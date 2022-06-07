@@ -36,29 +36,29 @@
 .method public constructor <init>(Lorg/telegram/ui/CallLogActivity;Landroid/content/Context;)V
     .registers 15
 
-    .line 311
+    .line 303
     iput-object p1, p0, Lorg/telegram/ui/CallLogActivity$CallCell;->this$0:Lorg/telegram/ui/CallLogActivity;
 
-    .line 312
+    .line 304
     invoke-direct {p0, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
     const-string p1, "windowBackgroundWhite"
 
-    .line 314
+    .line 306
     invoke-static {p1}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
 
     move-result v0
 
     invoke-virtual {p0, v0}, Landroid/widget/FrameLayout;->setBackgroundColor(I)V
 
-    .line 316
+    .line 308
     new-instance v0, Lorg/telegram/ui/Cells/ProfileSearchCell;
 
     invoke-direct {v0, p2}, Lorg/telegram/ui/Cells/ProfileSearchCell;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lorg/telegram/ui/CallLogActivity$CallCell;->profileSearchCell:Lorg/telegram/ui/Cells/ProfileSearchCell;
 
-    .line 317
+    .line 309
     sget-boolean v1, Lorg/telegram/messenger/LocaleController;->isRTL:Z
 
     const/high16 v2, 0x42000000    # 32.0f
@@ -93,7 +93,7 @@
     :goto_2c
     invoke-virtual {v0, v1, v3, v2, v3}, Landroid/view/ViewGroup;->setPadding(IIII)V
 
-    .line 318
+    .line 310
     iget-object v0, p0, Lorg/telegram/ui/CallLogActivity$CallCell;->profileSearchCell:Lorg/telegram/ui/Cells/ProfileSearchCell;
 
     sget-boolean v1, Lorg/telegram/messenger/LocaleController;->isRTL:Z
@@ -122,7 +122,7 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/ui/Cells/ProfileSearchCell;->setSublabelOffset(II)V
 
-    .line 319
+    .line 311
     iget-object v0, p0, Lorg/telegram/ui/CallLogActivity$CallCell;->profileSearchCell:Lorg/telegram/ui/Cells/ProfileSearchCell;
 
     const/4 v1, -0x1
@@ -135,7 +135,7 @@
 
     invoke-virtual {p0, v0, v1}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 321
+    .line 313
     new-instance v0, Landroid/widget/ImageView;
 
     invoke-direct {v0, p2}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
@@ -144,10 +144,10 @@
 
     const/16 v1, 0xd6
 
-    .line 322
+    .line 314
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setAlpha(I)V
 
-    .line 323
+    .line 315
     iget-object v0, p0, Lorg/telegram/ui/CallLogActivity$CallCell;->imageView:Landroid/widget/ImageView;
 
     new-instance v1, Landroid/graphics/PorterDuffColorFilter;
@@ -164,7 +164,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setColorFilter(Landroid/graphics/ColorFilter;)V
 
-    .line 324
+    .line 316
     iget-object v0, p0, Lorg/telegram/ui/CallLogActivity$CallCell;->imageView:Landroid/widget/ImageView;
 
     const-string v1, "listSelectorSDK21"
@@ -181,14 +181,14 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 325
+    .line 317
     iget-object v0, p0, Lorg/telegram/ui/CallLogActivity$CallCell;->imageView:Landroid/widget/ImageView;
 
     sget-object v1, Landroid/widget/ImageView$ScaleType;->CENTER:Landroid/widget/ImageView$ScaleType;
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setScaleType(Landroid/widget/ImageView$ScaleType;)V
 
-    .line 326
+    .line 318
     iget-object v0, p0, Lorg/telegram/ui/CallLogActivity$CallCell;->imageView:Landroid/widget/ImageView;
 
     new-instance v1, Lorg/telegram/ui/CallLogActivity$CallCell$$ExternalSyntheticLambda0;
@@ -197,10 +197,10 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 331
+    .line 323
     iget-object v0, p0, Lorg/telegram/ui/CallLogActivity$CallCell;->imageView:Landroid/widget/ImageView;
 
-    const v1, 0x7f0e0309
+    const v1, 0x7f0e0345
 
     const-string v2, "Call"
 
@@ -210,7 +210,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setContentDescription(Ljava/lang/CharSequence;)V
 
-    .line 332
+    .line 324
     iget-object v0, p0, Lorg/telegram/ui/CallLogActivity$CallCell;->imageView:Landroid/widget/ImageView;
 
     const/16 v4, 0x30
@@ -249,7 +249,7 @@
 
     invoke-virtual {p0, v0, v1}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 334
+    .line 326
     new-instance v0, Lorg/telegram/ui/Components/CheckBox2;
 
     const/16 v1, 0x15
@@ -262,20 +262,20 @@
 
     const-string v1, "checkboxCheck"
 
-    .line 335
+    .line 327
     invoke-virtual {v0, p2, p1, v1}, Lorg/telegram/ui/Components/CheckBox2;->setColor(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 336
+    .line 328
     iget-object p1, p0, Lorg/telegram/ui/CallLogActivity$CallCell;->checkBox:Lorg/telegram/ui/Components/CheckBox2;
 
     invoke-virtual {p1, v3}, Lorg/telegram/ui/Components/CheckBox2;->setDrawUnchecked(Z)V
 
-    .line 337
+    .line 329
     iget-object p1, p0, Lorg/telegram/ui/CallLogActivity$CallCell;->checkBox:Lorg/telegram/ui/Components/CheckBox2;
 
     invoke-virtual {p1, v11}, Lorg/telegram/ui/Components/CheckBox2;->setDrawBackgroundAsArc(I)V
 
-    .line 338
+    .line 330
     iget-object p1, p0, Lorg/telegram/ui/CallLogActivity$CallCell;->checkBox:Lorg/telegram/ui/Components/CheckBox2;
 
     const/16 v3, 0x18
@@ -311,19 +311,19 @@
     return-void
 .end method
 
-.method static synthetic access$2300(Lorg/telegram/ui/CallLogActivity$CallCell;)Landroid/widget/ImageView;
+.method static synthetic access$2000(Lorg/telegram/ui/CallLogActivity$CallCell;)Landroid/widget/ImageView;
     .registers 1
 
-    .line 305
+    .line 297
     iget-object p0, p0, Lorg/telegram/ui/CallLogActivity$CallCell;->imageView:Landroid/widget/ImageView;
 
     return-object p0
 .end method
 
-.method static synthetic access$2700(Lorg/telegram/ui/CallLogActivity$CallCell;)Lorg/telegram/ui/Cells/ProfileSearchCell;
+.method static synthetic access$2400(Lorg/telegram/ui/CallLogActivity$CallCell;)Lorg/telegram/ui/Cells/ProfileSearchCell;
     .registers 1
 
-    .line 305
+    .line 297
     iget-object p0, p0, Lorg/telegram/ui/CallLogActivity$CallCell;->profileSearchCell:Lorg/telegram/ui/Cells/ProfileSearchCell;
 
     return-object p0
@@ -332,14 +332,14 @@
 .method private synthetic lambda$new$0(Landroid/view/View;)V
     .registers 11
 
-    .line 327
+    .line 319
     invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object p1
 
     check-cast p1, Lorg/telegram/ui/CallLogActivity$CallLogRow;
 
-    .line 328
+    .line 320
     iget-object v0, p0, Lorg/telegram/ui/CallLogActivity$CallCell;->this$0:Lorg/telegram/ui/CallLogActivity;
 
     invoke-virtual {v0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getMessagesController()Lorg/telegram/messenger/MessagesController;
@@ -354,7 +354,7 @@
 
     move-result-object v0
 
-    .line 329
+    .line 321
     iget-object v1, p0, Lorg/telegram/ui/CallLogActivity$CallCell;->this$0:Lorg/telegram/ui/CallLogActivity;
 
     iget-object v2, p1, Lorg/telegram/ui/CallLogActivity$CallLogRow;->user:Lorg/telegram/tgnet/TLRPC$User;
@@ -413,14 +413,14 @@
 .method public setChecked(ZZ)V
     .registers 4
 
-    .line 342
+    .line 334
     iget-object v0, p0, Lorg/telegram/ui/CallLogActivity$CallCell;->checkBox:Lorg/telegram/ui/Components/CheckBox2;
 
     if-nez v0, :cond_5
 
     return-void
 
-    .line 345
+    .line 337
     :cond_5
     invoke-virtual {v0, p1, p2}, Lorg/telegram/ui/Components/CheckBox2;->setChecked(ZZ)V
 

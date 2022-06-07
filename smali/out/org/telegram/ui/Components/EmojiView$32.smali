@@ -26,7 +26,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/EmojiView;Landroidx/recyclerview/widget/GridLayoutManager;Lorg/telegram/ui/Components/RecyclerListView;)V
     .registers 4
 
-    .line 2663
+    .line 2679
     iput-object p1, p0, Lorg/telegram/ui/Components/EmojiView$32;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     iput-object p2, p0, Lorg/telegram/ui/Components/EmojiView$32;->val$layoutManager:Landroidx/recyclerview/widget/GridLayoutManager;
@@ -43,7 +43,7 @@
 .method public onAnimationCancel(Landroid/animation/Animator;)V
     .registers 3
 
-    .line 2690
+    .line 2706
     iget-object v0, p0, Lorg/telegram/ui/Components/EmojiView$32;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/EmojiView;->access$10400(Lorg/telegram/ui/Components/EmojiView;)Landroid/animation/AnimatorSet;
@@ -56,7 +56,7 @@
 
     if-eqz p1, :cond_12
 
-    .line 2691
+    .line 2707
     iget-object p1, p0, Lorg/telegram/ui/Components/EmojiView$32;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     const/4 v0, 0x0
@@ -70,7 +70,7 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .registers 9
 
-    .line 2666
+    .line 2682
     iget-object v0, p0, Lorg/telegram/ui/Components/EmojiView$32;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/EmojiView;->access$10400(Lorg/telegram/ui/Components/EmojiView;)Landroid/animation/AnimatorSet;
@@ -83,7 +83,7 @@
 
     if-eqz p1, :cond_92
 
-    .line 2667
+    .line 2683
     iget-object p1, p0, Lorg/telegram/ui/Components/EmojiView$32;->val$layoutManager:Landroidx/recyclerview/widget/GridLayoutManager;
 
     invoke-virtual {p1}, Landroidx/recyclerview/widget/LinearLayoutManager;->findFirstVisibleItemPosition()I
@@ -96,14 +96,14 @@
 
     if-eq p1, v0, :cond_2a
 
-    .line 2670
+    .line 2686
     iget-object v2, p0, Lorg/telegram/ui/Components/EmojiView$32;->val$layoutManager:Landroidx/recyclerview/widget/GridLayoutManager;
 
     invoke-virtual {v2, p1}, Landroidx/recyclerview/widget/LinearLayoutManager;->findViewByPosition(I)Landroid/view/View;
 
     move-result-object v2
 
-    .line 2671
+    .line 2687
     invoke-virtual {v2}, Landroid/view/View;->getTop()I
 
     move-result v2
@@ -125,7 +125,7 @@
     :cond_2a
     const/4 v2, 0x0
 
-    .line 2673
+    .line 2689
     :goto_2b
     iget-object v3, p0, Lorg/telegram/ui/Components/EmojiView$32;->val$gridView:Lorg/telegram/ui/Components/RecyclerListView;
 
@@ -133,7 +133,7 @@
 
     invoke-virtual {v3, v4}, Lorg/telegram/ui/Components/RecyclerListView;->setTranslationY(F)V
 
-    .line 2674
+    .line 2690
     iget-object v3, p0, Lorg/telegram/ui/Components/EmojiView$32;->val$gridView:Lorg/telegram/ui/Components/RecyclerListView;
 
     iget-object v4, p0, Lorg/telegram/ui/Components/EmojiView$32;->this$0:Lorg/telegram/ui/Components/EmojiView;
@@ -148,7 +148,7 @@
 
     if-ne v3, v4, :cond_4d
 
-    .line 2675
+    .line 2691
     iget-object v3, p0, Lorg/telegram/ui/Components/EmojiView$32;->val$gridView:Lorg/telegram/ui/Components/RecyclerListView;
 
     invoke-static {v5}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -163,7 +163,7 @@
 
     goto :goto_7e
 
-    .line 2676
+    .line 2692
     :cond_4d
     iget-object v3, p0, Lorg/telegram/ui/Components/EmojiView$32;->val$gridView:Lorg/telegram/ui/Components/RecyclerListView;
 
@@ -175,7 +175,7 @@
 
     if-ne v3, v4, :cond_65
 
-    .line 2677
+    .line 2693
     iget-object v3, p0, Lorg/telegram/ui/Components/EmojiView$32;->val$gridView:Lorg/telegram/ui/Components/RecyclerListView;
 
     invoke-static {v5}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -190,7 +190,7 @@
 
     goto :goto_7e
 
-    .line 2678
+    .line 2694
     :cond_65
     iget-object v3, p0, Lorg/telegram/ui/Components/EmojiView$32;->val$gridView:Lorg/telegram/ui/Components/RecyclerListView;
 
@@ -202,7 +202,7 @@
 
     if-ne v3, v4, :cond_7e
 
-    .line 2679
+    .line 2695
     iget-object v3, p0, Lorg/telegram/ui/Components/EmojiView$32;->val$gridView:Lorg/telegram/ui/Components/RecyclerListView;
 
     const/high16 v4, 0x42180000    # 38.0f
@@ -221,7 +221,7 @@
     :goto_7e
     if-eq p1, v0, :cond_8c
 
-    .line 2682
+    .line 2698
     iget-object v0, p0, Lorg/telegram/ui/Components/EmojiView$32;->val$layoutManager:Landroidx/recyclerview/widget/GridLayoutManager;
 
     iget-object v1, p0, Lorg/telegram/ui/Components/EmojiView$32;->val$gridView:Lorg/telegram/ui/Components/RecyclerListView;
@@ -234,7 +234,7 @@
 
     invoke-virtual {v0, p1, v2}, Landroidx/recyclerview/widget/LinearLayoutManager;->scrollToPositionWithOffset(II)V
 
-    .line 2684
+    .line 2700
     :cond_8c
     iget-object p1, p0, Lorg/telegram/ui/Components/EmojiView$32;->this$0:Lorg/telegram/ui/Components/EmojiView;
 

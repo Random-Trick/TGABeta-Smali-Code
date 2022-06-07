@@ -30,20 +30,20 @@
 .method public constructor <init>(Lorg/telegram/ui/Components/ChatActivityEnterView;Landroid/content/Context;)V
     .registers 4
 
-    .line 301
+    .line 303
     iput-object p1, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$SeekBarWaveformView;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
-    .line 302
+    .line 304
     invoke-direct {p0, p2}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
-    .line 303
+    .line 305
     new-instance v0, Lorg/telegram/ui/Components/SeekBarWaveform;
 
     invoke-direct {v0, p2}, Lorg/telegram/ui/Components/SeekBarWaveform;-><init>(Landroid/content/Context;)V
 
     invoke-static {p1, v0}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$002(Lorg/telegram/ui/Components/ChatActivityEnterView;Lorg/telegram/ui/Components/SeekBarWaveform;)Lorg/telegram/ui/Components/SeekBarWaveform;
 
-    .line 304
+    .line 306
     invoke-static {p1}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$000(Lorg/telegram/ui/Components/ChatActivityEnterView;)Lorg/telegram/ui/Components/SeekBarWaveform;
 
     move-result-object p1
@@ -60,7 +60,7 @@
 .method private synthetic lambda$new$0(F)V
     .registers 4
 
-    .line 305
+    .line 307
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$SeekBarWaveformView;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$200(Lorg/telegram/ui/Components/ChatActivityEnterView;)Lorg/telegram/messenger/MessageObject;
@@ -69,7 +69,7 @@
 
     if-eqz v0, :cond_1d
 
-    .line 306
+    .line 308
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$SeekBarWaveformView;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$200(Lorg/telegram/ui/Components/ChatActivityEnterView;)Lorg/telegram/messenger/MessageObject;
@@ -78,7 +78,7 @@
 
     iput p1, v0, Lorg/telegram/messenger/MessageObject;->audioProgress:F
 
-    .line 307
+    .line 309
     invoke-static {}, Lorg/telegram/messenger/MediaController;->getInstance()Lorg/telegram/messenger/MediaController;
 
     move-result-object v0
@@ -100,7 +100,7 @@
 .method public isDragging()Z
     .registers 2
 
-    .line 323
+    .line 325
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$SeekBarWaveformView;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$000(Lorg/telegram/ui/Components/ChatActivityEnterView;)Lorg/telegram/ui/Components/SeekBarWaveform;
@@ -117,10 +117,10 @@
 .method protected onDraw(Landroid/graphics/Canvas;)V
     .registers 7
 
-    .line 346
+    .line 348
     invoke-super {p0, p1}, Landroid/view/View;->onDraw(Landroid/graphics/Canvas;)V
 
-    .line 347
+    .line 349
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$SeekBarWaveformView;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$000(Lorg/telegram/ui/Components/ChatActivityEnterView;)Lorg/telegram/ui/Components/SeekBarWaveform;
@@ -151,7 +151,7 @@
 
     invoke-virtual {v0, v1, v3, v2}, Lorg/telegram/ui/Components/SeekBarWaveform;->setColors(III)V
 
-    .line 348
+    .line 350
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$SeekBarWaveformView;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$000(Lorg/telegram/ui/Components/ChatActivityEnterView;)Lorg/telegram/ui/Components/SeekBarWaveform;
@@ -166,10 +166,10 @@
 .method protected onLayout(ZIIII)V
     .registers 6
 
-    .line 340
+    .line 342
     invoke-super/range {p0 .. p5}, Landroid/view/View;->onLayout(ZIIII)V
 
-    .line 341
+    .line 343
     iget-object p1, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$SeekBarWaveformView;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$000(Lorg/telegram/ui/Components/ChatActivityEnterView;)Lorg/telegram/ui/Components/SeekBarWaveform;
@@ -188,7 +188,7 @@
 .method public onTouchEvent(Landroid/view/MotionEvent;)Z
     .registers 6
 
-    .line 328
+    .line 330
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$SeekBarWaveformView;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$000(Lorg/telegram/ui/Components/ChatActivityEnterView;)Lorg/telegram/ui/Components/SeekBarWaveform;
@@ -215,26 +215,26 @@
 
     if-eqz v0, :cond_27
 
-    .line 330
+    .line 332
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v2
 
     if-nez v2, :cond_24
 
-    .line 331
+    .line 333
     iget-object v2, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$SeekBarWaveformView;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-virtual {v2, v1}, Landroid/widget/FrameLayout;->requestDisallowInterceptTouchEvent(Z)V
 
-    .line 333
+    .line 335
     :cond_24
     invoke-virtual {p0}, Landroid/view/View;->invalidate()V
 
     :cond_27
     if-nez v0, :cond_31
 
-    .line 335
+    .line 337
     invoke-super {p0, p1}, Landroid/view/View;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
     move-result p1
@@ -254,7 +254,7 @@
 .method public setProgress(F)V
     .registers 3
 
-    .line 318
+    .line 320
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$SeekBarWaveformView;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$000(Lorg/telegram/ui/Components/ChatActivityEnterView;)Lorg/telegram/ui/Components/SeekBarWaveform;
@@ -263,7 +263,7 @@
 
     invoke-virtual {v0, p1}, Lorg/telegram/ui/Components/SeekBarWaveform;->setProgress(F)V
 
-    .line 319
+    .line 321
     invoke-virtual {p0}, Landroid/view/View;->invalidate()V
 
     return-void
@@ -272,7 +272,7 @@
 .method public setWaveform([B)V
     .registers 3
 
-    .line 313
+    .line 315
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$SeekBarWaveformView;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$000(Lorg/telegram/ui/Components/ChatActivityEnterView;)Lorg/telegram/ui/Components/SeekBarWaveform;
@@ -281,7 +281,7 @@
 
     invoke-virtual {v0, p1}, Lorg/telegram/ui/Components/SeekBarWaveform;->setWaveform([B)V
 
-    .line 314
+    .line 316
     invoke-virtual {p0}, Landroid/view/View;->invalidate()V
 
     return-void

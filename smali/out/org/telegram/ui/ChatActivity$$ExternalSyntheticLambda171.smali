@@ -10,12 +10,10 @@
 
 .field public final synthetic f$1:Lorg/telegram/messenger/MessageObject;
 
-.field public final synthetic f$2:Z
-
 
 # direct methods
-.method public synthetic constructor <init>(Lorg/telegram/ui/ChatActivity;Lorg/telegram/messenger/MessageObject;Z)V
-    .registers 4
+.method public synthetic constructor <init>(Lorg/telegram/ui/ChatActivity;Lorg/telegram/messenger/MessageObject;)V
+    .registers 3
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -23,23 +21,19 @@
 
     iput-object p2, p0, Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda171;->f$1:Lorg/telegram/messenger/MessageObject;
 
-    iput-boolean p3, p0, Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda171;->f$2:Z
-
     return-void
 .end method
 
 
 # virtual methods
 .method public final run()V
-    .registers 4
+    .registers 3
 
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda171;->f$0:Lorg/telegram/ui/ChatActivity;
 
     iget-object v1, p0, Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda171;->f$1:Lorg/telegram/messenger/MessageObject;
 
-    iget-boolean v2, p0, Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda171;->f$2:Z
-
-    invoke-static {v0, v1, v2}, Lorg/telegram/ui/ChatActivity;->$r8$lambda$wEV85K8QGP6KDsnpDk3tdAycyz8(Lorg/telegram/ui/ChatActivity;Lorg/telegram/messenger/MessageObject;Z)V
+    invoke-static {v0, v1}, Lorg/telegram/ui/ChatActivity;->$r8$lambda$V5QFL5Oy92Z3c_f1_FugRHJrpZQ(Lorg/telegram/ui/ChatActivity;Lorg/telegram/messenger/MessageObject;)V
 
     return-void
 .end method

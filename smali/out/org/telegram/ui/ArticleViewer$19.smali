@@ -25,7 +25,7 @@
 .method constructor <init>(Lorg/telegram/ui/ArticleViewer;)V
     .registers 2
 
-    .line 3710
+    .line 3711
     iput-object p1, p0, Lorg/telegram/ui/ArticleViewer$19;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public getClipTopBottom([F)V
     .registers 4
 
-    .line 3713
+    .line 3714
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$19;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     invoke-static {v0}, Lorg/telegram/ui/ArticleViewer;->access$2600(Lorg/telegram/ui/ArticleViewer;)I
@@ -51,7 +51,7 @@
 
     aput v0, p1, v1
 
-    .line 3714
+    .line 3715
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$19;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     invoke-static {v0}, Lorg/telegram/ui/ArticleViewer;->access$3200(Lorg/telegram/ui/ArticleViewer;)[Lorg/telegram/ui/Components/RecyclerListView;

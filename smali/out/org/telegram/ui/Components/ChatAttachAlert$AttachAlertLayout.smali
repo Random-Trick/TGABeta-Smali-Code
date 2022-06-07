@@ -24,13 +24,13 @@
 .method public constructor <init>(Lorg/telegram/ui/Components/ChatAttachAlert;Landroid/content/Context;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)V
     .registers 4
 
-    .line 340
+    .line 393
     invoke-direct {p0, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    .line 341
+    .line 394
     iput-object p3, p0, Lorg/telegram/ui/Components/ChatAttachAlert$AttachAlertLayout;->resourcesProvider:Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;
 
-    .line 342
+    .line 395
     iput-object p1, p0, Lorg/telegram/ui/Components/ChatAttachAlert$AttachAlertLayout;->parentAlert:Lorg/telegram/ui/Components/ChatAttachAlert;
 
     return-void
@@ -69,7 +69,7 @@
 .method getButtonsHideOffset()I
     .registers 2
 
-    .line 454
+    .line 515
     invoke-virtual {p0}, Lorg/telegram/ui/Components/ChatAttachAlert$AttachAlertLayout;->needsActionBar()I
 
     move-result v0
@@ -92,6 +92,14 @@
 .end method
 
 .method getCurrentItemTop()I
+    .registers 2
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method getCustomBackground()I
     .registers 2
 
     const/4 v0, 0x0
@@ -142,7 +150,7 @@
 .method protected getThemedColor(Ljava/lang/String;)I
     .registers 3
 
-    .line 486
+    .line 547
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlert$AttachAlertLayout;->resourcesProvider:Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;
 
     if-eqz v0, :cond_9
@@ -159,7 +167,7 @@
     :goto_a
     if-eqz v0, :cond_11
 
-    .line 487
+    .line 548
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
     move-result p1
@@ -173,6 +181,14 @@
 
     :goto_15
     return p1
+.end method
+
+.method hasCustomBackground()Z
+    .registers 2
+
+    const/4 v0, 0x0
+
+    return v0
 .end method
 
 .method needsActionBar()I

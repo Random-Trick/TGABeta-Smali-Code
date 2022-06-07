@@ -17,7 +17,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 27523
+    .line 27891
     invoke-direct {p0}, Lorg/telegram/tgnet/TLRPC$UserStatus;-><init>()V
 
     return-void
@@ -28,7 +28,7 @@
 .method public readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
     .registers 3
 
-    .line 27528
+    .line 27896
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result p1
@@ -41,12 +41,12 @@
 .method public serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
     .registers 3
 
-    .line 27532
+    .line 27900
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_userStatusOffline;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 27533
+    .line 27901
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$UserStatus;->expires:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V

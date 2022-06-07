@@ -18,7 +18,7 @@
 .method constructor <init>(Lorg/telegram/ui/ActionBar/ActionBar;)V
     .registers 2
 
-    .line 1506
+    .line 1531
     invoke-direct {p0}, Landroid/transition/ChangeBounds;-><init>()V
 
     return-void
@@ -29,17 +29,17 @@
 .method public captureEndValues(Landroid/transition/TransitionValues;)V
     .registers 4
 
-    .line 1518
+    .line 1543
     invoke-super {p0, p1}, Landroid/transition/ChangeBounds;->captureEndValues(Landroid/transition/TransitionValues;)V
 
-    .line 1519
+    .line 1544
     iget-object v0, p1, Landroid/transition/TransitionValues;->view:Landroid/view/View;
 
     instance-of v1, v0, Lorg/telegram/ui/ActionBar/SimpleTextView;
 
     if-eqz v1, :cond_1e
 
-    .line 1520
+    .line 1545
     check-cast v0, Lorg/telegram/ui/ActionBar/SimpleTextView;
 
     invoke-virtual {v0}, Lorg/telegram/ui/ActionBar/SimpleTextView;->getTextPaint()Landroid/text/TextPaint;
@@ -50,7 +50,7 @@
 
     move-result v0
 
-    .line 1521
+    .line 1546
     iget-object p1, p1, Landroid/transition/TransitionValues;->values:Ljava/util/Map;
 
     invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
@@ -68,17 +68,17 @@
 .method public captureStartValues(Landroid/transition/TransitionValues;)V
     .registers 4
 
-    .line 1510
+    .line 1535
     invoke-super {p0, p1}, Landroid/transition/ChangeBounds;->captureStartValues(Landroid/transition/TransitionValues;)V
 
-    .line 1511
+    .line 1536
     iget-object v0, p1, Landroid/transition/TransitionValues;->view:Landroid/view/View;
 
     instance-of v1, v0, Lorg/telegram/ui/ActionBar/SimpleTextView;
 
     if-eqz v1, :cond_1e
 
-    .line 1512
+    .line 1537
     check-cast v0, Lorg/telegram/ui/ActionBar/SimpleTextView;
 
     invoke-virtual {v0}, Lorg/telegram/ui/ActionBar/SimpleTextView;->getTextPaint()Landroid/text/TextPaint;
@@ -89,7 +89,7 @@
 
     move-result v0
 
-    .line 1513
+    .line 1538
     iget-object p1, p1, Landroid/transition/TransitionValues;->values:Ljava/util/Map;
 
     invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
@@ -109,14 +109,14 @@
 
     if-eqz p2, :cond_74
 
-    .line 1527
+    .line 1552
     iget-object v0, p2, Landroid/transition/TransitionValues;->view:Landroid/view/View;
 
     instance-of v0, v0, Lorg/telegram/ui/ActionBar/SimpleTextView;
 
     if-eqz v0, :cond_74
 
-    .line 1528
+    .line 1553
     new-instance v0, Landroid/animation/AnimatorSet;
 
     invoke-direct {v0}, Landroid/animation/AnimatorSet;-><init>()V
@@ -127,12 +127,12 @@
 
     if-eqz p3, :cond_43
 
-    .line 1530
+    .line 1555
     invoke-super {p0, p1, p2, p3}, Landroid/transition/ChangeBounds;->createAnimator(Landroid/view/ViewGroup;Landroid/transition/TransitionValues;Landroid/transition/TransitionValues;)Landroid/animation/Animator;
 
     move-result-object p1
 
-    .line 1531
+    .line 1556
     iget-object v3, p2, Landroid/transition/TransitionValues;->values:Ljava/util/Map;
 
     const-string v4, "text_size"
@@ -161,12 +161,12 @@
 
     div-float/2addr v3, p3
 
-    .line 1532
+    .line 1557
     iget-object p3, p2, Landroid/transition/TransitionValues;->view:Landroid/view/View;
 
     invoke-virtual {p3, v3}, Landroid/view/View;->setScaleX(F)V
 
-    .line 1533
+    .line 1558
     iget-object p3, p2, Landroid/transition/TransitionValues;->view:Landroid/view/View;
 
     invoke-virtual {p3, v3}, Landroid/view/View;->setScaleY(F)V
@@ -177,13 +177,13 @@
 
     aput-object p1, p3, v1
 
-    .line 1535
+    .line 1560
     invoke-virtual {v0, p3}, Landroid/animation/AnimatorSet;->playTogether([Landroid/animation/Animator;)V
 
     :cond_43
     new-array p1, v2, [Landroid/animation/Animator;
 
-    .line 1538
+    .line 1563
     iget-object p3, p2, Landroid/transition/TransitionValues;->view:Landroid/view/View;
 
     sget-object v3, Landroid/view/View;->SCALE_X:Landroid/util/Property;
@@ -204,7 +204,7 @@
 
     new-array p1, v2, [Landroid/animation/Animator;
 
-    .line 1539
+    .line 1564
     iget-object p3, p2, Landroid/transition/TransitionValues;->view:Landroid/view/View;
 
     sget-object v3, Landroid/view/View;->SCALE_Y:Landroid/util/Property;
@@ -221,7 +221,7 @@
 
     invoke-virtual {v0, p1}, Landroid/animation/AnimatorSet;->playTogether([Landroid/animation/Animator;)V
 
-    .line 1540
+    .line 1565
     new-instance p1, Lorg/telegram/ui/ActionBar/ActionBar$7$1;
 
     invoke-direct {p1, p0, p2}, Lorg/telegram/ui/ActionBar/ActionBar$7$1;-><init>(Lorg/telegram/ui/ActionBar/ActionBar$7;Landroid/transition/TransitionValues;)V
@@ -230,7 +230,7 @@
 
     return-object v0
 
-    .line 1556
+    .line 1581
     :cond_74
     invoke-super {p0, p1, p2, p3}, Landroid/transition/ChangeBounds;->createAnimator(Landroid/view/ViewGroup;Landroid/transition/TransitionValues;Landroid/transition/TransitionValues;)Landroid/animation/Animator;
 

@@ -28,7 +28,7 @@
 .method public constructor <init>(Lorg/telegram/messenger/ringtone/RingtoneDataStore;)V
     .registers 2
 
-    .line 314
+    .line 316
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

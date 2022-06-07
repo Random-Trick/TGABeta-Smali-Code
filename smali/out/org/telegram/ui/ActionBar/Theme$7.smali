@@ -24,7 +24,7 @@
 .method constructor <init>(I)V
     .registers 2
 
-    .line 6013
+    .line 6046
     iput p1, p0, Lorg/telegram/ui/ActionBar/Theme$7;->val$maskType:I
 
     invoke-direct {p0}, Landroid/graphics/drawable/Drawable;-><init>()V
@@ -37,37 +37,37 @@
 .method public draw(Landroid/graphics/Canvas;)V
     .registers 7
 
-    .line 6019
+    .line 6052
     invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
 
     move-result-object v0
 
-    .line 6020
+    .line 6053
     iget v1, p0, Lorg/telegram/ui/ActionBar/Theme$7;->val$maskType:I
 
     const/4 v2, 0x7
 
     if-ne v1, v2, :cond_2f
 
-    .line 6021
+    .line 6054
     iget-object v1, p0, Lorg/telegram/ui/ActionBar/Theme$7;->rect:Landroid/graphics/RectF;
 
     if-nez v1, :cond_14
 
-    .line 6022
+    .line 6055
     new-instance v1, Landroid/graphics/RectF;
 
     invoke-direct {v1}, Landroid/graphics/RectF;-><init>()V
 
     iput-object v1, p0, Lorg/telegram/ui/ActionBar/Theme$7;->rect:Landroid/graphics/RectF;
 
-    .line 6024
+    .line 6057
     :cond_14
     iget-object v1, p0, Lorg/telegram/ui/ActionBar/Theme$7;->rect:Landroid/graphics/RectF;
 
     invoke-virtual {v1, v0}, Landroid/graphics/RectF;->set(Landroid/graphics/Rect;)V
 
-    .line 6025
+    .line 6058
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/Theme$7;->rect:Landroid/graphics/RectF;
 
     const/high16 v1, 0x40c00000    # 6.0f
@@ -108,7 +108,7 @@
 
     if-ne v1, v2, :cond_48
 
-    .line 6031
+    .line 6064
     invoke-virtual {v0}, Landroid/graphics/Rect;->width()I
 
     move-result v1
@@ -125,7 +125,7 @@
 
     goto :goto_7a
 
-    .line 6035
+    .line 6068
     :cond_48
     iget v1, v0, Landroid/graphics/Rect;->left:I
 
@@ -183,12 +183,12 @@
     :goto_74
     const/high16 v1, 0x41a00000    # 20.0f
 
-    .line 6029
+    .line 6062
     invoke-static {v1}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v1
 
-    .line 6037
+    .line 6070
     :goto_7a
     invoke-virtual {v0}, Landroid/graphics/Rect;->centerX()I
 

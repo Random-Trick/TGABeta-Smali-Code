@@ -8,22 +8,18 @@
 # instance fields
 .field public final synthetic f$0:Lorg/telegram/ui/LaunchActivity;
 
-.field public final synthetic f$1:[Lorg/telegram/messenger/LocaleController$LocaleInfo;
-
-.field public final synthetic f$2:Ljava/lang/String;
+.field public final synthetic f$1:Lorg/telegram/ui/ActionBar/Theme$ThemeInfo;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lorg/telegram/ui/LaunchActivity;[Lorg/telegram/messenger/LocaleController$LocaleInfo;Ljava/lang/String;)V
-    .registers 4
+.method public synthetic constructor <init>(Lorg/telegram/ui/LaunchActivity;Lorg/telegram/ui/ActionBar/Theme$ThemeInfo;)V
+    .registers 3
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lorg/telegram/ui/LaunchActivity$$ExternalSyntheticLambda84;->f$0:Lorg/telegram/ui/LaunchActivity;
 
-    iput-object p2, p0, Lorg/telegram/ui/LaunchActivity$$ExternalSyntheticLambda84;->f$1:[Lorg/telegram/messenger/LocaleController$LocaleInfo;
-
-    iput-object p3, p0, Lorg/telegram/ui/LaunchActivity$$ExternalSyntheticLambda84;->f$2:Ljava/lang/String;
+    iput-object p2, p0, Lorg/telegram/ui/LaunchActivity$$ExternalSyntheticLambda84;->f$1:Lorg/telegram/ui/ActionBar/Theme$ThemeInfo;
 
     return-void
 .end method
@@ -31,15 +27,13 @@
 
 # virtual methods
 .method public final run(Lorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/TLRPC$TL_error;)V
-    .registers 6
+    .registers 5
 
     iget-object v0, p0, Lorg/telegram/ui/LaunchActivity$$ExternalSyntheticLambda84;->f$0:Lorg/telegram/ui/LaunchActivity;
 
-    iget-object v1, p0, Lorg/telegram/ui/LaunchActivity$$ExternalSyntheticLambda84;->f$1:[Lorg/telegram/messenger/LocaleController$LocaleInfo;
+    iget-object v1, p0, Lorg/telegram/ui/LaunchActivity$$ExternalSyntheticLambda84;->f$1:Lorg/telegram/ui/ActionBar/Theme$ThemeInfo;
 
-    iget-object v2, p0, Lorg/telegram/ui/LaunchActivity$$ExternalSyntheticLambda84;->f$2:Ljava/lang/String;
-
-    invoke-static {v0, v1, v2, p1, p2}, Lorg/telegram/ui/LaunchActivity;->$r8$lambda$xMsfK98FniKUoZs7f2v1MTml-8s(Lorg/telegram/ui/LaunchActivity;[Lorg/telegram/messenger/LocaleController$LocaleInfo;Ljava/lang/String;Lorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/TLRPC$TL_error;)V
+    invoke-static {v0, v1, p1, p2}, Lorg/telegram/ui/LaunchActivity;->$r8$lambda$NvJiDi_0zIPR6IPXi_7x9aKG4FQ(Lorg/telegram/ui/LaunchActivity;Lorg/telegram/ui/ActionBar/Theme$ThemeInfo;Lorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/TLRPC$TL_error;)V
 
     return-void
 .end method

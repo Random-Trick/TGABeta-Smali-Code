@@ -2,42 +2,32 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/google/android/gms/tasks/OnSuccessListener;
+.implements Landroidx/dynamicanimation/animation/DynamicAnimation$OnAnimationEndListener;
 
 
-# static fields
-.field public static final synthetic INSTANCE:Lorg/telegram/messenger/AndroidUtilities$$ExternalSyntheticLambda6;
+# instance fields
+.field public final synthetic f$0:Ljava/lang/Runnable;
 
 
 # direct methods
-.method static synthetic constructor <clinit>()V
-    .registers 1
-
-    new-instance v0, Lorg/telegram/messenger/AndroidUtilities$$ExternalSyntheticLambda6;
-
-    invoke-direct {v0}, Lorg/telegram/messenger/AndroidUtilities$$ExternalSyntheticLambda6;-><init>()V
-
-    sput-object v0, Lorg/telegram/messenger/AndroidUtilities$$ExternalSyntheticLambda6;->INSTANCE:Lorg/telegram/messenger/AndroidUtilities$$ExternalSyntheticLambda6;
-
-    return-void
-.end method
-
-.method private synthetic constructor <init>()V
-    .registers 1
+.method public synthetic constructor <init>(Ljava/lang/Runnable;)V
+    .registers 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lorg/telegram/messenger/AndroidUtilities$$ExternalSyntheticLambda6;->f$0:Ljava/lang/Runnable;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onSuccess(Ljava/lang/Object;)V
-    .registers 2
+.method public final onAnimationEnd(Landroidx/dynamicanimation/animation/DynamicAnimation;ZFF)V
+    .registers 6
 
-    check-cast p1, Ljava/lang/Void;
+    iget-object v0, p0, Lorg/telegram/messenger/AndroidUtilities$$ExternalSyntheticLambda6;->f$0:Ljava/lang/Runnable;
 
-    invoke-static {p1}, Lorg/telegram/messenger/AndroidUtilities;->$r8$lambda$X6o_S2Eqa-aUMiElCWLPKSRiYKM(Ljava/lang/Void;)V
+    invoke-static {v0, p1, p2, p3, p4}, Lorg/telegram/messenger/AndroidUtilities;->$r8$lambda$oEJ-oC0Qvq1-dWPfZ5LN0QXZGs8(Ljava/lang/Runnable;Landroidx/dynamicanimation/animation/DynamicAnimation;ZFF)V
 
     return-void
 .end method

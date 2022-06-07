@@ -50,18 +50,18 @@
 .method public constructor <init>()V
     .registers 2
 
-    .line 1806
+    .line 1812
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-string v0, ""
 
-    .line 1789
+    .line 1795
     iput-object v0, p0, Lorg/telegram/ui/ActionBar/Theme$OverrideWallpaperInfo;->fileName:Ljava/lang/String;
 
-    .line 1790
+    .line 1796
     iput-object v0, p0, Lorg/telegram/ui/ActionBar/Theme$OverrideWallpaperInfo;->originalFileName:Ljava/lang/String;
 
-    .line 1791
+    .line 1797
     iput-object v0, p0, Lorg/telegram/ui/ActionBar/Theme$OverrideWallpaperInfo;->slug:Ljava/lang/String;
 
     return-void
@@ -70,72 +70,72 @@
 .method public constructor <init>(Lorg/telegram/ui/ActionBar/Theme$OverrideWallpaperInfo;Lorg/telegram/ui/ActionBar/Theme$ThemeInfo;Lorg/telegram/ui/ActionBar/Theme$ThemeAccent;)V
     .registers 9
 
-    .line 1810
+    .line 1816
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-string v0, ""
 
-    .line 1789
+    .line 1795
     iput-object v0, p0, Lorg/telegram/ui/ActionBar/Theme$OverrideWallpaperInfo;->fileName:Ljava/lang/String;
 
-    .line 1790
+    .line 1796
     iput-object v0, p0, Lorg/telegram/ui/ActionBar/Theme$OverrideWallpaperInfo;->originalFileName:Ljava/lang/String;
 
-    .line 1791
+    .line 1797
     iput-object v0, p0, Lorg/telegram/ui/ActionBar/Theme$OverrideWallpaperInfo;->slug:Ljava/lang/String;
 
-    .line 1811
+    .line 1817
     iget-object v1, p1, Lorg/telegram/ui/ActionBar/Theme$OverrideWallpaperInfo;->slug:Ljava/lang/String;
 
     iput-object v1, p0, Lorg/telegram/ui/ActionBar/Theme$OverrideWallpaperInfo;->slug:Ljava/lang/String;
 
-    .line 1812
+    .line 1818
     iget v1, p1, Lorg/telegram/ui/ActionBar/Theme$OverrideWallpaperInfo;->color:I
 
     iput v1, p0, Lorg/telegram/ui/ActionBar/Theme$OverrideWallpaperInfo;->color:I
 
-    .line 1813
+    .line 1819
     iget v1, p1, Lorg/telegram/ui/ActionBar/Theme$OverrideWallpaperInfo;->gradientColor1:I
 
     iput v1, p0, Lorg/telegram/ui/ActionBar/Theme$OverrideWallpaperInfo;->gradientColor1:I
 
-    .line 1814
+    .line 1820
     iget v1, p1, Lorg/telegram/ui/ActionBar/Theme$OverrideWallpaperInfo;->gradientColor2:I
 
     iput v1, p0, Lorg/telegram/ui/ActionBar/Theme$OverrideWallpaperInfo;->gradientColor2:I
 
-    .line 1815
+    .line 1821
     iget v1, p1, Lorg/telegram/ui/ActionBar/Theme$OverrideWallpaperInfo;->gradientColor3:I
 
     iput v1, p0, Lorg/telegram/ui/ActionBar/Theme$OverrideWallpaperInfo;->gradientColor3:I
 
-    .line 1816
+    .line 1822
     iget v1, p1, Lorg/telegram/ui/ActionBar/Theme$OverrideWallpaperInfo;->rotation:I
 
     iput v1, p0, Lorg/telegram/ui/ActionBar/Theme$OverrideWallpaperInfo;->rotation:I
 
-    .line 1817
+    .line 1823
     iget-boolean v1, p1, Lorg/telegram/ui/ActionBar/Theme$OverrideWallpaperInfo;->isBlurred:Z
 
     iput-boolean v1, p0, Lorg/telegram/ui/ActionBar/Theme$OverrideWallpaperInfo;->isBlurred:Z
 
-    .line 1818
+    .line 1824
     iget-boolean v1, p1, Lorg/telegram/ui/ActionBar/Theme$OverrideWallpaperInfo;->isMotion:Z
 
     iput-boolean v1, p0, Lorg/telegram/ui/ActionBar/Theme$OverrideWallpaperInfo;->isMotion:Z
 
-    .line 1819
+    .line 1825
     iget v1, p1, Lorg/telegram/ui/ActionBar/Theme$OverrideWallpaperInfo;->intensity:F
 
     iput v1, p0, Lorg/telegram/ui/ActionBar/Theme$OverrideWallpaperInfo;->intensity:F
 
-    .line 1820
+    .line 1826
     iput-object p2, p0, Lorg/telegram/ui/ActionBar/Theme$OverrideWallpaperInfo;->parentTheme:Lorg/telegram/ui/ActionBar/Theme$ThemeInfo;
 
-    .line 1821
+    .line 1827
     iput-object p3, p0, Lorg/telegram/ui/ActionBar/Theme$OverrideWallpaperInfo;->parentAccent:Lorg/telegram/ui/ActionBar/Theme$ThemeAccent;
 
-    .line 1822
+    .line 1828
     iget-object p2, p1, Lorg/telegram/ui/ActionBar/Theme$OverrideWallpaperInfo;->fileName:Ljava/lang/String;
 
     invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -144,7 +144,7 @@
 
     if-nez p2, :cond_65
 
-    .line 1824
+    .line 1830
     :try_start_3b
     new-instance p2, Ljava/io/File;
 
@@ -156,7 +156,7 @@
 
     invoke-direct {p2, p3, v1}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 1825
+    .line 1831
     new-instance p3, Ljava/io/File;
 
     invoke-static {}, Lorg/telegram/messenger/ApplicationLoader;->getFilesDirFixed()Ljava/io/File;
@@ -177,7 +177,7 @@
 
     invoke-direct {p3, v1, v2}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 1826
+    .line 1832
     invoke-static {p2, p3}, Lorg/telegram/messenger/AndroidUtilities;->copyFile(Ljava/io/File;Ljava/io/File;)Z
     :try_end_5d
     .catch Ljava/lang/Exception; {:try_start_3b .. :try_end_5d} :catch_5e
@@ -187,19 +187,19 @@
     :catch_5e
     move-exception p2
 
-    .line 1828
+    .line 1834
     iput-object v0, p0, Lorg/telegram/ui/ActionBar/Theme$OverrideWallpaperInfo;->fileName:Ljava/lang/String;
 
-    .line 1829
+    .line 1835
     invoke-static {p2}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     goto :goto_67
 
-    .line 1832
+    .line 1838
     :cond_65
     iput-object v0, p0, Lorg/telegram/ui/ActionBar/Theme$OverrideWallpaperInfo;->fileName:Ljava/lang/String;
 
-    .line 1834
+    .line 1840
     :goto_67
     iget-object p2, p1, Lorg/telegram/ui/ActionBar/Theme$OverrideWallpaperInfo;->originalFileName:Ljava/lang/String;
 
@@ -209,7 +209,7 @@
 
     if-nez p2, :cond_a8
 
-    .line 1835
+    .line 1841
     iget-object p2, p1, Lorg/telegram/ui/ActionBar/Theme$OverrideWallpaperInfo;->originalFileName:Ljava/lang/String;
 
     iget-object p3, p1, Lorg/telegram/ui/ActionBar/Theme$OverrideWallpaperInfo;->fileName:Ljava/lang/String;
@@ -220,7 +220,7 @@
 
     if-nez p2, :cond_a3
 
-    .line 1837
+    .line 1843
     :try_start_79
     new-instance p2, Ljava/io/File;
 
@@ -232,7 +232,7 @@
 
     invoke-direct {p2, p3, p1}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 1838
+    .line 1844
     new-instance p1, Ljava/io/File;
 
     invoke-static {}, Lorg/telegram/messenger/ApplicationLoader;->getFilesDirFixed()Ljava/io/File;
@@ -253,7 +253,7 @@
 
     invoke-direct {p1, p3, v1}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 1839
+    .line 1845
     invoke-static {p2, p1}, Lorg/telegram/messenger/AndroidUtilities;->copyFile(Ljava/io/File;Ljava/io/File;)Z
     :try_end_9b
     .catch Ljava/lang/Exception; {:try_start_79 .. :try_end_9b} :catch_9c
@@ -263,15 +263,15 @@
     :catch_9c
     move-exception p1
 
-    .line 1841
+    .line 1847
     iput-object v0, p0, Lorg/telegram/ui/ActionBar/Theme$OverrideWallpaperInfo;->originalFileName:Ljava/lang/String;
 
-    .line 1842
+    .line 1848
     invoke-static {p1}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     goto :goto_aa
 
-    .line 1845
+    .line 1851
     :cond_a3
     iget-object p1, p0, Lorg/telegram/ui/ActionBar/Theme$OverrideWallpaperInfo;->fileName:Ljava/lang/String;
 
@@ -279,7 +279,7 @@
 
     goto :goto_aa
 
-    .line 1848
+    .line 1854
     :cond_a8
     iput-object v0, p0, Lorg/telegram/ui/ActionBar/Theme$OverrideWallpaperInfo;->originalFileName:Ljava/lang/String;
 
@@ -290,7 +290,7 @@
 .method static synthetic access$1500(Lorg/telegram/ui/ActionBar/Theme$OverrideWallpaperInfo;)V
     .registers 1
 
-    .line 1788
+    .line 1794
     invoke-direct {p0}, Lorg/telegram/ui/ActionBar/Theme$OverrideWallpaperInfo;->delete()V
 
     return-void
@@ -299,7 +299,7 @@
 .method static synthetic access$1600(Lorg/telegram/ui/ActionBar/Theme$OverrideWallpaperInfo;)V
     .registers 1
 
-    .line 1788
+    .line 1794
     invoke-direct {p0}, Lorg/telegram/ui/ActionBar/Theme$OverrideWallpaperInfo;->save()V
 
     return-void
@@ -308,12 +308,12 @@
 .method private delete()V
     .registers 5
 
-    .line 1904
+    .line 1910
     invoke-direct {p0}, Lorg/telegram/ui/ActionBar/Theme$OverrideWallpaperInfo;->getKey()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1905
+    .line 1911
     sget-object v1, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     const-string v2, "themeconfig"
@@ -324,7 +324,7 @@
 
     move-result-object v1
 
-    .line 1906
+    .line 1912
     invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v1
@@ -335,7 +335,7 @@
 
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 1907
+    .line 1913
     new-instance v0, Ljava/io/File;
 
     invoke-static {}, Lorg/telegram/messenger/ApplicationLoader;->getFilesDirFixed()Ljava/io/File;
@@ -348,7 +348,7 @@
 
     invoke-virtual {v0}, Ljava/io/File;->delete()Z
 
-    .line 1908
+    .line 1914
     new-instance v0, Ljava/io/File;
 
     invoke-static {}, Lorg/telegram/messenger/ApplicationLoader;->getFilesDirFixed()Ljava/io/File;
@@ -367,14 +367,14 @@
 .method private getKey()Ljava/lang/String;
     .registers 4
 
-    .line 1872
+    .line 1878
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/Theme$OverrideWallpaperInfo;->parentAccent:Lorg/telegram/ui/ActionBar/Theme$ThemeAccent;
 
     const-string v1, "_owp"
 
     if-eqz v0, :cond_26
 
-    .line 1873
+    .line 1879
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -403,7 +403,7 @@
 
     return-object v0
 
-    .line 1875
+    .line 1881
     :cond_26
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -427,13 +427,13 @@
 .method private save()V
     .registers 7
 
-    .line 1881
+    .line 1887
     :try_start_0
     invoke-direct {p0}, Lorg/telegram/ui/ActionBar/Theme$OverrideWallpaperInfo;->getKey()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1882
+    .line 1888
     sget-object v1, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     const-string v2, "themeconfig"
@@ -444,68 +444,68 @@
 
     move-result-object v1
 
-    .line 1883
+    .line 1889
     invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v1
 
-    .line 1884
+    .line 1890
     new-instance v2, Lorg/json/JSONObject;
 
     invoke-direct {v2}, Lorg/json/JSONObject;-><init>()V
 
     const-string v3, "wall"
 
-    .line 1885
+    .line 1891
     iget-object v4, p0, Lorg/telegram/ui/ActionBar/Theme$OverrideWallpaperInfo;->fileName:Ljava/lang/String;
 
     invoke-virtual {v2, v3, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
     const-string v3, "owall"
 
-    .line 1886
+    .line 1892
     iget-object v4, p0, Lorg/telegram/ui/ActionBar/Theme$OverrideWallpaperInfo;->originalFileName:Ljava/lang/String;
 
     invoke-virtual {v2, v3, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
     const-string v3, "pColor"
 
-    .line 1887
+    .line 1893
     iget v4, p0, Lorg/telegram/ui/ActionBar/Theme$OverrideWallpaperInfo;->color:I
 
     invoke-virtual {v2, v3, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
 
     const-string v3, "pGrColor"
 
-    .line 1888
+    .line 1894
     iget v4, p0, Lorg/telegram/ui/ActionBar/Theme$OverrideWallpaperInfo;->gradientColor1:I
 
     invoke-virtual {v2, v3, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
 
     const-string v3, "pGrColor2"
 
-    .line 1889
+    .line 1895
     iget v4, p0, Lorg/telegram/ui/ActionBar/Theme$OverrideWallpaperInfo;->gradientColor2:I
 
     invoke-virtual {v2, v3, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
 
     const-string v3, "pGrColor3"
 
-    .line 1890
+    .line 1896
     iget v4, p0, Lorg/telegram/ui/ActionBar/Theme$OverrideWallpaperInfo;->gradientColor3:I
 
     invoke-virtual {v2, v3, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
 
     const-string v3, "pGrAngle"
 
-    .line 1891
+    .line 1897
     iget v4, p0, Lorg/telegram/ui/ActionBar/Theme$OverrideWallpaperInfo;->rotation:I
 
     invoke-virtual {v2, v3, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
 
     const-string v3, "wallSlug"
 
-    .line 1892
+    .line 1898
     iget-object v4, p0, Lorg/telegram/ui/ActionBar/Theme$OverrideWallpaperInfo;->slug:Ljava/lang/String;
 
     if-eqz v4, :cond_4e
@@ -520,35 +520,35 @@
 
     const-string v3, "wBlur"
 
-    .line 1893
+    .line 1899
     iget-boolean v4, p0, Lorg/telegram/ui/ActionBar/Theme$OverrideWallpaperInfo;->isBlurred:Z
 
     invoke-virtual {v2, v3, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Z)Lorg/json/JSONObject;
 
     const-string v3, "wMotion"
 
-    .line 1894
+    .line 1900
     iget-boolean v4, p0, Lorg/telegram/ui/ActionBar/Theme$OverrideWallpaperInfo;->isMotion:Z
 
     invoke-virtual {v2, v3, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Z)Lorg/json/JSONObject;
 
     const-string v3, "pIntensity"
 
-    .line 1895
+    .line 1901
     iget v4, p0, Lorg/telegram/ui/ActionBar/Theme$OverrideWallpaperInfo;->intensity:F
 
     float-to-double v4, v4
 
     invoke-virtual {v2, v3, v4, v5}, Lorg/json/JSONObject;->put(Ljava/lang/String;D)Lorg/json/JSONObject;
 
-    .line 1896
+    .line 1902
     invoke-virtual {v2}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
 
     move-result-object v2
 
     invoke-interface {v1, v0, v2}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
-    .line 1897
+    .line 1903
     invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->commit()Z
     :try_end_73
     .catchall {:try_start_0 .. :try_end_73} :catchall_74
@@ -558,7 +558,7 @@
     :catchall_74
     move-exception v0
 
-    .line 1899
+    .line 1905
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     :goto_78
@@ -570,7 +570,7 @@
 .method public isColor()Z
     .registers 3
 
-    .line 1857
+    .line 1863
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/Theme$OverrideWallpaperInfo;->slug:Ljava/lang/String;
 
     const-string v1, "c"
@@ -585,7 +585,7 @@
 .method public isDefault()Z
     .registers 3
 
-    .line 1853
+    .line 1859
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/Theme$OverrideWallpaperInfo;->slug:Ljava/lang/String;
 
     const-string v1, "d"
@@ -600,7 +600,7 @@
 .method public isTheme()Z
     .registers 3
 
-    .line 1861
+    .line 1867
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/Theme$OverrideWallpaperInfo;->slug:Ljava/lang/String;
 
     const-string v1, "t"
@@ -615,7 +615,7 @@
 .method public saveOverrideWallpaper()V
     .registers 3
 
-    .line 1865
+    .line 1871
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/Theme$OverrideWallpaperInfo;->parentTheme:Lorg/telegram/ui/ActionBar/Theme$ThemeInfo;
 
     if-eqz v0, :cond_16
@@ -637,7 +637,7 @@
 
     goto :goto_16
 
-    .line 1868
+    .line 1874
     :cond_13
     invoke-direct {p0}, Lorg/telegram/ui/ActionBar/Theme$OverrideWallpaperInfo;->save()V
 

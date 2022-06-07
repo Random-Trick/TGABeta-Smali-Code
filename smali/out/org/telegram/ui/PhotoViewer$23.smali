@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/PhotoViewer;Landroid/content/Context;)V
     .registers 3
 
-    .line 4884
+    .line 5004
     iput-object p1, p0, Lorg/telegram/ui/PhotoViewer$23;->this$0:Lorg/telegram/ui/PhotoViewer;
 
     invoke-direct {p0, p2}, Lorg/telegram/ui/Components/VideoTimelinePlayView;-><init>(Landroid/content/Context;)V
@@ -35,7 +35,7 @@
 .method public setTranslationY(F)V
     .registers 3
 
-    .line 4887
+    .line 5007
     invoke-virtual {p0}, Landroid/view/View;->getTranslationY()F
 
     move-result v0
@@ -44,10 +44,10 @@
 
     if-eqz v0, :cond_14
 
-    .line 4888
+    .line 5008
     invoke-super {p0, p1}, Landroid/view/View;->setTranslationY(F)V
 
-    .line 4889
+    .line 5009
     iget-object p1, p0, Lorg/telegram/ui/PhotoViewer$23;->this$0:Lorg/telegram/ui/PhotoViewer;
 
     invoke-static {p1}, Lorg/telegram/ui/PhotoViewer;->access$1200(Lorg/telegram/ui/PhotoViewer;)Lorg/telegram/ui/PhotoViewer$FrameLayoutDrawer;

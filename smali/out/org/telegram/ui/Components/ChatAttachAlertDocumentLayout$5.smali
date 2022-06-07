@@ -24,12 +24,12 @@
 .method constructor <init>(Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout;Landroid/content/Context;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)V
     .registers 4
 
-    .line 317
+    .line 318
     iput-object p1, p0, Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout$5;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout;
 
     invoke-direct {p0, p2, p3}, Lorg/telegram/ui/Components/RecyclerListView;-><init>(Landroid/content/Context;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)V
 
-    .line 319
+    .line 320
     new-instance p1, Landroid/graphics/Paint;
 
     invoke-direct {p1}, Landroid/graphics/Paint;-><init>()V
@@ -44,7 +44,7 @@
 .method protected dispatchDraw(Landroid/graphics/Canvas;)V
     .registers 5
 
-    .line 322
+    .line 323
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout$5;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout;->access$1200(Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout;)I
@@ -65,7 +65,7 @@
 
     const/4 v1, 0x0
 
-    .line 324
+    .line 325
     :goto_12
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
 
@@ -73,7 +73,7 @@
 
     if-ge v1, v2, :cond_2f
 
-    .line 325
+    .line 326
     invoke-virtual {p0, v1}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v2
@@ -86,7 +86,7 @@
 
     if-gez v2, :cond_2c
 
-    .line 326
+    .line 327
     invoke-virtual {p0, v1}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v0
@@ -100,7 +100,7 @@
 
     goto :goto_12
 
-    .line 329
+    .line 330
     :cond_2f
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout$5;->paint:Landroid/graphics/Paint;
 
@@ -112,7 +112,7 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 332
+    .line 333
     :cond_3a
     invoke-super {p0, p1}, Lorg/telegram/ui/Components/RecyclerListView;->dispatchDraw(Landroid/graphics/Canvas;)V
 

@@ -26,7 +26,7 @@
 .method constructor <init>(Lorg/telegram/ui/PhotoViewer;ZZ)V
     .registers 4
 
-    .line 7986
+    .line 8169
     iput-object p1, p0, Lorg/telegram/ui/PhotoViewer$53;->this$0:Lorg/telegram/ui/PhotoViewer;
 
     iput-boolean p2, p0, Lorg/telegram/ui/PhotoViewer$53;->val$visible:Z
@@ -43,17 +43,17 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .registers 3
 
-    .line 7989
+    .line 8172
     iget-boolean p1, p0, Lorg/telegram/ui/PhotoViewer$53;->val$visible:Z
 
     const/16 v0, 0x8
 
     if-nez p1, :cond_10
 
-    .line 7990
+    .line 8173
     iget-object p1, p0, Lorg/telegram/ui/PhotoViewer$53;->this$0:Lorg/telegram/ui/PhotoViewer;
 
-    invoke-static {p1}, Lorg/telegram/ui/PhotoViewer;->access$9000(Lorg/telegram/ui/PhotoViewer;)Lorg/telegram/ui/PhotoViewer$VideoPlayerControlFrameLayout;
+    invoke-static {p1}, Lorg/telegram/ui/PhotoViewer;->access$8900(Lorg/telegram/ui/PhotoViewer;)Lorg/telegram/ui/PhotoViewer$VideoPlayerControlFrameLayout;
 
     move-result-object p1
 
@@ -61,7 +61,7 @@
 
     goto :goto_2f
 
-    .line 7992
+    .line 8175
     :cond_10
     iget-object p1, p0, Lorg/telegram/ui/PhotoViewer$53;->this$0:Lorg/telegram/ui/PhotoViewer;
 
@@ -71,7 +71,7 @@
 
     invoke-virtual {p1, v0}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
-    .line 7993
+    .line 8176
     iget-object p1, p0, Lorg/telegram/ui/PhotoViewer$53;->this$0:Lorg/telegram/ui/PhotoViewer;
 
     invoke-static {p1}, Lorg/telegram/ui/PhotoViewer;->access$16600(Lorg/telegram/ui/PhotoViewer;)Lorg/telegram/ui/Components/FadingTextViewLayout;
@@ -80,12 +80,12 @@
 
     invoke-virtual {p1, v0}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
-    .line 7994
+    .line 8177
     iget-boolean p1, p0, Lorg/telegram/ui/PhotoViewer$53;->val$shareWasAllowed:Z
 
     if-eqz p1, :cond_2f
 
-    .line 7995
+    .line 8178
     iget-object p1, p0, Lorg/telegram/ui/PhotoViewer$53;->this$0:Lorg/telegram/ui/PhotoViewer;
 
     invoke-static {p1}, Lorg/telegram/ui/PhotoViewer;->access$16800(Lorg/telegram/ui/PhotoViewer;)Landroid/widget/LinearLayout;

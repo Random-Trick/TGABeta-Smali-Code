@@ -512,14 +512,14 @@
 
     if-eqz v2, :cond_ca
 
-    const v2, 0x7f0e12ed
+    const v2, 0x7f0e13bb
 
     const-string v3, "VoipChannelVoiceChat"
 
     goto :goto_cf
 
     :cond_ca
-    const v2, 0x7f0e136f
+    const v2, 0x7f0e143d
 
     const-string v3, "VoipGroupVoiceChat"
 
@@ -539,14 +539,14 @@
 
     if-eqz v2, :cond_e3
 
-    const v2, 0x7f0e12d3
+    const v2, 0x7f0e13a1
 
     const-string v3, "VoipChannelJoinAnonymouseAlert"
 
     goto :goto_e8
 
     :cond_e3
-    const v2, 0x7f0e132c
+    const v2, 0x7f0e13fa
 
     const-string v3, "VoipGroupJoinAnonymouseAlert"
 
@@ -559,7 +559,7 @@
 
     move-result-object v12
 
-    const v1, 0x7f0e12f1
+    const v1, 0x7f0e13bf
 
     const-string v2, "VoipChatJoin"
 
@@ -598,7 +598,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0e0331
+    const v1, 0x7f0e036d
 
     const-string v2, "Cancel"
 
@@ -1635,14 +1635,14 @@
 
     if-lez v12, :cond_97
 
-    const v4, 0x7f0e1390
+    const v4, 0x7f0e145e
 
     const-string v5, "VoipOngoingAlert"
 
     goto :goto_b2
 
     :cond_97
-    const v4, 0x7f0e1391    # 1.8885197E38f
+    const v4, 0x7f0e145f
 
     const-string v5, "VoipOngoingAlert2"
 
@@ -1661,14 +1661,14 @@
 
     if-lez v12, :cond_ad
 
-    const v4, 0x7f0e1394
+    const v4, 0x7f0e1462
 
     const-string v5, "VoipOngoingChatAlert2"
 
     goto :goto_b2
 
     :cond_ad
-    const v4, 0x7f0e1393
+    const v4, 0x7f0e1461
 
     const-string v5, "VoipOngoingChatAlert"
 
@@ -1700,14 +1700,14 @@
 
     if-gez v14, :cond_ce
 
-    const v6, 0x7f0e1395
+    const v6, 0x7f0e1463
 
     const-string v7, "VoipOngoingChatAlertTitle"
 
     goto :goto_d3
 
     :cond_ce
-    const v6, 0x7f0e1392
+    const v6, 0x7f0e1460
 
     const-string v7, "VoipOngoingAlertTitle"
 
@@ -1744,7 +1744,7 @@
 
     move-result-object v10
 
-    const v0, 0x7f0e0bae
+    const v0, 0x7f0e0c38
 
     const-string v3, "OK"
 
@@ -1781,7 +1781,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0e0331
+    const v1, 0x7f0e036d
 
     const-string v2, "Cancel"
 
@@ -2460,14 +2460,14 @@
 
     if-ge p1, v0, :cond_13
 
-    const p1, 0x7f0e0aa0
+    const p1, 0x7f0e0b27
 
     const-string v0, "Next"
 
     goto :goto_18
 
     :cond_13
-    const p1, 0x7f0e0fc6
+    const p1, 0x7f0e1083
 
     const-string v0, "Send"
 
@@ -2571,7 +2571,7 @@
 
     invoke-static/range {v1 .. v14}, Lorg/telegram/messenger/SendMessagesHelper;->prepareSendingDocument(Lorg/telegram/messenger/AccountInstance;Ljava/lang/String;Ljava/lang/String;Landroid/net/Uri;Ljava/lang/String;Ljava/lang/String;JLorg/telegram/messenger/MessageObject;Lorg/telegram/messenger/MessageObject;Landroidx/core/view/inputmethod/InputContentInfoCompat;Lorg/telegram/messenger/MessageObject;ZI)V
 
-    const v0, 0x7f0e0320
+    const v0, 0x7f0e035c
 
     const-string v1, "CallReportSent"
 
@@ -2635,7 +2635,7 @@
     .line 601
     invoke-virtual {v3, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
-    const v1, 0x7f0e031d
+    const v1, 0x7f0e0359
 
     const-string v3, "CallReportHint"
 
@@ -2679,7 +2679,7 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    const v1, 0x7f0e0fc6
+    const v1, 0x7f0e1083
 
     const-string v2, "Send"
 
@@ -2973,14 +2973,14 @@
 
     if-eqz p2, :cond_27
 
-    const v2, 0x7f0e1384
+    const v2, 0x7f0e1452
 
     const-string v3, "VoipNeedMicCameraPermissionWithHint"
 
     goto :goto_2c
 
     :cond_27
-    const v2, 0x7f0e1386
+    const v2, 0x7f0e1454
 
     const-string v3, "VoipNeedMicPermissionWithHint"
 
@@ -2998,7 +2998,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0e1019
+    const v2, 0x7f0e10d7
 
     const-string v3, "Settings"
 
@@ -3015,7 +3015,7 @@
 
     move-result-object p0
 
-    const v1, 0x7f0e04c7
+    const v1, 0x7f0e0516
 
     const-string v2, "ContactsPermissionAlertNotNow"
 
@@ -3233,7 +3233,7 @@
 
     invoke-direct {v0, p0}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    const p0, 0x7f0e0523
+    const p0, 0x7f0e0572
 
     const-string v2, "DebugMenuCallSettings"
 
@@ -3354,7 +3354,7 @@
 
     const-string v6, "VoipRateCallAlert"
 
-    const v7, 0x7f0e139f
+    const v7, 0x7f0e146d
 
     .line 428
     invoke-static {v6, v7}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -3506,7 +3506,7 @@
     goto :goto_113
 
     :pswitch_ba
-    const v0, 0x7f0e0e7d
+    const v0, 0x7f0e0f28
 
     const-string v5, "RateCallDropped"
 
@@ -3518,7 +3518,7 @@
     goto :goto_113
 
     :pswitch_c4
-    const v0, 0x7f0e0e82
+    const v0, 0x7f0e0f2d
 
     const-string v5, "RateCallSilentRemote"
 
@@ -3530,7 +3530,7 @@
     goto :goto_113
 
     :pswitch_ce
-    const v0, 0x7f0e0e81
+    const v0, 0x7f0e0f2c
 
     const-string v5, "RateCallSilentLocal"
 
@@ -3542,7 +3542,7 @@
     goto :goto_113
 
     :pswitch_d8
-    const v0, 0x7f0e0e7c
+    const v0, 0x7f0e0f27
 
     const-string v5, "RateCallDistorted"
 
@@ -3554,7 +3554,7 @@
     goto :goto_113
 
     :pswitch_e2
-    const v0, 0x7f0e0e7f
+    const v0, 0x7f0e0f2a
 
     const-string v5, "RateCallInterruptions"
 
@@ -3566,7 +3566,7 @@
     goto :goto_113
 
     :pswitch_ec
-    const v0, 0x7f0e0e80
+    const v0, 0x7f0e0f2b
 
     const-string v5, "RateCallNoise"
 
@@ -3578,7 +3578,7 @@
     goto :goto_113
 
     :pswitch_f6
-    const v0, 0x7f0e0e7e
+    const v0, 0x7f0e0f29
 
     const-string v5, "RateCallEcho"
 
@@ -3590,7 +3590,7 @@
     goto :goto_113
 
     :pswitch_100
-    const v0, 0x7f0e0e84
+    const v0, 0x7f0e0f2f
 
     const-string v5, "RateCallVideoPixelated"
 
@@ -3602,7 +3602,7 @@
     goto :goto_113
 
     :pswitch_10a
-    const v0, 0x7f0e0e83
+    const v0, 0x7f0e0f2e
 
     const-string v5, "RateCallVideoDistorted"
 
@@ -3667,7 +3667,7 @@
 
     invoke-direct {v5, v13}, Lorg/telegram/ui/Components/EditTextBoldCursor;-><init>(Landroid/content/Context;)V
 
-    const v0, 0x7f0e1305
+    const v0, 0x7f0e13d3
 
     const-string v8, "VoipFeedbackCommentHint"
 
@@ -3777,7 +3777,7 @@
 
     invoke-direct {v4, v8, v14}, Lorg/telegram/ui/Components/voip/VoIPHelper$$ExternalSyntheticLambda13;-><init>([ZLorg/telegram/ui/Cells/CheckBoxCell;)V
 
-    const v9, 0x7f0e031e
+    const v9, 0x7f0e035a
 
     const-string v10, "CallReportIncludeLogs"
 
@@ -3828,7 +3828,7 @@
 
     invoke-virtual {v10, v0}, Landroid/widget/TextView;->setTextColor(I)V
 
-    const v0, 0x7f0e031f
+    const v0, 0x7f0e035b
 
     const-string v9, "CallReportLogsExplain"
 
@@ -3881,7 +3881,7 @@
 
     invoke-direct {v0, v13}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    const v4, 0x7f0e0315
+    const v4, 0x7f0e0351
 
     const-string v9, "CallMessageReportProblem"
 
@@ -3899,7 +3899,7 @@
 
     move-result-object v0
 
-    const v3, 0x7f0e0fc6
+    const v3, 0x7f0e1083
 
     const-string v4, "Send"
 
@@ -3914,7 +3914,7 @@
 
     move-result-object v0
 
-    const v3, 0x7f0e0331
+    const v3, 0x7f0e036d
 
     const-string v4, "Cancel"
 
@@ -4251,14 +4251,14 @@
 
     if-eqz v3, :cond_2d
 
-    const v2, 0x7f0e138d
+    const v2, 0x7f0e145b
 
     const-string v4, "VoipOfflineAirplaneTitle"
 
     goto :goto_32
 
     :cond_2d
-    const v2, 0x7f0e138f
+    const v2, 0x7f0e145d
 
     const-string v4, "VoipOfflineTitle"
 
@@ -4274,14 +4274,14 @@
 
     if-eqz v3, :cond_42
 
-    const v2, 0x7f0e133d
+    const v2, 0x7f0e140b
 
     const-string v4, "VoipGroupOfflineAirplane"
 
     goto :goto_47
 
     :cond_42
-    const v2, 0x7f0e133c
+    const v2, 0x7f0e140a
 
     const-string v4, "VoipGroupOffline"
 
@@ -4295,7 +4295,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0e0bae
+    const v2, 0x7f0e0c38
 
     const-string v4, "OK"
 
@@ -4330,7 +4330,7 @@
 
     if-eqz v3, :cond_81
 
-    const v3, 0x7f0e138e
+    const v3, 0x7f0e145c
 
     const-string v4, "VoipOfflineOpenSettings"
 
@@ -4510,7 +4510,7 @@
 
     const/4 v2, 0x0
 
-    const v3, 0x7f0e0bae
+    const v3, 0x7f0e0c38
 
     const-string v4, "OK"
 
@@ -4530,7 +4530,7 @@
 
     invoke-direct {v1, p3}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    const v7, 0x7f0e1304
+    const v7, 0x7f0e13d2
 
     const-string v8, "VoipFailed"
 
@@ -4543,7 +4543,7 @@
 
     move-result-object v1
 
-    const v7, 0x7f0e031c
+    const v7, 0x7f0e0358
 
     new-array v5, v5, [Ljava/lang/Object;
 
@@ -4629,14 +4629,14 @@
 
     if-eqz v5, :cond_74
 
-    const v1, 0x7f0e138d
+    const v1, 0x7f0e145b
 
     const-string v6, "VoipOfflineAirplaneTitle"
 
     goto :goto_79
 
     :cond_74
-    const v1, 0x7f0e138f
+    const v1, 0x7f0e145d
 
     const-string v6, "VoipOfflineTitle"
 
@@ -4652,14 +4652,14 @@
 
     if-eqz v5, :cond_89
 
-    const v1, 0x7f0e138c
+    const v1, 0x7f0e145a
 
     const-string v6, "VoipOfflineAirplane"
 
     goto :goto_8e
 
     :cond_89
-    const v1, 0x7f0e138b
+    const v1, 0x7f0e1459
 
     const-string v6, "VoipOffline"
 
@@ -4702,7 +4702,7 @@
 
     if-eqz v2, :cond_c2
 
-    const v2, 0x7f0e138e
+    const v2, 0x7f0e145c
 
     const-string v3, "VoipOfflineOpenSettings"
 

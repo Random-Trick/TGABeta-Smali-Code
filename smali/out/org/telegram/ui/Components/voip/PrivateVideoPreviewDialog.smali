@@ -329,7 +329,7 @@
     .line 211
     iget-object v2, v0, Lorg/telegram/ui/Components/voip/PrivateVideoPreviewDialog;->positiveButton:Landroid/widget/TextView;
 
-    const v9, 0x7f0e13ad
+    const v9, 0x7f0e147b
 
     const-string v10, "VoipShareVideo"
 
@@ -539,7 +539,7 @@
 
     aget-object v9, v9, v2
 
-    const v11, 0x7f0e139c
+    const v11, 0x7f0e146a
 
     const-string v13, "VoipPhoneScreen"
 
@@ -569,7 +569,7 @@
 
     aget-object v9, v9, v2
 
-    const v11, 0x7f0e12c6
+    const v11, 0x7f0e1394
 
     const-string v13, "VoipBackCamera"
 
@@ -588,7 +588,7 @@
 
     aget-object v9, v9, v2
 
-    const v11, 0x7f0e1307
+    const v11, 0x7f0e13d5
 
     const-string v13, "VoipFrontCamera"
 
@@ -761,7 +761,7 @@
     .line 281
     new-instance v1, Lorg/telegram/ui/Components/RLottieDrawable;
 
-    const v5, 0x7f0d009c
+    const v5, 0x7f0d009f
 
     const/high16 v2, 0x41c00000    # 24.0f
 
@@ -777,7 +777,7 @@
 
     const/4 v10, 0x0
 
-    const-string v6, "2131558556"
+    const-string v6, "2131558559"
 
     move-object v4, v1
 

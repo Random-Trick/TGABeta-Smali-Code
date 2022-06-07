@@ -280,7 +280,7 @@
 
     const-string v2, "StatisticViews"
 
-    const v3, 0x7f0e10c9
+    const v3, 0x7f0e1188
 
     invoke-static {v2, v3}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
@@ -330,7 +330,7 @@
 
     aget-object v0, v0, v3
 
-    const v3, 0x7f0e0e41
+    const v3, 0x7f0e0eec
 
     new-array v4, v1, [Ljava/lang/Object;
 
@@ -399,7 +399,7 @@
 
     aget-object v0, v0, v3
 
-    const v2, 0x7f0e0e23
+    const v2, 0x7f0e0ecc
 
     new-array v1, v1, [Ljava/lang/Object;
 

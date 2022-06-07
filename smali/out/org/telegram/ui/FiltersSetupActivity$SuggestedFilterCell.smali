@@ -30,10 +30,10 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .registers 14
 
-    .line 137
+    .line 142
     invoke-direct {p0, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    .line 139
+    .line 144
     new-instance v0, Landroid/widget/TextView;
 
     invoke-direct {v0, p1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
@@ -42,14 +42,14 @@
 
     const-string v1, "windowBackgroundWhiteBlackText"
 
-    .line 140
+    .line 145
     invoke-static {v1}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
 
     move-result v1
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 141
+    .line 146
     iget-object v0, p0, Lorg/telegram/ui/FiltersSetupActivity$SuggestedFilterCell;->textView:Landroid/widget/TextView;
 
     const/4 v1, 0x1
@@ -58,29 +58,29 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/widget/TextView;->setTextSize(IF)V
 
-    .line 142
+    .line 147
     iget-object v0, p0, Lorg/telegram/ui/FiltersSetupActivity$SuggestedFilterCell;->textView:Landroid/widget/TextView;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setLines(I)V
 
-    .line 143
+    .line 148
     iget-object v0, p0, Lorg/telegram/ui/FiltersSetupActivity$SuggestedFilterCell;->textView:Landroid/widget/TextView;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setMaxLines(I)V
 
-    .line 144
+    .line 149
     iget-object v0, p0, Lorg/telegram/ui/FiltersSetupActivity$SuggestedFilterCell;->textView:Landroid/widget/TextView;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setSingleLine(Z)V
 
-    .line 145
+    .line 150
     iget-object v0, p0, Lorg/telegram/ui/FiltersSetupActivity$SuggestedFilterCell;->textView:Landroid/widget/TextView;
 
     sget-object v2, Landroid/text/TextUtils$TruncateAt;->END:Landroid/text/TextUtils$TruncateAt;
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setEllipsize(Landroid/text/TextUtils$TruncateAt;)V
 
-    .line 146
+    .line 151
     iget-object v0, p0, Lorg/telegram/ui/FiltersSetupActivity$SuggestedFilterCell;->textView:Landroid/widget/TextView;
 
     sget-boolean v2, Lorg/telegram/messenger/LocaleController;->isRTL:Z
@@ -101,7 +101,7 @@
     :goto_3c
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setGravity(I)V
 
-    .line 147
+    .line 152
     iget-object v0, p0, Lorg/telegram/ui/FiltersSetupActivity$SuggestedFilterCell;->textView:Landroid/widget/TextView;
 
     const/4 v5, -0x2
@@ -134,7 +134,7 @@
 
     invoke-virtual {p0, v0, v2}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 149
+    .line 154
     new-instance v0, Landroid/widget/TextView;
 
     invoke-direct {v0, p1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
@@ -143,43 +143,43 @@
 
     const-string v2, "windowBackgroundWhiteGrayText2"
 
-    .line 150
+    .line 155
     invoke-static {v2}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
 
     move-result v2
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 151
+    .line 156
     iget-object v0, p0, Lorg/telegram/ui/FiltersSetupActivity$SuggestedFilterCell;->valueTextView:Landroid/widget/TextView;
 
     const/high16 v2, 0x41500000    # 13.0f
 
     invoke-virtual {v0, v1, v2}, Landroid/widget/TextView;->setTextSize(IF)V
 
-    .line 152
+    .line 157
     iget-object v0, p0, Lorg/telegram/ui/FiltersSetupActivity$SuggestedFilterCell;->valueTextView:Landroid/widget/TextView;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setLines(I)V
 
-    .line 153
+    .line 158
     iget-object v0, p0, Lorg/telegram/ui/FiltersSetupActivity$SuggestedFilterCell;->valueTextView:Landroid/widget/TextView;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setMaxLines(I)V
 
-    .line 154
+    .line 159
     iget-object v0, p0, Lorg/telegram/ui/FiltersSetupActivity$SuggestedFilterCell;->valueTextView:Landroid/widget/TextView;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setSingleLine(Z)V
 
-    .line 155
+    .line 160
     iget-object v0, p0, Lorg/telegram/ui/FiltersSetupActivity$SuggestedFilterCell;->valueTextView:Landroid/widget/TextView;
 
     sget-object v1, Landroid/text/TextUtils$TruncateAt;->END:Landroid/text/TextUtils$TruncateAt;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setEllipsize(Landroid/text/TextUtils$TruncateAt;)V
 
-    .line 156
+    .line 161
     iget-object v0, p0, Lorg/telegram/ui/FiltersSetupActivity$SuggestedFilterCell;->valueTextView:Landroid/widget/TextView;
 
     sget-boolean v1, Lorg/telegram/messenger/LocaleController;->isRTL:Z
@@ -196,7 +196,7 @@
     :goto_8f
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setGravity(I)V
 
-    .line 157
+    .line 162
     iget-object v0, p0, Lorg/telegram/ui/FiltersSetupActivity$SuggestedFilterCell;->valueTextView:Landroid/widget/TextView;
 
     const/4 v5, -0x2
@@ -229,25 +229,25 @@
 
     invoke-virtual {p0, v0, v1}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 159
+    .line 164
     new-instance v0, Lorg/telegram/ui/Components/ProgressButton;
 
     invoke-direct {v0, p1}, Lorg/telegram/ui/Components/ProgressButton;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lorg/telegram/ui/FiltersSetupActivity$SuggestedFilterCell;->addButton:Lorg/telegram/ui/Components/ProgressButton;
 
-    const p1, 0x7f0e0104
+    const p1, 0x7f0e012c
 
     const-string v1, "Add"
 
-    .line 160
+    .line 165
     invoke-static {v1, p1}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object p1
 
     invoke-virtual {v0, p1}, Landroid/widget/Button;->setText(Ljava/lang/CharSequence;)V
 
-    .line 161
+    .line 166
     iget-object p1, p0, Lorg/telegram/ui/FiltersSetupActivity$SuggestedFilterCell;->addButton:Lorg/telegram/ui/Components/ProgressButton;
 
     const-string v0, "featuredStickers_buttonText"
@@ -258,7 +258,7 @@
 
     invoke-virtual {p1, v0}, Landroid/widget/Button;->setTextColor(I)V
 
-    .line 162
+    .line 167
     iget-object p1, p0, Lorg/telegram/ui/FiltersSetupActivity$SuggestedFilterCell;->addButton:Lorg/telegram/ui/Components/ProgressButton;
 
     const-string v0, "featuredStickers_buttonProgress"
@@ -269,7 +269,7 @@
 
     invoke-virtual {p1, v0}, Lorg/telegram/ui/Components/ProgressButton;->setProgressColor(I)V
 
-    .line 163
+    .line 168
     iget-object p1, p0, Lorg/telegram/ui/FiltersSetupActivity$SuggestedFilterCell;->addButton:Lorg/telegram/ui/Components/ProgressButton;
 
     const-string v0, "featuredStickers_addButton"
@@ -286,7 +286,7 @@
 
     invoke-virtual {p1, v0, v1}, Lorg/telegram/ui/Components/ProgressButton;->setBackgroundRoundRect(II)V
 
-    .line 164
+    .line 169
     iget-object p1, p0, Lorg/telegram/ui/FiltersSetupActivity$SuggestedFilterCell;->addButton:Lorg/telegram/ui/Components/ProgressButton;
 
     const/high16 v0, -0x40000000    # -2.0f
@@ -317,7 +317,7 @@
 .method public getSuggestedFilter()Lorg/telegram/tgnet/TLRPC$TL_dialogFilterSuggested;
     .registers 2
 
-    .line 185
+    .line 190
     iget-object v0, p0, Lorg/telegram/ui/FiltersSetupActivity$SuggestedFilterCell;->suggestedFilter:Lorg/telegram/tgnet/TLRPC$TL_dialogFilterSuggested;
 
     return-object v0
@@ -326,14 +326,14 @@
 .method protected onDraw(Landroid/graphics/Canvas;)V
     .registers 9
 
-    .line 194
+    .line 199
     iget-boolean v0, p0, Lorg/telegram/ui/FiltersSetupActivity$SuggestedFilterCell;->needDivider:Z
 
     if-eqz v0, :cond_23
 
     const/4 v2, 0x0
 
-    .line 195
+    .line 200
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getHeight()I
 
     move-result v0
@@ -372,10 +372,38 @@
     return-void
 .end method
 
+.method public onInitializeAccessibilityNodeInfo(Landroid/view/accessibility/AccessibilityNodeInfo;)V
+    .registers 3
+
+    .line 206
+    invoke-super {p0, p1}, Landroid/widget/FrameLayout;->onInitializeAccessibilityNodeInfo(Landroid/view/accessibility/AccessibilityNodeInfo;)V
+
+    const/4 v0, 0x1
+
+    .line 207
+    invoke-virtual {p1, v0}, Landroid/view/accessibility/AccessibilityNodeInfo;->setEnabled(Z)V
+
+    .line 208
+    iget-object v0, p0, Lorg/telegram/ui/FiltersSetupActivity$SuggestedFilterCell;->addButton:Lorg/telegram/ui/Components/ProgressButton;
+
+    invoke-virtual {v0}, Landroid/widget/Button;->getText()Ljava/lang/CharSequence;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Landroid/view/accessibility/AccessibilityNodeInfo;->setText(Ljava/lang/CharSequence;)V
+
+    const-string v0, "android.widget.Button"
+
+    .line 209
+    invoke-virtual {p1, v0}, Landroid/view/accessibility/AccessibilityNodeInfo;->setClassName(Ljava/lang/CharSequence;)V
+
+    return-void
+.end method
+
 .method protected onMeasure(II)V
     .registers 9
 
-    .line 169
+    .line 174
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result v0
@@ -388,7 +416,7 @@
 
     invoke-virtual {p0, v0, v1}, Landroid/widget/FrameLayout;->setMeasuredDimension(II)V
 
-    .line 170
+    .line 175
     iget-object v1, p0, Lorg/telegram/ui/FiltersSetupActivity$SuggestedFilterCell;->addButton:Lorg/telegram/ui/Components/ProgressButton;
 
     const/4 v3, 0x0
@@ -403,7 +431,7 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/widget/FrameLayout;->measureChildWithMargins(Landroid/view/View;IIII)V
 
-    .line 171
+    .line 176
     iget-object v1, p0, Lorg/telegram/ui/FiltersSetupActivity$SuggestedFilterCell;->textView:Landroid/widget/TextView;
 
     iget-object v0, p0, Lorg/telegram/ui/FiltersSetupActivity$SuggestedFilterCell;->addButton:Lorg/telegram/ui/Components/ProgressButton;
@@ -416,7 +444,7 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/widget/FrameLayout;->measureChildWithMargins(Landroid/view/View;IIII)V
 
-    .line 172
+    .line 177
     iget-object v1, p0, Lorg/telegram/ui/FiltersSetupActivity$SuggestedFilterCell;->valueTextView:Landroid/widget/TextView;
 
     iget-object v0, p0, Lorg/telegram/ui/FiltersSetupActivity$SuggestedFilterCell;->addButton:Lorg/telegram/ui/Components/ProgressButton;
@@ -435,7 +463,7 @@
 .method public setAddOnClickListener(Landroid/view/View$OnClickListener;)V
     .registers 3
 
-    .line 189
+    .line 194
     iget-object v0, p0, Lorg/telegram/ui/FiltersSetupActivity$SuggestedFilterCell;->addButton:Lorg/telegram/ui/Components/ProgressButton;
 
     invoke-virtual {v0, p1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
@@ -446,27 +474,27 @@
 .method public setFilter(Lorg/telegram/tgnet/TLRPC$TL_dialogFilterSuggested;Z)V
     .registers 4
 
-    .line 176
+    .line 181
     iput-boolean p2, p0, Lorg/telegram/ui/FiltersSetupActivity$SuggestedFilterCell;->needDivider:Z
 
-    .line 177
+    .line 182
     iput-object p1, p0, Lorg/telegram/ui/FiltersSetupActivity$SuggestedFilterCell;->suggestedFilter:Lorg/telegram/tgnet/TLRPC$TL_dialogFilterSuggested;
 
     xor-int/lit8 p2, p2, 0x1
 
-    .line 178
+    .line 183
     invoke-virtual {p0, p2}, Landroid/widget/FrameLayout;->setWillNotDraw(Z)V
 
-    .line 180
+    .line 185
     iget-object p2, p0, Lorg/telegram/ui/FiltersSetupActivity$SuggestedFilterCell;->textView:Landroid/widget/TextView;
 
-    iget-object v0, p1, Lorg/telegram/tgnet/TLRPC$TL_dialogFilterSuggested;->filter:Lorg/telegram/tgnet/TLRPC$TL_dialogFilter;
+    iget-object v0, p1, Lorg/telegram/tgnet/TLRPC$TL_dialogFilterSuggested;->filter:Lorg/telegram/tgnet/TLRPC$DialogFilter;
 
-    iget-object v0, v0, Lorg/telegram/tgnet/TLRPC$TL_dialogFilter;->title:Ljava/lang/String;
+    iget-object v0, v0, Lorg/telegram/tgnet/TLRPC$DialogFilter;->title:Ljava/lang/String;
 
     invoke-virtual {p2, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 181
+    .line 186
     iget-object p2, p0, Lorg/telegram/ui/FiltersSetupActivity$SuggestedFilterCell;->valueTextView:Landroid/widget/TextView;
 
     iget-object p1, p1, Lorg/telegram/tgnet/TLRPC$TL_dialogFilterSuggested;->description:Ljava/lang/String;

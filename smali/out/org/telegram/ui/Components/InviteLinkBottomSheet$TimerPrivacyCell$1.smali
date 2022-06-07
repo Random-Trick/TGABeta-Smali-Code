@@ -25,7 +25,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/InviteLinkBottomSheet$TimerPrivacyCell;)V
     .registers 2
 
-    .line 966
+    .line 967
     iput-object p1, p0, Lorg/telegram/ui/Components/InviteLinkBottomSheet$TimerPrivacyCell$1;->this$1:Lorg/telegram/ui/Components/InviteLinkBottomSheet$TimerPrivacyCell;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public run()V
     .registers 5
 
-    .line 969
+    .line 970
     iget-object v0, p0, Lorg/telegram/ui/Components/InviteLinkBottomSheet$TimerPrivacyCell$1;->this$1:Lorg/telegram/ui/Components/InviteLinkBottomSheet$TimerPrivacyCell;
 
     iget-object v0, v0, Lorg/telegram/ui/Components/InviteLinkBottomSheet$TimerPrivacyCell;->this$0:Lorg/telegram/ui/Components/InviteLinkBottomSheet;
@@ -63,7 +63,7 @@
 
     if-eqz v0, :cond_3b
 
-    .line 970
+    .line 971
     iget-object v0, p0, Lorg/telegram/ui/Components/InviteLinkBottomSheet$TimerPrivacyCell$1;->this$1:Lorg/telegram/ui/Components/InviteLinkBottomSheet$TimerPrivacyCell;
 
     iget-object v0, v0, Lorg/telegram/ui/Components/InviteLinkBottomSheet$TimerPrivacyCell;->this$0:Lorg/telegram/ui/Components/InviteLinkBottomSheet;
@@ -80,7 +80,7 @@
 
     if-ltz v0, :cond_3b
 
-    .line 972
+    .line 973
     iget-object v1, p0, Lorg/telegram/ui/Components/InviteLinkBottomSheet$TimerPrivacyCell$1;->this$1:Lorg/telegram/ui/Components/InviteLinkBottomSheet$TimerPrivacyCell;
 
     iget-object v1, v1, Lorg/telegram/ui/Components/InviteLinkBottomSheet$TimerPrivacyCell;->this$0:Lorg/telegram/ui/Components/InviteLinkBottomSheet;
@@ -99,7 +99,7 @@
 
     invoke-virtual {v2, v1, v0}, Lorg/telegram/ui/Components/InviteLinkBottomSheet$Adapter;->onBindViewHolder(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;I)V
 
-    .line 974
+    .line 975
     :cond_3b
     invoke-static {p0}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 

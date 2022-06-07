@@ -190,7 +190,7 @@
 
     move-result-object v7
 
-    const v10, 0x7f0703b4
+    const v10, 0x7f0703b9
 
     invoke-virtual {v7, v10}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -397,7 +397,7 @@
 
     invoke-virtual {v15, v5}, Landroid/widget/TextView;->setTextColor(I)V
 
-    const v5, 0x7f0e0468
+    const v5, 0x7f0e04ad
 
     const-string v14, "ClearHistory"
 
@@ -518,7 +518,7 @@
 
     if-eqz v2, :cond_1af
 
-    const v3, 0x7f0e01b7
+    const v3, 0x7f0e01ec
 
     new-array v14, v9, [Ljava/lang/Object;
 
@@ -573,7 +573,7 @@
 
     if-eqz v3, :cond_1d3
 
-    const v3, 0x7f0e01b2
+    const v3, 0x7f0e01e7
 
     const-string v14, "AreYouSureClearHistoryGroup"
 
@@ -587,7 +587,7 @@
     goto :goto_1f8
 
     :cond_1d3
-    const v3, 0x7f0e01b0
+    const v3, 0x7f0e01e5
 
     const-string v14, "AreYouSureClearHistoryChannel"
 
@@ -602,7 +602,7 @@
 
     :cond_1e0
     :goto_1e0
-    const v14, 0x7f0e01b5
+    const v14, 0x7f0e01ea
 
     new-array v15, v9, [Ljava/lang/Object;
 
@@ -654,7 +654,7 @@
     .line 277
     iget-object v3, v0, Lorg/telegram/ui/Components/ClearHistoryAlert;->cell:Lorg/telegram/ui/Cells/CheckBoxCell;
 
-    const v6, 0x7f0e046c
+    const v6, 0x7f0e04b1
 
     new-array v14, v9, [Ljava/lang/Object;
 
@@ -760,7 +760,7 @@
     .line 288
     invoke-virtual {v2, v3}, Landroid/widget/FrameLayout;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    const v3, 0x7f0e014a
+    const v3, 0x7f0e0172
 
     const-string v5, "AlertClearHistory"
 
@@ -810,7 +810,7 @@
 
     invoke-direct {v2, v1}, Lorg/telegram/ui/Cells/ShadowSectionCell;-><init>(Landroid/content/Context;)V
 
-    const v3, 0x7f07012c
+    const v3, 0x7f0700fb
 
     .line 300
     invoke-static {v1, v3, v8}, Lorg/telegram/ui/ActionBar/Theme;->getThemedDrawable(Landroid/content/Context;ILjava/lang/String;)Landroid/graphics/drawable/Drawable;
@@ -854,7 +854,7 @@
 
     invoke-direct {v2, v1, v4}, Lorg/telegram/ui/Cells/HeaderCell;-><init>(Landroid/content/Context;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)V
 
-    const v3, 0x7f0e022c
+    const v3, 0x7f0e0261
 
     const-string v5, "AutoDeleteHeader"
 
@@ -909,7 +909,7 @@
     .line 311
     invoke-virtual {v5, v6}, Lorg/telegram/ui/Components/RLottieImageView;->setAutoRepeat(Z)V
 
-    const v7, 0x7f0d009a
+    const v7, 0x7f0d009c
 
     const/16 v14, 0x78
 
@@ -975,7 +975,7 @@
 
     invoke-virtual {v5, v6}, Landroid/widget/TextView;->setTextColor(I)V
 
-    const v6, 0x7f0e0227
+    const v6, 0x7f0e025c
 
     const-string v7, "AutoDeleteAlertTitle"
 
@@ -1025,7 +1025,7 @@
 
     if-eqz v2, :cond_392
 
-    const v3, 0x7f0e0228
+    const v3, 0x7f0e025d
 
     new-array v6, v9, [Ljava/lang/Object;
 
@@ -1060,7 +1060,7 @@
 
     if-nez v2, :cond_3a9
 
-    const v2, 0x7f0e0225
+    const v2, 0x7f0e025a
 
     const-string v3, "AutoDeleteAlertChannelInfo"
 
@@ -1074,7 +1074,7 @@
     goto :goto_3b5
 
     :cond_3a9
-    const v2, 0x7f0e0226
+    const v2, 0x7f0e025b
 
     const-string v3, "AutoDeleteAlertGroupInfo"
 
@@ -1128,7 +1128,7 @@
 
     new-array v3, v3, [Ljava/lang/String;
 
-    const v5, 0x7f0e0231
+    const v5, 0x7f0e0266
 
     const-string v6, "AutoDeleteNever"
 
@@ -1141,7 +1141,7 @@
 
     aput-object v5, v3, v6
 
-    const v5, 0x7f0e0221
+    const v5, 0x7f0e0256
 
     const-string v6, "AutoDelete24Hours"
 
@@ -1152,7 +1152,7 @@
 
     aput-object v5, v3, v9
 
-    const v5, 0x7f0e0222
+    const v5, 0x7f0e0257
 
     const-string v6, "AutoDelete7Days"
 
@@ -1165,7 +1165,7 @@
 
     aput-object v5, v3, v6
 
-    const v5, 0x7f0e0220
+    const v5, 0x7f0e0255
 
     const-string v6, "AutoDelete1Month"
 
@@ -1209,7 +1209,7 @@
 
     invoke-direct {v2, v1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    const v3, 0x7f07012d
+    const v3, 0x7f0700fc
 
     .line 363
     invoke-static {v1, v3, v8}, Lorg/telegram/ui/ActionBar/Theme;->getThemedDrawable(Landroid/content/Context;ILjava/lang/String;)Landroid/graphics/drawable/Drawable;
@@ -1253,43 +1253,43 @@
 
     invoke-direct {v3, v1, v4}, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;-><init>(Landroid/content/Context;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)V
 
-    const v5, 0x7f0e0230
+    const v5, 0x7f0e0265
 
     const-string v6, "AutoDeleteInfo"
 
-    .line 371
+    .line 370
     invoke-static {v6, v5}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v5
 
     invoke-virtual {v3, v5}, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;->setText(Ljava/lang/CharSequence;)V
 
-    .line 372
+    .line 371
     invoke-virtual {v2, v3}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;)V
 
-    .line 374
+    .line 373
     new-instance v3, Lorg/telegram/ui/Components/ClearHistoryAlert$BottomSheetCell;
 
     invoke-direct {v3, v1, v4}, Lorg/telegram/ui/Components/ClearHistoryAlert$BottomSheetCell;-><init>(Landroid/content/Context;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)V
 
     iput-object v3, v0, Lorg/telegram/ui/Components/ClearHistoryAlert;->setTimerButton:Lorg/telegram/ui/Components/ClearHistoryAlert$BottomSheetCell;
 
-    .line 375
+    .line 374
     invoke-virtual {v0, v11}, Lorg/telegram/ui/ActionBar/BottomSheet;->getThemedColor(Ljava/lang/String;)I
 
     move-result v1
 
     invoke-virtual {v3, v1}, Landroid/widget/FrameLayout;->setBackgroundColor(I)V
 
-    .line 376
+    .line 375
     iget-boolean v1, v0, Lorg/telegram/ui/Components/ClearHistoryAlert;->autoDeleteOnly:Z
 
     if-eqz v1, :cond_483
 
-    .line 377
+    .line 376
     iget-object v1, v0, Lorg/telegram/ui/Components/ClearHistoryAlert;->setTimerButton:Lorg/telegram/ui/Components/ClearHistoryAlert$BottomSheetCell;
 
-    const v3, 0x7f0e0234
+    const v3, 0x7f0e0269
 
     const-string v4, "AutoDeleteSet"
 
@@ -1304,15 +1304,15 @@
     :cond_483
     if-eqz p4, :cond_498
 
-    .line 378
+    .line 377
     iget v1, v0, Lorg/telegram/ui/Components/ClearHistoryAlert;->currentTimer:I
 
     if-nez v1, :cond_498
 
-    .line 379
+    .line 378
     iget-object v1, v0, Lorg/telegram/ui/Components/ClearHistoryAlert;->setTimerButton:Lorg/telegram/ui/Components/ClearHistoryAlert$BottomSheetCell;
 
-    const v3, 0x7f0e063a
+    const v3, 0x7f0e068c
 
     const-string v4, "EnableAutoDelete"
 
@@ -1324,11 +1324,11 @@
 
     goto :goto_4a6
 
-    .line 381
+    .line 380
     :cond_498
     iget-object v1, v0, Lorg/telegram/ui/Components/ClearHistoryAlert;->setTimerButton:Lorg/telegram/ui/Components/ClearHistoryAlert$BottomSheetCell;
 
-    const v3, 0x7f0e0229
+    const v3, 0x7f0e025e
 
     const-string v4, "AutoDeleteConfirm"
 
@@ -1338,7 +1338,7 @@
 
     invoke-virtual {v1, v3}, Lorg/telegram/ui/Components/ClearHistoryAlert$BottomSheetCell;->setText(Ljava/lang/CharSequence;)V
 
-    .line 383
+    .line 382
     :goto_4a6
     iget-object v1, v0, Lorg/telegram/ui/Components/ClearHistoryAlert;->setTimerButton:Lorg/telegram/ui/Components/ClearHistoryAlert$BottomSheetCell;
 
@@ -1352,14 +1352,14 @@
 
     invoke-virtual {v1, v3}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 412
+    .line 411
     iget-object v1, v0, Lorg/telegram/ui/Components/ClearHistoryAlert;->setTimerButton:Lorg/telegram/ui/Components/ClearHistoryAlert$BottomSheetCell;
 
     invoke-virtual {v2, v1}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;)V
 
     const/4 v1, 0x0
 
-    .line 414
+    .line 413
     invoke-direct {v0, v1}, Lorg/telegram/ui/Components/ClearHistoryAlert;->updateTimerButton(Z)V
 
     return-void
@@ -1514,14 +1514,14 @@
 .method private synthetic lambda$new$2(Landroid/view/View;)V
     .registers 5
 
-    .line 384
+    .line 383
     iget-boolean p1, p0, Lorg/telegram/ui/Components/ClearHistoryAlert;->dismissedDelayed:Z
 
     if-eqz p1, :cond_5
 
     return-void
 
-    .line 387
+    .line 386
     :cond_5
     iget p1, p0, Lorg/telegram/ui/Components/ClearHistoryAlert;->newTimer:I
 
@@ -1531,7 +1531,7 @@
 
     const/4 v0, 0x1
 
-    .line 388
+    .line 387
     iput-boolean v0, p0, Lorg/telegram/ui/Components/ClearHistoryAlert;->dismissedDelayed:Z
 
     const/4 v1, 0x3
@@ -1565,19 +1565,19 @@
 
     const/16 v2, 0x47
 
-    .line 404
+    .line 403
     :goto_27
     iget-object v0, p0, Lorg/telegram/ui/Components/ClearHistoryAlert;->delegate:Lorg/telegram/ui/Components/ClearHistoryAlert$ClearHistoryAlertDelegate;
 
     invoke-interface {v0, p1, v2}, Lorg/telegram/ui/Components/ClearHistoryAlert$ClearHistoryAlertDelegate;->onAutoDeleteHistory(II)V
 
-    .line 406
+    .line 405
     :cond_2c
     iget-boolean p1, p0, Lorg/telegram/ui/Components/ClearHistoryAlert;->dismissedDelayed:Z
 
     if-eqz p1, :cond_3b
 
-    .line 407
+    .line 406
     new-instance p1, Lorg/telegram/ui/Components/ClearHistoryAlert$$ExternalSyntheticLambda3;
 
     invoke-direct {p1, p0}, Lorg/telegram/ui/Components/ClearHistoryAlert$$ExternalSyntheticLambda3;-><init>(Lorg/telegram/ui/Components/ClearHistoryAlert;)V
@@ -1588,7 +1588,7 @@
 
     goto :goto_3e
 
-    .line 409
+    .line 408
     :cond_3b
     invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BottomSheet;->dismiss()V
 
@@ -1599,7 +1599,7 @@
 .method private updateLayout()V
     .registers 4
 
-    .line 436
+    .line 435
     iget-object v0, p0, Lorg/telegram/ui/Components/ClearHistoryAlert;->linearLayout:Landroid/widget/LinearLayout;
 
     const/4 v1, 0x0
@@ -1608,12 +1608,12 @@
 
     move-result-object v0
 
-    .line 437
+    .line 436
     iget-object v2, p0, Lorg/telegram/ui/Components/ClearHistoryAlert;->location:[I
 
     invoke-virtual {v0, v2}, Landroid/view/View;->getLocationInWindow([I)V
 
-    .line 438
+    .line 437
     iget-object v0, p0, Lorg/telegram/ui/Components/ClearHistoryAlert;->location:[I
 
     const/4 v2, 0x1
@@ -1638,20 +1638,20 @@
 
     sub-int/2addr v0, v2
 
-    .line 439
+    .line 438
     invoke-static {v0, v1}, Ljava/lang/Math;->max(II)I
 
     move-result v0
 
-    .line 440
+    .line 439
     iget v1, p0, Lorg/telegram/ui/Components/ClearHistoryAlert;->scrollOffsetY:I
 
     if-eq v1, v0, :cond_2e
 
-    .line 441
+    .line 440
     iput v0, p0, Lorg/telegram/ui/Components/ClearHistoryAlert;->scrollOffsetY:I
 
-    .line 442
+    .line 441
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/BottomSheet;->containerView:Landroid/view/ViewGroup;
 
     invoke-virtual {v0}, Landroid/view/ViewGroup;->invalidate()V
@@ -1663,7 +1663,7 @@
 .method private updateTimerButton(Z)V
     .registers 6
 
-    .line 418
+    .line 417
     iget v0, p0, Lorg/telegram/ui/Components/ClearHistoryAlert;->currentTimer:I
 
     iget v1, p0, Lorg/telegram/ui/Components/ClearHistoryAlert;->newTimer:I
@@ -1680,7 +1680,7 @@
 
     if-eqz p1, :cond_21
 
-    .line 420
+    .line 419
     iget-object p1, p0, Lorg/telegram/ui/Components/ClearHistoryAlert;->setTimerButton:Lorg/telegram/ui/Components/ClearHistoryAlert$BottomSheetCell;
 
     invoke-virtual {p1}, Landroid/widget/FrameLayout;->animate()Landroid/view/ViewPropertyAnimator;
@@ -1699,7 +1699,7 @@
 
     goto :goto_4e
 
-    .line 422
+    .line 421
     :cond_21
     iget-object p1, p0, Lorg/telegram/ui/Components/ClearHistoryAlert;->setTimerButton:Lorg/telegram/ui/Components/ClearHistoryAlert$BottomSheetCell;
 
@@ -1707,14 +1707,14 @@
 
     invoke-virtual {p1, v1}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
-    .line 423
+    .line 422
     iget-object p1, p0, Lorg/telegram/ui/Components/ClearHistoryAlert;->setTimerButton:Lorg/telegram/ui/Components/ClearHistoryAlert$BottomSheetCell;
 
     invoke-virtual {p1, v0}, Landroid/widget/FrameLayout;->setAlpha(F)V
 
     goto :goto_4e
 
-    .line 426
+    .line 425
     :cond_2d
     iget-object v0, p0, Lorg/telegram/ui/Components/ClearHistoryAlert;->setTimerButton:Lorg/telegram/ui/Components/ClearHistoryAlert$BottomSheetCell;
 
@@ -1726,7 +1726,7 @@
 
     if-eqz p1, :cond_49
 
-    .line 428
+    .line 427
     iget-object p1, p0, Lorg/telegram/ui/Components/ClearHistoryAlert;->setTimerButton:Lorg/telegram/ui/Components/ClearHistoryAlert$BottomSheetCell;
 
     invoke-virtual {p1}, Landroid/widget/FrameLayout;->animate()Landroid/view/ViewPropertyAnimator;
@@ -1745,7 +1745,7 @@
 
     goto :goto_4e
 
-    .line 430
+    .line 429
     :cond_49
     iget-object p1, p0, Lorg/telegram/ui/Components/ClearHistoryAlert;->setTimerButton:Lorg/telegram/ui/Components/ClearHistoryAlert$BottomSheetCell;
 
@@ -1768,7 +1768,7 @@
 .method public setDelegate(Lorg/telegram/ui/Components/ClearHistoryAlert$ClearHistoryAlertDelegate;)V
     .registers 2
 
-    .line 452
+    .line 451
     iput-object p1, p0, Lorg/telegram/ui/Components/ClearHistoryAlert;->delegate:Lorg/telegram/ui/Components/ClearHistoryAlert$ClearHistoryAlertDelegate;
 
     return-void

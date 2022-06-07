@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lorg/telegram/ui/ActionBar/ThemeDescription$ThemeDescriptionDelegate;
+.implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # instance fields
@@ -22,20 +22,12 @@
 
 
 # virtual methods
-.method public final didSetColor()V
-    .registers 2
+.method public final onClick(Landroid/content/DialogInterface;I)V
+    .registers 4
 
     iget-object v0, p0, Lorg/telegram/ui/ProfileNotificationsActivity$$ExternalSyntheticLambda0;->f$0:Lorg/telegram/ui/ProfileNotificationsActivity;
 
-    invoke-static {v0}, Lorg/telegram/ui/ProfileNotificationsActivity;->$r8$lambda$wdkiUreQfi-0m_HnbGYNjjCSZFo(Lorg/telegram/ui/ProfileNotificationsActivity;)V
-
-    return-void
-.end method
-
-.method public synthetic onAnimationProgress(F)V
-    .registers 2
-
-    invoke-static {p0, p1}, Lorg/telegram/ui/ActionBar/ThemeDescription$ThemeDescriptionDelegate$-CC;->$default$onAnimationProgress(Lorg/telegram/ui/ActionBar/ThemeDescription$ThemeDescriptionDelegate;F)V
+    invoke-static {v0, p1, p2}, Lorg/telegram/ui/ProfileNotificationsActivity;->$r8$lambda$xliUeCESsiaWib7cU4-rGIXdaCI(Lorg/telegram/ui/ProfileNotificationsActivity;Landroid/content/DialogInterface;I)V
 
     return-void
 .end method

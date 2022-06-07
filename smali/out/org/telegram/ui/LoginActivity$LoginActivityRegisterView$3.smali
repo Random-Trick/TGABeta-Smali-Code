@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/LoginActivity$LoginActivityRegisterView;Landroid/content/Context;Lorg/telegram/ui/LoginActivity;)V
     .registers 4
 
-    .line 5228
+    .line 5367
     iput-object p1, p0, Lorg/telegram/ui/LoginActivity$LoginActivityRegisterView$3;->this$1:Lorg/telegram/ui/LoginActivity$LoginActivityRegisterView;
 
     invoke-direct {p0, p2}, Lorg/telegram/ui/Components/RLottieImageView;-><init>(Landroid/content/Context;)V
@@ -35,13 +35,13 @@
 .method public invalidate()V
     .registers 2
 
-    .line 5237
+    .line 5376
     invoke-super {p0}, Landroid/widget/ImageView;->invalidate()V
 
-    .line 5238
+    .line 5377
     iget-object v0, p0, Lorg/telegram/ui/LoginActivity$LoginActivityRegisterView$3;->this$1:Lorg/telegram/ui/LoginActivity$LoginActivityRegisterView;
 
-    invoke-static {v0}, Lorg/telegram/ui/LoginActivity$LoginActivityRegisterView;->access$11300(Lorg/telegram/ui/LoginActivity$LoginActivityRegisterView;)Landroid/view/View;
+    invoke-static {v0}, Lorg/telegram/ui/LoginActivity$LoginActivityRegisterView;->access$12000(Lorg/telegram/ui/LoginActivity$LoginActivityRegisterView;)Landroid/view/View;
 
     move-result-object v0
 
@@ -53,13 +53,13 @@
 .method public invalidate(IIII)V
     .registers 5
 
-    .line 5231
+    .line 5370
     invoke-super {p0, p1, p2, p3, p4}, Landroid/widget/ImageView;->invalidate(IIII)V
 
-    .line 5232
+    .line 5371
     iget-object p1, p0, Lorg/telegram/ui/LoginActivity$LoginActivityRegisterView$3;->this$1:Lorg/telegram/ui/LoginActivity$LoginActivityRegisterView;
 
-    invoke-static {p1}, Lorg/telegram/ui/LoginActivity$LoginActivityRegisterView;->access$11300(Lorg/telegram/ui/LoginActivity$LoginActivityRegisterView;)Landroid/view/View;
+    invoke-static {p1}, Lorg/telegram/ui/LoginActivity$LoginActivityRegisterView;->access$12000(Lorg/telegram/ui/LoginActivity$LoginActivityRegisterView;)Landroid/view/View;
 
     move-result-object p1
 

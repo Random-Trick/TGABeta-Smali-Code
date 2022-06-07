@@ -165,7 +165,7 @@
     .line 506
     iget-object p2, p0, Lorg/telegram/ui/RestrictedLanguagesSelectActivity$ListAdapter;->mContext:Landroid/content/Context;
 
-    const v0, 0x7f07012d
+    const v0, 0x7f0700fc
 
     const-string v1, "windowBackgroundGrayShadow"
 
@@ -295,7 +295,7 @@
 
     aput-object v6, v5, v2
 
-    const v6, 0x7f0e08ff
+    const v6, 0x7f0e0964
 
     const-string v7, "LanguageCustom"
 
@@ -410,7 +410,7 @@
 
     invoke-virtual {p2, p1}, Landroid/widget/FrameLayout;->setBackgroundColor(I)V
 
-    const p1, 0x7f0e044d
+    const p1, 0x7f0e048f
 
     const-string v0, "ChooseLanguages"
 

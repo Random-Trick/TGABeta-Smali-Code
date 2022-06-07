@@ -25,7 +25,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/EmojiView;)V
     .registers 2
 
-    .line 1321
+    .line 1327
     iput-object p1, p0, Lorg/telegram/ui/Components/EmojiView$7;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,20 +38,20 @@
 .method public onItemClick(Landroid/view/View;I)V
     .registers 4
 
-    .line 1324
+    .line 1330
     instance-of p2, p1, Lorg/telegram/ui/Components/EmojiView$ImageViewEmoji;
 
     if-eqz p2, :cond_11
 
-    .line 1325
+    .line 1331
     check-cast p1, Lorg/telegram/ui/Components/EmojiView$ImageViewEmoji;
 
     const/4 p2, 0x0
 
-    .line 1326
+    .line 1332
     invoke-static {p1, p2}, Lorg/telegram/ui/Components/EmojiView$ImageViewEmoji;->access$4800(Lorg/telegram/ui/Components/EmojiView$ImageViewEmoji;Ljava/lang/String;)V
 
-    .line 1327
+    .line 1333
     iget-object p1, p0, Lorg/telegram/ui/Components/EmojiView$7;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     const/4 p2, 0x3

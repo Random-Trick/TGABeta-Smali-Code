@@ -26,7 +26,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/ChatAttachAlertPhotoLayout;Landroid/view/View;Landroid/widget/ImageView;)V
     .registers 4
 
-    .line 1088
+    .line 1080
     iput-object p1, p0, Lorg/telegram/ui/Components/ChatAttachAlertPhotoLayout$12;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertPhotoLayout;
 
     iput-object p2, p0, Lorg/telegram/ui/Components/ChatAttachAlertPhotoLayout$12;->val$currentImage:Landroid/view/View;
@@ -43,21 +43,21 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .registers 3
 
-    .line 1091
+    .line 1083
     iget-object p1, p0, Lorg/telegram/ui/Components/ChatAttachAlertPhotoLayout$12;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertPhotoLayout;
 
     const/4 v0, 0x0
 
-    invoke-static {p1, v0}, Lorg/telegram/ui/Components/ChatAttachAlertPhotoLayout;->access$6102(Lorg/telegram/ui/Components/ChatAttachAlertPhotoLayout;Z)Z
+    invoke-static {p1, v0}, Lorg/telegram/ui/Components/ChatAttachAlertPhotoLayout;->access$6002(Lorg/telegram/ui/Components/ChatAttachAlertPhotoLayout;Z)Z
 
-    .line 1092
+    .line 1084
     iget-object p1, p0, Lorg/telegram/ui/Components/ChatAttachAlertPhotoLayout$12;->val$currentImage:Landroid/view/View;
 
     const/4 v0, 0x4
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
 
-    .line 1093
+    .line 1085
     iget-object p1, p0, Lorg/telegram/ui/Components/ChatAttachAlertPhotoLayout$12;->val$nextImage:Landroid/widget/ImageView;
 
     const/16 v0, 0x8

@@ -17,7 +17,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 30798
+    .line 31226
     invoke-direct {p0}, Lorg/telegram/tgnet/TLRPC$DecryptedMessageAction;-><init>()V
 
     return-void
@@ -28,7 +28,7 @@
 .method public readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
     .registers 8
 
-    .line 30803
+    .line 31231
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
@@ -43,7 +43,7 @@
 
     return-void
 
-    .line 30806
+    .line 31234
     :cond_d
     new-instance p1, Ljava/lang/RuntimeException;
 
@@ -67,7 +67,7 @@
 
     throw p1
 
-    .line 30810
+    .line 31238
     :cond_22
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
@@ -76,7 +76,7 @@
     :goto_26
     if-ge v1, v0, :cond_38
 
-    .line 30812
+    .line 31240
     iget-object v2, p0, Lorg/telegram/tgnet/TLRPC$DecryptedMessageAction;->random_ids:Ljava/util/ArrayList;
 
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt64(Z)J
@@ -100,24 +100,24 @@
 .method public serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
     .registers 6
 
-    .line 30817
+    .line 31245
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_decryptedMessageActionScreenshotMessages;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
     const v0, 0x1cb5c415
 
-    .line 30818
+    .line 31246
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 30819
+    .line 31247
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$DecryptedMessageAction;->random_ids:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
-    .line 30820
+    .line 31248
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
     const/4 v1, 0x0
@@ -125,7 +125,7 @@
     :goto_15
     if-ge v1, v0, :cond_29
 
-    .line 30822
+    .line 31250
     iget-object v2, p0, Lorg/telegram/tgnet/TLRPC$DecryptedMessageAction;->random_ids:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;

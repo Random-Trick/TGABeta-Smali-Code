@@ -8,34 +8,38 @@
 # instance fields
 .field public final synthetic f$0:Lorg/telegram/messenger/MessagesController;
 
-.field public final synthetic f$1:Lorg/telegram/messenger/MessagesStorage;
+.field public final synthetic f$1:Lorg/telegram/messenger/MessagesStorage$BooleanCallback;
 
-.field public final synthetic f$2:J
+.field public final synthetic f$2:Landroid/content/Context;
 
-.field public final synthetic f$3:J
+.field public final synthetic f$3:Lorg/telegram/ui/ActionBar/AlertDialog;
 
-.field public final synthetic f$4:I
+.field public final synthetic f$4:Lorg/telegram/tgnet/TLRPC$TL_error;
 
-.field public final synthetic f$5:Lorg/telegram/messenger/MessagesController$MessagesLoadedCallback;
+.field public final synthetic f$5:Lorg/telegram/ui/ActionBar/BaseFragment;
+
+.field public final synthetic f$6:Lorg/telegram/tgnet/TLRPC$TL_channels_convertToGigagroup;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lorg/telegram/messenger/MessagesController;Lorg/telegram/messenger/MessagesStorage;JJILorg/telegram/messenger/MessagesController$MessagesLoadedCallback;)V
-    .registers 9
+.method public synthetic constructor <init>(Lorg/telegram/messenger/MessagesController;Lorg/telegram/messenger/MessagesStorage$BooleanCallback;Landroid/content/Context;Lorg/telegram/ui/ActionBar/AlertDialog;Lorg/telegram/tgnet/TLRPC$TL_error;Lorg/telegram/ui/ActionBar/BaseFragment;Lorg/telegram/tgnet/TLRPC$TL_channels_convertToGigagroup;)V
+    .registers 8
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lorg/telegram/messenger/MessagesController$$ExternalSyntheticLambda130;->f$0:Lorg/telegram/messenger/MessagesController;
 
-    iput-object p2, p0, Lorg/telegram/messenger/MessagesController$$ExternalSyntheticLambda130;->f$1:Lorg/telegram/messenger/MessagesStorage;
+    iput-object p2, p0, Lorg/telegram/messenger/MessagesController$$ExternalSyntheticLambda130;->f$1:Lorg/telegram/messenger/MessagesStorage$BooleanCallback;
 
-    iput-wide p3, p0, Lorg/telegram/messenger/MessagesController$$ExternalSyntheticLambda130;->f$2:J
+    iput-object p3, p0, Lorg/telegram/messenger/MessagesController$$ExternalSyntheticLambda130;->f$2:Landroid/content/Context;
 
-    iput-wide p5, p0, Lorg/telegram/messenger/MessagesController$$ExternalSyntheticLambda130;->f$3:J
+    iput-object p4, p0, Lorg/telegram/messenger/MessagesController$$ExternalSyntheticLambda130;->f$3:Lorg/telegram/ui/ActionBar/AlertDialog;
 
-    iput p7, p0, Lorg/telegram/messenger/MessagesController$$ExternalSyntheticLambda130;->f$4:I
+    iput-object p5, p0, Lorg/telegram/messenger/MessagesController$$ExternalSyntheticLambda130;->f$4:Lorg/telegram/tgnet/TLRPC$TL_error;
 
-    iput-object p8, p0, Lorg/telegram/messenger/MessagesController$$ExternalSyntheticLambda130;->f$5:Lorg/telegram/messenger/MessagesController$MessagesLoadedCallback;
+    iput-object p6, p0, Lorg/telegram/messenger/MessagesController$$ExternalSyntheticLambda130;->f$5:Lorg/telegram/ui/ActionBar/BaseFragment;
+
+    iput-object p7, p0, Lorg/telegram/messenger/MessagesController$$ExternalSyntheticLambda130;->f$6:Lorg/telegram/tgnet/TLRPC$TL_channels_convertToGigagroup;
 
     return-void
 .end method
@@ -43,21 +47,23 @@
 
 # virtual methods
 .method public final run()V
-    .registers 9
+    .registers 8
 
     iget-object v0, p0, Lorg/telegram/messenger/MessagesController$$ExternalSyntheticLambda130;->f$0:Lorg/telegram/messenger/MessagesController;
 
-    iget-object v1, p0, Lorg/telegram/messenger/MessagesController$$ExternalSyntheticLambda130;->f$1:Lorg/telegram/messenger/MessagesStorage;
+    iget-object v1, p0, Lorg/telegram/messenger/MessagesController$$ExternalSyntheticLambda130;->f$1:Lorg/telegram/messenger/MessagesStorage$BooleanCallback;
 
-    iget-wide v2, p0, Lorg/telegram/messenger/MessagesController$$ExternalSyntheticLambda130;->f$2:J
+    iget-object v2, p0, Lorg/telegram/messenger/MessagesController$$ExternalSyntheticLambda130;->f$2:Landroid/content/Context;
 
-    iget-wide v4, p0, Lorg/telegram/messenger/MessagesController$$ExternalSyntheticLambda130;->f$3:J
+    iget-object v3, p0, Lorg/telegram/messenger/MessagesController$$ExternalSyntheticLambda130;->f$3:Lorg/telegram/ui/ActionBar/AlertDialog;
 
-    iget v6, p0, Lorg/telegram/messenger/MessagesController$$ExternalSyntheticLambda130;->f$4:I
+    iget-object v4, p0, Lorg/telegram/messenger/MessagesController$$ExternalSyntheticLambda130;->f$4:Lorg/telegram/tgnet/TLRPC$TL_error;
 
-    iget-object v7, p0, Lorg/telegram/messenger/MessagesController$$ExternalSyntheticLambda130;->f$5:Lorg/telegram/messenger/MessagesController$MessagesLoadedCallback;
+    iget-object v5, p0, Lorg/telegram/messenger/MessagesController$$ExternalSyntheticLambda130;->f$5:Lorg/telegram/ui/ActionBar/BaseFragment;
 
-    invoke-static/range {v0 .. v7}, Lorg/telegram/messenger/MessagesController;->$r8$lambda$Mm1DNIDw688CaMmuWQBiXHRQHl8(Lorg/telegram/messenger/MessagesController;Lorg/telegram/messenger/MessagesStorage;JJILorg/telegram/messenger/MessagesController$MessagesLoadedCallback;)V
+    iget-object v6, p0, Lorg/telegram/messenger/MessagesController$$ExternalSyntheticLambda130;->f$6:Lorg/telegram/tgnet/TLRPC$TL_channels_convertToGigagroup;
+
+    invoke-static/range {v0 .. v6}, Lorg/telegram/messenger/MessagesController;->$r8$lambda$edOrq9dnCDjwUiC2LNkRY3xAdo4(Lorg/telegram/messenger/MessagesController;Lorg/telegram/messenger/MessagesStorage$BooleanCallback;Landroid/content/Context;Lorg/telegram/ui/ActionBar/AlertDialog;Lorg/telegram/tgnet/TLRPC$TL_error;Lorg/telegram/ui/ActionBar/BaseFragment;Lorg/telegram/tgnet/TLRPC$TL_channels_convertToGigagroup;)V
 
     return-void
 .end method

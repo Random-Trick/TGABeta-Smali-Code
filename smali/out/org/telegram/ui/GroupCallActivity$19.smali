@@ -51,12 +51,12 @@
 .method constructor <init>(Lorg/telegram/ui/GroupCallActivity;)V
     .registers 2
 
-    .line 4181
+    .line 4186
     iput-object p1, p0, Lorg/telegram/ui/GroupCallActivity$19;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 4183
+    .line 4188
     new-instance p1, Lorg/telegram/ui/GroupCallActivity$19$1;
 
     invoke-direct {p1, p0}, Lorg/telegram/ui/GroupCallActivity$19$1;-><init>(Lorg/telegram/ui/GroupCallActivity$19;)V
@@ -69,19 +69,19 @@
 .method private synthetic lambda$onClick$0()V
     .registers 4
 
-    .line 4203
+    .line 4208
     iget-object v0, p0, Lorg/telegram/ui/GroupCallActivity$19;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Lorg/telegram/ui/GroupCallActivity;->access$15902(Lorg/telegram/ui/GroupCallActivity;Ljava/lang/Boolean;)Ljava/lang/Boolean;
 
-    .line 4204
+    .line 4209
     iget-object v0, p0, Lorg/telegram/ui/GroupCallActivity$19;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-static {v0, v1}, Lorg/telegram/ui/GroupCallActivity;->access$16002(Lorg/telegram/ui/GroupCallActivity;Ljava/lang/Boolean;)Ljava/lang/Boolean;
 
-    .line 4205
+    .line 4210
     iget-object v0, p0, Lorg/telegram/ui/GroupCallActivity$19;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/GroupCallActivity;->access$2200(Lorg/telegram/ui/GroupCallActivity;)I
@@ -100,7 +100,7 @@
 
     if-eqz p1, :cond_12
 
-    .line 4236
+    .line 4241
     iget-object p2, p0, Lorg/telegram/ui/GroupCallActivity$19;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-static {p2}, Lorg/telegram/ui/GroupCallActivity;->access$200(Lorg/telegram/ui/GroupCallActivity;)Lorg/telegram/messenger/AccountInstance;
@@ -126,7 +126,7 @@
 
     if-eqz p1, :cond_12
 
-    .line 4251
+    .line 4256
     iget-object p2, p0, Lorg/telegram/ui/GroupCallActivity$19;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-static {p2}, Lorg/telegram/ui/GroupCallActivity;->access$200(Lorg/telegram/ui/GroupCallActivity;)Lorg/telegram/messenger/AccountInstance;
@@ -157,7 +157,7 @@
         }
     .end annotation
 
-    .line 4194
+    .line 4199
     iget-object v0, p0, Lorg/telegram/ui/GroupCallActivity$19;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     iget-object v1, v0, Lorg/telegram/ui/GroupCallActivity;->call:Lorg/telegram/messenger/ChatObject$Call;
@@ -174,7 +174,7 @@
 
     goto/16 :goto_29e
 
-    .line 4197
+    .line 4202
     :cond_f
     iget-object v0, p0, Lorg/telegram/ui/GroupCallActivity$19;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
@@ -200,7 +200,7 @@
 
     if-nez v0, :cond_b5
 
-    .line 4198
+    .line 4203
     iget-object p1, p0, Lorg/telegram/ui/GroupCallActivity$19;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/GroupCallActivity;->access$5000(Lorg/telegram/ui/GroupCallActivity;)Lorg/telegram/ui/Components/voip/GroupCallRenderersContainer;
@@ -246,19 +246,19 @@
     :goto_49
     if-eqz p1, :cond_6a
 
-    .line 4200
+    .line 4205
     iget-object p1, p0, Lorg/telegram/ui/GroupCallActivity$19;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     const/4 v0, 0x0
 
     invoke-virtual {p1, v0}, Lorg/telegram/ui/GroupCallActivity;->fullscreenFor(Lorg/telegram/messenger/ChatObject$VideoParticipant;)V
 
-    .line 4201
+    .line 4206
     sget-boolean p1, Lorg/telegram/ui/GroupCallActivity;->isLandscapeMode:Z
 
     if-eqz p1, :cond_5f
 
-    .line 4202
+    .line 4207
     new-instance p1, Lorg/telegram/ui/GroupCallActivity$19$$ExternalSyntheticLambda0;
 
     invoke-direct {p1, p0}, Lorg/telegram/ui/GroupCallActivity$19$$ExternalSyntheticLambda0;-><init>(Lorg/telegram/ui/GroupCallActivity$19;)V
@@ -267,7 +267,7 @@
 
     invoke-static {p1, v0, v1}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;J)V
 
-    .line 4208
+    .line 4213
     :cond_5f
     iget-object p1, p0, Lorg/telegram/ui/GroupCallActivity$19;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
@@ -281,7 +281,7 @@
 
     goto :goto_b4
 
-    .line 4209
+    .line 4214
     :cond_6a
     iget-object p1, p0, Lorg/telegram/ui/GroupCallActivity$19;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
@@ -293,7 +293,7 @@
 
     if-nez p1, :cond_b4
 
-    .line 4210
+    .line 4215
     iget-object p1, p0, Lorg/telegram/ui/GroupCallActivity$19;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     iget-object p1, p1, Lorg/telegram/ui/GroupCallActivity;->visibleVideoParticipants:Ljava/util/ArrayList;
@@ -304,21 +304,21 @@
 
     check-cast p1, Lorg/telegram/messenger/ChatObject$VideoParticipant;
 
-    .line 4211
+    .line 4216
     invoke-static {}, Lorg/telegram/messenger/AndroidUtilities;->isTablet()Z
 
     move-result v0
 
     if-eqz v0, :cond_8a
 
-    .line 4212
+    .line 4217
     iget-object v0, p0, Lorg/telegram/ui/GroupCallActivity$19;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-virtual {v0, p1}, Lorg/telegram/ui/GroupCallActivity;->fullscreenFor(Lorg/telegram/messenger/ChatObject$VideoParticipant;)V
 
     goto :goto_b4
 
-    .line 4214
+    .line 4219
     :cond_8a
     sget-boolean v0, Lorg/telegram/ui/GroupCallActivity;->isLandscapeMode:Z
 
@@ -330,12 +330,12 @@
 
     if-ne v0, v1, :cond_99
 
-    .line 4215
+    .line 4220
     iget-object v0, p0, Lorg/telegram/ui/GroupCallActivity$19;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-virtual {v0, p1}, Lorg/telegram/ui/GroupCallActivity;->fullscreenFor(Lorg/telegram/messenger/ChatObject$VideoParticipant;)V
 
-    .line 4217
+    .line 4222
     :cond_99
     iget-object p1, p0, Lorg/telegram/ui/GroupCallActivity$19;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
@@ -345,7 +345,7 @@
 
     if-eqz p1, :cond_ab
 
-    .line 4218
+    .line 4223
     iget-object p1, p0, Lorg/telegram/ui/GroupCallActivity$19;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/GroupCallActivity;->access$15500(Lorg/telegram/ui/GroupCallActivity;)Lorg/telegram/ui/LaunchActivity;
@@ -356,7 +356,7 @@
 
     goto :goto_b4
 
-    .line 4220
+    .line 4225
     :cond_ab
     iget-object p1, p0, Lorg/telegram/ui/GroupCallActivity$19;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
@@ -370,7 +370,7 @@
     :goto_b4
     return-void
 
-    .line 4226
+    .line 4231
     :cond_b5
     iget-object v0, p0, Lorg/telegram/ui/GroupCallActivity$19;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
@@ -384,7 +384,7 @@
 
     if-ne v0, v5, :cond_f3
 
-    .line 4227
+    .line 4232
     iget-object v0, p0, Lorg/telegram/ui/GroupCallActivity$19;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/GroupCallActivity;->access$15600(Lorg/telegram/ui/GroupCallActivity;)Z
@@ -395,21 +395,21 @@
 
     return-void
 
-    .line 4230
+    .line 4235
     :cond_c8
     invoke-virtual {p1, v1, v6}, Landroid/view/View;->performHapticFeedback(II)Z
 
-    .line 4231
+    .line 4236
     iget-object p1, p0, Lorg/telegram/ui/GroupCallActivity$19;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-static {p1, v4}, Lorg/telegram/ui/GroupCallActivity;->access$15602(Lorg/telegram/ui/GroupCallActivity;Z)Z
 
-    .line 4232
+    .line 4237
     new-instance p1, Lorg/telegram/tgnet/TLRPC$TL_phone_startScheduledGroupCall;
 
     invoke-direct {p1}, Lorg/telegram/tgnet/TLRPC$TL_phone_startScheduledGroupCall;-><init>()V
 
-    .line 4233
+    .line 4238
     iget-object v0, p0, Lorg/telegram/ui/GroupCallActivity$19;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     iget-object v0, v0, Lorg/telegram/ui/GroupCallActivity;->call:Lorg/telegram/messenger/ChatObject$Call;
@@ -420,7 +420,7 @@
 
     iput-object v0, p1, Lorg/telegram/tgnet/TLRPC$TL_phone_startScheduledGroupCall;->call:Lorg/telegram/tgnet/TLRPC$TL_inputGroupCall;
 
-    .line 4234
+    .line 4239
     iget-object v0, p0, Lorg/telegram/ui/GroupCallActivity$19;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/GroupCallActivity;->access$200(Lorg/telegram/ui/GroupCallActivity;)Lorg/telegram/messenger/AccountInstance;
@@ -439,7 +439,7 @@
 
     goto/16 :goto_29e
 
-    .line 4239
+    .line 4244
     :cond_f3
     iget-object v0, p0, Lorg/telegram/ui/GroupCallActivity$19;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
@@ -461,7 +461,7 @@
 
     goto/16 :goto_24b
 
-    .line 4256
+    .line 4261
     :cond_106
     invoke-static {}, Lorg/telegram/messenger/voip/VoIPService;->getSharedInstance()Lorg/telegram/messenger/voip/VoIPService;
 
@@ -479,7 +479,7 @@
 
     goto/16 :goto_24a
 
-    .line 4259
+    .line 4264
     :cond_116
     iget-object v0, p0, Lorg/telegram/ui/GroupCallActivity$19;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
@@ -501,7 +501,7 @@
 
     goto :goto_15e
 
-    .line 4302
+    .line 4307
     :cond_128
     iget-object p1, p0, Lorg/telegram/ui/GroupCallActivity$19;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
@@ -511,19 +511,19 @@
 
     if-nez p1, :cond_147
 
-    .line 4303
+    .line 4308
     iget-object p1, p0, Lorg/telegram/ui/GroupCallActivity$19;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-static {p1, v4, v4}, Lorg/telegram/ui/GroupCallActivity;->access$15200(Lorg/telegram/ui/GroupCallActivity;IZ)V
 
-    .line 4304
+    .line 4309
     invoke-static {}, Lorg/telegram/messenger/voip/VoIPService;->getSharedInstance()Lorg/telegram/messenger/voip/VoIPService;
 
     move-result-object p1
 
     invoke-virtual {p1, v3, v3, v4}, Lorg/telegram/messenger/voip/VoIPService;->setMicMute(ZZZ)V
 
-    .line 4305
+    .line 4310
     iget-object p1, p0, Lorg/telegram/ui/GroupCallActivity$19;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/GroupCallActivity;->access$5100(Lorg/telegram/ui/GroupCallActivity;)Lorg/telegram/ui/Components/RLottieImageView;
@@ -534,20 +534,20 @@
 
     goto/16 :goto_29e
 
-    .line 4307
+    .line 4312
     :cond_147
     iget-object p1, p0, Lorg/telegram/ui/GroupCallActivity$19;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-static {p1, v3, v4}, Lorg/telegram/ui/GroupCallActivity;->access$15200(Lorg/telegram/ui/GroupCallActivity;IZ)V
 
-    .line 4308
+    .line 4313
     invoke-static {}, Lorg/telegram/messenger/voip/VoIPService;->getSharedInstance()Lorg/telegram/messenger/voip/VoIPService;
 
     move-result-object p1
 
     invoke-virtual {p1, v4, v3, v4}, Lorg/telegram/messenger/voip/VoIPService;->setMicMute(ZZZ)V
 
-    .line 4309
+    .line 4314
     iget-object p1, p0, Lorg/telegram/ui/GroupCallActivity$19;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/GroupCallActivity;->access$5100(Lorg/telegram/ui/GroupCallActivity;)Lorg/telegram/ui/Components/RLottieImageView;
@@ -558,7 +558,7 @@
 
     goto/16 :goto_29e
 
-    .line 4260
+    .line 4265
     :cond_15e
     :goto_15e
     iget-object v0, p0, Lorg/telegram/ui/GroupCallActivity$19;->this$0:Lorg/telegram/ui/GroupCallActivity;
@@ -571,13 +571,13 @@
 
     return-void
 
-    .line 4263
+    .line 4268
     :cond_167
     iget-object v0, p0, Lorg/telegram/ui/GroupCallActivity$19;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-static {v0, v4}, Lorg/telegram/ui/GroupCallActivity;->access$15402(Lorg/telegram/ui/GroupCallActivity;Z)Z
 
-    .line 4264
+    .line 4269
     iget-object v0, p0, Lorg/telegram/ui/GroupCallActivity$19;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/GroupCallActivity;->access$5400(Lorg/telegram/ui/GroupCallActivity;)[Landroid/widget/TextView;
@@ -590,10 +590,10 @@
 
     invoke-static {v0, v5, v3}, Lorg/telegram/messenger/AndroidUtilities;->shakeView(Landroid/view/View;FI)V
 
-    .line 4265
+    .line 4270
     invoke-virtual {p1, v1, v6}, Landroid/view/View;->performHapticFeedback(II)Z
 
-    .line 4266
+    .line 4271
     sget-object p1, Lorg/telegram/messenger/Utilities;->random:Ljava/security/SecureRandom;
 
     const/16 v0, 0x64
@@ -656,7 +656,7 @@
 
     const/16 v3, 0x21c
 
-    .line 4285
+    .line 4290
     :goto_1b2
     iget-object p1, p0, Lorg/telegram/ui/GroupCallActivity$19;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
@@ -666,7 +666,7 @@
 
     invoke-virtual {p1, v1}, Lorg/telegram/ui/Components/RLottieDrawable;->setCustomEndFrame(I)Z
 
-    .line 4286
+    .line 4291
     iget-object p1, p0, Lorg/telegram/ui/GroupCallActivity$19;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/GroupCallActivity;->access$15800(Lorg/telegram/ui/GroupCallActivity;)Lorg/telegram/ui/Components/RLottieDrawable;
@@ -679,7 +679,7 @@
 
     invoke-virtual {p1, v0, v1}, Lorg/telegram/ui/Components/RLottieDrawable;->setOnFinishCallback(Ljava/lang/Runnable;I)V
 
-    .line 4287
+    .line 4292
     iget-object p1, p0, Lorg/telegram/ui/GroupCallActivity$19;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/GroupCallActivity;->access$5100(Lorg/telegram/ui/GroupCallActivity;)Lorg/telegram/ui/Components/RLottieImageView;
@@ -694,7 +694,7 @@
 
     invoke-virtual {p1, v0}, Lorg/telegram/ui/Components/RLottieImageView;->setAnimation(Lorg/telegram/ui/Components/RLottieDrawable;)V
 
-    .line 4288
+    .line 4293
     iget-object p1, p0, Lorg/telegram/ui/GroupCallActivity$19;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/GroupCallActivity;->access$15800(Lorg/telegram/ui/GroupCallActivity;)Lorg/telegram/ui/Components/RLottieDrawable;
@@ -703,7 +703,7 @@
 
     invoke-virtual {p1, v3}, Lorg/telegram/ui/Components/RLottieDrawable;->setCurrentFrame(I)V
 
-    .line 4289
+    .line 4294
     iget-object p1, p0, Lorg/telegram/ui/GroupCallActivity$19;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/GroupCallActivity;->access$5100(Lorg/telegram/ui/GroupCallActivity;)Lorg/telegram/ui/Components/RLottieImageView;
@@ -712,7 +712,7 @@
 
     invoke-virtual {p1}, Lorg/telegram/ui/Components/RLottieImageView;->playAnimation()V
 
-    .line 4290
+    .line 4295
     iget-object p1, p0, Lorg/telegram/ui/GroupCallActivity$19;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/GroupCallActivity;->access$2200(Lorg/telegram/ui/GroupCallActivity;)I
@@ -721,7 +721,7 @@
 
     if-ne p1, v6, :cond_29e
 
-    .line 4291
+    .line 4296
     iget-object p1, p0, Lorg/telegram/ui/GroupCallActivity$19;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     iget-object v0, p1, Lorg/telegram/ui/GroupCallActivity;->call:Lorg/telegram/messenger/ChatObject$Call;
@@ -742,21 +742,21 @@
 
     check-cast p1, Lorg/telegram/tgnet/TLRPC$TL_groupCallParticipant;
 
-    .line 4293
+    .line 4298
     iget-object p1, p1, Lorg/telegram/tgnet/TLRPC$TL_groupCallParticipant;->peer:Lorg/telegram/tgnet/TLRPC$Peer;
 
     invoke-static {p1}, Lorg/telegram/messenger/MessageObject;->getPeerId(Lorg/telegram/tgnet/TLRPC$Peer;)J
 
     move-result-wide v0
 
-    .line 4294
+    .line 4299
     invoke-static {v0, v1}, Lorg/telegram/messenger/DialogObject;->isUserDialog(J)Z
 
     move-result p1
 
     if-eqz p1, :cond_223
 
-    .line 4295
+    .line 4300
     iget-object p1, p0, Lorg/telegram/ui/GroupCallActivity$19;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/GroupCallActivity;->access$200(Lorg/telegram/ui/GroupCallActivity;)Lorg/telegram/messenger/AccountInstance;
@@ -777,7 +777,7 @@
 
     goto :goto_236
 
-    .line 4297
+    .line 4302
     :cond_223
     iget-object p1, p0, Lorg/telegram/ui/GroupCallActivity$19;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
@@ -802,7 +802,7 @@
     :goto_236
     move-object v6, p1
 
-    .line 4299
+    .line 4304
     invoke-static {}, Lorg/telegram/messenger/voip/VoIPService;->getSharedInstance()Lorg/telegram/messenger/voip/VoIPService;
 
     move-result-object v5
@@ -819,7 +819,7 @@
 
     invoke-virtual/range {v5 .. v11}, Lorg/telegram/messenger/voip/VoIPService;->editCallMember(Lorg/telegram/tgnet/TLObject;Ljava/lang/Boolean;Ljava/lang/Boolean;Ljava/lang/Integer;Ljava/lang/Boolean;Ljava/lang/Runnable;)V
 
-    .line 4300
+    .line 4305
     iget-object p1, p0, Lorg/telegram/ui/GroupCallActivity$19;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-static {p1, v2, v4}, Lorg/telegram/ui/GroupCallActivity;->access$15200(Lorg/telegram/ui/GroupCallActivity;IZ)V
@@ -830,7 +830,7 @@
     :goto_24a
     return-void
 
-    .line 4240
+    .line 4245
     :cond_24b
     :goto_24b
     iget-object p1, p0, Lorg/telegram/ui/GroupCallActivity$19;->this$0:Lorg/telegram/ui/GroupCallActivity;
@@ -841,7 +841,7 @@
 
     if-ne p1, v2, :cond_264
 
-    .line 4241
+    .line 4246
     iget-object p1, p0, Lorg/telegram/ui/GroupCallActivity$19;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/GroupCallActivity;->access$11400(Lorg/telegram/ui/GroupCallActivity;)Lorg/telegram/ui/Components/HintView;
@@ -850,7 +850,7 @@
 
     if-eqz p1, :cond_264
 
-    .line 4242
+    .line 4247
     iget-object p1, p0, Lorg/telegram/ui/GroupCallActivity$19;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/GroupCallActivity;->access$11400(Lorg/telegram/ui/GroupCallActivity;)Lorg/telegram/ui/Components/HintView;
@@ -859,13 +859,13 @@
 
     invoke-virtual {p1}, Lorg/telegram/ui/Components/HintView;->hide()V
 
-    .line 4245
+    .line 4250
     :cond_264
     new-instance p1, Lorg/telegram/tgnet/TLRPC$TL_phone_toggleGroupCallStartSubscription;
 
     invoke-direct {p1}, Lorg/telegram/tgnet/TLRPC$TL_phone_toggleGroupCallStartSubscription;-><init>()V
 
-    .line 4246
+    .line 4251
     iget-object v0, p0, Lorg/telegram/ui/GroupCallActivity$19;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     iget-object v0, v0, Lorg/telegram/ui/GroupCallActivity;->call:Lorg/telegram/messenger/ChatObject$Call;
@@ -876,7 +876,7 @@
 
     iput-object v0, p1, Lorg/telegram/tgnet/TLRPC$TL_phone_toggleGroupCallStartSubscription;->call:Lorg/telegram/tgnet/TLRPC$TL_inputGroupCall;
 
-    .line 4247
+    .line 4252
     iget-object v0, p0, Lorg/telegram/ui/GroupCallActivity$19;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     iget-object v1, v0, Lorg/telegram/ui/GroupCallActivity;->call:Lorg/telegram/messenger/ChatObject$Call;
@@ -889,10 +889,10 @@
 
     iput-boolean v3, v1, Lorg/telegram/tgnet/TLRPC$GroupCall;->schedule_start_subscribed:Z
 
-    .line 4248
+    .line 4253
     iput-boolean v3, p1, Lorg/telegram/tgnet/TLRPC$TL_phone_toggleGroupCallStartSubscription;->subscribed:Z
 
-    .line 4249
+    .line 4254
     invoke-static {v0}, Lorg/telegram/ui/GroupCallActivity;->access$200(Lorg/telegram/ui/GroupCallActivity;)Lorg/telegram/messenger/AccountInstance;
 
     move-result-object v0
@@ -907,7 +907,7 @@
 
     invoke-virtual {v0, p1, v1}, Lorg/telegram/tgnet/ConnectionsManager;->sendRequest(Lorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/RequestDelegate;)I
 
-    .line 4254
+    .line 4259
     iget-object p1, p0, Lorg/telegram/ui/GroupCallActivity$19;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     iget-object v0, p1, Lorg/telegram/ui/GroupCallActivity;->call:Lorg/telegram/messenger/ChatObject$Call;

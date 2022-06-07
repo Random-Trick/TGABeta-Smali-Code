@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/PhotoViewer$76;)V
     .registers 2
 
-    .line 15866
+    .line 16086
     iput-object p1, p0, Lorg/telegram/ui/PhotoViewer$76$1;->this$1:Lorg/telegram/ui/PhotoViewer$76;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -35,12 +35,12 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .registers 3
 
-    .line 15869
+    .line 16089
     iget-object v0, p0, Lorg/telegram/ui/PhotoViewer$76$1;->this$1:Lorg/telegram/ui/PhotoViewer$76;
 
     iget-object v0, v0, Lorg/telegram/ui/PhotoViewer$76;->this$0:Lorg/telegram/ui/PhotoViewer;
 
-    invoke-static {v0}, Lorg/telegram/ui/PhotoViewer;->access$28100(Lorg/telegram/ui/PhotoViewer;)Landroid/animation/AnimatorSet;
+    invoke-static {v0}, Lorg/telegram/ui/PhotoViewer;->access$28600(Lorg/telegram/ui/PhotoViewer;)Landroid/animation/AnimatorSet;
 
     move-result-object v0
 
@@ -50,14 +50,14 @@
 
     if-eqz p1, :cond_16
 
-    .line 15870
+    .line 16090
     iget-object p1, p0, Lorg/telegram/ui/PhotoViewer$76$1;->this$1:Lorg/telegram/ui/PhotoViewer$76;
 
     iget-object p1, p1, Lorg/telegram/ui/PhotoViewer$76;->this$0:Lorg/telegram/ui/PhotoViewer;
 
     const/4 v0, 0x0
 
-    invoke-static {p1, v0}, Lorg/telegram/ui/PhotoViewer;->access$28102(Lorg/telegram/ui/PhotoViewer;Landroid/animation/AnimatorSet;)Landroid/animation/AnimatorSet;
+    invoke-static {p1, v0}, Lorg/telegram/ui/PhotoViewer;->access$28602(Lorg/telegram/ui/PhotoViewer;Landroid/animation/AnimatorSet;)Landroid/animation/AnimatorSet;
 
     :cond_16
     return-void

@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/ActionBar/BottomSheet$ContainerView;)V
     .registers 2
 
-    .line 285
+    .line 299
     iput-object p1, p0, Lorg/telegram/ui/ActionBar/BottomSheet$ContainerView$1;->this$1:Lorg/telegram/ui/ActionBar/BottomSheet$ContainerView;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -35,7 +35,7 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .registers 6
 
-    .line 288
+    .line 302
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/BottomSheet$ContainerView$1;->this$1:Lorg/telegram/ui/ActionBar/BottomSheet$ContainerView;
 
     invoke-static {v0}, Lorg/telegram/ui/ActionBar/BottomSheet$ContainerView;->access$300(Lorg/telegram/ui/ActionBar/BottomSheet$ContainerView;)Landroid/animation/AnimatorSet;
@@ -56,14 +56,14 @@
 
     if-eqz p1, :cond_1a
 
-    .line 289
+    .line 303
     iget-object p1, p0, Lorg/telegram/ui/ActionBar/BottomSheet$ContainerView$1;->this$1:Lorg/telegram/ui/ActionBar/BottomSheet$ContainerView;
 
     const/4 v0, 0x0
 
     invoke-static {p1, v0}, Lorg/telegram/ui/ActionBar/BottomSheet$ContainerView;->access$302(Lorg/telegram/ui/ActionBar/BottomSheet$ContainerView;Landroid/animation/AnimatorSet;)Landroid/animation/AnimatorSet;
 
-    .line 291
+    .line 305
     :cond_1a
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getGlobalInstance()Lorg/telegram/messenger/NotificationCenter;
 

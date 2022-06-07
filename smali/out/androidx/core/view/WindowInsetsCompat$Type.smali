@@ -128,3 +128,11 @@
 
     return p0
 .end method
+
+.method public static navigationBars()I
+    .registers 1
+
+    const/4 v0, 0x2
+
+    return v0
+.end method

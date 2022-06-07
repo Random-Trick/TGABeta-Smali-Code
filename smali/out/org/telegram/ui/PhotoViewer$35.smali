@@ -24,7 +24,7 @@
 .method constructor <init>(Lorg/telegram/ui/PhotoViewer;I)V
     .registers 3
 
-    .line 6086
+    .line 6216
     iput-object p1, p0, Lorg/telegram/ui/PhotoViewer$35;->this$0:Lorg/telegram/ui/PhotoViewer;
 
     iput p2, p0, Lorg/telegram/ui/PhotoViewer$35;->val$toColor:I
@@ -39,7 +39,7 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .registers 3
 
-    .line 6089
+    .line 6219
     iget-object p1, p0, Lorg/telegram/ui/PhotoViewer$35;->this$0:Lorg/telegram/ui/PhotoViewer;
 
     invoke-static {p1}, Lorg/telegram/ui/PhotoViewer;->access$12700(Lorg/telegram/ui/PhotoViewer;)Landroid/graphics/Paint;
@@ -50,10 +50,10 @@
 
     invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 6090
+    .line 6220
     iget-object p1, p0, Lorg/telegram/ui/PhotoViewer$35;->this$0:Lorg/telegram/ui/PhotoViewer;
 
-    invoke-static {p1}, Lorg/telegram/ui/PhotoViewer;->access$5600(Lorg/telegram/ui/PhotoViewer;)Landroid/widget/FrameLayout;
+    invoke-static {p1}, Lorg/telegram/ui/PhotoViewer;->access$5500(Lorg/telegram/ui/PhotoViewer;)Landroid/widget/FrameLayout;
 
     move-result-object p1
 

@@ -199,7 +199,7 @@
 
     const-string v1, "AppName"
 
-    const v2, 0x7f0e017c
+    const v2, 0x7f0e01b1
 
     .line 521
     invoke-static {v1, v2}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -210,7 +210,7 @@
 
     const-string v1, "ClearRecentEmoji"
 
-    const v2, 0x7f0e0471
+    const v2, 0x7f0e04b6
 
     .line 522
     invoke-static {v1, v2}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -221,7 +221,7 @@
 
     const-string v1, "ClearButton"
 
-    const v2, 0x7f0e0460
+    const v2, 0x7f0e04a5
 
     .line 523
     invoke-static {v1, v2}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -240,7 +240,7 @@
 
     const-string v1, "Cancel"
 
-    const v2, 0x7f0e0331
+    const v2, 0x7f0e036d
 
     .line 524
     invoke-static {v1, v2}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;

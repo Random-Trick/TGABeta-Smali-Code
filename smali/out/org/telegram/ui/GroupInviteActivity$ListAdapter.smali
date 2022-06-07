@@ -280,7 +280,7 @@
     .line 273
     iget-object p2, p0, Lorg/telegram/ui/GroupInviteActivity$ListAdapter;->mContext:Landroid/content/Context;
 
-    const v0, 0x7f07012d
+    const v0, 0x7f0700fc
 
     invoke-static {p2, v0, v1}, Lorg/telegram/ui/ActionBar/Theme;->getThemedDrawable(Landroid/content/Context;ILjava/lang/String;)Landroid/graphics/drawable/Drawable;
 
@@ -332,7 +332,7 @@
 
     if-nez p2, :cond_7f
 
-    const p2, 0x7f0e038c
+    const p2, 0x7f0e03cb
 
     const-string v0, "ChannelLinkInfo"
 
@@ -346,7 +346,7 @@
     goto :goto_8b
 
     :cond_7f
-    const p2, 0x7f0e0939
+    const p2, 0x7f0e09c0
 
     const-string v0, "LinkInfo"
 
@@ -361,7 +361,7 @@
     :goto_8b
     iget-object p2, p0, Lorg/telegram/ui/GroupInviteActivity$ListAdapter;->mContext:Landroid/content/Context;
 
-    const v0, 0x7f07012c
+    const v0, 0x7f0700fb
 
     invoke-static {p2, v0, v1}, Lorg/telegram/ui/ActionBar/Theme;->getThemedDrawable(Landroid/content/Context;ILjava/lang/String;)Landroid/graphics/drawable/Drawable;
 
@@ -386,7 +386,7 @@
 
     if-ne p2, v0, :cond_b1
 
-    const p2, 0x7f0e04d4
+    const p2, 0x7f0e0523
 
     const-string v0, "CopyLink"
 
@@ -409,7 +409,7 @@
 
     if-ne p2, v0, :cond_c6
 
-    const p2, 0x7f0e1029
+    const p2, 0x7f0e10e7
 
     const-string v0, "ShareLink"
 
@@ -432,7 +432,7 @@
 
     if-ne p2, v0, :cond_da
 
-    const p2, 0x7f0e0f4d
+    const p2, 0x7f0e0ffd
 
     const-string v0, "RevokeLink"
 

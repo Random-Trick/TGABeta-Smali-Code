@@ -34,7 +34,7 @@
 .method static constructor <clinit>()V
     .registers 1
 
-    .line 12261
+    .line 12262
     new-instance v0, Landroidx/recyclerview/widget/RecyclerView$SavedState$1;
 
     invoke-direct {v0}, Landroidx/recyclerview/widget/RecyclerView$SavedState$1;-><init>()V
@@ -47,14 +47,14 @@
 .method constructor <init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
     .registers 3
 
-    .line 12239
+    .line 12240
     invoke-direct {p0, p1, p2}, Landroidx/customview/view/AbsSavedState;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
 
     if-eqz p2, :cond_6
 
     goto :goto_c
 
-    .line 12241
+    .line 12242
     :cond_6
     const-class p2, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;
 
@@ -62,7 +62,7 @@
 
     move-result-object p2
 
-    .line 12240
+    .line 12241
     :goto_c
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->readParcelable(Ljava/lang/ClassLoader;)Landroid/os/Parcelable;
 
@@ -76,7 +76,7 @@
 .method constructor <init>(Landroid/os/Parcelable;)V
     .registers 2
 
-    .line 12248
+    .line 12249
     invoke-direct {p0, p1}, Landroidx/customview/view/AbsSavedState;-><init>(Landroid/os/Parcelable;)V
 
     return-void
@@ -87,7 +87,7 @@
 .method copyFrom(Landroidx/recyclerview/widget/RecyclerView$SavedState;)V
     .registers 2
 
-    .line 12258
+    .line 12259
     iget-object p1, p1, Landroidx/recyclerview/widget/RecyclerView$SavedState;->mLayoutState:Landroid/os/Parcelable;
 
     iput-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$SavedState;->mLayoutState:Landroid/os/Parcelable;
@@ -98,10 +98,10 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .registers 4
 
-    .line 12253
+    .line 12254
     invoke-super {p0, p1, p2}, Landroidx/customview/view/AbsSavedState;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 12254
+    .line 12255
     iget-object p2, p0, Landroidx/recyclerview/widget/RecyclerView$SavedState;->mLayoutState:Landroid/os/Parcelable;
 
     const/4 v0, 0x0

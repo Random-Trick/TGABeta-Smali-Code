@@ -1,137 +1,189 @@
 .class Lj$/util/stream/E2;
-.super Lj$/util/stream/V2;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Lj$/util/stream/S2;
+.implements Lj$/util/stream/j3;
 
 
 # instance fields
-.field public final synthetic b:I
+.field private a:Z
 
-.field final synthetic c:Ljava/lang/Object;
+.field private b:D
+
+.field final synthetic c:Lj$/util/function/d;
 
 
 # direct methods
-.method public constructor <init>(Lj$/util/stream/f4;Lj$/util/function/b;)V
-    .registers 4
+.method constructor <init>(Lj$/util/function/d;)V
+    .registers 2
 
-    const/4 v0, 0x1
+    iput-object p1, p0, Lj$/util/stream/E2;->c:Lj$/util/function/d;
 
-    iput v0, p0, Lj$/util/stream/E2;->b:I
-
-    .line 1
-    iput-object p2, p0, Lj$/util/stream/E2;->c:Ljava/lang/Object;
-
-    invoke-direct {p0, p1}, Lj$/util/stream/V2;-><init>(Lj$/util/stream/f4;)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Lj$/util/stream/f4;Lj$/util/function/d;)V
-    .registers 4
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Lj$/util/stream/E2;->b:I
-
-    .line 2
-    iput-object p2, p0, Lj$/util/stream/E2;->c:Ljava/lang/Object;
-
-    invoke-direct {p0, p1}, Lj$/util/stream/V2;-><init>(Lj$/util/stream/f4;)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Lj$/util/stream/f4;Lj$/util/function/j;)V
-    .registers 4
-
-    const/4 v0, 0x2
-
-    iput v0, p0, Lj$/util/stream/E2;->b:I
-
-    .line 3
-    iput-object p2, p0, Lj$/util/stream/E2;->c:Ljava/lang/Object;
-
-    invoke-direct {p0, p1}, Lj$/util/stream/V2;-><init>(Lj$/util/stream/f4;)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Lj$/util/stream/f4;Lj$/util/function/o;)V
-    .registers 4
-
-    const/4 v0, 0x3
-
-    iput v0, p0, Lj$/util/stream/E2;->b:I
-
-    .line 4
-    iput-object p2, p0, Lj$/util/stream/E2;->c:Ljava/lang/Object;
-
-    invoke-direct {p0, p1}, Lj$/util/stream/V2;-><init>(Lj$/util/stream/f4;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a()Lj$/util/stream/T2;
+.method public accept(D)V
+    .registers 6
+
+    iget-boolean v0, p0, Lj$/util/stream/E2;->a:Z
+
+    if-eqz v0, :cond_8
+
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lj$/util/stream/E2;->a:Z
+
+    goto :goto_10
+
+    :cond_8
+    iget-object v0, p0, Lj$/util/stream/E2;->c:Lj$/util/function/d;
+
+    iget-wide v1, p0, Lj$/util/stream/E2;->b:D
+
+    invoke-interface {v0, v1, v2, p1, p2}, Lj$/util/function/d;->applyAsDouble(DD)D
+
+    move-result-wide p1
+
+    :goto_10
+    iput-wide p1, p0, Lj$/util/stream/E2;->b:D
+
+    return-void
+.end method
+
+.method public synthetic accept(I)V
+    .registers 2
+
+    invoke-static {p0}, Lj$/util/stream/o1;->d(Lj$/util/stream/m3;)V
+
+    const/4 p1, 0x0
+
+    throw p1
+.end method
+
+.method public synthetic accept(J)V
     .registers 3
 
-    iget v0, p0, Lj$/util/stream/E2;->b:I
+    invoke-static {p0}, Lj$/util/stream/o1;->e(Lj$/util/stream/m3;)V
 
-    packed-switch v0, :pswitch_data_2e
+    const/4 p1, 0x0
 
-    goto :goto_24
+    throw p1
+.end method
+
+.method public bridge synthetic accept(Ljava/lang/Object;)V
+    .registers 2
 
     .line 1
-    :pswitch_6
-    new-instance v0, Lj$/util/stream/O2;
+    check-cast p1, Ljava/lang/Double;
 
-    iget-object v1, p0, Lj$/util/stream/E2;->c:Ljava/lang/Object;
+    invoke-virtual {p0, p1}, Lj$/util/stream/E2;->b(Ljava/lang/Double;)V
 
-    check-cast v1, Lj$/util/function/j;
+    return-void
+.end method
 
-    invoke-direct {v0, v1}, Lj$/util/stream/O2;-><init>(Lj$/util/function/j;)V
+.method public synthetic andThen(Lj$/util/function/Consumer;)Lj$/util/function/Consumer;
+    .registers 2
+
+    invoke-static {p0, p1}, Lj$/util/function/Consumer$-CC;->$default$andThen(Lj$/util/function/Consumer;Lj$/util/function/Consumer;)Lj$/util/function/Consumer;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public synthetic b(Ljava/lang/Double;)V
+    .registers 2
+
+    invoke-static {p0, p1}, Lj$/util/stream/o1;->a(Lj$/util/stream/j3;Ljava/lang/Double;)V
+
+    return-void
+.end method
+
+.method public get()Ljava/lang/Object;
+    .registers 3
+
+    .line 1
+    iget-boolean v0, p0, Lj$/util/stream/E2;->a:Z
+
+    if-eqz v0, :cond_9
+
+    invoke-static {}, Lj$/util/j;->a()Lj$/util/j;
+
+    move-result-object v0
+
+    goto :goto_f
+
+    :cond_9
+    iget-wide v0, p0, Lj$/util/stream/E2;->b:D
+
+    invoke-static {v0, v1}, Lj$/util/j;->d(D)Lj$/util/j;
+
+    move-result-object v0
+
+    :goto_f
+    return-object v0
+.end method
+
+.method public h(Lj$/util/stream/S2;)V
+    .registers 4
+
+    check-cast p1, Lj$/util/stream/E2;
+
+    .line 1
+    iget-boolean v0, p1, Lj$/util/stream/E2;->a:Z
+
+    if-nez v0, :cond_b
+
+    iget-wide v0, p1, Lj$/util/stream/E2;->b:D
+
+    invoke-virtual {p0, v0, v1}, Lj$/util/stream/E2;->accept(D)V
+
+    :cond_b
+    return-void
+.end method
+
+.method public j(Lj$/util/function/f;)Lj$/util/function/f;
+    .registers 3
+
+    .line 1
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v0, Lj$/util/function/e;
+
+    invoke-direct {v0, p0, p1}, Lj$/util/function/e;-><init>(Lj$/util/function/f;Lj$/util/function/f;)V
 
     return-object v0
+.end method
 
-    .line 2
-    :pswitch_10
-    new-instance v0, Lj$/util/stream/I2;
+.method public synthetic m()V
+    .registers 1
 
-    iget-object v1, p0, Lj$/util/stream/E2;->c:Ljava/lang/Object;
+    return-void
+.end method
 
-    check-cast v1, Lj$/util/function/b;
+.method public n(J)V
+    .registers 3
 
-    invoke-direct {v0, v1}, Lj$/util/stream/I2;-><init>(Lj$/util/function/b;)V
+    const/4 p1, 0x1
 
-    return-object v0
+    iput-boolean p1, p0, Lj$/util/stream/E2;->a:Z
 
-    .line 3
-    :pswitch_1a
-    new-instance v0, Lj$/util/stream/F2;
+    const-wide/16 p1, 0x0
 
-    iget-object v1, p0, Lj$/util/stream/E2;->c:Ljava/lang/Object;
+    iput-wide p1, p0, Lj$/util/stream/E2;->b:D
 
-    check-cast v1, Lj$/util/function/d;
+    return-void
+.end method
 
-    invoke-direct {v0, v1}, Lj$/util/stream/F2;-><init>(Lj$/util/function/d;)V
+.method public synthetic o()Z
+    .registers 2
 
-    return-object v0
+    const/4 v0, 0x0
 
-    .line 4
-    :goto_24
-    new-instance v0, Lj$/util/stream/S2;
-
-    iget-object v1, p0, Lj$/util/stream/E2;->c:Ljava/lang/Object;
-
-    check-cast v1, Lj$/util/function/o;
-
-    invoke-direct {v0, v1}, Lj$/util/stream/S2;-><init>(Lj$/util/function/o;)V
-
-    return-object v0
-
-    :pswitch_data_2e
-    .packed-switch 0x0
-        :pswitch_1a
-        :pswitch_10
-        :pswitch_6
-    .end packed-switch
+    return v0
 .end method

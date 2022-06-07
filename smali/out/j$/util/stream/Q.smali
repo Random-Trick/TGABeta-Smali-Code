@@ -3,7 +3,7 @@
 
 
 # direct methods
-.method constructor <init>(Lj$/util/stream/c;Lj$/util/stream/f4;I)V
+.method constructor <init>(Lj$/util/stream/c;Lj$/util/stream/e4;I)V
     .registers 4
 
     invoke-direct {p0, p1, p3}, Lj$/util/stream/T;-><init>(Lj$/util/stream/c;I)V

@@ -923,7 +923,7 @@
 
     if-ne p2, v0, :cond_48
 
-    const p2, 0x7f0e0e9c
+    const p2, 0x7f0e0f48
 
     const-string v0, "RecentStickers"
 
@@ -946,7 +946,7 @@
 
     if-ne p2, v0, :cond_119
 
-    const p2, 0x7f0e06eb
+    const p2, 0x7f0e073d
 
     const-string v0, "FavoriteStickers"
 

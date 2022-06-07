@@ -26,17 +26,17 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .registers 10
 
-    .line 312
+    .line 313
     invoke-direct {p0, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    .line 309
+    .line 310
     new-instance v0, Lorg/telegram/ui/Components/AvatarDrawable;
 
     invoke-direct {v0}, Lorg/telegram/ui/Components/AvatarDrawable;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/ui/MessageSeenView$UserCell;->avatarDrawable:Lorg/telegram/ui/Components/AvatarDrawable;
 
-    .line 313
+    .line 314
     new-instance v0, Lorg/telegram/ui/Components/BackupImageView;
 
     invoke-direct {v0, p1}, Lorg/telegram/ui/Components/BackupImageView;-><init>(Landroid/content/Context;)V
@@ -57,14 +57,14 @@
 
     const/4 v7, 0x0
 
-    .line 314
+    .line 315
     invoke-static/range {v1 .. v7}, Lorg/telegram/ui/Components/LayoutHelper;->createFrame(IFIFFFF)Landroid/widget/FrameLayout$LayoutParams;
 
     move-result-object v1
 
     invoke-virtual {p0, v0, v1}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 315
+    .line 316
     iget-object v0, p0, Lorg/telegram/ui/MessageSeenView$UserCell;->avatarImageView:Lorg/telegram/ui/Components/BackupImageView;
 
     const/high16 v1, 0x41800000    # 16.0f
@@ -75,7 +75,7 @@
 
     invoke-virtual {v0, v2}, Lorg/telegram/ui/Components/BackupImageView;->setRoundRadius(I)V
 
-    .line 316
+    .line 317
     new-instance v0, Landroid/widget/TextView;
 
     invoke-direct {v0, p1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
@@ -84,22 +84,29 @@
 
     const/4 p1, 0x1
 
-    .line 317
+    .line 318
     invoke-virtual {v0, p1, v1}, Landroid/widget/TextView;->setTextSize(IF)V
 
-    .line 318
+    .line 319
     iget-object v0, p0, Lorg/telegram/ui/MessageSeenView$UserCell;->nameView:Landroid/widget/TextView;
 
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->setLines(I)V
 
-    .line 319
+    .line 320
     iget-object p1, p0, Lorg/telegram/ui/MessageSeenView$UserCell;->nameView:Landroid/widget/TextView;
 
     sget-object v0, Landroid/text/TextUtils$TruncateAt;->END:Landroid/text/TextUtils$TruncateAt;
 
     invoke-virtual {p1, v0}, Landroid/widget/TextView;->setEllipsize(Landroid/text/TextUtils$TruncateAt;)V
 
-    .line 320
+    .line 321
+    iget-object p1, p0, Lorg/telegram/ui/MessageSeenView$UserCell;->nameView:Landroid/widget/TextView;
+
+    const/4 v0, 0x2
+
+    invoke-virtual {p1, v0}, Landroid/widget/TextView;->setImportantForAccessibility(I)V
+
+    .line 322
     iget-object p1, p0, Lorg/telegram/ui/MessageSeenView$UserCell;->nameView:Landroid/widget/TextView;
 
     const/4 v0, -0x2
@@ -120,7 +127,7 @@
 
     invoke-virtual {p0, p1, v0}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 322
+    .line 324
     iget-object p1, p0, Lorg/telegram/ui/MessageSeenView$UserCell;->nameView:Landroid/widget/TextView;
 
     const-string v0, "actionBarDefaultSubmenuItem"
@@ -136,12 +143,46 @@
 
 
 # virtual methods
+.method public onInitializeAccessibilityNodeInfo(Landroid/view/accessibility/AccessibilityNodeInfo;)V
+    .registers 5
+
+    .line 343
+    invoke-super {p0, p1}, Landroid/widget/FrameLayout;->onInitializeAccessibilityNodeInfo(Landroid/view/accessibility/AccessibilityNodeInfo;)V
+
+    const/4 v0, 0x1
+
+    new-array v0, v0, [Ljava/lang/Object;
+
+    .line 344
+    iget-object v1, p0, Lorg/telegram/ui/MessageSeenView$UserCell;->nameView:Landroid/widget/TextView;
+
+    invoke-virtual {v1}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
+
+    move-result-object v1
+
+    const/4 v2, 0x0
+
+    aput-object v1, v0, v2
+
+    const-string v1, "AccDescrPersonHasSeen"
+
+    const v2, 0x7f0e0064
+
+    invoke-static {v1, v2, v0}, Lorg/telegram/messenger/LocaleController;->formatString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Landroid/view/accessibility/AccessibilityNodeInfo;->setText(Ljava/lang/CharSequence;)V
+
+    return-void
+.end method
+
 .method protected onMeasure(II)V
     .registers 4
 
     const/high16 p2, 0x42300000    # 44.0f
 
-    .line 327
+    .line 329
     invoke-static {p2}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result p2
@@ -162,19 +203,19 @@
 
     if-eqz p1, :cond_22
 
-    .line 332
+    .line 334
     iget-object v0, p0, Lorg/telegram/ui/MessageSeenView$UserCell;->avatarDrawable:Lorg/telegram/ui/Components/AvatarDrawable;
 
     invoke-virtual {v0, p1}, Lorg/telegram/ui/Components/AvatarDrawable;->setInfo(Lorg/telegram/tgnet/TLRPC$User;)V
 
     const/4 v0, 0x1
 
-    .line 333
+    .line 335
     invoke-static {p1, v0}, Lorg/telegram/messenger/ImageLocation;->getForUser(Lorg/telegram/tgnet/TLRPC$User;I)Lorg/telegram/messenger/ImageLocation;
 
     move-result-object v0
 
-    .line 334
+    .line 336
     iget-object v1, p0, Lorg/telegram/ui/MessageSeenView$UserCell;->avatarImageView:Lorg/telegram/ui/Components/BackupImageView;
 
     iget-object v2, p0, Lorg/telegram/ui/MessageSeenView$UserCell;->avatarDrawable:Lorg/telegram/ui/Components/AvatarDrawable;
@@ -183,7 +224,7 @@
 
     invoke-virtual {v1, v0, v3, v2, p1}, Lorg/telegram/ui/Components/BackupImageView;->setImage(Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Landroid/graphics/drawable/Drawable;Ljava/lang/Object;)V
 
-    .line 335
+    .line 337
     iget-object v0, p0, Lorg/telegram/ui/MessageSeenView$UserCell;->nameView:Landroid/widget/TextView;
 
     iget-object v1, p1, Lorg/telegram/tgnet/TLRPC$User;->first_name:Ljava/lang/String;

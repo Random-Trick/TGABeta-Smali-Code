@@ -15,7 +15,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 27314
+    .line 27682
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -30,7 +30,7 @@
 
     goto :goto_22
 
-    .line 27333
+    .line 27701
     :sswitch_5
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_inputStickerSetAnimatedEmoji;
 
@@ -38,7 +38,7 @@
 
     goto :goto_22
 
-    .line 27324
+    .line 27692
     :sswitch_b
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_inputStickerSetEmpty;
 
@@ -46,7 +46,7 @@
 
     goto :goto_22
 
-    .line 27336
+    .line 27704
     :sswitch_11
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_inputStickerSetDice;
 
@@ -54,7 +54,7 @@
 
     goto :goto_22
 
-    .line 27327
+    .line 27695
     :sswitch_17
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_inputStickerSetID;
 
@@ -62,7 +62,7 @@
 
     goto :goto_22
 
-    .line 27330
+    .line 27698
     :sswitch_1d
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_inputStickerSetShortName;
 
@@ -75,7 +75,7 @@
 
     goto :goto_3d
 
-    .line 27340
+    .line 27708
     :cond_27
     new-instance p0, Ljava/lang/RuntimeException;
 
@@ -105,7 +105,7 @@
     :goto_3d
     if-eqz v0, :cond_42
 
-    .line 27343
+    .line 27711
     invoke-virtual {v0, p0, p2}, Lorg/telegram/tgnet/TLObject;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
     :cond_42

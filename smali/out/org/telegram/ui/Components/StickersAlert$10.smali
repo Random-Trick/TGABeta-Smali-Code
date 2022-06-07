@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/StickersAlert;Ljava/lang/String;)V
     .registers 3
 
-    .line 929
+    .line 951
     iput-object p1, p0, Lorg/telegram/ui/Components/StickersAlert$10;->this$0:Lorg/telegram/ui/Components/StickersAlert;
 
     invoke-direct {p0, p2}, Lorg/telegram/ui/Components/URLSpanNoUnderline;-><init>(Ljava/lang/String;)V
@@ -35,7 +35,7 @@
 .method public onClick(Landroid/view/View;)V
     .registers 5
 
-    .line 932
+    .line 954
     iget-object p1, p0, Lorg/telegram/ui/Components/StickersAlert$10;->this$0:Lorg/telegram/ui/Components/StickersAlert;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/StickersAlert;->access$4500(Lorg/telegram/ui/Components/StickersAlert;)I
@@ -60,7 +60,7 @@
 
     invoke-virtual {p1, v0, v1, v2}, Lorg/telegram/messenger/MessagesController;->openByUserName(Ljava/lang/String;Lorg/telegram/ui/ActionBar/BaseFragment;I)V
 
-    .line 933
+    .line 955
     iget-object p1, p0, Lorg/telegram/ui/Components/StickersAlert$10;->this$0:Lorg/telegram/ui/Components/StickersAlert;
 
     invoke-virtual {p1}, Lorg/telegram/ui/Components/StickersAlert;->dismiss()V

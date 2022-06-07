@@ -1,5 +1,5 @@
 .class Lj$/util/stream/q;
-.super Lj$/util/stream/j3;
+.super Lj$/util/stream/i3;
 
 
 # instance fields
@@ -9,10 +9,10 @@
 
 
 # direct methods
-.method constructor <init>(Lj$/util/stream/s;Lj$/util/stream/n3;)V
+.method constructor <init>(Lj$/util/stream/s;Lj$/util/stream/m3;)V
     .registers 3
 
-    invoke-direct {p0, p2}, Lj$/util/stream/j3;-><init>(Lj$/util/stream/n3;)V
+    invoke-direct {p0, p2}, Lj$/util/stream/i3;-><init>(Lj$/util/stream/m3;)V
 
     return-void
 .end method
@@ -32,7 +32,7 @@
 
     iput-boolean p1, p0, Lj$/util/stream/q;->b:Z
 
-    iget-object p1, p0, Lj$/util/stream/j3;->a:Lj$/util/stream/n3;
+    iget-object p1, p0, Lj$/util/stream/i3;->a:Lj$/util/stream/m3;
 
     const/4 v0, 0x0
 
@@ -54,7 +54,7 @@
     if-nez v0, :cond_23
 
     :cond_1c
-    iget-object v0, p0, Lj$/util/stream/j3;->a:Lj$/util/stream/n3;
+    iget-object v0, p0, Lj$/util/stream/i3;->a:Lj$/util/stream/m3;
 
     iput-object p1, p0, Lj$/util/stream/q;->c:Ljava/lang/Object;
 
@@ -76,9 +76,9 @@
 
     iput-object v0, p0, Lj$/util/stream/q;->c:Ljava/lang/Object;
 
-    iget-object v0, p0, Lj$/util/stream/j3;->a:Lj$/util/stream/n3;
+    iget-object v0, p0, Lj$/util/stream/i3;->a:Lj$/util/stream/m3;
 
-    invoke-interface {v0}, Lj$/util/stream/n3;->m()V
+    invoke-interface {v0}, Lj$/util/stream/m3;->m()V
 
     return-void
 .end method
@@ -94,11 +94,11 @@
 
     iput-object p1, p0, Lj$/util/stream/q;->c:Ljava/lang/Object;
 
-    iget-object p1, p0, Lj$/util/stream/j3;->a:Lj$/util/stream/n3;
+    iget-object p1, p0, Lj$/util/stream/i3;->a:Lj$/util/stream/m3;
 
     const-wide/16 v0, -0x1
 
-    invoke-interface {p1, v0, v1}, Lj$/util/stream/n3;->n(J)V
+    invoke-interface {p1, v0, v1}, Lj$/util/stream/m3;->n(J)V
 
     return-void
 .end method

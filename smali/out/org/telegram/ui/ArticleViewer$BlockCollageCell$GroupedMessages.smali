@@ -51,19 +51,19 @@
 .method public constructor <init>(Lorg/telegram/ui/ArticleViewer$BlockCollageCell;)V
     .registers 2
 
-    .line 7767
+    .line 7768
     iput-object p1, p0, Lorg/telegram/ui/ArticleViewer$BlockCollageCell$GroupedMessages;->this$1:Lorg/telegram/ui/ArticleViewer$BlockCollageCell;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 7770
+    .line 7771
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
     iput-object p1, p0, Lorg/telegram/ui/ArticleViewer$BlockCollageCell$GroupedMessages;->posArray:Ljava/util/ArrayList;
 
-    .line 7771
+    .line 7772
     new-instance p1, Ljava/util/HashMap;
 
     invoke-direct {p1}, Ljava/util/HashMap;-><init>()V
@@ -72,7 +72,7 @@
 
     const/16 p1, 0x3e8
 
-    .line 7773
+    .line 7774
     iput p1, p0, Lorg/telegram/ui/ArticleViewer$BlockCollageCell$GroupedMessages;->maxSizeWidth:I
 
     return-void
@@ -86,7 +86,7 @@
     :goto_1
     if-ge p2, p3, :cond_9
 
-    .line 7799
+    .line 7800
     aget v1, p1, p2
 
     add-float/2addr v0, v1
@@ -95,7 +95,7 @@
 
     goto :goto_1
 
-    .line 7801
+    .line 7802
     :cond_9
     iget p1, p0, Lorg/telegram/ui/ArticleViewer$BlockCollageCell$GroupedMessages;->maxSizeWidth:I
 
@@ -113,17 +113,17 @@
 
     move-object/from16 v10, p0
 
-    .line 7805
+    .line 7806
     iget-object v0, v10, Lorg/telegram/ui/ArticleViewer$BlockCollageCell$GroupedMessages;->posArray:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 7806
+    .line 7807
     iget-object v0, v10, Lorg/telegram/ui/ArticleViewer$BlockCollageCell$GroupedMessages;->positions:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->clear()V
 
-    .line 7807
+    .line 7808
     iget-object v0, v10, Lorg/telegram/ui/ArticleViewer$BlockCollageCell$GroupedMessages;->this$1:Lorg/telegram/ui/ArticleViewer$BlockCollageCell;
 
     invoke-static {v0}, Lorg/telegram/ui/ArticleViewer$BlockCollageCell;->access$16700(Lorg/telegram/ui/ArticleViewer$BlockCollageCell;)Lorg/telegram/tgnet/TLRPC$TL_pageBlockCollage;
@@ -145,7 +145,7 @@
     :cond_1c
     const v13, 0x444b8000    # 814.0f
 
-    .line 7813
+    .line 7814
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -165,7 +165,7 @@
 
     if-ge v2, v11, :cond_ce
 
-    .line 7822
+    .line 7823
     iget-object v5, v10, Lorg/telegram/ui/ArticleViewer$BlockCollageCell$GroupedMessages;->this$1:Lorg/telegram/ui/ArticleViewer$BlockCollageCell;
 
     invoke-static {v5}, Lorg/telegram/ui/ArticleViewer$BlockCollageCell;->access$16700(Lorg/telegram/ui/ArticleViewer$BlockCollageCell;)Lorg/telegram/tgnet/TLRPC$TL_pageBlockCollage;
@@ -180,17 +180,17 @@
 
     check-cast v5, Lorg/telegram/tgnet/TLObject;
 
-    .line 7823
+    .line 7824
     instance-of v6, v5, Lorg/telegram/tgnet/TLRPC$TL_pageBlockPhoto;
 
     if-eqz v6, :cond_60
 
-    .line 7824
+    .line 7825
     move-object v6, v5
 
     check-cast v6, Lorg/telegram/tgnet/TLRPC$TL_pageBlockPhoto;
 
-    .line 7825
+    .line 7826
     iget-object v7, v10, Lorg/telegram/ui/ArticleViewer$BlockCollageCell$GroupedMessages;->this$1:Lorg/telegram/ui/ArticleViewer$BlockCollageCell;
 
     invoke-static {v7}, Lorg/telegram/ui/ArticleViewer$BlockCollageCell;->access$16800(Lorg/telegram/ui/ArticleViewer$BlockCollageCell;)Lorg/telegram/ui/ArticleViewer$WebpageAdapter;
@@ -207,7 +207,7 @@
 
     goto/16 :goto_ca
 
-    .line 7829
+    .line 7830
     :cond_55
     iget-object v6, v6, Lorg/telegram/tgnet/TLRPC$Photo;->sizes:Ljava/util/ArrayList;
 
@@ -221,18 +221,18 @@
 
     goto :goto_7e
 
-    .line 7830
+    .line 7831
     :cond_60
     instance-of v6, v5, Lorg/telegram/tgnet/TLRPC$TL_pageBlockVideo;
 
     if-eqz v6, :cond_ca
 
-    .line 7831
+    .line 7832
     move-object v6, v5
 
     check-cast v6, Lorg/telegram/tgnet/TLRPC$TL_pageBlockVideo;
 
-    .line 7832
+    .line 7833
     iget-object v7, v10, Lorg/telegram/ui/ArticleViewer$BlockCollageCell$GroupedMessages;->this$1:Lorg/telegram/ui/ArticleViewer$BlockCollageCell;
 
     invoke-static {v7}, Lorg/telegram/ui/ArticleViewer$BlockCollageCell;->access$16800(Lorg/telegram/ui/ArticleViewer$BlockCollageCell;)Lorg/telegram/ui/ArticleViewer$WebpageAdapter;
@@ -249,7 +249,7 @@
 
     goto :goto_ca
 
-    .line 7836
+    .line 7837
     :cond_76
     iget-object v6, v6, Lorg/telegram/tgnet/TLRPC$Document;->thumbs:Ljava/util/ArrayList;
 
@@ -259,7 +259,7 @@
 
     move-result-object v6
 
-    .line 7841
+    .line 7842
     :goto_7e
     new-instance v7, Lorg/telegram/messenger/MessageObject$GroupedMessagePosition;
 
@@ -276,7 +276,7 @@
     :cond_89
     const/4 v8, 0x0
 
-    .line 7842
+    .line 7843
     :goto_8a
     iput-boolean v8, v7, Lorg/telegram/messenger/MessageObject$GroupedMessagePosition;->last:Z
 
@@ -286,7 +286,7 @@
 
     goto :goto_98
 
-    .line 7843
+    .line 7844
     :cond_91
     iget v8, v6, Lorg/telegram/tgnet/TLRPC$PhotoSize;->w:I
 
@@ -307,7 +307,7 @@
 
     const-string v6, "w"
 
-    .line 7846
+    .line 7847
     invoke-virtual {v0, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_b6
@@ -321,7 +321,7 @@
 
     const-string v6, "n"
 
-    .line 7848
+    .line 7849
     invoke-virtual {v0, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_b6
@@ -329,10 +329,10 @@
     :cond_b1
     const-string v6, "q"
 
-    .line 7850
+    .line 7851
     invoke-virtual {v0, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 7853
+    .line 7854
     :goto_b6
     iget v6, v7, Lorg/telegram/messenger/MessageObject$GroupedMessagePosition;->aspectRatio:F
 
@@ -346,13 +346,13 @@
 
     const/4 v4, 0x1
 
-    .line 7859
+    .line 7860
     :cond_c0
     iget-object v6, v10, Lorg/telegram/ui/ArticleViewer$BlockCollageCell$GroupedMessages;->positions:Ljava/util/HashMap;
 
     invoke-virtual {v6, v5, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 7860
+    .line 7861
     iget-object v5, v10, Lorg/telegram/ui/ArticleViewer$BlockCollageCell$GroupedMessages;->posArray:Ljava/util/ArrayList;
 
     invoke-virtual {v5, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -366,12 +366,12 @@
     :cond_ce
     const/high16 v2, 0x42f00000    # 120.0f
 
-    .line 7863
+    .line 7864
     invoke-static {v2}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v5
 
-    .line 7864
+    .line 7865
     invoke-static {v2}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v2
@@ -402,7 +402,7 @@
 
     const/high16 v2, 0x42200000    # 40.0f
 
-    .line 7865
+    .line 7866
     invoke-static {v2}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v2
@@ -458,7 +458,7 @@
 
     if-ne v11, v3, :cond_244
 
-    .line 7872
+    .line 7873
     iget-object v2, v10, Lorg/telegram/ui/ArticleViewer$BlockCollageCell$GroupedMessages;->posArray:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v14}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -469,7 +469,7 @@
 
     check-cast v15, Lorg/telegram/messenger/MessageObject$GroupedMessagePosition;
 
-    .line 7873
+    .line 7874
     iget-object v2, v10, Lorg/telegram/ui/ArticleViewer$BlockCollageCell$GroupedMessages;->posArray:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v12}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -478,14 +478,14 @@
 
     check-cast v2, Lorg/telegram/messenger/MessageObject$GroupedMessagePosition;
 
-    .line 7874
+    .line 7875
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
     const-string v5, "ww"
 
-    .line 7875
+    .line 7876
     invoke-virtual {v0, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v16
@@ -520,7 +520,7 @@
 
     if-gez v6, :cond_191
 
-    .line 7876
+    .line 7877
     iget v0, v10, Lorg/telegram/ui/ArticleViewer$BlockCollageCell$GroupedMessages;->maxSizeWidth:I
 
     int-to-float v1, v0
@@ -557,7 +557,7 @@
 
     const/16 v19, 0x0
 
-    .line 7877
+    .line 7878
     iget v1, v10, Lorg/telegram/ui/ArticleViewer$BlockCollageCell$GroupedMessages;->maxSizeWidth:I
 
     const/16 v22, 0x7
@@ -572,7 +572,7 @@
 
     const/16 v20, 0x1
 
-    .line 7878
+    .line 7879
     iget v1, v10, Lorg/telegram/ui/ArticleViewer$BlockCollageCell$GroupedMessages;->maxSizeWidth:I
 
     const/16 v23, 0xb
@@ -587,7 +587,7 @@
 
     goto/16 :goto_4ec
 
-    .line 7879
+    .line 7880
     :cond_191
     invoke-virtual {v0, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -605,7 +605,7 @@
 
     goto :goto_203
 
-    .line 7885
+    .line 7886
     :cond_1a0
     iget v0, v10, Lorg/telegram/ui/ArticleViewer$BlockCollageCell$GroupedMessages;->maxSizeWidth:I
 
@@ -643,7 +643,7 @@
 
     float-to-int v0, v0
 
-    .line 7886
+    .line 7887
     iget v1, v10, Lorg/telegram/ui/ArticleViewer$BlockCollageCell$GroupedMessages;->maxSizeWidth:I
 
     sub-int/2addr v1, v0
@@ -659,7 +659,7 @@
     :cond_1c6
     int-to-float v3, v1
 
-    .line 7893
+    .line 7894
     iget v4, v15, Lorg/telegram/messenger/MessageObject$GroupedMessagePosition;->aspectRatio:F
 
     div-float/2addr v3, v4
@@ -702,7 +702,7 @@
 
     move/from16 v21, v3
 
-    .line 7894
+    .line 7895
     invoke-virtual/range {v15 .. v22}, Lorg/telegram/messenger/MessageObject$GroupedMessagePosition;->set(IIIIIFI)V
 
     const/16 v17, 0x1
@@ -719,12 +719,12 @@
 
     move/from16 v22, v3
 
-    .line 7895
+    .line 7896
     invoke-virtual/range {v16 .. v23}, Lorg/telegram/messenger/MessageObject$GroupedMessagePosition;->set(IIIIIFI)V
 
     goto/16 :goto_4ec
 
-    .line 7880
+    .line 7881
     :cond_203
     :goto_203
     iget v0, v10, Lorg/telegram/ui/ArticleViewer$BlockCollageCell$GroupedMessages;->maxSizeWidth:I
@@ -735,7 +735,7 @@
 
     int-to-float v1, v0
 
-    .line 7881
+    .line 7882
     iget v3, v15, Lorg/telegram/messenger/MessageObject$GroupedMessagePosition;->aspectRatio:F
 
     div-float v3, v1, v3
@@ -776,7 +776,7 @@
 
     move/from16 v21, v1
 
-    .line 7882
+    .line 7883
     invoke-virtual/range {v15 .. v22}, Lorg/telegram/messenger/MessageObject$GroupedMessagePosition;->set(IIIIIFI)V
 
     const/16 v17, 0x1
@@ -793,7 +793,7 @@
 
     move/from16 v22, v1
 
-    .line 7883
+    .line 7884
     invoke-virtual/range {v16 .. v23}, Lorg/telegram/messenger/MessageObject$GroupedMessagePosition;->set(IIIIIFI)V
 
     goto/16 :goto_4ec
@@ -803,7 +803,7 @@
 
     if-ne v11, v15, :cond_370
 
-    .line 7898
+    .line 7899
     iget-object v1, v10, Lorg/telegram/ui/ArticleViewer$BlockCollageCell$GroupedMessages;->posArray:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v14}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -812,7 +812,7 @@
 
     check-cast v1, Lorg/telegram/messenger/MessageObject$GroupedMessagePosition;
 
-    .line 7899
+    .line 7900
     iget-object v4, v10, Lorg/telegram/ui/ArticleViewer$BlockCollageCell$GroupedMessages;->posArray:Ljava/util/ArrayList;
 
     const/4 v5, 0x1
@@ -823,7 +823,7 @@
 
     check-cast v4, Lorg/telegram/messenger/MessageObject$GroupedMessagePosition;
 
-    .line 7900
+    .line 7901
     iget-object v5, v10, Lorg/telegram/ui/ArticleViewer$BlockCollageCell$GroupedMessages;->posArray:Ljava/util/ArrayList;
 
     const/4 v6, 0x2
@@ -834,7 +834,7 @@
 
     check-cast v5, Lorg/telegram/messenger/MessageObject$GroupedMessagePosition;
 
-    .line 7901
+    .line 7902
     invoke-virtual {v0, v14}, Ljava/lang/StringBuilder;->charAt(I)C
 
     move-result v0
@@ -843,7 +843,7 @@
 
     if-ne v0, v6, :cond_30b
 
-    .line 7902
+    .line 7903
     iget v0, v4, Lorg/telegram/messenger/MessageObject$GroupedMessagePosition;->aspectRatio:F
 
     iget v3, v10, Lorg/telegram/ui/ArticleViewer$BlockCollageCell$GroupedMessages;->maxSizeWidth:I
@@ -874,7 +874,7 @@
 
     int-to-float v3, v9
 
-    .line 7904
+    .line 7905
     iget v6, v10, Lorg/telegram/ui/ArticleViewer$BlockCollageCell$GroupedMessages;->maxSizeWidth:I
 
     int-to-float v6, v6
@@ -911,7 +911,7 @@
 
     float-to-int v3, v3
 
-    .line 7906
+    .line 7907
     iget v6, v1, Lorg/telegram/messenger/MessageObject$GroupedMessagePosition;->aspectRatio:F
 
     const v7, 0x444b8000    # 814.0f
@@ -952,7 +952,7 @@
 
     move/from16 v29, v2
 
-    .line 7907
+    .line 7908
     invoke-virtual/range {v24 .. v31}, Lorg/telegram/messenger/MessageObject$GroupedMessagePosition;->set(IIIIIFI)V
 
     const/16 v25, 0x1
@@ -973,7 +973,7 @@
 
     move/from16 v30, v13
 
-    .line 7909
+    .line 7910
     invoke-virtual/range {v24 .. v31}, Lorg/telegram/messenger/MessageObject$GroupedMessagePosition;->set(IIIIIFI)V
 
     const/16 v25, 0x0
@@ -992,10 +992,10 @@
 
     move/from16 v30, v0
 
-    .line 7911
+    .line 7912
     invoke-virtual/range {v24 .. v31}, Lorg/telegram/messenger/MessageObject$GroupedMessagePosition;->set(IIIIIFI)V
 
-    .line 7912
+    .line 7913
     iget v3, v10, Lorg/telegram/ui/ArticleViewer$BlockCollageCell$GroupedMessages;->maxSizeWidth:I
 
     iput v3, v5, Lorg/telegram/messenger/MessageObject$GroupedMessagePosition;->spanSize:I
@@ -1010,20 +1010,20 @@
 
     aput v13, v6, v0
 
-    .line 7914
+    .line 7915
     iput-object v6, v1, Lorg/telegram/messenger/MessageObject$GroupedMessagePosition;->siblingHeights:[F
 
     sub-int/2addr v3, v2
 
-    .line 7916
+    .line 7917
     iput v3, v4, Lorg/telegram/messenger/MessageObject$GroupedMessagePosition;->spanSize:I
 
-    .line 7917
+    .line 7918
     iput v2, v5, Lorg/telegram/messenger/MessageObject$GroupedMessagePosition;->leftSpanOffset:I
 
     goto/16 :goto_4ec
 
-    .line 7921
+    .line 7922
     :cond_30b
     iget v0, v10, Lorg/telegram/ui/ArticleViewer$BlockCollageCell$GroupedMessages;->maxSizeWidth:I
 
@@ -1055,7 +1055,7 @@
 
     const/16 v28, 0x0
 
-    .line 7922
+    .line 7923
     iget v2, v10, Lorg/telegram/ui/ArticleViewer$BlockCollageCell$GroupedMessages;->maxSizeWidth:I
 
     const/16 v31, 0x7
@@ -1068,7 +1068,7 @@
 
     invoke-virtual/range {v24 .. v31}, Lorg/telegram/messenger/MessageObject$GroupedMessagePosition;->set(IIIIIFI)V
 
-    .line 7924
+    .line 7925
     iget v1, v10, Lorg/telegram/ui/ArticleViewer$BlockCollageCell$GroupedMessages;->maxSizeWidth:I
 
     const/4 v2, 0x2
@@ -1081,7 +1081,7 @@
 
     int-to-float v0, v1
 
-    .line 7925
+    .line 7926
     iget v3, v4, Lorg/telegram/messenger/MessageObject$GroupedMessagePosition;->aspectRatio:F
 
     div-float v3, v0, v3
@@ -1120,7 +1120,7 @@
 
     move/from16 v30, v0
 
-    .line 7926
+    .line 7927
     invoke-virtual/range {v24 .. v31}, Lorg/telegram/messenger/MessageObject$GroupedMessagePosition;->set(IIIIIFI)V
 
     const/16 v25, 0x1
@@ -1131,7 +1131,7 @@
 
     move-object/from16 v24, v5
 
-    .line 7927
+    .line 7928
     invoke-virtual/range {v24 .. v31}, Lorg/telegram/messenger/MessageObject$GroupedMessagePosition;->set(IIIIIFI)V
 
     goto/16 :goto_4ec
@@ -1141,7 +1141,7 @@
 
     if-ne v11, v7, :cond_4ec
 
-    .line 7930
+    .line 7931
     iget-object v4, v10, Lorg/telegram/ui/ArticleViewer$BlockCollageCell$GroupedMessages;->posArray:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v14}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1150,7 +1150,7 @@
 
     check-cast v4, Lorg/telegram/messenger/MessageObject$GroupedMessagePosition;
 
-    .line 7931
+    .line 7932
     iget-object v6, v10, Lorg/telegram/ui/ArticleViewer$BlockCollageCell$GroupedMessages;->posArray:Ljava/util/ArrayList;
 
     const/4 v7, 0x1
@@ -1161,7 +1161,7 @@
 
     check-cast v6, Lorg/telegram/messenger/MessageObject$GroupedMessagePosition;
 
-    .line 7932
+    .line 7933
     iget-object v7, v10, Lorg/telegram/ui/ArticleViewer$BlockCollageCell$GroupedMessages;->posArray:Ljava/util/ArrayList;
 
     const/4 v8, 0x2
@@ -1172,7 +1172,7 @@
 
     check-cast v7, Lorg/telegram/messenger/MessageObject$GroupedMessagePosition;
 
-    .line 7933
+    .line 7934
     iget-object v8, v10, Lorg/telegram/ui/ArticleViewer$BlockCollageCell$GroupedMessages;->posArray:Ljava/util/ArrayList;
 
     invoke-virtual {v8, v15}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1181,7 +1181,7 @@
 
     check-cast v8, Lorg/telegram/messenger/MessageObject$GroupedMessagePosition;
 
-    .line 7934
+    .line 7935
     invoke-virtual {v0, v14}, Ljava/lang/StringBuilder;->charAt(I)C
 
     move-result v0
@@ -1192,7 +1192,7 @@
 
     if-ne v0, v12, :cond_43c
 
-    .line 7935
+    .line 7936
     iget v0, v10, Lorg/telegram/ui/ArticleViewer$BlockCollageCell$GroupedMessages;->maxSizeWidth:I
 
     int-to-float v0, v0
@@ -1223,7 +1223,7 @@
 
     const/16 v28, 0x0
 
-    .line 7936
+    .line 7937
     iget v1, v10, Lorg/telegram/ui/ArticleViewer$BlockCollageCell$GroupedMessages;->maxSizeWidth:I
 
     const/16 v31, 0x7
@@ -1236,7 +1236,7 @@
 
     invoke-virtual/range {v24 .. v31}, Lorg/telegram/messenger/MessageObject$GroupedMessagePosition;->set(IIIIIFI)V
 
-    .line 7938
+    .line 7939
     iget v1, v10, Lorg/telegram/ui/ArticleViewer$BlockCollageCell$GroupedMessages;->maxSizeWidth:I
 
     int-to-float v1, v1
@@ -1261,7 +1261,7 @@
 
     int-to-float v2, v9
 
-    .line 7939
+    .line 7940
     iget v3, v10, Lorg/telegram/ui/ArticleViewer$BlockCollageCell$GroupedMessages;->maxSizeWidth:I
 
     int-to-float v3, v3
@@ -1284,7 +1284,7 @@
 
     float-to-int v3, v3
 
-    .line 7940
+    .line 7941
     iget v4, v10, Lorg/telegram/ui/ArticleViewer$BlockCollageCell$GroupedMessages;->maxSizeWidth:I
 
     int-to-float v4, v4
@@ -1305,7 +1305,7 @@
 
     float-to-int v2, v2
 
-    .line 7941
+    .line 7942
     iget v4, v10, Lorg/telegram/ui/ArticleViewer$BlockCollageCell$GroupedMessages;->maxSizeWidth:I
 
     sub-int/2addr v4, v3
@@ -1316,7 +1316,7 @@
 
     sub-float v13, v5, v0
 
-    .line 7942
+    .line 7943
     invoke-static {v13, v1}, Ljava/lang/Math;->min(FF)F
 
     move-result v0
@@ -1337,7 +1337,7 @@
 
     move/from16 v30, v0
 
-    .line 7944
+    .line 7945
     invoke-virtual/range {v24 .. v31}, Lorg/telegram/messenger/MessageObject$GroupedMessagePosition;->set(IIIIIFI)V
 
     const/16 v25, 0x1
@@ -1350,7 +1350,7 @@
 
     move/from16 v29, v4
 
-    .line 7945
+    .line 7946
     invoke-virtual/range {v24 .. v31}, Lorg/telegram/messenger/MessageObject$GroupedMessagePosition;->set(IIIIIFI)V
 
     const/16 v25, 0x2
@@ -1363,12 +1363,12 @@
 
     move/from16 v29, v2
 
-    .line 7946
+    .line 7947
     invoke-virtual/range {v24 .. v31}, Lorg/telegram/messenger/MessageObject$GroupedMessagePosition;->set(IIIIIFI)V
 
     goto/16 :goto_4ec
 
-    .line 7948
+    .line 7949
     :cond_43c
     iget v0, v6, Lorg/telegram/messenger/MessageObject$GroupedMessagePosition;->aspectRatio:F
 
@@ -1410,7 +1410,7 @@
 
     int-to-float v9, v0
 
-    .line 7949
+    .line 7950
     iget v12, v6, Lorg/telegram/messenger/MessageObject$GroupedMessagePosition;->aspectRatio:F
 
     div-float v12, v9, v12
@@ -1425,7 +1425,7 @@
 
     move-result v12
 
-    .line 7950
+    .line 7951
     iget v14, v7, Lorg/telegram/messenger/MessageObject$GroupedMessagePosition;->aspectRatio:F
 
     div-float/2addr v9, v14
@@ -1444,7 +1444,7 @@
 
     sub-float/2addr v1, v5
 
-    .line 7952
+    .line 7953
     iget v9, v4, Lorg/telegram/messenger/MessageObject$GroupedMessagePosition;->aspectRatio:F
 
     mul-float v13, v3, v9
@@ -1485,7 +1485,7 @@
 
     move/from16 v29, v2
 
-    .line 7954
+    .line 7955
     invoke-virtual/range {v24 .. v31}, Lorg/telegram/messenger/MessageObject$GroupedMessagePosition;->set(IIIIIFI)V
 
     const/16 v25, 0x1
@@ -1502,7 +1502,7 @@
 
     move/from16 v30, v12
 
-    .line 7956
+    .line 7957
     invoke-virtual/range {v24 .. v31}, Lorg/telegram/messenger/MessageObject$GroupedMessagePosition;->set(IIIIIFI)V
 
     const/16 v25, 0x0
@@ -1517,10 +1517,10 @@
 
     move/from16 v30, v5
 
-    .line 7958
+    .line 7959
     invoke-virtual/range {v24 .. v31}, Lorg/telegram/messenger/MessageObject$GroupedMessagePosition;->set(IIIIIFI)V
 
-    .line 7959
+    .line 7960
     iget v3, v10, Lorg/telegram/ui/ArticleViewer$BlockCollageCell$GroupedMessages;->maxSizeWidth:I
 
     iput v3, v7, Lorg/telegram/messenger/MessageObject$GroupedMessagePosition;->spanSize:I
@@ -1535,23 +1535,23 @@
 
     move/from16 v30, v1
 
-    .line 7961
+    .line 7962
     invoke-virtual/range {v24 .. v31}, Lorg/telegram/messenger/MessageObject$GroupedMessagePosition;->set(IIIIIFI)V
 
-    .line 7962
+    .line 7963
     iget v0, v10, Lorg/telegram/ui/ArticleViewer$BlockCollageCell$GroupedMessages;->maxSizeWidth:I
 
     iput v0, v8, Lorg/telegram/messenger/MessageObject$GroupedMessagePosition;->spanSize:I
 
     sub-int/2addr v0, v2
 
-    .line 7964
+    .line 7965
     iput v0, v6, Lorg/telegram/messenger/MessageObject$GroupedMessagePosition;->spanSize:I
 
-    .line 7965
+    .line 7966
     iput v2, v7, Lorg/telegram/messenger/MessageObject$GroupedMessagePosition;->leftSpanOffset:I
 
-    .line 7966
+    .line 7967
     iput v2, v8, Lorg/telegram/messenger/MessageObject$GroupedMessagePosition;->leftSpanOffset:I
 
     new-array v0, v15, [F
@@ -1568,7 +1568,7 @@
 
     aput v1, v0, v3
 
-    .line 7968
+    .line 7969
     iput-object v0, v4, Lorg/telegram/messenger/MessageObject$GroupedMessagePosition;->siblingHeights:[F
 
     :cond_4ec
@@ -1579,7 +1579,7 @@
 
     goto/16 :goto_73a
 
-    .line 7973
+    .line 7974
     :cond_4f1
     iget-object v0, v10, Lorg/telegram/ui/ArticleViewer$BlockCollageCell$GroupedMessages;->posArray:Ljava/util/ArrayList;
 
@@ -1600,7 +1600,7 @@
 
     if-lez v2, :cond_514
 
-    .line 7976
+    .line 7977
     iget-object v2, v10, Lorg/telegram/ui/ArticleViewer$BlockCollageCell$GroupedMessages;->posArray:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1619,7 +1619,7 @@
 
     goto :goto_524
 
-    .line 7978
+    .line 7979
     :cond_514
     iget-object v2, v10, Lorg/telegram/ui/ArticleViewer$BlockCollageCell$GroupedMessages;->posArray:Ljava/util/ArrayList;
 
@@ -1642,7 +1642,7 @@
 
     const v4, 0x3fd9999a    # 1.7f
 
-    .line 7980
+    .line 7981
     aget v5, v13, v0
 
     invoke-static {v4, v5}, Ljava/lang/Math;->min(FF)F
@@ -1659,7 +1659,7 @@
 
     goto :goto_4fa
 
-    .line 7987
+    .line 7988
     :cond_539
     new-instance v14, Ljava/util/ArrayList;
 
@@ -1678,7 +1678,7 @@
 
     goto :goto_563
 
-    .line 7993
+    .line 7994
     :cond_548
     new-instance v5, Lorg/telegram/ui/ArticleViewer$BlockCollageCell$GroupedMessages$MessageGroupedLayoutAttempt;
 
@@ -1759,7 +1759,7 @@
 
     goto :goto_5af
 
-    .line 8002
+    .line 8003
     :cond_585
     new-instance v5, Lorg/telegram/ui/ArticleViewer$BlockCollageCell$GroupedMessages$MessageGroupedLayoutAttempt;
 
@@ -1873,7 +1873,7 @@
 
     goto :goto_618
 
-    .line 8013
+    .line 8014
     :cond_5e0
     new-instance v4, Lorg/telegram/ui/ArticleViewer$BlockCollageCell$GroupedMessages$MessageGroupedLayoutAttempt;
 
@@ -1999,7 +1999,7 @@
 
     move v11, v9
 
-    .line 8020
+    .line 8021
     iget v0, v10, Lorg/telegram/ui/ArticleViewer$BlockCollageCell$GroupedMessages;->maxSizeWidth:I
 
     const/4 v1, 0x3
@@ -2016,7 +2016,7 @@
 
     const/4 v5, 0x0
 
-    .line 8021
+    .line 8022
     :goto_652
     invoke-virtual {v14}, Ljava/util/ArrayList;->size()I
 
@@ -2024,7 +2024,7 @@
 
     if-ge v3, v6, :cond_6cc
 
-    .line 8022
+    .line 8023
     invoke-virtual {v14, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v6
@@ -2039,7 +2039,7 @@
 
     const/4 v9, 0x0
 
-    .line 8025
+    .line 8026
     :goto_666
     iget-object v12, v6, Lorg/telegram/ui/ArticleViewer$BlockCollageCell$GroupedMessages$MessageGroupedLayoutAttempt;->heights:[F
 
@@ -2047,19 +2047,19 @@
 
     if-ge v7, v15, :cond_679
 
-    .line 8026
+    .line 8027
     aget v15, v12, v7
 
     add-float/2addr v9, v15
 
-    .line 8027
+    .line 8028
     aget v15, v12, v7
 
     cmpg-float v15, v15, v8
 
     if-gez v15, :cond_676
 
-    .line 8028
+    .line 8029
     aget v8, v12, v7
 
     :cond_676
@@ -2070,12 +2070,12 @@
     :cond_679
     sub-float/2addr v9, v0
 
-    .line 8032
+    .line 8033
     invoke-static {v9}, Ljava/lang/Math;->abs(F)F
 
     move-result v7
 
-    .line 8033
+    .line 8034
     iget-object v9, v6, Lorg/telegram/ui/ArticleViewer$BlockCollageCell$GroupedMessages$MessageGroupedLayoutAttempt;->lineCounts:[I
 
     array-length v12, v9
@@ -2086,7 +2086,7 @@
 
     const/4 v12, 0x0
 
-    .line 8034
+    .line 8035
     aget v1, v9, v12
 
     aget v2, v9, v15
@@ -2197,7 +2197,7 @@
 
     const/4 v2, 0x0
 
-    .line 8055
+    .line 8056
     :goto_6d2
     iget-object v1, v4, Lorg/telegram/ui/ArticleViewer$BlockCollageCell$GroupedMessages$MessageGroupedLayoutAttempt;->lineCounts:[I
 
@@ -2205,15 +2205,15 @@
 
     if-ge v2, v3, :cond_73a
 
-    .line 8056
+    .line 8057
     aget v1, v1, v2
 
-    .line 8057
+    .line 8058
     iget-object v3, v4, Lorg/telegram/ui/ArticleViewer$BlockCollageCell$GroupedMessages$MessageGroupedLayoutAttempt;->heights:[F
 
     aget v3, v3, v2
 
-    .line 8058
+    .line 8059
     iget v5, v10, Lorg/telegram/ui/ArticleViewer$BlockCollageCell$GroupedMessages;->maxSizeWidth:I
 
     move v6, v5
@@ -2225,7 +2225,7 @@
     :goto_6e2
     if-ge v5, v1, :cond_72a
 
-    .line 8061
+    .line 8062
     aget v8, v13, v0
 
     mul-float v8, v8, v3
@@ -2234,7 +2234,7 @@
 
     sub-int/2addr v6, v8
 
-    .line 8064
+    .line 8065
     iget-object v9, v10, Lorg/telegram/ui/ArticleViewer$BlockCollageCell$GroupedMessages;->posArray:Ljava/util/ArrayList;
 
     invoke-virtual {v9, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -2254,7 +2254,7 @@
     :cond_6f8
     const/4 v9, 0x0
 
-    .line 8069
+    .line 8070
     :goto_6f9
     iget-object v11, v4, Lorg/telegram/ui/ArticleViewer$BlockCollageCell$GroupedMessages$MessageGroupedLayoutAttempt;->lineCounts:[I
 
@@ -2304,7 +2304,7 @@
 
     move/from16 v29, v8
 
-    .line 8079
+    .line 8080
     invoke-virtual/range {v24 .. v31}, Lorg/telegram/messenger/MessageObject$GroupedMessagePosition;->set(IIIIIFI)V
 
     add-int/lit8 v0, v0, 0x1
@@ -2316,14 +2316,14 @@
     :cond_72a
     const v9, 0x444b8000    # 814.0f
 
-    .line 8082
+    .line 8083
     iget v1, v7, Lorg/telegram/messenger/MessageObject$GroupedMessagePosition;->pw:I
 
     add-int/2addr v1, v6
 
     iput v1, v7, Lorg/telegram/messenger/MessageObject$GroupedMessagePosition;->pw:I
 
-    .line 8083
+    .line 8084
     iget v1, v7, Lorg/telegram/messenger/MessageObject$GroupedMessagePosition;->spanSize:I
 
     add-int/2addr v1, v6
@@ -2343,7 +2343,7 @@
     :goto_73d
     if-ge v14, v0, :cond_752
 
-    .line 8088
+    .line 8089
     iget-object v1, v10, Lorg/telegram/ui/ArticleViewer$BlockCollageCell$GroupedMessages;->posArray:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v14}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -2352,7 +2352,7 @@
 
     check-cast v1, Lorg/telegram/messenger/MessageObject$GroupedMessagePosition;
 
-    .line 8090
+    .line 8091
     iget v2, v1, Lorg/telegram/messenger/MessageObject$GroupedMessagePosition;->flags:I
 
     const/4 v3, 0x1
@@ -2361,7 +2361,7 @@
 
     if-eqz v2, :cond_74f
 
-    .line 8091
+    .line 8092
     iput-boolean v3, v1, Lorg/telegram/messenger/MessageObject$GroupedMessagePosition;->edge:Z
 
     :cond_74f

@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/EmojiView$GifLayoutManager;Lorg/telegram/ui/Components/EmojiView;)V
     .registers 3
 
-    .line 5360
+    .line 5446
     iput-object p1, p0, Lorg/telegram/ui/Components/EmojiView$GifLayoutManager$1;->this$1:Lorg/telegram/ui/Components/EmojiView$GifLayoutManager;
 
     invoke-direct {p0}, Landroidx/recyclerview/widget/GridLayoutManager$SpanSizeLookup;-><init>()V
@@ -37,7 +37,7 @@
 
     if-eqz p1, :cond_34
 
-    .line 5363
+    .line 5449
     iget-object v0, p0, Lorg/telegram/ui/Components/EmojiView$GifLayoutManager$1;->this$1:Lorg/telegram/ui/Components/EmojiView$GifLayoutManager;
 
     iget-object v0, v0, Lorg/telegram/ui/Components/EmojiView$GifLayoutManager;->this$0:Lorg/telegram/ui/Components/EmojiView;
@@ -80,7 +80,7 @@
 
     goto :goto_34
 
-    .line 5366
+    .line 5452
     :cond_2b
     iget-object v0, p0, Lorg/telegram/ui/Components/EmojiView$GifLayoutManager$1;->this$1:Lorg/telegram/ui/Components/EmojiView$GifLayoutManager;
 
@@ -92,7 +92,7 @@
 
     return p1
 
-    .line 5364
+    .line 5450
     :cond_34
     :goto_34
     iget-object p1, p0, Lorg/telegram/ui/Components/EmojiView$GifLayoutManager$1;->this$1:Lorg/telegram/ui/Components/EmojiView$GifLayoutManager;

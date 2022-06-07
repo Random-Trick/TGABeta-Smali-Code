@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/PhotoPickerActivity;)V
     .registers 2
 
-    .line 765
+    .line 774
     iput-object p1, p0, Lorg/telegram/ui/PhotoPickerActivity$7;->this$0:Lorg/telegram/ui/PhotoPickerActivity;
 
     invoke-direct {p0}, Landroidx/recyclerview/widget/GridLayoutManager$SpanSizeLookup;-><init>()V
@@ -35,7 +35,7 @@
 .method public getSpanSize(I)I
     .registers 5
 
-    .line 768
+    .line 777
     iget-object v0, p0, Lorg/telegram/ui/PhotoPickerActivity$7;->this$0:Lorg/telegram/ui/PhotoPickerActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/PhotoPickerActivity;->access$1400(Lorg/telegram/ui/PhotoPickerActivity;)Lorg/telegram/ui/PhotoPickerActivity$ListAdapter;
@@ -80,17 +80,17 @@
 
     goto :goto_4a
 
-    .line 771
+    .line 780
     :cond_2a
     iget-object v0, p0, Lorg/telegram/ui/PhotoPickerActivity$7;->this$0:Lorg/telegram/ui/PhotoPickerActivity;
 
-    invoke-static {v0}, Lorg/telegram/ui/PhotoPickerActivity;->access$2600(Lorg/telegram/ui/PhotoPickerActivity;)I
+    invoke-static {v0}, Lorg/telegram/ui/PhotoPickerActivity;->access$2700(Lorg/telegram/ui/PhotoPickerActivity;)I
 
     move-result v0
 
     iget-object v2, p0, Lorg/telegram/ui/PhotoPickerActivity$7;->this$0:Lorg/telegram/ui/PhotoPickerActivity;
 
-    invoke-static {v2}, Lorg/telegram/ui/PhotoPickerActivity;->access$2500(Lorg/telegram/ui/PhotoPickerActivity;)I
+    invoke-static {v2}, Lorg/telegram/ui/PhotoPickerActivity;->access$2600(Lorg/telegram/ui/PhotoPickerActivity;)I
 
     move-result v2
 
@@ -98,7 +98,7 @@
 
     iget-object v2, p0, Lorg/telegram/ui/PhotoPickerActivity$7;->this$0:Lorg/telegram/ui/PhotoPickerActivity;
 
-    invoke-static {v2}, Lorg/telegram/ui/PhotoPickerActivity;->access$2500(Lorg/telegram/ui/PhotoPickerActivity;)I
+    invoke-static {v2}, Lorg/telegram/ui/PhotoPickerActivity;->access$2600(Lorg/telegram/ui/PhotoPickerActivity;)I
 
     move-result v2
 
@@ -122,7 +122,7 @@
 
     return v0
 
-    .line 769
+    .line 778
     :cond_4a
     :goto_4a
     iget-object p1, p0, Lorg/telegram/ui/PhotoPickerActivity$7;->this$0:Lorg/telegram/ui/PhotoPickerActivity;

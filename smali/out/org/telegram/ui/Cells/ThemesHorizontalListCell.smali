@@ -630,7 +630,7 @@
     const/4 v0, 0x0
 
     :goto_4
-    const/4 v1, 0x3
+    const/4 v1, 0x4
 
     if-ge v0, v1, :cond_1c
 
@@ -669,7 +669,7 @@
     const/4 v0, 0x0
 
     :goto_4
-    const/4 v1, 0x3
+    const/4 v1, 0x4
 
     if-ge v0, v1, :cond_1c
 

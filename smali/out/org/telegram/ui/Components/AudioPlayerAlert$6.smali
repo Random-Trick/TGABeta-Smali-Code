@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/AudioPlayerAlert;Landroid/content/Context;)V
     .registers 3
 
-    .line 525
+    .line 526
     iput-object p1, p0, Lorg/telegram/ui/Components/AudioPlayerAlert$6;->this$0:Lorg/telegram/ui/Components/AudioPlayerAlert;
 
     invoke-direct {p0, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
@@ -35,10 +35,10 @@
 .method protected onLayout(ZIIII)V
     .registers 6
 
-    .line 528
+    .line 529
     invoke-super/range {p0 .. p5}, Landroid/widget/FrameLayout;->onLayout(ZIIII)V
 
-    .line 529
+    .line 530
     iget-object p1, p0, Lorg/telegram/ui/Components/AudioPlayerAlert$6;->this$0:Lorg/telegram/ui/Components/AudioPlayerAlert;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/AudioPlayerAlert;->access$4800(Lorg/telegram/ui/Components/AudioPlayerAlert;)Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
@@ -55,7 +55,7 @@
 
     if-eqz p1, :cond_57
 
-    .line 530
+    .line 531
     iget-object p1, p0, Lorg/telegram/ui/Components/AudioPlayerAlert$6;->this$0:Lorg/telegram/ui/Components/AudioPlayerAlert;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/AudioPlayerAlert;->access$4900(Lorg/telegram/ui/Components/AudioPlayerAlert;)Landroid/widget/TextView;
@@ -86,7 +86,7 @@
 
     sub-int/2addr p1, p2
 
-    .line 531
+    .line 532
     iget-object p2, p0, Lorg/telegram/ui/Components/AudioPlayerAlert$6;->this$0:Lorg/telegram/ui/Components/AudioPlayerAlert;
 
     invoke-static {p2}, Lorg/telegram/ui/Components/AudioPlayerAlert;->access$4800(Lorg/telegram/ui/Components/AudioPlayerAlert;)Lorg/telegram/ui/ActionBar/ActionBarMenuItem;

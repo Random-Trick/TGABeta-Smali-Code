@@ -34,17 +34,17 @@
 .method private constructor <init>()V
     .registers 2
 
-    .line 1088
+    .line 1097
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1090
+    .line 1099
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/messenger/AndroidUtilities$VcardData;->phones:Ljava/util/ArrayList;
 
-    .line 1091
+    .line 1100
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -57,7 +57,7 @@
 .method synthetic constructor <init>(Lorg/telegram/messenger/AndroidUtilities$1;)V
     .registers 2
 
-    .line 1088
+    .line 1097
     invoke-direct {p0}, Lorg/telegram/messenger/AndroidUtilities$VcardData;-><init>()V
 
     return-void

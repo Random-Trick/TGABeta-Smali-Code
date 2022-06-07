@@ -231,7 +231,7 @@
     .line 84
     new-instance v0, Lorg/telegram/ui/Components/RLottieDrawable;
 
-    const v2, 0x7f0d009e
+    const v2, 0x7f0d00a1
 
     const/high16 v1, 0x41b00000    # 22.0f
 
@@ -249,7 +249,7 @@
 
     const/4 v7, 0x0
 
-    const-string v3, "2131558558"
+    const-string v3, "2131558561"
 
     move-object v1, v0
 
@@ -1765,14 +1765,14 @@
 
     if-eqz v0, :cond_1d
 
-    const v0, 0x7f0e001e
+    const v0, 0x7f0e0023
 
     const-string v1, "AccDescrCloseMenu"
 
     goto :goto_22
 
     :cond_1d
-    const v0, 0x7f0e0044
+    const v0, 0x7f0e005f
 
     const-string v1, "AccDescrOpenMenu2"
 
@@ -1978,7 +1978,7 @@
 
     if-eqz v0, :cond_51
 
-    const v0, 0x7f0e12ed
+    const v0, 0x7f0e13bb
 
     const-string v1, "VoipChannelVoiceChat"
 
@@ -1990,7 +1990,7 @@
     goto :goto_5a
 
     :cond_51
-    const v0, 0x7f0e136f
+    const v0, 0x7f0e143d
 
     const-string v1, "VoipGroupVoiceChat"
 
@@ -2013,7 +2013,7 @@
 
     invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const v0, 0x7f0e13b4
+    const v0, 0x7f0e1482
 
     const-string v1, "VoipTapToMute"
 
@@ -2041,7 +2041,7 @@
 
     invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const v0, 0x7f0e04b3
+    const v0, 0x7f0e0502
 
     const-string v1, "Connecting"
 
@@ -2069,7 +2069,7 @@
 
     invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const v0, 0x7f0e137c
+    const v0, 0x7f0e144a
 
     const-string v1, "VoipMutedByAdmin"
 

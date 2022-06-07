@@ -376,7 +376,7 @@
 
     invoke-direct {v8, v2}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
 
-    const v14, 0x7f070337
+    const v14, 0x7f070356
 
     .line 7271
     invoke-virtual {v8, v14}, Landroid/widget/ImageView;->setImageResource(I)V
@@ -527,7 +527,7 @@
 
     iput-object v14, v0, Lorg/telegram/ui/PassportActivity$PhoneConfirmationView;->blackImageView:Landroid/widget/ImageView;
 
-    const v11, 0x7f0703d5
+    const v11, 0x7f0703cd
 
     .line 7287
     invoke-virtual {v14, v11}, Landroid/widget/ImageView;->setImageResource(I)V
@@ -577,7 +577,7 @@
 
     iput-object v8, v0, Lorg/telegram/ui/PassportActivity$PhoneConfirmationView;->blueImageView:Landroid/widget/ImageView;
 
-    const v10, 0x7f0703d3
+    const v10, 0x7f0703cb
 
     .line 7292
     invoke-virtual {v8, v10}, Landroid/widget/ImageView;->setImageResource(I)V
@@ -609,7 +609,7 @@
     .line 7296
     iget-object v4, v0, Lorg/telegram/ui/PassportActivity$PhoneConfirmationView;->titleTextView:Landroid/widget/TextView;
 
-    const v8, 0x7f0e0ff5
+    const v8, 0x7f0e10b2
 
     const-string v10, "SentAppCodeTitle"
 
@@ -629,7 +629,7 @@
 
     iput-object v8, v0, Lorg/telegram/ui/PassportActivity$PhoneConfirmationView;->blueImageView:Landroid/widget/ImageView;
 
-    const v10, 0x7f0703d4
+    const v10, 0x7f0703cc
 
     .line 7299
     invoke-virtual {v8, v10}, Landroid/widget/ImageView;->setImageResource(I)V
@@ -675,7 +675,7 @@
     .line 7303
     iget-object v4, v0, Lorg/telegram/ui/PassportActivity$PhoneConfirmationView;->titleTextView:Landroid/widget/TextView;
 
-    const v8, 0x7f0e0ffa
+    const v8, 0x7f0e10b7
 
     const-string v10, "SentSmsCodeTitle"
 
@@ -960,7 +960,7 @@
     .line 7350
     iget-object v1, v0, Lorg/telegram/ui/PassportActivity$PhoneConfirmationView;->problemText:Landroid/widget/TextView;
 
-    const v2, 0x7f0e05ab
+    const v2, 0x7f0e05fc
 
     const-string v3, "DidNotGetTheCodeSms"
 
@@ -976,7 +976,7 @@
     :cond_2f5
     iget-object v1, v0, Lorg/telegram/ui/PassportActivity$PhoneConfirmationView;->problemText:Landroid/widget/TextView;
 
-    const v2, 0x7f0e05a6
+    const v2, 0x7f0e05f7
 
     const-string v3, "DidNotGetTheCode"
 
@@ -1757,7 +1757,7 @@
     :catch_db
     iget-object p1, p0, Lorg/telegram/ui/PassportActivity$PhoneConfirmationView;->this$0:Lorg/telegram/ui/PassportActivity;
 
-    const v0, 0x7f0e0abd
+    const v0, 0x7f0e0b44
 
     const-string v1, "NoMailInstalled"
 
@@ -2465,7 +2465,7 @@
 
     invoke-direct {p1, v1}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    const v1, 0x7f0e017c
+    const v1, 0x7f0e01b1
 
     const-string v2, "AppName"
 
@@ -2476,7 +2476,7 @@
 
     invoke-virtual {p1, v1}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const v1, 0x7f0e10f4
+    const v1, 0x7f0e11b3
 
     const-string v2, "StopVerification"
 
@@ -2487,7 +2487,7 @@
 
     invoke-virtual {p1, v1}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const v1, 0x7f0e04c8
+    const v1, 0x7f0e0517
 
     const-string v2, "Continue"
 
@@ -2500,7 +2500,7 @@
 
     invoke-virtual {p1, v1, v2}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const v1, 0x7f0e10e4
+    const v1, 0x7f0e11a3
 
     const-string v2, "Stop"
 
@@ -3396,7 +3396,7 @@
 
     move-result-object v8
 
-    const v10, 0x7f07039c
+    const v10, 0x7f0703aa
 
     invoke-virtual {v8, v10}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -3655,7 +3655,7 @@
 
     if-ne v8, v5, :cond_1d1
 
-    const v3, 0x7f0e0ff9
+    const v3, 0x7f0e10b6
 
     new-array v8, v2, [Ljava/lang/Object;
 
@@ -3681,7 +3681,7 @@
     :cond_1d1
     if-ne v8, v4, :cond_1e9
 
-    const v3, 0x7f0e0ff7
+    const v3, 0x7f0e10b4
 
     new-array v8, v2, [Ljava/lang/Object;
 
@@ -3707,7 +3707,7 @@
     :cond_1e9
     if-ne v8, v9, :cond_200
 
-    const v3, 0x7f0e0ff8
+    const v3, 0x7f0e10b5
 
     new-array v8, v2, [Ljava/lang/Object;
 
@@ -3783,11 +3783,11 @@
     .line 7607
     iget v1, v0, Lorg/telegram/ui/PassportActivity$PhoneConfirmationView;->verificationType:I
 
-    const v3, 0x7f0e108d
+    const v3, 0x7f0e114c
 
     const-string v8, "SmsText"
 
-    const v10, 0x7f0e0321
+    const v10, 0x7f0e035d
 
     const-string v11, "CallText"
 

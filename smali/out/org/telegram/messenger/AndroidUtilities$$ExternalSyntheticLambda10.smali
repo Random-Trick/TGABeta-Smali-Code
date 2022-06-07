@@ -2,46 +2,44 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Ljava/util/Comparator;
+.implements Ljava/lang/Runnable;
 
 
-# static fields
-.field public static final synthetic INSTANCE:Lorg/telegram/messenger/AndroidUtilities$$ExternalSyntheticLambda10;
+# instance fields
+.field public final synthetic f$0:Ljava/util/ArrayList;
+
+.field public final synthetic f$1:J
+
+.field public final synthetic f$2:Landroid/view/Window;
 
 
 # direct methods
-.method static synthetic constructor <clinit>()V
-    .registers 1
-
-    new-instance v0, Lorg/telegram/messenger/AndroidUtilities$$ExternalSyntheticLambda10;
-
-    invoke-direct {v0}, Lorg/telegram/messenger/AndroidUtilities$$ExternalSyntheticLambda10;-><init>()V
-
-    sput-object v0, Lorg/telegram/messenger/AndroidUtilities$$ExternalSyntheticLambda10;->INSTANCE:Lorg/telegram/messenger/AndroidUtilities$$ExternalSyntheticLambda10;
-
-    return-void
-.end method
-
-.method private synthetic constructor <init>()V
-    .registers 1
+.method public synthetic constructor <init>(Ljava/util/ArrayList;JLandroid/view/Window;)V
+    .registers 5
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lorg/telegram/messenger/AndroidUtilities$$ExternalSyntheticLambda10;->f$0:Ljava/util/ArrayList;
+
+    iput-wide p2, p0, Lorg/telegram/messenger/AndroidUtilities$$ExternalSyntheticLambda10;->f$1:J
+
+    iput-object p4, p0, Lorg/telegram/messenger/AndroidUtilities$$ExternalSyntheticLambda10;->f$2:Landroid/view/Window;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final compare(Ljava/lang/Object;Ljava/lang/Object;)I
-    .registers 3
+.method public final run()V
+    .registers 5
 
-    check-cast p1, Lorg/telegram/messenger/AndroidUtilities$LinkSpec;
+    iget-object v0, p0, Lorg/telegram/messenger/AndroidUtilities$$ExternalSyntheticLambda10;->f$0:Ljava/util/ArrayList;
 
-    check-cast p2, Lorg/telegram/messenger/AndroidUtilities$LinkSpec;
+    iget-wide v1, p0, Lorg/telegram/messenger/AndroidUtilities$$ExternalSyntheticLambda10;->f$1:J
 
-    invoke-static {p1, p2}, Lorg/telegram/messenger/AndroidUtilities;->$r8$lambda$EQzW2t3xFb-pD49yTrFoIEuf8dU(Lorg/telegram/messenger/AndroidUtilities$LinkSpec;Lorg/telegram/messenger/AndroidUtilities$LinkSpec;)I
+    iget-object v3, p0, Lorg/telegram/messenger/AndroidUtilities$$ExternalSyntheticLambda10;->f$2:Landroid/view/Window;
 
-    move-result p1
+    invoke-static {v0, v1, v2, v3}, Lorg/telegram/messenger/AndroidUtilities;->$r8$lambda$Xknkuo839hRnDGkuS7ZcH7jE3h0(Ljava/util/ArrayList;JLandroid/view/Window;)V
 
-    return p1
+    return-void
 .end method

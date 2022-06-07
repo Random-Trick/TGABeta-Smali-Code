@@ -172,7 +172,7 @@
     .line 67
     iget-object p2, p0, Lorg/telegram/ui/Cells/AccountSelectCell;->textView:Landroid/widget/TextView;
 
-    const v0, 0x7f0e131b
+    const v0, 0x7f0e13e9
 
     const-string v3, "VoipGroupDisplayAs"
 
@@ -310,7 +310,7 @@
 
     iput-object p2, p0, Lorg/telegram/ui/Cells/AccountSelectCell;->checkImageView:Landroid/widget/ImageView;
 
-    const p1, 0x7f070046
+    const p1, 0x7f070044
 
     .line 84
     invoke-virtual {p2, p1}, Landroid/widget/ImageView;->setImageResource(I)V

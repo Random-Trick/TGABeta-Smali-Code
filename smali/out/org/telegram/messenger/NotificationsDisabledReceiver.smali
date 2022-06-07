@@ -61,7 +61,7 @@
 
     move-result v0
 
-    if-nez v0, :cond_217
+    if-nez v0, :cond_218
 
     const-string v0, "_ia_"
 
@@ -71,7 +71,7 @@
 
     if-eqz v0, :cond_2a
 
-    goto/16 :goto_217
+    goto/16 :goto_218
 
     :cond_2a
     const-string v0, "_"
@@ -105,17 +105,19 @@
 
     move-result v2
 
-    if-ltz v2, :cond_217
+    if-ltz v2, :cond_218
 
-    if-lt v2, v3, :cond_48
+    const/4 v3, 0x4
 
-    goto/16 :goto_217
+    if-lt v2, v3, :cond_49
+
+    goto/16 :goto_218
 
     .line 44
-    :cond_48
+    :cond_49
     sget-boolean v3, Lorg/telegram/messenger/BuildVars;->LOGS_ENABLED:Z
 
-    if-eqz v3, :cond_68
+    if-eqz v3, :cond_69
 
     .line 45
     new-instance v3, Ljava/lang/StringBuilder;
@@ -141,7 +143,7 @@
     invoke-static {v3}, Lorg/telegram/messenger/FileLog;->d(Ljava/lang/String;)V
 
     .line 47
-    :cond_68
+    :cond_69
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v3
@@ -162,23 +164,23 @@
 
     cmp-long v7, v3, v5
 
-    if-gtz v7, :cond_87
+    if-gtz v7, :cond_88
 
     .line 48
     sget-boolean p1, Lorg/telegram/messenger/BuildVars;->LOGS_ENABLED:Z
 
-    if-eqz p1, :cond_86
+    if-eqz p1, :cond_87
 
     const-string p1, "received disable notification event right after creating notification channel, ignoring"
 
     .line 49
     invoke-static {p1}, Lorg/telegram/messenger/FileLog;->d(Ljava/lang/String;)V
 
-    :cond_86
+    :cond_87
     return-void
 
     .line 53
-    :cond_87
+    :cond_88
     invoke-static {v2}, Lorg/telegram/messenger/AccountInstance;->getInstance(I)Lorg/telegram/messenger/AccountInstance;
 
     move-result-object v3
@@ -208,7 +210,7 @@
 
     const/4 v10, 0x0
 
-    if-eqz v5, :cond_ea
+    if-eqz v5, :cond_eb
 
     const-string v0, "channels"
 
@@ -222,15 +224,15 @@
 
     move-result v0
 
-    if-nez v0, :cond_b0
+    if-nez v0, :cond_b1
 
     return-void
 
     .line 59
-    :cond_b0
+    :cond_b1
     sget-boolean v0, Lorg/telegram/messenger/BuildVars;->LOGS_ENABLED:Z
 
-    if-eqz v0, :cond_c9
+    if-eqz v0, :cond_ca
 
     .line 60
     new-instance v0, Ljava/lang/StringBuilder;
@@ -250,7 +252,7 @@
     invoke-static {p1}, Lorg/telegram/messenger/FileLog;->d(Ljava/lang/String;)V
 
     .line 62
-    :cond_c9
+    :cond_ca
     invoke-interface {v3}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object p1
@@ -259,11 +261,11 @@
 
     move-result-object v0
 
-    if-eqz p2, :cond_d6
+    if-eqz p2, :cond_d7
 
     const v1, 0x7fffffff
 
-    :cond_d6
+    :cond_d7
     invoke-interface {p1, v0, v1}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
     move-result-object p1
@@ -281,10 +283,10 @@
 
     invoke-virtual {p1, v7}, Lorg/telegram/messenger/NotificationsController;->updateServerNotificationsSettings(I)V
 
-    goto/16 :goto_20c
+    goto/16 :goto_20d
 
     .line 64
-    :cond_ea
+    :cond_eb
     aget-object v5, v0, v4
 
     const-string v11, "groups"
@@ -293,7 +295,7 @@
 
     move-result v5
 
-    if-eqz v5, :cond_138
+    if-eqz v5, :cond_139
 
     .line 65
     invoke-interface {v3, v11, v10}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
@@ -305,15 +307,15 @@
 
     move-result v0
 
-    if-nez v0, :cond_ff
+    if-nez v0, :cond_100
 
     return-void
 
     .line 69
-    :cond_ff
+    :cond_100
     sget-boolean v0, Lorg/telegram/messenger/BuildVars;->LOGS_ENABLED:Z
 
-    if-eqz v0, :cond_118
+    if-eqz v0, :cond_119
 
     .line 70
     new-instance v0, Ljava/lang/StringBuilder;
@@ -333,7 +335,7 @@
     invoke-static {p1}, Lorg/telegram/messenger/FileLog;->d(Ljava/lang/String;)V
 
     .line 72
-    :cond_118
+    :cond_119
     invoke-interface {v3}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object p1
@@ -342,14 +344,14 @@
 
     move-result-object v0
 
-    if-eqz p2, :cond_123
+    if-eqz p2, :cond_124
 
-    goto :goto_124
+    goto :goto_125
 
-    :cond_123
+    :cond_124
     const/4 v6, 0x0
 
-    :goto_124
+    :goto_125
     invoke-interface {p1, v0, v6}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
     move-result-object p1
@@ -367,10 +369,10 @@
 
     invoke-virtual {p1, v1}, Lorg/telegram/messenger/NotificationsController;->updateServerNotificationsSettings(I)V
 
-    goto/16 :goto_20c
+    goto/16 :goto_20d
 
     .line 74
-    :cond_138
+    :cond_139
     aget-object v5, v0, v4
 
     const-string v11, "private"
@@ -379,7 +381,7 @@
 
     move-result v5
 
-    if-eqz v5, :cond_187
+    if-eqz v5, :cond_188
 
     .line 75
     invoke-interface {v3, v11, v10}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
@@ -391,15 +393,15 @@
 
     move-result v0
 
-    if-nez v0, :cond_14d
+    if-nez v0, :cond_14e
 
     return-void
 
     .line 79
-    :cond_14d
+    :cond_14e
     sget-boolean v0, Lorg/telegram/messenger/BuildVars;->LOGS_ENABLED:Z
 
-    if-eqz v0, :cond_166
+    if-eqz v0, :cond_167
 
     .line 80
     new-instance v0, Ljava/lang/StringBuilder;
@@ -419,7 +421,7 @@
     invoke-static {p1}, Lorg/telegram/messenger/FileLog;->d(Ljava/lang/String;)V
 
     .line 82
-    :cond_166
+    :cond_167
     invoke-interface {v3}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object p1
@@ -428,11 +430,11 @@
 
     move-result-object v0
 
-    if-eqz p2, :cond_173
+    if-eqz p2, :cond_174
 
     const v1, 0x7fffffff
 
-    :cond_173
+    :cond_174
     invoke-interface {p1, v0, v1}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
     move-result-object p1
@@ -450,10 +452,10 @@
 
     invoke-virtual {p1, v4}, Lorg/telegram/messenger/NotificationsController;->updateServerNotificationsSettings(I)V
 
-    goto/16 :goto_20c
+    goto/16 :goto_20d
 
     .line 85
-    :cond_187
+    :cond_188
     aget-object v0, v0, v4
 
     invoke-static {v0}, Lorg/telegram/messenger/Utilities;->parseLong(Ljava/lang/String;)Ljava/lang/Long;
@@ -468,12 +470,12 @@
 
     cmp-long v0, v5, v11
 
-    if-nez v0, :cond_198
+    if-nez v0, :cond_199
 
     return-void
 
     .line 89
-    :cond_198
+    :cond_199
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -497,15 +499,15 @@
 
     move-result v0
 
-    if-nez v0, :cond_1b4
+    if-nez v0, :cond_1b5
 
     return-void
 
     .line 93
-    :cond_1b4
+    :cond_1b5
     sget-boolean v0, Lorg/telegram/messenger/BuildVars;->LOGS_ENABLED:Z
 
-    if-eqz v0, :cond_1cd
+    if-eqz v0, :cond_1ce
 
     .line 94
     new-instance v0, Ljava/lang/StringBuilder;
@@ -525,7 +527,7 @@
     invoke-static {p1}, Lorg/telegram/messenger/FileLog;->d(Ljava/lang/String;)V
 
     .line 96
-    :cond_1cd
+    :cond_1ce
     invoke-interface {v3}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object p1
@@ -545,14 +547,14 @@
 
     move-result-object v0
 
-    if-eqz p2, :cond_1e5
+    if-eqz p2, :cond_1e6
 
     const/4 v1, 0x2
 
-    :cond_1e5
+    :cond_1e6
     invoke-interface {p1, v0, v1}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
-    if-nez p2, :cond_1fe
+    if-nez p2, :cond_1ff
 
     .line 99
     new-instance p2, Ljava/lang/StringBuilder;
@@ -572,7 +574,7 @@
     invoke-interface {p1, p2}, Landroid/content/SharedPreferences$Editor;->remove(Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
     .line 101
-    :cond_1fe
+    :cond_1ff
     invoke-interface {p1}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     .line 102
@@ -587,7 +589,7 @@
     invoke-virtual {p1, v5, v6, v4}, Lorg/telegram/messenger/NotificationsController;->updateServerNotificationsSettings(JZ)V
 
     .line 104
-    :goto_20c
+    :goto_20d
     invoke-static {v2}, Lorg/telegram/messenger/AccountInstance;->getInstance(I)Lorg/telegram/messenger/AccountInstance;
 
     move-result-object p1
@@ -598,7 +600,7 @@
 
     invoke-virtual {p1}, Lorg/telegram/tgnet/ConnectionsManager;->resumeNetworkMaybe()V
 
-    :cond_217
-    :goto_217
+    :cond_218
+    :goto_218
     return-void
 .end method

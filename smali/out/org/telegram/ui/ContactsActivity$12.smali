@@ -130,7 +130,7 @@
     .line 1047
     iget-object p1, p0, Lorg/telegram/ui/ContactsActivity$12;->val$previousFab:Lorg/telegram/ui/Components/RLottieImageView;
 
-    const v0, 0x7f0d00b8
+    const v0, 0x7f0d00bb
 
     const/16 v1, 0x34
 

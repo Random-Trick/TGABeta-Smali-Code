@@ -33,7 +33,7 @@
 
     iget-object v1, p0, Lorg/telegram/ui/PaymentFormActivity$$ExternalSyntheticLambda4;->f$1:Ljava/lang/String;
 
-    invoke-static {v0, v1, p1, p2}, Lorg/telegram/ui/PaymentFormActivity;->$r8$lambda$SCXutPJk9lWChRjBaT21xAon1tM(Lorg/telegram/ui/PaymentFormActivity;Ljava/lang/String;Landroid/content/DialogInterface;I)V
+    invoke-static {v0, v1, p1, p2}, Lorg/telegram/ui/PaymentFormActivity;->$r8$lambda$Wtej_A2Uii1GOgQbMYwPQj9yncg(Lorg/telegram/ui/PaymentFormActivity;Ljava/lang/String;Landroid/content/DialogInterface;I)V
 
     return-void
 .end method

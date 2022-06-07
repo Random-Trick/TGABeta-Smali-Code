@@ -232,7 +232,7 @@
 
     move-result v0
 
-    const v1, 0x7f07012d
+    const v1, 0x7f0700fc
 
     const-string v2, "windowBackgroundGrayShadow"
 
@@ -318,7 +318,7 @@
 
     if-ne p2, v0, :cond_102
 
-    const p2, 0x7f0e1216
+    const p2, 0x7f0e12e3
 
     const-string v0, "UseProxyForCallsInfo"
 
@@ -355,7 +355,7 @@
 
     if-ne p2, v0, :cond_81
 
-    const p2, 0x7f0e121b
+    const p2, 0x7f0e12e8
 
     const-string v0, "UseProxySettings"
 
@@ -384,7 +384,7 @@
 
     if-ne p2, v0, :cond_102
 
-    const p2, 0x7f0e1215
+    const p2, 0x7f0e12e2
 
     const-string v0, "UseProxyForCalls"
 
@@ -418,7 +418,7 @@
 
     if-ne p2, v0, :cond_102
 
-    const p2, 0x7f0e0e2f
+    const p2, 0x7f0e0ed8
 
     const-string v0, "ProxyConnections"
 
@@ -455,7 +455,7 @@
 
     if-ne p2, v0, :cond_102
 
-    const p2, 0x7f0e012e
+    const p2, 0x7f0e0156
 
     const-string v0, "AddProxy"
 
@@ -507,7 +507,7 @@
 
     iget-object p2, p0, Lorg/telegram/ui/ProxyListActivity$ListAdapter;->mContext:Landroid/content/Context;
 
-    const v0, 0x7f07012c
+    const v0, 0x7f0700fb
 
     invoke-static {p2, v0, v2}, Lorg/telegram/ui/ActionBar/Theme;->getThemedDrawable(Landroid/content/Context;ILjava/lang/String;)Landroid/graphics/drawable/Drawable;
 
@@ -651,7 +651,7 @@
     .line 627
     iget-object p2, p0, Lorg/telegram/ui/ProxyListActivity$ListAdapter;->mContext:Landroid/content/Context;
 
-    const v0, 0x7f07012c
+    const v0, 0x7f0700fb
 
     const-string v1, "windowBackgroundGrayShadow"
 

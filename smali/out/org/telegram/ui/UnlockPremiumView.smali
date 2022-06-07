@@ -4,289 +4,206 @@
 
 
 # instance fields
-.field buttonTextView:Landroid/widget/TextView;
+.field public final premiumButtonView:Lorg/telegram/ui/Components/Premium/PremiumButtonView;
 
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;ILorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)V
-    .registers 20
+    .registers 15
 
-    move-object/from16 v0, p0
+    .line 29
+    invoke-direct {p0, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    move-object/from16 v1, p1
+    .line 30
+    new-instance v0, Landroid/widget/LinearLayout;
 
-    move/from16 v2, p2
+    invoke-direct {v0, p1}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
+
+    const/4 v1, -0x1
+
+    const/4 v2, -0x2
+
+    const/16 v3, 0x50
+
+    .line 31
+    invoke-static {v1, v2, v3}, Lorg/telegram/ui/Components/LayoutHelper;->createFrame(III)Landroid/widget/FrameLayout$LayoutParams;
+
+    move-result-object v1
+
+    invoke-virtual {p0, v0, v1}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+
+    const/4 v1, 0x1
+
+    .line 32
+    invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setOrientation(I)V
+
+    .line 35
+    new-instance v2, Landroid/widget/TextView;
+
+    invoke-direct {v2, p1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
+
+    const-string v3, "windowBackgroundWhiteBlackText"
+
+    .line 36
+    invoke-static {v3, p3}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)I
+
+    move-result p3
+
+    const/16 v3, 0x64
+
+    invoke-static {p3, v3}, Landroidx/core/graphics/ColorUtils;->setAlphaComponent(II)I
+
+    move-result p3
+
+    invoke-virtual {v2, p3}, Landroid/widget/TextView;->setTextColor(I)V
+
+    const/high16 p3, 0x41500000    # 13.0f
+
+    .line 37
+    invoke-virtual {v2, v1, p3}, Landroid/widget/TextView;->setTextSize(IF)V
+
+    const/16 p3, 0x11
 
     .line 38
-    invoke-direct/range {p0 .. p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
+    invoke-virtual {v2, p3}, Landroid/widget/TextView;->setGravity(I)V
 
-    .line 39
-    new-instance v3, Landroid/widget/LinearLayout;
+    if-nez p2, :cond_44
 
-    invoke-direct {v3, v1}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
+    const p3, 0x7f0e12b4
 
-    const/4 v4, -0x1
-
-    const/4 v5, -0x2
-
-    const/16 v6, 0x50
+    const-string v3, "UnlockPremiumStickersDescription"
 
     .line 40
-    invoke-static {v4, v5, v6}, Lorg/telegram/ui/Components/LayoutHelper;->createFrame(III)Landroid/widget/FrameLayout$LayoutParams;
+    invoke-static {v3, p3}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
-    move-result-object v5
+    move-result-object p3
 
-    invoke-virtual {v0, v3, v5}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {v2, p3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    const/4 v5, 0x1
+    goto :goto_52
 
-    .line 41
-    invoke-virtual {v3, v5}, Landroid/widget/LinearLayout;->setOrientation(I)V
+    :cond_44
+    if-ne p2, v1, :cond_52
 
-    .line 43
-    new-instance v6, Lorg/telegram/ui/UnlockPremiumView$1;
+    const p3, 0x7f0e12b2
 
-    invoke-direct {v6, v0, v1}, Lorg/telegram/ui/UnlockPremiumView$1;-><init>(Lorg/telegram/ui/UnlockPremiumView;Landroid/content/Context;)V
+    const-string v3, "UnlockPremiumReactionsDescription"
 
-    .line 86
-    new-instance v7, Landroid/widget/TextView;
+    .line 42
+    invoke-static {v3, p3}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
-    invoke-direct {v7, v1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
+    move-result-object p3
 
-    iput-object v7, v0, Lorg/telegram/ui/UnlockPremiumView;->buttonTextView:Landroid/widget/TextView;
+    invoke-virtual {v2, p3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    const/high16 v8, 0x42080000    # 34.0f
+    :cond_52
+    :goto_52
+    const/4 v3, -0x1
 
-    .line 87
-    invoke-static {v8}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
+    const/4 v4, -0x2
 
-    move-result v9
+    const/4 v5, 0x0
 
-    invoke-static {v8}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
+    const/16 v6, 0x10
 
-    move-result v8
-
-    const/4 v10, 0x0
-
-    invoke-virtual {v7, v9, v10, v8, v10}, Landroid/widget/TextView;->setPadding(IIII)V
-
-    .line 88
-    iget-object v7, v0, Lorg/telegram/ui/UnlockPremiumView;->buttonTextView:Landroid/widget/TextView;
+    const/16 v7, 0x11
 
     const/16 v8, 0x11
 
-    invoke-virtual {v7, v8}, Landroid/widget/TextView;->setGravity(I)V
+    const/16 v9, 0x10
 
-    .line 89
-    iget-object v7, v0, Lorg/telegram/ui/UnlockPremiumView;->buttonTextView:Landroid/widget/TextView;
+    .line 44
+    invoke-static/range {v3 .. v9}, Lorg/telegram/ui/Components/LayoutHelper;->createLinear(IIIIIII)Landroid/widget/LinearLayout$LayoutParams;
 
-    invoke-virtual {v7, v4}, Landroid/widget/TextView;->setTextColor(I)V
+    move-result-object p3
 
-    .line 90
-    iget-object v7, v0, Lorg/telegram/ui/UnlockPremiumView;->buttonTextView:Landroid/widget/TextView;
+    invoke-virtual {v0, v2, p3}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    const/high16 v9, 0x41600000    # 14.0f
+    .line 46
+    new-instance p3, Lorg/telegram/ui/Components/Premium/PremiumButtonView;
 
-    invoke-virtual {v7, v5, v9}, Landroid/widget/TextView;->setTextSize(IF)V
+    const/4 v2, 0x0
 
-    .line 91
-    iget-object v7, v0, Lorg/telegram/ui/UnlockPremiumView;->buttonTextView:Landroid/widget/TextView;
+    invoke-direct {p3, p1, v2}, Lorg/telegram/ui/Components/Premium/PremiumButtonView;-><init>(Landroid/content/Context;Z)V
 
-    const-string v9, "fonts/rmedium.ttf"
+    iput-object p3, p0, Lorg/telegram/ui/UnlockPremiumView;->premiumButtonView:Lorg/telegram/ui/Components/Premium/PremiumButtonView;
 
-    invoke-static {v9}, Lorg/telegram/messenger/AndroidUtilities;->getTypeface(Ljava/lang/String;)Landroid/graphics/Typeface;
+    if-nez p2, :cond_78
 
-    move-result-object v9
+    const p2, 0x7f0e12b3
 
-    invoke-virtual {v7, v9}, Landroid/widget/TextView;->setTypeface(Landroid/graphics/Typeface;)V
+    const-string v3, "UnlockPremiumStickers"
 
-    if-nez v2, :cond_61
+    .line 50
+    invoke-static {v3, p2}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
-    const v7, 0x7f0e11e6
+    move-result-object p2
 
-    const-string v9, "UnlockPremiumStickers"
+    goto :goto_81
 
-    .line 95
-    invoke-static {v9, v7}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
+    :cond_78
+    const p2, 0x7f0e12b1
 
-    move-result-object v7
+    const-string v3, "UnlockPremiumReactions"
 
-    goto :goto_6a
+    .line 52
+    invoke-static {v3, p2}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
-    :cond_61
-    const v7, 0x7f0e11e4
+    move-result-object p2
 
-    const-string v9, "UnlockPremiumReactions"
+    .line 54
+    :goto_81
+    new-instance v3, Landroid/text/SpannableStringBuilder;
 
-    .line 97
-    invoke-static {v9, v7}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
+    invoke-direct {v3}, Landroid/text/SpannableStringBuilder;-><init>()V
 
-    move-result-object v7
+    const-string v4, "d "
 
-    .line 99
-    :goto_6a
-    new-instance v9, Landroid/text/SpannableStringBuilder;
-
-    invoke-direct {v9}, Landroid/text/SpannableStringBuilder;-><init>()V
-
-    const-string v11, "d "
-
-    .line 100
-    invoke-virtual {v9, v11}, Landroid/text/SpannableStringBuilder;->append(Ljava/lang/CharSequence;)Landroid/text/SpannableStringBuilder;
-
-    move-result-object v11
-
-    new-instance v12, Lorg/telegram/ui/Components/ColoredImageSpan;
-
-    const v13, 0x7f0702a8
-
-    invoke-static {v1, v13}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v13
-
-    invoke-direct {v12, v13}, Lorg/telegram/ui/Components/ColoredImageSpan;-><init>(Landroid/graphics/drawable/Drawable;)V
-
-    invoke-virtual {v11, v12, v10, v5, v10}, Landroid/text/SpannableStringBuilder;->setSpan(Ljava/lang/Object;III)V
-
-    .line 101
-    invoke-virtual {v9, v7}, Landroid/text/SpannableStringBuilder;->append(Ljava/lang/CharSequence;)Landroid/text/SpannableStringBuilder;
-
-    .line 102
-    iget-object v7, v0, Lorg/telegram/ui/UnlockPremiumView;->buttonTextView:Landroid/widget/TextView;
-
-    invoke-virtual {v7, v9}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    .line 103
-    iget-object v7, v0, Lorg/telegram/ui/UnlockPremiumView;->buttonTextView:Landroid/widget/TextView;
-
-    const/high16 v9, 0x41000000    # 8.0f
-
-    invoke-static {v9}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
-
-    move-result v9
-
-    const/16 v11, 0x78
-
-    invoke-static {v4, v11}, Landroidx/core/graphics/ColorUtils;->setAlphaComponent(II)I
-
-    move-result v4
-
-    invoke-static {v9, v10, v4}, Lorg/telegram/ui/ActionBar/Theme;->createSimpleSelectorRoundRectDrawable(III)Landroid/graphics/drawable/Drawable;
+    .line 55
+    invoke-virtual {v3, v4}, Landroid/text/SpannableStringBuilder;->append(Ljava/lang/CharSequence;)Landroid/text/SpannableStringBuilder;
 
     move-result-object v4
 
-    invoke-virtual {v7, v4}, Landroid/widget/TextView;->setBackground(Landroid/graphics/drawable/Drawable;)V
+    new-instance v5, Lorg/telegram/ui/Components/ColoredImageSpan;
 
-    .line 104
-    iget-object v4, v0, Lorg/telegram/ui/UnlockPremiumView;->buttonTextView:Landroid/widget/TextView;
+    const v6, 0x7f0702b2
 
-    new-instance v7, Lorg/telegram/ui/UnlockPremiumView$2;
+    invoke-static {p1, v6}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
-    invoke-direct {v7, v0}, Lorg/telegram/ui/UnlockPremiumView$2;-><init>(Lorg/telegram/ui/UnlockPremiumView;)V
+    move-result-object p1
 
-    invoke-virtual {v4, v7}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-direct {v5, p1}, Lorg/telegram/ui/Components/ColoredImageSpan;-><init>(Landroid/graphics/drawable/Drawable;)V
 
-    .line 110
-    iget-object v4, v0, Lorg/telegram/ui/UnlockPremiumView;->buttonTextView:Landroid/widget/TextView;
+    invoke-virtual {v4, v5, v2, v1, v2}, Landroid/text/SpannableStringBuilder;->setSpan(Ljava/lang/Object;III)V
 
-    invoke-virtual {v6, v4}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;)V
+    .line 56
+    invoke-virtual {v3, p2}, Landroid/text/SpannableStringBuilder;->append(Ljava/lang/CharSequence;)Landroid/text/SpannableStringBuilder;
 
-    const/4 v9, -0x1
+    .line 57
+    iget-object p1, p3, Lorg/telegram/ui/Components/Premium/PremiumButtonView;->buttonTextView:Landroid/widget/TextView;
 
-    const/16 v10, 0x30
+    invoke-virtual {p1, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    const/4 v11, 0x0
+    const/4 v4, -0x1
 
-    const/16 v12, 0x10
+    const/16 v5, 0x30
 
-    const/4 v13, 0x0
+    const/4 v6, 0x0
 
-    const/16 v14, 0x10
+    const/16 v7, 0x10
 
-    const/4 v15, 0x0
+    const/4 v8, 0x0
 
-    .line 111
-    invoke-static/range {v9 .. v15}, Lorg/telegram/ui/Components/LayoutHelper;->createLinear(IIIIIII)Landroid/widget/LinearLayout$LayoutParams;
+    const/16 v9, 0x10
 
-    move-result-object v4
+    const/16 v10, 0x10
 
-    invoke-virtual {v3, v6, v4}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+    .line 58
+    invoke-static/range {v4 .. v10}, Lorg/telegram/ui/Components/LayoutHelper;->createLinear(IIIIIII)Landroid/widget/LinearLayout$LayoutParams;
 
-    .line 113
-    new-instance v4, Landroid/widget/TextView;
+    move-result-object p1
 
-    invoke-direct {v4, v1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
-
-    const-string v1, "windowBackgroundWhiteGrayText"
-
-    move-object/from16 v6, p3
-
-    .line 114
-    invoke-static {v1, v6}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)I
-
-    move-result v1
-
-    invoke-virtual {v4, v1}, Landroid/widget/TextView;->setTextColor(I)V
-
-    const/high16 v1, 0x41500000    # 13.0f
-
-    .line 115
-    invoke-virtual {v4, v5, v1}, Landroid/widget/TextView;->setTextSize(IF)V
-
-    .line 116
-    invoke-virtual {v4, v8}, Landroid/widget/TextView;->setGravity(I)V
-
-    if-nez v2, :cond_e8
-
-    const v1, 0x7f0e11e7
-
-    const-string v2, "UnlockPremiumStickersDescription"
-
-    .line 118
-    invoke-static {v2, v1}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v4, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    goto :goto_f6
-
-    :cond_e8
-    if-ne v2, v5, :cond_f6
-
-    const v1, 0x7f0e11e5
-
-    const-string v2, "UnlockPremiumReactionsDescription"
-
-    .line 120
-    invoke-static {v2, v1}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v4, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    :cond_f6
-    :goto_f6
-    const/4 v5, -0x1
-
-    const/4 v6, -0x2
-
-    const/4 v7, 0x0
-
-    const/16 v8, 0x10
-
-    const/16 v9, 0x11
-
-    const/16 v10, 0x11
-
-    const/16 v11, 0x10
-
-    .line 122
-    invoke-static/range {v5 .. v11}, Lorg/telegram/ui/Components/LayoutHelper;->createLinear(IIIIIII)Landroid/widget/LinearLayout$LayoutParams;
-
-    move-result-object v1
-
-    invoke-virtual {v3, v4, v1}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {v0, p3, p1}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
     return-void
 .end method

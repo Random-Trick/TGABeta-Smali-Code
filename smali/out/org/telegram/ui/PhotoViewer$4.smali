@@ -30,7 +30,7 @@
 .method constructor <init>(Lorg/telegram/ui/PhotoViewer;Ljava/lang/String;)V
     .registers 3
 
-    .line 546
+    .line 554
     iput-object p1, p0, Lorg/telegram/ui/PhotoViewer$4;->this$0:Lorg/telegram/ui/PhotoViewer;
 
     invoke-direct {p0, p2}, Lorg/telegram/ui/Components/AnimationProperties$FloatProperty;-><init>(Ljava/lang/String;)V
@@ -43,7 +43,7 @@
 .method public get(Landroid/view/View;)Ljava/lang/Float;
     .registers 2
 
-    .line 557
+    .line 565
     invoke-virtual {p1}, Landroid/view/View;->getAlpha()F
 
     move-result p1
@@ -58,7 +58,7 @@
 .method public bridge synthetic get(Ljava/lang/Object;)Ljava/lang/Object;
     .registers 2
 
-    .line 546
+    .line 554
     check-cast p1, Landroid/view/View;
 
     invoke-virtual {p0, p1}, Lorg/telegram/ui/PhotoViewer$4;->get(Landroid/view/View;)Ljava/lang/Float;
@@ -71,10 +71,10 @@
 .method public setValue(Landroid/view/View;F)V
     .registers 3
 
-    .line 549
+    .line 557
     invoke-virtual {p1, p2}, Landroid/view/View;->setAlpha(F)V
 
-    .line 550
+    .line 558
     iget-object p1, p0, Lorg/telegram/ui/PhotoViewer$4;->this$0:Lorg/telegram/ui/PhotoViewer;
 
     invoke-static {p1}, Lorg/telegram/ui/PhotoViewer;->access$1300(Lorg/telegram/ui/PhotoViewer;)Lorg/telegram/ui/Components/PhotoCropView;
@@ -83,7 +83,7 @@
 
     if-eqz p1, :cond_14
 
-    .line 551
+    .line 559
     iget-object p1, p0, Lorg/telegram/ui/PhotoViewer$4;->this$0:Lorg/telegram/ui/PhotoViewer;
 
     invoke-static {p1}, Lorg/telegram/ui/PhotoViewer;->access$1300(Lorg/telegram/ui/PhotoViewer;)Lorg/telegram/ui/Components/PhotoCropView;
@@ -99,7 +99,7 @@
 .method public bridge synthetic setValue(Ljava/lang/Object;F)V
     .registers 3
 
-    .line 546
+    .line 554
     check-cast p1, Landroid/view/View;
 
     invoke-virtual {p0, p1, p2}, Lorg/telegram/ui/PhotoViewer$4;->setValue(Landroid/view/View;F)V

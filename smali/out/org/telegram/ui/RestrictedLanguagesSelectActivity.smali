@@ -717,7 +717,7 @@
 
     invoke-direct {p2, v0}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    const v0, 0x7f0e0570
+    const v0, 0x7f0e05c1
 
     const-string v3, "DeleteLocalizationTitle"
 
@@ -728,7 +728,7 @@
 
     invoke-virtual {p2, v0}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const v0, 0x7f0e056f
+    const v0, 0x7f0e05c0
 
     new-array v3, v2, [Ljava/lang/Object;
 
@@ -749,7 +749,7 @@
 
     invoke-virtual {p2, v0}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const v0, 0x7f0e0540
+    const v0, 0x7f0e0591
 
     const-string v1, "Delete"
 
@@ -764,7 +764,7 @@
 
     invoke-virtual {p2, v0, v1}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const p1, 0x7f0e0331
+    const p1, 0x7f0e036d
 
     const-string v0, "Cancel"
 
@@ -1011,7 +1011,7 @@
     .line 140
     iget-object v1, p0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
-    const v2, 0x7f070140
+    const v2, 0x7f070109
 
     invoke-virtual {v1, v2}, Lorg/telegram/ui/ActionBar/ActionBar;->setBackButtonImage(I)V
 
@@ -1027,7 +1027,7 @@
 
     const-string v3, "DoNotTranslate"
 
-    const v4, 0x7f0e05db
+    const v4, 0x7f0e062c
 
     invoke-static {v3, v4}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
@@ -1051,7 +1051,7 @@
 
     move-result-object v1
 
-    const v3, 0x7f07014a
+    const v3, 0x7f070110
 
     .line 154
     invoke-virtual {v1, v0, v3}, Lorg/telegram/ui/ActionBar/ActionBarMenu;->addItem(II)Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
@@ -1072,7 +1072,7 @@
 
     const-string v3, "Search"
 
-    const v4, 0x7f0e0f74
+    const v4, 0x7f0e1030
 
     .line 190
     invoke-static {v3, v4}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -1125,7 +1125,7 @@
 
     const-string v4, "NoResult"
 
-    const v5, 0x7f0e0ad8
+    const v5, 0x7f0e0b60
 
     .line 200
     invoke-static {v4, v5}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;

@@ -75,7 +75,7 @@
     .line 78
     invoke-virtual {v5, v2}, Lorg/telegram/ui/Components/RLottieImageView;->setAutoRepeat(Z)V
 
-    const v6, 0x7f0d0097
+    const v6, 0x7f0d0099
 
     const/16 v7, 0x78
 
@@ -136,7 +136,7 @@
 
     const-string v6, "GigagroupConvertTitle"
 
-    const v7, 0x7f0e07f9
+    const v7, 0x7f0e0851
 
     .line 87
     invoke-static {v6, v7}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -261,7 +261,7 @@
 
     invoke-virtual {v9, v10}, Landroid/widget/ImageView;->setColorFilter(Landroid/graphics/ColorFilter;)V
 
-    const v10, 0x7f0701b1
+    const v10, 0x7f070185
 
     .line 101
     invoke-virtual {v9, v10}, Landroid/widget/ImageView;->setImageResource(I)V
@@ -315,7 +315,7 @@
     goto :goto_121
 
     :cond_fb
-    const v7, 0x7f0e07f7
+    const v7, 0x7f0e084f
 
     const-string v11, "GigagroupConvertInfo3"
 
@@ -329,7 +329,7 @@
     goto :goto_121
 
     :cond_108
-    const v7, 0x7f0e07f6
+    const v7, 0x7f0e084e
 
     const-string v11, "GigagroupConvertInfo2"
 
@@ -343,7 +343,7 @@
     goto :goto_121
 
     :cond_115
-    const v7, 0x7f0e07f5
+    const v7, 0x7f0e084d
 
     const-string v11, "GigagroupConvertInfo1"
 
@@ -433,7 +433,7 @@
     .line 131
     invoke-virtual {v3, v5}, Landroid/widget/FrameLayout;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    const v5, 0x7f0e07f8
+    const v5, 0x7f0e0850
 
     const-string v6, "GigagroupConvertProcessButton"
 
@@ -497,7 +497,7 @@
 
     invoke-virtual {v3, v1}, Landroid/widget/TextView;->setTextColor(I)V
 
-    const v1, 0x7f0e07f3
+    const v1, 0x7f0e084b
 
     const-string v2, "GigagroupConvertCancelButton"
 
@@ -566,7 +566,7 @@
 
     const-string p1, "GigagroupConvertAlertTitle"
 
-    const v0, 0x7f0e07f2
+    const v0, 0x7f0e084a
 
     .line 136
     invoke-static {p1, v0}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -577,7 +577,7 @@
 
     const-string p1, "GigagroupConvertAlertText"
 
-    const v0, 0x7f0e07f1
+    const v0, 0x7f0e0849
 
     .line 137
     invoke-static {p1, v0}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -592,7 +592,7 @@
 
     const-string p1, "GigagroupConvertAlertConver"
 
-    const v0, 0x7f0e07f0
+    const v0, 0x7f0e0848
 
     .line 138
     invoke-static {p1, v0}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -607,7 +607,7 @@
 
     const-string p1, "Cancel"
 
-    const v0, 0x7f0e0331
+    const v0, 0x7f0e036d
 
     .line 139
     invoke-static {p1, v0}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;

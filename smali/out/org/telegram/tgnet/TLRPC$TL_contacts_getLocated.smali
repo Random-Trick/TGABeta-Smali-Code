@@ -27,7 +27,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 46433
+    .line 46885
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -38,7 +38,7 @@
 .method public deserializeResponse(Lorg/telegram/tgnet/AbstractSerializedData;IZ)Lorg/telegram/tgnet/TLObject;
     .registers 4
 
-    .line 46442
+    .line 46894
     invoke-static {p1, p2, p3}, Lorg/telegram/tgnet/TLRPC$Updates;->TLdeserialize(Lorg/telegram/tgnet/AbstractSerializedData;IZ)Lorg/telegram/tgnet/TLRPC$Updates;
 
     move-result-object p1
@@ -49,12 +49,12 @@
 .method public serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
     .registers 3
 
-    .line 46446
+    .line 46898
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_contacts_getLocated;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 46447
+    .line 46899
     iget-boolean v0, p0, Lorg/telegram/tgnet/TLRPC$TL_contacts_getLocated;->background:Z
 
     if-eqz v0, :cond_e
@@ -73,22 +73,22 @@
     :goto_12
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$TL_contacts_getLocated;->flags:I
 
-    .line 46448
+    .line 46900
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 46449
+    .line 46901
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_contacts_getLocated;->geo_point:Lorg/telegram/tgnet/TLRPC$InputGeoPoint;
 
     invoke-virtual {v0, p1}, Lorg/telegram/tgnet/TLObject;->serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
 
-    .line 46450
+    .line 46902
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_contacts_getLocated;->flags:I
 
     and-int/lit8 v0, v0, 0x1
 
     if-eqz v0, :cond_27
 
-    .line 46451
+    .line 46903
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_contacts_getLocated;->self_expires:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V

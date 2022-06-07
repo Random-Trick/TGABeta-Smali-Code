@@ -35,7 +35,7 @@
 .method public final applyAsLong(JJ)J
     .registers 5
 
-    invoke-static {p1, p2, p3, p4}, Ljava/lang/Math;->max(JJ)J
+    invoke-static {p1, p2, p3, p4}, Ljava/lang/Math;->min(JJ)J
 
     move-result-wide p1
 

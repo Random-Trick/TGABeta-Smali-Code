@@ -329,7 +329,7 @@
     invoke-virtual {v0, v2, v1}, Lorg/telegram/tgnet/ConnectionsManager;->cancelRequest(IZ)V
 
     :cond_1c
-    const v0, 0x7f0e1160
+    const v0, 0x7f0e122a
 
     const-string v2, "Theme"
 
@@ -346,7 +346,7 @@
 
     move-result v6
 
-    const v7, 0x7f0e1014
+    const v7, 0x7f0e10d2
 
     const-string v8, "SetUrlInvalid"
 
@@ -386,7 +386,7 @@
 
     if-gt v6, v9, :cond_6a
 
-    const p1, 0x7f0e1017
+    const p1, 0x7f0e10d5
 
     const-string v1, "SetUrlInvalidStartNumber"
 
@@ -510,7 +510,7 @@
 
     if-le v5, v6, :cond_d0
 
-    const p1, 0x7f0e1015
+    const p1, 0x7f0e10d3
 
     const-string v1, "SetUrlInvalidLong"
 
@@ -565,7 +565,7 @@
 
     if-eqz p2, :cond_f6
 
-    const p2, 0x7f0e1011
+    const p2, 0x7f0e10cf
 
     new-array v0, v1, [Ljava/lang/Object;
 
@@ -585,7 +585,7 @@
     return v1
 
     :cond_f6
-    const p2, 0x7f0e1012
+    const p2, 0x7f0e10d0
 
     const-string v0, "SetUrlChecking"
 
@@ -618,7 +618,7 @@
 
     :cond_113
     :goto_113
-    const p1, 0x7f0e1016
+    const p1, 0x7f0e10d4
 
     const-string v1, "SetUrlInvalidShort"
 
@@ -694,7 +694,7 @@
     goto :goto_33
 
     :cond_24
-    const p1, 0x7f0e1013
+    const p1, 0x7f0e10d1
 
     const-string p2, "SetUrlInUse"
 
@@ -711,7 +711,7 @@
 
     :cond_33
     :goto_33
-    const p2, 0x7f0e1011
+    const p2, 0x7f0e10cf
 
     const/4 v1, 0x1
 
@@ -856,7 +856,7 @@
     .line 317
     iget-object p1, p0, Lorg/telegram/ui/ThemeSetUrlActivity;->helpInfoCell:Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
 
-    const p2, 0x7f0e1166
+    const p2, 0x7f0e1230
 
     const-string v0, "ThemeCreateHelp2"
 
@@ -876,7 +876,7 @@
     :cond_15
     iget-object p1, p0, Lorg/telegram/ui/ThemeSetUrlActivity;->helpInfoCell:Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
 
-    const p2, 0x7f0e1165
+    const p2, 0x7f0e122f
 
     const-string v0, "ThemeCreateHelp"
 
@@ -948,7 +948,7 @@
 
     invoke-direct {v1, v2}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
-    const v3, 0x7f0e0457
+    const v3, 0x7f0e049c
 
     const-string v4, "ChooseTheme"
 
@@ -1293,7 +1293,7 @@
 
     if-nez v0, :cond_37
 
-    const v0, 0x7f0e1160
+    const v0, 0x7f0e122a
 
     const-string v1, "Theme"
 
@@ -1302,7 +1302,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0e1172
+    const v1, 0x7f0e123c
 
     const-string v2, "ThemeNameInvalid"
 
@@ -1594,7 +1594,7 @@
 
     move-result-object p2
 
-    const v0, 0x7f07012c
+    const v0, 0x7f0700fb
 
     invoke-static {p2, v0, v1}, Lorg/telegram/ui/ActionBar/Theme;->getThemedDrawable(Landroid/content/Context;ILjava/lang/String;)Landroid/graphics/drawable/Drawable;
 
@@ -1612,7 +1612,7 @@
 
     move-result-object p2
 
-    const v0, 0x7f07012d
+    const v0, 0x7f0700fc
 
     invoke-static {p2, v0, v1}, Lorg/telegram/ui/ActionBar/Theme;->getThemedDrawable(Landroid/content/Context;ILjava/lang/String;)Landroid/graphics/drawable/Drawable;
 
@@ -1657,7 +1657,7 @@
 
     move-result-object p2
 
-    const v0, 0x7f07012e
+    const v0, 0x7f0700fd
 
     invoke-static {p2, v0, v1}, Lorg/telegram/ui/ActionBar/Theme;->getThemedDrawable(Landroid/content/Context;ILjava/lang/String;)Landroid/graphics/drawable/Drawable;
 
@@ -1691,7 +1691,7 @@
     .line 167
     iget-object v2, v0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
-    const v3, 0x7f070140
+    const v3, 0x7f070109
 
     invoke-virtual {v2, v3}, Lorg/telegram/ui/ActionBar/ActionBar;->setBackButtonImage(I)V
 
@@ -1710,7 +1710,7 @@
     .line 170
     iget-object v2, v0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
-    const v4, 0x7f0e0a9f
+    const v4, 0x7f0e0b26
 
     const-string v5, "NewThemeTitle"
 
@@ -1726,7 +1726,7 @@
     :cond_25
     iget-object v2, v0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
-    const v4, 0x7f0e061f
+    const v4, 0x7f0e0671
 
     const-string v5, "EditThemeTitle"
 
@@ -1753,7 +1753,7 @@
 
     move-result-object v2
 
-    const v4, 0x7f0e05dd
+    const v4, 0x7f0e062e
 
     const-string v5, "Done"
 
@@ -1846,7 +1846,7 @@
 
     iput-object v4, v0, Lorg/telegram/ui/ThemeSetUrlActivity;->headerCell:Lorg/telegram/ui/Cells/HeaderCell;
 
-    const v7, 0x7f0e0894
+    const v7, 0x7f0e08f0
 
     const-string v8, "Info"
 
@@ -1979,7 +1979,7 @@
     .line 218
     iget-object v4, v0, Lorg/telegram/ui/ThemeSetUrlActivity;->nameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
-    const v14, 0x7f0e1173
+    const v14, 0x7f0e123d
 
     const-string v15, "ThemeNamePlaceholder"
 
@@ -2253,7 +2253,7 @@
     .line 269
     iget-object v5, v0, Lorg/telegram/ui/ThemeSetUrlActivity;->linkField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
-    const v7, 0x7f0e1018
+    const v7, 0x7f0e10d6
 
     const-string v8, "SetUrlPlaceholder"
 
@@ -2341,7 +2341,7 @@
 
     iput-object v4, v0, Lorg/telegram/ui/ThemeSetUrlActivity;->checkInfoCell:Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
 
-    const v5, 0x7f07012d
+    const v5, 0x7f0700fc
 
     const-string v7, "windowBackgroundGrayShadow"
 
@@ -2416,7 +2416,7 @@
     .line 334
     iget-object v4, v0, Lorg/telegram/ui/ThemeSetUrlActivity;->helpInfoCell:Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
 
-    const v8, 0x7f0e1165
+    const v8, 0x7f0e122f
 
     const-string v9, "ThemeCreateHelp"
 
@@ -2436,7 +2436,7 @@
     :cond_2e9
     iget-object v4, v0, Lorg/telegram/ui/ThemeSetUrlActivity;->helpInfoCell:Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
 
-    const v8, 0x7f0e1194
+    const v8, 0x7f0e125e
 
     const-string v9, "ThemeSetUrlHelp"
 
@@ -2472,7 +2472,7 @@
     .line 341
     iget-object v4, v0, Lorg/telegram/ui/ThemeSetUrlActivity;->helpInfoCell:Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
 
-    const v8, 0x7f07012c
+    const v8, 0x7f0700fb
 
     invoke-static {v1, v8, v7}, Lorg/telegram/ui/ActionBar/Theme;->getThemedDrawable(Landroid/content/Context;ILjava/lang/String;)Landroid/graphics/drawable/Drawable;
 
@@ -2515,7 +2515,7 @@
     .line 347
     iget-object v4, v0, Lorg/telegram/ui/ThemeSetUrlActivity;->createCell:Lorg/telegram/ui/Cells/TextSettingsCell;
 
-    const v8, 0x7f0e120d
+    const v8, 0x7f0e12da
 
     const-string v9, "UseDifferentTheme"
 
@@ -2552,7 +2552,7 @@
 
     iput-object v4, v0, Lorg/telegram/ui/ThemeSetUrlActivity;->createInfoCell:Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
 
-    const v8, 0x7f0e120e
+    const v8, 0x7f0e12db
 
     const-string v9, "UseDifferentThemeInfo"
 

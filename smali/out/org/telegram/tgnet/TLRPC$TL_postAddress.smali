@@ -31,7 +31,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 37641
+    .line 38093
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -40,7 +40,7 @@
 .method public static TLdeserialize(Lorg/telegram/tgnet/AbstractSerializedData;IZ)Lorg/telegram/tgnet/TLRPC$TL_postAddress;
     .registers 4
 
-    .line 37652
+    .line 38104
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_postAddress;->constructor:I
 
     if-eq v0, p1, :cond_1e
@@ -51,7 +51,7 @@
 
     return-object p0
 
-    .line 37654
+    .line 38106
     :cond_8
     new-instance p0, Ljava/lang/RuntimeException;
 
@@ -77,13 +77,13 @@
 
     throw p0
 
-    .line 37659
+    .line 38111
     :cond_1e
     new-instance p1, Lorg/telegram/tgnet/TLRPC$TL_postAddress;
 
     invoke-direct {p1}, Lorg/telegram/tgnet/TLRPC$TL_postAddress;-><init>()V
 
-    .line 37660
+    .line 38112
     invoke-virtual {p1, p0, p2}, Lorg/telegram/tgnet/TLRPC$TL_postAddress;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
     return-object p1
@@ -94,42 +94,42 @@
 .method public readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
     .registers 4
 
-    .line 37665
+    .line 38117
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readString(Z)Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_postAddress;->street_line1:Ljava/lang/String;
 
-    .line 37666
+    .line 38118
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readString(Z)Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_postAddress;->street_line2:Ljava/lang/String;
 
-    .line 37667
+    .line 38119
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readString(Z)Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_postAddress;->city:Ljava/lang/String;
 
-    .line 37668
+    .line 38120
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readString(Z)Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_postAddress;->state:Ljava/lang/String;
 
-    .line 37669
+    .line 38121
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readString(Z)Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_postAddress;->country_iso2:Ljava/lang/String;
 
-    .line 37670
+    .line 38122
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readString(Z)Ljava/lang/String;
 
     move-result-object p1
@@ -142,37 +142,37 @@
 .method public serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
     .registers 3
 
-    .line 37674
+    .line 38126
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_postAddress;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 37675
+    .line 38127
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_postAddress;->street_line1:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeString(Ljava/lang/String;)V
 
-    .line 37676
+    .line 38128
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_postAddress;->street_line2:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeString(Ljava/lang/String;)V
 
-    .line 37677
+    .line 38129
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_postAddress;->city:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeString(Ljava/lang/String;)V
 
-    .line 37678
+    .line 38130
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_postAddress;->state:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeString(Ljava/lang/String;)V
 
-    .line 37679
+    .line 38131
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_postAddress;->country_iso2:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeString(Ljava/lang/String;)V
 
-    .line 37680
+    .line 38132
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_postAddress;->post_code:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeString(Ljava/lang/String;)V

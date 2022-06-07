@@ -2,32 +2,50 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lorg/telegram/messenger/MessagesStorage$LongCallback;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
 .field public final synthetic f$0:Lorg/telegram/ui/ChatEditTypeActivity;
 
+.field public final synthetic f$1:Lorg/telegram/tgnet/TLRPC$TL_error;
+
+.field public final synthetic f$2:Lorg/telegram/tgnet/TLObject;
+
+.field public final synthetic f$3:Z
+
 
 # direct methods
-.method public synthetic constructor <init>(Lorg/telegram/ui/ChatEditTypeActivity;)V
-    .registers 2
+.method public synthetic constructor <init>(Lorg/telegram/ui/ChatEditTypeActivity;Lorg/telegram/tgnet/TLRPC$TL_error;Lorg/telegram/tgnet/TLObject;Z)V
+    .registers 5
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lorg/telegram/ui/ChatEditTypeActivity$$ExternalSyntheticLambda12;->f$0:Lorg/telegram/ui/ChatEditTypeActivity;
+
+    iput-object p2, p0, Lorg/telegram/ui/ChatEditTypeActivity$$ExternalSyntheticLambda12;->f$1:Lorg/telegram/tgnet/TLRPC$TL_error;
+
+    iput-object p3, p0, Lorg/telegram/ui/ChatEditTypeActivity$$ExternalSyntheticLambda12;->f$2:Lorg/telegram/tgnet/TLObject;
+
+    iput-boolean p4, p0, Lorg/telegram/ui/ChatEditTypeActivity$$ExternalSyntheticLambda12;->f$3:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run(J)V
-    .registers 4
+.method public final run()V
+    .registers 5
 
     iget-object v0, p0, Lorg/telegram/ui/ChatEditTypeActivity$$ExternalSyntheticLambda12;->f$0:Lorg/telegram/ui/ChatEditTypeActivity;
 
-    invoke-static {v0, p1, p2}, Lorg/telegram/ui/ChatEditTypeActivity;->$r8$lambda$CB82ipavEjYHwwR1yXLa0iLPwMo(Lorg/telegram/ui/ChatEditTypeActivity;J)V
+    iget-object v1, p0, Lorg/telegram/ui/ChatEditTypeActivity$$ExternalSyntheticLambda12;->f$1:Lorg/telegram/tgnet/TLRPC$TL_error;
+
+    iget-object v2, p0, Lorg/telegram/ui/ChatEditTypeActivity$$ExternalSyntheticLambda12;->f$2:Lorg/telegram/tgnet/TLObject;
+
+    iget-boolean v3, p0, Lorg/telegram/ui/ChatEditTypeActivity$$ExternalSyntheticLambda12;->f$3:Z
+
+    invoke-static {v0, v1, v2, v3}, Lorg/telegram/ui/ChatEditTypeActivity;->$r8$lambda$sAG6gv8kmWI4mNcXMcbZPdD2UXA(Lorg/telegram/ui/ChatEditTypeActivity;Lorg/telegram/tgnet/TLRPC$TL_error;Lorg/telegram/tgnet/TLObject;Z)V
 
     return-void
 .end method

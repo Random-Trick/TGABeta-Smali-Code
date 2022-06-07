@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/PhotoViewer;Landroid/content/Context;Lorg/telegram/ui/Components/SizeNotifierFrameLayoutPhoto;Landroid/view/View;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)V
     .registers 6
 
-    .line 5771
+    .line 5902
     iput-object p1, p0, Lorg/telegram/ui/PhotoViewer$30;->this$0:Lorg/telegram/ui/PhotoViewer;
 
     invoke-direct {p0, p2, p3, p4, p5}, Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView;-><init>(Landroid/content/Context;Lorg/telegram/ui/Components/SizeNotifierFrameLayoutPhoto;Landroid/view/View;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)V
@@ -37,11 +37,11 @@
 
     const/4 v0, 0x0
 
-    .line 5775
+    .line 5906
     :try_start_1
     iget-object v1, p0, Lorg/telegram/ui/PhotoViewer$30;->this$0:Lorg/telegram/ui/PhotoViewer;
 
-    invoke-static {v1}, Lorg/telegram/ui/PhotoViewer;->access$10300(Lorg/telegram/ui/PhotoViewer;)Z
+    invoke-static {v1}, Lorg/telegram/ui/PhotoViewer;->access$10200(Lorg/telegram/ui/PhotoViewer;)Z
 
     move-result v1
 
@@ -63,7 +63,7 @@
     :catch_11
     move-exception p1
 
-    .line 5777
+    .line 5908
     invoke-static {p1}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     return v0
@@ -72,7 +72,7 @@
 .method protected extendActionMode(Landroid/view/ActionMode;Landroid/view/Menu;)V
     .registers 3
 
-    .line 5802
+    .line 5933
     iget-object p1, p0, Lorg/telegram/ui/PhotoViewer$30;->this$0:Lorg/telegram/ui/PhotoViewer;
 
     invoke-static {p1}, Lorg/telegram/ui/PhotoViewer;->access$12800(Lorg/telegram/ui/PhotoViewer;)Lorg/telegram/ui/ChatActivity;
@@ -81,7 +81,7 @@
 
     if-eqz p1, :cond_11
 
-    .line 5803
+    .line 5934
     iget-object p1, p0, Lorg/telegram/ui/PhotoViewer$30;->this$0:Lorg/telegram/ui/PhotoViewer;
 
     invoke-static {p1}, Lorg/telegram/ui/PhotoViewer;->access$12800(Lorg/telegram/ui/PhotoViewer;)Lorg/telegram/ui/ChatActivity;
@@ -99,11 +99,11 @@
 
     const/4 v0, 0x0
 
-    .line 5785
+    .line 5916
     :try_start_1
     iget-object v1, p0, Lorg/telegram/ui/PhotoViewer$30;->this$0:Lorg/telegram/ui/PhotoViewer;
 
-    invoke-static {v1}, Lorg/telegram/ui/PhotoViewer;->access$10300(Lorg/telegram/ui/PhotoViewer;)Z
+    invoke-static {v1}, Lorg/telegram/ui/PhotoViewer;->access$10200(Lorg/telegram/ui/PhotoViewer;)Z
 
     move-result v1
 
@@ -125,7 +125,7 @@
     :catch_11
     move-exception p1
 
-    .line 5787
+    .line 5918
     invoke-static {p1}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     return v0
@@ -134,10 +134,10 @@
 .method public onTouchEvent(Landroid/view/MotionEvent;)Z
     .registers 4
 
-    .line 5794
+    .line 5925
     iget-object v0, p0, Lorg/telegram/ui/PhotoViewer$30;->this$0:Lorg/telegram/ui/PhotoViewer;
 
-    invoke-static {v0}, Lorg/telegram/ui/PhotoViewer;->access$10300(Lorg/telegram/ui/PhotoViewer;)Z
+    invoke-static {v0}, Lorg/telegram/ui/PhotoViewer;->access$10200(Lorg/telegram/ui/PhotoViewer;)Z
 
     move-result v0
 
@@ -151,16 +151,16 @@
 
     if-nez v0, :cond_13
 
-    .line 5795
+    .line 5926
     iget-object v0, p0, Lorg/telegram/ui/PhotoViewer$30;->this$0:Lorg/telegram/ui/PhotoViewer;
 
     iput-boolean v1, v0, Lorg/telegram/ui/PhotoViewer;->keyboardAnimationEnabled:Z
 
-    .line 5797
+    .line 5928
     :cond_13
     iget-object v0, p0, Lorg/telegram/ui/PhotoViewer$30;->this$0:Lorg/telegram/ui/PhotoViewer;
 
-    invoke-static {v0}, Lorg/telegram/ui/PhotoViewer;->access$10300(Lorg/telegram/ui/PhotoViewer;)Z
+    invoke-static {v0}, Lorg/telegram/ui/PhotoViewer;->access$10200(Lorg/telegram/ui/PhotoViewer;)Z
 
     move-result v0
 

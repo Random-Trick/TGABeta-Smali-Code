@@ -24,7 +24,7 @@
 .method constructor <init>(Lorg/telegram/ui/GroupCallActivity;Landroid/content/Context;Lorg/telegram/ui/Components/RecordStatusDrawable;)V
     .registers 4
 
-    .line 1774
+    .line 1777
     iput-object p1, p0, Lorg/telegram/ui/GroupCallActivity$5;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     iput-object p3, p0, Lorg/telegram/ui/GroupCallActivity$5;->val$recordStatusDrawable:Lorg/telegram/ui/Components/RecordStatusDrawable;
@@ -39,10 +39,10 @@
 .method protected dispatchDraw(Landroid/graphics/Canvas;)V
     .registers 5
 
-    .line 1786
+    .line 1789
     invoke-super {p0, p1}, Lorg/telegram/ui/ActionBar/ActionBar;->dispatchDraw(Landroid/graphics/Canvas;)V
 
-    .line 1787
+    .line 1790
     invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/ActionBar;->getAdditionalSubtitleTextView()Lorg/telegram/ui/ActionBar/SimpleTextView;
 
     move-result-object v0
@@ -53,10 +53,10 @@
 
     if-nez v0, :cond_49
 
-    .line 1788
+    .line 1791
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 1789
+    .line 1792
     invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/ActionBar;->getSubtitleTextView()Lorg/telegram/ui/ActionBar/SimpleTextView;
 
     move-result-object v0
@@ -87,7 +87,7 @@
 
     invoke-virtual {p1, v0, v1}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 1790
+    .line 1793
     iget-object v0, p0, Lorg/telegram/ui/GroupCallActivity$5;->val$recordStatusDrawable:Lorg/telegram/ui/Components/RecordStatusDrawable;
 
     const/high16 v1, 0x437f0000    # 255.0f
@@ -106,15 +106,15 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/RecordStatusDrawable;->setAlpha(I)V
 
-    .line 1791
+    .line 1794
     iget-object v0, p0, Lorg/telegram/ui/GroupCallActivity$5;->val$recordStatusDrawable:Lorg/telegram/ui/Components/RecordStatusDrawable;
 
     invoke-virtual {v0, p1}, Lorg/telegram/ui/Components/RecordStatusDrawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 1792
+    .line 1795
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
-    .line 1793
+    .line 1796
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->invalidate()V
 
     :cond_49
@@ -124,7 +124,7 @@
 .method public setAlpha(F)V
     .registers 3
 
-    .line 1778
+    .line 1781
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getAlpha()F
 
     move-result v0
@@ -133,10 +133,10 @@
 
     if-eqz v0, :cond_14
 
-    .line 1779
+    .line 1782
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->setAlpha(F)V
 
-    .line 1780
+    .line 1783
     iget-object p1, p0, Lorg/telegram/ui/GroupCallActivity$5;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/GroupCallActivity;->access$2600(Lorg/telegram/ui/GroupCallActivity;)Landroid/view/ViewGroup;

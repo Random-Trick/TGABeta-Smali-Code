@@ -118,7 +118,7 @@
 .end method
 
 .method public static from(Lorg/telegram/tgnet/TLRPC$TL_statsGroupTopAdmin;Ljava/util/ArrayList;)Lorg/telegram/ui/StatisticActivity$MemberData;
-    .registers 6
+    .registers 8
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -155,77 +155,85 @@
     .line 2488
     iget v1, p0, Lorg/telegram/tgnet/TLRPC$TL_statsGroupTopAdmin;->deleted:I
 
-    if-lez v1, :cond_21
+    const/4 v2, 0x0
 
-    const-string v2, "Deletions"
+    if-lez v1, :cond_24
+
+    new-array v3, v2, [Ljava/lang/Object;
+
+    const-string v4, "Deletions"
 
     .line 2489
-    invoke-static {v2, v1}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    invoke-static {v4, v1, v3}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 2491
-    :cond_21
+    :cond_24
     iget v1, p0, Lorg/telegram/tgnet/TLRPC$TL_statsGroupTopAdmin;->banned:I
 
-    const-string v2, ", "
+    const-string v3, ", "
 
-    if-lez v1, :cond_3b
+    if-lez v1, :cond_40
 
     .line 2492
     invoke-virtual {p1}, Ljava/lang/StringBuilder;->length()I
 
     move-result v1
 
-    if-lez v1, :cond_30
+    if-lez v1, :cond_33
 
     .line 2493
-    invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 2495
-    :cond_30
+    :cond_33
     iget v1, p0, Lorg/telegram/tgnet/TLRPC$TL_statsGroupTopAdmin;->banned:I
 
-    const-string v3, "Bans"
+    new-array v4, v2, [Ljava/lang/Object;
 
-    invoke-static {v3, v1}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    const-string v5, "Bans"
+
+    invoke-static {v5, v1, v4}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 2497
-    :cond_3b
+    :cond_40
     iget v1, p0, Lorg/telegram/tgnet/TLRPC$TL_statsGroupTopAdmin;->kicked:I
 
-    if-lez v1, :cond_53
+    if-lez v1, :cond_5a
 
     .line 2498
     invoke-virtual {p1}, Ljava/lang/StringBuilder;->length()I
 
     move-result v1
 
-    if-lez v1, :cond_48
+    if-lez v1, :cond_4d
 
     .line 2499
-    invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 2501
-    :cond_48
+    :cond_4d
     iget p0, p0, Lorg/telegram/tgnet/TLRPC$TL_statsGroupTopAdmin;->kicked:I
 
-    const-string v1, "Restrictions"
+    new-array v1, v2, [Ljava/lang/Object;
 
-    invoke-static {v1, p0}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    const-string v2, "Restrictions"
+
+    invoke-static {v2, p0, v1}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
 
     invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 2503
-    :cond_53
+    :cond_5a
     invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -268,31 +276,35 @@
     .line 2511
     iget p0, p0, Lorg/telegram/tgnet/TLRPC$TL_statsGroupTopInviter;->invitations:I
 
-    if-lez p0, :cond_1c
+    if-lez p0, :cond_1f
 
-    const-string p1, "Invitations"
+    const/4 p1, 0x0
+
+    new-array p1, p1, [Ljava/lang/Object;
+
+    const-string v1, "Invitations"
 
     .line 2512
-    invoke-static {p1, p0}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    invoke-static {v1, p0, p1}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
 
     iput-object p0, v0, Lorg/telegram/ui/StatisticActivity$MemberData;->description:Ljava/lang/String;
 
-    goto :goto_20
+    goto :goto_23
 
-    :cond_1c
+    :cond_1f
     const-string p0, ""
 
     .line 2514
     iput-object p0, v0, Lorg/telegram/ui/StatisticActivity$MemberData;->description:Ljava/lang/String;
 
-    :goto_20
+    :goto_23
     return-object v0
 .end method
 
 .method public static from(Lorg/telegram/tgnet/TLRPC$TL_statsGroupTopPoster;Ljava/util/ArrayList;)Lorg/telegram/ui/StatisticActivity$MemberData;
-    .registers 7
+    .registers 8
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -329,65 +341,69 @@
     .line 2470
     iget v1, p0, Lorg/telegram/tgnet/TLRPC$TL_statsGroupTopPoster;->messages:I
 
-    if-lez v1, :cond_21
+    const/4 v2, 0x0
 
-    const-string v2, "messages"
+    if-lez v1, :cond_24
+
+    new-array v3, v2, [Ljava/lang/Object;
+
+    const-string v4, "messages"
 
     .line 2471
-    invoke-static {v2, v1}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    invoke-static {v4, v1, v3}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 2473
-    :cond_21
+    :cond_24
     iget v1, p0, Lorg/telegram/tgnet/TLRPC$TL_statsGroupTopPoster;->avg_chars:I
 
-    if-lez v1, :cond_4a
+    if-lez v1, :cond_4e
 
     .line 2474
     invoke-virtual {p1}, Ljava/lang/StringBuilder;->length()I
 
     move-result v1
 
-    if-lez v1, :cond_30
+    if-lez v1, :cond_33
 
     const-string v1, ", "
 
     .line 2475
     invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :cond_30
-    const v1, 0x7f0e03d9
+    :cond_33
+    const v1, 0x7f0e0418
 
-    const/4 v2, 0x1
+    const/4 v3, 0x1
 
-    new-array v2, v2, [Ljava/lang/Object;
-
-    const/4 v3, 0x0
+    new-array v3, v3, [Ljava/lang/Object;
 
     .line 2477
     iget p0, p0, Lorg/telegram/tgnet/TLRPC$TL_statsGroupTopPoster;->avg_chars:I
 
-    const-string v4, "Characters"
+    new-array v4, v2, [Ljava/lang/Object;
 
-    invoke-static {v4, p0}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    const-string v5, "Characters"
+
+    invoke-static {v5, p0, v4}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
 
-    aput-object p0, v2, v3
+    aput-object p0, v3, v2
 
     const-string p0, "CharactersPerMessage"
 
-    invoke-static {p0, v1, v2}, Lorg/telegram/messenger/LocaleController;->formatString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {p0, v1, v3}, Lorg/telegram/messenger/LocaleController;->formatString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
 
     invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 2479
-    :cond_4a
+    :cond_4e
     invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -902,7 +918,7 @@
     const/4 v12, 0x0
 
     :goto_72
-    const v5, 0x7f0e10c6
+    const v5, 0x7f0e1185
 
     const-string v6, "StatisticOpenProfile"
 
@@ -913,7 +929,7 @@
 
     invoke-virtual {v1, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    const v5, 0x7f070214
+    const v5, 0x7f070287
 
     .line 2567
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -933,7 +949,7 @@
 
     invoke-virtual {v2, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    const v5, 0x7f0e10c8
+    const v5, 0x7f0e1187
 
     const-string v9, "StatisticSearchUserHistory"
 
@@ -944,7 +960,7 @@
 
     invoke-virtual {v1, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    const v5, 0x7f0701ed
+    const v5, 0x7f070276
 
     .line 2570
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1219,14 +1235,14 @@
     :goto_18c
     if-eqz v5, :cond_194
 
-    const v0, 0x7f0e1005
+    const v0, 0x7f0e10c2
 
     const-string v9, "SetAsAdmin"
 
     goto :goto_199
 
     :cond_194
-    const v0, 0x7f0e05fc
+    const v0, 0x7f0e064e
 
     const-string v9, "EditAdminRights"
 
@@ -1240,12 +1256,12 @@
 
     if-eqz v5, :cond_1a6
 
-    const v0, 0x7f070048
+    const v0, 0x7f0701c3
 
     goto :goto_1a9
 
     :cond_1a6
-    const v0, 0x7f07004e
+    const v0, 0x7f070290
 
     .line 2646
     :goto_1a9

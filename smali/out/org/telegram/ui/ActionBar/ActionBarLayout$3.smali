@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lorg/telegram/ui/ActionBar/ActionBarLayout;->presentFragment(Lorg/telegram/ui/ActionBar/BaseFragment;ZZZZLandroid/view/View;)Z
+    value = Lorg/telegram/ui/ActionBar/ActionBarLayout;->presentFragment(Lorg/telegram/ui/ActionBar/BaseFragment;ZZZZLorg/telegram/ui/ActionBar/ActionBarPopupWindow$ActionBarPopupWindowLayout;)Z
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,7 +18,7 @@
 .method constructor <init>(Lorg/telegram/ui/ActionBar/ActionBarLayout;)V
     .registers 2
 
-    .line 1168
+    .line 1286
     invoke-direct {p0}, Landroid/view/ViewOutlineProvider;-><init>()V
 
     return-void
@@ -32,7 +32,7 @@
         value = 0x15
     .end annotation
 
-    .line 1172
+    .line 1290
     sget v2, Lorg/telegram/messenger/AndroidUtilities;->statusBarHeight:I
 
     invoke-virtual {p1}, Landroid/view/View;->getMeasuredWidth()I

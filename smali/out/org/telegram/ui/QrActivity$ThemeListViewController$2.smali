@@ -26,21 +26,21 @@
 .method constructor <init>(Lorg/telegram/ui/QrActivity$ThemeListViewController;Landroid/content/Context;Lorg/telegram/ui/QrActivity;Lorg/telegram/ui/ActionBar/BaseFragment;)V
     .registers 6
 
-    .line 968
+    .line 957
     iput-object p1, p0, Lorg/telegram/ui/QrActivity$ThemeListViewController$2;->this$1:Lorg/telegram/ui/QrActivity$ThemeListViewController;
 
     iput-object p4, p0, Lorg/telegram/ui/QrActivity$ThemeListViewController$2;->val$fragment:Lorg/telegram/ui/ActionBar/BaseFragment;
 
     invoke-direct {p0, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    .line 970
+    .line 959
     new-instance p2, Landroid/graphics/Rect;
 
     invoke-direct {p2}, Landroid/graphics/Rect;-><init>()V
 
     iput-object p2, p0, Lorg/telegram/ui/QrActivity$ThemeListViewController$2;->backgroundPadding:Landroid/graphics/Rect;
 
-    .line 973
+    .line 962
     invoke-static {p1}, Lorg/telegram/ui/QrActivity$ThemeListViewController;->access$1900(Lorg/telegram/ui/QrActivity$ThemeListViewController;)Landroid/graphics/Paint;
 
     move-result-object p3
@@ -53,21 +53,21 @@
 
     invoke-virtual {p3, p4}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 974
+    .line 963
     invoke-static {p1}, Lorg/telegram/ui/QrActivity$ThemeListViewController;->access$2000(Lorg/telegram/ui/QrActivity$ThemeListViewController;)Landroid/graphics/drawable/Drawable;
 
     move-result-object p3
 
     invoke-virtual {p3, p0}, Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
 
-    .line 975
+    .line 964
     invoke-static {p1}, Lorg/telegram/ui/QrActivity$ThemeListViewController;->access$2000(Lorg/telegram/ui/QrActivity$ThemeListViewController;)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 
     invoke-virtual {p1, p2}, Landroid/graphics/drawable/Drawable;->getPadding(Landroid/graphics/Rect;)Z
 
-    .line 976
+    .line 965
     iget p1, p2, Landroid/graphics/Rect;->top:I
 
     const/high16 p3, 0x41000000    # 8.0f
@@ -92,7 +92,7 @@
 .method protected dispatchDraw(Landroid/graphics/Canvas;)V
     .registers 7
 
-    .line 1014
+    .line 1003
     iget-object v0, p0, Lorg/telegram/ui/QrActivity$ThemeListViewController$2;->this$1:Lorg/telegram/ui/QrActivity$ThemeListViewController;
 
     invoke-static {v0}, Lorg/telegram/ui/QrActivity$ThemeListViewController;->access$2400(Lorg/telegram/ui/QrActivity$ThemeListViewController;)Z
@@ -101,7 +101,7 @@
 
     if-eqz v0, :cond_2e
 
-    .line 1015
+    .line 1004
     iget-object v0, p0, Lorg/telegram/ui/QrActivity$ThemeListViewController$2;->this$1:Lorg/telegram/ui/QrActivity$ThemeListViewController;
 
     invoke-static {v0}, Lorg/telegram/ui/QrActivity$ThemeListViewController;->access$2000(Lorg/telegram/ui/QrActivity$ThemeListViewController;)Landroid/graphics/drawable/Drawable;
@@ -132,7 +132,7 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 1016
+    .line 1005
     iget-object v0, p0, Lorg/telegram/ui/QrActivity$ThemeListViewController$2;->this$1:Lorg/telegram/ui/QrActivity$ThemeListViewController;
 
     invoke-static {v0}, Lorg/telegram/ui/QrActivity$ThemeListViewController;->access$2000(Lorg/telegram/ui/QrActivity$ThemeListViewController;)Landroid/graphics/drawable/Drawable;
@@ -143,7 +143,7 @@
 
     goto :goto_58
 
-    .line 1018
+    .line 1007
     :cond_2e
     sget-object v0, Lorg/telegram/messenger/AndroidUtilities;->rectTmp:Landroid/graphics/RectF;
 
@@ -171,7 +171,7 @@
 
     invoke-virtual {v0, v4, v4, v1, v3}, Landroid/graphics/RectF;->set(FFFF)V
 
-    .line 1019
+    .line 1008
     invoke-static {v2}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v1
@@ -192,7 +192,7 @@
 
     invoke-virtual {p1, v0, v1, v2, v3}, Landroid/graphics/Canvas;->drawRoundRect(Landroid/graphics/RectF;FFLandroid/graphics/Paint;)V
 
-    .line 1021
+    .line 1010
     :goto_58
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->dispatchDraw(Landroid/graphics/Canvas;)V
 
@@ -202,7 +202,7 @@
 .method protected onMeasure(II)V
     .registers 14
 
-    .line 981
+    .line 970
     sget-object v0, Lorg/telegram/messenger/AndroidUtilities;->displaySize:Landroid/graphics/Point;
 
     iget v1, v0, Landroid/graphics/Point;->x:I
@@ -223,14 +223,14 @@
     :goto_c
     const/high16 v1, 0x41400000    # 12.0f
 
-    .line 982
+    .line 971
     invoke-static {v1}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v1
 
     if-eqz v0, :cond_4f
 
-    .line 984
+    .line 973
     iget-object v3, p0, Lorg/telegram/ui/QrActivity$ThemeListViewController$2;->this$1:Lorg/telegram/ui/QrActivity$ThemeListViewController;
 
     invoke-static {v3}, Lorg/telegram/ui/QrActivity$ThemeListViewController;->access$2100(Lorg/telegram/ui/QrActivity$ThemeListViewController;)Lorg/telegram/ui/Components/RecyclerListView;
@@ -257,7 +257,7 @@
 
     invoke-virtual {v3, v4}, Landroid/view/ViewGroup;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 985
+    .line 974
     iget-object v3, p0, Lorg/telegram/ui/QrActivity$ThemeListViewController$2;->this$1:Lorg/telegram/ui/QrActivity$ThemeListViewController;
 
     invoke-static {v3}, Lorg/telegram/ui/QrActivity$ThemeListViewController;->access$2100(Lorg/telegram/ui/QrActivity$ThemeListViewController;)Lorg/telegram/ui/Components/RecyclerListView;
@@ -266,7 +266,7 @@
 
     invoke-virtual {v3, v1, v2, v1, v2}, Landroid/view/ViewGroup;->setPadding(IIII)V
 
-    .line 986
+    .line 975
     iget-object v1, p0, Lorg/telegram/ui/QrActivity$ThemeListViewController$2;->this$1:Lorg/telegram/ui/QrActivity$ThemeListViewController;
 
     iget-object v1, v1, Lorg/telegram/ui/QrActivity$ThemeListViewController;->shareButton:Landroid/widget/TextView;
@@ -293,7 +293,7 @@
 
     goto :goto_89
 
-    .line 988
+    .line 977
     :cond_4f
     iget-object v3, p0, Lorg/telegram/ui/QrActivity$ThemeListViewController$2;->this$1:Lorg/telegram/ui/QrActivity$ThemeListViewController;
 
@@ -321,7 +321,7 @@
 
     invoke-virtual {v3, v4}, Landroid/view/ViewGroup;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 989
+    .line 978
     iget-object v3, p0, Lorg/telegram/ui/QrActivity$ThemeListViewController$2;->this$1:Lorg/telegram/ui/QrActivity$ThemeListViewController;
 
     invoke-static {v3}, Lorg/telegram/ui/QrActivity$ThemeListViewController;->access$2100(Lorg/telegram/ui/QrActivity$ThemeListViewController;)Lorg/telegram/ui/Components/RecyclerListView;
@@ -332,7 +332,7 @@
 
     invoke-virtual {v3, v1, v4, v1, v1}, Landroid/view/ViewGroup;->setPadding(IIII)V
 
-    .line 990
+    .line 979
     iget-object v1, p0, Lorg/telegram/ui/QrActivity$ThemeListViewController$2;->this$1:Lorg/telegram/ui/QrActivity$ThemeListViewController;
 
     iget-object v1, v1, Lorg/telegram/ui/QrActivity$ThemeListViewController;->shareButton:Landroid/widget/TextView;
@@ -358,7 +358,7 @@
     :goto_89
     if-eqz v0, :cond_a0
 
-    .line 993
+    .line 982
     iget-object v1, p0, Lorg/telegram/ui/QrActivity$ThemeListViewController$2;->this$1:Lorg/telegram/ui/QrActivity$ThemeListViewController;
 
     invoke-static {v1}, Lorg/telegram/ui/QrActivity$ThemeListViewController;->access$2200(Lorg/telegram/ui/QrActivity$ThemeListViewController;)Landroid/view/View;
@@ -369,7 +369,7 @@
 
     invoke-virtual {v1, v2}, Landroid/view/View;->setVisibility(I)V
 
-    .line 994
+    .line 983
     iget-object v1, p0, Lorg/telegram/ui/QrActivity$ThemeListViewController$2;->this$1:Lorg/telegram/ui/QrActivity$ThemeListViewController;
 
     invoke-static {v1}, Lorg/telegram/ui/QrActivity$ThemeListViewController;->access$2300(Lorg/telegram/ui/QrActivity$ThemeListViewController;)Landroid/view/View;
@@ -380,7 +380,7 @@
 
     goto :goto_e6
 
-    .line 996
+    .line 985
     :cond_a0
     iget-object v1, p0, Lorg/telegram/ui/QrActivity$ThemeListViewController$2;->this$1:Lorg/telegram/ui/QrActivity$ThemeListViewController;
 
@@ -390,7 +390,7 @@
 
     invoke-virtual {v1, v2}, Landroid/view/View;->setVisibility(I)V
 
-    .line 997
+    .line 986
     iget-object v1, p0, Lorg/telegram/ui/QrActivity$ThemeListViewController$2;->this$1:Lorg/telegram/ui/QrActivity$ThemeListViewController;
 
     invoke-static {v1}, Lorg/telegram/ui/QrActivity$ThemeListViewController;->access$2200(Lorg/telegram/ui/QrActivity$ThemeListViewController;)Landroid/view/View;
@@ -423,7 +423,7 @@
 
     invoke-virtual {v1, v3}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 998
+    .line 987
     iget-object v1, p0, Lorg/telegram/ui/QrActivity$ThemeListViewController$2;->this$1:Lorg/telegram/ui/QrActivity$ThemeListViewController;
 
     invoke-static {v1}, Lorg/telegram/ui/QrActivity$ThemeListViewController;->access$2300(Lorg/telegram/ui/QrActivity$ThemeListViewController;)Landroid/view/View;
@@ -432,7 +432,7 @@
 
     invoke-virtual {v1, v2}, Landroid/view/View;->setVisibility(I)V
 
-    .line 999
+    .line 988
     iget-object v1, p0, Lorg/telegram/ui/QrActivity$ThemeListViewController$2;->this$1:Lorg/telegram/ui/QrActivity$ThemeListViewController;
 
     invoke-static {v1}, Lorg/telegram/ui/QrActivity$ThemeListViewController;->access$2300(Lorg/telegram/ui/QrActivity$ThemeListViewController;)Landroid/view/View;
@@ -459,7 +459,7 @@
 
     invoke-virtual {v1, v2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 1001
+    .line 990
     :goto_e6
     iget-object v1, p0, Lorg/telegram/ui/QrActivity$ThemeListViewController$2;->this$1:Lorg/telegram/ui/QrActivity$ThemeListViewController;
 
@@ -469,7 +469,7 @@
 
     if-eq v1, v0, :cond_119
 
-    .line 1002
+    .line 991
     iget-object v1, p0, Lorg/telegram/ui/QrActivity$ThemeListViewController$2;->this$1:Lorg/telegram/ui/QrActivity$ThemeListViewController;
 
     invoke-static {v1}, Lorg/telegram/ui/QrActivity$ThemeListViewController;->access$2100(Lorg/telegram/ui/QrActivity$ThemeListViewController;)Lorg/telegram/ui/Components/RecyclerListView;
@@ -488,7 +488,7 @@
 
     invoke-virtual {v1, v2}, Landroidx/recyclerview/widget/RecyclerView;->setLayoutManager(Landroidx/recyclerview/widget/RecyclerView$LayoutManager;)V
 
-    .line 1003
+    .line 992
     iget-object v1, p0, Lorg/telegram/ui/QrActivity$ThemeListViewController$2;->this$1:Lorg/telegram/ui/QrActivity$ThemeListViewController;
 
     invoke-static {v1}, Lorg/telegram/ui/QrActivity$ThemeListViewController;->access$2100(Lorg/telegram/ui/QrActivity$ThemeListViewController;)Lorg/telegram/ui/Components/RecyclerListView;
@@ -497,7 +497,7 @@
 
     invoke-virtual {v1}, Lorg/telegram/ui/Components/RecyclerListView;->requestLayout()V
 
-    .line 1004
+    .line 993
     iget-object v1, p0, Lorg/telegram/ui/QrActivity$ThemeListViewController$2;->this$1:Lorg/telegram/ui/QrActivity$ThemeListViewController;
 
     iget v2, v1, Lorg/telegram/ui/QrActivity$ThemeListViewController;->prevSelectedPosition:I
@@ -506,16 +506,16 @@
 
     if-eq v2, v3, :cond_114
 
-    .line 1005
+    .line 994
     invoke-virtual {v1, v2}, Lorg/telegram/ui/QrActivity$ThemeListViewController;->setSelectedPosition(I)V
 
-    .line 1007
+    .line 996
     :cond_114
     iget-object v1, p0, Lorg/telegram/ui/QrActivity$ThemeListViewController$2;->this$1:Lorg/telegram/ui/QrActivity$ThemeListViewController;
 
     invoke-static {v1, v0}, Lorg/telegram/ui/QrActivity$ThemeListViewController;->access$2402(Lorg/telegram/ui/QrActivity$ThemeListViewController;Z)Z
 
-    .line 1009
+    .line 998
     :cond_119
     invoke-super {p0, p1, p2}, Landroid/widget/FrameLayout;->onMeasure(II)V
 
@@ -525,7 +525,7 @@
 .method protected verifyDrawable(Landroid/graphics/drawable/Drawable;)Z
     .registers 3
 
-    .line 1026
+    .line 1015
     iget-object v0, p0, Lorg/telegram/ui/QrActivity$ThemeListViewController$2;->this$1:Lorg/telegram/ui/QrActivity$ThemeListViewController;
 
     invoke-static {v0}, Lorg/telegram/ui/QrActivity$ThemeListViewController;->access$2000(Lorg/telegram/ui/QrActivity$ThemeListViewController;)Landroid/graphics/drawable/Drawable;

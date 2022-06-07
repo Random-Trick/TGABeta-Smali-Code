@@ -382,7 +382,7 @@
 
     invoke-direct {p2, p1}, Lorg/telegram/ui/Cells/InviteTextCell;-><init>(Landroid/content/Context;)V
 
-    const p1, 0x7f0e1033
+    const p1, 0x7f0e10f1
 
     const-string v0, "ShareTelegram"
 
@@ -391,7 +391,7 @@
 
     move-result-object p1
 
-    const v0, 0x7f0703b1
+    const v0, 0x7f0703b6
 
     invoke-virtual {p2, p1, v0}, Lorg/telegram/ui/Cells/InviteTextCell;->setTextAndIcon(Ljava/lang/String;I)V
 

@@ -25,7 +25,7 @@
 .method constructor <init>(Lorg/telegram/ui/ThemeActivity$TextSizeCell;Lorg/telegram/ui/ThemeActivity;)V
     .registers 3
 
-    .line 260
+    .line 259
     iput-object p1, p0, Lorg/telegram/ui/ThemeActivity$TextSizeCell$1;->this$1:Lorg/telegram/ui/ThemeActivity$TextSizeCell;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public getContentDescription()Ljava/lang/CharSequence;
     .registers 4
 
-    .line 272
+    .line 271
     iget-object v0, p0, Lorg/telegram/ui/ThemeActivity$TextSizeCell$1;->this$1:Lorg/telegram/ui/ThemeActivity$TextSizeCell;
 
     invoke-static {v0}, Lorg/telegram/ui/ThemeActivity$TextSizeCell;->access$300(Lorg/telegram/ui/ThemeActivity$TextSizeCell;)I
@@ -91,7 +91,7 @@
 .method public getStepsCount()I
     .registers 3
 
-    .line 277
+    .line 276
     iget-object v0, p0, Lorg/telegram/ui/ThemeActivity$TextSizeCell$1;->this$1:Lorg/telegram/ui/ThemeActivity$TextSizeCell;
 
     invoke-static {v0}, Lorg/telegram/ui/ThemeActivity$TextSizeCell;->access$400(Lorg/telegram/ui/ThemeActivity$TextSizeCell;)I
@@ -112,7 +112,7 @@
 .method public onSeekBarDrag(ZF)V
     .registers 6
 
-    .line 263
+    .line 262
     iget-object p1, p0, Lorg/telegram/ui/ThemeActivity$TextSizeCell$1;->this$1:Lorg/telegram/ui/ThemeActivity$TextSizeCell;
 
     iget-object v0, p1, Lorg/telegram/ui/ThemeActivity$TextSizeCell;->this$0:Lorg/telegram/ui/ThemeActivity;

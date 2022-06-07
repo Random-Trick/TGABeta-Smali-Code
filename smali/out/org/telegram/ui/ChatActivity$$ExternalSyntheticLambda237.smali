@@ -2,50 +2,54 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lorg/telegram/ui/Components/ReactionsContainerLayout$ReactionsContainerDelegate;
+.implements Lorg/telegram/ui/Components/AlertsCreator$ScheduleDatePickerDelegate;
 
 
 # instance fields
 .field public final synthetic f$0:Lorg/telegram/ui/ChatActivity;
 
-.field public final synthetic f$1:Lorg/telegram/messenger/MessageObject;
+.field public final synthetic f$1:Lorg/telegram/tgnet/TLRPC$TL_document;
 
-.field public final synthetic f$2:Lorg/telegram/ui/Components/ReactionsContainerLayout;
+.field public final synthetic f$2:Ljava/lang/String;
+
+.field public final synthetic f$3:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lorg/telegram/ui/ChatActivity;Lorg/telegram/messenger/MessageObject;Lorg/telegram/ui/Components/ReactionsContainerLayout;)V
-    .registers 4
+.method public synthetic constructor <init>(Lorg/telegram/ui/ChatActivity;Lorg/telegram/tgnet/TLRPC$TL_document;Ljava/lang/String;Ljava/lang/Object;)V
+    .registers 5
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda237;->f$0:Lorg/telegram/ui/ChatActivity;
 
-    iput-object p2, p0, Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda237;->f$1:Lorg/telegram/messenger/MessageObject;
+    iput-object p2, p0, Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda237;->f$1:Lorg/telegram/tgnet/TLRPC$TL_document;
 
-    iput-object p3, p0, Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda237;->f$2:Lorg/telegram/ui/Components/ReactionsContainerLayout;
+    iput-object p3, p0, Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda237;->f$2:Ljava/lang/String;
+
+    iput-object p4, p0, Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda237;->f$3:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onReactionClicked(Landroid/view/View;Lorg/telegram/tgnet/TLRPC$TL_availableReaction;Z)V
-    .registers 10
+.method public final didSelectDate(ZI)V
+    .registers 9
 
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda237;->f$0:Lorg/telegram/ui/ChatActivity;
 
-    iget-object v1, p0, Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda237;->f$1:Lorg/telegram/messenger/MessageObject;
+    iget-object v1, p0, Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda237;->f$1:Lorg/telegram/tgnet/TLRPC$TL_document;
 
-    iget-object v2, p0, Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda237;->f$2:Lorg/telegram/ui/Components/ReactionsContainerLayout;
+    iget-object v2, p0, Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda237;->f$2:Ljava/lang/String;
 
-    move-object v3, p1
+    iget-object v3, p0, Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda237;->f$3:Ljava/lang/Object;
 
-    move-object v4, p2
+    move v4, p1
 
-    move v5, p3
+    move v5, p2
 
-    invoke-static/range {v0 .. v5}, Lorg/telegram/ui/ChatActivity;->$r8$lambda$fQP9ecmq03Gdx6yqetnuplt_OJI(Lorg/telegram/ui/ChatActivity;Lorg/telegram/messenger/MessageObject;Lorg/telegram/ui/Components/ReactionsContainerLayout;Landroid/view/View;Lorg/telegram/tgnet/TLRPC$TL_availableReaction;Z)V
+    invoke-static/range {v0 .. v5}, Lorg/telegram/ui/ChatActivity;->$r8$lambda$F0XVjlr9Cldh0incWGYp_zd4XaA(Lorg/telegram/ui/ChatActivity;Lorg/telegram/tgnet/TLRPC$TL_document;Ljava/lang/String;Ljava/lang/Object;ZI)V
 
     return-void
 .end method

@@ -56,7 +56,7 @@
 
     xor-int/lit8 p2, p2, 0x1
 
-    invoke-static {p1, p2}, Lorg/telegram/ui/Components/NumberPicker;->access$000(Lorg/telegram/ui/Components/NumberPicker;Z)V
+    invoke-virtual {p1, p2}, Lorg/telegram/ui/Components/NumberPicker;->changeValueByOne(Z)V
 
     return-void
 .end method
@@ -67,7 +67,7 @@
     .line 219
     iget-object p1, p0, Lorg/telegram/ui/Components/NumberPicker$1;->this$0:Lorg/telegram/ui/Components/NumberPicker;
 
-    invoke-static {p1}, Lorg/telegram/ui/Components/NumberPicker;->access$100(Lorg/telegram/ui/Components/NumberPicker;)I
+    invoke-static {p1}, Lorg/telegram/ui/Components/NumberPicker;->access$000(Lorg/telegram/ui/Components/NumberPicker;)I
 
     move-result v0
 

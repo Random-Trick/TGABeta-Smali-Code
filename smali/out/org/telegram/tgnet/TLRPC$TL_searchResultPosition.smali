@@ -25,7 +25,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 34924
+    .line 35376
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -34,7 +34,7 @@
 .method public static TLdeserialize(Lorg/telegram/tgnet/AbstractSerializedData;IZ)Lorg/telegram/tgnet/TLRPC$TL_searchResultPosition;
     .registers 4
 
-    .line 34932
+    .line 35384
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_searchResultPosition;->constructor:I
 
     if-eq v0, p1, :cond_1e
@@ -45,7 +45,7 @@
 
     return-object p0
 
-    .line 34934
+    .line 35386
     :cond_8
     new-instance p0, Ljava/lang/RuntimeException;
 
@@ -71,13 +71,13 @@
 
     throw p0
 
-    .line 34939
+    .line 35391
     :cond_1e
     new-instance p1, Lorg/telegram/tgnet/TLRPC$TL_searchResultPosition;
 
     invoke-direct {p1}, Lorg/telegram/tgnet/TLRPC$TL_searchResultPosition;-><init>()V
 
-    .line 34940
+    .line 35392
     invoke-virtual {p1, p0, p2}, Lorg/telegram/tgnet/TLRPC$TL_searchResultPosition;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
     return-object p1
@@ -88,21 +88,21 @@
 .method public readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
     .registers 4
 
-    .line 34945
+    .line 35397
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
 
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$TL_searchResultPosition;->msg_id:I
 
-    .line 34946
+    .line 35398
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
 
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$TL_searchResultPosition;->date:I
 
-    .line 34947
+    .line 35399
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result p1
@@ -115,22 +115,22 @@
 .method public serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
     .registers 3
 
-    .line 34951
+    .line 35403
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_searchResultPosition;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 34952
+    .line 35404
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_searchResultPosition;->msg_id:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 34953
+    .line 35405
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_searchResultPosition;->date:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 34954
+    .line 35406
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_searchResultPosition;->offset:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V

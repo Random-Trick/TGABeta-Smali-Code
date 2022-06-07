@@ -24,12 +24,12 @@
 .method constructor <init>(Lorg/telegram/ui/Components/MentionsContainerView;Landroid/content/Context;IZZ)V
     .registers 6
 
-    .line 74
+    .line 77
     iput-object p1, p0, Lorg/telegram/ui/Components/MentionsContainerView$2;->this$0:Lorg/telegram/ui/Components/MentionsContainerView;
 
     invoke-direct {p0, p2, p3, p4, p5}, Lorg/telegram/ui/Components/ExtendedGridLayoutManager;-><init>(Landroid/content/Context;IZZ)V
 
-    .line 76
+    .line 78
     new-instance p1, Lorg/telegram/ui/Components/Size;
 
     invoke-direct {p1}, Lorg/telegram/ui/Components/Size;-><init>()V
@@ -44,7 +44,7 @@
 .method protected getFlowItemCount()I
     .registers 2
 
-    .line 138
+    .line 140
     iget-object v0, p0, Lorg/telegram/ui/Components/MentionsContainerView$2;->this$0:Lorg/telegram/ui/Components/MentionsContainerView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/MentionsContainerView;->access$200(Lorg/telegram/ui/Components/MentionsContainerView;)Lorg/telegram/ui/Adapters/MentionsAdapter;
@@ -57,7 +57,7 @@
 
     if-eqz v0, :cond_13
 
-    .line 139
+    .line 141
     invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->getItemCount()I
 
     move-result v0
@@ -66,7 +66,7 @@
 
     return v0
 
-    .line 141
+    .line 143
     :cond_13
     invoke-super {p0}, Lorg/telegram/ui/Components/ExtendedGridLayoutManager;->getFlowItemCount()I
 
@@ -82,7 +82,7 @@
 
     if-nez p1, :cond_1d
 
-    .line 81
+    .line 83
     iget-object p1, p0, Lorg/telegram/ui/Components/MentionsContainerView$2;->size:Lorg/telegram/ui/Components/Size;
 
     invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->getWidth()I
@@ -93,7 +93,7 @@
 
     iput v0, p1, Lorg/telegram/ui/Components/Size;->width:F
 
-    .line 82
+    .line 84
     iget-object p1, p0, Lorg/telegram/ui/Components/MentionsContainerView$2;->size:Lorg/telegram/ui/Components/Size;
 
     iget-object v0, p0, Lorg/telegram/ui/Components/MentionsContainerView$2;->this$0:Lorg/telegram/ui/Components/MentionsContainerView;
@@ -110,7 +110,7 @@
 
     iput v0, p1, Lorg/telegram/ui/Components/Size;->height:F
 
-    .line 83
+    .line 85
     iget-object p1, p0, Lorg/telegram/ui/Components/MentionsContainerView$2;->size:Lorg/telegram/ui/Components/Size;
 
     return-object p1
@@ -118,7 +118,7 @@
     :cond_1d
     add-int/lit8 p1, p1, -0x1
 
-    .line 87
+    .line 89
     iget-object v0, p0, Lorg/telegram/ui/Components/MentionsContainerView$2;->this$0:Lorg/telegram/ui/Components/MentionsContainerView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/MentionsContainerView;->access$200(Lorg/telegram/ui/Components/MentionsContainerView;)Lorg/telegram/ui/Adapters/MentionsAdapter;
@@ -133,7 +133,7 @@
 
     add-int/lit8 p1, p1, 0x1
 
-    .line 90
+    .line 92
     :cond_2d
     iget-object v0, p0, Lorg/telegram/ui/Components/MentionsContainerView$2;->size:Lorg/telegram/ui/Components/Size;
 
@@ -141,10 +141,10 @@
 
     iput v1, v0, Lorg/telegram/ui/Components/Size;->width:F
 
-    .line 91
+    .line 93
     iput v1, v0, Lorg/telegram/ui/Components/Size;->height:F
 
-    .line 92
+    .line 94
     iget-object v0, p0, Lorg/telegram/ui/Components/MentionsContainerView$2;->this$0:Lorg/telegram/ui/Components/MentionsContainerView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/MentionsContainerView;->access$200(Lorg/telegram/ui/Components/MentionsContainerView;)Lorg/telegram/ui/Adapters/MentionsAdapter;
@@ -155,22 +155,22 @@
 
     move-result-object p1
 
-    .line 93
+    .line 95
     instance-of v0, p1, Lorg/telegram/tgnet/TLRPC$BotInlineResult;
 
     if-eqz v0, :cond_114
 
-    .line 94
+    .line 96
     check-cast p1, Lorg/telegram/tgnet/TLRPC$BotInlineResult;
 
-    .line 95
+    .line 97
     iget-object v0, p1, Lorg/telegram/tgnet/TLRPC$BotInlineResult;->document:Lorg/telegram/tgnet/TLRPC$Document;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_94
 
-    .line 96
+    .line 98
     iget-object v0, v0, Lorg/telegram/tgnet/TLRPC$Document;->thumbs:Ljava/util/ArrayList;
 
     const/16 v2, 0x5a
@@ -179,7 +179,7 @@
 
     move-result-object v0
 
-    .line 97
+    .line 99
     iget-object v2, p0, Lorg/telegram/ui/Components/MentionsContainerView$2;->size:Lorg/telegram/ui/Components/Size;
 
     const/high16 v3, 0x42c80000    # 100.0f
@@ -200,7 +200,7 @@
 
     if-eqz v0, :cond_64
 
-    .line 98
+    .line 100
     iget v0, v0, Lorg/telegram/tgnet/TLRPC$PhotoSize;->h:I
 
     int-to-float v3, v0
@@ -208,7 +208,7 @@
     :cond_64
     iput v3, v2, Lorg/telegram/ui/Components/Size;->height:F
 
-    .line 99
+    .line 101
     :goto_66
     iget-object v0, p1, Lorg/telegram/tgnet/TLRPC$BotInlineResult;->document:Lorg/telegram/tgnet/TLRPC$Document;
 
@@ -220,7 +220,7 @@
 
     if-ge v1, v0, :cond_114
 
-    .line 100
+    .line 102
     iget-object v0, p1, Lorg/telegram/tgnet/TLRPC$BotInlineResult;->document:Lorg/telegram/tgnet/TLRPC$Document;
 
     iget-object v0, v0, Lorg/telegram/tgnet/TLRPC$Document;->attributes:Ljava/util/ArrayList;
@@ -231,7 +231,7 @@
 
     check-cast v0, Lorg/telegram/tgnet/TLRPC$DocumentAttribute;
 
-    .line 101
+    .line 103
     instance-of v2, v0, Lorg/telegram/tgnet/TLRPC$TL_documentAttributeImageSize;
 
     if-nez v2, :cond_86
@@ -247,7 +247,7 @@
 
     goto :goto_66
 
-    .line 102
+    .line 104
     :cond_86
     :goto_86
     iget-object p1, p0, Lorg/telegram/ui/Components/MentionsContainerView$2;->size:Lorg/telegram/ui/Components/Size;
@@ -258,7 +258,7 @@
 
     iput v1, p1, Lorg/telegram/ui/Components/Size;->width:F
 
-    .line 103
+    .line 105
     iget v0, v0, Lorg/telegram/tgnet/TLRPC$DocumentAttribute;->h:I
 
     int-to-float v0, v0
@@ -267,13 +267,13 @@
 
     goto/16 :goto_114
 
-    .line 107
+    .line 109
     :cond_94
     iget-object v0, p1, Lorg/telegram/tgnet/TLRPC$BotInlineResult;->content:Lorg/telegram/tgnet/TLRPC$WebDocument;
 
     if-eqz v0, :cond_c5
 
-    .line 108
+    .line 110
     :goto_98
     iget-object v0, p1, Lorg/telegram/tgnet/TLRPC$BotInlineResult;->content:Lorg/telegram/tgnet/TLRPC$WebDocument;
 
@@ -285,7 +285,7 @@
 
     if-ge v1, v0, :cond_114
 
-    .line 109
+    .line 111
     iget-object v0, p1, Lorg/telegram/tgnet/TLRPC$BotInlineResult;->content:Lorg/telegram/tgnet/TLRPC$WebDocument;
 
     iget-object v0, v0, Lorg/telegram/tgnet/TLRPC$WebDocument;->attributes:Ljava/util/ArrayList;
@@ -296,7 +296,7 @@
 
     check-cast v0, Lorg/telegram/tgnet/TLRPC$DocumentAttribute;
 
-    .line 110
+    .line 112
     instance-of v2, v0, Lorg/telegram/tgnet/TLRPC$TL_documentAttributeImageSize;
 
     if-nez v2, :cond_b8
@@ -312,7 +312,7 @@
 
     goto :goto_98
 
-    .line 111
+    .line 113
     :cond_b8
     :goto_b8
     iget-object p1, p0, Lorg/telegram/ui/Components/MentionsContainerView$2;->size:Lorg/telegram/ui/Components/Size;
@@ -323,7 +323,7 @@
 
     iput v1, p1, Lorg/telegram/ui/Components/Size;->width:F
 
-    .line 112
+    .line 114
     iget v0, v0, Lorg/telegram/tgnet/TLRPC$DocumentAttribute;->h:I
 
     int-to-float v0, v0
@@ -332,13 +332,13 @@
 
     goto :goto_114
 
-    .line 116
+    .line 118
     :cond_c5
     iget-object v0, p1, Lorg/telegram/tgnet/TLRPC$BotInlineResult;->thumb:Lorg/telegram/tgnet/TLRPC$WebDocument;
 
     if-eqz v0, :cond_f6
 
-    .line 117
+    .line 119
     :goto_c9
     iget-object v0, p1, Lorg/telegram/tgnet/TLRPC$BotInlineResult;->thumb:Lorg/telegram/tgnet/TLRPC$WebDocument;
 
@@ -350,7 +350,7 @@
 
     if-ge v1, v0, :cond_114
 
-    .line 118
+    .line 120
     iget-object v0, p1, Lorg/telegram/tgnet/TLRPC$BotInlineResult;->thumb:Lorg/telegram/tgnet/TLRPC$WebDocument;
 
     iget-object v0, v0, Lorg/telegram/tgnet/TLRPC$WebDocument;->attributes:Ljava/util/ArrayList;
@@ -361,7 +361,7 @@
 
     check-cast v0, Lorg/telegram/tgnet/TLRPC$DocumentAttribute;
 
-    .line 119
+    .line 121
     instance-of v2, v0, Lorg/telegram/tgnet/TLRPC$TL_documentAttributeImageSize;
 
     if-nez v2, :cond_e9
@@ -377,7 +377,7 @@
 
     goto :goto_c9
 
-    .line 120
+    .line 122
     :cond_e9
     :goto_e9
     iget-object p1, p0, Lorg/telegram/ui/Components/MentionsContainerView$2;->size:Lorg/telegram/ui/Components/Size;
@@ -388,7 +388,7 @@
 
     iput v1, p1, Lorg/telegram/ui/Components/Size;->width:F
 
-    .line 121
+    .line 123
     iget v0, v0, Lorg/telegram/tgnet/TLRPC$DocumentAttribute;->h:I
 
     int-to-float v0, v0
@@ -397,13 +397,13 @@
 
     goto :goto_114
 
-    .line 125
+    .line 127
     :cond_f6
     iget-object p1, p1, Lorg/telegram/tgnet/TLRPC$BotInlineResult;->photo:Lorg/telegram/tgnet/TLRPC$Photo;
 
     if-eqz p1, :cond_114
 
-    .line 126
+    .line 128
     iget-object p1, p1, Lorg/telegram/tgnet/TLRPC$Photo;->sizes:Ljava/util/ArrayList;
 
     sget-object v0, Lorg/telegram/messenger/AndroidUtilities;->photoSize:Ljava/lang/Integer;
@@ -418,7 +418,7 @@
 
     if-eqz p1, :cond_114
 
-    .line 128
+    .line 130
     iget-object v0, p0, Lorg/telegram/ui/Components/MentionsContainerView$2;->size:Lorg/telegram/ui/Components/Size;
 
     iget v1, p1, Lorg/telegram/tgnet/TLRPC$PhotoSize;->w:I
@@ -427,14 +427,14 @@
 
     iput v1, v0, Lorg/telegram/ui/Components/Size;->width:F
 
-    .line 129
+    .line 131
     iget p1, p1, Lorg/telegram/tgnet/TLRPC$PhotoSize;->h:I
 
     int-to-float p1, p1
 
     iput p1, v0, Lorg/telegram/ui/Components/Size;->height:F
 
-    .line 133
+    .line 135
     :cond_114
     :goto_114
     iget-object p1, p0, Lorg/telegram/ui/Components/MentionsContainerView$2;->size:Lorg/telegram/ui/Components/Size;

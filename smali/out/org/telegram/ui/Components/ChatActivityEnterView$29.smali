@@ -18,7 +18,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/ChatActivityEnterView;)V
     .registers 2
 
-    .line 3186
+    .line 3209
     invoke-direct {p0}, Lorg/telegram/ui/Components/CloseProgressDrawable2;-><init>()V
 
     return-void
@@ -31,7 +31,7 @@
 
     const-string v0, "chat_messagePanelCancelInlineBot"
 
-    .line 3189
+    .line 3212
     invoke-static {v0}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
 
     move-result v0

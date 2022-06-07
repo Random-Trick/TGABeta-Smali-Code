@@ -33,7 +33,7 @@
 
     iget-object v1, p0, Lorg/telegram/messenger/MessagesController$$ExternalSyntheticLambda94;->f$1:Landroidx/collection/LongSparseArray;
 
-    invoke-static {v0, v1}, Lorg/telegram/messenger/MessagesController;->$r8$lambda$PafQsos7S-SoSAoMbzTsfcC9G6w(Lorg/telegram/messenger/MessagesController;Landroidx/collection/LongSparseArray;)V
+    invoke-static {v0, v1}, Lorg/telegram/messenger/MessagesController;->$r8$lambda$-bZKs0nE0orQJwuitCvVE3IKuq0(Lorg/telegram/messenger/MessagesController;Landroidx/collection/LongSparseArray;)V
 
     return-void
 .end method

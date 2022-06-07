@@ -1072,7 +1072,7 @@
 
     if-ne p2, v0, :cond_21
 
-    const p2, 0x7f0e038f
+    const p2, 0x7f0e03ce
 
     const-string v0, "ChannelMembers"
 
@@ -1091,7 +1091,7 @@
 
     if-ne p2, v0, :cond_133
 
-    const p2, 0x7f0e07fe
+    const p2, 0x7f0e0856
 
     const-string v0, "GlobalSearch"
 
@@ -1501,7 +1501,7 @@
 
     invoke-direct {p2, v0, p1, p1, v1}, Lorg/telegram/ui/Cells/ManageChatUserCell;-><init>(Landroid/content/Context;IIZ)V
 
-    const p1, 0x7f070274
+    const p1, 0x7f07024b
 
     .line 654
     invoke-virtual {p2, p1}, Lorg/telegram/ui/Cells/ManageChatUserCell;->setCustomRightImage(I)V

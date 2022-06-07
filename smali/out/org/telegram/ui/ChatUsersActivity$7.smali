@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lorg/telegram/ui/ChatUsersActivity;->lambda$createView$1(Landroid/view/View;I)V
+    value = Lorg/telegram/ui/ChatUsersActivity;->lambda$createView$1(Landroid/content/Context;Landroid/view/View;I)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -25,7 +25,7 @@
 .method constructor <init>(Lorg/telegram/ui/ChatUsersActivity;)V
     .registers 2
 
-    .line 863
+    .line 860
     iput-object p1, p0, Lorg/telegram/ui/ChatUsersActivity$7;->this$0:Lorg/telegram/ui/ChatUsersActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public didAddParticipantToList(JLorg/telegram/tgnet/TLObject;)V
     .registers 6
 
-    .line 867
+    .line 864
     iget-object v0, p0, Lorg/telegram/ui/ChatUsersActivity$7;->this$0:Lorg/telegram/ui/ChatUsersActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/ChatUsersActivity;->access$8000(Lorg/telegram/ui/ChatUsersActivity;)Landroidx/collection/LongSparseArray;
@@ -51,14 +51,14 @@
 
     if-nez v0, :cond_32
 
-    .line 868
+    .line 865
     iget-object v0, p0, Lorg/telegram/ui/ChatUsersActivity$7;->this$0:Lorg/telegram/ui/ChatUsersActivity;
 
     invoke-virtual {v0}, Lorg/telegram/ui/ChatUsersActivity;->saveState()Lorg/telegram/ui/ChatUsersActivity$DiffCallback;
 
     move-result-object v0
 
-    .line 869
+    .line 866
     iget-object v1, p0, Lorg/telegram/ui/ChatUsersActivity$7;->this$0:Lorg/telegram/ui/ChatUsersActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/ChatUsersActivity;->access$2100(Lorg/telegram/ui/ChatUsersActivity;)Ljava/util/ArrayList;
@@ -67,7 +67,7 @@
 
     invoke-virtual {v1, p3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 870
+    .line 867
     iget-object v1, p0, Lorg/telegram/ui/ChatUsersActivity$7;->this$0:Lorg/telegram/ui/ChatUsersActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/ChatUsersActivity;->access$8000(Lorg/telegram/ui/ChatUsersActivity;)Landroidx/collection/LongSparseArray;
@@ -76,7 +76,7 @@
 
     invoke-virtual {v1, p1, p2, p3}, Landroidx/collection/LongSparseArray;->put(JLjava/lang/Object;)V
 
-    .line 871
+    .line 868
     iget-object p1, p0, Lorg/telegram/ui/ChatUsersActivity$7;->this$0:Lorg/telegram/ui/ChatUsersActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/ChatUsersActivity;->access$2100(Lorg/telegram/ui/ChatUsersActivity;)Ljava/util/ArrayList;
@@ -85,7 +85,7 @@
 
     invoke-static {p1, p2}, Lorg/telegram/ui/ChatUsersActivity;->access$8100(Lorg/telegram/ui/ChatUsersActivity;Ljava/util/ArrayList;)V
 
-    .line 872
+    .line 869
     iget-object p1, p0, Lorg/telegram/ui/ChatUsersActivity$7;->this$0:Lorg/telegram/ui/ChatUsersActivity;
 
     invoke-virtual {p1, v0}, Lorg/telegram/ui/ChatUsersActivity;->updateListAnimated(Lorg/telegram/ui/ChatUsersActivity$DiffCallback;)V
@@ -105,7 +105,7 @@
 .method public didKickParticipant(J)V
     .registers 8
 
-    .line 878
+    .line 875
     iget-object v0, p0, Lorg/telegram/ui/ChatUsersActivity$7;->this$0:Lorg/telegram/ui/ChatUsersActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/ChatUsersActivity;->access$8000(Lorg/telegram/ui/ChatUsersActivity;)Landroidx/collection/LongSparseArray;
@@ -118,14 +118,14 @@
 
     if-nez v0, :cond_77
 
-    .line 879
+    .line 876
     iget-object v0, p0, Lorg/telegram/ui/ChatUsersActivity$7;->this$0:Lorg/telegram/ui/ChatUsersActivity;
 
     invoke-virtual {v0}, Lorg/telegram/ui/ChatUsersActivity;->saveState()Lorg/telegram/ui/ChatUsersActivity$DiffCallback;
 
     move-result-object v0
 
-    .line 880
+    .line 877
     new-instance v1, Lorg/telegram/tgnet/TLRPC$TL_channelParticipantBanned;
 
     invoke-direct {v1}, Lorg/telegram/tgnet/TLRPC$TL_channelParticipantBanned;-><init>()V
@@ -136,19 +136,19 @@
 
     if-lez v4, :cond_27
 
-    .line 882
+    .line 879
     new-instance v2, Lorg/telegram/tgnet/TLRPC$TL_peerUser;
 
     invoke-direct {v2}, Lorg/telegram/tgnet/TLRPC$TL_peerUser;-><init>()V
 
     iput-object v2, v1, Lorg/telegram/tgnet/TLRPC$ChannelParticipant;->peer:Lorg/telegram/tgnet/TLRPC$Peer;
 
-    .line 883
+    .line 880
     iput-wide p1, v2, Lorg/telegram/tgnet/TLRPC$Peer;->user_id:J
 
     goto :goto_31
 
-    .line 885
+    .line 882
     :cond_27
     new-instance v2, Lorg/telegram/tgnet/TLRPC$TL_peerChannel;
 
@@ -158,10 +158,10 @@
 
     neg-long v3, p1
 
-    .line 886
+    .line 883
     iput-wide v3, v2, Lorg/telegram/tgnet/TLRPC$Peer;->channel_id:J
 
-    .line 888
+    .line 885
     :goto_31
     iget-object v2, p0, Lorg/telegram/ui/ChatUsersActivity$7;->this$0:Lorg/telegram/ui/ChatUsersActivity;
 
@@ -175,7 +175,7 @@
 
     iput v2, v1, Lorg/telegram/tgnet/TLRPC$ChannelParticipant;->date:I
 
-    .line 889
+    .line 886
     iget-object v2, p0, Lorg/telegram/ui/ChatUsersActivity$7;->this$0:Lorg/telegram/ui/ChatUsersActivity;
 
     invoke-virtual {v2}, Lorg/telegram/ui/ActionBar/BaseFragment;->getAccountInstance()Lorg/telegram/messenger/AccountInstance;
@@ -190,7 +190,7 @@
 
     iput-wide v2, v1, Lorg/telegram/tgnet/TLRPC$ChannelParticipant;->kicked_by:J
 
-    .line 890
+    .line 887
     iget-object v2, p0, Lorg/telegram/ui/ChatUsersActivity$7;->this$0:Lorg/telegram/ui/ChatUsersActivity;
 
     invoke-static {v2}, Lorg/telegram/ui/ChatUsersActivity;->access$500(Lorg/telegram/ui/ChatUsersActivity;)Lorg/telegram/tgnet/TLRPC$ChatFull;
@@ -203,7 +203,7 @@
 
     iput v3, v2, Lorg/telegram/tgnet/TLRPC$ChatFull;->kicked_count:I
 
-    .line 891
+    .line 888
     iget-object v2, p0, Lorg/telegram/ui/ChatUsersActivity$7;->this$0:Lorg/telegram/ui/ChatUsersActivity;
 
     invoke-static {v2}, Lorg/telegram/ui/ChatUsersActivity;->access$2100(Lorg/telegram/ui/ChatUsersActivity;)Ljava/util/ArrayList;
@@ -212,7 +212,7 @@
 
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 892
+    .line 889
     iget-object v2, p0, Lorg/telegram/ui/ChatUsersActivity$7;->this$0:Lorg/telegram/ui/ChatUsersActivity;
 
     invoke-static {v2}, Lorg/telegram/ui/ChatUsersActivity;->access$8000(Lorg/telegram/ui/ChatUsersActivity;)Landroidx/collection/LongSparseArray;
@@ -221,7 +221,7 @@
 
     invoke-virtual {v2, p1, p2, v1}, Landroidx/collection/LongSparseArray;->put(JLjava/lang/Object;)V
 
-    .line 893
+    .line 890
     iget-object p1, p0, Lorg/telegram/ui/ChatUsersActivity$7;->this$0:Lorg/telegram/ui/ChatUsersActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/ChatUsersActivity;->access$2100(Lorg/telegram/ui/ChatUsersActivity;)Ljava/util/ArrayList;
@@ -230,7 +230,7 @@
 
     invoke-static {p1, p2}, Lorg/telegram/ui/ChatUsersActivity;->access$8100(Lorg/telegram/ui/ChatUsersActivity;Ljava/util/ArrayList;)V
 
-    .line 894
+    .line 891
     iget-object p1, p0, Lorg/telegram/ui/ChatUsersActivity$7;->this$0:Lorg/telegram/ui/ChatUsersActivity;
 
     invoke-virtual {p1, v0}, Lorg/telegram/ui/ChatUsersActivity;->updateListAnimated(Lorg/telegram/ui/ChatUsersActivity$DiffCallback;)V

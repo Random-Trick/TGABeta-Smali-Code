@@ -199,7 +199,7 @@
 
     const-string v2, "InviteLink"
 
-    const v3, 0x7f0e08b1
+    const v3, 0x7f0e090e
 
     .line 61
     invoke-static {v2, v3}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -236,14 +236,14 @@
 
     if-eqz p7, :cond_9d
 
-    const v3, 0x7f0e093a
+    const v3, 0x7f0e09c1
 
     const-string v4, "LinkInfoChannel"
 
     goto :goto_a2
 
     :cond_9d
-    const v3, 0x7f0e0939
+    const v3, 0x7f0e09c0
 
     const-string v4, "LinkInfo"
 
@@ -281,7 +281,7 @@
 
     iput-object v4, v8, Lorg/telegram/ui/Components/PermanentLinkBottomSheet;->manage:Landroid/widget/TextView;
 
-    const v5, 0x7f0e0992
+    const v5, 0x7f0e0a19
 
     const-string v6, "ManageInviteLinks"
 
@@ -641,7 +641,7 @@
 
     invoke-direct {p1, p2}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    const p2, 0x7f0e0f4b
+    const p2, 0x7f0e0ffb
 
     const-string p3, "RevokeAlertNewLink"
 
@@ -652,7 +652,7 @@
 
     invoke-virtual {p1, p2}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const p2, 0x7f0e0f4d
+    const p2, 0x7f0e0ffd
 
     const-string p3, "RevokeLink"
 
@@ -663,7 +663,7 @@
 
     invoke-virtual {p1, p2}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const p2, 0x7f0e0bae
+    const p2, 0x7f0e0c38
 
     const-string p3, "OK"
 

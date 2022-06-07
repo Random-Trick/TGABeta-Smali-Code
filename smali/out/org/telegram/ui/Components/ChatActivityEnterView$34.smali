@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/ChatActivityEnterView;)V
     .registers 2
 
-    .line 3739
+    .line 3771
     iput-object p1, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$34;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -35,7 +35,7 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .registers 3
 
-    .line 3742
+    .line 3774
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$34;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$10000(Lorg/telegram/ui/Components/ChatActivityEnterView;)Landroid/animation/AnimatorSet;
@@ -48,14 +48,14 @@
 
     if-eqz p1, :cond_12
 
-    .line 3743
+    .line 3775
     iget-object p1, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$34;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     const/4 v0, 0x0
 
     invoke-static {p1, v0}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$10002(Lorg/telegram/ui/Components/ChatActivityEnterView;Landroid/animation/AnimatorSet;)Landroid/animation/AnimatorSet;
 
-    .line 3745
+    .line 3777
     :cond_12
     iget-object p1, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$34;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 

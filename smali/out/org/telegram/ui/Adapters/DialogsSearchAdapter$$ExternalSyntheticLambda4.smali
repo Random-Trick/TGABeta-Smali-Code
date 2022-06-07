@@ -6,24 +6,24 @@
 
 
 # instance fields
-.field public final synthetic f$0:Lorg/telegram/ui/Adapters/DialogsSearchAdapter$OnRecentSearchLoaded;
+.field public final synthetic f$0:I
 
-.field public final synthetic f$1:Ljava/util/ArrayList;
+.field public final synthetic f$1:I
 
-.field public final synthetic f$2:Landroidx/collection/LongSparseArray;
+.field public final synthetic f$2:Lorg/telegram/ui/Adapters/DialogsSearchAdapter$OnRecentSearchLoaded;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lorg/telegram/ui/Adapters/DialogsSearchAdapter$OnRecentSearchLoaded;Ljava/util/ArrayList;Landroidx/collection/LongSparseArray;)V
+.method public synthetic constructor <init>(IILorg/telegram/ui/Adapters/DialogsSearchAdapter$OnRecentSearchLoaded;)V
     .registers 4
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$$ExternalSyntheticLambda4;->f$0:Lorg/telegram/ui/Adapters/DialogsSearchAdapter$OnRecentSearchLoaded;
+    iput p1, p0, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$$ExternalSyntheticLambda4;->f$0:I
 
-    iput-object p2, p0, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$$ExternalSyntheticLambda4;->f$1:Ljava/util/ArrayList;
+    iput p2, p0, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$$ExternalSyntheticLambda4;->f$1:I
 
-    iput-object p3, p0, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$$ExternalSyntheticLambda4;->f$2:Landroidx/collection/LongSparseArray;
+    iput-object p3, p0, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$$ExternalSyntheticLambda4;->f$2:Lorg/telegram/ui/Adapters/DialogsSearchAdapter$OnRecentSearchLoaded;
 
     return-void
 .end method
@@ -33,13 +33,13 @@
 .method public final run()V
     .registers 4
 
-    iget-object v0, p0, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$$ExternalSyntheticLambda4;->f$0:Lorg/telegram/ui/Adapters/DialogsSearchAdapter$OnRecentSearchLoaded;
+    iget v0, p0, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$$ExternalSyntheticLambda4;->f$0:I
 
-    iget-object v1, p0, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$$ExternalSyntheticLambda4;->f$1:Ljava/util/ArrayList;
+    iget v1, p0, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$$ExternalSyntheticLambda4;->f$1:I
 
-    iget-object v2, p0, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$$ExternalSyntheticLambda4;->f$2:Landroidx/collection/LongSparseArray;
+    iget-object v2, p0, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$$ExternalSyntheticLambda4;->f$2:Lorg/telegram/ui/Adapters/DialogsSearchAdapter$OnRecentSearchLoaded;
 
-    invoke-static {v0, v1, v2}, Lorg/telegram/ui/Adapters/DialogsSearchAdapter;->$r8$lambda$fnT2vQNjnGixRTwkQSpQjX5EU-s(Lorg/telegram/ui/Adapters/DialogsSearchAdapter$OnRecentSearchLoaded;Ljava/util/ArrayList;Landroidx/collection/LongSparseArray;)V
+    invoke-static {v0, v1, v2}, Lorg/telegram/ui/Adapters/DialogsSearchAdapter;->$r8$lambda$DyqO_uhsabmie-AxwKo38X3Dn0A(IILorg/telegram/ui/Adapters/DialogsSearchAdapter$OnRecentSearchLoaded;)V
 
     return-void
 .end method

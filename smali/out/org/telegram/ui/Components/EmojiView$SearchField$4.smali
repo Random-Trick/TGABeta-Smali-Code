@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/EmojiView$SearchField;)V
     .registers 2
 
-    .line 604
+    .line 610
     iput-object p1, p0, Lorg/telegram/ui/Components/EmojiView$SearchField$4;->this$1:Lorg/telegram/ui/Components/EmojiView$SearchField;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -35,7 +35,7 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .registers 3
 
-    .line 607
+    .line 613
     iget-object p1, p0, Lorg/telegram/ui/Components/EmojiView$SearchField$4;->this$1:Lorg/telegram/ui/Components/EmojiView$SearchField;
 
     const/4 v0, 0x0

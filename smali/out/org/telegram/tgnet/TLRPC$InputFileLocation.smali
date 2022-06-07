@@ -25,7 +25,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 19442
+    .line 19623
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void

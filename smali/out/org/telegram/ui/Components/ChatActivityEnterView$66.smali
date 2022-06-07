@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/ChatActivityEnterView;)V
     .registers 2
 
-    .line 8464
+    .line 8520
     iput-object p1, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$66;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -35,14 +35,14 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .registers 4
 
-    .line 8467
+    .line 8523
     iget-object p1, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$66;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     const/4 v0, 0x0
 
     invoke-static {p1, v0}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$6202(Lorg/telegram/ui/Components/ChatActivityEnterView;Landroid/animation/Animator;)Landroid/animation/Animator;
 
-    .line 8468
+    .line 8524
     iget-object p1, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$66;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$700(Lorg/telegram/ui/Components/ChatActivityEnterView;)Lorg/telegram/ui/Components/EmojiView;
@@ -51,7 +51,7 @@
 
     if-eqz p1, :cond_2a
 
-    .line 8469
+    .line 8525
     iget-object p1, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$66;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$700(Lorg/telegram/ui/Components/ChatActivityEnterView;)Lorg/telegram/ui/Components/EmojiView;
@@ -70,7 +70,7 @@
 
     iput v1, p1, Landroid/view/ViewGroup$LayoutParams;->height:I
 
-    .line 8470
+    .line 8526
     iget-object p1, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$66;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$700(Lorg/telegram/ui/Components/ChatActivityEnterView;)Lorg/telegram/ui/Components/EmojiView;

@@ -6,16 +6,16 @@
 
 
 # instance fields
-.field public final synthetic f$0:Lorg/telegram/ui/Components/EditTextCaption;
+.field public final synthetic f$0:Lorg/telegram/ui/Components/ChatAttachAlert$12;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lorg/telegram/ui/Components/EditTextCaption;)V
+.method public synthetic constructor <init>(Lorg/telegram/ui/Components/ChatAttachAlert$12;)V
     .registers 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lorg/telegram/ui/Components/ChatAttachAlert$12$$ExternalSyntheticLambda0;->f$0:Lorg/telegram/ui/Components/EditTextCaption;
+    iput-object p1, p0, Lorg/telegram/ui/Components/ChatAttachAlert$12$$ExternalSyntheticLambda0;->f$0:Lorg/telegram/ui/Components/ChatAttachAlert$12;
 
     return-void
 .end method
@@ -25,9 +25,9 @@
 .method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
     .registers 3
 
-    iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlert$12$$ExternalSyntheticLambda0;->f$0:Lorg/telegram/ui/Components/EditTextCaption;
+    iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlert$12$$ExternalSyntheticLambda0;->f$0:Lorg/telegram/ui/Components/ChatAttachAlert$12;
 
-    invoke-static {v0, p1}, Lorg/telegram/ui/Components/ChatAttachAlert$12;->$r8$lambda$p42sAk_ZER9spJH-LJ0aHEaODKA(Lorg/telegram/ui/Components/EditTextCaption;Landroid/animation/ValueAnimator;)V
+    invoke-static {v0, p1}, Lorg/telegram/ui/Components/ChatAttachAlert$12;->$r8$lambda$cLfxsohhsmATTGRaV2dbh0ng9y8(Lorg/telegram/ui/Components/ChatAttachAlert$12;Landroid/animation/ValueAnimator;)V
 
     return-void
 .end method

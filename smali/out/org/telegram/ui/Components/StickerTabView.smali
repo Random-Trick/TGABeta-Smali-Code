@@ -528,7 +528,7 @@
 
     const/4 v3, 0x0
 
-    if-eqz v1, :cond_9c
+    if-eqz v1, :cond_9f
 
     const/4 v1, 0x1
 
@@ -542,39 +542,43 @@
     const/high16 v4, 0x41d00000    # 26.0f
 
     :goto_15
-    if-ne v0, v1, :cond_1a
+    const/high16 v5, 0x42180000    # 38.0f
+
+    if-ne v0, v1, :cond_1c
 
     const/high16 v0, 0x42180000    # 38.0f
 
-    goto :goto_1c
+    goto :goto_1e
 
-    :cond_1a
+    :cond_1c
     const/high16 v0, 0x42600000    # 56.0f
 
-    :goto_1c
-    const/high16 v1, 0x42100000    # 36.0f
-
-    sub-float/2addr v1, v4
+    :goto_1e
+    sub-float/2addr v5, v4
 
     .line 109
-    invoke-static {v1}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
-
-    move-result v5
-
-    int-to-float v5, v5
-
-    const/high16 v6, 0x40000000    # 2.0f
-
-    div-float/2addr v5, v6
-
-    .line 110
-    invoke-static {v1}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
+    invoke-static {v5}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v1
 
     int-to-float v1, v1
 
-    div-float/2addr v1, v6
+    const/high16 v5, 0x40000000    # 2.0f
+
+    div-float/2addr v1, v5
+
+    const/high16 v6, 0x42100000    # 36.0f
+
+    sub-float/2addr v6, v4
+
+    .line 110
+    invoke-static {v6}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
+
+    move-result v6
+
+    int-to-float v6, v6
+
+    div-float/2addr v6, v5
 
     const/high16 v7, 0x42ac0000    # 86.0f
 
@@ -587,7 +591,7 @@
 
     int-to-float v8, v8
 
-    div-float/2addr v8, v6
+    div-float/2addr v8, v5
 
     .line 112
     invoke-static {v7}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -596,16 +600,16 @@
 
     int-to-float v7, v7
 
-    div-float/2addr v7, v6
+    div-float/2addr v7, v5
 
     .line 114
-    iget-object v6, p0, Lorg/telegram/ui/Components/StickerTabView;->visibleView:Landroid/view/View;
+    iget-object v5, p0, Lorg/telegram/ui/Components/StickerTabView;->visibleView:Landroid/view/View;
 
-    sub-float/2addr v1, v7
+    sub-float/2addr v6, v7
 
     sub-float/2addr v2, p1
 
-    mul-float v1, v1, v2
+    mul-float v6, v6, v2
 
     const/high16 v7, 0x41000000    # 8.0f
 
@@ -617,18 +621,18 @@
 
     mul-float v7, v7, p1
 
-    sub-float/2addr v1, v7
+    sub-float/2addr v6, v7
 
-    invoke-virtual {v6, v1}, Landroid/view/View;->setTranslationY(F)V
+    invoke-virtual {v5, v6}, Landroid/view/View;->setTranslationY(F)V
 
     .line 115
-    iget-object v1, p0, Lorg/telegram/ui/Components/StickerTabView;->visibleView:Landroid/view/View;
+    iget-object v5, p0, Lorg/telegram/ui/Components/StickerTabView;->visibleView:Landroid/view/View;
 
-    sub-float/2addr v5, v8
+    sub-float/2addr v1, v8
 
-    mul-float v5, v5, v2
+    mul-float v1, v1, v2
 
-    invoke-virtual {v1, v5}, Landroid/view/View;->setTranslationX(F)V
+    invoke-virtual {v5, v1}, Landroid/view/View;->setTranslationX(F)V
 
     .line 116
     iget-object v1, p0, Lorg/telegram/ui/Components/StickerTabView;->textView:Landroid/widget/TextView;
@@ -705,10 +709,10 @@
 
     invoke-virtual {p1, v4}, Landroid/view/View;->setScaleY(F)V
 
-    goto :goto_b0
+    goto :goto_b3
 
     .line 129
-    :cond_9c
+    :cond_9f
     iget-object p1, p0, Lorg/telegram/ui/Components/StickerTabView;->visibleView:Landroid/view/View;
 
     invoke-virtual {p1, v3}, Landroid/view/View;->setTranslationX(F)V
@@ -728,6 +732,6 @@
 
     invoke-virtual {p1, v2}, Landroid/view/View;->setScaleY(F)V
 
-    :goto_b0
+    :goto_b3
     return-void
 .end method

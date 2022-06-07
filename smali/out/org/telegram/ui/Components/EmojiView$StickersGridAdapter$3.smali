@@ -18,7 +18,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/EmojiView$StickersGridAdapter;Landroid/content/Context;)V
     .registers 3
 
-    .line 4290
+    .line 4371
     invoke-direct {p0, p2}, Landroidx/recyclerview/widget/LinearLayoutManager;-><init>(Landroid/content/Context;)V
 
     return-void

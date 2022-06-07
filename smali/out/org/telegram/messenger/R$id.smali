@@ -298,187 +298,189 @@
 
 .field public static final menu_reload_page:I = 0x7f08008d
 
-.field public static final menu_spoiler:I = 0x7f08008e
+.field public static final menu_settings:I = 0x7f08008e
 
-.field public static final menu_strike:I = 0x7f08008f
+.field public static final menu_spoiler:I = 0x7f08008f
 
-.field public static final menu_underline:I = 0x7f080090
+.field public static final menu_strike:I = 0x7f080090
 
-.field public static final monochrome:I = 0x7f080091
+.field public static final menu_underline:I = 0x7f080091
 
-.field public static final name:I = 0x7f080092
+.field public static final monochrome:I = 0x7f080092
 
-.field public static final none:I = 0x7f080093
+.field public static final name:I = 0x7f080093
 
-.field public static final normal:I = 0x7f080094
+.field public static final none:I = 0x7f080094
 
-.field public static final notification_background:I = 0x7f080095
+.field public static final normal:I = 0x7f080095
 
-.field public static final notification_main_column:I = 0x7f080096
+.field public static final notification_background:I = 0x7f080096
 
-.field public static final notification_main_column_container:I = 0x7f080097
+.field public static final notification_main_column:I = 0x7f080097
 
-.field public static final object_tag:I = 0x7f080098
+.field public static final notification_main_column_container:I = 0x7f080098
 
-.field public static final omnibox_title_section:I = 0x7f080099
+.field public static final object_tag:I = 0x7f080099
 
-.field public static final omnibox_url_section:I = 0x7f08009a
+.field public static final omnibox_title_section:I = 0x7f08009a
 
-.field public static final parent_tag:I = 0x7f08009b
+.field public static final omnibox_url_section:I = 0x7f08009b
 
-.field public static final passcode_btn_0:I = 0x7f08009c
+.field public static final parent_tag:I = 0x7f08009c
 
-.field public static final passcode_btn_1:I = 0x7f08009d
+.field public static final passcode_btn_0:I = 0x7f08009d
 
-.field public static final passcode_btn_2:I = 0x7f08009e
+.field public static final passcode_btn_1:I = 0x7f08009e
 
-.field public static final passcode_btn_3:I = 0x7f08009f
+.field public static final passcode_btn_2:I = 0x7f08009f
 
-.field public static final passcode_btn_4:I = 0x7f0800a0
+.field public static final passcode_btn_3:I = 0x7f0800a0
 
-.field public static final passcode_btn_5:I = 0x7f0800a1
+.field public static final passcode_btn_4:I = 0x7f0800a1
 
-.field public static final passcode_btn_6:I = 0x7f0800a2
+.field public static final passcode_btn_5:I = 0x7f0800a2
 
-.field public static final passcode_btn_7:I = 0x7f0800a3
+.field public static final passcode_btn_6:I = 0x7f0800a3
 
-.field public static final passcode_btn_8:I = 0x7f0800a4
+.field public static final passcode_btn_7:I = 0x7f0800a4
 
-.field public static final passcode_btn_9:I = 0x7f0800a5
+.field public static final passcode_btn_8:I = 0x7f0800a5
 
-.field public static final passcode_btn_backspace:I = 0x7f0800a6
+.field public static final passcode_btn_9:I = 0x7f0800a6
 
-.field public static final passcode_btn_done:I = 0x7f0800a7
+.field public static final passcode_btn_backspace:I = 0x7f0800a7
 
-.field public static final passcode_btn_fingerprint:I = 0x7f0800a8
+.field public static final passcode_btn_done:I = 0x7f0800a8
 
-.field public static final photo:I = 0x7f0800a9
+.field public static final passcode_btn_fingerprint:I = 0x7f0800a9
 
-.field public static final plain:I = 0x7f0800aa
+.field public static final photo:I = 0x7f0800aa
 
-.field public static final player_album_art:I = 0x7f0800ab
+.field public static final plain:I = 0x7f0800ab
 
-.field public static final player_album_title:I = 0x7f0800ac
+.field public static final player_album_art:I = 0x7f0800ac
 
-.field public static final player_author_name:I = 0x7f0800ad
+.field public static final player_album_title:I = 0x7f0800ad
 
-.field public static final player_close:I = 0x7f0800ae
+.field public static final player_author_name:I = 0x7f0800ae
 
-.field public static final player_next:I = 0x7f0800af
+.field public static final player_close:I = 0x7f0800af
 
-.field public static final player_pause:I = 0x7f0800b0
+.field public static final player_next:I = 0x7f0800b0
 
-.field public static final player_play:I = 0x7f0800b1
+.field public static final player_pause:I = 0x7f0800b1
 
-.field public static final player_previous:I = 0x7f0800b2
+.field public static final player_play:I = 0x7f0800b2
 
-.field public static final player_progress_bar:I = 0x7f0800b3
+.field public static final player_previous:I = 0x7f0800b3
 
-.field public static final player_song_name:I = 0x7f0800b4
+.field public static final player_progress_bar:I = 0x7f0800b4
 
-.field public static final production:I = 0x7f0800b5
+.field public static final player_song_name:I = 0x7f0800b5
 
-.field public static final rfc822:I = 0x7f0800b6
+.field public static final production:I = 0x7f0800b6
 
-.field public static final right:I = 0x7f0800b7
+.field public static final rfc822:I = 0x7f0800b7
 
-.field public static final right_icon:I = 0x7f0800b8
+.field public static final right:I = 0x7f0800b8
 
-.field public static final right_side:I = 0x7f0800b9
+.field public static final right_icon:I = 0x7f0800b9
 
-.field public static final sandbox:I = 0x7f0800ba
+.field public static final right_side:I = 0x7f0800ba
 
-.field public static final satellite:I = 0x7f0800bb
+.field public static final sandbox:I = 0x7f0800bb
 
-.field public static final selectionDetails:I = 0x7f0800bc
+.field public static final satellite:I = 0x7f0800bc
 
-.field public static final shortcut_widget_item:I = 0x7f0800bd
+.field public static final selectionDetails:I = 0x7f0800bd
 
-.field public static final shortcut_widget_item_avatar:I = 0x7f0800be
+.field public static final shortcut_widget_item:I = 0x7f0800be
 
-.field public static final shortcut_widget_item_badge:I = 0x7f0800bf
+.field public static final shortcut_widget_item_avatar:I = 0x7f0800bf
 
-.field public static final shortcut_widget_item_divider:I = 0x7f0800c0
+.field public static final shortcut_widget_item_badge:I = 0x7f0800c0
 
-.field public static final shortcut_widget_item_message:I = 0x7f0800c1
+.field public static final shortcut_widget_item_divider:I = 0x7f0800c1
 
-.field public static final shortcut_widget_item_text:I = 0x7f0800c2
+.field public static final shortcut_widget_item_message:I = 0x7f0800c2
 
-.field public static final shortcut_widget_item_time:I = 0x7f0800c3
+.field public static final shortcut_widget_item_text:I = 0x7f0800c3
 
-.field public static final slide:I = 0x7f0800c4
+.field public static final shortcut_widget_item_time:I = 0x7f0800c4
 
-.field public static final standard:I = 0x7f0800c5
+.field public static final slide:I = 0x7f0800c5
 
-.field public static final start:I = 0x7f0800c6
+.field public static final standard:I = 0x7f0800c6
 
-.field public static final strict_sandbox:I = 0x7f0800c7
+.field public static final start:I = 0x7f0800c7
 
-.field public static final subtitle:I = 0x7f0800c8
+.field public static final strict_sandbox:I = 0x7f0800c8
 
-.field public static final svg_tag:I = 0x7f0800c9
+.field public static final subtitle:I = 0x7f0800c9
 
-.field public static final tag_accessibility_actions:I = 0x7f0800ca
+.field public static final svg_tag:I = 0x7f0800ca
 
-.field public static final tag_accessibility_clickable_spans:I = 0x7f0800cb
+.field public static final tag_accessibility_actions:I = 0x7f0800cb
 
-.field public static final tag_accessibility_heading:I = 0x7f0800cc
+.field public static final tag_accessibility_clickable_spans:I = 0x7f0800cc
 
-.field public static final tag_accessibility_pane_title:I = 0x7f0800cd
+.field public static final tag_accessibility_heading:I = 0x7f0800cd
 
-.field public static final tag_on_apply_window_listener:I = 0x7f0800ce
+.field public static final tag_accessibility_pane_title:I = 0x7f0800ce
 
-.field public static final tag_on_receive_content_listener:I = 0x7f0800cf
+.field public static final tag_on_apply_window_listener:I = 0x7f0800cf
 
-.field public static final tag_on_receive_content_mime_types:I = 0x7f0800d0
+.field public static final tag_on_receive_content_listener:I = 0x7f0800d0
 
-.field public static final tag_screen_reader_focusable:I = 0x7f0800d1
+.field public static final tag_on_receive_content_mime_types:I = 0x7f0800d1
 
-.field public static final tag_state_description:I = 0x7f0800d2
+.field public static final tag_screen_reader_focusable:I = 0x7f0800d2
 
-.field public static final tag_transition_group:I = 0x7f0800d3
+.field public static final tag_state_description:I = 0x7f0800d3
 
-.field public static final tag_unhandled_key_event_manager:I = 0x7f0800d4
+.field public static final tag_transition_group:I = 0x7f0800d4
 
-.field public static final tag_unhandled_key_listeners:I = 0x7f0800d5
+.field public static final tag_unhandled_key_event_manager:I = 0x7f0800d5
 
-.field public static final tag_window_insets_animation_callback:I = 0x7f0800d6
+.field public static final tag_unhandled_key_listeners:I = 0x7f0800d6
 
-.field public static final terrain:I = 0x7f0800d7
+.field public static final tag_window_insets_animation_callback:I = 0x7f0800d7
 
-.field public static final test:I = 0x7f0800d8
+.field public static final terrain:I = 0x7f0800d8
 
-.field public static final text:I = 0x7f0800d9
+.field public static final test:I = 0x7f0800d9
 
-.field public static final text1:I = 0x7f0800da
+.field public static final text:I = 0x7f0800da
 
-.field public static final text2:I = 0x7f0800db
+.field public static final text1:I = 0x7f0800db
 
-.field public static final text_wrap:I = 0x7f0800dc
+.field public static final text2:I = 0x7f0800dc
 
-.field public static final thing_proto:I = 0x7f0800dd
+.field public static final text_wrap:I = 0x7f0800dd
 
-.field public static final time:I = 0x7f0800de
+.field public static final thing_proto:I = 0x7f0800de
 
-.field public static final timeout_callback:I = 0x7f0800df
+.field public static final time:I = 0x7f0800df
 
-.field public static final title:I = 0x7f0800e0
+.field public static final timeout_callback:I = 0x7f0800e0
 
-.field public static final top:I = 0x7f0800e1
+.field public static final title:I = 0x7f0800e1
 
-.field public static final url:I = 0x7f0800e2
+.field public static final top:I = 0x7f0800e2
 
-.field public static final wide:I = 0x7f0800e3
+.field public static final url:I = 0x7f0800e3
 
-.field public static final widget_deleted_text:I = 0x7f0800e4
+.field public static final wide:I = 0x7f0800e4
 
-.field public static final widget_edititem:I = 0x7f0800e5
+.field public static final widget_deleted_text:I = 0x7f0800e5
 
-.field public static final widget_edititem_text:I = 0x7f0800e6
+.field public static final widget_edititem:I = 0x7f0800e6
 
-.field public static final width_tag:I = 0x7f0800e7
+.field public static final widget_edititem_text:I = 0x7f0800e7
 
-.field public static final wrap_content:I = 0x7f0800e8
+.field public static final width_tag:I = 0x7f0800e8
+
+.field public static final wrap_content:I = 0x7f0800e9
 
 
 # direct methods

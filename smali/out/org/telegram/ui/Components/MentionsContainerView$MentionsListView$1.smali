@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/MentionsContainerView$MentionsListView;Lorg/telegram/ui/Components/MentionsContainerView;)V
     .registers 3
 
-    .line 470
+    .line 495
     iput-object p1, p0, Lorg/telegram/ui/Components/MentionsContainerView$MentionsListView$1;->this$1:Lorg/telegram/ui/Components/MentionsContainerView$MentionsListView;
 
     invoke-direct {p0}, Landroidx/recyclerview/widget/RecyclerView$OnScrollListener;-><init>()V
@@ -35,7 +35,7 @@
 .method public onScrollStateChanged(Landroidx/recyclerview/widget/RecyclerView;I)V
     .registers 6
 
-    .line 474
+    .line 499
     iget-object p1, p0, Lorg/telegram/ui/Components/MentionsContainerView$MentionsListView$1;->this$1:Lorg/telegram/ui/Components/MentionsContainerView$MentionsListView;
 
     const/4 v0, 0x0
@@ -54,7 +54,7 @@
     :goto_9
     invoke-static {p1, v2}, Lorg/telegram/ui/Components/MentionsContainerView$MentionsListView;->access$702(Lorg/telegram/ui/Components/MentionsContainerView$MentionsListView;Z)Z
 
-    .line 475
+    .line 500
     iget-object p1, p0, Lorg/telegram/ui/Components/MentionsContainerView$MentionsListView$1;->this$1:Lorg/telegram/ui/Components/MentionsContainerView$MentionsListView;
 
     if-ne p2, v1, :cond_11
@@ -70,7 +70,7 @@
 .method public onScrolled(Landroidx/recyclerview/widget/RecyclerView;II)V
     .registers 4
 
-    .line 481
+    .line 506
     iget-object p1, p0, Lorg/telegram/ui/Components/MentionsContainerView$MentionsListView$1;->this$1:Lorg/telegram/ui/Components/MentionsContainerView$MentionsListView;
 
     invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->getLayoutManager()Landroidx/recyclerview/widget/RecyclerView$LayoutManager;
@@ -87,7 +87,7 @@
 
     if-ne p1, p2, :cond_1d
 
-    .line 482
+    .line 507
     iget-object p1, p0, Lorg/telegram/ui/Components/MentionsContainerView$MentionsListView$1;->this$1:Lorg/telegram/ui/Components/MentionsContainerView$MentionsListView;
 
     iget-object p1, p1, Lorg/telegram/ui/Components/MentionsContainerView$MentionsListView;->this$0:Lorg/telegram/ui/Components/MentionsContainerView;
@@ -102,7 +102,7 @@
 
     goto :goto_29
 
-    .line 484
+    .line 509
     :cond_1d
     iget-object p1, p0, Lorg/telegram/ui/Components/MentionsContainerView$MentionsListView$1;->this$1:Lorg/telegram/ui/Components/MentionsContainerView$MentionsListView;
 
@@ -131,7 +131,7 @@
     :goto_2f
     if-lez p2, :cond_4c
 
-    .line 487
+    .line 512
     iget-object p2, p0, Lorg/telegram/ui/Components/MentionsContainerView$MentionsListView$1;->this$1:Lorg/telegram/ui/Components/MentionsContainerView$MentionsListView;
 
     iget-object p2, p2, Lorg/telegram/ui/Components/MentionsContainerView$MentionsListView;->this$0:Lorg/telegram/ui/Components/MentionsContainerView;
@@ -148,7 +148,7 @@
 
     if-le p1, p2, :cond_4c
 
-    .line 488
+    .line 513
     iget-object p1, p0, Lorg/telegram/ui/Components/MentionsContainerView$MentionsListView$1;->this$1:Lorg/telegram/ui/Components/MentionsContainerView$MentionsListView;
 
     iget-object p1, p1, Lorg/telegram/ui/Components/MentionsContainerView$MentionsListView;->this$0:Lorg/telegram/ui/Components/MentionsContainerView;

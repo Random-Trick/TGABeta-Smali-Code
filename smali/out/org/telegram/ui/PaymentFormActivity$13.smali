@@ -25,7 +25,7 @@
 .method constructor <init>(Lorg/telegram/ui/PaymentFormActivity;)V
     .registers 2
 
-    .line 2011
+    .line 2095
     iput-object p1, p0, Lorg/telegram/ui/PaymentFormActivity$13;->this$0:Lorg/telegram/ui/PaymentFormActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -54,7 +54,7 @@
 .method public didSelectNewCard(Ljava/lang/String;Ljava/lang/String;ZLorg/telegram/tgnet/TLRPC$TL_inputPaymentCredentialsGooglePay;)Z
     .registers 7
 
-    .line 2014
+    .line 2098
     iget-object v0, p0, Lorg/telegram/ui/PaymentFormActivity$13;->this$0:Lorg/telegram/ui/PaymentFormActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/PaymentFormActivity;->access$3000(Lorg/telegram/ui/PaymentFormActivity;)Lorg/telegram/tgnet/TLRPC$TL_payments_paymentForm;
@@ -65,30 +65,30 @@
 
     iput-object v1, v0, Lorg/telegram/tgnet/TLRPC$TL_payments_paymentForm;->saved_credentials:Lorg/telegram/tgnet/TLRPC$TL_paymentSavedCredentialsCard;
 
-    .line 2015
+    .line 2099
     iget-object v0, p0, Lorg/telegram/ui/PaymentFormActivity$13;->this$0:Lorg/telegram/ui/PaymentFormActivity;
 
     invoke-static {v0, p1}, Lorg/telegram/ui/PaymentFormActivity;->access$002(Lorg/telegram/ui/PaymentFormActivity;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 2016
+    .line 2100
     iget-object p1, p0, Lorg/telegram/ui/PaymentFormActivity$13;->this$0:Lorg/telegram/ui/PaymentFormActivity;
 
-    invoke-static {p1, p3}, Lorg/telegram/ui/PaymentFormActivity;->access$4802(Lorg/telegram/ui/PaymentFormActivity;Z)Z
+    invoke-static {p1, p3}, Lorg/telegram/ui/PaymentFormActivity;->access$4902(Lorg/telegram/ui/PaymentFormActivity;Z)Z
 
-    .line 2017
+    .line 2101
     iget-object p1, p0, Lorg/telegram/ui/PaymentFormActivity$13;->this$0:Lorg/telegram/ui/PaymentFormActivity;
 
     invoke-static {p1, p2}, Lorg/telegram/ui/PaymentFormActivity;->access$102(Lorg/telegram/ui/PaymentFormActivity;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 2018
+    .line 2102
     iget-object p1, p0, Lorg/telegram/ui/PaymentFormActivity$13;->this$0:Lorg/telegram/ui/PaymentFormActivity;
 
-    invoke-static {p1, p4}, Lorg/telegram/ui/PaymentFormActivity;->access$4902(Lorg/telegram/ui/PaymentFormActivity;Lorg/telegram/tgnet/TLRPC$TL_inputPaymentCredentialsGooglePay;)Lorg/telegram/tgnet/TLRPC$TL_inputPaymentCredentialsGooglePay;
+    invoke-static {p1, p4}, Lorg/telegram/ui/PaymentFormActivity;->access$5002(Lorg/telegram/ui/PaymentFormActivity;Lorg/telegram/tgnet/TLRPC$TL_inputPaymentCredentialsGooglePay;)Lorg/telegram/tgnet/TLRPC$TL_inputPaymentCredentialsGooglePay;
 
-    .line 2019
+    .line 2103
     iget-object p1, p0, Lorg/telegram/ui/PaymentFormActivity$13;->this$0:Lorg/telegram/ui/PaymentFormActivity;
 
-    invoke-static {p1}, Lorg/telegram/ui/PaymentFormActivity;->access$5000(Lorg/telegram/ui/PaymentFormActivity;)[Lorg/telegram/ui/Cells/TextDetailSettingsCell;
+    invoke-static {p1}, Lorg/telegram/ui/PaymentFormActivity;->access$5100(Lorg/telegram/ui/PaymentFormActivity;)[Lorg/telegram/ui/Cells/TextDetailSettingsCell;
 
     move-result-object p1
 
@@ -104,7 +104,7 @@
 
     const-string p4, "PaymentCheckoutMethod"
 
-    const v0, 0x7f0e0cde
+    const v0, 0x7f0e0d69
 
     invoke-static {p4, v0}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 

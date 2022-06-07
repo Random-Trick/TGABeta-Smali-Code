@@ -282,17 +282,17 @@
 .method private cancelAnimators()V
     .registers 3
 
-    .line 1044
+    .line 1054
     sget-boolean v0, Lorg/telegram/messenger/BuildVars;->LOGS_ENABLED:Z
 
     if-eqz v0, :cond_9
 
     const-string v0, "cancel animations"
 
-    .line 1045
+    .line 1055
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->d(Ljava/lang/String;)V
 
-    .line 1047
+    .line 1057
     :cond_9
     new-instance v0, Ljava/util/ArrayList;
 
@@ -304,12 +304,12 @@
 
     invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 1048
+    .line 1058
     iget-object v1, p0, Landroidx/recyclerview/widget/ChatListItemAnimator;->animators:Ljava/util/HashMap;
 
     invoke-virtual {v1}, Ljava/util/HashMap;->clear()V
 
-    .line 1049
+    .line 1059
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -330,7 +330,7 @@
 
     if-eqz v1, :cond_1d
 
-    .line 1051
+    .line 1061
     invoke-virtual {v1}, Landroid/animation/Animator;->cancel()V
 
     goto :goto_1d
@@ -342,7 +342,7 @@
 .method private static synthetic lambda$animateAddImpl$7(Lorg/telegram/ui/Cells/ChatMessageCell;FFFFFFFFLandroid/animation/ValueAnimator;)V
     .registers 12
 
-    .line 1307
+    .line 1317
     invoke-virtual {p9}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
     move-result-object p9
@@ -353,14 +353,14 @@
 
     move-result p9
 
-    .line 1308
+    .line 1318
     invoke-virtual {p0}, Lorg/telegram/ui/Cells/ChatMessageCell;->getTransitionParams()Lorg/telegram/ui/Cells/ChatMessageCell$TransitionParams;
 
     move-result-object v0
 
     iput p9, v0, Lorg/telegram/ui/Cells/ChatMessageCell$TransitionParams;->animateChangeProgress:F
 
-    .line 1309
+    .line 1319
     invoke-virtual {p0}, Lorg/telegram/ui/Cells/ChatMessageCell;->getTransitionParams()Lorg/telegram/ui/Cells/ChatMessageCell$TransitionParams;
 
     move-result-object v0
@@ -373,14 +373,14 @@
 
     if-lez v0, :cond_22
 
-    .line 1310
+    .line 1320
     invoke-virtual {p0}, Lorg/telegram/ui/Cells/ChatMessageCell;->getTransitionParams()Lorg/telegram/ui/Cells/ChatMessageCell$TransitionParams;
 
     move-result-object v0
 
     iput v1, v0, Lorg/telegram/ui/Cells/ChatMessageCell$TransitionParams;->animateChangeProgress:F
 
-    .line 1312
+    .line 1322
     :cond_22
     invoke-virtual {p0}, Lorg/telegram/ui/Cells/ChatMessageCell;->getPhotoImage()Lorg/telegram/messenger/ImageReceiver;
 
@@ -410,7 +410,7 @@
 
     invoke-virtual {v0, p1, p3, p5, p7}, Lorg/telegram/messenger/ImageReceiver;->setImageCoords(FFFF)V
 
-    .line 1317
+    .line 1327
     invoke-virtual {p0}, Lorg/telegram/ui/Cells/ChatMessageCell;->invalidate()V
 
     return-void
@@ -607,7 +607,7 @@
 .method private static synthetic lambda$animateMoveImpl$3(Landroidx/recyclerview/widget/ChatListItemAnimator$MoveInfoExtended;Lorg/telegram/ui/Cells/ChatMessageCell$TransitionParams;Lorg/telegram/ui/Cells/ChatMessageCell;Landroid/animation/ValueAnimator;)V
     .registers 6
 
-    .line 765
+    .line 772
     invoke-virtual {p3}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
     move-result-object p3
@@ -618,12 +618,12 @@
 
     move-result p3
 
-    .line 766
+    .line 773
     iget-boolean v0, p0, Landroidx/recyclerview/widget/ChatListItemAnimator$MoveInfoExtended;->animateBackgroundOnly:Z
 
     if-eqz v0, :cond_2f
 
-    .line 767
+    .line 774
     iget v0, p0, Landroidx/recyclerview/widget/ChatListItemAnimator$MoveInfoExtended;->deltaLeft:I
 
     neg-int v0, v0
@@ -634,7 +634,7 @@
 
     iput v0, p1, Lorg/telegram/ui/Cells/ChatMessageCell$TransitionParams;->deltaLeft:F
 
-    .line 768
+    .line 775
     iget v0, p0, Landroidx/recyclerview/widget/ChatListItemAnimator$MoveInfoExtended;->deltaRight:I
 
     neg-int v0, v0
@@ -645,7 +645,7 @@
 
     iput v0, p1, Lorg/telegram/ui/Cells/ChatMessageCell$TransitionParams;->deltaRight:F
 
-    .line 769
+    .line 776
     iget v0, p0, Landroidx/recyclerview/widget/ChatListItemAnimator$MoveInfoExtended;->deltaTop:I
 
     neg-int v0, v0
@@ -656,7 +656,7 @@
 
     iput v0, p1, Lorg/telegram/ui/Cells/ChatMessageCell$TransitionParams;->deltaTop:F
 
-    .line 770
+    .line 777
     iget p0, p0, Landroidx/recyclerview/widget/ChatListItemAnimator$MoveInfoExtended;->deltaBottom:I
 
     neg-int p0, p0
@@ -669,7 +669,7 @@
 
     goto :goto_63
 
-    .line 772
+    .line 779
     :cond_2f
     iget v0, p0, Landroidx/recyclerview/widget/ChatListItemAnimator$MoveInfoExtended;->deltaLeft:I
 
@@ -687,7 +687,7 @@
 
     iput v0, p1, Lorg/telegram/ui/Cells/ChatMessageCell$TransitionParams;->deltaLeft:F
 
-    .line 773
+    .line 780
     iget v0, p0, Landroidx/recyclerview/widget/ChatListItemAnimator$MoveInfoExtended;->deltaRight:I
 
     neg-int v0, v0
@@ -704,7 +704,7 @@
 
     iput v0, p1, Lorg/telegram/ui/Cells/ChatMessageCell$TransitionParams;->deltaRight:F
 
-    .line 774
+    .line 781
     iget v0, p0, Landroidx/recyclerview/widget/ChatListItemAnimator$MoveInfoExtended;->deltaTop:I
 
     neg-int v0, v0
@@ -721,7 +721,7 @@
 
     iput v0, p1, Lorg/telegram/ui/Cells/ChatMessageCell$TransitionParams;->deltaTop:F
 
-    .line 775
+    .line 782
     iget p0, p0, Landroidx/recyclerview/widget/ChatListItemAnimator$MoveInfoExtended;->deltaBottom:I
 
     neg-int p0, p0
@@ -738,7 +738,7 @@
 
     iput p0, p1, Lorg/telegram/ui/Cells/ChatMessageCell$TransitionParams;->deltaBottom:F
 
-    .line 777
+    .line 784
     :goto_63
     invoke-virtual {p2}, Lorg/telegram/ui/Cells/ChatMessageCell;->invalidate()V
 
@@ -748,7 +748,7 @@
 .method private static synthetic lambda$animateMoveImpl$4(Lorg/telegram/messenger/MessageObject$GroupedMessages$TransitionParams;Landroidx/recyclerview/widget/ChatListItemAnimator$MoveInfoExtended;ZFFLorg/telegram/ui/Components/RecyclerListView;Landroid/animation/ValueAnimator;)V
     .registers 8
 
-    .line 797
+    .line 807
     invoke-virtual {p6}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
     move-result-object p6
@@ -759,7 +759,7 @@
 
     move-result p6
 
-    .line 798
+    .line 808
     iget v0, p1, Landroidx/recyclerview/widget/ChatListItemAnimator$MoveInfoExtended;->groupOffsetTop:I
 
     int-to-float v0, v0
@@ -768,7 +768,7 @@
 
     iput v0, p0, Lorg/telegram/messenger/MessageObject$GroupedMessages$TransitionParams;->offsetTop:F
 
-    .line 799
+    .line 809
     iget v0, p1, Landroidx/recyclerview/widget/ChatListItemAnimator$MoveInfoExtended;->groupOffsetBottom:I
 
     int-to-float v0, v0
@@ -777,7 +777,7 @@
 
     iput v0, p0, Lorg/telegram/messenger/MessageObject$GroupedMessages$TransitionParams;->offsetBottom:F
 
-    .line 800
+    .line 810
     iget v0, p1, Landroidx/recyclerview/widget/ChatListItemAnimator$MoveInfoExtended;->groupOffsetLeft:I
 
     int-to-float v0, v0
@@ -786,7 +786,7 @@
 
     iput v0, p0, Lorg/telegram/messenger/MessageObject$GroupedMessages$TransitionParams;->offsetLeft:F
 
-    .line 801
+    .line 811
     iget p1, p1, Landroidx/recyclerview/widget/ChatListItemAnimator$MoveInfoExtended;->groupOffsetRight:I
 
     int-to-float p1, p1
@@ -807,13 +807,13 @@
 
     add-float/2addr p3, p4
 
-    .line 803
+    .line 813
     iput p3, p0, Lorg/telegram/messenger/MessageObject$GroupedMessages$TransitionParams;->captionEnterProgress:F
 
     :cond_32
     if-eqz p5, :cond_37
 
-    .line 806
+    .line 816
     invoke-virtual {p5}, Landroid/view/ViewGroup;->invalidate()V
 
     :cond_37
@@ -823,7 +823,7 @@
 .method private static synthetic lambda$animateMoveImpl$5(Lorg/telegram/ui/Cells/ChatMessageCell$TransitionParams;Lorg/telegram/ui/Cells/ChatMessageCell;Landroid/animation/ValueAnimator;)V
     .registers 3
 
-    .line 823
+    .line 833
     invoke-virtual {p2}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
     move-result-object p2
@@ -836,7 +836,7 @@
 
     iput p2, p0, Lorg/telegram/ui/Cells/ChatMessageCell$TransitionParams;->changePinnedBottomProgress:F
 
-    .line 824
+    .line 834
     invoke-virtual {p1}, Lorg/telegram/ui/Cells/ChatMessageCell;->invalidate()V
 
     return-void
@@ -845,7 +845,7 @@
 .method private static synthetic lambda$animateMoveImpl$6(Lorg/telegram/ui/Cells/ChatMessageCell$TransitionParams;Lorg/telegram/ui/Cells/ChatMessageCell;Landroid/animation/ValueAnimator;)V
     .registers 3
 
-    .line 834
+    .line 844
     invoke-virtual {p2}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
     move-result-object p2
@@ -858,7 +858,7 @@
 
     iput p2, p0, Lorg/telegram/ui/Cells/ChatMessageCell$TransitionParams;->animateChangeProgress:F
 
-    .line 835
+    .line 845
     invoke-virtual {p1}, Lorg/telegram/ui/Cells/ChatMessageCell;->invalidate()V
 
     return-void
@@ -913,31 +913,31 @@
 
     const/high16 v0, 0x3f800000    # 1.0f
 
-    .line 1070
+    .line 1080
     invoke-virtual {p1, v0}, Landroid/view/View;->setAlpha(F)V
 
-    .line 1071
+    .line 1081
     invoke-virtual {p1, v0}, Landroid/view/View;->setScaleX(F)V
 
-    .line 1072
+    .line 1082
     invoke-virtual {p1, v0}, Landroid/view/View;->setScaleY(F)V
 
     const/4 v0, 0x0
 
-    .line 1073
+    .line 1083
     invoke-virtual {p1, v0}, Landroid/view/View;->setTranslationY(F)V
 
-    .line 1074
+    .line 1084
     instance-of v1, p1, Lorg/telegram/ui/Cells/BotHelpCell;
 
     if-eqz v1, :cond_3d
 
-    .line 1075
+    .line 1085
     move-object v1, p1
 
     check-cast v1, Lorg/telegram/ui/Cells/BotHelpCell;
 
-    .line 1076
+    .line 1086
     iget-object v2, p0, Landroidx/recyclerview/widget/ChatListItemAnimator;->recyclerListView:Lorg/telegram/ui/Components/RecyclerListView;
 
     invoke-virtual {v2}, Landroid/view/ViewGroup;->getMeasuredHeight()I
@@ -956,17 +956,17 @@
 
     const/4 v3, 0x0
 
-    .line 1077
+    .line 1087
     invoke-virtual {v1, v3}, Lorg/telegram/ui/Cells/BotHelpCell;->setAnimating(Z)V
 
-    .line 1078
+    .line 1088
     invoke-virtual {p1}, Landroid/view/View;->getTop()I
 
     move-result v1
 
     if-le v1, v2, :cond_39
 
-    .line 1079
+    .line 1089
     invoke-virtual {p1}, Landroid/view/View;->getTop()I
 
     move-result v0
@@ -979,19 +979,19 @@
 
     goto :goto_51
 
-    .line 1081
+    .line 1091
     :cond_39
     invoke-virtual {p1, v0}, Landroid/view/View;->setTranslationY(F)V
 
     goto :goto_51
 
-    .line 1083
+    .line 1093
     :cond_3d
     instance-of v1, p1, Lorg/telegram/ui/Cells/ChatMessageCell;
 
     if-eqz v1, :cond_4e
 
-    .line 1084
+    .line 1094
     check-cast p1, Lorg/telegram/ui/Cells/ChatMessageCell;
 
     invoke-virtual {p1}, Lorg/telegram/ui/Cells/ChatMessageCell;->getTransitionParams()Lorg/telegram/ui/Cells/ChatMessageCell$TransitionParams;
@@ -1000,12 +1000,12 @@
 
     invoke-virtual {v1}, Lorg/telegram/ui/Cells/ChatMessageCell$TransitionParams;->resetAnimation()V
 
-    .line 1085
+    .line 1095
     invoke-virtual {p1, v0}, Lorg/telegram/ui/Cells/ChatMessageCell;->setAnimationOffsetX(F)V
 
     goto :goto_51
 
-    .line 1087
+    .line 1097
     :cond_4e
     invoke-virtual {p1, v0}, Landroid/view/View;->setTranslationX(F)V
 
@@ -1589,42 +1589,42 @@
 
     move-object/from16 v8, p1
 
-    .line 1249
+    .line 1259
     sget-boolean v0, Lorg/telegram/messenger/BuildVars;->LOGS_ENABLED:Z
 
     if-eqz v0, :cond_d
 
     const-string v0, "animate add impl"
 
-    .line 1250
+    .line 1260
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->d(Ljava/lang/String;)V
 
-    .line 1252
+    .line 1262
     :cond_d
     iget-object v9, v8, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    .line 1253
+    .line 1263
     iget-object v0, v7, Landroidx/recyclerview/widget/DefaultItemAnimator;->mAddAnimations:Ljava/util/ArrayList;
 
     invoke-virtual {v0, v8}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1254
+    .line 1264
     iget-object v0, v7, Landroidx/recyclerview/widget/ChatListItemAnimator;->greetingsSticker:Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
 
     const/high16 v10, 0x3f800000    # 1.0f
 
     if-ne v8, v0, :cond_1d
 
-    .line 1255
+    .line 1265
     invoke-virtual {v9, v10}, Landroid/view/View;->setAlpha(F)V
 
-    .line 1257
+    .line 1267
     :cond_1d
     new-instance v11, Landroid/animation/AnimatorSet;
 
     invoke-direct {v11}, Landroid/animation/AnimatorSet;-><init>()V
 
-    .line 1259
+    .line 1269
     instance-of v0, v9, Lorg/telegram/ui/Cells/ChatMessageCell;
 
     const/4 v12, 0x2
@@ -1637,12 +1637,12 @@
 
     if-eqz v0, :cond_76
 
-    .line 1260
+    .line 1270
     move-object v0, v9
 
     check-cast v0, Lorg/telegram/ui/Cells/ChatMessageCell;
 
-    .line 1261
+    .line 1271
     invoke-virtual {v0}, Lorg/telegram/ui/Cells/ChatMessageCell;->getAnimationOffsetX()F
 
     move-result v1
@@ -1653,12 +1653,12 @@
 
     new-array v1, v15, [Landroid/animation/Animator;
 
-    .line 1262
+    .line 1272
     iget-object v2, v0, Lorg/telegram/ui/Cells/ChatMessageCell;->ANIMATION_OFFSET_X:Landroid/util/Property;
 
     new-array v3, v12, [F
 
-    .line 1263
+    .line 1273
     invoke-virtual {v0}, Lorg/telegram/ui/Cells/ChatMessageCell;->getAnimationOffsetX()F
 
     move-result v4
@@ -1673,10 +1673,10 @@
 
     aput-object v2, v1, v14
 
-    .line 1262
+    .line 1272
     invoke-virtual {v11, v1}, Landroid/animation/AnimatorSet;->playTogether([Landroid/animation/Animator;)V
 
-    .line 1266
+    .line 1276
     :cond_4c
     invoke-virtual {v0}, Lorg/telegram/ui/Cells/ChatMessageCell;->getBackgroundDrawableLeft()I
 
@@ -1702,10 +1702,10 @@
 
     add-float/2addr v1, v2
 
-    .line 1267
+    .line 1277
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->setPivotX(F)V
 
-    .line 1268
+    .line 1278
     invoke-virtual {v9}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
 
     move-result-object v0
@@ -1726,7 +1726,7 @@
 
     goto :goto_8d
 
-    .line 1270
+    .line 1280
     :cond_76
     invoke-virtual {v9}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
 
@@ -1750,7 +1750,7 @@
 
     invoke-virtual {v0}, Landroid/view/ViewPropertyAnimator;->start()V
 
-    .line 1274
+    .line 1284
     :goto_8d
     invoke-virtual {v9}, Landroid/view/View;->getBottom()I
 
@@ -1784,38 +1784,38 @@
 
     float-to-long v5, v0
 
-    .line 1276
+    .line 1286
     instance-of v0, v9, Lorg/telegram/ui/Cells/ChatMessageCell;
 
     if-eqz v0, :cond_1e0
 
-    .line 1277
+    .line 1287
     iget-object v0, v7, Landroidx/recyclerview/widget/ChatListItemAnimator;->greetingsSticker:Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
 
     if-ne v8, v0, :cond_1a0
 
-    .line 1279
+    .line 1289
     iget-object v0, v7, Landroidx/recyclerview/widget/ChatListItemAnimator;->chatGreetingsView:Lorg/telegram/ui/Components/ChatGreetingsView;
 
     if-eqz v0, :cond_ba
 
-    .line 1280
+    .line 1290
     iget-object v0, v0, Lorg/telegram/ui/Components/ChatGreetingsView;->stickerToSendView:Lorg/telegram/ui/Components/BackupImageView;
 
     invoke-virtual {v0, v13}, Landroid/view/View;->setAlpha(F)V
 
-    .line 1282
+    .line 1292
     :cond_ba
     iget-object v0, v7, Landroidx/recyclerview/widget/ChatListItemAnimator;->recyclerListView:Lorg/telegram/ui/Components/RecyclerListView;
 
     invoke-virtual {v0, v14}, Landroid/view/ViewGroup;->setClipChildren(Z)V
 
-    .line 1283
+    .line 1293
     move-object v2, v9
 
     check-cast v2, Lorg/telegram/ui/Cells/ChatMessageCell;
 
-    .line 1284
+    .line 1294
     iget-object v0, v7, Landroidx/recyclerview/widget/ChatListItemAnimator;->chatGreetingsView:Lorg/telegram/ui/Components/ChatGreetingsView;
 
     invoke-virtual {v0}, Landroid/widget/LinearLayout;->getParent()Landroid/view/ViewParent;
@@ -1824,7 +1824,7 @@
 
     check-cast v0, Landroid/view/View;
 
-    .line 1285
+    .line 1295
     iget-object v1, v7, Landroidx/recyclerview/widget/ChatListItemAnimator;->chatGreetingsView:Lorg/telegram/ui/Components/ChatGreetingsView;
 
     iget-object v1, v1, Lorg/telegram/ui/Components/ChatGreetingsView;->stickerToSendView:Lorg/telegram/ui/Components/BackupImageView;
@@ -1847,7 +1847,7 @@
 
     add-float/2addr v1, v3
 
-    .line 1286
+    .line 1296
     iget-object v3, v7, Landroidx/recyclerview/widget/ChatListItemAnimator;->chatGreetingsView:Lorg/telegram/ui/Components/ChatGreetingsView;
 
     iget-object v3, v3, Lorg/telegram/ui/Components/ChatGreetingsView;->stickerToSendView:Lorg/telegram/ui/Components/BackupImageView;
@@ -1870,7 +1870,7 @@
 
     add-float/2addr v3, v0
 
-    .line 1287
+    .line 1297
     invoke-virtual {v2}, Lorg/telegram/ui/Cells/ChatMessageCell;->getPhotoImage()Lorg/telegram/messenger/ImageReceiver;
 
     move-result-object v0
@@ -1893,7 +1893,7 @@
 
     add-float/2addr v0, v4
 
-    .line 1288
+    .line 1298
     invoke-virtual {v2}, Lorg/telegram/ui/Cells/ChatMessageCell;->getPhotoImage()Lorg/telegram/messenger/ImageReceiver;
 
     move-result-object v4
@@ -1916,7 +1916,7 @@
 
     add-float/2addr v4, v10
 
-    .line 1289
+    .line 1299
     iget-object v10, v7, Landroidx/recyclerview/widget/ChatListItemAnimator;->chatGreetingsView:Lorg/telegram/ui/Components/ChatGreetingsView;
 
     iget-object v10, v10, Lorg/telegram/ui/Components/ChatGreetingsView;->stickerToSendView:Lorg/telegram/ui/Components/BackupImageView;
@@ -1927,7 +1927,7 @@
 
     int-to-float v10, v10
 
-    .line 1290
+    .line 1300
     iget-object v14, v7, Landroidx/recyclerview/widget/ChatListItemAnimator;->chatGreetingsView:Lorg/telegram/ui/Components/ChatGreetingsView;
 
     iget-object v14, v14, Lorg/telegram/ui/Components/ChatGreetingsView;->stickerToSendView:Lorg/telegram/ui/Components/BackupImageView;
@@ -1938,7 +1938,7 @@
 
     int-to-float v14, v14
 
-    .line 1291
+    .line 1301
     invoke-virtual {v2}, Lorg/telegram/ui/Cells/ChatMessageCell;->getPhotoImage()Lorg/telegram/messenger/ImageReceiver;
 
     move-result-object v16
@@ -1947,7 +1947,7 @@
 
     move-result v26
 
-    .line 1292
+    .line 1302
     invoke-virtual {v2}, Lorg/telegram/ui/Cells/ChatMessageCell;->getPhotoImage()Lorg/telegram/messenger/ImageReceiver;
 
     move-result-object v16
@@ -1960,7 +1960,7 @@
 
     sub-float v21, v3, v4
 
-    .line 1296
+    .line 1306
     invoke-virtual {v2}, Lorg/telegram/ui/Cells/ChatMessageCell;->getPhotoImage()Lorg/telegram/messenger/ImageReceiver;
 
     move-result-object v0
@@ -1969,7 +1969,7 @@
 
     move-result v3
 
-    .line 1297
+    .line 1307
     invoke-virtual {v2}, Lorg/telegram/ui/Cells/ChatMessageCell;->getPhotoImage()Lorg/telegram/messenger/ImageReceiver;
 
     move-result-object v0
@@ -1978,21 +1978,21 @@
 
     move-result v4
 
-    .line 1299
+    .line 1309
     invoke-virtual {v2}, Lorg/telegram/ui/Cells/ChatMessageCell;->getTransitionParams()Lorg/telegram/ui/Cells/ChatMessageCell$TransitionParams;
 
     move-result-object v0
 
     iput-boolean v15, v0, Lorg/telegram/ui/Cells/ChatMessageCell$TransitionParams;->imageChangeBoundsTransition:Z
 
-    .line 1300
+    .line 1310
     invoke-virtual {v2}, Lorg/telegram/ui/Cells/ChatMessageCell;->getTransitionParams()Lorg/telegram/ui/Cells/ChatMessageCell$TransitionParams;
 
     move-result-object v0
 
     iput-boolean v15, v0, Lorg/telegram/ui/Cells/ChatMessageCell$TransitionParams;->animateDrawingTimeAlpha:Z
 
-    .line 1301
+    .line 1311
     invoke-virtual {v2}, Lorg/telegram/ui/Cells/ChatMessageCell;->getPhotoImage()Lorg/telegram/messenger/ImageReceiver;
 
     move-result-object v0
@@ -2005,14 +2005,14 @@
 
     new-array v0, v12, [F
 
-    .line 1303
+    .line 1313
     fill-array-data v0, :array_270
 
     invoke-static {v0}, Landroid/animation/ValueAnimator;->ofFloat([F)Landroid/animation/ValueAnimator;
 
     move-result-object v15
 
-    .line 1306
+    .line 1316
     new-instance v0, Landroidx/recyclerview/widget/ChatListItemAnimator$$ExternalSyntheticLambda6;
 
     move-object/from16 v16, v0
@@ -2035,7 +2035,7 @@
 
     invoke-virtual {v15, v0}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    .line 1319
+    .line 1329
     new-instance v10, Landroidx/recyclerview/widget/ChatListItemAnimator$9;
 
     move-object v0, v10
@@ -2052,7 +2052,7 @@
 
     invoke-virtual {v15, v10}, Landroid/animation/ValueAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 1330
+    .line 1340
     invoke-virtual {v11, v15}, Landroid/animation/AnimatorSet;->play(Landroid/animation/Animator;)Landroid/animation/AnimatorSet$Builder;
 
     move-wide/from16 v5, v16
@@ -2064,7 +2064,7 @@
     :cond_1a0
     move-wide/from16 v16, v5
 
-    .line 1332
+    .line 1342
     move-object v0, v9
 
     check-cast v0, Lorg/telegram/ui/Cells/ChatMessageCell;
@@ -2075,7 +2075,7 @@
 
     if-eqz v0, :cond_1d0
 
-    .line 1335
+    .line 1345
     iget-object v1, v7, Landroidx/recyclerview/widget/ChatListItemAnimator;->groupIdToEnterDelay:Ljava/util/HashMap;
 
     iget-wide v2, v0, Lorg/telegram/messenger/MessageObject$GroupedMessages;->groupId:J
@@ -2092,7 +2092,7 @@
 
     if-nez v1, :cond_1cb
 
-    .line 1337
+    .line 1347
     iget-object v1, v7, Landroidx/recyclerview/widget/ChatListItemAnimator;->groupIdToEnterDelay:Ljava/util/HashMap;
 
     iget-wide v2, v0, Lorg/telegram/messenger/MessageObject$GroupedMessages;->groupId:J
@@ -2109,7 +2109,7 @@
 
     goto :goto_1d0
 
-    .line 1339
+    .line 1349
     :cond_1cb
     invoke-virtual {v1}, Ljava/lang/Long;->longValue()J
 
@@ -2124,7 +2124,7 @@
     :goto_1d2
     if-eqz v0, :cond_1e2
 
-    .line 1342
+    .line 1352
     iget-object v0, v0, Lorg/telegram/messenger/MessageObject$GroupedMessages;->transitionParams:Lorg/telegram/messenger/MessageObject$GroupedMessages$TransitionParams;
 
     iget-boolean v0, v0, Lorg/telegram/messenger/MessageObject$GroupedMessages$TransitionParams;->backgroundChangeBounds:Z
@@ -2133,7 +2133,7 @@
 
     const-wide/16 v0, 0x8c
 
-    .line 1343
+    .line 1353
     invoke-virtual {v11, v0, v1}, Landroid/animation/AnimatorSet;->setStartDelay(J)V
 
     goto :goto_1e2
@@ -2145,7 +2145,7 @@
     :goto_1e2
     const/4 v0, 0x1
 
-    .line 1348
+    .line 1358
     :goto_1e3
     invoke-virtual {v9, v13}, Landroid/view/View;->setAlpha(F)V
 
@@ -2153,7 +2153,7 @@
 
     new-array v2, v1, [Landroid/animation/Animator;
 
-    .line 1349
+    .line 1359
     sget-object v3, Landroid/view/View;->ALPHA:Landroid/util/Property;
 
     new-array v4, v12, [F
@@ -2182,15 +2182,15 @@
 
     const v0, 0x3f666666    # 0.9f
 
-    .line 1351
+    .line 1361
     invoke-virtual {v9, v0}, Landroid/view/View;->setScaleX(F)V
 
-    .line 1352
+    .line 1362
     invoke-virtual {v9, v0}, Landroid/view/View;->setScaleY(F)V
 
     new-array v0, v1, [Landroid/animation/Animator;
 
-    .line 1353
+    .line 1363
     sget-object v2, Landroid/view/View;->SCALE_Y:Landroid/util/Property;
 
     new-array v3, v12, [F
@@ -2215,7 +2215,7 @@
 
     new-array v0, v1, [Landroid/animation/Animator;
 
-    .line 1354
+    .line 1364
     sget-object v2, Landroid/view/View;->SCALE_X:Landroid/util/Property;
 
     new-array v3, v12, [F
@@ -2241,13 +2241,13 @@
     :cond_23d
     const/high16 v4, 0x3f800000    # 1.0f
 
-    .line 1356
+    .line 1366
     invoke-virtual {v9, v4}, Landroid/view/View;->setScaleX(F)V
 
-    .line 1357
+    .line 1367
     invoke-virtual {v9, v4}, Landroid/view/View;->setScaleY(F)V
 
-    .line 1360
+    .line 1370
     :goto_245
     iget-object v0, v7, Landroidx/recyclerview/widget/ChatListItemAnimator;->greetingsSticker:Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
 
@@ -2255,10 +2255,10 @@
 
     const-wide/16 v0, 0x15e
 
-    .line 1361
+    .line 1371
     invoke-virtual {v11, v0, v1}, Landroid/animation/AnimatorSet;->setDuration(J)Landroid/animation/AnimatorSet;
 
-    .line 1362
+    .line 1372
     new-instance v0, Landroid/view/animation/OvershootInterpolator;
 
     invoke-direct {v0}, Landroid/view/animation/OvershootInterpolator;-><init>()V
@@ -2267,16 +2267,16 @@
 
     goto :goto_25f
 
-    .line 1364
+    .line 1374
     :cond_257
     invoke-virtual {v11, v5, v6}, Landroid/animation/AnimatorSet;->setStartDelay(J)V
 
     const-wide/16 v0, 0xfa
 
-    .line 1365
+    .line 1375
     invoke-virtual {v11, v0, v1}, Landroid/animation/AnimatorSet;->setDuration(J)Landroid/animation/AnimatorSet;
 
-    .line 1368
+    .line 1378
     :goto_25f
     new-instance v0, Landroidx/recyclerview/widget/ChatListItemAnimator$10;
 
@@ -2284,12 +2284,12 @@
 
     invoke-virtual {v11, v0}, Landroid/animation/AnimatorSet;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 1393
+    .line 1403
     iget-object v0, v7, Landroidx/recyclerview/widget/ChatListItemAnimator;->animators:Ljava/util/HashMap;
 
     invoke-virtual {v0, v8, v11}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1394
+    .line 1404
     invoke-virtual {v11}, Landroid/animation/AnimatorSet;->start()V
 
     return-void
@@ -2696,14 +2696,14 @@
 .method public animateChange(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;Landroidx/recyclerview/widget/RecyclerView$ViewHolder;Landroidx/recyclerview/widget/RecyclerView$ItemAnimator$ItemHolderInfo;IIII)Z
     .registers 16
 
-    .line 893
+    .line 903
     sget-boolean v0, Lorg/telegram/messenger/BuildVars;->LOGS_ENABLED:Z
 
     if-eqz v0, :cond_9
 
     const-string v0, "animate change"
 
-    .line 894
+    .line 904
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->d(Ljava/lang/String;)V
 
     :cond_9
@@ -2723,14 +2723,14 @@
 
     move v6, p7
 
-    .line 899
+    .line 909
     invoke-virtual/range {v0 .. v6}, Landroidx/recyclerview/widget/ChatListItemAnimator;->animateMove(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;Landroidx/recyclerview/widget/RecyclerView$ItemAnimator$ItemHolderInfo;IIII)Z
 
     move-result p1
 
     return p1
 
-    .line 902
+    .line 912
     :cond_17
     iget-object p3, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
@@ -2738,7 +2738,7 @@
 
     if-eqz v0, :cond_24
 
-    .line 903
+    .line 913
     check-cast p3, Lorg/telegram/ui/Cells/ChatMessageCell;
 
     invoke-virtual {p3}, Lorg/telegram/ui/Cells/ChatMessageCell;->getAnimationOffsetX()F
@@ -2747,13 +2747,13 @@
 
     goto :goto_28
 
-    .line 905
+    .line 915
     :cond_24
     invoke-virtual {p3}, Landroid/view/View;->getTranslationX()F
 
     move-result p3
 
-    .line 907
+    .line 917
     :goto_28
     iget-object v0, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
@@ -2761,14 +2761,14 @@
 
     move-result v0
 
-    .line 908
+    .line 918
     iget-object v1, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     invoke-virtual {v1}, Landroid/view/View;->getAlpha()F
 
     move-result v1
 
-    .line 909
+    .line 919
     invoke-virtual {p0, p1}, Landroidx/recyclerview/widget/ChatListItemAnimator;->resetAnimation(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
 
     sub-int v2, p6, p4
@@ -2787,48 +2787,48 @@
 
     float-to-int v3, v3
 
-    .line 913
+    .line 923
     iget-object v4, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     instance-of v5, v4, Lorg/telegram/ui/Cells/ChatMessageCell;
 
     if-eqz v5, :cond_4d
 
-    .line 914
+    .line 924
     check-cast v4, Lorg/telegram/ui/Cells/ChatMessageCell;
 
     invoke-virtual {v4, p3}, Lorg/telegram/ui/Cells/ChatMessageCell;->setAnimationOffsetX(F)V
 
     goto :goto_50
 
-    .line 916
+    .line 926
     :cond_4d
     invoke-virtual {v4, p3}, Landroid/view/View;->setTranslationX(F)V
 
-    .line 918
+    .line 928
     :goto_50
     iget-object p3, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     invoke-virtual {p3, v0}, Landroid/view/View;->setTranslationY(F)V
 
-    .line 919
+    .line 929
     iget-object p3, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     invoke-virtual {p3, v1}, Landroid/view/View;->setAlpha(F)V
 
     if-eqz p2, :cond_7f
 
-    .line 922
+    .line 932
     invoke-virtual {p0, p2}, Landroidx/recyclerview/widget/ChatListItemAnimator;->resetAnimation(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
 
-    .line 923
+    .line 933
     iget-object p3, p2, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     instance-of v0, p3, Lorg/telegram/ui/Cells/ChatMessageCell;
 
     if-eqz v0, :cond_6d
 
-    .line 924
+    .line 934
     check-cast p3, Lorg/telegram/ui/Cells/ChatMessageCell;
 
     neg-int v0, v2
@@ -2844,10 +2844,10 @@
 
     int-to-float v0, v0
 
-    .line 926
+    .line 936
     invoke-virtual {p3, v0}, Landroid/view/View;->setTranslationX(F)V
 
-    .line 928
+    .line 938
     :goto_72
     iget-object p3, p2, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
@@ -2857,14 +2857,14 @@
 
     invoke-virtual {p3, v0}, Landroid/view/View;->setTranslationY(F)V
 
-    .line 929
+    .line 939
     iget-object p3, p2, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     const/4 v0, 0x0
 
     invoke-virtual {p3, v0}, Landroid/view/View;->setAlpha(F)V
 
-    .line 931
+    .line 941
     :cond_7f
     iget-object p3, p0, Landroidx/recyclerview/widget/DefaultItemAnimator;->mPendingChanges:Ljava/util/ArrayList;
 
@@ -2888,7 +2888,7 @@
 
     invoke-virtual {p3, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 932
+    .line 942
     invoke-virtual {p0}, Landroidx/recyclerview/widget/DefaultItemAnimator;->checkIsRunning()V
 
     const/4 p1, 0x1
@@ -2899,17 +2899,17 @@
 .method animateChangeImpl(Landroidx/recyclerview/widget/DefaultItemAnimator$ChangeInfo;)V
     .registers 8
 
-    .line 937
+    .line 947
     sget-boolean v0, Lorg/telegram/messenger/BuildVars;->LOGS_ENABLED:Z
 
     if-eqz v0, :cond_9
 
     const-string v0, "animate change impl"
 
-    .line 938
+    .line 948
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->d(Ljava/lang/String;)V
 
-    .line 940
+    .line 950
     :cond_9
     iget-object v0, p1, Landroidx/recyclerview/widget/DefaultItemAnimator$ChangeInfo;->oldHolder:Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
 
@@ -2921,17 +2921,17 @@
 
     goto :goto_12
 
-    .line 941
+    .line 951
     :cond_10
     iget-object v0, v0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    .line 942
+    .line 952
     :goto_12
     iget-object v2, p1, Landroidx/recyclerview/widget/DefaultItemAnimator$ChangeInfo;->newHolder:Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
 
     if-eqz v2, :cond_18
 
-    .line 943
+    .line 953
     iget-object v1, v2, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     :cond_18
@@ -2939,29 +2939,29 @@
 
     if-eqz v0, :cond_50
 
-    .line 945
+    .line 955
     invoke-virtual {v0}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
 
     move-result-object v3
 
-    .line 946
+    .line 956
     invoke-virtual {p0}, Landroidx/recyclerview/widget/ChatListItemAnimator;->getChangeDuration()J
 
     move-result-wide v4
 
-    .line 945
+    .line 955
     invoke-virtual {v3, v4, v5}, Landroid/view/ViewPropertyAnimator;->setDuration(J)Landroid/view/ViewPropertyAnimator;
 
     move-result-object v3
 
-    .line 947
+    .line 957
     iget-object v4, p0, Landroidx/recyclerview/widget/DefaultItemAnimator;->mChangeAnimations:Ljava/util/ArrayList;
 
     iget-object v5, p1, Landroidx/recyclerview/widget/DefaultItemAnimator$ChangeInfo;->oldHolder:Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
 
     invoke-virtual {v4, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 948
+    .line 958
     iget v4, p1, Landroidx/recyclerview/widget/DefaultItemAnimator$ChangeInfo;->toX:I
 
     iget v5, p1, Landroidx/recyclerview/widget/DefaultItemAnimator$ChangeInfo;->fromX:I
@@ -2972,7 +2972,7 @@
 
     invoke-virtual {v3, v4}, Landroid/view/ViewPropertyAnimator;->translationX(F)Landroid/view/ViewPropertyAnimator;
 
-    .line 949
+    .line 959
     iget v4, p1, Landroidx/recyclerview/widget/DefaultItemAnimator$ChangeInfo;->toY:I
 
     iget v5, p1, Landroidx/recyclerview/widget/DefaultItemAnimator$ChangeInfo;->fromY:I
@@ -2983,7 +2983,7 @@
 
     invoke-virtual {v3, v4}, Landroid/view/ViewPropertyAnimator;->translationY(F)Landroid/view/ViewPropertyAnimator;
 
-    .line 950
+    .line 960
     invoke-virtual {v3, v2}, Landroid/view/ViewPropertyAnimator;->alpha(F)Landroid/view/ViewPropertyAnimator;
 
     move-result-object v4
@@ -2996,25 +2996,25 @@
 
     move-result-object v0
 
-    .line 973
+    .line 983
     invoke-virtual {v0}, Landroid/view/ViewPropertyAnimator;->start()V
 
     :cond_50
     if-eqz v1, :cond_7f
 
-    .line 976
+    .line 986
     invoke-virtual {v1}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
 
     move-result-object v0
 
-    .line 977
+    .line 987
     iget-object v3, p0, Landroidx/recyclerview/widget/DefaultItemAnimator;->mChangeAnimations:Ljava/util/ArrayList;
 
     iget-object v4, p1, Landroidx/recyclerview/widget/DefaultItemAnimator$ChangeInfo;->newHolder:Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
 
     invoke-virtual {v3, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 978
+    .line 988
     invoke-virtual {v0, v2}, Landroid/view/ViewPropertyAnimator;->translationX(F)Landroid/view/ViewPropertyAnimator;
 
     move-result-object v3
@@ -3033,7 +3033,7 @@
 
     const/high16 v3, 0x3f800000    # 1.0f
 
-    .line 979
+    .line 989
     invoke-virtual {v2, v3}, Landroid/view/ViewPropertyAnimator;->alpha(F)Landroid/view/ViewPropertyAnimator;
 
     move-result-object v2
@@ -3046,7 +3046,7 @@
 
     move-result-object p1
 
-    .line 1003
+    .line 1013
     invoke-virtual {p1}, Landroid/view/ViewPropertyAnimator;->start()V
 
     :cond_7f
@@ -4677,7 +4677,7 @@
     new-array v3, v7, [F
 
     .line 689
-    fill-array-data v3, :array_224
+    fill-array-data v3, :array_252
 
     invoke-static {v3}, Landroid/animation/ValueAnimator;->ofFloat([F)Landroid/animation/ValueAnimator;
 
@@ -4697,7 +4697,7 @@
     .line 702
     invoke-virtual {v13, v1}, Landroid/animation/AnimatorSet;->playTogether([Landroid/animation/Animator;)V
 
-    goto/16 :goto_1fc
+    goto/16 :goto_229
 
     .line 703
     :cond_67
@@ -4705,7 +4705,7 @@
 
     instance-of v2, v1, Lorg/telegram/ui/Cells/ChatMessageCell;
 
-    if-eqz v2, :cond_1fc
+    if-eqz v2, :cond_229
 
     .line 704
     move-object v6, v1
@@ -4754,7 +4754,7 @@
     new-array v1, v7, [F
 
     .line 711
-    fill-array-data v1, :array_22c
+    fill-array-data v1, :array_25a
 
     invoke-static {v1}, Landroid/animation/ValueAnimator;->ofFloat([F)Landroid/animation/ValueAnimator;
 
@@ -4933,336 +4933,405 @@
     :goto_121
     iget v1, v12, Landroidx/recyclerview/widget/ChatListItemAnimator$MoveInfoExtended;->deltaBottom:I
 
-    if-nez v1, :cond_135
+    if-nez v1, :cond_13a
 
     iget v1, v12, Landroidx/recyclerview/widget/ChatListItemAnimator$MoveInfoExtended;->deltaRight:I
 
-    if-nez v1, :cond_135
+    if-nez v1, :cond_13a
 
     iget v1, v12, Landroidx/recyclerview/widget/ChatListItemAnimator$MoveInfoExtended;->deltaTop:I
 
-    if-nez v1, :cond_135
+    if-nez v1, :cond_13a
 
     iget v1, v12, Landroidx/recyclerview/widget/ChatListItemAnimator$MoveInfoExtended;->deltaLeft:I
 
     if-eqz v1, :cond_132
 
-    goto :goto_135
+    goto :goto_13a
 
     :cond_132
-    move-object/from16 v3, p2
+    const/4 v1, 0x0
 
-    goto :goto_15b
+    .line 788
+    iput v1, v11, Lorg/telegram/ui/Cells/ChatMessageCell$TransitionParams;->toDeltaLeft:F
+
+    .line 789
+    iput v1, v11, Lorg/telegram/ui/Cells/ChatMessageCell$TransitionParams;->toDeltaRight:F
+
+    move-object/from16 v4, p2
+
+    goto :goto_188
+
+    :cond_13a
+    :goto_13a
+    const/4 v1, 0x0
 
     .line 760
-    :cond_135
-    :goto_135
-    iget-object v1, v0, Landroidx/recyclerview/widget/ChatListItemAnimator;->recyclerListView:Lorg/telegram/ui/Components/RecyclerListView;
+    iget-object v2, v0, Landroidx/recyclerview/widget/ChatListItemAnimator;->recyclerListView:Lorg/telegram/ui/Components/RecyclerListView;
 
-    invoke-virtual {v1, v10}, Landroid/view/ViewGroup;->setClipChildren(Z)V
+    invoke-virtual {v2, v10}, Landroid/view/ViewGroup;->setClipChildren(Z)V
 
     .line 761
-    iget-object v1, v0, Landroidx/recyclerview/widget/ChatListItemAnimator;->recyclerListView:Lorg/telegram/ui/Components/RecyclerListView;
+    iget-object v2, v0, Landroidx/recyclerview/widget/ChatListItemAnimator;->recyclerListView:Lorg/telegram/ui/Components/RecyclerListView;
 
-    invoke-virtual {v1}, Landroid/view/ViewGroup;->invalidate()V
-
-    const/4 v1, 0x2
-
-    new-array v2, v1, [F
-
-    .line 763
-    fill-array-data v2, :array_234
-
-    invoke-static {v2}, Landroid/animation/ValueAnimator;->ofFloat([F)Landroid/animation/ValueAnimator;
-
-    move-result-object v1
-
-    .line 764
-    new-instance v2, Landroidx/recyclerview/widget/ChatListItemAnimator$$ExternalSyntheticLambda0;
-
-    move-object/from16 v3, p2
-
-    invoke-direct {v2, v12, v11, v3}, Landroidx/recyclerview/widget/ChatListItemAnimator$$ExternalSyntheticLambda0;-><init>(Landroidx/recyclerview/widget/ChatListItemAnimator$MoveInfoExtended;Lorg/telegram/ui/Cells/ChatMessageCell$TransitionParams;Lorg/telegram/ui/Cells/ChatMessageCell;)V
-
-    invoke-virtual {v1, v2}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
-
-    const/4 v2, 0x1
-
-    new-array v4, v2, [Landroid/animation/Animator;
-
-    aput-object v1, v4, v10
-
-    .line 779
-    invoke-virtual {v13, v4}, Landroid/animation/AnimatorSet;->playTogether([Landroid/animation/Animator;)V
-
-    .line 782
-    :goto_15b
-    invoke-virtual {v3}, Lorg/telegram/ui/Cells/ChatMessageCell;->getCurrentMessagesGroup()Lorg/telegram/messenger/MessageObject$GroupedMessages;
-
-    move-result-object v1
-
-    if-nez v1, :cond_163
-
-    .line 784
-    iput-boolean v10, v12, Landroidx/recyclerview/widget/ChatListItemAnimator$MoveInfoExtended;->animateChangeGroupBackground:Z
-
-    .line 787
-    :cond_163
-    iget-boolean v2, v12, Landroidx/recyclerview/widget/ChatListItemAnimator$MoveInfoExtended;->animateChangeGroupBackground:Z
-
-    if-eqz v2, :cond_1b9
+    invoke-virtual {v2}, Landroid/view/ViewGroup;->invalidate()V
 
     const/4 v2, 0x2
 
-    new-array v4, v2, [F
+    new-array v3, v2, [F
 
-    .line 788
-    fill-array-data v4, :array_23c
+    .line 763
+    fill-array-data v3, :array_262
 
-    invoke-static {v4}, Landroid/animation/ValueAnimator;->ofFloat([F)Landroid/animation/ValueAnimator;
+    invoke-static {v3}, Landroid/animation/ValueAnimator;->ofFloat([F)Landroid/animation/ValueAnimator;
 
     move-result-object v2
 
-    .line 789
-    iget-object v4, v1, Lorg/telegram/messenger/MessageObject$GroupedMessages;->transitionParams:Lorg/telegram/messenger/MessageObject$GroupedMessages$TransitionParams;
+    .line 764
+    iget-boolean v3, v12, Landroidx/recyclerview/widget/ChatListItemAnimator$MoveInfoExtended;->animateBackgroundOnly:Z
 
-    move-object/from16 v5, p1
+    if-eqz v3, :cond_160
 
-    const/4 v6, 0x0
+    .line 765
+    iget v3, v12, Landroidx/recyclerview/widget/ChatListItemAnimator$MoveInfoExtended;->deltaLeft:I
 
-    .line 790
-    iget-object v7, v5, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
+    neg-int v3, v3
 
-    invoke-virtual {v7}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+    int-to-float v3, v3
 
-    move-result-object v7
+    iput v3, v11, Lorg/telegram/ui/Cells/ChatMessageCell$TransitionParams;->toDeltaLeft:F
 
-    move-object/from16 v22, v7
+    .line 766
+    iget v3, v12, Landroidx/recyclerview/widget/ChatListItemAnimator$MoveInfoExtended;->deltaRight:I
+
+    neg-int v3, v3
+
+    int-to-float v3, v3
+
+    iput v3, v11, Lorg/telegram/ui/Cells/ChatMessageCell$TransitionParams;->toDeltaRight:F
+
+    goto :goto_176
+
+    .line 768
+    :cond_160
+    iget v3, v12, Landroidx/recyclerview/widget/ChatListItemAnimator$MoveInfoExtended;->deltaLeft:I
+
+    neg-int v3, v3
+
+    int-to-float v3, v3
+
+    invoke-virtual/range {p2 .. p2}, Lorg/telegram/ui/Cells/ChatMessageCell;->getAnimationOffsetX()F
+
+    move-result v4
+
+    sub-float/2addr v3, v4
+
+    iput v3, v11, Lorg/telegram/ui/Cells/ChatMessageCell$TransitionParams;->toDeltaLeft:F
+
+    .line 769
+    iget v3, v12, Landroidx/recyclerview/widget/ChatListItemAnimator$MoveInfoExtended;->deltaRight:I
+
+    neg-int v3, v3
+
+    int-to-float v3, v3
+
+    invoke-virtual/range {p2 .. p2}, Lorg/telegram/ui/Cells/ChatMessageCell;->getAnimationOffsetX()F
+
+    move-result v4
+
+    sub-float/2addr v3, v4
+
+    iput v3, v11, Lorg/telegram/ui/Cells/ChatMessageCell$TransitionParams;->toDeltaRight:F
+
+    .line 771
+    :goto_176
+    new-instance v3, Landroidx/recyclerview/widget/ChatListItemAnimator$$ExternalSyntheticLambda0;
+
+    move-object/from16 v4, p2
+
+    invoke-direct {v3, v12, v11, v4}, Landroidx/recyclerview/widget/ChatListItemAnimator$$ExternalSyntheticLambda0;-><init>(Landroidx/recyclerview/widget/ChatListItemAnimator$MoveInfoExtended;Lorg/telegram/ui/Cells/ChatMessageCell$TransitionParams;Lorg/telegram/ui/Cells/ChatMessageCell;)V
+
+    invoke-virtual {v2, v3}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
+
+    const/4 v3, 0x1
+
+    new-array v5, v3, [Landroid/animation/Animator;
+
+    aput-object v2, v5, v10
+
+    .line 786
+    invoke-virtual {v13, v5}, Landroid/animation/AnimatorSet;->playTogether([Landroid/animation/Animator;)V
+
+    .line 792
+    :goto_188
+    invoke-virtual {v4}, Lorg/telegram/ui/Cells/ChatMessageCell;->getCurrentMessagesGroup()Lorg/telegram/messenger/MessageObject$GroupedMessages;
+
+    move-result-object v2
+
+    if-nez v2, :cond_190
+
+    .line 794
+    iput-boolean v10, v12, Landroidx/recyclerview/widget/ChatListItemAnimator$MoveInfoExtended;->animateChangeGroupBackground:Z
+
+    .line 797
+    :cond_190
+    iget-boolean v3, v12, Landroidx/recyclerview/widget/ChatListItemAnimator$MoveInfoExtended;->animateChangeGroupBackground:Z
+
+    if-eqz v3, :cond_1e6
+
+    const/4 v3, 0x2
+
+    new-array v5, v3, [F
+
+    .line 798
+    fill-array-data v5, :array_26a
+
+    invoke-static {v5}, Landroid/animation/ValueAnimator;->ofFloat([F)Landroid/animation/ValueAnimator;
+
+    move-result-object v3
+
+    .line 799
+    iget-object v5, v2, Lorg/telegram/messenger/MessageObject$GroupedMessages;->transitionParams:Lorg/telegram/messenger/MessageObject$GroupedMessages$TransitionParams;
+
+    move-object/from16 v6, p1
+
+    const/4 v7, 0x0
+
+    .line 800
+    iget-object v8, v6, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
+
+    invoke-virtual {v8}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+
+    move-result-object v8
+
+    move-object/from16 v22, v8
 
     check-cast v22, Lorg/telegram/ui/Components/RecyclerListView;
 
-    .line 792
-    iget-object v7, v1, Lorg/telegram/messenger/MessageObject$GroupedMessages;->transitionParams:Lorg/telegram/messenger/MessageObject$GroupedMessages$TransitionParams;
+    .line 802
+    iget-object v8, v2, Lorg/telegram/messenger/MessageObject$GroupedMessages;->transitionParams:Lorg/telegram/messenger/MessageObject$GroupedMessages$TransitionParams;
 
-    iget v7, v7, Lorg/telegram/messenger/MessageObject$GroupedMessages$TransitionParams;->captionEnterProgress:F
+    iget v8, v8, Lorg/telegram/messenger/MessageObject$GroupedMessages$TransitionParams;->captionEnterProgress:F
 
-    .line 793
-    iget-boolean v1, v1, Lorg/telegram/messenger/MessageObject$GroupedMessages;->hasCaption:Z
+    .line 803
+    iget-boolean v2, v2, Lorg/telegram/messenger/MessageObject$GroupedMessages;->hasCaption:Z
 
-    if-eqz v1, :cond_18d
+    if-eqz v2, :cond_1ba
 
     const/high16 v14, 0x3f800000    # 1.0f
 
     const/high16 v21, 0x3f800000    # 1.0f
 
-    goto :goto_18f
+    goto :goto_1bc
 
-    :cond_18d
+    :cond_1ba
     const/16 v21, 0x0
 
-    :goto_18f
-    cmpl-float v1, v7, v21
+    :goto_1bc
+    cmpl-float v1, v8, v21
 
-    if-eqz v1, :cond_196
+    if-eqz v1, :cond_1c3
 
     const/16 v19, 0x1
 
-    goto :goto_198
+    goto :goto_1c5
 
-    :cond_196
+    :cond_1c3
     const/16 v19, 0x0
 
-    .line 796
-    :goto_198
+    .line 806
+    :goto_1c5
     new-instance v1, Landroidx/recyclerview/widget/ChatListItemAnimator$$ExternalSyntheticLambda3;
 
     move-object/from16 v16, v1
 
-    move-object/from16 v17, v4
+    move-object/from16 v17, v5
 
     move-object/from16 v18, v12
 
-    move/from16 v20, v7
+    move/from16 v20, v8
 
     invoke-direct/range {v16 .. v22}, Landroidx/recyclerview/widget/ChatListItemAnimator$$ExternalSyntheticLambda3;-><init>(Lorg/telegram/messenger/MessageObject$GroupedMessages$TransitionParams;Landroidx/recyclerview/widget/ChatListItemAnimator$MoveInfoExtended;ZFFLorg/telegram/ui/Components/RecyclerListView;)V
 
-    invoke-virtual {v2, v1}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
+    invoke-virtual {v3, v1}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    .line 810
+    .line 820
     new-instance v1, Landroidx/recyclerview/widget/ChatListItemAnimator$5;
 
-    invoke-direct {v1, v0, v4}, Landroidx/recyclerview/widget/ChatListItemAnimator$5;-><init>(Landroidx/recyclerview/widget/ChatListItemAnimator;Lorg/telegram/messenger/MessageObject$GroupedMessages$TransitionParams;)V
+    invoke-direct {v1, v0, v5}, Landroidx/recyclerview/widget/ChatListItemAnimator$5;-><init>(Landroidx/recyclerview/widget/ChatListItemAnimator;Lorg/telegram/messenger/MessageObject$GroupedMessages$TransitionParams;)V
 
-    invoke-virtual {v2, v1}, Landroid/animation/ValueAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
+    invoke-virtual {v3, v1}, Landroid/animation/ValueAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
     const/4 v1, 0x1
 
-    new-array v4, v1, [Landroid/animation/Animator;
+    new-array v2, v1, [Landroid/animation/Animator;
 
-    aput-object v2, v4, v6
+    aput-object v3, v2, v7
 
-    .line 817
-    invoke-virtual {v13, v4}, Landroid/animation/AnimatorSet;->playTogether([Landroid/animation/Animator;)V
+    .line 827
+    invoke-virtual {v13, v2}, Landroid/animation/AnimatorSet;->playTogether([Landroid/animation/Animator;)V
 
-    goto :goto_1bc
+    goto :goto_1e9
 
-    :cond_1b9
-    move-object/from16 v5, p1
+    :cond_1e6
+    move-object/from16 v6, p1
 
-    const/4 v6, 0x0
+    const/4 v7, 0x0
 
-    .line 820
-    :goto_1bc
+    .line 830
+    :goto_1e9
     iget-boolean v1, v12, Landroidx/recyclerview/widget/ChatListItemAnimator$MoveInfoExtended;->animatePinnedBottom:Z
 
-    if-eqz v1, :cond_1db
+    if-eqz v1, :cond_208
 
     const/4 v1, 0x2
 
     new-array v2, v1, [F
 
-    .line 821
-    fill-array-data v2, :array_244
+    .line 831
+    fill-array-data v2, :array_272
 
     invoke-static {v2}, Landroid/animation/ValueAnimator;->ofFloat([F)Landroid/animation/ValueAnimator;
 
     move-result-object v1
 
-    .line 822
+    .line 832
     new-instance v2, Landroidx/recyclerview/widget/ChatListItemAnimator$$ExternalSyntheticLambda5;
 
-    invoke-direct {v2, v11, v3}, Landroidx/recyclerview/widget/ChatListItemAnimator$$ExternalSyntheticLambda5;-><init>(Lorg/telegram/ui/Cells/ChatMessageCell$TransitionParams;Lorg/telegram/ui/Cells/ChatMessageCell;)V
+    invoke-direct {v2, v11, v4}, Landroidx/recyclerview/widget/ChatListItemAnimator$$ExternalSyntheticLambda5;-><init>(Lorg/telegram/ui/Cells/ChatMessageCell$TransitionParams;Lorg/telegram/ui/Cells/ChatMessageCell;)V
 
     invoke-virtual {v1, v2}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
     const/4 v2, 0x1
 
-    new-array v4, v2, [Landroid/animation/Animator;
+    new-array v3, v2, [Landroid/animation/Animator;
 
-    aput-object v1, v4, v6
+    aput-object v1, v3, v7
 
-    .line 827
-    invoke-virtual {v13, v4}, Landroid/animation/AnimatorSet;->playTogether([Landroid/animation/Animator;)V
+    .line 837
+    invoke-virtual {v13, v3}, Landroid/animation/AnimatorSet;->playTogether([Landroid/animation/Animator;)V
 
-    goto :goto_1dc
+    goto :goto_209
 
-    :cond_1db
+    :cond_208
     const/4 v2, 0x1
 
-    .line 830
-    :goto_1dc
+    .line 840
+    :goto_209
     iget-boolean v1, v12, Landroidx/recyclerview/widget/ChatListItemAnimator$MoveInfoExtended;->animateChangeInternal:Z
 
-    if-eqz v1, :cond_201
+    if-eqz v1, :cond_22e
 
     const/4 v1, 0x2
 
     new-array v1, v1, [F
 
-    .line 831
-    fill-array-data v1, :array_24c
+    .line 841
+    fill-array-data v1, :array_27a
 
     invoke-static {v1}, Landroid/animation/ValueAnimator;->ofFloat([F)Landroid/animation/ValueAnimator;
 
     move-result-object v1
 
-    .line 832
+    .line 842
     iput-boolean v2, v11, Lorg/telegram/ui/Cells/ChatMessageCell$TransitionParams;->animateChange:Z
 
-    .line 833
-    new-instance v4, Landroidx/recyclerview/widget/ChatListItemAnimator$$ExternalSyntheticLambda4;
+    .line 843
+    new-instance v3, Landroidx/recyclerview/widget/ChatListItemAnimator$$ExternalSyntheticLambda4;
 
-    invoke-direct {v4, v11, v3}, Landroidx/recyclerview/widget/ChatListItemAnimator$$ExternalSyntheticLambda4;-><init>(Lorg/telegram/ui/Cells/ChatMessageCell$TransitionParams;Lorg/telegram/ui/Cells/ChatMessageCell;)V
+    invoke-direct {v3, v11, v4}, Landroidx/recyclerview/widget/ChatListItemAnimator$$ExternalSyntheticLambda4;-><init>(Lorg/telegram/ui/Cells/ChatMessageCell$TransitionParams;Lorg/telegram/ui/Cells/ChatMessageCell;)V
 
-    invoke-virtual {v1, v4}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
+    invoke-virtual {v1, v3}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
     new-array v2, v2, [Landroid/animation/Animator;
 
-    aput-object v1, v2, v6
+    aput-object v1, v2, v7
 
-    .line 837
+    .line 847
     invoke-virtual {v13, v2}, Landroid/animation/AnimatorSet;->playTogether([Landroid/animation/Animator;)V
 
-    goto :goto_201
+    goto :goto_22e
 
-    :cond_1fc
-    :goto_1fc
-    move-object v5, v10
+    :cond_229
+    :goto_229
+    move-object v6, v10
 
     move-object/from16 v23, v11
 
     move/from16 v24, v12
 
-    .line 841
-    :cond_201
-    :goto_201
+    .line 851
+    :cond_22e
+    :goto_22e
     iget-object v1, v0, Landroidx/recyclerview/widget/DefaultItemAnimator;->translationInterpolator:Landroid/view/animation/Interpolator;
 
-    if-eqz v1, :cond_208
+    if-eqz v1, :cond_235
 
-    .line 842
+    .line 852
     invoke-virtual {v13, v1}, Landroid/animation/AnimatorSet;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 844
-    :cond_208
+    .line 854
+    :cond_235
     invoke-virtual/range {p0 .. p0}, Landroidx/recyclerview/widget/ChatListItemAnimator;->getMoveDuration()J
 
     move-result-wide v1
 
     invoke-virtual {v13, v1, v2}, Landroid/animation/AnimatorSet;->setDuration(J)Landroid/animation/AnimatorSet;
 
-    .line 845
+    .line 855
     new-instance v1, Landroidx/recyclerview/widget/ChatListItemAnimator$6;
 
     move-object/from16 v2, v23
 
     move/from16 v3, v24
 
-    invoke-direct {v1, v0, v5, v3, v2}, Landroidx/recyclerview/widget/ChatListItemAnimator$6;-><init>(Landroidx/recyclerview/widget/ChatListItemAnimator;Landroidx/recyclerview/widget/RecyclerView$ViewHolder;ILandroid/view/View;)V
+    invoke-direct {v1, v0, v6, v3, v2}, Landroidx/recyclerview/widget/ChatListItemAnimator$6;-><init>(Landroidx/recyclerview/widget/ChatListItemAnimator;Landroidx/recyclerview/widget/RecyclerView$ViewHolder;ILandroid/view/View;)V
 
     invoke-virtual {v13, v1}, Landroid/animation/AnimatorSet;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 874
+    .line 884
     invoke-virtual {v13}, Landroid/animation/AnimatorSet;->start()V
 
-    .line 875
+    .line 885
     iget-object v1, v0, Landroidx/recyclerview/widget/ChatListItemAnimator;->animators:Ljava/util/HashMap;
 
-    invoke-virtual {v1, v5, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v1, v6, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 
-    :array_224
+    nop
+
+    :array_252
     .array-data 4
         0x0
         0x3f800000    # 1.0f
     .end array-data
 
-    :array_22c
+    :array_25a
     .array-data 4
         0x0
         0x3f800000    # 1.0f
     .end array-data
 
-    :array_234
+    :array_262
     .array-data 4
         0x3f800000    # 1.0f
         0x0
     .end array-data
 
-    :array_23c
+    :array_26a
     .array-data 4
         0x3f800000    # 1.0f
         0x0
     .end array-data
 
-    :array_244
+    :array_272
     .array-data 4
         0x0
         0x3f800000    # 1.0f
     .end array-data
 
-    :array_24c
+    :array_27a
     .array-data 4
         0x0
         0x3f800000    # 1.0f
@@ -5387,26 +5456,26 @@
 .method protected animateRemoveImpl(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
     .registers 7
 
-    .line 1398
+    .line 1408
     sget-boolean v0, Lorg/telegram/messenger/BuildVars;->LOGS_ENABLED:Z
 
     if-eqz v0, :cond_9
 
     const-string v0, "animate remove impl"
 
-    .line 1399
+    .line 1409
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->d(Ljava/lang/String;)V
 
-    .line 1401
+    .line 1411
     :cond_9
     iget-object v0, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    .line 1402
+    .line 1412
     iget-object v1, p0, Landroidx/recyclerview/widget/DefaultItemAnimator;->mRemoveAnimations:Ljava/util/ArrayList;
 
     invoke-virtual {v1, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1403
+    .line 1413
     sget-object v1, Landroid/view/View;->ALPHA:Landroid/util/Property;
 
     const/4 v2, 0x2
@@ -5431,32 +5500,32 @@
 
     move-result-object v1
 
-    .line 1405
+    .line 1415
     invoke-virtual {p0, p1}, Landroidx/recyclerview/widget/SimpleItemAnimator;->dispatchRemoveStarting(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
 
-    .line 1407
+    .line 1417
     invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView$ItemAnimator;->getRemoveDuration()J
 
     move-result-wide v2
 
     invoke-virtual {v1, v2, v3}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
-    .line 1408
+    .line 1418
     new-instance v2, Landroidx/recyclerview/widget/ChatListItemAnimator$11;
 
     invoke-direct {v2, p0, v0, p1}, Landroidx/recyclerview/widget/ChatListItemAnimator$11;-><init>(Landroidx/recyclerview/widget/ChatListItemAnimator;Landroid/view/View;Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
 
     invoke-virtual {v1, v2}, Landroid/animation/ObjectAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 1425
+    .line 1435
     iget-object v0, p0, Landroidx/recyclerview/widget/ChatListItemAnimator;->animators:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1426
+    .line 1436
     invoke-virtual {v1}, Landroid/animation/ObjectAnimator;->start()V
 
-    .line 1427
+    .line 1437
     iget-object p1, p0, Landroidx/recyclerview/widget/ChatListItemAnimator;->recyclerListView:Lorg/telegram/ui/Components/RecyclerListView;
 
     invoke-virtual {p1}, Lorg/telegram/ui/Components/RecyclerListView;->stopScroll()V
@@ -5467,7 +5536,7 @@
 .method public endAnimation(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
     .registers 3
 
-    .line 1058
+    .line 1068
     iget-object v0, p0, Landroidx/recyclerview/widget/ChatListItemAnimator;->animators:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
@@ -5478,26 +5547,26 @@
 
     if-eqz v0, :cond_d
 
-    .line 1060
+    .line 1070
     invoke-virtual {v0}, Landroid/animation/Animator;->cancel()V
 
-    .line 1062
+    .line 1072
     :cond_d
     invoke-super {p0, p1}, Landroidx/recyclerview/widget/DefaultItemAnimator;->endAnimation(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
 
-    .line 1063
+    .line 1073
     iget-object p1, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     invoke-direct {p0, p1}, Landroidx/recyclerview/widget/ChatListItemAnimator;->restoreTransitionParams(Landroid/view/View;)V
 
-    .line 1064
+    .line 1074
     sget-boolean p1, Lorg/telegram/messenger/BuildVars;->LOGS_ENABLED:Z
 
     if-eqz p1, :cond_1e
 
     const-string p1, "end animation"
 
-    .line 1065
+    .line 1075
     invoke-static {p1}, Lorg/telegram/messenger/FileLog;->d(Ljava/lang/String;)V
 
     :cond_1e
@@ -5507,17 +5576,17 @@
 .method public endAnimations()V
     .registers 6
 
-    .line 1093
+    .line 1103
     sget-boolean v0, Lorg/telegram/messenger/BuildVars;->LOGS_ENABLED:Z
 
     if-eqz v0, :cond_9
 
     const-string v0, "end animations"
 
-    .line 1094
+    .line 1104
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->d(Ljava/lang/String;)V
 
-    .line 1096
+    .line 1106
     :cond_9
     iget-object v0, p0, Landroidx/recyclerview/widget/ChatListItemAnimator;->willChangedGroups:Ljava/util/ArrayList;
 
@@ -5538,7 +5607,7 @@
 
     check-cast v1, Lorg/telegram/messenger/MessageObject$GroupedMessages;
 
-    .line 1097
+    .line 1107
     iget-object v1, v1, Lorg/telegram/messenger/MessageObject$GroupedMessages;->transitionParams:Lorg/telegram/messenger/MessageObject$GroupedMessages$TransitionParams;
 
     const/4 v2, 0x0
@@ -5547,21 +5616,21 @@
 
     goto :goto_f
 
-    .line 1099
+    .line 1109
     :cond_21
     iget-object v0, p0, Landroidx/recyclerview/widget/ChatListItemAnimator;->willChangedGroups:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 1100
+    .line 1110
     invoke-direct {p0}, Landroidx/recyclerview/widget/ChatListItemAnimator;->cancelAnimators()V
 
-    .line 1102
+    .line 1112
     iget-object v0, p0, Landroidx/recyclerview/widget/ChatListItemAnimator;->chatGreetingsView:Lorg/telegram/ui/Components/ChatGreetingsView;
 
     if-eqz v0, :cond_34
 
-    .line 1103
+    .line 1113
     iget-object v0, v0, Lorg/telegram/ui/Components/ChatGreetingsView;->stickerToSendView:Lorg/telegram/ui/Components/BackupImageView;
 
     const/high16 v1, 0x3f800000    # 1.0f
@@ -5571,13 +5640,13 @@
     :cond_34
     const/4 v0, 0x0
 
-    .line 1105
+    .line 1115
     iput-object v0, p0, Landroidx/recyclerview/widget/ChatListItemAnimator;->greetingsSticker:Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
 
-    .line 1106
+    .line 1116
     iput-object v0, p0, Landroidx/recyclerview/widget/ChatListItemAnimator;->chatGreetingsView:Lorg/telegram/ui/Components/ChatGreetingsView;
 
-    .line 1108
+    .line 1118
     iget-object v0, p0, Landroidx/recyclerview/widget/DefaultItemAnimator;->mPendingMoves:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -5589,7 +5658,7 @@
     :goto_41
     if-ltz v0, :cond_5f
 
-    .line 1110
+    .line 1120
     iget-object v1, p0, Landroidx/recyclerview/widget/DefaultItemAnimator;->mPendingMoves:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -5598,20 +5667,20 @@
 
     check-cast v1, Landroidx/recyclerview/widget/DefaultItemAnimator$MoveInfo;
 
-    .line 1111
+    .line 1121
     iget-object v2, v1, Landroidx/recyclerview/widget/DefaultItemAnimator$MoveInfo;->holder:Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
 
     iget-object v2, v2, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    .line 1112
+    .line 1122
     invoke-direct {p0, v2}, Landroidx/recyclerview/widget/ChatListItemAnimator;->restoreTransitionParams(Landroid/view/View;)V
 
-    .line 1113
+    .line 1123
     iget-object v1, v1, Landroidx/recyclerview/widget/DefaultItemAnimator$MoveInfo;->holder:Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
 
     invoke-virtual {p0, v1}, Landroidx/recyclerview/widget/SimpleItemAnimator;->dispatchMoveFinished(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
 
-    .line 1114
+    .line 1124
     iget-object v1, p0, Landroidx/recyclerview/widget/DefaultItemAnimator;->mPendingMoves:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
@@ -5620,7 +5689,7 @@
 
     goto :goto_41
 
-    .line 1116
+    .line 1126
     :cond_5f
     iget-object v0, p0, Landroidx/recyclerview/widget/DefaultItemAnimator;->mPendingRemovals:Ljava/util/ArrayList;
 
@@ -5633,7 +5702,7 @@
     :goto_67
     if-ltz v0, :cond_81
 
-    .line 1118
+    .line 1128
     iget-object v1, p0, Landroidx/recyclerview/widget/DefaultItemAnimator;->mPendingRemovals:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -5642,15 +5711,15 @@
 
     check-cast v1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
 
-    .line 1119
+    .line 1129
     iget-object v2, v1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     invoke-direct {p0, v2}, Landroidx/recyclerview/widget/ChatListItemAnimator;->restoreTransitionParams(Landroid/view/View;)V
 
-    .line 1120
+    .line 1130
     invoke-virtual {p0, v1}, Landroidx/recyclerview/widget/SimpleItemAnimator;->dispatchRemoveFinished(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
 
-    .line 1121
+    .line 1131
     iget-object v1, p0, Landroidx/recyclerview/widget/DefaultItemAnimator;->mPendingRemovals:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
@@ -5659,7 +5728,7 @@
 
     goto :goto_67
 
-    .line 1123
+    .line 1133
     :cond_81
     iget-object v0, p0, Landroidx/recyclerview/widget/DefaultItemAnimator;->mPendingAdditions:Ljava/util/ArrayList;
 
@@ -5672,7 +5741,7 @@
     :goto_89
     if-ltz v0, :cond_a3
 
-    .line 1125
+    .line 1135
     iget-object v1, p0, Landroidx/recyclerview/widget/DefaultItemAnimator;->mPendingAdditions:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -5681,15 +5750,15 @@
 
     check-cast v1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
 
-    .line 1126
+    .line 1136
     iget-object v2, v1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     invoke-direct {p0, v2}, Landroidx/recyclerview/widget/ChatListItemAnimator;->restoreTransitionParams(Landroid/view/View;)V
 
-    .line 1127
+    .line 1137
     invoke-virtual {p0, v1}, Landroidx/recyclerview/widget/SimpleItemAnimator;->dispatchAddFinished(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
 
-    .line 1128
+    .line 1138
     iget-object v1, p0, Landroidx/recyclerview/widget/DefaultItemAnimator;->mPendingAdditions:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
@@ -5698,7 +5767,7 @@
 
     goto :goto_89
 
-    .line 1130
+    .line 1140
     :cond_a3
     iget-object v0, p0, Landroidx/recyclerview/widget/DefaultItemAnimator;->mPendingChanges:Ljava/util/ArrayList;
 
@@ -5711,7 +5780,7 @@
     :goto_ab
     if-ltz v0, :cond_bb
 
-    .line 1132
+    .line 1142
     iget-object v1, p0, Landroidx/recyclerview/widget/DefaultItemAnimator;->mPendingChanges:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -5726,13 +5795,13 @@
 
     goto :goto_ab
 
-    .line 1134
+    .line 1144
     :cond_bb
     iget-object v0, p0, Landroidx/recyclerview/widget/DefaultItemAnimator;->mPendingChanges:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 1135
+    .line 1145
     invoke-virtual {p0}, Landroidx/recyclerview/widget/DefaultItemAnimator;->isRunning()Z
 
     move-result v0
@@ -5741,7 +5810,7 @@
 
     return-void
 
-    .line 1139
+    .line 1149
     :cond_c7
     iget-object v0, p0, Landroidx/recyclerview/widget/DefaultItemAnimator;->mMovesList:Ljava/util/ArrayList;
 
@@ -5754,7 +5823,7 @@
     :goto_cf
     if-ltz v0, :cond_107
 
-    .line 1141
+    .line 1151
     iget-object v1, p0, Landroidx/recyclerview/widget/DefaultItemAnimator;->mMovesList:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -5763,7 +5832,7 @@
 
     check-cast v1, Ljava/util/ArrayList;
 
-    .line 1142
+    .line 1152
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
     move-result v2
@@ -5773,37 +5842,37 @@
     :goto_df
     if-ltz v2, :cond_104
 
-    .line 1144
+    .line 1154
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Landroidx/recyclerview/widget/DefaultItemAnimator$MoveInfo;
 
-    .line 1145
+    .line 1155
     iget-object v4, v3, Landroidx/recyclerview/widget/DefaultItemAnimator$MoveInfo;->holder:Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
 
-    .line 1146
+    .line 1156
     iget-object v4, v4, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     invoke-direct {p0, v4}, Landroidx/recyclerview/widget/ChatListItemAnimator;->restoreTransitionParams(Landroid/view/View;)V
 
-    .line 1147
+    .line 1157
     iget-object v3, v3, Landroidx/recyclerview/widget/DefaultItemAnimator$MoveInfo;->holder:Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
 
     invoke-virtual {p0, v3}, Landroidx/recyclerview/widget/SimpleItemAnimator;->dispatchMoveFinished(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
 
-    .line 1148
+    .line 1158
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
-    .line 1149
+    .line 1159
     invoke-virtual {v1}, Ljava/util/ArrayList;->isEmpty()Z
 
     move-result v3
 
     if-eqz v3, :cond_101
 
-    .line 1150
+    .line 1160
     iget-object v3, p0, Landroidx/recyclerview/widget/DefaultItemAnimator;->mMovesList:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
@@ -5818,7 +5887,7 @@
 
     goto :goto_cf
 
-    .line 1154
+    .line 1164
     :cond_107
     iget-object v0, p0, Landroidx/recyclerview/widget/DefaultItemAnimator;->mAdditionsList:Ljava/util/ArrayList;
 
@@ -5831,7 +5900,7 @@
     :goto_10f
     if-ltz v0, :cond_143
 
-    .line 1156
+    .line 1166
     iget-object v1, p0, Landroidx/recyclerview/widget/DefaultItemAnimator;->mAdditionsList:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -5840,7 +5909,7 @@
 
     check-cast v1, Ljava/util/ArrayList;
 
-    .line 1157
+    .line 1167
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
     move-result v2
@@ -5850,32 +5919,32 @@
     :goto_11f
     if-ltz v2, :cond_140
 
-    .line 1159
+    .line 1169
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
 
-    .line 1160
+    .line 1170
     iget-object v4, v3, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     invoke-direct {p0, v4}, Landroidx/recyclerview/widget/ChatListItemAnimator;->restoreTransitionParams(Landroid/view/View;)V
 
-    .line 1161
+    .line 1171
     invoke-virtual {p0, v3}, Landroidx/recyclerview/widget/SimpleItemAnimator;->dispatchAddFinished(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
 
-    .line 1162
+    .line 1172
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
-    .line 1163
+    .line 1173
     invoke-virtual {v1}, Ljava/util/ArrayList;->isEmpty()Z
 
     move-result v3
 
     if-eqz v3, :cond_13d
 
-    .line 1164
+    .line 1174
     iget-object v3, p0, Landroidx/recyclerview/widget/DefaultItemAnimator;->mAdditionsList:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
@@ -5890,7 +5959,7 @@
 
     goto :goto_10f
 
-    .line 1168
+    .line 1178
     :cond_143
     iget-object v0, p0, Landroidx/recyclerview/widget/DefaultItemAnimator;->mChangesList:Ljava/util/ArrayList;
 
@@ -5903,7 +5972,7 @@
     :goto_14b
     if-ltz v0, :cond_177
 
-    .line 1170
+    .line 1180
     iget-object v1, p0, Landroidx/recyclerview/widget/DefaultItemAnimator;->mChangesList:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -5912,7 +5981,7 @@
 
     check-cast v1, Ljava/util/ArrayList;
 
-    .line 1171
+    .line 1181
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
     move-result v2
@@ -5922,7 +5991,7 @@
     :goto_15b
     if-ltz v2, :cond_174
 
-    .line 1173
+    .line 1183
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v3
@@ -5931,14 +6000,14 @@
 
     invoke-virtual {p0, v3}, Landroidx/recyclerview/widget/DefaultItemAnimator;->endChangeAnimationIfNecessary(Landroidx/recyclerview/widget/DefaultItemAnimator$ChangeInfo;)V
 
-    .line 1174
+    .line 1184
     invoke-virtual {v1}, Ljava/util/ArrayList;->isEmpty()Z
 
     move-result v3
 
     if-eqz v3, :cond_171
 
-    .line 1175
+    .line 1185
     iget-object v3, p0, Landroidx/recyclerview/widget/DefaultItemAnimator;->mChangesList:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
@@ -5953,28 +6022,28 @@
 
     goto :goto_14b
 
-    .line 1179
+    .line 1189
     :cond_177
     iget-object v0, p0, Landroidx/recyclerview/widget/DefaultItemAnimator;->mRemoveAnimations:Ljava/util/ArrayList;
 
     invoke-virtual {p0, v0}, Landroidx/recyclerview/widget/DefaultItemAnimator;->cancelAll(Ljava/util/List;)V
 
-    .line 1180
+    .line 1190
     iget-object v0, p0, Landroidx/recyclerview/widget/DefaultItemAnimator;->mMoveAnimations:Ljava/util/ArrayList;
 
     invoke-virtual {p0, v0}, Landroidx/recyclerview/widget/DefaultItemAnimator;->cancelAll(Ljava/util/List;)V
 
-    .line 1181
+    .line 1191
     iget-object v0, p0, Landroidx/recyclerview/widget/DefaultItemAnimator;->mAddAnimations:Ljava/util/ArrayList;
 
     invoke-virtual {p0, v0}, Landroidx/recyclerview/widget/DefaultItemAnimator;->cancelAll(Ljava/util/List;)V
 
-    .line 1182
+    .line 1192
     iget-object v0, p0, Landroidx/recyclerview/widget/DefaultItemAnimator;->mChangeAnimations:Ljava/util/ArrayList;
 
     invoke-virtual {p0, v0}, Landroidx/recyclerview/widget/DefaultItemAnimator;->cancelAll(Ljava/util/List;)V
 
-    .line 1184
+    .line 1194
     invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView$ItemAnimator;->dispatchAnimationsFinished()V
 
     return-void
@@ -5983,17 +6052,17 @@
 .method protected endChangeAnimationIfNecessary(Landroidx/recyclerview/widget/DefaultItemAnimator$ChangeInfo;Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)Z
     .registers 7
 
-    .line 1188
+    .line 1198
     sget-boolean v0, Lorg/telegram/messenger/BuildVars;->LOGS_ENABLED:Z
 
     if-eqz v0, :cond_9
 
     const-string v0, "end change if necessary"
 
-    .line 1189
+    .line 1199
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->d(Ljava/lang/String;)V
 
-    .line 1191
+    .line 1201
     :cond_9
     iget-object v0, p0, Landroidx/recyclerview/widget/ChatListItemAnimator;->animators:Ljava/util/HashMap;
 
@@ -6005,10 +6074,10 @@
 
     if-eqz v0, :cond_16
 
-    .line 1193
+    .line 1203
     invoke-virtual {v0}, Landroid/animation/Animator;->cancel()V
 
-    .line 1197
+    .line 1207
     :cond_16
     iget-object v0, p1, Landroidx/recyclerview/widget/DefaultItemAnimator$ChangeInfo;->newHolder:Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
 
@@ -6020,29 +6089,29 @@
 
     if-ne v0, p2, :cond_20
 
-    .line 1198
+    .line 1208
     iput-object v2, p1, Landroidx/recyclerview/widget/DefaultItemAnimator$ChangeInfo;->newHolder:Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
 
     goto :goto_27
 
-    .line 1199
+    .line 1209
     :cond_20
     iget-object v0, p1, Landroidx/recyclerview/widget/DefaultItemAnimator$ChangeInfo;->oldHolder:Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
 
     if-ne v0, p2, :cond_30
 
-    .line 1200
+    .line 1210
     iput-object v2, p1, Landroidx/recyclerview/widget/DefaultItemAnimator$ChangeInfo;->oldHolder:Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
 
     const/4 v3, 0x1
 
-    .line 1205
+    .line 1215
     :goto_27
     iget-object p1, p2, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     invoke-direct {p0, p1}, Landroidx/recyclerview/widget/ChatListItemAnimator;->restoreTransitionParams(Landroid/view/View;)V
 
-    .line 1206
+    .line 1216
     invoke-virtual {p0, p2, v3}, Landroidx/recyclerview/widget/SimpleItemAnimator;->dispatchChangeFinished(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;Z)V
 
     return v1
@@ -6082,7 +6151,7 @@
 
     return-void
 
-    .line 1219
+    .line 1229
     :cond_3
     iget-object v0, p1, Lorg/telegram/messenger/MessageObject$GroupedMessages;->messages:Ljava/util/ArrayList;
 
@@ -6094,14 +6163,14 @@
 
     if-nez v0, :cond_12
 
-    .line 1220
+    .line 1230
     iget-object p1, p1, Lorg/telegram/messenger/MessageObject$GroupedMessages;->transitionParams:Lorg/telegram/messenger/MessageObject$GroupedMessages$TransitionParams;
 
     iput-boolean v1, p1, Lorg/telegram/messenger/MessageObject$GroupedMessages$TransitionParams;->drawBackgroundForDeletedItems:Z
 
     goto/16 :goto_a6
 
-    .line 1222
+    .line 1232
     :cond_12
     iget-object v0, p1, Lorg/telegram/messenger/MessageObject$GroupedMessages;->transitionParams:Lorg/telegram/messenger/MessageObject$GroupedMessages$TransitionParams;
 
@@ -6121,7 +6190,7 @@
 
     if-nez v0, :cond_a1
 
-    .line 1223
+    .line 1233
     iget-object v0, p0, Landroidx/recyclerview/widget/ChatListItemAnimator;->recyclerListView:Lorg/telegram/ui/Components/RecyclerListView;
 
     invoke-virtual {v0}, Landroid/view/ViewGroup;->getChildCount()I
@@ -6133,27 +6202,27 @@
     :goto_2b
     if-ge v2, v0, :cond_a1
 
-    .line 1225
+    .line 1235
     iget-object v3, p0, Landroidx/recyclerview/widget/ChatListItemAnimator;->recyclerListView:Lorg/telegram/ui/Components/RecyclerListView;
 
     invoke-virtual {v3, v2}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v3
 
-    .line 1226
+    .line 1236
     instance-of v4, v3, Lorg/telegram/ui/Cells/ChatMessageCell;
 
     if-eqz v4, :cond_9e
 
-    .line 1227
+    .line 1237
     check-cast v3, Lorg/telegram/ui/Cells/ChatMessageCell;
 
-    .line 1228
+    .line 1238
     invoke-virtual {v3}, Lorg/telegram/ui/Cells/ChatMessageCell;->getMessageObject()Lorg/telegram/messenger/MessageObject;
 
     move-result-object v4
 
-    .line 1229
+    .line 1239
     invoke-virtual {v3}, Lorg/telegram/ui/Cells/ChatMessageCell;->getTransitionParams()Lorg/telegram/ui/Cells/ChatMessageCell$TransitionParams;
 
     move-result-object v5
@@ -6170,7 +6239,7 @@
 
     if-eqz v4, :cond_9e
 
-    .line 1230
+    .line 1240
     iget-object v0, p1, Lorg/telegram/messenger/MessageObject$GroupedMessages;->transitionParams:Lorg/telegram/messenger/MessageObject$GroupedMessages$TransitionParams;
 
     invoke-virtual {v3}, Landroid/view/ViewGroup;->getTop()I
@@ -6185,7 +6254,7 @@
 
     iput v2, v0, Lorg/telegram/messenger/MessageObject$GroupedMessages$TransitionParams;->top:I
 
-    .line 1231
+    .line 1241
     iget-object v0, p1, Lorg/telegram/messenger/MessageObject$GroupedMessages;->transitionParams:Lorg/telegram/messenger/MessageObject$GroupedMessages$TransitionParams;
 
     invoke-virtual {v3}, Landroid/view/ViewGroup;->getTop()I
@@ -6200,7 +6269,7 @@
 
     iput v2, v0, Lorg/telegram/messenger/MessageObject$GroupedMessages$TransitionParams;->bottom:I
 
-    .line 1232
+    .line 1242
     iget-object v0, p1, Lorg/telegram/messenger/MessageObject$GroupedMessages;->transitionParams:Lorg/telegram/messenger/MessageObject$GroupedMessages$TransitionParams;
 
     invoke-virtual {v3}, Landroid/view/ViewGroup;->getLeft()I
@@ -6215,7 +6284,7 @@
 
     iput v2, v0, Lorg/telegram/messenger/MessageObject$GroupedMessages$TransitionParams;->left:I
 
-    .line 1233
+    .line 1243
     iget-object v0, p1, Lorg/telegram/messenger/MessageObject$GroupedMessages;->transitionParams:Lorg/telegram/messenger/MessageObject$GroupedMessages$TransitionParams;
 
     invoke-virtual {v3}, Landroid/view/ViewGroup;->getLeft()I
@@ -6230,7 +6299,7 @@
 
     iput v2, v0, Lorg/telegram/messenger/MessageObject$GroupedMessages$TransitionParams;->right:I
 
-    .line 1234
+    .line 1244
     iget-object v0, p1, Lorg/telegram/messenger/MessageObject$GroupedMessages;->transitionParams:Lorg/telegram/messenger/MessageObject$GroupedMessages$TransitionParams;
 
     invoke-virtual {v3}, Lorg/telegram/ui/Cells/ChatMessageCell;->hasCaptionLayout()Z
@@ -6239,7 +6308,7 @@
 
     iput-boolean v2, v0, Lorg/telegram/messenger/MessageObject$GroupedMessages$TransitionParams;->drawCaptionLayout:Z
 
-    .line 1235
+    .line 1245
     iget-object v0, p1, Lorg/telegram/messenger/MessageObject$GroupedMessages;->transitionParams:Lorg/telegram/messenger/MessageObject$GroupedMessages$TransitionParams;
 
     invoke-virtual {v3}, Lorg/telegram/ui/Cells/ChatMessageCell;->isPinnedTop()Z
@@ -6248,7 +6317,7 @@
 
     iput-boolean v2, v0, Lorg/telegram/messenger/MessageObject$GroupedMessages$TransitionParams;->pinnedTop:Z
 
-    .line 1236
+    .line 1246
     iget-object v0, p1, Lorg/telegram/messenger/MessageObject$GroupedMessages;->transitionParams:Lorg/telegram/messenger/MessageObject$GroupedMessages$TransitionParams;
 
     invoke-virtual {v3}, Lorg/telegram/ui/Cells/ChatMessageCell;->isPinnedBottom()Z
@@ -6257,7 +6326,7 @@
 
     iput-boolean v2, v0, Lorg/telegram/messenger/MessageObject$GroupedMessages$TransitionParams;->pinnedBotton:Z
 
-    .line 1237
+    .line 1247
     iget-object v0, p1, Lorg/telegram/messenger/MessageObject$GroupedMessages;->transitionParams:Lorg/telegram/messenger/MessageObject$GroupedMessages$TransitionParams;
 
     iput-boolean v1, v0, Lorg/telegram/messenger/MessageObject$GroupedMessages$TransitionParams;->isNewGroup:Z
@@ -6269,7 +6338,7 @@
 
     goto :goto_2b
 
-    .line 1243
+    .line 1253
     :cond_a1
     :goto_a1
     iget-object v0, p0, Landroidx/recyclerview/widget/ChatListItemAnimator;->willChangedGroups:Ljava/util/ArrayList;
@@ -6283,7 +6352,7 @@
 .method public groupWillTransformToSingleMessage(Lorg/telegram/messenger/MessageObject$GroupedMessages;)V
     .registers 5
 
-    .line 1212
+    .line 1222
     iget-object v0, p0, Landroidx/recyclerview/widget/ChatListItemAnimator;->willRemovedGroup:Ljava/util/HashMap;
 
     iget-object v1, p1, Lorg/telegram/messenger/MessageObject$GroupedMessages;->messages:Ljava/util/ArrayList;
@@ -6312,20 +6381,20 @@
 .method protected onAllAnimationsDone()V
     .registers 3
 
-    .line 1031
+    .line 1041
     invoke-super {p0}, Landroidx/recyclerview/widget/DefaultItemAnimator;->onAllAnimationsDone()V
 
-    .line 1032
+    .line 1042
     sget-boolean v0, Lorg/telegram/messenger/BuildVars;->LOGS_ENABLED:Z
 
     if-eqz v0, :cond_c
 
     const-string v0, "all animations done"
 
-    .line 1033
+    .line 1043
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->d(Ljava/lang/String;)V
 
-    .line 1036
+    .line 1046
     :cond_c
     iget-object v0, p0, Landroidx/recyclerview/widget/ChatListItemAnimator;->recyclerListView:Lorg/telegram/ui/Components/RecyclerListView;
 
@@ -6333,7 +6402,7 @@
 
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->setClipChildren(Z)V
 
-    .line 1037
+    .line 1047
     :goto_12
     iget-object v0, p0, Landroidx/recyclerview/widget/ChatListItemAnimator;->runOnAnimationsEnd:Ljava/util/ArrayList;
 
@@ -6343,7 +6412,7 @@
 
     if-nez v0, :cond_27
 
-    .line 1038
+    .line 1048
     iget-object v0, p0, Landroidx/recyclerview/widget/ChatListItemAnimator;->runOnAnimationsEnd:Ljava/util/ArrayList;
 
     const/4 v1, 0x0
@@ -6358,7 +6427,7 @@
 
     goto :goto_12
 
-    .line 1040
+    .line 1050
     :cond_27
     invoke-direct {p0}, Landroidx/recyclerview/widget/ChatListItemAnimator;->cancelAnimators()V
 
@@ -6374,7 +6443,7 @@
 .method public onDestroy()V
     .registers 1
 
-    .line 1457
+    .line 1467
     invoke-virtual {p0}, Landroidx/recyclerview/widget/ChatListItemAnimator;->onAllAnimationsDone()V
 
     return-void
@@ -6383,15 +6452,15 @@
 .method public onGreetingStickerTransition(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;Lorg/telegram/ui/Components/ChatGreetingsView;)V
     .registers 3
 
-    .line 1480
+    .line 1490
     iput-object p1, p0, Landroidx/recyclerview/widget/ChatListItemAnimator;->greetingsSticker:Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
 
-    .line 1481
+    .line 1491
     iput-object p2, p0, Landroidx/recyclerview/widget/ChatListItemAnimator;->chatGreetingsView:Lorg/telegram/ui/Components/ChatGreetingsView;
 
     const/4 p1, 0x0
 
-    .line 1482
+    .line 1492
     iput-boolean p1, p0, Landroidx/recyclerview/widget/ChatListItemAnimator;->shouldAnimateEnterFromBottom:Z
 
     return-void
@@ -6412,67 +6481,67 @@
         }
     .end annotation
 
-    .line 1010
+    .line 1020
     invoke-super {p0, p1, p2, p3, p4}, Landroidx/recyclerview/widget/RecyclerView$ItemAnimator;->recordPreLayoutInformation(Landroidx/recyclerview/widget/RecyclerView$State;Landroidx/recyclerview/widget/RecyclerView$ViewHolder;ILjava/util/List;)Landroidx/recyclerview/widget/RecyclerView$ItemAnimator$ItemHolderInfo;
 
     move-result-object p1
 
-    .line 1011
+    .line 1021
     iget-object p2, p2, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     instance-of p3, p2, Lorg/telegram/ui/Cells/ChatMessageCell;
 
     if-eqz p3, :cond_36
 
-    .line 1012
+    .line 1022
     check-cast p2, Lorg/telegram/ui/Cells/ChatMessageCell;
 
-    .line 1013
+    .line 1023
     new-instance p3, Landroidx/recyclerview/widget/ChatListItemAnimator$ItemHolderInfoExtended;
 
     invoke-direct {p3, p0}, Landroidx/recyclerview/widget/ChatListItemAnimator$ItemHolderInfoExtended;-><init>(Landroidx/recyclerview/widget/ChatListItemAnimator;)V
 
-    .line 1014
+    .line 1024
     iget p4, p1, Landroidx/recyclerview/widget/RecyclerView$ItemAnimator$ItemHolderInfo;->left:I
 
     iput p4, p3, Landroidx/recyclerview/widget/RecyclerView$ItemAnimator$ItemHolderInfo;->left:I
 
-    .line 1015
+    .line 1025
     iget p4, p1, Landroidx/recyclerview/widget/RecyclerView$ItemAnimator$ItemHolderInfo;->top:I
 
     iput p4, p3, Landroidx/recyclerview/widget/RecyclerView$ItemAnimator$ItemHolderInfo;->top:I
 
-    .line 1016
+    .line 1026
     iget p4, p1, Landroidx/recyclerview/widget/RecyclerView$ItemAnimator$ItemHolderInfo;->right:I
 
     iput p4, p3, Landroidx/recyclerview/widget/RecyclerView$ItemAnimator$ItemHolderInfo;->right:I
 
-    .line 1017
+    .line 1027
     iget p1, p1, Landroidx/recyclerview/widget/RecyclerView$ItemAnimator$ItemHolderInfo;->bottom:I
 
     iput p1, p3, Landroidx/recyclerview/widget/RecyclerView$ItemAnimator$ItemHolderInfo;->bottom:I
 
-    .line 1019
+    .line 1029
     invoke-virtual {p2}, Lorg/telegram/ui/Cells/ChatMessageCell;->getTransitionParams()Lorg/telegram/ui/Cells/ChatMessageCell$TransitionParams;
 
     move-result-object p1
 
-    .line 1020
+    .line 1030
     iget p2, p1, Lorg/telegram/ui/Cells/ChatMessageCell$TransitionParams;->lastDrawingImageX:F
 
     iput p2, p3, Landroidx/recyclerview/widget/ChatListItemAnimator$ItemHolderInfoExtended;->imageX:F
 
-    .line 1021
+    .line 1031
     iget p2, p1, Lorg/telegram/ui/Cells/ChatMessageCell$TransitionParams;->lastDrawingImageY:F
 
     iput p2, p3, Landroidx/recyclerview/widget/ChatListItemAnimator$ItemHolderInfoExtended;->imageY:F
 
-    .line 1022
+    .line 1032
     iget p2, p1, Lorg/telegram/ui/Cells/ChatMessageCell$TransitionParams;->lastDrawingImageW:F
 
     iput p2, p3, Landroidx/recyclerview/widget/ChatListItemAnimator$ItemHolderInfoExtended;->imageWidth:F
 
-    .line 1023
+    .line 1033
     iget p1, p1, Lorg/telegram/ui/Cells/ChatMessageCell$TransitionParams;->lastDrawingImageH:F
 
     iput p1, p3, Landroidx/recyclerview/widget/ChatListItemAnimator$ItemHolderInfoExtended;->imageHeight:F
@@ -6486,17 +6555,17 @@
 .method public resetAnimation(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
     .registers 3
 
-    .line 882
+    .line 892
     sget-boolean v0, Lorg/telegram/messenger/BuildVars;->LOGS_ENABLED:Z
 
     if-eqz v0, :cond_9
 
     const-string v0, "reset animation"
 
-    .line 883
+    .line 893
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->d(Ljava/lang/String;)V
 
-    .line 886
+    .line 896
     :cond_9
     invoke-super {p0, p1}, Landroidx/recyclerview/widget/DefaultItemAnimator;->resetAnimation(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
 
@@ -6714,7 +6783,7 @@
 .method public setReversePositions(Z)V
     .registers 2
 
-    .line 1486
+    .line 1496
     iput-boolean p1, p0, Landroidx/recyclerview/widget/ChatListItemAnimator;->reversePositions:Z
 
     return-void
@@ -6723,7 +6792,7 @@
 .method public setShouldAnimateEnterFromBottom(Z)V
     .registers 2
 
-    .line 1431
+    .line 1441
     iput-boolean p1, p0, Landroidx/recyclerview/widget/ChatListItemAnimator;->shouldAnimateEnterFromBottom:Z
 
     return-void
@@ -6732,7 +6801,7 @@
 .method public willAddedFromAlpha(Landroid/view/View;)Z
     .registers 4
 
-    .line 1469
+    .line 1479
     iget-boolean v0, p0, Landroidx/recyclerview/widget/ChatListItemAnimator;->shouldAnimateEnterFromBottom:Z
 
     const/4 v1, 0x0
@@ -6741,7 +6810,7 @@
 
     return v1
 
-    .line 1472
+    .line 1482
     :cond_6
     iget-object v0, p0, Landroidx/recyclerview/widget/ChatListItemAnimator;->recyclerListView:Lorg/telegram/ui/Components/RecyclerListView;
 
@@ -6751,7 +6820,7 @@
 
     if-eqz p1, :cond_1f
 
-    .line 1474
+    .line 1484
     iget-object v0, p0, Landroidx/recyclerview/widget/DefaultItemAnimator;->mPendingAdditions:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
@@ -6778,7 +6847,7 @@
 .method public willRemoved(Landroid/view/View;)Z
     .registers 4
 
-    .line 1461
+    .line 1471
     iget-object v0, p0, Landroidx/recyclerview/widget/ChatListItemAnimator;->recyclerListView:Lorg/telegram/ui/Components/RecyclerListView;
 
     invoke-virtual {v0, p1}, Landroidx/recyclerview/widget/RecyclerView;->getChildViewHolder(Landroid/view/View;)Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
@@ -6789,7 +6858,7 @@
 
     if-eqz p1, :cond_1a
 
-    .line 1463
+    .line 1473
     iget-object v1, p0, Landroidx/recyclerview/widget/DefaultItemAnimator;->mPendingRemovals:Ljava/util/ArrayList;
 
     invoke-virtual {v1, p1}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z

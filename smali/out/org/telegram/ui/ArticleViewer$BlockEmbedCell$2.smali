@@ -30,7 +30,7 @@
 .method constructor <init>(Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;Lorg/telegram/ui/ArticleViewer;)V
     .registers 3
 
-    .line 7205
+    .line 7206
     iput-object p1, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell$2;->this$1:Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;
 
     invoke-direct {p0}, Landroid/webkit/WebChromeClient;-><init>()V
@@ -41,7 +41,7 @@
 .method private synthetic lambda$onShowCustomView$0()V
     .registers 5
 
-    .line 7221
+    .line 7222
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell$2;->this$1:Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;
 
     iget-object v0, v0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->this$0:Lorg/telegram/ui/ArticleViewer;
@@ -52,7 +52,7 @@
 
     if-eqz v0, :cond_30
 
-    .line 7222
+    .line 7223
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell$2;->this$1:Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;
 
     iget-object v0, v0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->this$0:Lorg/telegram/ui/ArticleViewer;
@@ -79,7 +79,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 7223
+    .line 7224
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell$2;->this$1:Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;
 
     iget-object v0, v0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->this$0:Lorg/telegram/ui/ArticleViewer;
@@ -101,10 +101,10 @@
 .method public onHideCustomView()V
     .registers 3
 
-    .line 7230
+    .line 7231
     invoke-super {p0}, Landroid/webkit/WebChromeClient;->onHideCustomView()V
 
-    .line 7231
+    .line 7232
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell$2;->this$1:Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;
 
     iget-object v0, v0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->this$0:Lorg/telegram/ui/ArticleViewer;
@@ -117,7 +117,7 @@
 
     return-void
 
-    .line 7234
+    .line 7235
     :cond_e
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell$2;->this$1:Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;
 
@@ -131,7 +131,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
-    .line 7235
+    .line 7236
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell$2;->this$1:Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;
 
     iget-object v0, v0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->this$0:Lorg/telegram/ui/ArticleViewer;
@@ -150,7 +150,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->removeView(Landroid/view/View;)V
 
-    .line 7236
+    .line 7237
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell$2;->this$1:Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;
 
     iget-object v0, v0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->this$0:Lorg/telegram/ui/ArticleViewer;
@@ -185,7 +185,7 @@
 
     if-nez v0, :cond_5a
 
-    .line 7237
+    .line 7238
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell$2;->this$1:Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;
 
     iget-object v0, v0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->this$0:Lorg/telegram/ui/ArticleViewer;
@@ -196,7 +196,7 @@
 
     invoke-interface {v0}, Landroid/webkit/WebChromeClient$CustomViewCallback;->onCustomViewHidden()V
 
-    .line 7239
+    .line 7240
     :cond_5a
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell$2;->this$1:Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;
 
@@ -212,7 +212,7 @@
 .method public onShowCustomView(Landroid/view/View;ILandroid/webkit/WebChromeClient$CustomViewCallback;)V
     .registers 4
 
-    .line 7209
+    .line 7210
     invoke-virtual {p0, p1, p3}, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell$2;->onShowCustomView(Landroid/view/View;Landroid/webkit/WebChromeClient$CustomViewCallback;)V
 
     return-void
@@ -221,7 +221,7 @@
 .method public onShowCustomView(Landroid/view/View;Landroid/webkit/WebChromeClient$CustomViewCallback;)V
     .registers 5
 
-    .line 7214
+    .line 7215
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell$2;->this$1:Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;
 
     iget-object v0, v0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->this$0:Lorg/telegram/ui/ArticleViewer;
@@ -232,12 +232,12 @@
 
     if-eqz v0, :cond_e
 
-    .line 7215
+    .line 7216
     invoke-interface {p2}, Landroid/webkit/WebChromeClient$CustomViewCallback;->onCustomViewHidden()V
 
     return-void
 
-    .line 7218
+    .line 7219
     :cond_e
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell$2;->this$1:Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;
 
@@ -245,14 +245,14 @@
 
     invoke-static {v0, p1}, Lorg/telegram/ui/ArticleViewer;->access$15802(Lorg/telegram/ui/ArticleViewer;Landroid/view/View;)Landroid/view/View;
 
-    .line 7219
+    .line 7220
     iget-object p1, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell$2;->this$1:Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;
 
     iget-object p1, p1, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     invoke-static {p1, p2}, Lorg/telegram/ui/ArticleViewer;->access$15902(Lorg/telegram/ui/ArticleViewer;Landroid/webkit/WebChromeClient$CustomViewCallback;)Landroid/webkit/WebChromeClient$CustomViewCallback;
 
-    .line 7220
+    .line 7221
     new-instance p1, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell$2$$ExternalSyntheticLambda0;
 
     invoke-direct {p1, p0}, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell$2$$ExternalSyntheticLambda0;-><init>(Lorg/telegram/ui/ArticleViewer$BlockEmbedCell$2;)V

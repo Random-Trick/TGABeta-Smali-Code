@@ -173,7 +173,7 @@
 
     invoke-virtual {v4, v7}, Landroid/widget/ImageView;->setScaleType(Landroid/widget/ImageView$ScaleType;)V
 
-    const v7, 0x7f0703c0
+    const v7, 0x7f0703c3
 
     .line 175
     invoke-virtual {v4, v7}, Landroid/widget/ImageView;->setImageResource(I)V
@@ -344,7 +344,7 @@
     .line 217
     iget-object v2, v0, Lorg/telegram/ui/Components/StickerMasksAlert$SearchField;->searchEditText:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
-    const v3, 0x7f0e0f92
+    const v3, 0x7f0e104e
 
     const-string v4, "SearchStickersHint"
 
@@ -362,7 +362,7 @@
     .line 219
     iget-object v2, v0, Lorg/telegram/ui/Components/StickerMasksAlert$SearchField;->searchEditText:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
-    const v3, 0x7f0e0f78
+    const v3, 0x7f0e1034
 
     const-string v4, "SearchEmojiHint"
 
@@ -382,7 +382,7 @@
     .line 221
     iget-object v2, v0, Lorg/telegram/ui/Components/StickerMasksAlert$SearchField;->searchEditText:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
-    const v3, 0x7f0e0f88
+    const v3, 0x7f0e1044
 
     const-string v4, "SearchGifsTitle"
 

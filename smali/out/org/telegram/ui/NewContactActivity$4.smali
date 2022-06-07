@@ -25,7 +25,7 @@
 .method constructor <init>(Lorg/telegram/ui/NewContactActivity;)V
     .registers 2
 
-    .line 362
+    .line 361
     iput-object p1, p0, Lorg/telegram/ui/NewContactActivity$4;->this$0:Lorg/telegram/ui/NewContactActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public afterTextChanged(Landroid/text/Editable;)V
     .registers 13
 
-    .line 375
+    .line 374
     iget-object p1, p0, Lorg/telegram/ui/NewContactActivity$4;->this$0:Lorg/telegram/ui/NewContactActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/NewContactActivity;->access$1300(Lorg/telegram/ui/NewContactActivity;)Z
@@ -49,7 +49,7 @@
 
     return-void
 
-    .line 378
+    .line 377
     :cond_9
     iget-object p1, p0, Lorg/telegram/ui/NewContactActivity$4;->this$0:Lorg/telegram/ui/NewContactActivity;
 
@@ -57,7 +57,7 @@
 
     invoke-static {p1, v0}, Lorg/telegram/ui/NewContactActivity;->access$1302(Lorg/telegram/ui/NewContactActivity;Z)Z
 
-    .line 379
+    .line 378
     iget-object p1, p0, Lorg/telegram/ui/NewContactActivity$4;->this$0:Lorg/telegram/ui/NewContactActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/NewContactActivity;->access$200(Lorg/telegram/ui/NewContactActivity;)Lorg/telegram/ui/Components/EditTextBoldCursor;
@@ -76,7 +76,7 @@
 
     move-result-object p1
 
-    .line 380
+    .line 379
     iget-object v1, p0, Lorg/telegram/ui/NewContactActivity$4;->this$0:Lorg/telegram/ui/NewContactActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/NewContactActivity;->access$200(Lorg/telegram/ui/NewContactActivity;)Lorg/telegram/ui/Components/EditTextBoldCursor;
@@ -85,7 +85,7 @@
 
     invoke-virtual {v1, p1}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
-    .line 381
+    .line 380
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v1
@@ -96,14 +96,14 @@
 
     if-nez v1, :cond_54
 
-    .line 382
+    .line 381
     iget-object p1, p0, Lorg/telegram/ui/NewContactActivity$4;->this$0:Lorg/telegram/ui/NewContactActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/NewContactActivity;->access$1400(Lorg/telegram/ui/NewContactActivity;)Landroid/widget/TextView;
 
     move-result-object p1
 
-    const v1, 0x7f0e0447
+    const v1, 0x7f0e0489
 
     const-string v4, "ChooseCountry"
 
@@ -113,7 +113,7 @@
 
     invoke-virtual {p1, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 383
+    .line 382
     iget-object p1, p0, Lorg/telegram/ui/NewContactActivity$4;->this$0:Lorg/telegram/ui/NewContactActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/NewContactActivity;->access$300(Lorg/telegram/ui/NewContactActivity;)Lorg/telegram/ui/Components/HintEditText;
@@ -122,14 +122,14 @@
 
     invoke-virtual {p1, v2}, Lorg/telegram/ui/Components/HintEditText;->setHintText(Ljava/lang/String;)V
 
-    .line 384
+    .line 383
     iget-object p1, p0, Lorg/telegram/ui/NewContactActivity$4;->this$0:Lorg/telegram/ui/NewContactActivity;
 
     invoke-static {p1, v0}, Lorg/telegram/ui/NewContactActivity;->access$1502(Lorg/telegram/ui/NewContactActivity;I)I
 
     goto/16 :goto_1bf
 
-    .line 389
+    .line 388
     :cond_54
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
@@ -139,7 +139,7 @@
 
     if-le v1, v4, :cond_de
 
-    .line 390
+    .line 389
     iget-object v1, p0, Lorg/telegram/ui/NewContactActivity$4;->this$0:Lorg/telegram/ui/NewContactActivity;
 
     invoke-static {v1, v0}, Lorg/telegram/ui/NewContactActivity;->access$1302(Lorg/telegram/ui/NewContactActivity;Z)Z
@@ -147,12 +147,12 @@
     :goto_60
     if-lt v4, v0, :cond_a6
 
-    .line 392
+    .line 391
     invoke-virtual {p1, v3, v4}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 393
+    .line 392
     iget-object v5, p0, Lorg/telegram/ui/NewContactActivity$4;->this$0:Lorg/telegram/ui/NewContactActivity;
 
     invoke-static {v5}, Lorg/telegram/ui/NewContactActivity;->access$1600(Lorg/telegram/ui/NewContactActivity;)Ljava/util/HashMap;
@@ -167,7 +167,7 @@
 
     if-eqz v5, :cond_a3
 
-    .line 396
+    .line 395
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -198,7 +198,7 @@
 
     move-result-object p1
 
-    .line 397
+    .line 396
     iget-object v4, p0, Lorg/telegram/ui/NewContactActivity$4;->this$0:Lorg/telegram/ui/NewContactActivity;
 
     invoke-static {v4}, Lorg/telegram/ui/NewContactActivity;->access$200(Lorg/telegram/ui/NewContactActivity;)Lorg/telegram/ui/Components/EditTextBoldCursor;
@@ -230,12 +230,12 @@
     :goto_a8
     if-nez v4, :cond_e0
 
-    .line 402
+    .line 401
     iget-object v1, p0, Lorg/telegram/ui/NewContactActivity$4;->this$0:Lorg/telegram/ui/NewContactActivity;
 
     invoke-static {v1, v0}, Lorg/telegram/ui/NewContactActivity;->access$1302(Lorg/telegram/ui/NewContactActivity;Z)Z
 
-    .line 403
+    .line 402
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -266,7 +266,7 @@
 
     move-result-object v1
 
-    .line 404
+    .line 403
     iget-object v5, p0, Lorg/telegram/ui/NewContactActivity$4;->this$0:Lorg/telegram/ui/NewContactActivity;
 
     invoke-static {v5}, Lorg/telegram/ui/NewContactActivity;->access$200(Lorg/telegram/ui/NewContactActivity;)Lorg/telegram/ui/Components/EditTextBoldCursor;
@@ -286,7 +286,7 @@
 
     const/4 v4, 0x0
 
-    .line 407
+    .line 406
     :cond_e0
     :goto_e0
     iget-object v5, p0, Lorg/telegram/ui/NewContactActivity$4;->this$0:Lorg/telegram/ui/NewContactActivity;
@@ -303,13 +303,13 @@
 
     const/4 v6, 0x2
 
-    const v7, 0x7f0e13eb
+    const v7, 0x7f0e14b9
 
     const-string v8, "WrongCountry"
 
     if-eqz v5, :cond_15c
 
-    .line 409
+    .line 408
     iget-object v9, p0, Lorg/telegram/ui/NewContactActivity$4;->this$0:Lorg/telegram/ui/NewContactActivity;
 
     invoke-static {v9}, Lorg/telegram/ui/NewContactActivity;->access$1700(Lorg/telegram/ui/NewContactActivity;)Ljava/util/ArrayList;
@@ -324,12 +324,12 @@
 
     if-eq v5, v9, :cond_140
 
-    .line 411
+    .line 410
     iget-object v6, p0, Lorg/telegram/ui/NewContactActivity$4;->this$0:Lorg/telegram/ui/NewContactActivity;
 
     invoke-static {v6, v0}, Lorg/telegram/ui/NewContactActivity;->access$1802(Lorg/telegram/ui/NewContactActivity;Z)Z
 
-    .line 412
+    .line 411
     iget-object v0, p0, Lorg/telegram/ui/NewContactActivity$4;->this$0:Lorg/telegram/ui/NewContactActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/NewContactActivity;->access$1400(Lorg/telegram/ui/NewContactActivity;)Landroid/widget/TextView;
@@ -350,7 +350,7 @@
 
     invoke-virtual {v0, v5}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 413
+    .line 412
     iget-object v0, p0, Lorg/telegram/ui/NewContactActivity$4;->this$0:Lorg/telegram/ui/NewContactActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/NewContactActivity;->access$1900(Lorg/telegram/ui/NewContactActivity;)Ljava/util/HashMap;
@@ -363,7 +363,7 @@
 
     check-cast p1, Ljava/lang/String;
 
-    .line 414
+    .line 413
     iget-object v0, p0, Lorg/telegram/ui/NewContactActivity$4;->this$0:Lorg/telegram/ui/NewContactActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/NewContactActivity;->access$300(Lorg/telegram/ui/NewContactActivity;)Lorg/telegram/ui/Components/HintEditText;
@@ -383,14 +383,14 @@
     :cond_137
     invoke-virtual {v0, v2}, Lorg/telegram/ui/Components/HintEditText;->setHintText(Ljava/lang/String;)V
 
-    .line 415
+    .line 414
     iget-object p1, p0, Lorg/telegram/ui/NewContactActivity$4;->this$0:Lorg/telegram/ui/NewContactActivity;
 
     invoke-static {p1, v3}, Lorg/telegram/ui/NewContactActivity;->access$1502(Lorg/telegram/ui/NewContactActivity;I)I
 
     goto :goto_177
 
-    .line 417
+    .line 416
     :cond_140
     iget-object p1, p0, Lorg/telegram/ui/NewContactActivity$4;->this$0:Lorg/telegram/ui/NewContactActivity;
 
@@ -404,7 +404,7 @@
 
     invoke-virtual {p1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 418
+    .line 417
     iget-object p1, p0, Lorg/telegram/ui/NewContactActivity$4;->this$0:Lorg/telegram/ui/NewContactActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/NewContactActivity;->access$300(Lorg/telegram/ui/NewContactActivity;)Lorg/telegram/ui/Components/HintEditText;
@@ -413,14 +413,14 @@
 
     invoke-virtual {p1, v2}, Lorg/telegram/ui/Components/HintEditText;->setHintText(Ljava/lang/String;)V
 
-    .line 419
+    .line 418
     iget-object p1, p0, Lorg/telegram/ui/NewContactActivity$4;->this$0:Lorg/telegram/ui/NewContactActivity;
 
     invoke-static {p1, v6}, Lorg/telegram/ui/NewContactActivity;->access$1502(Lorg/telegram/ui/NewContactActivity;I)I
 
     goto :goto_177
 
-    .line 422
+    .line 421
     :cond_15c
     iget-object p1, p0, Lorg/telegram/ui/NewContactActivity$4;->this$0:Lorg/telegram/ui/NewContactActivity;
 
@@ -434,7 +434,7 @@
 
     invoke-virtual {p1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 423
+    .line 422
     iget-object p1, p0, Lorg/telegram/ui/NewContactActivity$4;->this$0:Lorg/telegram/ui/NewContactActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/NewContactActivity;->access$300(Lorg/telegram/ui/NewContactActivity;)Lorg/telegram/ui/Components/HintEditText;
@@ -443,7 +443,7 @@
 
     invoke-virtual {p1, v2}, Lorg/telegram/ui/Components/HintEditText;->setHintText(Ljava/lang/String;)V
 
-    .line 424
+    .line 423
     iget-object p1, p0, Lorg/telegram/ui/NewContactActivity$4;->this$0:Lorg/telegram/ui/NewContactActivity;
 
     invoke-static {p1, v6}, Lorg/telegram/ui/NewContactActivity;->access$1502(Lorg/telegram/ui/NewContactActivity;I)I
@@ -451,7 +451,7 @@
     :goto_177
     if-nez v4, :cond_190
 
-    .line 427
+    .line 426
     iget-object p1, p0, Lorg/telegram/ui/NewContactActivity$4;->this$0:Lorg/telegram/ui/NewContactActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/NewContactActivity;->access$200(Lorg/telegram/ui/NewContactActivity;)Lorg/telegram/ui/Components/EditTextBoldCursor;
@@ -477,7 +477,7 @@
     :cond_190
     if-eqz v1, :cond_1bf
 
-    .line 430
+    .line 429
     iget-object p1, p0, Lorg/telegram/ui/NewContactActivity$4;->this$0:Lorg/telegram/ui/NewContactActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/NewContactActivity;->access$2000(Lorg/telegram/ui/NewContactActivity;)Ljava/lang/String;
@@ -486,7 +486,7 @@
 
     if-nez p1, :cond_1a3
 
-    .line 431
+    .line 430
     iget-object p1, p0, Lorg/telegram/ui/NewContactActivity$4;->this$0:Lorg/telegram/ui/NewContactActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/NewContactActivity;->access$300(Lorg/telegram/ui/NewContactActivity;)Lorg/telegram/ui/Components/HintEditText;
@@ -495,7 +495,7 @@
 
     invoke-virtual {p1}, Landroid/widget/EditText;->requestFocus()Z
 
-    .line 433
+    .line 432
     :cond_1a3
     iget-object p1, p0, Lorg/telegram/ui/NewContactActivity$4;->this$0:Lorg/telegram/ui/NewContactActivity;
 
@@ -505,7 +505,7 @@
 
     invoke-virtual {p1, v1}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
-    .line 434
+    .line 433
     iget-object p1, p0, Lorg/telegram/ui/NewContactActivity$4;->this$0:Lorg/telegram/ui/NewContactActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/NewContactActivity;->access$300(Lorg/telegram/ui/NewContactActivity;)Lorg/telegram/ui/Components/HintEditText;
@@ -524,7 +524,7 @@
 
     invoke-virtual {p1, v0}, Lorg/telegram/ui/Components/EditTextBoldCursor;->setSelection(I)V
 
-    .line 437
+    .line 436
     :cond_1bf
     :goto_1bf
     iget-object p1, p0, Lorg/telegram/ui/NewContactActivity$4;->this$0:Lorg/telegram/ui/NewContactActivity;

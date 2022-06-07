@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/LoginActivity$PhoneView;Landroid/content/Context;Lorg/telegram/ui/LoginActivity;)V
     .registers 4
 
-    .line 1651
+    .line 1675
     iput-object p1, p0, Lorg/telegram/ui/LoginActivity$PhoneView$1;->this$1:Lorg/telegram/ui/LoginActivity$PhoneView;
 
     invoke-direct {p0, p2}, Lorg/telegram/ui/Components/AnimatedPhoneNumberEditText;-><init>(Landroid/content/Context;)V
@@ -35,13 +35,13 @@
 .method protected onFocusChanged(ZILandroid/graphics/Rect;)V
     .registers 4
 
-    .line 1654
+    .line 1678
     invoke-super {p0, p1, p2, p3}, Lorg/telegram/ui/Components/EditTextBoldCursor;->onFocusChanged(ZILandroid/graphics/Rect;)V
 
-    .line 1655
+    .line 1679
     iget-object p2, p0, Lorg/telegram/ui/LoginActivity$PhoneView$1;->this$1:Lorg/telegram/ui/LoginActivity$PhoneView;
 
-    invoke-static {p2}, Lorg/telegram/ui/LoginActivity$PhoneView;->access$2500(Lorg/telegram/ui/LoginActivity$PhoneView;)Lorg/telegram/ui/Components/OutlineTextContainerView;
+    invoke-static {p2}, Lorg/telegram/ui/LoginActivity$PhoneView;->access$2600(Lorg/telegram/ui/LoginActivity$PhoneView;)Lorg/telegram/ui/Components/OutlineTextContainerView;
 
     move-result-object p2
 
@@ -49,7 +49,7 @@
 
     iget-object p3, p0, Lorg/telegram/ui/LoginActivity$PhoneView$1;->this$1:Lorg/telegram/ui/LoginActivity$PhoneView;
 
-    invoke-static {p3}, Lorg/telegram/ui/LoginActivity$PhoneView;->access$2400(Lorg/telegram/ui/LoginActivity$PhoneView;)Lorg/telegram/ui/Components/AnimatedPhoneNumberEditText;
+    invoke-static {p3}, Lorg/telegram/ui/LoginActivity$PhoneView;->access$2500(Lorg/telegram/ui/LoginActivity$PhoneView;)Lorg/telegram/ui/Components/AnimatedPhoneNumberEditText;
 
     move-result-object p3
 
@@ -75,7 +75,7 @@
 
     if-eqz p1, :cond_2c
 
-    .line 1658
+    .line 1682
     iget-object p1, p0, Lorg/telegram/ui/LoginActivity$PhoneView$1;->this$1:Lorg/telegram/ui/LoginActivity$PhoneView;
 
     iget-object p1, p1, Lorg/telegram/ui/LoginActivity$PhoneView;->this$0:Lorg/telegram/ui/LoginActivity;

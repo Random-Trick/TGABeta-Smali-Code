@@ -30,7 +30,7 @@
 .method private constructor <init>()V
     .registers 1
 
-    .line 519
+    .line 666
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -39,7 +39,7 @@
 .method synthetic constructor <init>(Lorg/telegram/messenger/MessagesController$1;)V
     .registers 2
 
-    .line 519
+    .line 666
     invoke-direct {p0}, Lorg/telegram/messenger/MessagesController$ReadTask;-><init>()V
 
     return-void

@@ -49,7 +49,7 @@
 .method constructor <init>(Lorg/telegram/ui/ChatActivity;)V
     .registers 2
 
-    .line 6356
+    .line 6446
     iput-object p1, p0, Lorg/telegram/ui/ChatActivity$24;->this$0:Lorg/telegram/ui/ChatActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -62,19 +62,19 @@
 
     if-nez p1, :cond_c
 
-    .line 6363
+    .line 6453
     iget-object p1, p0, Lorg/telegram/ui/ChatActivity$24;->this$0:Lorg/telegram/ui/ChatActivity;
 
     const/4 v0, 0x0
 
-    invoke-static {p1, v0}, Lorg/telegram/ui/ChatActivity;->access$23702(Lorg/telegram/ui/ChatActivity;Z)Z
+    invoke-static {p1, v0}, Lorg/telegram/ui/ChatActivity;->access$23802(Lorg/telegram/ui/ChatActivity;Z)Z
 
-    .line 6364
+    .line 6454
     invoke-direct {p0}, Lorg/telegram/ui/ChatActivity$24;->loadLastUnreadMention()V
 
     goto :goto_17
 
-    .line 6366
+    .line 6456
     :cond_c
     iget-object v1, p0, Lorg/telegram/ui/ChatActivity$24;->this$0:Lorg/telegram/ui/ChatActivity;
 
@@ -99,7 +99,7 @@
 .method private synthetic lambda$loadLastUnreadMention$1(Lorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/TLRPC$TL_error;Lorg/telegram/messenger/MessagesStorage;)V
     .registers 13
 
-    .line 6376
+    .line 6466
     check-cast p1, Lorg/telegram/tgnet/TLRPC$messages_Messages;
 
     const/4 v0, 0x1
@@ -108,7 +108,7 @@
 
     if-nez p2, :cond_43
 
-    .line 6377
+    .line 6467
     iget-object p2, p1, Lorg/telegram/tgnet/TLRPC$messages_Messages;->messages:Ljava/util/ArrayList;
 
     invoke-virtual {p2}, Ljava/util/ArrayList;->isEmpty()Z
@@ -119,7 +119,7 @@
 
     goto :goto_43
 
-    .line 6392
+    .line 6482
     :cond_f
     iget-object p1, p1, Lorg/telegram/tgnet/TLRPC$messages_Messages;->messages:Ljava/util/ArrayList;
 
@@ -131,7 +131,7 @@
 
     iget v3, p1, Lorg/telegram/tgnet/TLRPC$Message;->id:I
 
-    .line 6393
+    .line 6483
     iget-object p1, p0, Lorg/telegram/ui/ChatActivity$24;->this$0:Lorg/telegram/ui/ChatActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/ChatActivity;->access$4600(Lorg/telegram/ui/ChatActivity;)[Landroid/util/SparseArray;
@@ -146,7 +146,7 @@
 
     check-cast p1, Lorg/telegram/messenger/MessageObject;
 
-    .line 6394
+    .line 6484
     iget-object p2, p0, Lorg/telegram/ui/ChatActivity$24;->this$0:Lorg/telegram/ui/ChatActivity;
 
     invoke-static {p2}, Lorg/telegram/ui/ChatActivity;->access$500(Lorg/telegram/ui/ChatActivity;)J
@@ -157,15 +157,15 @@
 
     if-eqz p1, :cond_38
 
-    .line 6396
+    .line 6486
     iget-object p1, p1, Lorg/telegram/messenger/MessageObject;->messageOwner:Lorg/telegram/tgnet/TLRPC$Message;
 
     iput-boolean v0, p1, Lorg/telegram/tgnet/TLRPC$Message;->media_unread:Z
 
-    .line 6397
+    .line 6487
     iput-boolean v0, p1, Lorg/telegram/tgnet/TLRPC$Message;->mentioned:Z
 
-    .line 6399
+    .line 6489
     :cond_38
     iget-object v2, p0, Lorg/telegram/ui/ChatActivity$24;->this$0:Lorg/telegram/ui/ChatActivity;
 
@@ -187,22 +187,22 @@
     :goto_43
     if-eqz p1, :cond_4d
 
-    .line 6379
+    .line 6469
     iget-object p2, p0, Lorg/telegram/ui/ChatActivity$24;->this$0:Lorg/telegram/ui/ChatActivity;
 
     iget p1, p1, Lorg/telegram/tgnet/TLRPC$messages_Messages;->count:I
 
-    invoke-static {p2, p1}, Lorg/telegram/ui/ChatActivity;->access$23802(Lorg/telegram/ui/ChatActivity;I)I
+    invoke-static {p2, p1}, Lorg/telegram/ui/ChatActivity;->access$23902(Lorg/telegram/ui/ChatActivity;I)I
 
     goto :goto_52
 
-    .line 6381
+    .line 6471
     :cond_4d
     iget-object p1, p0, Lorg/telegram/ui/ChatActivity$24;->this$0:Lorg/telegram/ui/ChatActivity;
 
-    invoke-static {p1, v1}, Lorg/telegram/ui/ChatActivity;->access$23802(Lorg/telegram/ui/ChatActivity;I)I
+    invoke-static {p1, v1}, Lorg/telegram/ui/ChatActivity;->access$23902(Lorg/telegram/ui/ChatActivity;I)I
 
-    .line 6383
+    .line 6473
     :goto_52
     iget-object p1, p0, Lorg/telegram/ui/ChatActivity$24;->this$0:Lorg/telegram/ui/ChatActivity;
 
@@ -212,38 +212,38 @@
 
     iget-object v2, p0, Lorg/telegram/ui/ChatActivity$24;->this$0:Lorg/telegram/ui/ChatActivity;
 
-    invoke-static {v2}, Lorg/telegram/ui/ChatActivity;->access$23800(Lorg/telegram/ui/ChatActivity;)I
+    invoke-static {v2}, Lorg/telegram/ui/ChatActivity;->access$23900(Lorg/telegram/ui/ChatActivity;)I
 
     move-result v2
 
     invoke-virtual {p3, p1, p2, v2}, Lorg/telegram/messenger/MessagesStorage;->resetMentionsCount(JI)V
 
-    .line 6384
+    .line 6474
     iget-object p1, p0, Lorg/telegram/ui/ChatActivity$24;->this$0:Lorg/telegram/ui/ChatActivity;
 
-    invoke-static {p1}, Lorg/telegram/ui/ChatActivity;->access$23800(Lorg/telegram/ui/ChatActivity;)I
+    invoke-static {p1}, Lorg/telegram/ui/ChatActivity;->access$23900(Lorg/telegram/ui/ChatActivity;)I
 
     move-result p1
 
     if-nez p1, :cond_74
 
-    .line 6385
+    .line 6475
     iget-object p1, p0, Lorg/telegram/ui/ChatActivity$24;->this$0:Lorg/telegram/ui/ChatActivity;
 
-    invoke-static {p1, v0}, Lorg/telegram/ui/ChatActivity;->access$23702(Lorg/telegram/ui/ChatActivity;Z)Z
+    invoke-static {p1, v0}, Lorg/telegram/ui/ChatActivity;->access$23802(Lorg/telegram/ui/ChatActivity;Z)Z
 
-    .line 6386
+    .line 6476
     iget-object p1, p0, Lorg/telegram/ui/ChatActivity$24;->this$0:Lorg/telegram/ui/ChatActivity;
 
-    invoke-static {p1, v1, v0}, Lorg/telegram/ui/ChatActivity;->access$23900(Lorg/telegram/ui/ChatActivity;ZZ)V
+    invoke-static {p1, v1, v0}, Lorg/telegram/ui/ChatActivity;->access$24000(Lorg/telegram/ui/ChatActivity;ZZ)V
 
     goto :goto_94
 
-    .line 6388
+    .line 6478
     :cond_74
     iget-object p1, p0, Lorg/telegram/ui/ChatActivity$24;->this$0:Lorg/telegram/ui/ChatActivity;
 
-    invoke-static {p1}, Lorg/telegram/ui/ChatActivity;->access$24000(Lorg/telegram/ui/ChatActivity;)Lorg/telegram/ui/ActionBar/SimpleTextView;
+    invoke-static {p1}, Lorg/telegram/ui/ChatActivity;->access$24100(Lorg/telegram/ui/ChatActivity;)Lorg/telegram/ui/ActionBar/SimpleTextView;
 
     move-result-object p1
 
@@ -251,7 +251,7 @@
 
     iget-object p3, p0, Lorg/telegram/ui/ChatActivity$24;->this$0:Lorg/telegram/ui/ChatActivity;
 
-    invoke-static {p3}, Lorg/telegram/ui/ChatActivity;->access$23800(Lorg/telegram/ui/ChatActivity;)I
+    invoke-static {p3}, Lorg/telegram/ui/ChatActivity;->access$23900(Lorg/telegram/ui/ChatActivity;)I
 
     move-result p3
 
@@ -269,7 +269,7 @@
 
     invoke-virtual {p1, p2}, Lorg/telegram/ui/ActionBar/SimpleTextView;->setText(Ljava/lang/CharSequence;)Z
 
-    .line 6389
+    .line 6479
     invoke-direct {p0}, Lorg/telegram/ui/ChatActivity$24;->loadLastUnreadMention()V
 
     :goto_94
@@ -279,7 +279,7 @@
 .method private synthetic lambda$loadLastUnreadMention$2(Lorg/telegram/messenger/MessagesStorage;Lorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/TLRPC$TL_error;)V
     .registers 5
 
-    .line 6375
+    .line 6465
     new-instance v0, Lorg/telegram/ui/ChatActivity$24$$ExternalSyntheticLambda0;
 
     invoke-direct {v0, p0, p2, p3, p1}, Lorg/telegram/ui/ChatActivity$24$$ExternalSyntheticLambda0;-><init>(Lorg/telegram/ui/ChatActivity$24;Lorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/TLRPC$TL_error;Lorg/telegram/messenger/MessagesStorage;)V
@@ -292,23 +292,23 @@
 .method private loadLastUnreadMention()V
     .registers 7
 
-    .line 6359
+    .line 6449
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$24;->this$0:Lorg/telegram/ui/ChatActivity;
 
     const/4 v1, 0x1
 
-    invoke-static {v0, v1}, Lorg/telegram/ui/ChatActivity;->access$1302(Lorg/telegram/ui/ChatActivity;Z)Z
+    invoke-static {v0, v1}, Lorg/telegram/ui/ChatActivity;->access$1402(Lorg/telegram/ui/ChatActivity;Z)Z
 
-    .line 6360
+    .line 6450
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$24;->this$0:Lorg/telegram/ui/ChatActivity;
 
-    invoke-static {v0}, Lorg/telegram/ui/ChatActivity;->access$23700(Lorg/telegram/ui/ChatActivity;)Z
+    invoke-static {v0}, Lorg/telegram/ui/ChatActivity;->access$23800(Lorg/telegram/ui/ChatActivity;)Z
 
     move-result v0
 
     if-eqz v0, :cond_23
 
-    .line 6361
+    .line 6451
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$24;->this$0:Lorg/telegram/ui/ChatActivity;
 
     invoke-virtual {v0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getMessagesStorage()Lorg/telegram/messenger/MessagesStorage;
@@ -329,7 +329,7 @@
 
     goto :goto_59
 
-    .line 6370
+    .line 6460
     :cond_23
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$24;->this$0:Lorg/telegram/ui/ChatActivity;
 
@@ -337,12 +337,12 @@
 
     move-result-object v0
 
-    .line 6371
+    .line 6461
     new-instance v2, Lorg/telegram/tgnet/TLRPC$TL_messages_getUnreadMentions;
 
     invoke-direct {v2}, Lorg/telegram/tgnet/TLRPC$TL_messages_getUnreadMentions;-><init>()V
 
-    .line 6372
+    .line 6462
     iget-object v3, p0, Lorg/telegram/ui/ChatActivity$24;->this$0:Lorg/telegram/ui/ChatActivity;
 
     invoke-virtual {v3}, Lorg/telegram/ui/ActionBar/BaseFragment;->getMessagesController()Lorg/telegram/messenger/MessagesController;
@@ -361,13 +361,13 @@
 
     iput-object v3, v2, Lorg/telegram/tgnet/TLRPC$TL_messages_getUnreadMentions;->peer:Lorg/telegram/tgnet/TLRPC$InputPeer;
 
-    .line 6373
+    .line 6463
     iput v1, v2, Lorg/telegram/tgnet/TLRPC$TL_messages_getUnreadMentions;->limit:I
 
-    .line 6374
+    .line 6464
     iget-object v3, p0, Lorg/telegram/ui/ChatActivity$24;->this$0:Lorg/telegram/ui/ChatActivity;
 
-    invoke-static {v3}, Lorg/telegram/ui/ChatActivity;->access$23800(Lorg/telegram/ui/ChatActivity;)I
+    invoke-static {v3}, Lorg/telegram/ui/ChatActivity;->access$23900(Lorg/telegram/ui/ChatActivity;)I
 
     move-result v3
 
@@ -375,7 +375,7 @@
 
     iput v3, v2, Lorg/telegram/tgnet/TLRPC$TL_messages_getUnreadMentions;->add_offset:I
 
-    .line 6375
+    .line 6465
     iget-object v1, p0, Lorg/telegram/ui/ChatActivity$24;->this$0:Lorg/telegram/ui/ChatActivity;
 
     invoke-virtual {v1}, Lorg/telegram/ui/ActionBar/BaseFragment;->getConnectionsManager()Lorg/telegram/tgnet/ConnectionsManager;
@@ -397,7 +397,7 @@
 .method public onClick(Landroid/view/View;)V
     .registers 2
 
-    .line 6407
+    .line 6497
     invoke-direct {p0}, Lorg/telegram/ui/ChatActivity$24;->loadLastUnreadMention()V
 
     return-void

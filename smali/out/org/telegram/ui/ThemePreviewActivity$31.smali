@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/ThemePreviewActivity;)V
     .registers 2
 
-    .line 3480
+    .line 3470
     iput-object p1, p0, Lorg/telegram/ui/ThemePreviewActivity$31;->this$0:Lorg/telegram/ui/ThemePreviewActivity;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -35,7 +35,7 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .registers 3
 
-    .line 3483
+    .line 3473
     iget-object p1, p0, Lorg/telegram/ui/ThemePreviewActivity$31;->this$0:Lorg/telegram/ui/ThemePreviewActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/ThemePreviewActivity;->access$4800(Lorg/telegram/ui/ThemePreviewActivity;)Landroid/widget/FrameLayout;
@@ -48,7 +48,7 @@
 
     if-nez p1, :cond_16
 
-    .line 3484
+    .line 3474
     iget-object p1, p0, Lorg/telegram/ui/ThemePreviewActivity$31;->this$0:Lorg/telegram/ui/ThemePreviewActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/ThemePreviewActivity;->access$4800(Lorg/telegram/ui/ThemePreviewActivity;)Landroid/widget/FrameLayout;
@@ -59,7 +59,7 @@
 
     invoke-virtual {p1, v0}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
-    .line 3486
+    .line 3476
     :cond_16
     iget-object p1, p0, Lorg/telegram/ui/ThemePreviewActivity$31;->this$0:Lorg/telegram/ui/ThemePreviewActivity;
 

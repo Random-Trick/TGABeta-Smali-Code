@@ -24,7 +24,7 @@
 .method constructor <init>(Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell$3;)V
     .registers 2
 
-    .line 8423
+    .line 8424
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -33,7 +33,7 @@
 .method static synthetic access$18100(Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell$3$ObjectContainer;)Landroid/view/View;
     .registers 1
 
-    .line 8423
+    .line 8424
     iget-object p0, p0, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell$3$ObjectContainer;->view:Landroid/view/View;
 
     return-object p0
@@ -42,7 +42,7 @@
 .method static synthetic access$18102(Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell$3$ObjectContainer;Landroid/view/View;)Landroid/view/View;
     .registers 2
 
-    .line 8423
+    .line 8424
     iput-object p1, p0, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell$3$ObjectContainer;->view:Landroid/view/View;
 
     return-object p1
@@ -51,7 +51,7 @@
 .method static synthetic access$18200(Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell$3$ObjectContainer;)Lorg/telegram/tgnet/TLRPC$PageBlock;
     .registers 1
 
-    .line 8423
+    .line 8424
     iget-object p0, p0, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell$3$ObjectContainer;->block:Lorg/telegram/tgnet/TLRPC$PageBlock;
 
     return-object p0
@@ -60,7 +60,7 @@
 .method static synthetic access$18202(Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell$3$ObjectContainer;Lorg/telegram/tgnet/TLRPC$PageBlock;)Lorg/telegram/tgnet/TLRPC$PageBlock;
     .registers 2
 
-    .line 8423
+    .line 8424
     iput-object p1, p0, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell$3$ObjectContainer;->block:Lorg/telegram/tgnet/TLRPC$PageBlock;
 
     return-object p1

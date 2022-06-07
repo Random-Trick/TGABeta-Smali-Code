@@ -120,14 +120,6 @@
 
 
 # direct methods
-.method public static synthetic $r8$lambda$0XIa_15jJkz8wwBN3VhCKBQ-fcU(Lorg/telegram/ui/ChatEditTypeActivity;Ljava/lang/String;Lorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/TLRPC$TL_error;)V
-    .registers 4
-
-    invoke-direct {p0, p1, p2, p3}, Lorg/telegram/ui/ChatEditTypeActivity;->lambda$checkUserName$15(Ljava/lang/String;Lorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/TLRPC$TL_error;)V
-
-    return-void
-.end method
-
 .method public static synthetic $r8$lambda$3vstlOeQMpL2JMMrrag1kUZh2Wk(Lorg/telegram/ui/ChatEditTypeActivity;Landroid/view/View;)V
     .registers 2
 
@@ -136,18 +128,26 @@
     return-void
 .end method
 
-.method public static synthetic $r8$lambda$6F0NgMtM-PV3mxSpLMUpCqattG8(Lorg/telegram/ui/ChatEditTypeActivity;Lorg/telegram/tgnet/TLRPC$TL_error;Lorg/telegram/tgnet/TLObject;Z)V
-    .registers 4
+.method public static synthetic $r8$lambda$A2-VVHJoMwC3jOqZT4n7Ubb_oGM(Lorg/telegram/ui/ChatEditTypeActivity;J)V
+    .registers 3
 
-    invoke-direct {p0, p1, p2, p3}, Lorg/telegram/ui/ChatEditTypeActivity;->lambda$generateLink$17(Lorg/telegram/tgnet/TLRPC$TL_error;Lorg/telegram/tgnet/TLObject;Z)V
+    invoke-direct {p0, p1, p2}, Lorg/telegram/ui/ChatEditTypeActivity;->lambda$trySetUsername$8(J)V
 
     return-void
 .end method
 
-.method public static synthetic $r8$lambda$CB82ipavEjYHwwR1yXLa0iLPwMo(Lorg/telegram/ui/ChatEditTypeActivity;J)V
-    .registers 3
+.method public static synthetic $r8$lambda$Byrmh8zPThuI9UpZuScEF_ZMGAk(Lorg/telegram/ui/ChatEditTypeActivity;)V
+    .registers 1
 
-    invoke-direct {p0, p1, p2}, Lorg/telegram/ui/ChatEditTypeActivity;->lambda$tryUpdateJoinSettings$6(J)V
+    invoke-direct {p0}, Lorg/telegram/ui/ChatEditTypeActivity;->lambda$showPremiumIncreaseLimitDialog$6()V
+
+    return-void
+.end method
+
+.method public static synthetic $r8$lambda$CWUttotE9TWBrekaO3SMCV1Oq48(Lorg/telegram/ui/ChatEditTypeActivity;Landroid/view/View;)V
+    .registers 2
+
+    invoke-direct {p0, p1}, Lorg/telegram/ui/ChatEditTypeActivity;->lambda$loadAdminedChannels$12(Landroid/view/View;)V
 
     return-void
 .end method
@@ -160,10 +160,26 @@
     return-void
 .end method
 
-.method public static synthetic $r8$lambda$JZ6-vi6NUzQIVVBOWE5RS7odBaU(Lorg/telegram/ui/ChatEditTypeActivity;Lorg/telegram/tgnet/TLRPC$Chat;Landroid/content/DialogInterface;I)V
+.method public static synthetic $r8$lambda$GaSUv-MMZ-0ymuAkYWxhknGOfYU(Lorg/telegram/ui/ChatEditTypeActivity;Ljava/lang/String;Lorg/telegram/tgnet/TLRPC$TL_error;Lorg/telegram/tgnet/TLObject;)V
     .registers 4
 
-    invoke-direct {p0, p1, p2, p3}, Lorg/telegram/ui/ChatEditTypeActivity;->lambda$loadAdminedChannels$10(Lorg/telegram/tgnet/TLRPC$Chat;Landroid/content/DialogInterface;I)V
+    invoke-direct {p0, p1, p2, p3}, Lorg/telegram/ui/ChatEditTypeActivity;->lambda$checkUserName$15(Ljava/lang/String;Lorg/telegram/tgnet/TLRPC$TL_error;Lorg/telegram/tgnet/TLObject;)V
+
+    return-void
+.end method
+
+.method public static synthetic $r8$lambda$HhvbR674PUyOfIs_lwtdCY2JYG8(Lorg/telegram/ui/ChatEditTypeActivity;Lorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/TLRPC$TL_error;)V
+    .registers 3
+
+    invoke-direct {p0, p1, p2}, Lorg/telegram/ui/ChatEditTypeActivity;->lambda$loadAdminedChannels$10(Lorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/TLRPC$TL_error;)V
+
+    return-void
+.end method
+
+.method public static synthetic $r8$lambda$LkQEd9MFd1mkk5OWnZ22yIC_014(Lorg/telegram/ui/ChatEditTypeActivity;J)V
+    .registers 3
+
+    invoke-direct {p0, p1, p2}, Lorg/telegram/ui/ChatEditTypeActivity;->lambda$tryUpdateJoinSettings$7(J)V
 
     return-void
 .end method
@@ -176,34 +192,18 @@
     return-void
 .end method
 
-.method public static synthetic $r8$lambda$OXaOVEF-i9kh8Q_uqRh1TzpQS0s(Lorg/telegram/ui/ChatEditTypeActivity;)V
+.method public static synthetic $r8$lambda$NfRfMml6n8pva6IOGjubIGZeXC8(Lorg/telegram/ui/ChatEditTypeActivity;)V
     .registers 1
 
-    invoke-direct {p0}, Lorg/telegram/ui/ChatEditTypeActivity;->lambda$getThemeDescriptions$19()V
+    invoke-direct {p0}, Lorg/telegram/ui/ChatEditTypeActivity;->lambda$getThemeDescriptions$20()V
 
     return-void
 .end method
 
-.method public static synthetic $r8$lambda$QkEYqWUp5pjggvgRF7nhiFH3yF8(Lorg/telegram/ui/ChatEditTypeActivity;Landroid/view/View;)V
-    .registers 2
-
-    invoke-direct {p0, p1}, Lorg/telegram/ui/ChatEditTypeActivity;->lambda$loadAdminedChannels$11(Landroid/view/View;)V
-
-    return-void
-.end method
-
-.method public static synthetic $r8$lambda$SkU9BcigiRbqTLd7dv0pP-ezDHU(Lorg/telegram/ui/ChatEditTypeActivity;Ljava/lang/String;Lorg/telegram/tgnet/TLRPC$TL_error;Lorg/telegram/tgnet/TLObject;)V
-    .registers 4
-
-    invoke-direct {p0, p1, p2, p3}, Lorg/telegram/ui/ChatEditTypeActivity;->lambda$checkUserName$14(Ljava/lang/String;Lorg/telegram/tgnet/TLRPC$TL_error;Lorg/telegram/tgnet/TLObject;)V
-
-    return-void
-.end method
-
-.method public static synthetic $r8$lambda$TdkdG7Pz1LbG6Q4rOYL5q9unDOw(Lorg/telegram/ui/ChatEditTypeActivity;Lorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/TLRPC$TL_error;)V
+.method public static synthetic $r8$lambda$S-jkvELS0lG-ip7o8Jd8EWEcXVM(Lorg/telegram/ui/ChatEditTypeActivity;Lorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/TLRPC$TL_error;)V
     .registers 3
 
-    invoke-direct {p0, p1, p2}, Lorg/telegram/ui/ChatEditTypeActivity;->lambda$loadAdminedChannels$13(Lorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/TLRPC$TL_error;)V
+    invoke-direct {p0, p1, p2}, Lorg/telegram/ui/ChatEditTypeActivity;->lambda$loadAdminedChannels$14(Lorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/TLRPC$TL_error;)V
 
     return-void
 .end method
@@ -224,10 +224,10 @@
     return-void
 .end method
 
-.method public static synthetic $r8$lambda$W1Tft66kF3JsFjMvpq8EtZPgHzA(Lorg/telegram/ui/ChatEditTypeActivity;Lorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/TLRPC$TL_error;)V
-    .registers 3
+.method public static synthetic $r8$lambda$ZdLs0BkWhvMBwHPEpGvLeigQc6g(Lorg/telegram/ui/ChatEditTypeActivity;Ljava/lang/String;)V
+    .registers 2
 
-    invoke-direct {p0, p1, p2}, Lorg/telegram/ui/ChatEditTypeActivity;->lambda$loadAdminedChannels$9(Lorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/TLRPC$TL_error;)V
+    invoke-direct {p0, p1}, Lorg/telegram/ui/ChatEditTypeActivity;->lambda$checkUserName$17(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -240,42 +240,50 @@
     return-void
 .end method
 
-.method public static synthetic $r8$lambda$g129Mo0WjmGvSkOUlHfbGRk0Yzg(Lorg/telegram/ui/ChatEditTypeActivity;)V
-    .registers 1
-
-    invoke-direct {p0}, Lorg/telegram/ui/ChatEditTypeActivity;->lambda$loadAdminedChannels$8()V
-
-    return-void
-.end method
-
-.method public static synthetic $r8$lambda$iKMlZpaxglFgV2I3HlpmDtNYpqI(Lorg/telegram/ui/ChatEditTypeActivity;ZLorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/TLRPC$TL_error;)V
+.method public static synthetic $r8$lambda$dIQwSZkfuttECmtN0pHM-lcLBfM(Lorg/telegram/ui/ChatEditTypeActivity;Lorg/telegram/tgnet/TLRPC$Chat;Landroid/content/DialogInterface;I)V
     .registers 4
 
-    invoke-direct {p0, p1, p2, p3}, Lorg/telegram/ui/ChatEditTypeActivity;->lambda$generateLink$18(ZLorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/TLRPC$TL_error;)V
+    invoke-direct {p0, p1, p2, p3}, Lorg/telegram/ui/ChatEditTypeActivity;->lambda$loadAdminedChannels$11(Lorg/telegram/tgnet/TLRPC$Chat;Landroid/content/DialogInterface;I)V
 
     return-void
 .end method
 
-.method public static synthetic $r8$lambda$iNQ5skdagZAmF-_WrW9JuA43rgI(Lorg/telegram/ui/ChatEditTypeActivity;J)V
-    .registers 3
-
-    invoke-direct {p0, p1, p2}, Lorg/telegram/ui/ChatEditTypeActivity;->lambda$trySetUsername$7(J)V
-
-    return-void
-.end method
-
-.method public static synthetic $r8$lambda$o2WT-NKDg3rUSd9wPM0Fc0son5w(Lorg/telegram/ui/ChatEditTypeActivity;Ljava/lang/String;)V
+.method public static synthetic $r8$lambda$jA9UivD9X1tDOZoP45v7Fl_JP1c(Lorg/telegram/ui/ChatEditTypeActivity;Lorg/telegram/tgnet/TLObject;)V
     .registers 2
 
-    invoke-direct {p0, p1}, Lorg/telegram/ui/ChatEditTypeActivity;->lambda$checkUserName$16(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Lorg/telegram/ui/ChatEditTypeActivity;->lambda$loadAdminedChannels$13(Lorg/telegram/tgnet/TLObject;)V
 
     return-void
 .end method
 
-.method public static synthetic $r8$lambda$q08M2crGtmZAtZ1uTDjrcZAPUt4(Lorg/telegram/ui/ChatEditTypeActivity;Lorg/telegram/tgnet/TLObject;)V
-    .registers 2
+.method public static synthetic $r8$lambda$qABlPir9_TN78wf29MkaXCwPvaI(Lorg/telegram/ui/ChatEditTypeActivity;ZLorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/TLRPC$TL_error;)V
+    .registers 4
 
-    invoke-direct {p0, p1}, Lorg/telegram/ui/ChatEditTypeActivity;->lambda$loadAdminedChannels$12(Lorg/telegram/tgnet/TLObject;)V
+    invoke-direct {p0, p1, p2, p3}, Lorg/telegram/ui/ChatEditTypeActivity;->lambda$generateLink$19(ZLorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/TLRPC$TL_error;)V
+
+    return-void
+.end method
+
+.method public static synthetic $r8$lambda$rrlSdTN4Og3GXImczbll23jaE3Y(Lorg/telegram/ui/ChatEditTypeActivity;)V
+    .registers 1
+
+    invoke-direct {p0}, Lorg/telegram/ui/ChatEditTypeActivity;->lambda$loadAdminedChannels$9()V
+
+    return-void
+.end method
+
+.method public static synthetic $r8$lambda$sAG6gv8kmWI4mNcXMcbZPdD2UXA(Lorg/telegram/ui/ChatEditTypeActivity;Lorg/telegram/tgnet/TLRPC$TL_error;Lorg/telegram/tgnet/TLObject;Z)V
+    .registers 4
+
+    invoke-direct {p0, p1, p2, p3}, Lorg/telegram/ui/ChatEditTypeActivity;->lambda$generateLink$18(Lorg/telegram/tgnet/TLRPC$TL_error;Lorg/telegram/tgnet/TLObject;Z)V
+
+    return-void
+.end method
+
+.method public static synthetic $r8$lambda$sBYiuvx3UWCkfE42UXgbJiD22go(Lorg/telegram/ui/ChatEditTypeActivity;Ljava/lang/String;Lorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/TLRPC$TL_error;)V
+    .registers 4
+
+    invoke-direct {p0, p1, p2, p3}, Lorg/telegram/ui/ChatEditTypeActivity;->lambda$checkUserName$16(Ljava/lang/String;Lorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/TLRPC$TL_error;)V
 
     return-void
 .end method
@@ -283,32 +291,32 @@
 .method public constructor <init>(JZ)V
     .registers 5
 
-    .line 130
+    .line 125
     invoke-direct {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;-><init>()V
 
     const/4 v0, 0x1
 
-    .line 109
+    .line 104
     iput-boolean v0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->canCreatePublic:Z
 
-    .line 112
+    .line 107
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->adminedChannelCells:Ljava/util/ArrayList;
 
-    .line 125
+    .line 120
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->usersMap:Ljava/util/HashMap;
 
-    .line 131
+    .line 126
     iput-wide p1, p0, Lorg/telegram/ui/ChatEditTypeActivity;->chatId:J
 
-    .line 132
+    .line 127
     iput-boolean p3, p0, Lorg/telegram/ui/ChatEditTypeActivity;->isForcePublic:Z
 
     return-void
@@ -317,43 +325,61 @@
 .method static synthetic access$000(Lorg/telegram/ui/ChatEditTypeActivity;)V
     .registers 1
 
-    .line 66
+    .line 61
     invoke-direct {p0}, Lorg/telegram/ui/ChatEditTypeActivity;->processDone()V
 
     return-void
 .end method
 
-.method static synthetic access$100(Lorg/telegram/ui/ChatEditTypeActivity;)Z
+.method static synthetic access$100(Lorg/telegram/ui/ChatEditTypeActivity;)Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
     .registers 1
 
-    .line 66
-    iget-boolean p0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->ignoreTextChanges:Z
+    .line 61
+    iget-object p0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->checkTextView:Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
 
-    return p0
+    return-object p0
 .end method
 
-.method static synthetic access$1000(Lorg/telegram/ui/ChatEditTypeActivity;)Lorg/telegram/tgnet/TLRPC$Chat;
+.method static synthetic access$1000(Lorg/telegram/ui/ChatEditTypeActivity;)J
+    .registers 3
+
+    .line 61
+    iget-wide v0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->chatId:J
+
+    return-wide v0
+.end method
+
+.method static synthetic access$1100(Lorg/telegram/ui/ChatEditTypeActivity;)Lorg/telegram/tgnet/TLRPC$Chat;
     .registers 1
 
-    .line 66
+    .line 61
     iget-object p0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->currentChat:Lorg/telegram/tgnet/TLRPC$Chat;
 
     return-object p0
 .end method
 
-.method static synthetic access$200(Lorg/telegram/ui/ChatEditTypeActivity;)Lorg/telegram/ui/Components/EditTextBoldCursor;
+.method static synthetic access$200(Lorg/telegram/ui/ChatEditTypeActivity;)Z
     .registers 1
 
-    .line 66
+    .line 61
+    iget-boolean p0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->ignoreTextChanges:Z
+
+    return p0
+.end method
+
+.method static synthetic access$300(Lorg/telegram/ui/ChatEditTypeActivity;)Lorg/telegram/ui/Components/EditTextBoldCursor;
+    .registers 1
+
+    .line 61
     iget-object p0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->usernameTextView:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     return-object p0
 .end method
 
-.method static synthetic access$300(Lorg/telegram/ui/ChatEditTypeActivity;Ljava/lang/String;)Z
+.method static synthetic access$400(Lorg/telegram/ui/ChatEditTypeActivity;Ljava/lang/String;)Z
     .registers 2
 
-    .line 66
+    .line 61
     invoke-direct {p0, p1}, Lorg/telegram/ui/ChatEditTypeActivity;->checkUserName(Ljava/lang/String;)Z
 
     move-result p0
@@ -361,73 +387,64 @@
     return p0
 .end method
 
-.method static synthetic access$400(Lorg/telegram/ui/ChatEditTypeActivity;)V
+.method static synthetic access$500(Lorg/telegram/ui/ChatEditTypeActivity;)V
     .registers 1
 
-    .line 66
+    .line 61
     invoke-direct {p0}, Lorg/telegram/ui/ChatEditTypeActivity;->checkDoneButton()V
 
     return-void
 .end method
 
-.method static synthetic access$500(Lorg/telegram/ui/ChatEditTypeActivity;Z)V
+.method static synthetic access$600(Lorg/telegram/ui/ChatEditTypeActivity;Z)V
     .registers 2
 
-    .line 66
+    .line 61
     invoke-direct {p0, p1}, Lorg/telegram/ui/ChatEditTypeActivity;->generateLink(Z)V
 
     return-void
 .end method
 
-.method static synthetic access$600(Lorg/telegram/ui/ChatEditTypeActivity;)Lorg/telegram/ui/Components/InviteLinkBottomSheet;
+.method static synthetic access$700(Lorg/telegram/ui/ChatEditTypeActivity;)Lorg/telegram/ui/Components/InviteLinkBottomSheet;
     .registers 1
 
-    .line 66
+    .line 61
     iget-object p0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->inviteLinkBottomSheet:Lorg/telegram/ui/Components/InviteLinkBottomSheet;
 
     return-object p0
 .end method
 
-.method static synthetic access$602(Lorg/telegram/ui/ChatEditTypeActivity;Lorg/telegram/ui/Components/InviteLinkBottomSheet;)Lorg/telegram/ui/Components/InviteLinkBottomSheet;
+.method static synthetic access$702(Lorg/telegram/ui/ChatEditTypeActivity;Lorg/telegram/ui/Components/InviteLinkBottomSheet;)Lorg/telegram/ui/Components/InviteLinkBottomSheet;
     .registers 2
 
-    .line 66
+    .line 61
     iput-object p1, p0, Lorg/telegram/ui/ChatEditTypeActivity;->inviteLinkBottomSheet:Lorg/telegram/ui/Components/InviteLinkBottomSheet;
 
     return-object p1
 .end method
 
-.method static synthetic access$700(Lorg/telegram/ui/ChatEditTypeActivity;)Lorg/telegram/tgnet/TLRPC$TL_chatInviteExported;
+.method static synthetic access$800(Lorg/telegram/ui/ChatEditTypeActivity;)Lorg/telegram/tgnet/TLRPC$TL_chatInviteExported;
     .registers 1
 
-    .line 66
+    .line 61
     iget-object p0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->invite:Lorg/telegram/tgnet/TLRPC$TL_chatInviteExported;
 
     return-object p0
 .end method
 
-.method static synthetic access$800(Lorg/telegram/ui/ChatEditTypeActivity;)Lorg/telegram/tgnet/TLRPC$ChatFull;
+.method static synthetic access$900(Lorg/telegram/ui/ChatEditTypeActivity;)Lorg/telegram/tgnet/TLRPC$ChatFull;
     .registers 1
 
-    .line 66
+    .line 61
     iget-object p0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->info:Lorg/telegram/tgnet/TLRPC$ChatFull;
 
     return-object p0
 .end method
 
-.method static synthetic access$900(Lorg/telegram/ui/ChatEditTypeActivity;)J
-    .registers 3
-
-    .line 66
-    iget-wide v0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->chatId:J
-
-    return-wide v0
-.end method
-
 .method private checkDoneButton()V
     .registers 3
 
-    .line 684
+    .line 709
     iget-boolean v0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->isPrivate:Z
 
     if-nez v0, :cond_1b
@@ -442,7 +459,7 @@
 
     goto :goto_1b
 
-    .line 688
+    .line 713
     :cond_d
     iget-object v0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->doneButton:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
@@ -450,7 +467,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->setEnabled(Z)V
 
-    .line 689
+    .line 714
     iget-object v0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->doneButton:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
     const/high16 v1, 0x3f000000    # 0.5f
@@ -459,7 +476,7 @@
 
     goto :goto_28
 
-    .line 685
+    .line 710
     :cond_1b
     :goto_1b
     iget-object v0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->doneButton:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
@@ -468,7 +485,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->setEnabled(Z)V
 
-    .line 686
+    .line 711
     iget-object v0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->doneButton:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
     const/high16 v1, 0x3f800000    # 1.0f
@@ -486,21 +503,21 @@
 
     if-eqz p1, :cond_f
 
-    .line 694
+    .line 719
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v1
 
     if-lez v1, :cond_f
 
-    .line 695
+    .line 720
     iget-object v1, p0, Lorg/telegram/ui/ChatEditTypeActivity;->checkTextView:Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
 
     invoke-virtual {v1, v0}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
     goto :goto_16
 
-    .line 697
+    .line 722
     :cond_f
     iget-object v1, p0, Lorg/telegram/ui/ChatEditTypeActivity;->checkTextView:Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
 
@@ -508,7 +525,7 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
-    .line 699
+    .line 724
     :goto_16
     iget-object v1, p0, Lorg/telegram/ui/ChatEditTypeActivity;->typeInfoCell:Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
 
@@ -533,7 +550,7 @@
 
     move-result-object v2
 
-    const v4, 0x7f07012d
+    const v4, 0x7f0700fc
 
     const-string v5, "windowBackgroundGrayShadow"
 
@@ -544,28 +561,28 @@
     :goto_32
     invoke-virtual {v1, v2}, Landroid/widget/FrameLayout;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 700
+    .line 725
     iget-object v1, p0, Lorg/telegram/ui/ChatEditTypeActivity;->checkRunnable:Ljava/lang/Runnable;
 
     const/4 v2, 0x1
 
     if-eqz v1, :cond_4e
 
-    .line 701
+    .line 726
     invoke-static {v1}, Lorg/telegram/messenger/AndroidUtilities;->cancelRunOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 702
+    .line 727
     iput-object v3, p0, Lorg/telegram/ui/ChatEditTypeActivity;->checkRunnable:Ljava/lang/Runnable;
 
-    .line 703
+    .line 728
     iput-object v3, p0, Lorg/telegram/ui/ChatEditTypeActivity;->lastCheckName:Ljava/lang/String;
 
-    .line 704
+    .line 729
     iget v1, p0, Lorg/telegram/ui/ChatEditTypeActivity;->checkReqId:I
 
     if-eqz v1, :cond_4e
 
-    .line 705
+    .line 730
     invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getConnectionsManager()Lorg/telegram/tgnet/ConnectionsManager;
 
     move-result-object v1
@@ -574,7 +591,7 @@
 
     invoke-virtual {v1, v3, v2}, Lorg/telegram/tgnet/ConnectionsManager;->cancelRequest(IZ)V
 
-    .line 708
+    .line 733
     :cond_4e
     iput-boolean v0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->lastNameAvailable:Z
 
@@ -584,12 +601,12 @@
 
     const-string v3, "_"
 
-    .line 710
+    .line 735
     invoke-virtual {p1, v3}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v4
 
-    const v5, 0x7f0e093b
+    const v5, 0x7f0e09c2
 
     const-string v6, "LinkInvalid"
 
@@ -606,7 +623,7 @@
     :cond_68
     const/4 v3, 0x0
 
-    .line 715
+    .line 740
     :goto_69
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
@@ -614,7 +631,7 @@
 
     if-ge v3, v4, :cond_dd
 
-    .line 716
+    .line 741
     invoke-virtual {p1, v3}, Ljava/lang/String;->charAt(I)C
 
     move-result v4
@@ -629,15 +646,15 @@
 
     if-gt v4, v7, :cond_a4
 
-    .line 718
+    .line 743
     iget-boolean p1, p0, Lorg/telegram/ui/ChatEditTypeActivity;->isChannel:Z
 
     if-eqz p1, :cond_90
 
-    .line 719
+    .line 744
     iget-object p1, p0, Lorg/telegram/ui/ChatEditTypeActivity;->checkTextView:Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
 
-    const v2, 0x7f0e093f
+    const v2, 0x7f0e09c6
 
     const-string v3, "LinkInvalidStartNumber"
 
@@ -649,11 +666,11 @@
 
     goto :goto_9e
 
-    .line 721
+    .line 746
     :cond_90
     iget-object p1, p0, Lorg/telegram/ui/ChatEditTypeActivity;->checkTextView:Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
 
-    const v2, 0x7f0e0940
+    const v2, 0x7f0e09c7
 
     const-string v3, "LinkInvalidStartNumberMega"
 
@@ -663,7 +680,7 @@
 
     invoke-virtual {p1, v2}, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;->setText(Ljava/lang/CharSequence;)V
 
-    .line 723
+    .line 748
     :goto_9e
     iget-object p1, p0, Lorg/telegram/ui/ChatEditTypeActivity;->checkTextView:Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
 
@@ -699,7 +716,7 @@
 
     if-eq v4, v7, :cond_cb
 
-    .line 727
+    .line 752
     iget-object p1, p0, Lorg/telegram/ui/ChatEditTypeActivity;->checkTextView:Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
 
     invoke-static {v6, v5}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -708,7 +725,7 @@
 
     invoke-virtual {p1, v2}, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;->setText(Ljava/lang/CharSequence;)V
 
-    .line 728
+    .line 753
     iget-object p1, p0, Lorg/telegram/ui/ChatEditTypeActivity;->checkTextView:Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
 
     invoke-virtual {p1, v1}, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;->setTextColor(Ljava/lang/String;)V
@@ -720,7 +737,7 @@
 
     goto :goto_69
 
-    .line 711
+    .line 736
     :cond_ce
     :goto_ce
     iget-object p1, p0, Lorg/telegram/ui/ChatEditTypeActivity;->checkTextView:Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
@@ -731,7 +748,7 @@
 
     invoke-virtual {p1, v2}, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;->setText(Ljava/lang/CharSequence;)V
 
-    .line 712
+    .line 737
     iget-object p1, p0, Lorg/telegram/ui/ChatEditTypeActivity;->checkTextView:Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
 
     invoke-virtual {p1, v1}, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;->setTextColor(Ljava/lang/String;)V
@@ -741,7 +758,7 @@
     :cond_dd
     if-eqz p1, :cond_127
 
-    .line 733
+    .line 758
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v3
@@ -752,7 +769,7 @@
 
     goto :goto_127
 
-    .line 742
+    .line 767
     :cond_e7
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
@@ -762,10 +779,10 @@
 
     if-le v3, v4, :cond_103
 
-    .line 743
+    .line 768
     iget-object p1, p0, Lorg/telegram/ui/ChatEditTypeActivity;->checkTextView:Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
 
-    const v2, 0x7f0e093c
+    const v2, 0x7f0e09c3
 
     const-string v3, "LinkInvalidLong"
 
@@ -775,18 +792,18 @@
 
     invoke-virtual {p1, v2}, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;->setText(Ljava/lang/CharSequence;)V
 
-    .line 744
+    .line 769
     iget-object p1, p0, Lorg/telegram/ui/ChatEditTypeActivity;->checkTextView:Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
 
     invoke-virtual {p1, v1}, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;->setTextColor(Ljava/lang/String;)V
 
     return v0
 
-    .line 748
+    .line 773
     :cond_103
     iget-object v0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->checkTextView:Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
 
-    const v1, 0x7f0e092f
+    const v1, 0x7f0e09b6
 
     const-string v3, "LinkChecking"
 
@@ -796,41 +813,41 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;->setText(Ljava/lang/CharSequence;)V
 
-    .line 749
+    .line 774
     iget-object v0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->checkTextView:Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
 
     const-string v1, "windowBackgroundWhiteGrayText8"
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;->setTextColor(Ljava/lang/String;)V
 
-    .line 750
+    .line 775
     iput-object p1, p0, Lorg/telegram/ui/ChatEditTypeActivity;->lastCheckName:Ljava/lang/String;
 
-    .line 751
-    new-instance v0, Lorg/telegram/ui/ChatEditTypeActivity$$ExternalSyntheticLambda7;
+    .line 776
+    new-instance v0, Lorg/telegram/ui/ChatEditTypeActivity$$ExternalSyntheticLambda8;
 
-    invoke-direct {v0, p0, p1}, Lorg/telegram/ui/ChatEditTypeActivity$$ExternalSyntheticLambda7;-><init>(Lorg/telegram/ui/ChatEditTypeActivity;Ljava/lang/String;)V
+    invoke-direct {v0, p0, p1}, Lorg/telegram/ui/ChatEditTypeActivity$$ExternalSyntheticLambda8;-><init>(Lorg/telegram/ui/ChatEditTypeActivity;Ljava/lang/String;)V
 
     iput-object v0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->checkRunnable:Ljava/lang/Runnable;
 
     const-wide/16 v3, 0x12c
 
-    .line 775
+    .line 800
     invoke-static {v0, v3, v4}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;J)V
 
     return v2
 
-    .line 734
+    .line 759
     :cond_127
     :goto_127
     iget-boolean p1, p0, Lorg/telegram/ui/ChatEditTypeActivity;->isChannel:Z
 
     if-eqz p1, :cond_13a
 
-    .line 735
+    .line 760
     iget-object p1, p0, Lorg/telegram/ui/ChatEditTypeActivity;->checkTextView:Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
 
-    const v2, 0x7f0e093d
+    const v2, 0x7f0e09c4
 
     const-string v3, "LinkInvalidShort"
 
@@ -842,11 +859,11 @@
 
     goto :goto_148
 
-    .line 737
+    .line 762
     :cond_13a
     iget-object p1, p0, Lorg/telegram/ui/ChatEditTypeActivity;->checkTextView:Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
 
-    const v2, 0x7f0e093e
+    const v2, 0x7f0e09c5
 
     const-string v3, "LinkInvalidShortMega"
 
@@ -856,7 +873,7 @@
 
     invoke-virtual {p1, v2}, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;->setText(Ljava/lang/CharSequence;)V
 
-    .line 739
+    .line 764
     :goto_148
     iget-object p1, p0, Lorg/telegram/ui/ChatEditTypeActivity;->checkTextView:Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
 
@@ -868,17 +885,17 @@
 .method private generateLink(Z)V
     .registers 6
 
-    .line 781
+    .line 806
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_messages_exportChatInvite;
 
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_messages_exportChatInvite;-><init>()V
 
     const/4 v1, 0x1
 
-    .line 782
+    .line 807
     iput-boolean v1, v0, Lorg/telegram/tgnet/TLRPC$TL_messages_exportChatInvite;->legacy_revoke_permanent:Z
 
-    .line 783
+    .line 808
     invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getMessagesController()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v1
@@ -893,20 +910,20 @@
 
     iput-object v1, v0, Lorg/telegram/tgnet/TLRPC$TL_messages_exportChatInvite;->peer:Lorg/telegram/tgnet/TLRPC$InputPeer;
 
-    .line 784
+    .line 809
     invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getConnectionsManager()Lorg/telegram/tgnet/ConnectionsManager;
 
     move-result-object v1
 
-    new-instance v2, Lorg/telegram/ui/ChatEditTypeActivity$$ExternalSyntheticLambda18;
+    new-instance v2, Lorg/telegram/ui/ChatEditTypeActivity$$ExternalSyntheticLambda19;
 
-    invoke-direct {v2, p0, p1}, Lorg/telegram/ui/ChatEditTypeActivity$$ExternalSyntheticLambda18;-><init>(Lorg/telegram/ui/ChatEditTypeActivity;Z)V
+    invoke-direct {v2, p0, p1}, Lorg/telegram/ui/ChatEditTypeActivity$$ExternalSyntheticLambda19;-><init>(Lorg/telegram/ui/ChatEditTypeActivity;Z)V
 
     invoke-virtual {v1, v0, v2}, Lorg/telegram/tgnet/ConnectionsManager;->sendRequest(Lorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/RequestDelegate;)I
 
     move-result p1
 
-    .line 807
+    .line 832
     invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getConnectionsManager()Lorg/telegram/tgnet/ConnectionsManager;
 
     move-result-object v0
@@ -918,15 +935,15 @@
     return-void
 .end method
 
-.method private synthetic lambda$checkUserName$14(Ljava/lang/String;Lorg/telegram/tgnet/TLRPC$TL_error;Lorg/telegram/tgnet/TLObject;)V
+.method private synthetic lambda$checkUserName$15(Ljava/lang/String;Lorg/telegram/tgnet/TLRPC$TL_error;Lorg/telegram/tgnet/TLObject;)V
     .registers 7
 
     const/4 v0, 0x0
 
-    .line 756
+    .line 781
     iput v0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->checkReqId:I
 
-    .line 757
+    .line 782
     iget-object v1, p0, Lorg/telegram/ui/ChatEditTypeActivity;->lastCheckName:Ljava/lang/String;
 
     if-eqz v1, :cond_59
@@ -939,15 +956,15 @@
 
     if-nez p2, :cond_30
 
-    .line 758
+    .line 783
     instance-of p3, p3, Lorg/telegram/tgnet/TLRPC$TL_boolTrue;
 
     if-eqz p3, :cond_30
 
-    .line 759
+    .line 784
     iget-object p2, p0, Lorg/telegram/ui/ChatEditTypeActivity;->checkTextView:Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
 
-    const p3, 0x7f0e092e
+    const p3, 0x7f0e09b5
 
     const/4 v1, 0x1
 
@@ -963,14 +980,14 @@
 
     invoke-virtual {p2, p1}, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;->setText(Ljava/lang/CharSequence;)V
 
-    .line 760
+    .line 785
     iget-object p1, p0, Lorg/telegram/ui/ChatEditTypeActivity;->checkTextView:Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
 
     const-string p2, "windowBackgroundWhiteGreenText"
 
     invoke-virtual {p1, p2}, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;->setTextColor(Ljava/lang/String;)V
 
-    .line 761
+    .line 786
     iput-boolean v1, p0, Lorg/telegram/ui/ChatEditTypeActivity;->lastNameAvailable:Z
 
     goto :goto_59
@@ -978,7 +995,7 @@
     :cond_30
     if-eqz p2, :cond_42
 
-    .line 763
+    .line 788
     iget-object p1, p2, Lorg/telegram/tgnet/TLRPC$TL_error;->text:Ljava/lang/String;
 
     const-string p2, "CHANNELS_ADMIN_PUBLIC_TOO_MUCH"
@@ -989,19 +1006,19 @@
 
     if-eqz p1, :cond_42
 
-    .line 764
+    .line 789
     iput-boolean v0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->canCreatePublic:Z
 
-    .line 765
-    invoke-direct {p0}, Lorg/telegram/ui/ChatEditTypeActivity;->loadAdminedChannels()V
+    .line 790
+    invoke-direct {p0}, Lorg/telegram/ui/ChatEditTypeActivity;->showPremiumIncreaseLimitDialog()V
 
     goto :goto_50
 
-    .line 767
+    .line 792
     :cond_42
     iget-object p1, p0, Lorg/telegram/ui/ChatEditTypeActivity;->checkTextView:Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
 
-    const p2, 0x7f0e0938
+    const p2, 0x7f0e09bf
 
     const-string p3, "LinkInUse"
 
@@ -1011,7 +1028,7 @@
 
     invoke-virtual {p1, p2}, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;->setText(Ljava/lang/CharSequence;)V
 
-    .line 769
+    .line 794
     :goto_50
     iget-object p1, p0, Lorg/telegram/ui/ChatEditTypeActivity;->checkTextView:Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
 
@@ -1019,7 +1036,7 @@
 
     invoke-virtual {p1, p2}, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;->setTextColor(Ljava/lang/String;)V
 
-    .line 770
+    .line 795
     iput-boolean v0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->lastNameAvailable:Z
 
     :cond_59
@@ -1027,31 +1044,31 @@
     return-void
 .end method
 
-.method private synthetic lambda$checkUserName$15(Ljava/lang/String;Lorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/TLRPC$TL_error;)V
+.method private synthetic lambda$checkUserName$16(Ljava/lang/String;Lorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/TLRPC$TL_error;)V
     .registers 5
 
-    .line 755
-    new-instance v0, Lorg/telegram/ui/ChatEditTypeActivity$$ExternalSyntheticLambda8;
+    .line 780
+    new-instance v0, Lorg/telegram/ui/ChatEditTypeActivity$$ExternalSyntheticLambda9;
 
-    invoke-direct {v0, p0, p1, p3, p2}, Lorg/telegram/ui/ChatEditTypeActivity$$ExternalSyntheticLambda8;-><init>(Lorg/telegram/ui/ChatEditTypeActivity;Ljava/lang/String;Lorg/telegram/tgnet/TLRPC$TL_error;Lorg/telegram/tgnet/TLObject;)V
+    invoke-direct {v0, p0, p1, p3, p2}, Lorg/telegram/ui/ChatEditTypeActivity$$ExternalSyntheticLambda9;-><init>(Lorg/telegram/ui/ChatEditTypeActivity;Ljava/lang/String;Lorg/telegram/tgnet/TLRPC$TL_error;Lorg/telegram/tgnet/TLObject;)V
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
     return-void
 .end method
 
-.method private synthetic lambda$checkUserName$16(Ljava/lang/String;)V
+.method private synthetic lambda$checkUserName$17(Ljava/lang/String;)V
     .registers 6
 
-    .line 752
+    .line 777
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_channels_checkUsername;
 
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_channels_checkUsername;-><init>()V
 
-    .line 753
+    .line 778
     iput-object p1, v0, Lorg/telegram/tgnet/TLRPC$TL_channels_checkUsername;->username:Ljava/lang/String;
 
-    .line 754
+    .line 779
     invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getMessagesController()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v1
@@ -1064,14 +1081,14 @@
 
     iput-object v1, v0, Lorg/telegram/tgnet/TLRPC$TL_channels_checkUsername;->channel:Lorg/telegram/tgnet/TLRPC$InputChannel;
 
-    .line 755
+    .line 780
     invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getConnectionsManager()Lorg/telegram/tgnet/ConnectionsManager;
 
     move-result-object v1
 
-    new-instance v2, Lorg/telegram/ui/ChatEditTypeActivity$$ExternalSyntheticLambda17;
+    new-instance v2, Lorg/telegram/ui/ChatEditTypeActivity$$ExternalSyntheticLambda18;
 
-    invoke-direct {v2, p0, p1}, Lorg/telegram/ui/ChatEditTypeActivity$$ExternalSyntheticLambda17;-><init>(Lorg/telegram/ui/ChatEditTypeActivity;Ljava/lang/String;)V
+    invoke-direct {v2, p0, p1}, Lorg/telegram/ui/ChatEditTypeActivity$$ExternalSyntheticLambda18;-><init>(Lorg/telegram/ui/ChatEditTypeActivity;Ljava/lang/String;)V
 
     const/4 p1, 0x2
 
@@ -1087,7 +1104,7 @@
 .method private synthetic lambda$createView$2(Landroid/view/View;)V
     .registers 2
 
-    .line 272
+    .line 267
     iget-boolean p1, p0, Lorg/telegram/ui/ChatEditTypeActivity;->isPrivate:Z
 
     if-eqz p1, :cond_5
@@ -1097,10 +1114,10 @@
     :cond_5
     const/4 p1, 0x1
 
-    .line 275
+    .line 270
     iput-boolean p1, p0, Lorg/telegram/ui/ChatEditTypeActivity;->isPrivate:Z
 
-    .line 276
+    .line 271
     invoke-direct {p0}, Lorg/telegram/ui/ChatEditTypeActivity;->updatePrivatePublic()V
 
     return-void
@@ -1109,20 +1126,31 @@
 .method private synthetic lambda$createView$3(Landroid/view/View;)V
     .registers 2
 
-    .line 288
+    .line 283
     iget-boolean p1, p0, Lorg/telegram/ui/ChatEditTypeActivity;->isPrivate:Z
 
     if-nez p1, :cond_5
 
     return-void
 
+    .line 286
     :cond_5
+    iget-boolean p1, p0, Lorg/telegram/ui/ChatEditTypeActivity;->canCreatePublic:Z
+
+    if-nez p1, :cond_d
+
+    .line 287
+    invoke-direct {p0}, Lorg/telegram/ui/ChatEditTypeActivity;->showPremiumIncreaseLimitDialog()V
+
+    return-void
+
+    :cond_d
     const/4 p1, 0x0
 
-    .line 291
+    .line 290
     iput-boolean p1, p0, Lorg/telegram/ui/ChatEditTypeActivity;->isPrivate:Z
 
-    .line 292
+    .line 291
     invoke-direct {p0}, Lorg/telegram/ui/ChatEditTypeActivity;->updatePrivatePublic()V
 
     return-void
@@ -1131,7 +1159,7 @@
 .method private synthetic lambda$createView$4(Landroid/view/View;)V
     .registers 8
 
-    .line 412
+    .line 424
     new-instance p1, Lorg/telegram/ui/ManageLinksActivity;
 
     iget-wide v1, p0, Lorg/telegram/ui/ChatEditTypeActivity;->chatId:J
@@ -1144,14 +1172,14 @@
 
     invoke-direct/range {v0 .. v5}, Lorg/telegram/ui/ManageLinksActivity;-><init>(JJI)V
 
-    .line 413
+    .line 425
     iget-object v0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->info:Lorg/telegram/tgnet/TLRPC$ChatFull;
 
     iget-object v1, p0, Lorg/telegram/ui/ChatEditTypeActivity;->invite:Lorg/telegram/tgnet/TLRPC$TL_chatInviteExported;
 
     invoke-virtual {p1, v0, v1}, Lorg/telegram/ui/ManageLinksActivity;->setInfo(Lorg/telegram/tgnet/TLRPC$ChatFull;Lorg/telegram/tgnet/TLRPC$ExportedChatInvite;)V
 
-    .line 414
+    .line 426
     invoke-virtual {p0, p1}, Lorg/telegram/ui/ActionBar/BaseFragment;->presentFragment(Lorg/telegram/ui/ActionBar/BaseFragment;)Z
 
     return-void
@@ -1160,14 +1188,14 @@
 .method private synthetic lambda$createView$5(Landroid/view/View;)V
     .registers 3
 
-    .line 437
+    .line 449
     iget-boolean v0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->isSaveRestricted:Z
 
     xor-int/lit8 v0, v0, 0x1
 
     iput-boolean v0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->isSaveRestricted:Z
 
-    .line 438
+    .line 450
     check-cast p1, Lorg/telegram/ui/Cells/TextCheckCell;
 
     invoke-virtual {p1, v0}, Lorg/telegram/ui/Cells/TextCheckCell;->setChecked(Z)V
@@ -1175,30 +1203,30 @@
     return-void
 .end method
 
-.method private synthetic lambda$generateLink$17(Lorg/telegram/tgnet/TLRPC$TL_error;Lorg/telegram/tgnet/TLObject;Z)V
+.method private synthetic lambda$generateLink$18(Lorg/telegram/tgnet/TLRPC$TL_error;Lorg/telegram/tgnet/TLObject;Z)V
     .registers 6
 
     const/4 v0, 0x0
 
     if-nez p1, :cond_4a
 
-    .line 786
+    .line 811
     check-cast p2, Lorg/telegram/tgnet/TLRPC$TL_chatInviteExported;
 
     iput-object p2, p0, Lorg/telegram/ui/ChatEditTypeActivity;->invite:Lorg/telegram/tgnet/TLRPC$TL_chatInviteExported;
 
-    .line 787
+    .line 812
     iget-object p1, p0, Lorg/telegram/ui/ChatEditTypeActivity;->info:Lorg/telegram/tgnet/TLRPC$ChatFull;
 
     if-eqz p1, :cond_d
 
-    .line 788
+    .line 813
     iput-object p2, p1, Lorg/telegram/tgnet/TLRPC$ChatFull;->exported_invite:Lorg/telegram/tgnet/TLRPC$TL_chatInviteExported;
 
     :cond_d
     if-eqz p3, :cond_4a
 
-    .line 791
+    .line 816
     invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getParentActivity()Landroid/app/Activity;
 
     move-result-object p1
@@ -1207,7 +1235,7 @@
 
     return-void
 
-    .line 794
+    .line 819
     :cond_16
     new-instance p1, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
@@ -1217,53 +1245,53 @@
 
     invoke-direct {p1, p2}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    const p2, 0x7f0e0f4b
+    const p2, 0x7f0e0ffb
 
     const-string p3, "RevokeAlertNewLink"
 
-    .line 795
+    .line 820
     invoke-static {p3, p2}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object p2
 
     invoke-virtual {p1, p2}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const p2, 0x7f0e0f4d
+    const p2, 0x7f0e0ffd
 
     const-string p3, "RevokeLink"
 
-    .line 796
+    .line 821
     invoke-static {p3, p2}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object p2
 
     invoke-virtual {p1, p2}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const p2, 0x7f0e0bae
+    const p2, 0x7f0e0c38
 
     const-string p3, "OK"
 
-    .line 797
+    .line 822
     invoke-static {p3, p2}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object p2
 
     invoke-virtual {p1, p2, v0}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setNegativeButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 798
+    .line 823
     invoke-virtual {p1}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->create()Lorg/telegram/ui/ActionBar/AlertDialog;
 
     move-result-object p1
 
     invoke-virtual {p0, p1}, Lorg/telegram/ui/ActionBar/BaseFragment;->showDialog(Landroid/app/Dialog;)Landroid/app/Dialog;
 
-    .line 802
+    .line 827
     :cond_4a
     iget-object p1, p0, Lorg/telegram/ui/ChatEditTypeActivity;->permanentLinkView:Lorg/telegram/ui/Components/LinkActionView;
 
     if-eqz p1, :cond_60
 
-    .line 803
+    .line 828
     iget-object p2, p0, Lorg/telegram/ui/ChatEditTypeActivity;->invite:Lorg/telegram/tgnet/TLRPC$TL_chatInviteExported;
 
     if-eqz p2, :cond_54
@@ -1273,7 +1301,7 @@
     :cond_54
     invoke-virtual {p1, v0}, Lorg/telegram/ui/Components/LinkActionView;->setLink(Ljava/lang/String;)V
 
-    .line 804
+    .line 829
     iget-object p1, p0, Lorg/telegram/ui/ChatEditTypeActivity;->permanentLinkView:Lorg/telegram/ui/Components/LinkActionView;
 
     iget-object p2, p0, Lorg/telegram/ui/ChatEditTypeActivity;->invite:Lorg/telegram/tgnet/TLRPC$TL_chatInviteExported;
@@ -1286,28 +1314,28 @@
     return-void
 .end method
 
-.method private synthetic lambda$generateLink$18(ZLorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/TLRPC$TL_error;)V
+.method private synthetic lambda$generateLink$19(ZLorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/TLRPC$TL_error;)V
     .registers 5
 
-    .line 784
-    new-instance v0, Lorg/telegram/ui/ChatEditTypeActivity$$ExternalSyntheticLambda11;
+    .line 809
+    new-instance v0, Lorg/telegram/ui/ChatEditTypeActivity$$ExternalSyntheticLambda12;
 
-    invoke-direct {v0, p0, p3, p2, p1}, Lorg/telegram/ui/ChatEditTypeActivity$$ExternalSyntheticLambda11;-><init>(Lorg/telegram/ui/ChatEditTypeActivity;Lorg/telegram/tgnet/TLRPC$TL_error;Lorg/telegram/tgnet/TLObject;Z)V
+    invoke-direct {v0, p0, p3, p2, p1}, Lorg/telegram/ui/ChatEditTypeActivity$$ExternalSyntheticLambda12;-><init>(Lorg/telegram/ui/ChatEditTypeActivity;Lorg/telegram/tgnet/TLRPC$TL_error;Lorg/telegram/tgnet/TLObject;Z)V
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
     return-void
 .end method
 
-.method private synthetic lambda$getThemeDescriptions$19()V
+.method private synthetic lambda$getThemeDescriptions$20()V
     .registers 5
 
-    .line 814
+    .line 839
     iget-object v0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->adminnedChannelsLayout:Landroid/widget/LinearLayout;
 
     if-eqz v0, :cond_1d
 
-    .line 815
+    .line 840
     invoke-virtual {v0}, Landroid/widget/LinearLayout;->getChildCount()I
 
     move-result v0
@@ -1317,19 +1345,19 @@
     :goto_9
     if-ge v1, v0, :cond_1d
 
-    .line 817
+    .line 842
     iget-object v2, p0, Lorg/telegram/ui/ChatEditTypeActivity;->adminnedChannelsLayout:Landroid/widget/LinearLayout;
 
     invoke-virtual {v2, v1}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v2
 
-    .line 818
+    .line 843
     instance-of v3, v2, Lorg/telegram/ui/Cells/AdminedChannelCell;
 
     if-eqz v3, :cond_1a
 
-    .line 819
+    .line 844
     check-cast v2, Lorg/telegram/ui/Cells/AdminedChannelCell;
 
     invoke-virtual {v2}, Lorg/telegram/ui/Cells/AdminedChannelCell;->update()V
@@ -1339,13 +1367,13 @@
 
     goto :goto_9
 
-    .line 824
+    .line 849
     :cond_1d
     iget-object v0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->permanentLinkView:Lorg/telegram/ui/Components/LinkActionView;
 
     invoke-virtual {v0}, Lorg/telegram/ui/Components/LinkActionView;->updateColors()V
 
-    .line 825
+    .line 850
     iget-object v0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->manageLinksTextView:Lorg/telegram/ui/Cells/TextCell;
 
     const/4 v1, 0x1
@@ -1356,27 +1384,46 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 826
+    .line 851
     iget-object v0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->inviteLinkBottomSheet:Lorg/telegram/ui/Components/InviteLinkBottomSheet;
 
     if-eqz v0, :cond_33
 
-    .line 827
+    .line 852
     invoke-virtual {v0}, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->updateColors()V
 
     :cond_33
     return-void
 .end method
 
-.method private synthetic lambda$loadAdminedChannels$10(Lorg/telegram/tgnet/TLRPC$Chat;Landroid/content/DialogInterface;I)V
+.method private synthetic lambda$loadAdminedChannels$10(Lorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/TLRPC$TL_error;)V
+    .registers 3
+
+    .line 617
+    instance-of p1, p1, Lorg/telegram/tgnet/TLRPC$TL_boolTrue;
+
+    if-eqz p1, :cond_c
+
+    .line 618
+    new-instance p1, Lorg/telegram/ui/ChatEditTypeActivity$$ExternalSyntheticLambda7;
+
+    invoke-direct {p1, p0}, Lorg/telegram/ui/ChatEditTypeActivity$$ExternalSyntheticLambda7;-><init>(Lorg/telegram/ui/ChatEditTypeActivity;)V
+
+    invoke-static {p1}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
+
+    :cond_c
+    return-void
+.end method
+
+.method private synthetic lambda$loadAdminedChannels$11(Lorg/telegram/tgnet/TLRPC$Chat;Landroid/content/DialogInterface;I)V
     .registers 5
 
-    .line 588
+    .line 613
     new-instance p2, Lorg/telegram/tgnet/TLRPC$TL_channels_updateUsername;
 
     invoke-direct {p2}, Lorg/telegram/tgnet/TLRPC$TL_channels_updateUsername;-><init>()V
 
-    .line 589
+    .line 614
     invoke-static {p1}, Lorg/telegram/messenger/MessagesController;->getInputChannel(Lorg/telegram/tgnet/TLRPC$Chat;)Lorg/telegram/tgnet/TLRPC$InputChannel;
 
     move-result-object p1
@@ -1385,10 +1432,10 @@
 
     const-string p1, ""
 
-    .line 590
+    .line 615
     iput-object p1, p2, Lorg/telegram/tgnet/TLRPC$TL_channels_updateUsername;->username:Ljava/lang/String;
 
-    .line 591
+    .line 616
     invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getConnectionsManager()Lorg/telegram/tgnet/ConnectionsManager;
 
     move-result-object p1
@@ -1404,22 +1451,22 @@
     return-void
 .end method
 
-.method private synthetic lambda$loadAdminedChannels$11(Landroid/view/View;)V
+.method private synthetic lambda$loadAdminedChannels$12(Landroid/view/View;)V
     .registers 10
 
-    .line 577
+    .line 602
     invoke-virtual {p1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     move-result-object p1
 
     check-cast p1, Lorg/telegram/ui/Cells/AdminedChannelCell;
 
-    .line 578
+    .line 603
     invoke-virtual {p1}, Lorg/telegram/ui/Cells/AdminedChannelCell;->getCurrentChannel()Lorg/telegram/tgnet/TLRPC$Chat;
 
     move-result-object p1
 
-    .line 579
+    .line 604
     new-instance v0, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
     invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getParentActivity()Landroid/app/Activity;
@@ -1430,16 +1477,16 @@
 
     const-string v1, "AppName"
 
-    const v2, 0x7f0e017c
+    const v2, 0x7f0e01b1
 
-    .line 580
+    .line 605
     invoke-static {v1, v2}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 581
+    .line 606
     iget-boolean v1, p0, Lorg/telegram/ui/ChatEditTypeActivity;->isChannel:Z
 
     const/4 v2, 0x1
@@ -1452,11 +1499,11 @@
 
     if-eqz v1, :cond_5b
 
-    const v1, 0x7f0e0f4f
+    const v1, 0x7f0e0fff
 
     new-array v5, v5, [Ljava/lang/Object;
 
-    .line 582
+    .line 607
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -1500,11 +1547,11 @@
     goto :goto_8d
 
     :cond_5b
-    const v1, 0x7f0e0f4e
+    const v1, 0x7f0e0ffe
 
     new-array v5, v5, [Ljava/lang/Object;
 
-    .line 584
+    .line 609
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -1546,11 +1593,11 @@
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
     :goto_8d
-    const v1, 0x7f0e0331
+    const v1, 0x7f0e036d
 
     const-string v2, "Cancel"
 
-    .line 586
+    .line 611
     invoke-static {v2, v1}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v1
@@ -1559,11 +1606,11 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setNegativeButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const v1, 0x7f0e0f4c
+    const v1, 0x7f0e0ffc
 
     const-string v2, "RevokeButton"
 
-    .line 587
+    .line 612
     invoke-static {v2, v1}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v1
@@ -1574,7 +1621,7 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 603
+    .line 628
     invoke-virtual {v0}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->create()Lorg/telegram/ui/ActionBar/AlertDialog;
 
     move-result-object p1
@@ -1584,17 +1631,17 @@
     return-void
 .end method
 
-.method private synthetic lambda$loadAdminedChannels$12(Lorg/telegram/tgnet/TLObject;)V
+.method private synthetic lambda$loadAdminedChannels$13(Lorg/telegram/tgnet/TLObject;)V
     .registers 8
 
     const/4 v0, 0x0
 
-    .line 564
+    .line 589
     iput-boolean v0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->loadingAdminedChannels:Z
 
     if-eqz p1, :cond_71
 
-    .line 566
+    .line 591
     invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getParentActivity()Landroid/app/Activity;
 
     move-result-object v1
@@ -1606,7 +1653,7 @@
     :cond_c
     const/4 v1, 0x0
 
-    .line 569
+    .line 594
     :goto_d
     iget-object v2, p0, Lorg/telegram/ui/ChatEditTypeActivity;->adminedChannelCells:Ljava/util/ArrayList;
 
@@ -1616,7 +1663,7 @@
 
     if-ge v1, v2, :cond_25
 
-    .line 570
+    .line 595
     iget-object v2, p0, Lorg/telegram/ui/ChatEditTypeActivity;->linearLayout:Landroid/widget/LinearLayout;
 
     iget-object v3, p0, Lorg/telegram/ui/ChatEditTypeActivity;->adminedChannelCells:Ljava/util/ArrayList;
@@ -1633,18 +1680,18 @@
 
     goto :goto_d
 
-    .line 572
+    .line 597
     :cond_25
     iget-object v1, p0, Lorg/telegram/ui/ChatEditTypeActivity;->adminedChannelCells:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->clear()V
 
-    .line 573
+    .line 598
     check-cast p1, Lorg/telegram/tgnet/TLRPC$TL_messages_chats;
 
     const/4 v1, 0x0
 
-    .line 575
+    .line 600
     :goto_2d
     iget-object v2, p1, Lorg/telegram/tgnet/TLRPC$messages_Chats;->chats:Ljava/util/ArrayList;
 
@@ -1654,20 +1701,20 @@
 
     if-ge v1, v2, :cond_6e
 
-    .line 576
+    .line 601
     new-instance v2, Lorg/telegram/ui/Cells/AdminedChannelCell;
 
     invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getParentActivity()Landroid/app/Activity;
 
     move-result-object v3
 
-    new-instance v4, Lorg/telegram/ui/ChatEditTypeActivity$$ExternalSyntheticLambda3;
+    new-instance v4, Lorg/telegram/ui/ChatEditTypeActivity$$ExternalSyntheticLambda2;
 
-    invoke-direct {v4, p0}, Lorg/telegram/ui/ChatEditTypeActivity$$ExternalSyntheticLambda3;-><init>(Lorg/telegram/ui/ChatEditTypeActivity;)V
+    invoke-direct {v4, p0}, Lorg/telegram/ui/ChatEditTypeActivity$$ExternalSyntheticLambda2;-><init>(Lorg/telegram/ui/ChatEditTypeActivity;)V
 
-    invoke-direct {v2, v3, v4}, Lorg/telegram/ui/Cells/AdminedChannelCell;-><init>(Landroid/content/Context;Landroid/view/View$OnClickListener;)V
+    invoke-direct {v2, v3, v4, v0, v0}, Lorg/telegram/ui/Cells/AdminedChannelCell;-><init>(Landroid/content/Context;Landroid/view/View$OnClickListener;ZI)V
 
-    .line 605
+    .line 630
     iget-object v3, p1, Lorg/telegram/tgnet/TLRPC$messages_Chats;->chats:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1696,12 +1743,12 @@
     :goto_57
     invoke-virtual {v2, v3, v5}, Lorg/telegram/ui/Cells/AdminedChannelCell;->setChannel(Lorg/telegram/tgnet/TLRPC$Chat;Z)V
 
-    .line 606
+    .line 631
     iget-object v3, p0, Lorg/telegram/ui/ChatEditTypeActivity;->adminedChannelCells:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 607
+    .line 632
     iget-object v3, p0, Lorg/telegram/ui/ChatEditTypeActivity;->adminnedChannelsLayout:Landroid/widget/LinearLayout;
 
     const/4 v4, -0x1
@@ -1718,7 +1765,7 @@
 
     goto :goto_2d
 
-    .line 609
+    .line 634
     :cond_6e
     invoke-direct {p0}, Lorg/telegram/ui/ChatEditTypeActivity;->updatePrivatePublic()V
 
@@ -1726,28 +1773,28 @@
     return-void
 .end method
 
-.method private synthetic lambda$loadAdminedChannels$13(Lorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/TLRPC$TL_error;)V
+.method private synthetic lambda$loadAdminedChannels$14(Lorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/TLRPC$TL_error;)V
     .registers 3
 
-    .line 563
-    new-instance p2, Lorg/telegram/ui/ChatEditTypeActivity$$ExternalSyntheticLambda9;
+    .line 588
+    new-instance p2, Lorg/telegram/ui/ChatEditTypeActivity$$ExternalSyntheticLambda10;
 
-    invoke-direct {p2, p0, p1}, Lorg/telegram/ui/ChatEditTypeActivity$$ExternalSyntheticLambda9;-><init>(Lorg/telegram/ui/ChatEditTypeActivity;Lorg/telegram/tgnet/TLObject;)V
+    invoke-direct {p2, p0, p1}, Lorg/telegram/ui/ChatEditTypeActivity$$ExternalSyntheticLambda10;-><init>(Lorg/telegram/ui/ChatEditTypeActivity;Lorg/telegram/tgnet/TLObject;)V
 
     invoke-static {p2}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
     return-void
 .end method
 
-.method private synthetic lambda$loadAdminedChannels$8()V
+.method private synthetic lambda$loadAdminedChannels$9()V
     .registers 2
 
     const/4 v0, 0x1
 
-    .line 594
+    .line 619
     iput-boolean v0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->canCreatePublic:Z
 
-    .line 595
+    .line 620
     iget-object v0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->usernameTextView:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     invoke-virtual {v0}, Landroid/widget/EditText;->length()I
@@ -1756,7 +1803,7 @@
 
     if-lez v0, :cond_18
 
-    .line 596
+    .line 621
     iget-object v0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->usernameTextView:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     invoke-virtual {v0}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
@@ -1769,29 +1816,10 @@
 
     invoke-direct {p0, v0}, Lorg/telegram/ui/ChatEditTypeActivity;->checkUserName(Ljava/lang/String;)Z
 
-    .line 598
+    .line 623
     :cond_18
     invoke-direct {p0}, Lorg/telegram/ui/ChatEditTypeActivity;->updatePrivatePublic()V
 
-    return-void
-.end method
-
-.method private synthetic lambda$loadAdminedChannels$9(Lorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/TLRPC$TL_error;)V
-    .registers 3
-
-    .line 592
-    instance-of p1, p1, Lorg/telegram/tgnet/TLRPC$TL_boolTrue;
-
-    if-eqz p1, :cond_c
-
-    .line 593
-    new-instance p1, Lorg/telegram/ui/ChatEditTypeActivity$$ExternalSyntheticLambda6;
-
-    invoke-direct {p1, p0}, Lorg/telegram/ui/ChatEditTypeActivity$$ExternalSyntheticLambda6;-><init>(Lorg/telegram/ui/ChatEditTypeActivity;)V
-
-    invoke-static {p1}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
-
-    :cond_c
     return-void
 .end method
 
@@ -1800,7 +1828,7 @@
 
     if-eqz p1, :cond_f
 
-    .line 160
+    .line 155
     iget-object p1, p1, Lorg/telegram/tgnet/TLRPC$TL_error;->text:Ljava/lang/String;
 
     const-string v0, "CHANNELS_ADMIN_PUBLIC_TOO_MUCH"
@@ -1825,29 +1853,54 @@
     :goto_10
     iput-boolean p1, p0, Lorg/telegram/ui/ChatEditTypeActivity;->canCreatePublic:Z
 
-    if-nez p1, :cond_17
+    if-nez p1, :cond_21
 
-    .line 162
+    .line 156
+    invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getUserConfig()Lorg/telegram/messenger/UserConfig;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lorg/telegram/messenger/UserConfig;->isPremium()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_21
+
+    .line 157
     invoke-direct {p0}, Lorg/telegram/ui/ChatEditTypeActivity;->loadAdminedChannels()V
 
-    :cond_17
+    :cond_21
     return-void
 .end method
 
 .method private synthetic lambda$onFragmentCreate$1(Lorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/TLRPC$TL_error;)V
     .registers 3
 
-    .line 159
-    new-instance p1, Lorg/telegram/ui/ChatEditTypeActivity$$ExternalSyntheticLambda10;
+    .line 154
+    new-instance p1, Lorg/telegram/ui/ChatEditTypeActivity$$ExternalSyntheticLambda11;
 
-    invoke-direct {p1, p0, p2}, Lorg/telegram/ui/ChatEditTypeActivity$$ExternalSyntheticLambda10;-><init>(Lorg/telegram/ui/ChatEditTypeActivity;Lorg/telegram/tgnet/TLRPC$TL_error;)V
+    invoke-direct {p1, p0, p2}, Lorg/telegram/ui/ChatEditTypeActivity$$ExternalSyntheticLambda11;-><init>(Lorg/telegram/ui/ChatEditTypeActivity;Lorg/telegram/tgnet/TLRPC$TL_error;)V
 
     invoke-static {p1}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
     return-void
 .end method
 
-.method private synthetic lambda$trySetUsername$7(J)V
+.method private synthetic lambda$showPremiumIncreaseLimitDialog$6()V
+    .registers 2
+
+    const/4 v0, 0x1
+
+    .line 480
+    iput-boolean v0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->canCreatePublic:Z
+
+    .line 481
+    invoke-direct {p0}, Lorg/telegram/ui/ChatEditTypeActivity;->updatePrivatePublic()V
+
+    return-void
+.end method
+
+.method private synthetic lambda$trySetUsername$8(J)V
     .registers 6
 
     const-wide/16 v0, 0x0
@@ -1856,10 +1909,10 @@
 
     if-eqz v2, :cond_19
 
-    .line 542
+    .line 567
     iput-wide p1, p0, Lorg/telegram/ui/ChatEditTypeActivity;->chatId:J
 
-    .line 543
+    .line 568
     invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getMessagesController()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v0
@@ -1874,14 +1927,14 @@
 
     iput-object p1, p0, Lorg/telegram/ui/ChatEditTypeActivity;->currentChat:Lorg/telegram/tgnet/TLRPC$Chat;
 
-    .line 544
+    .line 569
     invoke-direct {p0}, Lorg/telegram/ui/ChatEditTypeActivity;->processDone()V
 
     :cond_19
     return-void
 .end method
 
-.method private synthetic lambda$tryUpdateJoinSettings$6(J)V
+.method private synthetic lambda$tryUpdateJoinSettings$7(J)V
     .registers 6
 
     const-wide/16 v0, 0x0
@@ -1890,10 +1943,10 @@
 
     if-eqz v2, :cond_19
 
-    .line 504
+    .line 529
     iput-wide p1, p0, Lorg/telegram/ui/ChatEditTypeActivity;->chatId:J
 
-    .line 505
+    .line 530
     invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getMessagesController()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v0
@@ -1908,7 +1961,7 @@
 
     iput-object p1, p0, Lorg/telegram/ui/ChatEditTypeActivity;->currentChat:Lorg/telegram/tgnet/TLRPC$Chat;
 
-    .line 506
+    .line 531
     invoke-direct {p0}, Lorg/telegram/ui/ChatEditTypeActivity;->processDone()V
 
     :cond_19
@@ -1918,7 +1971,7 @@
 .method private loadAdminedChannels()V
     .registers 4
 
-    .line 557
+    .line 582
     iget-boolean v0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->loadingAdminedChannels:Z
 
     if-nez v0, :cond_20
@@ -1932,25 +1985,25 @@
     :cond_9
     const/4 v0, 0x1
 
-    .line 560
+    .line 585
     iput-boolean v0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->loadingAdminedChannels:Z
 
-    .line 561
+    .line 586
     invoke-direct {p0}, Lorg/telegram/ui/ChatEditTypeActivity;->updatePrivatePublic()V
 
-    .line 562
+    .line 587
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_channels_getAdminedPublicChannels;
 
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_channels_getAdminedPublicChannels;-><init>()V
 
-    .line 563
+    .line 588
     invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getConnectionsManager()Lorg/telegram/tgnet/ConnectionsManager;
 
     move-result-object v1
 
-    new-instance v2, Lorg/telegram/ui/ChatEditTypeActivity$$ExternalSyntheticLambda15;
+    new-instance v2, Lorg/telegram/ui/ChatEditTypeActivity$$ExternalSyntheticLambda17;
 
-    invoke-direct {v2, p0}, Lorg/telegram/ui/ChatEditTypeActivity$$ExternalSyntheticLambda15;-><init>(Lorg/telegram/ui/ChatEditTypeActivity;)V
+    invoke-direct {v2, p0}, Lorg/telegram/ui/ChatEditTypeActivity$$ExternalSyntheticLambda17;-><init>(Lorg/telegram/ui/ChatEditTypeActivity;)V
 
     invoke-virtual {v1, v0, v2}, Lorg/telegram/tgnet/ConnectionsManager;->sendRequest(Lorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/RequestDelegate;)I
 
@@ -1962,7 +2015,7 @@
 .method private processDone()V
     .registers 6
 
-    .line 485
+    .line 510
     iget-object v0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->currentChat:Lorg/telegram/tgnet/TLRPC$Chat;
 
     iget-boolean v0, v0, Lorg/telegram/tgnet/TLRPC$Chat;->noforwards:Z
@@ -1971,7 +2024,7 @@
 
     if-eq v0, v1, :cond_17
 
-    .line 486
+    .line 511
     invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getMessagesController()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v0
@@ -1986,7 +2039,7 @@
 
     invoke-virtual {v0, v1, v2, v4}, Lorg/telegram/messenger/MessagesController;->toggleChatNoForwards(JZ)V
 
-    .line 488
+    .line 513
     :cond_17
     invoke-direct {p0}, Lorg/telegram/ui/ChatEditTypeActivity;->trySetUsername()Z
 
@@ -2000,17 +2053,61 @@
 
     if-eqz v0, :cond_26
 
-    .line 489
+    .line 514
     invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->finishFragment()V
 
     :cond_26
     return-void
 .end method
 
+.method private showPremiumIncreaseLimitDialog()V
+    .registers 5
+
+    .line 474
+    invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getParentActivity()Landroid/app/Activity;
+
+    move-result-object v0
+
+    if-nez v0, :cond_7
+
+    return-void
+
+    .line 477
+    :cond_7
+    new-instance v0, Lorg/telegram/ui/Components/Premium/LimitReachedBottomSheet;
+
+    invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getParentActivity()Landroid/app/Activity;
+
+    move-result-object v1
+
+    const/4 v2, 0x2
+
+    iget v3, p0, Lorg/telegram/ui/ActionBar/BaseFragment;->currentAccount:I
+
+    invoke-direct {v0, p0, v1, v2, v3}, Lorg/telegram/ui/Components/Premium/LimitReachedBottomSheet;-><init>(Lorg/telegram/ui/ActionBar/BaseFragment;Landroid/content/Context;II)V
+
+    .line 478
+    iget-boolean v1, p0, Lorg/telegram/ui/ChatEditTypeActivity;->isChannel:Z
+
+    iput-boolean v1, v0, Lorg/telegram/ui/Components/Premium/LimitReachedBottomSheet;->parentIsChannel:Z
+
+    .line 479
+    new-instance v1, Lorg/telegram/ui/ChatEditTypeActivity$$ExternalSyntheticLambda6;
+
+    invoke-direct {v1, p0}, Lorg/telegram/ui/ChatEditTypeActivity$$ExternalSyntheticLambda6;-><init>(Lorg/telegram/ui/ChatEditTypeActivity;)V
+
+    iput-object v1, v0, Lorg/telegram/ui/Components/Premium/LimitReachedBottomSheet;->onSuccessRunnable:Ljava/lang/Runnable;
+
+    .line 483
+    invoke-virtual {p0, v0}, Lorg/telegram/ui/ActionBar/BaseFragment;->showDialog(Landroid/app/Dialog;)Landroid/app/Dialog;
+
+    return-void
+.end method
+
 .method private trySetUsername()Z
     .registers 10
 
-    .line 522
+    .line 547
     invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getParentActivity()Landroid/app/Activity;
 
     move-result-object v0
@@ -2021,7 +2118,7 @@
 
     return v1
 
-    .line 525
+    .line 550
     :cond_8
     iget-boolean v0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->isPrivate:Z
 
@@ -2064,7 +2161,7 @@
 
     if-nez v0, :cond_57
 
-    .line 526
+    .line 551
     :cond_30
     iget-object v0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->usernameTextView:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
@@ -2078,7 +2175,7 @@
 
     if-nez v0, :cond_57
 
-    .line 527
+    .line 552
     invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getParentActivity()Landroid/app/Activity;
 
     move-result-object v0
@@ -2095,10 +2192,10 @@
 
     const-wide/16 v2, 0xc8
 
-    .line 529
+    .line 554
     invoke-virtual {v0, v2, v3}, Landroid/os/Vibrator;->vibrate(J)V
 
-    .line 531
+    .line 556
     :cond_4f
     iget-object v0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->checkTextView:Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
 
@@ -2108,7 +2205,7 @@
 
     return v1
 
-    .line 536
+    .line 561
     :cond_57
     iget-object v0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->currentChat:Lorg/telegram/tgnet/TLRPC$Chat;
 
@@ -2123,7 +2220,7 @@
     :cond_60
     move-object v0, v2
 
-    .line 537
+    .line 562
     :goto_61
     iget-boolean v3, p0, Lorg/telegram/ui/ChatEditTypeActivity;->isPrivate:Z
 
@@ -2142,7 +2239,7 @@
 
     move-result-object v2
 
-    .line 538
+    .line 563
     :goto_70
     invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -2150,7 +2247,7 @@
 
     if-nez v0, :cond_9f
 
-    .line 539
+    .line 564
     iget-object v0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->currentChat:Lorg/telegram/tgnet/TLRPC$Chat;
 
     invoke-static {v0}, Lorg/telegram/messenger/ChatObject;->isChannel(Lorg/telegram/tgnet/TLRPC$Chat;)Z
@@ -2159,7 +2256,7 @@
 
     if-nez v0, :cond_92
 
-    .line 540
+    .line 565
     invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getMessagesController()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v3
@@ -2180,7 +2277,7 @@
 
     return v1
 
-    .line 549
+    .line 574
     :cond_92
     invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getMessagesController()Lorg/telegram/messenger/MessagesController;
 
@@ -2190,7 +2287,7 @@
 
     invoke-virtual {v0, v3, v4, v2}, Lorg/telegram/messenger/MessagesController;->updateChannelUserName(JLjava/lang/String;)V
 
-    .line 550
+    .line 575
     iget-object v0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->currentChat:Lorg/telegram/tgnet/TLRPC$Chat;
 
     iput-object v2, v0, Lorg/telegram/tgnet/TLRPC$Chat;->username:Ljava/lang/String;
@@ -2204,7 +2301,7 @@
 .method private tryUpdateJoinSettings()Z
     .registers 10
 
-    .line 494
+    .line 519
     iget-boolean v0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->isChannel:Z
 
     const/4 v1, 0x1
@@ -2217,7 +2314,7 @@
 
     goto :goto_77
 
-    .line 497
+    .line 522
     :cond_a
     invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getParentActivity()Landroid/app/Activity;
 
@@ -2229,7 +2326,7 @@
 
     return v2
 
-    .line 500
+    .line 525
     :cond_12
     iget-object v0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->currentChat:Lorg/telegram/tgnet/TLRPC$Chat;
 
@@ -2260,7 +2357,7 @@
     :goto_27
     if-eqz v0, :cond_3d
 
-    .line 502
+    .line 527
     invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getMessagesController()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v3
@@ -2271,9 +2368,9 @@
 
     iget-wide v5, p0, Lorg/telegram/ui/ChatEditTypeActivity;->chatId:J
 
-    new-instance v8, Lorg/telegram/ui/ChatEditTypeActivity$$ExternalSyntheticLambda12;
+    new-instance v8, Lorg/telegram/ui/ChatEditTypeActivity$$ExternalSyntheticLambda14;
 
-    invoke-direct {v8, p0}, Lorg/telegram/ui/ChatEditTypeActivity$$ExternalSyntheticLambda12;-><init>(Lorg/telegram/ui/ChatEditTypeActivity;)V
+    invoke-direct {v8, p0}, Lorg/telegram/ui/ChatEditTypeActivity$$ExternalSyntheticLambda14;-><init>(Lorg/telegram/ui/ChatEditTypeActivity;)V
 
     move-object v7, p0
 
@@ -2281,7 +2378,7 @@
 
     return v2
 
-    .line 511
+    .line 536
     :cond_3d
     iget-object v0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->currentChat:Lorg/telegram/tgnet/TLRPC$Chat;
 
@@ -2293,7 +2390,7 @@
 
     if-eq v0, v2, :cond_5a
 
-    .line 512
+    .line 537
     invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getMessagesController()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v3
@@ -2314,7 +2411,7 @@
 
     invoke-virtual/range {v3 .. v8}, Lorg/telegram/messenger/MessagesController;->toggleChatJoinToSend(JZLjava/lang/Runnable;Ljava/lang/Runnable;)V
 
-    .line 514
+    .line 539
     :cond_5a
     iget-object v0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->currentChat:Lorg/telegram/tgnet/TLRPC$Chat;
 
@@ -2326,7 +2423,7 @@
 
     if-eq v0, v2, :cond_77
 
-    .line 515
+    .line 540
     invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getMessagesController()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v3
@@ -2355,20 +2452,20 @@
 .method private updatePrivatePublic()V
     .registers 13
 
-    .line 615
+    .line 640
     iget-object v0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->sectionCell2:Lorg/telegram/ui/Cells/ShadowSectionCell;
 
     if-nez v0, :cond_5
 
     return-void
 
-    .line 618
+    .line 643
     :cond_5
     iget-boolean v0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->isPrivate:Z
 
     const/4 v1, 0x0
 
-    const v2, 0x7f07012d
+    const v2, 0x7f0700fc
 
     const-string v3, "windowBackgroundGrayShadow"
 
@@ -2376,16 +2473,26 @@
 
     const/4 v5, 0x0
 
-    if-nez v0, :cond_9f
+    if-nez v0, :cond_a9
 
     iget-boolean v0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->canCreatePublic:Z
 
-    if-nez v0, :cond_9f
+    if-nez v0, :cond_a9
 
-    .line 619
+    invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getUserConfig()Lorg/telegram/messenger/UserConfig;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lorg/telegram/messenger/UserConfig;->isPremium()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_a9
+
+    .line 644
     iget-object v0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->typeInfoCell:Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
 
-    const v6, 0x7f0e035a
+    const v6, 0x7f0e0398
 
     const-string v7, "ChangePublicLimitReached"
 
@@ -2395,14 +2502,14 @@
 
     invoke-virtual {v0, v6}, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;->setText(Ljava/lang/CharSequence;)V
 
-    .line 620
+    .line 645
     iget-object v0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->typeInfoCell:Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
 
     const-string v6, "windowBackgroundWhiteRedText4"
 
     invoke-virtual {v0, v6}, Landroid/widget/FrameLayout;->setTag(Ljava/lang/Object;)V
 
-    .line 621
+    .line 646
     iget-object v0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->typeInfoCell:Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
 
     invoke-static {v6}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
@@ -2411,42 +2518,42 @@
 
     invoke-virtual {v0, v6}, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;->setTextColor(I)V
 
-    .line 622
+    .line 647
     iget-object v0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->linkContainer:Landroid/widget/LinearLayout;
 
     invoke-virtual {v0, v4}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
-    .line 623
+    .line 648
     iget-object v0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->checkTextView:Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
 
     invoke-virtual {v0, v4}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
-    .line 624
+    .line 649
     iget-object v0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->sectionCell2:Lorg/telegram/ui/Cells/ShadowSectionCell;
 
     invoke-virtual {v0, v4}, Landroid/view/View;->setVisibility(I)V
 
-    .line 625
+    .line 650
     iget-object v0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->adminedInfoCell:Lorg/telegram/ui/Cells/ShadowSectionCell;
 
     invoke-virtual {v0, v5}, Landroid/view/View;->setVisibility(I)V
 
-    .line 626
+    .line 651
     iget-boolean v0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->loadingAdminedChannels:Z
 
-    if-eqz v0, :cond_76
+    if-eqz v0, :cond_80
 
-    .line 627
+    .line 652
     iget-object v0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->loadingAdminedCell:Lorg/telegram/ui/Cells/LoadingCell;
 
     invoke-virtual {v0, v5}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
-    .line 628
+    .line 653
     iget-object v0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->adminnedChannelsLayout:Landroid/widget/LinearLayout;
 
     invoke-virtual {v0, v4}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
-    .line 629
+    .line 654
     iget-object v0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->typeInfoCell:Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
 
     iget-object v6, p0, Lorg/telegram/ui/ChatEditTypeActivity;->checkTextView:Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
@@ -2455,13 +2562,13 @@
 
     move-result v6
 
-    if-nez v6, :cond_62
+    if-nez v6, :cond_6c
 
     move-object v2, v1
 
-    goto :goto_6c
+    goto :goto_76
 
-    :cond_62
+    :cond_6c
     iget-object v6, p0, Lorg/telegram/ui/ChatEditTypeActivity;->typeInfoCell:Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
 
     invoke-virtual {v6}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
@@ -2472,18 +2579,18 @@
 
     move-result-object v2
 
-    :goto_6c
+    :goto_76
     invoke-virtual {v0, v2}, Landroid/widget/FrameLayout;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 630
+    .line 655
     iget-object v0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->adminedInfoCell:Lorg/telegram/ui/Cells/ShadowSectionCell;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    goto/16 :goto_1ef
+    goto/16 :goto_1f9
 
-    .line 632
-    :cond_76
+    .line 657
+    :cond_80
     iget-object v0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->adminedInfoCell:Lorg/telegram/ui/Cells/ShadowSectionCell;
 
     invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
@@ -2496,14 +2603,14 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 633
+    .line 658
     iget-object v0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->typeInfoCell:Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
 
     invoke-virtual {v0}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    const v2, 0x7f07012e
+    const v2, 0x7f0700fd
 
     invoke-static {v1, v2, v3}, Lorg/telegram/ui/ActionBar/Theme;->getThemedDrawable(Landroid/content/Context;ILjava/lang/String;)Landroid/graphics/drawable/Drawable;
 
@@ -2511,27 +2618,27 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 634
+    .line 659
     iget-object v0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->loadingAdminedCell:Lorg/telegram/ui/Cells/LoadingCell;
 
     invoke-virtual {v0, v4}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
-    .line 635
+    .line 660
     iget-object v0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->adminnedChannelsLayout:Landroid/widget/LinearLayout;
 
     invoke-virtual {v0, v5}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
-    goto/16 :goto_1ef
+    goto/16 :goto_1f9
 
-    .line 638
-    :cond_9f
+    .line 663
+    :cond_a9
     iget-object v0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->typeInfoCell:Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
 
     const-string v6, "windowBackgroundWhiteGrayText4"
 
     invoke-virtual {v0, v6}, Landroid/widget/FrameLayout;->setTag(Ljava/lang/Object;)V
 
-    .line 639
+    .line 664
     iget-object v0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->typeInfoCell:Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
 
     invoke-static {v6}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
@@ -2540,31 +2647,31 @@
 
     invoke-virtual {v0, v6}, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;->setTextColor(I)V
 
-    .line 640
+    .line 665
     iget-boolean v0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->isForcePublic:Z
 
-    if-eqz v0, :cond_b9
+    if-eqz v0, :cond_c3
 
-    .line 641
+    .line 666
     iget-object v0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->sectionCell2:Lorg/telegram/ui/Cells/ShadowSectionCell;
 
     invoke-virtual {v0, v4}, Landroid/view/View;->setVisibility(I)V
 
-    goto :goto_be
+    goto :goto_c8
 
-    .line 643
-    :cond_b9
+    .line 668
+    :cond_c3
     iget-object v0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->sectionCell2:Lorg/telegram/ui/Cells/ShadowSectionCell;
 
     invoke-virtual {v0, v5}, Landroid/view/View;->setVisibility(I)V
 
-    .line 645
-    :goto_be
+    .line 670
+    :goto_c8
     iget-object v0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->adminedInfoCell:Lorg/telegram/ui/Cells/ShadowSectionCell;
 
     invoke-virtual {v0, v4}, Landroid/view/View;->setVisibility(I)V
 
-    .line 646
+    .line 671
     iget-object v0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->typeInfoCell:Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
 
     invoke-virtual {v0}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
@@ -2577,218 +2684,218 @@
 
     invoke-virtual {v0, v6}, Landroid/widget/FrameLayout;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 647
+    .line 672
     iget-object v0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->adminnedChannelsLayout:Landroid/widget/LinearLayout;
 
     invoke-virtual {v0, v4}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
-    .line 648
+    .line 673
     iget-object v0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->linkContainer:Landroid/widget/LinearLayout;
 
     invoke-virtual {v0, v5}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
-    .line 649
+    .line 674
     iget-object v0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->loadingAdminedCell:Lorg/telegram/ui/Cells/LoadingCell;
 
     invoke-virtual {v0, v4}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
-    .line 650
+    .line 675
     iget-boolean v0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->isChannel:Z
 
-    const v6, 0x7f0e0383
+    const v6, 0x7f0e03c2
 
     const-string v7, "ChannelInviteLinkTitle"
 
-    const v8, 0x7f0e038d
+    const v8, 0x7f0e03cc
 
     const-string v9, "ChannelLinkTitle"
 
-    if-eqz v0, :cond_118
+    if-eqz v0, :cond_122
 
-    .line 651
+    .line 676
     iget-object v0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->typeInfoCell:Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
 
     iget-boolean v10, p0, Lorg/telegram/ui/ChatEditTypeActivity;->isPrivate:Z
 
-    if-eqz v10, :cond_f9
+    if-eqz v10, :cond_103
 
-    const v10, 0x7f0e03ae
+    const v10, 0x7f0e03ed
 
     const-string v11, "ChannelPrivateLinkHelp"
 
-    goto :goto_fe
+    goto :goto_108
 
-    :cond_f9
-    const v10, 0x7f0e03cf
+    :cond_103
+    const v10, 0x7f0e040e
 
     const-string v11, "ChannelUsernameHelp"
 
-    :goto_fe
+    :goto_108
     invoke-static {v11, v10}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v10
 
     invoke-virtual {v0, v10}, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;->setText(Ljava/lang/CharSequence;)V
 
-    .line 652
+    .line 677
     iget-object v0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->headerCell:Lorg/telegram/ui/Cells/HeaderCell;
 
     iget-boolean v10, p0, Lorg/telegram/ui/ChatEditTypeActivity;->isPrivate:Z
 
-    if-eqz v10, :cond_110
+    if-eqz v10, :cond_11a
 
     invoke-static {v7, v6}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v6
 
-    goto :goto_114
+    goto :goto_11e
 
-    :cond_110
+    :cond_11a
     invoke-static {v9, v8}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v6
 
-    :goto_114
+    :goto_11e
     invoke-virtual {v0, v6}, Lorg/telegram/ui/Cells/HeaderCell;->setText(Ljava/lang/CharSequence;)V
 
-    goto :goto_142
+    goto :goto_14c
 
-    .line 654
-    :cond_118
+    .line 679
+    :cond_122
     iget-object v0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->typeInfoCell:Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
 
     iget-boolean v10, p0, Lorg/telegram/ui/ChatEditTypeActivity;->isPrivate:Z
 
-    if-eqz v10, :cond_124
+    if-eqz v10, :cond_12e
 
-    const v10, 0x7f0e09cb
+    const v10, 0x7f0e0a52
 
     const-string v11, "MegaPrivateLinkHelp"
 
-    goto :goto_129
+    goto :goto_133
 
-    :cond_124
-    const v10, 0x7f0e09ce
+    :cond_12e
+    const v10, 0x7f0e0a55
 
     const-string v11, "MegaUsernameHelp"
 
-    :goto_129
+    :goto_133
     invoke-static {v11, v10}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v10
 
     invoke-virtual {v0, v10}, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;->setText(Ljava/lang/CharSequence;)V
 
-    .line 655
+    .line 680
     iget-object v0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->headerCell:Lorg/telegram/ui/Cells/HeaderCell;
 
     iget-boolean v10, p0, Lorg/telegram/ui/ChatEditTypeActivity;->isPrivate:Z
 
-    if-eqz v10, :cond_13b
+    if-eqz v10, :cond_145
 
     invoke-static {v7, v6}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v6
 
-    goto :goto_13f
+    goto :goto_149
 
-    :cond_13b
+    :cond_145
     invoke-static {v9, v8}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v6
 
-    :goto_13f
+    :goto_149
     invoke-virtual {v0, v6}, Lorg/telegram/ui/Cells/HeaderCell;->setText(Ljava/lang/CharSequence;)V
 
-    .line 657
-    :goto_142
+    .line 682
+    :goto_14c
     iget-object v0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->publicContainer:Landroid/widget/LinearLayout;
 
     iget-boolean v6, p0, Lorg/telegram/ui/ChatEditTypeActivity;->isPrivate:Z
 
-    if-eqz v6, :cond_14b
+    if-eqz v6, :cond_155
 
     const/16 v6, 0x8
 
-    goto :goto_14c
+    goto :goto_156
 
-    :cond_14b
+    :cond_155
     const/4 v6, 0x0
 
-    :goto_14c
+    :goto_156
     invoke-virtual {v0, v6}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
-    .line 658
+    .line 683
     iget-object v0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->privateContainer:Landroid/widget/LinearLayout;
 
     iget-boolean v6, p0, Lorg/telegram/ui/ChatEditTypeActivity;->isPrivate:Z
 
-    if-eqz v6, :cond_157
+    if-eqz v6, :cond_161
 
     const/4 v6, 0x0
 
-    goto :goto_159
+    goto :goto_163
 
-    :cond_157
+    :cond_161
     const/16 v6, 0x8
 
-    :goto_159
+    :goto_163
     invoke-virtual {v0, v6}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
-    .line 659
+    .line 684
     iget-object v0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->saveContainer:Landroid/widget/LinearLayout;
 
     invoke-virtual {v0, v5}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
-    .line 660
+    .line 685
     iget-object v0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->manageLinksTextView:Lorg/telegram/ui/Cells/TextCell;
 
     invoke-virtual {v0, v5}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
-    .line 661
+    .line 686
     iget-object v0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->manageLinksInfoCell:Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
 
     invoke-virtual {v0, v5}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
-    .line 662
+    .line 687
     iget-object v0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->linkContainer:Landroid/widget/LinearLayout;
 
     iget-boolean v6, p0, Lorg/telegram/ui/ChatEditTypeActivity;->isPrivate:Z
 
-    if-eqz v6, :cond_173
+    if-eqz v6, :cond_17d
 
     const/4 v6, 0x0
 
-    goto :goto_179
+    goto :goto_183
 
-    :cond_173
+    :cond_17d
     const/high16 v6, 0x40e00000    # 7.0f
 
     invoke-static {v6}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v6
 
-    :goto_179
+    :goto_183
     invoke-virtual {v0, v5, v5, v5, v6}, Landroid/widget/LinearLayout;->setPadding(IIII)V
 
-    .line 663
+    .line 688
     iget-object v0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->permanentLinkView:Lorg/telegram/ui/Components/LinkActionView;
 
     iget-object v6, p0, Lorg/telegram/ui/ChatEditTypeActivity;->invite:Lorg/telegram/tgnet/TLRPC$TL_chatInviteExported;
 
-    if-eqz v6, :cond_185
+    if-eqz v6, :cond_18f
 
     iget-object v6, v6, Lorg/telegram/tgnet/TLRPC$TL_chatInviteExported;->link:Ljava/lang/String;
 
-    goto :goto_186
+    goto :goto_190
 
-    :cond_185
+    :cond_18f
     move-object v6, v1
 
-    :goto_186
+    :goto_190
     invoke-virtual {v0, v6}, Lorg/telegram/ui/Components/LinkActionView;->setLink(Ljava/lang/String;)V
 
-    .line 664
+    .line 689
     iget-object v0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->permanentLinkView:Lorg/telegram/ui/Components/LinkActionView;
 
     iget-object v6, p0, Lorg/telegram/ui/ChatEditTypeActivity;->invite:Lorg/telegram/tgnet/TLRPC$TL_chatInviteExported;
@@ -2797,33 +2904,33 @@
 
     invoke-virtual {v0, v6, v7, v8}, Lorg/telegram/ui/Components/LinkActionView;->loadUsers(Lorg/telegram/tgnet/TLRPC$TL_chatInviteExported;J)V
 
-    .line 665
+    .line 690
     iget-object v0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->checkTextView:Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
 
     iget-boolean v6, p0, Lorg/telegram/ui/ChatEditTypeActivity;->isPrivate:Z
 
-    if-nez v6, :cond_1a0
+    if-nez v6, :cond_1aa
 
     invoke-virtual {v0}, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;->length()I
 
     move-result v6
 
-    if-eqz v6, :cond_1a0
+    if-eqz v6, :cond_1aa
 
     const/4 v6, 0x0
 
-    goto :goto_1a2
+    goto :goto_1ac
 
-    :cond_1a0
+    :cond_1aa
     const/16 v6, 0x8
 
-    :goto_1a2
+    :goto_1ac
     invoke-virtual {v0, v6}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
-    .line 666
+    .line 691
     iget-object v0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->manageLinksInfoCell:Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
 
-    const v6, 0x7f0e0993
+    const v6, 0x7f0e0a1a
 
     const-string v7, "ManageLinksInfoHelp"
 
@@ -2833,19 +2940,19 @@
 
     invoke-virtual {v0, v6}, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;->setText(Ljava/lang/CharSequence;)V
 
-    .line 667
+    .line 692
     iget-boolean v0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->isPrivate:Z
 
-    if-eqz v0, :cond_1d7
+    if-eqz v0, :cond_1e1
 
-    .line 668
+    .line 693
     iget-object v0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->typeInfoCell:Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
 
     invoke-virtual {v0}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    const v6, 0x7f07012c
+    const v6, 0x7f0700fb
 
     invoke-static {v1, v6, v3}, Lorg/telegram/ui/ActionBar/Theme;->getThemedDrawable(Landroid/content/Context;ILjava/lang/String;)Landroid/graphics/drawable/Drawable;
 
@@ -2853,7 +2960,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 669
+    .line 694
     iget-object v0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->manageLinksInfoCell:Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
 
     iget-object v1, p0, Lorg/telegram/ui/ChatEditTypeActivity;->typeInfoCell:Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
@@ -2868,10 +2975,10 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    goto :goto_1ef
+    goto :goto_1f9
 
-    .line 671
-    :cond_1d7
+    .line 696
+    :cond_1e1
     iget-object v0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->typeInfoCell:Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
 
     iget-object v6, p0, Lorg/telegram/ui/ChatEditTypeActivity;->checkTextView:Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
@@ -2880,11 +2987,11 @@
 
     move-result v6
 
-    if-nez v6, :cond_1e2
+    if-nez v6, :cond_1ec
 
-    goto :goto_1ec
+    goto :goto_1f6
 
-    :cond_1e2
+    :cond_1ec
     iget-object v1, p0, Lorg/telegram/ui/ChatEditTypeActivity;->typeInfoCell:Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
 
     invoke-virtual {v1}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
@@ -2895,11 +3002,11 @@
 
     move-result-object v1
 
-    :goto_1ec
+    :goto_1f6
     invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 674
-    :goto_1ef
+    .line 699
+    :goto_1f9
     iget-object v0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->radioButtonCell1:Lorg/telegram/ui/Cells/RadioButtonCell;
 
     iget-boolean v1, p0, Lorg/telegram/ui/ChatEditTypeActivity;->isPrivate:Z
@@ -2910,39 +3017,39 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/ui/Cells/RadioButtonCell;->setChecked(ZZ)V
 
-    .line 675
+    .line 700
     iget-object v0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->radioButtonCell2:Lorg/telegram/ui/Cells/RadioButtonCell;
 
     iget-boolean v1, p0, Lorg/telegram/ui/ChatEditTypeActivity;->isPrivate:Z
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/ui/Cells/RadioButtonCell;->setChecked(ZZ)V
 
-    .line 676
+    .line 701
     iget-object v0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->usernameTextView:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     invoke-virtual {v0}, Landroid/widget/EditText;->clearFocus()V
 
-    .line 677
+    .line 702
     iget-object v0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->joinContainer:Lorg/telegram/ui/Components/JoinToSendSettingsView;
 
-    if-eqz v0, :cond_214
+    if-eqz v0, :cond_21e
 
-    .line 678
+    .line 703
     iget-boolean v1, p0, Lorg/telegram/ui/ChatEditTypeActivity;->isChannel:Z
 
-    if-nez v1, :cond_211
+    if-nez v1, :cond_21b
 
     iget-boolean v1, p0, Lorg/telegram/ui/ChatEditTypeActivity;->isPrivate:Z
 
-    if-nez v1, :cond_211
+    if-nez v1, :cond_21b
 
     const/4 v4, 0x0
 
-    :cond_211
+    :cond_21b
     invoke-virtual {v0, v4}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
-    .line 680
-    :cond_214
+    .line 705
+    :cond_21e
     invoke-direct {p0}, Lorg/telegram/ui/ChatEditTypeActivity;->checkDoneButton()V
 
     return-void
@@ -2957,21 +3064,21 @@
 
     move-object/from16 v9, p1
 
-    .line 209
+    .line 204
     iget-object v0, v8, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
-    const v1, 0x7f070140
+    const v1, 0x7f070109
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/ActionBar;->setBackButtonImage(I)V
 
-    .line 210
+    .line 205
     iget-object v0, v8, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     const/4 v10, 0x1
 
     invoke-virtual {v0, v10}, Lorg/telegram/ui/ActionBar/ActionBar;->setAllowOverlayTitle(Z)V
 
-    .line 212
+    .line 207
     iget-object v0, v8, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     new-instance v1, Lorg/telegram/ui/ChatEditTypeActivity$1;
@@ -2980,7 +3087,7 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/ActionBar;->setActionBarMenuOnItemClick(Lorg/telegram/ui/ActionBar/ActionBar$ActionBarMenuOnItemClick;)V
 
-    .line 223
+    .line 218
     iget-object v0, v8, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     invoke-virtual {v0}, Lorg/telegram/ui/ActionBar/ActionBar;->createMenu()Lorg/telegram/ui/ActionBar/ActionBarMenu;
@@ -2989,20 +3096,20 @@
 
     const/high16 v1, 0x42600000    # 56.0f
 
-    .line 224
+    .line 219
     invoke-static {v1}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v1
 
     const-string v2, "Done"
 
-    const v3, 0x7f0e05dd
+    const v3, 0x7f0e062e
 
     invoke-static {v2, v3}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v2
 
-    const v3, 0x7f07015e
+    const v3, 0x7f07010a
 
     invoke-virtual {v0, v10, v3, v1, v2}, Lorg/telegram/ui/ActionBar/ActionBarMenu;->addItemWithWidth(IIILjava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
@@ -3010,7 +3117,7 @@
 
     iput-object v0, v8, Lorg/telegram/ui/ChatEditTypeActivity;->doneButton:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
-    .line 226
+    .line 221
     new-instance v0, Lorg/telegram/ui/ChatEditTypeActivity$2;
 
     invoke-direct {v0, v8, v9}, Lorg/telegram/ui/ChatEditTypeActivity$2;-><init>(Lorg/telegram/ui/ChatEditTypeActivity;Landroid/content/Context;)V
@@ -3019,29 +3126,29 @@
 
     const-string v1, "windowBackgroundGray"
 
-    .line 233
+    .line 228
     invoke-static {v1}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
 
     move-result v1
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setBackgroundColor(I)V
 
-    .line 234
+    .line 229
     iget-object v0, v8, Lorg/telegram/ui/ActionBar/BaseFragment;->fragmentView:Landroid/view/View;
 
     check-cast v0, Landroid/widget/ScrollView;
 
-    .line 235
+    .line 230
     invoke-virtual {v0, v10}, Landroid/widget/ScrollView;->setFillViewport(Z)V
 
-    .line 236
+    .line 231
     new-instance v1, Landroid/widget/LinearLayout;
 
     invoke-direct {v1, v9}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
 
     iput-object v1, v8, Lorg/telegram/ui/ChatEditTypeActivity;->linearLayout:Landroid/widget/LinearLayout;
 
-    .line 237
+    .line 232
     new-instance v2, Landroid/widget/FrameLayout$LayoutParams;
 
     const/4 v11, -0x1
@@ -3052,20 +3159,20 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/widget/ScrollView;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 239
+    .line 234
     iget-object v0, v8, Lorg/telegram/ui/ChatEditTypeActivity;->linearLayout:Landroid/widget/LinearLayout;
 
     invoke-virtual {v0, v10}, Landroid/widget/LinearLayout;->setOrientation(I)V
 
-    .line 241
+    .line 236
     iget-boolean v0, v8, Lorg/telegram/ui/ChatEditTypeActivity;->isForcePublic:Z
 
     if-eqz v0, :cond_7a
 
-    .line 242
+    .line 237
     iget-object v0, v8, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
-    const v1, 0x7f0e11cc
+    const v1, 0x7f0e1299
 
     const-string v2, "TypeLocationGroup"
 
@@ -3077,16 +3184,16 @@
 
     goto :goto_9b
 
-    .line 243
+    .line 238
     :cond_7a
     iget-boolean v0, v8, Lorg/telegram/ui/ChatEditTypeActivity;->isChannel:Z
 
     if-eqz v0, :cond_8d
 
-    .line 244
+    .line 239
     iget-object v0, v8, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
-    const v1, 0x7f0e03be
+    const v1, 0x7f0e03fd
 
     const-string v2, "ChannelSettingsTitle"
 
@@ -3098,11 +3205,11 @@
 
     goto :goto_9b
 
-    .line 246
+    .line 241
     :cond_8d
     iget-object v0, v8, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
-    const v1, 0x7f0e0816
+    const v1, 0x7f0e086e
 
     const-string v2, "GroupSettingsTitle"
 
@@ -3112,7 +3219,7 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/ActionBar;->setTitle(Ljava/lang/CharSequence;)V
 
-    .line 249
+    .line 244
     :goto_9b
     new-instance v0, Landroid/widget/LinearLayout;
 
@@ -3120,10 +3227,10 @@
 
     iput-object v0, v8, Lorg/telegram/ui/ChatEditTypeActivity;->linearLayoutTypeContainer:Landroid/widget/LinearLayout;
 
-    .line 250
+    .line 245
     invoke-virtual {v0, v10}, Landroid/widget/LinearLayout;->setOrientation(I)V
 
-    .line 251
+    .line 246
     iget-object v0, v8, Lorg/telegram/ui/ChatEditTypeActivity;->linearLayoutTypeContainer:Landroid/widget/LinearLayout;
 
     const-string v13, "windowBackgroundWhite"
@@ -3134,7 +3241,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setBackgroundColor(I)V
 
-    .line 252
+    .line 247
     iget-object v0, v8, Lorg/telegram/ui/ChatEditTypeActivity;->linearLayout:Landroid/widget/LinearLayout;
 
     iget-object v1, v8, Lorg/telegram/ui/ChatEditTypeActivity;->linearLayoutTypeContainer:Landroid/widget/LinearLayout;
@@ -3145,7 +3252,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 254
+    .line 249
     new-instance v0, Lorg/telegram/ui/Cells/HeaderCell;
 
     const/16 v14, 0x17
@@ -3156,18 +3263,18 @@
 
     const/16 v15, 0x2e
 
-    .line 255
+    .line 250
     invoke-virtual {v0, v15}, Lorg/telegram/ui/Cells/HeaderCell;->setHeight(I)V
 
-    .line 256
+    .line 251
     iget-boolean v0, v8, Lorg/telegram/ui/ChatEditTypeActivity;->isChannel:Z
 
     if-eqz v0, :cond_dc
 
-    .line 257
+    .line 252
     iget-object v0, v8, Lorg/telegram/ui/ChatEditTypeActivity;->headerCell2:Lorg/telegram/ui/Cells/HeaderCell;
 
-    const v1, 0x7f0e03c8
+    const v1, 0x7f0e0407
 
     const-string v2, "ChannelTypeHeader"
 
@@ -3179,11 +3286,11 @@
 
     goto :goto_ea
 
-    .line 259
+    .line 254
     :cond_dc
     iget-object v0, v8, Lorg/telegram/ui/ChatEditTypeActivity;->headerCell2:Lorg/telegram/ui/Cells/HeaderCell;
 
-    const v1, 0x7f0e081a
+    const v1, 0x7f0e0872
 
     const-string v2, "GroupTypeHeader"
 
@@ -3193,7 +3300,7 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Cells/HeaderCell;->setText(Ljava/lang/CharSequence;)V
 
-    .line 261
+    .line 256
     :goto_ea
     iget-object v0, v8, Lorg/telegram/ui/ChatEditTypeActivity;->linearLayoutTypeContainer:Landroid/widget/LinearLayout;
 
@@ -3201,7 +3308,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
-    .line 263
+    .line 258
     new-instance v0, Lorg/telegram/ui/Cells/RadioButtonCell;
 
     invoke-direct {v0, v9}, Lorg/telegram/ui/Cells/RadioButtonCell;-><init>(Landroid/content/Context;)V
@@ -3210,22 +3317,22 @@
 
     const/4 v7, 0x0
 
-    .line 264
+    .line 259
     invoke-static {v7}, Lorg/telegram/ui/ActionBar/Theme;->getSelectorDrawable(Z)Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 265
+    .line 260
     iget-boolean v0, v8, Lorg/telegram/ui/ChatEditTypeActivity;->isChannel:Z
 
     if-eqz v0, :cond_11e
 
-    .line 266
+    .line 261
     iget-object v0, v8, Lorg/telegram/ui/ChatEditTypeActivity;->radioButtonCell2:Lorg/telegram/ui/Cells/RadioButtonCell;
 
-    const v1, 0x7f0e03ac
+    const v1, 0x7f0e03eb
 
     const-string v2, "ChannelPrivate"
 
@@ -3233,7 +3340,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0e03ad
+    const v2, 0x7f0e03ec
 
     const-string v3, "ChannelPrivateInfo"
 
@@ -3247,11 +3354,11 @@
 
     goto :goto_137
 
-    .line 268
+    .line 263
     :cond_11e
     iget-object v0, v8, Lorg/telegram/ui/ChatEditTypeActivity;->radioButtonCell2:Lorg/telegram/ui/Cells/RadioButtonCell;
 
-    const v1, 0x7f0e09c9
+    const v1, 0x7f0e0a50
 
     const-string v2, "MegaPrivate"
 
@@ -3259,7 +3366,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0e09ca
+    const v2, 0x7f0e0a51
 
     const-string v3, "MegaPrivateInfo"
 
@@ -3271,7 +3378,7 @@
 
     invoke-virtual {v0, v1, v2, v7, v3}, Lorg/telegram/ui/Cells/RadioButtonCell;->setTextAndValue(Ljava/lang/String;Ljava/lang/String;ZZ)V
 
-    .line 270
+    .line 265
     :goto_137
     iget-object v0, v8, Lorg/telegram/ui/ChatEditTypeActivity;->linearLayoutTypeContainer:Landroid/widget/LinearLayout;
 
@@ -3283,7 +3390,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 271
+    .line 266
     iget-object v0, v8, Lorg/telegram/ui/ChatEditTypeActivity;->radioButtonCell2:Lorg/telegram/ui/Cells/RadioButtonCell;
 
     new-instance v1, Lorg/telegram/ui/ChatEditTypeActivity$$ExternalSyntheticLambda4;
@@ -3292,29 +3399,29 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 279
+    .line 274
     new-instance v0, Lorg/telegram/ui/Cells/RadioButtonCell;
 
     invoke-direct {v0, v9}, Lorg/telegram/ui/Cells/RadioButtonCell;-><init>(Landroid/content/Context;)V
 
     iput-object v0, v8, Lorg/telegram/ui/ChatEditTypeActivity;->radioButtonCell1:Lorg/telegram/ui/Cells/RadioButtonCell;
 
-    .line 280
+    .line 275
     invoke-static {v7}, Lorg/telegram/ui/ActionBar/Theme;->getSelectorDrawable(Z)Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 281
+    .line 276
     iget-boolean v0, v8, Lorg/telegram/ui/ChatEditTypeActivity;->isChannel:Z
 
     if-eqz v0, :cond_179
 
-    .line 282
+    .line 277
     iget-object v0, v8, Lorg/telegram/ui/ChatEditTypeActivity;->radioButtonCell1:Lorg/telegram/ui/Cells/RadioButtonCell;
 
-    const v1, 0x7f0e03af
+    const v1, 0x7f0e03ee
 
     const-string v2, "ChannelPublic"
 
@@ -3322,7 +3429,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0e03b2
+    const v2, 0x7f0e03f1
 
     const-string v3, "ChannelPublicInfo"
 
@@ -3338,11 +3445,11 @@
 
     goto :goto_193
 
-    .line 284
+    .line 279
     :cond_179
     iget-object v0, v8, Lorg/telegram/ui/ChatEditTypeActivity;->radioButtonCell1:Lorg/telegram/ui/Cells/RadioButtonCell;
 
-    const v1, 0x7f0e09cc
+    const v1, 0x7f0e0a53
 
     const-string v2, "MegaPublic"
 
@@ -3350,7 +3457,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0e09cd
+    const v2, 0x7f0e0a54
 
     const-string v3, "MegaPublicInfo"
 
@@ -3364,7 +3471,7 @@
 
     invoke-virtual {v0, v1, v2, v7, v3}, Lorg/telegram/ui/Cells/RadioButtonCell;->setTextAndValue(Ljava/lang/String;Ljava/lang/String;ZZ)V
 
-    .line 286
+    .line 281
     :goto_193
     iget-object v0, v8, Lorg/telegram/ui/ChatEditTypeActivity;->linearLayoutTypeContainer:Landroid/widget/LinearLayout;
 
@@ -3376,7 +3483,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 287
+    .line 282
     iget-object v0, v8, Lorg/telegram/ui/ChatEditTypeActivity;->radioButtonCell1:Lorg/telegram/ui/Cells/RadioButtonCell;
 
     new-instance v1, Lorg/telegram/ui/ChatEditTypeActivity$$ExternalSyntheticLambda1;
@@ -3385,14 +3492,14 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 295
+    .line 294
     new-instance v0, Lorg/telegram/ui/Cells/ShadowSectionCell;
 
     invoke-direct {v0, v9}, Lorg/telegram/ui/Cells/ShadowSectionCell;-><init>(Landroid/content/Context;)V
 
     iput-object v0, v8, Lorg/telegram/ui/ChatEditTypeActivity;->sectionCell2:Lorg/telegram/ui/Cells/ShadowSectionCell;
 
-    .line 296
+    .line 295
     iget-object v1, v8, Lorg/telegram/ui/ChatEditTypeActivity;->linearLayout:Landroid/widget/LinearLayout;
 
     invoke-static {v11, v12}, Lorg/telegram/ui/Components/LayoutHelper;->createLinear(II)Landroid/widget/LinearLayout$LayoutParams;
@@ -3401,34 +3508,34 @@
 
     invoke-virtual {v1, v0, v2}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 298
+    .line 297
     iget-boolean v0, v8, Lorg/telegram/ui/ChatEditTypeActivity;->isForcePublic:Z
 
     if-eqz v0, :cond_1d2
 
-    .line 299
+    .line 298
     iget-object v0, v8, Lorg/telegram/ui/ChatEditTypeActivity;->radioButtonCell2:Lorg/telegram/ui/Cells/RadioButtonCell;
 
     const/16 v1, 0x8
 
     invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
-    .line 300
+    .line 299
     iget-object v0, v8, Lorg/telegram/ui/ChatEditTypeActivity;->radioButtonCell1:Lorg/telegram/ui/Cells/RadioButtonCell;
 
     invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
-    .line 301
+    .line 300
     iget-object v0, v8, Lorg/telegram/ui/ChatEditTypeActivity;->sectionCell2:Lorg/telegram/ui/Cells/ShadowSectionCell;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 302
+    .line 301
     iget-object v0, v8, Lorg/telegram/ui/ChatEditTypeActivity;->headerCell2:Lorg/telegram/ui/Cells/HeaderCell;
 
     invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
-    .line 305
+    .line 304
     :cond_1d2
     new-instance v0, Landroid/widget/LinearLayout;
 
@@ -3436,10 +3543,10 @@
 
     iput-object v0, v8, Lorg/telegram/ui/ChatEditTypeActivity;->linkContainer:Landroid/widget/LinearLayout;
 
-    .line 306
+    .line 305
     invoke-virtual {v0, v10}, Landroid/widget/LinearLayout;->setOrientation(I)V
 
-    .line 307
+    .line 306
     iget-object v0, v8, Lorg/telegram/ui/ChatEditTypeActivity;->linkContainer:Landroid/widget/LinearLayout;
 
     invoke-static {v13}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
@@ -3448,7 +3555,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setBackgroundColor(I)V
 
-    .line 308
+    .line 307
     iget-object v0, v8, Lorg/telegram/ui/ChatEditTypeActivity;->linearLayout:Landroid/widget/LinearLayout;
 
     iget-object v1, v8, Lorg/telegram/ui/ChatEditTypeActivity;->linkContainer:Landroid/widget/LinearLayout;
@@ -3459,29 +3566,29 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 310
+    .line 309
     new-instance v0, Lorg/telegram/ui/Cells/HeaderCell;
 
     invoke-direct {v0, v9, v14}, Lorg/telegram/ui/Cells/HeaderCell;-><init>(Landroid/content/Context;I)V
 
     iput-object v0, v8, Lorg/telegram/ui/ChatEditTypeActivity;->headerCell:Lorg/telegram/ui/Cells/HeaderCell;
 
-    .line 311
+    .line 310
     iget-object v1, v8, Lorg/telegram/ui/ChatEditTypeActivity;->linkContainer:Landroid/widget/LinearLayout;
 
     invoke-virtual {v1, v0}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
-    .line 313
+    .line 312
     new-instance v0, Landroid/widget/LinearLayout;
 
     invoke-direct {v0, v9}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
 
     iput-object v0, v8, Lorg/telegram/ui/ChatEditTypeActivity;->publicContainer:Landroid/widget/LinearLayout;
 
-    .line 314
+    .line 313
     invoke-virtual {v0, v7}, Landroid/widget/LinearLayout;->setOrientation(I)V
 
-    .line 315
+    .line 314
     iget-object v0, v8, Lorg/telegram/ui/ChatEditTypeActivity;->linkContainer:Landroid/widget/LinearLayout;
 
     iget-object v1, v8, Lorg/telegram/ui/ChatEditTypeActivity;->publicContainer:Landroid/widget/LinearLayout;
@@ -3504,14 +3611,14 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 317
+    .line 316
     new-instance v0, Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     invoke-direct {v0, v9}, Lorg/telegram/ui/Components/EditTextBoldCursor;-><init>(Landroid/content/Context;)V
 
     iput-object v0, v8, Lorg/telegram/ui/ChatEditTypeActivity;->editText:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
-    .line 318
+    .line 317
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -3534,14 +3641,14 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
-    .line 319
+    .line 318
     iget-object v0, v8, Lorg/telegram/ui/ChatEditTypeActivity;->editText:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     const/high16 v1, 0x41900000    # 18.0f
 
     invoke-virtual {v0, v10, v1}, Landroid/widget/EditText;->setTextSize(IF)V
 
-    .line 320
+    .line 319
     iget-object v0, v8, Lorg/telegram/ui/ChatEditTypeActivity;->editText:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     const-string v2, "windowBackgroundWhiteHintText"
@@ -3552,7 +3659,7 @@
 
     invoke-virtual {v0, v3}, Landroid/widget/EditText;->setHintTextColor(I)V
 
-    .line 321
+    .line 320
     iget-object v0, v8, Lorg/telegram/ui/ChatEditTypeActivity;->editText:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     const-string v3, "windowBackgroundWhiteBlackText"
@@ -3563,53 +3670,53 @@
 
     invoke-virtual {v0, v4}, Landroid/widget/EditText;->setTextColor(I)V
 
-    .line 322
+    .line 321
     iget-object v0, v8, Lorg/telegram/ui/ChatEditTypeActivity;->editText:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     invoke-virtual {v0, v10}, Landroid/widget/EditText;->setMaxLines(I)V
 
-    .line 323
+    .line 322
     iget-object v0, v8, Lorg/telegram/ui/ChatEditTypeActivity;->editText:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     invoke-virtual {v0, v10}, Landroid/widget/EditText;->setLines(I)V
 
-    .line 324
+    .line 323
     iget-object v0, v8, Lorg/telegram/ui/ChatEditTypeActivity;->editText:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     invoke-virtual {v0, v7}, Landroid/widget/EditText;->setEnabled(Z)V
 
-    .line 325
+    .line 324
     iget-object v0, v8, Lorg/telegram/ui/ChatEditTypeActivity;->editText:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     const/4 v6, 0x0
 
     invoke-virtual {v0, v6}, Landroid/widget/EditText;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 326
+    .line 325
     iget-object v0, v8, Lorg/telegram/ui/ChatEditTypeActivity;->editText:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     invoke-virtual {v0, v7, v7, v7, v7}, Landroid/widget/EditText;->setPadding(IIII)V
 
-    .line 327
+    .line 326
     iget-object v0, v8, Lorg/telegram/ui/ChatEditTypeActivity;->editText:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     invoke-virtual {v0, v10}, Landroid/widget/EditText;->setSingleLine(Z)V
 
-    .line 328
+    .line 327
     iget-object v0, v8, Lorg/telegram/ui/ChatEditTypeActivity;->editText:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     const v4, 0x28000
 
     invoke-virtual {v0, v4}, Landroid/widget/EditText;->setInputType(I)V
 
-    .line 329
+    .line 328
     iget-object v0, v8, Lorg/telegram/ui/ChatEditTypeActivity;->editText:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     const/4 v4, 0x6
 
     invoke-virtual {v0, v4}, Landroid/widget/EditText;->setImeOptions(I)V
 
-    .line 330
+    .line 329
     iget-object v0, v8, Lorg/telegram/ui/ChatEditTypeActivity;->publicContainer:Landroid/widget/LinearLayout;
 
     iget-object v5, v8, Lorg/telegram/ui/ChatEditTypeActivity;->editText:Lorg/telegram/ui/Components/EditTextBoldCursor;
@@ -3622,17 +3729,17 @@
 
     invoke-virtual {v0, v5, v14}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 332
-    new-instance v0, Lorg/telegram/ui/Components/EditTextBoldCursor;
+    .line 331
+    new-instance v0, Lorg/telegram/ui/ChatEditTypeActivity$3;
 
-    invoke-direct {v0, v9}, Lorg/telegram/ui/Components/EditTextBoldCursor;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, v8, v9}, Lorg/telegram/ui/ChatEditTypeActivity$3;-><init>(Lorg/telegram/ui/ChatEditTypeActivity;Landroid/content/Context;)V
 
     iput-object v0, v8, Lorg/telegram/ui/ChatEditTypeActivity;->usernameTextView:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
-    .line 333
+    .line 344
     invoke-virtual {v0, v10, v1}, Landroid/widget/EditText;->setTextSize(IF)V
 
-    .line 334
+    .line 345
     iget-object v0, v8, Lorg/telegram/ui/ChatEditTypeActivity;->usernameTextView:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     invoke-static {v2}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
@@ -3641,7 +3748,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->setHintTextColor(I)V
 
-    .line 335
+    .line 346
     iget-object v0, v8, Lorg/telegram/ui/ChatEditTypeActivity;->usernameTextView:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     invoke-static {v3}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
@@ -3650,47 +3757,47 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->setTextColor(I)V
 
-    .line 336
+    .line 347
     iget-object v0, v8, Lorg/telegram/ui/ChatEditTypeActivity;->usernameTextView:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     invoke-virtual {v0, v10}, Landroid/widget/EditText;->setMaxLines(I)V
 
-    .line 337
+    .line 348
     iget-object v0, v8, Lorg/telegram/ui/ChatEditTypeActivity;->usernameTextView:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     invoke-virtual {v0, v10}, Landroid/widget/EditText;->setLines(I)V
 
-    .line 338
+    .line 349
     iget-object v0, v8, Lorg/telegram/ui/ChatEditTypeActivity;->usernameTextView:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     invoke-virtual {v0, v6}, Landroid/widget/EditText;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 339
+    .line 350
     iget-object v0, v8, Lorg/telegram/ui/ChatEditTypeActivity;->usernameTextView:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     invoke-virtual {v0, v7, v7, v7, v7}, Landroid/widget/EditText;->setPadding(IIII)V
 
-    .line 340
+    .line 351
     iget-object v0, v8, Lorg/telegram/ui/ChatEditTypeActivity;->usernameTextView:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     invoke-virtual {v0, v10}, Landroid/widget/EditText;->setSingleLine(Z)V
 
-    .line 341
+    .line 352
     iget-object v0, v8, Lorg/telegram/ui/ChatEditTypeActivity;->usernameTextView:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     const v1, 0x28020
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->setInputType(I)V
 
-    .line 342
+    .line 353
     iget-object v0, v8, Lorg/telegram/ui/ChatEditTypeActivity;->usernameTextView:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     invoke-virtual {v0, v4}, Landroid/widget/EditText;->setImeOptions(I)V
 
-    .line 343
+    .line 354
     iget-object v0, v8, Lorg/telegram/ui/ChatEditTypeActivity;->usernameTextView:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
-    const v1, 0x7f0e03d0
+    const v1, 0x7f0e040f
 
     const-string v2, "ChannelUsernamePlaceholder"
 
@@ -3700,7 +3807,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->setHint(Ljava/lang/CharSequence;)V
 
-    .line 344
+    .line 355
     iget-object v0, v8, Lorg/telegram/ui/ChatEditTypeActivity;->usernameTextView:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     invoke-static {v3}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
@@ -3709,7 +3816,7 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/EditTextBoldCursor;->setCursorColor(I)V
 
-    .line 345
+    .line 356
     iget-object v0, v8, Lorg/telegram/ui/ChatEditTypeActivity;->usernameTextView:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     const/high16 v1, 0x41a00000    # 20.0f
@@ -3720,14 +3827,14 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/EditTextBoldCursor;->setCursorSize(I)V
 
-    .line 346
+    .line 357
     iget-object v0, v8, Lorg/telegram/ui/ChatEditTypeActivity;->usernameTextView:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     const/high16 v1, 0x3fc00000    # 1.5f
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/EditTextBoldCursor;->setCursorWidth(F)V
 
-    .line 347
+    .line 358
     iget-object v0, v8, Lorg/telegram/ui/ChatEditTypeActivity;->publicContainer:Landroid/widget/LinearLayout;
 
     iget-object v1, v8, Lorg/telegram/ui/ChatEditTypeActivity;->usernameTextView:Lorg/telegram/ui/Components/EditTextBoldCursor;
@@ -3738,26 +3845,26 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 348
+    .line 359
     iget-object v0, v8, Lorg/telegram/ui/ChatEditTypeActivity;->usernameTextView:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
-    new-instance v1, Lorg/telegram/ui/ChatEditTypeActivity$3;
+    new-instance v1, Lorg/telegram/ui/ChatEditTypeActivity$4;
 
-    invoke-direct {v1, v8}, Lorg/telegram/ui/ChatEditTypeActivity$3;-><init>(Lorg/telegram/ui/ChatEditTypeActivity;)V
+    invoke-direct {v1, v8}, Lorg/telegram/ui/ChatEditTypeActivity$4;-><init>(Lorg/telegram/ui/ChatEditTypeActivity;)V
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/EditTextBoldCursor;->addTextChangedListener(Landroid/text/TextWatcher;)V
 
-    .line 368
+    .line 379
     new-instance v0, Landroid/widget/LinearLayout;
 
     invoke-direct {v0, v9}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
 
     iput-object v0, v8, Lorg/telegram/ui/ChatEditTypeActivity;->privateContainer:Landroid/widget/LinearLayout;
 
-    .line 369
+    .line 380
     invoke-virtual {v0, v10}, Landroid/widget/LinearLayout;->setOrientation(I)V
 
-    .line 370
+    .line 381
     iget-object v0, v8, Lorg/telegram/ui/ChatEditTypeActivity;->linkContainer:Landroid/widget/LinearLayout;
 
     iget-object v1, v8, Lorg/telegram/ui/ChatEditTypeActivity;->privateContainer:Landroid/widget/LinearLayout;
@@ -3768,7 +3875,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 372
+    .line 383
     new-instance v14, Lorg/telegram/ui/Components/LinkActionView;
 
     const/4 v3, 0x0
@@ -3791,11 +3898,11 @@
 
     move-object/from16 v2, p0
 
-    const/4 v10, 0x6
+    const/4 v11, 0x6
 
     move-wide/from16 v4, v19
 
-    move-object v11, v6
+    move-object v10, v6
 
     move v6, v15
 
@@ -3807,49 +3914,49 @@
 
     iput-object v14, v8, Lorg/telegram/ui/ChatEditTypeActivity;->permanentLinkView:Lorg/telegram/ui/Components/LinkActionView;
 
-    .line 373
-    new-instance v0, Lorg/telegram/ui/ChatEditTypeActivity$4;
+    .line 384
+    new-instance v0, Lorg/telegram/ui/ChatEditTypeActivity$5;
 
-    invoke-direct {v0, v8, v9}, Lorg/telegram/ui/ChatEditTypeActivity$4;-><init>(Lorg/telegram/ui/ChatEditTypeActivity;Landroid/content/Context;)V
+    invoke-direct {v0, v8, v9}, Lorg/telegram/ui/ChatEditTypeActivity$5;-><init>(Lorg/telegram/ui/ChatEditTypeActivity;Landroid/content/Context;)V
 
     invoke-virtual {v14, v0}, Lorg/telegram/ui/Components/LinkActionView;->setDelegate(Lorg/telegram/ui/Components/LinkActionView$Delegate;)V
 
-    .line 385
+    .line 396
     iget-object v0, v8, Lorg/telegram/ui/ChatEditTypeActivity;->permanentLinkView:Lorg/telegram/ui/Components/LinkActionView;
 
-    invoke-virtual {v0, v15, v11}, Lorg/telegram/ui/Components/LinkActionView;->setUsers(ILjava/util/ArrayList;)V
+    invoke-virtual {v0, v15, v10}, Lorg/telegram/ui/Components/LinkActionView;->setUsers(ILjava/util/ArrayList;)V
 
-    .line 386
+    .line 397
     iget-object v0, v8, Lorg/telegram/ui/ChatEditTypeActivity;->privateContainer:Landroid/widget/LinearLayout;
 
     iget-object v1, v8, Lorg/telegram/ui/ChatEditTypeActivity;->permanentLinkView:Lorg/telegram/ui/Components/LinkActionView;
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
-    .line 388
+    .line 399
     new-instance v0, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
 
     invoke-direct {v0, v9}, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;-><init>(Landroid/content/Context;)V
 
     iput-object v0, v8, Lorg/telegram/ui/ChatEditTypeActivity;->checkTextView:Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
 
-    const v1, 0x7f07012d
+    const v1, 0x7f0700fc
 
     const-string v2, "windowBackgroundGrayShadow"
 
-    .line 389
+    .line 400
     invoke-static {v9, v1, v2}, Lorg/telegram/ui/ActionBar/Theme;->getThemedDrawable(Landroid/content/Context;ILjava/lang/String;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 390
+    .line 401
     iget-object v0, v8, Lorg/telegram/ui/ChatEditTypeActivity;->checkTextView:Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
 
-    invoke-virtual {v0, v10}, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;->setBottomPadding(I)V
+    invoke-virtual {v0, v11}, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;->setBottomPadding(I)V
 
-    .line 391
+    .line 402
     iget-object v0, v8, Lorg/telegram/ui/ChatEditTypeActivity;->linearLayout:Landroid/widget/LinearLayout;
 
     iget-object v1, v8, Lorg/telegram/ui/ChatEditTypeActivity;->checkTextView:Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
@@ -3860,15 +3967,22 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 393
+    .line 404
     new-instance v0, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
 
     invoke-direct {v0, v9}, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;-><init>(Landroid/content/Context;)V
 
     iput-object v0, v8, Lorg/telegram/ui/ChatEditTypeActivity;->typeInfoCell:Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
 
-    .line 394
-    iget-object v1, v8, Lorg/telegram/ui/ChatEditTypeActivity;->linearLayout:Landroid/widget/LinearLayout;
+    const/4 v1, 0x1
+
+    .line 405
+    invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->setImportantForAccessibility(I)V
+
+    .line 406
+    iget-object v0, v8, Lorg/telegram/ui/ChatEditTypeActivity;->linearLayout:Landroid/widget/LinearLayout;
+
+    iget-object v1, v8, Lorg/telegram/ui/ChatEditTypeActivity;->typeInfoCell:Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
 
     const/4 v2, -0x1
 
@@ -3876,16 +3990,16 @@
 
     move-result-object v3
 
-    invoke-virtual {v1, v0, v3}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {v0, v1, v3}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 396
+    .line 408
     new-instance v0, Lorg/telegram/ui/Cells/LoadingCell;
 
     invoke-direct {v0, v9}, Lorg/telegram/ui/Cells/LoadingCell;-><init>(Landroid/content/Context;)V
 
     iput-object v0, v8, Lorg/telegram/ui/ChatEditTypeActivity;->loadingAdminedCell:Lorg/telegram/ui/Cells/LoadingCell;
 
-    .line 397
+    .line 409
     iget-object v1, v8, Lorg/telegram/ui/ChatEditTypeActivity;->linearLayout:Landroid/widget/LinearLayout;
 
     invoke-static {v2, v12}, Lorg/telegram/ui/Components/LayoutHelper;->createLinear(II)Landroid/widget/LinearLayout$LayoutParams;
@@ -3894,28 +4008,28 @@
 
     invoke-virtual {v1, v0, v3}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 399
+    .line 411
     new-instance v0, Landroid/widget/LinearLayout;
 
     invoke-direct {v0, v9}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
 
     iput-object v0, v8, Lorg/telegram/ui/ChatEditTypeActivity;->adminnedChannelsLayout:Landroid/widget/LinearLayout;
 
-    .line 400
+    .line 412
     invoke-static {v13}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
 
     move-result v1
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setBackgroundColor(I)V
 
-    .line 401
+    .line 413
     iget-object v0, v8, Lorg/telegram/ui/ChatEditTypeActivity;->adminnedChannelsLayout:Landroid/widget/LinearLayout;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setOrientation(I)V
 
-    .line 402
+    .line 414
     iget-object v0, v8, Lorg/telegram/ui/ChatEditTypeActivity;->linearLayout:Landroid/widget/LinearLayout;
 
     iget-object v1, v8, Lorg/telegram/ui/ChatEditTypeActivity;->adminnedChannelsLayout:Landroid/widget/LinearLayout;
@@ -3926,14 +4040,14 @@
 
     invoke-virtual {v0, v1, v3}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 404
+    .line 416
     new-instance v0, Lorg/telegram/ui/Cells/ShadowSectionCell;
 
     invoke-direct {v0, v9}, Lorg/telegram/ui/Cells/ShadowSectionCell;-><init>(Landroid/content/Context;)V
 
     iput-object v0, v8, Lorg/telegram/ui/ChatEditTypeActivity;->adminedInfoCell:Lorg/telegram/ui/Cells/ShadowSectionCell;
 
-    .line 405
+    .line 417
     iget-object v1, v8, Lorg/telegram/ui/ChatEditTypeActivity;->linearLayout:Landroid/widget/LinearLayout;
 
     invoke-static {v2, v12}, Lorg/telegram/ui/Components/LayoutHelper;->createLinear(II)Landroid/widget/LinearLayout$LayoutParams;
@@ -3942,7 +4056,7 @@
 
     invoke-virtual {v1, v0, v3}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 408
+    .line 420
     new-instance v0, Lorg/telegram/ui/Cells/TextCell;
 
     invoke-direct {v0, v9}, Lorg/telegram/ui/Cells/TextCell;-><init>(Landroid/content/Context;)V
@@ -3951,17 +4065,17 @@
 
     const/4 v1, 0x1
 
-    .line 409
+    .line 421
     invoke-static {v1}, Lorg/telegram/ui/ActionBar/Theme;->getSelectorDrawable(Z)Landroid/graphics/drawable/Drawable;
 
     move-result-object v2
 
     invoke-virtual {v0, v2}, Landroid/widget/FrameLayout;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 410
+    .line 422
     iget-object v0, v8, Lorg/telegram/ui/ChatEditTypeActivity;->manageLinksTextView:Lorg/telegram/ui/Cells/TextCell;
 
-    const v1, 0x7f0e0992
+    const v1, 0x7f0e0a19
 
     const-string v2, "ManageInviteLinks"
 
@@ -3969,20 +4083,20 @@
 
     move-result-object v1
 
-    const v2, 0x7f07004b
+    const v2, 0x7f070257
 
     invoke-virtual {v0, v1, v2, v15}, Lorg/telegram/ui/Cells/TextCell;->setTextAndIcon(Ljava/lang/String;IZ)V
 
-    .line 411
+    .line 423
     iget-object v0, v8, Lorg/telegram/ui/ChatEditTypeActivity;->manageLinksTextView:Lorg/telegram/ui/Cells/TextCell;
 
-    new-instance v1, Lorg/telegram/ui/ChatEditTypeActivity$$ExternalSyntheticLambda2;
+    new-instance v1, Lorg/telegram/ui/ChatEditTypeActivity$$ExternalSyntheticLambda3;
 
-    invoke-direct {v1, v8}, Lorg/telegram/ui/ChatEditTypeActivity$$ExternalSyntheticLambda2;-><init>(Lorg/telegram/ui/ChatEditTypeActivity;)V
+    invoke-direct {v1, v8}, Lorg/telegram/ui/ChatEditTypeActivity$$ExternalSyntheticLambda3;-><init>(Lorg/telegram/ui/ChatEditTypeActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 416
+    .line 428
     iget-object v0, v8, Lorg/telegram/ui/ChatEditTypeActivity;->linearLayout:Landroid/widget/LinearLayout;
 
     iget-object v1, v8, Lorg/telegram/ui/ChatEditTypeActivity;->manageLinksTextView:Lorg/telegram/ui/Cells/TextCell;
@@ -3995,14 +4109,14 @@
 
     invoke-virtual {v0, v1, v3}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 418
+    .line 430
     new-instance v0, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
 
     invoke-direct {v0, v9}, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;-><init>(Landroid/content/Context;)V
 
     iput-object v0, v8, Lorg/telegram/ui/ChatEditTypeActivity;->manageLinksInfoCell:Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
 
-    .line 419
+    .line 431
     iget-object v1, v8, Lorg/telegram/ui/ChatEditTypeActivity;->linearLayout:Landroid/widget/LinearLayout;
 
     invoke-static {v2, v12}, Lorg/telegram/ui/Components/LayoutHelper;->createLinear(II)Landroid/widget/LinearLayout$LayoutParams;
@@ -4011,7 +4125,7 @@
 
     invoke-virtual {v1, v0, v3}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 421
+    .line 433
     new-instance v0, Lorg/telegram/ui/Components/JoinToSendSettingsView;
 
     iget-object v1, v8, Lorg/telegram/ui/ChatEditTypeActivity;->currentChat:Lorg/telegram/tgnet/TLRPC$Chat;
@@ -4020,12 +4134,12 @@
 
     iput-object v0, v8, Lorg/telegram/ui/ChatEditTypeActivity;->joinContainer:Lorg/telegram/ui/Components/JoinToSendSettingsView;
 
-    .line 422
+    .line 434
     iget-object v1, v8, Lorg/telegram/ui/ChatEditTypeActivity;->linearLayout:Landroid/widget/LinearLayout;
 
     invoke-virtual {v1, v0}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
-    .line 424
+    .line 436
     new-instance v0, Landroid/widget/LinearLayout;
 
     invoke-direct {v0, v9}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
@@ -4034,17 +4148,17 @@
 
     const/4 v1, 0x1
 
-    .line 425
+    .line 437
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setOrientation(I)V
 
-    .line 426
+    .line 438
     iget-object v0, v8, Lorg/telegram/ui/ChatEditTypeActivity;->linearLayout:Landroid/widget/LinearLayout;
 
     iget-object v1, v8, Lorg/telegram/ui/ChatEditTypeActivity;->saveContainer:Landroid/widget/LinearLayout;
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
-    .line 428
+    .line 440
     new-instance v0, Lorg/telegram/ui/Cells/HeaderCell;
 
     const/16 v1, 0x17
@@ -4055,13 +4169,13 @@
 
     const/16 v1, 0x2e
 
-    .line 429
+    .line 441
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Cells/HeaderCell;->setHeight(I)V
 
-    .line 430
+    .line 442
     iget-object v0, v8, Lorg/telegram/ui/ChatEditTypeActivity;->saveHeaderCell:Lorg/telegram/ui/Cells/HeaderCell;
 
-    const v1, 0x7f0e0f67
+    const v1, 0x7f0e1023
 
     const-string v2, "SavingContentTitle"
 
@@ -4071,7 +4185,7 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Cells/HeaderCell;->setText(Ljava/lang/CharSequence;)V
 
-    .line 431
+    .line 443
     iget-object v0, v8, Lorg/telegram/ui/ChatEditTypeActivity;->saveHeaderCell:Lorg/telegram/ui/Cells/HeaderCell;
 
     const/4 v1, 0x1
@@ -4082,7 +4196,7 @@
 
     invoke-virtual {v0, v2}, Landroid/widget/FrameLayout;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 432
+    .line 444
     iget-object v0, v8, Lorg/telegram/ui/ChatEditTypeActivity;->saveContainer:Landroid/widget/LinearLayout;
 
     iget-object v2, v8, Lorg/telegram/ui/ChatEditTypeActivity;->saveHeaderCell:Lorg/telegram/ui/Cells/HeaderCell;
@@ -4095,24 +4209,24 @@
 
     invoke-virtual {v0, v2, v4}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 433
+    .line 445
     new-instance v0, Lorg/telegram/ui/Cells/TextCheckCell;
 
     invoke-direct {v0, v9}, Lorg/telegram/ui/Cells/TextCheckCell;-><init>(Landroid/content/Context;)V
 
     iput-object v0, v8, Lorg/telegram/ui/ChatEditTypeActivity;->saveRestrictCell:Lorg/telegram/ui/Cells/TextCheckCell;
 
-    .line 434
+    .line 446
     invoke-static {v1}, Lorg/telegram/ui/ActionBar/Theme;->getSelectorDrawable(Z)Landroid/graphics/drawable/Drawable;
 
     move-result-object v2
 
     invoke-virtual {v0, v2}, Landroid/widget/FrameLayout;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 435
+    .line 447
     iget-object v0, v8, Lorg/telegram/ui/ChatEditTypeActivity;->saveRestrictCell:Lorg/telegram/ui/Cells/TextCheckCell;
 
-    const v1, 0x7f0e0f3c
+    const v1, 0x7f0e0fec
 
     const-string v2, "RestrictSavingContent"
 
@@ -4124,7 +4238,7 @@
 
     invoke-virtual {v0, v1, v2, v15}, Lorg/telegram/ui/Cells/TextCheckCell;->setTextAndCheck(Ljava/lang/String;ZZ)V
 
-    .line 436
+    .line 448
     iget-object v0, v8, Lorg/telegram/ui/ChatEditTypeActivity;->saveRestrictCell:Lorg/telegram/ui/Cells/TextCheckCell;
 
     new-instance v1, Lorg/telegram/ui/ChatEditTypeActivity$$ExternalSyntheticLambda5;
@@ -4133,7 +4247,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 440
+    .line 452
     iget-object v0, v8, Lorg/telegram/ui/ChatEditTypeActivity;->saveContainer:Landroid/widget/LinearLayout;
 
     iget-object v1, v8, Lorg/telegram/ui/ChatEditTypeActivity;->saveRestrictCell:Lorg/telegram/ui/Cells/TextCheckCell;
@@ -4146,17 +4260,17 @@
 
     invoke-virtual {v0, v1, v3}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 441
+    .line 453
     new-instance v0, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
 
     invoke-direct {v0, v9}, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;-><init>(Landroid/content/Context;)V
 
     iput-object v0, v8, Lorg/telegram/ui/ChatEditTypeActivity;->saveRestrictInfoCell:Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
 
-    .line 442
+    .line 454
     iget-boolean v0, v8, Lorg/telegram/ui/ChatEditTypeActivity;->isChannel:Z
 
-    if-eqz v0, :cond_4bf
+    if-eqz v0, :cond_4c5
 
     iget-object v0, v8, Lorg/telegram/ui/ChatEditTypeActivity;->currentChat:Lorg/telegram/tgnet/TLRPC$Chat;
 
@@ -4164,12 +4278,12 @@
 
     move-result v0
 
-    if-nez v0, :cond_4bf
+    if-nez v0, :cond_4c5
 
-    .line 443
+    .line 455
     iget-object v0, v8, Lorg/telegram/ui/ChatEditTypeActivity;->saveRestrictInfoCell:Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
 
-    const v1, 0x7f0e0f3d
+    const v1, 0x7f0e0fed
 
     const-string v2, "RestrictSavingContentInfoChannel"
 
@@ -4179,13 +4293,13 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;->setText(Ljava/lang/CharSequence;)V
 
-    goto :goto_4cd
+    goto :goto_4d3
 
-    .line 445
-    :cond_4bf
+    .line 457
+    :cond_4c5
     iget-object v0, v8, Lorg/telegram/ui/ChatEditTypeActivity;->saveRestrictInfoCell:Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
 
-    const v1, 0x7f0e0f3e
+    const v1, 0x7f0e0fee
 
     const-string v2, "RestrictSavingContentInfoGroup"
 
@@ -4195,8 +4309,8 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;->setText(Ljava/lang/CharSequence;)V
 
-    .line 448
-    :goto_4cd
+    .line 460
+    :goto_4d3
     iget-object v0, v8, Lorg/telegram/ui/ChatEditTypeActivity;->saveContainer:Landroid/widget/LinearLayout;
 
     iget-object v1, v8, Lorg/telegram/ui/ChatEditTypeActivity;->saveRestrictInfoCell:Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
@@ -4209,28 +4323,28 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 450
+    .line 462
     iget-boolean v0, v8, Lorg/telegram/ui/ChatEditTypeActivity;->isPrivate:Z
 
-    if-nez v0, :cond_4fa
+    if-nez v0, :cond_500
 
     iget-object v0, v8, Lorg/telegram/ui/ChatEditTypeActivity;->currentChat:Lorg/telegram/tgnet/TLRPC$Chat;
 
     iget-object v0, v0, Lorg/telegram/tgnet/TLRPC$Chat;->username:Ljava/lang/String;
 
-    if-eqz v0, :cond_4fa
+    if-eqz v0, :cond_500
 
     const/4 v1, 0x1
 
-    .line 451
+    .line 463
     iput-boolean v1, v8, Lorg/telegram/ui/ChatEditTypeActivity;->ignoreTextChanges:Z
 
-    .line 452
+    .line 464
     iget-object v1, v8, Lorg/telegram/ui/ChatEditTypeActivity;->usernameTextView:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     invoke-virtual {v1, v0}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
-    .line 453
+    .line 465
     iget-object v0, v8, Lorg/telegram/ui/ChatEditTypeActivity;->usernameTextView:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     iget-object v1, v8, Lorg/telegram/ui/ChatEditTypeActivity;->currentChat:Lorg/telegram/tgnet/TLRPC$Chat;
@@ -4243,14 +4357,14 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/EditTextBoldCursor;->setSelection(I)V
 
-    .line 454
+    .line 466
     iput-boolean v15, v8, Lorg/telegram/ui/ChatEditTypeActivity;->ignoreTextChanges:Z
 
-    .line 456
-    :cond_4fa
+    .line 468
+    :cond_500
     invoke-direct/range {p0 .. p0}, Lorg/telegram/ui/ChatEditTypeActivity;->updatePrivatePublic()V
 
-    .line 458
+    .line 470
     iget-object v0, v8, Lorg/telegram/ui/ActionBar/BaseFragment;->fragmentView:Landroid/view/View;
 
     return-object v0
@@ -4259,19 +4373,19 @@
 .method public varargs didReceivedNotification(II[Ljava/lang/Object;)V
     .registers 7
 
-    .line 463
+    .line 488
     sget p2, Lorg/telegram/messenger/NotificationCenter;->chatInfoDidLoad:I
 
     if-ne p1, p2, :cond_1a
 
     const/4 p1, 0x0
 
-    .line 464
+    .line 489
     aget-object p1, p3, p1
 
     check-cast p1, Lorg/telegram/tgnet/TLRPC$ChatFull;
 
-    .line 465
+    .line 490
     iget-wide p2, p1, Lorg/telegram/tgnet/TLRPC$ChatFull;->id:J
 
     iget-wide v0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->chatId:J
@@ -4280,15 +4394,15 @@
 
     if-nez v2, :cond_1a
 
-    .line 466
+    .line 491
     iput-object p1, p0, Lorg/telegram/ui/ChatEditTypeActivity;->info:Lorg/telegram/tgnet/TLRPC$ChatFull;
 
-    .line 467
+    .line 492
     iget-object p1, p1, Lorg/telegram/tgnet/TLRPC$ChatFull;->exported_invite:Lorg/telegram/tgnet/TLRPC$TL_chatInviteExported;
 
     iput-object p1, p0, Lorg/telegram/ui/ChatEditTypeActivity;->invite:Lorg/telegram/tgnet/TLRPC$TL_chatInviteExported;
 
-    .line 468
+    .line 493
     invoke-direct {p0}, Lorg/telegram/ui/ChatEditTypeActivity;->updatePrivatePublic()V
 
     :cond_1a
@@ -4308,17 +4422,17 @@
 
     move-object/from16 v0, p0
 
-    .line 812
+    .line 837
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 813
-    new-instance v10, Lorg/telegram/ui/ChatEditTypeActivity$$ExternalSyntheticLambda19;
+    .line 838
+    new-instance v10, Lorg/telegram/ui/ChatEditTypeActivity$$ExternalSyntheticLambda20;
 
-    invoke-direct {v10, v0}, Lorg/telegram/ui/ChatEditTypeActivity$$ExternalSyntheticLambda19;-><init>(Lorg/telegram/ui/ChatEditTypeActivity;)V
+    invoke-direct {v10, v0}, Lorg/telegram/ui/ChatEditTypeActivity$$ExternalSyntheticLambda20;-><init>(Lorg/telegram/ui/ChatEditTypeActivity;)V
 
-    .line 831
+    .line 856
     new-instance v11, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v3, v0, Lorg/telegram/ui/ActionBar/BaseFragment;->fragmentView:Landroid/view/View;
@@ -4341,7 +4455,7 @@
 
     invoke-virtual {v1, v11}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 833
+    .line 858
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v13, v0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
@@ -4364,7 +4478,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 834
+    .line 859
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v3, v0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
@@ -4389,7 +4503,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 835
+    .line 860
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v12, v0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
@@ -4406,7 +4520,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 836
+    .line 861
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v3, v0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
@@ -4425,7 +4539,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 838
+    .line 863
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v12, v0, Lorg/telegram/ui/ChatEditTypeActivity;->sectionCell2:Lorg/telegram/ui/Cells/ShadowSectionCell;
@@ -4450,7 +4564,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 840
+    .line 865
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v3, v0, Lorg/telegram/ui/ChatEditTypeActivity;->infoCell:Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
@@ -4477,7 +4591,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 841
+    .line 866
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v3, v0, Lorg/telegram/ui/ChatEditTypeActivity;->infoCell:Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
@@ -4516,7 +4630,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 843
+    .line 868
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v3, v0, Lorg/telegram/ui/ChatEditTypeActivity;->textCell:Lorg/telegram/ui/Cells/TextSettingsCell;
@@ -4535,7 +4649,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 844
+    .line 869
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v3, v0, Lorg/telegram/ui/ChatEditTypeActivity;->textCell:Lorg/telegram/ui/Cells/TextSettingsCell;
@@ -4566,7 +4680,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 845
+    .line 870
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v3, v0, Lorg/telegram/ui/ChatEditTypeActivity;->textCell2:Lorg/telegram/ui/Cells/TextSettingsCell;
@@ -4583,7 +4697,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 846
+    .line 871
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v3, v0, Lorg/telegram/ui/ChatEditTypeActivity;->textCell2:Lorg/telegram/ui/Cells/TextSettingsCell;
@@ -4614,7 +4728,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 848
+    .line 873
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v3, v0, Lorg/telegram/ui/ChatEditTypeActivity;->usernameTextView:Lorg/telegram/ui/Components/EditTextBoldCursor;
@@ -4631,7 +4745,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 849
+    .line 874
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v3, v0, Lorg/telegram/ui/ChatEditTypeActivity;->usernameTextView:Lorg/telegram/ui/Components/EditTextBoldCursor;
@@ -4652,7 +4766,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 851
+    .line 876
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v3, v0, Lorg/telegram/ui/ChatEditTypeActivity;->linearLayoutTypeContainer:Landroid/widget/LinearLayout;
@@ -4669,7 +4783,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 852
+    .line 877
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v3, v0, Lorg/telegram/ui/ChatEditTypeActivity;->linkContainer:Landroid/widget/LinearLayout;
@@ -4686,7 +4800,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 853
+    .line 878
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v3, v0, Lorg/telegram/ui/ChatEditTypeActivity;->headerCell:Lorg/telegram/ui/Cells/HeaderCell;
@@ -4719,7 +4833,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 854
+    .line 879
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v3, v0, Lorg/telegram/ui/ChatEditTypeActivity;->headerCell2:Lorg/telegram/ui/Cells/HeaderCell;
@@ -4754,7 +4868,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 855
+    .line 880
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v3, v0, Lorg/telegram/ui/ChatEditTypeActivity;->saveHeaderCell:Lorg/telegram/ui/Cells/HeaderCell;
@@ -4783,7 +4897,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 856
+    .line 881
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v3, v0, Lorg/telegram/ui/ChatEditTypeActivity;->editText:Lorg/telegram/ui/Components/EditTextBoldCursor;
@@ -4804,7 +4918,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 857
+    .line 882
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v3, v0, Lorg/telegram/ui/ChatEditTypeActivity;->editText:Lorg/telegram/ui/Components/EditTextBoldCursor;
@@ -4825,7 +4939,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 859
+    .line 884
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v3, v0, Lorg/telegram/ui/ChatEditTypeActivity;->saveRestrictCell:Lorg/telegram/ui/Cells/TextCheckCell;
@@ -4844,7 +4958,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 860
+    .line 885
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v3, v0, Lorg/telegram/ui/ChatEditTypeActivity;->saveRestrictCell:Lorg/telegram/ui/Cells/TextCheckCell;
@@ -4877,7 +4991,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 861
+    .line 886
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v3, v0, Lorg/telegram/ui/ChatEditTypeActivity;->saveRestrictCell:Lorg/telegram/ui/Cells/TextCheckCell;
@@ -4914,7 +5028,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 862
+    .line 887
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v3, v0, Lorg/telegram/ui/ChatEditTypeActivity;->saveRestrictCell:Lorg/telegram/ui/Cells/TextCheckCell;
@@ -4943,7 +5057,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 864
+    .line 889
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v3, v0, Lorg/telegram/ui/ChatEditTypeActivity;->checkTextView:Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
@@ -4974,7 +5088,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 865
+    .line 890
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v3, v0, Lorg/telegram/ui/ChatEditTypeActivity;->checkTextView:Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
@@ -5005,7 +5119,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 866
+    .line 891
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v3, v0, Lorg/telegram/ui/ChatEditTypeActivity;->checkTextView:Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
@@ -5036,7 +5150,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 868
+    .line 893
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v3, v0, Lorg/telegram/ui/ChatEditTypeActivity;->typeInfoCell:Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
@@ -5063,7 +5177,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 869
+    .line 894
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v3, v0, Lorg/telegram/ui/ChatEditTypeActivity;->typeInfoCell:Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
@@ -5096,7 +5210,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 870
+    .line 895
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v3, v0, Lorg/telegram/ui/ChatEditTypeActivity;->typeInfoCell:Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
@@ -5129,7 +5243,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 872
+    .line 897
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v3, v0, Lorg/telegram/ui/ChatEditTypeActivity;->manageLinksInfoCell:Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
@@ -5154,7 +5268,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 873
+    .line 898
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v3, v0, Lorg/telegram/ui/ChatEditTypeActivity;->manageLinksInfoCell:Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
@@ -5185,7 +5299,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 874
+    .line 899
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v3, v0, Lorg/telegram/ui/ChatEditTypeActivity;->manageLinksInfoCell:Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
@@ -5218,7 +5332,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 876
+    .line 901
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v3, v0, Lorg/telegram/ui/ChatEditTypeActivity;->saveRestrictInfoCell:Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
@@ -5245,7 +5359,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 877
+    .line 902
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v3, v0, Lorg/telegram/ui/ChatEditTypeActivity;->saveRestrictInfoCell:Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
@@ -5278,7 +5392,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 878
+    .line 903
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v3, v0, Lorg/telegram/ui/ChatEditTypeActivity;->saveRestrictInfoCell:Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
@@ -5311,7 +5425,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 880
+    .line 905
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v3, v0, Lorg/telegram/ui/ChatEditTypeActivity;->adminedInfoCell:Lorg/telegram/ui/Cells/ShadowSectionCell;
@@ -5336,7 +5450,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 881
+    .line 906
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v3, v0, Lorg/telegram/ui/ChatEditTypeActivity;->adminnedChannelsLayout:Landroid/widget/LinearLayout;
@@ -5357,7 +5471,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 882
+    .line 907
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v3, v0, Lorg/telegram/ui/ChatEditTypeActivity;->loadingAdminedCell:Lorg/telegram/ui/Cells/LoadingCell;
@@ -5390,7 +5504,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 883
+    .line 908
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v3, v0, Lorg/telegram/ui/ChatEditTypeActivity;->radioButtonCell1:Lorg/telegram/ui/Cells/RadioButtonCell;
@@ -5407,7 +5521,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 884
+    .line 909
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v3, v0, Lorg/telegram/ui/ChatEditTypeActivity;->radioButtonCell1:Lorg/telegram/ui/Cells/RadioButtonCell;
@@ -5440,7 +5554,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 885
+    .line 910
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v3, v0, Lorg/telegram/ui/ChatEditTypeActivity;->radioButtonCell1:Lorg/telegram/ui/Cells/RadioButtonCell;
@@ -5473,7 +5587,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 886
+    .line 911
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v3, v0, Lorg/telegram/ui/ChatEditTypeActivity;->radioButtonCell1:Lorg/telegram/ui/Cells/RadioButtonCell;
@@ -5506,7 +5620,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 887
+    .line 912
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v3, v0, Lorg/telegram/ui/ChatEditTypeActivity;->radioButtonCell1:Lorg/telegram/ui/Cells/RadioButtonCell;
@@ -5539,7 +5653,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 888
+    .line 913
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v3, v0, Lorg/telegram/ui/ChatEditTypeActivity;->radioButtonCell2:Lorg/telegram/ui/Cells/RadioButtonCell;
@@ -5560,7 +5674,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 889
+    .line 914
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v3, v0, Lorg/telegram/ui/ChatEditTypeActivity;->radioButtonCell2:Lorg/telegram/ui/Cells/RadioButtonCell;
@@ -5591,7 +5705,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 890
+    .line 915
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v3, v0, Lorg/telegram/ui/ChatEditTypeActivity;->radioButtonCell2:Lorg/telegram/ui/Cells/RadioButtonCell;
@@ -5624,7 +5738,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 891
+    .line 916
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v3, v0, Lorg/telegram/ui/ChatEditTypeActivity;->radioButtonCell2:Lorg/telegram/ui/Cells/RadioButtonCell;
@@ -5655,7 +5769,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 892
+    .line 917
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v3, v0, Lorg/telegram/ui/ChatEditTypeActivity;->radioButtonCell2:Lorg/telegram/ui/Cells/RadioButtonCell;
@@ -5686,7 +5800,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 894
+    .line 919
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v3, v0, Lorg/telegram/ui/ChatEditTypeActivity;->adminnedChannelsLayout:Landroid/widget/LinearLayout;
@@ -5719,7 +5833,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 895
+    .line 920
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v3, v0, Lorg/telegram/ui/ChatEditTypeActivity;->adminnedChannelsLayout:Landroid/widget/LinearLayout;
@@ -5752,7 +5866,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 896
+    .line 921
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v3, v0, Lorg/telegram/ui/ChatEditTypeActivity;->adminnedChannelsLayout:Landroid/widget/LinearLayout;
@@ -5783,7 +5897,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 897
+    .line 922
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v3, v0, Lorg/telegram/ui/ChatEditTypeActivity;->adminnedChannelsLayout:Landroid/widget/LinearLayout;
@@ -5816,7 +5930,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 898
+    .line 923
     new-instance v12, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     sget-object v7, Lorg/telegram/ui/ActionBar/Theme;->avatarDrawables:[Landroid/graphics/drawable/Drawable;
@@ -5843,7 +5957,7 @@
 
     invoke-virtual {v1, v12}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 899
+    .line 924
     new-instance v12, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     const/4 v7, 0x0
@@ -5856,7 +5970,7 @@
 
     invoke-virtual {v1, v12}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 900
+    .line 925
     new-instance v12, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     const-string v9, "avatar_backgroundOrange"
@@ -5867,7 +5981,7 @@
 
     invoke-virtual {v1, v12}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 901
+    .line 926
     new-instance v12, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     const-string v9, "avatar_backgroundViolet"
@@ -5878,7 +5992,7 @@
 
     invoke-virtual {v1, v12}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 902
+    .line 927
     new-instance v12, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     const-string v9, "avatar_backgroundGreen"
@@ -5889,7 +6003,7 @@
 
     invoke-virtual {v1, v12}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 903
+    .line 928
     new-instance v12, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     const-string v9, "avatar_backgroundCyan"
@@ -5900,7 +6014,7 @@
 
     invoke-virtual {v1, v12}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 904
+    .line 929
     new-instance v12, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     const-string v9, "avatar_backgroundBlue"
@@ -5911,7 +6025,7 @@
 
     invoke-virtual {v1, v12}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 905
+    .line 930
     new-instance v12, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     const-string v9, "avatar_backgroundPink"
@@ -5922,7 +6036,7 @@
 
     invoke-virtual {v1, v12}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 907
+    .line 932
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v3, v0, Lorg/telegram/ui/ChatEditTypeActivity;->manageLinksTextView:Lorg/telegram/ui/Cells/TextCell;
@@ -5943,7 +6057,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 908
+    .line 933
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v3, v0, Lorg/telegram/ui/ChatEditTypeActivity;->manageLinksTextView:Lorg/telegram/ui/Cells/TextCell;
@@ -5976,7 +6090,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 909
+    .line 934
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v3, v0, Lorg/telegram/ui/ChatEditTypeActivity;->manageLinksTextView:Lorg/telegram/ui/Cells/TextCell;
@@ -6017,10 +6131,10 @@
 .method protected onBecomeFullyVisible()V
     .registers 2
 
-    .line 200
+    .line 195
     invoke-super {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->onBecomeFullyVisible()V
 
-    .line 201
+    .line 196
     iget-boolean v0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->isForcePublic:Z
 
     if-eqz v0, :cond_13
@@ -6029,10 +6143,10 @@
 
     if-eqz v0, :cond_13
 
-    .line 202
+    .line 197
     invoke-virtual {v0}, Landroid/widget/EditText;->requestFocus()Z
 
-    .line 203
+    .line 198
     iget-object v0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->usernameTextView:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->showKeyboard(Landroid/view/View;)Z
@@ -6044,7 +6158,7 @@
 .method public onFragmentCreate()Z
     .registers 11
 
-    .line 137
+    .line 132
     invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getMessagesController()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v0
@@ -6067,7 +6181,7 @@
 
     if-nez v0, :cond_4b
 
-    .line 139
+    .line 134
     invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getMessagesStorage()Lorg/telegram/messenger/MessagesStorage;
 
     move-result-object v0
@@ -6082,7 +6196,7 @@
 
     if-eqz v0, :cond_4a
 
-    .line 141
+    .line 136
     invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getMessagesController()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v0
@@ -6091,12 +6205,12 @@
 
     invoke-virtual {v0, v3, v2}, Lorg/telegram/messenger/MessagesController;->putChat(Lorg/telegram/tgnet/TLRPC$Chat;Z)V
 
-    .line 145
+    .line 140
     iget-object v0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->info:Lorg/telegram/tgnet/TLRPC$ChatFull;
 
     if-nez v0, :cond_4b
 
-    .line 146
+    .line 141
     invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getMessagesStorage()Lorg/telegram/messenger/MessagesStorage;
 
     move-result-object v3
@@ -6128,7 +6242,7 @@
     :cond_4a
     return v1
 
-    .line 152
+    .line 147
     :cond_4b
     iget-boolean v0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->isForcePublic:Z
 
@@ -6154,7 +6268,7 @@
     :goto_5c
     iput-boolean v0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->isPrivate:Z
 
-    .line 153
+    .line 148
     iget-object v0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->currentChat:Lorg/telegram/tgnet/TLRPC$Chat;
 
     invoke-static {v0}, Lorg/telegram/messenger/ChatObject;->isChannel(Lorg/telegram/tgnet/TLRPC$Chat;)Z
@@ -6174,14 +6288,14 @@
     :cond_6d
     iput-boolean v1, p0, Lorg/telegram/ui/ChatEditTypeActivity;->isChannel:Z
 
-    .line 154
+    .line 149
     iget-object v0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->currentChat:Lorg/telegram/tgnet/TLRPC$Chat;
 
     iget-boolean v1, v0, Lorg/telegram/tgnet/TLRPC$Chat;->noforwards:Z
 
     iput-boolean v1, p0, Lorg/telegram/ui/ChatEditTypeActivity;->isSaveRestricted:Z
 
-    .line 155
+    .line 150
     iget-boolean v1, p0, Lorg/telegram/ui/ChatEditTypeActivity;->isForcePublic:Z
 
     if-eqz v1, :cond_81
@@ -6205,7 +6319,7 @@
 
     if-eqz v0, :cond_a7
 
-    .line 156
+    .line 151
     :cond_8b
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_channels_checkUsername;
 
@@ -6213,28 +6327,28 @@
 
     const-string v1, "1"
 
-    .line 157
+    .line 152
     iput-object v1, v0, Lorg/telegram/tgnet/TLRPC$TL_channels_checkUsername;->username:Ljava/lang/String;
 
-    .line 158
+    .line 153
     new-instance v1, Lorg/telegram/tgnet/TLRPC$TL_inputChannelEmpty;
 
     invoke-direct {v1}, Lorg/telegram/tgnet/TLRPC$TL_inputChannelEmpty;-><init>()V
 
     iput-object v1, v0, Lorg/telegram/tgnet/TLRPC$TL_channels_checkUsername;->channel:Lorg/telegram/tgnet/TLRPC$InputChannel;
 
-    .line 159
+    .line 154
     invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getConnectionsManager()Lorg/telegram/tgnet/ConnectionsManager;
 
     move-result-object v1
 
-    new-instance v3, Lorg/telegram/ui/ChatEditTypeActivity$$ExternalSyntheticLambda14;
+    new-instance v3, Lorg/telegram/ui/ChatEditTypeActivity$$ExternalSyntheticLambda15;
 
-    invoke-direct {v3, p0}, Lorg/telegram/ui/ChatEditTypeActivity$$ExternalSyntheticLambda14;-><init>(Lorg/telegram/ui/ChatEditTypeActivity;)V
+    invoke-direct {v3, p0}, Lorg/telegram/ui/ChatEditTypeActivity$$ExternalSyntheticLambda15;-><init>(Lorg/telegram/ui/ChatEditTypeActivity;)V
 
     invoke-virtual {v1, v0, v3}, Lorg/telegram/tgnet/ConnectionsManager;->sendRequest(Lorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/RequestDelegate;)I
 
-    .line 166
+    .line 161
     :cond_a7
     iget-boolean v0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->isPrivate:Z
 
@@ -6244,7 +6358,7 @@
 
     if-eqz v0, :cond_ba
 
-    .line 167
+    .line 162
     invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getMessagesController()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v0
@@ -6255,7 +6369,7 @@
 
     invoke-virtual {v0, v3, v4, v1, v2}, Lorg/telegram/messenger/MessagesController;->loadFullChat(JIZ)V
 
-    .line 169
+    .line 164
     :cond_ba
     invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getNotificationCenter()Lorg/telegram/messenger/NotificationCenter;
 
@@ -6265,7 +6379,7 @@
 
     invoke-virtual {v0, p0, v1}, Lorg/telegram/messenger/NotificationCenter;->addObserver(Lorg/telegram/messenger/NotificationCenter$NotificationCenterDelegate;I)V
 
-    .line 170
+    .line 165
     invoke-super {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->onFragmentCreate()Z
 
     move-result v0
@@ -6276,10 +6390,10 @@
 .method public onFragmentDestroy()V
     .registers 3
 
-    .line 175
+    .line 170
     invoke-super {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->onFragmentDestroy()V
 
-    .line 176
+    .line 171
     invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getNotificationCenter()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v0
@@ -6288,7 +6402,7 @@
 
     invoke-virtual {v0, p0, v1}, Lorg/telegram/messenger/NotificationCenter;->removeObserver(Lorg/telegram/messenger/NotificationCenter$NotificationCenterDelegate;I)V
 
-    .line 177
+    .line 172
     invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getParentActivity()Landroid/app/Activity;
 
     move-result-object v0
@@ -6303,10 +6417,10 @@
 .method public onResume()V
     .registers 6
 
-    .line 182
+    .line 177
     invoke-super {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->onResume()V
 
-    .line 183
+    .line 178
     invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getParentActivity()Landroid/app/Activity;
 
     move-result-object v0
@@ -6315,7 +6429,7 @@
 
     invoke-static {v0, v1}, Lorg/telegram/messenger/AndroidUtilities;->requestAdjustResize(Landroid/app/Activity;I)V
 
-    .line 184
+    .line 179
     iget-object v0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->textCell2:Lorg/telegram/ui/Cells/TextSettingsCell;
 
     if-eqz v0, :cond_33
@@ -6324,18 +6438,18 @@
 
     if-eqz v1, :cond_33
 
-    .line 185
+    .line 180
     iget-object v1, v1, Lorg/telegram/tgnet/TLRPC$ChatFull;->stickerset:Lorg/telegram/tgnet/TLRPC$StickerSet;
 
     const/4 v2, 0x0
 
-    const v3, 0x7f0e0817
+    const v3, 0x7f0e086f
 
     const-string v4, "GroupStickers"
 
     if-eqz v1, :cond_2c
 
-    .line 186
+    .line 181
     invoke-static {v4, v3}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v1
@@ -6350,7 +6464,7 @@
 
     goto :goto_33
 
-    .line 188
+    .line 183
     :cond_2c
     invoke-static {v4, v3}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
@@ -6358,19 +6472,19 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/ui/Cells/TextSettingsCell;->setText(Ljava/lang/CharSequence;Z)V
 
-    .line 191
+    .line 186
     :cond_33
     :goto_33
     iget-object v0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->info:Lorg/telegram/tgnet/TLRPC$ChatFull;
 
     if-eqz v0, :cond_4f
 
-    .line 192
+    .line 187
     iget-object v0, v0, Lorg/telegram/tgnet/TLRPC$ChatFull;->exported_invite:Lorg/telegram/tgnet/TLRPC$TL_chatInviteExported;
 
     iput-object v0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->invite:Lorg/telegram/tgnet/TLRPC$TL_chatInviteExported;
 
-    .line 193
+    .line 188
     iget-object v1, p0, Lorg/telegram/ui/ChatEditTypeActivity;->permanentLinkView:Lorg/telegram/ui/Components/LinkActionView;
 
     if-nez v0, :cond_41
@@ -6385,7 +6499,7 @@
     :goto_43
     invoke-virtual {v1, v0}, Lorg/telegram/ui/Components/LinkActionView;->setLink(Ljava/lang/String;)V
 
-    .line 194
+    .line 189
     iget-object v0, p0, Lorg/telegram/ui/ChatEditTypeActivity;->permanentLinkView:Lorg/telegram/ui/Components/LinkActionView;
 
     iget-object v1, p0, Lorg/telegram/ui/ChatEditTypeActivity;->invite:Lorg/telegram/tgnet/TLRPC$TL_chatInviteExported;
@@ -6401,17 +6515,17 @@
 .method public setInfo(Lorg/telegram/tgnet/TLRPC$ChatFull;)V
     .registers 2
 
-    .line 474
+    .line 499
     iput-object p1, p0, Lorg/telegram/ui/ChatEditTypeActivity;->info:Lorg/telegram/tgnet/TLRPC$ChatFull;
 
     if-eqz p1, :cond_f
 
-    .line 476
+    .line 501
     iget-object p1, p1, Lorg/telegram/tgnet/TLRPC$ChatFull;->exported_invite:Lorg/telegram/tgnet/TLRPC$TL_chatInviteExported;
 
     if-eqz p1, :cond_b
 
-    .line 477
+    .line 502
     iput-object p1, p0, Lorg/telegram/ui/ChatEditTypeActivity;->invite:Lorg/telegram/tgnet/TLRPC$TL_chatInviteExported;
 
     goto :goto_f
@@ -6419,7 +6533,7 @@
     :cond_b
     const/4 p1, 0x0
 
-    .line 479
+    .line 504
     invoke-direct {p0, p1}, Lorg/telegram/ui/ChatEditTypeActivity;->generateLink(Z)V
 
     :cond_f

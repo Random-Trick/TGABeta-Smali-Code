@@ -21,7 +21,7 @@
     const/4 p1, 0x0
 
     :goto_1
-    const/4 p2, 0x3
+    const/4 p2, 0x4
 
     if-ge p1, p2, :cond_e
 

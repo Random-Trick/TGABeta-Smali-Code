@@ -33,7 +33,7 @@
 
     iget-object v1, p0, Lorg/telegram/messenger/MediaDataController$$ExternalSyntheticLambda55;->f$1:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lorg/telegram/messenger/MediaDataController;->$r8$lambda$W6d37r377R99IgVfUgxH6OmgWes(Lorg/telegram/messenger/MediaDataController;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lorg/telegram/messenger/MediaDataController;->$r8$lambda$LY5z84C10MiKmhGWmyK6LCEkx_I(Lorg/telegram/messenger/MediaDataController;Ljava/lang/String;)V
 
     return-void
 .end method

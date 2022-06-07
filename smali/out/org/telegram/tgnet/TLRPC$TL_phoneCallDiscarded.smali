@@ -17,7 +17,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 20153
+    .line 20334
     invoke-direct {p0}, Lorg/telegram/tgnet/TLRPC$PhoneCall;-><init>()V
 
     return-void
@@ -28,7 +28,7 @@
 .method public readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
     .registers 7
 
-    .line 20158
+    .line 20339
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
@@ -50,7 +50,7 @@
     :cond_e
     const/4 v1, 0x0
 
-    .line 20159
+    .line 20340
     :goto_f
     iput-boolean v1, p0, Lorg/telegram/tgnet/TLRPC$PhoneCall;->need_rating:Z
 
@@ -65,7 +65,7 @@
     :cond_17
     const/4 v1, 0x0
 
-    .line 20160
+    .line 20341
     :goto_18
     iput-boolean v1, p0, Lorg/telegram/tgnet/TLRPC$PhoneCall;->need_debug:Z
 
@@ -75,25 +75,25 @@
 
     const/4 v2, 0x1
 
-    .line 20161
+    .line 20342
     :cond_1f
     iput-boolean v2, p0, Lorg/telegram/tgnet/TLRPC$PhoneCall;->video:Z
 
-    .line 20162
+    .line 20343
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt64(Z)J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lorg/telegram/tgnet/TLRPC$PhoneCall;->id:J
 
-    .line 20163
+    .line 20344
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$PhoneCall;->flags:I
 
     and-int/2addr v0, v3
 
     if-eqz v0, :cond_36
 
-    .line 20164
+    .line 20345
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
@@ -104,7 +104,7 @@
 
     iput-object v0, p0, Lorg/telegram/tgnet/TLRPC$PhoneCall;->reason:Lorg/telegram/tgnet/TLRPC$PhoneCallDiscardReason;
 
-    .line 20166
+    .line 20347
     :cond_36
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$PhoneCall;->flags:I
 
@@ -112,7 +112,7 @@
 
     if-eqz v0, :cond_42
 
-    .line 20167
+    .line 20348
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result p1
@@ -126,12 +126,12 @@
 .method public serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
     .registers 4
 
-    .line 20172
+    .line 20353
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_phoneCallDiscarded;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 20173
+    .line 20354
     iget-boolean v0, p0, Lorg/telegram/tgnet/TLRPC$PhoneCall;->need_rating:Z
 
     if-eqz v0, :cond_e
@@ -150,7 +150,7 @@
     :goto_12
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$PhoneCall;->flags:I
 
-    .line 20174
+    .line 20355
     iget-boolean v1, p0, Lorg/telegram/tgnet/TLRPC$PhoneCall;->need_debug:Z
 
     if-eqz v1, :cond_1b
@@ -165,7 +165,7 @@
     :goto_1d
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$PhoneCall;->flags:I
 
-    .line 20175
+    .line 20356
     iget-boolean v1, p0, Lorg/telegram/tgnet/TLRPC$PhoneCall;->video:Z
 
     if-eqz v1, :cond_26
@@ -180,27 +180,27 @@
     :goto_28
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$PhoneCall;->flags:I
 
-    .line 20176
+    .line 20357
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 20177
+    .line 20358
     iget-wide v0, p0, Lorg/telegram/tgnet/TLRPC$PhoneCall;->id:J
 
     invoke-virtual {p1, v0, v1}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt64(J)V
 
-    .line 20178
+    .line 20359
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$PhoneCall;->flags:I
 
     and-int/lit8 v0, v0, 0x1
 
     if-eqz v0, :cond_3d
 
-    .line 20179
+    .line 20360
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$PhoneCall;->reason:Lorg/telegram/tgnet/TLRPC$PhoneCallDiscardReason;
 
     invoke-virtual {v0, p1}, Lorg/telegram/tgnet/TLObject;->serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
 
-    .line 20181
+    .line 20362
     :cond_3d
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$PhoneCall;->flags:I
 
@@ -208,7 +208,7 @@
 
     if-eqz v0, :cond_48
 
-    .line 20182
+    .line 20363
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$PhoneCall;->duration:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V

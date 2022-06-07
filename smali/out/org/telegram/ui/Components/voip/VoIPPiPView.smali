@@ -203,7 +203,7 @@
 
     iput p2, p0, Lorg/telegram/ui/Components/voip/VoIPPiPView;->xOffset:I
 
-    const p2, 0x7f0700a1
+    const p2, 0x7f070084
 
     .line 280
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
@@ -352,7 +352,7 @@
 
     iput-object p2, p0, Lorg/telegram/ui/Components/voip/VoIPPiPView;->closeIcon:Landroid/widget/ImageView;
 
-    const p3, 0x7f07034e
+    const p3, 0x7f070366
 
     .line 321
     invoke-virtual {p2, p3}, Landroid/widget/ImageView;->setImageResource(I)V
@@ -383,7 +383,7 @@
     .line 323
     iget-object p2, p0, Lorg/telegram/ui/Components/voip/VoIPPiPView;->closeIcon:Landroid/widget/ImageView;
 
-    const p4, 0x7f0e047b
+    const p4, 0x7f0e04c8
 
     const-string v0, "Close"
 
@@ -425,7 +425,7 @@
 
     iput-object p2, p0, Lorg/telegram/ui/Components/voip/VoIPPiPView;->enlargeIcon:Landroid/widget/ImageView;
 
-    const p4, 0x7f07034f
+    const p4, 0x7f070367
 
     .line 327
     invoke-virtual {p2, p4}, Landroid/widget/ImageView;->setImageResource(I)V
@@ -454,7 +454,7 @@
     .line 329
     iget-object p2, p0, Lorg/telegram/ui/Components/voip/VoIPPiPView;->enlargeIcon:Landroid/widget/ImageView;
 
-    const p3, 0x7f0e0bbd
+    const p3, 0x7f0e0c47
 
     const-string p4, "Open"
 

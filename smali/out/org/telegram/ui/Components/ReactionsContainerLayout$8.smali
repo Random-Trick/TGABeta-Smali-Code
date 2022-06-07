@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/ReactionsContainerLayout;)V
     .registers 2
 
-    .line 757
+    .line 821
     iput-object p1, p0, Lorg/telegram/ui/Components/ReactionsContainerLayout$8;->this$0:Lorg/telegram/ui/Components/ReactionsContainerLayout;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -35,10 +35,10 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .registers 4
 
-    .line 760
+    .line 824
     invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationEnd(Landroid/animation/Animator;)V
 
-    .line 761
+    .line 825
     iget-object p1, p0, Lorg/telegram/ui/Components/ReactionsContainerLayout$8;->this$0:Lorg/telegram/ui/Components/ReactionsContainerLayout;
 
     const/4 v0, 0x0
@@ -47,15 +47,15 @@
 
     const/4 v1, 0x0
 
-    .line 762
+    .line 826
     invoke-static {p1, v1}, Lorg/telegram/ui/Components/ReactionsContainerLayout;->access$1802(Lorg/telegram/ui/Components/ReactionsContainerLayout;F)F
 
-    .line 763
+    .line 827
     iget-object p1, p0, Lorg/telegram/ui/Components/ReactionsContainerLayout$8;->this$0:Lorg/telegram/ui/Components/ReactionsContainerLayout;
 
     invoke-static {p1, v0}, Lorg/telegram/ui/Components/ReactionsContainerLayout;->access$102(Lorg/telegram/ui/Components/ReactionsContainerLayout;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 764
+    .line 828
     iget-object p1, p0, Lorg/telegram/ui/Components/ReactionsContainerLayout$8;->this$0:Lorg/telegram/ui/Components/ReactionsContainerLayout;
 
     invoke-virtual {p1}, Landroid/widget/FrameLayout;->invalidate()V

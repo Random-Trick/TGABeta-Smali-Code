@@ -17,7 +17,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 22285
+    .line 22475
     invoke-direct {p0}, Lorg/telegram/tgnet/TLRPC$TL_messageActionChatAddUser;-><init>()V
 
     return-void
@@ -28,7 +28,7 @@
 .method public readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
     .registers 8
 
-    .line 22290
+    .line 22480
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
@@ -43,7 +43,7 @@
 
     return-void
 
-    .line 22293
+    .line 22483
     :cond_d
     new-instance p1, Ljava/lang/RuntimeException;
 
@@ -67,7 +67,7 @@
 
     throw p1
 
-    .line 22297
+    .line 22487
     :cond_22
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
@@ -76,7 +76,7 @@
     :goto_26
     if-ge v1, v0, :cond_39
 
-    .line 22299
+    .line 22489
     iget-object v2, p0, Lorg/telegram/tgnet/TLRPC$MessageAction;->users:Ljava/util/ArrayList;
 
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
@@ -102,24 +102,24 @@
 .method public serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
     .registers 6
 
-    .line 22304
+    .line 22494
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_messageActionChatAddUser_layer131;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
     const v0, 0x1cb5c415
 
-    .line 22305
+    .line 22495
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 22306
+    .line 22496
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$MessageAction;->users:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
-    .line 22307
+    .line 22497
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
     const/4 v1, 0x0
@@ -127,7 +127,7 @@
     :goto_15
     if-ge v1, v0, :cond_2a
 
-    .line 22309
+    .line 22499
     iget-object v2, p0, Lorg/telegram/tgnet/TLRPC$MessageAction;->users:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;

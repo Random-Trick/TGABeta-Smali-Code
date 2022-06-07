@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/MessageSeenView;)V
     .registers 2
 
-    .line 276
+    .line 277
     iput-object p1, p0, Lorg/telegram/ui/MessageSeenView$4;->this$0:Lorg/telegram/ui/MessageSeenView;
 
     invoke-direct {p0}, Lorg/telegram/ui/Components/RecyclerListView$SelectionAdapter;-><init>()V
@@ -35,7 +35,7 @@
 .method public getItemCount()I
     .registers 2
 
-    .line 298
+    .line 299
     iget-object v0, p0, Lorg/telegram/ui/MessageSeenView$4;->this$0:Lorg/telegram/ui/MessageSeenView;
 
     iget-object v0, v0, Lorg/telegram/ui/MessageSeenView;->users:Ljava/util/ArrayList;
@@ -58,12 +58,12 @@
 .method public onBindViewHolder(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;I)V
     .registers 4
 
-    .line 292
+    .line 293
     iget-object p1, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     check-cast p1, Lorg/telegram/ui/MessageSeenView$UserCell;
 
-    .line 293
+    .line 294
     iget-object v0, p0, Lorg/telegram/ui/MessageSeenView$4;->this$0:Lorg/telegram/ui/MessageSeenView;
 
     iget-object v0, v0, Lorg/telegram/ui/MessageSeenView;->users:Ljava/util/ArrayList;
@@ -82,7 +82,7 @@
 .method public onCreateViewHolder(Landroid/view/ViewGroup;I)Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
     .registers 5
 
-    .line 285
+    .line 286
     new-instance p2, Lorg/telegram/ui/MessageSeenView$UserCell;
 
     invoke-virtual {p1}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
@@ -91,7 +91,7 @@
 
     invoke-direct {p2, p1}, Lorg/telegram/ui/MessageSeenView$UserCell;-><init>(Landroid/content/Context;)V
 
-    .line 286
+    .line 287
     new-instance p1, Landroidx/recyclerview/widget/RecyclerView$LayoutParams;
 
     const/4 v0, -0x1
@@ -102,7 +102,7 @@
 
     invoke-virtual {p2, p1}, Landroid/widget/FrameLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 287
+    .line 288
     new-instance p1, Lorg/telegram/ui/Components/RecyclerListView$Holder;
 
     invoke-direct {p1, p2}, Lorg/telegram/ui/Components/RecyclerListView$Holder;-><init>(Landroid/view/View;)V

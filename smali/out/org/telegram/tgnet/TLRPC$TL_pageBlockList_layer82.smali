@@ -17,7 +17,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 53706
+    .line 54180
     invoke-direct {p0}, Lorg/telegram/tgnet/TLRPC$TL_pageBlockList;-><init>()V
 
     return-void
@@ -28,14 +28,14 @@
 .method public readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
     .registers 7
 
-    .line 53711
+    .line 54185
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readBool(Z)Z
 
     move-result v0
 
     iput-boolean v0, p0, Lorg/telegram/tgnet/TLRPC$TL_pageBlockList;->ordered:Z
 
-    .line 53712
+    .line 54186
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
@@ -50,7 +50,7 @@
 
     return-void
 
-    .line 53715
+    .line 54189
     :cond_13
     new-instance p1, Ljava/lang/RuntimeException;
 
@@ -74,7 +74,7 @@
 
     throw p1
 
-    .line 53719
+    .line 54193
     :cond_28
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
@@ -83,7 +83,7 @@
     :goto_2c
     if-ge v1, v0, :cond_48
 
-    .line 53721
+    .line 54195
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v2
@@ -96,16 +96,16 @@
 
     return-void
 
-    .line 53725
+    .line 54199
     :cond_39
     new-instance v3, Lorg/telegram/tgnet/TLRPC$TL_pageListItemText;
 
     invoke-direct {v3}, Lorg/telegram/tgnet/TLRPC$TL_pageListItemText;-><init>()V
 
-    .line 53726
+    .line 54200
     iput-object v2, v3, Lorg/telegram/tgnet/TLRPC$TL_pageListItemText;->text:Lorg/telegram/tgnet/TLRPC$RichText;
 
-    .line 53727
+    .line 54201
     iget-object v2, p0, Lorg/telegram/tgnet/TLRPC$TL_pageBlockList;->items:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -121,29 +121,29 @@
 .method public serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
     .registers 5
 
-    .line 53732
+    .line 54206
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_pageBlockList_layer82;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 53733
+    .line 54207
     iget-boolean v0, p0, Lorg/telegram/tgnet/TLRPC$TL_pageBlockList;->ordered:Z
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeBool(Z)V
 
     const v0, 0x1cb5c415
 
-    .line 53734
+    .line 54208
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 53735
+    .line 54209
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_pageBlockList;->items:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
-    .line 53736
+    .line 54210
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
     const/4 v1, 0x0
@@ -151,7 +151,7 @@
     :goto_1a
     if-ge v1, v0, :cond_2c
 
-    .line 53738
+    .line 54212
     iget-object v2, p0, Lorg/telegram/tgnet/TLRPC$TL_pageBlockList;->items:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -160,7 +160,7 @@
 
     check-cast v2, Lorg/telegram/tgnet/TLRPC$TL_pageListItemText;
 
-    .line 53739
+    .line 54213
     iget-object v2, v2, Lorg/telegram/tgnet/TLRPC$TL_pageListItemText;->text:Lorg/telegram/tgnet/TLRPC$RichText;
 
     invoke-virtual {v2, p1}, Lorg/telegram/tgnet/TLObject;->serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V

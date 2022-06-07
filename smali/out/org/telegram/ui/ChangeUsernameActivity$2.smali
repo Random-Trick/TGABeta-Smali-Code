@@ -110,7 +110,7 @@
 
     move-result-object p1
 
-    const v0, 0x7f0e1257
+    const v0, 0x7f0e1324
 
     new-array v2, v1, [Ljava/lang/Object;
 

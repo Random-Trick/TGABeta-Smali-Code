@@ -22,7 +22,7 @@
 .method constructor <init>(IZZLjava/util/HashMap;)V
     .registers 5
 
-    .line 8104
+    .line 8145
     iput-object p4, p0, Lorg/telegram/ui/ActionBar/Theme$10;->val$colors:Ljava/util/HashMap;
 
     invoke-direct {p0, p1, p2, p3}, Lorg/telegram/ui/ActionBar/Theme$MessageDrawable;-><init>(IZZ)V
@@ -35,7 +35,7 @@
 .method protected getColor(Ljava/lang/String;)I
     .registers 3
 
-    .line 8107
+    .line 8148
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/Theme$10;->val$colors:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -46,7 +46,7 @@
 
     if-nez v0, :cond_15
 
-    .line 8109
+    .line 8150
     invoke-static {}, Lorg/telegram/ui/ActionBar/Theme;->access$800()Ljava/util/HashMap;
 
     move-result-object v0
@@ -59,7 +59,7 @@
 
     check-cast v0, Ljava/lang/Integer;
 
-    .line 8111
+    .line 8152
     :cond_15
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
@@ -71,7 +71,7 @@
 .method protected getCurrentColor(Ljava/lang/String;)Ljava/lang/Integer;
     .registers 3
 
-    .line 8116
+    .line 8157
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/Theme$10;->val$colors:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;

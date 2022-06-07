@@ -23,7 +23,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 59210
+    .line 59694
     invoke-direct {p0}, Lorg/telegram/tgnet/TLRPC$BotMenuButton;-><init>()V
 
     return-void
@@ -34,14 +34,14 @@
 .method public readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
     .registers 4
 
-    .line 59217
+    .line 59701
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readString(Z)Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_botMenuButton;->text:Ljava/lang/String;
 
-    .line 59218
+    .line 59702
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readString(Z)Ljava/lang/String;
 
     move-result-object p1
@@ -54,17 +54,17 @@
 .method public serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
     .registers 3
 
-    .line 59222
+    .line 59706
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_botMenuButton;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 59223
+    .line 59707
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_botMenuButton;->text:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeString(Ljava/lang/String;)V
 
-    .line 59224
+    .line 59708
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_botMenuButton;->url:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeString(Ljava/lang/String;)V

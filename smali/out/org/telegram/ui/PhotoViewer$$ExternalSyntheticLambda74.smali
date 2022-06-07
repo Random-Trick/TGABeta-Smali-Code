@@ -2,32 +2,42 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lorg/telegram/ui/Components/RecyclerListView$OnItemClickListener;
+.implements Lorg/telegram/ui/Components/NumberPicker$Formatter;
 
 
-# instance fields
-.field public final synthetic f$0:Lorg/telegram/ui/PhotoViewer;
+# static fields
+.field public static final synthetic INSTANCE:Lorg/telegram/ui/PhotoViewer$$ExternalSyntheticLambda74;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lorg/telegram/ui/PhotoViewer;)V
-    .registers 2
+.method static synthetic constructor <clinit>()V
+    .registers 1
+
+    new-instance v0, Lorg/telegram/ui/PhotoViewer$$ExternalSyntheticLambda74;
+
+    invoke-direct {v0}, Lorg/telegram/ui/PhotoViewer$$ExternalSyntheticLambda74;-><init>()V
+
+    sput-object v0, Lorg/telegram/ui/PhotoViewer$$ExternalSyntheticLambda74;->INSTANCE:Lorg/telegram/ui/PhotoViewer$$ExternalSyntheticLambda74;
+
+    return-void
+.end method
+
+.method private synthetic constructor <init>()V
+    .registers 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lorg/telegram/ui/PhotoViewer$$ExternalSyntheticLambda74;->f$0:Lorg/telegram/ui/PhotoViewer;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onItemClick(Landroid/view/View;I)V
-    .registers 4
+.method public final format(I)Ljava/lang/String;
+    .registers 2
 
-    iget-object v0, p0, Lorg/telegram/ui/PhotoViewer$$ExternalSyntheticLambda74;->f$0:Lorg/telegram/ui/PhotoViewer;
+    invoke-static {p1}, Lorg/telegram/ui/PhotoViewer;->$r8$lambda$fk42hW6b-I_z-_g9i8uqptDYFaA(I)Ljava/lang/String;
 
-    invoke-static {v0, p1, p2}, Lorg/telegram/ui/PhotoViewer;->$r8$lambda$DJ1Eb06TFNVXrGDVGAmOudl1HOc(Lorg/telegram/ui/PhotoViewer;Landroid/view/View;I)V
+    move-result-object p1
 
-    return-void
+    return-object p1
 .end method

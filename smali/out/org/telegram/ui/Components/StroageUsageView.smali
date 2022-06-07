@@ -293,7 +293,7 @@
 
     const-string v5, "CalculatingSize"
 
-    const v7, 0x7f0e0300
+    const v7, 0x7f0e033c
 
     .line 131
     invoke-static {v5, v7}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -1008,7 +1008,7 @@
 
     const-string v7, "TotalDeviceFreeSize"
 
-    const v9, 0x7f0e11b8
+    const v9, 0x7f0e1284
 
     invoke-static {v7, v9, v6}, Lorg/telegram/messenger/LocaleController;->formatString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
@@ -1031,7 +1031,7 @@
 
     const-string v7, "TotalDeviceSize"
 
-    const v11, 0x7f0e11b9
+    const v11, 0x7f0e1285
 
     invoke-static {v7, v11, v6}, Lorg/telegram/messenger/LocaleController;->formatString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
@@ -1144,7 +1144,7 @@
     .line 221
     iget-object v1, v0, Lorg/telegram/ui/Components/StroageUsageView;->textSettingsCell:Lorg/telegram/ui/Cells/TextSettingsCell;
 
-    const v4, 0x7f0e047a
+    const v4, 0x7f0e04c7
 
     const-string v6, "ClearTelegramCache"
 
@@ -1157,7 +1157,7 @@
     .line 222
     iget-object v1, v0, Lorg/telegram/ui/Components/StroageUsageView;->telegramCacheTextView:Landroid/widget/TextView;
 
-    const v4, 0x7f0e113a
+    const v4, 0x7f0e11fe
 
     new-array v6, v5, [Ljava/lang/Object;
 
@@ -1193,7 +1193,7 @@
     .line 227
     iget-object v1, v0, Lorg/telegram/ui/Components/StroageUsageView;->telegramDatabaseTextView:Landroid/widget/TextView;
 
-    const v6, 0x7f0e0962
+    const v6, 0x7f0e09e9
 
     new-array v7, v5, [Ljava/lang/Object;
 

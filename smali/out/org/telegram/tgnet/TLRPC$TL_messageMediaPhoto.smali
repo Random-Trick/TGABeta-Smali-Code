@@ -17,7 +17,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 7399
+    .line 7466
     invoke-direct {p0}, Lorg/telegram/tgnet/TLRPC$MessageMedia;-><init>()V
 
     return-void
@@ -28,7 +28,7 @@
 .method public readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
     .registers 4
 
-    .line 7403
+    .line 7470
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
@@ -39,7 +39,7 @@
 
     if-eqz v0, :cond_15
 
-    .line 7405
+    .line 7472
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
@@ -52,7 +52,7 @@
 
     goto :goto_1c
 
-    .line 7407
+    .line 7474
     :cond_15
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_photoEmpty;
 
@@ -60,7 +60,7 @@
 
     iput-object v0, p0, Lorg/telegram/tgnet/TLRPC$MessageMedia;->photo:Lorg/telegram/tgnet/TLRPC$Photo;
 
-    .line 7409
+    .line 7476
     :goto_1c
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$MessageMedia;->flags:I
 
@@ -68,7 +68,7 @@
 
     if-eqz v0, :cond_28
 
-    .line 7410
+    .line 7477
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result p1
@@ -82,29 +82,29 @@
 .method public serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
     .registers 3
 
-    .line 7415
+    .line 7482
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_messageMediaPhoto;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 7416
+    .line 7483
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$MessageMedia;->flags:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 7417
+    .line 7484
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$MessageMedia;->flags:I
 
     and-int/lit8 v0, v0, 0x1
 
     if-eqz v0, :cond_15
 
-    .line 7418
+    .line 7485
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$MessageMedia;->photo:Lorg/telegram/tgnet/TLRPC$Photo;
 
     invoke-virtual {v0, p1}, Lorg/telegram/tgnet/TLObject;->serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
 
-    .line 7420
+    .line 7487
     :cond_15
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$MessageMedia;->flags:I
 
@@ -112,7 +112,7 @@
 
     if-eqz v0, :cond_20
 
-    .line 7421
+    .line 7488
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$MessageMedia;->ttl_seconds:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V

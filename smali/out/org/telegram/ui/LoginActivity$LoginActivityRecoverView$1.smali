@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/LoginActivity$LoginActivityRecoverView;Landroid/content/Context;Lorg/telegram/ui/LoginActivity;)V
     .registers 4
 
-    .line 4447
+    .line 4587
     iput-object p1, p0, Lorg/telegram/ui/LoginActivity$LoginActivityRecoverView$1;->this$1:Lorg/telegram/ui/LoginActivity$LoginActivityRecoverView;
 
     invoke-direct {p0, p2}, Lorg/telegram/ui/CodeFieldContainer;-><init>(Landroid/content/Context;)V
@@ -35,7 +35,7 @@
 .method protected processNextPressed()V
     .registers 3
 
-    .line 4450
+    .line 4590
     iget-object v0, p0, Lorg/telegram/ui/LoginActivity$LoginActivityRecoverView$1;->this$1:Lorg/telegram/ui/LoginActivity$LoginActivityRecoverView;
 
     const/4 v1, 0x0

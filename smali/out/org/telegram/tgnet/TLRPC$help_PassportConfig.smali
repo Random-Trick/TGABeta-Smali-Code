@@ -7,7 +7,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 44669
+    .line 45121
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -28,7 +28,7 @@
 
     goto :goto_17
 
-    .line 44675
+    .line 45127
     :cond_c
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_help_passportConfigNotModified;
 
@@ -36,7 +36,7 @@
 
     goto :goto_17
 
-    .line 44678
+    .line 45130
     :cond_12
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_help_passportConfig;
 
@@ -49,7 +49,7 @@
 
     goto :goto_32
 
-    .line 44682
+    .line 45134
     :cond_1c
     new-instance p0, Ljava/lang/RuntimeException;
 
@@ -79,7 +79,7 @@
     :goto_32
     if-eqz v0, :cond_37
 
-    .line 44685
+    .line 45137
     invoke-virtual {v0, p0, p2}, Lorg/telegram/tgnet/TLObject;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
     :cond_37

@@ -23,7 +23,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 17104
+    .line 17267
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -48,7 +48,7 @@
 
     goto :goto_22
 
-    .line 17118
+    .line 17281
     :cond_11
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_videoSize_layer115;
 
@@ -56,7 +56,7 @@
 
     goto :goto_22
 
-    .line 17121
+    .line 17284
     :cond_17
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_videoSize_layer127;
 
@@ -64,7 +64,7 @@
 
     goto :goto_22
 
-    .line 17124
+    .line 17287
     :cond_1d
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_videoSize;
 
@@ -79,7 +79,7 @@
 
     goto :goto_3d
 
-    .line 17128
+    .line 17291
     :cond_28
     new-instance p0, Ljava/lang/RuntimeException;
 
@@ -107,15 +107,15 @@
     :goto_3d
     if-eqz v0, :cond_84
 
-    .line 17131
+    .line 17294
     invoke-virtual {v0, p4, p6}, Lorg/telegram/tgnet/TLObject;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
-    .line 17132
+    .line 17295
     iget-object p4, v0, Lorg/telegram/tgnet/TLRPC$VideoSize;->location:Lorg/telegram/tgnet/TLRPC$FileLocation;
 
     if-nez p4, :cond_84
 
-    .line 17133
+    .line 17296
     iget-object p4, v0, Lorg/telegram/tgnet/TLRPC$VideoSize;->type:Ljava/lang/String;
 
     invoke-static {p4}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -134,7 +134,7 @@
 
     if-eqz p6, :cond_7d
 
-    .line 17134
+    .line 17297
     :cond_58
     new-instance p6, Lorg/telegram/tgnet/TLRPC$TL_fileLocationToBeDeprecated;
 
@@ -148,10 +148,10 @@
 
     neg-long p0, p0
 
-    .line 17136
+    .line 17299
     iput-wide p0, p6, Lorg/telegram/tgnet/TLRPC$FileLocation;->volume_id:J
 
-    .line 17137
+    .line 17300
     iget-object p0, v0, Lorg/telegram/tgnet/TLRPC$VideoSize;->type:Ljava/lang/String;
 
     invoke-virtual {p0, v1}, Ljava/lang/String;->charAt(I)C
@@ -165,10 +165,10 @@
     :cond_6f
     neg-long p0, p2
 
-    .line 17139
+    .line 17302
     iput-wide p0, p6, Lorg/telegram/tgnet/TLRPC$FileLocation;->volume_id:J
 
-    .line 17140
+    .line 17303
     iget-object p0, v0, Lorg/telegram/tgnet/TLRPC$VideoSize;->type:Ljava/lang/String;
 
     invoke-virtual {p0, v1}, Ljava/lang/String;->charAt(I)C
@@ -181,7 +181,7 @@
 
     goto :goto_84
 
-    .line 17143
+    .line 17306
     :cond_7d
     new-instance p0, Lorg/telegram/tgnet/TLRPC$TL_fileLocationUnavailable;
 

@@ -962,7 +962,7 @@
 
     const/4 v6, 0x0
 
-    const v7, 0x7f0e0331
+    const v7, 0x7f0e036d
 
     const-string v8, "Cancel"
 
@@ -993,7 +993,7 @@
 
     invoke-direct {p1, p2}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    const p2, 0x7f0e0f1a
+    const p2, 0x7f0e0fc7
 
     const-string p3, "ResetAutomaticMediaDownloadAlertTitle"
 
@@ -1004,7 +1004,7 @@
 
     invoke-virtual {p1, p2}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const p2, 0x7f0e0f19
+    const p2, 0x7f0e0fc6
 
     const-string p3, "ResetAutomaticMediaDownloadAlert"
 
@@ -1015,7 +1015,7 @@
 
     invoke-virtual {p1, p2}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const p2, 0x7f0e0f11
+    const p2, 0x7f0e0fbe
 
     const-string p3, "Reset"
 
@@ -1138,7 +1138,7 @@
 
     new-array p5, v0, [Ljava/lang/String;
 
-    const v0, 0x7f0e1211
+    const v0, 0x7f0e12de
 
     const-string v5, "UseLessDataNever"
 
@@ -1149,7 +1149,7 @@
 
     aput-object v0, p5, v2
 
-    const v0, 0x7f0e1213
+    const v0, 0x7f0e12e0    # 1.8884838E38f
 
     const-string v2, "UseLessDataOnRoaming"
 
@@ -1160,7 +1160,7 @@
 
     aput-object v0, p5, v3
 
-    const v0, 0x7f0e1212
+    const v0, 0x7f0e12df
 
     const-string v2, "UseLessDataOnMobile"
 
@@ -1171,7 +1171,7 @@
 
     aput-object v0, p5, v1
 
-    const v0, 0x7f0e1210
+    const v0, 0x7f0e12dd
 
     const-string v1, "UseLessDataAlways"
 
@@ -1182,7 +1182,7 @@
 
     aput-object v0, p5, v4
 
-    const v0, 0x7f0e13b6
+    const v0, 0x7f0e1484
 
     const-string v1, "VoipUseLessData"
 
@@ -1238,7 +1238,7 @@
 
     invoke-direct {p2, p3}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    const p3, 0x7f0e10f5
+    const p3, 0x7f0e11b4
 
     const-string p4, "StoragePath"
 
@@ -1601,7 +1601,7 @@
 
     invoke-direct {p1, p2}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    const p2, 0x7f0e01ad
+    const p2, 0x7f0e01e2
 
     const-string p3, "AreYouSureClearDraftsTitle"
 
@@ -1612,7 +1612,7 @@
 
     invoke-virtual {p1, p2}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const p2, 0x7f0e01ac
+    const p2, 0x7f0e01e1
 
     const-string p3, "AreYouSureClearDrafts"
 
@@ -1623,7 +1623,7 @@
 
     invoke-virtual {p1, p2}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const p2, 0x7f0e0540
+    const p2, 0x7f0e0591
 
     const-string p3, "Delete"
 
@@ -2003,7 +2003,7 @@
     .line 166
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
-    const v1, 0x7f070140
+    const v1, 0x7f070109
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/ActionBar;->setBackButtonImage(I)V
 
@@ -2012,7 +2012,7 @@
 
     const-string v1, "DataSettings"
 
-    const v2, 0x7f0e0506
+    const v2, 0x7f0e0555
 
     invoke-static {v1, v2}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 

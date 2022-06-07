@@ -86,7 +86,7 @@
     return-object p0
 .end method
 
-.method public static B(Ljava/util/Map;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public static synthetic B(Ljava/util/Map;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .registers 4
 
     instance-of v0, p0, Lj$/util/Map;
@@ -101,23 +101,15 @@
 
     return-object p0
 
-    .line 1
     :cond_b
-    invoke-interface {p0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p0, p1, p2}, Lj$/util/Map$-CC;->$default$putIfAbsent(Ljava/util/Map;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object p0
 
-    if-nez v0, :cond_15
-
-    invoke-interface {p0, p1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    :cond_15
-    return-object v0
+    return-object p0
 .end method
 
-.method public static C(Ljava/util/Map;Ljava/lang/Object;Ljava/lang/Object;)Z
+.method public static synthetic C(Ljava/util/Map;Ljava/lang/Object;Ljava/lang/Object;)Z
     .registers 4
 
     instance-of v0, p0, Lj$/util/Map;
@@ -132,45 +124,16 @@
 
     return p0
 
-    .line 1
     :cond_b
-    invoke-interface {p0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p0, p1, p2}, Lj$/util/Map$-CC;->$default$remove(Ljava/util/Map;Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result-object v0
+    move-result p0
 
-    invoke-static {v0, p2}, Lj$/util/a;->x(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-eqz p2, :cond_23
-
-    if-nez v0, :cond_1e
-
-    invoke-interface {p0, p1}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-nez p2, :cond_1e
-
-    goto :goto_23
-
-    :cond_1e
-    invoke-interface {p0, p1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
-
-    const/4 p0, 0x1
-
-    goto :goto_24
-
-    :cond_23
-    :goto_23
-    const/4 p0, 0x0
-
-    :goto_24
     return p0
 .end method
 
-.method public static D(Ljava/util/Map;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .registers 5
+.method public static synthetic D(Ljava/util/Map;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .registers 4
 
     instance-of v0, p0, Lj$/util/Map;
 
@@ -184,30 +147,15 @@
 
     return-object p0
 
-    .line 1
     :cond_b
-    invoke-interface {p0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p0, p1, p2}, Lj$/util/Map$-CC;->$default$replace(Ljava/util/Map;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object p0
 
-    if-nez v0, :cond_17
-
-    invoke-interface {p0, p1}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1b
-
-    :cond_17
-    invoke-interface {p0, p1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    :cond_1b
-    return-object v0
+    return-object p0
 .end method
 
-.method public static E(Ljava/util/Map;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Z
+.method public static synthetic E(Ljava/util/Map;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Z
     .registers 5
 
     instance-of v0, p0, Lj$/util/Map;
@@ -222,40 +170,11 @@
 
     return p0
 
-    .line 1
     :cond_b
-    invoke-interface {p0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p0, p1, p2, p3}, Lj$/util/Map$-CC;->$default$replace(Ljava/util/Map;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result-object v0
+    move-result p0
 
-    invoke-static {v0, p2}, Lj$/util/a;->x(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-eqz p2, :cond_23
-
-    if-nez v0, :cond_1e
-
-    invoke-interface {p0, p1}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-nez p2, :cond_1e
-
-    goto :goto_23
-
-    :cond_1e
-    invoke-interface {p0, p1, p3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const/4 p0, 0x1
-
-    goto :goto_24
-
-    :cond_23
-    :goto_23
-    const/4 p0, 0x0
-
-    :goto_24
     return p0
 .end method
 
@@ -415,7 +334,7 @@
     return-void
 .end method
 
-.method public static b(Lj$/util/u;Lj$/util/function/Consumer;)V
+.method public static b(Lj$/util/t;Lj$/util/function/Consumer;)V
     .registers 3
 
     instance-of v0, p1, Lj$/util/function/f;
@@ -424,12 +343,12 @@
 
     check-cast p1, Lj$/util/function/f;
 
-    invoke-interface {p0, p1}, Lj$/util/u;->e(Lj$/util/function/f;)V
+    invoke-interface {p0, p1}, Lj$/util/t;->e(Lj$/util/function/f;)V
 
     goto :goto_19
 
     :cond_a
-    sget-boolean v0, Lj$/util/P;->a:Z
+    sget-boolean v0, Lj$/util/N;->a:Z
 
     if-nez v0, :cond_1a
 
@@ -439,7 +358,7 @@
 
     invoke-direct {v0, p1}, Lj$/util/m;-><init>(Lj$/util/function/Consumer;)V
 
-    invoke-interface {p0, v0}, Lj$/util/u;->e(Lj$/util/function/f;)V
+    invoke-interface {p0, v0}, Lj$/util/t;->e(Lj$/util/function/f;)V
 
     :goto_19
     return-void
@@ -451,14 +370,14 @@
 
     const-string p1, "{0} calling Spliterator.OfDouble.forEachRemaining((DoubleConsumer) action::accept)"
 
-    invoke-static {p0, p1}, Lj$/util/P;->a(Ljava/lang/Class;Ljava/lang/String;)V
+    invoke-static {p0, p1}, Lj$/util/N;->a(Ljava/lang/Class;Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
     throw p0
 .end method
 
-.method public static c(Lj$/util/v;Lj$/util/function/Consumer;)V
+.method public static c(Lj$/util/u$a;Lj$/util/function/Consumer;)V
     .registers 3
 
     instance-of v0, p1, Lj$/util/function/l;
@@ -467,12 +386,12 @@
 
     check-cast p1, Lj$/util/function/l;
 
-    invoke-interface {p0, p1}, Lj$/util/v;->c(Lj$/util/function/l;)V
+    invoke-interface {p0, p1}, Lj$/util/u$a;->c(Lj$/util/function/l;)V
 
     goto :goto_19
 
     :cond_a
-    sget-boolean v0, Lj$/util/P;->a:Z
+    sget-boolean v0, Lj$/util/N;->a:Z
 
     if-nez v0, :cond_1a
 
@@ -482,7 +401,7 @@
 
     invoke-direct {v0, p1}, Lj$/util/o;-><init>(Lj$/util/function/Consumer;)V
 
-    invoke-interface {p0, v0}, Lj$/util/v;->c(Lj$/util/function/l;)V
+    invoke-interface {p0, v0}, Lj$/util/u$a;->c(Lj$/util/function/l;)V
 
     :goto_19
     return-void
@@ -494,14 +413,14 @@
 
     const-string p1, "{0} calling Spliterator.OfInt.forEachRemaining((IntConsumer) action::accept)"
 
-    invoke-static {p0, p1}, Lj$/util/P;->a(Ljava/lang/Class;Ljava/lang/String;)V
+    invoke-static {p0, p1}, Lj$/util/N;->a(Ljava/lang/Class;Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
     throw p0
 .end method
 
-.method public static d(Lj$/util/w;Lj$/util/function/Consumer;)V
+.method public static d(Lj$/util/v;Lj$/util/function/Consumer;)V
     .registers 3
 
     instance-of v0, p1, Lj$/util/function/q;
@@ -510,12 +429,12 @@
 
     check-cast p1, Lj$/util/function/q;
 
-    invoke-interface {p0, p1}, Lj$/util/w;->d(Lj$/util/function/q;)V
+    invoke-interface {p0, p1}, Lj$/util/v;->d(Lj$/util/function/q;)V
 
     goto :goto_19
 
     :cond_a
-    sget-boolean v0, Lj$/util/P;->a:Z
+    sget-boolean v0, Lj$/util/N;->a:Z
 
     if-nez v0, :cond_1a
 
@@ -525,7 +444,7 @@
 
     invoke-direct {v0, p1}, Lj$/util/q;-><init>(Lj$/util/function/Consumer;)V
 
-    invoke-interface {p0, v0}, Lj$/util/w;->d(Lj$/util/function/q;)V
+    invoke-interface {p0, v0}, Lj$/util/v;->d(Lj$/util/function/q;)V
 
     :goto_19
     return-void
@@ -537,17 +456,17 @@
 
     const-string p1, "{0} calling Spliterator.OfLong.forEachRemaining((LongConsumer) action::accept)"
 
-    invoke-static {p0, p1}, Lj$/util/P;->a(Ljava/lang/Class;Ljava/lang/String;)V
+    invoke-static {p0, p1}, Lj$/util/N;->a(Ljava/lang/Class;Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
     throw p0
 .end method
 
-.method public static e(Lj$/util/y;)J
+.method public static e(Lj$/util/u;)J
     .registers 3
 
-    invoke-interface {p0}, Lj$/util/y;->characteristics()I
+    invoke-interface {p0}, Lj$/util/u;->characteristics()I
 
     move-result v0
 
@@ -560,7 +479,7 @@
     goto :goto_f
 
     :cond_b
-    invoke-interface {p0}, Lj$/util/y;->estimateSize()J
+    invoke-interface {p0}, Lj$/util/u;->estimateSize()J
 
     move-result-wide v0
 
@@ -568,10 +487,10 @@
     return-wide v0
 .end method
 
-.method public static f(Lj$/util/y;I)Z
+.method public static f(Lj$/util/u;I)Z
     .registers 2
 
-    invoke-interface {p0}, Lj$/util/y;->characteristics()I
+    invoke-interface {p0}, Lj$/util/u;->characteristics()I
 
     move-result p0
 
@@ -593,13 +512,13 @@
 .method public static g(Ljava/util/Collection;)Lj$/util/stream/Stream;
     .registers 2
 
-    invoke-static {p0}, Lj$/util/Collection$-EL;->b(Ljava/util/Collection;)Lj$/util/y;
+    invoke-static {p0}, Lj$/util/Collection$-EL;->b(Ljava/util/Collection;)Lj$/util/u;
 
     move-result-object p0
 
     const/4 v0, 0x1
 
-    invoke-static {p0, v0}, Lj$/util/stream/p1;->y(Lj$/util/y;Z)Lj$/util/stream/Stream;
+    invoke-static {p0, v0}, Lj$/util/stream/o1;->y(Lj$/util/u;Z)Lj$/util/stream/Stream;
 
     move-result-object p0
 
@@ -663,20 +582,20 @@
 .method public static i(Ljava/util/Collection;)Lj$/util/stream/Stream;
     .registers 2
 
-    invoke-static {p0}, Lj$/util/Collection$-EL;->b(Ljava/util/Collection;)Lj$/util/y;
+    invoke-static {p0}, Lj$/util/Collection$-EL;->b(Ljava/util/Collection;)Lj$/util/u;
 
     move-result-object p0
 
     const/4 v0, 0x0
 
-    invoke-static {p0, v0}, Lj$/util/stream/p1;->y(Lj$/util/y;Z)Lj$/util/stream/Stream;
+    invoke-static {p0, v0}, Lj$/util/stream/o1;->y(Lj$/util/u;Z)Lj$/util/stream/Stream;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static j(Lj$/util/u;Lj$/util/function/Consumer;)Z
+.method public static j(Lj$/util/t;Lj$/util/function/Consumer;)Z
     .registers 3
 
     instance-of v0, p1, Lj$/util/function/f;
@@ -685,14 +604,14 @@
 
     check-cast p1, Lj$/util/function/f;
 
-    invoke-interface {p0, p1}, Lj$/util/u;->k(Lj$/util/function/f;)Z
+    invoke-interface {p0, p1}, Lj$/util/t;->k(Lj$/util/function/f;)Z
 
     move-result p0
 
     return p0
 
     :cond_b
-    sget-boolean v0, Lj$/util/P;->a:Z
+    sget-boolean v0, Lj$/util/N;->a:Z
 
     if-nez v0, :cond_1c
 
@@ -702,7 +621,7 @@
 
     invoke-direct {v0, p1}, Lj$/util/m;-><init>(Lj$/util/function/Consumer;)V
 
-    invoke-interface {p0, v0}, Lj$/util/u;->k(Lj$/util/function/f;)Z
+    invoke-interface {p0, v0}, Lj$/util/t;->k(Lj$/util/function/f;)Z
 
     move-result p0
 
@@ -715,14 +634,14 @@
 
     const-string p1, "{0} calling Spliterator.OfDouble.tryAdvance((DoubleConsumer) action::accept)"
 
-    invoke-static {p0, p1}, Lj$/util/P;->a(Ljava/lang/Class;Ljava/lang/String;)V
+    invoke-static {p0, p1}, Lj$/util/N;->a(Ljava/lang/Class;Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
     throw p0
 .end method
 
-.method public static k(Lj$/util/v;Lj$/util/function/Consumer;)Z
+.method public static k(Lj$/util/u$a;Lj$/util/function/Consumer;)Z
     .registers 3
 
     instance-of v0, p1, Lj$/util/function/l;
@@ -731,14 +650,14 @@
 
     check-cast p1, Lj$/util/function/l;
 
-    invoke-interface {p0, p1}, Lj$/util/v;->g(Lj$/util/function/l;)Z
+    invoke-interface {p0, p1}, Lj$/util/u$a;->g(Lj$/util/function/l;)Z
 
     move-result p0
 
     return p0
 
     :cond_b
-    sget-boolean v0, Lj$/util/P;->a:Z
+    sget-boolean v0, Lj$/util/N;->a:Z
 
     if-nez v0, :cond_1c
 
@@ -748,7 +667,7 @@
 
     invoke-direct {v0, p1}, Lj$/util/o;-><init>(Lj$/util/function/Consumer;)V
 
-    invoke-interface {p0, v0}, Lj$/util/v;->g(Lj$/util/function/l;)Z
+    invoke-interface {p0, v0}, Lj$/util/u$a;->g(Lj$/util/function/l;)Z
 
     move-result p0
 
@@ -761,14 +680,14 @@
 
     const-string p1, "{0} calling Spliterator.OfInt.tryAdvance((IntConsumer) action::accept)"
 
-    invoke-static {p0, p1}, Lj$/util/P;->a(Ljava/lang/Class;Ljava/lang/String;)V
+    invoke-static {p0, p1}, Lj$/util/N;->a(Ljava/lang/Class;Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
     throw p0
 .end method
 
-.method public static l(Lj$/util/w;Lj$/util/function/Consumer;)Z
+.method public static l(Lj$/util/v;Lj$/util/function/Consumer;)Z
     .registers 3
 
     instance-of v0, p1, Lj$/util/function/q;
@@ -777,14 +696,14 @@
 
     check-cast p1, Lj$/util/function/q;
 
-    invoke-interface {p0, p1}, Lj$/util/w;->i(Lj$/util/function/q;)Z
+    invoke-interface {p0, p1}, Lj$/util/v;->i(Lj$/util/function/q;)Z
 
     move-result p0
 
     return p0
 
     :cond_b
-    sget-boolean v0, Lj$/util/P;->a:Z
+    sget-boolean v0, Lj$/util/N;->a:Z
 
     if-nez v0, :cond_1c
 
@@ -794,7 +713,7 @@
 
     invoke-direct {v0, p1}, Lj$/util/q;-><init>(Lj$/util/function/Consumer;)V
 
-    invoke-interface {p0, v0}, Lj$/util/w;->i(Lj$/util/function/q;)Z
+    invoke-interface {p0, v0}, Lj$/util/v;->i(Lj$/util/function/q;)Z
 
     move-result p0
 
@@ -807,7 +726,7 @@
 
     const-string p1, "{0} calling Spliterator.OfLong.tryAdvance((LongConsumer) action::accept)"
 
-    invoke-static {p0, p1}, Lj$/util/P;->a(Ljava/lang/Class;Ljava/lang/String;)V
+    invoke-static {p0, p1}, Lj$/util/N;->a(Ljava/lang/Class;Ljava/lang/String;)V
 
     const/4 p0, 0x0
 

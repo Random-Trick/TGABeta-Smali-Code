@@ -18,7 +18,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;)V
     .registers 2
 
-    .line 532
+    .line 530
     invoke-direct {p0}, Landroid/view/ViewOutlineProvider;-><init>()V
 
     return-void
@@ -34,7 +34,7 @@
         }
     .end annotation
 
-    .line 536
+    .line 534
     invoke-virtual {p1}, Landroid/view/View;->getMeasuredWidth()I
 
     move-result v3

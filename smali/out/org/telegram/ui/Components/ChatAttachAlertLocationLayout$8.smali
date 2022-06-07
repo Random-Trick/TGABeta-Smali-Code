@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;)V
     .registers 2
 
-    .line 720
+    .line 718
     iput-object p1, p0, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout$8;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;
 
     invoke-direct {p0}, Landroidx/recyclerview/widget/RecyclerView$OnScrollListener;-><init>()V
@@ -35,7 +35,7 @@
 .method public onScrollStateChanged(Landroidx/recyclerview/widget/RecyclerView;I)V
     .registers 6
 
-    .line 723
+    .line 721
     iget-object p1, p0, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout$8;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;
 
     const/4 v0, 0x0
@@ -52,7 +52,7 @@
     :goto_8
     invoke-static {p1, v1}, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;->access$2602(Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;Z)Z
 
-    .line 724
+    .line 722
     iget-object p1, p0, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout$8;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;->access$2600(Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;)Z
@@ -69,7 +69,7 @@
 
     if-eqz p1, :cond_21
 
-    .line 725
+    .line 723
     iget-object p1, p0, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout$8;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;
 
     const/4 v1, 0x0
@@ -81,12 +81,12 @@
 
     const/high16 p1, 0x41500000    # 13.0f
 
-    .line 728
+    .line 726
     invoke-static {p1}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result p1
 
-    .line 729
+    .line 727
     iget-object p2, p0, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout$8;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;
 
     iget-object p2, p2, Lorg/telegram/ui/Components/ChatAttachAlert$AttachAlertLayout;->parentAlert:Lorg/telegram/ui/Components/ChatAttachAlert;
@@ -95,7 +95,7 @@
 
     move-result p2
 
-    .line 730
+    .line 728
     iget-object v1, p0, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout$8;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;
 
     iget-object v1, v1, Lorg/telegram/ui/Components/ChatAttachAlert$AttachAlertLayout;->parentAlert:Lorg/telegram/ui/Components/ChatAttachAlert;
@@ -110,14 +110,14 @@
 
     add-int/2addr v1, p2
 
-    .line 731
+    .line 729
     invoke-static {}, Lorg/telegram/ui/ActionBar/ActionBar;->getCurrentActionBarHeight()I
 
     move-result p1
 
     if-ge v1, p1, :cond_82
 
-    .line 732
+    .line 730
     iget-object p1, p0, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout$8;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;->access$1400(Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;)Lorg/telegram/ui/Components/RecyclerListView;
@@ -132,7 +132,7 @@
 
     if-eqz p1, :cond_82
 
-    .line 733
+    .line 731
     iget-object p2, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     invoke-virtual {p2}, Landroid/view/View;->getTop()I
@@ -155,7 +155,7 @@
 
     if-le p2, v1, :cond_82
 
-    .line 734
+    .line 732
     iget-object p2, p0, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout$8;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;
 
     invoke-static {p2}, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;->access$1400(Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;)Lorg/telegram/ui/Components/RecyclerListView;
@@ -193,12 +193,12 @@
 .method public onScrolled(Landroidx/recyclerview/widget/RecyclerView;II)V
     .registers 5
 
-    .line 742
+    .line 740
     iget-object p1, p0, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout$8;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;->access$2300(Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;)V
 
-    .line 743
+    .line 741
     iget-object p1, p0, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout$8;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;->access$2700(Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;)Lcom/google/android/gms/maps/CameraUpdate;
@@ -207,14 +207,14 @@
 
     if-eqz p1, :cond_13
 
-    .line 744
+    .line 742
     iget-object p1, p0, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout$8;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;
 
     int-to-float p2, p3
 
     invoke-static {p1, p2}, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;->access$2816(Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;F)F
 
-    .line 746
+    .line 744
     :cond_13
     iget-object p1, p0, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout$8;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;
 

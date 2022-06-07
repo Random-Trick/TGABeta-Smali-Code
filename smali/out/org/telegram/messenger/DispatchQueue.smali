@@ -18,6 +18,16 @@
 
 
 # direct methods
+.method public static synthetic $r8$lambda$bRKQ5b5tx0aDGsnknY5JEofaSxw(Lorg/telegram/messenger/DispatchQueue;Landroid/os/Message;)Z
+    .registers 2
+
+    invoke-direct {p0, p1}, Lorg/telegram/messenger/DispatchQueue;->lambda$run$0(Landroid/os/Message;)Z
+
+    move-result p0
+
+    return p0
+.end method
+
 .method static constructor <clinit>()V
     .registers 0
 
@@ -74,6 +84,17 @@
 
     :cond_1e
     return-void
+.end method
+
+.method private synthetic lambda$run$0(Landroid/os/Message;)Z
+    .registers 2
+
+    .line 113
+    invoke-virtual {p0, p1}, Lorg/telegram/messenger/DispatchQueue;->handleMessage(Landroid/os/Message;)V
+
+    const/4 p1, 0x1
+
+    return p1
 .end method
 
 
@@ -185,7 +206,7 @@
 .method public getHandler()Landroid/os/Handler;
     .registers 2
 
-    .line 127
+    .line 125
     iget-object v0, p0, Lorg/telegram/messenger/DispatchQueue;->handler:Landroid/os/Handler;
 
     return-object v0
@@ -209,7 +230,7 @@
 .method public isReady()Z
     .registers 6
 
-    .line 123
+    .line 121
     iget-object v0, p0, Lorg/telegram/messenger/DispatchQueue;->syncLatch:Ljava/util/concurrent/CountDownLatch;
 
     invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->getCount()J
@@ -317,24 +338,32 @@
 .end method
 
 .method public run()V
-    .registers 2
+    .registers 4
 
     .line 111
     invoke-static {}, Landroid/os/Looper;->prepare()V
 
     .line 112
-    new-instance v0, Lorg/telegram/messenger/DispatchQueue$1;
+    new-instance v0, Landroid/os/Handler;
 
-    invoke-direct {v0, p0}, Lorg/telegram/messenger/DispatchQueue$1;-><init>(Lorg/telegram/messenger/DispatchQueue;)V
+    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
+
+    move-result-object v1
+
+    new-instance v2, Lorg/telegram/messenger/DispatchQueue$$ExternalSyntheticLambda0;
+
+    invoke-direct {v2, p0}, Lorg/telegram/messenger/DispatchQueue$$ExternalSyntheticLambda0;-><init>(Lorg/telegram/messenger/DispatchQueue;)V
+
+    invoke-direct {v0, v1, v2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;Landroid/os/Handler$Callback;)V
 
     iput-object v0, p0, Lorg/telegram/messenger/DispatchQueue;->handler:Landroid/os/Handler;
 
-    .line 118
+    .line 116
     iget-object v0, p0, Lorg/telegram/messenger/DispatchQueue;->syncLatch:Ljava/util/concurrent/CountDownLatch;
 
     invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
 
-    .line 119
+    .line 117
     invoke-static {}, Landroid/os/Looper;->loop()V
 
     return-void

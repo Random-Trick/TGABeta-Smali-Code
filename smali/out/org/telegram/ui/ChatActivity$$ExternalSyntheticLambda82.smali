@@ -16,20 +16,18 @@
 
 .field public final synthetic f$4:I
 
-.field public final synthetic f$5:[Ljava/lang/String;
+.field public final synthetic f$5:Ljava/lang/String;
 
-.field public final synthetic f$6:Ljava/lang/String;
+.field public final synthetic f$6:Ljava/lang/CharSequence;
 
-.field public final synthetic f$7:Ljava/lang/CharSequence;
+.field public final synthetic f$7:Z
 
-.field public final synthetic f$8:Z
-
-.field public final synthetic f$9:Lorg/telegram/ui/Components/TranslateAlert$OnLinkPress;
+.field public final synthetic f$8:Lorg/telegram/ui/Components/TranslateAlert$OnLinkPress;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lorg/telegram/ui/ChatActivity;ILjava/util/ArrayList;Lorg/telegram/tgnet/TLRPC$InputPeer;I[Ljava/lang/String;Ljava/lang/String;Ljava/lang/CharSequence;ZLorg/telegram/ui/Components/TranslateAlert$OnLinkPress;)V
-    .registers 11
+.method public synthetic constructor <init>(Lorg/telegram/ui/ChatActivity;ILjava/util/ArrayList;Lorg/telegram/tgnet/TLRPC$InputPeer;ILjava/lang/String;Ljava/lang/CharSequence;ZLorg/telegram/ui/Components/TranslateAlert$OnLinkPress;)V
+    .registers 10
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -43,15 +41,13 @@
 
     iput p5, p0, Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda82;->f$4:I
 
-    iput-object p6, p0, Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda82;->f$5:[Ljava/lang/String;
+    iput-object p6, p0, Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda82;->f$5:Ljava/lang/String;
 
-    iput-object p7, p0, Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda82;->f$6:Ljava/lang/String;
+    iput-object p7, p0, Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda82;->f$6:Ljava/lang/CharSequence;
 
-    iput-object p8, p0, Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda82;->f$7:Ljava/lang/CharSequence;
+    iput-boolean p8, p0, Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda82;->f$7:Z
 
-    iput-boolean p9, p0, Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda82;->f$8:Z
-
-    iput-object p10, p0, Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda82;->f$9:Lorg/telegram/ui/Components/TranslateAlert$OnLinkPress;
+    iput-object p9, p0, Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda82;->f$8:Lorg/telegram/ui/Components/TranslateAlert$OnLinkPress;
 
     return-void
 .end method
@@ -59,7 +55,7 @@
 
 # virtual methods
 .method public final onClick(Landroid/view/View;)V
-    .registers 13
+    .registers 12
 
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda82;->f$0:Lorg/telegram/ui/ChatActivity;
 
@@ -71,19 +67,17 @@
 
     iget v4, p0, Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda82;->f$4:I
 
-    iget-object v5, p0, Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda82;->f$5:[Ljava/lang/String;
+    iget-object v5, p0, Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda82;->f$5:Ljava/lang/String;
 
-    iget-object v6, p0, Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda82;->f$6:Ljava/lang/String;
+    iget-object v6, p0, Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda82;->f$6:Ljava/lang/CharSequence;
 
-    iget-object v7, p0, Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda82;->f$7:Ljava/lang/CharSequence;
+    iget-boolean v7, p0, Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda82;->f$7:Z
 
-    iget-boolean v8, p0, Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda82;->f$8:Z
+    iget-object v8, p0, Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda82;->f$8:Lorg/telegram/ui/Components/TranslateAlert$OnLinkPress;
 
-    iget-object v9, p0, Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda82;->f$9:Lorg/telegram/ui/Components/TranslateAlert$OnLinkPress;
+    move-object v9, p1
 
-    move-object v10, p1
-
-    invoke-static/range {v0 .. v10}, Lorg/telegram/ui/ChatActivity;->$r8$lambda$WQEsQpoagQrZCGIx2ByQaVqSIrM(Lorg/telegram/ui/ChatActivity;ILjava/util/ArrayList;Lorg/telegram/tgnet/TLRPC$InputPeer;I[Ljava/lang/String;Ljava/lang/String;Ljava/lang/CharSequence;ZLorg/telegram/ui/Components/TranslateAlert$OnLinkPress;Landroid/view/View;)V
+    invoke-static/range {v0 .. v9}, Lorg/telegram/ui/ChatActivity;->$r8$lambda$DDkqOKotGH9GhRZEKWqplSkAmJU(Lorg/telegram/ui/ChatActivity;ILjava/util/ArrayList;Lorg/telegram/tgnet/TLRPC$InputPeer;ILjava/lang/String;Ljava/lang/CharSequence;ZLorg/telegram/ui/Components/TranslateAlert$OnLinkPress;Landroid/view/View;)V
 
     return-void
 .end method

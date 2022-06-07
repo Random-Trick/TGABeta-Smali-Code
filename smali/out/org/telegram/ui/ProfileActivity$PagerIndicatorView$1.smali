@@ -24,7 +24,7 @@
 .method constructor <init>(Lorg/telegram/ui/ProfileActivity$PagerIndicatorView;Lorg/telegram/ui/ProfileActivity;Z)V
     .registers 4
 
-    .line 1176
+    .line 1191
     iput-object p1, p0, Lorg/telegram/ui/ProfileActivity$PagerIndicatorView$1;->this$1:Lorg/telegram/ui/ProfileActivity$PagerIndicatorView;
 
     iput-boolean p3, p0, Lorg/telegram/ui/ProfileActivity$PagerIndicatorView$1;->val$expanded:Z
@@ -39,7 +39,7 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .registers 4
 
-    .line 1179
+    .line 1194
     iget-object p1, p0, Lorg/telegram/ui/ProfileActivity$PagerIndicatorView$1;->this$1:Lorg/telegram/ui/ProfileActivity$PagerIndicatorView;
 
     invoke-static {p1}, Lorg/telegram/ui/ProfileActivity$PagerIndicatorView;->access$2700(Lorg/telegram/ui/ProfileActivity$PagerIndicatorView;)Z
@@ -50,7 +50,7 @@
 
     if-eqz p1, :cond_60
 
-    .line 1180
+    .line 1195
     iget-object p1, p0, Lorg/telegram/ui/ProfileActivity$PagerIndicatorView$1;->this$1:Lorg/telegram/ui/ProfileActivity$PagerIndicatorView;
 
     iget-object p1, p1, Lorg/telegram/ui/ProfileActivity$PagerIndicatorView;->this$0:Lorg/telegram/ui/ProfileActivity;
@@ -61,7 +61,7 @@
 
     if-eqz p1, :cond_20
 
-    .line 1181
+    .line 1196
     iget-object p1, p0, Lorg/telegram/ui/ProfileActivity$PagerIndicatorView$1;->this$1:Lorg/telegram/ui/ProfileActivity$PagerIndicatorView;
 
     iget-object p1, p1, Lorg/telegram/ui/ProfileActivity$PagerIndicatorView;->this$0:Lorg/telegram/ui/ProfileActivity;
@@ -74,7 +74,7 @@
 
     invoke-virtual {p1, v1}, Landroid/widget/FrameLayout;->setClickable(Z)V
 
-    .line 1183
+    .line 1198
     :cond_20
     iget-object p1, p0, Lorg/telegram/ui/ProfileActivity$PagerIndicatorView$1;->this$1:Lorg/telegram/ui/ProfileActivity$PagerIndicatorView;
 
@@ -86,7 +86,7 @@
 
     if-eqz p1, :cond_35
 
-    .line 1184
+    .line 1199
     iget-object p1, p0, Lorg/telegram/ui/ProfileActivity$PagerIndicatorView$1;->this$1:Lorg/telegram/ui/ProfileActivity$PagerIndicatorView;
 
     iget-object p1, p1, Lorg/telegram/ui/ProfileActivity$PagerIndicatorView;->this$0:Lorg/telegram/ui/ProfileActivity;
@@ -97,7 +97,7 @@
 
     invoke-virtual {p1, v0}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
-    .line 1186
+    .line 1201
     :cond_35
     iget-object p1, p0, Lorg/telegram/ui/ProfileActivity$PagerIndicatorView$1;->this$1:Lorg/telegram/ui/ProfileActivity$PagerIndicatorView;
 
@@ -109,7 +109,7 @@
 
     if-eqz p1, :cond_4a
 
-    .line 1187
+    .line 1202
     iget-object p1, p0, Lorg/telegram/ui/ProfileActivity$PagerIndicatorView$1;->this$1:Lorg/telegram/ui/ProfileActivity$PagerIndicatorView;
 
     iget-object p1, p1, Lorg/telegram/ui/ProfileActivity$PagerIndicatorView;->this$0:Lorg/telegram/ui/ProfileActivity;
@@ -120,7 +120,7 @@
 
     invoke-virtual {p1, v0}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
-    .line 1189
+    .line 1204
     :cond_4a
     iget-object p1, p0, Lorg/telegram/ui/ProfileActivity$PagerIndicatorView$1;->this$1:Lorg/telegram/ui/ProfileActivity$PagerIndicatorView;
 
@@ -132,7 +132,7 @@
 
     if-eqz p1, :cond_65
 
-    .line 1190
+    .line 1205
     iget-object p1, p0, Lorg/telegram/ui/ProfileActivity$PagerIndicatorView$1;->this$1:Lorg/telegram/ui/ProfileActivity$PagerIndicatorView;
 
     iget-object p1, p1, Lorg/telegram/ui/ProfileActivity$PagerIndicatorView;->this$0:Lorg/telegram/ui/ProfileActivity;
@@ -145,7 +145,7 @@
 
     goto :goto_65
 
-    .line 1193
+    .line 1208
     :cond_60
     iget-object p1, p0, Lorg/telegram/ui/ProfileActivity$PagerIndicatorView$1;->this$1:Lorg/telegram/ui/ProfileActivity$PagerIndicatorView;
 
@@ -159,7 +159,7 @@
 .method public onAnimationStart(Landroid/animation/Animator;)V
     .registers 3
 
-    .line 1199
+    .line 1214
     iget-object p1, p0, Lorg/telegram/ui/ProfileActivity$PagerIndicatorView$1;->this$1:Lorg/telegram/ui/ProfileActivity$PagerIndicatorView;
 
     iget-object p1, p1, Lorg/telegram/ui/ProfileActivity$PagerIndicatorView;->this$0:Lorg/telegram/ui/ProfileActivity;
@@ -174,7 +174,7 @@
 
     if-nez p1, :cond_1a
 
-    .line 1200
+    .line 1215
     iget-object p1, p0, Lorg/telegram/ui/ProfileActivity$PagerIndicatorView$1;->this$1:Lorg/telegram/ui/ProfileActivity$PagerIndicatorView;
 
     iget-object p1, p1, Lorg/telegram/ui/ProfileActivity$PagerIndicatorView;->this$0:Lorg/telegram/ui/ProfileActivity;
@@ -187,7 +187,7 @@
 
     invoke-virtual {p1, v0}, Landroid/widget/FrameLayout;->setClickable(Z)V
 
-    .line 1202
+    .line 1217
     :cond_1a
     iget-object p1, p0, Lorg/telegram/ui/ProfileActivity$PagerIndicatorView$1;->this$1:Lorg/telegram/ui/ProfileActivity$PagerIndicatorView;
 
@@ -201,7 +201,7 @@
 
     if-eqz p1, :cond_30
 
-    .line 1203
+    .line 1218
     iget-object p1, p0, Lorg/telegram/ui/ProfileActivity$PagerIndicatorView$1;->this$1:Lorg/telegram/ui/ProfileActivity$PagerIndicatorView;
 
     iget-object p1, p1, Lorg/telegram/ui/ProfileActivity$PagerIndicatorView;->this$0:Lorg/telegram/ui/ProfileActivity;
@@ -212,7 +212,7 @@
 
     invoke-virtual {p1, v0}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
-    .line 1205
+    .line 1220
     :cond_30
     iget-object p1, p0, Lorg/telegram/ui/ProfileActivity$PagerIndicatorView$1;->this$1:Lorg/telegram/ui/ProfileActivity$PagerIndicatorView;
 
@@ -224,7 +224,7 @@
 
     if-eqz p1, :cond_45
 
-    .line 1206
+    .line 1221
     iget-object p1, p0, Lorg/telegram/ui/ProfileActivity$PagerIndicatorView$1;->this$1:Lorg/telegram/ui/ProfileActivity$PagerIndicatorView;
 
     iget-object p1, p1, Lorg/telegram/ui/ProfileActivity$PagerIndicatorView;->this$0:Lorg/telegram/ui/ProfileActivity;
@@ -235,7 +235,7 @@
 
     invoke-virtual {p1, v0}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
-    .line 1208
+    .line 1223
     :cond_45
     iget-object p1, p0, Lorg/telegram/ui/ProfileActivity$PagerIndicatorView$1;->this$1:Lorg/telegram/ui/ProfileActivity$PagerIndicatorView;
 
@@ -247,7 +247,7 @@
 
     if-eqz p1, :cond_5a
 
-    .line 1209
+    .line 1224
     iget-object p1, p0, Lorg/telegram/ui/ProfileActivity$PagerIndicatorView$1;->this$1:Lorg/telegram/ui/ProfileActivity$PagerIndicatorView;
 
     iget-object p1, p1, Lorg/telegram/ui/ProfileActivity$PagerIndicatorView;->this$0:Lorg/telegram/ui/ProfileActivity;
@@ -258,7 +258,7 @@
 
     invoke-virtual {p1, v0}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
-    .line 1211
+    .line 1226
     :cond_5a
     iget-object p1, p0, Lorg/telegram/ui/ProfileActivity$PagerIndicatorView$1;->this$1:Lorg/telegram/ui/ProfileActivity$PagerIndicatorView;
 

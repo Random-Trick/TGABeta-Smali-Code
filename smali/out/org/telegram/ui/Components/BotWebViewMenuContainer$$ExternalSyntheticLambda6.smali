@@ -47,7 +47,7 @@
 
     move v6, p4
 
-    invoke-static/range {v0 .. v6}, Lorg/telegram/ui/Components/BotWebViewMenuContainer;->$r8$lambda$eWtWCN-0_BtjEQq01l21w_jj2dQ(Lorg/telegram/ui/Components/BotWebViewMenuContainer;ZLorg/telegram/ui/Components/ChatActivityBotWebViewButton;Landroidx/dynamicanimation/animation/DynamicAnimation;ZFF)V
+    invoke-static/range {v0 .. v6}, Lorg/telegram/ui/Components/BotWebViewMenuContainer;->$r8$lambda$a-mgct4vc0xl3wmfeoXQDpasH1g(Lorg/telegram/ui/Components/BotWebViewMenuContainer;ZLorg/telegram/ui/Components/ChatActivityBotWebViewButton;Landroidx/dynamicanimation/animation/DynamicAnimation;ZFF)V
 
     return-void
 .end method

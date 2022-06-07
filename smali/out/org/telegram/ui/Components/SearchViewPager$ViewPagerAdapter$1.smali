@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/SearchViewPager$ViewPagerAdapter;)V
     .registers 2
 
-    .line 799
+    .line 849
     iput-object p1, p0, Lorg/telegram/ui/Components/SearchViewPager$ViewPagerAdapter$1;->this$1:Lorg/telegram/ui/Components/SearchViewPager$ViewPagerAdapter;
 
     invoke-direct {p0}, Landroidx/recyclerview/widget/RecyclerView$OnScrollListener;-><init>()V
@@ -35,10 +35,10 @@
 .method public onScrolled(Landroidx/recyclerview/widget/RecyclerView;II)V
     .registers 4
 
-    .line 802
+    .line 852
     invoke-super {p0, p1, p2, p3}, Landroidx/recyclerview/widget/RecyclerView$OnScrollListener;->onScrolled(Landroidx/recyclerview/widget/RecyclerView;II)V
 
-    .line 803
+    .line 853
     iget-object p1, p0, Lorg/telegram/ui/Components/SearchViewPager$ViewPagerAdapter$1;->this$1:Lorg/telegram/ui/Components/SearchViewPager$ViewPagerAdapter;
 
     iget-object p1, p1, Lorg/telegram/ui/Components/SearchViewPager$ViewPagerAdapter;->this$0:Lorg/telegram/ui/Components/SearchViewPager;

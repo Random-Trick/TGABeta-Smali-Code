@@ -38,7 +38,7 @@
 
 .field private rectF:Landroid/graphics/RectF;
 
-.field private settingsButton:Landroid/widget/ImageView;
+.field public settingsButton:Landroid/widget/ImageView;
 
 .field private shadowDrawable:Landroid/graphics/drawable/Drawable;
 
@@ -77,14 +77,14 @@
 
     new-array v1, v0, [I
 
-    .line 45
+    .line 46
     fill-array-data v1, :array_12
 
     sput-object v1, Lorg/telegram/ui/Components/Paint/Views/ColorPicker;->COLORS:[I
 
     new-array v0, v0, [F
 
-    .line 57
+    .line 58
     fill-array-data v0, :array_28
 
     sput-object v0, Lorg/telegram/ui/Components/Paint/Views/ColorPicker;->LOCATIONS:[F
@@ -121,12 +121,12 @@
 .end method
 
 .method public constructor <init>(Landroid/content/Context;)V
-    .registers 9
+    .registers 10
 
-    .line 85
+    .line 86
     invoke-direct {p0, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    .line 43
+    .line 44
     new-instance v0, Landroid/view/animation/OvershootInterpolator;
 
     const v1, 0x3f828f5c    # 1.02f
@@ -135,7 +135,7 @@
 
     iput-object v0, p0, Lorg/telegram/ui/Components/Paint/Views/ColorPicker;->interpolator:Landroid/view/animation/OvershootInterpolator;
 
-    .line 73
+    .line 74
     new-instance v0, Landroid/graphics/Paint;
 
     const/4 v1, 0x1
@@ -144,28 +144,28 @@
 
     iput-object v0, p0, Lorg/telegram/ui/Components/Paint/Views/ColorPicker;->gradientPaint:Landroid/graphics/Paint;
 
-    .line 74
+    .line 75
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0, v1}, Landroid/graphics/Paint;-><init>(I)V
 
     iput-object v0, p0, Lorg/telegram/ui/Components/Paint/Views/ColorPicker;->backgroundPaint:Landroid/graphics/Paint;
 
-    .line 75
+    .line 76
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0, v1}, Landroid/graphics/Paint;-><init>(I)V
 
     iput-object v0, p0, Lorg/telegram/ui/Components/Paint/Views/ColorPicker;->swatchPaint:Landroid/graphics/Paint;
 
-    .line 76
+    .line 77
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0, v1}, Landroid/graphics/Paint;-><init>(I)V
 
     iput-object v0, p0, Lorg/telegram/ui/Components/Paint/Views/ColorPicker;->swatchStrokePaint:Landroid/graphics/Paint;
 
-    .line 77
+    .line 78
     new-instance v0, Landroid/graphics/RectF;
 
     invoke-direct {v0}, Landroid/graphics/RectF;-><init>()V
@@ -174,20 +174,20 @@
 
     const v0, 0x3c896918
 
-    .line 80
+    .line 81
     iput v0, p0, Lorg/telegram/ui/Components/Paint/Views/ColorPicker;->weight:F
 
     const/4 v1, 0x0
 
-    .line 86
+    .line 87
     invoke-virtual {p0, v1}, Landroid/widget/FrameLayout;->setWillNotDraw(Z)V
 
-    .line 87
+    .line 88
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
-    const v3, 0x7f0701ac
+    const v3, 0x7f070182
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -195,21 +195,21 @@
 
     iput-object v2, p0, Lorg/telegram/ui/Components/Paint/Views/ColorPicker;->shadowDrawable:Landroid/graphics/drawable/Drawable;
 
-    .line 88
+    .line 89
     iget-object v2, p0, Lorg/telegram/ui/Components/Paint/Views/ColorPicker;->backgroundPaint:Landroid/graphics/Paint;
 
     const/4 v3, -0x1
 
     invoke-virtual {v2, v3}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 89
+    .line 90
     iget-object v2, p0, Lorg/telegram/ui/Components/Paint/Views/ColorPicker;->swatchStrokePaint:Landroid/graphics/Paint;
 
     sget-object v3, Landroid/graphics/Paint$Style;->STROKE:Landroid/graphics/Paint$Style;
 
     invoke-virtual {v2, v3}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
-    .line 90
+    .line 91
     iget-object v2, p0, Lorg/telegram/ui/Components/Paint/Views/ColorPicker;->swatchStrokePaint:Landroid/graphics/Paint;
 
     const/high16 v3, 0x3f800000    # 1.0f
@@ -222,26 +222,39 @@
 
     invoke-virtual {v2, v4}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
-    .line 92
+    .line 93
     new-instance v2, Landroid/widget/ImageView;
 
     invoke-direct {v2, p1}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
 
     iput-object v2, p0, Lorg/telegram/ui/Components/Paint/Views/ColorPicker;->settingsButton:Landroid/widget/ImageView;
 
-    .line 93
+    const-string v4, "AccDescrBrushType"
+
+    const v5, 0x7f0e0018
+
+    .line 94
+    invoke-static {v4, v5}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v2, v4}, Landroid/widget/ImageView;->setContentDescription(Ljava/lang/CharSequence;)V
+
+    .line 95
+    iget-object v2, p0, Lorg/telegram/ui/Components/Paint/Views/ColorPicker;->settingsButton:Landroid/widget/ImageView;
+
     sget-object v4, Landroid/widget/ImageView$ScaleType;->CENTER:Landroid/widget/ImageView$ScaleType;
 
     invoke-virtual {v2, v4}, Landroid/widget/ImageView;->setScaleType(Landroid/widget/ImageView$ScaleType;)V
 
-    .line 94
+    .line 96
     iget-object v2, p0, Lorg/telegram/ui/Components/Paint/Views/ColorPicker;->settingsButton:Landroid/widget/ImageView;
 
-    const v4, 0x7f07033d
+    const v4, 0x7f070359
 
     invoke-virtual {v2, v4}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 95
+    .line 97
     iget-object v2, p0, Lorg/telegram/ui/Components/Paint/Views/ColorPicker;->settingsButton:Landroid/widget/ImageView;
 
     const/16 v4, 0x2e
@@ -254,7 +267,7 @@
 
     invoke-virtual {p0, v2, v6}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 96
+    .line 98
     iget-object v2, p0, Lorg/telegram/ui/Components/Paint/Views/ColorPicker;->settingsButton:Landroid/widget/ImageView;
 
     new-instance v6, Lorg/telegram/ui/Components/Paint/Views/ColorPicker$$ExternalSyntheticLambda0;
@@ -263,26 +276,39 @@
 
     invoke-virtual {v2, v6}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 102
+    .line 104
     new-instance v2, Landroid/widget/ImageView;
 
     invoke-direct {v2, p1}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
 
     iput-object v2, p0, Lorg/telegram/ui/Components/Paint/Views/ColorPicker;->undoButton:Landroid/widget/ImageView;
 
-    .line 103
+    const-string v6, "Undo"
+
+    const v7, 0x7f0e12ac
+
+    .line 105
+    invoke-static {v6, v7}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-virtual {v2, v6}, Landroid/widget/ImageView;->setContentDescription(Ljava/lang/CharSequence;)V
+
+    .line 106
+    iget-object v2, p0, Lorg/telegram/ui/Components/Paint/Views/ColorPicker;->undoButton:Landroid/widget/ImageView;
+
     sget-object v6, Landroid/widget/ImageView$ScaleType;->CENTER:Landroid/widget/ImageView$ScaleType;
 
     invoke-virtual {v2, v6}, Landroid/widget/ImageView;->setScaleType(Landroid/widget/ImageView$ScaleType;)V
 
-    .line 104
+    .line 107
     iget-object v2, p0, Lorg/telegram/ui/Components/Paint/Views/ColorPicker;->undoButton:Landroid/widget/ImageView;
 
-    const v6, 0x7f070344
+    const v6, 0x7f07035c
 
     invoke-virtual {v2, v6}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 105
+    .line 108
     iget-object v2, p0, Lorg/telegram/ui/Components/Paint/Views/ColorPicker;->undoButton:Landroid/widget/ImageView;
 
     invoke-static {v4, v5}, Lorg/telegram/ui/Components/LayoutHelper;->createFrame(IF)Landroid/widget/FrameLayout$LayoutParams;
@@ -291,7 +317,7 @@
 
     invoke-virtual {p0, v2, v4}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 106
+    .line 109
     iget-object v2, p0, Lorg/telegram/ui/Components/Paint/Views/ColorPicker;->undoButton:Landroid/widget/ImageView;
 
     new-instance v4, Lorg/telegram/ui/Components/Paint/Views/ColorPicker$$ExternalSyntheticLambda1;
@@ -302,14 +328,14 @@
 
     const-string v2, "paint"
 
-    .line 112
+    .line 115
     invoke-virtual {p1, v2, v1}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
 
     move-result-object p1
 
     const-string v1, "last_color_location"
 
-    .line 113
+    .line 116
     invoke-interface {p1, v1, v3}, Landroid/content/SharedPreferences;->getFloat(Ljava/lang/String;F)F
 
     move-result v1
@@ -318,14 +344,14 @@
 
     const-string v1, "last_color_weight"
 
-    .line 114
+    .line 117
     invoke-interface {p1, v1, v0}, Landroid/content/SharedPreferences;->getFloat(Ljava/lang/String;F)F
 
     move-result p1
 
     invoke-virtual {p0, p1}, Lorg/telegram/ui/Components/Paint/Views/ColorPicker;->setWeight(F)V
 
-    .line 115
+    .line 118
     iget p1, p0, Lorg/telegram/ui/Components/Paint/Views/ColorPicker;->location:F
 
     invoke-virtual {p0, p1}, Lorg/telegram/ui/Components/Paint/Views/ColorPicker;->setLocation(F)V
@@ -338,7 +364,7 @@
 
     const/4 v0, 0x0
 
-    .line 174
+    .line 177
     invoke-static {p3, v0}, Ljava/lang/Math;->max(FF)F
 
     move-result p3
@@ -349,32 +375,32 @@
 
     move-result p3
 
-    .line 176
+    .line 179
     invoke-static {p1}, Landroid/graphics/Color;->red(I)I
 
     move-result v0
 
-    .line 177
+    .line 180
     invoke-static {p2}, Landroid/graphics/Color;->red(I)I
 
     move-result v1
 
-    .line 179
+    .line 182
     invoke-static {p1}, Landroid/graphics/Color;->green(I)I
 
     move-result v2
 
-    .line 180
+    .line 183
     invoke-static {p2}, Landroid/graphics/Color;->green(I)I
 
     move-result v3
 
-    .line 182
+    .line 185
     invoke-static {p1}, Landroid/graphics/Color;->blue(I)I
 
     move-result p1
 
-    .line 183
+    .line 186
     invoke-static {p2}, Landroid/graphics/Color;->blue(I)I
 
     move-result p2
@@ -393,7 +419,7 @@
 
     const/16 v1, 0xff
 
-    .line 185
+    .line 188
     invoke-static {v1, v0}, Ljava/lang/Math;->min(II)I
 
     move-result v0
@@ -410,7 +436,7 @@
 
     float-to-int v2, v4
 
-    .line 186
+    .line 189
     invoke-static {v1, v2}, Ljava/lang/Math;->min(II)I
 
     move-result v2
@@ -427,12 +453,12 @@
 
     float-to-int p1, v3
 
-    .line 187
+    .line 190
     invoke-static {v1, p1}, Ljava/lang/Math;->min(II)I
 
     move-result p1
 
-    .line 189
+    .line 192
     invoke-static {v1, v0, v2, p1}, Landroid/graphics/Color;->argb(IIII)I
 
     move-result p1
@@ -443,12 +469,12 @@
 .method private synthetic lambda$new$0(Landroid/view/View;)V
     .registers 2
 
-    .line 97
+    .line 99
     iget-object p1, p0, Lorg/telegram/ui/Components/Paint/Views/ColorPicker;->delegate:Lorg/telegram/ui/Components/Paint/Views/ColorPicker$ColorPickerDelegate;
 
     if-eqz p1, :cond_7
 
-    .line 98
+    .line 100
     invoke-interface {p1}, Lorg/telegram/ui/Components/Paint/Views/ColorPicker$ColorPickerDelegate;->onSettingsPressed()V
 
     :cond_7
@@ -458,12 +484,12 @@
 .method private synthetic lambda$new$1(Landroid/view/View;)V
     .registers 2
 
-    .line 107
+    .line 110
     iget-object p1, p0, Lorg/telegram/ui/Components/Paint/Views/ColorPicker;->delegate:Lorg/telegram/ui/Components/Paint/Views/ColorPicker$ColorPickerDelegate;
 
     if-eqz p1, :cond_7
 
-    .line 108
+    .line 111
     invoke-interface {p1}, Lorg/telegram/ui/Components/Paint/Views/ColorPicker$ColorPickerDelegate;->onUndoPressed()V
 
     :cond_7
@@ -473,14 +499,14 @@
 .method private setDragging(ZZ)V
     .registers 5
 
-    .line 312
+    .line 315
     iget-boolean v0, p0, Lorg/telegram/ui/Components/Paint/Views/ColorPicker;->dragging:Z
 
     if-ne v0, p1, :cond_5
 
     return-void
 
-    .line 315
+    .line 318
     :cond_5
     iput-boolean p1, p0, Lorg/telegram/ui/Components/Paint/Views/ColorPicker;->dragging:Z
 
@@ -502,7 +528,7 @@
 
     const/4 v0, 0x0
 
-    .line 318
+    .line 321
     iget v1, p0, Lorg/telegram/ui/Components/Paint/Views/ColorPicker;->draggingFactor:F
 
     aput v1, p2, v0
@@ -517,21 +543,21 @@
 
     move-result-object p1
 
-    .line 319
+    .line 322
     iget-object p2, p0, Lorg/telegram/ui/Components/Paint/Views/ColorPicker;->interpolator:Landroid/view/animation/OvershootInterpolator;
 
     invoke-virtual {p1, p2}, Landroid/animation/Animator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
     const/16 p2, 0x12c
 
-    .line 321
+    .line 324
     iget-boolean v0, p0, Lorg/telegram/ui/Components/Paint/Views/ColorPicker;->wasChangingWeight:Z
 
     if-eqz v0, :cond_34
 
     int-to-float p2, p2
 
-    .line 322
+    .line 325
     iget v0, p0, Lorg/telegram/ui/Components/Paint/Views/ColorPicker;->weight:F
 
     const/high16 v1, 0x42960000    # 75.0f
@@ -545,15 +571,15 @@
     :cond_34
     int-to-long v0, p2
 
-    .line 324
+    .line 327
     invoke-virtual {p1, v0, v1}, Landroid/animation/Animator;->setDuration(J)Landroid/animation/Animator;
 
-    .line 325
+    .line 328
     invoke-virtual {p1}, Landroid/animation/Animator;->start()V
 
     goto :goto_3f
 
-    .line 327
+    .line 330
     :cond_3c
     invoke-direct {p0, p1}, Lorg/telegram/ui/Components/Paint/Views/ColorPicker;->setDraggingFactor(F)V
 
@@ -566,10 +592,10 @@
     .annotation build Landroidx/annotation/Keep;
     .end annotation
 
-    .line 302
+    .line 305
     iput p1, p0, Lorg/telegram/ui/Components/Paint/Views/ColorPicker;->draggingFactor:F
 
-    .line 303
+    .line 306
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->invalidate()V
 
     return-void
@@ -586,7 +612,7 @@
 
     if-gtz v0, :cond_b
 
-    .line 146
+    .line 149
     sget-object p1, Lorg/telegram/ui/Components/Paint/Views/ColorPicker;->COLORS:[I
 
     const/4 v0, 0x0
@@ -604,7 +630,7 @@
 
     if-ltz v0, :cond_19
 
-    .line 148
+    .line 151
     sget-object p1, Lorg/telegram/ui/Components/Paint/Views/ColorPicker;->COLORS:[I
 
     array-length v0, p1
@@ -615,7 +641,7 @@
 
     return p1
 
-    .line 154
+    .line 157
     :cond_19
     :goto_19
     sget-object v0, Lorg/telegram/ui/Components/Paint/Views/ColorPicker;->LOCATIONS:[F
@@ -626,7 +652,7 @@
 
     if-ge v1, v2, :cond_2b
 
-    .line 155
+    .line 158
     aget v2, v0, v1
 
     cmpl-float v2, v2, p1
@@ -645,19 +671,19 @@
     :cond_2b
     const/4 v1, -0x1
 
-    .line 163
+    .line 166
     :goto_2c
     aget v2, v0, v3
 
-    .line 164
+    .line 167
     sget-object v4, Lorg/telegram/ui/Components/Paint/Views/ColorPicker;->COLORS:[I
 
     aget v3, v4, v3
 
-    .line 166
+    .line 169
     aget v0, v0, v1
 
-    .line 167
+    .line 170
     aget v1, v4, v1
 
     sub-float/2addr p1, v2
@@ -666,7 +692,7 @@
 
     div-float/2addr p1, v0
 
-    .line 170
+    .line 173
     invoke-direct {p0, v3, v1, p1}, Lorg/telegram/ui/Components/Paint/Views/ColorPicker;->interpolateColors(IIF)I
 
     move-result p1
@@ -679,7 +705,7 @@
     .annotation build Landroidx/annotation/Keep;
     .end annotation
 
-    .line 308
+    .line 311
     iget v0, p0, Lorg/telegram/ui/Components/Paint/Views/ColorPicker;->draggingFactor:F
 
     return v0
@@ -688,7 +714,7 @@
 .method public getSettingsButton()Landroid/view/View;
     .registers 2
 
-    .line 128
+    .line 131
     iget-object v0, p0, Lorg/telegram/ui/Components/Paint/Views/ColorPicker;->settingsButton:Landroid/widget/ImageView;
 
     return-object v0
@@ -697,7 +723,7 @@
 .method public getSwatch()Lorg/telegram/ui/Components/Paint/Swatch;
     .registers 5
 
-    .line 136
+    .line 139
     new-instance v0, Lorg/telegram/ui/Components/Paint/Swatch;
 
     iget v1, p0, Lorg/telegram/ui/Components/Paint/Views/ColorPicker;->location:F
@@ -718,7 +744,7 @@
 .method protected onDraw(Landroid/graphics/Canvas;)V
     .registers 11
 
-    .line 284
+    .line 287
     iget-object v0, p0, Lorg/telegram/ui/Components/Paint/Views/ColorPicker;->rectF:Landroid/graphics/RectF;
 
     const/high16 v1, 0x40c00000    # 6.0f
@@ -739,7 +765,7 @@
 
     invoke-virtual {p1, v0, v2, v1, v3}, Landroid/graphics/Canvas;->drawRoundRect(Landroid/graphics/RectF;FFLandroid/graphics/Paint;)V
 
-    .line 286
+    .line 289
     iget-object v0, p0, Lorg/telegram/ui/Components/Paint/Views/ColorPicker;->rectF:Landroid/graphics/RectF;
 
     iget v1, v0, Landroid/graphics/RectF;->left:F
@@ -756,7 +782,7 @@
 
     float-to-int v0, v1
 
-    .line 287
+    .line 290
     iget-object v1, p0, Lorg/telegram/ui/Components/Paint/Views/ColorPicker;->rectF:Landroid/graphics/RectF;
 
     invoke-virtual {v1}, Landroid/graphics/RectF;->centerY()F
@@ -807,7 +833,7 @@
 
     const/high16 v2, 0x41c00000    # 24.0f
 
-    .line 289
+    .line 292
     invoke-static {v2}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v2
@@ -828,7 +854,7 @@
 
     float-to-int v2, v2
 
-    .line 290
+    .line 293
     iget-object v3, p0, Lorg/telegram/ui/Components/Paint/Views/ColorPicker;->shadowDrawable:Landroid/graphics/drawable/Drawable;
 
     sub-int v6, v0, v2
@@ -841,14 +867,14 @@
 
     invoke-virtual {v3, v6, v7, v8, v2}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 291
+    .line 294
     iget-object v2, p0, Lorg/telegram/ui/Components/Paint/Views/ColorPicker;->shadowDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v2, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
     const/high16 v2, 0x40800000    # 4.0f
 
-    .line 293
+    .line 296
     invoke-static {v2}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v3
@@ -901,7 +927,7 @@
 
     const/high16 v3, 0x41b00000    # 22.0f
 
-    .line 295
+    .line 298
     invoke-static {v3}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v3
@@ -920,12 +946,12 @@
 
     invoke-virtual {p1, v0, v1, v3, v4}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
 
-    .line 296
+    .line 299
     iget-object v3, p0, Lorg/telegram/ui/Components/Paint/Views/ColorPicker;->swatchPaint:Landroid/graphics/Paint;
 
     invoke-virtual {p1, v0, v1, v2, v3}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
 
-    .line 297
+    .line 300
     invoke-static {v5}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v3
@@ -953,7 +979,7 @@
 
     sub-int/2addr p5, p3
 
-    .line 274
+    .line 277
     iget-object p1, p0, Lorg/telegram/ui/Components/Paint/Views/ColorPicker;->gradientPaint:Landroid/graphics/Paint;
 
     new-instance p2, Landroid/graphics/LinearGradient;
@@ -992,14 +1018,14 @@
 
     const/high16 p1, 0x42000000    # 32.0f
 
-    .line 275
+    .line 278
     invoke-static {p1}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result p1
 
     sub-int p1, p5, p1
 
-    .line 276
+    .line 279
     iget-object p2, p0, Lorg/telegram/ui/Components/Paint/Views/ColorPicker;->rectF:Landroid/graphics/RectF;
 
     invoke-static {p3}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -1030,7 +1056,7 @@
 
     invoke-virtual {p2, v0, v1, p3, p1}, Landroid/graphics/RectF;->set(FFFF)V
 
-    .line 278
+    .line 281
     iget-object p1, p0, Lorg/telegram/ui/Components/Paint/Views/ColorPicker;->settingsButton:Landroid/widget/ImageView;
 
     invoke-virtual {p1}, Landroid/widget/ImageView;->getMeasuredWidth()I
@@ -1049,7 +1075,7 @@
 
     invoke-virtual {p1, p2, v0, p4, p5}, Landroid/widget/ImageView;->layout(IIII)V
 
-    .line 279
+    .line 282
     iget-object p1, p0, Lorg/telegram/ui/Components/Paint/Views/ColorPicker;->undoButton:Landroid/widget/ImageView;
 
     invoke-static {p3}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -1074,7 +1100,7 @@
 .method public onTouchEvent(Landroid/view/MotionEvent;)Z
     .registers 8
 
-    .line 216
+    .line 219
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getPointerCount()I
 
     move-result v0
@@ -1087,7 +1113,7 @@
 
     return v1
 
-    .line 220
+    .line 223
     :cond_9
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
@@ -1099,7 +1125,7 @@
 
     sub-float/2addr v0, v3
 
-    .line 221
+    .line 224
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
 
     move-result v3
@@ -1110,7 +1136,7 @@
 
     sub-float/2addr v3, v4
 
-    .line 223
+    .line 226
     iget-boolean v4, p0, Lorg/telegram/ui/Components/Paint/Views/ColorPicker;->interacting:Z
 
     const/high16 v5, 0x41200000    # 10.0f
@@ -1131,7 +1157,7 @@
 
     return v1
 
-    .line 227
+    .line 230
     :cond_2c
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionMasked()I
 
@@ -1156,24 +1182,24 @@
 
     if-ne p1, v4, :cond_c6
 
-    .line 241
+    .line 244
     :cond_3e
     iget-boolean p1, p0, Lorg/telegram/ui/Components/Paint/Views/ColorPicker;->interacting:Z
 
     if-nez p1, :cond_4b
 
-    .line 242
+    .line 245
     iput-boolean v2, p0, Lorg/telegram/ui/Components/Paint/Views/ColorPicker;->interacting:Z
 
-    .line 243
+    .line 246
     iget-object p1, p0, Lorg/telegram/ui/Components/Paint/Views/ColorPicker;->delegate:Lorg/telegram/ui/Components/Paint/Views/ColorPicker$ColorPickerDelegate;
 
     if-eqz p1, :cond_4b
 
-    .line 244
+    .line 247
     invoke-interface {p1}, Lorg/telegram/ui/Components/Paint/Views/ColorPicker$ColorPickerDelegate;->onBeganColorPicking()V
 
-    .line 248
+    .line 251
     :cond_4b
     iget-object p1, p0, Lorg/telegram/ui/Components/Paint/Views/ColorPicker;->rectF:Landroid/graphics/RectF;
 
@@ -1195,13 +1221,13 @@
 
     move-result v0
 
-    .line 249
+    .line 252
     invoke-virtual {p0, v0}, Lorg/telegram/ui/Components/Paint/Views/ColorPicker;->setLocation(F)V
 
-    .line 251
+    .line 254
     invoke-direct {p0, v2, v2}, Lorg/telegram/ui/Components/Paint/Views/ColorPicker;->setDragging(ZZ)V
 
-    .line 253
+    .line 256
     invoke-static {v5}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v0
@@ -1214,12 +1240,12 @@
 
     if-gez v0, :cond_89
 
-    .line 254
+    .line 257
     iput-boolean v2, p0, Lorg/telegram/ui/Components/Paint/Views/ColorPicker;->changingWeight:Z
 
     neg-float v0, v3
 
-    .line 255
+    .line 258
     invoke-static {v5}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v3
@@ -1238,7 +1264,7 @@
 
     div-float/2addr v0, v3
 
-    .line 256
+    .line 259
     invoke-static {p1, v0}, Ljava/lang/Math;->min(FF)F
 
     move-result p1
@@ -1247,22 +1273,22 @@
 
     move-result p1
 
-    .line 257
+    .line 260
     invoke-virtual {p0, p1}, Lorg/telegram/ui/Components/Paint/Views/ColorPicker;->setWeight(F)V
 
-    .line 260
+    .line 263
     :cond_89
     iget-object p1, p0, Lorg/telegram/ui/Components/Paint/Views/ColorPicker;->delegate:Lorg/telegram/ui/Components/Paint/Views/ColorPicker$ColorPickerDelegate;
 
     if-eqz p1, :cond_90
 
-    .line 261
+    .line 264
     invoke-interface {p1}, Lorg/telegram/ui/Components/Paint/Views/ColorPicker$ColorPickerDelegate;->onColorValueChanged()V
 
     :cond_90
     return v2
 
-    .line 229
+    .line 232
     :cond_91
     :goto_91
     iget-boolean p1, p0, Lorg/telegram/ui/Components/Paint/Views/ColorPicker;->interacting:Z
@@ -1273,10 +1299,10 @@
 
     if-eqz p1, :cond_bb
 
-    .line 230
+    .line 233
     invoke-interface {p1}, Lorg/telegram/ui/Components/Paint/Views/ColorPicker$ColorPickerDelegate;->onFinishedColorPicking()V
 
-    .line 231
+    .line 234
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
 
     move-result-object p1
@@ -1291,36 +1317,36 @@
 
     move-result-object p1
 
-    .line 232
+    .line 235
     iget v0, p0, Lorg/telegram/ui/Components/Paint/Views/ColorPicker;->location:F
 
     const-string v3, "last_color_location"
 
     invoke-interface {p1, v3, v0}, Landroid/content/SharedPreferences$Editor;->putFloat(Ljava/lang/String;F)Landroid/content/SharedPreferences$Editor;
 
-    .line 233
+    .line 236
     iget v0, p0, Lorg/telegram/ui/Components/Paint/Views/ColorPicker;->weight:F
 
     const-string v3, "last_color_weight"
 
     invoke-interface {p1, v3, v0}, Landroid/content/SharedPreferences$Editor;->putFloat(Ljava/lang/String;F)Landroid/content/SharedPreferences$Editor;
 
-    .line 234
+    .line 237
     invoke-interface {p1}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 236
+    .line 239
     :cond_bb
     iput-boolean v1, p0, Lorg/telegram/ui/Components/Paint/Views/ColorPicker;->interacting:Z
 
-    .line 237
+    .line 240
     iget-boolean p1, p0, Lorg/telegram/ui/Components/Paint/Views/ColorPicker;->changingWeight:Z
 
     iput-boolean p1, p0, Lorg/telegram/ui/Components/Paint/Views/ColorPicker;->wasChangingWeight:Z
 
-    .line 238
+    .line 241
     iput-boolean v1, p0, Lorg/telegram/ui/Components/Paint/Views/ColorPicker;->changingWeight:Z
 
-    .line 239
+    .line 242
     invoke-direct {p0, v1, v2}, Lorg/telegram/ui/Components/Paint/Views/ColorPicker;->setDragging(ZZ)V
 
     :cond_c6
@@ -1330,7 +1356,7 @@
 .method public setDelegate(Lorg/telegram/ui/Components/Paint/Views/ColorPicker$ColorPickerDelegate;)V
     .registers 2
 
-    .line 124
+    .line 127
     iput-object p1, p0, Lorg/telegram/ui/Components/Paint/Views/ColorPicker;->delegate:Lorg/telegram/ui/Components/Paint/Views/ColorPicker$ColorPickerDelegate;
 
     return-void
@@ -1339,14 +1365,14 @@
 .method public setLocation(F)V
     .registers 8
 
-    .line 193
+    .line 196
     iput p1, p0, Lorg/telegram/ui/Components/Paint/Views/ColorPicker;->location:F
 
     invoke-virtual {p0, p1}, Lorg/telegram/ui/Components/Paint/Views/ColorPicker;->colorForLocation(F)I
 
     move-result p1
 
-    .line 194
+    .line 197
     iget-object v0, p0, Lorg/telegram/ui/Components/Paint/Views/ColorPicker;->swatchPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColor(I)V
@@ -1355,12 +1381,12 @@
 
     new-array v0, v0, [F
 
-    .line 197
+    .line 200
     invoke-static {p1, v0}, Landroid/graphics/Color;->colorToHSV(I[F)V
 
     const/4 v1, 0x0
 
-    .line 199
+    .line 202
     aget v1, v0, v1
 
     float-to-double v1, v1
@@ -1393,7 +1419,7 @@
 
     const/high16 p1, 0x3f800000    # 1.0f
 
-    .line 200
+    .line 203
     aget v0, v0, v1
 
     sub-float/2addr v0, v3
@@ -1414,7 +1440,7 @@
 
     float-to-int p1, p1
 
-    .line 201
+    .line 204
     iget-object v0, p0, Lorg/telegram/ui/Components/Paint/Views/ColorPicker;->swatchStrokePaint:Landroid/graphics/Paint;
 
     invoke-static {p1, p1, p1}, Landroid/graphics/Color;->rgb(III)I
@@ -1425,13 +1451,13 @@
 
     goto :goto_53
 
-    .line 203
+    .line 206
     :cond_4e
     iget-object v0, p0, Lorg/telegram/ui/Components/Paint/Views/ColorPicker;->swatchStrokePaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 206
+    .line 209
     :goto_53
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->invalidate()V
 
@@ -1441,7 +1467,7 @@
 .method public setSettingsButtonImage(I)V
     .registers 3
 
-    .line 132
+    .line 135
     iget-object v0, p0, Lorg/telegram/ui/Components/Paint/Views/ColorPicker;->settingsButton:Landroid/widget/ImageView;
 
     invoke-virtual {v0, p1}, Landroid/widget/ImageView;->setImageResource(I)V
@@ -1452,12 +1478,12 @@
 .method public setSwatch(Lorg/telegram/ui/Components/Paint/Swatch;)V
     .registers 3
 
-    .line 140
+    .line 143
     iget v0, p1, Lorg/telegram/ui/Components/Paint/Swatch;->colorLocation:F
 
     invoke-virtual {p0, v0}, Lorg/telegram/ui/Components/Paint/Views/ColorPicker;->setLocation(F)V
 
-    .line 141
+    .line 144
     iget p1, p1, Lorg/telegram/ui/Components/Paint/Swatch;->brushWeight:F
 
     invoke-virtual {p0, p1}, Lorg/telegram/ui/Components/Paint/Views/ColorPicker;->setWeight(F)V
@@ -1468,7 +1494,7 @@
 .method public setUndoEnabled(Z)V
     .registers 4
 
-    .line 119
+    .line 122
     iget-object v0, p0, Lorg/telegram/ui/Components/Paint/Views/ColorPicker;->undoButton:Landroid/widget/ImageView;
 
     if-eqz p1, :cond_7
@@ -1483,7 +1509,7 @@
     :goto_a
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setAlpha(F)V
 
-    .line 120
+    .line 123
     iget-object v0, p0, Lorg/telegram/ui/Components/Paint/Views/ColorPicker;->undoButton:Landroid/widget/ImageView;
 
     invoke-virtual {v0, p1}, Landroid/widget/ImageView;->setEnabled(Z)V
@@ -1494,10 +1520,10 @@
 .method public setWeight(F)V
     .registers 2
 
-    .line 210
+    .line 213
     iput p1, p0, Lorg/telegram/ui/Components/Paint/Views/ColorPicker;->weight:F
 
-    .line 211
+    .line 214
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->invalidate()V
 
     return-void

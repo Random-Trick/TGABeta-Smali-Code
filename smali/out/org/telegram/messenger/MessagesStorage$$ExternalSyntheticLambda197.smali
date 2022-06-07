@@ -35,11 +35,11 @@
 .method public final compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .registers 3
 
-    check-cast p1, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$DialogSearchResult;
+    check-cast p1, Lorg/telegram/messenger/MessagesController$DialogFilter;
 
-    check-cast p2, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$DialogSearchResult;
+    check-cast p2, Lorg/telegram/messenger/MessagesController$DialogFilter;
 
-    invoke-static {p1, p2}, Lorg/telegram/messenger/MessagesStorage;->$r8$lambda$QNphYq9B_1HjM-kuvk7u7UoEnA0(Lorg/telegram/ui/Adapters/DialogsSearchAdapter$DialogSearchResult;Lorg/telegram/ui/Adapters/DialogsSearchAdapter$DialogSearchResult;)I
+    invoke-static {p1, p2}, Lorg/telegram/messenger/MessagesStorage;->$r8$lambda$1778pXOVx4cFXvCufL7FqFsUlcY(Lorg/telegram/messenger/MessagesController$DialogFilter;Lorg/telegram/messenger/MessagesController$DialogFilter;)I
 
     move-result p1
 

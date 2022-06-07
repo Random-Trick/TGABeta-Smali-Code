@@ -255,16 +255,7 @@
     return-void
 .end method
 
-.method static synthetic access$000(Lorg/telegram/ui/Components/NumberPicker;Z)V
-    .registers 2
-
-    .line 49
-    invoke-direct {p0, p1}, Lorg/telegram/ui/Components/NumberPicker;->changeValueByOne(Z)V
-
-    return-void
-.end method
-
-.method static synthetic access$100(Lorg/telegram/ui/Components/NumberPicker;)I
+.method static synthetic access$000(Lorg/telegram/ui/Components/NumberPicker;)I
     .registers 1
 
     .line 49
@@ -273,7 +264,7 @@
     return p0
 .end method
 
-.method static synthetic access$300(Lorg/telegram/ui/Components/NumberPicker;)Z
+.method static synthetic access$200(Lorg/telegram/ui/Components/NumberPicker;)Z
     .registers 1
 
     .line 49
@@ -282,7 +273,7 @@
     return p0
 .end method
 
-.method static synthetic access$302(Lorg/telegram/ui/Components/NumberPicker;Z)Z
+.method static synthetic access$202(Lorg/telegram/ui/Components/NumberPicker;Z)Z
     .registers 2
 
     .line 49
@@ -291,7 +282,7 @@
     return p1
 .end method
 
-.method static synthetic access$380(Lorg/telegram/ui/Components/NumberPicker;I)Z
+.method static synthetic access$280(Lorg/telegram/ui/Components/NumberPicker;I)Z
     .registers 3
 
     .line 49
@@ -306,7 +297,7 @@
     return p1
 .end method
 
-.method static synthetic access$400(Lorg/telegram/ui/Components/NumberPicker;)I
+.method static synthetic access$300(Lorg/telegram/ui/Components/NumberPicker;)I
     .registers 1
 
     .line 49
@@ -315,7 +306,7 @@
     return p0
 .end method
 
-.method static synthetic access$500(Lorg/telegram/ui/Components/NumberPicker;)Z
+.method static synthetic access$400(Lorg/telegram/ui/Components/NumberPicker;)Z
     .registers 1
 
     .line 49
@@ -324,7 +315,7 @@
     return p0
 .end method
 
-.method static synthetic access$502(Lorg/telegram/ui/Components/NumberPicker;Z)Z
+.method static synthetic access$402(Lorg/telegram/ui/Components/NumberPicker;Z)Z
     .registers 2
 
     .line 49
@@ -333,7 +324,7 @@
     return p1
 .end method
 
-.method static synthetic access$580(Lorg/telegram/ui/Components/NumberPicker;I)Z
+.method static synthetic access$480(Lorg/telegram/ui/Components/NumberPicker;I)Z
     .registers 3
 
     .line 49
@@ -348,7 +339,7 @@
     return p1
 .end method
 
-.method static synthetic access$600(Lorg/telegram/ui/Components/NumberPicker;)I
+.method static synthetic access$500(Lorg/telegram/ui/Components/NumberPicker;)I
     .registers 1
 
     .line 49
@@ -357,87 +348,13 @@
     return p0
 .end method
 
-.method static synthetic access$700(Lorg/telegram/ui/Components/NumberPicker;)J
+.method static synthetic access$600(Lorg/telegram/ui/Components/NumberPicker;)J
     .registers 3
 
     .line 49
     iget-wide v0, p0, Lorg/telegram/ui/Components/NumberPicker;->mLongPressUpdateInterval:J
 
     return-wide v0
-.end method
-
-.method private changeValueByOne(Z)V
-    .registers 15
-
-    .line 874
-    iget-object v0, p0, Lorg/telegram/ui/Components/NumberPicker;->mInputText:Landroid/widget/TextView;
-
-    const/4 v1, 0x4
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
-
-    .line 875
-    iget-object v0, p0, Lorg/telegram/ui/Components/NumberPicker;->mFlingScroller:Lorg/telegram/ui/Components/Scroller;
-
-    invoke-direct {p0, v0}, Lorg/telegram/ui/Components/NumberPicker;->moveToFinalScrollerPosition(Lorg/telegram/ui/Components/Scroller;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_13
-
-    .line 876
-    iget-object v0, p0, Lorg/telegram/ui/Components/NumberPicker;->mAdjustScroller:Lorg/telegram/ui/Components/Scroller;
-
-    invoke-direct {p0, v0}, Lorg/telegram/ui/Components/NumberPicker;->moveToFinalScrollerPosition(Lorg/telegram/ui/Components/Scroller;)Z
-
-    :cond_13
-    const/4 v0, 0x0
-
-    .line 878
-    iput v0, p0, Lorg/telegram/ui/Components/NumberPicker;->mPreviousScrollerY:I
-
-    if-eqz p1, :cond_26
-
-    .line 880
-    iget-object v1, p0, Lorg/telegram/ui/Components/NumberPicker;->mFlingScroller:Lorg/telegram/ui/Components/Scroller;
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x0
-
-    const/4 v4, 0x0
-
-    iget p1, p0, Lorg/telegram/ui/Components/NumberPicker;->mSelectorElementHeight:I
-
-    neg-int v5, p1
-
-    const/16 v6, 0x12c
-
-    invoke-virtual/range {v1 .. v6}, Lorg/telegram/ui/Components/Scroller;->startScroll(IIIII)V
-
-    goto :goto_32
-
-    .line 882
-    :cond_26
-    iget-object v7, p0, Lorg/telegram/ui/Components/NumberPicker;->mFlingScroller:Lorg/telegram/ui/Components/Scroller;
-
-    const/4 v8, 0x0
-
-    const/4 v9, 0x0
-
-    const/4 v10, 0x0
-
-    iget v11, p0, Lorg/telegram/ui/Components/NumberPicker;->mSelectorElementHeight:I
-
-    const/16 v12, 0x12c
-
-    invoke-virtual/range {v7 .. v12}, Lorg/telegram/ui/Components/Scroller;->startScroll(IIIII)V
-
-    .line 884
-    :goto_32
-    invoke-virtual {p0}, Landroid/widget/LinearLayout;->invalidate()V
-
-    return-void
 .end method
 
 .method private decrementSelectorIndices([I)V
@@ -1682,7 +1599,7 @@
     :goto_f
     iget-object v0, p0, Lorg/telegram/ui/Components/NumberPicker;->mChangeCurrentByOneFromLongPressCommand:Lorg/telegram/ui/Components/NumberPicker$ChangeCurrentByOneFromLongPressCommand;
 
-    invoke-static {v0, p1}, Lorg/telegram/ui/Components/NumberPicker$ChangeCurrentByOneFromLongPressCommand;->access$200(Lorg/telegram/ui/Components/NumberPicker$ChangeCurrentByOneFromLongPressCommand;Z)V
+    invoke-static {v0, p1}, Lorg/telegram/ui/Components/NumberPicker$ChangeCurrentByOneFromLongPressCommand;->access$100(Lorg/telegram/ui/Components/NumberPicker$ChangeCurrentByOneFromLongPressCommand;Z)V
 
     .line 1025
     iget-object p1, p0, Lorg/telegram/ui/Components/NumberPicker;->mChangeCurrentByOneFromLongPressCommand:Lorg/telegram/ui/Components/NumberPicker$ChangeCurrentByOneFromLongPressCommand;
@@ -2116,6 +2033,80 @@
 
 
 # virtual methods
+.method protected changeValueByOne(Z)V
+    .registers 15
+
+    .line 874
+    iget-object v0, p0, Lorg/telegram/ui/Components/NumberPicker;->mInputText:Landroid/widget/TextView;
+
+    const/4 v1, 0x4
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
+
+    .line 875
+    iget-object v0, p0, Lorg/telegram/ui/Components/NumberPicker;->mFlingScroller:Lorg/telegram/ui/Components/Scroller;
+
+    invoke-direct {p0, v0}, Lorg/telegram/ui/Components/NumberPicker;->moveToFinalScrollerPosition(Lorg/telegram/ui/Components/Scroller;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_13
+
+    .line 876
+    iget-object v0, p0, Lorg/telegram/ui/Components/NumberPicker;->mAdjustScroller:Lorg/telegram/ui/Components/Scroller;
+
+    invoke-direct {p0, v0}, Lorg/telegram/ui/Components/NumberPicker;->moveToFinalScrollerPosition(Lorg/telegram/ui/Components/Scroller;)Z
+
+    :cond_13
+    const/4 v0, 0x0
+
+    .line 878
+    iput v0, p0, Lorg/telegram/ui/Components/NumberPicker;->mPreviousScrollerY:I
+
+    if-eqz p1, :cond_26
+
+    .line 880
+    iget-object v1, p0, Lorg/telegram/ui/Components/NumberPicker;->mFlingScroller:Lorg/telegram/ui/Components/Scroller;
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x0
+
+    iget p1, p0, Lorg/telegram/ui/Components/NumberPicker;->mSelectorElementHeight:I
+
+    neg-int v5, p1
+
+    const/16 v6, 0x12c
+
+    invoke-virtual/range {v1 .. v6}, Lorg/telegram/ui/Components/Scroller;->startScroll(IIIII)V
+
+    goto :goto_32
+
+    .line 882
+    :cond_26
+    iget-object v7, p0, Lorg/telegram/ui/Components/NumberPicker;->mFlingScroller:Lorg/telegram/ui/Components/Scroller;
+
+    const/4 v8, 0x0
+
+    const/4 v9, 0x0
+
+    const/4 v10, 0x0
+
+    iget v11, p0, Lorg/telegram/ui/Components/NumberPicker;->mSelectorElementHeight:I
+
+    const/16 v12, 0x12c
+
+    invoke-virtual/range {v7 .. v12}, Lorg/telegram/ui/Components/Scroller;->startScroll(IIIII)V
+
+    .line 884
+    :goto_32
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->invalidate()V
+
+    return-void
+.end method
+
 .method public computeScroll()V
     .registers 5
 
@@ -2359,7 +2350,7 @@
 
     .line 452
     :goto_5c
-    invoke-direct {p0, p1}, Lorg/telegram/ui/Components/NumberPicker;->changeValueByOne(Z)V
+    invoke-virtual {p0, p1}, Lorg/telegram/ui/Components/NumberPicker;->changeValueByOne(Z)V
 
     :cond_5f
     return v3
@@ -3399,7 +3390,7 @@
     if-lez v0, :cond_ad
 
     .line 401
-    invoke-direct {p0, v3}, Lorg/telegram/ui/Components/NumberPicker;->changeValueByOne(Z)V
+    invoke-virtual {p0, v3}, Lorg/telegram/ui/Components/NumberPicker;->changeValueByOne(Z)V
 
     .line 402
     iget-object p1, p0, Lorg/telegram/ui/Components/NumberPicker;->mPressedStateHelper:Lorg/telegram/ui/Components/NumberPicker$PressedStateHelper;
@@ -3412,7 +3403,7 @@
     if-gez v0, :cond_bb
 
     .line 405
-    invoke-direct {p0, v1}, Lorg/telegram/ui/Components/NumberPicker;->changeValueByOne(Z)V
+    invoke-virtual {p0, v1}, Lorg/telegram/ui/Components/NumberPicker;->changeValueByOne(Z)V
 
     .line 406
     iget-object p1, p0, Lorg/telegram/ui/Components/NumberPicker;->mPressedStateHelper:Lorg/telegram/ui/Components/NumberPicker$PressedStateHelper;

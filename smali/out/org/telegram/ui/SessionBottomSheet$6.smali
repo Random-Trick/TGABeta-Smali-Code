@@ -29,7 +29,7 @@
 .method constructor <init>(Lorg/telegram/ui/SessionBottomSheet;Lorg/telegram/ui/SessionBottomSheet$ItemView;Lorg/telegram/tgnet/TLRPC$TL_authorization;)V
     .registers 4
 
-    .line 192
+    .line 193
     iput-object p1, p0, Lorg/telegram/ui/SessionBottomSheet$6;->this$0:Lorg/telegram/ui/SessionBottomSheet;
 
     iput-object p2, p0, Lorg/telegram/ui/SessionBottomSheet$6;->val$acceptSecretChats:Lorg/telegram/ui/SessionBottomSheet$ItemView;
@@ -46,7 +46,7 @@
 .method public onClick(Landroid/view/View;)V
     .registers 4
 
-    .line 195
+    .line 196
     iget-object p1, p0, Lorg/telegram/ui/SessionBottomSheet$6;->val$acceptSecretChats:Lorg/telegram/ui/SessionBottomSheet$ItemView;
 
     iget-object p1, p1, Lorg/telegram/ui/SessionBottomSheet$ItemView;->switchView:Lorg/telegram/ui/Components/Switch;
@@ -61,7 +61,7 @@
 
     invoke-virtual {p1, v0, v1}, Lorg/telegram/ui/Components/Switch;->setChecked(ZZ)V
 
-    .line 196
+    .line 197
     iget-object p1, p0, Lorg/telegram/ui/SessionBottomSheet$6;->val$session:Lorg/telegram/tgnet/TLRPC$TL_authorization;
 
     iget-object v0, p0, Lorg/telegram/ui/SessionBottomSheet$6;->val$acceptSecretChats:Lorg/telegram/ui/SessionBottomSheet$ItemView;
@@ -76,7 +76,7 @@
 
     iput-boolean v0, p1, Lorg/telegram/tgnet/TLRPC$TL_authorization;->encrypted_requests_disabled:Z
 
-    .line 197
+    .line 198
     iget-object p1, p0, Lorg/telegram/ui/SessionBottomSheet$6;->this$0:Lorg/telegram/ui/SessionBottomSheet;
 
     invoke-static {p1}, Lorg/telegram/ui/SessionBottomSheet;->access$100(Lorg/telegram/ui/SessionBottomSheet;)V

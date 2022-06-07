@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/ChatActivity;Landroid/content/Context;I)V
     .registers 4
 
-    .line 7860
+    .line 8008
     iput-object p1, p0, Lorg/telegram/ui/ChatActivity$44;->this$0:Lorg/telegram/ui/ChatActivity;
 
     invoke-direct {p0, p2, p3}, Lorg/telegram/ui/Components/ReportAlert;-><init>(Landroid/content/Context;I)V
@@ -35,7 +35,7 @@
 .method protected onSend(ILjava/lang/String;)V
     .registers 6
 
-    .line 7863
+    .line 8011
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
@@ -44,11 +44,11 @@
 
     const/4 v1, 0x0
 
-    .line 7864
+    .line 8012
     :goto_7
     iget-object v2, p0, Lorg/telegram/ui/ChatActivity$44;->this$0:Lorg/telegram/ui/ChatActivity;
 
-    invoke-static {v2}, Lorg/telegram/ui/ChatActivity;->access$2100(Lorg/telegram/ui/ChatActivity;)[Landroid/util/SparseArray;
+    invoke-static {v2}, Lorg/telegram/ui/ChatActivity;->access$2200(Lorg/telegram/ui/ChatActivity;)[Landroid/util/SparseArray;
 
     move-result-object v2
 
@@ -60,10 +60,10 @@
 
     if-ge v1, v2, :cond_2b
 
-    .line 7865
+    .line 8013
     iget-object v2, p0, Lorg/telegram/ui/ChatActivity$44;->this$0:Lorg/telegram/ui/ChatActivity;
 
-    invoke-static {v2}, Lorg/telegram/ui/ChatActivity;->access$2100(Lorg/telegram/ui/ChatActivity;)[Landroid/util/SparseArray;
+    invoke-static {v2}, Lorg/telegram/ui/ChatActivity;->access$2200(Lorg/telegram/ui/ChatActivity;)[Landroid/util/SparseArray;
 
     move-result-object v2
 
@@ -83,7 +83,7 @@
 
     goto :goto_7
 
-    .line 7867
+    .line 8015
     :cond_2b
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$44;->this$0:Lorg/telegram/ui/ChatActivity;
 
@@ -104,25 +104,25 @@
 
     move-result-object v0
 
-    .line 7868
+    .line 8016
     :goto_3c
     iget-object v1, p0, Lorg/telegram/ui/ChatActivity$44;->this$0:Lorg/telegram/ui/ChatActivity;
 
-    invoke-static {v1}, Lorg/telegram/ui/ChatActivity;->access$1500(Lorg/telegram/ui/ChatActivity;)I
+    invoke-static {v1}, Lorg/telegram/ui/ChatActivity;->access$1600(Lorg/telegram/ui/ChatActivity;)I
 
     move-result v1
 
     invoke-static {v0, v1, p2, p1}, Lorg/telegram/ui/Components/AlertsCreator;->sendReport(Lorg/telegram/tgnet/TLRPC$InputPeer;ILjava/lang/String;Ljava/util/ArrayList;)V
 
-    .line 7869
+    .line 8017
     iget-object p1, p0, Lorg/telegram/ui/ChatActivity$44;->this$0:Lorg/telegram/ui/ChatActivity;
 
     invoke-virtual {p1}, Lorg/telegram/ui/ChatActivity;->finishFragment()V
 
-    .line 7870
+    .line 8018
     iget-object p1, p0, Lorg/telegram/ui/ChatActivity$44;->this$0:Lorg/telegram/ui/ChatActivity;
 
-    invoke-static {p1}, Lorg/telegram/ui/ChatActivity;->access$38200(Lorg/telegram/ui/ChatActivity;)Lorg/telegram/ui/ChatActivity$ChatActivityDelegate;
+    invoke-static {p1}, Lorg/telegram/ui/ChatActivity;->access$38700(Lorg/telegram/ui/ChatActivity;)Lorg/telegram/ui/ChatActivity$ChatActivityDelegate;
 
     move-result-object p1
 

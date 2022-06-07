@@ -1,11 +1,11 @@
 .class Lorg/telegram/ui/ChatActivity$68;
-.super Landroid/animation/AnimatorListenerAdapter;
+.super Lorg/telegram/ui/Components/TextSelectionHint;
 .source "ChatActivity.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lorg/telegram/ui/ChatActivity;->showGifHint()Z
+    value = Lorg/telegram/ui/ChatActivity;->showTextSelectionHint(Lorg/telegram/messenger/MessageObject;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,107 +19,100 @@
 
 
 # direct methods
-.method public static synthetic $r8$lambda$5jRH672ChdmcZU4VD7cwN-4aZ64(Lorg/telegram/ui/ChatActivity$68;)V
-    .registers 1
+.method constructor <init>(Lorg/telegram/ui/ChatActivity;Landroid/content/Context;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)V
+    .registers 4
 
-    invoke-direct {p0}, Lorg/telegram/ui/ChatActivity$68;->lambda$onAnimationEnd$0()V
-
-    return-void
-.end method
-
-.method constructor <init>(Lorg/telegram/ui/ChatActivity;)V
-    .registers 2
-
-    .line 10283
+    .line 10374
     iput-object p1, p0, Lorg/telegram/ui/ChatActivity$68;->this$0:Lorg/telegram/ui/ChatActivity;
 
-    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
-
-    return-void
-.end method
-
-.method private synthetic lambda$onAnimationEnd$0()V
-    .registers 8
-
-    .line 10287
-    iget-object v0, p0, Lorg/telegram/ui/ChatActivity$68;->this$0:Lorg/telegram/ui/ChatActivity;
-
-    invoke-static {v0}, Lorg/telegram/ui/ChatActivity;->access$11200(Lorg/telegram/ui/ChatActivity;)Lorg/telegram/ui/Components/HintView;
-
-    move-result-object v0
-
-    if-nez v0, :cond_9
-
-    return-void
-
-    .line 10290
-    :cond_9
-    new-instance v0, Landroid/animation/AnimatorSet;
-
-    invoke-direct {v0}, Landroid/animation/AnimatorSet;-><init>()V
-
-    const/4 v1, 0x1
-
-    new-array v2, v1, [Landroid/animation/Animator;
-
-    .line 10291
-    iget-object v3, p0, Lorg/telegram/ui/ChatActivity$68;->this$0:Lorg/telegram/ui/ChatActivity;
-
-    .line 10292
-    invoke-static {v3}, Lorg/telegram/ui/ChatActivity;->access$11200(Lorg/telegram/ui/ChatActivity;)Lorg/telegram/ui/Components/HintView;
-
-    move-result-object v3
-
-    sget-object v4, Landroid/view/View;->ALPHA:Landroid/util/Property;
-
-    new-array v1, v1, [F
-
-    const/4 v5, 0x0
-
-    const/4 v6, 0x0
-
-    aput v5, v1, v6
-
-    invoke-static {v3, v4, v1}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
-
-    move-result-object v1
-
-    aput-object v1, v2, v6
-
-    .line 10291
-    invoke-virtual {v0, v2}, Landroid/animation/AnimatorSet;->playTogether([Landroid/animation/Animator;)V
-
-    .line 10294
-    new-instance v1, Lorg/telegram/ui/ChatActivity$68$1;
-
-    invoke-direct {v1, p0}, Lorg/telegram/ui/ChatActivity$68$1;-><init>(Lorg/telegram/ui/ChatActivity$68;)V
-
-    invoke-virtual {v0, v1}, Landroid/animation/AnimatorSet;->addListener(Landroid/animation/Animator$AnimatorListener;)V
-
-    const-wide/16 v1, 0x12c
-
-    .line 10302
-    invoke-virtual {v0, v1, v2}, Landroid/animation/AnimatorSet;->setDuration(J)Landroid/animation/AnimatorSet;
-
-    .line 10303
-    invoke-virtual {v0}, Landroid/animation/AnimatorSet;->start()V
+    invoke-direct {p0, p2, p3}, Lorg/telegram/ui/Components/TextSelectionHint;-><init>(Landroid/content/Context;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onAnimationEnd(Landroid/animation/Animator;)V
-    .registers 4
+.method protected onDraw(Landroid/graphics/Canvas;)V
+    .registers 2
 
-    .line 10286
-    new-instance p1, Lorg/telegram/ui/ChatActivity$68$$ExternalSyntheticLambda0;
+    .line 10384
+    invoke-super {p0, p1}, Lorg/telegram/ui/Components/TextSelectionHint;->onDraw(Landroid/graphics/Canvas;)V
 
-    invoke-direct {p1, p0}, Lorg/telegram/ui/ChatActivity$68$$ExternalSyntheticLambda0;-><init>(Lorg/telegram/ui/ChatActivity$68;)V
+    .line 10385
+    invoke-virtual {p0}, Lorg/telegram/ui/ChatActivity$68;->updatePosition()V
 
-    const-wide/16 v0, 0x7d0
+    return-void
+.end method
 
-    invoke-static {p1, v0, v1}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;J)V
+.method protected onMeasure(II)V
+    .registers 3
+
+    .line 10378
+    invoke-super {p0, p1, p2}, Lorg/telegram/ui/Components/TextSelectionHint;->onMeasure(II)V
+
+    .line 10379
+    invoke-virtual {p0}, Lorg/telegram/ui/ChatActivity$68;->updatePosition()V
+
+    return-void
+.end method
+
+.method public updatePosition()V
+    .registers 5
+
+    .line 10389
+    invoke-virtual {p0}, Landroid/view/View;->getMeasuredHeight()I
+
+    move-result v0
+
+    const/high16 v1, 0x41800000    # 16.0f
+
+    invoke-static {v1}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
+
+    move-result v1
+
+    add-int/2addr v0, v1
+
+    neg-int v0, v0
+
+    .line 10390
+    iget-object v1, p0, Lorg/telegram/ui/ChatActivity$68;->this$0:Lorg/telegram/ui/ChatActivity;
+
+    iget-object v1, v1, Lorg/telegram/ui/ChatActivity;->chatActivityEnterView:Lorg/telegram/ui/Components/ChatActivityEnterView;
+
+    invoke-virtual {v1}, Landroid/widget/FrameLayout;->getTop()I
+
+    move-result v1
+
+    iget-object v2, p0, Lorg/telegram/ui/ChatActivity$68;->this$0:Lorg/telegram/ui/ChatActivity;
+
+    iget-object v2, v2, Lorg/telegram/ui/ChatActivity;->contentView:Lorg/telegram/ui/Components/SizeNotifierFrameLayout;
+
+    invoke-virtual {v2}, Landroid/widget/FrameLayout;->getMeasuredHeight()I
+
+    move-result v2
+
+    sub-int/2addr v1, v2
+
+    int-to-float v2, v1
+
+    add-int/2addr v1, v0
+
+    int-to-float v0, v1
+
+    .line 10391
+    invoke-virtual {p0}, Lorg/telegram/ui/Components/TextSelectionHint;->getPrepareProgress()F
+
+    move-result v1
+
+    const/high16 v3, 0x3f800000    # 1.0f
+
+    sub-float/2addr v3, v1
+
+    mul-float v0, v0, v3
+
+    sub-float/2addr v2, v0
+
+    invoke-virtual {p0, v2}, Landroid/view/View;->setTranslationY(F)V
 
     return-void
 .end method

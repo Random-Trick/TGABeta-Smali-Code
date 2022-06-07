@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/ChangeBioActivity;)V
     .registers 2
 
-    .line 65
+    .line 66
     iput-object p1, p0, Lorg/telegram/ui/ChangeBioActivity$1;->this$0:Lorg/telegram/ui/ChangeBioActivity;
 
     invoke-direct {p0}, Lorg/telegram/ui/ActionBar/ActionBar$ActionBarMenuOnItemClick;-><init>()V
@@ -39,7 +39,7 @@
 
     if-ne p1, v0, :cond_9
 
-    .line 69
+    .line 70
     iget-object p1, p0, Lorg/telegram/ui/ChangeBioActivity$1;->this$0:Lorg/telegram/ui/ChangeBioActivity;
 
     invoke-virtual {p1}, Lorg/telegram/ui/ActionBar/BaseFragment;->finishFragment()V
@@ -51,7 +51,7 @@
 
     if-ne p1, v0, :cond_11
 
-    .line 71
+    .line 72
     iget-object p1, p0, Lorg/telegram/ui/ChangeBioActivity$1;->this$0:Lorg/telegram/ui/ChangeBioActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/ChangeBioActivity;->access$000(Lorg/telegram/ui/ChangeBioActivity;)V

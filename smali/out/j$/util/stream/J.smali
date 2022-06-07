@@ -1,5 +1,5 @@
 .class Lj$/util/stream/J;
-.super Lj$/util/stream/g3;
+.super Lj$/util/stream/f3;
 
 
 # instance fields
@@ -9,7 +9,7 @@
 
 
 # direct methods
-.method public constructor <init>(Lj$/util/stream/K;Lj$/util/stream/n3;)V
+.method public constructor <init>(Lj$/util/stream/K;Lj$/util/stream/m3;)V
     .registers 4
 
     const/4 v0, 0x0
@@ -19,12 +19,12 @@
     .line 1
     iput-object p1, p0, Lj$/util/stream/J;->c:Ljava/lang/Object;
 
-    invoke-direct {p0, p2}, Lj$/util/stream/g3;-><init>(Lj$/util/stream/n3;)V
+    invoke-direct {p0, p2}, Lj$/util/stream/f3;-><init>(Lj$/util/stream/m3;)V
 
     return-void
 .end method
 
-.method public constructor <init>(Lj$/util/stream/K;Lj$/util/stream/n3;Lj$/lang/a;)V
+.method public constructor <init>(Lj$/util/stream/K;Lj$/util/stream/m3;Lj$/lang/a;)V
     .registers 4
 
     const/4 p3, 0x4
@@ -34,12 +34,12 @@
     .line 2
     iput-object p1, p0, Lj$/util/stream/J;->c:Ljava/lang/Object;
 
-    invoke-direct {p0, p2}, Lj$/util/stream/g3;-><init>(Lj$/util/stream/n3;)V
+    invoke-direct {p0, p2}, Lj$/util/stream/f3;-><init>(Lj$/util/stream/m3;)V
 
     return-void
 .end method
 
-.method public constructor <init>(Lj$/util/stream/K;Lj$/util/stream/n3;Lj$/lang/b;)V
+.method public constructor <init>(Lj$/util/stream/K;Lj$/util/stream/m3;Lj$/lang/b;)V
     .registers 4
 
     const/4 p3, 0x5
@@ -49,12 +49,12 @@
     .line 3
     iput-object p1, p0, Lj$/util/stream/J;->c:Ljava/lang/Object;
 
-    invoke-direct {p0, p2}, Lj$/util/stream/g3;-><init>(Lj$/util/stream/n3;)V
+    invoke-direct {p0, p2}, Lj$/util/stream/f3;-><init>(Lj$/util/stream/m3;)V
 
     return-void
 .end method
 
-.method public constructor <init>(Lj$/util/stream/K;Lj$/util/stream/n3;Lj$/lang/c;)V
+.method public constructor <init>(Lj$/util/stream/K;Lj$/util/stream/m3;Lj$/lang/c;)V
     .registers 4
 
     const/4 p3, 0x6
@@ -64,12 +64,12 @@
     .line 4
     iput-object p1, p0, Lj$/util/stream/J;->c:Ljava/lang/Object;
 
-    invoke-direct {p0, p2}, Lj$/util/stream/g3;-><init>(Lj$/util/stream/n3;)V
+    invoke-direct {p0, p2}, Lj$/util/stream/f3;-><init>(Lj$/util/stream/m3;)V
 
     return-void
 .end method
 
-.method public constructor <init>(Lj$/util/stream/L;Lj$/util/stream/n3;)V
+.method public constructor <init>(Lj$/util/stream/L;Lj$/util/stream/m3;)V
     .registers 4
 
     const/4 v0, 0x1
@@ -79,12 +79,12 @@
     .line 5
     iput-object p1, p0, Lj$/util/stream/J;->c:Ljava/lang/Object;
 
-    invoke-direct {p0, p2}, Lj$/util/stream/g3;-><init>(Lj$/util/stream/n3;)V
+    invoke-direct {p0, p2}, Lj$/util/stream/f3;-><init>(Lj$/util/stream/m3;)V
 
     return-void
 .end method
 
-.method public constructor <init>(Lj$/util/stream/M;Lj$/util/stream/n3;)V
+.method public constructor <init>(Lj$/util/stream/M;Lj$/util/stream/m3;)V
     .registers 4
 
     const/4 v0, 0x2
@@ -94,12 +94,12 @@
     .line 6
     iput-object p1, p0, Lj$/util/stream/J;->c:Ljava/lang/Object;
 
-    invoke-direct {p0, p2}, Lj$/util/stream/g3;-><init>(Lj$/util/stream/n3;)V
+    invoke-direct {p0, p2}, Lj$/util/stream/f3;-><init>(Lj$/util/stream/m3;)V
 
     return-void
 .end method
 
-.method public constructor <init>(Lj$/util/stream/N;Lj$/util/stream/n3;)V
+.method public constructor <init>(Lj$/util/stream/N;Lj$/util/stream/m3;)V
     .registers 4
 
     const/4 v0, 0x3
@@ -109,7 +109,7 @@
     .line 7
     iput-object p1, p0, Lj$/util/stream/J;->c:Ljava/lang/Object;
 
-    invoke-direct {p0, p2}, Lj$/util/stream/g3;-><init>(Lj$/util/stream/n3;)V
+    invoke-direct {p0, p2}, Lj$/util/stream/f3;-><init>(Lj$/util/stream/m3;)V
 
     return-void
 .end method
@@ -141,9 +141,9 @@
 
     if-eqz v0, :cond_1a
 
-    iget-object v0, p0, Lj$/util/stream/g3;->a:Lj$/util/stream/n3;
+    iget-object v0, p0, Lj$/util/stream/f3;->a:Lj$/util/stream/m3;
 
-    invoke-interface {v0, p1, p2}, Lj$/util/stream/n3;->accept(D)V
+    invoke-interface {v0, p1, p2}, Lj$/util/stream/m3;->accept(D)V
 
     :cond_1a
     return-void
@@ -203,7 +203,7 @@
 
     .line 3
     :pswitch_43
-    iget-object v0, p0, Lj$/util/stream/g3;->a:Lj$/util/stream/n3;
+    iget-object v0, p0, Lj$/util/stream/f3;->a:Lj$/util/stream/m3;
 
     iget-object v1, p0, Lj$/util/stream/J;->c:Ljava/lang/Object;
 
@@ -217,13 +217,13 @@
 
     move-result-wide p1
 
-    invoke-interface {v0, p1, p2}, Lj$/util/stream/n3;->accept(J)V
+    invoke-interface {v0, p1, p2}, Lj$/util/stream/m3;->accept(J)V
 
     return-void
 
     .line 4
     :pswitch_55
-    iget-object v0, p0, Lj$/util/stream/g3;->a:Lj$/util/stream/n3;
+    iget-object v0, p0, Lj$/util/stream/f3;->a:Lj$/util/stream/m3;
 
     iget-object v1, p0, Lj$/util/stream/J;->c:Ljava/lang/Object;
 
@@ -237,13 +237,13 @@
 
     move-result p1
 
-    invoke-interface {v0, p1}, Lj$/util/stream/n3;->accept(I)V
+    invoke-interface {v0, p1}, Lj$/util/stream/m3;->accept(I)V
 
     return-void
 
     .line 5
     :pswitch_67
-    iget-object v0, p0, Lj$/util/stream/g3;->a:Lj$/util/stream/n3;
+    iget-object v0, p0, Lj$/util/stream/f3;->a:Lj$/util/stream/m3;
 
     iget-object v1, p0, Lj$/util/stream/J;->c:Ljava/lang/Object;
 
@@ -263,7 +263,7 @@
 
     .line 6
     :pswitch_79
-    iget-object v0, p0, Lj$/util/stream/g3;->a:Lj$/util/stream/n3;
+    iget-object v0, p0, Lj$/util/stream/f3;->a:Lj$/util/stream/m3;
 
     iget-object v1, p0, Lj$/util/stream/J;->c:Ljava/lang/Object;
 
@@ -277,7 +277,7 @@
 
     move-result-wide p1
 
-    invoke-interface {v0, p1, p2}, Lj$/util/stream/n3;->accept(D)V
+    invoke-interface {v0, p1, p2}, Lj$/util/stream/m3;->accept(D)V
 
     return-void
 
@@ -293,9 +293,9 @@
 
     invoke-interface {v0, p1, p2}, Lj$/util/function/f;->accept(D)V
 
-    iget-object v0, p0, Lj$/util/stream/g3;->a:Lj$/util/stream/n3;
+    iget-object v0, p0, Lj$/util/stream/f3;->a:Lj$/util/stream/m3;
 
-    invoke-interface {v0, p1, p2}, Lj$/util/stream/n3;->accept(D)V
+    invoke-interface {v0, p1, p2}, Lj$/util/stream/m3;->accept(D)V
 
     return-void
 
@@ -323,25 +323,25 @@
 
     .line 1
     :pswitch_8
-    iget-object p1, p0, Lj$/util/stream/g3;->a:Lj$/util/stream/n3;
+    iget-object p1, p0, Lj$/util/stream/f3;->a:Lj$/util/stream/m3;
 
-    invoke-interface {p1, v1, v2}, Lj$/util/stream/n3;->n(J)V
+    invoke-interface {p1, v1, v2}, Lj$/util/stream/m3;->n(J)V
 
     return-void
 
     .line 2
     :pswitch_e
-    iget-object p1, p0, Lj$/util/stream/g3;->a:Lj$/util/stream/n3;
+    iget-object p1, p0, Lj$/util/stream/f3;->a:Lj$/util/stream/m3;
 
-    invoke-interface {p1, v1, v2}, Lj$/util/stream/n3;->n(J)V
+    invoke-interface {p1, v1, v2}, Lj$/util/stream/m3;->n(J)V
 
     return-void
 
     .line 3
     :goto_14
-    iget-object v0, p0, Lj$/util/stream/g3;->a:Lj$/util/stream/n3;
+    iget-object v0, p0, Lj$/util/stream/f3;->a:Lj$/util/stream/m3;
 
-    invoke-interface {v0, p1, p2}, Lj$/util/stream/n3;->n(J)V
+    invoke-interface {v0, p1, p2}, Lj$/util/stream/m3;->n(J)V
 
     return-void
 

@@ -24,7 +24,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/ChatActivityEnterView;Z)V
     .registers 3
 
-    .line 7980
+    .line 8029
     iput-object p1, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$64;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     iput-boolean p2, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$64;->val$showSearchingNew:Z
@@ -39,7 +39,7 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .registers 3
 
-    .line 7983
+    .line 8032
     iget-object p1, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$64;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     iget-boolean v0, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$64;->val$showSearchingNew:Z
@@ -56,7 +56,7 @@
     :goto_a
     invoke-static {p1, v0}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$12902(Lorg/telegram/ui/Components/ChatActivityEnterView;F)F
 
-    .line 7984
+    .line 8033
     iget-object p1, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$64;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$700(Lorg/telegram/ui/Components/ChatActivityEnterView;)Lorg/telegram/ui/Components/EmojiView;
@@ -65,7 +65,7 @@
 
     if-eqz p1, :cond_1e
 
-    .line 7985
+    .line 8034
     iget-object p1, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$64;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$700(Lorg/telegram/ui/Components/ChatActivityEnterView;)Lorg/telegram/ui/Components/EmojiView;

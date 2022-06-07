@@ -32,7 +32,7 @@
 .method constructor <init>(Lorg/telegram/ui/PhotoViewer;Lorg/telegram/ui/PhotoViewer$PhotoViewerProvider;Lorg/telegram/messenger/MessageObject;Lorg/telegram/messenger/MediaController$PhotoEntry;Z)V
     .registers 6
 
-    .line 12441
+    .line 12624
     iput-object p1, p0, Lorg/telegram/ui/PhotoViewer$67;->this$0:Lorg/telegram/ui/PhotoViewer;
 
     iput-object p2, p0, Lorg/telegram/ui/PhotoViewer$67;->val$chatPhotoProvider:Lorg/telegram/ui/PhotoViewer$PhotoViewerProvider;
@@ -45,8 +45,8 @@
 
     invoke-direct {p0}, Lorg/telegram/ui/PhotoViewer$EmptyPhotoViewerProvider;-><init>()V
 
-    .line 12443
-    invoke-static {p1}, Lorg/telegram/ui/PhotoViewer;->access$9400(Lorg/telegram/ui/PhotoViewer;)Lorg/telegram/messenger/ImageReceiver;
+    .line 12626
+    invoke-static {p1}, Lorg/telegram/ui/PhotoViewer;->access$9300(Lorg/telegram/ui/PhotoViewer;)Lorg/telegram/messenger/ImageReceiver;
 
     move-result-object p1
 
@@ -64,7 +64,7 @@
 
     move-object/from16 v0, p0
 
-    .line 12483
+    .line 12666
     iget-object v1, v0, Lorg/telegram/ui/PhotoViewer$67;->this$0:Lorg/telegram/ui/PhotoViewer;
 
     invoke-static {v1}, Lorg/telegram/ui/PhotoViewer;->access$12800(Lorg/telegram/ui/PhotoViewer;)Lorg/telegram/ui/ChatActivity;
@@ -75,7 +75,7 @@
 
     if-eqz p4, :cond_f
 
-    .line 12484
+    .line 12667
     iget-object v1, v0, Lorg/telegram/ui/PhotoViewer$67;->val$finalMessageObject:Lorg/telegram/messenger/MessageObject;
 
     goto :goto_10
@@ -88,7 +88,7 @@
 
     if-eqz v15, :cond_27
 
-    .line 12485
+    .line 12668
     iget-object v1, v0, Lorg/telegram/ui/PhotoViewer$67;->val$photoEntry:Lorg/telegram/messenger/MediaController$PhotoEntry;
 
     iget-object v1, v1, Lorg/telegram/messenger/MediaController$MediaEditState;->caption:Ljava/lang/CharSequence;
@@ -99,19 +99,19 @@
 
     if-nez v1, :cond_27
 
-    .line 12486
+    .line 12669
     iget-object v1, v0, Lorg/telegram/ui/PhotoViewer$67;->val$photoEntry:Lorg/telegram/messenger/MediaController$PhotoEntry;
 
     iget-object v2, v1, Lorg/telegram/messenger/MediaController$MediaEditState;->caption:Ljava/lang/CharSequence;
 
     iput-object v2, v15, Lorg/telegram/messenger/MessageObject;->editingMessage:Ljava/lang/CharSequence;
 
-    .line 12487
+    .line 12670
     iget-object v1, v1, Lorg/telegram/messenger/MediaController$MediaEditState;->entities:Ljava/util/ArrayList;
 
     iput-object v1, v15, Lorg/telegram/messenger/MessageObject;->editingMessageEntities:Ljava/util/ArrayList;
 
-    .line 12489
+    .line 12672
     :cond_27
     iget-object v1, v0, Lorg/telegram/ui/PhotoViewer$67;->val$photoEntry:Lorg/telegram/messenger/MediaController$PhotoEntry;
 
@@ -121,7 +121,7 @@
 
     if-eqz p1, :cond_71
 
-    .line 12491
+    .line 12674
     iget-object v1, v0, Lorg/telegram/ui/PhotoViewer$67;->this$0:Lorg/telegram/ui/PhotoViewer;
 
     invoke-static {v1}, Lorg/telegram/ui/PhotoViewer;->access$12800(Lorg/telegram/ui/PhotoViewer;)Lorg/telegram/ui/ChatActivity;
@@ -188,7 +188,7 @@
 
     goto/16 :goto_145
 
-    .line 12493
+    .line 12676
     :cond_71
     iget-object v1, v0, Lorg/telegram/ui/PhotoViewer$67;->this$0:Lorg/telegram/ui/PhotoViewer;
 
@@ -256,13 +256,13 @@
 
     goto/16 :goto_145
 
-    .line 12496
+    .line 12679
     :cond_b2
     iget-object v2, v1, Lorg/telegram/messenger/MediaController$MediaEditState;->imagePath:Ljava/lang/String;
 
     if-eqz v2, :cond_fc
 
-    .line 12497
+    .line 12680
     iget-object v1, v0, Lorg/telegram/ui/PhotoViewer$67;->this$0:Lorg/telegram/ui/PhotoViewer;
 
     invoke-static {v1}, Lorg/telegram/ui/PhotoViewer;->access$12800(Lorg/telegram/ui/PhotoViewer;)Lorg/telegram/ui/ChatActivity;
@@ -335,13 +335,13 @@
 
     goto :goto_145
 
-    .line 12498
+    .line 12681
     :cond_fc
     iget-object v1, v1, Lorg/telegram/messenger/MediaController$PhotoEntry;->path:Ljava/lang/String;
 
     if-eqz v1, :cond_145
 
-    .line 12499
+    .line 12682
     iget-object v1, v0, Lorg/telegram/ui/PhotoViewer$67;->this$0:Lorg/telegram/ui/PhotoViewer;
 
     invoke-static {v1}, Lorg/telegram/ui/PhotoViewer;->access$12800(Lorg/telegram/ui/PhotoViewer;)Lorg/telegram/ui/ChatActivity;
@@ -430,7 +430,7 @@
 .method public canReplace(I)Z
     .registers 2
 
-    .line 12469
+    .line 12652
     iget-object p1, p0, Lorg/telegram/ui/PhotoViewer$67;->val$chatPhotoProvider:Lorg/telegram/ui/PhotoViewer$PhotoViewerProvider;
 
     if-eqz p1, :cond_a
@@ -453,7 +453,7 @@
 .method public getEditingMessageObject()Lorg/telegram/messenger/MessageObject;
     .registers 2
 
-    .line 12474
+    .line 12657
     iget-object v0, p0, Lorg/telegram/ui/PhotoViewer$67;->val$finalMessageObject:Lorg/telegram/messenger/MessageObject;
 
     return-object v0
@@ -462,7 +462,7 @@
 .method public getPlaceForPhoto(Lorg/telegram/messenger/MessageObject;Lorg/telegram/tgnet/TLRPC$FileLocation;IZ)Lorg/telegram/ui/PhotoViewer$PlaceProviderObject;
     .registers 6
 
-    .line 12447
+    .line 12630
     iget-object p1, p0, Lorg/telegram/ui/PhotoViewer$67;->val$chatPhotoProvider:Lorg/telegram/ui/PhotoViewer$PhotoViewerProvider;
 
     const/4 p2, 0x0
@@ -484,7 +484,7 @@
 .method public getThumbForPhoto(Lorg/telegram/messenger/MessageObject;Lorg/telegram/tgnet/TLRPC$FileLocation;I)Lorg/telegram/messenger/ImageReceiver$BitmapHolder;
     .registers 4
 
-    .line 12452
+    .line 12635
     iget-object p1, p0, Lorg/telegram/ui/PhotoViewer$67;->thumbHolder:Lorg/telegram/messenger/ImageReceiver$BitmapHolder;
 
     return-object p1
@@ -493,7 +493,7 @@
 .method public replaceButtonPressed(ILorg/telegram/messenger/VideoEditedInfo;)V
     .registers 9
 
-    .line 12462
+    .line 12645
     iget-object p1, p0, Lorg/telegram/ui/PhotoViewer$67;->val$photoEntry:Lorg/telegram/messenger/MediaController$PhotoEntry;
 
     iget-boolean v0, p1, Lorg/telegram/messenger/MediaController$MediaEditState;->isCropped:Z
@@ -531,7 +531,7 @@
 
     move-object v1, p2
 
-    .line 12463
+    .line 12646
     invoke-direct/range {v0 .. v5}, Lorg/telegram/ui/PhotoViewer$67;->sendMedia(Lorg/telegram/messenger/VideoEditedInfo;ZIZZ)V
 
     :cond_21
@@ -553,7 +553,7 @@
 
     move v5, p5
 
-    .line 12457
+    .line 12640
     invoke-direct/range {v0 .. v5}, Lorg/telegram/ui/PhotoViewer$67;->sendMedia(Lorg/telegram/messenger/VideoEditedInfo;ZIZZ)V
 
     return-void

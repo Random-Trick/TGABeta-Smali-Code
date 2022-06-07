@@ -64,42 +64,42 @@
 .method public constructor <init>(Lorg/telegram/ui/ChatUsersActivity;Landroid/content/Context;)V
     .registers 10
 
-    .line 233
+    .line 227
     iput-object p1, p0, Lorg/telegram/ui/ChatUsersActivity$ChooseView;->this$0:Lorg/telegram/ui/ChatUsersActivity;
 
-    .line 234
+    .line 228
     invoke-direct {p0, p2}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
-    .line 230
+    .line 224
     new-instance p2, Ljava/util/ArrayList;
 
     invoke-direct {p2}, Ljava/util/ArrayList;-><init>()V
 
     iput-object p2, p0, Lorg/telegram/ui/ChatUsersActivity$ChooseView;->strings:Ljava/util/ArrayList;
 
-    .line 231
+    .line 225
     new-instance p2, Ljava/util/ArrayList;
 
     invoke-direct {p2}, Ljava/util/ArrayList;-><init>()V
 
     iput-object p2, p0, Lorg/telegram/ui/ChatUsersActivity$ChooseView;->sizes:Ljava/util/ArrayList;
 
-    .line 236
+    .line 230
     new-instance p2, Landroid/graphics/Paint;
 
     const/4 v0, 0x1
 
-    .line 253
+    .line 247
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
 
-    .line 236
+    .line 230
     invoke-direct {p2, v0}, Landroid/graphics/Paint;-><init>(I)V
 
     iput-object p2, p0, Lorg/telegram/ui/ChatUsersActivity$ChooseView;->paint:Landroid/graphics/Paint;
 
-    .line 237
+    .line 231
     new-instance p2, Landroid/text/TextPaint;
 
     invoke-direct {p2, v0}, Landroid/text/TextPaint;-><init>(I)V
@@ -108,7 +108,7 @@
 
     const/high16 v2, 0x41500000    # 13.0f
 
-    .line 238
+    .line 232
     invoke-static {v2}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v2
@@ -128,7 +128,7 @@
 
     if-eqz v2, :cond_a0
 
-    const v3, 0x7f0e1083
+    const v3, 0x7f0e1142
 
     const-string v4, "SlowmodeSeconds"
 
@@ -140,7 +140,7 @@
 
     const/4 v3, 0x3
 
-    const v4, 0x7f0e1081
+    const v4, 0x7f0e1140
 
     const-string v5, "SlowmodeMinutes"
 
@@ -154,7 +154,7 @@
 
     if-eq v2, v6, :cond_5d
 
-    const v3, 0x7f0e107e
+    const v3, 0x7f0e113d
 
     new-array v4, v0, [Ljava/lang/Object;
 
@@ -162,7 +162,7 @@
 
     const-string v5, "SlowmodeHours"
 
-    .line 263
+    .line 257
     invoke-static {v5, v3, v4}, Lorg/telegram/messenger/LocaleController;->formatString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v3
@@ -174,7 +174,7 @@
 
     const/16 v6, 0xf
 
-    .line 259
+    .line 253
     invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v6
@@ -190,7 +190,7 @@
     :cond_6c
     new-array v3, v0, [Ljava/lang/Object;
 
-    .line 256
+    .line 250
     invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v6
@@ -208,7 +208,7 @@
 
     aput-object v1, v3, p2
 
-    .line 253
+    .line 247
     invoke-static {v5, v4, v3}, Lorg/telegram/messenger/LocaleController;->formatString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v3
@@ -220,7 +220,7 @@
 
     const/16 v6, 0x1e
 
-    .line 250
+    .line 244
     invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v6
@@ -238,7 +238,7 @@
 
     const/16 v6, 0xa
 
-    .line 247
+    .line 241
     invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v6
@@ -252,22 +252,22 @@
     goto :goto_a9
 
     :cond_a0
-    const v3, 0x7f0e1082
+    const v3, 0x7f0e1141
 
     const-string v4, "SlowmodeOff"
 
-    .line 244
+    .line 238
     invoke-static {v4, v3}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 266
+    .line 260
     :goto_a9
     iget-object v4, p0, Lorg/telegram/ui/ChatUsersActivity$ChooseView;->strings:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 267
+    .line 261
     iget-object v4, p0, Lorg/telegram/ui/ChatUsersActivity$ChooseView;->sizes:Ljava/util/ArrayList;
 
     iget-object v5, p0, Lorg/telegram/ui/ChatUsersActivity$ChooseView;->textPaint:Landroid/text/TextPaint;
@@ -294,7 +294,7 @@
 
     goto/16 :goto_32
 
-    .line 270
+    .line 264
     :cond_c7
     new-instance p2, Lorg/telegram/ui/ChatUsersActivity$ChooseView$1;
 
@@ -308,7 +308,7 @@
 .method static synthetic access$100(Lorg/telegram/ui/ChatUsersActivity$ChooseView;I)V
     .registers 2
 
-    .line 213
+    .line 207
     invoke-direct {p0, p1}, Lorg/telegram/ui/ChatUsersActivity$ChooseView;->setItem(I)V
 
     return-void
@@ -317,7 +317,7 @@
 .method static synthetic access$200(Lorg/telegram/ui/ChatUsersActivity$ChooseView;)Ljava/util/ArrayList;
     .registers 1
 
-    .line 213
+    .line 207
     iget-object p0, p0, Lorg/telegram/ui/ChatUsersActivity$ChooseView;->strings:Ljava/util/ArrayList;
 
     return-object p0
@@ -326,7 +326,7 @@
 .method private setItem(I)V
     .registers 3
 
-    .line 363
+    .line 357
     iget-object v0, p0, Lorg/telegram/ui/ChatUsersActivity$ChooseView;->this$0:Lorg/telegram/ui/ChatUsersActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/ChatUsersActivity;->access$500(Lorg/telegram/ui/ChatUsersActivity;)Lorg/telegram/tgnet/TLRPC$ChatFull;
@@ -337,13 +337,13 @@
 
     return-void
 
-    .line 366
+    .line 360
     :cond_9
     iget-object v0, p0, Lorg/telegram/ui/ChatUsersActivity$ChooseView;->this$0:Lorg/telegram/ui/ChatUsersActivity;
 
     invoke-static {v0, p1}, Lorg/telegram/ui/ChatUsersActivity;->access$002(Lorg/telegram/ui/ChatUsersActivity;I)I
 
-    .line 367
+    .line 361
     iget-object p1, p0, Lorg/telegram/ui/ChatUsersActivity$ChooseView;->this$0:Lorg/telegram/ui/ChatUsersActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/ChatUsersActivity;->access$700(Lorg/telegram/ui/ChatUsersActivity;)Lorg/telegram/ui/ChatUsersActivity$ListAdapter;
@@ -358,7 +358,7 @@
 
     invoke-virtual {p1, v0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->notifyItemChanged(I)V
 
-    .line 368
+    .line 362
     invoke-virtual {p0}, Landroid/view/View;->invalidate()V
 
     return-void
@@ -369,7 +369,7 @@
 .method protected onDraw(Landroid/graphics/Canvas;)V
     .registers 13
 
-    .line 382
+    .line 376
     iget-object v0, p0, Lorg/telegram/ui/ChatUsersActivity$ChooseView;->textPaint:Landroid/text/TextPaint;
 
     const-string v1, "windowBackgroundWhiteGrayText"
@@ -380,7 +380,7 @@
 
     invoke-virtual {v0, v1}, Landroid/text/TextPaint;->setColor(I)V
 
-    .line 383
+    .line 377
     invoke-virtual {p0}, Landroid/view/View;->getMeasuredHeight()I
 
     move-result v0
@@ -397,7 +397,7 @@
 
     const/4 v1, 0x0
 
-    .line 385
+    .line 379
     :goto_19
     iget-object v2, p0, Lorg/telegram/ui/ChatUsersActivity$ChooseView;->strings:Ljava/util/ArrayList;
 
@@ -407,7 +407,7 @@
 
     if-ge v1, v2, :cond_117
 
-    .line 386
+    .line 380
     iget v2, p0, Lorg/telegram/ui/ChatUsersActivity$ChooseView;->sideSide:I
 
     iget v3, p0, Lorg/telegram/ui/ChatUsersActivity$ChooseView;->lineSize:I
@@ -430,7 +430,7 @@
 
     add-int/2addr v2, v4
 
-    .line 387
+    .line 381
     iget-object v3, p0, Lorg/telegram/ui/ChatUsersActivity$ChooseView;->this$0:Lorg/telegram/ui/ChatUsersActivity;
 
     invoke-static {v3}, Lorg/telegram/ui/ChatUsersActivity;->access$000(Lorg/telegram/ui/ChatUsersActivity;)I
@@ -439,7 +439,7 @@
 
     if-gt v1, v3, :cond_47
 
-    .line 388
+    .line 382
     iget-object v3, p0, Lorg/telegram/ui/ChatUsersActivity$ChooseView;->paint:Landroid/graphics/Paint;
 
     const-string v4, "switchTrackChecked"
@@ -452,7 +452,7 @@
 
     goto :goto_52
 
-    .line 390
+    .line 384
     :cond_47
     iget-object v3, p0, Lorg/telegram/ui/ChatUsersActivity$ChooseView;->paint:Landroid/graphics/Paint;
 
@@ -469,7 +469,7 @@
 
     int-to-float v4, v0
 
-    .line 392
+    .line 386
     iget-object v5, p0, Lorg/telegram/ui/ChatUsersActivity$ChooseView;->this$0:Lorg/telegram/ui/ChatUsersActivity;
 
     invoke-static {v5}, Lorg/telegram/ui/ChatUsersActivity;->access$000(Lorg/telegram/ui/ChatUsersActivity;)I
@@ -500,7 +500,7 @@
 
     if-eqz v1, :cond_bb
 
-    .line 394
+    .line 388
     iget v3, p0, Lorg/telegram/ui/ChatUsersActivity$ChooseView;->circleSize:I
 
     div-int/lit8 v3, v3, 0x2
@@ -515,7 +515,7 @@
 
     sub-int/2addr v3, v4
 
-    .line 396
+    .line 390
     iget-object v5, p0, Lorg/telegram/ui/ChatUsersActivity$ChooseView;->this$0:Lorg/telegram/ui/ChatUsersActivity;
 
     invoke-static {v5}, Lorg/telegram/ui/ChatUsersActivity;->access$000(Lorg/telegram/ui/ChatUsersActivity;)I
@@ -536,7 +536,7 @@
 
     if-ne v1, v5, :cond_94
 
-    .line 397
+    .line 391
     :cond_8f
     invoke-static {v6}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
@@ -544,7 +544,7 @@
 
     sub-int/2addr v4, v5
 
-    .line 399
+    .line 393
     :cond_94
     iget-object v5, p0, Lorg/telegram/ui/ChatUsersActivity$ChooseView;->this$0:Lorg/telegram/ui/ChatUsersActivity;
 
@@ -556,7 +556,7 @@
 
     if-ne v1, v5, :cond_a3
 
-    .line 400
+    .line 394
     invoke-static {v6}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v5
@@ -568,7 +568,7 @@
 
     const/high16 v5, 0x3f800000    # 1.0f
 
-    .line 402
+    .line 396
     invoke-static {v5}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v7
@@ -595,7 +595,7 @@
 
     invoke-virtual/range {v5 .. v10}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    .line 404
+    .line 398
     :cond_bb
     iget-object v3, p0, Lorg/telegram/ui/ChatUsersActivity$ChooseView;->sizes:Ljava/util/ArrayList;
 
@@ -609,7 +609,7 @@
 
     move-result v3
 
-    .line 405
+    .line 399
     iget-object v4, p0, Lorg/telegram/ui/ChatUsersActivity$ChooseView;->strings:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -624,7 +624,7 @@
 
     if-nez v1, :cond_e5
 
-    .line 407
+    .line 401
     invoke-static {v5}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v2
@@ -643,7 +643,7 @@
 
     goto :goto_113
 
-    .line 408
+    .line 402
     :cond_e5
     iget-object v7, p0, Lorg/telegram/ui/ChatUsersActivity$ChooseView;->strings:Ljava/util/ArrayList;
 
@@ -655,7 +655,7 @@
 
     if-ne v1, v7, :cond_105
 
-    .line 409
+    .line 403
     invoke-virtual {p0}, Landroid/view/View;->getMeasuredWidth()I
 
     move-result v2
@@ -682,7 +682,7 @@
 
     goto :goto_113
 
-    .line 411
+    .line 405
     :cond_105
     div-int/lit8 v3, v3, 0x2
 
@@ -712,10 +712,10 @@
 .method public onInitializeAccessibilityNodeInfo(Landroid/view/accessibility/AccessibilityNodeInfo;)V
     .registers 3
 
-    .line 299
+    .line 293
     invoke-super {p0, p1}, Landroid/view/View;->onInitializeAccessibilityNodeInfo(Landroid/view/accessibility/AccessibilityNodeInfo;)V
 
-    .line 300
+    .line 294
     iget-object v0, p0, Lorg/telegram/ui/ChatUsersActivity$ChooseView;->accessibilityDelegate:Lorg/telegram/ui/Components/SeekBarAccessibilityDelegate;
 
     invoke-virtual {v0, p0, p1}, Lorg/telegram/ui/Components/SeekBarAccessibilityDelegate;->onInitializeAccessibilityNodeInfoInternal(Landroid/view/View;Landroid/view/accessibility/AccessibilityNodeInfo;)V
@@ -728,7 +728,7 @@
 
     const/high16 p2, 0x42940000    # 74.0f
 
-    .line 373
+    .line 367
     invoke-static {p2}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result p2
@@ -743,7 +743,7 @@
 
     const/high16 p1, 0x40c00000    # 6.0f
 
-    .line 374
+    .line 368
     invoke-static {p1}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result p1
@@ -752,7 +752,7 @@
 
     const/high16 p1, 0x40000000    # 2.0f
 
-    .line 375
+    .line 369
     invoke-static {p1}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result p1
@@ -761,14 +761,14 @@
 
     const/high16 p1, 0x41b00000    # 22.0f
 
-    .line 376
+    .line 370
     invoke-static {p1}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result p1
 
     iput p1, p0, Lorg/telegram/ui/ChatUsersActivity$ChooseView;->sideSide:I
 
-    .line 377
+    .line 371
     invoke-virtual {p0}, Landroid/view/View;->getMeasuredWidth()I
 
     move-result p1
@@ -825,12 +825,12 @@
 .method public onTouchEvent(Landroid/view/MotionEvent;)Z
     .registers 10
 
-    .line 310
+    .line 304
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
     move-result v0
 
-    .line 311
+    .line 305
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v1
@@ -845,7 +845,7 @@
 
     if-nez v1, :cond_5f
 
-    .line 312
+    .line 306
     invoke-virtual {p0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     move-result-object p1
@@ -854,7 +854,7 @@
 
     const/4 p1, 0x0
 
-    .line 313
+    .line 307
     :goto_17
     iget-object v1, p0, Lorg/telegram/ui/ChatUsersActivity$ChooseView;->strings:Ljava/util/ArrayList;
 
@@ -864,7 +864,7 @@
 
     if-ge p1, v1, :cond_124
 
-    .line 314
+    .line 308
     iget v1, p0, Lorg/telegram/ui/ChatUsersActivity$ChooseView;->sideSide:I
 
     iget v6, p0, Lorg/telegram/ui/ChatUsersActivity$ChooseView;->lineSize:I
@@ -887,7 +887,7 @@
 
     add-int/2addr v1, v7
 
-    .line 315
+    .line 309
     invoke-static {v2}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v6
@@ -912,7 +912,7 @@
 
     if-gez v1, :cond_5c
 
-    .line 316
+    .line 310
     iget-object v1, p0, Lorg/telegram/ui/ChatUsersActivity$ChooseView;->this$0:Lorg/telegram/ui/ChatUsersActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/ChatUsersActivity;->access$000(Lorg/telegram/ui/ChatUsersActivity;)I
@@ -926,10 +926,10 @@
     :cond_4e
     iput-boolean v3, p0, Lorg/telegram/ui/ChatUsersActivity$ChooseView;->startMoving:Z
 
-    .line 317
+    .line 311
     iput v0, p0, Lorg/telegram/ui/ChatUsersActivity$ChooseView;->startX:F
 
-    .line 318
+    .line 312
     iget-object p1, p0, Lorg/telegram/ui/ChatUsersActivity$ChooseView;->this$0:Lorg/telegram/ui/ChatUsersActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/ChatUsersActivity;->access$000(Lorg/telegram/ui/ChatUsersActivity;)I
@@ -945,7 +945,7 @@
 
     goto :goto_17
 
-    .line 322
+    .line 316
     :cond_5f
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
@@ -953,12 +953,12 @@
 
     if-ne v1, v5, :cond_be
 
-    .line 323
+    .line 317
     iget-boolean p1, p0, Lorg/telegram/ui/ChatUsersActivity$ChooseView;->startMoving:Z
 
     if-eqz p1, :cond_80
 
-    .line 324
+    .line 318
     iget p1, p0, Lorg/telegram/ui/ChatUsersActivity$ChooseView;->startX:F
 
     sub-float/2addr p1, v0
@@ -977,21 +977,21 @@
 
     if-ltz p1, :cond_124
 
-    .line 325
+    .line 319
     iput-boolean v4, p0, Lorg/telegram/ui/ChatUsersActivity$ChooseView;->moving:Z
 
-    .line 326
+    .line 320
     iput-boolean v3, p0, Lorg/telegram/ui/ChatUsersActivity$ChooseView;->startMoving:Z
 
     goto/16 :goto_124
 
-    .line 328
+    .line 322
     :cond_80
     iget-boolean p1, p0, Lorg/telegram/ui/ChatUsersActivity$ChooseView;->moving:Z
 
     if-eqz p1, :cond_124
 
-    .line 329
+    .line 323
     :goto_84
     iget-object p1, p0, Lorg/telegram/ui/ChatUsersActivity$ChooseView;->strings:Ljava/util/ArrayList;
 
@@ -1001,7 +1001,7 @@
 
     if-ge v3, p1, :cond_124
 
-    .line 330
+    .line 324
     iget p1, p0, Lorg/telegram/ui/ChatUsersActivity$ChooseView;->sideSide:I
 
     iget v1, p0, Lorg/telegram/ui/ChatUsersActivity$ChooseView;->lineSize:I
@@ -1024,7 +1024,7 @@
 
     add-int/2addr p1, v6
 
-    .line 331
+    .line 325
     div-int/2addr v1, v5
 
     div-int/2addr v7, v5
@@ -1049,7 +1049,7 @@
 
     if-gez p1, :cond_bb
 
-    .line 333
+    .line 327
     iget-object p1, p0, Lorg/telegram/ui/ChatUsersActivity$ChooseView;->this$0:Lorg/telegram/ui/ChatUsersActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/ChatUsersActivity;->access$000(Lorg/telegram/ui/ChatUsersActivity;)I
@@ -1058,7 +1058,7 @@
 
     if-eq p1, v3, :cond_124
 
-    .line 334
+    .line 328
     invoke-direct {p0, v3}, Lorg/telegram/ui/ChatUsersActivity$ChooseView;->setItem(I)V
 
     goto :goto_124
@@ -1068,7 +1068,7 @@
 
     goto :goto_84
 
-    .line 340
+    .line 334
     :cond_be
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
@@ -1084,7 +1084,7 @@
 
     if-ne p1, v1, :cond_124
 
-    .line 341
+    .line 335
     :cond_cb
     iget-boolean p1, p0, Lorg/telegram/ui/ChatUsersActivity$ChooseView;->moving:Z
 
@@ -1092,7 +1092,7 @@
 
     const/4 p1, 0x0
 
-    .line 342
+    .line 336
     :goto_d0
     iget-object v1, p0, Lorg/telegram/ui/ChatUsersActivity$ChooseView;->strings:Ljava/util/ArrayList;
 
@@ -1102,7 +1102,7 @@
 
     if-ge p1, v1, :cond_120
 
-    .line 343
+    .line 337
     iget v1, p0, Lorg/telegram/ui/ChatUsersActivity$ChooseView;->sideSide:I
 
     iget v6, p0, Lorg/telegram/ui/ChatUsersActivity$ChooseView;->lineSize:I
@@ -1125,7 +1125,7 @@
 
     add-int/2addr v1, v7
 
-    .line 344
+    .line 338
     invoke-static {v2}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v6
@@ -1150,7 +1150,7 @@
 
     if-gez v1, :cond_10a
 
-    .line 345
+    .line 339
     iget-object v0, p0, Lorg/telegram/ui/ChatUsersActivity$ChooseView;->this$0:Lorg/telegram/ui/ChatUsersActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/ChatUsersActivity;->access$000(Lorg/telegram/ui/ChatUsersActivity;)I
@@ -1159,7 +1159,7 @@
 
     if-eq v0, p1, :cond_120
 
-    .line 346
+    .line 340
     invoke-direct {p0, p1}, Lorg/telegram/ui/ChatUsersActivity$ChooseView;->setItem(I)V
 
     goto :goto_120
@@ -1169,7 +1169,7 @@
 
     goto :goto_d0
 
-    .line 352
+    .line 346
     :cond_10d
     iget-object p1, p0, Lorg/telegram/ui/ChatUsersActivity$ChooseView;->this$0:Lorg/telegram/ui/ChatUsersActivity;
 
@@ -1181,7 +1181,7 @@
 
     if-eq p1, v0, :cond_120
 
-    .line 353
+    .line 347
     iget-object p1, p0, Lorg/telegram/ui/ChatUsersActivity$ChooseView;->this$0:Lorg/telegram/ui/ChatUsersActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/ChatUsersActivity;->access$000(Lorg/telegram/ui/ChatUsersActivity;)I
@@ -1190,12 +1190,12 @@
 
     invoke-direct {p0, p1}, Lorg/telegram/ui/ChatUsersActivity$ChooseView;->setItem(I)V
 
-    .line 356
+    .line 350
     :cond_120
     :goto_120
     iput-boolean v3, p0, Lorg/telegram/ui/ChatUsersActivity$ChooseView;->startMoving:Z
 
-    .line 357
+    .line 351
     iput-boolean v3, p0, Lorg/telegram/ui/ChatUsersActivity$ChooseView;->moving:Z
 
     :cond_124
@@ -1206,7 +1206,7 @@
 .method public performAccessibilityAction(ILandroid/os/Bundle;)Z
     .registers 4
 
-    .line 305
+    .line 299
     invoke-super {p0, p1, p2}, Landroid/view/View;->performAccessibilityAction(ILandroid/os/Bundle;)Z
 
     move-result v0

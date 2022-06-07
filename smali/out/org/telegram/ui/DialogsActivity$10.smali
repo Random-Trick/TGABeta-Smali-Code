@@ -25,7 +25,7 @@
 .method constructor <init>(Lorg/telegram/ui/DialogsActivity;)V
     .registers 2
 
-    .line 2871
+    .line 2918
     iput-object p1, p0, Lorg/telegram/ui/DialogsActivity$10;->this$0:Lorg/telegram/ui/DialogsActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,42 +44,42 @@
 .method public didFinishChatCreation(Lorg/telegram/ui/GroupCreateFinalActivity;J)V
     .registers 6
 
-    .line 2879
+    .line 2926
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
     neg-long p2, p2
 
-    .line 2880
+    .line 2927
     invoke-static {p2, p3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object p2
 
     invoke-virtual {p1, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 2881
+    .line 2928
     iget-object p2, p0, Lorg/telegram/ui/DialogsActivity$10;->this$0:Lorg/telegram/ui/DialogsActivity;
 
-    invoke-static {p2}, Lorg/telegram/ui/DialogsActivity;->access$25000(Lorg/telegram/ui/DialogsActivity;)Lorg/telegram/ui/DialogsActivity$DialogsActivityDelegate;
+    invoke-static {p2}, Lorg/telegram/ui/DialogsActivity;->access$25500(Lorg/telegram/ui/DialogsActivity;)Lorg/telegram/ui/DialogsActivity$DialogsActivityDelegate;
 
     move-result-object p2
 
-    .line 2882
+    .line 2929
     iget-object p3, p0, Lorg/telegram/ui/DialogsActivity$10;->this$0:Lorg/telegram/ui/DialogsActivity;
 
-    invoke-static {p3}, Lorg/telegram/ui/DialogsActivity;->access$28400(Lorg/telegram/ui/DialogsActivity;)Z
+    invoke-static {p3}, Lorg/telegram/ui/DialogsActivity;->access$29100(Lorg/telegram/ui/DialogsActivity;)Z
 
     move-result p3
 
     if-eqz p3, :cond_20
 
-    .line 2883
+    .line 2930
     iget-object p3, p0, Lorg/telegram/ui/DialogsActivity$10;->this$0:Lorg/telegram/ui/DialogsActivity;
 
     invoke-virtual {p3}, Lorg/telegram/ui/ActionBar/BaseFragment;->removeSelfFromStack()V
 
-    .line 2885
+    .line 2932
     :cond_20
     iget-object p3, p0, Lorg/telegram/ui/DialogsActivity$10;->this$0:Lorg/telegram/ui/DialogsActivity;
 

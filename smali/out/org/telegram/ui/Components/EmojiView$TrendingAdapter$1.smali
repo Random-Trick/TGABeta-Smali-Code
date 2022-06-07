@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/EmojiView$TrendingAdapter;Landroid/content/Context;)V
     .registers 3
 
-    .line 4042
+    .line 4098
     iput-object p1, p0, Lorg/telegram/ui/Components/EmojiView$TrendingAdapter$1;->this$1:Lorg/telegram/ui/Components/EmojiView$TrendingAdapter;
 
     invoke-direct {p0, p2}, Lorg/telegram/ui/Components/BackupImageView;-><init>(Landroid/content/Context;)V
@@ -35,17 +35,17 @@
 .method protected onDraw(Landroid/graphics/Canvas;)V
     .registers 6
 
-    .line 4045
+    .line 4101
     invoke-super {p0, p1}, Lorg/telegram/ui/Components/BackupImageView;->onDraw(Landroid/graphics/Canvas;)V
 
-    .line 4046
+    .line 4102
     invoke-virtual {p0}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lorg/telegram/tgnet/TLRPC$StickerSetCovered;
 
-    .line 4047
+    .line 4103
     iget-object v1, p0, Lorg/telegram/ui/Components/EmojiView$TrendingAdapter$1;->this$1:Lorg/telegram/ui/Components/EmojiView$TrendingAdapter;
 
     iget-object v1, v1, Lorg/telegram/ui/Components/EmojiView$TrendingAdapter;->this$0:Lorg/telegram/ui/Components/EmojiView;
@@ -78,7 +78,7 @@
 
     if-eqz v0, :cond_4e
 
-    .line 4048
+    .line 4104
     invoke-virtual {p1}, Landroid/graphics/Canvas;->getWidth()I
 
     move-result v0
@@ -93,7 +93,7 @@
 
     const/high16 v1, 0x41600000    # 14.0f
 
-    .line 4049
+    .line 4105
     invoke-static {v1}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v1
@@ -104,7 +104,7 @@
 
     const/high16 v2, 0x40400000    # 3.0f
 
-    .line 4050
+    .line 4106
     invoke-static {v2}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v2

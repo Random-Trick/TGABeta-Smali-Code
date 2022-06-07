@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/ChatUsersActivity;)V
     .registers 2
 
-    .line 1286
+    .line 1322
     iput-object p1, p0, Lorg/telegram/ui/ChatUsersActivity$12;->this$0:Lorg/telegram/ui/ChatUsersActivity;
 
     invoke-direct {p0}, Landroidx/recyclerview/widget/RecyclerView$OnScrollListener;-><init>()V
@@ -39,7 +39,7 @@
 
     if-ne p2, p1, :cond_10
 
-    .line 1290
+    .line 1326
     iget-object p1, p0, Lorg/telegram/ui/ChatUsersActivity$12;->this$0:Lorg/telegram/ui/ChatUsersActivity;
 
     invoke-virtual {p1}, Lorg/telegram/ui/ActionBar/BaseFragment;->getParentActivity()Landroid/app/Activity;

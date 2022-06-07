@@ -1463,7 +1463,7 @@
     :cond_b
     iget-object v2, v0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
-    const v3, 0x7f070140
+    const v3, 0x7f070109
 
     invoke-virtual {v2, v3}, Lorg/telegram/ui/ActionBar/ActionBar;->setBackButtonImage(I)V
 
@@ -1477,7 +1477,7 @@
     .line 267
     iget-object v2, v0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
-    const v4, 0x7f0e0a8b
+    const v4, 0x7f0e0b12
 
     const-string v5, "NewGroup"
 
@@ -1525,7 +1525,7 @@
 
     move-result-object v4
 
-    const v6, 0x7f07012e
+    const v6, 0x7f0700fd
 
     invoke-virtual {v4, v6}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -1605,7 +1605,7 @@
     .line 441
     iget-object v7, v0, Lorg/telegram/ui/GroupCreateFinalActivity;->avatarImage:Lorg/telegram/ui/Components/BackupImageView;
 
-    const v8, 0x7f0e044e
+    const v8, 0x7f0e0490
 
     const-string v9, "ChoosePhoto"
 
@@ -1988,7 +1988,7 @@
     goto :goto_1ec
 
     :cond_1e6
-    const v12, 0x7f0e0657
+    const v12, 0x7f0e06a9
 
     const-string v14, "EnterListName"
 
@@ -1996,7 +1996,7 @@
 
     :cond_1ec
     :goto_1ec
-    const v12, 0x7f0e0656
+    const v12, 0x7f0e06a8
 
     const-string v14, "EnterGroupNamePlaceholder"
 
@@ -2228,7 +2228,7 @@
 
     move-result-object v15
 
-    const v8, 0x7f07010c
+    const v8, 0x7f0700e6
 
     invoke-virtual {v15, v8}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -2496,7 +2496,7 @@
     .line 616
     iget-object v2, v0, Lorg/telegram/ui/GroupCreateFinalActivity;->floatingButtonIcon:Landroid/widget/ImageView;
 
-    const v3, 0x7f0700c0
+    const v3, 0x7f0700a1
 
     invoke-virtual {v2, v3}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -2512,7 +2512,7 @@
     .line 618
     iget-object v2, v0, Lorg/telegram/ui/GroupCreateFinalActivity;->floatingButtonContainer:Landroid/widget/FrameLayout;
 
-    const v3, 0x7f0e05dd
+    const v3, 0x7f0e062e
 
     const-string v5, "Done"
 

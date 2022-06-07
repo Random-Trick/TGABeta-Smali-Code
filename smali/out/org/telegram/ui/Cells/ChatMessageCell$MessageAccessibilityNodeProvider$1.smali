@@ -24,7 +24,7 @@
 .method constructor <init>(Lorg/telegram/ui/Cells/ChatMessageCell$MessageAccessibilityNodeProvider;Landroid/text/style/CharacterStyle;)V
     .registers 3
 
-    .line 15005
+    .line 15209
     iput-object p1, p0, Lorg/telegram/ui/Cells/ChatMessageCell$MessageAccessibilityNodeProvider$1;->this$1:Lorg/telegram/ui/Cells/ChatMessageCell$MessageAccessibilityNodeProvider;
 
     iput-object p2, p0, Lorg/telegram/ui/Cells/ChatMessageCell$MessageAccessibilityNodeProvider$1;->val$link:Landroid/text/style/CharacterStyle;
@@ -39,7 +39,22 @@
 .method public onClick(Landroid/view/View;)V
     .registers 5
 
-    .line 15008
+    .line 15212
+    iget-object v0, p0, Lorg/telegram/ui/Cells/ChatMessageCell$MessageAccessibilityNodeProvider$1;->val$link:Landroid/text/style/CharacterStyle;
+
+    instance-of v1, v0, Lorg/telegram/ui/Cells/ChatMessageCell$MessageAccessibilityNodeProvider$ProfileSpan;
+
+    if-eqz v1, :cond_c
+
+    .line 15213
+    check-cast v0, Lorg/telegram/ui/Cells/ChatMessageCell$MessageAccessibilityNodeProvider$ProfileSpan;
+
+    invoke-virtual {v0, p1}, Lorg/telegram/ui/Cells/ChatMessageCell$MessageAccessibilityNodeProvider$ProfileSpan;->onClick(Landroid/view/View;)V
+
+    goto :goto_28
+
+    .line 15214
+    :cond_c
     iget-object p1, p0, Lorg/telegram/ui/Cells/ChatMessageCell$MessageAccessibilityNodeProvider$1;->this$1:Lorg/telegram/ui/Cells/ChatMessageCell$MessageAccessibilityNodeProvider;
 
     iget-object p1, p1, Lorg/telegram/ui/Cells/ChatMessageCell$MessageAccessibilityNodeProvider;->this$0:Lorg/telegram/ui/Cells/ChatMessageCell;
@@ -48,9 +63,9 @@
 
     move-result-object p1
 
-    if-eqz p1, :cond_1c
+    if-eqz p1, :cond_28
 
-    .line 15009
+    .line 15215
     iget-object p1, p0, Lorg/telegram/ui/Cells/ChatMessageCell$MessageAccessibilityNodeProvider$1;->this$1:Lorg/telegram/ui/Cells/ChatMessageCell$MessageAccessibilityNodeProvider;
 
     iget-object p1, p1, Lorg/telegram/ui/Cells/ChatMessageCell$MessageAccessibilityNodeProvider;->this$0:Lorg/telegram/ui/Cells/ChatMessageCell;
@@ -69,6 +84,7 @@
 
     invoke-interface {p1, v0, v1, v2}, Lorg/telegram/ui/Cells/ChatMessageCell$ChatMessageCellDelegate;->didPressUrl(Lorg/telegram/ui/Cells/ChatMessageCell;Landroid/text/style/CharacterStyle;Z)V
 
-    :cond_1c
+    :cond_28
+    :goto_28
     return-void
 .end method

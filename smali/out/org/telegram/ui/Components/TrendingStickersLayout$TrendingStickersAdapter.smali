@@ -1628,7 +1628,7 @@
 
     check-cast p1, Lorg/telegram/ui/Cells/GraySectionCell;
 
-    const p2, 0x7f0e0bdd
+    const p2, 0x7f0e0c67
 
     const-string v0, "OtherStickers"
 

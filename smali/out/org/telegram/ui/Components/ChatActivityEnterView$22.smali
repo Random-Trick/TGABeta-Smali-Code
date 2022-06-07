@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lorg/telegram/ui/Components/ChatActivityEnterView;->lambda$new$11(Lorg/telegram/ui/Components/SimpleAvatarView;[ILorg/telegram/ui/Components/SenderSelectPopup$SenderView;)V
+    value = Lorg/telegram/ui/Components/ChatActivityEnterView;->lambda$new$12(Lorg/telegram/ui/Components/SimpleAvatarView;[ILorg/telegram/ui/Components/SenderSelectPopup$SenderView;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -35,7 +35,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/ChatActivityEnterView;Lorg/telegram/ui/Components/SimpleAvatarView;Lorg/telegram/ui/Components/SenderSelectPopup$SenderView;)V
     .registers 4
 
-    .line 2673
+    .line 2688
     iput-object p2, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$22;->val$avatar:Lorg/telegram/ui/Components/SimpleAvatarView;
 
     iput-object p3, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$22;->val$senderView:Lorg/telegram/ui/Components/SenderSelectPopup$SenderView;
@@ -48,14 +48,14 @@
 .method private synthetic lambda$onDraw$0(Lorg/telegram/ui/Components/SimpleAvatarView;Lorg/telegram/ui/Components/SenderSelectPopup$SenderView;)V
     .registers 3
 
-    .line 2677
+    .line 2692
     invoke-virtual {p1}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
 
     move-result-object p1
 
     invoke-virtual {p1, p0}, Landroid/view/ViewTreeObserver;->removeOnDrawListener(Landroid/view/ViewTreeObserver$OnDrawListener;)V
 
-    .line 2678
+    .line 2693
     iget-object p1, p2, Lorg/telegram/ui/Components/SenderSelectPopup$SenderView;->avatar:Lorg/telegram/ui/Components/SimpleAvatarView;
 
     const/4 p2, 0x1
@@ -70,7 +70,7 @@
 .method public onDraw()V
     .registers 4
 
-    .line 2676
+    .line 2691
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$22;->val$avatar:Lorg/telegram/ui/Components/SimpleAvatarView;
 
     iget-object v1, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$22;->val$senderView:Lorg/telegram/ui/Components/SenderSelectPopup$SenderView;

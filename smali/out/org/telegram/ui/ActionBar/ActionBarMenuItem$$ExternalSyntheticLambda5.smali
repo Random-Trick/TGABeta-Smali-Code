@@ -33,7 +33,7 @@
 
     iget-boolean v1, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuItem$$ExternalSyntheticLambda5;->f$1:Z
 
-    invoke-static {v0, v1, p1}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->$r8$lambda$OhdtLxxopXUo6LKQ-vhjcjRMsAE(Lorg/telegram/ui/ActionBar/ActionBarMenuItem;ZLandroid/view/View;)V
+    invoke-static {v0, v1, p1}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->$r8$lambda$KsYskzptalk7KkdkFeP33Blvke8(Lorg/telegram/ui/ActionBar/ActionBarMenuItem;ZLandroid/view/View;)V
 
     return-void
 .end method

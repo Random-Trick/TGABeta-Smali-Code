@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lcom/google/android/gms/tasks/OnCompleteListener;
 
 
 # instance fields
@@ -22,12 +22,12 @@
 
 
 # virtual methods
-.method public final run()V
-    .registers 2
+.method public final onComplete(Lcom/google/android/gms/tasks/Task;)V
+    .registers 3
 
     iget-object v0, p0, Lorg/telegram/ui/PaymentFormActivity$$ExternalSyntheticLambda31;->f$0:Lorg/telegram/ui/PaymentFormActivity;
 
-    invoke-static {v0}, Lorg/telegram/ui/PaymentFormActivity;->$r8$lambda$lQ1ldyyjP2GM2PBB-Il0I86KOtQ(Lorg/telegram/ui/PaymentFormActivity;)V
+    invoke-static {v0, p1}, Lorg/telegram/ui/PaymentFormActivity;->$r8$lambda$7fuEeUQymgV1HyD4Nked01qsi_U(Lorg/telegram/ui/PaymentFormActivity;Lcom/google/android/gms/tasks/Task;)V
 
     return-void
 .end method

@@ -18,7 +18,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/TranslateAlert$LoadingTextView2;Landroid/content/Context;)V
     .registers 3
 
-    .line 1565
+    .line 1578
     invoke-direct {p0, p2}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
     return-void
@@ -29,7 +29,7 @@
 .method protected onMeasure(II)V
     .registers 3
 
-    .line 1568
+    .line 1581
     invoke-static {}, Lorg/telegram/ui/Components/TranslateAlert;->access$1300()I
 
     move-result p2

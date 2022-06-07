@@ -6,6 +6,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Lorg/telegram/ui/Components/LinkSpanDrawable$LinksTextView;,
         Lorg/telegram/ui/Components/LinkSpanDrawable$LinkCollector;
     }
 .end annotation
@@ -92,7 +93,7 @@
 .method static constructor <clinit>()V
     .registers 1
 
-    .line 30
+    .line 38
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -124,7 +125,7 @@
 
     move v4, p4
 
-    .line 54
+    .line 62
     invoke-direct/range {v0 .. v5}, Lorg/telegram/ui/Components/LinkSpanDrawable;-><init>(Landroid/text/style/CharacterStyle;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;FFZ)V
 
     return-void
@@ -140,10 +141,10 @@
         }
     .end annotation
 
-    .line 57
+    .line 65
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 31
+    .line 39
     new-instance p5, Ljava/util/ArrayList;
 
     invoke-direct {p5}, Ljava/util/ArrayList;-><init>()V
@@ -152,10 +153,10 @@
 
     const/4 p5, 0x0
 
-    .line 32
+    .line 40
     iput p5, p0, Lorg/telegram/ui/Components/LinkSpanDrawable;->mPathesCount:I
 
-    .line 38
+    .line 46
     new-instance v0, Landroid/graphics/Path;
 
     invoke-direct {v0}, Landroid/graphics/Path;-><init>()V
@@ -164,41 +165,41 @@
 
     const-wide/16 v0, -0x1
 
-    .line 42
+    .line 50
     iput-wide v0, p0, Lorg/telegram/ui/Components/LinkSpanDrawable;->mStart:J
 
-    .line 43
+    .line 51
     iput-wide v0, p0, Lorg/telegram/ui/Components/LinkSpanDrawable;->mReleaseStart:J
 
-    .line 58
+    .line 66
     iput-object p1, p0, Lorg/telegram/ui/Components/LinkSpanDrawable;->mSpan:Landroid/text/style/CharacterStyle;
 
-    .line 59
+    .line 67
     iput-object p2, p0, Lorg/telegram/ui/Components/LinkSpanDrawable;->mResourcesProvider:Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;
 
     const-string p1, "chat_linkSelectBackground"
 
-    .line 60
+    .line 68
     invoke-direct {p0, p1}, Lorg/telegram/ui/Components/LinkSpanDrawable;->getThemedColor(Ljava/lang/String;)I
 
     move-result p1
 
     invoke-virtual {p0, p1}, Lorg/telegram/ui/Components/LinkSpanDrawable;->setColor(I)V
 
-    .line 61
+    .line 69
     iput p3, p0, Lorg/telegram/ui/Components/LinkSpanDrawable;->mTouchX:F
 
-    .line 62
+    .line 70
     iput p4, p0, Lorg/telegram/ui/Components/LinkSpanDrawable;->mTouchY:F
 
-    .line 63
+    .line 71
     invoke-static {}, Landroid/view/ViewConfiguration;->getTapTimeout()I
 
     move-result p1
 
     int-to-long p1, p1
 
-    .line 64
+    .line 72
     invoke-static {}, Landroid/view/ViewConfiguration;->getLongPressTimeout()I
 
     move-result p3
@@ -219,7 +220,7 @@
 
     mul-float p2, p2, p3
 
-    .line 65
+    .line 73
     invoke-static {p1, p2}, Ljava/lang/Math;->min(FF)F
 
     move-result p1
@@ -228,7 +229,7 @@
 
     iput-wide p1, p0, Lorg/telegram/ui/Components/LinkSpanDrawable;->mDuration:J
 
-    .line 66
+    .line 74
     iput-boolean p5, p0, Lorg/telegram/ui/Components/LinkSpanDrawable;->mSupportsLongPress:Z
 
     return-void
@@ -237,7 +238,7 @@
 .method static synthetic access$000(Lorg/telegram/ui/Components/LinkSpanDrawable;)J
     .registers 3
 
-    .line 23
+    .line 31
     iget-wide v0, p0, Lorg/telegram/ui/Components/LinkSpanDrawable;->mReleaseStart:J
 
     return-wide v0
@@ -246,7 +247,7 @@
 .method private getThemedColor(Ljava/lang/String;)I
     .registers 3
 
-    .line 203
+    .line 211
     iget-object v0, p0, Lorg/telegram/ui/Components/LinkSpanDrawable;->mResourcesProvider:Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;
 
     if-eqz v0, :cond_9
@@ -263,7 +264,7 @@
     :goto_a
     if-eqz v0, :cond_11
 
-    .line 204
+    .line 212
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
     move-result p1
@@ -288,7 +289,7 @@
 
     move-object/from16 v1, p1
 
-    .line 112
+    .line 120
     iget v2, v0, Lorg/telegram/ui/Components/LinkSpanDrawable;->cornerRadius:I
 
     const/high16 v3, 0x40800000    # 4.0f
@@ -310,7 +311,7 @@
     :cond_12
     const/4 v2, 0x0
 
-    .line 113
+    .line 121
     :goto_13
     iget-object v4, v0, Lorg/telegram/ui/Components/LinkSpanDrawable;->mSelectionPaint:Landroid/graphics/Paint;
 
@@ -318,7 +319,7 @@
 
     if-eqz v2, :cond_45
 
-    .line 114
+    .line 122
     :cond_19
     new-instance v4, Landroid/graphics/Paint;
 
@@ -326,19 +327,19 @@
 
     iput-object v4, v0, Lorg/telegram/ui/Components/LinkSpanDrawable;->mSelectionPaint:Landroid/graphics/Paint;
 
-    .line 115
+    .line 123
     sget-object v7, Landroid/graphics/Paint$Style;->FILL_AND_STROKE:Landroid/graphics/Paint$Style;
 
     invoke-virtual {v4, v7}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
-    .line 116
+    .line 124
     iget-object v4, v0, Lorg/telegram/ui/Components/LinkSpanDrawable;->mSelectionPaint:Landroid/graphics/Paint;
 
     iget v7, v0, Lorg/telegram/ui/Components/LinkSpanDrawable;->color:I
 
     invoke-virtual {v4, v7}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 117
+    .line 125
     iget-object v4, v0, Lorg/telegram/ui/Components/LinkSpanDrawable;->mSelectionPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v4}, Landroid/graphics/Paint;->getAlpha()I
@@ -347,7 +348,7 @@
 
     iput v4, v0, Lorg/telegram/ui/Components/LinkSpanDrawable;->mSelectionAlpha:I
 
-    .line 118
+    .line 126
     iget-object v4, v0, Lorg/telegram/ui/Components/LinkSpanDrawable;->mSelectionPaint:Landroid/graphics/Paint;
 
     new-instance v7, Landroid/graphics/CornerPathEffect;
@@ -364,7 +365,7 @@
 
     invoke-virtual {v4, v7}, Landroid/graphics/Paint;->setPathEffect(Landroid/graphics/PathEffect;)Landroid/graphics/PathEffect;
 
-    .line 120
+    .line 128
     :cond_45
     iget-object v4, v0, Lorg/telegram/ui/Components/LinkSpanDrawable;->mRipplePaint:Landroid/graphics/Paint;
 
@@ -372,7 +373,7 @@
 
     if-eqz v2, :cond_77
 
-    .line 121
+    .line 129
     :cond_4b
     new-instance v2, Landroid/graphics/Paint;
 
@@ -380,19 +381,19 @@
 
     iput-object v2, v0, Lorg/telegram/ui/Components/LinkSpanDrawable;->mRipplePaint:Landroid/graphics/Paint;
 
-    .line 122
+    .line 130
     sget-object v4, Landroid/graphics/Paint$Style;->FILL_AND_STROKE:Landroid/graphics/Paint$Style;
 
     invoke-virtual {v2, v4}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
-    .line 123
+    .line 131
     iget-object v2, v0, Lorg/telegram/ui/Components/LinkSpanDrawable;->mRipplePaint:Landroid/graphics/Paint;
 
     iget v4, v0, Lorg/telegram/ui/Components/LinkSpanDrawable;->color:I
 
     invoke-virtual {v2, v4}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 124
+    .line 132
     iget-object v2, v0, Lorg/telegram/ui/Components/LinkSpanDrawable;->mRipplePaint:Landroid/graphics/Paint;
 
     invoke-virtual {v2}, Landroid/graphics/Paint;->getAlpha()I
@@ -401,7 +402,7 @@
 
     iput v2, v0, Lorg/telegram/ui/Components/LinkSpanDrawable;->mRippleAlpha:I
 
-    .line 125
+    .line 133
     iget-object v2, v0, Lorg/telegram/ui/Components/LinkSpanDrawable;->mRipplePaint:Landroid/graphics/Paint;
 
     new-instance v4, Landroid/graphics/CornerPathEffect;
@@ -418,7 +419,7 @@
 
     invoke-virtual {v2, v4}, Landroid/graphics/Paint;->setPathEffect(Landroid/graphics/PathEffect;)Landroid/graphics/PathEffect;
 
-    .line 127
+    .line 135
     :cond_77
     iget-object v2, v0, Lorg/telegram/ui/Components/LinkSpanDrawable;->mBounds:Landroid/graphics/Rect;
 
@@ -428,7 +429,7 @@
 
     if-lez v2, :cond_169
 
-    .line 128
+    .line 136
     iget-object v2, v0, Lorg/telegram/ui/Components/LinkSpanDrawable;->mPathes:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v5}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -441,7 +442,7 @@
 
     invoke-virtual {v2, v3, v5}, Landroid/graphics/Path;->computeBounds(Landroid/graphics/RectF;Z)V
 
-    .line 129
+    .line 137
     new-instance v2, Landroid/graphics/Rect;
 
     iget v4, v3, Landroid/graphics/RectF;->left:F
@@ -466,13 +467,13 @@
 
     const/4 v2, 0x1
 
-    .line 135
+    .line 143
     :goto_a0
     iget v3, v0, Lorg/telegram/ui/Components/LinkSpanDrawable;->mPathesCount:I
 
     if-ge v2, v3, :cond_e8
 
-    .line 136
+    .line 144
     iget-object v3, v0, Lorg/telegram/ui/Components/LinkSpanDrawable;->mPathes:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -485,7 +486,7 @@
 
     invoke-virtual {v3, v4, v5}, Landroid/graphics/Path;->computeBounds(Landroid/graphics/RectF;Z)V
 
-    .line 137
+    .line 145
     iget-object v3, v0, Lorg/telegram/ui/Components/LinkSpanDrawable;->mBounds:Landroid/graphics/Rect;
 
     iget v7, v3, Landroid/graphics/Rect;->left:I
@@ -500,7 +501,7 @@
 
     iput v7, v3, Landroid/graphics/Rect;->left:I
 
-    .line 138
+    .line 146
     iget-object v3, v0, Lorg/telegram/ui/Components/LinkSpanDrawable;->mBounds:Landroid/graphics/Rect;
 
     iget v7, v3, Landroid/graphics/Rect;->top:I
@@ -515,7 +516,7 @@
 
     iput v7, v3, Landroid/graphics/Rect;->top:I
 
-    .line 139
+    .line 147
     iget-object v3, v0, Lorg/telegram/ui/Components/LinkSpanDrawable;->mBounds:Landroid/graphics/Rect;
 
     iget v7, v3, Landroid/graphics/Rect;->right:I
@@ -530,7 +531,7 @@
 
     iput v7, v3, Landroid/graphics/Rect;->right:I
 
-    .line 140
+    .line 148
     iget-object v3, v0, Lorg/telegram/ui/Components/LinkSpanDrawable;->mBounds:Landroid/graphics/Rect;
 
     iget v7, v3, Landroid/graphics/Rect;->bottom:I
@@ -549,7 +550,7 @@
 
     goto :goto_a0
 
-    .line 142
+    .line 150
     :cond_e8
     iget-object v2, v0, Lorg/telegram/ui/Components/LinkSpanDrawable;->mBounds:Landroid/graphics/Rect;
 
@@ -565,7 +566,7 @@
 
     const-wide/high16 v7, 0x4000000000000000L    # 2.0
 
-    .line 145
+    .line 153
     invoke-static {v2, v3, v7, v8}, Ljava/lang/Math;->pow(DD)D
 
     move-result-wide v2
@@ -600,7 +601,7 @@
 
     float-to-double v9, v4
 
-    .line 146
+    .line 154
     invoke-static {v9, v10, v7, v8}, Ljava/lang/Math;->pow(DD)D
 
     move-result-wide v9
@@ -623,7 +624,7 @@
 
     add-double/2addr v9, v11
 
-    .line 144
+    .line 152
     invoke-static {v2, v3, v9, v10}, Ljava/lang/Math;->max(DD)D
 
     move-result-wide v2
@@ -640,7 +641,7 @@
 
     float-to-double v9, v4
 
-    .line 149
+    .line 157
     invoke-static {v9, v10, v7, v8}, Ljava/lang/Math;->pow(DD)D
 
     move-result-wide v9
@@ -675,7 +676,7 @@
 
     float-to-double v11, v4
 
-    .line 150
+    .line 158
     invoke-static {v11, v12, v7, v8}, Ljava/lang/Math;->pow(DD)D
 
     move-result-wide v11
@@ -698,17 +699,17 @@
 
     add-double/2addr v11, v7
 
-    .line 148
+    .line 156
     invoke-static {v9, v10, v11, v12}, Ljava/lang/Math;->max(DD)D
 
     move-result-wide v7
 
-    .line 143
+    .line 151
     invoke-static {v2, v3, v7, v8}, Ljava/lang/Math;->max(DD)D
 
     move-result-wide v2
 
-    .line 142
+    .line 150
     invoke-static {v2, v3}, Ljava/lang/Math;->sqrt(D)D
 
     move-result-wide v2
@@ -717,13 +718,13 @@
 
     iput v2, v0, Lorg/telegram/ui/Components/LinkSpanDrawable;->mMaxRadius:F
 
-    .line 156
+    .line 164
     :cond_169
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v2
 
-    .line 157
+    .line 165
     iget-wide v7, v0, Lorg/telegram/ui/Components/LinkSpanDrawable;->mStart:J
 
     const-wide/16 v9, 0x0
@@ -732,10 +733,10 @@
 
     if-gez v4, :cond_177
 
-    .line 158
+    .line 166
     iput-wide v2, v0, Lorg/telegram/ui/Components/LinkSpanDrawable;->mStart:J
 
-    .line 160
+    .line 168
     :cond_177
     sget-object v4, Lorg/telegram/ui/Components/CubicBezierInterpolator;->DEFAULT:Lorg/telegram/ui/Components/CubicBezierInterpolator;
 
@@ -761,7 +762,7 @@
 
     move-result v4
 
-    .line 161
+    .line 169
     iget-wide v11, v0, Lorg/telegram/ui/Components/LinkSpanDrawable;->mReleaseStart:J
 
     const/4 v7, 0x0
@@ -795,13 +796,13 @@
 
     move-result v11
 
-    .line 163
+    .line 171
     :goto_1a6
     iget-boolean v12, v0, Lorg/telegram/ui/Components/LinkSpanDrawable;->mSupportsLongPress:Z
 
     if-eqz v12, :cond_1de
 
-    .line 164
+    .line 172
     iget-wide v12, v0, Lorg/telegram/ui/Components/LinkSpanDrawable;->mStart:J
 
     sub-long v12, v2, v12
@@ -834,7 +835,7 @@
 
     if-lez v6, :cond_1d5
 
-    .line 166
+    .line 174
     iget-wide v5, v0, Lorg/telegram/ui/Components/LinkSpanDrawable;->mStart:J
 
     sub-long v5, v2, v5
@@ -870,7 +871,7 @@
     :cond_1de
     const/high16 v5, 0x3f800000    # 1.0f
 
-    .line 175
+    .line 183
     :goto_1e0
     iget-object v6, v0, Lorg/telegram/ui/Components/LinkSpanDrawable;->mSelectionPaint:Landroid/graphics/Paint;
 
@@ -900,7 +901,7 @@
 
     invoke-virtual {v6, v7}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 176
+    .line 184
     iget-object v6, v0, Lorg/telegram/ui/Components/LinkSpanDrawable;->mSelectionPaint:Landroid/graphics/Paint;
 
     sub-float v5, v8, v5
@@ -921,13 +922,13 @@
 
     const/4 v6, 0x0
 
-    .line 177
+    .line 185
     :goto_20f
     iget v7, v0, Lorg/telegram/ui/Components/LinkSpanDrawable;->mPathesCount:I
 
     if-ge v6, v7, :cond_223
 
-    .line 178
+    .line 186
     iget-object v7, v0, Lorg/telegram/ui/Components/LinkSpanDrawable;->mPathes:Ljava/util/ArrayList;
 
     invoke-virtual {v7, v6}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -944,7 +945,7 @@
 
     goto :goto_20f
 
-    .line 181
+    .line 189
     :cond_223
     iget-object v6, v0, Lorg/telegram/ui/Components/LinkSpanDrawable;->mRipplePaint:Landroid/graphics/Paint;
 
@@ -962,7 +963,7 @@
 
     invoke-virtual {v6, v7}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 182
+    .line 190
     iget-object v6, v0, Lorg/telegram/ui/Components/LinkSpanDrawable;->mRipplePaint:Landroid/graphics/Paint;
 
     invoke-static {v8, v5}, Ljava/lang/Math;->min(FF)F
@@ -983,20 +984,20 @@
 
     if-gez v5, :cond_27c
 
-    .line 184
+    .line 192
     iget v5, v0, Lorg/telegram/ui/Components/LinkSpanDrawable;->mMaxRadius:F
 
     mul-float v5, v5, v4
 
-    .line 185
+    .line 193
     invoke-virtual/range {p1 .. p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 186
+    .line 194
     iget-object v6, v0, Lorg/telegram/ui/Components/LinkSpanDrawable;->circlePath:Landroid/graphics/Path;
 
     invoke-virtual {v6}, Landroid/graphics/Path;->reset()V
 
-    .line 187
+    .line 195
     iget-object v6, v0, Lorg/telegram/ui/Components/LinkSpanDrawable;->circlePath:Landroid/graphics/Path;
 
     iget v7, v0, Lorg/telegram/ui/Components/LinkSpanDrawable;->mTouchX:F
@@ -1007,20 +1008,20 @@
 
     invoke-virtual {v6, v7, v11, v5, v12}, Landroid/graphics/Path;->addCircle(FFFLandroid/graphics/Path$Direction;)V
 
-    .line 188
+    .line 196
     iget-object v5, v0, Lorg/telegram/ui/Components/LinkSpanDrawable;->circlePath:Landroid/graphics/Path;
 
     invoke-virtual {v1, v5}, Landroid/graphics/Canvas;->clipPath(Landroid/graphics/Path;)Z
 
     const/4 v5, 0x0
 
-    .line 189
+    .line 197
     :goto_264
     iget v6, v0, Lorg/telegram/ui/Components/LinkSpanDrawable;->mPathesCount:I
 
     if-ge v5, v6, :cond_278
 
-    .line 190
+    .line 198
     iget-object v6, v0, Lorg/telegram/ui/Components/LinkSpanDrawable;->mPathes:Ljava/util/ArrayList;
 
     invoke-virtual {v6, v5}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1037,7 +1038,7 @@
 
     goto :goto_264
 
-    .line 192
+    .line 200
     :cond_278
     invoke-virtual/range {p1 .. p1}, Landroid/graphics/Canvas;->restore()V
 
@@ -1046,13 +1047,13 @@
     :cond_27c
     const/4 v5, 0x0
 
-    .line 194
+    .line 202
     :goto_27d
     iget v6, v0, Lorg/telegram/ui/Components/LinkSpanDrawable;->mPathesCount:I
 
     if-ge v5, v6, :cond_291
 
-    .line 195
+    .line 203
     iget-object v6, v0, Lorg/telegram/ui/Components/LinkSpanDrawable;->mPathes:Ljava/util/ArrayList;
 
     invoke-virtual {v6, v5}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1075,7 +1076,7 @@
 
     if-ltz v1, :cond_2ae
 
-    .line 199
+    .line 207
     iget-wide v4, v0, Lorg/telegram/ui/Components/LinkSpanDrawable;->mReleaseStart:J
 
     cmp-long v1, v4, v9
@@ -1123,7 +1124,7 @@
         }
     .end annotation
 
-    .line 108
+    .line 116
     iget-object v0, p0, Lorg/telegram/ui/Components/LinkSpanDrawable;->mSpan:Landroid/text/style/CharacterStyle;
 
     return-object v0
@@ -1132,7 +1133,7 @@
 .method public obtainNewPath()Lorg/telegram/ui/Components/LinkPath;
     .registers 3
 
-    .line 87
+    .line 95
     sget-object v0, Lorg/telegram/ui/Components/LinkSpanDrawable;->pathCache:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
@@ -1143,7 +1144,7 @@
 
     const/4 v1, 0x0
 
-    .line 88
+    .line 96
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
     move-result-object v0
@@ -1152,7 +1153,7 @@
 
     goto :goto_16
 
-    .line 90
+    .line 98
     :cond_10
     new-instance v0, Lorg/telegram/ui/Components/LinkPath;
 
@@ -1160,16 +1161,16 @@
 
     invoke-direct {v0, v1}, Lorg/telegram/ui/Components/LinkPath;-><init>(Z)V
 
-    .line 92
+    .line 100
     :goto_16
     invoke-virtual {v0}, Lorg/telegram/ui/Components/LinkPath;->reset()V
 
-    .line 93
+    .line 101
     iget-object v1, p0, Lorg/telegram/ui/Components/LinkSpanDrawable;->mPathes:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 94
+    .line 102
     iget-object v1, p0, Lorg/telegram/ui/Components/LinkSpanDrawable;->mPathes:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
@@ -1184,7 +1185,7 @@
 .method public release()V
     .registers 5
 
-    .line 82
+    .line 90
     iget-wide v0, p0, Lorg/telegram/ui/Components/LinkSpanDrawable;->mStart:J
 
     iget-wide v2, p0, Lorg/telegram/ui/Components/LinkSpanDrawable;->mDuration:J
@@ -1207,7 +1208,7 @@
 .method public reset()V
     .registers 3
 
-    .line 99
+    .line 107
     iget-object v0, p0, Lorg/telegram/ui/Components/LinkSpanDrawable;->mPathes:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
@@ -1218,7 +1219,7 @@
 
     return-void
 
-    .line 102
+    .line 110
     :cond_9
     sget-object v0, Lorg/telegram/ui/Components/LinkSpanDrawable;->pathCache:Ljava/util/ArrayList;
 
@@ -1226,14 +1227,14 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
-    .line 103
+    .line 111
     iget-object v0, p0, Lorg/telegram/ui/Components/LinkSpanDrawable;->mPathes:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
     const/4 v0, 0x0
 
-    .line 104
+    .line 112
     iput v0, p0, Lorg/telegram/ui/Components/LinkSpanDrawable;->mPathesCount:I
 
     return-void
@@ -1242,18 +1243,18 @@
 .method public setColor(I)V
     .registers 3
 
-    .line 70
+    .line 78
     iput p1, p0, Lorg/telegram/ui/Components/LinkSpanDrawable;->color:I
 
-    .line 71
+    .line 79
     iget-object v0, p0, Lorg/telegram/ui/Components/LinkSpanDrawable;->mSelectionPaint:Landroid/graphics/Paint;
 
     if-eqz v0, :cond_11
 
-    .line 72
+    .line 80
     invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 73
+    .line 81
     iget-object v0, p0, Lorg/telegram/ui/Components/LinkSpanDrawable;->mSelectionPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0}, Landroid/graphics/Paint;->getAlpha()I
@@ -1262,16 +1263,16 @@
 
     iput v0, p0, Lorg/telegram/ui/Components/LinkSpanDrawable;->mSelectionAlpha:I
 
-    .line 75
+    .line 83
     :cond_11
     iget-object v0, p0, Lorg/telegram/ui/Components/LinkSpanDrawable;->mRipplePaint:Landroid/graphics/Paint;
 
     if-eqz v0, :cond_20
 
-    .line 76
+    .line 84
     invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 77
+    .line 85
     iget-object p1, p0, Lorg/telegram/ui/Components/LinkSpanDrawable;->mRipplePaint:Landroid/graphics/Paint;
 
     invoke-virtual {p1}, Landroid/graphics/Paint;->getAlpha()I

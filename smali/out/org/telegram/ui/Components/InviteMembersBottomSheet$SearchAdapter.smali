@@ -1393,7 +1393,7 @@
 
     check-cast p1, Lorg/telegram/ui/Cells/GroupCreateSectionCell;
 
-    const p2, 0x7f0e07fe
+    const p2, 0x7f0e0856
 
     const-string v0, "GlobalSearch"
 

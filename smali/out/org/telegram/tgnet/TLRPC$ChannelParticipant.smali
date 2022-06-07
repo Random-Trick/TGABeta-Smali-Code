@@ -41,7 +41,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 35411
+    .line 35863
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -56,7 +56,7 @@
 
     goto/16 :goto_8f
 
-    .line 35451
+    .line 35903
     :sswitch_6
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_channelParticipantBanned;
 
@@ -64,7 +64,7 @@
 
     goto/16 :goto_8f
 
-    .line 35487
+    .line 35939
     :sswitch_d
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_channelParticipantAdmin_layer103;
 
@@ -72,7 +72,7 @@
 
     goto/16 :goto_8f
 
-    .line 35475
+    .line 35927
     :sswitch_14
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_channelParticipantBanned_layer131;
 
@@ -80,7 +80,7 @@
 
     goto/16 :goto_8f
 
-    .line 35442
+    .line 35894
     :sswitch_1b
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_channelParticipantCreator_layer131;
 
@@ -88,7 +88,7 @@
 
     goto/16 :goto_8f
 
-    .line 35469
+    .line 35921
     :sswitch_22
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_channelParticipantSelf;
 
@@ -96,7 +96,7 @@
 
     goto/16 :goto_8f
 
-    .line 35454
+    .line 35906
     :sswitch_29
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_channelParticipantAdmin;
 
@@ -104,7 +104,7 @@
 
     goto/16 :goto_8f
 
-    .line 35460
+    .line 35912
     :sswitch_30
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_channelParticipantCreator;
 
@@ -112,7 +112,7 @@
 
     goto :goto_8f
 
-    .line 35472
+    .line 35924
     :sswitch_36
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_channelParticipantSelf_layer133;
 
@@ -120,7 +120,7 @@
 
     goto :goto_8f
 
-    .line 35433
+    .line 35885
     :sswitch_3c
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_channelParticipantBanned_layer92;
 
@@ -128,7 +128,7 @@
 
     goto :goto_8f
 
-    .line 35484
+    .line 35936
     :sswitch_42
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_channelParticipantBanned_layer125;
 
@@ -136,7 +136,7 @@
 
     goto :goto_8f
 
-    .line 35481
+    .line 35933
     :sswitch_48
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_channelParticipantLeft;
 
@@ -144,7 +144,7 @@
 
     goto :goto_8f
 
-    .line 35436
+    .line 35888
     :sswitch_4e
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_channelParticipant_layer131;
 
@@ -152,7 +152,7 @@
 
     goto :goto_8f
 
-    .line 35445
+    .line 35897
     :sswitch_54
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_channelParticipantCreator_layer103;
 
@@ -160,7 +160,7 @@
 
     goto :goto_8f
 
-    .line 35463
+    .line 35915
     :sswitch_5a
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_channelParticipantAdmin_layer131;
 
@@ -168,7 +168,7 @@
 
     goto :goto_8f
 
-    .line 35490
+    .line 35942
     :sswitch_60
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_channelParticipantLeft_layer125;
 
@@ -176,7 +176,7 @@
 
     goto :goto_8f
 
-    .line 35457
+    .line 35909
     :sswitch_66
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_channelParticipant;
 
@@ -184,7 +184,7 @@
 
     goto :goto_8f
 
-    .line 35466
+    .line 35918
     :sswitch_6c
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_channelParticipantAdmin_layer92;
 
@@ -192,7 +192,7 @@
 
     goto :goto_8f
 
-    .line 35448
+    .line 35900
     :sswitch_72
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_channelParticipantSelf_layer131;
 
@@ -200,7 +200,7 @@
 
     goto :goto_8f
 
-    .line 35478
+    .line 35930
     :sswitch_78
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_channelParticipantEditor_layer67;
 
@@ -208,7 +208,7 @@
 
     goto :goto_8f
 
-    .line 35493
+    .line 35945
     :sswitch_7e
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_channelParticipantModerator_layer67;
 
@@ -216,7 +216,7 @@
 
     goto :goto_8f
 
-    .line 35496
+    .line 35948
     :sswitch_84
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_channelParticipantKicked_layer67;
 
@@ -224,7 +224,7 @@
 
     goto :goto_8f
 
-    .line 35439
+    .line 35891
     :sswitch_8a
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_channelParticipantCreator_layer118;
 
@@ -237,7 +237,7 @@
 
     goto :goto_aa
 
-    .line 35500
+    .line 35952
     :cond_94
     new-instance p0, Ljava/lang/RuntimeException;
 
@@ -267,7 +267,7 @@
     :goto_aa
     if-eqz v0, :cond_af
 
-    .line 35503
+    .line 35955
     invoke-virtual {v0, p0, p2}, Lorg/telegram/tgnet/TLObject;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
     :cond_af

@@ -36,7 +36,7 @@
 .method static constructor <clinit>()V
     .registers 7
 
-    .line 9363
+    .line 9423
     new-instance v0, Lorg/telegram/ui/Components/ChatActivityEnterView$BotMenuButtonType;
 
     const-string v1, "NO_BUTTON"
@@ -47,7 +47,7 @@
 
     sput-object v0, Lorg/telegram/ui/Components/ChatActivityEnterView$BotMenuButtonType;->NO_BUTTON:Lorg/telegram/ui/Components/ChatActivityEnterView$BotMenuButtonType;
 
-    .line 9364
+    .line 9424
     new-instance v1, Lorg/telegram/ui/Components/ChatActivityEnterView$BotMenuButtonType;
 
     const-string v3, "COMMANDS"
@@ -58,7 +58,7 @@
 
     sput-object v1, Lorg/telegram/ui/Components/ChatActivityEnterView$BotMenuButtonType;->COMMANDS:Lorg/telegram/ui/Components/ChatActivityEnterView$BotMenuButtonType;
 
-    .line 9365
+    .line 9425
     new-instance v3, Lorg/telegram/ui/Components/ChatActivityEnterView$BotMenuButtonType;
 
     const-string v5, "WEB_VIEW"
@@ -79,7 +79,7 @@
 
     aput-object v3, v5, v6
 
-    .line 9362
+    .line 9422
     sput-object v5, Lorg/telegram/ui/Components/ChatActivityEnterView$BotMenuButtonType;->$VALUES:[Lorg/telegram/ui/Components/ChatActivityEnterView$BotMenuButtonType;
 
     return-void
@@ -93,7 +93,7 @@
         }
     .end annotation
 
-    .line 9362
+    .line 9422
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -102,7 +102,7 @@
 .method public static valueOf(Ljava/lang/String;)Lorg/telegram/ui/Components/ChatActivityEnterView$BotMenuButtonType;
     .registers 2
 
-    .line 9362
+    .line 9422
     const-class v0, Lorg/telegram/ui/Components/ChatActivityEnterView$BotMenuButtonType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -117,7 +117,7 @@
 .method public static values()[Lorg/telegram/ui/Components/ChatActivityEnterView$BotMenuButtonType;
     .registers 1
 
-    .line 9362
+    .line 9422
     sget-object v0, Lorg/telegram/ui/Components/ChatActivityEnterView$BotMenuButtonType;->$VALUES:[Lorg/telegram/ui/Components/ChatActivityEnterView$BotMenuButtonType;
 
     invoke-virtual {v0}, [Lorg/telegram/ui/Components/ChatActivityEnterView$BotMenuButtonType;->clone()Ljava/lang/Object;

@@ -295,7 +295,7 @@
 
     const-string p2, "PollTapToSelect"
 
-    const v0, 0x7f0e0da9
+    const v0, 0x7f0e0e39
 
     .line 357
     invoke-static {p2, v0}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -849,7 +849,7 @@
 
     invoke-direct {v1, v2}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    const v2, 0x7f0e0343
+    const v2, 0x7f0e037f
 
     const-string v3, "CancelPollAlertTitle"
 
@@ -860,7 +860,7 @@
 
     invoke-virtual {v1, v2}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const v2, 0x7f0e0342
+    const v2, 0x7f0e037e
 
     const-string v3, "CancelPollAlertText"
 
@@ -871,7 +871,7 @@
 
     invoke-virtual {v1, v2}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const v2, 0x7f0e0c3f
+    const v2, 0x7f0e0cc9
 
     const-string v3, "PassportDiscard"
 
@@ -886,7 +886,7 @@
 
     invoke-virtual {v1, v2, v3}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const v2, 0x7f0e0331
+    const v2, 0x7f0e036d
 
     const-string v3, "Cancel"
 
@@ -3722,7 +3722,7 @@
 
     iget-object p1, p1, Lorg/telegram/ui/Components/ChatAttachAlert;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
-    const v0, 0x7f0e0a97
+    const v0, 0x7f0e0b1e
 
     const-string v1, "NewQuiz"
 
@@ -3740,7 +3740,7 @@
 
     iget-object p1, p1, Lorg/telegram/ui/Components/ChatAttachAlert;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
-    const v0, 0x7f0e0a96
+    const v0, 0x7f0e0b1d
 
     const-string v1, "NewPoll"
 

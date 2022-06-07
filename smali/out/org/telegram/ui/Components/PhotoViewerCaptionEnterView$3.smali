@@ -25,7 +25,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView;)V
     .registers 2
 
-    .line 554
+    .line 553
     iput-object p1, p0, Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView$3;->this$0:Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -116,7 +116,7 @@
 .method public onBackspace()Z
     .registers 5
 
-    .line 557
+    .line 556
     iget-object v0, p0, Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView$3;->this$0:Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView;->access$200(Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView;)Lorg/telegram/ui/Components/EditTextCaption;
@@ -133,7 +133,7 @@
 
     return v1
 
-    .line 560
+    .line 559
     :cond_e
     iget-object v0, p0, Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView$3;->this$0:Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView;
 
@@ -165,7 +165,7 @@
 .method public onEmojiSelected(Ljava/lang/String;)V
     .registers 6
 
-    .line 566
+    .line 565
     iget-object v0, p0, Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView$3;->this$0:Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView;->access$200(Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView;)Lorg/telegram/ui/Components/EditTextCaption;
@@ -182,7 +182,7 @@
 
     const/4 v0, 0x0
 
-    .line 571
+    .line 570
     :cond_e
     :try_start_e
     iget-object v2, p0, Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView$3;->this$0:Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView;
@@ -191,7 +191,7 @@
 
     invoke-static {v2, v3}, Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView;->access$402(Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView;Z)Z
 
-    .line 572
+    .line 571
     iget-object v2, p0, Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView$3;->this$0:Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView;
 
     invoke-static {v2}, Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView;->access$200(Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView;)Lorg/telegram/ui/Components/EditTextCaption;
@@ -216,7 +216,7 @@
 
     move-result-object p1
 
-    .line 573
+    .line 572
     iget-object v2, p0, Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView$3;->this$0:Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView;
 
     invoke-static {v2}, Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView;->access$200(Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView;)Lorg/telegram/ui/Components/EditTextCaption;
@@ -239,14 +239,14 @@
 
     invoke-virtual {v2, v3}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
-    .line 574
+    .line 573
     invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
 
     move-result p1
 
     add-int/2addr v0, p1
 
-    .line 575
+    .line 574
     iget-object p1, p0, Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView$3;->this$0:Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView;->access$200(Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView;)Lorg/telegram/ui/Components/EditTextCaption;
@@ -268,13 +268,13 @@
     :catch_54
     move-exception p1
 
-    .line 577
+    .line 576
     :try_start_55
     invoke-static {p1}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
     :try_end_58
     .catchall {:try_start_55 .. :try_end_58} :catchall_52
 
-    .line 579
+    .line 578
     :goto_58
     iget-object p1, p0, Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView$3;->this$0:Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView;
 
@@ -287,7 +287,7 @@
 
     invoke-static {v0, v1}, Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView;->access$402(Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView;Z)Z
 
-    .line 580
+    .line 579
     throw p1
 .end method
 

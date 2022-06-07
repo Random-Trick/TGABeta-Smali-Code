@@ -24,7 +24,7 @@
 .method private constructor <init>()V
     .registers 1
 
-    .line 110
+    .line 111
     invoke-direct {p0}, Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;-><init>()V
 
     return-void
@@ -33,7 +33,7 @@
 .method synthetic constructor <init>(Lorg/telegram/ui/FilterUsersActivity$1;)V
     .registers 2
 
-    .line 110
+    .line 111
     invoke-direct {p0}, Lorg/telegram/ui/FilterUsersActivity$ItemDecoration;-><init>()V
 
     return-void
@@ -44,12 +44,12 @@
 .method public getItemOffsets(Landroid/graphics/Rect;Landroid/view/View;Landroidx/recyclerview/widget/RecyclerView;Landroidx/recyclerview/widget/RecyclerView$State;)V
     .registers 5
 
-    .line 138
+    .line 139
     invoke-super {p0, p1, p2, p3, p4}, Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;->getItemOffsets(Landroid/graphics/Rect;Landroid/view/View;Landroidx/recyclerview/widget/RecyclerView;Landroidx/recyclerview/widget/RecyclerView$State;)V
 
     const/4 p2, 0x1
 
-    .line 143
+    .line 144
     iput p2, p1, Landroid/graphics/Rect;->top:I
 
     return-void
@@ -58,12 +58,12 @@
 .method public onDraw(Landroid/graphics/Canvas;Landroidx/recyclerview/widget/RecyclerView;Landroidx/recyclerview/widget/RecyclerView$State;)V
     .registers 16
 
-    .line 121
+    .line 122
     invoke-virtual {p2}, Landroid/view/ViewGroup;->getWidth()I
 
     move-result p3
 
-    .line 123
+    .line 124
     invoke-virtual {p2}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result v0
@@ -81,7 +81,7 @@
     :goto_f
     if-ge v2, v0, :cond_5d
 
-    .line 125
+    .line 126
     invoke-virtual {p2, v2}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v3
@@ -92,7 +92,7 @@
 
     add-int/lit8 v4, v2, 0x1
 
-    .line 126
+    .line 127
     invoke-virtual {p2, v4}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v4
@@ -102,13 +102,13 @@
     :cond_20
     const/4 v4, 0x0
 
-    .line 127
+    .line 128
     :goto_21
     invoke-virtual {p2, v3}, Landroidx/recyclerview/widget/RecyclerView;->getChildAdapterPosition(Landroid/view/View;)I
 
     move-result v5
 
-    .line 128
+    .line 129
     iget v6, p0, Lorg/telegram/ui/FilterUsersActivity$ItemDecoration;->skipRows:I
 
     if-lt v5, v6, :cond_5a
@@ -123,13 +123,13 @@
 
     goto :goto_5a
 
-    .line 131
+    .line 132
     :cond_32
     invoke-virtual {v3}, Landroid/view/View;->getBottom()I
 
     move-result v3
 
-    .line 132
+    .line 133
     sget-boolean v4, Lorg/telegram/messenger/LocaleController;->isRTL:Z
 
     const/high16 v5, 0x42900000    # 72.0f

@@ -18,7 +18,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter;Landroid/content/Context;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)V
     .registers 4
 
-    .line 2429
+    .line 2442
     invoke-direct {p0, p2, p3}, Lorg/telegram/ui/Components/RecyclerListView;-><init>(Landroid/content/Context;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)V
 
     return-void
@@ -29,7 +29,7 @@
 .method public onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
     .registers 5
 
-    .line 2432
+    .line 2445
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getParent()Landroid/view/ViewParent;
 
     move-result-object v0
@@ -46,7 +46,7 @@
 
     if-eqz v0, :cond_2b
 
-    .line 2433
+    .line 2446
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getParent()Landroid/view/ViewParent;
 
     move-result-object v0
@@ -80,7 +80,7 @@
     :goto_28
     invoke-interface {v0, v2}, Landroid/view/ViewParent;->requestDisallowInterceptTouchEvent(Z)V
 
-    .line 2435
+    .line 2448
     :cond_2b
     invoke-super {p0, p1}, Lorg/telegram/ui/Components/RecyclerListView;->onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
 

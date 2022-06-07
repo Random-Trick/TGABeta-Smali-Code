@@ -27,7 +27,7 @@
 .method constructor <init>(Lorg/telegram/ui/ActionBar/ActionBarMenuItem;I)V
     .registers 3
 
-    .line 933
+    .line 927
     iput-object p1, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuItem$5;->this$0:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
     iput p2, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuItem$5;->val$selectedAccount:I
@@ -42,7 +42,7 @@
 .method public onTransitionCancel(Landroid/transition/Transition;)V
     .registers 3
 
-    .line 946
+    .line 940
     iget p1, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuItem$5;->val$selectedAccount:I
 
     invoke-static {p1}, Lorg/telegram/messenger/NotificationCenter;->getInstance(I)Lorg/telegram/messenger/NotificationCenter;
@@ -63,7 +63,7 @@
 .method public onTransitionEnd(Landroid/transition/Transition;)V
     .registers 3
 
-    .line 941
+    .line 935
     iget p1, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuItem$5;->val$selectedAccount:I
 
     invoke-static {p1}, Lorg/telegram/messenger/NotificationCenter;->getInstance(I)Lorg/telegram/messenger/NotificationCenter;
@@ -96,7 +96,7 @@
 .method public onTransitionStart(Landroid/transition/Transition;)V
     .registers 5
 
-    .line 936
+    .line 930
     iget-object p1, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuItem$5;->this$0:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
     iget v0, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuItem$5;->val$selectedAccount:I

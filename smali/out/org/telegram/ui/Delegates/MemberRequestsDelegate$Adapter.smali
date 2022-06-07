@@ -491,7 +491,7 @@
 
     move-result-object p1
 
-    const v0, 0x7f07012d
+    const v0, 0x7f0700fc
 
     const-string v1, "windowBackgroundGrayShadow"
 

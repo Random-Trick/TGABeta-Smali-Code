@@ -393,7 +393,7 @@
 .end method
 
 .method public setImage(Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Landroid/graphics/drawable/Drawable;Landroid/graphics/Bitmap;Ljava/lang/String;ILjava/lang/Object;)V
-    .registers 23
+    .registers 24
 
     move-object/from16 v0, p6
 
@@ -421,29 +421,31 @@
     :goto_10
     iget-object v3, v0, Lorg/telegram/ui/Components/BackupImageView;->imageReceiver:Lorg/telegram/messenger/ImageReceiver;
 
-    const/4 v12, 0x0
+    move/from16 v1, p8
+
+    int-to-long v9, v1
+
+    const/4 v13, 0x0
 
     move-object v4, p1
 
-    move-object v5, p2
+    move-object/from16 v5, p2
 
     move-object/from16 v6, p3
 
     move-object/from16 v7, p4
 
-    move/from16 v9, p8
+    move-object/from16 v11, p7
 
-    move-object/from16 v10, p7
+    move-object/from16 v12, p9
 
-    move-object/from16 v11, p9
-
-    invoke-virtual/range {v3 .. v12}, Lorg/telegram/messenger/ImageReceiver;->setImage(Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Landroid/graphics/drawable/Drawable;ILjava/lang/String;Ljava/lang/Object;I)V
+    invoke-virtual/range {v3 .. v13}, Lorg/telegram/messenger/ImageReceiver;->setImage(Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Landroid/graphics/drawable/Drawable;JLjava/lang/String;Ljava/lang/Object;I)V
 
     return-void
 .end method
 
 .method public setImage(Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Landroid/graphics/drawable/Drawable;Ljava/lang/Object;)V
-    .registers 20
+    .registers 21
 
     move-object v0, p0
 
@@ -454,15 +456,15 @@
 
     const/4 v7, 0x0
 
-    const/4 v9, 0x0
+    const-wide/16 v9, 0x0
 
-    const/4 v10, 0x0
+    const/4 v11, 0x0
 
-    const/4 v12, 0x1
+    const/4 v13, 0x1
 
     move-object v2, p1
 
-    move-object v3, p2
+    move-object/from16 v3, p2
 
     move-object/from16 v4, p3
 
@@ -470,15 +472,15 @@
 
     move-object/from16 v8, p5
 
-    move-object/from16 v11, p6
+    move-object/from16 v12, p6
 
-    invoke-virtual/range {v1 .. v12}, Lorg/telegram/messenger/ImageReceiver;->setImage(Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Landroid/graphics/drawable/Drawable;ILjava/lang/String;Ljava/lang/Object;I)V
+    invoke-virtual/range {v1 .. v13}, Lorg/telegram/messenger/ImageReceiver;->setImage(Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Landroid/graphics/drawable/Drawable;JLjava/lang/String;Ljava/lang/Object;I)V
 
     return-void
 .end method
 
-.method public setImage(Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Ljava/lang/String;IILjava/lang/Object;)V
-    .registers 20
+.method public setImage(Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Ljava/lang/String;JILjava/lang/Object;)V
+    .registers 22
 
     move-object v0, p0
 
@@ -493,17 +495,17 @@
 
     move-object v4, p3
 
-    move-object v5, p4
+    move-object/from16 v5, p4
 
-    move/from16 v7, p6
+    move-wide/from16 v7, p6
 
-    move-object/from16 v8, p5
+    move-object/from16 v9, p5
 
-    move-object/from16 v9, p8
+    move-object/from16 v10, p9
 
-    move/from16 v10, p7
+    move/from16 v11, p8
 
-    invoke-virtual/range {v1 .. v10}, Lorg/telegram/messenger/ImageReceiver;->setImage(Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Landroid/graphics/drawable/Drawable;ILjava/lang/String;Ljava/lang/Object;I)V
+    invoke-virtual/range {v1 .. v11}, Lorg/telegram/messenger/ImageReceiver;->setImage(Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Landroid/graphics/drawable/Drawable;JLjava/lang/String;Ljava/lang/Object;I)V
 
     return-void
 .end method
@@ -562,39 +564,43 @@
 .end method
 
 .method public setImageMedia(Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Landroid/graphics/Bitmap;IILjava/lang/Object;)V
-    .registers 24
+    .registers 25
 
     move-object/from16 v0, p5
 
     const/4 v1, 0x0
 
-    if-eqz v0, :cond_d
+    if-eqz v0, :cond_e
 
     .line 84
     new-instance v2, Landroid/graphics/drawable/BitmapDrawable;
 
     invoke-direct {v2, v1, v0}, Landroid/graphics/drawable/BitmapDrawable;-><init>(Landroid/content/res/Resources;Landroid/graphics/Bitmap;)V
 
-    move-object v0, p0
+    move-object/from16 v0, p0
 
     move-object v10, v2
 
-    goto :goto_f
+    goto :goto_11
 
-    :cond_d
-    move-object v0, p0
+    :cond_e
+    move-object/from16 v0, p0
 
     move-object v10, v1
 
     .line 86
-    :goto_f
+    :goto_11
     iget-object v3, v0, Lorg/telegram/ui/Components/BackupImageView;->imageReceiver:Lorg/telegram/messenger/ImageReceiver;
 
     const/4 v8, 0x0
 
     const/4 v9, 0x0
 
-    const/4 v12, 0x0
+    move/from16 v1, p6
+
+    int-to-long v11, v1
+
+    const/4 v13, 0x0
 
     move-object/from16 v4, p1
 
@@ -604,30 +610,32 @@
 
     move-object/from16 v7, p4
 
-    move/from16 v11, p6
+    move-object/from16 v14, p8
 
-    move-object/from16 v13, p8
+    move/from16 v15, p7
 
-    move/from16 v14, p7
-
-    invoke-virtual/range {v3 .. v14}, Lorg/telegram/messenger/ImageReceiver;->setImage(Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Landroid/graphics/drawable/Drawable;ILjava/lang/String;Ljava/lang/Object;I)V
+    invoke-virtual/range {v3 .. v15}, Lorg/telegram/messenger/ImageReceiver;->setImage(Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Landroid/graphics/drawable/Drawable;JLjava/lang/String;Ljava/lang/Object;I)V
 
     return-void
 .end method
 
 .method public setImageMedia(Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Ljava/lang/String;IILjava/lang/Object;)V
-    .registers 24
+    .registers 25
 
     move-object v0, p0
 
     .line 113
     iget-object v1, v0, Lorg/telegram/ui/Components/BackupImageView;->imageReceiver:Lorg/telegram/messenger/ImageReceiver;
 
+    move/from16 v2, p8
+
+    int-to-long v9, v2
+
     const/4 v8, 0x0
 
     move-object v2, p1
 
-    move-object v3, p2
+    move-object/from16 v3, p2
 
     move-object/from16 v4, p3
 
@@ -637,15 +645,13 @@
 
     move-object/from16 v7, p6
 
-    move/from16 v9, p8
+    move-object/from16 v11, p7
 
-    move-object/from16 v10, p7
+    move-object/from16 v12, p10
 
-    move-object/from16 v11, p10
+    move/from16 v13, p9
 
-    move/from16 v12, p9
-
-    invoke-virtual/range {v1 .. v12}, Lorg/telegram/messenger/ImageReceiver;->setImage(Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Landroid/graphics/drawable/Drawable;ILjava/lang/String;Ljava/lang/Object;I)V
+    invoke-virtual/range {v1 .. v13}, Lorg/telegram/messenger/ImageReceiver;->setImage(Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Landroid/graphics/drawable/Drawable;JLjava/lang/String;Ljava/lang/Object;I)V
 
     return-void
 .end method
@@ -668,41 +674,6 @@
     invoke-virtual {v0, p1}, Lorg/telegram/messenger/ImageReceiver;->setImageBitmap(Landroid/graphics/drawable/Drawable;)V
 
     .line 123
-    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
-
-    return-void
-.end method
-
-.method public setImageResource(II)V
-    .registers 5
-
-    .line 127
-    invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_14
-
-    .line 129
-    new-instance v0, Landroid/graphics/PorterDuffColorFilter;
-
-    sget-object v1, Landroid/graphics/PorterDuff$Mode;->MULTIPLY:Landroid/graphics/PorterDuff$Mode;
-
-    invoke-direct {v0, p2, v1}, Landroid/graphics/PorterDuffColorFilter;-><init>(ILandroid/graphics/PorterDuff$Mode;)V
-
-    invoke-virtual {p1, v0}, Landroid/graphics/drawable/Drawable;->setColorFilter(Landroid/graphics/ColorFilter;)V
-
-    .line 131
-    :cond_14
-    iget-object p2, p0, Lorg/telegram/ui/Components/BackupImageView;->imageReceiver:Lorg/telegram/messenger/ImageReceiver;
-
-    invoke-virtual {p2, p1}, Lorg/telegram/messenger/ImageReceiver;->setImageBitmap(Landroid/graphics/drawable/Drawable;)V
-
-    .line 132
     invoke-virtual {p0}, Landroid/view/View;->invalidate()V
 
     return-void

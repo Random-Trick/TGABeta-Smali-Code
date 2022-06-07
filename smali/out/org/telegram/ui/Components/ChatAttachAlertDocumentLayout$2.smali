@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout;)V
     .registers 2
 
-    .line 225
+    .line 226
     iput-object p1, p0, Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout$2;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout;
 
     invoke-direct {p0}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem$ActionBarMenuItemSearchListener;-><init>()V
@@ -35,14 +35,14 @@
 .method public onSearchCollapse()V
     .registers 4
 
-    .line 235
+    .line 236
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout$2;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout;
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout;->access$502(Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout;Z)Z
 
-    .line 236
+    .line 237
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout$2;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout;->access$600(Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout;)Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
@@ -51,7 +51,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
-    .line 237
+    .line 238
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout$2;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout;->access$000(Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout;)Lorg/telegram/ui/Components/RecyclerListView;
@@ -70,7 +70,7 @@
 
     if-eq v0, v1, :cond_30
 
-    .line 238
+    .line 239
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout$2;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout;->access$000(Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout;)Lorg/telegram/ui/Components/RecyclerListView;
@@ -85,7 +85,7 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/RecyclerListView;->setAdapter(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
-    .line 240
+    .line 241
     :cond_30
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout$2;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout;
 
@@ -95,7 +95,7 @@
 
     invoke-virtual {v0}, Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout$ListAdapter;->notifyDataSetChanged()V
 
-    .line 241
+    .line 242
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout$2;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout;->access$900(Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout;)Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout$SearchAdapter;
@@ -114,14 +114,14 @@
 .method public onSearchExpand()V
     .registers 4
 
-    .line 228
+    .line 229
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout$2;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout;
 
     const/4 v1, 0x1
 
     invoke-static {v0, v1}, Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout;->access$502(Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout;Z)Z
 
-    .line 229
+    .line 230
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout$2;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout;->access$600(Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout;)Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
@@ -132,7 +132,7 @@
 
     invoke-virtual {v0, v2}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
-    .line 230
+    .line 231
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout$2;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout;
 
     iget-object v2, v0, Lorg/telegram/ui/Components/ChatAttachAlert$AttachAlertLayout;->parentAlert:Lorg/telegram/ui/Components/ChatAttachAlert;
@@ -153,7 +153,7 @@
 .method public onSearchFilterCleared(Lorg/telegram/ui/Adapters/FiltersView$MediaFilterData;)V
     .registers 4
 
-    .line 251
+    .line 252
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout$2;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout;->access$900(Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout;)Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout$SearchAdapter;
@@ -162,7 +162,7 @@
 
     invoke-virtual {v0, p1}, Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout$SearchAdapter;->removeSearchFilter(Lorg/telegram/ui/Adapters/FiltersView$MediaFilterData;)V
 
-    .line 252
+    .line 253
     iget-object p1, p0, Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout$2;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout;->access$900(Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout;)Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout$SearchAdapter;
@@ -191,7 +191,7 @@
 
     invoke-virtual {p1, v0, v1}, Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout$SearchAdapter;->search(Ljava/lang/String;Z)V
 
-    .line 253
+    .line 254
     iget-object p1, p0, Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout$2;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout;->access$900(Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout;)Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout$SearchAdapter;
@@ -210,7 +210,7 @@
 .method public onTextChanged(Landroid/widget/EditText;)V
     .registers 4
 
-    .line 246
+    .line 247
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout$2;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout;->access$900(Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout;)Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout$SearchAdapter;

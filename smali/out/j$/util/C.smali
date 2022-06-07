@@ -1,120 +1,120 @@
-.class Lj$/util/C;
+.class final Lj$/util/C;
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lj$/util/n;
-.implements Lj$/util/function/f;
-.implements Lj$/util/Iterator;
+.implements Lj$/util/t;
 
 
 # instance fields
-.field a:Z
+.field private final a:[D
 
-.field b:D
+.field private b:I
 
-.field final synthetic c:Lj$/util/u;
+.field private final c:I
+
+.field private final d:I
 
 
 # direct methods
-.method constructor <init>(Lj$/util/u;)V
-    .registers 2
-
-    iput-object p1, p0, Lj$/util/C;->c:Lj$/util/u;
+.method public constructor <init>([DIII)V
+    .registers 5
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x0
+    iput-object p1, p0, Lj$/util/C;->a:[D
 
-    iput-boolean p1, p0, Lj$/util/C;->a:Z
+    iput p2, p0, Lj$/util/C;->b:I
+
+    iput p3, p0, Lj$/util/C;->c:I
+
+    or-int/lit8 p1, p4, 0x40
+
+    or-int/lit16 p1, p1, 0x4000
+
+    iput p1, p0, Lj$/util/C;->d:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public accept(D)V
-    .registers 4
+.method public synthetic b(Lj$/util/function/Consumer;)Z
+    .registers 2
 
-    const/4 v0, 0x1
+    invoke-static {p0, p1}, Lj$/util/a;->j(Lj$/util/t;Lj$/util/function/Consumer;)Z
 
-    iput-boolean v0, p0, Lj$/util/C;->a:Z
+    move-result p1
 
-    iput-wide p1, p0, Lj$/util/C;->b:D
+    return p1
+.end method
 
-    return-void
+.method public characteristics()I
+    .registers 2
+
+    iget v0, p0, Lj$/util/C;->d:I
+
+    return v0
 .end method
 
 .method public e(Lj$/util/function/f;)V
-    .registers 4
+    .registers 7
 
-    .line 1
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    :goto_3
-    invoke-virtual {p0}, Lj$/util/C;->hasNext()Z
+    iget-object v0, p0, Lj$/util/C;->a:[D
 
-    move-result v0
+    array-length v1, v0
 
-    if-eqz v0, :cond_11
+    iget v2, p0, Lj$/util/C;->c:I
 
-    invoke-virtual {p0}, Lj$/util/C;->nextDouble()D
+    if-lt v1, v2, :cond_1b
 
-    move-result-wide v0
+    iget v1, p0, Lj$/util/C;->b:I
 
-    invoke-interface {p1, v0, v1}, Lj$/util/function/f;->accept(D)V
+    if-ltz v1, :cond_1b
 
-    goto :goto_3
+    iput v2, p0, Lj$/util/C;->b:I
 
-    :cond_11
+    if-ge v1, v2, :cond_1b
+
+    :cond_12
+    aget-wide v3, v0, v1
+
+    invoke-interface {p1, v3, v4}, Lj$/util/function/f;->accept(D)V
+
+    add-int/lit8 v1, v1, 0x1
+
+    if-lt v1, v2, :cond_12
+
+    :cond_1b
     return-void
 .end method
 
-.method public forEachRemaining(Lj$/util/function/Consumer;)V
+.method public estimateSize()J
     .registers 3
 
-    .line 1
-    instance-of v0, p1, Lj$/util/function/f;
+    iget v0, p0, Lj$/util/C;->c:I
 
-    if-eqz v0, :cond_a
+    iget v1, p0, Lj$/util/C;->b:I
 
-    check-cast p1, Lj$/util/function/f;
+    sub-int/2addr v0, v1
 
-    invoke-virtual {p0, p1}, Lj$/util/C;->e(Lj$/util/function/f;)V
+    int-to-long v0, v0
 
-    goto :goto_19
+    return-wide v0
+.end method
 
-    :cond_a
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+.method public synthetic forEachRemaining(Lj$/util/function/Consumer;)V
+    .registers 2
 
-    sget-boolean v0, Lj$/util/P;->a:Z
+    invoke-static {p0, p1}, Lj$/util/a;->b(Lj$/util/t;Lj$/util/function/Consumer;)V
 
-    if-nez v0, :cond_1a
-
-    new-instance v0, Lj$/util/m;
-
-    invoke-direct {v0, p1}, Lj$/util/m;-><init>(Lj$/util/function/Consumer;)V
-
-    invoke-virtual {p0, v0}, Lj$/util/C;->e(Lj$/util/function/f;)V
-
-    :goto_19
     return-void
-
-    :cond_1a
-    const-class p1, Lj$/util/C;
-
-    const-string v0, "{0} calling PrimitiveIterator.OfDouble.forEachRemainingDouble(action::accept)"
-
-    invoke-static {p1, v0}, Lj$/util/P;->a(Ljava/lang/Class;Ljava/lang/String;)V
-
-    const/4 p1, 0x0
-
-    throw p1
 .end method
 
 .method public bridge synthetic forEachRemaining(Ljava/lang/Object;)V
     .registers 2
 
-    .line 2
     check-cast p1, Lj$/util/function/f;
 
     invoke-virtual {p0, p1}, Lj$/util/C;->e(Lj$/util/function/f;)V
@@ -122,116 +122,146 @@
     return-void
 .end method
 
-.method public hasNext()Z
+.method public getComparator()Ljava/util/Comparator;
     .registers 2
 
-    iget-boolean v0, p0, Lj$/util/C;->a:Z
-
-    if-nez v0, :cond_9
-
-    iget-object v0, p0, Lj$/util/C;->c:Lj$/util/u;
-
-    invoke-interface {v0, p0}, Lj$/util/u;->k(Lj$/util/function/f;)Z
-
-    :cond_9
-    iget-boolean v0, p0, Lj$/util/C;->a:Z
-
-    return v0
-.end method
-
-.method public j(Lj$/util/function/f;)Lj$/util/function/f;
-    .registers 3
+    const/4 v0, 0x4
 
     .line 1
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v0, Lj$/util/function/e;
-
-    invoke-direct {v0, p0, p1}, Lj$/util/function/e;-><init>(Lj$/util/function/f;Lj$/util/function/f;)V
-
-    return-object v0
-.end method
-
-.method public next()Ljava/lang/Double;
-    .registers 3
-
-    .line 1
-    sget-boolean v0, Lj$/util/P;->a:Z
-
-    if-nez v0, :cond_d
-
-    invoke-virtual {p0}, Lj$/util/C;->nextDouble()D
-
-    move-result-wide v0
-
-    invoke-static {v0, v1}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
-
-    move-result-object v0
-
-    return-object v0
-
-    :cond_d
-    const-class v0, Lj$/util/C;
-
-    const-string v1, "{0} calling PrimitiveIterator.OfDouble.nextLong()"
-
-    invoke-static {v0, v1}, Lj$/util/P;->a(Ljava/lang/Class;Ljava/lang/String;)V
-
-    const/4 v0, 0x0
-
-    throw v0
-.end method
-
-.method public bridge synthetic next()Ljava/lang/Object;
-    .registers 2
-
-    .line 2
-    invoke-virtual {p0}, Lj$/util/C;->next()Ljava/lang/Double;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public nextDouble()D
-    .registers 3
-
-    iget-boolean v0, p0, Lj$/util/C;->a:Z
-
-    if-nez v0, :cond_11
-
-    invoke-virtual {p0}, Lj$/util/C;->hasNext()Z
+    invoke-static {p0, v0}, Lj$/util/a;->f(Lj$/util/u;I)Z
 
     move-result v0
 
-    if-eqz v0, :cond_b
+    if-eqz v0, :cond_9
 
-    goto :goto_11
-
-    :cond_b
-    new-instance v0, Ljava/util/NoSuchElementException;
-
-    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
-
-    throw v0
-
-    :cond_11
-    :goto_11
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lj$/util/C;->a:Z
+    return-object v0
 
-    iget-wide v0, p0, Lj$/util/C;->b:D
+    .line 2
+    :cond_9
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    invoke-direct {v0}, Ljava/lang/IllegalStateException;-><init>()V
+
+    throw v0
+.end method
+
+.method public synthetic getExactSizeIfKnown()J
+    .registers 3
+
+    invoke-static {p0}, Lj$/util/a;->e(Lj$/util/u;)J
+
+    move-result-wide v0
 
     return-wide v0
 .end method
 
-.method public synthetic remove()V
+.method public synthetic hasCharacteristics(I)Z
     .registers 2
 
-    invoke-static {p0}, Lj$/util/Iterator$-CC;->a(Ljava/util/Iterator;)V
+    invoke-static {p0, p1}, Lj$/util/a;->f(Lj$/util/u;I)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public k(Lj$/util/function/f;)Z
+    .registers 5
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget v0, p0, Lj$/util/C;->b:I
+
+    if-ltz v0, :cond_18
+
+    iget v1, p0, Lj$/util/C;->c:I
+
+    if-ge v0, v1, :cond_18
+
+    iget-object v1, p0, Lj$/util/C;->a:[D
+
+    add-int/lit8 v2, v0, 0x1
+
+    iput v2, p0, Lj$/util/C;->b:I
+
+    aget-wide v0, v1, v0
+
+    invoke-interface {p1, v0, v1}, Lj$/util/function/f;->accept(D)V
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_18
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public bridge synthetic tryAdvance(Ljava/lang/Object;)Z
+    .registers 2
+
+    check-cast p1, Lj$/util/function/f;
+
+    invoke-virtual {p0, p1}, Lj$/util/C;->k(Lj$/util/function/f;)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public trySplit()Lj$/util/t;
+    .registers 6
+
+    iget v0, p0, Lj$/util/C;->b:I
+
+    iget v1, p0, Lj$/util/C;->c:I
+
+    add-int/2addr v1, v0
+
+    ushr-int/lit8 v1, v1, 0x1
+
+    if-lt v0, v1, :cond_b
 
     const/4 v0, 0x0
 
-    throw v0
+    goto :goto_17
+
+    :cond_b
+    new-instance v2, Lj$/util/C;
+
+    iget-object v3, p0, Lj$/util/C;->a:[D
+
+    iput v1, p0, Lj$/util/C;->b:I
+
+    iget v4, p0, Lj$/util/C;->d:I
+
+    invoke-direct {v2, v3, v0, v1, v4}, Lj$/util/C;-><init>([DIII)V
+
+    move-object v0, v2
+
+    :goto_17
+    return-object v0
+.end method
+
+.method public bridge synthetic trySplit()Lj$/util/u;
+    .registers 2
+
+    invoke-virtual {p0}, Lj$/util/C;->trySplit()Lj$/util/t;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public bridge synthetic trySplit()Lj$/util/w;
+    .registers 2
+
+    invoke-virtual {p0}, Lj$/util/C;->trySplit()Lj$/util/t;
+
+    move-result-object v0
+
+    return-object v0
 .end method

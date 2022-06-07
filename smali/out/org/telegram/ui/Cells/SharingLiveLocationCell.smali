@@ -1235,7 +1235,7 @@
 
     move-result-object v1
 
-    const v3, 0x7f07034d
+    const v3, 0x7f070365
 
     invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -1502,7 +1502,7 @@
     .line 202
     iget-object p1, p0, Lorg/telegram/ui/Cells/SharingLiveLocationCell;->distanceTextView:Lorg/telegram/ui/ActionBar/SimpleTextView;
 
-    const p2, 0x7f0e0958
+    const p2, 0x7f0e09df
 
     const-string p3, "Loading"
 

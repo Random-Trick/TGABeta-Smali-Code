@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lorg/telegram/ui/Components/AlertsCreator;->createSoundFrequencyPickerDialog(Landroid/content/Context;IILorg/telegram/ui/Components/AlertsCreator$SoundFrequencyDelegate;)Lorg/telegram/ui/ActionBar/BottomSheet$Builder;
+    value = Lorg/telegram/ui/Components/AlertsCreator;->createSoundFrequencyPickerDialog(Landroid/content/Context;IILorg/telegram/ui/Components/AlertsCreator$SoundFrequencyDelegate;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)Lorg/telegram/ui/ActionBar/BottomSheet$Builder;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,11 +15,11 @@
 
 
 # direct methods
-.method constructor <init>(Landroid/content/Context;)V
-    .registers 2
+.method constructor <init>(Landroid/content/Context;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)V
+    .registers 3
 
-    .line 2939
-    invoke-direct {p0, p1}, Lorg/telegram/ui/Components/NumberPicker;-><init>(Landroid/content/Context;)V
+    .line 2969
+    invoke-direct {p0, p1, p2}, Lorg/telegram/ui/Components/NumberPicker;-><init>(Landroid/content/Context;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)V
 
     return-void
 .end method
@@ -27,14 +27,18 @@
 
 # virtual methods
 .method protected getContentDescription(I)Ljava/lang/CharSequence;
-    .registers 3
+    .registers 4
 
     add-int/lit8 p1, p1, 0x1
 
-    const-string v0, "Times"
+    const/4 v0, 0x0
 
-    .line 2942
-    invoke-static {v0, p1}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    new-array v0, v0, [Ljava/lang/Object;
+
+    const-string v1, "Times"
+
+    .line 2972
+    invoke-static {v1, p1, v0}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
 

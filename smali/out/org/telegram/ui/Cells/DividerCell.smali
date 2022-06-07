@@ -8,12 +8,25 @@
 
 .field private paint:Landroid/graphics/Paint;
 
+.field private resourcesProvider:Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;
+
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
+    .registers 3
+
+    const/4 v0, 0x0
+
+    .line 29
+    invoke-direct {p0, p1, v0}, Lorg/telegram/ui/Cells/DividerCell;-><init>(Landroid/content/Context;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/content/Context;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)V
     .registers 4
 
-    .line 28
+    .line 33
     invoke-direct {p0, p1}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
     .line 25
@@ -23,20 +36,23 @@
 
     iput-object p1, p0, Lorg/telegram/ui/Cells/DividerCell;->paint:Landroid/graphics/Paint;
 
+    .line 34
+    iput-object p2, p0, Lorg/telegram/ui/Cells/DividerCell;->resourcesProvider:Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;
+
     const/high16 p1, 0x41000000    # 8.0f
 
-    .line 29
+    .line 35
     invoke-static {p1}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
-    move-result v0
+    move-result p2
 
     invoke-static {p1}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result p1
 
-    const/4 v1, 0x0
+    const/4 v0, 0x0
 
-    invoke-virtual {p0, v1, v0, v1, p1}, Landroid/view/View;->setPadding(IIII)V
+    invoke-virtual {p0, v0, p2, v0, p1}, Landroid/view/View;->setPadding(IIII)V
 
     return-void
 .end method
@@ -46,19 +62,21 @@
 .method protected onDraw(Landroid/graphics/Canvas;)V
     .registers 9
 
-    .line 39
+    .line 45
     iget-boolean v0, p0, Lorg/telegram/ui/Cells/DividerCell;->forceDarkTheme:Z
 
-    if-eqz v0, :cond_19
+    if-eqz v0, :cond_1b
 
-    .line 40
+    .line 46
     iget-object v0, p0, Lorg/telegram/ui/Cells/DividerCell;->paint:Landroid/graphics/Paint;
 
     const/high16 v1, -0x1000000
 
-    const-string v2, "voipgroup_dialogBackground"
+    iget-object v2, p0, Lorg/telegram/ui/Cells/DividerCell;->resourcesProvider:Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;
 
-    invoke-static {v2}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
+    const-string v3, "voipgroup_dialogBackground"
+
+    invoke-static {v3, v2}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)I
 
     move-result v2
 
@@ -70,22 +88,24 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    goto :goto_24
+    goto :goto_28
 
-    .line 42
-    :cond_19
+    .line 48
+    :cond_1b
     iget-object v0, p0, Lorg/telegram/ui/Cells/DividerCell;->paint:Landroid/graphics/Paint;
 
-    const-string v1, "divider"
+    iget-object v1, p0, Lorg/telegram/ui/Cells/DividerCell;->resourcesProvider:Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;
 
-    invoke-static {v1}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
+    const-string v2, "divider"
+
+    invoke-static {v2, v1}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)I
 
     move-result v1
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 45
-    :goto_24
+    .line 51
+    :goto_28
     invoke-virtual {p0}, Landroid/view/View;->getPaddingLeft()I
 
     move-result v0
@@ -128,7 +148,7 @@
 .method protected onMeasure(II)V
     .registers 4
 
-    .line 34
+    .line 40
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result p1
@@ -153,7 +173,7 @@
 .method public setForceDarkTheme(Z)V
     .registers 2
 
-    .line 49
+    .line 55
     iput-boolean p1, p0, Lorg/telegram/ui/Cells/DividerCell;->forceDarkTheme:Z
 
     return-void

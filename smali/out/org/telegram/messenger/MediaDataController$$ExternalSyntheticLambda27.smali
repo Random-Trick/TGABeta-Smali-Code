@@ -8,18 +8,22 @@
 # instance fields
 .field public final synthetic f$0:Lorg/telegram/messenger/MediaDataController;
 
-.field public final synthetic f$1:J
+.field public final synthetic f$1:I
+
+.field public final synthetic f$2:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(Lorg/telegram/messenger/MediaDataController;J)V
+.method public synthetic constructor <init>(Lorg/telegram/messenger/MediaDataController;IZ)V
     .registers 4
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lorg/telegram/messenger/MediaDataController$$ExternalSyntheticLambda27;->f$0:Lorg/telegram/messenger/MediaDataController;
 
-    iput-wide p2, p0, Lorg/telegram/messenger/MediaDataController$$ExternalSyntheticLambda27;->f$1:J
+    iput p2, p0, Lorg/telegram/messenger/MediaDataController$$ExternalSyntheticLambda27;->f$1:I
+
+    iput-boolean p3, p0, Lorg/telegram/messenger/MediaDataController$$ExternalSyntheticLambda27;->f$2:Z
 
     return-void
 .end method
@@ -31,9 +35,11 @@
 
     iget-object v0, p0, Lorg/telegram/messenger/MediaDataController$$ExternalSyntheticLambda27;->f$0:Lorg/telegram/messenger/MediaDataController;
 
-    iget-wide v1, p0, Lorg/telegram/messenger/MediaDataController$$ExternalSyntheticLambda27;->f$1:J
+    iget v1, p0, Lorg/telegram/messenger/MediaDataController$$ExternalSyntheticLambda27;->f$1:I
 
-    invoke-static {v0, v1, v2}, Lorg/telegram/messenger/MediaDataController;->$r8$lambda$eE1nDop_HlPDgMJG9loEaNEWDfE(Lorg/telegram/messenger/MediaDataController;J)V
+    iget-boolean v2, p0, Lorg/telegram/messenger/MediaDataController$$ExternalSyntheticLambda27;->f$2:Z
+
+    invoke-static {v0, v1, v2}, Lorg/telegram/messenger/MediaDataController;->$r8$lambda$P9ElZEEA3JgpsCXtwn5kEYZiMWE(Lorg/telegram/messenger/MediaDataController;IZ)V
 
     return-void
 .end method

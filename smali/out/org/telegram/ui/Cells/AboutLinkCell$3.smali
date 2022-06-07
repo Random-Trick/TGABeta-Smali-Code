@@ -41,7 +41,7 @@
 .method constructor <init>(Lorg/telegram/ui/Cells/AboutLinkCell;)V
     .registers 2
 
-    .line 368
+    .line 376
     iput-object p1, p0, Lorg/telegram/ui/Cells/AboutLinkCell$3;->this$0:Lorg/telegram/ui/Cells/AboutLinkCell;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -54,7 +54,7 @@
 
     if-nez p4, :cond_9
 
-    .line 390
+    .line 398
     iget-object p2, p0, Lorg/telegram/ui/Cells/AboutLinkCell$3;->this$0:Lorg/telegram/ui/Cells/AboutLinkCell;
 
     invoke-static {p2, p1}, Lorg/telegram/ui/Cells/AboutLinkCell;->access$1200(Lorg/telegram/ui/Cells/AboutLinkCell;Landroid/text/style/ClickableSpan;)V
@@ -66,10 +66,10 @@
 
     if-ne p4, p1, :cond_81
 
-    .line 392
+    .line 400
     invoke-static {p2}, Lorg/telegram/messenger/AndroidUtilities;->addToClipboard(Ljava/lang/CharSequence;)V
 
-    .line 393
+    .line 401
     sget p1, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 p3, 0x1f
@@ -78,7 +78,7 @@
 
     const-string p1, "@"
 
-    .line 394
+    .line 402
     invoke-virtual {p2, p1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result p1
@@ -87,7 +87,7 @@
 
     if-eqz p1, :cond_3b
 
-    .line 395
+    .line 403
     iget-object p1, p0, Lorg/telegram/ui/Cells/AboutLinkCell$3;->this$0:Lorg/telegram/ui/Cells/AboutLinkCell;
 
     invoke-static {p1}, Lorg/telegram/ui/Cells/AboutLinkCell;->access$1300(Lorg/telegram/ui/Cells/AboutLinkCell;)Lorg/telegram/ui/ActionBar/BaseFragment;
@@ -98,7 +98,7 @@
 
     move-result-object p1
 
-    const p2, 0x7f0e1254
+    const p2, 0x7f0e1321
 
     const-string p4, "UsernameCopied"
 
@@ -117,7 +117,7 @@
     :cond_3b
     const-string p1, "#"
 
-    .line 396
+    .line 404
     invoke-virtual {p2, p1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result p1
@@ -134,7 +134,7 @@
 
     goto :goto_67
 
-    .line 399
+    .line 407
     :cond_4c
     iget-object p1, p0, Lorg/telegram/ui/Cells/AboutLinkCell$3;->this$0:Lorg/telegram/ui/Cells/AboutLinkCell;
 
@@ -146,7 +146,7 @@
 
     move-result-object p1
 
-    const p2, 0x7f0e0930
+    const p2, 0x7f0e09b7
 
     const-string p4, "LinkCopied"
 
@@ -162,7 +162,7 @@
 
     goto :goto_81
 
-    .line 397
+    .line 405
     :cond_67
     :goto_67
     iget-object p1, p0, Lorg/telegram/ui/Cells/AboutLinkCell$3;->this$0:Lorg/telegram/ui/Cells/AboutLinkCell;
@@ -175,7 +175,7 @@
 
     move-result-object p1
 
-    const p2, 0x7f0e082d
+    const p2, 0x7f0e0887
 
     const-string p4, "HashtagCopied"
 
@@ -197,7 +197,7 @@
 .method private synthetic lambda$run$1(Landroid/content/DialogInterface;)V
     .registers 2
 
-    .line 404
+    .line 412
     iget-object p1, p0, Lorg/telegram/ui/Cells/AboutLinkCell$3;->this$0:Lorg/telegram/ui/Cells/AboutLinkCell;
 
     invoke-static {p1}, Lorg/telegram/ui/Cells/AboutLinkCell;->access$1100(Lorg/telegram/ui/Cells/AboutLinkCell;)V
@@ -210,7 +210,7 @@
 .method public run()V
     .registers 8
 
-    .line 371
+    .line 379
     iget-object v0, p0, Lorg/telegram/ui/Cells/AboutLinkCell$3;->this$0:Lorg/telegram/ui/Cells/AboutLinkCell;
 
     invoke-static {v0}, Lorg/telegram/ui/Cells/AboutLinkCell;->access$200(Lorg/telegram/ui/Cells/AboutLinkCell;)Lorg/telegram/ui/Components/LinkSpanDrawable;
@@ -219,7 +219,7 @@
 
     if-eqz v0, :cond_ab
 
-    .line 373
+    .line 381
     iget-object v0, p0, Lorg/telegram/ui/Cells/AboutLinkCell$3;->this$0:Lorg/telegram/ui/Cells/AboutLinkCell;
 
     invoke-static {v0}, Lorg/telegram/ui/Cells/AboutLinkCell;->access$200(Lorg/telegram/ui/Cells/AboutLinkCell;)Lorg/telegram/ui/Components/LinkSpanDrawable;
@@ -234,7 +234,7 @@
 
     if-eqz v0, :cond_27
 
-    .line 374
+    .line 382
     iget-object v0, p0, Lorg/telegram/ui/Cells/AboutLinkCell$3;->this$0:Lorg/telegram/ui/Cells/AboutLinkCell;
 
     invoke-static {v0}, Lorg/telegram/ui/Cells/AboutLinkCell;->access$200(Lorg/telegram/ui/Cells/AboutLinkCell;)Lorg/telegram/ui/Components/LinkSpanDrawable;
@@ -253,7 +253,7 @@
 
     goto :goto_54
 
-    .line 375
+    .line 383
     :cond_27
     iget-object v0, p0, Lorg/telegram/ui/Cells/AboutLinkCell$3;->this$0:Lorg/telegram/ui/Cells/AboutLinkCell;
 
@@ -269,7 +269,7 @@
 
     if-eqz v0, :cond_46
 
-    .line 376
+    .line 384
     iget-object v0, p0, Lorg/telegram/ui/Cells/AboutLinkCell$3;->this$0:Lorg/telegram/ui/Cells/AboutLinkCell;
 
     invoke-static {v0}, Lorg/telegram/ui/Cells/AboutLinkCell;->access$200(Lorg/telegram/ui/Cells/AboutLinkCell;)Lorg/telegram/ui/Components/LinkSpanDrawable;
@@ -288,7 +288,7 @@
 
     goto :goto_54
 
-    .line 378
+    .line 386
     :cond_46
     iget-object v0, p0, Lorg/telegram/ui/Cells/AboutLinkCell$3;->this$0:Lorg/telegram/ui/Cells/AboutLinkCell;
 
@@ -309,7 +309,7 @@
 
     const/4 v2, 0x0
 
-    .line 382
+    .line 390
     :try_start_56
     iget-object v3, p0, Lorg/telegram/ui/Cells/AboutLinkCell$3;->this$0:Lorg/telegram/ui/Cells/AboutLinkCell;
 
@@ -317,7 +317,7 @@
     :try_end_5b
     .catch Ljava/lang/Exception; {:try_start_56 .. :try_end_5b} :catch_5b
 
-    .line 385
+    .line 393
     :catch_5b
     iget-object v3, p0, Lorg/telegram/ui/Cells/AboutLinkCell$3;->this$0:Lorg/telegram/ui/Cells/AboutLinkCell;
 
@@ -331,7 +331,7 @@
 
     check-cast v3, Landroid/text/style/ClickableSpan;
 
-    .line 386
+    .line 394
     new-instance v4, Lorg/telegram/ui/ActionBar/BottomSheet$Builder;
 
     iget-object v5, p0, Lorg/telegram/ui/Cells/AboutLinkCell$3;->this$0:Lorg/telegram/ui/Cells/AboutLinkCell;
@@ -346,16 +346,16 @@
 
     invoke-direct {v4, v5}, Lorg/telegram/ui/ActionBar/BottomSheet$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 387
+    .line 395
     invoke-virtual {v4, v0}, Lorg/telegram/ui/ActionBar/BottomSheet$Builder;->setTitle(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/BottomSheet$Builder;
 
     new-array v1, v1, [Ljava/lang/CharSequence;
 
-    const v5, 0x7f0e0bbd
+    const v5, 0x7f0e0c47
 
     const-string v6, "Open"
 
-    .line 388
+    .line 396
     invoke-static {v6, v5}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v5
@@ -364,7 +364,7 @@
 
     const/4 v2, 0x1
 
-    const v5, 0x7f0e04d2
+    const v5, 0x7f0e0521
 
     const-string v6, "Copy"
 
@@ -380,17 +380,17 @@
 
     invoke-virtual {v4, v1, v2}, Lorg/telegram/ui/ActionBar/BottomSheet$Builder;->setItems([Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/BottomSheet$Builder;
 
-    .line 404
+    .line 412
     new-instance v0, Lorg/telegram/ui/Cells/AboutLinkCell$3$$ExternalSyntheticLambda1;
 
     invoke-direct {v0, p0}, Lorg/telegram/ui/Cells/AboutLinkCell$3$$ExternalSyntheticLambda1;-><init>(Lorg/telegram/ui/Cells/AboutLinkCell$3;)V
 
     invoke-virtual {v4, v0}, Lorg/telegram/ui/ActionBar/BottomSheet$Builder;->setOnPreDismissListener(Landroid/content/DialogInterface$OnDismissListener;)Lorg/telegram/ui/ActionBar/BottomSheet$Builder;
 
-    .line 405
+    .line 413
     invoke-virtual {v4}, Lorg/telegram/ui/ActionBar/BottomSheet$Builder;->show()Lorg/telegram/ui/ActionBar/BottomSheet;
 
-    .line 407
+    .line 415
     iget-object v0, p0, Lorg/telegram/ui/Cells/AboutLinkCell$3;->this$0:Lorg/telegram/ui/Cells/AboutLinkCell;
 
     const/4 v1, 0x0

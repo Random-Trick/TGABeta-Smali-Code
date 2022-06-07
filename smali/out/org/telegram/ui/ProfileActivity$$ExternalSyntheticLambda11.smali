@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/content/DialogInterface$OnDismissListener;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
@@ -22,12 +22,12 @@
 
 
 # virtual methods
-.method public final onDismiss(Landroid/content/DialogInterface;)V
+.method public final onClick(Landroid/view/View;)V
     .registers 3
 
     iget-object v0, p0, Lorg/telegram/ui/ProfileActivity$$ExternalSyntheticLambda11;->f$0:Lorg/telegram/ui/ProfileActivity;
 
-    invoke-static {v0, p1}, Lorg/telegram/ui/ProfileActivity;->$r8$lambda$Ki8ssP3SxYfJjP3Yq-4TOAAn-CU(Lorg/telegram/ui/ProfileActivity;Landroid/content/DialogInterface;)V
+    invoke-static {v0, p1}, Lorg/telegram/ui/ProfileActivity;->$r8$lambda$euxqp5qExlhS2HRXjLbjuraOqpY(Lorg/telegram/ui/ProfileActivity;Landroid/view/View;)V
 
     return-void
 .end method

@@ -25,7 +25,7 @@
 .method constructor <init>(Lorg/telegram/ui/SessionsActivity$ScanQRCodeView;Lorg/telegram/ui/SessionsActivity;)V
     .registers 3
 
-    .line 885
+    .line 916
     iput-object p1, p0, Lorg/telegram/ui/SessionsActivity$ScanQRCodeView$1;->this$1:Lorg/telegram/ui/SessionsActivity$ScanQRCodeView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public onClick(Landroid/view/View;)V
     .registers 3
 
-    .line 888
+    .line 919
     iget-object p1, p0, Lorg/telegram/ui/SessionsActivity$ScanQRCodeView$1;->this$1:Lorg/telegram/ui/SessionsActivity$ScanQRCodeView;
 
     iget-object p1, p1, Lorg/telegram/ui/SessionsActivity$ScanQRCodeView;->imageView:Lorg/telegram/ui/Components/BackupImageView;
@@ -71,7 +71,7 @@
 
     if-nez p1, :cond_3f
 
-    .line 889
+    .line 920
     iget-object p1, p0, Lorg/telegram/ui/SessionsActivity$ScanQRCodeView$1;->this$1:Lorg/telegram/ui/SessionsActivity$ScanQRCodeView;
 
     iget-object p1, p1, Lorg/telegram/ui/SessionsActivity$ScanQRCodeView;->imageView:Lorg/telegram/ui/Components/BackupImageView;
@@ -88,7 +88,7 @@
 
     invoke-virtual {p1, v0, v0}, Lorg/telegram/ui/Components/RLottieDrawable;->setCurrentFrame(IZ)V
 
-    .line 890
+    .line 921
     iget-object p1, p0, Lorg/telegram/ui/SessionsActivity$ScanQRCodeView$1;->this$1:Lorg/telegram/ui/SessionsActivity$ScanQRCodeView;
 
     iget-object p1, p1, Lorg/telegram/ui/SessionsActivity$ScanQRCodeView;->imageView:Lorg/telegram/ui/Components/BackupImageView;

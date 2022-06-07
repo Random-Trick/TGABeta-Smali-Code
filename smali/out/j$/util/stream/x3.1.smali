@@ -1,42 +1,139 @@
-.class public final synthetic Lj$/util/stream/x3;
-.super Ljava/lang/Object;
-
-# interfaces
-.implements Lj$/util/function/m;
+.class Lj$/util/stream/x3;
+.super Lj$/util/stream/f3;
 
 
-# static fields
-.field public static final synthetic a:Lj$/util/stream/x3;
+# instance fields
+.field b:J
+
+.field c:J
+
+.field final synthetic d:Lj$/util/stream/y3;
 
 
 # direct methods
-.method static synthetic constructor <clinit>()V
-    .registers 1
+.method constructor <init>(Lj$/util/stream/y3;Lj$/util/stream/m3;)V
+    .registers 6
 
-    new-instance v0, Lj$/util/stream/x3;
+    iput-object p1, p0, Lj$/util/stream/x3;->d:Lj$/util/stream/y3;
 
-    invoke-direct {v0}, Lj$/util/stream/x3;-><init>()V
+    invoke-direct {p0, p2}, Lj$/util/stream/f3;-><init>(Lj$/util/stream/m3;)V
 
-    sput-object v0, Lj$/util/stream/x3;->a:Lj$/util/stream/x3;
+    iget-wide v0, p1, Lj$/util/stream/y3;->l:J
 
-    return-void
-.end method
+    iput-wide v0, p0, Lj$/util/stream/x3;->b:J
 
-.method private synthetic constructor <init>()V
-    .registers 1
+    iget-wide p1, p1, Lj$/util/stream/y3;->m:J
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-wide/16 v0, 0x0
+
+    cmp-long v2, p1, v0
+
+    if-ltz v2, :cond_12
+
+    goto :goto_17
+
+    :cond_12
+    const-wide p1, 0x7fffffffffffffffL
+
+    :goto_17
+    iput-wide p1, p0, Lj$/util/stream/x3;->c:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final apply(I)Ljava/lang/Object;
-    .registers 2
+.method public accept(D)V
+    .registers 10
 
-    .line 1
-    new-array p1, p1, [Ljava/lang/Double;
+    iget-wide v0, p0, Lj$/util/stream/x3;->b:J
 
-    return-object p1
+    const-wide/16 v2, 0x1
+
+    const-wide/16 v4, 0x0
+
+    cmp-long v6, v0, v4
+
+    if-nez v6, :cond_19
+
+    iget-wide v0, p0, Lj$/util/stream/x3;->c:J
+
+    cmp-long v6, v0, v4
+
+    if-lez v6, :cond_1c
+
+    sub-long/2addr v0, v2
+
+    iput-wide v0, p0, Lj$/util/stream/x3;->c:J
+
+    iget-object v0, p0, Lj$/util/stream/f3;->a:Lj$/util/stream/m3;
+
+    invoke-interface {v0, p1, p2}, Lj$/util/stream/m3;->accept(D)V
+
+    goto :goto_1c
+
+    :cond_19
+    sub-long/2addr v0, v2
+
+    iput-wide v0, p0, Lj$/util/stream/x3;->b:J
+
+    :cond_1c
+    :goto_1c
+    return-void
+.end method
+
+.method public n(J)V
+    .registers 11
+
+    iget-object v0, p0, Lj$/util/stream/f3;->a:Lj$/util/stream/m3;
+
+    iget-object v1, p0, Lj$/util/stream/x3;->d:Lj$/util/stream/y3;
+
+    iget-wide v4, v1, Lj$/util/stream/y3;->l:J
+
+    iget-wide v6, p0, Lj$/util/stream/x3;->c:J
+
+    move-wide v2, p1
+
+    invoke-static/range {v2 .. v7}, Lj$/util/stream/B3;->c(JJJ)J
+
+    move-result-wide p1
+
+    invoke-interface {v0, p1, p2}, Lj$/util/stream/m3;->n(J)V
+
+    return-void
+.end method
+
+.method public o()Z
+    .registers 6
+
+    iget-wide v0, p0, Lj$/util/stream/x3;->c:J
+
+    const-wide/16 v2, 0x0
+
+    cmp-long v4, v0, v2
+
+    if-eqz v4, :cond_13
+
+    iget-object v0, p0, Lj$/util/stream/f3;->a:Lj$/util/stream/m3;
+
+    invoke-interface {v0}, Lj$/util/stream/m3;->o()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_11
+
+    goto :goto_13
+
+    :cond_11
+    const/4 v0, 0x0
+
+    goto :goto_14
+
+    :cond_13
+    :goto_13
+    const/4 v0, 0x1
+
+    :goto_14
+    return v0
 .end method

@@ -18,7 +18,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/InviteLinkBottomSheet$Adapter;Landroid/content/Context;)V
     .registers 3
 
-    .line 658
+    .line 659
     invoke-direct {p0, p2}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
     return-void
@@ -31,7 +31,7 @@
 
     const/high16 p2, 0x40a00000    # 5.0f
 
-    .line 661
+    .line 662
     invoke-static {p2}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result p2

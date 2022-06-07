@@ -627,7 +627,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f07036d
+    const v4, 0x7f070384
 
     iget-object v5, p0, Lorg/telegram/ui/CalendarActivity$MonthView$2;->this$1:Lorg/telegram/ui/CalendarActivity$MonthView;
 
@@ -667,7 +667,7 @@
 
     invoke-direct {v3, v4, v5, v1}, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;-><init>(Landroid/content/Context;ZZ)V
 
-    const v4, 0x7f0e08f1
+    const v4, 0x7f0e0956
 
     const-string v6, "JumpToDate"
 
@@ -676,7 +676,7 @@
 
     move-result-object v4
 
-    const v6, 0x7f070285
+    const v6, 0x7f070268
 
     invoke-virtual {v3, v4, v6}, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;->setTextAndIcon(Ljava/lang/CharSequence;I)V
 
@@ -719,7 +719,7 @@
 
     invoke-direct {v3, v6, v1, v1}, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;-><init>(Landroid/content/Context;ZZ)V
 
-    const v6, 0x7f0e0fc3
+    const v6, 0x7f0e1080
 
     const-string v7, "SelectThisDay"
 
@@ -728,7 +728,7 @@
 
     move-result-object v6
 
-    const v7, 0x7f0702ca
+    const v7, 0x7f0702e7
 
     invoke-virtual {v3, v6, v7}, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;->setTextAndIcon(Ljava/lang/CharSequence;I)V
 
@@ -758,7 +758,7 @@
 
     invoke-direct {p1, v3, v1, v5}, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;-><init>(Landroid/content/Context;ZZ)V
 
-    const v1, 0x7f0e0468
+    const v1, 0x7f0e04ad
 
     const-string v3, "ClearHistory"
 
@@ -767,7 +767,7 @@
 
     move-result-object v1
 
-    const v3, 0x7f070258
+    const v3, 0x7f070206
 
     invoke-virtual {p1, v1, v3}, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;->setTextAndIcon(Ljava/lang/CharSequence;I)V
 
@@ -881,7 +881,7 @@
 
     iget-object p1, p1, Lorg/telegram/ui/CalendarActivity$MonthView;->this$0:Lorg/telegram/ui/CalendarActivity;
 
-    invoke-virtual {p1, v2, v0}, Lorg/telegram/ui/ActionBar/BaseFragment;->presentFragmentAsPreviewWithMenu(Lorg/telegram/ui/ActionBar/BaseFragment;Landroid/view/View;)Z
+    invoke-virtual {p1, v2, v0}, Lorg/telegram/ui/ActionBar/BaseFragment;->presentFragmentAsPreviewWithMenu(Lorg/telegram/ui/ActionBar/BaseFragment;Lorg/telegram/ui/ActionBar/ActionBarPopupWindow$ActionBarPopupWindowLayout;)Z
 
     :cond_175
     return-void
@@ -966,7 +966,7 @@
 
     const/4 v2, 0x0
 
-    if-eqz v1, :cond_189
+    if-eqz v1, :cond_18b
 
     .line 611
     iget-object v0, v0, Lorg/telegram/ui/CalendarActivity$MonthView;->this$0:Lorg/telegram/ui/CalendarActivity;
@@ -990,7 +990,7 @@
 
     move-result-object p1
 
-    if-eqz p1, :cond_189
+    if-eqz p1, :cond_18b
 
     .line 614
     iget-object v0, p0, Lorg/telegram/ui/CalendarActivity$MonthView$2;->this$1:Lorg/telegram/ui/CalendarActivity$MonthView;
@@ -1242,7 +1242,7 @@
 
     invoke-static {p1}, Lorg/telegram/ui/CalendarActivity;->access$700(Lorg/telegram/ui/CalendarActivity;)V
 
-    goto :goto_189
+    goto :goto_18b
 
     .line 642
     :cond_13b
@@ -1257,6 +1257,8 @@
     invoke-direct {p0, v0, p1}, Lorg/telegram/ui/CalendarActivity$MonthView$2;->getDayAtCoord(FF)Lorg/telegram/ui/CalendarActivity$PeriodDay;
 
     move-result-object p1
+
+    if-eqz p1, :cond_18b
 
     .line 643
     iget-object v0, p0, Lorg/telegram/ui/CalendarActivity$MonthView$2;->this$1:Lorg/telegram/ui/CalendarActivity$MonthView;
@@ -1275,7 +1277,7 @@
 
     const/4 v1, 0x2
 
-    if-lt v0, v1, :cond_189
+    if-lt v0, v1, :cond_18b
 
     .line 644
     iget-object v0, p0, Lorg/telegram/ui/CalendarActivity$MonthView$2;->this$1:Lorg/telegram/ui/CalendarActivity$MonthView;
@@ -1313,7 +1315,7 @@
     .line 645
     instance-of v1, v0, Lorg/telegram/ui/ChatActivity;
 
-    if-eqz v1, :cond_189
+    if-eqz v1, :cond_18b
 
     .line 646
     iget-object v1, p0, Lorg/telegram/ui/CalendarActivity$MonthView$2;->this$1:Lorg/telegram/ui/CalendarActivity$MonthView;
@@ -1329,7 +1331,7 @@
 
     invoke-virtual {v0, p1}, Lorg/telegram/ui/ChatActivity;->jumpToDate(I)V
 
-    :cond_189
-    :goto_189
+    :cond_18b
+    :goto_18b
     return v2
 .end method

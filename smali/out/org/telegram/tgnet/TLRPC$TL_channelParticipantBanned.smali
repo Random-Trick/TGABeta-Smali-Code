@@ -17,7 +17,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 35630
+    .line 36082
     invoke-direct {p0}, Lorg/telegram/tgnet/TLRPC$ChannelParticipant;-><init>()V
 
     return-void
@@ -28,7 +28,7 @@
 .method public readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
     .registers 5
 
-    .line 35635
+    .line 36087
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
@@ -46,11 +46,11 @@
     :cond_b
     const/4 v1, 0x0
 
-    .line 35636
+    .line 36088
     :goto_c
     iput-boolean v1, p0, Lorg/telegram/tgnet/TLRPC$ChannelParticipant;->left:Z
 
-    .line 35637
+    .line 36089
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
@@ -61,21 +61,21 @@
 
     iput-object v0, p0, Lorg/telegram/tgnet/TLRPC$ChannelParticipant;->peer:Lorg/telegram/tgnet/TLRPC$Peer;
 
-    .line 35638
+    .line 36090
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt64(Z)J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lorg/telegram/tgnet/TLRPC$ChannelParticipant;->kicked_by:J
 
-    .line 35639
+    .line 36091
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
 
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$ChannelParticipant;->date:I
 
-    .line 35640
+    .line 36092
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
@@ -92,12 +92,12 @@
 .method public serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
     .registers 4
 
-    .line 35644
+    .line 36096
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_channelParticipantBanned;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 35645
+    .line 36097
     iget-boolean v0, p0, Lorg/telegram/tgnet/TLRPC$ChannelParticipant;->left:Z
 
     if-eqz v0, :cond_e
@@ -116,25 +116,25 @@
     :goto_12
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$ChannelParticipant;->flags:I
 
-    .line 35646
+    .line 36098
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 35647
+    .line 36099
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$ChannelParticipant;->peer:Lorg/telegram/tgnet/TLRPC$Peer;
 
     invoke-virtual {v0, p1}, Lorg/telegram/tgnet/TLObject;->serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
 
-    .line 35648
+    .line 36100
     iget-wide v0, p0, Lorg/telegram/tgnet/TLRPC$ChannelParticipant;->kicked_by:J
 
     invoke-virtual {p1, v0, v1}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt64(J)V
 
-    .line 35649
+    .line 36101
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$ChannelParticipant;->date:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 35650
+    .line 36102
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$ChannelParticipant;->banned_rights:Lorg/telegram/tgnet/TLRPC$TL_chatBannedRights;
 
     invoke-virtual {v0, p1}, Lorg/telegram/tgnet/TLRPC$TL_chatBannedRights;->serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V

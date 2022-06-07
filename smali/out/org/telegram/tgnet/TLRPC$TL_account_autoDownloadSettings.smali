@@ -25,7 +25,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 37280
+    .line 37732
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -34,7 +34,7 @@
 .method public static TLdeserialize(Lorg/telegram/tgnet/AbstractSerializedData;IZ)Lorg/telegram/tgnet/TLRPC$TL_account_autoDownloadSettings;
     .registers 4
 
-    .line 37288
+    .line 37740
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_account_autoDownloadSettings;->constructor:I
 
     if-eq v0, p1, :cond_1e
@@ -45,7 +45,7 @@
 
     return-object p0
 
-    .line 37290
+    .line 37742
     :cond_8
     new-instance p0, Ljava/lang/RuntimeException;
 
@@ -71,13 +71,13 @@
 
     throw p0
 
-    .line 37295
+    .line 37747
     :cond_1e
     new-instance p1, Lorg/telegram/tgnet/TLRPC$TL_account_autoDownloadSettings;
 
     invoke-direct {p1}, Lorg/telegram/tgnet/TLRPC$TL_account_autoDownloadSettings;-><init>()V
 
-    .line 37296
+    .line 37748
     invoke-virtual {p1, p0, p2}, Lorg/telegram/tgnet/TLRPC$TL_account_autoDownloadSettings;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
     return-object p1
@@ -88,7 +88,7 @@
 .method public readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
     .registers 4
 
-    .line 37301
+    .line 37753
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
@@ -99,7 +99,7 @@
 
     iput-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_account_autoDownloadSettings;->low:Lorg/telegram/tgnet/TLRPC$TL_autoDownloadSettings;
 
-    .line 37302
+    .line 37754
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
@@ -110,7 +110,7 @@
 
     iput-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_account_autoDownloadSettings;->medium:Lorg/telegram/tgnet/TLRPC$TL_autoDownloadSettings;
 
-    .line 37303
+    .line 37755
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
@@ -127,22 +127,22 @@
 .method public serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
     .registers 3
 
-    .line 37307
+    .line 37759
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_account_autoDownloadSettings;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 37308
+    .line 37760
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_account_autoDownloadSettings;->low:Lorg/telegram/tgnet/TLRPC$TL_autoDownloadSettings;
 
     invoke-virtual {v0, p1}, Lorg/telegram/tgnet/TLRPC$TL_autoDownloadSettings;->serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
 
-    .line 37309
+    .line 37761
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_account_autoDownloadSettings;->medium:Lorg/telegram/tgnet/TLRPC$TL_autoDownloadSettings;
 
     invoke-virtual {v0, p1}, Lorg/telegram/tgnet/TLRPC$TL_autoDownloadSettings;->serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
 
-    .line 37310
+    .line 37762
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_account_autoDownloadSettings;->high:Lorg/telegram/tgnet/TLRPC$TL_autoDownloadSettings;
 
     invoke-virtual {v0, p1}, Lorg/telegram/tgnet/TLRPC$TL_autoDownloadSettings;->serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V

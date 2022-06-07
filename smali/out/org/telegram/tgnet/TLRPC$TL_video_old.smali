@@ -17,7 +17,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 23783
+    .line 24050
     invoke-direct {p0}, Lorg/telegram/tgnet/TLRPC$TL_video_layer45;-><init>()V
 
     return-void
@@ -28,21 +28,21 @@
 .method public readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
     .registers 13
 
-    .line 23788
+    .line 24055
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt64(Z)J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lorg/telegram/tgnet/TLRPC$Video;->id:J
 
-    .line 23789
+    .line 24056
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt64(Z)J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lorg/telegram/tgnet/TLRPC$Video;->access_hash:J
 
-    .line 23790
+    .line 24057
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
@@ -51,35 +51,35 @@
 
     iput-wide v0, p0, Lorg/telegram/tgnet/TLRPC$Video;->user_id:J
 
-    .line 23791
+    .line 24058
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
 
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$Video;->date:I
 
-    .line 23792
+    .line 24059
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readString(Z)Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/telegram/tgnet/TLRPC$Video;->caption:Ljava/lang/String;
 
-    .line 23793
+    .line 24060
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
 
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$Video;->duration:I
 
-    .line 23794
+    .line 24061
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
 
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$Video;->size:I
 
-    .line 23795
+    .line 24062
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v8
@@ -100,21 +100,21 @@
 
     iput-object v0, p0, Lorg/telegram/tgnet/TLRPC$Video;->thumb:Lorg/telegram/tgnet/TLRPC$PhotoSize;
 
-    .line 23796
+    .line 24063
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
 
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$Video;->dc_id:I
 
-    .line 23797
+    .line 24064
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
 
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$Video;->w:I
 
-    .line 23798
+    .line 24065
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result p1
@@ -127,64 +127,64 @@
 .method public serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
     .registers 4
 
-    .line 23802
+    .line 24069
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_video_old;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 23803
+    .line 24070
     iget-wide v0, p0, Lorg/telegram/tgnet/TLRPC$Video;->id:J
 
     invoke-virtual {p1, v0, v1}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt64(J)V
 
-    .line 23804
+    .line 24071
     iget-wide v0, p0, Lorg/telegram/tgnet/TLRPC$Video;->access_hash:J
 
     invoke-virtual {p1, v0, v1}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt64(J)V
 
-    .line 23805
+    .line 24072
     iget-wide v0, p0, Lorg/telegram/tgnet/TLRPC$Video;->user_id:J
 
     long-to-int v1, v0
 
     invoke-virtual {p1, v1}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 23806
+    .line 24073
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$Video;->date:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 23807
+    .line 24074
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$Video;->caption:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeString(Ljava/lang/String;)V
 
-    .line 23808
+    .line 24075
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$Video;->duration:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 23809
+    .line 24076
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$Video;->size:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 23810
+    .line 24077
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$Video;->thumb:Lorg/telegram/tgnet/TLRPC$PhotoSize;
 
     invoke-virtual {v0, p1}, Lorg/telegram/tgnet/TLObject;->serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
 
-    .line 23811
+    .line 24078
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$Video;->dc_id:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 23812
+    .line 24079
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$Video;->w:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 23813
+    .line 24080
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$Video;->h:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V

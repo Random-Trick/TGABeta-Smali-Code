@@ -1,14 +1,11 @@
 .class Lorg/telegram/ui/Components/ChatAttachAlert$19;
-.super Ljava/lang/Object;
+.super Landroid/animation/AnimatorListenerAdapter;
 .source "ChatAttachAlert.java"
-
-# interfaces
-.implements Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout$DocumentSelectActivityDelegate;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lorg/telegram/ui/Components/ChatAttachAlert;->openDocumentsLayout(Z)V
+    value = Lorg/telegram/ui/Components/ChatAttachAlert;->showCommentTextView(ZZ)Z
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,167 +17,171 @@
 # instance fields
 .field final synthetic this$0:Lorg/telegram/ui/Components/ChatAttachAlert;
 
+.field final synthetic val$show:Z
+
 
 # direct methods
-.method constructor <init>(Lorg/telegram/ui/Components/ChatAttachAlert;)V
-    .registers 2
+.method constructor <init>(Lorg/telegram/ui/Components/ChatAttachAlert;Z)V
+    .registers 3
 
-    .line 2683
+    .line 2858
     iput-object p1, p0, Lorg/telegram/ui/Components/ChatAttachAlert$19;->this$0:Lorg/telegram/ui/Components/ChatAttachAlert;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-boolean p2, p0, Lorg/telegram/ui/Components/ChatAttachAlert$19;->val$show:Z
+
+    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public didSelectFiles(Ljava/util/ArrayList;Ljava/lang/String;Ljava/util/ArrayList;ZI)V
-    .registers 14
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/ArrayList<",
-            "Ljava/lang/String;",
-            ">;",
-            "Ljava/lang/String;",
-            "Ljava/util/ArrayList<",
-            "Lorg/telegram/messenger/MessageObject;",
-            ">;ZI)V"
-        }
-    .end annotation
-
-    .line 2686
-    iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlert$19;->this$0:Lorg/telegram/ui/Components/ChatAttachAlert;
-
-    iget-object v0, v0, Lorg/telegram/ui/Components/ChatAttachAlert;->baseFragment:Lorg/telegram/ui/ActionBar/BaseFragment;
-
-    instance-of v1, v0, Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout$DocumentSelectActivityDelegate;
-
-    if-eqz v1, :cond_14
-
-    .line 2687
-    move-object v2, v0
-
-    check-cast v2, Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout$DocumentSelectActivityDelegate;
-
-    move-object v3, p1
-
-    move-object v4, p2
-
-    move-object v5, p3
-
-    move v6, p4
-
-    move v7, p5
-
-    invoke-interface/range {v2 .. v7}, Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout$DocumentSelectActivityDelegate;->didSelectFiles(Ljava/util/ArrayList;Ljava/lang/String;Ljava/util/ArrayList;ZI)V
-
-    goto :goto_1d
-
-    .line 2688
-    :cond_14
-    instance-of p3, v0, Lorg/telegram/ui/PassportActivity;
-
-    if-eqz p3, :cond_1d
-
-    .line 2689
-    check-cast v0, Lorg/telegram/ui/PassportActivity;
-
-    invoke-virtual {v0, p1, p2, p4, p5}, Lorg/telegram/ui/PassportActivity;->didSelectFiles(Ljava/util/ArrayList;Ljava/lang/String;ZI)V
-
-    :cond_1d
-    :goto_1d
-    return-void
-.end method
-
-.method public didSelectPhotos(Ljava/util/ArrayList;ZI)V
-    .registers 6
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/ArrayList<",
-            "Lorg/telegram/messenger/SendMessagesHelper$SendingMediaInfo;",
-            ">;ZI)V"
-        }
-    .end annotation
-
-    .line 2695
-    iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlert$19;->this$0:Lorg/telegram/ui/Components/ChatAttachAlert;
-
-    iget-object v0, v0, Lorg/telegram/ui/Components/ChatAttachAlert;->baseFragment:Lorg/telegram/ui/ActionBar/BaseFragment;
-
-    instance-of v1, v0, Lorg/telegram/ui/ChatActivity;
-
-    if-eqz v1, :cond_e
-
-    .line 2696
-    check-cast v0, Lorg/telegram/ui/ChatActivity;
-
-    invoke-virtual {v0, p1, p2, p3}, Lorg/telegram/ui/ChatActivity;->didSelectPhotos(Ljava/util/ArrayList;ZI)V
-
-    goto :goto_17
-
-    .line 2697
-    :cond_e
-    instance-of v1, v0, Lorg/telegram/ui/PassportActivity;
-
-    if-eqz v1, :cond_17
-
-    .line 2698
-    check-cast v0, Lorg/telegram/ui/PassportActivity;
-
-    invoke-virtual {v0, p1, p2, p3}, Lorg/telegram/ui/PassportActivity;->didSelectPhotos(Ljava/util/ArrayList;ZI)V
-
-    :cond_17
-    :goto_17
-    return-void
-.end method
-
-.method public startDocumentSelectActivity()V
+.method public onAnimationCancel(Landroid/animation/Animator;)V
     .registers 3
 
-    .line 2704
+    .line 2881
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlert$19;->this$0:Lorg/telegram/ui/Components/ChatAttachAlert;
 
-    iget-object v0, v0, Lorg/telegram/ui/Components/ChatAttachAlert;->baseFragment:Lorg/telegram/ui/ActionBar/BaseFragment;
+    invoke-static {v0}, Lorg/telegram/ui/Components/ChatAttachAlert;->access$13400(Lorg/telegram/ui/Components/ChatAttachAlert;)Landroid/animation/AnimatorSet;
 
-    instance-of v1, v0, Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout$DocumentSelectActivityDelegate;
+    move-result-object v0
 
-    if-eqz v1, :cond_e
+    invoke-virtual {p1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    .line 2705
-    check-cast v0, Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout$DocumentSelectActivityDelegate;
+    move-result p1
 
-    invoke-interface {v0}, Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout$DocumentSelectActivityDelegate;->startDocumentSelectActivity()V
+    if-eqz p1, :cond_12
 
-    goto :goto_17
+    .line 2882
+    iget-object p1, p0, Lorg/telegram/ui/Components/ChatAttachAlert$19;->this$0:Lorg/telegram/ui/Components/ChatAttachAlert;
 
-    .line 2706
-    :cond_e
-    instance-of v1, v0, Lorg/telegram/ui/PassportActivity;
+    const/4 v0, 0x0
 
-    if-eqz v1, :cond_17
+    invoke-static {p1, v0}, Lorg/telegram/ui/Components/ChatAttachAlert;->access$13402(Lorg/telegram/ui/Components/ChatAttachAlert;Landroid/animation/AnimatorSet;)Landroid/animation/AnimatorSet;
 
-    .line 2707
-    check-cast v0, Lorg/telegram/ui/PassportActivity;
-
-    invoke-virtual {v0}, Lorg/telegram/ui/PassportActivity;->startDocumentSelectActivity()V
-
-    :cond_17
-    :goto_17
+    :cond_12
     return-void
 .end method
 
-.method public startMusicSelectActivity()V
-    .registers 3
+.method public onAnimationEnd(Landroid/animation/Animator;)V
+    .registers 4
 
-    .line 2713
+    .line 2861
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlert$19;->this$0:Lorg/telegram/ui/Components/ChatAttachAlert;
 
-    const/4 v1, 0x1
+    invoke-static {v0}, Lorg/telegram/ui/Components/ChatAttachAlert;->access$13400(Lorg/telegram/ui/Components/ChatAttachAlert;)Landroid/animation/AnimatorSet;
 
-    invoke-static {v0, v1}, Lorg/telegram/ui/Components/ChatAttachAlert;->access$13000(Lorg/telegram/ui/Components/ChatAttachAlert;Z)V
+    move-result-object v0
 
+    invoke-virtual {p1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_66
+
+    .line 2862
+    iget-boolean p1, p0, Lorg/telegram/ui/Components/ChatAttachAlert$19;->val$show:Z
+
+    const/4 v0, 0x4
+
+    if-nez p1, :cond_41
+
+    .line 2863
+    iget-object p1, p0, Lorg/telegram/ui/Components/ChatAttachAlert$19;->this$0:Lorg/telegram/ui/Components/ChatAttachAlert;
+
+    invoke-static {p1}, Lorg/telegram/ui/Components/ChatAttachAlert;->access$13500(Lorg/telegram/ui/Components/ChatAttachAlert;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_22
+
+    .line 2864
+    iget-object p1, p0, Lorg/telegram/ui/Components/ChatAttachAlert$19;->this$0:Lorg/telegram/ui/Components/ChatAttachAlert;
+
+    invoke-static {p1}, Lorg/telegram/ui/Components/ChatAttachAlert;->access$3700(Lorg/telegram/ui/Components/ChatAttachAlert;)Landroid/widget/FrameLayout;
+
+    move-result-object p1
+
+    invoke-virtual {p1, v0}, Landroid/widget/FrameLayout;->setVisibility(I)V
+
+    .line 2866
+    :cond_22
+    iget-object p1, p0, Lorg/telegram/ui/Components/ChatAttachAlert$19;->this$0:Lorg/telegram/ui/Components/ChatAttachAlert;
+
+    invoke-static {p1}, Lorg/telegram/ui/Components/ChatAttachAlert;->access$11300(Lorg/telegram/ui/Components/ChatAttachAlert;)Landroid/widget/FrameLayout;
+
+    move-result-object p1
+
+    invoke-virtual {p1, v0}, Landroid/widget/FrameLayout;->setVisibility(I)V
+
+    .line 2867
+    iget-object p1, p0, Lorg/telegram/ui/Components/ChatAttachAlert$19;->this$0:Lorg/telegram/ui/Components/ChatAttachAlert;
+
+    iget-boolean v1, p1, Lorg/telegram/ui/Components/ChatAttachAlert;->typeButtonsAvailable:Z
+
+    if-nez v1, :cond_60
+
+    invoke-static {p1}, Lorg/telegram/ui/Components/ChatAttachAlert;->access$13500(Lorg/telegram/ui/Components/ChatAttachAlert;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_60
+
+    .line 2868
+    iget-object p1, p0, Lorg/telegram/ui/Components/ChatAttachAlert$19;->this$0:Lorg/telegram/ui/Components/ChatAttachAlert;
+
+    invoke-static {p1}, Lorg/telegram/ui/Components/ChatAttachAlert;->access$1100(Lorg/telegram/ui/Components/ChatAttachAlert;)Landroid/view/View;
+
+    move-result-object p1
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
+
+    goto :goto_60
+
+    .line 2870
+    :cond_41
+    iget-object p1, p0, Lorg/telegram/ui/Components/ChatAttachAlert$19;->this$0:Lorg/telegram/ui/Components/ChatAttachAlert;
+
+    iget-boolean v1, p1, Lorg/telegram/ui/Components/ChatAttachAlert;->typeButtonsAvailable:Z
+
+    if-eqz v1, :cond_60
+
+    .line 2871
+    invoke-static {p1}, Lorg/telegram/ui/Components/ChatAttachAlert;->access$000(Lorg/telegram/ui/Components/ChatAttachAlert;)Lorg/telegram/ui/Components/ChatAttachAlert$AttachAlertLayout;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_59
+
+    iget-object p1, p0, Lorg/telegram/ui/Components/ChatAttachAlert$19;->this$0:Lorg/telegram/ui/Components/ChatAttachAlert;
+
+    invoke-static {p1}, Lorg/telegram/ui/Components/ChatAttachAlert;->access$000(Lorg/telegram/ui/Components/ChatAttachAlert;)Lorg/telegram/ui/Components/ChatAttachAlert$AttachAlertLayout;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lorg/telegram/ui/Components/ChatAttachAlert$AttachAlertLayout;->shouldHideBottomButtons()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_60
+
+    .line 2872
+    :cond_59
+    iget-object p1, p0, Lorg/telegram/ui/Components/ChatAttachAlert$19;->this$0:Lorg/telegram/ui/Components/ChatAttachAlert;
+
+    iget-object p1, p1, Lorg/telegram/ui/Components/ChatAttachAlert;->buttonsRecyclerView:Lorg/telegram/ui/Components/RecyclerListView;
+
+    invoke-virtual {p1, v0}, Lorg/telegram/ui/Components/RecyclerListView;->setVisibility(I)V
+
+    .line 2875
+    :cond_60
+    :goto_60
+    iget-object p1, p0, Lorg/telegram/ui/Components/ChatAttachAlert$19;->this$0:Lorg/telegram/ui/Components/ChatAttachAlert;
+
+    const/4 v0, 0x0
+
+    invoke-static {p1, v0}, Lorg/telegram/ui/Components/ChatAttachAlert;->access$13402(Lorg/telegram/ui/Components/ChatAttachAlert;Landroid/animation/AnimatorSet;)Landroid/animation/AnimatorSet;
+
+    :cond_66
     return-void
 .end method

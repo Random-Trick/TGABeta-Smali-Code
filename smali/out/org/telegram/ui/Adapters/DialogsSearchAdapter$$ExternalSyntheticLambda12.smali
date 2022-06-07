@@ -33,7 +33,7 @@
 
     iget-wide v1, p0, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$$ExternalSyntheticLambda12;->f$1:J
 
-    invoke-static {v0, v1, v2}, Lorg/telegram/ui/Adapters/DialogsSearchAdapter;->$r8$lambda$AxVXJcK6P6ig9jTfrCjBvAUEnbQ(Lorg/telegram/ui/Adapters/DialogsSearchAdapter;J)V
+    invoke-static {v0, v1, v2}, Lorg/telegram/ui/Adapters/DialogsSearchAdapter;->$r8$lambda$fGwkxH3Wjqp5C8HtyqRiQQMLSLg(Lorg/telegram/ui/Adapters/DialogsSearchAdapter;J)V
 
     return-void
 .end method

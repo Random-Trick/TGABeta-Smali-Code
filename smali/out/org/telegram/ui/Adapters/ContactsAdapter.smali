@@ -1727,7 +1727,7 @@
 
     if-nez p2, :cond_25
 
-    const p2, 0x7f0e04c4
+    const p2, 0x7f0e0513
 
     const-string p3, "Contacts"
 
@@ -1743,7 +1743,7 @@
     :cond_25
     if-ne p2, v2, :cond_35
 
-    const p2, 0x7f0e1094
+    const p2, 0x7f0e1153
 
     const-string p3, "SortedByName"
 
@@ -1757,7 +1757,7 @@
     goto/16 :goto_1b7
 
     :cond_35
-    const p2, 0x7f0e1093
+    const p2, 0x7f0e1152
 
     const-string p3, "SortedByLastSeen"
 
@@ -1785,7 +1785,7 @@
 
     if-nez p2, :cond_60
 
-    const p1, 0x7f0e08af
+    const p1, 0x7f0e090c
 
     const-string p2, "InviteFriends"
 
@@ -1794,7 +1794,7 @@
 
     move-result-object p1
 
-    const p2, 0x7f070203
+    const p2, 0x7f070247
 
     invoke-virtual {p3, p1, p2, v3}, Lorg/telegram/ui/Cells/TextCell;->setTextAndIcon(Ljava/lang/String;IZ)V
 
@@ -1803,7 +1803,7 @@
     :cond_60
     if-ne p2, v2, :cond_1b7
 
-    const p1, 0x7f0e012c
+    const p1, 0x7f0e0154
 
     const-string p2, "AddPeopleNearby"
 
@@ -1812,7 +1812,7 @@
 
     move-result-object p1
 
-    const p2, 0x7f070208
+    const p2, 0x7f07025c
 
     invoke-virtual {p3, p1, p2, v3}, Lorg/telegram/ui/Cells/TextCell;->setTextAndIcon(Ljava/lang/String;IZ)V
 
@@ -1827,11 +1827,11 @@
     .line 447
     iget-boolean p1, p0, Lorg/telegram/ui/Adapters/ContactsAdapter;->isChannel:Z
 
-    const p2, 0x7f07037d
+    const p2, 0x7f070257
 
     if-eqz p1, :cond_8c
 
-    const p1, 0x7f0e0384
+    const p1, 0x7f0e03c3
 
     const-string v0, "ChannelInviteViaLink"
 
@@ -1845,7 +1845,7 @@
     goto/16 :goto_1b7
 
     :cond_8c
-    const p1, 0x7f0e08c2
+    const p1, 0x7f0e091f
 
     const-string v0, "InviteToGroupByLink"
 
@@ -1861,7 +1861,7 @@
     :cond_9a
     if-nez p2, :cond_ad
 
-    const p1, 0x7f0e0a8b
+    const p1, 0x7f0e0b12
 
     const-string p2, "NewGroup"
 
@@ -1870,7 +1870,7 @@
 
     move-result-object p1
 
-    const p2, 0x7f0701fb
+    const p2, 0x7f070235
 
     invoke-virtual {p3, p1, p2, v3}, Lorg/telegram/ui/Cells/TextCell;->setTextAndIcon(Ljava/lang/String;IZ)V
 
@@ -1879,7 +1879,7 @@
     :cond_ad
     if-ne p2, v2, :cond_c0
 
-    const p1, 0x7f0e0a98
+    const p1, 0x7f0e0b1f
 
     const-string p2, "NewSecretChat"
 
@@ -1888,7 +1888,7 @@
 
     move-result-object p1
 
-    const p2, 0x7f070219
+    const p2, 0x7f0702e2
 
     invoke-virtual {p3, p1, p2, v3}, Lorg/telegram/ui/Cells/TextCell;->setTextAndIcon(Ljava/lang/String;IZ)V
 
@@ -1897,7 +1897,7 @@
     :cond_c0
     if-ne p2, v1, :cond_1b7
 
-    const p1, 0x7f0e0a83
+    const p1, 0x7f0e0b0a
 
     const-string p2, "NewChannel"
 
@@ -1906,7 +1906,7 @@
 
     move-result-object p1
 
-    const p2, 0x7f0701e2
+    const p2, 0x7f0701e9
 
     invoke-virtual {p3, p1, p2, v3}, Lorg/telegram/ui/Cells/TextCell;->setTextAndIcon(Ljava/lang/String;IZ)V
 
@@ -2218,7 +2218,7 @@
     .line 401
     iget-object p2, p0, Lorg/telegram/ui/Adapters/ContactsAdapter;->mContext:Landroid/content/Context;
 
-    const v1, 0x7f07012c
+    const v1, 0x7f0700fb
 
     const-string v2, "windowBackgroundGrayShadow"
 

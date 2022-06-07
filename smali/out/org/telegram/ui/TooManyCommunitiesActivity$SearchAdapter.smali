@@ -70,19 +70,19 @@
 .method constructor <init>(Lorg/telegram/ui/TooManyCommunitiesActivity;)V
     .registers 2
 
-    .line 535
+    .line 534
     iput-object p1, p0, Lorg/telegram/ui/TooManyCommunitiesActivity$SearchAdapter;->this$0:Lorg/telegram/ui/TooManyCommunitiesActivity;
 
     invoke-direct {p0}, Lorg/telegram/ui/Components/RecyclerListView$SelectionAdapter;-><init>()V
 
-    .line 537
+    .line 536
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
     iput-object p1, p0, Lorg/telegram/ui/TooManyCommunitiesActivity$SearchAdapter;->searchResults:Ljava/util/ArrayList;
 
-    .line 538
+    .line 537
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
@@ -99,7 +99,7 @@
 
     move/from16 v1, p2
 
-    .line 585
+    .line 584
     invoke-virtual/range {p1 .. p1}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object v2
@@ -108,7 +108,7 @@
 
     move-result-object v2
 
-    .line 586
+    .line 585
     invoke-virtual {v2}, Ljava/lang/String;->length()I
 
     move-result v3
@@ -117,12 +117,12 @@
 
     if-nez v3, :cond_17
 
-    .line 587
+    .line 586
     invoke-direct {v0, v4, v4, v1}, Lorg/telegram/ui/TooManyCommunitiesActivity$SearchAdapter;->updateSearchResults(Ljava/util/ArrayList;Ljava/util/ArrayList;I)V
 
     return-void
 
-    .line 590
+    .line 589
     :cond_17
     invoke-static {}, Lorg/telegram/messenger/LocaleController;->getInstance()Lorg/telegram/messenger/LocaleController;
 
@@ -132,7 +132,7 @@
 
     move-result-object v3
 
-    .line 591
+    .line 590
     invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v5
@@ -168,31 +168,31 @@
     :goto_34
     add-int/2addr v6, v5
 
-    .line 594
+    .line 593
     new-array v7, v6, [Ljava/lang/String;
 
-    .line 595
+    .line 594
     aput-object v2, v7, v3
 
     if-eqz v4, :cond_3d
 
-    .line 597
+    .line 596
     aput-object v4, v7, v5
 
-    .line 600
+    .line 599
     :cond_3d
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 601
+    .line 600
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
     const/4 v8, 0x0
 
-    .line 603
+    .line 602
     :goto_48
     iget-object v9, v0, Lorg/telegram/ui/TooManyCommunitiesActivity$SearchAdapter;->this$0:Lorg/telegram/ui/TooManyCommunitiesActivity;
 
@@ -206,7 +206,7 @@
 
     if-ge v8, v9, :cond_b8
 
-    .line 604
+    .line 603
     iget-object v9, v0, Lorg/telegram/ui/TooManyCommunitiesActivity$SearchAdapter;->this$0:Lorg/telegram/ui/TooManyCommunitiesActivity;
 
     invoke-static {v9}, Lorg/telegram/ui/TooManyCommunitiesActivity;->access$700(Lorg/telegram/ui/TooManyCommunitiesActivity;)Ljava/util/ArrayList;
@@ -230,7 +230,7 @@
 
     if-nez v10, :cond_6a
 
-    .line 607
+    .line 606
     iget-object v12, v9, Lorg/telegram/tgnet/TLRPC$Chat;->title:Ljava/lang/String;
 
     goto :goto_6c
@@ -243,7 +243,7 @@
 
     goto :goto_b0
 
-    .line 611
+    .line 610
     :cond_6f
     invoke-virtual {v12}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
 
@@ -254,10 +254,10 @@
     :goto_74
     if-ge v13, v6, :cond_9b
 
-    .line 612
+    .line 611
     aget-object v14, v7, v13
 
-    .line 613
+    .line 612
     invoke-virtual {v12, v14}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v15
@@ -300,10 +300,10 @@
     :cond_9b
     if-eqz v11, :cond_b0
 
-    .line 619
+    .line 618
     invoke-virtual {v2, v9}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 620
+    .line 619
     iget-object v3, v0, Lorg/telegram/ui/TooManyCommunitiesActivity$SearchAdapter;->this$0:Lorg/telegram/ui/TooManyCommunitiesActivity;
 
     invoke-static {v3}, Lorg/telegram/ui/TooManyCommunitiesActivity;->access$1000(Lorg/telegram/ui/TooManyCommunitiesActivity;)Ljava/util/ArrayList;
@@ -336,7 +336,7 @@
 
     goto :goto_48
 
-    .line 626
+    .line 625
     :cond_b8
     invoke-direct {v0, v2, v4, v1}, Lorg/telegram/ui/TooManyCommunitiesActivity$SearchAdapter;->updateSearchResults(Ljava/util/ArrayList;Ljava/util/ArrayList;I)V
 
@@ -346,7 +346,7 @@
 .method private synthetic lambda$search$0(Ljava/lang/String;I)V
     .registers 3
 
-    .line 579
+    .line 578
     invoke-virtual {p0, p1, p2}, Lorg/telegram/ui/TooManyCommunitiesActivity$SearchAdapter;->processSearch(Ljava/lang/String;I)V
 
     return-void
@@ -355,41 +355,41 @@
 .method private synthetic lambda$updateSearchResults$2(ILjava/util/ArrayList;Ljava/util/ArrayList;)V
     .registers 5
 
-    .line 632
+    .line 631
     iget v0, p0, Lorg/telegram/ui/TooManyCommunitiesActivity$SearchAdapter;->lastSearchId:I
 
     if-eq p1, v0, :cond_5
 
     return-void
 
-    .line 635
+    .line 634
     :cond_5
     iget-object p1, p0, Lorg/telegram/ui/TooManyCommunitiesActivity$SearchAdapter;->searchResults:Ljava/util/ArrayList;
 
     invoke-virtual {p1}, Ljava/util/ArrayList;->clear()V
 
-    .line 636
+    .line 635
     iget-object p1, p0, Lorg/telegram/ui/TooManyCommunitiesActivity$SearchAdapter;->searchResultsSignatures:Ljava/util/ArrayList;
 
     invoke-virtual {p1}, Ljava/util/ArrayList;->clear()V
 
     if-eqz p2, :cond_1b
 
-    .line 638
+    .line 637
     iget-object p1, p0, Lorg/telegram/ui/TooManyCommunitiesActivity$SearchAdapter;->searchResults:Ljava/util/ArrayList;
 
     invoke-virtual {p1, p2}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
-    .line 639
+    .line 638
     iget-object p1, p0, Lorg/telegram/ui/TooManyCommunitiesActivity$SearchAdapter;->searchResultsSignatures:Ljava/util/ArrayList;
 
     invoke-virtual {p1, p3}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
-    .line 641
+    .line 640
     :cond_1b
     invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->notifyDataSetChanged()V
 
-    .line 642
+    .line 641
     iget-object p1, p0, Lorg/telegram/ui/TooManyCommunitiesActivity$SearchAdapter;->searchResults:Ljava/util/ArrayList;
 
     invoke-virtual {p1}, Ljava/util/ArrayList;->isEmpty()Z
@@ -398,7 +398,7 @@
 
     if-eqz p1, :cond_31
 
-    .line 643
+    .line 642
     iget-object p1, p0, Lorg/telegram/ui/TooManyCommunitiesActivity$SearchAdapter;->this$0:Lorg/telegram/ui/TooManyCommunitiesActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/TooManyCommunitiesActivity;->access$100(Lorg/telegram/ui/TooManyCommunitiesActivity;)Lorg/telegram/ui/Components/EmptyTextProgressView;
@@ -411,7 +411,7 @@
 
     goto :goto_3c
 
-    .line 645
+    .line 644
     :cond_31
     iget-object p1, p0, Lorg/telegram/ui/TooManyCommunitiesActivity$SearchAdapter;->this$0:Lorg/telegram/ui/TooManyCommunitiesActivity;
 
@@ -441,7 +441,7 @@
         }
     .end annotation
 
-    .line 631
+    .line 630
     new-instance v0, Lorg/telegram/ui/TooManyCommunitiesActivity$SearchAdapter$$ExternalSyntheticLambda0;
 
     invoke-direct {v0, p0, p3, p1, p2}, Lorg/telegram/ui/TooManyCommunitiesActivity$SearchAdapter$$ExternalSyntheticLambda0;-><init>(Lorg/telegram/ui/TooManyCommunitiesActivity$SearchAdapter;ILjava/util/ArrayList;Ljava/util/ArrayList;)V
@@ -456,7 +456,7 @@
 .method public getItemCount()I
     .registers 2
 
-    .line 564
+    .line 563
     iget-object v0, p0, Lorg/telegram/ui/TooManyCommunitiesActivity$SearchAdapter;->searchResults:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -477,7 +477,7 @@
 .method public onBindViewHolder(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;I)V
     .registers 9
 
-    .line 555
+    .line 554
     iget-object v0, p0, Lorg/telegram/ui/TooManyCommunitiesActivity$SearchAdapter;->searchResults:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -486,7 +486,7 @@
 
     check-cast v0, Lorg/telegram/tgnet/TLRPC$Chat;
 
-    .line 556
+    .line 555
     iget-object v1, p0, Lorg/telegram/ui/TooManyCommunitiesActivity$SearchAdapter;->searchResultsSignatures:Ljava/util/ArrayList;
 
     invoke-virtual {v1, p2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -495,12 +495,12 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 557
+    .line 556
     iget-object p1, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     check-cast p1, Lorg/telegram/ui/Cells/GroupCreateUserCell;
 
-    .line 558
+    .line 557
     iget-object v2, v0, Lorg/telegram/tgnet/TLRPC$Chat;->title:Ljava/lang/String;
 
     iget-object v3, p0, Lorg/telegram/ui/TooManyCommunitiesActivity$SearchAdapter;->searchResults:Ljava/util/ArrayList;
@@ -525,7 +525,7 @@
     :goto_23
     invoke-virtual {p1, v0, v2, v1, v4}, Lorg/telegram/ui/Cells/GroupCreateUserCell;->setObject(Lorg/telegram/tgnet/TLObject;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)V
 
-    .line 559
+    .line 558
     iget-object p2, p0, Lorg/telegram/ui/TooManyCommunitiesActivity$SearchAdapter;->this$0:Lorg/telegram/ui/TooManyCommunitiesActivity;
 
     invoke-static {p2}, Lorg/telegram/ui/TooManyCommunitiesActivity;->access$1100(Lorg/telegram/ui/TooManyCommunitiesActivity;)Ljava/util/Set;
@@ -550,7 +550,7 @@
 .method public onCreateViewHolder(Landroid/view/ViewGroup;I)Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
     .registers 6
 
-    .line 550
+    .line 549
     new-instance p2, Lorg/telegram/ui/Components/RecyclerListView$Holder;
 
     new-instance v0, Lorg/telegram/ui/Cells/GroupCreateUserCell;
@@ -573,7 +573,7 @@
 .method public processSearch(Ljava/lang/String;I)V
     .registers 5
 
-    .line 584
+    .line 583
     sget-object v0, Lorg/telegram/messenger/Utilities;->searchQueue:Lorg/telegram/messenger/DispatchQueue;
 
     new-instance v1, Lorg/telegram/ui/TooManyCommunitiesActivity$SearchAdapter$$ExternalSyntheticLambda2;
@@ -588,12 +588,12 @@
 .method public search(Ljava/lang/String;)V
     .registers 7
 
-    .line 568
+    .line 567
     iget-object v0, p0, Lorg/telegram/ui/TooManyCommunitiesActivity$SearchAdapter;->searchRunnable:Ljava/lang/Runnable;
 
     if-eqz v0, :cond_e
 
-    .line 569
+    .line 568
     sget-object v0, Lorg/telegram/messenger/Utilities;->searchQueue:Lorg/telegram/messenger/DispatchQueue;
 
     iget-object v1, p0, Lorg/telegram/ui/TooManyCommunitiesActivity$SearchAdapter;->searchRunnable:Ljava/lang/Runnable;
@@ -602,10 +602,10 @@
 
     const/4 v0, 0x0
 
-    .line 570
+    .line 569
     iput-object v0, p0, Lorg/telegram/ui/TooManyCommunitiesActivity$SearchAdapter;->searchRunnable:Ljava/lang/Runnable;
 
-    .line 572
+    .line 571
     :cond_e
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -613,20 +613,20 @@
 
     if-eqz v0, :cond_2d
 
-    .line 573
+    .line 572
     iget-object p1, p0, Lorg/telegram/ui/TooManyCommunitiesActivity$SearchAdapter;->searchResults:Ljava/util/ArrayList;
 
     invoke-virtual {p1}, Ljava/util/ArrayList;->clear()V
 
-    .line 574
+    .line 573
     iget-object p1, p0, Lorg/telegram/ui/TooManyCommunitiesActivity$SearchAdapter;->searchResultsSignatures:Ljava/util/ArrayList;
 
     invoke-virtual {p1}, Ljava/util/ArrayList;->clear()V
 
-    .line 575
+    .line 574
     invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->notifyDataSetChanged()V
 
-    .line 576
+    .line 575
     iget-object p1, p0, Lorg/telegram/ui/TooManyCommunitiesActivity$SearchAdapter;->this$0:Lorg/telegram/ui/TooManyCommunitiesActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/TooManyCommunitiesActivity;->access$100(Lorg/telegram/ui/TooManyCommunitiesActivity;)Lorg/telegram/ui/Components/EmptyTextProgressView;
@@ -639,7 +639,7 @@
 
     goto :goto_41
 
-    .line 578
+    .line 577
     :cond_2d
     iget v0, p0, Lorg/telegram/ui/TooManyCommunitiesActivity$SearchAdapter;->lastSearchId:I
 
@@ -647,7 +647,7 @@
 
     iput v0, p0, Lorg/telegram/ui/TooManyCommunitiesActivity$SearchAdapter;->lastSearchId:I
 
-    .line 579
+    .line 578
     sget-object v1, Lorg/telegram/messenger/Utilities;->searchQueue:Lorg/telegram/messenger/DispatchQueue;
 
     new-instance v2, Lorg/telegram/ui/TooManyCommunitiesActivity$SearchAdapter$$ExternalSyntheticLambda1;

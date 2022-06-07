@@ -18,7 +18,7 @@
 .method constructor <init>(Lorg/telegram/ui/ProfileActivity$ListAdapter;Landroid/content/Context;)V
     .registers 3
 
-    .line 7256
+    .line 7408
     invoke-direct {p0, p2}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
     return-void
@@ -29,7 +29,7 @@
 .method protected onMeasure(II)V
     .registers 4
 
-    .line 7259
+    .line 7411
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result p1

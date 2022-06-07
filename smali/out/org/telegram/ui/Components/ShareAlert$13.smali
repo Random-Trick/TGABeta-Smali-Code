@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/ShareAlert;Landroid/content/Context;)V
     .registers 3
 
-    .line 1262
+    .line 1273
     iput-object p1, p0, Lorg/telegram/ui/Components/ShareAlert$13;->this$0:Lorg/telegram/ui/Components/ShareAlert;
 
     invoke-direct {p0, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
@@ -33,31 +33,33 @@
 
 # virtual methods
 .method public onInitializeAccessibilityNodeInfo(Landroid/view/accessibility/AccessibilityNodeInfo;)V
-    .registers 4
+    .registers 5
 
-    .line 1265
+    .line 1276
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->onInitializeAccessibilityNodeInfo(Landroid/view/accessibility/AccessibilityNodeInfo;)V
 
-    .line 1266
+    .line 1277
     iget-object v0, p0, Lorg/telegram/ui/Components/ShareAlert$13;->this$0:Lorg/telegram/ui/Components/ShareAlert;
 
-    invoke-static {v0}, Lorg/telegram/ui/Components/ShareAlert;->access$9100(Lorg/telegram/ui/Components/ShareAlert;)Landroidx/collection/LongSparseArray;
-
-    move-result-object v0
+    iget-object v0, v0, Lorg/telegram/ui/Components/ShareAlert;->selectedDialogs:Landroidx/collection/LongSparseArray;
 
     invoke-virtual {v0}, Landroidx/collection/LongSparseArray;->size()I
 
     move-result v0
 
-    const-string v1, "AccDescrShareInChats"
+    const/4 v1, 0x0
 
-    invoke-static {v1, v0}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    new-array v1, v1, [Ljava/lang/Object;
+
+    const-string v2, "AccDescrShareInChats"
+
+    invoke-static {v2, v0, v1}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
     invoke-virtual {p1, v0}, Landroid/view/accessibility/AccessibilityNodeInfo;->setText(Ljava/lang/CharSequence;)V
 
-    .line 1267
+    .line 1278
     const-class v0, Landroid/widget/Button;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -68,10 +70,10 @@
 
     const/4 v0, 0x1
 
-    .line 1268
+    .line 1279
     invoke-virtual {p1, v0}, Landroid/view/accessibility/AccessibilityNodeInfo;->setLongClickable(Z)V
 
-    .line 1269
+    .line 1280
     invoke-virtual {p1, v0}, Landroid/view/accessibility/AccessibilityNodeInfo;->setClickable(Z)V
 
     return-void

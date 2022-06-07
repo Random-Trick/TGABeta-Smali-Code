@@ -298,7 +298,7 @@
 
     aget-object v1, v1, v5
 
-    const v3, 0x7f0e083c
+    const v3, 0x7f0e0897
 
     const-string v4, "HintSent"
 
@@ -325,7 +325,7 @@
 
     aget-object v1, v1, v5
 
-    const v3, 0x7f0e083b
+    const v3, 0x7f0e0896
 
     const-string v4, "HintRead"
 
@@ -355,7 +355,7 @@
 
     iput-object p2, p0, Lorg/telegram/ui/Components/ChecksHintView;->arrowImageView:Landroid/widget/ImageView;
 
-    const p1, 0x7f0703ff
+    const p1, 0x7f0703e7
 
     .line 75
     invoke-virtual {p2, p1}, Landroid/widget/ImageView;->setImageResource(I)V

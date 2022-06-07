@@ -96,14 +96,14 @@
 
     if-eqz p1, :cond_48
 
-    const p1, 0x7f0e0df4
+    const p1, 0x7f0e0e9d
 
     const-string v0, "PrimaryLinkHelpChannel"
 
     goto :goto_4d
 
     :cond_48
-    const p1, 0x7f0e0df3
+    const p1, 0x7f0e0e9c
 
     const-string v0, "PrimaryLinkHelp"
 

@@ -2,32 +2,38 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lorg/telegram/tgnet/RequestDelegate;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
 .field public final synthetic f$0:Lorg/telegram/ui/ChannelCreateActivity;
 
+.field public final synthetic f$1:Lorg/telegram/tgnet/TLRPC$TL_error;
+
 
 # direct methods
-.method public synthetic constructor <init>(Lorg/telegram/ui/ChannelCreateActivity;)V
-    .registers 2
+.method public synthetic constructor <init>(Lorg/telegram/ui/ChannelCreateActivity;Lorg/telegram/tgnet/TLRPC$TL_error;)V
+    .registers 3
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lorg/telegram/ui/ChannelCreateActivity$$ExternalSyntheticLambda18;->f$0:Lorg/telegram/ui/ChannelCreateActivity;
+
+    iput-object p2, p0, Lorg/telegram/ui/ChannelCreateActivity$$ExternalSyntheticLambda18;->f$1:Lorg/telegram/tgnet/TLRPC$TL_error;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run(Lorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/TLRPC$TL_error;)V
-    .registers 4
+.method public final run()V
+    .registers 3
 
     iget-object v0, p0, Lorg/telegram/ui/ChannelCreateActivity$$ExternalSyntheticLambda18;->f$0:Lorg/telegram/ui/ChannelCreateActivity;
 
-    invoke-static {v0, p1, p2}, Lorg/telegram/ui/ChannelCreateActivity;->$r8$lambda$UWkqcwExYOKKnkXG56GvN0h6ZbM(Lorg/telegram/ui/ChannelCreateActivity;Lorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/TLRPC$TL_error;)V
+    iget-object v1, p0, Lorg/telegram/ui/ChannelCreateActivity$$ExternalSyntheticLambda18;->f$1:Lorg/telegram/tgnet/TLRPC$TL_error;
+
+    invoke-static {v0, v1}, Lorg/telegram/ui/ChannelCreateActivity;->$r8$lambda$qZLyXG9vNDeEPhVYAVKFLFEmonU(Lorg/telegram/ui/ChannelCreateActivity;Lorg/telegram/tgnet/TLRPC$TL_error;)V
 
     return-void
 .end method

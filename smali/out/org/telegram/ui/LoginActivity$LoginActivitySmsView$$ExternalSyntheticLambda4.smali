@@ -27,7 +27,7 @@
 
     iget-object v0, p0, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$$ExternalSyntheticLambda4;->f$0:Lorg/telegram/ui/LoginActivity$LoginActivitySmsView;
 
-    invoke-static {v0, p1}, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView;->$r8$lambda$buy-EfFe7hWr8824GWxT6H9A4_8(Lorg/telegram/ui/LoginActivity$LoginActivitySmsView;Landroid/view/View;)V
+    invoke-static {v0, p1}, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView;->$r8$lambda$ahv2axD5oXvVcWqngYCLZQVXAPA(Lorg/telegram/ui/LoginActivity$LoginActivitySmsView;Landroid/view/View;)V
 
     return-void
 .end method

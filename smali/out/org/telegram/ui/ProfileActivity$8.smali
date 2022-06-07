@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/ProfileActivity;)V
     .registers 2
 
-    .line 2400
+    .line 2429
     iput-object p1, p0, Lorg/telegram/ui/ProfileActivity$8;->this$0:Lorg/telegram/ui/ProfileActivity;
 
     invoke-direct {p0}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem$ActionBarMenuItemSearchListener;-><init>()V
@@ -35,27 +35,27 @@
 .method public getCustomToggleTransition()Landroid/animation/Animator;
     .registers 3
 
-    .line 2404
+    .line 2433
     iget-object v0, p0, Lorg/telegram/ui/ProfileActivity$8;->this$0:Lorg/telegram/ui/ProfileActivity;
 
-    invoke-static {v0}, Lorg/telegram/ui/ProfileActivity;->access$10700(Lorg/telegram/ui/ProfileActivity;)Z
+    invoke-static {v0}, Lorg/telegram/ui/ProfileActivity;->access$10800(Lorg/telegram/ui/ProfileActivity;)Z
 
     move-result v1
 
     xor-int/lit8 v1, v1, 0x1
 
-    invoke-static {v0, v1}, Lorg/telegram/ui/ProfileActivity;->access$10702(Lorg/telegram/ui/ProfileActivity;Z)Z
+    invoke-static {v0, v1}, Lorg/telegram/ui/ProfileActivity;->access$10802(Lorg/telegram/ui/ProfileActivity;Z)Z
 
-    .line 2405
+    .line 2434
     iget-object v0, p0, Lorg/telegram/ui/ProfileActivity$8;->this$0:Lorg/telegram/ui/ProfileActivity;
 
-    invoke-static {v0}, Lorg/telegram/ui/ProfileActivity;->access$10700(Lorg/telegram/ui/ProfileActivity;)Z
+    invoke-static {v0}, Lorg/telegram/ui/ProfileActivity;->access$10800(Lorg/telegram/ui/ProfileActivity;)Z
 
     move-result v0
 
     if-nez v0, :cond_1c
 
-    .line 2406
+    .line 2435
     iget-object v0, p0, Lorg/telegram/ui/ProfileActivity$8;->this$0:Lorg/telegram/ui/ProfileActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/ProfileActivity;->access$2800(Lorg/telegram/ui/ProfileActivity;)Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
@@ -64,17 +64,17 @@
 
     invoke-virtual {v0}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->clearFocusOnSearchView()V
 
-    .line 2408
+    .line 2437
     :cond_1c
     iget-object v0, p0, Lorg/telegram/ui/ProfileActivity$8;->this$0:Lorg/telegram/ui/ProfileActivity;
 
-    invoke-static {v0}, Lorg/telegram/ui/ProfileActivity;->access$10700(Lorg/telegram/ui/ProfileActivity;)Z
+    invoke-static {v0}, Lorg/telegram/ui/ProfileActivity;->access$10800(Lorg/telegram/ui/ProfileActivity;)Z
 
     move-result v0
 
     if-eqz v0, :cond_33
 
-    .line 2409
+    .line 2438
     iget-object v0, p0, Lorg/telegram/ui/ProfileActivity$8;->this$0:Lorg/telegram/ui/ProfileActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/ProfileActivity;->access$2800(Lorg/telegram/ui/ProfileActivity;)Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
@@ -89,15 +89,15 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
-    .line 2411
+    .line 2440
     :cond_33
     iget-object v0, p0, Lorg/telegram/ui/ProfileActivity$8;->this$0:Lorg/telegram/ui/ProfileActivity;
 
-    invoke-static {v0}, Lorg/telegram/ui/ProfileActivity;->access$10700(Lorg/telegram/ui/ProfileActivity;)Z
+    invoke-static {v0}, Lorg/telegram/ui/ProfileActivity;->access$10800(Lorg/telegram/ui/ProfileActivity;)Z
 
     move-result v1
 
-    invoke-static {v0, v1}, Lorg/telegram/ui/ProfileActivity;->access$10800(Lorg/telegram/ui/ProfileActivity;Z)Landroid/animation/Animator;
+    invoke-static {v0, v1}, Lorg/telegram/ui/ProfileActivity;->access$10900(Lorg/telegram/ui/ProfileActivity;Z)Landroid/animation/Animator;
 
     move-result-object v0
 
@@ -107,10 +107,10 @@
 .method public onTextChanged(Landroid/widget/EditText;)V
     .registers 3
 
-    .line 2416
+    .line 2445
     iget-object v0, p0, Lorg/telegram/ui/ProfileActivity$8;->this$0:Lorg/telegram/ui/ProfileActivity;
 
-    invoke-static {v0}, Lorg/telegram/ui/ProfileActivity;->access$10900(Lorg/telegram/ui/ProfileActivity;)Lorg/telegram/ui/ProfileActivity$SearchAdapter;
+    invoke-static {v0}, Lorg/telegram/ui/ProfileActivity;->access$11000(Lorg/telegram/ui/ProfileActivity;)Lorg/telegram/ui/ProfileActivity$SearchAdapter;
 
     move-result-object v0
 

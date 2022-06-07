@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;Landroid/content/Context;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)V
     .registers 4
 
-    .line 686
+    .line 684
     iput-object p1, p0, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout$6;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;
 
     invoke-direct {p0, p2, p3}, Lorg/telegram/ui/Components/RecyclerListView;-><init>(Landroid/content/Context;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)V
@@ -35,10 +35,10 @@
 .method protected onLayout(ZIIII)V
     .registers 6
 
-    .line 689
+    .line 687
     invoke-super/range {p0 .. p5}, Lorg/telegram/ui/Components/RecyclerListView;->onLayout(ZIIII)V
 
-    .line 690
+    .line 688
     iget-object p1, p0, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout$6;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;->access$2300(Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;)V

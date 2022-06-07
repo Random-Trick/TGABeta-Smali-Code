@@ -34,7 +34,7 @@
 .method private constructor <init>()V
     .registers 1
 
-    .line 911
+    .line 933
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -43,7 +43,7 @@
 .method synthetic constructor <init>(Lorg/telegram/ui/NotificationsSoundActivity$1;)V
     .registers 2
 
-    .line 911
+    .line 933
     invoke-direct {p0}, Lorg/telegram/ui/NotificationsSoundActivity$Tone;-><init>()V
 
     return-void
@@ -54,7 +54,7 @@
 .method public getUriForShare(I)Landroid/net/Uri;
     .registers 5
 
-    .line 922
+    .line 944
     iget-object v0, p0, Lorg/telegram/ui/NotificationsSoundActivity$Tone;->uri:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -63,7 +63,7 @@
 
     if-nez v0, :cond_14
 
-    .line 923
+    .line 945
     new-instance p1, Ljava/io/File;
 
     iget-object v0, p0, Lorg/telegram/ui/NotificationsSoundActivity$Tone;->uri:Ljava/lang/String;
@@ -76,35 +76,35 @@
 
     return-object p1
 
-    .line 925
+    .line 947
     :cond_14
     iget-object v0, p0, Lorg/telegram/ui/NotificationsSoundActivity$Tone;->document:Lorg/telegram/tgnet/TLRPC$Document;
 
     if-eqz v0, :cond_64
 
-    .line 926
+    .line 948
     iget-object v1, v0, Lorg/telegram/tgnet/TLRPC$Document;->file_name_fixed:Ljava/lang/String;
 
-    .line 927
+    .line 949
     invoke-static {v0}, Lorg/telegram/messenger/FileLoader;->getDocumentExtension(Lorg/telegram/tgnet/TLRPC$Document;)Ljava/lang/String;
 
     move-result-object v0
 
     if-eqz v0, :cond_64
 
-    .line 929
+    .line 951
     invoke-virtual {v0}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 930
+    .line 952
     invoke-virtual {v1, v0}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
     move-result v2
 
     if-nez v2, :cond_3e
 
-    .line 931
+    .line 953
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -121,7 +121,7 @@
 
     move-result-object v1
 
-    .line 933
+    .line 955
     :cond_3e
     new-instance v0, Ljava/io/File;
 
@@ -131,14 +131,14 @@
 
     invoke-direct {v0, v2, v1}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 934
+    .line 956
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
     move-result v1
 
     if-nez v1, :cond_5f
 
-    .line 936
+    .line 958
     :try_start_4d
     invoke-static {p1}, Lorg/telegram/messenger/FileLoader;->getInstance(I)Lorg/telegram/messenger/FileLoader;
 
@@ -159,10 +159,10 @@
     :catch_5b
     move-exception p1
 
-    .line 938
+    .line 960
     invoke-virtual {p1}, Ljava/io/IOException;->printStackTrace()V
 
-    .line 941
+    .line 963
     :cond_5f
     :goto_5f
     invoke-static {v0}, Landroid/net/Uri;->fromFile(Ljava/io/File;)Landroid/net/Uri;

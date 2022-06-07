@@ -17,7 +17,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 41714
+    .line 42166
     invoke-direct {p0}, Lorg/telegram/tgnet/TLRPC$FileLocation;-><init>()V
 
     return-void
@@ -28,42 +28,42 @@
 .method public readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
     .registers 5
 
-    .line 41719
+    .line 42171
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
 
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$FileLocation;->dc_id:I
 
-    .line 41720
+    .line 42172
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt64(Z)J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lorg/telegram/tgnet/TLRPC$FileLocation;->volume_id:J
 
-    .line 41721
+    .line 42173
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
 
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$FileLocation;->local_id:I
 
-    .line 41722
+    .line 42174
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt64(Z)J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lorg/telegram/tgnet/TLRPC$FileLocation;->secret:J
 
-    .line 41723
+    .line 42175
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readByteArray(Z)[B
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/telegram/tgnet/TLRPC$FileLocation;->key:[B
 
-    .line 41724
+    .line 42176
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readByteArray(Z)[B
 
     move-result-object p1
@@ -76,37 +76,37 @@
 .method public serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
     .registers 4
 
-    .line 41728
+    .line 42180
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_fileEncryptedLocation;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 41729
+    .line 42181
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$FileLocation;->dc_id:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 41730
+    .line 42182
     iget-wide v0, p0, Lorg/telegram/tgnet/TLRPC$FileLocation;->volume_id:J
 
     invoke-virtual {p1, v0, v1}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt64(J)V
 
-    .line 41731
+    .line 42183
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$FileLocation;->local_id:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 41732
+    .line 42184
     iget-wide v0, p0, Lorg/telegram/tgnet/TLRPC$FileLocation;->secret:J
 
     invoke-virtual {p1, v0, v1}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt64(J)V
 
-    .line 41733
+    .line 42185
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$FileLocation;->key:[B
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeByteArray([B)V
 
-    .line 41734
+    .line 42186
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$FileLocation;->iv:[B
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeByteArray([B)V

@@ -50,35 +50,35 @@
 .method public constructor <init>(Lorg/telegram/ui/Components/StickersAlert;Landroid/content/Context;)V
     .registers 3
 
-    .line 1547
+    .line 1579
     iput-object p1, p0, Lorg/telegram/ui/Components/StickersAlert$GridAdapter;->this$0:Lorg/telegram/ui/Components/StickersAlert;
 
     invoke-direct {p0}, Lorg/telegram/ui/Components/RecyclerListView$SelectionAdapter;-><init>()V
 
-    .line 1542
+    .line 1574
     new-instance p1, Landroid/util/SparseArray;
 
     invoke-direct {p1}, Landroid/util/SparseArray;-><init>()V
 
     iput-object p1, p0, Lorg/telegram/ui/Components/StickersAlert$GridAdapter;->cache:Landroid/util/SparseArray;
 
-    .line 1543
+    .line 1575
     new-instance p1, Landroid/util/SparseArray;
 
     invoke-direct {p1}, Landroid/util/SparseArray;-><init>()V
 
     iput-object p1, p0, Lorg/telegram/ui/Components/StickersAlert$GridAdapter;->positionsToSets:Landroid/util/SparseArray;
 
-    .line 1548
+    .line 1580
     iput-object p2, p0, Lorg/telegram/ui/Components/StickersAlert$GridAdapter;->context:Landroid/content/Context;
 
     return-void
 .end method
 
-.method static synthetic access$1400(Lorg/telegram/ui/Components/StickersAlert$GridAdapter;)I
+.method static synthetic access$1500(Lorg/telegram/ui/Components/StickersAlert$GridAdapter;)I
     .registers 1
 
-    .line 1538
+    .line 1570
     iget p0, p0, Lorg/telegram/ui/Components/StickersAlert$GridAdapter;->stickersRowCount:I
 
     return p0
@@ -87,7 +87,7 @@
 .method static synthetic access$4100(Lorg/telegram/ui/Components/StickersAlert$GridAdapter;)Landroid/util/SparseArray;
     .registers 1
 
-    .line 1538
+    .line 1570
     iget-object p0, p0, Lorg/telegram/ui/Components/StickersAlert$GridAdapter;->cache:Landroid/util/SparseArray;
 
     return-object p0
@@ -96,7 +96,7 @@
 .method static synthetic access$4200(Lorg/telegram/ui/Components/StickersAlert$GridAdapter;)I
     .registers 1
 
-    .line 1538
+    .line 1570
     iget p0, p0, Lorg/telegram/ui/Components/StickersAlert$GridAdapter;->totalItems:I
 
     return p0
@@ -105,7 +105,7 @@
 .method static synthetic access$4300(Lorg/telegram/ui/Components/StickersAlert$GridAdapter;)I
     .registers 1
 
-    .line 1538
+    .line 1570
     iget p0, p0, Lorg/telegram/ui/Components/StickersAlert$GridAdapter;->stickersPerRow:I
 
     return p0
@@ -114,7 +114,7 @@
 .method static synthetic access$5600(Lorg/telegram/ui/Components/StickersAlert$GridAdapter;)Landroid/util/SparseArray;
     .registers 1
 
-    .line 1538
+    .line 1570
     iget-object p0, p0, Lorg/telegram/ui/Components/StickersAlert$GridAdapter;->positionsToSets:Landroid/util/SparseArray;
 
     return-object p0
@@ -125,7 +125,7 @@
 .method public getItemCount()I
     .registers 2
 
-    .line 1553
+    .line 1585
     iget v0, p0, Lorg/telegram/ui/Components/StickersAlert$GridAdapter;->totalItems:I
 
     return v0
@@ -134,10 +134,10 @@
 .method public getItemViewType(I)I
     .registers 4
 
-    .line 1558
+    .line 1590
     iget-object v0, p0, Lorg/telegram/ui/Components/StickersAlert$GridAdapter;->this$0:Lorg/telegram/ui/Components/StickersAlert;
 
-    invoke-static {v0}, Lorg/telegram/ui/Components/StickersAlert;->access$1200(Lorg/telegram/ui/Components/StickersAlert;)Ljava/util/ArrayList;
+    invoke-static {v0}, Lorg/telegram/ui/Components/StickersAlert;->access$1300(Lorg/telegram/ui/Components/StickersAlert;)Ljava/util/ArrayList;
 
     move-result-object v0
 
@@ -145,7 +145,7 @@
 
     if-eqz v0, :cond_1a
 
-    .line 1559
+    .line 1591
     iget-object v0, p0, Lorg/telegram/ui/Components/StickersAlert$GridAdapter;->cache:Landroid/util/SparseArray;
 
     invoke-virtual {v0, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -154,7 +154,7 @@
 
     if-eqz p1, :cond_18
 
-    .line 1561
+    .line 1593
     instance-of p1, p1, Lorg/telegram/tgnet/TLRPC$Document;
 
     if-eqz p1, :cond_16
@@ -188,19 +188,19 @@
         }
     .end annotation
 
-    .line 1690
+    .line 1722
     iget-object v0, p0, Lorg/telegram/ui/Components/StickersAlert$GridAdapter;->this$0:Lorg/telegram/ui/Components/StickersAlert;
 
-    invoke-static {v0}, Lorg/telegram/ui/Components/StickersAlert;->access$1200(Lorg/telegram/ui/Components/StickersAlert;)Ljava/util/ArrayList;
+    invoke-static {v0}, Lorg/telegram/ui/Components/StickersAlert;->access$1300(Lorg/telegram/ui/Components/StickersAlert;)Ljava/util/ArrayList;
 
     move-result-object v0
 
     if-eqz v0, :cond_11
 
-    .line 1691
+    .line 1723
     iget-object v0, p0, Lorg/telegram/ui/Components/StickersAlert$GridAdapter;->this$0:Lorg/telegram/ui/Components/StickersAlert;
 
-    invoke-static {v0}, Lorg/telegram/ui/Components/StickersAlert;->access$1900(Lorg/telegram/ui/Components/StickersAlert;)Lorg/telegram/ui/Components/RecyclerListView;
+    invoke-static {v0}, Lorg/telegram/ui/Components/StickersAlert;->access$1100(Lorg/telegram/ui/Components/StickersAlert;)Lorg/telegram/ui/Components/RecyclerListView;
 
     move-result-object v0
 
@@ -221,10 +221,10 @@
 .method public notifyDataSetChanged()V
     .registers 9
 
-    .line 1627
+    .line 1659
     iget-object v0, p0, Lorg/telegram/ui/Components/StickersAlert$GridAdapter;->this$0:Lorg/telegram/ui/Components/StickersAlert;
 
-    invoke-static {v0}, Lorg/telegram/ui/Components/StickersAlert;->access$1200(Lorg/telegram/ui/Components/StickersAlert;)Ljava/util/ArrayList;
+    invoke-static {v0}, Lorg/telegram/ui/Components/StickersAlert;->access$1300(Lorg/telegram/ui/Components/StickersAlert;)Ljava/util/ArrayList;
 
     move-result-object v0
 
@@ -232,10 +232,10 @@
 
     if-eqz v0, :cond_f5
 
-    .line 1628
+    .line 1660
     iget-object v0, p0, Lorg/telegram/ui/Components/StickersAlert$GridAdapter;->this$0:Lorg/telegram/ui/Components/StickersAlert;
 
-    invoke-static {v0}, Lorg/telegram/ui/Components/StickersAlert;->access$1900(Lorg/telegram/ui/Components/StickersAlert;)Lorg/telegram/ui/Components/RecyclerListView;
+    invoke-static {v0}, Lorg/telegram/ui/Components/StickersAlert;->access$1100(Lorg/telegram/ui/Components/StickersAlert;)Lorg/telegram/ui/Components/RecyclerListView;
 
     move-result-object v0
 
@@ -245,7 +245,7 @@
 
     if-nez v0, :cond_19
 
-    .line 1630
+    .line 1662
     sget-object v0, Lorg/telegram/messenger/AndroidUtilities;->displaySize:Landroid/graphics/Point;
 
     iget v0, v0, Landroid/graphics/Point;->x:I
@@ -253,7 +253,7 @@
     :cond_19
     const/high16 v2, 0x42900000    # 72.0f
 
-    .line 1632
+    .line 1664
     invoke-static {v2}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v2
@@ -262,7 +262,7 @@
 
     iput v0, p0, Lorg/telegram/ui/Components/StickersAlert$GridAdapter;->stickersPerRow:I
 
-    .line 1633
+    .line 1665
     iget-object v0, p0, Lorg/telegram/ui/Components/StickersAlert$GridAdapter;->this$0:Lorg/telegram/ui/Components/StickersAlert;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/StickersAlert;->access$5500(Lorg/telegram/ui/Components/StickersAlert;)Landroidx/recyclerview/widget/GridLayoutManager;
@@ -273,29 +273,29 @@
 
     invoke-virtual {v0, v2}, Landroidx/recyclerview/widget/GridLayoutManager;->setSpanCount(I)V
 
-    .line 1634
+    .line 1666
     iget-object v0, p0, Lorg/telegram/ui/Components/StickersAlert$GridAdapter;->cache:Landroid/util/SparseArray;
 
     invoke-virtual {v0}, Landroid/util/SparseArray;->clear()V
 
-    .line 1635
+    .line 1667
     iget-object v0, p0, Lorg/telegram/ui/Components/StickersAlert$GridAdapter;->positionsToSets:Landroid/util/SparseArray;
 
     invoke-virtual {v0}, Landroid/util/SparseArray;->clear()V
 
-    .line 1636
+    .line 1668
     iput v1, p0, Lorg/telegram/ui/Components/StickersAlert$GridAdapter;->totalItems:I
 
-    .line 1637
+    .line 1669
     iput v1, p0, Lorg/telegram/ui/Components/StickersAlert$GridAdapter;->stickersRowCount:I
 
     const/4 v0, 0x0
 
-    .line 1638
+    .line 1670
     :goto_3c
     iget-object v2, p0, Lorg/telegram/ui/Components/StickersAlert$GridAdapter;->this$0:Lorg/telegram/ui/Components/StickersAlert;
 
-    invoke-static {v2}, Lorg/telegram/ui/Components/StickersAlert;->access$1200(Lorg/telegram/ui/Components/StickersAlert;)Ljava/util/ArrayList;
+    invoke-static {v2}, Lorg/telegram/ui/Components/StickersAlert;->access$1300(Lorg/telegram/ui/Components/StickersAlert;)Ljava/util/ArrayList;
 
     move-result-object v2
 
@@ -305,10 +305,10 @@
 
     if-ge v0, v2, :cond_120
 
-    .line 1639
+    .line 1671
     iget-object v2, p0, Lorg/telegram/ui/Components/StickersAlert$GridAdapter;->this$0:Lorg/telegram/ui/Components/StickersAlert;
 
-    invoke-static {v2}, Lorg/telegram/ui/Components/StickersAlert;->access$1200(Lorg/telegram/ui/Components/StickersAlert;)Ljava/util/ArrayList;
+    invoke-static {v2}, Lorg/telegram/ui/Components/StickersAlert;->access$1300(Lorg/telegram/ui/Components/StickersAlert;)Ljava/util/ArrayList;
 
     move-result-object v2
 
@@ -318,7 +318,7 @@
 
     check-cast v2, Lorg/telegram/tgnet/TLRPC$StickerSetCovered;
 
-    .line 1640
+    .line 1672
     iget-object v3, v2, Lorg/telegram/tgnet/TLRPC$StickerSetCovered;->covers:Ljava/util/ArrayList;
 
     invoke-virtual {v3}, Ljava/util/ArrayList;->isEmpty()Z
@@ -333,7 +333,7 @@
 
     goto/16 :goto_f1
 
-    .line 1643
+    .line 1675
     :cond_62
     iget v3, p0, Lorg/telegram/ui/Components/StickersAlert$GridAdapter;->stickersRowCount:I
 
@@ -341,7 +341,7 @@
 
     iget-object v5, p0, Lorg/telegram/ui/Components/StickersAlert$GridAdapter;->this$0:Lorg/telegram/ui/Components/StickersAlert;
 
-    invoke-static {v5}, Lorg/telegram/ui/Components/StickersAlert;->access$1200(Lorg/telegram/ui/Components/StickersAlert;)Ljava/util/ArrayList;
+    invoke-static {v5}, Lorg/telegram/ui/Components/StickersAlert;->access$1300(Lorg/telegram/ui/Components/StickersAlert;)Ljava/util/ArrayList;
 
     move-result-object v5
 
@@ -371,14 +371,14 @@
 
     iput v3, p0, Lorg/telegram/ui/Components/StickersAlert$GridAdapter;->stickersRowCount:I
 
-    .line 1644
+    .line 1676
     iget-object v3, p0, Lorg/telegram/ui/Components/StickersAlert$GridAdapter;->positionsToSets:Landroid/util/SparseArray;
 
     iget v4, p0, Lorg/telegram/ui/Components/StickersAlert$GridAdapter;->totalItems:I
 
     invoke-virtual {v3, v4, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 1645
+    .line 1677
     iget-object v3, p0, Lorg/telegram/ui/Components/StickersAlert$GridAdapter;->cache:Landroid/util/SparseArray;
 
     iget v4, p0, Lorg/telegram/ui/Components/StickersAlert$GridAdapter;->totalItems:I
@@ -393,14 +393,14 @@
 
     invoke-virtual {v3, v4, v5}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 1646
+    .line 1678
     iget v3, p0, Lorg/telegram/ui/Components/StickersAlert$GridAdapter;->totalItems:I
 
     iget v4, p0, Lorg/telegram/ui/Components/StickersAlert$GridAdapter;->stickersPerRow:I
 
     div-int/2addr v3, v4
 
-    .line 1648
+    .line 1680
     iget-object v3, v2, Lorg/telegram/tgnet/TLRPC$StickerSetCovered;->covers:Ljava/util/ArrayList;
 
     invoke-virtual {v3}, Ljava/util/ArrayList;->isEmpty()Z
@@ -409,7 +409,7 @@
 
     if-nez v3, :cond_ce
 
-    .line 1649
+    .line 1681
     iget-object v3, v2, Lorg/telegram/tgnet/TLRPC$StickerSetCovered;->covers:Ljava/util/ArrayList;
 
     invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
@@ -434,7 +434,7 @@
 
     const/4 v4, 0x0
 
-    .line 1650
+    .line 1682
     :goto_b5
     iget-object v5, v2, Lorg/telegram/tgnet/TLRPC$StickerSetCovered;->covers:Ljava/util/ArrayList;
 
@@ -444,7 +444,7 @@
 
     if-ge v4, v5, :cond_d8
 
-    .line 1651
+    .line 1683
     iget-object v5, p0, Lorg/telegram/ui/Components/StickersAlert$GridAdapter;->cache:Landroid/util/SparseArray;
 
     iget v6, p0, Lorg/telegram/ui/Components/StickersAlert$GridAdapter;->totalItems:I
@@ -463,7 +463,7 @@
 
     goto :goto_b5
 
-    .line 1655
+    .line 1687
     :cond_ce
     iget-object v3, p0, Lorg/telegram/ui/Components/StickersAlert$GridAdapter;->cache:Landroid/util/SparseArray;
 
@@ -478,7 +478,7 @@
     :cond_d8
     const/4 v4, 0x0
 
-    .line 1657
+    .line 1689
     :goto_d9
     iget v5, p0, Lorg/telegram/ui/Components/StickersAlert$GridAdapter;->stickersPerRow:I
 
@@ -486,7 +486,7 @@
 
     if-ge v4, v6, :cond_ea
 
-    .line 1658
+    .line 1690
     iget-object v5, p0, Lorg/telegram/ui/Components/StickersAlert$GridAdapter;->positionsToSets:Landroid/util/SparseArray;
 
     iget v6, p0, Lorg/telegram/ui/Components/StickersAlert$GridAdapter;->totalItems:I
@@ -499,7 +499,7 @@
 
     goto :goto_d9
 
-    .line 1660
+    .line 1692
     :cond_ea
     iget v2, p0, Lorg/telegram/ui/Components/StickersAlert$GridAdapter;->totalItems:I
 
@@ -514,7 +514,7 @@
 
     goto/16 :goto_3c
 
-    .line 1662
+    .line 1694
     :cond_f5
     iget-object v0, p0, Lorg/telegram/ui/Components/StickersAlert$GridAdapter;->this$0:Lorg/telegram/ui/Components/StickersAlert;
 
@@ -524,7 +524,7 @@
 
     if-eqz v0, :cond_10a
 
-    .line 1663
+    .line 1695
     iget-object v0, p0, Lorg/telegram/ui/Components/StickersAlert$GridAdapter;->this$0:Lorg/telegram/ui/Components/StickersAlert;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/StickersAlert;->access$5300(Lorg/telegram/ui/Components/StickersAlert;)Ljava/util/ArrayList;
@@ -539,11 +539,11 @@
 
     goto :goto_120
 
-    .line 1665
+    .line 1697
     :cond_10a
     iget-object v0, p0, Lorg/telegram/ui/Components/StickersAlert$GridAdapter;->this$0:Lorg/telegram/ui/Components/StickersAlert;
 
-    invoke-static {v0}, Lorg/telegram/ui/Components/StickersAlert;->access$1600(Lorg/telegram/ui/Components/StickersAlert;)Lorg/telegram/tgnet/TLRPC$TL_messages_stickerSet;
+    invoke-static {v0}, Lorg/telegram/ui/Components/StickersAlert;->access$1700(Lorg/telegram/ui/Components/StickersAlert;)Lorg/telegram/tgnet/TLRPC$TL_messages_stickerSet;
 
     move-result-object v0
 
@@ -551,7 +551,7 @@
 
     iget-object v0, p0, Lorg/telegram/ui/Components/StickersAlert$GridAdapter;->this$0:Lorg/telegram/ui/Components/StickersAlert;
 
-    invoke-static {v0}, Lorg/telegram/ui/Components/StickersAlert;->access$1600(Lorg/telegram/ui/Components/StickersAlert;)Lorg/telegram/tgnet/TLRPC$TL_messages_stickerSet;
+    invoke-static {v0}, Lorg/telegram/ui/Components/StickersAlert;->access$1700(Lorg/telegram/ui/Components/StickersAlert;)Lorg/telegram/tgnet/TLRPC$TL_messages_stickerSet;
 
     move-result-object v0
 
@@ -564,7 +564,7 @@
     :cond_11e
     iput v1, p0, Lorg/telegram/ui/Components/StickersAlert$GridAdapter;->totalItems:I
 
-    .line 1667
+    .line 1699
     :cond_120
     :goto_120
     invoke-super {p0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->notifyDataSetChanged()V
@@ -575,7 +575,7 @@
 .method public notifyItemRemoved(I)V
     .registers 3
 
-    .line 1672
+    .line 1704
     iget-object v0, p0, Lorg/telegram/ui/Components/StickersAlert$GridAdapter;->this$0:Lorg/telegram/ui/Components/StickersAlert;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/StickersAlert;->access$5300(Lorg/telegram/ui/Components/StickersAlert;)Ljava/util/ArrayList;
@@ -584,7 +584,7 @@
 
     if-eqz v0, :cond_14
 
-    .line 1673
+    .line 1705
     iget-object v0, p0, Lorg/telegram/ui/Components/StickersAlert$GridAdapter;->this$0:Lorg/telegram/ui/Components/StickersAlert;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/StickersAlert;->access$5300(Lorg/telegram/ui/Components/StickersAlert;)Ljava/util/ArrayList;
@@ -597,7 +597,7 @@
 
     iput v0, p0, Lorg/telegram/ui/Components/StickersAlert$GridAdapter;->totalItems:I
 
-    .line 1675
+    .line 1707
     :cond_14
     invoke-super {p0, p1}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->notifyItemRemoved(I)V
 
@@ -607,16 +607,16 @@
 .method public onBindViewHolder(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;I)V
     .registers 6
 
-    .line 1603
+    .line 1635
     iget-object v0, p0, Lorg/telegram/ui/Components/StickersAlert$GridAdapter;->this$0:Lorg/telegram/ui/Components/StickersAlert;
 
-    invoke-static {v0}, Lorg/telegram/ui/Components/StickersAlert;->access$1200(Lorg/telegram/ui/Components/StickersAlert;)Ljava/util/ArrayList;
+    invoke-static {v0}, Lorg/telegram/ui/Components/StickersAlert;->access$1300(Lorg/telegram/ui/Components/StickersAlert;)Ljava/util/ArrayList;
 
     move-result-object v0
 
     if-eqz v0, :cond_5b
 
-    .line 1604
+    .line 1636
     invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->getItemViewType()I
 
     move-result v0
@@ -635,11 +635,11 @@
 
     goto/16 :goto_98
 
-    .line 1613
+    .line 1645
     :cond_17
     iget-object v0, p0, Lorg/telegram/ui/Components/StickersAlert$GridAdapter;->this$0:Lorg/telegram/ui/Components/StickersAlert;
 
-    invoke-static {v0}, Lorg/telegram/ui/Components/StickersAlert;->access$1200(Lorg/telegram/ui/Components/StickersAlert;)Ljava/util/ArrayList;
+    invoke-static {v0}, Lorg/telegram/ui/Components/StickersAlert;->access$1300(Lorg/telegram/ui/Components/StickersAlert;)Ljava/util/ArrayList;
 
     move-result-object v0
 
@@ -661,17 +661,17 @@
 
     check-cast p2, Lorg/telegram/tgnet/TLRPC$StickerSetCovered;
 
-    .line 1614
+    .line 1646
     iget-object p1, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     check-cast p1, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;
 
-    .line 1615
+    .line 1647
     invoke-virtual {p1, p2, v1}, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;->setStickerSet(Lorg/telegram/tgnet/TLRPC$StickerSetCovered;Z)V
 
     goto :goto_98
 
-    .line 1610
+    .line 1642
     :cond_37
     iget-object p1, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
@@ -687,7 +687,7 @@
 
     goto :goto_98
 
-    .line 1606
+    .line 1638
     :cond_45
     iget-object v0, p0, Lorg/telegram/ui/Components/StickersAlert$GridAdapter;->cache:Landroid/util/SparseArray;
 
@@ -697,7 +697,7 @@
 
     check-cast v0, Lorg/telegram/tgnet/TLRPC$Document;
 
-    .line 1607
+    .line 1639
     iget-object p1, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     check-cast p1, Lorg/telegram/ui/Cells/StickerEmojiCell;
@@ -712,7 +712,7 @@
 
     goto :goto_98
 
-    .line 1618
+    .line 1650
     :cond_5b
     iget-object v0, p0, Lorg/telegram/ui/Components/StickersAlert$GridAdapter;->this$0:Lorg/telegram/ui/Components/StickersAlert;
 
@@ -722,7 +722,7 @@
 
     if-eqz v0, :cond_77
 
-    .line 1619
+    .line 1651
     iget-object p1, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     check-cast p1, Lorg/telegram/ui/Cells/StickerEmojiCell;
@@ -743,7 +743,7 @@
 
     goto :goto_98
 
-    .line 1621
+    .line 1653
     :cond_77
     iget-object p1, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
@@ -751,7 +751,7 @@
 
     iget-object v0, p0, Lorg/telegram/ui/Components/StickersAlert$GridAdapter;->this$0:Lorg/telegram/ui/Components/StickersAlert;
 
-    invoke-static {v0}, Lorg/telegram/ui/Components/StickersAlert;->access$1600(Lorg/telegram/ui/Components/StickersAlert;)Lorg/telegram/tgnet/TLRPC$TL_messages_stickerSet;
+    invoke-static {v0}, Lorg/telegram/ui/Components/StickersAlert;->access$1700(Lorg/telegram/ui/Components/StickersAlert;)Lorg/telegram/tgnet/TLRPC$TL_messages_stickerSet;
 
     move-result-object v0
 
@@ -765,7 +765,7 @@
 
     iget-object v0, p0, Lorg/telegram/ui/Components/StickersAlert$GridAdapter;->this$0:Lorg/telegram/ui/Components/StickersAlert;
 
-    invoke-static {v0}, Lorg/telegram/ui/Components/StickersAlert;->access$1600(Lorg/telegram/ui/Components/StickersAlert;)Lorg/telegram/tgnet/TLRPC$TL_messages_stickerSet;
+    invoke-static {v0}, Lorg/telegram/ui/Components/StickersAlert;->access$1700(Lorg/telegram/ui/Components/StickersAlert;)Lorg/telegram/tgnet/TLRPC$TL_messages_stickerSet;
 
     move-result-object v0
 
@@ -798,7 +798,7 @@
 
     goto :goto_35
 
-    .line 1594
+    .line 1626
     :cond_a
     new-instance p1, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;
 
@@ -822,7 +822,7 @@
 
     goto :goto_35
 
-    .line 1591
+    .line 1623
     :cond_1d
     new-instance p1, Lorg/telegram/ui/Cells/EmptyCell;
 
@@ -832,7 +832,7 @@
 
     goto :goto_35
 
-    .line 1582
+    .line 1614
     :cond_25
     new-instance p1, Lorg/telegram/ui/Components/StickersAlert$GridAdapter$1;
 
@@ -842,7 +842,7 @@
 
     invoke-direct {p1, p0, p2, v0}, Lorg/telegram/ui/Components/StickersAlert$GridAdapter$1;-><init>(Lorg/telegram/ui/Components/StickersAlert$GridAdapter;Landroid/content/Context;Z)V
 
-    .line 1587
+    .line 1619
     invoke-virtual {p1}, Lorg/telegram/ui/Cells/StickerEmojiCell;->getImageView()Lorg/telegram/ui/Components/BackupImageView;
 
     move-result-object p2
@@ -851,7 +851,7 @@
 
     invoke-virtual {p2, v0}, Lorg/telegram/ui/Components/BackupImageView;->setLayerNum(I)V
 
-    .line 1598
+    .line 1630
     :goto_35
     new-instance p2, Lorg/telegram/ui/Components/RecyclerListView$Holder;
 
@@ -863,10 +863,10 @@
 .method public updateColors()V
     .registers 5
 
-    .line 1679
+    .line 1711
     iget-object v0, p0, Lorg/telegram/ui/Components/StickersAlert$GridAdapter;->this$0:Lorg/telegram/ui/Components/StickersAlert;
 
-    invoke-static {v0}, Lorg/telegram/ui/Components/StickersAlert;->access$1200(Lorg/telegram/ui/Components/StickersAlert;)Ljava/util/ArrayList;
+    invoke-static {v0}, Lorg/telegram/ui/Components/StickersAlert;->access$1300(Lorg/telegram/ui/Components/StickersAlert;)Ljava/util/ArrayList;
 
     move-result-object v0
 
@@ -874,10 +874,10 @@
 
     const/4 v0, 0x0
 
-    .line 1680
+    .line 1712
     iget-object v1, p0, Lorg/telegram/ui/Components/StickersAlert$GridAdapter;->this$0:Lorg/telegram/ui/Components/StickersAlert;
 
-    invoke-static {v1}, Lorg/telegram/ui/Components/StickersAlert;->access$1900(Lorg/telegram/ui/Components/StickersAlert;)Lorg/telegram/ui/Components/RecyclerListView;
+    invoke-static {v1}, Lorg/telegram/ui/Components/StickersAlert;->access$1100(Lorg/telegram/ui/Components/StickersAlert;)Lorg/telegram/ui/Components/RecyclerListView;
 
     move-result-object v1
 
@@ -888,10 +888,10 @@
     :goto_13
     if-ge v0, v1, :cond_2b
 
-    .line 1681
+    .line 1713
     iget-object v2, p0, Lorg/telegram/ui/Components/StickersAlert$GridAdapter;->this$0:Lorg/telegram/ui/Components/StickersAlert;
 
-    invoke-static {v2}, Lorg/telegram/ui/Components/StickersAlert;->access$1900(Lorg/telegram/ui/Components/StickersAlert;)Lorg/telegram/ui/Components/RecyclerListView;
+    invoke-static {v2}, Lorg/telegram/ui/Components/StickersAlert;->access$1100(Lorg/telegram/ui/Components/StickersAlert;)Lorg/telegram/ui/Components/RecyclerListView;
 
     move-result-object v2
 
@@ -899,12 +899,12 @@
 
     move-result-object v2
 
-    .line 1682
+    .line 1714
     instance-of v3, v2, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;
 
     if-eqz v3, :cond_28
 
-    .line 1683
+    .line 1715
     check-cast v2, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;
 
     invoke-virtual {v2}, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;->updateColors()V

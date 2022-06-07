@@ -51,17 +51,17 @@
 
     const/4 v2, 0x0
 
-    .line 49
+    .line 51
     invoke-direct {v0, v1, v2}, Lorg/telegram/ui/ActionBar/BottomSheet;-><init>(Landroid/content/Context;Z)V
 
     const-string v3, "voipgroup_inviteMembersBackground"
 
-    .line 51
+    .line 53
     invoke-static {v3}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
 
     move-result v3
 
-    .line 52
+    .line 54
     iget-object v4, v0, Lorg/telegram/ui/ActionBar/BottomSheet;->shadowDrawable:Landroid/graphics/drawable/Drawable;
 
     new-instance v5, Landroid/graphics/PorterDuffColorFilter;
@@ -72,36 +72,36 @@
 
     invoke-virtual {v4, v5}, Landroid/graphics/drawable/Drawable;->setColorFilter(Landroid/graphics/ColorFilter;)V
 
-    .line 54
+    .line 56
     new-instance v4, Lorg/telegram/ui/Components/GroupCallRecordAlert$1;
 
     invoke-direct {v4, v0, v1}, Lorg/telegram/ui/Components/GroupCallRecordAlert$1;-><init>(Lorg/telegram/ui/Components/GroupCallRecordAlert;Landroid/content/Context;)V
 
     iput-object v4, v0, Lorg/telegram/ui/ActionBar/BottomSheet;->containerView:Landroid/view/ViewGroup;
 
-    .line 88
+    .line 90
     invoke-virtual {v4, v2}, Landroid/view/ViewGroup;->setWillNotDraw(Z)V
 
-    .line 89
+    .line 91
     iget-object v4, v0, Lorg/telegram/ui/ActionBar/BottomSheet;->containerView:Landroid/view/ViewGroup;
 
     invoke-virtual {v4, v2}, Landroid/view/ViewGroup;->setClipChildren(Z)V
 
-    .line 90
+    .line 92
     iget-object v4, v0, Lorg/telegram/ui/ActionBar/BottomSheet;->containerView:Landroid/view/ViewGroup;
 
     iget-object v5, v0, Lorg/telegram/ui/ActionBar/BottomSheet;->shadowDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v4, v5}, Landroid/view/ViewGroup;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 91
+    .line 93
     iget-object v4, v0, Lorg/telegram/ui/ActionBar/BottomSheet;->containerView:Landroid/view/ViewGroup;
 
     iget v5, v0, Lorg/telegram/ui/ActionBar/BottomSheet;->backgroundPaddingLeft:I
 
     invoke-virtual {v4, v5, v2, v5, v2}, Landroid/view/ViewGroup;->setPadding(IIII)V
 
-    .line 93
+    .line 95
     new-instance v4, Landroid/widget/TextView;
 
     invoke-virtual/range {p0 .. p0}, Landroid/app/Dialog;->getContext()Landroid/content/Context;
@@ -110,18 +110,18 @@
 
     invoke-direct {v4, v5}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
-    .line 94
+    .line 96
     invoke-static/range {p2 .. p2}, Lorg/telegram/messenger/ChatObject;->isChannelOrGiga(Lorg/telegram/tgnet/TLRPC$Chat;)Z
 
     move-result v5
 
     if-eqz v5, :cond_53
 
-    const v5, 0x7f0e12da
+    const v5, 0x7f0e13a8
 
     const-string v6, "VoipChannelRecordVoiceChat"
 
-    .line 95
+    .line 97
     invoke-static {v6, v5}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v5
@@ -131,11 +131,11 @@
     goto :goto_5f
 
     :cond_53
-    const v5, 0x7f0e13a5
+    const v5, 0x7f0e1473
 
     const-string v6, "VoipRecordVoiceChat"
 
-    .line 97
+    .line 99
     invoke-static {v6, v5}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v5
@@ -145,26 +145,26 @@
     :goto_5f
     const/4 v5, -0x1
 
-    .line 99
+    .line 101
     invoke-virtual {v4, v5}, Landroid/widget/TextView;->setTextColor(I)V
 
     const/high16 v6, 0x41a00000    # 20.0f
 
     const/4 v7, 0x1
 
-    .line 100
+    .line 102
     invoke-virtual {v4, v7, v6}, Landroid/widget/TextView;->setTextSize(IF)V
 
     const-string v6, "fonts/rmedium.ttf"
 
-    .line 101
+    .line 103
     invoke-static {v6}, Lorg/telegram/messenger/AndroidUtilities;->getTypeface(Ljava/lang/String;)Landroid/graphics/Typeface;
 
     move-result-object v8
 
     invoke-virtual {v4, v8}, Landroid/widget/TextView;->setTypeface(Landroid/graphics/Typeface;)V
 
-    .line 102
+    .line 104
     sget-boolean v8, Lorg/telegram/messenger/LocaleController;->isRTL:Z
 
     const/4 v9, 0x5
@@ -185,7 +185,7 @@
 
     invoke-virtual {v4, v8}, Landroid/widget/TextView;->setGravity(I)V
 
-    .line 103
+    .line 105
     iget-object v8, v0, Lorg/telegram/ui/ActionBar/BottomSheet;->containerView:Landroid/view/ViewGroup;
 
     const/4 v11, -0x2
@@ -220,7 +220,7 @@
 
     invoke-virtual {v8, v4, v11}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 105
+    .line 107
     new-instance v4, Landroid/widget/TextView;
 
     invoke-virtual/range {p0 .. p0}, Landroid/app/Dialog;->getContext()Landroid/content/Context;
@@ -229,26 +229,26 @@
 
     invoke-direct {v4, v8}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
-    const v8, 0x7f0e13a6
+    const v8, 0x7f0e1474
 
     const-string v11, "VoipRecordVoiceChatInfo"
 
-    .line 106
+    .line 108
     invoke-static {v11, v8}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v8
 
     invoke-virtual {v4, v8}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 107
+    .line 109
     invoke-virtual {v4, v5}, Landroid/widget/TextView;->setTextColor(I)V
 
     const/high16 v8, 0x41600000    # 14.0f
 
-    .line 108
+    .line 110
     invoke-virtual {v4, v7, v8}, Landroid/widget/TextView;->setTextSize(IF)V
 
-    .line 109
+    .line 111
     sget-boolean v11, Lorg/telegram/messenger/LocaleController;->isRTL:Z
 
     if-eqz v11, :cond_c0
@@ -265,7 +265,7 @@
 
     invoke-virtual {v4, v11}, Landroid/widget/TextView;->setGravity(I)V
 
-    .line 110
+    .line 112
     iget-object v11, v0, Lorg/telegram/ui/ActionBar/BottomSheet;->containerView:Landroid/view/ViewGroup;
 
     const/4 v12, -0x2
@@ -300,39 +300,39 @@
 
     new-array v4, v10, [Landroid/widget/TextView;
 
-    .line 112
+    .line 114
     iput-object v4, v0, Lorg/telegram/ui/Components/GroupCallRecordAlert;->titles:[Landroid/widget/TextView;
 
-    .line 114
+    .line 116
     new-instance v4, Landroidx/viewpager/widget/ViewPager;
 
     invoke-direct {v4, v1}, Landroidx/viewpager/widget/ViewPager;-><init>(Landroid/content/Context;)V
 
     iput-object v4, v0, Lorg/telegram/ui/Components/GroupCallRecordAlert;->viewPager:Landroidx/viewpager/widget/ViewPager;
 
-    .line 115
+    .line 117
     invoke-virtual {v4, v2}, Landroid/view/ViewGroup;->setClipChildren(Z)V
 
-    .line 116
+    .line 118
     iget-object v4, v0, Lorg/telegram/ui/Components/GroupCallRecordAlert;->viewPager:Landroidx/viewpager/widget/ViewPager;
 
     const/4 v9, 0x4
 
     invoke-virtual {v4, v9}, Landroidx/viewpager/widget/ViewPager;->setOffscreenPageLimit(I)V
 
-    .line 117
+    .line 119
     iget-object v4, v0, Lorg/telegram/ui/Components/GroupCallRecordAlert;->viewPager:Landroidx/viewpager/widget/ViewPager;
 
     invoke-virtual {v4, v2}, Landroid/view/ViewGroup;->setClipToPadding(Z)V
 
-    .line 118
+    .line 120
     iget-object v4, v0, Lorg/telegram/ui/Components/GroupCallRecordAlert;->viewPager:Landroidx/viewpager/widget/ViewPager;
 
     const/high16 v9, 0x7f000000
 
     invoke-static {v4, v9}, Lorg/telegram/messenger/AndroidUtilities;->setViewPagerEdgeEffectColor(Landroidx/viewpager/widget/ViewPager;I)V
 
-    .line 119
+    .line 121
     iget-object v4, v0, Lorg/telegram/ui/Components/GroupCallRecordAlert;->viewPager:Landroidx/viewpager/widget/ViewPager;
 
     new-instance v9, Lorg/telegram/ui/Components/GroupCallRecordAlert$Adapter;
@@ -343,12 +343,12 @@
 
     invoke-virtual {v4, v9}, Landroidx/viewpager/widget/ViewPager;->setAdapter(Landroidx/viewpager/widget/PagerAdapter;)V
 
-    .line 120
+    .line 122
     iget-object v4, v0, Lorg/telegram/ui/Components/GroupCallRecordAlert;->viewPager:Landroidx/viewpager/widget/ViewPager;
 
     invoke-virtual {v4, v2}, Landroidx/viewpager/widget/ViewPager;->setPageMargin(I)V
 
-    .line 121
+    .line 123
     iget-object v4, v0, Lorg/telegram/ui/ActionBar/BottomSheet;->containerView:Landroid/view/ViewGroup;
 
     iget-object v9, v0, Lorg/telegram/ui/Components/GroupCallRecordAlert;->viewPager:Landroidx/viewpager/widget/ViewPager;
@@ -373,7 +373,7 @@
 
     invoke-virtual {v4, v9, v10}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 122
+    .line 124
     iget-object v4, v0, Lorg/telegram/ui/Components/GroupCallRecordAlert;->viewPager:Landroidx/viewpager/widget/ViewPager;
 
     new-instance v9, Lorg/telegram/ui/Components/GroupCallRecordAlert$2;
@@ -382,7 +382,7 @@
 
     invoke-virtual {v4, v9}, Landroidx/viewpager/widget/ViewPager;->addOnPageChangeListener(Landroidx/viewpager/widget/ViewPager$OnPageChangeListener;)V
 
-    .line 142
+    .line 144
     new-instance v4, Landroid/view/View;
 
     invoke-virtual/range {p0 .. p0}, Landroid/app/Dialog;->getContext()Landroid/content/Context;
@@ -391,7 +391,7 @@
 
     invoke-direct {v4, v9}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
-    .line 143
+    .line 145
     new-instance v9, Landroid/graphics/drawable/GradientDrawable;
 
     sget-object v10, Landroid/graphics/drawable/GradientDrawable$Orientation;->LEFT_RIGHT:Landroid/graphics/drawable/GradientDrawable$Orientation;
@@ -408,7 +408,7 @@
 
     invoke-virtual {v4, v9}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    .line 144
+    .line 146
     iget-object v9, v0, Lorg/telegram/ui/ActionBar/BottomSheet;->containerView:Landroid/view/ViewGroup;
 
     const/16 v12, 0x78
@@ -429,7 +429,7 @@
 
     invoke-virtual {v9, v4, v10}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 146
+    .line 148
     new-instance v4, Landroid/view/View;
 
     invoke-virtual/range {p0 .. p0}, Landroid/app/Dialog;->getContext()Landroid/content/Context;
@@ -438,7 +438,7 @@
 
     invoke-direct {v4, v9}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
-    .line 147
+    .line 149
     new-instance v9, Landroid/graphics/drawable/GradientDrawable;
 
     sget-object v10, Landroid/graphics/drawable/GradientDrawable$Orientation;->LEFT_RIGHT:Landroid/graphics/drawable/GradientDrawable$Orientation;
@@ -453,7 +453,7 @@
 
     invoke-virtual {v4, v9}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    .line 148
+    .line 150
     iget-object v3, v0, Lorg/telegram/ui/ActionBar/BottomSheet;->containerView:Landroid/view/ViewGroup;
 
     const/16 v9, 0x78
@@ -476,7 +476,7 @@
 
     invoke-virtual {v3, v4, v9}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 150
+    .line 152
     new-instance v3, Lorg/telegram/ui/Components/GroupCallRecordAlert$3;
 
     invoke-virtual/range {p0 .. p0}, Landroid/app/Dialog;->getContext()Landroid/content/Context;
@@ -489,14 +489,14 @@
 
     const/high16 v4, 0x42800000    # 64.0f
 
-    .line 202
+    .line 204
     invoke-static {v4}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v4
 
     invoke-virtual {v3, v4}, Landroid/widget/TextView;->setMinWidth(I)V
 
-    .line 203
+    .line 205
     iget-object v3, v0, Lorg/telegram/ui/Components/GroupCallRecordAlert;->positiveButton:Landroid/widget/TextView;
 
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -505,12 +505,12 @@
 
     invoke-virtual {v3, v4}, Landroid/widget/TextView;->setTag(Ljava/lang/Object;)V
 
-    .line 204
+    .line 206
     iget-object v3, v0, Lorg/telegram/ui/Components/GroupCallRecordAlert;->positiveButton:Landroid/widget/TextView;
 
     invoke-virtual {v3, v7, v8}, Landroid/widget/TextView;->setTextSize(IF)V
 
-    .line 205
+    .line 207
     iget-object v3, v0, Lorg/telegram/ui/Components/GroupCallRecordAlert;->positiveButton:Landroid/widget/TextView;
 
     const-string v4, "voipgroup_nameText"
@@ -521,14 +521,14 @@
 
     invoke-virtual {v3, v8}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 206
+    .line 208
     iget-object v3, v0, Lorg/telegram/ui/Components/GroupCallRecordAlert;->positiveButton:Landroid/widget/TextView;
 
     const/16 v8, 0x11
 
     invoke-virtual {v3, v8}, Landroid/widget/TextView;->setGravity(I)V
 
-    .line 207
+    .line 209
     iget-object v3, v0, Lorg/telegram/ui/Components/GroupCallRecordAlert;->positiveButton:Landroid/widget/TextView;
 
     invoke-static {v6}, Lorg/telegram/messenger/AndroidUtilities;->getTypeface(Ljava/lang/String;)Landroid/graphics/Typeface;
@@ -537,10 +537,10 @@
 
     invoke-virtual {v3, v8}, Landroid/widget/TextView;->setTypeface(Landroid/graphics/Typeface;)V
 
-    .line 208
+    .line 210
     iget-object v3, v0, Lorg/telegram/ui/Components/GroupCallRecordAlert;->positiveButton:Landroid/widget/TextView;
 
-    const v8, 0x7f0e13a4
+    const v8, 0x7f0e1472
 
     const-string v9, "VoipRecordStart"
 
@@ -550,14 +550,14 @@
 
     invoke-virtual {v3, v8}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 209
+    .line 211
     sget v3, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v8, 0x17
 
     if-lt v3, v8, :cond_1f8
 
-    .line 210
+    .line 212
     iget-object v3, v0, Lorg/telegram/ui/Components/GroupCallRecordAlert;->positiveButton:Landroid/widget/TextView;
 
     const/high16 v8, 0x40c00000    # 6.0f
@@ -582,7 +582,7 @@
 
     invoke-virtual {v3, v4}, Landroid/widget/TextView;->setForeground(Landroid/graphics/drawable/Drawable;)V
 
-    .line 212
+    .line 214
     :cond_1f8
     iget-object v3, v0, Lorg/telegram/ui/Components/GroupCallRecordAlert;->positiveButton:Landroid/widget/TextView;
 
@@ -598,7 +598,7 @@
 
     invoke-virtual {v3, v2, v8, v2, v9}, Landroid/widget/TextView;->setPadding(IIII)V
 
-    .line 213
+    .line 215
     iget-object v3, v0, Lorg/telegram/ui/Components/GroupCallRecordAlert;->positiveButton:Landroid/widget/TextView;
 
     new-instance v8, Lorg/telegram/ui/Components/GroupCallRecordAlert$$ExternalSyntheticLambda0;
@@ -607,7 +607,7 @@
 
     invoke-virtual {v3, v8}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 218
+    .line 220
     iget-object v3, v0, Lorg/telegram/ui/ActionBar/BottomSheet;->containerView:Landroid/view/ViewGroup;
 
     iget-object v8, v0, Lorg/telegram/ui/Components/GroupCallRecordAlert;->positiveButton:Landroid/widget/TextView;
@@ -632,14 +632,14 @@
 
     invoke-virtual {v3, v8, v9}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 220
+    .line 222
     new-instance v3, Landroid/widget/LinearLayout;
 
     invoke-direct {v3, v1}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
 
     iput-object v3, v0, Lorg/telegram/ui/Components/GroupCallRecordAlert;->titlesLayout:Landroid/widget/LinearLayout;
 
-    .line 221
+    .line 223
     iget-object v8, v0, Lorg/telegram/ui/ActionBar/BottomSheet;->containerView:Landroid/view/ViewGroup;
 
     const/16 v9, 0x40
@@ -656,7 +656,7 @@
 
     const/4 v3, 0x0
 
-    .line 223
+    .line 225
     :goto_23c
     iget-object v8, v0, Lorg/telegram/ui/Components/GroupCallRecordAlert;->titles:[Landroid/widget/TextView;
 
@@ -664,28 +664,28 @@
 
     if-ge v3, v9, :cond_2d5
 
-    .line 224
+    .line 226
     new-instance v9, Landroid/widget/TextView;
 
     invoke-direct {v9, v1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
     aput-object v9, v8, v3
 
-    .line 225
+    .line 227
     iget-object v8, v0, Lorg/telegram/ui/Components/GroupCallRecordAlert;->titles:[Landroid/widget/TextView;
 
     aget-object v8, v8, v3
 
     invoke-virtual {v8, v7, v4}, Landroid/widget/TextView;->setTextSize(IF)V
 
-    .line 226
+    .line 228
     iget-object v8, v0, Lorg/telegram/ui/Components/GroupCallRecordAlert;->titles:[Landroid/widget/TextView;
 
     aget-object v8, v8, v3
 
     invoke-virtual {v8, v5}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 227
+    .line 229
     iget-object v8, v0, Lorg/telegram/ui/Components/GroupCallRecordAlert;->titles:[Landroid/widget/TextView;
 
     aget-object v8, v8, v3
@@ -696,7 +696,7 @@
 
     invoke-virtual {v8, v9}, Landroid/widget/TextView;->setTypeface(Landroid/graphics/Typeface;)V
 
-    .line 228
+    .line 230
     iget-object v8, v0, Lorg/telegram/ui/Components/GroupCallRecordAlert;->titles:[Landroid/widget/TextView;
 
     aget-object v8, v8, v3
@@ -713,7 +713,7 @@
 
     invoke-virtual {v8, v10, v2, v9, v2}, Landroid/widget/TextView;->setPadding(IIII)V
 
-    .line 229
+    .line 231
     iget-object v8, v0, Lorg/telegram/ui/Components/GroupCallRecordAlert;->titles:[Landroid/widget/TextView;
 
     aget-object v8, v8, v3
@@ -722,14 +722,14 @@
 
     invoke-virtual {v8, v9}, Landroid/widget/TextView;->setGravity(I)V
 
-    .line 230
+    .line 232
     iget-object v8, v0, Lorg/telegram/ui/Components/GroupCallRecordAlert;->titles:[Landroid/widget/TextView;
 
     aget-object v8, v8, v3
 
     invoke-virtual {v8, v7}, Landroid/widget/TextView;->setSingleLine(Z)V
 
-    .line 231
+    .line 233
     iget-object v8, v0, Lorg/telegram/ui/Components/GroupCallRecordAlert;->titlesLayout:Landroid/widget/LinearLayout;
 
     iget-object v9, v0, Lorg/telegram/ui/Components/GroupCallRecordAlert;->titles:[Landroid/widget/TextView;
@@ -744,12 +744,12 @@
 
     if-nez v3, :cond_2a2
 
-    .line 233
+    .line 235
     iget-object v8, v0, Lorg/telegram/ui/Components/GroupCallRecordAlert;->titles:[Landroid/widget/TextView;
 
     aget-object v8, v8, v3
 
-    const v9, 0x7f0e13a1
+    const v9, 0x7f0e146f
 
     const-string v10, "VoipRecordAudio"
 
@@ -764,12 +764,12 @@
     :cond_2a2
     if-ne v3, v7, :cond_2b5
 
-    .line 235
+    .line 237
     iget-object v8, v0, Lorg/telegram/ui/Components/GroupCallRecordAlert;->titles:[Landroid/widget/TextView;
 
     aget-object v8, v8, v3
 
-    const v9, 0x7f0e13a3
+    const v9, 0x7f0e1471
 
     const-string v10, "VoipRecordPortrait"
 
@@ -781,13 +781,13 @@
 
     goto :goto_2c5
 
-    .line 237
+    .line 239
     :cond_2b5
     iget-object v8, v0, Lorg/telegram/ui/Components/GroupCallRecordAlert;->titles:[Landroid/widget/TextView;
 
     aget-object v8, v8, v3
 
-    const v9, 0x7f0e13a2
+    const v9, 0x7f0e1470
 
     const-string v10, "VoipRecordLandscape"
 
@@ -797,7 +797,7 @@
 
     invoke-virtual {v8, v9}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 240
+    .line 242
     :goto_2c5
     iget-object v8, v0, Lorg/telegram/ui/Components/GroupCallRecordAlert;->titles:[Landroid/widget/TextView;
 
@@ -816,7 +816,7 @@
     :cond_2d5
     if-eqz p3, :cond_2dc
 
-    .line 243
+    .line 245
     iget-object v1, v0, Lorg/telegram/ui/Components/GroupCallRecordAlert;->viewPager:Landroidx/viewpager/widget/ViewPager;
 
     invoke-virtual {v1, v7}, Landroidx/viewpager/widget/ViewPager;->setCurrentItem(I)V
@@ -828,7 +828,7 @@
 .method static synthetic access$000(Lorg/telegram/ui/Components/GroupCallRecordAlert;)Landroid/widget/TextView;
     .registers 1
 
-    .line 38
+    .line 40
     iget-object p0, p0, Lorg/telegram/ui/Components/GroupCallRecordAlert;->positiveButton:Landroid/widget/TextView;
 
     return-object p0
@@ -837,7 +837,7 @@
 .method static synthetic access$100(Lorg/telegram/ui/Components/GroupCallRecordAlert;)Landroidx/viewpager/widget/ViewPager;
     .registers 1
 
-    .line 38
+    .line 40
     iget-object p0, p0, Lorg/telegram/ui/Components/GroupCallRecordAlert;->viewPager:Landroidx/viewpager/widget/ViewPager;
 
     return-object p0
@@ -846,7 +846,7 @@
 .method static synthetic access$200(Lorg/telegram/ui/Components/GroupCallRecordAlert;)Landroid/widget/LinearLayout;
     .registers 1
 
-    .line 38
+    .line 40
     iget-object p0, p0, Lorg/telegram/ui/Components/GroupCallRecordAlert;->titlesLayout:Landroid/widget/LinearLayout;
 
     return-object p0
@@ -855,7 +855,7 @@
 .method static synthetic access$300(Lorg/telegram/ui/Components/GroupCallRecordAlert;)V
     .registers 1
 
-    .line 38
+    .line 40
     invoke-direct {p0}, Lorg/telegram/ui/Components/GroupCallRecordAlert;->updateTitlesLayout()V
 
     return-void
@@ -864,7 +864,7 @@
 .method static synthetic access$500(Lorg/telegram/ui/Components/GroupCallRecordAlert;)I
     .registers 1
 
-    .line 38
+    .line 40
     iget p0, p0, Lorg/telegram/ui/Components/GroupCallRecordAlert;->currentPage:I
 
     return p0
@@ -873,7 +873,7 @@
 .method static synthetic access$502(Lorg/telegram/ui/Components/GroupCallRecordAlert;I)I
     .registers 2
 
-    .line 38
+    .line 40
     iput p1, p0, Lorg/telegram/ui/Components/GroupCallRecordAlert;->currentPage:I
 
     return p1
@@ -882,7 +882,7 @@
 .method static synthetic access$600(Lorg/telegram/ui/Components/GroupCallRecordAlert;)F
     .registers 1
 
-    .line 38
+    .line 40
     iget p0, p0, Lorg/telegram/ui/Components/GroupCallRecordAlert;->pageOffset:F
 
     return p0
@@ -891,7 +891,7 @@
 .method static synthetic access$602(Lorg/telegram/ui/Components/GroupCallRecordAlert;F)F
     .registers 2
 
-    .line 38
+    .line 40
     iput p1, p0, Lorg/telegram/ui/Components/GroupCallRecordAlert;->pageOffset:F
 
     return p1
@@ -900,7 +900,7 @@
 .method static synthetic access$700(Lorg/telegram/ui/Components/GroupCallRecordAlert;)[Landroid/widget/TextView;
     .registers 1
 
-    .line 38
+    .line 40
     iget-object p0, p0, Lorg/telegram/ui/Components/GroupCallRecordAlert;->titles:[Landroid/widget/TextView;
 
     return-object p0
@@ -909,12 +909,12 @@
 .method private synthetic lambda$new$0(Landroid/view/View;)V
     .registers 2
 
-    .line 214
+    .line 216
     iget p1, p0, Lorg/telegram/ui/Components/GroupCallRecordAlert;->currentPage:I
 
     invoke-virtual {p0, p1}, Lorg/telegram/ui/Components/GroupCallRecordAlert;->onStartRecord(I)V
 
-    .line 215
+    .line 217
     invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BottomSheet;->dismiss()V
 
     return-void
@@ -923,7 +923,7 @@
 .method private synthetic lambda$new$1(ILandroid/view/View;)V
     .registers 4
 
-    .line 240
+    .line 242
     iget-object p2, p0, Lorg/telegram/ui/Components/GroupCallRecordAlert;->viewPager:Landroidx/viewpager/widget/ViewPager;
 
     const/4 v0, 0x1
@@ -936,14 +936,14 @@
 .method private updateTitlesLayout()V
     .registers 9
 
-    .line 248
+    .line 250
     iget-object v0, p0, Lorg/telegram/ui/Components/GroupCallRecordAlert;->titles:[Landroid/widget/TextView;
 
     iget v1, p0, Lorg/telegram/ui/Components/GroupCallRecordAlert;->currentPage:I
 
     aget-object v2, v0, v1
 
-    .line 249
+    .line 251
     array-length v3, v0
 
     add-int/lit8 v3, v3, -0x1
@@ -959,7 +959,7 @@
     :cond_10
     const/4 v0, 0x0
 
-    .line 250
+    .line 252
     :goto_11
     iget-object v1, p0, Lorg/telegram/ui/ActionBar/BottomSheet;->containerView:Landroid/view/ViewGroup;
 
@@ -969,7 +969,7 @@
 
     div-int/lit8 v1, v1, 0x2
 
-    .line 251
+    .line 253
     invoke-virtual {v2}, Landroid/view/View;->getLeft()I
 
     move-result v1
@@ -984,7 +984,7 @@
 
     int-to-float v1, v1
 
-    .line 252
+    .line 254
     iget-object v2, p0, Lorg/telegram/ui/ActionBar/BottomSheet;->containerView:Landroid/view/ViewGroup;
 
     invoke-virtual {v2}, Landroid/view/ViewGroup;->getMeasuredWidth()I
@@ -999,7 +999,7 @@
 
     if-eqz v0, :cond_43
 
-    .line 254
+    .line 256
     invoke-virtual {v0}, Landroid/view/View;->getLeft()I
 
     move-result v3
@@ -1016,7 +1016,7 @@
 
     sub-float/2addr v0, v1
 
-    .line 255
+    .line 257
     iget v1, p0, Lorg/telegram/ui/Components/GroupCallRecordAlert;->pageOffset:F
 
     mul-float v0, v0, v1
@@ -1026,7 +1026,7 @@
     :cond_43
     const/4 v0, 0x0
 
-    .line 257
+    .line 259
     :goto_44
     iget-object v1, p0, Lorg/telegram/ui/Components/GroupCallRecordAlert;->titles:[Landroid/widget/TextView;
 
@@ -1034,7 +1034,7 @@
 
     if-ge v0, v3, :cond_8a
 
-    .line 260
+    .line 262
     iget v3, p0, Lorg/telegram/ui/Components/GroupCallRecordAlert;->currentPage:I
 
     const v4, 0x3f666666    # 0.9f
@@ -1056,7 +1056,7 @@
 
     if-ne v0, v3, :cond_6c
 
-    .line 264
+    .line 266
     iget v3, p0, Lorg/telegram/ui/Components/GroupCallRecordAlert;->pageOffset:F
 
     mul-float v7, v7, v3
@@ -1071,7 +1071,7 @@
 
     goto :goto_74
 
-    .line 267
+    .line 269
     :cond_6c
     iget v3, p0, Lorg/telegram/ui/Components/GroupCallRecordAlert;->pageOffset:F
 
@@ -1083,21 +1083,21 @@
 
     add-float/2addr v4, v3
 
-    .line 270
+    .line 272
     :cond_74
     :goto_74
     aget-object v1, v1, v0
 
     invoke-virtual {v1, v5}, Landroid/widget/TextView;->setAlpha(F)V
 
-    .line 271
+    .line 273
     iget-object v1, p0, Lorg/telegram/ui/Components/GroupCallRecordAlert;->titles:[Landroid/widget/TextView;
 
     aget-object v1, v1, v0
 
     invoke-virtual {v1, v4}, Landroid/widget/TextView;->setScaleX(F)V
 
-    .line 272
+    .line 274
     iget-object v1, p0, Lorg/telegram/ui/Components/GroupCallRecordAlert;->titles:[Landroid/widget/TextView;
 
     aget-object v1, v1, v0
@@ -1108,13 +1108,13 @@
 
     goto :goto_44
 
-    .line 274
+    .line 276
     :cond_8a
     iget-object v0, p0, Lorg/telegram/ui/Components/GroupCallRecordAlert;->titlesLayout:Landroid/widget/LinearLayout;
 
     invoke-virtual {v0, v2}, Landroid/widget/LinearLayout;->setTranslationX(F)V
 
-    .line 275
+    .line 277
     iget-object v0, p0, Lorg/telegram/ui/Components/GroupCallRecordAlert;->positiveButton:Landroid/widget/TextView;
 
     invoke-virtual {v0}, Landroid/widget/TextView;->invalidate()V

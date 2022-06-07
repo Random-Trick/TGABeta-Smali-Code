@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/ChatAttachAlertPhotoLayoutPreview;Landroid/content/Context;Lorg/telegram/ui/ActionBar/ActionBarMenu;IILorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)V
     .registers 13
 
-    .line 98
+    .line 100
     iput-object p1, p0, Lorg/telegram/ui/Components/ChatAttachAlertPhotoLayoutPreview$1;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertPhotoLayoutPreview;
 
     move-object v0, p0
@@ -47,15 +47,13 @@
 .method public onInitializeAccessibilityNodeInfo(Landroid/view/accessibility/AccessibilityNodeInfo;)V
     .registers 3
 
-    .line 101
+    .line 103
     invoke-super {p0, p1}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->onInitializeAccessibilityNodeInfo(Landroid/view/accessibility/AccessibilityNodeInfo;)V
 
-    .line 102
+    .line 104
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlertPhotoLayoutPreview$1;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertPhotoLayoutPreview;
 
-    invoke-static {v0}, Lorg/telegram/ui/Components/ChatAttachAlertPhotoLayoutPreview;->access$000(Lorg/telegram/ui/Components/ChatAttachAlertPhotoLayoutPreview;)Landroid/widget/TextView;
-
-    move-result-object v0
+    iget-object v0, v0, Lorg/telegram/ui/Components/ChatAttachAlertPhotoLayoutPreview;->header:Landroid/widget/TextView;
 
     invoke-virtual {v0}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
 

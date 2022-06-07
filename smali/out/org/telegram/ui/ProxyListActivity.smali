@@ -985,7 +985,7 @@
 
     invoke-direct {v0, v1}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    const v1, 0x7f0e057c
+    const v1, 0x7f0e05cd
 
     const-string v2, "DeleteProxy"
 
@@ -996,7 +996,7 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const v1, 0x7f0e0331
+    const v1, 0x7f0e036d
 
     const-string v2, "Cancel"
 
@@ -1009,7 +1009,7 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setNegativeButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const v1, 0x7f0e017c
+    const v1, 0x7f0e01b1
 
     const-string v2, "AppName"
 
@@ -1020,7 +1020,7 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const v1, 0x7f0e0bae
+    const v1, 0x7f0e0c38
 
     const-string v2, "OK"
 
@@ -1268,7 +1268,7 @@
     .line 240
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
-    const v1, 0x7f070140
+    const v1, 0x7f070109
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/ActionBar;->setBackButtonImage(I)V
 
@@ -1277,7 +1277,7 @@
 
     const-string v1, "ProxySettings"
 
-    const v2, 0x7f0e0e31
+    const v2, 0x7f0e0eda
 
     invoke-static {v1, v2}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 

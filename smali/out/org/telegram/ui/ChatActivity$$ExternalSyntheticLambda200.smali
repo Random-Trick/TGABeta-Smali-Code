@@ -2,46 +2,50 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Ljava/util/Comparator;
+.implements Ljava/lang/Runnable;
 
 
-# static fields
-.field public static final synthetic INSTANCE:Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda200;
+# instance fields
+.field public final synthetic f$0:Lorg/telegram/ui/ChatActivity;
+
+.field public final synthetic f$1:[Z
+
+.field public final synthetic f$2:I
+
+.field public final synthetic f$3:Lorg/telegram/ui/ChatActivity;
 
 
 # direct methods
-.method static synthetic constructor <clinit>()V
-    .registers 1
-
-    new-instance v0, Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda200;
-
-    invoke-direct {v0}, Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda200;-><init>()V
-
-    sput-object v0, Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda200;->INSTANCE:Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda200;
-
-    return-void
-.end method
-
-.method private synthetic constructor <init>()V
-    .registers 1
+.method public synthetic constructor <init>(Lorg/telegram/ui/ChatActivity;[ZILorg/telegram/ui/ChatActivity;)V
+    .registers 5
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda200;->f$0:Lorg/telegram/ui/ChatActivity;
+
+    iput-object p2, p0, Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda200;->f$1:[Z
+
+    iput p3, p0, Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda200;->f$2:I
+
+    iput-object p4, p0, Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda200;->f$3:Lorg/telegram/ui/ChatActivity;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final compare(Ljava/lang/Object;Ljava/lang/Object;)I
-    .registers 3
+.method public final run()V
+    .registers 5
 
-    check-cast p1, Ljava/lang/Integer;
+    iget-object v0, p0, Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda200;->f$0:Lorg/telegram/ui/ChatActivity;
 
-    check-cast p2, Ljava/lang/Integer;
+    iget-object v1, p0, Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda200;->f$1:[Z
 
-    invoke-static {p1, p2}, Lorg/telegram/ui/ChatActivity;->$r8$lambda$HGn8Mi000En1whBxL1U7sUzQoYM(Ljava/lang/Integer;Ljava/lang/Integer;)I
+    iget v2, p0, Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda200;->f$2:I
 
-    move-result p1
+    iget-object v3, p0, Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda200;->f$3:Lorg/telegram/ui/ChatActivity;
 
-    return p1
+    invoke-static {v0, v1, v2, v3}, Lorg/telegram/ui/ChatActivity;->$r8$lambda$7TPKAib3Vs4LbkkSUAYVMpSSyQg(Lorg/telegram/ui/ChatActivity;[ZILorg/telegram/ui/ChatActivity;)V
+
+    return-void
 .end method

@@ -25,7 +25,7 @@
 .method constructor <init>(Landroidx/recyclerview/widget/RecyclerView;)V
     .registers 2
 
-    .line 399
+    .line 400
     iput-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$1;->this$0:Landroidx/recyclerview/widget/RecyclerView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public run()V
     .registers 3
 
-    .line 402
+    .line 403
     iget-object v0, p0, Landroidx/recyclerview/widget/RecyclerView$1;->this$0:Landroidx/recyclerview/widget/RecyclerView;
 
     iget-boolean v1, v0, Landroidx/recyclerview/widget/RecyclerView;->mFirstLayoutComplete:Z
@@ -53,7 +53,7 @@
 
     goto :goto_22
 
-    .line 406
+    .line 407
     :cond_d
     iget-object v0, p0, Landroidx/recyclerview/widget/RecyclerView$1;->this$0:Landroidx/recyclerview/widget/RecyclerView;
 
@@ -61,12 +61,12 @@
 
     if-nez v1, :cond_17
 
-    .line 407
+    .line 408
     invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView;->requestLayout()V
 
     return-void
 
-    .line 411
+    .line 412
     :cond_17
     iget-boolean v1, v0, Landroidx/recyclerview/widget/RecyclerView;->mLayoutSuppressed:Z
 
@@ -74,12 +74,12 @@
 
     const/4 v1, 0x1
 
-    .line 412
+    .line 413
     iput-boolean v1, v0, Landroidx/recyclerview/widget/RecyclerView;->mLayoutWasDefered:Z
 
     return-void
 
-    .line 415
+    .line 416
     :cond_1f
     invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView;->consumePendingUpdateOperations()V
 

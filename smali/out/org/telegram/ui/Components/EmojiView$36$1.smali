@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/EmojiView$36;)V
     .registers 2
 
-    .line 3908
+    .line 3962
     iput-object p1, p0, Lorg/telegram/ui/Components/EmojiView$36$1;->this$1:Lorg/telegram/ui/Components/EmojiView$36;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -35,7 +35,7 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .registers 3
 
-    .line 3911
+    .line 3965
     iget-object p1, p0, Lorg/telegram/ui/Components/EmojiView$36$1;->this$1:Lorg/telegram/ui/Components/EmojiView$36;
 
     iget-object p1, p1, Lorg/telegram/ui/Components/EmojiView$36;->this$0:Lorg/telegram/ui/Components/EmojiView;
@@ -46,7 +46,7 @@
 
     if-eqz p1, :cond_16
 
-    .line 3912
+    .line 3966
     iget-object p1, p0, Lorg/telegram/ui/Components/EmojiView$36$1;->this$1:Lorg/telegram/ui/Components/EmojiView$36;
 
     iget-object p1, p1, Lorg/telegram/ui/Components/EmojiView$36;->this$0:Lorg/telegram/ui/Components/EmojiView;

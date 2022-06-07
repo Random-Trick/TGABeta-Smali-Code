@@ -21,7 +21,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 18716
+    .line 18879
     invoke-direct {p0}, Lorg/telegram/tgnet/TLRPC$messages_FeaturedStickers;-><init>()V
 
     return-void
@@ -32,7 +32,7 @@
 .method public readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
     .registers 3
 
-    .line 18722
+    .line 18885
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result p1
@@ -45,12 +45,12 @@
 .method public serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
     .registers 3
 
-    .line 18726
+    .line 18889
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_messages_featuredStickersNotModified;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 18727
+    .line 18890
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_messages_featuredStickersNotModified;->count:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V

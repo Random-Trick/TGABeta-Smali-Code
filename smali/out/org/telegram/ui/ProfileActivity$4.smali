@@ -19,13 +19,13 @@
 
 
 # direct methods
-.method constructor <init>(Lorg/telegram/ui/ProfileActivity;Landroid/content/Context;)V
-    .registers 3
+.method constructor <init>(Lorg/telegram/ui/ProfileActivity;Landroid/content/Context;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)V
+    .registers 4
 
-    .line 1519
+    .line 1540
     iput-object p1, p0, Lorg/telegram/ui/ProfileActivity$4;->this$0:Lorg/telegram/ui/ProfileActivity;
 
-    invoke-direct {p0, p2}, Lorg/telegram/ui/ActionBar/ActionBar;-><init>(Landroid/content/Context;)V
+    invoke-direct {p0, p2, p3}, Lorg/telegram/ui/ActionBar/ActionBar;-><init>(Landroid/content/Context;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)V
 
     return-void
 .end method
@@ -35,7 +35,7 @@
 .method public onTouchEvent(Landroid/view/MotionEvent;)Z
     .registers 5
 
-    .line 1523
+    .line 1543
     iget-object v0, p0, Lorg/telegram/ui/ProfileActivity$4;->this$0:Lorg/telegram/ui/ProfileActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/ProfileActivity;->access$500(Lorg/telegram/ui/ProfileActivity;)Landroid/widget/FrameLayout;
@@ -50,7 +50,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->getHitRect(Landroid/graphics/Rect;)V
 
-    .line 1524
+    .line 1544
     iget-object v0, p0, Lorg/telegram/ui/ProfileActivity$4;->this$0:Lorg/telegram/ui/ProfileActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/ProfileActivity;->access$4200(Lorg/telegram/ui/ProfileActivity;)Landroid/graphics/Rect;
@@ -79,7 +79,7 @@
 
     return p1
 
-    .line 1527
+    .line 1547
     :cond_27
     invoke-super {p0, p1}, Lorg/telegram/ui/ActionBar/ActionBar;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
@@ -91,12 +91,12 @@
 .method public setItemsColor(IZ)V
     .registers 5
 
-    .line 1532
+    .line 1552
     invoke-super {p0, p1, p2}, Lorg/telegram/ui/ActionBar/ActionBar;->setItemsColor(IZ)V
 
     if-nez p2, :cond_1d
 
-    .line 1533
+    .line 1553
     iget-object p2, p0, Lorg/telegram/ui/ProfileActivity$4;->this$0:Lorg/telegram/ui/ProfileActivity;
 
     invoke-static {p2}, Lorg/telegram/ui/ProfileActivity;->access$4300(Lorg/telegram/ui/ProfileActivity;)Landroid/widget/ImageView;
@@ -105,7 +105,7 @@
 
     if-eqz p2, :cond_1d
 
-    .line 1534
+    .line 1554
     iget-object p2, p0, Lorg/telegram/ui/ProfileActivity$4;->this$0:Lorg/telegram/ui/ProfileActivity;
 
     invoke-static {p2}, Lorg/telegram/ui/ProfileActivity;->access$4300(Lorg/telegram/ui/ProfileActivity;)Landroid/widget/ImageView;

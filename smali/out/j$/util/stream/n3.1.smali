@@ -1,25 +1,42 @@
-.class interface abstract Lj$/util/stream/n3;
+.class public final synthetic Lj$/util/stream/n3;
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lj$/util/function/Consumer;
+.implements Lj$/util/function/m;
+
+
+# static fields
+.field public static final synthetic a:Lj$/util/stream/n3;
+
+
+# direct methods
+.method static synthetic constructor <clinit>()V
+    .registers 1
+
+    new-instance v0, Lj$/util/stream/n3;
+
+    invoke-direct {v0}, Lj$/util/stream/n3;-><init>()V
+
+    sput-object v0, Lj$/util/stream/n3;->a:Lj$/util/stream/n3;
+
+    return-void
+.end method
+
+.method private synthetic constructor <init>()V
+    .registers 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public abstract accept(D)V
-.end method
+.method public final apply(I)Ljava/lang/Object;
+    .registers 2
 
-.method public abstract accept(I)V
-.end method
+    .line 1
+    new-array p1, p1, [Ljava/lang/Object;
 
-.method public abstract accept(J)V
-.end method
-
-.method public abstract m()V
-.end method
-
-.method public abstract n(J)V
-.end method
-
-.method public abstract o()Z
+    return-object p1
 .end method

@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/EmojiView$StickersGridAdapter;Landroid/content/Context;)V
     .registers 3
 
-    .line 4275
+    .line 4356
     iput-object p1, p0, Lorg/telegram/ui/Components/EmojiView$StickersGridAdapter$2;->this$1:Lorg/telegram/ui/Components/EmojiView$StickersGridAdapter;
 
     invoke-direct {p0, p2}, Lorg/telegram/ui/Components/RecyclerListView;-><init>(Landroid/content/Context;)V
@@ -35,7 +35,7 @@
 .method public onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
     .registers 5
 
-    .line 4278
+    .line 4359
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getParent()Landroid/view/ViewParent;
 
     move-result-object v0
@@ -52,7 +52,7 @@
 
     if-eqz v0, :cond_38
 
-    .line 4279
+    .line 4360
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getParent()Landroid/view/ViewParent;
 
     move-result-object v0
@@ -91,7 +91,7 @@
     :goto_2a
     invoke-interface {v0, v1}, Landroid/view/ViewParent;->requestDisallowInterceptTouchEvent(Z)V
 
-    .line 4280
+    .line 4361
     iget-object v0, p0, Lorg/telegram/ui/Components/EmojiView$StickersGridAdapter$2;->this$1:Lorg/telegram/ui/Components/EmojiView$StickersGridAdapter;
 
     iget-object v0, v0, Lorg/telegram/ui/Components/EmojiView$StickersGridAdapter;->this$0:Lorg/telegram/ui/Components/EmojiView;
@@ -102,7 +102,7 @@
 
     invoke-virtual {v0, v2}, Landroid/view/ViewGroup;->requestDisallowInterceptTouchEvent(Z)V
 
-    .line 4282
+    .line 4363
     :cond_38
     invoke-super {p0, p1}, Lorg/telegram/ui/Components/RecyclerListView;->onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
 

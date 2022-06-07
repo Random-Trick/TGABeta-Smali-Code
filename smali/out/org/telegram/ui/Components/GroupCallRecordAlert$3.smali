@@ -24,12 +24,12 @@
 .method constructor <init>(Lorg/telegram/ui/Components/GroupCallRecordAlert;Landroid/content/Context;)V
     .registers 5
 
-    .line 150
+    .line 152
     iput-object p1, p0, Lorg/telegram/ui/Components/GroupCallRecordAlert$3;->this$0:Lorg/telegram/ui/Components/GroupCallRecordAlert;
 
     invoke-direct {p0, p2}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
-    .line 152
+    .line 154
     invoke-static {p1}, Lorg/telegram/ui/Components/GroupCallRecordAlert;->access$700(Lorg/telegram/ui/Components/GroupCallRecordAlert;)[Landroid/widget/TextView;
 
     move-result-object p1
@@ -42,7 +42,7 @@
 
     const/4 p1, 0x0
 
-    .line 154
+    .line 156
     :goto_f
     iget-object p2, p0, Lorg/telegram/ui/Components/GroupCallRecordAlert$3;->gradientPaint:[Landroid/graphics/Paint;
 
@@ -50,7 +50,7 @@
 
     if-ge p1, v0, :cond_1f
 
-    .line 155
+    .line 157
     new-instance v0, Landroid/graphics/Paint;
 
     const/4 v1, 0x1
@@ -72,7 +72,7 @@
 .method protected onDraw(Landroid/graphics/Canvas;)V
     .registers 9
 
-    .line 192
+    .line 194
     sget-object v0, Lorg/telegram/messenger/AndroidUtilities;->rectTmp:Landroid/graphics/RectF;
 
     invoke-virtual {p0}, Landroid/widget/TextView;->getMeasuredWidth()I
@@ -91,7 +91,7 @@
 
     invoke-virtual {v0, v3, v3, v1, v2}, Landroid/graphics/RectF;->set(FFFF)V
 
-    .line 193
+    .line 195
     iget-object v1, p0, Lorg/telegram/ui/Components/GroupCallRecordAlert$3;->gradientPaint:[Landroid/graphics/Paint;
 
     iget-object v2, p0, Lorg/telegram/ui/Components/GroupCallRecordAlert$3;->this$0:Lorg/telegram/ui/Components/GroupCallRecordAlert;
@@ -108,7 +108,7 @@
 
     const/high16 v1, 0x40c00000    # 6.0f
 
-    .line 194
+    .line 196
     invoke-static {v1}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v2
@@ -133,7 +133,7 @@
 
     invoke-virtual {p1, v0, v2, v4, v5}, Landroid/graphics/Canvas;->drawRoundRect(Landroid/graphics/RectF;FFLandroid/graphics/Paint;)V
 
-    .line 195
+    .line 197
     iget-object v2, p0, Lorg/telegram/ui/Components/GroupCallRecordAlert$3;->this$0:Lorg/telegram/ui/Components/GroupCallRecordAlert;
 
     invoke-static {v2}, Lorg/telegram/ui/Components/GroupCallRecordAlert;->access$600(Lorg/telegram/ui/Components/GroupCallRecordAlert;)F
@@ -158,7 +158,7 @@
 
     if-ge v2, v4, :cond_80
 
-    .line 196
+    .line 198
     iget-object v2, p0, Lorg/telegram/ui/Components/GroupCallRecordAlert$3;->this$0:Lorg/telegram/ui/Components/GroupCallRecordAlert;
 
     invoke-static {v2}, Lorg/telegram/ui/Components/GroupCallRecordAlert;->access$500(Lorg/telegram/ui/Components/GroupCallRecordAlert;)I
@@ -183,7 +183,7 @@
 
     invoke-virtual {v2, v3}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 197
+    .line 199
     invoke-static {v1}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v2
@@ -210,7 +210,7 @@
 
     invoke-virtual {p1, v0, v2, v1, v3}, Landroid/graphics/Canvas;->drawRoundRect(Landroid/graphics/RectF;FFLandroid/graphics/Paint;)V
 
-    .line 199
+    .line 201
     :cond_80
     invoke-super {p0, p1}, Landroid/widget/TextView;->onDraw(Landroid/graphics/Canvas;)V
 
@@ -222,14 +222,14 @@
 
     move-object/from16 v0, p0
 
-    .line 161
+    .line 163
     invoke-super/range {p0 .. p4}, Landroid/widget/TextView;->onSizeChanged(IIII)V
 
     const/4 v1, 0x0
 
     const/4 v2, 0x0
 
-    .line 162
+    .line 164
     :goto_7
     iget-object v3, v0, Lorg/telegram/ui/Components/GroupCallRecordAlert$3;->gradientPaint:[Landroid/graphics/Paint;
 
@@ -273,7 +273,7 @@
 
     if-eqz v6, :cond_4b
 
-    .line 181
+    .line 183
     new-instance v16, Landroid/graphics/LinearGradient;
 
     const/4 v9, 0x0
@@ -308,7 +308,7 @@
 
     goto :goto_6b
 
-    .line 183
+    .line 185
     :cond_4b
     new-instance v16, Landroid/graphics/LinearGradient;
 
@@ -345,7 +345,7 @@
     :goto_6b
     move-object/from16 v3, v16
 
-    .line 185
+    .line 187
     iget-object v4, v0, Lorg/telegram/ui/Components/GroupCallRecordAlert$3;->gradientPaint:[Landroid/graphics/Paint;
 
     aget-object v4, v4, v2

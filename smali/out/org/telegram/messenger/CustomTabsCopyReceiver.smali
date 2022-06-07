@@ -28,7 +28,7 @@
     .line 22
     invoke-static {p2}, Lorg/telegram/messenger/AndroidUtilities;->addToClipboard(Ljava/lang/CharSequence;)V
 
-    const p2, 0x7f0e0930
+    const p2, 0x7f0e09b7
 
     const-string v0, "LinkCopied"
 

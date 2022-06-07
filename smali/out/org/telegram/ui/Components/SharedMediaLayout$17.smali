@@ -25,7 +25,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/SharedMediaLayout;)V
     .registers 2
 
-    .line 2414
+    .line 2418
     iput-object p1, p0, Lorg/telegram/ui/Components/SharedMediaLayout$17;->this$0:Lorg/telegram/ui/Components/SharedMediaLayout;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,7 +44,7 @@
 
     const/4 v2, 0x0
 
-    .line 2418
+    .line 2422
     :goto_3
     iget-object v3, p0, Lorg/telegram/ui/Components/SharedMediaLayout$17;->this$0:Lorg/telegram/ui/Components/SharedMediaLayout;
 
@@ -62,7 +62,7 @@
 
     if-ge v2, v3, :cond_2d
 
-    .line 2419
+    .line 2423
     iget-object v3, p0, Lorg/telegram/ui/Components/SharedMediaLayout$17;->this$0:Lorg/telegram/ui/Components/SharedMediaLayout;
 
     invoke-static {v3}, Lorg/telegram/ui/Components/SharedMediaLayout;->access$600(Lorg/telegram/ui/Components/SharedMediaLayout;)[Lorg/telegram/ui/Components/SharedMediaLayout$SharedMediaData;
@@ -92,7 +92,7 @@
 
     goto :goto_3
 
-    .line 2423
+    .line 2427
     :cond_2d
     iget-object v2, p0, Lorg/telegram/ui/Components/SharedMediaLayout$17;->this$0:Lorg/telegram/ui/Components/SharedMediaLayout;
 
@@ -104,7 +104,7 @@
 
     if-eqz v2, :cond_3f
 
-    .line 2425
+    .line 2429
     invoke-static {v2}, Lorg/telegram/ui/Components/SharedMediaLayout$MediaPage;->access$200(Lorg/telegram/ui/Components/SharedMediaLayout$MediaPage;)Lorg/telegram/ui/Components/ExtendedGridLayoutManager;
 
     move-result-object p2
@@ -113,21 +113,21 @@
 
     goto :goto_45
 
-    .line 2427
+    .line 2431
     :cond_3f
     iget-object v1, p0, Lorg/telegram/ui/Components/SharedMediaLayout$17;->this$0:Lorg/telegram/ui/Components/SharedMediaLayout;
 
     const/4 v3, 0x1
 
-    invoke-static {v1, v0, p1, p2, v3}, Lorg/telegram/ui/Components/SharedMediaLayout;->access$5000(Lorg/telegram/ui/Components/SharedMediaLayout;IIIZ)V
+    invoke-static {v1, v0, p1, p2, v3}, Lorg/telegram/ui/Components/SharedMediaLayout;->access$5100(Lorg/telegram/ui/Components/SharedMediaLayout;IIIZ)V
 
     :goto_45
     if-eqz v2, :cond_4b
 
-    .line 2430
+    .line 2434
     iput p1, v2, Lorg/telegram/ui/Components/SharedMediaLayout$MediaPage;->highlightMessageId:I
 
-    .line 2431
+    .line 2435
     iput-boolean v0, v2, Lorg/telegram/ui/Components/SharedMediaLayout$MediaPage;->highlightAnimation:Z
 
     :cond_4b

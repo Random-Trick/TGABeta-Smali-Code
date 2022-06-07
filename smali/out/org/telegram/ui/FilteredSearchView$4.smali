@@ -60,7 +60,7 @@
 
     invoke-static {p2, p3, p1, v1}, Lorg/telegram/ui/FilteredSearchView;->access$400(Lorg/telegram/ui/FilteredSearchView;Lorg/telegram/messenger/MessageObject;Landroid/view/View;I)Z
 
-    goto :goto_75
+    goto :goto_79
 
     .line 318
     :cond_13
@@ -81,7 +81,7 @@
 
     invoke-static {p2, p3, p1, v1}, Lorg/telegram/ui/FilteredSearchView;->access$400(Lorg/telegram/ui/FilteredSearchView;Lorg/telegram/messenger/MessageObject;Landroid/view/View;I)Z
 
-    goto :goto_75
+    goto :goto_79
 
     .line 320
     :cond_24
@@ -102,7 +102,7 @@
 
     invoke-static {p2, p3, p1, v1}, Lorg/telegram/ui/FilteredSearchView;->access$400(Lorg/telegram/ui/FilteredSearchView;Lorg/telegram/messenger/MessageObject;Landroid/view/View;I)Z
 
-    goto :goto_75
+    goto :goto_79
 
     .line 322
     :cond_35
@@ -123,13 +123,13 @@
 
     invoke-static {p2, p3, p1, v1}, Lorg/telegram/ui/FilteredSearchView;->access$400(Lorg/telegram/ui/FilteredSearchView;Lorg/telegram/messenger/MessageObject;Landroid/view/View;I)Z
 
-    goto :goto_75
+    goto :goto_79
 
     .line 324
     :cond_46
     instance-of p2, p1, Lorg/telegram/ui/Cells/DialogCell;
 
-    if-eqz p2, :cond_75
+    if-eqz p2, :cond_79
 
     .line 325
     iget-object p2, p0, Lorg/telegram/ui/FilteredSearchView$4;->this$0:Lorg/telegram/ui/FilteredSearchView;
@@ -142,7 +142,7 @@
 
     move-result p2
 
-    if-nez p2, :cond_69
+    if-nez p2, :cond_6d
 
     .line 326
     move-object p2, p1
@@ -153,7 +153,7 @@
 
     move-result p3
 
-    if-eqz p3, :cond_69
+    if-eqz p3, :cond_6d
 
     .line 327
     iget-object p1, p0, Lorg/telegram/ui/FilteredSearchView$4;->this$0:Lorg/telegram/ui/FilteredSearchView;
@@ -162,12 +162,16 @@
 
     move-result-object p1
 
-    invoke-interface {p1, p2}, Lorg/telegram/ui/Components/SearchViewPager$ChatPreviewDelegate;->startChatPreview(Lorg/telegram/ui/Cells/DialogCell;)V
+    iget-object p3, p0, Lorg/telegram/ui/FilteredSearchView$4;->this$0:Lorg/telegram/ui/FilteredSearchView;
+
+    iget-object p3, p3, Lorg/telegram/ui/FilteredSearchView;->recyclerListView:Lorg/telegram/ui/Components/RecyclerListView;
+
+    invoke-interface {p1, p3, p2}, Lorg/telegram/ui/Components/SearchViewPager$ChatPreviewDelegate;->startChatPreview(Lorg/telegram/ui/Components/RecyclerListView;Lorg/telegram/ui/Cells/DialogCell;)V
 
     return v0
 
     .line 331
-    :cond_69
+    :cond_6d
     iget-object p2, p0, Lorg/telegram/ui/FilteredSearchView$4;->this$0:Lorg/telegram/ui/FilteredSearchView;
 
     move-object p3, p1
@@ -180,8 +184,8 @@
 
     invoke-static {p2, p3, p1, v1}, Lorg/telegram/ui/FilteredSearchView;->access$400(Lorg/telegram/ui/FilteredSearchView;Lorg/telegram/messenger/MessageObject;Landroid/view/View;I)Z
 
-    :cond_75
-    :goto_75
+    :cond_79
+    :goto_79
     return v0
 .end method
 

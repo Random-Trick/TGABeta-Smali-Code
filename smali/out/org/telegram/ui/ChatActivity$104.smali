@@ -1,11 +1,14 @@
 .class Lorg/telegram/ui/ChatActivity$104;
-.super Lorg/telegram/ui/Components/ChatScrimPopupContainerLayout;
+.super Ljava/lang/Object;
 .source "ChatActivity.java"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lorg/telegram/ui/ChatActivity;->createMenu(Landroid/view/View;ZZFFZ)Z
+    value = Lorg/telegram/ui/ChatActivity;->lambda$createMenu$159(Lorg/telegram/messenger/MessageObject;Landroid/view/View;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,77 +18,49 @@
 
 
 # instance fields
+.field clicked:Z
+
 .field final synthetic this$0:Lorg/telegram/ui/ChatActivity;
 
 
 # direct methods
-.method constructor <init>(Lorg/telegram/ui/ChatActivity;Landroid/content/Context;)V
-    .registers 3
+.method constructor <init>(Lorg/telegram/ui/ChatActivity;)V
+    .registers 2
 
-    .line 21730
+    .line 21857
     iput-object p1, p0, Lorg/telegram/ui/ChatActivity$104;->this$0:Lorg/telegram/ui/ChatActivity;
 
-    invoke-direct {p0, p2}, Lorg/telegram/ui/Components/ChatScrimPopupContainerLayout;-><init>(Landroid/content/Context;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public dispatchKeyEvent(Landroid/view/KeyEvent;)Z
-    .registers 4
-
-    .line 21733
-    invoke-virtual {p1}, Landroid/view/KeyEvent;->getKeyCode()I
-
-    move-result v0
-
-    const/4 v1, 0x4
-
-    if-ne v0, v1, :cond_12
-
-    invoke-virtual {p1}, Landroid/view/KeyEvent;->getRepeatCount()I
-
-    move-result v0
-
-    if-nez v0, :cond_12
-
-    .line 21734
-    iget-object v0, p0, Lorg/telegram/ui/ChatActivity$104;->this$0:Lorg/telegram/ui/ChatActivity;
-
-    invoke-static {v0}, Lorg/telegram/ui/ChatActivity;->access$36900(Lorg/telegram/ui/ChatActivity;)V
-
-    .line 21736
-    :cond_12
-    invoke-super {p0, p1}, Landroid/widget/LinearLayout;->dispatchKeyEvent(Landroid/view/KeyEvent;)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public dispatchTouchEvent(Landroid/view/MotionEvent;)Z
+.method public run()V
     .registers 3
 
-    .line 21741
-    invoke-super {p0, p1}, Landroid/widget/LinearLayout;->dispatchTouchEvent(Landroid/view/MotionEvent;)Z
+    .line 21862
+    iget-boolean v0, p0, Lorg/telegram/ui/ChatActivity$104;->clicked:Z
 
-    move-result v0
+    if-eqz v0, :cond_5
 
-    .line 21742
-    invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
+    return-void
 
-    move-result p1
+    :cond_5
+    const/4 v0, 0x1
 
-    if-nez p1, :cond_11
+    .line 21865
+    iput-boolean v0, p0, Lorg/telegram/ui/ChatActivity$104;->clicked:Z
 
-    if-nez v0, :cond_11
+    .line 21866
+    iget-object v0, p0, Lorg/telegram/ui/ChatActivity$104;->this$0:Lorg/telegram/ui/ChatActivity;
 
-    .line 21743
-    iget-object p1, p0, Lorg/telegram/ui/ChatActivity$104;->this$0:Lorg/telegram/ui/ChatActivity;
+    new-instance v1, Lorg/telegram/ui/NotificationsSettingsActivity;
 
-    invoke-static {p1}, Lorg/telegram/ui/ChatActivity;->access$36900(Lorg/telegram/ui/ChatActivity;)V
+    invoke-direct {v1}, Lorg/telegram/ui/NotificationsSettingsActivity;-><init>()V
 
-    :cond_11
-    return v0
+    invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/BaseFragment;->presentFragment(Lorg/telegram/ui/ActionBar/BaseFragment;)Z
+
+    return-void
 .end method

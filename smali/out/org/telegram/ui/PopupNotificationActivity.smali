@@ -2503,7 +2503,7 @@
     const/4 p1, 0x0
 
     :goto_3a
-    const/4 v1, 0x3
+    const/4 v1, 0x4
 
     if-ge p1, v1, :cond_55
 
@@ -4126,7 +4126,7 @@
     .line 1308
     iget-object v0, p0, Lorg/telegram/ui/PopupNotificationActivity;->nameTextView:Landroid/widget/TextView;
 
-    const v1, 0x7f070167
+    const v1, 0x7f07012a
 
     invoke-virtual {v0, v1, v2, v2, v2}, Landroid/widget/TextView;->setCompoundDrawablesWithIntrinsicBounds(IIII)V
 
@@ -4361,7 +4361,7 @@
     .line 1339
     iget-object v0, p0, Lorg/telegram/ui/PopupNotificationActivity;->onlineTextView:Landroid/widget/TextView;
 
-    const v1, 0x7f0e0ffc
+    const v1, 0x7f0e10b9
 
     const-string v2, "ServiceNotifications"
 
@@ -4539,7 +4539,7 @@
     .line 1450
     iget p1, p0, Lorg/telegram/ui/PopupNotificationActivity;->lastResumedAccount:I
 
-    if-ne p2, p1, :cond_1c5
+    if-ne p2, p1, :cond_1c6
 
     .line 1451
     invoke-virtual {p0}, Lorg/telegram/ui/PopupNotificationActivity;->onFinish()V
@@ -4547,7 +4547,7 @@
     .line 1452
     invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
-    goto/16 :goto_1c5
+    goto/16 :goto_1c6
 
     .line 1454
     :cond_10
@@ -4559,12 +4559,12 @@
 
     const/4 v3, 0x0
 
-    if-ne p1, v0, :cond_89
+    if-ne p1, v0, :cond_8a
 
     .line 1455
     iget-boolean p1, p0, Lorg/telegram/ui/PopupNotificationActivity;->isReply:Z
 
-    if-nez p1, :cond_1c5
+    if-nez p1, :cond_1c6
 
     .line 1456
     iget-object p1, p0, Lorg/telegram/ui/PopupNotificationActivity;->popupMessages:Ljava/util/ArrayList;
@@ -4574,7 +4574,9 @@
     const/4 p1, 0x0
 
     :goto_21
-    if-ge p1, v1, :cond_3b
+    const/4 p2, 0x4
+
+    if-ge p1, p2, :cond_3c
 
     .line 1458
     invoke-static {p1}, Lorg/telegram/messenger/UserConfig;->getInstance(I)Lorg/telegram/messenger/UserConfig;
@@ -4585,7 +4587,7 @@
 
     move-result p2
 
-    if-eqz p2, :cond_38
+    if-eqz p2, :cond_39
 
     .line 1459
     iget-object p2, p0, Lorg/telegram/ui/PopupNotificationActivity;->popupMessages:Ljava/util/ArrayList;
@@ -4598,13 +4600,13 @@
 
     invoke-virtual {p2, p3}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
-    :cond_38
+    :cond_39
     add-int/lit8 p1, p1, 0x1
 
     goto :goto_21
 
     .line 1462
-    :cond_3b
+    :cond_3c
     invoke-direct {p0}, Lorg/telegram/ui/PopupNotificationActivity;->getNewMessage()V
 
     .line 1463
@@ -4614,12 +4616,12 @@
 
     move-result p1
 
-    if-nez p1, :cond_1c5
+    if-nez p1, :cond_1c6
 
     const/4 p1, 0x0
 
-    :goto_47
-    if-ge p1, v1, :cond_1c5
+    :goto_48
+    if-ge p1, v1, :cond_1c6
 
     .line 1465
     iget p2, p0, Lorg/telegram/ui/PopupNotificationActivity;->currentMessageNum:I
@@ -4635,9 +4637,9 @@
 
     move-result p3
 
-    if-ne p3, v2, :cond_61
+    if-ne p3, v2, :cond_62
 
-    if-ltz p2, :cond_5f
+    if-ltz p2, :cond_60
 
     iget-object p3, p0, Lorg/telegram/ui/PopupNotificationActivity;->popupMessages:Ljava/util/ArrayList;
 
@@ -4645,17 +4647,17 @@
 
     move-result p3
 
-    if-lt p2, p3, :cond_61
+    if-lt p2, p3, :cond_62
 
-    :cond_5f
+    :cond_60
     const/4 p2, 0x0
 
-    goto :goto_7d
+    goto :goto_7e
 
-    :cond_61
+    :cond_62
     const/4 p3, -0x1
 
-    if-ne p2, p3, :cond_6c
+    if-ne p2, p3, :cond_6d
 
     .line 1471
     iget-object p2, p0, Lorg/telegram/ui/PopupNotificationActivity;->popupMessages:Ljava/util/ArrayList;
@@ -4666,23 +4668,23 @@
 
     sub-int/2addr p2, v2
 
-    goto :goto_75
+    goto :goto_76
 
     .line 1472
-    :cond_6c
+    :cond_6d
     iget-object p3, p0, Lorg/telegram/ui/PopupNotificationActivity;->popupMessages:Ljava/util/ArrayList;
 
     invoke-virtual {p3}, Ljava/util/ArrayList;->size()I
 
     move-result p3
 
-    if-ne p2, p3, :cond_75
+    if-ne p2, p3, :cond_76
 
     const/4 p2, 0x0
 
     .line 1475
-    :cond_75
-    :goto_75
+    :cond_76
+    :goto_76
     iget-object p3, p0, Lorg/telegram/ui/PopupNotificationActivity;->popupMessages:Ljava/util/ArrayList;
 
     invoke-virtual {p3, p2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -4692,40 +4694,40 @@
     check-cast p2, Lorg/telegram/messenger/MessageObject;
 
     .line 1477
-    :goto_7d
+    :goto_7e
     iget-object p3, p0, Lorg/telegram/ui/PopupNotificationActivity;->setMessageObjects:[Lorg/telegram/messenger/MessageObject;
 
     aget-object p3, p3, p1
 
-    if-eq p3, p2, :cond_86
+    if-eq p3, p2, :cond_87
 
     .line 1478
     invoke-direct {p0, v3}, Lorg/telegram/ui/PopupNotificationActivity;->updateInterfaceForCurrentMessage(I)V
 
-    :cond_86
+    :cond_87
     add-int/lit8 p1, p1, 0x1
 
-    goto :goto_47
+    goto :goto_48
 
     .line 1483
-    :cond_89
+    :cond_8a
     sget v0, Lorg/telegram/messenger/NotificationCenter;->updateInterfaces:I
 
-    if-ne p1, v0, :cond_f1
+    if-ne p1, v0, :cond_f2
 
     .line 1484
     iget-object p1, p0, Lorg/telegram/ui/PopupNotificationActivity;->currentMessageObject:Lorg/telegram/messenger/MessageObject;
 
-    if-eqz p1, :cond_f0
+    if-eqz p1, :cond_f1
 
     iget p1, p0, Lorg/telegram/ui/PopupNotificationActivity;->lastResumedAccount:I
 
-    if-eq p2, p1, :cond_96
+    if-eq p2, p1, :cond_97
 
-    goto :goto_f0
+    goto :goto_f1
 
     .line 1487
-    :cond_96
+    :cond_97
     aget-object p1, p3, v3
 
     check-cast p1, Ljava/lang/Integer;
@@ -4739,55 +4741,55 @@
 
     and-int/2addr p2, p1
 
-    if-nez p2, :cond_b2
+    if-nez p2, :cond_b3
 
     sget p2, Lorg/telegram/messenger/MessagesController;->UPDATE_MASK_STATUS:I
 
     and-int/2addr p2, p1
 
-    if-nez p2, :cond_b2
+    if-nez p2, :cond_b3
 
     sget p2, Lorg/telegram/messenger/MessagesController;->UPDATE_MASK_CHAT_NAME:I
 
     and-int/2addr p2, p1
 
-    if-nez p2, :cond_b2
+    if-nez p2, :cond_b3
 
     sget p2, Lorg/telegram/messenger/MessagesController;->UPDATE_MASK_CHAT_MEMBERS:I
 
     and-int/2addr p2, p1
 
-    if-eqz p2, :cond_b5
+    if-eqz p2, :cond_b6
 
     .line 1489
-    :cond_b2
+    :cond_b3
     invoke-direct {p0}, Lorg/telegram/ui/PopupNotificationActivity;->updateSubtitle()V
 
     .line 1491
-    :cond_b5
+    :cond_b6
     sget p2, Lorg/telegram/messenger/MessagesController;->UPDATE_MASK_AVATAR:I
 
     and-int/2addr p2, p1
 
-    if-nez p2, :cond_bf
+    if-nez p2, :cond_c0
 
     sget p2, Lorg/telegram/messenger/MessagesController;->UPDATE_MASK_CHAT_AVATAR:I
 
     and-int/2addr p2, p1
 
-    if-eqz p2, :cond_c2
+    if-eqz p2, :cond_c3
 
     .line 1492
-    :cond_bf
+    :cond_c0
     invoke-direct {p0}, Lorg/telegram/ui/PopupNotificationActivity;->checkAndUpdateAvatar()V
 
     .line 1494
-    :cond_c2
+    :cond_c3
     sget p2, Lorg/telegram/messenger/MessagesController;->UPDATE_MASK_USER_PRINT:I
 
     and-int/2addr p1, p2
 
-    if-eqz p1, :cond_1c5
+    if-eqz p1, :cond_1c6
 
     .line 1495
     iget-object p1, p0, Lorg/telegram/ui/PopupNotificationActivity;->currentMessageObject:Lorg/telegram/messenger/MessageObject;
@@ -4811,41 +4813,41 @@
     .line 1496
     iget-object p2, p0, Lorg/telegram/ui/PopupNotificationActivity;->lastPrintString:Ljava/lang/CharSequence;
 
-    if-eqz p2, :cond_df
+    if-eqz p2, :cond_e0
 
-    if-eqz p1, :cond_eb
+    if-eqz p1, :cond_ec
 
-    :cond_df
-    if-nez p2, :cond_e3
+    :cond_e0
+    if-nez p2, :cond_e4
 
-    if-nez p1, :cond_eb
+    if-nez p1, :cond_ec
 
-    :cond_e3
-    if-eqz p2, :cond_1c5
+    :cond_e4
+    if-eqz p2, :cond_1c6
 
     invoke-virtual {p2, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
-    if-nez p1, :cond_1c5
+    if-nez p1, :cond_1c6
 
     .line 1497
-    :cond_eb
+    :cond_ec
     invoke-direct {p0}, Lorg/telegram/ui/PopupNotificationActivity;->updateSubtitle()V
 
-    goto/16 :goto_1c5
+    goto/16 :goto_1c6
 
-    :cond_f0
-    :goto_f0
+    :cond_f1
+    :goto_f1
     return-void
 
     .line 1500
-    :cond_f1
+    :cond_f2
     sget v0, Lorg/telegram/messenger/NotificationCenter;->messagePlayingDidReset:I
 
     const/16 v4, 0x12c
 
-    if-ne p1, v0, :cond_13d
+    if-ne p1, v0, :cond_13e
 
     .line 1501
     aget-object p1, p3, v3
@@ -4855,15 +4857,15 @@
     .line 1502
     iget-object p3, p0, Lorg/telegram/ui/PopupNotificationActivity;->messageContainer:Landroid/view/ViewGroup;
 
-    if-eqz p3, :cond_1c5
+    if-eqz p3, :cond_1c6
 
     .line 1503
     invoke-virtual {p3}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result p3
 
-    :goto_103
-    if-ge v3, p3, :cond_1c5
+    :goto_104
+    if-ge v3, p3, :cond_1c6
 
     .line 1505
     iget-object v0, p0, Lorg/telegram/ui/PopupNotificationActivity;->messageContainer:Landroid/view/ViewGroup;
@@ -4883,7 +4885,7 @@
 
     move-result v2
 
-    if-ne v2, v1, :cond_13a
+    if-ne v2, v1, :cond_13b
 
     .line 1507
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -4901,12 +4903,12 @@
 
     move-result-object v2
 
-    if-eqz v2, :cond_13a
+    if-eqz v2, :cond_13b
 
     .line 1509
     iget v5, v2, Lorg/telegram/messenger/MessageObject;->currentAccount:I
 
-    if-ne v5, p2, :cond_13a
+    if-ne v5, p2, :cond_13b
 
     invoke-virtual {v2}, Lorg/telegram/messenger/MessageObject;->getId()I
 
@@ -4916,23 +4918,23 @@
 
     move-result v5
 
-    if-ne v2, v5, :cond_13a
+    if-ne v2, v5, :cond_13b
 
     .line 1510
     invoke-virtual {v0}, Lorg/telegram/ui/Components/PopupAudioView;->updateButtonState()V
 
-    goto/16 :goto_1c5
+    goto/16 :goto_1c6
 
-    :cond_13a
+    :cond_13b
     add-int/lit8 v3, v3, 0x1
 
-    goto :goto_103
+    goto :goto_104
 
     .line 1516
-    :cond_13d
+    :cond_13e
     sget v0, Lorg/telegram/messenger/NotificationCenter;->messagePlayingProgressDidChanged:I
 
-    if-ne p1, v0, :cond_186
+    if-ne p1, v0, :cond_187
 
     .line 1517
     aget-object p1, p3, v3
@@ -4942,15 +4944,15 @@
     .line 1518
     iget-object p3, p0, Lorg/telegram/ui/PopupNotificationActivity;->messageContainer:Landroid/view/ViewGroup;
 
-    if-eqz p3, :cond_1c5
+    if-eqz p3, :cond_1c6
 
     .line 1519
     invoke-virtual {p3}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result p3
 
-    :goto_14d
-    if-ge v3, p3, :cond_1c5
+    :goto_14e
+    if-ge v3, p3, :cond_1c6
 
     .line 1521
     iget-object v0, p0, Lorg/telegram/ui/PopupNotificationActivity;->messageContainer:Landroid/view/ViewGroup;
@@ -4970,7 +4972,7 @@
 
     move-result v2
 
-    if-ne v2, v1, :cond_183
+    if-ne v2, v1, :cond_184
 
     .line 1523
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -4988,12 +4990,12 @@
 
     move-result-object v2
 
-    if-eqz v2, :cond_183
+    if-eqz v2, :cond_184
 
     .line 1525
     iget v5, v2, Lorg/telegram/messenger/MessageObject;->currentAccount:I
 
-    if-ne v5, p2, :cond_183
+    if-ne v5, p2, :cond_184
 
     invoke-virtual {v2}, Lorg/telegram/messenger/MessageObject;->getId()I
 
@@ -5003,36 +5005,36 @@
 
     move-result v5
 
-    if-ne v2, v5, :cond_183
+    if-ne v2, v5, :cond_184
 
     .line 1526
     invoke-virtual {v0}, Lorg/telegram/ui/Components/PopupAudioView;->updateProgress()V
 
-    goto :goto_1c5
+    goto :goto_1c6
 
-    :cond_183
+    :cond_184
     add-int/lit8 v3, v3, 0x1
 
-    goto :goto_14d
+    goto :goto_14e
 
     .line 1532
-    :cond_186
+    :cond_187
     sget p3, Lorg/telegram/messenger/NotificationCenter;->emojiLoaded:I
 
-    if-ne p1, p3, :cond_1ba
+    if-ne p1, p3, :cond_1bb
 
     .line 1533
     iget-object p1, p0, Lorg/telegram/ui/PopupNotificationActivity;->messageContainer:Landroid/view/ViewGroup;
 
-    if-eqz p1, :cond_1c5
+    if-eqz p1, :cond_1c6
 
     .line 1534
     invoke-virtual {p1}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result p1
 
-    :goto_192
-    if-ge v3, p1, :cond_1c5
+    :goto_193
+    if-ge v3, p1, :cond_1c6
 
     .line 1536
     iget-object p2, p0, Lorg/telegram/ui/PopupNotificationActivity;->messageContainer:Landroid/view/ViewGroup;
@@ -5052,7 +5054,7 @@
 
     move-result p3
 
-    if-ne p3, v2, :cond_1b7
+    if-ne p3, v2, :cond_1b8
 
     const/16 p3, 0x12d
 
@@ -5067,32 +5069,32 @@
 
     check-cast p2, Landroid/widget/TextView;
 
-    if-eqz p2, :cond_1b7
+    if-eqz p2, :cond_1b8
 
     .line 1540
     invoke-virtual {p2}, Landroid/widget/TextView;->invalidate()V
 
-    :cond_1b7
+    :cond_1b8
     add-int/lit8 v3, v3, 0x1
 
-    goto :goto_192
+    goto :goto_193
 
     .line 1545
-    :cond_1ba
+    :cond_1bb
     sget p3, Lorg/telegram/messenger/NotificationCenter;->contactsDidLoad:I
 
-    if-ne p1, p3, :cond_1c5
+    if-ne p1, p3, :cond_1c6
 
     .line 1546
     iget p1, p0, Lorg/telegram/ui/PopupNotificationActivity;->lastResumedAccount:I
 
-    if-ne p2, p1, :cond_1c5
+    if-ne p2, p1, :cond_1c6
 
     .line 1547
     invoke-direct {p0}, Lorg/telegram/ui/PopupNotificationActivity;->updateSubtitle()V
 
-    :cond_1c5
-    :goto_1c5
+    :cond_1c6
+    :goto_1c6
     return-void
 .end method
 
@@ -5113,7 +5115,7 @@
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/ChatActivityEnterView;->hidePopup(Z)V
+    invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/ChatActivityEnterView;->hidePopup(Z)Z
 
     return-void
 
@@ -5161,7 +5163,7 @@
     const/4 v2, 0x0
 
     :goto_10
-    const/4 v3, 0x3
+    const/4 v3, 0x4
 
     if-ge v2, v3, :cond_43
 
@@ -5280,18 +5282,18 @@
 
     invoke-direct {v4, v1, v7}, Lorg/telegram/ui/Components/PlayingGameDrawable;-><init>(ZLorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)V
 
-    aput-object v4, v2, v3
+    const/4 v8, 0x3
+
+    aput-object v4, v2, v8
 
     .line 181
     iget-object v2, v0, Lorg/telegram/ui/PopupNotificationActivity;->statusDrawables:[Lorg/telegram/ui/Components/StatusDrawable;
 
-    const/4 v4, 0x4
+    new-instance v4, Lorg/telegram/ui/Components/RoundStatusDrawable;
 
-    new-instance v8, Lorg/telegram/ui/Components/RoundStatusDrawable;
+    invoke-direct {v4, v1}, Lorg/telegram/ui/Components/RoundStatusDrawable;-><init>(Z)V
 
-    invoke-direct {v8, v1}, Lorg/telegram/ui/Components/RoundStatusDrawable;-><init>(Z)V
-
-    aput-object v8, v2, v4
+    aput-object v4, v2, v3
 
     .line 183
     new-instance v2, Lorg/telegram/ui/PopupNotificationActivity$1;
@@ -5301,26 +5303,26 @@
     .line 276
     invoke-virtual {v0, v2}, Landroid/app/Activity;->setContentView(Landroid/view/View;)V
 
-    const/high16 v4, -0x67000000
+    const/high16 v3, -0x67000000
 
     .line 277
-    invoke-virtual {v2, v4}, Landroid/widget/FrameLayout;->setBackgroundColor(I)V
+    invoke-virtual {v2, v3}, Landroid/widget/FrameLayout;->setBackgroundColor(I)V
 
     .line 279
-    new-instance v4, Landroid/widget/RelativeLayout;
+    new-instance v3, Landroid/widget/RelativeLayout;
 
-    invoke-direct {v4, v0}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;)V
+    invoke-direct {v3, v0}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;)V
 
-    const/4 v8, -0x1
+    const/4 v4, -0x1
 
     const/high16 v9, -0x40800000    # -1.0f
 
     .line 280
-    invoke-static {v8, v9}, Lorg/telegram/ui/Components/LayoutHelper;->createFrame(IF)Landroid/widget/FrameLayout$LayoutParams;
+    invoke-static {v4, v9}, Lorg/telegram/ui/Components/LayoutHelper;->createFrame(IF)Landroid/widget/FrameLayout$LayoutParams;
 
     move-result-object v10
 
-    invoke-virtual {v2, v4, v10}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {v2, v3, v10}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 282
     new-instance v10, Lorg/telegram/ui/PopupNotificationActivity$2;
@@ -5359,52 +5361,52 @@
 
     move-result-object v11
 
-    invoke-virtual {v4, v10, v11}, Landroid/widget/RelativeLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {v3, v10, v11}, Landroid/widget/RelativeLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 310
-    iget-object v4, v0, Lorg/telegram/ui/PopupNotificationActivity;->chatActivityEnterView:Lorg/telegram/ui/Components/ChatActivityEnterView;
+    iget-object v3, v0, Lorg/telegram/ui/PopupNotificationActivity;->chatActivityEnterView:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
-    if-eqz v4, :cond_d4
+    if-eqz v3, :cond_d4
 
     .line 311
-    invoke-virtual {v4}, Lorg/telegram/ui/Components/ChatActivityEnterView;->onDestroy()V
+    invoke-virtual {v3}, Lorg/telegram/ui/Components/ChatActivityEnterView;->onDestroy()V
 
     .line 313
     :cond_d4
-    new-instance v4, Lorg/telegram/ui/Components/ChatActivityEnterView;
+    new-instance v3, Lorg/telegram/ui/Components/ChatActivityEnterView;
 
-    invoke-direct {v4, v0, v2, v7, v1}, Lorg/telegram/ui/Components/ChatActivityEnterView;-><init>(Landroid/app/Activity;Lorg/telegram/ui/Components/SizeNotifierFrameLayout;Lorg/telegram/ui/ChatActivity;Z)V
+    invoke-direct {v3, v0, v2, v7, v1}, Lorg/telegram/ui/Components/ChatActivityEnterView;-><init>(Landroid/app/Activity;Lorg/telegram/ui/Components/SizeNotifierFrameLayout;Lorg/telegram/ui/ChatActivity;Z)V
 
-    iput-object v4, v0, Lorg/telegram/ui/PopupNotificationActivity;->chatActivityEnterView:Lorg/telegram/ui/Components/ChatActivityEnterView;
+    iput-object v3, v0, Lorg/telegram/ui/PopupNotificationActivity;->chatActivityEnterView:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     const/16 v2, 0x3e8
 
     .line 314
-    invoke-virtual {v4, v2}, Landroid/widget/FrameLayout;->setId(I)V
+    invoke-virtual {v3, v2}, Landroid/widget/FrameLayout;->setId(I)V
 
     .line 315
     iget-object v2, v0, Lorg/telegram/ui/PopupNotificationActivity;->popupContainer:Landroid/widget/RelativeLayout;
 
-    iget-object v4, v0, Lorg/telegram/ui/PopupNotificationActivity;->chatActivityEnterView:Lorg/telegram/ui/Components/ChatActivityEnterView;
+    iget-object v3, v0, Lorg/telegram/ui/PopupNotificationActivity;->chatActivityEnterView:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     const/16 v7, 0xc
 
     const/4 v10, -0x2
 
-    invoke-static {v8, v10, v7}, Lorg/telegram/ui/Components/LayoutHelper;->createRelative(III)Landroid/widget/RelativeLayout$LayoutParams;
+    invoke-static {v4, v10, v7}, Lorg/telegram/ui/Components/LayoutHelper;->createRelative(III)Landroid/widget/RelativeLayout$LayoutParams;
 
     move-result-object v7
 
-    invoke-virtual {v2, v4, v7}, Landroid/widget/RelativeLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {v2, v3, v7}, Landroid/widget/RelativeLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 316
     iget-object v2, v0, Lorg/telegram/ui/PopupNotificationActivity;->chatActivityEnterView:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
-    new-instance v4, Lorg/telegram/ui/PopupNotificationActivity$3;
+    new-instance v3, Lorg/telegram/ui/PopupNotificationActivity$3;
 
-    invoke-direct {v4, v0}, Lorg/telegram/ui/PopupNotificationActivity$3;-><init>(Lorg/telegram/ui/PopupNotificationActivity;)V
+    invoke-direct {v3, v0}, Lorg/telegram/ui/PopupNotificationActivity$3;-><init>(Lorg/telegram/ui/PopupNotificationActivity;)V
 
-    invoke-virtual {v2, v4}, Lorg/telegram/ui/Components/ChatActivityEnterView;->setDelegate(Lorg/telegram/ui/Components/ChatActivityEnterView$ChatActivityEnterViewDelegate;)V
+    invoke-virtual {v2, v3}, Lorg/telegram/ui/Components/ChatActivityEnterView;->setDelegate(Lorg/telegram/ui/Components/ChatActivityEnterView$ChatActivityEnterViewDelegate;)V
 
     .line 433
     new-instance v2, Lorg/telegram/ui/PopupNotificationActivity$FrameLayoutTouch;
@@ -5414,9 +5416,9 @@
     iput-object v2, v0, Lorg/telegram/ui/PopupNotificationActivity;->messageContainer:Landroid/view/ViewGroup;
 
     .line 434
-    iget-object v4, v0, Lorg/telegram/ui/PopupNotificationActivity;->popupContainer:Landroid/widget/RelativeLayout;
+    iget-object v3, v0, Lorg/telegram/ui/PopupNotificationActivity;->popupContainer:Landroid/widget/RelativeLayout;
 
-    invoke-virtual {v4, v2, v1}, Landroid/widget/RelativeLayout;->addView(Landroid/view/View;I)V
+    invoke-virtual {v3, v2, v1}, Landroid/widget/RelativeLayout;->addView(Landroid/view/View;I)V
 
     .line 436
     new-instance v2, Lorg/telegram/ui/ActionBar/ActionBar;
@@ -5431,38 +5433,38 @@
     .line 438
     iget-object v2, v0, Lorg/telegram/ui/PopupNotificationActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
-    const v4, 0x7f07015d
+    const v3, 0x7f070121
 
-    invoke-virtual {v2, v4}, Lorg/telegram/ui/ActionBar/ActionBar;->setBackButtonImage(I)V
+    invoke-virtual {v2, v3}, Lorg/telegram/ui/ActionBar/ActionBar;->setBackButtonImage(I)V
 
     .line 439
     iget-object v2, v0, Lorg/telegram/ui/PopupNotificationActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
-    const-string v4, "actionBarDefault"
+    const-string v3, "actionBarDefault"
 
-    invoke-static {v4}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
+    invoke-static {v3}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
 
-    move-result v4
+    move-result v3
 
-    invoke-virtual {v2, v4}, Lorg/telegram/ui/ActionBar/ActionBar;->setBackgroundColor(I)V
+    invoke-virtual {v2, v3}, Lorg/telegram/ui/ActionBar/ActionBar;->setBackgroundColor(I)V
 
     .line 440
     iget-object v2, v0, Lorg/telegram/ui/PopupNotificationActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
-    const-string v4, "actionBarDefaultSelector"
+    const-string v3, "actionBarDefaultSelector"
 
-    invoke-static {v4}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
+    invoke-static {v3}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
 
-    move-result v4
+    move-result v3
 
-    invoke-virtual {v2, v4, v1}, Lorg/telegram/ui/ActionBar/ActionBar;->setItemsBackgroundColor(IZ)V
+    invoke-virtual {v2, v3, v1}, Lorg/telegram/ui/ActionBar/ActionBar;->setItemsBackgroundColor(IZ)V
 
     .line 441
     iget-object v2, v0, Lorg/telegram/ui/PopupNotificationActivity;->popupContainer:Landroid/widget/RelativeLayout;
 
-    iget-object v4, v0, Lorg/telegram/ui/PopupNotificationActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
+    iget-object v3, v0, Lorg/telegram/ui/PopupNotificationActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
-    invoke-virtual {v2, v4}, Landroid/widget/RelativeLayout;->addView(Landroid/view/View;)V
+    invoke-virtual {v2, v3}, Landroid/widget/RelativeLayout;->addView(Landroid/view/View;)V
 
     .line 442
     iget-object v2, v0, Lorg/telegram/ui/PopupNotificationActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
@@ -5472,12 +5474,12 @@
     move-result-object v2
 
     .line 443
-    iput v8, v2, Landroid/view/ViewGroup$LayoutParams;->width:I
+    iput v4, v2, Landroid/view/ViewGroup$LayoutParams;->width:I
 
     .line 444
-    iget-object v4, v0, Lorg/telegram/ui/PopupNotificationActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
+    iget-object v3, v0, Lorg/telegram/ui/PopupNotificationActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
-    invoke-virtual {v4, v2}, Landroid/widget/FrameLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {v3, v2}, Landroid/widget/FrameLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 446
     iget-object v2, v0, Lorg/telegram/ui/PopupNotificationActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
@@ -5486,23 +5488,23 @@
 
     move-result-object v2
 
-    const/high16 v4, 0x42600000    # 56.0f
+    const/high16 v3, 0x42600000    # 56.0f
 
     .line 447
-    invoke-static {v4}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
+    invoke-static {v3}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
-    move-result v4
+    move-result v3
 
-    invoke-virtual {v2, v6, v1, v4}, Lorg/telegram/ui/ActionBar/ActionBarMenu;->addItemWithWidth(III)Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
+    invoke-virtual {v2, v6, v1, v3}, Lorg/telegram/ui/ActionBar/ActionBarMenu;->addItemWithWidth(III)Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
     move-result-object v2
 
     .line 448
-    new-instance v4, Landroid/widget/TextView;
+    new-instance v3, Landroid/widget/TextView;
 
-    invoke-direct {v4, v0}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
+    invoke-direct {v3, v0}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
-    iput-object v4, v0, Lorg/telegram/ui/PopupNotificationActivity;->countText:Landroid/widget/TextView;
+    iput-object v3, v0, Lorg/telegram/ui/PopupNotificationActivity;->countText:Landroid/widget/TextView;
 
     const-string v6, "actionBarDefaultSubtitle"
 
@@ -5511,24 +5513,24 @@
 
     move-result v7
 
-    invoke-virtual {v4, v7}, Landroid/widget/TextView;->setTextColor(I)V
+    invoke-virtual {v3, v7}, Landroid/widget/TextView;->setTextColor(I)V
 
     .line 450
-    iget-object v4, v0, Lorg/telegram/ui/PopupNotificationActivity;->countText:Landroid/widget/TextView;
+    iget-object v3, v0, Lorg/telegram/ui/PopupNotificationActivity;->countText:Landroid/widget/TextView;
 
     const/high16 v7, 0x41600000    # 14.0f
 
-    invoke-virtual {v4, v5, v7}, Landroid/widget/TextView;->setTextSize(IF)V
+    invoke-virtual {v3, v5, v7}, Landroid/widget/TextView;->setTextSize(IF)V
 
     .line 451
-    iget-object v4, v0, Lorg/telegram/ui/PopupNotificationActivity;->countText:Landroid/widget/TextView;
+    iget-object v3, v0, Lorg/telegram/ui/PopupNotificationActivity;->countText:Landroid/widget/TextView;
 
     const/16 v11, 0x11
 
-    invoke-virtual {v4, v11}, Landroid/widget/TextView;->setGravity(I)V
+    invoke-virtual {v3, v11}, Landroid/widget/TextView;->setGravity(I)V
 
     .line 452
-    iget-object v4, v0, Lorg/telegram/ui/PopupNotificationActivity;->countText:Landroid/widget/TextView;
+    iget-object v3, v0, Lorg/telegram/ui/PopupNotificationActivity;->countText:Landroid/widget/TextView;
 
     const/16 v11, 0x38
 
@@ -5536,7 +5538,7 @@
 
     move-result-object v9
 
-    invoke-virtual {v2, v4, v9}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {v2, v3, v9}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 454
     new-instance v2, Landroid/widget/FrameLayout;
@@ -5545,14 +5547,14 @@
 
     iput-object v2, v0, Lorg/telegram/ui/PopupNotificationActivity;->avatarContainer:Landroid/widget/FrameLayout;
 
-    const/high16 v4, 0x40800000    # 4.0f
+    const/high16 v3, 0x40800000    # 4.0f
 
     .line 455
-    invoke-static {v4}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
+    invoke-static {v3}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v9
 
-    invoke-static {v4}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
+    invoke-static {v3}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v11
 
@@ -5575,38 +5577,38 @@
     check-cast v2, Landroid/widget/FrameLayout$LayoutParams;
 
     .line 458
-    iput v8, v2, Landroid/widget/FrameLayout$LayoutParams;->height:I
+    iput v4, v2, Landroid/widget/FrameLayout$LayoutParams;->height:I
 
     .line 459
     iput v10, v2, Landroid/widget/FrameLayout$LayoutParams;->width:I
 
-    const/high16 v8, 0x42400000    # 48.0f
+    const/high16 v4, 0x42400000    # 48.0f
 
     .line 460
-    invoke-static {v8}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
+    invoke-static {v4}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
-    move-result v8
+    move-result v4
 
-    iput v8, v2, Landroid/widget/FrameLayout$LayoutParams;->rightMargin:I
+    iput v4, v2, Landroid/widget/FrameLayout$LayoutParams;->rightMargin:I
 
-    const/high16 v8, 0x42700000    # 60.0f
+    const/high16 v4, 0x42700000    # 60.0f
 
     .line 461
-    invoke-static {v8}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
+    invoke-static {v4}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
-    move-result v8
+    move-result v4
 
-    iput v8, v2, Landroid/widget/FrameLayout$LayoutParams;->leftMargin:I
+    iput v4, v2, Landroid/widget/FrameLayout$LayoutParams;->leftMargin:I
 
-    const/16 v8, 0x33
+    const/16 v4, 0x33
 
     .line 462
-    iput v8, v2, Landroid/widget/FrameLayout$LayoutParams;->gravity:I
+    iput v4, v2, Landroid/widget/FrameLayout$LayoutParams;->gravity:I
 
     .line 463
-    iget-object v8, v0, Lorg/telegram/ui/PopupNotificationActivity;->avatarContainer:Landroid/widget/FrameLayout;
+    iget-object v4, v0, Lorg/telegram/ui/PopupNotificationActivity;->avatarContainer:Landroid/widget/FrameLayout;
 
-    invoke-virtual {v8, v2}, Landroid/widget/FrameLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {v4, v2}, Landroid/widget/FrameLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 465
     new-instance v2, Lorg/telegram/ui/Components/BackupImageView;
@@ -5615,21 +5617,21 @@
 
     iput-object v2, v0, Lorg/telegram/ui/PopupNotificationActivity;->avatarImageView:Lorg/telegram/ui/Components/BackupImageView;
 
-    const/high16 v8, 0x41a80000    # 21.0f
+    const/high16 v4, 0x41a80000    # 21.0f
 
     .line 466
-    invoke-static {v8}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
+    invoke-static {v4}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
-    move-result v8
+    move-result v4
 
-    invoke-virtual {v2, v8}, Lorg/telegram/ui/Components/BackupImageView;->setRoundRadius(I)V
+    invoke-virtual {v2, v4}, Lorg/telegram/ui/Components/BackupImageView;->setRoundRadius(I)V
 
     .line 467
     iget-object v2, v0, Lorg/telegram/ui/PopupNotificationActivity;->avatarContainer:Landroid/widget/FrameLayout;
 
-    iget-object v8, v0, Lorg/telegram/ui/PopupNotificationActivity;->avatarImageView:Lorg/telegram/ui/Components/BackupImageView;
+    iget-object v4, v0, Lorg/telegram/ui/PopupNotificationActivity;->avatarImageView:Lorg/telegram/ui/Components/BackupImageView;
 
-    invoke-virtual {v2, v8}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;)V
+    invoke-virtual {v2, v4}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;)V
 
     .line 468
     iget-object v2, v0, Lorg/telegram/ui/PopupNotificationActivity;->avatarImageView:Lorg/telegram/ui/Components/BackupImageView;
@@ -5640,35 +5642,35 @@
 
     check-cast v2, Landroid/widget/FrameLayout$LayoutParams;
 
-    const/high16 v8, 0x42280000    # 42.0f
+    const/high16 v4, 0x42280000    # 42.0f
 
     .line 469
-    invoke-static {v8}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
+    invoke-static {v4}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v9
 
     iput v9, v2, Landroid/widget/FrameLayout$LayoutParams;->width:I
 
     .line 470
-    invoke-static {v8}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
+    invoke-static {v4}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
-    move-result v8
+    move-result v4
 
-    iput v8, v2, Landroid/widget/FrameLayout$LayoutParams;->height:I
+    iput v4, v2, Landroid/widget/FrameLayout$LayoutParams;->height:I
 
-    const/high16 v8, 0x40400000    # 3.0f
+    const/high16 v4, 0x40400000    # 3.0f
 
     .line 471
-    invoke-static {v8}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
+    invoke-static {v4}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
-    move-result v8
+    move-result v4
 
-    iput v8, v2, Landroid/widget/FrameLayout$LayoutParams;->topMargin:I
+    iput v4, v2, Landroid/widget/FrameLayout$LayoutParams;->topMargin:I
 
     .line 472
-    iget-object v8, v0, Lorg/telegram/ui/PopupNotificationActivity;->avatarImageView:Lorg/telegram/ui/Components/BackupImageView;
+    iget-object v4, v0, Lorg/telegram/ui/PopupNotificationActivity;->avatarImageView:Lorg/telegram/ui/Components/BackupImageView;
 
-    invoke-virtual {v8, v2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {v4, v2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 474
     new-instance v2, Landroid/widget/TextView;
@@ -5677,21 +5679,21 @@
 
     iput-object v2, v0, Lorg/telegram/ui/PopupNotificationActivity;->nameTextView:Landroid/widget/TextView;
 
-    const-string v8, "actionBarDefaultTitle"
+    const-string v4, "actionBarDefaultTitle"
 
     .line 475
-    invoke-static {v8}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
+    invoke-static {v4}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
 
-    move-result v8
+    move-result v4
 
-    invoke-virtual {v2, v8}, Landroid/widget/TextView;->setTextColor(I)V
+    invoke-virtual {v2, v4}, Landroid/widget/TextView;->setTextColor(I)V
 
     .line 476
     iget-object v2, v0, Lorg/telegram/ui/PopupNotificationActivity;->nameTextView:Landroid/widget/TextView;
 
-    const/high16 v8, 0x41900000    # 18.0f
+    const/high16 v4, 0x41900000    # 18.0f
 
-    invoke-virtual {v2, v5, v8}, Landroid/widget/TextView;->setTextSize(IF)V
+    invoke-virtual {v2, v5, v4}, Landroid/widget/TextView;->setTextSize(IF)V
 
     .line 477
     iget-object v2, v0, Lorg/telegram/ui/PopupNotificationActivity;->nameTextView:Landroid/widget/TextView;
@@ -5711,32 +5713,32 @@
     .line 480
     iget-object v2, v0, Lorg/telegram/ui/PopupNotificationActivity;->nameTextView:Landroid/widget/TextView;
 
-    sget-object v8, Landroid/text/TextUtils$TruncateAt;->END:Landroid/text/TextUtils$TruncateAt;
+    sget-object v4, Landroid/text/TextUtils$TruncateAt;->END:Landroid/text/TextUtils$TruncateAt;
 
-    invoke-virtual {v2, v8}, Landroid/widget/TextView;->setEllipsize(Landroid/text/TextUtils$TruncateAt;)V
+    invoke-virtual {v2, v4}, Landroid/widget/TextView;->setEllipsize(Landroid/text/TextUtils$TruncateAt;)V
 
     .line 481
     iget-object v2, v0, Lorg/telegram/ui/PopupNotificationActivity;->nameTextView:Landroid/widget/TextView;
 
-    invoke-virtual {v2, v3}, Landroid/widget/TextView;->setGravity(I)V
+    invoke-virtual {v2, v8}, Landroid/widget/TextView;->setGravity(I)V
 
     .line 482
     iget-object v2, v0, Lorg/telegram/ui/PopupNotificationActivity;->nameTextView:Landroid/widget/TextView;
 
-    const-string v8, "fonts/rmedium.ttf"
+    const-string v4, "fonts/rmedium.ttf"
 
-    invoke-static {v8}, Lorg/telegram/messenger/AndroidUtilities;->getTypeface(Ljava/lang/String;)Landroid/graphics/Typeface;
+    invoke-static {v4}, Lorg/telegram/messenger/AndroidUtilities;->getTypeface(Ljava/lang/String;)Landroid/graphics/Typeface;
 
-    move-result-object v8
+    move-result-object v4
 
-    invoke-virtual {v2, v8}, Landroid/widget/TextView;->setTypeface(Landroid/graphics/Typeface;)V
+    invoke-virtual {v2, v4}, Landroid/widget/TextView;->setTypeface(Landroid/graphics/Typeface;)V
 
     .line 483
     iget-object v2, v0, Lorg/telegram/ui/PopupNotificationActivity;->avatarContainer:Landroid/widget/FrameLayout;
 
-    iget-object v8, v0, Lorg/telegram/ui/PopupNotificationActivity;->nameTextView:Landroid/widget/TextView;
+    iget-object v4, v0, Lorg/telegram/ui/PopupNotificationActivity;->nameTextView:Landroid/widget/TextView;
 
-    invoke-virtual {v2, v8}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;)V
+    invoke-virtual {v2, v4}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;)V
 
     .line 484
     iget-object v2, v0, Lorg/telegram/ui/PopupNotificationActivity;->nameTextView:Landroid/widget/TextView;
@@ -5753,10 +5755,10 @@
     .line 486
     iput v10, v2, Landroid/widget/FrameLayout$LayoutParams;->height:I
 
-    const/high16 v8, 0x42580000    # 54.0f
+    const/high16 v4, 0x42580000    # 54.0f
 
     .line 487
-    invoke-static {v8}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
+    invoke-static {v4}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v9
 
@@ -5825,14 +5827,14 @@
     .line 499
     iget-object v2, v0, Lorg/telegram/ui/PopupNotificationActivity;->onlineTextView:Landroid/widget/TextView;
 
-    invoke-virtual {v2, v3}, Landroid/widget/TextView;->setGravity(I)V
+    invoke-virtual {v2, v8}, Landroid/widget/TextView;->setGravity(I)V
 
     .line 500
     iget-object v2, v0, Lorg/telegram/ui/PopupNotificationActivity;->avatarContainer:Landroid/widget/FrameLayout;
 
-    iget-object v3, v0, Lorg/telegram/ui/PopupNotificationActivity;->onlineTextView:Landroid/widget/TextView;
+    iget-object v5, v0, Lorg/telegram/ui/PopupNotificationActivity;->onlineTextView:Landroid/widget/TextView;
 
-    invoke-virtual {v2, v3}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;)V
+    invoke-virtual {v2, v5}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;)V
 
     .line 501
     iget-object v2, v0, Lorg/telegram/ui/PopupNotificationActivity;->onlineTextView:Landroid/widget/TextView;
@@ -5850,14 +5852,14 @@
     iput v10, v2, Landroid/widget/FrameLayout$LayoutParams;->height:I
 
     .line 504
-    invoke-static {v8}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
+    invoke-static {v4}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
-    move-result v3
+    move-result v4
 
-    iput v3, v2, Landroid/widget/FrameLayout$LayoutParams;->leftMargin:I
+    iput v4, v2, Landroid/widget/FrameLayout$LayoutParams;->leftMargin:I
 
     .line 505
-    invoke-static {v4}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
+    invoke-static {v3}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v3
 
@@ -5994,7 +5996,7 @@
     const/4 v0, 0x0
 
     :goto_12
-    const/4 v1, 0x3
+    const/4 v1, 0x4
 
     if-ge v0, v1, :cond_45
 
@@ -6122,7 +6124,7 @@
     if-eqz v1, :cond_13
 
     .line 1439
-    invoke-virtual {v1, v0}, Lorg/telegram/ui/Components/ChatActivityEnterView;->hidePopup(Z)V
+    invoke-virtual {v1, v0}, Lorg/telegram/ui/Components/ChatActivityEnterView;->hidePopup(Z)Z
 
     .line 1440
     iget-object v1, p0, Lorg/telegram/ui/PopupNotificationActivity;->chatActivityEnterView:Lorg/telegram/ui/Components/ChatActivityEnterView;
@@ -6173,7 +6175,7 @@
 
     invoke-direct {p1, p0}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    const p2, 0x7f0e017c
+    const p2, 0x7f0e01b1
 
     const-string p3, "AppName"
 
@@ -6184,7 +6186,7 @@
 
     invoke-virtual {p1, p2}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const p2, 0x7f0e0d37
+    const p2, 0x7f0e0dc5
 
     const-string p3, "PermissionNoAudioWithHint"
 
@@ -6195,7 +6197,7 @@
 
     invoke-virtual {p1, p2}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const p2, 0x7f0e0d42
+    const p2, 0x7f0e0dd0
 
     const-string p3, "PermissionOpenSettings"
 
@@ -6210,7 +6212,7 @@
 
     invoke-virtual {p1, p2, p3}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setNegativeButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const p2, 0x7f0e0bae
+    const p2, 0x7f0e0c38
 
     const-string p3, "OK"
 

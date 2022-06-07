@@ -2280,7 +2280,7 @@
     .line 381
     iget-object p2, p0, Lorg/telegram/ui/Adapters/StickersSearchAdapter;->emptyImageView:Landroid/widget/ImageView;
 
-    const v0, 0x7f0703de
+    const v0, 0x7f0703d5
 
     invoke-virtual {p2, v0}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -2338,7 +2338,7 @@
 
     iput-object p2, p0, Lorg/telegram/ui/Adapters/StickersSearchAdapter;->emptyTextView:Landroid/widget/TextView;
 
-    const v3, 0x7f0e0ae7
+    const v3, 0x7f0e0b70
 
     const-string v5, "NoStickersFound"
 

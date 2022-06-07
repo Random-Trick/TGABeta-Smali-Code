@@ -26,7 +26,7 @@
 
     move-object v0, p1
 
-    .line 7227
+    .line 7271
     iput-object v0, v8, Lorg/telegram/ui/Components/ChatActivityEnterView$57;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     move-object v0, p0
@@ -55,10 +55,10 @@
 .method public setTranslationY(F)V
     .registers 3
 
-    .line 7230
+    .line 7274
     invoke-super {p0, p1}, Lorg/telegram/ui/Components/EmojiView;->setTranslationY(F)V
 
-    .line 7231
+    .line 7275
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$57;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$3800(Lorg/telegram/ui/Components/ChatActivityEnterView;)Landroid/animation/AnimatorSet;
@@ -75,7 +75,7 @@
 
     if-nez v0, :cond_1c
 
-    .line 7232
+    .line 7276
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$57;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$1500(Lorg/telegram/ui/Components/ChatActivityEnterView;)Lorg/telegram/ui/Components/ChatActivityEnterView$ChatActivityEnterViewDelegate;

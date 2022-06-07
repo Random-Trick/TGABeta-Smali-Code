@@ -1,109 +1,61 @@
-.class public interface abstract Lj$/util/stream/f1;
-.super Ljava/lang/Object;
+.class Lj$/util/stream/f1;
+.super Lj$/util/stream/j1;
 
-# interfaces
-.implements Lj$/util/stream/g;
+
+# instance fields
+.field final synthetic c:Lj$/util/stream/k1;
+
+.field final synthetic d:Lj$/util/function/Predicate;
+
+
+# direct methods
+.method constructor <init>(Lj$/util/stream/k1;Lj$/util/function/Predicate;)V
+    .registers 3
+
+    iput-object p1, p0, Lj$/util/stream/f1;->c:Lj$/util/stream/k1;
+
+    iput-object p2, p0, Lj$/util/stream/f1;->d:Lj$/util/function/Predicate;
+
+    invoke-direct {p0, p1}, Lj$/util/stream/j1;-><init>(Lj$/util/stream/k1;)V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public abstract D(JLj$/util/function/o;)J
-.end method
+.method public accept(Ljava/lang/Object;)V
+    .registers 3
 
-.method public abstract L(Lj$/wrappers/j0;)Z
-.end method
+    iget-boolean v0, p0, Lj$/util/stream/j1;->a:Z
 
-.method public abstract O(Lj$/wrappers/l0;)Lj$/util/stream/U;
-.end method
+    if-nez v0, :cond_1d
 
-.method public abstract Q(Lj$/util/function/r;)Lj$/util/stream/Stream;
-.end method
+    iget-object v0, p0, Lj$/util/stream/f1;->d:Lj$/util/function/Predicate;
 
-.method public abstract S(Lj$/wrappers/j0;)Z
-.end method
+    invoke-interface {v0, p1}, Lj$/util/function/Predicate;->test(Ljava/lang/Object;)Z
 
-.method public abstract Z(Lj$/util/function/q;)V
-.end method
+    move-result p1
 
-.method public abstract asDoubleStream()Lj$/util/stream/U;
-.end method
+    iget-object v0, p0, Lj$/util/stream/f1;->c:Lj$/util/stream/k1;
 
-.method public abstract average()Lj$/util/j;
-.end method
+    invoke-static {v0}, Lj$/util/stream/k1;->a(Lj$/util/stream/k1;)Z
 
-.method public abstract boxed()Lj$/util/stream/Stream;
-.end method
+    move-result v0
 
-.method public abstract count()J
-.end method
+    if-ne p1, v0, :cond_1d
 
-.method public abstract d(Lj$/util/function/q;)V
-.end method
+    const/4 p1, 0x1
 
-.method public abstract distinct()Lj$/util/stream/f1;
-.end method
+    iput-boolean p1, p0, Lj$/util/stream/j1;->a:Z
 
-.method public abstract e0(Lj$/wrappers/n0;)Lj$/util/stream/M0;
-.end method
+    iget-object p1, p0, Lj$/util/stream/f1;->c:Lj$/util/stream/k1;
 
-.method public abstract f0(Lj$/util/function/y;Lj$/util/function/w;Lj$/util/function/BiConsumer;)Ljava/lang/Object;
-.end method
+    invoke-static {p1}, Lj$/util/stream/k1;->b(Lj$/util/stream/k1;)Z
 
-.method public abstract findAny()Lj$/util/l;
-.end method
+    move-result p1
 
-.method public abstract findFirst()Lj$/util/l;
-.end method
+    iput-boolean p1, p0, Lj$/util/stream/j1;->b:Z
 
-.method public abstract g(Lj$/util/function/o;)Lj$/util/l;
-.end method
-
-.method public abstract iterator()Lj$/util/r;
-.end method
-
-.method public abstract k(Lj$/wrappers/j0;)Z
-.end method
-
-.method public abstract limit(J)Lj$/util/stream/f1;
-.end method
-
-.method public abstract max()Lj$/util/l;
-.end method
-
-.method public abstract min()Lj$/util/l;
-.end method
-
-.method public abstract p(Lj$/util/function/q;)Lj$/util/stream/f1;
-.end method
-
-.method public abstract parallel()Lj$/util/stream/f1;
-.end method
-
-.method public abstract s(Lj$/util/function/r;)Lj$/util/stream/f1;
-.end method
-
-.method public abstract sequential()Lj$/util/stream/f1;
-.end method
-
-.method public abstract skip(J)Lj$/util/stream/f1;
-.end method
-
-.method public abstract sorted()Lj$/util/stream/f1;
-.end method
-
-.method public abstract spliterator()Lj$/util/w;
-.end method
-
-.method public abstract sum()J
-.end method
-
-.method public abstract summaryStatistics()Lj$/util/i;
-.end method
-
-.method public abstract toArray()[J
-.end method
-
-.method public abstract u(Lj$/wrappers/j0;)Lj$/util/stream/f1;
-.end method
-
-.method public abstract z(Lj$/util/function/t;)Lj$/util/stream/f1;
+    :cond_1d
+    return-void
 .end method

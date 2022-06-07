@@ -1,5 +1,5 @@
 .class Lorg/telegram/ui/Components/ChatThemeBottomSheet$1;
-.super Landroidx/recyclerview/widget/LinearSmoothScroller;
+.super Lorg/telegram/ui/Components/RLottieImageView;
 .source "ChatThemeBottomSheet.java"
 
 
@@ -14,27 +14,64 @@
 .end annotation
 
 
+# instance fields
+.field final synthetic this$0:Lorg/telegram/ui/Components/ChatThemeBottomSheet;
+
+
 # direct methods
 .method constructor <init>(Lorg/telegram/ui/Components/ChatThemeBottomSheet;Landroid/content/Context;)V
     .registers 3
 
-    .line 140
-    invoke-direct {p0, p2}, Landroidx/recyclerview/widget/LinearSmoothScroller;-><init>(Landroid/content/Context;)V
+    .line 130
+    iput-object p1, p0, Lorg/telegram/ui/Components/ChatThemeBottomSheet$1;->this$0:Lorg/telegram/ui/Components/ChatThemeBottomSheet;
+
+    invoke-direct {p0, p2}, Lorg/telegram/ui/Components/RLottieImageView;-><init>(Landroid/content/Context;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected calculateTimeForScrolling(I)I
-    .registers 2
+.method public onInitializeAccessibilityNodeInfo(Landroid/view/accessibility/AccessibilityNodeInfo;)V
+    .registers 4
 
-    .line 143
-    invoke-super {p0, p1}, Landroidx/recyclerview/widget/LinearSmoothScroller;->calculateTimeForScrolling(I)I
+    .line 133
+    invoke-super {p0, p1}, Landroid/widget/ImageView;->onInitializeAccessibilityNodeInfo(Landroid/view/accessibility/AccessibilityNodeInfo;)V
 
-    move-result p1
+    .line 134
+    iget-object v0, p0, Lorg/telegram/ui/Components/ChatThemeBottomSheet$1;->this$0:Lorg/telegram/ui/Components/ChatThemeBottomSheet;
 
-    mul-int/lit8 p1, p1, 0x6
+    invoke-static {v0}, Lorg/telegram/ui/Components/ChatThemeBottomSheet;->access$000(Lorg/telegram/ui/Components/ChatThemeBottomSheet;)Z
 
-    return p1
+    move-result v0
+
+    if-eqz v0, :cond_18
+
+    const v0, 0x7f0e009c
+
+    const-string v1, "AccDescrSwitchToDayTheme"
+
+    .line 135
+    invoke-static {v1, v0}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Landroid/view/accessibility/AccessibilityNodeInfo;->setText(Ljava/lang/CharSequence;)V
+
+    goto :goto_24
+
+    :cond_18
+    const v0, 0x7f0e009d
+
+    const-string v1, "AccDescrSwitchToNightTheme"
+
+    .line 137
+    invoke-static {v1, v0}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Landroid/view/accessibility/AccessibilityNodeInfo;->setText(Ljava/lang/CharSequence;)V
+
+    :goto_24
+    return-void
 .end method

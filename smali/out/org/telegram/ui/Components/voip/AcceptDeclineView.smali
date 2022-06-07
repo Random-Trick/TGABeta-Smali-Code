@@ -226,7 +226,7 @@
 
     const-string v2, "AcceptCall"
 
-    const v4, 0x7f0e0090
+    const v4, 0x7f0e00b8
 
     .line 103
     invoke-static {v2, v4}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -235,7 +235,7 @@
 
     const-string v2, "DeclineCall"
 
-    const v4, 0x7f0e053c
+    const v4, 0x7f0e058d
 
     .line 104
     invoke-static {v2, v4}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -244,7 +244,7 @@
 
     const-string v4, "RetryCall"
 
-    const v6, 0x7f0e0f47
+    const v6, 0x7f0e0ff7
 
     .line 105
     invoke-static {v4, v6}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -314,7 +314,7 @@
 
     iput-object v2, p0, Lorg/telegram/ui/Components/voip/AcceptDeclineView;->retryLayout:Landroid/text/StaticLayout;
 
-    const v0, 0x7f070098
+    const v0, 0x7f07007b
 
     .line 112
     invoke-static {p1, v0}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
@@ -327,7 +327,7 @@
 
     iput-object v0, p0, Lorg/telegram/ui/Components/voip/AcceptDeclineView;->callDrawable:Landroid/graphics/drawable/Drawable;
 
-    const v0, 0x7f07015d
+    const v0, 0x7f070121
 
     .line 113
     invoke-static {p1, v0}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
@@ -380,7 +380,7 @@
     .line 118
     invoke-virtual {v0, p0}, Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
 
-    const v0, 0x7f07008d
+    const v0, 0x7f070070
 
     .line 120
     invoke-static {p1, v0}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
@@ -392,7 +392,7 @@
     return-void
 .end method
 
-.method static synthetic access$100(Lorg/telegram/ui/Components/voip/AcceptDeclineView;)Landroid/text/StaticLayout;
+.method static synthetic access$000(Lorg/telegram/ui/Components/voip/AcceptDeclineView;)Landroid/text/StaticLayout;
     .registers 1
 
     .line 38
@@ -401,7 +401,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$200(Lorg/telegram/ui/Components/voip/AcceptDeclineView;)Landroid/text/StaticLayout;
+.method static synthetic access$100(Lorg/telegram/ui/Components/voip/AcceptDeclineView;)Landroid/text/StaticLayout;
     .registers 1
 
     .line 38
@@ -410,7 +410,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$300(Lorg/telegram/ui/Components/voip/AcceptDeclineView;)Landroid/text/StaticLayout;
+.method static synthetic access$200(Lorg/telegram/ui/Components/voip/AcceptDeclineView;)Landroid/text/StaticLayout;
     .registers 1
 
     .line 38

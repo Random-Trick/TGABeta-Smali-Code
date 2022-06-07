@@ -12,14 +12,14 @@
 
 .field public key_fingerprint:I
 
-.field public size:I
+.field public size:J
 
 
 # direct methods
 .method public constructor <init>()V
     .registers 1
 
-    .line 3280
+    .line 3296
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -28,41 +28,53 @@
 .method public static TLdeserialize(Lorg/telegram/tgnet/AbstractSerializedData;IZ)Lorg/telegram/tgnet/TLRPC$EncryptedFile;
     .registers 4
 
+    const v0, -0x57ff7328
+
+    if-eq p1, v0, :cond_1d
+
     const v0, -0x3de0b682
 
-    if-eq p1, v0, :cond_12
+    if-eq p1, v0, :cond_17
 
     const v0, 0x4a70994c    # 3941971.0f
 
-    if-eq p1, v0, :cond_c
+    if-eq p1, v0, :cond_11
 
     const/4 v0, 0x0
 
-    goto :goto_17
+    goto :goto_22
 
-    .line 3291
-    :cond_c
-    new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_encryptedFile;
+    .line 3310
+    :cond_11
+    new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_encryptedFile_layer142;
 
-    invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_encryptedFile;-><init>()V
+    invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_encryptedFile_layer142;-><init>()V
 
-    goto :goto_17
+    goto :goto_22
 
-    .line 3294
-    :cond_12
+    .line 3313
+    :cond_17
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_encryptedFileEmpty;
 
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_encryptedFileEmpty;-><init>()V
 
-    :goto_17
-    if-nez v0, :cond_32
+    goto :goto_22
 
-    if-nez p2, :cond_1c
+    .line 3307
+    :cond_1d
+    new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_encryptedFile;
 
-    goto :goto_32
+    invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_encryptedFile;-><init>()V
 
-    .line 3298
-    :cond_1c
+    :goto_22
+    if-nez v0, :cond_3d
+
+    if-nez p2, :cond_27
+
+    goto :goto_3d
+
+    .line 3317
+    :cond_27
     new-instance p0, Ljava/lang/RuntimeException;
 
     const/4 p2, 0x1
@@ -87,13 +99,13 @@
 
     throw p0
 
-    :cond_32
-    :goto_32
-    if-eqz v0, :cond_37
+    :cond_3d
+    :goto_3d
+    if-eqz v0, :cond_42
 
-    .line 3301
+    .line 3320
     invoke-virtual {v0, p0, p2}, Lorg/telegram/tgnet/TLObject;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
-    :cond_37
+    :cond_42
     return-object v0
 .end method

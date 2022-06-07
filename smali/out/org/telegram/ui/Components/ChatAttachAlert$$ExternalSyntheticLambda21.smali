@@ -8,22 +8,18 @@
 # instance fields
 .field public final synthetic f$0:Lorg/telegram/ui/Components/ChatAttachAlert;
 
-.field public final synthetic f$1:Lorg/telegram/ui/Components/EditTextBoldCursor;
-
-.field public final synthetic f$2:Z
+.field public final synthetic f$1:Lorg/telegram/ui/ActionBar/BottomSheet$BottomSheetDelegateInterface;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lorg/telegram/ui/Components/ChatAttachAlert;Lorg/telegram/ui/Components/EditTextBoldCursor;Z)V
-    .registers 4
+.method public synthetic constructor <init>(Lorg/telegram/ui/Components/ChatAttachAlert;Lorg/telegram/ui/ActionBar/BottomSheet$BottomSheetDelegateInterface;)V
+    .registers 3
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lorg/telegram/ui/Components/ChatAttachAlert$$ExternalSyntheticLambda21;->f$0:Lorg/telegram/ui/Components/ChatAttachAlert;
 
-    iput-object p2, p0, Lorg/telegram/ui/Components/ChatAttachAlert$$ExternalSyntheticLambda21;->f$1:Lorg/telegram/ui/Components/EditTextBoldCursor;
-
-    iput-boolean p3, p0, Lorg/telegram/ui/Components/ChatAttachAlert$$ExternalSyntheticLambda21;->f$2:Z
+    iput-object p2, p0, Lorg/telegram/ui/Components/ChatAttachAlert$$ExternalSyntheticLambda21;->f$1:Lorg/telegram/ui/ActionBar/BottomSheet$BottomSheetDelegateInterface;
 
     return-void
 .end method
@@ -31,15 +27,13 @@
 
 # virtual methods
 .method public final run()V
-    .registers 4
+    .registers 3
 
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlert$$ExternalSyntheticLambda21;->f$0:Lorg/telegram/ui/Components/ChatAttachAlert;
 
-    iget-object v1, p0, Lorg/telegram/ui/Components/ChatAttachAlert$$ExternalSyntheticLambda21;->f$1:Lorg/telegram/ui/Components/EditTextBoldCursor;
+    iget-object v1, p0, Lorg/telegram/ui/Components/ChatAttachAlert$$ExternalSyntheticLambda21;->f$1:Lorg/telegram/ui/ActionBar/BottomSheet$BottomSheetDelegateInterface;
 
-    iget-boolean v2, p0, Lorg/telegram/ui/Components/ChatAttachAlert$$ExternalSyntheticLambda21;->f$2:Z
-
-    invoke-static {v0, v1, v2}, Lorg/telegram/ui/Components/ChatAttachAlert;->$r8$lambda$7M5ulkNs6UaMPa7QGHVpnfLzORg(Lorg/telegram/ui/Components/ChatAttachAlert;Lorg/telegram/ui/Components/EditTextBoldCursor;Z)V
+    invoke-static {v0, v1}, Lorg/telegram/ui/Components/ChatAttachAlert;->$r8$lambda$j4R3OFXPV1_kmH9YDPJq2I3OMbY(Lorg/telegram/ui/Components/ChatAttachAlert;Lorg/telegram/ui/ActionBar/BottomSheet$BottomSheetDelegateInterface;)V
 
     return-void
 .end method

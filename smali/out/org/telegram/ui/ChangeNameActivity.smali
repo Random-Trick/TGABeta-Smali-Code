@@ -10,6 +10,8 @@
 
 .field private lastNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
+.field private resourcesProvider:Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;
+
 
 # direct methods
 .method public static synthetic $r8$lambda$B6pCQaSvOtsN5cw27gXJyPg2Tr8(Lorg/telegram/ui/ChangeNameActivity;Landroid/widget/TextView;ILandroid/view/KeyEvent;)Z
@@ -58,11 +60,14 @@
     return-void
 .end method
 
-.method public constructor <init>()V
-    .registers 1
+.method public constructor <init>(Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)V
+    .registers 2
 
-    .line 39
+    .line 50
     invoke-direct {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;-><init>()V
+
+    .line 51
+    iput-object p1, p0, Lorg/telegram/ui/ChangeNameActivity;->resourcesProvider:Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;
 
     return-void
 .end method
@@ -85,6 +90,15 @@
     return-void
 .end method
 
+.method static synthetic access$200(Lorg/telegram/ui/ChangeNameActivity;)Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;
+    .registers 1
+
+    .line 39
+    iget-object p0, p0, Lorg/telegram/ui/ChangeNameActivity;->resourcesProvider:Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;
+
+    return-object p0
+.end method
+
 .method private static synthetic lambda$createView$0(Landroid/view/View;Landroid/view/MotionEvent;)Z
     .registers 2
 
@@ -100,12 +114,12 @@
 
     if-ne p2, p1, :cond_13
 
-    .line 100
+    .line 113
     iget-object p1, p0, Lorg/telegram/ui/ChangeNameActivity;->lastNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     invoke-virtual {p1}, Landroid/widget/EditText;->requestFocus()Z
 
-    .line 101
+    .line 114
     iget-object p1, p0, Lorg/telegram/ui/ChangeNameActivity;->lastNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     invoke-virtual {p1}, Landroid/widget/EditText;->length()I
@@ -131,7 +145,7 @@
 
     if-ne p2, p1, :cond_a
 
-    .line 126
+    .line 144
     iget-object p1, p0, Lorg/telegram/ui/ChangeNameActivity;->doneButton:Landroid/view/View;
 
     invoke-virtual {p1}, Landroid/view/View;->performClick()Z
@@ -149,15 +163,15 @@
 .method private synthetic lambda$onTransitionAnimationEnd$4()V
     .registers 2
 
-    .line 183
+    .line 206
     iget-object v0, p0, Lorg/telegram/ui/ChangeNameActivity;->firstNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     if-eqz v0, :cond_c
 
-    .line 184
+    .line 207
     invoke-virtual {v0}, Landroid/widget/EditText;->requestFocus()Z
 
-    .line 185
+    .line 208
     iget-object v0, p0, Lorg/telegram/ui/ChangeNameActivity;->firstNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->showKeyboard(Landroid/view/View;)Z
@@ -175,7 +189,7 @@
 .method private saveName()V
     .registers 7
 
-    .line 153
+    .line 171
     iget v0, p0, Lorg/telegram/ui/ActionBar/BaseFragment;->currentAccount:I
 
     invoke-static {v0}, Lorg/telegram/messenger/UserConfig;->getInstance(I)Lorg/telegram/messenger/UserConfig;
@@ -188,7 +202,7 @@
 
     if-eqz v0, :cond_b1
 
-    .line 154
+    .line 172
     iget-object v1, p0, Lorg/telegram/ui/ChangeNameActivity;->lastNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     invoke-virtual {v1}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
@@ -207,7 +221,7 @@
 
     goto/16 :goto_b1
 
-    .line 157
+    .line 175
     :cond_1e
     iget-object v1, p0, Lorg/telegram/ui/ChangeNameActivity;->firstNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
@@ -219,7 +233,7 @@
 
     move-result-object v1
 
-    .line 158
+    .line 176
     iget-object v2, p0, Lorg/telegram/ui/ChangeNameActivity;->lastNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     invoke-virtual {v2}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
@@ -230,7 +244,7 @@
 
     move-result-object v2
 
-    .line 159
+    .line 177
     iget-object v3, v0, Lorg/telegram/tgnet/TLRPC$User;->first_name:Ljava/lang/String;
 
     if-eqz v3, :cond_47
@@ -253,7 +267,7 @@
 
     return-void
 
-    .line 162
+    .line 180
     :cond_47
     new-instance v3, Lorg/telegram/tgnet/TLRPC$TL_account_updateProfile;
 
@@ -261,20 +275,20 @@
 
     const/4 v4, 0x3
 
-    .line 163
+    .line 181
     iput v4, v3, Lorg/telegram/tgnet/TLRPC$TL_account_updateProfile;->flags:I
 
-    .line 164
+    .line 182
     iput-object v1, v3, Lorg/telegram/tgnet/TLRPC$TL_account_updateProfile;->first_name:Ljava/lang/String;
 
     iput-object v1, v0, Lorg/telegram/tgnet/TLRPC$User;->first_name:Ljava/lang/String;
 
-    .line 165
+    .line 183
     iput-object v2, v3, Lorg/telegram/tgnet/TLRPC$TL_account_updateProfile;->last_name:Ljava/lang/String;
 
     iput-object v2, v0, Lorg/telegram/tgnet/TLRPC$User;->last_name:Ljava/lang/String;
 
-    .line 166
+    .line 184
     iget v0, p0, Lorg/telegram/ui/ActionBar/BaseFragment;->currentAccount:I
 
     invoke-static {v0}, Lorg/telegram/messenger/MessagesController;->getInstance(I)Lorg/telegram/messenger/MessagesController;
@@ -301,17 +315,17 @@
 
     if-eqz v0, :cond_79
 
-    .line 168
+    .line 186
     iget-object v1, v3, Lorg/telegram/tgnet/TLRPC$TL_account_updateProfile;->first_name:Ljava/lang/String;
 
     iput-object v1, v0, Lorg/telegram/tgnet/TLRPC$User;->first_name:Ljava/lang/String;
 
-    .line 169
+    .line 187
     iget-object v1, v3, Lorg/telegram/tgnet/TLRPC$TL_account_updateProfile;->last_name:Ljava/lang/String;
 
     iput-object v1, v0, Lorg/telegram/tgnet/TLRPC$User;->last_name:Ljava/lang/String;
 
-    .line 171
+    .line 189
     :cond_79
     iget v0, p0, Lorg/telegram/ui/ActionBar/BaseFragment;->currentAccount:I
 
@@ -323,7 +337,7 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/messenger/UserConfig;->saveConfig(Z)V
 
-    .line 172
+    .line 190
     iget v0, p0, Lorg/telegram/ui/ActionBar/BaseFragment;->currentAccount:I
 
     invoke-static {v0}, Lorg/telegram/messenger/NotificationCenter;->getInstance(I)Lorg/telegram/messenger/NotificationCenter;
@@ -338,7 +352,7 @@
 
     invoke-virtual {v0, v2, v5}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 173
+    .line 191
     iget v0, p0, Lorg/telegram/ui/ActionBar/BaseFragment;->currentAccount:I
 
     invoke-static {v0}, Lorg/telegram/messenger/NotificationCenter;->getInstance(I)Lorg/telegram/messenger/NotificationCenter;
@@ -359,7 +373,7 @@
 
     invoke-virtual {v0, v2, v1}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 174
+    .line 192
     iget v0, p0, Lorg/telegram/ui/ActionBar/BaseFragment;->currentAccount:I
 
     invoke-static {v0}, Lorg/telegram/tgnet/ConnectionsManager;->getInstance(I)Lorg/telegram/tgnet/ConnectionsManager;
@@ -384,26 +398,54 @@
 
     move-object/from16 v1, p1
 
-    .line 50
+    .line 56
     iget-object v2, v0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
-    const v3, 0x7f070140
+    iget-object v3, v0, Lorg/telegram/ui/ChangeNameActivity;->resourcesProvider:Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;
+
+    const-string v4, "avatar_actionBarSelectorBlue"
+
+    invoke-static {v4, v3}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)I
+
+    move-result v3
+
+    const/4 v4, 0x0
+
+    invoke-virtual {v2, v3, v4}, Lorg/telegram/ui/ActionBar/ActionBar;->setItemsBackgroundColor(IZ)V
+
+    .line 57
+    iget-object v2, v0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
+
+    iget-object v3, v0, Lorg/telegram/ui/ChangeNameActivity;->resourcesProvider:Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;
+
+    const-string v5, "actionBarDefaultIcon"
+
+    invoke-static {v5, v3}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)I
+
+    move-result v3
+
+    invoke-virtual {v2, v3, v4}, Lorg/telegram/ui/ActionBar/ActionBar;->setItemsColor(IZ)V
+
+    .line 58
+    iget-object v2, v0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
+
+    const v3, 0x7f070109
 
     invoke-virtual {v2, v3}, Lorg/telegram/ui/ActionBar/ActionBar;->setBackButtonImage(I)V
 
-    .line 51
+    .line 59
     iget-object v2, v0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     const/4 v3, 0x1
 
     invoke-virtual {v2, v3}, Lorg/telegram/ui/ActionBar/ActionBar;->setAllowOverlayTitle(Z)V
 
-    .line 52
+    .line 60
     iget-object v2, v0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     const-string v4, "EditName"
 
-    const v5, 0x7f0e061a
+    const v5, 0x7f0e066c
 
     invoke-static {v4, v5}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
@@ -411,7 +453,7 @@
 
     invoke-virtual {v2, v4}, Lorg/telegram/ui/ActionBar/ActionBar;->setTitle(Ljava/lang/CharSequence;)V
 
-    .line 53
+    .line 61
     iget-object v2, v0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     new-instance v4, Lorg/telegram/ui/ChangeNameActivity$1;
@@ -420,7 +462,7 @@
 
     invoke-virtual {v2, v4}, Lorg/telegram/ui/ActionBar/ActionBar;->setActionBarMenuOnItemClick(Lorg/telegram/ui/ActionBar/ActionBar$ActionBarMenuOnItemClick;)V
 
-    .line 67
+    .line 75
     iget-object v2, v0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     invoke-virtual {v2}, Lorg/telegram/ui/ActionBar/ActionBar;->createMenu()Lorg/telegram/ui/ActionBar/ActionBarMenu;
@@ -429,20 +471,20 @@
 
     const/high16 v4, 0x42600000    # 56.0f
 
-    .line 68
+    .line 76
     invoke-static {v4}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v4
 
     const-string v5, "Done"
 
-    const v6, 0x7f0e05dd
+    const v6, 0x7f0e062e
 
     invoke-static {v5, v6}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v5
 
-    const v6, 0x7f07015e
+    const v6, 0x7f07010a
 
     invoke-virtual {v2, v3, v6, v4, v5}, Lorg/telegram/ui/ActionBar/ActionBarMenu;->addItemWithWidth(IIILjava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
@@ -450,7 +492,7 @@
 
     iput-object v2, v0, Lorg/telegram/ui/ChangeNameActivity;->doneButton:Landroid/view/View;
 
-    .line 70
+    .line 78
     iget v2, v0, Lorg/telegram/ui/ActionBar/BaseFragment;->currentAccount:I
 
     invoke-static {v2}, Lorg/telegram/messenger/MessagesController;->getInstance(I)Lorg/telegram/messenger/MessagesController;
@@ -475,9 +517,9 @@
 
     move-result-object v2
 
-    if-nez v2, :cond_6c
+    if-nez v2, :cond_87
 
-    .line 72
+    .line 80
     iget v2, v0, Lorg/telegram/ui/ActionBar/BaseFragment;->currentAccount:I
 
     invoke-static {v2}, Lorg/telegram/messenger/UserConfig;->getInstance(I)Lorg/telegram/messenger/UserConfig;
@@ -488,16 +530,16 @@
 
     move-result-object v2
 
-    .line 75
-    :cond_6c
+    .line 83
+    :cond_87
     new-instance v4, Landroid/widget/LinearLayout;
 
     invoke-direct {v4, v1}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
 
-    .line 76
+    .line 84
     iput-object v4, v0, Lorg/telegram/ui/ActionBar/BaseFragment;->fragmentView:Landroid/view/View;
 
-    .line 77
+    .line 85
     new-instance v5, Landroid/view/ViewGroup$LayoutParams;
 
     const/4 v6, -0x1
@@ -506,62 +548,66 @@
 
     invoke-virtual {v4, v5}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 78
+    .line 86
     iget-object v5, v0, Lorg/telegram/ui/ActionBar/BaseFragment;->fragmentView:Landroid/view/View;
 
     check-cast v5, Landroid/widget/LinearLayout;
 
     invoke-virtual {v5, v3}, Landroid/widget/LinearLayout;->setOrientation(I)V
 
-    .line 79
+    .line 87
     iget-object v5, v0, Lorg/telegram/ui/ActionBar/BaseFragment;->fragmentView:Landroid/view/View;
 
     sget-object v6, Lorg/telegram/ui/ChangeNameActivity$$ExternalSyntheticLambda0;->INSTANCE:Lorg/telegram/ui/ChangeNameActivity$$ExternalSyntheticLambda0;
 
     invoke-virtual {v5, v6}, Landroid/view/View;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    .line 81
-    new-instance v5, Lorg/telegram/ui/Components/EditTextBoldCursor;
+    .line 89
+    new-instance v5, Lorg/telegram/ui/ChangeNameActivity$2;
 
-    invoke-direct {v5, v1}, Lorg/telegram/ui/Components/EditTextBoldCursor;-><init>(Landroid/content/Context;)V
+    invoke-direct {v5, v0, v1}, Lorg/telegram/ui/ChangeNameActivity$2;-><init>(Lorg/telegram/ui/ChangeNameActivity;Landroid/content/Context;)V
 
     iput-object v5, v0, Lorg/telegram/ui/ChangeNameActivity;->firstNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     const/high16 v6, 0x41900000    # 18.0f
 
-    .line 82
+    .line 95
     invoke-virtual {v5, v3, v6}, Landroid/widget/EditText;->setTextSize(IF)V
 
-    .line 83
+    .line 96
     iget-object v5, v0, Lorg/telegram/ui/ChangeNameActivity;->firstNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
-    const-string v7, "windowBackgroundWhiteHintText"
+    iget-object v7, v0, Lorg/telegram/ui/ChangeNameActivity;->resourcesProvider:Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;
 
-    invoke-static {v7}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
+    const-string v8, "windowBackgroundWhiteHintText"
 
-    move-result v8
+    invoke-static {v8, v7}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)I
 
-    invoke-virtual {v5, v8}, Landroid/widget/EditText;->setHintTextColor(I)V
+    move-result v7
 
-    .line 84
+    invoke-virtual {v5, v7}, Landroid/widget/EditText;->setHintTextColor(I)V
+
+    .line 97
     iget-object v5, v0, Lorg/telegram/ui/ChangeNameActivity;->firstNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
-    const-string v8, "windowBackgroundWhiteBlackText"
+    iget-object v7, v0, Lorg/telegram/ui/ChangeNameActivity;->resourcesProvider:Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;
 
-    invoke-static {v8}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
+    const-string v9, "windowBackgroundWhiteBlackText"
 
-    move-result v9
+    invoke-static {v9, v7}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)I
 
-    invoke-virtual {v5, v9}, Landroid/widget/EditText;->setTextColor(I)V
+    move-result v7
 
-    .line 85
+    invoke-virtual {v5, v7}, Landroid/widget/EditText;->setTextColor(I)V
+
+    .line 98
     iget-object v5, v0, Lorg/telegram/ui/ChangeNameActivity;->firstNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
-    const/4 v9, 0x0
+    const/4 v7, 0x0
 
-    invoke-virtual {v5, v9}, Landroid/widget/EditText;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {v5, v7}, Landroid/widget/EditText;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 86
+    .line 99
     iget-object v5, v0, Lorg/telegram/ui/ChangeNameActivity;->firstNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     const-string v10, "windowBackgroundWhiteInputField"
@@ -584,56 +630,56 @@
 
     invoke-virtual {v5, v11, v13, v15}, Lorg/telegram/ui/Components/EditTextBoldCursor;->setLineColors(III)V
 
-    .line 87
+    .line 100
     iget-object v5, v0, Lorg/telegram/ui/ChangeNameActivity;->firstNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     invoke-virtual {v5, v3}, Landroid/widget/EditText;->setMaxLines(I)V
 
-    .line 88
+    .line 101
     iget-object v5, v0, Lorg/telegram/ui/ChangeNameActivity;->firstNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     invoke-virtual {v5, v3}, Landroid/widget/EditText;->setLines(I)V
 
-    .line 89
+    .line 102
     iget-object v5, v0, Lorg/telegram/ui/ChangeNameActivity;->firstNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     invoke-virtual {v5, v3}, Landroid/widget/EditText;->setSingleLine(Z)V
 
-    .line 90
+    .line 103
     iget-object v5, v0, Lorg/telegram/ui/ChangeNameActivity;->firstNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     sget-boolean v11, Lorg/telegram/messenger/LocaleController;->isRTL:Z
 
     const/4 v15, 0x5
 
-    if-eqz v11, :cond_e1
+    if-eqz v11, :cond_100
 
     const/4 v11, 0x5
 
-    goto :goto_e2
+    goto :goto_101
 
-    :cond_e1
+    :cond_100
     const/4 v11, 0x3
 
-    :goto_e2
+    :goto_101
     invoke-virtual {v5, v11}, Landroid/widget/EditText;->setGravity(I)V
 
-    .line 91
+    .line 104
     iget-object v5, v0, Lorg/telegram/ui/ChangeNameActivity;->firstNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     const v11, 0xc000
 
     invoke-virtual {v5, v11}, Landroid/widget/EditText;->setInputType(I)V
 
-    .line 92
+    .line 105
     iget-object v5, v0, Lorg/telegram/ui/ChangeNameActivity;->firstNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     invoke-virtual {v5, v15}, Landroid/widget/EditText;->setImeOptions(I)V
 
-    .line 93
+    .line 106
     iget-object v5, v0, Lorg/telegram/ui/ChangeNameActivity;->firstNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
-    const v13, 0x7f0e0756
+    const v13, 0x7f0e07aa
 
     const-string v15, "FirstName"
 
@@ -643,16 +689,18 @@
 
     invoke-virtual {v5, v13}, Landroid/widget/EditText;->setHint(Ljava/lang/CharSequence;)V
 
-    .line 94
+    .line 107
     iget-object v5, v0, Lorg/telegram/ui/ChangeNameActivity;->firstNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
-    invoke-static {v8}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
+    iget-object v13, v0, Lorg/telegram/ui/ChangeNameActivity;->resourcesProvider:Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;
+
+    invoke-static {v9, v13}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)I
 
     move-result v13
 
     invoke-virtual {v5, v13}, Lorg/telegram/ui/Components/EditTextBoldCursor;->setCursorColor(I)V
 
-    .line 95
+    .line 108
     iget-object v5, v0, Lorg/telegram/ui/ChangeNameActivity;->firstNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     const/high16 v13, 0x41a00000    # 20.0f
@@ -663,14 +711,14 @@
 
     invoke-virtual {v5, v15}, Lorg/telegram/ui/Components/EditTextBoldCursor;->setCursorSize(I)V
 
-    .line 96
+    .line 109
     iget-object v5, v0, Lorg/telegram/ui/ChangeNameActivity;->firstNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     const/high16 v15, 0x3fc00000    # 1.5f
 
     invoke-virtual {v5, v15}, Lorg/telegram/ui/Components/EditTextBoldCursor;->setCursorWidth(F)V
 
-    .line 97
+    .line 110
     iget-object v5, v0, Lorg/telegram/ui/ChangeNameActivity;->firstNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     const/16 v16, -0x1
@@ -691,7 +739,7 @@
 
     invoke-virtual {v4, v5, v15}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 98
+    .line 111
     iget-object v5, v0, Lorg/telegram/ui/ChangeNameActivity;->firstNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     new-instance v15, Lorg/telegram/ui/ChangeNameActivity$$ExternalSyntheticLambda1;
@@ -700,40 +748,44 @@
 
     invoke-virtual {v5, v15}, Landroid/widget/EditText;->setOnEditorActionListener(Landroid/widget/TextView$OnEditorActionListener;)V
 
-    .line 107
-    new-instance v5, Lorg/telegram/ui/Components/EditTextBoldCursor;
+    .line 120
+    new-instance v5, Lorg/telegram/ui/ChangeNameActivity$3;
 
-    invoke-direct {v5, v1}, Lorg/telegram/ui/Components/EditTextBoldCursor;-><init>(Landroid/content/Context;)V
+    invoke-direct {v5, v0, v1}, Lorg/telegram/ui/ChangeNameActivity$3;-><init>(Lorg/telegram/ui/ChangeNameActivity;Landroid/content/Context;)V
 
     iput-object v5, v0, Lorg/telegram/ui/ChangeNameActivity;->lastNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
-    .line 108
+    .line 126
     invoke-virtual {v5, v3, v6}, Landroid/widget/EditText;->setTextSize(IF)V
 
-    .line 109
+    .line 127
     iget-object v1, v0, Lorg/telegram/ui/ChangeNameActivity;->lastNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
-    invoke-static {v7}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
+    iget-object v5, v0, Lorg/telegram/ui/ChangeNameActivity;->resourcesProvider:Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;
+
+    invoke-static {v8, v5}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)I
 
     move-result v5
 
     invoke-virtual {v1, v5}, Landroid/widget/EditText;->setHintTextColor(I)V
 
-    .line 110
+    .line 128
     iget-object v1, v0, Lorg/telegram/ui/ChangeNameActivity;->lastNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
-    invoke-static {v8}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
+    iget-object v5, v0, Lorg/telegram/ui/ChangeNameActivity;->resourcesProvider:Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;
+
+    invoke-static {v9, v5}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)I
 
     move-result v5
 
     invoke-virtual {v1, v5}, Landroid/widget/EditText;->setTextColor(I)V
 
-    .line 111
+    .line 129
     iget-object v1, v0, Lorg/telegram/ui/ChangeNameActivity;->lastNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
-    invoke-virtual {v1, v9}, Landroid/widget/EditText;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {v1, v7}, Landroid/widget/EditText;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 112
+    .line 130
     iget-object v1, v0, Lorg/telegram/ui/ChangeNameActivity;->lastNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     invoke-virtual {v0, v10}, Lorg/telegram/ui/ActionBar/BaseFragment;->getThemedColor(Ljava/lang/String;)I
@@ -750,54 +802,54 @@
 
     invoke-virtual {v1, v5, v6, v7}, Lorg/telegram/ui/Components/EditTextBoldCursor;->setLineColors(III)V
 
-    .line 113
+    .line 131
     iget-object v1, v0, Lorg/telegram/ui/ChangeNameActivity;->lastNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     invoke-virtual {v1, v3}, Landroid/widget/EditText;->setMaxLines(I)V
 
-    .line 114
+    .line 132
     iget-object v1, v0, Lorg/telegram/ui/ChangeNameActivity;->lastNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     invoke-virtual {v1, v3}, Landroid/widget/EditText;->setLines(I)V
 
-    .line 115
+    .line 133
     iget-object v1, v0, Lorg/telegram/ui/ChangeNameActivity;->lastNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     invoke-virtual {v1, v3}, Landroid/widget/EditText;->setSingleLine(Z)V
 
-    .line 116
+    .line 134
     iget-object v1, v0, Lorg/telegram/ui/ChangeNameActivity;->lastNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     sget-boolean v3, Lorg/telegram/messenger/LocaleController;->isRTL:Z
 
-    if-eqz v3, :cond_183
+    if-eqz v3, :cond_1a8
 
     const/4 v3, 0x5
 
-    goto :goto_184
+    goto :goto_1a9
 
-    :cond_183
+    :cond_1a8
     const/4 v3, 0x3
 
-    :goto_184
+    :goto_1a9
     invoke-virtual {v1, v3}, Landroid/widget/EditText;->setGravity(I)V
 
-    .line 117
+    .line 135
     iget-object v1, v0, Lorg/telegram/ui/ChangeNameActivity;->lastNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     invoke-virtual {v1, v11}, Landroid/widget/EditText;->setInputType(I)V
 
-    .line 118
+    .line 136
     iget-object v1, v0, Lorg/telegram/ui/ChangeNameActivity;->lastNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     const/4 v3, 0x6
 
     invoke-virtual {v1, v3}, Landroid/widget/EditText;->setImeOptions(I)V
 
-    .line 119
+    .line 137
     iget-object v1, v0, Lorg/telegram/ui/ChangeNameActivity;->lastNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
-    const v3, 0x7f0e0911
+    const v3, 0x7f0e0977
 
     const-string v5, "LastName"
 
@@ -807,16 +859,18 @@
 
     invoke-virtual {v1, v3}, Landroid/widget/EditText;->setHint(Ljava/lang/CharSequence;)V
 
-    .line 120
+    .line 138
     iget-object v1, v0, Lorg/telegram/ui/ChangeNameActivity;->lastNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
-    invoke-static {v8}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
+    iget-object v3, v0, Lorg/telegram/ui/ChangeNameActivity;->resourcesProvider:Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;
+
+    invoke-static {v9, v3}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)I
 
     move-result v3
 
     invoke-virtual {v1, v3}, Lorg/telegram/ui/Components/EditTextBoldCursor;->setCursorColor(I)V
 
-    .line 121
+    .line 139
     iget-object v1, v0, Lorg/telegram/ui/ChangeNameActivity;->lastNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     invoke-static {v13}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -825,14 +879,14 @@
 
     invoke-virtual {v1, v3}, Lorg/telegram/ui/Components/EditTextBoldCursor;->setCursorSize(I)V
 
-    .line 122
+    .line 140
     iget-object v1, v0, Lorg/telegram/ui/ChangeNameActivity;->lastNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     const/high16 v3, 0x3fc00000    # 1.5f
 
     invoke-virtual {v1, v3}, Lorg/telegram/ui/Components/EditTextBoldCursor;->setCursorWidth(F)V
 
-    .line 123
+    .line 141
     iget-object v1, v0, Lorg/telegram/ui/ChangeNameActivity;->lastNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     const/4 v5, -0x1
@@ -853,7 +907,7 @@
 
     invoke-virtual {v4, v1, v3}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 124
+    .line 142
     iget-object v1, v0, Lorg/telegram/ui/ChangeNameActivity;->lastNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     new-instance v3, Lorg/telegram/ui/ChangeNameActivity$$ExternalSyntheticLambda2;
@@ -862,16 +916,16 @@
 
     invoke-virtual {v1, v3}, Landroid/widget/EditText;->setOnEditorActionListener(Landroid/widget/TextView$OnEditorActionListener;)V
 
-    if-eqz v2, :cond_1ef
+    if-eqz v2, :cond_216
 
-    .line 133
+    .line 151
     iget-object v1, v0, Lorg/telegram/ui/ChangeNameActivity;->firstNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     iget-object v3, v2, Lorg/telegram/tgnet/TLRPC$User;->first_name:Ljava/lang/String;
 
     invoke-virtual {v1, v3}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
-    .line 134
+    .line 152
     iget-object v1, v0, Lorg/telegram/ui/ChangeNameActivity;->firstNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     invoke-virtual {v1}, Landroid/widget/EditText;->length()I
@@ -880,18 +934,27 @@
 
     invoke-virtual {v1, v3}, Lorg/telegram/ui/Components/EditTextBoldCursor;->setSelection(I)V
 
-    .line 135
+    .line 153
     iget-object v1, v0, Lorg/telegram/ui/ChangeNameActivity;->lastNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     iget-object v2, v2, Lorg/telegram/tgnet/TLRPC$User;->last_name:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
-    .line 138
-    :cond_1ef
+    .line 156
+    :cond_216
     iget-object v1, v0, Lorg/telegram/ui/ActionBar/BaseFragment;->fragmentView:Landroid/view/View;
 
     return-object v1
+.end method
+
+.method public getResourceProvider()Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;
+    .registers 2
+
+    .line 199
+    iget-object v0, p0, Lorg/telegram/ui/ChangeNameActivity;->resourcesProvider:Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;
+
+    return-object v0
 .end method
 
 .method public getThemeDescriptions()Ljava/util/ArrayList;
@@ -907,12 +970,12 @@
 
     move-object/from16 v0, p0
 
-    .line 193
+    .line 216
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 195
+    .line 218
     new-instance v10, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v3, v0, Lorg/telegram/ui/ActionBar/BaseFragment;->fragmentView:Landroid/view/View;
@@ -935,7 +998,7 @@
 
     invoke-virtual {v1, v10}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 197
+    .line 220
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v12, v0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
@@ -958,7 +1021,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 198
+    .line 221
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v4, v0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
@@ -975,7 +1038,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 199
+    .line 222
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v12, v0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
@@ -990,7 +1053,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 200
+    .line 223
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v4, v0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
@@ -1005,7 +1068,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 202
+    .line 225
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v12, v0, Lorg/telegram/ui/ChangeNameActivity;->firstNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
@@ -1020,7 +1083,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 203
+    .line 226
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v4, v0, Lorg/telegram/ui/ChangeNameActivity;->firstNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
@@ -1035,7 +1098,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 204
+    .line 227
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v12, v0, Lorg/telegram/ui/ChangeNameActivity;->firstNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
@@ -1050,7 +1113,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 205
+    .line 228
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v4, v0, Lorg/telegram/ui/ChangeNameActivity;->firstNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
@@ -1069,7 +1132,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 206
+    .line 229
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v12, v0, Lorg/telegram/ui/ChangeNameActivity;->lastNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
@@ -1084,7 +1147,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 207
+    .line 230
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v4, v0, Lorg/telegram/ui/ChangeNameActivity;->lastNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
@@ -1099,7 +1162,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 208
+    .line 231
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v12, v0, Lorg/telegram/ui/ChangeNameActivity;->lastNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
@@ -1114,7 +1177,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 209
+    .line 232
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v4, v0, Lorg/telegram/ui/ChangeNameActivity;->lastNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
@@ -1139,10 +1202,10 @@
 .method public onResume()V
     .registers 4
 
-    .line 143
+    .line 161
     invoke-super {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->onResume()V
 
-    .line 144
+    .line 162
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getGlobalMainSettings()Landroid/content/SharedPreferences;
 
     move-result-object v0
@@ -1151,19 +1214,19 @@
 
     const/4 v2, 0x1
 
-    .line 145
+    .line 163
     invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v0
 
     if-nez v0, :cond_1a
 
-    .line 147
+    .line 165
     iget-object v0, p0, Lorg/telegram/ui/ChangeNameActivity;->firstNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     invoke-virtual {v0}, Landroid/widget/EditText;->requestFocus()Z
 
-    .line 148
+    .line 166
     iget-object v0, p0, Lorg/telegram/ui/ChangeNameActivity;->firstNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->showKeyboard(Landroid/view/View;)Z
@@ -1177,7 +1240,7 @@
 
     if-eqz p1, :cond_c
 
-    .line 182
+    .line 205
     new-instance p1, Lorg/telegram/ui/ChangeNameActivity$$ExternalSyntheticLambda3;
 
     invoke-direct {p1, p0}, Lorg/telegram/ui/ChangeNameActivity$$ExternalSyntheticLambda3;-><init>(Lorg/telegram/ui/ChangeNameActivity;)V

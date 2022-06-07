@@ -69,7 +69,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 51
+    .line 52
     invoke-direct {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;-><init>()V
 
     return-void
@@ -78,7 +78,7 @@
 .method static synthetic access$000(Lorg/telegram/ui/ChangeBioActivity;)V
     .registers 1
 
-    .line 51
+    .line 52
     invoke-direct {p0}, Lorg/telegram/ui/ChangeBioActivity;->saveName()V
 
     return-void
@@ -87,7 +87,7 @@
 .method static synthetic access$100(Lorg/telegram/ui/ChangeBioActivity;)Landroid/view/View;
     .registers 1
 
-    .line 51
+    .line 52
     iget-object p0, p0, Lorg/telegram/ui/ChangeBioActivity;->doneButton:Landroid/view/View;
 
     return-object p0
@@ -96,7 +96,7 @@
 .method static synthetic access$200(Lorg/telegram/ui/ChangeBioActivity;)Lorg/telegram/ui/Components/NumberTextView;
     .registers 1
 
-    .line 51
+    .line 52
     iget-object p0, p0, Lorg/telegram/ui/ChangeBioActivity;->checkTextView:Lorg/telegram/ui/Components/NumberTextView;
 
     return-object p0
@@ -117,12 +117,12 @@
 
     if-ne p2, p1, :cond_c
 
-    .line 126
+    .line 135
     iget-object p1, p0, Lorg/telegram/ui/ChangeBioActivity;->doneButton:Landroid/view/View;
 
     if-eqz p1, :cond_c
 
-    .line 127
+    .line 136
     invoke-virtual {p1}, Landroid/view/View;->performClick()Z
 
     const/4 p1, 0x1
@@ -138,7 +138,7 @@
 .method private synthetic lambda$saveName$2(Lorg/telegram/ui/ActionBar/AlertDialog;Lorg/telegram/tgnet/TLRPC$UserFull;Ljava/lang/String;Lorg/telegram/tgnet/TLRPC$User;)V
     .registers 9
 
-    .line 213
+    .line 222
     :try_start_0
     invoke-virtual {p1}, Lorg/telegram/ui/ActionBar/AlertDialog;->dismiss()V
     :try_end_3
@@ -149,14 +149,14 @@
     :catch_4
     move-exception p1
 
-    .line 215
+    .line 224
     invoke-static {p1}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
-    .line 217
+    .line 226
     :goto_8
     iput-object p3, p2, Lorg/telegram/tgnet/TLRPC$UserFull;->about:Ljava/lang/String;
 
-    .line 218
+    .line 227
     iget p1, p0, Lorg/telegram/ui/ActionBar/BaseFragment;->currentAccount:I
 
     invoke-static {p1}, Lorg/telegram/messenger/NotificationCenter;->getInstance(I)Lorg/telegram/messenger/NotificationCenter;
@@ -185,7 +185,7 @@
 
     invoke-virtual {p1, p3, v0}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 219
+    .line 228
     invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->finishFragment()V
 
     return-void
@@ -194,7 +194,7 @@
 .method private synthetic lambda$saveName$3(Lorg/telegram/ui/ActionBar/AlertDialog;Lorg/telegram/tgnet/TLRPC$TL_error;Lorg/telegram/tgnet/TLRPC$TL_account_updateProfile;)V
     .registers 5
 
-    .line 224
+    .line 233
     :try_start_0
     invoke-virtual {p1}, Lorg/telegram/ui/ActionBar/AlertDialog;->dismiss()V
     :try_end_3
@@ -205,10 +205,10 @@
     :catch_4
     move-exception p1
 
-    .line 226
+    .line 235
     invoke-static {p1}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
-    .line 228
+    .line 237
     :goto_8
     iget p1, p0, Lorg/telegram/ui/ActionBar/BaseFragment;->currentAccount:I
 
@@ -226,12 +226,12 @@
 
     if-nez p6, :cond_13
 
-    .line 210
+    .line 219
     move-object v5, p5
 
     check-cast v5, Lorg/telegram/tgnet/TLRPC$User;
 
-    .line 211
+    .line 220
     new-instance p4, Lorg/telegram/ui/ChangeBioActivity$$ExternalSyntheticLambda4;
 
     move-object v0, p4
@@ -250,7 +250,7 @@
 
     goto :goto_1b
 
-    .line 222
+    .line 231
     :cond_13
     new-instance p2, Lorg/telegram/ui/ChangeBioActivity$$ExternalSyntheticLambda3;
 
@@ -265,7 +265,7 @@
 .method private synthetic lambda$saveName$5(ILandroid/content/DialogInterface;)V
     .registers 4
 
-    .line 234
+    .line 243
     iget p2, p0, Lorg/telegram/ui/ActionBar/BaseFragment;->currentAccount:I
 
     invoke-static {p2}, Lorg/telegram/tgnet/ConnectionsManager;->getInstance(I)Lorg/telegram/tgnet/ConnectionsManager;
@@ -282,7 +282,7 @@
 .method private saveName()V
     .registers 11
 
-    .line 188
+    .line 197
     iget v0, p0, Lorg/telegram/ui/ActionBar/BaseFragment;->currentAccount:I
 
     invoke-static {v0}, Lorg/telegram/messenger/MessagesController;->getInstance(I)Lorg/telegram/messenger/MessagesController;
@@ -303,7 +303,7 @@
 
     move-result-object v6
 
-    .line 189
+    .line 198
     invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getParentActivity()Landroid/app/Activity;
 
     move-result-object v0
@@ -314,7 +314,7 @@
 
     goto :goto_7f
 
-    .line 192
+    .line 201
     :cond_1d
     iget-object v0, v6, Lorg/telegram/tgnet/TLRPC$UserFull;->about:Ljava/lang/String;
 
@@ -324,7 +324,7 @@
 
     move-object v0, v1
 
-    .line 196
+    .line 205
     :cond_24
     iget-object v2, p0, Lorg/telegram/ui/ChangeBioActivity;->firstNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
@@ -342,19 +342,19 @@
 
     move-result-object v7
 
-    .line 197
+    .line 206
     invoke-virtual {v0, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_3e
 
-    .line 198
+    .line 207
     invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->finishFragment()V
 
     return-void
 
-    .line 202
+    .line 211
     :cond_3e
     new-instance v0, Lorg/telegram/ui/ActionBar/AlertDialog;
 
@@ -366,22 +366,22 @@
 
     invoke-direct {v0, v1, v2}, Lorg/telegram/ui/ActionBar/AlertDialog;-><init>(Landroid/content/Context;I)V
 
-    .line 204
+    .line 213
     new-instance v1, Lorg/telegram/tgnet/TLRPC$TL_account_updateProfile;
 
     invoke-direct {v1}, Lorg/telegram/tgnet/TLRPC$TL_account_updateProfile;-><init>()V
 
-    .line 205
+    .line 214
     iput-object v7, v1, Lorg/telegram/tgnet/TLRPC$TL_account_updateProfile;->about:Ljava/lang/String;
 
-    .line 206
+    .line 215
     iget v2, v1, Lorg/telegram/tgnet/TLRPC$TL_account_updateProfile;->flags:I
 
     or-int/lit8 v2, v2, 0x4
 
     iput v2, v1, Lorg/telegram/tgnet/TLRPC$TL_account_updateProfile;->flags:I
 
-    .line 208
+    .line 217
     iget v2, p0, Lorg/telegram/ui/ActionBar/BaseFragment;->currentAccount:I
 
     invoke-static {v2}, Lorg/telegram/tgnet/ConnectionsManager;->getInstance(I)Lorg/telegram/tgnet/ConnectionsManager;
@@ -406,7 +406,7 @@
 
     move-result v1
 
-    .line 232
+    .line 241
     iget v2, p0, Lorg/telegram/ui/ActionBar/BaseFragment;->currentAccount:I
 
     invoke-static {v2}, Lorg/telegram/tgnet/ConnectionsManager;->getInstance(I)Lorg/telegram/tgnet/ConnectionsManager;
@@ -417,14 +417,14 @@
 
     invoke-virtual {v2, v1, v3}, Lorg/telegram/tgnet/ConnectionsManager;->bindRequestToGuid(II)V
 
-    .line 234
+    .line 243
     new-instance v2, Lorg/telegram/ui/ChangeBioActivity$$ExternalSyntheticLambda0;
 
     invoke-direct {v2, p0, v1}, Lorg/telegram/ui/ChangeBioActivity$$ExternalSyntheticLambda0;-><init>(Lorg/telegram/ui/ChangeBioActivity;I)V
 
     invoke-virtual {v0, v2}, Lorg/telegram/ui/ActionBar/AlertDialog;->setOnCancelListener(Landroid/content/DialogInterface$OnCancelListener;)V
 
-    .line 235
+    .line 244
     invoke-virtual {v0}, Landroid/app/Dialog;->show()V
 
     :cond_7f
@@ -435,32 +435,32 @@
 
 # virtual methods
 .method public createView(Landroid/content/Context;)Landroid/view/View;
-    .registers 23
+    .registers 22
 
     move-object/from16 v0, p0
 
     move-object/from16 v1, p1
 
-    .line 62
+    .line 63
     iget-object v2, v0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
-    const v3, 0x7f070140
+    const v3, 0x7f070109
 
     invoke-virtual {v2, v3}, Lorg/telegram/ui/ActionBar/ActionBar;->setBackButtonImage(I)V
 
-    .line 63
+    .line 64
     iget-object v2, v0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     const/4 v3, 0x1
 
     invoke-virtual {v2, v3}, Lorg/telegram/ui/ActionBar/ActionBar;->setAllowOverlayTitle(Z)V
 
-    .line 64
+    .line 65
     iget-object v2, v0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     const-string v4, "UserBio"
 
-    const v5, 0x7f0e1228
+    const v5, 0x7f0e12f5
 
     invoke-static {v4, v5}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
@@ -468,7 +468,7 @@
 
     invoke-virtual {v2, v6}, Lorg/telegram/ui/ActionBar/ActionBar;->setTitle(Ljava/lang/CharSequence;)V
 
-    .line 65
+    .line 66
     iget-object v2, v0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     new-instance v6, Lorg/telegram/ui/ChangeBioActivity$1;
@@ -477,7 +477,7 @@
 
     invoke-virtual {v2, v6}, Lorg/telegram/ui/ActionBar/ActionBar;->setActionBarMenuOnItemClick(Lorg/telegram/ui/ActionBar/ActionBar$ActionBarMenuOnItemClick;)V
 
-    .line 76
+    .line 77
     iget-object v2, v0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     invoke-virtual {v2}, Lorg/telegram/ui/ActionBar/ActionBar;->createMenu()Lorg/telegram/ui/ActionBar/ActionBarMenu;
@@ -486,12 +486,12 @@
 
     const/high16 v6, 0x42600000    # 56.0f
 
-    .line 77
+    .line 78
     invoke-static {v6}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v6
 
-    const v7, 0x7f07015e
+    const v7, 0x7f07010a
 
     invoke-virtual {v2, v3, v7, v6}, Lorg/telegram/ui/ActionBar/ActionBarMenu;->addItemWithWidth(III)Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
@@ -501,36 +501,36 @@
 
     const-string v6, "Done"
 
-    const v7, 0x7f0e05dd
+    const v7, 0x7f0e062e
 
-    .line 78
+    .line 79
     invoke-static {v6, v7}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v6
 
     invoke-virtual {v2, v6}, Landroid/view/View;->setContentDescription(Ljava/lang/CharSequence;)V
 
-    .line 80
+    .line 81
     new-instance v2, Landroid/widget/LinearLayout;
 
     invoke-direct {v2, v1}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
 
     iput-object v2, v0, Lorg/telegram/ui/ActionBar/BaseFragment;->fragmentView:Landroid/view/View;
 
-    .line 81
+    .line 82
     check-cast v2, Landroid/widget/LinearLayout;
 
-    .line 82
+    .line 83
     invoke-virtual {v2, v3}, Landroid/widget/LinearLayout;->setOrientation(I)V
 
-    .line 83
+    .line 84
     iget-object v6, v0, Lorg/telegram/ui/ActionBar/BaseFragment;->fragmentView:Landroid/view/View;
 
     sget-object v7, Lorg/telegram/ui/ChangeBioActivity$$ExternalSyntheticLambda1;->INSTANCE:Lorg/telegram/ui/ChangeBioActivity$$ExternalSyntheticLambda1;
 
     invoke-virtual {v6, v7}, Landroid/view/View;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    .line 85
+    .line 86
     new-instance v6, Landroid/widget/FrameLayout;
 
     invoke-direct {v6, v1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
@@ -547,26 +547,26 @@
 
     const/4 v12, 0x0
 
-    .line 86
+    .line 87
     invoke-static/range {v7 .. v12}, Lorg/telegram/ui/Components/LayoutHelper;->createLinear(IIFFFF)Landroid/widget/LinearLayout$LayoutParams;
 
     move-result-object v7
 
     invoke-virtual {v2, v6, v7}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 88
-    new-instance v7, Lorg/telegram/ui/Components/EditTextBoldCursor;
+    .line 89
+    new-instance v7, Lorg/telegram/ui/ChangeBioActivity$2;
 
-    invoke-direct {v7, v1}, Lorg/telegram/ui/Components/EditTextBoldCursor;-><init>(Landroid/content/Context;)V
+    invoke-direct {v7, v0, v1}, Lorg/telegram/ui/ChangeBioActivity$2;-><init>(Lorg/telegram/ui/ChangeBioActivity;Landroid/content/Context;)V
 
     iput-object v7, v0, Lorg/telegram/ui/ChangeBioActivity;->firstNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     const/high16 v8, 0x41900000    # 18.0f
 
-    .line 89
+    .line 98
     invoke-virtual {v7, v3, v8}, Landroid/widget/EditText;->setTextSize(IF)V
 
-    .line 90
+    .line 99
     iget-object v7, v0, Lorg/telegram/ui/ChangeBioActivity;->firstNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     const-string v8, "windowBackgroundWhiteHintText"
@@ -577,7 +577,7 @@
 
     invoke-virtual {v7, v8}, Landroid/widget/EditText;->setHintTextColor(I)V
 
-    .line 91
+    .line 100
     iget-object v7, v0, Lorg/telegram/ui/ChangeBioActivity;->firstNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     const-string v8, "windowBackgroundWhiteBlackText"
@@ -588,14 +588,14 @@
 
     invoke-virtual {v7, v9}, Landroid/widget/EditText;->setTextColor(I)V
 
-    .line 92
+    .line 101
     iget-object v7, v0, Lorg/telegram/ui/ChangeBioActivity;->firstNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     const/4 v9, 0x0
 
     invoke-virtual {v7, v9}, Landroid/widget/EditText;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 93
+    .line 102
     iget-object v7, v0, Lorg/telegram/ui/ChangeBioActivity;->firstNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     const-string v9, "windowBackgroundWhiteInputField"
@@ -618,14 +618,14 @@
 
     invoke-virtual {v7, v9, v10, v11}, Lorg/telegram/ui/Components/EditTextBoldCursor;->setLineColors(III)V
 
-    .line 94
+    .line 103
     iget-object v7, v0, Lorg/telegram/ui/ChangeBioActivity;->firstNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     const/4 v9, 0x4
 
     invoke-virtual {v7, v9}, Landroid/widget/EditText;->setMaxLines(I)V
 
-    .line 95
+    .line 104
     iget-object v7, v0, Lorg/telegram/ui/ChangeBioActivity;->firstNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     sget-boolean v9, Lorg/telegram/messenger/LocaleController;->isRTL:Z
@@ -669,7 +669,7 @@
 
     invoke-virtual {v7, v9, v12, v10, v11}, Landroid/widget/EditText;->setPadding(IIII)V
 
-    .line 96
+    .line 105
     iget-object v7, v0, Lorg/telegram/ui/ChangeBioActivity;->firstNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     sget-boolean v9, Lorg/telegram/messenger/LocaleController;->isRTL:Z
@@ -690,21 +690,21 @@
     :goto_e7
     invoke-virtual {v7, v9}, Landroid/widget/EditText;->setGravity(I)V
 
-    .line 97
+    .line 106
     iget-object v7, v0, Lorg/telegram/ui/ChangeBioActivity;->firstNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     const/high16 v9, 0x10000000
 
     invoke-virtual {v7, v9}, Landroid/widget/EditText;->setImeOptions(I)V
 
-    .line 98
+    .line 107
     iget-object v7, v0, Lorg/telegram/ui/ChangeBioActivity;->firstNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     const v9, 0x24001
 
     invoke-virtual {v7, v9}, Landroid/widget/EditText;->setInputType(I)V
 
-    .line 99
+    .line 108
     iget-object v7, v0, Lorg/telegram/ui/ChangeBioActivity;->firstNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     const/4 v9, 0x6
@@ -713,21 +713,27 @@
 
     new-array v7, v3, [Landroid/text/InputFilter;
 
-    .line 101
-    new-instance v9, Lorg/telegram/ui/ChangeBioActivity$2;
+    .line 110
+    new-instance v9, Lorg/telegram/ui/ChangeBioActivity$3;
 
-    const/16 v13, 0x46
+    invoke-virtual/range {p0 .. p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getMessagesController()Lorg/telegram/messenger/MessagesController;
 
-    invoke-direct {v9, v0, v13}, Lorg/telegram/ui/ChangeBioActivity$2;-><init>(Lorg/telegram/ui/ChangeBioActivity;I)V
+    move-result-object v13
+
+    invoke-virtual {v13}, Lorg/telegram/messenger/MessagesController;->getAboutLimit()I
+
+    move-result v13
+
+    invoke-direct {v9, v0, v13}, Lorg/telegram/ui/ChangeBioActivity$3;-><init>(Lorg/telegram/ui/ChangeBioActivity;I)V
 
     aput-object v9, v7, v12
 
-    .line 119
+    .line 128
     iget-object v9, v0, Lorg/telegram/ui/ChangeBioActivity;->firstNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     invoke-virtual {v9, v7}, Landroid/widget/EditText;->setFilters([Landroid/text/InputFilter;)V
 
-    .line 120
+    .line 129
     iget-object v7, v0, Lorg/telegram/ui/ChangeBioActivity;->firstNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     const/high16 v9, 0x42100000    # 36.0f
@@ -738,7 +744,7 @@
 
     invoke-virtual {v7, v9}, Landroid/widget/EditText;->setMinHeight(I)V
 
-    .line 121
+    .line 130
     iget-object v7, v0, Lorg/telegram/ui/ChangeBioActivity;->firstNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     invoke-static {v4, v5}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -747,7 +753,7 @@
 
     invoke-virtual {v7, v4}, Landroid/widget/EditText;->setHint(Ljava/lang/CharSequence;)V
 
-    .line 122
+    .line 131
     iget-object v4, v0, Lorg/telegram/ui/ChangeBioActivity;->firstNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     invoke-static {v8}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
@@ -756,7 +762,7 @@
 
     invoke-virtual {v4, v5}, Lorg/telegram/ui/Components/EditTextBoldCursor;->setCursorColor(I)V
 
-    .line 123
+    .line 132
     iget-object v4, v0, Lorg/telegram/ui/ChangeBioActivity;->firstNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     const/high16 v5, 0x41a00000    # 20.0f
@@ -767,14 +773,14 @@
 
     invoke-virtual {v4, v5}, Lorg/telegram/ui/Components/EditTextBoldCursor;->setCursorSize(I)V
 
-    .line 124
+    .line 133
     iget-object v4, v0, Lorg/telegram/ui/ChangeBioActivity;->firstNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     const/high16 v5, 0x3fc00000    # 1.5f
 
     invoke-virtual {v4, v5}, Lorg/telegram/ui/Components/EditTextBoldCursor;->setCursorWidth(F)V
 
-    .line 125
+    .line 134
     iget-object v4, v0, Lorg/telegram/ui/ChangeBioActivity;->firstNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     new-instance v5, Lorg/telegram/ui/ChangeBioActivity$$ExternalSyntheticLambda2;
@@ -783,61 +789,69 @@
 
     invoke-virtual {v4, v5}, Landroid/widget/EditText;->setOnEditorActionListener(Landroid/widget/TextView$OnEditorActionListener;)V
 
-    .line 132
+    .line 141
     iget-object v4, v0, Lorg/telegram/ui/ChangeBioActivity;->firstNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
-    new-instance v5, Lorg/telegram/ui/ChangeBioActivity$3;
+    new-instance v5, Lorg/telegram/ui/ChangeBioActivity$4;
 
-    invoke-direct {v5, v0}, Lorg/telegram/ui/ChangeBioActivity$3;-><init>(Lorg/telegram/ui/ChangeBioActivity;)V
+    invoke-direct {v5, v0}, Lorg/telegram/ui/ChangeBioActivity$4;-><init>(Lorg/telegram/ui/ChangeBioActivity;)V
 
     invoke-virtual {v4, v5}, Lorg/telegram/ui/Components/EditTextBoldCursor;->addTextChangedListener(Landroid/text/TextWatcher;)V
 
-    .line 149
+    .line 158
     iget-object v4, v0, Lorg/telegram/ui/ChangeBioActivity;->firstNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
-    const/4 v14, -0x1
+    const/4 v13, -0x1
 
-    const/high16 v15, -0x40000000    # -2.0f
+    const/high16 v14, -0x40000000    # -2.0f
 
-    const/16 v16, 0x33
+    const/16 v15, 0x33
+
+    const/16 v16, 0x0
 
     const/16 v17, 0x0
 
-    const/16 v18, 0x0
+    const/high16 v18, 0x40800000    # 4.0f
 
-    const/high16 v19, 0x40800000    # 4.0f
+    const/16 v19, 0x0
 
-    const/16 v20, 0x0
-
-    invoke-static/range {v14 .. v20}, Lorg/telegram/ui/Components/LayoutHelper;->createFrame(IFIFFFF)Landroid/widget/FrameLayout$LayoutParams;
+    invoke-static/range {v13 .. v19}, Lorg/telegram/ui/Components/LayoutHelper;->createFrame(IFIFFFF)Landroid/widget/FrameLayout$LayoutParams;
 
     move-result-object v5
 
     invoke-virtual {v6, v4, v5}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 151
+    .line 160
     new-instance v4, Lorg/telegram/ui/Components/NumberTextView;
 
     invoke-direct {v4, v1}, Lorg/telegram/ui/Components/NumberTextView;-><init>(Landroid/content/Context;)V
 
     iput-object v4, v0, Lorg/telegram/ui/ChangeBioActivity;->checkTextView:Lorg/telegram/ui/Components/NumberTextView;
 
-    .line 152
+    .line 161
     invoke-virtual {v4, v3}, Lorg/telegram/ui/Components/NumberTextView;->setCenterAlign(Z)V
 
-    .line 153
+    .line 162
     iget-object v4, v0, Lorg/telegram/ui/ChangeBioActivity;->checkTextView:Lorg/telegram/ui/Components/NumberTextView;
 
     const/16 v5, 0xf
 
     invoke-virtual {v4, v5}, Lorg/telegram/ui/Components/NumberTextView;->setTextSize(I)V
 
-    .line 154
+    .line 163
     iget-object v4, v0, Lorg/telegram/ui/ChangeBioActivity;->checkTextView:Lorg/telegram/ui/Components/NumberTextView;
 
-    invoke-virtual {v4, v13, v12}, Lorg/telegram/ui/Components/NumberTextView;->setNumber(IZ)V
+    invoke-virtual/range {p0 .. p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getMessagesController()Lorg/telegram/messenger/MessagesController;
 
-    .line 155
+    move-result-object v5
+
+    invoke-virtual {v5}, Lorg/telegram/messenger/MessagesController;->getAboutLimit()I
+
+    move-result v5
+
+    invoke-virtual {v4, v5, v12}, Lorg/telegram/ui/Components/NumberTextView;->setNumber(IZ)V
+
+    .line 164
     iget-object v4, v0, Lorg/telegram/ui/ChangeBioActivity;->checkTextView:Lorg/telegram/ui/Components/NumberTextView;
 
     const-string v5, "windowBackgroundWhiteGrayText4"
@@ -848,32 +862,32 @@
 
     invoke-virtual {v4, v5}, Lorg/telegram/ui/Components/NumberTextView;->setTextColor(I)V
 
-    .line 156
+    .line 165
     iget-object v4, v0, Lorg/telegram/ui/ChangeBioActivity;->checkTextView:Lorg/telegram/ui/Components/NumberTextView;
 
     const/4 v5, 0x2
 
     invoke-virtual {v4, v5}, Landroid/view/View;->setImportantForAccessibility(I)V
 
-    .line 157
+    .line 166
     iget-object v4, v0, Lorg/telegram/ui/ChangeBioActivity;->checkTextView:Lorg/telegram/ui/Components/NumberTextView;
 
-    const/16 v12, 0x14
+    const/16 v12, 0x1a
 
     const/high16 v13, 0x41a00000    # 20.0f
 
     sget-boolean v5, Lorg/telegram/messenger/LocaleController;->isRTL:Z
 
-    if-eqz v5, :cond_19b
+    if-eqz v5, :cond_1a9
 
     const/4 v14, 0x3
 
-    goto :goto_19c
+    goto :goto_1aa
 
-    :cond_19b
+    :cond_1a9
     const/4 v14, 0x5
 
-    :goto_19c
+    :goto_1aa
     const/4 v15, 0x0
 
     const/high16 v16, 0x40800000    # 4.0f
@@ -888,24 +902,24 @@
 
     invoke-virtual {v6, v4, v5}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 159
+    .line 168
     new-instance v4, Landroid/widget/TextView;
 
     invoke-direct {v4, v1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
     iput-object v4, v0, Lorg/telegram/ui/ChangeBioActivity;->helpTextView:Landroid/widget/TextView;
 
-    .line 160
+    .line 169
     invoke-virtual {v4, v3}, Landroid/widget/TextView;->setFocusable(Z)V
 
-    .line 161
+    .line 170
     iget-object v1, v0, Lorg/telegram/ui/ChangeBioActivity;->helpTextView:Landroid/widget/TextView;
 
     const/high16 v4, 0x41700000    # 15.0f
 
     invoke-virtual {v1, v3, v4}, Landroid/widget/TextView;->setTextSize(IF)V
 
-    .line 162
+    .line 171
     iget-object v1, v0, Lorg/telegram/ui/ChangeBioActivity;->helpTextView:Landroid/widget/TextView;
 
     const-string v3, "windowBackgroundWhiteGrayText8"
@@ -916,27 +930,27 @@
 
     invoke-virtual {v1, v3}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 163
+    .line 172
     iget-object v1, v0, Lorg/telegram/ui/ChangeBioActivity;->helpTextView:Landroid/widget/TextView;
 
     sget-boolean v3, Lorg/telegram/messenger/LocaleController;->isRTL:Z
 
-    if-eqz v3, :cond_1ce
+    if-eqz v3, :cond_1dc
 
     const/4 v3, 0x5
 
-    goto :goto_1cf
+    goto :goto_1dd
 
-    :cond_1ce
+    :cond_1dc
     const/4 v3, 0x3
 
-    :goto_1cf
+    :goto_1dd
     invoke-virtual {v1, v3}, Landroid/widget/TextView;->setGravity(I)V
 
-    .line 164
+    .line 173
     iget-object v1, v0, Lorg/telegram/ui/ChangeBioActivity;->helpTextView:Landroid/widget/TextView;
 
-    const v3, 0x7f0e122b
+    const v3, 0x7f0e12f8
 
     const-string v4, "UserBioInfo"
 
@@ -950,7 +964,7 @@
 
     invoke-virtual {v1, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 165
+    .line 174
     iget-object v1, v0, Lorg/telegram/ui/ChangeBioActivity;->helpTextView:Landroid/widget/TextView;
 
     const/4 v3, -0x2
@@ -959,16 +973,16 @@
 
     sget-boolean v5, Lorg/telegram/messenger/LocaleController;->isRTL:Z
 
-    if-eqz v5, :cond_1ee
+    if-eqz v5, :cond_1fc
 
     const/4 v5, 0x5
 
-    goto :goto_1ef
+    goto :goto_1fd
 
-    :cond_1ee
+    :cond_1fc
     const/4 v5, 0x3
 
-    :goto_1ef
+    :goto_1fd
     const/16 v6, 0x18
 
     const/16 v7, 0xa
@@ -983,7 +997,7 @@
 
     invoke-virtual {v2, v1, v3}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 167
+    .line 176
     iget v1, v0, Lorg/telegram/ui/ActionBar/BaseFragment;->currentAccount:I
 
     invoke-static {v1}, Lorg/telegram/messenger/MessagesController;->getInstance(I)Lorg/telegram/messenger/MessagesController;
@@ -1004,19 +1018,19 @@
 
     move-result-object v1
 
-    if-eqz v1, :cond_225
+    if-eqz v1, :cond_233
 
-    .line 168
+    .line 177
     iget-object v1, v1, Lorg/telegram/tgnet/TLRPC$UserFull;->about:Ljava/lang/String;
 
-    if-eqz v1, :cond_225
+    if-eqz v1, :cond_233
 
-    .line 169
+    .line 178
     iget-object v2, v0, Lorg/telegram/ui/ChangeBioActivity;->firstNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     invoke-virtual {v2, v1}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
-    .line 170
+    .line 179
     iget-object v1, v0, Lorg/telegram/ui/ChangeBioActivity;->firstNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     invoke-virtual {v1}, Landroid/widget/EditText;->length()I
@@ -1025,8 +1039,8 @@
 
     invoke-virtual {v1, v2}, Lorg/telegram/ui/Components/EditTextBoldCursor;->setSelection(I)V
 
-    .line 173
-    :cond_225
+    .line 182
+    :cond_233
     iget-object v1, v0, Lorg/telegram/ui/ActionBar/BaseFragment;->fragmentView:Landroid/view/View;
 
     return-object v1
@@ -1045,12 +1059,12 @@
 
     move-object/from16 v0, p0
 
-    .line 248
+    .line 257
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 250
+    .line 259
     new-instance v10, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v3, v0, Lorg/telegram/ui/ActionBar/BaseFragment;->fragmentView:Landroid/view/View;
@@ -1073,7 +1087,7 @@
 
     invoke-virtual {v1, v10}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 252
+    .line 261
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v12, v0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
@@ -1096,7 +1110,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 253
+    .line 262
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v4, v0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
@@ -1113,7 +1127,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 254
+    .line 263
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v12, v0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
@@ -1128,7 +1142,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 255
+    .line 264
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v4, v0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
@@ -1143,7 +1157,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 257
+    .line 266
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v12, v0, Lorg/telegram/ui/ChangeBioActivity;->firstNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
@@ -1158,7 +1172,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 258
+    .line 267
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v4, v0, Lorg/telegram/ui/ChangeBioActivity;->firstNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
@@ -1173,7 +1187,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 259
+    .line 268
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v12, v0, Lorg/telegram/ui/ChangeBioActivity;->firstNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
@@ -1188,7 +1202,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 260
+    .line 269
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v4, v0, Lorg/telegram/ui/ChangeBioActivity;->firstNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
@@ -1207,7 +1221,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 262
+    .line 271
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v12, v0, Lorg/telegram/ui/ChangeBioActivity;->helpTextView:Landroid/widget/TextView;
@@ -1222,7 +1236,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 264
+    .line 273
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v4, v0, Lorg/telegram/ui/ChangeBioActivity;->checkTextView:Lorg/telegram/ui/Components/NumberTextView;
@@ -1243,10 +1257,10 @@
 .method public onResume()V
     .registers 4
 
-    .line 178
+    .line 187
     invoke-super {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->onResume()V
 
-    .line 179
+    .line 188
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getGlobalMainSettings()Landroid/content/SharedPreferences;
 
     move-result-object v0
@@ -1255,19 +1269,19 @@
 
     const/4 v2, 0x1
 
-    .line 180
+    .line 189
     invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v0
 
     if-nez v0, :cond_1a
 
-    .line 182
+    .line 191
     iget-object v0, p0, Lorg/telegram/ui/ChangeBioActivity;->firstNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     invoke-virtual {v0}, Landroid/widget/EditText;->requestFocus()Z
 
-    .line 183
+    .line 192
     iget-object v0, p0, Lorg/telegram/ui/ChangeBioActivity;->firstNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->showKeyboard(Landroid/view/View;)Z
@@ -1281,12 +1295,12 @@
 
     if-eqz p1, :cond_c
 
-    .line 241
+    .line 250
     iget-object p1, p0, Lorg/telegram/ui/ChangeBioActivity;->firstNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     invoke-virtual {p1}, Landroid/widget/EditText;->requestFocus()Z
 
-    .line 242
+    .line 251
     iget-object p1, p0, Lorg/telegram/ui/ChangeBioActivity;->firstNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     invoke-static {p1}, Lorg/telegram/messenger/AndroidUtilities;->showKeyboard(Landroid/view/View;)Z

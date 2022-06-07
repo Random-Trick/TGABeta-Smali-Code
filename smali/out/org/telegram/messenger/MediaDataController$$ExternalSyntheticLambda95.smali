@@ -8,30 +8,26 @@
 # instance fields
 .field public final synthetic f$0:Lorg/telegram/messenger/MediaDataController;
 
-.field public final synthetic f$1:Lorg/telegram/tgnet/TLRPC$TL_error;
+.field public final synthetic f$1:Lorg/telegram/tgnet/TLRPC$TL_attachMenuBots;
 
-.field public final synthetic f$2:Lorg/telegram/tgnet/TLObject;
+.field public final synthetic f$2:J
 
-.field public final synthetic f$3:Ljava/lang/String;
-
-.field public final synthetic f$4:Z
+.field public final synthetic f$3:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lorg/telegram/messenger/MediaDataController;Lorg/telegram/tgnet/TLRPC$TL_error;Lorg/telegram/tgnet/TLObject;Ljava/lang/String;Z)V
+.method public synthetic constructor <init>(Lorg/telegram/messenger/MediaDataController;Lorg/telegram/tgnet/TLRPC$TL_attachMenuBots;JI)V
     .registers 6
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lorg/telegram/messenger/MediaDataController$$ExternalSyntheticLambda95;->f$0:Lorg/telegram/messenger/MediaDataController;
 
-    iput-object p2, p0, Lorg/telegram/messenger/MediaDataController$$ExternalSyntheticLambda95;->f$1:Lorg/telegram/tgnet/TLRPC$TL_error;
+    iput-object p2, p0, Lorg/telegram/messenger/MediaDataController$$ExternalSyntheticLambda95;->f$1:Lorg/telegram/tgnet/TLRPC$TL_attachMenuBots;
 
-    iput-object p3, p0, Lorg/telegram/messenger/MediaDataController$$ExternalSyntheticLambda95;->f$2:Lorg/telegram/tgnet/TLObject;
+    iput-wide p3, p0, Lorg/telegram/messenger/MediaDataController$$ExternalSyntheticLambda95;->f$2:J
 
-    iput-object p4, p0, Lorg/telegram/messenger/MediaDataController$$ExternalSyntheticLambda95;->f$3:Ljava/lang/String;
-
-    iput-boolean p5, p0, Lorg/telegram/messenger/MediaDataController$$ExternalSyntheticLambda95;->f$4:Z
+    iput p5, p0, Lorg/telegram/messenger/MediaDataController$$ExternalSyntheticLambda95;->f$3:I
 
     return-void
 .end method
@@ -43,15 +39,13 @@
 
     iget-object v0, p0, Lorg/telegram/messenger/MediaDataController$$ExternalSyntheticLambda95;->f$0:Lorg/telegram/messenger/MediaDataController;
 
-    iget-object v1, p0, Lorg/telegram/messenger/MediaDataController$$ExternalSyntheticLambda95;->f$1:Lorg/telegram/tgnet/TLRPC$TL_error;
+    iget-object v1, p0, Lorg/telegram/messenger/MediaDataController$$ExternalSyntheticLambda95;->f$1:Lorg/telegram/tgnet/TLRPC$TL_attachMenuBots;
 
-    iget-object v2, p0, Lorg/telegram/messenger/MediaDataController$$ExternalSyntheticLambda95;->f$2:Lorg/telegram/tgnet/TLObject;
+    iget-wide v2, p0, Lorg/telegram/messenger/MediaDataController$$ExternalSyntheticLambda95;->f$2:J
 
-    iget-object v3, p0, Lorg/telegram/messenger/MediaDataController$$ExternalSyntheticLambda95;->f$3:Ljava/lang/String;
+    iget v4, p0, Lorg/telegram/messenger/MediaDataController$$ExternalSyntheticLambda95;->f$3:I
 
-    iget-boolean v4, p0, Lorg/telegram/messenger/MediaDataController$$ExternalSyntheticLambda95;->f$4:Z
-
-    invoke-static {v0, v1, v2, v3, v4}, Lorg/telegram/messenger/MediaDataController;->$r8$lambda$f8OMOPMb4mWTiapmSgOGwGgeMq0(Lorg/telegram/messenger/MediaDataController;Lorg/telegram/tgnet/TLRPC$TL_error;Lorg/telegram/tgnet/TLObject;Ljava/lang/String;Z)V
+    invoke-static {v0, v1, v2, v3, v4}, Lorg/telegram/messenger/MediaDataController;->$r8$lambda$ex2wriwfMfZY2O2wBXWPlafqo-w(Lorg/telegram/messenger/MediaDataController;Lorg/telegram/tgnet/TLRPC$TL_attachMenuBots;JI)V
 
     return-void
 .end method

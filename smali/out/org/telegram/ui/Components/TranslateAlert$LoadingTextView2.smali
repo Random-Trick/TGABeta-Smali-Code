@@ -80,7 +80,7 @@
 
     const/high16 v0, 0x40c00000    # 6.0f
 
-    .line 1545
+    .line 1557
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v0
@@ -89,7 +89,7 @@
 
     const/high16 v0, 0x3fc00000    # 1.5f
 
-    .line 1546
+    .line 1558
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v0
@@ -110,15 +110,15 @@
 
     move/from16 v3, p5
 
-    .line 1559
+    .line 1571
     invoke-direct/range {p0 .. p1}, Landroid/view/ViewGroup;-><init>(Landroid/content/Context;)V
 
     const/4 v4, 0x1
 
-    .line 1548
+    .line 1560
     iput-boolean v4, v0, Lorg/telegram/ui/Components/TranslateAlert$LoadingTextView2;->showLoadingText:Z
 
-    .line 1556
+    .line 1568
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v5
@@ -127,42 +127,42 @@
 
     const/high16 v5, 0x3f800000    # 1.0f
 
-    .line 1557
+    .line 1569
     iput v5, v0, Lorg/telegram/ui/Components/TranslateAlert$LoadingTextView2;->scaleT:F
 
     const/4 v5, 0x0
 
-    .line 1631
+    .line 1648
     iput-boolean v5, v0, Lorg/telegram/ui/Components/TranslateAlert$LoadingTextView2;->loaded:Z
 
     const/4 v6, 0x0
 
-    .line 1632
+    .line 1649
     iput v6, v0, Lorg/telegram/ui/Components/TranslateAlert$LoadingTextView2;->loadingT:F
 
     const/4 v7, 0x0
 
-    .line 1633
+    .line 1650
     iput-object v7, v0, Lorg/telegram/ui/Components/TranslateAlert$LoadingTextView2;->loadedAnimator:Landroid/animation/ValueAnimator;
 
-    .line 1680
+    .line 1697
     iput v5, v0, Lorg/telegram/ui/Components/TranslateAlert$LoadingTextView2;->lastWidth:I
 
-    .line 1708
+    .line 1725
     new-instance v8, Landroid/graphics/RectF;
 
     invoke-direct {v8}, Landroid/graphics/RectF;-><init>()V
 
     iput-object v8, v0, Lorg/telegram/ui/Components/TranslateAlert$LoadingTextView2;->fetchedPathRect:Landroid/graphics/RectF;
 
-    .line 1745
+    .line 1762
     new-instance v8, Landroid/graphics/RectF;
 
     invoke-direct {v8}, Landroid/graphics/RectF;-><init>()V
 
     iput-object v8, v0, Lorg/telegram/ui/Components/TranslateAlert$LoadingTextView2;->rect:Landroid/graphics/RectF;
 
-    .line 1746
+    .line 1763
     new-instance v8, Landroid/graphics/Path;
 
     invoke-direct {v8}, Landroid/graphics/Path;-><init>()V
@@ -187,7 +187,7 @@
 
     iput-object v8, v0, Lorg/telegram/ui/Components/TranslateAlert$LoadingTextView2;->shadePath:Landroid/graphics/Path;
 
-    .line 1750
+    .line 1767
     new-instance v8, Landroid/graphics/Paint;
 
     invoke-direct {v8}, Landroid/graphics/Paint;-><init>()V
@@ -196,7 +196,7 @@
 
     const/high16 v9, 0x43af0000    # 350.0f
 
-    .line 1751
+    .line 1768
     invoke-static {v9}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v9
@@ -205,20 +205,23 @@
 
     iput v13, v0, Lorg/telegram/ui/Components/TranslateAlert$LoadingTextView2;->gradientWidth:F
 
-    .line 1561
+    .line 1573
     sget v9, Lorg/telegram/ui/Components/TranslateAlert$LoadingTextView2;->paddingHorizontal:I
 
     sget v10, Lorg/telegram/ui/Components/TranslateAlert$LoadingTextView2;->paddingVertical:I
 
     invoke-virtual {v0, v9, v10, v9, v10}, Landroid/view/ViewGroup;->setPadding(IIII)V
 
-    .line 1562
+    .line 1574
     invoke-virtual {v0, v5}, Landroid/view/ViewGroup;->setClipChildren(Z)V
 
-    .line 1563
+    .line 1575
     invoke-virtual {v0, v5}, Landroid/view/ViewGroup;->setWillNotDraw(Z)V
 
-    .line 1565
+    .line 1576
+    invoke-virtual {v0, v5}, Landroid/view/ViewGroup;->setFocusable(Z)V
+
+    .line 1578
     new-instance v9, Lorg/telegram/ui/Components/TranslateAlert$LoadingTextView2$1;
 
     invoke-direct {v9, v0, v1}, Lorg/telegram/ui/Components/TranslateAlert$LoadingTextView2$1;-><init>(Lorg/telegram/ui/Components/TranslateAlert$LoadingTextView2;Landroid/content/Context;)V
@@ -229,92 +232,104 @@
 
     int-to-float v10, v10
 
-    .line 1571
+    .line 1584
     invoke-virtual {v9, v5, v10}, Landroid/widget/TextView;->setTextSize(IF)V
 
-    .line 1572
+    .line 1585
     invoke-virtual {v9, v3}, Landroid/widget/TextView;->setTextColor(I)V
 
     move-object/from16 v11, p2
 
-    .line 1573
+    .line 1586
     invoke-virtual {v9, v11}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 1574
+    .line 1587
     invoke-virtual {v9, v5}, Landroid/widget/TextView;->setLines(I)V
 
-    .line 1575
+    .line 1588
     invoke-virtual {v9, v5}, Landroid/widget/TextView;->setMaxLines(I)V
 
-    .line 1576
+    .line 1589
     invoke-virtual {v9, v5}, Landroid/widget/TextView;->setSingleLine(Z)V
 
-    .line 1577
+    .line 1590
     invoke-virtual {v9, v7}, Landroid/widget/TextView;->setEllipsize(Landroid/text/TextUtils$TruncateAt;)V
 
-    .line 1578
+    .line 1591
+    invoke-virtual {v9, v5}, Landroid/widget/TextView;->setFocusable(Z)V
+
+    const/4 v15, 0x2
+
+    .line 1592
+    invoke-virtual {v9, v15}, Landroid/widget/TextView;->setImportantForAccessibility(I)V
+
+    .line 1593
     invoke-virtual {v0, v9}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    .line 1580
+    .line 1595
     new-instance v9, Lorg/telegram/ui/Components/TranslateAlert$LoadingTextView2$2;
 
     invoke-direct {v9, v0, v1}, Lorg/telegram/ui/Components/TranslateAlert$LoadingTextView2$2;-><init>(Lorg/telegram/ui/Components/TranslateAlert$LoadingTextView2;Landroid/content/Context;)V
 
     iput-object v9, v0, Lorg/telegram/ui/Components/TranslateAlert$LoadingTextView2;->toTextView:Landroid/widget/TextView;
 
-    .line 1586
+    .line 1601
     invoke-virtual {v9, v5, v10}, Landroid/widget/TextView;->setTextSize(IF)V
 
-    .line 1587
+    .line 1602
     invoke-virtual {v9, v3}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 1588
+    .line 1603
     invoke-virtual {v9, v5}, Landroid/widget/TextView;->setLines(I)V
 
-    .line 1589
+    .line 1604
     invoke-virtual {v9, v5}, Landroid/widget/TextView;->setMaxLines(I)V
 
-    .line 1590
+    .line 1605
     invoke-virtual {v9, v5}, Landroid/widget/TextView;->setSingleLine(Z)V
 
-    .line 1591
+    .line 1606
     invoke-virtual {v9, v7}, Landroid/widget/TextView;->setEllipsize(Landroid/text/TextUtils$TruncateAt;)V
 
-    .line 1592
+    .line 1607
+    invoke-virtual {v9, v5}, Landroid/widget/TextView;->setFocusable(Z)V
+
+    .line 1608
+    invoke-virtual {v9, v15}, Landroid/widget/TextView;->setImportantForAccessibility(I)V
+
+    .line 1609
     invoke-virtual {v0, v9}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
     const-string v1, "dialogBackground"
 
-    .line 1594
+    .line 1611
     invoke-static {v1}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
 
     move-result v1
 
     const-string v3, "dialogBackgroundGray"
 
-    .line 1595
+    .line 1612
     invoke-static {v3}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
 
     move-result v3
 
-    .line 1596
+    .line 1613
     new-instance v7, Landroid/graphics/LinearGradient;
 
     const/4 v9, 0x3
 
-    new-array v15, v9, [I
+    new-array v14, v9, [I
 
-    aput v1, v15, v5
+    aput v1, v14, v5
 
-    aput v3, v15, v4
+    aput v3, v14, v4
 
-    const/4 v3, 0x2
-
-    aput v1, v15, v3
+    aput v1, v14, v15
 
     new-array v1, v9, [F
 
-    fill-array-data v1, :array_f8
+    fill-array-data v1, :array_10c
 
     sget-object v17, Landroid/graphics/Shader$TileMode;->REPEAT:Landroid/graphics/Shader$TileMode;
 
@@ -322,21 +337,29 @@
 
     const/4 v12, 0x0
 
-    const/4 v14, 0x0
+    const/4 v3, 0x0
 
     move-object v10, v7
+
+    move-object v4, v14
+
+    move v14, v3
+
+    const/4 v3, 0x2
+
+    move-object v15, v4
 
     move-object/from16 v16, v1
 
     invoke-direct/range {v10 .. v17}, Landroid/graphics/LinearGradient;-><init>(FFFF[I[FLandroid/graphics/Shader$TileMode;)V
 
-    .line 1597
+    .line 1614
     invoke-virtual {v8, v7}, Landroid/graphics/Paint;->setShader(Landroid/graphics/Shader;)Landroid/graphics/Shader;
 
     new-array v1, v3, [F
 
-    .line 1600
-    fill-array-data v1, :array_102
+    .line 1617
+    fill-array-data v1, :array_116
 
     invoke-static {v1}, Landroid/animation/ValueAnimator;->ofFloat([F)Landroid/animation/ValueAnimator;
 
@@ -344,13 +367,13 @@
 
     iput-object v1, v0, Lorg/telegram/ui/Components/TranslateAlert$LoadingTextView2;->loadingAnimator:Landroid/animation/ValueAnimator;
 
-    if-eqz v2, :cond_e4
+    if-eqz v2, :cond_f7
 
-    .line 1602
+    .line 1619
     iput v6, v0, Lorg/telegram/ui/Components/TranslateAlert$LoadingTextView2;->scaleT:F
 
-    .line 1603
-    :cond_e4
+    .line 1620
+    :cond_f7
     new-instance v3, Lorg/telegram/ui/Components/TranslateAlert$LoadingTextView2$$ExternalSyntheticLambda1;
 
     invoke-direct {v3, v0, v2}, Lorg/telegram/ui/Components/TranslateAlert$LoadingTextView2$$ExternalSyntheticLambda1;-><init>(Lorg/telegram/ui/Components/TranslateAlert$LoadingTextView2;Z)V
@@ -359,22 +382,24 @@
 
     const-wide v2, 0x7fffffffffffffffL
 
-    .line 1613
+    .line 1630
     invoke-virtual {v1, v2, v3}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
-    .line 1614
+    .line 1631
     invoke-virtual {v1}, Landroid/animation/ValueAnimator;->start()V
 
     return-void
 
-    :array_f8
+    nop
+
+    :array_10c
     .array-data 4
         0x0
         0x3f2b851f    # 0.67f
         0x3f800000    # 1.0f
     .end array-data
 
-    :array_102
+    :array_116
     .array-data 4
         0x0
         0x3f800000    # 1.0f
@@ -384,7 +409,7 @@
 .method private synthetic lambda$loaded$1(Landroid/animation/ValueAnimator;)V
     .registers 2
 
-    .line 1645
+    .line 1662
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
     move-result-object p1
@@ -397,10 +422,10 @@
 
     iput p1, p0, Lorg/telegram/ui/Components/TranslateAlert$LoadingTextView2;->loadingT:F
 
-    .line 1646
+    .line 1663
     invoke-direct {p0}, Lorg/telegram/ui/Components/TranslateAlert$LoadingTextView2;->updateHeight()V
 
-    .line 1647
+    .line 1664
     invoke-virtual {p0}, Landroid/view/ViewGroup;->invalidate()V
 
     return-void
@@ -409,12 +434,12 @@
 .method private synthetic lambda$new$0(ZLandroid/animation/ValueAnimator;)V
     .registers 7
 
-    .line 1604
+    .line 1621
     invoke-virtual {p0}, Landroid/view/ViewGroup;->invalidate()V
 
     if-eqz p1, :cond_26
 
-    .line 1606
+    .line 1623
     iget p1, p0, Lorg/telegram/ui/Components/TranslateAlert$LoadingTextView2;->scaleT:F
 
     const/high16 p2, 0x3f800000    # 1.0f
@@ -430,7 +455,7 @@
     :cond_f
     const/4 p1, 0x0
 
-    .line 1607
+    .line 1624
     :goto_10
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
@@ -454,7 +479,7 @@
 
     if-eqz p1, :cond_26
 
-    .line 1609
+    .line 1626
     invoke-direct {p0}, Lorg/telegram/ui/Components/TranslateAlert$LoadingTextView2;->updateHeight()V
 
     :cond_26
@@ -464,7 +489,7 @@
 .method private layout()V
     .registers 2
 
-    .line 1699
+    .line 1716
     iget v0, p0, Lorg/telegram/ui/Components/TranslateAlert$LoadingTextView2;->lastWidth:I
 
     invoke-direct {p0, v0}, Lorg/telegram/ui/Components/TranslateAlert$LoadingTextView2;->layout(I)V
@@ -475,30 +500,30 @@
 .method private layout(I)V
     .registers 3
 
-    .line 1691
+    .line 1708
     iget-object v0, p0, Lorg/telegram/ui/Components/TranslateAlert$LoadingTextView2;->fromTextView:Landroid/widget/TextView;
 
     invoke-direct {p0, v0, p1}, Lorg/telegram/ui/Components/TranslateAlert$LoadingTextView2;->measureChild(Landroid/view/View;I)V
 
-    .line 1692
+    .line 1709
     iget-object v0, p0, Lorg/telegram/ui/Components/TranslateAlert$LoadingTextView2;->fromTextView:Landroid/widget/TextView;
 
     invoke-direct {p0, v0, p1}, Lorg/telegram/ui/Components/TranslateAlert$LoadingTextView2;->layoutChild(Landroid/view/View;I)V
 
-    .line 1693
+    .line 1710
     invoke-direct {p0}, Lorg/telegram/ui/Components/TranslateAlert$LoadingTextView2;->updateLoadingPath()V
 
-    .line 1694
+    .line 1711
     iget-object v0, p0, Lorg/telegram/ui/Components/TranslateAlert$LoadingTextView2;->toTextView:Landroid/widget/TextView;
 
     invoke-direct {p0, v0, p1}, Lorg/telegram/ui/Components/TranslateAlert$LoadingTextView2;->measureChild(Landroid/view/View;I)V
 
-    .line 1695
+    .line 1712
     iget-object v0, p0, Lorg/telegram/ui/Components/TranslateAlert$LoadingTextView2;->toTextView:Landroid/widget/TextView;
 
     invoke-direct {p0, v0, p1}, Lorg/telegram/ui/Components/TranslateAlert$LoadingTextView2;->layoutChild(Landroid/view/View;I)V
 
-    .line 1696
+    .line 1713
     invoke-direct {p0}, Lorg/telegram/ui/Components/TranslateAlert$LoadingTextView2;->updateHeight()V
 
     return-void
@@ -507,14 +532,14 @@
 .method private layout(IZ)V
     .registers 4
 
-    .line 1686
+    .line 1703
     iget v0, p0, Lorg/telegram/ui/Components/TranslateAlert$LoadingTextView2;->lastWidth:I
 
     if-ne v0, p1, :cond_6
 
     if-eqz p2, :cond_b
 
-    .line 1687
+    .line 1704
     :cond_6
     iput p1, p0, Lorg/telegram/ui/Components/TranslateAlert$LoadingTextView2;->lastWidth:I
 
@@ -527,7 +552,7 @@
 .method private layoutChild(Landroid/view/View;I)V
     .registers 7
 
-    .line 1705
+    .line 1722
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getPaddingLeft()I
 
     move-result v0
@@ -562,7 +587,7 @@
 
     const/high16 v0, 0x40000000    # 2.0f
 
-    .line 1702
+    .line 1719
     invoke-static {p2, v0}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
 
     move-result p2
@@ -579,17 +604,17 @@
 .method private updateHeight()V
     .registers 3
 
-    .line 1625
+    .line 1642
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getParent()Landroid/view/ViewParent;
 
     move-result-object v0
 
-    .line 1626
+    .line 1643
     instance-of v1, v0, Lorg/telegram/ui/Components/TranslateAlert$TextBlocksLayout;
 
     if-eqz v1, :cond_d
 
-    .line 1627
+    .line 1644
     check-cast v0, Lorg/telegram/ui/Components/TranslateAlert$TextBlocksLayout;
 
     invoke-virtual {v0}, Lorg/telegram/ui/Components/TranslateAlert$TextBlocksLayout;->updateHeight()V
@@ -601,7 +626,7 @@
 .method private updateLoadingPath()V
     .registers 12
 
-    .line 1710
+    .line 1727
     iget-object v0, p0, Lorg/telegram/ui/Components/TranslateAlert$LoadingTextView2;->fromTextView:Landroid/widget/TextView;
 
     if-eqz v0, :cond_87
@@ -612,12 +637,12 @@
 
     if-lez v0, :cond_87
 
-    .line 1711
+    .line 1728
     iget-object v0, p0, Lorg/telegram/ui/Components/TranslateAlert$LoadingTextView2;->loadingPath:Landroid/graphics/Path;
 
     invoke-virtual {v0}, Landroid/graphics/Path;->reset()V
 
-    .line 1712
+    .line 1729
     iget-object v0, p0, Lorg/telegram/ui/Components/TranslateAlert$LoadingTextView2;->fromTextView:Landroid/widget/TextView;
 
     invoke-virtual {v0}, Landroid/widget/TextView;->getLayout()Landroid/text/Layout;
@@ -626,12 +651,12 @@
 
     if-eqz v0, :cond_87
 
-    .line 1714
+    .line 1731
     invoke-virtual {v0}, Landroid/text/Layout;->getText()Ljava/lang/CharSequence;
 
     move-result-object v1
 
-    .line 1715
+    .line 1732
     invoke-virtual {v0}, Landroid/text/Layout;->getLineCount()I
 
     move-result v2
@@ -643,32 +668,32 @@
     :goto_21
     if-ge v4, v2, :cond_87
 
-    .line 1717
+    .line 1734
     invoke-virtual {v0, v4}, Landroid/text/Layout;->getLineLeft(I)F
 
     move-result v5
 
-    .line 1718
+    .line 1735
     invoke-virtual {v0, v4}, Landroid/text/Layout;->getLineRight(I)F
 
     move-result v6
 
-    .line 1719
+    .line 1736
     invoke-static {v5, v6}, Ljava/lang/Math;->min(FF)F
 
     move-result v7
 
-    .line 1720
+    .line 1737
     invoke-static {v5, v6}, Ljava/lang/Math;->max(FF)F
 
     move-result v5
 
-    .line 1721
+    .line 1738
     invoke-virtual {v0, v4}, Landroid/text/Layout;->getLineStart(I)I
 
     move-result v6
 
-    .line 1722
+    .line 1739
     invoke-virtual {v0, v4}, Landroid/text/Layout;->getLineEnd(I)I
 
     move-result v8
@@ -676,7 +701,7 @@
     :goto_3b
     if-ge v6, v8, :cond_52
 
-    .line 1725
+    .line 1742
     invoke-interface {v1, v6}, Ljava/lang/CharSequence;->charAt(I)C
 
     move-result v9
@@ -710,7 +735,7 @@
 
     goto :goto_84
 
-    .line 1733
+    .line 1750
     :cond_56
     iget-object v6, p0, Lorg/telegram/ui/Components/TranslateAlert$LoadingTextView2;->fetchedPathRect:Landroid/graphics/RectF;
 
@@ -720,7 +745,7 @@
 
     sub-float/2addr v7, v9
 
-    .line 1735
+    .line 1752
     invoke-virtual {v0, v4}, Landroid/text/Layout;->getLineTop(I)I
 
     move-result v9
@@ -735,7 +760,7 @@
 
     add-float/2addr v5, v8
 
-    .line 1737
+    .line 1754
     invoke-virtual {v0, v4}, Landroid/text/Layout;->getLineBottom(I)I
 
     move-result v8
@@ -744,10 +769,10 @@
 
     int-to-float v8, v8
 
-    .line 1733
+    .line 1750
     invoke-virtual {v6, v7, v9, v5, v8}, Landroid/graphics/RectF;->set(FFFF)V
 
-    .line 1739
+    .line 1756
     iget-object v5, p0, Lorg/telegram/ui/Components/TranslateAlert$LoadingTextView2;->loadingPath:Landroid/graphics/Path;
 
     iget-object v6, p0, Lorg/telegram/ui/Components/TranslateAlert$LoadingTextView2;->fetchedPathRect:Landroid/graphics/RectF;
@@ -792,7 +817,7 @@
 .method public height()I
     .registers 3
 
-    .line 1621
+    .line 1638
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getPaddingTop()I
 
     move-result v0
@@ -815,7 +840,7 @@
 .method public innerHeight()I
     .registers 4
 
-    .line 1618
+    .line 1635
     iget-object v0, p0, Lorg/telegram/ui/Components/TranslateAlert$LoadingTextView2;->fromTextView:Landroid/widget/TextView;
 
     invoke-virtual {v0}, Landroid/widget/TextView;->getMeasuredHeight()I
@@ -850,18 +875,18 @@
 
     const/4 v0, 0x1
 
-    .line 1635
+    .line 1652
     iput-boolean v0, p0, Lorg/telegram/ui/Components/TranslateAlert$LoadingTextView2;->loaded:Z
 
-    .line 1636
+    .line 1653
     iget-object v0, p0, Lorg/telegram/ui/Components/TranslateAlert$LoadingTextView2;->toTextView:Landroid/widget/TextView;
 
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 1637
+    .line 1654
     invoke-direct {p0}, Lorg/telegram/ui/Components/TranslateAlert$LoadingTextView2;->layout()V
 
-    .line 1639
+    .line 1656
     iget-object p1, p0, Lorg/telegram/ui/Components/TranslateAlert$LoadingTextView2;->loadingAnimator:Landroid/animation/ValueAnimator;
 
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->isRunning()Z
@@ -870,12 +895,12 @@
 
     if-eqz p1, :cond_18
 
-    .line 1640
+    .line 1657
     iget-object p1, p0, Lorg/telegram/ui/Components/TranslateAlert$LoadingTextView2;->loadingAnimator:Landroid/animation/ValueAnimator;
 
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->cancel()V
 
-    .line 1642
+    .line 1659
     :cond_18
     iget-object p1, p0, Lorg/telegram/ui/Components/TranslateAlert$LoadingTextView2;->loadedAnimator:Landroid/animation/ValueAnimator;
 
@@ -885,7 +910,7 @@
 
     new-array p1, p1, [F
 
-    .line 1643
+    .line 1660
     fill-array-data p1, :array_4e
 
     invoke-static {p1}, Landroid/animation/ValueAnimator;->ofFloat([F)Landroid/animation/ValueAnimator;
@@ -894,14 +919,14 @@
 
     iput-object p1, p0, Lorg/telegram/ui/Components/TranslateAlert$LoadingTextView2;->loadedAnimator:Landroid/animation/ValueAnimator;
 
-    .line 1644
+    .line 1661
     new-instance v0, Lorg/telegram/ui/Components/TranslateAlert$LoadingTextView2$$ExternalSyntheticLambda0;
 
     invoke-direct {v0, p0}, Lorg/telegram/ui/Components/TranslateAlert$LoadingTextView2$$ExternalSyntheticLambda0;-><init>(Lorg/telegram/ui/Components/TranslateAlert$LoadingTextView2;)V
 
     invoke-virtual {p1, v0}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    .line 1649
+    .line 1666
     iget-object p1, p0, Lorg/telegram/ui/Components/TranslateAlert$LoadingTextView2;->loadedAnimator:Landroid/animation/ValueAnimator;
 
     new-instance v0, Lorg/telegram/ui/Components/TranslateAlert$LoadingTextView2$3;
@@ -910,21 +935,21 @@
 
     invoke-virtual {p1, v0}, Landroid/animation/ValueAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 1656
+    .line 1673
     iget-object p1, p0, Lorg/telegram/ui/Components/TranslateAlert$LoadingTextView2;->loadedAnimator:Landroid/animation/ValueAnimator;
 
     const-wide/16 v0, 0x15e
 
     invoke-virtual {p1, v0, v1}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
-    .line 1657
+    .line 1674
     iget-object p1, p0, Lorg/telegram/ui/Components/TranslateAlert$LoadingTextView2;->loadedAnimator:Landroid/animation/ValueAnimator;
 
     sget-object p2, Lorg/telegram/ui/Components/CubicBezierInterpolator;->EASE_BOTH:Lorg/telegram/ui/Components/CubicBezierInterpolator;
 
     invoke-virtual {p1, p2}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 1658
+    .line 1675
     iget-object p1, p0, Lorg/telegram/ui/Components/TranslateAlert$LoadingTextView2;->loadedAnimator:Landroid/animation/ValueAnimator;
 
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->start()V
@@ -942,7 +967,7 @@
 .method protected onDraw(Landroid/graphics/Canvas;)V
     .registers 13
 
-    .line 1754
+    .line 1771
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getWidth()I
 
     move-result v0
@@ -955,7 +980,7 @@
 
     int-to-float v7, v1
 
-    .line 1756
+    .line 1773
     sget-boolean v1, Lorg/telegram/messenger/LocaleController;->isRTL:Z
 
     const/high16 v2, 0x41000000    # 8.0f
@@ -984,7 +1009,7 @@
     :goto_21
     div-float v3, v7, v3
 
-    .line 1757
+    .line 1774
     invoke-static {v3, v2}, Ljava/lang/Math;->min(FF)F
 
     move-result v2
@@ -1001,7 +1026,7 @@
 
     add-float/2addr v4, v6
 
-    .line 1759
+    .line 1776
     invoke-static {v5, v4}, Ljava/lang/Math;->max(FF)F
 
     move-result v4
@@ -1014,12 +1039,12 @@
 
     add-float/2addr v6, v5
 
-    .line 1760
+    .line 1777
     invoke-static {v3, v6}, Ljava/lang/Math;->max(FF)F
 
     move-result v3
 
-    .line 1758
+    .line 1775
     invoke-static {v4, v3}, Ljava/lang/Math;->max(FF)F
 
     move-result v3
@@ -1032,34 +1057,34 @@
 
     double-to-float v3, v3
 
-    .line 1762
+    .line 1779
     iget v4, p0, Lorg/telegram/ui/Components/TranslateAlert$LoadingTextView2;->loadingT:F
 
     mul-float v4, v4, v3
 
-    .line 1763
+    .line 1780
     iget-object v3, p0, Lorg/telegram/ui/Components/TranslateAlert$LoadingTextView2;->inPath:Landroid/graphics/Path;
 
     invoke-virtual {v3}, Landroid/graphics/Path;->reset()V
 
-    .line 1764
+    .line 1781
     iget-object v3, p0, Lorg/telegram/ui/Components/TranslateAlert$LoadingTextView2;->inPath:Landroid/graphics/Path;
 
     sget-object v5, Landroid/graphics/Path$Direction;->CW:Landroid/graphics/Path$Direction;
 
     invoke-virtual {v3, v1, v2, v4, v5}, Landroid/graphics/Path;->addCircle(FFFLandroid/graphics/Path$Direction;)V
 
-    .line 1766
+    .line 1783
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 1767
+    .line 1784
     iget-object v1, p0, Lorg/telegram/ui/Components/TranslateAlert$LoadingTextView2;->inPath:Landroid/graphics/Path;
 
     sget-object v2, Landroid/graphics/Region$Op;->DIFFERENCE:Landroid/graphics/Region$Op;
 
     invoke-virtual {p1, v1, v2}, Landroid/graphics/Canvas;->clipPath(Landroid/graphics/Path;Landroid/graphics/Region$Op;)Z
 
-    .line 1769
+    .line 1786
     iget-object v1, p0, Lorg/telegram/ui/Components/TranslateAlert$LoadingTextView2;->loadingPaint:Landroid/graphics/Paint;
 
     iget v2, p0, Lorg/telegram/ui/Components/TranslateAlert$LoadingTextView2;->loadingT:F
@@ -1076,7 +1101,7 @@
 
     invoke-virtual {v1, v2}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 1770
+    .line 1787
     iget v1, p0, Lorg/telegram/ui/Components/TranslateAlert$LoadingTextView2;->gradientWidth:F
 
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
@@ -1101,12 +1126,12 @@
 
     sub-float v10, v1, v2
 
-    .line 1771
+    .line 1788
     iget-object v1, p0, Lorg/telegram/ui/Components/TranslateAlert$LoadingTextView2;->shadePath:Landroid/graphics/Path;
 
     invoke-virtual {v1}, Landroid/graphics/Path;->reset()V
 
-    .line 1772
+    .line 1789
     iget-object v1, p0, Lorg/telegram/ui/Components/TranslateAlert$LoadingTextView2;->shadePath:Landroid/graphics/Path;
 
     const/4 v2, 0x0
@@ -1121,7 +1146,7 @@
 
     invoke-virtual/range {v1 .. v6}, Landroid/graphics/Path;->addRect(FFFFLandroid/graphics/Path$Direction;)V
 
-    .line 1774
+    .line 1791
     sget v1, Lorg/telegram/ui/Components/TranslateAlert$LoadingTextView2;->paddingHorizontal:I
 
     int-to-float v2, v1
@@ -1132,7 +1157,7 @@
 
     invoke-virtual {p1, v2, v4}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 1775
+    .line 1792
     iget-object v2, p0, Lorg/telegram/ui/Components/TranslateAlert$LoadingTextView2;->loadingPath:Landroid/graphics/Path;
 
     invoke-virtual {p1, v2}, Landroid/graphics/Canvas;->clipPath(Landroid/graphics/Path;)Z
@@ -1145,37 +1170,37 @@
 
     int-to-float v4, v4
 
-    .line 1776
+    .line 1793
     invoke-virtual {p1, v2, v4}, Landroid/graphics/Canvas;->translate(FF)V
 
     neg-float v2, v10
 
     const/4 v4, 0x0
 
-    .line 1777
+    .line 1794
     invoke-virtual {p1, v2, v4}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 1778
+    .line 1795
     iget-object v2, p0, Lorg/telegram/ui/Components/TranslateAlert$LoadingTextView2;->shadePath:Landroid/graphics/Path;
 
     iget-object v5, p0, Lorg/telegram/ui/Components/TranslateAlert$LoadingTextView2;->tempPath:Landroid/graphics/Path;
 
     invoke-virtual {v2, v10, v4, v5}, Landroid/graphics/Path;->offset(FFLandroid/graphics/Path;)V
 
-    .line 1779
+    .line 1796
     iget-object v2, p0, Lorg/telegram/ui/Components/TranslateAlert$LoadingTextView2;->tempPath:Landroid/graphics/Path;
 
     iget-object v5, p0, Lorg/telegram/ui/Components/TranslateAlert$LoadingTextView2;->loadingPaint:Landroid/graphics/Paint;
 
     invoke-virtual {p1, v2, v5}, Landroid/graphics/Canvas;->drawPath(Landroid/graphics/Path;Landroid/graphics/Paint;)V
 
-    .line 1780
+    .line 1797
     invoke-virtual {p1, v10, v4}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 1781
+    .line 1798
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
-    .line 1783
+    .line 1800
     iget-boolean v2, p0, Lorg/telegram/ui/Components/TranslateAlert$LoadingTextView2;->showLoadingText:Z
 
     const/16 v5, 0x1f
@@ -1186,15 +1211,15 @@
 
     if-eqz v2, :cond_f6
 
-    .line 1784
+    .line 1801
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 1785
+    .line 1802
     iget-object v2, p0, Lorg/telegram/ui/Components/TranslateAlert$LoadingTextView2;->rect:Landroid/graphics/RectF;
 
     invoke-virtual {v2, v4, v4, v0, v7}, Landroid/graphics/RectF;->set(FFFF)V
 
-    .line 1786
+    .line 1803
     iget-object v0, p0, Lorg/telegram/ui/Components/TranslateAlert$LoadingTextView2;->inPath:Landroid/graphics/Path;
 
     sget-object v2, Landroid/graphics/Region$Op;->DIFFERENCE:Landroid/graphics/Region$Op;
@@ -1205,37 +1230,37 @@
 
     int-to-float v2, v3
 
-    .line 1787
+    .line 1804
     invoke-virtual {p1, v0, v2}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 1788
+    .line 1805
     iget-object v0, p0, Lorg/telegram/ui/Components/TranslateAlert$LoadingTextView2;->rect:Landroid/graphics/RectF;
 
     const/16 v2, 0x14
 
     invoke-virtual {p1, v0, v2, v5}, Landroid/graphics/Canvas;->saveLayerAlpha(Landroid/graphics/RectF;II)I
 
-    .line 1789
+    .line 1806
     iget-object v0, p0, Lorg/telegram/ui/Components/TranslateAlert$LoadingTextView2;->fromTextView:Landroid/widget/TextView;
 
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->draw(Landroid/graphics/Canvas;)V
 
-    .line 1790
+    .line 1807
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
-    .line 1791
+    .line 1808
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
-    .line 1794
+    .line 1811
     :cond_f6
     iget-object v0, p0, Lorg/telegram/ui/Components/TranslateAlert$LoadingTextView2;->toTextView:Landroid/widget/TextView;
 
     if-eqz v0, :cond_122
 
-    .line 1795
+    .line 1812
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 1796
+    .line 1813
     iget-object v0, p0, Lorg/telegram/ui/Components/TranslateAlert$LoadingTextView2;->inPath:Landroid/graphics/Path;
 
     invoke-virtual {p1, v0}, Landroid/graphics/Canvas;->clipPath(Landroid/graphics/Path;)Z
@@ -1244,10 +1269,10 @@
 
     int-to-float v1, v3
 
-    .line 1797
+    .line 1814
     invoke-virtual {p1, v0, v1}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 1798
+    .line 1815
     iget-object v0, p0, Lorg/telegram/ui/Components/TranslateAlert$LoadingTextView2;->rect:Landroid/graphics/RectF;
 
     iget v1, p0, Lorg/telegram/ui/Components/TranslateAlert$LoadingTextView2;->loadingT:F
@@ -1258,22 +1283,22 @@
 
     invoke-virtual {p1, v0, v1, v5}, Landroid/graphics/Canvas;->saveLayerAlpha(Landroid/graphics/RectF;II)I
 
-    .line 1799
+    .line 1816
     iget-object v0, p0, Lorg/telegram/ui/Components/TranslateAlert$LoadingTextView2;->toTextView:Landroid/widget/TextView;
 
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->draw(Landroid/graphics/Canvas;)V
 
-    .line 1800
+    .line 1817
     iget v0, p0, Lorg/telegram/ui/Components/TranslateAlert$LoadingTextView2;->loadingT:F
 
     cmpg-float v0, v0, v8
 
     if-gez v0, :cond_11f
 
-    .line 1801
+    .line 1818
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
-    .line 1803
+    .line 1820
     :cond_11f
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
@@ -1286,7 +1311,7 @@
 
     sub-int/2addr p4, p2
 
-    .line 1683
+    .line 1700
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getPaddingLeft()I
 
     move-result p1
@@ -1309,12 +1334,12 @@
 .method protected onMeasure(II)V
     .registers 4
 
-    .line 1664
+    .line 1681
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result p1
 
-    .line 1665
+    .line 1682
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getPaddingLeft()I
 
     move-result p2
@@ -1327,7 +1352,7 @@
 
     sub-int/2addr p2, v0
 
-    .line 1666
+    .line 1683
     iget-object v0, p0, Lorg/telegram/ui/Components/TranslateAlert$LoadingTextView2;->fromTextView:Landroid/widget/TextView;
 
     invoke-virtual {v0}, Landroid/widget/TextView;->getMeasuredWidth()I
@@ -1340,16 +1365,16 @@
 
     if-eq v0, p2, :cond_23
 
-    .line 1667
+    .line 1684
     :cond_1b
     iget-object v0, p0, Lorg/telegram/ui/Components/TranslateAlert$LoadingTextView2;->fromTextView:Landroid/widget/TextView;
 
     invoke-direct {p0, v0, p2}, Lorg/telegram/ui/Components/TranslateAlert$LoadingTextView2;->measureChild(Landroid/view/View;I)V
 
-    .line 1668
+    .line 1685
     invoke-direct {p0}, Lorg/telegram/ui/Components/TranslateAlert$LoadingTextView2;->updateLoadingPath()V
 
-    .line 1670
+    .line 1687
     :cond_23
     iget-object v0, p0, Lorg/telegram/ui/Components/TranslateAlert$LoadingTextView2;->toTextView:Landroid/widget/TextView;
 
@@ -1363,24 +1388,24 @@
 
     if-eq v0, p2, :cond_34
 
-    .line 1671
+    .line 1688
     :cond_2f
     iget-object v0, p0, Lorg/telegram/ui/Components/TranslateAlert$LoadingTextView2;->toTextView:Landroid/widget/TextView;
 
     invoke-direct {p0, v0, p2}, Lorg/telegram/ui/Components/TranslateAlert$LoadingTextView2;->measureChild(Landroid/view/View;I)V
 
-    .line 1673
+    .line 1690
     :cond_34
     iput p2, p0, Lorg/telegram/ui/Components/TranslateAlert$LoadingTextView2;->lastWidth:I
 
     const/high16 p2, 0x40000000    # 2.0f
 
-    .line 1675
+    .line 1692
     invoke-static {p1, p2}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
 
     move-result p1
 
-    .line 1676
+    .line 1693
     invoke-virtual {p0}, Lorg/telegram/ui/Components/TranslateAlert$LoadingTextView2;->height()I
 
     move-result v0
@@ -1389,7 +1414,7 @@
 
     move-result p2
 
-    .line 1674
+    .line 1691
     invoke-super {p0, p1, p2}, Landroid/view/ViewGroup;->onMeasure(II)V
 
     return-void

@@ -17,3 +17,6 @@
 # virtual methods
 .method public abstract didCreateNewException(Lorg/telegram/ui/NotificationsSettingsActivity$NotificationException;)V
 .end method
+
+.method public abstract didRemoveException(J)V
+.end method

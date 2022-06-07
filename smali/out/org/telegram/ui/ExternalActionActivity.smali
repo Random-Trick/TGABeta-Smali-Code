@@ -542,7 +542,7 @@
     :try_start_10
     const-string p1, "UpdateAppAlert"
 
-    const v2, 0x7f0e11fc
+    const v2, 0x7f0e12c9
 
     .line 362
     invoke-static {p1, v2}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -1418,7 +1418,7 @@
 
     invoke-direct {v0, p0}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    const v1, 0x7f0e017c
+    const v1, 0x7f0e01b1
 
     const-string v3, "AppName"
 
@@ -1429,7 +1429,7 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const v1, 0x7f0e0d95
+    const v1, 0x7f0e0e25
 
     const-string v3, "PleaseLoginPassport"
 
@@ -1440,7 +1440,7 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const v1, 0x7f0e0bae
+    const v1, 0x7f0e0c38
 
     const-string v3, "OK"
 
@@ -2205,7 +2205,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f070402
+    const v2, 0x7f0703ea
 
     invoke-virtual {v1, v2}, Landroid/view/Window;->setBackgroundDrawableResource(I)V
 
@@ -2450,7 +2450,7 @@
     .line 160
     iget-object v5, p0, Lorg/telegram/ui/ExternalActionActivity;->layersActionBarLayout:Lorg/telegram/ui/ActionBar/ActionBarLayout;
 
-    const v6, 0x7f070084
+    const v6, 0x7f07006b
 
     invoke-virtual {v5, v6}, Landroid/widget/FrameLayout;->setBackgroundResource(I)V
 

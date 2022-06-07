@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/Switch;)V
     .registers 2
 
-    .line 238
+    .line 252
     iput-object p1, p0, Lorg/telegram/ui/Components/Switch$3;->this$0:Lorg/telegram/ui/Components/Switch;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -35,7 +35,7 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .registers 3
 
-    .line 241
+    .line 255
     iget-object p1, p0, Lorg/telegram/ui/Components/Switch$3;->this$0:Lorg/telegram/ui/Components/Switch;
 
     const/4 v0, 0x0

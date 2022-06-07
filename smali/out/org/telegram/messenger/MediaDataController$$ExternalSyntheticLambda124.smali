@@ -2,44 +2,38 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lorg/telegram/messenger/GenericProvider;
+.implements Ljava/util/Comparator;
 
 
-# static fields
-.field public static final synthetic INSTANCE:Lorg/telegram/messenger/MediaDataController$$ExternalSyntheticLambda124;
+# instance fields
+.field public final synthetic f$0:Ljava/util/ArrayList;
 
 
 # direct methods
-.method static synthetic constructor <clinit>()V
-    .registers 1
-
-    new-instance v0, Lorg/telegram/messenger/MediaDataController$$ExternalSyntheticLambda124;
-
-    invoke-direct {v0}, Lorg/telegram/messenger/MediaDataController$$ExternalSyntheticLambda124;-><init>()V
-
-    sput-object v0, Lorg/telegram/messenger/MediaDataController$$ExternalSyntheticLambda124;->INSTANCE:Lorg/telegram/messenger/MediaDataController$$ExternalSyntheticLambda124;
-
-    return-void
-.end method
-
-.method private synthetic constructor <init>()V
-    .registers 1
+.method public synthetic constructor <init>(Ljava/util/ArrayList;)V
+    .registers 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lorg/telegram/messenger/MediaDataController$$ExternalSyntheticLambda124;->f$0:Ljava/util/ArrayList;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final provide(Ljava/lang/Object;)Ljava/lang/Object;
-    .registers 2
+.method public final compare(Ljava/lang/Object;Ljava/lang/Object;)I
+    .registers 4
 
-    check-cast p1, Ljava/lang/Void;
+    iget-object v0, p0, Lorg/telegram/messenger/MediaDataController$$ExternalSyntheticLambda124;->f$0:Ljava/util/ArrayList;
 
-    invoke-static {p1}, Lorg/telegram/messenger/MediaDataController;->$r8$lambda$f2tx26-19k_-dn6paZqLVBsU-nc(Ljava/lang/Void;)Lorg/telegram/tgnet/TLRPC$MessageEntity;
+    check-cast p1, Lorg/telegram/tgnet/TLRPC$TL_messages_stickerSet;
 
-    move-result-object p1
+    check-cast p2, Lorg/telegram/tgnet/TLRPC$TL_messages_stickerSet;
 
-    return-object p1
+    invoke-static {v0, p1, p2}, Lorg/telegram/messenger/MediaDataController;->$r8$lambda$91GB6Xt4-jzL5IzM1tyJVQU14kk(Ljava/util/ArrayList;Lorg/telegram/tgnet/TLRPC$TL_messages_stickerSet;Lorg/telegram/tgnet/TLRPC$TL_messages_stickerSet;)I
+
+    move-result p1
+
+    return p1
 .end method

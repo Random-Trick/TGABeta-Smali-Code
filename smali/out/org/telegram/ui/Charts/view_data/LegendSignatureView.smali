@@ -201,7 +201,7 @@
 
     iput-object v0, p0, Lorg/telegram/ui/Charts/view_data/LegendSignatureView;->chevron:Landroid/widget/ImageView;
 
-    const v1, 0x7f07015c
+    const v1, 0x7f070120
 
     .line 88
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
@@ -590,7 +590,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0703d6
+    const v1, 0x7f0703ce
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 

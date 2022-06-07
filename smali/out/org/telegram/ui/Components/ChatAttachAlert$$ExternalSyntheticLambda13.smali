@@ -2,40 +2,38 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/view/View$OnTouchListener;
+.implements Landroid/view/View$OnLongClickListener;
 
 
-# static fields
-.field public static final synthetic INSTANCE:Lorg/telegram/ui/Components/ChatAttachAlert$$ExternalSyntheticLambda13;
+# instance fields
+.field public final synthetic f$0:Lorg/telegram/ui/Components/ChatAttachAlert;
+
+.field public final synthetic f$1:Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;
 
 
 # direct methods
-.method static synthetic constructor <clinit>()V
-    .registers 1
-
-    new-instance v0, Lorg/telegram/ui/Components/ChatAttachAlert$$ExternalSyntheticLambda13;
-
-    invoke-direct {v0}, Lorg/telegram/ui/Components/ChatAttachAlert$$ExternalSyntheticLambda13;-><init>()V
-
-    sput-object v0, Lorg/telegram/ui/Components/ChatAttachAlert$$ExternalSyntheticLambda13;->INSTANCE:Lorg/telegram/ui/Components/ChatAttachAlert$$ExternalSyntheticLambda13;
-
-    return-void
-.end method
-
-.method private synthetic constructor <init>()V
-    .registers 1
+.method public synthetic constructor <init>(Lorg/telegram/ui/Components/ChatAttachAlert;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)V
+    .registers 3
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lorg/telegram/ui/Components/ChatAttachAlert$$ExternalSyntheticLambda13;->f$0:Lorg/telegram/ui/Components/ChatAttachAlert;
+
+    iput-object p2, p0, Lorg/telegram/ui/Components/ChatAttachAlert$$ExternalSyntheticLambda13;->f$1:Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
-    .registers 3
+.method public final onLongClick(Landroid/view/View;)Z
+    .registers 4
 
-    invoke-static {p1, p2}, Lorg/telegram/ui/Components/ChatAttachAlert;->$r8$lambda$1yvyUVCL2vlAfrSO8qsMFeCmTDk(Landroid/view/View;Landroid/view/MotionEvent;)Z
+    iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlert$$ExternalSyntheticLambda13;->f$0:Lorg/telegram/ui/Components/ChatAttachAlert;
+
+    iget-object v1, p0, Lorg/telegram/ui/Components/ChatAttachAlert$$ExternalSyntheticLambda13;->f$1:Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;
+
+    invoke-static {v0, v1, p1}, Lorg/telegram/ui/Components/ChatAttachAlert;->$r8$lambda$8gb4s0ttGM7PHHgq-plRPnpA63k(Lorg/telegram/ui/Components/ChatAttachAlert;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;Landroid/view/View;)Z
 
     move-result p1
 

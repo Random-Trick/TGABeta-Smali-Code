@@ -176,7 +176,7 @@
     .line 172
     iget-object v0, p0, Lorg/telegram/ui/Adapters/LocationActivityAdapter;->sendLocationCell:Lorg/telegram/ui/Cells/SendLocationCell;
 
-    if-eqz v0, :cond_f3
+    if-eqz v0, :cond_f5
 
     .line 173
     iget v1, p0, Lorg/telegram/ui/Adapters/LocationActivityAdapter;->locationType:I
@@ -185,7 +185,7 @@
 
     const/4 v3, 0x4
 
-    const v4, 0x7f0e0958
+    const v4, 0x7f0e09df
 
     const-string v5, "Loading"
 
@@ -193,30 +193,30 @@
 
     const/4 v7, 0x1
 
-    if-eq v1, v3, :cond_62
+    if-eq v1, v3, :cond_64
 
     iget-object v1, p0, Lorg/telegram/ui/Adapters/LocationActivityAdapter;->customLocation:Landroid/location/Location;
 
     if-eqz v1, :cond_17
 
-    goto :goto_62
+    goto :goto_64
 
     .line 193
     :cond_17
     iget-object v1, p0, Lorg/telegram/ui/Adapters/LocationActivityAdapter;->gpsLocation:Landroid/location/Location;
 
-    const v3, 0x7f0e0fdb
+    const v3, 0x7f0e1098
 
     const-string v8, "SendLocation"
 
-    if-eqz v1, :cond_48
+    if-eqz v1, :cond_4a
 
     .line 194
     invoke-static {v8, v3}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v1
 
-    const v2, 0x7f0e009a
+    const v2, 0x7f0e00c2
 
     new-array v3, v7, [Ljava/lang/Object;
 
@@ -228,9 +228,11 @@
 
     float-to-int v4, v4
 
-    const-string v5, "Meters"
+    new-array v5, v6, [Ljava/lang/Object;
 
-    invoke-static {v5, v4}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    const-string v8, "Meters"
+
+    invoke-static {v8, v4, v5}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v4
 
@@ -249,26 +251,26 @@
 
     invoke-virtual {v0, v7}, Lorg/telegram/ui/Cells/SendLocationCell;->setHasLocation(Z)V
 
-    goto/16 :goto_f3
+    goto/16 :goto_f5
 
     .line 197
-    :cond_48
+    :cond_4a
     invoke-static {v8, v3}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v1
 
     iget-boolean v3, p0, Lorg/telegram/ui/Adapters/LocationActivityAdapter;->myLocationDenied:Z
 
-    if-eqz v3, :cond_51
+    if-eqz v3, :cond_53
 
-    goto :goto_55
+    goto :goto_57
 
-    :cond_51
+    :cond_53
     invoke-static {v5, v4}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v2
 
-    :goto_55
+    :goto_57
     invoke-virtual {v0, v1, v2}, Lorg/telegram/ui/Cells/SendLocationCell;->setText(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 198
@@ -280,53 +282,53 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Cells/SendLocationCell;->setHasLocation(Z)V
 
-    goto/16 :goto_f3
+    goto/16 :goto_f5
 
     .line 175
-    :cond_62
-    :goto_62
+    :cond_64
+    :goto_64
     iget-object v0, p0, Lorg/telegram/ui/Adapters/LocationActivityAdapter;->addressName:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
-    if-nez v0, :cond_6d
+    if-nez v0, :cond_6f
 
     .line 176
     iget-object v2, p0, Lorg/telegram/ui/Adapters/LocationActivityAdapter;->addressName:Ljava/lang/String;
 
-    goto :goto_cd
+    goto :goto_cf
 
     .line 177
-    :cond_6d
+    :cond_6f
     iget-object v0, p0, Lorg/telegram/ui/Adapters/LocationActivityAdapter;->customLocation:Landroid/location/Location;
 
-    if-nez v0, :cond_75
+    if-nez v0, :cond_77
 
     iget-object v1, p0, Lorg/telegram/ui/Adapters/LocationActivityAdapter;->gpsLocation:Landroid/location/Location;
 
-    if-eqz v1, :cond_79
+    if-eqz v1, :cond_7b
 
-    :cond_75
+    :cond_77
     iget-boolean v1, p0, Lorg/telegram/ui/Adapters/LocationActivityAdapter;->fetchingLocation:Z
 
-    if-eqz v1, :cond_7e
+    if-eqz v1, :cond_80
 
     .line 178
-    :cond_79
+    :cond_7b
     invoke-static {v5, v4}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v2
 
-    goto :goto_cd
+    goto :goto_cf
 
-    :cond_7e
+    :cond_80
     const/4 v1, 0x2
 
     const-string v8, "(%f,%f)"
 
-    if-eqz v0, :cond_a2
+    if-eqz v0, :cond_a4
 
     .line 180
     sget-object v2, Ljava/util/Locale;->US:Ljava/util/Locale;
@@ -359,13 +361,13 @@
 
     move-result-object v2
 
-    goto :goto_cd
+    goto :goto_cf
 
     .line 181
-    :cond_a2
+    :cond_a4
     iget-object v0, p0, Lorg/telegram/ui/Adapters/LocationActivityAdapter;->gpsLocation:Landroid/location/Location;
 
-    if-eqz v0, :cond_c5
+    if-eqz v0, :cond_c7
 
     .line 182
     sget-object v2, Ljava/util/Locale;->US:Ljava/util/Locale;
@@ -398,13 +400,13 @@
 
     move-result-object v2
 
-    goto :goto_cd
+    goto :goto_cf
 
     .line 183
-    :cond_c5
+    :cond_c7
     iget-boolean v0, p0, Lorg/telegram/ui/Adapters/LocationActivityAdapter;->myLocationDenied:Z
 
-    if-nez v0, :cond_cd
+    if-nez v0, :cond_cf
 
     .line 184
     invoke-static {v5, v4}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -412,16 +414,16 @@
     move-result-object v2
 
     .line 186
-    :cond_cd
-    :goto_cd
+    :cond_cf
+    :goto_cf
     iget v0, p0, Lorg/telegram/ui/Adapters/LocationActivityAdapter;->locationType:I
 
-    if-ne v0, v3, :cond_e0
+    if-ne v0, v3, :cond_e2
 
     .line 187
     iget-object v0, p0, Lorg/telegram/ui/Adapters/LocationActivityAdapter;->sendLocationCell:Lorg/telegram/ui/Cells/SendLocationCell;
 
-    const v1, 0x7f0e03ff
+    const v1, 0x7f0e0440
 
     const-string v3, "ChatSetThisLocation"
 
@@ -431,13 +433,13 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/ui/Cells/SendLocationCell;->setText(Ljava/lang/String;Ljava/lang/String;)V
 
-    goto :goto_ee
+    goto :goto_f0
 
     .line 189
-    :cond_e0
+    :cond_e2
     iget-object v0, p0, Lorg/telegram/ui/Adapters/LocationActivityAdapter;->sendLocationCell:Lorg/telegram/ui/Cells/SendLocationCell;
 
-    const v1, 0x7f0e0fe5
+    const v1, 0x7f0e10a2
 
     const-string v3, "SendSelectedLocation"
 
@@ -448,13 +450,13 @@
     invoke-virtual {v0, v1, v2}, Lorg/telegram/ui/Cells/SendLocationCell;->setText(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 191
-    :goto_ee
+    :goto_f0
     iget-object v0, p0, Lorg/telegram/ui/Adapters/LocationActivityAdapter;->sendLocationCell:Lorg/telegram/ui/Cells/SendLocationCell;
 
     invoke-virtual {v0, v7}, Lorg/telegram/ui/Cells/SendLocationCell;->setHasLocation(Z)V
 
-    :cond_f3
-    :goto_f3
+    :cond_f5
+    :goto_f5
     return-void
 .end method
 
@@ -1546,7 +1548,7 @@
 
     if-eqz p2, :cond_e3
 
-    const p2, 0x7f0e0957
+    const p2, 0x7f0e09de
 
     const-string v0, "LiveLocations"
 
@@ -1560,7 +1562,7 @@
     goto :goto_116
 
     :cond_e3
-    const p2, 0x7f0e0a79
+    const p2, 0x7f0e0b00
 
     const-string v0, "NearbyVenue"
 
@@ -1654,7 +1656,7 @@
     .line 329
     iget-object p2, p0, Lorg/telegram/ui/Adapters/LocationActivityAdapter;->mContext:Landroid/content/Context;
 
-    const v1, 0x7f07012d
+    const v1, 0x7f0700fc
 
     const-string v2, "windowBackgroundGrayShadow"
 

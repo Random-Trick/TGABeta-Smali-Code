@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/ChatAttachAlertPhotoLayoutPreview;)V
     .registers 2
 
-    .line 147
+    .line 149
     iput-object p1, p0, Lorg/telegram/ui/Components/ChatAttachAlertPhotoLayoutPreview$3;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertPhotoLayoutPreview;
 
     invoke-direct {p0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;-><init>()V
@@ -49,12 +49,12 @@
 .method public onCreateViewHolder(Landroid/view/ViewGroup;I)Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
     .registers 3
 
-    .line 151
+    .line 153
     new-instance p1, Lorg/telegram/ui/Components/RecyclerListView$Holder;
 
     iget-object p2, p0, Lorg/telegram/ui/Components/ChatAttachAlertPhotoLayoutPreview$3;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertPhotoLayoutPreview;
 
-    invoke-static {p2}, Lorg/telegram/ui/Components/ChatAttachAlertPhotoLayoutPreview;->access$100(Lorg/telegram/ui/Components/ChatAttachAlertPhotoLayoutPreview;)Lorg/telegram/ui/Components/ChatAttachAlertPhotoLayoutPreview$PreviewGroupsView;
+    invoke-static {p2}, Lorg/telegram/ui/Components/ChatAttachAlertPhotoLayoutPreview;->access$000(Lorg/telegram/ui/Components/ChatAttachAlertPhotoLayoutPreview;)Lorg/telegram/ui/Components/ChatAttachAlertPhotoLayoutPreview$PreviewGroupsView;
 
     move-result-object p2
 

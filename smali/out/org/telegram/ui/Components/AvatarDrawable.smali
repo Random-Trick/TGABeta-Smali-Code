@@ -181,19 +181,6 @@
     return-void
 .end method
 
-.method public static getButtonColorForId(J)I
-    .registers 2
-
-    const-string p0, "avatar_actionBarSelectorBlue"
-
-    .line 124
-    invoke-static {p0}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
-
-    move-result p0
-
-    return p0
-.end method
-
 .method public static getColorForId(J)I
     .registers 3
 
@@ -251,13 +238,13 @@
     return p1
 .end method
 
-.method public static getIconColorForId(J)I
-    .registers 2
+.method public static getIconColorForId(JLorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)I
+    .registers 3
 
     const-string p0, "avatar_actionBarIconBlue"
 
     .line 128
-    invoke-static {p0}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
+    invoke-static {p0, p2}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)I
 
     move-result p0
 
@@ -279,21 +266,21 @@
     return-object p0
 .end method
 
-.method public static getProfileBackColorForId(J)I
-    .registers 2
+.method public static getProfileBackColorForId(JLorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)I
+    .registers 3
 
     const-string p0, "avatar_backgroundActionBarBlue"
 
     .line 140
-    invoke-static {p0}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
+    invoke-static {p0, p2}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)I
 
     move-result p0
 
     return p0
 .end method
 
-.method public static getProfileColorForId(J)I
-    .registers 3
+.method public static getProfileColorForId(JLorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)I
+    .registers 4
 
     .line 132
     sget-object v0, Lorg/telegram/ui/ActionBar/Theme;->keys_avatar_background:[Ljava/lang/String;
@@ -304,20 +291,20 @@
 
     aget-object p0, v0, p0
 
-    invoke-static {p0}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
+    invoke-static {p0, p2}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)I
 
     move-result p0
 
     return p0
 .end method
 
-.method public static getProfileTextColorForId(J)I
-    .registers 2
+.method public static getProfileTextColorForId(JLorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)I
+    .registers 3
 
     const-string p0, "avatar_subtitleInProfileBlue"
 
     .line 136
-    invoke-static {p0}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
+    invoke-static {p0, p2}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)I
 
     move-result p0
 

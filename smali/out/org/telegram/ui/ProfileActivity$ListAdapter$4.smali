@@ -19,13 +19,13 @@
 
 
 # direct methods
-.method constructor <init>(Lorg/telegram/ui/ProfileActivity$ListAdapter;Landroid/content/Context;)V
-    .registers 3
+.method constructor <init>(Lorg/telegram/ui/ProfileActivity$ListAdapter;Landroid/content/Context;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)V
+    .registers 4
 
-    .line 7359
+    .line 7511
     iput-object p1, p0, Lorg/telegram/ui/ProfileActivity$ListAdapter$4;->this$1:Lorg/telegram/ui/ProfileActivity$ListAdapter;
 
-    invoke-direct {p0, p2}, Lorg/telegram/ui/Cells/SettingsSuggestionCell;-><init>(Landroid/content/Context;)V
+    invoke-direct {p0, p2, p3}, Lorg/telegram/ui/Cells/SettingsSuggestionCell;-><init>(Landroid/content/Context;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)V
 
     return-void
 .end method
@@ -37,7 +37,7 @@
 
     if-nez p1, :cond_10
 
-    .line 7372
+    .line 7524
     iget-object p1, p0, Lorg/telegram/ui/ProfileActivity$ListAdapter$4;->this$1:Lorg/telegram/ui/ProfileActivity$ListAdapter;
 
     iget-object p1, p1, Lorg/telegram/ui/ProfileActivity$ListAdapter;->this$0:Lorg/telegram/ui/ProfileActivity;
@@ -52,7 +52,7 @@
 
     goto :goto_1f
 
-    .line 7374
+    .line 7526
     :cond_10
     iget-object p1, p0, Lorg/telegram/ui/ProfileActivity$ListAdapter$4;->this$1:Lorg/telegram/ui/ProfileActivity$ListAdapter;
 
@@ -75,7 +75,7 @@
 .method protected onYesClick(I)V
     .registers 7
 
-    .line 7362
+    .line 7514
     iget-object v0, p0, Lorg/telegram/ui/ProfileActivity$ListAdapter$4;->this$1:Lorg/telegram/ui/ProfileActivity$ListAdapter;
 
     iget-object v0, v0, Lorg/telegram/ui/ProfileActivity$ListAdapter;->this$0:Lorg/telegram/ui/ProfileActivity;
@@ -92,7 +92,7 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/messenger/NotificationCenter;->removeObserver(Lorg/telegram/messenger/NotificationCenter$NotificationCenterDelegate;I)V
 
-    .line 7363
+    .line 7515
     iget-object v0, p0, Lorg/telegram/ui/ProfileActivity$ListAdapter$4;->this$1:Lorg/telegram/ui/ProfileActivity$ListAdapter;
 
     iget-object v0, v0, Lorg/telegram/ui/ProfileActivity$ListAdapter;->this$0:Lorg/telegram/ui/ProfileActivity;
@@ -115,7 +115,7 @@
 
     invoke-virtual {v0, v3, v4, v1}, Lorg/telegram/messenger/MessagesController;->removeSuggestion(JLjava/lang/String;)V
 
-    .line 7364
+    .line 7516
     iget-object v0, p0, Lorg/telegram/ui/ProfileActivity$ListAdapter$4;->this$1:Lorg/telegram/ui/ProfileActivity$ListAdapter;
 
     iget-object v0, v0, Lorg/telegram/ui/ProfileActivity$ListAdapter;->this$0:Lorg/telegram/ui/ProfileActivity;
@@ -132,12 +132,12 @@
 
     if-nez p1, :cond_3e
 
-    .line 7365
+    .line 7517
     iget-object p1, p0, Lorg/telegram/ui/ProfileActivity$ListAdapter$4;->this$1:Lorg/telegram/ui/ProfileActivity$ListAdapter;
 
     iget-object p1, p1, Lorg/telegram/ui/ProfileActivity$ListAdapter;->this$0:Lorg/telegram/ui/ProfileActivity;
 
-    invoke-static {p1}, Lorg/telegram/ui/ProfileActivity;->access$18500(Lorg/telegram/ui/ProfileActivity;)I
+    invoke-static {p1}, Lorg/telegram/ui/ProfileActivity;->access$18600(Lorg/telegram/ui/ProfileActivity;)I
 
     goto :goto_45
 
@@ -146,9 +146,9 @@
 
     iget-object p1, p1, Lorg/telegram/ui/ProfileActivity$ListAdapter;->this$0:Lorg/telegram/ui/ProfileActivity;
 
-    invoke-static {p1}, Lorg/telegram/ui/ProfileActivity;->access$18600(Lorg/telegram/ui/ProfileActivity;)I
+    invoke-static {p1}, Lorg/telegram/ui/ProfileActivity;->access$18700(Lorg/telegram/ui/ProfileActivity;)I
 
-    .line 7366
+    .line 7518
     :goto_45
     iget-object p1, p0, Lorg/telegram/ui/ProfileActivity$ListAdapter$4;->this$1:Lorg/telegram/ui/ProfileActivity$ListAdapter;
 

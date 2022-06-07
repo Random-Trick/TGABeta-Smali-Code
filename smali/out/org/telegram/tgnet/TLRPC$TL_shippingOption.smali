@@ -33,10 +33,10 @@
 .method public constructor <init>()V
     .registers 2
 
-    .line 24363
+    .line 24630
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
-    .line 24368
+    .line 24635
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -49,7 +49,7 @@
 .method public static TLdeserialize(Lorg/telegram/tgnet/AbstractSerializedData;IZ)Lorg/telegram/tgnet/TLRPC$TL_shippingOption;
     .registers 4
 
-    .line 24371
+    .line 24638
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_shippingOption;->constructor:I
 
     if-eq v0, p1, :cond_1e
@@ -60,7 +60,7 @@
 
     return-object p0
 
-    .line 24373
+    .line 24640
     :cond_8
     new-instance p0, Ljava/lang/RuntimeException;
 
@@ -86,13 +86,13 @@
 
     throw p0
 
-    .line 24378
+    .line 24645
     :cond_1e
     new-instance p1, Lorg/telegram/tgnet/TLRPC$TL_shippingOption;
 
     invoke-direct {p1}, Lorg/telegram/tgnet/TLRPC$TL_shippingOption;-><init>()V
 
-    .line 24379
+    .line 24646
     invoke-virtual {p1, p0, p2}, Lorg/telegram/tgnet/TLRPC$TL_shippingOption;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
     return-object p1
@@ -103,21 +103,21 @@
 .method public readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
     .registers 7
 
-    .line 24384
+    .line 24651
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readString(Z)Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_shippingOption;->id:Ljava/lang/String;
 
-    .line 24385
+    .line 24652
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readString(Z)Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_shippingOption;->title:Ljava/lang/String;
 
-    .line 24386
+    .line 24653
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
@@ -132,7 +132,7 @@
 
     return-void
 
-    .line 24389
+    .line 24656
     :cond_19
     new-instance p1, Ljava/lang/RuntimeException;
 
@@ -156,7 +156,7 @@
 
     throw p1
 
-    .line 24393
+    .line 24660
     :cond_2e
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
@@ -165,7 +165,7 @@
     :goto_32
     if-ge v1, v0, :cond_47
 
-    .line 24395
+    .line 24662
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v2
@@ -178,7 +178,7 @@
 
     return-void
 
-    .line 24399
+    .line 24666
     :cond_3f
     iget-object v3, p0, Lorg/telegram/tgnet/TLRPC$TL_shippingOption;->prices:Ljava/util/ArrayList;
 
@@ -195,34 +195,34 @@
 .method public serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
     .registers 5
 
-    .line 24404
+    .line 24671
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_shippingOption;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 24405
+    .line 24672
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_shippingOption;->id:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeString(Ljava/lang/String;)V
 
-    .line 24406
+    .line 24673
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_shippingOption;->title:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeString(Ljava/lang/String;)V
 
     const v0, 0x1cb5c415
 
-    .line 24407
+    .line 24674
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 24408
+    .line 24675
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_shippingOption;->prices:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
-    .line 24409
+    .line 24676
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
     const/4 v1, 0x0
@@ -230,7 +230,7 @@
     :goto_1f
     if-ge v1, v0, :cond_2f
 
-    .line 24411
+    .line 24678
     iget-object v2, p0, Lorg/telegram/tgnet/TLRPC$TL_shippingOption;->prices:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;

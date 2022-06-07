@@ -36,15 +36,15 @@
 .method public constructor <init>(Lorg/telegram/ui/CallLogActivity;Landroid/content/Context;)V
     .registers 10
 
-    .line 355
+    .line 347
     iput-object p1, p0, Lorg/telegram/ui/CallLogActivity$GroupCallCell;->this$0:Lorg/telegram/ui/CallLogActivity;
 
-    .line 356
+    .line 348
     invoke-direct {p0, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
     const-string p1, "windowBackgroundWhite"
 
-    .line 358
+    .line 350
     invoke-static {p1}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
 
     move-result p1
@@ -53,21 +53,21 @@
 
     const-string p1, "VoipChatJoin"
 
-    const v0, 0x7f0e12f1
+    const v0, 0x7f0e13bf
 
-    .line 360
+    .line 352
     invoke-static {p1, v0}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 361
+    .line 353
     new-instance v0, Lorg/telegram/ui/Components/ProgressButton;
 
     invoke-direct {v0, p2}, Lorg/telegram/ui/Components/ProgressButton;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lorg/telegram/ui/CallLogActivity$GroupCallCell;->button:Lorg/telegram/ui/Components/ProgressButton;
 
-    .line 362
+    .line 354
     invoke-virtual {v0}, Landroid/widget/Button;->getPaint()Landroid/text/TextPaint;
 
     move-result-object v0
@@ -84,14 +84,14 @@
 
     double-to-int v0, v0
 
-    .line 364
+    .line 356
     new-instance v1, Lorg/telegram/ui/Cells/ProfileSearchCell;
 
     invoke-direct {v1, p2}, Lorg/telegram/ui/Cells/ProfileSearchCell;-><init>(Landroid/content/Context;)V
 
     iput-object v1, p0, Lorg/telegram/ui/CallLogActivity$GroupCallCell;->profileSearchCell:Lorg/telegram/ui/Cells/ProfileSearchCell;
 
-    .line 365
+    .line 357
     sget-boolean p2, Lorg/telegram/messenger/LocaleController;->isRTL:Z
 
     const/high16 v2, 0x42300000    # 44.0f
@@ -130,7 +130,7 @@
     :goto_4c
     invoke-virtual {v1, p2, v3, v2, v3}, Landroid/view/ViewGroup;->setPadding(IIII)V
 
-    .line 366
+    .line 358
     iget-object p2, p0, Lorg/telegram/ui/CallLogActivity$GroupCallCell;->profileSearchCell:Lorg/telegram/ui/Cells/ProfileSearchCell;
 
     const/high16 v0, 0x3f800000    # 1.0f
@@ -143,7 +143,7 @@
 
     invoke-virtual {p2, v3, v0}, Lorg/telegram/ui/Cells/ProfileSearchCell;->setSublabelOffset(II)V
 
-    .line 367
+    .line 359
     iget-object p2, p0, Lorg/telegram/ui/CallLogActivity$GroupCallCell;->profileSearchCell:Lorg/telegram/ui/Cells/ProfileSearchCell;
 
     const/4 v0, -0x1
@@ -156,12 +156,12 @@
 
     invoke-virtual {p0, p2, v0}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 369
+    .line 361
     iget-object p2, p0, Lorg/telegram/ui/CallLogActivity$GroupCallCell;->button:Lorg/telegram/ui/Components/ProgressButton;
 
     invoke-virtual {p2, p1}, Landroid/widget/Button;->setText(Ljava/lang/CharSequence;)V
 
-    .line 370
+    .line 362
     iget-object p1, p0, Lorg/telegram/ui/CallLogActivity$GroupCallCell;->button:Lorg/telegram/ui/Components/ProgressButton;
 
     const/4 p2, 0x1
@@ -170,7 +170,7 @@
 
     invoke-virtual {p1, p2, v0}, Landroid/widget/Button;->setTextSize(IF)V
 
-    .line 371
+    .line 363
     iget-object p1, p0, Lorg/telegram/ui/CallLogActivity$GroupCallCell;->button:Lorg/telegram/ui/Components/ProgressButton;
 
     const-string p2, "featuredStickers_buttonText"
@@ -181,7 +181,7 @@
 
     invoke-virtual {p1, p2}, Landroid/widget/Button;->setTextColor(I)V
 
-    .line 372
+    .line 364
     iget-object p1, p0, Lorg/telegram/ui/CallLogActivity$GroupCallCell;->button:Lorg/telegram/ui/Components/ProgressButton;
 
     const-string p2, "featuredStickers_buttonProgress"
@@ -192,7 +192,7 @@
 
     invoke-virtual {p1, p2}, Lorg/telegram/ui/Components/ProgressButton;->setProgressColor(I)V
 
-    .line 373
+    .line 365
     iget-object p1, p0, Lorg/telegram/ui/CallLogActivity$GroupCallCell;->button:Lorg/telegram/ui/Components/ProgressButton;
 
     const-string p2, "featuredStickers_addButton"
@@ -211,7 +211,7 @@
 
     invoke-virtual {p1, p2, v1, v2}, Lorg/telegram/ui/Components/ProgressButton;->setBackgroundRoundRect(IIF)V
 
-    .line 374
+    .line 366
     iget-object p1, p0, Lorg/telegram/ui/CallLogActivity$GroupCallCell;->button:Lorg/telegram/ui/Components/ProgressButton;
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -224,7 +224,7 @@
 
     invoke-virtual {p1, p2, v3, v0, v3}, Landroid/widget/Button;->setPadding(IIII)V
 
-    .line 375
+    .line 367
     iget-object p1, p0, Lorg/telegram/ui/CallLogActivity$GroupCallCell;->button:Lorg/telegram/ui/Components/ProgressButton;
 
     const/high16 v0, -0x40000000    # -2.0f
@@ -235,7 +235,7 @@
 
     const/4 v3, 0x0
 
-    const/high16 v4, 0x41900000    # 18.0f
+    const/high16 v4, 0x41800000    # 16.0f
 
     const/high16 v5, 0x41600000    # 14.0f
 
@@ -247,7 +247,7 @@
 
     invoke-virtual {p0, p1, p2}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 376
+    .line 368
     iget-object p1, p0, Lorg/telegram/ui/CallLogActivity$GroupCallCell;->button:Lorg/telegram/ui/Components/ProgressButton;
 
     new-instance p2, Lorg/telegram/ui/CallLogActivity$GroupCallCell$$ExternalSyntheticLambda0;
@@ -259,28 +259,28 @@
     return-void
 .end method
 
-.method static synthetic access$2100(Lorg/telegram/ui/CallLogActivity$GroupCallCell;)Lorg/telegram/ui/Cells/ProfileSearchCell;
+.method static synthetic access$2500(Lorg/telegram/ui/CallLogActivity$GroupCallCell;)Lorg/telegram/ui/Components/ProgressButton;
     .registers 1
 
-    .line 349
-    iget-object p0, p0, Lorg/telegram/ui/CallLogActivity$GroupCallCell;->profileSearchCell:Lorg/telegram/ui/Cells/ProfileSearchCell;
-
-    return-object p0
-.end method
-
-.method static synthetic access$2200(Lorg/telegram/ui/CallLogActivity$GroupCallCell;)Lorg/telegram/ui/Components/ProgressButton;
-    .registers 1
-
-    .line 349
+    .line 341
     iget-object p0, p0, Lorg/telegram/ui/CallLogActivity$GroupCallCell;->button:Lorg/telegram/ui/Components/ProgressButton;
 
     return-object p0
 .end method
 
-.method static synthetic access$3100(Lorg/telegram/ui/CallLogActivity$GroupCallCell;)Lorg/telegram/tgnet/TLRPC$Chat;
+.method static synthetic access$2600(Lorg/telegram/ui/CallLogActivity$GroupCallCell;)Lorg/telegram/ui/Cells/ProfileSearchCell;
     .registers 1
 
-    .line 349
+    .line 341
+    iget-object p0, p0, Lorg/telegram/ui/CallLogActivity$GroupCallCell;->profileSearchCell:Lorg/telegram/ui/Cells/ProfileSearchCell;
+
+    return-object p0
+.end method
+
+.method static synthetic access$3000(Lorg/telegram/ui/CallLogActivity$GroupCallCell;)Lorg/telegram/tgnet/TLRPC$Chat;
+    .registers 1
+
+    .line 341
     iget-object p0, p0, Lorg/telegram/ui/CallLogActivity$GroupCallCell;->currentChat:Lorg/telegram/tgnet/TLRPC$Chat;
 
     return-object p0
@@ -289,37 +289,14 @@
 .method private synthetic lambda$new$0(Landroid/view/View;)V
     .registers 9
 
-    .line 377
-    iget-object v0, p0, Lorg/telegram/ui/CallLogActivity$GroupCallCell;->this$0:Lorg/telegram/ui/CallLogActivity;
-
-    invoke-static {v0}, Lorg/telegram/ui/CallLogActivity;->access$200(Lorg/telegram/ui/CallLogActivity;)Lorg/telegram/ui/Components/ProgressButton;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    const/4 v2, 0x1
-
-    if-eqz v0, :cond_13
-
-    .line 378
-    iget-object v0, p0, Lorg/telegram/ui/CallLogActivity$GroupCallCell;->this$0:Lorg/telegram/ui/CallLogActivity;
-
-    invoke-static {v0}, Lorg/telegram/ui/CallLogActivity;->access$200(Lorg/telegram/ui/CallLogActivity;)Lorg/telegram/ui/Components/ProgressButton;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v1, v2}, Lorg/telegram/ui/Components/ProgressButton;->setDrawProgress(ZZ)V
-
-    .line 380
-    :cond_13
+    .line 369
     invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object p1
 
     check-cast p1, Ljava/lang/Long;
 
-    .line 381
+    .line 370
     iget-object v0, p0, Lorg/telegram/ui/CallLogActivity$GroupCallCell;->this$0:Lorg/telegram/ui/CallLogActivity;
 
     invoke-virtual {v0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getMessagesController()Lorg/telegram/messenger/MessagesController;
@@ -328,31 +305,33 @@
 
     invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
 
-    move-result-wide v3
+    move-result-wide v1
 
-    invoke-virtual {v0, v3, v4, v1}, Lorg/telegram/messenger/MessagesController;->getGroupCall(JZ)Lorg/telegram/messenger/ChatObject$Call;
+    const/4 v3, 0x0
+
+    invoke-virtual {v0, v1, v2, v3}, Lorg/telegram/messenger/MessagesController;->getGroupCall(JZ)Lorg/telegram/messenger/ChatObject$Call;
 
     move-result-object v0
 
-    .line 382
-    iget-object v3, p0, Lorg/telegram/ui/CallLogActivity$GroupCallCell;->this$0:Lorg/telegram/ui/CallLogActivity;
+    .line 371
+    iget-object v1, p0, Lorg/telegram/ui/CallLogActivity$GroupCallCell;->this$0:Lorg/telegram/ui/CallLogActivity;
 
-    invoke-virtual {v3}, Lorg/telegram/ui/ActionBar/BaseFragment;->getMessagesController()Lorg/telegram/messenger/MessagesController;
+    invoke-virtual {v1}, Lorg/telegram/ui/ActionBar/BaseFragment;->getMessagesController()Lorg/telegram/messenger/MessagesController;
 
-    move-result-object v4
+    move-result-object v2
 
-    invoke-virtual {v4, p1}, Lorg/telegram/messenger/MessagesController;->getChat(Ljava/lang/Long;)Lorg/telegram/tgnet/TLRPC$Chat;
+    invoke-virtual {v2, p1}, Lorg/telegram/messenger/MessagesController;->getChat(Ljava/lang/Long;)Lorg/telegram/tgnet/TLRPC$Chat;
 
-    move-result-object v4
+    move-result-object v2
 
-    invoke-static {v3, v4}, Lorg/telegram/ui/CallLogActivity;->access$302(Lorg/telegram/ui/CallLogActivity;Lorg/telegram/tgnet/TLRPC$Chat;)Lorg/telegram/tgnet/TLRPC$Chat;
+    invoke-static {v1, v2}, Lorg/telegram/ui/CallLogActivity;->access$202(Lorg/telegram/ui/CallLogActivity;Lorg/telegram/tgnet/TLRPC$Chat;)Lorg/telegram/tgnet/TLRPC$Chat;
 
-    if-eqz v0, :cond_4f
+    if-eqz v0, :cond_3d
 
-    .line 384
+    .line 373
     iget-object p1, p0, Lorg/telegram/ui/CallLogActivity$GroupCallCell;->this$0:Lorg/telegram/ui/CallLogActivity;
 
-    invoke-static {p1}, Lorg/telegram/ui/CallLogActivity;->access$300(Lorg/telegram/ui/CallLogActivity;)Lorg/telegram/tgnet/TLRPC$Chat;
+    invoke-static {p1}, Lorg/telegram/ui/CallLogActivity;->access$200(Lorg/telegram/ui/CallLogActivity;)Lorg/telegram/tgnet/TLRPC$Chat;
 
     move-result-object v0
 
@@ -376,15 +355,15 @@
 
     invoke-static/range {v0 .. v6}, Lorg/telegram/ui/Components/voip/VoIPHelper;->startCall(Lorg/telegram/tgnet/TLRPC$Chat;Lorg/telegram/tgnet/TLRPC$InputPeer;Ljava/lang/String;ZLandroid/app/Activity;Lorg/telegram/ui/ActionBar/BaseFragment;Lorg/telegram/messenger/AccountInstance;)V
 
-    goto :goto_6d
+    goto :goto_50
 
-    .line 386
-    :cond_4f
+    .line 375
+    :cond_3d
     iget-object v0, p0, Lorg/telegram/ui/CallLogActivity$GroupCallCell;->this$0:Lorg/telegram/ui/CallLogActivity;
 
-    invoke-static {v0, p1}, Lorg/telegram/ui/CallLogActivity;->access$402(Lorg/telegram/ui/CallLogActivity;Ljava/lang/Long;)Ljava/lang/Long;
+    invoke-static {v0, p1}, Lorg/telegram/ui/CallLogActivity;->access$302(Lorg/telegram/ui/CallLogActivity;Ljava/lang/Long;)Ljava/lang/Long;
 
-    .line 387
+    .line 376
     iget-object v0, p0, Lorg/telegram/ui/CallLogActivity$GroupCallCell;->this$0:Lorg/telegram/ui/CallLogActivity;
 
     invoke-virtual {v0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getMessagesController()Lorg/telegram/messenger/MessagesController;
@@ -393,23 +372,13 @@
 
     invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
 
-    move-result-wide v3
+    move-result-wide v1
 
-    invoke-virtual {v0, v3, v4, v1, v2}, Lorg/telegram/messenger/MessagesController;->loadFullChat(JIZ)V
+    const/4 p1, 0x1
 
-    .line 388
-    iget-object p1, p0, Lorg/telegram/ui/CallLogActivity$GroupCallCell;->button:Lorg/telegram/ui/Components/ProgressButton;
+    invoke-virtual {v0, v1, v2, v3, p1}, Lorg/telegram/messenger/MessagesController;->loadFullChat(JIZ)V
 
-    invoke-virtual {p1, v2, v2}, Lorg/telegram/ui/Components/ProgressButton;->setDrawProgress(ZZ)V
-
-    .line 389
-    iget-object p1, p0, Lorg/telegram/ui/CallLogActivity$GroupCallCell;->this$0:Lorg/telegram/ui/CallLogActivity;
-
-    iget-object v0, p0, Lorg/telegram/ui/CallLogActivity$GroupCallCell;->button:Lorg/telegram/ui/Components/ProgressButton;
-
-    invoke-static {p1, v0}, Lorg/telegram/ui/CallLogActivity;->access$202(Lorg/telegram/ui/CallLogActivity;Lorg/telegram/ui/Components/ProgressButton;)Lorg/telegram/ui/Components/ProgressButton;
-
-    :goto_6d
+    :goto_50
     return-void
 .end method
 
@@ -418,7 +387,7 @@
 .method public setChat(Lorg/telegram/tgnet/TLRPC$Chat;)V
     .registers 2
 
-    .line 395
+    .line 382
     iput-object p1, p0, Lorg/telegram/ui/CallLogActivity$GroupCallCell;->currentChat:Lorg/telegram/tgnet/TLRPC$Chat;
 
     return-void

@@ -25,7 +25,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/RecyclerListView;)V
     .registers 2
 
-    .line 2509
+    .line 2513
     iput-object p1, p0, Lorg/telegram/ui/Components/RecyclerListView$6;->this$0:Lorg/telegram/ui/Components/RecyclerListView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public run()V
     .registers 7
 
-    .line 2513
+    .line 2517
     iget-object v0, p0, Lorg/telegram/ui/Components/RecyclerListView$6;->this$0:Lorg/telegram/ui/Components/RecyclerListView;
 
     iget-object v1, v0, Lorg/telegram/ui/Components/RecyclerListView;->multiSelectionListener:Lorg/telegram/ui/Components/RecyclerListView$onMultiSelectionChanged;
@@ -47,7 +47,7 @@
 
     invoke-interface {v1, v0}, Lorg/telegram/ui/Components/RecyclerListView$onMultiSelectionChanged;->getPaddings([I)V
 
-    .line 2514
+    .line 2518
     iget-object v0, p0, Lorg/telegram/ui/Components/RecyclerListView$6;->this$0:Lorg/telegram/ui/Components/RecyclerListView;
 
     iget-boolean v0, v0, Lorg/telegram/ui/Components/RecyclerListView;->multiselectScrollToTop:Z
@@ -58,14 +58,14 @@
 
     if-eqz v0, :cond_23
 
-    .line 2515
+    .line 2519
     invoke-static {v2}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v0
 
     neg-int v0, v0
 
-    .line 2516
+    .line 2520
     iget-object v2, p0, Lorg/telegram/ui/Components/RecyclerListView$6;->this$0:Lorg/telegram/ui/Components/RecyclerListView;
 
     iget-object v3, v2, Lorg/telegram/ui/Components/RecyclerListView;->listPaddings:[I
@@ -80,13 +80,13 @@
 
     goto :goto_39
 
-    .line 2518
+    .line 2522
     :cond_23
     invoke-static {v2}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v0
 
-    .line 2519
+    .line 2523
     iget-object v2, p0, Lorg/telegram/ui/Components/RecyclerListView$6;->this$0:Lorg/telegram/ui/Components/RecyclerListView;
 
     invoke-virtual {v2}, Landroid/view/ViewGroup;->getMeasuredHeight()I
@@ -107,7 +107,7 @@
 
     invoke-static {v2, v1, v3}, Lorg/telegram/ui/Components/RecyclerListView;->access$3100(Lorg/telegram/ui/Components/RecyclerListView;FF)Z
 
-    .line 2521
+    .line 2525
     :goto_39
     iget-object v1, p0, Lorg/telegram/ui/Components/RecyclerListView$6;->this$0:Lorg/telegram/ui/Components/RecyclerListView;
 
@@ -115,14 +115,14 @@
 
     invoke-interface {v1, v0}, Lorg/telegram/ui/Components/RecyclerListView$onMultiSelectionChanged;->scrollBy(I)V
 
-    .line 2522
+    .line 2526
     iget-object v0, p0, Lorg/telegram/ui/Components/RecyclerListView$6;->this$0:Lorg/telegram/ui/Components/RecyclerListView;
 
     iget-boolean v1, v0, Lorg/telegram/ui/Components/RecyclerListView;->multiselectScrollRunning:Z
 
     if-eqz v1, :cond_4b
 
-    .line 2523
+    .line 2527
     iget-object v0, v0, Lorg/telegram/ui/Components/RecyclerListView;->scroller:Ljava/lang/Runnable;
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V

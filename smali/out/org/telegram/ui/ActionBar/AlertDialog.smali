@@ -333,7 +333,7 @@
 
     move-result-object p1
 
-    const p3, 0x7f07036d
+    const p3, 0x7f070384
 
     invoke-virtual {p1, p3}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -1298,7 +1298,7 @@
 
     invoke-direct {v0, v1}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    const v1, 0x7f0e017c
+    const v1, 0x7f0e01b1
 
     const-string v2, "AppName"
 
@@ -1309,7 +1309,7 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const v1, 0x7f0e10ec
+    const v1, 0x7f0e11ab
 
     const-string v2, "StopLoading"
 
@@ -1320,7 +1320,7 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const v1, 0x7f0e13c9
+    const v1, 0x7f0e1497
 
     const-string v2, "WaitMore"
 
@@ -1333,7 +1333,7 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const v1, 0x7f0e10e4
+    const v1, 0x7f0e11a3
 
     const-string v2, "Stop"
 
@@ -1825,7 +1825,7 @@
 
     move-result-object v7
 
-    const v8, 0x7f07036f
+    const v8, 0x7f070386
 
     invoke-virtual {v7, v8}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -2266,7 +2266,7 @@
 
     move-result-object v15
 
-    const v12, 0x7f07013d
+    const v12, 0x7f070106
 
     invoke-virtual {v15, v12}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -2291,7 +2291,7 @@
 
     move-result-object v12
 
-    const v15, 0x7f07013e
+    const v15, 0x7f070107
 
     invoke-virtual {v12, v15}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -3747,7 +3747,7 @@
 
     move-result-object v3
 
-    invoke-virtual {v1, v3}, Landroid/widget/TextView;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {v1, v3}, Landroid/widget/TextView;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
     .line 841
     invoke-static {v4}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I

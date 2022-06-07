@@ -199,7 +199,7 @@
 
     move-result-object v6
 
-    const v7, 0x7f0703b4
+    const v7, 0x7f0703b9
 
     invoke-virtual {v6, v7}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -393,7 +393,7 @@
 
     const-string v8, "LocationNotifiation"
 
-    const v9, 0x7f0e096a
+    const v9, 0x7f0e09f1
 
     .line 164
     invoke-static {v8, v9}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -1169,7 +1169,7 @@
 
     if-eqz v0, :cond_18
 
-    const v0, 0x7f0e0a40
+    const v0, 0x7f0e0ac7
 
     new-array v2, v2, [Ljava/lang/Object;
 
@@ -1189,7 +1189,7 @@
     return-object p1
 
     :cond_18
-    const v0, 0x7f0e08f5
+    const v0, 0x7f0e095a
 
     new-array v2, v2, [Ljava/lang/Object;
 
@@ -1245,7 +1245,7 @@
 
     if-ne p1, v2, :cond_1c
 
-    const p1, 0x7f0e0764
+    const p1, 0x7f0e07ba
 
     new-array v0, v2, [Ljava/lang/Object;
 
@@ -1292,7 +1292,7 @@
     return-object p1
 
     :cond_31
-    const v0, 0x7f0e0a30
+    const v0, 0x7f0e0ab7
 
     const-string v3, "MetersShort"
 
@@ -2737,7 +2737,7 @@
     :cond_26
     iget-object p1, p0, Lorg/telegram/ui/Components/ProximitySheet;->infoTextView:Landroid/widget/TextView;
 
-    const v1, 0x7f0e096d
+    const v1, 0x7f0e09f4
 
     new-array v8, v6, [Ljava/lang/Object;
 
@@ -2831,7 +2831,7 @@
     .line 319
     iget-object p1, p0, Lorg/telegram/ui/Components/ProximitySheet;->buttonTextView:Landroid/widget/TextView;
 
-    const v1, 0x7f0e096b
+    const v1, 0x7f0e09f2
 
     new-array v6, v6, [Ljava/lang/Object;
 
@@ -2850,7 +2850,7 @@
     :cond_94
     const-string p1, "LocationNotifiationButtonUser"
 
-    const v8, 0x7f0e096c
+    const v8, 0x7f0e09f3
 
     .line 321
     invoke-static {p1, v8}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;

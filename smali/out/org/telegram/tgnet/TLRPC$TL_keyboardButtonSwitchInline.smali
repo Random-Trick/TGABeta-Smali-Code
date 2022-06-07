@@ -17,7 +17,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 16900
+    .line 17063
     invoke-direct {p0}, Lorg/telegram/tgnet/TLRPC$KeyboardButton;-><init>()V
 
     return-void
@@ -28,7 +28,7 @@
 .method public readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
     .registers 5
 
-    .line 16905
+    .line 17068
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
@@ -46,18 +46,18 @@
     :cond_b
     const/4 v1, 0x0
 
-    .line 16906
+    .line 17069
     :goto_c
     iput-boolean v1, p0, Lorg/telegram/tgnet/TLRPC$KeyboardButton;->same_peer:Z
 
-    .line 16907
+    .line 17070
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readString(Z)Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/telegram/tgnet/TLRPC$KeyboardButton;->text:Ljava/lang/String;
 
-    .line 16908
+    .line 17071
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readString(Z)Ljava/lang/String;
 
     move-result-object p1
@@ -70,12 +70,12 @@
 .method public serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
     .registers 3
 
-    .line 16912
+    .line 17075
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_keyboardButtonSwitchInline;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 16913
+    .line 17076
     iget-boolean v0, p0, Lorg/telegram/tgnet/TLRPC$KeyboardButton;->same_peer:Z
 
     if-eqz v0, :cond_e
@@ -94,15 +94,15 @@
     :goto_12
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$KeyboardButton;->flags:I
 
-    .line 16914
+    .line 17077
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 16915
+    .line 17078
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$KeyboardButton;->text:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeString(Ljava/lang/String;)V
 
-    .line 16916
+    .line 17079
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$KeyboardButton;->query:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeString(Ljava/lang/String;)V

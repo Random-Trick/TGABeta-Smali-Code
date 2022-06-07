@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lj$/util/w;
+.implements Lj$/util/v;
 
 
 # instance fields
@@ -20,7 +20,7 @@
     return-void
 .end method
 
-.method public static synthetic a(Ljava/util/Spliterator$OfLong;)Lj$/util/w;
+.method public static synthetic a(Ljava/util/Spliterator$OfLong;)Lj$/util/v;
     .registers 2
 
     if-nez p0, :cond_4
@@ -36,7 +36,7 @@
 
     check-cast p0, Lj$/wrappers/n;
 
-    iget-object p0, p0, Lj$/wrappers/n;->a:Lj$/util/w;
+    iget-object p0, p0, Lj$/wrappers/n;->a:Lj$/util/v;
 
     return-object p0
 
@@ -192,39 +192,7 @@
     return p1
 .end method
 
-.method public synthetic trySplit()Lj$/util/w;
-    .registers 2
-
-    iget-object v0, p0, Lj$/wrappers/m;->a:Ljava/util/Spliterator$OfLong;
-
-    invoke-interface {v0}, Ljava/util/Spliterator$OfLong;->trySplit()Ljava/util/Spliterator$OfLong;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lj$/wrappers/m;->a(Ljava/util/Spliterator$OfLong;)Lj$/util/w;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public synthetic trySplit()Lj$/util/x;
-    .registers 2
-
-    iget-object v0, p0, Lj$/wrappers/m;->a:Ljava/util/Spliterator$OfLong;
-
-    invoke-interface {v0}, Ljava/util/Spliterator$OfLong;->trySplit()Ljava/util/Spliterator$OfPrimitive;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lj$/wrappers/o;->a(Ljava/util/Spliterator$OfPrimitive;)Lj$/util/x;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public synthetic trySplit()Lj$/util/y;
+.method public synthetic trySplit()Lj$/util/u;
     .registers 2
 
     iget-object v0, p0, Lj$/wrappers/m;->a:Ljava/util/Spliterator$OfLong;
@@ -233,7 +201,39 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lj$/wrappers/g;->a(Ljava/util/Spliterator;)Lj$/util/y;
+    invoke-static {v0}, Lj$/wrappers/g;->a(Ljava/util/Spliterator;)Lj$/util/u;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public synthetic trySplit()Lj$/util/v;
+    .registers 2
+
+    iget-object v0, p0, Lj$/wrappers/m;->a:Ljava/util/Spliterator$OfLong;
+
+    invoke-interface {v0}, Ljava/util/Spliterator$OfLong;->trySplit()Ljava/util/Spliterator$OfLong;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lj$/wrappers/m;->a(Ljava/util/Spliterator$OfLong;)Lj$/util/v;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public synthetic trySplit()Lj$/util/w;
+    .registers 2
+
+    iget-object v0, p0, Lj$/wrappers/m;->a:Ljava/util/Spliterator$OfLong;
+
+    invoke-interface {v0}, Ljava/util/Spliterator$OfLong;->trySplit()Ljava/util/Spliterator$OfPrimitive;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lj$/wrappers/o;->a(Ljava/util/Spliterator$OfPrimitive;)Lj$/util/w;
 
     move-result-object v0
 

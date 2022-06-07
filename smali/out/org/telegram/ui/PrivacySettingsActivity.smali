@@ -813,11 +813,11 @@
 
     move-result v2
 
-    const v3, 0x7f0e0be7
+    const v3, 0x7f0e0c71
 
     const-string v4, "P2PNobody"
 
-    const v5, 0x7f0e091d
+    const v5, 0x7f0e0983
 
     const-string v6, "LastSeenNobody"
 
@@ -1046,7 +1046,7 @@
     :goto_b5
     add-int/lit8 v9, v9, 0x1
 
-    const v5, 0x7f0e091d
+    const v5, 0x7f0e0983
 
     goto/16 :goto_2c
 
@@ -1096,7 +1096,7 @@
     return-object v0
 
     :cond_de
-    const v0, 0x7f0e0be8
+    const v0, 0x7f0e0c72
 
     new-array v1, v15, [Ljava/lang/Object;
 
@@ -1122,7 +1122,7 @@
 
     if-nez v12, :cond_fc
 
-    const v0, 0x7f0e091d
+    const v0, 0x7f0e0983
 
     .line 680
     invoke-static {v6, v0}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -1132,7 +1132,7 @@
     return-object v0
 
     :cond_fc
-    const v0, 0x7f0e091e
+    const v0, 0x7f0e0984
 
     new-array v1, v15, [Ljava/lang/Object;
 
@@ -1159,7 +1159,7 @@
 
     if-nez v11, :cond_11e
 
-    const v0, 0x7f0e0be0
+    const v0, 0x7f0e0c6a
 
     const-string v1, "P2PContacts"
 
@@ -1175,7 +1175,7 @@
 
     if-eqz v11, :cond_13b
 
-    const v0, 0x7f0e0be2
+    const v0, 0x7f0e0c6c
 
     new-array v1, v14, [Ljava/lang/Object;
 
@@ -1205,7 +1205,7 @@
     :cond_13b
     if-eqz v11, :cond_150
 
-    const v0, 0x7f0e0be1
+    const v0, 0x7f0e0c6b
 
     new-array v1, v15, [Ljava/lang/Object;
 
@@ -1229,7 +1229,7 @@
     :cond_150
     const/4 v3, 0x0
 
-    const v0, 0x7f0e0be3
+    const v0, 0x7f0e0c6d
 
     new-array v1, v15, [Ljava/lang/Object;
 
@@ -1253,7 +1253,7 @@
 
     if-nez v11, :cond_171
 
-    const v0, 0x7f0e0914
+    const v0, 0x7f0e097a
 
     const-string v1, "LastSeenContacts"
 
@@ -1269,7 +1269,7 @@
 
     if-eqz v11, :cond_18e
 
-    const v0, 0x7f0e0916
+    const v0, 0x7f0e097c
 
     new-array v1, v14, [Ljava/lang/Object;
 
@@ -1299,7 +1299,7 @@
     :cond_18e
     if-eqz v11, :cond_1a3
 
-    const v0, 0x7f0e0915
+    const v0, 0x7f0e097b
 
     new-array v1, v15, [Ljava/lang/Object;
 
@@ -1323,7 +1323,7 @@
     :cond_1a3
     const/4 v3, 0x0
 
-    const v0, 0x7f0e0917
+    const v0, 0x7f0e097d
 
     new-array v1, v15, [Ljava/lang/Object;
 
@@ -1348,7 +1348,7 @@
 
     if-nez v11, :cond_1c4
 
-    const v0, 0x7f0e0be5
+    const v0, 0x7f0e0c6f
 
     const-string v1, "P2PEverybody"
 
@@ -1360,7 +1360,7 @@
     return-object v0
 
     :cond_1c4
-    const v0, 0x7f0e0be6
+    const v0, 0x7f0e0c70
 
     new-array v1, v15, [Ljava/lang/Object;
 
@@ -1384,7 +1384,7 @@
     :cond_1d7
     if-nez v11, :cond_1e3
 
-    const v0, 0x7f0e091a
+    const v0, 0x7f0e0980
 
     const-string v1, "LastSeenEverybody"
 
@@ -1396,7 +1396,7 @@
     return-object v0
 
     :cond_1e3
-    const v0, 0x7f0e091b
+    const v0, 0x7f0e0981
 
     new-array v1, v15, [Ljava/lang/Object;
 
@@ -1531,7 +1531,7 @@
 
     if-eqz p2, :cond_3c
 
-    const p1, 0x7f0e0e10
+    const p1, 0x7f0e0eb9
 
     const-string p2, "PrivacyPaymentsPaymentShippingCleared"
 
@@ -1548,7 +1548,7 @@
 
     if-eqz p2, :cond_4a
 
-    const p1, 0x7f0e0e11
+    const p1, 0x7f0e0eba
 
     const-string p2, "PrivacyPaymentsShippingInfoCleared"
 
@@ -1565,7 +1565,7 @@
 
     if-eqz p1, :cond_65
 
-    const p1, 0x7f0e0e0f
+    const p1, 0x7f0e0eb8
 
     const-string p2, "PrivacyPaymentsPaymentInfoCleared"
 
@@ -1625,7 +1625,7 @@
 
     invoke-direct {p1, p2}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    const p2, 0x7f0e0e0e
+    const p2, 0x7f0e0eb7
 
     const-string v0, "PrivacyPaymentsClearAlertTitle"
 
@@ -1636,7 +1636,7 @@
 
     invoke-virtual {p1, p2}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const p2, 0x7f0e0e0c
+    const p2, 0x7f0e0eb5
 
     const-string v0, "PrivacyPaymentsClearAlert"
 
@@ -1647,7 +1647,7 @@
 
     invoke-virtual {p1, p2}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const p2, 0x7f0e0460
+    const p2, 0x7f0e04a5
 
     const-string v0, "ClearButton"
 
@@ -1662,7 +1662,7 @@
 
     invoke-virtual {p1, p2, v0}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const p2, 0x7f0e0331
+    const p2, 0x7f0e036d
 
     const-string v0, "Cancel"
 
@@ -1745,7 +1745,7 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/BaseFragment;->presentFragment(Lorg/telegram/ui/ActionBar/BaseFragment;)Z
 
-    goto/16 :goto_3d3
+    goto/16 :goto_3db
 
     .line 214
     :cond_1b
@@ -1762,7 +1762,7 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/BaseFragment;->presentFragment(Lorg/telegram/ui/ActionBar/BaseFragment;)Z
 
-    goto/16 :goto_3d3
+    goto/16 :goto_3db
 
     .line 216
     :cond_2a
@@ -1779,7 +1779,7 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/BaseFragment;->presentFragment(Lorg/telegram/ui/ActionBar/BaseFragment;)Z
 
-    goto/16 :goto_3d3
+    goto/16 :goto_3db
 
     .line 218
     :cond_39
@@ -1791,7 +1791,7 @@
 
     const/high16 v8, 0x40800000    # 4.0f
 
-    const v9, 0x7f0e0331
+    const v9, 0x7f0e036d
 
     const-string v10, "Cancel"
 
@@ -1799,7 +1799,7 @@
 
     const/4 v12, 0x0
 
-    if-ne v2, v3, :cond_102
+    if-ne v2, v3, :cond_10a
 
     .line 219
     invoke-virtual/range {p0 .. p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getParentActivity()Landroid/app/Activity;
@@ -1861,7 +1861,7 @@
 
     invoke-direct {v2, v13}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    const v13, 0x7f0e0544
+    const v13, 0x7f0e0595
 
     const-string v14, "DeleteAccountTitle"
 
@@ -1874,33 +1874,41 @@
 
     new-array v13, v6, [Ljava/lang/String;
 
-    const-string v14, "Months"
+    new-array v14, v4, [Ljava/lang/Object;
+
+    const-string v15, "Months"
 
     .line 236
-    invoke-static {v14, v5}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    invoke-static {v15, v5, v14}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
-    move-result-object v15
+    move-result-object v14
 
-    aput-object v15, v13, v4
+    aput-object v14, v13, v4
+
+    new-array v14, v4, [Ljava/lang/Object;
 
     .line 237
-    invoke-static {v14, v3}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    invoke-static {v15, v3, v14}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
-    move-result-object v15
+    move-result-object v14
 
-    aput-object v15, v13, v5
+    aput-object v14, v13, v5
+
+    new-array v14, v4, [Ljava/lang/Object;
 
     .line 238
-    invoke-static {v14, v7}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    invoke-static {v15, v7, v14}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v7
 
     aput-object v7, v13, v11
 
-    const-string v7, "Years"
+    new-array v7, v4, [Ljava/lang/Object;
+
+    const-string v11, "Years"
 
     .line 239
-    invoke-static {v7, v5}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    invoke-static {v11, v5, v7}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v7
 
@@ -1923,8 +1931,8 @@
 
     const/4 v7, 0x0
 
-    :goto_ae
-    if-ge v7, v6, :cond_f2
+    :goto_b6
+    if-ge v7, v6, :cond_fa
 
     .line 246
     new-instance v11, Lorg/telegram/ui/Cells/RadioColorCell;
@@ -1971,16 +1979,16 @@
     .line 250
     aget-object v14, v13, v7
 
-    if-ne v1, v7, :cond_e0
+    if-ne v1, v7, :cond_e8
 
     const/4 v15, 0x1
 
-    goto :goto_e1
+    goto :goto_e9
 
-    :cond_e0
+    :cond_e8
     const/4 v15, 0x0
 
-    :goto_e1
+    :goto_e9
     invoke-virtual {v11, v14, v15}, Lorg/telegram/ui/Cells/RadioColorCell;->setTextAndValue(Ljava/lang/String;Z)V
 
     .line 251
@@ -1995,10 +2003,10 @@
 
     add-int/lit8 v7, v7, 0x1
 
-    goto :goto_ae
+    goto :goto_b6
 
     .line 286
-    :cond_f2
+    :cond_fa
     invoke-static {v10, v9}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v1
@@ -2012,13 +2020,13 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/BaseFragment;->showDialog(Landroid/app/Dialog;)Landroid/app/Dialog;
 
-    goto/16 :goto_3d3
+    goto/16 :goto_3db
 
     .line 288
-    :cond_102
+    :cond_10a
     iget v3, v0, Lorg/telegram/ui/PrivacySettingsActivity;->lastSeenRow:I
 
-    if-ne v2, v3, :cond_110
+    if-ne v2, v3, :cond_118
 
     .line 289
     new-instance v1, Lorg/telegram/ui/PrivacyControlActivity;
@@ -2027,13 +2035,13 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/BaseFragment;->presentFragment(Lorg/telegram/ui/ActionBar/BaseFragment;)Z
 
-    goto/16 :goto_3d3
+    goto/16 :goto_3db
 
     .line 290
-    :cond_110
+    :cond_118
     iget v3, v0, Lorg/telegram/ui/PrivacySettingsActivity;->phoneNumberRow:I
 
-    if-ne v2, v3, :cond_11e
+    if-ne v2, v3, :cond_126
 
     .line 291
     new-instance v1, Lorg/telegram/ui/PrivacyControlActivity;
@@ -2042,13 +2050,13 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/BaseFragment;->presentFragment(Lorg/telegram/ui/ActionBar/BaseFragment;)Z
 
-    goto/16 :goto_3d3
+    goto/16 :goto_3db
 
     .line 292
-    :cond_11e
+    :cond_126
     iget v3, v0, Lorg/telegram/ui/PrivacySettingsActivity;->groupsRow:I
 
-    if-ne v2, v3, :cond_12c
+    if-ne v2, v3, :cond_134
 
     .line 293
     new-instance v1, Lorg/telegram/ui/PrivacyControlActivity;
@@ -2057,13 +2065,13 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/BaseFragment;->presentFragment(Lorg/telegram/ui/ActionBar/BaseFragment;)Z
 
-    goto/16 :goto_3d3
+    goto/16 :goto_3db
 
     .line 294
-    :cond_12c
+    :cond_134
     iget v3, v0, Lorg/telegram/ui/PrivacySettingsActivity;->callsRow:I
 
-    if-ne v2, v3, :cond_13a
+    if-ne v2, v3, :cond_142
 
     .line 295
     new-instance v1, Lorg/telegram/ui/PrivacyControlActivity;
@@ -2072,13 +2080,13 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/BaseFragment;->presentFragment(Lorg/telegram/ui/ActionBar/BaseFragment;)Z
 
-    goto/16 :goto_3d3
+    goto/16 :goto_3db
 
     .line 296
-    :cond_13a
+    :cond_142
     iget v3, v0, Lorg/telegram/ui/PrivacySettingsActivity;->profilePhotoRow:I
 
-    if-ne v2, v3, :cond_148
+    if-ne v2, v3, :cond_150
 
     .line 297
     new-instance v1, Lorg/telegram/ui/PrivacyControlActivity;
@@ -2087,15 +2095,15 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/BaseFragment;->presentFragment(Lorg/telegram/ui/ActionBar/BaseFragment;)Z
 
-    goto/16 :goto_3d3
+    goto/16 :goto_3db
 
     .line 298
-    :cond_148
+    :cond_150
     iget v3, v0, Lorg/telegram/ui/PrivacySettingsActivity;->forwardsRow:I
 
     const/4 v6, 0x5
 
-    if-ne v2, v3, :cond_157
+    if-ne v2, v3, :cond_15f
 
     .line 299
     new-instance v1, Lorg/telegram/ui/PrivacyControlActivity;
@@ -2104,35 +2112,35 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/BaseFragment;->presentFragment(Lorg/telegram/ui/ActionBar/BaseFragment;)Z
 
-    goto/16 :goto_3d3
+    goto/16 :goto_3db
 
     .line 300
-    :cond_157
+    :cond_15f
     iget v3, v0, Lorg/telegram/ui/PrivacySettingsActivity;->passwordRow:I
 
-    if-ne v2, v3, :cond_1a1
+    if-ne v2, v3, :cond_1a9
 
     .line 301
     iget-object v1, v0, Lorg/telegram/ui/PrivacySettingsActivity;->currentPassword:Lorg/telegram/tgnet/TLRPC$TL_account_password;
 
-    if-nez v1, :cond_160
+    if-nez v1, :cond_168
 
     return-void
 
     .line 304
-    :cond_160
+    :cond_168
     invoke-static {v1, v4}, Lorg/telegram/ui/TwoStepVerificationActivity;->canHandleCurrentPassword(Lorg/telegram/tgnet/TLRPC$TL_account_password;Z)Z
 
     move-result v1
 
-    if-nez v1, :cond_176
+    if-nez v1, :cond_17e
 
     .line 305
     invoke-virtual/range {p0 .. p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getParentActivity()Landroid/app/Activity;
 
     move-result-object v1
 
-    const v2, 0x7f0e11fc
+    const v2, 0x7f0e12c9
 
     const-string v3, "UpdateAppAlert"
 
@@ -2143,12 +2151,12 @@
     invoke-static {v1, v2, v5}, Lorg/telegram/ui/Components/AlertsCreator;->showUpdateAppAlert(Landroid/content/Context;Ljava/lang/String;Z)Lorg/telegram/ui/ActionBar/AlertDialog;
 
     .line 307
-    :cond_176
+    :cond_17e
     iget-object v1, v0, Lorg/telegram/ui/PrivacySettingsActivity;->currentPassword:Lorg/telegram/tgnet/TLRPC$TL_account_password;
 
     iget-boolean v2, v1, Lorg/telegram/tgnet/TLRPC$TL_account_password;->has_password:Z
 
-    if-eqz v2, :cond_18b
+    if-eqz v2, :cond_193
 
     .line 308
     new-instance v1, Lorg/telegram/ui/TwoStepVerificationActivity;
@@ -2163,25 +2171,25 @@
     .line 310
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/BaseFragment;->presentFragment(Lorg/telegram/ui/ActionBar/BaseFragment;)Z
 
-    goto/16 :goto_3d3
+    goto/16 :goto_3db
 
     .line 313
-    :cond_18b
+    :cond_193
     iget-object v1, v1, Lorg/telegram/tgnet/TLRPC$TL_account_password;->email_unconfirmed_pattern:Ljava/lang/String;
 
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
-    if-eqz v1, :cond_194
+    if-eqz v1, :cond_19c
 
-    goto :goto_195
+    goto :goto_19d
 
-    :cond_194
+    :cond_19c
     const/4 v7, 0x5
 
     .line 318
-    :goto_195
+    :goto_19d
     new-instance v1, Lorg/telegram/ui/TwoStepVerificationSetupActivity;
 
     iget-object v2, v0, Lorg/telegram/ui/PrivacySettingsActivity;->currentPassword:Lorg/telegram/tgnet/TLRPC$TL_account_password;
@@ -2190,13 +2198,13 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/BaseFragment;->presentFragment(Lorg/telegram/ui/ActionBar/BaseFragment;)Z
 
-    goto/16 :goto_3d3
+    goto/16 :goto_3db
 
     .line 320
-    :cond_1a1
+    :cond_1a9
     iget v3, v0, Lorg/telegram/ui/PrivacySettingsActivity;->passcodeRow:I
 
-    if-ne v2, v3, :cond_1ae
+    if-ne v2, v3, :cond_1b6
 
     .line 321
     invoke-static {}, Lorg/telegram/ui/PasscodeActivity;->determineOpenFragment()Lorg/telegram/ui/ActionBar/BaseFragment;
@@ -2205,13 +2213,13 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/BaseFragment;->presentFragment(Lorg/telegram/ui/ActionBar/BaseFragment;)Z
 
-    goto/16 :goto_3d3
+    goto/16 :goto_3db
 
     .line 322
-    :cond_1ae
+    :cond_1b6
     iget v3, v0, Lorg/telegram/ui/PrivacySettingsActivity;->secretWebpageRow:I
 
-    if-ne v2, v3, :cond_1f2
+    if-ne v2, v3, :cond_1fa
 
     .line 323
     invoke-virtual/range {p0 .. p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getMessagesController()Lorg/telegram/messenger/MessagesController;
@@ -2220,7 +2228,7 @@
 
     iget v2, v2, Lorg/telegram/messenger/MessagesController;->secretWebpagePreview:I
 
-    if-ne v2, v5, :cond_1c1
+    if-ne v2, v5, :cond_1c9
 
     .line 324
     invoke-virtual/range {p0 .. p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getMessagesController()Lorg/telegram/messenger/MessagesController;
@@ -2229,10 +2237,10 @@
 
     iput v4, v2, Lorg/telegram/messenger/MessagesController;->secretWebpagePreview:I
 
-    goto :goto_1c7
+    goto :goto_1cf
 
     .line 326
-    :cond_1c1
+    :cond_1c9
     invoke-virtual/range {p0 .. p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getMessagesController()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v2
@@ -2240,7 +2248,7 @@
     iput v5, v2, Lorg/telegram/messenger/MessagesController;->secretWebpagePreview:I
 
     .line 328
-    :goto_1c7
+    :goto_1cf
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getGlobalMainSettings()Landroid/content/SharedPreferences;
 
     move-result-object v2
@@ -2266,7 +2274,7 @@
     .line 329
     instance-of v2, v1, Lorg/telegram/ui/Cells/TextCheckCell;
 
-    if-eqz v2, :cond_3d3
+    if-eqz v2, :cond_3db
 
     .line 330
     check-cast v1, Lorg/telegram/ui/Cells/TextCheckCell;
@@ -2277,36 +2285,36 @@
 
     iget v2, v2, Lorg/telegram/messenger/MessagesController;->secretWebpagePreview:I
 
-    if-ne v2, v5, :cond_1ed
+    if-ne v2, v5, :cond_1f5
 
     const/4 v4, 0x1
 
-    :cond_1ed
+    :cond_1f5
     invoke-virtual {v1, v4}, Lorg/telegram/ui/Cells/TextCheckCell;->setChecked(Z)V
 
-    goto/16 :goto_3d3
+    goto/16 :goto_3db
 
     .line 332
-    :cond_1f2
+    :cond_1fa
     iget v3, v0, Lorg/telegram/ui/PrivacySettingsActivity;->contactsDeleteRow:I
 
     const-string v6, "dialogTextRed2"
 
     const/4 v7, -0x1
 
-    if-ne v2, v3, :cond_255
+    if-ne v2, v3, :cond_25d
 
     .line 333
     invoke-virtual/range {p0 .. p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getParentActivity()Landroid/app/Activity;
 
     move-result-object v1
 
-    if-nez v1, :cond_200
+    if-nez v1, :cond_208
 
     return-void
 
     .line 336
-    :cond_200
+    :cond_208
     new-instance v1, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
     invoke-virtual/range {p0 .. p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getParentActivity()Landroid/app/Activity;
@@ -2315,7 +2323,7 @@
 
     invoke-direct {v1, v2}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    const v2, 0x7f0e1121
+    const v2, 0x7f0e11e5
 
     const-string v3, "SyncContactsDeleteTitle"
 
@@ -2326,7 +2334,7 @@
 
     invoke-virtual {v1, v2}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const v2, 0x7f0e1120
+    const v2, 0x7f0e11e4
 
     const-string v3, "SyncContactsDeleteText"
 
@@ -2348,7 +2356,7 @@
 
     invoke-virtual {v1, v2, v12}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setNegativeButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const v2, 0x7f0e0540
+    const v2, 0x7f0e0591
 
     const-string v3, "Delete"
 
@@ -2378,7 +2386,7 @@
 
     check-cast v1, Landroid/widget/TextView;
 
-    if-eqz v1, :cond_3d3
+    if-eqz v1, :cond_3db
 
     .line 355
     invoke-static {v6}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
@@ -2387,13 +2395,13 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setTextColor(I)V
 
-    goto/16 :goto_3d3
+    goto/16 :goto_3db
 
     .line 357
-    :cond_255
+    :cond_25d
     iget v3, v0, Lorg/telegram/ui/PrivacySettingsActivity;->contactsSuggestRow:I
 
-    if-ne v2, v3, :cond_2b7
+    if-ne v2, v3, :cond_2bf
 
     .line 358
     check-cast v1, Lorg/telegram/ui/Cells/TextCheckCell;
@@ -2401,7 +2409,7 @@
     .line 359
     iget-boolean v2, v0, Lorg/telegram/ui/PrivacySettingsActivity;->newSuggest:Z
 
-    if-eqz v2, :cond_2b0
+    if-eqz v2, :cond_2b8
 
     .line 360
     new-instance v2, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
@@ -2412,7 +2420,7 @@
 
     invoke-direct {v2, v3}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    const v3, 0x7f0e1105
+    const v3, 0x7f0e11c9
 
     const-string v4, "SuggestContactsTitle"
 
@@ -2423,7 +2431,7 @@
 
     invoke-virtual {v2, v3}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const v3, 0x7f0e1103
+    const v3, 0x7f0e11c7
 
     const-string v4, "SuggestContactsAlert"
 
@@ -2434,7 +2442,7 @@
 
     invoke-virtual {v2, v3}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const v3, 0x7f0e0a69
+    const v3, 0x7f0e0af0
 
     const-string v4, "MuteDisable"
 
@@ -2471,7 +2479,7 @@
 
     check-cast v1, Landroid/widget/TextView;
 
-    if-eqz v1, :cond_3d3
+    if-eqz v1, :cond_3db
 
     .line 379
     invoke-static {v6}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
@@ -2480,21 +2488,21 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setTextColor(I)V
 
-    goto/16 :goto_3d3
+    goto/16 :goto_3db
 
     .line 382
-    :cond_2b0
+    :cond_2b8
     iput-boolean v5, v0, Lorg/telegram/ui/PrivacySettingsActivity;->newSuggest:Z
 
     invoke-virtual {v1, v5}, Lorg/telegram/ui/Cells/TextCheckCell;->setChecked(Z)V
 
-    goto/16 :goto_3d3
+    goto/16 :goto_3db
 
     .line 384
-    :cond_2b7
+    :cond_2bf
     iget v3, v0, Lorg/telegram/ui/PrivacySettingsActivity;->newChatsRow:I
 
-    if-ne v2, v3, :cond_2c7
+    if-ne v2, v3, :cond_2cf
 
     .line 385
     check-cast v1, Lorg/telegram/ui/Cells/TextCheckCell;
@@ -2509,13 +2517,13 @@
     .line 387
     invoke-virtual {v1, v2}, Lorg/telegram/ui/Cells/TextCheckCell;->setChecked(Z)V
 
-    goto/16 :goto_3d3
+    goto/16 :goto_3db
 
     .line 388
-    :cond_2c7
+    :cond_2cf
     iget v3, v0, Lorg/telegram/ui/PrivacySettingsActivity;->contactsSyncRow:I
 
-    if-ne v2, v3, :cond_2db
+    if-ne v2, v3, :cond_2e3
 
     .line 389
     iget-boolean v2, v0, Lorg/telegram/ui/PrivacySettingsActivity;->newSync:Z
@@ -2527,20 +2535,20 @@
     .line 390
     instance-of v3, v1, Lorg/telegram/ui/Cells/TextCheckCell;
 
-    if-eqz v3, :cond_3d3
+    if-eqz v3, :cond_3db
 
     .line 391
     check-cast v1, Lorg/telegram/ui/Cells/TextCheckCell;
 
     invoke-virtual {v1, v2}, Lorg/telegram/ui/Cells/TextCheckCell;->setChecked(Z)V
 
-    goto/16 :goto_3d3
+    goto/16 :goto_3db
 
     .line 393
-    :cond_2db
+    :cond_2e3
     iget v1, v0, Lorg/telegram/ui/PrivacySettingsActivity;->secretMapRow:I
 
-    if-ne v2, v1, :cond_2ef
+    if-ne v2, v1, :cond_2f7
 
     .line 394
     invoke-virtual/range {p0 .. p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getParentActivity()Landroid/app/Activity;
@@ -2555,13 +2563,13 @@
 
     invoke-static {v1, v2, v3, v4, v12}, Lorg/telegram/ui/Components/AlertsCreator;->showSecretLocationAlert(Landroid/content/Context;ILjava/lang/Runnable;ZLorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)Lorg/telegram/ui/ActionBar/AlertDialog;
 
-    goto/16 :goto_3d3
+    goto/16 :goto_3db
 
     .line 395
-    :cond_2ef
+    :cond_2f7
     iget v1, v0, Lorg/telegram/ui/PrivacySettingsActivity;->paymentsClearRow:I
 
-    if-ne v2, v1, :cond_3ba
+    if-ne v2, v1, :cond_3c2
 
     .line 396
     new-instance v1, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
@@ -2572,7 +2580,7 @@
 
     invoke-direct {v1, v2}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    const v2, 0x7f0e0e0e
+    const v2, 0x7f0e0eb7
 
     const-string v3, "PrivacyPaymentsClearAlertTitle"
 
@@ -2583,7 +2591,7 @@
 
     invoke-virtual {v1, v2}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const v2, 0x7f0e0e0d
+    const v2, 0x7f0e0eb6
 
     const-string v3, "PrivacyPaymentsClearAlertText"
 
@@ -2611,12 +2619,12 @@
 
     const/4 v3, 0x0
 
-    :goto_324
-    if-ge v3, v11, :cond_384
+    :goto_32c
+    if-ge v3, v11, :cond_38c
 
-    if-nez v3, :cond_332
+    if-nez v3, :cond_33a
 
-    const v13, 0x7f0e0dfb
+    const v13, 0x7f0e0ea4
 
     const-string v14, "PrivacyClearShipping"
 
@@ -2625,10 +2633,10 @@
 
     move-result-object v13
 
-    goto :goto_33b
+    goto :goto_343
 
-    :cond_332
-    const v13, 0x7f0e0dfa
+    :cond_33a
+    const v13, 0x7f0e0ea3
 
     const-string v14, "PrivacyClearPayment"
 
@@ -2638,7 +2646,7 @@
     move-result-object v13
 
     .line 411
-    :goto_33b
+    :goto_343
     iget-object v14, v0, Lorg/telegram/ui/PrivacySettingsActivity;->clear:[Z
 
     aput-boolean v5, v14, v3
@@ -2711,10 +2719,10 @@
 
     const/4 v11, 0x2
 
-    goto :goto_324
+    goto :goto_32c
 
-    :cond_384
-    const v2, 0x7f0e0460
+    :cond_38c
+    const v2, 0x7f0e04a5
 
     const-string v3, "ClearButton"
 
@@ -2758,7 +2766,7 @@
 
     check-cast v1, Landroid/widget/TextView;
 
-    if-eqz v1, :cond_3d3
+    if-eqz v1, :cond_3db
 
     .line 474
     invoke-static {v6}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
@@ -2767,13 +2775,13 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setTextColor(I)V
 
-    goto :goto_3d3
+    goto :goto_3db
 
     .line 476
-    :cond_3ba
+    :cond_3c2
     iget v1, v0, Lorg/telegram/ui/PrivacySettingsActivity;->passportRow:I
 
-    if-ne v2, v1, :cond_3d3
+    if-ne v2, v1, :cond_3db
 
     .line 477
     new-instance v1, Lorg/telegram/ui/PassportActivity;
@@ -2802,8 +2810,8 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/BaseFragment;->presentFragment(Lorg/telegram/ui/ActionBar/BaseFragment;)Z
 
-    :cond_3d3
-    :goto_3d3
+    :cond_3db
+    :goto_3db
     return-void
 .end method
 
@@ -3378,9 +3386,35 @@
 
     const/4 v1, -0x1
 
-    if-eqz v0, :cond_76
+    if-nez v0, :cond_73
+
+    invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getUserConfig()Lorg/telegram/messenger/UserConfig;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lorg/telegram/messenger/UserConfig;->isPremium()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_6c
+
+    goto :goto_73
+
+    .line 531
+    :cond_6c
+    iput v1, p0, Lorg/telegram/ui/PrivacySettingsActivity;->newChatsHeaderRow:I
+
+    .line 532
+    iput v1, p0, Lorg/telegram/ui/PrivacySettingsActivity;->newChatsRow:I
+
+    .line 533
+    iput v1, p0, Lorg/telegram/ui/PrivacySettingsActivity;->newChatsSectionRow:I
+
+    goto :goto_87
 
     .line 527
+    :cond_73
+    :goto_73
     iget v0, p0, Lorg/telegram/ui/PrivacySettingsActivity;->rowCount:I
 
     add-int/lit8 v2, v0, 0x1
@@ -3403,20 +3437,8 @@
 
     iput v0, p0, Lorg/telegram/ui/PrivacySettingsActivity;->newChatsSectionRow:I
 
-    goto :goto_7c
-
-    .line 531
-    :cond_76
-    iput v1, p0, Lorg/telegram/ui/PrivacySettingsActivity;->newChatsHeaderRow:I
-
-    .line 532
-    iput v1, p0, Lorg/telegram/ui/PrivacySettingsActivity;->newChatsRow:I
-
-    .line 533
-    iput v1, p0, Lorg/telegram/ui/PrivacySettingsActivity;->newChatsSectionRow:I
-
     .line 535
-    :goto_7c
+    :goto_87
     iget v0, p0, Lorg/telegram/ui/PrivacySettingsActivity;->rowCount:I
 
     add-int/lit8 v2, v0, 0x1
@@ -3453,7 +3475,7 @@
 
     iget-boolean v0, v0, Lorg/telegram/messenger/UserConfig;->hasSecureData:Z
 
-    if-eqz v0, :cond_a7
+    if-eqz v0, :cond_b2
 
     .line 540
     iget v0, p0, Lorg/telegram/ui/PrivacySettingsActivity;->rowCount:I
@@ -3464,14 +3486,14 @@
 
     iput v0, p0, Lorg/telegram/ui/PrivacySettingsActivity;->passportRow:I
 
-    goto :goto_a9
+    goto :goto_b4
 
     .line 542
-    :cond_a7
+    :cond_b2
     iput v1, p0, Lorg/telegram/ui/PrivacySettingsActivity;->passportRow:I
 
     .line 544
-    :goto_a9
+    :goto_b4
     iget v0, p0, Lorg/telegram/ui/PrivacySettingsActivity;->rowCount:I
 
     add-int/lit8 v1, v0, 0x1
@@ -3560,12 +3582,12 @@
     .line 556
     iget-object v0, p0, Lorg/telegram/ui/PrivacySettingsActivity;->listAdapter:Lorg/telegram/ui/PrivacySettingsActivity$ListAdapter;
 
-    if-eqz v0, :cond_fa
+    if-eqz v0, :cond_105
 
     .line 557
     invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->notifyDataSetChanged()V
 
-    :cond_fa
+    :cond_105
     return-void
 .end method
 
@@ -3577,7 +3599,7 @@
     .line 178
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
-    const v1, 0x7f070140
+    const v1, 0x7f070109
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/ActionBar;->setBackButtonImage(I)V
 
@@ -3593,7 +3615,7 @@
 
     const-string v2, "PrivacySettings"
 
-    const v3, 0x7f0e0e20
+    const v3, 0x7f0e0ec9
 
     invoke-static {v2, v3}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
@@ -4447,7 +4469,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0e111e
+    const v1, 0x7f0e11e2
 
     const-string v4, "SyncContactsAdded"
 

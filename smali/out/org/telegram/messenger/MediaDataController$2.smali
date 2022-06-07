@@ -35,7 +35,7 @@
 .method constructor <init>(Lorg/telegram/messenger/MediaDataController;Ljava/util/ArrayList;)V
     .registers 3
 
-    .line 6020
+    .line 6222
     iput-object p1, p0, Lorg/telegram/messenger/MediaDataController$2;->this$0:Lorg/telegram/messenger/MediaDataController;
 
     iput-object p2, p0, Lorg/telegram/messenger/MediaDataController$2;->val$previewItems:Ljava/util/ArrayList;
@@ -48,14 +48,14 @@
 .method private synthetic lambda$run$0(Ljava/util/ArrayList;)V
     .registers 3
 
-    .line 6027
+    .line 6229
     iget-object v0, p0, Lorg/telegram/messenger/MediaDataController$2;->this$0:Lorg/telegram/messenger/MediaDataController;
 
     iget-object v0, v0, Lorg/telegram/messenger/MediaDataController;->defaultEmojiThemes:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 6028
+    .line 6230
     iget-object v0, p0, Lorg/telegram/messenger/MediaDataController$2;->this$0:Lorg/telegram/messenger/MediaDataController;
 
     iget-object v0, v0, Lorg/telegram/messenger/MediaDataController;->defaultEmojiThemes:Ljava/util/ArrayList;
@@ -74,7 +74,7 @@
 
     const/4 v1, 0x0
 
-    .line 6023
+    .line 6225
     :goto_2
     iget-object v2, p0, Lorg/telegram/messenger/MediaDataController$2;->val$previewItems:Ljava/util/ArrayList;
 
@@ -84,7 +84,7 @@
 
     if-ge v1, v2, :cond_1a
 
-    .line 6024
+    .line 6226
     iget-object v2, p0, Lorg/telegram/messenger/MediaDataController$2;->val$previewItems:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -101,7 +101,7 @@
 
     goto :goto_2
 
-    .line 6026
+    .line 6228
     :cond_1a
     iget-object v0, p0, Lorg/telegram/messenger/MediaDataController$2;->val$previewItems:Ljava/util/ArrayList;
 

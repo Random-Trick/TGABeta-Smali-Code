@@ -27,7 +27,7 @@
 .method constructor <init>(Landroidx/recyclerview/widget/DefaultItemAnimator;Ljava/util/ArrayList;)V
     .registers 3
 
-    .line 154
+    .line 155
     iput-object p1, p0, Landroidx/recyclerview/widget/DefaultItemAnimator$2;->this$0:Landroidx/recyclerview/widget/DefaultItemAnimator;
 
     iput-object p2, p0, Landroidx/recyclerview/widget/DefaultItemAnimator$2;->val$changes:Ljava/util/ArrayList;
@@ -42,7 +42,7 @@
 .method public run()V
     .registers 4
 
-    .line 157
+    .line 158
     iget-object v0, p0, Landroidx/recyclerview/widget/DefaultItemAnimator$2;->val$changes:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -62,12 +62,12 @@
 
     check-cast v1, Landroidx/recyclerview/widget/DefaultItemAnimator$ChangeInfo;
 
-    .line 158
+    .line 159
     iget-object v2, p0, Landroidx/recyclerview/widget/DefaultItemAnimator$2;->this$0:Landroidx/recyclerview/widget/DefaultItemAnimator;
 
     invoke-virtual {v2, v1}, Landroidx/recyclerview/widget/DefaultItemAnimator;->animateChangeImpl(Landroidx/recyclerview/widget/DefaultItemAnimator$ChangeInfo;)V
 
-    .line 159
+    .line 160
     iget-object v2, p0, Landroidx/recyclerview/widget/DefaultItemAnimator$2;->this$0:Landroidx/recyclerview/widget/DefaultItemAnimator;
 
     iget-object v2, v2, Landroidx/recyclerview/widget/DefaultItemAnimator;->currentChanges:Ljava/util/ArrayList;
@@ -76,13 +76,13 @@
 
     goto :goto_6
 
-    .line 161
+    .line 162
     :cond_1f
     iget-object v0, p0, Landroidx/recyclerview/widget/DefaultItemAnimator$2;->val$changes:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 162
+    .line 163
     iget-object v0, p0, Landroidx/recyclerview/widget/DefaultItemAnimator$2;->this$0:Landroidx/recyclerview/widget/DefaultItemAnimator;
 
     iget-object v0, v0, Landroidx/recyclerview/widget/DefaultItemAnimator;->mChangesList:Ljava/util/ArrayList;

@@ -769,7 +769,7 @@
     .line 426
     iget-object v5, v0, Lorg/telegram/ui/Components/PhotoFilterView;->cancelTextView:Landroid/widget/TextView;
 
-    const v9, 0x7f0e0331
+    const v9, 0x7f0e036d
 
     const-string v10, "Cancel"
 
@@ -856,7 +856,7 @@
     .line 436
     iget-object v5, v0, Lorg/telegram/ui/Components/PhotoFilterView;->doneTextView:Landroid/widget/TextView;
 
-    const v11, 0x7f0e05dd
+    const v11, 0x7f0e062e
 
     const-string v12, "Done"
 
@@ -917,7 +917,7 @@
     .line 445
     iget-object v4, v0, Lorg/telegram/ui/Components/PhotoFilterView;->tuneItem:Landroid/widget/ImageView;
 
-    const v9, 0x7f070342
+    const v9, 0x7f07029d
 
     invoke-virtual {v4, v9}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -986,7 +986,7 @@
     .line 459
     iget-object v4, v0, Lorg/telegram/ui/Components/PhotoFilterView;->blurItem:Landroid/widget/ImageView;
 
-    const v12, 0x7f0703fb
+    const v12, 0x7f070292
 
     invoke-virtual {v4, v12}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -1044,7 +1044,7 @@
     .line 475
     iget-object v2, v0, Lorg/telegram/ui/Components/PhotoFilterView;->curveItem:Landroid/widget/ImageView;
 
-    const v4, 0x7f0703fd
+    const v4, 0x7f070299
 
     invoke-virtual {v2, v4}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -1258,7 +1258,7 @@
 
     if-nez v3, :cond_3fe
 
-    const v9, 0x7f0e04f9
+    const v9, 0x7f0e0548
 
     const-string v10, "CurvesAll"
 
@@ -1316,7 +1316,7 @@
     :cond_3fe
     if-ne v3, v8, :cond_439
 
-    const v9, 0x7f0e04fc
+    const v9, 0x7f0e054b
 
     const-string v10, "CurvesRed"
 
@@ -1375,7 +1375,7 @@
 
     if-ne v3, v9, :cond_475
 
-    const v10, 0x7f0e04fb
+    const v10, 0x7f0e054a
 
     const-string v11, "CurvesGreen"
 
@@ -1434,7 +1434,7 @@
 
     if-ne v3, v10, :cond_4b0
 
-    const v10, 0x7f0e04fa
+    const v10, 0x7f0e0549
 
     const-string v11, "CurvesBlue"
 
@@ -1656,7 +1656,7 @@
     .line 556
     iget-object v2, v0, Lorg/telegram/ui/Components/PhotoFilterView;->blurOffButton:Landroid/widget/TextView;
 
-    const v5, 0x7f0e02c0
+    const v5, 0x7f0e02f7
 
     const-string v6, "BlurOff"
 
@@ -1717,7 +1717,7 @@
     .line 571
     iget-object v2, v0, Lorg/telegram/ui/Components/PhotoFilterView;->blurRadialButton:Landroid/widget/TextView;
 
-    const v5, 0x7f0e02c1
+    const v5, 0x7f0e02f8
 
     const-string v6, "BlurRadial"
 
@@ -1800,7 +1800,7 @@
     .line 587
     iget-object v1, v0, Lorg/telegram/ui/Components/PhotoFilterView;->blurLinearButton:Landroid/widget/TextView;
 
-    const v2, 0x7f0e02bf
+    const v2, 0x7f0e02f6
 
     const-string v3, "BlurLinear"
 
@@ -3154,11 +3154,11 @@
     .line 626
     iget v0, p0, Lorg/telegram/ui/Components/PhotoFilterView;->blurType:I
 
-    const v1, 0x7f070073
+    const v1, 0x7f0701d6
 
-    const v2, 0x7f070075
+    const v2, 0x7f0701d8
 
-    const v3, 0x7f070074
+    const v3, 0x7f0701d7
 
     const/4 v4, -0x1
 

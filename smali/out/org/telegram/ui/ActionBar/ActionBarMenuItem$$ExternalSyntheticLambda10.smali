@@ -27,7 +27,7 @@
 
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuItem$$ExternalSyntheticLambda10;->f$0:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
-    invoke-static {v0, p1, p2, p3}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->$r8$lambda$S6FI_imSWvrXXhjRDn4Qc4YTmTI(Lorg/telegram/ui/ActionBar/ActionBarMenuItem;Landroid/widget/TextView;ILandroid/view/KeyEvent;)Z
+    invoke-static {v0, p1, p2, p3}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->$r8$lambda$LGp4tRyLTxiEtrcVymWPkluxBZI(Lorg/telegram/ui/ActionBar/ActionBarMenuItem;Landroid/widget/TextView;ILandroid/view/KeyEvent;)Z
 
     move-result p1
 

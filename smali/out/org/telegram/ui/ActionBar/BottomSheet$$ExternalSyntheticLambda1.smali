@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/view/View$OnApplyWindowInsetsListener;
+.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
 
 
 # instance fields
@@ -22,14 +22,12 @@
 
 
 # virtual methods
-.method public final onApplyWindowInsets(Landroid/view/View;Landroid/view/WindowInsets;)Landroid/view/WindowInsets;
-    .registers 4
+.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
+    .registers 3
 
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/BottomSheet$$ExternalSyntheticLambda1;->f$0:Lorg/telegram/ui/ActionBar/BottomSheet;
 
-    invoke-static {v0, p1, p2}, Lorg/telegram/ui/ActionBar/BottomSheet;->$r8$lambda$jXi_Inmnp3x4SU1lNfYZw4lpBiM(Lorg/telegram/ui/ActionBar/BottomSheet;Landroid/view/View;Landroid/view/WindowInsets;)Landroid/view/WindowInsets;
+    invoke-static {v0, p1}, Lorg/telegram/ui/ActionBar/BottomSheet;->$r8$lambda$iQOT4chCWu8guSxSTxJxHMOtgaY(Lorg/telegram/ui/ActionBar/BottomSheet;Landroid/animation/ValueAnimator;)V
 
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method

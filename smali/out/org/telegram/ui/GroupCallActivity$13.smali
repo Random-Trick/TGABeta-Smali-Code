@@ -25,7 +25,7 @@
 .method constructor <init>(Lorg/telegram/ui/GroupCallActivity;)V
     .registers 2
 
-    .line 3361
+    .line 3366
     iput-object p1, p0, Lorg/telegram/ui/GroupCallActivity$13;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public copyInviteLink()V
     .registers 3
 
-    .line 3364
+    .line 3369
     iget-object v0, p0, Lorg/telegram/ui/GroupCallActivity$13;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     const/4 v1, 0x1
@@ -51,7 +51,7 @@
 .method public inviteUser(J)V
     .registers 5
 
-    .line 3369
+    .line 3374
     iget-object v0, p0, Lorg/telegram/ui/GroupCallActivity$13;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     const/4 v1, 0x1
@@ -64,7 +64,7 @@
 .method public needOpenSearch(Landroid/view/MotionEvent;Lorg/telegram/ui/Components/EditTextBoldCursor;)V
     .registers 6
 
-    .line 3374
+    .line 3379
     iget-object v0, p0, Lorg/telegram/ui/GroupCallActivity$13;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/GroupCallActivity;->access$3100(Lorg/telegram/ui/GroupCallActivity;)Z
@@ -73,7 +73,7 @@
 
     if-nez v0, :cond_52
 
-    .line 3375
+    .line 3380
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
     move-result v0
@@ -104,7 +104,7 @@
 
     if-gez v0, :cond_48
 
-    .line 3376
+    .line 3381
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
 
     move-result v0
@@ -133,7 +133,7 @@
 
     if-gez p1, :cond_48
 
-    .line 3377
+    .line 3382
     iget-object p1, p0, Lorg/telegram/ui/GroupCallActivity$13;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/GroupCallActivity;->access$22200(Lorg/telegram/ui/GroupCallActivity;)Lorg/telegram/ui/Components/GroupVoipInviteAlert;
@@ -146,7 +146,7 @@
 
     goto :goto_52
 
-    .line 3379
+    .line 3384
     :cond_48
     iget-object p1, p0, Lorg/telegram/ui/GroupCallActivity$13;->this$0:Lorg/telegram/ui/GroupCallActivity;
 

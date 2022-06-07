@@ -18,7 +18,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/QRCodeBottomSheet;)V
     .registers 2
 
-    .line 69
+    .line 70
     invoke-direct {p0}, Landroid/view/ViewOutlineProvider;-><init>()V
 
     return-void
@@ -29,7 +29,7 @@
 .method public getOutline(Landroid/view/View;Landroid/graphics/Outline;)V
     .registers 9
 
-    .line 72
+    .line 73
     invoke-virtual {p1}, Landroid/view/View;->getMeasuredWidth()I
 
     move-result v3

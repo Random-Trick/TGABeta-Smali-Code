@@ -2,20 +2,14 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lj$/util/x;
+.implements Lj$/util/u;
 
 
 # virtual methods
-.method public abstract b(Lj$/util/function/Consumer;)Z
+.method public abstract forEachRemaining(Ljava/lang/Object;)V
 .end method
 
-.method public abstract d(Lj$/util/function/q;)V
-.end method
-
-.method public abstract forEachRemaining(Lj$/util/function/Consumer;)V
-.end method
-
-.method public abstract i(Lj$/util/function/q;)Z
+.method public abstract tryAdvance(Ljava/lang/Object;)Z
 .end method
 
 .method public abstract trySplit()Lj$/util/w;

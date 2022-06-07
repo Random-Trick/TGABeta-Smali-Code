@@ -6,8 +6,6 @@
 # static fields
 .field public static APPCENTER_HASH:Ljava/lang/String; = null
 
-.field public static APPCENTER_HASH_DEBUG:Ljava/lang/String; = null
-
 .field public static APP_HASH:Ljava/lang/String; = null
 
 .field public static APP_ID:I = 0x0
@@ -18,9 +16,11 @@
 
 .field public static CHECK_UPDATES:Z = true
 
-.field public static DEBUG_PRIVATE_VERSION:Z = true
+.field public static DEBUG_PRIVATE_VERSION:Z = false
 
 .field public static DEBUG_VERSION:Z = true
+
+.field public static IS_BILLING_UNAVAILABLE:Z = false
 
 .field public static LOGS_ENABLED:Z = true
 
@@ -62,7 +62,7 @@
     :goto_b
     sput-boolean v0, Lorg/telegram/messenger/BuildVars;->NO_SCOPED_STORAGE:Z
 
-    const/16 v0, 0xa58
+    const/16 v0, 0xa78
 
     .line 23
     sput v0, Lorg/telegram/messenger/BuildVars;->BUILD_VERSION:I
@@ -82,53 +82,51 @@
     .line 26
     sput-object v0, Lorg/telegram/messenger/BuildVars;->APP_HASH:Ljava/lang/String;
 
-    const-string v0, "a5b5c4f5-51da-dedc-9918-d9766a22ca7c"
-
-    .line 27
-    sput-object v0, Lorg/telegram/messenger/BuildVars;->APPCENTER_HASH:Ljava/lang/String;
-
-    const-string v0, "bdd66674-2158-4db2-938c-34937e6a8026"
-
-    .line 28
-    sput-object v0, Lorg/telegram/messenger/BuildVars;->APPCENTER_HASH_DEBUG:Ljava/lang/String;
+    const-string v0, "f9726602-67c9-48d2-b5d0-4761f1c1a8f3"
 
     .line 30
+    sput-object v0, Lorg/telegram/messenger/BuildVars;->APPCENTER_HASH:Ljava/lang/String;
+
+    .line 32
     invoke-static {}, Lorg/telegram/messenger/BuildVars;->isStandaloneApp()Z
 
     move-result v0
 
-    if-eqz v0, :cond_2d
+    if-eqz v0, :cond_29
 
     const-string v0, "w0lkcmTZkKh"
 
-    goto :goto_36
+    goto :goto_32
 
-    :cond_2d
+    :cond_29
     sget-boolean v0, Lorg/telegram/messenger/BuildVars;->DEBUG_VERSION:Z
 
-    if-eqz v0, :cond_34
+    if-eqz v0, :cond_30
 
     const-string v0, "O2P2z+/jBpJ"
 
-    goto :goto_36
+    goto :goto_32
 
-    :cond_34
+    :cond_30
     const-string v0, "oLeq9AcOZkT"
 
-    :goto_36
+    :goto_32
     sput-object v0, Lorg/telegram/messenger/BuildVars;->SMS_HASH:Ljava/lang/String;
 
     const-string v0, "https://play.google.com/store/apps/details?id=org.telegram.messenger"
 
-    .line 31
+    .line 33
     sput-object v0, Lorg/telegram/messenger/BuildVars;->PLAYSTORE_APP_URL:Ljava/lang/String;
 
-    .line 34
+    .line 36
+    sput-boolean v2, Lorg/telegram/messenger/BuildVars;->IS_BILLING_UNAVAILABLE:Z
+
+    .line 39
     sget-object v0, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
-    if-eqz v0, :cond_58
+    if-eqz v0, :cond_56
 
-    .line 35
+    .line 40
     sget-object v0, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     const-string v3, "systemConfig"
@@ -137,10 +135,10 @@
 
     move-result-object v0
 
-    .line 36
+    .line 41
     sget-boolean v3, Lorg/telegram/messenger/BuildVars;->DEBUG_VERSION:Z
 
-    if-nez v3, :cond_56
+    if-nez v3, :cond_54
 
     const-string v4, "logsEnabled"
 
@@ -148,18 +146,18 @@
 
     move-result v0
 
-    if-eqz v0, :cond_55
+    if-eqz v0, :cond_53
 
-    goto :goto_56
+    goto :goto_54
 
-    :cond_55
+    :cond_53
     const/4 v1, 0x0
 
-    :cond_56
-    :goto_56
+    :cond_54
+    :goto_54
     sput-boolean v1, Lorg/telegram/messenger/BuildVars;->LOGS_ENABLED:Z
 
-    :cond_58
+    :cond_56
     return-void
 .end method
 
@@ -175,12 +173,12 @@
 .method public static isBetaApp()Z
     .registers 2
 
-    .line 50
+    .line 59
     sget-object v0, Lorg/telegram/messenger/BuildVars;->betaApp:Ljava/lang/Boolean;
 
     if-nez v0, :cond_1f
 
-    .line 51
+    .line 60
     sget-object v0, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     if-eqz v0, :cond_18
@@ -213,7 +211,7 @@
 
     sput-object v0, Lorg/telegram/messenger/BuildVars;->betaApp:Ljava/lang/Boolean;
 
-    .line 53
+    .line 62
     :cond_1f
     sget-object v0, Lorg/telegram/messenger/BuildVars;->betaApp:Ljava/lang/Boolean;
 
@@ -227,12 +225,12 @@
 .method public static isStandaloneApp()Z
     .registers 2
 
-    .line 42
+    .line 51
     sget-object v0, Lorg/telegram/messenger/BuildVars;->standaloneApp:Ljava/lang/Boolean;
 
     if-nez v0, :cond_1f
 
-    .line 43
+    .line 52
     sget-object v0, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     if-eqz v0, :cond_18
@@ -265,7 +263,7 @@
 
     sput-object v0, Lorg/telegram/messenger/BuildVars;->standaloneApp:Ljava/lang/Boolean;
 
-    .line 45
+    .line 54
     :cond_1f
     sget-object v0, Lorg/telegram/messenger/BuildVars;->standaloneApp:Ljava/lang/Boolean;
 
@@ -273,5 +271,40 @@
 
     move-result v0
 
+    return v0
+.end method
+
+.method public static useInvoiceBilling()Z
+    .registers 1
+
+    .line 46
+    sget-boolean v0, Lorg/telegram/messenger/BuildVars;->DEBUG_VERSION:Z
+
+    if-nez v0, :cond_13
+
+    invoke-static {}, Lorg/telegram/messenger/BuildVars;->isStandaloneApp()Z
+
+    move-result v0
+
+    if-nez v0, :cond_13
+
+    invoke-static {}, Lorg/telegram/messenger/BuildVars;->isBetaApp()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_11
+
+    goto :goto_13
+
+    :cond_11
+    const/4 v0, 0x0
+
+    goto :goto_14
+
+    :cond_13
+    :goto_13
+    const/4 v0, 0x1
+
+    :goto_14
     return v0
 .end method

@@ -18,7 +18,7 @@
 .method public abstract M(Lj$/util/function/g;)Lj$/util/stream/Stream;
 .end method
 
-.method public abstract R(Lj$/wrappers/G;)Lj$/util/stream/M0;
+.method public abstract R(Lj$/wrappers/G;)Lj$/util/stream/IntStream;
 .end method
 
 .method public abstract Y(Lj$/wrappers/E;)Z
@@ -84,7 +84,7 @@
 .method public abstract sorted()Lj$/util/stream/U;
 .end method
 
-.method public abstract spliterator()Lj$/util/u;
+.method public abstract spliterator()Lj$/util/t;
 .end method
 
 .method public abstract sum()D
@@ -99,7 +99,7 @@
 .method public abstract w(Lj$/util/function/g;)Lj$/util/stream/U;
 .end method
 
-.method public abstract x(Lj$/util/function/h;)Lj$/util/stream/f1;
+.method public abstract x(Lj$/util/function/h;)Lj$/util/stream/e1;
 .end method
 
 .method public abstract y(Lj$/wrappers/K;)Lj$/util/stream/U;

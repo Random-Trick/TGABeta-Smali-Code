@@ -452,14 +452,14 @@
 .end method
 
 .method private didWriteData(Ljava/io/File;JZ)V
-    .registers 15
+    .registers 16
 
     .line 2359
     iget-boolean v0, p0, Lorg/telegram/ui/Components/InstantCameraView$VideoRecorder;->videoConvertFirstWrite:Z
 
     const-wide/16 v1, 0x0
 
-    if-eqz v0, :cond_47
+    if-eqz v0, :cond_48
 
     .line 2360
     iget-object v0, p0, Lorg/telegram/ui/Components/InstantCameraView$VideoRecorder;->this$0:Lorg/telegram/ui/Components/InstantCameraView;
@@ -484,20 +484,20 @@
 
     const/4 v6, 0x0
 
-    const/4 v7, 0x1
+    const-wide/16 v7, 0x1
 
-    const/high16 v8, 0x2000000
+    const/high16 v9, 0x2000000
 
-    const/4 v9, 0x0
+    const/4 v10, 0x0
 
-    invoke-virtual/range {v3 .. v9}, Lorg/telegram/messenger/FileLoader;->uploadFile(Ljava/lang/String;ZZIIZ)V
+    invoke-virtual/range {v3 .. v10}, Lorg/telegram/messenger/FileLoader;->uploadFile(Ljava/lang/String;ZZJIZ)V
 
     const/4 v0, 0x0
 
     .line 2361
     iput-boolean v0, p0, Lorg/telegram/ui/Components/InstantCameraView$VideoRecorder;->videoConvertFirstWrite:Z
 
-    if-eqz p4, :cond_66
+    if-eqz p4, :cond_67
 
     .line 2363
     iget-object v0, p0, Lorg/telegram/ui/Components/InstantCameraView$VideoRecorder;->this$0:Lorg/telegram/ui/Components/InstantCameraView;
@@ -520,23 +520,23 @@
 
     move-result v5
 
-    if-eqz p4, :cond_41
+    if-eqz p4, :cond_42
 
     invoke-virtual {p1}, Ljava/io/File;->length()J
 
     move-result-wide v1
 
-    :cond_41
+    :cond_42
     move-wide v8, v1
 
     move-wide v6, p2
 
     invoke-virtual/range {v3 .. v9}, Lorg/telegram/messenger/FileLoader;->checkUploadNewDataAvailable(Ljava/lang/String;ZJJ)V
 
-    goto :goto_66
+    goto :goto_67
 
     .line 2366
-    :cond_47
+    :cond_48
     iget-object v0, p0, Lorg/telegram/ui/Components/InstantCameraView$VideoRecorder;->this$0:Lorg/telegram/ui/Components/InstantCameraView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/InstantCameraView;->access$3400(Lorg/telegram/ui/Components/InstantCameraView;)I
@@ -557,21 +557,21 @@
 
     move-result v5
 
-    if-eqz p4, :cond_61
+    if-eqz p4, :cond_62
 
     invoke-virtual {p1}, Ljava/io/File;->length()J
 
     move-result-wide v1
 
-    :cond_61
+    :cond_62
     move-wide v8, v1
 
     move-wide v6, p2
 
     invoke-virtual/range {v3 .. v9}, Lorg/telegram/messenger/FileLoader;->checkUploadNewDataAvailable(Ljava/lang/String;ZJJ)V
 
-    :cond_66
-    :goto_66
+    :cond_67
+    :goto_67
     return-void
 .end method
 

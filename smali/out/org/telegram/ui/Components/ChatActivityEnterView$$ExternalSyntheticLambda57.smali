@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lorg/telegram/ui/Components/EditTextCaption$EditTextCaptionDelegate;
+.implements Lorg/telegram/ui/Components/BotKeyboardView$BotKeyboardViewDelegate;
 
 
 # instance fields
@@ -22,12 +22,12 @@
 
 
 # virtual methods
-.method public final onSpansChanged()V
-    .registers 2
+.method public final didPressedButton(Lorg/telegram/tgnet/TLRPC$KeyboardButton;)V
+    .registers 3
 
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$$ExternalSyntheticLambda57;->f$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
-    invoke-static {v0}, Lorg/telegram/ui/Components/ChatActivityEnterView;->$r8$lambda$Bfo7SVCESIz6OG71SZVvtF_rjLU(Lorg/telegram/ui/Components/ChatActivityEnterView;)V
+    invoke-static {v0, p1}, Lorg/telegram/ui/Components/ChatActivityEnterView;->$r8$lambda$Vibu4z-KYIC6TH3cawCoBwjukIA(Lorg/telegram/ui/Components/ChatActivityEnterView;Lorg/telegram/tgnet/TLRPC$KeyboardButton;)V
 
     return-void
 .end method

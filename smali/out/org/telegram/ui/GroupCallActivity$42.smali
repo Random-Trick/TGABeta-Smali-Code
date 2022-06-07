@@ -27,7 +27,7 @@
 .method constructor <init>(Lorg/telegram/ui/GroupCallActivity;Lorg/telegram/messenger/ChatObject$VideoParticipant;)V
     .registers 3
 
-    .line 5416
+    .line 5421
     iput-object p1, p0, Lorg/telegram/ui/GroupCallActivity$42;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     iput-object p2, p0, Lorg/telegram/ui/GroupCallActivity$42;->val$videoParticipant:Lorg/telegram/messenger/ChatObject$VideoParticipant;
@@ -42,7 +42,7 @@
 .method public onPreDraw()Z
     .registers 3
 
-    .line 5419
+    .line 5424
     iget-object v0, p0, Lorg/telegram/ui/GroupCallActivity$42;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/GroupCallActivity;->access$5700(Lorg/telegram/ui/GroupCallActivity;)Lorg/telegram/ui/Components/RecyclerListView;
@@ -55,14 +55,14 @@
 
     invoke-virtual {v0, p0}, Landroid/view/ViewTreeObserver;->removeOnPreDrawListener(Landroid/view/ViewTreeObserver$OnPreDrawListener;)V
 
-    .line 5420
+    .line 5425
     iget-object v0, p0, Lorg/telegram/ui/GroupCallActivity$42;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     const/4 v1, 0x0
 
     iput-object v1, v0, Lorg/telegram/ui/GroupCallActivity;->requestFullscreenListener:Landroid/view/ViewTreeObserver$OnPreDrawListener;
 
-    .line 5421
+    .line 5426
     invoke-static {v0}, Lorg/telegram/ui/GroupCallActivity;->access$5000(Lorg/telegram/ui/GroupCallActivity;)Lorg/telegram/ui/Components/voip/GroupCallRenderersContainer;
 
     move-result-object v0
@@ -71,7 +71,7 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/voip/GroupCallRenderersContainer;->requestFullscreen(Lorg/telegram/messenger/ChatObject$VideoParticipant;)V
 
-    .line 5422
+    .line 5427
     iget-object v0, p0, Lorg/telegram/ui/GroupCallActivity$42;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     iget-object v0, v0, Lorg/telegram/ui/GroupCallActivity;->fullscreenUsersListView:Lorg/telegram/ui/Components/RecyclerListView;

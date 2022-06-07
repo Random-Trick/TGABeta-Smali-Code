@@ -24,7 +24,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/BotWebViewSheet$2;Z)V
     .registers 3
 
-    .line 209
+    .line 300
     iput-object p1, p0, Lorg/telegram/ui/Components/BotWebViewSheet$2$1;->this$1:Lorg/telegram/ui/Components/BotWebViewSheet$2;
 
     iput-boolean p2, p0, Lorg/telegram/ui/Components/BotWebViewSheet$2$1;->val$isVisible:Z
@@ -39,12 +39,12 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .registers 3
 
-    .line 212
+    .line 303
     iget-boolean p1, p0, Lorg/telegram/ui/Components/BotWebViewSheet$2$1;->val$isVisible:Z
 
     if-nez p1, :cond_11
 
-    .line 213
+    .line 304
     iget-object p1, p0, Lorg/telegram/ui/Components/BotWebViewSheet$2$1;->this$1:Lorg/telegram/ui/Components/BotWebViewSheet$2;
 
     iget-object p1, p1, Lorg/telegram/ui/Components/BotWebViewSheet$2;->this$0:Lorg/telegram/ui/Components/BotWebViewSheet;
@@ -57,13 +57,13 @@
 
     invoke-virtual {p1, v0}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 215
+    .line 306
     :cond_11
     iget-object p1, p0, Lorg/telegram/ui/Components/BotWebViewSheet$2$1;->this$1:Lorg/telegram/ui/Components/BotWebViewSheet$2;
 
     iget-object p1, p1, Lorg/telegram/ui/Components/BotWebViewSheet$2;->this$0:Lorg/telegram/ui/Components/BotWebViewSheet;
 
-    invoke-static {p1}, Lorg/telegram/ui/Components/BotWebViewSheet;->access$800(Lorg/telegram/ui/Components/BotWebViewSheet;)Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout$WebViewSwipeContainer;
+    invoke-static {p1}, Lorg/telegram/ui/Components/BotWebViewSheet;->access$1400(Lorg/telegram/ui/Components/BotWebViewSheet;)Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout$WebViewSwipeContainer;
 
     move-result-object p1
 

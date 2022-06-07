@@ -7,10 +7,10 @@
 
 
 # direct methods
-.method constructor <init>(Lj$/util/stream/n3;)V
+.method constructor <init>(Lj$/util/stream/m3;)V
     .registers 2
 
-    invoke-direct {p0, p1}, Lj$/util/stream/g3;-><init>(Lj$/util/stream/n3;)V
+    invoke-direct {p0, p1}, Lj$/util/stream/g3;-><init>(Lj$/util/stream/m3;)V
 
     return-void
 .end method

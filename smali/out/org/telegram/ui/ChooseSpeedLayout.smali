@@ -100,13 +100,13 @@
 
     const-string v3, "Back"
 
-    const v4, 0x7f0e0281
+    const v4, 0x7f0e02b6
 
     invoke-static {v3, v4}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v3
 
-    const v4, 0x7f07023b
+    const v4, 0x7f0701c7
 
     invoke-static {v0, v4, v3, v1, v2}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->addItem(Lorg/telegram/ui/ActionBar/ActionBarPopupWindow$ActionBarPopupWindowLayout;ILjava/lang/CharSequence;ZLorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;
 
@@ -129,13 +129,13 @@
 
     const-string v3, "SpeedVerySlow"
 
-    const v4, 0x7f0e10a6
+    const v4, 0x7f0e1165
 
     invoke-static {v3, v4}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v3
 
-    const v4, 0x7f0702d2
+    const v4, 0x7f0702f5
 
     invoke-static {v0, v4, v3, v1, v2}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->addItem(Lorg/telegram/ui/ActionBar/ActionBarPopupWindow$ActionBarPopupWindowLayout;ILjava/lang/CharSequence;ZLorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;
 
@@ -161,13 +161,13 @@
 
     const-string v3, "SpeedSlow"
 
-    const v4, 0x7f0e10a4
+    const v4, 0x7f0e1163
 
     invoke-static {v3, v4}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v3
 
-    const v4, 0x7f0702d3
+    const v4, 0x7f0702f6
 
     invoke-static {v0, v4, v3, v1, v2}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->addItem(Lorg/telegram/ui/ActionBar/ActionBarPopupWindow$ActionBarPopupWindowLayout;ILjava/lang/CharSequence;ZLorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;
 
@@ -193,13 +193,13 @@
 
     const-string v0, "SpeedNormal"
 
-    const v3, 0x7f0e10a3
+    const v3, 0x7f0e1162
 
     invoke-static {v0, v3}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v0
 
-    const v3, 0x7f0702d4
+    const v3, 0x7f0702f7
 
     invoke-static {p1, v3, v0, v1, v2}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->addItem(Lorg/telegram/ui/ActionBar/ActionBarPopupWindow$ActionBarPopupWindowLayout;ILjava/lang/CharSequence;ZLorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;
 
@@ -227,13 +227,13 @@
 
     const-string v0, "SpeedFast"
 
-    const v3, 0x7f0e10a2
+    const v3, 0x7f0e1161
 
     invoke-static {v0, v3}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v0
 
-    const v3, 0x7f0702d5
+    const v3, 0x7f0702f8
 
     invoke-static {p1, v3, v0, v1, v2}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->addItem(Lorg/telegram/ui/ActionBar/ActionBarPopupWindow$ActionBarPopupWindowLayout;ILjava/lang/CharSequence;ZLorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;
 
@@ -261,13 +261,13 @@
 
     const-string v0, "SpeedVeryFast"
 
-    const v3, 0x7f0e10a5
+    const v3, 0x7f0e1164
 
     invoke-static {v0, v3}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v0
 
-    const v3, 0x7f0702d6
+    const v3, 0x7f0702f9
 
     invoke-static {p1, v3, v0, v1, v2}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->addItem(Lorg/telegram/ui/ActionBar/ActionBarPopupWindow$ActionBarPopupWindowLayout;ILjava/lang/CharSequence;ZLorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;
 

@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/StickersActivity;)V
     .registers 2
 
-    .line 204
+    .line 221
     iput-object p1, p0, Lorg/telegram/ui/StickersActivity$1;->this$0:Lorg/telegram/ui/StickersActivity;
 
     invoke-direct {p0}, Lorg/telegram/ui/ActionBar/ActionBar$ActionBarMenuOnItemClick;-><init>()V
@@ -39,7 +39,7 @@
 
     if-ne p1, v0, :cond_11
 
-    .line 208
+    .line 225
     iget-object p1, p0, Lorg/telegram/ui/StickersActivity$1;->this$0:Lorg/telegram/ui/StickersActivity;
 
     invoke-virtual {p1}, Lorg/telegram/ui/StickersActivity;->onBackPressed()Z
@@ -48,7 +48,7 @@
 
     if-eqz p1, :cond_38
 
-    .line 209
+    .line 226
     iget-object p1, p0, Lorg/telegram/ui/StickersActivity$1;->this$0:Lorg/telegram/ui/StickersActivity;
 
     invoke-virtual {p1}, Lorg/telegram/ui/ActionBar/BaseFragment;->finishFragment()V
@@ -66,7 +66,7 @@
 
     if-ne p1, v0, :cond_38
 
-    .line 212
+    .line 229
     :cond_19
     iget-object v0, p0, Lorg/telegram/ui/StickersActivity$1;->this$0:Lorg/telegram/ui/StickersActivity;
 
@@ -76,7 +76,7 @@
 
     if-nez v0, :cond_33
 
-    .line 213
+    .line 230
     iget-object v0, p0, Lorg/telegram/ui/StickersActivity$1;->this$0:Lorg/telegram/ui/StickersActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/StickersActivity;->access$400(Lorg/telegram/ui/StickersActivity;)I
@@ -85,7 +85,7 @@
 
     if-nez v0, :cond_38
 
-    .line 214
+    .line 231
     iget-object v0, p0, Lorg/telegram/ui/StickersActivity$1;->this$0:Lorg/telegram/ui/StickersActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/StickersActivity;->access$000(Lorg/telegram/ui/StickersActivity;)Lorg/telegram/ui/StickersActivity$ListAdapter;
@@ -96,7 +96,7 @@
 
     goto :goto_38
 
-    .line 217
+    .line 234
     :cond_33
     iget-object p1, p0, Lorg/telegram/ui/StickersActivity$1;->this$0:Lorg/telegram/ui/StickersActivity;
 

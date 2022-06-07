@@ -23,7 +23,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 59094
+    .line 59578
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -32,7 +32,7 @@
 .method public static TLdeserialize(Lorg/telegram/tgnet/AbstractSerializedData;IZ)Lorg/telegram/tgnet/TLRPC$TL_attachMenuBotIconColor;
     .registers 4
 
-    .line 59101
+    .line 59585
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_attachMenuBotIconColor;->constructor:I
 
     if-eq v0, p1, :cond_1e
@@ -43,7 +43,7 @@
 
     return-object p0
 
-    .line 59103
+    .line 59587
     :cond_8
     new-instance p0, Ljava/lang/RuntimeException;
 
@@ -69,13 +69,13 @@
 
     throw p0
 
-    .line 59108
+    .line 59592
     :cond_1e
     new-instance p1, Lorg/telegram/tgnet/TLRPC$TL_attachMenuBotIconColor;
 
     invoke-direct {p1}, Lorg/telegram/tgnet/TLRPC$TL_attachMenuBotIconColor;-><init>()V
 
-    .line 59109
+    .line 59593
     invoke-virtual {p1, p0, p2}, Lorg/telegram/tgnet/TLRPC$TL_attachMenuBotIconColor;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
     return-object p1
@@ -86,14 +86,14 @@
 .method public readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
     .registers 4
 
-    .line 59114
+    .line 59598
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readString(Z)Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_attachMenuBotIconColor;->name:Ljava/lang/String;
 
-    .line 59115
+    .line 59599
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result p1
@@ -106,17 +106,17 @@
 .method public serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
     .registers 3
 
-    .line 59119
+    .line 59603
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_attachMenuBotIconColor;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 59120
+    .line 59604
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_attachMenuBotIconColor;->name:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeString(Ljava/lang/String;)V
 
-    .line 59121
+    .line 59605
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_attachMenuBotIconColor;->color:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V

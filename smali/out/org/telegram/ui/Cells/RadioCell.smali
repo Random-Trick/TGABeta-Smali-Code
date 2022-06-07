@@ -8,6 +8,8 @@
 
 .field private radioButton:Lorg/telegram/ui/Components/RadioButton;
 
+.field private resourcesProvider:Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;
+
 .field private textView:Landroid/widget/TextView;
 
 
@@ -19,243 +21,278 @@
 
     const/16 v1, 0x15
 
-    .line 38
+    .line 39
     invoke-direct {p0, p1, v0, v1}, Lorg/telegram/ui/Cells/RadioCell;-><init>(Landroid/content/Context;ZI)V
 
     return-void
 .end method
 
-.method public constructor <init>(Landroid/content/Context;ZI)V
-    .registers 16
-
-    .line 42
-    invoke-direct {p0, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
-
-    .line 44
-    new-instance v0, Landroid/widget/TextView;
-
-    invoke-direct {v0, p1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
-
-    iput-object v0, p0, Lorg/telegram/ui/Cells/RadioCell;->textView:Landroid/widget/TextView;
-
-    if-eqz p2, :cond_16
-
-    const-string v1, "dialogTextBlack"
-
-    .line 46
-    invoke-static {v1}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
-
-    goto :goto_1f
-
-    :cond_16
-    const-string v1, "windowBackgroundWhiteBlackText"
-
-    .line 48
-    invoke-static {v1}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
-
-    .line 50
-    :goto_1f
-    iget-object v0, p0, Lorg/telegram/ui/Cells/RadioCell;->textView:Landroid/widget/TextView;
-
-    const/high16 v1, 0x41800000    # 16.0f
-
-    const/4 v2, 0x1
-
-    invoke-virtual {v0, v2, v1}, Landroid/widget/TextView;->setTextSize(IF)V
-
-    .line 51
-    iget-object v0, p0, Lorg/telegram/ui/Cells/RadioCell;->textView:Landroid/widget/TextView;
-
-    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setLines(I)V
-
-    .line 52
-    iget-object v0, p0, Lorg/telegram/ui/Cells/RadioCell;->textView:Landroid/widget/TextView;
-
-    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setMaxLines(I)V
-
-    .line 53
-    iget-object v0, p0, Lorg/telegram/ui/Cells/RadioCell;->textView:Landroid/widget/TextView;
-
-    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setSingleLine(Z)V
-
-    .line 54
-    iget-object v0, p0, Lorg/telegram/ui/Cells/RadioCell;->textView:Landroid/widget/TextView;
-
-    sget-object v1, Landroid/text/TextUtils$TruncateAt;->END:Landroid/text/TextUtils$TruncateAt;
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setEllipsize(Landroid/text/TextUtils$TruncateAt;)V
-
-    .line 55
-    iget-object v0, p0, Lorg/telegram/ui/Cells/RadioCell;->textView:Landroid/widget/TextView;
-
-    sget-boolean v1, Lorg/telegram/messenger/LocaleController;->isRTL:Z
-
-    const/4 v3, 0x5
-
-    const/4 v4, 0x3
-
-    if-eqz v1, :cond_47
-
-    const/4 v1, 0x5
-
-    goto :goto_48
-
-    :cond_47
-    const/4 v1, 0x3
-
-    :goto_48
-    or-int/lit8 v1, v1, 0x10
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setGravity(I)V
-
-    .line 56
-    iget-object v0, p0, Lorg/telegram/ui/Cells/RadioCell;->textView:Landroid/widget/TextView;
-
-    const/4 v5, -0x1
-
-    const/high16 v6, -0x40800000    # -1.0f
-
-    sget-boolean v1, Lorg/telegram/messenger/LocaleController;->isRTL:Z
-
-    if-eqz v1, :cond_58
-
-    const/4 v1, 0x5
-
-    goto :goto_59
-
-    :cond_58
-    const/4 v1, 0x3
-
-    :goto_59
-    or-int/lit8 v7, v1, 0x30
-
-    int-to-float v10, p3
-
-    const/4 v9, 0x0
-
-    const/4 v11, 0x0
-
-    move v8, v10
-
-    invoke-static/range {v5 .. v11}, Lorg/telegram/ui/Components/LayoutHelper;->createFrame(IFIFFFF)Landroid/widget/FrameLayout$LayoutParams;
-
-    move-result-object v1
-
-    invoke-virtual {p0, v0, v1}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
-
-    .line 58
-    new-instance v0, Lorg/telegram/ui/Components/RadioButton;
-
-    invoke-direct {v0, p1}, Lorg/telegram/ui/Components/RadioButton;-><init>(Landroid/content/Context;)V
-
-    iput-object v0, p0, Lorg/telegram/ui/Cells/RadioCell;->radioButton:Lorg/telegram/ui/Components/RadioButton;
-
-    const/high16 p1, 0x41a00000    # 20.0f
-
-    .line 59
-    invoke-static {p1}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
-
-    move-result p1
-
-    invoke-virtual {v0, p1}, Lorg/telegram/ui/Components/RadioButton;->setSize(I)V
-
-    if-eqz p2, :cond_8a
-
-    .line 61
-    iget-object p1, p0, Lorg/telegram/ui/Cells/RadioCell;->radioButton:Lorg/telegram/ui/Components/RadioButton;
-
-    const-string p2, "dialogRadioBackground"
-
-    invoke-static {p2}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
-
-    move-result p2
-
-    const-string v0, "dialogRadioBackgroundChecked"
-
-    invoke-static {v0}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
-
-    move-result v0
-
-    invoke-virtual {p1, p2, v0}, Lorg/telegram/ui/Components/RadioButton;->setColor(II)V
-
-    goto :goto_9b
-
-    .line 63
-    :cond_8a
-    iget-object p1, p0, Lorg/telegram/ui/Cells/RadioCell;->radioButton:Lorg/telegram/ui/Components/RadioButton;
-
-    const-string p2, "radioBackground"
-
-    invoke-static {p2}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
-
-    move-result p2
-
-    const-string v0, "radioBackgroundChecked"
-
-    invoke-static {v0}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
-
-    move-result v0
-
-    invoke-virtual {p1, p2, v0}, Lorg/telegram/ui/Components/RadioButton;->setColor(II)V
-
-    .line 65
-    :goto_9b
-    iget-object p1, p0, Lorg/telegram/ui/Cells/RadioCell;->radioButton:Lorg/telegram/ui/Components/RadioButton;
-
-    const/16 v5, 0x16
-
-    const/high16 v6, 0x41b00000    # 22.0f
-
-    sget-boolean p2, Lorg/telegram/messenger/LocaleController;->isRTL:Z
-
-    if-eqz p2, :cond_a6
-
-    const/4 v3, 0x3
-
-    :cond_a6
-    or-int/lit8 v7, v3, 0x30
+.method public constructor <init>(Landroid/content/Context;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)V
+    .registers 5
 
     const/4 v0, 0x0
 
-    if-eqz p2, :cond_ae
+    const/16 v1, 0x15
 
-    add-int/lit8 v1, p3, 0x1
+    .line 43
+    invoke-direct {p0, p1, v0, v1, p2}, Lorg/telegram/ui/Cells/RadioCell;-><init>(Landroid/content/Context;ZILorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)V
 
-    goto :goto_af
+    return-void
+.end method
 
-    :cond_ae
-    const/4 v1, 0x0
+.method public constructor <init>(Landroid/content/Context;ZI)V
+    .registers 5
 
-    :goto_af
-    int-to-float v8, v1
+    const/4 v0, 0x0
 
-    const/high16 v9, 0x41600000    # 14.0f
+    .line 47
+    invoke-direct {p0, p1, p2, p3, v0}, Lorg/telegram/ui/Cells/RadioCell;-><init>(Landroid/content/Context;ZILorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)V
 
-    if-eqz p2, :cond_b5
+    return-void
+.end method
 
-    goto :goto_b7
+.method public constructor <init>(Landroid/content/Context;ZILorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)V
+    .registers 21
 
-    :cond_b5
-    add-int/lit8 v0, p3, 0x1
+    move-object/from16 v0, p0
 
-    :goto_b7
-    int-to-float v10, v0
+    move-object/from16 v1, p1
 
-    const/4 v11, 0x0
+    move/from16 v2, p3
 
-    invoke-static/range {v5 .. v11}, Lorg/telegram/ui/Components/LayoutHelper;->createFrame(IFIFFFF)Landroid/widget/FrameLayout$LayoutParams;
+    move-object/from16 v3, p4
 
-    move-result-object p2
+    .line 51
+    invoke-direct/range {p0 .. p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    invoke-virtual {p0, p1, p2}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+    .line 52
+    iput-object v3, v0, Lorg/telegram/ui/Cells/RadioCell;->resourcesProvider:Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;
+
+    .line 54
+    new-instance v4, Landroid/widget/TextView;
+
+    invoke-direct {v4, v1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
+
+    iput-object v4, v0, Lorg/telegram/ui/Cells/RadioCell;->textView:Landroid/widget/TextView;
+
+    if-eqz p2, :cond_20
+
+    const-string v5, "dialogTextBlack"
+
+    .line 56
+    invoke-static {v5, v3}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)I
+
+    move-result v5
+
+    invoke-virtual {v4, v5}, Landroid/widget/TextView;->setTextColor(I)V
+
+    goto :goto_29
+
+    :cond_20
+    const-string v5, "windowBackgroundWhiteBlackText"
+
+    .line 58
+    invoke-static {v5, v3}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)I
+
+    move-result v5
+
+    invoke-virtual {v4, v5}, Landroid/widget/TextView;->setTextColor(I)V
+
+    .line 60
+    :goto_29
+    iget-object v4, v0, Lorg/telegram/ui/Cells/RadioCell;->textView:Landroid/widget/TextView;
+
+    const/high16 v5, 0x41800000    # 16.0f
+
+    const/4 v6, 0x1
+
+    invoke-virtual {v4, v6, v5}, Landroid/widget/TextView;->setTextSize(IF)V
+
+    .line 61
+    iget-object v4, v0, Lorg/telegram/ui/Cells/RadioCell;->textView:Landroid/widget/TextView;
+
+    invoke-virtual {v4, v6}, Landroid/widget/TextView;->setLines(I)V
+
+    .line 62
+    iget-object v4, v0, Lorg/telegram/ui/Cells/RadioCell;->textView:Landroid/widget/TextView;
+
+    invoke-virtual {v4, v6}, Landroid/widget/TextView;->setMaxLines(I)V
+
+    .line 63
+    iget-object v4, v0, Lorg/telegram/ui/Cells/RadioCell;->textView:Landroid/widget/TextView;
+
+    invoke-virtual {v4, v6}, Landroid/widget/TextView;->setSingleLine(Z)V
+
+    .line 64
+    iget-object v4, v0, Lorg/telegram/ui/Cells/RadioCell;->textView:Landroid/widget/TextView;
+
+    sget-object v5, Landroid/text/TextUtils$TruncateAt;->END:Landroid/text/TextUtils$TruncateAt;
+
+    invoke-virtual {v4, v5}, Landroid/widget/TextView;->setEllipsize(Landroid/text/TextUtils$TruncateAt;)V
+
+    .line 65
+    iget-object v4, v0, Lorg/telegram/ui/Cells/RadioCell;->textView:Landroid/widget/TextView;
+
+    sget-boolean v5, Lorg/telegram/messenger/LocaleController;->isRTL:Z
+
+    const/4 v7, 0x5
+
+    const/4 v8, 0x3
+
+    if-eqz v5, :cond_51
+
+    const/4 v5, 0x5
+
+    goto :goto_52
+
+    :cond_51
+    const/4 v5, 0x3
+
+    :goto_52
+    or-int/lit8 v5, v5, 0x10
+
+    invoke-virtual {v4, v5}, Landroid/widget/TextView;->setGravity(I)V
+
+    .line 66
+    iget-object v4, v0, Lorg/telegram/ui/Cells/RadioCell;->textView:Landroid/widget/TextView;
+
+    const/4 v9, -0x1
+
+    const/high16 v10, -0x40800000    # -1.0f
+
+    sget-boolean v5, Lorg/telegram/messenger/LocaleController;->isRTL:Z
+
+    if-eqz v5, :cond_62
+
+    const/4 v5, 0x5
+
+    goto :goto_63
+
+    :cond_62
+    const/4 v5, 0x3
+
+    :goto_63
+    or-int/lit8 v11, v5, 0x30
+
+    int-to-float v14, v2
+
+    const/4 v13, 0x0
+
+    const/4 v15, 0x0
+
+    move v12, v14
+
+    invoke-static/range {v9 .. v15}, Lorg/telegram/ui/Components/LayoutHelper;->createFrame(IFIFFFF)Landroid/widget/FrameLayout$LayoutParams;
+
+    move-result-object v5
+
+    invoke-virtual {v0, v4, v5}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+
+    .line 68
+    new-instance v4, Lorg/telegram/ui/Components/RadioButton;
+
+    invoke-direct {v4, v1}, Lorg/telegram/ui/Components/RadioButton;-><init>(Landroid/content/Context;)V
+
+    iput-object v4, v0, Lorg/telegram/ui/Cells/RadioCell;->radioButton:Lorg/telegram/ui/Components/RadioButton;
+
+    const/high16 v1, 0x41a00000    # 20.0f
+
+    .line 69
+    invoke-static {v1}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
+
+    move-result v1
+
+    invoke-virtual {v4, v1}, Lorg/telegram/ui/Components/RadioButton;->setSize(I)V
+
+    if-eqz p2, :cond_94
+
+    .line 71
+    iget-object v1, v0, Lorg/telegram/ui/Cells/RadioCell;->radioButton:Lorg/telegram/ui/Components/RadioButton;
+
+    const-string v4, "dialogRadioBackground"
+
+    invoke-static {v4, v3}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)I
+
+    move-result v4
+
+    const-string v5, "dialogRadioBackgroundChecked"
+
+    invoke-static {v5, v3}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)I
+
+    move-result v3
+
+    invoke-virtual {v1, v4, v3}, Lorg/telegram/ui/Components/RadioButton;->setColor(II)V
+
+    goto :goto_a5
+
+    .line 73
+    :cond_94
+    iget-object v1, v0, Lorg/telegram/ui/Cells/RadioCell;->radioButton:Lorg/telegram/ui/Components/RadioButton;
+
+    const-string v4, "radioBackground"
+
+    invoke-static {v4, v3}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)I
+
+    move-result v4
+
+    const-string v5, "radioBackgroundChecked"
+
+    invoke-static {v5, v3}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)I
+
+    move-result v3
+
+    invoke-virtual {v1, v4, v3}, Lorg/telegram/ui/Components/RadioButton;->setColor(II)V
+
+    .line 75
+    :goto_a5
+    iget-object v1, v0, Lorg/telegram/ui/Cells/RadioCell;->radioButton:Lorg/telegram/ui/Components/RadioButton;
+
+    const/16 v9, 0x16
+
+    const/high16 v10, 0x41b00000    # 22.0f
+
+    sget-boolean v3, Lorg/telegram/messenger/LocaleController;->isRTL:Z
+
+    if-eqz v3, :cond_b0
+
+    const/4 v7, 0x3
+
+    :cond_b0
+    or-int/lit8 v11, v7, 0x30
+
+    const/4 v4, 0x0
+
+    if-eqz v3, :cond_b8
+
+    add-int/lit8 v5, v2, 0x1
+
+    goto :goto_b9
+
+    :cond_b8
+    const/4 v5, 0x0
+
+    :goto_b9
+    int-to-float v12, v5
+
+    const/high16 v13, 0x41600000    # 14.0f
+
+    if-eqz v3, :cond_bf
+
+    goto :goto_c1
+
+    :cond_bf
+    add-int/lit8 v4, v2, 0x1
+
+    :goto_c1
+    int-to-float v14, v4
+
+    const/4 v15, 0x0
+
+    invoke-static/range {v9 .. v15}, Lorg/telegram/ui/Components/LayoutHelper;->createFrame(IFIFFFF)Landroid/widget/FrameLayout$LayoutParams;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
     return-void
 .end method
@@ -265,7 +302,7 @@
 .method public isChecked()Z
     .registers 2
 
-    .line 89
+    .line 99
     iget-object v0, p0, Lorg/telegram/ui/Cells/RadioCell;->radioButton:Lorg/telegram/ui/Components/RadioButton;
 
     invoke-virtual {v0}, Lorg/telegram/ui/Components/RadioButton;->isChecked()Z
@@ -278,12 +315,12 @@
 .method protected onDraw(Landroid/graphics/Canvas;)V
     .registers 10
 
-    .line 109
+    .line 119
     iget-boolean v0, p0, Lorg/telegram/ui/Cells/RadioCell;->needDivider:Z
 
     if-eqz v0, :cond_37
 
-    .line 110
+    .line 120
     sget-boolean v0, Lorg/telegram/messenger/LocaleController;->isRTL:Z
 
     const/high16 v1, 0x41a00000    # 20.0f
@@ -357,20 +394,20 @@
 .method public onInitializeAccessibilityNodeInfo(Landroid/view/accessibility/AccessibilityNodeInfo;)V
     .registers 3
 
-    .line 116
+    .line 126
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->onInitializeAccessibilityNodeInfo(Landroid/view/accessibility/AccessibilityNodeInfo;)V
 
     const-string v0, "android.widget.RadioButton"
 
-    .line 117
+    .line 127
     invoke-virtual {p1, v0}, Landroid/view/accessibility/AccessibilityNodeInfo;->setClassName(Ljava/lang/CharSequence;)V
 
     const/4 v0, 0x1
 
-    .line 118
+    .line 128
     invoke-virtual {p1, v0}, Landroid/view/accessibility/AccessibilityNodeInfo;->setCheckable(Z)V
 
-    .line 119
+    .line 129
     invoke-virtual {p0}, Lorg/telegram/ui/Cells/RadioCell;->isChecked()Z
 
     move-result v0
@@ -383,7 +420,7 @@
 .method protected onMeasure(II)V
     .registers 6
 
-    .line 70
+    .line 80
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result p1
@@ -400,7 +437,7 @@
 
     invoke-virtual {p0, p1, p2}, Landroid/widget/FrameLayout;->setMeasuredDimension(II)V
 
-    .line 72
+    .line 82
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getMeasuredWidth()I
 
     move-result p1
@@ -425,7 +462,7 @@
 
     sub-int/2addr p1, p2
 
-    .line 73
+    .line 83
     iget-object p2, p0, Lorg/telegram/ui/Cells/RadioCell;->radioButton:Lorg/telegram/ui/Components/RadioButton;
 
     const/high16 v0, 0x41b00000    # 22.0f
@@ -452,7 +489,7 @@
 
     invoke-virtual {p2, v1, v0}, Landroid/view/View;->measure(II)V
 
-    .line 74
+    .line 84
     iget-object p2, p0, Lorg/telegram/ui/Cells/RadioCell;->textView:Landroid/widget/TextView;
 
     invoke-static {p1, v2}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
@@ -475,7 +512,7 @@
 .method public setChecked(ZZ)V
     .registers 4
 
-    .line 93
+    .line 103
     iget-object v0, p0, Lorg/telegram/ui/Cells/RadioCell;->radioButton:Lorg/telegram/ui/Components/RadioButton;
 
     invoke-virtual {v0, p1, p2}, Lorg/telegram/ui/Components/RadioButton;->setChecked(ZZ)V
@@ -494,7 +531,7 @@
         }
     .end annotation
 
-    .line 97
+    .line 107
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->setEnabled(Z)V
 
     const/high16 v0, 0x3f800000    # 1.0f
@@ -503,7 +540,7 @@
 
     if-eqz p2, :cond_36
 
-    .line 99
+    .line 109
     iget-object v2, p0, Lorg/telegram/ui/Cells/RadioCell;->textView:Landroid/widget/TextView;
 
     sget-object v3, Landroid/view/View;->ALPHA:Landroid/util/Property;
@@ -532,7 +569,7 @@
 
     invoke-virtual {p2, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 100
+    .line 110
     iget-object v2, p0, Lorg/telegram/ui/Cells/RadioCell;->radioButton:Lorg/telegram/ui/Components/RadioButton;
 
     sget-object v3, Landroid/view/View;->ALPHA:Landroid/util/Property;
@@ -557,7 +594,7 @@
 
     goto :goto_4c
 
-    .line 102
+    .line 112
     :cond_36
     iget-object p2, p0, Lorg/telegram/ui/Cells/RadioCell;->textView:Landroid/widget/TextView;
 
@@ -573,7 +610,7 @@
     :goto_3f
     invoke-virtual {p2, v2}, Landroid/widget/TextView;->setAlpha(F)V
 
-    .line 103
+    .line 113
     iget-object p2, p0, Lorg/telegram/ui/Cells/RadioCell;->radioButton:Lorg/telegram/ui/Components/RadioButton;
 
     if-eqz p1, :cond_47
@@ -593,24 +630,24 @@
 .method public setText(Ljava/lang/String;ZZ)V
     .registers 5
 
-    .line 82
+    .line 92
     iget-object v0, p0, Lorg/telegram/ui/Cells/RadioCell;->textView:Landroid/widget/TextView;
 
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 83
+    .line 93
     iget-object p1, p0, Lorg/telegram/ui/Cells/RadioCell;->radioButton:Lorg/telegram/ui/Components/RadioButton;
 
     const/4 v0, 0x0
 
     invoke-virtual {p1, p2, v0}, Lorg/telegram/ui/Components/RadioButton;->setChecked(ZZ)V
 
-    .line 84
+    .line 94
     iput-boolean p3, p0, Lorg/telegram/ui/Cells/RadioCell;->needDivider:Z
 
     xor-int/lit8 p1, p3, 0x1
 
-    .line 85
+    .line 95
     invoke-virtual {p0, p1}, Landroid/widget/FrameLayout;->setWillNotDraw(Z)V
 
     return-void
@@ -619,7 +656,7 @@
 .method public setTextColor(I)V
     .registers 3
 
-    .line 78
+    .line 88
     iget-object v0, p0, Lorg/telegram/ui/Cells/RadioCell;->textView:Landroid/widget/TextView;
 
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->setTextColor(I)V

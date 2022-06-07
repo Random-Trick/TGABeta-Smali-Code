@@ -29,7 +29,7 @@
 
 .field public parentObject:Ljava/lang/Object;
 
-.field public size:I
+.field public size:J
 
 .field public thumb:Landroid/graphics/drawable/Drawable;
 
@@ -42,7 +42,7 @@
 .method private constructor <init>()V
     .registers 1
 
-    .line 127
+    .line 128
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -51,7 +51,7 @@
 .method synthetic constructor <init>(Lorg/telegram/messenger/ImageReceiver$1;)V
     .registers 2
 
-    .line 127
+    .line 128
     invoke-direct {p0}, Lorg/telegram/messenger/ImageReceiver$SetImageBackup;-><init>()V
 
     return-void
@@ -60,7 +60,7 @@
 .method static synthetic access$000(Lorg/telegram/messenger/ImageReceiver$SetImageBackup;)Z
     .registers 1
 
-    .line 127
+    .line 128
     invoke-direct {p0}, Lorg/telegram/messenger/ImageReceiver$SetImageBackup;->isWebfileSet()Z
 
     move-result p0
@@ -71,7 +71,7 @@
 .method static synthetic access$100(Lorg/telegram/messenger/ImageReceiver$SetImageBackup;)V
     .registers 1
 
-    .line 127
+    .line 128
     invoke-direct {p0}, Lorg/telegram/messenger/ImageReceiver$SetImageBackup;->clear()V
 
     return-void
@@ -80,7 +80,7 @@
 .method static synthetic access$300(Lorg/telegram/messenger/ImageReceiver$SetImageBackup;)Z
     .registers 1
 
-    .line 127
+    .line 128
     invoke-direct {p0}, Lorg/telegram/messenger/ImageReceiver$SetImageBackup;->isSet()Z
 
     move-result p0
@@ -93,16 +93,16 @@
 
     const/4 v0, 0x0
 
-    .line 151
+    .line 152
     iput-object v0, p0, Lorg/telegram/messenger/ImageReceiver$SetImageBackup;->imageLocation:Lorg/telegram/messenger/ImageLocation;
 
-    .line 152
+    .line 153
     iput-object v0, p0, Lorg/telegram/messenger/ImageReceiver$SetImageBackup;->thumbLocation:Lorg/telegram/messenger/ImageLocation;
 
-    .line 153
+    .line 154
     iput-object v0, p0, Lorg/telegram/messenger/ImageReceiver$SetImageBackup;->mediaLocation:Lorg/telegram/messenger/ImageLocation;
 
-    .line 154
+    .line 155
     iput-object v0, p0, Lorg/telegram/messenger/ImageReceiver$SetImageBackup;->thumb:Landroid/graphics/drawable/Drawable;
 
     return-void
@@ -111,7 +111,7 @@
 .method private isSet()Z
     .registers 2
 
-    .line 141
+    .line 142
     iget-object v0, p0, Lorg/telegram/messenger/ImageReceiver$SetImageBackup;->imageLocation:Lorg/telegram/messenger/ImageLocation;
 
     if-nez v0, :cond_13
@@ -146,7 +146,7 @@
 .method private isWebfileSet()Z
     .registers 3
 
-    .line 145
+    .line 146
     iget-object v0, p0, Lorg/telegram/messenger/ImageReceiver$SetImageBackup;->imageLocation:Lorg/telegram/messenger/ImageLocation;
 
     if-eqz v0, :cond_c

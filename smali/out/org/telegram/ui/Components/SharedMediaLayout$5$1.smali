@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/SharedMediaLayout$5;Landroid/content/Context;Landroid/view/View;)V
     .registers 4
 
-    .line 1320
+    .line 1324
     iput-object p3, p0, Lorg/telegram/ui/Components/SharedMediaLayout$5$1;->val$dividerView:Landroid/view/View;
 
     invoke-direct {p0, p2}, Lorg/telegram/ui/ActionBar/ActionBarPopupWindow$ActionBarPopupWindowLayout;-><init>(Landroid/content/Context;)V
@@ -35,7 +35,7 @@
 .method protected onMeasure(II)V
     .registers 6
 
-    .line 1323
+    .line 1327
     iget-object v0, p0, Lorg/telegram/ui/Components/SharedMediaLayout$5$1;->val$dividerView:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
@@ -44,17 +44,17 @@
 
     if-eqz v0, :cond_2f
 
-    .line 1324
+    .line 1328
     iget-object v0, p0, Lorg/telegram/ui/Components/SharedMediaLayout$5$1;->val$dividerView:Landroid/view/View;
 
     const/16 v1, 0x8
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 1325
+    .line 1329
     invoke-super {p0, p1, p2}, Lorg/telegram/ui/ActionBar/ActionBarPopupWindow$ActionBarPopupWindowLayout;->onMeasure(II)V
 
-    .line 1326
+    .line 1330
     iget-object v0, p0, Lorg/telegram/ui/Components/SharedMediaLayout$5$1;->val$dividerView:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
@@ -75,19 +75,19 @@
 
     iput v1, v0, Landroid/view/ViewGroup$LayoutParams;->width:I
 
-    .line 1327
+    .line 1331
     iget-object v0, p0, Lorg/telegram/ui/Components/SharedMediaLayout$5$1;->val$dividerView:Landroid/view/View;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 1328
+    .line 1332
     invoke-super {p0, p1, p2}, Lorg/telegram/ui/ActionBar/ActionBarPopupWindow$ActionBarPopupWindowLayout;->onMeasure(II)V
 
     goto :goto_32
 
-    .line 1330
+    .line 1334
     :cond_2f
     invoke-super {p0, p1, p2}, Lorg/telegram/ui/ActionBar/ActionBarPopupWindow$ActionBarPopupWindowLayout;->onMeasure(II)V
 

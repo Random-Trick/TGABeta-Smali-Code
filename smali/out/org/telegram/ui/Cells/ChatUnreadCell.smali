@@ -30,7 +30,7 @@
 
     iput-object p2, p0, Lorg/telegram/ui/Cells/ChatUnreadCell;->backgroundLayout:Landroid/widget/FrameLayout;
 
-    const v0, 0x7f070303
+    const v0, 0x7f07032c
 
     .line 37
     invoke-virtual {p2, v0}, Landroid/widget/FrameLayout;->setBackgroundResource(I)V
@@ -86,7 +86,7 @@
 
     iput-object p2, p0, Lorg/telegram/ui/Cells/ChatUnreadCell;->imageView:Landroid/widget/ImageView;
 
-    const v0, 0x7f070146
+    const v0, 0x7f07010c
 
     .line 42
     invoke-virtual {p2, v0}, Landroid/widget/ImageView;->setImageResource(I)V

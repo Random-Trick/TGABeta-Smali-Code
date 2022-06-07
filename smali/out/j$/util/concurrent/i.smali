@@ -390,7 +390,7 @@
 
     const/4 v0, 0x0
 
-    invoke-static {v9, v0}, Lj$/util/stream/p1;->r(Lj$/util/u;Z)Lj$/util/stream/U;
+    invoke-static {v9, v0}, Lj$/util/stream/o1;->r(Lj$/util/t;Z)Lj$/util/stream/U;
 
     move-result-object v0
 
@@ -426,7 +426,7 @@
 
     const/4 p1, 0x0
 
-    invoke-static {v0, p1}, Lj$/util/stream/p1;->r(Lj$/util/u;Z)Lj$/util/stream/U;
+    invoke-static {v0, p1}, Lj$/util/stream/o1;->r(Lj$/util/t;Z)Lj$/util/stream/U;
 
     move-result-object p1
 
@@ -474,7 +474,7 @@
 
     const/4 p1, 0x0
 
-    invoke-static {v0, p1}, Lj$/util/stream/p1;->r(Lj$/util/u;Z)Lj$/util/stream/U;
+    invoke-static {v0, p1}, Lj$/util/stream/o1;->r(Lj$/util/t;Z)Lj$/util/stream/U;
 
     move-result-object p1
 
@@ -526,7 +526,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Lj$/util/stream/p1;->r(Lj$/util/u;Z)Lj$/util/stream/U;
+    invoke-static {v0, v1}, Lj$/util/stream/o1;->r(Lj$/util/t;Z)Lj$/util/stream/U;
 
     move-result-object v0
 
@@ -749,12 +749,12 @@
 
     const/4 v0, 0x0
 
-    invoke-static {v7, v0}, Lj$/util/stream/p1;->s(Lj$/util/v;Z)Lj$/util/stream/M0;
+    invoke-static {v7, v0}, Lj$/util/stream/o1;->s(Lj$/util/u$a;Z)Lj$/util/stream/IntStream;
 
     move-result-object v0
 
     .line 2
-    invoke-static {v0}, Lj$/wrappers/O0;->n0(Lj$/util/stream/M0;)Ljava/util/stream/IntStream;
+    invoke-static {v0}, Lj$/wrappers/$r8$wrapper$java$util$stream$IntStream$-WRP;->convert(Lj$/util/stream/IntStream;)Ljava/util/stream/IntStream;
 
     move-result-object v0
 
@@ -783,12 +783,12 @@
 
     const/4 p1, 0x0
 
-    invoke-static {v7, p1}, Lj$/util/stream/p1;->s(Lj$/util/v;Z)Lj$/util/stream/M0;
+    invoke-static {v7, p1}, Lj$/util/stream/o1;->s(Lj$/util/u$a;Z)Lj$/util/stream/IntStream;
 
     move-result-object p1
 
     .line 4
-    invoke-static {p1}, Lj$/wrappers/O0;->n0(Lj$/util/stream/M0;)Ljava/util/stream/IntStream;
+    invoke-static {p1}, Lj$/wrappers/$r8$wrapper$java$util$stream$IntStream$-WRP;->convert(Lj$/util/stream/IntStream;)Ljava/util/stream/IntStream;
 
     move-result-object p1
 
@@ -831,12 +831,12 @@
 
     const/4 p1, 0x0
 
-    invoke-static {v0, p1}, Lj$/util/stream/p1;->s(Lj$/util/v;Z)Lj$/util/stream/M0;
+    invoke-static {v0, p1}, Lj$/util/stream/o1;->s(Lj$/util/u$a;Z)Lj$/util/stream/IntStream;
 
     move-result-object p1
 
     .line 7
-    invoke-static {p1}, Lj$/wrappers/O0;->n0(Lj$/util/stream/M0;)Ljava/util/stream/IntStream;
+    invoke-static {p1}, Lj$/wrappers/$r8$wrapper$java$util$stream$IntStream$-WRP;->convert(Lj$/util/stream/IntStream;)Ljava/util/stream/IntStream;
 
     move-result-object p1
 
@@ -881,12 +881,12 @@
 
     const/4 p1, 0x0
 
-    invoke-static {v0, p1}, Lj$/util/stream/p1;->s(Lj$/util/v;Z)Lj$/util/stream/M0;
+    invoke-static {v0, p1}, Lj$/util/stream/o1;->s(Lj$/util/u$a;Z)Lj$/util/stream/IntStream;
 
     move-result-object p1
 
     .line 10
-    invoke-static {p1}, Lj$/wrappers/O0;->n0(Lj$/util/stream/M0;)Ljava/util/stream/IntStream;
+    invoke-static {p1}, Lj$/wrappers/$r8$wrapper$java$util$stream$IntStream$-WRP;->convert(Lj$/util/stream/IntStream;)Ljava/util/stream/IntStream;
 
     move-result-object p1
 
@@ -946,12 +946,12 @@
 
     const/4 v0, 0x0
 
-    invoke-static {v9, v0}, Lj$/util/stream/p1;->t(Lj$/util/w;Z)Lj$/util/stream/f1;
+    invoke-static {v9, v0}, Lj$/util/stream/o1;->t(Lj$/util/v;Z)Lj$/util/stream/e1;
 
     move-result-object v0
 
     .line 2
-    invoke-static {v0}, Lj$/wrappers/Q0;->n0(Lj$/util/stream/f1;)Ljava/util/stream/LongStream;
+    invoke-static {v0}, Lj$/wrappers/O0;->n0(Lj$/util/stream/e1;)Ljava/util/stream/LongStream;
 
     move-result-object v0
 
@@ -984,12 +984,12 @@
 
     const/4 p1, 0x0
 
-    invoke-static {v0, p1}, Lj$/util/stream/p1;->t(Lj$/util/w;Z)Lj$/util/stream/f1;
+    invoke-static {v0, p1}, Lj$/util/stream/o1;->t(Lj$/util/v;Z)Lj$/util/stream/e1;
 
     move-result-object p1
 
     .line 4
-    invoke-static {p1}, Lj$/wrappers/Q0;->n0(Lj$/util/stream/f1;)Ljava/util/stream/LongStream;
+    invoke-static {p1}, Lj$/wrappers/O0;->n0(Lj$/util/stream/e1;)Ljava/util/stream/LongStream;
 
     move-result-object p1
 
@@ -1030,12 +1030,12 @@
 
     const/4 p1, 0x0
 
-    invoke-static {v0, p1}, Lj$/util/stream/p1;->t(Lj$/util/w;Z)Lj$/util/stream/f1;
+    invoke-static {v0, p1}, Lj$/util/stream/o1;->t(Lj$/util/v;Z)Lj$/util/stream/e1;
 
     move-result-object p1
 
     .line 7
-    invoke-static {p1}, Lj$/wrappers/Q0;->n0(Lj$/util/stream/f1;)Ljava/util/stream/LongStream;
+    invoke-static {p1}, Lj$/wrappers/O0;->n0(Lj$/util/stream/e1;)Ljava/util/stream/LongStream;
 
     move-result-object p1
 
@@ -1082,12 +1082,12 @@
 
     const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Lj$/util/stream/p1;->t(Lj$/util/w;Z)Lj$/util/stream/f1;
+    invoke-static {v0, v1}, Lj$/util/stream/o1;->t(Lj$/util/v;Z)Lj$/util/stream/e1;
 
     move-result-object v0
 
     .line 10
-    invoke-static {v0}, Lj$/wrappers/Q0;->n0(Lj$/util/stream/f1;)Ljava/util/stream/LongStream;
+    invoke-static {v0}, Lj$/wrappers/O0;->n0(Lj$/util/stream/e1;)Ljava/util/stream/LongStream;
 
     move-result-object v0
 

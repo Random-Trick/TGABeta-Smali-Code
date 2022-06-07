@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/NumberTextView;)V
     .registers 2
 
-    .line 125
+    .line 126
     iput-object p1, p0, Lorg/telegram/ui/Components/NumberTextView$1;->this$0:Lorg/telegram/ui/Components/NumberTextView;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -35,14 +35,14 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .registers 3
 
-    .line 128
+    .line 129
     iget-object p1, p0, Lorg/telegram/ui/Components/NumberTextView$1;->this$0:Lorg/telegram/ui/Components/NumberTextView;
 
     const/4 v0, 0x0
 
     invoke-static {p1, v0}, Lorg/telegram/ui/Components/NumberTextView;->access$002(Lorg/telegram/ui/Components/NumberTextView;Landroid/animation/ObjectAnimator;)Landroid/animation/ObjectAnimator;
 
-    .line 129
+    .line 130
     iget-object p1, p0, Lorg/telegram/ui/Components/NumberTextView$1;->this$0:Lorg/telegram/ui/Components/NumberTextView;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/NumberTextView;->access$100(Lorg/telegram/ui/Components/NumberTextView;)Ljava/util/ArrayList;

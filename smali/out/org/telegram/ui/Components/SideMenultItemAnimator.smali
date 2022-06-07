@@ -756,7 +756,7 @@
 
     move-result-object v3
 
-    invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView$ItemAnimator;->getChangeOldDuration()J
+    invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView$ItemAnimator;->getChangeRemoveDuration()J
 
     move-result-wide v4
 
@@ -833,7 +833,7 @@
 
     move-result-object v2
 
-    invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView$ItemAnimator;->getChangeNewDuration()J
+    invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView$ItemAnimator;->getChangeAddDuration()J
 
     move-result-wide v3
 
@@ -846,7 +846,7 @@
 
     move-result-wide v3
 
-    invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView$ItemAnimator;->getChangeNewDuration()J
+    invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView$ItemAnimator;->getChangeAddDuration()J
 
     move-result-wide v5
 

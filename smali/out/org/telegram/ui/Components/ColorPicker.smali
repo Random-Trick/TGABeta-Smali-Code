@@ -238,7 +238,7 @@
 
     move-result-object v8
 
-    const v9, 0x7f0701ac
+    const v9, 0x7f070182
 
     invoke-virtual {v8, v9}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -815,7 +815,7 @@
     .line 394
     iget-object v8, v0, Lorg/telegram/ui/Components/ColorPicker;->addButton:Landroid/widget/ImageView;
 
-    const v10, 0x7f0703f0
+    const v10, 0x7f0701b9
 
     invoke-virtual {v8, v10}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -853,7 +853,7 @@
     .line 477
     iget-object v8, v0, Lorg/telegram/ui/Components/ColorPicker;->addButton:Landroid/widget/ImageView;
 
-    const v10, 0x7f0e0104
+    const v10, 0x7f0e012c
 
     const-string v13, "Add"
 
@@ -911,7 +911,7 @@
     .line 488
     iget-object v8, v0, Lorg/telegram/ui/Components/ColorPicker;->clearButton:Landroid/widget/ImageView;
 
-    const v10, 0x7f0703f1
+    const v10, 0x7f0701f7
 
     invoke-virtual {v8, v10}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -969,7 +969,7 @@
     .line 561
     iget-object v2, v0, Lorg/telegram/ui/Components/ColorPicker;->clearButton:Landroid/widget/ImageView;
 
-    const v6, 0x7f0e0460
+    const v6, 0x7f0e04a5
 
     const-string v8, "ClearButton"
 
@@ -1097,14 +1097,14 @@
     .line 583
     iget-object v1, v0, Lorg/telegram/ui/Components/ColorPicker;->menuItem:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
-    const v2, 0x7f070147
+    const v2, 0x7f07010d
 
     invoke-virtual {v1, v2}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->setIcon(I)V
 
     .line 584
     iget-object v1, v0, Lorg/telegram/ui/Components/ColorPicker;->menuItem:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
-    const v2, 0x7f0e0033
+    const v2, 0x7f0e003e
 
     const-string v6, "AccDescrMoreOptions"
 
@@ -1117,9 +1117,9 @@
     .line 585
     iget-object v1, v0, Lorg/telegram/ui/Components/ColorPicker;->menuItem:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
-    const v2, 0x7f070262
+    const v2, 0x7f070212
 
-    const v6, 0x7f0e0bc7
+    const v6, 0x7f0e0c51
 
     const-string v8, "OpenInEditor"
 
@@ -1132,9 +1132,9 @@
     .line 586
     iget-object v1, v0, Lorg/telegram/ui/Components/ColorPicker;->menuItem:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
-    const v2, 0x7f0702cd
+    const v2, 0x7f0702f0
 
-    const v6, 0x7f0e1034
+    const v6, 0x7f0e10f2
 
     const-string v8, "ShareTheme"
 
@@ -1147,9 +1147,9 @@
     .line 587
     iget-object v1, v0, Lorg/telegram/ui/Components/ColorPicker;->menuItem:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
-    const v2, 0x7f070258
+    const v2, 0x7f070206
 
-    const v6, 0x7f0e0582
+    const v6, 0x7f0e05d3
 
     const-string v8, "DeleteTheme"
 

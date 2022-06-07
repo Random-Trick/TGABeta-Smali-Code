@@ -2,32 +2,42 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Landroid/text/util/Linkify$MatchFilter;
 
 
-# instance fields
-.field public final synthetic f$0:Ljava/lang/Runnable;
+# static fields
+.field public static final synthetic INSTANCE:Lorg/telegram/messenger/AndroidUtilities$$ExternalSyntheticLambda3;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/Runnable;)V
-    .registers 2
+.method static synthetic constructor <clinit>()V
+    .registers 1
+
+    new-instance v0, Lorg/telegram/messenger/AndroidUtilities$$ExternalSyntheticLambda3;
+
+    invoke-direct {v0}, Lorg/telegram/messenger/AndroidUtilities$$ExternalSyntheticLambda3;-><init>()V
+
+    sput-object v0, Lorg/telegram/messenger/AndroidUtilities$$ExternalSyntheticLambda3;->INSTANCE:Lorg/telegram/messenger/AndroidUtilities$$ExternalSyntheticLambda3;
+
+    return-void
+.end method
+
+.method private synthetic constructor <init>()V
+    .registers 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lorg/telegram/messenger/AndroidUtilities$$ExternalSyntheticLambda3;->f$0:Ljava/lang/Runnable;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .registers 3
+.method public final acceptMatch(Ljava/lang/CharSequence;II)Z
+    .registers 4
 
-    iget-object v0, p0, Lorg/telegram/messenger/AndroidUtilities$$ExternalSyntheticLambda3;->f$0:Ljava/lang/Runnable;
+    invoke-static {p1, p2, p3}, Lorg/telegram/messenger/AndroidUtilities;->$r8$lambda$2xtT73PjaRk4syceZcc85zuXKrM(Ljava/lang/CharSequence;II)Z
 
-    invoke-static {v0, p1}, Lorg/telegram/messenger/AndroidUtilities;->$r8$lambda$w87O13ROoNBPHrIOKgHXguH8npI(Ljava/lang/Runnable;Landroid/view/View;)V
+    move-result p1
 
-    return-void
+    return p1
 .end method

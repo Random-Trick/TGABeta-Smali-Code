@@ -1,224 +1,241 @@
-.class public final synthetic Lj$/util/stream/L4;
-.super Ljava/lang/Object;
-
-# interfaces
-.implements Lj$/util/stream/n3;
-
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Ljava/lang/Object;
+.class final Lj$/util/stream/L4;
+.super Lj$/util/stream/f4;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lj$/util/function/Consumer;)V
-    .registers 3
+.method constructor <init>(Lj$/util/stream/y2;Lj$/util/function/y;Z)V
+    .registers 4
 
-    const/4 v0, 0x0
-
-    iput v0, p0, Lj$/util/stream/L4;->a:I
-
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lj$/util/stream/L4;->b:Ljava/lang/Object;
+    invoke-direct {p0, p1, p2, p3}, Lj$/util/stream/f4;-><init>(Lj$/util/stream/y2;Lj$/util/function/y;Z)V
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lj$/util/stream/b4;)V
-    .registers 3
+.method constructor <init>(Lj$/util/stream/y2;Lj$/util/u;Z)V
+    .registers 4
 
-    const/4 v0, 0x1
-
-    iput v0, p0, Lj$/util/stream/L4;->a:I
-
-    .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lj$/util/stream/L4;->b:Ljava/lang/Object;
+    invoke-direct {p0, p1, p2, p3}, Lj$/util/stream/f4;-><init>(Lj$/util/stream/y2;Lj$/util/u;Z)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public synthetic accept(D)V
-    .registers 3
+.method public b(Lj$/util/function/Consumer;)Z
+    .registers 13
 
-    iget p1, p0, Lj$/util/stream/L4;->a:I
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    const/4 p2, 0x0
+    invoke-virtual {p0}, Lj$/util/stream/f4;->a()Z
 
-    packed-switch p1, :pswitch_data_10
+    move-result v0
 
-    goto :goto_b
+    if-eqz v0, :cond_69
+
+    iget-object v1, p0, Lj$/util/stream/f4;->h:Lj$/util/stream/e;
+
+    check-cast v1, Lj$/util/stream/a4;
+
+    iget-wide v2, p0, Lj$/util/stream/f4;->g:J
 
     .line 1
-    :pswitch_7
-    invoke-static {p0}, Lj$/util/stream/p1;->f(Lj$/util/stream/n3;)V
+    iget v4, v1, Lj$/util/stream/e;->c:I
 
-    throw p2
+    if-nez v4, :cond_2a
+
+    iget v4, v1, Lj$/util/stream/e;->b:I
+
+    int-to-long v4, v4
+
+    cmp-long v6, v2, v4
+
+    if-gez v6, :cond_20
+
+    iget-object v1, v1, Lj$/util/stream/a4;->e:[Ljava/lang/Object;
+
+    long-to-int v3, v2
+
+    aget-object v1, v1, v3
+
+    goto :goto_4e
+
+    :cond_20
+    new-instance p1, Ljava/lang/IndexOutOfBoundsException;
+
+    invoke-static {v2, v3}, Ljava/lang/Long;->toString(J)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {p1, v0}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_2a
+    invoke-virtual {v1}, Lj$/util/stream/e;->count()J
+
+    move-result-wide v4
+
+    cmp-long v6, v2, v4
+
+    if-gez v6, :cond_5f
+
+    const/4 v4, 0x0
+
+    :goto_33
+    iget v5, v1, Lj$/util/stream/e;->c:I
+
+    if-gt v4, v5, :cond_55
+
+    iget-object v5, v1, Lj$/util/stream/e;->d:[J
+
+    aget-wide v6, v5, v4
+
+    iget-object v8, v1, Lj$/util/stream/a4;->f:[[Ljava/lang/Object;
+
+    aget-object v9, v8, v4
+
+    array-length v9, v9
+
+    int-to-long v9, v9
+
+    add-long/2addr v6, v9
+
+    cmp-long v9, v2, v6
+
+    if-gez v9, :cond_52
+
+    aget-object v1, v8, v4
+
+    aget-wide v4, v5, v4
+
+    sub-long/2addr v2, v4
+
+    long-to-int v3, v2
+
+    aget-object v1, v1, v3
 
     .line 2
-    :goto_b
-    invoke-static {p0}, Lj$/util/stream/p1;->f(Lj$/util/stream/n3;)V
+    :goto_4e
+    invoke-interface {p1, v1}, Lj$/util/function/Consumer;->accept(Ljava/lang/Object;)V
 
-    throw p2
+    goto :goto_69
 
-    nop
+    :cond_52
+    add-int/lit8 v4, v4, 0x1
 
-    :pswitch_data_10
-    .packed-switch 0x0
-        :pswitch_7
-    .end packed-switch
-.end method
-
-.method public synthetic accept(I)V
-    .registers 3
-
-    iget p1, p0, Lj$/util/stream/L4;->a:I
-
-    const/4 v0, 0x0
-
-    packed-switch p1, :pswitch_data_10
-
-    goto :goto_b
+    goto :goto_33
 
     .line 3
-    :pswitch_7
-    invoke-static {p0}, Lj$/util/stream/p1;->d(Lj$/util/stream/n3;)V
+    :cond_55
+    new-instance p1, Ljava/lang/IndexOutOfBoundsException;
 
-    throw v0
+    invoke-static {v2, v3}, Ljava/lang/Long;->toString(J)Ljava/lang/String;
 
-    .line 4
-    :goto_b
-    invoke-static {p0}, Lj$/util/stream/p1;->d(Lj$/util/stream/n3;)V
+    move-result-object v0
 
-    throw v0
+    invoke-direct {p1, v0}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
 
-    nop
+    throw p1
 
-    :pswitch_data_10
-    .packed-switch 0x0
-        :pswitch_7
-    .end packed-switch
+    :cond_5f
+    new-instance p1, Ljava/lang/IndexOutOfBoundsException;
+
+    invoke-static {v2, v3}, Ljava/lang/Long;->toString(J)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {p1, v0}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_69
+    :goto_69
+    return v0
 .end method
 
-.method public synthetic accept(J)V
-    .registers 3
+.method public forEachRemaining(Lj$/util/function/Consumer;)V
+    .registers 4
 
-    iget p1, p0, Lj$/util/stream/L4;->a:I
+    iget-object v0, p0, Lj$/util/stream/f4;->h:Lj$/util/stream/e;
 
-    const/4 p2, 0x0
+    if-nez v0, :cond_1e
 
-    packed-switch p1, :pswitch_data_10
+    iget-boolean v0, p0, Lj$/util/stream/f4;->i:Z
 
-    goto :goto_b
+    if-nez v0, :cond_1e
 
-    .line 5
-    :pswitch_7
-    invoke-static {p0}, Lj$/util/stream/p1;->e(Lj$/util/stream/n3;)V
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    throw p2
+    invoke-virtual {p0}, Lj$/util/stream/f4;->h()V
 
-    .line 6
-    :goto_b
-    invoke-static {p0}, Lj$/util/stream/p1;->e(Lj$/util/stream/n3;)V
+    iget-object v0, p0, Lj$/util/stream/f4;->b:Lj$/util/stream/y2;
 
-    throw p2
+    new-instance v1, Lj$/util/stream/K4;
 
-    nop
+    invoke-direct {v1, p1}, Lj$/util/stream/K4;-><init>(Lj$/util/function/Consumer;)V
 
-    :pswitch_data_10
-    .packed-switch 0x0
-        :pswitch_7
-    .end packed-switch
+    iget-object p1, p0, Lj$/util/stream/f4;->d:Lj$/util/u;
+
+    invoke-virtual {v0, v1, p1}, Lj$/util/stream/y2;->u0(Lj$/util/stream/m3;Lj$/util/u;)Lj$/util/stream/m3;
+
+    const/4 p1, 0x1
+
+    iput-boolean p1, p0, Lj$/util/stream/f4;->i:Z
+
+    goto :goto_24
+
+    :cond_1e
+    invoke-virtual {p0, p1}, Lj$/util/stream/L4;->b(Lj$/util/function/Consumer;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1e
+
+    :goto_24
+    return-void
 .end method
 
-.method public final accept(Ljava/lang/Object;)V
-    .registers 3
+.method j()V
+    .registers 4
 
-    iget v0, p0, Lj$/util/stream/L4;->a:I
+    new-instance v0, Lj$/util/stream/a4;
 
-    packed-switch v0, :pswitch_data_16
+    invoke-direct {v0}, Lj$/util/stream/a4;-><init>()V
 
-    goto :goto_e
+    iput-object v0, p0, Lj$/util/stream/f4;->h:Lj$/util/stream/e;
 
-    .line 7
-    :pswitch_6
-    iget-object v0, p0, Lj$/util/stream/L4;->b:Ljava/lang/Object;
+    iget-object v1, p0, Lj$/util/stream/f4;->b:Lj$/util/stream/y2;
 
-    check-cast v0, Lj$/util/function/Consumer;
+    new-instance v2, Lj$/util/stream/K4;
 
-    invoke-interface {v0, p1}, Lj$/util/function/Consumer;->accept(Ljava/lang/Object;)V
+    invoke-direct {v2, v0}, Lj$/util/stream/K4;-><init>(Lj$/util/stream/a4;)V
+
+    invoke-virtual {v1, v2}, Lj$/util/stream/y2;->v0(Lj$/util/stream/m3;)Lj$/util/stream/m3;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lj$/util/stream/f4;->e:Lj$/util/stream/m3;
+
+    new-instance v0, Lj$/util/stream/b;
+
+    invoke-direct {v0, p0}, Lj$/util/stream/b;-><init>(Lj$/util/stream/L4;)V
+
+    iput-object v0, p0, Lj$/util/stream/f4;->f:Lj$/util/function/c;
 
     return-void
-
-    .line 8
-    :goto_e
-    iget-object v0, p0, Lj$/util/stream/L4;->b:Ljava/lang/Object;
-
-    check-cast v0, Lj$/util/stream/b4;
-
-    invoke-virtual {v0, p1}, Lj$/util/stream/b4;->accept(Ljava/lang/Object;)V
-
-    return-void
-
-    :pswitch_data_16
-    .packed-switch 0x0
-        :pswitch_6
-    .end packed-switch
 .end method
 
-.method public synthetic andThen(Lj$/util/function/Consumer;)Lj$/util/function/Consumer;
-    .registers 3
-
-    iget v0, p0, Lj$/util/stream/L4;->a:I
-
-    packed-switch v0, :pswitch_data_10
-
-    goto :goto_b
+.method l(Lj$/util/u;)Lj$/util/stream/f4;
+    .registers 5
 
     .line 1
-    :pswitch_6
-    invoke-static {p0, p1}, Lj$/util/function/Consumer$-CC;->$default$andThen(Lj$/util/function/Consumer;Lj$/util/function/Consumer;)Lj$/util/function/Consumer;
+    new-instance v0, Lj$/util/stream/L4;
 
-    move-result-object p1
+    iget-object v1, p0, Lj$/util/stream/f4;->b:Lj$/util/stream/y2;
 
-    return-object p1
+    iget-boolean v2, p0, Lj$/util/stream/f4;->a:Z
 
-    .line 2
-    :goto_b
-    invoke-static {p0, p1}, Lj$/util/function/Consumer$-CC;->$default$andThen(Lj$/util/function/Consumer;Lj$/util/function/Consumer;)Lj$/util/function/Consumer;
+    invoke-direct {v0, v1, p1, v2}, Lj$/util/stream/L4;-><init>(Lj$/util/stream/y2;Lj$/util/u;Z)V
 
-    move-result-object p1
-
-    return-object p1
-
-    :pswitch_data_10
-    .packed-switch 0x0
-        :pswitch_6
-    .end packed-switch
-.end method
-
-.method public synthetic m()V
-    .registers 1
-
-    return-void
-.end method
-
-.method public synthetic n(J)V
-    .registers 3
-
-    return-void
-.end method
-
-.method public synthetic o()Z
-    .registers 2
-
-    const/4 v0, 0x0
-
-    return v0
+    return-object v0
 .end method

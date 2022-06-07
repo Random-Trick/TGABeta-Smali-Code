@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/TranslateAlert$InlineLoadingTextView;Ljava/lang/Runnable;)V
     .registers 3
 
-    .line 1444
+    .line 1456
     iput-object p2, p0, Lorg/telegram/ui/Components/TranslateAlert$InlineLoadingTextView$3;->val$onLoadEnd:Ljava/lang/Runnable;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -35,12 +35,12 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .registers 2
 
-    .line 1447
+    .line 1459
     iget-object p1, p0, Lorg/telegram/ui/Components/TranslateAlert$InlineLoadingTextView$3;->val$onLoadEnd:Ljava/lang/Runnable;
 
     if-eqz p1, :cond_7
 
-    .line 1448
+    .line 1460
     invoke-interface {p1}, Ljava/lang/Runnable;->run()V
 
     :cond_7

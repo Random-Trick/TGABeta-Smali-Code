@@ -5,27 +5,41 @@
 .implements Lorg/telegram/tgnet/RequestDelegate;
 
 
-# static fields
-.field public static final synthetic INSTANCE:Lorg/telegram/messenger/MediaDataController$$ExternalSyntheticLambda164;
+# instance fields
+.field public final synthetic f$0:Lorg/telegram/messenger/MediaDataController;
+
+.field public final synthetic f$1:Ljava/util/ArrayList;
+
+.field public final synthetic f$2:I
+
+.field public final synthetic f$3:Landroidx/collection/LongSparseArray;
+
+.field public final synthetic f$4:Lorg/telegram/tgnet/TLRPC$StickerSet;
+
+.field public final synthetic f$5:Lorg/telegram/tgnet/TLRPC$TL_messages_allStickers;
+
+.field public final synthetic f$6:I
 
 
 # direct methods
-.method static synthetic constructor <clinit>()V
-    .registers 1
-
-    new-instance v0, Lorg/telegram/messenger/MediaDataController$$ExternalSyntheticLambda164;
-
-    invoke-direct {v0}, Lorg/telegram/messenger/MediaDataController$$ExternalSyntheticLambda164;-><init>()V
-
-    sput-object v0, Lorg/telegram/messenger/MediaDataController$$ExternalSyntheticLambda164;->INSTANCE:Lorg/telegram/messenger/MediaDataController$$ExternalSyntheticLambda164;
-
-    return-void
-.end method
-
-.method private synthetic constructor <init>()V
-    .registers 1
+.method public synthetic constructor <init>(Lorg/telegram/messenger/MediaDataController;Ljava/util/ArrayList;ILandroidx/collection/LongSparseArray;Lorg/telegram/tgnet/TLRPC$StickerSet;Lorg/telegram/tgnet/TLRPC$TL_messages_allStickers;I)V
+    .registers 8
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lorg/telegram/messenger/MediaDataController$$ExternalSyntheticLambda164;->f$0:Lorg/telegram/messenger/MediaDataController;
+
+    iput-object p2, p0, Lorg/telegram/messenger/MediaDataController$$ExternalSyntheticLambda164;->f$1:Ljava/util/ArrayList;
+
+    iput p3, p0, Lorg/telegram/messenger/MediaDataController$$ExternalSyntheticLambda164;->f$2:I
+
+    iput-object p4, p0, Lorg/telegram/messenger/MediaDataController$$ExternalSyntheticLambda164;->f$3:Landroidx/collection/LongSparseArray;
+
+    iput-object p5, p0, Lorg/telegram/messenger/MediaDataController$$ExternalSyntheticLambda164;->f$4:Lorg/telegram/tgnet/TLRPC$StickerSet;
+
+    iput-object p6, p0, Lorg/telegram/messenger/MediaDataController$$ExternalSyntheticLambda164;->f$5:Lorg/telegram/tgnet/TLRPC$TL_messages_allStickers;
+
+    iput p7, p0, Lorg/telegram/messenger/MediaDataController$$ExternalSyntheticLambda164;->f$6:I
 
     return-void
 .end method
@@ -33,9 +47,27 @@
 
 # virtual methods
 .method public final run(Lorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/TLRPC$TL_error;)V
-    .registers 3
+    .registers 12
 
-    invoke-static {p1, p2}, Lorg/telegram/messenger/MediaDataController;->$r8$lambda$tHroTGCBTqSHiE4lZ1K27RH-saQ(Lorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/TLRPC$TL_error;)V
+    iget-object v0, p0, Lorg/telegram/messenger/MediaDataController$$ExternalSyntheticLambda164;->f$0:Lorg/telegram/messenger/MediaDataController;
+
+    iget-object v1, p0, Lorg/telegram/messenger/MediaDataController$$ExternalSyntheticLambda164;->f$1:Ljava/util/ArrayList;
+
+    iget v2, p0, Lorg/telegram/messenger/MediaDataController$$ExternalSyntheticLambda164;->f$2:I
+
+    iget-object v3, p0, Lorg/telegram/messenger/MediaDataController$$ExternalSyntheticLambda164;->f$3:Landroidx/collection/LongSparseArray;
+
+    iget-object v4, p0, Lorg/telegram/messenger/MediaDataController$$ExternalSyntheticLambda164;->f$4:Lorg/telegram/tgnet/TLRPC$StickerSet;
+
+    iget-object v5, p0, Lorg/telegram/messenger/MediaDataController$$ExternalSyntheticLambda164;->f$5:Lorg/telegram/tgnet/TLRPC$TL_messages_allStickers;
+
+    iget v6, p0, Lorg/telegram/messenger/MediaDataController$$ExternalSyntheticLambda164;->f$6:I
+
+    move-object v7, p1
+
+    move-object v8, p2
+
+    invoke-static/range {v0 .. v8}, Lorg/telegram/messenger/MediaDataController;->$r8$lambda$QOG_B7J4j5hJ2__S3o70UC_xHQg(Lorg/telegram/messenger/MediaDataController;Ljava/util/ArrayList;ILandroidx/collection/LongSparseArray;Lorg/telegram/tgnet/TLRPC$StickerSet;Lorg/telegram/tgnet/TLRPC$TL_messages_allStickers;ILorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/TLRPC$TL_error;)V
 
     return-void
 .end method

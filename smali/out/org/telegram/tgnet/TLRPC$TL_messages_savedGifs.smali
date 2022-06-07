@@ -17,7 +17,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 41771
+    .line 42223
     invoke-direct {p0}, Lorg/telegram/tgnet/TLRPC$messages_SavedGifs;-><init>()V
 
     return-void
@@ -28,14 +28,14 @@
 .method public readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
     .registers 7
 
-    .line 41776
+    .line 42228
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt64(Z)J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lorg/telegram/tgnet/TLRPC$messages_SavedGifs;->hash:J
 
-    .line 41777
+    .line 42229
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
@@ -50,7 +50,7 @@
 
     return-void
 
-    .line 41780
+    .line 42232
     :cond_13
     new-instance p1, Ljava/lang/RuntimeException;
 
@@ -74,7 +74,7 @@
 
     throw p1
 
-    .line 41784
+    .line 42236
     :cond_28
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
@@ -83,7 +83,7 @@
     :goto_2c
     if-ge v1, v0, :cond_41
 
-    .line 41786
+    .line 42238
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v2
@@ -96,7 +96,7 @@
 
     return-void
 
-    .line 41790
+    .line 42242
     :cond_39
     iget-object v3, p0, Lorg/telegram/tgnet/TLRPC$messages_SavedGifs;->gifs:Ljava/util/ArrayList;
 
@@ -113,29 +113,29 @@
 .method public serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
     .registers 5
 
-    .line 41795
+    .line 42247
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_messages_savedGifs;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 41796
+    .line 42248
     iget-wide v0, p0, Lorg/telegram/tgnet/TLRPC$messages_SavedGifs;->hash:J
 
     invoke-virtual {p1, v0, v1}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt64(J)V
 
     const v0, 0x1cb5c415
 
-    .line 41797
+    .line 42249
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 41798
+    .line 42250
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$messages_SavedGifs;->gifs:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
-    .line 41799
+    .line 42251
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
     const/4 v1, 0x0
@@ -143,7 +143,7 @@
     :goto_1a
     if-ge v1, v0, :cond_2a
 
-    .line 41801
+    .line 42253
     iget-object v2, p0, Lorg/telegram/tgnet/TLRPC$messages_SavedGifs;->gifs:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;

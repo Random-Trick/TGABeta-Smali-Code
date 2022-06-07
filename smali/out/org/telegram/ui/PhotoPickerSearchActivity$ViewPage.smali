@@ -30,7 +30,7 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .registers 2
 
-    .line 56
+    .line 57
     invoke-direct {p0, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
     return-void
@@ -39,7 +39,7 @@
 .method static synthetic access$1300(Lorg/telegram/ui/PhotoPickerSearchActivity$ViewPage;)Lorg/telegram/ui/Components/RecyclerListView;
     .registers 1
 
-    .line 48
+    .line 49
     iget-object p0, p0, Lorg/telegram/ui/PhotoPickerSearchActivity$ViewPage;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     return-object p0
@@ -48,61 +48,61 @@
 .method static synthetic access$1302(Lorg/telegram/ui/PhotoPickerSearchActivity$ViewPage;Lorg/telegram/ui/Components/RecyclerListView;)Lorg/telegram/ui/Components/RecyclerListView;
     .registers 2
 
-    .line 48
+    .line 49
     iput-object p1, p0, Lorg/telegram/ui/PhotoPickerSearchActivity$ViewPage;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     return-object p1
 .end method
 
-.method static synthetic access$3200(Lorg/telegram/ui/PhotoPickerSearchActivity$ViewPage;)Lorg/telegram/ui/ActionBar/BaseFragment;
+.method static synthetic access$3000(Lorg/telegram/ui/PhotoPickerSearchActivity$ViewPage;)Lorg/telegram/ui/ActionBar/BaseFragment;
     .registers 1
 
-    .line 48
+    .line 49
     iget-object p0, p0, Lorg/telegram/ui/PhotoPickerSearchActivity$ViewPage;->parentFragment:Lorg/telegram/ui/ActionBar/BaseFragment;
 
     return-object p0
 .end method
 
-.method static synthetic access$3202(Lorg/telegram/ui/PhotoPickerSearchActivity$ViewPage;Lorg/telegram/ui/ActionBar/BaseFragment;)Lorg/telegram/ui/ActionBar/BaseFragment;
+.method static synthetic access$3002(Lorg/telegram/ui/PhotoPickerSearchActivity$ViewPage;Lorg/telegram/ui/ActionBar/BaseFragment;)Lorg/telegram/ui/ActionBar/BaseFragment;
     .registers 2
 
-    .line 48
+    .line 49
     iput-object p1, p0, Lorg/telegram/ui/PhotoPickerSearchActivity$ViewPage;->parentFragment:Lorg/telegram/ui/ActionBar/BaseFragment;
 
     return-object p1
 .end method
 
-.method static synthetic access$3300(Lorg/telegram/ui/PhotoPickerSearchActivity$ViewPage;)Landroid/widget/FrameLayout;
+.method static synthetic access$3100(Lorg/telegram/ui/PhotoPickerSearchActivity$ViewPage;)Landroid/widget/FrameLayout;
     .registers 1
 
-    .line 48
+    .line 49
     iget-object p0, p0, Lorg/telegram/ui/PhotoPickerSearchActivity$ViewPage;->fragmentView:Landroid/widget/FrameLayout;
 
     return-object p0
 .end method
 
-.method static synthetic access$3302(Lorg/telegram/ui/PhotoPickerSearchActivity$ViewPage;Landroid/widget/FrameLayout;)Landroid/widget/FrameLayout;
+.method static synthetic access$3102(Lorg/telegram/ui/PhotoPickerSearchActivity$ViewPage;Landroid/widget/FrameLayout;)Landroid/widget/FrameLayout;
     .registers 2
 
-    .line 48
+    .line 49
     iput-object p1, p0, Lorg/telegram/ui/PhotoPickerSearchActivity$ViewPage;->fragmentView:Landroid/widget/FrameLayout;
 
     return-object p1
 .end method
 
-.method static synthetic access$3400(Lorg/telegram/ui/PhotoPickerSearchActivity$ViewPage;)Lorg/telegram/ui/ActionBar/ActionBar;
+.method static synthetic access$3200(Lorg/telegram/ui/PhotoPickerSearchActivity$ViewPage;)Lorg/telegram/ui/ActionBar/ActionBar;
     .registers 1
 
-    .line 48
+    .line 49
     iget-object p0, p0, Lorg/telegram/ui/PhotoPickerSearchActivity$ViewPage;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     return-object p0
 .end method
 
-.method static synthetic access$3402(Lorg/telegram/ui/PhotoPickerSearchActivity$ViewPage;Lorg/telegram/ui/ActionBar/ActionBar;)Lorg/telegram/ui/ActionBar/ActionBar;
+.method static synthetic access$3202(Lorg/telegram/ui/PhotoPickerSearchActivity$ViewPage;Lorg/telegram/ui/ActionBar/ActionBar;)Lorg/telegram/ui/ActionBar/ActionBar;
     .registers 2
 
-    .line 48
+    .line 49
     iput-object p1, p0, Lorg/telegram/ui/PhotoPickerSearchActivity$ViewPage;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     return-object p1
@@ -111,7 +111,7 @@
 .method static synthetic access$400(Lorg/telegram/ui/PhotoPickerSearchActivity$ViewPage;)I
     .registers 1
 
-    .line 48
+    .line 49
     iget p0, p0, Lorg/telegram/ui/PhotoPickerSearchActivity$ViewPage;->selectedType:I
 
     return p0
@@ -120,7 +120,7 @@
 .method static synthetic access$402(Lorg/telegram/ui/PhotoPickerSearchActivity$ViewPage;I)I
     .registers 2
 
-    .line 48
+    .line 49
     iput p1, p0, Lorg/telegram/ui/PhotoPickerSearchActivity$ViewPage;->selectedType:I
 
     return p1

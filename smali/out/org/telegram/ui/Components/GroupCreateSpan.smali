@@ -74,7 +74,7 @@
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Ljava/lang/Object;Lorg/telegram/messenger/ContactsController$Contact;)V
-    .registers 28
+    .registers 29
 
     move-object/from16 v0, p0
 
@@ -107,7 +107,7 @@
 
     move-result-object v4
 
-    const v5, 0x7f0700dc
+    const v5, 0x7f0700bb
 
     invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -182,7 +182,7 @@
 
     const/4 v13, 0x4
 
-    sparse-switch v4, :sswitch_data_286
+    sparse-switch v4, :sswitch_data_288
 
     goto :goto_ae
 
@@ -293,7 +293,7 @@
     const/4 v8, -0x1
 
     :goto_af
-    packed-switch v8, :pswitch_data_2a8
+    packed-switch v8, :pswitch_data_2aa
 
     .line 123
     iget-object v1, v0, Lorg/telegram/ui/Components/GroupCreateSpan;->avatarDrawable:Lorg/telegram/ui/Components/AvatarDrawable;
@@ -307,7 +307,7 @@
     .line 124
     iput-wide v1, v0, Lorg/telegram/ui/Components/GroupCreateSpan;->uid:J
 
-    const v1, 0x7f0e070b
+    const v1, 0x7f0e0760
 
     const-string v2, "FilterArchived"
 
@@ -329,7 +329,7 @@
     .line 118
     iput-wide v1, v0, Lorg/telegram/ui/Components/GroupCreateSpan;->uid:J
 
-    const v1, 0x7f0e0737
+    const v1, 0x7f0e078c
 
     const-string v2, "FilterRead"
 
@@ -353,7 +353,7 @@
     .line 113
     iput-wide v1, v0, Lorg/telegram/ui/Components/GroupCreateSpan;->uid:J
 
-    const v1, 0x7f0e072c
+    const v1, 0x7f0e0781
 
     const-string v2, "FilterMuted"
 
@@ -375,7 +375,7 @@
     .line 108
     iput-wide v1, v0, Lorg/telegram/ui/Components/GroupCreateSpan;->uid:J
 
-    const v1, 0x7f0e070e
+    const v1, 0x7f0e0763
 
     const-string v2, "FilterBots"
 
@@ -397,7 +397,7 @@
     .line 103
     iput-wide v1, v0, Lorg/telegram/ui/Components/GroupCreateSpan;->uid:J
 
-    const v1, 0x7f0e070f
+    const v1, 0x7f0e0764
 
     const-string v2, "FilterChannels"
 
@@ -419,7 +419,7 @@
     .line 98
     iput-wide v1, v0, Lorg/telegram/ui/Components/GroupCreateSpan;->uid:J
 
-    const v1, 0x7f0e0729
+    const v1, 0x7f0e077e
 
     const-string v2, "FilterGroups"
 
@@ -441,7 +441,7 @@
     .line 93
     iput-wide v1, v0, Lorg/telegram/ui/Components/GroupCreateSpan;->uid:J
 
-    const v1, 0x7f0e0736
+    const v1, 0x7f0e078b
 
     const-string v2, "FilterNonContacts"
 
@@ -463,7 +463,7 @@
     .line 88
     iput-wide v1, v0, Lorg/telegram/ui/Components/GroupCreateSpan;->uid:J
 
-    const v1, 0x7f0e0718
+    const v1, 0x7f0e076d
 
     const-string v2, "FilterContacts"
 
@@ -473,7 +473,7 @@
     move-result-object v1
 
     :goto_157
-    move-object v14, v9
+    move-object v15, v9
 
     goto/16 :goto_1ee
 
@@ -498,7 +498,7 @@
 
     if-eqz v2, :cond_181
 
-    const v1, 0x7f0e0ed5
+    const v1, 0x7f0e0f82
 
     const-string v2, "RepliesTitle"
 
@@ -532,7 +532,7 @@
 
     if-eqz v2, :cond_19b
 
-    const v1, 0x7f0e0f65
+    const v1, 0x7f0e1021
 
     const-string v2, "SavedMessages"
 
@@ -571,14 +571,14 @@
 
     move-object v9, v3
 
-    move-object/from16 v23, v2
+    move-object/from16 v24, v2
 
     move-object v2, v1
 
-    move-object/from16 v1, v23
+    move-object/from16 v1, v24
 
     :goto_1ae
-    move-object v14, v2
+    move-object v15, v2
 
     goto :goto_1ee
 
@@ -613,7 +613,7 @@
 
     move-result-object v2
 
-    move-object v14, v9
+    move-object v15, v9
 
     move-object v9, v2
 
@@ -762,26 +762,26 @@
 
     invoke-static {v1, v3, v2, v4}, Landroid/text/TextUtils;->ellipsize(Ljava/lang/CharSequence;Landroid/text/TextPaint;FLandroid/text/TextUtils$TruncateAt;)Ljava/lang/CharSequence;
 
-    move-result-object v16
+    move-result-object v17
 
     .line 182
     new-instance v1, Landroid/text/StaticLayout;
 
-    sget-object v17, Lorg/telegram/ui/Components/GroupCreateSpan;->textPaint:Landroid/text/TextPaint;
+    sget-object v18, Lorg/telegram/ui/Components/GroupCreateSpan;->textPaint:Landroid/text/TextPaint;
 
-    const/16 v18, 0x3e8
+    const/16 v19, 0x3e8
 
-    sget-object v19, Landroid/text/Layout$Alignment;->ALIGN_NORMAL:Landroid/text/Layout$Alignment;
+    sget-object v20, Landroid/text/Layout$Alignment;->ALIGN_NORMAL:Landroid/text/Layout$Alignment;
 
-    const/high16 v20, 0x3f800000    # 1.0f
-
-    const/16 v21, 0x0
+    const/high16 v21, 0x3f800000    # 1.0f
 
     const/16 v22, 0x0
 
-    move-object v15, v1
+    const/16 v23, 0x0
 
-    invoke-direct/range {v15 .. v22}, Landroid/text/StaticLayout;-><init>(Ljava/lang/CharSequence;Landroid/text/TextPaint;ILandroid/text/Layout$Alignment;FFZ)V
+    move-object/from16 v16, v1
+
+    invoke-direct/range {v16 .. v23}, Landroid/text/StaticLayout;-><init>(Ljava/lang/CharSequence;Landroid/text/TextPaint;ILandroid/text/Layout$Alignment;FFZ)V
 
     iput-object v1, v0, Lorg/telegram/ui/Components/GroupCreateSpan;->nameLayout:Landroid/text/StaticLayout;
 
@@ -790,7 +790,7 @@
 
     move-result v1
 
-    if-lez v1, :cond_275
+    if-lez v1, :cond_276
 
     .line 184
     iget-object v1, v0, Lorg/telegram/ui/Components/GroupCreateSpan;->nameLayout:Landroid/text/StaticLayout;
@@ -821,29 +821,27 @@
     iput v1, v0, Lorg/telegram/ui/Components/GroupCreateSpan;->textX:F
 
     .line 187
-    :cond_275
+    :cond_276
     iget-object v8, v0, Lorg/telegram/ui/Components/GroupCreateSpan;->imageReceiver:Lorg/telegram/messenger/ImageReceiver;
 
     iget-object v11, v0, Lorg/telegram/ui/Components/GroupCreateSpan;->avatarDrawable:Lorg/telegram/ui/Components/AvatarDrawable;
 
-    const/4 v12, 0x0
+    const-wide/16 v12, 0x0
 
-    const/4 v13, 0x0
+    const/4 v14, 0x0
 
-    const/4 v15, 0x1
+    const/16 v16, 0x1
 
     const-string v10, "50_50"
 
-    invoke-virtual/range {v8 .. v15}, Lorg/telegram/messenger/ImageReceiver;->setImage(Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Landroid/graphics/drawable/Drawable;ILjava/lang/String;Ljava/lang/Object;I)V
+    invoke-virtual/range {v8 .. v16}, Lorg/telegram/messenger/ImageReceiver;->setImage(Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Landroid/graphics/drawable/Drawable;JLjava/lang/String;Ljava/lang/Object;I)V
 
     .line 188
     invoke-virtual/range {p0 .. p0}, Lorg/telegram/ui/Components/GroupCreateSpan;->updateColors()V
 
     return-void
 
-    nop
-
-    :sswitch_data_286
+    :sswitch_data_288
     .sparse-switch
         -0x664cc81e -> :sswitch_a4
         -0x49c2262c -> :sswitch_9a
@@ -855,7 +853,7 @@
         0x556423d0 -> :sswitch_5f
     .end sparse-switch
 
-    :pswitch_data_2a8
+    :pswitch_data_2aa
     .packed-switch 0x0
         :pswitch_144
         :pswitch_130
@@ -1425,7 +1423,7 @@
 
     move-result v1
 
-    const v2, 0x7f0e0540
+    const v2, 0x7f0e0591
 
     const-string v3, "Delete"
 

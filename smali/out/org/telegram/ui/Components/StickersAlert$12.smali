@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/StickersAlert;)V
     .registers 2
 
-    .line 1276
+    .line 1304
     iput-object p1, p0, Lorg/telegram/ui/Components/StickersAlert$12;->this$0:Lorg/telegram/ui/Components/StickersAlert;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -35,7 +35,7 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .registers 3
 
-    .line 1279
+    .line 1307
     iget-object p1, p0, Lorg/telegram/ui/Components/StickersAlert$12;->this$0:Lorg/telegram/ui/Components/StickersAlert;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/StickersAlert;->access$4700(Lorg/telegram/ui/Components/StickersAlert;)Landroid/widget/FrameLayout;
@@ -46,7 +46,7 @@
 
     invoke-virtual {p1, v0}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
-    .line 1280
+    .line 1308
     iget-object p1, p0, Lorg/telegram/ui/Components/StickersAlert$12;->this$0:Lorg/telegram/ui/Components/StickersAlert;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/StickersAlert;->access$4800(Lorg/telegram/ui/Components/StickersAlert;)Lorg/telegram/ui/Components/BackupImageView;

@@ -33,11 +33,28 @@
 
 # virtual methods
 .method public final accept(Ljava/lang/Object;J)V
-    .registers 4
+    .registers 9
 
-    check-cast p1, Lj$/util/i;
+    check-cast p1, [J
 
-    invoke-virtual {p1, p2, p3}, Lj$/util/i;->accept(J)V
+    const/4 v0, 0x0
+
+    .line 1
+    aget-wide v1, p1, v0
+
+    const-wide/16 v3, 0x1
+
+    add-long/2addr v1, v3
+
+    aput-wide v1, p1, v0
+
+    const/4 v0, 0x1
+
+    aget-wide v1, p1, v0
+
+    add-long/2addr v1, p2
+
+    aput-wide v1, p1, v0
 
     return-void
 .end method

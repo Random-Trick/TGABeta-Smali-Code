@@ -35,7 +35,7 @@
 .method public final didSelectDate(ZI)V
     .registers 3
 
-    invoke-static {p1, p2}, Lorg/telegram/ui/Components/ChatActivityEnterView;->$r8$lambda$V5LlzXJTy26Z5U5tt3iOHdbMtHI(ZI)V
+    invoke-static {p1, p2}, Lorg/telegram/ui/Components/ChatActivityEnterView;->$r8$lambda$VqA-RqqQssBPMKoqwdW3xomAtDk(ZI)V
 
     return-void
 .end method

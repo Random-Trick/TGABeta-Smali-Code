@@ -18,7 +18,7 @@
 .method constructor <init>(Lorg/telegram/ui/ThemePreviewActivity;)V
     .registers 2
 
-    .line 385
+    .line 379
     invoke-direct {p0}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem$ActionBarMenuItemSearchListener;-><init>()V
 
     return-void

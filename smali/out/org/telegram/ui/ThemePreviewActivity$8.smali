@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/ThemePreviewActivity;Landroid/content/Context;)V
     .registers 3
 
-    .line 828
+    .line 822
     iput-object p1, p0, Lorg/telegram/ui/ThemePreviewActivity$8;->this$0:Lorg/telegram/ui/ThemePreviewActivity;
 
     invoke-direct {p0, p2}, Lorg/telegram/ui/Components/RecyclerListView;-><init>(Landroid/content/Context;)V
@@ -33,7 +33,7 @@
 .method private checkMotionEvent(Landroid/view/MotionEvent;)V
     .registers 4
 
-    .line 954
+    .line 948
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result p1
@@ -42,7 +42,7 @@
 
     if-ne p1, v0, :cond_32
 
-    .line 955
+    .line 949
     iget-object p1, p0, Lorg/telegram/ui/ThemePreviewActivity$8;->this$0:Lorg/telegram/ui/ThemePreviewActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/ThemePreviewActivity;->access$5000(Lorg/telegram/ui/ThemePreviewActivity;)Z
@@ -77,12 +77,12 @@
 
     if-nez p1, :cond_2d
 
-    .line 956
+    .line 950
     iget-object p1, p0, Lorg/telegram/ui/ThemePreviewActivity$8;->this$0:Lorg/telegram/ui/ThemePreviewActivity;
 
     invoke-static {p1, v1, v1, v0}, Lorg/telegram/ui/ThemePreviewActivity;->access$5100(Lorg/telegram/ui/ThemePreviewActivity;IZZ)V
 
-    .line 958
+    .line 952
     :cond_2d
     iget-object p1, p0, Lorg/telegram/ui/ThemePreviewActivity$8;->this$0:Lorg/telegram/ui/ThemePreviewActivity;
 
@@ -97,7 +97,7 @@
 .method protected allowSelectChildAtPosition(Landroid/view/View;)Z
     .registers 4
 
-    .line 940
+    .line 934
     iget-object v0, p0, Lorg/telegram/ui/ThemePreviewActivity$8;->this$0:Lorg/telegram/ui/ThemePreviewActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/ThemePreviewActivity;->access$1300(Lorg/telegram/ui/ThemePreviewActivity;)Lorg/telegram/ui/Components/RecyclerListView;
@@ -110,7 +110,7 @@
 
     if-eqz v0, :cond_15
 
-    .line 941
+    .line 935
     invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->getItemViewType()I
 
     move-result v0
@@ -123,7 +123,7 @@
 
     return p1
 
-    .line 944
+    .line 938
     :cond_15
     invoke-super {p0, p1}, Lorg/telegram/ui/Components/RecyclerListView;->allowSelectChildAtPosition(Landroid/view/View;)Z
 
@@ -135,44 +135,44 @@
 .method public drawChild(Landroid/graphics/Canvas;Landroid/view/View;J)Z
     .registers 12
 
-    .line 831
+    .line 825
     invoke-super {p0, p1, p2, p3, p4}, Landroidx/recyclerview/widget/RecyclerView;->drawChild(Landroid/graphics/Canvas;Landroid/view/View;J)Z
 
     move-result p3
 
-    .line 832
+    .line 826
     instance-of p4, p2, Lorg/telegram/ui/Cells/ChatMessageCell;
 
     if-eqz p4, :cond_f8
 
-    .line 833
+    .line 827
     move-object p4, p2
 
     check-cast p4, Lorg/telegram/ui/Cells/ChatMessageCell;
 
-    .line 834
+    .line 828
     invoke-virtual {p4}, Lorg/telegram/ui/Cells/ChatMessageCell;->getMessageObject()Lorg/telegram/messenger/MessageObject;
 
-    .line 835
+    .line 829
     invoke-virtual {p4}, Lorg/telegram/ui/Cells/ChatMessageCell;->getAvatarImage()Lorg/telegram/messenger/ImageReceiver;
 
     move-result-object v0
 
     if-eqz v0, :cond_f8
 
-    .line 837
+    .line 831
     invoke-virtual {p2}, Landroid/view/View;->getTop()I
 
     move-result v1
 
-    .line 838
+    .line 832
     invoke-virtual {p4}, Lorg/telegram/ui/Cells/ChatMessageCell;->isPinnedBottom()Z
 
     move-result v2
 
     if-eqz v2, :cond_4b
 
-    .line 839
+    .line 833
     iget-object v2, p0, Lorg/telegram/ui/ThemePreviewActivity$8;->this$0:Lorg/telegram/ui/ThemePreviewActivity;
 
     invoke-static {v2}, Lorg/telegram/ui/ThemePreviewActivity;->access$1300(Lorg/telegram/ui/ThemePreviewActivity;)Lorg/telegram/ui/Components/RecyclerListView;
@@ -185,14 +185,14 @@
 
     if-eqz v2, :cond_4b
 
-    .line 841
+    .line 835
     invoke-virtual {v2}, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->getAdapterPosition()I
 
     move-result v2
 
     add-int/lit8 v2, v2, -0x1
 
-    .line 844
+    .line 838
     iget-object v3, p0, Lorg/telegram/ui/ThemePreviewActivity$8;->this$0:Lorg/telegram/ui/ThemePreviewActivity;
 
     invoke-static {v3}, Lorg/telegram/ui/ThemePreviewActivity;->access$1300(Lorg/telegram/ui/ThemePreviewActivity;)Lorg/telegram/ui/Components/RecyclerListView;
@@ -207,7 +207,7 @@
 
     const/high16 p2, 0x447a0000    # 1000.0f
 
-    .line 846
+    .line 840
     invoke-static {p2}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result p2
@@ -218,18 +218,18 @@
 
     invoke-virtual {v0, p2}, Lorg/telegram/messenger/ImageReceiver;->setImageY(F)V
 
-    .line 847
+    .line 841
     invoke-virtual {v0, p1}, Lorg/telegram/messenger/ImageReceiver;->draw(Landroid/graphics/Canvas;)Z
 
     return p3
 
-    .line 852
+    .line 846
     :cond_4b
     invoke-virtual {p4}, Landroid/view/ViewGroup;->getTranslationX()F
 
     move-result v2
 
-    .line 853
+    .line 847
     invoke-virtual {p2}, Landroid/view/View;->getTop()I
 
     move-result v3
@@ -240,7 +240,7 @@
 
     add-int/2addr v3, v4
 
-    .line 854
+    .line 848
     iget-object v4, p0, Lorg/telegram/ui/ThemePreviewActivity$8;->this$0:Lorg/telegram/ui/ThemePreviewActivity;
 
     invoke-static {v4}, Lorg/telegram/ui/ThemePreviewActivity;->access$1300(Lorg/telegram/ui/ThemePreviewActivity;)Lorg/telegram/ui/Components/RecyclerListView;
@@ -267,7 +267,7 @@
 
     move v3, v4
 
-    .line 858
+    .line 852
     :cond_70
     invoke-virtual {p4}, Lorg/telegram/ui/Cells/ChatMessageCell;->isPinnedTop()Z
 
@@ -277,7 +277,7 @@
 
     if-eqz p4, :cond_ca
 
-    .line 859
+    .line 853
     iget-object p4, p0, Lorg/telegram/ui/ThemePreviewActivity$8;->this$0:Lorg/telegram/ui/ThemePreviewActivity;
 
     invoke-static {p4}, Lorg/telegram/ui/ThemePreviewActivity;->access$1300(Lorg/telegram/ui/ThemePreviewActivity;)Lorg/telegram/ui/Components/RecyclerListView;
@@ -302,14 +302,14 @@
     :cond_8a
     add-int/lit8 p4, p4, 0x1
 
-    .line 867
+    .line 861
     invoke-virtual {p2}, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->getAdapterPosition()I
 
     move-result p2
 
     add-int/lit8 p2, p2, 0x1
 
-    .line 869
+    .line 863
     iget-object v5, p0, Lorg/telegram/ui/ThemePreviewActivity$8;->this$0:Lorg/telegram/ui/ThemePreviewActivity;
 
     invoke-static {v5}, Lorg/telegram/ui/ThemePreviewActivity;->access$1300(Lorg/telegram/ui/ThemePreviewActivity;)Lorg/telegram/ui/Components/RecyclerListView;
@@ -322,14 +322,14 @@
 
     if-eqz p2, :cond_ca
 
-    .line 871
+    .line 865
     iget-object v1, p2, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     invoke-virtual {v1}, Landroid/view/View;->getTop()I
 
     move-result v1
 
-    .line 872
+    .line 866
     invoke-static {v4}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v5
@@ -344,7 +344,7 @@
 
     if-ge v5, v6, :cond_bc
 
-    .line 873
+    .line 867
     iget-object v5, p2, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     invoke-virtual {v5}, Landroid/view/View;->getTranslationX()F
@@ -355,7 +355,7 @@
 
     move-result v2
 
-    .line 875
+    .line 869
     :cond_bc
     iget-object v5, p2, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
@@ -363,17 +363,17 @@
 
     if-eqz v6, :cond_ca
 
-    .line 876
+    .line 870
     check-cast v5, Lorg/telegram/ui/Cells/ChatMessageCell;
 
-    .line 877
+    .line 871
     invoke-virtual {v5}, Lorg/telegram/ui/Cells/ChatMessageCell;->isPinnedTop()Z
 
     move-result v5
 
     if-nez v5, :cond_85
 
-    .line 889
+    .line 883
     :cond_ca
     :goto_ca
     invoke-static {v4}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -384,7 +384,7 @@
 
     if-ge p2, v1, :cond_d8
 
-    .line 890
+    .line 884
     invoke-static {v4}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result p2
@@ -398,16 +398,16 @@
 
     if-eqz p4, :cond_e3
 
-    .line 893
+    .line 887
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 894
+    .line 888
     invoke-virtual {p1, v2, p2}, Landroid/graphics/Canvas;->translate(FF)V
 
     :cond_e3
     const/high16 p4, 0x42300000    # 44.0f
 
-    .line 896
+    .line 890
     invoke-static {p4}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result p4
@@ -418,14 +418,14 @@
 
     invoke-virtual {v0, p4}, Lorg/telegram/messenger/ImageReceiver;->setImageY(F)V
 
-    .line 897
+    .line 891
     invoke-virtual {v0, p1}, Lorg/telegram/messenger/ImageReceiver;->draw(Landroid/graphics/Canvas;)Z
 
     cmpl-float p2, v2, p2
 
     if-eqz p2, :cond_f8
 
-    .line 899
+    .line 893
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
     :cond_f8
@@ -437,17 +437,17 @@
 
     if-eqz p4, :cond_10
 
-    .line 929
+    .line 923
     instance-of v0, p1, Lorg/telegram/ui/Cells/ChatMessageCell;
 
     if-eqz v0, :cond_10
 
-    .line 930
+    .line 924
     move-object v0, p1
 
     check-cast v0, Lorg/telegram/ui/Cells/ChatMessageCell;
 
-    .line 931
+    .line 925
     invoke-virtual {v0, p2, p3}, Lorg/telegram/ui/Cells/ChatMessageCell;->isInsideBackground(FF)Z
 
     move-result v0
@@ -456,7 +456,7 @@
 
     return-void
 
-    .line 935
+    .line 929
     :cond_10
     invoke-super {p0, p1, p2, p3, p4}, Lorg/telegram/ui/Components/RecyclerListView;->onChildPressed(Landroid/view/View;FFZ)V
 
@@ -466,10 +466,10 @@
 .method public onTouchEvent(Landroid/view/MotionEvent;)Z
     .registers 2
 
-    .line 949
+    .line 943
     invoke-direct {p0, p1}, Lorg/telegram/ui/ThemePreviewActivity$8;->checkMotionEvent(Landroid/view/MotionEvent;)V
 
-    .line 950
+    .line 944
     invoke-super {p0, p1}, Lorg/telegram/ui/Components/RecyclerListView;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
     move-result p1
@@ -480,10 +480,10 @@
 .method public setTranslationY(F)V
     .registers 4
 
-    .line 908
+    .line 902
     invoke-super {p0, p1}, Lorg/telegram/ui/Components/RecyclerListView;->setTranslationY(F)V
 
-    .line 909
+    .line 903
     iget-object p1, p0, Lorg/telegram/ui/ThemePreviewActivity$8;->this$0:Lorg/telegram/ui/ThemePreviewActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/ThemePreviewActivity;->access$4600(Lorg/telegram/ui/ThemePreviewActivity;)[Lorg/telegram/ui/Components/WallpaperCheckBoxView;
@@ -496,7 +496,7 @@
 
     const/4 p1, 0x0
 
-    .line 910
+    .line 904
     :goto_d
     iget-object v1, p0, Lorg/telegram/ui/ThemePreviewActivity$8;->this$0:Lorg/telegram/ui/ThemePreviewActivity;
 
@@ -508,7 +508,7 @@
 
     if-ge p1, v1, :cond_24
 
-    .line 911
+    .line 905
     iget-object v1, p0, Lorg/telegram/ui/ThemePreviewActivity$8;->this$0:Lorg/telegram/ui/ThemePreviewActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/ThemePreviewActivity;->access$4600(Lorg/telegram/ui/ThemePreviewActivity;)[Lorg/telegram/ui/Components/WallpaperCheckBoxView;
@@ -523,7 +523,7 @@
 
     goto :goto_d
 
-    .line 914
+    .line 908
     :cond_24
     iget-object p1, p0, Lorg/telegram/ui/ThemePreviewActivity$8;->this$0:Lorg/telegram/ui/ThemePreviewActivity;
 
@@ -533,7 +533,7 @@
 
     if-eqz p1, :cond_43
 
-    .line 915
+    .line 909
     :goto_2c
     iget-object p1, p0, Lorg/telegram/ui/ThemePreviewActivity$8;->this$0:Lorg/telegram/ui/ThemePreviewActivity;
 
@@ -545,7 +545,7 @@
 
     if-ge v0, p1, :cond_43
 
-    .line 916
+    .line 910
     iget-object p1, p0, Lorg/telegram/ui/ThemePreviewActivity$8;->this$0:Lorg/telegram/ui/ThemePreviewActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/ThemePreviewActivity;->access$4700(Lorg/telegram/ui/ThemePreviewActivity;)[Lorg/telegram/ui/Components/WallpaperCheckBoxView;
@@ -560,7 +560,7 @@
 
     goto :goto_2c
 
-    .line 919
+    .line 913
     :cond_43
     iget-object p1, p0, Lorg/telegram/ui/ThemePreviewActivity$8;->this$0:Lorg/telegram/ui/ThemePreviewActivity;
 
@@ -570,7 +570,7 @@
 
     if-eqz p1, :cond_54
 
-    .line 920
+    .line 914
     iget-object p1, p0, Lorg/telegram/ui/ThemePreviewActivity$8;->this$0:Lorg/telegram/ui/ThemePreviewActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/ThemePreviewActivity;->access$4800(Lorg/telegram/ui/ThemePreviewActivity;)Landroid/widget/FrameLayout;
@@ -579,7 +579,7 @@
 
     invoke-virtual {p1}, Landroid/widget/FrameLayout;->invalidate()V
 
-    .line 922
+    .line 916
     :cond_54
     iget-object p1, p0, Lorg/telegram/ui/ThemePreviewActivity$8;->this$0:Lorg/telegram/ui/ThemePreviewActivity;
 
@@ -589,7 +589,7 @@
 
     if-eqz p1, :cond_65
 
-    .line 923
+    .line 917
     iget-object p1, p0, Lorg/telegram/ui/ThemePreviewActivity$8;->this$0:Lorg/telegram/ui/ThemePreviewActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/ThemePreviewActivity;->access$4900(Lorg/telegram/ui/ThemePreviewActivity;)Landroid/widget/FrameLayout;

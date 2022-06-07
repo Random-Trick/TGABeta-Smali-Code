@@ -27,7 +27,7 @@
 
     iget-object v0, p0, Lorg/telegram/ui/QrActivity$$ExternalSyntheticLambda5;->f$0:Lorg/telegram/ui/QrActivity;
 
-    invoke-static {v0}, Lorg/telegram/ui/QrActivity;->$r8$lambda$xCz-37lPoMoXE0KCPvf-zCC55Z4(Lorg/telegram/ui/QrActivity;)V
+    invoke-static {v0}, Lorg/telegram/ui/QrActivity;->$r8$lambda$CL8dGIKKb64O3lgJH9q6J7Lx9z4(Lorg/telegram/ui/QrActivity;)V
 
     return-void
 .end method

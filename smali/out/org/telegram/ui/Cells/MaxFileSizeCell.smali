@@ -788,7 +788,7 @@
 
     const-string v2, "AutodownloadSizeLimitUpTo"
 
-    const v3, 0x7f0e0276
+    const v3, 0x7f0e02ab
 
     invoke-static {v2, v3, v1}, Lorg/telegram/messenger/LocaleController;->formatString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 

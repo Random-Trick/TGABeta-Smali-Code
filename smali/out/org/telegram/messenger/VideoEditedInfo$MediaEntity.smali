@@ -72,7 +72,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 90
+    .line 91
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -81,89 +81,89 @@
 .method private constructor <init>(Lorg/telegram/tgnet/SerializedData;)V
     .registers 4
 
-    .line 94
+    .line 95
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
-
-    .line 95
-    invoke-virtual {p1, v0}, Lorg/telegram/tgnet/SerializedData;->readByte(Z)B
-
-    move-result v1
-
-    iput-byte v1, p0, Lorg/telegram/messenger/VideoEditedInfo$MediaEntity;->type:B
 
     .line 96
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/SerializedData;->readByte(Z)B
 
     move-result v1
 
-    iput-byte v1, p0, Lorg/telegram/messenger/VideoEditedInfo$MediaEntity;->subType:B
+    iput-byte v1, p0, Lorg/telegram/messenger/VideoEditedInfo$MediaEntity;->type:B
 
     .line 97
-    invoke-virtual {p1, v0}, Lorg/telegram/tgnet/SerializedData;->readFloat(Z)F
+    invoke-virtual {p1, v0}, Lorg/telegram/tgnet/SerializedData;->readByte(Z)B
 
     move-result v1
 
-    iput v1, p0, Lorg/telegram/messenger/VideoEditedInfo$MediaEntity;->x:F
+    iput-byte v1, p0, Lorg/telegram/messenger/VideoEditedInfo$MediaEntity;->subType:B
 
     .line 98
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/SerializedData;->readFloat(Z)F
 
     move-result v1
 
-    iput v1, p0, Lorg/telegram/messenger/VideoEditedInfo$MediaEntity;->y:F
+    iput v1, p0, Lorg/telegram/messenger/VideoEditedInfo$MediaEntity;->x:F
 
     .line 99
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/SerializedData;->readFloat(Z)F
 
     move-result v1
 
-    iput v1, p0, Lorg/telegram/messenger/VideoEditedInfo$MediaEntity;->rotation:F
+    iput v1, p0, Lorg/telegram/messenger/VideoEditedInfo$MediaEntity;->y:F
 
     .line 100
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/SerializedData;->readFloat(Z)F
 
     move-result v1
 
-    iput v1, p0, Lorg/telegram/messenger/VideoEditedInfo$MediaEntity;->width:F
+    iput v1, p0, Lorg/telegram/messenger/VideoEditedInfo$MediaEntity;->rotation:F
 
     .line 101
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/SerializedData;->readFloat(Z)F
 
     move-result v1
 
-    iput v1, p0, Lorg/telegram/messenger/VideoEditedInfo$MediaEntity;->height:F
+    iput v1, p0, Lorg/telegram/messenger/VideoEditedInfo$MediaEntity;->width:F
 
     .line 102
+    invoke-virtual {p1, v0}, Lorg/telegram/tgnet/SerializedData;->readFloat(Z)F
+
+    move-result v1
+
+    iput v1, p0, Lorg/telegram/messenger/VideoEditedInfo$MediaEntity;->height:F
+
+    .line 103
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/SerializedData;->readString(Z)Ljava/lang/String;
 
     move-result-object v1
 
     iput-object v1, p0, Lorg/telegram/messenger/VideoEditedInfo$MediaEntity;->text:Ljava/lang/String;
 
-    .line 103
+    .line 104
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/SerializedData;->readInt32(Z)I
 
     move-result v1
 
     iput v1, p0, Lorg/telegram/messenger/VideoEditedInfo$MediaEntity;->color:I
 
-    .line 104
+    .line 105
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/SerializedData;->readInt32(Z)I
 
     move-result v1
 
     iput v1, p0, Lorg/telegram/messenger/VideoEditedInfo$MediaEntity;->fontSize:I
 
-    .line 105
+    .line 106
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/SerializedData;->readInt32(Z)I
 
     move-result v1
 
     iput v1, p0, Lorg/telegram/messenger/VideoEditedInfo$MediaEntity;->viewWidth:I
 
-    .line 106
+    .line 107
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/SerializedData;->readInt32(Z)I
 
     move-result p1
@@ -176,7 +176,7 @@
 .method synthetic constructor <init>(Lorg/telegram/tgnet/SerializedData;Lorg/telegram/messenger/VideoEditedInfo$1;)V
     .registers 3
 
-    .line 58
+    .line 59
     invoke-direct {p0, p1}, Lorg/telegram/messenger/VideoEditedInfo$MediaEntity;-><init>(Lorg/telegram/tgnet/SerializedData;)V
 
     return-void
@@ -185,7 +185,7 @@
 .method static synthetic access$000(Lorg/telegram/messenger/VideoEditedInfo$MediaEntity;Lorg/telegram/tgnet/SerializedData;)V
     .registers 2
 
-    .line 58
+    .line 59
     invoke-direct {p0, p1}, Lorg/telegram/messenger/VideoEditedInfo$MediaEntity;->serializeTo(Lorg/telegram/tgnet/SerializedData;)V
 
     return-void
@@ -194,62 +194,62 @@
 .method private serializeTo(Lorg/telegram/tgnet/SerializedData;)V
     .registers 3
 
-    .line 110
+    .line 111
     iget-byte v0, p0, Lorg/telegram/messenger/VideoEditedInfo$MediaEntity;->type:B
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/SerializedData;->writeByte(B)V
 
-    .line 111
+    .line 112
     iget-byte v0, p0, Lorg/telegram/messenger/VideoEditedInfo$MediaEntity;->subType:B
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/SerializedData;->writeByte(B)V
 
-    .line 112
+    .line 113
     iget v0, p0, Lorg/telegram/messenger/VideoEditedInfo$MediaEntity;->x:F
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/SerializedData;->writeFloat(F)V
 
-    .line 113
+    .line 114
     iget v0, p0, Lorg/telegram/messenger/VideoEditedInfo$MediaEntity;->y:F
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/SerializedData;->writeFloat(F)V
 
-    .line 114
+    .line 115
     iget v0, p0, Lorg/telegram/messenger/VideoEditedInfo$MediaEntity;->rotation:F
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/SerializedData;->writeFloat(F)V
 
-    .line 115
+    .line 116
     iget v0, p0, Lorg/telegram/messenger/VideoEditedInfo$MediaEntity;->width:F
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/SerializedData;->writeFloat(F)V
 
-    .line 116
+    .line 117
     iget v0, p0, Lorg/telegram/messenger/VideoEditedInfo$MediaEntity;->height:F
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/SerializedData;->writeFloat(F)V
 
-    .line 117
+    .line 118
     iget-object v0, p0, Lorg/telegram/messenger/VideoEditedInfo$MediaEntity;->text:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/SerializedData;->writeString(Ljava/lang/String;)V
 
-    .line 118
+    .line 119
     iget v0, p0, Lorg/telegram/messenger/VideoEditedInfo$MediaEntity;->color:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/SerializedData;->writeInt32(I)V
 
-    .line 119
+    .line 120
     iget v0, p0, Lorg/telegram/messenger/VideoEditedInfo$MediaEntity;->fontSize:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/SerializedData;->writeInt32(I)V
 
-    .line 120
+    .line 121
     iget v0, p0, Lorg/telegram/messenger/VideoEditedInfo$MediaEntity;->viewWidth:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/SerializedData;->writeInt32(I)V
 
-    .line 121
+    .line 122
     iget v0, p0, Lorg/telegram/messenger/VideoEditedInfo$MediaEntity;->viewHeight:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/SerializedData;->writeInt32(I)V
@@ -262,92 +262,92 @@
 .method public copy()Lorg/telegram/messenger/VideoEditedInfo$MediaEntity;
     .registers 3
 
-    .line 125
+    .line 126
     new-instance v0, Lorg/telegram/messenger/VideoEditedInfo$MediaEntity;
 
     invoke-direct {v0}, Lorg/telegram/messenger/VideoEditedInfo$MediaEntity;-><init>()V
 
-    .line 126
+    .line 127
     iget-byte v1, p0, Lorg/telegram/messenger/VideoEditedInfo$MediaEntity;->type:B
 
     iput-byte v1, v0, Lorg/telegram/messenger/VideoEditedInfo$MediaEntity;->type:B
 
-    .line 127
+    .line 128
     iget-byte v1, p0, Lorg/telegram/messenger/VideoEditedInfo$MediaEntity;->subType:B
 
     iput-byte v1, v0, Lorg/telegram/messenger/VideoEditedInfo$MediaEntity;->subType:B
 
-    .line 128
+    .line 129
     iget v1, p0, Lorg/telegram/messenger/VideoEditedInfo$MediaEntity;->x:F
 
     iput v1, v0, Lorg/telegram/messenger/VideoEditedInfo$MediaEntity;->x:F
 
-    .line 129
+    .line 130
     iget v1, p0, Lorg/telegram/messenger/VideoEditedInfo$MediaEntity;->y:F
 
     iput v1, v0, Lorg/telegram/messenger/VideoEditedInfo$MediaEntity;->y:F
 
-    .line 130
+    .line 131
     iget v1, p0, Lorg/telegram/messenger/VideoEditedInfo$MediaEntity;->rotation:F
 
     iput v1, v0, Lorg/telegram/messenger/VideoEditedInfo$MediaEntity;->rotation:F
 
-    .line 131
+    .line 132
     iget v1, p0, Lorg/telegram/messenger/VideoEditedInfo$MediaEntity;->width:F
 
     iput v1, v0, Lorg/telegram/messenger/VideoEditedInfo$MediaEntity;->width:F
 
-    .line 132
+    .line 133
     iget v1, p0, Lorg/telegram/messenger/VideoEditedInfo$MediaEntity;->height:F
 
     iput v1, v0, Lorg/telegram/messenger/VideoEditedInfo$MediaEntity;->height:F
 
-    .line 133
+    .line 134
     iget-object v1, p0, Lorg/telegram/messenger/VideoEditedInfo$MediaEntity;->text:Ljava/lang/String;
 
     iput-object v1, v0, Lorg/telegram/messenger/VideoEditedInfo$MediaEntity;->text:Ljava/lang/String;
 
-    .line 134
+    .line 135
     iget v1, p0, Lorg/telegram/messenger/VideoEditedInfo$MediaEntity;->color:I
 
     iput v1, v0, Lorg/telegram/messenger/VideoEditedInfo$MediaEntity;->color:I
 
-    .line 135
+    .line 136
     iget v1, p0, Lorg/telegram/messenger/VideoEditedInfo$MediaEntity;->fontSize:I
 
     iput v1, v0, Lorg/telegram/messenger/VideoEditedInfo$MediaEntity;->fontSize:I
 
-    .line 136
+    .line 137
     iget v1, p0, Lorg/telegram/messenger/VideoEditedInfo$MediaEntity;->viewWidth:I
 
     iput v1, v0, Lorg/telegram/messenger/VideoEditedInfo$MediaEntity;->viewWidth:I
 
-    .line 137
+    .line 138
     iget v1, p0, Lorg/telegram/messenger/VideoEditedInfo$MediaEntity;->viewHeight:I
 
     iput v1, v0, Lorg/telegram/messenger/VideoEditedInfo$MediaEntity;->viewHeight:I
 
-    .line 138
+    .line 139
     iget v1, p0, Lorg/telegram/messenger/VideoEditedInfo$MediaEntity;->scale:F
 
     iput v1, v0, Lorg/telegram/messenger/VideoEditedInfo$MediaEntity;->scale:F
 
-    .line 139
+    .line 140
     iget v1, p0, Lorg/telegram/messenger/VideoEditedInfo$MediaEntity;->textViewWidth:F
 
     iput v1, v0, Lorg/telegram/messenger/VideoEditedInfo$MediaEntity;->textViewWidth:F
 
-    .line 140
+    .line 141
     iget v1, p0, Lorg/telegram/messenger/VideoEditedInfo$MediaEntity;->textViewHeight:F
 
     iput v1, v0, Lorg/telegram/messenger/VideoEditedInfo$MediaEntity;->textViewHeight:F
 
-    .line 141
+    .line 142
     iget v1, p0, Lorg/telegram/messenger/VideoEditedInfo$MediaEntity;->textViewX:F
 
     iput v1, v0, Lorg/telegram/messenger/VideoEditedInfo$MediaEntity;->textViewX:F
 
-    .line 142
+    .line 143
     iget v1, p0, Lorg/telegram/messenger/VideoEditedInfo$MediaEntity;->textViewY:F
 
     iput v1, v0, Lorg/telegram/messenger/VideoEditedInfo$MediaEntity;->textViewY:F

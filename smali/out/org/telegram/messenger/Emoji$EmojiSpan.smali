@@ -21,27 +21,27 @@
 
 
 # direct methods
-.method public constructor <init>(Lorg/telegram/messenger/Emoji$EmojiDrawable;IILandroid/graphics/Paint$FontMetricsInt;)V
+.method public constructor <init>(Landroid/graphics/drawable/Drawable;IILandroid/graphics/Paint$FontMetricsInt;)V
     .registers 5
 
-    .line 489
+    .line 654
     invoke-direct {p0, p1, p2}, Landroid/text/style/ImageSpan;-><init>(Landroid/graphics/drawable/Drawable;I)V
 
     const/high16 p1, 0x41a00000    # 20.0f
 
-    .line 486
+    .line 651
     invoke-static {p1}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result p2
 
     iput p2, p0, Lorg/telegram/messenger/Emoji$EmojiSpan;->size:I
 
-    .line 490
+    .line 655
     iput-object p4, p0, Lorg/telegram/messenger/Emoji$EmojiSpan;->fontMetrics:Landroid/graphics/Paint$FontMetricsInt;
 
     if-eqz p4, :cond_28
 
-    .line 492
+    .line 657
     iget p2, p4, Landroid/graphics/Paint$FontMetricsInt;->descent:I
 
     invoke-static {p2}, Ljava/lang/Math;->abs(I)I
@@ -62,7 +62,7 @@
 
     if-nez p2, :cond_28
 
-    .line 494
+    .line 659
     invoke-static {p1}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result p1
@@ -78,7 +78,7 @@
 .method public draw(Landroid/graphics/Canvas;Ljava/lang/CharSequence;IIFIIILandroid/graphics/Paint;)V
     .registers 16
 
-    .line 540
+    .line 705
     invoke-virtual {p9}, Landroid/graphics/Paint;->getAlpha()I
 
     move-result v0
@@ -95,7 +95,7 @@
 
     if-eqz v0, :cond_1b
 
-    .line 542
+    .line 707
     invoke-virtual {p0}, Landroid/text/style/ImageSpan;->getDrawable()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
@@ -113,7 +113,7 @@
     :cond_1b
     const/4 v0, 0x0
 
-    .line 545
+    .line 710
     :goto_1c
     sget v4, Lorg/telegram/messenger/Emoji;->emojiDrawingYOffset:F
 
@@ -123,10 +123,10 @@
 
     if-eqz v4, :cond_2c
 
-    .line 547
+    .line 712
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 548
+    .line 713
     sget v3, Lorg/telegram/messenger/Emoji;->emojiDrawingYOffset:F
 
     invoke-virtual {p1, v5, v3}, Landroid/graphics/Canvas;->translate(FF)V
@@ -136,19 +136,19 @@
     :cond_2c
     const/4 v1, 0x0
 
-    .line 550
+    .line 715
     :goto_2d
     invoke-super/range {p0 .. p9}, Landroid/text/style/ImageSpan;->draw(Landroid/graphics/Canvas;Ljava/lang/CharSequence;IIFIIILandroid/graphics/Paint;)V
 
     if-eqz v1, :cond_35
 
-    .line 552
+    .line 717
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
     :cond_35
     if-eqz v0, :cond_3e
 
-    .line 555
+    .line 720
     invoke-virtual {p0}, Landroid/text/style/ImageSpan;->getDrawable()Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
@@ -164,12 +164,12 @@
 
     if-nez p5, :cond_7
 
-    .line 507
+    .line 672
     new-instance p5, Landroid/graphics/Paint$FontMetricsInt;
 
     invoke-direct {p5}, Landroid/graphics/Paint$FontMetricsInt;-><init>()V
 
-    .line 510
+    .line 675
     :cond_7
     iget-object v0, p0, Lorg/telegram/messenger/Emoji$EmojiSpan;->fontMetrics:Landroid/graphics/Paint$FontMetricsInt;
 
@@ -189,21 +189,21 @@
 
     move-object v5, p5
 
-    .line 511
+    .line 676
     invoke-super/range {v0 .. v5}, Landroid/text/style/ImageSpan;->getSize(Landroid/graphics/Paint;Ljava/lang/CharSequence;IILandroid/graphics/Paint$FontMetricsInt;)I
 
     move-result p1
 
     const/high16 p2, 0x41000000    # 8.0f
 
-    .line 513
+    .line 678
     invoke-static {p2}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result p2
 
     const/high16 p3, 0x41200000    # 10.0f
 
-    .line 514
+    .line 679
     invoke-static {p3}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result p3
@@ -212,54 +212,54 @@
 
     sub-int/2addr p4, p2
 
-    .line 515
+    .line 680
     iput p4, p5, Landroid/graphics/Paint$FontMetricsInt;->top:I
 
     sub-int/2addr p3, p2
 
-    .line 516
+    .line 681
     iput p3, p5, Landroid/graphics/Paint$FontMetricsInt;->bottom:I
 
-    .line 517
+    .line 682
     iput p4, p5, Landroid/graphics/Paint$FontMetricsInt;->ascent:I
 
-    .line 518
+    .line 683
     iput v6, p5, Landroid/graphics/Paint$FontMetricsInt;->leading:I
 
-    .line 519
+    .line 684
     iput p3, p5, Landroid/graphics/Paint$FontMetricsInt;->descent:I
 
     return p1
 
-    .line 524
+    .line 689
     :cond_30
     iget p1, v0, Landroid/graphics/Paint$FontMetricsInt;->ascent:I
 
     iput p1, p5, Landroid/graphics/Paint$FontMetricsInt;->ascent:I
 
-    .line 525
+    .line 690
     iget p1, v0, Landroid/graphics/Paint$FontMetricsInt;->descent:I
 
     iput p1, p5, Landroid/graphics/Paint$FontMetricsInt;->descent:I
 
-    .line 527
+    .line 692
     iget p1, v0, Landroid/graphics/Paint$FontMetricsInt;->top:I
 
     iput p1, p5, Landroid/graphics/Paint$FontMetricsInt;->top:I
 
-    .line 528
+    .line 693
     iget p1, v0, Landroid/graphics/Paint$FontMetricsInt;->bottom:I
 
     iput p1, p5, Landroid/graphics/Paint$FontMetricsInt;->bottom:I
 
-    .line 530
+    .line 695
     invoke-virtual {p0}, Landroid/text/style/ImageSpan;->getDrawable()Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 
     if-eqz p1, :cond_4f
 
-    .line 531
+    .line 696
     invoke-virtual {p0}, Landroid/text/style/ImageSpan;->getDrawable()Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
@@ -268,7 +268,7 @@
 
     invoke-virtual {p1, v6, v6, p2, p2}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 533
+    .line 698
     :cond_4f
     iget p1, p0, Lorg/telegram/messenger/Emoji$EmojiSpan;->size:I
 
@@ -278,11 +278,47 @@
 .method public replaceFontMetrics(Landroid/graphics/Paint$FontMetricsInt;I)V
     .registers 3
 
-    .line 500
+    .line 665
     iput-object p1, p0, Lorg/telegram/messenger/Emoji$EmojiSpan;->fontMetrics:Landroid/graphics/Paint$FontMetricsInt;
 
-    .line 501
+    .line 666
     iput p2, p0, Lorg/telegram/messenger/Emoji$EmojiSpan;->size:I
+
+    return-void
+.end method
+
+.method public updateDrawState(Landroid/text/TextPaint;)V
+    .registers 5
+
+    .line 726
+    invoke-virtual {p0}, Landroid/text/style/ImageSpan;->getDrawable()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    instance-of v0, v0, Lorg/telegram/messenger/Emoji$EmojiDrawable;
+
+    if-eqz v0, :cond_18
+
+    .line 727
+    invoke-virtual {p0}, Landroid/text/style/ImageSpan;->getDrawable()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    check-cast v0, Lorg/telegram/messenger/Emoji$EmojiDrawable;
+
+    const v1, 0x20ffffff
+
+    invoke-virtual {p1}, Landroid/text/TextPaint;->getColor()I
+
+    move-result v2
+
+    and-int/2addr v1, v2
+
+    iput v1, v0, Lorg/telegram/messenger/Emoji$EmojiDrawable;->placeholderColor:I
+
+    .line 729
+    :cond_18
+    invoke-super {p0, p1}, Landroid/text/style/ImageSpan;->updateDrawState(Landroid/text/TextPaint;)V
 
     return-void
 .end method

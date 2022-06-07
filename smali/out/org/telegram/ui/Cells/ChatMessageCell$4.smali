@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/Cells/ChatMessageCell;)V
     .registers 2
 
-    .line 6794
+    .line 6903
     iput-object p1, p0, Lorg/telegram/ui/Cells/ChatMessageCell$4;->this$0:Lorg/telegram/ui/Cells/ChatMessageCell;
 
     invoke-direct {p0}, Lorg/telegram/messenger/video/VideoPlayerRewinder;-><init>()V
@@ -35,7 +35,7 @@
 .method protected onRewindCanceled()V
     .registers 10
 
-    .line 6797
+    .line 6906
     iget-object v0, p0, Lorg/telegram/ui/Cells/ChatMessageCell$4;->this$0:Lorg/telegram/ui/Cells/ChatMessageCell;
 
     const-wide/16 v1, 0x0
@@ -56,7 +56,7 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Cells/ChatMessageCell;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
-    .line 6798
+    .line 6907
     iget-object v0, p0, Lorg/telegram/ui/Cells/ChatMessageCell$4;->this$0:Lorg/telegram/ui/Cells/ChatMessageCell;
 
     iget-object v0, v0, Lorg/telegram/ui/Cells/ChatMessageCell;->videoForwardDrawable:Lorg/telegram/ui/Components/VideoForwardDrawable;
@@ -71,7 +71,7 @@
 .method protected onRewindStart(Z)V
     .registers 4
 
-    .line 6812
+    .line 6921
     iget-object v0, p0, Lorg/telegram/ui/Cells/ChatMessageCell$4;->this$0:Lorg/telegram/ui/Cells/ChatMessageCell;
 
     iget-object v0, v0, Lorg/telegram/ui/Cells/ChatMessageCell;->videoForwardDrawable:Lorg/telegram/ui/Components/VideoForwardDrawable;
@@ -82,7 +82,7 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/VideoForwardDrawable;->setDelegate(Lorg/telegram/ui/Components/VideoForwardDrawable$VideoForwardDrawableDelegate;)V
 
-    .line 6823
+    .line 6932
     iget-object v0, p0, Lorg/telegram/ui/Cells/ChatMessageCell$4;->this$0:Lorg/telegram/ui/Cells/ChatMessageCell;
 
     iget-object v0, v0, Lorg/telegram/ui/Cells/ChatMessageCell;->videoForwardDrawable:Lorg/telegram/ui/Components/VideoForwardDrawable;
@@ -91,7 +91,7 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/VideoForwardDrawable;->setOneShootAnimation(Z)V
 
-    .line 6824
+    .line 6933
     iget-object v0, p0, Lorg/telegram/ui/Cells/ChatMessageCell$4;->this$0:Lorg/telegram/ui/Cells/ChatMessageCell;
 
     iget-object v0, v0, Lorg/telegram/ui/Cells/ChatMessageCell;->videoForwardDrawable:Lorg/telegram/ui/Components/VideoForwardDrawable;
@@ -102,14 +102,14 @@
 
     invoke-virtual {v0, p1}, Lorg/telegram/ui/Components/VideoForwardDrawable;->setLeftSide(Z)V
 
-    .line 6825
+    .line 6934
     iget-object p1, p0, Lorg/telegram/ui/Cells/ChatMessageCell$4;->this$0:Lorg/telegram/ui/Cells/ChatMessageCell;
 
     iget-object p1, p1, Lorg/telegram/ui/Cells/ChatMessageCell;->videoForwardDrawable:Lorg/telegram/ui/Components/VideoForwardDrawable;
 
     invoke-virtual {p1, v1}, Lorg/telegram/ui/Components/VideoForwardDrawable;->setShowing(Z)V
 
-    .line 6826
+    .line 6935
     iget-object p1, p0, Lorg/telegram/ui/Cells/ChatMessageCell$4;->this$0:Lorg/telegram/ui/Cells/ChatMessageCell;
 
     invoke-virtual {p1}, Lorg/telegram/ui/Cells/ChatMessageCell;->invalidate()V
@@ -120,7 +120,7 @@
 .method protected updateRewindProgressUi(JFZ)V
     .registers 6
 
-    .line 6803
+    .line 6912
     iget-object v0, p0, Lorg/telegram/ui/Cells/ChatMessageCell$4;->this$0:Lorg/telegram/ui/Cells/ChatMessageCell;
 
     iget-object v0, v0, Lorg/telegram/ui/Cells/ChatMessageCell;->videoForwardDrawable:Lorg/telegram/ui/Components/VideoForwardDrawable;
@@ -133,7 +133,7 @@
 
     if-eqz p4, :cond_1a
 
-    .line 6805
+    .line 6914
     iget-object p1, p0, Lorg/telegram/ui/Cells/ChatMessageCell$4;->this$0:Lorg/telegram/ui/Cells/ChatMessageCell;
 
     invoke-static {p1}, Lorg/telegram/ui/Cells/ChatMessageCell;->access$600(Lorg/telegram/ui/Cells/ChatMessageCell;)Lorg/telegram/messenger/MessageObject;
@@ -142,7 +142,7 @@
 
     iput p3, p1, Lorg/telegram/messenger/MessageObject;->audioProgress:F
 
-    .line 6806
+    .line 6915
     iget-object p1, p0, Lorg/telegram/ui/Cells/ChatMessageCell$4;->this$0:Lorg/telegram/ui/Cells/ChatMessageCell;
 
     invoke-virtual {p1}, Lorg/telegram/ui/Cells/ChatMessageCell;->updatePlayingMessageProgress()V

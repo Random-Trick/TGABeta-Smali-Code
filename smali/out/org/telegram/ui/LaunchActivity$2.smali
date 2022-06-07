@@ -18,7 +18,7 @@
 .method constructor <init>(Lorg/telegram/ui/LaunchActivity;Landroid/content/Context;)V
     .registers 3
 
-    .line 327
+    .line 339
     invoke-direct {p0, p2}, Lorg/telegram/ui/ActionBar/DrawerLayoutContainer;-><init>(Landroid/content/Context;)V
 
     return-void
@@ -29,10 +29,10 @@
 .method protected onLayout(ZIIII)V
     .registers 6
 
-    .line 330
+    .line 342
     invoke-super/range {p0 .. p5}, Lorg/telegram/ui/ActionBar/DrawerLayoutContainer;->onLayout(ZIIII)V
 
-    .line 331
+    .line 343
     invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/DrawerLayoutContainer;->getDrawerPosition()F
 
     move-result p1

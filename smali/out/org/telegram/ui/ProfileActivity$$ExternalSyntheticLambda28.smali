@@ -2,44 +2,62 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Ljava/util/Comparator;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
 .field public final synthetic f$0:Lorg/telegram/ui/ProfileActivity;
 
-.field public final synthetic f$1:I
+.field public final synthetic f$1:[Z
+
+.field public final synthetic f$2:Ljava/lang/String;
+
+.field public final synthetic f$3:I
+
+.field public final synthetic f$4:[Ljava/lang/String;
+
+.field public final synthetic f$5:Ljava/lang/String;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lorg/telegram/ui/ProfileActivity;I)V
-    .registers 3
+.method public synthetic constructor <init>(Lorg/telegram/ui/ProfileActivity;[ZLjava/lang/String;I[Ljava/lang/String;Ljava/lang/String;)V
+    .registers 7
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lorg/telegram/ui/ProfileActivity$$ExternalSyntheticLambda28;->f$0:Lorg/telegram/ui/ProfileActivity;
 
-    iput p2, p0, Lorg/telegram/ui/ProfileActivity$$ExternalSyntheticLambda28;->f$1:I
+    iput-object p2, p0, Lorg/telegram/ui/ProfileActivity$$ExternalSyntheticLambda28;->f$1:[Z
+
+    iput-object p3, p0, Lorg/telegram/ui/ProfileActivity$$ExternalSyntheticLambda28;->f$2:Ljava/lang/String;
+
+    iput p4, p0, Lorg/telegram/ui/ProfileActivity$$ExternalSyntheticLambda28;->f$3:I
+
+    iput-object p5, p0, Lorg/telegram/ui/ProfileActivity$$ExternalSyntheticLambda28;->f$4:[Ljava/lang/String;
+
+    iput-object p6, p0, Lorg/telegram/ui/ProfileActivity$$ExternalSyntheticLambda28;->f$5:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final compare(Ljava/lang/Object;Ljava/lang/Object;)I
-    .registers 5
+.method public final run()V
+    .registers 7
 
     iget-object v0, p0, Lorg/telegram/ui/ProfileActivity$$ExternalSyntheticLambda28;->f$0:Lorg/telegram/ui/ProfileActivity;
 
-    iget v1, p0, Lorg/telegram/ui/ProfileActivity$$ExternalSyntheticLambda28;->f$1:I
+    iget-object v1, p0, Lorg/telegram/ui/ProfileActivity$$ExternalSyntheticLambda28;->f$1:[Z
 
-    check-cast p1, Ljava/lang/Integer;
+    iget-object v2, p0, Lorg/telegram/ui/ProfileActivity$$ExternalSyntheticLambda28;->f$2:Ljava/lang/String;
 
-    check-cast p2, Ljava/lang/Integer;
+    iget v3, p0, Lorg/telegram/ui/ProfileActivity$$ExternalSyntheticLambda28;->f$3:I
 
-    invoke-static {v0, v1, p1, p2}, Lorg/telegram/ui/ProfileActivity;->$r8$lambda$3iUTunca8P7AHvNLgLbp71Jpn_0(Lorg/telegram/ui/ProfileActivity;ILjava/lang/Integer;Ljava/lang/Integer;)I
+    iget-object v4, p0, Lorg/telegram/ui/ProfileActivity$$ExternalSyntheticLambda28;->f$4:[Ljava/lang/String;
 
-    move-result p1
+    iget-object v5, p0, Lorg/telegram/ui/ProfileActivity$$ExternalSyntheticLambda28;->f$5:Ljava/lang/String;
 
-    return p1
+    invoke-static/range {v0 .. v5}, Lorg/telegram/ui/ProfileActivity;->$r8$lambda$Jr4yTnbAvR47J1_xmfgPLULbMnU(Lorg/telegram/ui/ProfileActivity;[ZLjava/lang/String;I[Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
 .end method

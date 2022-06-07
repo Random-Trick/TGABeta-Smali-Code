@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/ArticleViewer;)V
     .registers 2
 
-    .line 1738
+    .line 1739
     iput-object p1, p0, Lorg/telegram/ui/ArticleViewer$6;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     invoke-direct {p0}, Lorg/telegram/ui/ActionBar/BottomSheet$BottomSheetDelegate;-><init>()V
@@ -35,7 +35,7 @@
 .method public canDismiss()Z
     .registers 2
 
-    .line 1741
+    .line 1742
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$6;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     iget-object v0, v0, Lorg/telegram/ui/ArticleViewer;->textSelectionHelperBottomSheet:Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;
@@ -48,7 +48,7 @@
 
     if-eqz v0, :cond_15
 
-    .line 1742
+    .line 1743
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$6;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     iget-object v0, v0, Lorg/telegram/ui/ArticleViewer;->textSelectionHelperBottomSheet:Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;

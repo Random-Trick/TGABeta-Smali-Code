@@ -51,7 +51,7 @@
     .line 621
     iget-object p1, p0, Lorg/telegram/ui/PhotoPickerSearchActivity$6;->this$0:Lorg/telegram/ui/PhotoPickerSearchActivity;
 
-    invoke-static {p1}, Lorg/telegram/ui/PhotoPickerSearchActivity;->access$3500(Lorg/telegram/ui/PhotoPickerSearchActivity;)Lorg/telegram/ui/ActionBar/ActionBar;
+    invoke-static {p1}, Lorg/telegram/ui/PhotoPickerSearchActivity;->access$3300(Lorg/telegram/ui/PhotoPickerSearchActivity;)Lorg/telegram/ui/ActionBar/ActionBar;
 
     move-result-object p1
 
@@ -149,7 +149,7 @@
     .line 637
     iget-object p1, p0, Lorg/telegram/ui/PhotoPickerSearchActivity$6;->this$0:Lorg/telegram/ui/PhotoPickerSearchActivity;
 
-    invoke-static {p1}, Lorg/telegram/ui/PhotoPickerSearchActivity;->access$3600(Lorg/telegram/ui/PhotoPickerSearchActivity;)Lorg/telegram/ui/ActionBar/ActionBar;
+    invoke-static {p1}, Lorg/telegram/ui/PhotoPickerSearchActivity;->access$3400(Lorg/telegram/ui/PhotoPickerSearchActivity;)Lorg/telegram/ui/ActionBar/ActionBar;
 
     move-result-object p1
 
@@ -203,7 +203,7 @@
     .line 645
     iget-object p1, p0, Lorg/telegram/ui/PhotoPickerSearchActivity$6;->this$0:Lorg/telegram/ui/PhotoPickerSearchActivity;
 
-    invoke-static {p1, p2}, Lorg/telegram/ui/PhotoPickerSearchActivity;->access$3700(Lorg/telegram/ui/PhotoPickerSearchActivity;F)V
+    invoke-static {p1, p2}, Lorg/telegram/ui/PhotoPickerSearchActivity;->access$3500(Lorg/telegram/ui/PhotoPickerSearchActivity;F)V
 
     :cond_41
     return-void

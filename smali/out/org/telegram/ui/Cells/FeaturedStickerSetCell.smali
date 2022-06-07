@@ -358,7 +358,7 @@
 
     iput-object v0, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetCell;->addButton:Lorg/telegram/ui/Components/ProgressButton;
 
-    const v1, 0x7f0e0104
+    const v1, 0x7f0e012c
 
     const-string v2, "Add"
 
@@ -456,7 +456,7 @@
     .line 100
     iget-object p1, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetCell;->checkImage:Landroid/widget/ImageView;
 
-    const v0, 0x7f0703d8
+    const v0, 0x7f0703cf
 
     invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -858,9 +858,11 @@
 
     iget v3, v3, Lorg/telegram/tgnet/TLRPC$StickerSet;->count:I
 
-    const-string v4, "Stickers"
+    new-array v4, v10, [Ljava/lang/Object;
 
-    invoke-static {v4, v3}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    const-string v5, "Stickers"
+
+    invoke-static {v5, v3, v4}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v3
 
@@ -869,21 +871,21 @@
     .line 177
     iget-object v2, v8, Lorg/telegram/tgnet/TLRPC$StickerSetCovered;->cover:Lorg/telegram/tgnet/TLRPC$Document;
 
-    if-eqz v2, :cond_58
+    if-eqz v2, :cond_5a
 
     move-object v1, v2
 
-    goto :goto_68
+    goto :goto_6a
 
     .line 179
-    :cond_58
+    :cond_5a
     iget-object v2, v8, Lorg/telegram/tgnet/TLRPC$StickerSetCovered;->covers:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->isEmpty()Z
 
     move-result v2
 
-    if-nez v2, :cond_68
+    if-nez v2, :cond_6a
 
     .line 180
     iget-object v1, v8, Lorg/telegram/tgnet/TLRPC$StickerSetCovered;->covers:Ljava/util/ArrayList;
@@ -894,11 +896,11 @@
 
     check-cast v1, Lorg/telegram/tgnet/TLRPC$Document;
 
-    :cond_68
-    :goto_68
+    :cond_6a
+    :goto_6a
     const/high16 v12, 0x3f800000    # 1.0f
 
-    if-eqz v1, :cond_f0
+    if-eqz v1, :cond_f2
 
     .line 185
     iget-object v2, v8, Lorg/telegram/tgnet/TLRPC$StickerSetCovered;->set:Lorg/telegram/tgnet/TLRPC$StickerSet;
@@ -911,12 +913,12 @@
 
     move-result-object v2
 
-    if-nez v2, :cond_79
+    if-nez v2, :cond_7b
 
     move-object v2, v1
 
     .line 189
-    :cond_79
+    :cond_7b
     iget-object v4, v8, Lorg/telegram/tgnet/TLRPC$StickerSetCovered;->set:Lorg/telegram/tgnet/TLRPC$StickerSet;
 
     iget-object v4, v4, Lorg/telegram/tgnet/TLRPC$StickerSet;->thumbs:Ljava/util/ArrayList;
@@ -930,7 +932,7 @@
     .line 192
     instance-of v4, v2, Lorg/telegram/tgnet/TLRPC$Document;
 
-    if-eqz v4, :cond_92
+    if-eqz v4, :cond_94
 
     .line 193
     iget-object v2, v1, Lorg/telegram/tgnet/TLRPC$Document;->thumbs:Ljava/util/ArrayList;
@@ -944,10 +946,10 @@
 
     move-result-object v2
 
-    goto :goto_9c
+    goto :goto_9e
 
     .line 196
-    :cond_92
+    :cond_94
     check-cast v2, Lorg/telegram/tgnet/TLRPC$PhotoSize;
 
     .line 197
@@ -959,19 +961,19 @@
 
     move-result-object v2
 
-    :goto_9c
+    :goto_9e
     move-object v6, v2
 
-    if-eqz v4, :cond_d0
+    if-eqz v4, :cond_d2
 
     .line 200
     invoke-static {v1, v9}, Lorg/telegram/messenger/MessageObject;->isAnimatedStickerDocument(Lorg/telegram/tgnet/TLRPC$Document;Z)Z
 
     move-result v2
 
-    if-eqz v2, :cond_d0
+    if-eqz v2, :cond_d2
 
-    if-eqz v5, :cond_bb
+    if-eqz v5, :cond_bd
 
     .line 202
     iget-object v2, v0, Lorg/telegram/ui/Cells/FeaturedStickerSetCell;->imageView:Lorg/telegram/ui/Components/BackupImageView;
@@ -998,10 +1000,10 @@
 
     invoke-virtual/range {v1 .. v6}, Lorg/telegram/ui/Components/BackupImageView;->setImage(Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Landroid/graphics/drawable/Drawable;ILjava/lang/Object;)V
 
-    goto :goto_fc
+    goto :goto_fe
 
     .line 204
-    :cond_bb
+    :cond_bd
     iget-object v2, v0, Lorg/telegram/ui/Cells/FeaturedStickerSetCell;->imageView:Lorg/telegram/ui/Components/BackupImageView;
 
     invoke-static {v1}, Lorg/telegram/messenger/ImageLocation;->getForDocument(Lorg/telegram/tgnet/TLRPC$Document;)Lorg/telegram/messenger/ImageLocation;
@@ -1028,15 +1030,15 @@
 
     invoke-virtual/range {v1 .. v7}, Lorg/telegram/ui/Components/BackupImageView;->setImage(Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;ILjava/lang/Object;)V
 
-    goto :goto_fc
+    goto :goto_fe
 
-    :cond_d0
-    if-eqz v6, :cond_e3
+    :cond_d2
+    if-eqz v6, :cond_e5
 
     .line 206
     iget v1, v6, Lorg/telegram/messenger/ImageLocation;->imageType:I
 
-    if-ne v1, v9, :cond_e3
+    if-ne v1, v9, :cond_e5
 
     .line 207
     iget-object v1, v0, Lorg/telegram/ui/Cells/FeaturedStickerSetCell;->imageView:Lorg/telegram/ui/Components/BackupImageView;
@@ -1051,10 +1053,10 @@
 
     invoke-virtual/range {v1 .. v6}, Lorg/telegram/ui/Components/BackupImageView;->setImage(Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Ljava/lang/String;Landroid/graphics/drawable/Drawable;Ljava/lang/Object;)V
 
-    goto :goto_fc
+    goto :goto_fe
 
     .line 209
-    :cond_e3
+    :cond_e5
     iget-object v1, v0, Lorg/telegram/ui/Cells/FeaturedStickerSetCell;->imageView:Lorg/telegram/ui/Components/BackupImageView;
 
     const-string v3, "50_50"
@@ -1067,10 +1069,10 @@
 
     invoke-virtual/range {v1 .. v6}, Lorg/telegram/ui/Components/BackupImageView;->setImage(Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Ljava/lang/String;Landroid/graphics/drawable/Drawable;Ljava/lang/Object;)V
 
-    goto :goto_fc
+    goto :goto_fe
 
     .line 212
-    :cond_f0
+    :cond_f2
     iget-object v1, v0, Lorg/telegram/ui/Cells/FeaturedStickerSetCell;->imageView:Lorg/telegram/ui/Components/BackupImageView;
 
     const/4 v2, 0x0
@@ -1085,10 +1087,10 @@
 
     invoke-virtual/range {v1 .. v6}, Lorg/telegram/ui/Components/BackupImageView;->setImage(Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Ljava/lang/String;Landroid/graphics/drawable/Drawable;Ljava/lang/Object;)V
 
-    :goto_fc
+    :goto_fe
     const/4 v1, 0x4
 
-    if-eqz v11, :cond_224
+    if-eqz v11, :cond_226
 
     .line 216
     iget-boolean v2, v0, Lorg/telegram/ui/Cells/FeaturedStickerSetCell;->isInstalled:Z
@@ -1126,9 +1128,9 @@
 
     const/4 v14, 0x2
 
-    if-eqz v3, :cond_1a2
+    if-eqz v3, :cond_1a4
 
-    if-nez v2, :cond_27a
+    if-nez v2, :cond_27c
 
     .line 219
     iget-object v2, v0, Lorg/telegram/ui/Cells/FeaturedStickerSetCell;->checkImage:Landroid/widget/ImageView;
@@ -1143,13 +1145,13 @@
     .line 221
     iget-object v2, v0, Lorg/telegram/ui/Cells/FeaturedStickerSetCell;->currentAnimation:Landroid/animation/AnimatorSet;
 
-    if-eqz v2, :cond_132
+    if-eqz v2, :cond_134
 
     .line 222
     invoke-virtual {v2}, Landroid/animation/AnimatorSet;->cancel()V
 
     .line 224
-    :cond_132
+    :cond_134
     new-instance v2, Landroid/animation/AnimatorSet;
 
     invoke-direct {v2}, Landroid/animation/AnimatorSet;-><init>()V
@@ -1168,7 +1170,7 @@
 
     new-array v7, v14, [F
 
-    fill-array-data v7, :array_27c
+    fill-array-data v7, :array_27e
 
     invoke-static {v6, v13, v7}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Ljava/lang/String;[F)Landroid/animation/ObjectAnimator;
 
@@ -1180,7 +1182,7 @@
 
     new-array v7, v14, [F
 
-    fill-array-data v7, :array_284
+    fill-array-data v7, :array_286
 
     .line 227
     invoke-static {v6, v12, v7}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Ljava/lang/String;[F)Landroid/animation/ObjectAnimator;
@@ -1193,7 +1195,7 @@
 
     new-array v7, v14, [F
 
-    fill-array-data v7, :array_28c
+    fill-array-data v7, :array_28e
 
     .line 228
     invoke-static {v6, v11, v7}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Ljava/lang/String;[F)Landroid/animation/ObjectAnimator;
@@ -1206,7 +1208,7 @@
 
     new-array v7, v14, [F
 
-    fill-array-data v7, :array_294
+    fill-array-data v7, :array_296
 
     .line 229
     invoke-static {v6, v13, v7}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Ljava/lang/String;[F)Landroid/animation/ObjectAnimator;
@@ -1219,7 +1221,7 @@
 
     new-array v6, v14, [F
 
-    fill-array-data v6, :array_29c
+    fill-array-data v6, :array_29e
 
     .line 230
     invoke-static {v5, v12, v6}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Ljava/lang/String;[F)Landroid/animation/ObjectAnimator;
@@ -1232,7 +1234,7 @@
 
     new-array v5, v14, [F
 
-    fill-array-data v5, :array_2a4
+    fill-array-data v5, :array_2a6
 
     .line 231
     invoke-static {v1, v11, v5}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Ljava/lang/String;[F)Landroid/animation/ObjectAnimator;
@@ -1258,10 +1260,10 @@
 
     invoke-virtual {v1}, Landroid/animation/AnimatorSet;->start()V
 
-    goto/16 :goto_27a
+    goto/16 :goto_27c
 
-    :cond_1a2
-    if-eqz v2, :cond_27a
+    :cond_1a4
+    if-eqz v2, :cond_27c
 
     .line 251
     iget-object v2, v0, Lorg/telegram/ui/Cells/FeaturedStickerSetCell;->addButton:Lorg/telegram/ui/Components/ProgressButton;
@@ -1276,13 +1278,13 @@
     .line 253
     iget-object v2, v0, Lorg/telegram/ui/Cells/FeaturedStickerSetCell;->currentAnimation:Landroid/animation/AnimatorSet;
 
-    if-eqz v2, :cond_1b5
+    if-eqz v2, :cond_1b7
 
     .line 254
     invoke-virtual {v2}, Landroid/animation/AnimatorSet;->cancel()V
 
     .line 256
-    :cond_1b5
+    :cond_1b7
     new-instance v2, Landroid/animation/AnimatorSet;
 
     invoke-direct {v2}, Landroid/animation/AnimatorSet;-><init>()V
@@ -1301,7 +1303,7 @@
 
     new-array v7, v14, [F
 
-    fill-array-data v7, :array_2ac
+    fill-array-data v7, :array_2ae
 
     invoke-static {v6, v13, v7}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Ljava/lang/String;[F)Landroid/animation/ObjectAnimator;
 
@@ -1313,7 +1315,7 @@
 
     new-array v7, v14, [F
 
-    fill-array-data v7, :array_2b4
+    fill-array-data v7, :array_2b6
 
     .line 259
     invoke-static {v6, v12, v7}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Ljava/lang/String;[F)Landroid/animation/ObjectAnimator;
@@ -1326,7 +1328,7 @@
 
     new-array v7, v14, [F
 
-    fill-array-data v7, :array_2bc
+    fill-array-data v7, :array_2be
 
     .line 260
     invoke-static {v6, v11, v7}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Ljava/lang/String;[F)Landroid/animation/ObjectAnimator;
@@ -1339,7 +1341,7 @@
 
     new-array v7, v14, [F
 
-    fill-array-data v7, :array_2c4
+    fill-array-data v7, :array_2c6
 
     .line 261
     invoke-static {v6, v13, v7}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Ljava/lang/String;[F)Landroid/animation/ObjectAnimator;
@@ -1352,7 +1354,7 @@
 
     new-array v6, v14, [F
 
-    fill-array-data v6, :array_2cc
+    fill-array-data v6, :array_2ce
 
     .line 262
     invoke-static {v5, v12, v6}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Ljava/lang/String;[F)Landroid/animation/ObjectAnimator;
@@ -1365,7 +1367,7 @@
 
     new-array v5, v14, [F
 
-    fill-array-data v5, :array_2d4
+    fill-array-data v5, :array_2d6
 
     .line 263
     invoke-static {v1, v11, v5}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Ljava/lang/String;[F)Landroid/animation/ObjectAnimator;
@@ -1391,19 +1393,19 @@
 
     invoke-virtual {v1}, Landroid/animation/AnimatorSet;->start()V
 
-    goto :goto_27a
+    goto :goto_27c
 
     .line 283
-    :cond_224
+    :cond_226
     iget-object v2, v0, Lorg/telegram/ui/Cells/FeaturedStickerSetCell;->currentAnimation:Landroid/animation/AnimatorSet;
 
-    if-eqz v2, :cond_22b
+    if-eqz v2, :cond_22d
 
     .line 284
     invoke-virtual {v2}, Landroid/animation/AnimatorSet;->cancel()V
 
     .line 286
-    :cond_22b
+    :cond_22d
     iget v2, v0, Lorg/telegram/ui/Cells/FeaturedStickerSetCell;->currentAccount:I
 
     invoke-static {v2}, Lorg/telegram/messenger/MediaDataController;->getInstance(I)Lorg/telegram/messenger/MediaDataController;
@@ -1420,7 +1422,7 @@
 
     iput-boolean v2, v0, Lorg/telegram/ui/Cells/FeaturedStickerSetCell;->isInstalled:Z
 
-    if-eqz v2, :cond_25c
+    if-eqz v2, :cond_25e
 
     .line 287
     iget-object v2, v0, Lorg/telegram/ui/Cells/FeaturedStickerSetCell;->addButton:Lorg/telegram/ui/Components/ProgressButton;
@@ -1452,10 +1454,10 @@
 
     invoke-virtual {v1, v12}, Landroid/widget/ImageView;->setAlpha(F)V
 
-    goto :goto_27a
+    goto :goto_27c
 
     .line 294
-    :cond_25c
+    :cond_25e
     iget-object v2, v0, Lorg/telegram/ui/Cells/FeaturedStickerSetCell;->addButton:Lorg/telegram/ui/Components/ProgressButton;
 
     invoke-virtual {v2, v10}, Landroid/widget/Button;->setVisibility(I)V
@@ -1485,79 +1487,79 @@
 
     invoke-virtual {v1, v12}, Landroid/widget/Button;->setAlpha(F)V
 
-    :cond_27a
-    :goto_27a
+    :cond_27c
+    :goto_27c
     return-void
 
     nop
 
-    :array_27c
+    :array_27e
     .array-data 4
         0x3f800000    # 1.0f
         0x0
     .end array-data
 
-    :array_284
+    :array_286
     .array-data 4
         0x3f800000    # 1.0f
         0x3c23d70a    # 0.01f
     .end array-data
 
-    :array_28c
+    :array_28e
     .array-data 4
         0x3f800000    # 1.0f
         0x3c23d70a    # 0.01f
     .end array-data
 
-    :array_294
+    :array_296
     .array-data 4
         0x0
         0x3f800000    # 1.0f
     .end array-data
 
-    :array_29c
+    :array_29e
     .array-data 4
         0x3c23d70a    # 0.01f
         0x3f800000    # 1.0f
     .end array-data
 
-    :array_2a4
+    :array_2a6
     .array-data 4
         0x3c23d70a    # 0.01f
         0x3f800000    # 1.0f
     .end array-data
 
-    :array_2ac
+    :array_2ae
     .array-data 4
         0x3f800000    # 1.0f
         0x0
     .end array-data
 
-    :array_2b4
+    :array_2b6
     .array-data 4
         0x3f800000    # 1.0f
         0x3c23d70a    # 0.01f
     .end array-data
 
-    :array_2bc
+    :array_2be
     .array-data 4
         0x3f800000    # 1.0f
         0x3c23d70a    # 0.01f
     .end array-data
 
-    :array_2c4
+    :array_2c6
     .array-data 4
         0x0
         0x3f800000    # 1.0f
     .end array-data
 
-    :array_2cc
+    :array_2ce
     .array-data 4
         0x3c23d70a    # 0.01f
         0x3f800000    # 1.0f
     .end array-data
 
-    :array_2d4
+    :array_2d6
     .array-data 4
         0x3c23d70a    # 0.01f
         0x3f800000    # 1.0f

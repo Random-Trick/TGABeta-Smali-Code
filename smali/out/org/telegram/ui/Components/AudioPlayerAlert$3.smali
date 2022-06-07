@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/AudioPlayerAlert;Landroid/content/Context;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)V
     .registers 4
 
-    .line 428
+    .line 429
     iput-object p1, p0, Lorg/telegram/ui/Components/AudioPlayerAlert$3;->this$0:Lorg/telegram/ui/Components/AudioPlayerAlert;
 
     invoke-direct {p0, p2, p3}, Lorg/telegram/ui/ActionBar/ActionBar;-><init>(Landroid/content/Context;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)V
@@ -35,10 +35,10 @@
 .method public setAlpha(F)V
     .registers 2
 
-    .line 431
+    .line 432
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->setAlpha(F)V
 
-    .line 432
+    .line 433
     iget-object p1, p0, Lorg/telegram/ui/Components/AudioPlayerAlert$3;->this$0:Lorg/telegram/ui/Components/AudioPlayerAlert;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/AudioPlayerAlert;->access$4300(Lorg/telegram/ui/Components/AudioPlayerAlert;)Landroid/view/ViewGroup;

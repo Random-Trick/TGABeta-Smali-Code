@@ -18,7 +18,7 @@
 .method constructor <init>(Lorg/telegram/ui/ChatEditTypeActivity;Landroid/content/Context;)V
     .registers 3
 
-    .line 226
+    .line 221
     invoke-direct {p0, p2}, Landroid/widget/ScrollView;-><init>(Landroid/content/Context;)V
 
     return-void
@@ -29,7 +29,7 @@
 .method public requestChildRectangleOnScreen(Landroid/view/View;Landroid/graphics/Rect;Z)Z
     .registers 6
 
-    .line 229
+    .line 224
     iget v0, p2, Landroid/graphics/Rect;->bottom:I
 
     const/high16 v1, 0x42700000    # 60.0f
@@ -42,7 +42,7 @@
 
     iput v0, p2, Landroid/graphics/Rect;->bottom:I
 
-    .line 230
+    .line 225
     invoke-super {p0, p1, p2, p3}, Landroid/widget/ScrollView;->requestChildRectangleOnScreen(Landroid/view/View;Landroid/graphics/Rect;Z)Z
 
     move-result p1

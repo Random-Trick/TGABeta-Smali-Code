@@ -28,7 +28,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/SharedMediaLayout;Landroid/view/View;Lorg/telegram/ui/Components/SharedMediaLayout$MediaPage;Landroid/graphics/Bitmap;)V
     .registers 5
 
-    .line 2327
+    .line 2331
     iput-object p1, p0, Lorg/telegram/ui/Components/SharedMediaLayout$16;->this$0:Lorg/telegram/ui/Components/SharedMediaLayout;
 
     iput-object p2, p0, Lorg/telegram/ui/Components/SharedMediaLayout$16;->val$view:Landroid/view/View;
@@ -47,14 +47,14 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .registers 3
 
-    .line 2330
+    .line 2334
     iget-object p1, p0, Lorg/telegram/ui/Components/SharedMediaLayout$16;->this$0:Lorg/telegram/ui/Components/SharedMediaLayout;
 
     const/4 v0, 0x0
 
     invoke-static {p1, v0}, Lorg/telegram/ui/Components/SharedMediaLayout;->access$2702(Lorg/telegram/ui/Components/SharedMediaLayout;Z)Z
 
-    .line 2331
+    .line 2335
     iget-object p1, p0, Lorg/telegram/ui/Components/SharedMediaLayout$16;->val$view:Landroid/view/View;
 
     invoke-virtual {p1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
@@ -63,14 +63,14 @@
 
     if-eqz p1, :cond_1a
 
-    .line 2332
+    .line 2336
     iget-object p1, p0, Lorg/telegram/ui/Components/SharedMediaLayout$16;->val$mediaPage:Lorg/telegram/ui/Components/SharedMediaLayout$MediaPage;
 
     iget-object v0, p0, Lorg/telegram/ui/Components/SharedMediaLayout$16;->val$view:Landroid/view/View;
 
     invoke-virtual {p1, v0}, Landroid/widget/FrameLayout;->removeView(Landroid/view/View;)V
 
-    .line 2333
+    .line 2337
     iget-object p1, p0, Lorg/telegram/ui/Components/SharedMediaLayout$16;->val$finalBitmap:Landroid/graphics/Bitmap;
 
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->recycle()V

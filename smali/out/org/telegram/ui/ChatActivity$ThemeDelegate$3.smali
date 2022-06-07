@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/ChatActivity$ThemeDelegate;Lorg/telegram/ui/Components/MotionBackgroundDrawable;)V
     .registers 3
 
-    .line 27409
+    .line 27858
     iput-object p2, p0, Lorg/telegram/ui/ChatActivity$ThemeDelegate$3;->val$currentBackgroundDrawable:Lorg/telegram/ui/Components/MotionBackgroundDrawable;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -35,10 +35,10 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .registers 3
 
-    .line 27412
+    .line 27861
     invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationEnd(Landroid/animation/Animator;)V
 
-    .line 27413
+    .line 27862
     iget-object p1, p0, Lorg/telegram/ui/ChatActivity$ThemeDelegate$3;->val$currentBackgroundDrawable:Lorg/telegram/ui/Components/MotionBackgroundDrawable;
 
     const/high16 v0, 0x3f800000    # 1.0f

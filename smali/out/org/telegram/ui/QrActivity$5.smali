@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lorg/telegram/ui/QrActivity;->onCustomTransitionAnimation(ZLjava/lang/Runnable;)Landroid/animation/AnimatorSet;
+    value = Lorg/telegram/ui/QrActivity;->onItemSelected(Lorg/telegram/ui/ActionBar/EmojiThemes;IZ)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,15 +15,19 @@
 
 
 # instance fields
-.field final synthetic val$callback:Ljava/lang/Runnable;
+.field final synthetic this$0:Lorg/telegram/ui/QrActivity;
+
+.field final synthetic val$newQrColors:[I
 
 
 # direct methods
-.method constructor <init>(Lorg/telegram/ui/QrActivity;Ljava/lang/Runnable;)V
+.method constructor <init>(Lorg/telegram/ui/QrActivity;[I)V
     .registers 3
 
-    .line 511
-    iput-object p2, p0, Lorg/telegram/ui/QrActivity$5;->val$callback:Ljava/lang/Runnable;
+    .line 577
+    iput-object p1, p0, Lorg/telegram/ui/QrActivity$5;->this$0:Lorg/telegram/ui/QrActivity;
+
+    iput-object p2, p0, Lorg/telegram/ui/QrActivity$5;->val$newQrColors:[I
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
 
@@ -32,17 +36,187 @@
 
 
 # virtual methods
+.method public onAnimationCancel(Landroid/animation/Animator;)V
+    .registers 11
+
+    .line 592
+    invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationCancel(Landroid/animation/Animator;)V
+
+    .line 593
+    check-cast p1, Landroid/animation/ValueAnimator;
+
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Float;
+
+    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
+
+    move-result p1
+
+    .line 594
+    iget-object v0, p0, Lorg/telegram/ui/QrActivity$5;->val$newQrColors:[I
+
+    if-eqz v0, :cond_6b
+
+    .line 595
+    iget-object v0, p0, Lorg/telegram/ui/QrActivity$5;->this$0:Lorg/telegram/ui/QrActivity;
+
+    invoke-static {v0}, Lorg/telegram/ui/QrActivity;->access$1600(Lorg/telegram/ui/QrActivity;)[I
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    aget v0, v0, v1
+
+    iget-object v2, p0, Lorg/telegram/ui/QrActivity$5;->val$newQrColors:[I
+
+    aget v2, v2, v1
+
+    invoke-static {v0, v2, p1}, Landroidx/core/graphics/ColorUtils;->blendARGB(IIF)I
+
+    move-result v0
+
+    .line 596
+    iget-object v2, p0, Lorg/telegram/ui/QrActivity$5;->this$0:Lorg/telegram/ui/QrActivity;
+
+    invoke-static {v2}, Lorg/telegram/ui/QrActivity;->access$1600(Lorg/telegram/ui/QrActivity;)[I
+
+    move-result-object v2
+
+    const/4 v3, 0x1
+
+    aget v2, v2, v3
+
+    iget-object v4, p0, Lorg/telegram/ui/QrActivity$5;->val$newQrColors:[I
+
+    aget v4, v4, v3
+
+    invoke-static {v2, v4, p1}, Landroidx/core/graphics/ColorUtils;->blendARGB(IIF)I
+
+    move-result v2
+
+    .line 597
+    iget-object v4, p0, Lorg/telegram/ui/QrActivity$5;->this$0:Lorg/telegram/ui/QrActivity;
+
+    invoke-static {v4}, Lorg/telegram/ui/QrActivity;->access$1600(Lorg/telegram/ui/QrActivity;)[I
+
+    move-result-object v4
+
+    const/4 v5, 0x2
+
+    aget v4, v4, v5
+
+    iget-object v6, p0, Lorg/telegram/ui/QrActivity$5;->val$newQrColors:[I
+
+    aget v6, v6, v5
+
+    invoke-static {v4, v6, p1}, Landroidx/core/graphics/ColorUtils;->blendARGB(IIF)I
+
+    move-result v4
+
+    .line 598
+    iget-object v6, p0, Lorg/telegram/ui/QrActivity$5;->this$0:Lorg/telegram/ui/QrActivity;
+
+    invoke-static {v6}, Lorg/telegram/ui/QrActivity;->access$1600(Lorg/telegram/ui/QrActivity;)[I
+
+    move-result-object v6
+
+    const/4 v7, 0x3
+
+    aget v6, v6, v7
+
+    iget-object v8, p0, Lorg/telegram/ui/QrActivity$5;->val$newQrColors:[I
+
+    aget v8, v8, v7
+
+    invoke-static {v6, v8, p1}, Landroidx/core/graphics/ColorUtils;->blendARGB(IIF)I
+
+    move-result p1
+
+    const/4 v6, 0x4
+
+    new-array v8, v6, [I
+
+    aput v0, v8, v1
+
+    aput v2, v8, v3
+
+    aput v4, v8, v5
+
+    aput p1, v8, v7
+
+    .line 600
+    iget-object p1, p0, Lorg/telegram/ui/QrActivity$5;->this$0:Lorg/telegram/ui/QrActivity;
+
+    invoke-static {p1}, Lorg/telegram/ui/QrActivity;->access$1600(Lorg/telegram/ui/QrActivity;)[I
+
+    move-result-object p1
+
+    invoke-static {v8, v1, p1, v1, v6}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    :cond_6b
+    return-void
+.end method
+
 .method public onAnimationEnd(Landroid/animation/Animator;)V
-    .registers 2
+    .registers 5
 
-    .line 514
-    iget-object p1, p0, Lorg/telegram/ui/QrActivity$5;->val$callback:Ljava/lang/Runnable;
+    .line 580
+    invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationEnd(Landroid/animation/Animator;)V
 
-    if-eqz p1, :cond_7
+    .line 581
+    iget-object p1, p0, Lorg/telegram/ui/QrActivity$5;->val$newQrColors:[I
 
-    .line 515
-    invoke-interface {p1}, Ljava/lang/Runnable;->run()V
+    if-eqz p1, :cond_12
 
-    :cond_7
+    .line 582
+    iget-object v0, p0, Lorg/telegram/ui/QrActivity$5;->this$0:Lorg/telegram/ui/QrActivity;
+
+    invoke-static {v0}, Lorg/telegram/ui/QrActivity;->access$1600(Lorg/telegram/ui/QrActivity;)[I
+
+    move-result-object v0
+
+    const/4 v1, 0x4
+
+    const/4 v2, 0x0
+
+    invoke-static {p1, v2, v0, v2, v1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    .line 584
+    :cond_12
+    iget-object p1, p0, Lorg/telegram/ui/QrActivity$5;->this$0:Lorg/telegram/ui/QrActivity;
+
+    const/4 v0, 0x0
+
+    invoke-static {p1, v0}, Lorg/telegram/ui/QrActivity;->access$802(Lorg/telegram/ui/QrActivity;Lorg/telegram/ui/Components/MotionBackgroundDrawable;)Lorg/telegram/ui/Components/MotionBackgroundDrawable;
+
+    .line 585
+    iget-object p1, p0, Lorg/telegram/ui/QrActivity$5;->this$0:Lorg/telegram/ui/QrActivity;
+
+    invoke-static {p1, v0}, Lorg/telegram/ui/QrActivity;->access$1702(Lorg/telegram/ui/QrActivity;Landroid/animation/ValueAnimator;)Landroid/animation/ValueAnimator;
+
+    .line 586
+    iget-object p1, p0, Lorg/telegram/ui/QrActivity$5;->this$0:Lorg/telegram/ui/QrActivity;
+
+    invoke-static {p1}, Lorg/telegram/ui/QrActivity;->access$900(Lorg/telegram/ui/QrActivity;)Lorg/telegram/ui/Components/MotionBackgroundDrawable;
+
+    move-result-object p1
+
+    const/high16 v0, 0x3f800000    # 1.0f
+
+    invoke-virtual {p1, v0}, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->setBackgroundAlpha(F)V
+
+    .line 587
+    iget-object p1, p0, Lorg/telegram/ui/QrActivity$5;->this$0:Lorg/telegram/ui/QrActivity;
+
+    invoke-static {p1}, Lorg/telegram/ui/QrActivity;->access$900(Lorg/telegram/ui/QrActivity;)Lorg/telegram/ui/Components/MotionBackgroundDrawable;
+
+    move-result-object p1
+
+    invoke-virtual {p1, v0}, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->setPatternAlpha(F)V
+
     return-void
 .end method

@@ -58,34 +58,34 @@
 .method public constructor <init>(Lorg/telegram/ui/PhotoViewer;Landroid/view/View;)V
     .registers 7
 
-    .line 1486
+    .line 1497
     iput-object p1, p0, Lorg/telegram/ui/PhotoViewer$PhotoProgressView;->this$0:Lorg/telegram/ui/PhotoViewer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-wide/16 v0, 0x0
 
-    .line 1466
+    .line 1477
     iput-wide v0, p0, Lorg/telegram/ui/PhotoViewer$PhotoProgressView;->lastUpdateTime:J
 
     const/4 v2, 0x0
 
-    .line 1467
+    .line 1478
     iput v2, p0, Lorg/telegram/ui/PhotoViewer$PhotoProgressView;->radOffset:F
 
-    .line 1468
+    .line 1479
     iput v2, p0, Lorg/telegram/ui/PhotoViewer$PhotoProgressView;->currentProgress:F
 
-    .line 1469
+    .line 1480
     iput v2, p0, Lorg/telegram/ui/PhotoViewer$PhotoProgressView;->animationProgressStart:F
 
-    .line 1470
+    .line 1481
     iput-wide v0, p0, Lorg/telegram/ui/PhotoViewer$PhotoProgressView;->currentProgressTime:J
 
-    .line 1471
+    .line 1482
     iput v2, p0, Lorg/telegram/ui/PhotoViewer$PhotoProgressView;->animatedProgressValue:F
 
-    .line 1472
+    .line 1483
     new-instance v0, Landroid/graphics/RectF;
 
     invoke-direct {v0}, Landroid/graphics/RectF;-><init>()V
@@ -94,12 +94,12 @@
 
     const/4 v0, -0x1
 
-    .line 1473
+    .line 1484
     iput v0, p0, Lorg/telegram/ui/PhotoViewer$PhotoProgressView;->backgroundState:I
 
     const/high16 v1, 0x42800000    # 64.0f
 
-    .line 1475
+    .line 1486
     invoke-static {v1}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v1
@@ -108,56 +108,56 @@
 
     const/4 v1, -0x2
 
-    .line 1476
+    .line 1487
     iput v1, p0, Lorg/telegram/ui/PhotoViewer$PhotoProgressView;->previousBackgroundState:I
 
     const/high16 v1, 0x3f800000    # 1.0f
 
-    .line 1477
+    .line 1488
     iput v1, p0, Lorg/telegram/ui/PhotoViewer$PhotoProgressView;->animatedAlphaValue:F
 
     const/4 v2, 0x3
 
     new-array v3, v2, [F
 
-    .line 1478
+    .line 1489
     iput-object v3, p0, Lorg/telegram/ui/PhotoViewer$PhotoProgressView;->animAlphas:[F
 
     new-array v2, v2, [F
 
-    .line 1479
+    .line 1490
     iput-object v2, p0, Lorg/telegram/ui/PhotoViewer$PhotoProgressView;->alphas:[F
 
-    .line 1480
+    .line 1491
     iput v1, p0, Lorg/telegram/ui/PhotoViewer$PhotoProgressView;->scale:F
 
-    .line 1487
-    invoke-static {}, Lorg/telegram/ui/PhotoViewer;->access$6500()Landroid/view/animation/DecelerateInterpolator;
+    .line 1498
+    invoke-static {}, Lorg/telegram/ui/PhotoViewer;->access$6400()Landroid/view/animation/DecelerateInterpolator;
 
     move-result-object v1
 
     if-nez v1, :cond_78
 
-    .line 1488
+    .line 1499
     new-instance v1, Landroid/view/animation/DecelerateInterpolator;
 
     const/high16 v2, 0x3fc00000    # 1.5f
 
     invoke-direct {v1, v2}, Landroid/view/animation/DecelerateInterpolator;-><init>(F)V
 
-    invoke-static {v1}, Lorg/telegram/ui/PhotoViewer;->access$6502(Landroid/view/animation/DecelerateInterpolator;)Landroid/view/animation/DecelerateInterpolator;
+    invoke-static {v1}, Lorg/telegram/ui/PhotoViewer;->access$6402(Landroid/view/animation/DecelerateInterpolator;)Landroid/view/animation/DecelerateInterpolator;
 
-    .line 1489
+    .line 1500
     new-instance v1, Landroid/graphics/Paint;
 
     const/4 v2, 0x1
 
     invoke-direct {v1, v2}, Landroid/graphics/Paint;-><init>(I)V
 
-    invoke-static {v1}, Lorg/telegram/ui/PhotoViewer;->access$6602(Landroid/graphics/Paint;)Landroid/graphics/Paint;
+    invoke-static {v1}, Lorg/telegram/ui/PhotoViewer;->access$6502(Landroid/graphics/Paint;)Landroid/graphics/Paint;
 
-    .line 1490
-    invoke-static {}, Lorg/telegram/ui/PhotoViewer;->access$6600()Landroid/graphics/Paint;
+    .line 1501
+    invoke-static {}, Lorg/telegram/ui/PhotoViewer;->access$6500()Landroid/graphics/Paint;
 
     move-result-object v1
 
@@ -165,8 +165,8 @@
 
     invoke-virtual {v1, v2}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
-    .line 1491
-    invoke-static {}, Lorg/telegram/ui/PhotoViewer;->access$6600()Landroid/graphics/Paint;
+    .line 1502
+    invoke-static {}, Lorg/telegram/ui/PhotoViewer;->access$6500()Landroid/graphics/Paint;
 
     move-result-object v1
 
@@ -174,8 +174,8 @@
 
     invoke-virtual {v1, v2}, Landroid/graphics/Paint;->setStrokeCap(Landroid/graphics/Paint$Cap;)V
 
-    .line 1492
-    invoke-static {}, Lorg/telegram/ui/PhotoViewer;->access$6600()Landroid/graphics/Paint;
+    .line 1503
+    invoke-static {}, Lorg/telegram/ui/PhotoViewer;->access$6500()Landroid/graphics/Paint;
 
     move-result-object v1
 
@@ -189,21 +189,21 @@
 
     invoke-virtual {v1, v2}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
-    .line 1493
-    invoke-static {}, Lorg/telegram/ui/PhotoViewer;->access$6600()Landroid/graphics/Paint;
+    .line 1504
+    invoke-static {}, Lorg/telegram/ui/PhotoViewer;->access$6500()Landroid/graphics/Paint;
 
     move-result-object v1
 
     invoke-virtual {v1, v0}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 1495
+    .line 1506
     :cond_78
     iput-object p2, p0, Lorg/telegram/ui/PhotoViewer$PhotoProgressView;->parent:Landroid/view/View;
 
-    .line 1496
+    .line 1507
     invoke-virtual {p0}, Lorg/telegram/ui/PhotoViewer$PhotoProgressView;->resetAlphas()V
 
-    .line 1498
+    .line 1509
     new-instance p2, Lorg/telegram/ui/Components/PlayPauseDrawable;
 
     const/16 v0, 0x1c
@@ -214,21 +214,21 @@
 
     const/16 v0, 0xc8
 
-    .line 1499
+    .line 1510
     invoke-virtual {p2, v0}, Lorg/telegram/ui/Components/PlayPauseDrawable;->setDuration(I)V
 
-    .line 1501
-    invoke-static {p1}, Lorg/telegram/ui/PhotoViewer;->access$4700(Lorg/telegram/ui/PhotoViewer;)Landroid/app/Activity;
+    .line 1512
+    invoke-static {p1}, Lorg/telegram/ui/PhotoViewer;->access$4500(Lorg/telegram/ui/PhotoViewer;)Landroid/app/Activity;
 
     move-result-object p1
 
-    const v0, 0x7f0700c2
+    const v0, 0x7f0700a3
 
     invoke-static {p1, v0}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 
-    .line 1502
+    .line 1513
     new-instance v0, Lorg/telegram/ui/Components/CombinedDrawable;
 
     invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
@@ -245,34 +245,34 @@
 .method static synthetic access$10900(Lorg/telegram/ui/PhotoViewer$PhotoProgressView;)I
     .registers 1
 
-    .line 1464
+    .line 1475
     iget p0, p0, Lorg/telegram/ui/PhotoViewer$PhotoProgressView;->size:I
 
     return p0
 .end method
 
-.method static synthetic access$21600(Lorg/telegram/ui/PhotoViewer$PhotoProgressView;)[F
+.method static synthetic access$21700(Lorg/telegram/ui/PhotoViewer$PhotoProgressView;)[F
     .registers 1
 
-    .line 1464
+    .line 1475
     iget-object p0, p0, Lorg/telegram/ui/PhotoViewer$PhotoProgressView;->animAlphas:[F
 
     return-object p0
 .end method
 
-.method static synthetic access$23700(Lorg/telegram/ui/PhotoViewer$PhotoProgressView;)I
+.method static synthetic access$23800(Lorg/telegram/ui/PhotoViewer$PhotoProgressView;)I
     .registers 1
 
-    .line 1464
+    .line 1475
     iget p0, p0, Lorg/telegram/ui/PhotoViewer$PhotoProgressView;->backgroundState:I
 
     return p0
 .end method
 
-.method static synthetic access$28000(Lorg/telegram/ui/PhotoViewer$PhotoProgressView;)I
+.method static synthetic access$28500(Lorg/telegram/ui/PhotoViewer$PhotoProgressView;)I
     .registers 1
 
-    .line 1464
+    .line 1475
     iget p0, p0, Lorg/telegram/ui/PhotoViewer$PhotoProgressView;->previousBackgroundState:I
 
     return p0
@@ -285,7 +285,7 @@
 
     const/4 v1, 0x0
 
-    .line 1625
+    .line 1636
     :goto_3
     iget-object v2, p0, Lorg/telegram/ui/PhotoViewer$PhotoProgressView;->animAlphas:[F
 
@@ -297,7 +297,7 @@
 
     if-ne v1, v3, :cond_14
 
-    .line 1627
+    .line 1638
     sget-object v3, Lorg/telegram/messenger/AndroidUtilities;->accelerateInterpolator:Landroid/view/animation/AccelerateInterpolator;
 
     aget v2, v2, v1
@@ -308,7 +308,7 @@
 
     goto :goto_16
 
-    .line 1629
+    .line 1640
     :cond_14
     aget v2, v2, v1
 
@@ -330,7 +330,7 @@
 
     const/4 v1, 0x0
 
-    .line 1637
+    .line 1648
     :goto_2
     iget-object v2, p0, Lorg/telegram/ui/PhotoViewer$PhotoProgressView;->alphas:[F
 
@@ -338,7 +338,7 @@
 
     if-ge v1, v3, :cond_13
 
-    .line 1638
+    .line 1649
     aget v2, v2, v1
 
     const/high16 v3, 0x3f800000    # 1.0f
@@ -357,16 +357,16 @@
     :cond_13
     const/4 v0, 0x1
 
-    .line 1643
+    .line 1654
     :goto_14
     iget-boolean v1, p0, Lorg/telegram/ui/PhotoViewer$PhotoProgressView;->visible:Z
 
     if-eq v0, v1, :cond_1d
 
-    .line 1644
+    .line 1655
     iput-boolean v0, p0, Lorg/telegram/ui/PhotoViewer$PhotoProgressView;->visible:Z
 
-    .line 1645
+    .line 1656
     invoke-virtual {p0, v0}, Lorg/telegram/ui/PhotoViewer$PhotoProgressView;->onVisibilityChanged(Z)V
 
     :cond_1d
@@ -376,12 +376,12 @@
 .method private updateAnimation(Z)V
     .registers 14
 
-    .line 1506
+    .line 1517
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
-    .line 1507
+    .line 1518
     iget-wide v2, p0, Lorg/telegram/ui/PhotoViewer$PhotoProgressView;->lastUpdateTime:J
 
     sub-long v2, v0, v2
@@ -394,7 +394,7 @@
 
     move-wide v2, v4
 
-    .line 1511
+    .line 1522
     :cond_f
     iput-wide v0, p0, Lorg/telegram/ui/PhotoViewer$PhotoProgressView;->lastUpdateTime:J
 
@@ -410,7 +410,7 @@
 
     if-eqz p1, :cond_8a
 
-    .line 1516
+    .line 1527
     iget p1, p0, Lorg/telegram/ui/PhotoViewer$PhotoProgressView;->animatedProgressValue:F
 
     cmpl-float p1, p1, v4
@@ -430,7 +430,7 @@
 
     goto :goto_70
 
-    .line 1517
+    .line 1528
     :cond_29
     :goto_29
     iget p1, p0, Lorg/telegram/ui/PhotoViewer$PhotoProgressView;->radOffset:F
@@ -449,14 +449,14 @@
 
     iput p1, p0, Lorg/telegram/ui/PhotoViewer$PhotoProgressView;->radOffset:F
 
-    .line 1518
+    .line 1529
     iget p1, p0, Lorg/telegram/ui/PhotoViewer$PhotoProgressView;->currentProgress:F
 
     iget v7, p0, Lorg/telegram/ui/PhotoViewer$PhotoProgressView;->animationProgressStart:F
 
     sub-float/2addr p1, v7
 
-    .line 1519
+    .line 1530
     invoke-static {p1}, Ljava/lang/Math;->abs(F)F
 
     move-result v7
@@ -465,7 +465,7 @@
 
     if-lez v7, :cond_6f
 
-    .line 1520
+    .line 1531
     iget-wide v7, p0, Lorg/telegram/ui/PhotoViewer$PhotoProgressView;->currentProgressTime:J
 
     add-long/2addr v7, v2
@@ -478,26 +478,26 @@
 
     if-ltz v11, :cond_5a
 
-    .line 1522
+    .line 1533
     iget p1, p0, Lorg/telegram/ui/PhotoViewer$PhotoProgressView;->currentProgress:F
 
     iput p1, p0, Lorg/telegram/ui/PhotoViewer$PhotoProgressView;->animatedProgressValue:F
 
-    .line 1523
+    .line 1534
     iput p1, p0, Lorg/telegram/ui/PhotoViewer$PhotoProgressView;->animationProgressStart:F
 
     const-wide/16 v7, 0x0
 
-    .line 1524
+    .line 1535
     iput-wide v7, p0, Lorg/telegram/ui/PhotoViewer$PhotoProgressView;->currentProgressTime:J
 
     goto :goto_6f
 
-    .line 1526
+    .line 1537
     :cond_5a
     iget v7, p0, Lorg/telegram/ui/PhotoViewer$PhotoProgressView;->animationProgressStart:F
 
-    invoke-static {}, Lorg/telegram/ui/PhotoViewer;->access$6500()Landroid/view/animation/DecelerateInterpolator;
+    invoke-static {}, Lorg/telegram/ui/PhotoViewer;->access$6400()Landroid/view/animation/DecelerateInterpolator;
 
     move-result-object v8
 
@@ -523,7 +523,7 @@
     :goto_6f
     const/4 p1, 0x1
 
-    .line 1532
+    .line 1543
     :goto_70
     iget v7, p0, Lorg/telegram/ui/PhotoViewer$PhotoProgressView;->animatedAlphaValue:F
 
@@ -543,17 +543,17 @@
 
     sub-float/2addr v7, p1
 
-    .line 1533
+    .line 1544
     iput v7, p0, Lorg/telegram/ui/PhotoViewer$PhotoProgressView;->animatedAlphaValue:F
 
     cmpg-float p1, v7, v6
 
     if-gtz p1, :cond_88
 
-    .line 1535
+    .line 1546
     iput v6, p0, Lorg/telegram/ui/PhotoViewer$PhotoProgressView;->animatedAlphaValue:F
 
-    .line 1536
+    .line 1547
     iput v9, p0, Lorg/telegram/ui/PhotoViewer$PhotoProgressView;->previousBackgroundState:I
 
     :cond_88
@@ -564,7 +564,7 @@
     :cond_8a
     const/4 p1, 0x0
 
-    .line 1542
+    .line 1553
     :cond_8b
     :goto_8b
     iget-object v7, p0, Lorg/telegram/ui/PhotoViewer$PhotoProgressView;->alphas:[F
@@ -573,7 +573,7 @@
 
     if-ge v0, v8, :cond_be
 
-    .line 1543
+    .line 1554
     aget v8, v7, v0
 
     iget-object v9, p0, Lorg/telegram/ui/PhotoViewer$PhotoProgressView;->animAlphas:[F
@@ -584,7 +584,7 @@
 
     if-lez v8, :cond_a7
 
-    .line 1544
+    .line 1555
     aget p1, v9, v0
 
     long-to-float v7, v2
@@ -604,7 +604,7 @@
 
     goto :goto_bb
 
-    .line 1546
+    .line 1557
     :cond_a7
     aget v7, v7, v0
 
@@ -614,7 +614,7 @@
 
     if-gez v7, :cond_bb
 
-    .line 1547
+    .line 1558
     aget p1, v9, v0
 
     long-to-float v7, v2
@@ -640,7 +640,7 @@
     :cond_be
     if-eqz p1, :cond_c5
 
-    .line 1553
+    .line 1564
     iget-object p1, p0, Lorg/telegram/ui/PhotoViewer$PhotoProgressView;->parent:Landroid/view/View;
 
     invoke-virtual {p1}, Landroid/view/View;->postInvalidateOnAnimation()V
@@ -654,7 +654,7 @@
 .method public getX()I
     .registers 4
 
-    .line 1657
+    .line 1668
     iget-object v0, p0, Lorg/telegram/ui/PhotoViewer$PhotoProgressView;->this$0:Lorg/telegram/ui/PhotoViewer;
 
     invoke-static {v0}, Lorg/telegram/ui/PhotoViewer;->access$1200(Lorg/telegram/ui/PhotoViewer;)Lorg/telegram/ui/PhotoViewer$FrameLayoutDrawer;
@@ -685,14 +685,14 @@
 .method public getY()I
     .registers 4
 
-    .line 1661
+    .line 1672
     sget-object v0, Lorg/telegram/messenger/AndroidUtilities;->displaySize:Landroid/graphics/Point;
 
     iget v0, v0, Landroid/graphics/Point;->y:I
 
     iget-object v1, p0, Lorg/telegram/ui/PhotoViewer$PhotoProgressView;->this$0:Lorg/telegram/ui/PhotoViewer;
 
-    invoke-static {v1}, Lorg/telegram/ui/PhotoViewer;->access$6700(Lorg/telegram/ui/PhotoViewer;)Z
+    invoke-static {v1}, Lorg/telegram/ui/PhotoViewer;->access$6600(Lorg/telegram/ui/PhotoViewer;)Z
 
     move-result v1
 
@@ -724,10 +724,10 @@
 
     int-to-float v0, v0
 
-    .line 1662
+    .line 1673
     iget-object v1, p0, Lorg/telegram/ui/PhotoViewer$PhotoProgressView;->this$0:Lorg/telegram/ui/PhotoViewer;
 
-    invoke-static {v1}, Lorg/telegram/ui/PhotoViewer;->access$6800(Lorg/telegram/ui/PhotoViewer;)F
+    invoke-static {v1}, Lorg/telegram/ui/PhotoViewer;->access$6700(Lorg/telegram/ui/PhotoViewer;)F
 
     move-result v1
 
@@ -735,7 +735,7 @@
 
     float-to-int v0, v0
 
-    .line 1663
+    .line 1674
     iget-object v1, p0, Lorg/telegram/ui/PhotoViewer$PhotoProgressView;->this$0:Lorg/telegram/ui/PhotoViewer;
 
     invoke-static {v1}, Lorg/telegram/ui/PhotoViewer;->access$2400(Lorg/telegram/ui/PhotoViewer;)I
@@ -748,7 +748,7 @@
 
     const/high16 v1, 0x42180000    # 38.0f
 
-    .line 1664
+    .line 1675
     invoke-static {v1}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v1
@@ -762,7 +762,7 @@
 .method public isVisible()Z
     .registers 2
 
-    .line 1653
+    .line 1664
     iget-boolean v0, p0, Lorg/telegram/ui/PhotoViewer$PhotoProgressView;->visible:Z
 
     return v0
@@ -779,7 +779,7 @@
 .method public onDraw(Landroid/graphics/Canvas;)V
     .registers 16
 
-    .line 1670
+    .line 1681
     iget v0, p0, Lorg/telegram/ui/PhotoViewer$PhotoProgressView;->size:I
 
     int-to-float v0, v0
@@ -790,29 +790,29 @@
 
     float-to-int v0, v0
 
-    .line 1671
+    .line 1682
     invoke-virtual {p0}, Lorg/telegram/ui/PhotoViewer$PhotoProgressView;->getX()I
 
     move-result v1
 
-    .line 1672
+    .line 1683
     invoke-virtual {p0}, Lorg/telegram/ui/PhotoViewer$PhotoProgressView;->getY()I
 
     move-result v2
 
-    .line 1674
+    .line 1685
     invoke-direct {p0}, Lorg/telegram/ui/PhotoViewer$PhotoProgressView;->calculateAlpha()F
 
     move-result v3
 
-    .line 1676
+    .line 1687
     iget v4, p0, Lorg/telegram/ui/PhotoViewer$PhotoProgressView;->previousBackgroundState:I
 
     const/high16 v5, 0x437f0000    # 255.0f
 
     if-ltz v4, :cond_4d
 
-    invoke-static {}, Lorg/telegram/ui/PhotoViewer;->access$6900()[Landroid/graphics/drawable/Drawable;
+    invoke-static {}, Lorg/telegram/ui/PhotoViewer;->access$6800()[Landroid/graphics/drawable/Drawable;
 
     move-result-object v6
 
@@ -822,10 +822,10 @@
 
     if-ge v4, v6, :cond_4d
 
-    .line 1678
+    .line 1689
     iget v4, p0, Lorg/telegram/ui/PhotoViewer$PhotoProgressView;->previousBackgroundState:I
 
-    invoke-static {}, Lorg/telegram/ui/PhotoViewer;->access$6900()[Landroid/graphics/drawable/Drawable;
+    invoke-static {}, Lorg/telegram/ui/PhotoViewer;->access$6800()[Landroid/graphics/drawable/Drawable;
 
     move-result-object v6
 
@@ -833,8 +833,8 @@
 
     if-ge v4, v6, :cond_35
 
-    .line 1679
-    invoke-static {}, Lorg/telegram/ui/PhotoViewer;->access$6900()[Landroid/graphics/drawable/Drawable;
+    .line 1690
+    invoke-static {}, Lorg/telegram/ui/PhotoViewer;->access$6800()[Landroid/graphics/drawable/Drawable;
 
     move-result-object v4
 
@@ -844,14 +844,14 @@
 
     goto :goto_37
 
-    .line 1681
+    .line 1692
     :cond_35
     iget-object v4, p0, Lorg/telegram/ui/PhotoViewer$PhotoProgressView;->playDrawable:Lorg/telegram/ui/Components/CombinedDrawable;
 
     :goto_37
     if-eqz v4, :cond_4d
 
-    .line 1684
+    .line 1695
     iget v6, p0, Lorg/telegram/ui/PhotoViewer$PhotoProgressView;->animatedAlphaValue:F
 
     mul-float v6, v6, v5
@@ -866,13 +866,13 @@
 
     add-int v7, v2, v0
 
-    .line 1685
+    .line 1696
     invoke-virtual {v4, v1, v2, v6, v7}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 1686
+    .line 1697
     invoke-virtual {v4, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 1690
+    .line 1701
     :cond_4d
     iget v4, p0, Lorg/telegram/ui/PhotoViewer$PhotoProgressView;->backgroundState:I
 
@@ -880,7 +880,7 @@
 
     if-ltz v4, :cond_93
 
-    invoke-static {}, Lorg/telegram/ui/PhotoViewer;->access$6900()[Landroid/graphics/drawable/Drawable;
+    invoke-static {}, Lorg/telegram/ui/PhotoViewer;->access$6800()[Landroid/graphics/drawable/Drawable;
 
     move-result-object v7
 
@@ -890,10 +890,10 @@
 
     if-ge v4, v7, :cond_93
 
-    .line 1692
+    .line 1703
     iget v4, p0, Lorg/telegram/ui/PhotoViewer$PhotoProgressView;->backgroundState:I
 
-    invoke-static {}, Lorg/telegram/ui/PhotoViewer;->access$6900()[Landroid/graphics/drawable/Drawable;
+    invoke-static {}, Lorg/telegram/ui/PhotoViewer;->access$6800()[Landroid/graphics/drawable/Drawable;
 
     move-result-object v7
 
@@ -901,8 +901,8 @@
 
     if-ge v4, v7, :cond_6d
 
-    .line 1693
-    invoke-static {}, Lorg/telegram/ui/PhotoViewer;->access$6900()[Landroid/graphics/drawable/Drawable;
+    .line 1704
+    invoke-static {}, Lorg/telegram/ui/PhotoViewer;->access$6800()[Landroid/graphics/drawable/Drawable;
 
     move-result-object v4
 
@@ -912,21 +912,21 @@
 
     goto :goto_6f
 
-    .line 1695
+    .line 1706
     :cond_6d
     iget-object v4, p0, Lorg/telegram/ui/PhotoViewer$PhotoProgressView;->playDrawable:Lorg/telegram/ui/Components/CombinedDrawable;
 
     :goto_6f
     if-eqz v4, :cond_93
 
-    .line 1698
+    .line 1709
     iget v7, p0, Lorg/telegram/ui/PhotoViewer$PhotoProgressView;->previousBackgroundState:I
 
     if-eq v7, v6, :cond_83
 
     const/high16 v7, 0x3f800000    # 1.0f
 
-    .line 1699
+    .line 1710
     iget v8, p0, Lorg/telegram/ui/PhotoViewer$PhotoProgressView;->animatedAlphaValue:F
 
     sub-float/2addr v7, v8
@@ -946,7 +946,7 @@
 
     float-to-int v7, v7
 
-    .line 1701
+    .line 1712
     invoke-virtual {v4, v7}, Landroid/graphics/drawable/Drawable;->setAlpha(I)V
 
     :goto_89
@@ -954,13 +954,13 @@
 
     add-int v8, v2, v0
 
-    .line 1703
+    .line 1714
     invoke-virtual {v4, v1, v2, v7, v8}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 1704
+    .line 1715
     invoke-virtual {v4, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 1708
+    .line 1719
     :cond_93
     iget v4, p0, Lorg/telegram/ui/PhotoViewer$PhotoProgressView;->backgroundState:I
 
@@ -981,7 +981,7 @@
     :cond_a1
     const/4 p1, 0x0
 
-    .line 1719
+    .line 1730
     invoke-direct {p0, p1}, Lorg/telegram/ui/PhotoViewer$PhotoProgressView;->updateAnimation(Z)V
 
     goto :goto_f8
@@ -990,18 +990,18 @@
     :goto_a6
     const/high16 v4, 0x40800000    # 4.0f
 
-    .line 1709
+    .line 1720
     invoke-static {v4}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v8
 
-    .line 1710
+    .line 1721
     iget v9, p0, Lorg/telegram/ui/PhotoViewer$PhotoProgressView;->previousBackgroundState:I
 
     if-eq v9, v6, :cond_bf
 
-    .line 1711
-    invoke-static {}, Lorg/telegram/ui/PhotoViewer;->access$6600()Landroid/graphics/Paint;
+    .line 1722
+    invoke-static {}, Lorg/telegram/ui/PhotoViewer;->access$6500()Landroid/graphics/Paint;
 
     move-result-object v6
 
@@ -1017,9 +1017,9 @@
 
     goto :goto_c9
 
-    .line 1713
+    .line 1724
     :cond_bf
-    invoke-static {}, Lorg/telegram/ui/PhotoViewer;->access$6600()Landroid/graphics/Paint;
+    invoke-static {}, Lorg/telegram/ui/PhotoViewer;->access$6500()Landroid/graphics/Paint;
 
     move-result-object v6
 
@@ -1029,7 +1029,7 @@
 
     invoke-virtual {v6, v3}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 1715
+    .line 1726
     :goto_c9
     iget-object v3, p0, Lorg/telegram/ui/PhotoViewer$PhotoProgressView;->progressRect:Landroid/graphics/RectF;
 
@@ -1055,7 +1055,7 @@
 
     invoke-virtual {v3, v5, v6, v1, v0}, Landroid/graphics/RectF;->set(FFFF)V
 
-    .line 1716
+    .line 1727
     iget-object v9, p0, Lorg/telegram/ui/PhotoViewer$PhotoProgressView;->progressRect:Landroid/graphics/RectF;
 
     const/high16 v0, -0x3d4c0000    # -90.0f
@@ -1076,7 +1076,7 @@
 
     const/4 v12, 0x0
 
-    invoke-static {}, Lorg/telegram/ui/PhotoViewer;->access$6600()Landroid/graphics/Paint;
+    invoke-static {}, Lorg/telegram/ui/PhotoViewer;->access$6500()Landroid/graphics/Paint;
 
     move-result-object v13
 
@@ -1084,7 +1084,7 @@
 
     invoke-virtual/range {v8 .. v13}, Landroid/graphics/Canvas;->drawArc(Landroid/graphics/RectF;FFZLandroid/graphics/Paint;)V
 
-    .line 1717
+    .line 1728
     invoke-direct {p0, v7}, Lorg/telegram/ui/PhotoViewer$PhotoProgressView;->updateAnimation(Z)V
 
     :goto_f8
@@ -1104,7 +1104,7 @@
 
     const/4 v0, 0x0
 
-    .line 1617
+    .line 1628
     :goto_1
     iget-object v1, p0, Lorg/telegram/ui/PhotoViewer$PhotoProgressView;->alphas:[F
 
@@ -1112,7 +1112,7 @@
 
     if-ge v0, v2, :cond_11
 
-    .line 1618
+    .line 1629
     iget-object v2, p0, Lorg/telegram/ui/PhotoViewer$PhotoProgressView;->animAlphas:[F
 
     const/high16 v3, 0x3f800000    # 1.0f
@@ -1125,7 +1125,7 @@
 
     goto :goto_1
 
-    .line 1620
+    .line 1631
     :cond_11
     invoke-direct {p0}, Lorg/telegram/ui/PhotoViewer$PhotoProgressView;->checkVisibility()V
 
@@ -1137,7 +1137,7 @@
 
     const/4 v0, 0x0
 
-    .line 1598
+    .line 1609
     invoke-virtual {p0, v0, p1, v0}, Lorg/telegram/ui/PhotoViewer$PhotoProgressView;->setIndexedAlpha(IFZ)V
 
     return-void
@@ -1146,14 +1146,14 @@
 .method public setBackgroundState(IZZ)V
     .registers 10
 
-    .line 1570
+    .line 1581
     iget v0, p0, Lorg/telegram/ui/PhotoViewer$PhotoProgressView;->backgroundState:I
 
     if-ne v0, p1, :cond_5
 
     return-void
 
-    .line 1573
+    .line 1584
     :cond_5
     iget-object v1, p0, Lorg/telegram/ui/PhotoViewer$PhotoProgressView;->playPauseDrawable:Lorg/telegram/ui/Components/PlayPauseDrawable;
 
@@ -1184,7 +1184,7 @@
     :goto_16
     if-ne p1, v4, :cond_1c
 
-    .line 1576
+    .line 1587
     invoke-virtual {v1, v5, p3}, Lorg/telegram/ui/Components/PlayPauseDrawable;->setPause(ZZ)V
 
     goto :goto_21
@@ -1192,10 +1192,10 @@
     :cond_1c
     if-ne p1, v2, :cond_21
 
-    .line 1578
+    .line 1589
     invoke-virtual {v1, v3, p3}, Lorg/telegram/ui/Components/PlayPauseDrawable;->setPause(ZZ)V
 
-    .line 1580
+    .line 1591
     :cond_21
     :goto_21
     iget-object p3, p0, Lorg/telegram/ui/PhotoViewer$PhotoProgressView;->playPauseDrawable:Lorg/telegram/ui/Components/PlayPauseDrawable;
@@ -1204,12 +1204,12 @@
 
     invoke-virtual {p3, v0}, Lorg/telegram/ui/Components/PlayPauseDrawable;->setParent(Landroid/view/View;)V
 
-    .line 1581
+    .line 1592
     iget-object p3, p0, Lorg/telegram/ui/PhotoViewer$PhotoProgressView;->playPauseDrawable:Lorg/telegram/ui/Components/PlayPauseDrawable;
 
     invoke-virtual {p3}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
 
-    .line 1583
+    .line 1594
     :cond_2d
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -1219,17 +1219,17 @@
 
     if-eqz p2, :cond_40
 
-    .line 1584
+    .line 1595
     iget p2, p0, Lorg/telegram/ui/PhotoViewer$PhotoProgressView;->backgroundState:I
 
     if-eq p2, p1, :cond_40
 
-    .line 1585
+    .line 1596
     iput p2, p0, Lorg/telegram/ui/PhotoViewer$PhotoProgressView;->previousBackgroundState:I
 
     const/high16 p2, 0x3f800000    # 1.0f
 
-    .line 1586
+    .line 1597
     iput p2, p0, Lorg/telegram/ui/PhotoViewer$PhotoProgressView;->animatedAlphaValue:F
 
     goto :goto_43
@@ -1237,16 +1237,16 @@
     :cond_40
     const/4 p2, -0x2
 
-    .line 1588
+    .line 1599
     iput p2, p0, Lorg/telegram/ui/PhotoViewer$PhotoProgressView;->previousBackgroundState:I
 
-    .line 1590
+    .line 1601
     :goto_43
     iput p1, p0, Lorg/telegram/ui/PhotoViewer$PhotoProgressView;->backgroundState:I
 
     invoke-virtual {p0, p1}, Lorg/telegram/ui/PhotoViewer$PhotoProgressView;->onBackgroundStateUpdated(I)V
 
-    .line 1591
+    .line 1602
     iget-object p1, p0, Lorg/telegram/ui/PhotoViewer$PhotoProgressView;->parent:Landroid/view/View;
 
     invoke-virtual {p1}, Landroid/view/View;->invalidate()V
@@ -1257,7 +1257,7 @@
 .method public setIndexedAlpha(IFZ)V
     .registers 6
 
-    .line 1606
+    .line 1617
     iget-object v0, p0, Lorg/telegram/ui/PhotoViewer$PhotoProgressView;->alphas:[F
 
     aget v1, v0, p1
@@ -1266,21 +1266,21 @@
 
     if-eqz v1, :cond_18
 
-    .line 1607
+    .line 1618
     aput p2, v0, p1
 
     if-nez p3, :cond_10
 
-    .line 1609
+    .line 1620
     iget-object p3, p0, Lorg/telegram/ui/PhotoViewer$PhotoProgressView;->animAlphas:[F
 
     aput p2, p3, p1
 
-    .line 1611
+    .line 1622
     :cond_10
     invoke-direct {p0}, Lorg/telegram/ui/PhotoViewer$PhotoProgressView;->checkVisibility()V
 
-    .line 1612
+    .line 1623
     iget-object p1, p0, Lorg/telegram/ui/PhotoViewer$PhotoProgressView;->parent:Landroid/view/View;
 
     invoke-virtual {p1}, Landroid/view/View;->invalidate()V
@@ -1294,30 +1294,30 @@
 
     if-nez p2, :cond_7
 
-    .line 1559
+    .line 1570
     iput p1, p0, Lorg/telegram/ui/PhotoViewer$PhotoProgressView;->animatedProgressValue:F
 
-    .line 1560
+    .line 1571
     iput p1, p0, Lorg/telegram/ui/PhotoViewer$PhotoProgressView;->animationProgressStart:F
 
     goto :goto_b
 
-    .line 1562
+    .line 1573
     :cond_7
     iget p2, p0, Lorg/telegram/ui/PhotoViewer$PhotoProgressView;->animatedProgressValue:F
 
     iput p2, p0, Lorg/telegram/ui/PhotoViewer$PhotoProgressView;->animationProgressStart:F
 
-    .line 1564
+    .line 1575
     :goto_b
     iput p1, p0, Lorg/telegram/ui/PhotoViewer$PhotoProgressView;->currentProgress:F
 
     const-wide/16 p1, 0x0
 
-    .line 1565
+    .line 1576
     iput-wide p1, p0, Lorg/telegram/ui/PhotoViewer$PhotoProgressView;->currentProgressTime:J
 
-    .line 1566
+    .line 1577
     iget-object p1, p0, Lorg/telegram/ui/PhotoViewer$PhotoProgressView;->parent:Landroid/view/View;
 
     invoke-virtual {p1}, Landroid/view/View;->invalidate()V
@@ -1328,7 +1328,7 @@
 .method public setScale(F)V
     .registers 2
 
-    .line 1602
+    .line 1613
     iput p1, p0, Lorg/telegram/ui/PhotoViewer$PhotoProgressView;->scale:F
 
     return-void

@@ -105,9 +105,9 @@
     iput-object v0, p0, Lorg/telegram/tgnet/TLRPC$Document;->mime_type:Ljava/lang/String;
 
     .line 34
-    iget v0, p1, Lorg/telegram/tgnet/TLRPC$Document;->size:I
+    iget-wide v0, p1, Lorg/telegram/tgnet/TLRPC$Document;->size:J
 
-    iput v0, p0, Lorg/telegram/tgnet/TLRPC$Document;->size:I
+    iput-wide v0, p0, Lorg/telegram/tgnet/TLRPC$Document;->size:J
 
     .line 35
     iget-object v0, p1, Lorg/telegram/tgnet/TLRPC$Document;->thumbs:Ljava/util/ArrayList;

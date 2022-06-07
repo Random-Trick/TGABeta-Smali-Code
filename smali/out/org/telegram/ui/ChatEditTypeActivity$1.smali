@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/ChatEditTypeActivity;)V
     .registers 2
 
-    .line 212
+    .line 207
     iput-object p1, p0, Lorg/telegram/ui/ChatEditTypeActivity$1;->this$0:Lorg/telegram/ui/ChatEditTypeActivity;
 
     invoke-direct {p0}, Lorg/telegram/ui/ActionBar/ActionBar$ActionBarMenuOnItemClick;-><init>()V
@@ -39,7 +39,7 @@
 
     if-ne p1, v0, :cond_9
 
-    .line 216
+    .line 211
     iget-object p1, p0, Lorg/telegram/ui/ChatEditTypeActivity$1;->this$0:Lorg/telegram/ui/ChatEditTypeActivity;
 
     invoke-virtual {p1}, Lorg/telegram/ui/ActionBar/BaseFragment;->finishFragment()V
@@ -51,7 +51,7 @@
 
     if-ne p1, v0, :cond_11
 
-    .line 218
+    .line 213
     iget-object p1, p0, Lorg/telegram/ui/ChatEditTypeActivity$1;->this$0:Lorg/telegram/ui/ChatEditTypeActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/ChatEditTypeActivity;->access$000(Lorg/telegram/ui/ChatEditTypeActivity;)V

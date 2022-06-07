@@ -393,7 +393,7 @@
 .method private clearDatabase()V
     .registers 4
 
-    .line 583
+    .line 581
     new-instance v0, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
     invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getParentActivity()Landroid/app/Activity;
@@ -404,9 +404,9 @@
 
     const-string v1, "LocalDatabaseClearTextTitle"
 
-    const v2, 0x7f0e0960
+    const v2, 0x7f0e09e7
 
-    .line 584
+    .line 582
     invoke-static {v1, v2}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v1
@@ -415,9 +415,9 @@
 
     const-string v1, "LocalDatabaseClearText"
 
-    const v2, 0x7f0e095f
+    const v2, 0x7f0e09e6
 
-    .line 585
+    .line 583
     invoke-static {v1, v2}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v1
@@ -426,9 +426,9 @@
 
     const-string v1, "Cancel"
 
-    const v2, 0x7f0e0331
+    const v2, 0x7f0e036d
 
-    .line 586
+    .line 584
     invoke-static {v1, v2}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v1
@@ -439,9 +439,9 @@
 
     const-string v1, "CacheClear"
 
-    const v2, 0x7f0e02fd
+    const v2, 0x7f0e0339
 
-    .line 587
+    .line 585
     invoke-static {v1, v2}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v1
@@ -452,17 +452,17 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 597
+    .line 595
     invoke-virtual {v0}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->create()Lorg/telegram/ui/ActionBar/AlertDialog;
 
     move-result-object v0
 
-    .line 598
+    .line 596
     invoke-virtual {p0, v0}, Lorg/telegram/ui/ActionBar/BaseFragment;->showDialog(Landroid/app/Dialog;)Landroid/app/Dialog;
 
     const/4 v1, -0x1
 
-    .line 599
+    .line 597
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/AlertDialog;->getButton(I)Landroid/view/View;
 
     move-result-object v0
@@ -473,7 +473,7 @@
 
     const-string v1, "dialogTextRed2"
 
-    .line 601
+    .line 599
     invoke-static {v1}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
 
     move-result v1
@@ -540,7 +540,7 @@
 .end method
 
 .method private synthetic lambda$cleanupFolders$2(ZLorg/telegram/ui/ActionBar/AlertDialog;J)V
-    .registers 12
+    .registers 11
 
     if-eqz p1, :cond_9
 
@@ -588,47 +588,40 @@
     .line 416
     iget-object p1, p0, Lorg/telegram/ui/CacheControlActivity;->cacheRemovedTooltip:Lorg/telegram/ui/Components/UndoView;
 
-    const p2, 0x7f0e02ff
+    const p2, 0x7f0e033b
 
     const/4 v0, 0x1
 
-    new-array v1, v0, [Ljava/lang/Object;
+    new-array v0, v0, [Ljava/lang/Object;
+
+    const/4 v1, 0x0
 
     invoke-static {p3, p4}, Lorg/telegram/messenger/AndroidUtilities;->formatFileSize(J)Ljava/lang/String;
 
     move-result-object p3
 
-    const/4 p4, 0x0
-
-    aput-object p3, v1, p4
+    aput-object p3, v0, v1
 
     const-string p3, "CacheWasCleared"
 
-    invoke-static {p3, p2, v1}, Lorg/telegram/messenger/LocaleController;->formatString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {p3, p2, v0}, Lorg/telegram/messenger/LocaleController;->formatString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p2
 
     invoke-virtual {p1, p2}, Lorg/telegram/ui/Components/UndoView;->setInfoText(Ljava/lang/CharSequence;)V
 
     .line 417
-    iget-object v1, p0, Lorg/telegram/ui/CacheControlActivity;->cacheRemovedTooltip:Lorg/telegram/ui/Components/UndoView;
+    iget-object v0, p0, Lorg/telegram/ui/CacheControlActivity;->cacheRemovedTooltip:Lorg/telegram/ui/Components/UndoView;
 
-    const-wide/16 v2, 0x0
+    const-wide/16 v1, 0x0
 
-    const/16 v4, 0x13
+    const/16 v3, 0x13
+
+    const/4 v4, 0x0
 
     const/4 v5, 0x0
 
-    const/4 v6, 0x0
-
-    invoke-virtual/range {v1 .. v6}, Lorg/telegram/ui/Components/UndoView;->showWithAction(JILjava/lang/Runnable;Ljava/lang/Runnable;)V
-
-    .line 419
-    invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getMediaDataController()Lorg/telegram/messenger/MediaDataController;
-
-    move-result-object p1
-
-    invoke-virtual {p1, p4, v0}, Lorg/telegram/messenger/MediaDataController;->loadAttachMenuBots(ZZ)V
+    invoke-virtual/range {v0 .. v5}, Lorg/telegram/ui/Components/UndoView;->showWithAction(JILjava/lang/Runnable;Ljava/lang/Runnable;)V
 
     return-void
 .end method
@@ -1192,7 +1185,7 @@
 .method private synthetic lambda$clearDatabase$7(Landroid/content/DialogInterface;I)V
     .registers 5
 
-    .line 588
+    .line 586
     invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getParentActivity()Landroid/app/Activity;
 
     move-result-object p1
@@ -1201,7 +1194,7 @@
 
     return-void
 
-    .line 591
+    .line 589
     :cond_7
     new-instance p1, Lorg/telegram/ui/ActionBar/AlertDialog;
 
@@ -1217,17 +1210,17 @@
 
     const/4 p2, 0x0
 
-    .line 592
+    .line 590
     invoke-virtual {p1, p2}, Lorg/telegram/ui/ActionBar/AlertDialog;->setCanCancel(Z)V
 
-    .line 593
+    .line 591
     iget-object p1, p0, Lorg/telegram/ui/CacheControlActivity;->progressDialog:Lorg/telegram/ui/ActionBar/AlertDialog;
 
     const-wide/16 v0, 0x1f4
 
     invoke-virtual {p1, v0, v1}, Lorg/telegram/ui/ActionBar/AlertDialog;->showDelayed(J)V
 
-    .line 594
+    .line 592
     iget p1, p0, Lorg/telegram/ui/ActionBar/BaseFragment;->currentAccount:I
 
     invoke-static {p1}, Lorg/telegram/messenger/MessagesController;->getInstance(I)Lorg/telegram/messenger/MessagesController;
@@ -1236,7 +1229,7 @@
 
     invoke-virtual {p1}, Lorg/telegram/messenger/MessagesController;->clearQueryTime()V
 
-    .line 595
+    .line 593
     invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getMessagesStorage()Lorg/telegram/messenger/MessagesStorage;
 
     move-result-object p1
@@ -1255,7 +1248,7 @@
 
     const/4 v2, 0x0
 
-    .line 525
+    .line 523
     :goto_3
     iget-object v3, p0, Lorg/telegram/ui/CacheControlActivity;->clearViewData:[Lorg/telegram/ui/Components/StorageDiagramView$ClearViewData;
 
@@ -1263,7 +1256,7 @@
 
     if-ge v1, v4, :cond_17
 
-    .line 526
+    .line 524
     aget-object v4, v3, v1
 
     if-eqz v4, :cond_14
@@ -1281,11 +1274,11 @@
 
     goto :goto_3
 
-    .line 530
+    .line 528
     :cond_17
     check-cast p1, Lorg/telegram/ui/Cells/CheckBoxCell;
 
-    .line 531
+    .line 529
     invoke-virtual {p1}, Landroid/widget/FrameLayout;->getTag()Ljava/lang/Object;
 
     move-result-object v1
@@ -1300,7 +1293,7 @@
 
     if-ne v2, v3, :cond_38
 
-    .line 532
+    .line 530
     iget-object v2, p0, Lorg/telegram/ui/CacheControlActivity;->clearViewData:[Lorg/telegram/ui/Components/StorageDiagramView$ClearViewData;
 
     aget-object v2, v2, v1
@@ -1309,7 +1302,7 @@
 
     if-eqz v2, :cond_38
 
-    .line 533
+    .line 531
     invoke-virtual {p1}, Lorg/telegram/ui/Cells/CheckBoxCell;->getCheckBoxView()Landroid/view/View;
 
     move-result-object p1
@@ -1320,7 +1313,7 @@
 
     return-void
 
-    .line 538
+    .line 536
     :cond_38
     iget-object v0, p0, Lorg/telegram/ui/CacheControlActivity;->clearViewData:[Lorg/telegram/ui/Components/StorageDiagramView$ClearViewData;
 
@@ -1334,7 +1327,7 @@
 
     invoke-virtual {v2, v0}, Lorg/telegram/ui/Components/StorageDiagramView$ClearViewData;->setClear(Z)V
 
-    .line 539
+    .line 537
     iget-object v0, p0, Lorg/telegram/ui/CacheControlActivity;->clearViewData:[Lorg/telegram/ui/Components/StorageDiagramView$ClearViewData;
 
     aget-object v0, v0, v1
@@ -1349,13 +1342,13 @@
 .method private synthetic lambda$createView$5(Landroid/view/View;)V
     .registers 2
 
-    .line 554
+    .line 552
     :try_start_0
     iget-object p1, p0, Lorg/telegram/ui/ActionBar/BaseFragment;->visibleDialog:Landroid/app/Dialog;
 
     if-eqz p1, :cond_c
 
-    .line 555
+    .line 553
     invoke-virtual {p1}, Landroid/app/Dialog;->dismiss()V
     :try_end_7
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_7} :catch_8
@@ -1365,10 +1358,10 @@
     :catch_8
     move-exception p1
 
-    .line 558
+    .line 556
     invoke-static {p1}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
-    .line 560
+    .line 558
     :cond_c
     :goto_c
     invoke-direct {p0}, Lorg/telegram/ui/CacheControlActivity;->cleanupFolders()V
@@ -1385,7 +1378,7 @@
 
     move/from16 v2, p3
 
-    .line 450
+    .line 448
     invoke-virtual/range {p0 .. p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getParentActivity()Landroid/app/Activity;
 
     move-result-object v3
@@ -1397,43 +1390,43 @@
     :cond_d
     int-to-long v3, v2
 
-    .line 453
+    .line 451
     iget-wide v5, v0, Lorg/telegram/ui/CacheControlActivity;->migrateOldFolderRow:J
 
     cmp-long v7, v3, v5
 
     if-nez v7, :cond_1f
 
-    .line 454
+    .line 452
     sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v2, 0x1e
 
     if-lt v1, v2, :cond_1a5
 
-    .line 455
+    .line 453
     invoke-direct/range {p0 .. p0}, Lorg/telegram/ui/CacheControlActivity;->migrateOldFolder()V
 
     goto/16 :goto_1a5
 
-    .line 457
+    .line 455
     :cond_1f
     iget v3, v0, Lorg/telegram/ui/CacheControlActivity;->databaseRow:I
 
     if-ne v2, v3, :cond_28
 
-    .line 458
+    .line 456
     invoke-direct/range {p0 .. p0}, Lorg/telegram/ui/CacheControlActivity;->clearDatabase()V
 
     goto/16 :goto_1a5
 
-    .line 459
+    .line 457
     :cond_28
     iget v3, v0, Lorg/telegram/ui/CacheControlActivity;->storageUsageRow:I
 
     if-ne v2, v3, :cond_1a5
 
-    .line 460
+    .line 458
     iget-wide v2, v0, Lorg/telegram/ui/CacheControlActivity;->totalSize:J
 
     const-wide/16 v4, 0x0
@@ -1450,7 +1443,7 @@
 
     goto/16 :goto_1a5
 
-    .line 463
+    .line 461
     :cond_3c
     new-instance v2, Lorg/telegram/ui/CacheControlActivity$2;
 
@@ -1464,22 +1457,22 @@
 
     iput-object v2, v0, Lorg/telegram/ui/CacheControlActivity;->bottomSheet:Lorg/telegram/ui/ActionBar/BottomSheet;
 
-    .line 469
+    .line 467
     invoke-virtual {v2}, Lorg/telegram/ui/ActionBar/BottomSheet;->fixNavigationBar()V
 
-    .line 470
+    .line 468
     iget-object v2, v0, Lorg/telegram/ui/CacheControlActivity;->bottomSheet:Lorg/telegram/ui/ActionBar/BottomSheet;
 
     const/4 v3, 0x1
 
     invoke-virtual {v2, v3}, Lorg/telegram/ui/ActionBar/BottomSheet;->setAllowNestedScroll(Z)V
 
-    .line 471
+    .line 469
     iget-object v2, v0, Lorg/telegram/ui/CacheControlActivity;->bottomSheet:Lorg/telegram/ui/ActionBar/BottomSheet;
 
     invoke-virtual {v2, v6}, Lorg/telegram/ui/ActionBar/BottomSheet;->setApplyBottomPadding(Z)V
 
-    .line 472
+    .line 470
     new-instance v2, Landroid/widget/LinearLayout;
 
     invoke-virtual/range {p0 .. p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getParentActivity()Landroid/app/Activity;
@@ -1488,13 +1481,13 @@
 
     invoke-direct {v2, v7}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
 
-    .line 473
+    .line 471
     iput-object v2, v0, Lorg/telegram/ui/CacheControlActivity;->bottomSheetView:Landroid/view/View;
 
-    .line 474
+    .line 472
     invoke-virtual {v2, v3}, Landroid/widget/LinearLayout;->setOrientation(I)V
 
-    .line 475
+    .line 473
     new-instance v7, Lorg/telegram/ui/Components/StorageDiagramView;
 
     invoke-direct {v7, v1}, Lorg/telegram/ui/Components/StorageDiagramView;-><init>(Landroid/content/Context;)V
@@ -1513,7 +1506,7 @@
 
     const/16 v14, 0x10
 
-    .line 476
+    .line 474
     invoke-static/range {v8 .. v14}, Lorg/telegram/ui/Components/LayoutHelper;->createLinear(IIIIIII)Landroid/widget/LinearLayout$LayoutParams;
 
     move-result-object v8
@@ -1537,14 +1530,14 @@
 
     if-nez v9, :cond_91
 
-    .line 483
+    .line 481
     iget-wide v14, v0, Lorg/telegram/ui/CacheControlActivity;->photoSize:J
 
-    const v12, 0x7f0e0966
+    const v12, 0x7f0e09ed
 
     const-string v13, "LocalPhotoCache"
 
-    .line 484
+    .line 482
     invoke-static {v13, v12}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v12
@@ -1556,14 +1549,14 @@
     :cond_91
     if-ne v9, v3, :cond_a1
 
-    .line 487
+    .line 485
     iget-wide v14, v0, Lorg/telegram/ui/CacheControlActivity;->videoSize:J
 
-    const v12, 0x7f0e0967
+    const v12, 0x7f0e09ee
 
     const-string v13, "LocalVideoCache"
 
-    .line 488
+    .line 486
     invoke-static {v13, v12}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v12
@@ -1575,14 +1568,14 @@
     :cond_a1
     if-ne v9, v14, :cond_b1
 
-    .line 491
+    .line 489
     iget-wide v14, v0, Lorg/telegram/ui/CacheControlActivity;->documentsSize:J
 
-    const v12, 0x7f0e0963
+    const v12, 0x7f0e09ea
 
     const-string v13, "LocalDocumentCache"
 
-    .line 492
+    .line 490
     invoke-static {v13, v12}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v12
@@ -1596,14 +1589,14 @@
 
     if-ne v9, v12, :cond_c2
 
-    .line 495
+    .line 493
     iget-wide v14, v0, Lorg/telegram/ui/CacheControlActivity;->musicSize:J
 
-    const v12, 0x7f0e0965
+    const v12, 0x7f0e09ec
 
     const-string v13, "LocalMusicCache"
 
-    .line 496
+    .line 494
     invoke-static {v13, v12}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v12
@@ -1615,14 +1608,14 @@
     :cond_c2
     if-ne v9, v11, :cond_d2
 
-    .line 499
+    .line 497
     iget-wide v14, v0, Lorg/telegram/ui/CacheControlActivity;->audioSize:J
 
-    const v12, 0x7f0e095c
+    const v12, 0x7f0e09e3
 
     const-string v13, "LocalAudioCache"
 
-    .line 500
+    .line 498
     invoke-static {v13, v12}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v12
@@ -1636,14 +1629,14 @@
 
     if-ne v9, v12, :cond_e3
 
-    .line 503
+    .line 501
     iget-wide v14, v0, Lorg/telegram/ui/CacheControlActivity;->stickersSize:J
 
-    const v12, 0x7f0e0170
+    const v12, 0x7f0e019d
 
     const-string v13, "AnimatedStickers"
 
-    .line 504
+    .line 502
     invoke-static {v13, v12}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v12
@@ -1652,15 +1645,15 @@
 
     goto :goto_f0
 
-    .line 507
+    .line 505
     :cond_e3
     iget-wide v14, v0, Lorg/telegram/ui/CacheControlActivity;->cacheSize:J
 
-    const v12, 0x7f0e095d
+    const v12, 0x7f0e09e4
 
     const-string v13, "LocalCache"
 
-    .line 508
+    .line 506
     invoke-static {v13, v12}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v12
@@ -1672,7 +1665,7 @@
 
     if-lez v16, :cond_14a
 
-    .line 512
+    .line 510
     iget-object v10, v0, Lorg/telegram/ui/CacheControlActivity;->clearViewData:[Lorg/telegram/ui/Components/StorageDiagramView$ClearViewData;
 
     new-instance v4, Lorg/telegram/ui/Components/StorageDiagramView$ClearViewData;
@@ -1681,19 +1674,19 @@
 
     aput-object v4, v10, v9
 
-    .line 513
+    .line 511
     iget-object v4, v0, Lorg/telegram/ui/CacheControlActivity;->clearViewData:[Lorg/telegram/ui/Components/StorageDiagramView$ClearViewData;
 
     aget-object v5, v4, v9
 
     iput-wide v14, v5, Lorg/telegram/ui/Components/StorageDiagramView$ClearViewData;->size:J
 
-    .line 514
+    .line 512
     aget-object v4, v4, v9
 
     iput-object v13, v4, Lorg/telegram/ui/Components/StorageDiagramView$ClearViewData;->color:Ljava/lang/String;
 
-    .line 515
+    .line 513
     new-instance v10, Lorg/telegram/ui/Cells/CheckBoxCell;
 
     invoke-virtual/range {p0 .. p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getParentActivity()Landroid/app/Activity;
@@ -1704,14 +1697,14 @@
 
     invoke-direct {v10, v4, v11, v5, v8}, Lorg/telegram/ui/Cells/CheckBoxCell;-><init>(Landroid/content/Context;IILorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)V
 
-    .line 517
+    .line 515
     invoke-static {v9}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v4
 
     invoke-virtual {v10, v4}, Landroid/widget/FrameLayout;->setTag(Ljava/lang/Object;)V
 
-    .line 518
+    .line 516
     invoke-static {v6}, Lorg/telegram/ui/ActionBar/Theme;->getSelectorDrawable(Z)Landroid/graphics/drawable/Drawable;
 
     move-result-object v4
@@ -1722,14 +1715,14 @@
 
     const/4 v5, -0x1
 
-    .line 519
+    .line 517
     invoke-static {v5, v4}, Lorg/telegram/ui/Components/LayoutHelper;->createLinear(II)Landroid/widget/LinearLayout$LayoutParams;
 
     move-result-object v4
 
     invoke-virtual {v2, v10, v4}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 520
+    .line 518
     invoke-static {v14, v15}, Lorg/telegram/messenger/AndroidUtilities;->formatFileSize(J)Ljava/lang/String;
 
     move-result-object v4
@@ -1738,7 +1731,7 @@
 
     const-string v4, "dialogTextBlack"
 
-    .line 521
+    .line 519
     invoke-static {v4}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
 
     move-result v4
@@ -1749,10 +1742,10 @@
 
     const-string v5, "checkboxCheck"
 
-    .line 522
+    .line 520
     invoke-virtual {v10, v13, v4, v5}, Lorg/telegram/ui/Cells/CheckBoxCell;->setCheckBoxColor(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 523
+    .line 521
     new-instance v4, Lorg/telegram/ui/CacheControlActivity$$ExternalSyntheticLambda1;
 
     invoke-direct {v4, v0}, Lorg/telegram/ui/CacheControlActivity$$ExternalSyntheticLambda1;-><init>(Lorg/telegram/ui/CacheControlActivity;)V
@@ -1761,7 +1754,7 @@
 
     goto :goto_14e
 
-    .line 542
+    .line 540
     :cond_14a
     iget-object v4, v0, Lorg/telegram/ui/CacheControlActivity;->clearViewData:[Lorg/telegram/ui/Components/StorageDiagramView$ClearViewData;
 
@@ -1777,16 +1770,16 @@
     :cond_154
     if-eqz v10, :cond_159
 
-    .line 546
+    .line 544
     invoke-virtual {v10, v6}, Lorg/telegram/ui/Cells/CheckBoxCell;->setNeedDivider(Z)V
 
-    .line 548
+    .line 546
     :cond_159
     iget-object v3, v0, Lorg/telegram/ui/CacheControlActivity;->clearViewData:[Lorg/telegram/ui/Components/StorageDiagramView$ClearViewData;
 
     invoke-virtual {v7, v3}, Lorg/telegram/ui/Components/StorageDiagramView;->setData([Lorg/telegram/ui/Components/StorageDiagramView$ClearViewData;)V
 
-    .line 549
+    .line 547
     new-instance v3, Lorg/telegram/ui/ActionBar/BottomSheet$BottomSheetCell;
 
     invoke-virtual/range {p0 .. p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getParentActivity()Landroid/app/Activity;
@@ -1795,25 +1788,25 @@
 
     invoke-direct {v3, v4, v14}, Lorg/telegram/ui/ActionBar/BottomSheet$BottomSheetCell;-><init>(Landroid/content/Context;I)V
 
-    const v4, 0x7f0e046e
+    const v4, 0x7f0e04b3
 
     const-string v5, "ClearMediaCache"
 
-    .line 550
+    .line 548
     invoke-static {v5, v4}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v4
 
     invoke-virtual {v3, v4, v6}, Lorg/telegram/ui/ActionBar/BottomSheet$BottomSheetCell;->setTextAndIcon(Ljava/lang/CharSequence;I)V
 
-    .line 551
+    .line 549
     invoke-virtual {v3}, Lorg/telegram/ui/ActionBar/BottomSheet$BottomSheetCell;->getTextView()Landroid/widget/TextView;
 
     move-result-object v4
 
     iput-object v4, v0, Lorg/telegram/ui/CacheControlActivity;->actionTextView:Landroid/view/View;
 
-    .line 552
+    .line 550
     invoke-virtual {v3}, Lorg/telegram/ui/ActionBar/BottomSheet$BottomSheetCell;->getTextView()Landroid/widget/TextView;
 
     move-result-object v4
@@ -1828,30 +1821,30 @@
 
     const/4 v5, -0x1
 
-    .line 562
+    .line 560
     invoke-static {v5, v4}, Lorg/telegram/ui/Components/LayoutHelper;->createLinear(II)Landroid/widget/LinearLayout$LayoutParams;
 
     move-result-object v4
 
     invoke-virtual {v2, v3, v4}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 563
+    .line 561
     new-instance v3, Landroidx/core/widget/NestedScrollView;
 
     invoke-direct {v3, v1}, Landroidx/core/widget/NestedScrollView;-><init>(Landroid/content/Context;)V
 
-    .line 564
+    .line 562
     invoke-virtual {v3, v6}, Landroid/widget/FrameLayout;->setVerticalScrollBarEnabled(Z)V
 
-    .line 565
+    .line 563
     invoke-virtual {v3, v2}, Landroidx/core/widget/NestedScrollView;->addView(Landroid/view/View;)V
 
-    .line 566
+    .line 564
     iget-object v1, v0, Lorg/telegram/ui/CacheControlActivity;->bottomSheet:Lorg/telegram/ui/ActionBar/BottomSheet;
 
     invoke-virtual {v1, v3}, Lorg/telegram/ui/ActionBar/BottomSheet;->setCustomView(Landroid/view/View;)V
 
-    .line 567
+    .line 565
     iget-object v1, v0, Lorg/telegram/ui/CacheControlActivity;->bottomSheet:Lorg/telegram/ui/ActionBar/BottomSheet;
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/BaseFragment;->showDialog(Landroid/app/Dialog;)Landroid/app/Dialog;
@@ -1866,21 +1859,21 @@
 .method private synthetic lambda$getThemeDescriptions$8()V
     .registers 5
 
-    .line 759
+    .line 757
     iget-object v0, p0, Lorg/telegram/ui/CacheControlActivity;->bottomSheet:Lorg/telegram/ui/ActionBar/BottomSheet;
 
     if-eqz v0, :cond_d
 
     const-string v1, "dialogBackground"
 
-    .line 760
+    .line 758
     invoke-static {v1}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
 
     move-result v1
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/BottomSheet;->setBackgroundColor(I)V
 
-    .line 763
+    .line 761
     :cond_d
     iget-object v0, p0, Lorg/telegram/ui/CacheControlActivity;->actionTextView:Landroid/view/View;
 
@@ -1898,7 +1891,7 @@
 
     const-string v2, "featuredStickers_addButton"
 
-    .line 764
+    .line 762
     invoke-static {v2, v1}, Lorg/telegram/ui/ActionBar/Theme$AdaptiveRipple;->filledRect(Ljava/lang/String;[F)Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
@@ -2332,7 +2325,7 @@
 .method private migrateOldFolder()V
     .registers 1
 
-    .line 579
+    .line 577
     invoke-static {p0}, Lorg/telegram/messenger/FilesMigrationService;->checkBottomSheet(Lorg/telegram/ui/ActionBar/BaseFragment;)V
 
     return-void
@@ -2572,26 +2565,26 @@
 .method public createView(Landroid/content/Context;)Landroid/view/View;
     .registers 11
 
-    .line 426
+    .line 424
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
-    const v1, 0x7f070140
+    const v1, 0x7f070109
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/ActionBar;->setBackButtonImage(I)V
 
-    .line 427
+    .line 425
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/ActionBar;->setAllowOverlayTitle(Z)V
 
-    .line 428
+    .line 426
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     const-string v2, "StorageUsage"
 
-    const v3, 0x7f0e10f6
+    const v3, 0x7f0e11b5
 
     invoke-static {v2, v3}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
@@ -2599,7 +2592,7 @@
 
     invoke-virtual {v0, v2}, Lorg/telegram/ui/ActionBar/ActionBar;->setTitle(Ljava/lang/CharSequence;)V
 
-    .line 429
+    .line 427
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     new-instance v2, Lorg/telegram/ui/CacheControlActivity$1;
@@ -2608,33 +2601,33 @@
 
     invoke-virtual {v0, v2}, Lorg/telegram/ui/ActionBar/ActionBar;->setActionBarMenuOnItemClick(Lorg/telegram/ui/ActionBar/ActionBar$ActionBarMenuOnItemClick;)V
 
-    .line 438
+    .line 436
     new-instance v0, Lorg/telegram/ui/CacheControlActivity$ListAdapter;
 
     invoke-direct {v0, p0, p1}, Lorg/telegram/ui/CacheControlActivity$ListAdapter;-><init>(Lorg/telegram/ui/CacheControlActivity;Landroid/content/Context;)V
 
     iput-object v0, p0, Lorg/telegram/ui/CacheControlActivity;->listAdapter:Lorg/telegram/ui/CacheControlActivity$ListAdapter;
 
-    .line 440
+    .line 438
     new-instance v0, Landroid/widget/FrameLayout;
 
     invoke-direct {v0, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lorg/telegram/ui/ActionBar/BaseFragment;->fragmentView:Landroid/view/View;
 
-    .line 441
+    .line 439
     check-cast v0, Landroid/widget/FrameLayout;
 
     const-string v2, "windowBackgroundGray"
 
-    .line 442
+    .line 440
     invoke-static {v2}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
 
     move-result v2
 
     invoke-virtual {v0, v2}, Landroid/widget/FrameLayout;->setBackgroundColor(I)V
 
-    .line 444
+    .line 442
     new-instance v2, Lorg/telegram/ui/Components/RecyclerListView;
 
     invoke-direct {v2, p1}, Lorg/telegram/ui/Components/RecyclerListView;-><init>(Landroid/content/Context;)V
@@ -2643,10 +2636,10 @@
 
     const/4 v3, 0x0
 
-    .line 445
+    .line 443
     invoke-virtual {v2, v3}, Lorg/telegram/ui/Components/RecyclerListView;->setVerticalScrollBarEnabled(Z)V
 
-    .line 446
+    .line 444
     iget-object v2, p0, Lorg/telegram/ui/CacheControlActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     new-instance v4, Landroidx/recyclerview/widget/LinearLayoutManager;
@@ -2657,7 +2650,7 @@
 
     invoke-virtual {v2, v4}, Landroidx/recyclerview/widget/RecyclerView;->setLayoutManager(Landroidx/recyclerview/widget/RecyclerView$LayoutManager;)V
 
-    .line 447
+    .line 445
     iget-object v1, p0, Lorg/telegram/ui/CacheControlActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     const/4 v2, -0x1
@@ -2670,14 +2663,14 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 448
+    .line 446
     iget-object v1, p0, Lorg/telegram/ui/CacheControlActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     iget-object v2, p0, Lorg/telegram/ui/CacheControlActivity;->listAdapter:Lorg/telegram/ui/CacheControlActivity$ListAdapter;
 
     invoke-virtual {v1, v2}, Lorg/telegram/ui/Components/RecyclerListView;->setAdapter(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
-    .line 449
+    .line 447
     iget-object v1, p0, Lorg/telegram/ui/CacheControlActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     new-instance v2, Lorg/telegram/ui/CacheControlActivity$$ExternalSyntheticLambda8;
@@ -2686,7 +2679,7 @@
 
     invoke-virtual {v1, v2}, Lorg/telegram/ui/Components/RecyclerListView;->setOnItemClickListener(Lorg/telegram/ui/Components/RecyclerListView$OnItemClickListener;)V
 
-    .line 571
+    .line 569
     new-instance v1, Lorg/telegram/ui/Components/UndoView;
 
     invoke-direct {v1, p1}, Lorg/telegram/ui/Components/UndoView;-><init>(Landroid/content/Context;)V
@@ -2707,14 +2700,14 @@
 
     const/high16 v8, 0x41000000    # 8.0f
 
-    .line 572
+    .line 570
     invoke-static/range {v2 .. v8}, Lorg/telegram/ui/Components/LayoutHelper;->createFrame(IFIFFFF)Landroid/widget/FrameLayout$LayoutParams;
 
     move-result-object p1
 
     invoke-virtual {v0, v1, p1}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 574
+    .line 572
     iget-object p1, p0, Lorg/telegram/ui/ActionBar/BaseFragment;->fragmentView:Landroid/view/View;
 
     return-object p1
@@ -2723,18 +2716,18 @@
 .method public varargs didReceivedNotification(II[Ljava/lang/Object;)V
     .registers 4
 
-    .line 615
+    .line 613
     sget p2, Lorg/telegram/messenger/NotificationCenter;->didClearDatabase:I
 
     if-ne p1, p2, :cond_28
 
-    .line 617
+    .line 615
     :try_start_4
     iget-object p1, p0, Lorg/telegram/ui/CacheControlActivity;->progressDialog:Lorg/telegram/ui/ActionBar/AlertDialog;
 
     if-eqz p1, :cond_10
 
-    .line 618
+    .line 616
     invoke-virtual {p1}, Lorg/telegram/ui/ActionBar/AlertDialog;->dismiss()V
     :try_end_b
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_b} :catch_c
@@ -2744,22 +2737,22 @@
     :catch_c
     move-exception p1
 
-    .line 621
+    .line 619
     invoke-static {p1}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     :cond_10
     :goto_10
     const/4 p1, 0x0
 
-    .line 623
+    .line 621
     iput-object p1, p0, Lorg/telegram/ui/CacheControlActivity;->progressDialog:Lorg/telegram/ui/ActionBar/AlertDialog;
 
-    .line 624
+    .line 622
     iget-object p1, p0, Lorg/telegram/ui/CacheControlActivity;->listAdapter:Lorg/telegram/ui/CacheControlActivity$ListAdapter;
 
     if-eqz p1, :cond_28
 
-    .line 625
+    .line 623
     iget p1, p0, Lorg/telegram/ui/ActionBar/BaseFragment;->currentAccount:I
 
     invoke-static {p1}, Lorg/telegram/messenger/MessagesStorage;->getInstance(I)Lorg/telegram/messenger/MessagesStorage;
@@ -2772,7 +2765,7 @@
 
     iput-wide p1, p0, Lorg/telegram/ui/CacheControlActivity;->databaseSize:J
 
-    .line 626
+    .line 624
     iget-object p1, p0, Lorg/telegram/ui/CacheControlActivity;->listAdapter:Lorg/telegram/ui/CacheControlActivity$ListAdapter;
 
     invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->notifyDataSetChanged()V
@@ -2794,17 +2787,17 @@
 
     move-object/from16 v0, p0
 
-    .line 758
+    .line 756
     new-instance v7, Lorg/telegram/ui/CacheControlActivity$$ExternalSyntheticLambda7;
 
     invoke-direct {v7, v0}, Lorg/telegram/ui/CacheControlActivity$$ExternalSyntheticLambda7;-><init>(Lorg/telegram/ui/CacheControlActivity;)V
 
-    .line 767
+    .line 765
     new-instance v9, Ljava/util/ArrayList;
 
     invoke-direct {v9}, Ljava/util/ArrayList;-><init>()V
 
-    .line 769
+    .line 767
     new-instance v1, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v11, v0, Lorg/telegram/ui/CacheControlActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
@@ -2853,7 +2846,7 @@
 
     invoke-virtual {v9, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 770
+    .line 768
     new-instance v1, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v2, v0, Lorg/telegram/ui/ActionBar/BaseFragment;->fragmentView:Landroid/view/View;
@@ -2878,7 +2871,7 @@
 
     invoke-virtual {v9, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 772
+    .line 770
     new-instance v1, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v11, v0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
@@ -2895,7 +2888,7 @@
 
     invoke-virtual {v9, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 773
+    .line 771
     new-instance v1, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v2, v0, Lorg/telegram/ui/CacheControlActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
@@ -2912,7 +2905,7 @@
 
     invoke-virtual {v9, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 774
+    .line 772
     new-instance v1, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v11, v0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
@@ -2927,7 +2920,7 @@
 
     invoke-virtual {v9, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 775
+    .line 773
     new-instance v1, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v2, v0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
@@ -2944,7 +2937,7 @@
 
     invoke-virtual {v9, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 776
+    .line 774
     new-instance v1, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v11, v0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
@@ -2959,7 +2952,7 @@
 
     invoke-virtual {v9, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 778
+    .line 776
     new-instance v1, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v2, v0, Lorg/telegram/ui/CacheControlActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
@@ -2976,7 +2969,7 @@
 
     invoke-virtual {v9, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 780
+    .line 778
     new-instance v1, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v11, v0, Lorg/telegram/ui/CacheControlActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
@@ -3005,7 +2998,7 @@
 
     invoke-virtual {v9, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 781
+    .line 779
     new-instance v1, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v5, v0, Lorg/telegram/ui/CacheControlActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
@@ -3042,7 +3035,7 @@
 
     invoke-virtual {v9, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 783
+    .line 781
     new-instance v1, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v12, v0, Lorg/telegram/ui/CacheControlActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
@@ -3063,7 +3056,7 @@
 
     invoke-virtual {v9, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 784
+    .line 782
     new-instance v1, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v5, v0, Lorg/telegram/ui/CacheControlActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
@@ -3092,7 +3085,7 @@
 
     invoke-virtual {v9, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 785
+    .line 783
     new-instance v1, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v12, v0, Lorg/telegram/ui/CacheControlActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
@@ -3119,7 +3112,7 @@
 
     invoke-virtual {v9, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 786
+    .line 784
     new-instance v1, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v5, v0, Lorg/telegram/ui/CacheControlActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
@@ -3154,7 +3147,7 @@
 
     invoke-virtual {v9, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 787
+    .line 785
     new-instance v1, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v12, v0, Lorg/telegram/ui/CacheControlActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
@@ -3179,7 +3172,7 @@
 
     invoke-virtual {v9, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 788
+    .line 786
     new-instance v1, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v5, v0, Lorg/telegram/ui/CacheControlActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
@@ -3210,7 +3203,7 @@
 
     invoke-virtual {v9, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 789
+    .line 787
     new-instance v1, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v12, v0, Lorg/telegram/ui/CacheControlActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
@@ -3235,7 +3228,7 @@
 
     invoke-virtual {v9, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 790
+    .line 788
     new-instance v1, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v5, v0, Lorg/telegram/ui/CacheControlActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
@@ -3266,7 +3259,7 @@
 
     invoke-virtual {v9, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 791
+    .line 789
     new-instance v1, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v12, v0, Lorg/telegram/ui/CacheControlActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
@@ -3291,7 +3284,7 @@
 
     invoke-virtual {v9, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 793
+    .line 791
     new-instance v1, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v5, v0, Lorg/telegram/ui/CacheControlActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
@@ -3316,7 +3309,7 @@
 
     invoke-virtual {v9, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 794
+    .line 792
     new-instance v1, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v12, v0, Lorg/telegram/ui/CacheControlActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
@@ -3337,7 +3330,7 @@
 
     invoke-virtual {v9, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 795
+    .line 793
     new-instance v1, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v5, v0, Lorg/telegram/ui/CacheControlActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
@@ -3364,7 +3357,7 @@
 
     invoke-virtual {v9, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 797
+    .line 795
     new-instance v1, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v12, v0, Lorg/telegram/ui/CacheControlActivity;->bottomSheetView:Landroid/view/View;
@@ -3379,7 +3372,7 @@
 
     invoke-virtual {v9, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 798
+    .line 796
     new-instance v1, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v5, v0, Lorg/telegram/ui/CacheControlActivity;->bottomSheetView:Landroid/view/View;
@@ -3410,7 +3403,7 @@
 
     invoke-virtual {v9, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 799
+    .line 797
     new-instance v1, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v12, v0, Lorg/telegram/ui/CacheControlActivity;->bottomSheetView:Landroid/view/View;
@@ -3435,7 +3428,7 @@
 
     invoke-virtual {v9, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 800
+    .line 798
     new-instance v1, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v5, v0, Lorg/telegram/ui/CacheControlActivity;->bottomSheetView:Landroid/view/View;
@@ -3462,7 +3455,7 @@
 
     invoke-virtual {v9, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 801
+    .line 799
     new-instance v1, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v11, v0, Lorg/telegram/ui/CacheControlActivity;->bottomSheetView:Landroid/view/View;
@@ -3487,7 +3480,7 @@
 
     invoke-virtual {v9, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 803
+    .line 801
     new-instance v1, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     new-array v5, v4, [Ljava/lang/Class;
@@ -3520,7 +3513,7 @@
 
     invoke-virtual {v9, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 804
+    .line 802
     new-instance v10, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     const/4 v2, 0x0
@@ -3539,7 +3532,7 @@
 
     invoke-virtual {v9, v10}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 806
+    .line 804
     new-instance v1, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v12, v0, Lorg/telegram/ui/CacheControlActivity;->bottomSheetView:Landroid/view/View;
@@ -3556,7 +3549,7 @@
 
     invoke-virtual {v9, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 807
+    .line 805
     new-instance v1, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v2, v0, Lorg/telegram/ui/CacheControlActivity;->bottomSheetView:Landroid/view/View;
@@ -3575,7 +3568,7 @@
 
     invoke-virtual {v9, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 808
+    .line 806
     new-instance v1, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v11, v0, Lorg/telegram/ui/CacheControlActivity;->bottomSheetView:Landroid/view/View;
@@ -3592,7 +3585,7 @@
 
     invoke-virtual {v9, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 809
+    .line 807
     new-instance v1, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v2, v0, Lorg/telegram/ui/CacheControlActivity;->bottomSheetView:Landroid/view/View;
@@ -3611,7 +3604,7 @@
 
     invoke-virtual {v9, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 810
+    .line 808
     new-instance v1, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v11, v0, Lorg/telegram/ui/CacheControlActivity;->bottomSheetView:Landroid/view/View;
@@ -3624,7 +3617,7 @@
 
     invoke-virtual {v9, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 811
+    .line 809
     new-instance v1, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v2, v0, Lorg/telegram/ui/CacheControlActivity;->bottomSheetView:Landroid/view/View;
@@ -3639,7 +3632,7 @@
 
     invoke-virtual {v9, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 812
+    .line 810
     new-instance v1, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v11, v0, Lorg/telegram/ui/CacheControlActivity;->bottomSheetView:Landroid/view/View;
@@ -3652,7 +3645,7 @@
 
     invoke-virtual {v9, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 813
+    .line 811
     new-instance v1, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v2, v0, Lorg/telegram/ui/CacheControlActivity;->bottomSheetView:Landroid/view/View;
@@ -3774,13 +3767,13 @@
 
     const/4 p2, 0x0
 
-    .line 821
+    .line 819
     :goto_5
     array-length v0, p3
 
     if-ge p2, v0, :cond_10
 
-    .line 822
+    .line 820
     aget v0, p3, p2
 
     if-eqz v0, :cond_d
@@ -3798,7 +3791,7 @@
     :goto_11
     if-eqz p1, :cond_20
 
-    .line 827
+    .line 825
     sget p1, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 p2, 0x1e
@@ -3809,7 +3802,7 @@
 
     if-eqz p1, :cond_20
 
-    .line 828
+    .line 826
     invoke-virtual {p1}, Lorg/telegram/messenger/FilesMigrationService$FilesMigrationBottomSheet;->migrateOldFolder()V
 
     :cond_20
@@ -3819,15 +3812,15 @@
 .method public onResume()V
     .registers 2
 
-    .line 607
+    .line 605
     invoke-super {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->onResume()V
 
-    .line 608
+    .line 606
     iget-object v0, p0, Lorg/telegram/ui/CacheControlActivity;->listAdapter:Lorg/telegram/ui/CacheControlActivity$ListAdapter;
 
     if-eqz v0, :cond_a
 
-    .line 609
+    .line 607
     invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->notifyDataSetChanged()V
 
     :cond_a

@@ -3,10 +3,10 @@
 
 
 # direct methods
-.method constructor <init>(Lj$/util/y;IZ)V
+.method constructor <init>(Lj$/util/u;IZ)V
     .registers 4
 
-    invoke-direct {p0, p1, p2, p3}, Lj$/util/stream/T;-><init>(Lj$/util/y;IZ)V
+    invoke-direct {p0, p1, p2, p3}, Lj$/util/stream/T;-><init>(Lj$/util/u;IZ)V
 
     return-void
 .end method
@@ -23,7 +23,7 @@
     throw v0
 .end method
 
-.method final H0(ILj$/util/stream/n3;)Lj$/util/stream/n3;
+.method final H0(ILj$/util/stream/m3;)Lj$/util/stream/m3;
     .registers 3
 
     new-instance p1, Ljava/lang/UnsupportedOperationException;
@@ -42,15 +42,15 @@
 
     if-nez v0, :cond_12
 
-    invoke-virtual {p0}, Lj$/util/stream/c;->J0()Lj$/util/y;
+    invoke-virtual {p0}, Lj$/util/stream/c;->J0()Lj$/util/u;
 
     move-result-object v0
 
-    invoke-static {v0}, Lj$/util/stream/T;->L0(Lj$/util/y;)Lj$/util/u;
+    invoke-static {v0}, Lj$/util/stream/T;->L0(Lj$/util/u;)Lj$/util/t;
 
     move-result-object v0
 
-    invoke-interface {v0, p1}, Lj$/util/u;->e(Lj$/util/function/f;)V
+    invoke-interface {v0, p1}, Lj$/util/t;->e(Lj$/util/function/f;)V
 
     goto :goto_15
 
@@ -70,15 +70,15 @@
 
     if-nez v0, :cond_12
 
-    invoke-virtual {p0}, Lj$/util/stream/c;->J0()Lj$/util/y;
+    invoke-virtual {p0}, Lj$/util/stream/c;->J0()Lj$/util/u;
 
     move-result-object v0
 
-    invoke-static {v0}, Lj$/util/stream/T;->L0(Lj$/util/y;)Lj$/util/u;
+    invoke-static {v0}, Lj$/util/stream/T;->L0(Lj$/util/u;)Lj$/util/t;
 
     move-result-object v0
 
-    invoke-interface {v0, p1}, Lj$/util/u;->e(Lj$/util/function/f;)V
+    invoke-interface {v0, p1}, Lj$/util/t;->e(Lj$/util/function/f;)V
 
     goto :goto_1e
 
@@ -93,7 +93,7 @@
     invoke-direct {v0, p1, v1}, Lj$/util/stream/k0;-><init>(Lj$/util/function/f;Z)V
 
     .line 2
-    invoke-virtual {p0, v0}, Lj$/util/stream/c;->x0(Lj$/util/stream/O4;)Ljava/lang/Object;
+    invoke-virtual {p0, v0}, Lj$/util/stream/c;->x0(Lj$/util/stream/N4;)Ljava/lang/Object;
 
     :goto_1e
     return-void

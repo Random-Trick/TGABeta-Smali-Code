@@ -482,7 +482,7 @@
 
     if-ne p2, v0, :cond_33
 
-    const p2, 0x7f0e11a2
+    const p2, 0x7f0e126e
 
     const-string v0, "TintShadows"
 
@@ -511,7 +511,7 @@
 
     if-ne p2, v0, :cond_1a8
 
-    const p2, 0x7f0e11a1
+    const p2, 0x7f0e126d
 
     const-string v0, "TintHighlights"
 
@@ -554,7 +554,7 @@
 
     if-ne p2, v0, :cond_78
 
-    const p2, 0x7f0e0651
+    const p2, 0x7f0e06a3
 
     const-string v0, "Enhance"
 
@@ -585,7 +585,7 @@
 
     if-ne p2, v0, :cond_96
 
-    const p2, 0x7f0e083a
+    const p2, 0x7f0e0895
 
     const-string v0, "Highlights"
 
@@ -614,7 +614,7 @@
 
     if-ne p2, v0, :cond_b2
 
-    const p2, 0x7f0e04ca
+    const p2, 0x7f0e0519
 
     const-string v0, "Contrast"
 
@@ -643,7 +643,7 @@
 
     if-ne p2, v0, :cond_ce
 
-    const p2, 0x7f0e06e6
+    const p2, 0x7f0e0738
 
     const-string v0, "Exposure"
 
@@ -672,7 +672,7 @@
 
     if-ne p2, v0, :cond_ea
 
-    const p2, 0x7f0e13cc
+    const p2, 0x7f0e149a
 
     const-string v0, "Warmth"
 
@@ -701,7 +701,7 @@
 
     if-ne p2, v0, :cond_106
 
-    const p2, 0x7f0e0f55
+    const p2, 0x7f0e100d
 
     const-string v0, "Saturation"
 
@@ -730,7 +730,7 @@
 
     if-ne p2, v0, :cond_122
 
-    const p2, 0x7f0e12b5
+    const p2, 0x7f0e1383
 
     const-string v0, "Vignette"
 
@@ -759,7 +759,7 @@
 
     if-ne p2, v0, :cond_13d
 
-    const p2, 0x7f0e1024
+    const p2, 0x7f0e10e2
 
     const-string v0, "Shadows"
 
@@ -788,7 +788,7 @@
 
     if-ne p2, v0, :cond_158
 
-    const p2, 0x7f0e0804
+    const p2, 0x7f0e085c
 
     const-string v0, "Grain"
 
@@ -817,7 +817,7 @@
 
     if-ne p2, v0, :cond_173
 
-    const p2, 0x7f0e105c
+    const p2, 0x7f0e111a
 
     const-string v0, "Sharpen"
 
@@ -846,7 +846,7 @@
 
     if-ne p2, v0, :cond_18e
 
-    const p2, 0x7f0e06e9
+    const p2, 0x7f0e073b
 
     const-string v0, "Fade"
 
@@ -875,7 +875,7 @@
 
     if-ne p2, v0, :cond_1a8
 
-    const p2, 0x7f0e108f
+    const p2, 0x7f0e114e
 
     const-string v0, "SoftenSkin"
 

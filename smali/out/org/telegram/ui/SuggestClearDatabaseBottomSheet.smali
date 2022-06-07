@@ -134,7 +134,7 @@
 
     const-string v9, "SuggestClearDatabaseTitle"
 
-    const v10, 0x7f0e1101
+    const v10, 0x7f0e11c5
 
     .line 56
     invoke-static {v9, v10}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -201,7 +201,7 @@
 
     const-string v7, "SuggestClearDatabaseMessage"
 
-    const v9, 0x7f0e1100
+    const v9, 0x7f0e11c4
 
     invoke-static {v7, v9, v6}, Lorg/telegram/messenger/LocaleController;->formatString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
@@ -271,7 +271,7 @@
 
     const-string v2, "ClearLocalDatabase"
 
-    const v4, 0x7f0e046d
+    const v4, 0x7f0e04b2
 
     .line 72
     invoke-static {v2, v4}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -430,7 +430,7 @@
 
     const-string v0, "LocalDatabaseClearTextTitle"
 
-    const v1, 0x7f0e0960
+    const v1, 0x7f0e09e7
 
     .line 81
     invoke-static {v0, v1}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -441,7 +441,7 @@
 
     const-string v0, "LocalDatabaseClearText"
 
-    const v1, 0x7f0e095f
+    const v1, 0x7f0e09e6
 
     .line 82
     invoke-static {v0, v1}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -452,7 +452,7 @@
 
     const-string v0, "Cancel"
 
-    const v1, 0x7f0e0331
+    const v1, 0x7f0e036d
 
     .line 83
     invoke-static {v0, v1}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -465,7 +465,7 @@
 
     const-string v0, "CacheClear"
 
-    const v1, 0x7f0e02fd
+    const v1, 0x7f0e0339
 
     .line 84
     invoke-static {v0, v1}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;

@@ -27,12 +27,12 @@
 .method constructor <init>(Lorg/telegram/ui/Components/ShareAlert;)V
     .registers 2
 
-    .line 1506
+    .line 1519
     iput-object p1, p0, Lorg/telegram/ui/Components/ShareAlert$18;->this$0:Lorg/telegram/ui/Components/ShareAlert;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1507
+    .line 1520
     new-instance p1, Landroid/graphics/Rect;
 
     invoke-direct {p1}, Landroid/graphics/Rect;-><init>()V
@@ -47,17 +47,17 @@
 .method public onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
     .registers 4
 
-    .line 1511
+    .line 1524
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getActionMasked()I
 
     move-result v0
 
     if-nez v0, :cond_3a
 
-    .line 1512
+    .line 1525
     iget-object v0, p0, Lorg/telegram/ui/Components/ShareAlert$18;->this$0:Lorg/telegram/ui/Components/ShareAlert;
 
-    invoke-static {v0}, Lorg/telegram/ui/Components/ShareAlert;->access$10500(Lorg/telegram/ui/Components/ShareAlert;)Lorg/telegram/ui/ActionBar/ActionBarPopupWindow;
+    invoke-static {v0}, Lorg/telegram/ui/Components/ShareAlert;->access$10300(Lorg/telegram/ui/Components/ShareAlert;)Lorg/telegram/ui/ActionBar/ActionBarPopupWindow;
 
     move-result-object v0
 
@@ -65,7 +65,7 @@
 
     iget-object v0, p0, Lorg/telegram/ui/Components/ShareAlert$18;->this$0:Lorg/telegram/ui/Components/ShareAlert;
 
-    invoke-static {v0}, Lorg/telegram/ui/Components/ShareAlert;->access$10500(Lorg/telegram/ui/Components/ShareAlert;)Lorg/telegram/ui/ActionBar/ActionBarPopupWindow;
+    invoke-static {v0}, Lorg/telegram/ui/Components/ShareAlert;->access$10300(Lorg/telegram/ui/Components/ShareAlert;)Lorg/telegram/ui/ActionBar/ActionBarPopupWindow;
 
     move-result-object v0
 
@@ -75,12 +75,12 @@
 
     if-eqz v0, :cond_3a
 
-    .line 1513
+    .line 1526
     iget-object v0, p0, Lorg/telegram/ui/Components/ShareAlert$18;->popupRect:Landroid/graphics/Rect;
 
     invoke-virtual {p1, v0}, Landroid/view/View;->getHitRect(Landroid/graphics/Rect;)V
 
-    .line 1514
+    .line 1527
     iget-object p1, p0, Lorg/telegram/ui/Components/ShareAlert$18;->popupRect:Landroid/graphics/Rect;
 
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getX()F
@@ -101,10 +101,10 @@
 
     if-nez p1, :cond_3a
 
-    .line 1515
+    .line 1528
     iget-object p1, p0, Lorg/telegram/ui/Components/ShareAlert$18;->this$0:Lorg/telegram/ui/Components/ShareAlert;
 
-    invoke-static {p1}, Lorg/telegram/ui/Components/ShareAlert;->access$10500(Lorg/telegram/ui/Components/ShareAlert;)Lorg/telegram/ui/ActionBar/ActionBarPopupWindow;
+    invoke-static {p1}, Lorg/telegram/ui/Components/ShareAlert;->access$10300(Lorg/telegram/ui/Components/ShareAlert;)Lorg/telegram/ui/ActionBar/ActionBarPopupWindow;
 
     move-result-object p1
 

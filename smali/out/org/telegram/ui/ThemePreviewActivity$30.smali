@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/ThemePreviewActivity;)V
     .registers 2
 
-    .line 3406
+    .line 3396
     iput-object p1, p0, Lorg/telegram/ui/ThemePreviewActivity$30;->this$0:Lorg/telegram/ui/ThemePreviewActivity;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -35,7 +35,7 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .registers 3
 
-    .line 3409
+    .line 3399
     iget-object p1, p0, Lorg/telegram/ui/ThemePreviewActivity$30;->this$0:Lorg/telegram/ui/ThemePreviewActivity;
 
     const/4 v0, 0x0

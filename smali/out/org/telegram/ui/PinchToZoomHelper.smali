@@ -654,7 +654,7 @@
 .end method
 
 .method private setFullImage(Lorg/telegram/messenger/MessageObject;)V
-    .registers 14
+    .registers 15
 
     if-nez p1, :cond_3
 
@@ -680,7 +680,7 @@
 
     move-result-object v3
 
-    if-eqz v3, :cond_31
+    if-eqz v3, :cond_32
 
     .line 200
     invoke-virtual {p1}, Lorg/telegram/messenger/MessageObject;->isWebpage()Z
@@ -691,12 +691,12 @@
 
     if-eqz v2, :cond_1c
 
-    const/4 v11, 0x1
+    const/4 v12, 0x1
 
     goto :goto_1d
 
     :cond_1c
-    const/4 v11, 0x0
+    const/4 v12, 0x0
 
     :goto_1d
     const/4 v0, 0x0
@@ -710,15 +710,17 @@
 
     const/4 v7, 0x0
 
-    aget v8, v1, v4
+    aget v1, v1, v4
 
-    const/4 v9, 0x0
+    int-to-long v8, v1
+
+    const/4 v10, 0x0
 
     move-object v4, v0
 
-    move-object v10, p1
+    move-object v11, p1
 
-    invoke-virtual/range {v2 .. v11}, Lorg/telegram/messenger/ImageReceiver;->setImage(Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Landroid/graphics/drawable/Drawable;ILjava/lang/String;Ljava/lang/Object;I)V
+    invoke-virtual/range {v2 .. v12}, Lorg/telegram/messenger/ImageReceiver;->setImage(Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Landroid/graphics/drawable/Drawable;JLjava/lang/String;Ljava/lang/Object;I)V
 
     .line 206
     iget-object p1, p0, Lorg/telegram/ui/PinchToZoomHelper;->fullImage:Lorg/telegram/messenger/ImageReceiver;
@@ -728,7 +730,7 @@
     invoke-virtual {p1, v0}, Lorg/telegram/messenger/ImageReceiver;->setCrossfadeAlpha(B)V
 
     .line 209
-    :cond_31
+    :cond_32
     invoke-direct {p0}, Lorg/telegram/ui/PinchToZoomHelper;->updateViewsLocation()Z
 
     return-void
@@ -1965,7 +1967,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f08009b
+    const v4, 0x7f08009c
 
     invoke-virtual {v3, v4, p2}, Landroid/widget/FrameLayout;->setTag(ILjava/lang/Object;)V
 

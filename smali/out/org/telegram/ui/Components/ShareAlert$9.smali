@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/ShareAlert;)V
     .registers 2
 
-    .line 1005
+    .line 1016
     iput-object p1, p0, Lorg/telegram/ui/Components/ShareAlert$9;->this$0:Lorg/telegram/ui/Components/ShareAlert;
 
     invoke-direct {p0}, Landroidx/recyclerview/widget/RecyclerView$OnScrollListener;-><init>()V
@@ -37,12 +37,12 @@
 
     if-eqz p3, :cond_10
 
-    .line 1009
+    .line 1020
     iget-object p1, p0, Lorg/telegram/ui/Components/ShareAlert$9;->this$0:Lorg/telegram/ui/Components/ShareAlert;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/ShareAlert;->access$6200(Lorg/telegram/ui/Components/ShareAlert;)V
 
-    .line 1010
+    .line 1021
     iget-object p1, p0, Lorg/telegram/ui/Components/ShareAlert$9;->this$0:Lorg/telegram/ui/Components/ShareAlert;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/ShareAlert;->access$2600(Lorg/telegram/ui/Components/ShareAlert;)I

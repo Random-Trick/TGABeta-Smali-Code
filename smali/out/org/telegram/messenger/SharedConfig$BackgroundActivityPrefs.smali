@@ -22,7 +22,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 1243
+    .line 1261
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -31,7 +31,7 @@
 .method static synthetic access$002(Landroid/content/SharedPreferences;)Landroid/content/SharedPreferences;
     .registers 1
 
-    .line 1243
+    .line 1261
     sput-object p0, Lorg/telegram/messenger/SharedConfig$BackgroundActivityPrefs;->prefs:Landroid/content/SharedPreferences;
 
     return-object p0
@@ -40,7 +40,7 @@
 .method public static getLastCheckedBackgroundActivity()J
     .registers 4
 
-    .line 1247
+    .line 1265
     sget-object v0, Lorg/telegram/messenger/SharedConfig$BackgroundActivityPrefs;->prefs:Landroid/content/SharedPreferences;
 
     const-string v1, "last_checked"
@@ -57,7 +57,7 @@
 .method public static setLastCheckedBackgroundActivity(J)V
     .registers 4
 
-    .line 1251
+    .line 1269
     sget-object v0, Lorg/telegram/messenger/SharedConfig$BackgroundActivityPrefs;->prefs:Landroid/content/SharedPreferences;
 
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;

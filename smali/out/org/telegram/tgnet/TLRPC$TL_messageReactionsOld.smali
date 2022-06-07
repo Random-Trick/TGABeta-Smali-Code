@@ -17,7 +17,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 23520
+    .line 23787
     invoke-direct {p0}, Lorg/telegram/tgnet/TLRPC$TL_messageReactions;-><init>()V
 
     return-void
@@ -28,7 +28,7 @@
 .method public readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
     .registers 11
 
-    .line 23538
+    .line 23805
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
@@ -50,7 +50,7 @@
     :cond_e
     const/4 v1, 0x0
 
-    .line 23539
+    .line 23806
     :goto_f
     iput-boolean v1, p0, Lorg/telegram/tgnet/TLRPC$MessageReactions;->min:Z
 
@@ -65,11 +65,11 @@
     :cond_17
     const/4 v0, 0x0
 
-    .line 23540
+    .line 23807
     :goto_18
     iput-boolean v0, p0, Lorg/telegram/tgnet/TLRPC$MessageReactions;->can_see_list:Z
 
-    .line 23541
+    .line 23808
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
@@ -84,7 +84,7 @@
 
     return-void
 
-    .line 23544
+    .line 23811
     :cond_28
     new-instance p1, Ljava/lang/RuntimeException;
 
@@ -104,7 +104,7 @@
 
     throw p1
 
-    .line 23548
+    .line 23815
     :cond_3a
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
@@ -115,7 +115,7 @@
     :goto_3f
     if-ge v5, v0, :cond_54
 
-    .line 23550
+    .line 23817
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v6
@@ -128,7 +128,7 @@
 
     return-void
 
-    .line 23554
+    .line 23821
     :cond_4c
     iget-object v7, p0, Lorg/telegram/tgnet/TLRPC$MessageReactions;->results:Ljava/util/ArrayList;
 
@@ -138,7 +138,7 @@
 
     goto :goto_3f
 
-    .line 23556
+    .line 23823
     :cond_54
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$MessageReactions;->flags:I
 
@@ -146,7 +146,7 @@
 
     if-eqz v0, :cond_8e
 
-    .line 23557
+    .line 23824
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
@@ -157,7 +157,7 @@
 
     return-void
 
-    .line 23560
+    .line 23827
     :cond_63
     new-instance p1, Ljava/lang/RuntimeException;
 
@@ -177,7 +177,7 @@
 
     throw p1
 
-    .line 23564
+    .line 23831
     :cond_75
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
@@ -186,7 +186,7 @@
     :goto_79
     if-ge v2, v0, :cond_8e
 
-    .line 23566
+    .line 23833
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v1
@@ -199,7 +199,7 @@
 
     return-void
 
-    .line 23570
+    .line 23837
     :cond_86
     iget-object v3, p0, Lorg/telegram/tgnet/TLRPC$MessageReactions;->recent_reactions:Ljava/util/ArrayList;
 
@@ -216,12 +216,12 @@
 .method public serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
     .registers 7
 
-    .line 23576
+    .line 23843
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_messageReactionsOld;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 23577
+    .line 23844
     iget-boolean v0, p0, Lorg/telegram/tgnet/TLRPC$MessageReactions;->min:Z
 
     if-eqz v0, :cond_e
@@ -240,7 +240,7 @@
     :goto_12
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$MessageReactions;->flags:I
 
-    .line 23578
+    .line 23845
     iget-boolean v1, p0, Lorg/telegram/tgnet/TLRPC$MessageReactions;->can_see_list:Z
 
     if-eqz v1, :cond_1b
@@ -255,22 +255,22 @@
     :goto_1d
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$MessageReactions;->flags:I
 
-    .line 23579
+    .line 23846
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
     const v0, 0x1cb5c415
 
-    .line 23580
+    .line 23847
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 23581
+    .line 23848
     iget-object v1, p0, Lorg/telegram/tgnet/TLRPC$MessageReactions;->results:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
     move-result v1
 
-    .line 23582
+    .line 23849
     invoke-virtual {p1, v1}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
     const/4 v2, 0x0
@@ -280,7 +280,7 @@
     :goto_33
     if-ge v3, v1, :cond_43
 
-    .line 23584
+    .line 23851
     iget-object v4, p0, Lorg/telegram/tgnet/TLRPC$MessageReactions;->results:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -295,7 +295,7 @@
 
     goto :goto_33
 
-    .line 23586
+    .line 23853
     :cond_43
     iget v1, p0, Lorg/telegram/tgnet/TLRPC$MessageReactions;->flags:I
 
@@ -303,23 +303,23 @@
 
     if-eqz v1, :cond_65
 
-    .line 23587
+    .line 23854
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 23588
+    .line 23855
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$MessageReactions;->recent_reactions:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
-    .line 23589
+    .line 23856
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
     :goto_55
     if-ge v2, v0, :cond_65
 
-    .line 23591
+    .line 23858
     iget-object v1, p0, Lorg/telegram/tgnet/TLRPC$MessageReactions;->recent_reactions:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;

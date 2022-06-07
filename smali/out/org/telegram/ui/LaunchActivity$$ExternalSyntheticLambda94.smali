@@ -2,58 +2,40 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lorg/telegram/ui/DialogsActivity$DialogsActivityDelegate;
+.implements Lorg/telegram/ui/Components/RecyclerListView$OnItemLongClickListener;
 
 
 # instance fields
 .field public final synthetic f$0:Lorg/telegram/ui/LaunchActivity;
 
-.field public final synthetic f$1:Ljava/lang/String;
-
-.field public final synthetic f$2:I
-
-.field public final synthetic f$3:Lorg/telegram/tgnet/TLRPC$TL_contacts_resolvedPeer;
+.field public final synthetic f$1:Landroidx/recyclerview/widget/ItemTouchHelper;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lorg/telegram/ui/LaunchActivity;Ljava/lang/String;ILorg/telegram/tgnet/TLRPC$TL_contacts_resolvedPeer;)V
-    .registers 5
+.method public synthetic constructor <init>(Lorg/telegram/ui/LaunchActivity;Landroidx/recyclerview/widget/ItemTouchHelper;)V
+    .registers 3
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lorg/telegram/ui/LaunchActivity$$ExternalSyntheticLambda94;->f$0:Lorg/telegram/ui/LaunchActivity;
 
-    iput-object p2, p0, Lorg/telegram/ui/LaunchActivity$$ExternalSyntheticLambda94;->f$1:Ljava/lang/String;
-
-    iput p3, p0, Lorg/telegram/ui/LaunchActivity$$ExternalSyntheticLambda94;->f$2:I
-
-    iput-object p4, p0, Lorg/telegram/ui/LaunchActivity$$ExternalSyntheticLambda94;->f$3:Lorg/telegram/tgnet/TLRPC$TL_contacts_resolvedPeer;
+    iput-object p2, p0, Lorg/telegram/ui/LaunchActivity$$ExternalSyntheticLambda94;->f$1:Landroidx/recyclerview/widget/ItemTouchHelper;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final didSelectDialogs(Lorg/telegram/ui/DialogsActivity;Ljava/util/ArrayList;Ljava/lang/CharSequence;Z)V
-    .registers 13
+.method public final onItemClick(Landroid/view/View;I)Z
+    .registers 5
 
     iget-object v0, p0, Lorg/telegram/ui/LaunchActivity$$ExternalSyntheticLambda94;->f$0:Lorg/telegram/ui/LaunchActivity;
 
-    iget-object v1, p0, Lorg/telegram/ui/LaunchActivity$$ExternalSyntheticLambda94;->f$1:Ljava/lang/String;
+    iget-object v1, p0, Lorg/telegram/ui/LaunchActivity$$ExternalSyntheticLambda94;->f$1:Landroidx/recyclerview/widget/ItemTouchHelper;
 
-    iget v2, p0, Lorg/telegram/ui/LaunchActivity$$ExternalSyntheticLambda94;->f$2:I
+    invoke-static {v0, v1, p1, p2}, Lorg/telegram/ui/LaunchActivity;->$r8$lambda$uLuQ9FTM6Zu0kQ7YLHl6AhOCpsI(Lorg/telegram/ui/LaunchActivity;Landroidx/recyclerview/widget/ItemTouchHelper;Landroid/view/View;I)Z
 
-    iget-object v3, p0, Lorg/telegram/ui/LaunchActivity$$ExternalSyntheticLambda94;->f$3:Lorg/telegram/tgnet/TLRPC$TL_contacts_resolvedPeer;
+    move-result p1
 
-    move-object v4, p1
-
-    move-object v5, p2
-
-    move-object v6, p3
-
-    move v7, p4
-
-    invoke-static/range {v0 .. v7}, Lorg/telegram/ui/LaunchActivity;->$r8$lambda$1qz5uXHqEwZFM0vxg6nvEyFOYI4(Lorg/telegram/ui/LaunchActivity;Ljava/lang/String;ILorg/telegram/tgnet/TLRPC$TL_contacts_resolvedPeer;Lorg/telegram/ui/DialogsActivity;Ljava/util/ArrayList;Ljava/lang/CharSequence;Z)V
-
-    return-void
+    return p1
 .end method

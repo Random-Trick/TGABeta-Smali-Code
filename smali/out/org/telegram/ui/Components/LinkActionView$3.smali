@@ -31,7 +31,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/LinkActionView;Landroid/view/View;Landroid/widget/FrameLayout;Landroid/view/ViewTreeObserver$OnPreDrawListener;)V
     .registers 5
 
-    .line 287
+    .line 290
     iput-object p1, p0, Lorg/telegram/ui/Components/LinkActionView$3;->this$0:Lorg/telegram/ui/Components/LinkActionView;
 
     iput-object p2, p0, Lorg/telegram/ui/Components/LinkActionView$3;->val$dimView:Landroid/view/View;
@@ -50,14 +50,14 @@
 .method public onDismiss()V
     .registers 4
 
-    .line 290
+    .line 293
     iget-object v0, p0, Lorg/telegram/ui/Components/LinkActionView$3;->this$0:Lorg/telegram/ui/Components/LinkActionView;
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Lorg/telegram/ui/Components/LinkActionView;->access$502(Lorg/telegram/ui/Components/LinkActionView;Lorg/telegram/ui/ActionBar/ActionBarPopupWindow;)Lorg/telegram/ui/ActionBar/ActionBarPopupWindow;
 
-    .line 291
+    .line 294
     iget-object v0, p0, Lorg/telegram/ui/Components/LinkActionView$3;->val$dimView:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
@@ -66,7 +66,7 @@
 
     invoke-virtual {v0}, Landroid/view/ViewPropertyAnimator;->cancel()V
 
-    .line 292
+    .line 295
     iget-object v0, p0, Lorg/telegram/ui/Components/LinkActionView$3;->val$dimView:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;

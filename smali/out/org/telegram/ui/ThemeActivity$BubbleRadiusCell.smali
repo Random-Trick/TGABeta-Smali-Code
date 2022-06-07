@@ -30,26 +30,26 @@
 .method public constructor <init>(Lorg/telegram/ui/ThemeActivity;Landroid/content/Context;)V
     .registers 10
 
-    .line 333
+    .line 332
     iput-object p1, p0, Lorg/telegram/ui/ThemeActivity$BubbleRadiusCell;->this$0:Lorg/telegram/ui/ThemeActivity;
 
-    .line 334
+    .line 333
     invoke-direct {p0, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
     const/4 v0, 0x0
 
-    .line 328
+    .line 327
     iput v0, p0, Lorg/telegram/ui/ThemeActivity$BubbleRadiusCell;->startRadius:I
 
     const/16 v1, 0x11
 
-    .line 329
+    .line 328
     iput v1, p0, Lorg/telegram/ui/ThemeActivity$BubbleRadiusCell;->endRadius:I
 
-    .line 336
+    .line 335
     invoke-virtual {p0, v0}, Landroid/widget/FrameLayout;->setWillNotDraw(Z)V
 
-    .line 338
+    .line 337
     new-instance v0, Landroid/text/TextPaint;
 
     const/4 v1, 0x1
@@ -60,7 +60,7 @@
 
     const/high16 v2, 0x41800000    # 16.0f
 
-    .line 339
+    .line 338
     invoke-static {v2}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v2
@@ -69,14 +69,14 @@
 
     invoke-virtual {v0, v2}, Landroid/text/TextPaint;->setTextSize(F)V
 
-    .line 341
+    .line 340
     new-instance v0, Lorg/telegram/ui/Components/SeekBarView;
 
     invoke-direct {v0, p2}, Lorg/telegram/ui/Components/SeekBarView;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lorg/telegram/ui/ThemeActivity$BubbleRadiusCell;->sizeBar:Lorg/telegram/ui/Components/SeekBarView;
 
-    .line 342
+    .line 341
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/SeekBarView;->setReportChanges(Z)V
 
     .line 343
@@ -124,7 +124,7 @@
 .method static synthetic access$1100(Lorg/telegram/ui/ThemeActivity$BubbleRadiusCell;)Lorg/telegram/ui/Components/SeekBarView;
     .registers 1
 
-    .line 325
+    .line 324
     iget-object p0, p0, Lorg/telegram/ui/ThemeActivity$BubbleRadiusCell;->sizeBar:Lorg/telegram/ui/Components/SeekBarView;
 
     return-object p0
@@ -133,7 +133,7 @@
 .method static synthetic access$800(Lorg/telegram/ui/ThemeActivity$BubbleRadiusCell;)I
     .registers 1
 
-    .line 325
+    .line 324
     iget p0, p0, Lorg/telegram/ui/ThemeActivity$BubbleRadiusCell;->startRadius:I
 
     return p0
@@ -142,7 +142,7 @@
 .method static synthetic access$900(Lorg/telegram/ui/ThemeActivity$BubbleRadiusCell;)I
     .registers 1
 
-    .line 325
+    .line 324
     iget p0, p0, Lorg/telegram/ui/ThemeActivity$BubbleRadiusCell;->endRadius:I
 
     return p0

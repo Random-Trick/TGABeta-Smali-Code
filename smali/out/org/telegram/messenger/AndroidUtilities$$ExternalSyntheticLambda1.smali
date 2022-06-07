@@ -2,32 +2,38 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/content/DialogInterface$OnClickListener;
+.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
 
 
 # instance fields
-.field public final synthetic f$0:Lorg/telegram/ui/ActionBar/BaseFragment;
+.field public final synthetic f$0:Lorg/telegram/messenger/AndroidUtilities$IntColorCallback;
+
+.field public final synthetic f$1:Landroid/view/Window;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lorg/telegram/ui/ActionBar/BaseFragment;)V
-    .registers 2
+.method public synthetic constructor <init>(Lorg/telegram/messenger/AndroidUtilities$IntColorCallback;Landroid/view/Window;)V
+    .registers 3
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lorg/telegram/messenger/AndroidUtilities$$ExternalSyntheticLambda1;->f$0:Lorg/telegram/ui/ActionBar/BaseFragment;
+    iput-object p1, p0, Lorg/telegram/messenger/AndroidUtilities$$ExternalSyntheticLambda1;->f$0:Lorg/telegram/messenger/AndroidUtilities$IntColorCallback;
+
+    iput-object p2, p0, Lorg/telegram/messenger/AndroidUtilities$$ExternalSyntheticLambda1;->f$1:Landroid/view/Window;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/content/DialogInterface;I)V
+.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
     .registers 4
 
-    iget-object v0, p0, Lorg/telegram/messenger/AndroidUtilities$$ExternalSyntheticLambda1;->f$0:Lorg/telegram/ui/ActionBar/BaseFragment;
+    iget-object v0, p0, Lorg/telegram/messenger/AndroidUtilities$$ExternalSyntheticLambda1;->f$0:Lorg/telegram/messenger/AndroidUtilities$IntColorCallback;
 
-    invoke-static {v0, p1, p2}, Lorg/telegram/messenger/AndroidUtilities;->$r8$lambda$ZUsEWDJkOqFkVRrfxvldFsVFPeg(Lorg/telegram/ui/ActionBar/BaseFragment;Landroid/content/DialogInterface;I)V
+    iget-object v1, p0, Lorg/telegram/messenger/AndroidUtilities$$ExternalSyntheticLambda1;->f$1:Landroid/view/Window;
+
+    invoke-static {v0, v1, p1}, Lorg/telegram/messenger/AndroidUtilities;->$r8$lambda$JPLyppQg8vcUXbtH63LYD8tRcls(Lorg/telegram/messenger/AndroidUtilities$IntColorCallback;Landroid/view/Window;Landroid/animation/ValueAnimator;)V
 
     return-void
 .end method

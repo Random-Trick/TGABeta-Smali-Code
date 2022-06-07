@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;Landroid/content/Context;Lorg/telegram/ui/ArticleViewer;)V
     .registers 4
 
-    .line 8386
+    .line 8387
     iput-object p1, p0, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell$1;->this$1:Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;
 
     invoke-direct {p0, p2}, Landroidx/viewpager/widget/ViewPager;-><init>(Landroid/content/Context;)V
@@ -35,7 +35,7 @@
 .method public onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
     .registers 4
 
-    .line 8394
+    .line 8395
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell$1;->this$1:Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;
 
     iget-object v0, v0, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;->this$0:Lorg/telegram/ui/ArticleViewer;
@@ -48,14 +48,14 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ArticleViewer$WindowView;->requestDisallowInterceptTouchEvent(Z)V
 
-    .line 8395
+    .line 8396
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell$1;->this$1:Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;
 
     iget-object v0, v0, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     invoke-virtual {v0}, Lorg/telegram/ui/ArticleViewer;->cancelCheckLongPress()V
 
-    .line 8396
+    .line 8397
     invoke-super {p0, p1}, Landroidx/viewpager/widget/ViewPager;->onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
 
     move-result p1
@@ -66,7 +66,7 @@
 .method public onTouchEvent(Landroid/view/MotionEvent;)Z
     .registers 2
 
-    .line 8389
+    .line 8390
     invoke-super {p0, p1}, Landroidx/viewpager/widget/ViewPager;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
     move-result p1

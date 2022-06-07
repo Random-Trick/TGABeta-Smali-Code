@@ -107,7 +107,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f07036e
+    const v1, 0x7f070385
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -353,14 +353,14 @@
 
     if-eqz p5, :cond_108
 
-    const p5, 0x7f0e0137
+    const p5, 0x7f0e015f
 
     const-string v5, "AddToChannel"
 
     goto :goto_10d
 
     :cond_108
-    const p5, 0x7f0e013c
+    const p5, 0x7f0e0164
 
     const-string v5, "AddToGroup"
 
@@ -370,7 +370,7 @@
 
     move-result-object p5
 
-    const v5, 0x7f070052
+    const v5, 0x7f0702d0
 
     invoke-virtual {p1, p5, v5}, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;->setTextAndIcon(Ljava/lang/CharSequence;I)V
 
@@ -407,7 +407,7 @@
 
     invoke-virtual {p1, p5}, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;->setSelectorColor(I)V
 
-    const p5, 0x7f0e0fdc
+    const p5, 0x7f0e1099
 
     const-string v1, "SendMessage"
 
@@ -416,7 +416,7 @@
 
     move-result-object p5
 
-    const v1, 0x7f070291
+    const v1, 0x7f070276
 
     invoke-virtual {p1, p5, v1}, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;->setTextAndIcon(Ljava/lang/CharSequence;I)V
 
@@ -457,7 +457,7 @@
 
     invoke-virtual {p1, p2}, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;->setSelectorColor(I)V
 
-    const p2, 0x7f0e05d4
+    const p2, 0x7f0e0625
 
     const-string p3, "DismissRequest"
 
@@ -466,7 +466,7 @@
 
     move-result-object p2
 
-    const p3, 0x7f070050
+    const p3, 0x7f0702c3
 
     invoke-virtual {p1, p2, p3}, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;->setTextAndIcon(Ljava/lang/CharSequence;I)V
 

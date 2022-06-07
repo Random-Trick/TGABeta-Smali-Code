@@ -25,7 +25,7 @@
 .method constructor <init>(Lorg/telegram/ui/ThemePreviewActivity;)V
     .registers 2
 
-    .line 1946
+    .line 1940
     iput-object p1, p0, Lorg/telegram/ui/ThemePreviewActivity$24;->this$0:Lorg/telegram/ui/ThemePreviewActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -50,7 +50,7 @@
 .method public onPageSelected(I)V
     .registers 2
 
-    .line 1954
+    .line 1948
     iget-object p1, p0, Lorg/telegram/ui/ThemePreviewActivity$24;->this$0:Lorg/telegram/ui/ThemePreviewActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/ThemePreviewActivity;->access$6600(Lorg/telegram/ui/ThemePreviewActivity;)Landroid/view/View;

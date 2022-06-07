@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/ChatAttachAlertPhotoLayout$PhotoAttachAdapter;)V
     .registers 2
 
-    .line 3303
+    .line 3294
     iput-object p1, p0, Lorg/telegram/ui/Components/ChatAttachAlertPhotoLayout$PhotoAttachAdapter$1;->this$1:Lorg/telegram/ui/Components/ChatAttachAlertPhotoLayout$PhotoAttachAdapter;
 
     invoke-direct {p0}, Landroid/view/ViewOutlineProvider;-><init>()V
@@ -35,12 +35,12 @@
 .method public getOutline(Landroid/view/View;Landroid/graphics/Outline;)V
     .registers 10
 
-    .line 3306
+    .line 3297
     move-object v0, p1
 
     check-cast v0, Lorg/telegram/ui/Cells/PhotoAttachPhotoCell;
 
-    .line 3307
+    .line 3298
     invoke-virtual {v0}, Landroid/widget/FrameLayout;->getTag()Ljava/lang/Object;
 
     move-result-object v0
@@ -51,10 +51,10 @@
 
     move-result v0
 
-    .line 3308
+    .line 3299
     iget-object v1, p0, Lorg/telegram/ui/Components/ChatAttachAlertPhotoLayout$PhotoAttachAdapter$1;->this$1:Lorg/telegram/ui/Components/ChatAttachAlertPhotoLayout$PhotoAttachAdapter;
 
-    invoke-static {v1}, Lorg/telegram/ui/Components/ChatAttachAlertPhotoLayout$PhotoAttachAdapter;->access$5200(Lorg/telegram/ui/Components/ChatAttachAlertPhotoLayout$PhotoAttachAdapter;)Z
+    invoke-static {v1}, Lorg/telegram/ui/Components/ChatAttachAlertPhotoLayout$PhotoAttachAdapter;->access$5100(Lorg/telegram/ui/Components/ChatAttachAlertPhotoLayout$PhotoAttachAdapter;)Z
 
     move-result v1
 
@@ -64,7 +64,7 @@
 
     iget-object v1, v1, Lorg/telegram/ui/Components/ChatAttachAlertPhotoLayout$PhotoAttachAdapter;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertPhotoLayout;
 
-    invoke-static {v1}, Lorg/telegram/ui/Components/ChatAttachAlertPhotoLayout;->access$5300(Lorg/telegram/ui/Components/ChatAttachAlertPhotoLayout;)Lorg/telegram/messenger/MediaController$AlbumEntry;
+    invoke-static {v1}, Lorg/telegram/ui/Components/ChatAttachAlertPhotoLayout;->access$5200(Lorg/telegram/ui/Components/ChatAttachAlertPhotoLayout;)Lorg/telegram/messenger/MediaController$AlbumEntry;
 
     move-result-object v1
 
@@ -72,7 +72,7 @@
 
     iget-object v2, v2, Lorg/telegram/ui/Components/ChatAttachAlertPhotoLayout$PhotoAttachAdapter;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertPhotoLayout;
 
-    invoke-static {v2}, Lorg/telegram/ui/Components/ChatAttachAlertPhotoLayout;->access$5400(Lorg/telegram/ui/Components/ChatAttachAlertPhotoLayout;)Lorg/telegram/messenger/MediaController$AlbumEntry;
+    invoke-static {v2}, Lorg/telegram/ui/Components/ChatAttachAlertPhotoLayout;->access$5300(Lorg/telegram/ui/Components/ChatAttachAlertPhotoLayout;)Lorg/telegram/messenger/MediaController$AlbumEntry;
 
     move-result-object v2
 
@@ -85,7 +85,7 @@
 
     if-nez v0, :cond_4f
 
-    .line 3312
+    .line 3303
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlertPhotoLayout$PhotoAttachAdapter$1;->this$1:Lorg/telegram/ui/Components/ChatAttachAlertPhotoLayout$PhotoAttachAdapter;
 
     iget-object v0, v0, Lorg/telegram/ui/Components/ChatAttachAlertPhotoLayout$PhotoAttachAdapter;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertPhotoLayout;
@@ -104,7 +104,7 @@
 
     const/4 v3, 0x0
 
-    .line 3313
+    .line 3304
     invoke-virtual {p1}, Landroid/view/View;->getMeasuredWidth()I
 
     move-result v1
@@ -125,13 +125,13 @@
 
     goto :goto_87
 
-    .line 3314
+    .line 3305
     :cond_4f
     iget-object v2, p0, Lorg/telegram/ui/Components/ChatAttachAlertPhotoLayout$PhotoAttachAdapter$1;->this$1:Lorg/telegram/ui/Components/ChatAttachAlertPhotoLayout$PhotoAttachAdapter;
 
     iget-object v2, v2, Lorg/telegram/ui/Components/ChatAttachAlertPhotoLayout$PhotoAttachAdapter;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertPhotoLayout;
 
-    invoke-static {v2}, Lorg/telegram/ui/Components/ChatAttachAlertPhotoLayout;->access$1400(Lorg/telegram/ui/Components/ChatAttachAlertPhotoLayout;)I
+    invoke-static {v2}, Lorg/telegram/ui/Components/ChatAttachAlertPhotoLayout;->access$1300(Lorg/telegram/ui/Components/ChatAttachAlertPhotoLayout;)I
 
     move-result v2
 
@@ -139,7 +139,7 @@
 
     if-ne v0, v2, :cond_7b
 
-    .line 3315
+    .line 3306
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlertPhotoLayout$PhotoAttachAdapter$1;->this$1:Lorg/telegram/ui/Components/ChatAttachAlertPhotoLayout$PhotoAttachAdapter;
 
     iget-object v0, v0, Lorg/telegram/ui/Components/ChatAttachAlertPhotoLayout$PhotoAttachAdapter;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertPhotoLayout;
@@ -158,7 +158,7 @@
 
     const/4 v3, 0x0
 
-    .line 3316
+    .line 3307
     invoke-virtual {p1}, Landroid/view/View;->getMeasuredWidth()I
 
     move-result v4
@@ -177,7 +177,7 @@
 
     goto :goto_87
 
-    .line 3318
+    .line 3309
     :cond_7b
     invoke-virtual {p1}, Landroid/view/View;->getMeasuredWidth()I
 

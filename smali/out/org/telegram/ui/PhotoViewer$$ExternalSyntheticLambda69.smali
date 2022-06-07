@@ -8,18 +8,18 @@
 # instance fields
 .field public final synthetic f$0:Lorg/telegram/ui/PhotoViewer;
 
-.field public final synthetic f$1:Lorg/telegram/tgnet/TLRPC$Message;
+.field public final synthetic f$1:Lorg/telegram/tgnet/TLObject;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lorg/telegram/ui/PhotoViewer;Lorg/telegram/tgnet/TLRPC$Message;)V
+.method public synthetic constructor <init>(Lorg/telegram/ui/PhotoViewer;Lorg/telegram/tgnet/TLObject;)V
     .registers 3
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lorg/telegram/ui/PhotoViewer$$ExternalSyntheticLambda69;->f$0:Lorg/telegram/ui/PhotoViewer;
 
-    iput-object p2, p0, Lorg/telegram/ui/PhotoViewer$$ExternalSyntheticLambda69;->f$1:Lorg/telegram/tgnet/TLRPC$Message;
+    iput-object p2, p0, Lorg/telegram/ui/PhotoViewer$$ExternalSyntheticLambda69;->f$1:Lorg/telegram/tgnet/TLObject;
 
     return-void
 .end method
@@ -31,9 +31,9 @@
 
     iget-object v0, p0, Lorg/telegram/ui/PhotoViewer$$ExternalSyntheticLambda69;->f$0:Lorg/telegram/ui/PhotoViewer;
 
-    iget-object v1, p0, Lorg/telegram/ui/PhotoViewer$$ExternalSyntheticLambda69;->f$1:Lorg/telegram/tgnet/TLRPC$Message;
+    iget-object v1, p0, Lorg/telegram/ui/PhotoViewer$$ExternalSyntheticLambda69;->f$1:Lorg/telegram/tgnet/TLObject;
 
-    invoke-static {v0, v1}, Lorg/telegram/ui/PhotoViewer;->$r8$lambda$-kthS6T6mr9wXyG11qzsuVsJWzA(Lorg/telegram/ui/PhotoViewer;Lorg/telegram/tgnet/TLRPC$Message;)Ljava/io/File;
+    invoke-static {v0, v1}, Lorg/telegram/ui/PhotoViewer;->$r8$lambda$wMuXxiRZCmWJPLIrvDl_o33ZVxU(Lorg/telegram/ui/PhotoViewer;Lorg/telegram/tgnet/TLObject;)Ljava/io/File;
 
     move-result-object v0
 

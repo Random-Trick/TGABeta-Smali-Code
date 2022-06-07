@@ -1,91 +1,124 @@
-.class abstract Lj$/util/stream/k1;
-.super Ljava/lang/Object;
+.class final enum Lj$/util/stream/k1;
+.super Ljava/lang/Enum;
 
-# interfaces
-.implements Lj$/util/stream/n3;
+
+# static fields
+.field public static final enum ALL:Lj$/util/stream/k1;
+
+.field public static final enum ANY:Lj$/util/stream/k1;
+
+.field public static final enum NONE:Lj$/util/stream/k1;
+
+.field private static final synthetic c:[Lj$/util/stream/k1;
 
 
 # instance fields
-.field a:Z
+.field private final a:Z
 
-.field b:Z
+.field private final b:Z
 
 
 # direct methods
-.method constructor <init>(Lj$/util/stream/l1;)V
-    .registers 2
+.method static constructor <clinit>()V
+    .registers 7
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lj$/util/stream/k1;
 
-    invoke-static {p1}, Lj$/util/stream/l1;->b(Lj$/util/stream/l1;)Z
+    const-string v1, "ANY"
 
-    move-result p1
+    const/4 v2, 0x0
 
-    xor-int/lit8 p1, p1, 0x1
+    const/4 v3, 0x1
 
-    iput-boolean p1, p0, Lj$/util/stream/k1;->b:Z
+    invoke-direct {v0, v1, v2, v3, v3}, Lj$/util/stream/k1;-><init>(Ljava/lang/String;IZZ)V
+
+    sput-object v0, Lj$/util/stream/k1;->ANY:Lj$/util/stream/k1;
+
+    new-instance v1, Lj$/util/stream/k1;
+
+    const-string v4, "ALL"
+
+    invoke-direct {v1, v4, v3, v2, v2}, Lj$/util/stream/k1;-><init>(Ljava/lang/String;IZZ)V
+
+    sput-object v1, Lj$/util/stream/k1;->ALL:Lj$/util/stream/k1;
+
+    new-instance v4, Lj$/util/stream/k1;
+
+    const-string v5, "NONE"
+
+    const/4 v6, 0x2
+
+    invoke-direct {v4, v5, v6, v3, v2}, Lj$/util/stream/k1;-><init>(Ljava/lang/String;IZZ)V
+
+    sput-object v4, Lj$/util/stream/k1;->NONE:Lj$/util/stream/k1;
+
+    const/4 v5, 0x3
+
+    new-array v5, v5, [Lj$/util/stream/k1;
+
+    aput-object v0, v5, v2
+
+    aput-object v1, v5, v3
+
+    aput-object v4, v5, v6
+
+    sput-object v5, Lj$/util/stream/k1;->c:[Lj$/util/stream/k1;
 
     return-void
 .end method
 
+.method private constructor <init>(Ljava/lang/String;IZZ)V
+    .registers 5
 
-# virtual methods
-.method public synthetic accept(D)V
-    .registers 3
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    invoke-static {p0}, Lj$/util/stream/p1;->f(Lj$/util/stream/n3;)V
+    iput-boolean p3, p0, Lj$/util/stream/k1;->a:Z
 
-    const/4 p1, 0x0
+    iput-boolean p4, p0, Lj$/util/stream/k1;->b:Z
 
-    throw p1
+    return-void
 .end method
 
-.method public synthetic accept(I)V
-    .registers 2
-
-    invoke-static {p0}, Lj$/util/stream/p1;->d(Lj$/util/stream/n3;)V
-
-    const/4 p1, 0x0
-
-    throw p1
-.end method
-
-.method public synthetic accept(J)V
-    .registers 3
-
-    invoke-static {p0}, Lj$/util/stream/p1;->e(Lj$/util/stream/n3;)V
-
-    const/4 p1, 0x0
-
-    throw p1
-.end method
-
-.method public synthetic andThen(Lj$/util/function/Consumer;)Lj$/util/function/Consumer;
-    .registers 2
-
-    invoke-static {p0, p1}, Lj$/util/function/Consumer$-CC;->$default$andThen(Lj$/util/function/Consumer;Lj$/util/function/Consumer;)Lj$/util/function/Consumer;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public synthetic m()V
+.method static synthetic a(Lj$/util/stream/k1;)Z
     .registers 1
 
-    return-void
+    iget-boolean p0, p0, Lj$/util/stream/k1;->a:Z
+
+    return p0
 .end method
 
-.method public synthetic n(J)V
-    .registers 3
+.method static synthetic b(Lj$/util/stream/k1;)Z
+    .registers 1
 
-    return-void
+    iget-boolean p0, p0, Lj$/util/stream/k1;->b:Z
+
+    return p0
 .end method
 
-.method public o()Z
+.method public static valueOf(Ljava/lang/String;)Lj$/util/stream/k1;
     .registers 2
 
-    iget-boolean v0, p0, Lj$/util/stream/k1;->a:Z
+    const-class v0, Lj$/util/stream/k1;
 
-    return v0
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Lj$/util/stream/k1;
+
+    return-object p0
+.end method
+
+.method public static values()[Lj$/util/stream/k1;
+    .registers 1
+
+    sget-object v0, Lj$/util/stream/k1;->c:[Lj$/util/stream/k1;
+
+    invoke-virtual {v0}, [Lj$/util/stream/k1;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lj$/util/stream/k1;
+
+    return-object v0
 .end method

@@ -24,7 +24,7 @@
 .method constructor <init>(Lorg/telegram/ui/ArticleViewer;Z)V
     .registers 3
 
-    .line 3759
+    .line 3760
     iput-object p1, p0, Lorg/telegram/ui/ArticleViewer$21;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     iput-boolean p2, p0, Lorg/telegram/ui/ArticleViewer$21;->val$show:Z
@@ -39,12 +39,12 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .registers 3
 
-    .line 3762
+    .line 3763
     iget-boolean p1, p0, Lorg/telegram/ui/ArticleViewer$21;->val$show:Z
 
     if-nez p1, :cond_e
 
-    .line 3763
+    .line 3764
     iget-object p1, p0, Lorg/telegram/ui/ArticleViewer$21;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     invoke-static {p1}, Lorg/telegram/ui/ArticleViewer;->access$10100(Lorg/telegram/ui/ArticleViewer;)Landroid/widget/FrameLayout;

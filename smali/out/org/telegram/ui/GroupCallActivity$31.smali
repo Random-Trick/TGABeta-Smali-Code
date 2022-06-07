@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/GroupCallActivity;Landroid/content/Context;)V
     .registers 3
 
-    .line 4900
+    .line 4905
     iput-object p1, p0, Lorg/telegram/ui/GroupCallActivity$31;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-direct {p0, p2}, Landroid/view/View;-><init>(Landroid/content/Context;)V
@@ -35,7 +35,7 @@
 .method public setAlpha(F)V
     .registers 3
 
-    .line 4903
+    .line 4908
     invoke-virtual {p0}, Landroid/view/View;->getAlpha()F
 
     move-result v0
@@ -44,10 +44,10 @@
 
     if-eqz v0, :cond_10
 
-    .line 4904
+    .line 4909
     invoke-super {p0, p1}, Landroid/view/View;->setAlpha(F)V
 
-    .line 4905
+    .line 4910
     iget-object p1, p0, Lorg/telegram/ui/GroupCallActivity$31;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/GroupCallActivity;->access$17400(Lorg/telegram/ui/GroupCallActivity;)V

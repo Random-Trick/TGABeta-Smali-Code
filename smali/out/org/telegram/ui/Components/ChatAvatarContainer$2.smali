@@ -1,14 +1,11 @@
 .class Lorg/telegram/ui/Components/ChatAvatarContainer$2;
-.super Ljava/lang/Object;
+.super Lorg/telegram/ui/ActionBar/SimpleTextView;
 .source "ChatAvatarContainer.java"
-
-# interfaces
-.implements Lorg/telegram/ui/Components/AutoDeletePopupWrapper$Callback;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lorg/telegram/ui/Components/ChatAvatarContainer;->openSetTimer()Z
+    value = Lorg/telegram/ui/Components/ChatAvatarContainer;-><init>(Landroid/content/Context;Lorg/telegram/ui/ChatActivity;ZLorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,164 +17,75 @@
 # instance fields
 .field final synthetic this$0:Lorg/telegram/ui/Components/ChatAvatarContainer;
 
-.field final synthetic val$scrimPopupWindow:[Lorg/telegram/ui/ActionBar/ActionBarPopupWindow;
-
 
 # direct methods
-.method constructor <init>(Lorg/telegram/ui/Components/ChatAvatarContainer;[Lorg/telegram/ui/ActionBar/ActionBarPopupWindow;)V
+.method constructor <init>(Lorg/telegram/ui/Components/ChatAvatarContainer;Landroid/content/Context;)V
     .registers 3
 
-    .line 203
+    .line 131
     iput-object p1, p0, Lorg/telegram/ui/Components/ChatAvatarContainer$2;->this$0:Lorg/telegram/ui/Components/ChatAvatarContainer;
 
-    iput-object p2, p0, Lorg/telegram/ui/Components/ChatAvatarContainer$2;->val$scrimPopupWindow:[Lorg/telegram/ui/ActionBar/ActionBarPopupWindow;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Lorg/telegram/ui/ActionBar/SimpleTextView;-><init>(Landroid/content/Context;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public dismiss()V
-    .registers 4
+.method public setText(Ljava/lang/CharSequence;)Z
+    .registers 3
 
-    .line 206
-    iget-object v0, p0, Lorg/telegram/ui/Components/ChatAvatarContainer$2;->val$scrimPopupWindow:[Lorg/telegram/ui/ActionBar/ActionBarPopupWindow;
+    .line 134
+    iget-object v0, p0, Lorg/telegram/ui/Components/ChatAvatarContainer$2;->this$0:Lorg/telegram/ui/Components/ChatAvatarContainer;
 
-    const/4 v1, 0x0
+    invoke-static {v0}, Lorg/telegram/ui/Components/ChatAvatarContainer;->access$000(Lorg/telegram/ui/Components/ChatAvatarContainer;)Lorg/telegram/ui/ActionBar/SimpleTextView;
 
-    aget-object v2, v0, v1
+    move-result-object v0
 
-    if-eqz v2, :cond_c
+    if-eqz v0, :cond_11
 
-    .line 207
-    aget-object v0, v0, v1
+    .line 135
+    iget-object v0, p0, Lorg/telegram/ui/Components/ChatAvatarContainer$2;->this$0:Lorg/telegram/ui/Components/ChatAvatarContainer;
 
-    invoke-virtual {v0}, Lorg/telegram/ui/ActionBar/ActionBarPopupWindow;->dismiss()V
+    invoke-static {v0}, Lorg/telegram/ui/Components/ChatAvatarContainer;->access$000(Lorg/telegram/ui/Components/ChatAvatarContainer;)Lorg/telegram/ui/ActionBar/SimpleTextView;
 
-    :cond_c
-    return-void
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Lorg/telegram/ui/ActionBar/SimpleTextView;->setText(Ljava/lang/CharSequence;)Z
+
+    .line 137
+    :cond_11
+    invoke-super {p0, p1}, Lorg/telegram/ui/ActionBar/SimpleTextView;->setText(Ljava/lang/CharSequence;)Z
+
+    move-result p1
+
+    return p1
 .end method
 
-.method public setAutoDeleteHistory(II)V
-    .registers 13
+.method public setTranslationY(F)V
+    .registers 3
 
-    .line 213
+    .line 142
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAvatarContainer$2;->this$0:Lorg/telegram/ui/Components/ChatAvatarContainer;
 
-    invoke-static {v0}, Lorg/telegram/ui/Components/ChatAvatarContainer;->access$000(Lorg/telegram/ui/Components/ChatAvatarContainer;)Lorg/telegram/ui/ChatActivity;
+    invoke-static {v0}, Lorg/telegram/ui/Components/ChatAvatarContainer;->access$000(Lorg/telegram/ui/Components/ChatAvatarContainer;)Lorg/telegram/ui/ActionBar/SimpleTextView;
 
     move-result-object v0
 
-    if-nez v0, :cond_9
+    if-eqz v0, :cond_11
 
-    return-void
-
-    .line 216
-    :cond_9
+    .line 143
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAvatarContainer$2;->this$0:Lorg/telegram/ui/Components/ChatAvatarContainer;
 
-    invoke-static {v0}, Lorg/telegram/ui/Components/ChatAvatarContainer;->access$000(Lorg/telegram/ui/Components/ChatAvatarContainer;)Lorg/telegram/ui/ChatActivity;
+    invoke-static {v0}, Lorg/telegram/ui/Components/ChatAvatarContainer;->access$000(Lorg/telegram/ui/Components/ChatAvatarContainer;)Lorg/telegram/ui/ActionBar/SimpleTextView;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getMessagesController()Lorg/telegram/messenger/MessagesController;
+    invoke-virtual {v0, p1}, Landroid/view/View;->setTranslationY(F)V
 
-    move-result-object v0
+    .line 145
+    :cond_11
+    invoke-super {p0, p1}, Landroid/view/View;->setTranslationY(F)V
 
-    iget-object v1, p0, Lorg/telegram/ui/Components/ChatAvatarContainer$2;->this$0:Lorg/telegram/ui/Components/ChatAvatarContainer;
-
-    invoke-static {v1}, Lorg/telegram/ui/Components/ChatAvatarContainer;->access$000(Lorg/telegram/ui/Components/ChatAvatarContainer;)Lorg/telegram/ui/ChatActivity;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lorg/telegram/ui/ChatActivity;->getDialogId()J
-
-    move-result-wide v1
-
-    invoke-virtual {v0, v1, v2, p1}, Lorg/telegram/messenger/MessagesController;->setDialogHistoryTTL(JI)V
-
-    .line 217
-    iget-object p1, p0, Lorg/telegram/ui/Components/ChatAvatarContainer$2;->this$0:Lorg/telegram/ui/Components/ChatAvatarContainer;
-
-    invoke-static {p1}, Lorg/telegram/ui/Components/ChatAvatarContainer;->access$000(Lorg/telegram/ui/Components/ChatAvatarContainer;)Lorg/telegram/ui/ChatActivity;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Lorg/telegram/ui/ChatActivity;->getCurrentChatInfo()Lorg/telegram/tgnet/TLRPC$ChatFull;
-
-    move-result-object p1
-
-    .line 218
-    iget-object v0, p0, Lorg/telegram/ui/Components/ChatAvatarContainer$2;->this$0:Lorg/telegram/ui/Components/ChatAvatarContainer;
-
-    invoke-static {v0}, Lorg/telegram/ui/Components/ChatAvatarContainer;->access$000(Lorg/telegram/ui/Components/ChatAvatarContainer;)Lorg/telegram/ui/ChatActivity;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lorg/telegram/ui/ChatActivity;->getCurrentUserInfo()Lorg/telegram/tgnet/TLRPC$UserFull;
-
-    move-result-object v0
-
-    if-nez v0, :cond_38
-
-    if-eqz p1, :cond_67
-
-    .line 220
-    :cond_38
-    iget-object v1, p0, Lorg/telegram/ui/Components/ChatAvatarContainer$2;->this$0:Lorg/telegram/ui/Components/ChatAvatarContainer;
-
-    invoke-static {v1}, Lorg/telegram/ui/Components/ChatAvatarContainer;->access$000(Lorg/telegram/ui/Components/ChatAvatarContainer;)Lorg/telegram/ui/ChatActivity;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lorg/telegram/ui/ChatActivity;->getUndoView()Lorg/telegram/ui/Components/UndoView;
-
-    move-result-object v2
-
-    iget-object v1, p0, Lorg/telegram/ui/Components/ChatAvatarContainer$2;->this$0:Lorg/telegram/ui/Components/ChatAvatarContainer;
-
-    invoke-static {v1}, Lorg/telegram/ui/Components/ChatAvatarContainer;->access$000(Lorg/telegram/ui/Components/ChatAvatarContainer;)Lorg/telegram/ui/ChatActivity;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lorg/telegram/ui/ChatActivity;->getDialogId()J
-
-    move-result-wide v3
-
-    iget-object v1, p0, Lorg/telegram/ui/Components/ChatAvatarContainer$2;->this$0:Lorg/telegram/ui/Components/ChatAvatarContainer;
-
-    invoke-static {v1}, Lorg/telegram/ui/Components/ChatAvatarContainer;->access$000(Lorg/telegram/ui/Components/ChatAvatarContainer;)Lorg/telegram/ui/ChatActivity;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lorg/telegram/ui/ChatActivity;->getCurrentUser()Lorg/telegram/tgnet/TLRPC$User;
-
-    move-result-object v6
-
-    if-eqz v0, :cond_5b
-
-    iget p1, v0, Lorg/telegram/tgnet/TLRPC$UserFull;->ttl_period:I
-
-    goto :goto_5d
-
-    :cond_5b
-    iget p1, p1, Lorg/telegram/tgnet/TLRPC$ChatFull;->ttl_period:I
-
-    :goto_5d
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v7
-
-    const/4 v8, 0x0
-
-    const/4 v9, 0x0
-
-    move v5, p2
-
-    invoke-virtual/range {v2 .. v9}, Lorg/telegram/ui/Components/UndoView;->showWithAction(JILjava/lang/Object;Ljava/lang/Object;Ljava/lang/Runnable;Ljava/lang/Runnable;)V
-
-    :cond_67
     return-void
 .end method

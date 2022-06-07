@@ -8,18 +8,18 @@
 # instance fields
 .field public final synthetic f$0:Lorg/telegram/ui/Components/ChatAttachAlert;
 
-.field public final synthetic f$1:Lorg/telegram/ui/ActionBar/BottomSheet$BottomSheetDelegateInterface;
+.field public final synthetic f$1:Lorg/telegram/tgnet/TLRPC$TL_attachMenuBot;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lorg/telegram/ui/Components/ChatAttachAlert;Lorg/telegram/ui/ActionBar/BottomSheet$BottomSheetDelegateInterface;)V
+.method public synthetic constructor <init>(Lorg/telegram/ui/Components/ChatAttachAlert;Lorg/telegram/tgnet/TLRPC$TL_attachMenuBot;)V
     .registers 3
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lorg/telegram/ui/Components/ChatAttachAlert$$ExternalSyntheticLambda20;->f$0:Lorg/telegram/ui/Components/ChatAttachAlert;
 
-    iput-object p2, p0, Lorg/telegram/ui/Components/ChatAttachAlert$$ExternalSyntheticLambda20;->f$1:Lorg/telegram/ui/ActionBar/BottomSheet$BottomSheetDelegateInterface;
+    iput-object p2, p0, Lorg/telegram/ui/Components/ChatAttachAlert$$ExternalSyntheticLambda20;->f$1:Lorg/telegram/tgnet/TLRPC$TL_attachMenuBot;
 
     return-void
 .end method
@@ -31,9 +31,9 @@
 
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlert$$ExternalSyntheticLambda20;->f$0:Lorg/telegram/ui/Components/ChatAttachAlert;
 
-    iget-object v1, p0, Lorg/telegram/ui/Components/ChatAttachAlert$$ExternalSyntheticLambda20;->f$1:Lorg/telegram/ui/ActionBar/BottomSheet$BottomSheetDelegateInterface;
+    iget-object v1, p0, Lorg/telegram/ui/Components/ChatAttachAlert$$ExternalSyntheticLambda20;->f$1:Lorg/telegram/tgnet/TLRPC$TL_attachMenuBot;
 
-    invoke-static {v0, v1}, Lorg/telegram/ui/Components/ChatAttachAlert;->$r8$lambda$fZ0J5IodjowShf9ZQxDoPd_-uYA(Lorg/telegram/ui/Components/ChatAttachAlert;Lorg/telegram/ui/ActionBar/BottomSheet$BottomSheetDelegateInterface;)V
+    invoke-static {v0, v1}, Lorg/telegram/ui/Components/ChatAttachAlert;->$r8$lambda$mihoaZdi1LgG3xvXuuCqr4HOlRw(Lorg/telegram/ui/Components/ChatAttachAlert;Lorg/telegram/tgnet/TLRPC$TL_attachMenuBot;)V
 
     return-void
 .end method

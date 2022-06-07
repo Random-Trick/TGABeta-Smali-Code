@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lorg/telegram/ui/Components/SimpleFloatPropertyCompat$Setter;
+.implements Lorg/telegram/messenger/GenericProvider;
 
 
 # static fields
@@ -32,12 +32,14 @@
 
 
 # virtual methods
-.method public final set(Ljava/lang/Object;F)V
-    .registers 3
+.method public final provide(Ljava/lang/Object;)Ljava/lang/Object;
+    .registers 2
 
-    check-cast p1, Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout$WebViewSwipeContainer;
+    check-cast p1, Ljava/lang/Void;
 
-    invoke-virtual {p1, p2}, Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout$WebViewSwipeContainer;->setSwipeOffsetY(F)V
+    invoke-static {p1}, Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout$WebViewSwipeContainer;->$r8$lambda$Je8dolP49xupZcZr6bCKQRYX4SQ(Ljava/lang/Void;)Ljava/lang/Boolean;
 
-    return-void
+    move-result-object p1
+
+    return-object p1
 .end method

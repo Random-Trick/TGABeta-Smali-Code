@@ -25,7 +25,7 @@
 .method constructor <init>(Lorg/telegram/ui/PasscodeActivity;)V
     .registers 2
 
-    .line 566
+    .line 567
     iput-object p1, p0, Lorg/telegram/ui/PasscodeActivity$6;->this$0:Lorg/telegram/ui/PasscodeActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,7 +44,7 @@
 .method public beforeTextChanged(Ljava/lang/CharSequence;III)V
     .registers 5
 
-    .line 569
+    .line 570
     iget-object p1, p0, Lorg/telegram/ui/PasscodeActivity$6;->this$0:Lorg/telegram/ui/PasscodeActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/PasscodeActivity;->access$1100(Lorg/telegram/ui/PasscodeActivity;)Z
@@ -53,7 +53,7 @@
 
     if-eqz p1, :cond_20
 
-    .line 570
+    .line 571
     iget-object p1, p0, Lorg/telegram/ui/PasscodeActivity$6;->this$0:Lorg/telegram/ui/PasscodeActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/PasscodeActivity;->access$400(Lorg/telegram/ui/PasscodeActivity;)Lorg/telegram/ui/CodeFieldContainer;
@@ -68,7 +68,7 @@
 
     invoke-virtual {p1, p2}, Landroid/widget/LinearLayout;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    .line 571
+    .line 572
     iget-object p1, p0, Lorg/telegram/ui/PasscodeActivity$6;->this$0:Lorg/telegram/ui/PasscodeActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/PasscodeActivity;->access$1200(Lorg/telegram/ui/PasscodeActivity;)Ljava/lang/Runnable;

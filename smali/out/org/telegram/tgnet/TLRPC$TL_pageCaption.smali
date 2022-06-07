@@ -23,7 +23,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 6855
+    .line 6920
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -32,7 +32,7 @@
 .method public static TLdeserialize(Lorg/telegram/tgnet/AbstractSerializedData;IZ)Lorg/telegram/tgnet/TLRPC$TL_pageCaption;
     .registers 4
 
-    .line 6862
+    .line 6927
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_pageCaption;->constructor:I
 
     if-eq v0, p1, :cond_1e
@@ -43,7 +43,7 @@
 
     return-object p0
 
-    .line 6864
+    .line 6929
     :cond_8
     new-instance p0, Ljava/lang/RuntimeException;
 
@@ -69,13 +69,13 @@
 
     throw p0
 
-    .line 6869
+    .line 6934
     :cond_1e
     new-instance p1, Lorg/telegram/tgnet/TLRPC$TL_pageCaption;
 
     invoke-direct {p1}, Lorg/telegram/tgnet/TLRPC$TL_pageCaption;-><init>()V
 
-    .line 6870
+    .line 6935
     invoke-virtual {p1, p0, p2}, Lorg/telegram/tgnet/TLRPC$TL_pageCaption;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
     return-object p1
@@ -86,7 +86,7 @@
 .method public readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
     .registers 4
 
-    .line 6875
+    .line 6940
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
@@ -97,7 +97,7 @@
 
     iput-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_pageCaption;->text:Lorg/telegram/tgnet/TLRPC$RichText;
 
-    .line 6876
+    .line 6941
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
@@ -114,17 +114,17 @@
 .method public serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
     .registers 3
 
-    .line 6880
+    .line 6945
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_pageCaption;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 6881
+    .line 6946
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_pageCaption;->text:Lorg/telegram/tgnet/TLRPC$RichText;
 
     invoke-virtual {v0, p1}, Lorg/telegram/tgnet/TLObject;->serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
 
-    .line 6882
+    .line 6947
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_pageCaption;->credit:Lorg/telegram/tgnet/TLRPC$RichText;
 
     invoke-virtual {v0, p1}, Lorg/telegram/tgnet/TLObject;->serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V

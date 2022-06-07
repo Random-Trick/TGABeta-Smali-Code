@@ -17,7 +17,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 33217
+    .line 33669
     invoke-direct {p0}, Lorg/telegram/tgnet/TLRPC$TL_inputChannelFromMessage;-><init>()V
 
     return-void
@@ -28,7 +28,7 @@
 .method public readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
     .registers 4
 
-    .line 33222
+    .line 33674
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
@@ -39,14 +39,14 @@
 
     iput-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_inputChannelFromMessage;->peer:Lorg/telegram/tgnet/TLRPC$InputPeer;
 
-    .line 33223
+    .line 33675
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
 
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$TL_inputChannelFromMessage;->msg_id:I
 
-    .line 33224
+    .line 33676
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result p1
@@ -61,22 +61,22 @@
 .method public serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
     .registers 4
 
-    .line 33228
+    .line 33680
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_inputChannelFromMessage_layer131;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 33229
+    .line 33681
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_inputChannelFromMessage;->peer:Lorg/telegram/tgnet/TLRPC$InputPeer;
 
     invoke-virtual {v0, p1}, Lorg/telegram/tgnet/TLObject;->serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
 
-    .line 33230
+    .line 33682
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_inputChannelFromMessage;->msg_id:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 33231
+    .line 33683
     iget-wide v0, p0, Lorg/telegram/tgnet/TLRPC$InputChannel;->channel_id:J
 
     long-to-int v1, v0

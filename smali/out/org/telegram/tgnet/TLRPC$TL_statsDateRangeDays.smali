@@ -23,7 +23,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 21396
+    .line 21577
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -32,7 +32,7 @@
 .method public static TLdeserialize(Lorg/telegram/tgnet/AbstractSerializedData;IZ)Lorg/telegram/tgnet/TLRPC$TL_statsDateRangeDays;
     .registers 4
 
-    .line 21403
+    .line 21584
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_statsDateRangeDays;->constructor:I
 
     if-eq v0, p1, :cond_1e
@@ -43,7 +43,7 @@
 
     return-object p0
 
-    .line 21405
+    .line 21586
     :cond_8
     new-instance p0, Ljava/lang/RuntimeException;
 
@@ -69,13 +69,13 @@
 
     throw p0
 
-    .line 21410
+    .line 21591
     :cond_1e
     new-instance p1, Lorg/telegram/tgnet/TLRPC$TL_statsDateRangeDays;
 
     invoke-direct {p1}, Lorg/telegram/tgnet/TLRPC$TL_statsDateRangeDays;-><init>()V
 
-    .line 21411
+    .line 21592
     invoke-virtual {p1, p0, p2}, Lorg/telegram/tgnet/TLRPC$TL_statsDateRangeDays;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
     return-object p1
@@ -86,14 +86,14 @@
 .method public readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
     .registers 4
 
-    .line 21416
+    .line 21597
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
 
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$TL_statsDateRangeDays;->min_date:I
 
-    .line 21417
+    .line 21598
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result p1
@@ -106,17 +106,17 @@
 .method public serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
     .registers 3
 
-    .line 21421
+    .line 21602
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_statsDateRangeDays;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 21422
+    .line 21603
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_statsDateRangeDays;->min_date:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 21423
+    .line 21604
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_statsDateRangeDays;->max_date:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V

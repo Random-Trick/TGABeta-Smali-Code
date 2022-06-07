@@ -29,14 +29,14 @@
 .method constructor <init>(Lorg/telegram/ui/PaymentFormActivity;)V
     .registers 2
 
-    .line 803
+    .line 880
     iput-object p1, p0, Lorg/telegram/ui/PaymentFormActivity$4;->this$0:Lorg/telegram/ui/PaymentFormActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 p1, -0x1
 
-    .line 804
+    .line 881
     iput p1, p0, Lorg/telegram/ui/PaymentFormActivity$4;->characterAction:I
 
     return-void
@@ -47,7 +47,7 @@
 .method public afterTextChanged(Landroid/text/Editable;)V
     .registers 12
 
-    .line 830
+    .line 907
     iget-object p1, p0, Lorg/telegram/ui/PaymentFormActivity$4;->this$0:Lorg/telegram/ui/PaymentFormActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/PaymentFormActivity;->access$1900(Lorg/telegram/ui/PaymentFormActivity;)Z
@@ -58,7 +58,7 @@
 
     return-void
 
-    .line 833
+    .line 910
     :cond_9
     iget-object p1, p0, Lorg/telegram/ui/PaymentFormActivity$4;->this$0:Lorg/telegram/ui/PaymentFormActivity;
 
@@ -72,12 +72,12 @@
 
     check-cast p1, Lorg/telegram/ui/Components/HintEditText;
 
-    .line 834
+    .line 911
     invoke-virtual {p1}, Landroid/widget/EditText;->getSelectionStart()I
 
     move-result v0
 
-    .line 836
+    .line 913
     invoke-virtual {p1}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
 
     move-result-object v1
@@ -86,7 +86,7 @@
 
     move-result-object v1
 
-    .line 837
+    .line 914
     iget v2, p0, Lorg/telegram/ui/PaymentFormActivity$4;->characterAction:I
 
     const/4 v3, 0x3
@@ -97,7 +97,7 @@
 
     if-ne v2, v3, :cond_46
 
-    .line 838
+    .line 915
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -126,7 +126,7 @@
 
     add-int/lit8 v0, v0, -0x1
 
-    .line 841
+    .line 918
     :cond_46
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -138,7 +138,7 @@
 
     const/4 v6, 0x0
 
-    .line 842
+    .line 919
     :goto_50
     invoke-virtual {v1}, Ljava/lang/String;->length()I
 
@@ -148,21 +148,21 @@
 
     add-int/lit8 v7, v6, 0x1
 
-    .line 843
+    .line 920
     invoke-virtual {v1, v6, v7}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v6
 
     const-string v8, "0123456789"
 
-    .line 844
+    .line 921
     invoke-virtual {v8, v6}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v8
 
     if-eqz v8, :cond_67
 
-    .line 845
+    .line 922
     invoke-virtual {v2, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     :cond_67
@@ -170,13 +170,13 @@
 
     goto :goto_50
 
-    .line 848
+    .line 925
     :cond_69
     iget-object v1, p0, Lorg/telegram/ui/PaymentFormActivity$4;->this$0:Lorg/telegram/ui/PaymentFormActivity;
 
     invoke-static {v1, v5}, Lorg/telegram/ui/PaymentFormActivity;->access$1902(Lorg/telegram/ui/PaymentFormActivity;Z)Z
 
-    .line 849
+    .line 926
     invoke-virtual {p1}, Lorg/telegram/ui/Components/HintEditText;->getHintText()Ljava/lang/String;
 
     move-result-object v1
@@ -185,7 +185,7 @@
 
     const/4 v6, 0x0
 
-    .line 851
+    .line 928
     :goto_75
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->length()I
 
@@ -193,7 +193,7 @@
 
     if-ge v6, v7, :cond_a9
 
-    .line 852
+    .line 929
     invoke-virtual {v1}, Ljava/lang/String;->length()I
 
     move-result v7
@@ -204,21 +204,21 @@
 
     if-ge v6, v7, :cond_9b
 
-    .line 853
+    .line 930
     invoke-virtual {v1, v6}, Ljava/lang/String;->charAt(I)C
 
     move-result v7
 
     if-ne v7, v9, :cond_99
 
-    .line 854
+    .line 931
     invoke-virtual {v2, v6, v9}, Ljava/lang/StringBuilder;->insert(IC)Ljava/lang/StringBuilder;
 
     add-int/lit8 v6, v6, 0x1
 
     if-ne v0, v6, :cond_99
 
-    .line 856
+    .line 933
     iget v7, p0, Lorg/telegram/ui/PaymentFormActivity$4;->characterAction:I
 
     if-eq v7, v8, :cond_99
@@ -232,7 +232,7 @@
 
     goto :goto_75
 
-    .line 861
+    .line 938
     :cond_9b
     invoke-virtual {v2, v6, v9}, Ljava/lang/StringBuilder;->insert(IC)Ljava/lang/StringBuilder;
 
@@ -240,7 +240,7 @@
 
     if-ne v0, v6, :cond_a9
 
-    .line 862
+    .line 939
     iget v1, p0, Lorg/telegram/ui/PaymentFormActivity$4;->characterAction:I
 
     if-eq v1, v8, :cond_a9
@@ -249,13 +249,13 @@
 
     add-int/lit8 v0, v0, 0x1
 
-    .line 869
+    .line 946
     :cond_a9
     invoke-virtual {p1, v2}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
     if-ltz v0, :cond_b9
 
-    .line 871
+    .line 948
     invoke-virtual {p1}, Landroid/widget/EditText;->length()I
 
     move-result v1
@@ -266,11 +266,11 @@
 
     invoke-virtual {p1, v0}, Lorg/telegram/ui/Components/EditTextBoldCursor;->setSelection(I)V
 
-    .line 873
+    .line 950
     :cond_b9
     invoke-virtual {p1}, Lorg/telegram/ui/Components/HintEditText;->onTextChange()V
 
-    .line 874
+    .line 951
     iget-object p1, p0, Lorg/telegram/ui/PaymentFormActivity$4;->this$0:Lorg/telegram/ui/PaymentFormActivity;
 
     invoke-static {p1, v4}, Lorg/telegram/ui/PaymentFormActivity;->access$1902(Lorg/telegram/ui/PaymentFormActivity;Z)Z
@@ -287,7 +287,7 @@
 
     if-ne p4, v0, :cond_8
 
-    .line 810
+    .line 887
     iput v0, p0, Lorg/telegram/ui/PaymentFormActivity$4;->characterAction:I
 
     goto :goto_24
@@ -297,7 +297,7 @@
 
     if-nez p4, :cond_21
 
-    .line 812
+    .line 889
     invoke-interface {p1, p2}, Ljava/lang/CharSequence;->charAt(I)C
 
     move-result p1
@@ -310,12 +310,12 @@
 
     const/4 p1, 0x3
 
-    .line 813
+    .line 890
     iput p1, p0, Lorg/telegram/ui/PaymentFormActivity$4;->characterAction:I
 
     sub-int/2addr p2, v0
 
-    .line 814
+    .line 891
     iput p2, p0, Lorg/telegram/ui/PaymentFormActivity$4;->actionPosition:I
 
     goto :goto_24
@@ -323,7 +323,7 @@
     :cond_1d
     const/4 p1, 0x2
 
-    .line 816
+    .line 893
     iput p1, p0, Lorg/telegram/ui/PaymentFormActivity$4;->characterAction:I
 
     goto :goto_24
@@ -331,7 +331,7 @@
     :cond_21
     const/4 p1, -0x1
 
-    .line 819
+    .line 896
     iput p1, p0, Lorg/telegram/ui/PaymentFormActivity$4;->characterAction:I
 
     :goto_24

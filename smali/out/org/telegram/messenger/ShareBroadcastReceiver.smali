@@ -42,7 +42,7 @@
     .line 23
     invoke-virtual {v0, v1, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    const p2, 0x7f0e1029
+    const p2, 0x7f0e10e7
 
     const-string v1, "ShareLink"
 

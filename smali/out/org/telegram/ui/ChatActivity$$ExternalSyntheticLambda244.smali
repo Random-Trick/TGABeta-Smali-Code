@@ -2,32 +2,40 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lorg/telegram/ui/Components/RecyclerListView$OnItemLongClickListener;
+.implements Lorg/telegram/ui/Components/RecyclerListView$OnInterceptTouchListener;
 
 
-# instance fields
-.field public final synthetic f$0:Lorg/telegram/ui/ChatActivity;
+# static fields
+.field public static final synthetic INSTANCE:Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda244;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lorg/telegram/ui/ChatActivity;)V
-    .registers 2
+.method static synthetic constructor <clinit>()V
+    .registers 1
+
+    new-instance v0, Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda244;
+
+    invoke-direct {v0}, Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda244;-><init>()V
+
+    sput-object v0, Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda244;->INSTANCE:Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda244;
+
+    return-void
+.end method
+
+.method private synthetic constructor <init>()V
+    .registers 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda244;->f$0:Lorg/telegram/ui/ChatActivity;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onItemClick(Landroid/view/View;I)Z
-    .registers 4
+.method public final onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
+    .registers 2
 
-    iget-object v0, p0, Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda244;->f$0:Lorg/telegram/ui/ChatActivity;
-
-    invoke-static {v0, p1, p2}, Lorg/telegram/ui/ChatActivity;->$r8$lambda$ExWv6ZBQ56P4rZImgLHSJ1OXbE0(Lorg/telegram/ui/ChatActivity;Landroid/view/View;I)Z
+    invoke-static {p1}, Lorg/telegram/ui/ChatActivity;->$r8$lambda$kAmww0IRoiHiCXaXaExqAQoGyXU(Landroid/view/MotionEvent;)Z
 
     move-result p1
 

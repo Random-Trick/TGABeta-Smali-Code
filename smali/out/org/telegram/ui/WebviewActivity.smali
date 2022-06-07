@@ -811,7 +811,7 @@
     .line 159
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
-    const v1, 0x7f070140
+    const v1, 0x7f070109
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/ActionBar;->setBackButtonImage(I)V
 
@@ -845,7 +845,7 @@
 
     move-result v2
 
-    const v3, 0x7f0703b1
+    const v3, 0x7f0703b6
 
     invoke-virtual {v0, v1, v3, v2}, Lorg/telegram/ui/ActionBar/ActionBarMenu;->addItemWithWidth(III)Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
@@ -866,16 +866,16 @@
 
     if-nez v2, :cond_96
 
-    const v2, 0x7f070147
+    const v2, 0x7f07010d
 
     .line 180
     invoke-virtual {v0, v6, v2}, Lorg/telegram/ui/ActionBar/ActionBarMenu;->addItem(II)Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
     move-result-object v0
 
-    const v2, 0x7f070298
+    const v2, 0x7f070286
 
-    const v7, 0x7f0e0bc8
+    const v7, 0x7f0e0c52
 
     const-string v8, "OpenInExternalApp"
 
@@ -1019,7 +1019,7 @@
     .line 198
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
-    const v2, 0x7f0e10ca
+    const v2, 0x7f0e1189
 
     const-string v7, "Statistics"
 

@@ -540,7 +540,7 @@
     .line 776
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
-    const v1, 0x7f070140
+    const v1, 0x7f070109
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/ActionBar;->setBackButtonImage(I)V
 
@@ -572,7 +572,7 @@
     .line 783
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
-    const v2, 0x7f0e13e0
+    const v2, 0x7f0e14ae
 
     const-string v3, "WidgetChats"
 
@@ -588,7 +588,7 @@
     :cond_2c
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
-    const v2, 0x7f0e13e5
+    const v2, 0x7f0e14b3
 
     const-string v3, "WidgetShortcuts"
 
@@ -606,7 +606,7 @@
 
     move-result-object v0
 
-    const v2, 0x7f0e05dd
+    const v2, 0x7f0e062e
 
     const-string v3, "Done"
 

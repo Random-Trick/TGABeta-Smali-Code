@@ -14,7 +14,7 @@
     .registers 2
     .param p0, "_this"    # Lorg/telegram/ui/Components/ChatAttachAlert$ChatAttachViewDelegate;
 
-    .line 281
+    .line 334
     invoke-interface {p1}, Ljava/lang/Runnable;->run()V
 
     return-void

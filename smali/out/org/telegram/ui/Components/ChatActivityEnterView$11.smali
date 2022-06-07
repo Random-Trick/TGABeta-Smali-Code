@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/ChatActivityEnterView;Landroid/content/Context;)V
     .registers 3
 
-    .line 1788
+    .line 1811
     iput-object p1, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$11;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-direct {p0, p2}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
@@ -35,10 +35,10 @@
 .method protected onDraw(Landroid/graphics/Canvas;)V
     .registers 6
 
-    .line 1791
+    .line 1814
     invoke-super {p0, p1}, Landroid/widget/ImageView;->onDraw(Landroid/graphics/Canvas;)V
 
-    .line 1792
+    .line 1815
     invoke-virtual {p0}, Landroid/widget/ImageView;->getTag()Ljava/lang/Object;
 
     move-result-object v0
@@ -89,7 +89,7 @@
 
     if-eqz v0, :cond_61
 
-    .line 1793
+    .line 1816
     invoke-virtual {p0}, Landroid/widget/ImageView;->getWidth()I
 
     move-result v0
@@ -104,7 +104,7 @@
 
     add-int/2addr v0, v1
 
-    .line 1794
+    .line 1817
     invoke-virtual {p0}, Landroid/widget/ImageView;->getHeight()I
 
     move-result v1
@@ -125,7 +125,7 @@
 
     const/high16 v2, 0x40a00000    # 5.0f
 
-    .line 1795
+    .line 1818
     invoke-static {v2}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v2

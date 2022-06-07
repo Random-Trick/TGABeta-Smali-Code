@@ -11,7 +11,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 5817
+    .line 5882
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -26,7 +26,7 @@
 
     goto/16 :goto_8f
 
-    .line 5854
+    .line 5919
     :sswitch_6
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_sendMessageChooseContactAction;
 
@@ -34,7 +34,7 @@
 
     goto/16 :goto_8f
 
-    .line 5884
+    .line 5949
     :sswitch_d
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_sendMessageEmojiInteraction;
 
@@ -42,7 +42,7 @@
 
     goto/16 :goto_8f
 
-    .line 5863
+    .line 5928
     :sswitch_14
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_sendMessageUploadRoundAction;
 
@@ -50,7 +50,7 @@
 
     goto/16 :goto_8f
 
-    .line 5851
+    .line 5916
     :sswitch_1b
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_sendMessageGeoLocationAction;
 
@@ -58,7 +58,7 @@
 
     goto/16 :goto_8f
 
-    .line 5866
+    .line 5931
     :sswitch_22
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_sendMessageTypingAction;
 
@@ -66,7 +66,7 @@
 
     goto/16 :goto_8f
 
-    .line 5848
+    .line 5913
     :sswitch_29
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_sendMessageCancelAction;
 
@@ -74,7 +74,7 @@
 
     goto/16 :goto_8f
 
-    .line 5836
+    .line 5901
     :sswitch_30
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_sendMessageUploadAudioAction;
 
@@ -82,7 +82,7 @@
 
     goto :goto_8f
 
-    .line 5845
+    .line 5910
     :sswitch_36
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_sendMessageUploadVideoAction;
 
@@ -90,7 +90,7 @@
 
     goto :goto_8f
 
-    .line 5833
+    .line 5898
     :sswitch_3c
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_sendMessageUploadAudioAction_old;
 
@@ -98,7 +98,7 @@
 
     goto :goto_8f
 
-    .line 5824
+    .line 5889
     :sswitch_42
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_sendMessageGamePlayAction;
 
@@ -106,7 +106,7 @@
 
     goto :goto_8f
 
-    .line 5869
+    .line 5934
     :sswitch_48
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_sendMessageHistoryImportAction;
 
@@ -114,7 +114,7 @@
 
     goto :goto_8f
 
-    .line 5878
+    .line 5943
     :sswitch_4e
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_speakingInGroupCallAction;
 
@@ -122,7 +122,7 @@
 
     goto :goto_8f
 
-    .line 5827
+    .line 5892
     :sswitch_54
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_sendMessageRecordAudioAction;
 
@@ -130,7 +130,7 @@
 
     goto :goto_8f
 
-    .line 5839
+    .line 5904
     :sswitch_5a
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_sendMessageUploadPhotoAction;
 
@@ -138,7 +138,7 @@
 
     goto :goto_8f
 
-    .line 5887
+    .line 5952
     :sswitch_60
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_sendMessageEmojiInteractionSeen;
 
@@ -146,7 +146,7 @@
 
     goto :goto_8f
 
-    .line 5857
+    .line 5922
     :sswitch_66
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_sendMessageChooseStickerAction;
 
@@ -154,7 +154,7 @@
 
     goto :goto_8f
 
-    .line 5875
+    .line 5940
     :sswitch_6c
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_sendMessageUploadDocumentAction;
 
@@ -162,7 +162,7 @@
 
     goto :goto_8f
 
-    .line 5881
+    .line 5946
     :sswitch_72
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_sendMessageRecordVideoAction;
 
@@ -170,7 +170,7 @@
 
     goto :goto_8f
 
-    .line 5872
+    .line 5937
     :sswitch_78
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_sendMessageUploadPhotoAction_old;
 
@@ -178,7 +178,7 @@
 
     goto :goto_8f
 
-    .line 5830
+    .line 5895
     :sswitch_7e
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_sendMessageUploadVideoAction_old;
 
@@ -186,7 +186,7 @@
 
     goto :goto_8f
 
-    .line 5842
+    .line 5907
     :sswitch_84
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_sendMessageUploadDocumentAction_old;
 
@@ -194,7 +194,7 @@
 
     goto :goto_8f
 
-    .line 5860
+    .line 5925
     :sswitch_8a
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_sendMessageRecordRoundAction;
 
@@ -207,7 +207,7 @@
 
     goto :goto_aa
 
-    .line 5891
+    .line 5956
     :cond_94
     new-instance p0, Ljava/lang/RuntimeException;
 
@@ -237,7 +237,7 @@
     :goto_aa
     if-eqz v0, :cond_af
 
-    .line 5894
+    .line 5959
     invoke-virtual {v0, p0, p2}, Lorg/telegram/tgnet/TLObject;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
     :cond_af

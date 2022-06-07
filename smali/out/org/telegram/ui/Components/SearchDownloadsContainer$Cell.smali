@@ -22,10 +22,10 @@
 .method public constructor <init>(Lorg/telegram/ui/Components/SearchDownloadsContainer;Landroid/content/Context;)V
     .registers 4
 
-    .line 657
+    .line 668
     invoke-direct {p0, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    .line 658
+    .line 669
     new-instance p1, Lorg/telegram/ui/Cells/SharedDocumentCell;
 
     const/4 v0, 0x2
@@ -34,17 +34,33 @@
 
     iput-object p1, p0, Lorg/telegram/ui/Components/SearchDownloadsContainer$Cell;->sharedDocumentCell:Lorg/telegram/ui/Cells/SharedDocumentCell;
 
-    .line 659
+    .line 670
     iget-object p1, p1, Lorg/telegram/ui/Cells/SharedDocumentCell;->rightDateTextView:Landroid/widget/TextView;
 
     const/16 p2, 0x8
 
     invoke-virtual {p1, p2}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 660
+    .line 671
     iget-object p1, p0, Lorg/telegram/ui/Components/SearchDownloadsContainer$Cell;->sharedDocumentCell:Lorg/telegram/ui/Cells/SharedDocumentCell;
 
     invoke-virtual {p0, p1}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public onInitializeAccessibilityNodeInfo(Landroid/view/accessibility/AccessibilityNodeInfo;)V
+    .registers 3
+
+    .line 676
+    invoke-super {p0, p1}, Landroid/widget/FrameLayout;->onInitializeAccessibilityNodeInfo(Landroid/view/accessibility/AccessibilityNodeInfo;)V
+
+    .line 677
+    iget-object v0, p0, Lorg/telegram/ui/Components/SearchDownloadsContainer$Cell;->sharedDocumentCell:Lorg/telegram/ui/Cells/SharedDocumentCell;
+
+    invoke-virtual {v0, p1}, Lorg/telegram/ui/Cells/SharedDocumentCell;->onInitializeAccessibilityNodeInfo(Landroid/view/accessibility/AccessibilityNodeInfo;)V
 
     return-void
 .end method

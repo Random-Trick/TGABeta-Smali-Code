@@ -23,7 +23,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 31010
+    .line 31438
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -32,7 +32,7 @@
 .method public static TLdeserialize(Lorg/telegram/tgnet/AbstractSerializedData;IZ)Lorg/telegram/tgnet/TLRPC$TL_auth_loggedOut;
     .registers 4
 
-    .line 31017
+    .line 31445
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_auth_loggedOut;->constructor:I
 
     if-eq v0, p1, :cond_1e
@@ -43,7 +43,7 @@
 
     return-object p0
 
-    .line 31019
+    .line 31447
     :cond_8
     new-instance p0, Ljava/lang/RuntimeException;
 
@@ -69,13 +69,13 @@
 
     throw p0
 
-    .line 31024
+    .line 31452
     :cond_1e
     new-instance p1, Lorg/telegram/tgnet/TLRPC$TL_auth_loggedOut;
 
     invoke-direct {p1}, Lorg/telegram/tgnet/TLRPC$TL_auth_loggedOut;-><init>()V
 
-    .line 31025
+    .line 31453
     invoke-virtual {p1, p0, p2}, Lorg/telegram/tgnet/TLRPC$TL_auth_loggedOut;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
     return-object p1
@@ -86,7 +86,7 @@
 .method public readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
     .registers 4
 
-    .line 31030
+    .line 31458
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
@@ -97,7 +97,7 @@
 
     if-eqz v0, :cond_10
 
-    .line 31032
+    .line 31460
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readByteArray(Z)[B
 
     move-result-object p1
@@ -111,24 +111,24 @@
 .method public serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
     .registers 3
 
-    .line 31037
+    .line 31465
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_auth_loggedOut;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 31038
+    .line 31466
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_auth_loggedOut;->flags:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 31039
+    .line 31467
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_auth_loggedOut;->flags:I
 
     and-int/lit8 v0, v0, 0x1
 
     if-eqz v0, :cond_15
 
-    .line 31040
+    .line 31468
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_auth_loggedOut;->future_auth_token:[B
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeByteArray([B)V

@@ -24,7 +24,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/PopupSwipeBackLayout;I)V
     .registers 3
 
-    .line 68
+    .line 71
     iput-object p1, p0, Lorg/telegram/ui/Components/PopupSwipeBackLayout$1;->this$0:Lorg/telegram/ui/Components/PopupSwipeBackLayout;
 
     iput p2, p0, Lorg/telegram/ui/Components/PopupSwipeBackLayout$1;->val$touchSlop:I
@@ -47,7 +47,7 @@
 .method public onFling(Landroid/view/MotionEvent;Landroid/view/MotionEvent;FF)Z
     .registers 6
 
-    .line 98
+    .line 101
     iget-object p1, p0, Lorg/telegram/ui/Components/PopupSwipeBackLayout$1;->this$0:Lorg/telegram/ui/Components/PopupSwipeBackLayout;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/PopupSwipeBackLayout;->access$500(Lorg/telegram/ui/Components/PopupSwipeBackLayout;)Z
@@ -75,12 +75,12 @@
 
     if-ltz p1, :cond_27
 
-    .line 102
+    .line 105
     iget-object p1, p0, Lorg/telegram/ui/Components/PopupSwipeBackLayout$1;->this$0:Lorg/telegram/ui/Components/PopupSwipeBackLayout;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/PopupSwipeBackLayout;->access$600(Lorg/telegram/ui/Components/PopupSwipeBackLayout;)V
 
-    .line 103
+    .line 106
     iget-object p1, p0, Lorg/telegram/ui/Components/PopupSwipeBackLayout$1;->this$0:Lorg/telegram/ui/Components/PopupSwipeBackLayout;
 
     const/4 p4, 0x0
@@ -101,7 +101,7 @@
 
     move-object v0, p0
 
-    .line 76
+    .line 79
     iget-object v1, v0, Lorg/telegram/ui/Components/PopupSwipeBackLayout$1;->this$0:Lorg/telegram/ui/Components/PopupSwipeBackLayout;
 
     invoke-static {v1}, Lorg/telegram/ui/Components/PopupSwipeBackLayout;->access$000(Lorg/telegram/ui/Components/PopupSwipeBackLayout;)Z
@@ -120,7 +120,7 @@
 
     if-nez v1, :cond_87
 
-    .line 77
+    .line 80
     iget-object v1, v0, Lorg/telegram/ui/Components/PopupSwipeBackLayout$1;->this$0:Lorg/telegram/ui/Components/PopupSwipeBackLayout;
 
     invoke-static {v1}, Lorg/telegram/ui/Components/PopupSwipeBackLayout;->access$200(Lorg/telegram/ui/Components/PopupSwipeBackLayout;)Z
@@ -197,7 +197,7 @@
 
     if-nez v1, :cond_81
 
-    .line 78
+    .line 81
     iget-object v1, v0, Lorg/telegram/ui/Components/PopupSwipeBackLayout$1;->this$0:Lorg/telegram/ui/Components/PopupSwipeBackLayout;
 
     invoke-static {v1, v3}, Lorg/telegram/ui/Components/PopupSwipeBackLayout;->access$002(Lorg/telegram/ui/Components/PopupSwipeBackLayout;Z)Z
@@ -214,12 +214,12 @@
 
     const/4 v14, 0x0
 
-    .line 80
+    .line 83
     invoke-static/range {v7 .. v14}, Landroid/view/MotionEvent;->obtain(JJIFFI)Landroid/view/MotionEvent;
 
     move-result-object v1
 
-    .line 81
+    .line 84
     :goto_67
     iget-object v3, v0, Lorg/telegram/ui/Components/PopupSwipeBackLayout$1;->this$0:Lorg/telegram/ui/Components/PopupSwipeBackLayout;
 
@@ -229,7 +229,7 @@
 
     if-ge v6, v3, :cond_7b
 
-    .line 82
+    .line 85
     iget-object v3, v0, Lorg/telegram/ui/Components/PopupSwipeBackLayout$1;->this$0:Lorg/telegram/ui/Components/PopupSwipeBackLayout;
 
     invoke-virtual {v3, v6}, Landroid/widget/FrameLayout;->getChildAt(I)Landroid/view/View;
@@ -242,7 +242,7 @@
 
     goto :goto_67
 
-    .line 83
+    .line 86
     :cond_7b
     invoke-virtual {v1}, Landroid/view/MotionEvent;->recycle()V
 
@@ -251,7 +251,7 @@
     :cond_7f
     move-object/from16 v5, p2
 
-    .line 84
+    .line 87
     :cond_81
     iget-object v1, v0, Lorg/telegram/ui/Components/PopupSwipeBackLayout$1;->this$0:Lorg/telegram/ui/Components/PopupSwipeBackLayout;
 
@@ -262,7 +262,7 @@
     :cond_87
     move-object/from16 v5, p2
 
-    .line 87
+    .line 90
     :goto_89
     iget-object v1, v0, Lorg/telegram/ui/Components/PopupSwipeBackLayout$1;->this$0:Lorg/telegram/ui/Components/PopupSwipeBackLayout;
 
@@ -272,14 +272,14 @@
 
     if-eqz v1, :cond_bc
 
-    .line 88
+    .line 91
     iget-object v1, v0, Lorg/telegram/ui/Components/PopupSwipeBackLayout$1;->this$0:Lorg/telegram/ui/Components/PopupSwipeBackLayout;
 
     const/high16 v3, -0x40800000    # -1.0f
 
     invoke-static {v1, v3}, Lorg/telegram/ui/Components/PopupSwipeBackLayout;->access$402(Lorg/telegram/ui/Components/PopupSwipeBackLayout;F)F
 
-    .line 89
+    .line 92
     iget-object v1, v0, Lorg/telegram/ui/Components/PopupSwipeBackLayout$1;->this$0:Lorg/telegram/ui/Components/PopupSwipeBackLayout;
 
     const/4 v3, 0x0
@@ -316,12 +316,12 @@
 
     iput v2, v1, Lorg/telegram/ui/Components/PopupSwipeBackLayout;->transitionProgress:F
 
-    .line 90
+    .line 93
     iget-object v1, v0, Lorg/telegram/ui/Components/PopupSwipeBackLayout$1;->this$0:Lorg/telegram/ui/Components/PopupSwipeBackLayout;
 
     invoke-virtual {v1}, Lorg/telegram/ui/Components/PopupSwipeBackLayout;->invalidateTransforms()V
 
-    .line 93
+    .line 96
     :cond_bc
     iget-object v1, v0, Lorg/telegram/ui/Components/PopupSwipeBackLayout$1;->this$0:Lorg/telegram/ui/Components/PopupSwipeBackLayout;
 

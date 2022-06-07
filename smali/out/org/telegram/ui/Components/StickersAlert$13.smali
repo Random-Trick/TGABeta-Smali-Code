@@ -26,7 +26,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/StickersAlert;IZ)V
     .registers 4
 
-    .line 1301
+    .line 1329
     iput-object p1, p0, Lorg/telegram/ui/Components/StickersAlert$13;->this$0:Lorg/telegram/ui/Components/StickersAlert;
 
     iput p2, p0, Lorg/telegram/ui/Components/StickersAlert$13;->val$num:I
@@ -43,7 +43,7 @@
 .method public onAnimationCancel(Landroid/animation/Animator;)V
     .registers 4
 
-    .line 1314
+    .line 1342
     iget-object v0, p0, Lorg/telegram/ui/Components/StickersAlert$13;->this$0:Lorg/telegram/ui/Components/StickersAlert;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/StickersAlert;->access$4900(Lorg/telegram/ui/Components/StickersAlert;)[Landroid/animation/AnimatorSet;
@@ -72,7 +72,7 @@
 
     if-eqz p1, :cond_27
 
-    .line 1315
+    .line 1343
     iget-object p1, p0, Lorg/telegram/ui/Components/StickersAlert$13;->this$0:Lorg/telegram/ui/Components/StickersAlert;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/StickersAlert;->access$4900(Lorg/telegram/ui/Components/StickersAlert;)[Landroid/animation/AnimatorSet;
@@ -92,7 +92,7 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .registers 4
 
-    .line 1304
+    .line 1332
     iget-object v0, p0, Lorg/telegram/ui/Components/StickersAlert$13;->this$0:Lorg/telegram/ui/Components/StickersAlert;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/StickersAlert;->access$4900(Lorg/telegram/ui/Components/StickersAlert;)[Landroid/animation/AnimatorSet;
@@ -121,12 +121,12 @@
 
     if-eqz p1, :cond_39
 
-    .line 1305
+    .line 1333
     iget-boolean p1, p0, Lorg/telegram/ui/Components/StickersAlert$13;->val$show:Z
 
     if-nez p1, :cond_2e
 
-    .line 1306
+    .line 1334
     iget-object p1, p0, Lorg/telegram/ui/Components/StickersAlert$13;->this$0:Lorg/telegram/ui/Components/StickersAlert;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/StickersAlert;->access$5000(Lorg/telegram/ui/Components/StickersAlert;)[Landroid/view/View;
@@ -141,7 +141,7 @@
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
 
-    .line 1308
+    .line 1336
     :cond_2e
     iget-object p1, p0, Lorg/telegram/ui/Components/StickersAlert$13;->this$0:Lorg/telegram/ui/Components/StickersAlert;
 

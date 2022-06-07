@@ -15,50 +15,50 @@
 
 
 # instance fields
-.field private fileOffset:I
+.field private fileOffset:J
 
-.field private length:I
+.field private length:J
 
 
 # direct methods
-.method private constructor <init>(II)V
-    .registers 3
+.method private constructor <init>(JJ)V
+    .registers 5
 
-    .line 55
+    .line 53
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 56
-    iput p1, p0, Lorg/telegram/messenger/FileLoadOperation$PreloadRange;->fileOffset:I
+    .line 54
+    iput-wide p1, p0, Lorg/telegram/messenger/FileLoadOperation$PreloadRange;->fileOffset:J
 
-    .line 57
-    iput p2, p0, Lorg/telegram/messenger/FileLoadOperation$PreloadRange;->length:I
-
-    return-void
-.end method
-
-.method synthetic constructor <init>(IILorg/telegram/messenger/FileLoadOperation$1;)V
-    .registers 4
-
-    .line 51
-    invoke-direct {p0, p1, p2}, Lorg/telegram/messenger/FileLoadOperation$PreloadRange;-><init>(II)V
+    .line 55
+    iput-wide p3, p0, Lorg/telegram/messenger/FileLoadOperation$PreloadRange;->length:J
 
     return-void
 .end method
 
-.method static synthetic access$1000(Lorg/telegram/messenger/FileLoadOperation$PreloadRange;)I
-    .registers 1
+.method synthetic constructor <init>(JJLorg/telegram/messenger/FileLoadOperation$1;)V
+    .registers 6
 
-    .line 51
-    iget p0, p0, Lorg/telegram/messenger/FileLoadOperation$PreloadRange;->fileOffset:I
+    .line 49
+    invoke-direct {p0, p1, p2, p3, p4}, Lorg/telegram/messenger/FileLoadOperation$PreloadRange;-><init>(JJ)V
 
-    return p0
+    return-void
 .end method
 
-.method static synthetic access$900(Lorg/telegram/messenger/FileLoadOperation$PreloadRange;)I
-    .registers 1
+.method static synthetic access$1000(Lorg/telegram/messenger/FileLoadOperation$PreloadRange;)J
+    .registers 3
 
-    .line 51
-    iget p0, p0, Lorg/telegram/messenger/FileLoadOperation$PreloadRange;->length:I
+    .line 49
+    iget-wide v0, p0, Lorg/telegram/messenger/FileLoadOperation$PreloadRange;->fileOffset:J
 
-    return p0
+    return-wide v0
+.end method
+
+.method static synthetic access$900(Lorg/telegram/messenger/FileLoadOperation$PreloadRange;)J
+    .registers 3
+
+    .line 49
+    iget-wide v0, p0, Lorg/telegram/messenger/FileLoadOperation$PreloadRange;->length:J
+
+    return-wide v0
 .end method

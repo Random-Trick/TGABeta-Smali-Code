@@ -122,10 +122,34 @@
 
 
 # direct methods
-.method public static synthetic $r8$lambda$KgpJsfAGLeaVzRe7TX1IoAdHDQM(Lorg/telegram/ui/EmojiAnimationsOverlay;)V
+.method public static synthetic $r8$lambda$51RDbPoUXYzAKlzQmpKDhOqOv_A(Lorg/telegram/ui/EmojiAnimationsOverlay;Lorg/telegram/messenger/MessageObject;)V
+    .registers 2
+
+    invoke-direct {p0, p1}, Lorg/telegram/ui/EmojiAnimationsOverlay;->lambda$showStickerSetBulletin$3(Lorg/telegram/messenger/MessageObject;)V
+
+    return-void
+.end method
+
+.method public static synthetic $r8$lambda$VhUkybCDHf4260HML1aLWV96k2E(Lorg/telegram/ui/EmojiAnimationsOverlay;Lorg/telegram/messenger/MessageObject;Lorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/TLRPC$TL_error;)V
+    .registers 4
+
+    invoke-direct {p0, p1, p2, p3}, Lorg/telegram/ui/EmojiAnimationsOverlay;->lambda$showAnimationForCell$1(Lorg/telegram/messenger/MessageObject;Lorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/TLRPC$TL_error;)V
+
+    return-void
+.end method
+
+.method public static synthetic $r8$lambda$apesflTQwmJ6t6M7bof6DX09RY0(Lorg/telegram/ui/EmojiAnimationsOverlay;)V
     .registers 1
 
-    invoke-direct {p0}, Lorg/telegram/ui/EmojiAnimationsOverlay;->lambda$showAnimationForCell$0()V
+    invoke-direct {p0}, Lorg/telegram/ui/EmojiAnimationsOverlay;->lambda$showAnimationForCell$2()V
+
+    return-void
+.end method
+
+.method public static synthetic $r8$lambda$v80eUMpSoFJUZ-jvfsgDpjbd9bM(Lorg/telegram/ui/EmojiAnimationsOverlay;Lorg/telegram/tgnet/TLObject;Lorg/telegram/messenger/MessageObject;)V
+    .registers 3
+
+    invoke-direct {p0, p1, p2}, Lorg/telegram/ui/EmojiAnimationsOverlay;->lambda$showAnimationForCell$0(Lorg/telegram/tgnet/TLObject;Lorg/telegram/messenger/MessageObject;)V
 
     return-void
 .end method
@@ -298,25 +322,25 @@
 
     const/4 v0, 0x0
 
-    .line 513
+    .line 586
     iput v0, p0, Lorg/telegram/ui/EmojiAnimationsOverlay;->lastTappedMsgId:I
 
     const/4 v0, 0x0
 
-    .line 514
+    .line 587
     iput-object v0, p0, Lorg/telegram/ui/EmojiAnimationsOverlay;->lastTappedEmoji:Ljava/lang/String;
 
     const-wide/16 v0, 0x0
 
-    .line 515
+    .line 588
     iput-wide v0, p0, Lorg/telegram/ui/EmojiAnimationsOverlay;->lastTappedTime:J
 
-    .line 516
+    .line 589
     iget-object v0, p0, Lorg/telegram/ui/EmojiAnimationsOverlay;->timeIntervals:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 517
+    .line 590
     iget-object v0, p0, Lorg/telegram/ui/EmojiAnimationsOverlay;->animationIndexes:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
@@ -446,16 +470,89 @@
     return-void
 .end method
 
-.method private synthetic lambda$showAnimationForCell$0()V
+.method private synthetic lambda$showAnimationForCell$0(Lorg/telegram/tgnet/TLObject;Lorg/telegram/messenger/MessageObject;)V
+    .registers 3
+
+    .line 403
+    check-cast p1, Lorg/telegram/tgnet/TLRPC$TL_messages_stickerSet;
+
+    invoke-direct {p0, p1, p2}, Lorg/telegram/ui/EmojiAnimationsOverlay;->showStickerSetBulletin(Lorg/telegram/tgnet/TLRPC$TL_messages_stickerSet;Lorg/telegram/messenger/MessageObject;)V
+
+    return-void
+.end method
+
+.method private synthetic lambda$showAnimationForCell$1(Lorg/telegram/messenger/MessageObject;Lorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/TLRPC$TL_error;)V
+    .registers 4
+
+    .line 402
+    new-instance p3, Lorg/telegram/ui/EmojiAnimationsOverlay$$ExternalSyntheticLambda2;
+
+    invoke-direct {p3, p0, p2, p1}, Lorg/telegram/ui/EmojiAnimationsOverlay$$ExternalSyntheticLambda2;-><init>(Lorg/telegram/ui/EmojiAnimationsOverlay;Lorg/telegram/tgnet/TLObject;Lorg/telegram/messenger/MessageObject;)V
+
+    invoke-static {p3}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
+
+    return-void
+.end method
+
+.method private synthetic lambda$showAnimationForCell$2()V
     .registers 2
 
-    .line 442
+    .line 494
     invoke-direct {p0}, Lorg/telegram/ui/EmojiAnimationsOverlay;->sendCurrentTaps()V
 
     const/4 v0, 0x0
 
-    .line 443
+    .line 495
     iput-object v0, p0, Lorg/telegram/ui/EmojiAnimationsOverlay;->sentInteractionsRunnable:Ljava/lang/Runnable;
+
+    return-void
+.end method
+
+.method private synthetic lambda$showStickerSetBulletin$3(Lorg/telegram/messenger/MessageObject;)V
+    .registers 10
+
+    .line 519
+    new-instance v7, Lorg/telegram/ui/Components/StickersAlert;
+
+    iget-object v0, p0, Lorg/telegram/ui/EmojiAnimationsOverlay;->chatActivity:Lorg/telegram/ui/ChatActivity;
+
+    invoke-virtual {v0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getParentActivity()Landroid/app/Activity;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lorg/telegram/ui/EmojiAnimationsOverlay;->chatActivity:Lorg/telegram/ui/ChatActivity;
+
+    invoke-virtual {p1}, Lorg/telegram/messenger/MessageObject;->getInputStickerSet()Lorg/telegram/tgnet/TLRPC$InputStickerSet;
+
+    move-result-object v3
+
+    iget-object p1, p0, Lorg/telegram/ui/EmojiAnimationsOverlay;->chatActivity:Lorg/telegram/ui/ChatActivity;
+
+    invoke-virtual {p1}, Lorg/telegram/ui/ChatActivity;->getResourceProvider()Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;
+
+    move-result-object v6
+
+    const/4 v4, 0x0
+
+    const/4 v5, 0x0
+
+    move-object v0, v7
+
+    invoke-direct/range {v0 .. v6}, Lorg/telegram/ui/Components/StickersAlert;-><init>(Landroid/content/Context;Lorg/telegram/ui/ActionBar/BaseFragment;Lorg/telegram/tgnet/TLRPC$InputStickerSet;Lorg/telegram/tgnet/TLRPC$TL_messages_stickerSet;Lorg/telegram/ui/Components/StickersAlert$StickersAlertDelegate;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)V
+
+    .line 520
+    iget-object p1, p0, Lorg/telegram/ui/EmojiAnimationsOverlay;->chatActivity:Lorg/telegram/ui/ChatActivity;
+
+    invoke-virtual {p1}, Lorg/telegram/ui/ChatActivity;->isKeyboardVisible()Z
+
+    move-result p1
+
+    invoke-virtual {v7, p1}, Lorg/telegram/ui/ActionBar/BottomSheet;->setCalcMandatoryInsets(Z)V
+
+    .line 521
+    iget-object p1, p0, Lorg/telegram/ui/EmojiAnimationsOverlay;->chatActivity:Lorg/telegram/ui/ChatActivity;
+
+    invoke-virtual {p1, v7}, Lorg/telegram/ui/ActionBar/BaseFragment;->showDialog(Landroid/app/Dialog;)Landroid/app/Dialog;
 
     return-void
 .end method
@@ -463,37 +560,37 @@
 .method private sendCurrentTaps()V
     .registers 10
 
-    .line 474
+    .line 547
     iget v0, p0, Lorg/telegram/ui/EmojiAnimationsOverlay;->lastTappedMsgId:I
 
     if-nez v0, :cond_5
 
     return-void
 
-    .line 477
+    .line 550
     :cond_5
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_sendMessageEmojiInteraction;
 
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_sendMessageEmojiInteraction;-><init>()V
 
-    .line 478
+    .line 551
     iget v1, p0, Lorg/telegram/ui/EmojiAnimationsOverlay;->lastTappedMsgId:I
 
     iput v1, v0, Lorg/telegram/tgnet/TLRPC$TL_sendMessageEmojiInteraction;->msg_id:I
 
-    .line 479
+    .line 552
     iget-object v1, p0, Lorg/telegram/ui/EmojiAnimationsOverlay;->lastTappedEmoji:Ljava/lang/String;
 
     iput-object v1, v0, Lorg/telegram/tgnet/TLRPC$TL_sendMessageEmojiInteraction;->emoticon:Ljava/lang/String;
 
-    .line 480
+    .line 553
     new-instance v1, Lorg/telegram/tgnet/TLRPC$TL_dataJSON;
 
     invoke-direct {v1}, Lorg/telegram/tgnet/TLRPC$TL_dataJSON;-><init>()V
 
     iput-object v1, v0, Lorg/telegram/tgnet/TLRPC$TL_sendMessageEmojiInteraction;->interaction:Lorg/telegram/tgnet/TLRPC$TL_dataJSON;
 
-    .line 481
+    .line 554
     new-instance v1, Lorg/json/JSONObject;
 
     invoke-direct {v1}, Lorg/json/JSONObject;-><init>()V
@@ -503,17 +600,17 @@
 
     const/4 v3, 0x1
 
-    .line 483
+    .line 556
     invoke-virtual {v1, v2, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
 
-    .line 484
+    .line 557
     new-instance v2, Lorg/json/JSONArray;
 
     invoke-direct {v2}, Lorg/json/JSONArray;-><init>()V
 
     const/4 v4, 0x0
 
-    .line 486
+    .line 559
     :goto_2a
     iget-object v5, p0, Lorg/telegram/ui/EmojiAnimationsOverlay;->timeIntervals:Ljava/util/ArrayList;
 
@@ -523,14 +620,14 @@
 
     if-ge v4, v5, :cond_65
 
-    .line 487
+    .line 560
     new-instance v5, Lorg/json/JSONObject;
 
     invoke-direct {v5}, Lorg/json/JSONObject;-><init>()V
 
     const-string v6, "i"
 
-    .line 488
+    .line 561
     iget-object v7, p0, Lorg/telegram/ui/EmojiAnimationsOverlay;->animationIndexes:Ljava/util/ArrayList;
 
     invoke-virtual {v7, v4}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -549,7 +646,7 @@
 
     const-string v6, "t"
 
-    .line 489
+    .line 562
     iget-object v7, p0, Lorg/telegram/ui/EmojiAnimationsOverlay;->timeIntervals:Ljava/util/ArrayList;
 
     invoke-virtual {v7, v4}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -572,7 +669,7 @@
 
     invoke-virtual {v5, v6, v7, v8}, Lorg/json/JSONObject;->put(Ljava/lang/String;D)Lorg/json/JSONObject;
 
-    .line 490
+    .line 563
     invoke-virtual {v2, v4, v5}, Lorg/json/JSONArray;->put(ILjava/lang/Object;)Lorg/json/JSONArray;
 
     add-int/lit8 v4, v4, 0x1
@@ -582,12 +679,12 @@
     :cond_65
     const-string v4, "a"
 
-    .line 493
+    .line 566
     invoke-virtual {v1, v4, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
     :try_end_6a
     .catch Lorg/json/JSONException; {:try_start_1e .. :try_end_6a} :catch_a0
 
-    .line 499
+    .line 572
     iget-object v2, v0, Lorg/telegram/tgnet/TLRPC$TL_sendMessageEmojiInteraction;->interaction:Lorg/telegram/tgnet/TLRPC$TL_dataJSON;
 
     invoke-virtual {v1}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
@@ -596,31 +693,31 @@
 
     iput-object v1, v2, Lorg/telegram/tgnet/TLRPC$TL_dataJSON;->data:Ljava/lang/String;
 
-    .line 501
+    .line 574
     new-instance v1, Lorg/telegram/tgnet/TLRPC$TL_messages_setTyping;
 
     invoke-direct {v1}, Lorg/telegram/tgnet/TLRPC$TL_messages_setTyping;-><init>()V
 
-    .line 502
+    .line 575
     iget v2, p0, Lorg/telegram/ui/EmojiAnimationsOverlay;->threadMsgId:I
 
     if-eqz v2, :cond_82
 
-    .line 503
+    .line 576
     iput v2, v1, Lorg/telegram/tgnet/TLRPC$TL_messages_setTyping;->top_msg_id:I
 
-    .line 504
+    .line 577
     iget v2, v1, Lorg/telegram/tgnet/TLRPC$TL_messages_setTyping;->flags:I
 
     or-int/2addr v2, v3
 
     iput v2, v1, Lorg/telegram/tgnet/TLRPC$TL_messages_setTyping;->flags:I
 
-    .line 506
+    .line 579
     :cond_82
     iput-object v0, v1, Lorg/telegram/tgnet/TLRPC$TL_messages_setTyping;->action:Lorg/telegram/tgnet/TLRPC$SendMessageAction;
 
-    .line 507
+    .line 580
     iget v0, p0, Lorg/telegram/ui/EmojiAnimationsOverlay;->currentAccount:I
 
     invoke-static {v0}, Lorg/telegram/messenger/MessagesController;->getInstance(I)Lorg/telegram/messenger/MessagesController;
@@ -635,7 +732,7 @@
 
     iput-object v0, v1, Lorg/telegram/tgnet/TLRPC$TL_messages_setTyping;->peer:Lorg/telegram/tgnet/TLRPC$InputPeer;
 
-    .line 508
+    .line 581
     iget v0, p0, Lorg/telegram/ui/EmojiAnimationsOverlay;->currentAccount:I
 
     invoke-static {v0}, Lorg/telegram/tgnet/ConnectionsManager;->getInstance(I)Lorg/telegram/tgnet/ConnectionsManager;
@@ -646,7 +743,7 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/tgnet/ConnectionsManager;->sendRequest(Lorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/RequestDelegate;)I
 
-    .line 509
+    .line 582
     invoke-direct {p0}, Lorg/telegram/ui/EmojiAnimationsOverlay;->clearSendingInfo()V
 
     return-void
@@ -654,23 +751,23 @@
     :catch_a0
     move-exception v0
 
-    .line 495
+    .line 568
     invoke-direct {p0}, Lorg/telegram/ui/EmojiAnimationsOverlay;->clearSendingInfo()V
 
-    .line 496
+    .line 569
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     return-void
 .end method
 
 .method private showAnimationForCell(Lorg/telegram/ui/Cells/ChatMessageCell;IZZ)Z
-    .registers 35
+    .registers 29
 
     move-object/from16 v0, p0
 
     move/from16 v1, p2
 
-    .line 334
+    .line 351
     iget-object v2, v0, Lorg/telegram/ui/EmojiAnimationsOverlay;->drawingObjects:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
@@ -685,7 +782,7 @@
 
     return v3
 
-    .line 337
+    .line 354
     :cond_10
     invoke-virtual/range {p1 .. p1}, Lorg/telegram/ui/Cells/ChatMessageCell;->getPhotoImage()Lorg/telegram/messenger/ImageReceiver;
 
@@ -699,13 +796,13 @@
 
     return v3
 
-    .line 340
+    .line 357
     :cond_1b
     invoke-virtual/range {p1 .. p1}, Lorg/telegram/ui/Cells/ChatMessageCell;->getMessageObject()Lorg/telegram/messenger/MessageObject;
 
     move-result-object v2
 
-    .line 341
+    .line 358
     invoke-virtual {v2}, Lorg/telegram/messenger/MessageObject;->getStickerEmoji()Ljava/lang/String;
 
     move-result-object v4
@@ -714,7 +811,7 @@
 
     return v3
 
-    .line 345
+    .line 362
     :cond_26
     invoke-virtual/range {p1 .. p1}, Lorg/telegram/ui/Cells/ChatMessageCell;->getPhotoImage()Lorg/telegram/messenger/ImageReceiver;
 
@@ -724,7 +821,7 @@
 
     move-result v5
 
-    .line 346
+    .line 363
     invoke-virtual/range {p1 .. p1}, Lorg/telegram/ui/Cells/ChatMessageCell;->getPhotoImage()Lorg/telegram/messenger/ImageReceiver;
 
     move-result-object v6
@@ -737,188 +834,343 @@
 
     cmpg-float v8, v5, v7
 
-    if-lez v8, :cond_2aa
+    if-lez v8, :cond_39b
 
     cmpg-float v7, v6, v7
 
     if-gtz v7, :cond_41
 
-    goto/16 :goto_2aa
+    goto/16 :goto_39b
 
-    .line 351
+    .line 368
     :cond_41
     invoke-direct {v0, v4}, Lorg/telegram/ui/EmojiAnimationsOverlay;->unwrapEmoji(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v13
 
-    .line 353
-    sget-object v4, Lorg/telegram/ui/EmojiAnimationsOverlay;->supportedEmoji:Ljava/util/HashSet;
-
-    invoke-virtual {v4, v13}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
-
-    move-result v4
-
-    if-nez v4, :cond_53
-
+    .line 369
     invoke-virtual {v2}, Lorg/telegram/messenger/MessageObject;->isPremiumSticker()Z
 
     move-result v4
 
-    if-eqz v4, :cond_2aa
+    .line 371
+    sget-object v7, Lorg/telegram/ui/EmojiAnimationsOverlay;->supportedEmoji:Ljava/util/HashSet;
 
-    .line 354
-    :cond_53
-    iget-object v4, v0, Lorg/telegram/ui/EmojiAnimationsOverlay;->emojiInteractionsStickersMap:Ljava/util/HashMap;
-
-    invoke-virtual {v4, v13}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Ljava/util/ArrayList;
-
-    if-eqz v4, :cond_63
-
-    .line 355
-    invoke-virtual {v4}, Ljava/util/ArrayList;->isEmpty()Z
+    invoke-virtual {v7, v13}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
 
     move-result v7
 
-    if-eqz v7, :cond_69
+    if-nez v7, :cond_57
 
-    :cond_63
-    invoke-virtual {v2}, Lorg/telegram/messenger/MessageObject;->isPremiumSticker()Z
+    if-eqz v4, :cond_54
 
-    move-result v7
+    goto :goto_57
 
-    if-eqz v7, :cond_2aa
+    :cond_54
+    const/4 v1, 0x0
 
-    :cond_69
-    const/4 v7, 0x0
+    goto/16 :goto_39a
 
-    const/4 v8, 0x0
+    .line 372
+    :cond_57
+    :goto_57
+    iget-object v7, v0, Lorg/telegram/ui/EmojiAnimationsOverlay;->emojiInteractionsStickersMap:Ljava/util/HashMap;
 
-    .line 357
-    :goto_6b
-    iget-object v9, v0, Lorg/telegram/ui/EmojiAnimationsOverlay;->drawingObjects:Ljava/util/ArrayList;
+    invoke-virtual {v7, v13}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {v9}, Ljava/util/ArrayList;->size()I
+    move-result-object v7
 
-    move-result v9
+    check-cast v7, Ljava/util/ArrayList;
 
-    if-ge v7, v9, :cond_b1
+    if-eqz v7, :cond_67
 
-    .line 358
-    iget-object v9, v0, Lorg/telegram/ui/EmojiAnimationsOverlay;->drawingObjects:Ljava/util/ArrayList;
-
-    invoke-virtual {v9, v7}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v9
-
-    check-cast v9, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;
-
-    iget v9, v9, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;->messageId:I
-
-    invoke-virtual/range {p1 .. p1}, Lorg/telegram/ui/Cells/ChatMessageCell;->getMessageObject()Lorg/telegram/messenger/MessageObject;
-
-    move-result-object v10
-
-    invoke-virtual {v10}, Lorg/telegram/messenger/MessageObject;->getId()I
-
-    move-result v10
-
-    if-ne v9, v10, :cond_ae
-
-    add-int/lit8 v8, v8, 0x1
-
-    .line 360
-    iget-object v9, v0, Lorg/telegram/ui/EmojiAnimationsOverlay;->drawingObjects:Ljava/util/ArrayList;
-
-    invoke-virtual {v9, v7}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v9
-
-    check-cast v9, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;
-
-    iget-object v9, v9, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;->imageReceiver:Lorg/telegram/messenger/ImageReceiver;
-
-    invoke-virtual {v9}, Lorg/telegram/messenger/ImageReceiver;->getLottieAnimation()Lorg/telegram/ui/Components/RLottieDrawable;
-
-    move-result-object v9
-
-    if-eqz v9, :cond_ad
-
-    iget-object v9, v0, Lorg/telegram/ui/EmojiAnimationsOverlay;->drawingObjects:Ljava/util/ArrayList;
-
-    invoke-virtual {v9, v7}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v9
-
-    check-cast v9, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;
-
-    iget-object v9, v9, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;->imageReceiver:Lorg/telegram/messenger/ImageReceiver;
-
-    invoke-virtual {v9}, Lorg/telegram/messenger/ImageReceiver;->getLottieAnimation()Lorg/telegram/ui/Components/RLottieDrawable;
-
-    move-result-object v9
-
-    invoke-virtual {v9}, Lorg/telegram/ui/Components/RLottieDrawable;->isGeneratingCache()Z
-
-    move-result v9
-
-    if-eqz v9, :cond_ae
-
-    :cond_ad
-    return v3
-
-    :cond_ae
-    add-int/lit8 v7, v7, 0x1
-
-    goto :goto_6b
-
-    :cond_b1
-    const/4 v7, 0x4
-
-    if-lt v8, v7, :cond_b5
-
-    return v3
-
-    .line 370
-    :cond_b5
-    invoke-virtual {v2}, Lorg/telegram/messenger/MessageObject;->isPremiumSticker()Z
+    .line 373
+    invoke-virtual {v7}, Ljava/util/ArrayList;->isEmpty()Z
 
     move-result v8
+
+    if-eqz v8, :cond_69
+
+    :cond_67
+    if-eqz v4, :cond_54
+
+    :cond_69
+    const/4 v8, 0x0
 
     const/4 v9, 0x0
 
-    const/4 v15, 0x1
+    const/4 v10, 0x0
 
-    if-eqz v8, :cond_c4
+    .line 376
+    :goto_6c
+    iget-object v11, v0, Lorg/telegram/ui/EmojiAnimationsOverlay;->drawingObjects:Ljava/util/ArrayList;
 
-    .line 371
-    invoke-virtual {v2}, Lorg/telegram/messenger/MessageObject;->getPremiumStickerAnimation()Lorg/telegram/tgnet/TLRPC$VideoSize;
+    invoke-virtual {v11}, Ljava/util/ArrayList;->size()I
+
+    move-result v11
+
+    if-ge v8, v11, :cond_e4
+
+    .line 377
+    iget-object v11, v0, Lorg/telegram/ui/EmojiAnimationsOverlay;->drawingObjects:Ljava/util/ArrayList;
+
+    invoke-virtual {v11, v8}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v11
+
+    check-cast v11, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;
+
+    iget v11, v11, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;->messageId:I
+
+    invoke-virtual/range {p1 .. p1}, Lorg/telegram/ui/Cells/ChatMessageCell;->getMessageObject()Lorg/telegram/messenger/MessageObject;
+
+    move-result-object v12
+
+    invoke-virtual {v12}, Lorg/telegram/messenger/MessageObject;->getId()I
+
+    move-result v12
+
+    if-ne v11, v12, :cond_af
+
+    add-int/lit8 v9, v9, 0x1
+
+    .line 379
+    iget-object v11, v0, Lorg/telegram/ui/EmojiAnimationsOverlay;->drawingObjects:Ljava/util/ArrayList;
+
+    invoke-virtual {v11, v8}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v11
+
+    check-cast v11, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;
+
+    iget-object v11, v11, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;->imageReceiver:Lorg/telegram/messenger/ImageReceiver;
+
+    invoke-virtual {v11}, Lorg/telegram/messenger/ImageReceiver;->getLottieAnimation()Lorg/telegram/ui/Components/RLottieDrawable;
+
+    move-result-object v11
+
+    if-eqz v11, :cond_ae
+
+    iget-object v11, v0, Lorg/telegram/ui/EmojiAnimationsOverlay;->drawingObjects:Ljava/util/ArrayList;
+
+    invoke-virtual {v11, v8}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v11
+
+    check-cast v11, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;
+
+    iget-object v11, v11, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;->imageReceiver:Lorg/telegram/messenger/ImageReceiver;
+
+    invoke-virtual {v11}, Lorg/telegram/messenger/ImageReceiver;->getLottieAnimation()Lorg/telegram/ui/Components/RLottieDrawable;
+
+    move-result-object v11
+
+    invoke-virtual {v11}, Lorg/telegram/ui/Components/RLottieDrawable;->isGeneratingCache()Z
+
+    move-result v11
+
+    if-eqz v11, :cond_af
+
+    :cond_ae
+    return v3
+
+    .line 383
+    :cond_af
+    iget-object v11, v0, Lorg/telegram/ui/EmojiAnimationsOverlay;->drawingObjects:Ljava/util/ArrayList;
+
+    invoke-virtual {v11, v8}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v11
+
+    check-cast v11, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;
+
+    iget-object v11, v11, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;->document:Lorg/telegram/tgnet/TLRPC$Document;
+
+    if-eqz v11, :cond_e1
+
+    invoke-virtual/range {p1 .. p1}, Lorg/telegram/ui/Cells/ChatMessageCell;->getMessageObject()Lorg/telegram/messenger/MessageObject;
+
+    move-result-object v11
+
+    invoke-virtual {v11}, Lorg/telegram/messenger/MessageObject;->getDocument()Lorg/telegram/tgnet/TLRPC$Document;
+
+    move-result-object v11
+
+    if-eqz v11, :cond_e1
+
+    iget-object v11, v0, Lorg/telegram/ui/EmojiAnimationsOverlay;->drawingObjects:Ljava/util/ArrayList;
+
+    invoke-virtual {v11, v8}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v11
+
+    check-cast v11, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;
+
+    iget-object v11, v11, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;->document:Lorg/telegram/tgnet/TLRPC$Document;
+
+    iget-wide v11, v11, Lorg/telegram/tgnet/TLRPC$Document;->id:J
+
+    invoke-virtual/range {p1 .. p1}, Lorg/telegram/ui/Cells/ChatMessageCell;->getMessageObject()Lorg/telegram/messenger/MessageObject;
+
+    move-result-object v14
+
+    invoke-virtual {v14}, Lorg/telegram/messenger/MessageObject;->getDocument()Lorg/telegram/tgnet/TLRPC$Document;
+
+    move-result-object v14
+
+    iget-wide v14, v14, Lorg/telegram/tgnet/TLRPC$Document;->id:J
+
+    cmp-long v16, v11, v14
+
+    if-nez v16, :cond_e1
+
+    add-int/lit8 v10, v10, 0x1
+
+    :cond_e1
+    add-int/lit8 v8, v8, 0x1
+
+    goto :goto_6c
+
+    :cond_e4
+    const/4 v8, 0x0
+
+    if-eqz p3, :cond_13c
+
+    if-eqz v4, :cond_13c
+
+    if-lez v9, :cond_13c
+
+    .line 388
+    invoke-static {}, Lorg/telegram/ui/Components/Bulletin;->getVisibleBulletin()Lorg/telegram/ui/Components/Bulletin;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_fe
+
+    invoke-static {}, Lorg/telegram/ui/Components/Bulletin;->getVisibleBulletin()Lorg/telegram/ui/Components/Bulletin;
+
+    move-result-object v1
+
+    iget v1, v1, Lorg/telegram/ui/Components/Bulletin;->hash:I
+
+    invoke-virtual {v2}, Lorg/telegram/messenger/MessageObject;->getId()I
+
+    move-result v4
+
+    if-ne v1, v4, :cond_fe
+
+    return v3
+
+    .line 391
+    :cond_fe
+    invoke-virtual {v2}, Lorg/telegram/messenger/MessageObject;->getInputStickerSet()Lorg/telegram/tgnet/TLRPC$InputStickerSet;
+
+    move-result-object v1
+
+    .line 393
+    iget-object v4, v1, Lorg/telegram/tgnet/TLRPC$InputStickerSet;->short_name:Ljava/lang/String;
+
+    if-eqz v4, :cond_112
+
+    .line 394
+    iget v4, v0, Lorg/telegram/ui/EmojiAnimationsOverlay;->currentAccount:I
+
+    invoke-static {v4}, Lorg/telegram/messenger/MediaDataController;->getInstance(I)Lorg/telegram/messenger/MediaDataController;
 
     move-result-object v4
 
-    move-object v8, v4
+    iget-object v5, v1, Lorg/telegram/tgnet/TLRPC$InputStickerSet;->short_name:Ljava/lang/String;
 
-    move-object v4, v9
+    invoke-virtual {v4, v5}, Lorg/telegram/messenger/MediaDataController;->getStickerSetByName(Ljava/lang/String;)Lorg/telegram/tgnet/TLRPC$TL_messages_stickerSet;
 
-    goto :goto_e3
+    move-result-object v8
 
-    :cond_c4
-    if-ltz v1, :cond_cd
+    :cond_112
+    if-nez v8, :cond_120
 
-    .line 373
-    invoke-virtual {v4}, Ljava/util/ArrayList;->size()I
+    .line 397
+    iget v4, v0, Lorg/telegram/ui/EmojiAnimationsOverlay;->currentAccount:I
 
-    move-result v8
+    invoke-static {v4}, Lorg/telegram/messenger/MediaDataController;->getInstance(I)Lorg/telegram/messenger/MediaDataController;
 
-    sub-int/2addr v8, v15
+    move-result-object v4
 
-    if-le v1, v8, :cond_dc
+    iget-wide v5, v1, Lorg/telegram/tgnet/TLRPC$InputStickerSet;->id:J
 
-    .line 374
-    :cond_cd
+    invoke-virtual {v4, v5, v6}, Lorg/telegram/messenger/MediaDataController;->getStickerSetById(J)Lorg/telegram/tgnet/TLRPC$TL_messages_stickerSet;
+
+    move-result-object v8
+
+    :cond_120
+    if-nez v8, :cond_138
+
+    .line 400
+    new-instance v4, Lorg/telegram/tgnet/TLRPC$TL_messages_getStickerSet;
+
+    invoke-direct {v4}, Lorg/telegram/tgnet/TLRPC$TL_messages_getStickerSet;-><init>()V
+
+    .line 401
+    iput-object v1, v4, Lorg/telegram/tgnet/TLRPC$TL_messages_getStickerSet;->stickerset:Lorg/telegram/tgnet/TLRPC$InputStickerSet;
+
+    .line 402
+    iget v1, v0, Lorg/telegram/ui/EmojiAnimationsOverlay;->currentAccount:I
+
+    invoke-static {v1}, Lorg/telegram/tgnet/ConnectionsManager;->getInstance(I)Lorg/telegram/tgnet/ConnectionsManager;
+
+    move-result-object v1
+
+    new-instance v5, Lorg/telegram/ui/EmojiAnimationsOverlay$$ExternalSyntheticLambda3;
+
+    invoke-direct {v5, v0, v2}, Lorg/telegram/ui/EmojiAnimationsOverlay$$ExternalSyntheticLambda3;-><init>(Lorg/telegram/ui/EmojiAnimationsOverlay;Lorg/telegram/messenger/MessageObject;)V
+
+    invoke-virtual {v1, v4, v5}, Lorg/telegram/tgnet/ConnectionsManager;->sendRequest(Lorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/RequestDelegate;)I
+
+    goto :goto_13b
+
+    .line 406
+    :cond_138
+    invoke-direct {v0, v8, v2}, Lorg/telegram/ui/EmojiAnimationsOverlay;->showStickerSetBulletin(Lorg/telegram/tgnet/TLRPC$TL_messages_stickerSet;Lorg/telegram/messenger/MessageObject;)V
+
+    :goto_13b
+    return v3
+
+    :cond_13c
+    const/4 v11, 0x4
+
+    if-lt v9, v11, :cond_140
+
+    return v3
+
+    :cond_140
+    const/4 v15, 0x1
+
+    if-eqz v4, :cond_14a
+
+    .line 416
+    invoke-virtual {v2}, Lorg/telegram/messenger/MessageObject;->getPremiumStickerAnimation()Lorg/telegram/tgnet/TLRPC$VideoSize;
+
+    move-result-object v7
+
+    move-object v9, v7
+
+    move-object v7, v8
+
+    goto :goto_169
+
+    :cond_14a
+    if-ltz v1, :cond_153
+
+    .line 418
+    invoke-virtual {v7}, Ljava/util/ArrayList;->size()I
+
+    move-result v9
+
+    sub-int/2addr v9, v15
+
+    if-le v1, v9, :cond_162
+
+    .line 419
+    :cond_153
     iget-object v1, v0, Lorg/telegram/ui/EmojiAnimationsOverlay;->random:Ljava/util/Random;
 
     invoke-virtual {v1}, Ljava/util/Random;->nextInt()I
@@ -929,85 +1181,85 @@
 
     move-result v1
 
-    invoke-virtual {v4}, Ljava/util/ArrayList;->size()I
+    invoke-virtual {v7}, Ljava/util/ArrayList;->size()I
 
-    move-result v8
+    move-result v9
 
-    rem-int/2addr v1, v8
+    rem-int/2addr v1, v9
 
-    .line 376
-    :cond_dc
-    invoke-virtual {v4, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    .line 421
+    :cond_162
+    invoke-virtual {v7, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
-    move-result-object v4
+    move-result-object v7
 
-    check-cast v4, Lorg/telegram/tgnet/TLRPC$Document;
+    check-cast v7, Lorg/telegram/tgnet/TLRPC$Document;
 
-    move-object v8, v9
+    move-object v9, v8
 
-    :goto_e3
-    if-nez v4, :cond_e8
+    :goto_169
+    if-nez v7, :cond_16e
 
-    if-nez v8, :cond_e8
+    if-nez v9, :cond_16e
 
     return v3
 
-    .line 383
-    :cond_e8
-    new-instance v10, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;
+    .line 428
+    :cond_16e
+    new-instance v12, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;
 
-    invoke-direct {v10, v0, v9}, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;-><init>(Lorg/telegram/ui/EmojiAnimationsOverlay;Lorg/telegram/ui/EmojiAnimationsOverlay$1;)V
+    invoke-direct {v12, v0, v8}, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;-><init>(Lorg/telegram/ui/EmojiAnimationsOverlay;Lorg/telegram/ui/EmojiAnimationsOverlay$1;)V
 
-    .line 384
+    .line 429
     invoke-virtual {v2}, Lorg/telegram/messenger/MessageObject;->isPremiumSticker()Z
-
-    move-result v11
-
-    iput-boolean v11, v10, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;->isPremiumSticker:Z
-
-    const/high16 v11, 0x40800000    # 4.0f
-
-    div-float v12, v6, v11
-
-    .line 385
-    iget-object v14, v0, Lorg/telegram/ui/EmojiAnimationsOverlay;->random:Ljava/util/Random;
-
-    invoke-virtual {v14}, Ljava/util/Random;->nextInt()I
 
     move-result v14
 
-    rem-int/lit8 v14, v14, 0x65
+    iput-boolean v14, v12, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;->isPremiumSticker:Z
 
-    int-to-float v14, v14
+    const/high16 v14, 0x40800000    # 4.0f
 
-    const/high16 v16, 0x42c80000    # 100.0f
+    div-float v16, v6, v14
 
-    div-float v14, v14, v16
+    .line 430
+    iget-object v8, v0, Lorg/telegram/ui/EmojiAnimationsOverlay;->random:Ljava/util/Random;
 
-    mul-float v12, v12, v14
+    invoke-virtual {v8}, Ljava/util/Random;->nextInt()I
 
-    iput v12, v10, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;->randomOffsetX:F
+    move-result v8
 
-    div-float/2addr v5, v11
+    rem-int/lit8 v8, v8, 0x65
 
-    .line 386
-    iget-object v11, v0, Lorg/telegram/ui/EmojiAnimationsOverlay;->random:Ljava/util/Random;
+    int-to-float v8, v8
 
-    invoke-virtual {v11}, Ljava/util/Random;->nextInt()I
+    const/high16 v17, 0x42c80000    # 100.0f
 
-    move-result v11
+    div-float v8, v8, v17
 
-    rem-int/lit8 v11, v11, 0x65
+    mul-float v8, v8, v16
 
-    int-to-float v11, v11
+    iput v8, v12, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;->randomOffsetX:F
 
-    div-float v11, v11, v16
+    div-float/2addr v5, v14
 
-    mul-float v5, v5, v11
+    .line 431
+    iget-object v8, v0, Lorg/telegram/ui/EmojiAnimationsOverlay;->random:Ljava/util/Random;
 
-    iput v5, v10, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;->randomOffsetY:F
+    invoke-virtual {v8}, Ljava/util/Random;->nextInt()I
 
-    .line 387
+    move-result v8
+
+    rem-int/lit8 v8, v8, 0x65
+
+    int-to-float v8, v8
+
+    div-float v8, v8, v17
+
+    mul-float v5, v5, v8
+
+    iput v5, v12, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;->randomOffsetY:F
+
+    .line 432
     invoke-virtual/range {p1 .. p1}, Lorg/telegram/ui/Cells/ChatMessageCell;->getMessageObject()Lorg/telegram/messenger/MessageObject;
 
     move-result-object v5
@@ -1016,9 +1268,12 @@
 
     move-result v5
 
-    iput v5, v10, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;->messageId:I
+    iput v5, v12, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;->messageId:I
 
-    .line 389
+    .line 433
+    iput-object v7, v12, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;->document:Lorg/telegram/tgnet/TLRPC$Document;
+
+    .line 434
     invoke-virtual/range {p1 .. p1}, Lorg/telegram/ui/Cells/ChatMessageCell;->getMessageObject()Lorg/telegram/messenger/MessageObject;
 
     move-result-object v5
@@ -1027,13 +1282,18 @@
 
     move-result v5
 
-    iput-boolean v5, v10, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;->isOut:Z
+    iput-boolean v5, v12, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;->isOut:Z
+
+    .line 435
+    iget-object v5, v12, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;->imageReceiver:Lorg/telegram/messenger/ImageReceiver;
+
+    invoke-virtual {v5, v15}, Lorg/telegram/messenger/ImageReceiver;->setAllowStartAnimation(Z)V
 
     const/high16 v5, 0x40000000    # 2.0f
 
     mul-float v6, v6, v5
 
-    .line 391
+    .line 436
     sget v5, Lorg/telegram/messenger/AndroidUtilities;->density:F
 
     div-float/2addr v6, v5
@@ -1042,137 +1302,230 @@
 
     const-string v6, "_pcache"
 
-    const-string v11, "_"
+    const-string v8, "_"
 
-    if-eqz v4, :cond_1ad
+    if-eqz v7, :cond_239
 
-    .line 393
+    .line 438
     iget-object v2, v0, Lorg/telegram/ui/EmojiAnimationsOverlay;->lastAnimationIndex:Ljava/util/HashMap;
 
-    move-object/from16 p2, v10
-
-    iget-wide v9, v4, Lorg/telegram/tgnet/TLRPC$Document;->id:J
-
-    invoke-static {v9, v10}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v8
-
-    invoke-virtual {v2, v8}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ljava/lang/Integer;
-
-    if-nez v2, :cond_14e
-
-    const/4 v2, 0x0
-
-    goto :goto_152
-
-    .line 394
-    :cond_14e
-    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
-
-    move-result v2
-
-    .line 395
-    :goto_152
-    iget-object v8, v0, Lorg/telegram/ui/EmojiAnimationsOverlay;->lastAnimationIndex:Ljava/util/HashMap;
-
-    iget-wide v9, v4, Lorg/telegram/tgnet/TLRPC$Document;->id:J
+    iget-wide v9, v7, Lorg/telegram/tgnet/TLRPC$Document;->id:J
 
     invoke-static {v9, v10}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v9
 
-    add-int/lit8 v10, v2, 0x1
-
-    rem-int/2addr v10, v7
-
-    invoke-static {v10}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v7
-
-    invoke-virtual {v8, v9, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 397
-    invoke-static {v4}, Lorg/telegram/messenger/ImageLocation;->getForDocument(Lorg/telegram/tgnet/TLRPC$Document;)Lorg/telegram/messenger/ImageLocation;
-
-    move-result-object v17
-
-    move-object/from16 v4, p2
-
-    .line 398
-    iget-object v7, v4, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;->imageReceiver:Lorg/telegram/messenger/ImageReceiver;
-
-    new-instance v8, Ljava/lang/StringBuilder;
-
-    invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v8, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v8, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v2, v4, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;->messageId:I
-
-    invoke-virtual {v8, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v8, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v2, v9}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v2
 
-    invoke-virtual {v7, v2}, Lorg/telegram/messenger/ImageReceiver;->setUniqKeyPrefix(Ljava/lang/String;)V
+    check-cast v2, Ljava/lang/Integer;
 
-    .line 400
-    iget-object v2, v4, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;->imageReceiver:Lorg/telegram/messenger/ImageReceiver;
+    if-nez v2, :cond_1d9
 
-    new-instance v7, Ljava/lang/StringBuilder;
+    const/4 v2, 0x0
 
-    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
+    goto :goto_1dd
 
-    invoke-virtual {v7, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    .line 439
+    :cond_1d9
+    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
 
-    invoke-virtual {v7, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result v2
 
-    invoke-virtual {v7, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    .line 440
+    :goto_1dd
+    iget-object v9, v0, Lorg/telegram/ui/EmojiAnimationsOverlay;->lastAnimationIndex:Ljava/util/HashMap;
 
-    invoke-virtual {v7, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move/from16 v16, v4
 
-    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iget-wide v3, v7, Lorg/telegram/tgnet/TLRPC$Document;->id:J
+
+    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v3
+
+    add-int/lit8 v4, v2, 0x1
+
+    rem-int/2addr v4, v11
+
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v4
+
+    invoke-virtual {v9, v3, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 442
+    invoke-static {v7}, Lorg/telegram/messenger/ImageLocation;->getForDocument(Lorg/telegram/tgnet/TLRPC$Document;)Lorg/telegram/messenger/ImageLocation;
 
     move-result-object v18
 
-    const/16 v19, 0x0
+    .line 443
+    iget-object v3, v12, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;->imageReceiver:Lorg/telegram/messenger/ImageReceiver;
 
-    iget-object v5, v0, Lorg/telegram/ui/EmojiAnimationsOverlay;->set:Lorg/telegram/tgnet/TLRPC$TL_messages_stickerSet;
+    new-instance v4, Ljava/lang/StringBuilder;
 
-    const/16 v22, 0x1
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v20, "tgs"
+    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    move-object/from16 v16, v2
+    invoke-virtual {v4, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-object/from16 v21, v5
+    iget v2, v12, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;->messageId:I
 
-    invoke-virtual/range {v16 .. v22}, Lorg/telegram/messenger/ImageReceiver;->setImage(Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Landroid/graphics/drawable/Drawable;Ljava/lang/String;Ljava/lang/Object;I)V
+    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    goto :goto_1dc
+    invoke-virtual {v4, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :cond_1ad
-    move-object v4, v10
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 402
-    iget-object v7, v4, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;->imageReceiver:Lorg/telegram/messenger/ImageReceiver;
+    move-result-object v2
+
+    invoke-virtual {v3, v2}, Lorg/telegram/messenger/ImageReceiver;->setUniqKeyPrefix(Ljava/lang/String;)V
+
+    .line 445
+    iget-object v2, v12, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;->imageReceiver:Lorg/telegram/messenger/ImageReceiver;
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v19
+
+    const/16 v20, 0x0
+
+    iget-object v3, v0, Lorg/telegram/ui/EmojiAnimationsOverlay;->set:Lorg/telegram/tgnet/TLRPC$TL_messages_stickerSet;
+
+    const/16 v23, 0x1
+
+    const-string v21, "tgs"
+
+    move-object/from16 v17, v2
+
+    move-object/from16 v22, v3
+
+    invoke-virtual/range {v17 .. v23}, Lorg/telegram/messenger/ImageReceiver;->setImage(Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Landroid/graphics/drawable/Drawable;Ljava/lang/String;Ljava/lang/Object;I)V
+
+    goto/16 :goto_2c0
+
+    :cond_239
+    move/from16 v16, v4
+
+    if-lez v10, :cond_28b
+
+    .line 448
+    iget-object v3, v0, Lorg/telegram/ui/EmojiAnimationsOverlay;->lastAnimationIndex:Ljava/util/HashMap;
+
+    invoke-virtual {v2}, Lorg/telegram/messenger/MessageObject;->getDocument()Lorg/telegram/tgnet/TLRPC$Document;
+
+    move-result-object v4
+
+    iget-wide v14, v4, Lorg/telegram/tgnet/TLRPC$Document;->id:J
+
+    invoke-static {v14, v15}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Ljava/lang/Integer;
+
+    if-nez v3, :cond_253
+
+    const/4 v14, 0x0
+
+    goto :goto_257
+
+    .line 449
+    :cond_253
+    invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
+
+    move-result v14
+
+    .line 450
+    :goto_257
+    iget-object v3, v0, Lorg/telegram/ui/EmojiAnimationsOverlay;->lastAnimationIndex:Ljava/util/HashMap;
+
+    invoke-virtual {v2}, Lorg/telegram/messenger/MessageObject;->getDocument()Lorg/telegram/tgnet/TLRPC$Document;
+
+    move-result-object v4
+
+    move-object v10, v8
+
+    iget-wide v7, v4, Lorg/telegram/tgnet/TLRPC$Document;->id:J
+
+    invoke-static {v7, v8}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v4
+
+    add-int/lit8 v7, v14, 0x1
+
+    rem-int/2addr v7, v11
+
+    invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v7
+
+    invoke-virtual {v3, v4, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 451
+    iget-object v3, v12, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;->imageReceiver:Lorg/telegram/messenger/ImageReceiver;
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v4, v14}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v7, v12, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;->messageId:I
+
+    invoke-virtual {v4, v7}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Lorg/telegram/messenger/ImageReceiver;->setUniqKeyPrefix(Ljava/lang/String;)V
+
+    goto :goto_28c
+
+    :cond_28b
+    move-object v10, v8
+
+    .line 453
+    :goto_28c
+    invoke-virtual {v2}, Lorg/telegram/messenger/MessageObject;->getDocument()Lorg/telegram/tgnet/TLRPC$Document;
+
+    move-result-object v3
+
+    iput-object v3, v12, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;->document:Lorg/telegram/tgnet/TLRPC$Document;
+
+    .line 454
+    iget-object v3, v12, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;->imageReceiver:Lorg/telegram/messenger/ImageReceiver;
 
     invoke-virtual {v2}, Lorg/telegram/messenger/MessageObject;->getDocument()Lorg/telegram/tgnet/TLRPC$Document;
 
     move-result-object v2
 
-    invoke-static {v8, v2}, Lorg/telegram/messenger/ImageLocation;->getForDocument(Lorg/telegram/tgnet/TLRPC$VideoSize;Lorg/telegram/tgnet/TLRPC$Document;)Lorg/telegram/messenger/ImageLocation;
+    invoke-static {v9, v2}, Lorg/telegram/messenger/ImageLocation;->getForDocument(Lorg/telegram/tgnet/TLRPC$VideoSize;Lorg/telegram/tgnet/TLRPC$Document;)Lorg/telegram/messenger/ImageLocation;
 
-    move-result-object v24
+    move-result-object v18
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -1180,7 +1533,7 @@
 
     invoke-virtual {v2, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v2, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -1188,51 +1541,65 @@
 
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v25
+    move-result-object v19
 
-    const/16 v26, 0x0
+    const/16 v20, 0x0
 
     iget-object v2, v0, Lorg/telegram/ui/EmojiAnimationsOverlay;->set:Lorg/telegram/tgnet/TLRPC$TL_messages_stickerSet;
 
-    const/16 v29, 0x1
+    const/16 v23, 0x1
 
-    const-string v27, "tgs"
+    const-string v21, "tgs"
 
-    move-object/from16 v23, v7
+    move-object/from16 v17, v3
 
-    move-object/from16 v28, v2
+    move-object/from16 v22, v2
 
-    invoke-virtual/range {v23 .. v29}, Lorg/telegram/messenger/ImageReceiver;->setImage(Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Landroid/graphics/drawable/Drawable;Ljava/lang/String;Ljava/lang/Object;I)V
+    invoke-virtual/range {v17 .. v23}, Lorg/telegram/messenger/ImageReceiver;->setImage(Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Landroid/graphics/drawable/Drawable;Ljava/lang/String;Ljava/lang/Object;I)V
 
-    .line 407
-    :goto_1dc
-    iget-object v2, v4, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;->imageReceiver:Lorg/telegram/messenger/ImageReceiver;
+    .line 457
+    :goto_2c0
+    iget-object v2, v12, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;->imageReceiver:Lorg/telegram/messenger/ImageReceiver;
 
-    const v5, 0x7fffffff
+    const v3, 0x7fffffff
 
-    invoke-virtual {v2, v5}, Lorg/telegram/messenger/ImageReceiver;->setLayerNum(I)V
+    invoke-virtual {v2, v3}, Lorg/telegram/messenger/ImageReceiver;->setLayerNum(I)V
 
-    .line 408
-    iget-object v2, v4, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;->imageReceiver:Lorg/telegram/messenger/ImageReceiver;
+    .line 458
+    iget-object v2, v12, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;->imageReceiver:Lorg/telegram/messenger/ImageReceiver;
 
-    invoke-virtual {v2, v15}, Lorg/telegram/messenger/ImageReceiver;->setAllowStartAnimation(Z)V
-
-    .line 409
-    iget-object v2, v4, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;->imageReceiver:Lorg/telegram/messenger/ImageReceiver;
+    const/4 v3, 0x0
 
     invoke-virtual {v2, v3}, Lorg/telegram/messenger/ImageReceiver;->setAutoRepeat(I)V
 
-    .line 410
-    iget-object v2, v4, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;->imageReceiver:Lorg/telegram/messenger/ImageReceiver;
+    .line 459
+    iget-object v2, v12, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;->imageReceiver:Lorg/telegram/messenger/ImageReceiver;
 
     invoke-virtual {v2}, Lorg/telegram/messenger/ImageReceiver;->getLottieAnimation()Lorg/telegram/ui/Components/RLottieDrawable;
 
     move-result-object v2
 
-    if-eqz v2, :cond_1ff
+    if-eqz v2, :cond_2ed
 
-    .line 411
-    iget-object v2, v4, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;->imageReceiver:Lorg/telegram/messenger/ImageReceiver;
+    .line 460
+    iget-boolean v2, v12, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;->isPremiumSticker:Z
+
+    if-eqz v2, :cond_2e4
+
+    .line 461
+    iget-object v2, v12, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;->imageReceiver:Lorg/telegram/messenger/ImageReceiver;
+
+    invoke-virtual {v2}, Lorg/telegram/messenger/ImageReceiver;->getLottieAnimation()Lorg/telegram/ui/Components/RLottieDrawable;
+
+    move-result-object v2
+
+    const/4 v4, 0x1
+
+    invoke-virtual {v2, v3, v3, v4}, Lorg/telegram/ui/Components/RLottieDrawable;->setCurrentFrame(IZZ)V
+
+    .line 463
+    :cond_2e4
+    iget-object v2, v12, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;->imageReceiver:Lorg/telegram/messenger/ImageReceiver;
 
     invoke-virtual {v2}, Lorg/telegram/messenger/ImageReceiver;->getLottieAnimation()Lorg/telegram/ui/Components/RLottieDrawable;
 
@@ -1240,35 +1607,37 @@
 
     invoke-virtual {v2}, Lorg/telegram/ui/Components/RLottieDrawable;->start()V
 
-    .line 413
-    :cond_1ff
+    .line 465
+    :cond_2ed
     iget-object v2, v0, Lorg/telegram/ui/EmojiAnimationsOverlay;->drawingObjects:Ljava/util/ArrayList;
 
-    invoke-virtual {v2, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v2, v12}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 414
-    iget-object v2, v4, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;->imageReceiver:Lorg/telegram/messenger/ImageReceiver;
+    .line 466
+    iget-object v2, v12, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;->imageReceiver:Lorg/telegram/messenger/ImageReceiver;
 
     invoke-virtual {v2}, Lorg/telegram/messenger/ImageReceiver;->onAttachedToWindow()Z
 
-    .line 415
-    iget-object v2, v4, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;->imageReceiver:Lorg/telegram/messenger/ImageReceiver;
+    .line 467
+    iget-object v2, v12, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;->imageReceiver:Lorg/telegram/messenger/ImageReceiver;
 
     iget-object v3, v0, Lorg/telegram/ui/EmojiAnimationsOverlay;->contentLayout:Landroid/widget/FrameLayout;
 
     invoke-virtual {v2, v3}, Lorg/telegram/messenger/ImageReceiver;->setParentView(Landroid/view/View;)V
 
-    .line 416
+    .line 468
     iget-object v2, v0, Lorg/telegram/ui/EmojiAnimationsOverlay;->contentLayout:Landroid/widget/FrameLayout;
 
     invoke-virtual {v2}, Landroid/widget/FrameLayout;->invalidate()V
 
-    if-eqz p3, :cond_297
+    if-eqz p3, :cond_387
 
-    .line 419
+    if-nez v16, :cond_387
+
+    .line 471
     iget v2, v0, Lorg/telegram/ui/EmojiAnimationsOverlay;->lastTappedMsgId:I
 
-    if-eqz v2, :cond_231
+    if-eqz v2, :cond_321
 
     invoke-virtual/range {p1 .. p1}, Lorg/telegram/ui/Cells/ChatMessageCell;->getMessageObject()Lorg/telegram/messenger/MessageObject;
 
@@ -1278,23 +1647,23 @@
 
     move-result v3
 
-    if-eq v2, v3, :cond_231
+    if-eq v2, v3, :cond_321
 
-    .line 420
+    .line 472
     iget-object v2, v0, Lorg/telegram/ui/EmojiAnimationsOverlay;->sentInteractionsRunnable:Ljava/lang/Runnable;
 
-    if-eqz v2, :cond_231
+    if-eqz v2, :cond_321
 
-    .line 421
+    .line 473
     invoke-static {v2}, Lorg/telegram/messenger/AndroidUtilities;->cancelRunOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 422
+    .line 474
     iget-object v2, v0, Lorg/telegram/ui/EmojiAnimationsOverlay;->sentInteractionsRunnable:Ljava/lang/Runnable;
 
     invoke-interface {v2}, Ljava/lang/Runnable;->run()V
 
-    .line 425
-    :cond_231
+    .line 477
+    :cond_321
     invoke-virtual/range {p1 .. p1}, Lorg/telegram/ui/Cells/ChatMessageCell;->getMessageObject()Lorg/telegram/messenger/MessageObject;
 
     move-result-object v2
@@ -1305,36 +1674,36 @@
 
     iput v2, v0, Lorg/telegram/ui/EmojiAnimationsOverlay;->lastTappedMsgId:I
 
-    .line 426
+    .line 478
     iput-object v13, v0, Lorg/telegram/ui/EmojiAnimationsOverlay;->lastTappedEmoji:Ljava/lang/String;
 
-    .line 427
+    .line 479
     iget-wide v2, v0, Lorg/telegram/ui/EmojiAnimationsOverlay;->lastTappedTime:J
 
     const-wide/16 v4, 0x0
 
     cmp-long v6, v2, v4
 
-    if-nez v6, :cond_268
+    if-nez v6, :cond_358
 
-    .line 428
+    .line 480
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v2
 
     iput-wide v2, v0, Lorg/telegram/ui/EmojiAnimationsOverlay;->lastTappedTime:J
 
-    .line 429
+    .line 481
     iget-object v2, v0, Lorg/telegram/ui/EmojiAnimationsOverlay;->timeIntervals:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->clear()V
 
-    .line 430
+    .line 482
     iget-object v2, v0, Lorg/telegram/ui/EmojiAnimationsOverlay;->animationIndexes:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->clear()V
 
-    .line 431
+    .line 483
     iget-object v2, v0, Lorg/telegram/ui/EmojiAnimationsOverlay;->timeIntervals:Ljava/util/ArrayList;
 
     invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -1343,7 +1712,7 @@
 
     invoke-virtual {v2, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 432
+    .line 484
     iget-object v2, v0, Lorg/telegram/ui/EmojiAnimationsOverlay;->animationIndexes:Ljava/util/ArrayList;
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1352,10 +1721,10 @@
 
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    goto :goto_281
+    goto :goto_371
 
-    .line 434
-    :cond_268
+    .line 486
+    :cond_358
     iget-object v2, v0, Lorg/telegram/ui/EmojiAnimationsOverlay;->timeIntervals:Ljava/util/ArrayList;
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -1372,7 +1741,7 @@
 
     invoke-virtual {v2, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 435
+    .line 487
     iget-object v2, v0, Lorg/telegram/ui/EmojiAnimationsOverlay;->animationIndexes:Ljava/util/ArrayList;
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1381,22 +1750,22 @@
 
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 437
-    :goto_281
+    .line 489
+    :goto_371
     iget-object v1, v0, Lorg/telegram/ui/EmojiAnimationsOverlay;->sentInteractionsRunnable:Ljava/lang/Runnable;
 
-    if-eqz v1, :cond_28b
+    if-eqz v1, :cond_37b
 
-    .line 438
+    .line 490
     invoke-static {v1}, Lorg/telegram/messenger/AndroidUtilities;->cancelRunOnUIThread(Ljava/lang/Runnable;)V
 
     const/4 v1, 0x0
 
-    .line 439
+    .line 491
     iput-object v1, v0, Lorg/telegram/ui/EmojiAnimationsOverlay;->sentInteractionsRunnable:Ljava/lang/Runnable;
 
-    .line 441
-    :cond_28b
+    .line 493
+    :cond_37b
     new-instance v1, Lorg/telegram/ui/EmojiAnimationsOverlay$$ExternalSyntheticLambda0;
 
     invoke-direct {v1, v0}, Lorg/telegram/ui/EmojiAnimationsOverlay$$ExternalSyntheticLambda0;-><init>(Lorg/telegram/ui/EmojiAnimationsOverlay;)V
@@ -1407,10 +1776,10 @@
 
     invoke-static {v1, v2, v3}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;J)V
 
-    :cond_297
-    if-eqz p4, :cond_2a9
+    :cond_387
+    if-eqz p4, :cond_399
 
-    .line 448
+    .line 500
     iget v1, v0, Lorg/telegram/ui/EmojiAnimationsOverlay;->currentAccount:I
 
     invoke-static {v1}, Lorg/telegram/messenger/MessagesController;->getInstance(I)Lorg/telegram/messenger/MessagesController;
@@ -1427,18 +1796,151 @@
 
     invoke-virtual/range {v8 .. v14}, Lorg/telegram/messenger/MessagesController;->sendTyping(JIILjava/lang/String;I)Z
 
-    :cond_2a9
-    return v15
+    :cond_399
+    const/4 v1, 0x1
 
-    :cond_2aa
-    :goto_2aa
-    return v3
+    :goto_39a
+    return v1
+
+    :cond_39b
+    :goto_39b
+    const/4 v1, 0x0
+
+    return v1
+.end method
+
+.method private showStickerSetBulletin(Lorg/telegram/tgnet/TLRPC$TL_messages_stickerSet;Lorg/telegram/messenger/MessageObject;)V
+    .registers 10
+
+    .line 509
+    iget v0, p0, Lorg/telegram/ui/EmojiAnimationsOverlay;->currentAccount:I
+
+    invoke-static {v0}, Lorg/telegram/messenger/MessagesController;->getInstance(I)Lorg/telegram/messenger/MessagesController;
+
+    move-result-object v0
+
+    iget-boolean v0, v0, Lorg/telegram/messenger/MessagesController;->premiumLocked:Z
+
+    if-eqz v0, :cond_b
+
+    return-void
+
+    .line 512
+    :cond_b
+    new-instance v0, Lorg/telegram/ui/Components/StickerSetBulletinLayout;
+
+    iget-object v1, p0, Lorg/telegram/ui/EmojiAnimationsOverlay;->contentLayout:Landroid/widget/FrameLayout;
+
+    invoke-virtual {v1}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
+
+    move-result-object v2
+
+    const/4 v3, 0x0
+
+    const/4 v4, -0x1
+
+    invoke-virtual {p2}, Lorg/telegram/messenger/MessageObject;->getDocument()Lorg/telegram/tgnet/TLRPC$Document;
+
+    move-result-object v5
+
+    iget-object v1, p0, Lorg/telegram/ui/EmojiAnimationsOverlay;->chatActivity:Lorg/telegram/ui/ChatActivity;
+
+    invoke-virtual {v1}, Lorg/telegram/ui/ChatActivity;->getResourceProvider()Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;
+
+    move-result-object v6
+
+    move-object v1, v0
+
+    invoke-direct/range {v1 .. v6}, Lorg/telegram/ui/Components/StickerSetBulletinLayout;-><init>(Landroid/content/Context;Lorg/telegram/tgnet/TLObject;ILorg/telegram/tgnet/TLRPC$Document;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)V
+
+    .line 513
+    iget-object v1, v0, Lorg/telegram/ui/Components/Bulletin$TwoLineLayout;->titleTextView:Landroid/widget/TextView;
+
+    iget-object p1, p1, Lorg/telegram/tgnet/TLRPC$messages_StickerSet;->set:Lorg/telegram/tgnet/TLRPC$StickerSet;
+
+    iget-object p1, p1, Lorg/telegram/tgnet/TLRPC$StickerSet;->title:Ljava/lang/String;
+
+    invoke-virtual {v1, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    .line 514
+    iget-object p1, v0, Lorg/telegram/ui/Components/Bulletin$TwoLineLayout;->subtitleTextView:Landroid/widget/TextView;
+
+    const v1, 0x7f0e0e55
+
+    const-string v2, "PremiumStickerToolteip"
+
+    invoke-static {v2, v1}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {p1, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    .line 516
+    new-instance p1, Lorg/telegram/ui/Components/Bulletin$UndoButton;
+
+    iget-object v1, p0, Lorg/telegram/ui/EmojiAnimationsOverlay;->chatActivity:Lorg/telegram/ui/ChatActivity;
+
+    invoke-virtual {v1}, Lorg/telegram/ui/ActionBar/BaseFragment;->getParentActivity()Landroid/app/Activity;
+
+    move-result-object v1
+
+    const/4 v2, 0x1
+
+    iget-object v3, p0, Lorg/telegram/ui/EmojiAnimationsOverlay;->chatActivity:Lorg/telegram/ui/ChatActivity;
+
+    invoke-virtual {v3}, Lorg/telegram/ui/ChatActivity;->getResourceProvider()Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;
+
+    move-result-object v3
+
+    invoke-direct {p1, v1, v2, v3}, Lorg/telegram/ui/Components/Bulletin$UndoButton;-><init>(Landroid/content/Context;ZLorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)V
+
+    .line 517
+    invoke-virtual {v0, p1}, Lorg/telegram/ui/Components/Bulletin$ButtonLayout;->setButton(Lorg/telegram/ui/Components/Bulletin$Button;)V
+
+    .line 518
+    new-instance v1, Lorg/telegram/ui/EmojiAnimationsOverlay$$ExternalSyntheticLambda1;
+
+    invoke-direct {v1, p0, p2}, Lorg/telegram/ui/EmojiAnimationsOverlay$$ExternalSyntheticLambda1;-><init>(Lorg/telegram/ui/EmojiAnimationsOverlay;Lorg/telegram/messenger/MessageObject;)V
+
+    invoke-virtual {p1, v1}, Lorg/telegram/ui/Components/Bulletin$UndoButton;->setUndoAction(Ljava/lang/Runnable;)Lorg/telegram/ui/Components/Bulletin$UndoButton;
+
+    const v1, 0x7f0e1362
+
+    const-string v2, "ViewAction"
+
+    .line 523
+    invoke-static {v2, v1}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {p1, v1}, Lorg/telegram/ui/Components/Bulletin$UndoButton;->setText(Ljava/lang/CharSequence;)Lorg/telegram/ui/Components/Bulletin$UndoButton;
+
+    .line 524
+    iget-object p1, p0, Lorg/telegram/ui/EmojiAnimationsOverlay;->chatActivity:Lorg/telegram/ui/ChatActivity;
+
+    const/16 v1, 0xabe
+
+    invoke-static {p1, v0, v1}, Lorg/telegram/ui/Components/Bulletin;->make(Lorg/telegram/ui/ActionBar/BaseFragment;Lorg/telegram/ui/Components/Bulletin$Layout;I)Lorg/telegram/ui/Components/Bulletin;
+
+    move-result-object p1
+
+    .line 525
+    invoke-virtual {p2}, Lorg/telegram/messenger/MessageObject;->getId()I
+
+    move-result p2
+
+    iput p2, p1, Lorg/telegram/ui/Components/Bulletin;->hash:I
+
+    .line 526
+    invoke-virtual {p1}, Lorg/telegram/ui/Components/Bulletin;->show()Lorg/telegram/ui/Components/Bulletin;
+
+    return-void
 .end method
 
 .method private unwrapEmoji(Ljava/lang/String;)Ljava/lang/String;
     .registers 10
 
-    .line 458
+    .line 531
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v0
@@ -1458,7 +1960,7 @@
 
     if-ge v2, v3, :cond_60
 
-    .line 460
+    .line 533
     invoke-interface {p1, v2}, Ljava/lang/CharSequence;->charAt(I)C
 
     move-result v3
@@ -1515,7 +2017,7 @@
     :cond_45
     new-array v3, v4, [Ljava/lang/CharSequence;
 
-    .line 461
+    .line 534
     invoke-interface {p1, v1, v2}, Ljava/lang/CharSequence;->subSequence(II)Ljava/lang/CharSequence;
 
     move-result-object v4
@@ -1542,7 +2044,7 @@
 
     goto :goto_83
 
-    .line 464
+    .line 537
     :cond_60
     invoke-interface {p1, v2}, Ljava/lang/CharSequence;->charAt(I)C
 
@@ -1554,7 +2056,7 @@
 
     new-array v3, v4, [Ljava/lang/CharSequence;
 
-    .line 465
+    .line 538
     invoke-interface {p1, v1, v2}, Ljava/lang/CharSequence;->subSequence(II)Ljava/lang/CharSequence;
 
     move-result-object v4
@@ -1587,7 +2089,7 @@
 
     goto/16 :goto_6
 
-    .line 470
+    .line 543
     :cond_88
     invoke-interface {p1}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
@@ -1601,21 +2103,59 @@
 .method public cancelHintRunnable()V
     .registers 2
 
-    .line 327
+    .line 344
     iget-object v0, p0, Lorg/telegram/ui/EmojiAnimationsOverlay;->hintRunnable:Ljava/lang/Runnable;
 
     if-eqz v0, :cond_7
 
-    .line 328
+    .line 345
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->cancelRunOnUIThread(Ljava/lang/Runnable;)V
 
     :cond_7
     const/4 v0, 0x0
 
-    .line 330
+    .line 347
     iput-object v0, p0, Lorg/telegram/ui/EmojiAnimationsOverlay;->hintRunnable:Ljava/lang/Runnable;
 
     return-void
+.end method
+
+.method public checkPosition(Lorg/telegram/ui/Cells/ChatMessageCell;FI)Z
+    .registers 5
+
+    .line 606
+    invoke-virtual {p1}, Landroid/view/ViewGroup;->getY()F
+
+    move-result v0
+
+    invoke-virtual {p1}, Lorg/telegram/ui/Cells/ChatMessageCell;->getPhotoImage()Lorg/telegram/messenger/ImageReceiver;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lorg/telegram/messenger/ImageReceiver;->getCenterY()F
+
+    move-result p1
+
+    add-float/2addr v0, p1
+
+    cmpl-float p1, v0, p2
+
+    if-lez p1, :cond_18
+
+    int-to-float p1, p3
+
+    cmpg-float p1, v0, p1
+
+    if-gez p1, :cond_18
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_18
+    const/4 p1, 0x0
+
+    return p1
 .end method
 
 .method public checkStickerPack()V
@@ -2129,7 +2669,7 @@
 
     move-result v0
 
-    if-nez v0, :cond_1c3
+    if-nez v0, :cond_1e0
 
     const/4 v0, 0x0
 
@@ -2143,7 +2683,7 @@
 
     move-result v2
 
-    if-ge v1, v2, :cond_1be
+    if-ge v1, v2, :cond_1d0
 
     .line 220
     iget-object v2, p0, Lorg/telegram/ui/EmojiAnimationsOverlay;->drawingObjects:Ljava/util/ArrayList;
@@ -2167,11 +2707,11 @@
 
     move-result v4
 
-    const/4 v5, 0x1
+    const/high16 v5, 0x40000000    # 2.0f
 
-    const/high16 v6, 0x40000000    # 2.0f
+    const/4 v6, 0x1
 
-    if-ge v3, v4, :cond_c1
+    if-ge v3, v4, :cond_cb
 
     .line 223
     iget-object v4, p0, Lorg/telegram/ui/EmojiAnimationsOverlay;->listView:Lorg/telegram/ui/Components/RecyclerListView;
@@ -2183,7 +2723,7 @@
     .line 224
     instance-of v7, v4, Lorg/telegram/ui/Cells/ChatMessageCell;
 
-    if-eqz v7, :cond_bd
+    if-eqz v7, :cond_c7
 
     .line 225
     move-object v7, v4
@@ -2201,10 +2741,10 @@
 
     iget v9, v2, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;->messageId:I
 
-    if-ne v8, v9, :cond_bd
+    if-ne v8, v9, :cond_c7
 
     .line 227
-    iput-boolean v5, v2, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;->viewFound:Z
+    iput-boolean v6, v2, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;->viewFound:Z
 
     .line 228
     iget-object v3, p0, Lorg/telegram/ui/EmojiAnimationsOverlay;->listView:Lorg/telegram/ui/Components/RecyclerListView;
@@ -2255,7 +2795,7 @@
 
     move-result-object v3
 
-    invoke-virtual {v3}, Lorg/telegram/messenger/ImageReceiver;->getCenterY()F
+    invoke-virtual {v3}, Lorg/telegram/messenger/ImageReceiver;->getImageY()F
 
     move-result v3
 
@@ -2265,7 +2805,7 @@
 
     goto :goto_b2
 
-    .line 234
+    .line 235
     :cond_74
     invoke-virtual {v7}, Lorg/telegram/ui/Cells/ChatMessageCell;->getPhotoImage()Lorg/telegram/messenger/ImageReceiver;
 
@@ -2277,7 +2817,7 @@
 
     add-float/2addr v3, v4
 
-    .line 235
+    .line 236
     invoke-virtual {v7}, Lorg/telegram/ui/Cells/ChatMessageCell;->getPhotoImage()Lorg/telegram/messenger/ImageReceiver;
 
     move-result-object v4
@@ -2288,14 +2828,14 @@
 
     add-float/2addr v8, v4
 
-    .line 236
+    .line 237
     iget-boolean v4, v2, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;->isOut:Z
 
     const/high16 v9, 0x41c00000    # 24.0f
 
     if-eqz v4, :cond_9e
 
-    .line 237
+    .line 238
     invoke-virtual {v7}, Lorg/telegram/ui/Cells/ChatMessageCell;->getPhotoImage()Lorg/telegram/messenger/ImageReceiver;
 
     move-result-object v4
@@ -2306,7 +2846,7 @@
 
     neg-float v4, v4
 
-    mul-float v4, v4, v6
+    mul-float v4, v4, v5
 
     invoke-static {v9}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
@@ -2318,7 +2858,7 @@
 
     goto :goto_a4
 
-    .line 239
+    .line 240
     :cond_9e
     invoke-static {v9}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
@@ -2331,7 +2871,7 @@
     :goto_a4
     add-float/2addr v3, v4
 
-    .line 241
+    .line 242
     invoke-virtual {v7}, Lorg/telegram/ui/Cells/ChatMessageCell;->getPhotoImage()Lorg/telegram/messenger/ImageReceiver;
 
     move-result-object v4
@@ -2342,13 +2882,13 @@
 
     sub-float/2addr v8, v4
 
-    .line 242
+    .line 243
     iput v3, v2, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;->lastX:F
 
-    .line 243
+    .line 244
     iput v8, v2, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;->lastY:F
 
-    .line 245
+    .line 246
     :goto_b2
     invoke-virtual {v7}, Lorg/telegram/ui/Cells/ChatMessageCell;->getPhotoImage()Lorg/telegram/messenger/ImageReceiver;
 
@@ -2360,123 +2900,146 @@
 
     iput v3, v2, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;->lastW:F
 
-    goto :goto_c1
+    .line 247
+    invoke-virtual {v7}, Lorg/telegram/ui/Cells/ChatMessageCell;->getPhotoImage()Lorg/telegram/messenger/ImageReceiver;
 
-    :cond_bd
+    move-result-object v3
+
+    invoke-virtual {v3}, Lorg/telegram/messenger/ImageReceiver;->getImageHeight()F
+
+    move-result v3
+
+    iput v3, v2, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;->lastH:F
+
+    goto :goto_cb
+
+    :cond_c7
     add-int/lit8 v3, v3, 0x1
 
     goto/16 :goto_1d
 
-    .line 251
-    :cond_c1
-    :goto_c1
+    .line 253
+    :cond_cb
+    :goto_cb
     iget-boolean v3, v2, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;->isPremiumSticker:Z
 
     const/high16 v4, 0x3f800000    # 1.0f
 
     const/high16 v7, -0x40800000    # -1.0f
 
-    if-eqz v3, :cond_117
+    if-eqz v3, :cond_129
 
-    .line 252
-    iget-boolean v3, v2, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;->isOut:Z
+    .line 254
+    iget v3, v2, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;->lastH:F
 
-    if-nez v3, :cond_de
+    const v8, 0x3fbfe7c0
 
-    .line 253
-    iget-object v3, v2, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;->imageReceiver:Lorg/telegram/messenger/ImageReceiver;
+    mul-float v8, v8, v3
 
-    iget v8, v2, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;->lastX:F
+    const/high16 v9, 0x3d600000    # 0.0546875f
 
-    iget v9, v2, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;->lastY:F
+    mul-float v9, v9, v8
 
-    iget v10, v2, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;->lastW:F
-
-    sub-float/2addr v9, v10
-
-    mul-float v11, v10, v6
-
-    mul-float v10, v10, v6
-
-    invoke-virtual {v3, v8, v9, v11, v10}, Lorg/telegram/messenger/ImageReceiver;->setImageCoords(FFFF)V
-
-    goto :goto_f2
-
-    .line 255
-    :cond_de
-    iget-object v3, v2, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;->imageReceiver:Lorg/telegram/messenger/ImageReceiver;
-
-    iget v8, v2, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;->lastX:F
-
-    iget v9, v2, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;->lastW:F
-
-    add-float/2addr v8, v9
-
-    mul-float v10, v9, v6
-
-    sub-float/2addr v8, v10
-
+    .line 256
     iget v10, v2, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;->lastY:F
 
-    sub-float/2addr v10, v9
+    div-float/2addr v3, v5
 
-    mul-float v11, v9, v6
+    add-float/2addr v10, v3
 
-    mul-float v9, v9, v6
+    div-float v3, v8, v5
 
-    invoke-virtual {v3, v8, v10, v11, v9}, Lorg/telegram/messenger/ImageReceiver;->setImageCoords(FFFF)V
+    sub-float/2addr v10, v3
 
-    .line 257
-    :goto_f2
-    iget-boolean v3, v2, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;->isOut:Z
+    const v3, 0x3b36d86f    # 0.00279f
 
-    if-nez v3, :cond_111
+    mul-float v3, v3, v8
+
+    sub-float/2addr v10, v3
 
     .line 258
-    invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
+    iget-boolean v3, v2, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;->isOut:Z
+
+    if-nez v3, :cond_f8
 
     .line 259
+    iget-object v3, v2, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;->imageReceiver:Lorg/telegram/messenger/ImageReceiver;
+
+    iget v5, v2, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;->lastX:F
+
+    sub-float/2addr v5, v9
+
+    invoke-virtual {v3, v5, v10, v8, v8}, Lorg/telegram/messenger/ImageReceiver;->setImageCoords(FFFF)V
+
+    goto :goto_104
+
+    .line 261
+    :cond_f8
+    iget-object v3, v2, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;->imageReceiver:Lorg/telegram/messenger/ImageReceiver;
+
+    iget v5, v2, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;->lastX:F
+
+    iget v11, v2, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;->lastW:F
+
+    add-float/2addr v5, v11
+
+    sub-float/2addr v5, v8
+
+    add-float/2addr v5, v9
+
+    invoke-virtual {v3, v5, v10, v8, v8}, Lorg/telegram/messenger/ImageReceiver;->setImageCoords(FFFF)V
+
+    .line 263
+    :goto_104
+    iget-boolean v3, v2, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;->isOut:Z
+
+    if-nez v3, :cond_123
+
+    .line 264
+    invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
+
+    .line 265
     iget-object v3, v2, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;->imageReceiver:Lorg/telegram/messenger/ImageReceiver;
 
     invoke-virtual {v3}, Lorg/telegram/messenger/ImageReceiver;->getCenterX()F
 
     move-result v3
 
-    iget-object v6, v2, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;->imageReceiver:Lorg/telegram/messenger/ImageReceiver;
+    iget-object v5, v2, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;->imageReceiver:Lorg/telegram/messenger/ImageReceiver;
 
-    invoke-virtual {v6}, Lorg/telegram/messenger/ImageReceiver;->getCenterY()F
+    invoke-virtual {v5}, Lorg/telegram/messenger/ImageReceiver;->getCenterY()F
 
-    move-result v6
+    move-result v5
 
-    invoke-virtual {p1, v7, v4, v3, v6}, Landroid/graphics/Canvas;->scale(FFFF)V
-
-    .line 260
-    iget-object v3, v2, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;->imageReceiver:Lorg/telegram/messenger/ImageReceiver;
-
-    invoke-virtual {v3, p1}, Lorg/telegram/messenger/ImageReceiver;->draw(Landroid/graphics/Canvas;)Z
-
-    .line 261
-    invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
-
-    goto :goto_152
-
-    .line 263
-    :cond_111
-    iget-object v3, v2, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;->imageReceiver:Lorg/telegram/messenger/ImageReceiver;
-
-    invoke-virtual {v3, p1}, Lorg/telegram/messenger/ImageReceiver;->draw(Landroid/graphics/Canvas;)Z
-
-    goto :goto_152
+    invoke-virtual {p1, v7, v4, v3, v5}, Landroid/graphics/Canvas;->scale(FFFF)V
 
     .line 266
-    :cond_117
     iget-object v3, v2, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;->imageReceiver:Lorg/telegram/messenger/ImageReceiver;
 
-    iget v6, v2, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;->lastX:F
+    invoke-virtual {v3, p1}, Lorg/telegram/messenger/ImageReceiver;->draw(Landroid/graphics/Canvas;)Z
+
+    .line 267
+    invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
+
+    goto :goto_164
+
+    .line 269
+    :cond_123
+    iget-object v3, v2, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;->imageReceiver:Lorg/telegram/messenger/ImageReceiver;
+
+    invoke-virtual {v3, p1}, Lorg/telegram/messenger/ImageReceiver;->draw(Landroid/graphics/Canvas;)Z
+
+    goto :goto_164
+
+    .line 272
+    :cond_129
+    iget-object v3, v2, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;->imageReceiver:Lorg/telegram/messenger/ImageReceiver;
+
+    iget v5, v2, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;->lastX:F
 
     iget v8, v2, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;->randomOffsetX:F
 
-    add-float/2addr v6, v8
+    add-float/2addr v5, v8
 
     iget v8, v2, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;->lastY:F
 
@@ -2492,52 +3055,52 @@
 
     mul-float v9, v9, v10
 
-    invoke-virtual {v3, v6, v8, v11, v9}, Lorg/telegram/messenger/ImageReceiver;->setImageCoords(FFFF)V
+    invoke-virtual {v3, v5, v8, v11, v9}, Lorg/telegram/messenger/ImageReceiver;->setImageCoords(FFFF)V
 
-    .line 267
+    .line 273
     iget-boolean v3, v2, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;->isOut:Z
 
-    if-nez v3, :cond_14d
+    if-nez v3, :cond_15f
 
-    .line 268
+    .line 274
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 269
+    .line 275
     iget-object v3, v2, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;->imageReceiver:Lorg/telegram/messenger/ImageReceiver;
 
     invoke-virtual {v3}, Lorg/telegram/messenger/ImageReceiver;->getCenterX()F
 
     move-result v3
 
-    iget-object v6, v2, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;->imageReceiver:Lorg/telegram/messenger/ImageReceiver;
+    iget-object v5, v2, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;->imageReceiver:Lorg/telegram/messenger/ImageReceiver;
 
-    invoke-virtual {v6}, Lorg/telegram/messenger/ImageReceiver;->getCenterY()F
+    invoke-virtual {v5}, Lorg/telegram/messenger/ImageReceiver;->getCenterY()F
 
-    move-result v6
+    move-result v5
 
-    invoke-virtual {p1, v7, v4, v3, v6}, Landroid/graphics/Canvas;->scale(FFFF)V
-
-    .line 270
-    iget-object v3, v2, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;->imageReceiver:Lorg/telegram/messenger/ImageReceiver;
-
-    invoke-virtual {v3, p1}, Lorg/telegram/messenger/ImageReceiver;->draw(Landroid/graphics/Canvas;)Z
-
-    .line 271
-    invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
-
-    goto :goto_152
-
-    .line 273
-    :cond_14d
-    iget-object v3, v2, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;->imageReceiver:Lorg/telegram/messenger/ImageReceiver;
-
-    invoke-virtual {v3, p1}, Lorg/telegram/messenger/ImageReceiver;->draw(Landroid/graphics/Canvas;)Z
+    invoke-virtual {p1, v7, v4, v3, v5}, Landroid/graphics/Canvas;->scale(FFFF)V
 
     .line 276
-    :goto_152
+    iget-object v3, v2, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;->imageReceiver:Lorg/telegram/messenger/ImageReceiver;
+
+    invoke-virtual {v3, p1}, Lorg/telegram/messenger/ImageReceiver;->draw(Landroid/graphics/Canvas;)Z
+
+    .line 277
+    invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
+
+    goto :goto_164
+
+    .line 279
+    :cond_15f
+    iget-object v3, v2, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;->imageReceiver:Lorg/telegram/messenger/ImageReceiver;
+
+    invoke-virtual {v3, p1}, Lorg/telegram/messenger/ImageReceiver;->draw(Landroid/graphics/Canvas;)Z
+
+    .line 282
+    :goto_164
     iget-boolean v3, v2, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;->wasPlayed:Z
 
-    if-eqz v3, :cond_17e
+    if-eqz v3, :cond_190
 
     iget-object v3, v2, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;->imageReceiver:Lorg/telegram/messenger/ImageReceiver;
 
@@ -2545,7 +3108,7 @@
 
     move-result-object v3
 
-    if-eqz v3, :cond_17e
+    if-eqz v3, :cond_190
 
     iget-object v3, v2, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;->imageReceiver:Lorg/telegram/messenger/ImageReceiver;
 
@@ -2569,53 +3132,26 @@
 
     add-int/lit8 v4, v4, -0x2
 
-    if-ne v3, v4, :cond_17e
+    if-ne v3, v4, :cond_190
 
-    .line 277
+    .line 283
     iget-object v2, p0, Lorg/telegram/ui/EmojiAnimationsOverlay;->drawingObjects:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
     add-int/lit8 v1, v1, -0x1
 
-    goto :goto_1bb
+    goto :goto_1cd
 
-    .line 279
-    :cond_17e
+    .line 285
+    :cond_190
     iget-object v3, v2, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;->imageReceiver:Lorg/telegram/messenger/ImageReceiver;
 
     invoke-virtual {v3}, Lorg/telegram/messenger/ImageReceiver;->getLottieAnimation()Lorg/telegram/ui/Components/RLottieDrawable;
 
     move-result-object v3
 
-    if-eqz v3, :cond_195
-
-    iget-object v3, v2, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;->imageReceiver:Lorg/telegram/messenger/ImageReceiver;
-
-    invoke-virtual {v3}, Lorg/telegram/messenger/ImageReceiver;->getLottieAnimation()Lorg/telegram/ui/Components/RLottieDrawable;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Lorg/telegram/ui/Components/RLottieDrawable;->isRunning()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_195
-
-    .line 280
-    iput-boolean v5, v2, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;->wasPlayed:Z
-
-    goto :goto_1bb
-
-    .line 281
-    :cond_195
-    iget-object v3, v2, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;->imageReceiver:Lorg/telegram/messenger/ImageReceiver;
-
-    invoke-virtual {v3}, Lorg/telegram/messenger/ImageReceiver;->getLottieAnimation()Lorg/telegram/ui/Components/RLottieDrawable;
-
-    move-result-object v3
-
-    if-eqz v3, :cond_1bb
+    if-eqz v3, :cond_1a7
 
     iget-object v3, v2, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;->imageReceiver:Lorg/telegram/messenger/ImageReceiver;
 
@@ -2627,18 +3163,45 @@
 
     move-result v3
 
-    if-nez v3, :cond_1bb
+    if-eqz v3, :cond_1a7
 
-    .line 282
+    .line 286
+    iput-boolean v6, v2, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;->wasPlayed:Z
+
+    goto :goto_1cd
+
+    .line 287
+    :cond_1a7
     iget-object v3, v2, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;->imageReceiver:Lorg/telegram/messenger/ImageReceiver;
 
     invoke-virtual {v3}, Lorg/telegram/messenger/ImageReceiver;->getLottieAnimation()Lorg/telegram/ui/Components/RLottieDrawable;
 
     move-result-object v3
 
-    invoke-virtual {v3, v0, v5}, Lorg/telegram/ui/Components/RLottieDrawable;->setCurrentFrame(IZ)V
+    if-eqz v3, :cond_1cd
 
-    .line 283
+    iget-object v3, v2, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;->imageReceiver:Lorg/telegram/messenger/ImageReceiver;
+
+    invoke-virtual {v3}, Lorg/telegram/messenger/ImageReceiver;->getLottieAnimation()Lorg/telegram/ui/Components/RLottieDrawable;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Lorg/telegram/ui/Components/RLottieDrawable;->isRunning()Z
+
+    move-result v3
+
+    if-nez v3, :cond_1cd
+
+    .line 288
+    iget-object v3, v2, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;->imageReceiver:Lorg/telegram/messenger/ImageReceiver;
+
+    invoke-virtual {v3}, Lorg/telegram/messenger/ImageReceiver;->getLottieAnimation()Lorg/telegram/ui/Components/RLottieDrawable;
+
+    move-result-object v3
+
+    invoke-virtual {v3, v0, v6}, Lorg/telegram/ui/Components/RLottieDrawable;->setCurrentFrame(IZ)V
+
+    .line 289
     iget-object v2, v2, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;->imageReceiver:Lorg/telegram/messenger/ImageReceiver;
 
     invoke-virtual {v2}, Lorg/telegram/messenger/ImageReceiver;->getLottieAnimation()Lorg/telegram/ui/Components/RLottieDrawable;
@@ -2647,20 +3210,54 @@
 
     invoke-virtual {v2}, Lorg/telegram/ui/Components/RLottieDrawable;->start()V
 
-    :cond_1bb
-    :goto_1bb
-    add-int/2addr v1, v5
+    :cond_1cd
+    :goto_1cd
+    add-int/2addr v1, v6
 
     goto/16 :goto_a
 
-    .line 286
-    :cond_1be
+    .line 292
+    :cond_1d0
+    iget-object p1, p0, Lorg/telegram/ui/EmojiAnimationsOverlay;->drawingObjects:Ljava/util/ArrayList;
+
+    invoke-virtual {p1}, Ljava/util/ArrayList;->isEmpty()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_1db
+
+    .line 293
+    invoke-virtual {p0}, Lorg/telegram/ui/EmojiAnimationsOverlay;->onAllEffectsEnd()V
+
+    .line 295
+    :cond_1db
     iget-object p1, p0, Lorg/telegram/ui/EmojiAnimationsOverlay;->contentLayout:Landroid/widget/FrameLayout;
 
     invoke-virtual {p1}, Landroid/widget/FrameLayout;->invalidate()V
 
-    :cond_1c3
+    :cond_1e0
     return-void
+.end method
+
+.method public isIdle()Z
+    .registers 2
+
+    .line 602
+    iget-object v0, p0, Lorg/telegram/ui/EmojiAnimationsOverlay;->drawingObjects:Ljava/util/ArrayList;
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public onAllEffectsEnd()V
+    .registers 1
+
+    const p0, 0x0
+
+    throw p0
 .end method
 
 .method protected onAttachedToWindow()V
@@ -2759,7 +3356,7 @@
 
     const/4 v0, 0x0
 
-    .line 521
+    .line 594
     :goto_1
     iget-object v1, p0, Lorg/telegram/ui/EmojiAnimationsOverlay;->drawingObjects:Ljava/util/ArrayList;
 
@@ -2769,7 +3366,7 @@
 
     if-ge v0, v1, :cond_26
 
-    .line 522
+    .line 595
     iget-object v1, p0, Lorg/telegram/ui/EmojiAnimationsOverlay;->drawingObjects:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -2782,7 +3379,7 @@
 
     if-nez v1, :cond_23
 
-    .line 523
+    .line 596
     iget-object v1, p0, Lorg/telegram/ui/EmojiAnimationsOverlay;->drawingObjects:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -2808,25 +3405,27 @@
     return-void
 .end method
 
-.method public onTapItem(Lorg/telegram/ui/Cells/ChatMessageCell;Lorg/telegram/ui/ChatActivity;)V
-    .registers 13
+.method public onTapItem(Lorg/telegram/ui/Cells/ChatMessageCell;Lorg/telegram/ui/ChatActivity;)Z
+    .registers 14
 
-    .line 291
+    .line 304
     iget-object v0, p2, Lorg/telegram/ui/ChatActivity;->currentUser:Lorg/telegram/tgnet/TLRPC$User;
 
-    if-eqz v0, :cond_f5
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_10c
 
     invoke-virtual {p2}, Lorg/telegram/ui/ChatActivity;->isSecretChat()Z
 
     move-result v0
 
-    if-nez v0, :cond_f5
+    if-nez v0, :cond_10c
 
     invoke-virtual {p1}, Lorg/telegram/ui/Cells/ChatMessageCell;->getMessageObject()Lorg/telegram/messenger/MessageObject;
 
     move-result-object v0
 
-    if-eqz v0, :cond_f5
+    if-eqz v0, :cond_10c
 
     invoke-virtual {p1}, Lorg/telegram/ui/Cells/ChatMessageCell;->getMessageObject()Lorg/telegram/messenger/MessageObject;
 
@@ -2836,27 +3435,25 @@
 
     move-result v0
 
-    if-gez v0, :cond_1c
+    if-gez v0, :cond_1d
 
-    goto/16 :goto_f5
+    goto/16 :goto_10c
 
-    :cond_1c
+    :cond_1d
     const/4 v0, -0x1
 
-    const/4 v1, 0x1
+    const/4 v2, 0x1
 
-    const/4 v2, 0x0
-
-    .line 294
-    invoke-direct {p0, p1, v0, v1, v2}, Lorg/telegram/ui/EmojiAnimationsOverlay;->showAnimationForCell(Lorg/telegram/ui/Cells/ChatMessageCell;IZZ)Z
+    .line 307
+    invoke-direct {p0, p1, v0, v2, v1}, Lorg/telegram/ui/EmojiAnimationsOverlay;->showAnimationForCell(Lorg/telegram/ui/Cells/ChatMessageCell;IZZ)Z
 
     move-result v0
 
     const/4 v3, 0x3
 
-    if-eqz v0, :cond_37
+    if-eqz v0, :cond_41
 
-    .line 295
+    .line 309
     invoke-virtual {p1}, Lorg/telegram/ui/Cells/ChatMessageCell;->getMessageObject()Lorg/telegram/messenger/MessageObject;
 
     move-result-object v4
@@ -2869,13 +3466,8 @@
 
     move-result v4
 
-    if-nez v4, :cond_37
+    if-eqz v4, :cond_3e
 
-    .line 296
-    invoke-virtual {p1, v3}, Landroid/view/ViewGroup;->performHapticFeedback(I)Z
-
-    .line 298
-    :cond_37
     invoke-virtual {p1}, Lorg/telegram/ui/Cells/ChatMessageCell;->getMessageObject()Lorg/telegram/messenger/MessageObject;
 
     move-result-object v4
@@ -2884,12 +3476,42 @@
 
     move-result v4
 
-    if-eqz v4, :cond_42
+    if-eqz v4, :cond_41
 
-    return-void
+    .line 310
+    :cond_3e
+    invoke-virtual {p1, v3}, Landroid/view/ViewGroup;->performHapticFeedback(I)Z
 
-    .line 301
-    :cond_42
+    .line 312
+    :cond_41
+    invoke-virtual {p1}, Lorg/telegram/ui/Cells/ChatMessageCell;->getMessageObject()Lorg/telegram/messenger/MessageObject;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Lorg/telegram/messenger/MessageObject;->isPremiumSticker()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_58
+
+    .line 313
+    invoke-virtual {p1}, Lorg/telegram/ui/Cells/ChatMessageCell;->getMessageObject()Lorg/telegram/messenger/MessageObject;
+
+    move-result-object p2
+
+    iput-boolean v2, p2, Lorg/telegram/messenger/MessageObject;->wasPlayedPremiumAnimation:Z
+
+    .line 314
+    invoke-virtual {p1}, Lorg/telegram/ui/Cells/ChatMessageCell;->getMessageObject()Lorg/telegram/messenger/MessageObject;
+
+    move-result-object p1
+
+    iput-boolean v1, p1, Lorg/telegram/messenger/MessageObject;->forcePlayEffect:Z
+
+    return v0
+
+    .line 317
+    :cond_58
     iget v4, p0, Lorg/telegram/ui/EmojiAnimationsOverlay;->currentAccount:I
 
     invoke-static {v4}, Lorg/telegram/messenger/MessagesController;->getInstance(I)Lorg/telegram/messenger/MessagesController;
@@ -2904,86 +3526,86 @@
 
     move-result-object v4
 
-    if-eqz v4, :cond_5b
+    if-eqz v4, :cond_71
 
-    .line 303
+    .line 319
     invoke-virtual {v4}, Ljava/lang/Integer;->intValue()I
 
     move-result v4
 
     const/4 v5, 0x5
 
-    if-ne v4, v5, :cond_5b
+    if-ne v4, v5, :cond_71
 
     const/4 v4, 0x0
 
-    goto :goto_5c
+    goto :goto_72
 
-    :cond_5b
+    :cond_71
     const/4 v4, 0x1
 
-    :goto_5c
-    if-eqz v4, :cond_f5
+    :goto_72
+    if-eqz v4, :cond_10b
 
-    .line 306
+    .line 322
     iget-object v4, p0, Lorg/telegram/ui/EmojiAnimationsOverlay;->hintRunnable:Ljava/lang/Runnable;
 
-    if-nez v4, :cond_f5
+    if-nez v4, :cond_10b
 
-    if-eqz v0, :cond_f5
-
-    invoke-static {}, Lorg/telegram/ui/Components/Bulletin;->getVisibleBulletin()Lorg/telegram/ui/Components/Bulletin;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_74
+    if-eqz v0, :cond_10b
 
     invoke-static {}, Lorg/telegram/ui/Components/Bulletin;->getVisibleBulletin()Lorg/telegram/ui/Components/Bulletin;
 
-    move-result-object v0
+    move-result-object v4
 
-    invoke-virtual {v0}, Lorg/telegram/ui/Components/Bulletin;->isShowing()Z
+    if-eqz v4, :cond_8a
 
-    move-result v0
+    invoke-static {}, Lorg/telegram/ui/Components/Bulletin;->getVisibleBulletin()Lorg/telegram/ui/Components/Bulletin;
 
-    if-nez v0, :cond_f5
+    move-result-object v4
 
-    :cond_74
-    sget v0, Lorg/telegram/messenger/SharedConfig;->emojiInteractionsHintCount:I
+    invoke-virtual {v4}, Lorg/telegram/ui/Components/Bulletin;->isShowing()Z
 
-    if-lez v0, :cond_f5
+    move-result v4
 
-    iget v0, p0, Lorg/telegram/ui/EmojiAnimationsOverlay;->currentAccount:I
+    if-nez v4, :cond_10b
 
-    invoke-static {v0}, Lorg/telegram/messenger/UserConfig;->getInstance(I)Lorg/telegram/messenger/UserConfig;
+    :cond_8a
+    sget v4, Lorg/telegram/messenger/SharedConfig;->emojiInteractionsHintCount:I
 
-    move-result-object v0
+    if-lez v4, :cond_10b
 
-    invoke-virtual {v0}, Lorg/telegram/messenger/UserConfig;->getClientUserId()J
+    iget v4, p0, Lorg/telegram/ui/EmojiAnimationsOverlay;->currentAccount:I
+
+    invoke-static {v4}, Lorg/telegram/messenger/UserConfig;->getInstance(I)Lorg/telegram/messenger/UserConfig;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Lorg/telegram/messenger/UserConfig;->getClientUserId()J
 
     move-result-wide v4
 
-    iget-object v0, p2, Lorg/telegram/ui/ChatActivity;->currentUser:Lorg/telegram/tgnet/TLRPC$User;
+    iget-object v6, p2, Lorg/telegram/ui/ChatActivity;->currentUser:Lorg/telegram/tgnet/TLRPC$User;
 
-    iget-wide v6, v0, Lorg/telegram/tgnet/TLRPC$User;->id:J
+    iget-wide v6, v6, Lorg/telegram/tgnet/TLRPC$User;->id:J
 
-    cmp-long v0, v4, v6
+    cmp-long v8, v4, v6
 
-    if-eqz v0, :cond_f5
+    if-eqz v8, :cond_10b
 
-    .line 307
-    sget v0, Lorg/telegram/messenger/SharedConfig;->emojiInteractionsHintCount:I
+    .line 323
+    sget v4, Lorg/telegram/messenger/SharedConfig;->emojiInteractionsHintCount:I
 
-    sub-int/2addr v0, v1
+    sub-int/2addr v4, v2
 
-    invoke-static {v0}, Lorg/telegram/messenger/SharedConfig;->updateEmojiInteractionsHintCount(I)V
+    invoke-static {v4}, Lorg/telegram/messenger/SharedConfig;->updateEmojiInteractionsHintCount(I)V
 
-    .line 308
-    iget v0, p0, Lorg/telegram/ui/EmojiAnimationsOverlay;->currentAccount:I
+    .line 324
+    iget v4, p0, Lorg/telegram/ui/EmojiAnimationsOverlay;->currentAccount:I
 
-    invoke-static {v0}, Lorg/telegram/messenger/MediaDataController;->getInstance(I)Lorg/telegram/messenger/MediaDataController;
+    invoke-static {v4}, Lorg/telegram/messenger/MediaDataController;->getInstance(I)Lorg/telegram/messenger/MediaDataController;
 
-    move-result-object v0
+    move-result-object v4
 
     invoke-virtual {p1}, Lorg/telegram/ui/Cells/ChatMessageCell;->getMessageObject()Lorg/telegram/messenger/MessageObject;
 
@@ -2993,97 +3615,100 @@
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lorg/telegram/messenger/MediaDataController;->getEmojiAnimatedSticker(Ljava/lang/CharSequence;)Lorg/telegram/tgnet/TLRPC$Document;
+    invoke-virtual {v4, p1}, Lorg/telegram/messenger/MediaDataController;->getEmojiAnimatedSticker(Ljava/lang/CharSequence;)Lorg/telegram/tgnet/TLRPC$Document;
 
-    move-result-object v8
+    move-result-object v9
 
-    .line 309
+    .line 325
     new-instance p1, Lorg/telegram/ui/Components/StickerSetBulletinLayout;
 
     invoke-virtual {p2}, Lorg/telegram/ui/ActionBar/BaseFragment;->getParentActivity()Landroid/app/Activity;
 
-    move-result-object v5
+    move-result-object v6
 
-    const/4 v6, 0x0
+    const/4 v7, 0x0
 
-    const/4 v7, -0x1
+    const/4 v8, -0x1
 
     invoke-virtual {p2}, Lorg/telegram/ui/ChatActivity;->getResourceProvider()Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;
 
-    move-result-object v9
+    move-result-object v10
 
-    move-object v4, p1
+    move-object v5, p1
 
-    invoke-direct/range {v4 .. v9}, Lorg/telegram/ui/Components/StickerSetBulletinLayout;-><init>(Landroid/content/Context;Lorg/telegram/tgnet/TLObject;ILorg/telegram/tgnet/TLRPC$Document;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)V
+    invoke-direct/range {v5 .. v10}, Lorg/telegram/ui/Components/StickerSetBulletinLayout;-><init>(Landroid/content/Context;Lorg/telegram/tgnet/TLObject;ILorg/telegram/tgnet/TLRPC$Document;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)V
 
-    .line 310
-    iget-object v0, p1, Lorg/telegram/ui/Components/Bulletin$TwoLineLayout;->subtitleTextView:Landroid/widget/TextView;
+    .line 326
+    iget-object v4, p1, Lorg/telegram/ui/Components/Bulletin$TwoLineLayout;->subtitleTextView:Landroid/widget/TextView;
 
-    const/16 v4, 0x8
+    const/16 v5, 0x8
 
-    invoke-virtual {v0, v4}, Landroid/widget/TextView;->setVisibility(I)V
+    invoke-virtual {v4, v5}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 311
-    iget-object v0, p1, Lorg/telegram/ui/Components/Bulletin$TwoLineLayout;->titleTextView:Landroid/widget/TextView;
+    .line 327
+    iget-object v4, p1, Lorg/telegram/ui/Components/Bulletin$TwoLineLayout;->titleTextView:Landroid/widget/TextView;
 
-    const v4, 0x7f0e0630
+    const v5, 0x7f0e0682
 
-    new-array v1, v1, [Ljava/lang/Object;
+    new-array v2, v2, [Ljava/lang/Object;
 
-    iget-object v5, p2, Lorg/telegram/ui/ChatActivity;->currentUser:Lorg/telegram/tgnet/TLRPC$User;
+    iget-object v6, p2, Lorg/telegram/ui/ChatActivity;->currentUser:Lorg/telegram/tgnet/TLRPC$User;
 
-    iget-object v5, v5, Lorg/telegram/tgnet/TLRPC$User;->first_name:Ljava/lang/String;
+    iget-object v6, v6, Lorg/telegram/tgnet/TLRPC$User;->first_name:Ljava/lang/String;
 
-    aput-object v5, v1, v2
+    aput-object v6, v2, v1
 
-    const-string v5, "EmojiInteractionTapHint"
+    const-string v6, "EmojiInteractionTapHint"
 
-    invoke-static {v5, v4, v1}, Lorg/telegram/messenger/LocaleController;->formatString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {v6, v5, v2}, Lorg/telegram/messenger/LocaleController;->formatString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v2
 
-    invoke-static {v1}, Lorg/telegram/messenger/AndroidUtilities;->replaceTags(Ljava/lang/String;)Landroid/text/SpannableStringBuilder;
+    invoke-static {v2}, Lorg/telegram/messenger/AndroidUtilities;->replaceTags(Ljava/lang/String;)Landroid/text/SpannableStringBuilder;
 
-    move-result-object v1
+    move-result-object v2
 
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    invoke-virtual {v4, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 312
-    iget-object v0, p1, Lorg/telegram/ui/Components/Bulletin$TwoLineLayout;->titleTextView:Landroid/widget/TextView;
+    .line 328
+    iget-object v2, p1, Lorg/telegram/ui/Components/Bulletin$TwoLineLayout;->titleTextView:Landroid/widget/TextView;
 
-    const/4 v1, 0x0
+    const/4 v4, 0x0
 
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTypeface(Landroid/graphics/Typeface;)V
+    invoke-virtual {v2, v4}, Landroid/widget/TextView;->setTypeface(Landroid/graphics/Typeface;)V
 
-    .line 313
-    iget-object v0, p1, Lorg/telegram/ui/Components/Bulletin$TwoLineLayout;->titleTextView:Landroid/widget/TextView;
+    .line 329
+    iget-object v2, p1, Lorg/telegram/ui/Components/Bulletin$TwoLineLayout;->titleTextView:Landroid/widget/TextView;
 
-    invoke-virtual {v0, v3}, Landroid/widget/TextView;->setMaxLines(I)V
+    invoke-virtual {v2, v3}, Landroid/widget/TextView;->setMaxLines(I)V
 
-    .line 314
-    iget-object v0, p1, Lorg/telegram/ui/Components/Bulletin$TwoLineLayout;->titleTextView:Landroid/widget/TextView;
+    .line 330
+    iget-object v2, p1, Lorg/telegram/ui/Components/Bulletin$TwoLineLayout;->titleTextView:Landroid/widget/TextView;
 
-    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setSingleLine(Z)V
+    invoke-virtual {v2, v1}, Landroid/widget/TextView;->setSingleLine(Z)V
 
-    const/16 v0, 0xabe
+    const/16 v1, 0xabe
 
-    .line 315
-    invoke-static {p2, p1, v0}, Lorg/telegram/ui/Components/Bulletin;->make(Lorg/telegram/ui/ActionBar/BaseFragment;Lorg/telegram/ui/Components/Bulletin$Layout;I)Lorg/telegram/ui/Components/Bulletin;
+    .line 331
+    invoke-static {p2, p1, v1}, Lorg/telegram/ui/Components/Bulletin;->make(Lorg/telegram/ui/ActionBar/BaseFragment;Lorg/telegram/ui/Components/Bulletin$Layout;I)Lorg/telegram/ui/Components/Bulletin;
 
     move-result-object p1
 
-    .line 316
+    .line 332
     new-instance p2, Lorg/telegram/ui/EmojiAnimationsOverlay$2;
 
     invoke-direct {p2, p0, p1}, Lorg/telegram/ui/EmojiAnimationsOverlay$2;-><init>(Lorg/telegram/ui/EmojiAnimationsOverlay;Lorg/telegram/ui/Components/Bulletin;)V
 
     iput-object p2, p0, Lorg/telegram/ui/EmojiAnimationsOverlay;->hintRunnable:Ljava/lang/Runnable;
 
-    const-wide/16 v0, 0x5dc
+    const-wide/16 v1, 0x5dc
 
-    invoke-static {p2, v0, v1}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;J)V
+    invoke-static {p2, v1, v2}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;J)V
 
-    :cond_f5
-    :goto_f5
-    return-void
+    :cond_10b
+    return v0
+
+    :cond_10c
+    :goto_10c
+    return v1
 .end method

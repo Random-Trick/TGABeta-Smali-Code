@@ -24,6 +24,9 @@
 .method public abstract didLongPress(Lorg/telegram/ui/Cells/ChatMessageCell;FF)V
 .end method
 
+.method public abstract didLongPressBotButton(Lorg/telegram/ui/Cells/ChatMessageCell;Lorg/telegram/tgnet/TLRPC$KeyboardButton;)V
+.end method
+
 .method public abstract didLongPressChannelAvatar(Lorg/telegram/ui/Cells/ChatMessageCell;Lorg/telegram/tgnet/TLRPC$Chat;IFF)Z
 .end method
 
@@ -124,6 +127,9 @@
 .end method
 
 .method public abstract needReloadPolls()V
+.end method
+
+.method public abstract needShowPremiumFeatures()V
 .end method
 
 .method public abstract onDiceFinished()V

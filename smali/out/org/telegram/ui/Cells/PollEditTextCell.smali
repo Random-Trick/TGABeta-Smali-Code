@@ -279,7 +279,7 @@
     .line 148
     iget-object v5, v0, Lorg/telegram/ui/Cells/PollEditTextCell;->moveImageView:Landroid/widget/ImageView;
 
-    const v9, 0x7f070369
+    const v9, 0x7f070380
 
     invoke-virtual {v5, v9}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -370,7 +370,7 @@
     .line 156
     iget-object v5, v0, Lorg/telegram/ui/Cells/PollEditTextCell;->deleteImageView:Landroid/widget/ImageView;
 
-    const v9, 0x7f070368
+    const v9, 0x7f07037f
 
     invoke-virtual {v5, v9}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -397,7 +397,7 @@
     .line 159
     iget-object v2, v0, Lorg/telegram/ui/Cells/PollEditTextCell;->deleteImageView:Landroid/widget/ImageView;
 
-    const v5, 0x7f0e0540
+    const v5, 0x7f0e0591
 
     const-string v9, "Delete"
 
@@ -568,7 +568,7 @@
     .line 169
     iget-object v1, v0, Lorg/telegram/ui/Cells/PollEditTextCell;->checkBox:Lorg/telegram/ui/Components/CheckBox2;
 
-    const v2, 0x7f0e0050
+    const v2, 0x7f0e006f
 
     const-string v3, "AccDescrQuizCorrectAnswer"
 

@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/messenger/MediaController;)V
     .registers 2
 
-    .line 3341
+    .line 3359
     iput-object p1, p0, Lorg/telegram/messenger/MediaController$12;->this$0:Lorg/telegram/messenger/MediaController;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -35,7 +35,7 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .registers 2
 
-    .line 3344
+    .line 3362
     iget-object p1, p0, Lorg/telegram/messenger/MediaController$12;->this$0:Lorg/telegram/messenger/MediaController;
 
     invoke-static {p1}, Lorg/telegram/messenger/MediaController;->access$2500(Lorg/telegram/messenger/MediaController;)Lorg/telegram/ui/Components/VideoPlayer;
@@ -44,7 +44,7 @@
 
     if-eqz p1, :cond_11
 
-    .line 3345
+    .line 3363
     iget-object p1, p0, Lorg/telegram/messenger/MediaController$12;->this$0:Lorg/telegram/messenger/MediaController;
 
     invoke-static {p1}, Lorg/telegram/messenger/MediaController;->access$2500(Lorg/telegram/messenger/MediaController;)Lorg/telegram/ui/Components/VideoPlayer;

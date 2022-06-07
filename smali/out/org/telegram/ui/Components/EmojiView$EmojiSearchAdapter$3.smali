@@ -25,7 +25,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/EmojiView$EmojiSearchAdapter;)V
     .registers 2
 
-    .line 4805
+    .line 4891
     iput-object p1, p0, Lorg/telegram/ui/Components/EmojiView$EmojiSearchAdapter$3;->this$1:Lorg/telegram/ui/Components/EmojiView$EmojiSearchAdapter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public run()V
     .registers 7
 
-    .line 4808
+    .line 4894
     iget-object v0, p0, Lorg/telegram/ui/Components/EmojiView$EmojiSearchAdapter$3;->this$1:Lorg/telegram/ui/Components/EmojiView$EmojiSearchAdapter;
 
     iget-object v0, v0, Lorg/telegram/ui/Components/EmojiView$EmojiSearchAdapter;->this$0:Lorg/telegram/ui/Components/EmojiView;
@@ -53,19 +53,19 @@
 
     invoke-virtual {v0}, Lorg/telegram/ui/Components/CloseProgressDrawable2;->startAnimation()V
 
-    .line 4809
+    .line 4895
     iget-object v0, p0, Lorg/telegram/ui/Components/EmojiView$EmojiSearchAdapter$3;->this$1:Lorg/telegram/ui/Components/EmojiView$EmojiSearchAdapter;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/EmojiView$EmojiSearchAdapter;->access$1200(Lorg/telegram/ui/Components/EmojiView$EmojiSearchAdapter;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 4810
+    .line 4896
     invoke-static {}, Lorg/telegram/messenger/AndroidUtilities;->getCurrentKeyboardLanguage()[Ljava/lang/String;
 
     move-result-object v1
 
-    .line 4811
+    .line 4897
     iget-object v2, p0, Lorg/telegram/ui/Components/EmojiView$EmojiSearchAdapter$3;->this$1:Lorg/telegram/ui/Components/EmojiView$EmojiSearchAdapter;
 
     iget-object v2, v2, Lorg/telegram/ui/Components/EmojiView$EmojiSearchAdapter;->this$0:Lorg/telegram/ui/Components/EmojiView;
@@ -80,7 +80,7 @@
 
     if-nez v2, :cond_36
 
-    .line 4812
+    .line 4898
     iget-object v2, p0, Lorg/telegram/ui/Components/EmojiView$EmojiSearchAdapter$3;->this$1:Lorg/telegram/ui/Components/EmojiView$EmojiSearchAdapter;
 
     iget-object v2, v2, Lorg/telegram/ui/Components/EmojiView$EmojiSearchAdapter;->this$0:Lorg/telegram/ui/Components/EmojiView;
@@ -95,7 +95,7 @@
 
     invoke-virtual {v2, v1}, Lorg/telegram/messenger/MediaDataController;->fetchNewEmojiKeywords([Ljava/lang/String;)V
 
-    .line 4814
+    .line 4900
     :cond_36
     iget-object v2, p0, Lorg/telegram/ui/Components/EmojiView$EmojiSearchAdapter$3;->this$1:Lorg/telegram/ui/Components/EmojiView$EmojiSearchAdapter;
 
@@ -103,7 +103,7 @@
 
     invoke-static {v2, v1}, Lorg/telegram/ui/Components/EmojiView;->access$6402(Lorg/telegram/ui/Components/EmojiView;[Ljava/lang/String;)[Ljava/lang/String;
 
-    .line 4815
+    .line 4901
     iget-object v1, p0, Lorg/telegram/ui/Components/EmojiView$EmojiSearchAdapter$3;->this$1:Lorg/telegram/ui/Components/EmojiView$EmojiSearchAdapter;
 
     iget-object v1, v1, Lorg/telegram/ui/Components/EmojiView$EmojiSearchAdapter;->this$0:Lorg/telegram/ui/Components/EmojiView;

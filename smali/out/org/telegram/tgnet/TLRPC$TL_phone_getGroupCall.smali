@@ -23,7 +23,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 52726
+    .line 53191
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -34,7 +34,7 @@
 .method public deserializeResponse(Lorg/telegram/tgnet/AbstractSerializedData;IZ)Lorg/telegram/tgnet/TLObject;
     .registers 4
 
-    .line 52733
+    .line 53198
     invoke-static {p1, p2, p3}, Lorg/telegram/tgnet/TLRPC$TL_phone_groupCall;->TLdeserialize(Lorg/telegram/tgnet/AbstractSerializedData;IZ)Lorg/telegram/tgnet/TLRPC$TL_phone_groupCall;
 
     move-result-object p1
@@ -45,17 +45,17 @@
 .method public serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
     .registers 3
 
-    .line 52737
+    .line 53202
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_phone_getGroupCall;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 52738
+    .line 53203
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_phone_getGroupCall;->call:Lorg/telegram/tgnet/TLRPC$TL_inputGroupCall;
 
     invoke-virtual {v0, p1}, Lorg/telegram/tgnet/TLRPC$TL_inputGroupCall;->serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
 
-    .line 52739
+    .line 53204
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_phone_getGroupCall;->limit:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V

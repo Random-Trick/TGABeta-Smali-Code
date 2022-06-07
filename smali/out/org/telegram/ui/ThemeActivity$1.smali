@@ -473,7 +473,7 @@
 
     invoke-direct {p1, v1}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    const v1, 0x7f0e1192
+    const v1, 0x7f0e125c
 
     const-string v2, "ThemeResetToDefaultsTitle"
 
@@ -484,7 +484,7 @@
 
     invoke-virtual {p1, v1}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const v1, 0x7f0e1191
+    const v1, 0x7f0e125b
 
     const-string v2, "ThemeResetToDefaultsText"
 
@@ -495,7 +495,7 @@
 
     invoke-virtual {p1, v1}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const v1, 0x7f0e0f11
+    const v1, 0x7f0e0fbe
 
     const-string v2, "Reset"
 
@@ -510,7 +510,7 @@
 
     invoke-virtual {p1, v1, v2}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const v1, 0x7f0e0331
+    const v1, 0x7f0e036d
 
     const-string v2, "Cancel"
 

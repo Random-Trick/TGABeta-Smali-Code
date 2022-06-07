@@ -17,7 +17,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 41988
+    .line 42440
     invoke-direct {p0}, Lorg/telegram/tgnet/TLRPC$PhotoSize;-><init>()V
 
     return-void
@@ -28,28 +28,28 @@
 .method public readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
     .registers 4
 
-    .line 41993
+    .line 42445
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readString(Z)Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/telegram/tgnet/TLRPC$PhotoSize;->type:Ljava/lang/String;
 
-    .line 41994
+    .line 42446
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
 
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$PhotoSize;->w:I
 
-    .line 41995
+    .line 42447
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
 
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$PhotoSize;->h:I
 
-    .line 41996
+    .line 42448
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result p1
@@ -62,27 +62,27 @@
 .method public serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
     .registers 3
 
-    .line 42000
+    .line 42452
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_photoSize;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 42001
+    .line 42453
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$PhotoSize;->type:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeString(Ljava/lang/String;)V
 
-    .line 42002
+    .line 42454
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$PhotoSize;->w:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 42003
+    .line 42455
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$PhotoSize;->h:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 42004
+    .line 42456
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$PhotoSize;->size:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V

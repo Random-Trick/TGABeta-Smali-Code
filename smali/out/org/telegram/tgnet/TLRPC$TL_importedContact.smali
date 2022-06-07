@@ -23,7 +23,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 44096
+    .line 44548
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -32,7 +32,7 @@
 .method public static TLdeserialize(Lorg/telegram/tgnet/AbstractSerializedData;IZ)Lorg/telegram/tgnet/TLRPC$TL_importedContact;
     .registers 4
 
-    .line 44103
+    .line 44555
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_importedContact;->constructor:I
 
     if-eq v0, p1, :cond_1e
@@ -43,7 +43,7 @@
 
     return-object p0
 
-    .line 44105
+    .line 44557
     :cond_8
     new-instance p0, Ljava/lang/RuntimeException;
 
@@ -69,13 +69,13 @@
 
     throw p0
 
-    .line 44110
+    .line 44562
     :cond_1e
     new-instance p1, Lorg/telegram/tgnet/TLRPC$TL_importedContact;
 
     invoke-direct {p1}, Lorg/telegram/tgnet/TLRPC$TL_importedContact;-><init>()V
 
-    .line 44111
+    .line 44563
     invoke-virtual {p1, p0, p2}, Lorg/telegram/tgnet/TLRPC$TL_importedContact;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
     return-object p1
@@ -86,14 +86,14 @@
 .method public readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
     .registers 5
 
-    .line 44116
+    .line 44568
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt64(Z)J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lorg/telegram/tgnet/TLRPC$TL_importedContact;->user_id:J
 
-    .line 44117
+    .line 44569
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt64(Z)J
 
     move-result-wide p1
@@ -106,17 +106,17 @@
 .method public serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
     .registers 4
 
-    .line 44121
+    .line 44573
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_importedContact;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 44122
+    .line 44574
     iget-wide v0, p0, Lorg/telegram/tgnet/TLRPC$TL_importedContact;->user_id:J
 
     invoke-virtual {p1, v0, v1}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt64(J)V
 
-    .line 44123
+    .line 44575
     iget-wide v0, p0, Lorg/telegram/tgnet/TLRPC$TL_importedContact;->client_id:J
 
     invoke-virtual {p1, v0, v1}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt64(J)V

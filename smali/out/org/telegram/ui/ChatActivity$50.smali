@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/ChatActivity;)V
     .registers 2
 
-    .line 8415
+    .line 8541
     iput-object p1, p0, Lorg/telegram/ui/ChatActivity$50;->this$0:Lorg/telegram/ui/ChatActivity;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -35,25 +35,14 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .registers 3
 
-    .line 8418
+    .line 8544
     iget-object p1, p0, Lorg/telegram/ui/ChatActivity$50;->this$0:Lorg/telegram/ui/ChatActivity;
 
-    invoke-static {p1}, Lorg/telegram/ui/ChatActivity;->access$11100(Lorg/telegram/ui/ChatActivity;)Landroid/widget/FrameLayout;
+    const/high16 v0, 0x3f800000    # 1.0f
 
-    move-result-object p1
+    invoke-static {p1, v0}, Lorg/telegram/ui/ChatActivity;->access$30802(Lorg/telegram/ui/ChatActivity;F)F
 
-    const/4 v0, 0x4
-
-    invoke-virtual {p1, v0}, Landroid/widget/FrameLayout;->setVisibility(I)V
-
-    .line 8419
-    iget-object p1, p0, Lorg/telegram/ui/ChatActivity$50;->this$0:Lorg/telegram/ui/ChatActivity;
-
-    const/4 v0, 0x0
-
-    invoke-static {p1, v0}, Lorg/telegram/ui/ChatActivity;->access$30302(Lorg/telegram/ui/ChatActivity;F)F
-
-    .line 8420
+    .line 8545
     iget-object p1, p0, Lorg/telegram/ui/ChatActivity$50;->this$0:Lorg/telegram/ui/ChatActivity;
 
     iget-object p1, p1, Lorg/telegram/ui/ChatActivity;->contentView:Lorg/telegram/ui/Components/SizeNotifierFrameLayout;

@@ -17,7 +17,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 57614
+    .line 58095
     invoke-direct {p0}, Lorg/telegram/tgnet/TLRPC$ChatParticipant;-><init>()V
 
     return-void

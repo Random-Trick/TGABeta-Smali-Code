@@ -26,7 +26,7 @@
 
     move-object v0, p1
 
-    .line 5969
+    .line 5974
     iput-object v0, v11, Lorg/telegram/ui/GroupCallActivity$46;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     move-object v0, p0
@@ -69,7 +69,7 @@
         }
     .end annotation
 
-    .line 5972
+    .line 5977
     invoke-virtual {p1}, Landroidx/collection/LongSparseArray;->size()I
 
     move-result v0
@@ -78,7 +78,7 @@
 
     if-ne v0, v1, :cond_20
 
-    .line 5973
+    .line 5978
     iget-object v0, p0, Lorg/telegram/ui/GroupCallActivity$46;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-virtual {v0}, Lorg/telegram/ui/GroupCallActivity;->getUndoView()Lorg/telegram/ui/Components/UndoView;
@@ -105,7 +105,7 @@
 
     goto :goto_3b
 
-    .line 5975
+    .line 5980
     :cond_20
     iget-object v0, p0, Lorg/telegram/ui/GroupCallActivity$46;->this$0:Lorg/telegram/ui/GroupCallActivity;
 

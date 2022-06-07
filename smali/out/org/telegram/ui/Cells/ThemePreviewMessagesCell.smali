@@ -87,7 +87,7 @@
 
     invoke-virtual {v6, v11, v1, v11, v0}, Landroid/widget/LinearLayout;->setPadding(IIII)V
 
-    const v0, 0x7f07012d
+    const v0, 0x7f0700fc
 
     const-string v1, "windowBackgroundGrayShadow"
 
@@ -124,7 +124,7 @@
 
     invoke-direct {v15}, Lorg/telegram/tgnet/TLRPC$TL_message;-><init>()V
 
-    const v13, 0x7f0e05df
+    const v13, 0x7f0e0630
 
     const-string v9, "DoubleTapPreviewMessage"
 
@@ -204,7 +204,7 @@
     .line 87
     iput-wide v1, v0, Lorg/telegram/messenger/MessageObject;->eventId:J
 
-    const v1, 0x7f0e05e1
+    const v1, 0x7f0e0632
 
     const-string v2, "DoubleTapPreviewSenderName"
 
@@ -215,7 +215,7 @@
 
     iput-object v1, v0, Lorg/telegram/messenger/MessageObject;->customName:Ljava/lang/String;
 
-    const v1, 0x7f0700ed
+    const v1, 0x7f0700cb
 
     .line 89
     invoke-static {v7, v1}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
@@ -238,7 +238,7 @@
 
     if-nez v8, :cond_c5
 
-    const v5, 0x7f0e0760
+    const v5, 0x7f0e07b6
 
     const-string v9, "FontSizePreviewReply"
 
@@ -252,7 +252,7 @@
     goto :goto_d0
 
     :cond_c5
-    const v5, 0x7f0e0a9d
+    const v5, 0x7f0e0b24
 
     const-string v9, "NewThemePreviewReply"
 
@@ -334,7 +334,7 @@
 
     if-nez v8, :cond_11b
 
-    const v14, 0x7f0e075e
+    const v14, 0x7f0e07b4
 
     const-string v15, "FontSizePreviewLine2"
 
@@ -348,7 +348,7 @@
     goto :goto_15e
 
     :cond_11b
-    const v14, 0x7f0e0a9b
+    const v14, 0x7f0e0b22
 
     const-string v15, "NewThemePreviewLine3"
 
@@ -508,7 +508,7 @@
 
     if-nez v8, :cond_1b3
 
-    const v2, 0x7f0e075d
+    const v2, 0x7f0e07b3
 
     const-string v3, "FontSizePreviewLine1"
 
@@ -522,7 +522,7 @@
     goto :goto_1be
 
     :cond_1b3
-    const v2, 0x7f0e0a9a
+    const v2, 0x7f0e0b21
 
     const-string v3, "NewThemePreviewLine1"
 
@@ -610,7 +610,7 @@
 
     if-nez v8, :cond_20d
 
-    const v1, 0x7f0e075f
+    const v1, 0x7f0e07b5
 
     const-string v2, "FontSizePreviewName"
 
@@ -624,7 +624,7 @@
     goto :goto_218
 
     :cond_20d
-    const v1, 0x7f0e0a9c
+    const v1, 0x7f0e0b23
 
     const-string v2, "NewThemePreviewName"
 
@@ -792,14 +792,14 @@
 .method public dispatchTouchEvent(Landroid/view/MotionEvent;)Z
     .registers 4
 
-    .line 349
+    .line 358
     iget v0, p0, Lorg/telegram/ui/Cells/ThemePreviewMessagesCell;->type:I
 
     const/4 v1, 0x2
 
     if-ne v0, v1, :cond_a
 
-    .line 350
+    .line 359
     invoke-super {p0, p1}, Landroid/widget/LinearLayout;->dispatchTouchEvent(Landroid/view/MotionEvent;)Z
 
     move-result p1
@@ -853,32 +853,32 @@
 .method protected onDetachedFromWindow()V
     .registers 3
 
-    .line 328
+    .line 337
     invoke-super {p0}, Landroid/widget/LinearLayout;->onDetachedFromWindow()V
 
-    .line 329
+    .line 338
     iget-object v0, p0, Lorg/telegram/ui/Cells/ThemePreviewMessagesCell;->backgroundGradientDisposable:Lorg/telegram/ui/Components/BackgroundGradientDrawable$Disposable;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_d
 
-    .line 330
+    .line 339
     invoke-interface {v0}, Lorg/telegram/ui/Components/BackgroundGradientDrawable$Disposable;->dispose()V
 
-    .line 331
+    .line 340
     iput-object v1, p0, Lorg/telegram/ui/Cells/ThemePreviewMessagesCell;->backgroundGradientDisposable:Lorg/telegram/ui/Components/BackgroundGradientDrawable$Disposable;
 
-    .line 333
+    .line 342
     :cond_d
     iget-object v0, p0, Lorg/telegram/ui/Cells/ThemePreviewMessagesCell;->oldBackgroundGradientDisposable:Lorg/telegram/ui/Components/BackgroundGradientDrawable$Disposable;
 
     if-eqz v0, :cond_16
 
-    .line 334
+    .line 343
     invoke-interface {v0}, Lorg/telegram/ui/Components/BackgroundGradientDrawable$Disposable;->dispose()V
 
-    .line 335
+    .line 344
     iput-object v1, p0, Lorg/telegram/ui/Cells/ThemePreviewMessagesCell;->oldBackgroundGradientDisposable:Lorg/telegram/ui/Components/BackgroundGradientDrawable$Disposable;
 
     :cond_16
@@ -894,52 +894,61 @@
     move-result-object v0
 
     .line 261
+    sget-object v1, Lorg/telegram/ui/ActionBar/Theme;->wallpaperLoadTask:Ljava/lang/Runnable;
+
+    if-eqz v1, :cond_b
+
+    .line 262
+    invoke-virtual {p0}, Lorg/telegram/ui/Cells/ThemePreviewMessagesCell;->invalidate()V
+
+    .line 264
+    :cond_b
     iget-object v1, p0, Lorg/telegram/ui/Cells/ThemePreviewMessagesCell;->backgroundDrawable:Landroid/graphics/drawable/Drawable;
 
     const/4 v2, 0x0
 
-    if-eq v0, v1, :cond_25
+    if-eq v0, v1, :cond_2c
 
-    if-eqz v0, :cond_25
+    if-eqz v0, :cond_2c
 
-    .line 262
+    .line 265
     invoke-static {}, Lorg/telegram/ui/ActionBar/Theme;->isAnimatingColor()Z
 
     move-result v1
 
-    if-eqz v1, :cond_1a
+    if-eqz v1, :cond_21
 
-    .line 263
+    .line 266
     iget-object v1, p0, Lorg/telegram/ui/Cells/ThemePreviewMessagesCell;->backgroundDrawable:Landroid/graphics/drawable/Drawable;
 
     iput-object v1, p0, Lorg/telegram/ui/Cells/ThemePreviewMessagesCell;->oldBackgroundDrawable:Landroid/graphics/drawable/Drawable;
 
-    .line 264
+    .line 267
     iget-object v1, p0, Lorg/telegram/ui/Cells/ThemePreviewMessagesCell;->backgroundGradientDisposable:Lorg/telegram/ui/Components/BackgroundGradientDrawable$Disposable;
 
     iput-object v1, p0, Lorg/telegram/ui/Cells/ThemePreviewMessagesCell;->oldBackgroundGradientDisposable:Lorg/telegram/ui/Components/BackgroundGradientDrawable$Disposable;
 
-    goto :goto_23
+    goto :goto_2a
 
-    .line 265
-    :cond_1a
+    .line 268
+    :cond_21
     iget-object v1, p0, Lorg/telegram/ui/Cells/ThemePreviewMessagesCell;->backgroundGradientDisposable:Lorg/telegram/ui/Components/BackgroundGradientDrawable$Disposable;
 
-    if-eqz v1, :cond_23
-
-    .line 266
-    invoke-interface {v1}, Lorg/telegram/ui/Components/BackgroundGradientDrawable$Disposable;->dispose()V
-
-    .line 267
-    iput-object v2, p0, Lorg/telegram/ui/Cells/ThemePreviewMessagesCell;->backgroundGradientDisposable:Lorg/telegram/ui/Components/BackgroundGradientDrawable$Disposable;
+    if-eqz v1, :cond_2a
 
     .line 269
-    :cond_23
-    :goto_23
+    invoke-interface {v1}, Lorg/telegram/ui/Components/BackgroundGradientDrawable$Disposable;->dispose()V
+
+    .line 270
+    iput-object v2, p0, Lorg/telegram/ui/Cells/ThemePreviewMessagesCell;->backgroundGradientDisposable:Lorg/telegram/ui/Components/BackgroundGradientDrawable$Disposable;
+
+    .line 272
+    :cond_2a
+    :goto_2a
     iput-object v0, p0, Lorg/telegram/ui/Cells/ThemePreviewMessagesCell;->backgroundDrawable:Landroid/graphics/drawable/Drawable;
 
-    .line 271
-    :cond_25
+    .line 274
+    :cond_2c
     iget-object v0, p0, Lorg/telegram/ui/Cells/ThemePreviewMessagesCell;->parentLayout:Lorg/telegram/ui/ActionBar/ActionBarLayout;
 
     invoke-virtual {v0}, Lorg/telegram/ui/ActionBar/ActionBarLayout;->getThemeAnimationValue()F
@@ -950,107 +959,112 @@
 
     const/4 v3, 0x0
 
-    :goto_2d
+    :goto_34
     const/4 v4, 0x2
 
-    if-ge v3, v4, :cond_123
+    if-ge v3, v4, :cond_12e
 
-    if-nez v3, :cond_35
+    if-nez v3, :cond_3c
 
-    .line 273
+    .line 276
     iget-object v5, p0, Lorg/telegram/ui/Cells/ThemePreviewMessagesCell;->oldBackgroundDrawable:Landroid/graphics/drawable/Drawable;
 
-    goto :goto_37
+    goto :goto_3e
 
-    :cond_35
+    :cond_3c
     iget-object v5, p0, Lorg/telegram/ui/Cells/ThemePreviewMessagesCell;->backgroundDrawable:Landroid/graphics/drawable/Drawable;
 
-    :goto_37
-    if-nez v5, :cond_3b
+    :goto_3e
+    if-nez v5, :cond_42
 
-    goto/16 :goto_11f
+    goto/16 :goto_12a
 
-    :cond_3b
+    :cond_42
     const/4 v6, 0x1
 
-    if-ne v3, v6, :cond_4f
+    if-ne v3, v6, :cond_53
 
-    .line 277
-    iget-object v6, p0, Lorg/telegram/ui/Cells/ThemePreviewMessagesCell;->oldBackgroundDrawable:Landroid/graphics/drawable/Drawable;
+    .line 281
+    iget-object v7, p0, Lorg/telegram/ui/Cells/ThemePreviewMessagesCell;->oldBackgroundDrawable:Landroid/graphics/drawable/Drawable;
 
-    if-eqz v6, :cond_4f
+    if-eqz v7, :cond_53
 
-    iget-object v6, p0, Lorg/telegram/ui/Cells/ThemePreviewMessagesCell;->parentLayout:Lorg/telegram/ui/ActionBar/ActionBarLayout;
+    iget-object v7, p0, Lorg/telegram/ui/Cells/ThemePreviewMessagesCell;->parentLayout:Lorg/telegram/ui/ActionBar/ActionBarLayout;
 
-    if-eqz v6, :cond_4f
+    if-eqz v7, :cond_53
 
-    const/high16 v6, 0x437f0000    # 255.0f
+    const/high16 v7, 0x437f0000    # 255.0f
 
-    mul-float v6, v6, v0
+    mul-float v7, v7, v0
 
-    float-to-int v6, v6
+    float-to-int v7, v7
 
-    .line 278
-    invoke-virtual {v5, v6}, Landroid/graphics/drawable/Drawable;->setAlpha(I)V
+    goto :goto_55
 
-    goto :goto_54
+    :cond_53
+    const/16 v7, 0xff
 
-    :cond_4f
-    const/16 v6, 0xff
+    :goto_55
+    if-gtz v7, :cond_59
 
-    .line 280
-    invoke-virtual {v5, v6}, Landroid/graphics/drawable/Drawable;->setAlpha(I)V
+    goto/16 :goto_12a
 
-    .line 282
-    :goto_54
-    instance-of v6, v5, Landroid/graphics/drawable/ColorDrawable;
-
-    if-nez v6, :cond_ea
-
-    instance-of v6, v5, Landroid/graphics/drawable/GradientDrawable;
-
-    if-nez v6, :cond_ea
-
-    instance-of v6, v5, Lorg/telegram/ui/Components/MotionBackgroundDrawable;
-
-    if-eqz v6, :cond_62
-
-    goto/16 :goto_ea
+    .line 289
+    :cond_59
+    invoke-virtual {v5, v7}, Landroid/graphics/drawable/Drawable;->setAlpha(I)V
 
     .line 290
-    :cond_62
-    instance-of v6, v5, Landroid/graphics/drawable/BitmapDrawable;
+    instance-of v7, v5, Landroid/graphics/drawable/ColorDrawable;
 
-    if-eqz v6, :cond_105
+    if-nez v7, :cond_f5
 
-    .line 291
-    move-object v6, v5
+    instance-of v7, v5, Landroid/graphics/drawable/GradientDrawable;
 
-    check-cast v6, Landroid/graphics/drawable/BitmapDrawable;
+    if-nez v7, :cond_f5
 
-    .line 292
-    invoke-virtual {v6}, Landroid/graphics/drawable/BitmapDrawable;->getTileModeX()Landroid/graphics/Shader$TileMode;
+    instance-of v7, v5, Lorg/telegram/ui/Components/MotionBackgroundDrawable;
+
+    if-eqz v7, :cond_6a
+
+    goto/16 :goto_f5
+
+    .line 298
+    :cond_6a
+    instance-of v7, v5, Landroid/graphics/drawable/BitmapDrawable;
+
+    if-eqz v7, :cond_110
+
+    .line 299
+    move-object v7, v5
+
+    check-cast v7, Landroid/graphics/drawable/BitmapDrawable;
+
+    .line 300
+    invoke-virtual {v7, v6}, Landroid/graphics/drawable/BitmapDrawable;->setFilterBitmap(Z)V
+
+    .line 301
+    invoke-virtual {v7}, Landroid/graphics/drawable/BitmapDrawable;->getTileModeX()Landroid/graphics/Shader$TileMode;
 
     move-result-object v6
 
     sget-object v7, Landroid/graphics/Shader$TileMode;->REPEAT:Landroid/graphics/Shader$TileMode;
 
-    if-ne v6, v7, :cond_98
+    if-ne v6, v7, :cond_a3
 
-    .line 293
+    .line 302
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
     const/high16 v4, 0x40000000    # 2.0f
 
-    .line 294
+    .line 303
     sget v6, Lorg/telegram/messenger/AndroidUtilities;->density:F
 
     div-float/2addr v4, v6
 
-    .line 295
+    .line 304
     invoke-virtual {p1, v4, v4}, Landroid/graphics/Canvas;->scale(FF)V
 
-    .line 296
+    .line 305
     invoke-virtual {p0}, Landroid/widget/LinearLayout;->getMeasuredWidth()I
 
     move-result v6
@@ -1085,15 +1099,15 @@
 
     invoke-virtual {v5, v1, v1, v6, v4}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    goto :goto_e3
+    goto :goto_ee
 
-    .line 298
-    :cond_98
+    .line 307
+    :cond_a3
     invoke-virtual {p0}, Landroid/widget/LinearLayout;->getMeasuredHeight()I
 
     move-result v6
 
-    .line 299
+    .line 308
     invoke-virtual {p0}, Landroid/widget/LinearLayout;->getMeasuredWidth()I
 
     move-result v7
@@ -1110,7 +1124,7 @@
 
     int-to-float v8, v6
 
-    .line 300
+    .line 309
     invoke-virtual {v5}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
 
     move-result v9
@@ -1119,12 +1133,12 @@
 
     div-float/2addr v8, v9
 
-    .line 301
+    .line 310
     invoke-static {v7, v8}, Ljava/lang/Math;->max(FF)F
 
     move-result v7
 
-    .line 302
+    .line 311
     invoke-virtual {v5}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
     move-result v8
@@ -1141,7 +1155,7 @@
 
     double-to-int v8, v8
 
-    .line 303
+    .line 312
     invoke-virtual {v5}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
 
     move-result v9
@@ -1158,7 +1172,7 @@
 
     double-to-int v7, v9
 
-    .line 304
+    .line 313
     invoke-virtual {p0}, Landroid/widget/LinearLayout;->getMeasuredWidth()I
 
     move-result v9
@@ -1169,13 +1183,13 @@
 
     sub-int/2addr v6, v7
 
-    .line 305
+    .line 314
     div-int/2addr v6, v4
 
-    .line 306
+    .line 315
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 307
+    .line 316
     invoke-virtual {p0}, Landroid/widget/LinearLayout;->getMeasuredHeight()I
 
     move-result v4
@@ -1186,21 +1200,21 @@
 
     add-int/2addr v7, v6
 
-    .line 308
+    .line 317
     invoke-virtual {v5, v9, v6, v8, v7}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 310
-    :goto_e3
+    .line 319
+    :goto_ee
     invoke-virtual {v5, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 311
+    .line 320
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
-    goto :goto_105
+    goto :goto_110
 
-    .line 283
-    :cond_ea
-    :goto_ea
+    .line 291
+    :cond_f5
+    :goto_f5
     invoke-virtual {p0}, Landroid/widget/LinearLayout;->getMeasuredWidth()I
 
     move-result v4
@@ -1211,68 +1225,68 @@
 
     invoke-virtual {v5, v1, v1, v4, v6}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 284
+    .line 292
     instance-of v4, v5, Lorg/telegram/ui/Components/BackgroundGradientDrawable;
 
-    if-eqz v4, :cond_102
+    if-eqz v4, :cond_10d
 
-    .line 285
+    .line 293
     check-cast v5, Lorg/telegram/ui/Components/BackgroundGradientDrawable;
 
-    .line 286
+    .line 294
     invoke-virtual {v5, p1, p0}, Lorg/telegram/ui/Components/BackgroundGradientDrawable;->drawExactBoundsSize(Landroid/graphics/Canvas;Landroid/view/View;)Lorg/telegram/ui/Components/BackgroundGradientDrawable$Disposable;
 
     move-result-object v4
 
     iput-object v4, p0, Lorg/telegram/ui/Cells/ThemePreviewMessagesCell;->backgroundGradientDisposable:Lorg/telegram/ui/Components/BackgroundGradientDrawable$Disposable;
 
-    goto :goto_105
+    goto :goto_110
 
-    .line 288
-    :cond_102
+    .line 296
+    :cond_10d
     invoke-virtual {v5, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    :cond_105
-    :goto_105
-    if-nez v3, :cond_11f
+    :cond_110
+    :goto_110
+    if-nez v3, :cond_12a
 
-    .line 313
+    .line 322
     iget-object v4, p0, Lorg/telegram/ui/Cells/ThemePreviewMessagesCell;->oldBackgroundDrawable:Landroid/graphics/drawable/Drawable;
 
-    if-eqz v4, :cond_11f
+    if-eqz v4, :cond_12a
 
     const/high16 v4, 0x3f800000    # 1.0f
 
     cmpl-float v4, v0, v4
 
-    if-ltz v4, :cond_11f
+    if-ltz v4, :cond_12a
 
-    .line 314
+    .line 323
     iget-object v4, p0, Lorg/telegram/ui/Cells/ThemePreviewMessagesCell;->oldBackgroundGradientDisposable:Lorg/telegram/ui/Components/BackgroundGradientDrawable$Disposable;
 
-    if-eqz v4, :cond_11a
+    if-eqz v4, :cond_125
 
-    .line 315
+    .line 324
     invoke-interface {v4}, Lorg/telegram/ui/Components/BackgroundGradientDrawable$Disposable;->dispose()V
 
-    .line 316
+    .line 325
     iput-object v2, p0, Lorg/telegram/ui/Cells/ThemePreviewMessagesCell;->oldBackgroundGradientDisposable:Lorg/telegram/ui/Components/BackgroundGradientDrawable$Disposable;
 
-    .line 318
-    :cond_11a
+    .line 327
+    :cond_125
     iput-object v2, p0, Lorg/telegram/ui/Cells/ThemePreviewMessagesCell;->oldBackgroundDrawable:Landroid/graphics/drawable/Drawable;
 
-    .line 319
+    .line 328
     invoke-virtual {p0}, Lorg/telegram/ui/Cells/ThemePreviewMessagesCell;->invalidate()V
 
-    :cond_11f
-    :goto_11f
+    :cond_12a
+    :goto_12a
     add-int/lit8 v3, v3, 0x1
 
-    goto/16 :goto_2d
+    goto/16 :goto_34
 
-    .line 322
-    :cond_123
+    .line 331
+    :cond_12e
     iget-object v0, p0, Lorg/telegram/ui/Cells/ThemePreviewMessagesCell;->shadowDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {p0}, Landroid/widget/LinearLayout;->getMeasuredWidth()I
@@ -1285,7 +1299,7 @@
 
     invoke-virtual {v0, v1, v1, v2, v3}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 323
+    .line 332
     iget-object v0, p0, Lorg/telegram/ui/Cells/ThemePreviewMessagesCell;->shadowDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
@@ -1296,14 +1310,14 @@
 .method public onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
     .registers 4
 
-    .line 341
+    .line 350
     iget v0, p0, Lorg/telegram/ui/Cells/ThemePreviewMessagesCell;->type:I
 
     const/4 v1, 0x2
 
     if-ne v0, v1, :cond_a
 
-    .line 342
+    .line 351
     invoke-super {p0, p1}, Landroid/widget/LinearLayout;->onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
 
     move-result p1
@@ -1319,14 +1333,14 @@
 .method public onTouchEvent(Landroid/view/MotionEvent;)Z
     .registers 4
 
-    .line 362
+    .line 371
     iget v0, p0, Lorg/telegram/ui/Cells/ThemePreviewMessagesCell;->type:I
 
     const/4 v1, 0x2
 
     if-ne v0, v1, :cond_a
 
-    .line 363
+    .line 372
     invoke-super {p0, p1}, Landroid/widget/LinearLayout;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
     move-result p1

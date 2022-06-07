@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$4$1;)V
     .registers 2
 
-    .line 25525
+    .line 25964
     iput-object p1, p0, Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$4$1$2;->this$3:Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$4$1;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -35,7 +35,7 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .registers 3
 
-    .line 25528
+    .line 25967
     iget-object p1, p0, Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$4$1$2;->this$3:Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$4$1;
 
     iget-object p1, p1, Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$4$1;->this$2:Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$4;
@@ -52,7 +52,7 @@
 
     invoke-virtual {p1, v0}, Lorg/telegram/ui/Components/InstantCameraView;->setIsMessageTransition(Z)V
 
-    .line 25529
+    .line 25968
     iget-object p1, p0, Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$4$1$2;->this$3:Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$4$1;
 
     iget-object p1, p1, Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$4$1;->this$2:Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$4;
@@ -69,7 +69,7 @@
 
     invoke-virtual {p1, v0}, Lorg/telegram/ui/Components/InstantCameraView;->hideCamera(Z)V
 
-    .line 25530
+    .line 25969
     iget-object p1, p0, Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$4$1$2;->this$3:Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$4$1;
 
     iget-object p1, p1, Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$4$1;->this$2:Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$4;

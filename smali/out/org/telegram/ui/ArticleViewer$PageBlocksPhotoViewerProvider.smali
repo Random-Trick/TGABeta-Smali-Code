@@ -42,7 +42,7 @@
         }
     .end annotation
 
-    .line 11379
+    .line 11380
     iput-object p1, p0, Lorg/telegram/ui/ArticleViewer$PageBlocksPhotoViewerProvider;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     invoke-direct {p0}, Lorg/telegram/ui/PhotoViewer$EmptyPhotoViewerProvider;-><init>()V
@@ -51,10 +51,10 @@
 
     new-array p1, p1, [I
 
-    .line 11376
+    .line 11377
     iput-object p1, p0, Lorg/telegram/ui/ArticleViewer$PageBlocksPhotoViewerProvider;->tempArr:[I
 
-    .line 11380
+    .line 11381
     iput-object p2, p0, Lorg/telegram/ui/ArticleViewer$PageBlocksPhotoViewerProvider;->pageBlocks:Ljava/util/List;
 
     return-void
@@ -63,7 +63,7 @@
 .method private getImageReceiverFromListView(Landroid/view/ViewGroup;Lorg/telegram/tgnet/TLRPC$PageBlock;[I)Lorg/telegram/messenger/ImageReceiver;
     .registers 7
 
-    .line 11404
+    .line 11405
     invoke-virtual {p1}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result v0
@@ -73,7 +73,7 @@
     :goto_5
     if-ge v1, v0, :cond_15
 
-    .line 11406
+    .line 11407
     invoke-virtual {p1, v1}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v2
@@ -100,68 +100,68 @@
 .method private getImageReceiverView(Landroid/view/View;Lorg/telegram/tgnet/TLRPC$PageBlock;[I)Lorg/telegram/messenger/ImageReceiver;
     .registers 6
 
-    .line 11415
+    .line 11416
     instance-of v0, p1, Lorg/telegram/ui/ArticleViewer$BlockPhotoCell;
 
     if-eqz v0, :cond_15
 
-    .line 11416
+    .line 11417
     move-object v0, p1
 
     check-cast v0, Lorg/telegram/ui/ArticleViewer$BlockPhotoCell;
 
-    .line 11417
+    .line 11418
     invoke-static {v0}, Lorg/telegram/ui/ArticleViewer$BlockPhotoCell;->access$17000(Lorg/telegram/ui/ArticleViewer$BlockPhotoCell;)Lorg/telegram/tgnet/TLRPC$TL_pageBlockPhoto;
 
     move-result-object v1
 
     if-ne v1, p2, :cond_7e
 
-    .line 11418
+    .line 11419
     invoke-virtual {p1, p3}, Landroid/view/View;->getLocationInWindow([I)V
 
-    .line 11419
+    .line 11420
     invoke-static {v0}, Lorg/telegram/ui/ArticleViewer$BlockPhotoCell;->access$21500(Lorg/telegram/ui/ArticleViewer$BlockPhotoCell;)Lorg/telegram/messenger/ImageReceiver;
 
     move-result-object p1
 
     return-object p1
 
-    .line 11421
+    .line 11422
     :cond_15
     instance-of v0, p1, Lorg/telegram/ui/ArticleViewer$BlockVideoCell;
 
     if-eqz v0, :cond_2a
 
-    .line 11422
+    .line 11423
     move-object v0, p1
 
     check-cast v0, Lorg/telegram/ui/ArticleViewer$BlockVideoCell;
 
-    .line 11423
+    .line 11424
     invoke-static {v0}, Lorg/telegram/ui/ArticleViewer$BlockVideoCell;->access$17200(Lorg/telegram/ui/ArticleViewer$BlockVideoCell;)Lorg/telegram/tgnet/TLRPC$TL_pageBlockVideo;
 
     move-result-object v1
 
     if-ne v1, p2, :cond_7e
 
-    .line 11424
+    .line 11425
     invoke-virtual {p1, p3}, Landroid/view/View;->getLocationInWindow([I)V
 
-    .line 11425
+    .line 11426
     invoke-static {v0}, Lorg/telegram/ui/ArticleViewer$BlockVideoCell;->access$21600(Lorg/telegram/ui/ArticleViewer$BlockVideoCell;)Lorg/telegram/messenger/ImageReceiver;
 
     move-result-object p1
 
     return-object p1
 
-    .line 11427
+    .line 11428
     :cond_2a
     instance-of v0, p1, Lorg/telegram/ui/ArticleViewer$BlockCollageCell;
 
     if-eqz v0, :cond_3b
 
-    .line 11428
+    .line 11429
     check-cast p1, Lorg/telegram/ui/ArticleViewer$BlockCollageCell;
 
     invoke-static {p1}, Lorg/telegram/ui/ArticleViewer$BlockCollageCell;->access$21700(Lorg/telegram/ui/ArticleViewer$BlockCollageCell;)Lorg/telegram/ui/Components/RecyclerListView;
@@ -176,13 +176,13 @@
 
     return-object p1
 
-    .line 11432
+    .line 11433
     :cond_3b
     instance-of v0, p1, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;
 
     if-eqz v0, :cond_4c
 
-    .line 11433
+    .line 11434
     check-cast p1, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;
 
     invoke-static {p1}, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;->access$17600(Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;)Landroidx/viewpager/widget/ViewPager;
@@ -197,23 +197,23 @@
 
     return-object p1
 
-    .line 11437
+    .line 11438
     :cond_4c
     instance-of v0, p1, Lorg/telegram/ui/ArticleViewer$BlockListItemCell;
 
     if-eqz v0, :cond_65
 
-    .line 11438
+    .line 11439
     check-cast p1, Lorg/telegram/ui/ArticleViewer$BlockListItemCell;
 
-    .line 11439
+    .line 11440
     invoke-static {p1}, Lorg/telegram/ui/ArticleViewer$BlockListItemCell;->access$6100(Lorg/telegram/ui/ArticleViewer$BlockListItemCell;)Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
 
     move-result-object v0
 
     if-eqz v0, :cond_7e
 
-    .line 11440
+    .line 11441
     invoke-static {p1}, Lorg/telegram/ui/ArticleViewer$BlockListItemCell;->access$6100(Lorg/telegram/ui/ArticleViewer$BlockListItemCell;)Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
 
     move-result-object p1
@@ -228,23 +228,23 @@
 
     return-object p1
 
-    .line 11445
+    .line 11446
     :cond_65
     instance-of v0, p1, Lorg/telegram/ui/ArticleViewer$BlockOrderedListItemCell;
 
     if-eqz v0, :cond_7e
 
-    .line 11446
+    .line 11447
     check-cast p1, Lorg/telegram/ui/ArticleViewer$BlockOrderedListItemCell;
 
-    .line 11447
+    .line 11448
     invoke-static {p1}, Lorg/telegram/ui/ArticleViewer$BlockOrderedListItemCell;->access$6200(Lorg/telegram/ui/ArticleViewer$BlockOrderedListItemCell;)Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
 
     move-result-object v0
 
     if-eqz v0, :cond_7e
 
-    .line 11448
+    .line 11449
     invoke-static {p1}, Lorg/telegram/ui/ArticleViewer$BlockOrderedListItemCell;->access$6200(Lorg/telegram/ui/ArticleViewer$BlockOrderedListItemCell;)Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
 
     move-result-object p1
@@ -274,7 +274,7 @@
 
     if-ltz p3, :cond_56
 
-    .line 11385
+    .line 11386
     iget-object p2, p0, Lorg/telegram/ui/ArticleViewer$PageBlocksPhotoViewerProvider;->pageBlocks:Ljava/util/List;
 
     invoke-interface {p2}, Ljava/util/List;->size()I
@@ -285,7 +285,7 @@
 
     goto :goto_56
 
-    .line 11388
+    .line 11389
     :cond_c
     iget-object p2, p0, Lorg/telegram/ui/ArticleViewer$PageBlocksPhotoViewerProvider;->this$0:Lorg/telegram/ui/ArticleViewer;
 
@@ -315,13 +315,13 @@
 
     return-object p1
 
-    .line 11392
+    .line 11393
     :cond_26
     new-instance p1, Lorg/telegram/ui/PhotoViewer$PlaceProviderObject;
 
     invoke-direct {p1}, Lorg/telegram/ui/PhotoViewer$PlaceProviderObject;-><init>()V
 
-    .line 11393
+    .line 11394
     iget-object p3, p0, Lorg/telegram/ui/ArticleViewer$PageBlocksPhotoViewerProvider;->tempArr:[I
 
     aget v0, p3, p4
@@ -330,12 +330,12 @@
 
     const/4 v0, 0x1
 
-    .line 11394
+    .line 11395
     aget p3, p3, v0
 
     iput p3, p1, Lorg/telegram/ui/PhotoViewer$PlaceProviderObject;->viewY:I
 
-    .line 11395
+    .line 11396
     iget-object p3, p0, Lorg/telegram/ui/ArticleViewer$PageBlocksPhotoViewerProvider;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     invoke-static {p3}, Lorg/telegram/ui/ArticleViewer;->access$3200(Lorg/telegram/ui/ArticleViewer;)[Lorg/telegram/ui/Components/RecyclerListView;
@@ -346,24 +346,24 @@
 
     iput-object p3, p1, Lorg/telegram/ui/PhotoViewer$PlaceProviderObject;->parentView:Landroid/view/View;
 
-    .line 11396
+    .line 11397
     iput-object p2, p1, Lorg/telegram/ui/PhotoViewer$PlaceProviderObject;->imageReceiver:Lorg/telegram/messenger/ImageReceiver;
 
-    .line 11397
+    .line 11398
     invoke-virtual {p2}, Lorg/telegram/messenger/ImageReceiver;->getBitmapSafe()Lorg/telegram/messenger/ImageReceiver$BitmapHolder;
 
     move-result-object p3
 
     iput-object p3, p1, Lorg/telegram/ui/PhotoViewer$PlaceProviderObject;->thumb:Lorg/telegram/messenger/ImageReceiver$BitmapHolder;
 
-    .line 11398
+    .line 11399
     invoke-virtual {p2}, Lorg/telegram/messenger/ImageReceiver;->getRoundRadius()[I
 
     move-result-object p2
 
     iput-object p2, p1, Lorg/telegram/ui/PhotoViewer$PlaceProviderObject;->radius:[I
 
-    .line 11399
+    .line 11400
     iget-object p2, p0, Lorg/telegram/ui/ArticleViewer$PageBlocksPhotoViewerProvider;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     invoke-static {p2}, Lorg/telegram/ui/ArticleViewer;->access$2600(Lorg/telegram/ui/ArticleViewer;)I

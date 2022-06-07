@@ -25,7 +25,7 @@
 .method constructor <init>(Landroidx/recyclerview/widget/RecyclerView;)V
     .registers 2
 
-    .line 12613
+    .line 12614
     iput-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ItemAnimatorRestoreListener;->this$0:Landroidx/recyclerview/widget/RecyclerView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,10 +40,10 @@
 
     const/4 v0, 0x1
 
-    .line 12618
+    .line 12619
     invoke-virtual {p1, v0}, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->setIsRecyclable(Z)V
 
-    .line 12619
+    .line 12620
     iget-object v0, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->mShadowedHolder:Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
 
     const/4 v1, 0x0
@@ -54,21 +54,21 @@
 
     if-nez v0, :cond_f
 
-    .line 12620
+    .line 12621
     iput-object v1, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->mShadowedHolder:Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
 
-    .line 12624
+    .line 12625
     :cond_f
     iput-object v1, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->mShadowingHolder:Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
 
-    .line 12625
+    .line 12626
     invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->shouldBeKeptAsChild()Z
 
     move-result v0
 
     if-nez v0, :cond_2f
 
-    .line 12626
+    .line 12627
     iget-object v0, p0, Landroidx/recyclerview/widget/RecyclerView$ItemAnimatorRestoreListener;->this$0:Landroidx/recyclerview/widget/RecyclerView;
 
     iget-object v1, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
@@ -85,7 +85,7 @@
 
     if-eqz v0, :cond_2f
 
-    .line 12627
+    .line 12628
     iget-object v0, p0, Landroidx/recyclerview/widget/RecyclerView$ItemAnimatorRestoreListener;->this$0:Landroidx/recyclerview/widget/RecyclerView;
 
     iget-object p1, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;

@@ -1,11 +1,14 @@
 .class Lorg/telegram/ui/Components/ChatThemeBottomSheet$5;
-.super Landroid/view/View;
+.super Ljava/lang/Object;
 .source "ChatThemeBottomSheet.java"
+
+# interfaces
+.implements Lorg/telegram/ui/ActionBar/ThemeDescription$ThemeDescriptionDelegate;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lorg/telegram/ui/Components/ChatThemeBottomSheet;->setupLightDarkTheme(Z)V
+    value = Lorg/telegram/ui/Components/ChatThemeBottomSheet;->getThemeDescriptions()Ljava/util/ArrayList;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,164 +18,136 @@
 
 
 # instance fields
+.field private isAnimationStarted:Z
+
 .field final synthetic this$0:Lorg/telegram/ui/Components/ChatThemeBottomSheet;
-
-.field final synthetic val$bitmap:Landroid/graphics/Bitmap;
-
-.field final synthetic val$bitmapCanvas:Landroid/graphics/Canvas;
-
-.field final synthetic val$bitmapPaint:Landroid/graphics/Paint;
-
-.field final synthetic val$cx:F
-
-.field final synthetic val$cy:F
-
-.field final synthetic val$isDark:Z
-
-.field final synthetic val$r:F
-
-.field final synthetic val$x:F
-
-.field final synthetic val$xRefPaint:Landroid/graphics/Paint;
-
-.field final synthetic val$y:F
 
 
 # direct methods
-.method constructor <init>(Lorg/telegram/ui/Components/ChatThemeBottomSheet;Landroid/content/Context;ZLandroid/graphics/Canvas;FFFLandroid/graphics/Paint;Landroid/graphics/Bitmap;Landroid/graphics/Paint;FF)V
-    .registers 13
+.method constructor <init>(Lorg/telegram/ui/Components/ChatThemeBottomSheet;)V
+    .registers 2
 
-    .line 396
+    .line 339
     iput-object p1, p0, Lorg/telegram/ui/Components/ChatThemeBottomSheet$5;->this$0:Lorg/telegram/ui/Components/ChatThemeBottomSheet;
 
-    iput-boolean p3, p0, Lorg/telegram/ui/Components/ChatThemeBottomSheet$5;->val$isDark:Z
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p4, p0, Lorg/telegram/ui/Components/ChatThemeBottomSheet$5;->val$bitmapCanvas:Landroid/graphics/Canvas;
+    const/4 p1, 0x0
 
-    iput p5, p0, Lorg/telegram/ui/Components/ChatThemeBottomSheet$5;->val$cx:F
-
-    iput p6, p0, Lorg/telegram/ui/Components/ChatThemeBottomSheet$5;->val$cy:F
-
-    iput p7, p0, Lorg/telegram/ui/Components/ChatThemeBottomSheet$5;->val$r:F
-
-    iput-object p8, p0, Lorg/telegram/ui/Components/ChatThemeBottomSheet$5;->val$xRefPaint:Landroid/graphics/Paint;
-
-    iput-object p9, p0, Lorg/telegram/ui/Components/ChatThemeBottomSheet$5;->val$bitmap:Landroid/graphics/Bitmap;
-
-    iput-object p10, p0, Lorg/telegram/ui/Components/ChatThemeBottomSheet$5;->val$bitmapPaint:Landroid/graphics/Paint;
-
-    iput p11, p0, Lorg/telegram/ui/Components/ChatThemeBottomSheet$5;->val$x:F
-
-    iput p12, p0, Lorg/telegram/ui/Components/ChatThemeBottomSheet$5;->val$y:F
-
-    invoke-direct {p0, p2}, Landroid/view/View;-><init>(Landroid/content/Context;)V
+    .line 340
+    iput-boolean p1, p0, Lorg/telegram/ui/Components/ChatThemeBottomSheet$5;->isAnimationStarted:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected onDraw(Landroid/graphics/Canvas;)V
-    .registers 8
+.method public didSetColor()V
+    .registers 1
 
-    .line 399
-    invoke-super {p0, p1}, Landroid/view/View;->onDraw(Landroid/graphics/Canvas;)V
+    return-void
+.end method
 
-    .line 400
-    iget-boolean v0, p0, Lorg/telegram/ui/Components/ChatThemeBottomSheet$5;->val$isDark:Z
+.method public onAnimationProgress(F)V
+    .registers 6
 
-    if-eqz v0, :cond_2f
+    const/4 v0, 0x0
 
-    .line 401
+    cmpl-float v0, p1, v0
+
+    if-nez v0, :cond_11
+
+    .line 344
+    iget-boolean v0, p0, Lorg/telegram/ui/Components/ChatThemeBottomSheet$5;->isAnimationStarted:Z
+
+    if-nez v0, :cond_11
+
+    .line 345
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatThemeBottomSheet$5;->this$0:Lorg/telegram/ui/Components/ChatThemeBottomSheet;
 
-    invoke-static {v0}, Lorg/telegram/ui/Components/ChatThemeBottomSheet;->access$900(Lorg/telegram/ui/Components/ChatThemeBottomSheet;)F
+    invoke-static {v0}, Lorg/telegram/ui/Components/ChatThemeBottomSheet;->access$300(Lorg/telegram/ui/Components/ChatThemeBottomSheet;)V
 
-    move-result v0
+    const/4 v0, 0x1
 
-    const/4 v1, 0x0
+    .line 346
+    iput-boolean v0, p0, Lorg/telegram/ui/Components/ChatThemeBottomSheet$5;->isAnimationStarted:Z
 
-    cmpl-float v0, v0, v1
-
-    if-lez v0, :cond_27
-
-    .line 402
-    iget-object v0, p0, Lorg/telegram/ui/Components/ChatThemeBottomSheet$5;->val$bitmapCanvas:Landroid/graphics/Canvas;
-
-    iget v2, p0, Lorg/telegram/ui/Components/ChatThemeBottomSheet$5;->val$cx:F
-
-    iget v3, p0, Lorg/telegram/ui/Components/ChatThemeBottomSheet$5;->val$cy:F
-
-    iget v4, p0, Lorg/telegram/ui/Components/ChatThemeBottomSheet$5;->val$r:F
-
-    iget-object v5, p0, Lorg/telegram/ui/Components/ChatThemeBottomSheet$5;->this$0:Lorg/telegram/ui/Components/ChatThemeBottomSheet;
-
-    invoke-static {v5}, Lorg/telegram/ui/Components/ChatThemeBottomSheet;->access$900(Lorg/telegram/ui/Components/ChatThemeBottomSheet;)F
-
-    move-result v5
-
-    mul-float v4, v4, v5
-
-    iget-object v5, p0, Lorg/telegram/ui/Components/ChatThemeBottomSheet$5;->val$xRefPaint:Landroid/graphics/Paint;
-
-    invoke-virtual {v0, v2, v3, v4, v5}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
-
-    .line 404
-    :cond_27
-    iget-object v0, p0, Lorg/telegram/ui/Components/ChatThemeBottomSheet$5;->val$bitmap:Landroid/graphics/Bitmap;
-
-    iget-object v2, p0, Lorg/telegram/ui/Components/ChatThemeBottomSheet$5;->val$bitmapPaint:Landroid/graphics/Paint;
-
-    invoke-virtual {p1, v0, v1, v1, v2}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
-
-    goto :goto_45
-
-    .line 406
-    :cond_2f
-    iget v0, p0, Lorg/telegram/ui/Components/ChatThemeBottomSheet$5;->val$cx:F
-
-    iget v1, p0, Lorg/telegram/ui/Components/ChatThemeBottomSheet$5;->val$cy:F
-
-    iget v2, p0, Lorg/telegram/ui/Components/ChatThemeBottomSheet$5;->val$r:F
-
-    const/high16 v3, 0x3f800000    # 1.0f
-
-    iget-object v4, p0, Lorg/telegram/ui/Components/ChatThemeBottomSheet$5;->this$0:Lorg/telegram/ui/Components/ChatThemeBottomSheet;
-
-    invoke-static {v4}, Lorg/telegram/ui/Components/ChatThemeBottomSheet;->access$900(Lorg/telegram/ui/Components/ChatThemeBottomSheet;)F
-
-    move-result v4
-
-    sub-float/2addr v3, v4
-
-    mul-float v2, v2, v3
-
-    iget-object v3, p0, Lorg/telegram/ui/Components/ChatThemeBottomSheet$5;->val$bitmapPaint:Landroid/graphics/Paint;
-
-    invoke-virtual {p1, v0, v1, v2, v3}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
-
-    .line 408
-    :goto_45
-    invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
-
-    .line 409
-    iget v0, p0, Lorg/telegram/ui/Components/ChatThemeBottomSheet$5;->val$x:F
-
-    iget v1, p0, Lorg/telegram/ui/Components/ChatThemeBottomSheet$5;->val$y:F
-
-    invoke-virtual {p1, v0, v1}, Landroid/graphics/Canvas;->translate(FF)V
-
-    .line 410
+    .line 348
+    :cond_11
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatThemeBottomSheet$5;->this$0:Lorg/telegram/ui/Components/ChatThemeBottomSheet;
 
-    invoke-static {v0}, Lorg/telegram/ui/Components/ChatThemeBottomSheet;->access$1000(Lorg/telegram/ui/Components/ChatThemeBottomSheet;)Lorg/telegram/ui/Components/RLottieImageView;
+    invoke-static {v0}, Lorg/telegram/ui/Components/ChatThemeBottomSheet;->access$500(Lorg/telegram/ui/Components/ChatThemeBottomSheet;)Lorg/telegram/ui/Components/RLottieDrawable;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Landroid/widget/ImageView;->draw(Landroid/graphics/Canvas;)V
+    new-instance v1, Landroid/graphics/PorterDuffColorFilter;
 
-    .line 411
-    invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
+    iget-object v2, p0, Lorg/telegram/ui/Components/ChatThemeBottomSheet$5;->this$0:Lorg/telegram/ui/Components/ChatThemeBottomSheet;
 
+    const-string v3, "featuredStickers_addButton"
+
+    invoke-static {v2, v3}, Lorg/telegram/ui/Components/ChatThemeBottomSheet;->access$400(Lorg/telegram/ui/Components/ChatThemeBottomSheet;Ljava/lang/String;)I
+
+    move-result v2
+
+    sget-object v3, Landroid/graphics/PorterDuff$Mode;->MULTIPLY:Landroid/graphics/PorterDuff$Mode;
+
+    invoke-direct {v1, v2, v3}, Landroid/graphics/PorterDuffColorFilter;-><init>(ILandroid/graphics/PorterDuff$Mode;)V
+
+    invoke-virtual {v0, v1}, Landroid/graphics/drawable/BitmapDrawable;->setColorFilter(Landroid/graphics/ColorFilter;)V
+
+    .line 349
+    iget-object v0, p0, Lorg/telegram/ui/Components/ChatThemeBottomSheet$5;->this$0:Lorg/telegram/ui/Components/ChatThemeBottomSheet;
+
+    const-string v1, "windowBackgroundGray"
+
+    invoke-static {v0, v1}, Lorg/telegram/ui/Components/ChatThemeBottomSheet;->access$600(Lorg/telegram/ui/Components/ChatThemeBottomSheet;Ljava/lang/String;)I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/BottomSheet;->setOverlayNavBarColor(I)V
+
+    .line 350
+    iget-object v0, p0, Lorg/telegram/ui/Components/ChatThemeBottomSheet$5;->this$0:Lorg/telegram/ui/Components/ChatThemeBottomSheet;
+
+    invoke-static {v0}, Lorg/telegram/ui/Components/ChatThemeBottomSheet;->access$700(Lorg/telegram/ui/Components/ChatThemeBottomSheet;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_41
+
+    .line 351
+    iget-object v0, p0, Lorg/telegram/ui/Components/ChatThemeBottomSheet$5;->this$0:Lorg/telegram/ui/Components/ChatThemeBottomSheet;
+
+    invoke-static {v0, p1}, Lorg/telegram/ui/Components/ChatThemeBottomSheet;->access$800(Lorg/telegram/ui/Components/ChatThemeBottomSheet;F)V
+
+    :cond_41
+    const/high16 v0, 0x3f800000    # 1.0f
+
+    cmpl-float p1, p1, v0
+
+    if-nez p1, :cond_58
+
+    .line 353
+    iget-boolean p1, p0, Lorg/telegram/ui/Components/ChatThemeBottomSheet$5;->isAnimationStarted:Z
+
+    if-eqz p1, :cond_58
+
+    .line 354
+    iget-object p1, p0, Lorg/telegram/ui/Components/ChatThemeBottomSheet$5;->this$0:Lorg/telegram/ui/Components/ChatThemeBottomSheet;
+
+    const/4 v0, 0x0
+
+    invoke-static {p1, v0}, Lorg/telegram/ui/Components/ChatThemeBottomSheet;->access$702(Lorg/telegram/ui/Components/ChatThemeBottomSheet;Z)Z
+
+    .line 355
+    iget-object p1, p0, Lorg/telegram/ui/Components/ChatThemeBottomSheet$5;->this$0:Lorg/telegram/ui/Components/ChatThemeBottomSheet;
+
+    invoke-static {p1}, Lorg/telegram/ui/Components/ChatThemeBottomSheet;->access$900(Lorg/telegram/ui/Components/ChatThemeBottomSheet;)V
+
+    .line 356
+    iput-boolean v0, p0, Lorg/telegram/ui/Components/ChatThemeBottomSheet$5;->isAnimationStarted:Z
+
+    :cond_58
     return-void
 .end method

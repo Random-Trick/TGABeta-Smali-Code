@@ -80,14 +80,14 @@
     move-object p3, p1
 
     :goto_24
-    if-eqz p3, :cond_a6
+    if-eqz p3, :cond_a7
 
     .line 159
     iget p4, p3, Lorg/telegram/tgnet/TLRPC$FileLocation;->local_id:I
 
     iget v0, p2, Lorg/telegram/tgnet/TLRPC$FileLocation;->local_id:I
 
-    if-ne p4, v0, :cond_a6
+    if-ne p4, v0, :cond_a7
 
     iget-wide v0, p3, Lorg/telegram/tgnet/TLRPC$FileLocation;->volume_id:J
 
@@ -95,13 +95,13 @@
 
     cmp-long p4, v0, v2
 
-    if-nez p4, :cond_a6
+    if-nez p4, :cond_a7
 
     iget p3, p3, Lorg/telegram/tgnet/TLRPC$FileLocation;->dc_id:I
 
     iget p2, p2, Lorg/telegram/tgnet/TLRPC$FileLocation;->dc_id:I
 
-    if-ne p3, p2, :cond_a6
+    if-ne p3, p2, :cond_a7
 
     const/4 p1, 0x2
 
@@ -191,10 +191,10 @@
 
     iput-object p1, p2, Lorg/telegram/ui/PhotoViewer$PlaceProviderObject;->thumb:Lorg/telegram/messenger/ImageReceiver$BitmapHolder;
 
-    const/4 p1, -0x1
+    const-wide/16 v0, -0x1
 
     .line 169
-    iput p1, p2, Lorg/telegram/ui/PhotoViewer$PlaceProviderObject;->size:I
+    iput-wide v0, p2, Lorg/telegram/ui/PhotoViewer$PlaceProviderObject;->size:J
 
     .line 170
     iget-object p1, p0, Lorg/telegram/ui/ChatEditActivity$1;->this$0:Lorg/telegram/ui/ChatEditActivity;
@@ -231,7 +231,7 @@
 
     return-object p2
 
-    :cond_a6
+    :cond_a7
     return-object p1
 .end method
 

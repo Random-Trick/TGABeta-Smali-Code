@@ -36,10 +36,10 @@
 .method constructor <init>()V
     .registers 3
 
-    .line 5596
+    .line 5597
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 5597
+    .line 5598
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -48,15 +48,15 @@
 
     const/16 v0, 0x14
 
-    .line 5598
+    .line 5599
     iput v0, p0, Landroidx/recyclerview/widget/RecyclerView$RecycledViewPool$ScrapData;->mMaxScrap:I
 
     const-wide/16 v0, 0x0
 
-    .line 5599
+    .line 5600
     iput-wide v0, p0, Landroidx/recyclerview/widget/RecyclerView$RecycledViewPool$ScrapData;->mCreateRunningAverageNs:J
 
-    .line 5600
+    .line 5601
     iput-wide v0, p0, Landroidx/recyclerview/widget/RecyclerView$RecycledViewPool$ScrapData;->mBindRunningAverageNs:J
 
     return-void

@@ -2,44 +2,38 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lorg/telegram/messenger/GenericProvider;
+.implements Ljava/lang/Runnable;
 
 
-# static fields
-.field public static final synthetic INSTANCE:Lorg/telegram/ui/LaunchActivity$$ExternalSyntheticLambda61;
+# instance fields
+.field public final synthetic f$0:Lorg/telegram/ui/LaunchActivity;
+
+.field public final synthetic f$1:Lorg/telegram/ui/ThemePreviewActivity;
 
 
 # direct methods
-.method static synthetic constructor <clinit>()V
-    .registers 1
-
-    new-instance v0, Lorg/telegram/ui/LaunchActivity$$ExternalSyntheticLambda61;
-
-    invoke-direct {v0}, Lorg/telegram/ui/LaunchActivity$$ExternalSyntheticLambda61;-><init>()V
-
-    sput-object v0, Lorg/telegram/ui/LaunchActivity$$ExternalSyntheticLambda61;->INSTANCE:Lorg/telegram/ui/LaunchActivity$$ExternalSyntheticLambda61;
-
-    return-void
-.end method
-
-.method private synthetic constructor <init>()V
-    .registers 1
+.method public synthetic constructor <init>(Lorg/telegram/ui/LaunchActivity;Lorg/telegram/ui/ThemePreviewActivity;)V
+    .registers 3
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lorg/telegram/ui/LaunchActivity$$ExternalSyntheticLambda61;->f$0:Lorg/telegram/ui/LaunchActivity;
+
+    iput-object p2, p0, Lorg/telegram/ui/LaunchActivity$$ExternalSyntheticLambda61;->f$1:Lorg/telegram/ui/ThemePreviewActivity;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final provide(Ljava/lang/Object;)Ljava/lang/Object;
-    .registers 2
+.method public final run()V
+    .registers 3
 
-    check-cast p1, Ljava/lang/Void;
+    iget-object v0, p0, Lorg/telegram/ui/LaunchActivity$$ExternalSyntheticLambda61;->f$0:Lorg/telegram/ui/LaunchActivity;
 
-    invoke-static {p1}, Lorg/telegram/ui/LaunchActivity;->$r8$lambda$ej3GfHWl8XQ9pI2kDbrmm3W9jFk(Ljava/lang/Void;)Lorg/telegram/ui/DialogsActivity;
+    iget-object v1, p0, Lorg/telegram/ui/LaunchActivity$$ExternalSyntheticLambda61;->f$1:Lorg/telegram/ui/ThemePreviewActivity;
 
-    move-result-object p1
+    invoke-static {v0, v1}, Lorg/telegram/ui/LaunchActivity;->$r8$lambda$hh-wmSJcKGUL5DIpt4whXzCEgKM(Lorg/telegram/ui/LaunchActivity;Lorg/telegram/ui/ThemePreviewActivity;)V
 
-    return-object p1
+    return-void
 .end method

@@ -2,46 +2,38 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lorg/telegram/ui/GroupCreateActivity$ContactsAddActivityDelegate;
+.implements Lorg/telegram/ui/Components/RecyclerListView$OnItemClickListener;
 
 
 # instance fields
 .field public final synthetic f$0:Lorg/telegram/ui/ChatActivity;
 
-.field public final synthetic f$1:J
+.field public final synthetic f$1:Lorg/telegram/ui/MessageSeenView;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lorg/telegram/ui/ChatActivity;J)V
-    .registers 4
+.method public synthetic constructor <init>(Lorg/telegram/ui/ChatActivity;Lorg/telegram/ui/MessageSeenView;)V
+    .registers 3
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda248;->f$0:Lorg/telegram/ui/ChatActivity;
 
-    iput-wide p2, p0, Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda248;->f$1:J
+    iput-object p2, p0, Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda248;->f$1:Lorg/telegram/ui/MessageSeenView;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final didSelectUsers(Ljava/util/ArrayList;I)V
-    .registers 6
+.method public final onItemClick(Landroid/view/View;I)V
+    .registers 5
 
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda248;->f$0:Lorg/telegram/ui/ChatActivity;
 
-    iget-wide v1, p0, Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda248;->f$1:J
+    iget-object v1, p0, Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda248;->f$1:Lorg/telegram/ui/MessageSeenView;
 
-    invoke-static {v0, v1, v2, p1, p2}, Lorg/telegram/ui/ChatActivity;->$r8$lambda$s71TKdkSSFkO9XB-Kg-1Pk0rZ4g(Lorg/telegram/ui/ChatActivity;JLjava/util/ArrayList;I)V
-
-    return-void
-.end method
-
-.method public synthetic needAddBot(Lorg/telegram/tgnet/TLRPC$User;)V
-    .registers 2
-
-    invoke-static {p0, p1}, Lorg/telegram/ui/GroupCreateActivity$ContactsAddActivityDelegate$-CC;->$default$needAddBot(Lorg/telegram/ui/GroupCreateActivity$ContactsAddActivityDelegate;Lorg/telegram/tgnet/TLRPC$User;)V
+    invoke-static {v0, v1, p1, p2}, Lorg/telegram/ui/ChatActivity;->$r8$lambda$Z1of1EYSkoFOkqa3ZGCpn049Xzg(Lorg/telegram/ui/ChatActivity;Lorg/telegram/ui/MessageSeenView;Landroid/view/View;I)V
 
     return-void
 .end method

@@ -8,22 +8,22 @@
 # instance fields
 .field public final synthetic f$0:Lorg/telegram/ui/PhotoViewer$FirstFrameView;
 
-.field public final synthetic f$1:Landroid/net/Uri;
+.field public final synthetic f$1:I
 
-.field public final synthetic f$2:I
+.field public final synthetic f$2:Landroid/graphics/Bitmap;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lorg/telegram/ui/PhotoViewer$FirstFrameView;Landroid/net/Uri;I)V
+.method public synthetic constructor <init>(Lorg/telegram/ui/PhotoViewer$FirstFrameView;ILandroid/graphics/Bitmap;)V
     .registers 4
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lorg/telegram/ui/PhotoViewer$FirstFrameView$$ExternalSyntheticLambda2;->f$0:Lorg/telegram/ui/PhotoViewer$FirstFrameView;
 
-    iput-object p2, p0, Lorg/telegram/ui/PhotoViewer$FirstFrameView$$ExternalSyntheticLambda2;->f$1:Landroid/net/Uri;
+    iput p2, p0, Lorg/telegram/ui/PhotoViewer$FirstFrameView$$ExternalSyntheticLambda2;->f$1:I
 
-    iput p3, p0, Lorg/telegram/ui/PhotoViewer$FirstFrameView$$ExternalSyntheticLambda2;->f$2:I
+    iput-object p3, p0, Lorg/telegram/ui/PhotoViewer$FirstFrameView$$ExternalSyntheticLambda2;->f$2:Landroid/graphics/Bitmap;
 
     return-void
 .end method
@@ -35,11 +35,11 @@
 
     iget-object v0, p0, Lorg/telegram/ui/PhotoViewer$FirstFrameView$$ExternalSyntheticLambda2;->f$0:Lorg/telegram/ui/PhotoViewer$FirstFrameView;
 
-    iget-object v1, p0, Lorg/telegram/ui/PhotoViewer$FirstFrameView$$ExternalSyntheticLambda2;->f$1:Landroid/net/Uri;
+    iget v1, p0, Lorg/telegram/ui/PhotoViewer$FirstFrameView$$ExternalSyntheticLambda2;->f$1:I
 
-    iget v2, p0, Lorg/telegram/ui/PhotoViewer$FirstFrameView$$ExternalSyntheticLambda2;->f$2:I
+    iget-object v2, p0, Lorg/telegram/ui/PhotoViewer$FirstFrameView$$ExternalSyntheticLambda2;->f$2:Landroid/graphics/Bitmap;
 
-    invoke-static {v0, v1, v2}, Lorg/telegram/ui/PhotoViewer$FirstFrameView;->$r8$lambda$MUgtcGlYI3Tm6evEG4d59VctOz8(Lorg/telegram/ui/PhotoViewer$FirstFrameView;Landroid/net/Uri;I)V
+    invoke-static {v0, v1, v2}, Lorg/telegram/ui/PhotoViewer$FirstFrameView;->$r8$lambda$j5qCHkZFfpHh3mgnBUAgPThasKA(Lorg/telegram/ui/PhotoViewer$FirstFrameView;ILandroid/graphics/Bitmap;)V
 
     return-void
 .end method

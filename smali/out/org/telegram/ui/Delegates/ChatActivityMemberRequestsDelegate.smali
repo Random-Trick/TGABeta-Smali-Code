@@ -475,7 +475,7 @@
     :cond_21
     iget v1, p0, Lorg/telegram/ui/Delegates/ChatActivityMemberRequestsDelegate;->pendingRequestsCount:I
 
-    if-eq v1, p1, :cond_6f
+    if-eq v1, p1, :cond_71
 
     .line 168
     iput p1, p0, Lorg/telegram/ui/Delegates/ChatActivityMemberRequestsDelegate;->pendingRequestsCount:I
@@ -483,9 +483,11 @@
     .line 169
     iget-object v1, p0, Lorg/telegram/ui/Delegates/ChatActivityMemberRequestsDelegate;->requestsCountTextView:Landroid/widget/TextView;
 
-    const-string v2, "JoinUsersRequests"
+    new-array v2, v0, [Ljava/lang/Object;
 
-    invoke-static {v2, p1}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    const-string v3, "JoinUsersRequests"
+
+    invoke-static {v3, p1, v2}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -496,14 +498,14 @@
     .line 170
     invoke-direct {p0, p1, p3}, Lorg/telegram/ui/Delegates/ChatActivityMemberRequestsDelegate;->animatePendingRequests(ZZ)V
 
-    if-eqz p2, :cond_6f
+    if-eqz p2, :cond_71
 
     .line 172
     invoke-interface {p2}, Ljava/util/List;->isEmpty()Z
 
     move-result p3
 
-    if-nez p3, :cond_6f
+    if-nez p3, :cond_71
 
     const/4 p3, 0x3
 
@@ -516,8 +518,8 @@
 
     move-result p3
 
-    :goto_47
-    if-ge v0, p3, :cond_65
+    :goto_49
+    if-ge v0, p3, :cond_67
 
     .line 175
     iget-object v1, p0, Lorg/telegram/ui/Delegates/ChatActivityMemberRequestsDelegate;->fragment:Lorg/telegram/ui/ActionBar/BaseFragment;
@@ -536,7 +538,7 @@
 
     move-result-object v1
 
-    if-eqz v1, :cond_62
+    if-eqz v1, :cond_64
 
     .line 177
     iget-object v2, p0, Lorg/telegram/ui/Delegates/ChatActivityMemberRequestsDelegate;->avatarsView:Lorg/telegram/ui/Components/AvatarsImageView;
@@ -545,13 +547,13 @@
 
     invoke-virtual {v2, v0, v3, v1}, Lorg/telegram/ui/Components/AvatarsImageView;->setObject(IILorg/telegram/tgnet/TLObject;)V
 
-    :cond_62
+    :cond_64
     add-int/lit8 v0, v0, 0x1
 
-    goto :goto_47
+    goto :goto_49
 
     .line 180
-    :cond_65
+    :cond_67
     iget-object p2, p0, Lorg/telegram/ui/Delegates/ChatActivityMemberRequestsDelegate;->avatarsView:Lorg/telegram/ui/Components/AvatarsImageView;
 
     invoke-virtual {p2, p3}, Lorg/telegram/ui/Components/AvatarsImageView;->setCount(I)V
@@ -561,7 +563,7 @@
 
     invoke-virtual {p2, p1}, Lorg/telegram/ui/Components/AvatarsImageView;->commitTransition(Z)V
 
-    :cond_6f
+    :cond_71
     return-void
 .end method
 
@@ -701,7 +703,7 @@
 
     iput-object v0, p0, Lorg/telegram/ui/Delegates/ChatActivityMemberRequestsDelegate;->root:Landroid/widget/FrameLayout;
 
-    const v1, 0x7f070070
+    const v1, 0x7f07005a
 
     .line 64
     invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->setBackgroundResource(I)V
@@ -1011,7 +1013,7 @@
     .line 102
     iget-object v0, p0, Lorg/telegram/ui/Delegates/ChatActivityMemberRequestsDelegate;->closeView:Landroid/widget/ImageView;
 
-    const v2, 0x7f0e047b
+    const v2, 0x7f0e04c8
 
     const-string v3, "Close"
 
@@ -1024,7 +1026,7 @@
     .line 103
     iget-object v0, p0, Lorg/telegram/ui/Delegates/ChatActivityMemberRequestsDelegate;->closeView:Landroid/widget/ImageView;
 
-    const v2, 0x7f07022e
+    const v2, 0x7f0701b3
 
     invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setImageResource(I)V
 

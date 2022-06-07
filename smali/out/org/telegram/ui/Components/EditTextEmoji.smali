@@ -513,7 +513,7 @@
     .line 170
     iget-object p1, p0, Lorg/telegram/ui/Components/EditTextEmoji;->emojiIconDrawable:Lorg/telegram/ui/Components/ReplaceableIconDrawable;
 
-    const p3, 0x7f0703d1
+    const p3, 0x7f0703c9
 
     invoke-virtual {p1, p3, v2}, Lorg/telegram/ui/Components/ReplaceableIconDrawable;->setIcon(IZ)V
 
@@ -553,7 +553,7 @@
     :cond_185
     iget-object p1, p0, Lorg/telegram/ui/Components/EditTextEmoji;->emojiIconDrawable:Lorg/telegram/ui/Components/ReplaceableIconDrawable;
 
-    const p2, 0x7f070190
+    const p2, 0x7f070167
 
     invoke-virtual {p1, p2, v2}, Lorg/telegram/ui/Components/ReplaceableIconDrawable;->setIcon(IZ)V
 
@@ -616,7 +616,7 @@
     .line 191
     iget-object p1, p0, Lorg/telegram/ui/Components/EditTextEmoji;->emojiButton:Landroid/widget/ImageView;
 
-    const p2, 0x7f0e0627
+    const p2, 0x7f0e0679
 
     const-string p3, "Emoji"
 
@@ -2178,7 +2178,7 @@
     .line 422
     iget-object v2, p0, Lorg/telegram/ui/Components/EditTextEmoji;->emojiIconDrawable:Lorg/telegram/ui/Components/ReplaceableIconDrawable;
 
-    const v3, 0x7f070189
+    const v3, 0x7f070160
 
     invoke-virtual {v2, v3, v1}, Lorg/telegram/ui/Components/ReplaceableIconDrawable;->setIcon(IZ)V
 
@@ -2260,7 +2260,7 @@
     .line 449
     iget-object v2, p0, Lorg/telegram/ui/Components/EditTextEmoji;->emojiIconDrawable:Lorg/telegram/ui/Components/ReplaceableIconDrawable;
 
-    const v3, 0x7f0703d1
+    const v3, 0x7f0703c9
 
     invoke-virtual {v2, v3, v1}, Lorg/telegram/ui/Components/ReplaceableIconDrawable;->setIcon(IZ)V
 
@@ -2270,7 +2270,7 @@
     :cond_ea
     iget-object v2, p0, Lorg/telegram/ui/Components/EditTextEmoji;->emojiIconDrawable:Lorg/telegram/ui/Components/ReplaceableIconDrawable;
 
-    const v3, 0x7f070190
+    const v3, 0x7f070167
 
     invoke-virtual {v2, v3, v1}, Lorg/telegram/ui/Components/ReplaceableIconDrawable;->setIcon(IZ)V
 

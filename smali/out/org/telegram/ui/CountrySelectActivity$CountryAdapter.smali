@@ -283,7 +283,7 @@
     :goto_b7
     iget-object p1, p0, Lorg/telegram/ui/CountrySelectActivity$CountryAdapter;->sortedCountries:Ljava/util/ArrayList;
 
-    sget-object p2, Lorg/telegram/ui/ChangePhoneActivity$PhoneView$$ExternalSyntheticLambda6;->INSTANCE:Lorg/telegram/ui/ChangePhoneActivity$PhoneView$$ExternalSyntheticLambda6;
+    sget-object p2, Lorg/telegram/ui/CountrySelectActivity$CountryAdapter$$ExternalSyntheticLambda0;->INSTANCE:Lorg/telegram/ui/CountrySelectActivity$CountryAdapter$$ExternalSyntheticLambda0;
 
     invoke-static {p1, p2}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
 
@@ -312,7 +312,7 @@
     check-cast p2, Ljava/util/ArrayList;
 
     .line 305
-    sget-object p3, Lorg/telegram/ui/CountrySelectActivity$CountryAdapter$$ExternalSyntheticLambda0;->INSTANCE:Lorg/telegram/ui/CountrySelectActivity$CountryAdapter$$ExternalSyntheticLambda0;
+    sget-object p3, Lorg/telegram/ui/CountrySelectActivity$CountryAdapter$$ExternalSyntheticLambda1;->INSTANCE:Lorg/telegram/ui/CountrySelectActivity$CountryAdapter$$ExternalSyntheticLambda1;
 
     invoke-static {p2, p3}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
 

@@ -2,32 +2,44 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lorg/telegram/ui/Components/RecyclerListView$OnItemClickListener;
+.implements Lorg/telegram/messenger/MessagesStorage$IntCallback;
 
 
 # instance fields
 .field public final synthetic f$0:Lorg/telegram/ui/Adapters/DialogsSearchAdapter;
 
+.field public final synthetic f$1:J
+
+.field public final synthetic f$2:Ljava/lang/Object;
+
 
 # direct methods
-.method public synthetic constructor <init>(Lorg/telegram/ui/Adapters/DialogsSearchAdapter;)V
-    .registers 2
+.method public synthetic constructor <init>(Lorg/telegram/ui/Adapters/DialogsSearchAdapter;JLjava/lang/Object;)V
+    .registers 5
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$$ExternalSyntheticLambda20;->f$0:Lorg/telegram/ui/Adapters/DialogsSearchAdapter;
+
+    iput-wide p2, p0, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$$ExternalSyntheticLambda20;->f$1:J
+
+    iput-object p4, p0, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$$ExternalSyntheticLambda20;->f$2:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onItemClick(Landroid/view/View;I)V
-    .registers 4
+.method public final run(I)V
+    .registers 6
 
     iget-object v0, p0, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$$ExternalSyntheticLambda20;->f$0:Lorg/telegram/ui/Adapters/DialogsSearchAdapter;
 
-    invoke-static {v0, p1, p2}, Lorg/telegram/ui/Adapters/DialogsSearchAdapter;->$r8$lambda$dRvlC2SMKIYHBsn2a4TMwZymWz8(Lorg/telegram/ui/Adapters/DialogsSearchAdapter;Landroid/view/View;I)V
+    iget-wide v1, p0, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$$ExternalSyntheticLambda20;->f$1:J
+
+    iget-object v3, p0, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$$ExternalSyntheticLambda20;->f$2:Ljava/lang/Object;
+
+    invoke-static {v0, v1, v2, v3, p1}, Lorg/telegram/ui/Adapters/DialogsSearchAdapter;->$r8$lambda$RdxT41jdeNr9f263Wl_L9tmRT4E(Lorg/telegram/ui/Adapters/DialogsSearchAdapter;JLjava/lang/Object;I)V
 
     return-void
 .end method

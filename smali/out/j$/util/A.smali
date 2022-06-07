@@ -2,24 +2,24 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lj$/util/p;
-.implements Lj$/util/function/l;
+.implements Lj$/util/n;
+.implements Lj$/util/function/f;
 .implements Lj$/util/Iterator;
 
 
 # instance fields
 .field a:Z
 
-.field b:I
+.field b:D
 
-.field final synthetic c:Lj$/util/v;
+.field final synthetic c:Lj$/util/t;
 
 
 # direct methods
-.method constructor <init>(Lj$/util/v;)V
+.method constructor <init>(Lj$/util/t;)V
     .registers 2
 
-    iput-object p1, p0, Lj$/util/A;->c:Lj$/util/v;
+    iput-object p1, p0, Lj$/util/A;->c:Lj$/util/t;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -32,20 +32,20 @@
 
 
 # virtual methods
-.method public accept(I)V
-    .registers 3
+.method public accept(D)V
+    .registers 4
 
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lj$/util/A;->a:Z
 
-    iput p1, p0, Lj$/util/A;->b:I
+    iput-wide p1, p0, Lj$/util/A;->b:D
 
     return-void
 .end method
 
-.method public c(Lj$/util/function/l;)V
-    .registers 3
+.method public e(Lj$/util/function/f;)V
+    .registers 4
 
     .line 1
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -57,11 +57,11 @@
 
     if-eqz v0, :cond_11
 
-    invoke-virtual {p0}, Lj$/util/A;->nextInt()I
+    invoke-virtual {p0}, Lj$/util/A;->nextDouble()D
 
-    move-result v0
+    move-result-wide v0
 
-    invoke-interface {p1, v0}, Lj$/util/function/l;->accept(I)V
+    invoke-interface {p1, v0, v1}, Lj$/util/function/f;->accept(D)V
 
     goto :goto_3
 
@@ -73,28 +73,28 @@
     .registers 3
 
     .line 1
-    instance-of v0, p1, Lj$/util/function/l;
+    instance-of v0, p1, Lj$/util/function/f;
 
     if-eqz v0, :cond_a
 
-    check-cast p1, Lj$/util/function/l;
+    check-cast p1, Lj$/util/function/f;
 
-    invoke-virtual {p0, p1}, Lj$/util/A;->c(Lj$/util/function/l;)V
+    invoke-virtual {p0, p1}, Lj$/util/A;->e(Lj$/util/function/f;)V
 
     goto :goto_19
 
     :cond_a
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    sget-boolean v0, Lj$/util/P;->a:Z
+    sget-boolean v0, Lj$/util/N;->a:Z
 
     if-nez v0, :cond_1a
 
-    new-instance v0, Lj$/util/o;
+    new-instance v0, Lj$/util/m;
 
-    invoke-direct {v0, p1}, Lj$/util/o;-><init>(Lj$/util/function/Consumer;)V
+    invoke-direct {v0, p1}, Lj$/util/m;-><init>(Lj$/util/function/Consumer;)V
 
-    invoke-virtual {p0, v0}, Lj$/util/A;->c(Lj$/util/function/l;)V
+    invoke-virtual {p0, v0}, Lj$/util/A;->e(Lj$/util/function/f;)V
 
     :goto_19
     return-void
@@ -102,9 +102,9 @@
     :cond_1a
     const-class p1, Lj$/util/A;
 
-    const-string v0, "{0} calling PrimitiveIterator.OfInt.forEachRemainingInt(action::accept)"
+    const-string v0, "{0} calling PrimitiveIterator.OfDouble.forEachRemainingDouble(action::accept)"
 
-    invoke-static {p1, v0}, Lj$/util/P;->a(Ljava/lang/Class;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lj$/util/N;->a(Ljava/lang/Class;Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -115,9 +115,9 @@
     .registers 2
 
     .line 2
-    check-cast p1, Lj$/util/function/l;
+    check-cast p1, Lj$/util/function/f;
 
-    invoke-virtual {p0, p1}, Lj$/util/A;->c(Lj$/util/function/l;)V
+    invoke-virtual {p0, p1}, Lj$/util/A;->e(Lj$/util/function/f;)V
 
     return-void
 .end method
@@ -129,9 +129,9 @@
 
     if-nez v0, :cond_9
 
-    iget-object v0, p0, Lj$/util/A;->c:Lj$/util/v;
+    iget-object v0, p0, Lj$/util/A;->c:Lj$/util/t;
 
-    invoke-interface {v0, p0}, Lj$/util/v;->g(Lj$/util/function/l;)Z
+    invoke-interface {v0, p0}, Lj$/util/t;->k(Lj$/util/function/f;)Z
 
     :cond_9
     iget-boolean v0, p0, Lj$/util/A;->a:Z
@@ -139,32 +139,32 @@
     return v0
 .end method
 
-.method public l(Lj$/util/function/l;)Lj$/util/function/l;
+.method public j(Lj$/util/function/f;)Lj$/util/function/f;
     .registers 3
 
     .line 1
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    new-instance v0, Lj$/util/function/k;
+    new-instance v0, Lj$/util/function/e;
 
-    invoke-direct {v0, p0, p1}, Lj$/util/function/k;-><init>(Lj$/util/function/l;Lj$/util/function/l;)V
+    invoke-direct {v0, p0, p1}, Lj$/util/function/e;-><init>(Lj$/util/function/f;Lj$/util/function/f;)V
 
     return-object v0
 .end method
 
-.method public next()Ljava/lang/Integer;
+.method public next()Ljava/lang/Double;
     .registers 3
 
     .line 1
-    sget-boolean v0, Lj$/util/P;->a:Z
+    sget-boolean v0, Lj$/util/N;->a:Z
 
     if-nez v0, :cond_d
 
-    invoke-virtual {p0}, Lj$/util/A;->nextInt()I
+    invoke-virtual {p0}, Lj$/util/A;->nextDouble()D
 
-    move-result v0
+    move-result-wide v0
 
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v0, v1}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
 
     move-result-object v0
 
@@ -173,9 +173,9 @@
     :cond_d
     const-class v0, Lj$/util/A;
 
-    const-string v1, "{0} calling PrimitiveIterator.OfInt.nextInt()"
+    const-string v1, "{0} calling PrimitiveIterator.OfDouble.nextLong()"
 
-    invoke-static {v0, v1}, Lj$/util/P;->a(Ljava/lang/Class;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lj$/util/N;->a(Ljava/lang/Class;Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -186,15 +186,15 @@
     .registers 2
 
     .line 2
-    invoke-virtual {p0}, Lj$/util/A;->next()Ljava/lang/Integer;
+    invoke-virtual {p0}, Lj$/util/A;->next()Ljava/lang/Double;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public nextInt()I
-    .registers 2
+.method public nextDouble()D
+    .registers 3
 
     iget-boolean v0, p0, Lj$/util/A;->a:Z
 
@@ -221,9 +221,9 @@
 
     iput-boolean v0, p0, Lj$/util/A;->a:Z
 
-    iget v0, p0, Lj$/util/A;->b:I
+    iget-wide v0, p0, Lj$/util/A;->b:D
 
-    return v0
+    return-wide v0
 .end method
 
 .method public synthetic remove()V

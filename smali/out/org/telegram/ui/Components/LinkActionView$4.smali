@@ -25,7 +25,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/LinkActionView;)V
     .registers 2
 
-    .line 325
+    .line 328
     iput-object p1, p0, Lorg/telegram/ui/Components/LinkActionView$4;->this$0:Lorg/telegram/ui/Components/LinkActionView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public onClick(Landroid/view/View;)V
     .registers 2
 
-    .line 328
+    .line 331
     iget-object p1, p0, Lorg/telegram/ui/Components/LinkActionView$4;->this$0:Lorg/telegram/ui/Components/LinkActionView;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/LinkActionView;->access$000(Lorg/telegram/ui/Components/LinkActionView;)Landroid/widget/TextView;

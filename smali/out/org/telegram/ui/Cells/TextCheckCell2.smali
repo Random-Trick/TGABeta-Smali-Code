@@ -418,7 +418,7 @@
 .end method
 
 .method public onInitializeAccessibilityNodeInfo(Landroid/view/accessibility/AccessibilityNodeInfo;)V
-    .registers 4
+    .registers 3
 
     .line 177
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->onInitializeAccessibilityNodeInfo(Landroid/view/accessibility/AccessibilityNodeInfo;)V
@@ -441,33 +441,6 @@
     move-result v0
 
     invoke-virtual {p1, v0}, Landroid/view/accessibility/AccessibilityNodeInfo;->setChecked(Z)V
-
-    .line 181
-    iget-object v0, p0, Lorg/telegram/ui/Cells/TextCheckCell2;->checkBox:Lorg/telegram/ui/Components/Switch;
-
-    invoke-virtual {v0}, Lorg/telegram/ui/Components/Switch;->isChecked()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_23
-
-    const v0, 0x7f0e0b96
-
-    const-string v1, "NotificationsOn"
-
-    goto :goto_28
-
-    :cond_23
-    const v0, 0x7f0e0b94
-
-    const-string v1, "NotificationsOff"
-
-    :goto_28
-    invoke-static {v1, v0}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Landroid/view/accessibility/AccessibilityNodeInfo;->setContentDescription(Ljava/lang/CharSequence;)V
 
     return-void
 .end method

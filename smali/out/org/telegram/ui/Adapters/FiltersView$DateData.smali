@@ -26,16 +26,16 @@
 .method private constructor <init>(Ljava/lang/String;JJ)V
     .registers 6
 
-    .line 835
+    .line 833
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 836
+    .line 834
     iput-object p1, p0, Lorg/telegram/ui/Adapters/FiltersView$DateData;->title:Ljava/lang/String;
 
-    .line 837
+    .line 835
     iput-wide p2, p0, Lorg/telegram/ui/Adapters/FiltersView$DateData;->minDate:J
 
-    .line 838
+    .line 836
     iput-wide p4, p0, Lorg/telegram/ui/Adapters/FiltersView$DateData;->maxDate:J
 
     return-void
@@ -44,7 +44,7 @@
 .method synthetic constructor <init>(Ljava/lang/String;JJLorg/telegram/ui/Adapters/FiltersView$1;)V
     .registers 7
 
-    .line 830
+    .line 828
     invoke-direct/range {p0 .. p5}, Lorg/telegram/ui/Adapters/FiltersView$DateData;-><init>(Ljava/lang/String;JJ)V
 
     return-void

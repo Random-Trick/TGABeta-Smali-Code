@@ -7,7 +7,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 18731
+    .line 18894
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -22,7 +22,7 @@
 
     goto :goto_3a
 
-    .line 18737
+    .line 18900
     :sswitch_5
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_secureValueErrorFile;
 
@@ -30,7 +30,7 @@
 
     goto :goto_3a
 
-    .line 18743
+    .line 18906
     :sswitch_b
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_secureValueErrorFiles;
 
@@ -38,7 +38,7 @@
 
     goto :goto_3a
 
-    .line 18758
+    .line 18921
     :sswitch_11
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_secureValueErrorTranslationFiles;
 
@@ -46,7 +46,7 @@
 
     goto :goto_3a
 
-    .line 18740
+    .line 18903
     :sswitch_17
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_secureValueErrorFrontSide;
 
@@ -54,7 +54,7 @@
 
     goto :goto_3a
 
-    .line 18755
+    .line 18918
     :sswitch_1d
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_secureValueErrorData;
 
@@ -62,7 +62,7 @@
 
     goto :goto_3a
 
-    .line 18761
+    .line 18924
     :sswitch_23
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_secureValueErrorSelfie;
 
@@ -70,7 +70,7 @@
 
     goto :goto_3a
 
-    .line 18749
+    .line 18912
     :sswitch_29
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_secureValueErrorTranslationFile;
 
@@ -78,7 +78,7 @@
 
     goto :goto_3a
 
-    .line 18752
+    .line 18915
     :sswitch_2f
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_secureValueError;
 
@@ -86,7 +86,7 @@
 
     goto :goto_3a
 
-    .line 18746
+    .line 18909
     :sswitch_35
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_secureValueErrorReverseSide;
 
@@ -99,7 +99,7 @@
 
     goto :goto_55
 
-    .line 18765
+    .line 18928
     :cond_3f
     new-instance p0, Ljava/lang/RuntimeException;
 
@@ -129,7 +129,7 @@
     :goto_55
     if-eqz v0, :cond_5a
 
-    .line 18768
+    .line 18931
     invoke-virtual {v0, p0, p2}, Lorg/telegram/tgnet/TLObject;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
     :cond_5a

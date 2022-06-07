@@ -12,14 +12,12 @@
 
 .field public final synthetic f$2:Lorg/telegram/ui/ActionBar/BaseFragment;
 
-.field public final synthetic f$3:Lorg/telegram/tgnet/TLRPC$TL_channels_editAdmin;
-
-.field public final synthetic f$4:Z
+.field public final synthetic f$3:Lorg/telegram/tgnet/TLRPC$TL_channels_createChannel;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lorg/telegram/messenger/MessagesController;Lorg/telegram/tgnet/TLRPC$TL_error;Lorg/telegram/ui/ActionBar/BaseFragment;Lorg/telegram/tgnet/TLRPC$TL_channels_editAdmin;Z)V
-    .registers 6
+.method public synthetic constructor <init>(Lorg/telegram/messenger/MessagesController;Lorg/telegram/tgnet/TLRPC$TL_error;Lorg/telegram/ui/ActionBar/BaseFragment;Lorg/telegram/tgnet/TLRPC$TL_channels_createChannel;)V
+    .registers 5
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -29,9 +27,7 @@
 
     iput-object p3, p0, Lorg/telegram/messenger/MessagesController$$ExternalSyntheticLambda165;->f$2:Lorg/telegram/ui/ActionBar/BaseFragment;
 
-    iput-object p4, p0, Lorg/telegram/messenger/MessagesController$$ExternalSyntheticLambda165;->f$3:Lorg/telegram/tgnet/TLRPC$TL_channels_editAdmin;
-
-    iput-boolean p5, p0, Lorg/telegram/messenger/MessagesController$$ExternalSyntheticLambda165;->f$4:Z
+    iput-object p4, p0, Lorg/telegram/messenger/MessagesController$$ExternalSyntheticLambda165;->f$3:Lorg/telegram/tgnet/TLRPC$TL_channels_createChannel;
 
     return-void
 .end method
@@ -39,7 +35,7 @@
 
 # virtual methods
 .method public final run()V
-    .registers 6
+    .registers 5
 
     iget-object v0, p0, Lorg/telegram/messenger/MessagesController$$ExternalSyntheticLambda165;->f$0:Lorg/telegram/messenger/MessagesController;
 
@@ -47,11 +43,9 @@
 
     iget-object v2, p0, Lorg/telegram/messenger/MessagesController$$ExternalSyntheticLambda165;->f$2:Lorg/telegram/ui/ActionBar/BaseFragment;
 
-    iget-object v3, p0, Lorg/telegram/messenger/MessagesController$$ExternalSyntheticLambda165;->f$3:Lorg/telegram/tgnet/TLRPC$TL_channels_editAdmin;
+    iget-object v3, p0, Lorg/telegram/messenger/MessagesController$$ExternalSyntheticLambda165;->f$3:Lorg/telegram/tgnet/TLRPC$TL_channels_createChannel;
 
-    iget-boolean v4, p0, Lorg/telegram/messenger/MessagesController$$ExternalSyntheticLambda165;->f$4:Z
-
-    invoke-static {v0, v1, v2, v3, v4}, Lorg/telegram/messenger/MessagesController;->$r8$lambda$dxzflSETssn8QRvmRUNpJ2Aw3N0(Lorg/telegram/messenger/MessagesController;Lorg/telegram/tgnet/TLRPC$TL_error;Lorg/telegram/ui/ActionBar/BaseFragment;Lorg/telegram/tgnet/TLRPC$TL_channels_editAdmin;Z)V
+    invoke-static {v0, v1, v2, v3}, Lorg/telegram/messenger/MessagesController;->$r8$lambda$7IKDY07izImpnqr3XhmenHFGAQg(Lorg/telegram/messenger/MessagesController;Lorg/telegram/tgnet/TLRPC$TL_error;Lorg/telegram/ui/ActionBar/BaseFragment;Lorg/telegram/tgnet/TLRPC$TL_channels_createChannel;)V
 
     return-void
 .end method

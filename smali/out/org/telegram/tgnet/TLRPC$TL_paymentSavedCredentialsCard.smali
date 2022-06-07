@@ -23,7 +23,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 43604
+    .line 44056
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -32,7 +32,7 @@
 .method public static TLdeserialize(Lorg/telegram/tgnet/AbstractSerializedData;IZ)Lorg/telegram/tgnet/TLRPC$TL_paymentSavedCredentialsCard;
     .registers 4
 
-    .line 43611
+    .line 44063
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_paymentSavedCredentialsCard;->constructor:I
 
     if-eq v0, p1, :cond_1e
@@ -43,7 +43,7 @@
 
     return-object p0
 
-    .line 43613
+    .line 44065
     :cond_8
     new-instance p0, Ljava/lang/RuntimeException;
 
@@ -69,13 +69,13 @@
 
     throw p0
 
-    .line 43618
+    .line 44070
     :cond_1e
     new-instance p1, Lorg/telegram/tgnet/TLRPC$TL_paymentSavedCredentialsCard;
 
     invoke-direct {p1}, Lorg/telegram/tgnet/TLRPC$TL_paymentSavedCredentialsCard;-><init>()V
 
-    .line 43619
+    .line 44071
     invoke-virtual {p1, p0, p2}, Lorg/telegram/tgnet/TLRPC$TL_paymentSavedCredentialsCard;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
     return-object p1
@@ -86,14 +86,14 @@
 .method public readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
     .registers 4
 
-    .line 43624
+    .line 44076
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readString(Z)Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_paymentSavedCredentialsCard;->id:Ljava/lang/String;
 
-    .line 43625
+    .line 44077
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readString(Z)Ljava/lang/String;
 
     move-result-object p1
@@ -106,17 +106,17 @@
 .method public serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
     .registers 3
 
-    .line 43629
+    .line 44081
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_paymentSavedCredentialsCard;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 43630
+    .line 44082
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_paymentSavedCredentialsCard;->id:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeString(Ljava/lang/String;)V
 
-    .line 43631
+    .line 44083
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_paymentSavedCredentialsCard;->title:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeString(Ljava/lang/String;)V

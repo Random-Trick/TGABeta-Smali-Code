@@ -29,7 +29,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/SharedMediaLayout$5;Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;)V
     .registers 4
 
-    .line 1360
+    .line 1364
     iput-object p1, p0, Lorg/telegram/ui/Components/SharedMediaLayout$5$2;->this$1:Lorg/telegram/ui/Components/SharedMediaLayout$5;
 
     iput-object p2, p0, Lorg/telegram/ui/Components/SharedMediaLayout$5$2;->val$mediaZoomOutItem:Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;
@@ -46,7 +46,7 @@
 .method public onClick(Landroid/view/View;)V
     .registers 4
 
-    .line 1363
+    .line 1367
     iget-object p1, p0, Lorg/telegram/ui/Components/SharedMediaLayout$5$2;->this$1:Lorg/telegram/ui/Components/SharedMediaLayout$5;
 
     iget-object p1, p1, Lorg/telegram/ui/Components/SharedMediaLayout$5;->this$0:Lorg/telegram/ui/Components/SharedMediaLayout;
@@ -59,7 +59,7 @@
 
     return-void
 
-    .line 1366
+    .line 1370
     :cond_b
     iget-object p1, p0, Lorg/telegram/ui/Components/SharedMediaLayout$5$2;->this$1:Lorg/telegram/ui/Components/SharedMediaLayout$5;
 
@@ -75,7 +75,7 @@
 
     move-result p1
 
-    .line 1367
+    .line 1371
     iget-object v0, p0, Lorg/telegram/ui/Components/SharedMediaLayout$5$2;->this$1:Lorg/telegram/ui/Components/SharedMediaLayout$5;
 
     iget-object v0, v0, Lorg/telegram/ui/Components/SharedMediaLayout$5;->this$0:Lorg/telegram/ui/Components/SharedMediaLayout;
@@ -86,12 +86,12 @@
 
     if-ne p1, v0, :cond_36
 
-    .line 1368
+    .line 1372
     iget-object v0, p0, Lorg/telegram/ui/Components/SharedMediaLayout$5$2;->val$mediaZoomOutItem:Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;
 
     invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->setEnabled(Z)V
 
-    .line 1369
+    .line 1373
     iget-object v0, p0, Lorg/telegram/ui/Components/SharedMediaLayout$5$2;->val$mediaZoomOutItem:Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;
 
     invoke-virtual {v0}, Landroid/widget/FrameLayout;->animate()Landroid/view/ViewPropertyAnimator;
@@ -106,7 +106,7 @@
 
     invoke-virtual {v0}, Landroid/view/ViewPropertyAnimator;->start()V
 
-    .line 1371
+    .line 1375
     :cond_36
     iget-object v0, p0, Lorg/telegram/ui/Components/SharedMediaLayout$5$2;->this$1:Lorg/telegram/ui/Components/SharedMediaLayout$5;
 
@@ -118,7 +118,7 @@
 
     if-eq v0, p1, :cond_67
 
-    .line 1372
+    .line 1376
     iget-object v0, p0, Lorg/telegram/ui/Components/SharedMediaLayout$5$2;->val$mediaZoomInItem:Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;
 
     invoke-virtual {v0}, Landroid/widget/FrameLayout;->isEnabled()Z
@@ -127,14 +127,14 @@
 
     if-nez v0, :cond_5d
 
-    .line 1373
+    .line 1377
     iget-object v0, p0, Lorg/telegram/ui/Components/SharedMediaLayout$5$2;->val$mediaZoomInItem:Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->setEnabled(Z)V
 
-    .line 1374
+    .line 1378
     iget-object v0, p0, Lorg/telegram/ui/Components/SharedMediaLayout$5$2;->val$mediaZoomInItem:Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;
 
     invoke-virtual {v0}, Landroid/widget/FrameLayout;->animate()Landroid/view/ViewPropertyAnimator;
@@ -149,11 +149,11 @@
 
     invoke-virtual {v0}, Landroid/view/ViewPropertyAnimator;->start()V
 
-    .line 1376
+    .line 1380
     :cond_5d
     invoke-static {p1}, Lorg/telegram/messenger/SharedConfig;->setMediaColumnsCount(I)V
 
-    .line 1377
+    .line 1381
     iget-object v0, p0, Lorg/telegram/ui/Components/SharedMediaLayout$5$2;->this$1:Lorg/telegram/ui/Components/SharedMediaLayout$5;
 
     iget-object v0, v0, Lorg/telegram/ui/Components/SharedMediaLayout$5;->this$0:Lorg/telegram/ui/Components/SharedMediaLayout;

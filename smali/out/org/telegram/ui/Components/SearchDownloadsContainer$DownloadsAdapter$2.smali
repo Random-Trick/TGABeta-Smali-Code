@@ -25,7 +25,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/SearchDownloadsContainer$DownloadsAdapter;)V
     .registers 2
 
-    .line 475
+    .line 482
     iput-object p1, p0, Lorg/telegram/ui/Components/SearchDownloadsContainer$DownloadsAdapter$2;->this$1:Lorg/telegram/ui/Components/SearchDownloadsContainer$DownloadsAdapter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +42,7 @@
 
     const/4 v0, 0x0
 
-    .line 478
+    .line 485
     :goto_2
     iget-object v1, p0, Lorg/telegram/ui/Components/SearchDownloadsContainer$DownloadsAdapter$2;->this$1:Lorg/telegram/ui/Components/SearchDownloadsContainer$DownloadsAdapter;
 
@@ -56,7 +56,7 @@
 
     if-ge v0, v1, :cond_4a
 
-    .line 479
+    .line 486
     iget-object v1, p0, Lorg/telegram/ui/Components/SearchDownloadsContainer$DownloadsAdapter$2;->this$1:Lorg/telegram/ui/Components/SearchDownloadsContainer$DownloadsAdapter;
 
     iget-object v1, v1, Lorg/telegram/ui/Components/SearchDownloadsContainer$DownloadsAdapter;->this$0:Lorg/telegram/ui/Components/SearchDownloadsContainer;
@@ -69,7 +69,7 @@
 
     check-cast v1, Lorg/telegram/messenger/MessageObject;
 
-    .line 480
+    .line 487
     iget-object v2, p0, Lorg/telegram/ui/Components/SearchDownloadsContainer$DownloadsAdapter$2;->this$1:Lorg/telegram/ui/Components/SearchDownloadsContainer$DownloadsAdapter;
 
     iget-object v2, v2, Lorg/telegram/ui/Components/SearchDownloadsContainer$DownloadsAdapter;->this$0:Lorg/telegram/ui/Components/SearchDownloadsContainer;
@@ -80,7 +80,7 @@
 
     if-eqz v2, :cond_36
 
-    .line 481
+    .line 488
     sget v2, Lorg/telegram/messenger/UserConfig;->selectedAccount:I
 
     invoke-static {v2}, Lorg/telegram/messenger/AccountInstance;->getInstance(I)Lorg/telegram/messenger/AccountInstance;
@@ -99,7 +99,7 @@
 
     goto :goto_47
 
-    .line 483
+    .line 490
     :cond_36
     sget v2, Lorg/telegram/messenger/UserConfig;->selectedAccount:I
 
@@ -122,7 +122,7 @@
 
     goto :goto_2
 
-    .line 486
+    .line 493
     :cond_4a
     iget-object p1, p0, Lorg/telegram/ui/Components/SearchDownloadsContainer$DownloadsAdapter$2;->this$1:Lorg/telegram/ui/Components/SearchDownloadsContainer$DownloadsAdapter;
 

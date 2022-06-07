@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/DialogsActivity;Landroid/app/Activity;Lorg/telegram/ui/Components/SizeNotifierFrameLayout;Lorg/telegram/ui/ChatActivity;Z)V
     .registers 6
 
-    .line 3330
+    .line 3401
     iput-object p1, p0, Lorg/telegram/ui/DialogsActivity$20;->this$0:Lorg/telegram/ui/DialogsActivity;
 
     invoke-direct {p0, p2, p3, p4, p5}, Lorg/telegram/ui/Components/ChatActivityEnterView;-><init>(Landroid/app/Activity;Lorg/telegram/ui/Components/SizeNotifierFrameLayout;Lorg/telegram/ui/ChatActivity;Z)V
@@ -35,14 +35,14 @@
 .method public dispatchTouchEvent(Landroid/view/MotionEvent;)Z
     .registers 4
 
-    .line 3333
+    .line 3404
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v0
 
     if-nez v0, :cond_15
 
-    .line 3334
+    .line 3405
     iget-object v0, p0, Lorg/telegram/ui/DialogsActivity$20;->this$0:Lorg/telegram/ui/DialogsActivity;
 
     invoke-virtual {v0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getParentActivity()Landroid/app/Activity;
@@ -51,13 +51,13 @@
 
     iget-object v1, p0, Lorg/telegram/ui/DialogsActivity$20;->this$0:Lorg/telegram/ui/DialogsActivity;
 
-    invoke-static {v1}, Lorg/telegram/ui/DialogsActivity;->access$24600(Lorg/telegram/ui/DialogsActivity;)I
+    invoke-static {v1}, Lorg/telegram/ui/DialogsActivity;->access$25100(Lorg/telegram/ui/DialogsActivity;)I
 
     move-result v1
 
     invoke-static {v0, v1}, Lorg/telegram/messenger/AndroidUtilities;->requestAdjustResize(Landroid/app/Activity;I)V
 
-    .line 3336
+    .line 3407
     :cond_15
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->dispatchTouchEvent(Landroid/view/MotionEvent;)Z
 
@@ -69,7 +69,7 @@
 .method public setTranslationY(F)V
     .registers 2
 
-    .line 3340
+    .line 3411
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->setTranslationY(F)V
 
     return-void

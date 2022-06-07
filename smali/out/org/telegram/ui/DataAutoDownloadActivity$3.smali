@@ -65,7 +65,7 @@
     .line 377
     iget-object v0, p0, Lorg/telegram/ui/DataAutoDownloadActivity$3;->val$infoCell:Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
 
-    const v1, 0x7f0e0257
+    const v1, 0x7f0e028c
 
     const/4 v2, 0x1
 

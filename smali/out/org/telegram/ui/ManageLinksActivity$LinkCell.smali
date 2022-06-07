@@ -265,7 +265,7 @@
 
     iput-object p1, p0, Lorg/telegram/ui/ManageLinksActivity$LinkCell;->optionsView:Landroid/widget/ImageView;
 
-    const v1, 0x7f070147
+    const v1, 0x7f07010d
 
     .line 1028
     invoke-static {p2, v1}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
@@ -530,7 +530,7 @@
 
     const/4 p3, 0x0
 
-    const v0, 0x7f0e0331
+    const v0, 0x7f0e036d
 
     const-string v1, "Cancel"
 
@@ -557,7 +557,7 @@
 
     invoke-direct {p2, v2}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    const v2, 0x7f0e056d
+    const v2, 0x7f0e05be
 
     const-string v3, "DeleteLink"
 
@@ -568,7 +568,7 @@
 
     invoke-virtual {p2, v2}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const v2, 0x7f0e056e
+    const v2, 0x7f0e05bf
 
     const-string v3, "DeleteLinkHelp"
 
@@ -579,7 +579,7 @@
 
     invoke-virtual {p2, v2}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const v2, 0x7f0e0540
+    const v2, 0x7f0e0591
 
     const-string v3, "Delete"
 
@@ -627,7 +627,7 @@
 
     invoke-direct {p2, v2}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    const v2, 0x7f0e0f4a
+    const v2, 0x7f0e0ffa
 
     const-string v3, "RevokeAlert"
 
@@ -638,7 +638,7 @@
 
     invoke-virtual {p2, v2}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const v2, 0x7f0e0f4d
+    const v2, 0x7f0e0ffd
 
     const-string v3, "RevokeLink"
 
@@ -649,7 +649,7 @@
 
     invoke-virtual {p2, v2}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const v2, 0x7f0e0f4c
+    const v2, 0x7f0e0ffc
 
     const-string v3, "RevokeButton"
 
@@ -730,7 +730,7 @@
 
     const-string p3, "InviteToGroupByLink"
 
-    const v0, 0x7f0e08c2
+    const v0, 0x7f0e091f
 
     invoke-static {p3, v0}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
@@ -847,7 +847,7 @@
 
     iget-boolean v2, v2, Lorg/telegram/tgnet/TLRPC$TL_chatInviteExported;->revoked:Z
 
-    const v3, 0x7f070258
+    const v3, 0x7f070206
 
     const/4 v4, 0x0
 
@@ -855,7 +855,7 @@
 
     if-eqz v2, :cond_3d
 
-    const v2, 0x7f0e0540
+    const v2, 0x7f0e0591
 
     const-string v6, "Delete"
 
@@ -888,7 +888,7 @@
     goto/16 :goto_c9
 
     :cond_3d
-    const v2, 0x7f0e04d4
+    const v2, 0x7f0e0523
 
     const-string v6, "CopyLink"
 
@@ -899,7 +899,7 @@
 
     invoke-virtual {p1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    const v2, 0x7f070255
+    const v2, 0x7f070201
 
     .line 1047
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -915,7 +915,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    const v2, 0x7f0e1029
+    const v2, 0x7f0e10e7
 
     const-string v6, "ShareLink"
 
@@ -926,7 +926,7 @@
 
     invoke-virtual {p1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    const v2, 0x7f0702cd
+    const v2, 0x7f0702f0
 
     .line 1051
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -957,7 +957,7 @@
 
     if-eqz v2, :cond_a3
 
-    const v2, 0x7f0e060f
+    const v2, 0x7f0e0661
 
     const-string v6, "EditLink"
 
@@ -968,7 +968,7 @@
 
     invoke-virtual {p1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    const v2, 0x7f070262
+    const v2, 0x7f070212
 
     .line 1056
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -996,7 +996,7 @@
 
     if-eqz v2, :cond_c8
 
-    const v2, 0x7f0e0f4d
+    const v2, 0x7f0e0ffd
 
     const-string v6, "RevokeLink"
 
@@ -1059,7 +1059,7 @@
 
     invoke-virtual {v3, v4, v0, v6}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setItems([Ljava/lang/CharSequence;[ILandroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const v0, 0x7f0e08b1
+    const v0, 0x7f0e090e
 
     const-string v1, "InviteLink"
 
@@ -2065,7 +2065,7 @@
 
     if-nez v1, :cond_b4
 
-    const p2, 0x7f0e0ac8
+    const p2, 0x7f0e0b4f
 
     const-string v1, "NoOneJoinedYet"
 
@@ -2074,48 +2074,50 @@
 
     move-result-object p2
 
-    goto/16 :goto_132
+    goto/16 :goto_13c
 
     .line 1307
     :cond_b4
     iget v1, p1, Lorg/telegram/tgnet/TLRPC$TL_chatInviteExported;->usage_limit:I
 
-    if-lez v1, :cond_c9
+    if-lez v1, :cond_cb
 
-    if-nez p2, :cond_c9
+    if-nez p2, :cond_cb
 
     iget-boolean v2, p1, Lorg/telegram/tgnet/TLRPC$TL_chatInviteExported;->expired:Z
 
-    if-nez v2, :cond_c9
+    if-nez v2, :cond_cb
 
     iget-boolean v2, p1, Lorg/telegram/tgnet/TLRPC$TL_chatInviteExported;->revoked:Z
 
-    if-nez v2, :cond_c9
+    if-nez v2, :cond_cb
 
-    const-string p2, "CanJoin"
+    new-array p2, v0, [Ljava/lang/Object;
+
+    const-string v2, "CanJoin"
 
     .line 1308
-    invoke-static {p2, v1}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    invoke-static {v2, v1, p2}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p2
 
-    goto :goto_132
+    goto :goto_13c
 
-    :cond_c9
+    :cond_cb
     const-string v2, ", "
 
     const-string v3, "PeopleJoined"
 
-    if-lez v1, :cond_fb
+    if-lez v1, :cond_101
 
     .line 1309
     iget-boolean v1, p1, Lorg/telegram/tgnet/TLRPC$TL_chatInviteExported;->expired:Z
 
-    if-eqz v1, :cond_fb
+    if-eqz v1, :cond_101
 
     iget-boolean v1, p1, Lorg/telegram/tgnet/TLRPC$TL_chatInviteExported;->revoked:Z
 
-    if-eqz v1, :cond_fb
+    if-eqz v1, :cond_101
 
     .line 1310
     new-instance p2, Ljava/lang/StringBuilder;
@@ -2124,7 +2126,9 @@
 
     iget v1, p1, Lorg/telegram/tgnet/TLRPC$TL_chatInviteExported;->usage:I
 
-    invoke-static {v3, v1}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    new-array v4, v0, [Ljava/lang/Object;
+
+    invoke-static {v3, v1, v4}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -2138,9 +2142,11 @@
 
     sub-int/2addr v1, v2
 
-    const-string v2, "PeopleJoinedRemaining"
+    new-array v2, v0, [Ljava/lang/Object;
 
-    invoke-static {v2, v1}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    const-string v3, "PeopleJoinedRemaining"
+
+    invoke-static {v3, v1, v2}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -2150,31 +2156,33 @@
 
     move-result-object p2
 
-    goto :goto_132
+    goto :goto_13c
 
-    :cond_fb
-    if-lez p2, :cond_102
+    :cond_101
+    if-lez p2, :cond_10a
+
+    new-array v1, v0, [Ljava/lang/Object;
 
     .line 1313
-    invoke-static {v3, p2}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    invoke-static {v3, p2, v1}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p2
 
-    goto :goto_104
+    goto :goto_10c
 
-    :cond_102
+    :cond_10a
     const-string p2, ""
 
     .line 1315
-    :goto_104
+    :goto_10c
     iget v1, p1, Lorg/telegram/tgnet/TLRPC$TL_chatInviteExported;->requested:I
 
-    if-lez v1, :cond_132
+    if-lez v1, :cond_13c
 
     .line 1316
     iget v1, p1, Lorg/telegram/tgnet/TLRPC$TL_chatInviteExported;->usage:I
 
-    if-lez v1, :cond_11b
+    if-lez v1, :cond_123
 
     .line 1317
     new-instance v1, Ljava/lang/StringBuilder;
@@ -2190,7 +2198,7 @@
     move-result-object p2
 
     .line 1319
-    :cond_11b
+    :cond_123
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2199,9 +2207,11 @@
 
     iget p2, p1, Lorg/telegram/tgnet/TLRPC$TL_chatInviteExported;->requested:I
 
-    const-string v2, "JoinRequests"
+    new-array v2, v0, [Ljava/lang/Object;
 
-    invoke-static {v2, p2}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    const-string v3, "JoinRequests"
+
+    invoke-static {v3, p2, v2}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p2
 
@@ -2212,19 +2222,19 @@
     move-result-object p2
 
     .line 1323
-    :cond_132
-    :goto_132
+    :cond_13c
+    :goto_13c
     iget-boolean v1, p1, Lorg/telegram/tgnet/TLRPC$TL_chatInviteExported;->permanent:Z
 
     const-string v2, "  .  "
 
     const/high16 v3, 0x3fc00000    # 1.5f
 
-    if-eqz v1, :cond_175
+    if-eqz v1, :cond_17f
 
     iget-boolean v1, p1, Lorg/telegram/tgnet/TLRPC$TL_chatInviteExported;->revoked:Z
 
-    if-nez v1, :cond_175
+    if-nez v1, :cond_17f
 
     .line 1324
     new-instance p1, Landroid/text/SpannableStringBuilder;
@@ -2262,7 +2272,7 @@
 
     invoke-virtual {v1, p2, v2, v3, v0}, Landroid/text/SpannableStringBuilder;->setSpan(Ljava/lang/Object;III)V
 
-    const p2, 0x7f0e0d2c
+    const p2, 0x7f0e0dba
 
     const-string v0, "Permanent"
 
@@ -2278,25 +2288,25 @@
 
     invoke-virtual {p2, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    goto/16 :goto_28b
+    goto/16 :goto_297
 
     .line 1330
-    :cond_175
+    :cond_17f
     iget-boolean v1, p1, Lorg/telegram/tgnet/TLRPC$TL_chatInviteExported;->expired:Z
 
-    if-nez v1, :cond_224
+    if-nez v1, :cond_230
 
     iget-boolean v1, p1, Lorg/telegram/tgnet/TLRPC$TL_chatInviteExported;->revoked:Z
 
-    if-eqz v1, :cond_17f
+    if-eqz v1, :cond_189
 
-    goto/16 :goto_224
+    goto/16 :goto_230
 
     .line 1344
-    :cond_17f
+    :cond_189
     iget v1, p1, Lorg/telegram/tgnet/TLRPC$TL_chatInviteExported;->expire_date:I
 
-    if-lez v1, :cond_21e
+    if-lez v1, :cond_22a
 
     .line 1345
     new-instance v1, Landroid/text/SpannableStringBuilder;
@@ -2362,34 +2372,36 @@
 
     cmp-long v4, p1, v2
 
-    if-gez v4, :cond_1c1
+    if-gez v4, :cond_1cb
 
     move-wide p1, v2
 
-    :cond_1c1
+    :cond_1cb
     const-wide/32 v2, 0x5265c00
 
     cmp-long v4, p1, v2
 
-    if-lez v4, :cond_1d4
+    if-lez v4, :cond_1e0
 
     .line 1357
     div-long/2addr p1, v2
 
     long-to-int p2, p1
 
-    const-string p1, "DaysLeft"
+    new-array p1, v0, [Ljava/lang/Object;
 
-    invoke-static {p1, p2}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    const-string v0, "DaysLeft"
+
+    invoke-static {v0, p2, p1}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
 
     invoke-virtual {v1, p1}, Landroid/text/SpannableStringBuilder;->append(Ljava/lang/CharSequence;)Landroid/text/SpannableStringBuilder;
 
-    goto :goto_218
+    goto :goto_224
 
     .line 1359
-    :cond_1d4
+    :cond_1e0
     div-long/2addr p1, v6
 
     const-wide/16 v2, 0x3c
@@ -2469,33 +2481,33 @@
     iput-boolean v2, p0, Lorg/telegram/ui/ManageLinksActivity$LinkCell;->timerRunning:Z
 
     .line 1365
-    :goto_218
+    :goto_224
     iget-object p1, p0, Lorg/telegram/ui/ManageLinksActivity$LinkCell;->subtitleView:Landroid/widget/TextView;
 
     invoke-virtual {p1, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    goto :goto_28b
+    goto :goto_297
 
     .line 1367
-    :cond_21e
+    :cond_22a
     iget-object p1, p0, Lorg/telegram/ui/ManageLinksActivity$LinkCell;->subtitleView:Landroid/widget/TextView;
 
     invoke-virtual {p1, p2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    goto :goto_28b
+    goto :goto_297
 
     .line 1331
-    :cond_224
-    :goto_224
+    :cond_230
+    :goto_230
     iget-boolean v1, p1, Lorg/telegram/tgnet/TLRPC$TL_chatInviteExported;->revoked:Z
 
-    if-eqz v1, :cond_235
+    if-eqz v1, :cond_241
 
     iget v1, p1, Lorg/telegram/tgnet/TLRPC$TL_chatInviteExported;->usage:I
 
-    if-nez v1, :cond_235
+    if-nez v1, :cond_241
 
-    const p2, 0x7f0e0ac7
+    const p2, 0x7f0e0b4e
 
     const-string v1, "NoOneJoined"
 
@@ -2505,7 +2517,7 @@
     move-result-object p2
 
     .line 1334
-    :cond_235
+    :cond_241
     new-instance v1, Landroid/text/SpannableStringBuilder;
 
     invoke-direct {v1, p2}, Landroid/text/SpannableStringBuilder;-><init>(Ljava/lang/CharSequence;)V
@@ -2544,17 +2556,17 @@
     .line 1338
     iget-boolean p2, p1, Lorg/telegram/tgnet/TLRPC$TL_chatInviteExported;->revoked:Z
 
-    if-nez p2, :cond_272
+    if-nez p2, :cond_27e
 
     iget v0, p1, Lorg/telegram/tgnet/TLRPC$TL_chatInviteExported;->usage_limit:I
 
-    if-lez v0, :cond_272
+    if-lez v0, :cond_27e
 
     iget p1, p1, Lorg/telegram/tgnet/TLRPC$TL_chatInviteExported;->usage:I
 
-    if-lt p1, v0, :cond_272
+    if-lt p1, v0, :cond_27e
 
-    const p1, 0x7f0e0944
+    const p1, 0x7f0e09cb
 
     const-string p2, "LinkLimitReached"
 
@@ -2565,24 +2577,24 @@
 
     invoke-virtual {v1, p1}, Landroid/text/SpannableStringBuilder;->append(Ljava/lang/CharSequence;)Landroid/text/SpannableStringBuilder;
 
-    goto :goto_286
+    goto :goto_292
 
-    :cond_272
-    if-eqz p2, :cond_27a
+    :cond_27e
+    if-eqz p2, :cond_286
 
-    const p1, 0x7f0e0f50
+    const p1, 0x7f0e1008
 
     const-string p2, "Revoked"
 
-    goto :goto_27f
+    goto :goto_28b
 
-    :cond_27a
-    const p1, 0x7f0e06e3
+    :cond_286
+    const p1, 0x7f0e0735
 
     const-string p2, "Expired"
 
     .line 1341
-    :goto_27f
+    :goto_28b
     invoke-static {p2, p1}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object p1
@@ -2590,11 +2602,11 @@
     invoke-virtual {v1, p1}, Landroid/text/SpannableStringBuilder;->append(Ljava/lang/CharSequence;)Landroid/text/SpannableStringBuilder;
 
     .line 1343
-    :goto_286
+    :goto_292
     iget-object p1, p0, Lorg/telegram/ui/ManageLinksActivity$LinkCell;->subtitleView:Landroid/widget/TextView;
 
     invoke-virtual {p1, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    :goto_28b
+    :goto_297
     return-void
 .end method

@@ -46,20 +46,20 @@
 .method private constructor <init>(Lorg/telegram/ui/CalendarActivity;)V
     .registers 2
 
-    .line 1223
+    .line 1222
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/high16 p1, 0x3f800000    # 1.0f
 
-    .line 1226
+    .line 1225
     iput p1, p0, Lorg/telegram/ui/CalendarActivity$PeriodDay;->enterAlpha:F
 
-    .line 1227
+    .line 1226
     iput p1, p0, Lorg/telegram/ui/CalendarActivity$PeriodDay;->startEnterDelay:F
 
     const/4 p1, 0x1
 
-    .line 1229
+    .line 1228
     iput-boolean p1, p0, Lorg/telegram/ui/CalendarActivity$PeriodDay;->hasImage:Z
 
     return-void
@@ -68,7 +68,7 @@
 .method synthetic constructor <init>(Lorg/telegram/ui/CalendarActivity;Lorg/telegram/ui/CalendarActivity$1;)V
     .registers 3
 
-    .line 1223
+    .line 1222
     invoke-direct {p0, p1}, Lorg/telegram/ui/CalendarActivity$PeriodDay;-><init>(Lorg/telegram/ui/CalendarActivity;)V
 
     return-void

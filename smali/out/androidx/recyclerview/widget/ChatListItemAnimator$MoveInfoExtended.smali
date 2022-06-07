@@ -68,7 +68,7 @@
 
     move v5, p6
 
-    .line 1515
+    .line 1525
     invoke-direct/range {v0 .. v5}, Landroidx/recyclerview/widget/DefaultItemAnimator$MoveInfo;-><init>(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;IIII)V
 
     return-void

@@ -2,32 +2,40 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lorg/telegram/ui/Components/BotKeyboardView$BotKeyboardViewDelegate;
+.implements Lorg/telegram/ui/Components/AlertsCreator$ScheduleDatePickerDelegate;
 
 
-# instance fields
-.field public final synthetic f$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
+# static fields
+.field public static final synthetic INSTANCE:Lorg/telegram/ui/Components/ChatActivityEnterView$$ExternalSyntheticLambda56;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lorg/telegram/ui/Components/ChatActivityEnterView;)V
-    .registers 2
+.method static synthetic constructor <clinit>()V
+    .registers 1
+
+    new-instance v0, Lorg/telegram/ui/Components/ChatActivityEnterView$$ExternalSyntheticLambda56;
+
+    invoke-direct {v0}, Lorg/telegram/ui/Components/ChatActivityEnterView$$ExternalSyntheticLambda56;-><init>()V
+
+    sput-object v0, Lorg/telegram/ui/Components/ChatActivityEnterView$$ExternalSyntheticLambda56;->INSTANCE:Lorg/telegram/ui/Components/ChatActivityEnterView$$ExternalSyntheticLambda56;
+
+    return-void
+.end method
+
+.method private synthetic constructor <init>()V
+    .registers 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$$ExternalSyntheticLambda56;->f$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final didPressedButton(Lorg/telegram/tgnet/TLRPC$KeyboardButton;)V
+.method public final didSelectDate(ZI)V
     .registers 3
 
-    iget-object v0, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$$ExternalSyntheticLambda56;->f$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
-
-    invoke-static {v0, p1}, Lorg/telegram/ui/Components/ChatActivityEnterView;->$r8$lambda$9TjENHUCiEcZ6Q1NIeQNPBCXjGo(Lorg/telegram/ui/Components/ChatActivityEnterView;Lorg/telegram/tgnet/TLRPC$KeyboardButton;)V
+    invoke-static {p1, p2}, Lorg/telegram/ui/Components/ChatActivityEnterView;->$r8$lambda$xiie7KCeY4MELNSXZ_7Ey4F7Kdk(ZI)V
 
     return-void
 .end method

@@ -18,7 +18,7 @@
 .method private constructor <init>()V
     .registers 1
 
-    .line 490
+    .line 637
     invoke-direct {p0}, Lorg/telegram/tgnet/TLRPC$Updates;-><init>()V
 
     return-void
@@ -27,7 +27,7 @@
 .method synthetic constructor <init>(Lorg/telegram/messenger/MessagesController$1;)V
     .registers 2
 
-    .line 490
+    .line 637
     invoke-direct {p0}, Lorg/telegram/messenger/MessagesController$UserActionUpdatesPts;-><init>()V
 
     return-void

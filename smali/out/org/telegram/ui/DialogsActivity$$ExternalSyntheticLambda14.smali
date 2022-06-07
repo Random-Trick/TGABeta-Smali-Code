@@ -5,25 +5,27 @@
 .implements Landroid/content/DialogInterface$OnClickListener;
 
 
-# instance fields
-.field public final synthetic f$0:Lorg/telegram/ui/DialogsActivity;
-
-.field public final synthetic f$1:Ljava/util/ArrayList;
-
-.field public final synthetic f$2:I
+# static fields
+.field public static final synthetic INSTANCE:Lorg/telegram/ui/DialogsActivity$$ExternalSyntheticLambda14;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lorg/telegram/ui/DialogsActivity;Ljava/util/ArrayList;I)V
-    .registers 4
+.method static synthetic constructor <clinit>()V
+    .registers 1
+
+    new-instance v0, Lorg/telegram/ui/DialogsActivity$$ExternalSyntheticLambda14;
+
+    invoke-direct {v0}, Lorg/telegram/ui/DialogsActivity$$ExternalSyntheticLambda14;-><init>()V
+
+    sput-object v0, Lorg/telegram/ui/DialogsActivity$$ExternalSyntheticLambda14;->INSTANCE:Lorg/telegram/ui/DialogsActivity$$ExternalSyntheticLambda14;
+
+    return-void
+.end method
+
+.method private synthetic constructor <init>()V
+    .registers 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lorg/telegram/ui/DialogsActivity$$ExternalSyntheticLambda14;->f$0:Lorg/telegram/ui/DialogsActivity;
-
-    iput-object p2, p0, Lorg/telegram/ui/DialogsActivity$$ExternalSyntheticLambda14;->f$1:Ljava/util/ArrayList;
-
-    iput p3, p0, Lorg/telegram/ui/DialogsActivity$$ExternalSyntheticLambda14;->f$2:I
 
     return-void
 .end method
@@ -31,15 +33,9 @@
 
 # virtual methods
 .method public final onClick(Landroid/content/DialogInterface;I)V
-    .registers 6
+    .registers 3
 
-    iget-object v0, p0, Lorg/telegram/ui/DialogsActivity$$ExternalSyntheticLambda14;->f$0:Lorg/telegram/ui/DialogsActivity;
-
-    iget-object v1, p0, Lorg/telegram/ui/DialogsActivity$$ExternalSyntheticLambda14;->f$1:Ljava/util/ArrayList;
-
-    iget v2, p0, Lorg/telegram/ui/DialogsActivity$$ExternalSyntheticLambda14;->f$2:I
-
-    invoke-static {v0, v1, v2, p1, p2}, Lorg/telegram/ui/DialogsActivity;->$r8$lambda$zc4iA7Cee0FWiA08gqf1OA_1gF0(Lorg/telegram/ui/DialogsActivity;Ljava/util/ArrayList;ILandroid/content/DialogInterface;I)V
+    invoke-static {p1, p2}, Lorg/telegram/ui/DialogsActivity;->$r8$lambda$KTd42Lub2u7T-__Iuj4BbsXkkv4(Landroid/content/DialogInterface;I)V
 
     return-void
 .end method

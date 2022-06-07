@@ -99,7 +99,7 @@
     move-result v5
 
     :goto_23
-    const v6, 0x7f0e09de
+    const v6, 0x7f0e0a65
 
     const-string v9, "MembersOverviewTitle"
 
@@ -312,7 +312,7 @@
     move-result v3
 
     :goto_d0
-    const v4, 0x7f0e12ac
+    const v4, 0x7f0e137a
 
     const-string v5, "ViewingMembers"
 
@@ -445,7 +445,7 @@
     move-result v2
 
     :goto_137
-    const v3, 0x7f0e0dae
+    const v3, 0x7f0e0e3e
 
     const-string v12, "PostingMembers"
 
@@ -576,7 +576,7 @@
     move-result v2
 
     :goto_19c
-    const v3, 0x7f0e0a26
+    const v3, 0x7f0e0aad
 
     const-string v7, "MessagesOverview"
 

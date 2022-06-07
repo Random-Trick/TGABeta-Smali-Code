@@ -544,7 +544,7 @@
 
     const/4 v1, 0x2
 
-    const v2, 0x7f0e1274
+    const v2, 0x7f0e1341
 
     const-string v3, "Vibrate"
 
@@ -552,9 +552,9 @@
 
     const/4 v5, 0x1
 
-    packed-switch v0, :pswitch_data_4ec
+    packed-switch v0, :pswitch_data_4f2
 
-    goto/16 :goto_4eb
+    goto/16 :goto_4f1
 
     .line 944
     :pswitch_11
@@ -569,9 +569,9 @@
 
     move-result v0
 
-    if-ne p2, v0, :cond_4eb
+    if-ne p2, v0, :cond_4f1
 
-    const p2, 0x7f0e106c
+    const p2, 0x7f0e112b
 
     const-string v0, "ShowNotificationsForInfo"
 
@@ -582,7 +582,7 @@
 
     invoke-virtual {p1, p2}, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;->setText(Ljava/lang/CharSequence;)V
 
-    goto/16 :goto_4eb
+    goto/16 :goto_4f1
 
     .line 908
     :pswitch_2b
@@ -610,7 +610,7 @@
 
     if-ne p2, v6, :cond_6d
 
-    const p2, 0x7f0e053f
+    const p2, 0x7f0e0590
 
     const-string v1, "DefaultRingtone"
 
@@ -634,7 +634,7 @@
 
     if-eqz v1, :cond_5f
 
-    const p2, 0x7f0e0ae5
+    const p2, 0x7f0e0b6e
 
     .line 913
     invoke-static {v0, p2}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -642,7 +642,7 @@
     move-result-object p2
 
     :cond_5f
-    const v0, 0x7f0e13ac
+    const v0, 0x7f0e147a
 
     const-string v1, "VoipSettingsRingtone"
 
@@ -653,7 +653,7 @@
 
     invoke-virtual {p1, v0, p2, v4}, Lorg/telegram/ui/Cells/TextSettingsCell;->setTextAndValue(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)V
 
-    goto/16 :goto_4eb
+    goto/16 :goto_4f1
 
     .line 916
     :cond_6d
@@ -679,7 +679,7 @@
 
     move-result-object p2
 
-    const v0, 0x7f0e1275
+    const v0, 0x7f0e1342
 
     const-string v1, "VibrationDefault"
 
@@ -689,7 +689,7 @@
 
     invoke-virtual {p1, p2, v0, v5}, Lorg/telegram/ui/Cells/TextSettingsCell;->setTextAndValue(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)V
 
-    goto/16 :goto_4eb
+    goto/16 :goto_4f1
 
     :cond_8f
     if-ne p2, v5, :cond_a3
@@ -699,7 +699,7 @@
 
     move-result-object p2
 
-    const v0, 0x7f0e105d
+    const v0, 0x7f0e111b
 
     const-string v1, "Short"
 
@@ -709,7 +709,7 @@
 
     invoke-virtual {p1, p2, v0, v5}, Lorg/telegram/ui/Cells/TextSettingsCell;->setTextAndValue(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)V
 
-    goto/16 :goto_4eb
+    goto/16 :goto_4f1
 
     :cond_a3
     if-ne p2, v1, :cond_b7
@@ -719,7 +719,7 @@
 
     move-result-object p2
 
-    const v0, 0x7f0e1276
+    const v0, 0x7f0e1343
 
     const-string v1, "VibrationDisabled"
 
@@ -729,7 +729,7 @@
 
     invoke-virtual {p1, p2, v0, v5}, Lorg/telegram/ui/Cells/TextSettingsCell;->setTextAndValue(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)V
 
-    goto/16 :goto_4eb
+    goto/16 :goto_4f1
 
     :cond_b7
     const/4 v0, 0x3
@@ -741,7 +741,7 @@
 
     move-result-object p2
 
-    const v0, 0x7f0e097a
+    const v0, 0x7f0e0a01
 
     const-string v1, "Long"
 
@@ -751,19 +751,19 @@
 
     invoke-virtual {p1, p2, v0, v5}, Lorg/telegram/ui/Cells/TextSettingsCell;->setTextAndValue(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)V
 
-    goto/16 :goto_4eb
+    goto/16 :goto_4f1
 
     :cond_cc
     const/4 v0, 0x4
 
-    if-ne p2, v0, :cond_4eb
+    if-ne p2, v0, :cond_4f1
 
     .line 927
     invoke-static {v3, v2}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object p2
 
-    const v0, 0x7f0e0bba
+    const v0, 0x7f0e0c44
 
     const-string v1, "OnlyIfSilent"
 
@@ -773,7 +773,7 @@
 
     invoke-virtual {p1, p2, v0, v5}, Lorg/telegram/ui/Cells/TextSettingsCell;->setTextAndValue(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)V
 
-    goto/16 :goto_4eb
+    goto/16 :goto_4f1
 
     .line 929
     :cond_e1
@@ -783,7 +783,7 @@
 
     move-result v1
 
-    if-ne p2, v1, :cond_4eb
+    if-ne p2, v1, :cond_4f1
 
     const-string p2, "repeat_messages"
 
@@ -796,7 +796,7 @@
 
     if-nez p2, :cond_fd
 
-    const p2, 0x7f0e0ed1
+    const p2, 0x7f0e0f7e
 
     const-string v0, "RepeatNotificationsNever"
 
@@ -805,32 +805,36 @@
 
     move-result-object p2
 
-    goto :goto_10d
+    goto :goto_111
 
     :cond_fd
-    if-ge p2, v1, :cond_106
+    if-ge p2, v1, :cond_108
 
-    const-string v0, "Minutes"
+    new-array v0, v4, [Ljava/lang/Object;
+
+    const-string v1, "Minutes"
 
     .line 935
-    invoke-static {v0, p2}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    invoke-static {v1, p2, v0}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p2
 
-    goto :goto_10d
+    goto :goto_111
 
     .line 937
-    :cond_106
+    :cond_108
     div-int/2addr p2, v1
 
-    const-string v0, "Hours"
+    new-array v0, v4, [Ljava/lang/Object;
 
-    invoke-static {v0, p2}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    const-string v1, "Hours"
+
+    invoke-static {v1, p2, v0}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p2
 
-    :goto_10d
-    const v0, 0x7f0e0ed0
+    :goto_111
+    const v0, 0x7f0e0f7d
 
     const-string v1, "RepeatNotifications"
 
@@ -841,10 +845,10 @@
 
     invoke-virtual {p1, v0, p2, v4}, Lorg/telegram/ui/Cells/TextSettingsCell;->setTextAndValue(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)V
 
-    goto/16 :goto_4eb
+    goto/16 :goto_4f1
 
     .line 900
-    :pswitch_11b
+    :pswitch_11f
     iget-object v0, p0, Lorg/telegram/ui/NotificationsSettingsActivity$ListAdapter;->this$0:Lorg/telegram/ui/NotificationsSettingsActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/NotificationsSettingsActivity;->access$1400(Lorg/telegram/ui/NotificationsSettingsActivity;)I
@@ -853,14 +857,14 @@
 
     const-string v1, "windowBackgroundGrayShadow"
 
-    if-ne p2, v0, :cond_135
+    if-ne p2, v0, :cond_139
 
     .line 901
     iget-object p1, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     iget-object p2, p0, Lorg/telegram/ui/NotificationsSettingsActivity$ListAdapter;->mContext:Landroid/content/Context;
 
-    const v0, 0x7f07012d
+    const v0, 0x7f0700fc
 
     invoke-static {p2, v0, v1}, Lorg/telegram/ui/ActionBar/Theme;->getThemedDrawable(Landroid/content/Context;ILjava/lang/String;)Landroid/graphics/drawable/Drawable;
 
@@ -868,15 +872,15 @@
 
     invoke-virtual {p1, p2}, Landroid/view/View;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    goto/16 :goto_4eb
+    goto/16 :goto_4f1
 
     .line 903
-    :cond_135
+    :cond_139
     iget-object p1, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     iget-object p2, p0, Lorg/telegram/ui/NotificationsSettingsActivity$ListAdapter;->mContext:Landroid/content/Context;
 
-    const v0, 0x7f07012c
+    const v0, 0x7f0700fb
 
     invoke-static {p2, v0, v1}, Lorg/telegram/ui/ActionBar/Theme;->getThemedDrawable(Landroid/content/Context;ILjava/lang/String;)Landroid/graphics/drawable/Drawable;
 
@@ -884,10 +888,10 @@
 
     invoke-virtual {p1, p2}, Landroid/view/View;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    goto/16 :goto_4eb
+    goto/16 :goto_4f1
 
     .line 851
-    :pswitch_145
+    :pswitch_149
     iget-object p1, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     move-object v6, p1
@@ -927,9 +931,9 @@
 
     move-result v2
 
-    if-ne p2, v2, :cond_181
+    if-ne p2, v2, :cond_185
 
-    const v2, 0x7f0e0b9d
+    const v2, 0x7f0e0c27
 
     const-string v3, "NotificationsPrivateChats"
 
@@ -952,22 +956,22 @@
 
     move-result p1
 
-    :goto_17f
+    :goto_183
     move-object v7, v2
 
-    goto :goto_1b5
+    goto :goto_1b9
 
     .line 863
-    :cond_181
+    :cond_185
     iget-object v2, p0, Lorg/telegram/ui/NotificationsSettingsActivity$ListAdapter;->this$0:Lorg/telegram/ui/NotificationsSettingsActivity;
 
     invoke-static {v2}, Lorg/telegram/ui/NotificationsSettingsActivity;->access$4000(Lorg/telegram/ui/NotificationsSettingsActivity;)I
 
     move-result v2
 
-    if-ne p2, v2, :cond_19f
+    if-ne p2, v2, :cond_1a3
 
-    const v2, 0x7f0e0b8a
+    const v2, 0x7f0e0c14
 
     const-string v3, "NotificationsGroups"
 
@@ -990,10 +994,10 @@
 
     move-result p1
 
-    goto :goto_17f
+    goto :goto_183
 
-    :cond_19f
-    const v2, 0x7f0e0b76
+    :cond_1a3
+    const v2, 0x7f0e0c00
 
     const-string v3, "NotificationsChannels"
 
@@ -1016,66 +1020,66 @@
 
     move-result p1
 
-    goto :goto_17f
+    goto :goto_183
 
-    :goto_1b5
-    if-ge p1, v0, :cond_1b9
+    :goto_1b9
+    if-ge p1, v0, :cond_1bd
 
     const/4 v2, 0x1
 
-    goto :goto_1ba
+    goto :goto_1be
 
-    :cond_1b9
+    :cond_1bd
     const/4 v2, 0x0
 
-    :goto_1ba
+    :goto_1be
     const v8, 0x1e13380
 
-    if-eqz v2, :cond_1c1
+    if-eqz v2, :cond_1c5
 
-    :goto_1bf
+    :goto_1c3
     const/4 v10, 0x0
 
-    goto :goto_1c7
+    goto :goto_1cb
 
-    :cond_1c1
+    :cond_1c5
     sub-int v9, p1, v8
 
-    if-lt v9, v0, :cond_1c6
+    if-lt v9, v0, :cond_1ca
 
-    goto :goto_1bf
+    goto :goto_1c3
 
-    :cond_1c6
+    :cond_1ca
     const/4 v10, 0x2
 
     .line 880
-    :goto_1c7
+    :goto_1cb
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    if-eqz v3, :cond_227
+    if-eqz v3, :cond_22d
 
     .line 881
     invoke-virtual {v3}, Ljava/util/ArrayList;->isEmpty()Z
 
     move-result v9
 
-    if-nez v9, :cond_227
+    if-nez v9, :cond_22d
 
-    if-ge p1, v0, :cond_1d8
+    if-ge p1, v0, :cond_1dc
 
     const/4 v2, 0x1
 
-    goto :goto_1d9
+    goto :goto_1dd
 
-    :cond_1d8
+    :cond_1dc
     const/4 v2, 0x0
 
-    :goto_1d9
-    if-eqz v2, :cond_1e8
+    :goto_1dd
+    if-eqz v2, :cond_1ec
 
-    const p1, 0x7f0e0b96
+    const p1, 0x7f0e0c20
 
     const-string v0, "NotificationsOn"
 
@@ -1086,14 +1090,14 @@
 
     invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    goto :goto_20e
+    goto :goto_212
 
-    :cond_1e8
+    :cond_1ec
     sub-int v8, p1, v8
 
-    if-lt v8, v0, :cond_1f9
+    if-lt v8, v0, :cond_1fd
 
-    const p1, 0x7f0e0b94
+    const p1, 0x7f0e0c1e
 
     const-string v0, "NotificationsOff"
 
@@ -1104,10 +1108,10 @@
 
     invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    goto :goto_20e
+    goto :goto_212
 
-    :cond_1f9
-    const v0, 0x7f0e0b95
+    :cond_1fd
+    const v0, 0x7f0e0c1f
 
     new-array v8, v5, [Ljava/lang/Object;
 
@@ -1129,12 +1133,12 @@
     invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 889
-    :goto_20e
+    :goto_212
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->length()I
 
     move-result p1
 
-    if-eqz p1, :cond_219
+    if-eqz p1, :cond_21d
 
     const-string p1, ", "
 
@@ -1142,23 +1146,25 @@
     invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 892
-    :cond_219
+    :cond_21d
     invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
 
     move-result p1
 
-    const-string v0, "Exception"
+    new-array v0, v4, [Ljava/lang/Object;
 
-    invoke-static {v0, p1}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    const-string v3, "Exception"
+
+    invoke-static {v3, p1, v0}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
 
     invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    goto :goto_233
+    goto :goto_239
 
-    :cond_227
-    const p1, 0x7f0e1131
+    :cond_22d
+    const p1, 0x7f0e11f5
 
     const-string v0, "TapToChange"
 
@@ -1169,7 +1175,7 @@
 
     invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :goto_233
+    :goto_239
     move v9, v2
 
     .line 896
@@ -1179,24 +1185,24 @@
 
     move-result p1
 
-    if-eq p2, p1, :cond_23e
+    if-eq p2, p1, :cond_244
 
     const/4 v11, 0x1
 
-    goto :goto_23f
+    goto :goto_245
 
-    :cond_23e
+    :cond_244
     const/4 v11, 0x0
 
-    :goto_23f
+    :goto_245
     move-object v8, v1
 
     invoke-virtual/range {v6 .. v11}, Lorg/telegram/ui/Cells/NotificationsCheckCell;->setTextAndValueAndCheck(Ljava/lang/String;Ljava/lang/CharSequence;ZIZ)V
 
-    goto/16 :goto_4eb
+    goto/16 :goto_4f1
 
     .line 843
-    :pswitch_245
+    :pswitch_24b
     iget-object p1, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     check-cast p1, Lorg/telegram/ui/Cells/TextDetailSettingsCell;
@@ -1211,9 +1217,9 @@
 
     move-result v0
 
-    if-ne p2, v0, :cond_4eb
+    if-ne p2, v0, :cond_4f1
 
-    const p2, 0x7f0e0f17
+    const p2, 0x7f0e0fc4
 
     const-string v0, "ResetAllNotifications"
 
@@ -1222,7 +1228,7 @@
 
     move-result-object p2
 
-    const v0, 0x7f0e11e0
+    const v0, 0x7f0e12ad
 
     const-string v1, "UndoAllCustom"
 
@@ -1232,10 +1238,10 @@
 
     invoke-virtual {p1, p2, v0, v4}, Lorg/telegram/ui/Cells/TextDetailSettingsCell;->setTextAndValue(Ljava/lang/String;Ljava/lang/CharSequence;Z)V
 
-    goto/16 :goto_4eb
+    goto/16 :goto_4f1
 
     .line 807
-    :pswitch_26b
+    :pswitch_271
     iget-object p1, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     move-object v6, p1
@@ -1260,9 +1266,9 @@
 
     move-result v0
 
-    if-ne p2, v0, :cond_296
+    if-ne p2, v0, :cond_29c
 
-    const p2, 0x7f0e088b
+    const p2, 0x7f0e08e6
 
     const-string v0, "InAppSounds"
 
@@ -1279,19 +1285,19 @@
 
     invoke-virtual {v6, p2, p1, v5}, Lorg/telegram/ui/Cells/TextCheckCell;->setTextAndCheck(Ljava/lang/String;ZZ)V
 
-    goto/16 :goto_4eb
+    goto/16 :goto_4f1
 
     .line 811
-    :cond_296
+    :cond_29c
     iget-object v0, p0, Lorg/telegram/ui/NotificationsSettingsActivity$ListAdapter;->this$0:Lorg/telegram/ui/NotificationsSettingsActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/NotificationsSettingsActivity;->access$1800(Lorg/telegram/ui/NotificationsSettingsActivity;)I
 
     move-result v0
 
-    if-ne p2, v0, :cond_2b2
+    if-ne p2, v0, :cond_2b8
 
-    const p2, 0x7f0e088c
+    const p2, 0x7f0e08e7
 
     const-string v0, "InAppVibrate"
 
@@ -1308,19 +1314,19 @@
 
     invoke-virtual {v6, p2, p1, v5}, Lorg/telegram/ui/Cells/TextCheckCell;->setTextAndCheck(Ljava/lang/String;ZZ)V
 
-    goto/16 :goto_4eb
+    goto/16 :goto_4f1
 
     .line 813
-    :cond_2b2
+    :cond_2b8
     iget-object v0, p0, Lorg/telegram/ui/NotificationsSettingsActivity$ListAdapter;->this$0:Lorg/telegram/ui/NotificationsSettingsActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/NotificationsSettingsActivity;->access$1900(Lorg/telegram/ui/NotificationsSettingsActivity;)I
 
     move-result v0
 
-    if-ne p2, v0, :cond_2ce
+    if-ne p2, v0, :cond_2d4
 
-    const p2, 0x7f0e088a
+    const p2, 0x7f0e08e5
 
     const-string v0, "InAppPreview"
 
@@ -1337,19 +1343,19 @@
 
     invoke-virtual {v6, p2, p1, v5}, Lorg/telegram/ui/Cells/TextCheckCell;->setTextAndCheck(Ljava/lang/String;ZZ)V
 
-    goto/16 :goto_4eb
+    goto/16 :goto_4f1
 
     .line 815
-    :cond_2ce
+    :cond_2d4
     iget-object v0, p0, Lorg/telegram/ui/NotificationsSettingsActivity$ListAdapter;->this$0:Lorg/telegram/ui/NotificationsSettingsActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/NotificationsSettingsActivity;->access$2000(Lorg/telegram/ui/NotificationsSettingsActivity;)I
 
     move-result v0
 
-    if-ne p2, v0, :cond_2ea
+    if-ne p2, v0, :cond_2f0
 
-    const p2, 0x7f0e0b8b
+    const p2, 0x7f0e0c15
 
     const-string v0, "NotificationsImportance"
 
@@ -1366,19 +1372,19 @@
 
     invoke-virtual {v6, p2, p1, v4}, Lorg/telegram/ui/Cells/TextCheckCell;->setTextAndCheck(Ljava/lang/String;ZZ)V
 
-    goto/16 :goto_4eb
+    goto/16 :goto_4f1
 
     .line 817
-    :cond_2ea
+    :cond_2f0
     iget-object v0, p0, Lorg/telegram/ui/NotificationsSettingsActivity$ListAdapter;->this$0:Lorg/telegram/ui/NotificationsSettingsActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/NotificationsSettingsActivity;->access$2100(Lorg/telegram/ui/NotificationsSettingsActivity;)I
 
     move-result v0
 
-    if-ne p2, v0, :cond_306
+    if-ne p2, v0, :cond_30c
 
-    const p2, 0x7f0e04bb
+    const p2, 0x7f0e050a
 
     const-string v0, "ContactJoined"
 
@@ -1395,19 +1401,19 @@
 
     invoke-virtual {v6, p2, p1, v5}, Lorg/telegram/ui/Cells/TextCheckCell;->setTextAndCheck(Ljava/lang/String;ZZ)V
 
-    goto/16 :goto_4eb
+    goto/16 :goto_4f1
 
     .line 819
-    :cond_306
+    :cond_30c
     iget-object v0, p0, Lorg/telegram/ui/NotificationsSettingsActivity$ListAdapter;->this$0:Lorg/telegram/ui/NotificationsSettingsActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/NotificationsSettingsActivity;->access$2200(Lorg/telegram/ui/NotificationsSettingsActivity;)I
 
     move-result v0
 
-    if-ne p2, v0, :cond_320
+    if-ne p2, v0, :cond_326
 
-    const p2, 0x7f0e0d81
+    const p2, 0x7f0e0e11
 
     const-string v0, "PinnedMessages"
 
@@ -1422,17 +1428,17 @@
 
     invoke-virtual {v6, p2, p1, v4}, Lorg/telegram/ui/Cells/TextCheckCell;->setTextAndCheck(Ljava/lang/String;ZZ)V
 
-    goto/16 :goto_4eb
+    goto/16 :goto_4f1
 
     .line 821
-    :cond_320
+    :cond_326
     iget-object v0, p0, Lorg/telegram/ui/NotificationsSettingsActivity$ListAdapter;->this$0:Lorg/telegram/ui/NotificationsSettingsActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/NotificationsSettingsActivity;->access$2300(Lorg/telegram/ui/NotificationsSettingsActivity;)I
 
     move-result v0
 
-    if-ne p2, v0, :cond_335
+    if-ne p2, v0, :cond_33b
 
     const-string p2, "EnableAutoNotifications"
 
@@ -1445,19 +1451,19 @@
 
     invoke-virtual {v6, p2, p1, v5}, Lorg/telegram/ui/Cells/TextCheckCell;->setTextAndCheck(Ljava/lang/String;ZZ)V
 
-    goto/16 :goto_4eb
+    goto/16 :goto_4f1
 
     .line 823
-    :cond_335
+    :cond_33b
     iget-object v0, p0, Lorg/telegram/ui/NotificationsSettingsActivity$ListAdapter;->this$0:Lorg/telegram/ui/NotificationsSettingsActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/NotificationsSettingsActivity;->access$2400(Lorg/telegram/ui/NotificationsSettingsActivity;)I
 
     move-result v0
 
-    if-ne p2, v0, :cond_364
+    if-ne p2, v0, :cond_36a
 
-    const p2, 0x7f0e0b9e
+    const p2, 0x7f0e0c28
 
     const-string v0, "NotificationsService"
 
@@ -1466,7 +1472,7 @@
 
     move-result-object v7
 
-    const p2, 0x7f0e0ba1
+    const p2, 0x7f0e0c2b
 
     const-string v0, "NotificationsServiceInfo"
 
@@ -1494,19 +1500,19 @@
 
     invoke-virtual/range {v6 .. v11}, Lorg/telegram/ui/Cells/TextCheckCell;->setTextAndValueAndCheck(Ljava/lang/String;Ljava/lang/String;ZZZ)V
 
-    goto/16 :goto_4eb
+    goto/16 :goto_4f1
 
     .line 825
-    :cond_364
+    :cond_36a
     iget-object v0, p0, Lorg/telegram/ui/NotificationsSettingsActivity$ListAdapter;->this$0:Lorg/telegram/ui/NotificationsSettingsActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/NotificationsSettingsActivity;->access$2500(Lorg/telegram/ui/NotificationsSettingsActivity;)I
 
     move-result v0
 
-    if-ne p2, v0, :cond_393
+    if-ne p2, v0, :cond_399
 
-    const p2, 0x7f0e0b9f
+    const p2, 0x7f0e0c29
 
     const-string v0, "NotificationsServiceConnection"
 
@@ -1515,7 +1521,7 @@
 
     move-result-object v7
 
-    const p2, 0x7f0e0ba0
+    const p2, 0x7f0e0c2a
 
     const-string v0, "NotificationsServiceConnectionInfo"
 
@@ -1543,19 +1549,19 @@
 
     invoke-virtual/range {v6 .. v11}, Lorg/telegram/ui/Cells/TextCheckCell;->setTextAndValueAndCheck(Ljava/lang/String;Ljava/lang/String;ZZZ)V
 
-    goto/16 :goto_4eb
+    goto/16 :goto_4f1
 
     .line 827
-    :cond_393
+    :cond_399
     iget-object v0, p0, Lorg/telegram/ui/NotificationsSettingsActivity$ListAdapter;->this$0:Lorg/telegram/ui/NotificationsSettingsActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/NotificationsSettingsActivity;->access$2600(Lorg/telegram/ui/NotificationsSettingsActivity;)I
 
     move-result v0
 
-    if-ne p2, v0, :cond_3b1
+    if-ne p2, v0, :cond_3b7
 
-    const p1, 0x7f0e029b
+    const p1, 0x7f0e02d0
 
     const-string p2, "BadgeNumberShow"
 
@@ -1574,19 +1580,19 @@
 
     invoke-virtual {v6, p1, p2, v5}, Lorg/telegram/ui/Cells/TextCheckCell;->setTextAndCheck(Ljava/lang/String;ZZ)V
 
-    goto/16 :goto_4eb
+    goto/16 :goto_4f1
 
     .line 829
-    :cond_3b1
+    :cond_3b7
     iget-object v0, p0, Lorg/telegram/ui/NotificationsSettingsActivity$ListAdapter;->this$0:Lorg/telegram/ui/NotificationsSettingsActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/NotificationsSettingsActivity;->access$2800(Lorg/telegram/ui/NotificationsSettingsActivity;)I
 
     move-result v0
 
-    if-ne p2, v0, :cond_3cf
+    if-ne p2, v0, :cond_3d5
 
-    const p1, 0x7f0e029a
+    const p1, 0x7f0e02cf
 
     const-string p2, "BadgeNumberMutedChats"
 
@@ -1605,19 +1611,19 @@
 
     invoke-virtual {v6, p1, p2, v5}, Lorg/telegram/ui/Cells/TextCheckCell;->setTextAndCheck(Ljava/lang/String;ZZ)V
 
-    goto/16 :goto_4eb
+    goto/16 :goto_4f1
 
     .line 831
-    :cond_3cf
+    :cond_3d5
     iget-object v0, p0, Lorg/telegram/ui/NotificationsSettingsActivity$ListAdapter;->this$0:Lorg/telegram/ui/NotificationsSettingsActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/NotificationsSettingsActivity;->access$3000(Lorg/telegram/ui/NotificationsSettingsActivity;)I
 
     move-result v0
 
-    if-ne p2, v0, :cond_3ed
+    if-ne p2, v0, :cond_3f3
 
-    const p1, 0x7f0e029c
+    const p1, 0x7f0e02d1
 
     const-string p2, "BadgeNumberUnread"
 
@@ -1636,19 +1642,19 @@
 
     invoke-virtual {v6, p1, p2, v4}, Lorg/telegram/ui/Cells/TextCheckCell;->setTextAndCheck(Ljava/lang/String;ZZ)V
 
-    goto/16 :goto_4eb
+    goto/16 :goto_4f1
 
     .line 833
-    :cond_3ed
+    :cond_3f3
     iget-object v0, p0, Lorg/telegram/ui/NotificationsSettingsActivity$ListAdapter;->this$0:Lorg/telegram/ui/NotificationsSettingsActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/NotificationsSettingsActivity;->access$3200(Lorg/telegram/ui/NotificationsSettingsActivity;)I
 
     move-result v0
 
-    if-ne p2, v0, :cond_409
+    if-ne p2, v0, :cond_40f
 
-    const p2, 0x7f0e088d
+    const p2, 0x7f0e08e8
 
     const-string v0, "InChatSound"
 
@@ -1665,17 +1671,17 @@
 
     invoke-virtual {v6, p2, p1, v5}, Lorg/telegram/ui/Cells/TextCheckCell;->setTextAndCheck(Ljava/lang/String;ZZ)V
 
-    goto/16 :goto_4eb
+    goto/16 :goto_4f1
 
     .line 835
-    :cond_409
+    :cond_40f
     iget-object v0, p0, Lorg/telegram/ui/NotificationsSettingsActivity$ListAdapter;->this$0:Lorg/telegram/ui/NotificationsSettingsActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/NotificationsSettingsActivity;->access$3300(Lorg/telegram/ui/NotificationsSettingsActivity;)I
 
     move-result v0
 
-    if-ne p2, v0, :cond_420
+    if-ne p2, v0, :cond_426
 
     .line 836
     invoke-static {v3, v2}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -1690,19 +1696,19 @@
 
     invoke-virtual {v6, p2, p1, v5}, Lorg/telegram/ui/Cells/TextCheckCell;->setTextAndCheck(Ljava/lang/String;ZZ)V
 
-    goto/16 :goto_4eb
+    goto/16 :goto_4f1
 
     .line 837
-    :cond_420
+    :cond_426
     iget-object p1, p0, Lorg/telegram/ui/NotificationsSettingsActivity$ListAdapter;->this$0:Lorg/telegram/ui/NotificationsSettingsActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/NotificationsSettingsActivity;->access$3400(Lorg/telegram/ui/NotificationsSettingsActivity;)I
 
     move-result p1
 
-    if-ne p2, p1, :cond_4eb
+    if-ne p2, p1, :cond_4f1
 
-    const p1, 0x7f0e014b
+    const p1, 0x7f0e0173
 
     const-string p2, "AllAccounts"
 
@@ -1721,10 +1727,10 @@
 
     invoke-virtual {v6, p1, p2, v4}, Lorg/telegram/ui/Cells/TextCheckCell;->setTextAndCheck(Ljava/lang/String;ZZ)V
 
-    goto/16 :goto_4eb
+    goto/16 :goto_4f1
 
     .line 786
-    :pswitch_43e
+    :pswitch_444
     iget-object p1, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     check-cast p1, Lorg/telegram/ui/Cells/HeaderCell;
@@ -1736,9 +1742,9 @@
 
     move-result v0
 
-    if-ne p2, v0, :cond_458
+    if-ne p2, v0, :cond_45e
 
-    const p2, 0x7f0e0b86
+    const p2, 0x7f0e0c10
 
     const-string v0, "NotificationsForChats"
 
@@ -1749,19 +1755,19 @@
 
     invoke-virtual {p1, p2}, Lorg/telegram/ui/Cells/HeaderCell;->setText(Ljava/lang/CharSequence;)V
 
-    goto/16 :goto_4eb
+    goto/16 :goto_4f1
 
     .line 789
-    :cond_458
+    :cond_45e
     iget-object v0, p0, Lorg/telegram/ui/NotificationsSettingsActivity$ListAdapter;->this$0:Lorg/telegram/ui/NotificationsSettingsActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/NotificationsSettingsActivity;->access$200(Lorg/telegram/ui/NotificationsSettingsActivity;)I
 
     move-result v0
 
-    if-ne p2, v0, :cond_46e
+    if-ne p2, v0, :cond_474
 
-    const p2, 0x7f0e0889
+    const p2, 0x7f0e08e4
 
     const-string v0, "InAppNotifications"
 
@@ -1772,19 +1778,19 @@
 
     invoke-virtual {p1, p2}, Lorg/telegram/ui/Cells/HeaderCell;->setText(Ljava/lang/CharSequence;)V
 
-    goto/16 :goto_4eb
+    goto/16 :goto_4f1
 
     .line 791
-    :cond_46e
+    :cond_474
     iget-object v0, p0, Lorg/telegram/ui/NotificationsSettingsActivity$ListAdapter;->this$0:Lorg/telegram/ui/NotificationsSettingsActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/NotificationsSettingsActivity;->access$300(Lorg/telegram/ui/NotificationsSettingsActivity;)I
 
     move-result v0
 
-    if-ne p2, v0, :cond_483
+    if-ne p2, v0, :cond_489
 
-    const p2, 0x7f0e06db
+    const p2, 0x7f0e072d
 
     const-string v0, "Events"
 
@@ -1795,19 +1801,19 @@
 
     invoke-virtual {p1, p2}, Lorg/telegram/ui/Cells/HeaderCell;->setText(Ljava/lang/CharSequence;)V
 
-    goto :goto_4eb
+    goto :goto_4f1
 
     .line 793
-    :cond_483
+    :cond_489
     iget-object v0, p0, Lorg/telegram/ui/NotificationsSettingsActivity$ListAdapter;->this$0:Lorg/telegram/ui/NotificationsSettingsActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/NotificationsSettingsActivity;->access$400(Lorg/telegram/ui/NotificationsSettingsActivity;)I
 
     move-result v0
 
-    if-ne p2, v0, :cond_498
+    if-ne p2, v0, :cond_49e
 
-    const p2, 0x7f0e0b97
+    const p2, 0x7f0e0c21
 
     const-string v0, "NotificationsOther"
 
@@ -1818,19 +1824,19 @@
 
     invoke-virtual {p1, p2}, Lorg/telegram/ui/Cells/HeaderCell;->setText(Ljava/lang/CharSequence;)V
 
-    goto :goto_4eb
+    goto :goto_4f1
 
     .line 795
-    :cond_498
+    :cond_49e
     iget-object v0, p0, Lorg/telegram/ui/NotificationsSettingsActivity$ListAdapter;->this$0:Lorg/telegram/ui/NotificationsSettingsActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/NotificationsSettingsActivity;->access$500(Lorg/telegram/ui/NotificationsSettingsActivity;)I
 
     move-result v0
 
-    if-ne p2, v0, :cond_4ad
+    if-ne p2, v0, :cond_4b3
 
-    const p2, 0x7f0e0f11
+    const p2, 0x7f0e0fbe
 
     const-string v0, "Reset"
 
@@ -1841,19 +1847,19 @@
 
     invoke-virtual {p1, p2}, Lorg/telegram/ui/Cells/HeaderCell;->setText(Ljava/lang/CharSequence;)V
 
-    goto :goto_4eb
+    goto :goto_4f1
 
     .line 797
-    :cond_4ad
+    :cond_4b3
     iget-object v0, p0, Lorg/telegram/ui/NotificationsSettingsActivity$ListAdapter;->this$0:Lorg/telegram/ui/NotificationsSettingsActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/NotificationsSettingsActivity;->access$1000(Lorg/telegram/ui/NotificationsSettingsActivity;)I
 
     move-result v0
 
-    if-ne p2, v0, :cond_4c2
+    if-ne p2, v0, :cond_4c8
 
-    const p2, 0x7f0e138a
+    const p2, 0x7f0e1458
 
     const-string v0, "VoipNotificationSettings"
 
@@ -1864,19 +1870,19 @@
 
     invoke-virtual {p1, p2}, Lorg/telegram/ui/Cells/HeaderCell;->setText(Ljava/lang/CharSequence;)V
 
-    goto :goto_4eb
+    goto :goto_4f1
 
     .line 799
-    :cond_4c2
+    :cond_4c8
     iget-object v0, p0, Lorg/telegram/ui/NotificationsSettingsActivity$ListAdapter;->this$0:Lorg/telegram/ui/NotificationsSettingsActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/NotificationsSettingsActivity;->access$600(Lorg/telegram/ui/NotificationsSettingsActivity;)I
 
     move-result v0
 
-    if-ne p2, v0, :cond_4d7
+    if-ne p2, v0, :cond_4dd
 
-    const p2, 0x7f0e0299
+    const p2, 0x7f0e02ce
 
     const-string v0, "BadgeNumber"
 
@@ -1887,19 +1893,19 @@
 
     invoke-virtual {p1, p2}, Lorg/telegram/ui/Cells/HeaderCell;->setText(Ljava/lang/CharSequence;)V
 
-    goto :goto_4eb
+    goto :goto_4f1
 
     .line 801
-    :cond_4d7
+    :cond_4dd
     iget-object v0, p0, Lorg/telegram/ui/NotificationsSettingsActivity$ListAdapter;->this$0:Lorg/telegram/ui/NotificationsSettingsActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/NotificationsSettingsActivity;->access$1200(Lorg/telegram/ui/NotificationsSettingsActivity;)I
 
     move-result v0
 
-    if-ne p2, v0, :cond_4eb
+    if-ne p2, v0, :cond_4f1
 
-    const p2, 0x7f0e106b
+    const p2, 0x7f0e112a
 
     const-string v0, "ShowNotificationsFor"
 
@@ -1910,17 +1916,17 @@
 
     invoke-virtual {p1, p2}, Lorg/telegram/ui/Cells/HeaderCell;->setText(Ljava/lang/CharSequence;)V
 
-    :cond_4eb
-    :goto_4eb
+    :cond_4f1
+    :goto_4f1
     return-void
 
-    :pswitch_data_4ec
+    :pswitch_data_4f2
     .packed-switch 0x0
-        :pswitch_43e
-        :pswitch_26b
-        :pswitch_245
-        :pswitch_145
-        :pswitch_11b
+        :pswitch_444
+        :pswitch_271
+        :pswitch_24b
+        :pswitch_149
+        :pswitch_11f
         :pswitch_2b
         :pswitch_11
     .end packed-switch
@@ -1963,7 +1969,7 @@
     .line 776
     iget-object p2, p0, Lorg/telegram/ui/NotificationsSettingsActivity$ListAdapter;->mContext:Landroid/content/Context;
 
-    const v0, 0x7f07012d
+    const v0, 0x7f0700fc
 
     const-string v1, "windowBackgroundGrayShadow"
 

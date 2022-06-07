@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lorg/telegram/ui/Components/RecyclerAnimationScrollHelper$ScrollListener;
+.implements Lorg/telegram/ui/Components/ChatGreetingsView$Listener;
 
 
 # instance fields
@@ -22,12 +22,12 @@
 
 
 # virtual methods
-.method public final onScroll()V
-    .registers 2
+.method public final onGreetings(Lorg/telegram/tgnet/TLRPC$Document;)V
+    .registers 3
 
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda238;->f$0:Lorg/telegram/ui/ChatActivity;
 
-    invoke-virtual {v0}, Lorg/telegram/ui/ChatActivity;->invalidateMessagesVisiblePart()V
+    invoke-static {v0, p1}, Lorg/telegram/ui/ChatActivity;->$r8$lambda$4l9xHAFsgs5g2diz9PMsx5vhN94(Lorg/telegram/ui/ChatActivity;Lorg/telegram/tgnet/TLRPC$Document;)V
 
     return-void
 .end method

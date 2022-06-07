@@ -30,7 +30,7 @@
 .method constructor <init>(Lorg/telegram/messenger/ImageLoader;)V
     .registers 2
 
-    .line 1974
+    .line 1993
     iput-object p1, p0, Lorg/telegram/messenger/ImageLoader$6;->this$0:Lorg/telegram/messenger/ImageLoader;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -41,7 +41,7 @@
 .method private synthetic lambda$onReceive$0()V
     .registers 2
 
-    .line 1980
+    .line 1999
     iget-object v0, p0, Lorg/telegram/messenger/ImageLoader$6;->this$0:Lorg/telegram/messenger/ImageLoader;
 
     invoke-virtual {v0}, Lorg/telegram/messenger/ImageLoader;->checkMediaPaths()V
@@ -54,23 +54,23 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .registers 5
 
-    .line 1977
+    .line 1996
     sget-boolean p1, Lorg/telegram/messenger/BuildVars;->LOGS_ENABLED:Z
 
     if-eqz p1, :cond_9
 
     const-string p1, "file system changed"
 
-    .line 1978
+    .line 1997
     invoke-static {p1}, Lorg/telegram/messenger/FileLog;->d(Ljava/lang/String;)V
 
-    .line 1980
+    .line 1999
     :cond_9
     new-instance p1, Lorg/telegram/messenger/ImageLoader$6$$ExternalSyntheticLambda0;
 
     invoke-direct {p1, p0}, Lorg/telegram/messenger/ImageLoader$6$$ExternalSyntheticLambda0;-><init>(Lorg/telegram/messenger/ImageLoader$6;)V
 
-    .line 1981
+    .line 2000
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p2
@@ -85,12 +85,12 @@
 
     const-wide/16 v0, 0x3e8
 
-    .line 1982
+    .line 2001
     invoke-static {p1, v0, v1}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;J)V
 
     goto :goto_23
 
-    .line 1984
+    .line 2003
     :cond_20
     invoke-interface {p1}, Ljava/lang/Runnable;->run()V
 

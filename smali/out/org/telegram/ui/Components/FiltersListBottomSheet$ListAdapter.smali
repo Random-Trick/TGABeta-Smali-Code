@@ -191,7 +191,7 @@
 
     if-ne v1, v2, :cond_49
 
-    const v0, 0x7f070214
+    const v0, 0x7f070287
 
     goto :goto_87
 
@@ -209,7 +209,7 @@
 
     if-ne v2, v1, :cond_58
 
-    const v0, 0x7f070227
+    const v0, 0x7f070263
 
     goto :goto_87
 
@@ -223,7 +223,7 @@
 
     if-ne v1, v2, :cond_63
 
-    const v0, 0x7f0701e2
+    const v0, 0x7f0701e9
 
     goto :goto_87
 
@@ -237,7 +237,7 @@
 
     if-ne v1, v2, :cond_6e
 
-    const v0, 0x7f0701fb
+    const v0, 0x7f070235
 
     goto :goto_87
 
@@ -251,7 +251,7 @@
 
     if-ne v1, v2, :cond_79
 
-    const v0, 0x7f0701f1
+    const v0, 0x7f0701fb
 
     goto :goto_87
 
@@ -265,12 +265,12 @@
 
     if-ne v0, v1, :cond_84
 
-    const v0, 0x7f0701e1
+    const v0, 0x7f0701da
 
     goto :goto_87
 
     :cond_84
-    const v0, 0x7f0701fa
+    const v0, 0x7f070224
 
     .line 410
     :goto_87
@@ -297,7 +297,7 @@
 
     move-result-object p2
 
-    const v0, 0x7f070366
+    const v0, 0x7f07037d
 
     invoke-virtual {p2, v0}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -310,7 +310,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f070367
+    const v1, 0x7f07037e
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -360,7 +360,7 @@
 
     invoke-virtual {p1, p2}, Lorg/telegram/ui/ActionBar/BottomSheet$BottomSheetCell;->setTextColor(I)V
 
-    const p2, 0x7f0e04e5
+    const p2, 0x7f0e0534
 
     const-string v0, "CreateNewFilter"
 

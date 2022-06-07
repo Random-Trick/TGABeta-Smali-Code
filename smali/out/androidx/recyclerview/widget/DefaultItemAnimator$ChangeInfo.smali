@@ -32,13 +32,13 @@
 .method private constructor <init>(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
     .registers 3
 
-    .line 82
+    .line 83
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 83
+    .line 84
     iput-object p1, p0, Landroidx/recyclerview/widget/DefaultItemAnimator$ChangeInfo;->oldHolder:Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
 
-    .line 84
+    .line 85
     iput-object p2, p0, Landroidx/recyclerview/widget/DefaultItemAnimator$ChangeInfo;->newHolder:Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
 
     return-void
@@ -47,19 +47,19 @@
 .method constructor <init>(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;Landroidx/recyclerview/widget/RecyclerView$ViewHolder;IIII)V
     .registers 7
 
-    .line 89
+    .line 90
     invoke-direct {p0, p1, p2}, Landroidx/recyclerview/widget/DefaultItemAnimator$ChangeInfo;-><init>(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
 
-    .line 90
+    .line 91
     iput p3, p0, Landroidx/recyclerview/widget/DefaultItemAnimator$ChangeInfo;->fromX:I
 
-    .line 91
+    .line 92
     iput p4, p0, Landroidx/recyclerview/widget/DefaultItemAnimator$ChangeInfo;->fromY:I
 
-    .line 92
+    .line 93
     iput p5, p0, Landroidx/recyclerview/widget/DefaultItemAnimator$ChangeInfo;->toX:I
 
-    .line 93
+    .line 94
     iput p6, p0, Landroidx/recyclerview/widget/DefaultItemAnimator$ChangeInfo;->toY:I
 
     return-void
@@ -70,7 +70,7 @@
 .method public toString()Ljava/lang/String;
     .registers 3
 
-    .line 98
+    .line 99
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

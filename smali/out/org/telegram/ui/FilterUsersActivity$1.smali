@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/FilterUsersActivity;)V
     .registers 2
 
-    .line 410
+    .line 411
     iput-object p1, p0, Lorg/telegram/ui/FilterUsersActivity$1;->this$0:Lorg/telegram/ui/FilterUsersActivity;
 
     invoke-direct {p0}, Lorg/telegram/ui/ActionBar/ActionBar$ActionBarMenuOnItemClick;-><init>()V
@@ -39,7 +39,7 @@
 
     if-ne p1, v0, :cond_9
 
-    .line 414
+    .line 415
     iget-object p1, p0, Lorg/telegram/ui/FilterUsersActivity$1;->this$0:Lorg/telegram/ui/FilterUsersActivity;
 
     invoke-virtual {p1}, Lorg/telegram/ui/ActionBar/BaseFragment;->finishFragment()V
@@ -51,7 +51,7 @@
 
     if-ne p1, v0, :cond_11
 
-    .line 416
+    .line 417
     iget-object p1, p0, Lorg/telegram/ui/FilterUsersActivity$1;->this$0:Lorg/telegram/ui/FilterUsersActivity;
 
     invoke-static {p1, v0}, Lorg/telegram/ui/FilterUsersActivity;->access$1100(Lorg/telegram/ui/FilterUsersActivity;Z)Z

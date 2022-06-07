@@ -482,7 +482,7 @@
     .line 114
     invoke-virtual {p1, v1}, Landroid/content/Intent;->putExtras(Landroid/os/Bundle;)Landroid/content/Intent;
 
-    const v1, 0x7f0800bd
+    const v1, 0x7f0800be
 
     .line 115
     invoke-virtual {v0, v1, p1}, Landroid/widget/RemoteViews;->setOnClickFillInIntent(ILandroid/content/Intent;)V

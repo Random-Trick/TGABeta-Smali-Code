@@ -27,7 +27,7 @@
 .method constructor <init>(Lorg/telegram/ui/Cells/SharedLinkCell;)V
     .registers 2
 
-    .line 85
+    .line 86
     iput-object p1, p0, Lorg/telegram/ui/Cells/SharedLinkCell$CheckForLongPress;->this$0:Lorg/telegram/ui/Cells/SharedLinkCell;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +40,7 @@
 .method public run()V
     .registers 12
 
-    .line 89
+    .line 90
     iget-object v0, p0, Lorg/telegram/ui/Cells/SharedLinkCell$CheckForLongPress;->this$0:Lorg/telegram/ui/Cells/SharedLinkCell;
 
     invoke-static {v0}, Lorg/telegram/ui/Cells/SharedLinkCell;->access$200(Lorg/telegram/ui/Cells/SharedLinkCell;)Z
@@ -67,19 +67,19 @@
 
     if-ne v0, v1, :cond_5d
 
-    .line 90
+    .line 91
     iget-object v0, p0, Lorg/telegram/ui/Cells/SharedLinkCell$CheckForLongPress;->this$0:Lorg/telegram/ui/Cells/SharedLinkCell;
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Lorg/telegram/ui/Cells/SharedLinkCell;->access$202(Lorg/telegram/ui/Cells/SharedLinkCell;Z)Z
 
-    .line 91
+    .line 92
     iget-object v0, p0, Lorg/telegram/ui/Cells/SharedLinkCell$CheckForLongPress;->this$0:Lorg/telegram/ui/Cells/SharedLinkCell;
 
     invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->performHapticFeedback(I)Z
 
-    .line 92
+    .line 93
     iget-object v0, p0, Lorg/telegram/ui/Cells/SharedLinkCell$CheckForLongPress;->this$0:Lorg/telegram/ui/Cells/SharedLinkCell;
 
     invoke-static {v0}, Lorg/telegram/ui/Cells/SharedLinkCell;->access$300(Lorg/telegram/ui/Cells/SharedLinkCell;)I
@@ -88,7 +88,7 @@
 
     if-ltz v0, :cond_49
 
-    .line 93
+    .line 94
     iget-object v0, p0, Lorg/telegram/ui/Cells/SharedLinkCell$CheckForLongPress;->this$0:Lorg/telegram/ui/Cells/SharedLinkCell;
 
     invoke-static {v0}, Lorg/telegram/ui/Cells/SharedLinkCell;->access$400(Lorg/telegram/ui/Cells/SharedLinkCell;)Lorg/telegram/ui/Cells/SharedLinkCell$SharedLinkCellDelegate;
@@ -130,17 +130,17 @@
 
     const/4 v10, 0x0
 
-    .line 95
+    .line 96
     invoke-static/range {v3 .. v10}, Landroid/view/MotionEvent;->obtain(JJIFFI)Landroid/view/MotionEvent;
 
     move-result-object v0
 
-    .line 96
+    .line 97
     iget-object v1, p0, Lorg/telegram/ui/Cells/SharedLinkCell$CheckForLongPress;->this$0:Lorg/telegram/ui/Cells/SharedLinkCell;
 
     invoke-virtual {v1, v0}, Lorg/telegram/ui/Cells/SharedLinkCell;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
-    .line 97
+    .line 98
     invoke-virtual {v0}, Landroid/view/MotionEvent;->recycle()V
 
     :cond_5d

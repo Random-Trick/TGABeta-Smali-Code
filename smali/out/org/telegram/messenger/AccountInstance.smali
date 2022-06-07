@@ -15,7 +15,7 @@
 .method static constructor <clinit>()V
     .registers 1
 
-    const/4 v0, 0x3
+    const/4 v0, 0x4
 
     new-array v0, v0, [Lorg/telegram/messenger/AccountInstance;
 

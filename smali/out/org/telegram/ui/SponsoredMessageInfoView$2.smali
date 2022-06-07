@@ -43,7 +43,7 @@
 
     const-string v0, "SponsoredMessageAlertLearnMoreUrl"
 
-    const v1, 0x7f0e10aa
+    const v1, 0x7f0e1169
 
     invoke-static {v0, v1}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 

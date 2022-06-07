@@ -26,7 +26,7 @@
 .method private constructor <init>()V
     .registers 1
 
-    .line 1593
+    .line 1592
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -35,7 +35,7 @@
 .method synthetic constructor <init>(Lorg/telegram/ui/Cells/TextSelectionHelper$1;)V
     .registers 2
 
-    .line 1593
+    .line 1592
     invoke-direct {p0}, Lorg/telegram/ui/Cells/TextSelectionHelper$LayoutBlock;-><init>()V
 
     return-void

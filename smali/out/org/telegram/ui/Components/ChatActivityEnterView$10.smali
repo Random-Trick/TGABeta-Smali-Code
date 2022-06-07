@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/ChatActivityEnterView;Landroid/content/Context;)V
     .registers 3
 
-    .line 1751
+    .line 1774
     iput-object p1, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$10;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-direct {p0, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
@@ -35,19 +35,19 @@
 .method protected drawChild(Landroid/graphics/Canvas;Landroid/view/View;J)Z
     .registers 10
 
-    .line 1774
+    .line 1797
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$10;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     iget-object v0, v0, Lorg/telegram/ui/Components/ChatActivityEnterView;->messageEditText:Lorg/telegram/ui/Components/EditTextCaption;
 
     if-ne p2, v0, :cond_3b
 
-    .line 1775
+    .line 1798
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
     const/4 v0, 0x0
 
-    .line 1776
+    .line 1799
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getTop()I
 
     move-result v1
@@ -92,17 +92,17 @@
 
     invoke-virtual {p1, v0, v1, v2, v3}, Landroid/graphics/Canvas;->clipRect(IIII)Z
 
-    .line 1777
+    .line 1800
     invoke-super {p0, p1, p2, p3, p4}, Landroid/widget/FrameLayout;->drawChild(Landroid/graphics/Canvas;Landroid/view/View;J)Z
 
     move-result p2
 
-    .line 1778
+    .line 1801
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
     return p2
 
-    .line 1781
+    .line 1804
     :cond_3b
     invoke-super {p0, p1, p2, p3, p4}, Landroid/widget/FrameLayout;->drawChild(Landroid/graphics/Canvas;Landroid/view/View;J)Z
 
@@ -114,10 +114,10 @@
 .method protected onLayout(ZIIII)V
     .registers 6
 
-    .line 1754
+    .line 1777
     invoke-super/range {p0 .. p5}, Landroid/widget/FrameLayout;->onLayout(ZIIII)V
 
-    .line 1755
+    .line 1778
     iget-object p1, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$10;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$5400(Lorg/telegram/ui/Components/ChatActivityEnterView;)Landroid/widget/ImageView;
@@ -126,7 +126,7 @@
 
     if-eqz p1, :cond_5c
 
-    .line 1756
+    .line 1779
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getMeasuredWidth()I
 
     move-result p1
@@ -173,7 +173,7 @@
 
     sub-int/2addr p1, p2
 
-    .line 1757
+    .line 1780
     iget-object p2, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$10;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {p2}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$5400(Lorg/telegram/ui/Components/ChatActivityEnterView;)Landroid/widget/ImageView;
@@ -214,7 +214,7 @@
 
     invoke-virtual {p2, p1, p3, p4, p5}, Landroid/widget/ImageView;->layout(IIII)V
 
-    .line 1759
+    .line 1782
     :cond_5c
     iget-object p1, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$10;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
@@ -230,7 +230,7 @@
 
     const/4 p1, 0x0
 
-    .line 1760
+    .line 1783
     :goto_69
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getChildCount()I
 
@@ -238,12 +238,12 @@
 
     if-ge p1, p2, :cond_a9
 
-    .line 1761
+    .line 1784
     invoke-virtual {p0, p1}, Landroid/widget/FrameLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object p2
 
-    .line 1762
+    .line 1785
     iget-object p3, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$10;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {p3}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$5600(Lorg/telegram/ui/Components/ChatActivityEnterView;)Ljava/util/HashMap;
@@ -258,7 +258,7 @@
 
     if-eqz p3, :cond_a6
 
-    .line 1764
+    .line 1787
     invoke-virtual {p3}, Ljava/lang/Float;->floatValue()F
 
     move-result p3
@@ -273,7 +273,7 @@
 
     invoke-virtual {p2, p3}, Landroid/view/View;->setTranslationX(F)V
 
-    .line 1765
+    .line 1788
     invoke-virtual {p2}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
 
     move-result-object p2
@@ -303,7 +303,7 @@
 
     goto :goto_69
 
-    .line 1768
+    .line 1791
     :cond_a9
     iget-object p1, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$10;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 

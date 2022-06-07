@@ -18,7 +18,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/SearchDownloadsContainer$DownloadsAdapter;Landroid/content/Context;)V
     .registers 3
 
-    .line 456
+    .line 459
     invoke-direct {p0, p2}, Lorg/telegram/ui/Cells/SharedAudioCell;-><init>(Landroid/content/Context;)V
 
     return-void
@@ -29,7 +29,7 @@
 .method public needPlayMessage(Lorg/telegram/messenger/MessageObject;)Z
     .registers 3
 
-    .line 459
+    .line 462
     invoke-static {}, Lorg/telegram/messenger/MediaController;->getInstance()Lorg/telegram/messenger/MediaController;
 
     move-result-object v0

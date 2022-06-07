@@ -24,7 +24,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/ReactedUsersListView;Landroid/content/Context;)V
     .registers 3
 
-    .line 87
+    .line 91
     iput-object p1, p0, Lorg/telegram/ui/Components/ReactedUsersListView$2;->this$0:Lorg/telegram/ui/Components/ReactedUsersListView;
 
     iput-object p2, p0, Lorg/telegram/ui/Components/ReactedUsersListView$2;->val$context:Landroid/content/Context;
@@ -39,7 +39,7 @@
 .method public getItemCount()I
     .registers 2
 
-    .line 102
+    .line 106
     iget-object v0, p0, Lorg/telegram/ui/Components/ReactedUsersListView$2;->this$0:Lorg/telegram/ui/Components/ReactedUsersListView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/ReactedUsersListView;->access$100(Lorg/telegram/ui/Components/ReactedUsersListView;)Ljava/util/List;
@@ -56,12 +56,12 @@
 .method public onBindViewHolder(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;I)V
     .registers 4
 
-    .line 96
+    .line 100
     iget-object p1, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     check-cast p1, Lorg/telegram/ui/Components/ReactedUsersListView$ReactedUserHolderView;
 
-    .line 97
+    .line 101
     iget-object v0, p0, Lorg/telegram/ui/Components/ReactedUsersListView$2;->this$0:Lorg/telegram/ui/Components/ReactedUsersListView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/ReactedUsersListView;->access$100(Lorg/telegram/ui/Components/ReactedUsersListView;)Ljava/util/List;
@@ -82,7 +82,7 @@
 .method public onCreateViewHolder(Landroid/view/ViewGroup;I)Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
     .registers 5
 
-    .line 91
+    .line 95
     new-instance p1, Lorg/telegram/ui/Components/RecyclerListView$Holder;
 
     new-instance p2, Lorg/telegram/ui/Components/ReactedUsersListView$ReactedUserHolderView;

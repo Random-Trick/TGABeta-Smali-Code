@@ -24,7 +24,7 @@
 .method constructor <init>(Lorg/telegram/ui/PaymentFormActivity;Z)V
     .registers 3
 
-    .line 3804
+    .line 4118
     iput-object p1, p0, Lorg/telegram/ui/PaymentFormActivity$28;->this$0:Lorg/telegram/ui/PaymentFormActivity;
 
     iput-boolean p2, p0, Lorg/telegram/ui/PaymentFormActivity$28;->val$show:Z
@@ -39,7 +39,7 @@
 .method public onAnimationCancel(Landroid/animation/Animator;)V
     .registers 3
 
-    .line 3818
+    .line 4132
     iget-object v0, p0, Lorg/telegram/ui/PaymentFormActivity$28;->this$0:Lorg/telegram/ui/PaymentFormActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/PaymentFormActivity;->access$3900(Lorg/telegram/ui/PaymentFormActivity;)Landroid/animation/AnimatorSet;
@@ -60,7 +60,7 @@
 
     if-eqz p1, :cond_1a
 
-    .line 3819
+    .line 4133
     iget-object p1, p0, Lorg/telegram/ui/PaymentFormActivity$28;->this$0:Lorg/telegram/ui/PaymentFormActivity;
 
     const/4 v0, 0x0
@@ -74,7 +74,7 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .registers 3
 
-    .line 3807
+    .line 4121
     iget-object v0, p0, Lorg/telegram/ui/PaymentFormActivity$28;->this$0:Lorg/telegram/ui/PaymentFormActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/PaymentFormActivity;->access$3900(Lorg/telegram/ui/PaymentFormActivity;)Landroid/animation/AnimatorSet;
@@ -95,14 +95,14 @@
 
     if-eqz p1, :cond_2c
 
-    .line 3808
+    .line 4122
     iget-boolean p1, p0, Lorg/telegram/ui/PaymentFormActivity$28;->val$show:Z
 
     const/4 v0, 0x4
 
     if-nez p1, :cond_23
 
-    .line 3809
+    .line 4123
     iget-object p1, p0, Lorg/telegram/ui/PaymentFormActivity$28;->this$0:Lorg/telegram/ui/PaymentFormActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/PaymentFormActivity;->access$4200(Lorg/telegram/ui/PaymentFormActivity;)Lorg/telegram/ui/Components/ContextProgressView;
@@ -113,7 +113,7 @@
 
     goto :goto_2c
 
-    .line 3811
+    .line 4125
     :cond_23
     iget-object p1, p0, Lorg/telegram/ui/PaymentFormActivity$28;->this$0:Lorg/telegram/ui/PaymentFormActivity;
 

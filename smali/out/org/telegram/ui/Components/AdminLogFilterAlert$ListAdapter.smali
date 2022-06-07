@@ -292,7 +292,7 @@
 
     if-nez p2, :cond_82
 
-    const p2, 0x7f0e068e
+    const p2, 0x7f0e06e0
 
     const-string v3, "EventLogFilterAll"
 
@@ -326,7 +326,7 @@
 
     if-ne p2, v3, :cond_c9
 
-    const p2, 0x7f0e0698
+    const p2, 0x7f0e06ea
 
     const-string v3, "EventLogFilterNewRestrictions"
 
@@ -401,7 +401,7 @@
 
     if-ne p2, v3, :cond_fc
 
-    const p2, 0x7f0e0696
+    const p2, 0x7f0e06e8
 
     const-string v3, "EventLogFilterNewAdmins"
 
@@ -456,7 +456,7 @@
 
     if-ne p2, v3, :cond_12f
 
-    const p2, 0x7f0e0697
+    const p2, 0x7f0e06e9
 
     const-string v3, "EventLogFilterNewMembers"
 
@@ -520,7 +520,7 @@
 
     if-eqz p2, :cond_160
 
-    const p2, 0x7f0e0693
+    const p2, 0x7f0e06e5
 
     const-string v3, "EventLogFilterGroupInfo"
 
@@ -556,7 +556,7 @@
     goto/16 :goto_29f
 
     :cond_160
-    const p2, 0x7f0e0690
+    const p2, 0x7f0e06e2
 
     const-string v3, "EventLogFilterChannelInfo"
 
@@ -601,7 +601,7 @@
 
     if-ne p2, v3, :cond_1aa
 
-    const p2, 0x7f0e0691
+    const p2, 0x7f0e06e3
 
     const-string v3, "EventLogFilterDeletedMessages"
 
@@ -646,7 +646,7 @@
 
     if-ne p2, v3, :cond_1d3
 
-    const p2, 0x7f0e0692
+    const p2, 0x7f0e06e4
 
     const-string v3, "EventLogFilterEditedMessages"
 
@@ -691,7 +691,7 @@
 
     if-ne p2, v3, :cond_1fc
 
-    const p2, 0x7f0e0699
+    const p2, 0x7f0e06eb
 
     const-string v3, "EventLogFilterPinnedMessages"
 
@@ -736,7 +736,7 @@
 
     if-ne p2, v3, :cond_231
 
-    const p2, 0x7f0e0695
+    const p2, 0x7f0e06e7
 
     const-string v3, "EventLogFilterLeavingMembers"
 
@@ -802,7 +802,7 @@
 
     if-ne p2, v3, :cond_25a
 
-    const p2, 0x7f0e068f
+    const p2, 0x7f0e06e1
 
     const-string v3, "EventLogFilterCalls"
 
@@ -850,7 +850,7 @@
 
     if-ne p2, v3, :cond_282
 
-    const p2, 0x7f0e0694
+    const p2, 0x7f0e06e6
 
     const-string v3, "EventLogFilterInvites"
 
@@ -895,7 +895,7 @@
 
     if-ne p2, v3, :cond_29f
 
-    const p2, 0x7f0e066c
+    const p2, 0x7f0e06be
 
     const-string v3, "EventLogAllAdmins"
 

@@ -27,7 +27,7 @@
 
     iget-object v0, p0, Lorg/telegram/ui/Components/EmojiView$StickersGridAdapter$$ExternalSyntheticLambda1;->f$0:Lorg/telegram/ui/Components/EmojiView$StickersGridAdapter;
 
-    invoke-static {v0, p1}, Lorg/telegram/ui/Components/EmojiView$StickersGridAdapter;->$r8$lambda$iCoZBnZmhbdQzXT81nj6tq0dJoo(Lorg/telegram/ui/Components/EmojiView$StickersGridAdapter;Landroid/view/View;)V
+    invoke-static {v0, p1}, Lorg/telegram/ui/Components/EmojiView$StickersGridAdapter;->$r8$lambda$IVXUulgU1wljxZuVSFvPkdBN1Kk(Lorg/telegram/ui/Components/EmojiView$StickersGridAdapter;Landroid/view/View;)V
 
     return-void
 .end method

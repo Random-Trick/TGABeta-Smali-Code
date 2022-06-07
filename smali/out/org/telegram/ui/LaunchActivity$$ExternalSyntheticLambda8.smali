@@ -6,24 +6,16 @@
 
 
 # instance fields
-.field public final synthetic f$0:Ljava/lang/String;
-
-.field public final synthetic f$1:Ljava/lang/String;
-
-.field public final synthetic f$2:Lorg/telegram/ui/ActionBar/BaseFragment;
+.field public final synthetic f$0:Lorg/telegram/ui/LaunchActivity;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/String;Ljava/lang/String;Lorg/telegram/ui/ActionBar/BaseFragment;)V
-    .registers 4
+.method public synthetic constructor <init>(Lorg/telegram/ui/LaunchActivity;)V
+    .registers 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lorg/telegram/ui/LaunchActivity$$ExternalSyntheticLambda8;->f$0:Ljava/lang/String;
-
-    iput-object p2, p0, Lorg/telegram/ui/LaunchActivity$$ExternalSyntheticLambda8;->f$1:Ljava/lang/String;
-
-    iput-object p3, p0, Lorg/telegram/ui/LaunchActivity$$ExternalSyntheticLambda8;->f$2:Lorg/telegram/ui/ActionBar/BaseFragment;
+    iput-object p1, p0, Lorg/telegram/ui/LaunchActivity$$ExternalSyntheticLambda8;->f$0:Lorg/telegram/ui/LaunchActivity;
 
     return-void
 .end method
@@ -31,15 +23,11 @@
 
 # virtual methods
 .method public final onClick(Landroid/content/DialogInterface;I)V
-    .registers 6
+    .registers 4
 
-    iget-object v0, p0, Lorg/telegram/ui/LaunchActivity$$ExternalSyntheticLambda8;->f$0:Ljava/lang/String;
+    iget-object v0, p0, Lorg/telegram/ui/LaunchActivity$$ExternalSyntheticLambda8;->f$0:Lorg/telegram/ui/LaunchActivity;
 
-    iget-object v1, p0, Lorg/telegram/ui/LaunchActivity$$ExternalSyntheticLambda8;->f$1:Ljava/lang/String;
-
-    iget-object v2, p0, Lorg/telegram/ui/LaunchActivity$$ExternalSyntheticLambda8;->f$2:Lorg/telegram/ui/ActionBar/BaseFragment;
-
-    invoke-static {v0, v1, v2, p1, p2}, Lorg/telegram/ui/LaunchActivity;->$r8$lambda$UxC1_7IiH12vQbxxpUdyVRyaLQ4(Ljava/lang/String;Ljava/lang/String;Lorg/telegram/ui/ActionBar/BaseFragment;Landroid/content/DialogInterface;I)V
+    invoke-static {v0, p1, p2}, Lorg/telegram/ui/LaunchActivity;->$r8$lambda$ybywaC913NwKCC8jGDccaaAxncQ(Lorg/telegram/ui/LaunchActivity;Landroid/content/DialogInterface;I)V
 
     return-void
 .end method

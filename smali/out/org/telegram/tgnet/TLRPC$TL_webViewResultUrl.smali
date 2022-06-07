@@ -23,7 +23,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 58640
+    .line 59124
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -32,7 +32,7 @@
 .method public static TLdeserialize(Lorg/telegram/tgnet/AbstractSerializedData;IZ)Lorg/telegram/tgnet/TLRPC$TL_webViewResultUrl;
     .registers 4
 
-    .line 58647
+    .line 59131
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_webViewResultUrl;->constructor:I
 
     if-eq v0, p1, :cond_1e
@@ -43,7 +43,7 @@
 
     return-object p0
 
-    .line 58649
+    .line 59133
     :cond_8
     new-instance p0, Ljava/lang/RuntimeException;
 
@@ -69,13 +69,13 @@
 
     throw p0
 
-    .line 58654
+    .line 59138
     :cond_1e
     new-instance p1, Lorg/telegram/tgnet/TLRPC$TL_webViewResultUrl;
 
     invoke-direct {p1}, Lorg/telegram/tgnet/TLRPC$TL_webViewResultUrl;-><init>()V
 
-    .line 58655
+    .line 59139
     invoke-virtual {p1, p0, p2}, Lorg/telegram/tgnet/TLRPC$TL_webViewResultUrl;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
     return-object p1
@@ -86,14 +86,14 @@
 .method public readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
     .registers 5
 
-    .line 58660
+    .line 59144
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt64(Z)J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lorg/telegram/tgnet/TLRPC$TL_webViewResultUrl;->query_id:J
 
-    .line 58661
+    .line 59145
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readString(Z)Ljava/lang/String;
 
     move-result-object p1
@@ -106,17 +106,17 @@
 .method public serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
     .registers 4
 
-    .line 58665
+    .line 59149
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_webViewResultUrl;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 58666
+    .line 59150
     iget-wide v0, p0, Lorg/telegram/tgnet/TLRPC$TL_webViewResultUrl;->query_id:J
 
     invoke-virtual {p1, v0, v1}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt64(J)V
 
-    .line 58667
+    .line 59151
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_webViewResultUrl;->url:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeString(Ljava/lang/String;)V

@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lj$/util/v;
+.implements Lj$/util/u$a;
 
 
 # instance fields
@@ -20,7 +20,7 @@
     return-void
 .end method
 
-.method public static synthetic a(Ljava/util/Spliterator$OfInt;)Lj$/util/v;
+.method public static synthetic a(Ljava/util/Spliterator$OfInt;)Lj$/util/u$a;
     .registers 2
 
     if-nez p0, :cond_4
@@ -36,7 +36,7 @@
 
     check-cast p0, Lj$/wrappers/l;
 
-    iget-object p0, p0, Lj$/wrappers/l;->a:Lj$/util/v;
+    iget-object p0, p0, Lj$/wrappers/l;->a:Lj$/util/u$a;
 
     return-object p0
 
@@ -192,7 +192,7 @@
     return p1
 .end method
 
-.method public synthetic trySplit()Lj$/util/v;
+.method public synthetic trySplit()Lj$/util/u$a;
     .registers 2
 
     iget-object v0, p0, Lj$/wrappers/k;->a:Ljava/util/Spliterator$OfInt;
@@ -201,30 +201,14 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lj$/wrappers/k;->a(Ljava/util/Spliterator$OfInt;)Lj$/util/v;
+    invoke-static {v0}, Lj$/wrappers/k;->a(Ljava/util/Spliterator$OfInt;)Lj$/util/u$a;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public synthetic trySplit()Lj$/util/x;
-    .registers 2
-
-    iget-object v0, p0, Lj$/wrappers/k;->a:Ljava/util/Spliterator$OfInt;
-
-    invoke-interface {v0}, Ljava/util/Spliterator$OfInt;->trySplit()Ljava/util/Spliterator$OfPrimitive;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lj$/wrappers/o;->a(Ljava/util/Spliterator$OfPrimitive;)Lj$/util/x;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public synthetic trySplit()Lj$/util/y;
+.method public synthetic trySplit()Lj$/util/u;
     .registers 2
 
     iget-object v0, p0, Lj$/wrappers/k;->a:Ljava/util/Spliterator$OfInt;
@@ -233,7 +217,23 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lj$/wrappers/g;->a(Ljava/util/Spliterator;)Lj$/util/y;
+    invoke-static {v0}, Lj$/wrappers/g;->a(Ljava/util/Spliterator;)Lj$/util/u;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public synthetic trySplit()Lj$/util/w;
+    .registers 2
+
+    iget-object v0, p0, Lj$/wrappers/k;->a:Ljava/util/Spliterator$OfInt;
+
+    invoke-interface {v0}, Ljava/util/Spliterator$OfInt;->trySplit()Ljava/util/Spliterator$OfPrimitive;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lj$/wrappers/o;->a(Ljava/util/Spliterator$OfPrimitive;)Lj$/util/w;
 
     move-result-object v0
 

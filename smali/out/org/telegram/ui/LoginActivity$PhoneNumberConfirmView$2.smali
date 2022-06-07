@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;Ljava/lang/Runnable;)V
     .registers 3
 
-    .line 6071
+    .line 6214
     iput-object p2, p0, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView$2;->val$callback:Ljava/lang/Runnable;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -35,7 +35,7 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .registers 2
 
-    .line 6074
+    .line 6217
     iget-object p1, p0, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView$2;->val$callback:Ljava/lang/Runnable;
 
     invoke-interface {p1}, Ljava/lang/Runnable;->run()V

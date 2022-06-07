@@ -6,21 +6,21 @@
 
 
 # instance fields
-.field final synthetic a:Lj$/util/y;
+.field final synthetic a:Lj$/util/u;
 
 
 # direct methods
-.method private synthetic constructor <init>(Lj$/util/y;)V
+.method private synthetic constructor <init>(Lj$/util/u;)V
     .registers 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lj$/wrappers/h;->a:Lj$/util/y;
+    iput-object p1, p0, Lj$/wrappers/h;->a:Lj$/util/u;
 
     return-void
 .end method
 
-.method public static synthetic a(Lj$/util/y;)Ljava/util/Spliterator;
+.method public static synthetic a(Lj$/util/u;)Ljava/util/Spliterator;
     .registers 2
 
     if-nez p0, :cond_4
@@ -43,7 +43,7 @@
     :cond_d
     new-instance v0, Lj$/wrappers/h;
 
-    invoke-direct {v0, p0}, Lj$/wrappers/h;-><init>(Lj$/util/y;)V
+    invoke-direct {v0, p0}, Lj$/wrappers/h;-><init>(Lj$/util/u;)V
 
     return-object v0
 .end method
@@ -53,9 +53,9 @@
 .method public synthetic characteristics()I
     .registers 2
 
-    iget-object v0, p0, Lj$/wrappers/h;->a:Lj$/util/y;
+    iget-object v0, p0, Lj$/wrappers/h;->a:Lj$/util/u;
 
-    invoke-interface {v0}, Lj$/util/y;->characteristics()I
+    invoke-interface {v0}, Lj$/util/u;->characteristics()I
 
     move-result v0
 
@@ -65,9 +65,9 @@
 .method public synthetic estimateSize()J
     .registers 3
 
-    iget-object v0, p0, Lj$/wrappers/h;->a:Lj$/util/y;
+    iget-object v0, p0, Lj$/wrappers/h;->a:Lj$/util/u;
 
-    invoke-interface {v0}, Lj$/util/y;->estimateSize()J
+    invoke-interface {v0}, Lj$/util/u;->estimateSize()J
 
     move-result-wide v0
 
@@ -77,13 +77,13 @@
 .method public synthetic forEachRemaining(Ljava/util/function/Consumer;)V
     .registers 3
 
-    iget-object v0, p0, Lj$/wrappers/h;->a:Lj$/util/y;
+    iget-object v0, p0, Lj$/wrappers/h;->a:Lj$/util/u;
 
     invoke-static {p1}, Lj$/wrappers/w;->b(Ljava/util/function/Consumer;)Lj$/util/function/Consumer;
 
     move-result-object p1
 
-    invoke-interface {v0, p1}, Lj$/util/y;->forEachRemaining(Lj$/util/function/Consumer;)V
+    invoke-interface {v0, p1}, Lj$/util/u;->forEachRemaining(Lj$/util/function/Consumer;)V
 
     return-void
 .end method
@@ -91,9 +91,9 @@
 .method public synthetic getComparator()Ljava/util/Comparator;
     .registers 2
 
-    iget-object v0, p0, Lj$/wrappers/h;->a:Lj$/util/y;
+    iget-object v0, p0, Lj$/wrappers/h;->a:Lj$/util/u;
 
-    invoke-interface {v0}, Lj$/util/y;->getComparator()Ljava/util/Comparator;
+    invoke-interface {v0}, Lj$/util/u;->getComparator()Ljava/util/Comparator;
 
     move-result-object v0
 
@@ -103,9 +103,9 @@
 .method public synthetic getExactSizeIfKnown()J
     .registers 3
 
-    iget-object v0, p0, Lj$/wrappers/h;->a:Lj$/util/y;
+    iget-object v0, p0, Lj$/wrappers/h;->a:Lj$/util/u;
 
-    invoke-interface {v0}, Lj$/util/y;->getExactSizeIfKnown()J
+    invoke-interface {v0}, Lj$/util/u;->getExactSizeIfKnown()J
 
     move-result-wide v0
 
@@ -115,9 +115,9 @@
 .method public synthetic hasCharacteristics(I)Z
     .registers 3
 
-    iget-object v0, p0, Lj$/wrappers/h;->a:Lj$/util/y;
+    iget-object v0, p0, Lj$/wrappers/h;->a:Lj$/util/u;
 
-    invoke-interface {v0, p1}, Lj$/util/y;->hasCharacteristics(I)Z
+    invoke-interface {v0, p1}, Lj$/util/u;->hasCharacteristics(I)Z
 
     move-result p1
 
@@ -127,13 +127,13 @@
 .method public synthetic tryAdvance(Ljava/util/function/Consumer;)Z
     .registers 3
 
-    iget-object v0, p0, Lj$/wrappers/h;->a:Lj$/util/y;
+    iget-object v0, p0, Lj$/wrappers/h;->a:Lj$/util/u;
 
     invoke-static {p1}, Lj$/wrappers/w;->b(Ljava/util/function/Consumer;)Lj$/util/function/Consumer;
 
     move-result-object p1
 
-    invoke-interface {v0, p1}, Lj$/util/y;->b(Lj$/util/function/Consumer;)Z
+    invoke-interface {v0, p1}, Lj$/util/u;->b(Lj$/util/function/Consumer;)Z
 
     move-result p1
 
@@ -143,13 +143,13 @@
 .method public synthetic trySplit()Ljava/util/Spliterator;
     .registers 2
 
-    iget-object v0, p0, Lj$/wrappers/h;->a:Lj$/util/y;
+    iget-object v0, p0, Lj$/wrappers/h;->a:Lj$/util/u;
 
-    invoke-interface {v0}, Lj$/util/y;->trySplit()Lj$/util/y;
+    invoke-interface {v0}, Lj$/util/u;->trySplit()Lj$/util/u;
 
     move-result-object v0
 
-    invoke-static {v0}, Lj$/wrappers/h;->a(Lj$/util/y;)Ljava/util/Spliterator;
+    invoke-static {v0}, Lj$/wrappers/h;->a(Lj$/util/u;)Ljava/util/Spliterator;
 
     move-result-object v0
 

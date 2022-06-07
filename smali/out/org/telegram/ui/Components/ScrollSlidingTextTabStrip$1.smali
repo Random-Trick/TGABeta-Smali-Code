@@ -25,7 +25,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/ScrollSlidingTextTabStrip;)V
     .registers 2
 
-    .line 93
+    .line 94
     iput-object p1, p0, Lorg/telegram/ui/Components/ScrollSlidingTextTabStrip$1;->this$0:Lorg/telegram/ui/Components/ScrollSlidingTextTabStrip;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public run()V
     .registers 6
 
-    .line 96
+    .line 97
     iget-object v0, p0, Lorg/telegram/ui/Components/ScrollSlidingTextTabStrip$1;->this$0:Lorg/telegram/ui/Components/ScrollSlidingTextTabStrip;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/ScrollSlidingTextTabStrip;->access$000(Lorg/telegram/ui/Components/ScrollSlidingTextTabStrip;)Z
@@ -49,13 +49,13 @@
 
     return-void
 
-    .line 99
+    .line 100
     :cond_9
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
 
-    .line 100
+    .line 101
     iget-object v2, p0, Lorg/telegram/ui/Components/ScrollSlidingTextTabStrip$1;->this$0:Lorg/telegram/ui/Components/ScrollSlidingTextTabStrip;
 
     invoke-static {v2}, Lorg/telegram/ui/Components/ScrollSlidingTextTabStrip;->access$100(Lorg/telegram/ui/Components/ScrollSlidingTextTabStrip;)J
@@ -72,7 +72,7 @@
 
     move-wide v0, v2
 
-    .line 104
+    .line 105
     :cond_1b
     iget-object v2, p0, Lorg/telegram/ui/Components/ScrollSlidingTextTabStrip$1;->this$0:Lorg/telegram/ui/Components/ScrollSlidingTextTabStrip;
 
@@ -84,7 +84,7 @@
 
     invoke-static {v2, v0}, Lorg/telegram/ui/Components/ScrollSlidingTextTabStrip;->access$216(Lorg/telegram/ui/Components/ScrollSlidingTextTabStrip;F)F
 
-    .line 105
+    .line 106
     iget-object v0, p0, Lorg/telegram/ui/Components/ScrollSlidingTextTabStrip$1;->this$0:Lorg/telegram/ui/Components/ScrollSlidingTextTabStrip;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/ScrollSlidingTextTabStrip;->access$300(Lorg/telegram/ui/Components/ScrollSlidingTextTabStrip;)Lorg/telegram/ui/Components/CubicBezierInterpolator;
@@ -103,7 +103,7 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/ScrollSlidingTextTabStrip;->setAnimationIdicatorProgress(F)V
 
-    .line 106
+    .line 107
     iget-object v0, p0, Lorg/telegram/ui/Components/ScrollSlidingTextTabStrip$1;->this$0:Lorg/telegram/ui/Components/ScrollSlidingTextTabStrip;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/ScrollSlidingTextTabStrip;->access$200(Lorg/telegram/ui/Components/ScrollSlidingTextTabStrip;)F
@@ -116,12 +116,12 @@
 
     if-lez v0, :cond_48
 
-    .line 107
+    .line 108
     iget-object v0, p0, Lorg/telegram/ui/Components/ScrollSlidingTextTabStrip$1;->this$0:Lorg/telegram/ui/Components/ScrollSlidingTextTabStrip;
 
     invoke-static {v0, v1}, Lorg/telegram/ui/Components/ScrollSlidingTextTabStrip;->access$202(Lorg/telegram/ui/Components/ScrollSlidingTextTabStrip;F)F
 
-    .line 109
+    .line 110
     :cond_48
     iget-object v0, p0, Lorg/telegram/ui/Components/ScrollSlidingTextTabStrip$1;->this$0:Lorg/telegram/ui/Components/ScrollSlidingTextTabStrip;
 
@@ -133,7 +133,7 @@
 
     if-gez v0, :cond_5c
 
-    .line 110
+    .line 111
     iget-object v0, p0, Lorg/telegram/ui/Components/ScrollSlidingTextTabStrip$1;->this$0:Lorg/telegram/ui/Components/ScrollSlidingTextTabStrip;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/ScrollSlidingTextTabStrip;->access$400(Lorg/telegram/ui/Components/ScrollSlidingTextTabStrip;)Ljava/lang/Runnable;
@@ -144,7 +144,7 @@
 
     goto :goto_79
 
-    .line 112
+    .line 113
     :cond_5c
     iget-object v0, p0, Lorg/telegram/ui/Components/ScrollSlidingTextTabStrip$1;->this$0:Lorg/telegram/ui/Components/ScrollSlidingTextTabStrip;
 
@@ -152,14 +152,14 @@
 
     invoke-static {v0, v2}, Lorg/telegram/ui/Components/ScrollSlidingTextTabStrip;->access$002(Lorg/telegram/ui/Components/ScrollSlidingTextTabStrip;Z)Z
 
-    .line 113
+    .line 114
     iget-object v0, p0, Lorg/telegram/ui/Components/ScrollSlidingTextTabStrip$1;->this$0:Lorg/telegram/ui/Components/ScrollSlidingTextTabStrip;
 
     const/4 v2, 0x1
 
     invoke-virtual {v0, v2}, Lorg/telegram/ui/Components/ScrollSlidingTextTabStrip;->setEnabled(Z)V
 
-    .line 114
+    .line 115
     iget-object v0, p0, Lorg/telegram/ui/Components/ScrollSlidingTextTabStrip$1;->this$0:Lorg/telegram/ui/Components/ScrollSlidingTextTabStrip;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/ScrollSlidingTextTabStrip;->access$500(Lorg/telegram/ui/Components/ScrollSlidingTextTabStrip;)Lorg/telegram/ui/Components/ScrollSlidingTextTabStrip$ScrollSlidingTabStripDelegate;
@@ -168,7 +168,7 @@
 
     if-eqz v0, :cond_79
 
-    .line 115
+    .line 116
     iget-object v0, p0, Lorg/telegram/ui/Components/ScrollSlidingTextTabStrip$1;->this$0:Lorg/telegram/ui/Components/ScrollSlidingTextTabStrip;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/ScrollSlidingTextTabStrip;->access$500(Lorg/telegram/ui/Components/ScrollSlidingTextTabStrip;)Lorg/telegram/ui/Components/ScrollSlidingTextTabStrip$ScrollSlidingTabStripDelegate;

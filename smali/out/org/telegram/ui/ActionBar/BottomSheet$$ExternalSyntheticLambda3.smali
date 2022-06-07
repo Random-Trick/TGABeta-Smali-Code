@@ -2,42 +2,34 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/view/View$OnTouchListener;
+.implements Landroid/view/View$OnApplyWindowInsetsListener;
 
 
-# static fields
-.field public static final synthetic INSTANCE:Lorg/telegram/ui/ActionBar/BottomSheet$$ExternalSyntheticLambda3;
+# instance fields
+.field public final synthetic f$0:Lorg/telegram/ui/ActionBar/BottomSheet;
 
 
 # direct methods
-.method static synthetic constructor <clinit>()V
-    .registers 1
-
-    new-instance v0, Lorg/telegram/ui/ActionBar/BottomSheet$$ExternalSyntheticLambda3;
-
-    invoke-direct {v0}, Lorg/telegram/ui/ActionBar/BottomSheet$$ExternalSyntheticLambda3;-><init>()V
-
-    sput-object v0, Lorg/telegram/ui/ActionBar/BottomSheet$$ExternalSyntheticLambda3;->INSTANCE:Lorg/telegram/ui/ActionBar/BottomSheet$$ExternalSyntheticLambda3;
-
-    return-void
-.end method
-
-.method private synthetic constructor <init>()V
-    .registers 1
+.method public synthetic constructor <init>(Lorg/telegram/ui/ActionBar/BottomSheet;)V
+    .registers 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lorg/telegram/ui/ActionBar/BottomSheet$$ExternalSyntheticLambda3;->f$0:Lorg/telegram/ui/ActionBar/BottomSheet;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
-    .registers 3
+.method public final onApplyWindowInsets(Landroid/view/View;Landroid/view/WindowInsets;)Landroid/view/WindowInsets;
+    .registers 4
 
-    invoke-static {p1, p2}, Lorg/telegram/ui/ActionBar/BottomSheet;->$r8$lambda$tGqkMKTJXQ8uhnr5u1IbLHy8vhw(Landroid/view/View;Landroid/view/MotionEvent;)Z
+    iget-object v0, p0, Lorg/telegram/ui/ActionBar/BottomSheet$$ExternalSyntheticLambda3;->f$0:Lorg/telegram/ui/ActionBar/BottomSheet;
 
-    move-result p1
+    invoke-static {v0, p1, p2}, Lorg/telegram/ui/ActionBar/BottomSheet;->$r8$lambda$jXi_Inmnp3x4SU1lNfYZw4lpBiM(Lorg/telegram/ui/ActionBar/BottomSheet;Landroid/view/View;Landroid/view/WindowInsets;)Landroid/view/WindowInsets;
 
-    return p1
+    move-result-object p1
+
+    return-object p1
 .end method

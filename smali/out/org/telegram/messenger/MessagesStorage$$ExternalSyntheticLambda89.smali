@@ -45,7 +45,7 @@
 
     iget-object v5, p0, Lorg/telegram/messenger/MessagesStorage$$ExternalSyntheticLambda89;->f$3:Lorg/telegram/tgnet/TLObject;
 
-    invoke-static/range {v0 .. v5}, Lorg/telegram/messenger/MessagesStorage;->$r8$lambda$UsowaNG71-KmHdoh-t5thAFaG5c(Lorg/telegram/messenger/MessagesStorage;JJLorg/telegram/tgnet/TLObject;)V
+    invoke-static/range {v0 .. v5}, Lorg/telegram/messenger/MessagesStorage;->$r8$lambda$9fktpouHWTOJpdb3m5MRbRl2qas(Lorg/telegram/messenger/MessagesStorage;JJLorg/telegram/tgnet/TLObject;)V
 
     return-void
 .end method

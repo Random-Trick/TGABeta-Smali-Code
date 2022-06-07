@@ -2,32 +2,42 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Landroid/view/animation/Interpolator;
 
 
-# instance fields
-.field public final synthetic f$0:Lorg/telegram/ui/DialogsActivity;
+# static fields
+.field public static final synthetic INSTANCE:Lorg/telegram/ui/DialogsActivity$$ExternalSyntheticLambda29;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lorg/telegram/ui/DialogsActivity;)V
-    .registers 2
+.method static synthetic constructor <clinit>()V
+    .registers 1
+
+    new-instance v0, Lorg/telegram/ui/DialogsActivity$$ExternalSyntheticLambda29;
+
+    invoke-direct {v0}, Lorg/telegram/ui/DialogsActivity$$ExternalSyntheticLambda29;-><init>()V
+
+    sput-object v0, Lorg/telegram/ui/DialogsActivity$$ExternalSyntheticLambda29;->INSTANCE:Lorg/telegram/ui/DialogsActivity$$ExternalSyntheticLambda29;
+
+    return-void
+.end method
+
+.method private synthetic constructor <init>()V
+    .registers 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lorg/telegram/ui/DialogsActivity$$ExternalSyntheticLambda29;->f$0:Lorg/telegram/ui/DialogsActivity;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
+.method public final getInterpolation(F)F
     .registers 2
 
-    iget-object v0, p0, Lorg/telegram/ui/DialogsActivity$$ExternalSyntheticLambda29;->f$0:Lorg/telegram/ui/DialogsActivity;
+    invoke-static {p1}, Lorg/telegram/ui/DialogsActivity;->$r8$lambda$xOEuGfWASgHbeYQu20ZPCmNt81M(F)F
 
-    invoke-static {v0}, Lorg/telegram/ui/DialogsActivity;->$r8$lambda$JEbSD2XnuqN84wECwpeeq-bUFbc(Lorg/telegram/ui/DialogsActivity;)V
+    move-result p1
 
-    return-void
+    return p1
 .end method

@@ -24,7 +24,7 @@
 .method constructor <init>(Lorg/telegram/ui/PasscodeActivity;Z)V
     .registers 3
 
-    .line 729
+    .line 730
     iput-object p1, p0, Lorg/telegram/ui/PasscodeActivity$11;->this$0:Lorg/telegram/ui/PasscodeActivity;
 
     iput-boolean p2, p0, Lorg/telegram/ui/PasscodeActivity$11;->val$visible:Z
@@ -39,12 +39,12 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .registers 3
 
-    .line 739
+    .line 740
     iget-boolean p1, p0, Lorg/telegram/ui/PasscodeActivity$11;->val$visible:Z
 
     if-nez p1, :cond_f
 
-    .line 740
+    .line 741
     iget-object p1, p0, Lorg/telegram/ui/PasscodeActivity$11;->this$0:Lorg/telegram/ui/PasscodeActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/PasscodeActivity;->access$000(Lorg/telegram/ui/PasscodeActivity;)Lorg/telegram/ui/Components/CustomPhoneKeyboardView;
@@ -62,12 +62,12 @@
 .method public onAnimationStart(Landroid/animation/Animator;)V
     .registers 3
 
-    .line 732
+    .line 733
     iget-boolean p1, p0, Lorg/telegram/ui/PasscodeActivity$11;->val$visible:Z
 
     if-eqz p1, :cond_e
 
-    .line 733
+    .line 734
     iget-object p1, p0, Lorg/telegram/ui/PasscodeActivity$11;->this$0:Lorg/telegram/ui/PasscodeActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/PasscodeActivity;->access$000(Lorg/telegram/ui/PasscodeActivity;)Lorg/telegram/ui/Components/CustomPhoneKeyboardView;

@@ -242,7 +242,7 @@
 
     const-string v2, "SearchMusic"
 
-    const v3, 0x7f0e0f90
+    const v3, 0x7f0e104c
 
     .line 141
     invoke-static {v2, v3}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -336,7 +336,7 @@
 
     iput-object v1, v7, Lorg/telegram/ui/Components/ChatAttachAlertAudioLayout;->emptyImageView:Landroid/widget/ImageView;
 
-    const v2, 0x7f0702ff
+    const v2, 0x7f070328
 
     .line 156
     invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setImageResource(I)V
@@ -901,7 +901,7 @@
 
     move-result-object v2
     :try_end_39
-    .catch Ljava/lang/Exception; {:try_start_28 .. :try_end_39} :catch_16e
+    .catch Ljava/lang/Exception; {:try_start_28 .. :try_end_39} :catch_16f
 
     const v0, -0x77359400
 
@@ -912,7 +912,7 @@
 
     move-result v3
 
-    if-eqz v3, :cond_15f
+    if-eqz v3, :cond_160
 
     .line 522
     new-instance v3, Lorg/telegram/messenger/MediaController$AudioEntry;
@@ -1012,7 +1012,7 @@
 
     move-result-object v12
     :try_end_98
-    .catchall {:try_start_3c .. :try_end_98} :catchall_164
+    .catchall {:try_start_3c .. :try_end_98} :catchall_165
 
     move-object/from16 v16, v14
 
@@ -1141,7 +1141,9 @@
 
     long-to-int v7, v12
 
-    iput v7, v6, Lorg/telegram/tgnet/TLRPC$Document;->size:I
+    int-to-long v12, v7
+
+    iput-wide v12, v6, Lorg/telegram/tgnet/TLRPC$Document;->size:J
 
     .line 554
     iget-object v6, v5, Lorg/telegram/tgnet/TLRPC$Message;->media:Lorg/telegram/tgnet/TLRPC$MessageMedia;
@@ -1217,16 +1219,16 @@
     invoke-direct {v4, v6, v5, v8, v9}, Lorg/telegram/messenger/MessageObject;-><init>(ILorg/telegram/tgnet/TLRPC$Message;ZZ)V
 
     iput-object v4, v3, Lorg/telegram/messenger/MediaController$AudioEntry;->messageObject:Lorg/telegram/messenger/MessageObject;
-    :try_end_14c
-    .catchall {:try_start_9a .. :try_end_14c} :catchall_15b
+    :try_end_14d
+    .catchall {:try_start_9a .. :try_end_14d} :catchall_15c
 
     move-object/from16 v4, v16
 
     .line 569
-    :try_start_14e
+    :try_start_14f
     invoke-virtual {v4, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-    :try_end_151
-    .catchall {:try_start_14e .. :try_end_151} :catchall_159
+    :try_end_152
+    .catchall {:try_start_14f .. :try_end_152} :catchall_15a
 
     add-int/lit8 v0, v0, -0x1
 
@@ -1240,66 +1242,66 @@
 
     goto/16 :goto_3c
 
-    :catchall_159
+    :catchall_15a
     move-exception v0
 
-    goto :goto_166
+    goto :goto_167
 
-    :catchall_15b
+    :catchall_15c
     move-exception v0
 
     move-object/from16 v4, v16
 
-    goto :goto_166
+    goto :goto_167
 
-    :cond_15f
+    :cond_160
     move-object v4, v14
 
     .line 572
-    :try_start_160
+    :try_start_161
     invoke-interface {v2}, Landroid/database/Cursor;->close()V
-    :try_end_163
-    .catch Ljava/lang/Exception; {:try_start_160 .. :try_end_163} :catch_16c
+    :try_end_164
+    .catch Ljava/lang/Exception; {:try_start_161 .. :try_end_164} :catch_16d
 
-    goto :goto_173
+    goto :goto_174
 
-    :catchall_164
+    :catchall_165
     move-exception v0
 
     move-object v4, v14
 
-    :goto_166
-    if-eqz v2, :cond_16b
+    :goto_167
+    if-eqz v2, :cond_16c
 
     .line 519
-    :try_start_168
+    :try_start_169
     invoke-interface {v2}, Landroid/database/Cursor;->close()V
-    :try_end_16b
-    .catchall {:try_start_168 .. :try_end_16b} :catchall_16b
-
-    :catchall_16b
-    :cond_16b
-    :try_start_16b
-    throw v0
     :try_end_16c
-    .catch Ljava/lang/Exception; {:try_start_16b .. :try_end_16c} :catch_16c
+    .catchall {:try_start_169 .. :try_end_16c} :catchall_16c
 
-    :catch_16c
+    :catchall_16c
+    :cond_16c
+    :try_start_16c
+    throw v0
+    :try_end_16d
+    .catch Ljava/lang/Exception; {:try_start_16c .. :try_end_16d} :catch_16d
+
+    :catch_16d
     move-exception v0
 
-    goto :goto_170
+    goto :goto_171
 
-    :catch_16e
+    :catch_16f
     move-exception v0
 
     move-object v4, v14
 
     .line 573
-    :goto_170
+    :goto_171
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     .line 575
-    :goto_173
+    :goto_174
     new-instance v0, Lorg/telegram/ui/Components/ChatAttachAlertAudioLayout$$ExternalSyntheticLambda2;
 
     invoke-direct {v0, v1, v4}, Lorg/telegram/ui/Components/ChatAttachAlertAudioLayout$$ExternalSyntheticLambda2;-><init>(Lorg/telegram/ui/Components/ChatAttachAlertAudioLayout;Ljava/util/ArrayList;)V
@@ -1408,13 +1410,13 @@
     .line 469
     invoke-virtual {p1, v2, v3}, Lorg/telegram/ui/Cells/SharedAudioCell;->setChecked(ZZ)V
 
-    goto :goto_5e
+    goto :goto_60
 
     .line 472
     :cond_29
     iget v1, p0, Lorg/telegram/ui/Components/ChatAttachAlertAudioLayout;->maxSelectedFiles:I
 
-    if-ltz v1, :cond_4e
+    if-ltz v1, :cond_50
 
     iget-object v1, p0, Lorg/telegram/ui/Components/ChatAttachAlertAudioLayout;->selectedAudios:Landroid/util/LongSparseArray;
 
@@ -1424,16 +1426,18 @@
 
     iget v4, p0, Lorg/telegram/ui/Components/ChatAttachAlertAudioLayout;->maxSelectedFiles:I
 
-    if-lt v1, v4, :cond_4e
+    if-lt v1, v4, :cond_50
 
-    const p1, 0x7f0e0cc0
+    const p1, 0x7f0e0d4a
 
     new-array v0, v3, [Ljava/lang/Object;
 
-    const-string v1, "Files"
+    new-array v1, v2, [Ljava/lang/Object;
+
+    const-string v3, "Files"
 
     .line 473
-    invoke-static {v1, v4}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    invoke-static {v3, v4, v1}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -1450,7 +1454,7 @@
     return-void
 
     .line 476
-    :cond_4e
+    :cond_50
     iget-object v1, p0, Lorg/telegram/ui/Components/ChatAttachAlertAudioLayout;->selectedAudios:Landroid/util/LongSparseArray;
 
     iget-wide v4, v0, Lorg/telegram/messenger/MediaController$AudioEntry;->id:J
@@ -1468,17 +1472,17 @@
     const/4 v2, 0x1
 
     .line 481
-    :goto_5e
+    :goto_60
     iget-object p1, p0, Lorg/telegram/ui/Components/ChatAttachAlert$AttachAlertLayout;->parentAlert:Lorg/telegram/ui/Components/ChatAttachAlert;
 
-    if-eqz v2, :cond_63
+    if-eqz v2, :cond_65
 
-    goto :goto_64
+    goto :goto_66
 
-    :cond_63
+    :cond_65
     const/4 v3, 0x2
 
-    :goto_64
+    :goto_66
     invoke-virtual {p1, v3}, Lorg/telegram/ui/Components/ChatAttachAlert;->updateCountButton(I)V
 
     return-void
@@ -1625,7 +1629,7 @@
 
     const-string v1, "AppName"
 
-    const v2, 0x7f0e017c
+    const v2, 0x7f0e01b1
 
     invoke-static {v1, v2}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
@@ -1641,7 +1645,7 @@
 
     const-string v0, "OK"
 
-    const v1, 0x7f0e0bae
+    const v1, 0x7f0e0c38
 
     invoke-static {v0, v1}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
@@ -1695,7 +1699,7 @@
     .line 268
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlertAudioLayout;->emptyTitleTextView:Landroid/widget/TextView;
 
-    const v2, 0x7f0e0aa3
+    const v2, 0x7f0e0b2a
 
     const-string v3, "NoAudioFound"
 
@@ -1711,7 +1715,7 @@
     :cond_29
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlertAudioLayout;->emptyTitleTextView:Landroid/widget/TextView;
 
-    const v2, 0x7f0e0aa1
+    const v2, 0x7f0e0b28
 
     const-string v3, "NoAudioFiles"
 
@@ -1724,7 +1728,7 @@
     .line 271
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlertAudioLayout;->emptySubtitleTextView:Landroid/widget/TextView;
 
-    const v2, 0x7f0e0aa2
+    const v2, 0x7f0e0b29
 
     const-string v3, "NoAudioFilesInfo"
 

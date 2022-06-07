@@ -25,7 +25,7 @@
 .method constructor <init>(Lorg/telegram/ui/ActionBar/ActionBarMenuItem$SearchFilterView;)V
     .registers 2
 
-    .line 1794
+    .line 1797
     iput-object p1, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuItem$SearchFilterView$1;->this$0:Lorg/telegram/ui/ActionBar/ActionBarMenuItem$SearchFilterView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public run()V
     .registers 3
 
-    .line 1797
+    .line 1800
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuItem$SearchFilterView$1;->this$0:Lorg/telegram/ui/ActionBar/ActionBarMenuItem$SearchFilterView;
 
     invoke-static {v0}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem$SearchFilterView;->access$1600(Lorg/telegram/ui/ActionBar/ActionBarMenuItem$SearchFilterView;)Z
@@ -47,7 +47,7 @@
 
     if-eqz v0, :cond_e
 
-    .line 1798
+    .line 1801
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuItem$SearchFilterView$1;->this$0:Lorg/telegram/ui/ActionBar/ActionBarMenuItem$SearchFilterView;
 
     const/4 v1, 0x0

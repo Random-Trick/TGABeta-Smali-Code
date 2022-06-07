@@ -51,7 +51,7 @@
 .method constructor <init>(Lorg/telegram/messenger/MediaDataController;IJIIIIIZI)V
     .registers 12
 
-    .line 3028
+    .line 3179
     iput-object p1, p0, Lorg/telegram/messenger/MediaDataController$1;->this$0:Lorg/telegram/messenger/MediaDataController;
 
     iput p2, p0, Lorg/telegram/messenger/MediaDataController$1;->val$count:I
@@ -80,7 +80,7 @@
 .method private synthetic lambda$run$0(Ljava/lang/Runnable;I)V
     .registers 4
 
-    .line 3165
+    .line 3316
     iget-object v0, p0, Lorg/telegram/messenger/MediaDataController$1;->this$0:Lorg/telegram/messenger/MediaDataController;
 
     invoke-virtual {v0}, Lorg/telegram/messenger/BaseController;->getMessagesStorage()Lorg/telegram/messenger/MessagesStorage;
@@ -99,30 +99,30 @@
 
     move-object/from16 v1, p0
 
-    .line 3032
+    .line 3183
     new-instance v3, Lorg/telegram/tgnet/TLRPC$TL_messages_messages;
 
     invoke-direct {v3}, Lorg/telegram/tgnet/TLRPC$TL_messages_messages;-><init>()V
 
-    .line 3034
+    .line 3185
     :try_start_7
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 3035
+    .line 3186
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    .line 3036
+    .line 3187
     iget v5, v1, Lorg/telegram/messenger/MediaDataController$1;->val$count:I
 
     const/4 v6, 0x1
 
     add-int/2addr v5, v6
 
-    .line 3039
+    .line 3190
     iget-object v7, v1, Lorg/telegram/messenger/MediaDataController$1;->this$0:Lorg/telegram/messenger/MediaDataController;
 
     invoke-virtual {v7}, Lorg/telegram/messenger/BaseController;->getMessagesStorage()Lorg/telegram/messenger/MessagesStorage;
@@ -133,7 +133,7 @@
 
     move-result-object v7
 
-    .line 3042
+    .line 3193
     iget-wide v8, v1, Lorg/telegram/messenger/MediaDataController$1;->val$uid:J
 
     invoke-static {v8, v9}, Lorg/telegram/messenger/DialogObject;->isEncryptedDialog(J)Z
@@ -146,12 +146,12 @@
 
     if-nez v8, :cond_2a4
 
-    .line 3043
+    .line 3194
     iget v8, v1, Lorg/telegram/messenger/MediaDataController$1;->val$min_id:I
 
     if-nez v8, :cond_ae
 
-    .line 3044
+    .line 3195
     sget-object v8, Ljava/util/Locale;->US:Ljava/util/Locale;
 
     const-string v14, "SELECT start FROM media_holes_v2 WHERE uid = %d AND type = %d AND start IN (0, 1)"
@@ -184,14 +184,14 @@
 
     move-result-object v9
 
-    .line 3045
+    .line 3196
     invoke-virtual {v9}, Lorg/telegram/SQLite/SQLiteCursor;->next()Z
 
     move-result v10
 
     if-eqz v10, :cond_5b
 
-    .line 3046
+    .line 3197
     invoke-virtual {v9, v12}, Lorg/telegram/SQLite/SQLiteCursor;->intValue(I)I
 
     move-result v8
@@ -202,7 +202,7 @@
 
     goto :goto_aa
 
-    .line 3048
+    .line 3199
     :cond_5b
     invoke-virtual {v9}, Lorg/telegram/SQLite/SQLiteCursor;->dispose()V
 
@@ -210,7 +210,7 @@
 
     new-array v10, v11, [Ljava/lang/Object;
 
-    .line 3049
+    .line 3200
     iget-wide v14, v1, Lorg/telegram/messenger/MediaDataController$1;->val$uid:J
 
     invoke-static {v14, v15}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -237,14 +237,14 @@
 
     move-result-object v9
 
-    .line 3050
+    .line 3201
     invoke-virtual {v9}, Lorg/telegram/SQLite/SQLiteCursor;->next()Z
 
     move-result v8
 
     if-eqz v8, :cond_a9
 
-    .line 3051
+    .line 3202
     invoke-virtual {v9, v12}, Lorg/telegram/SQLite/SQLiteCursor;->intValue(I)I
 
     move-result v8
@@ -253,44 +253,44 @@
 
     const-string v10, "REPLACE INTO media_holes_v2 VALUES(?, ?, ?, ?)"
 
-    .line 3053
+    .line 3204
     invoke-virtual {v7, v10}, Lorg/telegram/SQLite/SQLiteDatabase;->executeFast(Ljava/lang/String;)Lorg/telegram/SQLite/SQLitePreparedStatement;
 
     move-result-object v10
 
-    .line 3054
+    .line 3205
     invoke-virtual {v10}, Lorg/telegram/SQLite/SQLitePreparedStatement;->requery()V
 
-    .line 3055
+    .line 3206
     iget-wide v14, v1, Lorg/telegram/messenger/MediaDataController$1;->val$uid:J
 
     invoke-virtual {v10, v6, v14, v15}, Lorg/telegram/SQLite/SQLitePreparedStatement;->bindLong(IJ)V
 
-    .line 3056
+    .line 3207
     iget v14, v1, Lorg/telegram/messenger/MediaDataController$1;->val$type:I
 
     invoke-virtual {v10, v11, v14}, Lorg/telegram/SQLite/SQLitePreparedStatement;->bindInteger(II)V
 
     const/4 v14, 0x3
 
-    .line 3057
+    .line 3208
     invoke-virtual {v10, v14, v12}, Lorg/telegram/SQLite/SQLitePreparedStatement;->bindInteger(II)V
 
     const/4 v14, 0x4
 
-    .line 3058
+    .line 3209
     invoke-virtual {v10, v14, v8}, Lorg/telegram/SQLite/SQLitePreparedStatement;->bindInteger(II)V
 
-    .line 3059
+    .line 3210
     invoke-virtual {v10}, Lorg/telegram/SQLite/SQLitePreparedStatement;->step()I
 
-    .line 3060
+    .line 3211
     invoke-virtual {v10}, Lorg/telegram/SQLite/SQLitePreparedStatement;->dispose()V
 
     :cond_a9
     const/4 v8, 0x0
 
-    .line 3064
+    .line 3215
     :goto_aa
     invoke-virtual {v9}, Lorg/telegram/SQLite/SQLiteCursor;->dispose()V
 
@@ -299,13 +299,13 @@
     :cond_ae
     const/4 v8, 0x0
 
-    .line 3068
+    .line 3219
     :goto_af
     iget v9, v1, Lorg/telegram/messenger/MediaDataController$1;->val$max_id:I
 
     if-eqz v9, :cond_15b
 
-    .line 3070
+    .line 3221
     sget-object v9, Ljava/util/Locale;->US:Ljava/util/Locale;
 
     const-string v14, "SELECT start, end FROM media_holes_v2 WHERE uid = %d AND type = %d AND start <= %d ORDER BY end DESC LIMIT 1"
@@ -350,17 +350,17 @@
 
     move-result-object v10
 
-    .line 3071
+    .line 3222
     invoke-virtual {v10}, Lorg/telegram/SQLite/SQLiteCursor;->next()Z
 
     move-result v11
 
     if-eqz v11, :cond_eb
 
-    .line 3072
+    .line 3223
     invoke-virtual {v10, v12}, Lorg/telegram/SQLite/SQLiteCursor;->intValue(I)I
 
-    .line 3073
+    .line 3224
     invoke-virtual {v10, v6}, Lorg/telegram/SQLite/SQLiteCursor;->intValue(I)I
 
     move-result v11
@@ -370,7 +370,7 @@
     :cond_eb
     const/4 v11, 0x0
 
-    .line 3075
+    .line 3226
     :goto_ec
     invoke-virtual {v10}, Lorg/telegram/SQLite/SQLiteCursor;->dispose()V
 
@@ -382,7 +382,7 @@
 
     new-array v10, v10, [Ljava/lang/Object;
 
-    .line 3078
+    .line 3229
     iget-wide v13, v1, Lorg/telegram/messenger/MediaDataController$1;->val$uid:J
 
     invoke-static {v13, v14}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -446,7 +446,7 @@
 
     new-array v11, v11, [Ljava/lang/Object;
 
-    .line 3081
+    .line 3232
     iget-wide v13, v1, Lorg/telegram/messenger/MediaDataController$1;->val$uid:J
 
     invoke-static {v13, v14}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -493,13 +493,13 @@
 
     goto/16 :goto_2a2
 
-    .line 3083
+    .line 3234
     :cond_15b
     iget v9, v1, Lorg/telegram/messenger/MediaDataController$1;->val$min_id:I
 
     if-eqz v9, :cond_211
 
-    .line 3085
+    .line 3236
     sget-object v9, Ljava/util/Locale;->US:Ljava/util/Locale;
 
     const-string v10, "SELECT start, end FROM media_holes_v2 WHERE uid = %d AND type = %d AND end >= %d ORDER BY end ASC LIMIT 1"
@@ -548,21 +548,21 @@
 
     move-result-object v6
 
-    .line 3086
+    .line 3237
     invoke-virtual {v6}, Lorg/telegram/SQLite/SQLiteCursor;->next()Z
 
     move-result v7
 
     if-eqz v7, :cond_19a
 
-    .line 3087
+    .line 3238
     invoke-virtual {v6, v12}, Lorg/telegram/SQLite/SQLiteCursor;->intValue(I)I
 
     move-result v7
 
     const/4 v10, 0x1
 
-    .line 3088
+    .line 3239
     invoke-virtual {v6, v10}, Lorg/telegram/SQLite/SQLiteCursor;->intValue(I)I
 
     goto :goto_19b
@@ -570,7 +570,7 @@
     :cond_19a
     const/4 v7, 0x0
 
-    .line 3090
+    .line 3241
     :goto_19b
     invoke-virtual {v6}, Lorg/telegram/SQLite/SQLiteCursor;->dispose()V
 
@@ -584,7 +584,7 @@
 
     new-array v10, v10, [Ljava/lang/Object;
 
-    .line 3093
+    .line 3244
     iget-wide v11, v1, Lorg/telegram/messenger/MediaDataController$1;->val$uid:J
 
     invoke-static {v11, v12}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -652,7 +652,7 @@
 
     new-array v7, v7, [Ljava/lang/Object;
 
-    .line 3096
+    .line 3247
     iget-wide v11, v1, Lorg/telegram/messenger/MediaDataController$1;->val$uid:J
 
     invoke-static {v11, v12}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -713,7 +713,7 @@
     :cond_211
     move-object v14, v7
 
-    .line 3099
+    .line 3250
     sget-object v6, Ljava/util/Locale;->US:Ljava/util/Locale;
 
     const-string v7, "SELECT max(end) FROM media_holes_v2 WHERE uid = %d AND type = %d"
@@ -752,14 +752,14 @@
 
     move-result-object v7
 
-    .line 3100
+    .line 3251
     invoke-virtual {v7}, Lorg/telegram/SQLite/SQLiteCursor;->next()Z
 
     move-result v9
 
     if-eqz v9, :cond_240
 
-    .line 3101
+    .line 3252
     invoke-virtual {v7, v12}, Lorg/telegram/SQLite/SQLiteCursor;->intValue(I)I
 
     move-result v9
@@ -769,7 +769,7 @@
     :cond_240
     const/4 v9, 0x0
 
-    .line 3103
+    .line 3254
     :goto_241
     invoke-virtual {v7}, Lorg/telegram/SQLite/SQLiteCursor;->dispose()V
 
@@ -783,7 +783,7 @@
 
     new-array v10, v10, [Ljava/lang/Object;
 
-    .line 3105
+    .line 3256
     iget-wide v11, v1, Lorg/telegram/messenger/MediaDataController$1;->val$uid:J
 
     invoke-static {v11, v12}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -841,7 +841,7 @@
 
     new-array v9, v9, [Ljava/lang/Object;
 
-    .line 3107
+    .line 3258
     iget-wide v11, v1, Lorg/telegram/messenger/MediaDataController$1;->val$uid:J
 
     invoke-static {v11, v12}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -893,12 +893,12 @@
     :cond_2a4
     move-object v14, v7
 
-    .line 3112
+    .line 3263
     iget v6, v1, Lorg/telegram/messenger/MediaDataController$1;->val$max_id:I
 
     if-eqz v6, :cond_2e1
 
-    .line 3113
+    .line 3264
     sget-object v6, Ljava/util/Locale;->US:Ljava/util/Locale;
 
     const-string v7, "SELECT m.data, m.mid, r.random_id FROM media_v4 as m LEFT JOIN randoms_v2 as r ON r.mid = m.mid WHERE m.uid = %d AND m.mid > %d AND type = %d ORDER BY m.mid ASC LIMIT %d"
@@ -967,13 +967,13 @@
 
     goto :goto_347
 
-    .line 3114
+    .line 3265
     :cond_2e1
     iget v6, v1, Lorg/telegram/messenger/MediaDataController$1;->val$min_id:I
 
     if-eqz v6, :cond_31a
 
-    .line 3115
+    .line 3266
     sget-object v6, Ljava/util/Locale;->US:Ljava/util/Locale;
 
     const-string v7, "SELECT m.data, m.mid, r.random_id FROM media_v4 as m LEFT JOIN randoms_v2 as r ON r.mid = m.mid WHERE m.uid = %d AND m.mid < %d AND type = %d ORDER BY m.mid DESC LIMIT %d"
@@ -1034,7 +1034,7 @@
 
     goto :goto_2dd
 
-    .line 3117
+    .line 3268
     :cond_31a
     sget-object v6, Ljava/util/Locale;->US:Ljava/util/Locale;
 
@@ -1088,7 +1088,7 @@
 
     const/4 v12, 0x0
 
-    .line 3121
+    .line 3272
     :goto_347
     invoke-virtual {v5}, Lorg/telegram/SQLite/SQLiteCursor;->next()Z
 
@@ -1096,14 +1096,14 @@
 
     if-eqz v6, :cond_39b
 
-    .line 3122
+    .line 3273
     invoke-virtual {v5, v13}, Lorg/telegram/SQLite/SQLiteCursor;->byteBufferValue(I)Lorg/telegram/tgnet/NativeByteBuffer;
 
     move-result-object v6
 
     if-eqz v6, :cond_397
 
-    .line 3124
+    .line 3275
     invoke-virtual {v6, v13}, Lorg/telegram/tgnet/NativeByteBuffer;->readInt32(Z)I
 
     move-result v8
@@ -1112,7 +1112,7 @@
 
     move-result-object v8
 
-    .line 3125
+    .line 3276
     iget-object v9, v1, Lorg/telegram/messenger/MediaDataController$1;->this$0:Lorg/telegram/messenger/MediaDataController;
 
     invoke-virtual {v9}, Lorg/telegram/messenger/BaseController;->getUserConfig()Lorg/telegram/messenger/UserConfig;
@@ -1123,24 +1123,24 @@
 
     invoke-virtual {v8, v6, v9, v10}, Lorg/telegram/tgnet/TLRPC$Message;->readAttachPath(Lorg/telegram/tgnet/AbstractSerializedData;J)V
 
-    .line 3126
+    .line 3277
     invoke-virtual {v6}, Lorg/telegram/tgnet/NativeByteBuffer;->reuse()V
 
     const/4 v6, 0x1
 
-    .line 3127
+    .line 3278
     invoke-virtual {v5, v6}, Lorg/telegram/SQLite/SQLiteCursor;->intValue(I)I
 
     move-result v9
 
     iput v9, v8, Lorg/telegram/tgnet/TLRPC$Message;->id:I
 
-    .line 3128
+    .line 3279
     iget-wide v9, v1, Lorg/telegram/messenger/MediaDataController$1;->val$uid:J
 
     iput-wide v9, v8, Lorg/telegram/tgnet/TLRPC$Message;->dialog_id:J
 
-    .line 3129
+    .line 3280
     invoke-static {v9, v10}, Lorg/telegram/messenger/DialogObject;->isEncryptedDialog(J)Z
 
     move-result v6
@@ -1149,7 +1149,7 @@
 
     const/4 v6, 0x2
 
-    .line 3130
+    .line 3281
     invoke-virtual {v5, v6}, Lorg/telegram/SQLite/SQLiteCursor;->longValue(I)J
 
     move-result-wide v9
@@ -1164,7 +1164,7 @@
     :goto_383
     if-eqz v12, :cond_38c
 
-    .line 3133
+    .line 3284
     iget-object v9, v3, Lorg/telegram/tgnet/TLRPC$messages_Messages;->messages:Ljava/util/ArrayList;
 
     const/4 v10, 0x0
@@ -1176,12 +1176,12 @@
     :cond_38c
     const/4 v10, 0x0
 
-    .line 3135
+    .line 3286
     iget-object v9, v3, Lorg/telegram/tgnet/TLRPC$messages_Messages;->messages:Ljava/util/ArrayList;
 
     invoke-virtual {v9, v8}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 3138
+    .line 3289
     :goto_392
     invoke-static {v8, v2, v4}, Lorg/telegram/messenger/MessagesStorage;->addUsersAndChatsFromMessage(Lorg/telegram/tgnet/TLRPC$Message;Ljava/util/ArrayList;Ljava/util/ArrayList;)V
 
@@ -1197,10 +1197,10 @@
     :cond_39b
     const/4 v10, 0x0
 
-    .line 3141
+    .line 3292
     invoke-virtual {v5}, Lorg/telegram/SQLite/SQLiteCursor;->dispose()V
 
-    .line 3143
+    .line 3294
     invoke-virtual {v2}, Ljava/util/ArrayList;->isEmpty()Z
 
     move-result v5
@@ -1212,7 +1212,7 @@
 
     if-nez v5, :cond_3b6
 
-    .line 3144
+    .line 3295
     :try_start_3a7
     iget-object v5, v1, Lorg/telegram/messenger/MediaDataController$1;->this$0:Lorg/telegram/messenger/MediaDataController;
 
@@ -1228,7 +1228,7 @@
 
     invoke-virtual {v5, v2, v8}, Lorg/telegram/messenger/MessagesStorage;->getUsersInternal(Ljava/lang/String;Ljava/util/ArrayList;)V
 
-    .line 3146
+    .line 3297
     :cond_3b6
     invoke-virtual {v4}, Ljava/util/ArrayList;->isEmpty()Z
 
@@ -1236,7 +1236,7 @@
 
     if-nez v2, :cond_3cb
 
-    .line 3147
+    .line 3298
     iget-object v2, v1, Lorg/telegram/messenger/MediaDataController$1;->this$0:Lorg/telegram/messenger/MediaDataController;
 
     invoke-virtual {v2}, Lorg/telegram/messenger/BaseController;->getMessagesStorage()Lorg/telegram/messenger/MessagesStorage;
@@ -1251,7 +1251,7 @@
 
     invoke-virtual {v2, v4, v5}, Lorg/telegram/messenger/MessagesStorage;->getChatsInternal(Ljava/lang/String;Ljava/util/ArrayList;)V
 
-    .line 3149
+    .line 3300
     :cond_3cb
     iget-object v2, v3, Lorg/telegram/tgnet/TLRPC$messages_Messages;->messages:Ljava/util/ArrayList;
 
@@ -1267,7 +1267,7 @@
 
     if-nez v2, :cond_3e5
 
-    .line 3150
+    .line 3301
     iget-object v2, v3, Lorg/telegram/tgnet/TLRPC$messages_Messages;->messages:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
@@ -1282,7 +1282,7 @@
 
     goto :goto_3e9
 
-    .line 3152
+    .line 3303
     :cond_3e5
     iget v2, v1, Lorg/telegram/messenger/MediaDataController$1;->val$min_id:I
     :try_end_3e7
@@ -1299,7 +1299,7 @@
     :cond_3eb
     move v13, v7
 
-    .line 3165
+    .line 3316
     :goto_3ec
     iget v2, v1, Lorg/telegram/messenger/MediaDataController$1;->val$classGuid:I
 
@@ -1309,7 +1309,7 @@
 
     invoke-static {v4}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 3166
+    .line 3317
     iget-object v2, v1, Lorg/telegram/messenger/MediaDataController$1;->this$0:Lorg/telegram/messenger/MediaDataController;
 
     iget-wide v4, v1, Lorg/telegram/messenger/MediaDataController$1;->val$uid:J
@@ -1344,28 +1344,28 @@
 
     move-object v2, v0
 
-    .line 3159
+    .line 3310
     :try_start_410
     iget-object v4, v3, Lorg/telegram/tgnet/TLRPC$messages_Messages;->messages:Ljava/util/ArrayList;
 
     invoke-virtual {v4}, Ljava/util/ArrayList;->clear()V
 
-    .line 3160
+    .line 3311
     iget-object v4, v3, Lorg/telegram/tgnet/TLRPC$messages_Messages;->chats:Ljava/util/ArrayList;
 
     invoke-virtual {v4}, Ljava/util/ArrayList;->clear()V
 
-    .line 3161
+    .line 3312
     iget-object v4, v3, Lorg/telegram/tgnet/TLRPC$messages_Messages;->users:Ljava/util/ArrayList;
 
     invoke-virtual {v4}, Ljava/util/ArrayList;->clear()V
 
-    .line 3162
+    .line 3313
     invoke-static {v2}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
     :try_end_422
     .catchall {:try_start_410 .. :try_end_422} :catchall_40b
 
-    .line 3165
+    .line 3316
     iget v2, v1, Lorg/telegram/messenger/MediaDataController$1;->val$classGuid:I
 
     new-instance v4, Lorg/telegram/messenger/MediaDataController$1$$ExternalSyntheticLambda0;
@@ -1374,7 +1374,7 @@
 
     invoke-static {v4}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 3166
+    .line 3317
     iget-object v2, v1, Lorg/telegram/messenger/MediaDataController$1;->this$0:Lorg/telegram/messenger/MediaDataController;
 
     iget-wide v4, v1, Lorg/telegram/messenger/MediaDataController$1;->val$uid:J
@@ -1402,7 +1402,7 @@
 
     return-void
 
-    .line 3165
+    .line 3316
     :goto_445
     iget v2, v1, Lorg/telegram/messenger/MediaDataController$1;->val$classGuid:I
 
@@ -1412,7 +1412,7 @@
 
     invoke-static {v4}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 3166
+    .line 3317
     iget-object v2, v1, Lorg/telegram/messenger/MediaDataController$1;->this$0:Lorg/telegram/messenger/MediaDataController;
 
     iget-wide v4, v1, Lorg/telegram/messenger/MediaDataController$1;->val$uid:J
@@ -1437,7 +1437,7 @@
 
     invoke-static/range {v2 .. v14}, Lorg/telegram/messenger/MediaDataController;->access$000(Lorg/telegram/messenger/MediaDataController;Lorg/telegram/tgnet/TLRPC$messages_Messages;JIIIIIIZZI)V
 
-    .line 3167
+    .line 3318
     goto :goto_469
 
     :goto_468

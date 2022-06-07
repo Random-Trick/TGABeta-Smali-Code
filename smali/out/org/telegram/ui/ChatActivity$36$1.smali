@@ -1,14 +1,11 @@
 .class Lorg/telegram/ui/ChatActivity$36$1;
-.super Ljava/lang/Object;
+.super Landroid/animation/AnimatorListenerAdapter;
 .source "ChatActivity.java"
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lorg/telegram/ui/ChatActivity$36;->onTextChanged(Ljava/lang/CharSequence;Z)V
+    value = Lorg/telegram/ui/ChatActivity$36;->onTextSelectionChanged(II)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,59 +17,83 @@
 # instance fields
 .field final synthetic this$1:Lorg/telegram/ui/ChatActivity$36;
 
-.field final synthetic val$text:Ljava/lang/CharSequence;
-
 
 # direct methods
-.method constructor <init>(Lorg/telegram/ui/ChatActivity$36;Ljava/lang/CharSequence;)V
-    .registers 3
+.method constructor <init>(Lorg/telegram/ui/ChatActivity$36;)V
+    .registers 2
 
-    .line 7192
+    .line 7261
     iput-object p1, p0, Lorg/telegram/ui/ChatActivity$36$1;->this$1:Lorg/telegram/ui/ChatActivity$36;
 
-    iput-object p2, p0, Lorg/telegram/ui/ChatActivity$36$1;->val$text:Ljava/lang/CharSequence;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public run()V
-    .registers 4
+.method public onAnimationEnd(Landroid/animation/Animator;)V
+    .registers 3
 
-    .line 7195
-    iget-object v0, p0, Lorg/telegram/ui/ChatActivity$36$1;->this$1:Lorg/telegram/ui/ChatActivity$36;
+    .line 7271
+    iget-object p1, p0, Lorg/telegram/ui/ChatActivity$36$1;->this$1:Lorg/telegram/ui/ChatActivity$36;
 
-    iget-object v0, v0, Lorg/telegram/ui/ChatActivity$36;->this$0:Lorg/telegram/ui/ChatActivity;
+    iget-object p1, p1, Lorg/telegram/ui/ChatActivity$36;->this$0:Lorg/telegram/ui/ChatActivity;
 
-    invoke-static {v0}, Lorg/telegram/ui/ChatActivity;->access$27300(Lorg/telegram/ui/ChatActivity;)Ljava/lang/Runnable;
+    invoke-static {p1}, Lorg/telegram/ui/ChatActivity;->access$27400(Lorg/telegram/ui/ChatActivity;)Lorg/telegram/ui/ActionBar/ActionBar;
 
-    move-result-object v0
+    move-result-object p1
 
-    if-ne p0, v0, :cond_1c
+    const/4 v0, 0x0
 
-    .line 7196
-    iget-object v0, p0, Lorg/telegram/ui/ChatActivity$36$1;->this$1:Lorg/telegram/ui/ChatActivity$36;
+    invoke-virtual {p1, v0}, Lorg/telegram/ui/ActionBar/ActionBar;->setMenuOffsetSuppressed(Z)V
 
-    iget-object v0, v0, Lorg/telegram/ui/ChatActivity$36;->this$0:Lorg/telegram/ui/ChatActivity;
+    return-void
+.end method
 
-    iget-object v1, p0, Lorg/telegram/ui/ChatActivity$36$1;->val$text:Ljava/lang/CharSequence;
+.method public onAnimationStart(Landroid/animation/Animator;)V
+    .registers 3
 
-    const/4 v2, 0x0
+    .line 7264
+    iget-object p1, p0, Lorg/telegram/ui/ChatActivity$36$1;->this$1:Lorg/telegram/ui/ChatActivity$36;
 
-    invoke-static {v0, v1, v2}, Lorg/telegram/ui/ChatActivity;->access$27400(Lorg/telegram/ui/ChatActivity;Ljava/lang/CharSequence;Z)V
+    iget-object p1, p1, Lorg/telegram/ui/ChatActivity$36;->this$0:Lorg/telegram/ui/ChatActivity;
 
-    .line 7197
-    iget-object v0, p0, Lorg/telegram/ui/ChatActivity$36$1;->this$1:Lorg/telegram/ui/ChatActivity$36;
+    invoke-static {p1}, Lorg/telegram/ui/ChatActivity;->access$27300(Lorg/telegram/ui/ChatActivity;)Lorg/telegram/ui/ActionBar/ActionBar;
 
-    iget-object v0, v0, Lorg/telegram/ui/ChatActivity$36;->this$0:Lorg/telegram/ui/ChatActivity;
+    move-result-object p1
 
-    const/4 v1, 0x0
+    const/4 v0, 0x1
 
-    invoke-static {v0, v1}, Lorg/telegram/ui/ChatActivity;->access$27302(Lorg/telegram/ui/ChatActivity;Ljava/lang/Runnable;)Ljava/lang/Runnable;
+    invoke-virtual {p1, v0}, Lorg/telegram/ui/ActionBar/ActionBar;->setMenuOffsetSuppressed(Z)V
 
-    :cond_1c
+    .line 7265
+    iget-object p1, p0, Lorg/telegram/ui/ChatActivity$36$1;->this$1:Lorg/telegram/ui/ChatActivity$36;
+
+    iget-object p1, p1, Lorg/telegram/ui/ChatActivity$36;->this$0:Lorg/telegram/ui/ChatActivity;
+
+    invoke-static {p1}, Lorg/telegram/ui/ChatActivity;->access$6500(Lorg/telegram/ui/ChatActivity;)Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
+
+    move-result-object p1
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0}, Landroid/widget/FrameLayout;->setVisibility(I)V
+
+    .line 7266
+    iget-object p1, p0, Lorg/telegram/ui/ChatActivity$36$1;->this$1:Lorg/telegram/ui/ChatActivity$36;
+
+    iget-object p1, p1, Lorg/telegram/ui/ChatActivity$36;->val$menu:Lorg/telegram/ui/ActionBar/ActionBarMenu;
+
+    const/high16 v0, 0x42400000    # 48.0f
+
+    invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
+
+    move-result v0
+
+    int-to-float v0, v0
+
+    invoke-virtual {p1, v0}, Lorg/telegram/ui/ActionBar/ActionBarMenu;->translateXItems(F)V
+
     return-void
 .end method

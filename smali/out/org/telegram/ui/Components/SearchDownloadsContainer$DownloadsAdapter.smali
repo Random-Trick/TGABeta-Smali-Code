@@ -22,7 +22,7 @@
 .method private constructor <init>(Lorg/telegram/ui/Components/SearchDownloadsContainer;)V
     .registers 2
 
-    .line 444
+    .line 447
     iput-object p1, p0, Lorg/telegram/ui/Components/SearchDownloadsContainer$DownloadsAdapter;->this$0:Lorg/telegram/ui/Components/SearchDownloadsContainer;
 
     invoke-direct {p0}, Lorg/telegram/ui/Components/RecyclerListView$SelectionAdapter;-><init>()V
@@ -33,7 +33,7 @@
 .method synthetic constructor <init>(Lorg/telegram/ui/Components/SearchDownloadsContainer;Lorg/telegram/ui/Components/SearchDownloadsContainer$1;)V
     .registers 3
 
-    .line 444
+    .line 447
     invoke-direct {p0, p1}, Lorg/telegram/ui/Components/SearchDownloadsContainer$DownloadsAdapter;-><init>(Lorg/telegram/ui/Components/SearchDownloadsContainer;)V
 
     return-void
@@ -42,7 +42,7 @@
 .method static synthetic access$400(Lorg/telegram/ui/Components/SearchDownloadsContainer$DownloadsAdapter;I)Lorg/telegram/messenger/MessageObject;
     .registers 2
 
-    .line 444
+    .line 447
     invoke-direct {p0, p1}, Lorg/telegram/ui/Components/SearchDownloadsContainer$DownloadsAdapter;->getMessage(I)Lorg/telegram/messenger/MessageObject;
 
     move-result-object p0
@@ -53,7 +53,7 @@
 .method private getMessage(I)Lorg/telegram/messenger/MessageObject;
     .registers 5
 
-    .line 533
+    .line 541
     iget-object v0, p0, Lorg/telegram/ui/Components/SearchDownloadsContainer$DownloadsAdapter;->this$0:Lorg/telegram/ui/Components/SearchDownloadsContainer;
 
     iget v1, v0, Lorg/telegram/ui/Components/SearchDownloadsContainer;->downloadingFilesStartRow:I
@@ -64,7 +64,7 @@
 
     if-ge p1, v2, :cond_14
 
-    .line 534
+    .line 542
     iget-object v0, v0, Lorg/telegram/ui/Components/SearchDownloadsContainer;->currentLoadingFiles:Ljava/util/ArrayList;
 
     sub-int/2addr p1, v1
@@ -77,7 +77,7 @@
 
     return-object p1
 
-    .line 535
+    .line 543
     :cond_14
     iget v1, v0, Lorg/telegram/ui/Components/SearchDownloadsContainer;->recentFilesStartRow:I
 
@@ -87,7 +87,7 @@
 
     if-ge p1, v2, :cond_26
 
-    .line 536
+    .line 544
     iget-object v0, v0, Lorg/telegram/ui/Components/SearchDownloadsContainer;->recentLoadingFiles:Ljava/util/ArrayList;
 
     sub-int/2addr p1, v1
@@ -111,7 +111,7 @@
 .method public getItemCount()I
     .registers 2
 
-    .line 543
+    .line 551
     iget-object v0, p0, Lorg/telegram/ui/Components/SearchDownloadsContainer$DownloadsAdapter;->this$0:Lorg/telegram/ui/Components/SearchDownloadsContainer;
 
     iget v0, v0, Lorg/telegram/ui/Components/SearchDownloadsContainer;->rowCount:I
@@ -122,7 +122,7 @@
 .method public getItemViewType(I)I
     .registers 4
 
-    .line 519
+    .line 527
     iget-object v0, p0, Lorg/telegram/ui/Components/SearchDownloadsContainer$DownloadsAdapter;->this$0:Lorg/telegram/ui/Components/SearchDownloadsContainer;
 
     iget v1, v0, Lorg/telegram/ui/Components/SearchDownloadsContainer;->downloadingFilesHeader:I
@@ -135,7 +135,7 @@
 
     goto :goto_1c
 
-    .line 522
+    .line 530
     :cond_b
     invoke-direct {p0, p1}, Lorg/telegram/ui/Components/SearchDownloadsContainer$DownloadsAdapter;->getMessage(I)Lorg/telegram/messenger/MessageObject;
 
@@ -147,7 +147,7 @@
 
     return v0
 
-    .line 526
+    .line 534
     :cond_13
     invoke-virtual {p1}, Lorg/telegram/messenger/MessageObject;->isMusic()Z
 
@@ -172,7 +172,7 @@
 .method public isEnabled(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)Z
     .registers 4
 
-    .line 548
+    .line 556
     invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->getItemViewType()I
 
     move-result v0
@@ -202,82 +202,130 @@
 .method public onBindViewHolder(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;I)V
     .registers 10
 
-    .line 471
+    .line 474
     invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->getItemViewType()I
 
     move-result v0
 
-    if-nez v0, :cond_5a
+    if-nez v0, :cond_84
 
-    .line 473
+    .line 476
     iget-object p1, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     check-cast p1, Lorg/telegram/ui/Cells/GraySectionCell;
 
-    .line 474
+    .line 477
     iget-object v0, p0, Lorg/telegram/ui/Components/SearchDownloadsContainer$DownloadsAdapter;->this$0:Lorg/telegram/ui/Components/SearchDownloadsContainer;
 
     iget v1, v0, Lorg/telegram/ui/Components/SearchDownloadsContainer;->downloadingFilesHeader:I
 
-    if-ne p2, v1, :cond_3a
+    if-ne p2, v1, :cond_64
 
-    const p2, 0x7f0e05e5
+    const p2, 0x7f0e0637
 
     const-string v0, "Downloading"
 
-    .line 475
+    .line 478
     invoke-static {v0, p2}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object p2
 
+    .line 479
+    invoke-virtual {p1}, Lorg/telegram/ui/Cells/GraySectionCell;->getText()Ljava/lang/CharSequence;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    const v1, 0x7f0e0d5b
+
+    const-string v2, "PauseAll"
+
+    const v3, 0x7f0e0ff5
+
+    const-string v4, "ResumeAll"
+
+    if-eqz v0, :cond_49
+
+    .line 480
+    iget-object p2, p0, Lorg/telegram/ui/Components/SearchDownloadsContainer$DownloadsAdapter;->this$0:Lorg/telegram/ui/Components/SearchDownloadsContainer;
+
+    invoke-static {p2}, Lorg/telegram/ui/Components/SearchDownloadsContainer;->access$100(Lorg/telegram/ui/Components/SearchDownloadsContainer;)Z
+
+    move-result p2
+
+    if-eqz p2, :cond_3a
+
+    invoke-static {v2, v1}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
+
+    move-result-object p2
+
+    goto :goto_3e
+
+    :cond_3a
+    invoke-static {v4, v3}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
+
+    move-result-object p2
+
+    :goto_3e
     iget-object v0, p0, Lorg/telegram/ui/Components/SearchDownloadsContainer$DownloadsAdapter;->this$0:Lorg/telegram/ui/Components/SearchDownloadsContainer;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/SearchDownloadsContainer;->access$100(Lorg/telegram/ui/Components/SearchDownloadsContainer;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_27
+    invoke-virtual {p1, p2, v0}, Lorg/telegram/ui/Cells/GraySectionCell;->setRightText(Ljava/lang/String;Z)V
 
-    const v0, 0x7f0e0cd1
+    goto/16 :goto_11a
 
-    const-string v1, "PauseAll"
+    .line 482
+    :cond_49
+    iget-object v0, p0, Lorg/telegram/ui/Components/SearchDownloadsContainer$DownloadsAdapter;->this$0:Lorg/telegram/ui/Components/SearchDownloadsContainer;
 
-    goto :goto_2c
+    invoke-static {v0}, Lorg/telegram/ui/Components/SearchDownloadsContainer;->access$100(Lorg/telegram/ui/Components/SearchDownloadsContainer;)Z
 
-    :cond_27
-    const v0, 0x7f0e0f45
+    move-result v0
 
-    const-string v1, "ResumeAll"
+    if-eqz v0, :cond_56
 
-    :goto_2c
-    invoke-static {v1, v0}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
+    invoke-static {v2, v1}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v0
 
+    goto :goto_5a
+
+    :cond_56
+    invoke-static {v4, v3}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
+
+    move-result-object v0
+
+    :goto_5a
     new-instance v1, Lorg/telegram/ui/Components/SearchDownloadsContainer$DownloadsAdapter$2;
 
     invoke-direct {v1, p0}, Lorg/telegram/ui/Components/SearchDownloadsContainer$DownloadsAdapter$2;-><init>(Lorg/telegram/ui/Components/SearchDownloadsContainer$DownloadsAdapter;)V
 
     invoke-virtual {p1, p2, v0, v1}, Lorg/telegram/ui/Cells/GraySectionCell;->setText(Ljava/lang/String;Ljava/lang/String;Landroid/view/View$OnClickListener;)V
 
-    goto/16 :goto_f0
+    goto/16 :goto_11a
 
-    .line 489
-    :cond_3a
+    .line 497
+    :cond_64
     iget v0, v0, Lorg/telegram/ui/Components/SearchDownloadsContainer;->recentFilesHeader:I
 
-    if-ne p2, v0, :cond_f0
+    if-ne p2, v0, :cond_11a
 
-    const p2, 0x7f0e0e9e
+    const p2, 0x7f0e0f4a
 
     const-string v0, "RecentlyDownloaded"
 
-    .line 490
+    .line 498
     invoke-static {v0, p2}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object p2
 
-    const v0, 0x7f0e1019
+    const v0, 0x7f0e10d7
 
     const-string v1, "Settings"
 
@@ -291,50 +339,50 @@
 
     invoke-virtual {p1, p2, v0, v1}, Lorg/telegram/ui/Cells/GraySectionCell;->setText(Ljava/lang/String;Ljava/lang/String;Landroid/view/View$OnClickListener;)V
 
-    goto/16 :goto_f0
+    goto/16 :goto_11a
 
-    .line 498
-    :cond_5a
+    .line 506
+    :cond_84
     invoke-direct {p0, p2}, Lorg/telegram/ui/Components/SearchDownloadsContainer$DownloadsAdapter;->getMessage(I)Lorg/telegram/messenger/MessageObject;
 
     move-result-object p2
 
-    if-eqz p2, :cond_f0
+    if-eqz p2, :cond_11a
 
     const/4 v1, 0x0
 
     const/4 v2, 0x1
 
-    if-ne v0, v2, :cond_c0
+    if-ne v0, v2, :cond_ea
 
-    .line 501
+    .line 509
     iget-object p1, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     check-cast p1, Lorg/telegram/ui/Components/SearchDownloadsContainer$Cell;
 
     const-string v0, "windowBackgroundWhite"
 
-    .line 502
+    .line 510
     invoke-static {v0}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
 
     move-result v0
 
     invoke-virtual {p1, v0}, Landroid/widget/FrameLayout;->setBackgroundColor(I)V
 
-    .line 503
+    .line 511
     iget-object v0, p1, Lorg/telegram/ui/Components/SearchDownloadsContainer$Cell;->sharedDocumentCell:Lorg/telegram/ui/Cells/SharedDocumentCell;
 
     invoke-virtual {v0}, Lorg/telegram/ui/Cells/SharedDocumentCell;->getMessage()Lorg/telegram/messenger/MessageObject;
 
     move-result-object v0
 
-    if-nez v0, :cond_7b
+    if-nez v0, :cond_a5
 
     const/4 v0, 0x0
 
-    goto :goto_85
+    goto :goto_af
 
-    :cond_7b
+    :cond_a5
     iget-object v0, p1, Lorg/telegram/ui/Components/SearchDownloadsContainer$Cell;->sharedDocumentCell:Lorg/telegram/ui/Cells/SharedDocumentCell;
 
     invoke-virtual {v0}, Lorg/telegram/ui/Cells/SharedDocumentCell;->getMessage()Lorg/telegram/messenger/MessageObject;
@@ -345,13 +393,13 @@
 
     move-result v0
 
-    .line 504
-    :goto_85
+    .line 512
+    :goto_af
     iget-object v3, p1, Lorg/telegram/ui/Components/SearchDownloadsContainer$Cell;->sharedDocumentCell:Lorg/telegram/ui/Cells/SharedDocumentCell;
 
     invoke-virtual {v3, p2, v2}, Lorg/telegram/ui/Cells/SharedDocumentCell;->setDocument(Lorg/telegram/messenger/MessageObject;Z)V
 
-    .line 505
+    .line 513
     iget-object v3, p0, Lorg/telegram/ui/Components/SearchDownloadsContainer$DownloadsAdapter;->this$0:Lorg/telegram/ui/Components/SearchDownloadsContainer;
 
     invoke-static {v3}, Lorg/telegram/ui/Components/SearchDownloadsContainer;->access$300(Lorg/telegram/ui/Components/SearchDownloadsContainer;)Lorg/telegram/ui/FilteredSearchView$MessageHashId;
@@ -380,7 +428,7 @@
 
     invoke-virtual {v3, v4, v5, v6}, Lorg/telegram/ui/FilteredSearchView$MessageHashId;->set(IJ)V
 
-    .line 506
+    .line 514
     iget-object p1, p1, Lorg/telegram/ui/Components/SearchDownloadsContainer$Cell;->sharedDocumentCell:Lorg/telegram/ui/Cells/SharedDocumentCell;
 
     iget-object v3, p0, Lorg/telegram/ui/Components/SearchDownloadsContainer$DownloadsAdapter;->this$0:Lorg/telegram/ui/Components/SearchDownloadsContainer;
@@ -399,40 +447,40 @@
 
     move-result p2
 
-    if-ne v0, p2, :cond_bc
+    if-ne v0, p2, :cond_e6
 
     const/4 v1, 0x1
 
-    :cond_bc
+    :cond_e6
     invoke-virtual {p1, v3, v1}, Lorg/telegram/ui/Cells/SharedDocumentCell;->setChecked(ZZ)V
 
-    goto :goto_f0
+    goto :goto_11a
 
-    :cond_c0
+    :cond_ea
     const/4 v3, 0x2
 
-    if-ne v0, v3, :cond_f0
+    if-ne v0, v3, :cond_11a
 
-    .line 508
+    .line 516
     iget-object p1, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     check-cast p1, Lorg/telegram/ui/Cells/SharedAudioCell;
 
-    .line 509
+    .line 517
     invoke-virtual {p1, p2, v2}, Lorg/telegram/ui/Cells/SharedAudioCell;->setMessageObject(Lorg/telegram/messenger/MessageObject;Z)V
 
-    .line 510
+    .line 518
     invoke-virtual {p1}, Lorg/telegram/ui/Cells/SharedAudioCell;->getMessage()Lorg/telegram/messenger/MessageObject;
 
     move-result-object v0
 
-    if-nez v0, :cond_d2
+    if-nez v0, :cond_fc
 
     const/4 v0, 0x0
 
-    goto :goto_da
+    goto :goto_104
 
-    :cond_d2
+    :cond_fc
     invoke-virtual {p1}, Lorg/telegram/ui/Cells/SharedAudioCell;->getMessage()Lorg/telegram/messenger/MessageObject;
 
     move-result-object v0
@@ -441,8 +489,8 @@
 
     move-result v0
 
-    .line 511
-    :goto_da
+    .line 519
+    :goto_104
     iget-object v3, p0, Lorg/telegram/ui/Components/SearchDownloadsContainer$DownloadsAdapter;->this$0:Lorg/telegram/ui/Components/SearchDownloadsContainer;
 
     iget-object v4, v3, Lorg/telegram/ui/Components/SearchDownloadsContainer;->uiCallback:Lorg/telegram/ui/FilteredSearchView$UiCallback;
@@ -459,15 +507,15 @@
 
     move-result p2
 
-    if-ne v0, p2, :cond_ed
+    if-ne v0, p2, :cond_117
 
     const/4 v1, 0x1
 
-    :cond_ed
+    :cond_117
     invoke-virtual {p1, v3, v1}, Lorg/telegram/ui/Cells/SharedAudioCell;->setChecked(ZZ)V
 
-    :cond_f0
-    :goto_f0
+    :cond_11a
+    :goto_11a
     return-void
 .end method
 
@@ -476,7 +524,7 @@
 
     if-nez p2, :cond_c
 
-    .line 451
+    .line 454
     new-instance p2, Lorg/telegram/ui/Cells/GraySectionCell;
 
     invoke-virtual {p1}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
@@ -492,7 +540,7 @@
 
     if-ne p2, v0, :cond_1b
 
-    .line 453
+    .line 456
     new-instance p2, Lorg/telegram/ui/Components/SearchDownloadsContainer$Cell;
 
     iget-object v0, p0, Lorg/telegram/ui/Components/SearchDownloadsContainer$DownloadsAdapter;->this$0:Lorg/telegram/ui/Components/SearchDownloadsContainer;
@@ -505,7 +553,7 @@
 
     goto :goto_24
 
-    .line 456
+    .line 459
     :cond_1b
     new-instance p2, Lorg/telegram/ui/Components/SearchDownloadsContainer$DownloadsAdapter$1;
 
@@ -515,7 +563,7 @@
 
     invoke-direct {p2, p0, p1}, Lorg/telegram/ui/Components/SearchDownloadsContainer$DownloadsAdapter$1;-><init>(Lorg/telegram/ui/Components/SearchDownloadsContainer$DownloadsAdapter;Landroid/content/Context;)V
 
-    .line 464
+    .line 467
     :goto_24
     new-instance p1, Landroidx/recyclerview/widget/RecyclerView$LayoutParams;
 
@@ -527,7 +575,7 @@
 
     invoke-virtual {p2, p1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 465
+    .line 468
     new-instance p1, Lorg/telegram/ui/Components/RecyclerListView$Holder;
 
     invoke-direct {p1, p2}, Lorg/telegram/ui/Components/RecyclerListView$Holder;-><init>(Landroid/view/View;)V

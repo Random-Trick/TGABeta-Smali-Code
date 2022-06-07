@@ -997,7 +997,7 @@
     .line 1539
     iget-object v0, p0, Lorg/telegram/ui/Components/ThemeEditorView;->windowView:Landroid/widget/FrameLayout;
 
-    const v1, 0x7f0703ee
+    const v1, 0x7f0703e4
 
     invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->setBackgroundResource(I)V
 

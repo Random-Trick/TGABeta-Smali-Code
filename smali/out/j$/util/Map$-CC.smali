@@ -223,6 +223,136 @@
     return-object p2
 .end method
 
+.method public static $default$putIfAbsent(Ljava/util/Map;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .registers 4
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(TK;TV;)TV;"
+        }
+    .end annotation
+
+    invoke-interface {p0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    if-nez v0, :cond_a
+
+    invoke-interface {p0, p1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    :cond_a
+    return-object v0
+.end method
+
+.method public static $default$remove(Ljava/util/Map;Ljava/lang/Object;Ljava/lang/Object;)Z
+    .registers 4
+
+    invoke-interface {p0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-static {v0, p2}, Lj$/util/a;->x(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p2
+
+    if-eqz p2, :cond_18
+
+    if-nez v0, :cond_13
+
+    invoke-interface {p0, p1}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
+
+    move-result p2
+
+    if-nez p2, :cond_13
+
+    goto :goto_18
+
+    :cond_13
+    invoke-interface {p0, p1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_18
+    :goto_18
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public static $default$replace(Ljava/util/Map;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .registers 5
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(TK;TV;)TV;"
+        }
+    .end annotation
+
+    invoke-interface {p0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    if-nez v0, :cond_c
+
+    invoke-interface {p0, p1}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_10
+
+    :cond_c
+    invoke-interface {p0, p1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    :cond_10
+    return-object v0
+.end method
+
+.method public static $default$replace(Ljava/util/Map;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Z
+    .registers 5
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(TK;TV;TV;)Z"
+        }
+    .end annotation
+
+    invoke-interface {p0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-static {v0, p2}, Lj$/util/a;->x(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p2
+
+    if-eqz p2, :cond_18
+
+    if-nez v0, :cond_13
+
+    invoke-interface {p0, p1}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
+
+    move-result p2
+
+    if-nez p2, :cond_13
+
+    goto :goto_18
+
+    :cond_13
+    invoke-interface {p0, p1, p3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_18
+    :goto_18
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
 .method public static $default$replaceAll(Ljava/util/Map;Lj$/util/function/BiFunction;)V
     .registers 5
     .annotation system Ldalvik/annotation/Signature;

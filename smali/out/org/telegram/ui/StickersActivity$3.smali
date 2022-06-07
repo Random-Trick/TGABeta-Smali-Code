@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/StickersActivity;)V
     .registers 2
 
-    .line 279
+    .line 290
     iput-object p1, p0, Lorg/telegram/ui/StickersActivity$3;->this$0:Lorg/telegram/ui/StickersActivity;
 
     invoke-direct {p0}, Lorg/telegram/ui/Components/TrendingStickersLayout$Delegate;-><init>()V
@@ -35,10 +35,10 @@
 .method public onStickerSetAdd(Lorg/telegram/tgnet/TLRPC$StickerSetCovered;Z)V
     .registers 10
 
-    .line 282
+    .line 293
     iget-object p2, p0, Lorg/telegram/ui/StickersActivity$3;->this$0:Lorg/telegram/ui/StickersActivity;
 
-    invoke-static {p2}, Lorg/telegram/ui/StickersActivity;->access$3900(Lorg/telegram/ui/StickersActivity;)I
+    invoke-static {p2}, Lorg/telegram/ui/StickersActivity;->access$5300(Lorg/telegram/ui/StickersActivity;)I
 
     move-result p2
 
@@ -70,10 +70,10 @@
 .method public onStickerSetRemove(Lorg/telegram/tgnet/TLRPC$StickerSetCovered;)V
     .registers 10
 
-    .line 287
+    .line 298
     iget-object v0, p0, Lorg/telegram/ui/StickersActivity$3;->this$0:Lorg/telegram/ui/StickersActivity;
 
-    invoke-static {v0}, Lorg/telegram/ui/StickersActivity;->access$4000(Lorg/telegram/ui/StickersActivity;)I
+    invoke-static {v0}, Lorg/telegram/ui/StickersActivity;->access$5400(Lorg/telegram/ui/StickersActivity;)I
 
     move-result v0
 

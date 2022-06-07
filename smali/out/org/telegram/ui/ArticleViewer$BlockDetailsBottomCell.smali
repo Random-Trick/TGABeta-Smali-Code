@@ -18,10 +18,10 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .registers 2
 
-    .line 9187
+    .line 9188
     invoke-direct {p0, p1}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
-    .line 9184
+    .line 9185
     new-instance p1, Landroid/graphics/RectF;
 
     invoke-direct {p1}, Landroid/graphics/RectF;-><init>()V
@@ -34,7 +34,7 @@
 .method protected onDraw(Landroid/graphics/Canvas;)V
     .registers 9
 
-    .line 9197
+    .line 9198
     invoke-virtual {p0}, Landroid/view/View;->getMeasuredWidth()I
 
     move-result v0
@@ -61,7 +61,7 @@
 .method protected onMeasure(II)V
     .registers 3
 
-    .line 9192
+    .line 9193
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result p1

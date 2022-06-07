@@ -18,7 +18,7 @@
 .method constructor <init>(Lorg/telegram/ui/PhotoViewer$29;Landroid/content/Context;)V
     .registers 3
 
-    .line 5743
+    .line 5874
     invoke-direct {p0, p2}, Landroidx/recyclerview/widget/LinearSmoothScrollerEnd;-><init>(Landroid/content/Context;)V
 
     return-void
@@ -29,7 +29,7 @@
 .method protected calculateTimeForDeceleration(I)I
     .registers 3
 
-    .line 5746
+    .line 5877
     invoke-super {p0, p1}, Landroidx/recyclerview/widget/LinearSmoothScrollerEnd;->calculateTimeForDeceleration(I)I
 
     move-result p1

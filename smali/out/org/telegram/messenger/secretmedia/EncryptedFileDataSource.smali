@@ -390,19 +390,21 @@
     move-result p3
 
     .line 96
-    iget-object v4, p0, Lorg/telegram/messenger/secretmedia/EncryptedFileDataSource;->key:[B
+    iget-object v1, p0, Lorg/telegram/messenger/secretmedia/EncryptedFileDataSource;->key:[B
 
-    iget-object v5, p0, Lorg/telegram/messenger/secretmedia/EncryptedFileDataSource;->iv:[B
+    iget-object v2, p0, Lorg/telegram/messenger/secretmedia/EncryptedFileDataSource;->iv:[B
 
-    iget v8, p0, Lorg/telegram/messenger/secretmedia/EncryptedFileDataSource;->fileOffset:I
+    int-to-long v7, p3
 
-    move-object v3, p1
+    iget v6, p0, Lorg/telegram/messenger/secretmedia/EncryptedFileDataSource;->fileOffset:I
 
-    move v6, p2
+    move-object v0, p1
 
-    move v7, p3
+    move v3, p2
 
-    invoke-static/range {v3 .. v8}, Lorg/telegram/messenger/Utilities;->aesCtrDecryptionByteArray([B[B[BIII)V
+    move-wide v4, v7
+
+    invoke-static/range {v0 .. v6}, Lorg/telegram/messenger/Utilities;->aesCtrDecryptionByteArray([B[B[BIJI)V
 
     .line 97
     iget p1, p0, Lorg/telegram/messenger/secretmedia/EncryptedFileDataSource;->fileOffset:I
@@ -410,17 +412,15 @@
     add-int/2addr p1, p3
 
     iput p1, p0, Lorg/telegram/messenger/secretmedia/EncryptedFileDataSource;->fileOffset:I
-    :try_end_2b
-    .catch Ljava/io/IOException; {:try_start_e .. :try_end_2b} :catch_37
+    :try_end_2c
+    .catch Ljava/io/IOException; {:try_start_e .. :try_end_2c} :catch_37
 
     if-lez p3, :cond_36
 
     .line 103
     iget-wide p1, p0, Lorg/telegram/messenger/secretmedia/EncryptedFileDataSource;->bytesRemaining:J
 
-    int-to-long v0, p3
-
-    sub-long/2addr p1, v0
+    sub-long/2addr p1, v7
 
     iput-wide p1, p0, Lorg/telegram/messenger/secretmedia/EncryptedFileDataSource;->bytesRemaining:J
 

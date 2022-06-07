@@ -2,38 +2,62 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Ljava/util/Comparator;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic f$0:Ljava/util/ArrayList;
+.field public final synthetic f$0:Lorg/telegram/messenger/MediaDataController;
+
+.field public final synthetic f$1:Z
+
+.field public final synthetic f$2:Lorg/telegram/tgnet/TLRPC$TL_messages_stickerSet;
+
+.field public final synthetic f$3:I
+
+.field public final synthetic f$4:Ljava/lang/String;
+
+.field public final synthetic f$5:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/util/ArrayList;)V
-    .registers 2
+.method public synthetic constructor <init>(Lorg/telegram/messenger/MediaDataController;ZLorg/telegram/tgnet/TLRPC$TL_messages_stickerSet;ILjava/lang/String;Z)V
+    .registers 7
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lorg/telegram/messenger/MediaDataController$$ExternalSyntheticLambda117;->f$0:Ljava/util/ArrayList;
+    iput-object p1, p0, Lorg/telegram/messenger/MediaDataController$$ExternalSyntheticLambda117;->f$0:Lorg/telegram/messenger/MediaDataController;
+
+    iput-boolean p2, p0, Lorg/telegram/messenger/MediaDataController$$ExternalSyntheticLambda117;->f$1:Z
+
+    iput-object p3, p0, Lorg/telegram/messenger/MediaDataController$$ExternalSyntheticLambda117;->f$2:Lorg/telegram/tgnet/TLRPC$TL_messages_stickerSet;
+
+    iput p4, p0, Lorg/telegram/messenger/MediaDataController$$ExternalSyntheticLambda117;->f$3:I
+
+    iput-object p5, p0, Lorg/telegram/messenger/MediaDataController$$ExternalSyntheticLambda117;->f$4:Ljava/lang/String;
+
+    iput-boolean p6, p0, Lorg/telegram/messenger/MediaDataController$$ExternalSyntheticLambda117;->f$5:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final compare(Ljava/lang/Object;Ljava/lang/Object;)I
-    .registers 4
+.method public final run()V
+    .registers 7
 
-    iget-object v0, p0, Lorg/telegram/messenger/MediaDataController$$ExternalSyntheticLambda117;->f$0:Ljava/util/ArrayList;
+    iget-object v0, p0, Lorg/telegram/messenger/MediaDataController$$ExternalSyntheticLambda117;->f$0:Lorg/telegram/messenger/MediaDataController;
 
-    check-cast p1, Lorg/telegram/tgnet/TLRPC$TL_messages_stickerSet;
+    iget-boolean v1, p0, Lorg/telegram/messenger/MediaDataController$$ExternalSyntheticLambda117;->f$1:Z
 
-    check-cast p2, Lorg/telegram/tgnet/TLRPC$TL_messages_stickerSet;
+    iget-object v2, p0, Lorg/telegram/messenger/MediaDataController$$ExternalSyntheticLambda117;->f$2:Lorg/telegram/tgnet/TLRPC$TL_messages_stickerSet;
 
-    invoke-static {v0, p1, p2}, Lorg/telegram/messenger/MediaDataController;->$r8$lambda$J8r7DEf75ZjPwwM1b12IsxzwYSI(Ljava/util/ArrayList;Lorg/telegram/tgnet/TLRPC$TL_messages_stickerSet;Lorg/telegram/tgnet/TLRPC$TL_messages_stickerSet;)I
+    iget v3, p0, Lorg/telegram/messenger/MediaDataController$$ExternalSyntheticLambda117;->f$3:I
 
-    move-result p1
+    iget-object v4, p0, Lorg/telegram/messenger/MediaDataController$$ExternalSyntheticLambda117;->f$4:Ljava/lang/String;
 
-    return p1
+    iget-boolean v5, p0, Lorg/telegram/messenger/MediaDataController$$ExternalSyntheticLambda117;->f$5:Z
+
+    invoke-static/range {v0 .. v5}, Lorg/telegram/messenger/MediaDataController;->$r8$lambda$pMmeWHEL4XwPJTsDn63xY1ZK8L8(Lorg/telegram/messenger/MediaDataController;ZLorg/telegram/tgnet/TLRPC$TL_messages_stickerSet;ILjava/lang/String;Z)V
+
+    return-void
 .end method

@@ -8,22 +8,22 @@
 # instance fields
 .field public final synthetic f$0:Lorg/telegram/ui/GroupCallActivity;
 
-.field public final synthetic f$1:Lorg/telegram/tgnet/TLRPC$Chat;
+.field public final synthetic f$1:I
 
-.field public final synthetic f$2:Lorg/telegram/tgnet/TLRPC$InputPeer;
+.field public final synthetic f$2:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(Lorg/telegram/ui/GroupCallActivity;Lorg/telegram/tgnet/TLRPC$Chat;Lorg/telegram/tgnet/TLRPC$InputPeer;)V
+.method public synthetic constructor <init>(Lorg/telegram/ui/GroupCallActivity;IZ)V
     .registers 4
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lorg/telegram/ui/GroupCallActivity$$ExternalSyntheticLambda51;->f$0:Lorg/telegram/ui/GroupCallActivity;
 
-    iput-object p2, p0, Lorg/telegram/ui/GroupCallActivity$$ExternalSyntheticLambda51;->f$1:Lorg/telegram/tgnet/TLRPC$Chat;
+    iput p2, p0, Lorg/telegram/ui/GroupCallActivity$$ExternalSyntheticLambda51;->f$1:I
 
-    iput-object p3, p0, Lorg/telegram/ui/GroupCallActivity$$ExternalSyntheticLambda51;->f$2:Lorg/telegram/tgnet/TLRPC$InputPeer;
+    iput-boolean p3, p0, Lorg/telegram/ui/GroupCallActivity$$ExternalSyntheticLambda51;->f$2:Z
 
     return-void
 .end method
@@ -35,11 +35,11 @@
 
     iget-object v0, p0, Lorg/telegram/ui/GroupCallActivity$$ExternalSyntheticLambda51;->f$0:Lorg/telegram/ui/GroupCallActivity;
 
-    iget-object v1, p0, Lorg/telegram/ui/GroupCallActivity$$ExternalSyntheticLambda51;->f$1:Lorg/telegram/tgnet/TLRPC$Chat;
+    iget v1, p0, Lorg/telegram/ui/GroupCallActivity$$ExternalSyntheticLambda51;->f$1:I
 
-    iget-object v2, p0, Lorg/telegram/ui/GroupCallActivity$$ExternalSyntheticLambda51;->f$2:Lorg/telegram/tgnet/TLRPC$InputPeer;
+    iget-boolean v2, p0, Lorg/telegram/ui/GroupCallActivity$$ExternalSyntheticLambda51;->f$2:Z
 
-    invoke-static {v0, v1, v2, p1, p2}, Lorg/telegram/ui/GroupCallActivity;->$r8$lambda$oCNBaW1V6F02iRrkh0hgThllxcw(Lorg/telegram/ui/GroupCallActivity;Lorg/telegram/tgnet/TLRPC$Chat;Lorg/telegram/tgnet/TLRPC$InputPeer;Lorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/TLRPC$TL_error;)V
+    invoke-static {v0, v1, v2, p1, p2}, Lorg/telegram/ui/GroupCallActivity;->$r8$lambda$wFaGoMjsJGkaqDi86mbpgpdvK-g(Lorg/telegram/ui/GroupCallActivity;IZLorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/TLRPC$TL_error;)V
 
     return-void
 .end method

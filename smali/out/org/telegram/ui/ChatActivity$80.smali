@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lorg/telegram/ui/ChatActivity;->openPhotosEditor(Ljava/util/ArrayList;Ljava/lang/CharSequence;)Z
+    value = Lorg/telegram/ui/ChatActivity;->openVideoEditor(Ljava/lang/String;Ljava/lang/String;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -17,21 +17,21 @@
 # instance fields
 .field final synthetic this$0:Lorg/telegram/ui/ChatActivity;
 
-.field final synthetic val$checked:[Z
+.field final synthetic val$cameraPhoto:Ljava/util/ArrayList;
 
-.field final synthetic val$entries:Ljava/util/ArrayList;
+.field final synthetic val$thumb:Landroid/graphics/Bitmap;
 
 
 # direct methods
-.method constructor <init>(Lorg/telegram/ui/ChatActivity;Ljava/util/ArrayList;[Z)V
+.method constructor <init>(Lorg/telegram/ui/ChatActivity;Landroid/graphics/Bitmap;Ljava/util/ArrayList;)V
     .registers 4
 
-    .line 13471
+    .line 13548
     iput-object p1, p0, Lorg/telegram/ui/ChatActivity$80;->this$0:Lorg/telegram/ui/ChatActivity;
 
-    iput-object p2, p0, Lorg/telegram/ui/ChatActivity$80;->val$entries:Ljava/util/ArrayList;
+    iput-object p2, p0, Lorg/telegram/ui/ChatActivity$80;->val$thumb:Landroid/graphics/Bitmap;
 
-    iput-object p3, p0, Lorg/telegram/ui/ChatActivity$80;->val$checked:[Z
+    iput-object p3, p0, Lorg/telegram/ui/ChatActivity$80;->val$cameraPhoto:Ljava/util/ArrayList;
 
     invoke-direct {p0}, Lorg/telegram/ui/PhotoViewer$EmptyPhotoViewerProvider;-><init>()V
 
@@ -49,69 +49,49 @@
 .end method
 
 .method public getThumbForPhoto(Lorg/telegram/messenger/MessageObject;Lorg/telegram/tgnet/TLRPC$FileLocation;I)Lorg/telegram/messenger/ImageReceiver$BitmapHolder;
-    .registers 4
+    .registers 5
 
-    const/4 p1, 0x0
+    .line 13551
+    new-instance p1, Lorg/telegram/messenger/ImageReceiver$BitmapHolder;
+
+    iget-object p2, p0, Lorg/telegram/ui/ChatActivity$80;->val$thumb:Landroid/graphics/Bitmap;
+
+    const/4 p3, 0x0
+
+    const/4 v0, 0x0
+
+    invoke-direct {p1, p2, p3, v0}, Lorg/telegram/messenger/ImageReceiver$BitmapHolder;-><init>(Landroid/graphics/Bitmap;Ljava/lang/String;I)V
 
     return-object p1
 .end method
 
-.method public isPhotoChecked(I)Z
-    .registers 3
-
-    .line 13494
-    iget-object v0, p0, Lorg/telegram/ui/ChatActivity$80;->val$checked:[Z
-
-    aget-boolean p1, v0, p1
-
-    return p1
-.end method
-
 .method public sendButtonPressed(ILorg/telegram/messenger/VideoEditedInfo;ZIZ)V
-    .registers 6
+    .registers 12
 
-    .line 13479
-    iget-object p1, p0, Lorg/telegram/ui/ChatActivity$80;->val$entries:Ljava/util/ArrayList;
+    .line 13556
+    iget-object v0, p0, Lorg/telegram/ui/ChatActivity$80;->this$0:Lorg/telegram/ui/ChatActivity;
 
-    invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
+    iget-object p1, p0, Lorg/telegram/ui/ChatActivity$80;->val$cameraPhoto:Ljava/util/ArrayList;
 
-    move-result p1
+    const/4 v1, 0x0
 
-    add-int/lit8 p1, p1, -0x1
+    invoke-virtual {p1, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
-    :goto_8
-    if-ltz p1, :cond_18
+    move-result-object p1
 
-    .line 13480
-    iget-object p2, p0, Lorg/telegram/ui/ChatActivity$80;->val$checked:[Z
+    move-object v1, p1
 
-    aget-boolean p2, p2, p1
+    check-cast v1, Lorg/telegram/messenger/MediaController$PhotoEntry;
 
-    if-nez p2, :cond_15
+    move-object v2, p2
 
-    .line 13481
-    iget-object p2, p0, Lorg/telegram/ui/ChatActivity$80;->val$entries:Ljava/util/ArrayList;
+    move v3, p3
 
-    invoke-virtual {p2, p1}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
+    move v4, p4
 
-    :cond_15
-    add-int/lit8 p1, p1, -0x1
+    move v5, p5
 
-    goto :goto_8
-
-    .line 13484
-    :cond_18
-    iget-object p1, p0, Lorg/telegram/ui/ChatActivity$80;->this$0:Lorg/telegram/ui/ChatActivity;
-
-    iget-object p2, p0, Lorg/telegram/ui/ChatActivity$80;->val$entries:Ljava/util/ArrayList;
-
-    invoke-static {p1, p2, p3, p4, p5}, Lorg/telegram/ui/ChatActivity;->access$34400(Lorg/telegram/ui/ChatActivity;Ljava/util/ArrayList;ZIZ)V
+    invoke-virtual/range {v0 .. v5}, Lorg/telegram/ui/ChatActivity;->sendMedia(Lorg/telegram/messenger/MediaController$PhotoEntry;Lorg/telegram/messenger/VideoEditedInfo;ZIZ)V
 
     return-void
-.end method
-
-.method public setPhotoChecked(ILorg/telegram/messenger/VideoEditedInfo;)I
-    .registers 3
-
-    return p1
 .end method

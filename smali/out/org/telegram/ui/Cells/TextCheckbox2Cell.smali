@@ -636,31 +636,41 @@
     invoke-virtual {p1, v0}, Landroid/view/accessibility/AccessibilityNodeInfo;->setChecked(Z)V
 
     .line 298
-    iget-object v0, p0, Lorg/telegram/ui/Cells/TextCheckbox2Cell;->checkbox:Lorg/telegram/ui/Components/CheckBox2;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Lorg/telegram/ui/Components/CheckBox2;->isChecked()Z
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    move-result v0
+    .line 299
+    iget-object v1, p0, Lorg/telegram/ui/Cells/TextCheckbox2Cell;->textView:Landroid/widget/TextView;
 
-    if-eqz v0, :cond_23
+    invoke-virtual {v1}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
 
-    const v0, 0x7f0e0b96
+    move-result-object v1
 
-    const-string v1, "NotificationsOn"
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
-    goto :goto_28
+    .line 300
+    iget-object v1, p0, Lorg/telegram/ui/Cells/TextCheckbox2Cell;->valueTextView:Landroid/widget/TextView;
 
-    :cond_23
-    const v0, 0x7f0e0b94
+    if-eqz v1, :cond_35
 
-    const-string v1, "NotificationsOff"
+    const-string v1, "\n"
 
-    :goto_28
-    invoke-static {v1, v0}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
+    .line 301
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v0
+    .line 302
+    iget-object v1, p0, Lorg/telegram/ui/Cells/TextCheckbox2Cell;->valueTextView:Landroid/widget/TextView;
 
-    invoke-virtual {p1, v0}, Landroid/view/accessibility/AccessibilityNodeInfo;->setContentDescription(Ljava/lang/CharSequence;)V
+    invoke-virtual {v1}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
+
+    .line 304
+    :cond_35
+    invoke-virtual {p1, v0}, Landroid/view/accessibility/AccessibilityNodeInfo;->setText(Ljava/lang/CharSequence;)V
 
     return-void
 .end method

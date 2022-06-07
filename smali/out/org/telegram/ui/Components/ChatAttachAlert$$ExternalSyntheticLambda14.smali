@@ -2,46 +2,42 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroidx/dynamicanimation/animation/DynamicAnimation$OnAnimationEndListener;
+.implements Landroid/view/View$OnTouchListener;
 
 
-# instance fields
-.field public final synthetic f$0:Lorg/telegram/ui/Components/ChatAttachAlert;
-
-.field public final synthetic f$1:Ljava/lang/Runnable;
+# static fields
+.field public static final synthetic INSTANCE:Lorg/telegram/ui/Components/ChatAttachAlert$$ExternalSyntheticLambda14;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lorg/telegram/ui/Components/ChatAttachAlert;Ljava/lang/Runnable;)V
-    .registers 3
+.method static synthetic constructor <clinit>()V
+    .registers 1
+
+    new-instance v0, Lorg/telegram/ui/Components/ChatAttachAlert$$ExternalSyntheticLambda14;
+
+    invoke-direct {v0}, Lorg/telegram/ui/Components/ChatAttachAlert$$ExternalSyntheticLambda14;-><init>()V
+
+    sput-object v0, Lorg/telegram/ui/Components/ChatAttachAlert$$ExternalSyntheticLambda14;->INSTANCE:Lorg/telegram/ui/Components/ChatAttachAlert$$ExternalSyntheticLambda14;
+
+    return-void
+.end method
+
+.method private synthetic constructor <init>()V
+    .registers 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lorg/telegram/ui/Components/ChatAttachAlert$$ExternalSyntheticLambda14;->f$0:Lorg/telegram/ui/Components/ChatAttachAlert;
-
-    iput-object p2, p0, Lorg/telegram/ui/Components/ChatAttachAlert$$ExternalSyntheticLambda14;->f$1:Ljava/lang/Runnable;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onAnimationEnd(Landroidx/dynamicanimation/animation/DynamicAnimation;ZFF)V
-    .registers 11
+.method public final onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
+    .registers 3
 
-    iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlert$$ExternalSyntheticLambda14;->f$0:Lorg/telegram/ui/Components/ChatAttachAlert;
+    invoke-static {p1, p2}, Lorg/telegram/ui/Components/ChatAttachAlert;->$r8$lambda$1yvyUVCL2vlAfrSO8qsMFeCmTDk(Landroid/view/View;Landroid/view/MotionEvent;)Z
 
-    iget-object v1, p0, Lorg/telegram/ui/Components/ChatAttachAlert$$ExternalSyntheticLambda14;->f$1:Ljava/lang/Runnable;
+    move-result p1
 
-    move-object v2, p1
-
-    move v3, p2
-
-    move v4, p3
-
-    move v5, p4
-
-    invoke-static/range {v0 .. v5}, Lorg/telegram/ui/Components/ChatAttachAlert;->$r8$lambda$E_-OIHbkRYqefoIdJMalwLkQSB0(Lorg/telegram/ui/Components/ChatAttachAlert;Ljava/lang/Runnable;Landroidx/dynamicanimation/animation/DynamicAnimation;ZFF)V
-
-    return-void
+    return p1
 .end method

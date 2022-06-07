@@ -1,11 +1,11 @@
 .class Lorg/telegram/ui/Components/ChatAvatarContainer$5;
-.super Landroid/animation/AnimatorListenerAdapter;
+.super Lorg/telegram/ui/ActionBar/ActionBarPopupWindow;
 .source "ChatAvatarContainer.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lorg/telegram/ui/Components/ChatAvatarContainer;->updateSubtitle(Z)V
+    value = Lorg/telegram/ui/Components/ChatAvatarContainer;->openSetTimer()Z
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,62 +19,45 @@
 
 
 # direct methods
-.method constructor <init>(Lorg/telegram/ui/Components/ChatAvatarContainer;)V
-    .registers 2
+.method constructor <init>(Lorg/telegram/ui/Components/ChatAvatarContainer;Landroid/view/View;II)V
+    .registers 5
 
-    .line 517
+    .line 271
     iput-object p1, p0, Lorg/telegram/ui/Components/ChatAvatarContainer$5;->this$0:Lorg/telegram/ui/Components/ChatAvatarContainer;
 
-    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
+    invoke-direct {p0, p2, p3, p4}, Lorg/telegram/ui/ActionBar/ActionBarPopupWindow;-><init>(Landroid/view/View;II)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onAnimationCancel(Landroid/animation/Animator;)V
+.method public dismiss()V
     .registers 3
 
-    .line 520
-    iget-object p1, p0, Lorg/telegram/ui/Components/ChatAvatarContainer$5;->this$0:Lorg/telegram/ui/Components/ChatAvatarContainer;
+    .line 274
+    invoke-super {p0}, Lorg/telegram/ui/ActionBar/ActionBarPopupWindow;->dismiss()V
 
-    const/4 v0, 0x0
-
-    invoke-static {p1, v0}, Lorg/telegram/ui/Components/ChatAvatarContainer;->access$202(Lorg/telegram/ui/Components/ChatAvatarContainer;Landroid/animation/AnimatorSet;)Landroid/animation/AnimatorSet;
-
-    return-void
-.end method
-
-.method public onAnimationEnd(Landroid/animation/Animator;)V
-    .registers 3
-
-    .line 525
+    .line 275
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAvatarContainer$5;->this$0:Lorg/telegram/ui/Components/ChatAvatarContainer;
 
-    invoke-static {v0}, Lorg/telegram/ui/Components/ChatAvatarContainer;->access$200(Lorg/telegram/ui/Components/ChatAvatarContainer;)Landroid/animation/AnimatorSet;
+    invoke-static {v0}, Lorg/telegram/ui/Components/ChatAvatarContainer;->access$200(Lorg/telegram/ui/Components/ChatAvatarContainer;)Lorg/telegram/ui/ChatActivity;
 
     move-result-object v0
 
-    if-ne v0, p1, :cond_18
+    if-eqz v0, :cond_15
 
-    .line 526
-    iget-object p1, p0, Lorg/telegram/ui/Components/ChatAvatarContainer$5;->this$0:Lorg/telegram/ui/Components/ChatAvatarContainer;
+    .line 276
+    iget-object v0, p0, Lorg/telegram/ui/Components/ChatAvatarContainer$5;->this$0:Lorg/telegram/ui/Components/ChatAvatarContainer;
 
-    invoke-static {p1}, Lorg/telegram/ui/Components/ChatAvatarContainer;->access$300(Lorg/telegram/ui/Components/ChatAvatarContainer;)Lorg/telegram/ui/ActionBar/SimpleTextView;
+    invoke-static {v0}, Lorg/telegram/ui/Components/ChatAvatarContainer;->access$200(Lorg/telegram/ui/Components/ChatAvatarContainer;)Lorg/telegram/ui/ChatActivity;
 
-    move-result-object p1
+    move-result-object v0
 
-    const/4 v0, 0x4
+    const/4 v1, 0x0
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v0, v1}, Lorg/telegram/ui/ChatActivity;->dimBehindView(Z)V
 
-    .line 527
-    iget-object p1, p0, Lorg/telegram/ui/Components/ChatAvatarContainer$5;->this$0:Lorg/telegram/ui/Components/ChatAvatarContainer;
-
-    const/4 v0, 0x0
-
-    invoke-static {p1, v0}, Lorg/telegram/ui/Components/ChatAvatarContainer;->access$202(Lorg/telegram/ui/Components/ChatAvatarContainer;Landroid/animation/AnimatorSet;)Landroid/animation/AnimatorSet;
-
-    :cond_18
+    :cond_15
     return-void
 .end method

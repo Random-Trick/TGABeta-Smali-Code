@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/FilterUsersActivity;)V
     .registers 2
 
-    .line 711
+    .line 715
     iput-object p1, p0, Lorg/telegram/ui/FilterUsersActivity$8;->this$0:Lorg/telegram/ui/FilterUsersActivity;
 
     invoke-direct {p0}, Landroidx/recyclerview/widget/RecyclerView$OnScrollListener;-><init>()V
@@ -39,7 +39,7 @@
 
     if-ne p2, p1, :cond_c
 
-    .line 715
+    .line 719
     iget-object p1, p0, Lorg/telegram/ui/FilterUsersActivity$8;->this$0:Lorg/telegram/ui/FilterUsersActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/FilterUsersActivity;->access$000(Lorg/telegram/ui/FilterUsersActivity;)Lorg/telegram/ui/Components/EditTextBoldCursor;

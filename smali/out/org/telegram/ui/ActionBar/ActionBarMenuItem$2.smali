@@ -24,7 +24,7 @@
 .method constructor <init>(Lorg/telegram/ui/ActionBar/ActionBarMenuItem;Ljava/util/ArrayList;)V
     .registers 3
 
-    .line 792
+    .line 786
     iput-object p1, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuItem$2;->this$0:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
     iput-object p2, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuItem$2;->val$menuIcons:Ljava/util/ArrayList;
@@ -39,7 +39,7 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .registers 4
 
-    .line 795
+    .line 789
     iget-object p1, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuItem$2;->this$0:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
     invoke-static {p1}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->access$100(Lorg/telegram/ui/ActionBar/ActionBarMenuItem;)Landroid/widget/FrameLayout;
@@ -52,7 +52,7 @@
 
     const/4 p1, 0x0
 
-    .line 796
+    .line 790
     :goto_b
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuItem$2;->val$menuIcons:Ljava/util/ArrayList;
 
@@ -62,7 +62,7 @@
 
     if-ge p1, v0, :cond_23
 
-    .line 797
+    .line 791
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuItem$2;->val$menuIcons:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -79,7 +79,7 @@
 
     goto :goto_b
 
-    .line 799
+    .line 793
     :cond_23
     iget-object p1, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuItem$2;->this$0:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 

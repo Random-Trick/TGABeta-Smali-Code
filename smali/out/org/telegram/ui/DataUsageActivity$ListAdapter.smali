@@ -584,7 +584,7 @@
 
     move-result v0
 
-    const v1, 0x7f07012d
+    const v1, 0x7f0700fc
 
     const-string v2, "windowBackgroundGrayShadow"
 
@@ -621,7 +621,7 @@
 
     invoke-virtual {p1, p2}, Landroid/widget/FrameLayout;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    const p2, 0x7f0e0a7d
+    const p2, 0x7f0e0b04
 
     new-array v0, v6, [Ljava/lang/Object;
 
@@ -675,7 +675,7 @@
 
     if-ne p2, v0, :cond_66
 
-    const p2, 0x7f0e11b7
+    const p2, 0x7f0e1283
 
     const-string v0, "TotalDataUsage"
 
@@ -694,7 +694,7 @@
 
     if-ne p2, v0, :cond_78
 
-    const p2, 0x7f0e0328
+    const p2, 0x7f0e0364
 
     const-string v0, "CallsDataUsage"
 
@@ -713,7 +713,7 @@
 
     if-ne p2, v0, :cond_8a
 
-    const p2, 0x7f0e06f4
+    const p2, 0x7f0e0749
 
     const-string v0, "FilesDataUsage"
 
@@ -732,7 +732,7 @@
 
     if-ne p2, v0, :cond_9c
 
-    const p2, 0x7f0e095c
+    const p2, 0x7f0e09e3
 
     const-string v0, "LocalAudioCache"
 
@@ -751,7 +751,7 @@
 
     if-ne p2, v0, :cond_ae
 
-    const p2, 0x7f0e0967
+    const p2, 0x7f0e09ee
 
     const-string v0, "LocalVideoCache"
 
@@ -770,7 +770,7 @@
 
     if-ne p2, v0, :cond_c0
 
-    const p2, 0x7f0e0966
+    const p2, 0x7f0e09ed
 
     const-string v0, "LocalPhotoCache"
 
@@ -789,7 +789,7 @@
 
     if-ne p2, v0, :cond_311
 
-    const p2, 0x7f0e0a19
+    const p2, 0x7f0e0aa0
 
     const-string v0, "MessagesDataUsage"
 
@@ -818,7 +818,7 @@
     .line 747
     invoke-virtual {p1, p2}, Landroid/widget/FrameLayout;->setTag(Ljava/lang/Object;)V
 
-    const v0, 0x7f0e0f29
+    const v0, 0x7f0e0fd9
 
     const-string v1, "ResetStatistics"
 
@@ -1009,7 +1009,7 @@
 
     if-ne p2, v0, :cond_1a0
 
-    const p2, 0x7f0e0bdf
+    const p2, 0x7f0e0c69
 
     const-string v0, "OutgoingCalls"
 
@@ -1056,7 +1056,7 @@
 
     if-ne p2, v0, :cond_1ce
 
-    const p2, 0x7f0e0891
+    const p2, 0x7f0e08ec
 
     const-string v0, "IncomingCalls"
 
@@ -1124,7 +1124,7 @@
 
     move-result-object p2
 
-    const v0, 0x7f0e0329
+    const v0, 0x7f0e0365
 
     const-string v1, "CallsTotalTime"
 
@@ -1248,7 +1248,7 @@
     if-ne p2, v0, :cond_311
 
     :cond_259
-    const v0, 0x7f0e02fb
+    const v0, 0x7f0e0337
 
     const-string v1, "BytesReceived"
 
@@ -1290,7 +1290,7 @@
 
     :cond_280
     :goto_280
-    const p2, 0x7f0e02fc
+    const p2, 0x7f0e0338
 
     const-string v0, "BytesSent"
 
@@ -1325,7 +1325,7 @@
 
     :cond_2a1
     :goto_2a1
-    const p2, 0x7f0e04db
+    const p2, 0x7f0e052a
 
     const-string v0, "CountReceived"
 
@@ -1368,7 +1368,7 @@
 
     :cond_2ca
     :goto_2ca
-    const p2, 0x7f0e04dc
+    const p2, 0x7f0e052b
 
     const-string v0, "CountSent"
 
@@ -1434,7 +1434,7 @@
 
     iget-object p2, p0, Lorg/telegram/ui/DataUsageActivity$ListAdapter;->mContext:Landroid/content/Context;
 
-    const v0, 0x7f07012c
+    const v0, 0x7f0700fb
 
     invoke-static {p2, v0, v2}, Lorg/telegram/ui/ActionBar/Theme;->getThemedDrawable(Landroid/content/Context;ILjava/lang/String;)Landroid/graphics/drawable/Drawable;
 

@@ -47,7 +47,7 @@
 
     const/4 v1, 0x0
 
-    if-eqz v0, :cond_a1
+    if-eqz v0, :cond_a3
 
     iget-object v0, p0, Lorg/telegram/ui/Components/FragmentContextView$1;->this$0:Lorg/telegram/ui/Components/FragmentContextView;
 
@@ -59,7 +59,7 @@
 
     if-nez v0, :cond_15
 
-    goto/16 :goto_a1
+    goto/16 :goto_a3
 
     .line 159
     :cond_15
@@ -75,7 +75,7 @@
 
     move-result-object v0
 
-    if-eqz v0, :cond_95
+    if-eqz v0, :cond_97
 
     .line 160
     invoke-virtual {v0}, Lorg/telegram/messenger/ChatObject$Call;->isScheduled()Z
@@ -84,63 +84,65 @@
 
     if-nez v2, :cond_2a
 
-    goto :goto_95
+    goto :goto_97
 
     .line 165
     :cond_2a
-    iget-object v1, p0, Lorg/telegram/ui/Components/FragmentContextView$1;->this$0:Lorg/telegram/ui/Components/FragmentContextView;
+    iget-object v2, p0, Lorg/telegram/ui/Components/FragmentContextView$1;->this$0:Lorg/telegram/ui/Components/FragmentContextView;
 
-    invoke-static {v1}, Lorg/telegram/ui/Components/FragmentContextView;->access$100(Lorg/telegram/ui/Components/FragmentContextView;)Lorg/telegram/ui/ActionBar/BaseFragment;
+    invoke-static {v2}, Lorg/telegram/ui/Components/FragmentContextView;->access$100(Lorg/telegram/ui/Components/FragmentContextView;)Lorg/telegram/ui/ActionBar/BaseFragment;
 
-    move-result-object v1
+    move-result-object v2
 
-    invoke-virtual {v1}, Lorg/telegram/ui/ActionBar/BaseFragment;->getConnectionsManager()Lorg/telegram/tgnet/ConnectionsManager;
+    invoke-virtual {v2}, Lorg/telegram/ui/ActionBar/BaseFragment;->getConnectionsManager()Lorg/telegram/tgnet/ConnectionsManager;
 
-    move-result-object v1
+    move-result-object v2
 
-    invoke-virtual {v1}, Lorg/telegram/tgnet/ConnectionsManager;->getCurrentTime()I
+    invoke-virtual {v2}, Lorg/telegram/tgnet/ConnectionsManager;->getCurrentTime()I
 
-    move-result v1
+    move-result v2
 
     .line 166
     iget-object v0, v0, Lorg/telegram/messenger/ChatObject$Call;->call:Lorg/telegram/tgnet/TLRPC$GroupCall;
 
     iget v0, v0, Lorg/telegram/tgnet/TLRPC$GroupCall;->schedule_date:I
 
-    sub-int v2, v0, v1
+    sub-int v3, v0, v2
 
-    const v3, 0x15180
+    const v4, 0x15180
 
-    if-lt v2, v3, :cond_53
+    if-lt v3, v4, :cond_55
 
-    int-to-float v0, v2
+    int-to-float v0, v3
 
-    const v1, 0x47a8c000    # 86400.0f
+    const v2, 0x47a8c000    # 86400.0f
 
-    div-float/2addr v0, v1
+    div-float/2addr v0, v2
 
     .line 169
     invoke-static {v0}, Ljava/lang/Math;->round(F)I
 
     move-result v0
 
-    const-string v1, "Days"
+    new-array v1, v1, [Ljava/lang/Object;
 
-    invoke-static {v1, v0}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    const-string v2, "Days"
+
+    invoke-static {v2, v0, v1}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
-    goto :goto_58
+    goto :goto_5a
 
-    :cond_53
-    sub-int/2addr v0, v1
+    :cond_55
+    sub-int/2addr v0, v2
 
     .line 171
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->formatFullDuration(I)Ljava/lang/String;
 
     move-result-object v0
 
-    :goto_58
+    :goto_5a
     move-object v2, v0
 
     .line 173
@@ -210,8 +212,8 @@
     return-void
 
     .line 161
-    :cond_95
-    :goto_95
+    :cond_97
+    :goto_97
     iget-object v0, p0, Lorg/telegram/ui/Components/FragmentContextView$1;->this$0:Lorg/telegram/ui/Components/FragmentContextView;
 
     const/4 v2, 0x0
@@ -226,8 +228,8 @@
     return-void
 
     .line 156
-    :cond_a1
-    :goto_a1
+    :cond_a3
+    :goto_a3
     iget-object v0, p0, Lorg/telegram/ui/Components/FragmentContextView$1;->this$0:Lorg/telegram/ui/Components/FragmentContextView;
 
     invoke-static {v0, v1}, Lorg/telegram/ui/Components/FragmentContextView;->access$202(Lorg/telegram/ui/Components/FragmentContextView;Z)Z

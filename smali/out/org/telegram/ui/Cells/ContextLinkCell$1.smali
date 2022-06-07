@@ -37,7 +37,7 @@
 .method constructor <init>(Lorg/telegram/ui/Cells/ContextLinkCell;IZ)V
     .registers 4
 
-    .line 860
+    .line 866
     iput-object p1, p0, Lorg/telegram/ui/Cells/ContextLinkCell$1;->this$0:Lorg/telegram/ui/Cells/ContextLinkCell;
 
     iput p2, p0, Lorg/telegram/ui/Cells/ContextLinkCell$1;->val$localId:I
@@ -52,39 +52,39 @@
 .method private synthetic lambda$run$0(ILjava/lang/String;Ljava/io/File;ZZ)V
     .registers 8
 
-    .line 905
+    .line 911
     iget-object v0, p0, Lorg/telegram/ui/Cells/ContextLinkCell$1;->this$0:Lorg/telegram/ui/Cells/ContextLinkCell;
 
     const/4 v1, 0x0
 
     iput-boolean v1, v0, Lorg/telegram/ui/Cells/ContextLinkCell;->resolvingFileName:Z
 
-    .line 906
+    .line 912
     iget v1, v0, Lorg/telegram/ui/Cells/ContextLinkCell;->resolveFileNameId:I
 
     if-ne v1, p1, :cond_15
 
-    .line 907
+    .line 913
     iput-object p2, v0, Lorg/telegram/ui/Cells/ContextLinkCell;->fileName:Ljava/lang/String;
 
     if-nez p2, :cond_11
 
     const-string p1, ""
 
-    .line 909
+    .line 915
     iput-object p1, v0, Lorg/telegram/ui/Cells/ContextLinkCell;->fileName:Ljava/lang/String;
 
-    .line 911
+    .line 917
     :cond_11
     iput-object p3, v0, Lorg/telegram/ui/Cells/ContextLinkCell;->cacheFile:Ljava/io/File;
 
-    .line 912
+    .line 918
     iput-boolean p4, v0, Lorg/telegram/ui/Cells/ContextLinkCell;->fileExist:Z
 
     :cond_15
     const/4 p1, 0x1
 
-    .line 914
+    .line 920
     invoke-virtual {v0, p5, p1}, Lorg/telegram/ui/Cells/ContextLinkCell;->updateButtonState(ZZ)V
 
     return-void
@@ -95,7 +95,7 @@
 .method public run()V
     .registers 14
 
-    .line 865
+    .line 871
     iget-object v0, p0, Lorg/telegram/ui/Cells/ContextLinkCell$1;->this$0:Lorg/telegram/ui/Cells/ContextLinkCell;
 
     invoke-static {v0}, Lorg/telegram/ui/Cells/ContextLinkCell;->access$000(Lorg/telegram/ui/Cells/ContextLinkCell;)I
@@ -126,7 +126,7 @@
 
     goto/16 :goto_1b6
 
-    .line 873
+    .line 879
     :cond_19
     iget-object v0, p0, Lorg/telegram/ui/Cells/ContextLinkCell$1;->this$0:Lorg/telegram/ui/Cells/ContextLinkCell;
 
@@ -136,7 +136,7 @@
 
     if-eqz v0, :cond_230
 
-    .line 874
+    .line 880
     iget-object v0, p0, Lorg/telegram/ui/Cells/ContextLinkCell$1;->this$0:Lorg/telegram/ui/Cells/ContextLinkCell;
 
     invoke-static {v0}, Lorg/telegram/ui/Cells/ContextLinkCell;->access$300(Lorg/telegram/ui/Cells/ContextLinkCell;)Lorg/telegram/tgnet/TLRPC$BotInlineResult;
@@ -147,7 +147,7 @@
 
     if-eqz v0, :cond_16b
 
-    .line 875
+    .line 881
     iget-object v0, p0, Lorg/telegram/ui/Cells/ContextLinkCell$1;->this$0:Lorg/telegram/ui/Cells/ContextLinkCell;
 
     invoke-static {v0}, Lorg/telegram/ui/Cells/ContextLinkCell;->access$300(Lorg/telegram/ui/Cells/ContextLinkCell;)Lorg/telegram/tgnet/TLRPC$BotInlineResult;
@@ -160,7 +160,7 @@
 
     if-eqz v0, :cond_5a
 
-    .line 876
+    .line 882
     iget-object v0, p0, Lorg/telegram/ui/Cells/ContextLinkCell$1;->this$0:Lorg/telegram/ui/Cells/ContextLinkCell;
 
     invoke-static {v0}, Lorg/telegram/ui/Cells/ContextLinkCell;->access$300(Lorg/telegram/ui/Cells/ContextLinkCell;)Lorg/telegram/tgnet/TLRPC$BotInlineResult;
@@ -173,7 +173,7 @@
 
     move-result-object v0
 
-    .line 877
+    .line 883
     iget-object v3, p0, Lorg/telegram/ui/Cells/ContextLinkCell$1;->this$0:Lorg/telegram/ui/Cells/ContextLinkCell;
 
     invoke-static {v3}, Lorg/telegram/ui/Cells/ContextLinkCell;->access$200(Lorg/telegram/ui/Cells/ContextLinkCell;)I
@@ -198,7 +198,7 @@
 
     goto/16 :goto_194
 
-    .line 878
+    .line 884
     :cond_5a
     iget-object v0, p0, Lorg/telegram/ui/Cells/ContextLinkCell$1;->this$0:Lorg/telegram/ui/Cells/ContextLinkCell;
 
@@ -212,7 +212,7 @@
 
     if-eqz v0, :cond_9b
 
-    .line 879
+    .line 885
     iget-object v0, p0, Lorg/telegram/ui/Cells/ContextLinkCell$1;->this$0:Lorg/telegram/ui/Cells/ContextLinkCell;
 
     invoke-static {v0}, Lorg/telegram/ui/Cells/ContextLinkCell;->access$300(Lorg/telegram/ui/Cells/ContextLinkCell;)Lorg/telegram/tgnet/TLRPC$BotInlineResult;
@@ -233,7 +233,7 @@
 
     invoke-static {v0, v3}, Lorg/telegram/ui/Cells/ContextLinkCell;->access$502(Lorg/telegram/ui/Cells/ContextLinkCell;Lorg/telegram/tgnet/TLRPC$PhotoSize;)Lorg/telegram/tgnet/TLRPC$PhotoSize;
 
-    .line 880
+    .line 886
     iget-object v0, p0, Lorg/telegram/ui/Cells/ContextLinkCell$1;->this$0:Lorg/telegram/ui/Cells/ContextLinkCell;
 
     invoke-static {v0}, Lorg/telegram/ui/Cells/ContextLinkCell;->access$500(Lorg/telegram/ui/Cells/ContextLinkCell;)Lorg/telegram/tgnet/TLRPC$PhotoSize;
@@ -244,7 +244,7 @@
 
     move-result-object v0
 
-    .line 881
+    .line 887
     iget-object v3, p0, Lorg/telegram/ui/Cells/ContextLinkCell$1;->this$0:Lorg/telegram/ui/Cells/ContextLinkCell;
 
     invoke-static {v3}, Lorg/telegram/ui/Cells/ContextLinkCell;->access$200(Lorg/telegram/ui/Cells/ContextLinkCell;)I
@@ -267,7 +267,7 @@
 
     goto/16 :goto_194
 
-    .line 882
+    .line 888
     :cond_9b
     iget-object v0, p0, Lorg/telegram/ui/Cells/ContextLinkCell$1;->this$0:Lorg/telegram/ui/Cells/ContextLinkCell;
 
@@ -281,7 +281,7 @@
 
     if-eqz v0, :cond_119
 
-    .line 883
+    .line 889
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -338,7 +338,7 @@
 
     move-result-object v0
 
-    .line 884
+    .line 890
     new-instance v4, Ljava/io/File;
 
     invoke-static {v3}, Lorg/telegram/messenger/FileLoader;->getDirectory(I)Ljava/io/File;
@@ -347,7 +347,7 @@
 
     invoke-direct {v4, v3, v0}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 885
+    .line 891
     iget-object v3, p0, Lorg/telegram/ui/Cells/ContextLinkCell$1;->this$0:Lorg/telegram/ui/Cells/ContextLinkCell;
 
     invoke-static {v3}, Lorg/telegram/ui/Cells/ContextLinkCell;->access$000(Lorg/telegram/ui/Cells/ContextLinkCell;)I
@@ -398,7 +398,7 @@
 
     goto/16 :goto_194
 
-    .line 888
+    .line 894
     :cond_119
     iget-object v0, p0, Lorg/telegram/ui/Cells/ContextLinkCell$1;->this$0:Lorg/telegram/ui/Cells/ContextLinkCell;
 
@@ -412,7 +412,7 @@
 
     if-eqz v0, :cond_192
 
-    .line 889
+    .line 895
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -469,7 +469,7 @@
 
     move-result-object v0
 
-    .line 890
+    .line 896
     new-instance v4, Ljava/io/File;
 
     invoke-static {v3}, Lorg/telegram/messenger/FileLoader;->getDirectory(I)Ljava/io/File;
@@ -480,7 +480,7 @@
 
     goto :goto_116
 
-    .line 892
+    .line 898
     :cond_16b
     iget-object v0, p0, Lorg/telegram/ui/Cells/ContextLinkCell$1;->this$0:Lorg/telegram/ui/Cells/ContextLinkCell;
 
@@ -490,7 +490,7 @@
 
     if-eqz v0, :cond_192
 
-    .line 893
+    .line 899
     iget-object v0, p0, Lorg/telegram/ui/Cells/ContextLinkCell$1;->this$0:Lorg/telegram/ui/Cells/ContextLinkCell;
 
     invoke-static {v0}, Lorg/telegram/ui/Cells/ContextLinkCell;->access$100(Lorg/telegram/ui/Cells/ContextLinkCell;)Lorg/telegram/tgnet/TLRPC$Document;
@@ -501,7 +501,7 @@
 
     move-result-object v0
 
-    .line 894
+    .line 900
     iget-object v3, p0, Lorg/telegram/ui/Cells/ContextLinkCell$1;->this$0:Lorg/telegram/ui/Cells/ContextLinkCell;
 
     invoke-static {v3}, Lorg/telegram/ui/Cells/ContextLinkCell;->access$200(Lorg/telegram/ui/Cells/ContextLinkCell;)I
@@ -529,7 +529,7 @@
 
     move-object v3, v0
 
-    .line 897
+    .line 903
     :goto_194
     iget-object v4, p0, Lorg/telegram/ui/Cells/ContextLinkCell$1;->this$0:Lorg/telegram/ui/Cells/ContextLinkCell;
 
@@ -570,7 +570,7 @@
 
     goto/16 :goto_232
 
-    .line 866
+    .line 872
     :cond_1b6
     :goto_1b6
     iget-object v0, p0, Lorg/telegram/ui/Cells/ContextLinkCell$1;->this$0:Lorg/telegram/ui/Cells/ContextLinkCell;
@@ -581,7 +581,7 @@
 
     if-eqz v0, :cond_1df
 
-    .line 867
+    .line 873
     iget-object v0, p0, Lorg/telegram/ui/Cells/ContextLinkCell$1;->this$0:Lorg/telegram/ui/Cells/ContextLinkCell;
 
     invoke-static {v0}, Lorg/telegram/ui/Cells/ContextLinkCell;->access$100(Lorg/telegram/ui/Cells/ContextLinkCell;)Lorg/telegram/tgnet/TLRPC$Document;
@@ -592,7 +592,7 @@
 
     move-result-object v5
 
-    .line 868
+    .line 874
     iget-object v0, p0, Lorg/telegram/ui/Cells/ContextLinkCell$1;->this$0:Lorg/telegram/ui/Cells/ContextLinkCell;
 
     invoke-static {v0}, Lorg/telegram/ui/Cells/ContextLinkCell;->access$200(Lorg/telegram/ui/Cells/ContextLinkCell;)I
@@ -621,7 +621,7 @@
 
     goto :goto_232
 
-    .line 869
+    .line 875
     :cond_1df
     iget-object v0, p0, Lorg/telegram/ui/Cells/ContextLinkCell$1;->this$0:Lorg/telegram/ui/Cells/ContextLinkCell;
 
@@ -635,7 +635,7 @@
 
     if-eqz v0, :cond_230
 
-    .line 870
+    .line 876
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -694,7 +694,7 @@
 
     move-result-object v5
 
-    .line 871
+    .line 877
     new-instance v0, Ljava/io/File;
 
     invoke-static {v3}, Lorg/telegram/messenger/FileLoader;->getDirectory(I)Ljava/io/File;
@@ -710,7 +710,7 @@
 
     move-object v10, v9
 
-    .line 903
+    .line 909
     :goto_232
     invoke-static {v9}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -733,7 +733,7 @@
 
     const/4 v11, 0x0
 
-    .line 904
+    .line 910
     :goto_242
     iget v8, p0, Lorg/telegram/ui/Cells/ContextLinkCell$1;->val$localId:I
 

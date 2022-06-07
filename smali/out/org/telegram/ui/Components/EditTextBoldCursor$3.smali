@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/EditTextBoldCursor;)V
     .registers 2
 
-    .line 287
+    .line 289
     iput-object p1, p0, Lorg/telegram/ui/Components/EditTextBoldCursor$3;->this$0:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     invoke-direct {p0}, Landroid/graphics/drawable/ShapeDrawable;-><init>()V
@@ -35,7 +35,7 @@
 .method public draw(Landroid/graphics/Canvas;)V
     .registers 4
 
-    .line 291
+    .line 293
     iget-object v0, p0, Lorg/telegram/ui/Components/EditTextBoldCursor$3;->this$0:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     iget-boolean v1, v0, Lorg/telegram/ui/Components/EditTextBoldCursor;->drawInMaim:Z
@@ -44,12 +44,12 @@
 
     const/4 p1, 0x1
 
-    .line 292
+    .line 294
     invoke-static {v0, p1}, Lorg/telegram/ui/Components/EditTextBoldCursor;->access$202(Lorg/telegram/ui/Components/EditTextBoldCursor;Z)Z
 
     goto :goto_e
 
-    .line 294
+    .line 296
     :cond_b
     invoke-super {p0, p1}, Landroid/graphics/drawable/ShapeDrawable;->draw(Landroid/graphics/Canvas;)V
 
@@ -60,7 +60,7 @@
 .method public getIntrinsicHeight()I
     .registers 2
 
-    .line 300
+    .line 302
     iget-object v0, p0, Lorg/telegram/ui/Components/EditTextBoldCursor$3;->this$0:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/EditTextBoldCursor;->access$300(Lorg/telegram/ui/Components/EditTextBoldCursor;)I
@@ -81,7 +81,7 @@
 .method public getIntrinsicWidth()I
     .registers 2
 
-    .line 305
+    .line 307
     iget-object v0, p0, Lorg/telegram/ui/Components/EditTextBoldCursor$3;->this$0:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/EditTextBoldCursor;->access$400(Lorg/telegram/ui/Components/EditTextBoldCursor;)F

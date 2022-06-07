@@ -790,7 +790,7 @@
     .line 1685
     iget-object p1, p0, Lorg/telegram/ui/Components/WebPlayerView;->shareButton:Landroid/widget/ImageView;
 
-    const p2, 0x7f070179
+    const p2, 0x7f07013c
 
     invoke-virtual {p1, p2}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -2248,7 +2248,7 @@
     .line 1918
     iget-object v0, p0, Lorg/telegram/ui/Components/WebPlayerView;->fullscreenButton:Landroid/widget/ImageView;
 
-    const v1, 0x7f070162
+    const v1, 0x7f070125
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -2281,7 +2281,7 @@
     :cond_34
     iget-object v0, p0, Lorg/telegram/ui/Components/WebPlayerView;->fullscreenButton:Landroid/widget/ImageView;
 
-    const v1, 0x7f07016c
+    const v1, 0x7f07012f
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -2595,12 +2595,12 @@
 
     if-eqz v1, :cond_d
 
-    const v1, 0x7f070163
+    const v1, 0x7f070126
 
     goto :goto_10
 
     :cond_d
-    const v1, 0x7f07016d
+    const v1, 0x7f070130
 
     :goto_10
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
@@ -2698,12 +2698,12 @@
 
     if-eqz v1, :cond_20
 
-    const v1, 0x7f070151
+    const v1, 0x7f070116
 
     goto :goto_23
 
     :cond_20
-    const v1, 0x7f070150
+    const v1, 0x7f070115
 
     :goto_23
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
@@ -2718,12 +2718,12 @@
 
     if-eqz v1, :cond_31
 
-    const v1, 0x7f070173
+    const v1, 0x7f070136
 
     goto :goto_34
 
     :cond_31
-    const v1, 0x7f070171
+    const v1, 0x7f070134
 
     :goto_34
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
@@ -2738,12 +2738,12 @@
 
     if-eqz v1, :cond_42
 
-    const v1, 0x7f07016f
+    const v1, 0x7f070132
 
     goto :goto_45
 
     :cond_42
-    const v1, 0x7f07016e
+    const v1, 0x7f070131
 
     :goto_45
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
@@ -3910,7 +3910,7 @@
 .end method
 
 .method public loadVideo(Ljava/lang/String;Lorg/telegram/tgnet/TLRPC$Photo;Ljava/lang/Object;Ljava/lang/String;Z)Z
-    .registers 31
+    .registers 32
 
     move-object/from16 v1, p0
 
@@ -4460,17 +4460,17 @@
 
     move-result-object v19
 
-    const/16 v21, 0x0
+    const-wide/16 v21, 0x0
 
-    const/16 v22, 0x0
+    const/16 v23, 0x0
 
-    const/16 v24, 0x1
+    const/16 v25, 0x1
 
     const-string v20, "80_80_b"
 
-    move-object/from16 v23, p3
+    move-object/from16 v24, p3
 
-    invoke-virtual/range {v16 .. v24}, Lorg/telegram/messenger/ImageReceiver;->setImage(Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;ILjava/lang/String;Ljava/lang/Object;I)V
+    invoke-virtual/range {v16 .. v25}, Lorg/telegram/messenger/ImageReceiver;->setImage(Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;JLjava/lang/String;Ljava/lang/Object;I)V
 
     .line 2314
     iput-boolean v8, v1, Lorg/telegram/ui/Components/WebPlayerView;->drawImage:Z

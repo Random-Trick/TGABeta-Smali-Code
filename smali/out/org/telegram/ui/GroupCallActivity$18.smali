@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/GroupCallActivity;Landroid/content/Context;)V
     .registers 3
 
-    .line 4129
+    .line 4134
     iput-object p1, p0, Lorg/telegram/ui/GroupCallActivity$18;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-direct {p0, p2}, Lorg/telegram/ui/Components/RLottieImageView;-><init>(Landroid/content/Context;)V
@@ -35,10 +35,10 @@
 .method public onInitializeAccessibilityNodeInfo(Landroid/view/accessibility/AccessibilityNodeInfo;)V
     .registers 6
 
-    .line 4168
+    .line 4173
     invoke-super {p0, p1}, Landroid/widget/ImageView;->onInitializeAccessibilityNodeInfo(Landroid/view/accessibility/AccessibilityNodeInfo;)V
 
-    .line 4170
+    .line 4175
     const-class v0, Landroid/widget/Button;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -47,7 +47,7 @@
 
     invoke-virtual {p1, v0}, Landroid/view/accessibility/AccessibilityNodeInfo;->setClassName(Ljava/lang/CharSequence;)V
 
-    .line 4171
+    .line 4176
     iget-object v0, p0, Lorg/telegram/ui/GroupCallActivity$18;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/GroupCallActivity;->access$2200(Lorg/telegram/ui/GroupCallActivity;)I
@@ -80,7 +80,7 @@
     :goto_21
     invoke-virtual {p1, v0}, Landroid/view/accessibility/AccessibilityNodeInfo;->setEnabled(Z)V
 
-    .line 4173
+    .line 4178
     iget-object v0, p0, Lorg/telegram/ui/GroupCallActivity$18;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/GroupCallActivity;->access$2200(Lorg/telegram/ui/GroupCallActivity;)I
@@ -95,12 +95,12 @@
 
     if-lt v0, v1, :cond_45
 
-    .line 4174
+    .line 4179
     new-instance v0, Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;
 
     const/16 v1, 0x10
 
-    const v2, 0x7f0e137b
+    const v2, 0x7f0e1449
 
     const-string v3, "VoipMute"
 
@@ -119,7 +119,7 @@
 .method public onTouchEvent(Landroid/view/MotionEvent;)Z
     .registers 14
 
-    .line 4133
+    .line 4138
     iget-object v0, p0, Lorg/telegram/ui/GroupCallActivity$18;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-virtual {v0}, Lorg/telegram/ui/GroupCallActivity;->isRtmpStream()Z
@@ -128,14 +128,14 @@
 
     if-eqz v0, :cond_d
 
-    .line 4134
+    .line 4139
     invoke-super {p0, p1}, Landroid/widget/ImageView;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
     move-result p1
 
     return p1
 
-    .line 4137
+    .line 4142
     :cond_d
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
@@ -159,7 +159,7 @@
 
     if-eqz v2, :cond_32
 
-    .line 4138
+    .line 4143
     invoke-static {v0}, Lorg/telegram/ui/GroupCallActivity;->access$14800(Lorg/telegram/ui/GroupCallActivity;)Ljava/lang/Runnable;
 
     move-result-object v0
@@ -168,14 +168,14 @@
 
     invoke-static {v0, v2, v3}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;J)V
 
-    .line 4139
+    .line 4144
     iget-object v0, p0, Lorg/telegram/ui/GroupCallActivity$18;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-static {v0, v1}, Lorg/telegram/ui/GroupCallActivity;->access$14902(Lorg/telegram/ui/GroupCallActivity;Z)Z
 
     goto/16 :goto_d4
 
-    .line 4140
+    .line 4145
     :cond_32
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
@@ -191,7 +191,7 @@
 
     if-ne v0, v2, :cond_d4
 
-    .line 4141
+    .line 4146
     :cond_3f
     iget-object v0, p0, Lorg/telegram/ui/GroupCallActivity$18;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
@@ -203,7 +203,7 @@
 
     if-eqz v0, :cond_58
 
-    .line 4142
+    .line 4147
     iget-object v0, p0, Lorg/telegram/ui/GroupCallActivity$18;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/GroupCallActivity;->access$14800(Lorg/telegram/ui/GroupCallActivity;)Ljava/lang/Runnable;
@@ -212,14 +212,14 @@
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->cancelRunOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 4143
+    .line 4148
     iget-object v0, p0, Lorg/telegram/ui/GroupCallActivity$18;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-static {v0, v3}, Lorg/telegram/ui/GroupCallActivity;->access$14902(Lorg/telegram/ui/GroupCallActivity;Z)Z
 
     goto/16 :goto_d4
 
-    .line 4144
+    .line 4149
     :cond_58
     iget-object v0, p0, Lorg/telegram/ui/GroupCallActivity$18;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
@@ -229,7 +229,7 @@
 
     if-eqz v0, :cond_d4
 
-    .line 4145
+    .line 4150
     iget-object p1, p0, Lorg/telegram/ui/GroupCallActivity$18;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/GroupCallActivity;->access$15100(Lorg/telegram/ui/GroupCallActivity;)Ljava/lang/Runnable;
@@ -238,26 +238,26 @@
 
     invoke-static {p1}, Lorg/telegram/messenger/AndroidUtilities;->cancelRunOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 4146
+    .line 4151
     iget-object p1, p0, Lorg/telegram/ui/GroupCallActivity$18;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-static {p1, v3, v1}, Lorg/telegram/ui/GroupCallActivity;->access$15200(Lorg/telegram/ui/GroupCallActivity;IZ)V
 
-    .line 4147
+    .line 4152
     invoke-static {}, Lorg/telegram/messenger/voip/VoIPService;->getSharedInstance()Lorg/telegram/messenger/voip/VoIPService;
 
     move-result-object p1
 
     if-eqz p1, :cond_85
 
-    .line 4148
+    .line 4153
     invoke-static {}, Lorg/telegram/messenger/voip/VoIPService;->getSharedInstance()Lorg/telegram/messenger/voip/VoIPService;
 
     move-result-object p1
 
     invoke-virtual {p1, v1, v1, v3}, Lorg/telegram/messenger/voip/VoIPService;->setMicMute(ZZZ)V
 
-    .line 4149
+    .line 4154
     iget-object p1, p0, Lorg/telegram/ui/GroupCallActivity$18;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/GroupCallActivity;->access$5100(Lorg/telegram/ui/GroupCallActivity;)Lorg/telegram/ui/Components/RLottieImageView;
@@ -268,7 +268,7 @@
 
     invoke-virtual {p1, v2, v0}, Landroid/widget/ImageView;->performHapticFeedback(II)Z
 
-    .line 4151
+    .line 4156
     :cond_85
     iget-object p1, p0, Lorg/telegram/ui/GroupCallActivity$18;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
@@ -278,7 +278,7 @@
 
     invoke-virtual {p1}, Ljava/util/ArrayList;->clear()V
 
-    .line 4152
+    .line 4157
     iget-object p1, p0, Lorg/telegram/ui/GroupCallActivity$18;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/GroupCallActivity;->access$6300(Lorg/telegram/ui/GroupCallActivity;)Ljava/util/ArrayList;
@@ -295,7 +295,7 @@
 
     const/4 p1, 0x0
 
-    .line 4153
+    .line 4158
     :goto_9e
     iget-object v0, p0, Lorg/telegram/ui/GroupCallActivity$18;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
@@ -309,7 +309,7 @@
 
     if-ge p1, v0, :cond_bc
 
-    .line 4154
+    .line 4159
     iget-object v0, p0, Lorg/telegram/ui/GroupCallActivity$18;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/GroupCallActivity;->access$6300(Lorg/telegram/ui/GroupCallActivity;)Ljava/util/ArrayList;
@@ -328,7 +328,7 @@
 
     goto :goto_9e
 
-    .line 4156
+    .line 4161
     :cond_bc
     iget-object p1, p0, Lorg/telegram/ui/GroupCallActivity$18;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
@@ -346,20 +346,20 @@
 
     const/4 v11, 0x0
 
-    .line 4157
+    .line 4162
     invoke-static/range {v4 .. v11}, Landroid/view/MotionEvent;->obtain(JJIFFI)Landroid/view/MotionEvent;
 
     move-result-object p1
 
-    .line 4158
+    .line 4163
     invoke-super {p0, p1}, Landroid/widget/ImageView;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
-    .line 4159
+    .line 4164
     invoke-virtual {p1}, Landroid/view/MotionEvent;->recycle()V
 
     return v1
 
-    .line 4163
+    .line 4168
     :cond_d4
     :goto_d4
     invoke-super {p0, p1}, Landroid/widget/ImageView;->onTouchEvent(Landroid/view/MotionEvent;)Z

@@ -1,9 +1,6 @@
 .class Lorg/telegram/ui/ChatEditTypeActivity$3;
-.super Ljava/lang/Object;
+.super Lorg/telegram/ui/Components/EditTextBoldCursor;
 .source "ChatEditTypeActivity.java"
-
-# interfaces
-.implements Landroid/text/TextWatcher;
 
 
 # annotations
@@ -22,67 +19,103 @@
 
 
 # direct methods
-.method constructor <init>(Lorg/telegram/ui/ChatEditTypeActivity;)V
-    .registers 2
+.method constructor <init>(Lorg/telegram/ui/ChatEditTypeActivity;Landroid/content/Context;)V
+    .registers 3
 
-    .line 348
+    .line 331
     iput-object p1, p0, Lorg/telegram/ui/ChatEditTypeActivity$3;->this$0:Lorg/telegram/ui/ChatEditTypeActivity;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Lorg/telegram/ui/Components/EditTextBoldCursor;-><init>(Landroid/content/Context;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public afterTextChanged(Landroid/text/Editable;)V
-    .registers 2
+.method public onInitializeAccessibilityNodeInfo(Landroid/view/accessibility/AccessibilityNodeInfo;)V
+    .registers 4
 
-    .line 364
-    iget-object p1, p0, Lorg/telegram/ui/ChatEditTypeActivity$3;->this$0:Lorg/telegram/ui/ChatEditTypeActivity;
+    .line 334
+    invoke-super {p0, p1}, Lorg/telegram/ui/Components/EditTextBoldCursor;->onInitializeAccessibilityNodeInfo(Landroid/view/accessibility/AccessibilityNodeInfo;)V
 
-    invoke-static {p1}, Lorg/telegram/ui/ChatEditTypeActivity;->access$400(Lorg/telegram/ui/ChatEditTypeActivity;)V
+    .line 335
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    return-void
-.end method
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-.method public beforeTextChanged(Ljava/lang/CharSequence;III)V
-    .registers 5
+    .line 336
+    invoke-virtual {p0}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
 
-    return-void
-.end method
+    move-result-object v1
 
-.method public onTextChanged(Ljava/lang/CharSequence;III)V
-    .registers 5
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
-    .line 356
-    iget-object p1, p0, Lorg/telegram/ui/ChatEditTypeActivity$3;->this$0:Lorg/telegram/ui/ChatEditTypeActivity;
+    .line 337
+    iget-object v1, p0, Lorg/telegram/ui/ChatEditTypeActivity$3;->this$0:Lorg/telegram/ui/ChatEditTypeActivity;
 
-    invoke-static {p1}, Lorg/telegram/ui/ChatEditTypeActivity;->access$100(Lorg/telegram/ui/ChatEditTypeActivity;)Z
+    invoke-static {v1}, Lorg/telegram/ui/ChatEditTypeActivity;->access$100(Lorg/telegram/ui/ChatEditTypeActivity;)Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
 
-    move-result p1
+    move-result-object v1
 
-    if-eqz p1, :cond_9
+    if-eqz v1, :cond_4d
 
-    return-void
+    iget-object v1, p0, Lorg/telegram/ui/ChatEditTypeActivity$3;->this$0:Lorg/telegram/ui/ChatEditTypeActivity;
 
-    .line 359
-    :cond_9
-    iget-object p1, p0, Lorg/telegram/ui/ChatEditTypeActivity$3;->this$0:Lorg/telegram/ui/ChatEditTypeActivity;
+    invoke-static {v1}, Lorg/telegram/ui/ChatEditTypeActivity;->access$100(Lorg/telegram/ui/ChatEditTypeActivity;)Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
 
-    invoke-static {p1}, Lorg/telegram/ui/ChatEditTypeActivity;->access$200(Lorg/telegram/ui/ChatEditTypeActivity;)Lorg/telegram/ui/Components/EditTextBoldCursor;
+    move-result-object v1
 
-    move-result-object p2
+    invoke-virtual {v1}, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;->getTextView()Landroid/widget/TextView;
 
-    invoke-virtual {p2}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
+    move-result-object v1
 
-    move-result-object p2
+    if-eqz v1, :cond_4d
 
-    invoke-virtual {p2}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    iget-object v1, p0, Lorg/telegram/ui/ChatEditTypeActivity$3;->this$0:Lorg/telegram/ui/ChatEditTypeActivity;
 
-    move-result-object p2
+    invoke-static {v1}, Lorg/telegram/ui/ChatEditTypeActivity;->access$100(Lorg/telegram/ui/ChatEditTypeActivity;)Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
 
-    invoke-static {p1, p2}, Lorg/telegram/ui/ChatEditTypeActivity;->access$300(Lorg/telegram/ui/ChatEditTypeActivity;Ljava/lang/String;)Z
+    move-result-object v1
+
+    invoke-virtual {v1}, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;->getTextView()Landroid/widget/TextView;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
+
+    move-result-object v1
+
+    invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_4d
+
+    const-string v1, "\n"
+
+    .line 338
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 339
+    iget-object v1, p0, Lorg/telegram/ui/ChatEditTypeActivity$3;->this$0:Lorg/telegram/ui/ChatEditTypeActivity;
+
+    invoke-static {v1}, Lorg/telegram/ui/ChatEditTypeActivity;->access$100(Lorg/telegram/ui/ChatEditTypeActivity;)Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;->getTextView()Landroid/widget/TextView;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
+
+    .line 341
+    :cond_4d
+    invoke-virtual {p1, v0}, Landroid/view/accessibility/AccessibilityNodeInfo;->setText(Ljava/lang/CharSequence;)V
 
     return-void
 .end method

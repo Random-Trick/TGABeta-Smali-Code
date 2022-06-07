@@ -21,7 +21,7 @@
 .method constructor <init>(Lorg/telegram/ui/FilterUsersActivity;)V
     .registers 2
 
-    .line 525
+    .line 526
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

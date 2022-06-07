@@ -39,7 +39,7 @@
 .method constructor <init>(Lorg/telegram/ui/SessionBottomSheet;Lorg/telegram/ui/SessionBottomSheet$Callback;Lorg/telegram/tgnet/TLRPC$TL_authorization;Lorg/telegram/ui/ActionBar/BaseFragment;)V
     .registers 5
 
-    .line 244
+    .line 245
     iput-object p1, p0, Lorg/telegram/ui/SessionBottomSheet$8;->this$0:Lorg/telegram/ui/SessionBottomSheet;
 
     iput-object p2, p0, Lorg/telegram/ui/SessionBottomSheet$8;->val$callback:Lorg/telegram/ui/SessionBottomSheet$Callback;
@@ -56,10 +56,10 @@
 .method private synthetic lambda$onClick$0(Lorg/telegram/ui/SessionBottomSheet$Callback;Lorg/telegram/tgnet/TLRPC$TL_authorization;Landroid/content/DialogInterface;I)V
     .registers 5
 
-    .line 255
+    .line 256
     invoke-interface {p1, p2}, Lorg/telegram/ui/SessionBottomSheet$Callback;->onSessionTerminated(Lorg/telegram/tgnet/TLRPC$TL_authorization;)V
 
-    .line 256
+    .line 257
     iget-object p1, p0, Lorg/telegram/ui/SessionBottomSheet$8;->this$0:Lorg/telegram/ui/SessionBottomSheet;
 
     invoke-virtual {p1}, Lorg/telegram/ui/ActionBar/BottomSheet;->dismiss()V
@@ -72,7 +72,7 @@
 .method public onClick(Landroid/view/View;)V
     .registers 6
 
-    .line 247
+    .line 248
     new-instance p1, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
     iget-object v0, p0, Lorg/telegram/ui/SessionBottomSheet$8;->this$0:Lorg/telegram/ui/SessionBottomSheet;
@@ -87,9 +87,9 @@
 
     const-string v0, "TerminateSessionText"
 
-    const v1, 0x7f0e1155
+    const v1, 0x7f0e121f
 
-    .line 250
+    .line 251
     invoke-static {v0, v1}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v0
@@ -98,9 +98,9 @@
 
     const-string v0, "AreYouSureSessionTitle"
 
-    const v1, 0x7f0e01d4
+    const v1, 0x7f0e0209
 
-    .line 251
+    .line 252
     invoke-static {v0, v1}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v0
@@ -109,14 +109,14 @@
 
     const-string v0, "Terminate"
 
-    const v1, 0x7f0e114e
+    const v1, 0x7f0e1218
 
-    .line 252
+    .line 253
     invoke-static {v0, v1}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 254
+    .line 255
     iget-object v1, p0, Lorg/telegram/ui/SessionBottomSheet$8;->val$callback:Lorg/telegram/ui/SessionBottomSheet$Callback;
 
     iget-object v2, p0, Lorg/telegram/ui/SessionBottomSheet$8;->val$session:Lorg/telegram/tgnet/TLRPC$TL_authorization;
@@ -129,9 +129,9 @@
 
     const-string v0, "Cancel"
 
-    const v1, 0x7f0e0331
+    const v1, 0x7f0e036d
 
-    .line 258
+    .line 259
     invoke-static {v0, v1}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v0
@@ -140,19 +140,19 @@
 
     invoke-virtual {p1, v0, v1}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setNegativeButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 259
+    .line 260
     invoke-virtual {p1}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->create()Lorg/telegram/ui/ActionBar/AlertDialog;
 
     move-result-object p1
 
-    .line 260
+    .line 261
     iget-object v0, p0, Lorg/telegram/ui/SessionBottomSheet$8;->val$fragment:Lorg/telegram/ui/ActionBar/BaseFragment;
 
     invoke-virtual {v0, p1}, Lorg/telegram/ui/ActionBar/BaseFragment;->showDialog(Landroid/app/Dialog;)Landroid/app/Dialog;
 
     const/4 v0, -0x1
 
-    .line 261
+    .line 262
     invoke-virtual {p1, v0}, Lorg/telegram/ui/ActionBar/AlertDialog;->getButton(I)Landroid/view/View;
 
     move-result-object p1
@@ -163,7 +163,7 @@
 
     const-string v0, "dialogTextRed2"
 
-    .line 263
+    .line 264
     invoke-static {v0}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
 
     move-result v0

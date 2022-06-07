@@ -25,7 +25,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 43868
+    .line 44320
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -34,7 +34,7 @@
 .method public static TLdeserialize(Lorg/telegram/tgnet/AbstractSerializedData;IZ)Lorg/telegram/tgnet/TLRPC$TL_nearestDc;
     .registers 4
 
-    .line 43876
+    .line 44328
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_nearestDc;->constructor:I
 
     if-eq v0, p1, :cond_1e
@@ -45,7 +45,7 @@
 
     return-object p0
 
-    .line 43878
+    .line 44330
     :cond_8
     new-instance p0, Ljava/lang/RuntimeException;
 
@@ -71,13 +71,13 @@
 
     throw p0
 
-    .line 43883
+    .line 44335
     :cond_1e
     new-instance p1, Lorg/telegram/tgnet/TLRPC$TL_nearestDc;
 
     invoke-direct {p1}, Lorg/telegram/tgnet/TLRPC$TL_nearestDc;-><init>()V
 
-    .line 43884
+    .line 44336
     invoke-virtual {p1, p0, p2}, Lorg/telegram/tgnet/TLRPC$TL_nearestDc;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
     return-object p1
@@ -88,21 +88,21 @@
 .method public readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
     .registers 4
 
-    .line 43889
+    .line 44341
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readString(Z)Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_nearestDc;->country:Ljava/lang/String;
 
-    .line 43890
+    .line 44342
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
 
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$TL_nearestDc;->this_dc:I
 
-    .line 43891
+    .line 44343
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result p1
@@ -115,22 +115,22 @@
 .method public serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
     .registers 3
 
-    .line 43895
+    .line 44347
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_nearestDc;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 43896
+    .line 44348
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_nearestDc;->country:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeString(Ljava/lang/String;)V
 
-    .line 43897
+    .line 44349
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_nearestDc;->this_dc:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 43898
+    .line 44350
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_nearestDc;->nearest_dc:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V

@@ -396,7 +396,7 @@
 
     const-string v1, "Reactions"
 
-    const v2, 0x7f0e0e8d
+    const v2, 0x7f0e0f39
 
     invoke-static {v1, v2}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
@@ -407,7 +407,7 @@
     .line 85
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
-    const v1, 0x7f070140
+    const v1, 0x7f070109
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/ActionBar;->setBackButtonImage(I)V
 
@@ -465,7 +465,7 @@
 
     const-string v3, "EnableReactions"
 
-    const v4, 0x7f0e063c
+    const v4, 0x7f0e068e
 
     invoke-static {v3, v4}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 

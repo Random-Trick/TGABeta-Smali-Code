@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/FiltersSetupActivity;)V
     .registers 2
 
-    .line 449
+    .line 499
     iput-object p1, p0, Lorg/telegram/ui/FiltersSetupActivity$1;->this$0:Lorg/telegram/ui/FiltersSetupActivity;
 
     invoke-direct {p0}, Lorg/telegram/ui/ActionBar/ActionBar$ActionBarMenuOnItemClick;-><init>()V
@@ -39,7 +39,7 @@
 
     if-ne p1, v0, :cond_8
 
-    .line 453
+    .line 503
     iget-object p1, p0, Lorg/telegram/ui/FiltersSetupActivity$1;->this$0:Lorg/telegram/ui/FiltersSetupActivity;
 
     invoke-virtual {p1}, Lorg/telegram/ui/ActionBar/BaseFragment;->finishFragment()V

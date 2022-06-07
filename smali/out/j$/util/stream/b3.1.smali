@@ -2,71 +2,91 @@
 .super Lj$/util/stream/e3;
 
 
-# instance fields
-.field public final synthetic l:I
-
-.field final synthetic m:Lj$/util/function/Function;
-
-
 # direct methods
-.method public constructor <init>(Lj$/util/stream/f3;Lj$/util/stream/c;Lj$/util/stream/f4;ILj$/util/function/Function;I)V
-    .registers 7
+.method constructor <init>(Lj$/util/u;IZ)V
+    .registers 4
 
-    iput p6, p0, Lj$/util/stream/b3;->l:I
-
-    const/4 p1, 0x1
-
-    if-eq p6, p1, :cond_b
-
-    .line 1
-    iput-object p5, p0, Lj$/util/stream/b3;->m:Lj$/util/function/Function;
-
-    invoke-direct {p0, p2, p3, p4}, Lj$/util/stream/e3;-><init>(Lj$/util/stream/c;Lj$/util/stream/f4;I)V
-
-    return-void
-
-    .line 2
-    :cond_b
-    iput-object p5, p0, Lj$/util/stream/b3;->m:Lj$/util/function/Function;
-
-    invoke-direct {p0, p2, p3, p4}, Lj$/util/stream/e3;-><init>(Lj$/util/stream/c;Lj$/util/stream/f4;I)V
+    invoke-direct {p0, p1, p2, p3}, Lj$/util/stream/e3;-><init>(Lj$/util/u;IZ)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method H0(ILj$/util/stream/n3;)Lj$/util/stream/n3;
+.method final G0()Z
+    .registers 2
+
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw v0
+.end method
+
+.method final H0(ILj$/util/stream/m3;)Lj$/util/stream/m3;
+    .registers 3
+
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw p1
+.end method
+
+.method public e(Lj$/util/function/Consumer;)V
     .registers 4
 
-    iget p1, p0, Lj$/util/stream/b3;->l:I
+    invoke-virtual {p0}, Lj$/util/stream/c;->isParallel()Z
 
-    packed-switch p1, :pswitch_data_14
+    move-result v0
 
-    goto :goto_c
+    if-nez v0, :cond_e
+
+    invoke-virtual {p0}, Lj$/util/stream/c;->J0()Lj$/util/u;
+
+    move-result-object v0
+
+    invoke-interface {v0, p1}, Lj$/util/u;->forEachRemaining(Lj$/util/function/Consumer;)V
+
+    goto :goto_1a
 
     .line 1
-    :pswitch_6
-    new-instance p1, Lj$/util/stream/Z2;
+    :cond_e
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-direct {p1, p0, p2}, Lj$/util/stream/Z2;-><init>(Lj$/util/stream/b3;Lj$/util/stream/n3;)V
+    new-instance v0, Lj$/util/stream/n0;
 
-    return-object p1
+    const/4 v1, 0x1
+
+    invoke-direct {v0, p1, v1}, Lj$/util/stream/n0;-><init>(Lj$/util/function/Consumer;Z)V
 
     .line 2
-    :goto_c
-    new-instance p1, Lj$/util/stream/Z2;
+    invoke-virtual {p0, v0}, Lj$/util/stream/c;->x0(Lj$/util/stream/N4;)Ljava/lang/Object;
 
-    const/4 v0, 0x0
+    :goto_1a
+    return-void
+.end method
 
-    invoke-direct {p1, p0, p2, v0}, Lj$/util/stream/Z2;-><init>(Lj$/util/stream/b3;Lj$/util/stream/n3;Lj$/lang/a;)V
+.method public forEach(Lj$/util/function/Consumer;)V
+    .registers 3
 
-    return-object p1
+    invoke-virtual {p0}, Lj$/util/stream/c;->isParallel()Z
 
-    nop
+    move-result v0
 
-    :pswitch_data_14
-    .packed-switch 0x0
-        :pswitch_6
-    .end packed-switch
+    if-nez v0, :cond_e
+
+    invoke-virtual {p0}, Lj$/util/stream/c;->J0()Lj$/util/u;
+
+    move-result-object v0
+
+    invoke-interface {v0, p1}, Lj$/util/u;->forEachRemaining(Lj$/util/function/Consumer;)V
+
+    goto :goto_11
+
+    :cond_e
+    invoke-super {p0, p1}, Lj$/util/stream/e3;->forEach(Lj$/util/function/Consumer;)V
+
+    :goto_11
+    return-void
 .end method

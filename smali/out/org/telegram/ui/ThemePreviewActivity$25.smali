@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/ThemePreviewActivity;)V
     .registers 2
 
-    .line 1962
+    .line 1956
     iput-object p1, p0, Lorg/telegram/ui/ThemePreviewActivity$25;->this$0:Lorg/telegram/ui/ThemePreviewActivity;
 
     invoke-direct {p0}, Landroidx/viewpager/widget/PagerAdapter;-><init>()V
@@ -35,7 +35,7 @@
 .method public destroyItem(Landroid/view/ViewGroup;ILjava/lang/Object;)V
     .registers 4
 
-    .line 1988
+    .line 1982
     check-cast p3, Landroid/view/View;
 
     invoke-virtual {p1, p3}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
@@ -46,7 +46,7 @@
 .method public getCount()I
     .registers 2
 
-    .line 1966
+    .line 1960
     iget-object v0, p0, Lorg/telegram/ui/ThemePreviewActivity$25;->this$0:Lorg/telegram/ui/ThemePreviewActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/ThemePreviewActivity;->access$4400(Lorg/telegram/ui/ThemePreviewActivity;)I
@@ -79,7 +79,7 @@
 
     if-nez p2, :cond_9
 
-    .line 1981
+    .line 1975
     iget-object p2, p0, Lorg/telegram/ui/ThemePreviewActivity$25;->this$0:Lorg/telegram/ui/ThemePreviewActivity;
 
     invoke-static {p2}, Lorg/telegram/ui/ThemePreviewActivity;->access$6400(Lorg/telegram/ui/ThemePreviewActivity;)Landroid/widget/FrameLayout;
@@ -95,7 +95,7 @@
 
     move-result-object p2
 
-    .line 1982
+    .line 1976
     :goto_f
     invoke-virtual {p1, p2}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 

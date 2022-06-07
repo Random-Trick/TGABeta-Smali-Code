@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/LaunchActivity;Landroid/os/Bundle;)V
     .registers 3
 
-    .line 2591
+    .line 2674
     iput-object p1, p0, Lorg/telegram/ui/LaunchActivity$11;->this$0:Lorg/telegram/ui/LaunchActivity;
 
     invoke-direct {p0, p2}, Lorg/telegram/ui/DialogsActivity;-><init>(Landroid/os/Bundle;)V
@@ -46,7 +46,7 @@
         }
     .end annotation
 
-    .line 2594
+    .line 2677
     iget-object p1, p0, Lorg/telegram/ui/LaunchActivity$11;->this$0:Lorg/telegram/ui/LaunchActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/LaunchActivity;->access$1300(Lorg/telegram/ui/LaunchActivity;)Landroid/net/Uri;
@@ -59,7 +59,7 @@
 
     return p3
 
-    .line 2597
+    .line 2680
     :cond_a
     iget-object p1, p0, Lorg/telegram/ui/LaunchActivity$11;->this$0:Lorg/telegram/ui/LaunchActivity;
 
@@ -95,7 +95,7 @@
 
     return p4
 
-    .line 2600
+    .line 2683
     :cond_2a
     invoke-virtual {p2}, Ljava/util/ArrayList;->size()I
 
@@ -103,7 +103,7 @@
 
     if-gt p1, p4, :cond_4e
 
-    .line 2601
+    .line 2684
     iget-object p1, p0, Lorg/telegram/ui/LaunchActivity$11;->this$0:Lorg/telegram/ui/LaunchActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/LaunchActivity;->access$1500(Lorg/telegram/ui/LaunchActivity;)Ljava/lang/String;
@@ -114,7 +114,7 @@
 
     return p4
 
-    .line 2603
+    .line 2686
     :cond_39
     iget-object p1, p0, Lorg/telegram/ui/LaunchActivity$11;->this$0:Lorg/telegram/ui/LaunchActivity;
 

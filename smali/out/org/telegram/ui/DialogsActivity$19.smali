@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/DialogsActivity;Landroid/content/Context;Lorg/telegram/ui/ActionBar/BaseFragment;Z)V
     .registers 5
 
-    .line 3313
+    .line 3384
     iput-object p1, p0, Lorg/telegram/ui/DialogsActivity$19;->this$0:Lorg/telegram/ui/DialogsActivity;
 
     invoke-direct {p0, p2, p3, p4}, Lorg/telegram/ui/Components/FragmentContextView;-><init>(Landroid/content/Context;Lorg/telegram/ui/ActionBar/BaseFragment;Z)V
@@ -39,7 +39,7 @@
 
     sub-float v0, p1, v0
 
-    .line 3316
+    .line 3387
     invoke-static {v0}, Ljava/lang/Math;->abs(F)F
 
     move-result v1
@@ -62,7 +62,7 @@
 
     if-lez v1, :cond_3e
 
-    .line 3317
+    .line 3388
     :cond_1c
     iget-object v1, p0, Lorg/telegram/ui/DialogsActivity$19;->this$0:Lorg/telegram/ui/DialogsActivity;
 

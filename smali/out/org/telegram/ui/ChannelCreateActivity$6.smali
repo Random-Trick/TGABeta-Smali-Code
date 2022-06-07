@@ -21,7 +21,7 @@
 .method constructor <init>(Lorg/telegram/ui/ChannelCreateActivity;)V
     .registers 2
 
-    .line 589
+    .line 640
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

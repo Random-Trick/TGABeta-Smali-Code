@@ -24,7 +24,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/TranslateAlert;Ljava/lang/Runnable;)V
     .registers 3
 
-    .line 171
+    .line 172
     iput-object p1, p0, Lorg/telegram/ui/Components/TranslateAlert$1;->this$0:Lorg/telegram/ui/Components/TranslateAlert;
 
     iput-object p2, p0, Lorg/telegram/ui/Components/TranslateAlert$1;->val$onAnimationEnd:Ljava/lang/Runnable;
@@ -39,7 +39,7 @@
 .method public onAnimationCancel(Landroid/animation/Animator;)V
     .registers 3
 
-    .line 180
+    .line 181
     iget-object p1, p0, Lorg/telegram/ui/Components/TranslateAlert$1;->this$0:Lorg/telegram/ui/Components/TranslateAlert;
 
     const/4 v0, 0x0
@@ -52,19 +52,19 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .registers 3
 
-    .line 174
+    .line 175
     iget-object p1, p0, Lorg/telegram/ui/Components/TranslateAlert$1;->this$0:Lorg/telegram/ui/Components/TranslateAlert;
 
     const/4 v0, 0x0
 
     invoke-static {p1, v0}, Lorg/telegram/ui/Components/TranslateAlert;->access$002(Lorg/telegram/ui/Components/TranslateAlert;Z)Z
 
-    .line 175
+    .line 176
     iget-object p1, p0, Lorg/telegram/ui/Components/TranslateAlert$1;->val$onAnimationEnd:Ljava/lang/Runnable;
 
     if-eqz p1, :cond_d
 
-    .line 176
+    .line 177
     invoke-interface {p1}, Ljava/lang/Runnable;->run()V
 
     :cond_d

@@ -170,7 +170,7 @@
     .line 877
     iget-object v0, p0, Lorg/telegram/ui/PeopleNearbyActivity$HintInnerCell;->titleTextView:Landroid/widget/TextView;
 
-    const v4, 0x7f0e0d24
+    const v4, 0x7f0e0db2
 
     new-array v5, v1, [Ljava/lang/Object;
 
@@ -242,7 +242,7 @@
     .line 884
     iget-object p2, p0, Lorg/telegram/ui/PeopleNearbyActivity$HintInnerCell;->messageTextView:Landroid/widget/TextView;
 
-    const v0, 0x7f0e0d2b
+    const v0, 0x7f0e0db9
 
     new-array v1, v1, [Ljava/lang/Object;
 

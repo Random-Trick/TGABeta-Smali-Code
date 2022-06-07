@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/PaymentFormActivity;)V
     .registers 2
 
-    .line 1061
+    .line 1138
     iput-object p1, p0, Lorg/telegram/ui/PaymentFormActivity$6;->this$0:Lorg/telegram/ui/PaymentFormActivity;
 
     invoke-direct {p0}, Landroid/webkit/WebViewClient;-><init>()V
@@ -35,7 +35,7 @@
 .method public onLoadResource(Landroid/webkit/WebView;Ljava/lang/String;)V
     .registers 3
 
-    .line 1064
+    .line 1141
     invoke-super {p0, p1, p2}, Landroid/webkit/WebViewClient;->onLoadResource(Landroid/webkit/WebView;Ljava/lang/String;)V
 
     return-void
@@ -44,24 +44,24 @@
 .method public onPageFinished(Landroid/webkit/WebView;Ljava/lang/String;)V
     .registers 4
 
-    .line 1075
+    .line 1152
     invoke-super {p0, p1, p2}, Landroid/webkit/WebViewClient;->onPageFinished(Landroid/webkit/WebView;Ljava/lang/String;)V
 
-    .line 1076
+    .line 1153
     iget-object p1, p0, Lorg/telegram/ui/PaymentFormActivity$6;->this$0:Lorg/telegram/ui/PaymentFormActivity;
 
     const/4 p2, 0x0
 
     invoke-static {p1, p2}, Lorg/telegram/ui/PaymentFormActivity;->access$2402(Lorg/telegram/ui/PaymentFormActivity;Z)Z
 
-    .line 1077
+    .line 1154
     iget-object p1, p0, Lorg/telegram/ui/PaymentFormActivity$6;->this$0:Lorg/telegram/ui/PaymentFormActivity;
 
     const/4 v0, 0x1
 
     invoke-static {p1, v0, p2}, Lorg/telegram/ui/PaymentFormActivity;->access$2500(Lorg/telegram/ui/PaymentFormActivity;ZZ)V
 
-    .line 1078
+    .line 1155
     iget-object p1, p0, Lorg/telegram/ui/PaymentFormActivity$6;->this$0:Lorg/telegram/ui/PaymentFormActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/PaymentFormActivity;->access$2600(Lorg/telegram/ui/PaymentFormActivity;)V
@@ -72,7 +72,7 @@
 .method public shouldOverrideUrlLoading(Landroid/webkit/WebView;Ljava/lang/String;)Z
     .registers 5
 
-    .line 1069
+    .line 1146
     iget-object v0, p0, Lorg/telegram/ui/PaymentFormActivity$6;->this$0:Lorg/telegram/ui/PaymentFormActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/PaymentFormActivity;->access$2300(Lorg/telegram/ui/PaymentFormActivity;)Ljava/lang/String;
@@ -87,7 +87,7 @@
 
     invoke-static {v0, v1}, Lorg/telegram/ui/PaymentFormActivity;->access$2202(Lorg/telegram/ui/PaymentFormActivity;Z)Z
 
-    .line 1070
+    .line 1147
     invoke-super {p0, p1, p2}, Landroid/webkit/WebViewClient;->shouldOverrideUrlLoading(Landroid/webkit/WebView;Ljava/lang/String;)Z
 
     move-result p1

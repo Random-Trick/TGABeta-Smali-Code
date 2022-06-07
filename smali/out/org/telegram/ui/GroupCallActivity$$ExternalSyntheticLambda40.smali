@@ -8,26 +8,18 @@
 # instance fields
 .field public final synthetic f$0:Lorg/telegram/ui/GroupCallActivity;
 
-.field public final synthetic f$1:Lorg/telegram/tgnet/TLObject;
-
-.field public final synthetic f$2:I
-
-.field public final synthetic f$3:Z
+.field public final synthetic f$1:Ljava/util/ArrayList;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lorg/telegram/ui/GroupCallActivity;Lorg/telegram/tgnet/TLObject;IZ)V
-    .registers 5
+.method public synthetic constructor <init>(Lorg/telegram/ui/GroupCallActivity;Ljava/util/ArrayList;)V
+    .registers 3
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lorg/telegram/ui/GroupCallActivity$$ExternalSyntheticLambda40;->f$0:Lorg/telegram/ui/GroupCallActivity;
 
-    iput-object p2, p0, Lorg/telegram/ui/GroupCallActivity$$ExternalSyntheticLambda40;->f$1:Lorg/telegram/tgnet/TLObject;
-
-    iput p3, p0, Lorg/telegram/ui/GroupCallActivity$$ExternalSyntheticLambda40;->f$2:I
-
-    iput-boolean p4, p0, Lorg/telegram/ui/GroupCallActivity$$ExternalSyntheticLambda40;->f$3:Z
+    iput-object p2, p0, Lorg/telegram/ui/GroupCallActivity$$ExternalSyntheticLambda40;->f$1:Ljava/util/ArrayList;
 
     return-void
 .end method
@@ -35,17 +27,13 @@
 
 # virtual methods
 .method public final run()V
-    .registers 5
+    .registers 3
 
     iget-object v0, p0, Lorg/telegram/ui/GroupCallActivity$$ExternalSyntheticLambda40;->f$0:Lorg/telegram/ui/GroupCallActivity;
 
-    iget-object v1, p0, Lorg/telegram/ui/GroupCallActivity$$ExternalSyntheticLambda40;->f$1:Lorg/telegram/tgnet/TLObject;
+    iget-object v1, p0, Lorg/telegram/ui/GroupCallActivity$$ExternalSyntheticLambda40;->f$1:Ljava/util/ArrayList;
 
-    iget v2, p0, Lorg/telegram/ui/GroupCallActivity$$ExternalSyntheticLambda40;->f$2:I
-
-    iget-boolean v3, p0, Lorg/telegram/ui/GroupCallActivity$$ExternalSyntheticLambda40;->f$3:Z
-
-    invoke-static {v0, v1, v2, v3}, Lorg/telegram/ui/GroupCallActivity;->$r8$lambda$DN46FoCNy2QcEBkKsrA7NAPLGWI(Lorg/telegram/ui/GroupCallActivity;Lorg/telegram/tgnet/TLObject;IZ)V
+    invoke-static {v0, v1}, Lorg/telegram/ui/GroupCallActivity;->$r8$lambda$J05RgdAluSg-TN2zjmbh0Ec_TJY(Lorg/telegram/ui/GroupCallActivity;Ljava/util/ArrayList;)V
 
     return-void
 .end method

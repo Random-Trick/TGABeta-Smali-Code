@@ -15,5 +15,5 @@
 
 
 # virtual methods
-.method public abstract run(Lorg/telegram/tgnet/TLRPC$TL_error;)V
+.method public abstract run(Lorg/telegram/tgnet/TLRPC$TL_error;)Z
 .end method

@@ -97,18 +97,34 @@
     return-void
 .end method
 
-.method public static synthetic $r8$lambda$1o1XKAPPQjZ6eEUB9OAMX0qnT_A(Lorg/telegram/ui/NotificationsCustomSettingsActivity;ZLjava/util/ArrayList;Lorg/telegram/ui/NotificationsSettingsActivity$NotificationException;II)V
-    .registers 6
+.method public static synthetic $r8$lambda$0vPSAhH3PvmQ7a3OslGVaKcbXUk(Lorg/telegram/ui/NotificationsCustomSettingsActivity;Lorg/telegram/ui/NotificationsSettingsActivity$NotificationException;)V
+    .registers 2
 
-    invoke-direct/range {p0 .. p5}, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->lambda$createView$0(ZLjava/util/ArrayList;Lorg/telegram/ui/NotificationsSettingsActivity$NotificationException;II)V
+    invoke-direct {p0, p1}, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->lambda$createView$0(Lorg/telegram/ui/NotificationsSettingsActivity$NotificationException;)V
 
     return-void
 .end method
 
-.method public static synthetic $r8$lambda$D6c2OvRBQwa9GvS65_ZUqg0Amtg(Lorg/telegram/ui/NotificationsCustomSettingsActivity;Lorg/telegram/ui/DialogsActivity;Ljava/util/ArrayList;Ljava/lang/CharSequence;Z)V
+.method public static synthetic $r8$lambda$1gGofHdFwMWvoiWjY6ukFpRcV1s(Lorg/telegram/ui/NotificationsCustomSettingsActivity;Landroid/content/Context;Landroid/view/View;IFF)V
+    .registers 6
+
+    invoke-direct/range {p0 .. p5}, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->lambda$createView$8(Landroid/content/Context;Landroid/view/View;IFF)V
+
+    return-void
+.end method
+
+.method public static synthetic $r8$lambda$6BJ2uKMdSyh1KGndf-1ljOXicP0(Lorg/telegram/ui/NotificationsCustomSettingsActivity;)V
+    .registers 1
+
+    invoke-direct {p0}, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->lambda$loadExceptions$10()V
+
+    return-void
+.end method
+
+.method public static synthetic $r8$lambda$8EIC9-YeoOwV2GDVR1tFL652JDs(Lorg/telegram/ui/NotificationsCustomSettingsActivity;Lorg/telegram/ui/DialogsActivity;Ljava/util/ArrayList;Ljava/lang/CharSequence;Z)V
     .registers 5
 
-    invoke-direct {p0, p1, p2, p3, p4}, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->lambda$createView$2(Lorg/telegram/ui/DialogsActivity;Ljava/util/ArrayList;Ljava/lang/CharSequence;Z)V
+    invoke-direct {p0, p1, p2, p3, p4}, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->lambda$createView$1(Lorg/telegram/ui/DialogsActivity;Ljava/util/ArrayList;Ljava/lang/CharSequence;Z)V
 
     return-void
 .end method
@@ -121,42 +137,34 @@
     return-void
 .end method
 
-.method public static synthetic $r8$lambda$O8S1wOl9tu-j41kXCl6QwQ3thcY(Lorg/telegram/ui/NotificationsCustomSettingsActivity;Landroid/content/DialogInterface;I)V
-    .registers 3
-
-    invoke-direct {p0, p1, p2}, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->lambda$createView$3(Landroid/content/DialogInterface;I)V
-
-    return-void
-.end method
-
-.method public static synthetic $r8$lambda$Q0JA7CkShx4ZcJ9-1r5xSgqVbIo(Lorg/telegram/ui/NotificationsCustomSettingsActivity;)V
+.method public static synthetic $r8$lambda$IrvjnB8eeeZZMo9-uFmAFPyZEro(Lorg/telegram/ui/NotificationsCustomSettingsActivity;)V
     .registers 1
 
-    invoke-direct {p0}, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->lambda$getThemeDescriptions$12()V
+    invoke-direct {p0}, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->lambda$getThemeDescriptions$11()V
 
     return-void
 .end method
 
-.method public static synthetic $r8$lambda$R7jYVrP2VrGfwn4uPC3mWhwFhrI(Lorg/telegram/ui/NotificationsCustomSettingsActivity;Lorg/telegram/ui/Cells/NotificationsCheckCell;Landroidx/recyclerview/widget/RecyclerView$ViewHolder;II)V
+.method public static synthetic $r8$lambda$NcCg9g8b6DzcCdTFXtruFLbI-x0(Lorg/telegram/ui/NotificationsCustomSettingsActivity;I)V
+    .registers 2
+
+    invoke-direct {p0, p1}, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->lambda$createView$4(I)V
+
+    return-void
+.end method
+
+.method public static synthetic $r8$lambda$YVabcR2XI177j8FG2LbfvBSwGmU(Lorg/telegram/ui/NotificationsCustomSettingsActivity;Lorg/telegram/ui/Cells/NotificationsCheckCell;Landroidx/recyclerview/widget/RecyclerView$ViewHolder;II)V
     .registers 5
 
-    invoke-direct {p0, p1, p2, p3, p4}, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->lambda$createView$4(Lorg/telegram/ui/Cells/NotificationsCheckCell;Landroidx/recyclerview/widget/RecyclerView$ViewHolder;II)V
+    invoke-direct {p0, p1, p2, p3, p4}, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->lambda$createView$3(Lorg/telegram/ui/Cells/NotificationsCheckCell;Landroidx/recyclerview/widget/RecyclerView$ViewHolder;II)V
 
     return-void
 .end method
 
-.method public static synthetic $r8$lambda$_Kj5FhQtv6QzApG7T_21WTvYXqQ(Lorg/telegram/ui/NotificationsCustomSettingsActivity;Landroid/view/View;IFF)V
-    .registers 5
-
-    invoke-direct {p0, p1, p2, p3, p4}, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->lambda$createView$9(Landroid/view/View;IFF)V
-
-    return-void
-.end method
-
-.method public static synthetic $r8$lambda$cUkvVuZl4hZFa8i4o3bnOROtDRE(Lorg/telegram/ui/NotificationsCustomSettingsActivity;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;)V
+.method public static synthetic $r8$lambda$_zCXK3BppNMbQFJtvzAJhxxeAE0(Lorg/telegram/ui/NotificationsCustomSettingsActivity;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;)V
     .registers 7
 
-    invoke-direct/range {p0 .. p6}, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->lambda$loadExceptions$10(Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;)V
+    invoke-direct/range {p0 .. p6}, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->lambda$loadExceptions$9(Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;)V
 
     return-void
 .end method
@@ -169,26 +177,10 @@
     return-void
 .end method
 
-.method public static synthetic $r8$lambda$nFvIxPM5BVwkqUZHQwJrD8uXmh8(Lorg/telegram/ui/NotificationsCustomSettingsActivity;)V
-    .registers 1
+.method public static synthetic $r8$lambda$nxLUBd9ZCyb1MacO4YfsiUGmrFk(Lorg/telegram/ui/NotificationsCustomSettingsActivity;Landroid/content/DialogInterface;I)V
+    .registers 3
 
-    invoke-direct {p0}, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->lambda$loadExceptions$11()V
-
-    return-void
-.end method
-
-.method public static synthetic $r8$lambda$oG3AHSSXPZ2GspqTyb4E-s7l1LA(Lorg/telegram/ui/NotificationsCustomSettingsActivity;I)V
-    .registers 2
-
-    invoke-direct {p0, p1}, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->lambda$createView$8(I)V
-
-    return-void
-.end method
-
-.method public static synthetic $r8$lambda$yHZDb9g338aLEoVqYqubflVI1-Y(Lorg/telegram/ui/NotificationsCustomSettingsActivity;Lorg/telegram/ui/NotificationsSettingsActivity$NotificationException;)V
-    .registers 2
-
-    invoke-direct {p0, p1}, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->lambda$createView$1(Lorg/telegram/ui/NotificationsSettingsActivity$NotificationException;)V
+    invoke-direct {p0, p1, p2}, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->lambda$createView$2(Landroid/content/DialogInterface;I)V
 
     return-void
 .end method
@@ -206,7 +198,7 @@
 
     const/4 v0, 0x0
 
-    .line 111
+    .line 114
     invoke-direct {p0, p1, p2, v0}, Lorg/telegram/ui/NotificationsCustomSettingsActivity;-><init>(ILjava/util/ArrayList;Z)V
 
     return-void
@@ -223,28 +215,28 @@
         }
     .end annotation
 
-    .line 115
+    .line 118
     invoke-direct {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 104
+    .line 107
     iput v0, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->rowCount:I
 
-    .line 108
+    .line 111
     new-instance v1, Ljava/util/HashMap;
 
     invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
     iput-object v1, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->exceptionsDict:Ljava/util/HashMap;
 
-    .line 116
+    .line 119
     iput p1, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->currentType:I
 
-    .line 117
+    .line 120
     iput-object p2, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->exceptions:Ljava/util/ArrayList;
 
-    .line 118
+    .line 121
     invoke-virtual {p2}, Ljava/util/ArrayList;->size()I
 
     move-result p1
@@ -252,7 +244,7 @@
     :goto_15
     if-ge v0, p1, :cond_2d
 
-    .line 119
+    .line 122
     iget-object p2, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->exceptions:Ljava/util/ArrayList;
 
     invoke-virtual {p2, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -261,7 +253,7 @@
 
     check-cast p2, Lorg/telegram/ui/NotificationsSettingsActivity$NotificationException;
 
-    .line 120
+    .line 123
     iget-object v1, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->exceptionsDict:Ljava/util/HashMap;
 
     iget-wide v2, p2, Lorg/telegram/ui/NotificationsSettingsActivity$NotificationException;->did:J
@@ -279,7 +271,7 @@
     :cond_2d
     if-eqz p3, :cond_32
 
-    .line 123
+    .line 126
     invoke-direct {p0}, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->loadExceptions()V
 
     :cond_32
@@ -289,7 +281,7 @@
 .method static synthetic access$000(Lorg/telegram/ui/NotificationsCustomSettingsActivity;)Z
     .registers 1
 
-    .line 75
+    .line 78
     iget-boolean p0, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->searching:Z
 
     return p0
@@ -298,7 +290,7 @@
 .method static synthetic access$002(Lorg/telegram/ui/NotificationsCustomSettingsActivity;Z)Z
     .registers 2
 
-    .line 75
+    .line 78
     iput-boolean p1, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->searching:Z
 
     return p1
@@ -307,7 +299,7 @@
 .method static synthetic access$100(Lorg/telegram/ui/NotificationsCustomSettingsActivity;)Lorg/telegram/ui/Components/EmptyTextProgressView;
     .registers 1
 
-    .line 75
+    .line 78
     iget-object p0, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->emptyView:Lorg/telegram/ui/Components/EmptyTextProgressView;
 
     return-object p0
@@ -316,7 +308,7 @@
 .method static synthetic access$1000(Lorg/telegram/ui/NotificationsCustomSettingsActivity;)I
     .registers 1
 
-    .line 75
+    .line 78
     iget p0, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->messageSectionRow:I
 
     return p0
@@ -325,7 +317,7 @@
 .method static synthetic access$1100(Lorg/telegram/ui/NotificationsCustomSettingsActivity;)Landroid/content/SharedPreferences;
     .registers 1
 
-    .line 75
+    .line 78
     invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getNotificationsSettings()Landroid/content/SharedPreferences;
 
     move-result-object p0
@@ -336,7 +328,7 @@
 .method static synthetic access$1200(Lorg/telegram/ui/NotificationsCustomSettingsActivity;)I
     .registers 1
 
-    .line 75
+    .line 78
     iget p0, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->previewRow:I
 
     return p0
@@ -345,7 +337,7 @@
 .method static synthetic access$1300(Lorg/telegram/ui/NotificationsCustomSettingsActivity;)I
     .registers 1
 
-    .line 75
+    .line 78
     iget p0, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->exceptionsStartRow:I
 
     return p0
@@ -354,7 +346,7 @@
 .method static synthetic access$1400(Lorg/telegram/ui/NotificationsCustomSettingsActivity;)I
     .registers 1
 
-    .line 75
+    .line 78
     iget p0, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->exceptionsEndRow:I
 
     return p0
@@ -363,7 +355,7 @@
 .method static synthetic access$1500(Lorg/telegram/ui/NotificationsCustomSettingsActivity;)Landroid/content/SharedPreferences;
     .registers 1
 
-    .line 75
+    .line 78
     invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getNotificationsSettings()Landroid/content/SharedPreferences;
 
     move-result-object p0
@@ -374,7 +366,7 @@
 .method static synthetic access$1600(Lorg/telegram/ui/NotificationsCustomSettingsActivity;)I
     .registers 1
 
-    .line 75
+    .line 78
     iget p0, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->deleteAllSectionRow:I
 
     return p0
@@ -383,7 +375,7 @@
 .method static synthetic access$1700(Lorg/telegram/ui/NotificationsCustomSettingsActivity;)I
     .registers 1
 
-    .line 75
+    .line 78
     iget p0, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->groupSection2Row:I
 
     return p0
@@ -392,7 +384,7 @@
 .method static synthetic access$1800(Lorg/telegram/ui/NotificationsCustomSettingsActivity;)I
     .registers 1
 
-    .line 75
+    .line 78
     iget p0, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->exceptionsSection2Row:I
 
     return p0
@@ -401,7 +393,7 @@
 .method static synthetic access$1900(Lorg/telegram/ui/NotificationsCustomSettingsActivity;)I
     .registers 1
 
-    .line 75
+    .line 78
     iget p0, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->deleteAllRow:I
 
     return p0
@@ -410,7 +402,7 @@
 .method static synthetic access$200(Lorg/telegram/ui/NotificationsCustomSettingsActivity;)Lorg/telegram/ui/NotificationsCustomSettingsActivity$SearchAdapter;
     .registers 1
 
-    .line 75
+    .line 78
     iget-object p0, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->searchAdapter:Lorg/telegram/ui/NotificationsCustomSettingsActivity$SearchAdapter;
 
     return-object p0
@@ -419,7 +411,7 @@
 .method static synthetic access$2000(Lorg/telegram/ui/NotificationsCustomSettingsActivity;)Landroid/content/SharedPreferences;
     .registers 1
 
-    .line 75
+    .line 78
     invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getNotificationsSettings()Landroid/content/SharedPreferences;
 
     move-result-object p0
@@ -430,7 +422,7 @@
 .method static synthetic access$2100(Lorg/telegram/ui/NotificationsCustomSettingsActivity;)I
     .registers 1
 
-    .line 75
+    .line 78
     iget p0, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->messageSoundRow:I
 
     return p0
@@ -439,7 +431,7 @@
 .method static synthetic access$2200(Lorg/telegram/ui/NotificationsCustomSettingsActivity;)I
     .registers 1
 
-    .line 75
+    .line 78
     iget p0, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->messageVibrateRow:I
 
     return p0
@@ -448,7 +440,7 @@
 .method static synthetic access$2300(Lorg/telegram/ui/NotificationsCustomSettingsActivity;)I
     .registers 1
 
-    .line 75
+    .line 78
     iget p0, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->messagePriorityRow:I
 
     return p0
@@ -457,7 +449,7 @@
 .method static synthetic access$2400(Lorg/telegram/ui/NotificationsCustomSettingsActivity;)I
     .registers 1
 
-    .line 75
+    .line 78
     iget p0, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->messagePopupNotificationRow:I
 
     return p0
@@ -466,7 +458,7 @@
 .method static synthetic access$2500(Lorg/telegram/ui/NotificationsCustomSettingsActivity;)Landroid/content/SharedPreferences;
     .registers 1
 
-    .line 75
+    .line 78
     invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getNotificationsSettings()Landroid/content/SharedPreferences;
 
     move-result-object p0
@@ -477,7 +469,7 @@
 .method static synthetic access$2600(Lorg/telegram/ui/NotificationsCustomSettingsActivity;)I
     .registers 1
 
-    .line 75
+    .line 78
     iget p0, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->exceptionsAddRow:I
 
     return p0
@@ -486,7 +478,7 @@
 .method static synthetic access$2700(Lorg/telegram/ui/NotificationsCustomSettingsActivity;)Lorg/telegram/messenger/NotificationsController;
     .registers 1
 
-    .line 75
+    .line 78
     invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getNotificationsController()Lorg/telegram/messenger/NotificationsController;
 
     move-result-object p0
@@ -497,7 +489,7 @@
 .method static synthetic access$2800(Lorg/telegram/ui/NotificationsCustomSettingsActivity;)I
     .registers 1
 
-    .line 75
+    .line 78
     iget p0, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->messageLedRow:I
 
     return p0
@@ -506,7 +498,7 @@
 .method static synthetic access$2900(Lorg/telegram/ui/NotificationsCustomSettingsActivity;)I
     .registers 1
 
-    .line 75
+    .line 78
     iget p0, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->alertSection2Row:I
 
     return p0
@@ -515,7 +507,7 @@
 .method static synthetic access$3000(Lorg/telegram/ui/NotificationsCustomSettingsActivity;)I
     .registers 1
 
-    .line 75
+    .line 78
     iget p0, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->alertRow:I
 
     return p0
@@ -524,17 +516,104 @@
 .method static synthetic access$302(Lorg/telegram/ui/NotificationsCustomSettingsActivity;Z)Z
     .registers 2
 
-    .line 75
+    .line 78
     iput-boolean p1, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->searchWas:Z
 
     return p1
 .end method
 
+.method static synthetic access$3200(Lorg/telegram/ui/NotificationsCustomSettingsActivity;)I
+    .registers 1
+
+    .line 78
+    iget p0, p0, Lorg/telegram/ui/ActionBar/BaseFragment;->currentAccount:I
+
+    return p0
+.end method
+
+.method static synthetic access$3300(Lorg/telegram/ui/NotificationsCustomSettingsActivity;)Lorg/telegram/messenger/NotificationsController;
+    .registers 1
+
+    .line 78
+    invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getNotificationsController()Lorg/telegram/messenger/NotificationsController;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method static synthetic access$3500(Lorg/telegram/ui/NotificationsCustomSettingsActivity;)Lorg/telegram/messenger/NotificationsController;
+    .registers 1
+
+    .line 78
+    invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getNotificationsController()Lorg/telegram/messenger/NotificationsController;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method static synthetic access$3600(Lorg/telegram/ui/NotificationsCustomSettingsActivity;)Landroid/content/SharedPreferences;
+    .registers 1
+
+    .line 78
+    invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getNotificationsSettings()Landroid/content/SharedPreferences;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method static synthetic access$3700(Lorg/telegram/ui/NotificationsCustomSettingsActivity;)Ljava/util/HashMap;
+    .registers 1
+
+    .line 78
+    iget-object p0, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->exceptionsDict:Ljava/util/HashMap;
+
+    return-object p0
+.end method
+
+.method static synthetic access$3800(Lorg/telegram/ui/NotificationsCustomSettingsActivity;Z)V
+    .registers 2
+
+    .line 78
+    invoke-direct {p0, p1}, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->updateRows(Z)V
+
+    return-void
+.end method
+
+.method static synthetic access$3900(Lorg/telegram/ui/NotificationsCustomSettingsActivity;)Lorg/telegram/ui/ActionBar/ActionBar;
+    .registers 1
+
+    .line 78
+    iget-object p0, p0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
+
+    return-object p0
+.end method
+
 .method static synthetic access$400(Lorg/telegram/ui/NotificationsCustomSettingsActivity;)Lorg/telegram/ui/NotificationsCustomSettingsActivity$ListAdapter;
     .registers 1
 
-    .line 75
+    .line 78
     iget-object p0, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->adapter:Lorg/telegram/ui/NotificationsCustomSettingsActivity$ListAdapter;
+
+    return-object p0
+.end method
+
+.method static synthetic access$4000(Lorg/telegram/ui/NotificationsCustomSettingsActivity;)V
+    .registers 1
+
+    .line 78
+    invoke-direct {p0}, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->checkRowsEnabled()V
+
+    return-void
+.end method
+
+.method static synthetic access$4100(Lorg/telegram/ui/NotificationsCustomSettingsActivity;)Lorg/telegram/ui/ActionBar/ActionBar;
+    .registers 1
+
+    .line 78
+    iget-object p0, p0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     return-object p0
 .end method
@@ -542,7 +621,7 @@
 .method static synthetic access$500(Lorg/telegram/ui/NotificationsCustomSettingsActivity;)Lorg/telegram/ui/Components/RecyclerListView;
     .registers 1
 
-    .line 75
+    .line 78
     iget-object p0, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     return-object p0
@@ -551,7 +630,7 @@
 .method static synthetic access$600(Lorg/telegram/ui/NotificationsCustomSettingsActivity;)Landroid/animation/AnimatorSet;
     .registers 1
 
-    .line 75
+    .line 78
     iget-object p0, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->animatorSet:Landroid/animation/AnimatorSet;
 
     return-object p0
@@ -560,7 +639,7 @@
 .method static synthetic access$602(Lorg/telegram/ui/NotificationsCustomSettingsActivity;Landroid/animation/AnimatorSet;)Landroid/animation/AnimatorSet;
     .registers 2
 
-    .line 75
+    .line 78
     iput-object p1, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->animatorSet:Landroid/animation/AnimatorSet;
 
     return-object p1
@@ -569,7 +648,7 @@
 .method static synthetic access$700(Lorg/telegram/ui/NotificationsCustomSettingsActivity;)I
     .registers 1
 
-    .line 75
+    .line 78
     iget p0, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->currentType:I
 
     return p0
@@ -578,7 +657,7 @@
 .method static synthetic access$800(Lorg/telegram/ui/NotificationsCustomSettingsActivity;)Ljava/util/ArrayList;
     .registers 1
 
-    .line 75
+    .line 78
     iget-object p0, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->exceptions:Ljava/util/ArrayList;
 
     return-object p0
@@ -587,7 +666,7 @@
 .method static synthetic access$900(Lorg/telegram/ui/NotificationsCustomSettingsActivity;)I
     .registers 1
 
-    .line 75
+    .line 78
     iget p0, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->rowCount:I
 
     return p0
@@ -596,7 +675,7 @@
 .method private checkRowsEnabled()V
     .registers 8
 
-    .line 550
+    .line 622
     iget-object v0, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->exceptions:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
@@ -607,7 +686,7 @@
 
     return-void
 
-    .line 553
+    .line 625
     :cond_9
     iget-object v0, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
@@ -615,12 +694,12 @@
 
     move-result v0
 
-    .line 554
+    .line 626
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 555
+    .line 627
     invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getNotificationsController()Lorg/telegram/messenger/NotificationsController;
 
     move-result-object v2
@@ -636,14 +715,14 @@
     :goto_1f
     if-ge v3, v0, :cond_69
 
-    .line 557
+    .line 629
     iget-object v4, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     invoke-virtual {v4, v3}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v4
 
-    .line 558
+    .line 630
     iget-object v5, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     invoke-virtual {v5, v4}, Landroidx/recyclerview/widget/RecyclerView;->getChildViewHolder(Landroid/view/View;)Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
@@ -652,7 +731,7 @@
 
     check-cast v4, Lorg/telegram/ui/Components/RecyclerListView$Holder;
 
-    .line 559
+    .line 631
     invoke-virtual {v4}, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->getItemViewType()I
 
     move-result v5
@@ -673,46 +752,46 @@
 
     goto :goto_66
 
-    .line 578
+    .line 650
     :cond_3f
     iget-object v4, v4, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     check-cast v4, Lorg/telegram/ui/Cells/TextSettingsCell;
 
-    .line 579
+    .line 651
     invoke-virtual {v4, v2, v1}, Lorg/telegram/ui/Cells/TextSettingsCell;->setEnabled(ZLjava/util/ArrayList;)V
 
     goto :goto_66
 
-    .line 573
+    .line 645
     :cond_47
     iget-object v4, v4, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     check-cast v4, Lorg/telegram/ui/Cells/TextColorCell;
 
-    .line 574
+    .line 646
     invoke-virtual {v4, v2, v1}, Lorg/telegram/ui/Cells/TextColorCell;->setEnabled(ZLjava/util/ArrayList;)V
 
     goto :goto_66
 
-    .line 568
+    .line 640
     :cond_4f
     iget-object v4, v4, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     check-cast v4, Lorg/telegram/ui/Cells/TextCheckCell;
 
-    .line 569
+    .line 641
     invoke-virtual {v4, v2, v1}, Lorg/telegram/ui/Cells/TextCheckCell;->setEnabled(ZLjava/util/ArrayList;)V
 
     goto :goto_66
 
-    .line 561
+    .line 633
     :cond_57
     iget-object v5, v4, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     check-cast v5, Lorg/telegram/ui/Cells/HeaderCell;
 
-    .line 562
+    .line 634
     invoke-virtual {v4}, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->getAdapterPosition()I
 
     move-result v4
@@ -721,7 +800,7 @@
 
     if-ne v4, v6, :cond_66
 
-    .line 563
+    .line 635
     invoke-virtual {v5, v2, v1}, Lorg/telegram/ui/Cells/HeaderCell;->setEnabled(ZLjava/util/ArrayList;)V
 
     :cond_66
@@ -730,7 +809,7 @@
 
     goto :goto_1f
 
-    .line 584
+    .line 656
     :cond_69
     invoke-virtual {v1}, Ljava/util/ArrayList;->isEmpty()Z
 
@@ -738,15 +817,15 @@
 
     if-nez v0, :cond_96
 
-    .line 585
+    .line 657
     iget-object v0, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->animatorSet:Landroid/animation/AnimatorSet;
 
     if-eqz v0, :cond_76
 
-    .line 586
+    .line 658
     invoke-virtual {v0}, Landroid/animation/AnimatorSet;->cancel()V
 
-    .line 588
+    .line 660
     :cond_76
     new-instance v0, Landroid/animation/AnimatorSet;
 
@@ -754,26 +833,26 @@
 
     iput-object v0, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->animatorSet:Landroid/animation/AnimatorSet;
 
-    .line 589
+    .line 661
     invoke-virtual {v0, v1}, Landroid/animation/AnimatorSet;->playTogether(Ljava/util/Collection;)V
 
-    .line 590
+    .line 662
     iget-object v0, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->animatorSet:Landroid/animation/AnimatorSet;
 
-    new-instance v1, Lorg/telegram/ui/NotificationsCustomSettingsActivity$4;
+    new-instance v1, Lorg/telegram/ui/NotificationsCustomSettingsActivity$5;
 
-    invoke-direct {v1, p0}, Lorg/telegram/ui/NotificationsCustomSettingsActivity$4;-><init>(Lorg/telegram/ui/NotificationsCustomSettingsActivity;)V
+    invoke-direct {v1, p0}, Lorg/telegram/ui/NotificationsCustomSettingsActivity$5;-><init>(Lorg/telegram/ui/NotificationsCustomSettingsActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/animation/AnimatorSet;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 598
+    .line 670
     iget-object v0, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->animatorSet:Landroid/animation/AnimatorSet;
 
     const-wide/16 v1, 0x96
 
     invoke-virtual {v0, v1, v2}, Landroid/animation/AnimatorSet;->setDuration(J)Landroid/animation/AnimatorSet;
 
-    .line 599
+    .line 671
     iget-object v0, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->animatorSet:Landroid/animation/AnimatorSet;
 
     invoke-virtual {v0}, Landroid/animation/AnimatorSet;->start()V
@@ -782,266 +861,10 @@
     return-void
 .end method
 
-.method private synthetic lambda$createView$0(ZLjava/util/ArrayList;Lorg/telegram/ui/NotificationsSettingsActivity$NotificationException;II)V
-    .registers 11
-
-    const/4 v0, 0x1
-
-    const/4 v1, -0x1
-
-    const/4 v2, 0x0
-
-    if-nez p5, :cond_72
-
-    if-eqz p1, :cond_8
-
-    return-void
-
-    .line 275
-    :cond_8
-    iget-object p1, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->exceptions:Ljava/util/ArrayList;
-
-    if-eq p2, p1, :cond_22
-
-    .line 276
-    invoke-virtual {p1, p3}, Ljava/util/ArrayList;->indexOf(Ljava/lang/Object;)I
-
-    move-result p1
-
-    if-ltz p1, :cond_22
-
-    .line 278
-    iget-object p5, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->exceptions:Ljava/util/ArrayList;
-
-    invoke-virtual {p5, p1}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
-
-    .line 279
-    iget-object p1, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->exceptionsDict:Ljava/util/HashMap;
-
-    iget-wide v3, p3, Lorg/telegram/ui/NotificationsSettingsActivity$NotificationException;->did:J
-
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object p5
-
-    invoke-virtual {p1, p5}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 282
-    :cond_22
-    invoke-virtual {p2, p3}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
-
-    .line 283
-    iget-object p1, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->exceptions:Ljava/util/ArrayList;
-
-    if-ne p2, p1, :cond_64
-
-    .line 284
-    iget p1, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->exceptionsAddRow:I
-
-    if-eq p1, v1, :cond_54
-
-    invoke-virtual {p2}, Ljava/util/ArrayList;->isEmpty()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_54
-
-    .line 285
-    iget-object p1, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
-
-    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Landroidx/recyclerview/widget/RecyclerView$Adapter;
-
-    move-result-object p1
-
-    iget p2, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->exceptionsAddRow:I
-
-    invoke-virtual {p1, p2}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->notifyItemChanged(I)V
-
-    .line 286
-    iget-object p1, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
-
-    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Landroidx/recyclerview/widget/RecyclerView$Adapter;
-
-    move-result-object p1
-
-    iget p2, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->deleteAllRow:I
-
-    invoke-virtual {p1, p2}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->notifyItemRemoved(I)V
-
-    .line 287
-    iget-object p1, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
-
-    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Landroidx/recyclerview/widget/RecyclerView$Adapter;
-
-    move-result-object p1
-
-    iget p2, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->deleteAllSectionRow:I
-
-    invoke-virtual {p1, p2}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->notifyItemRemoved(I)V
-
-    .line 289
-    :cond_54
-    iget-object p1, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
-
-    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Landroidx/recyclerview/widget/RecyclerView$Adapter;
-
-    move-result-object p1
-
-    invoke-virtual {p1, p4}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->notifyItemRemoved(I)V
-
-    .line 290
-    invoke-direct {p0, v2}, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->updateRows(Z)V
-
-    .line 291
-    invoke-direct {p0}, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->checkRowsEnabled()V
-
-    goto :goto_6c
-
-    .line 293
-    :cond_64
-    invoke-direct {p0, v0}, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->updateRows(Z)V
-
-    .line 294
-    iget-object p1, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->searchAdapter:Lorg/telegram/ui/NotificationsCustomSettingsActivity$SearchAdapter;
-
-    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->notifyDataSetChanged()V
-
-    .line 296
-    :goto_6c
-    iget-object p1, p0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
-
-    invoke-virtual {p1}, Lorg/telegram/ui/ActionBar/ActionBar;->closeSearchField()V
-
-    goto :goto_e9
-
-    .line 298
-    :cond_72
-    invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getNotificationsSettings()Landroid/content/SharedPreferences;
-
-    move-result-object p2
-
-    .line 299
-    new-instance p5, Ljava/lang/StringBuilder;
-
-    invoke-direct {p5}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, "custom_"
-
-    invoke-virtual {p5, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v3, p3, Lorg/telegram/ui/NotificationsSettingsActivity$NotificationException;->did:J
-
-    invoke-virtual {p5, v3, v4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p5
-
-    invoke-interface {p2, p5, v2}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
-
-    move-result p5
-
-    iput-boolean p5, p3, Lorg/telegram/ui/NotificationsSettingsActivity$NotificationException;->hasCustom:Z
-
-    .line 300
-    new-instance p5, Ljava/lang/StringBuilder;
-
-    invoke-direct {p5}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, "notify2_"
-
-    invoke-virtual {p5, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v3, p3, Lorg/telegram/ui/NotificationsSettingsActivity$NotificationException;->did:J
-
-    invoke-virtual {p5, v3, v4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p5
-
-    invoke-interface {p2, p5, v2}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
-
-    move-result p5
-
-    iput p5, p3, Lorg/telegram/ui/NotificationsSettingsActivity$NotificationException;->notify:I
-
-    if-eqz p5, :cond_c5
-
-    .line 302
-    new-instance p5, Ljava/lang/StringBuilder;
-
-    invoke-direct {p5}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "notifyuntil_"
-
-    invoke-virtual {p5, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v2, p3, Lorg/telegram/ui/NotificationsSettingsActivity$NotificationException;->did:J
-
-    invoke-virtual {p5, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p5
-
-    invoke-interface {p2, p5, v1}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
-
-    move-result p2
-
-    if-eq p2, v1, :cond_c5
-
-    .line 304
-    iput p2, p3, Lorg/telegram/ui/NotificationsSettingsActivity$NotificationException;->muteUntil:I
-
-    :cond_c5
-    if-eqz p1, :cond_db
-
-    .line 308
-    iget-object p1, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->exceptions:Ljava/util/ArrayList;
-
-    invoke-virtual {p1, p3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    .line 309
-    iget-object p1, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->exceptionsDict:Ljava/util/HashMap;
-
-    iget-wide p4, p3, Lorg/telegram/ui/NotificationsSettingsActivity$NotificationException;->did:J
-
-    invoke-static {p4, p5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object p2
-
-    invoke-virtual {p1, p2, p3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 310
-    invoke-direct {p0, v0}, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->updateRows(Z)V
-
-    goto :goto_e4
-
-    .line 312
-    :cond_db
-    iget-object p1, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
-
-    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Landroidx/recyclerview/widget/RecyclerView$Adapter;
-
-    move-result-object p1
-
-    invoke-virtual {p1, p4}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->notifyItemChanged(I)V
-
-    .line 314
-    :goto_e4
-    iget-object p1, p0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
-
-    invoke-virtual {p1}, Lorg/telegram/ui/ActionBar/ActionBar;->closeSearchField()V
-
-    :goto_e9
-    return-void
-.end method
-
-.method private synthetic lambda$createView$1(Lorg/telegram/ui/NotificationsSettingsActivity$NotificationException;)V
+.method private synthetic lambda$createView$0(Lorg/telegram/ui/NotificationsSettingsActivity$NotificationException;)V
     .registers 4
 
-    .line 337
+    .line 409
     iget-object v0, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->exceptions:Ljava/util/ArrayList;
 
     const/4 v1, 0x0
@@ -1050,23 +873,23 @@
 
     const/4 p1, 0x1
 
-    .line 338
+    .line 410
     invoke-direct {p0, p1}, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->updateRows(Z)V
 
     return-void
 .end method
 
-.method private synthetic lambda$createView$2(Lorg/telegram/ui/DialogsActivity;Ljava/util/ArrayList;Ljava/lang/CharSequence;Z)V
+.method private synthetic lambda$createView$1(Lorg/telegram/ui/DialogsActivity;Ljava/util/ArrayList;Ljava/lang/CharSequence;Z)V
     .registers 5
 
-    .line 332
+    .line 404
     new-instance p1, Landroid/os/Bundle;
 
     invoke-direct {p1}, Landroid/os/Bundle;-><init>()V
 
     const/4 p3, 0x0
 
-    .line 333
+    .line 405
     invoke-virtual {p2, p3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object p2
@@ -1085,41 +908,45 @@
 
     const/4 p3, 0x1
 
-    .line 334
+    .line 406
     invoke-virtual {p1, p2, p3}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 335
+    .line 407
     new-instance p2, Lorg/telegram/ui/ProfileNotificationsActivity;
 
-    invoke-direct {p2, p1}, Lorg/telegram/ui/ProfileNotificationsActivity;-><init>(Landroid/os/Bundle;)V
+    invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getResourceProvider()Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;
 
-    .line 336
-    new-instance p1, Lorg/telegram/ui/NotificationsCustomSettingsActivity$$ExternalSyntheticLambda12;
+    move-result-object p4
 
-    invoke-direct {p1, p0}, Lorg/telegram/ui/NotificationsCustomSettingsActivity$$ExternalSyntheticLambda12;-><init>(Lorg/telegram/ui/NotificationsCustomSettingsActivity;)V
+    invoke-direct {p2, p1, p4}, Lorg/telegram/ui/ProfileNotificationsActivity;-><init>(Landroid/os/Bundle;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)V
+
+    .line 408
+    new-instance p1, Lorg/telegram/ui/NotificationsCustomSettingsActivity$$ExternalSyntheticLambda11;
+
+    invoke-direct {p1, p0}, Lorg/telegram/ui/NotificationsCustomSettingsActivity$$ExternalSyntheticLambda11;-><init>(Lorg/telegram/ui/NotificationsCustomSettingsActivity;)V
 
     invoke-virtual {p2, p1}, Lorg/telegram/ui/ProfileNotificationsActivity;->setDelegate(Lorg/telegram/ui/ProfileNotificationsActivity$ProfileNotificationsActivityDelegate;)V
 
-    .line 340
+    .line 412
     invoke-virtual {p0, p2, p3}, Lorg/telegram/ui/ActionBar/BaseFragment;->presentFragment(Lorg/telegram/ui/ActionBar/BaseFragment;Z)Z
 
     return-void
 .end method
 
-.method private synthetic lambda$createView$3(Landroid/content/DialogInterface;I)V
+.method private synthetic lambda$createView$2(Landroid/content/DialogInterface;I)V
     .registers 11
 
-    .line 348
+    .line 420
     invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getNotificationsSettings()Landroid/content/SharedPreferences;
 
     move-result-object p1
 
-    .line 349
+    .line 421
     invoke-interface {p1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object p1
 
-    .line 350
+    .line 422
     iget-object p2, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->exceptions:Ljava/util/ArrayList;
 
     invoke-virtual {p2}, Ljava/util/ArrayList;->size()I
@@ -1133,7 +960,7 @@
     :goto_10
     if-ge v1, p2, :cond_6c
 
-    .line 351
+    .line 423
     iget-object v2, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->exceptions:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1142,7 +969,7 @@
 
     check-cast v2, Lorg/telegram/ui/NotificationsSettingsActivity$NotificationException;
 
-    .line 352
+    .line 424
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1181,7 +1008,7 @@
 
     invoke-interface {v3, v4}, Landroid/content/SharedPreferences$Editor;->remove(Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
-    .line 353
+    .line 425
     invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getMessagesStorage()Lorg/telegram/messenger/MessagesStorage;
 
     move-result-object v3
@@ -1192,7 +1019,7 @@
 
     invoke-virtual {v3, v4, v5, v6, v7}, Lorg/telegram/messenger/MessagesStorage;->setDialogFlags(JJ)V
 
-    .line 354
+    .line 426
     invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getMessagesController()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v3
@@ -1209,7 +1036,7 @@
 
     if-eqz v2, :cond_69
 
-    .line 356
+    .line 428
     new-instance v3, Lorg/telegram/tgnet/TLRPC$TL_peerNotifySettings;
 
     invoke-direct {v3}, Lorg/telegram/tgnet/TLRPC$TL_peerNotifySettings;-><init>()V
@@ -1221,11 +1048,11 @@
 
     goto :goto_10
 
-    .line 359
+    .line 431
     :cond_6c
     invoke-interface {p1}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 360
+    .line 432
     iget-object p1, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->exceptions:Ljava/util/ArrayList;
 
     invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
@@ -1237,7 +1064,7 @@
     :goto_76
     if-ge p2, p1, :cond_8c
 
-    .line 361
+    .line 433
     iget-object v1, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->exceptions:Ljava/util/ArrayList;
 
     invoke-virtual {v1, p2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1246,7 +1073,7 @@
 
     check-cast v1, Lorg/telegram/ui/NotificationsSettingsActivity$NotificationException;
 
-    .line 362
+    .line 434
     invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getNotificationsController()Lorg/telegram/messenger/NotificationsController;
 
     move-result-object v2
@@ -1259,23 +1086,23 @@
 
     goto :goto_76
 
-    .line 365
+    .line 437
     :cond_8c
     iget-object p1, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->exceptions:Ljava/util/ArrayList;
 
     invoke-virtual {p1}, Ljava/util/ArrayList;->clear()V
 
-    .line 366
+    .line 438
     iget-object p1, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->exceptionsDict:Ljava/util/HashMap;
 
     invoke-virtual {p1}, Ljava/util/HashMap;->clear()V
 
     const/4 p1, 0x1
 
-    .line 367
+    .line 439
     invoke-direct {p0, p1}, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->updateRows(Z)V
 
-    .line 368
+    .line 440
     invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getNotificationCenter()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object p1
@@ -1289,15 +1116,15 @@
     return-void
 .end method
 
-.method private synthetic lambda$createView$4(Lorg/telegram/ui/Cells/NotificationsCheckCell;Landroidx/recyclerview/widget/RecyclerView$ViewHolder;II)V
+.method private synthetic lambda$createView$3(Lorg/telegram/ui/Cells/NotificationsCheckCell;Landroidx/recyclerview/widget/RecyclerView$ViewHolder;II)V
     .registers 8
 
-    .line 392
+    .line 464
     invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getNotificationsSettings()Landroid/content/SharedPreferences;
 
     move-result-object p4
 
-    .line 393
+    .line 465
     iget v0, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->currentType:I
 
     const/4 v1, 0x0
@@ -1308,7 +1135,7 @@
 
     const-string v0, "EnableAll2"
 
-    .line 394
+    .line 466
     invoke-interface {p4, v0, v1}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
 
     move-result p4
@@ -1320,7 +1147,7 @@
 
     const-string v0, "EnableGroup2"
 
-    .line 396
+    .line 468
     invoke-interface {p4, v0, v1}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
 
     move-result p4
@@ -1330,12 +1157,12 @@
     :cond_1a
     const-string v0, "EnableChannel2"
 
-    .line 398
+    .line 470
     invoke-interface {p4, v0, v1}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
 
     move-result p4
 
-    .line 400
+    .line 472
     :goto_20
     invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getConnectionsManager()Lorg/telegram/tgnet/ConnectionsManager;
 
@@ -1361,7 +1188,7 @@
     :cond_32
     const/4 v1, 0x2
 
-    .line 409
+    .line 481
     :goto_33
     invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getNotificationsController()Lorg/telegram/messenger/NotificationsController;
 
@@ -1377,22 +1204,22 @@
 
     if-eqz p2, :cond_47
 
-    .line 411
+    .line 483
     iget-object p1, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->adapter:Lorg/telegram/ui/NotificationsCustomSettingsActivity$ListAdapter;
 
     invoke-virtual {p1, p2, p3}, Lorg/telegram/ui/NotificationsCustomSettingsActivity$ListAdapter;->onBindViewHolder(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;I)V
 
-    .line 413
+    .line 485
     :cond_47
     invoke-direct {p0}, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->checkRowsEnabled()V
 
     return-void
 .end method
 
-.method private synthetic lambda$createView$5(I)V
+.method private synthetic lambda$createView$4(I)V
     .registers 4
 
-    .line 483
+    .line 555
     iget-object v0, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     invoke-virtual {v0, p1}, Landroidx/recyclerview/widget/RecyclerView;->findViewHolderForAdapterPosition(I)Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
@@ -1401,7 +1228,28 @@
 
     if-eqz v0, :cond_d
 
-    .line 485
+    .line 557
+    iget-object v1, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->adapter:Lorg/telegram/ui/NotificationsCustomSettingsActivity$ListAdapter;
+
+    invoke-virtual {v1, v0, p1}, Lorg/telegram/ui/NotificationsCustomSettingsActivity$ListAdapter;->onBindViewHolder(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;I)V
+
+    :cond_d
+    return-void
+.end method
+
+.method private synthetic lambda$createView$5(I)V
+    .registers 4
+
+    .line 565
+    iget-object v0, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
+
+    invoke-virtual {v0, p1}, Landroidx/recyclerview/widget/RecyclerView;->findViewHolderForAdapterPosition(I)Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_d
+
+    .line 567
     iget-object v1, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->adapter:Lorg/telegram/ui/NotificationsCustomSettingsActivity$ListAdapter;
 
     invoke-virtual {v1, v0, p1}, Lorg/telegram/ui/NotificationsCustomSettingsActivity$ListAdapter;->onBindViewHolder(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;I)V
@@ -1413,7 +1261,7 @@
 .method private synthetic lambda$createView$6(I)V
     .registers 4
 
-    .line 493
+    .line 583
     iget-object v0, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     invoke-virtual {v0, p1}, Landroidx/recyclerview/widget/RecyclerView;->findViewHolderForAdapterPosition(I)Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
@@ -1422,7 +1270,7 @@
 
     if-eqz v0, :cond_d
 
-    .line 495
+    .line 585
     iget-object v1, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->adapter:Lorg/telegram/ui/NotificationsCustomSettingsActivity$ListAdapter;
 
     invoke-virtual {v1, v0, p1}, Lorg/telegram/ui/NotificationsCustomSettingsActivity$ListAdapter;->onBindViewHolder(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;I)V
@@ -1434,7 +1282,7 @@
 .method private synthetic lambda$createView$7(I)V
     .registers 4
 
-    .line 511
+    .line 593
     iget-object v0, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     invoke-virtual {v0, p1}, Landroidx/recyclerview/widget/RecyclerView;->findViewHolderForAdapterPosition(I)Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
@@ -1443,7 +1291,7 @@
 
     if-eqz v0, :cond_d
 
-    .line 513
+    .line 595
     iget-object v1, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->adapter:Lorg/telegram/ui/NotificationsCustomSettingsActivity$ListAdapter;
 
     invoke-virtual {v1, v0, p1}, Lorg/telegram/ui/NotificationsCustomSettingsActivity$ListAdapter;->onBindViewHolder(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;I)V
@@ -1452,199 +1300,178 @@
     return-void
 .end method
 
-.method private synthetic lambda$createView$8(I)V
-    .registers 4
+.method private synthetic lambda$createView$8(Landroid/content/Context;Landroid/view/View;IFF)V
+    .registers 28
 
-    .line 521
-    iget-object v0, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
+    move-object/from16 v10, p0
 
-    invoke-virtual {v0, p1}, Landroidx/recyclerview/widget/RecyclerView;->findViewHolderForAdapterPosition(I)Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
+    move-object/from16 v11, p2
 
-    move-result-object v0
+    move/from16 v0, p3
 
-    if-eqz v0, :cond_d
-
-    .line 523
-    iget-object v1, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->adapter:Lorg/telegram/ui/NotificationsCustomSettingsActivity$ListAdapter;
-
-    invoke-virtual {v1, v0, p1}, Lorg/telegram/ui/NotificationsCustomSettingsActivity$ListAdapter;->onBindViewHolder(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;I)V
-
-    :cond_d
-    return-void
-.end method
-
-.method private synthetic lambda$createView$9(Landroid/view/View;IFF)V
-    .registers 20
-
-    move-object v9, p0
-
-    move-object/from16 v8, p1
-
-    move/from16 v0, p2
-
-    .line 218
-    invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getParentActivity()Landroid/app/Activity;
+    .line 221
+    invoke-virtual/range {p0 .. p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getParentActivity()Landroid/app/Activity;
 
     move-result-object v1
 
-    if-nez v1, :cond_c
+    if-nez v1, :cond_d
 
     return-void
 
-    .line 221
-    :cond_c
-    iget-object v1, v9, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
+    .line 224
+    :cond_d
+    iget-object v1, v10, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     invoke-virtual {v1}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Landroidx/recyclerview/widget/RecyclerView$Adapter;
 
     move-result-object v1
 
-    iget-object v2, v9, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->searchAdapter:Lorg/telegram/ui/NotificationsCustomSettingsActivity$SearchAdapter;
+    iget-object v2, v10, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->searchAdapter:Lorg/telegram/ui/NotificationsCustomSettingsActivity$SearchAdapter;
 
     const/4 v3, 0x0
 
-    const/4 v10, 0x1
+    const/4 v8, 0x1
 
-    if-eq v1, v2, :cond_20a
+    if-eq v1, v2, :cond_210
 
-    iget v1, v9, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->exceptionsStartRow:I
+    iget v1, v10, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->exceptionsStartRow:I
 
-    if-lt v0, v1, :cond_22
+    if-lt v0, v1, :cond_23
 
-    iget v1, v9, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->exceptionsEndRow:I
+    iget v1, v10, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->exceptionsEndRow:I
 
-    if-ge v0, v1, :cond_22
+    if-ge v0, v1, :cond_23
 
-    goto/16 :goto_20a
+    goto/16 :goto_210
 
-    .line 319
-    :cond_22
-    iget v1, v9, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->exceptionsAddRow:I
+    .line 391
+    :cond_23
+    iget v1, v10, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->exceptionsAddRow:I
 
-    if-ne v0, v1, :cond_5e
+    if-ne v0, v1, :cond_5f
 
-    .line 320
+    .line 392
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     const-string v1, "onlySelect"
 
-    .line 321
-    invoke-virtual {v0, v1, v10}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
+    .line 393
+    invoke-virtual {v0, v1, v8}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
     const-string v1, "checkCanWrite"
 
-    .line 322
+    .line 394
     invoke-virtual {v0, v1, v3}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 323
-    iget v1, v9, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->currentType:I
+    .line 395
+    iget v1, v10, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->currentType:I
 
     const-string v2, "dialogsType"
 
-    if-nez v1, :cond_40
+    if-nez v1, :cond_41
 
     const/4 v1, 0x6
 
-    .line 324
+    .line 396
     invoke-virtual {v0, v2, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    goto :goto_4c
+    goto :goto_4d
 
-    :cond_40
+    :cond_41
     const/4 v4, 0x2
 
-    if-ne v1, v4, :cond_48
+    if-ne v1, v4, :cond_49
 
     const/4 v1, 0x5
 
-    .line 326
+    .line 398
     invoke-virtual {v0, v2, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    goto :goto_4c
+    goto :goto_4d
 
-    :cond_48
+    :cond_49
     const/4 v1, 0x4
 
-    .line 328
+    .line 400
     invoke-virtual {v0, v2, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 330
-    :goto_4c
+    .line 402
+    :goto_4d
     new-instance v1, Lorg/telegram/ui/DialogsActivity;
 
     invoke-direct {v1, v0}, Lorg/telegram/ui/DialogsActivity;-><init>(Landroid/os/Bundle;)V
 
-    .line 331
-    new-instance v0, Lorg/telegram/ui/NotificationsCustomSettingsActivity$$ExternalSyntheticLambda11;
+    .line 403
+    new-instance v0, Lorg/telegram/ui/NotificationsCustomSettingsActivity$$ExternalSyntheticLambda10;
 
-    invoke-direct {v0, p0}, Lorg/telegram/ui/NotificationsCustomSettingsActivity$$ExternalSyntheticLambda11;-><init>(Lorg/telegram/ui/NotificationsCustomSettingsActivity;)V
+    invoke-direct {v0, v10}, Lorg/telegram/ui/NotificationsCustomSettingsActivity$$ExternalSyntheticLambda10;-><init>(Lorg/telegram/ui/NotificationsCustomSettingsActivity;)V
 
     invoke-virtual {v1, v0}, Lorg/telegram/ui/DialogsActivity;->setDelegate(Lorg/telegram/ui/DialogsActivity$DialogsActivityDelegate;)V
 
-    .line 342
-    invoke-virtual {p0, v1}, Lorg/telegram/ui/ActionBar/BaseFragment;->presentFragment(Lorg/telegram/ui/ActionBar/BaseFragment;)Z
+    .line 414
+    invoke-virtual {v10, v1}, Lorg/telegram/ui/ActionBar/BaseFragment;->presentFragment(Lorg/telegram/ui/ActionBar/BaseFragment;)Z
 
-    goto/16 :goto_1fd
+    goto/16 :goto_203
 
-    .line 343
-    :cond_5e
-    iget v1, v9, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->deleteAllRow:I
+    .line 415
+    :cond_5f
+    iget v1, v10, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->deleteAllRow:I
 
-    if-ne v0, v1, :cond_bc
+    if-ne v0, v1, :cond_bd
 
-    .line 344
+    .line 416
     new-instance v0, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getParentActivity()Landroid/app/Activity;
+    invoke-virtual/range {p0 .. p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getParentActivity()Landroid/app/Activity;
 
     move-result-object v1
 
     invoke-direct {v0, v1}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    const v1, 0x7f0e0b80
+    const v1, 0x7f0e0c0a
 
     const-string v2, "NotificationsDeleteAllExceptionTitle"
 
-    .line 345
+    .line 417
     invoke-static {v2, v1}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const v1, 0x7f0e0b7f
+    const v1, 0x7f0e0c09
 
     const-string v2, "NotificationsDeleteAllExceptionAlert"
 
-    .line 346
+    .line 418
     invoke-static {v2, v1}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const v1, 0x7f0e0540
+    const v1, 0x7f0e0591
 
     const-string v2, "Delete"
 
-    .line 347
+    .line 419
     invoke-static {v2, v1}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v1
 
     new-instance v2, Lorg/telegram/ui/NotificationsCustomSettingsActivity$$ExternalSyntheticLambda0;
 
-    invoke-direct {v2, p0}, Lorg/telegram/ui/NotificationsCustomSettingsActivity$$ExternalSyntheticLambda0;-><init>(Lorg/telegram/ui/NotificationsCustomSettingsActivity;)V
+    invoke-direct {v2, v10}, Lorg/telegram/ui/NotificationsCustomSettingsActivity$$ExternalSyntheticLambda0;-><init>(Lorg/telegram/ui/NotificationsCustomSettingsActivity;)V
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const v1, 0x7f0e0331
+    const v1, 0x7f0e036d
 
     const-string v2, "Cancel"
 
-    .line 370
+    .line 442
     invoke-static {v2, v1}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v1
@@ -1653,107 +1480,107 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setNegativeButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 371
+    .line 443
     invoke-virtual {v0}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->create()Lorg/telegram/ui/ActionBar/AlertDialog;
 
     move-result-object v0
 
-    .line 372
-    invoke-virtual {p0, v0}, Lorg/telegram/ui/ActionBar/BaseFragment;->showDialog(Landroid/app/Dialog;)Landroid/app/Dialog;
+    .line 444
+    invoke-virtual {v10, v0}, Lorg/telegram/ui/ActionBar/BaseFragment;->showDialog(Landroid/app/Dialog;)Landroid/app/Dialog;
 
     const/4 v1, -0x1
 
-    .line 373
+    .line 445
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/AlertDialog;->getButton(I)Landroid/view/View;
 
     move-result-object v0
 
     check-cast v0, Landroid/widget/TextView;
 
-    if-eqz v0, :cond_1fd
+    if-eqz v0, :cond_203
 
     const-string v1, "dialogTextRed2"
 
-    .line 375
+    .line 447
     invoke-static {v1}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
 
     move-result v1
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
 
-    goto/16 :goto_1fd
+    goto/16 :goto_203
 
-    .line 377
-    :cond_bc
-    iget v1, v9, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->alertRow:I
+    .line 449
+    :cond_bd
+    iget v1, v10, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->alertRow:I
 
-    if-ne v0, v1, :cond_105
+    if-ne v0, v1, :cond_107
 
-    .line 378
-    invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getNotificationsController()Lorg/telegram/messenger/NotificationsController;
+    .line 450
+    invoke-virtual/range {p0 .. p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getNotificationsController()Lorg/telegram/messenger/NotificationsController;
 
     move-result-object v1
 
-    iget v2, v9, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->currentType:I
+    iget v2, v10, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->currentType:I
 
     invoke-virtual {v1, v2}, Lorg/telegram/messenger/NotificationsController;->isGlobalNotificationsEnabled(I)Z
 
-    move-result v11
+    move-result v9
 
-    .line 380
-    move-object v1, v8
+    .line 452
+    move-object v1, v11
 
     check-cast v1, Lorg/telegram/ui/Cells/NotificationsCheckCell;
 
-    .line 381
-    iget-object v2, v9, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
+    .line 453
+    iget-object v2, v10, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     invoke-virtual {v2, v0}, Landroidx/recyclerview/widget/RecyclerView;->findViewHolderForAdapterPosition(I)Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
 
     move-result-object v2
 
-    if-nez v11, :cond_ec
+    if-nez v9, :cond_ed
 
-    .line 383
-    invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getNotificationsController()Lorg/telegram/messenger/NotificationsController;
+    .line 455
+    invoke-virtual/range {p0 .. p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getNotificationsController()Lorg/telegram/messenger/NotificationsController;
 
     move-result-object v4
 
-    iget v5, v9, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->currentType:I
+    iget v5, v10, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->currentType:I
 
     invoke-virtual {v4, v5, v3}, Lorg/telegram/messenger/NotificationsController;->setGlobalNotificationsEnabled(II)V
 
-    .line 384
-    invoke-virtual {v1, v10}, Lorg/telegram/ui/Cells/NotificationsCheckCell;->setChecked(Z)V
+    .line 456
+    invoke-virtual {v1, v8}, Lorg/telegram/ui/Cells/NotificationsCheckCell;->setChecked(Z)V
 
-    if-eqz v2, :cond_e8
+    if-eqz v2, :cond_e9
 
-    .line 386
-    iget-object v1, v9, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->adapter:Lorg/telegram/ui/NotificationsCustomSettingsActivity$ListAdapter;
+    .line 458
+    iget-object v1, v10, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->adapter:Lorg/telegram/ui/NotificationsCustomSettingsActivity$ListAdapter;
 
     invoke-virtual {v1, v2, v0}, Lorg/telegram/ui/NotificationsCustomSettingsActivity$ListAdapter;->onBindViewHolder(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;I)V
 
-    .line 388
-    :cond_e8
-    invoke-direct {p0}, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->checkRowsEnabled()V
+    .line 460
+    :cond_e9
+    invoke-direct/range {p0 .. p0}, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->checkRowsEnabled()V
 
-    goto :goto_102
+    goto :goto_104
 
-    :cond_ec
+    :cond_ed
     const-wide/16 v3, 0x0
 
-    .line 390
-    iget v5, v9, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->currentType:I
+    .line 462
+    iget v5, v10, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->currentType:I
 
-    iget-object v6, v9, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->exceptions:Ljava/util/ArrayList;
+    iget-object v6, v10, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->exceptions:Ljava/util/ArrayList;
 
-    iget v7, v9, Lorg/telegram/ui/ActionBar/BaseFragment;->currentAccount:I
+    iget v7, v10, Lorg/telegram/ui/ActionBar/BaseFragment;->currentAccount:I
 
     new-instance v12, Lorg/telegram/ui/NotificationsCustomSettingsActivity$$ExternalSyntheticLambda7;
 
-    invoke-direct {v12, p0, v1, v2, v0}, Lorg/telegram/ui/NotificationsCustomSettingsActivity$$ExternalSyntheticLambda7;-><init>(Lorg/telegram/ui/NotificationsCustomSettingsActivity;Lorg/telegram/ui/Cells/NotificationsCheckCell;Landroidx/recyclerview/widget/RecyclerView$ViewHolder;I)V
+    invoke-direct {v12, v10, v1, v2, v0}, Lorg/telegram/ui/NotificationsCustomSettingsActivity$$ExternalSyntheticLambda7;-><init>(Lorg/telegram/ui/NotificationsCustomSettingsActivity;Lorg/telegram/ui/Cells/NotificationsCheckCell;Landroidx/recyclerview/widget/RecyclerView$ViewHolder;I)V
 
-    move-object v1, p0
+    move-object/from16 v1, p0
 
     move-wide v2, v3
 
@@ -1767,321 +1594,325 @@
 
     invoke-static/range {v1 .. v7}, Lorg/telegram/ui/Components/AlertsCreator;->showCustomNotificationsDialog(Lorg/telegram/ui/ActionBar/BaseFragment;JILjava/util/ArrayList;ILorg/telegram/messenger/MessagesStorage$IntCallback;)V
 
-    :goto_102
-    move v3, v11
+    :goto_104
+    move v3, v9
 
-    goto/16 :goto_1fd
+    goto/16 :goto_203
 
-    .line 416
-    :cond_105
-    iget v1, v9, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->previewRow:I
+    .line 488
+    :cond_107
+    iget v1, v10, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->previewRow:I
 
-    if-ne v0, v1, :cond_151
+    if-ne v0, v1, :cond_153
 
-    .line 417
-    invoke-virtual/range {p1 .. p1}, Landroid/view/View;->isEnabled()Z
+    .line 489
+    invoke-virtual/range {p2 .. p2}, Landroid/view/View;->isEnabled()Z
 
     move-result v0
 
-    if-nez v0, :cond_110
+    if-nez v0, :cond_112
 
     return-void
 
-    .line 420
-    :cond_110
-    invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getNotificationsSettings()Landroid/content/SharedPreferences;
+    .line 492
+    :cond_112
+    invoke-virtual/range {p0 .. p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getNotificationsSettings()Landroid/content/SharedPreferences;
 
     move-result-object v0
 
-    .line 421
+    .line 493
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v1
 
-    .line 422
-    iget v2, v9, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->currentType:I
+    .line 494
+    iget v2, v10, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->currentType:I
 
-    if-ne v2, v10, :cond_129
+    if-ne v2, v8, :cond_12b
 
     const-string v2, "EnablePreviewAll"
 
-    .line 423
-    invoke-interface {v0, v2, v10}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
+    .line 495
+    invoke-interface {v0, v2, v8}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v0
 
     xor-int/lit8 v3, v0, 0x1
 
-    .line 424
+    .line 496
     invoke-interface {v1, v2, v3}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
-    :goto_127
+    :goto_129
     move v3, v0
 
-    goto :goto_143
+    goto :goto_145
 
-    :cond_129
-    if-nez v2, :cond_137
+    :cond_12b
+    if-nez v2, :cond_139
 
     const-string v2, "EnablePreviewGroup"
 
-    .line 426
-    invoke-interface {v0, v2, v10}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
+    .line 498
+    invoke-interface {v0, v2, v8}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v0
 
     xor-int/lit8 v3, v0, 0x1
 
-    .line 427
+    .line 499
     invoke-interface {v1, v2, v3}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
-    goto :goto_127
+    goto :goto_129
 
-    :cond_137
+    :cond_139
     const-string v2, "EnablePreviewChannel"
 
-    .line 429
-    invoke-interface {v0, v2, v10}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
+    .line 501
+    invoke-interface {v0, v2, v8}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v0
 
     xor-int/lit8 v3, v0, 0x1
 
-    .line 430
+    .line 502
     invoke-interface {v1, v2, v3}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
-    goto :goto_127
+    goto :goto_129
 
-    .line 432
-    :goto_143
+    .line 504
+    :goto_145
     invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 433
-    invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getNotificationsController()Lorg/telegram/messenger/NotificationsController;
+    .line 505
+    invoke-virtual/range {p0 .. p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getNotificationsController()Lorg/telegram/messenger/NotificationsController;
 
     move-result-object v0
 
-    iget v1, v9, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->currentType:I
+    iget v1, v10, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->currentType:I
 
     invoke-virtual {v0, v1}, Lorg/telegram/messenger/NotificationsController;->updateServerNotificationsSettings(I)V
 
-    goto/16 :goto_1fd
+    goto/16 :goto_203
 
-    .line 434
-    :cond_151
-    iget v1, v9, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->messageSoundRow:I
+    .line 506
+    :cond_153
+    iget v1, v10, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->messageSoundRow:I
 
-    if-ne v0, v1, :cond_178
+    if-ne v0, v1, :cond_17e
 
-    .line 435
-    invoke-virtual/range {p1 .. p1}, Landroid/view/View;->isEnabled()Z
+    .line 507
+    invoke-virtual/range {p2 .. p2}, Landroid/view/View;->isEnabled()Z
 
     move-result v0
 
-    if-nez v0, :cond_15c
+    if-nez v0, :cond_15e
 
     return-void
 
-    .line 439
-    :cond_15c
-    :try_start_15c
+    .line 511
+    :cond_15e
+    :try_start_15e
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     const-string v1, "type"
 
-    .line 440
-    iget v2, v9, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->currentType:I
+    .line 512
+    iget v2, v10, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->currentType:I
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 441
+    .line 513
     new-instance v1, Lorg/telegram/ui/NotificationsSoundActivity;
 
-    invoke-direct {v1, v0}, Lorg/telegram/ui/NotificationsSoundActivity;-><init>(Landroid/os/Bundle;)V
+    invoke-virtual/range {p0 .. p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getResourceProvider()Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;
 
-    invoke-virtual {p0, v1}, Lorg/telegram/ui/ActionBar/BaseFragment;->presentFragment(Lorg/telegram/ui/ActionBar/BaseFragment;)Z
-    :try_end_170
-    .catch Ljava/lang/Exception; {:try_start_15c .. :try_end_170} :catch_172
+    move-result-object v2
 
-    goto/16 :goto_1fd
+    invoke-direct {v1, v0, v2}, Lorg/telegram/ui/NotificationsSoundActivity;-><init>(Landroid/os/Bundle;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)V
 
-    :catch_172
+    invoke-virtual {v10, v1}, Lorg/telegram/ui/ActionBar/BaseFragment;->presentFragment(Lorg/telegram/ui/ActionBar/BaseFragment;)Z
+    :try_end_176
+    .catch Ljava/lang/Exception; {:try_start_15e .. :try_end_176} :catch_178
+
+    goto/16 :goto_203
+
+    :catch_178
     move-exception v0
 
-    .line 476
+    .line 548
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
-    goto/16 :goto_1fd
+    goto/16 :goto_203
 
-    .line 478
-    :cond_178
-    iget v1, v9, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->messageLedRow:I
+    .line 550
+    :cond_17e
+    iget v1, v10, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->messageLedRow:I
 
     const-wide/16 v4, 0x0
 
-    if-ne v0, v1, :cond_198
+    if-ne v0, v1, :cond_19e
 
-    .line 479
-    invoke-virtual/range {p1 .. p1}, Landroid/view/View;->isEnabled()Z
+    .line 551
+    invoke-virtual/range {p2 .. p2}, Landroid/view/View;->isEnabled()Z
 
     move-result v1
 
-    if-nez v1, :cond_185
+    if-nez v1, :cond_18b
 
     return-void
 
-    .line 482
-    :cond_185
-    invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getParentActivity()Landroid/app/Activity;
+    .line 554
+    :cond_18b
+    invoke-virtual/range {p0 .. p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getParentActivity()Landroid/app/Activity;
 
     move-result-object v1
 
-    iget v2, v9, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->currentType:I
+    iget v2, v10, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->currentType:I
 
-    new-instance v6, Lorg/telegram/ui/NotificationsCustomSettingsActivity$$ExternalSyntheticLambda2;
+    new-instance v6, Lorg/telegram/ui/NotificationsCustomSettingsActivity$$ExternalSyntheticLambda4;
 
-    invoke-direct {v6, p0, v0}, Lorg/telegram/ui/NotificationsCustomSettingsActivity$$ExternalSyntheticLambda2;-><init>(Lorg/telegram/ui/NotificationsCustomSettingsActivity;I)V
+    invoke-direct {v6, v10, v0}, Lorg/telegram/ui/NotificationsCustomSettingsActivity$$ExternalSyntheticLambda4;-><init>(Lorg/telegram/ui/NotificationsCustomSettingsActivity;I)V
 
     invoke-static {v1, v4, v5, v2, v6}, Lorg/telegram/ui/Components/AlertsCreator;->createColorSelectDialog(Landroid/app/Activity;JILjava/lang/Runnable;)Landroid/app/Dialog;
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Lorg/telegram/ui/ActionBar/BaseFragment;->showDialog(Landroid/app/Dialog;)Landroid/app/Dialog;
+    invoke-virtual {v10, v0}, Lorg/telegram/ui/ActionBar/BaseFragment;->showDialog(Landroid/app/Dialog;)Landroid/app/Dialog;
 
-    goto :goto_1fd
+    goto :goto_203
 
-    .line 488
-    :cond_198
-    iget v1, v9, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->messagePopupNotificationRow:I
+    .line 560
+    :cond_19e
+    iget v1, v10, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->messagePopupNotificationRow:I
 
-    if-ne v0, v1, :cond_1b6
+    if-ne v0, v1, :cond_1bc
 
-    .line 489
-    invoke-virtual/range {p1 .. p1}, Landroid/view/View;->isEnabled()Z
+    .line 561
+    invoke-virtual/range {p2 .. p2}, Landroid/view/View;->isEnabled()Z
 
     move-result v1
 
-    if-nez v1, :cond_1a3
+    if-nez v1, :cond_1a9
 
     return-void
 
-    .line 492
-    :cond_1a3
-    invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getParentActivity()Landroid/app/Activity;
+    .line 564
+    :cond_1a9
+    invoke-virtual/range {p0 .. p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getParentActivity()Landroid/app/Activity;
 
     move-result-object v1
 
-    iget v2, v9, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->currentType:I
+    iget v2, v10, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->currentType:I
 
-    new-instance v4, Lorg/telegram/ui/NotificationsCustomSettingsActivity$$ExternalSyntheticLambda3;
+    new-instance v4, Lorg/telegram/ui/NotificationsCustomSettingsActivity$$ExternalSyntheticLambda2;
 
-    invoke-direct {v4, p0, v0}, Lorg/telegram/ui/NotificationsCustomSettingsActivity$$ExternalSyntheticLambda3;-><init>(Lorg/telegram/ui/NotificationsCustomSettingsActivity;I)V
+    invoke-direct {v4, v10, v0}, Lorg/telegram/ui/NotificationsCustomSettingsActivity$$ExternalSyntheticLambda2;-><init>(Lorg/telegram/ui/NotificationsCustomSettingsActivity;I)V
 
     invoke-static {v1, v2, v4}, Lorg/telegram/ui/Components/AlertsCreator;->createPopupSelectDialog(Landroid/app/Activity;ILjava/lang/Runnable;)Landroid/app/Dialog;
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Lorg/telegram/ui/ActionBar/BaseFragment;->showDialog(Landroid/app/Dialog;)Landroid/app/Dialog;
+    invoke-virtual {v10, v0}, Lorg/telegram/ui/ActionBar/BaseFragment;->showDialog(Landroid/app/Dialog;)Landroid/app/Dialog;
 
-    goto :goto_1fd
+    goto :goto_203
 
-    .line 498
-    :cond_1b6
-    iget v1, v9, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->messageVibrateRow:I
+    .line 570
+    :cond_1bc
+    iget v1, v10, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->messageVibrateRow:I
 
-    if-ne v0, v1, :cond_1e0
+    if-ne v0, v1, :cond_1e6
 
-    .line 499
-    invoke-virtual/range {p1 .. p1}, Landroid/view/View;->isEnabled()Z
+    .line 571
+    invoke-virtual/range {p2 .. p2}, Landroid/view/View;->isEnabled()Z
 
     move-result v1
 
-    if-nez v1, :cond_1c1
+    if-nez v1, :cond_1c7
 
     return-void
 
-    .line 503
-    :cond_1c1
-    iget v1, v9, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->currentType:I
+    .line 575
+    :cond_1c7
+    iget v1, v10, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->currentType:I
 
-    if-ne v1, v10, :cond_1c8
+    if-ne v1, v8, :cond_1ce
 
     const-string v1, "vibrate_messages"
 
-    goto :goto_1cf
+    goto :goto_1d5
 
-    :cond_1c8
-    if-nez v1, :cond_1cd
+    :cond_1ce
+    if-nez v1, :cond_1d3
 
     const-string v1, "vibrate_group"
 
-    goto :goto_1cf
+    goto :goto_1d5
 
-    :cond_1cd
+    :cond_1d3
     const-string v1, "vibrate_channel"
 
-    .line 510
-    :goto_1cf
-    invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getParentActivity()Landroid/app/Activity;
+    .line 582
+    :goto_1d5
+    invoke-virtual/range {p0 .. p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getParentActivity()Landroid/app/Activity;
 
     move-result-object v2
 
-    new-instance v6, Lorg/telegram/ui/NotificationsCustomSettingsActivity$$ExternalSyntheticLambda4;
+    new-instance v6, Lorg/telegram/ui/NotificationsCustomSettingsActivity$$ExternalSyntheticLambda3;
 
-    invoke-direct {v6, p0, v0}, Lorg/telegram/ui/NotificationsCustomSettingsActivity$$ExternalSyntheticLambda4;-><init>(Lorg/telegram/ui/NotificationsCustomSettingsActivity;I)V
+    invoke-direct {v6, v10, v0}, Lorg/telegram/ui/NotificationsCustomSettingsActivity$$ExternalSyntheticLambda3;-><init>(Lorg/telegram/ui/NotificationsCustomSettingsActivity;I)V
 
     invoke-static {v2, v4, v5, v1, v6}, Lorg/telegram/ui/Components/AlertsCreator;->createVibrationSelectDialog(Landroid/app/Activity;JLjava/lang/String;Ljava/lang/Runnable;)Landroid/app/Dialog;
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Lorg/telegram/ui/ActionBar/BaseFragment;->showDialog(Landroid/app/Dialog;)Landroid/app/Dialog;
+    invoke-virtual {v10, v0}, Lorg/telegram/ui/ActionBar/BaseFragment;->showDialog(Landroid/app/Dialog;)Landroid/app/Dialog;
 
-    goto :goto_1fd
+    goto :goto_203
 
-    .line 516
-    :cond_1e0
-    iget v1, v9, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->messagePriorityRow:I
+    .line 588
+    :cond_1e6
+    iget v1, v10, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->messagePriorityRow:I
 
-    if-ne v0, v1, :cond_1fd
+    if-ne v0, v1, :cond_203
 
-    .line 517
-    invoke-virtual/range {p1 .. p1}, Landroid/view/View;->isEnabled()Z
+    .line 589
+    invoke-virtual/range {p2 .. p2}, Landroid/view/View;->isEnabled()Z
 
     move-result v1
 
-    if-nez v1, :cond_1eb
+    if-nez v1, :cond_1f1
 
     return-void
 
-    .line 520
-    :cond_1eb
-    invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getParentActivity()Landroid/app/Activity;
+    .line 592
+    :cond_1f1
+    invoke-virtual/range {p0 .. p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getParentActivity()Landroid/app/Activity;
 
     move-result-object v1
 
-    iget v2, v9, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->currentType:I
+    iget v2, v10, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->currentType:I
 
     new-instance v6, Lorg/telegram/ui/NotificationsCustomSettingsActivity$$ExternalSyntheticLambda5;
 
-    invoke-direct {v6, p0, v0}, Lorg/telegram/ui/NotificationsCustomSettingsActivity$$ExternalSyntheticLambda5;-><init>(Lorg/telegram/ui/NotificationsCustomSettingsActivity;I)V
+    invoke-direct {v6, v10, v0}, Lorg/telegram/ui/NotificationsCustomSettingsActivity$$ExternalSyntheticLambda5;-><init>(Lorg/telegram/ui/NotificationsCustomSettingsActivity;I)V
 
     invoke-static {v1, v4, v5, v2, v6}, Lorg/telegram/ui/Components/AlertsCreator;->createPrioritySelectDialog(Landroid/app/Activity;JILjava/lang/Runnable;)Landroid/app/Dialog;
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Lorg/telegram/ui/ActionBar/BaseFragment;->showDialog(Landroid/app/Dialog;)Landroid/app/Dialog;
+    invoke-virtual {v10, v0}, Lorg/telegram/ui/ActionBar/BaseFragment;->showDialog(Landroid/app/Dialog;)Landroid/app/Dialog;
 
-    .line 527
-    :cond_1fd
-    :goto_1fd
-    instance-of v0, v8, Lorg/telegram/ui/Cells/TextCheckCell;
+    .line 599
+    :cond_203
+    :goto_203
+    instance-of v0, v11, Lorg/telegram/ui/Cells/TextCheckCell;
 
-    if-eqz v0, :cond_209
+    if-eqz v0, :cond_20f
 
-    .line 528
-    move-object v0, v8
+    .line 600
+    move-object v0, v11
 
     check-cast v0, Lorg/telegram/ui/Cells/TextCheckCell;
 
@@ -2089,74 +1920,74 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Cells/TextCheckCell;->setChecked(Z)V
 
-    :cond_209
+    :cond_20f
     return-void
 
-    .line 225
-    :cond_20a
-    :goto_20a
-    iget-object v1, v9, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
+    .line 228
+    :cond_210
+    :goto_210
+    iget-object v1, v10, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     invoke-virtual {v1}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Landroidx/recyclerview/widget/RecyclerView$Adapter;
 
     move-result-object v1
 
-    iget-object v2, v9, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->searchAdapter:Lorg/telegram/ui/NotificationsCustomSettingsActivity$SearchAdapter;
+    iget-object v2, v10, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->searchAdapter:Lorg/telegram/ui/NotificationsCustomSettingsActivity$SearchAdapter;
 
-    if-ne v1, v2, :cond_26c
+    if-ne v1, v2, :cond_273
 
-    .line 226
+    .line 229
     invoke-virtual {v2, v0}, Lorg/telegram/ui/NotificationsCustomSettingsActivity$SearchAdapter;->getObject(I)Ljava/lang/Object;
 
     move-result-object v1
 
-    .line 227
+    .line 230
     instance-of v2, v1, Lorg/telegram/ui/NotificationsSettingsActivity$NotificationException;
 
-    if-eqz v2, :cond_225
+    if-eqz v2, :cond_22b
 
-    .line 228
-    iget-object v2, v9, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->searchAdapter:Lorg/telegram/ui/NotificationsCustomSettingsActivity$SearchAdapter;
+    .line 231
+    iget-object v2, v10, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->searchAdapter:Lorg/telegram/ui/NotificationsCustomSettingsActivity$SearchAdapter;
 
     invoke-static {v2}, Lorg/telegram/ui/NotificationsCustomSettingsActivity$SearchAdapter;->access$3100(Lorg/telegram/ui/NotificationsCustomSettingsActivity$SearchAdapter;)Ljava/util/ArrayList;
 
     move-result-object v2
 
-    .line 229
+    .line 232
     check-cast v1, Lorg/telegram/ui/NotificationsSettingsActivity$NotificationException;
 
-    goto :goto_269
+    goto :goto_26f
 
-    .line 233
-    :cond_225
+    .line 236
+    :cond_22b
     instance-of v2, v1, Lorg/telegram/tgnet/TLRPC$User;
 
-    if-eqz v2, :cond_22f
+    if-eqz v2, :cond_235
 
-    .line 234
+    .line 237
     move-object v4, v1
 
     check-cast v4, Lorg/telegram/tgnet/TLRPC$User;
 
-    .line 235
+    .line 238
     iget-wide v4, v4, Lorg/telegram/tgnet/TLRPC$User;->id:J
 
-    goto :goto_235
+    goto :goto_23b
 
-    .line 237
-    :cond_22f
+    .line 240
+    :cond_235
     move-object v4, v1
 
     check-cast v4, Lorg/telegram/tgnet/TLRPC$Chat;
 
-    .line 238
+    .line 241
     iget-wide v4, v4, Lorg/telegram/tgnet/TLRPC$Chat;->id:J
 
     neg-long v4, v4
 
-    .line 240
-    :goto_235
-    iget-object v6, v9, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->exceptionsDict:Ljava/util/HashMap;
+    .line 243
+    :goto_23b
+    iget-object v6, v10, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->exceptionsDict:Ljava/util/HashMap;
 
     invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
@@ -2166,10 +1997,10 @@
 
     move-result v6
 
-    if-eqz v6, :cond_24e
+    if-eqz v6, :cond_254
 
-    .line 241
-    iget-object v1, v9, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->exceptionsDict:Ljava/util/HashMap;
+    .line 244
+    iget-object v1, v10, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->exceptionsDict:Ljava/util/HashMap;
 
     invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
@@ -2181,145 +2012,176 @@
 
     check-cast v1, Lorg/telegram/ui/NotificationsSettingsActivity$NotificationException;
 
-    goto :goto_267
+    goto :goto_26d
 
-    .line 245
-    :cond_24e
+    .line 248
+    :cond_254
     new-instance v3, Lorg/telegram/ui/NotificationsSettingsActivity$NotificationException;
 
     invoke-direct {v3}, Lorg/telegram/ui/NotificationsSettingsActivity$NotificationException;-><init>()V
 
-    .line 246
+    .line 249
     iput-wide v4, v3, Lorg/telegram/ui/NotificationsSettingsActivity$NotificationException;->did:J
 
-    if-eqz v2, :cond_25e
+    if-eqz v2, :cond_264
 
-    .line 248
+    .line 251
     check-cast v1, Lorg/telegram/tgnet/TLRPC$User;
 
-    .line 249
+    .line 252
     iget-wide v1, v1, Lorg/telegram/tgnet/TLRPC$User;->id:J
 
     iput-wide v1, v3, Lorg/telegram/ui/NotificationsSettingsActivity$NotificationException;->did:J
 
-    goto :goto_265
+    goto :goto_26b
 
-    .line 251
-    :cond_25e
+    .line 254
+    :cond_264
     check-cast v1, Lorg/telegram/tgnet/TLRPC$Chat;
 
-    .line 252
+    .line 255
     iget-wide v1, v1, Lorg/telegram/tgnet/TLRPC$Chat;->id:J
 
     neg-long v1, v1
 
     iput-wide v1, v3, Lorg/telegram/ui/NotificationsSettingsActivity$NotificationException;->did:J
 
-    :goto_265
+    :goto_26b
     move-object v1, v3
 
     const/4 v3, 0x1
 
-    .line 255
-    :goto_267
-    iget-object v2, v9, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->exceptions:Ljava/util/ArrayList;
-
-    :goto_269
-    move-object v5, v1
-
-    move-object v4, v2
-
-    goto :goto_283
-
     .line 258
-    :cond_26c
-    iget-object v1, v9, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->exceptions:Ljava/util/ArrayList;
+    :goto_26d
+    iget-object v2, v10, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->exceptions:Ljava/util/ArrayList;
 
-    .line 259
-    iget v2, v9, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->exceptionsStartRow:I
+    :goto_26f
+    move-object v6, v1
+
+    move-object v9, v2
+
+    move v7, v3
+
+    goto :goto_28b
+
+    .line 261
+    :cond_273
+    iget-object v1, v10, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->exceptions:Ljava/util/ArrayList;
+
+    .line 262
+    iget v2, v10, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->exceptionsStartRow:I
 
     sub-int v2, v0, v2
 
-    if-ltz v2, :cond_2a0
+    if-ltz v2, :cond_2c8
 
-    .line 260
+    .line 263
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
     move-result v4
 
-    if-lt v2, v4, :cond_27b
+    if-lt v2, v4, :cond_282
 
-    goto :goto_2a0
+    goto :goto_2c8
 
-    .line 263
-    :cond_27b
+    .line 266
+    :cond_282
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Lorg/telegram/ui/NotificationsSettingsActivity$NotificationException;
 
-    move-object v4, v1
+    move-object v9, v1
 
-    move-object v5, v2
+    move-object v6, v2
 
-    :goto_283
-    if-nez v5, :cond_286
+    const/4 v7, 0x0
+
+    :goto_28b
+    if-nez v6, :cond_28e
 
     return-void
 
-    .line 270
-    :cond_286
-    iget-wide v7, v5, Lorg/telegram/ui/NotificationsSettingsActivity$NotificationException;->did:J
+    .line 273
+    :cond_28e
+    iget-wide v12, v6, Lorg/telegram/ui/NotificationsSettingsActivity$NotificationException;->did:J
 
-    const/4 v10, -0x1
+    .line 274
+    iget v1, v10, Lorg/telegram/ui/ActionBar/BaseFragment;->currentAccount:I
 
-    const/4 v11, 0x0
+    invoke-static {v1}, Lorg/telegram/messenger/NotificationsController;->getInstance(I)Lorg/telegram/messenger/NotificationsController;
 
-    iget v12, v9, Lorg/telegram/ui/ActionBar/BaseFragment;->currentAccount:I
+    move-result-object v1
 
-    const/4 v13, 0x0
+    invoke-virtual {v1, v12, v13}, Lorg/telegram/messenger/NotificationsController;->isGlobalNotificationsEnabled(J)Z
 
-    new-instance v14, Lorg/telegram/ui/NotificationsCustomSettingsActivity$$ExternalSyntheticLambda8;
+    move-result v5
 
-    move-object v1, v14
+    .line 275
+    new-instance v15, Lorg/telegram/ui/Components/ChatNotificationsPopupWrapper;
 
-    move-object v2, p0
+    iget v14, v10, Lorg/telegram/ui/ActionBar/BaseFragment;->currentAccount:I
 
-    move/from16 v6, p2
+    const/16 v17, 0x0
 
-    invoke-direct/range {v1 .. v6}, Lorg/telegram/ui/NotificationsCustomSettingsActivity$$ExternalSyntheticLambda8;-><init>(Lorg/telegram/ui/NotificationsCustomSettingsActivity;ZLjava/util/ArrayList;Lorg/telegram/ui/NotificationsSettingsActivity$NotificationException;I)V
+    const/16 v18, 0x1
 
-    move-object v1, p0
+    const/16 v19, 0x1
 
-    move-wide v2, v7
+    new-instance v20, Lorg/telegram/ui/NotificationsCustomSettingsActivity$3;
 
-    move v4, v10
+    move-object/from16 v1, v20
 
-    move-object v5, v11
+    move-object/from16 v2, p0
 
-    move v6, v12
+    move-wide v3, v12
 
-    move-object v7, v13
+    move/from16 v8, p3
 
-    move-object v8, v14
+    invoke-direct/range {v1 .. v9}, Lorg/telegram/ui/NotificationsCustomSettingsActivity$3;-><init>(Lorg/telegram/ui/NotificationsCustomSettingsActivity;JZLorg/telegram/ui/NotificationsSettingsActivity$NotificationException;ZILjava/util/ArrayList;)V
 
-    invoke-static/range {v1 .. v8}, Lorg/telegram/ui/Components/AlertsCreator;->showCustomNotificationsDialog(Lorg/telegram/ui/ActionBar/BaseFragment;JILjava/util/ArrayList;ILorg/telegram/messenger/MessagesStorage$IntCallback;Lorg/telegram/messenger/MessagesStorage$IntCallback;)V
+    .line 386
+    invoke-virtual/range {p0 .. p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getResourceProvider()Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;
 
-    :cond_2a0
-    :goto_2a0
+    move-result-object v21
+
+    move v0, v14
+
+    move-object v14, v15
+
+    move-object v1, v15
+
+    move-object/from16 v15, p1
+
+    move/from16 v16, v0
+
+    invoke-direct/range {v14 .. v21}, Lorg/telegram/ui/Components/ChatNotificationsPopupWrapper;-><init>(Landroid/content/Context;ILorg/telegram/ui/Components/PopupSwipeBackLayout;ZZLorg/telegram/ui/Components/ChatNotificationsPopupWrapper$Callback;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)V
+
+    .line 387
+    invoke-virtual {v1, v12, v13}, Lorg/telegram/ui/Components/ChatNotificationsPopupWrapper;->update(J)V
+
+    move/from16 v0, p4
+
+    move/from16 v2, p5
+
+    .line 388
+    invoke-virtual {v1, v10, v11, v0, v2}, Lorg/telegram/ui/Components/ChatNotificationsPopupWrapper;->showAsOptions(Lorg/telegram/ui/ActionBar/BaseFragment;Landroid/view/View;FF)V
+
+    :cond_2c8
+    :goto_2c8
     return-void
 .end method
 
-.method private synthetic lambda$getThemeDescriptions$12()V
+.method private synthetic lambda$getThemeDescriptions$11()V
     .registers 6
 
-    .line 1432
+    .line 1504
     iget-object v0, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     if-eqz v0, :cond_1e
 
-    .line 1433
+    .line 1505
     invoke-virtual {v0}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result v0
@@ -2331,19 +2193,19 @@
     :goto_a
     if-ge v2, v0, :cond_1e
 
-    .line 1435
+    .line 1507
     iget-object v3, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     invoke-virtual {v3, v2}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v3
 
-    .line 1436
+    .line 1508
     instance-of v4, v3, Lorg/telegram/ui/Cells/UserCell;
 
     if-eqz v4, :cond_1b
 
-    .line 1437
+    .line 1509
     check-cast v3, Lorg/telegram/ui/Cells/UserCell;
 
     invoke-virtual {v3, v1}, Lorg/telegram/ui/Cells/UserCell;->update(I)V
@@ -2357,132 +2219,77 @@
     return-void
 .end method
 
-.method private synthetic lambda$loadExceptions$10(Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;)V
-    .registers 9
-
-    .line 734
-    invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getMessagesController()Lorg/telegram/messenger/MessagesController;
-
-    move-result-object v0
-
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, p1, v1}, Lorg/telegram/messenger/MessagesController;->putUsers(Ljava/util/ArrayList;Z)V
-
-    .line 735
-    invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getMessagesController()Lorg/telegram/messenger/MessagesController;
-
-    move-result-object p1
-
-    invoke-virtual {p1, p2, v1}, Lorg/telegram/messenger/MessagesController;->putChats(Ljava/util/ArrayList;Z)V
-
-    .line 736
-    invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getMessagesController()Lorg/telegram/messenger/MessagesController;
-
-    move-result-object p1
-
-    invoke-virtual {p1, p3, v1}, Lorg/telegram/messenger/MessagesController;->putEncryptedChats(Ljava/util/ArrayList;Z)V
-
-    .line 737
-    iget p1, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->currentType:I
-
-    if-ne p1, v1, :cond_1d
-
-    .line 738
-    iput-object p4, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->exceptions:Ljava/util/ArrayList;
-
-    goto :goto_24
-
-    :cond_1d
-    if-nez p1, :cond_22
-
-    .line 740
-    iput-object p5, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->exceptions:Ljava/util/ArrayList;
-
-    goto :goto_24
-
-    .line 742
-    :cond_22
-    iput-object p6, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->exceptions:Ljava/util/ArrayList;
-
-    .line 744
-    :goto_24
-    invoke-direct {p0, v1}, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->updateRows(Z)V
-
-    return-void
-.end method
-
-.method private synthetic lambda$loadExceptions$11()V
+.method private synthetic lambda$loadExceptions$10()V
     .registers 23
 
-    .line 605
+    .line 677
     new-instance v6, Ljava/util/ArrayList;
 
     invoke-direct {v6}, Ljava/util/ArrayList;-><init>()V
 
-    .line 606
+    .line 678
     new-instance v7, Ljava/util/ArrayList;
 
     invoke-direct {v7}, Ljava/util/ArrayList;-><init>()V
 
-    .line 607
+    .line 679
     new-instance v8, Ljava/util/ArrayList;
 
     invoke-direct {v8}, Ljava/util/ArrayList;-><init>()V
 
-    .line 608
+    .line 680
     new-instance v1, Landroid/util/LongSparseArray;
 
     invoke-direct {v1}, Landroid/util/LongSparseArray;-><init>()V
 
-    .line 610
+    .line 682
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 611
+    .line 683
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 612
+    .line 684
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
-    .line 614
+    .line 686
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    .line 615
+    .line 687
     new-instance v5, Ljava/util/ArrayList;
 
     invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
 
-    .line 616
+    .line 688
     new-instance v9, Ljava/util/ArrayList;
 
     invoke-direct {v9}, Ljava/util/ArrayList;-><init>()V
 
-    .line 617
+    .line 689
     invoke-virtual/range {p0 .. p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getUserConfig()Lorg/telegram/messenger/UserConfig;
 
     move-result-object v10
 
     iget-wide v10, v10, Lorg/telegram/messenger/UserConfig;->clientUserId:J
 
-    .line 619
+    .line 691
     invoke-virtual/range {p0 .. p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getNotificationsSettings()Landroid/content/SharedPreferences;
 
     move-result-object v12
 
-    .line 620
+    .line 692
     invoke-interface {v12}, Landroid/content/SharedPreferences;->getAll()Ljava/util/Map;
 
     move-result-object v13
 
-    .line 621
+    .line 693
     invoke-interface {v13}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object v14
@@ -2506,7 +2313,7 @@
 
     check-cast v15, Ljava/util/Map$Entry;
 
-    .line 622
+    .line 694
     invoke-interface {v15}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v17
@@ -2519,7 +2326,7 @@
 
     const-string v14, "notify2_"
 
-    .line 623
+    .line 695
     invoke-virtual {v5, v14}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v18
@@ -2530,12 +2337,12 @@
 
     const-string v4, ""
 
-    .line 624
+    .line 696
     invoke-virtual {v5, v14, v4}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 626
+    .line 698
     invoke-static {v4}, Lorg/telegram/messenger/Utilities;->parseLong(Ljava/lang/String;)Ljava/lang/Long;
 
     move-result-object v5
@@ -2558,17 +2365,17 @@
 
     if-eqz v5, :cond_18f
 
-    .line 628
+    .line 700
     new-instance v5, Lorg/telegram/ui/NotificationsSettingsActivity$NotificationException;
 
     invoke-direct {v5}, Lorg/telegram/ui/NotificationsSettingsActivity$NotificationException;-><init>()V
 
-    .line 629
+    .line 701
     iput-wide v7, v5, Lorg/telegram/ui/NotificationsSettingsActivity$NotificationException;->did:J
 
     move-wide/from16 v20, v10
 
-    .line 630
+    .line 702
     new-instance v10, Ljava/lang/StringBuilder;
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
@@ -2591,7 +2398,7 @@
 
     iput-boolean v10, v5, Lorg/telegram/ui/NotificationsSettingsActivity$NotificationException;->hasCustom:Z
 
-    .line 631
+    .line 703
     invoke-interface {v15}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v10
@@ -2606,7 +2413,7 @@
 
     if-eqz v10, :cond_d3
 
-    .line 633
+    .line 705
     new-instance v10, Ljava/lang/StringBuilder;
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
@@ -2629,14 +2436,14 @@
 
     if-eqz v4, :cond_d3
 
-    .line 635
+    .line 707
     invoke-virtual {v4}, Ljava/lang/Integer;->intValue()I
 
     move-result v4
 
     iput v4, v5, Lorg/telegram/ui/NotificationsSettingsActivity$NotificationException;->muteUntil:I
 
-    .line 639
+    .line 711
     :cond_d3
     invoke-static {v7, v8}, Lorg/telegram/messenger/DialogObject;->isEncryptedDialog(J)Z
 
@@ -2644,12 +2451,12 @@
 
     if-eqz v4, :cond_120
 
-    .line 640
+    .line 712
     invoke-static {v7, v8}, Lorg/telegram/messenger/DialogObject;->getEncryptedChatId(J)I
 
     move-result v4
 
-    .line 641
+    .line 713
     invoke-virtual/range {p0 .. p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getMessagesController()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v10
@@ -2664,19 +2471,19 @@
 
     if-nez v10, :cond_f6
 
-    .line 643
+    .line 715
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v4
 
     invoke-virtual {v3, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 644
+    .line 716
     invoke-virtual {v1, v7, v8, v5}, Landroid/util/LongSparseArray;->put(JLjava/lang/Object;)V
 
     goto :goto_11b
 
-    .line 646
+    .line 718
     :cond_f6
     invoke-virtual/range {p0 .. p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getMessagesController()Lorg/telegram/messenger/MessagesController;
 
@@ -2694,7 +2501,7 @@
 
     if-nez v4, :cond_115
 
-    .line 648
+    .line 720
     iget-wide v7, v10, Lorg/telegram/tgnet/TLRPC$EncryptedChat;->user_id:J
 
     invoke-static {v7, v8}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -2703,14 +2510,14 @@
 
     invoke-virtual {v0, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 649
+    .line 721
     iget-wide v7, v10, Lorg/telegram/tgnet/TLRPC$EncryptedChat;->user_id:J
 
     invoke-virtual {v1, v7, v8, v5}, Landroid/util/LongSparseArray;->put(JLjava/lang/Object;)V
 
     goto :goto_11b
 
-    .line 650
+    .line 722
     :cond_115
     iget-boolean v4, v4, Lorg/telegram/tgnet/TLRPC$User;->deleted:Z
 
@@ -2718,14 +2525,14 @@
 
     goto/16 :goto_185
 
-    .line 654
+    .line 726
     :cond_11b
     :goto_11b
     invoke-virtual {v6, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto/16 :goto_191
 
-    .line 655
+    .line 727
     :cond_120
     invoke-static {v7, v8}, Lorg/telegram/messenger/DialogObject;->isUserDialog(J)Z
 
@@ -2733,7 +2540,7 @@
 
     if-eqz v4, :cond_148
 
-    .line 656
+    .line 728
     invoke-virtual/range {p0 .. p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getMessagesController()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v4
@@ -2748,19 +2555,19 @@
 
     if-nez v4, :cond_13f
 
-    .line 658
+    .line 730
     invoke-static {v7, v8}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v4
 
     invoke-virtual {v0, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 659
+    .line 731
     invoke-virtual {v1, v7, v8, v5}, Landroid/util/LongSparseArray;->put(JLjava/lang/Object;)V
 
     goto :goto_144
 
-    .line 660
+    .line 732
     :cond_13f
     iget-boolean v4, v4, Lorg/telegram/tgnet/TLRPC$User;->deleted:Z
 
@@ -2768,14 +2575,14 @@
 
     goto :goto_185
 
-    .line 663
+    .line 735
     :cond_144
     :goto_144
     invoke-virtual {v6, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_191
 
-    .line 665
+    .line 737
     :cond_148
     invoke-virtual/range {p0 .. p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getMessagesController()Lorg/telegram/messenger/MessagesController;
 
@@ -2793,19 +2600,19 @@
 
     if-nez v4, :cond_162
 
-    .line 667
+    .line 739
     invoke-static {v10, v11}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v4
 
     invoke-virtual {v2, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 668
+    .line 740
     invoke-virtual {v1, v7, v8, v5}, Landroid/util/LongSparseArray;->put(JLjava/lang/Object;)V
 
     goto :goto_185
 
-    .line 670
+    .line 742
     :cond_162
     iget-boolean v7, v4, Lorg/telegram/tgnet/TLRPC$Chat;->left:Z
 
@@ -2821,7 +2628,7 @@
 
     goto :goto_185
 
-    .line 673
+    .line 745
     :cond_16f
     invoke-static {v4}, Lorg/telegram/messenger/ChatObject;->isChannel(Lorg/telegram/tgnet/TLRPC$Chat;)Z
 
@@ -2835,7 +2642,7 @@
 
     move-object/from16 v8, v19
 
-    .line 674
+    .line 746
     invoke-virtual {v8, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_199
@@ -2843,7 +2650,7 @@
     :cond_17f
     move-object/from16 v8, v19
 
-    .line 676
+    .line 748
     invoke-virtual {v14, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_199
@@ -2898,14 +2705,14 @@
 
     const/4 v11, 0x0
 
-    .line 682
+    .line 754
     invoke-virtual {v1}, Landroid/util/LongSparseArray;->size()I
 
     move-result v4
 
     if-eqz v4, :cond_29c
 
-    .line 684
+    .line 756
     :try_start_1ae
     invoke-virtual {v3}, Ljava/util/ArrayList;->isEmpty()Z
 
@@ -2917,7 +2724,7 @@
 
     if-nez v4, :cond_1c1
 
-    .line 685
+    .line 757
     :try_start_1b6
     invoke-virtual/range {p0 .. p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getMessagesStorage()Lorg/telegram/messenger/MessagesStorage;
 
@@ -2929,7 +2736,7 @@
 
     invoke-virtual {v4, v3, v9, v0}, Lorg/telegram/messenger/MessagesStorage;->getEncryptedChatsInternal(Ljava/lang/String;Ljava/util/ArrayList;Ljava/util/ArrayList;)V
 
-    .line 687
+    .line 759
     :cond_1c1
     invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
 
@@ -2939,7 +2746,7 @@
 
     if-nez v3, :cond_1d9
 
-    .line 688
+    .line 760
     :try_start_1c7
     invoke-virtual/range {p0 .. p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getMessagesStorage()Lorg/telegram/messenger/MessagesStorage;
 
@@ -2968,7 +2775,7 @@
     :cond_1d9
     move-object/from16 v4, v18
 
-    .line 690
+    .line 762
     :goto_1db
     invoke-virtual {v2}, Ljava/util/ArrayList;->isEmpty()Z
 
@@ -2976,7 +2783,7 @@
 
     if-nez v0, :cond_1f1
 
-    .line 691
+    .line 763
     invoke-virtual/range {p0 .. p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getMessagesStorage()Lorg/telegram/messenger/MessagesStorage;
 
     move-result-object v0
@@ -3021,11 +2828,11 @@
 
     move-object/from16 v4, v18
 
-    .line 694
+    .line 766
     :goto_1fd
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
-    .line 696
+    .line 768
     :goto_200
     invoke-virtual {v5}, Ljava/util/ArrayList;->size()I
 
@@ -3036,14 +2843,14 @@
     :goto_205
     if-ge v2, v0, :cond_23f
 
-    .line 697
+    .line 769
     invoke-virtual {v5, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Lorg/telegram/tgnet/TLRPC$Chat;
 
-    .line 698
+    .line 770
     iget-boolean v7, v3, Lorg/telegram/tgnet/TLRPC$Chat;->left:Z
 
     if-nez v7, :cond_23c
@@ -3058,7 +2865,7 @@
 
     goto :goto_23c
 
-    .line 701
+    .line 773
     :cond_21a
     iget-wide v12, v3, Lorg/telegram/tgnet/TLRPC$Chat;->id:J
 
@@ -3070,7 +2877,7 @@
 
     check-cast v7, Lorg/telegram/ui/NotificationsSettingsActivity$NotificationException;
 
-    .line 702
+    .line 774
     iget-wide v12, v3, Lorg/telegram/tgnet/TLRPC$Chat;->id:J
 
     neg-long v12, v12
@@ -3079,7 +2886,7 @@
 
     if-eqz v7, :cond_23c
 
-    .line 705
+    .line 777
     invoke-static {v3}, Lorg/telegram/messenger/ChatObject;->isChannel(Lorg/telegram/tgnet/TLRPC$Chat;)Z
 
     move-result v10
@@ -3090,12 +2897,12 @@
 
     if-nez v3, :cond_239
 
-    .line 706
+    .line 778
     invoke-virtual {v8, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_23c
 
-    .line 708
+    .line 780
     :cond_239
     invoke-virtual {v14, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -3105,7 +2912,7 @@
 
     goto :goto_205
 
-    .line 712
+    .line 784
     :cond_23f
     invoke-virtual {v4}, Ljava/util/ArrayList;->size()I
 
@@ -3116,21 +2923,21 @@
     :goto_244
     if-ge v2, v0, :cond_259
 
-    .line 713
+    .line 785
     invoke-virtual {v4, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Lorg/telegram/tgnet/TLRPC$User;
 
-    .line 714
+    .line 786
     iget-boolean v7, v3, Lorg/telegram/tgnet/TLRPC$User;->deleted:Z
 
     if-eqz v7, :cond_251
 
     goto :goto_256
 
-    .line 717
+    .line 789
     :cond_251
     iget-wide v12, v3, Lorg/telegram/tgnet/TLRPC$User;->id:J
 
@@ -3141,7 +2948,7 @@
 
     goto :goto_244
 
-    .line 719
+    .line 791
     :cond_259
     invoke-virtual {v9}, Ljava/util/ArrayList;->size()I
 
@@ -3152,14 +2959,14 @@
     :goto_25e
     if-ge v2, v0, :cond_273
 
-    .line 720
+    .line 792
     invoke-virtual {v9, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Lorg/telegram/tgnet/TLRPC$EncryptedChat;
 
-    .line 721
+    .line 793
     iget v3, v3, Lorg/telegram/tgnet/TLRPC$EncryptedChat;->id:I
 
     int-to-long v12, v3
@@ -3174,7 +2981,7 @@
 
     goto :goto_25e
 
-    .line 723
+    .line 795
     :cond_273
     invoke-virtual {v1}, Landroid/util/LongSparseArray;->size()I
 
@@ -3183,26 +2990,26 @@
     :goto_277
     if-ge v11, v0, :cond_2a0
 
-    .line 724
+    .line 796
     invoke-virtual {v1, v11}, Landroid/util/LongSparseArray;->keyAt(I)J
 
     move-result-wide v2
 
-    .line 725
+    .line 797
     invoke-static {v2, v3}, Lorg/telegram/messenger/DialogObject;->isChatDialog(J)Z
 
     move-result v2
 
     if-eqz v2, :cond_292
 
-    .line 726
+    .line 798
     invoke-virtual {v1, v11}, Landroid/util/LongSparseArray;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v2
 
     invoke-virtual {v14, v2}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 727
+    .line 799
     invoke-virtual {v1, v11}, Landroid/util/LongSparseArray;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v2
@@ -3211,7 +3018,7 @@
 
     goto :goto_299
 
-    .line 729
+    .line 801
     :cond_292
     invoke-virtual {v1, v11}, Landroid/util/LongSparseArray;->valueAt(I)Ljava/lang/Object;
 
@@ -3229,7 +3036,7 @@
 
     move-object/from16 v4, v18
 
-    .line 733
+    .line 805
     :cond_2a0
     new-instance v0, Lorg/telegram/ui/NotificationsCustomSettingsActivity$$ExternalSyntheticLambda6;
 
@@ -3252,10 +3059,65 @@
     return-void
 .end method
 
+.method private synthetic lambda$loadExceptions$9(Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;)V
+    .registers 9
+
+    .line 806
+    invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getMessagesController()Lorg/telegram/messenger/MessagesController;
+
+    move-result-object v0
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, p1, v1}, Lorg/telegram/messenger/MessagesController;->putUsers(Ljava/util/ArrayList;Z)V
+
+    .line 807
+    invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getMessagesController()Lorg/telegram/messenger/MessagesController;
+
+    move-result-object p1
+
+    invoke-virtual {p1, p2, v1}, Lorg/telegram/messenger/MessagesController;->putChats(Ljava/util/ArrayList;Z)V
+
+    .line 808
+    invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getMessagesController()Lorg/telegram/messenger/MessagesController;
+
+    move-result-object p1
+
+    invoke-virtual {p1, p3, v1}, Lorg/telegram/messenger/MessagesController;->putEncryptedChats(Ljava/util/ArrayList;Z)V
+
+    .line 809
+    iget p1, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->currentType:I
+
+    if-ne p1, v1, :cond_1d
+
+    .line 810
+    iput-object p4, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->exceptions:Ljava/util/ArrayList;
+
+    goto :goto_24
+
+    :cond_1d
+    if-nez p1, :cond_22
+
+    .line 812
+    iput-object p5, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->exceptions:Ljava/util/ArrayList;
+
+    goto :goto_24
+
+    .line 814
+    :cond_22
+    iput-object p6, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->exceptions:Ljava/util/ArrayList;
+
+    .line 816
+    :goto_24
+    invoke-direct {p0, v1}, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->updateRows(Z)V
+
+    return-void
+.end method
+
 .method private loadExceptions()V
     .registers 3
 
-    .line 604
+    .line 676
     invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getMessagesStorage()Lorg/telegram/messenger/MessagesStorage;
 
     move-result-object v0
@@ -3278,10 +3140,10 @@
 
     const/4 v0, 0x0
 
-    .line 750
+    .line 822
     iput v0, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->rowCount:I
 
-    .line 751
+    .line 823
     iget v1, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->currentType:I
 
     const/4 v2, -0x1
@@ -3292,42 +3154,42 @@
 
     add-int/lit8 v3, v3, 0x1
 
-    .line 752
+    .line 824
     iput v3, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->rowCount:I
 
     iput v0, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->alertRow:I
 
     add-int/lit8 v0, v3, 0x1
 
-    .line 753
+    .line 825
     iput v0, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->rowCount:I
 
     iput v3, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->alertSection2Row:I
 
     add-int/lit8 v3, v0, 0x1
 
-    .line 754
+    .line 826
     iput v3, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->rowCount:I
 
     iput v0, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->messageSectionRow:I
 
     add-int/lit8 v0, v3, 0x1
 
-    .line 755
+    .line 827
     iput v0, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->rowCount:I
 
     iput v3, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->previewRow:I
 
     add-int/lit8 v3, v0, 0x1
 
-    .line 756
+    .line 828
     iput v3, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->rowCount:I
 
     iput v0, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->messageLedRow:I
 
     add-int/lit8 v0, v3, 0x1
 
-    .line 757
+    .line 829
     iput v0, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->rowCount:I
 
     iput v3, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->messageVibrateRow:I
@@ -3336,7 +3198,7 @@
 
     if-ne v1, v3, :cond_33
 
-    .line 759
+    .line 831
     iput v2, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->messagePopupNotificationRow:I
 
     goto :goto_39
@@ -3344,12 +3206,12 @@
     :cond_33
     add-int/lit8 v1, v0, 0x1
 
-    .line 761
+    .line 833
     iput v1, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->rowCount:I
 
     iput v0, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->messagePopupNotificationRow:I
 
-    .line 763
+    .line 835
     :goto_39
     iget v0, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->rowCount:I
 
@@ -3359,7 +3221,7 @@
 
     iput v0, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->messageSoundRow:I
 
-    .line 764
+    .line 836
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v3, 0x15
@@ -3368,18 +3230,18 @@
 
     add-int/lit8 v0, v1, 0x1
 
-    .line 765
+    .line 837
     iput v0, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->rowCount:I
 
     iput v1, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->messagePriorityRow:I
 
     goto :goto_50
 
-    .line 767
+    .line 839
     :cond_4e
     iput v2, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->messagePriorityRow:I
 
-    .line 769
+    .line 841
     :goto_50
     iget v0, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->rowCount:I
 
@@ -3391,48 +3253,48 @@
 
     add-int/lit8 v0, v1, 0x1
 
-    .line 770
+    .line 842
     iput v0, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->rowCount:I
 
     iput v1, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->exceptionsAddRow:I
 
     goto :goto_75
 
-    .line 772
+    .line 844
     :cond_5f
     iput v2, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->alertRow:I
 
-    .line 773
+    .line 845
     iput v2, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->alertSection2Row:I
 
-    .line 774
+    .line 846
     iput v2, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->messageSectionRow:I
 
-    .line 775
+    .line 847
     iput v2, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->previewRow:I
 
-    .line 776
+    .line 848
     iput v2, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->messageLedRow:I
 
-    .line 777
+    .line 849
     iput v2, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->messageVibrateRow:I
 
-    .line 778
+    .line 850
     iput v2, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->messagePopupNotificationRow:I
 
-    .line 779
+    .line 851
     iput v2, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->messageSoundRow:I
 
-    .line 780
+    .line 852
     iput v2, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->messagePriorityRow:I
 
-    .line 781
+    .line 853
     iput v2, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->groupSection2Row:I
 
-    .line 782
+    .line 854
     iput v2, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->exceptionsAddRow:I
 
-    .line 784
+    .line 856
     :goto_75
     iget-object v0, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->exceptions:Ljava/util/ArrayList;
 
@@ -3444,12 +3306,12 @@
 
     if-nez v0, :cond_8f
 
-    .line 785
+    .line 857
     iget v0, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->rowCount:I
 
     iput v0, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->exceptionsStartRow:I
 
-    .line 786
+    .line 858
     iget-object v1, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->exceptions:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
@@ -3460,19 +3322,19 @@
 
     iput v0, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->rowCount:I
 
-    .line 787
+    .line 859
     iput v0, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->exceptionsEndRow:I
 
     goto :goto_93
 
-    .line 789
+    .line 861
     :cond_8f
     iput v2, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->exceptionsStartRow:I
 
-    .line 790
+    .line 862
     iput v2, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->exceptionsEndRow:I
 
-    .line 792
+    .line 864
     :goto_93
     iget v0, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->currentType:I
 
@@ -3490,13 +3352,13 @@
 
     goto :goto_a5
 
-    .line 795
+    .line 867
     :cond_a2
     iput v2, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->exceptionsSection2Row:I
 
     goto :goto_ad
 
-    .line 793
+    .line 865
     :cond_a5
     :goto_a5
     iget v0, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->rowCount:I
@@ -3507,7 +3369,7 @@
 
     iput v0, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->exceptionsSection2Row:I
 
-    .line 797
+    .line 869
     :goto_ad
     iget-object v0, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->exceptions:Ljava/util/ArrayList;
 
@@ -3519,7 +3381,7 @@
 
     if-nez v0, :cond_c6
 
-    .line 798
+    .line 870
     iget v0, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->rowCount:I
 
     add-int/lit8 v1, v0, 0x1
@@ -3530,29 +3392,29 @@
 
     add-int/lit8 v0, v1, 0x1
 
-    .line 799
+    .line 871
     iput v0, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->rowCount:I
 
     iput v1, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->deleteAllSectionRow:I
 
     goto :goto_ca
 
-    .line 801
+    .line 873
     :cond_c6
     iput v2, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->deleteAllRow:I
 
-    .line 802
+    .line 874
     iput v2, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->deleteAllSectionRow:I
 
     :goto_ca
     if-eqz p1, :cond_d3
 
-    .line 804
+    .line 876
     iget-object p1, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->adapter:Lorg/telegram/ui/NotificationsCustomSettingsActivity$ListAdapter;
 
     if-eqz p1, :cond_d3
 
-    .line 805
+    .line 877
     invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->notifyDataSetChanged()V
 
     :cond_d3
@@ -3566,34 +3428,34 @@
 
     const/4 v0, 0x0
 
-    .line 135
+    .line 138
     iput-boolean v0, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->searching:Z
 
-    .line 138
+    .line 141
     iget-object v1, p0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
-    const v2, 0x7f070140
+    const v2, 0x7f070109
 
     invoke-virtual {v1, v2}, Lorg/telegram/ui/ActionBar/ActionBar;->setBackButtonImage(I)V
 
-    .line 139
+    .line 142
     iget-object v1, p0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     const/4 v2, 0x1
 
     invoke-virtual {v1, v2}, Lorg/telegram/ui/ActionBar/ActionBar;->setAllowOverlayTitle(Z)V
 
-    .line 140
+    .line 143
     iget v1, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->currentType:I
 
     const/4 v3, -0x1
 
     if-ne v1, v3, :cond_25
 
-    .line 141
+    .line 144
     iget-object v1, p0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
-    const v4, 0x7f0e0b82
+    const v4, 0x7f0e0c0c
 
     const-string v5, "NotificationsExceptions"
 
@@ -3605,11 +3467,11 @@
 
     goto :goto_33
 
-    .line 143
+    .line 146
     :cond_25
     iget-object v1, p0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
-    const v4, 0x7f0e0b73
+    const v4, 0x7f0e0bfd
 
     const-string v5, "Notifications"
 
@@ -3619,7 +3481,7 @@
 
     invoke-virtual {v1, v4}, Lorg/telegram/ui/ActionBar/ActionBar;->setTitle(Ljava/lang/CharSequence;)V
 
-    .line 145
+    .line 148
     :goto_33
     iget-object v1, p0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
@@ -3629,7 +3491,7 @@
 
     invoke-virtual {v1, v4}, Lorg/telegram/ui/ActionBar/ActionBar;->setActionBarMenuOnItemClick(Lorg/telegram/ui/ActionBar/ActionBar$ActionBarMenuOnItemClick;)V
 
-    .line 153
+    .line 156
     iget-object v1, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->exceptions:Ljava/util/ArrayList;
 
     if-eqz v1, :cond_6d
@@ -3640,16 +3502,16 @@
 
     if-nez v1, :cond_6d
 
-    .line 154
+    .line 157
     iget-object v1, p0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     invoke-virtual {v1}, Lorg/telegram/ui/ActionBar/ActionBar;->createMenu()Lorg/telegram/ui/ActionBar/ActionBarMenu;
 
     move-result-object v1
 
-    const v4, 0x7f07014a
+    const v4, 0x7f070110
 
-    .line 155
+    .line 158
     invoke-virtual {v1, v0, v4}, Lorg/telegram/ui/ActionBar/ActionBarMenu;->addItem(II)Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
     move-result-object v1
@@ -3666,18 +3528,18 @@
 
     move-result-object v1
 
-    const v4, 0x7f0e0f74
+    const v4, 0x7f0e1030
 
     const-string v5, "Search"
 
-    .line 195
+    .line 198
     invoke-static {v5, v4}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v4
 
     invoke-virtual {v1, v4}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->setSearchFieldHint(Ljava/lang/CharSequence;)V
 
-    .line 198
+    .line 201
     :cond_6d
     new-instance v1, Lorg/telegram/ui/NotificationsCustomSettingsActivity$SearchAdapter;
 
@@ -3685,26 +3547,26 @@
 
     iput-object v1, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->searchAdapter:Lorg/telegram/ui/NotificationsCustomSettingsActivity$SearchAdapter;
 
-    .line 200
+    .line 203
     new-instance v1, Landroid/widget/FrameLayout;
 
     invoke-direct {v1, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
     iput-object v1, p0, Lorg/telegram/ui/ActionBar/BaseFragment;->fragmentView:Landroid/view/View;
 
-    .line 201
+    .line 204
     check-cast v1, Landroid/widget/FrameLayout;
 
     const-string v4, "windowBackgroundGray"
 
-    .line 202
+    .line 205
     invoke-static {v4}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
 
     move-result v4
 
     invoke-virtual {v1, v4}, Landroid/widget/FrameLayout;->setBackgroundColor(I)V
 
-    .line 204
+    .line 207
     new-instance v4, Lorg/telegram/ui/Components/EmptyTextProgressView;
 
     invoke-direct {v4, p1}, Lorg/telegram/ui/Components/EmptyTextProgressView;-><init>(Landroid/content/Context;)V
@@ -3713,13 +3575,13 @@
 
     const/16 v5, 0x12
 
-    .line 205
+    .line 208
     invoke-virtual {v4, v5}, Lorg/telegram/ui/Components/EmptyTextProgressView;->setTextSize(I)V
 
-    .line 206
+    .line 209
     iget-object v4, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->emptyView:Lorg/telegram/ui/Components/EmptyTextProgressView;
 
-    const v5, 0x7f0e0ab4
+    const v5, 0x7f0e0b3b
 
     const-string v6, "NoExceptions"
 
@@ -3729,12 +3591,12 @@
 
     invoke-virtual {v4, v5}, Lorg/telegram/ui/Components/EmptyTextProgressView;->setText(Ljava/lang/String;)V
 
-    .line 207
+    .line 210
     iget-object v4, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->emptyView:Lorg/telegram/ui/Components/EmptyTextProgressView;
 
     invoke-virtual {v4}, Lorg/telegram/ui/Components/EmptyTextProgressView;->showTextView()V
 
-    .line 208
+    .line 211
     iget-object v4, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->emptyView:Lorg/telegram/ui/Components/EmptyTextProgressView;
 
     const/high16 v5, -0x40800000    # -1.0f
@@ -3745,19 +3607,19 @@
 
     invoke-virtual {v1, v4, v6}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 210
+    .line 213
     new-instance v4, Lorg/telegram/ui/Components/RecyclerListView;
 
     invoke-direct {v4, p1}, Lorg/telegram/ui/Components/RecyclerListView;-><init>(Landroid/content/Context;)V
 
     iput-object v4, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
-    .line 211
+    .line 214
     iget-object v6, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->emptyView:Lorg/telegram/ui/Components/EmptyTextProgressView;
 
     invoke-virtual {v4, v6}, Lorg/telegram/ui/Components/RecyclerListView;->setEmptyView(Landroid/view/View;)V
 
-    .line 212
+    .line 215
     iget-object v4, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     new-instance v6, Landroidx/recyclerview/widget/LinearLayoutManager;
@@ -3766,12 +3628,12 @@
 
     invoke-virtual {v4, v6}, Landroidx/recyclerview/widget/RecyclerView;->setLayoutManager(Landroidx/recyclerview/widget/RecyclerView$LayoutManager;)V
 
-    .line 213
+    .line 216
     iget-object v2, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     invoke-virtual {v2, v0}, Lorg/telegram/ui/Components/RecyclerListView;->setVerticalScrollBarEnabled(Z)V
 
-    .line 214
+    .line 217
     iget-object v0, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     invoke-static {v3, v5}, Lorg/telegram/ui/Components/LayoutHelper;->createFrame(IF)Landroid/widget/FrameLayout$LayoutParams;
@@ -3780,7 +3642,7 @@
 
     invoke-virtual {v1, v0, v2}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 215
+    .line 218
     iget-object v0, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     new-instance v1, Lorg/telegram/ui/NotificationsCustomSettingsActivity$ListAdapter;
@@ -3791,25 +3653,25 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/RecyclerListView;->setAdapter(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
-    .line 216
+    .line 219
+    iget-object v0, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
+
+    new-instance v1, Lorg/telegram/ui/NotificationsCustomSettingsActivity$$ExternalSyntheticLambda9;
+
+    invoke-direct {v1, p0, p1}, Lorg/telegram/ui/NotificationsCustomSettingsActivity$$ExternalSyntheticLambda9;-><init>(Lorg/telegram/ui/NotificationsCustomSettingsActivity;Landroid/content/Context;)V
+
+    invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/RecyclerListView;->setOnItemClickListener(Lorg/telegram/ui/Components/RecyclerListView$OnItemClickListenerExtended;)V
+
+    .line 604
     iget-object p1, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
-    new-instance v0, Lorg/telegram/ui/NotificationsCustomSettingsActivity$$ExternalSyntheticLambda10;
+    new-instance v0, Lorg/telegram/ui/NotificationsCustomSettingsActivity$4;
 
-    invoke-direct {v0, p0}, Lorg/telegram/ui/NotificationsCustomSettingsActivity$$ExternalSyntheticLambda10;-><init>(Lorg/telegram/ui/NotificationsCustomSettingsActivity;)V
-
-    invoke-virtual {p1, v0}, Lorg/telegram/ui/Components/RecyclerListView;->setOnItemClickListener(Lorg/telegram/ui/Components/RecyclerListView$OnItemClickListenerExtended;)V
-
-    .line 532
-    iget-object p1, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
-
-    new-instance v0, Lorg/telegram/ui/NotificationsCustomSettingsActivity$3;
-
-    invoke-direct {v0, p0}, Lorg/telegram/ui/NotificationsCustomSettingsActivity$3;-><init>(Lorg/telegram/ui/NotificationsCustomSettingsActivity;)V
+    invoke-direct {v0, p0}, Lorg/telegram/ui/NotificationsCustomSettingsActivity$4;-><init>(Lorg/telegram/ui/NotificationsCustomSettingsActivity;)V
 
     invoke-virtual {p1, v0}, Lorg/telegram/ui/Components/RecyclerListView;->setOnScrollListener(Landroidx/recyclerview/widget/RecyclerView$OnScrollListener;)V
 
-    .line 546
+    .line 618
     iget-object p1, p0, Lorg/telegram/ui/ActionBar/BaseFragment;->fragmentView:Landroid/view/View;
 
     return-object p1
@@ -3818,17 +3680,17 @@
 .method public varargs didReceivedNotification(II[Ljava/lang/Object;)V
     .registers 4
 
-    .line 881
+    .line 953
     sget p2, Lorg/telegram/messenger/NotificationCenter;->notificationsSettingsUpdated:I
 
     if-ne p1, p2, :cond_b
 
-    .line 882
+    .line 954
     iget-object p1, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->adapter:Lorg/telegram/ui/NotificationsCustomSettingsActivity$ListAdapter;
 
     if-eqz p1, :cond_b
 
-    .line 883
+    .line 955
     invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->notifyDataSetChanged()V
 
     :cond_b
@@ -3848,17 +3710,17 @@
 
     move-object/from16 v0, p0
 
-    .line 1429
+    .line 1501
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1431
-    new-instance v11, Lorg/telegram/ui/NotificationsCustomSettingsActivity$$ExternalSyntheticLambda9;
+    .line 1503
+    new-instance v11, Lorg/telegram/ui/NotificationsCustomSettingsActivity$$ExternalSyntheticLambda8;
 
-    invoke-direct {v11, v0}, Lorg/telegram/ui/NotificationsCustomSettingsActivity$$ExternalSyntheticLambda9;-><init>(Lorg/telegram/ui/NotificationsCustomSettingsActivity;)V
+    invoke-direct {v11, v0}, Lorg/telegram/ui/NotificationsCustomSettingsActivity$$ExternalSyntheticLambda8;-><init>(Lorg/telegram/ui/NotificationsCustomSettingsActivity;)V
 
-    .line 1443
+    .line 1515
     new-instance v10, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v3, v0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
@@ -3919,7 +3781,7 @@
 
     invoke-virtual {v1, v10}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1444
+    .line 1516
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v15, v0, Lorg/telegram/ui/ActionBar/BaseFragment;->fragmentView:Landroid/view/View;
@@ -3942,7 +3804,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1446
+    .line 1518
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v4, v0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
@@ -3959,7 +3821,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1447
+    .line 1519
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v15, v0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
@@ -3974,7 +3836,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1448
+    .line 1520
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v4, v0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
@@ -3989,7 +3851,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1449
+    .line 1521
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v15, v0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
@@ -4004,7 +3866,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1450
+    .line 1522
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v4, v0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
@@ -4019,7 +3881,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1452
+    .line 1524
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v15, v0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
@@ -4034,7 +3896,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1454
+    .line 1526
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v4, v0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
@@ -4057,7 +3919,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1456
+    .line 1528
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v15, v0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
@@ -4090,7 +3952,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1458
+    .line 1530
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v3, v0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
@@ -4127,7 +3989,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1459
+    .line 1531
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v15, v0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
@@ -4156,7 +4018,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1460
+    .line 1532
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v3, v0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
@@ -4191,7 +4053,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1461
+    .line 1533
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v3, v0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
@@ -4228,7 +4090,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1463
+    .line 1535
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v3, v0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
@@ -4259,7 +4121,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1464
+    .line 1536
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v3, v0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
@@ -4290,7 +4152,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1465
+    .line 1537
     new-instance v10, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v3, v0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
@@ -4325,7 +4187,7 @@
 
     invoke-virtual {v1, v12}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1466
+    .line 1538
     new-instance v12, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v3, v0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
@@ -4354,7 +4216,7 @@
 
     invoke-virtual {v1, v12}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1467
+    .line 1539
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v3, v0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
@@ -4383,7 +4245,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1468
+    .line 1540
     new-instance v10, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     const/4 v3, 0x0
@@ -4404,7 +4266,7 @@
 
     invoke-virtual {v1, v10}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1469
+    .line 1541
     new-instance v10, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     const-string v9, "avatar_backgroundOrange"
@@ -4415,7 +4277,7 @@
 
     invoke-virtual {v1, v10}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1470
+    .line 1542
     new-instance v10, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     const-string v9, "avatar_backgroundViolet"
@@ -4426,7 +4288,7 @@
 
     invoke-virtual {v1, v10}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1471
+    .line 1543
     new-instance v10, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     const-string v9, "avatar_backgroundGreen"
@@ -4437,7 +4299,7 @@
 
     invoke-virtual {v1, v10}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1472
+    .line 1544
     new-instance v10, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     const-string v9, "avatar_backgroundCyan"
@@ -4448,7 +4310,7 @@
 
     invoke-virtual {v1, v10}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1473
+    .line 1545
     new-instance v10, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     const-string v9, "avatar_backgroundBlue"
@@ -4459,7 +4321,7 @@
 
     invoke-virtual {v1, v10}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1474
+    .line 1546
     new-instance v10, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     const-string v9, "avatar_backgroundPink"
@@ -4470,7 +4332,7 @@
 
     invoke-virtual {v1, v10}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1476
+    .line 1548
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v3, v0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
@@ -4505,7 +4367,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1477
+    .line 1549
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v3, v0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
@@ -4534,7 +4396,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1479
+    .line 1551
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v3, v0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
@@ -4565,7 +4427,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1480
+    .line 1552
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v3, v0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
@@ -4600,7 +4462,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1481
+    .line 1553
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v3, v0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
@@ -4631,7 +4493,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1482
+    .line 1554
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v3, v0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
@@ -4662,7 +4524,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1484
+    .line 1556
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v3, v0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
@@ -4693,7 +4555,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1486
+    .line 1558
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v3, v0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
@@ -4724,7 +4586,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1487
+    .line 1559
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v3, v0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
@@ -4755,7 +4617,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1489
+    .line 1561
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v3, v0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
@@ -4784,7 +4646,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1491
+    .line 1563
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v3, v0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
@@ -4819,7 +4681,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1492
+    .line 1564
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v3, v0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
@@ -4852,7 +4714,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1493
+    .line 1565
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v3, v0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
@@ -4903,7 +4765,7 @@
 
     const-string p2, "android.intent.extra.ringtone.PICKED_URI"
 
-    .line 812
+    .line 884
     invoke-virtual {p3, p2}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;)Landroid/os/Parcelable;
 
     move-result-object p2
@@ -4914,7 +4776,7 @@
 
     if-eqz p2, :cond_35
 
-    .line 815
+    .line 887
     invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getParentActivity()Landroid/app/Activity;
 
     move-result-object v0
@@ -4925,7 +4787,7 @@
 
     if-eqz v0, :cond_35
 
-    .line 817
+    .line 889
     sget-object p3, Landroid/provider/Settings$System;->DEFAULT_NOTIFICATION_URI:Landroid/net/Uri;
 
     invoke-virtual {p2, p3}, Landroid/net/Uri;->equals(Ljava/lang/Object;)Z
@@ -4934,18 +4796,18 @@
 
     if-eqz p3, :cond_2a
 
-    const p3, 0x7f0e1098
+    const p3, 0x7f0e1157
 
     const-string v1, "SoundDefault"
 
-    .line 818
+    .line 890
     invoke-static {v1, p3}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object p3
 
     goto :goto_32
 
-    .line 820
+    .line 892
     :cond_2a
     invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getParentActivity()Landroid/app/Activity;
 
@@ -4955,22 +4817,22 @@
 
     move-result-object p3
 
-    .line 822
+    .line 894
     :goto_32
     invoke-virtual {v0}, Landroid/media/Ringtone;->stop()V
 
-    .line 826
+    .line 898
     :cond_35
     invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getNotificationsSettings()Landroid/content/SharedPreferences;
 
     move-result-object v0
 
-    .line 827
+    .line 899
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
-    .line 829
+    .line 901
     iget v1, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->currentType:I
 
     const/4 v2, 0x1
@@ -4987,10 +4849,10 @@
 
     if-eqz p2, :cond_57
 
-    .line 831
+    .line 903
     invoke-interface {v0, v2, p3}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
-    .line 832
+    .line 904
     invoke-virtual {p2}, Landroid/net/Uri;->toString()Ljava/lang/String;
 
     move-result-object p2
@@ -4999,11 +4861,11 @@
 
     goto :goto_96
 
-    .line 834
+    .line 906
     :cond_57
     invoke-interface {v0, v2, v3}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
-    .line 835
+    .line 907
     invoke-interface {v0, v1, v3}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
     goto :goto_96
@@ -5019,10 +4881,10 @@
 
     if-eqz p2, :cond_73
 
-    .line 839
+    .line 911
     invoke-interface {v0, v2, p3}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
-    .line 840
+    .line 912
     invoke-virtual {p2}, Landroid/net/Uri;->toString()Ljava/lang/String;
 
     move-result-object p2
@@ -5031,11 +4893,11 @@
 
     goto :goto_96
 
-    .line 842
+    .line 914
     :cond_73
     invoke-interface {v0, v2, v3}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
-    .line 843
+    .line 915
     invoke-interface {v0, v1, v3}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
     goto :goto_96
@@ -5053,10 +4915,10 @@
 
     if-eqz p2, :cond_90
 
-    .line 847
+    .line 919
     invoke-interface {v0, v2, p3}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
-    .line 848
+    .line 920
     invoke-virtual {p2}, Landroid/net/Uri;->toString()Ljava/lang/String;
 
     move-result-object p2
@@ -5065,14 +4927,14 @@
 
     goto :goto_96
 
-    .line 850
+    .line 922
     :cond_90
     invoke-interface {v0, v2, v3}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
-    .line 851
+    .line 923
     invoke-interface {v0, v1, v3}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
-    .line 854
+    .line 926
     :cond_96
     :goto_96
     invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getNotificationsController()Lorg/telegram/messenger/NotificationsController;
@@ -5083,10 +4945,10 @@
 
     invoke-virtual {p2, p3}, Lorg/telegram/messenger/NotificationsController;->deleteNotificationChannelGlobal(I)V
 
-    .line 855
+    .line 927
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 856
+    .line 928
     invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getNotificationsController()Lorg/telegram/messenger/NotificationsController;
 
     move-result-object p2
@@ -5095,7 +4957,7 @@
 
     invoke-virtual {p2, p3}, Lorg/telegram/messenger/NotificationsController;->updateServerNotificationsSettings(I)V
 
-    .line 857
+    .line 929
     iget-object p2, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     invoke-virtual {p2, p1}, Landroidx/recyclerview/widget/RecyclerView;->findViewHolderForAdapterPosition(I)Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
@@ -5104,7 +4966,7 @@
 
     if-eqz p2, :cond_b8
 
-    .line 859
+    .line 931
     iget-object p3, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->adapter:Lorg/telegram/ui/NotificationsCustomSettingsActivity$ListAdapter;
 
     invoke-virtual {p3, p2, p1}, Lorg/telegram/ui/NotificationsCustomSettingsActivity$ListAdapter;->onBindViewHolder(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;I)V
@@ -5118,10 +4980,10 @@
 
     const/4 v0, 0x1
 
-    .line 129
+    .line 132
     invoke-direct {p0, v0}, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->updateRows(Z)V
 
-    .line 130
+    .line 133
     invoke-super {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->onFragmentCreate()Z
 
     move-result v0
@@ -5132,10 +4994,10 @@
 .method public onPause()V
     .registers 3
 
-    .line 875
+    .line 947
     invoke-super {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->onPause()V
 
-    .line 876
+    .line 948
     invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getNotificationCenter()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v0
@@ -5150,18 +5012,18 @@
 .method public onResume()V
     .registers 3
 
-    .line 866
+    .line 938
     invoke-super {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->onResume()V
 
-    .line 867
+    .line 939
     iget-object v0, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->adapter:Lorg/telegram/ui/NotificationsCustomSettingsActivity$ListAdapter;
 
     if-eqz v0, :cond_a
 
-    .line 868
+    .line 940
     invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->notifyDataSetChanged()V
 
-    .line 870
+    .line 942
     :cond_a
     invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getNotificationCenter()Lorg/telegram/messenger/NotificationCenter;
 

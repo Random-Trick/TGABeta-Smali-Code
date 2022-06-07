@@ -24,7 +24,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/InviteLinkBottomSheet;Z)V
     .registers 3
 
-    .line 888
+    .line 889
     iput-object p1, p0, Lorg/telegram/ui/Components/InviteLinkBottomSheet$5;->this$0:Lorg/telegram/ui/Components/InviteLinkBottomSheet;
 
     iput-boolean p2, p0, Lorg/telegram/ui/Components/InviteLinkBottomSheet$5;->val$show:Z
@@ -39,7 +39,7 @@
 .method public onAnimationCancel(Landroid/animation/Animator;)V
     .registers 3
 
-    .line 901
+    .line 902
     iget-object v0, p0, Lorg/telegram/ui/Components/InviteLinkBottomSheet$5;->this$0:Lorg/telegram/ui/Components/InviteLinkBottomSheet;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->access$3200(Lorg/telegram/ui/Components/InviteLinkBottomSheet;)Landroid/animation/AnimatorSet;
@@ -60,7 +60,7 @@
 
     if-eqz p1, :cond_1a
 
-    .line 902
+    .line 903
     iget-object p1, p0, Lorg/telegram/ui/Components/InviteLinkBottomSheet$5;->this$0:Lorg/telegram/ui/Components/InviteLinkBottomSheet;
 
     const/4 v0, 0x0
@@ -74,7 +74,7 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .registers 3
 
-    .line 891
+    .line 892
     iget-object v0, p0, Lorg/telegram/ui/Components/InviteLinkBottomSheet$5;->this$0:Lorg/telegram/ui/Components/InviteLinkBottomSheet;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->access$3200(Lorg/telegram/ui/Components/InviteLinkBottomSheet;)Landroid/animation/AnimatorSet;
@@ -95,12 +95,12 @@
 
     if-eqz p1, :cond_28
 
-    .line 892
+    .line 893
     iget-boolean p1, p0, Lorg/telegram/ui/Components/InviteLinkBottomSheet$5;->val$show:Z
 
     if-nez p1, :cond_22
 
-    .line 893
+    .line 894
     iget-object p1, p0, Lorg/telegram/ui/Components/InviteLinkBottomSheet$5;->this$0:Lorg/telegram/ui/Components/InviteLinkBottomSheet;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->access$3300(Lorg/telegram/ui/Components/InviteLinkBottomSheet;)Landroid/view/View;
@@ -111,7 +111,7 @@
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
 
-    .line 895
+    .line 896
     :cond_22
     iget-object p1, p0, Lorg/telegram/ui/Components/InviteLinkBottomSheet$5;->this$0:Lorg/telegram/ui/Components/InviteLinkBottomSheet;
 

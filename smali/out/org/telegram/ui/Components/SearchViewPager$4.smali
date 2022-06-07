@@ -1,5 +1,5 @@
 .class Lorg/telegram/ui/Components/SearchViewPager$4;
-.super Landroidx/recyclerview/widget/RecyclerView$OnScrollListener;
+.super Lorg/telegram/ui/Components/StickerEmptyView;
 .source "SearchViewPager.java"
 
 
@@ -19,31 +19,45 @@
 
 
 # direct methods
-.method constructor <init>(Lorg/telegram/ui/Components/SearchViewPager;)V
-    .registers 2
+.method constructor <init>(Lorg/telegram/ui/Components/SearchViewPager;Landroid/content/Context;Landroid/view/View;I)V
+    .registers 5
 
-    .line 175
+    .line 198
     iput-object p1, p0, Lorg/telegram/ui/Components/SearchViewPager$4;->this$0:Lorg/telegram/ui/Components/SearchViewPager;
 
-    invoke-direct {p0}, Landroidx/recyclerview/widget/RecyclerView$OnScrollListener;-><init>()V
+    invoke-direct {p0, p2, p3, p4}, Lorg/telegram/ui/Components/StickerEmptyView;-><init>(Landroid/content/Context;Landroid/view/View;I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onScrolled(Landroidx/recyclerview/widget/RecyclerView;II)V
-    .registers 4
+.method public setVisibility(I)V
+    .registers 3
 
-    .line 178
-    invoke-super {p0, p1, p2, p3}, Landroidx/recyclerview/widget/RecyclerView$OnScrollListener;->onScrolled(Landroidx/recyclerview/widget/RecyclerView;II)V
+    .line 201
+    iget-object v0, p0, Lorg/telegram/ui/Components/SearchViewPager$4;->this$0:Lorg/telegram/ui/Components/SearchViewPager;
 
-    .line 179
-    iget-object p1, p0, Lorg/telegram/ui/Components/SearchViewPager$4;->this$0:Lorg/telegram/ui/Components/SearchViewPager;
+    invoke-static {v0}, Lorg/telegram/ui/Components/SearchViewPager;->access$300(Lorg/telegram/ui/Components/SearchViewPager;)Lorg/telegram/ui/FilteredSearchView;
 
-    iget-object p1, p1, Lorg/telegram/ui/Components/SearchViewPager;->fragmentView:Lorg/telegram/ui/Components/SizeNotifierFrameLayout;
+    move-result-object v0
 
-    invoke-virtual {p1}, Lorg/telegram/ui/Components/SizeNotifierFrameLayout;->invalidateBlur()V
+    invoke-virtual {v0}, Landroid/widget/FrameLayout;->getTag()Ljava/lang/Object;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_12
+
+    const/16 p1, 0x8
+
+    .line 202
+    invoke-super {p0, p1}, Lorg/telegram/ui/Components/StickerEmptyView;->setVisibility(I)V
+
+    return-void
+
+    .line 205
+    :cond_12
+    invoke-super {p0, p1}, Lorg/telegram/ui/Components/StickerEmptyView;->setVisibility(I)V
 
     return-void
 .end method

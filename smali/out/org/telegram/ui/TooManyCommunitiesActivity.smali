@@ -473,14 +473,14 @@
 .method private synthetic lambda$getThemeDescriptions$6()V
     .registers 6
 
-    .line 654
+    .line 653
     iget-object v0, p0, Lorg/telegram/ui/TooManyCommunitiesActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_1e
 
-    .line 655
+    .line 654
     invoke-virtual {v0}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result v0
@@ -490,19 +490,19 @@
     :goto_a
     if-ge v2, v0, :cond_1e
 
-    .line 657
+    .line 656
     iget-object v3, p0, Lorg/telegram/ui/TooManyCommunitiesActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     invoke-virtual {v3, v2}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v3
 
-    .line 658
+    .line 657
     instance-of v4, v3, Lorg/telegram/ui/Cells/GroupCreateUserCell;
 
     if-eqz v4, :cond_1b
 
-    .line 659
+    .line 658
     check-cast v3, Lorg/telegram/ui/Cells/GroupCreateUserCell;
 
     invoke-virtual {v3, v1}, Lorg/telegram/ui/Cells/GroupCreateUserCell;->update(I)V
@@ -512,13 +512,13 @@
 
     goto :goto_a
 
-    .line 664
+    .line 663
     :cond_1e
     iget-object v0, p0, Lorg/telegram/ui/TooManyCommunitiesActivity;->searchListView:Lorg/telegram/ui/Components/RecyclerListView;
 
     if-eqz v0, :cond_3b
 
-    .line 665
+    .line 664
     invoke-virtual {v0}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result v0
@@ -528,19 +528,19 @@
     :goto_27
     if-ge v2, v0, :cond_3b
 
-    .line 667
+    .line 666
     iget-object v3, p0, Lorg/telegram/ui/TooManyCommunitiesActivity;->searchListView:Lorg/telegram/ui/Components/RecyclerListView;
 
     invoke-virtual {v3, v2}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v3
 
-    .line 668
+    .line 667
     instance-of v4, v3, Lorg/telegram/ui/Cells/GroupCreateUserCell;
 
     if-eqz v4, :cond_38
 
-    .line 669
+    .line 668
     check-cast v3, Lorg/telegram/ui/Cells/GroupCreateUserCell;
 
     invoke-virtual {v3, v1}, Lorg/telegram/ui/Cells/GroupCreateUserCell;->update(I)V
@@ -550,7 +550,7 @@
 
     goto :goto_27
 
-    .line 674
+    .line 673
     :cond_3b
     iget-object v0, p0, Lorg/telegram/ui/TooManyCommunitiesActivity;->buttonTextView:Landroid/widget/TextView;
 
@@ -570,7 +570,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    .line 675
+    .line 674
     iget-object v0, p0, Lorg/telegram/ui/TooManyCommunitiesActivity;->progressBar:Lorg/telegram/ui/Components/RadialProgressView;
 
     const-string v1, "progressCircle"
@@ -798,7 +798,7 @@
 .method private synthetic lambda$loadInactiveChannels$5(Lorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/TLRPC$TL_error;)V
     .registers 13
 
-    if-nez p2, :cond_ad
+    if-nez p2, :cond_b7
 
     .line 339
     check-cast p1, Lorg/telegram/tgnet/TLRPC$TL_messages_inactiveChats;
@@ -820,7 +820,7 @@
 
     move-result v2
 
-    if-ge v1, v2, :cond_a5
+    if-ge v1, v2, :cond_af
 
     .line 342
     iget-object v2, p1, Lorg/telegram/tgnet/TLRPC$TL_messages_inactiveChats;->chats:Ljava/util/ArrayList;
@@ -862,52 +862,58 @@
 
     const/16 v4, 0x1e
 
-    if-ge v3, v4, :cond_3f
+    if-ge v3, v4, :cond_41
 
-    const-string v4, "Days"
+    new-array v4, v0, [Ljava/lang/Object;
+
+    const-string v5, "Days"
 
     .line 349
-    invoke-static {v4, v3}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    invoke-static {v5, v3, v4}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v3
 
-    goto :goto_54
+    goto :goto_5a
 
-    :cond_3f
+    :cond_41
     const/16 v4, 0x16d
 
-    if-ge v3, v4, :cond_4c
+    if-ge v3, v4, :cond_50
 
     .line 351
     div-int/lit8 v3, v3, 0x1e
 
-    const-string v4, "Months"
+    new-array v4, v0, [Ljava/lang/Object;
 
-    invoke-static {v4, v3}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    const-string v5, "Months"
+
+    invoke-static {v5, v3, v4}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v3
 
-    goto :goto_54
+    goto :goto_5a
 
     .line 353
-    :cond_4c
+    :cond_50
     div-int/lit16 v3, v3, 0x16d
 
-    const-string v4, "Years"
+    new-array v4, v0, [Ljava/lang/Object;
 
-    invoke-static {v4, v3}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    const-string v5, "Years"
+
+    invoke-static {v5, v3, v4}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v3
 
     .line 355
-    :goto_54
+    :goto_5a
     invoke-static {v2}, Lorg/telegram/messenger/ChatObject;->isMegagroup(Lorg/telegram/tgnet/TLRPC$Chat;)Z
 
     move-result v4
 
     const/4 v5, 0x2
 
-    const v6, 0x7f0e088f
+    const v6, 0x7f0e08ea
 
     const-string v7, "InactiveChatSignature"
 
@@ -915,12 +921,14 @@
 
     const/4 v9, 0x1
 
-    if-eqz v4, :cond_77
+    if-eqz v4, :cond_7f
 
     .line 356
     iget v2, v2, Lorg/telegram/tgnet/TLRPC$Chat;->participants_count:I
 
-    invoke-static {v8, v2}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    new-array v4, v0, [Ljava/lang/Object;
+
+    invoke-static {v8, v2, v4}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -937,17 +945,17 @@
 
     invoke-virtual {p2, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    goto :goto_a1
+    goto :goto_ab
 
     .line 358
-    :cond_77
+    :cond_7f
     invoke-static {v2}, Lorg/telegram/messenger/ChatObject;->isChannel(Lorg/telegram/tgnet/TLRPC$Chat;)Z
 
     move-result v4
 
-    if-eqz v4, :cond_8e
+    if-eqz v4, :cond_96
 
-    const v2, 0x7f0e088e
+    const v2, 0x7f0e08e9
 
     new-array v4, v9, [Ljava/lang/Object;
 
@@ -962,13 +970,15 @@
 
     invoke-virtual {p2, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    goto :goto_a1
+    goto :goto_ab
 
     .line 361
-    :cond_8e
+    :cond_96
     iget v2, v2, Lorg/telegram/tgnet/TLRPC$Chat;->participants_count:I
 
-    invoke-static {v8, v2}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    new-array v4, v0, [Ljava/lang/Object;
+
+    invoke-static {v8, v2, v4}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -985,20 +995,20 @@
 
     invoke-virtual {p2, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    :goto_a1
+    :goto_ab
     add-int/lit8 v1, v1, 0x1
 
     goto/16 :goto_b
 
     .line 365
-    :cond_a5
+    :cond_af
     new-instance v0, Lorg/telegram/ui/TooManyCommunitiesActivity$$ExternalSyntheticLambda2;
 
     invoke-direct {v0, p0, p2, p1}, Lorg/telegram/ui/TooManyCommunitiesActivity$$ExternalSyntheticLambda2;-><init>(Lorg/telegram/ui/TooManyCommunitiesActivity;Ljava/util/ArrayList;Lorg/telegram/tgnet/TLRPC$TL_messages_inactiveChats;)V
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    :cond_ad
+    :cond_b7
     return-void
 .end method
 
@@ -1515,12 +1525,12 @@
 
     move-result v0
 
-    if-nez v0, :cond_14a
+    if-nez v0, :cond_14c
 
     .line 328
     iget-object v0, p0, Lorg/telegram/ui/TooManyCommunitiesActivity;->buttonTextView:Landroid/widget/TextView;
 
-    const v1, 0x7f0e0925
+    const v1, 0x7f0e098b
 
     new-array v2, v6, [Ljava/lang/Object;
 
@@ -1530,9 +1540,11 @@
 
     move-result v3
 
-    const-string v4, "Chats"
+    new-array v4, v7, [Ljava/lang/Object;
 
-    invoke-static {v4, v3}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    const-string v5, "Chats"
+
+    invoke-static {v5, v3, v4}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v3
 
@@ -1546,7 +1558,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    :cond_14a
+    :cond_14c
     return-void
 .end method
 
@@ -1571,7 +1583,7 @@
     .line 128
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
-    const v1, 0x7f070140
+    const v1, 0x7f070109
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/ActionBar;->setBackButtonImage(I)V
 
@@ -1587,7 +1599,7 @@
 
     const-string v3, "LimitReached"
 
-    const v4, 0x7f0e092b
+    const v4, 0x7f0e0999
 
     invoke-static {v3, v4}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
@@ -1611,7 +1623,7 @@
 
     move-result-object v0
 
-    const v3, 0x7f07014a
+    const v3, 0x7f070110
 
     .line 141
     invoke-virtual {v0, v2, v3}, Lorg/telegram/ui/ActionBar/ActionBarMenu;->addItem(II)Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
@@ -1632,7 +1644,7 @@
 
     const-string v3, "Search"
 
-    const v4, 0x7f0e0f74
+    const v4, 0x7f0e1030
 
     .line 191
     invoke-static {v3, v4}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -1763,7 +1775,7 @@
 
     const-string v4, "NoResult"
 
-    const v5, 0x7f0e0ad8
+    const v5, 0x7f0e0b60
 
     invoke-static {v4, v5}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
@@ -2004,7 +2016,7 @@
 
     move-object/from16 v0, p0
 
-    .line 653
+    .line 652
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
@@ -2013,7 +2025,7 @@
 
     invoke-direct {v10, v0}, Lorg/telegram/ui/TooManyCommunitiesActivity$$ExternalSyntheticLambda4;-><init>(Lorg/telegram/ui/TooManyCommunitiesActivity;)V
 
-    .line 678
+    .line 677
     new-instance v11, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v3, v0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
@@ -2036,7 +2048,7 @@
 
     invoke-virtual {v1, v11}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 679
+    .line 678
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v13, v0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
@@ -2059,7 +2071,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 680
+    .line 679
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v3, v0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
@@ -2084,7 +2096,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 681
+    .line 680
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v12, v0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
@@ -2101,7 +2113,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 682
+    .line 681
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v3, v0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
@@ -2120,7 +2132,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 683
+    .line 682
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v12, v0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
@@ -2135,7 +2147,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 684
+    .line 683
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v3, v0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
@@ -2152,7 +2164,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 686
+    .line 685
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v12, v0, Lorg/telegram/ui/TooManyCommunitiesActivity;->hintCell:Lorg/telegram/ui/Cells/TooManyCommunitiesHintCell;
@@ -2185,7 +2197,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 687
+    .line 686
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v3, v0, Lorg/telegram/ui/TooManyCommunitiesActivity;->hintCell:Lorg/telegram/ui/Cells/TooManyCommunitiesHintCell;
@@ -2224,7 +2236,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 688
+    .line 687
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v12, v0, Lorg/telegram/ui/TooManyCommunitiesActivity;->hintCell:Lorg/telegram/ui/Cells/TooManyCommunitiesHintCell;
@@ -2249,7 +2261,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 689
+    .line 688
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v3, v0, Lorg/telegram/ui/ActionBar/BaseFragment;->fragmentView:Landroid/view/View;
@@ -2270,7 +2282,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 690
+    .line 689
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v12, v0, Lorg/telegram/ui/TooManyCommunitiesActivity;->buttonLayout:Landroid/widget/FrameLayout;
@@ -2289,7 +2301,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 692
+    .line 691
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v3, v0, Lorg/telegram/ui/TooManyCommunitiesActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
@@ -2314,7 +2326,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 693
+    .line 692
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v12, v0, Lorg/telegram/ui/TooManyCommunitiesActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
@@ -2339,7 +2351,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 694
+    .line 693
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v3, v0, Lorg/telegram/ui/TooManyCommunitiesActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
@@ -2374,7 +2386,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 696
+    .line 695
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v12, v0, Lorg/telegram/ui/TooManyCommunitiesActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
@@ -2401,7 +2413,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 697
+    .line 696
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v3, v0, Lorg/telegram/ui/TooManyCommunitiesActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
@@ -2434,7 +2446,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 698
+    .line 697
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v12, v0, Lorg/telegram/ui/TooManyCommunitiesActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
@@ -2459,7 +2471,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 699
+    .line 698
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v3, v0, Lorg/telegram/ui/TooManyCommunitiesActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
@@ -2490,7 +2502,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 700
+    .line 699
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v12, v0, Lorg/telegram/ui/TooManyCommunitiesActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
@@ -2517,7 +2529,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 701
+    .line 700
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v4, v0, Lorg/telegram/ui/TooManyCommunitiesActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
@@ -2554,7 +2566,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 702
+    .line 701
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v13, v0, Lorg/telegram/ui/TooManyCommunitiesActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
@@ -2577,7 +2589,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 704
+    .line 703
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v4, v0, Lorg/telegram/ui/TooManyCommunitiesActivity;->searchListView:Lorg/telegram/ui/Components/RecyclerListView;
@@ -2608,7 +2620,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 705
+    .line 704
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v4, v0, Lorg/telegram/ui/TooManyCommunitiesActivity;->searchListView:Lorg/telegram/ui/Components/RecyclerListView;
@@ -2645,7 +2657,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 706
+    .line 705
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v4, v0, Lorg/telegram/ui/TooManyCommunitiesActivity;->searchListView:Lorg/telegram/ui/Components/RecyclerListView;
@@ -2676,7 +2688,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 707
+    .line 706
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v4, v0, Lorg/telegram/ui/TooManyCommunitiesActivity;->searchListView:Lorg/telegram/ui/Components/RecyclerListView;
@@ -2707,7 +2719,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 708
+    .line 707
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v4, v0, Lorg/telegram/ui/TooManyCommunitiesActivity;->searchListView:Lorg/telegram/ui/Components/RecyclerListView;
@@ -2738,7 +2750,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 709
+    .line 708
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v3, v0, Lorg/telegram/ui/TooManyCommunitiesActivity;->searchListView:Lorg/telegram/ui/Components/RecyclerListView;
@@ -2773,7 +2785,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 710
+    .line 709
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v12, v0, Lorg/telegram/ui/TooManyCommunitiesActivity;->searchListView:Lorg/telegram/ui/Components/RecyclerListView;
@@ -2800,7 +2812,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 711
+    .line 710
     new-instance v11, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     const/4 v3, 0x0
@@ -2827,7 +2839,7 @@
 
     invoke-virtual {v1, v11}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 712
+    .line 711
     new-instance v11, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     const-string v9, "avatar_backgroundOrange"
@@ -2838,7 +2850,7 @@
 
     invoke-virtual {v1, v11}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 713
+    .line 712
     new-instance v11, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     const-string v9, "avatar_backgroundViolet"
@@ -2849,7 +2861,7 @@
 
     invoke-virtual {v1, v11}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 714
+    .line 713
     new-instance v11, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     const-string v9, "avatar_backgroundGreen"
@@ -2860,7 +2872,7 @@
 
     invoke-virtual {v1, v11}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 715
+    .line 714
     new-instance v11, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     const-string v9, "avatar_backgroundCyan"
@@ -2871,7 +2883,7 @@
 
     invoke-virtual {v1, v11}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 716
+    .line 715
     new-instance v11, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     const-string v9, "avatar_backgroundBlue"
@@ -2882,7 +2894,7 @@
 
     invoke-virtual {v1, v11}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 717
+    .line 716
     new-instance v11, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     const-string v9, "avatar_backgroundPink"
@@ -2893,7 +2905,7 @@
 
     invoke-virtual {v1, v11}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 718
+    .line 717
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v3, v0, Lorg/telegram/ui/TooManyCommunitiesActivity;->emptyView:Lorg/telegram/ui/Components/EmptyTextProgressView;
@@ -2914,7 +2926,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 720
+    .line 719
     new-instance v11, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v3, v0, Lorg/telegram/ui/TooManyCommunitiesActivity;->buttonTextView:Landroid/widget/TextView;
@@ -2927,7 +2939,7 @@
 
     invoke-virtual {v1, v11}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 721
+    .line 720
     new-instance v11, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v3, v0, Lorg/telegram/ui/TooManyCommunitiesActivity;->buttonTextView:Landroid/widget/TextView;
@@ -2940,7 +2952,7 @@
 
     invoke-virtual {v1, v11}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 722
+    .line 721
     new-instance v11, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v3, v0, Lorg/telegram/ui/TooManyCommunitiesActivity;->progressBar:Lorg/telegram/ui/Components/RadialProgressView;
@@ -2953,7 +2965,7 @@
 
     invoke-virtual {v1, v11}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 723
+    .line 722
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v3, v0, Lorg/telegram/ui/TooManyCommunitiesActivity;->hintCell:Lorg/telegram/ui/Cells/TooManyCommunitiesHintCell;

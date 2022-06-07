@@ -2,42 +2,38 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/view/View$OnTouchListener;
+.implements Landroid/view/View$OnClickListener;
 
 
-# static fields
-.field public static final synthetic INSTANCE:Lorg/telegram/ui/DialogsActivity$$ExternalSyntheticLambda24;
+# instance fields
+.field public final synthetic f$0:Lorg/telegram/ui/DialogsActivity;
+
+.field public final synthetic f$1:Ljava/util/ArrayList;
 
 
 # direct methods
-.method static synthetic constructor <clinit>()V
-    .registers 1
-
-    new-instance v0, Lorg/telegram/ui/DialogsActivity$$ExternalSyntheticLambda24;
-
-    invoke-direct {v0}, Lorg/telegram/ui/DialogsActivity$$ExternalSyntheticLambda24;-><init>()V
-
-    sput-object v0, Lorg/telegram/ui/DialogsActivity$$ExternalSyntheticLambda24;->INSTANCE:Lorg/telegram/ui/DialogsActivity$$ExternalSyntheticLambda24;
-
-    return-void
-.end method
-
-.method private synthetic constructor <init>()V
-    .registers 1
+.method public synthetic constructor <init>(Lorg/telegram/ui/DialogsActivity;Ljava/util/ArrayList;)V
+    .registers 3
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lorg/telegram/ui/DialogsActivity$$ExternalSyntheticLambda24;->f$0:Lorg/telegram/ui/DialogsActivity;
+
+    iput-object p2, p0, Lorg/telegram/ui/DialogsActivity$$ExternalSyntheticLambda24;->f$1:Ljava/util/ArrayList;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
-    .registers 3
+.method public final onClick(Landroid/view/View;)V
+    .registers 4
 
-    invoke-static {p1, p2}, Lorg/telegram/ui/DialogsActivity;->$r8$lambda$cEUAlPjLEWMgubTtSBtNHUDdZEc(Landroid/view/View;Landroid/view/MotionEvent;)Z
+    iget-object v0, p0, Lorg/telegram/ui/DialogsActivity$$ExternalSyntheticLambda24;->f$0:Lorg/telegram/ui/DialogsActivity;
 
-    move-result p1
+    iget-object v1, p0, Lorg/telegram/ui/DialogsActivity$$ExternalSyntheticLambda24;->f$1:Ljava/util/ArrayList;
 
-    return p1
+    invoke-static {v0, v1, p1}, Lorg/telegram/ui/DialogsActivity;->$r8$lambda$_ds_xrb8inH6MI_xp7q8hgk0yrM(Lorg/telegram/ui/DialogsActivity;Ljava/util/ArrayList;Landroid/view/View;)V
+
+    return-void
 .end method

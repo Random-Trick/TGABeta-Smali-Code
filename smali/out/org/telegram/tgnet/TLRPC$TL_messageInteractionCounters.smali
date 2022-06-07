@@ -25,7 +25,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 4617
+    .line 4682
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -34,7 +34,7 @@
 .method public static TLdeserialize(Lorg/telegram/tgnet/AbstractSerializedData;IZ)Lorg/telegram/tgnet/TLRPC$TL_messageInteractionCounters;
     .registers 4
 
-    .line 4625
+    .line 4690
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_messageInteractionCounters;->constructor:I
 
     if-eq v0, p1, :cond_1e
@@ -45,7 +45,7 @@
 
     return-object p0
 
-    .line 4627
+    .line 4692
     :cond_8
     new-instance p0, Ljava/lang/RuntimeException;
 
@@ -71,13 +71,13 @@
 
     throw p0
 
-    .line 4632
+    .line 4697
     :cond_1e
     new-instance p1, Lorg/telegram/tgnet/TLRPC$TL_messageInteractionCounters;
 
     invoke-direct {p1}, Lorg/telegram/tgnet/TLRPC$TL_messageInteractionCounters;-><init>()V
 
-    .line 4633
+    .line 4698
     invoke-virtual {p1, p0, p2}, Lorg/telegram/tgnet/TLRPC$TL_messageInteractionCounters;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
     return-object p1
@@ -88,21 +88,21 @@
 .method public readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
     .registers 4
 
-    .line 4638
+    .line 4703
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
 
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$TL_messageInteractionCounters;->msg_id:I
 
-    .line 4639
+    .line 4704
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
 
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$TL_messageInteractionCounters;->views:I
 
-    .line 4640
+    .line 4705
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result p1
@@ -115,22 +115,22 @@
 .method public serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
     .registers 3
 
-    .line 4644
+    .line 4709
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_messageInteractionCounters;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 4645
+    .line 4710
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_messageInteractionCounters;->msg_id:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 4646
+    .line 4711
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_messageInteractionCounters;->views:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 4647
+    .line 4712
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_messageInteractionCounters;->forwards:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V

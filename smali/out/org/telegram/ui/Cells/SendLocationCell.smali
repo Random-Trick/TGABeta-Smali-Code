@@ -190,7 +190,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f07034d
+    const v2, 0x7f070365
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -579,7 +579,7 @@
 
     if-eqz v0, :cond_2c
 
-    const v1, 0x7f0e10e7
+    const v1, 0x7f0e11a6
 
     const-string v2, "StopLiveLocation"
 
@@ -615,7 +615,7 @@
     goto :goto_41
 
     :cond_2c
-    const v0, 0x7f0e0fd5
+    const v0, 0x7f0e1092
 
     const-string v1, "SendLiveLocation"
 
@@ -624,7 +624,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0e0fd9
+    const v1, 0x7f0e1096
 
     const-string v2, "SendLiveLocationInfo"
 

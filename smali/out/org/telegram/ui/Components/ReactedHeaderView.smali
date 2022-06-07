@@ -301,7 +301,7 @@
 
     invoke-virtual {p0, p2, p4}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    const p2, 0x7f0702ac
+    const p2, 0x7f0702bf
 
     .line 77
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
@@ -460,19 +460,21 @@
 
     move-result-object p1
 
-    goto :goto_4f
+    goto :goto_51
 
     :cond_49
     :goto_49
-    const-string v0, "ReactionsCount"
+    new-array v0, v2, [Ljava/lang/Object;
+
+    const-string v3, "ReactionsCount"
 
     .line 197
-    invoke-static {v0, p1}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    invoke-static {v3, p1, v0}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
 
     .line 207
-    :goto_4f
+    :goto_51
     iget-object v0, p0, Lorg/telegram/ui/Components/ReactedHeaderView;->titleView:Landroid/widget/TextView;
 
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
@@ -488,7 +490,7 @@
 
     const/4 v3, 0x0
 
-    if-eqz p1, :cond_cc
+    if-eqz p1, :cond_ce
 
     iget-object p1, p1, Lorg/telegram/tgnet/TLRPC$MessageReactions;->results:Ljava/util/ArrayList;
 
@@ -496,7 +498,7 @@
 
     move-result p1
 
-    if-ne p1, v1, :cond_cc
+    if-ne p1, v1, :cond_ce
 
     iget-object p1, p2, Lorg/telegram/tgnet/TLRPC$TL_messages_messageReactionsList;->reactions:Ljava/util/ArrayList;
 
@@ -504,7 +506,7 @@
 
     move-result p1
 
-    if-nez p1, :cond_cc
+    if-nez p1, :cond_ce
 
     .line 210
     iget p1, p0, Lorg/telegram/ui/Components/ReactedHeaderView;->currentAccount:I
@@ -521,12 +523,12 @@
 
     move-result-object p1
 
-    :cond_7d
+    :cond_7f
     invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v4
 
-    if-eqz v4, :cond_cc
+    if-eqz v4, :cond_ce
 
     invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -553,7 +555,7 @@
 
     move-result v4
 
-    if-eqz v4, :cond_7d
+    if-eqz v4, :cond_7f
 
     .line 212
     iget-object v5, p0, Lorg/telegram/ui/Components/ReactedHeaderView;->reactView:Lorg/telegram/ui/Components/BackupImageView;
@@ -604,13 +606,13 @@
 
     const/4 p1, 0x0
 
-    goto :goto_cd
+    goto :goto_cf
 
-    :cond_cc
+    :cond_ce
     const/4 p1, 0x1
 
-    :goto_cd
-    if-eqz p1, :cond_e6
+    :goto_cf
+    if-eqz p1, :cond_e8
 
     .line 223
     iget-object p1, p0, Lorg/telegram/ui/Components/ReactedHeaderView;->iconView:Landroid/widget/ImageView;
@@ -636,20 +638,20 @@
     invoke-virtual {p1}, Landroid/view/ViewPropertyAnimator;->start()V
 
     .line 227
-    :cond_e6
+    :cond_e8
     iget-object p1, p2, Lorg/telegram/tgnet/TLRPC$TL_messages_messageReactionsList;->users:Ljava/util/ArrayList;
 
     invoke-virtual {p1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
 
-    :cond_ec
-    :goto_ec
+    :cond_ee
+    :goto_ee
     invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
     move-result p2
 
-    if-eqz p2, :cond_12f
+    if-eqz p2, :cond_131
 
     invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -664,7 +666,7 @@
 
     iget-object v0, v0, Lorg/telegram/tgnet/TLRPC$Message;->from_id:Lorg/telegram/tgnet/TLRPC$Peer;
 
-    if-eqz v0, :cond_ec
+    if-eqz v0, :cond_ee
 
     iget-wide v3, p2, Lorg/telegram/tgnet/TLRPC$User;->id:J
 
@@ -672,19 +674,19 @@
 
     cmp-long v0, v3, v5
 
-    if-eqz v0, :cond_ec
+    if-eqz v0, :cond_ee
 
     const/4 v0, 0x0
 
     .line 230
-    :goto_109
+    :goto_10b
     iget-object v3, p0, Lorg/telegram/ui/Components/ReactedHeaderView;->users:Ljava/util/List;
 
     invoke-interface {v3}, Ljava/util/List;->size()I
 
     move-result v3
 
-    if-ge v0, v3, :cond_126
+    if-ge v0, v3, :cond_128
 
     .line 231
     iget-object v3, p0, Lorg/telegram/ui/Components/ReactedHeaderView;->users:Ljava/util/List;
@@ -701,32 +703,32 @@
 
     cmp-long v7, v3, v5
 
-    if-nez v7, :cond_123
+    if-nez v7, :cond_125
 
     const/4 v0, 0x1
 
-    goto :goto_127
+    goto :goto_129
 
-    :cond_123
+    :cond_125
     add-int/lit8 v0, v0, 0x1
 
-    goto :goto_109
+    goto :goto_10b
 
-    :cond_126
+    :cond_128
     const/4 v0, 0x0
 
-    :goto_127
-    if-nez v0, :cond_ec
+    :goto_129
+    if-nez v0, :cond_ee
 
     .line 237
     iget-object v0, p0, Lorg/telegram/ui/Components/ReactedHeaderView;->users:Ljava/util/List;
 
     invoke-interface {v0, p2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    goto :goto_ec
+    goto :goto_ee
 
     .line 242
-    :cond_12f
+    :cond_131
     invoke-direct {p0}, Lorg/telegram/ui/Components/ReactedHeaderView;->updateView()V
 
     return-void

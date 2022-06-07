@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView;Landroid/content/Context;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)V
     .registers 4
 
-    .line 161
+    .line 158
     iput-object p1, p0, Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView$1;->this$0:Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView;
 
     invoke-direct {p0, p2, p3}, Lorg/telegram/ui/Components/EditTextCaption;-><init>(Landroid/content/Context;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)V
@@ -35,7 +35,7 @@
 .method protected extendActionMode(Landroid/view/ActionMode;Landroid/view/Menu;)V
     .registers 4
 
-    .line 189
+    .line 186
     iget-object v0, p0, Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView$1;->this$0:Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView;
 
     invoke-virtual {v0, p1, p2}, Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView;->extendActionMode(Landroid/view/ActionMode;Landroid/view/Menu;)V
@@ -54,7 +54,7 @@
 .method protected onMeasure(II)V
     .registers 6
 
-    .line 165
+    .line 162
     :try_start_0
     iget-object v0, p0, Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView$1;->this$0:Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView;
 
@@ -82,10 +82,10 @@
     :goto_12
     invoke-static {v0, v1}, Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView;->access$002(Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView;Z)Z
 
-    .line 166
+    .line 163
     invoke-super {p0, p1, p2}, Lorg/telegram/ui/Components/EditTextCaption;->onMeasure(II)V
 
-    .line 167
+    .line 164
     iget-object p2, p0, Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView$1;->this$0:Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView;
 
     invoke-static {p2}, Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView;->access$000(Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView;)Z
@@ -94,7 +94,7 @@
 
     if-eqz p2, :cond_29
 
-    .line 168
+    .line 165
     iget-object p2, p0, Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView$1;->this$0:Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView;
 
     invoke-virtual {p0}, Landroid/widget/EditText;->getLineCount()I
@@ -103,7 +103,7 @@
 
     invoke-static {p2, v0}, Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView;->access$102(Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView;I)I
 
-    .line 170
+    .line 167
     :cond_29
     iget-object p2, p0, Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView$1;->this$0:Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView;
 
@@ -116,7 +116,7 @@
     :catch_2f
     move-exception p2
 
-    .line 172
+    .line 169
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result p1
@@ -129,7 +129,7 @@
 
     invoke-virtual {p0, p1, v0}, Landroid/widget/EditText;->setMeasuredDimension(II)V
 
-    .line 173
+    .line 170
     invoke-static {p2}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     :goto_40
@@ -139,14 +139,14 @@
 .method protected onSelectionChanged(II)V
     .registers 3
 
-    .line 179
+    .line 176
     invoke-super {p0, p1, p2}, Lorg/telegram/ui/Components/EditTextEffects;->onSelectionChanged(II)V
 
     if-eq p1, p2, :cond_a
 
     const/4 p1, 0x0
 
-    .line 181
+    .line 178
     invoke-virtual {p0, p1}, Lorg/telegram/ui/Components/EditTextBoldCursor;->fixHandleView(Z)V
 
     goto :goto_e
@@ -154,7 +154,7 @@
     :cond_a
     const/4 p1, 0x1
 
-    .line 183
+    .line 180
     invoke-virtual {p0, p1}, Lorg/telegram/ui/Components/EditTextBoldCursor;->fixHandleView(Z)V
 
     :goto_e
@@ -164,7 +164,7 @@
 .method public requestRectangleOnScreen(Landroid/graphics/Rect;)Z
     .registers 4
 
-    .line 199
+    .line 196
     iget v0, p1, Landroid/graphics/Rect;->bottom:I
 
     const/high16 v1, 0x447a0000    # 1000.0f
@@ -177,7 +177,7 @@
 
     iput v0, p1, Landroid/graphics/Rect;->bottom:I
 
-    .line 200
+    .line 197
     invoke-super {p0, p1}, Landroid/widget/EditText;->requestRectangleOnScreen(Landroid/graphics/Rect;)Z
 
     move-result p1

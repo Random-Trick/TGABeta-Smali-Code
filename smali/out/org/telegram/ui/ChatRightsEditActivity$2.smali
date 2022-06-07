@@ -24,14 +24,14 @@
 .method constructor <init>(Lorg/telegram/ui/ChatRightsEditActivity;Landroid/content/Context;)V
     .registers 3
 
-    .line 391
+    .line 388
     iput-object p1, p0, Lorg/telegram/ui/ChatRightsEditActivity$2;->this$0:Lorg/telegram/ui/ChatRightsEditActivity;
 
     invoke-direct {p0, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
     const/4 p1, -0x1
 
-    .line 392
+    .line 389
     iput p1, p0, Lorg/telegram/ui/ChatRightsEditActivity$2;->previousHeight:I
 
     return-void
@@ -42,12 +42,12 @@
 .method protected onLayout(ZIIII)V
     .registers 6
 
-    .line 395
+    .line 392
     invoke-super/range {p0 .. p5}, Landroid/widget/FrameLayout;->onLayout(ZIIII)V
 
     sub-int/2addr p5, p3
 
-    .line 397
+    .line 394
     iget p1, p0, Lorg/telegram/ui/ChatRightsEditActivity$2;->previousHeight:I
 
     const/4 p2, -0x1
@@ -68,7 +68,7 @@
 
     if-le p1, p2, :cond_27
 
-    .line 398
+    .line 395
     iget-object p1, p0, Lorg/telegram/ui/ChatRightsEditActivity$2;->this$0:Lorg/telegram/ui/ChatRightsEditActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/ChatRightsEditActivity;->access$300(Lorg/telegram/ui/ChatRightsEditActivity;)Lorg/telegram/ui/Components/RecyclerListView;
@@ -85,7 +85,7 @@
 
     invoke-virtual {p1, p2}, Landroidx/recyclerview/widget/RecyclerView;->smoothScrollToPosition(I)V
 
-    .line 400
+    .line 397
     :cond_27
     iput p5, p0, Lorg/telegram/ui/ChatRightsEditActivity$2;->previousHeight:I
 

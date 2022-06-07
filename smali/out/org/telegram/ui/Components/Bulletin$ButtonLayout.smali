@@ -30,7 +30,7 @@
 .method public constructor <init>(Landroid/content/Context;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)V
     .registers 3
 
-    .line 872
+    .line 875
     invoke-direct {p0, p1, p2}, Lorg/telegram/ui/Components/Bulletin$Layout;-><init>(Landroid/content/Context;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)V
 
     return-void
@@ -41,7 +41,7 @@
 .method public getButton()Lorg/telegram/ui/Components/Bulletin$Button;
     .registers 2
 
-    .line 897
+    .line 900
     iget-object v0, p0, Lorg/telegram/ui/Components/Bulletin$ButtonLayout;->button:Lorg/telegram/ui/Components/Bulletin$Button;
 
     return-object v0
@@ -50,14 +50,14 @@
 .method protected measureChildWithMargins(Landroid/view/View;IIII)V
     .registers 12
 
-    .line 886
+    .line 889
     iget-object v0, p0, Lorg/telegram/ui/Components/Bulletin$ButtonLayout;->button:Lorg/telegram/ui/Components/Bulletin$Button;
 
     if-eqz v0, :cond_12
 
     if-eq p1, v0, :cond_12
 
-    .line 887
+    .line 890
     invoke-virtual {v0}, Landroid/widget/FrameLayout;->getMeasuredWidth()I
 
     move-result v0
@@ -85,22 +85,22 @@
 
     move v5, p5
 
-    .line 889
+    .line 892
     invoke-super/range {v0 .. v5}, Landroid/widget/FrameLayout;->measureChildWithMargins(Landroid/view/View;IIII)V
 
-    .line 890
+    .line 893
     iget-object p2, p0, Lorg/telegram/ui/Components/Bulletin$ButtonLayout;->button:Lorg/telegram/ui/Components/Bulletin$Button;
 
     if-eq p1, p2, :cond_37
 
-    .line 891
+    .line 894
     invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object p2
 
     check-cast p2, Landroid/view/ViewGroup$MarginLayoutParams;
 
-    .line 892
+    .line 895
     iget p3, p0, Lorg/telegram/ui/Components/Bulletin$ButtonLayout;->childrenMeasuredWidth:I
 
     iget p4, p2, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
@@ -130,13 +130,13 @@
 
     const/4 v0, 0x0
 
-    .line 877
+    .line 880
     iput v0, p0, Lorg/telegram/ui/Components/Bulletin$ButtonLayout;->childrenMeasuredWidth:I
 
-    .line 878
+    .line 881
     invoke-super {p0, p1, p2}, Landroid/widget/FrameLayout;->onMeasure(II)V
 
-    .line 879
+    .line 882
     iget-object p2, p0, Lorg/telegram/ui/Components/Bulletin$ButtonLayout;->button:Lorg/telegram/ui/Components/Bulletin$Button;
 
     if-eqz p2, :cond_22
@@ -149,7 +149,7 @@
 
     if-ne p1, p2, :cond_22
 
-    .line 880
+    .line 883
     iget p1, p0, Lorg/telegram/ui/Components/Bulletin$ButtonLayout;->childrenMeasuredWidth:I
 
     iget-object p2, p0, Lorg/telegram/ui/Components/Bulletin$ButtonLayout;->button:Lorg/telegram/ui/Components/Bulletin$Button;
@@ -173,26 +173,26 @@
 .method public setButton(Lorg/telegram/ui/Components/Bulletin$Button;)V
     .registers 5
 
-    .line 901
+    .line 904
     iget-object v0, p0, Lorg/telegram/ui/Components/Bulletin$ButtonLayout;->button:Lorg/telegram/ui/Components/Bulletin$Button;
 
     if-eqz v0, :cond_c
 
-    .line 902
+    .line 905
     invoke-virtual {p0, v0}, Lorg/telegram/ui/Components/Bulletin$Layout;->removeCallback(Lorg/telegram/ui/Components/Bulletin$Layout$Callback;)V
 
-    .line 903
+    .line 906
     iget-object v0, p0, Lorg/telegram/ui/Components/Bulletin$ButtonLayout;->button:Lorg/telegram/ui/Components/Bulletin$Button;
 
     invoke-virtual {p0, v0}, Landroid/widget/FrameLayout;->removeView(Landroid/view/View;)V
 
-    .line 905
+    .line 908
     :cond_c
     iput-object p1, p0, Lorg/telegram/ui/Components/Bulletin$ButtonLayout;->button:Lorg/telegram/ui/Components/Bulletin$Button;
 
     if-eqz p1, :cond_20
 
-    .line 907
+    .line 910
     invoke-virtual {p0, p1}, Lorg/telegram/ui/Components/Bulletin$Layout;->addCallback(Lorg/telegram/ui/Components/Bulletin$Layout$Callback;)V
 
     const/4 v0, 0x0
@@ -201,7 +201,7 @@
 
     const/high16 v2, -0x40000000    # -2.0f
 
-    .line 908
+    .line 911
     invoke-static {v2, v2, v1}, Lorg/telegram/ui/Components/LayoutHelper;->createFrameRelatively(FFI)Landroid/widget/FrameLayout$LayoutParams;
 
     move-result-object v1

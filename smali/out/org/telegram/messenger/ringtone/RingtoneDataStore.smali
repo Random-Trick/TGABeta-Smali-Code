@@ -50,10 +50,18 @@
 
 
 # direct methods
-.method public static synthetic $r8$lambda$4QyvlQE_4S6lCOclKI_WVO_naE0(Lorg/telegram/messenger/ringtone/RingtoneDataStore;Lorg/telegram/tgnet/TLRPC$Document;)V
+.method public static synthetic $r8$lambda$F55wIJ5tIJ2p65YJw58iS8GEx_c(Lorg/telegram/messenger/ringtone/RingtoneDataStore;)V
+    .registers 1
+
+    invoke-direct {p0}, Lorg/telegram/messenger/ringtone/RingtoneDataStore;->lambda$loadFromPrefs$3()V
+
+    return-void
+.end method
+
+.method public static synthetic $r8$lambda$HhM3cui_7B90uf7k6Un5ZILktjA(Lorg/telegram/messenger/ringtone/RingtoneDataStore;Ljava/util/ArrayList;)V
     .registers 2
 
-    invoke-direct {p0, p1}, Lorg/telegram/messenger/ringtone/RingtoneDataStore;->lambda$checkRingtoneSoundsLoaded$3(Lorg/telegram/tgnet/TLRPC$Document;)V
+    invoke-direct {p0, p1}, Lorg/telegram/messenger/ringtone/RingtoneDataStore;->lambda$checkRingtoneSoundsLoaded$5(Ljava/util/ArrayList;)V
 
     return-void
 .end method
@@ -62,6 +70,14 @@
     .registers 1
 
     invoke-direct {p0}, Lorg/telegram/messenger/ringtone/RingtoneDataStore;->lambda$new$0()V
+
+    return-void
+.end method
+
+.method public static synthetic $r8$lambda$e7tglwQ3LhUeuet04kXN3rprhdI(Lorg/telegram/messenger/ringtone/RingtoneDataStore;Lorg/telegram/tgnet/TLRPC$Document;)V
+    .registers 2
+
+    invoke-direct {p0, p1}, Lorg/telegram/messenger/ringtone/RingtoneDataStore;->lambda$checkRingtoneSoundsLoaded$4(Lorg/telegram/tgnet/TLRPC$Document;)V
 
     return-void
 .end method
@@ -78,14 +94,6 @@
     .registers 2
 
     invoke-direct {p0, p1}, Lorg/telegram/messenger/ringtone/RingtoneDataStore;->lambda$loadUserRingtones$1(Lorg/telegram/tgnet/TLObject;)V
-
-    return-void
-.end method
-
-.method public static synthetic $r8$lambda$vWovnlGhnVr2jmLJ10a5EWbZ9Y8(Lorg/telegram/messenger/ringtone/RingtoneDataStore;Ljava/util/ArrayList;)V
-    .registers 2
-
-    invoke-direct {p0, p1}, Lorg/telegram/messenger/ringtone/RingtoneDataStore;->lambda$checkRingtoneSoundsLoaded$4(Ljava/util/ArrayList;)V
 
     return-void
 .end method
@@ -203,9 +211,9 @@
 
     .line 52
     :goto_32
-    new-instance p1, Lorg/telegram/messenger/ringtone/RingtoneDataStore$$ExternalSyntheticLambda0;
+    new-instance p1, Lorg/telegram/messenger/ringtone/RingtoneDataStore$$ExternalSyntheticLambda1;
 
-    invoke-direct {p1, p0}, Lorg/telegram/messenger/ringtone/RingtoneDataStore$$ExternalSyntheticLambda0;-><init>(Lorg/telegram/messenger/ringtone/RingtoneDataStore;)V
+    invoke-direct {p1, p0}, Lorg/telegram/messenger/ringtone/RingtoneDataStore$$ExternalSyntheticLambda1;-><init>(Lorg/telegram/messenger/ringtone/RingtoneDataStore;)V
 
     invoke-static {p1}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
@@ -215,12 +223,12 @@
 .method private getSharedPreferences()Landroid/content/SharedPreferences;
     .registers 4
 
-    .line 177
+    .line 179
     iget-object v0, p0, Lorg/telegram/messenger/ringtone/RingtoneDataStore;->prefName:Ljava/lang/String;
 
     if-nez v0, :cond_19
 
-    .line 178
+    .line 180
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -239,7 +247,7 @@
 
     iput-object v0, p0, Lorg/telegram/messenger/ringtone/RingtoneDataStore;->prefName:Ljava/lang/String;
 
-    .line 180
+    .line 182
     :cond_19
     sget-object v0, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
@@ -254,10 +262,10 @@
     return-object v0
 .end method
 
-.method private synthetic lambda$checkRingtoneSoundsLoaded$3(Lorg/telegram/tgnet/TLRPC$Document;)V
+.method private synthetic lambda$checkRingtoneSoundsLoaded$4(Lorg/telegram/tgnet/TLRPC$Document;)V
     .registers 4
 
-    .line 256
+    .line 258
     iget v0, p0, Lorg/telegram/messenger/ringtone/RingtoneDataStore;->currentAccount:I
 
     invoke-static {v0}, Lorg/telegram/messenger/FileLoader;->getInstance(I)Lorg/telegram/messenger/FileLoader;
@@ -271,12 +279,12 @@
     return-void
 .end method
 
-.method private synthetic lambda$checkRingtoneSoundsLoaded$4(Ljava/util/ArrayList;)V
+.method private synthetic lambda$checkRingtoneSoundsLoaded$5(Ljava/util/ArrayList;)V
     .registers 6
 
     const/4 v0, 0x0
 
-    .line 242
+    .line 244
     :goto_1
     invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
 
@@ -284,14 +292,14 @@
 
     if-ge v0, v1, :cond_44
 
-    .line 243
+    .line 245
     invoke-virtual {p1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Lorg/telegram/messenger/ringtone/RingtoneDataStore$CachedTone;
 
-    .line 244
+    .line 246
     iget-object v2, v1, Lorg/telegram/messenger/ringtone/RingtoneDataStore$CachedTone;->localUri:Ljava/lang/String;
 
     invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -300,14 +308,14 @@
 
     if-nez v2, :cond_23
 
-    .line 245
+    .line 247
     new-instance v2, Ljava/io/File;
 
     iget-object v3, v1, Lorg/telegram/messenger/ringtone/RingtoneDataStore$CachedTone;->localUri:Ljava/lang/String;
 
     invoke-direct {v2, v3}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 246
+    .line 248
     invoke-virtual {v2}, Ljava/io/File;->exists()Z
 
     move-result v2
@@ -316,13 +324,13 @@
 
     goto :goto_41
 
-    .line 251
+    .line 253
     :cond_23
     iget-object v1, v1, Lorg/telegram/messenger/ringtone/RingtoneDataStore$CachedTone;->document:Lorg/telegram/tgnet/TLRPC$Document;
 
     if-eqz v1, :cond_41
 
-    .line 253
+    .line 255
     iget v2, p0, Lorg/telegram/messenger/ringtone/RingtoneDataStore;->currentAccount:I
 
     invoke-static {v2}, Lorg/telegram/messenger/FileLoader;->getInstance(I)Lorg/telegram/messenger/FileLoader;
@@ -335,18 +343,18 @@
 
     if-eqz v2, :cond_39
 
-    .line 254
+    .line 256
     invoke-virtual {v2}, Ljava/io/File;->exists()Z
 
     move-result v2
 
     if-nez v2, :cond_41
 
-    .line 255
+    .line 257
     :cond_39
-    new-instance v2, Lorg/telegram/messenger/ringtone/RingtoneDataStore$$ExternalSyntheticLambda3;
+    new-instance v2, Lorg/telegram/messenger/ringtone/RingtoneDataStore$$ExternalSyntheticLambda4;
 
-    invoke-direct {v2, p0, v1}, Lorg/telegram/messenger/ringtone/RingtoneDataStore$$ExternalSyntheticLambda3;-><init>(Lorg/telegram/messenger/ringtone/RingtoneDataStore;Lorg/telegram/tgnet/TLRPC$Document;)V
+    invoke-direct {v2, p0, v1}, Lorg/telegram/messenger/ringtone/RingtoneDataStore$$ExternalSyntheticLambda4;-><init>(Lorg/telegram/messenger/ringtone/RingtoneDataStore;Lorg/telegram/tgnet/TLRPC$Document;)V
 
     invoke-static {v2}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
@@ -357,6 +365,27 @@
     goto :goto_1
 
     :cond_44
+    return-void
+.end method
+
+.method private synthetic lambda$loadFromPrefs$3()V
+    .registers 4
+
+    .line 110
+    iget v0, p0, Lorg/telegram/messenger/ringtone/RingtoneDataStore;->currentAccount:I
+
+    invoke-static {v0}, Lorg/telegram/messenger/NotificationCenter;->getInstance(I)Lorg/telegram/messenger/NotificationCenter;
+
+    move-result-object v0
+
+    sget v1, Lorg/telegram/messenger/NotificationCenter;->onUserRingtonesUpdated:I
+
+    const/4 v2, 0x0
+
+    new-array v2, v2, [Ljava/lang/Object;
+
+    invoke-virtual {v0, v1, v2}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
+
     return-void
 .end method
 
@@ -440,9 +469,9 @@
     .registers 3
 
     .line 62
-    new-instance p2, Lorg/telegram/messenger/ringtone/RingtoneDataStore$$ExternalSyntheticLambda2;
+    new-instance p2, Lorg/telegram/messenger/ringtone/RingtoneDataStore$$ExternalSyntheticLambda3;
 
-    invoke-direct {p2, p0, p1}, Lorg/telegram/messenger/ringtone/RingtoneDataStore$$ExternalSyntheticLambda2;-><init>(Lorg/telegram/messenger/ringtone/RingtoneDataStore;Lorg/telegram/tgnet/TLObject;)V
+    invoke-direct {p2, p0, p1}, Lorg/telegram/messenger/ringtone/RingtoneDataStore$$ExternalSyntheticLambda3;-><init>(Lorg/telegram/messenger/ringtone/RingtoneDataStore;Lorg/telegram/tgnet/TLObject;)V
 
     invoke-static {p2}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
@@ -459,7 +488,7 @@
 .end method
 
 .method private loadFromPrefs(Z)V
-    .registers 10
+    .registers 9
 
     .line 87
     invoke-direct {p0}, Lorg/telegram/messenger/ringtone/RingtoneDataStore;->getSharedPreferences()Landroid/content/SharedPreferences;
@@ -480,138 +509,130 @@
 
     invoke-virtual {v3}, Ljava/util/ArrayList;->clear()V
 
-    const/4 v3, 0x0
-
-    :goto_11
-    if-ge v3, v1, :cond_74
+    :goto_10
+    if-ge v2, v1, :cond_73
 
     .line 91
-    new-instance v4, Ljava/lang/StringBuilder;
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v5, "tone_document"
+    const-string v4, "tone_document"
 
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v4
+    move-result-object v3
 
-    const-string v5, ""
+    const-string v4, ""
 
-    invoke-interface {v0, v4, v5}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-interface {v0, v3, v4}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v4
+    move-result-object v3
 
     .line 92
-    new-instance v6, Ljava/lang/StringBuilder;
+    new-instance v5, Ljava/lang/StringBuilder;
 
-    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v7, "tone_local_path"
+    const-string v6, "tone_local_path"
 
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v6, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v5, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v6
-
-    invoke-interface {v0, v6, v5}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v5
 
-    .line 93
-    new-instance v6, Lorg/telegram/tgnet/SerializedData;
-
-    invoke-static {v4}, Lorg/telegram/messenger/Utilities;->hexToBytes(Ljava/lang/String;)[B
+    invoke-interface {v0, v5, v4}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
-    invoke-direct {v6, v4}, Lorg/telegram/tgnet/SerializedData;-><init>([B)V
+    .line 93
+    new-instance v5, Lorg/telegram/tgnet/SerializedData;
 
-    const/4 v4, 0x1
+    invoke-static {v3}, Lorg/telegram/messenger/Utilities;->hexToBytes(Ljava/lang/String;)[B
+
+    move-result-object v3
+
+    invoke-direct {v5, v3}, Lorg/telegram/tgnet/SerializedData;-><init>([B)V
+
+    const/4 v3, 0x1
 
     .line 95
-    :try_start_49
-    invoke-virtual {v6, v4}, Lorg/telegram/tgnet/SerializedData;->readInt32(Z)I
+    :try_start_48
+    invoke-virtual {v5, v3}, Lorg/telegram/tgnet/SerializedData;->readInt32(Z)I
 
-    move-result v7
+    move-result v6
 
-    invoke-static {v6, v7, v4}, Lorg/telegram/tgnet/TLRPC$Document;->TLdeserialize(Lorg/telegram/tgnet/AbstractSerializedData;IZ)Lorg/telegram/tgnet/TLRPC$Document;
+    invoke-static {v5, v6, v3}, Lorg/telegram/tgnet/TLRPC$Document;->TLdeserialize(Lorg/telegram/tgnet/AbstractSerializedData;IZ)Lorg/telegram/tgnet/TLRPC$Document;
 
-    move-result-object v4
+    move-result-object v3
 
     .line 96
-    new-instance v6, Lorg/telegram/messenger/ringtone/RingtoneDataStore$CachedTone;
+    new-instance v5, Lorg/telegram/messenger/ringtone/RingtoneDataStore$CachedTone;
 
-    invoke-direct {v6, p0}, Lorg/telegram/messenger/ringtone/RingtoneDataStore$CachedTone;-><init>(Lorg/telegram/messenger/ringtone/RingtoneDataStore;)V
+    invoke-direct {v5, p0}, Lorg/telegram/messenger/ringtone/RingtoneDataStore$CachedTone;-><init>(Lorg/telegram/messenger/ringtone/RingtoneDataStore;)V
 
     .line 97
-    iput-object v4, v6, Lorg/telegram/messenger/ringtone/RingtoneDataStore$CachedTone;->document:Lorg/telegram/tgnet/TLRPC$Document;
+    iput-object v3, v5, Lorg/telegram/messenger/ringtone/RingtoneDataStore$CachedTone;->document:Lorg/telegram/tgnet/TLRPC$Document;
 
     .line 98
-    iput-object v5, v6, Lorg/telegram/messenger/ringtone/RingtoneDataStore$CachedTone;->localUri:Ljava/lang/String;
+    iput-object v4, v5, Lorg/telegram/messenger/ringtone/RingtoneDataStore$CachedTone;->localUri:Ljava/lang/String;
 
     .line 99
-    iget v4, p0, Lorg/telegram/messenger/ringtone/RingtoneDataStore;->localIds:I
+    iget v3, p0, Lorg/telegram/messenger/ringtone/RingtoneDataStore;->localIds:I
 
-    add-int/lit8 v5, v4, 0x1
+    add-int/lit8 v4, v3, 0x1
 
-    iput v5, p0, Lorg/telegram/messenger/ringtone/RingtoneDataStore;->localIds:I
+    iput v4, p0, Lorg/telegram/messenger/ringtone/RingtoneDataStore;->localIds:I
 
-    iput v4, v6, Lorg/telegram/messenger/ringtone/RingtoneDataStore$CachedTone;->localId:I
+    iput v3, v5, Lorg/telegram/messenger/ringtone/RingtoneDataStore$CachedTone;->localId:I
 
     .line 100
-    iget-object v4, p0, Lorg/telegram/messenger/ringtone/RingtoneDataStore;->userRingtones:Ljava/util/ArrayList;
+    iget-object v3, p0, Lorg/telegram/messenger/ringtone/RingtoneDataStore;->userRingtones:Ljava/util/ArrayList;
 
-    invoke-virtual {v4, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-    :try_end_67
-    .catchall {:try_start_49 .. :try_end_67} :catchall_68
+    invoke-virtual {v3, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    :try_end_66
+    .catchall {:try_start_48 .. :try_end_66} :catchall_67
 
-    goto :goto_70
+    goto :goto_6f
 
-    :catchall_68
-    move-exception v4
+    :catchall_67
+    move-exception v3
 
     .line 102
-    sget-boolean v5, Lorg/telegram/messenger/BuildVars;->DEBUG_PRIVATE_VERSION:Z
+    sget-boolean v4, Lorg/telegram/messenger/BuildVars;->DEBUG_PRIVATE_VERSION:Z
 
-    if-nez v5, :cond_73
+    if-nez v4, :cond_72
 
     .line 105
-    invoke-static {v4}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
+    invoke-static {v3}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
-    :goto_70
-    add-int/lit8 v3, v3, 0x1
+    :goto_6f
+    add-int/lit8 v2, v2, 0x1
 
-    goto :goto_11
+    goto :goto_10
 
     .line 103
-    :cond_73
-    throw v4
+    :cond_72
+    throw v3
 
-    :cond_74
-    if-eqz p1, :cond_83
+    :cond_73
+    if-eqz p1, :cond_7d
 
     .line 109
-    iget p1, p0, Lorg/telegram/messenger/ringtone/RingtoneDataStore;->currentAccount:I
+    new-instance p1, Lorg/telegram/messenger/ringtone/RingtoneDataStore$$ExternalSyntheticLambda0;
 
-    invoke-static {p1}, Lorg/telegram/messenger/NotificationCenter;->getInstance(I)Lorg/telegram/messenger/NotificationCenter;
+    invoke-direct {p1, p0}, Lorg/telegram/messenger/ringtone/RingtoneDataStore$$ExternalSyntheticLambda0;-><init>(Lorg/telegram/messenger/ringtone/RingtoneDataStore;)V
 
-    move-result-object p1
+    invoke-static {p1}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    sget v0, Lorg/telegram/messenger/NotificationCenter;->onUserRingtonesUpdated:I
-
-    new-array v1, v2, [Ljava/lang/Object;
-
-    invoke-virtual {p1, v0, v1}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
-
-    :cond_83
+    :cond_7d
     return-void
 .end method
 
@@ -626,28 +647,28 @@
         }
     .end annotation
 
-    .line 114
+    .line 116
     iget-boolean v0, p0, Lorg/telegram/messenger/ringtone/RingtoneDataStore;->loaded:Z
 
     const/4 v1, 0x0
 
     if-nez v0, :cond_b
 
-    .line 115
+    .line 117
     invoke-direct {p0, v1}, Lorg/telegram/messenger/ringtone/RingtoneDataStore;->loadFromPrefs(Z)V
 
     const/4 v0, 0x1
 
-    .line 116
+    .line 118
     iput-boolean v0, p0, Lorg/telegram/messenger/ringtone/RingtoneDataStore;->loaded:Z
 
-    .line 118
+    .line 120
     :cond_b
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    .line 119
+    .line 121
     iget-object v2, p0, Lorg/telegram/messenger/ringtone/RingtoneDataStore;->userRingtones:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -668,7 +689,7 @@
 
     check-cast v3, Lorg/telegram/messenger/ringtone/RingtoneDataStore$CachedTone;
 
-    .line 120
+    .line 122
     iget-object v4, v3, Lorg/telegram/messenger/ringtone/RingtoneDataStore$CachedTone;->localUri:Ljava/lang/String;
 
     if-eqz v4, :cond_16
@@ -677,7 +698,7 @@
 
     if-eqz v4, :cond_16
 
-    .line 121
+    .line 123
     iget-wide v4, v4, Lorg/telegram/tgnet/TLRPC$Document;->id:J
 
     invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -690,18 +711,18 @@
 
     goto :goto_16
 
-    .line 124
+    .line 126
     :cond_36
     iget-object v2, p0, Lorg/telegram/messenger/ringtone/RingtoneDataStore;->userRingtones:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->clear()V
 
-    .line 125
+    .line 127
     invoke-direct {p0}, Lorg/telegram/messenger/ringtone/RingtoneDataStore;->getSharedPreferences()Landroid/content/SharedPreferences;
 
     move-result-object v2
 
-    .line 126
+    .line 128
     invoke-interface {v2}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v3
@@ -712,12 +733,12 @@
 
     invoke-interface {v3}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    .line 127
+    .line 129
     invoke-interface {v2}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v2
 
-    .line 128
+    .line 130
     invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
 
     move-result v3
@@ -728,7 +749,7 @@
 
     const/4 v3, 0x0
 
-    .line 130
+    .line 132
     :goto_58
     invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
 
@@ -736,14 +757,14 @@
 
     if-ge v3, v4, :cond_c7
 
-    .line 131
+    .line 133
     invoke-virtual {p1, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v4
 
     check-cast v4, Lorg/telegram/tgnet/TLRPC$Document;
 
-    .line 132
+    .line 134
     iget-wide v5, v4, Lorg/telegram/tgnet/TLRPC$Document;->id:J
 
     invoke-static {v5, v6}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -756,7 +777,7 @@
 
     check-cast v5, Ljava/lang/String;
 
-    .line 133
+    .line 135
     new-instance v6, Lorg/telegram/tgnet/SerializedData;
 
     invoke-virtual {v4}, Lorg/telegram/tgnet/TLObject;->getObjectSize()I
@@ -765,10 +786,10 @@
 
     invoke-direct {v6, v7}, Lorg/telegram/tgnet/SerializedData;-><init>(I)V
 
-    .line 134
+    .line 136
     invoke-virtual {v4, v6}, Lorg/telegram/tgnet/TLObject;->serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
 
-    .line 135
+    .line 137
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -795,7 +816,7 @@
 
     if-eqz v5, :cond_ae
 
-    .line 137
+    .line 139
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -812,19 +833,19 @@
 
     invoke-interface {v2, v6, v5}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
-    .line 139
+    .line 141
     :cond_ae
     new-instance v6, Lorg/telegram/messenger/ringtone/RingtoneDataStore$CachedTone;
 
     invoke-direct {v6, p0}, Lorg/telegram/messenger/ringtone/RingtoneDataStore$CachedTone;-><init>(Lorg/telegram/messenger/ringtone/RingtoneDataStore;)V
 
-    .line 140
+    .line 142
     iput-object v4, v6, Lorg/telegram/messenger/ringtone/RingtoneDataStore$CachedTone;->document:Lorg/telegram/tgnet/TLRPC$Document;
 
-    .line 141
+    .line 143
     iput-object v5, v6, Lorg/telegram/messenger/ringtone/RingtoneDataStore$CachedTone;->localUri:Ljava/lang/String;
 
-    .line 142
+    .line 144
     iget v4, p0, Lorg/telegram/messenger/ringtone/RingtoneDataStore;->localIds:I
 
     add-int/lit8 v5, v4, 0x1
@@ -833,7 +854,7 @@
 
     iput v4, v6, Lorg/telegram/messenger/ringtone/RingtoneDataStore$CachedTone;->localId:I
 
-    .line 143
+    .line 145
     iget-object v4, p0, Lorg/telegram/messenger/ringtone/RingtoneDataStore;->userRingtones:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -842,11 +863,11 @@
 
     goto :goto_58
 
-    .line 145
+    .line 147
     :cond_c7
     invoke-interface {v2}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    .line 146
+    .line 148
     iget p1, p0, Lorg/telegram/messenger/ringtone/RingtoneDataStore;->currentAccount:I
 
     invoke-static {p1}, Lorg/telegram/messenger/NotificationCenter;->getInstance(I)Lorg/telegram/messenger/NotificationCenter;
@@ -869,7 +890,7 @@
 
     if-eqz p1, :cond_25
 
-    .line 290
+    .line 292
     iget-wide v0, p1, Lorg/telegram/tgnet/TLRPC$Document;->id:J
 
     invoke-virtual {p0, v0, v1}, Lorg/telegram/messenger/ringtone/RingtoneDataStore;->contains(J)Z
@@ -880,16 +901,16 @@
 
     goto :goto_25
 
-    .line 293
+    .line 295
     :cond_b
     new-instance v0, Lorg/telegram/messenger/ringtone/RingtoneDataStore$CachedTone;
 
     invoke-direct {v0, p0}, Lorg/telegram/messenger/ringtone/RingtoneDataStore$CachedTone;-><init>(Lorg/telegram/messenger/ringtone/RingtoneDataStore;)V
 
-    .line 294
+    .line 296
     iput-object p1, v0, Lorg/telegram/messenger/ringtone/RingtoneDataStore$CachedTone;->document:Lorg/telegram/tgnet/TLRPC$Document;
 
-    .line 295
+    .line 297
     iget p1, p0, Lorg/telegram/messenger/ringtone/RingtoneDataStore;->localIds:I
 
     add-int/lit8 v1, p1, 0x1
@@ -900,15 +921,15 @@
 
     const/4 p1, 0x0
 
-    .line 296
+    .line 298
     iput-boolean p1, v0, Lorg/telegram/messenger/ringtone/RingtoneDataStore$CachedTone;->uploading:Z
 
-    .line 297
+    .line 299
     iget-object p1, p0, Lorg/telegram/messenger/ringtone/RingtoneDataStore;->userRingtones:Ljava/util/ArrayList;
 
     invoke-virtual {p1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 298
+    .line 300
     invoke-virtual {p0}, Lorg/telegram/messenger/ringtone/RingtoneDataStore;->saveTones()V
 
     :cond_25
@@ -919,15 +940,15 @@
 .method public addUploadingTone(Ljava/lang/String;)V
     .registers 4
 
-    .line 184
+    .line 186
     new-instance v0, Lorg/telegram/messenger/ringtone/RingtoneDataStore$CachedTone;
 
     invoke-direct {v0, p0}, Lorg/telegram/messenger/ringtone/RingtoneDataStore$CachedTone;-><init>(Lorg/telegram/messenger/ringtone/RingtoneDataStore;)V
 
-    .line 185
+    .line 187
     iput-object p1, v0, Lorg/telegram/messenger/ringtone/RingtoneDataStore$CachedTone;->localUri:Ljava/lang/String;
 
-    .line 186
+    .line 188
     iget p1, p0, Lorg/telegram/messenger/ringtone/RingtoneDataStore;->localIds:I
 
     add-int/lit8 v1, p1, 0x1
@@ -938,10 +959,10 @@
 
     const/4 p1, 0x1
 
-    .line 187
+    .line 189
     iput-boolean p1, v0, Lorg/telegram/messenger/ringtone/RingtoneDataStore$CachedTone;->uploading:Z
 
-    .line 188
+    .line 190
     iget-object p1, p0, Lorg/telegram/messenger/ringtone/RingtoneDataStore;->userRingtones:Ljava/util/ArrayList;
 
     invoke-virtual {p1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -952,20 +973,20 @@
 .method public checkRingtoneSoundsLoaded()V
     .registers 4
 
-    .line 236
+    .line 238
     iget-boolean v0, p0, Lorg/telegram/messenger/ringtone/RingtoneDataStore;->loaded:Z
 
     if-nez v0, :cond_a
 
     const/4 v0, 0x1
 
-    .line 237
+    .line 239
     invoke-direct {p0, v0}, Lorg/telegram/messenger/ringtone/RingtoneDataStore;->loadFromPrefs(Z)V
 
-    .line 238
+    .line 240
     iput-boolean v0, p0, Lorg/telegram/messenger/ringtone/RingtoneDataStore;->loaded:Z
 
-    .line 240
+    .line 242
     :cond_a
     new-instance v0, Ljava/util/ArrayList;
 
@@ -973,12 +994,12 @@
 
     invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 241
+    .line 243
     sget-object v1, Lorg/telegram/messenger/Utilities;->globalQueue:Lorg/telegram/messenger/DispatchQueue;
 
-    new-instance v2, Lorg/telegram/messenger/ringtone/RingtoneDataStore$$ExternalSyntheticLambda1;
+    new-instance v2, Lorg/telegram/messenger/ringtone/RingtoneDataStore$$ExternalSyntheticLambda2;
 
-    invoke-direct {v2, p0, v0}, Lorg/telegram/messenger/ringtone/RingtoneDataStore$$ExternalSyntheticLambda1;-><init>(Lorg/telegram/messenger/ringtone/RingtoneDataStore;Ljava/util/ArrayList;)V
+    invoke-direct {v2, p0, v0}, Lorg/telegram/messenger/ringtone/RingtoneDataStore$$ExternalSyntheticLambda2;-><init>(Lorg/telegram/messenger/ringtone/RingtoneDataStore;Ljava/util/ArrayList;)V
 
     invoke-virtual {v1, v2}, Lorg/telegram/messenger/DispatchQueue;->postRunnable(Ljava/lang/Runnable;)Z
 
@@ -988,7 +1009,7 @@
 .method public contains(J)Z
     .registers 3
 
-    .line 286
+    .line 288
     invoke-virtual {p0, p1, p2}, Lorg/telegram/messenger/ringtone/RingtoneDataStore;->getDocument(J)Lorg/telegram/tgnet/TLRPC$Document;
 
     move-result-object p1
@@ -1009,23 +1030,23 @@
 .method public getDocument(J)Lorg/telegram/tgnet/TLRPC$Document;
     .registers 7
 
-    .line 302
+    .line 304
     iget-boolean v0, p0, Lorg/telegram/messenger/ringtone/RingtoneDataStore;->loaded:Z
 
     if-nez v0, :cond_a
 
     const/4 v0, 0x1
 
-    .line 303
+    .line 305
     invoke-direct {p0, v0}, Lorg/telegram/messenger/ringtone/RingtoneDataStore;->loadFromPrefs(Z)V
 
-    .line 304
+    .line 306
     iput-boolean v0, p0, Lorg/telegram/messenger/ringtone/RingtoneDataStore;->loaded:Z
 
     :cond_a
     const/4 v0, 0x0
 
-    .line 306
+    .line 308
     :goto_b
     iget-object v1, p0, Lorg/telegram/messenger/ringtone/RingtoneDataStore;->userRingtones:Ljava/util/ArrayList;
 
@@ -1035,7 +1056,7 @@
 
     if-ge v0, v1, :cond_3d
 
-    .line 307
+    .line 309
     iget-object v1, p0, Lorg/telegram/messenger/ringtone/RingtoneDataStore;->userRingtones:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1064,7 +1085,7 @@
 
     if-nez v3, :cond_3a
 
-    .line 308
+    .line 310
     iget-object p1, p0, Lorg/telegram/messenger/ringtone/RingtoneDataStore;->userRingtones:Ljava/util/ArrayList;
 
     invoke-virtual {p1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1091,23 +1112,23 @@
 .method public getSoundPath(J)Ljava/lang/String;
     .registers 7
 
-    .line 220
+    .line 222
     iget-boolean v0, p0, Lorg/telegram/messenger/ringtone/RingtoneDataStore;->loaded:Z
 
     if-nez v0, :cond_a
 
     const/4 v0, 0x1
 
-    .line 221
+    .line 223
     invoke-direct {p0, v0}, Lorg/telegram/messenger/ringtone/RingtoneDataStore;->loadFromPrefs(Z)V
 
-    .line 222
+    .line 224
     iput-boolean v0, p0, Lorg/telegram/messenger/ringtone/RingtoneDataStore;->loaded:Z
 
     :cond_a
     const/4 v0, 0x0
 
-    .line 224
+    .line 226
     :goto_b
     iget-object v1, p0, Lorg/telegram/messenger/ringtone/RingtoneDataStore;->userRingtones:Ljava/util/ArrayList;
 
@@ -1117,7 +1138,7 @@
 
     if-ge v0, v1, :cond_66
 
-    .line 225
+    .line 227
     iget-object v1, p0, Lorg/telegram/messenger/ringtone/RingtoneDataStore;->userRingtones:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1146,7 +1167,7 @@
 
     if-nez v3, :cond_63
 
-    .line 226
+    .line 228
     iget-object p1, p0, Lorg/telegram/messenger/ringtone/RingtoneDataStore;->userRingtones:Ljava/util/ArrayList;
 
     invoke-virtual {p1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1163,7 +1184,7 @@
 
     if-nez p1, :cond_4a
 
-    .line 227
+    .line 229
     iget-object p1, p0, Lorg/telegram/messenger/ringtone/RingtoneDataStore;->userRingtones:Ljava/util/ArrayList;
 
     invoke-virtual {p1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1176,7 +1197,7 @@
 
     return-object p1
 
-    .line 229
+    .line 231
     :cond_4a
     iget p1, p0, Lorg/telegram/messenger/ringtone/RingtoneDataStore;->currentAccount:I
 
@@ -1218,7 +1239,7 @@
 .method public isLoaded()Z
     .registers 2
 
-    .line 266
+    .line 268
     iget-boolean v0, p0, Lorg/telegram/messenger/ringtone/RingtoneDataStore;->loaded:Z
 
     return v0
@@ -1271,9 +1292,9 @@
 
     move-result-object v0
 
-    new-instance v2, Lorg/telegram/messenger/ringtone/RingtoneDataStore$$ExternalSyntheticLambda4;
+    new-instance v2, Lorg/telegram/messenger/ringtone/RingtoneDataStore$$ExternalSyntheticLambda5;
 
-    invoke-direct {v2, p0}, Lorg/telegram/messenger/ringtone/RingtoneDataStore$$ExternalSyntheticLambda4;-><init>(Lorg/telegram/messenger/ringtone/RingtoneDataStore;)V
+    invoke-direct {v2, p0}, Lorg/telegram/messenger/ringtone/RingtoneDataStore$$ExternalSyntheticLambda5;-><init>(Lorg/telegram/messenger/ringtone/RingtoneDataStore;)V
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/tgnet/ConnectionsManager;->sendRequest(Lorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/RequestDelegate;)I
 
@@ -1310,7 +1331,7 @@
 
     const/4 p2, 0x0
 
-    .line 194
+    .line 196
     :goto_5
     iget-object p3, p0, Lorg/telegram/messenger/ringtone/RingtoneDataStore;->userRingtones:Ljava/util/ArrayList;
 
@@ -1320,7 +1341,7 @@
 
     if-ge p2, p3, :cond_32
 
-    .line 195
+    .line 197
     iget-object p3, p0, Lorg/telegram/messenger/ringtone/RingtoneDataStore;->userRingtones:Ljava/util/ArrayList;
 
     invoke-virtual {p3, p2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1349,7 +1370,7 @@
 
     if-eqz p3, :cond_2f
 
-    .line 196
+    .line 198
     iget-object p1, p0, Lorg/telegram/messenger/ringtone/RingtoneDataStore;->userRingtones:Ljava/util/ArrayList;
 
     invoke-virtual {p1, p2}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
@@ -1369,7 +1390,7 @@
     :cond_34
     const/4 p3, 0x0
 
-    .line 202
+    .line 204
     :goto_35
     iget-object v2, p0, Lorg/telegram/messenger/ringtone/RingtoneDataStore;->userRingtones:Ljava/util/ArrayList;
 
@@ -1379,7 +1400,7 @@
 
     if-ge p3, v2, :cond_71
 
-    .line 203
+    .line 205
     iget-object v2, p0, Lorg/telegram/messenger/ringtone/RingtoneDataStore;->userRingtones:Ljava/util/ArrayList;
 
     invoke-virtual {v2, p3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1408,7 +1429,7 @@
 
     if-eqz v2, :cond_6e
 
-    .line 204
+    .line 206
     iget-object p1, p0, Lorg/telegram/messenger/ringtone/RingtoneDataStore;->userRingtones:Ljava/util/ArrayList;
 
     invoke-virtual {p1, p3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1419,7 +1440,7 @@
 
     iput-boolean v1, p1, Lorg/telegram/messenger/ringtone/RingtoneDataStore$CachedTone;->uploading:Z
 
-    .line 205
+    .line 207
     iget-object p1, p0, Lorg/telegram/messenger/ringtone/RingtoneDataStore;->userRingtones:Ljava/util/ArrayList;
 
     invoke-virtual {p1, p3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1443,14 +1464,14 @@
     :goto_72
     if-eqz v0, :cond_77
 
-    .line 211
+    .line 213
     invoke-virtual {p0}, Lorg/telegram/messenger/ringtone/RingtoneDataStore;->saveTones()V
 
     :cond_77
     :goto_77
     if-eqz v0, :cond_86
 
-    .line 215
+    .line 217
     iget p1, p0, Lorg/telegram/messenger/ringtone/RingtoneDataStore;->currentAccount:I
 
     invoke-static {p1}, Lorg/telegram/messenger/NotificationCenter;->getInstance(I)Lorg/telegram/messenger/NotificationCenter;
@@ -1474,7 +1495,7 @@
 
     return-void
 
-    .line 273
+    .line 275
     :cond_3
     iget-boolean v0, p0, Lorg/telegram/messenger/ringtone/RingtoneDataStore;->loaded:Z
 
@@ -1482,16 +1503,16 @@
 
     const/4 v0, 0x1
 
-    .line 274
+    .line 276
     invoke-direct {p0, v0}, Lorg/telegram/messenger/ringtone/RingtoneDataStore;->loadFromPrefs(Z)V
 
-    .line 275
+    .line 277
     iput-boolean v0, p0, Lorg/telegram/messenger/ringtone/RingtoneDataStore;->loaded:Z
 
     :cond_d
     const/4 v0, 0x0
 
-    .line 277
+    .line 279
     :goto_e
     iget-object v1, p0, Lorg/telegram/messenger/ringtone/RingtoneDataStore;->userRingtones:Ljava/util/ArrayList;
 
@@ -1501,7 +1522,7 @@
 
     if-ge v0, v1, :cond_3d
 
-    .line 278
+    .line 280
     iget-object v1, p0, Lorg/telegram/messenger/ringtone/RingtoneDataStore;->userRingtones:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1532,7 +1553,7 @@
 
     if-nez v5, :cond_3a
 
-    .line 279
+    .line 281
     iget-object p1, p0, Lorg/telegram/messenger/ringtone/RingtoneDataStore;->userRingtones:Ljava/util/ArrayList;
 
     invoke-virtual {p1, v0}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
@@ -1552,12 +1573,12 @@
 .method public saveTones()V
     .registers 9
 
-    .line 150
+    .line 152
     invoke-direct {p0}, Lorg/telegram/messenger/ringtone/RingtoneDataStore;->getSharedPreferences()Landroid/content/SharedPreferences;
 
     move-result-object v0
 
-    .line 151
+    .line 153
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v1
@@ -1568,7 +1589,7 @@
 
     invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    .line 152
+    .line 154
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
@@ -1579,7 +1600,7 @@
 
     const/4 v3, 0x0
 
-    .line 155
+    .line 157
     :goto_16
     iget-object v4, p0, Lorg/telegram/messenger/ringtone/RingtoneDataStore;->userRingtones:Ljava/util/ArrayList;
 
@@ -1589,7 +1610,7 @@
 
     if-ge v2, v4, :cond_82
 
-    .line 156
+    .line 158
     iget-object v4, p0, Lorg/telegram/messenger/ringtone/RingtoneDataStore;->userRingtones:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1607,7 +1628,7 @@
     :cond_2b
     add-int/lit8 v3, v3, 0x1
 
-    .line 160
+    .line 162
     iget-object v4, p0, Lorg/telegram/messenger/ringtone/RingtoneDataStore;->userRingtones:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1618,7 +1639,7 @@
 
     iget-object v4, v4, Lorg/telegram/messenger/ringtone/RingtoneDataStore$CachedTone;->document:Lorg/telegram/tgnet/TLRPC$Document;
 
-    .line 161
+    .line 163
     iget-object v5, p0, Lorg/telegram/messenger/ringtone/RingtoneDataStore;->userRingtones:Ljava/util/ArrayList;
 
     invoke-virtual {v5, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1629,7 +1650,7 @@
 
     iget-object v5, v5, Lorg/telegram/messenger/ringtone/RingtoneDataStore$CachedTone;->localUri:Ljava/lang/String;
 
-    .line 162
+    .line 164
     new-instance v6, Lorg/telegram/tgnet/SerializedData;
 
     invoke-virtual {v4}, Lorg/telegram/tgnet/TLObject;->getObjectSize()I
@@ -1638,10 +1659,10 @@
 
     invoke-direct {v6, v7}, Lorg/telegram/tgnet/SerializedData;-><init>(I)V
 
-    .line 163
+    .line 165
     invoke-virtual {v4, v6}, Lorg/telegram/tgnet/TLObject;->serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
 
-    .line 164
+    .line 166
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -1668,7 +1689,7 @@
 
     if-eqz v5, :cond_7f
 
-    .line 166
+    .line 168
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -1694,13 +1715,13 @@
     :cond_82
     const-string v2, "count"
 
-    .line 170
+    .line 172
     invoke-interface {v0, v2, v3}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
-    .line 171
+    .line 173
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    .line 172
+    .line 174
     iget v0, p0, Lorg/telegram/messenger/ringtone/RingtoneDataStore;->currentAccount:I
 
     invoke-static {v0}, Lorg/telegram/messenger/NotificationCenter;->getInstance(I)Lorg/telegram/messenger/NotificationCenter;

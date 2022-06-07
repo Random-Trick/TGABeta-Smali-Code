@@ -22,10 +22,10 @@
 .method private constructor <init>(II)V
     .registers 6
 
-    .line 913
+    .line 1118
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 914
+    .line 1119
     sget-object v0, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -62,7 +62,7 @@
 .method synthetic constructor <init>(IILorg/telegram/ui/Components/PipVideoOverlay$1;)V
     .registers 4
 
-    .line 910
+    .line 1115
     invoke-direct {p0, p1, p2}, Lorg/telegram/ui/Components/PipVideoOverlay$PipConfig;-><init>(II)V
 
     return-void
@@ -71,7 +71,7 @@
 .method static synthetic access$300(Lorg/telegram/ui/Components/PipVideoOverlay$PipConfig;)F
     .registers 1
 
-    .line 910
+    .line 1115
     invoke-direct {p0}, Lorg/telegram/ui/Components/PipVideoOverlay$PipConfig;->getPipX()F
 
     move-result p0
@@ -79,28 +79,10 @@
     return p0
 .end method
 
-.method static synthetic access$3100(Lorg/telegram/ui/Components/PipVideoOverlay$PipConfig;F)V
-    .registers 2
-
-    .line 910
-    invoke-direct {p0, p1}, Lorg/telegram/ui/Components/PipVideoOverlay$PipConfig;->setPipX(F)V
-
-    return-void
-.end method
-
-.method static synthetic access$3200(Lorg/telegram/ui/Components/PipVideoOverlay$PipConfig;F)V
-    .registers 2
-
-    .line 910
-    invoke-direct {p0, p1}, Lorg/telegram/ui/Components/PipVideoOverlay$PipConfig;->setPipY(F)V
-
-    return-void
-.end method
-
 .method static synthetic access$400(Lorg/telegram/ui/Components/PipVideoOverlay$PipConfig;)F
     .registers 1
 
-    .line 910
+    .line 1115
     invoke-direct {p0}, Lorg/telegram/ui/Components/PipVideoOverlay$PipConfig;->getPipY()F
 
     move-result p0
@@ -108,10 +90,28 @@
     return p0
 .end method
 
+.method static synthetic access$4000(Lorg/telegram/ui/Components/PipVideoOverlay$PipConfig;F)V
+    .registers 2
+
+    .line 1115
+    invoke-direct {p0, p1}, Lorg/telegram/ui/Components/PipVideoOverlay$PipConfig;->setPipX(F)V
+
+    return-void
+.end method
+
+.method static synthetic access$4100(Lorg/telegram/ui/Components/PipVideoOverlay$PipConfig;F)V
+    .registers 2
+
+    .line 1115
+    invoke-direct {p0, p1}, Lorg/telegram/ui/Components/PipVideoOverlay$PipConfig;->setPipY(F)V
+
+    return-void
+.end method
+
 .method static synthetic access$500(Lorg/telegram/ui/Components/PipVideoOverlay$PipConfig;)F
     .registers 1
 
-    .line 910
+    .line 1115
     invoke-direct {p0}, Lorg/telegram/ui/Components/PipVideoOverlay$PipConfig;->getScaleFactor()F
 
     move-result p0
@@ -122,7 +122,7 @@
 .method private getPipX()F
     .registers 4
 
-    .line 934
+    .line 1139
     iget-object v0, p0, Lorg/telegram/ui/Components/PipVideoOverlay$PipConfig;->mPrefs:Landroid/content/SharedPreferences;
 
     const-string v1, "x"
@@ -139,7 +139,7 @@
 .method private getPipY()F
     .registers 4
 
-    .line 938
+    .line 1143
     iget-object v0, p0, Lorg/telegram/ui/Components/PipVideoOverlay$PipConfig;->mPrefs:Landroid/content/SharedPreferences;
 
     const-string v1, "y"
@@ -156,7 +156,7 @@
 .method private getScaleFactor()F
     .registers 4
 
-    .line 930
+    .line 1135
     iget-object v0, p0, Lorg/telegram/ui/Components/PipVideoOverlay$PipConfig;->mPrefs:Landroid/content/SharedPreferences;
 
     const-string v1, "scale_factor"
@@ -173,7 +173,7 @@
 .method private setPipX(F)V
     .registers 4
 
-    .line 918
+    .line 1123
     iget-object v0, p0, Lorg/telegram/ui/Components/PipVideoOverlay$PipConfig;->mPrefs:Landroid/content/SharedPreferences;
 
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
@@ -194,7 +194,7 @@
 .method private setPipY(F)V
     .registers 4
 
-    .line 922
+    .line 1127
     iget-object v0, p0, Lorg/telegram/ui/Components/PipVideoOverlay$PipConfig;->mPrefs:Landroid/content/SharedPreferences;
 
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;

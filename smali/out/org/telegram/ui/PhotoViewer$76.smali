@@ -24,7 +24,7 @@
 .method constructor <init>(Lorg/telegram/ui/PhotoViewer;Z)V
     .registers 3
 
-    .line 15842
+    .line 16062
     iput-object p1, p0, Lorg/telegram/ui/PhotoViewer$76;->this$0:Lorg/telegram/ui/PhotoViewer;
 
     iput-boolean p2, p0, Lorg/telegram/ui/PhotoViewer$76;->val$show:Z
@@ -39,12 +39,12 @@
 .method public onAnimationCancel(Landroid/animation/Animator;)V
     .registers 3
 
-    .line 15881
+    .line 16101
     iget-object p1, p0, Lorg/telegram/ui/PhotoViewer$76;->this$0:Lorg/telegram/ui/PhotoViewer;
 
     const/4 v0, 0x0
 
-    invoke-static {p1, v0}, Lorg/telegram/ui/PhotoViewer;->access$28102(Lorg/telegram/ui/PhotoViewer;Landroid/animation/AnimatorSet;)Landroid/animation/AnimatorSet;
+    invoke-static {p1, v0}, Lorg/telegram/ui/PhotoViewer;->access$28602(Lorg/telegram/ui/PhotoViewer;Landroid/animation/AnimatorSet;)Landroid/animation/AnimatorSet;
 
     return-void
 .end method
@@ -52,10 +52,10 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .registers 11
 
-    .line 15845
+    .line 16065
     iget-object v0, p0, Lorg/telegram/ui/PhotoViewer$76;->this$0:Lorg/telegram/ui/PhotoViewer;
 
-    invoke-static {v0}, Lorg/telegram/ui/PhotoViewer;->access$28100(Lorg/telegram/ui/PhotoViewer;)Landroid/animation/AnimatorSet;
+    invoke-static {v0}, Lorg/telegram/ui/PhotoViewer;->access$28600(Lorg/telegram/ui/PhotoViewer;)Landroid/animation/AnimatorSet;
 
     move-result-object v0
 
@@ -67,7 +67,7 @@
 
     return-void
 
-    .line 15848
+    .line 16068
     :cond_d
     iget-object p1, p0, Lorg/telegram/ui/PhotoViewer$76;->this$0:Lorg/telegram/ui/PhotoViewer;
 
@@ -75,9 +75,9 @@
 
     invoke-direct {v0}, Landroid/animation/AnimatorSet;-><init>()V
 
-    invoke-static {p1, v0}, Lorg/telegram/ui/PhotoViewer;->access$28102(Lorg/telegram/ui/PhotoViewer;Landroid/animation/AnimatorSet;)Landroid/animation/AnimatorSet;
+    invoke-static {p1, v0}, Lorg/telegram/ui/PhotoViewer;->access$28602(Lorg/telegram/ui/PhotoViewer;Landroid/animation/AnimatorSet;)Landroid/animation/AnimatorSet;
 
-    .line 15849
+    .line 16069
     iget-boolean p1, p0, Lorg/telegram/ui/PhotoViewer$76;->val$show:Z
 
     const/high16 v0, 0x42400000    # 48.0f
@@ -94,28 +94,28 @@
 
     if-eqz p1, :cond_7c
 
-    .line 15850
+    .line 16070
     iget-object p1, p0, Lorg/telegram/ui/PhotoViewer$76;->this$0:Lorg/telegram/ui/PhotoViewer;
 
-    invoke-static {p1}, Lorg/telegram/ui/PhotoViewer;->access$28200(Lorg/telegram/ui/PhotoViewer;)Lorg/telegram/ui/PhotoViewer$QualityChooseView;
+    invoke-static {p1}, Lorg/telegram/ui/PhotoViewer;->access$28700(Lorg/telegram/ui/PhotoViewer;)Lorg/telegram/ui/PhotoViewer$QualityChooseView;
 
     move-result-object p1
 
     invoke-virtual {p1, v5}, Landroid/view/View;->setVisibility(I)V
 
-    .line 15851
+    .line 16071
     iget-object p1, p0, Lorg/telegram/ui/PhotoViewer$76;->this$0:Lorg/telegram/ui/PhotoViewer;
 
-    invoke-static {p1}, Lorg/telegram/ui/PhotoViewer;->access$28300(Lorg/telegram/ui/PhotoViewer;)Lorg/telegram/ui/Components/PickerBottomLayoutViewer;
+    invoke-static {p1}, Lorg/telegram/ui/PhotoViewer;->access$28800(Lorg/telegram/ui/PhotoViewer;)Lorg/telegram/ui/Components/PickerBottomLayoutViewer;
 
     move-result-object p1
 
     invoke-virtual {p1, v5}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
-    .line 15852
+    .line 16072
     iget-object p1, p0, Lorg/telegram/ui/PhotoViewer$76;->this$0:Lorg/telegram/ui/PhotoViewer;
 
-    invoke-static {p1}, Lorg/telegram/ui/PhotoViewer;->access$28100(Lorg/telegram/ui/PhotoViewer;)Landroid/animation/AnimatorSet;
+    invoke-static {p1}, Lorg/telegram/ui/PhotoViewer;->access$28600(Lorg/telegram/ui/PhotoViewer;)Landroid/animation/AnimatorSet;
 
     move-result-object p1
 
@@ -123,8 +123,8 @@
 
     iget-object v6, p0, Lorg/telegram/ui/PhotoViewer$76;->this$0:Lorg/telegram/ui/PhotoViewer;
 
-    .line 15853
-    invoke-static {v6}, Lorg/telegram/ui/PhotoViewer;->access$28200(Lorg/telegram/ui/PhotoViewer;)Lorg/telegram/ui/PhotoViewer$QualityChooseView;
+    .line 16073
+    invoke-static {v6}, Lorg/telegram/ui/PhotoViewer;->access$28700(Lorg/telegram/ui/PhotoViewer;)Lorg/telegram/ui/PhotoViewer$QualityChooseView;
 
     move-result-object v6
 
@@ -142,8 +142,8 @@
 
     iget-object v6, p0, Lorg/telegram/ui/PhotoViewer$76;->this$0:Lorg/telegram/ui/PhotoViewer;
 
-    .line 15854
-    invoke-static {v6}, Lorg/telegram/ui/PhotoViewer;->access$28300(Lorg/telegram/ui/PhotoViewer;)Lorg/telegram/ui/Components/PickerBottomLayoutViewer;
+    .line 16074
+    invoke-static {v6}, Lorg/telegram/ui/PhotoViewer;->access$28800(Lorg/telegram/ui/PhotoViewer;)Lorg/telegram/ui/Components/PickerBottomLayoutViewer;
 
     move-result-object v6
 
@@ -161,8 +161,8 @@
 
     iget-object v3, p0, Lorg/telegram/ui/PhotoViewer$76;->this$0:Lorg/telegram/ui/PhotoViewer;
 
-    .line 15855
-    invoke-static {v3}, Lorg/telegram/ui/PhotoViewer;->access$8800(Lorg/telegram/ui/PhotoViewer;)Landroid/widget/FrameLayout;
+    .line 16075
+    invoke-static {v3}, Lorg/telegram/ui/PhotoViewer;->access$8700(Lorg/telegram/ui/PhotoViewer;)Landroid/widget/FrameLayout;
 
     move-result-object v3
 
@@ -186,16 +186,16 @@
 
     aput-object v0, v2, v1
 
-    .line 15852
+    .line 16072
     invoke-virtual {p1, v2}, Landroid/animation/AnimatorSet;->playTogether([Landroid/animation/Animator;)V
 
     goto :goto_d6
 
-    .line 15858
+    .line 16078
     :cond_7c
     iget-object p1, p0, Lorg/telegram/ui/PhotoViewer$76;->this$0:Lorg/telegram/ui/PhotoViewer;
 
-    invoke-static {p1}, Lorg/telegram/ui/PhotoViewer;->access$28200(Lorg/telegram/ui/PhotoViewer;)Lorg/telegram/ui/PhotoViewer$QualityChooseView;
+    invoke-static {p1}, Lorg/telegram/ui/PhotoViewer;->access$28700(Lorg/telegram/ui/PhotoViewer;)Lorg/telegram/ui/PhotoViewer$QualityChooseView;
 
     move-result-object p1
 
@@ -203,19 +203,19 @@
 
     invoke-virtual {p1, v6}, Landroid/view/View;->setVisibility(I)V
 
-    .line 15859
+    .line 16079
     iget-object p1, p0, Lorg/telegram/ui/PhotoViewer$76;->this$0:Lorg/telegram/ui/PhotoViewer;
 
-    invoke-static {p1}, Lorg/telegram/ui/PhotoViewer;->access$28300(Lorg/telegram/ui/PhotoViewer;)Lorg/telegram/ui/Components/PickerBottomLayoutViewer;
+    invoke-static {p1}, Lorg/telegram/ui/PhotoViewer;->access$28800(Lorg/telegram/ui/PhotoViewer;)Lorg/telegram/ui/Components/PickerBottomLayoutViewer;
 
     move-result-object p1
 
     invoke-virtual {p1, v6}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
-    .line 15860
+    .line 16080
     iget-object p1, p0, Lorg/telegram/ui/PhotoViewer$76;->this$0:Lorg/telegram/ui/PhotoViewer;
 
-    invoke-static {p1}, Lorg/telegram/ui/PhotoViewer;->access$28100(Lorg/telegram/ui/PhotoViewer;)Landroid/animation/AnimatorSet;
+    invoke-static {p1}, Lorg/telegram/ui/PhotoViewer;->access$28600(Lorg/telegram/ui/PhotoViewer;)Landroid/animation/AnimatorSet;
 
     move-result-object p1
 
@@ -223,8 +223,8 @@
 
     iget-object v6, p0, Lorg/telegram/ui/PhotoViewer$76;->this$0:Lorg/telegram/ui/PhotoViewer;
 
-    .line 15861
-    invoke-static {v6}, Lorg/telegram/ui/PhotoViewer;->access$7600(Lorg/telegram/ui/PhotoViewer;)Landroid/widget/FrameLayout;
+    .line 16081
+    invoke-static {v6}, Lorg/telegram/ui/PhotoViewer;->access$7500(Lorg/telegram/ui/PhotoViewer;)Landroid/widget/FrameLayout;
 
     move-result-object v6
 
@@ -242,8 +242,8 @@
 
     iget-object v6, p0, Lorg/telegram/ui/PhotoViewer$76;->this$0:Lorg/telegram/ui/PhotoViewer;
 
-    .line 15862
-    invoke-static {v6}, Lorg/telegram/ui/PhotoViewer;->access$7700(Lorg/telegram/ui/PhotoViewer;)Landroid/widget/ImageView;
+    .line 16082
+    invoke-static {v6}, Lorg/telegram/ui/PhotoViewer;->access$7600(Lorg/telegram/ui/PhotoViewer;)Landroid/widget/ImageView;
 
     move-result-object v6
 
@@ -261,8 +261,8 @@
 
     iget-object v3, p0, Lorg/telegram/ui/PhotoViewer$76;->this$0:Lorg/telegram/ui/PhotoViewer;
 
-    .line 15863
-    invoke-static {v3}, Lorg/telegram/ui/PhotoViewer;->access$8800(Lorg/telegram/ui/PhotoViewer;)Landroid/widget/FrameLayout;
+    .line 16083
+    invoke-static {v3}, Lorg/telegram/ui/PhotoViewer;->access$8700(Lorg/telegram/ui/PhotoViewer;)Landroid/widget/FrameLayout;
 
     move-result-object v3
 
@@ -286,14 +286,14 @@
 
     aput-object v0, v2, v1
 
-    .line 15860
+    .line 16080
     invoke-virtual {p1, v2}, Landroid/animation/AnimatorSet;->playTogether([Landroid/animation/Animator;)V
 
-    .line 15866
+    .line 16086
     :goto_d6
     iget-object p1, p0, Lorg/telegram/ui/PhotoViewer$76;->this$0:Lorg/telegram/ui/PhotoViewer;
 
-    invoke-static {p1}, Lorg/telegram/ui/PhotoViewer;->access$28100(Lorg/telegram/ui/PhotoViewer;)Landroid/animation/AnimatorSet;
+    invoke-static {p1}, Lorg/telegram/ui/PhotoViewer;->access$28600(Lorg/telegram/ui/PhotoViewer;)Landroid/animation/AnimatorSet;
 
     move-result-object p1
 
@@ -303,10 +303,10 @@
 
     invoke-virtual {p1, v0}, Landroid/animation/AnimatorSet;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 15874
+    .line 16094
     iget-object p1, p0, Lorg/telegram/ui/PhotoViewer$76;->this$0:Lorg/telegram/ui/PhotoViewer;
 
-    invoke-static {p1}, Lorg/telegram/ui/PhotoViewer;->access$28100(Lorg/telegram/ui/PhotoViewer;)Landroid/animation/AnimatorSet;
+    invoke-static {p1}, Lorg/telegram/ui/PhotoViewer;->access$28600(Lorg/telegram/ui/PhotoViewer;)Landroid/animation/AnimatorSet;
 
     move-result-object p1
 
@@ -314,10 +314,10 @@
 
     invoke-virtual {p1, v0, v1}, Landroid/animation/AnimatorSet;->setDuration(J)Landroid/animation/AnimatorSet;
 
-    .line 15875
+    .line 16095
     iget-object p1, p0, Lorg/telegram/ui/PhotoViewer$76;->this$0:Lorg/telegram/ui/PhotoViewer;
 
-    invoke-static {p1}, Lorg/telegram/ui/PhotoViewer;->access$28100(Lorg/telegram/ui/PhotoViewer;)Landroid/animation/AnimatorSet;
+    invoke-static {p1}, Lorg/telegram/ui/PhotoViewer;->access$28600(Lorg/telegram/ui/PhotoViewer;)Landroid/animation/AnimatorSet;
 
     move-result-object p1
 
@@ -325,10 +325,10 @@
 
     invoke-virtual {p1, v0}, Landroid/animation/AnimatorSet;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 15876
+    .line 16096
     iget-object p1, p0, Lorg/telegram/ui/PhotoViewer$76;->this$0:Lorg/telegram/ui/PhotoViewer;
 
-    invoke-static {p1}, Lorg/telegram/ui/PhotoViewer;->access$28100(Lorg/telegram/ui/PhotoViewer;)Landroid/animation/AnimatorSet;
+    invoke-static {p1}, Lorg/telegram/ui/PhotoViewer;->access$28600(Lorg/telegram/ui/PhotoViewer;)Landroid/animation/AnimatorSet;
 
     move-result-object p1
 

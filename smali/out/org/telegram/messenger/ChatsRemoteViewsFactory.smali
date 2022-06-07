@@ -239,9 +239,9 @@
 
     invoke-direct {v0, v2, v3}, Landroid/widget/RemoteViews;-><init>(Ljava/lang/String;I)V
 
-    const v2, 0x7f0800e4
+    const v2, 0x7f0800e5
 
-    const v3, 0x7f0e13e1
+    const v3, 0x7f0e14af
 
     const-string v4, "WidgetLoggedOff"
 
@@ -281,9 +281,9 @@
 
     invoke-direct {v0, v2, v5}, Landroid/widget/RemoteViews;-><init>(Ljava/lang/String;I)V
 
-    const v2, 0x7f0800e6
+    const v2, 0x7f0800e7
 
-    const v5, 0x7f0e1134
+    const v5, 0x7f0e11f8
 
     const-string v6, "TapToEditWidget"
 
@@ -328,7 +328,7 @@
     .line 94
     invoke-virtual {v3, v2}, Landroid/content/Intent;->putExtras(Landroid/os/Bundle;)Landroid/content/Intent;
 
-    const v2, 0x7f0800e5
+    const v2, 0x7f0800e6
 
     .line 95
     invoke-virtual {v0, v2, v3}, Landroid/widget/RemoteViews;->setOnClickFillInIntent(ILandroid/content/Intent;)V
@@ -384,7 +384,7 @@
 
     if-eqz v10, :cond_ab
 
-    const v10, 0x7f0e0f65
+    const v10, 0x7f0e1021
 
     const-string v11, "SavedMessages"
 
@@ -403,7 +403,7 @@
 
     if-eqz v10, :cond_bb
 
-    const v10, 0x7f0e0ed5
+    const v10, 0x7f0e0f82
 
     const-string v11, "RepliesTitle"
 
@@ -422,7 +422,7 @@
 
     if-eqz v10, :cond_cb
 
-    const v10, 0x7f0e0830
+    const v10, 0x7f0e088a
 
     const-string v11, "HiddenName"
 
@@ -570,7 +570,7 @@
 
     invoke-direct {v7, v12, v13}, Landroid/widget/RemoteViews;-><init>(Ljava/lang/String;I)V
 
-    const v12, 0x7f0800c2
+    const v12, 0x7f0800c3
 
     .line 130
     invoke-virtual {v7, v12, v10}, Landroid/widget/RemoteViews;->setTextViewText(ILjava/lang/CharSequence;)V
@@ -777,7 +777,7 @@
     :goto_1e3
     invoke-virtual {v14, v9}, Landroid/graphics/Canvas;->setBitmap(Landroid/graphics/Bitmap;)V
 
-    const v0, 0x7f0800be
+    const v0, 0x7f0800bf
 
     .line 172
     invoke-virtual {v7, v0, v13}, Landroid/widget/RemoteViews;->setImageViewBitmap(ILandroid/graphics/Bitmap;)V
@@ -975,7 +975,7 @@
 
     if-eqz v0, :cond_297
 
-    const v0, 0x7f0e07d3
+    const v0, 0x7f0e082b
 
     const-string v6, "FromYou"
 
@@ -1549,7 +1549,7 @@
 
     if-eqz v6, :cond_465
 
-    const v0, 0x7f0e01fc
+    const v0, 0x7f0e0231
 
     const-string v6, "AttachPhotoExpired"
 
@@ -1576,7 +1576,7 @@
 
     if-eqz v6, :cond_47e
 
-    const v0, 0x7f0e0202
+    const v0, 0x7f0e0237
 
     const-string v6, "AttachVideoExpired"
 
@@ -1814,7 +1814,7 @@
 
     move-result-object v0
 
-    const v4, 0x7f0800c3
+    const v4, 0x7f0800c4
 
     invoke-virtual {v7, v4, v0}, Landroid/widget/RemoteViews;->setTextViewText(ILjava/lang/CharSequence;)V
 
@@ -1823,7 +1823,7 @@
 
     move-result-object v0
 
-    const v4, 0x7f0800c1
+    const v4, 0x7f0800c2
 
     invoke-virtual {v7, v4, v0}, Landroid/widget/RemoteViews;->setTextViewText(ILjava/lang/CharSequence;)V
 
@@ -1833,7 +1833,7 @@
     goto :goto_56c
 
     :cond_551
-    const v4, 0x7f0800c3
+    const v4, 0x7f0800c4
 
     if-eqz v10, :cond_563
 
@@ -1858,7 +1858,7 @@
     invoke-virtual {v7, v4, v8}, Landroid/widget/RemoteViews;->setTextViewText(ILjava/lang/CharSequence;)V
 
     :goto_566
-    const v4, 0x7f0800c1
+    const v4, 0x7f0800c2
 
     .line 324
     invoke-virtual {v7, v4, v8}, Landroid/widget/RemoteViews;->setTextViewText(ILjava/lang/CharSequence;)V
@@ -1866,7 +1866,7 @@
     :goto_56c
     const/16 v0, 0x8
 
-    const v4, 0x7f0800bf
+    const v4, 0x7f0800c0
 
     if-eqz v10, :cond_5b4
 
@@ -1921,7 +1921,7 @@
     .line 330
     invoke-virtual {v7, v4, v10, v8}, Landroid/widget/RemoteViews;->setBoolean(ILjava/lang/String;Z)V
 
-    const v6, 0x7f070439
+    const v6, 0x7f070413
 
     .line 331
     invoke-virtual {v7, v4, v9, v6}, Landroid/widget/RemoteViews;->setInt(ILjava/lang/String;I)V
@@ -1934,7 +1934,7 @@
     .line 333
     invoke-virtual {v7, v4, v10, v6}, Landroid/widget/RemoteViews;->setBoolean(ILjava/lang/String;Z)V
 
-    const v6, 0x7f070438
+    const v6, 0x7f070412
 
     .line 334
     invoke-virtual {v7, v4, v9, v6}, Landroid/widget/RemoteViews;->setInt(ILjava/lang/String;I)V
@@ -2005,12 +2005,12 @@
     .line 350
     invoke-virtual {v3, v4}, Landroid/content/Intent;->putExtras(Landroid/os/Bundle;)Landroid/content/Intent;
 
-    const v4, 0x7f0800bd
+    const v4, 0x7f0800be
 
     .line 351
     invoke-virtual {v7, v4, v3}, Landroid/widget/RemoteViews;->setOnClickFillInIntent(ILandroid/content/Intent;)V
 
-    const v3, 0x7f0800c0
+    const v3, 0x7f0800c1
 
     .line 353
     invoke-virtual/range {p0 .. p0}, Lorg/telegram/messenger/ChatsRemoteViewsFactory;->getCount()I

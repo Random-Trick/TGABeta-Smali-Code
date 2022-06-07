@@ -27,14 +27,14 @@
 .method constructor <init>(Lorg/telegram/ui/Components/ChatActivityEnterView;)V
     .registers 2
 
-    .line 541
+    .line 543
     iput-object p1, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$3;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 p1, -0x1
 
-    .line 543
+    .line 545
     iput p1, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$3;->lastKnownPage:I
 
     return-void
@@ -45,7 +45,7 @@
 .method public run()V
     .registers 9
 
-    .line 547
+    .line 549
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$3;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$700(Lorg/telegram/ui/Components/ChatActivityEnterView;)Lorg/telegram/ui/Components/EmojiView;
@@ -54,7 +54,7 @@
 
     if-eqz v0, :cond_7f
 
-    .line 548
+    .line 550
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$3;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$700(Lorg/telegram/ui/Components/ChatActivityEnterView;)Lorg/telegram/ui/Components/EmojiView;
@@ -65,22 +65,22 @@
 
     move-result v0
 
-    .line 549
+    .line 551
     iget v1, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$3;->lastKnownPage:I
 
     if-eq v0, v1, :cond_7f
 
-    .line 550
+    .line 552
     iput v0, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$3;->lastKnownPage:I
 
-    .line 551
+    .line 553
     iget-object v1, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$3;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {v1}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$800(Lorg/telegram/ui/Components/ChatActivityEnterView;)Z
 
     move-result v1
 
-    .line 552
+    .line 554
     iget-object v2, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$3;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     const/4 v3, 0x2
@@ -107,14 +107,14 @@
     :goto_2b
     invoke-static {v2, v6}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$802(Lorg/telegram/ui/Components/ChatActivityEnterView;Z)Z
 
-    .line 553
+    .line 555
     iget-object v2, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$3;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {v2}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$900(Lorg/telegram/ui/Components/ChatActivityEnterView;)Z
 
     move-result v2
 
-    .line 554
+    .line 556
     iget-object v6, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$3;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     if-nez v0, :cond_3a
@@ -129,7 +129,7 @@
     :goto_3b
     invoke-static {v6, v7}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$902(Lorg/telegram/ui/Components/ChatActivityEnterView;Z)Z
 
-    .line 555
+    .line 557
     iget-object v6, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$3;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {v6}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$1000(Lorg/telegram/ui/Components/ChatActivityEnterView;)Z
@@ -138,7 +138,7 @@
 
     if-eqz v6, :cond_6a
 
-    .line 556
+    .line 558
     iget-object v6, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$3;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {v6}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$1100(Lorg/telegram/ui/Components/ChatActivityEnterView;)I
@@ -147,7 +147,7 @@
 
     if-eqz v6, :cond_5d
 
-    .line 557
+    .line 559
     iget-object v4, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$3;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     if-nez v0, :cond_53
@@ -160,14 +160,14 @@
     :goto_54
     invoke-static {v4, v3, v5}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$1200(Lorg/telegram/ui/Components/ChatActivityEnterView;IZ)V
 
-    .line 558
+    .line 560
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$3;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$1300(Lorg/telegram/ui/Components/ChatActivityEnterView;)V
 
     goto :goto_6a
 
-    .line 559
+    .line 561
     :cond_5d
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$3;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
@@ -177,12 +177,12 @@
 
     if-nez v0, :cond_6a
 
-    .line 560
+    .line 562
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$3;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-virtual {v0, v4, v5, v4}, Lorg/telegram/ui/Components/ChatActivityEnterView;->setStickersExpanded(ZZZ)V
 
-    .line 563
+    .line 565
     :cond_6a
     :goto_6a
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$3;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
@@ -201,7 +201,7 @@
 
     if-eq v2, v0, :cond_7f
 
-    .line 564
+    .line 566
     :cond_7a
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$3;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 

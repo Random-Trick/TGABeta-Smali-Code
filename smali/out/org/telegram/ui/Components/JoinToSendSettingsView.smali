@@ -130,7 +130,7 @@
 
     const-string v2, "ChannelSettingsJoinTitle"
 
-    const v3, 0x7f0e03bb
+    const v3, 0x7f0e03fa
 
     .line 43
     invoke-static {v2, v3}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -174,7 +174,7 @@
 
     const-string v2, "ChannelSettingsJoinToSend"
 
-    const v3, 0x7f0e03bc
+    const v3, 0x7f0e03fb
 
     invoke-static {v2, v3}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
@@ -246,7 +246,7 @@
     .line 97
     iget-object v1, p0, Lorg/telegram/ui/Components/JoinToSendSettingsView;->joinRequestCell:Lorg/telegram/ui/Cells/TextCheckCell;
 
-    const v2, 0x7f0e03b9
+    const v2, 0x7f0e03f8
 
     const-string v4, "ChannelSettingsJoinRequest"
 
@@ -310,7 +310,7 @@
 
     iput-object p2, p0, Lorg/telegram/ui/Components/JoinToSendSettingsView;->joinToSendInfoCell:Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
 
-    const v0, 0x7f0e03bd
+    const v0, 0x7f0e03fc
 
     const-string v1, "ChannelSettingsJoinToSendInfo"
 
@@ -333,7 +333,7 @@
 
     iput-object p2, p0, Lorg/telegram/ui/Components/JoinToSendSettingsView;->joinRequestInfoCell:Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
 
-    const p1, 0x7f0e03ba
+    const p1, 0x7f0e03f9
 
     const-string v0, "ChannelSettingsJoinRequestInfo"
 

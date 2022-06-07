@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout$6;Landroid/content/Context;)V
     .registers 3
 
-    .line 341
+    .line 342
     iput-object p1, p0, Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout$6$1;->this$1:Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout$6;
 
     invoke-direct {p0, p2}, Landroidx/recyclerview/widget/LinearSmoothScroller;-><init>(Landroid/content/Context;)V
@@ -35,12 +35,12 @@
 .method public calculateDyToMakeVisible(Landroid/view/View;I)I
     .registers 4
 
-    .line 344
+    .line 345
     invoke-super {p0, p1, p2}, Landroidx/recyclerview/widget/LinearSmoothScroller;->calculateDyToMakeVisible(Landroid/view/View;I)I
 
     move-result p1
 
-    .line 345
+    .line 346
     iget-object p2, p0, Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout$6$1;->this$1:Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout$6;
 
     iget-object p2, p2, Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout$6;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout;
@@ -69,7 +69,7 @@
 .method protected calculateTimeForDeceleration(I)I
     .registers 2
 
-    .line 351
+    .line 352
     invoke-super {p0, p1}, Landroidx/recyclerview/widget/LinearSmoothScroller;->calculateTimeForDeceleration(I)I
 
     move-result p1

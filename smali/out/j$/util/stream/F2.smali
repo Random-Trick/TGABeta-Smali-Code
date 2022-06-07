@@ -1,26 +1,30 @@
 .class Lj$/util/stream/F2;
-.super Ljava/lang/Object;
+.super Lj$/util/stream/T2;
 
 # interfaces
-.implements Lj$/util/stream/T2;
-.implements Lj$/util/stream/k3;
+.implements Lj$/util/stream/S2;
+.implements Lj$/util/stream/j3;
 
 
 # instance fields
-.field private a:Z
+.field final synthetic b:Lj$/util/function/y;
 
-.field private b:D
+.field final synthetic c:Lj$/util/function/u;
 
-.field final synthetic c:Lj$/util/function/d;
+.field final synthetic d:Lj$/util/function/b;
 
 
 # direct methods
-.method constructor <init>(Lj$/util/function/d;)V
-    .registers 2
+.method constructor <init>(Lj$/util/function/y;Lj$/util/function/u;Lj$/util/function/b;)V
+    .registers 4
 
-    iput-object p1, p0, Lj$/util/stream/F2;->c:Lj$/util/function/d;
+    iput-object p1, p0, Lj$/util/stream/F2;->b:Lj$/util/function/y;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Lj$/util/stream/F2;->c:Lj$/util/function/u;
+
+    iput-object p3, p0, Lj$/util/stream/F2;->d:Lj$/util/function/b;
+
+    invoke-direct {p0}, Lj$/util/stream/T2;-><init>()V
 
     return-void
 .end method
@@ -28,29 +32,13 @@
 
 # virtual methods
 .method public accept(D)V
-    .registers 6
+    .registers 5
 
-    iget-boolean v0, p0, Lj$/util/stream/F2;->a:Z
+    iget-object v0, p0, Lj$/util/stream/F2;->c:Lj$/util/function/u;
 
-    if-eqz v0, :cond_8
+    iget-object v1, p0, Lj$/util/stream/T2;->a:Ljava/lang/Object;
 
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lj$/util/stream/F2;->a:Z
-
-    goto :goto_10
-
-    :cond_8
-    iget-object v0, p0, Lj$/util/stream/F2;->c:Lj$/util/function/d;
-
-    iget-wide v1, p0, Lj$/util/stream/F2;->b:D
-
-    invoke-interface {v0, v1, v2, p1, p2}, Lj$/util/function/d;->applyAsDouble(DD)D
-
-    move-result-wide p1
-
-    :goto_10
-    iput-wide p1, p0, Lj$/util/stream/F2;->b:D
+    invoke-interface {v0, v1, p1, p2}, Lj$/util/function/u;->accept(Ljava/lang/Object;D)V
 
     return-void
 .end method
@@ -58,7 +46,7 @@
 .method public synthetic accept(I)V
     .registers 2
 
-    invoke-static {p0}, Lj$/util/stream/p1;->d(Lj$/util/stream/n3;)V
+    invoke-static {p0}, Lj$/util/stream/o1;->d(Lj$/util/stream/m3;)V
 
     const/4 p1, 0x0
 
@@ -68,7 +56,7 @@
 .method public synthetic accept(J)V
     .registers 3
 
-    invoke-static {p0}, Lj$/util/stream/p1;->e(Lj$/util/stream/n3;)V
+    invoke-static {p0}, Lj$/util/stream/o1;->e(Lj$/util/stream/m3;)V
 
     const/4 p1, 0x0
 
@@ -99,51 +87,29 @@
 .method public synthetic b(Ljava/lang/Double;)V
     .registers 2
 
-    invoke-static {p0, p1}, Lj$/util/stream/p1;->a(Lj$/util/stream/k3;Ljava/lang/Double;)V
+    invoke-static {p0, p1}, Lj$/util/stream/o1;->a(Lj$/util/stream/j3;Ljava/lang/Double;)V
 
     return-void
 .end method
 
-.method public get()Ljava/lang/Object;
-    .registers 3
-
-    .line 1
-    iget-boolean v0, p0, Lj$/util/stream/F2;->a:Z
-
-    if-eqz v0, :cond_9
-
-    invoke-static {}, Lj$/util/j;->a()Lj$/util/j;
-
-    move-result-object v0
-
-    goto :goto_f
-
-    :cond_9
-    iget-wide v0, p0, Lj$/util/stream/F2;->b:D
-
-    invoke-static {v0, v1}, Lj$/util/j;->d(D)Lj$/util/j;
-
-    move-result-object v0
-
-    :goto_f
-    return-object v0
-.end method
-
-.method public h(Lj$/util/stream/T2;)V
+.method public h(Lj$/util/stream/S2;)V
     .registers 4
 
     check-cast p1, Lj$/util/stream/F2;
 
     .line 1
-    iget-boolean v0, p1, Lj$/util/stream/F2;->a:Z
+    iget-object v0, p0, Lj$/util/stream/F2;->d:Lj$/util/function/b;
 
-    if-nez v0, :cond_b
+    iget-object v1, p0, Lj$/util/stream/T2;->a:Ljava/lang/Object;
 
-    iget-wide v0, p1, Lj$/util/stream/F2;->b:D
+    iget-object p1, p1, Lj$/util/stream/T2;->a:Ljava/lang/Object;
 
-    invoke-virtual {p0, v0, v1}, Lj$/util/stream/F2;->accept(D)V
+    invoke-interface {v0, v1, p1}, Lj$/util/function/BiFunction;->apply(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    :cond_b
+    move-result-object p1
+
+    iput-object p1, p0, Lj$/util/stream/T2;->a:Ljava/lang/Object;
+
     return-void
 .end method
 
@@ -169,13 +135,13 @@
 .method public n(J)V
     .registers 3
 
-    const/4 p1, 0x1
+    iget-object p1, p0, Lj$/util/stream/F2;->b:Lj$/util/function/y;
 
-    iput-boolean p1, p0, Lj$/util/stream/F2;->a:Z
+    invoke-interface {p1}, Lj$/util/function/y;->get()Ljava/lang/Object;
 
-    const-wide/16 p1, 0x0
+    move-result-object p1
 
-    iput-wide p1, p0, Lj$/util/stream/F2;->b:D
+    iput-object p1, p0, Lj$/util/stream/T2;->a:Ljava/lang/Object;
 
     return-void
 .end method

@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lorg/telegram/ui/ContactAddActivity$ContactAddActivityDelegate;
+.implements Lorg/telegram/ui/Components/RecyclerListView$OnItemClickListener;
 
 
 # instance fields
@@ -22,12 +22,12 @@
 
 
 # virtual methods
-.method public final didAddToContacts()V
-    .registers 2
+.method public final onItemClick(Landroid/view/View;I)V
+    .registers 4
 
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda246;->f$0:Lorg/telegram/ui/ChatActivity;
 
-    invoke-static {v0}, Lorg/telegram/ui/ChatActivity;->$r8$lambda$HgIhVHylV2PUVJq1igHATQtUBJE(Lorg/telegram/ui/ChatActivity;)V
+    invoke-static {v0, p1, p2}, Lorg/telegram/ui/ChatActivity;->$r8$lambda$OQBvkzqOcBtV9R9gvSjt4kWgeqI(Lorg/telegram/ui/ChatActivity;Landroid/view/View;I)V
 
     return-void
 .end method

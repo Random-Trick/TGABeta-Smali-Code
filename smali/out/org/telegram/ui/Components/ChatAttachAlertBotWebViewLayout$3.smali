@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout;Landroid/content/Context;)V
     .registers 3
 
-    .line 153
+    .line 177
     iput-object p1, p0, Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout$3;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout;
 
     invoke-direct {p0, p2}, Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout$WebViewSwipeContainer;-><init>(Landroid/content/Context;)V
@@ -35,7 +35,7 @@
 .method protected onMeasure(II)V
     .registers 4
 
-    .line 156
+    .line 180
     invoke-static {p2}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result p2
@@ -56,7 +56,7 @@
 
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout$3;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout;
 
-    invoke-static {v0}, Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout;->access$500(Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout;)I
+    invoke-static {v0}, Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout;->access$600(Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout;)I
 
     move-result v0
 

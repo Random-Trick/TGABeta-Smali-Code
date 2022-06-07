@@ -40,12 +40,12 @@
 .method private constructor <init>(Lorg/telegram/ui/Components/EmojiView;)V
     .registers 2
 
-    .line 4608
+    .line 4694
     iput-object p1, p0, Lorg/telegram/ui/Components/EmojiView$EmojiSearchAdapter;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-direct {p0}, Lorg/telegram/ui/Components/RecyclerListView$SelectionAdapter;-><init>()V
 
-    .line 4610
+    .line 4696
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
@@ -58,7 +58,7 @@
 .method synthetic constructor <init>(Lorg/telegram/ui/Components/EmojiView;Lorg/telegram/ui/Components/EmojiView$1;)V
     .registers 3
 
-    .line 4608
+    .line 4694
     invoke-direct {p0, p1}, Lorg/telegram/ui/Components/EmojiView$EmojiSearchAdapter;-><init>(Lorg/telegram/ui/Components/EmojiView;)V
 
     return-void
@@ -67,25 +67,25 @@
 .method static synthetic access$1200(Lorg/telegram/ui/Components/EmojiView$EmojiSearchAdapter;)Ljava/lang/String;
     .registers 1
 
-    .line 4608
+    .line 4694
     iget-object p0, p0, Lorg/telegram/ui/Components/EmojiView$EmojiSearchAdapter;->lastSearchEmojiString:Ljava/lang/String;
 
     return-object p0
 .end method
 
-.method static synthetic access$14200(Lorg/telegram/ui/Components/EmojiView$EmojiSearchAdapter;)Ljava/lang/String;
+.method static synthetic access$14300(Lorg/telegram/ui/Components/EmojiView$EmojiSearchAdapter;)Ljava/lang/String;
     .registers 1
 
-    .line 4608
+    .line 4694
     iget-object p0, p0, Lorg/telegram/ui/Components/EmojiView$EmojiSearchAdapter;->lastSearchAlias:Ljava/lang/String;
 
     return-object p0
 .end method
 
-.method static synthetic access$14202(Lorg/telegram/ui/Components/EmojiView$EmojiSearchAdapter;Ljava/lang/String;)Ljava/lang/String;
+.method static synthetic access$14302(Lorg/telegram/ui/Components/EmojiView$EmojiSearchAdapter;Ljava/lang/String;)Ljava/lang/String;
     .registers 2
 
-    .line 4608
+    .line 4694
     iput-object p1, p0, Lorg/telegram/ui/Components/EmojiView$EmojiSearchAdapter;->lastSearchAlias:Ljava/lang/String;
 
     return-object p1
@@ -94,7 +94,7 @@
 .method static synthetic access$5400(Lorg/telegram/ui/Components/EmojiView$EmojiSearchAdapter;)Z
     .registers 1
 
-    .line 4608
+    .line 4694
     iget-boolean p0, p0, Lorg/telegram/ui/Components/EmojiView$EmojiSearchAdapter;->searchWas:Z
 
     return p0
@@ -103,7 +103,7 @@
 .method static synthetic access$5402(Lorg/telegram/ui/Components/EmojiView$EmojiSearchAdapter;Z)Z
     .registers 2
 
-    .line 4608
+    .line 4694
     iput-boolean p1, p0, Lorg/telegram/ui/Components/EmojiView$EmojiSearchAdapter;->searchWas:Z
 
     return p1
@@ -112,7 +112,7 @@
 .method static synthetic access$5500(Lorg/telegram/ui/Components/EmojiView$EmojiSearchAdapter;)Ljava/util/ArrayList;
     .registers 1
 
-    .line 4608
+    .line 4694
     iget-object p0, p0, Lorg/telegram/ui/Components/EmojiView$EmojiSearchAdapter;->result:Ljava/util/ArrayList;
 
     return-object p0
@@ -121,7 +121,7 @@
 .method static synthetic access$5502(Lorg/telegram/ui/Components/EmojiView$EmojiSearchAdapter;Ljava/util/ArrayList;)Ljava/util/ArrayList;
     .registers 2
 
-    .line 4608
+    .line 4694
     iput-object p1, p0, Lorg/telegram/ui/Components/EmojiView$EmojiSearchAdapter;->result:Ljava/util/ArrayList;
 
     return-object p1
@@ -132,7 +132,7 @@
 .method public getItemCount()I
     .registers 2
 
-    .line 4618
+    .line 4704
     iget-object v0, p0, Lorg/telegram/ui/Components/EmojiView$EmojiSearchAdapter;->result:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
@@ -145,7 +145,7 @@
 
     if-nez v0, :cond_15
 
-    .line 4619
+    .line 4705
     sget-object v0, Lorg/telegram/messenger/Emoji;->recentEmoji:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -157,7 +157,7 @@
 
     return v0
 
-    .line 4621
+    .line 4707
     :cond_15
     iget-object v0, p0, Lorg/telegram/ui/Components/EmojiView$EmojiSearchAdapter;->result:Ljava/util/ArrayList;
 
@@ -167,7 +167,7 @@
 
     if-nez v0, :cond_24
 
-    .line 4622
+    .line 4708
     iget-object v0, p0, Lorg/telegram/ui/Components/EmojiView$EmojiSearchAdapter;->result:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -194,7 +194,7 @@
     :cond_4
     if-ne p1, v0, :cond_14
 
-    .line 4784
+    .line 4870
     iget-boolean p1, p0, Lorg/telegram/ui/Components/EmojiView$EmojiSearchAdapter;->searchWas:Z
 
     if-eqz p1, :cond_14
@@ -220,7 +220,7 @@
 .method public isEnabled(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)Z
     .registers 2
 
-    .line 4629
+    .line 4715
     invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->getItemViewType()I
 
     move-result p1
@@ -241,7 +241,7 @@
 .method public onBindViewHolder(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;I)V
     .registers 5
 
-    .line 4757
+    .line 4843
     invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->getItemViewType()I
 
     move-result v0
@@ -250,7 +250,7 @@
 
     goto :goto_38
 
-    .line 4759
+    .line 4845
     :cond_7
     iget-object p1, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
@@ -258,7 +258,7 @@
 
     add-int/lit8 p2, p2, -0x1
 
-    .line 4766
+    .line 4852
     iget-object v0, p0, Lorg/telegram/ui/Components/EmojiView$EmojiSearchAdapter;->result:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
@@ -271,7 +271,7 @@
 
     if-nez v0, :cond_23
 
-    .line 4767
+    .line 4853
     sget-object v0, Lorg/telegram/messenger/Emoji;->recentEmoji:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -284,7 +284,7 @@
 
     goto :goto_2e
 
-    .line 4770
+    .line 4856
     :cond_23
     iget-object v0, p0, Lorg/telegram/ui/Components/EmojiView$EmojiSearchAdapter;->result:Ljava/util/ArrayList;
 
@@ -298,7 +298,7 @@
 
     const/4 v0, 0x0
 
-    .line 4773
+    .line 4859
     :goto_2e
     invoke-static {p2}, Lorg/telegram/messenger/Emoji;->getEmojiBigDrawable(Ljava/lang/String;)Landroid/graphics/drawable/Drawable;
 
@@ -306,7 +306,7 @@
 
     invoke-virtual {p1, v1, v0}, Lorg/telegram/ui/Components/EmojiView$ImageViewEmoji;->setImageDrawable(Landroid/graphics/drawable/Drawable;Z)V
 
-    .line 4774
+    .line 4860
     invoke-virtual {p1, p2}, Landroid/widget/ImageView;->setTag(Ljava/lang/Object;)V
 
     :goto_38
@@ -324,7 +324,7 @@
 
     if-eq p2, v0, :cond_8c
 
-    .line 4645
+    .line 4731
     new-instance p2, Lorg/telegram/ui/Components/EmojiView$EmojiSearchAdapter$1;
 
     iget-object v1, p0, Lorg/telegram/ui/Components/EmojiView$EmojiSearchAdapter;->this$0:Lorg/telegram/ui/Components/EmojiView;
@@ -335,7 +335,7 @@
 
     invoke-direct {p2, p0, v1}, Lorg/telegram/ui/Components/EmojiView$EmojiSearchAdapter$1;-><init>(Lorg/telegram/ui/Components/EmojiView$EmojiSearchAdapter;Landroid/content/Context;)V
 
-    .line 4659
+    .line 4745
     new-instance v1, Landroid/widget/TextView;
 
     iget-object v2, p0, Lorg/telegram/ui/Components/EmojiView$EmojiSearchAdapter;->this$0:Lorg/telegram/ui/Components/EmojiView;
@@ -346,11 +346,11 @@
 
     invoke-direct {v1, v2}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
-    const v2, 0x7f0e0ab3
+    const v2, 0x7f0e0b3a
 
     const-string v3, "NoEmojiFound"
 
-    .line 4660
+    .line 4746
     invoke-static {v3, v2}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v2
@@ -359,10 +359,10 @@
 
     const/high16 v2, 0x41800000    # 16.0f
 
-    .line 4661
+    .line 4747
     invoke-virtual {v1, v0, v2}, Landroid/widget/TextView;->setTextSize(IF)V
 
-    .line 4662
+    .line 4748
     iget-object v0, p0, Lorg/telegram/ui/Components/EmojiView$EmojiSearchAdapter;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     const-string v2, "chat_emojiPanelEmptyText"
@@ -387,14 +387,14 @@
 
     const/4 v9, 0x0
 
-    .line 4663
+    .line 4749
     invoke-static/range {v3 .. v9}, Lorg/telegram/ui/Components/LayoutHelper;->createFrame(IFIFFFF)Landroid/widget/FrameLayout$LayoutParams;
 
     move-result-object v0
 
     invoke-virtual {p2, v1, v0}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 4665
+    .line 4751
     new-instance v0, Landroid/widget/ImageView;
 
     iget-object v1, p0, Lorg/telegram/ui/Components/EmojiView$EmojiSearchAdapter;->this$0:Lorg/telegram/ui/Components/EmojiView;
@@ -405,17 +405,17 @@
 
     invoke-direct {v0, v1}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
 
-    .line 4666
+    .line 4752
     sget-object v1, Landroid/widget/ImageView$ScaleType;->CENTER:Landroid/widget/ImageView$ScaleType;
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setScaleType(Landroid/widget/ImageView$ScaleType;)V
 
-    const v1, 0x7f0703c7
+    const v1, 0x7f07021a
 
-    .line 4667
+    .line 4753
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 4668
+    .line 4754
     new-instance v1, Landroid/graphics/PorterDuffColorFilter;
 
     iget-object v3, p0, Lorg/telegram/ui/Components/EmojiView$EmojiSearchAdapter;->this$0:Lorg/telegram/ui/Components/EmojiView;
@@ -434,21 +434,21 @@
 
     const/16 v2, 0x30
 
-    .line 4669
+    .line 4755
     invoke-static {v2, v2, v1}, Lorg/telegram/ui/Components/LayoutHelper;->createFrame(III)Landroid/widget/FrameLayout$LayoutParams;
 
     move-result-object v1
 
     invoke-virtual {p2, v0, v1}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 4670
+    .line 4756
     new-instance v1, Lorg/telegram/ui/Components/EmojiView$EmojiSearchAdapter$2;
 
     invoke-direct {v1, p0}, Lorg/telegram/ui/Components/EmojiView$EmojiSearchAdapter$2;-><init>(Lorg/telegram/ui/Components/EmojiView$EmojiSearchAdapter;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 4749
+    .line 4835
     new-instance v0, Landroidx/recyclerview/widget/RecyclerView$LayoutParams;
 
     const/4 v1, -0x2
@@ -459,7 +459,7 @@
 
     goto :goto_b1
 
-    .line 4640
+    .line 4726
     :cond_8c
     new-instance p2, Landroid/view/View;
 
@@ -471,7 +471,7 @@
 
     invoke-direct {p2, v0}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
-    .line 4641
+    .line 4727
     new-instance v0, Landroidx/recyclerview/widget/RecyclerView$LayoutParams;
 
     iget-object v1, p0, Lorg/telegram/ui/Components/EmojiView$EmojiSearchAdapter;->this$0:Lorg/telegram/ui/Components/EmojiView;
@@ -486,7 +486,7 @@
 
     goto :goto_b1
 
-    .line 4637
+    .line 4723
     :cond_a6
     new-instance p2, Lorg/telegram/ui/Components/EmojiView$ImageViewEmoji;
 
@@ -498,7 +498,7 @@
 
     invoke-direct {p2, p1, v0}, Lorg/telegram/ui/Components/EmojiView$ImageViewEmoji;-><init>(Lorg/telegram/ui/Components/EmojiView;Landroid/content/Context;)V
 
-    .line 4752
+    .line 4838
     :goto_b1
     new-instance p1, Lorg/telegram/ui/Components/RecyclerListView$Holder;
 
@@ -510,7 +510,7 @@
 .method public search(Ljava/lang/String;)V
     .registers 4
 
-    .line 4791
+    .line 4877
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -519,10 +519,10 @@
 
     const/4 p1, 0x0
 
-    .line 4792
+    .line 4878
     iput-object p1, p0, Lorg/telegram/ui/Components/EmojiView$EmojiSearchAdapter;->lastSearchEmojiString:Ljava/lang/String;
 
-    .line 4793
+    .line 4879
     iget-object p1, p0, Lorg/telegram/ui/Components/EmojiView$EmojiSearchAdapter;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/EmojiView;->access$1000(Lorg/telegram/ui/Components/EmojiView;)Lorg/telegram/ui/Components/RecyclerListView;
@@ -541,7 +541,7 @@
 
     if-eq p1, v0, :cond_2d
 
-    .line 4794
+    .line 4880
     iget-object p1, p0, Lorg/telegram/ui/Components/EmojiView$EmojiSearchAdapter;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/EmojiView;->access$1000(Lorg/telegram/ui/Components/EmojiView;)Lorg/telegram/ui/Components/RecyclerListView;
@@ -558,16 +558,16 @@
 
     const/4 p1, 0x0
 
-    .line 4795
+    .line 4881
     iput-boolean p1, p0, Lorg/telegram/ui/Components/EmojiView$EmojiSearchAdapter;->searchWas:Z
 
-    .line 4797
+    .line 4883
     :cond_2d
     invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->notifyDataSetChanged()V
 
     goto :goto_37
 
-    .line 4799
+    .line 4885
     :cond_31
     invoke-virtual {p1}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
 
@@ -575,16 +575,16 @@
 
     iput-object p1, p0, Lorg/telegram/ui/Components/EmojiView$EmojiSearchAdapter;->lastSearchEmojiString:Ljava/lang/String;
 
-    .line 4801
+    .line 4887
     :goto_37
     iget-object p1, p0, Lorg/telegram/ui/Components/EmojiView$EmojiSearchAdapter;->searchRunnable:Ljava/lang/Runnable;
 
     if-eqz p1, :cond_3e
 
-    .line 4802
+    .line 4888
     invoke-static {p1}, Lorg/telegram/messenger/AndroidUtilities;->cancelRunOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 4804
+    .line 4890
     :cond_3e
     iget-object p1, p0, Lorg/telegram/ui/Components/EmojiView$EmojiSearchAdapter;->lastSearchEmojiString:Ljava/lang/String;
 
@@ -594,7 +594,7 @@
 
     if-nez p1, :cond_52
 
-    .line 4805
+    .line 4891
     new-instance p1, Lorg/telegram/ui/Components/EmojiView$EmojiSearchAdapter$3;
 
     invoke-direct {p1, p0}, Lorg/telegram/ui/Components/EmojiView$EmojiSearchAdapter$3;-><init>(Lorg/telegram/ui/Components/EmojiView$EmojiSearchAdapter;)V

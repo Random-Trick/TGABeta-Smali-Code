@@ -27,7 +27,7 @@
 .method constructor <init>(Lorg/telegram/ui/Cells/ChatMessageCell;Ljava/lang/Class;Ljava/lang/String;)V
     .registers 4
 
-    .line 14805
+    .line 14949
     invoke-direct {p0, p2, p3}, Landroid/util/Property;-><init>(Ljava/lang/Class;Ljava/lang/String;)V
 
     return-void
@@ -38,7 +38,7 @@
 .method public get(Lorg/telegram/ui/Cells/ChatMessageCell;)Ljava/lang/Float;
     .registers 2
 
-    .line 14808
+    .line 14952
     invoke-static {p1}, Lorg/telegram/ui/Cells/ChatMessageCell;->access$7300(Lorg/telegram/ui/Cells/ChatMessageCell;)F
 
     move-result p1
@@ -53,7 +53,7 @@
 .method public bridge synthetic get(Ljava/lang/Object;)Ljava/lang/Object;
     .registers 2
 
-    .line 14805
+    .line 14949
     check-cast p1, Lorg/telegram/ui/Cells/ChatMessageCell;
 
     invoke-virtual {p0, p1}, Lorg/telegram/ui/Cells/ChatMessageCell$7;->get(Lorg/telegram/ui/Cells/ChatMessageCell;)Ljava/lang/Float;
@@ -66,7 +66,7 @@
 .method public bridge synthetic set(Ljava/lang/Object;Ljava/lang/Object;)V
     .registers 3
 
-    .line 14805
+    .line 14949
     check-cast p1, Lorg/telegram/ui/Cells/ChatMessageCell;
 
     check-cast p2, Ljava/lang/Float;
@@ -79,7 +79,7 @@
 .method public set(Lorg/telegram/ui/Cells/ChatMessageCell;Ljava/lang/Float;)V
     .registers 3
 
-    .line 14813
+    .line 14957
     invoke-virtual {p2}, Ljava/lang/Float;->floatValue()F
 
     move-result p2

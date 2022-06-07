@@ -25,7 +25,7 @@
 .method constructor <init>(Lorg/telegram/ui/NewContactActivity;)V
     .registers 2
 
-    .line 244
+    .line 243
     iput-object p1, p0, Lorg/telegram/ui/NewContactActivity$2;->this$0:Lorg/telegram/ui/NewContactActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public afterTextChanged(Landroid/text/Editable;)V
     .registers 2
 
-    .line 257
+    .line 256
     iget-object p1, p0, Lorg/telegram/ui/NewContactActivity$2;->this$0:Lorg/telegram/ui/NewContactActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/NewContactActivity;->access$1200(Lorg/telegram/ui/NewContactActivity;)V

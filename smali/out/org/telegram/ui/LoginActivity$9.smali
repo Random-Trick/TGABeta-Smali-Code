@@ -26,7 +26,7 @@
 .method constructor <init>(Lorg/telegram/ui/LoginActivity;ZZ)V
     .registers 4
 
-    .line 1076
+    .line 1100
     iput-object p1, p0, Lorg/telegram/ui/LoginActivity$9;->this$0:Lorg/telegram/ui/LoginActivity;
 
     iput-boolean p2, p0, Lorg/telegram/ui/LoginActivity$9;->val$floating:Z
@@ -43,7 +43,7 @@
 .method public onAnimationCancel(Landroid/animation/Animator;)V
     .registers 4
 
-    .line 1102
+    .line 1126
     iget-object v0, p0, Lorg/telegram/ui/LoginActivity$9;->this$0:Lorg/telegram/ui/LoginActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/LoginActivity;->access$1800(Lorg/telegram/ui/LoginActivity;)[Landroid/animation/AnimatorSet;
@@ -76,7 +76,7 @@
 
     if-eqz p1, :cond_2d
 
-    .line 1103
+    .line 1127
     iget-object p1, p0, Lorg/telegram/ui/LoginActivity$9;->this$0:Lorg/telegram/ui/LoginActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/LoginActivity;->access$1800(Lorg/telegram/ui/LoginActivity;)[Landroid/animation/AnimatorSet;
@@ -98,7 +98,7 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .registers 5
 
-    .line 1079
+    .line 1103
     iget-object v0, p0, Lorg/telegram/ui/LoginActivity$9;->this$0:Lorg/telegram/ui/LoginActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/LoginActivity;->access$1800(Lorg/telegram/ui/LoginActivity;)[Landroid/animation/AnimatorSet;
@@ -133,17 +133,17 @@
 
     if-eqz p1, :cond_9d
 
-    .line 1080
+    .line 1104
     iget-boolean p1, p0, Lorg/telegram/ui/LoginActivity$9;->val$show:Z
 
     if-nez p1, :cond_9d
 
-    .line 1081
+    .line 1105
     iget-boolean p1, p0, Lorg/telegram/ui/LoginActivity$9;->val$floating:Z
 
     if-eqz p1, :cond_32
 
-    .line 1082
+    .line 1106
     iget-object p1, p0, Lorg/telegram/ui/LoginActivity$9;->this$0:Lorg/telegram/ui/LoginActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/LoginActivity;->access$100(Lorg/telegram/ui/LoginActivity;)Landroid/widget/FrameLayout;
@@ -154,7 +154,7 @@
 
     invoke-virtual {p1, v0}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
-    .line 1085
+    .line 1109
     :cond_32
     iget-boolean p1, p0, Lorg/telegram/ui/LoginActivity$9;->val$floating:Z
 
@@ -176,7 +176,7 @@
 
     if-eqz p1, :cond_9d
 
-    .line 1086
+    .line 1110
     iget-object p1, p0, Lorg/telegram/ui/LoginActivity$9;->this$0:Lorg/telegram/ui/LoginActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/LoginActivity;->access$1900(Lorg/telegram/ui/LoginActivity;)Lorg/telegram/ui/Components/TransformableLoginButtonView;
@@ -185,7 +185,7 @@
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setAlpha(F)V
 
-    .line 1087
+    .line 1111
     iget-object p1, p0, Lorg/telegram/ui/LoginActivity$9;->this$0:Lorg/telegram/ui/LoginActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/LoginActivity;->access$1900(Lorg/telegram/ui/LoginActivity;)Lorg/telegram/ui/Components/TransformableLoginButtonView;
@@ -194,7 +194,7 @@
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setScaleX(F)V
 
-    .line 1088
+    .line 1112
     iget-object p1, p0, Lorg/telegram/ui/LoginActivity$9;->this$0:Lorg/telegram/ui/LoginActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/LoginActivity;->access$1900(Lorg/telegram/ui/LoginActivity;)Lorg/telegram/ui/Components/TransformableLoginButtonView;
@@ -203,7 +203,7 @@
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setScaleY(F)V
 
-    .line 1089
+    .line 1113
     iget-object p1, p0, Lorg/telegram/ui/LoginActivity$9;->this$0:Lorg/telegram/ui/LoginActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/LoginActivity;->access$1900(Lorg/telegram/ui/LoginActivity;)Lorg/telegram/ui/Components/TransformableLoginButtonView;
@@ -214,7 +214,7 @@
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
 
-    .line 1090
+    .line 1114
     iget-object p1, p0, Lorg/telegram/ui/LoginActivity$9;->this$0:Lorg/telegram/ui/LoginActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/LoginActivity;->access$100(Lorg/telegram/ui/LoginActivity;)Landroid/widget/FrameLayout;
@@ -223,7 +223,7 @@
 
     invoke-virtual {p1, v2}, Landroid/widget/FrameLayout;->setEnabled(Z)V
 
-    .line 1091
+    .line 1115
     iget-object p1, p0, Lorg/telegram/ui/LoginActivity$9;->this$0:Lorg/telegram/ui/LoginActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/LoginActivity;->access$2000(Lorg/telegram/ui/LoginActivity;)Lorg/telegram/ui/Components/RadialProgressView;
@@ -234,7 +234,7 @@
 
     invoke-virtual {p1, v0}, Lorg/telegram/ui/Components/RadialProgressView;->setAlpha(F)V
 
-    .line 1092
+    .line 1116
     iget-object p1, p0, Lorg/telegram/ui/LoginActivity$9;->this$0:Lorg/telegram/ui/LoginActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/LoginActivity;->access$2000(Lorg/telegram/ui/LoginActivity;)Lorg/telegram/ui/Components/RadialProgressView;
@@ -245,7 +245,7 @@
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setScaleX(F)V
 
-    .line 1093
+    .line 1117
     iget-object p1, p0, Lorg/telegram/ui/LoginActivity$9;->this$0:Lorg/telegram/ui/LoginActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/LoginActivity;->access$2000(Lorg/telegram/ui/LoginActivity;)Lorg/telegram/ui/Components/RadialProgressView;
@@ -254,7 +254,7 @@
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setScaleY(F)V
 
-    .line 1094
+    .line 1118
     iget-object p1, p0, Lorg/telegram/ui/LoginActivity$9;->this$0:Lorg/telegram/ui/LoginActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/LoginActivity;->access$2000(Lorg/telegram/ui/LoginActivity;)Lorg/telegram/ui/Components/RadialProgressView;

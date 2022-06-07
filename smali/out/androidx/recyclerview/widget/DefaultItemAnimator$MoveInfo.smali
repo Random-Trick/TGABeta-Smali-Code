@@ -30,22 +30,22 @@
 .method public constructor <init>(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;IIII)V
     .registers 6
 
-    .line 70
+    .line 71
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 71
+    .line 72
     iput-object p1, p0, Landroidx/recyclerview/widget/DefaultItemAnimator$MoveInfo;->holder:Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
 
-    .line 72
+    .line 73
     iput p2, p0, Landroidx/recyclerview/widget/DefaultItemAnimator$MoveInfo;->fromX:I
 
-    .line 73
+    .line 74
     iput p3, p0, Landroidx/recyclerview/widget/DefaultItemAnimator$MoveInfo;->fromY:I
 
-    .line 74
+    .line 75
     iput p4, p0, Landroidx/recyclerview/widget/DefaultItemAnimator$MoveInfo;->toX:I
 
-    .line 75
+    .line 76
     iput p5, p0, Landroidx/recyclerview/widget/DefaultItemAnimator$MoveInfo;->toY:I
 
     return-void

@@ -90,7 +90,7 @@
 
     const-string v1, "OptimizingTelegram"
 
-    const v2, 0x7f0e0bd0
+    const v2, 0x7f0e0c5a
 
     invoke-static {v1, v2}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
@@ -173,7 +173,7 @@
 
     const-string v3, "OptimizingTelegramDescription1"
 
-    const v4, 0x7f0e0bd1
+    const v4, 0x7f0e0c5b
 
     invoke-static {v3, v4}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
@@ -237,7 +237,7 @@
 
     const-string p2, "OptimizingTelegramDescription2"
 
-    const v2, 0x7f0e0bd2
+    const v2, 0x7f0e0c5c
 
     invoke-static {p2, v2}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 

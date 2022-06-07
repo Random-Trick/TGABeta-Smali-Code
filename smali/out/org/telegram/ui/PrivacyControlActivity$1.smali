@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/PrivacyControlActivity;)V
     .registers 2
 
-    .line 326
+    .line 327
     iput-object p1, p0, Lorg/telegram/ui/PrivacyControlActivity$1;->this$0:Lorg/telegram/ui/PrivacyControlActivity;
 
     invoke-direct {p0}, Lorg/telegram/ui/ActionBar/ActionBar$ActionBarMenuOnItemClick;-><init>()V
@@ -39,7 +39,7 @@
 
     if-ne p1, v0, :cond_11
 
-    .line 330
+    .line 331
     iget-object p1, p0, Lorg/telegram/ui/PrivacyControlActivity$1;->this$0:Lorg/telegram/ui/PrivacyControlActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/PrivacyControlActivity;->access$400(Lorg/telegram/ui/PrivacyControlActivity;)Z
@@ -48,7 +48,7 @@
 
     if-eqz p1, :cond_19
 
-    .line 331
+    .line 332
     iget-object p1, p0, Lorg/telegram/ui/PrivacyControlActivity$1;->this$0:Lorg/telegram/ui/PrivacyControlActivity;
 
     invoke-virtual {p1}, Lorg/telegram/ui/ActionBar/BaseFragment;->finishFragment()V
@@ -60,7 +60,7 @@
 
     if-ne p1, v0, :cond_19
 
-    .line 334
+    .line 335
     iget-object p1, p0, Lorg/telegram/ui/PrivacyControlActivity$1;->this$0:Lorg/telegram/ui/PrivacyControlActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/PrivacyControlActivity;->access$500(Lorg/telegram/ui/PrivacyControlActivity;)V

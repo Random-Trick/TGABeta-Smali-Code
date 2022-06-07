@@ -25,7 +25,7 @@
 .method constructor <init>(Lorg/telegram/ui/PaymentFormActivity;)V
     .registers 2
 
-    .line 2962
+    .line 3181
     iput-object p1, p0, Lorg/telegram/ui/PaymentFormActivity$24;->this$0:Lorg/telegram/ui/PaymentFormActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public currentPasswordUpdated(Lorg/telegram/tgnet/TLRPC$TL_account_password;)V
     .registers 3
 
-    .line 2981
+    .line 3200
     iget-object v0, p0, Lorg/telegram/ui/PaymentFormActivity$24;->this$0:Lorg/telegram/ui/PaymentFormActivity;
 
     invoke-static {v0, p1}, Lorg/telegram/ui/PaymentFormActivity;->access$302(Lorg/telegram/ui/PaymentFormActivity;Lorg/telegram/tgnet/TLRPC$TL_account_password;)Lorg/telegram/tgnet/TLRPC$TL_account_password;
@@ -57,7 +57,7 @@
 .method public didSelectNewCard(Ljava/lang/String;Ljava/lang/String;ZLorg/telegram/tgnet/TLRPC$TL_inputPaymentCredentialsGooglePay;)Z
     .registers 6
 
-    .line 2965
+    .line 3184
     iget-object v0, p0, Lorg/telegram/ui/PaymentFormActivity$24;->this$0:Lorg/telegram/ui/PaymentFormActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/PaymentFormActivity;->access$3300(Lorg/telegram/ui/PaymentFormActivity;)Lorg/telegram/ui/PaymentFormActivity$PaymentFormActivityDelegate;
@@ -66,7 +66,7 @@
 
     if-eqz v0, :cond_11
 
-    .line 2966
+    .line 3185
     iget-object v0, p0, Lorg/telegram/ui/PaymentFormActivity$24;->this$0:Lorg/telegram/ui/PaymentFormActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/PaymentFormActivity;->access$3300(Lorg/telegram/ui/PaymentFormActivity;)Lorg/telegram/ui/PaymentFormActivity$PaymentFormActivityDelegate;
@@ -75,7 +75,7 @@
 
     invoke-interface {v0, p1, p2, p3, p4}, Lorg/telegram/ui/PaymentFormActivity$PaymentFormActivityDelegate;->didSelectNewCard(Ljava/lang/String;Ljava/lang/String;ZLorg/telegram/tgnet/TLRPC$TL_inputPaymentCredentialsGooglePay;)Z
 
-    .line 2968
+    .line 3187
     :cond_11
     iget-object p1, p0, Lorg/telegram/ui/PaymentFormActivity$24;->this$0:Lorg/telegram/ui/PaymentFormActivity;
 
@@ -85,12 +85,12 @@
 
     if-eqz p1, :cond_1e
 
-    .line 2969
+    .line 3188
     iget-object p1, p0, Lorg/telegram/ui/PaymentFormActivity$24;->this$0:Lorg/telegram/ui/PaymentFormActivity;
 
     invoke-virtual {p1}, Lorg/telegram/ui/ActionBar/BaseFragment;->removeSelfFromStack()V
 
-    .line 2971
+    .line 3190
     :cond_1e
     iget-object p1, p0, Lorg/telegram/ui/PaymentFormActivity$24;->this$0:Lorg/telegram/ui/PaymentFormActivity;
 
@@ -114,7 +114,7 @@
 .method public onFragmentDestroyed()V
     .registers 3
 
-    .line 2976
+    .line 3195
     iget-object v0, p0, Lorg/telegram/ui/PaymentFormActivity$24;->this$0:Lorg/telegram/ui/PaymentFormActivity;
 
     const/4 v1, 0x0

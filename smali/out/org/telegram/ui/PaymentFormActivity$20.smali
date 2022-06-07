@@ -25,7 +25,7 @@
 .method constructor <init>(Lorg/telegram/ui/PaymentFormActivity;)V
     .registers 2
 
-    .line 2261
+    .line 2441
     iput-object p1, p0, Lorg/telegram/ui/PaymentFormActivity$20;->this$0:Lorg/telegram/ui/PaymentFormActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public afterTextChanged(Landroid/text/Editable;)V
     .registers 3
 
-    .line 2274
+    .line 2454
     iget-object v0, p0, Lorg/telegram/ui/PaymentFormActivity$20;->this$0:Lorg/telegram/ui/PaymentFormActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/PaymentFormActivity;->access$3200(Lorg/telegram/ui/PaymentFormActivity;)I
@@ -59,7 +59,7 @@
 
     if-ne p1, v0, :cond_1a
 
-    .line 2275
+    .line 2455
     iget-object p1, p0, Lorg/telegram/ui/PaymentFormActivity$20;->this$0:Lorg/telegram/ui/PaymentFormActivity;
 
     const/4 v0, 0x0

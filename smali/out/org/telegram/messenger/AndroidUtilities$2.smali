@@ -26,7 +26,7 @@
 .method constructor <init>(Landroid/view/View;IF)V
     .registers 4
 
-    .line 2395
+    .line 2406
     iput-object p1, p0, Lorg/telegram/messenger/AndroidUtilities$2;->val$view:Landroid/view/View;
 
     iput p2, p0, Lorg/telegram/messenger/AndroidUtilities$2;->val$num:I
@@ -43,7 +43,7 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .registers 4
 
-    .line 2398
+    .line 2409
     iget-object p1, p0, Lorg/telegram/messenger/AndroidUtilities$2;->val$view:Landroid/view/View;
 
     iget v0, p0, Lorg/telegram/messenger/AndroidUtilities$2;->val$num:I

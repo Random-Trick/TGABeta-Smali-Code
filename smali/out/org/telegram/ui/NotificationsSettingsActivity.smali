@@ -738,7 +738,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0e0f26
+    const v2, 0x7f0e0fd6
 
     const-string v3, "ResetNotificationsText"
 
@@ -918,1256 +918,1278 @@
 .end method
 
 .method private synthetic lambda$createView$8(Landroid/view/View;IFF)V
-    .registers 15
+    .registers 21
+
+    move-object/from16 v1, p0
+
+    move-object/from16 v2, p1
+
+    move/from16 v0, p2
 
     .line 373
-    invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getParentActivity()Landroid/app/Activity;
+    invoke-virtual/range {p0 .. p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getParentActivity()Landroid/app/Activity;
 
-    move-result-object p4
+    move-result-object v3
 
-    if-nez p4, :cond_7
+    if-nez v3, :cond_d
 
     return-void
 
     .line 376
-    :cond_7
-    iget p4, p0, Lorg/telegram/ui/NotificationsSettingsActivity;->privateRow:I
+    :cond_d
+    iget v3, v1, Lorg/telegram/ui/NotificationsSettingsActivity;->privateRow:I
 
-    const/4 v0, 0x2
+    const/4 v4, 0x2
 
-    const/4 v1, 0x0
+    const/4 v5, 0x0
 
-    const/4 v2, 0x1
+    const/4 v6, 0x1
 
-    if-eq p2, p4, :cond_3c3
+    if-eq v0, v3, :cond_3d6
 
-    iget v3, p0, Lorg/telegram/ui/NotificationsSettingsActivity;->groupRow:I
+    iget v7, v1, Lorg/telegram/ui/NotificationsSettingsActivity;->groupRow:I
 
-    if-eq p2, v3, :cond_3c3
+    if-eq v0, v7, :cond_3d6
 
-    iget v3, p0, Lorg/telegram/ui/NotificationsSettingsActivity;->channelsRow:I
+    iget v7, v1, Lorg/telegram/ui/NotificationsSettingsActivity;->channelsRow:I
 
-    if-ne p2, v3, :cond_18
+    if-ne v0, v7, :cond_1e
 
-    goto/16 :goto_3c3
+    goto/16 :goto_3d6
 
     .line 403
-    :cond_18
-    iget p3, p0, Lorg/telegram/ui/NotificationsSettingsActivity;->callsRingtoneRow:I
+    :cond_1e
+    iget v3, v1, Lorg/telegram/ui/NotificationsSettingsActivity;->callsRingtoneRow:I
 
-    const/4 p4, 0x0
+    const/4 v7, 0x0
 
-    if-ne p2, p3, :cond_78
+    if-ne v0, v3, :cond_7e
 
     .line 405
-    :try_start_1d
-    iget p3, p0, Lorg/telegram/ui/ActionBar/BaseFragment;->currentAccount:I
+    :try_start_23
+    iget v3, v1, Lorg/telegram/ui/ActionBar/BaseFragment;->currentAccount:I
 
-    invoke-static {p3}, Lorg/telegram/messenger/MessagesController;->getNotificationsSettings(I)Landroid/content/SharedPreferences;
+    invoke-static {v3}, Lorg/telegram/messenger/MessagesController;->getNotificationsSettings(I)Landroid/content/SharedPreferences;
 
-    move-result-object p3
+    move-result-object v3
 
     .line 406
-    new-instance v0, Landroid/content/Intent;
+    new-instance v4, Landroid/content/Intent;
 
-    const-string v3, "android.intent.action.RINGTONE_PICKER"
+    const-string v8, "android.intent.action.RINGTONE_PICKER"
 
-    invoke-direct {v0, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+    invoke-direct {v4, v8}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    const-string v3, "android.intent.extra.ringtone.TYPE"
+    const-string v8, "android.intent.extra.ringtone.TYPE"
 
     .line 407
-    invoke-virtual {v0, v3, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+    invoke-virtual {v4, v8, v6}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    const-string v3, "android.intent.extra.ringtone.SHOW_DEFAULT"
+    const-string v8, "android.intent.extra.ringtone.SHOW_DEFAULT"
 
     .line 408
-    invoke-virtual {v0, v3, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
+    invoke-virtual {v4, v8, v6}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    const-string v3, "android.intent.extra.ringtone.SHOW_SILENT"
+    const-string v8, "android.intent.extra.ringtone.SHOW_SILENT"
 
     .line 409
-    invoke-virtual {v0, v3, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
+    invoke-virtual {v4, v8, v6}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    const-string v3, "android.intent.extra.ringtone.DEFAULT_URI"
+    const-string v8, "android.intent.extra.ringtone.DEFAULT_URI"
 
     .line 410
-    invoke-static {v2}, Landroid/media/RingtoneManager;->getDefaultUri(I)Landroid/net/Uri;
+    invoke-static {v6}, Landroid/media/RingtoneManager;->getDefaultUri(I)Landroid/net/Uri;
 
-    move-result-object v4
+    move-result-object v9
 
-    invoke-virtual {v0, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
+    invoke-virtual {v4, v8, v9}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
     .line 414
-    sget-object v3, Landroid/provider/Settings$System;->DEFAULT_RINGTONE_URI:Landroid/net/Uri;
+    sget-object v8, Landroid/provider/Settings$System;->DEFAULT_RINGTONE_URI:Landroid/net/Uri;
 
-    if-eqz v3, :cond_4b
+    if-eqz v8, :cond_51
 
     .line 416
-    invoke-virtual {v3}, Landroid/net/Uri;->getPath()Ljava/lang/String;
+    invoke-virtual {v8}, Landroid/net/Uri;->getPath()Ljava/lang/String;
 
-    move-result-object v4
+    move-result-object v9
 
-    goto :goto_4c
+    goto :goto_52
 
-    :cond_4b
-    move-object v4, p4
+    :cond_51
+    move-object v9, v7
 
-    :goto_4c
-    const-string v5, "CallsRingtonePath"
+    :goto_52
+    const-string v10, "CallsRingtonePath"
 
     .line 418
-    invoke-interface {p3, v5, v4}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-interface {v3, v10, v9}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object p3
+    move-result-object v3
 
-    if-eqz p3, :cond_68
+    if-eqz v3, :cond_6e
 
-    const-string v5, "NoSound"
+    const-string v10, "NoSound"
 
     .line 419
-    invoke-virtual {p3, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v3, v10}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v10
+
+    if-nez v10, :cond_6e
+
+    .line 420
+    invoke-virtual {v3, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v7
+
+    if-eqz v7, :cond_6a
+
+    move-object v7, v8
+
+    goto :goto_6e
+
+    .line 423
+    :cond_6a
+    invoke-static {v3}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v7
+
+    :cond_6e
+    :goto_6e
+    const-string v3, "android.intent.extra.ringtone.EXISTING_URI"
+
+    .line 426
+    invoke-virtual {v4, v3, v7}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
+
+    .line 427
+    invoke-virtual {v1, v4, v0}, Lorg/telegram/ui/ActionBar/BaseFragment;->startActivityForResult(Landroid/content/Intent;I)V
+    :try_end_76
+    .catch Ljava/lang/Exception; {:try_start_23 .. :try_end_76} :catch_78
+
+    goto/16 :goto_43a
+
+    :catch_78
+    move-exception v0
+
+    .line 429
+    invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
+
+    goto/16 :goto_43a
+
+    .line 431
+    :cond_7e
+    iget v3, v1, Lorg/telegram/ui/NotificationsSettingsActivity;->resetNotificationsRow:I
+
+    const v8, 0x7f0e036d
+
+    const-string v9, "Cancel"
+
+    if-ne v0, v3, :cond_db
+
+    .line 432
+    new-instance v0, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
+
+    invoke-virtual/range {p0 .. p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getParentActivity()Landroid/app/Activity;
+
+    move-result-object v3
+
+    invoke-direct {v0, v3}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
+
+    const v3, 0x7f0e0fd5
+
+    const-string v4, "ResetNotificationsAlertTitle"
+
+    .line 433
+    invoke-static {v4, v3}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v0, v3}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
+
+    const v3, 0x7f0e0fd4
+
+    const-string v4, "ResetNotificationsAlert"
+
+    .line 434
+    invoke-static {v4, v3}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v0, v3}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
+
+    const v3, 0x7f0e0fbe
+
+    const-string v4, "Reset"
+
+    .line 435
+    invoke-static {v4, v3}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
+
+    move-result-object v3
+
+    new-instance v4, Lorg/telegram/ui/NotificationsSettingsActivity$$ExternalSyntheticLambda0;
+
+    invoke-direct {v4, v1}, Lorg/telegram/ui/NotificationsSettingsActivity$$ExternalSyntheticLambda0;-><init>(Lorg/telegram/ui/NotificationsSettingsActivity;)V
+
+    invoke-virtual {v0, v3, v4}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
+
+    .line 458
+    invoke-static {v9, v8}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v0, v3, v7}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setNegativeButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
+
+    .line 459
+    invoke-virtual {v0}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->create()Lorg/telegram/ui/ActionBar/AlertDialog;
+
+    move-result-object v0
+
+    .line 460
+    invoke-virtual {v1, v0}, Lorg/telegram/ui/ActionBar/BaseFragment;->showDialog(Landroid/app/Dialog;)Landroid/app/Dialog;
+
+    const/4 v3, -0x1
+
+    .line 461
+    invoke-virtual {v0, v3}, Lorg/telegram/ui/ActionBar/AlertDialog;->getButton(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextView;
+
+    if-eqz v0, :cond_43a
+
+    const-string v3, "dialogTextRed2"
+
+    .line 463
+    invoke-static {v3}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
+
+    move-result v3
+
+    invoke-virtual {v0, v3}, Landroid/widget/TextView;->setTextColor(I)V
+
+    goto/16 :goto_43a
+
+    .line 465
+    :cond_db
+    iget v3, v1, Lorg/telegram/ui/NotificationsSettingsActivity;->inappSoundRow:I
+
+    if-ne v0, v3, :cond_f9
+
+    .line 466
+    iget v0, v1, Lorg/telegram/ui/ActionBar/BaseFragment;->currentAccount:I
+
+    invoke-static {v0}, Lorg/telegram/messenger/MessagesController;->getNotificationsSettings(I)Landroid/content/SharedPreferences;
+
+    move-result-object v0
+
+    .line 467
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v3
+
+    const-string v4, "EnableInAppSounds"
+
+    .line 468
+    invoke-interface {v0, v4, v6}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v5
 
-    if-nez v5, :cond_68
-
-    .line 420
-    invoke-virtual {p3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p4
-
-    if-eqz p4, :cond_64
-
-    move-object p4, v3
-
-    goto :goto_68
-
-    .line 423
-    :cond_64
-    invoke-static {p3}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
-
-    move-result-object p4
-
-    :cond_68
-    :goto_68
-    const-string p3, "android.intent.extra.ringtone.EXISTING_URI"
-
-    .line 426
-    invoke-virtual {v0, p3, p4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
-
-    .line 427
-    invoke-virtual {p0, v0, p2}, Lorg/telegram/ui/ActionBar/BaseFragment;->startActivityForResult(Landroid/content/Intent;I)V
-    :try_end_70
-    .catch Ljava/lang/Exception; {:try_start_1d .. :try_end_70} :catch_72
-
-    goto/16 :goto_427
-
-    :catch_72
-    move-exception p2
-
-    .line 429
-    invoke-static {p2}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
-
-    goto/16 :goto_427
-
-    .line 431
-    :cond_78
-    iget p3, p0, Lorg/telegram/ui/NotificationsSettingsActivity;->resetNotificationsRow:I
-
-    const v3, 0x7f0e0331
-
-    const-string v4, "Cancel"
-
-    if-ne p2, p3, :cond_d5
-
-    .line 432
-    new-instance p2, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
-
-    invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getParentActivity()Landroid/app/Activity;
-
-    move-result-object p3
-
-    invoke-direct {p2, p3}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
-
-    const p3, 0x7f0e0f25
-
-    const-string v0, "ResetNotificationsAlertTitle"
-
-    .line 433
-    invoke-static {v0, p3}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
-
-    move-result-object p3
-
-    invoke-virtual {p2, p3}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
-
-    const p3, 0x7f0e0f24
-
-    const-string v0, "ResetNotificationsAlert"
-
-    .line 434
-    invoke-static {v0, p3}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
-
-    move-result-object p3
-
-    invoke-virtual {p2, p3}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
-
-    const p3, 0x7f0e0f11
-
-    const-string v0, "Reset"
-
-    .line 435
-    invoke-static {v0, p3}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
-
-    move-result-object p3
-
-    new-instance v0, Lorg/telegram/ui/NotificationsSettingsActivity$$ExternalSyntheticLambda0;
-
-    invoke-direct {v0, p0}, Lorg/telegram/ui/NotificationsSettingsActivity$$ExternalSyntheticLambda0;-><init>(Lorg/telegram/ui/NotificationsSettingsActivity;)V
-
-    invoke-virtual {p2, p3, v0}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
-
-    .line 458
-    invoke-static {v4, v3}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
-
-    move-result-object p3
-
-    invoke-virtual {p2, p3, p4}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setNegativeButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
-
-    .line 459
-    invoke-virtual {p2}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->create()Lorg/telegram/ui/ActionBar/AlertDialog;
-
-    move-result-object p2
-
-    .line 460
-    invoke-virtual {p0, p2}, Lorg/telegram/ui/ActionBar/BaseFragment;->showDialog(Landroid/app/Dialog;)Landroid/app/Dialog;
-
-    const/4 p3, -0x1
-
-    .line 461
-    invoke-virtual {p2, p3}, Lorg/telegram/ui/ActionBar/AlertDialog;->getButton(I)Landroid/view/View;
-
-    move-result-object p2
-
-    check-cast p2, Landroid/widget/TextView;
-
-    if-eqz p2, :cond_427
-
-    const-string p3, "dialogTextRed2"
-
-    .line 463
-    invoke-static {p3}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
-
-    move-result p3
-
-    invoke-virtual {p2, p3}, Landroid/widget/TextView;->setTextColor(I)V
-
-    goto/16 :goto_427
-
-    .line 465
-    :cond_d5
-    iget p3, p0, Lorg/telegram/ui/NotificationsSettingsActivity;->inappSoundRow:I
-
-    if-ne p2, p3, :cond_f3
-
-    .line 466
-    iget p2, p0, Lorg/telegram/ui/ActionBar/BaseFragment;->currentAccount:I
-
-    invoke-static {p2}, Lorg/telegram/messenger/MessagesController;->getNotificationsSettings(I)Landroid/content/SharedPreferences;
-
-    move-result-object p2
-
-    .line 467
-    invoke-interface {p2}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
-
-    move-result-object p3
-
-    const-string p4, "EnableInAppSounds"
-
-    .line 468
-    invoke-interface {p2, p4, v2}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
-
-    move-result v1
-
-    xor-int/lit8 p2, v1, 0x1
+    xor-int/lit8 v0, v5, 0x1
 
     .line 469
-    invoke-interface {p3, p4, p2}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
+    invoke-interface {v3, v4, v0}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
     .line 470
-    invoke-interface {p3}, Landroid/content/SharedPreferences$Editor;->commit()Z
+    invoke-interface {v3}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    goto/16 :goto_427
+    goto/16 :goto_43a
 
     .line 471
-    :cond_f3
-    iget p3, p0, Lorg/telegram/ui/NotificationsSettingsActivity;->inappVibrateRow:I
+    :cond_f9
+    iget v3, v1, Lorg/telegram/ui/NotificationsSettingsActivity;->inappVibrateRow:I
 
-    if-ne p2, p3, :cond_111
+    if-ne v0, v3, :cond_117
 
     .line 472
-    iget p2, p0, Lorg/telegram/ui/ActionBar/BaseFragment;->currentAccount:I
+    iget v0, v1, Lorg/telegram/ui/ActionBar/BaseFragment;->currentAccount:I
 
-    invoke-static {p2}, Lorg/telegram/messenger/MessagesController;->getNotificationsSettings(I)Landroid/content/SharedPreferences;
+    invoke-static {v0}, Lorg/telegram/messenger/MessagesController;->getNotificationsSettings(I)Landroid/content/SharedPreferences;
 
-    move-result-object p2
+    move-result-object v0
 
     .line 473
-    invoke-interface {p2}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
-    move-result-object p3
+    move-result-object v3
 
-    const-string p4, "EnableInAppVibrate"
+    const-string v4, "EnableInAppVibrate"
 
     .line 474
-    invoke-interface {p2, p4, v2}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
+    invoke-interface {v0, v4, v6}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
-    move-result v1
+    move-result v5
 
-    xor-int/lit8 p2, v1, 0x1
+    xor-int/lit8 v0, v5, 0x1
 
     .line 475
-    invoke-interface {p3, p4, p2}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
+    invoke-interface {v3, v4, v0}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
     .line 476
-    invoke-interface {p3}, Landroid/content/SharedPreferences$Editor;->commit()Z
+    invoke-interface {v3}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    goto/16 :goto_427
+    goto/16 :goto_43a
 
     .line 477
-    :cond_111
-    iget p3, p0, Lorg/telegram/ui/NotificationsSettingsActivity;->inappPreviewRow:I
+    :cond_117
+    iget v3, v1, Lorg/telegram/ui/NotificationsSettingsActivity;->inappPreviewRow:I
 
-    if-ne p2, p3, :cond_12f
+    if-ne v0, v3, :cond_135
 
     .line 478
-    iget p2, p0, Lorg/telegram/ui/ActionBar/BaseFragment;->currentAccount:I
+    iget v0, v1, Lorg/telegram/ui/ActionBar/BaseFragment;->currentAccount:I
 
-    invoke-static {p2}, Lorg/telegram/messenger/MessagesController;->getNotificationsSettings(I)Landroid/content/SharedPreferences;
+    invoke-static {v0}, Lorg/telegram/messenger/MessagesController;->getNotificationsSettings(I)Landroid/content/SharedPreferences;
 
-    move-result-object p2
+    move-result-object v0
 
     .line 479
-    invoke-interface {p2}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
-    move-result-object p3
+    move-result-object v3
 
-    const-string p4, "EnableInAppPreview"
+    const-string v4, "EnableInAppPreview"
 
     .line 480
-    invoke-interface {p2, p4, v2}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
+    invoke-interface {v0, v4, v6}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
-    move-result v1
+    move-result v5
 
-    xor-int/lit8 p2, v1, 0x1
+    xor-int/lit8 v0, v5, 0x1
 
     .line 481
-    invoke-interface {p3, p4, p2}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
+    invoke-interface {v3, v4, v0}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
     .line 482
-    invoke-interface {p3}, Landroid/content/SharedPreferences$Editor;->commit()Z
+    invoke-interface {v3}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    goto/16 :goto_427
+    goto/16 :goto_43a
 
     .line 483
-    :cond_12f
-    iget p3, p0, Lorg/telegram/ui/NotificationsSettingsActivity;->inchatSoundRow:I
+    :cond_135
+    iget v3, v1, Lorg/telegram/ui/NotificationsSettingsActivity;->inchatSoundRow:I
 
-    if-ne p2, p3, :cond_156
+    if-ne v0, v3, :cond_15c
 
     .line 484
-    iget p2, p0, Lorg/telegram/ui/ActionBar/BaseFragment;->currentAccount:I
+    iget v0, v1, Lorg/telegram/ui/ActionBar/BaseFragment;->currentAccount:I
 
-    invoke-static {p2}, Lorg/telegram/messenger/MessagesController;->getNotificationsSettings(I)Landroid/content/SharedPreferences;
+    invoke-static {v0}, Lorg/telegram/messenger/MessagesController;->getNotificationsSettings(I)Landroid/content/SharedPreferences;
 
-    move-result-object p2
+    move-result-object v0
 
     .line 485
-    invoke-interface {p2}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
-    move-result-object p3
+    move-result-object v3
 
-    const-string p4, "EnableInChatSound"
+    const-string v4, "EnableInChatSound"
 
     .line 486
-    invoke-interface {p2, p4, v2}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
+    invoke-interface {v0, v4, v6}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
-    move-result v1
+    move-result v5
 
-    xor-int/lit8 p2, v1, 0x1
+    xor-int/lit8 v0, v5, 0x1
 
     .line 487
-    invoke-interface {p3, p4, p2}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
+    invoke-interface {v3, v4, v0}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
     .line 488
-    invoke-interface {p3}, Landroid/content/SharedPreferences$Editor;->commit()Z
+    invoke-interface {v3}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     .line 489
-    invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getNotificationsController()Lorg/telegram/messenger/NotificationsController;
+    invoke-virtual/range {p0 .. p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getNotificationsController()Lorg/telegram/messenger/NotificationsController;
 
-    move-result-object p2
+    move-result-object v0
 
-    xor-int/lit8 p3, v1, 0x1
+    xor-int/lit8 v3, v5, 0x1
 
-    invoke-virtual {p2, p3}, Lorg/telegram/messenger/NotificationsController;->setInChatSoundEnabled(Z)V
+    invoke-virtual {v0, v3}, Lorg/telegram/messenger/NotificationsController;->setInChatSoundEnabled(Z)V
 
-    goto/16 :goto_427
+    goto/16 :goto_43a
 
     .line 490
-    :cond_156
-    iget p3, p0, Lorg/telegram/ui/NotificationsSettingsActivity;->inappPriorityRow:I
+    :cond_15c
+    iget v3, v1, Lorg/telegram/ui/NotificationsSettingsActivity;->inappPriorityRow:I
 
-    if-ne p2, p3, :cond_174
+    if-ne v0, v3, :cond_17a
 
     .line 491
-    iget p2, p0, Lorg/telegram/ui/ActionBar/BaseFragment;->currentAccount:I
+    iget v0, v1, Lorg/telegram/ui/ActionBar/BaseFragment;->currentAccount:I
 
-    invoke-static {p2}, Lorg/telegram/messenger/MessagesController;->getNotificationsSettings(I)Landroid/content/SharedPreferences;
+    invoke-static {v0}, Lorg/telegram/messenger/MessagesController;->getNotificationsSettings(I)Landroid/content/SharedPreferences;
 
-    move-result-object p2
+    move-result-object v0
 
     .line 492
-    invoke-interface {p2}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
-    move-result-object p3
+    move-result-object v3
 
-    const-string p4, "EnableInAppPriority"
+    const-string v4, "EnableInAppPriority"
 
     .line 493
-    invoke-interface {p2, p4, v1}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
+    invoke-interface {v0, v4, v5}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
-    move-result v1
+    move-result v5
 
-    xor-int/lit8 p2, v1, 0x1
+    xor-int/lit8 v0, v5, 0x1
 
     .line 494
-    invoke-interface {p3, p4, p2}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
+    invoke-interface {v3, v4, v0}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
     .line 495
-    invoke-interface {p3}, Landroid/content/SharedPreferences$Editor;->commit()Z
+    invoke-interface {v3}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    goto/16 :goto_427
+    goto/16 :goto_43a
 
     .line 496
-    :cond_174
-    iget p3, p0, Lorg/telegram/ui/NotificationsSettingsActivity;->contactJoinedRow:I
+    :cond_17a
+    iget v3, v1, Lorg/telegram/ui/NotificationsSettingsActivity;->contactJoinedRow:I
 
-    if-ne p2, p3, :cond_1ae
+    if-ne v0, v3, :cond_1b4
 
     .line 497
-    iget p2, p0, Lorg/telegram/ui/ActionBar/BaseFragment;->currentAccount:I
+    iget v0, v1, Lorg/telegram/ui/ActionBar/BaseFragment;->currentAccount:I
 
-    invoke-static {p2}, Lorg/telegram/messenger/MessagesController;->getNotificationsSettings(I)Landroid/content/SharedPreferences;
+    invoke-static {v0}, Lorg/telegram/messenger/MessagesController;->getNotificationsSettings(I)Landroid/content/SharedPreferences;
 
-    move-result-object p2
+    move-result-object v0
 
     .line 498
-    invoke-interface {p2}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
-    move-result-object p3
+    move-result-object v3
 
-    const-string p4, "EnableContactJoined"
+    const-string v4, "EnableContactJoined"
 
     .line 499
-    invoke-interface {p2, p4, v2}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
+    invoke-interface {v0, v4, v6}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
-    move-result v1
+    move-result v5
 
     .line 500
-    iget p2, p0, Lorg/telegram/ui/ActionBar/BaseFragment;->currentAccount:I
+    iget v0, v1, Lorg/telegram/ui/ActionBar/BaseFragment;->currentAccount:I
 
-    invoke-static {p2}, Lorg/telegram/messenger/MessagesController;->getInstance(I)Lorg/telegram/messenger/MessagesController;
+    invoke-static {v0}, Lorg/telegram/messenger/MessagesController;->getInstance(I)Lorg/telegram/messenger/MessagesController;
 
-    move-result-object p2
+    move-result-object v0
 
-    xor-int/lit8 v0, v1, 0x1
+    xor-int/lit8 v7, v5, 0x1
 
-    iput-boolean v0, p2, Lorg/telegram/messenger/MessagesController;->enableJoined:Z
+    iput-boolean v7, v0, Lorg/telegram/messenger/MessagesController;->enableJoined:Z
 
-    xor-int/lit8 p2, v1, 0x1
+    xor-int/lit8 v0, v5, 0x1
 
     .line 501
-    invoke-interface {p3, p4, p2}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
+    invoke-interface {v3, v4, v0}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
     .line 502
-    invoke-interface {p3}, Landroid/content/SharedPreferences$Editor;->commit()Z
+    invoke-interface {v3}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     .line 503
-    new-instance p2, Lorg/telegram/tgnet/TLRPC$TL_account_setContactSignUpNotification;
+    new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_account_setContactSignUpNotification;
 
-    invoke-direct {p2}, Lorg/telegram/tgnet/TLRPC$TL_account_setContactSignUpNotification;-><init>()V
+    invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_account_setContactSignUpNotification;-><init>()V
 
     .line 504
-    iput-boolean v1, p2, Lorg/telegram/tgnet/TLRPC$TL_account_setContactSignUpNotification;->silent:Z
+    iput-boolean v5, v0, Lorg/telegram/tgnet/TLRPC$TL_account_setContactSignUpNotification;->silent:Z
 
     .line 505
-    iget p3, p0, Lorg/telegram/ui/ActionBar/BaseFragment;->currentAccount:I
+    iget v3, v1, Lorg/telegram/ui/ActionBar/BaseFragment;->currentAccount:I
 
-    invoke-static {p3}, Lorg/telegram/tgnet/ConnectionsManager;->getInstance(I)Lorg/telegram/tgnet/ConnectionsManager;
+    invoke-static {v3}, Lorg/telegram/tgnet/ConnectionsManager;->getInstance(I)Lorg/telegram/tgnet/ConnectionsManager;
 
-    move-result-object p3
+    move-result-object v3
 
-    sget-object p4, Lorg/telegram/ui/NotificationsSettingsActivity$$ExternalSyntheticLambda8;->INSTANCE:Lorg/telegram/ui/NotificationsSettingsActivity$$ExternalSyntheticLambda8;
+    sget-object v4, Lorg/telegram/ui/NotificationsSettingsActivity$$ExternalSyntheticLambda8;->INSTANCE:Lorg/telegram/ui/NotificationsSettingsActivity$$ExternalSyntheticLambda8;
 
-    invoke-virtual {p3, p2, p4}, Lorg/telegram/tgnet/ConnectionsManager;->sendRequest(Lorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/RequestDelegate;)I
+    invoke-virtual {v3, v0, v4}, Lorg/telegram/tgnet/ConnectionsManager;->sendRequest(Lorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/RequestDelegate;)I
 
-    goto/16 :goto_427
+    goto/16 :goto_43a
 
     .line 508
-    :cond_1ae
-    iget p3, p0, Lorg/telegram/ui/NotificationsSettingsActivity;->pinnedMessageRow:I
+    :cond_1b4
+    iget v3, v1, Lorg/telegram/ui/NotificationsSettingsActivity;->pinnedMessageRow:I
 
-    if-ne p2, p3, :cond_1cc
+    if-ne v0, v3, :cond_1d2
 
     .line 509
-    iget p2, p0, Lorg/telegram/ui/ActionBar/BaseFragment;->currentAccount:I
+    iget v0, v1, Lorg/telegram/ui/ActionBar/BaseFragment;->currentAccount:I
 
-    invoke-static {p2}, Lorg/telegram/messenger/MessagesController;->getNotificationsSettings(I)Landroid/content/SharedPreferences;
+    invoke-static {v0}, Lorg/telegram/messenger/MessagesController;->getNotificationsSettings(I)Landroid/content/SharedPreferences;
 
-    move-result-object p2
+    move-result-object v0
 
     .line 510
-    invoke-interface {p2}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
-    move-result-object p3
+    move-result-object v3
 
-    const-string p4, "PinnedMessages"
+    const-string v4, "PinnedMessages"
 
     .line 511
-    invoke-interface {p2, p4, v2}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
+    invoke-interface {v0, v4, v6}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
-    move-result v1
+    move-result v5
 
-    xor-int/lit8 p2, v1, 0x1
+    xor-int/lit8 v0, v5, 0x1
 
     .line 512
-    invoke-interface {p3, p4, p2}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
+    invoke-interface {v3, v4, v0}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
     .line 513
-    invoke-interface {p3}, Landroid/content/SharedPreferences$Editor;->commit()Z
+    invoke-interface {v3}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    goto/16 :goto_427
+    goto/16 :goto_43a
 
     .line 514
-    :cond_1cc
-    iget p3, p0, Lorg/telegram/ui/NotificationsSettingsActivity;->androidAutoAlertRow:I
+    :cond_1d2
+    iget v3, v1, Lorg/telegram/ui/NotificationsSettingsActivity;->androidAutoAlertRow:I
 
-    if-ne p2, p3, :cond_1ea
+    if-ne v0, v3, :cond_1f0
 
     .line 515
-    iget p2, p0, Lorg/telegram/ui/ActionBar/BaseFragment;->currentAccount:I
+    iget v0, v1, Lorg/telegram/ui/ActionBar/BaseFragment;->currentAccount:I
 
-    invoke-static {p2}, Lorg/telegram/messenger/MessagesController;->getNotificationsSettings(I)Landroid/content/SharedPreferences;
+    invoke-static {v0}, Lorg/telegram/messenger/MessagesController;->getNotificationsSettings(I)Landroid/content/SharedPreferences;
 
-    move-result-object p2
+    move-result-object v0
 
     .line 516
-    invoke-interface {p2}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
-    move-result-object p3
+    move-result-object v3
 
-    const-string p4, "EnableAutoNotifications"
+    const-string v4, "EnableAutoNotifications"
 
     .line 517
-    invoke-interface {p2, p4, v1}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
+    invoke-interface {v0, v4, v5}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
-    move-result v1
+    move-result v5
 
-    xor-int/lit8 p2, v1, 0x1
+    xor-int/lit8 v0, v5, 0x1
 
     .line 518
-    invoke-interface {p3, p4, p2}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
+    invoke-interface {v3, v4, v0}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
     .line 519
-    invoke-interface {p3}, Landroid/content/SharedPreferences$Editor;->commit()Z
+    invoke-interface {v3}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    goto/16 :goto_427
+    goto/16 :goto_43a
 
     .line 520
-    :cond_1ea
-    iget p3, p0, Lorg/telegram/ui/NotificationsSettingsActivity;->badgeNumberShowRow:I
+    :cond_1f0
+    iget v3, v1, Lorg/telegram/ui/NotificationsSettingsActivity;->badgeNumberShowRow:I
 
-    if-ne p2, p3, :cond_21d
+    if-ne v0, v3, :cond_223
 
     .line 521
-    iget p2, p0, Lorg/telegram/ui/ActionBar/BaseFragment;->currentAccount:I
+    iget v0, v1, Lorg/telegram/ui/ActionBar/BaseFragment;->currentAccount:I
 
-    invoke-static {p2}, Lorg/telegram/messenger/MessagesController;->getNotificationsSettings(I)Landroid/content/SharedPreferences;
+    invoke-static {v0}, Lorg/telegram/messenger/MessagesController;->getNotificationsSettings(I)Landroid/content/SharedPreferences;
 
-    move-result-object p2
+    move-result-object v0
 
     .line 522
-    invoke-interface {p2}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
-    move-result-object p2
+    move-result-object v0
 
     .line 523
-    invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getNotificationsController()Lorg/telegram/messenger/NotificationsController;
+    invoke-virtual/range {p0 .. p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getNotificationsController()Lorg/telegram/messenger/NotificationsController;
 
-    move-result-object p3
+    move-result-object v3
 
-    iget-boolean v1, p3, Lorg/telegram/messenger/NotificationsController;->showBadgeNumber:Z
+    iget-boolean v5, v3, Lorg/telegram/messenger/NotificationsController;->showBadgeNumber:Z
 
     .line 524
-    invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getNotificationsController()Lorg/telegram/messenger/NotificationsController;
+    invoke-virtual/range {p0 .. p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getNotificationsController()Lorg/telegram/messenger/NotificationsController;
 
-    move-result-object p3
+    move-result-object v3
 
-    xor-int/lit8 p4, v1, 0x1
+    xor-int/lit8 v4, v5, 0x1
 
-    iput-boolean p4, p3, Lorg/telegram/messenger/NotificationsController;->showBadgeNumber:Z
+    iput-boolean v4, v3, Lorg/telegram/messenger/NotificationsController;->showBadgeNumber:Z
 
     .line 525
-    invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getNotificationsController()Lorg/telegram/messenger/NotificationsController;
+    invoke-virtual/range {p0 .. p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getNotificationsController()Lorg/telegram/messenger/NotificationsController;
 
-    move-result-object p3
+    move-result-object v3
 
-    iget-boolean p3, p3, Lorg/telegram/messenger/NotificationsController;->showBadgeNumber:Z
+    iget-boolean v3, v3, Lorg/telegram/messenger/NotificationsController;->showBadgeNumber:Z
 
-    const-string p4, "badgeNumber"
+    const-string v4, "badgeNumber"
 
-    invoke-interface {p2, p4, p3}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
+    invoke-interface {v0, v4, v3}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
     .line 526
-    invoke-interface {p2}, Landroid/content/SharedPreferences$Editor;->commit()Z
+    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     .line 527
-    invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getNotificationsController()Lorg/telegram/messenger/NotificationsController;
+    invoke-virtual/range {p0 .. p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getNotificationsController()Lorg/telegram/messenger/NotificationsController;
 
-    move-result-object p2
+    move-result-object v0
 
-    invoke-virtual {p2}, Lorg/telegram/messenger/NotificationsController;->updateBadge()V
+    invoke-virtual {v0}, Lorg/telegram/messenger/NotificationsController;->updateBadge()V
 
-    goto/16 :goto_427
+    goto/16 :goto_43a
 
     .line 528
-    :cond_21d
-    iget p3, p0, Lorg/telegram/ui/NotificationsSettingsActivity;->badgeNumberMutedRow:I
+    :cond_223
+    iget v3, v1, Lorg/telegram/ui/NotificationsSettingsActivity;->badgeNumberMutedRow:I
 
-    if-ne p2, p3, :cond_257
+    if-ne v0, v3, :cond_25d
 
     .line 529
-    iget p2, p0, Lorg/telegram/ui/ActionBar/BaseFragment;->currentAccount:I
+    iget v0, v1, Lorg/telegram/ui/ActionBar/BaseFragment;->currentAccount:I
 
-    invoke-static {p2}, Lorg/telegram/messenger/MessagesController;->getNotificationsSettings(I)Landroid/content/SharedPreferences;
+    invoke-static {v0}, Lorg/telegram/messenger/MessagesController;->getNotificationsSettings(I)Landroid/content/SharedPreferences;
 
-    move-result-object p2
+    move-result-object v0
 
     .line 530
-    invoke-interface {p2}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
-    move-result-object p2
+    move-result-object v0
 
     .line 531
-    invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getNotificationsController()Lorg/telegram/messenger/NotificationsController;
+    invoke-virtual/range {p0 .. p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getNotificationsController()Lorg/telegram/messenger/NotificationsController;
 
-    move-result-object p3
+    move-result-object v3
 
-    iget-boolean v1, p3, Lorg/telegram/messenger/NotificationsController;->showBadgeMuted:Z
+    iget-boolean v5, v3, Lorg/telegram/messenger/NotificationsController;->showBadgeMuted:Z
 
     .line 532
-    invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getNotificationsController()Lorg/telegram/messenger/NotificationsController;
+    invoke-virtual/range {p0 .. p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getNotificationsController()Lorg/telegram/messenger/NotificationsController;
 
-    move-result-object p3
+    move-result-object v3
 
-    xor-int/lit8 p4, v1, 0x1
+    xor-int/lit8 v4, v5, 0x1
 
-    iput-boolean p4, p3, Lorg/telegram/messenger/NotificationsController;->showBadgeMuted:Z
+    iput-boolean v4, v3, Lorg/telegram/messenger/NotificationsController;->showBadgeMuted:Z
 
     .line 533
-    invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getNotificationsController()Lorg/telegram/messenger/NotificationsController;
+    invoke-virtual/range {p0 .. p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getNotificationsController()Lorg/telegram/messenger/NotificationsController;
 
-    move-result-object p3
+    move-result-object v3
 
-    iget-boolean p3, p3, Lorg/telegram/messenger/NotificationsController;->showBadgeMuted:Z
+    iget-boolean v3, v3, Lorg/telegram/messenger/NotificationsController;->showBadgeMuted:Z
 
-    const-string p4, "badgeNumberMuted"
+    const-string v4, "badgeNumberMuted"
 
-    invoke-interface {p2, p4, p3}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
+    invoke-interface {v0, v4, v3}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
     .line 534
-    invoke-interface {p2}, Landroid/content/SharedPreferences$Editor;->commit()Z
+    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     .line 535
-    invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getNotificationsController()Lorg/telegram/messenger/NotificationsController;
+    invoke-virtual/range {p0 .. p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getNotificationsController()Lorg/telegram/messenger/NotificationsController;
 
-    move-result-object p2
+    move-result-object v0
 
-    invoke-virtual {p2}, Lorg/telegram/messenger/NotificationsController;->updateBadge()V
+    invoke-virtual {v0}, Lorg/telegram/messenger/NotificationsController;->updateBadge()V
 
     .line 536
-    invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getMessagesStorage()Lorg/telegram/messenger/MessagesStorage;
+    invoke-virtual/range {p0 .. p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getMessagesStorage()Lorg/telegram/messenger/MessagesStorage;
 
-    move-result-object p2
+    move-result-object v0
 
-    invoke-virtual {p2}, Lorg/telegram/messenger/MessagesStorage;->updateMutedDialogsFiltersCounters()V
+    invoke-virtual {v0}, Lorg/telegram/messenger/MessagesStorage;->updateMutedDialogsFiltersCounters()V
 
-    goto/16 :goto_427
+    goto/16 :goto_43a
 
     .line 537
-    :cond_257
-    iget p3, p0, Lorg/telegram/ui/NotificationsSettingsActivity;->badgeNumberMessagesRow:I
+    :cond_25d
+    iget v3, v1, Lorg/telegram/ui/NotificationsSettingsActivity;->badgeNumberMessagesRow:I
 
-    if-ne p2, p3, :cond_28a
+    if-ne v0, v3, :cond_290
 
     .line 538
-    iget p2, p0, Lorg/telegram/ui/ActionBar/BaseFragment;->currentAccount:I
+    iget v0, v1, Lorg/telegram/ui/ActionBar/BaseFragment;->currentAccount:I
 
-    invoke-static {p2}, Lorg/telegram/messenger/MessagesController;->getNotificationsSettings(I)Landroid/content/SharedPreferences;
+    invoke-static {v0}, Lorg/telegram/messenger/MessagesController;->getNotificationsSettings(I)Landroid/content/SharedPreferences;
 
-    move-result-object p2
+    move-result-object v0
 
     .line 539
-    invoke-interface {p2}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
-    move-result-object p2
+    move-result-object v0
 
     .line 540
-    invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getNotificationsController()Lorg/telegram/messenger/NotificationsController;
+    invoke-virtual/range {p0 .. p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getNotificationsController()Lorg/telegram/messenger/NotificationsController;
 
-    move-result-object p3
+    move-result-object v3
 
-    iget-boolean v1, p3, Lorg/telegram/messenger/NotificationsController;->showBadgeMessages:Z
+    iget-boolean v5, v3, Lorg/telegram/messenger/NotificationsController;->showBadgeMessages:Z
 
     .line 541
-    invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getNotificationsController()Lorg/telegram/messenger/NotificationsController;
+    invoke-virtual/range {p0 .. p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getNotificationsController()Lorg/telegram/messenger/NotificationsController;
 
-    move-result-object p3
+    move-result-object v3
 
-    xor-int/lit8 p4, v1, 0x1
+    xor-int/lit8 v4, v5, 0x1
 
-    iput-boolean p4, p3, Lorg/telegram/messenger/NotificationsController;->showBadgeMessages:Z
+    iput-boolean v4, v3, Lorg/telegram/messenger/NotificationsController;->showBadgeMessages:Z
 
     .line 542
-    invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getNotificationsController()Lorg/telegram/messenger/NotificationsController;
+    invoke-virtual/range {p0 .. p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getNotificationsController()Lorg/telegram/messenger/NotificationsController;
 
-    move-result-object p3
+    move-result-object v3
 
-    iget-boolean p3, p3, Lorg/telegram/messenger/NotificationsController;->showBadgeMessages:Z
+    iget-boolean v3, v3, Lorg/telegram/messenger/NotificationsController;->showBadgeMessages:Z
 
-    const-string p4, "badgeNumberMessages"
+    const-string v4, "badgeNumberMessages"
 
-    invoke-interface {p2, p4, p3}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
+    invoke-interface {v0, v4, v3}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
     .line 543
-    invoke-interface {p2}, Landroid/content/SharedPreferences$Editor;->commit()Z
+    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     .line 544
-    invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getNotificationsController()Lorg/telegram/messenger/NotificationsController;
+    invoke-virtual/range {p0 .. p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getNotificationsController()Lorg/telegram/messenger/NotificationsController;
 
-    move-result-object p2
+    move-result-object v0
 
-    invoke-virtual {p2}, Lorg/telegram/messenger/NotificationsController;->updateBadge()V
+    invoke-virtual {v0}, Lorg/telegram/messenger/NotificationsController;->updateBadge()V
 
-    goto/16 :goto_427
+    goto/16 :goto_43a
 
     .line 545
-    :cond_28a
-    iget p3, p0, Lorg/telegram/ui/NotificationsSettingsActivity;->notificationsServiceConnectionRow:I
+    :cond_290
+    iget v3, v1, Lorg/telegram/ui/NotificationsSettingsActivity;->notificationsServiceConnectionRow:I
 
-    if-ne p2, p3, :cond_2c4
+    if-ne v0, v3, :cond_2ca
 
     .line 546
-    iget p2, p0, Lorg/telegram/ui/ActionBar/BaseFragment;->currentAccount:I
+    iget v0, v1, Lorg/telegram/ui/ActionBar/BaseFragment;->currentAccount:I
 
-    invoke-static {p2}, Lorg/telegram/messenger/MessagesController;->getNotificationsSettings(I)Landroid/content/SharedPreferences;
+    invoke-static {v0}, Lorg/telegram/messenger/MessagesController;->getNotificationsSettings(I)Landroid/content/SharedPreferences;
 
-    move-result-object p2
+    move-result-object v0
 
     .line 547
-    invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getMessagesController()Lorg/telegram/messenger/MessagesController;
+    invoke-virtual/range {p0 .. p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getMessagesController()Lorg/telegram/messenger/MessagesController;
 
-    move-result-object p3
+    move-result-object v3
 
-    iget-boolean p3, p3, Lorg/telegram/messenger/MessagesController;->backgroundConnection:Z
+    iget-boolean v3, v3, Lorg/telegram/messenger/MessagesController;->backgroundConnection:Z
 
-    const-string p4, "pushConnection"
+    const-string v4, "pushConnection"
 
-    invoke-interface {p2, p4, p3}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
+    invoke-interface {v0, v4, v3}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
-    move-result p3
+    move-result v3
 
     .line 548
-    invoke-interface {p2}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
-    move-result-object p2
+    move-result-object v0
 
-    xor-int/lit8 v0, p3, 0x1
+    xor-int/lit8 v7, v3, 0x1
 
     .line 549
-    invoke-interface {p2, p4, v0}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
+    invoke-interface {v0, v4, v7}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
     .line 550
-    invoke-interface {p2}, Landroid/content/SharedPreferences$Editor;->commit()Z
+    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    if-nez p3, :cond_2b8
+    if-nez v3, :cond_2be
 
     .line 552
-    iget p2, p0, Lorg/telegram/ui/ActionBar/BaseFragment;->currentAccount:I
+    iget v0, v1, Lorg/telegram/ui/ActionBar/BaseFragment;->currentAccount:I
 
-    invoke-static {p2}, Lorg/telegram/tgnet/ConnectionsManager;->getInstance(I)Lorg/telegram/tgnet/ConnectionsManager;
+    invoke-static {v0}, Lorg/telegram/tgnet/ConnectionsManager;->getInstance(I)Lorg/telegram/tgnet/ConnectionsManager;
 
-    move-result-object p2
+    move-result-object v0
 
-    invoke-virtual {p2, v2}, Lorg/telegram/tgnet/ConnectionsManager;->setPushConnectionEnabled(Z)V
+    invoke-virtual {v0, v6}, Lorg/telegram/tgnet/ConnectionsManager;->setPushConnectionEnabled(Z)V
 
-    goto :goto_2c1
+    goto :goto_2c7
 
     .line 554
-    :cond_2b8
-    iget p2, p0, Lorg/telegram/ui/ActionBar/BaseFragment;->currentAccount:I
+    :cond_2be
+    iget v0, v1, Lorg/telegram/ui/ActionBar/BaseFragment;->currentAccount:I
 
-    invoke-static {p2}, Lorg/telegram/tgnet/ConnectionsManager;->getInstance(I)Lorg/telegram/tgnet/ConnectionsManager;
+    invoke-static {v0}, Lorg/telegram/tgnet/ConnectionsManager;->getInstance(I)Lorg/telegram/tgnet/ConnectionsManager;
 
-    move-result-object p2
+    move-result-object v0
 
-    invoke-virtual {p2, v1}, Lorg/telegram/tgnet/ConnectionsManager;->setPushConnectionEnabled(Z)V
+    invoke-virtual {v0, v5}, Lorg/telegram/tgnet/ConnectionsManager;->setPushConnectionEnabled(Z)V
 
-    :goto_2c1
-    move v1, p3
+    :goto_2c7
+    move v5, v3
 
-    goto/16 :goto_427
+    goto/16 :goto_43a
 
     .line 556
-    :cond_2c4
-    iget p3, p0, Lorg/telegram/ui/NotificationsSettingsActivity;->accountsAllRow:I
+    :cond_2ca
+    iget v3, v1, Lorg/telegram/ui/NotificationsSettingsActivity;->accountsAllRow:I
 
-    const/4 v5, 0x3
+    const/4 v10, 0x4
 
-    if-ne p2, p3, :cond_30a
+    if-ne v0, v3, :cond_310
 
     .line 557
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getGlobalNotificationsSettings()Landroid/content/SharedPreferences;
 
-    move-result-object p2
+    move-result-object v0
 
-    const-string p3, "AllAccounts"
+    const-string v3, "AllAccounts"
 
     .line 558
-    invoke-interface {p2, p3, v2}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
+    invoke-interface {v0, v3, v6}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
-    move-result p4
+    move-result v4
 
     .line 559
-    invoke-interface {p2}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
-    move-result-object p2
+    move-result-object v0
 
-    xor-int/lit8 v0, p4, 0x1
+    xor-int/lit8 v7, v4, 0x1
 
     .line 560
-    invoke-interface {p2, p3, v0}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
+    invoke-interface {v0, v3, v7}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
     .line 561
-    invoke-interface {p2}, Landroid/content/SharedPreferences$Editor;->commit()Z
+    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    xor-int/lit8 p2, p4, 0x1
+    xor-int/lit8 v0, v4, 0x1
 
     .line 562
-    sput-boolean p2, Lorg/telegram/messenger/SharedConfig;->showNotificationsForAllAccounts:Z
+    sput-boolean v0, Lorg/telegram/messenger/SharedConfig;->showNotificationsForAllAccounts:Z
 
-    :goto_2e3
-    if-ge v1, v5, :cond_307
+    :goto_2e9
+    if-ge v5, v10, :cond_30d
 
     .line 564
-    sget-boolean p2, Lorg/telegram/messenger/SharedConfig;->showNotificationsForAllAccounts:Z
+    sget-boolean v0, Lorg/telegram/messenger/SharedConfig;->showNotificationsForAllAccounts:Z
 
-    if-eqz p2, :cond_2f1
+    if-eqz v0, :cond_2f7
 
     .line 565
-    invoke-static {v1}, Lorg/telegram/messenger/NotificationsController;->getInstance(I)Lorg/telegram/messenger/NotificationsController;
+    invoke-static {v5}, Lorg/telegram/messenger/NotificationsController;->getInstance(I)Lorg/telegram/messenger/NotificationsController;
 
-    move-result-object p2
+    move-result-object v0
 
-    invoke-virtual {p2}, Lorg/telegram/messenger/NotificationsController;->showNotifications()V
+    invoke-virtual {v0}, Lorg/telegram/messenger/NotificationsController;->showNotifications()V
 
-    goto :goto_304
+    goto :goto_30a
 
     .line 567
-    :cond_2f1
-    iget p2, p0, Lorg/telegram/ui/ActionBar/BaseFragment;->currentAccount:I
+    :cond_2f7
+    iget v0, v1, Lorg/telegram/ui/ActionBar/BaseFragment;->currentAccount:I
 
-    if-ne v1, p2, :cond_2fd
+    if-ne v5, v0, :cond_303
 
     .line 568
-    invoke-static {v1}, Lorg/telegram/messenger/NotificationsController;->getInstance(I)Lorg/telegram/messenger/NotificationsController;
+    invoke-static {v5}, Lorg/telegram/messenger/NotificationsController;->getInstance(I)Lorg/telegram/messenger/NotificationsController;
 
-    move-result-object p2
+    move-result-object v0
 
-    invoke-virtual {p2}, Lorg/telegram/messenger/NotificationsController;->showNotifications()V
+    invoke-virtual {v0}, Lorg/telegram/messenger/NotificationsController;->showNotifications()V
 
-    goto :goto_304
+    goto :goto_30a
 
     .line 570
-    :cond_2fd
-    invoke-static {v1}, Lorg/telegram/messenger/NotificationsController;->getInstance(I)Lorg/telegram/messenger/NotificationsController;
+    :cond_303
+    invoke-static {v5}, Lorg/telegram/messenger/NotificationsController;->getInstance(I)Lorg/telegram/messenger/NotificationsController;
 
-    move-result-object p2
+    move-result-object v0
 
-    invoke-virtual {p2}, Lorg/telegram/messenger/NotificationsController;->hideNotifications()V
+    invoke-virtual {v0}, Lorg/telegram/messenger/NotificationsController;->hideNotifications()V
 
-    :goto_304
-    add-int/lit8 v1, v1, 0x1
+    :goto_30a
+    add-int/lit8 v5, v5, 0x1
 
-    goto :goto_2e3
+    goto :goto_2e9
 
-    :cond_307
-    move v1, p4
+    :cond_30d
+    move v5, v4
 
-    goto/16 :goto_427
+    goto/16 :goto_43a
 
     .line 574
-    :cond_30a
-    iget p3, p0, Lorg/telegram/ui/NotificationsSettingsActivity;->notificationsServiceRow:I
+    :cond_310
+    iget v3, v1, Lorg/telegram/ui/NotificationsSettingsActivity;->notificationsServiceRow:I
 
-    if-ne p2, p3, :cond_331
+    if-ne v0, v3, :cond_337
 
     .line 575
-    iget p2, p0, Lorg/telegram/ui/ActionBar/BaseFragment;->currentAccount:I
+    iget v0, v1, Lorg/telegram/ui/ActionBar/BaseFragment;->currentAccount:I
 
-    invoke-static {p2}, Lorg/telegram/messenger/MessagesController;->getNotificationsSettings(I)Landroid/content/SharedPreferences;
+    invoke-static {v0}, Lorg/telegram/messenger/MessagesController;->getNotificationsSettings(I)Landroid/content/SharedPreferences;
 
-    move-result-object p2
+    move-result-object v0
 
     .line 576
-    invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getMessagesController()Lorg/telegram/messenger/MessagesController;
+    invoke-virtual/range {p0 .. p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getMessagesController()Lorg/telegram/messenger/MessagesController;
 
-    move-result-object p3
+    move-result-object v3
 
-    iget-boolean p3, p3, Lorg/telegram/messenger/MessagesController;->keepAliveService:Z
+    iget-boolean v3, v3, Lorg/telegram/messenger/MessagesController;->keepAliveService:Z
 
-    const-string p4, "pushService"
+    const-string v4, "pushService"
 
-    invoke-interface {p2, p4, p3}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
+    invoke-interface {v0, v4, v3}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
-    move-result v1
+    move-result v5
 
     .line 577
-    invoke-interface {p2}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
-    move-result-object p2
+    move-result-object v0
 
-    xor-int/lit8 p3, v1, 0x1
+    xor-int/lit8 v3, v5, 0x1
 
     .line 578
-    invoke-interface {p2, p4, p3}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
+    invoke-interface {v0, v4, v3}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
     .line 579
-    invoke-interface {p2}, Landroid/content/SharedPreferences$Editor;->commit()Z
+    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     .line 580
     invoke-static {}, Lorg/telegram/messenger/ApplicationLoader;->startPushService()V
 
-    goto/16 :goto_427
+    goto/16 :goto_43a
 
     .line 581
-    :cond_331
-    iget p3, p0, Lorg/telegram/ui/NotificationsSettingsActivity;->callsVibrateRow:I
+    :cond_337
+    iget v3, v1, Lorg/telegram/ui/NotificationsSettingsActivity;->callsVibrateRow:I
 
-    if-ne p2, p3, :cond_356
+    if-ne v0, v3, :cond_35c
 
     .line 582
-    invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getParentActivity()Landroid/app/Activity;
+    invoke-virtual/range {p0 .. p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getParentActivity()Landroid/app/Activity;
 
-    move-result-object p3
+    move-result-object v3
 
-    if-nez p3, :cond_33c
+    if-nez v3, :cond_342
 
     return-void
 
     .line 586
-    :cond_33c
-    iget p3, p0, Lorg/telegram/ui/NotificationsSettingsActivity;->callsVibrateRow:I
+    :cond_342
+    iget v3, v1, Lorg/telegram/ui/NotificationsSettingsActivity;->callsVibrateRow:I
 
-    if-ne p2, p3, :cond_342
+    if-ne v0, v3, :cond_348
 
-    const-string p4, "vibrate_calls"
+    const-string v7, "vibrate_calls"
 
     .line 589
-    :cond_342
-    invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getParentActivity()Landroid/app/Activity;
+    :cond_348
+    invoke-virtual/range {p0 .. p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getParentActivity()Landroid/app/Activity;
 
-    move-result-object p3
+    move-result-object v3
 
-    const-wide/16 v3, 0x0
+    const-wide/16 v8, 0x0
 
-    new-instance v0, Lorg/telegram/ui/NotificationsSettingsActivity$$ExternalSyntheticLambda5;
+    new-instance v4, Lorg/telegram/ui/NotificationsSettingsActivity$$ExternalSyntheticLambda5;
 
-    invoke-direct {v0, p0, p2}, Lorg/telegram/ui/NotificationsSettingsActivity$$ExternalSyntheticLambda5;-><init>(Lorg/telegram/ui/NotificationsSettingsActivity;I)V
+    invoke-direct {v4, v1, v0}, Lorg/telegram/ui/NotificationsSettingsActivity$$ExternalSyntheticLambda5;-><init>(Lorg/telegram/ui/NotificationsSettingsActivity;I)V
 
-    invoke-static {p3, v3, v4, p4, v0}, Lorg/telegram/ui/Components/AlertsCreator;->createVibrationSelectDialog(Landroid/app/Activity;JLjava/lang/String;Ljava/lang/Runnable;)Landroid/app/Dialog;
-
-    move-result-object p2
-
-    invoke-virtual {p0, p2}, Lorg/telegram/ui/ActionBar/BaseFragment;->showDialog(Landroid/app/Dialog;)Landroid/app/Dialog;
-
-    goto/16 :goto_427
-
-    .line 590
-    :cond_356
-    iget p3, p0, Lorg/telegram/ui/NotificationsSettingsActivity;->repeatRow:I
-
-    if-ne p2, p3, :cond_427
-
-    .line 591
-    new-instance p3, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
-
-    invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getParentActivity()Landroid/app/Activity;
-
-    move-result-object v6
-
-    invoke-direct {p3, v6}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
-
-    const v6, 0x7f0e0ed0
-
-    const-string v7, "RepeatNotifications"
-
-    .line 592
-    invoke-static {v7, v6}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
-
-    move-result-object v6
-
-    invoke-virtual {p3, v6}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
-
-    const/4 v6, 0x7
-
-    new-array v6, v6, [Ljava/lang/CharSequence;
-
-    const v7, 0x7f0e0ece
-
-    const-string v8, "RepeatDisabled"
-
-    .line 594
-    invoke-static {v8, v7}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
-
-    move-result-object v7
-
-    aput-object v7, v6, v1
-
-    const-string v7, "Minutes"
-
-    const/4 v8, 0x5
-
-    .line 595
-    invoke-static {v7, v8}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
-
-    move-result-object v9
-
-    aput-object v9, v6, v2
-
-    const/16 v9, 0xa
-
-    .line 596
-    invoke-static {v7, v9}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
-
-    move-result-object v9
-
-    aput-object v9, v6, v0
-
-    const/16 v9, 0x1e
-
-    .line 597
-    invoke-static {v7, v9}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
-
-    move-result-object v7
-
-    aput-object v7, v6, v5
-
-    const/4 v5, 0x4
-
-    const-string v7, "Hours"
-
-    .line 598
-    invoke-static {v7, v2}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
-
-    move-result-object v9
-
-    aput-object v9, v6, v5
-
-    .line 599
-    invoke-static {v7, v0}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    invoke-static {v3, v8, v9, v7, v4}, Lorg/telegram/ui/Components/AlertsCreator;->createVibrationSelectDialog(Landroid/app/Activity;JLjava/lang/String;Ljava/lang/Runnable;)Landroid/app/Dialog;
 
     move-result-object v0
 
-    aput-object v0, v6, v8
+    invoke-virtual {v1, v0}, Lorg/telegram/ui/ActionBar/BaseFragment;->showDialog(Landroid/app/Dialog;)Landroid/app/Dialog;
 
-    const/4 v0, 0x6
+    goto/16 :goto_43a
+
+    .line 590
+    :cond_35c
+    iget v3, v1, Lorg/telegram/ui/NotificationsSettingsActivity;->repeatRow:I
+
+    if-ne v0, v3, :cond_43a
+
+    .line 591
+    new-instance v3, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
+
+    invoke-virtual/range {p0 .. p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getParentActivity()Landroid/app/Activity;
+
+    move-result-object v11
+
+    invoke-direct {v3, v11}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
+
+    const v11, 0x7f0e0f7d
+
+    const-string v12, "RepeatNotifications"
+
+    .line 592
+    invoke-static {v12, v11}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
+
+    move-result-object v11
+
+    invoke-virtual {v3, v11}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
+
+    const/4 v11, 0x7
+
+    new-array v11, v11, [Ljava/lang/CharSequence;
+
+    const v12, 0x7f0e0f7b
+
+    const-string v13, "RepeatDisabled"
+
+    .line 594
+    invoke-static {v13, v12}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
+
+    move-result-object v12
+
+    aput-object v12, v11, v5
+
+    new-array v12, v5, [Ljava/lang/Object;
+
+    const-string v13, "Minutes"
+
+    const/4 v14, 0x5
+
+    .line 595
+    invoke-static {v13, v14, v12}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v12
+
+    aput-object v12, v11, v6
+
+    const/16 v12, 0xa
+
+    new-array v15, v5, [Ljava/lang/Object;
+
+    .line 596
+    invoke-static {v13, v12, v15}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v12
+
+    aput-object v12, v11, v4
+
+    const/4 v12, 0x3
+
+    const/16 v15, 0x1e
+
+    new-array v7, v5, [Ljava/lang/Object;
+
+    .line 597
+    invoke-static {v13, v15, v7}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v7
+
+    aput-object v7, v11, v12
+
+    new-array v7, v5, [Ljava/lang/Object;
+
+    const-string v12, "Hours"
+
+    .line 598
+    invoke-static {v12, v6, v7}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v7
+
+    aput-object v7, v11, v10
+
+    new-array v7, v5, [Ljava/lang/Object;
+
+    .line 599
+    invoke-static {v12, v4, v7}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v4
+
+    aput-object v4, v11, v14
+
+    const/4 v4, 0x6
+
+    new-array v7, v5, [Ljava/lang/Object;
 
     .line 600
-    invoke-static {v7, v5}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    invoke-static {v12, v10, v7}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
-    move-result-object v5
+    move-result-object v7
 
-    aput-object v5, v6, v0
+    aput-object v7, v11, v4
 
-    new-instance v0, Lorg/telegram/ui/NotificationsSettingsActivity$$ExternalSyntheticLambda1;
+    new-instance v4, Lorg/telegram/ui/NotificationsSettingsActivity$$ExternalSyntheticLambda1;
 
-    invoke-direct {v0, p0, p2}, Lorg/telegram/ui/NotificationsSettingsActivity$$ExternalSyntheticLambda1;-><init>(Lorg/telegram/ui/NotificationsSettingsActivity;I)V
+    invoke-direct {v4, v1, v0}, Lorg/telegram/ui/NotificationsSettingsActivity$$ExternalSyntheticLambda1;-><init>(Lorg/telegram/ui/NotificationsSettingsActivity;I)V
 
     .line 593
-    invoke-virtual {p3, v6, v0}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setItems([Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
+    invoke-virtual {v3, v11, v4}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setItems([Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
     .line 620
-    invoke-static {v4, v3}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
+    invoke-static {v9, v8}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
-    move-result-object p2
+    move-result-object v0
 
-    invoke-virtual {p3, p2, p4}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setNegativeButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
+    const/4 v4, 0x0
+
+    invoke-virtual {v3, v0, v4}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setNegativeButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
     .line 621
-    invoke-virtual {p3}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->create()Lorg/telegram/ui/ActionBar/AlertDialog;
+    invoke-virtual {v3}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->create()Lorg/telegram/ui/ActionBar/AlertDialog;
 
-    move-result-object p2
+    move-result-object v0
 
-    invoke-virtual {p0, p2}, Lorg/telegram/ui/ActionBar/BaseFragment;->showDialog(Landroid/app/Dialog;)Landroid/app/Dialog;
+    invoke-virtual {v1, v0}, Lorg/telegram/ui/ActionBar/BaseFragment;->showDialog(Landroid/app/Dialog;)Landroid/app/Dialog;
 
-    goto :goto_427
+    goto :goto_43a
 
-    :cond_3c3
-    :goto_3c3
-    if-ne p2, p4, :cond_3c9
+    :cond_3d6
+    :goto_3d6
+    if-ne v0, v3, :cond_3dc
 
     .line 381
-    iget-object p4, p0, Lorg/telegram/ui/NotificationsSettingsActivity;->exceptionUsers:Ljava/util/ArrayList;
+    iget-object v3, v1, Lorg/telegram/ui/NotificationsSettingsActivity;->exceptionUsers:Ljava/util/ArrayList;
 
-    const/4 v0, 0x1
+    const/4 v4, 0x1
 
-    goto :goto_3d3
+    goto :goto_3e6
 
     .line 382
-    :cond_3c9
-    iget p4, p0, Lorg/telegram/ui/NotificationsSettingsActivity;->groupRow:I
+    :cond_3dc
+    iget v3, v1, Lorg/telegram/ui/NotificationsSettingsActivity;->groupRow:I
 
-    if-ne p2, p4, :cond_3d1
+    if-ne v0, v3, :cond_3e4
 
     .line 384
-    iget-object p4, p0, Lorg/telegram/ui/NotificationsSettingsActivity;->exceptionChats:Ljava/util/ArrayList;
+    iget-object v3, v1, Lorg/telegram/ui/NotificationsSettingsActivity;->exceptionChats:Ljava/util/ArrayList;
 
-    const/4 v0, 0x0
+    const/4 v4, 0x0
 
-    goto :goto_3d3
+    goto :goto_3e6
 
     .line 387
-    :cond_3d1
-    iget-object p4, p0, Lorg/telegram/ui/NotificationsSettingsActivity;->exceptionChannels:Ljava/util/ArrayList;
+    :cond_3e4
+    iget-object v3, v1, Lorg/telegram/ui/NotificationsSettingsActivity;->exceptionChannels:Ljava/util/ArrayList;
 
-    :goto_3d3
-    if-nez p4, :cond_3d6
+    :goto_3e6
+    if-nez v3, :cond_3e9
 
     return-void
 
     .line 393
-    :cond_3d6
-    move-object v3, p1
+    :cond_3e9
+    move-object v7, v2
 
-    check-cast v3, Lorg/telegram/ui/Cells/NotificationsCheckCell;
+    check-cast v7, Lorg/telegram/ui/Cells/NotificationsCheckCell;
 
     .line 394
-    invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getNotificationsController()Lorg/telegram/messenger/NotificationsController;
+    invoke-virtual/range {p0 .. p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getNotificationsController()Lorg/telegram/messenger/NotificationsController;
 
-    move-result-object v4
+    move-result-object v8
 
-    invoke-virtual {v4, v0}, Lorg/telegram/messenger/NotificationsController;->isGlobalNotificationsEnabled(I)Z
+    invoke-virtual {v8, v4}, Lorg/telegram/messenger/NotificationsController;->isGlobalNotificationsEnabled(I)Z
 
-    move-result v4
+    move-result v8
 
     .line 395
-    sget-boolean v5, Lorg/telegram/messenger/LocaleController;->isRTL:Z
+    sget-boolean v9, Lorg/telegram/messenger/LocaleController;->isRTL:Z
 
-    const/high16 v6, 0x42980000    # 76.0f
+    const/high16 v10, 0x42980000    # 76.0f
 
-    if-eqz v5, :cond_3f0
+    if-eqz v9, :cond_403
 
-    invoke-static {v6}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
+    invoke-static {v10}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
-    move-result v5
+    move-result v9
 
-    int-to-float v5, v5
+    int-to-float v9, v9
 
-    cmpg-float v5, p3, v5
+    cmpg-float v9, p3, v9
 
-    if-lez v5, :cond_402
+    if-lez v9, :cond_415
 
-    :cond_3f0
-    sget-boolean v5, Lorg/telegram/messenger/LocaleController;->isRTL:Z
+    :cond_403
+    sget-boolean v9, Lorg/telegram/messenger/LocaleController;->isRTL:Z
 
-    if-nez v5, :cond_41e
+    if-nez v9, :cond_431
 
-    invoke-virtual {p1}, Landroid/view/View;->getMeasuredWidth()I
+    invoke-virtual/range {p1 .. p1}, Landroid/view/View;->getMeasuredWidth()I
 
-    move-result v5
+    move-result v9
 
-    invoke-static {v6}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
+    invoke-static {v10}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
-    move-result v6
+    move-result v10
 
-    sub-int/2addr v5, v6
+    sub-int/2addr v9, v10
 
-    int-to-float v5, v5
+    int-to-float v9, v9
 
-    cmpl-float p3, p3, v5
+    cmpl-float v9, p3, v9
 
-    if-ltz p3, :cond_41e
+    if-ltz v9, :cond_431
 
     .line 396
-    :cond_402
-    invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getNotificationsController()Lorg/telegram/messenger/NotificationsController;
+    :cond_415
+    invoke-virtual/range {p0 .. p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getNotificationsController()Lorg/telegram/messenger/NotificationsController;
 
-    move-result-object p3
+    move-result-object v3
 
-    if-nez v4, :cond_40a
+    if-nez v8, :cond_41d
 
-    const/4 p4, 0x0
+    const/4 v9, 0x0
 
-    goto :goto_40d
+    goto :goto_420
 
-    :cond_40a
-    const p4, 0x7fffffff
+    :cond_41d
+    const v9, 0x7fffffff
 
-    :goto_40d
-    invoke-virtual {p3, v0, p4}, Lorg/telegram/messenger/NotificationsController;->setGlobalNotificationsEnabled(II)V
+    :goto_420
+    invoke-virtual {v3, v4, v9}, Lorg/telegram/messenger/NotificationsController;->setGlobalNotificationsEnabled(II)V
 
     .line 397
-    invoke-direct {p0, p2}, Lorg/telegram/ui/NotificationsSettingsActivity;->showExceptionsAlert(I)V
+    invoke-direct {v1, v0}, Lorg/telegram/ui/NotificationsSettingsActivity;->showExceptionsAlert(I)V
 
-    xor-int/lit8 p3, v4, 0x1
+    xor-int/lit8 v3, v8, 0x1
 
     .line 398
-    invoke-virtual {v3, p3, v1}, Lorg/telegram/ui/Cells/NotificationsCheckCell;->setChecked(ZI)V
+    invoke-virtual {v7, v3, v5}, Lorg/telegram/ui/Cells/NotificationsCheckCell;->setChecked(ZI)V
 
     .line 399
-    iget-object p3, p0, Lorg/telegram/ui/NotificationsSettingsActivity;->adapter:Lorg/telegram/ui/NotificationsSettingsActivity$ListAdapter;
+    iget-object v3, v1, Lorg/telegram/ui/NotificationsSettingsActivity;->adapter:Lorg/telegram/ui/NotificationsSettingsActivity$ListAdapter;
 
-    invoke-virtual {p3, p2}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->notifyItemChanged(I)V
+    invoke-virtual {v3, v0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->notifyItemChanged(I)V
 
-    goto :goto_426
+    goto :goto_439
 
     .line 401
-    :cond_41e
-    new-instance p2, Lorg/telegram/ui/NotificationsCustomSettingsActivity;
+    :cond_431
+    new-instance v0, Lorg/telegram/ui/NotificationsCustomSettingsActivity;
 
-    invoke-direct {p2, v0, p4}, Lorg/telegram/ui/NotificationsCustomSettingsActivity;-><init>(ILjava/util/ArrayList;)V
+    invoke-direct {v0, v4, v3}, Lorg/telegram/ui/NotificationsCustomSettingsActivity;-><init>(ILjava/util/ArrayList;)V
 
-    invoke-virtual {p0, p2}, Lorg/telegram/ui/ActionBar/BaseFragment;->presentFragment(Lorg/telegram/ui/ActionBar/BaseFragment;)Z
+    invoke-virtual {v1, v0}, Lorg/telegram/ui/ActionBar/BaseFragment;->presentFragment(Lorg/telegram/ui/ActionBar/BaseFragment;)Z
 
-    :goto_426
-    move v1, v4
+    :goto_439
+    move v5, v8
 
     .line 623
-    :cond_427
-    :goto_427
-    instance-of p2, p1, Lorg/telegram/ui/Cells/TextCheckCell;
+    :cond_43a
+    :goto_43a
+    instance-of v0, v2, Lorg/telegram/ui/Cells/TextCheckCell;
 
-    if-eqz p2, :cond_432
+    if-eqz v0, :cond_446
 
     .line 624
-    check-cast p1, Lorg/telegram/ui/Cells/TextCheckCell;
+    move-object v0, v2
 
-    xor-int/lit8 p2, v1, 0x1
+    check-cast v0, Lorg/telegram/ui/Cells/TextCheckCell;
 
-    invoke-virtual {p1, p2}, Lorg/telegram/ui/Cells/TextCheckCell;->setChecked(Z)V
+    xor-int/lit8 v2, v5, 0x1
 
-    :cond_432
+    invoke-virtual {v0, v2}, Lorg/telegram/ui/Cells/TextCheckCell;->setChecked(Z)V
+
+    :cond_446
     return-void
 .end method
 
@@ -3154,129 +3176,135 @@
 
     const/4 v1, 0x0
 
-    if-ne p1, v0, :cond_1c
+    const/4 v2, 0x0
+
+    if-ne p1, v0, :cond_1f
 
     .line 678
     iget-object p1, p0, Lorg/telegram/ui/NotificationsSettingsActivity;->exceptionUsers:Ljava/util/ArrayList;
 
-    if-eqz p1, :cond_1a
+    if-eqz p1, :cond_1d
 
     .line 679
     invoke-virtual {p1}, Ljava/util/ArrayList;->isEmpty()Z
 
     move-result v0
 
-    if-nez v0, :cond_1a
+    if-nez v0, :cond_1d
 
     .line 680
     invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
-    const-string v2, "ChatsException"
+    new-array v3, v2, [Ljava/lang/Object;
 
-    invoke-static {v2, v0}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    const-string v4, "ChatsException"
+
+    invoke-static {v4, v0, v3}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
-    goto :goto_49
+    goto :goto_50
 
-    :cond_1a
+    :cond_1d
     move-object v0, v1
 
-    goto :goto_49
+    goto :goto_50
 
     .line 682
-    :cond_1c
+    :cond_1f
     iget v0, p0, Lorg/telegram/ui/NotificationsSettingsActivity;->groupRow:I
 
-    if-ne p1, v0, :cond_35
+    if-ne p1, v0, :cond_3a
 
     .line 683
     iget-object p1, p0, Lorg/telegram/ui/NotificationsSettingsActivity;->exceptionChats:Ljava/util/ArrayList;
 
-    if-eqz p1, :cond_1a
+    if-eqz p1, :cond_1d
 
     .line 684
     invoke-virtual {p1}, Ljava/util/ArrayList;->isEmpty()Z
 
     move-result v0
 
-    if-nez v0, :cond_1a
+    if-nez v0, :cond_1d
 
     .line 685
     invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
-    const-string v2, "Groups"
+    new-array v3, v2, [Ljava/lang/Object;
 
-    invoke-static {v2, v0}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    const-string v4, "Groups"
+
+    invoke-static {v4, v0, v3}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
-    goto :goto_49
+    goto :goto_50
 
     .line 688
-    :cond_35
+    :cond_3a
     iget-object p1, p0, Lorg/telegram/ui/NotificationsSettingsActivity;->exceptionChannels:Ljava/util/ArrayList;
 
-    if-eqz p1, :cond_1a
+    if-eqz p1, :cond_1d
 
     .line 689
     invoke-virtual {p1}, Ljava/util/ArrayList;->isEmpty()Z
 
     move-result v0
 
-    if-nez v0, :cond_1a
+    if-nez v0, :cond_1d
 
     .line 690
     invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
-    const-string v2, "Channels"
+    new-array v3, v2, [Ljava/lang/Object;
 
-    invoke-static {v2, v0}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    const-string v4, "Channels"
+
+    invoke-static {v4, v0, v3}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
-    :goto_49
-    if-nez v0, :cond_4c
+    :goto_50
+    if-nez v0, :cond_53
 
     return-void
 
     .line 696
-    :cond_4c
-    new-instance v2, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
+    :cond_53
+    new-instance v3, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
     invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getParentActivity()Landroid/app/Activity;
 
-    move-result-object v3
+    move-result-object v4
 
-    invoke-direct {v2, v3}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
+    invoke-direct {v3, v4}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
     .line 697
     invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
 
-    move-result v3
-
-    const/4 v4, 0x0
+    move-result v4
 
     const/4 v5, 0x1
 
-    if-ne v3, v5, :cond_72
+    if-ne v4, v5, :cond_78
 
-    const v3, 0x7f0e0b84
+    const v4, 0x7f0e0c0e
 
     new-array v5, v5, [Ljava/lang/Object;
 
-    aput-object v0, v5, v4
+    aput-object v0, v5, v2
 
     const-string v0, "NotificationsExceptionsSingleAlert"
 
     .line 698
-    invoke-static {v0, v3, v5}, Lorg/telegram/messenger/LocaleController;->formatString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {v0, v4, v5}, Lorg/telegram/messenger/LocaleController;->formatString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -3284,21 +3312,21 @@
 
     move-result-object v0
 
-    invoke-virtual {v2, v0}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
+    invoke-virtual {v3, v0}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    goto :goto_86
+    goto :goto_8c
 
-    :cond_72
-    const v3, 0x7f0e0b83
+    :cond_78
+    const v4, 0x7f0e0c0d
 
     new-array v5, v5, [Ljava/lang/Object;
 
-    aput-object v0, v5, v4
+    aput-object v0, v5, v2
 
     const-string v0, "NotificationsExceptionsAlert"
 
     .line 700
-    invoke-static {v0, v3, v5}, Lorg/telegram/messenger/LocaleController;->formatString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {v0, v4, v5}, Lorg/telegram/messenger/LocaleController;->formatString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -3306,36 +3334,36 @@
 
     move-result-object v0
 
-    invoke-virtual {v2, v0}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
+    invoke-virtual {v3, v0}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    :goto_86
-    const v0, 0x7f0e0b82
+    :goto_8c
+    const v0, 0x7f0e0c0c
 
-    const-string v3, "NotificationsExceptions"
+    const-string v2, "NotificationsExceptions"
 
     .line 702
-    invoke-static {v3, v0}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
+    invoke-static {v2, v0}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {v2, v0}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
+    invoke-virtual {v3, v0}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const v0, 0x7f0e1298
+    const v0, 0x7f0e1366
 
-    const-string v3, "ViewExceptions"
+    const-string v2, "ViewExceptions"
 
     .line 703
-    invoke-static {v3, v0}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
+    invoke-static {v2, v0}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v0
 
-    new-instance v3, Lorg/telegram/ui/NotificationsSettingsActivity$$ExternalSyntheticLambda2;
+    new-instance v2, Lorg/telegram/ui/NotificationsSettingsActivity$$ExternalSyntheticLambda2;
 
-    invoke-direct {v3, p0, p1}, Lorg/telegram/ui/NotificationsSettingsActivity$$ExternalSyntheticLambda2;-><init>(Lorg/telegram/ui/NotificationsSettingsActivity;Ljava/util/ArrayList;)V
+    invoke-direct {v2, p0, p1}, Lorg/telegram/ui/NotificationsSettingsActivity$$ExternalSyntheticLambda2;-><init>(Lorg/telegram/ui/NotificationsSettingsActivity;Ljava/util/ArrayList;)V
 
-    invoke-virtual {v2, v0, v3}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setNeutralButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
+    invoke-virtual {v3, v0, v2}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setNeutralButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const p1, 0x7f0e0bae
+    const p1, 0x7f0e0c38
 
     const-string v0, "OK"
 
@@ -3344,10 +3372,10 @@
 
     move-result-object p1
 
-    invoke-virtual {v2, p1, v1}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setNegativeButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
+    invoke-virtual {v3, p1, v1}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setNegativeButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
     .line 705
-    invoke-virtual {v2}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->create()Lorg/telegram/ui/ActionBar/AlertDialog;
+    invoke-virtual {v3}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->create()Lorg/telegram/ui/ActionBar/AlertDialog;
 
     move-result-object p1
 
@@ -3364,7 +3392,7 @@
     .line 343
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
-    const v1, 0x7f070140
+    const v1, 0x7f070109
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/ActionBar;->setBackButtonImage(I)V
 
@@ -3380,7 +3408,7 @@
 
     const-string v2, "NotificationsAndSounds"
 
-    const v3, 0x7f0e0b75
+    const v3, 0x7f0e0bff
 
     invoke-static {v2, v3}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
@@ -4265,7 +4293,7 @@
 
     if-eqz p3, :cond_2e
 
-    const p3, 0x7f0e053f
+    const p3, 0x7f0e0590
 
     const-string v1, "DefaultRingtone"
 
@@ -4298,7 +4326,7 @@
 
     if-eqz p3, :cond_49
 
-    const p3, 0x7f0e1098
+    const p3, 0x7f0e1157
 
     const-string v1, "SoundDefault"
 

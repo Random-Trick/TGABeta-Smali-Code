@@ -28,7 +28,7 @@
 .method constructor <init>(Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;Lorg/telegram/ui/ArticleViewer;)V
     .registers 3
 
-    .line 8421
+    .line 8422
     iput-object p1, p0, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell$3;->this$1:Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;
 
     invoke-direct {p0}, Landroidx/viewpager/widget/PagerAdapter;-><init>()V
@@ -41,7 +41,7 @@
 .method public destroyItem(Landroid/view/ViewGroup;ILjava/lang/Object;)V
     .registers 4
 
-    .line 8470
+    .line 8471
     check-cast p3, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell$3$ObjectContainer;
 
     invoke-static {p3}, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell$3$ObjectContainer;->access$18100(Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell$3$ObjectContainer;)Landroid/view/View;
@@ -56,7 +56,7 @@
 .method public getCount()I
     .registers 2
 
-    .line 8430
+    .line 8431
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell$3;->this$1:Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;
 
     invoke-static {v0}, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;->access$18000(Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;)Lorg/telegram/tgnet/TLRPC$TL_pageBlockSlideshow;
@@ -69,7 +69,7 @@
 
     return v0
 
-    .line 8433
+    .line 8434
     :cond_a
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell$3;->this$1:Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;
 
@@ -89,10 +89,10 @@
 .method public getItemPosition(Ljava/lang/Object;)I
     .registers 3
 
-    .line 8443
+    .line 8444
     check-cast p1, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell$3$ObjectContainer;
 
-    .line 8444
+    .line 8445
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell$3;->this$1:Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;
 
     invoke-static {v0}, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;->access$18000(Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;)Lorg/telegram/tgnet/TLRPC$TL_pageBlockSlideshow;
@@ -124,7 +124,7 @@
 .method public instantiateItem(Landroid/view/ViewGroup;I)Ljava/lang/Object;
     .registers 8
 
-    .line 8453
+    .line 8454
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell$3;->this$1:Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;
 
     invoke-static {v0}, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;->access$18000(Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;)Lorg/telegram/tgnet/TLRPC$TL_pageBlockSlideshow;
@@ -139,14 +139,14 @@
 
     check-cast p2, Lorg/telegram/tgnet/TLRPC$PageBlock;
 
-    .line 8454
+    .line 8455
     instance-of v0, p2, Lorg/telegram/tgnet/TLRPC$TL_pageBlockPhoto;
 
     const/4 v1, 0x1
 
     if-eqz v0, :cond_2d
 
-    .line 8455
+    .line 8456
     new-instance v0, Lorg/telegram/ui/ArticleViewer$BlockPhotoCell;
 
     iget-object v2, p0, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell$3;->this$1:Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;
@@ -165,7 +165,7 @@
 
     invoke-direct {v0, v3, v2, v4, v1}, Lorg/telegram/ui/ArticleViewer$BlockPhotoCell;-><init>(Lorg/telegram/ui/ArticleViewer;Landroid/content/Context;Lorg/telegram/ui/ArticleViewer$WebpageAdapter;I)V
 
-    .line 8456
+    .line 8457
     move-object v2, p2
 
     check-cast v2, Lorg/telegram/tgnet/TLRPC$TL_pageBlockPhoto;
@@ -174,7 +174,7 @@
 
     goto :goto_46
 
-    .line 8458
+    .line 8459
     :cond_2d
     new-instance v0, Lorg/telegram/ui/ArticleViewer$BlockVideoCell;
 
@@ -194,26 +194,26 @@
 
     invoke-direct {v0, v3, v2, v4, v1}, Lorg/telegram/ui/ArticleViewer$BlockVideoCell;-><init>(Lorg/telegram/ui/ArticleViewer;Landroid/content/Context;Lorg/telegram/ui/ArticleViewer$WebpageAdapter;I)V
 
-    .line 8459
+    .line 8460
     move-object v2, p2
 
     check-cast v2, Lorg/telegram/tgnet/TLRPC$TL_pageBlockVideo;
 
     invoke-virtual {v0, v2, v1, v1}, Lorg/telegram/ui/ArticleViewer$BlockVideoCell;->setBlock(Lorg/telegram/tgnet/TLRPC$TL_pageBlockVideo;ZZ)V
 
-    .line 8461
+    .line 8462
     :goto_46
     invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    .line 8462
+    .line 8463
     new-instance p1, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell$3$ObjectContainer;
 
     invoke-direct {p1, p0}, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell$3$ObjectContainer;-><init>(Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell$3;)V
 
-    .line 8463
+    .line 8464
     invoke-static {p1, v0}, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell$3$ObjectContainer;->access$18102(Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell$3$ObjectContainer;Landroid/view/View;)Landroid/view/View;
 
-    .line 8464
+    .line 8465
     invoke-static {p1, p2}, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell$3$ObjectContainer;->access$18202(Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell$3$ObjectContainer;Lorg/telegram/tgnet/TLRPC$PageBlock;)Lorg/telegram/tgnet/TLRPC$PageBlock;
 
     return-object p1
@@ -222,7 +222,7 @@
 .method public isViewFromObject(Landroid/view/View;Ljava/lang/Object;)Z
     .registers 3
 
-    .line 8438
+    .line 8439
     check-cast p2, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell$3$ObjectContainer;
 
     invoke-static {p2}, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell$3$ObjectContainer;->access$18100(Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell$3$ObjectContainer;)Landroid/view/View;

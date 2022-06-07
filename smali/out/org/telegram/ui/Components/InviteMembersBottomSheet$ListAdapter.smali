@@ -524,7 +524,7 @@
 
     invoke-direct {p2, p1}, Lorg/telegram/ui/Cells/ManageChatTextCell;-><init>(Landroid/content/Context;)V
 
-    const p1, 0x7f0e1317
+    const p1, 0x7f0e13e5
 
     const-string v0, "VoipGroupCopyInviteLink"
 
@@ -535,7 +535,7 @@
 
     const/4 v5, 0x0
 
-    const v6, 0x7f070277
+    const v6, 0x7f070256
 
     const/4 v7, 0x7
 
@@ -588,7 +588,7 @@
     .line 589
     iget-object p1, p2, Lorg/telegram/ui/Components/StickerEmptyView;->title:Landroid/widget/TextView;
 
-    const v0, 0x7f0e0732
+    const v0, 0x7f0e0787
 
     const-string v1, "FilterNoChats"
 
@@ -604,7 +604,7 @@
     :cond_5d
     iget-object p1, p2, Lorg/telegram/ui/Components/StickerEmptyView;->title:Landroid/widget/TextView;
 
-    const v0, 0x7f0e0aae
+    const v0, 0x7f0e0b35
 
     const-string v1, "NoContacts"
 

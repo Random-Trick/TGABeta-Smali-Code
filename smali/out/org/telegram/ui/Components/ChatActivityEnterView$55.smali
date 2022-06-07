@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/ChatActivityEnterView;Landroid/content/Context;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)V
     .registers 4
 
-    .line 7017
+    .line 7062
     iput-object p1, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$55;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-direct {p0, p2, p3}, Lorg/telegram/ui/Components/BotKeyboardView;-><init>(Landroid/content/Context;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)V
@@ -35,10 +35,10 @@
 .method public setTranslationY(F)V
     .registers 4
 
-    .line 7020
+    .line 7065
     invoke-super {p0, p1}, Landroid/widget/LinearLayout;->setTranslationY(F)V
 
-    .line 7021
+    .line 7066
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$55;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$3800(Lorg/telegram/ui/Components/ChatActivityEnterView;)Landroid/animation/AnimatorSet;
@@ -57,7 +57,7 @@
 
     if-ne v0, v1, :cond_1d
 
-    .line 7022
+    .line 7067
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$55;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$1500(Lorg/telegram/ui/Components/ChatActivityEnterView;)Lorg/telegram/ui/Components/ChatActivityEnterView$ChatActivityEnterViewDelegate;

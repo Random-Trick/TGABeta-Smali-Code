@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/ChatUsersActivity;Landroid/content/Context;)V
     .registers 3
 
-    .line 748
+    .line 745
     iput-object p1, p0, Lorg/telegram/ui/ChatUsersActivity$3;->this$0:Lorg/telegram/ui/ChatUsersActivity;
 
     invoke-direct {p0, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
@@ -35,7 +35,7 @@
 .method protected dispatchDraw(Landroid/graphics/Canvas;)V
     .registers 4
 
-    .line 751
+    .line 748
     iget-object v0, p0, Lorg/telegram/ui/ChatUsersActivity$3;->this$0:Lorg/telegram/ui/ChatUsersActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/ChatUsersActivity;->access$1300(Lorg/telegram/ui/ChatUsersActivity;)Lorg/telegram/ui/Components/RecyclerListView;
@@ -68,7 +68,7 @@
 
     invoke-virtual {p1, v0}, Landroid/graphics/Canvas;->drawColor(I)V
 
-    .line 752
+    .line 749
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->dispatchDraw(Landroid/graphics/Canvas;)V
 
     return-void

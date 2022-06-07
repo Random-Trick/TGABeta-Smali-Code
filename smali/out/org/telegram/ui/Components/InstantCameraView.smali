@@ -503,7 +503,7 @@
     .line 306
     iget-object v3, v0, Lorg/telegram/ui/Components/InstantCameraView;->switchCameraButton:Landroid/widget/ImageView;
 
-    const v5, 0x7f0e0079
+    const v5, 0x7f0e009b
 
     const-string v8, "AccDescrSwitchCamera"
 
@@ -560,7 +560,7 @@
     .line 353
     iget-object v1, v0, Lorg/telegram/ui/Components/InstantCameraView;->muteImageView:Landroid/widget/ImageView;
 
-    const v3, 0x7f07040f
+    const v3, 0x7f0703f3
 
     invoke-virtual {v1, v3}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -4849,7 +4849,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f070069
+    const v1, 0x7f070053
 
     invoke-static {v0, v1}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
@@ -4870,7 +4870,7 @@
     :cond_20
     iget-object v0, p0, Lorg/telegram/ui/Components/InstantCameraView;->switchCameraButton:Landroid/widget/ImageView;
 
-    const v1, 0x7f070404
+    const v1, 0x7f0703eb
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -4940,7 +4940,7 @@
     :cond_59
     iget-object v0, p0, Lorg/telegram/ui/Components/InstantCameraView;->textureOverlayView:Lorg/telegram/ui/Components/BackupImageView;
 
-    const v1, 0x7f07017d
+    const v1, 0x7f070154
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/BackupImageView;->setImageResource(I)V
 

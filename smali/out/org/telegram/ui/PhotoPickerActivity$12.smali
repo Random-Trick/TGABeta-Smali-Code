@@ -1,5 +1,5 @@
 .class Lorg/telegram/ui/PhotoPickerActivity$12;
-.super Landroid/view/ViewOutlineProvider;
+.super Landroid/widget/FrameLayout;
 .source "PhotoPickerActivity.java"
 
 
@@ -14,40 +14,69 @@
 .end annotation
 
 
-# direct methods
-.method constructor <init>(Lorg/telegram/ui/PhotoPickerActivity;)V
-    .registers 2
+# instance fields
+.field final synthetic this$0:Lorg/telegram/ui/PhotoPickerActivity;
 
-    .line 1026
-    invoke-direct {p0}, Landroid/view/ViewOutlineProvider;-><init>()V
+
+# direct methods
+.method constructor <init>(Lorg/telegram/ui/PhotoPickerActivity;Landroid/content/Context;)V
+    .registers 3
+
+    .line 1020
+    iput-object p1, p0, Lorg/telegram/ui/PhotoPickerActivity$12;->this$0:Lorg/telegram/ui/PhotoPickerActivity;
+
+    invoke-direct {p0, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public getOutline(Landroid/view/View;Landroid/graphics/Outline;)V
+.method public onInitializeAccessibilityNodeInfo(Landroid/view/accessibility/AccessibilityNodeInfo;)V
     .registers 5
-    .annotation build Landroid/annotation/SuppressLint;
-        value = {
-            "NewApi"
-        }
-    .end annotation
 
-    const/high16 p1, 0x42600000    # 56.0f
+    .line 1023
+    invoke-super {p0, p1}, Landroid/widget/FrameLayout;->onInitializeAccessibilityNodeInfo(Landroid/view/accessibility/AccessibilityNodeInfo;)V
 
-    .line 1030
-    invoke-static {p1}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
+    .line 1024
+    iget-object v0, p0, Lorg/telegram/ui/PhotoPickerActivity$12;->this$0:Lorg/telegram/ui/PhotoPickerActivity;
+
+    invoke-static {v0}, Lorg/telegram/ui/PhotoPickerActivity;->access$500(Lorg/telegram/ui/PhotoPickerActivity;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/util/HashMap;->size()I
 
     move-result v0
 
-    invoke-static {p1}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
-
-    move-result p1
-
     const/4 v1, 0x0
 
-    invoke-virtual {p2, v1, v1, v0, p1}, Landroid/graphics/Outline;->setOval(IIII)V
+    new-array v1, v1, [Ljava/lang/Object;
+
+    const-string v2, "AccDescrSendPhotos"
+
+    invoke-static {v2, v0, v1}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Landroid/view/accessibility/AccessibilityNodeInfo;->setText(Ljava/lang/CharSequence;)V
+
+    .line 1025
+    const-class v0, Landroid/widget/Button;
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Landroid/view/accessibility/AccessibilityNodeInfo;->setClassName(Ljava/lang/CharSequence;)V
+
+    const/4 v0, 0x1
+
+    .line 1026
+    invoke-virtual {p1, v0}, Landroid/view/accessibility/AccessibilityNodeInfo;->setLongClickable(Z)V
+
+    .line 1027
+    invoke-virtual {p1, v0}, Landroid/view/accessibility/AccessibilityNodeInfo;->setClickable(Z)V
 
     return-void
 .end method

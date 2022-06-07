@@ -846,7 +846,7 @@
 .method static constructor <clinit>()V
     .registers 1
 
-    const/4 v0, 0x3
+    const/4 v0, 0x4
 
     new-array v0, v0, [Lorg/telegram/messenger/ContactsController;
 
@@ -3616,7 +3616,7 @@
     const/4 v8, 0x0
 
     :goto_19
-    const/4 v9, 0x3
+    const/4 v9, 0x4
 
     if-ge v8, v9, :cond_46
 
@@ -4024,7 +4024,7 @@
 
     aput-object v2, v1, v0
 
-    const v2, 0x7f0e0595
+    const v2, 0x7f0e05e6
 
     new-array v4, v3, [Ljava/lang/Object;
 
@@ -10322,7 +10322,7 @@
     :try_end_168
     .catchall {:try_start_11e .. :try_end_168} :catchall_1eb
 
-    const v0, 0x7f0e0d4b
+    const v0, 0x7f0e0dd9
 
     const-string v1, "PhoneMobile"
 
@@ -10365,7 +10365,7 @@
 
     const-string v1, "PhoneHome"
 
-    const v3, 0x7f0e0d49
+    const v3, 0x7f0e0dd7
 
     invoke-static {v1, v3}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
@@ -10401,7 +10401,7 @@
 
     const-string v1, "PhoneWork"
 
-    const v3, 0x7f0e0d55
+    const v3, 0x7f0e0de3
 
     invoke-static {v1, v3}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
@@ -10421,7 +10421,7 @@
 
     const-string v1, "PhoneMain"
 
-    const v3, 0x7f0e0d4a
+    const v3, 0x7f0e0dd8
 
     invoke-static {v1, v3}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
@@ -10437,7 +10437,7 @@
 
     const-string v1, "PhoneOther"
 
-    const v3, 0x7f0e0d54
+    const v3, 0x7f0e0de2
 
     invoke-static {v1, v3}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
@@ -11690,7 +11690,7 @@
 
     const-string v8, "ContactShortcutMessage"
 
-    const v9, 0x7f0e04bf
+    const v9, 0x7f0e050e
 
     new-array v10, v3, [Ljava/lang/Object;
 
@@ -11762,7 +11762,7 @@
 
     const-string v8, "ContactShortcutVoiceCall"
 
-    const v9, 0x7f0e04c1
+    const v9, 0x7f0e0510
 
     new-array v10, v3, [Ljava/lang/Object;
 
@@ -11834,7 +11834,7 @@
 
     const-string v8, "ContactShortcutVideoCall"
 
-    const v9, 0x7f0e04c0
+    const v9, 0x7f0e050f
 
     new-array v3, v3, [Ljava/lang/Object;
 
@@ -11985,7 +11985,7 @@
     const/4 v8, 0x0
 
     :goto_19
-    const/4 v9, 0x3
+    const/4 v9, 0x4
 
     if-ge v8, v9, :cond_4a
 
@@ -13536,7 +13536,7 @@
     const/4 v6, 0x0
 
     :goto_17
-    const/4 v7, 0x3
+    const/4 v7, 0x4
 
     if-ge v6, v7, :cond_44
 
@@ -13773,7 +13773,7 @@
     const-string v0, "https://telegram.org/dl"
 
     :cond_6
-    const v1, 0x7f0e08ba
+    const v1, 0x7f0e0917
 
     const-string v2, "InviteText2"
 

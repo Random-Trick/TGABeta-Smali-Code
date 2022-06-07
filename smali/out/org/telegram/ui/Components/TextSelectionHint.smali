@@ -1323,7 +1323,7 @@
     invoke-virtual {p1}, Landroid/animation/Animator;->cancel()V
 
     :cond_1c
-    const p1, 0x7f0e115e
+    const p1, 0x7f0e1228
 
     const-string p2, "TextSelectionHit"
 

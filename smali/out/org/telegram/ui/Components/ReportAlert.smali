@@ -157,7 +157,7 @@
 
     if-nez v2, :cond_7d
 
-    const v9, 0x7f0e0efc
+    const v9, 0x7f0e0fa9
 
     const-string v10, "ReportTitleSpam"
 
@@ -173,7 +173,7 @@
     :cond_7d
     if-ne v2, v8, :cond_8c
 
-    const v9, 0x7f0e0efa
+    const v9, 0x7f0e0fa7
 
     const-string v10, "ReportTitleFake"
 
@@ -189,7 +189,7 @@
     :cond_8c
     if-ne v2, v3, :cond_9b
 
-    const v9, 0x7f0e0efd
+    const v9, 0x7f0e0faa
 
     const-string v10, "ReportTitleViolence"
 
@@ -207,7 +207,7 @@
 
     if-ne v2, v9, :cond_ab
 
-    const v9, 0x7f0e0ef9
+    const v9, 0x7f0e0fa6
 
     const-string v10, "ReportTitleChild"
 
@@ -223,7 +223,7 @@
     :cond_ab
     if-ne v2, v7, :cond_ba
 
-    const v9, 0x7f0e0efb
+    const v9, 0x7f0e0fa8
 
     const-string v10, "ReportTitlePornography"
 
@@ -241,7 +241,7 @@
 
     if-ne v2, v9, :cond_ca
 
-    const v9, 0x7f0e0edf
+    const v9, 0x7f0e0f8c
 
     const-string v10, "ReportChat"
 
@@ -297,7 +297,7 @@
     .line 108
     invoke-virtual {v5, v3}, Landroid/widget/TextView;->setGravity(I)V
 
-    const v9, 0x7f0e0eeb
+    const v9, 0x7f0e0f98
 
     const-string v10, "ReportInfo"
 
@@ -439,7 +439,7 @@
     .line 125
     iget-object v4, v0, Lorg/telegram/ui/Components/ReportAlert;->editText:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
-    const v5, 0x7f0e0eea
+    const v5, 0x7f0e0f97
 
     const-string v7, "ReportHint"
 
@@ -521,7 +521,7 @@
     .line 140
     iget-object v1, v0, Lorg/telegram/ui/Components/ReportAlert;->clearButton:Lorg/telegram/ui/Components/ReportAlert$BottomSheetCell;
 
-    const v4, 0x7f0e0eef
+    const v4, 0x7f0e0f9c
 
     const-string v5, "ReportSend"
 

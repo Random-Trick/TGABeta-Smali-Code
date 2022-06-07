@@ -891,7 +891,7 @@
 
 # virtual methods
 .method public onItemClick(I)V
-    .registers 6
+    .registers 7
 
     const/4 v0, -0x1
 
@@ -933,7 +933,7 @@
 
     invoke-static {p1}, Lorg/telegram/ui/WallpapersListActivity;->access$300(Lorg/telegram/ui/WallpapersListActivity;)V
 
-    goto/16 :goto_c6
+    goto/16 :goto_c8
 
     .line 489
     :cond_28
@@ -941,12 +941,12 @@
 
     invoke-virtual {p1}, Lorg/telegram/ui/ActionBar/BaseFragment;->finishFragment()V
 
-    goto/16 :goto_c6
+    goto/16 :goto_c8
 
     :cond_2f
     const/4 v1, 0x4
 
-    if-ne p1, v1, :cond_a1
+    if-ne p1, v1, :cond_a3
 
     .line 492
     iget-object p1, p0, Lorg/telegram/ui/WallpapersListActivity$2;->this$0:Lorg/telegram/ui/WallpapersListActivity;
@@ -982,17 +982,19 @@
 
     move-result v1
 
-    const-string v2, "DeleteBackground"
+    const/4 v2, 0x0
 
-    invoke-static {v2, v1}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    new-array v3, v2, [Ljava/lang/Object;
+
+    const-string v4, "DeleteBackground"
+
+    invoke-static {v4, v1, v3}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {p1, v1}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const v1, 0x7f0e055c
-
-    const/4 v2, 0x0
+    const v1, 0x7f0e05ad
 
     new-array v2, v2, [Ljava/lang/Object;
 
@@ -1005,7 +1007,7 @@
 
     invoke-virtual {p1, v1}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const v1, 0x7f0e0540
+    const v1, 0x7f0e0591
 
     const-string v2, "Delete"
 
@@ -1020,7 +1022,7 @@
 
     invoke-virtual {p1, v1, v2}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const v1, 0x7f0e0331
+    const v1, 0x7f0e036d
 
     const-string v2, "Cancel"
 
@@ -1050,7 +1052,7 @@
 
     check-cast p1, Landroid/widget/TextView;
 
-    if-eqz p1, :cond_c6
+    if-eqz p1, :cond_c8
 
     const-string v0, "dialogTextRed2"
 
@@ -1061,12 +1063,12 @@
 
     invoke-virtual {p1, v0}, Landroid/widget/TextView;->setTextColor(I)V
 
-    goto :goto_c6
+    goto :goto_c8
 
-    :cond_a1
+    :cond_a3
     const/4 v0, 0x3
 
-    if-ne p1, v0, :cond_c6
+    if-ne p1, v0, :cond_c8
 
     .line 565
     new-instance p1, Landroid/os/Bundle;
@@ -1102,7 +1104,7 @@
 
     invoke-virtual {p1, v0}, Lorg/telegram/ui/ActionBar/BaseFragment;->presentFragment(Lorg/telegram/ui/ActionBar/BaseFragment;)Z
 
-    :cond_c6
-    :goto_c6
+    :cond_c8
+    :goto_c8
     return-void
 .end method

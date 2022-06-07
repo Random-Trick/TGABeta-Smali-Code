@@ -29,7 +29,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 26100
+    .line 26468
     invoke-direct {p0}, Lorg/telegram/tgnet/TLRPC$PageBlock;-><init>()V
 
     return-void
@@ -40,7 +40,7 @@
 .method public readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
     .registers 7
 
-    .line 26110
+    .line 26478
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
@@ -62,7 +62,7 @@
     :cond_e
     const/4 v1, 0x0
 
-    .line 26111
+    .line 26479
     :goto_f
     iput-boolean v1, p0, Lorg/telegram/tgnet/TLRPC$TL_pageBlockVideo;->autoplay:Z
 
@@ -72,18 +72,18 @@
 
     const/4 v2, 0x1
 
-    .line 26112
+    .line 26480
     :cond_16
     iput-boolean v2, p0, Lorg/telegram/tgnet/TLRPC$TL_pageBlockVideo;->loop:Z
 
-    .line 26113
+    .line 26481
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt64(Z)J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lorg/telegram/tgnet/TLRPC$TL_pageBlockVideo;->video_id:J
 
-    .line 26114
+    .line 26482
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
@@ -100,12 +100,12 @@
 .method public serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
     .registers 4
 
-    .line 26118
+    .line 26486
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_pageBlockVideo;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 26119
+    .line 26487
     iget-boolean v0, p0, Lorg/telegram/tgnet/TLRPC$TL_pageBlockVideo;->autoplay:Z
 
     if-eqz v0, :cond_e
@@ -124,7 +124,7 @@
     :goto_12
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$TL_pageBlockVideo;->flags:I
 
-    .line 26120
+    .line 26488
     iget-boolean v1, p0, Lorg/telegram/tgnet/TLRPC$TL_pageBlockVideo;->loop:Z
 
     if-eqz v1, :cond_1b
@@ -139,15 +139,15 @@
     :goto_1d
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$TL_pageBlockVideo;->flags:I
 
-    .line 26121
+    .line 26489
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 26122
+    .line 26490
     iget-wide v0, p0, Lorg/telegram/tgnet/TLRPC$TL_pageBlockVideo;->video_id:J
 
     invoke-virtual {p1, v0, v1}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt64(J)V
 
-    .line 26123
+    .line 26491
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_pageBlockVideo;->caption:Lorg/telegram/tgnet/TLRPC$TL_pageCaption;
 
     invoke-virtual {v0, p1}, Lorg/telegram/tgnet/TLRPC$TL_pageCaption;->serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V

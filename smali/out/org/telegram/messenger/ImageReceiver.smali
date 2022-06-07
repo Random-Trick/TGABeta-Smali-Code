@@ -43,6 +43,8 @@
 
 .field private animateFromIsPressed:I
 
+.field public animatedFileDrawableRepeatMaxCount:I
+
 .field private animationReadySent:Z
 
 .field private attachedToWindow:Z
@@ -52,8 +54,6 @@
 .field private bitmapRect:Landroid/graphics/RectF;
 
 .field private blendMode:Ljava/lang/Object;
-
-.field private cachedGradientShader:Landroid/graphics/BitmapShader;
 
 .field private canceledLoading:Z
 
@@ -113,7 +113,7 @@
 
 .field private currentParentObject:Ljava/lang/Object;
 
-.field private currentSize:I
+.field private currentSize:J
 
 .field private currentThumbDrawable:Landroid/graphics/drawable/Drawable;
 
@@ -146,8 +146,6 @@
 .field private imageOrientation:I
 
 .field private imageShader:Landroid/graphics/BitmapShader;
-
-.field private imageShaderBitmap:Landroid/graphics/Bitmap;
 
 .field private imageTag:I
 
@@ -195,8 +193,6 @@
 
 .field private mediaTag:I
 
-.field private mustScaleImageShaderBitmap:Z
-
 .field private needsQualityThumb:Z
 
 .field private overrideAlpha:F
@@ -218,12 +214,6 @@
 .field private roundRadius:[I
 
 .field private roundRect:Landroid/graphics/RectF;
-
-.field private scaleImageShaderBitmap:F
-
-.field private scaledImageShader:Landroid/graphics/BitmapShader;
-
-.field private scaledImageShaderBitmap:Landroid/graphics/Bitmap;
 
 .field private setImageBackup:Lorg/telegram/messenger/ImageReceiver$SetImageBackup;
 
@@ -256,7 +246,7 @@
 .method static constructor <clinit>()V
     .registers 3
 
-    .line 171
+    .line 172
     new-instance v0, Landroid/graphics/PorterDuffColorFilter;
 
     sget-object v1, Landroid/graphics/PorterDuff$Mode;->MULTIPLY:Landroid/graphics/PorterDuff$Mode;
@@ -267,7 +257,7 @@
 
     sput-object v0, Lorg/telegram/messenger/ImageReceiver;->selectedColorFilter:Landroid/graphics/PorterDuffColorFilter;
 
-    .line 172
+    .line 173
     new-instance v0, Landroid/graphics/PorterDuffColorFilter;
 
     sget-object v1, Landroid/graphics/PorterDuff$Mode;->MULTIPLY:Landroid/graphics/PorterDuff$Mode;
@@ -282,7 +272,7 @@
 
     new-array v0, v0, [F
 
-    .line 260
+    .line 261
     sput-object v0, Lorg/telegram/messenger/ImageReceiver;->radii:[F
 
     return-void
@@ -293,7 +283,7 @@
 
     const/4 v0, 0x0
 
-    .line 283
+    .line 286
     invoke-direct {p0, v0}, Lorg/telegram/messenger/ImageReceiver;-><init>(Landroid/view/View;)V
 
     return-void
@@ -302,65 +292,65 @@
 .method public constructor <init>(Landroid/view/View;)V
     .registers 4
 
-    .line 286
+    .line 289
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x1
 
-    .line 214
+    .line 215
     iput-boolean v0, p0, Lorg/telegram/messenger/ImageReceiver;->useRoundForThumb:Z
 
-    .line 226
+    .line 227
     iput-boolean v0, p0, Lorg/telegram/messenger/ImageReceiver;->allowStartAnimation:Z
 
-    .line 227
+    .line 228
     iput-boolean v0, p0, Lorg/telegram/messenger/ImageReceiver;->allowStartLottieAnimation:Z
 
-    .line 230
+    .line 231
     iput v0, p0, Lorg/telegram/messenger/ImageReceiver;->autoRepeat:I
 
-    .line 247
+    .line 248
     new-instance v1, Landroid/graphics/RectF;
 
     invoke-direct {v1}, Landroid/graphics/RectF;-><init>()V
 
     iput-object v1, p0, Lorg/telegram/messenger/ImageReceiver;->drawRegion:Landroid/graphics/RectF;
 
-    .line 248
+    .line 249
     iput-boolean v0, p0, Lorg/telegram/messenger/ImageReceiver;->isVisible:Z
 
     const/4 v1, 0x4
 
     new-array v1, v1, [I
 
-    .line 252
+    .line 253
     iput-object v1, p0, Lorg/telegram/messenger/ImageReceiver;->roundRadius:[I
 
-    .line 253
+    .line 254
     iput-boolean v0, p0, Lorg/telegram/messenger/ImageReceiver;->isRoundRect:Z
-
-    .line 256
-    new-instance v1, Landroid/graphics/RectF;
-
-    invoke-direct {v1}, Landroid/graphics/RectF;-><init>()V
-
-    iput-object v1, p0, Lorg/telegram/messenger/ImageReceiver;->roundRect:Landroid/graphics/RectF;
 
     .line 257
     new-instance v1, Landroid/graphics/RectF;
 
     invoke-direct {v1}, Landroid/graphics/RectF;-><init>()V
 
-    iput-object v1, p0, Lorg/telegram/messenger/ImageReceiver;->bitmapRect:Landroid/graphics/RectF;
+    iput-object v1, p0, Lorg/telegram/messenger/ImageReceiver;->roundRect:Landroid/graphics/RectF;
 
     .line 258
+    new-instance v1, Landroid/graphics/RectF;
+
+    invoke-direct {v1}, Landroid/graphics/RectF;-><init>()V
+
+    iput-object v1, p0, Lorg/telegram/messenger/ImageReceiver;->bitmapRect:Landroid/graphics/RectF;
+
+    .line 259
     new-instance v1, Landroid/graphics/Matrix;
 
     invoke-direct {v1}, Landroid/graphics/Matrix;-><init>()V
 
     iput-object v1, p0, Lorg/telegram/messenger/ImageReceiver;->shaderMatrix:Landroid/graphics/Matrix;
 
-    .line 259
+    .line 260
     new-instance v1, Landroid/graphics/Path;
 
     invoke-direct {v1}, Landroid/graphics/Path;-><init>()V
@@ -369,36 +359,31 @@
 
     const/high16 v1, 0x3f800000    # 1.0f
 
-    .line 261
+    .line 262
     iput v1, p0, Lorg/telegram/messenger/ImageReceiver;->overrideAlpha:F
 
-    .line 266
+    .line 267
     iput v1, p0, Lorg/telegram/messenger/ImageReceiver;->previousAlpha:F
 
-    .line 268
+    .line 269
     iput-byte v0, p0, Lorg/telegram/messenger/ImageReceiver;->crossfadeAlpha:B
 
     const/16 v0, 0x96
 
-    .line 275
+    .line 276
     iput v0, p0, Lorg/telegram/messenger/ImageReceiver;->crossfadeDuration:I
 
-    .line 279
+    .line 280
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->loadingOperations:Ljava/util/ArrayList;
 
-    const/4 v0, 0x0
-
-    .line 781
-    iput-boolean v0, p0, Lorg/telegram/messenger/ImageReceiver;->mustScaleImageShaderBitmap:Z
-
-    .line 287
+    .line 290
     iput-object p1, p0, Lorg/telegram/messenger/ImageReceiver;->parentView:Landroid/view/View;
 
-    .line 288
+    .line 291
     new-instance p1, Landroid/graphics/Paint;
 
     const/4 v0, 0x3
@@ -407,7 +392,7 @@
 
     iput-object p1, p0, Lorg/telegram/messenger/ImageReceiver;->roundPaint:Landroid/graphics/Paint;
 
-    .line 289
+    .line 292
     sget p1, Lorg/telegram/messenger/UserConfig;->selectedAccount:I
 
     iput p1, p0, Lorg/telegram/messenger/ImageReceiver;->currentAccount:I
@@ -418,14 +403,14 @@
 .method private checkAlphaAnimation(Z)V
     .registers 8
 
-    .line 1397
+    .line 1390
     iget-boolean v0, p0, Lorg/telegram/messenger/ImageReceiver;->manualAlphaAnimator:Z
 
     if-eqz v0, :cond_5
 
     return-void
 
-    .line 1400
+    .line 1393
     :cond_5
     iget v0, p0, Lorg/telegram/messenger/ImageReceiver;->currentAlpha:F
 
@@ -437,12 +422,12 @@
 
     if-nez p1, :cond_3a
 
-    .line 1402
+    .line 1395
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v2
 
-    .line 1403
+    .line 1396
     iget-wide v4, p0, Lorg/telegram/messenger/ImageReceiver;->lastUpdateAlphaTime:J
 
     sub-long/2addr v2, v4
@@ -455,7 +440,7 @@
 
     move-wide v2, v4
 
-    .line 1407
+    .line 1400
     :cond_1d
     iget p1, p0, Lorg/telegram/messenger/ImageReceiver;->currentAlpha:F
 
@@ -475,13 +460,13 @@
 
     if-lez p1, :cond_3a
 
-    .line 1409
+    .line 1402
     iput v1, p0, Lorg/telegram/messenger/ImageReceiver;->currentAlpha:F
 
-    .line 1410
+    .line 1403
     iput v1, p0, Lorg/telegram/messenger/ImageReceiver;->previousAlpha:F
 
-    .line 1411
+    .line 1404
     iget-object p1, p0, Lorg/telegram/messenger/ImageReceiver;->crossfadeImage:Landroid/graphics/drawable/Drawable;
 
     if-eqz p1, :cond_3a
@@ -490,13 +475,13 @@
 
     const/4 v0, 0x0
 
-    .line 1412
+    .line 1405
     invoke-direct {p0, v0, p1}, Lorg/telegram/messenger/ImageReceiver;->recycleBitmap(Ljava/lang/String;I)V
 
-    .line 1413
+    .line 1406
     iput-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->crossfadeShader:Landroid/graphics/BitmapShader;
 
-    .line 1417
+    .line 1410
     :cond_3a
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -504,22 +489,22 @@
 
     iput-wide v0, p0, Lorg/telegram/messenger/ImageReceiver;->lastUpdateAlphaTime:J
 
-    .line 1418
+    .line 1411
     iget-object p1, p0, Lorg/telegram/messenger/ImageReceiver;->parentView:Landroid/view/View;
 
     if-eqz p1, :cond_5d
 
-    .line 1419
+    .line 1412
     iget-boolean v0, p0, Lorg/telegram/messenger/ImageReceiver;->invalidateAll:Z
 
     if-eqz v0, :cond_4c
 
-    .line 1420
+    .line 1413
     invoke-virtual {p1}, Landroid/view/View;->invalidate()V
 
     goto :goto_5d
 
-    .line 1422
+    .line 1415
     :cond_4c
     iget v0, p0, Lorg/telegram/messenger/ImageReceiver;->imageX:F
 
@@ -551,7 +536,7 @@
 .method private drawDrawable(Landroid/graphics/Canvas;Landroid/graphics/drawable/Drawable;ILandroid/graphics/BitmapShader;I)V
     .registers 15
 
-    .line 962
+    .line 968
     iget v0, p0, Lorg/telegram/messenger/ImageReceiver;->isPressed:I
 
     const/4 v1, 0x0
@@ -568,26 +553,26 @@
 
     sub-float/2addr v0, v2
 
-    .line 963
+    .line 969
     iput v0, p0, Lorg/telegram/messenger/ImageReceiver;->pressedProgress:F
 
     cmpg-float v0, v0, v1
 
     if-gez v0, :cond_17
 
-    .line 965
+    .line 971
     iput v1, p0, Lorg/telegram/messenger/ImageReceiver;->pressedProgress:F
 
-    .line 967
+    .line 973
     :cond_17
     iget-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->parentView:Landroid/view/View;
 
     if-eqz v0, :cond_1e
 
-    .line 968
+    .line 974
     invoke-virtual {v0}, Landroid/view/View;->invalidate()V
 
-    .line 971
+    .line 977
     :cond_1e
     iget v8, p0, Lorg/telegram/messenger/ImageReceiver;->isPressed:I
 
@@ -595,13 +580,13 @@
 
     if-eqz v8, :cond_28
 
-    .line 972
+    .line 978
     iput v0, p0, Lorg/telegram/messenger/ImageReceiver;->pressedProgress:F
 
-    .line 973
+    .line 979
     iput v8, p0, Lorg/telegram/messenger/ImageReceiver;->animateFromIsPressed:I
 
-    .line 975
+    .line 981
     :cond_28
     iget v2, p0, Lorg/telegram/messenger/ImageReceiver;->pressedProgress:F
 
@@ -628,12 +613,12 @@
 
     move v7, p5
 
-    .line 978
+    .line 984
     invoke-direct/range {v2 .. v8}, Lorg/telegram/messenger/ImageReceiver;->drawDrawable(Landroid/graphics/Canvas;Landroid/graphics/drawable/Drawable;ILandroid/graphics/BitmapShader;II)V
 
     int-to-float p3, p3
 
-    .line 979
+    .line 985
     iget v0, p0, Lorg/telegram/messenger/ImageReceiver;->pressedProgress:F
 
     mul-float p3, p3, v0
@@ -670,7 +655,7 @@
 
     move v7, p5
 
-    .line 976
+    .line 982
     invoke-direct/range {v2 .. v8}, Lorg/telegram/messenger/ImageReceiver;->drawDrawable(Landroid/graphics/Canvas;Landroid/graphics/drawable/Drawable;ILandroid/graphics/BitmapShader;II)V
 
     :goto_56
@@ -694,34 +679,34 @@
 
     move/from16 v6, p6
 
-    .line 988
+    .line 994
     instance-of v7, v0, Landroid/graphics/drawable/BitmapDrawable;
 
     const/4 v9, 0x0
 
     const/high16 v10, 0x40000000    # 2.0f
 
-    if-eqz v7, :cond_6b4
+    if-eqz v7, :cond_684
 
-    .line 989
+    .line 995
     move-object v7, v0
 
     check-cast v7, Landroid/graphics/drawable/BitmapDrawable;
 
     if-eqz v4, :cond_1d
 
-    .line 993
+    .line 999
     iget-object v11, v1, Lorg/telegram/messenger/ImageReceiver;->roundPaint:Landroid/graphics/Paint;
 
     goto :goto_21
 
-    .line 995
+    .line 1001
     :cond_1d
     invoke-virtual {v7}, Landroid/graphics/drawable/BitmapDrawable;->getPaint()Landroid/graphics/Paint;
 
     move-result-object v11
 
-    .line 997
+    .line 1003
     :goto_21
     sget v12, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -731,7 +716,7 @@
 
     if-lt v12, v13, :cond_39
 
-    .line 998
+    .line 1004
     iget-object v15, v1, Lorg/telegram/messenger/ImageReceiver;->blendMode:Ljava/lang/Object;
 
     if-eqz v15, :cond_36
@@ -740,14 +725,14 @@
 
     if-nez v13, :cond_36
 
-    .line 999
+    .line 1005
     check-cast v15, Landroid/graphics/BlendMode;
 
     invoke-virtual {v11, v15}, Landroid/graphics/Paint;->setBlendMode(Landroid/graphics/BlendMode;)V
 
     goto :goto_39
 
-    .line 1001
+    .line 1007
     :cond_36
     invoke-virtual {v11, v14}, Landroid/graphics/Paint;->setBlendMode(Landroid/graphics/BlendMode;)V
 
@@ -757,7 +742,7 @@
 
     if-eqz v11, :cond_44
 
-    .line 1004
+    .line 1010
     invoke-virtual {v11}, Landroid/graphics/Paint;->getColorFilter()Landroid/graphics/ColorFilter;
 
     move-result-object v11
@@ -778,20 +763,20 @@
 
     if-eqz v4, :cond_51
 
-    .line 1007
+    .line 1013
     iget-object v0, v1, Lorg/telegram/messenger/ImageReceiver;->roundPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, v14}, Landroid/graphics/Paint;->setColorFilter(Landroid/graphics/ColorFilter;)Landroid/graphics/ColorFilter;
 
     goto :goto_7e
 
-    .line 1008
+    .line 1014
     :cond_51
     iget-object v6, v1, Lorg/telegram/messenger/ImageReceiver;->staticThumbDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eq v6, v0, :cond_7e
 
-    .line 1009
+    .line 1015
     invoke-virtual {v7, v14}, Landroid/graphics/drawable/BitmapDrawable;->setColorFilter(Landroid/graphics/ColorFilter;)V
 
     goto :goto_7e
@@ -805,7 +790,7 @@
 
     if-eqz v4, :cond_69
 
-    .line 1014
+    .line 1020
     iget-object v0, v1, Lorg/telegram/messenger/ImageReceiver;->roundPaint:Landroid/graphics/Paint;
 
     sget-object v6, Lorg/telegram/messenger/ImageReceiver;->selectedColorFilter:Landroid/graphics/PorterDuffColorFilter;
@@ -814,7 +799,7 @@
 
     goto :goto_7e
 
-    .line 1016
+    .line 1022
     :cond_69
     sget-object v0, Lorg/telegram/messenger/ImageReceiver;->selectedColorFilter:Landroid/graphics/PorterDuffColorFilter;
 
@@ -825,7 +810,7 @@
     :cond_6f
     if-eqz v4, :cond_79
 
-    .line 1020
+    .line 1026
     iget-object v0, v1, Lorg/telegram/messenger/ImageReceiver;->roundPaint:Landroid/graphics/Paint;
 
     sget-object v6, Lorg/telegram/messenger/ImageReceiver;->selectedGroupColorFilter:Landroid/graphics/PorterDuffColorFilter;
@@ -834,13 +819,13 @@
 
     goto :goto_7e
 
-    .line 1022
+    .line 1028
     :cond_79
     sget-object v0, Lorg/telegram/messenger/ImageReceiver;->selectedGroupColorFilter:Landroid/graphics/PorterDuffColorFilter;
 
     invoke-virtual {v7, v0}, Landroid/graphics/drawable/BitmapDrawable;->setColorFilter(Landroid/graphics/ColorFilter;)V
 
-    .line 1026
+    .line 1032
     :cond_7e
     :goto_7e
     iget-object v0, v1, Lorg/telegram/messenger/ImageReceiver;->colorFilter:Landroid/graphics/ColorFilter;
@@ -853,18 +838,18 @@
 
     if-eqz v4, :cond_8e
 
-    .line 1028
+    .line 1034
     iget-object v6, v1, Lorg/telegram/messenger/ImageReceiver;->roundPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v6, v0}, Landroid/graphics/Paint;->setColorFilter(Landroid/graphics/ColorFilter;)Landroid/graphics/ColorFilter;
 
     goto :goto_91
 
-    .line 1030
+    .line 1036
     :cond_8e
     invoke-virtual {v7, v0}, Landroid/graphics/drawable/BitmapDrawable;->setColorFilter(Landroid/graphics/ColorFilter;)V
 
-    .line 1035
+    .line 1041
     :cond_91
     :goto_91
     instance-of v0, v7, Lorg/telegram/ui/Components/AnimatedFileDrawable;
@@ -881,7 +866,7 @@
 
     goto :goto_c4
 
-    .line 1044
+    .line 1050
     :cond_9e
     invoke-virtual {v7}, Landroid/graphics/drawable/BitmapDrawable;->getBitmap()Landroid/graphics/Bitmap;
 
@@ -889,7 +874,7 @@
 
     if-eqz v14, :cond_ab
 
-    .line 1045
+    .line 1051
     invoke-virtual {v14}, Landroid/graphics/Bitmap;->isRecycled()Z
 
     move-result v17
@@ -898,7 +883,7 @@
 
     return-void
 
-    .line 1048
+    .line 1054
     :cond_ab
     rem-int/lit16 v13, v5, 0x168
 
@@ -908,34 +893,34 @@
 
     goto :goto_bb
 
-    .line 1052
+    .line 1058
     :cond_b2
     invoke-virtual {v14}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v13
 
-    .line 1053
+    .line 1059
     invoke-virtual {v14}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result v14
 
     goto :goto_dc
 
-    .line 1049
+    .line 1055
     :cond_bb
     :goto_bb
     invoke-virtual {v14}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result v13
 
-    .line 1050
+    .line 1056
     invoke-virtual {v14}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v14
 
     goto :goto_dc
 
-    .line 1036
+    .line 1042
     :cond_c4
     :goto_c4
     rem-int/lit16 v13, v5, 0x168
@@ -946,32 +931,32 @@
 
     goto :goto_d4
 
-    .line 1040
+    .line 1046
     :cond_cb
     invoke-virtual {v7}, Landroid/graphics/drawable/BitmapDrawable;->getIntrinsicWidth()I
 
     move-result v13
 
-    .line 1041
+    .line 1047
     invoke-virtual {v7}, Landroid/graphics/drawable/BitmapDrawable;->getIntrinsicHeight()I
 
     move-result v14
 
     goto :goto_dc
 
-    .line 1037
+    .line 1043
     :cond_d4
     :goto_d4
     invoke-virtual {v7}, Landroid/graphics/drawable/BitmapDrawable;->getIntrinsicHeight()I
 
     move-result v13
 
-    .line 1038
+    .line 1044
     invoke-virtual {v7}, Landroid/graphics/drawable/BitmapDrawable;->getIntrinsicWidth()I
 
     move-result v14
 
-    .line 1056
+    .line 1062
     :goto_dc
     iget v6, v1, Lorg/telegram/messenger/ImageReceiver;->imageW:F
 
@@ -981,7 +966,7 @@
 
     sub-float v18, v6, v18
 
-    .line 1057
+    .line 1063
     iget v15, v1, Lorg/telegram/messenger/ImageReceiver;->imageH:F
 
     mul-float v11, v11, v10
@@ -1016,14 +1001,14 @@
     div-float/2addr v15, v11
 
     :goto_fd
-    if-eqz v4, :cond_481
+    if-eqz v4, :cond_451
 
-    .line 1062
+    .line 1068
     iget-boolean v0, v1, Lorg/telegram/messenger/ImageReceiver;->isAspectFit:Z
 
-    if-eqz v0, :cond_1cd
+    if-eqz v0, :cond_1c7
 
-    .line 1063
+    .line 1069
     invoke-static {v6, v15}, Ljava/lang/Math;->max(FF)F
 
     move-result v0
@@ -1040,7 +1025,7 @@
 
     float-to-int v6, v6
 
-    .line 1066
+    .line 1072
     iget-object v9, v1, Lorg/telegram/messenger/ImageReceiver;->drawRegion:Landroid/graphics/RectF;
 
     iget v11, v1, Lorg/telegram/messenger/ImageReceiver;->imageX:F
@@ -1081,17 +1066,17 @@
 
     invoke-virtual {v9, v13, v8, v11, v14}, Landroid/graphics/RectF;->set(FFFF)V
 
-    .line 1068
+    .line 1074
     iget-boolean v5, v1, Lorg/telegram/messenger/ImageReceiver;->isVisible:Z
 
-    if-eqz v5, :cond_744
+    if-eqz v5, :cond_714
 
-    .line 1069
+    .line 1075
     iget-object v5, v1, Lorg/telegram/messenger/ImageReceiver;->shaderMatrix:Landroid/graphics/Matrix;
 
     invoke-virtual {v5}, Landroid/graphics/Matrix;->reset()V
 
-    .line 1070
+    .line 1076
     iget-object v5, v1, Lorg/telegram/messenger/ImageReceiver;->shaderMatrix:Landroid/graphics/Matrix;
 
     iget-object v6, v1, Lorg/telegram/messenger/ImageReceiver;->drawRegion:Landroid/graphics/RectF;
@@ -1114,67 +1099,59 @@
 
     div-float v8, v5, v0
 
-    .line 1071
-    invoke-direct {v1, v8}, Lorg/telegram/messenger/ImageReceiver;->scaleImageShaderBitmap(F)Z
-
-    move-result v0
-
-    if-nez v0, :cond_153
-
-    .line 1072
+    .line 1078
     iget-object v0, v1, Lorg/telegram/messenger/ImageReceiver;->shaderMatrix:Landroid/graphics/Matrix;
 
     invoke-virtual {v0, v8, v8}, Landroid/graphics/Matrix;->preScale(FF)Z
 
-    .line 1075
-    :cond_153
+    .line 1080
     iget-object v0, v1, Lorg/telegram/messenger/ImageReceiver;->shaderMatrix:Landroid/graphics/Matrix;
 
     invoke-virtual {v4, v0}, Landroid/graphics/BitmapShader;->setLocalMatrix(Landroid/graphics/Matrix;)V
 
-    .line 1076
+    .line 1081
     iget-object v0, v1, Lorg/telegram/messenger/ImageReceiver;->roundPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, v4}, Landroid/graphics/Paint;->setShader(Landroid/graphics/Shader;)Landroid/graphics/Shader;
 
-    .line 1077
+    .line 1082
     iget-object v0, v1, Lorg/telegram/messenger/ImageReceiver;->roundPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, v3}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 1078
+    .line 1083
     iget-object v0, v1, Lorg/telegram/messenger/ImageReceiver;->roundRect:Landroid/graphics/RectF;
 
     iget-object v3, v1, Lorg/telegram/messenger/ImageReceiver;->drawRegion:Landroid/graphics/RectF;
 
     invoke-virtual {v0, v3}, Landroid/graphics/RectF;->set(Landroid/graphics/RectF;)V
 
-    .line 1080
+    .line 1085
     iget-boolean v0, v1, Lorg/telegram/messenger/ImageReceiver;->isRoundRect:Z
 
-    if-eqz v0, :cond_196
+    if-eqz v0, :cond_190
 
-    .line 1082
-    :try_start_16d
+    .line 1087
+    :try_start_167
     iget-object v0, v1, Lorg/telegram/messenger/ImageReceiver;->roundRadius:[I
 
     const/4 v3, 0x0
 
     aget v4, v0, v3
 
-    if-nez v4, :cond_17d
+    if-nez v4, :cond_177
 
-    .line 1083
+    .line 1088
     iget-object v0, v1, Lorg/telegram/messenger/ImageReceiver;->roundRect:Landroid/graphics/RectF;
 
     iget-object v3, v1, Lorg/telegram/messenger/ImageReceiver;->roundPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v2, v0, v3}, Landroid/graphics/Canvas;->drawRect(Landroid/graphics/RectF;Landroid/graphics/Paint;)V
 
-    goto/16 :goto_744
+    goto/16 :goto_714
 
-    .line 1085
-    :cond_17d
+    .line 1090
+    :cond_177
     iget-object v3, v1, Lorg/telegram/messenger/ImageReceiver;->roundRect:Landroid/graphics/RectF;
 
     const/4 v4, 0x0
@@ -1190,34 +1167,34 @@
     iget-object v4, v1, Lorg/telegram/messenger/ImageReceiver;->roundPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v2, v3, v5, v0, v4}, Landroid/graphics/Canvas;->drawRoundRect(Landroid/graphics/RectF;FFLandroid/graphics/Paint;)V
-    :try_end_18b
-    .catch Ljava/lang/Exception; {:try_start_16d .. :try_end_18b} :catch_18d
+    :try_end_185
+    .catch Ljava/lang/Exception; {:try_start_167 .. :try_end_185} :catch_187
 
-    goto/16 :goto_744
+    goto/16 :goto_714
 
-    :catch_18d
+    :catch_187
     move-exception v0
 
-    .line 1088
+    .line 1093
     invoke-direct {v1, v7}, Lorg/telegram/messenger/ImageReceiver;->onBitmapException(Landroid/graphics/drawable/Drawable;)V
 
-    .line 1089
+    .line 1094
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
-    goto/16 :goto_744
+    goto/16 :goto_714
 
-    :cond_196
+    :cond_190
     const/4 v15, 0x0
 
-    .line 1092
-    :goto_197
+    .line 1097
+    :goto_191
     iget-object v0, v1, Lorg/telegram/messenger/ImageReceiver;->roundRadius:[I
 
     array-length v3, v0
 
-    if-ge v15, v3, :cond_1af
+    if-ge v15, v3, :cond_1a9
 
-    .line 1093
+    .line 1098
     sget-object v3, Lorg/telegram/messenger/ImageReceiver;->radii:[F
 
     mul-int/lit8 v4, v15, 0x2
@@ -1232,7 +1209,7 @@
 
     add-int/2addr v4, v5
 
-    .line 1094
+    .line 1099
     aget v0, v0, v15
 
     int-to-float v0, v0
@@ -1241,15 +1218,15 @@
 
     add-int/lit8 v15, v15, 0x1
 
-    goto :goto_197
+    goto :goto_191
 
-    .line 1096
-    :cond_1af
+    .line 1101
+    :cond_1a9
     iget-object v0, v1, Lorg/telegram/messenger/ImageReceiver;->roundPath:Landroid/graphics/Path;
 
     invoke-virtual {v0}, Landroid/graphics/Path;->reset()V
 
-    .line 1097
+    .line 1102
     iget-object v0, v1, Lorg/telegram/messenger/ImageReceiver;->roundPath:Landroid/graphics/Path;
 
     iget-object v3, v1, Lorg/telegram/messenger/ImageReceiver;->roundRect:Landroid/graphics/RectF;
@@ -1260,27 +1237,27 @@
 
     invoke-virtual {v0, v3, v4, v5}, Landroid/graphics/Path;->addRoundRect(Landroid/graphics/RectF;[FLandroid/graphics/Path$Direction;)V
 
-    .line 1098
+    .line 1103
     iget-object v0, v1, Lorg/telegram/messenger/ImageReceiver;->roundPath:Landroid/graphics/Path;
 
     invoke-virtual {v0}, Landroid/graphics/Path;->close()V
 
-    .line 1099
+    .line 1104
     iget-object v0, v1, Lorg/telegram/messenger/ImageReceiver;->roundPath:Landroid/graphics/Path;
 
     iget-object v3, v1, Lorg/telegram/messenger/ImageReceiver;->roundPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v2, v0, v3}, Landroid/graphics/Canvas;->drawPath(Landroid/graphics/Path;Landroid/graphics/Paint;)V
 
-    goto/16 :goto_744
+    goto/16 :goto_714
 
-    .line 1103
-    :cond_1cd
+    .line 1108
+    :cond_1c7
     iget-object v0, v1, Lorg/telegram/messenger/ImageReceiver;->legacyCanvas:Landroid/graphics/Canvas;
 
-    if-eqz v0, :cond_1fb
+    if-eqz v0, :cond_1f5
 
-    .line 1104
+    .line 1109
     iget-object v0, v1, Lorg/telegram/messenger/ImageReceiver;->roundRect:Landroid/graphics/RectF;
 
     iget-object v8, v1, Lorg/telegram/messenger/ImageReceiver;->legacyBitmap:Landroid/graphics/Bitmap;
@@ -1301,7 +1278,7 @@
 
     invoke-virtual {v0, v9, v9, v8, v12}, Landroid/graphics/RectF;->set(FFFF)V
 
-    .line 1105
+    .line 1110
     iget-object v0, v1, Lorg/telegram/messenger/ImageReceiver;->legacyCanvas:Landroid/graphics/Canvas;
 
     iget-object v8, v1, Lorg/telegram/messenger/ImageReceiver;->gradientBitmap:Landroid/graphics/Bitmap;
@@ -1312,7 +1289,7 @@
 
     invoke-virtual {v0, v8, v9, v12, v9}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Rect;Landroid/graphics/RectF;Landroid/graphics/Paint;)V
 
-    .line 1106
+    .line 1111
     iget-object v0, v1, Lorg/telegram/messenger/ImageReceiver;->legacyCanvas:Landroid/graphics/Canvas;
 
     invoke-virtual {v7}, Landroid/graphics/drawable/BitmapDrawable;->getBitmap()Landroid/graphics/Bitmap;
@@ -1325,46 +1302,46 @@
 
     invoke-virtual {v0, v8, v9, v12, v10}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Rect;Landroid/graphics/RectF;Landroid/graphics/Paint;)V
 
-    .line 1108
-    :cond_1fb
+    .line 1113
+    :cond_1f5
     iget-object v0, v1, Lorg/telegram/messenger/ImageReceiver;->imageShader:Landroid/graphics/BitmapShader;
 
-    if-ne v4, v0, :cond_215
+    if-ne v4, v0, :cond_20f
 
     iget-object v0, v1, Lorg/telegram/messenger/ImageReceiver;->gradientShader:Landroid/graphics/BitmapShader;
 
-    if-eqz v0, :cond_215
+    if-eqz v0, :cond_20f
 
-    .line 1109
+    .line 1114
     iget-object v0, v1, Lorg/telegram/messenger/ImageReceiver;->composeShader:Landroid/graphics/ComposeShader;
 
-    if-eqz v0, :cond_20d
+    if-eqz v0, :cond_207
 
-    .line 1110
+    .line 1115
     iget-object v8, v1, Lorg/telegram/messenger/ImageReceiver;->roundPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v8, v0}, Landroid/graphics/Paint;->setShader(Landroid/graphics/Shader;)Landroid/graphics/Shader;
 
-    goto :goto_21a
+    goto :goto_214
 
-    .line 1112
-    :cond_20d
+    .line 1117
+    :cond_207
     iget-object v0, v1, Lorg/telegram/messenger/ImageReceiver;->roundPaint:Landroid/graphics/Paint;
 
     iget-object v8, v1, Lorg/telegram/messenger/ImageReceiver;->legacyShader:Landroid/graphics/BitmapShader;
 
     invoke-virtual {v0, v8}, Landroid/graphics/Paint;->setShader(Landroid/graphics/Shader;)Landroid/graphics/Shader;
 
-    goto :goto_21a
+    goto :goto_214
 
-    .line 1115
-    :cond_215
+    .line 1120
+    :cond_20f
     iget-object v0, v1, Lorg/telegram/messenger/ImageReceiver;->roundPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, v4}, Landroid/graphics/Paint;->setShader(Landroid/graphics/Shader;)Landroid/graphics/Shader;
 
-    .line 1117
-    :goto_21a
+    .line 1122
+    :goto_214
     invoke-static {v6, v15}, Ljava/lang/Math;->min(FF)F
 
     move-result v0
@@ -1373,7 +1350,7 @@
 
     div-float v0, v8, v0
 
-    .line 1118
+    .line 1123
     iget-object v8, v1, Lorg/telegram/messenger/ImageReceiver;->roundRect:Landroid/graphics/RectF;
 
     iget v9, v1, Lorg/telegram/messenger/ImageReceiver;->imageX:F
@@ -1404,7 +1381,7 @@
 
     sub-float v2, v6, v15
 
-    .line 1119
+    .line 1124
     invoke-static {v2}, Ljava/lang/Math;->abs(F)F
 
     move-result v2
@@ -1413,7 +1390,7 @@
 
     cmpl-float v2, v2, v3
 
-    if-lez v2, :cond_281
+    if-lez v2, :cond_27b
 
     int-to-float v2, v13
 
@@ -1421,11 +1398,11 @@
 
     cmpl-float v7, v2, v18
 
-    if-lez v7, :cond_267
+    if-lez v7, :cond_261
 
     float-to-int v2, v2
 
-    .line 1122
+    .line 1127
     iget-object v6, v1, Lorg/telegram/messenger/ImageReceiver;->drawRegion:Landroid/graphics/RectF;
 
     iget v7, v1, Lorg/telegram/messenger/ImageReceiver;->imageX:F
@@ -1452,16 +1429,16 @@
 
     invoke-virtual {v6, v8, v10, v7, v2}, Landroid/graphics/RectF;->set(FFFF)V
 
-    goto :goto_28e
+    goto :goto_288
 
-    :cond_267
+    :cond_261
     int-to-float v2, v14
 
     div-float/2addr v2, v6
 
     float-to-int v2, v2
 
-    .line 1125
+    .line 1130
     iget-object v6, v1, Lorg/telegram/messenger/ImageReceiver;->drawRegion:Landroid/graphics/RectF;
 
     iget v7, v1, Lorg/telegram/messenger/ImageReceiver;->imageX:F
@@ -1488,10 +1465,10 @@
 
     invoke-virtual {v6, v7, v9, v12, v8}, Landroid/graphics/RectF;->set(FFFF)V
 
-    goto :goto_28e
+    goto :goto_288
 
-    .line 1128
-    :cond_281
+    .line 1133
+    :cond_27b
     iget-object v2, v1, Lorg/telegram/messenger/ImageReceiver;->drawRegion:Landroid/graphics/RectF;
 
     iget v6, v1, Lorg/telegram/messenger/ImageReceiver;->imageX:F
@@ -1504,18 +1481,18 @@
 
     invoke-virtual {v2, v6, v7, v8, v9}, Landroid/graphics/RectF;->set(FFFF)V
 
-    .line 1130
-    :goto_28e
+    .line 1135
+    :goto_288
     iget-boolean v2, v1, Lorg/telegram/messenger/ImageReceiver;->isVisible:Z
 
-    if-eqz v2, :cond_744
+    if-eqz v2, :cond_714
 
-    .line 1131
+    .line 1136
     iget-object v2, v1, Lorg/telegram/messenger/ImageReceiver;->shaderMatrix:Landroid/graphics/Matrix;
 
     invoke-virtual {v2}, Landroid/graphics/Matrix;->reset()V
 
-    .line 1132
+    .line 1137
     iget-object v2, v1, Lorg/telegram/messenger/ImageReceiver;->shaderMatrix:Landroid/graphics/Matrix;
 
     iget-object v6, v1, Lorg/telegram/messenger/ImageReceiver;->drawRegion:Landroid/graphics/RectF;
@@ -1542,16 +1519,16 @@
 
     const/16 v2, 0x5a
 
-    if-ne v5, v2, :cond_2c3
+    if-ne v5, v2, :cond_2bd
 
-    .line 1134
+    .line 1139
     iget-object v2, v1, Lorg/telegram/messenger/ImageReceiver;->shaderMatrix:Landroid/graphics/Matrix;
 
     const/high16 v5, 0x42b40000    # 90.0f
 
     invoke-virtual {v2, v5}, Landroid/graphics/Matrix;->preRotate(F)Z
 
-    .line 1135
+    .line 1140
     iget-object v2, v1, Lorg/telegram/messenger/ImageReceiver;->shaderMatrix:Landroid/graphics/Matrix;
 
     iget-object v5, v1, Lorg/telegram/messenger/ImageReceiver;->drawRegion:Landroid/graphics/RectF;
@@ -1566,21 +1543,21 @@
 
     invoke-virtual {v2, v6, v5}, Landroid/graphics/Matrix;->preTranslate(FF)Z
 
-    goto :goto_2fa
+    goto :goto_2f4
 
-    :cond_2c3
+    :cond_2bd
     const/16 v2, 0xb4
 
-    if-ne v5, v2, :cond_2e2
+    if-ne v5, v2, :cond_2dc
 
-    .line 1137
+    .line 1142
     iget-object v2, v1, Lorg/telegram/messenger/ImageReceiver;->shaderMatrix:Landroid/graphics/Matrix;
 
     const/high16 v5, 0x43340000    # 180.0f
 
     invoke-virtual {v2, v5}, Landroid/graphics/Matrix;->preRotate(F)Z
 
-    .line 1138
+    .line 1143
     iget-object v2, v1, Lorg/telegram/messenger/ImageReceiver;->shaderMatrix:Landroid/graphics/Matrix;
 
     iget-object v5, v1, Lorg/telegram/messenger/ImageReceiver;->drawRegion:Landroid/graphics/RectF;
@@ -1601,21 +1578,21 @@
 
     invoke-virtual {v2, v5, v6}, Landroid/graphics/Matrix;->preTranslate(FF)Z
 
-    goto :goto_2fa
+    goto :goto_2f4
 
-    :cond_2e2
+    :cond_2dc
     const/16 v2, 0x10e
 
-    if-ne v5, v2, :cond_2fa
+    if-ne v5, v2, :cond_2f4
 
-    .line 1140
+    .line 1145
     iget-object v2, v1, Lorg/telegram/messenger/ImageReceiver;->shaderMatrix:Landroid/graphics/Matrix;
 
     const/high16 v5, 0x43870000    # 270.0f
 
     invoke-virtual {v2, v5}, Landroid/graphics/Matrix;->preRotate(F)Z
 
-    .line 1141
+    .line 1146
     iget-object v2, v1, Lorg/telegram/messenger/ImageReceiver;->shaderMatrix:Landroid/graphics/Matrix;
 
     iget-object v5, v1, Lorg/telegram/messenger/ImageReceiver;->drawRegion:Landroid/graphics/RectF;
@@ -1630,71 +1607,19 @@
 
     invoke-virtual {v2, v5, v6}, Landroid/graphics/Matrix;->preTranslate(FF)Z
 
-    .line 1143
-    :cond_2fa
-    :goto_2fa
-    iget-object v2, v1, Lorg/telegram/messenger/ImageReceiver;->imageShader:Landroid/graphics/BitmapShader;
-
-    if-ne v4, v2, :cond_324
-
-    invoke-direct {v1, v0}, Lorg/telegram/messenger/ImageReceiver;->scaleImageShaderBitmap(F)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_324
-
-    .line 1144
-    iget-object v0, v1, Lorg/telegram/messenger/ImageReceiver;->imageShader:Landroid/graphics/BitmapShader;
-
-    if-ne v4, v0, :cond_31e
-
-    iget-object v0, v1, Lorg/telegram/messenger/ImageReceiver;->gradientShader:Landroid/graphics/BitmapShader;
-
-    if-eqz v0, :cond_31e
-
-    .line 1145
-    iget-object v0, v1, Lorg/telegram/messenger/ImageReceiver;->composeShader:Landroid/graphics/ComposeShader;
-
-    if-eqz v0, :cond_316
-
-    .line 1146
-    iget-object v2, v1, Lorg/telegram/messenger/ImageReceiver;->roundPaint:Landroid/graphics/Paint;
-
-    invoke-virtual {v2, v0}, Landroid/graphics/Paint;->setShader(Landroid/graphics/Shader;)Landroid/graphics/Shader;
-
-    goto :goto_329
-
     .line 1148
-    :cond_316
-    iget-object v0, v1, Lorg/telegram/messenger/ImageReceiver;->roundPaint:Landroid/graphics/Paint;
-
-    iget-object v2, v1, Lorg/telegram/messenger/ImageReceiver;->legacyShader:Landroid/graphics/BitmapShader;
-
-    invoke-virtual {v0, v2}, Landroid/graphics/Paint;->setShader(Landroid/graphics/Shader;)Landroid/graphics/Shader;
-
-    goto :goto_329
-
-    .line 1151
-    :cond_31e
-    iget-object v0, v1, Lorg/telegram/messenger/ImageReceiver;->roundPaint:Landroid/graphics/Paint;
-
-    invoke-virtual {v0, v4}, Landroid/graphics/Paint;->setShader(Landroid/graphics/Shader;)Landroid/graphics/Shader;
-
-    goto :goto_329
-
-    .line 1154
-    :cond_324
+    :cond_2f4
+    :goto_2f4
     iget-object v2, v1, Lorg/telegram/messenger/ImageReceiver;->shaderMatrix:Landroid/graphics/Matrix;
 
     invoke-virtual {v2, v0, v0}, Landroid/graphics/Matrix;->preScale(FF)Z
 
-    .line 1156
-    :goto_329
+    .line 1149
     iget-boolean v0, v1, Lorg/telegram/messenger/ImageReceiver;->isRoundVideo:Z
 
-    if-eqz v0, :cond_347
+    if-eqz v0, :cond_317
 
-    .line 1157
+    .line 1150
     sget v0, Lorg/telegram/messenger/AndroidUtilities;->roundMessageInset:I
 
     mul-int/lit8 v0, v0, 0x2
@@ -1705,7 +1630,7 @@
 
     div-float v0, v0, v18
 
-    .line 1158
+    .line 1151
     iget-object v2, v1, Lorg/telegram/messenger/ImageReceiver;->shaderMatrix:Landroid/graphics/Matrix;
 
     iget-object v5, v1, Lorg/telegram/messenger/ImageReceiver;->drawRegion:Landroid/graphics/RectF;
@@ -1722,88 +1647,88 @@
 
     invoke-virtual {v2, v0, v0, v5, v6}, Landroid/graphics/Matrix;->postScale(FFFF)Z
 
-    .line 1160
-    :cond_347
+    .line 1153
+    :cond_317
     iget-object v0, v1, Lorg/telegram/messenger/ImageReceiver;->legacyShader:Landroid/graphics/BitmapShader;
 
-    if-eqz v0, :cond_350
+    if-eqz v0, :cond_320
 
-    .line 1161
+    .line 1154
     iget-object v2, v1, Lorg/telegram/messenger/ImageReceiver;->shaderMatrix:Landroid/graphics/Matrix;
 
     invoke-virtual {v0, v2}, Landroid/graphics/BitmapShader;->setLocalMatrix(Landroid/graphics/Matrix;)V
 
-    .line 1163
-    :cond_350
+    .line 1156
+    :cond_320
     iget-object v0, v1, Lorg/telegram/messenger/ImageReceiver;->shaderMatrix:Landroid/graphics/Matrix;
 
     invoke-virtual {v4, v0}, Landroid/graphics/BitmapShader;->setLocalMatrix(Landroid/graphics/Matrix;)V
 
-    .line 1165
+    .line 1158
     iget-object v0, v1, Lorg/telegram/messenger/ImageReceiver;->composeShader:Landroid/graphics/ComposeShader;
 
-    if-eqz v0, :cond_40d
+    if-eqz v0, :cond_3dd
 
-    .line 1166
+    .line 1159
     iget-object v0, v1, Lorg/telegram/messenger/ImageReceiver;->gradientBitmap:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v0
 
-    .line 1167
+    .line 1160
     iget-object v2, v1, Lorg/telegram/messenger/ImageReceiver;->gradientBitmap:Landroid/graphics/Bitmap;
 
     invoke-virtual {v2}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result v2
 
-    .line 1168
+    .line 1161
     iget v4, v1, Lorg/telegram/messenger/ImageReceiver;->imageW:F
 
     const/4 v5, 0x0
 
     cmpl-float v4, v4, v5
 
-    if-nez v4, :cond_36f
+    if-nez v4, :cond_33f
 
     const/high16 v4, 0x3f800000    # 1.0f
 
-    goto :goto_372
+    goto :goto_342
 
-    :cond_36f
+    :cond_33f
     int-to-float v4, v0
 
     div-float v4, v4, v18
 
-    .line 1169
-    :goto_372
+    .line 1162
+    :goto_342
     iget v6, v1, Lorg/telegram/messenger/ImageReceiver;->imageH:F
 
     cmpl-float v6, v6, v5
 
-    if-nez v6, :cond_37b
+    if-nez v6, :cond_34b
 
     const/high16 v5, 0x3f800000    # 1.0f
 
-    goto :goto_37d
+    goto :goto_34d
 
-    :cond_37b
+    :cond_34b
     int-to-float v5, v2
 
     div-float/2addr v5, v11
 
-    :goto_37d
+    :goto_34d
     sub-float v6, v4, v5
 
-    .line 1170
+    .line 1163
     invoke-static {v6}, Ljava/lang/Math;->abs(F)F
 
     move-result v6
 
     cmpl-float v3, v6, v3
 
-    if-lez v3, :cond_3c0
+    if-lez v3, :cond_390
 
     int-to-float v3, v0
 
@@ -1811,11 +1736,11 @@
 
     cmpl-float v5, v3, v18
 
-    if-lez v5, :cond_3a6
+    if-lez v5, :cond_376
 
     float-to-int v0, v3
 
-    .line 1173
+    .line 1166
     iget-object v3, v1, Lorg/telegram/messenger/ImageReceiver;->drawRegion:Landroid/graphics/RectF;
 
     iget v4, v1, Lorg/telegram/messenger/ImageReceiver;->imageX:F
@@ -1842,16 +1767,16 @@
 
     invoke-virtual {v3, v6, v8, v4, v5}, Landroid/graphics/RectF;->set(FFFF)V
 
-    goto :goto_3cd
+    goto :goto_39d
 
-    :cond_3a6
+    :cond_376
     int-to-float v2, v2
 
     div-float/2addr v2, v4
 
     float-to-int v2, v2
 
-    .line 1176
+    .line 1169
     iget-object v3, v1, Lorg/telegram/messenger/ImageReceiver;->drawRegion:Landroid/graphics/RectF;
 
     iget v4, v1, Lorg/telegram/messenger/ImageReceiver;->imageX:F
@@ -1878,10 +1803,10 @@
 
     invoke-virtual {v3, v4, v7, v9, v5}, Landroid/graphics/RectF;->set(FFFF)V
 
-    goto :goto_3cd
+    goto :goto_39d
 
-    .line 1179
-    :cond_3c0
+    .line 1172
+    :cond_390
     iget-object v3, v1, Lorg/telegram/messenger/ImageReceiver;->drawRegion:Landroid/graphics/RectF;
 
     iget v4, v1, Lorg/telegram/messenger/ImageReceiver;->imageX:F
@@ -1894,42 +1819,42 @@
 
     invoke-virtual {v3, v4, v5, v6, v7}, Landroid/graphics/RectF;->set(FFFF)V
 
-    .line 1181
-    :goto_3cd
+    .line 1174
+    :goto_39d
     iget v3, v1, Lorg/telegram/messenger/ImageReceiver;->imageW:F
 
     const/4 v4, 0x0
 
     cmpl-float v3, v3, v4
 
-    if-nez v3, :cond_3d7
+    if-nez v3, :cond_3a7
 
     const/high16 v5, 0x3f800000    # 1.0f
 
-    goto :goto_3da
+    goto :goto_3aa
 
-    :cond_3d7
+    :cond_3a7
     int-to-float v0, v0
 
     div-float v5, v0, v18
 
-    :goto_3da
+    :goto_3aa
     iget v0, v1, Lorg/telegram/messenger/ImageReceiver;->imageH:F
 
     cmpl-float v0, v0, v4
 
-    if-nez v0, :cond_3e3
+    if-nez v0, :cond_3b3
 
     const/high16 v0, 0x3f800000    # 1.0f
 
-    goto :goto_3e5
+    goto :goto_3b5
 
-    :cond_3e3
+    :cond_3b3
     int-to-float v0, v2
 
     div-float/2addr v0, v11
 
-    :goto_3e5
+    :goto_3b5
     invoke-static {v5, v0}, Ljava/lang/Math;->min(FF)F
 
     move-result v0
@@ -1938,12 +1863,12 @@
 
     div-float v8, v5, v0
 
-    .line 1183
+    .line 1176
     iget-object v0, v1, Lorg/telegram/messenger/ImageReceiver;->shaderMatrix:Landroid/graphics/Matrix;
 
     invoke-virtual {v0}, Landroid/graphics/Matrix;->reset()V
 
-    .line 1184
+    .line 1177
     iget-object v0, v1, Lorg/telegram/messenger/ImageReceiver;->shaderMatrix:Landroid/graphics/Matrix;
 
     iget-object v2, v1, Lorg/telegram/messenger/ImageReceiver;->drawRegion:Landroid/graphics/RectF;
@@ -1960,42 +1885,42 @@
 
     invoke-virtual {v0, v3, v2}, Landroid/graphics/Matrix;->setTranslate(FF)V
 
-    .line 1185
+    .line 1178
     iget-object v0, v1, Lorg/telegram/messenger/ImageReceiver;->shaderMatrix:Landroid/graphics/Matrix;
 
     invoke-virtual {v0, v8, v8}, Landroid/graphics/Matrix;->preScale(FF)Z
 
-    .line 1186
+    .line 1179
     iget-object v0, v1, Lorg/telegram/messenger/ImageReceiver;->gradientShader:Landroid/graphics/BitmapShader;
 
     iget-object v2, v1, Lorg/telegram/messenger/ImageReceiver;->shaderMatrix:Landroid/graphics/Matrix;
 
     invoke-virtual {v0, v2}, Landroid/graphics/BitmapShader;->setLocalMatrix(Landroid/graphics/Matrix;)V
 
-    .line 1189
-    :cond_40d
+    .line 1182
+    :cond_3dd
     iget-object v0, v1, Lorg/telegram/messenger/ImageReceiver;->roundPaint:Landroid/graphics/Paint;
 
     move/from16 v2, p3
 
     invoke-virtual {v0, v2}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 1191
+    .line 1184
     iget-boolean v0, v1, Lorg/telegram/messenger/ImageReceiver;->isRoundRect:Z
 
-    if-eqz v0, :cond_447
+    if-eqz v0, :cond_417
 
-    .line 1193
-    :try_start_418
+    .line 1186
+    :try_start_3e8
     iget-object v0, v1, Lorg/telegram/messenger/ImageReceiver;->roundRadius:[I
 
     const/4 v2, 0x0
 
     aget v3, v0, v2
 
-    if-nez v3, :cond_42a
+    if-nez v3, :cond_3fa
 
-    .line 1194
+    .line 1187
     iget-object v0, v1, Lorg/telegram/messenger/ImageReceiver;->roundRect:Landroid/graphics/RectF;
 
     iget-object v2, v1, Lorg/telegram/messenger/ImageReceiver;->roundPaint:Landroid/graphics/Paint;
@@ -2004,12 +1929,12 @@
 
     invoke-virtual {v3, v0, v2}, Landroid/graphics/Canvas;->drawRect(Landroid/graphics/RectF;Landroid/graphics/Paint;)V
 
-    goto/16 :goto_744
+    goto/16 :goto_714
 
-    :cond_42a
+    :cond_3fa
     move-object/from16 v3, p1
 
-    .line 1196
+    .line 1189
     iget-object v2, v1, Lorg/telegram/messenger/ImageReceiver;->roundRect:Landroid/graphics/RectF;
 
     const/4 v4, 0x0
@@ -2025,40 +1950,40 @@
     iget-object v4, v1, Lorg/telegram/messenger/ImageReceiver;->roundPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v3, v2, v5, v0, v4}, Landroid/graphics/Canvas;->drawRoundRect(Landroid/graphics/RectF;FFLandroid/graphics/Paint;)V
-    :try_end_43a
-    .catch Ljava/lang/Exception; {:try_start_418 .. :try_end_43a} :catch_43c
+    :try_end_40a
+    .catch Ljava/lang/Exception; {:try_start_3e8 .. :try_end_40a} :catch_40c
 
-    goto/16 :goto_744
+    goto/16 :goto_714
 
-    :catch_43c
+    :catch_40c
     move-exception v0
 
     move-object/from16 v4, v19
 
-    .line 1199
+    .line 1192
     invoke-direct {v1, v4}, Lorg/telegram/messenger/ImageReceiver;->onBitmapException(Landroid/graphics/drawable/Drawable;)V
 
-    .line 1200
+    .line 1193
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
-    goto/16 :goto_744
+    goto/16 :goto_714
 
-    :cond_447
+    :cond_417
     move-object/from16 v3, p1
 
     const/4 v4, 0x0
 
     const/4 v15, 0x0
 
-    .line 1203
-    :goto_44b
+    .line 1196
+    :goto_41b
     iget-object v0, v1, Lorg/telegram/messenger/ImageReceiver;->roundRadius:[I
 
     array-length v2, v0
 
-    if-ge v15, v2, :cond_463
+    if-ge v15, v2, :cond_433
 
-    .line 1204
+    .line 1197
     sget-object v2, Lorg/telegram/messenger/ImageReceiver;->radii:[F
 
     mul-int/lit8 v4, v15, 0x2
@@ -2073,7 +1998,7 @@
 
     add-int/2addr v4, v5
 
-    .line 1205
+    .line 1198
     aget v0, v0, v15
 
     int-to-float v0, v0
@@ -2082,15 +2007,15 @@
 
     add-int/lit8 v15, v15, 0x1
 
-    goto :goto_44b
+    goto :goto_41b
 
-    .line 1207
-    :cond_463
+    .line 1200
+    :cond_433
     iget-object v0, v1, Lorg/telegram/messenger/ImageReceiver;->roundPath:Landroid/graphics/Path;
 
     invoke-virtual {v0}, Landroid/graphics/Path;->reset()V
 
-    .line 1208
+    .line 1201
     iget-object v0, v1, Lorg/telegram/messenger/ImageReceiver;->roundPath:Landroid/graphics/Path;
 
     iget-object v2, v1, Lorg/telegram/messenger/ImageReceiver;->roundRect:Landroid/graphics/RectF;
@@ -2101,21 +2026,21 @@
 
     invoke-virtual {v0, v2, v4, v5}, Landroid/graphics/Path;->addRoundRect(Landroid/graphics/RectF;[FLandroid/graphics/Path$Direction;)V
 
-    .line 1209
+    .line 1202
     iget-object v0, v1, Lorg/telegram/messenger/ImageReceiver;->roundPath:Landroid/graphics/Path;
 
     invoke-virtual {v0}, Landroid/graphics/Path;->close()V
 
-    .line 1210
+    .line 1203
     iget-object v0, v1, Lorg/telegram/messenger/ImageReceiver;->roundPath:Landroid/graphics/Path;
 
     iget-object v2, v1, Lorg/telegram/messenger/ImageReceiver;->roundPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v3, v0, v2}, Landroid/graphics/Canvas;->drawPath(Landroid/graphics/Path;Landroid/graphics/Paint;)V
 
-    goto/16 :goto_744
+    goto/16 :goto_714
 
-    :cond_481
+    :cond_451
     move-object v4, v7
 
     move/from16 v20, v3
@@ -2124,17 +2049,17 @@
 
     move/from16 v2, v20
 
-    .line 1215
+    .line 1208
     iget-boolean v7, v1, Lorg/telegram/messenger/ImageReceiver;->isAspectFit:Z
 
-    if-eqz v7, :cond_4f9
+    if-eqz v7, :cond_4c9
 
-    .line 1216
+    .line 1209
     invoke-static {v6, v15}, Ljava/lang/Math;->max(FF)F
 
     move-result v0
 
-    .line 1217
+    .line 1210
     invoke-virtual/range {p1 .. p1}, Landroid/graphics/Canvas;->save()I
 
     int-to-float v5, v13
@@ -2149,7 +2074,7 @@
 
     float-to-int v0, v6
 
-    .line 1220
+    .line 1213
     iget-object v6, v1, Lorg/telegram/messenger/ImageReceiver;->drawRegion:Landroid/graphics/RectF;
 
     iget v7, v1, Lorg/telegram/messenger/ImageReceiver;->imageX:F
@@ -2192,7 +2117,7 @@
 
     invoke-virtual {v6, v9, v13, v7, v11}, Landroid/graphics/RectF;->set(FFFF)V
 
-    .line 1221
+    .line 1214
     iget-object v0, v1, Lorg/telegram/messenger/ImageReceiver;->drawRegion:Landroid/graphics/RectF;
 
     iget v5, v0, Landroid/graphics/RectF;->left:F
@@ -2213,12 +2138,12 @@
 
     invoke-virtual {v4, v5, v6, v7, v0}, Landroid/graphics/drawable/BitmapDrawable;->setBounds(IIII)V
 
-    .line 1222
+    .line 1215
     instance-of v0, v4, Lorg/telegram/ui/Components/AnimatedFileDrawable;
 
-    if-eqz v0, :cond_4e2
+    if-eqz v0, :cond_4b2
 
-    .line 1223
+    .line 1216
     move-object v7, v4
 
     check-cast v7, Lorg/telegram/ui/Components/AnimatedFileDrawable;
@@ -2241,43 +2166,43 @@
 
     invoke-virtual {v7, v5, v6, v0, v8}, Lorg/telegram/ui/Components/AnimatedFileDrawable;->setActualDrawRect(FFFF)V
 
-    .line 1225
-    :cond_4e2
+    .line 1218
+    :cond_4b2
     iget-boolean v0, v1, Lorg/telegram/messenger/ImageReceiver;->isVisible:Z
 
-    if-eqz v0, :cond_4f4
+    if-eqz v0, :cond_4c4
 
-    .line 1227
-    :try_start_4e6
+    .line 1220
+    :try_start_4b6
     invoke-virtual {v4, v2}, Landroid/graphics/drawable/BitmapDrawable;->setAlpha(I)V
 
-    .line 1228
+    .line 1221
     invoke-virtual {v4, v3}, Landroid/graphics/drawable/BitmapDrawable;->draw(Landroid/graphics/Canvas;)V
-    :try_end_4ec
-    .catch Ljava/lang/Exception; {:try_start_4e6 .. :try_end_4ec} :catch_4ed
+    :try_end_4bc
+    .catch Ljava/lang/Exception; {:try_start_4b6 .. :try_end_4bc} :catch_4bd
 
-    goto :goto_4f4
+    goto :goto_4c4
 
-    :catch_4ed
+    :catch_4bd
     move-exception v0
 
-    .line 1230
+    .line 1223
     invoke-direct {v1, v4}, Lorg/telegram/messenger/ImageReceiver;->onBitmapException(Landroid/graphics/drawable/Drawable;)V
 
-    .line 1231
+    .line 1224
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
-    .line 1234
-    :cond_4f4
-    :goto_4f4
+    .line 1227
+    :cond_4c4
+    :goto_4c4
     invoke-virtual/range {p1 .. p1}, Landroid/graphics/Canvas;->restore()V
 
-    goto/16 :goto_744
+    goto/16 :goto_714
 
-    :cond_4f9
+    :cond_4c9
     sub-float v7, v6, v15
 
-    .line 1236
+    .line 1229
     invoke-static {v7}, Ljava/lang/Math;->abs(F)F
 
     move-result v7
@@ -2286,12 +2211,12 @@
 
     cmpl-float v7, v7, v8
 
-    if-lez v7, :cond_5f2
+    if-lez v7, :cond_5c2
 
-    .line 1237
+    .line 1230
     invoke-virtual/range {p1 .. p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 1238
+    .line 1231
     iget v7, v1, Lorg/telegram/messenger/ImageReceiver;->imageX:F
 
     iget v8, v1, Lorg/telegram/messenger/ImageReceiver;->imageY:F
@@ -2306,19 +2231,19 @@
 
     invoke-virtual {v3, v7, v8, v9, v10}, Landroid/graphics/Canvas;->clipRect(FFFF)Z
 
-    .line 1240
+    .line 1233
     rem-int/lit16 v7, v5, 0x168
 
-    if-eqz v7, :cond_530
+    if-eqz v7, :cond_500
 
-    .line 1241
+    .line 1234
     iget-boolean v8, v1, Lorg/telegram/messenger/ImageReceiver;->centerRotation:Z
 
-    if-eqz v8, :cond_52b
+    if-eqz v8, :cond_4fb
 
     int-to-float v5, v5
 
-    .line 1242
+    .line 1235
     iget v8, v1, Lorg/telegram/messenger/ImageReceiver;->imageW:F
 
     const/high16 v9, 0x40000000    # 2.0f
@@ -2331,32 +2256,32 @@
 
     invoke-virtual {v3, v5, v8, v10}, Landroid/graphics/Canvas;->rotate(FFF)V
 
-    goto :goto_530
+    goto :goto_500
 
-    :cond_52b
+    :cond_4fb
     int-to-float v5, v5
 
     const/4 v8, 0x0
 
-    .line 1244
+    .line 1237
     invoke-virtual {v3, v5, v8, v8}, Landroid/graphics/Canvas;->rotate(FFF)V
 
-    :cond_530
-    :goto_530
+    :cond_500
+    :goto_500
     int-to-float v5, v13
 
     div-float/2addr v5, v15
 
-    .line 1248
+    .line 1241
     iget v8, v1, Lorg/telegram/messenger/ImageReceiver;->imageW:F
 
     cmpl-float v9, v5, v8
 
-    if-lez v9, :cond_551
+    if-lez v9, :cond_521
 
     float-to-int v5, v5
 
-    .line 1250
+    .line 1243
     iget-object v6, v1, Lorg/telegram/messenger/ImageReceiver;->drawRegion:Landroid/graphics/RectF;
 
     iget v9, v1, Lorg/telegram/messenger/ImageReceiver;->imageX:F
@@ -2385,16 +2310,16 @@
 
     invoke-virtual {v6, v10, v13, v9, v5}, Landroid/graphics/RectF;->set(FFFF)V
 
-    goto :goto_56b
+    goto :goto_53b
 
-    :cond_551
+    :cond_521
     int-to-float v5, v14
 
     div-float/2addr v5, v6
 
     float-to-int v5, v5
 
-    .line 1253
+    .line 1246
     iget-object v6, v1, Lorg/telegram/messenger/ImageReceiver;->drawRegion:Landroid/graphics/RectF;
 
     iget v9, v1, Lorg/telegram/messenger/ImageReceiver;->imageX:F
@@ -2423,10 +2348,10 @@
 
     invoke-virtual {v6, v9, v13, v8, v10}, Landroid/graphics/RectF;->set(FFFF)V
 
-    :goto_56b
-    if-eqz v0, :cond_57b
+    :goto_53b
+    if-eqz v0, :cond_54b
 
-    .line 1256
+    .line 1249
     move-object v0, v4
 
     check-cast v0, Lorg/telegram/ui/Components/AnimatedFileDrawable;
@@ -2441,19 +2366,19 @@
 
     invoke-virtual {v0, v5, v6, v8, v9}, Lorg/telegram/ui/Components/AnimatedFileDrawable;->setActualDrawRect(FFFF)V
 
-    :cond_57b
+    :cond_54b
     const/16 v0, 0x5a
 
-    if-eq v7, v0, :cond_596
+    if-eq v7, v0, :cond_566
 
     const/16 v0, 0x10e
 
-    if-ne v7, v0, :cond_584
+    if-ne v7, v0, :cond_554
 
-    goto :goto_596
+    goto :goto_566
 
-    .line 1265
-    :cond_584
+    .line 1258
+    :cond_554
     iget-object v0, v1, Lorg/telegram/messenger/ImageReceiver;->drawRegion:Landroid/graphics/RectF;
 
     iget v5, v0, Landroid/graphics/RectF;->left:F
@@ -2474,11 +2399,11 @@
 
     invoke-virtual {v4, v5, v6, v7, v0}, Landroid/graphics/drawable/BitmapDrawable;->setBounds(IIII)V
 
-    goto :goto_5bf
+    goto :goto_58f
 
-    .line 1259
-    :cond_596
-    :goto_596
+    .line 1252
+    :cond_566
+    :goto_566
     iget-object v0, v1, Lorg/telegram/messenger/ImageReceiver;->drawRegion:Landroid/graphics/RectF;
 
     invoke-virtual {v0}, Landroid/graphics/RectF;->width()F
@@ -2489,7 +2414,7 @@
 
     div-float/2addr v0, v5
 
-    .line 1260
+    .line 1253
     iget-object v6, v1, Lorg/telegram/messenger/ImageReceiver;->drawRegion:Landroid/graphics/RectF;
 
     invoke-virtual {v6}, Landroid/graphics/RectF;->height()F
@@ -2498,14 +2423,14 @@
 
     div-float/2addr v6, v5
 
-    .line 1261
+    .line 1254
     iget-object v5, v1, Lorg/telegram/messenger/ImageReceiver;->drawRegion:Landroid/graphics/RectF;
 
     invoke-virtual {v5}, Landroid/graphics/RectF;->centerX()F
 
     move-result v5
 
-    .line 1262
+    .line 1255
     iget-object v7, v1, Lorg/telegram/messenger/ImageReceiver;->drawRegion:Landroid/graphics/RectF;
 
     invoke-virtual {v7}, Landroid/graphics/RectF;->centerY()F
@@ -2528,26 +2453,26 @@
 
     float-to-int v0, v7
 
-    .line 1263
+    .line 1256
     invoke-virtual {v4, v8, v9, v5, v0}, Landroid/graphics/drawable/BitmapDrawable;->setBounds(IIII)V
 
-    .line 1267
-    :goto_5bf
+    .line 1260
+    :goto_58f
     iget-boolean v0, v1, Lorg/telegram/messenger/ImageReceiver;->isVisible:Z
 
-    if-eqz v0, :cond_5ed
+    if-eqz v0, :cond_5bd
 
     const/16 v0, 0x1d
 
-    if-lt v12, v0, :cond_5df
+    if-lt v12, v0, :cond_5af
 
-    .line 1270
-    :try_start_5c7
+    .line 1263
+    :try_start_597
     iget-object v0, v1, Lorg/telegram/messenger/ImageReceiver;->blendMode:Ljava/lang/Object;
 
-    if-eqz v0, :cond_5d7
+    if-eqz v0, :cond_5a7
 
-    .line 1271
+    .line 1264
     invoke-virtual {v4}, Landroid/graphics/drawable/BitmapDrawable;->getPaint()Landroid/graphics/Paint;
 
     move-result-object v0
@@ -2558,10 +2483,10 @@
 
     invoke-virtual {v0, v5}, Landroid/graphics/Paint;->setBlendMode(Landroid/graphics/BlendMode;)V
 
-    goto :goto_5df
+    goto :goto_5af
 
-    .line 1273
-    :cond_5d7
+    .line 1266
+    :cond_5a7
     invoke-virtual {v4}, Landroid/graphics/drawable/BitmapDrawable;->getPaint()Landroid/graphics/Paint;
 
     move-result-object v0
@@ -2570,51 +2495,51 @@
 
     invoke-virtual {v0, v5}, Landroid/graphics/Paint;->setBlendMode(Landroid/graphics/BlendMode;)V
 
-    .line 1276
-    :cond_5df
-    :goto_5df
+    .line 1269
+    :cond_5af
+    :goto_5af
     invoke-virtual {v4, v2}, Landroid/graphics/drawable/BitmapDrawable;->setAlpha(I)V
 
-    .line 1277
+    .line 1270
     invoke-virtual {v4, v3}, Landroid/graphics/drawable/BitmapDrawable;->draw(Landroid/graphics/Canvas;)V
-    :try_end_5e5
-    .catch Ljava/lang/Exception; {:try_start_5c7 .. :try_end_5e5} :catch_5e6
+    :try_end_5b5
+    .catch Ljava/lang/Exception; {:try_start_597 .. :try_end_5b5} :catch_5b6
 
-    goto :goto_5ed
+    goto :goto_5bd
 
-    :catch_5e6
+    :catch_5b6
     move-exception v0
 
-    .line 1279
+    .line 1272
     invoke-direct {v1, v4}, Lorg/telegram/messenger/ImageReceiver;->onBitmapException(Landroid/graphics/drawable/Drawable;)V
 
-    .line 1280
+    .line 1273
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
-    .line 1284
-    :cond_5ed
-    :goto_5ed
+    .line 1277
+    :cond_5bd
+    :goto_5bd
     invoke-virtual/range {p1 .. p1}, Landroid/graphics/Canvas;->restore()V
 
-    goto/16 :goto_744
+    goto/16 :goto_714
 
-    .line 1286
-    :cond_5f2
+    .line 1279
+    :cond_5c2
     invoke-virtual/range {p1 .. p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 1287
+    .line 1280
     rem-int/lit16 v6, v5, 0x168
 
-    if-eqz v6, :cond_60f
+    if-eqz v6, :cond_5df
 
-    .line 1288
+    .line 1281
     iget-boolean v7, v1, Lorg/telegram/messenger/ImageReceiver;->centerRotation:Z
 
-    if-eqz v7, :cond_60a
+    if-eqz v7, :cond_5da
 
     int-to-float v5, v5
 
-    .line 1289
+    .line 1282
     iget v7, v1, Lorg/telegram/messenger/ImageReceiver;->imageW:F
 
     const/high16 v8, 0x40000000    # 2.0f
@@ -2627,19 +2552,19 @@
 
     invoke-virtual {v3, v5, v7, v9}, Landroid/graphics/Canvas;->rotate(FFF)V
 
-    goto :goto_60f
+    goto :goto_5df
 
-    :cond_60a
+    :cond_5da
     int-to-float v5, v5
 
     const/4 v7, 0x0
 
-    .line 1291
+    .line 1284
     invoke-virtual {v3, v5, v7, v7}, Landroid/graphics/Canvas;->rotate(FFF)V
 
-    .line 1294
-    :cond_60f
-    :goto_60f
+    .line 1287
+    :cond_5df
+    :goto_5df
     iget-object v5, v1, Lorg/telegram/messenger/ImageReceiver;->drawRegion:Landroid/graphics/RectF;
 
     iget v7, v1, Lorg/telegram/messenger/ImageReceiver;->imageX:F
@@ -2656,12 +2581,12 @@
 
     invoke-virtual {v5, v7, v8, v9, v10}, Landroid/graphics/RectF;->set(FFFF)V
 
-    .line 1295
+    .line 1288
     iget-boolean v5, v1, Lorg/telegram/messenger/ImageReceiver;->isRoundVideo:Z
 
-    if-eqz v5, :cond_62d
+    if-eqz v5, :cond_5fd
 
-    .line 1296
+    .line 1289
     iget-object v5, v1, Lorg/telegram/messenger/ImageReceiver;->drawRegion:Landroid/graphics/RectF;
 
     sget v7, Lorg/telegram/messenger/AndroidUtilities;->roundMessageInset:I
@@ -2676,10 +2601,10 @@
 
     invoke-virtual {v5, v8, v7}, Landroid/graphics/RectF;->inset(FF)V
 
-    :cond_62d
-    if-eqz v0, :cond_63d
+    :cond_5fd
+    if-eqz v0, :cond_60d
 
-    .line 1299
+    .line 1292
     move-object v7, v4
 
     check-cast v7, Lorg/telegram/ui/Components/AnimatedFileDrawable;
@@ -2694,19 +2619,19 @@
 
     invoke-virtual {v7, v0, v5, v8, v9}, Lorg/telegram/ui/Components/AnimatedFileDrawable;->setActualDrawRect(FFFF)V
 
-    :cond_63d
+    :cond_60d
     const/16 v0, 0x5a
 
-    if-eq v6, v0, :cond_658
+    if-eq v6, v0, :cond_628
 
     const/16 v0, 0x10e
 
-    if-ne v6, v0, :cond_646
+    if-ne v6, v0, :cond_616
 
-    goto :goto_658
+    goto :goto_628
 
-    .line 1308
-    :cond_646
+    .line 1301
+    :cond_616
     iget-object v0, v1, Lorg/telegram/messenger/ImageReceiver;->drawRegion:Landroid/graphics/RectF;
 
     iget v5, v0, Landroid/graphics/RectF;->left:F
@@ -2727,11 +2652,11 @@
 
     invoke-virtual {v4, v5, v6, v7, v0}, Landroid/graphics/drawable/BitmapDrawable;->setBounds(IIII)V
 
-    goto :goto_681
+    goto :goto_651
 
-    .line 1302
-    :cond_658
-    :goto_658
+    .line 1295
+    :cond_628
+    :goto_628
     iget-object v0, v1, Lorg/telegram/messenger/ImageReceiver;->drawRegion:Landroid/graphics/RectF;
 
     invoke-virtual {v0}, Landroid/graphics/RectF;->width()F
@@ -2742,7 +2667,7 @@
 
     div-float/2addr v0, v5
 
-    .line 1303
+    .line 1296
     iget-object v6, v1, Lorg/telegram/messenger/ImageReceiver;->drawRegion:Landroid/graphics/RectF;
 
     invoke-virtual {v6}, Landroid/graphics/RectF;->height()F
@@ -2751,14 +2676,14 @@
 
     div-float/2addr v6, v5
 
-    .line 1304
+    .line 1297
     iget-object v5, v1, Lorg/telegram/messenger/ImageReceiver;->drawRegion:Landroid/graphics/RectF;
 
     invoke-virtual {v5}, Landroid/graphics/RectF;->centerX()F
 
     move-result v5
 
-    .line 1305
+    .line 1298
     iget-object v7, v1, Lorg/telegram/messenger/ImageReceiver;->drawRegion:Landroid/graphics/RectF;
 
     invoke-virtual {v7}, Landroid/graphics/RectF;->centerY()F
@@ -2781,26 +2706,26 @@
 
     float-to-int v0, v7
 
-    .line 1306
+    .line 1299
     invoke-virtual {v4, v8, v9, v5, v0}, Landroid/graphics/drawable/BitmapDrawable;->setBounds(IIII)V
 
-    .line 1310
-    :goto_681
+    .line 1303
+    :goto_651
     iget-boolean v0, v1, Lorg/telegram/messenger/ImageReceiver;->isVisible:Z
 
-    if-eqz v0, :cond_6af
+    if-eqz v0, :cond_67f
 
     const/16 v0, 0x1d
 
-    if-lt v12, v0, :cond_6a1
+    if-lt v12, v0, :cond_671
 
-    .line 1313
-    :try_start_689
+    .line 1306
+    :try_start_659
     iget-object v0, v1, Lorg/telegram/messenger/ImageReceiver;->blendMode:Ljava/lang/Object;
 
-    if-eqz v0, :cond_699
+    if-eqz v0, :cond_669
 
-    .line 1314
+    .line 1307
     invoke-virtual {v4}, Landroid/graphics/drawable/BitmapDrawable;->getPaint()Landroid/graphics/Paint;
 
     move-result-object v0
@@ -2811,10 +2736,10 @@
 
     invoke-virtual {v0, v5}, Landroid/graphics/Paint;->setBlendMode(Landroid/graphics/BlendMode;)V
 
-    goto :goto_6a1
+    goto :goto_671
 
-    .line 1316
-    :cond_699
+    .line 1309
+    :cond_669
     invoke-virtual {v4}, Landroid/graphics/drawable/BitmapDrawable;->getPaint()Landroid/graphics/Paint;
 
     move-result-object v0
@@ -2823,35 +2748,35 @@
 
     invoke-virtual {v0, v5}, Landroid/graphics/Paint;->setBlendMode(Landroid/graphics/BlendMode;)V
 
-    .line 1319
-    :cond_6a1
-    :goto_6a1
+    .line 1312
+    :cond_671
+    :goto_671
     invoke-virtual {v4, v2}, Landroid/graphics/drawable/BitmapDrawable;->setAlpha(I)V
 
-    .line 1320
+    .line 1313
     invoke-virtual {v4, v3}, Landroid/graphics/drawable/BitmapDrawable;->draw(Landroid/graphics/Canvas;)V
-    :try_end_6a7
-    .catch Ljava/lang/Exception; {:try_start_689 .. :try_end_6a7} :catch_6a8
+    :try_end_677
+    .catch Ljava/lang/Exception; {:try_start_659 .. :try_end_677} :catch_678
 
-    goto :goto_6af
+    goto :goto_67f
 
-    :catch_6a8
+    :catch_678
     move-exception v0
 
-    .line 1322
+    .line 1315
     invoke-direct {v1, v4}, Lorg/telegram/messenger/ImageReceiver;->onBitmapException(Landroid/graphics/drawable/Drawable;)V
 
-    .line 1323
+    .line 1316
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
-    .line 1326
-    :cond_6af
-    :goto_6af
+    .line 1319
+    :cond_67f
+    :goto_67f
     invoke-virtual/range {p1 .. p1}, Landroid/graphics/Canvas;->restore()V
 
-    goto/16 :goto_744
+    goto/16 :goto_714
 
-    :cond_6b4
+    :cond_684
     const/high16 v5, 0x3f800000    # 1.0f
 
     move/from16 v20, v3
@@ -2860,22 +2785,22 @@
 
     move/from16 v2, v20
 
-    .line 1331
+    .line 1324
     iget-boolean v4, v1, Lorg/telegram/messenger/ImageReceiver;->isAspectFit:Z
 
-    if-eqz v4, :cond_715
+    if-eqz v4, :cond_6e5
 
-    .line 1332
+    .line 1325
     invoke-virtual/range {p2 .. p2}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
     move-result v4
 
-    .line 1333
+    .line 1326
     invoke-virtual/range {p2 .. p2}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
 
     move-result v6
 
-    .line 1334
+    .line 1327
     iget v7, v1, Lorg/telegram/messenger/ImageReceiver;->imageW:F
 
     iget v8, v1, Lorg/telegram/messenger/ImageReceiver;->sideClip:F
@@ -2886,7 +2811,7 @@
 
     sub-float v10, v7, v10
 
-    .line 1335
+    .line 1328
     iget v11, v1, Lorg/telegram/messenger/ImageReceiver;->imageH:F
 
     mul-float v8, v8, v9
@@ -2897,33 +2822,33 @@
 
     cmpl-float v7, v7, v9
 
-    if-nez v7, :cond_6df
+    if-nez v7, :cond_6af
 
     const/high16 v7, 0x3f800000    # 1.0f
 
-    goto :goto_6e1
+    goto :goto_6b1
 
-    :cond_6df
+    :cond_6af
     int-to-float v7, v4
 
     div-float/2addr v7, v10
 
-    :goto_6e1
+    :goto_6b1
     cmpl-float v9, v11, v9
 
-    if-nez v9, :cond_6e8
+    if-nez v9, :cond_6b8
 
     const/high16 v8, 0x3f800000    # 1.0f
 
-    goto :goto_6eb
+    goto :goto_6bb
 
-    :cond_6e8
+    :cond_6b8
     int-to-float v5, v6
 
     div-float v8, v5, v8
 
-    .line 1338
-    :goto_6eb
+    .line 1331
+    :goto_6bb
     invoke-static {v7, v8}, Ljava/lang/Math;->max(FF)F
 
     move-result v5
@@ -2940,7 +2865,7 @@
 
     float-to-int v5, v6
 
-    .line 1341
+    .line 1334
     iget-object v6, v1, Lorg/telegram/messenger/ImageReceiver;->drawRegion:Landroid/graphics/RectF;
 
     iget v7, v1, Lorg/telegram/messenger/ImageReceiver;->imageX:F
@@ -2983,10 +2908,10 @@
 
     invoke-virtual {v6, v9, v13, v7, v11}, Landroid/graphics/RectF;->set(FFFF)V
 
-    goto :goto_724
+    goto :goto_6f4
 
-    .line 1343
-    :cond_715
+    .line 1336
+    :cond_6e5
     iget-object v4, v1, Lorg/telegram/messenger/ImageReceiver;->drawRegion:Landroid/graphics/RectF;
 
     iget v5, v1, Lorg/telegram/messenger/ImageReceiver;->imageX:F
@@ -3003,8 +2928,8 @@
 
     invoke-virtual {v4, v5, v6, v7, v8}, Landroid/graphics/RectF;->set(FFFF)V
 
-    .line 1345
-    :goto_724
+    .line 1338
+    :goto_6f4
     iget-object v4, v1, Lorg/telegram/messenger/ImageReceiver;->drawRegion:Landroid/graphics/RectF;
 
     iget v5, v4, Landroid/graphics/RectF;->left:F
@@ -3025,30 +2950,30 @@
 
     invoke-virtual {v0, v5, v6, v7, v4}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 1346
+    .line 1339
     iget-boolean v4, v1, Lorg/telegram/messenger/ImageReceiver;->isVisible:Z
 
-    if-eqz v4, :cond_744
+    if-eqz v4, :cond_714
 
-    .line 1348
-    :try_start_739
+    .line 1341
+    :try_start_709
     invoke-virtual/range {p2 .. p3}, Landroid/graphics/drawable/Drawable;->setAlpha(I)V
 
-    .line 1349
+    .line 1342
     invoke-virtual {v0, v3}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
-    :try_end_73f
-    .catch Ljava/lang/Exception; {:try_start_739 .. :try_end_73f} :catch_740
+    :try_end_70f
+    .catch Ljava/lang/Exception; {:try_start_709 .. :try_end_70f} :catch_710
 
-    goto :goto_744
+    goto :goto_714
 
-    :catch_740
+    :catch_710
     move-exception v0
 
-    .line 1351
+    .line 1344
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
-    :cond_744
-    :goto_744
+    :cond_714
+    :goto_714
     return-void
 .end method
 
@@ -3061,107 +2986,107 @@
 .end method
 
 .method private onBitmapException(Landroid/graphics/drawable/Drawable;)V
-    .registers 16
+    .registers 15
 
-    .line 1383
-    iget-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->currentMediaDrawable:Landroid/graphics/drawable/Drawable;
+    .line 1376
+    iget-object v1, p0, Lorg/telegram/messenger/ImageReceiver;->currentMediaDrawable:Landroid/graphics/drawable/Drawable;
 
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    if-ne p1, v0, :cond_15
+    if-ne p1, v1, :cond_15
 
-    iget-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->currentMediaKey:Ljava/lang/String;
+    iget-object v1, p0, Lorg/telegram/messenger/ImageReceiver;->currentMediaKey:Ljava/lang/String;
 
-    if-eqz v0, :cond_15
+    if-eqz v1, :cond_15
 
-    .line 1384
+    .line 1377
     invoke-static {}, Lorg/telegram/messenger/ImageLoader;->getInstance()Lorg/telegram/messenger/ImageLoader;
 
-    move-result-object p1
+    move-result-object v0
 
-    iget-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->currentMediaKey:Ljava/lang/String;
+    iget-object v1, p0, Lorg/telegram/messenger/ImageReceiver;->currentMediaKey:Ljava/lang/String;
 
-    invoke-virtual {p1, v0}, Lorg/telegram/messenger/ImageLoader;->removeImage(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lorg/telegram/messenger/ImageLoader;->removeImage(Ljava/lang/String;)V
 
-    .line 1385
-    iput-object v1, p0, Lorg/telegram/messenger/ImageReceiver;->currentMediaKey:Ljava/lang/String;
+    .line 1378
+    iput-object v2, p0, Lorg/telegram/messenger/ImageReceiver;->currentMediaKey:Ljava/lang/String;
 
     goto :goto_3c
 
-    .line 1386
+    .line 1379
     :cond_15
-    iget-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->currentImageDrawable:Landroid/graphics/drawable/Drawable;
+    iget-object v1, p0, Lorg/telegram/messenger/ImageReceiver;->currentImageDrawable:Landroid/graphics/drawable/Drawable;
 
-    if-ne p1, v0, :cond_29
+    if-ne p1, v1, :cond_29
 
-    iget-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->currentImageKey:Ljava/lang/String;
+    iget-object v1, p0, Lorg/telegram/messenger/ImageReceiver;->currentImageKey:Ljava/lang/String;
 
-    if-eqz v0, :cond_29
+    if-eqz v1, :cond_29
 
-    .line 1387
+    .line 1380
     invoke-static {}, Lorg/telegram/messenger/ImageLoader;->getInstance()Lorg/telegram/messenger/ImageLoader;
 
-    move-result-object p1
+    move-result-object v0
 
-    iget-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->currentImageKey:Ljava/lang/String;
+    iget-object v1, p0, Lorg/telegram/messenger/ImageReceiver;->currentImageKey:Ljava/lang/String;
 
-    invoke-virtual {p1, v0}, Lorg/telegram/messenger/ImageLoader;->removeImage(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lorg/telegram/messenger/ImageLoader;->removeImage(Ljava/lang/String;)V
 
-    .line 1388
-    iput-object v1, p0, Lorg/telegram/messenger/ImageReceiver;->currentImageKey:Ljava/lang/String;
+    .line 1381
+    iput-object v2, p0, Lorg/telegram/messenger/ImageReceiver;->currentImageKey:Ljava/lang/String;
 
     goto :goto_3c
 
-    .line 1389
+    .line 1382
     :cond_29
-    iget-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->currentThumbDrawable:Landroid/graphics/drawable/Drawable;
+    iget-object v1, p0, Lorg/telegram/messenger/ImageReceiver;->currentThumbDrawable:Landroid/graphics/drawable/Drawable;
 
-    if-ne p1, v0, :cond_3c
-
-    iget-object p1, p0, Lorg/telegram/messenger/ImageReceiver;->currentThumbKey:Ljava/lang/String;
-
-    if-eqz p1, :cond_3c
-
-    .line 1390
-    invoke-static {}, Lorg/telegram/messenger/ImageLoader;->getInstance()Lorg/telegram/messenger/ImageLoader;
-
-    move-result-object p1
+    if-ne p1, v1, :cond_3c
 
     iget-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->currentThumbKey:Ljava/lang/String;
 
-    invoke-virtual {p1, v0}, Lorg/telegram/messenger/ImageLoader;->removeImage(Ljava/lang/String;)V
+    if-eqz v0, :cond_3c
 
-    .line 1391
-    iput-object v1, p0, Lorg/telegram/messenger/ImageReceiver;->currentThumbKey:Ljava/lang/String;
+    .line 1383
+    invoke-static {}, Lorg/telegram/messenger/ImageLoader;->getInstance()Lorg/telegram/messenger/ImageLoader;
 
-    .line 1393
+    move-result-object v0
+
+    iget-object v1, p0, Lorg/telegram/messenger/ImageReceiver;->currentThumbKey:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Lorg/telegram/messenger/ImageLoader;->removeImage(Ljava/lang/String;)V
+
+    .line 1384
+    iput-object v2, p0, Lorg/telegram/messenger/ImageReceiver;->currentThumbKey:Ljava/lang/String;
+
+    .line 1386
     :cond_3c
     :goto_3c
-    iget-object v3, p0, Lorg/telegram/messenger/ImageReceiver;->currentMediaLocation:Lorg/telegram/messenger/ImageLocation;
+    iget-object v1, p0, Lorg/telegram/messenger/ImageReceiver;->currentMediaLocation:Lorg/telegram/messenger/ImageLocation;
 
-    iget-object v4, p0, Lorg/telegram/messenger/ImageReceiver;->currentMediaFilter:Ljava/lang/String;
+    iget-object v2, p0, Lorg/telegram/messenger/ImageReceiver;->currentMediaFilter:Ljava/lang/String;
 
-    iget-object v5, p0, Lorg/telegram/messenger/ImageReceiver;->currentImageLocation:Lorg/telegram/messenger/ImageLocation;
+    iget-object v3, p0, Lorg/telegram/messenger/ImageReceiver;->currentImageLocation:Lorg/telegram/messenger/ImageLocation;
 
-    iget-object v6, p0, Lorg/telegram/messenger/ImageReceiver;->currentImageFilter:Ljava/lang/String;
+    iget-object v4, p0, Lorg/telegram/messenger/ImageReceiver;->currentImageFilter:Ljava/lang/String;
 
-    iget-object v7, p0, Lorg/telegram/messenger/ImageReceiver;->currentThumbLocation:Lorg/telegram/messenger/ImageLocation;
+    iget-object v5, p0, Lorg/telegram/messenger/ImageReceiver;->currentThumbLocation:Lorg/telegram/messenger/ImageLocation;
 
-    iget-object v8, p0, Lorg/telegram/messenger/ImageReceiver;->currentThumbFilter:Ljava/lang/String;
+    iget-object v6, p0, Lorg/telegram/messenger/ImageReceiver;->currentThumbFilter:Ljava/lang/String;
 
-    iget-object v9, p0, Lorg/telegram/messenger/ImageReceiver;->currentThumbDrawable:Landroid/graphics/drawable/Drawable;
+    iget-object v7, p0, Lorg/telegram/messenger/ImageReceiver;->currentThumbDrawable:Landroid/graphics/drawable/Drawable;
 
-    iget v10, p0, Lorg/telegram/messenger/ImageReceiver;->currentSize:I
+    iget-wide v8, p0, Lorg/telegram/messenger/ImageReceiver;->currentSize:J
 
-    iget-object v11, p0, Lorg/telegram/messenger/ImageReceiver;->currentExt:Ljava/lang/String;
+    iget-object v10, p0, Lorg/telegram/messenger/ImageReceiver;->currentExt:Ljava/lang/String;
 
-    iget-object v12, p0, Lorg/telegram/messenger/ImageReceiver;->currentParentObject:Ljava/lang/Object;
+    iget-object v11, p0, Lorg/telegram/messenger/ImageReceiver;->currentParentObject:Ljava/lang/Object;
 
-    iget v13, p0, Lorg/telegram/messenger/ImageReceiver;->currentCacheType:I
+    iget v12, p0, Lorg/telegram/messenger/ImageReceiver;->currentCacheType:I
 
-    move-object v2, p0
+    move-object v0, p0
 
-    invoke-virtual/range {v2 .. v13}, Lorg/telegram/messenger/ImageReceiver;->setImage(Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Landroid/graphics/drawable/Drawable;ILjava/lang/String;Ljava/lang/Object;I)V
+    invoke-virtual/range {v0 .. v12}, Lorg/telegram/messenger/ImageReceiver;->setImage(Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Landroid/graphics/drawable/Drawable;JLjava/lang/String;Ljava/lang/Object;I)V
 
     return-void
 .end method
@@ -3177,10 +3102,10 @@
 
     if-ne p2, v1, :cond_a
 
-    .line 2311
+    .line 2313
     iget-object v3, p0, Lorg/telegram/messenger/ImageReceiver;->currentMediaKey:Ljava/lang/String;
 
-    .line 2312
+    .line 2314
     iget-object v4, p0, Lorg/telegram/messenger/ImageReceiver;->currentMediaDrawable:Landroid/graphics/drawable/Drawable;
 
     goto :goto_1c
@@ -3188,10 +3113,10 @@
     :cond_a
     if-ne p2, v0, :cond_11
 
-    .line 2314
+    .line 2316
     iget-object v3, p0, Lorg/telegram/messenger/ImageReceiver;->crossfadeKey:Ljava/lang/String;
 
-    .line 2315
+    .line 2317
     iget-object v4, p0, Lorg/telegram/messenger/ImageReceiver;->crossfadeImage:Landroid/graphics/drawable/Drawable;
 
     goto :goto_1c
@@ -3199,19 +3124,19 @@
     :cond_11
     if-ne p2, v2, :cond_18
 
-    .line 2317
+    .line 2319
     iget-object v3, p0, Lorg/telegram/messenger/ImageReceiver;->currentThumbKey:Ljava/lang/String;
 
-    .line 2318
+    .line 2320
     iget-object v4, p0, Lorg/telegram/messenger/ImageReceiver;->currentThumbDrawable:Landroid/graphics/drawable/Drawable;
 
     goto :goto_1c
 
-    .line 2320
+    .line 2322
     :cond_18
     iget-object v3, p0, Lorg/telegram/messenger/ImageReceiver;->currentImageKey:Ljava/lang/String;
 
-    .line 2321
+    .line 2323
     iget-object v4, p0, Lorg/telegram/messenger/ImageReceiver;->currentImageDrawable:Landroid/graphics/drawable/Drawable;
 
     :goto_1c
@@ -3219,7 +3144,7 @@
 
     const-string v5, "-"
 
-    .line 2323
+    .line 2325
     invoke-virtual {v3, v5}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v5
@@ -3234,7 +3159,7 @@
 
     if-eqz v5, :cond_39
 
-    .line 2324
+    .line 2326
     :cond_2e
     invoke-static {}, Lorg/telegram/messenger/ImageLoader;->getInstance()Lorg/telegram/messenger/ImageLoader;
 
@@ -3248,103 +3173,60 @@
 
     move-object v3, v5
 
-    .line 2329
+    .line 2331
     :cond_39
     instance-of v5, v4, Lorg/telegram/ui/Components/RLottieDrawable;
 
     if-eqz v5, :cond_45
 
-    .line 2330
+    .line 2332
     move-object v5, v4
 
     check-cast v5, Lorg/telegram/ui/Components/RLottieDrawable;
 
-    .line 2331
+    .line 2333
     iget-object v6, p0, Lorg/telegram/messenger/ImageReceiver;->parentView:Landroid/view/View;
 
     invoke-virtual {v5, v6}, Lorg/telegram/ui/Components/RLottieDrawable;->removeParentView(Landroid/view/View;)V
 
-    .line 2333
+    .line 2335
     :cond_45
     instance-of v5, v4, Lorg/telegram/ui/Components/AnimatedFileDrawable;
 
-    if-eqz v5, :cond_51
+    if-eqz v5, :cond_4f
 
-    .line 2334
+    .line 2336
     move-object v5, v4
 
     check-cast v5, Lorg/telegram/ui/Components/AnimatedFileDrawable;
 
-    .line 2335
-    iget-object v6, p0, Lorg/telegram/messenger/ImageReceiver;->parentView:Landroid/view/View;
-
-    invoke-virtual {v5, v6}, Lorg/telegram/ui/Components/AnimatedFileDrawable;->removeParent(Landroid/view/View;)V
-
-    :cond_51
-    if-eqz v3, :cond_d1
-
-    if-eqz p1, :cond_5b
-
     .line 2337
+    invoke-virtual {v5, p0}, Lorg/telegram/ui/Components/AnimatedFileDrawable;->removeParent(Lorg/telegram/messenger/ImageReceiver;)V
+
+    :cond_4f
+    if-eqz v3, :cond_cf
+
+    if-eqz p1, :cond_59
+
+    .line 2339
     invoke-virtual {p1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
-    if-nez p1, :cond_d1
+    if-nez p1, :cond_cf
 
-    :cond_5b
-    if-eqz v4, :cond_d1
-
-    .line 2338
-    instance-of p1, v4, Lorg/telegram/ui/Components/RLottieDrawable;
-
-    if-eqz p1, :cond_7b
-
-    .line 2339
-    check-cast v4, Lorg/telegram/ui/Components/RLottieDrawable;
+    :cond_59
+    if-eqz v4, :cond_cf
 
     .line 2340
-    invoke-static {}, Lorg/telegram/messenger/ImageLoader;->getInstance()Lorg/telegram/messenger/ImageLoader;
+    instance-of p1, v4, Lorg/telegram/ui/Components/RLottieDrawable;
 
-    move-result-object p1
-
-    invoke-virtual {p1, v3}, Lorg/telegram/messenger/ImageLoader;->decrementUseCount(Ljava/lang/String;)Z
-
-    move-result p1
+    if-eqz p1, :cond_79
 
     .line 2341
-    invoke-static {}, Lorg/telegram/messenger/ImageLoader;->getInstance()Lorg/telegram/messenger/ImageLoader;
+    check-cast v4, Lorg/telegram/ui/Components/RLottieDrawable;
 
-    move-result-object v5
-
-    invoke-virtual {v5, v3, v2}, Lorg/telegram/messenger/ImageLoader;->isInMemCache(Ljava/lang/String;Z)Z
-
-    move-result v3
-
-    if-nez v3, :cond_d1
-
-    if-eqz p1, :cond_d1
-
-    .line 2343
-    invoke-virtual {v4}, Lorg/telegram/ui/Components/RLottieDrawable;->recycle()V
-
-    goto :goto_d1
-
-    .line 2346
-    :cond_7b
-    instance-of p1, v4, Lorg/telegram/ui/Components/AnimatedFileDrawable;
-
-    if-eqz p1, :cond_a7
-
-    .line 2347
-    check-cast v4, Lorg/telegram/ui/Components/AnimatedFileDrawable;
-
-    .line 2348
-    iget-boolean p1, v4, Lorg/telegram/ui/Components/AnimatedFileDrawable;->isWebmSticker:Z
-
-    if-eqz p1, :cond_a3
-
-    .line 2349
+    .line 2342
     invoke-static {}, Lorg/telegram/messenger/ImageLoader;->getInstance()Lorg/telegram/messenger/ImageLoader;
 
     move-result-object p1
@@ -3353,7 +3235,7 @@
 
     move-result p1
 
-    .line 2350
+    .line 2343
     invoke-static {}, Lorg/telegram/messenger/ImageLoader;->getInstance()Lorg/telegram/messenger/ImageLoader;
 
     move-result-object v5
@@ -3362,43 +3244,84 @@
 
     move-result v3
 
-    if-nez v3, :cond_9d
+    if-nez v3, :cond_cf
 
-    if-eqz p1, :cond_d1
+    if-eqz p1, :cond_cf
+
+    .line 2345
+    invoke-virtual {v4}, Lorg/telegram/ui/Components/RLottieDrawable;->recycle()V
+
+    goto :goto_cf
+
+    .line 2348
+    :cond_79
+    instance-of p1, v4, Lorg/telegram/ui/Components/AnimatedFileDrawable;
+
+    if-eqz p1, :cond_a5
+
+    .line 2349
+    check-cast v4, Lorg/telegram/ui/Components/AnimatedFileDrawable;
+
+    .line 2350
+    iget-boolean p1, v4, Lorg/telegram/ui/Components/AnimatedFileDrawable;->isWebmSticker:Z
+
+    if-eqz p1, :cond_a1
+
+    .line 2351
+    invoke-static {}, Lorg/telegram/messenger/ImageLoader;->getInstance()Lorg/telegram/messenger/ImageLoader;
+
+    move-result-object p1
+
+    invoke-virtual {p1, v3}, Lorg/telegram/messenger/ImageLoader;->decrementUseCount(Ljava/lang/String;)Z
+
+    move-result p1
 
     .line 2352
+    invoke-static {}, Lorg/telegram/messenger/ImageLoader;->getInstance()Lorg/telegram/messenger/ImageLoader;
+
+    move-result-object v5
+
+    invoke-virtual {v5, v3, v2}, Lorg/telegram/messenger/ImageLoader;->isInMemCache(Ljava/lang/String;Z)Z
+
+    move-result v3
+
+    if-nez v3, :cond_9b
+
+    if-eqz p1, :cond_cf
+
+    .line 2354
     invoke-virtual {v4}, Lorg/telegram/ui/Components/AnimatedFileDrawable;->recycle()V
 
-    goto :goto_d1
+    goto :goto_cf
 
-    :cond_9d
-    if-eqz p1, :cond_d1
+    :cond_9b
+    if-eqz p1, :cond_cf
 
-    .line 2355
+    .line 2357
     invoke-virtual {v4}, Lorg/telegram/ui/Components/AnimatedFileDrawable;->stop()V
 
-    goto :goto_d1
-
-    .line 2358
-    :cond_a3
-    invoke-virtual {v4}, Lorg/telegram/ui/Components/AnimatedFileDrawable;->recycle()V
-
-    goto :goto_d1
+    goto :goto_cf
 
     .line 2360
-    :cond_a7
+    :cond_a1
+    invoke-virtual {v4}, Lorg/telegram/ui/Components/AnimatedFileDrawable;->recycle()V
+
+    goto :goto_cf
+
+    .line 2362
+    :cond_a5
     instance-of p1, v4, Landroid/graphics/drawable/BitmapDrawable;
 
-    if-eqz p1, :cond_d1
+    if-eqz p1, :cond_cf
 
-    .line 2361
+    .line 2363
     check-cast v4, Landroid/graphics/drawable/BitmapDrawable;
 
     invoke-virtual {v4}, Landroid/graphics/drawable/BitmapDrawable;->getBitmap()Landroid/graphics/Bitmap;
 
     move-result-object p1
 
-    .line 2362
+    .line 2364
     invoke-static {}, Lorg/telegram/messenger/ImageLoader;->getInstance()Lorg/telegram/messenger/ImageLoader;
 
     move-result-object v4
@@ -3407,7 +3330,7 @@
 
     move-result v4
 
-    .line 2363
+    .line 2365
     invoke-static {}, Lorg/telegram/messenger/ImageLoader;->getInstance()Lorg/telegram/messenger/ImageLoader;
 
     move-result-object v5
@@ -3418,193 +3341,72 @@
 
     move-result v3
 
-    if-nez v3, :cond_d1
+    if-nez v3, :cond_cf
 
-    if-eqz v4, :cond_d1
+    if-eqz v4, :cond_cf
 
-    .line 2365
+    .line 2367
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
-    .line 2366
+    .line 2368
     invoke-virtual {v3, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 2367
+    .line 2369
     invoke-static {v3}, Lorg/telegram/messenger/AndroidUtilities;->recycleBitmaps(Ljava/util/ArrayList;)V
 
-    :cond_d1
-    :goto_d1
+    :cond_cf
+    :goto_cf
     const/4 p1, 0x0
 
-    if-ne p2, v1, :cond_d9
+    if-ne p2, v1, :cond_d7
 
-    .line 2373
+    .line 2375
     iput-object p1, p0, Lorg/telegram/messenger/ImageReceiver;->currentMediaKey:Ljava/lang/String;
 
-    .line 2374
+    .line 2376
     iput-object p1, p0, Lorg/telegram/messenger/ImageReceiver;->currentMediaDrawable:Landroid/graphics/drawable/Drawable;
 
-    goto :goto_eb
+    goto :goto_e9
 
-    :cond_d9
-    if-ne p2, v0, :cond_e0
+    :cond_d7
+    if-ne p2, v0, :cond_de
 
-    .line 2376
+    .line 2378
     iput-object p1, p0, Lorg/telegram/messenger/ImageReceiver;->crossfadeKey:Ljava/lang/String;
 
-    .line 2377
+    .line 2379
     iput-object p1, p0, Lorg/telegram/messenger/ImageReceiver;->crossfadeImage:Landroid/graphics/drawable/Drawable;
 
-    goto :goto_eb
+    goto :goto_e9
 
-    :cond_e0
-    if-ne p2, v2, :cond_e7
+    :cond_de
+    if-ne p2, v2, :cond_e5
 
-    .line 2379
+    .line 2381
     iput-object p1, p0, Lorg/telegram/messenger/ImageReceiver;->currentThumbDrawable:Landroid/graphics/drawable/Drawable;
 
-    .line 2380
+    .line 2382
     iput-object p1, p0, Lorg/telegram/messenger/ImageReceiver;->currentThumbKey:Ljava/lang/String;
 
-    goto :goto_eb
+    goto :goto_e9
 
-    .line 2382
-    :cond_e7
+    .line 2384
+    :cond_e5
     iput-object p1, p0, Lorg/telegram/messenger/ImageReceiver;->currentImageDrawable:Landroid/graphics/drawable/Drawable;
 
-    .line 2383
+    .line 2385
     iput-object p1, p0, Lorg/telegram/messenger/ImageReceiver;->currentImageKey:Ljava/lang/String;
 
-    :goto_eb
+    :goto_e9
     return-void
 .end method
 
-.method private scaleImageShaderBitmap(F)Z
-    .registers 6
-
-    .line 826
-    iget-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->imageShader:Landroid/graphics/BitmapShader;
-
-    if-eqz v0, :cond_60
-
-    iget-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->composeShader:Landroid/graphics/ComposeShader;
-
-    if-eqz v0, :cond_60
-
-    iget-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->imageShaderBitmap:Landroid/graphics/Bitmap;
-
-    if-eqz v0, :cond_60
-
-    iget-boolean v0, p0, Lorg/telegram/messenger/ImageReceiver;->mustScaleImageShaderBitmap:Z
-
-    if-nez v0, :cond_11
-
-    goto :goto_60
-
-    .line 829
-    :cond_11
-    iget v0, p0, Lorg/telegram/messenger/ImageReceiver;->scaleImageShaderBitmap:F
-
-    sub-float/2addr v0, p1
-
-    invoke-static {v0}, Ljava/lang/Math;->abs(F)F
-
-    move-result v0
-
-    const v1, 0x3a83126f    # 0.001f
-
-    const/4 v2, 0x1
-
-    cmpl-float v0, v0, v1
-
-    if-lez v0, :cond_5f
-
-    .line 830
-    iput p1, p0, Lorg/telegram/messenger/ImageReceiver;->scaleImageShaderBitmap:F
-
-    .line 831
-    iget-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->scaledImageShaderBitmap:Landroid/graphics/Bitmap;
-
-    if-eqz v0, :cond_2d
-
-    iget-object v1, p0, Lorg/telegram/messenger/ImageReceiver;->imageShaderBitmap:Landroid/graphics/Bitmap;
-
-    if-eq v0, v1, :cond_2d
-
-    .line 832
-    invoke-virtual {v0}, Landroid/graphics/Bitmap;->recycle()V
-
-    .line 834
-    :cond_2d
-    iget-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->imageShaderBitmap:Landroid/graphics/Bitmap;
-
-    invoke-virtual {v0}, Landroid/graphics/Bitmap;->getWidth()I
-
-    move-result v1
-
-    int-to-float v1, v1
-
-    mul-float v1, v1, p1
-
-    float-to-int v1, v1
-
-    iget-object v3, p0, Lorg/telegram/messenger/ImageReceiver;->imageShaderBitmap:Landroid/graphics/Bitmap;
-
-    invoke-virtual {v3}, Landroid/graphics/Bitmap;->getHeight()I
-
-    move-result v3
-
-    int-to-float v3, v3
-
-    mul-float v3, v3, p1
-
-    float-to-int p1, v3
-
-    invoke-static {v0, v1, p1, v2}, Landroid/graphics/Bitmap;->createScaledBitmap(Landroid/graphics/Bitmap;IIZ)Landroid/graphics/Bitmap;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lorg/telegram/messenger/ImageReceiver;->scaledImageShaderBitmap:Landroid/graphics/Bitmap;
-
-    .line 835
-    new-instance p1, Landroid/graphics/BitmapShader;
-
-    iget-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->scaledImageShaderBitmap:Landroid/graphics/Bitmap;
-
-    sget-object v1, Landroid/graphics/Shader$TileMode;->CLAMP:Landroid/graphics/Shader$TileMode;
-
-    invoke-direct {p1, v0, v1, v1}, Landroid/graphics/BitmapShader;-><init>(Landroid/graphics/Bitmap;Landroid/graphics/Shader$TileMode;Landroid/graphics/Shader$TileMode;)V
-
-    iput-object p1, p0, Lorg/telegram/messenger/ImageReceiver;->scaledImageShader:Landroid/graphics/BitmapShader;
-
-    .line 836
-    new-instance p1, Landroid/graphics/ComposeShader;
-
-    iget-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->cachedGradientShader:Landroid/graphics/BitmapShader;
-
-    iget-object v1, p0, Lorg/telegram/messenger/ImageReceiver;->scaledImageShader:Landroid/graphics/BitmapShader;
-
-    sget-object v3, Landroid/graphics/PorterDuff$Mode;->DST_IN:Landroid/graphics/PorterDuff$Mode;
-
-    invoke-direct {p1, v0, v1, v3}, Landroid/graphics/ComposeShader;-><init>(Landroid/graphics/Shader;Landroid/graphics/Shader;Landroid/graphics/PorterDuff$Mode;)V
-
-    iput-object p1, p0, Lorg/telegram/messenger/ImageReceiver;->composeShader:Landroid/graphics/ComposeShader;
-
-    :cond_5f
-    return v2
-
-    :cond_60
-    :goto_60
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
 .method private setBackupImage()Z
-    .registers 15
+    .registers 16
 
-    .line 916
+    .line 922
     iget-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->setImageBackup:Lorg/telegram/messenger/ImageReceiver$SetImageBackup;
 
     if-eqz v0, :cond_47
@@ -3615,15 +3417,15 @@
 
     if-eqz v0, :cond_47
 
-    .line 917
+    .line 923
     iget-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->setImageBackup:Lorg/telegram/messenger/ImageReceiver$SetImageBackup;
 
     const/4 v1, 0x0
 
-    .line 918
+    .line 924
     iput-object v1, p0, Lorg/telegram/messenger/ImageReceiver;->setImageBackup:Lorg/telegram/messenger/ImageReceiver$SetImageBackup;
 
-    .line 919
+    .line 925
     iget-object v3, v0, Lorg/telegram/messenger/ImageReceiver$SetImageBackup;->mediaLocation:Lorg/telegram/messenger/ImageLocation;
 
     iget-object v4, v0, Lorg/telegram/messenger/ImageReceiver$SetImageBackup;->mediaFilter:Ljava/lang/String;
@@ -3638,32 +3440,32 @@
 
     iget-object v9, v0, Lorg/telegram/messenger/ImageReceiver$SetImageBackup;->thumb:Landroid/graphics/drawable/Drawable;
 
-    iget v10, v0, Lorg/telegram/messenger/ImageReceiver$SetImageBackup;->size:I
+    iget-wide v10, v0, Lorg/telegram/messenger/ImageReceiver$SetImageBackup;->size:J
 
-    iget-object v11, v0, Lorg/telegram/messenger/ImageReceiver$SetImageBackup;->ext:Ljava/lang/String;
+    iget-object v12, v0, Lorg/telegram/messenger/ImageReceiver$SetImageBackup;->ext:Ljava/lang/String;
 
-    iget-object v12, v0, Lorg/telegram/messenger/ImageReceiver$SetImageBackup;->parentObject:Ljava/lang/Object;
+    iget-object v13, v0, Lorg/telegram/messenger/ImageReceiver$SetImageBackup;->parentObject:Ljava/lang/Object;
 
-    iget v13, v0, Lorg/telegram/messenger/ImageReceiver$SetImageBackup;->cacheType:I
+    iget v14, v0, Lorg/telegram/messenger/ImageReceiver$SetImageBackup;->cacheType:I
 
     move-object v2, p0
 
-    invoke-virtual/range {v2 .. v13}, Lorg/telegram/messenger/ImageReceiver;->setImage(Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Landroid/graphics/drawable/Drawable;ILjava/lang/String;Ljava/lang/Object;I)V
+    invoke-virtual/range {v2 .. v14}, Lorg/telegram/messenger/ImageReceiver;->setImage(Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Landroid/graphics/drawable/Drawable;JLjava/lang/String;Ljava/lang/Object;I)V
 
-    .line 920
+    .line 926
     invoke-static {v0}, Lorg/telegram/messenger/ImageReceiver$SetImageBackup;->access$100(Lorg/telegram/messenger/ImageReceiver$SetImageBackup;)V
 
-    .line 921
+    .line 927
     iput-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->setImageBackup:Lorg/telegram/messenger/ImageReceiver$SetImageBackup;
 
-    .line 922
+    .line 928
     invoke-virtual {p0}, Lorg/telegram/messenger/ImageReceiver;->getLottieAnimation()Lorg/telegram/ui/Components/RLottieDrawable;
 
     move-result-object v0
 
     if-eqz v0, :cond_45
 
-    .line 923
+    .line 929
     iget-boolean v1, p0, Lorg/telegram/messenger/ImageReceiver;->allowStartLottieAnimation:Z
 
     if-eqz v1, :cond_45
@@ -3678,7 +3480,7 @@
 
     if-nez v1, :cond_45
 
-    .line 924
+    .line 930
     :cond_42
     invoke-virtual {v0}, Lorg/telegram/ui/Components/RLottieDrawable;->start()V
 
@@ -3696,91 +3498,59 @@
 .method private setDrawableShader(Landroid/graphics/drawable/Drawable;Landroid/graphics/BitmapShader;)V
     .registers 5
 
-    .line 789
+    .line 818
     iget-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->currentThumbDrawable:Landroid/graphics/drawable/Drawable;
 
-    if-eq p1, v0, :cond_aa
+    if-eq p1, v0, :cond_91
 
     iget-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->staticThumbDrawable:Landroid/graphics/drawable/Drawable;
 
     if-ne p1, v0, :cond_a
 
-    goto/16 :goto_aa
+    goto/16 :goto_91
 
-    .line 791
+    .line 820
     :cond_a
     iget-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->currentMediaDrawable:Landroid/graphics/drawable/Drawable;
 
     if-ne p1, v0, :cond_12
 
-    .line 792
+    .line 821
     iput-object p2, p0, Lorg/telegram/messenger/ImageReceiver;->mediaShader:Landroid/graphics/BitmapShader;
 
-    goto/16 :goto_ac
+    goto/16 :goto_93
 
-    .line 793
+    .line 822
     :cond_12
     iget-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->currentImageDrawable:Landroid/graphics/drawable/Drawable;
 
-    if-ne p1, v0, :cond_ac
+    if-ne p1, v0, :cond_93
 
-    .line 794
+    .line 823
     iput-object p2, p0, Lorg/telegram/messenger/ImageReceiver;->imageShader:Landroid/graphics/BitmapShader;
 
-    .line 795
+    .line 824
     iget-object p2, p0, Lorg/telegram/messenger/ImageReceiver;->gradientShader:Landroid/graphics/BitmapShader;
 
-    if-eqz p2, :cond_ac
+    if-eqz p2, :cond_93
 
     instance-of p2, p1, Landroid/graphics/drawable/BitmapDrawable;
 
-    if-eqz p2, :cond_ac
+    if-eqz p2, :cond_93
 
-    .line 796
+    .line 825
     sget p2, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v0, 0x1c
 
-    if-lt p2, v0, :cond_4d
+    if-lt p2, v0, :cond_34
 
-    .line 797
-    iget-object p1, p0, Lorg/telegram/messenger/ImageReceiver;->scaledImageShaderBitmap:Landroid/graphics/Bitmap;
-
-    if-eqz p1, :cond_31
-
-    iget-object p2, p0, Lorg/telegram/messenger/ImageReceiver;->imageShaderBitmap:Landroid/graphics/Bitmap;
-
-    if-eq p1, p2, :cond_31
-
-    .line 798
-    invoke-virtual {p1}, Landroid/graphics/Bitmap;->recycle()V
-
-    :cond_31
-    const/4 p1, 0x0
-
-    .line 800
-    iput-object p1, p0, Lorg/telegram/messenger/ImageReceiver;->scaledImageShaderBitmap:Landroid/graphics/Bitmap;
-
-    const/4 p1, 0x1
-
-    .line 801
-    iput-boolean p1, p0, Lorg/telegram/messenger/ImageReceiver;->mustScaleImageShaderBitmap:Z
-
-    const/high16 p1, 0x3f800000    # 1.0f
-
-    .line 802
-    iput p1, p0, Lorg/telegram/messenger/ImageReceiver;->scaleImageShaderBitmap:F
-
-    .line 803
+    .line 826
     new-instance p1, Landroid/graphics/ComposeShader;
 
     iget-object p2, p0, Lorg/telegram/messenger/ImageReceiver;->gradientShader:Landroid/graphics/BitmapShader;
 
-    iput-object p2, p0, Lorg/telegram/messenger/ImageReceiver;->cachedGradientShader:Landroid/graphics/BitmapShader;
-
     iget-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->imageShader:Landroid/graphics/BitmapShader;
-
-    iput-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->scaledImageShader:Landroid/graphics/BitmapShader;
 
     sget-object v1, Landroid/graphics/PorterDuff$Mode;->DST_IN:Landroid/graphics/PorterDuff$Mode;
 
@@ -3788,13 +3558,13 @@
 
     iput-object p1, p0, Lorg/telegram/messenger/ImageReceiver;->composeShader:Landroid/graphics/ComposeShader;
 
-    goto :goto_ac
+    goto :goto_93
 
-    .line 805
-    :cond_4d
+    .line 828
+    :cond_34
     check-cast p1, Landroid/graphics/drawable/BitmapDrawable;
 
-    .line 806
+    .line 829
     invoke-virtual {p1}, Landroid/graphics/drawable/BitmapDrawable;->getBitmap()Landroid/graphics/Bitmap;
 
     move-result-object p2
@@ -3803,7 +3573,7 @@
 
     move-result p2
 
-    .line 807
+    .line 830
     invoke-virtual {p1}, Landroid/graphics/drawable/BitmapDrawable;->getBitmap()Landroid/graphics/Bitmap;
 
     move-result-object p1
@@ -3812,16 +3582,16 @@
 
     move-result p1
 
-    .line 808
+    .line 831
     iget-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->legacyBitmap:Landroid/graphics/Bitmap;
 
-    if-eqz v0, :cond_71
+    if-eqz v0, :cond_58
 
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v0
 
-    if-ne v0, p2, :cond_71
+    if-ne v0, p2, :cond_58
 
     iget-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->legacyBitmap:Landroid/graphics/Bitmap;
 
@@ -3829,19 +3599,19 @@
 
     move-result v0
 
-    if-eq v0, p1, :cond_ac
+    if-eq v0, p1, :cond_93
 
-    .line 809
-    :cond_71
+    .line 832
+    :cond_58
     iget-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->legacyBitmap:Landroid/graphics/Bitmap;
 
-    if-eqz v0, :cond_78
+    if-eqz v0, :cond_5f
 
-    .line 810
+    .line 833
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->recycle()V
 
-    .line 812
-    :cond_78
+    .line 835
+    :cond_5f
     sget-object v0, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
 
     invoke-static {p2, p1, v0}, Landroid/graphics/Bitmap;->createBitmap(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
@@ -3850,7 +3620,7 @@
 
     iput-object p1, p0, Lorg/telegram/messenger/ImageReceiver;->legacyBitmap:Landroid/graphics/Bitmap;
 
-    .line 813
+    .line 836
     new-instance p1, Landroid/graphics/Canvas;
 
     iget-object p2, p0, Lorg/telegram/messenger/ImageReceiver;->legacyBitmap:Landroid/graphics/Bitmap;
@@ -3859,7 +3629,7 @@
 
     iput-object p1, p0, Lorg/telegram/messenger/ImageReceiver;->legacyCanvas:Landroid/graphics/Canvas;
 
-    .line 814
+    .line 837
     new-instance p1, Landroid/graphics/BitmapShader;
 
     iget-object p2, p0, Lorg/telegram/messenger/ImageReceiver;->legacyBitmap:Landroid/graphics/Bitmap;
@@ -3870,19 +3640,19 @@
 
     iput-object p1, p0, Lorg/telegram/messenger/ImageReceiver;->legacyShader:Landroid/graphics/BitmapShader;
 
-    .line 815
+    .line 838
     iget-object p1, p0, Lorg/telegram/messenger/ImageReceiver;->legacyPaint:Landroid/graphics/Paint;
 
-    if-nez p1, :cond_ac
+    if-nez p1, :cond_93
 
-    .line 816
+    .line 839
     new-instance p1, Landroid/graphics/Paint;
 
     invoke-direct {p1}, Landroid/graphics/Paint;-><init>()V
 
     iput-object p1, p0, Lorg/telegram/messenger/ImageReceiver;->legacyPaint:Landroid/graphics/Paint;
 
-    .line 817
+    .line 840
     new-instance p2, Landroid/graphics/PorterDuffXfermode;
 
     sget-object v0, Landroid/graphics/PorterDuff$Mode;->DST_IN:Landroid/graphics/PorterDuff$Mode;
@@ -3891,15 +3661,15 @@
 
     invoke-virtual {p1, p2}, Landroid/graphics/Paint;->setXfermode(Landroid/graphics/Xfermode;)Landroid/graphics/Xfermode;
 
-    goto :goto_ac
+    goto :goto_93
 
-    .line 790
-    :cond_aa
-    :goto_aa
+    .line 819
+    :cond_91
+    :goto_91
     iput-object p2, p0, Lorg/telegram/messenger/ImageReceiver;->thumbShader:Landroid/graphics/BitmapShader;
 
-    :cond_ac
-    :goto_ac
+    :cond_93
+    :goto_93
     return-void
 .end method
 
@@ -3910,7 +3680,7 @@
 
     return-void
 
-    .line 854
+    .line 861
     :cond_3
     invoke-direct {p0}, Lorg/telegram/messenger/ImageReceiver;->hasRoundRadius()Z
 
@@ -3920,77 +3690,72 @@
 
     iget-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->gradientShader:Landroid/graphics/BitmapShader;
 
-    if-eqz v0, :cond_3e
+    if-eqz v0, :cond_3a
 
     :cond_d
     instance-of v0, p1, Landroid/graphics/drawable/BitmapDrawable;
 
-    if-eqz v0, :cond_3e
+    if-eqz v0, :cond_3a
 
-    .line 855
+    .line 862
     move-object v0, p1
 
     check-cast v0, Landroid/graphics/drawable/BitmapDrawable;
 
-    .line 856
+    .line 863
     instance-of v1, v0, Lorg/telegram/ui/Components/RLottieDrawable;
 
     if-eqz v1, :cond_19
 
-    goto :goto_42
+    goto :goto_3e
 
-    .line 858
+    .line 865
     :cond_19
     instance-of v1, v0, Lorg/telegram/ui/Components/AnimatedFileDrawable;
 
     if-eqz v1, :cond_25
 
-    .line 859
+    .line 866
     check-cast p1, Lorg/telegram/ui/Components/AnimatedFileDrawable;
 
-    .line 860
+    .line 867
     iget-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->roundRadius:[I
 
     invoke-virtual {p1, v0}, Lorg/telegram/ui/Components/AnimatedFileDrawable;->setRoundRadius([I)V
 
-    goto :goto_42
+    goto :goto_3e
 
-    .line 861
+    .line 868
     :cond_25
     invoke-virtual {v0}, Landroid/graphics/drawable/BitmapDrawable;->getBitmap()Landroid/graphics/Bitmap;
 
     move-result-object v1
 
-    if-eqz v1, :cond_42
+    if-eqz v1, :cond_3e
 
-    .line 862
+    .line 869
+    new-instance v1, Landroid/graphics/BitmapShader;
+
     invoke-virtual {v0}, Landroid/graphics/drawable/BitmapDrawable;->getBitmap()Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    iput-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->imageShaderBitmap:Landroid/graphics/Bitmap;
+    sget-object v2, Landroid/graphics/Shader$TileMode;->REPEAT:Landroid/graphics/Shader$TileMode;
 
-    .line 863
-    new-instance v0, Landroid/graphics/BitmapShader;
+    invoke-direct {v1, v0, v2, v2}, Landroid/graphics/BitmapShader;-><init>(Landroid/graphics/Bitmap;Landroid/graphics/Shader$TileMode;Landroid/graphics/Shader$TileMode;)V
 
-    iget-object v1, p0, Lorg/telegram/messenger/ImageReceiver;->imageShaderBitmap:Landroid/graphics/Bitmap;
+    invoke-direct {p0, p1, v1}, Lorg/telegram/messenger/ImageReceiver;->setDrawableShader(Landroid/graphics/drawable/Drawable;Landroid/graphics/BitmapShader;)V
 
-    sget-object v2, Landroid/graphics/Shader$TileMode;->CLAMP:Landroid/graphics/Shader$TileMode;
+    goto :goto_3e
 
-    invoke-direct {v0, v1, v2, v2}, Landroid/graphics/BitmapShader;-><init>(Landroid/graphics/Bitmap;Landroid/graphics/Shader$TileMode;Landroid/graphics/Shader$TileMode;)V
-
-    invoke-direct {p0, p1, v0}, Lorg/telegram/messenger/ImageReceiver;->setDrawableShader(Landroid/graphics/drawable/Drawable;Landroid/graphics/BitmapShader;)V
-
-    goto :goto_42
-
-    :cond_3e
+    :cond_3a
     const/4 v0, 0x0
 
-    .line 866
+    .line 872
     invoke-direct {p0, p1, v0}, Lorg/telegram/messenger/ImageReceiver;->setDrawableShader(Landroid/graphics/drawable/Drawable;Landroid/graphics/BitmapShader;)V
 
-    :cond_42
-    :goto_42
+    :cond_3e
+    :goto_3e
     return-void
 .end method
 
@@ -3999,7 +3764,7 @@
 .method public addLoadingImageRunnable(Ljava/lang/Runnable;)V
     .registers 3
 
-    .line 2474
+    .line 2476
     iget-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->loadingOperations:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -4010,7 +3775,7 @@
 .method public canInvertBitmap()Z
     .registers 2
 
-    .line 607
+    .line 640
     iget-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->currentMediaDrawable:Landroid/graphics/drawable/Drawable;
 
     instance-of v0, v0, Lorg/telegram/messenger/ExtendedBitmapDrawable;
@@ -4055,10 +3820,10 @@
 
     const/4 v0, 0x0
 
-    .line 293
+    .line 296
     iput-boolean v0, p0, Lorg/telegram/messenger/ImageReceiver;->forceLoding:Z
 
-    .line 294
+    .line 297
     invoke-static {}, Lorg/telegram/messenger/ImageLoader;->getInstance()Lorg/telegram/messenger/ImageLoader;
 
     move-result-object v0
@@ -4067,7 +3832,7 @@
 
     invoke-virtual {v0, p0, v1}, Lorg/telegram/messenger/ImageLoader;->cancelLoadingForImageReceiver(Lorg/telegram/messenger/ImageReceiver;Z)V
 
-    .line 295
+    .line 298
     iput-boolean v1, p0, Lorg/telegram/messenger/ImageReceiver;->canceledLoading:Z
 
     return-void
@@ -4085,14 +3850,14 @@
 
     const/4 v1, 0x0
 
-    .line 872
+    .line 878
     invoke-direct {p0, v1, v0}, Lorg/telegram/messenger/ImageReceiver;->recycleBitmap(Ljava/lang/String;I)V
 
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 874
+    .line 880
     :cond_b
     invoke-static {}, Lorg/telegram/messenger/ImageLoader;->getInstance()Lorg/telegram/messenger/ImageLoader;
 
@@ -4108,19 +3873,19 @@
 .method public varargs didReceivedNotification(II[Ljava/lang/Object;)V
     .registers 7
 
-    .line 2393
+    .line 2395
     sget p2, Lorg/telegram/messenger/NotificationCenter;->didReplacedPhotoInMemCache:I
 
     const/4 v0, 0x0
 
     if-ne p1, p2, :cond_6d
 
-    .line 2394
+    .line 2396
     aget-object p1, p3, v0
 
     check-cast p1, Ljava/lang/String;
 
-    .line 2395
+    .line 2397
     iget-object p2, p0, Lorg/telegram/messenger/ImageReceiver;->currentMediaKey:Ljava/lang/String;
 
     const/4 v0, 0x1
@@ -4135,33 +3900,33 @@
 
     if-eqz p2, :cond_2b
 
-    .line 2396
+    .line 2398
     aget-object p2, p3, v0
 
     check-cast p2, Ljava/lang/String;
 
     iput-object p2, p0, Lorg/telegram/messenger/ImageReceiver;->currentMediaKey:Ljava/lang/String;
 
-    .line 2397
+    .line 2399
     aget-object p2, p3, v1
 
     check-cast p2, Lorg/telegram/messenger/ImageLocation;
 
     iput-object p2, p0, Lorg/telegram/messenger/ImageReceiver;->currentMediaLocation:Lorg/telegram/messenger/ImageLocation;
 
-    .line 2398
+    .line 2400
     iget-object p2, p0, Lorg/telegram/messenger/ImageReceiver;->setImageBackup:Lorg/telegram/messenger/ImageReceiver$SetImageBackup;
 
     if-eqz p2, :cond_2b
 
-    .line 2399
+    .line 2401
     aget-object v2, p3, v1
 
     check-cast v2, Lorg/telegram/messenger/ImageLocation;
 
     iput-object v2, p2, Lorg/telegram/messenger/ImageReceiver$SetImageBackup;->mediaLocation:Lorg/telegram/messenger/ImageLocation;
 
-    .line 2402
+    .line 2404
     :cond_2b
     iget-object p2, p0, Lorg/telegram/messenger/ImageReceiver;->currentImageKey:Ljava/lang/String;
 
@@ -4173,33 +3938,33 @@
 
     if-eqz p2, :cond_4b
 
-    .line 2403
+    .line 2405
     aget-object p2, p3, v0
 
     check-cast p2, Ljava/lang/String;
 
     iput-object p2, p0, Lorg/telegram/messenger/ImageReceiver;->currentImageKey:Ljava/lang/String;
 
-    .line 2404
+    .line 2406
     aget-object p2, p3, v1
 
     check-cast p2, Lorg/telegram/messenger/ImageLocation;
 
     iput-object p2, p0, Lorg/telegram/messenger/ImageReceiver;->currentImageLocation:Lorg/telegram/messenger/ImageLocation;
 
-    .line 2405
+    .line 2407
     iget-object p2, p0, Lorg/telegram/messenger/ImageReceiver;->setImageBackup:Lorg/telegram/messenger/ImageReceiver$SetImageBackup;
 
     if-eqz p2, :cond_4b
 
-    .line 2406
+    .line 2408
     aget-object v2, p3, v1
 
     check-cast v2, Lorg/telegram/messenger/ImageLocation;
 
     iput-object v2, p2, Lorg/telegram/messenger/ImageReceiver$SetImageBackup;->imageLocation:Lorg/telegram/messenger/ImageLocation;
 
-    .line 2409
+    .line 2411
     :cond_4b
     iget-object p2, p0, Lorg/telegram/messenger/ImageReceiver;->currentThumbKey:Ljava/lang/String;
 
@@ -4211,26 +3976,26 @@
 
     if-eqz p1, :cond_ea
 
-    .line 2410
+    .line 2412
     aget-object p1, p3, v0
 
     check-cast p1, Ljava/lang/String;
 
     iput-object p1, p0, Lorg/telegram/messenger/ImageReceiver;->currentThumbKey:Ljava/lang/String;
 
-    .line 2411
+    .line 2413
     aget-object p1, p3, v1
 
     check-cast p1, Lorg/telegram/messenger/ImageLocation;
 
     iput-object p1, p0, Lorg/telegram/messenger/ImageReceiver;->currentThumbLocation:Lorg/telegram/messenger/ImageLocation;
 
-    .line 2412
+    .line 2414
     iget-object p1, p0, Lorg/telegram/messenger/ImageReceiver;->setImageBackup:Lorg/telegram/messenger/ImageReceiver$SetImageBackup;
 
     if-eqz p1, :cond_ea
 
-    .line 2413
+    .line 2415
     aget-object p2, p3, v1
 
     check-cast p2, Lorg/telegram/messenger/ImageLocation;
@@ -4239,18 +4004,18 @@
 
     goto/16 :goto_ea
 
-    .line 2416
+    .line 2418
     :cond_6d
     sget p2, Lorg/telegram/messenger/NotificationCenter;->stopAllHeavyOperations:I
 
     if-ne p1, p2, :cond_a2
 
-    .line 2417
+    .line 2419
     aget-object p1, p3, v0
 
     check-cast p1, Ljava/lang/Integer;
 
-    .line 2418
+    .line 2420
     iget p2, p0, Lorg/telegram/messenger/ImageReceiver;->currentLayerNum:I
 
     invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
@@ -4261,7 +4026,7 @@
 
     return-void
 
-    .line 2421
+    .line 2423
     :cond_7e
     iget p2, p0, Lorg/telegram/messenger/ImageReceiver;->currentOpenedLayerFlags:I
 
@@ -4275,24 +4040,24 @@
 
     if-eqz p1, :cond_ea
 
-    .line 2423
+    .line 2425
     invoke-virtual {p0}, Lorg/telegram/messenger/ImageReceiver;->getLottieAnimation()Lorg/telegram/ui/Components/RLottieDrawable;
 
     move-result-object p1
 
     if-eqz p1, :cond_98
 
-    .line 2424
+    .line 2426
     invoke-virtual {p1}, Lorg/telegram/ui/Components/RLottieDrawable;->isHeavyDrawable()Z
 
     move-result p2
 
     if-eqz p2, :cond_98
 
-    .line 2425
+    .line 2427
     invoke-virtual {p1}, Lorg/telegram/ui/Components/RLottieDrawable;->stop()V
 
-    .line 2427
+    .line 2429
     :cond_98
     invoke-virtual {p0}, Lorg/telegram/messenger/ImageReceiver;->getAnimation()Lorg/telegram/ui/Components/AnimatedFileDrawable;
 
@@ -4300,23 +4065,23 @@
 
     if-eqz p1, :cond_ea
 
-    .line 2429
+    .line 2431
     invoke-virtual {p1}, Lorg/telegram/ui/Components/AnimatedFileDrawable;->stop()V
 
     goto :goto_ea
 
-    .line 2432
+    .line 2434
     :cond_a2
     sget p2, Lorg/telegram/messenger/NotificationCenter;->startAllHeavyOperations:I
 
     if-ne p1, p2, :cond_ea
 
-    .line 2433
+    .line 2435
     aget-object p1, p3, v0
 
     check-cast p1, Ljava/lang/Integer;
 
-    .line 2434
+    .line 2436
     iget p2, p0, Lorg/telegram/messenger/ImageReceiver;->currentLayerNum:I
 
     invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
@@ -4331,7 +4096,7 @@
 
     goto :goto_ea
 
-    .line 2437
+    .line 2439
     :cond_b7
     invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
@@ -4345,12 +4110,12 @@
 
     if-nez p1, :cond_ea
 
-    .line 2439
+    .line 2441
     invoke-virtual {p0}, Lorg/telegram/messenger/ImageReceiver;->getLottieAnimation()Lorg/telegram/ui/Components/RLottieDrawable;
 
     move-result-object p1
 
-    .line 2440
+    .line 2442
     iget-boolean p2, p0, Lorg/telegram/messenger/ImageReceiver;->allowStartLottieAnimation:Z
 
     if-eqz p2, :cond_d5
@@ -4363,31 +4128,31 @@
 
     if-eqz p2, :cond_d5
 
-    .line 2441
+    .line 2443
     invoke-virtual {p1}, Lorg/telegram/ui/Components/RLottieDrawable;->start()V
 
-    .line 2443
+    .line 2445
     :cond_d5
     invoke-virtual {p0}, Lorg/telegram/messenger/ImageReceiver;->getAnimation()Lorg/telegram/ui/Components/AnimatedFileDrawable;
 
     move-result-object p1
 
-    .line 2444
+    .line 2446
     iget-boolean p2, p0, Lorg/telegram/messenger/ImageReceiver;->allowStartAnimation:Z
 
     if-eqz p2, :cond_ea
 
     if-eqz p1, :cond_ea
 
-    .line 2445
-    invoke-virtual {p1}, Lorg/telegram/ui/Components/AnimatedFileDrawable;->start()V
+    .line 2447
+    invoke-virtual {p1}, Lorg/telegram/ui/Components/AnimatedFileDrawable;->checkRepeat()V
 
-    .line 2446
+    .line 2448
     iget-object p1, p0, Lorg/telegram/messenger/ImageReceiver;->parentView:Landroid/view/View;
 
     if-eqz p1, :cond_ea
 
-    .line 2447
+    .line 2449
     invoke-virtual {p1}, Landroid/view/View;->invalidate()V
 
     nop
@@ -4404,7 +4169,7 @@
 
     move-object/from16 v8, p1
 
-    .line 1438
+    .line 1431
     iget-object v0, v7, Lorg/telegram/messenger/ImageReceiver;->gradientBitmap:Landroid/graphics/Bitmap;
 
     if-eqz v0, :cond_21
@@ -4413,10 +4178,10 @@
 
     if-eqz v0, :cond_21
 
-    .line 1439
+    .line 1432
     invoke-virtual/range {p1 .. p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 1440
+    .line 1433
     iget v0, v7, Lorg/telegram/messenger/ImageReceiver;->imageX:F
 
     iget v1, v7, Lorg/telegram/messenger/ImageReceiver;->imageY:F
@@ -4433,17 +4198,17 @@
 
     const/high16 v0, -0x1000000
 
-    .line 1441
+    .line 1434
     invoke-virtual {v8, v0}, Landroid/graphics/Canvas;->drawColor(I)V
 
-    .line 1445
+    .line 1438
     :cond_21
     :try_start_21
     invoke-virtual/range {p0 .. p0}, Lorg/telegram/messenger/ImageReceiver;->getAnimation()Lorg/telegram/ui/Components/AnimatedFileDrawable;
 
     move-result-object v0
 
-    .line 1446
+    .line 1439
     invoke-virtual/range {p0 .. p0}, Lorg/telegram/messenger/ImageReceiver;->getLottieAnimation()Lorg/telegram/ui/Components/RLottieDrawable;
 
     move-result-object v1
@@ -4452,7 +4217,7 @@
 
     if-eqz v0, :cond_32
 
-    .line 1447
+    .line 1440
     invoke-virtual {v0}, Lorg/telegram/ui/Components/AnimatedFileDrawable;->hasBitmap()Z
 
     move-result v2
@@ -4479,7 +4244,7 @@
     :goto_3d
     if-eqz v0, :cond_44
 
-    .line 1449
+    .line 1442
     iget-object v3, v7, Lorg/telegram/messenger/ImageReceiver;->roundRadius:[I
 
     invoke-virtual {v0, v3}, Lorg/telegram/ui/Components/AnimatedFileDrawable;->setRoundRadius([I)V
@@ -4487,7 +4252,7 @@
     :cond_44
     if-eqz v1, :cond_4b
 
-    .line 1452
+    .line 1445
     iget-object v3, v7, Lorg/telegram/messenger/ImageReceiver;->parentView:Landroid/view/View;
 
     invoke-virtual {v1, v3}, Lorg/telegram/ui/Components/RLottieDrawable;->setCurrentParentView(Landroid/view/View;)V
@@ -4500,23 +4265,23 @@
     :cond_4f
     if-nez v2, :cond_5e
 
-    .line 1454
+    .line 1447
     iget-boolean v0, v7, Lorg/telegram/messenger/ImageReceiver;->animationReadySent:Z
 
     if-nez v0, :cond_5e
 
-    .line 1455
+    .line 1448
     iput-boolean v10, v7, Lorg/telegram/messenger/ImageReceiver;->animationReadySent:Z
 
-    .line 1456
+    .line 1449
     iget-object v0, v7, Lorg/telegram/messenger/ImageReceiver;->delegate:Lorg/telegram/messenger/ImageReceiver$ImageReceiverDelegate;
 
     if-eqz v0, :cond_5e
 
-    .line 1457
+    .line 1450
     invoke-interface {v0, v7}, Lorg/telegram/messenger/ImageReceiver$ImageReceiverDelegate;->onAnimationReady(Lorg/telegram/messenger/ImageReceiver;)V
 
-    .line 1462
+    .line 1455
     :cond_5e
     iget-boolean v0, v7, Lorg/telegram/messenger/ImageReceiver;->forcePreview:Z
 
@@ -4530,10 +4295,10 @@
 
     if-nez v2, :cond_72
 
-    .line 1464
+    .line 1457
     iget-object v0, v7, Lorg/telegram/messenger/ImageReceiver;->mediaShader:Landroid/graphics/BitmapShader;
 
-    .line 1465
+    .line 1458
     iget v3, v7, Lorg/telegram/messenger/ImageReceiver;->imageOrientation:I
 
     :goto_6d
@@ -4550,7 +4315,7 @@
     :cond_72
     if-nez v0, :cond_87
 
-    .line 1466
+    .line 1459
     iget-object v1, v7, Lorg/telegram/messenger/ImageReceiver;->currentImageDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eqz v1, :cond_87
@@ -4561,11 +4326,11 @@
 
     if-eqz v0, :cond_87
 
-    .line 1468
+    .line 1461
     :cond_7e
     iget-object v0, v7, Lorg/telegram/messenger/ImageReceiver;->imageShader:Landroid/graphics/BitmapShader;
 
-    .line 1469
+    .line 1462
     iget v2, v7, Lorg/telegram/messenger/ImageReceiver;->imageOrientation:I
 
     move-object v13, v0
@@ -4578,7 +4343,7 @@
 
     goto :goto_b7
 
-    .line 1471
+    .line 1464
     :cond_87
     iget-object v1, v7, Lorg/telegram/messenger/ImageReceiver;->crossfadeImage:Landroid/graphics/drawable/Drawable;
 
@@ -4588,15 +4353,15 @@
 
     if-nez v0, :cond_94
 
-    .line 1473
+    .line 1466
     iget-object v0, v7, Lorg/telegram/messenger/ImageReceiver;->crossfadeShader:Landroid/graphics/BitmapShader;
 
-    .line 1474
+    .line 1467
     iget v3, v7, Lorg/telegram/messenger/ImageReceiver;->imageOrientation:I
 
     goto :goto_6d
 
-    .line 1475
+    .line 1468
     :cond_94
     iget-object v1, v7, Lorg/telegram/messenger/ImageReceiver;->staticThumbDrawable:Landroid/graphics/drawable/Drawable;
 
@@ -4604,7 +4369,7 @@
 
     if-eqz v0, :cond_aa
 
-    .line 1477
+    .line 1470
     iget-boolean v0, v7, Lorg/telegram/messenger/ImageReceiver;->useRoundForThumb:Z
 
     if-eqz v0, :cond_a5
@@ -4613,28 +4378,28 @@
 
     if-nez v0, :cond_a5
 
-    .line 1478
+    .line 1471
     invoke-direct {v7, v1}, Lorg/telegram/messenger/ImageReceiver;->updateDrawableRadius(Landroid/graphics/drawable/Drawable;)V
 
-    .line 1480
+    .line 1473
     :cond_a5
     iget-object v0, v7, Lorg/telegram/messenger/ImageReceiver;->thumbShader:Landroid/graphics/BitmapShader;
 
-    .line 1481
+    .line 1474
     iget v3, v7, Lorg/telegram/messenger/ImageReceiver;->thumbOrientation:I
 
     goto :goto_6d
 
-    .line 1482
+    .line 1475
     :cond_aa
     iget-object v1, v7, Lorg/telegram/messenger/ImageReceiver;->currentThumbDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eqz v1, :cond_b3
 
-    .line 1484
+    .line 1477
     iget-object v0, v7, Lorg/telegram/messenger/ImageReceiver;->thumbShader:Landroid/graphics/BitmapShader;
 
-    .line 1485
+    .line 1478
     iget v3, v7, Lorg/telegram/messenger/ImageReceiver;->thumbOrientation:I
 
     goto :goto_6d
@@ -4653,12 +4418,12 @@
 
     if-eqz v0, :cond_1c9
 
-    .line 1489
+    .line 1482
     iget-byte v1, v7, Lorg/telegram/messenger/ImageReceiver;->crossfadeAlpha:B
 
     if-eqz v1, :cond_1ad
 
-    .line 1490
+    .line 1483
     iget v1, v7, Lorg/telegram/messenger/ImageReceiver;->previousAlpha:F
 
     const/high16 v16, 0x3f800000    # 1.0f
@@ -4680,7 +4445,7 @@
 
     if-eqz v1, :cond_ef
 
-    .line 1491
+    .line 1484
     iget-boolean v2, v7, Lorg/telegram/messenger/ImageReceiver;->useRoundForThumb:Z
 
     if-eqz v2, :cond_de
@@ -4689,10 +4454,10 @@
 
     if-nez v2, :cond_de
 
-    .line 1492
+    .line 1485
     invoke-direct {v7, v1}, Lorg/telegram/messenger/ImageReceiver;->updateDrawableRadius(Landroid/graphics/drawable/Drawable;)V
 
-    .line 1494
+    .line 1487
     :cond_de
     iget-object v3, v7, Lorg/telegram/messenger/ImageReceiver;->staticThumbDrawable:Landroid/graphics/drawable/Drawable;
 
@@ -4712,7 +4477,7 @@
 
     invoke-direct/range {v1 .. v6}, Lorg/telegram/messenger/ImageReceiver;->drawDrawable(Landroid/graphics/Canvas;Landroid/graphics/drawable/Drawable;ILandroid/graphics/BitmapShader;I)V
 
-    .line 1496
+    .line 1489
     :cond_ef
     iget-boolean v1, v7, Lorg/telegram/messenger/ImageReceiver;->crossfadeWithThumb:Z
 
@@ -4720,7 +4485,7 @@
 
     if-eqz v12, :cond_106
 
-    .line 1497
+    .line 1490
     iget v1, v7, Lorg/telegram/messenger/ImageReceiver;->overrideAlpha:F
 
     mul-float v1, v1, v15
@@ -4744,14 +4509,14 @@
     :cond_106
     if-eqz v1, :cond_199
 
-    .line 1499
+    .line 1492
     iget v1, v7, Lorg/telegram/messenger/ImageReceiver;->currentAlpha:F
 
     cmpl-float v1, v1, v16
 
     if-eqz v1, :cond_199
 
-    .line 1502
+    .line 1495
     iget-object v1, v7, Lorg/telegram/messenger/ImageReceiver;->currentImageDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eq v0, v1, :cond_13b
@@ -4762,7 +4527,7 @@
 
     goto :goto_13b
 
-    .line 1516
+    .line 1509
     :cond_117
     iget-object v1, v7, Lorg/telegram/messenger/ImageReceiver;->currentThumbDrawable:Landroid/graphics/drawable/Drawable;
 
@@ -4774,7 +4539,7 @@
 
     goto :goto_129
 
-    .line 1524
+    .line 1517
     :cond_120
     iget-object v2, v7, Lorg/telegram/messenger/ImageReceiver;->staticThumbDrawable:Landroid/graphics/drawable/Drawable;
 
@@ -4782,19 +4547,19 @@
 
     if-eqz v1, :cond_15d
 
-    .line 1527
+    .line 1520
     iget-object v2, v7, Lorg/telegram/messenger/ImageReceiver;->crossfadeShader:Landroid/graphics/BitmapShader;
 
     goto :goto_141
 
-    .line 1517
+    .line 1510
     :cond_129
     :goto_129
     iget-object v1, v7, Lorg/telegram/messenger/ImageReceiver;->staticThumbDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eqz v1, :cond_15d
 
-    .line 1519
+    .line 1512
     iget-boolean v2, v7, Lorg/telegram/messenger/ImageReceiver;->useRoundForThumb:Z
 
     if-eqz v2, :cond_138
@@ -4803,23 +4568,23 @@
 
     if-nez v2, :cond_138
 
-    .line 1520
+    .line 1513
     invoke-direct {v7, v1}, Lorg/telegram/messenger/ImageReceiver;->updateDrawableRadius(Landroid/graphics/drawable/Drawable;)V
 
-    .line 1522
+    .line 1515
     :cond_138
     iget-object v2, v7, Lorg/telegram/messenger/ImageReceiver;->thumbShader:Landroid/graphics/BitmapShader;
 
     goto :goto_141
 
-    .line 1503
+    .line 1496
     :cond_13b
     :goto_13b
     iget-object v1, v7, Lorg/telegram/messenger/ImageReceiver;->crossfadeImage:Landroid/graphics/drawable/Drawable;
 
     if-eqz v1, :cond_144
 
-    .line 1505
+    .line 1498
     iget-object v2, v7, Lorg/telegram/messenger/ImageReceiver;->crossfadeShader:Landroid/graphics/BitmapShader;
 
     :goto_141
@@ -4829,24 +4594,24 @@
 
     goto :goto_15e
 
-    .line 1506
+    .line 1499
     :cond_144
     iget-object v1, v7, Lorg/telegram/messenger/ImageReceiver;->currentThumbDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eqz v1, :cond_14b
 
-    .line 1508
+    .line 1501
     iget-object v2, v7, Lorg/telegram/messenger/ImageReceiver;->thumbShader:Landroid/graphics/BitmapShader;
 
     goto :goto_141
 
-    .line 1509
+    .line 1502
     :cond_14b
     iget-object v1, v7, Lorg/telegram/messenger/ImageReceiver;->staticThumbDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eqz v1, :cond_15d
 
-    .line 1511
+    .line 1504
     iget-boolean v2, v7, Lorg/telegram/messenger/ImageReceiver;->useRoundForThumb:Z
 
     if-eqz v2, :cond_15a
@@ -4855,10 +4620,10 @@
 
     if-nez v2, :cond_15a
 
-    .line 1512
+    .line 1505
     invoke-direct {v7, v1}, Lorg/telegram/messenger/ImageReceiver;->updateDrawableRadius(Landroid/graphics/drawable/Drawable;)V
 
-    .line 1514
+    .line 1507
     :cond_15a
     iget-object v2, v7, Lorg/telegram/messenger/ImageReceiver;->thumbShader:Landroid/graphics/BitmapShader;
 
@@ -4870,7 +4635,7 @@
     :goto_15e
     if-eqz v11, :cond_199
 
-    .line 1532
+    .line 1525
     instance-of v1, v11, Lorg/telegram/messenger/SvgHelper$SvgDrawable;
 
     if-nez v1, :cond_172
@@ -4881,7 +4646,7 @@
 
     goto :goto_172
 
-    .line 1535
+    .line 1528
     :cond_169
     iget v1, v7, Lorg/telegram/messenger/ImageReceiver;->overrideAlpha:F
 
@@ -4893,7 +4658,7 @@
 
     goto :goto_17c
 
-    .line 1533
+    .line 1526
     :cond_172
     :goto_172
     iget v1, v7, Lorg/telegram/messenger/ImageReceiver;->overrideAlpha:F
@@ -4911,7 +4676,7 @@
 
     move v6, v1
 
-    .line 1537
+    .line 1530
     iget v4, v7, Lorg/telegram/messenger/ImageReceiver;->thumbOrientation:I
 
     move-object/from16 v1, p0
@@ -4934,15 +4699,15 @@
 
     if-eq v9, v1, :cond_199
 
-    .line 1538
+    .line 1531
     instance-of v2, v11, Lorg/telegram/messenger/Emoji$EmojiDrawable;
 
     if-eqz v2, :cond_199
 
-    .line 1539
+    .line 1532
     invoke-virtual {v11, v1}, Landroid/graphics/drawable/Drawable;->setAlpha(I)V
 
-    .line 1543
+    .line 1536
     :cond_199
     iget v1, v7, Lorg/telegram/messenger/ImageReceiver;->overrideAlpha:F
 
@@ -4968,7 +4733,7 @@
 
     goto :goto_1bc
 
-    .line 1546
+    .line 1539
     :cond_1ad
     iget v1, v7, Lorg/telegram/messenger/ImageReceiver;->overrideAlpha:F
 
@@ -4991,7 +4756,7 @@
     :goto_1bc
     if-eqz v12, :cond_1c4
 
-    .line 1549
+    .line 1542
     iget-boolean v1, v7, Lorg/telegram/messenger/ImageReceiver;->crossfadeWithThumb:Z
 
     if-eqz v1, :cond_1c4
@@ -5008,13 +4773,13 @@
 
     goto :goto_1df
 
-    .line 1551
+    .line 1544
     :cond_1c9
     iget-object v3, v7, Lorg/telegram/messenger/ImageReceiver;->staticThumbDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eqz v3, :cond_1e1
 
-    .line 1552
+    .line 1545
     iget v1, v7, Lorg/telegram/messenger/ImageReceiver;->overrideAlpha:F
 
     mul-float v1, v1, v15
@@ -5031,7 +4796,7 @@
 
     invoke-direct/range {v1 .. v6}, Lorg/telegram/messenger/ImageReceiver;->drawDrawable(Landroid/graphics/Canvas;Landroid/graphics/drawable/Drawable;ILandroid/graphics/BitmapShader;I)V
 
-    .line 1553
+    .line 1546
     invoke-direct {v7, v12}, Lorg/telegram/messenger/ImageReceiver;->checkAlphaAnimation(Z)V
 
     :goto_1df
@@ -5039,7 +4804,7 @@
 
     goto :goto_1e5
 
-    .line 1556
+    .line 1549
     :cond_1e1
     invoke-direct {v7, v12}, Lorg/telegram/messenger/ImageReceiver;->checkAlphaAnimation(Z)V
     :try_end_1e4
@@ -5052,13 +4817,13 @@
 
     if-eqz v12, :cond_1f8
 
-    .line 1559
+    .line 1552
     :try_start_1e9
     iget-object v0, v7, Lorg/telegram/messenger/ImageReceiver;->parentView:Landroid/view/View;
 
     if-eqz v0, :cond_1f8
 
-    .line 1560
+    .line 1553
     invoke-virtual {v0}, Landroid/view/View;->invalidate()V
     :try_end_1f0
     .catch Ljava/lang/Exception; {:try_start_1e9 .. :try_end_1f0} :catch_1f1
@@ -5075,11 +4840,11 @@
 
     const/4 v9, 0x0
 
-    .line 1563
+    .line 1556
     :goto_1f5
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
-    .line 1565
+    .line 1558
     :cond_1f8
     :goto_1f8
     iget-object v0, v7, Lorg/telegram/messenger/ImageReceiver;->gradientBitmap:Landroid/graphics/Bitmap;
@@ -5090,7 +4855,7 @@
 
     if-eqz v0, :cond_203
 
-    .line 1566
+    .line 1559
     invoke-virtual/range {p1 .. p1}, Landroid/graphics/Canvas;->restore()V
 
     :cond_203
@@ -5100,7 +4865,7 @@
 .method public getAllowStartAnimation()Z
     .registers 2
 
-    .line 2033
+    .line 2035
     iget-boolean v0, p0, Lorg/telegram/messenger/ImageReceiver;->allowStartAnimation:Z
 
     return v0
@@ -5111,7 +4876,7 @@
     .annotation build Landroidx/annotation/Keep;
     .end annotation
 
-    .line 1774
+    .line 1767
     iget v0, p0, Lorg/telegram/messenger/ImageReceiver;->overrideAlpha:F
 
     return v0
@@ -5120,14 +4885,14 @@
 .method public getAnimatedOrientation()I
     .registers 2
 
-    .line 646
+    .line 679
     invoke-virtual {p0}, Lorg/telegram/messenger/ImageReceiver;->getAnimation()Lorg/telegram/ui/Components/AnimatedFileDrawable;
 
     move-result-object v0
 
     if-eqz v0, :cond_b
 
-    .line 647
+    .line 680
     invoke-virtual {v0}, Lorg/telegram/ui/Components/AnimatedFileDrawable;->getOrientation()I
 
     move-result v0
@@ -5144,25 +4909,12 @@
 .method public getAnimation()Lorg/telegram/ui/Components/AnimatedFileDrawable;
     .registers 3
 
-    .line 2091
+    .line 2093
     iget-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->currentMediaDrawable:Landroid/graphics/drawable/Drawable;
 
     instance-of v1, v0, Lorg/telegram/ui/Components/AnimatedFileDrawable;
 
     if-eqz v1, :cond_9
-
-    .line 2092
-    check-cast v0, Lorg/telegram/ui/Components/AnimatedFileDrawable;
-
-    return-object v0
-
-    .line 2093
-    :cond_9
-    iget-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->currentImageDrawable:Landroid/graphics/drawable/Drawable;
-
-    instance-of v1, v0, Lorg/telegram/ui/Components/AnimatedFileDrawable;
-
-    if-eqz v1, :cond_12
 
     .line 2094
     check-cast v0, Lorg/telegram/ui/Components/AnimatedFileDrawable;
@@ -5170,12 +4922,12 @@
     return-object v0
 
     .line 2095
-    :cond_12
-    iget-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->currentThumbDrawable:Landroid/graphics/drawable/Drawable;
+    :cond_9
+    iget-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->currentImageDrawable:Landroid/graphics/drawable/Drawable;
 
     instance-of v1, v0, Lorg/telegram/ui/Components/AnimatedFileDrawable;
 
-    if-eqz v1, :cond_1b
+    if-eqz v1, :cond_12
 
     .line 2096
     check-cast v0, Lorg/telegram/ui/Components/AnimatedFileDrawable;
@@ -5183,6 +4935,19 @@
     return-object v0
 
     .line 2097
+    :cond_12
+    iget-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->currentThumbDrawable:Landroid/graphics/drawable/Drawable;
+
+    instance-of v1, v0, Lorg/telegram/ui/Components/AnimatedFileDrawable;
+
+    if-eqz v1, :cond_1b
+
+    .line 2098
+    check-cast v0, Lorg/telegram/ui/Components/AnimatedFileDrawable;
+
+    return-object v0
+
+    .line 2099
     :cond_1b
     iget-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->staticThumbDrawable:Landroid/graphics/drawable/Drawable;
 
@@ -5190,7 +4955,7 @@
 
     if-eqz v1, :cond_24
 
-    .line 2098
+    .line 2100
     check-cast v0, Lorg/telegram/ui/Components/AnimatedFileDrawable;
 
     return-object v0
@@ -5204,28 +4969,28 @@
 .method public getBitmap()Landroid/graphics/Bitmap;
     .registers 4
 
-    .line 1599
+    .line 1592
     invoke-virtual {p0}, Lorg/telegram/messenger/ImageReceiver;->getLottieAnimation()Lorg/telegram/ui/Components/RLottieDrawable;
 
     move-result-object v0
 
     if-eqz v0, :cond_11
 
-    .line 1600
+    .line 1593
     invoke-virtual {v0}, Lorg/telegram/ui/Components/RLottieDrawable;->hasBitmap()Z
 
     move-result v1
 
     if-eqz v1, :cond_11
 
-    .line 1601
+    .line 1594
     invoke-virtual {v0}, Lorg/telegram/ui/Components/RLottieDrawable;->getAnimatedBitmap()Landroid/graphics/Bitmap;
 
     move-result-object v0
 
     return-object v0
 
-    .line 1603
+    .line 1596
     :cond_11
     invoke-virtual {p0}, Lorg/telegram/messenger/ImageReceiver;->getAnimation()Lorg/telegram/ui/Components/AnimatedFileDrawable;
 
@@ -5233,21 +4998,21 @@
 
     if-eqz v0, :cond_22
 
-    .line 1604
+    .line 1597
     invoke-virtual {v0}, Lorg/telegram/ui/Components/AnimatedFileDrawable;->hasBitmap()Z
 
     move-result v1
 
     if-eqz v1, :cond_22
 
-    .line 1605
+    .line 1598
     invoke-virtual {v0}, Lorg/telegram/ui/Components/AnimatedFileDrawable;->getAnimatedBitmap()Landroid/graphics/Bitmap;
 
     move-result-object v0
 
     return-object v0
 
-    .line 1606
+    .line 1599
     :cond_22
     iget-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->currentMediaDrawable:Landroid/graphics/drawable/Drawable;
 
@@ -5263,7 +5028,7 @@
 
     if-nez v1, :cond_37
 
-    .line 1607
+    .line 1600
     check-cast v0, Landroid/graphics/drawable/BitmapDrawable;
 
     invoke-virtual {v0}, Landroid/graphics/drawable/BitmapDrawable;->getBitmap()Landroid/graphics/Bitmap;
@@ -5272,7 +5037,7 @@
 
     return-object v0
 
-    .line 1608
+    .line 1601
     :cond_37
     iget-object v1, p0, Lorg/telegram/messenger/ImageReceiver;->currentImageDrawable:Landroid/graphics/drawable/Drawable;
 
@@ -5288,7 +5053,7 @@
 
     if-nez v2, :cond_4c
 
-    .line 1609
+    .line 1602
     check-cast v1, Landroid/graphics/drawable/BitmapDrawable;
 
     invoke-virtual {v1}, Landroid/graphics/drawable/BitmapDrawable;->getBitmap()Landroid/graphics/Bitmap;
@@ -5297,7 +5062,7 @@
 
     return-object v0
 
-    .line 1610
+    .line 1603
     :cond_4c
     iget-object v1, p0, Lorg/telegram/messenger/ImageReceiver;->currentThumbDrawable:Landroid/graphics/drawable/Drawable;
 
@@ -5313,7 +5078,7 @@
 
     if-nez v0, :cond_61
 
-    .line 1611
+    .line 1604
     check-cast v1, Landroid/graphics/drawable/BitmapDrawable;
 
     invoke-virtual {v1}, Landroid/graphics/drawable/BitmapDrawable;->getBitmap()Landroid/graphics/Bitmap;
@@ -5322,7 +5087,7 @@
 
     return-object v0
 
-    .line 1612
+    .line 1605
     :cond_61
     iget-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->staticThumbDrawable:Landroid/graphics/drawable/Drawable;
 
@@ -5330,7 +5095,7 @@
 
     if-eqz v1, :cond_6e
 
-    .line 1613
+    .line 1606
     check-cast v0, Landroid/graphics/drawable/BitmapDrawable;
 
     invoke-virtual {v0}, Landroid/graphics/drawable/BitmapDrawable;->getBitmap()Landroid/graphics/Bitmap;
@@ -5348,10 +5113,10 @@
 .method public getBitmapHeight()I
     .registers 5
 
-    .line 1716
+    .line 1709
     invoke-virtual {p0}, Lorg/telegram/messenger/ImageReceiver;->getDrawable()Landroid/graphics/drawable/Drawable;
 
-    .line 1717
+    .line 1710
     invoke-virtual {p0}, Lorg/telegram/messenger/ImageReceiver;->getAnimation()Lorg/telegram/ui/Components/AnimatedFileDrawable;
 
     move-result-object v0
@@ -5360,7 +5125,7 @@
 
     if-eqz v0, :cond_20
 
-    .line 1719
+    .line 1712
     iget v2, p0, Lorg/telegram/messenger/ImageReceiver;->imageOrientation:I
 
     rem-int/lit16 v3, v2, 0x168
@@ -5389,7 +5154,7 @@
     :goto_1f
     return v0
 
-    .line 1721
+    .line 1714
     :cond_20
     invoke-virtual {p0}, Lorg/telegram/messenger/ImageReceiver;->getLottieAnimation()Lorg/telegram/ui/Components/RLottieDrawable;
 
@@ -5397,14 +5162,14 @@
 
     if-eqz v0, :cond_2b
 
-    .line 1723
+    .line 1716
     invoke-virtual {v0}, Lorg/telegram/ui/Components/RLottieDrawable;->getIntrinsicHeight()I
 
     move-result v0
 
     return v0
 
-    .line 1725
+    .line 1718
     :cond_2b
     invoke-virtual {p0}, Lorg/telegram/messenger/ImageReceiver;->getBitmap()Landroid/graphics/Bitmap;
 
@@ -5412,12 +5177,12 @@
 
     if-nez v0, :cond_3c
 
-    .line 1727
+    .line 1720
     iget-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->staticThumbDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eqz v0, :cond_3a
 
-    .line 1728
+    .line 1721
     invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
 
     move-result v0
@@ -5429,7 +5194,7 @@
 
     return v0
 
-    .line 1732
+    .line 1725
     :cond_3c
     iget v2, p0, Lorg/telegram/messenger/ImageReceiver;->imageOrientation:I
 
@@ -5463,12 +5228,12 @@
 .method public getBitmapSafe()Lorg/telegram/messenger/ImageReceiver$BitmapHolder;
     .registers 6
 
-    .line 1621
+    .line 1614
     invoke-virtual {p0}, Lorg/telegram/messenger/ImageReceiver;->getAnimation()Lorg/telegram/ui/Components/AnimatedFileDrawable;
 
     move-result-object v0
 
-    .line 1622
+    .line 1615
     invoke-virtual {p0}, Lorg/telegram/messenger/ImageReceiver;->getLottieAnimation()Lorg/telegram/ui/Components/RLottieDrawable;
 
     move-result-object v1
@@ -5479,14 +5244,14 @@
 
     if-eqz v1, :cond_19
 
-    .line 1624
+    .line 1617
     invoke-virtual {v1}, Lorg/telegram/ui/Components/RLottieDrawable;->hasBitmap()Z
 
     move-result v4
 
     if-eqz v4, :cond_19
 
-    .line 1625
+    .line 1618
     invoke-virtual {v1}, Lorg/telegram/ui/Components/RLottieDrawable;->getAnimatedBitmap()Landroid/graphics/Bitmap;
 
     move-result-object v0
@@ -5499,26 +5264,26 @@
     :cond_19
     if-eqz v0, :cond_37
 
-    .line 1626
+    .line 1619
     invoke-virtual {v0}, Lorg/telegram/ui/Components/AnimatedFileDrawable;->hasBitmap()Z
 
     move-result v1
 
     if-eqz v1, :cond_37
 
-    .line 1627
+    .line 1620
     invoke-virtual {v0}, Lorg/telegram/ui/Components/AnimatedFileDrawable;->getAnimatedBitmap()Landroid/graphics/Bitmap;
 
     move-result-object v1
 
-    .line 1628
+    .line 1621
     invoke-virtual {v0}, Lorg/telegram/ui/Components/AnimatedFileDrawable;->getOrientation()I
 
     move-result v3
 
     if-eqz v3, :cond_35
 
-    .line 1630
+    .line 1623
     new-instance v0, Lorg/telegram/messenger/ImageReceiver$BitmapHolder;
 
     invoke-static {v1}, Landroid/graphics/Bitmap;->createBitmap(Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
@@ -5534,7 +5299,7 @@
 
     goto :goto_16
 
-    .line 1632
+    .line 1625
     :cond_37
     iget-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->currentMediaDrawable:Landroid/graphics/drawable/Drawable;
 
@@ -5550,19 +5315,19 @@
 
     if-nez v1, :cond_4e
 
-    .line 1633
+    .line 1626
     check-cast v0, Landroid/graphics/drawable/BitmapDrawable;
 
     invoke-virtual {v0}, Landroid/graphics/drawable/BitmapDrawable;->getBitmap()Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    .line 1634
+    .line 1627
     iget-object v1, p0, Lorg/telegram/messenger/ImageReceiver;->currentMediaKey:Ljava/lang/String;
 
     goto :goto_8b
 
-    .line 1635
+    .line 1628
     :cond_4e
     iget-object v1, p0, Lorg/telegram/messenger/ImageReceiver;->currentImageDrawable:Landroid/graphics/drawable/Drawable;
 
@@ -5578,19 +5343,19 @@
 
     if-nez v4, :cond_65
 
-    .line 1636
+    .line 1629
     check-cast v1, Landroid/graphics/drawable/BitmapDrawable;
 
     invoke-virtual {v1}, Landroid/graphics/drawable/BitmapDrawable;->getBitmap()Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    .line 1637
+    .line 1630
     iget-object v1, p0, Lorg/telegram/messenger/ImageReceiver;->currentImageKey:Ljava/lang/String;
 
     goto :goto_8b
 
-    .line 1638
+    .line 1631
     :cond_65
     iget-object v1, p0, Lorg/telegram/messenger/ImageReceiver;->currentThumbDrawable:Landroid/graphics/drawable/Drawable;
 
@@ -5606,19 +5371,19 @@
 
     if-nez v0, :cond_7c
 
-    .line 1639
+    .line 1632
     check-cast v1, Landroid/graphics/drawable/BitmapDrawable;
 
     invoke-virtual {v1}, Landroid/graphics/drawable/BitmapDrawable;->getBitmap()Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    .line 1640
+    .line 1633
     iget-object v1, p0, Lorg/telegram/messenger/ImageReceiver;->currentThumbKey:Ljava/lang/String;
 
     goto :goto_8b
 
-    .line 1641
+    .line 1634
     :cond_7c
     iget-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->staticThumbDrawable:Landroid/graphics/drawable/Drawable;
 
@@ -5626,7 +5391,7 @@
 
     if-eqz v1, :cond_89
 
-    .line 1642
+    .line 1635
     check-cast v0, Landroid/graphics/drawable/BitmapDrawable;
 
     invoke-virtual {v0}, Landroid/graphics/drawable/BitmapDrawable;->getBitmap()Landroid/graphics/Bitmap;
@@ -5643,7 +5408,7 @@
     :goto_8b
     if-eqz v0, :cond_92
 
-    .line 1645
+    .line 1638
     new-instance v2, Lorg/telegram/messenger/ImageReceiver$BitmapHolder;
 
     invoke-direct {v2, v0, v1, v3}, Lorg/telegram/messenger/ImageReceiver$BitmapHolder;-><init>(Landroid/graphics/Bitmap;Ljava/lang/String;I)V
@@ -5655,10 +5420,10 @@
 .method public getBitmapWidth()I
     .registers 5
 
-    .line 1696
+    .line 1689
     invoke-virtual {p0}, Lorg/telegram/messenger/ImageReceiver;->getDrawable()Landroid/graphics/drawable/Drawable;
 
-    .line 1697
+    .line 1690
     invoke-virtual {p0}, Lorg/telegram/messenger/ImageReceiver;->getAnimation()Lorg/telegram/ui/Components/AnimatedFileDrawable;
 
     move-result-object v0
@@ -5667,7 +5432,7 @@
 
     if-eqz v0, :cond_20
 
-    .line 1699
+    .line 1692
     iget v2, p0, Lorg/telegram/messenger/ImageReceiver;->imageOrientation:I
 
     rem-int/lit16 v3, v2, 0x168
@@ -5696,7 +5461,7 @@
     :goto_1f
     return v0
 
-    .line 1701
+    .line 1694
     :cond_20
     invoke-virtual {p0}, Lorg/telegram/messenger/ImageReceiver;->getLottieAnimation()Lorg/telegram/ui/Components/RLottieDrawable;
 
@@ -5704,14 +5469,14 @@
 
     if-eqz v0, :cond_2b
 
-    .line 1703
+    .line 1696
     invoke-virtual {v0}, Lorg/telegram/ui/Components/RLottieDrawable;->getIntrinsicWidth()I
 
     move-result v0
 
     return v0
 
-    .line 1705
+    .line 1698
     :cond_2b
     invoke-virtual {p0}, Lorg/telegram/messenger/ImageReceiver;->getBitmap()Landroid/graphics/Bitmap;
 
@@ -5719,12 +5484,12 @@
 
     if-nez v0, :cond_3c
 
-    .line 1707
+    .line 1700
     iget-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->staticThumbDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eqz v0, :cond_3a
 
-    .line 1708
+    .line 1701
     invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
     move-result v0
@@ -5736,7 +5501,7 @@
 
     return v0
 
-    .line 1712
+    .line 1705
     :cond_3c
     iget v2, p0, Lorg/telegram/messenger/ImageReceiver;->imageOrientation:I
 
@@ -5770,7 +5535,7 @@
 .method public getCacheType()I
     .registers 2
 
-    .line 1929
+    .line 1931
     iget v0, p0, Lorg/telegram/messenger/ImageReceiver;->currentCacheType:I
 
     return v0
@@ -5779,7 +5544,7 @@
 .method public getCenterX()F
     .registers 4
 
-    .line 1837
+    .line 1839
     iget v0, p0, Lorg/telegram/messenger/ImageReceiver;->imageX:F
 
     iget v1, p0, Lorg/telegram/messenger/ImageReceiver;->imageW:F
@@ -5796,7 +5561,7 @@
 .method public getCenterY()F
     .registers 4
 
-    .line 1841
+    .line 1843
     iget v0, p0, Lorg/telegram/messenger/ImageReceiver;->imageY:F
 
     iget v1, p0, Lorg/telegram/messenger/ImageReceiver;->imageH:F
@@ -5813,7 +5578,7 @@
 .method public getCurrentAccount()I
     .registers 2
 
-    .line 2017
+    .line 2019
     iget v0, p0, Lorg/telegram/messenger/ImageReceiver;->currentAccount:I
 
     return v0
@@ -5824,7 +5589,7 @@
     .annotation build Landroidx/annotation/Keep;
     .end annotation
 
-    .line 1577
+    .line 1570
     iget v0, p0, Lorg/telegram/messenger/ImageReceiver;->currentAlpha:F
 
     return v0
@@ -5833,7 +5598,7 @@
 .method public getDrawRegion()Landroid/graphics/RectF;
     .registers 2
 
-    .line 1881
+    .line 1883
     iget-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->drawRegion:Landroid/graphics/RectF;
 
     return-object v0
@@ -5842,14 +5607,14 @@
 .method public getDrawable()Landroid/graphics/drawable/Drawable;
     .registers 2
 
-    .line 1586
+    .line 1579
     iget-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->currentMediaDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eqz v0, :cond_5
 
     return-object v0
 
-    .line 1588
+    .line 1581
     :cond_5
     iget-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->currentImageDrawable:Landroid/graphics/drawable/Drawable;
 
@@ -5857,7 +5622,7 @@
 
     return-object v0
 
-    .line 1590
+    .line 1583
     :cond_a
     iget-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->currentThumbDrawable:Landroid/graphics/drawable/Drawable;
 
@@ -5865,7 +5630,7 @@
 
     return-object v0
 
-    .line 1592
+    .line 1585
     :cond_f
     iget-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->staticThumbDrawable:Landroid/graphics/drawable/Drawable;
 
@@ -5882,7 +5647,7 @@
 .method public getDrawableSafe()Lorg/telegram/messenger/ImageReceiver$BitmapHolder;
     .registers 6
 
-    .line 1653
+    .line 1646
     iget-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->currentMediaDrawable:Landroid/graphics/drawable/Drawable;
 
     instance-of v1, v0, Landroid/graphics/drawable/BitmapDrawable;
@@ -5899,12 +5664,12 @@
 
     if-nez v1, :cond_12
 
-    .line 1655
+    .line 1648
     iget-object v1, p0, Lorg/telegram/messenger/ImageReceiver;->currentMediaKey:Ljava/lang/String;
 
     goto :goto_41
 
-    .line 1656
+    .line 1649
     :cond_12
     iget-object v1, p0, Lorg/telegram/messenger/ImageReceiver;->currentImageDrawable:Landroid/graphics/drawable/Drawable;
 
@@ -5920,7 +5685,7 @@
 
     if-nez v3, :cond_26
 
-    .line 1658
+    .line 1651
     iget-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->currentImageKey:Ljava/lang/String;
 
     :goto_22
@@ -5932,7 +5697,7 @@
 
     goto :goto_41
 
-    .line 1659
+    .line 1652
     :cond_26
     iget-object v1, p0, Lorg/telegram/messenger/ImageReceiver;->currentThumbDrawable:Landroid/graphics/drawable/Drawable;
 
@@ -5948,12 +5713,12 @@
 
     if-nez v0, :cond_37
 
-    .line 1661
+    .line 1654
     iget-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->currentThumbKey:Ljava/lang/String;
 
     goto :goto_22
 
-    .line 1662
+    .line 1655
     :cond_37
     iget-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->staticThumbDrawable:Landroid/graphics/drawable/Drawable;
 
@@ -5973,7 +5738,7 @@
     :goto_41
     if-eqz v0, :cond_49
 
-    .line 1666
+    .line 1659
     new-instance v2, Lorg/telegram/messenger/ImageReceiver$BitmapHolder;
 
     const/4 v3, 0x0
@@ -5987,7 +5752,7 @@
 .method public getExt()Ljava/lang/String;
     .registers 2
 
-    .line 1873
+    .line 1875
     iget-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->currentExt:Ljava/lang/String;
 
     return-object v0
@@ -5996,7 +5761,7 @@
 .method public getImageAspectRatio()F
     .registers 3
 
-    .line 1869
+    .line 1871
     iget v0, p0, Lorg/telegram/messenger/ImageReceiver;->imageOrientation:I
 
     rem-int/lit16 v0, v0, 0xb4
@@ -6039,7 +5804,7 @@
 .method public getImageFilter()Ljava/lang/String;
     .registers 2
 
-    .line 1921
+    .line 1923
     iget-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->currentImageFilter:Ljava/lang/String;
 
     return-object v0
@@ -6048,7 +5813,7 @@
 .method public getImageHeight()F
     .registers 2
 
-    .line 1865
+    .line 1867
     iget v0, p0, Lorg/telegram/messenger/ImageReceiver;->imageH:F
 
     return v0
@@ -6057,7 +5822,7 @@
 .method public getImageKey()Ljava/lang/String;
     .registers 2
 
-    .line 1889
+    .line 1891
     iget-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->currentImageKey:Ljava/lang/String;
 
     return-object v0
@@ -6066,7 +5831,7 @@
 .method public getImageLocation()Lorg/telegram/messenger/ImageLocation;
     .registers 2
 
-    .line 1909
+    .line 1911
     iget-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->currentImageLocation:Lorg/telegram/messenger/ImageLocation;
 
     return-object v0
@@ -6075,7 +5840,7 @@
 .method public getImageWidth()F
     .registers 2
 
-    .line 1861
+    .line 1863
     iget v0, p0, Lorg/telegram/messenger/ImageReceiver;->imageW:F
 
     return v0
@@ -6084,7 +5849,7 @@
 .method public getImageX()F
     .registers 2
 
-    .line 1845
+    .line 1847
     iget v0, p0, Lorg/telegram/messenger/ImageReceiver;->imageX:F
 
     return v0
@@ -6093,7 +5858,7 @@
 .method public getImageX2()F
     .registers 3
 
-    .line 1849
+    .line 1851
     iget v0, p0, Lorg/telegram/messenger/ImageReceiver;->imageX:F
 
     iget v1, p0, Lorg/telegram/messenger/ImageReceiver;->imageW:F
@@ -6106,7 +5871,7 @@
 .method public getImageY()F
     .registers 2
 
-    .line 1853
+    .line 1855
     iget v0, p0, Lorg/telegram/messenger/ImageReceiver;->imageY:F
 
     return v0
@@ -6115,7 +5880,7 @@
 .method public getImageY2()F
     .registers 3
 
-    .line 1857
+    .line 1859
     iget v0, p0, Lorg/telegram/messenger/ImageReceiver;->imageY:F
 
     iget v1, p0, Lorg/telegram/messenger/ImageReceiver;->imageH:F
@@ -6136,7 +5901,7 @@
         }
     .end annotation
 
-    .line 2478
+    .line 2480
     iget-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->loadingOperations:Ljava/util/ArrayList;
 
     return-object v0
@@ -6145,25 +5910,12 @@
 .method public getLottieAnimation()Lorg/telegram/ui/Components/RLottieDrawable;
     .registers 3
 
-    .line 2104
+    .line 2106
     iget-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->currentMediaDrawable:Landroid/graphics/drawable/Drawable;
 
     instance-of v1, v0, Lorg/telegram/ui/Components/RLottieDrawable;
 
     if-eqz v1, :cond_9
-
-    .line 2105
-    check-cast v0, Lorg/telegram/ui/Components/RLottieDrawable;
-
-    return-object v0
-
-    .line 2106
-    :cond_9
-    iget-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->currentImageDrawable:Landroid/graphics/drawable/Drawable;
-
-    instance-of v1, v0, Lorg/telegram/ui/Components/RLottieDrawable;
-
-    if-eqz v1, :cond_12
 
     .line 2107
     check-cast v0, Lorg/telegram/ui/Components/RLottieDrawable;
@@ -6171,12 +5923,12 @@
     return-object v0
 
     .line 2108
-    :cond_12
-    iget-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->currentThumbDrawable:Landroid/graphics/drawable/Drawable;
+    :cond_9
+    iget-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->currentImageDrawable:Landroid/graphics/drawable/Drawable;
 
     instance-of v1, v0, Lorg/telegram/ui/Components/RLottieDrawable;
 
-    if-eqz v1, :cond_1b
+    if-eqz v1, :cond_12
 
     .line 2109
     check-cast v0, Lorg/telegram/ui/Components/RLottieDrawable;
@@ -6184,6 +5936,19 @@
     return-object v0
 
     .line 2110
+    :cond_12
+    iget-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->currentThumbDrawable:Landroid/graphics/drawable/Drawable;
+
+    instance-of v1, v0, Lorg/telegram/ui/Components/RLottieDrawable;
+
+    if-eqz v1, :cond_1b
+
+    .line 2111
+    check-cast v0, Lorg/telegram/ui/Components/RLottieDrawable;
+
+    return-object v0
+
+    .line 2112
     :cond_1b
     iget-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->staticThumbDrawable:Landroid/graphics/drawable/Drawable;
 
@@ -6191,7 +5956,7 @@
 
     if-eqz v1, :cond_24
 
-    .line 2111
+    .line 2113
     check-cast v0, Lorg/telegram/ui/Components/RLottieDrawable;
 
     return-object v0
@@ -6205,7 +5970,7 @@
 .method public getMediaFilter()Ljava/lang/String;
     .registers 2
 
-    .line 1917
+    .line 1919
     iget-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->currentMediaFilter:Ljava/lang/String;
 
     return-object v0
@@ -6214,7 +5979,7 @@
 .method public getMediaKey()Ljava/lang/String;
     .registers 2
 
-    .line 1893
+    .line 1895
     iget-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->currentMediaKey:Ljava/lang/String;
 
     return-object v0
@@ -6223,7 +5988,7 @@
 .method public getMediaLocation()Lorg/telegram/messenger/ImageLocation;
     .registers 2
 
-    .line 1905
+    .line 1907
     iget-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->currentMediaLocation:Lorg/telegram/messenger/ImageLocation;
 
     return-object v0
@@ -6232,7 +5997,7 @@
 .method public getNewGuid()I
     .registers 2
 
-    .line 1885
+    .line 1887
     iget v0, p0, Lorg/telegram/messenger/ImageReceiver;->currentGuid:I
 
     add-int/lit8 v0, v0, 0x1
@@ -6245,7 +6010,7 @@
 .method public getOrientation()I
     .registers 2
 
-    .line 651
+    .line 684
     iget v0, p0, Lorg/telegram/messenger/ImageReceiver;->imageOrientation:I
 
     return v0
@@ -6254,7 +6019,7 @@
 .method public getParam()I
     .registers 2
 
-    .line 2141
+    .line 2143
     iget v0, p0, Lorg/telegram/messenger/ImageReceiver;->param:I
 
     return v0
@@ -6263,7 +6028,7 @@
 .method public getParentObject()Ljava/lang/Object;
     .registers 2
 
-    .line 1989
+    .line 1991
     iget-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->currentParentObject:Ljava/lang/Object;
 
     return-object v0
@@ -6272,24 +6037,33 @@
 .method public getParentPosition([I)V
     .registers 3
 
-    .line 1757
+    .line 1750
     iget-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->parentView:Landroid/view/View;
 
     if-nez v0, :cond_5
 
     return-void
 
-    .line 1760
+    .line 1753
     :cond_5
     invoke-virtual {v0, p1}, Landroid/view/View;->getLocationInWindow([I)V
 
     return-void
 .end method
 
+.method public getParentView()Landroid/view/View;
+    .registers 2
+
+    .line 2489
+    iget-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->parentView:Landroid/view/View;
+
+    return-object v0
+.end method
+
 .method public getPressed()Z
     .registers 2
 
-    .line 623
+    .line 656
     iget v0, p0, Lorg/telegram/messenger/ImageReceiver;->isPressed:I
 
     if-eqz v0, :cond_6
@@ -6305,10 +6079,10 @@
     return v0
 .end method
 
-.method public getQulityThumbDocument()Lorg/telegram/tgnet/TLRPC$Document;
+.method public getQualityThumbDocument()Lorg/telegram/tgnet/TLRPC$Document;
     .registers 2
 
-    .line 2001
+    .line 2003
     iget-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->qulityThumbDocument:Lorg/telegram/tgnet/TLRPC$Document;
 
     return-object v0
@@ -6317,25 +6091,25 @@
 .method public getRoundRadius()[I
     .registers 2
 
-    .line 1985
+    .line 1987
     iget-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->roundRadius:[I
 
     return-object v0
 .end method
 
-.method public getSize()I
-    .registers 2
+.method public getSize()J
+    .registers 3
 
-    .line 1901
-    iget v0, p0, Lorg/telegram/messenger/ImageReceiver;->currentSize:I
+    .line 1903
+    iget-wide v0, p0, Lorg/telegram/messenger/ImageReceiver;->currentSize:J
 
-    return v0
+    return-wide v0
 .end method
 
 .method public getStaticThumb()Landroid/graphics/drawable/Drawable;
     .registers 2
 
-    .line 642
+    .line 675
     iget-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->staticThumbDrawable:Landroid/graphics/drawable/Drawable;
 
     return-object v0
@@ -6344,7 +6118,7 @@
 .method public getStrippedLocation()Lorg/telegram/messenger/ImageLocation;
     .registers 2
 
-    .line 315
+    .line 318
     iget-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->strippedLocation:Lorg/telegram/messenger/ImageLocation;
 
     return-object v0
@@ -6357,7 +6131,7 @@
 
     if-ne p1, v0, :cond_6
 
-    .line 2118
+    .line 2120
     iget p1, p0, Lorg/telegram/messenger/ImageReceiver;->thumbTag:I
 
     return p1
@@ -6367,12 +6141,12 @@
 
     if-ne p1, v0, :cond_c
 
-    .line 2120
+    .line 2122
     iget p1, p0, Lorg/telegram/messenger/ImageReceiver;->mediaTag:I
 
     return p1
 
-    .line 2122
+    .line 2124
     :cond_c
     iget p1, p0, Lorg/telegram/messenger/ImageReceiver;->imageTag:I
 
@@ -6382,14 +6156,14 @@
 .method public getThumbBitmap()Landroid/graphics/Bitmap;
     .registers 3
 
-    .line 1672
+    .line 1665
     iget-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->currentThumbDrawable:Landroid/graphics/drawable/Drawable;
 
     instance-of v1, v0, Landroid/graphics/drawable/BitmapDrawable;
 
     if-eqz v1, :cond_d
 
-    .line 1673
+    .line 1666
     check-cast v0, Landroid/graphics/drawable/BitmapDrawable;
 
     invoke-virtual {v0}, Landroid/graphics/drawable/BitmapDrawable;->getBitmap()Landroid/graphics/Bitmap;
@@ -6398,7 +6172,7 @@
 
     return-object v0
 
-    .line 1674
+    .line 1667
     :cond_d
     iget-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->staticThumbDrawable:Landroid/graphics/drawable/Drawable;
 
@@ -6406,7 +6180,7 @@
 
     if-eqz v1, :cond_1a
 
-    .line 1675
+    .line 1668
     check-cast v0, Landroid/graphics/drawable/BitmapDrawable;
 
     invoke-virtual {v0}, Landroid/graphics/drawable/BitmapDrawable;->getBitmap()Landroid/graphics/Bitmap;
@@ -6424,7 +6198,7 @@
 .method public getThumbBitmapSafe()Lorg/telegram/messenger/ImageReceiver$BitmapHolder;
     .registers 5
 
-    .line 1683
+    .line 1676
     iget-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->currentThumbDrawable:Landroid/graphics/drawable/Drawable;
 
     instance-of v1, v0, Landroid/graphics/drawable/BitmapDrawable;
@@ -6433,19 +6207,19 @@
 
     if-eqz v1, :cond_10
 
-    .line 1684
+    .line 1677
     check-cast v0, Landroid/graphics/drawable/BitmapDrawable;
 
     invoke-virtual {v0}, Landroid/graphics/drawable/BitmapDrawable;->getBitmap()Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    .line 1685
+    .line 1678
     iget-object v1, p0, Lorg/telegram/messenger/ImageReceiver;->currentThumbKey:Ljava/lang/String;
 
     goto :goto_20
 
-    .line 1686
+    .line 1679
     :cond_10
     iget-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->staticThumbDrawable:Landroid/graphics/drawable/Drawable;
 
@@ -6453,7 +6227,7 @@
 
     if-eqz v1, :cond_1e
 
-    .line 1687
+    .line 1680
     check-cast v0, Landroid/graphics/drawable/BitmapDrawable;
 
     invoke-virtual {v0}, Landroid/graphics/drawable/BitmapDrawable;->getBitmap()Landroid/graphics/Bitmap;
@@ -6472,7 +6246,7 @@
     :goto_20
     if-eqz v0, :cond_28
 
-    .line 1690
+    .line 1683
     new-instance v2, Lorg/telegram/messenger/ImageReceiver$BitmapHolder;
 
     const/4 v3, 0x0
@@ -6486,7 +6260,7 @@
 .method public getThumbFilter()Ljava/lang/String;
     .registers 2
 
-    .line 1925
+    .line 1927
     iget-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->currentThumbFilter:Ljava/lang/String;
 
     return-object v0
@@ -6495,7 +6269,7 @@
 .method public getThumbKey()Ljava/lang/String;
     .registers 2
 
-    .line 1897
+    .line 1899
     iget-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->currentThumbKey:Ljava/lang/String;
 
     return-object v0
@@ -6504,7 +6278,7 @@
 .method public getThumbLocation()Lorg/telegram/messenger/ImageLocation;
     .registers 2
 
-    .line 1913
+    .line 1915
     iget-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->currentThumbLocation:Lorg/telegram/messenger/ImageLocation;
 
     return-object v0
@@ -6513,7 +6287,7 @@
 .method public getUniqKeyPrefix()Ljava/lang/String;
     .registers 2
 
-    .line 2470
+    .line 2472
     iget-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->uniqKeyPrefix:Ljava/lang/String;
 
     return-object v0
@@ -6522,7 +6296,7 @@
 .method public getVisible()Z
     .registers 2
 
-    .line 1764
+    .line 1757
     iget-boolean v0, p0, Lorg/telegram/messenger/ImageReceiver;->isVisible:Z
 
     return v0
@@ -6531,7 +6305,7 @@
 .method public hasBitmapImage()Z
     .registers 2
 
-    .line 1786
+    .line 1779
     iget-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->currentImageDrawable:Landroid/graphics/drawable/Drawable;
 
     if-nez v0, :cond_13
@@ -6566,7 +6340,7 @@
 .method public hasImageSet()Z
     .registers 2
 
-    .line 1782
+    .line 1775
     iget-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->currentImageDrawable:Landroid/graphics/drawable/Drawable;
 
     if-nez v0, :cond_1b
@@ -6609,7 +6383,7 @@
 .method public hasNotThumb()Z
     .registers 2
 
-    .line 1790
+    .line 1783
     iget-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->currentImageDrawable:Landroid/graphics/drawable/Drawable;
 
     if-nez v0, :cond_b
@@ -6636,7 +6410,7 @@
 .method public hasStaticThumb()Z
     .registers 2
 
-    .line 1794
+    .line 1787
     iget-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->staticThumbDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eqz v0, :cond_6
@@ -6655,25 +6429,25 @@
 .method public invalidate()V
     .registers 7
 
-    .line 1746
+    .line 1739
     iget-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->parentView:Landroid/view/View;
 
     if-nez v0, :cond_5
 
     return-void
 
-    .line 1749
+    .line 1742
     :cond_5
     iget-boolean v1, p0, Lorg/telegram/messenger/ImageReceiver;->invalidateAll:Z
 
     if-eqz v1, :cond_d
 
-    .line 1750
+    .line 1743
     invoke-virtual {v0}, Landroid/view/View;->invalidate()V
 
     goto :goto_1e
 
-    .line 1752
+    .line 1745
     :cond_d
     iget v1, p0, Lorg/telegram/messenger/ImageReceiver;->imageX:F
 
@@ -6704,7 +6478,7 @@
 .method public isAllowStartAnimation()Z
     .registers 2
 
-    .line 2057
+    .line 2059
     iget-boolean v0, p0, Lorg/telegram/messenger/ImageReceiver;->allowStartAnimation:Z
 
     return v0
@@ -6713,14 +6487,14 @@
 .method public isAnimationRunning()Z
     .registers 2
 
-    .line 2086
+    .line 2088
     invoke-virtual {p0}, Lorg/telegram/messenger/ImageReceiver;->getAnimation()Lorg/telegram/ui/Components/AnimatedFileDrawable;
 
     move-result-object v0
 
     if-eqz v0, :cond_e
 
-    .line 2087
+    .line 2089
     invoke-virtual {v0}, Lorg/telegram/ui/Components/AnimatedFileDrawable;->isRunning()Z
 
     move-result v0
@@ -6741,8 +6515,17 @@
 .method public isAspectFit()Z
     .registers 2
 
-    .line 1802
+    .line 1795
     iget-boolean v0, p0, Lorg/telegram/messenger/ImageReceiver;->isAspectFit:Z
+
+    return v0
+.end method
+
+.method public isAttachedToWindow()Z
+    .registers 2
+
+    .line 2493
+    iget-boolean v0, p0, Lorg/telegram/messenger/ImageReceiver;->attachedToWindow:Z
 
     return v0
 .end method
@@ -6750,7 +6533,7 @@
 .method public isCurrentKeyQuality()Z
     .registers 2
 
-    .line 2013
+    .line 2015
     iget-boolean v0, p0, Lorg/telegram/messenger/ImageReceiver;->currentKeyQuality:Z
 
     return v0
@@ -6759,7 +6542,7 @@
 .method public isForceLoding()Z
     .registers 2
 
-    .line 303
+    .line 306
     iget-boolean v0, p0, Lorg/telegram/messenger/ImageReceiver;->forceLoding:Z
 
     return v0
@@ -6768,7 +6551,7 @@
 .method public isForcePreview()Z
     .registers 2
 
-    .line 1941
+    .line 1943
     iget-boolean v0, p0, Lorg/telegram/messenger/ImageReceiver;->forcePreview:Z
 
     return v0
@@ -6777,7 +6560,7 @@
 .method public isInsideImage(FF)Z
     .registers 5
 
-    .line 1877
+    .line 1879
     iget v0, p0, Lorg/telegram/messenger/ImageReceiver;->imageX:F
 
     cmpl-float v1, p1, v0
@@ -6820,7 +6603,7 @@
 .method public isNeedsQualityThumb()Z
     .registers 2
 
-    .line 2009
+    .line 2011
     iget-boolean v0, p0, Lorg/telegram/messenger/ImageReceiver;->needsQualityThumb:Z
 
     return v0
@@ -6829,7 +6612,7 @@
 .method public isShouldGenerateQualityThumb()Z
     .registers 2
 
-    .line 2025
+    .line 2027
     iget-boolean v0, p0, Lorg/telegram/messenger/ImageReceiver;->shouldGenerateQualityThumb:Z
 
     return v0
@@ -6838,7 +6621,7 @@
 .method public moveImageToFront()V
     .registers 3
 
-    .line 2482
+    .line 2484
     invoke-static {}, Lorg/telegram/messenger/ImageLoader;->getInstance()Lorg/telegram/messenger/ImageLoader;
 
     move-result-object v0
@@ -6847,7 +6630,7 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/messenger/ImageLoader;->moveToFront(Ljava/lang/String;)V
 
-    .line 2483
+    .line 2485
     invoke-static {}, Lorg/telegram/messenger/ImageLoader;->getInstance()Lorg/telegram/messenger/ImageLoader;
 
     move-result-object v0
@@ -6864,10 +6647,10 @@
 
     const/4 v0, 0x1
 
-    .line 932
+    .line 938
     iput-boolean v0, p0, Lorg/telegram/messenger/ImageReceiver;->attachedToWindow:Z
 
-    .line 933
+    .line 939
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getGlobalInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v1
@@ -6878,7 +6661,7 @@
 
     iput v1, p0, Lorg/telegram/messenger/ImageReceiver;->currentOpenedLayerFlags:I
 
-    .line 934
+    .line 940
     iget v2, p0, Lorg/telegram/messenger/ImageReceiver;->currentLayerNum:I
 
     xor-int/lit8 v2, v2, -0x1
@@ -6887,7 +6670,7 @@
 
     iput v1, p0, Lorg/telegram/messenger/ImageReceiver;->currentOpenedLayerFlags:I
 
-    .line 935
+    .line 941
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getGlobalInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v1
@@ -6896,7 +6679,7 @@
 
     invoke-virtual {v1, p0, v2}, Lorg/telegram/messenger/NotificationCenter;->addObserver(Lorg/telegram/messenger/NotificationCenter$NotificationCenterDelegate;I)V
 
-    .line 936
+    .line 942
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getGlobalInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v1
@@ -6905,7 +6688,7 @@
 
     invoke-virtual {v1, p0, v2}, Lorg/telegram/messenger/NotificationCenter;->addObserver(Lorg/telegram/messenger/NotificationCenter$NotificationCenterDelegate;I)V
 
-    .line 937
+    .line 943
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getGlobalInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v1
@@ -6914,7 +6697,7 @@
 
     invoke-virtual {v1, p0, v3}, Lorg/telegram/messenger/NotificationCenter;->addObserver(Lorg/telegram/messenger/NotificationCenter$NotificationCenterDelegate;I)V
 
-    .line 938
+    .line 944
     invoke-direct {p0}, Lorg/telegram/messenger/ImageReceiver;->setBackupImage()Z
 
     move-result v1
@@ -6923,7 +6706,7 @@
 
     return v0
 
-    .line 941
+    .line 947
     :cond_36
     invoke-virtual {p0}, Lorg/telegram/messenger/ImageReceiver;->getLottieAnimation()Lorg/telegram/ui/Components/RLottieDrawable;
 
@@ -6931,7 +6714,7 @@
 
     if-eqz v1, :cond_4d
 
-    .line 942
+    .line 948
     iget-boolean v3, p0, Lorg/telegram/messenger/ImageReceiver;->allowStartLottieAnimation:Z
 
     if-eqz v3, :cond_4d
@@ -6946,11 +6729,11 @@
 
     if-nez v3, :cond_4d
 
-    .line 943
+    .line 949
     :cond_4a
     invoke-virtual {v1}, Lorg/telegram/ui/Components/RLottieDrawable;->start()V
 
-    .line 945
+    .line 951
     :cond_4d
     invoke-virtual {p0}, Lorg/telegram/messenger/ImageReceiver;->getAnimation()Lorg/telegram/ui/Components/AnimatedFileDrawable;
 
@@ -6958,18 +6741,18 @@
 
     if-eqz v1, :cond_5a
 
-    .line 946
+    .line 952
     iget-object v3, p0, Lorg/telegram/messenger/ImageReceiver;->parentView:Landroid/view/View;
 
     if-eqz v3, :cond_5a
 
-    .line 947
-    invoke-virtual {v1, v3}, Lorg/telegram/ui/Components/AnimatedFileDrawable;->addParent(Landroid/view/View;)V
+    .line 953
+    invoke-virtual {v1, p0}, Lorg/telegram/ui/Components/AnimatedFileDrawable;->addParent(Lorg/telegram/messenger/ImageReceiver;)V
 
     :cond_5a
     if-eqz v1, :cond_6e
 
-    .line 949
+    .line 955
     iget-boolean v3, p0, Lorg/telegram/messenger/ImageReceiver;->allowStartAnimation:Z
 
     if-eqz v3, :cond_6e
@@ -6978,18 +6761,18 @@
 
     if-nez v3, :cond_6e
 
-    .line 950
-    invoke-virtual {v1}, Lorg/telegram/ui/Components/AnimatedFileDrawable;->start()V
+    .line 956
+    invoke-virtual {v1}, Lorg/telegram/ui/Components/AnimatedFileDrawable;->checkRepeat()V
 
-    .line 951
+    .line 957
     iget-object v1, p0, Lorg/telegram/messenger/ImageReceiver;->parentView:Landroid/view/View;
 
     if-eqz v1, :cond_6e
 
-    .line 952
+    .line 958
     invoke-virtual {v1}, Landroid/view/View;->invalidate()V
 
-    .line 955
+    .line 961
     :cond_6e
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getGlobalInstance()Lorg/telegram/messenger/NotificationCenter;
 
@@ -7003,7 +6786,7 @@
 
     if-eqz v1, :cond_88
 
-    .line 956
+    .line 962
     iget v1, p0, Lorg/telegram/messenger/ImageReceiver;->currentAccount:I
 
     new-array v0, v0, [Ljava/lang/Object;
@@ -7023,14 +6806,14 @@
 .end method
 
 .method public onDetachedFromWindow()V
-    .registers 4
+    .registers 5
 
     const/4 v0, 0x0
 
-    .line 878
+    .line 884
     iput-boolean v0, p0, Lorg/telegram/messenger/ImageReceiver;->attachedToWindow:Z
 
-    .line 879
+    .line 885
     iget-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->currentImageLocation:Lorg/telegram/messenger/ImageLocation;
 
     const/4 v1, 0x0
@@ -7049,20 +6832,20 @@
 
     if-eqz v0, :cond_4d
 
-    .line 880
+    .line 886
     :cond_14
     iget-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->setImageBackup:Lorg/telegram/messenger/ImageReceiver$SetImageBackup;
 
     if-nez v0, :cond_1f
 
-    .line 881
+    .line 887
     new-instance v0, Lorg/telegram/messenger/ImageReceiver$SetImageBackup;
 
     invoke-direct {v0, v1}, Lorg/telegram/messenger/ImageReceiver$SetImageBackup;-><init>(Lorg/telegram/messenger/ImageReceiver$1;)V
 
     iput-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->setImageBackup:Lorg/telegram/messenger/ImageReceiver$SetImageBackup;
 
-    .line 883
+    .line 889
     :cond_1f
     iget-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->setImageBackup:Lorg/telegram/messenger/ImageReceiver$SetImageBackup;
 
@@ -7070,57 +6853,57 @@
 
     iput-object v2, v0, Lorg/telegram/messenger/ImageReceiver$SetImageBackup;->mediaLocation:Lorg/telegram/messenger/ImageLocation;
 
-    .line 884
+    .line 890
     iget-object v2, p0, Lorg/telegram/messenger/ImageReceiver;->currentMediaFilter:Ljava/lang/String;
 
     iput-object v2, v0, Lorg/telegram/messenger/ImageReceiver$SetImageBackup;->mediaFilter:Ljava/lang/String;
 
-    .line 885
+    .line 891
     iget-object v2, p0, Lorg/telegram/messenger/ImageReceiver;->currentImageLocation:Lorg/telegram/messenger/ImageLocation;
 
     iput-object v2, v0, Lorg/telegram/messenger/ImageReceiver$SetImageBackup;->imageLocation:Lorg/telegram/messenger/ImageLocation;
 
-    .line 886
+    .line 892
     iget-object v2, p0, Lorg/telegram/messenger/ImageReceiver;->currentImageFilter:Ljava/lang/String;
 
     iput-object v2, v0, Lorg/telegram/messenger/ImageReceiver$SetImageBackup;->imageFilter:Ljava/lang/String;
 
-    .line 887
+    .line 893
     iget-object v2, p0, Lorg/telegram/messenger/ImageReceiver;->currentThumbLocation:Lorg/telegram/messenger/ImageLocation;
 
     iput-object v2, v0, Lorg/telegram/messenger/ImageReceiver$SetImageBackup;->thumbLocation:Lorg/telegram/messenger/ImageLocation;
 
-    .line 888
+    .line 894
     iget-object v2, p0, Lorg/telegram/messenger/ImageReceiver;->currentThumbFilter:Ljava/lang/String;
 
     iput-object v2, v0, Lorg/telegram/messenger/ImageReceiver$SetImageBackup;->thumbFilter:Ljava/lang/String;
 
-    .line 889
+    .line 895
     iget-object v2, p0, Lorg/telegram/messenger/ImageReceiver;->staticThumbDrawable:Landroid/graphics/drawable/Drawable;
 
     iput-object v2, v0, Lorg/telegram/messenger/ImageReceiver$SetImageBackup;->thumb:Landroid/graphics/drawable/Drawable;
 
-    .line 890
-    iget v2, p0, Lorg/telegram/messenger/ImageReceiver;->currentSize:I
+    .line 896
+    iget-wide v2, p0, Lorg/telegram/messenger/ImageReceiver;->currentSize:J
 
-    iput v2, v0, Lorg/telegram/messenger/ImageReceiver$SetImageBackup;->size:I
+    iput-wide v2, v0, Lorg/telegram/messenger/ImageReceiver$SetImageBackup;->size:J
 
-    .line 891
+    .line 897
     iget-object v2, p0, Lorg/telegram/messenger/ImageReceiver;->currentExt:Ljava/lang/String;
 
     iput-object v2, v0, Lorg/telegram/messenger/ImageReceiver$SetImageBackup;->ext:Ljava/lang/String;
 
-    .line 892
+    .line 898
     iget v2, p0, Lorg/telegram/messenger/ImageReceiver;->currentCacheType:I
 
     iput v2, v0, Lorg/telegram/messenger/ImageReceiver$SetImageBackup;->cacheType:I
 
-    .line 893
+    .line 899
     iget-object v2, p0, Lorg/telegram/messenger/ImageReceiver;->currentParentObject:Ljava/lang/Object;
 
     iput-object v2, v0, Lorg/telegram/messenger/ImageReceiver$SetImageBackup;->parentObject:Ljava/lang/Object;
 
-    .line 895
+    .line 901
     :cond_4d
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getGlobalInstance()Lorg/telegram/messenger/NotificationCenter;
 
@@ -7130,7 +6913,7 @@
 
     invoke-virtual {v0, p0, v2}, Lorg/telegram/messenger/NotificationCenter;->removeObserver(Lorg/telegram/messenger/NotificationCenter$NotificationCenterDelegate;I)V
 
-    .line 896
+    .line 902
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getGlobalInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v0
@@ -7139,7 +6922,7 @@
 
     invoke-virtual {v0, p0, v2}, Lorg/telegram/messenger/NotificationCenter;->removeObserver(Lorg/telegram/messenger/NotificationCenter$NotificationCenterDelegate;I)V
 
-    .line 897
+    .line 903
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getGlobalInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v0
@@ -7148,57 +6931,55 @@
 
     invoke-virtual {v0, p0, v2}, Lorg/telegram/messenger/NotificationCenter;->removeObserver(Lorg/telegram/messenger/NotificationCenter$NotificationCenterDelegate;I)V
 
-    .line 899
+    .line 905
     iget-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->staticThumbDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eqz v0, :cond_75
 
-    .line 900
+    .line 906
     iput-object v1, p0, Lorg/telegram/messenger/ImageReceiver;->staticThumbDrawable:Landroid/graphics/drawable/Drawable;
 
-    .line 901
+    .line 907
     iput-object v1, p0, Lorg/telegram/messenger/ImageReceiver;->thumbShader:Landroid/graphics/BitmapShader;
 
-    .line 902
+    .line 908
     iget-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->roundPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setShader(Landroid/graphics/Shader;)Landroid/graphics/Shader;
 
-    .line 904
+    .line 910
     :cond_75
     invoke-virtual {p0}, Lorg/telegram/messenger/ImageReceiver;->clearImage()V
 
-    .line 905
+    .line 911
     iget v0, p0, Lorg/telegram/messenger/ImageReceiver;->isPressed:I
 
     if-nez v0, :cond_7f
 
     const/4 v0, 0x0
 
-    .line 906
+    .line 912
     iput v0, p0, Lorg/telegram/messenger/ImageReceiver;->pressedProgress:F
 
-    .line 909
+    .line 915
     :cond_7f
     invoke-virtual {p0}, Lorg/telegram/messenger/ImageReceiver;->getAnimation()Lorg/telegram/ui/Components/AnimatedFileDrawable;
 
     move-result-object v0
 
-    if-eqz v0, :cond_8a
+    if-eqz v0, :cond_88
 
-    .line 911
-    iget-object v1, p0, Lorg/telegram/messenger/ImageReceiver;->parentView:Landroid/view/View;
+    .line 917
+    invoke-virtual {v0, p0}, Lorg/telegram/ui/Components/AnimatedFileDrawable;->removeParent(Lorg/telegram/messenger/ImageReceiver;)V
 
-    invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/AnimatedFileDrawable;->removeParent(Landroid/view/View;)V
-
-    :cond_8a
+    :cond_88
     return-void
 .end method
 
 .method public setAllowDecodeSingleFrame(Z)V
     .registers 2
 
-    .line 2041
+    .line 2043
     iput-boolean p1, p0, Lorg/telegram/messenger/ImageReceiver;->allowDecodeSingleFrame:Z
 
     return-void
@@ -7207,7 +6988,7 @@
 .method public setAllowStartAnimation(Z)V
     .registers 2
 
-    .line 2029
+    .line 2031
     iput-boolean p1, p0, Lorg/telegram/messenger/ImageReceiver;->allowStartAnimation:Z
 
     return-void
@@ -7216,7 +6997,7 @@
 .method public setAllowStartLottieAnimation(Z)V
     .registers 2
 
-    .line 2037
+    .line 2039
     iput-boolean p1, p0, Lorg/telegram/messenger/ImageReceiver;->allowStartLottieAnimation:Z
 
     return-void
@@ -7227,7 +7008,7 @@
     .annotation build Landroidx/annotation/Keep;
     .end annotation
 
-    .line 1769
+    .line 1762
     iput p1, p0, Lorg/telegram/messenger/ImageReceiver;->overrideAlpha:F
 
     return-void
@@ -7236,7 +7017,7 @@
 .method public setAspectFit(Z)V
     .registers 2
 
-    .line 1798
+    .line 1791
     iput-boolean p1, p0, Lorg/telegram/messenger/ImageReceiver;->isAspectFit:Z
 
     return-void
@@ -7245,17 +7026,17 @@
 .method public setAutoRepeat(I)V
     .registers 3
 
-    .line 2045
+    .line 2047
     iput p1, p0, Lorg/telegram/messenger/ImageReceiver;->autoRepeat:I
 
-    .line 2046
+    .line 2048
     invoke-virtual {p0}, Lorg/telegram/messenger/ImageReceiver;->getLottieAnimation()Lorg/telegram/ui/Components/RLottieDrawable;
 
     move-result-object v0
 
     if-eqz v0, :cond_b
 
-    .line 2048
+    .line 2050
     invoke-virtual {v0, p1}, Lorg/telegram/ui/Components/RLottieDrawable;->setAutoRepeat(I)V
 
     :cond_b
@@ -7265,10 +7046,10 @@
 .method public setBlendMode(Ljava/lang/Object;)V
     .registers 2
 
-    .line 1358
+    .line 1351
     iput-object p1, p0, Lorg/telegram/messenger/ImageReceiver;->blendMode:Ljava/lang/Object;
 
-    .line 1359
+    .line 1352
     invoke-virtual {p0}, Lorg/telegram/messenger/ImageReceiver;->invalidate()V
 
     return-void
@@ -7277,7 +7058,7 @@
 .method public setColorFilter(Landroid/graphics/ColorFilter;)V
     .registers 2
 
-    .line 611
+    .line 644
     iput-object p1, p0, Lorg/telegram/messenger/ImageReceiver;->colorFilter:Landroid/graphics/ColorFilter;
 
     return-void
@@ -7286,7 +7067,7 @@
 .method public setCrossfadeAlpha(B)V
     .registers 2
 
-    .line 1778
+    .line 1771
     iput-byte p1, p0, Lorg/telegram/messenger/ImageReceiver;->crossfadeAlpha:B
 
     return-void
@@ -7295,7 +7076,7 @@
 .method public setCrossfadeDuration(I)V
     .registers 2
 
-    .line 2388
+    .line 2390
     iput p1, p0, Lorg/telegram/messenger/ImageReceiver;->crossfadeDuration:I
 
     return-void
@@ -7304,7 +7085,7 @@
 .method public setCrossfadeWithOldImage(Z)V
     .registers 2
 
-    .line 2005
+    .line 2007
     iput-boolean p1, p0, Lorg/telegram/messenger/ImageReceiver;->crossfadeWithOldImage:Z
 
     return-void
@@ -7313,7 +7094,7 @@
 .method public setCurrentAccount(I)V
     .registers 2
 
-    .line 1981
+    .line 1983
     iput p1, p0, Lorg/telegram/messenger/ImageReceiver;->currentAccount:I
 
     return-void
@@ -7324,7 +7105,7 @@
     .annotation build Landroidx/annotation/Keep;
     .end annotation
 
-    .line 1582
+    .line 1575
     iput p1, p0, Lorg/telegram/messenger/ImageReceiver;->currentAlpha:F
 
     return-void
@@ -7333,7 +7114,7 @@
 .method public setDelegate(Lorg/telegram/messenger/ImageReceiver$ImageReceiverDelegate;)V
     .registers 2
 
-    .line 615
+    .line 648
     iput-object p1, p0, Lorg/telegram/messenger/ImageReceiver;->delegate:Lorg/telegram/messenger/ImageReceiver$ImageReceiverDelegate;
 
     return-void
@@ -7344,175 +7125,393 @@
 
     const/4 v0, 0x0
 
-    .line 339
+    .line 342
     invoke-virtual {p0, p1, p2, v0}, Lorg/telegram/messenger/ImageReceiver;->setForUserOrChat(Lorg/telegram/tgnet/TLObject;Landroid/graphics/drawable/Drawable;Ljava/lang/Object;)V
 
     return-void
 .end method
 
 .method public setForUserOrChat(Lorg/telegram/tgnet/TLObject;Landroid/graphics/drawable/Drawable;Ljava/lang/Object;)V
-    .registers 13
+    .registers 5
 
-    if-nez p3, :cond_3
+    const/4 p3, 0x0
 
-    move-object p3, p1
+    const/4 v0, 0x0
 
-    :cond_3
-    const/4 v0, 0x1
+    .line 345
+    invoke-virtual {p0, p1, p2, p3, v0}, Lorg/telegram/messenger/ImageReceiver;->setForUserOrChat(Lorg/telegram/tgnet/TLObject;Landroid/graphics/drawable/Drawable;Ljava/lang/Object;Z)V
 
-    .line 346
-    invoke-virtual {p0, v0}, Lorg/telegram/messenger/ImageReceiver;->setUseRoundForThumbDrawable(Z)V
+    return-void
+.end method
 
-    const/4 v1, 0x0
+.method public setForUserOrChat(Lorg/telegram/tgnet/TLObject;Landroid/graphics/drawable/Drawable;Ljava/lang/Object;Z)V
+    .registers 21
 
-    .line 349
-    instance-of v2, p1, Lorg/telegram/tgnet/TLRPC$User;
+    move-object/from16 v13, p0
+
+    move-object/from16 v0, p1
+
+    if-nez p3, :cond_8
+
+    move-object v11, v0
+
+    goto :goto_a
+
+    :cond_8
+    move-object/from16 v11, p3
+
+    :goto_a
+    const/4 v1, 0x1
+
+    .line 352
+    invoke-virtual {v13, v1}, Lorg/telegram/messenger/ImageReceiver;->setUseRoundForThumbDrawable(Z)V
+
+    .line 356
+    instance-of v2, v0, Lorg/telegram/tgnet/TLRPC$User;
 
     const/4 v3, 0x0
 
-    if-eqz v2, :cond_1f
+    const/4 v4, 0x0
 
-    .line 350
-    move-object v2, p1
+    if-eqz v2, :cond_a1
+
+    .line 357
+    move-object v2, v0
 
     check-cast v2, Lorg/telegram/tgnet/TLRPC$User;
 
-    .line 351
-    iget-object v2, v2, Lorg/telegram/tgnet/TLRPC$User;->photo:Lorg/telegram/tgnet/TLRPC$UserProfilePhoto;
+    .line 358
+    iget-object v5, v2, Lorg/telegram/tgnet/TLRPC$User;->photo:Lorg/telegram/tgnet/TLRPC$UserProfilePhoto;
 
-    if-eqz v2, :cond_1b
+    if-eqz v5, :cond_9d
 
-    .line 352
-    iget-object v1, v2, Lorg/telegram/tgnet/TLRPC$UserProfilePhoto;->strippedBitmap:Landroid/graphics/drawable/BitmapDrawable;
+    .line 359
+    iget-object v6, v5, Lorg/telegram/tgnet/TLRPC$UserProfilePhoto;->strippedBitmap:Landroid/graphics/drawable/BitmapDrawable;
 
-    .line 353
-    iget-object v2, v2, Lorg/telegram/tgnet/TLRPC$UserProfilePhoto;->stripped_thumb:[B
+    .line 360
+    iget-object v5, v5, Lorg/telegram/tgnet/TLRPC$UserProfilePhoto;->stripped_thumb:[B
 
-    if-eqz v2, :cond_1b
+    if-eqz v5, :cond_23
 
-    :goto_1a
-    const/4 v3, 0x1
+    const/4 v5, 0x1
 
-    :cond_1b
-    move v8, v3
+    goto :goto_24
 
-    move-object v3, v1
+    :cond_23
+    const/4 v5, 0x0
 
-    move v1, v8
+    .line 361
+    :goto_24
+    iget v7, v13, Lorg/telegram/messenger/ImageReceiver;->currentAccount:I
 
-    goto :goto_33
+    invoke-static {v7}, Lorg/telegram/messenger/MessagesController;->getInstance(I)Lorg/telegram/messenger/MessagesController;
 
-    .line 355
-    :cond_1f
-    instance-of v2, p1, Lorg/telegram/tgnet/TLRPC$Chat;
+    move-result-object v7
 
-    if-eqz v2, :cond_31
+    invoke-virtual {v7, v2}, Lorg/telegram/messenger/MessagesController;->isPremiumUser(Lorg/telegram/tgnet/TLRPC$User;)Z
 
-    .line 356
-    move-object v2, p1
+    move-result v7
+
+    if-eqz v7, :cond_99
+
+    iget-object v7, v2, Lorg/telegram/tgnet/TLRPC$User;->photo:Lorg/telegram/tgnet/TLRPC$UserProfilePhoto;
+
+    iget-boolean v7, v7, Lorg/telegram/tgnet/TLRPC$UserProfilePhoto;->has_video:Z
+
+    if-eqz v7, :cond_99
+
+    if-eqz p4, :cond_99
+
+    .line 362
+    iget v7, v13, Lorg/telegram/messenger/ImageReceiver;->currentAccount:I
+
+    invoke-static {v7}, Lorg/telegram/messenger/MessagesController;->getInstance(I)Lorg/telegram/messenger/MessagesController;
+
+    move-result-object v7
+
+    iget-wide v8, v2, Lorg/telegram/tgnet/TLRPC$User;->id:J
+
+    invoke-virtual {v7, v8, v9}, Lorg/telegram/messenger/MessagesController;->getUserFull(J)Lorg/telegram/tgnet/TLRPC$UserFull;
+
+    move-result-object v7
+
+    if-nez v7, :cond_51
+
+    .line 364
+    iget v8, v13, Lorg/telegram/messenger/ImageReceiver;->currentAccount:I
+
+    invoke-static {v8}, Lorg/telegram/messenger/MessagesController;->getInstance(I)Lorg/telegram/messenger/MessagesController;
+
+    move-result-object v8
+
+    iget v9, v13, Lorg/telegram/messenger/ImageReceiver;->currentGuid:I
+
+    invoke-virtual {v8, v2, v9, v4}, Lorg/telegram/messenger/MessagesController;->loadFullUser(Lorg/telegram/tgnet/TLRPC$User;IZ)V
+
+    :cond_51
+    if-eqz v7, :cond_99
+
+    .line 366
+    iget-object v2, v7, Lorg/telegram/tgnet/TLRPC$UserFull;->profile_photo:Lorg/telegram/tgnet/TLRPC$Photo;
+
+    iget-object v2, v2, Lorg/telegram/tgnet/TLRPC$Photo;->video_sizes:Ljava/util/ArrayList;
+
+    invoke-virtual {v2}, Ljava/util/ArrayList;->isEmpty()Z
+
+    move-result v2
+
+    if-nez v2, :cond_99
+
+    .line 367
+    iget-object v2, v7, Lorg/telegram/tgnet/TLRPC$UserFull;->profile_photo:Lorg/telegram/tgnet/TLRPC$Photo;
+
+    iget-object v2, v2, Lorg/telegram/tgnet/TLRPC$Photo;->video_sizes:Ljava/util/ArrayList;
+
+    invoke-virtual {v2, v4}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lorg/telegram/tgnet/TLRPC$VideoSize;
+
+    .line 368
+    :goto_67
+    iget-object v3, v7, Lorg/telegram/tgnet/TLRPC$UserFull;->profile_photo:Lorg/telegram/tgnet/TLRPC$Photo;
+
+    iget-object v3, v3, Lorg/telegram/tgnet/TLRPC$Photo;->video_sizes:Ljava/util/ArrayList;
+
+    invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
+
+    move-result v3
+
+    if-ge v4, v3, :cond_93
+
+    .line 369
+    iget-object v3, v7, Lorg/telegram/tgnet/TLRPC$UserFull;->profile_photo:Lorg/telegram/tgnet/TLRPC$Photo;
+
+    iget-object v3, v3, Lorg/telegram/tgnet/TLRPC$Photo;->video_sizes:Ljava/util/ArrayList;
+
+    invoke-virtual {v3, v4}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lorg/telegram/tgnet/TLRPC$VideoSize;
+
+    iget-object v3, v3, Lorg/telegram/tgnet/TLRPC$VideoSize;->type:Ljava/lang/String;
+
+    const-string v8, "p"
+
+    invoke-virtual {v8, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_90
+
+    .line 370
+    iget-object v2, v7, Lorg/telegram/tgnet/TLRPC$UserFull;->profile_photo:Lorg/telegram/tgnet/TLRPC$Photo;
+
+    iget-object v2, v2, Lorg/telegram/tgnet/TLRPC$Photo;->video_sizes:Ljava/util/ArrayList;
+
+    invoke-virtual {v2, v4}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lorg/telegram/tgnet/TLRPC$VideoSize;
+
+    goto :goto_93
+
+    :cond_90
+    add-int/lit8 v4, v4, 0x1
+
+    goto :goto_67
+
+    .line 374
+    :cond_93
+    :goto_93
+    iget-object v3, v7, Lorg/telegram/tgnet/TLRPC$UserFull;->profile_photo:Lorg/telegram/tgnet/TLRPC$Photo;
+
+    invoke-static {v2, v3}, Lorg/telegram/messenger/ImageLocation;->getForPhoto(Lorg/telegram/tgnet/TLRPC$VideoSize;Lorg/telegram/tgnet/TLRPC$Photo;)Lorg/telegram/messenger/ImageLocation;
+
+    move-result-object v3
+
+    :cond_99
+    move-object v2, v3
+
+    move v4, v5
+
+    move-object v3, v6
+
+    goto :goto_9e
+
+    :cond_9d
+    move-object v2, v3
+
+    :goto_9e
+    move-object v7, v3
+
+    move-object v3, v2
+
+    goto :goto_b6
+
+    .line 378
+    :cond_a1
+    instance-of v2, v0, Lorg/telegram/tgnet/TLRPC$Chat;
+
+    if-eqz v2, :cond_b5
+
+    .line 379
+    move-object v2, v0
 
     check-cast v2, Lorg/telegram/tgnet/TLRPC$Chat;
 
-    .line 357
+    .line 380
     iget-object v2, v2, Lorg/telegram/tgnet/TLRPC$Chat;->photo:Lorg/telegram/tgnet/TLRPC$ChatPhoto;
 
-    if-eqz v2, :cond_31
+    if-eqz v2, :cond_b5
 
-    .line 358
-    iget-object v1, v2, Lorg/telegram/tgnet/TLRPC$ChatPhoto;->strippedBitmap:Landroid/graphics/drawable/BitmapDrawable;
+    .line 381
+    iget-object v5, v2, Lorg/telegram/tgnet/TLRPC$ChatPhoto;->strippedBitmap:Landroid/graphics/drawable/BitmapDrawable;
 
-    .line 359
+    .line 382
     iget-object v2, v2, Lorg/telegram/tgnet/TLRPC$ChatPhoto;->stripped_thumb:[B
 
-    if-eqz v2, :cond_1b
+    if-eqz v2, :cond_b3
 
-    goto :goto_1a
+    const/4 v4, 0x1
 
-    :cond_31
-    move-object v3, v1
+    :cond_b3
+    move-object v7, v5
 
-    const/4 v1, 0x0
+    goto :goto_b6
 
-    :goto_33
-    if-eqz v3, :cond_43
+    :cond_b5
+    move-object v7, v3
 
-    .line 363
-    invoke-static {p1, v0}, Lorg/telegram/messenger/ImageLocation;->getForUserOrChat(Lorg/telegram/tgnet/TLObject;I)Lorg/telegram/messenger/ImageLocation;
+    .line 385
+    :goto_b6
+    invoke-static {v0, v1}, Lorg/telegram/messenger/ImageLocation;->getForUserOrChat(Lorg/telegram/tgnet/TLObject;I)Lorg/telegram/messenger/ImageLocation;
 
-    move-result-object v1
+    move-result-object v5
+
+    const-string v6, "50_50"
+
+    if-eqz v3, :cond_d5
+
+    const/4 v8, 0x0
+
+    const/4 v9, 0x0
+
+    const-wide/16 v14, 0x0
+
+    const/4 v10, 0x0
+
+    const/4 v12, 0x0
+
+    const-string v2, "avatar"
+
+    move-object/from16 v0, p0
+
+    move-object v1, v3
+
+    move-object v3, v5
+
+    move-object v4, v6
+
+    move-object v5, v8
+
+    move-object v6, v9
+
+    move-wide v8, v14
+
+    .line 388
+    invoke-virtual/range {v0 .. v12}, Lorg/telegram/messenger/ImageReceiver;->setImage(Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Landroid/graphics/drawable/Drawable;JLjava/lang/String;Ljava/lang/Object;I)V
+
+    const/4 v0, 0x3
+
+    .line 389
+    iput v0, v13, Lorg/telegram/messenger/ImageReceiver;->animatedFileDrawableRepeatMaxCount:I
+
+    goto :goto_106
+
+    :cond_d5
+    if-eqz v7, :cond_e4
 
     const/4 v4, 0x0
 
-    const/4 v6, 0x0
+    const/4 v8, 0x0
 
-    const-string v2, "50_50"
+    move-object/from16 v0, p0
 
-    move-object v0, p0
+    move-object v1, v5
 
-    move-object v5, p3
+    move-object v2, v6
 
+    move-object v3, v7
+
+    move-object v5, v11
+
+    move v6, v8
+
+    .line 392
     invoke-virtual/range {v0 .. v6}, Lorg/telegram/messenger/ImageReceiver;->setImage(Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Landroid/graphics/drawable/Drawable;Ljava/lang/String;Ljava/lang/Object;I)V
 
-    goto :goto_68
+    goto :goto_106
 
-    :cond_43
-    if-eqz v1, :cond_5a
+    :cond_e4
+    if-eqz v4, :cond_f9
 
-    .line 365
-    invoke-static {p1, v0}, Lorg/telegram/messenger/ImageLocation;->getForUserOrChat(Lorg/telegram/tgnet/TLObject;I)Lorg/telegram/messenger/ImageLocation;
+    const/4 v1, 0x2
 
-    move-result-object v1
-
-    const/4 v0, 0x2
-
-    invoke-static {p1, v0}, Lorg/telegram/messenger/ImageLocation;->getForUserOrChat(Lorg/telegram/tgnet/TLObject;I)Lorg/telegram/messenger/ImageLocation;
+    .line 394
+    invoke-static {v0, v1}, Lorg/telegram/messenger/ImageLocation;->getForUserOrChat(Lorg/telegram/tgnet/TLObject;I)Lorg/telegram/messenger/ImageLocation;
 
     move-result-object v3
 
     const/4 v7, 0x0
 
-    const-string v2, "50_50"
-
     const-string v4, "50_50_b"
 
-    move-object v0, p0
+    move-object/from16 v0, p0
 
-    move-object v5, p2
+    move-object v1, v5
 
-    move-object v6, p3
+    move-object v2, v6
+
+    move-object/from16 v5, p2
+
+    move-object v6, v11
 
     invoke-virtual/range {v0 .. v7}, Lorg/telegram/messenger/ImageReceiver;->setImage(Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Landroid/graphics/drawable/Drawable;Ljava/lang/Object;I)V
 
-    goto :goto_68
+    goto :goto_106
 
-    .line 367
-    :cond_5a
-    invoke-static {p1, v0}, Lorg/telegram/messenger/ImageLocation;->getForUserOrChat(Lorg/telegram/tgnet/TLObject;I)Lorg/telegram/messenger/ImageLocation;
-
-    move-result-object v1
-
+    :cond_f9
     const/4 v4, 0x0
 
-    const/4 v6, 0x0
+    const/4 v7, 0x0
 
-    const-string v2, "50_50"
+    move-object/from16 v0, p0
 
-    move-object v0, p0
+    move-object v1, v5
 
-    move-object v3, p2
+    move-object v2, v6
 
-    move-object v5, p3
+    move-object/from16 v3, p2
 
+    move-object v5, v11
+
+    move v6, v7
+
+    .line 396
     invoke-virtual/range {v0 .. v6}, Lorg/telegram/messenger/ImageReceiver;->setImage(Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Landroid/graphics/drawable/Drawable;Ljava/lang/String;Ljava/lang/Object;I)V
 
-    :goto_68
+    :goto_106
     return-void
 .end method
 
 .method public setForceCrossfade(Z)V
     .registers 2
 
-    .line 1937
+    .line 1939
     iput-boolean p1, p0, Lorg/telegram/messenger/ImageReceiver;->forceCrossfade:Z
 
     return-void
@@ -7521,7 +7520,7 @@
 .method public setForceLoading(Z)V
     .registers 2
 
-    .line 299
+    .line 302
     iput-boolean p1, p0, Lorg/telegram/messenger/ImageReceiver;->forceLoding:Z
 
     return-void
@@ -7530,7 +7529,7 @@
 .method public setForcePreview(Z)V
     .registers 2
 
-    .line 1933
+    .line 1935
     iput-boolean p1, p0, Lorg/telegram/messenger/ImageReceiver;->forcePreview:Z
 
     return-void
@@ -7541,7 +7540,7 @@
 
     if-eqz p1, :cond_1c
 
-    .line 1364
+    .line 1357
     iget-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->gradientShader:Landroid/graphics/BitmapShader;
 
     if-eqz v0, :cond_a
@@ -7550,7 +7549,7 @@
 
     if-eq v0, p1, :cond_18
 
-    .line 1365
+    .line 1358
     :cond_a
     new-instance v0, Landroid/graphics/BitmapShader;
 
@@ -7560,7 +7559,7 @@
 
     iput-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->gradientShader:Landroid/graphics/BitmapShader;
 
-    .line 1366
+    .line 1359
     iget-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->currentImageDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-direct {p0, v0}, Lorg/telegram/messenger/ImageReceiver;->updateDrawableRadius(Landroid/graphics/drawable/Drawable;)V
@@ -7568,7 +7567,7 @@
     :cond_18
     const/4 v0, 0x1
 
-    .line 1368
+    .line 1361
     iput-boolean v0, p0, Lorg/telegram/messenger/ImageReceiver;->isRoundRect:Z
 
     goto :goto_2e
@@ -7576,30 +7575,30 @@
     :cond_1c
     const/4 v0, 0x0
 
-    .line 1370
+    .line 1363
     iput-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->gradientShader:Landroid/graphics/BitmapShader;
 
-    .line 1371
+    .line 1364
     iput-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->composeShader:Landroid/graphics/ComposeShader;
 
-    .line 1372
+    .line 1365
     iput-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->legacyShader:Landroid/graphics/BitmapShader;
 
-    .line 1373
+    .line 1366
     iput-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->legacyCanvas:Landroid/graphics/Canvas;
 
-    .line 1374
+    .line 1367
     iget-object v1, p0, Lorg/telegram/messenger/ImageReceiver;->legacyBitmap:Landroid/graphics/Bitmap;
 
     if-eqz v1, :cond_2e
 
-    .line 1375
+    .line 1368
     invoke-virtual {v1}, Landroid/graphics/Bitmap;->recycle()V
 
-    .line 1376
+    .line 1369
     iput-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->legacyBitmap:Landroid/graphics/Bitmap;
 
-    .line 1379
+    .line 1372
     :cond_2e
     :goto_2e
     iput-object p1, p0, Lorg/telegram/messenger/ImageReceiver;->gradientBitmap:Landroid/graphics/Bitmap;
@@ -7610,16 +7609,16 @@
 .method public setIgnoreImageSet(Z)V
     .registers 2
 
-    .line 311
+    .line 314
     iput-boolean p1, p0, Lorg/telegram/messenger/ImageReceiver;->ignoreImageSet:Z
 
     return-void
 .end method
 
-.method public setImage(Ljava/lang/String;Ljava/lang/String;Landroid/graphics/drawable/Drawable;Ljava/lang/String;I)V
-    .registers 16
+.method public setImage(Ljava/lang/String;Ljava/lang/String;Landroid/graphics/drawable/Drawable;Ljava/lang/String;J)V
+    .registers 18
 
-    .line 327
+    .line 330
     invoke-static {p1}, Lorg/telegram/messenger/ImageLocation;->getForPath(Ljava/lang/String;)Lorg/telegram/messenger/ImageLocation;
 
     move-result-object v1
@@ -7628,9 +7627,9 @@
 
     const/4 v4, 0x0
 
-    const/4 v8, 0x0
+    const/4 v9, 0x0
 
-    const/4 v9, 0x1
+    const/4 v10, 0x1
 
     move-object v0, p0
 
@@ -7638,17 +7637,17 @@
 
     move-object v5, p3
 
-    move v6, p5
+    move-wide/from16 v6, p5
 
-    move-object v7, p4
+    move-object v8, p4
 
-    invoke-virtual/range {v0 .. v9}, Lorg/telegram/messenger/ImageReceiver;->setImage(Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Landroid/graphics/drawable/Drawable;ILjava/lang/String;Ljava/lang/Object;I)V
+    invoke-virtual/range {v0 .. v10}, Lorg/telegram/messenger/ImageReceiver;->setImage(Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Landroid/graphics/drawable/Drawable;JLjava/lang/String;Ljava/lang/Object;I)V
 
     return-void
 .end method
 
-.method public setImage(Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Landroid/graphics/drawable/Drawable;ILjava/lang/String;Ljava/lang/Object;I)V
-    .registers 18
+.method public setImage(Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Landroid/graphics/drawable/Drawable;JLjava/lang/String;Ljava/lang/Object;I)V
+    .registers 20
 
     const/4 v3, 0x0
 
@@ -7662,28 +7661,28 @@
 
     move-object v5, p3
 
-    move v6, p4
-
-    move-object v7, p5
+    move-wide v6, p4
 
     move-object/from16 v8, p6
 
-    move/from16 v9, p7
+    move-object/from16 v9, p7
 
-    .line 323
-    invoke-virtual/range {v0 .. v9}, Lorg/telegram/messenger/ImageReceiver;->setImage(Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Landroid/graphics/drawable/Drawable;ILjava/lang/String;Ljava/lang/Object;I)V
+    move/from16 v10, p8
+
+    .line 326
+    invoke-virtual/range {v0 .. v10}, Lorg/telegram/messenger/ImageReceiver;->setImage(Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Landroid/graphics/drawable/Drawable;JLjava/lang/String;Ljava/lang/Object;I)V
 
     return-void
 .end method
 
 .method public setImage(Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Landroid/graphics/drawable/Drawable;Ljava/lang/String;Ljava/lang/Object;I)V
-    .registers 17
+    .registers 18
 
     const/4 v3, 0x0
 
     const/4 v4, 0x0
 
-    const/4 v6, 0x0
+    const-wide/16 v6, 0x0
 
     move-object v0, p0
 
@@ -7693,20 +7692,20 @@
 
     move-object v5, p3
 
-    move-object v7, p4
+    move-object v8, p4
 
-    move-object v8, p5
+    move-object/from16 v9, p5
 
-    move/from16 v9, p6
+    move/from16 v10, p6
 
-    .line 319
-    invoke-virtual/range {v0 .. v9}, Lorg/telegram/messenger/ImageReceiver;->setImage(Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Landroid/graphics/drawable/Drawable;ILjava/lang/String;Ljava/lang/Object;I)V
+    .line 322
+    invoke-virtual/range {v0 .. v10}, Lorg/telegram/messenger/ImageReceiver;->setImage(Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Landroid/graphics/drawable/Drawable;JLjava/lang/String;Ljava/lang/Object;I)V
 
     return-void
 .end method
 
-.method public setImage(Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;ILjava/lang/String;Ljava/lang/Object;I)V
-    .registers 19
+.method public setImage(Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;JLjava/lang/String;Ljava/lang/Object;I)V
+    .registers 21
 
     const/4 v5, 0x0
 
@@ -7720,22 +7719,22 @@
 
     move-object v4, p4
 
-    move v6, p5
-
-    move-object/from16 v7, p6
+    move-wide/from16 v6, p5
 
     move-object/from16 v8, p7
 
-    move/from16 v9, p8
+    move-object/from16 v9, p8
 
-    .line 335
-    invoke-virtual/range {v0 .. v9}, Lorg/telegram/messenger/ImageReceiver;->setImage(Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Landroid/graphics/drawable/Drawable;ILjava/lang/String;Ljava/lang/Object;I)V
+    move/from16 v10, p9
+
+    .line 338
+    invoke-virtual/range {v0 .. v10}, Lorg/telegram/messenger/ImageReceiver;->setImage(Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Landroid/graphics/drawable/Drawable;JLjava/lang/String;Ljava/lang/Object;I)V
 
     return-void
 .end method
 
-.method public setImage(Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Landroid/graphics/drawable/Drawable;ILjava/lang/String;Ljava/lang/Object;I)V
-    .registers 22
+.method public setImage(Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Landroid/graphics/drawable/Drawable;JLjava/lang/String;Ljava/lang/Object;I)V
+    .registers 24
 
     const/4 v1, 0x0
 
@@ -7747,36 +7746,36 @@
 
     move-object v4, p2
 
-    move-object v5, p3
+    move-object/from16 v5, p3
 
     move-object/from16 v6, p4
 
     move-object/from16 v7, p5
 
-    move/from16 v8, p6
-
-    move-object/from16 v9, p7
+    move-wide/from16 v8, p6
 
     move-object/from16 v10, p8
 
-    move/from16 v11, p9
+    move-object/from16 v11, p9
 
-    .line 376
-    invoke-virtual/range {v0 .. v11}, Lorg/telegram/messenger/ImageReceiver;->setImage(Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Landroid/graphics/drawable/Drawable;ILjava/lang/String;Ljava/lang/Object;I)V
+    move/from16 v12, p10
+
+    .line 407
+    invoke-virtual/range {v0 .. v12}, Lorg/telegram/messenger/ImageReceiver;->setImage(Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Landroid/graphics/drawable/Drawable;JLjava/lang/String;Ljava/lang/Object;I)V
 
     return-void
 .end method
 
 .method public setImage(Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Landroid/graphics/drawable/Drawable;Ljava/lang/Object;I)V
-    .registers 20
+    .registers 21
 
     const/4 v1, 0x0
 
     const/4 v2, 0x0
 
-    const/4 v8, 0x0
+    const-wide/16 v8, 0x0
 
-    const/4 v9, 0x0
+    const/4 v10, 0x0
 
     move-object v0, p0
 
@@ -7784,28 +7783,28 @@
 
     move-object v4, p2
 
-    move-object v5, p3
+    move-object/from16 v5, p3
 
     move-object/from16 v6, p4
 
     move-object/from16 v7, p5
 
-    move-object/from16 v10, p6
+    move-object/from16 v11, p6
 
-    move/from16 v11, p7
+    move/from16 v12, p7
 
-    .line 372
-    invoke-virtual/range {v0 .. v11}, Lorg/telegram/messenger/ImageReceiver;->setImage(Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Landroid/graphics/drawable/Drawable;ILjava/lang/String;Ljava/lang/Object;I)V
+    .line 403
+    invoke-virtual/range {v0 .. v12}, Lorg/telegram/messenger/ImageReceiver;->setImage(Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Landroid/graphics/drawable/Drawable;JLjava/lang/String;Ljava/lang/Object;I)V
 
     return-void
 .end method
 
 .method public setImage(Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Object;I)V
-    .registers 18
+    .registers 19
 
     const/4 v5, 0x0
 
-    const/4 v6, 0x0
+    const-wide/16 v6, 0x0
 
     move-object v0, p0
 
@@ -7817,19 +7816,19 @@
 
     move-object v4, p4
 
-    move-object v7, p5
+    move-object/from16 v8, p5
 
-    move-object/from16 v8, p6
+    move-object/from16 v9, p6
 
-    move/from16 v9, p7
+    move/from16 v10, p7
 
-    .line 331
-    invoke-virtual/range {v0 .. v9}, Lorg/telegram/messenger/ImageReceiver;->setImage(Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Landroid/graphics/drawable/Drawable;ILjava/lang/String;Ljava/lang/Object;I)V
+    .line 334
+    invoke-virtual/range {v0 .. v10}, Lorg/telegram/messenger/ImageReceiver;->setImage(Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Landroid/graphics/drawable/Drawable;JLjava/lang/String;Ljava/lang/Object;I)V
 
     return-void
 .end method
 
-.method public setImage(Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Landroid/graphics/drawable/Drawable;ILjava/lang/String;Ljava/lang/Object;I)V
+.method public setImage(Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Landroid/graphics/drawable/Drawable;JLjava/lang/String;Ljava/lang/Object;I)V
     .registers 31
 
     move-object/from16 v0, p0
@@ -7848,18 +7847,18 @@
 
     move-object/from16 v7, p7
 
-    move-object/from16 v8, p9
+    move-object/from16 v8, p10
 
-    move-object/from16 v9, p10
+    move-object/from16 v9, p11
 
-    .line 380
+    .line 411
     iget-boolean v10, v0, Lorg/telegram/messenger/ImageReceiver;->ignoreImageSet:Z
 
     if-eqz v10, :cond_19
 
     return-void
 
-    .line 383
+    .line 414
     :cond_19
     iget-boolean v10, v0, Lorg/telegram/messenger/ImageReceiver;->crossfadeWithOldImage:Z
 
@@ -7875,177 +7874,179 @@
 
     if-eqz v10, :cond_2a
 
-    .line 384
+    .line 415
     invoke-direct/range {p0 .. p0}, Lorg/telegram/messenger/ImageReceiver;->setBackupImage()Z
 
-    .line 386
+    .line 417
     :cond_2a
     iget-object v10, v0, Lorg/telegram/messenger/ImageReceiver;->setImageBackup:Lorg/telegram/messenger/ImageReceiver$SetImageBackup;
 
     if-eqz v10, :cond_31
 
-    .line 387
+    .line 418
     invoke-static {v10}, Lorg/telegram/messenger/ImageReceiver$SetImageBackup;->access$100(Lorg/telegram/messenger/ImageReceiver$SetImageBackup;)V
 
     :cond_31
-    const/high16 v10, 0x3f800000    # 1.0f
+    const-wide/16 v10, 0x0
 
-    const/4 v11, 0x1
+    const/high16 v12, 0x3f800000    # 1.0f
 
-    const/4 v12, 0x0
+    const/4 v13, 0x1
 
-    const/4 v13, 0x0
+    const/4 v14, 0x0
 
-    if-nez v3, :cond_d8
+    const/4 v15, 0x0
 
-    if-nez v5, :cond_d8
+    if-nez v3, :cond_da
 
-    if-nez v1, :cond_d8
+    if-nez v5, :cond_da
+
+    if-nez v1, :cond_da
 
     const/4 v1, 0x0
 
-    :goto_3d
+    :goto_3f
     const/4 v2, 0x4
 
-    if-ge v1, v2, :cond_46
+    if-ge v1, v2, :cond_48
 
-    .line 392
-    invoke-direct {v0, v13, v1}, Lorg/telegram/messenger/ImageReceiver;->recycleBitmap(Ljava/lang/String;I)V
+    .line 423
+    invoke-direct {v0, v15, v1}, Lorg/telegram/messenger/ImageReceiver;->recycleBitmap(Ljava/lang/String;I)V
 
     add-int/lit8 v1, v1, 0x1
 
-    goto :goto_3d
-
-    .line 394
-    :cond_46
-    iput-object v13, v0, Lorg/telegram/messenger/ImageReceiver;->currentImageLocation:Lorg/telegram/messenger/ImageLocation;
-
-    .line 395
-    iput-object v13, v0, Lorg/telegram/messenger/ImageReceiver;->currentImageFilter:Ljava/lang/String;
-
-    .line 396
-    iput-object v13, v0, Lorg/telegram/messenger/ImageReceiver;->currentImageKey:Ljava/lang/String;
-
-    .line 397
-    iput-object v13, v0, Lorg/telegram/messenger/ImageReceiver;->currentMediaLocation:Lorg/telegram/messenger/ImageLocation;
-
-    .line 398
-    iput-object v13, v0, Lorg/telegram/messenger/ImageReceiver;->currentMediaFilter:Ljava/lang/String;
-
-    .line 399
-    iput-object v13, v0, Lorg/telegram/messenger/ImageReceiver;->currentMediaKey:Ljava/lang/String;
-
-    .line 400
-    iput-object v13, v0, Lorg/telegram/messenger/ImageReceiver;->currentThumbLocation:Lorg/telegram/messenger/ImageLocation;
-
-    .line 401
-    iput-object v13, v0, Lorg/telegram/messenger/ImageReceiver;->currentThumbFilter:Ljava/lang/String;
-
-    .line 402
-    iput-object v13, v0, Lorg/telegram/messenger/ImageReceiver;->currentThumbKey:Ljava/lang/String;
-
-    .line 404
-    iput-object v13, v0, Lorg/telegram/messenger/ImageReceiver;->currentMediaDrawable:Landroid/graphics/drawable/Drawable;
-
-    .line 405
-    iput-object v13, v0, Lorg/telegram/messenger/ImageReceiver;->mediaShader:Landroid/graphics/BitmapShader;
-
-    .line 406
-    iput-object v13, v0, Lorg/telegram/messenger/ImageReceiver;->currentImageDrawable:Landroid/graphics/drawable/Drawable;
-
-    .line 407
-    iput-object v13, v0, Lorg/telegram/messenger/ImageReceiver;->imageShader:Landroid/graphics/BitmapShader;
-
-    .line 408
-    iput-object v13, v0, Lorg/telegram/messenger/ImageReceiver;->composeShader:Landroid/graphics/ComposeShader;
-
-    .line 409
-    iput-object v13, v0, Lorg/telegram/messenger/ImageReceiver;->thumbShader:Landroid/graphics/BitmapShader;
-
-    .line 410
-    iput-object v13, v0, Lorg/telegram/messenger/ImageReceiver;->crossfadeShader:Landroid/graphics/BitmapShader;
-
-    .line 411
-    iput-object v13, v0, Lorg/telegram/messenger/ImageReceiver;->legacyShader:Landroid/graphics/BitmapShader;
-
-    .line 412
-    iput-object v13, v0, Lorg/telegram/messenger/ImageReceiver;->legacyCanvas:Landroid/graphics/Canvas;
-
-    .line 413
-    iget-object v1, v0, Lorg/telegram/messenger/ImageReceiver;->legacyBitmap:Landroid/graphics/Bitmap;
-
-    if-eqz v1, :cond_73
-
-    .line 414
-    invoke-virtual {v1}, Landroid/graphics/Bitmap;->recycle()V
-
-    .line 415
-    iput-object v13, v0, Lorg/telegram/messenger/ImageReceiver;->legacyBitmap:Landroid/graphics/Bitmap;
-
-    .line 418
-    :cond_73
-    iput-object v8, v0, Lorg/telegram/messenger/ImageReceiver;->currentExt:Ljava/lang/String;
-
-    .line 419
-    iput-object v13, v0, Lorg/telegram/messenger/ImageReceiver;->currentParentObject:Ljava/lang/Object;
-
-    .line 420
-    iput v12, v0, Lorg/telegram/messenger/ImageReceiver;->currentCacheType:I
-
-    .line 421
-    iget-object v1, v0, Lorg/telegram/messenger/ImageReceiver;->roundPaint:Landroid/graphics/Paint;
-
-    invoke-virtual {v1, v13}, Landroid/graphics/Paint;->setShader(Landroid/graphics/Shader;)Landroid/graphics/Shader;
-
-    .line 422
-    iput-object v7, v0, Lorg/telegram/messenger/ImageReceiver;->staticThumbDrawable:Landroid/graphics/drawable/Drawable;
-
-    .line 423
-    iput v10, v0, Lorg/telegram/messenger/ImageReceiver;->currentAlpha:F
-
-    .line 424
-    iput v10, v0, Lorg/telegram/messenger/ImageReceiver;->previousAlpha:F
+    goto :goto_3f
 
     .line 425
-    iput v12, v0, Lorg/telegram/messenger/ImageReceiver;->currentSize:I
+    :cond_48
+    iput-object v15, v0, Lorg/telegram/messenger/ImageReceiver;->currentImageLocation:Lorg/telegram/messenger/ImageLocation;
+
+    .line 426
+    iput-object v15, v0, Lorg/telegram/messenger/ImageReceiver;->currentImageFilter:Ljava/lang/String;
 
     .line 427
-    instance-of v1, v7, Lorg/telegram/messenger/SvgHelper$SvgDrawable;
-
-    if-eqz v1, :cond_90
+    iput-object v15, v0, Lorg/telegram/messenger/ImageReceiver;->currentImageKey:Ljava/lang/String;
 
     .line 428
+    iput-object v15, v0, Lorg/telegram/messenger/ImageReceiver;->currentMediaLocation:Lorg/telegram/messenger/ImageLocation;
+
+    .line 429
+    iput-object v15, v0, Lorg/telegram/messenger/ImageReceiver;->currentMediaFilter:Ljava/lang/String;
+
+    .line 430
+    iput-object v15, v0, Lorg/telegram/messenger/ImageReceiver;->currentMediaKey:Ljava/lang/String;
+
+    .line 431
+    iput-object v15, v0, Lorg/telegram/messenger/ImageReceiver;->currentThumbLocation:Lorg/telegram/messenger/ImageLocation;
+
+    .line 432
+    iput-object v15, v0, Lorg/telegram/messenger/ImageReceiver;->currentThumbFilter:Ljava/lang/String;
+
+    .line 433
+    iput-object v15, v0, Lorg/telegram/messenger/ImageReceiver;->currentThumbKey:Ljava/lang/String;
+
+    .line 435
+    iput-object v15, v0, Lorg/telegram/messenger/ImageReceiver;->currentMediaDrawable:Landroid/graphics/drawable/Drawable;
+
+    .line 436
+    iput-object v15, v0, Lorg/telegram/messenger/ImageReceiver;->mediaShader:Landroid/graphics/BitmapShader;
+
+    .line 437
+    iput-object v15, v0, Lorg/telegram/messenger/ImageReceiver;->currentImageDrawable:Landroid/graphics/drawable/Drawable;
+
+    .line 438
+    iput-object v15, v0, Lorg/telegram/messenger/ImageReceiver;->imageShader:Landroid/graphics/BitmapShader;
+
+    .line 439
+    iput-object v15, v0, Lorg/telegram/messenger/ImageReceiver;->composeShader:Landroid/graphics/ComposeShader;
+
+    .line 440
+    iput-object v15, v0, Lorg/telegram/messenger/ImageReceiver;->thumbShader:Landroid/graphics/BitmapShader;
+
+    .line 441
+    iput-object v15, v0, Lorg/telegram/messenger/ImageReceiver;->crossfadeShader:Landroid/graphics/BitmapShader;
+
+    .line 442
+    iput-object v15, v0, Lorg/telegram/messenger/ImageReceiver;->legacyShader:Landroid/graphics/BitmapShader;
+
+    .line 443
+    iput-object v15, v0, Lorg/telegram/messenger/ImageReceiver;->legacyCanvas:Landroid/graphics/Canvas;
+
+    .line 444
+    iget-object v1, v0, Lorg/telegram/messenger/ImageReceiver;->legacyBitmap:Landroid/graphics/Bitmap;
+
+    if-eqz v1, :cond_75
+
+    .line 445
+    invoke-virtual {v1}, Landroid/graphics/Bitmap;->recycle()V
+
+    .line 446
+    iput-object v15, v0, Lorg/telegram/messenger/ImageReceiver;->legacyBitmap:Landroid/graphics/Bitmap;
+
+    .line 449
+    :cond_75
+    iput-object v8, v0, Lorg/telegram/messenger/ImageReceiver;->currentExt:Ljava/lang/String;
+
+    .line 450
+    iput-object v15, v0, Lorg/telegram/messenger/ImageReceiver;->currentParentObject:Ljava/lang/Object;
+
+    .line 451
+    iput v14, v0, Lorg/telegram/messenger/ImageReceiver;->currentCacheType:I
+
+    .line 452
+    iget-object v1, v0, Lorg/telegram/messenger/ImageReceiver;->roundPaint:Landroid/graphics/Paint;
+
+    invoke-virtual {v1, v15}, Landroid/graphics/Paint;->setShader(Landroid/graphics/Shader;)Landroid/graphics/Shader;
+
+    .line 453
+    iput-object v7, v0, Lorg/telegram/messenger/ImageReceiver;->staticThumbDrawable:Landroid/graphics/drawable/Drawable;
+
+    .line 454
+    iput v12, v0, Lorg/telegram/messenger/ImageReceiver;->currentAlpha:F
+
+    .line 455
+    iput v12, v0, Lorg/telegram/messenger/ImageReceiver;->previousAlpha:F
+
+    .line 456
+    iput-wide v10, v0, Lorg/telegram/messenger/ImageReceiver;->currentSize:J
+
+    .line 458
+    instance-of v1, v7, Lorg/telegram/messenger/SvgHelper$SvgDrawable;
+
+    if-eqz v1, :cond_92
+
+    .line 459
     move-object v1, v7
 
     check-cast v1, Lorg/telegram/messenger/SvgHelper$SvgDrawable;
 
     invoke-virtual {v1, v0}, Lorg/telegram/messenger/SvgHelper$SvgDrawable;->setParent(Lorg/telegram/messenger/ImageReceiver;)V
 
-    .line 431
-    :cond_90
+    .line 462
+    :cond_92
     invoke-static {}, Lorg/telegram/messenger/ImageLoader;->getInstance()Lorg/telegram/messenger/ImageLoader;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0, v11}, Lorg/telegram/messenger/ImageLoader;->cancelLoadingForImageReceiver(Lorg/telegram/messenger/ImageReceiver;Z)V
+    invoke-virtual {v1, v0, v13}, Lorg/telegram/messenger/ImageLoader;->cancelLoadingForImageReceiver(Lorg/telegram/messenger/ImageReceiver;Z)V
 
-    .line 432
+    .line 463
     iget-object v1, v0, Lorg/telegram/messenger/ImageReceiver;->parentView:Landroid/view/View;
 
-    if-eqz v1, :cond_b4
+    if-eqz v1, :cond_b6
 
-    .line 433
+    .line 464
     iget-boolean v2, v0, Lorg/telegram/messenger/ImageReceiver;->invalidateAll:Z
 
-    if-eqz v2, :cond_a3
+    if-eqz v2, :cond_a5
 
-    .line 434
+    .line 465
     invoke-virtual {v1}, Landroid/view/View;->invalidate()V
 
-    goto :goto_b4
+    goto :goto_b6
 
-    .line 436
-    :cond_a3
+    .line 467
+    :cond_a5
     iget v2, v0, Lorg/telegram/messenger/ImageReceiver;->imageX:F
 
     float-to-int v3, v2
@@ -8068,845 +8069,853 @@
 
     invoke-virtual {v1, v3, v5, v2, v4}, Landroid/view/View;->invalidate(IIII)V
 
-    .line 439
-    :cond_b4
-    :goto_b4
+    .line 470
+    :cond_b6
+    :goto_b6
     iget-object v1, v0, Lorg/telegram/messenger/ImageReceiver;->delegate:Lorg/telegram/messenger/ImageReceiver$ImageReceiverDelegate;
 
-    if-eqz v1, :cond_d7
+    if-eqz v1, :cond_d9
 
-    .line 440
+    .line 471
     iget-object v2, v0, Lorg/telegram/messenger/ImageReceiver;->currentImageDrawable:Landroid/graphics/drawable/Drawable;
 
-    if-nez v2, :cond_cb
+    if-nez v2, :cond_cd
 
     iget-object v3, v0, Lorg/telegram/messenger/ImageReceiver;->currentThumbDrawable:Landroid/graphics/drawable/Drawable;
 
-    if-nez v3, :cond_cb
+    if-nez v3, :cond_cd
 
     iget-object v3, v0, Lorg/telegram/messenger/ImageReceiver;->staticThumbDrawable:Landroid/graphics/drawable/Drawable;
 
-    if-nez v3, :cond_cb
+    if-nez v3, :cond_cd
 
     iget-object v3, v0, Lorg/telegram/messenger/ImageReceiver;->currentMediaDrawable:Landroid/graphics/drawable/Drawable;
 
-    if-eqz v3, :cond_c9
+    if-eqz v3, :cond_cb
 
-    goto :goto_cb
-
-    :cond_c9
-    const/4 v3, 0x0
-
-    goto :goto_cc
+    goto :goto_cd
 
     :cond_cb
-    :goto_cb
+    const/4 v3, 0x0
+
+    goto :goto_ce
+
+    :cond_cd
+    :goto_cd
     const/4 v3, 0x1
 
-    :goto_cc
-    if-nez v2, :cond_d3
+    :goto_ce
+    if-nez v2, :cond_d5
 
     iget-object v2, v0, Lorg/telegram/messenger/ImageReceiver;->currentMediaDrawable:Landroid/graphics/drawable/Drawable;
 
-    if-nez v2, :cond_d3
+    if-nez v2, :cond_d5
 
-    goto :goto_d4
+    goto :goto_d6
 
-    :cond_d3
-    const/4 v11, 0x0
+    :cond_d5
+    const/4 v13, 0x0
 
-    :goto_d4
-    invoke-interface {v1, v0, v3, v11, v12}, Lorg/telegram/messenger/ImageReceiver$ImageReceiverDelegate;->didSetImage(Lorg/telegram/messenger/ImageReceiver;ZZZ)V
+    :goto_d6
+    invoke-interface {v1, v0, v3, v13, v14}, Lorg/telegram/messenger/ImageReceiver$ImageReceiverDelegate;->didSetImage(Lorg/telegram/messenger/ImageReceiver;ZZZ)V
 
-    :cond_d7
+    :cond_d9
     return-void
 
-    :cond_d8
-    if-eqz v3, :cond_df
+    :cond_da
+    if-eqz v3, :cond_e1
 
-    .line 444
-    invoke-virtual {v3, v9, v13, v12}, Lorg/telegram/messenger/ImageLocation;->getKey(Ljava/lang/Object;Ljava/lang/Object;Z)Ljava/lang/String;
+    .line 475
+    invoke-virtual {v3, v9, v15, v14}, Lorg/telegram/messenger/ImageLocation;->getKey(Ljava/lang/Object;Ljava/lang/Object;Z)Ljava/lang/String;
 
-    move-result-object v14
+    move-result-object v16
 
-    goto :goto_e0
+    goto :goto_e3
 
-    :cond_df
-    move-object v14, v13
+    :cond_e1
+    move-object/from16 v16, v15
 
-    :goto_e0
-    if-nez v14, :cond_e5
+    :goto_e3
+    if-nez v16, :cond_e8
 
-    if-eqz v3, :cond_e5
+    if-eqz v3, :cond_e8
 
-    move-object v3, v13
+    move-object v3, v15
 
-    .line 448
-    :cond_e5
-    iput-boolean v12, v0, Lorg/telegram/messenger/ImageReceiver;->currentKeyQuality:Z
+    .line 479
+    :cond_e8
+    iput v14, v0, Lorg/telegram/messenger/ImageReceiver;->animatedFileDrawableRepeatMaxCount:I
 
-    if-nez v14, :cond_12e
+    .line 480
+    iput-boolean v14, v0, Lorg/telegram/messenger/ImageReceiver;->currentKeyQuality:Z
 
-    .line 449
-    iget-boolean v15, v0, Lorg/telegram/messenger/ImageReceiver;->needsQualityThumb:Z
+    if-nez v16, :cond_132
 
-    if-eqz v15, :cond_12e
+    .line 481
+    iget-boolean v12, v0, Lorg/telegram/messenger/ImageReceiver;->needsQualityThumb:Z
 
-    instance-of v15, v9, Lorg/telegram/messenger/MessageObject;
+    if-eqz v12, :cond_132
 
-    if-nez v15, :cond_f5
+    instance-of v12, v9, Lorg/telegram/messenger/MessageObject;
 
-    iget-object v15, v0, Lorg/telegram/messenger/ImageReceiver;->qulityThumbDocument:Lorg/telegram/tgnet/TLRPC$Document;
+    if-nez v12, :cond_fa
 
-    if-eqz v15, :cond_12e
+    iget-object v12, v0, Lorg/telegram/messenger/ImageReceiver;->qulityThumbDocument:Lorg/telegram/tgnet/TLRPC$Document;
 
-    .line 450
-    :cond_f5
-    iget-object v15, v0, Lorg/telegram/messenger/ImageReceiver;->qulityThumbDocument:Lorg/telegram/tgnet/TLRPC$Document;
+    if-eqz v12, :cond_132
 
-    if-eqz v15, :cond_fa
-
-    goto :goto_101
-
+    .line 482
     :cond_fa
-    move-object v15, v9
+    iget-object v12, v0, Lorg/telegram/messenger/ImageReceiver;->qulityThumbDocument:Lorg/telegram/tgnet/TLRPC$Document;
 
-    check-cast v15, Lorg/telegram/messenger/MessageObject;
+    if-eqz v12, :cond_ff
 
-    invoke-virtual {v15}, Lorg/telegram/messenger/MessageObject;->getDocument()Lorg/telegram/tgnet/TLRPC$Document;
+    goto :goto_106
 
-    move-result-object v15
+    :cond_ff
+    move-object v12, v9
 
-    :goto_101
-    if-eqz v15, :cond_12e
+    check-cast v12, Lorg/telegram/messenger/MessageObject;
 
-    .line 451
-    iget v10, v15, Lorg/telegram/tgnet/TLRPC$Document;->dc_id:I
+    invoke-virtual {v12}, Lorg/telegram/messenger/MessageObject;->getDocument()Lorg/telegram/tgnet/TLRPC$Document;
 
-    if-eqz v10, :cond_12e
+    move-result-object v12
 
-    iget-wide v12, v15, Lorg/telegram/tgnet/TLRPC$Document;->id:J
+    :goto_106
+    if-eqz v12, :cond_132
 
-    const-wide/16 v16, 0x0
+    .line 483
+    iget v14, v12, Lorg/telegram/tgnet/TLRPC$Document;->dc_id:I
 
-    cmp-long v18, v12, v16
+    if-eqz v14, :cond_132
 
-    if-eqz v18, :cond_12e
+    iget-wide v13, v12, Lorg/telegram/tgnet/TLRPC$Document;->id:J
 
-    .line 452
+    cmp-long v17, v13, v10
+
+    if-eqz v17, :cond_132
+
+    .line 484
+    new-instance v10, Ljava/lang/StringBuilder;
+
+    invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v11, "q_"
+
+    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v11, v12, Lorg/telegram/tgnet/TLRPC$Document;->dc_id:I
+
+    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v11, "_"
+
+    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v11, v12, Lorg/telegram/tgnet/TLRPC$Document;->id:J
+
+    invoke-virtual {v10, v11, v12}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v10}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v16
+
+    const/4 v10, 0x1
+
+    .line 485
+    iput-boolean v10, v0, Lorg/telegram/messenger/ImageReceiver;->currentKeyQuality:Z
+
+    :cond_132
+    move-object/from16 v10, v16
+
+    const-string v11, "@"
+
+    if-eqz v10, :cond_14c
+
+    if-eqz v4, :cond_14c
+
+    .line 489
     new-instance v12, Ljava/lang/StringBuilder;
 
     invoke-direct {v12}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v13, "q_"
+    invoke-virtual {v12, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v12, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v12, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v13, v15, Lorg/telegram/tgnet/TLRPC$Document;->dc_id:I
-
-    invoke-virtual {v12, v13}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v13, "_"
-
-    invoke-virtual {v12, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v13, v15, Lorg/telegram/tgnet/TLRPC$Document;->id:J
-
-    invoke-virtual {v12, v13, v14}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v12, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v12}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v14
+    move-result-object v10
 
-    .line 453
-    iput-boolean v11, v0, Lorg/telegram/messenger/ImageReceiver;->currentKeyQuality:Z
+    .line 492
+    :cond_14c
+    iget-object v12, v0, Lorg/telegram/messenger/ImageReceiver;->uniqKeyPrefix:Ljava/lang/String;
 
-    :cond_12e
-    const-string v12, "@"
+    if-eqz v12, :cond_161
 
-    if-eqz v14, :cond_146
+    .line 493
+    new-instance v12, Ljava/lang/StringBuilder;
 
-    if-eqz v4, :cond_146
+    invoke-direct {v12}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 457
-    new-instance v13, Ljava/lang/StringBuilder;
-
-    invoke-direct {v13}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v13, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v13, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v13, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v13}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v14
-
-    .line 460
-    :cond_146
     iget-object v13, v0, Lorg/telegram/messenger/ImageReceiver;->uniqKeyPrefix:Ljava/lang/String;
 
-    if-eqz v13, :cond_15b
+    invoke-virtual {v12, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 461
-    new-instance v13, Ljava/lang/StringBuilder;
+    invoke-virtual {v12, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct {v13}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-virtual {v12}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    iget-object v15, v0, Lorg/telegram/messenger/ImageReceiver;->uniqKeyPrefix:Ljava/lang/String;
+    move-result-object v10
 
-    invoke-virtual {v13, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :cond_161
+    if-eqz v1, :cond_169
 
-    invoke-virtual {v13, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/4 v12, 0x0
 
-    invoke-virtual {v13}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    .line 496
+    invoke-virtual {v1, v9, v15, v12}, Lorg/telegram/messenger/ImageLocation;->getKey(Ljava/lang/Object;Ljava/lang/Object;Z)Ljava/lang/String;
 
-    move-result-object v14
+    move-result-object v13
 
-    :cond_15b
-    if-eqz v1, :cond_164
+    goto :goto_16a
 
-    const/4 v10, 0x0
+    :cond_169
+    move-object v13, v15
 
-    const/4 v13, 0x0
+    :goto_16a
+    if-nez v13, :cond_16f
 
-    .line 464
-    invoke-virtual {v1, v9, v13, v10}, Lorg/telegram/messenger/ImageLocation;->getKey(Ljava/lang/Object;Ljava/lang/Object;Z)Ljava/lang/String;
+    if-eqz v1, :cond_16f
 
-    move-result-object v15
+    move-object v1, v15
 
-    goto :goto_165
+    :cond_16f
+    if-eqz v13, :cond_185
 
-    :cond_164
+    if-eqz v2, :cond_185
+
+    .line 501
+    new-instance v12, Ljava/lang/StringBuilder;
+
+    invoke-direct {v12}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v12, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v12, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v12, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v12}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v13
+
+    :cond_185
+    if-nez v13, :cond_191
+
+    .line 504
+    iget-object v12, v0, Lorg/telegram/messenger/ImageReceiver;->currentImageKey:Ljava/lang/String;
+
+    if-eqz v12, :cond_191
+
+    invoke-virtual {v12, v10}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v12
+
+    if-nez v12, :cond_19b
+
+    :cond_191
+    iget-object v12, v0, Lorg/telegram/messenger/ImageReceiver;->currentMediaKey:Ljava/lang/String;
+
+    if-eqz v12, :cond_1c6
+
+    invoke-virtual {v12, v13}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v12
+
+    if-eqz v12, :cond_1c6
+
+    .line 505
+    :cond_19b
+    iget-object v12, v0, Lorg/telegram/messenger/ImageReceiver;->delegate:Lorg/telegram/messenger/ImageReceiver$ImageReceiverDelegate;
+
+    if-eqz v12, :cond_1c1
+
+    .line 506
+    iget-object v14, v0, Lorg/telegram/messenger/ImageReceiver;->currentImageDrawable:Landroid/graphics/drawable/Drawable;
+
+    if-nez v14, :cond_1b2
+
+    iget-object v15, v0, Lorg/telegram/messenger/ImageReceiver;->currentThumbDrawable:Landroid/graphics/drawable/Drawable;
+
+    if-nez v15, :cond_1b2
+
+    iget-object v15, v0, Lorg/telegram/messenger/ImageReceiver;->staticThumbDrawable:Landroid/graphics/drawable/Drawable;
+
+    if-nez v15, :cond_1b2
+
+    iget-object v15, v0, Lorg/telegram/messenger/ImageReceiver;->currentMediaDrawable:Landroid/graphics/drawable/Drawable;
+
+    if-eqz v15, :cond_1b0
+
+    goto :goto_1b2
+
+    :cond_1b0
     const/4 v15, 0x0
 
-    :goto_165
-    if-nez v15, :cond_16a
+    goto :goto_1b3
 
-    if-eqz v1, :cond_16a
+    :cond_1b2
+    :goto_1b2
+    const/4 v15, 0x1
 
-    const/4 v1, 0x0
+    :goto_1b3
+    if-nez v14, :cond_1bc
 
-    :cond_16a
-    if-eqz v15, :cond_180
+    iget-object v14, v0, Lorg/telegram/messenger/ImageReceiver;->currentMediaDrawable:Landroid/graphics/drawable/Drawable;
 
-    if-eqz v2, :cond_180
-
-    .line 469
-    new-instance v13, Ljava/lang/StringBuilder;
-
-    invoke-direct {v13}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v13, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v13, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v13, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v13}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v15
-
-    :cond_180
-    if-nez v15, :cond_18c
-
-    .line 472
-    iget-object v13, v0, Lorg/telegram/messenger/ImageReceiver;->currentImageKey:Ljava/lang/String;
-
-    if-eqz v13, :cond_18c
-
-    invoke-virtual {v13, v14}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v13
-
-    if-nez v13, :cond_196
-
-    :cond_18c
-    iget-object v13, v0, Lorg/telegram/messenger/ImageReceiver;->currentMediaKey:Ljava/lang/String;
-
-    if-eqz v13, :cond_1c1
-
-    invoke-virtual {v13, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v13
-
-    if-eqz v13, :cond_1c1
-
-    .line 473
-    :cond_196
-    iget-object v13, v0, Lorg/telegram/messenger/ImageReceiver;->delegate:Lorg/telegram/messenger/ImageReceiver$ImageReceiverDelegate;
-
-    if-eqz v13, :cond_1bc
-
-    .line 474
-    iget-object v10, v0, Lorg/telegram/messenger/ImageReceiver;->currentImageDrawable:Landroid/graphics/drawable/Drawable;
-
-    if-nez v10, :cond_1ad
-
-    iget-object v11, v0, Lorg/telegram/messenger/ImageReceiver;->currentThumbDrawable:Landroid/graphics/drawable/Drawable;
-
-    if-nez v11, :cond_1ad
-
-    iget-object v11, v0, Lorg/telegram/messenger/ImageReceiver;->staticThumbDrawable:Landroid/graphics/drawable/Drawable;
-
-    if-nez v11, :cond_1ad
-
-    iget-object v11, v0, Lorg/telegram/messenger/ImageReceiver;->currentMediaDrawable:Landroid/graphics/drawable/Drawable;
-
-    if-eqz v11, :cond_1ab
-
-    goto :goto_1ad
-
-    :cond_1ab
-    const/4 v11, 0x0
-
-    goto :goto_1ae
-
-    :cond_1ad
-    :goto_1ad
-    const/4 v11, 0x1
-
-    :goto_1ae
-    if-nez v10, :cond_1b7
-
-    iget-object v10, v0, Lorg/telegram/messenger/ImageReceiver;->currentMediaDrawable:Landroid/graphics/drawable/Drawable;
-
-    if-nez v10, :cond_1b7
+    if-nez v14, :cond_1bc
 
     const/4 v7, 0x0
 
-    const/4 v10, 0x1
+    const/4 v14, 0x1
 
-    goto :goto_1b9
+    goto :goto_1be
 
-    :cond_1b7
-    const/4 v7, 0x0
-
-    const/4 v10, 0x0
-
-    :goto_1b9
-    invoke-interface {v13, v0, v11, v10, v7}, Lorg/telegram/messenger/ImageReceiver$ImageReceiverDelegate;->didSetImage(Lorg/telegram/messenger/ImageReceiver;ZZZ)V
-
-    .line 476
     :cond_1bc
+    const/4 v7, 0x0
+
+    const/4 v14, 0x0
+
+    :goto_1be
+    invoke-interface {v12, v0, v15, v14, v7}, Lorg/telegram/messenger/ImageReceiver$ImageReceiverDelegate;->didSetImage(Lorg/telegram/messenger/ImageReceiver;ZZZ)V
+
+    .line 508
+    :cond_1c1
     iget-boolean v7, v0, Lorg/telegram/messenger/ImageReceiver;->canceledLoading:Z
 
-    if-nez v7, :cond_1c1
+    if-nez v7, :cond_1c6
 
     return-void
 
-    .line 482
-    :cond_1c1
+    .line 514
+    :cond_1c6
     iget-object v7, v0, Lorg/telegram/messenger/ImageReceiver;->strippedLocation:Lorg/telegram/messenger/ImageLocation;
 
-    if-eqz v7, :cond_1c6
+    if-eqz v7, :cond_1cb
 
-    goto :goto_1cb
+    goto :goto_1d0
 
-    :cond_1c6
-    if-eqz v1, :cond_1ca
+    :cond_1cb
+    if-eqz v1, :cond_1cf
 
     move-object v7, v1
 
-    goto :goto_1cb
+    goto :goto_1d0
 
-    :cond_1ca
+    :cond_1cf
     move-object v7, v3
 
-    :goto_1cb
-    if-nez v7, :cond_1ce
+    :goto_1d0
+    if-nez v7, :cond_1d3
 
     move-object v7, v5
 
-    :cond_1ce
-    if-eqz v5, :cond_1d6
+    :cond_1d3
+    if-eqz v5, :cond_1db
 
-    const/4 v10, 0x0
+    const/4 v12, 0x0
 
-    .line 491
-    invoke-virtual {v5, v9, v7, v10}, Lorg/telegram/messenger/ImageLocation;->getKey(Ljava/lang/Object;Ljava/lang/Object;Z)Ljava/lang/String;
+    .line 523
+    invoke-virtual {v5, v9, v7, v12}, Lorg/telegram/messenger/ImageLocation;->getKey(Ljava/lang/Object;Ljava/lang/Object;Z)Ljava/lang/String;
 
     move-result-object v7
 
-    goto :goto_1d7
+    goto :goto_1dc
 
-    :cond_1d6
+    :cond_1db
     const/4 v7, 0x0
 
-    :goto_1d7
-    if-eqz v7, :cond_1ed
+    :goto_1dc
+    if-eqz v7, :cond_1f2
 
-    if-eqz v6, :cond_1ed
+    if-eqz v6, :cond_1f2
 
-    .line 493
-    new-instance v11, Ljava/lang/StringBuilder;
+    .line 525
+    new-instance v12, Ljava/lang/StringBuilder;
 
-    invoke-direct {v11}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v12}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v11, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v12, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v12, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v11, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v12, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v11}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v12}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v7
 
-    .line 496
-    :cond_1ed
+    .line 528
+    :cond_1f2
     iget-boolean v11, v0, Lorg/telegram/messenger/ImageReceiver;->crossfadeWithOldImage:Z
 
     const/4 v12, 0x3
 
-    const/4 v13, 0x2
+    const/4 v14, 0x2
 
-    if-eqz v11, :cond_299
+    if-eqz v11, :cond_2a5
 
-    .line 497
+    .line 529
     iget-object v11, v0, Lorg/telegram/messenger/ImageReceiver;->currentMediaDrawable:Landroid/graphics/drawable/Drawable;
 
-    if-eqz v11, :cond_21f
+    if-eqz v11, :cond_22b
 
-    .line 498
+    .line 530
     instance-of v12, v11, Lorg/telegram/ui/Components/AnimatedFileDrawable;
 
-    if-eqz v12, :cond_200
+    if-eqz v12, :cond_20c
 
-    .line 499
+    .line 531
     check-cast v11, Lorg/telegram/ui/Components/AnimatedFileDrawable;
 
     invoke-virtual {v11}, Lorg/telegram/ui/Components/AnimatedFileDrawable;->stop()V
 
-    :cond_200
+    .line 532
+    iget-object v11, v0, Lorg/telegram/messenger/ImageReceiver;->currentMediaDrawable:Landroid/graphics/drawable/Drawable;
+
+    check-cast v11, Lorg/telegram/ui/Components/AnimatedFileDrawable;
+
+    invoke-virtual {v11, v0}, Lorg/telegram/ui/Components/AnimatedFileDrawable;->removeParent(Lorg/telegram/messenger/ImageReceiver;)V
+
+    :cond_20c
     const/4 v11, 0x1
 
-    .line 501
+    .line 534
     invoke-direct {v0, v7, v11}, Lorg/telegram/messenger/ImageReceiver;->recycleBitmap(Ljava/lang/String;I)V
 
     const/4 v11, 0x0
 
-    .line 502
-    invoke-direct {v0, v11, v13}, Lorg/telegram/messenger/ImageReceiver;->recycleBitmap(Ljava/lang/String;I)V
+    .line 535
+    invoke-direct {v0, v11, v14}, Lorg/telegram/messenger/ImageReceiver;->recycleBitmap(Ljava/lang/String;I)V
 
-    const/4 v10, 0x0
+    const/4 v12, 0x0
 
-    .line 503
-    invoke-direct {v0, v15, v10}, Lorg/telegram/messenger/ImageReceiver;->recycleBitmap(Ljava/lang/String;I)V
+    .line 536
+    invoke-direct {v0, v13, v12}, Lorg/telegram/messenger/ImageReceiver;->recycleBitmap(Ljava/lang/String;I)V
 
-    .line 504
-    iget-object v12, v0, Lorg/telegram/messenger/ImageReceiver;->currentMediaDrawable:Landroid/graphics/drawable/Drawable;
+    .line 537
+    iget-object v14, v0, Lorg/telegram/messenger/ImageReceiver;->currentMediaDrawable:Landroid/graphics/drawable/Drawable;
 
-    iput-object v12, v0, Lorg/telegram/messenger/ImageReceiver;->crossfadeImage:Landroid/graphics/drawable/Drawable;
+    iput-object v14, v0, Lorg/telegram/messenger/ImageReceiver;->crossfadeImage:Landroid/graphics/drawable/Drawable;
 
-    .line 505
-    iget-object v12, v0, Lorg/telegram/messenger/ImageReceiver;->mediaShader:Landroid/graphics/BitmapShader;
+    .line 538
+    iget-object v14, v0, Lorg/telegram/messenger/ImageReceiver;->mediaShader:Landroid/graphics/BitmapShader;
+
+    iput-object v14, v0, Lorg/telegram/messenger/ImageReceiver;->crossfadeShader:Landroid/graphics/BitmapShader;
+
+    .line 539
+    iget-object v14, v0, Lorg/telegram/messenger/ImageReceiver;->currentImageKey:Ljava/lang/String;
+
+    iput-object v14, v0, Lorg/telegram/messenger/ImageReceiver;->crossfadeKey:Ljava/lang/String;
+
+    .line 540
+    iput-boolean v12, v0, Lorg/telegram/messenger/ImageReceiver;->crossfadingWithThumb:Z
+
+    .line 541
+    iput-object v11, v0, Lorg/telegram/messenger/ImageReceiver;->currentMediaDrawable:Landroid/graphics/drawable/Drawable;
+
+    .line 542
+    iput-object v11, v0, Lorg/telegram/messenger/ImageReceiver;->currentMediaKey:Ljava/lang/String;
+
+    goto :goto_24d
+
+    :cond_22b
+    const/4 v11, 0x0
+
+    .line 543
+    iget-object v15, v0, Lorg/telegram/messenger/ImageReceiver;->currentImageDrawable:Landroid/graphics/drawable/Drawable;
+
+    if-eqz v15, :cond_24f
+
+    const/4 v15, 0x1
+
+    .line 544
+    invoke-direct {v0, v7, v15}, Lorg/telegram/messenger/ImageReceiver;->recycleBitmap(Ljava/lang/String;I)V
+
+    .line 545
+    invoke-direct {v0, v11, v14}, Lorg/telegram/messenger/ImageReceiver;->recycleBitmap(Ljava/lang/String;I)V
+
+    .line 546
+    invoke-direct {v0, v13, v12}, Lorg/telegram/messenger/ImageReceiver;->recycleBitmap(Ljava/lang/String;I)V
+
+    .line 547
+    iget-object v12, v0, Lorg/telegram/messenger/ImageReceiver;->imageShader:Landroid/graphics/BitmapShader;
 
     iput-object v12, v0, Lorg/telegram/messenger/ImageReceiver;->crossfadeShader:Landroid/graphics/BitmapShader;
 
-    .line 506
+    .line 548
+    iget-object v12, v0, Lorg/telegram/messenger/ImageReceiver;->currentImageDrawable:Landroid/graphics/drawable/Drawable;
+
+    iput-object v12, v0, Lorg/telegram/messenger/ImageReceiver;->crossfadeImage:Landroid/graphics/drawable/Drawable;
+
+    .line 549
     iget-object v12, v0, Lorg/telegram/messenger/ImageReceiver;->currentImageKey:Ljava/lang/String;
 
     iput-object v12, v0, Lorg/telegram/messenger/ImageReceiver;->crossfadeKey:Ljava/lang/String;
 
-    .line 507
-    iput-boolean v10, v0, Lorg/telegram/messenger/ImageReceiver;->crossfadingWithThumb:Z
+    const/4 v15, 0x0
 
-    .line 508
-    iput-object v11, v0, Lorg/telegram/messenger/ImageReceiver;->currentMediaDrawable:Landroid/graphics/drawable/Drawable;
+    .line 550
+    iput-boolean v15, v0, Lorg/telegram/messenger/ImageReceiver;->crossfadingWithThumb:Z
 
-    .line 509
-    iput-object v11, v0, Lorg/telegram/messenger/ImageReceiver;->currentMediaKey:Ljava/lang/String;
-
-    goto :goto_241
-
-    :cond_21f
-    const/4 v11, 0x0
-
-    .line 510
-    iget-object v10, v0, Lorg/telegram/messenger/ImageReceiver;->currentImageDrawable:Landroid/graphics/drawable/Drawable;
-
-    if-eqz v10, :cond_243
-
-    const/4 v10, 0x1
-
-    .line 511
-    invoke-direct {v0, v7, v10}, Lorg/telegram/messenger/ImageReceiver;->recycleBitmap(Ljava/lang/String;I)V
-
-    .line 512
-    invoke-direct {v0, v11, v13}, Lorg/telegram/messenger/ImageReceiver;->recycleBitmap(Ljava/lang/String;I)V
-
-    .line 513
-    invoke-direct {v0, v15, v12}, Lorg/telegram/messenger/ImageReceiver;->recycleBitmap(Ljava/lang/String;I)V
-
-    .line 514
-    iget-object v10, v0, Lorg/telegram/messenger/ImageReceiver;->imageShader:Landroid/graphics/BitmapShader;
-
-    iput-object v10, v0, Lorg/telegram/messenger/ImageReceiver;->crossfadeShader:Landroid/graphics/BitmapShader;
-
-    .line 515
-    iget-object v10, v0, Lorg/telegram/messenger/ImageReceiver;->currentImageDrawable:Landroid/graphics/drawable/Drawable;
-
-    iput-object v10, v0, Lorg/telegram/messenger/ImageReceiver;->crossfadeImage:Landroid/graphics/drawable/Drawable;
-
-    .line 516
-    iget-object v10, v0, Lorg/telegram/messenger/ImageReceiver;->currentImageKey:Ljava/lang/String;
-
-    iput-object v10, v0, Lorg/telegram/messenger/ImageReceiver;->crossfadeKey:Ljava/lang/String;
-
-    const/4 v10, 0x0
-
-    .line 517
-    iput-boolean v10, v0, Lorg/telegram/messenger/ImageReceiver;->crossfadingWithThumb:Z
-
-    .line 518
+    .line 551
     iput-object v11, v0, Lorg/telegram/messenger/ImageReceiver;->currentImageDrawable:Landroid/graphics/drawable/Drawable;
 
-    .line 519
+    .line 552
     iput-object v11, v0, Lorg/telegram/messenger/ImageReceiver;->currentImageKey:Ljava/lang/String;
 
-    :goto_241
+    :goto_24d
     const/4 v12, 0x1
 
-    goto :goto_2ab
+    goto :goto_2b7
 
-    :cond_243
-    const/4 v10, 0x0
+    :cond_24f
+    const/4 v15, 0x0
 
-    .line 520
+    .line 553
     iget-object v12, v0, Lorg/telegram/messenger/ImageReceiver;->currentThumbDrawable:Landroid/graphics/drawable/Drawable;
 
-    if-eqz v12, :cond_265
+    if-eqz v12, :cond_271
 
-    .line 521
-    invoke-direct {v0, v14, v10}, Lorg/telegram/messenger/ImageReceiver;->recycleBitmap(Ljava/lang/String;I)V
+    .line 554
+    invoke-direct {v0, v10, v15}, Lorg/telegram/messenger/ImageReceiver;->recycleBitmap(Ljava/lang/String;I)V
 
-    .line 522
-    invoke-direct {v0, v11, v13}, Lorg/telegram/messenger/ImageReceiver;->recycleBitmap(Ljava/lang/String;I)V
+    .line 555
+    invoke-direct {v0, v11, v14}, Lorg/telegram/messenger/ImageReceiver;->recycleBitmap(Ljava/lang/String;I)V
 
     const/4 v12, 0x3
 
-    .line 523
-    invoke-direct {v0, v15, v12}, Lorg/telegram/messenger/ImageReceiver;->recycleBitmap(Ljava/lang/String;I)V
+    .line 556
+    invoke-direct {v0, v13, v12}, Lorg/telegram/messenger/ImageReceiver;->recycleBitmap(Ljava/lang/String;I)V
 
-    .line 524
+    .line 557
     iget-object v12, v0, Lorg/telegram/messenger/ImageReceiver;->thumbShader:Landroid/graphics/BitmapShader;
 
     iput-object v12, v0, Lorg/telegram/messenger/ImageReceiver;->crossfadeShader:Landroid/graphics/BitmapShader;
 
-    .line 525
+    .line 558
     iget-object v12, v0, Lorg/telegram/messenger/ImageReceiver;->currentThumbDrawable:Landroid/graphics/drawable/Drawable;
 
     iput-object v12, v0, Lorg/telegram/messenger/ImageReceiver;->crossfadeImage:Landroid/graphics/drawable/Drawable;
 
-    .line 526
+    .line 559
     iget-object v12, v0, Lorg/telegram/messenger/ImageReceiver;->currentThumbKey:Ljava/lang/String;
 
     iput-object v12, v0, Lorg/telegram/messenger/ImageReceiver;->crossfadeKey:Ljava/lang/String;
 
-    .line 527
-    iput-boolean v10, v0, Lorg/telegram/messenger/ImageReceiver;->crossfadingWithThumb:Z
+    .line 560
+    iput-boolean v15, v0, Lorg/telegram/messenger/ImageReceiver;->crossfadingWithThumb:Z
 
-    .line 528
+    .line 561
     iput-object v11, v0, Lorg/telegram/messenger/ImageReceiver;->currentThumbDrawable:Landroid/graphics/drawable/Drawable;
 
-    .line 529
+    .line 562
     iput-object v11, v0, Lorg/telegram/messenger/ImageReceiver;->currentThumbKey:Ljava/lang/String;
 
-    goto :goto_241
+    goto :goto_24d
 
-    .line 530
-    :cond_265
+    .line 563
+    :cond_271
     iget-object v12, v0, Lorg/telegram/messenger/ImageReceiver;->staticThumbDrawable:Landroid/graphics/drawable/Drawable;
 
-    if-eqz v12, :cond_288
+    if-eqz v12, :cond_294
 
-    .line 531
-    invoke-direct {v0, v14, v10}, Lorg/telegram/messenger/ImageReceiver;->recycleBitmap(Ljava/lang/String;I)V
+    .line 564
+    invoke-direct {v0, v10, v15}, Lorg/telegram/messenger/ImageReceiver;->recycleBitmap(Ljava/lang/String;I)V
 
     const/4 v12, 0x1
 
-    .line 532
+    .line 565
     invoke-direct {v0, v7, v12}, Lorg/telegram/messenger/ImageReceiver;->recycleBitmap(Ljava/lang/String;I)V
 
-    .line 533
-    invoke-direct {v0, v11, v13}, Lorg/telegram/messenger/ImageReceiver;->recycleBitmap(Ljava/lang/String;I)V
+    .line 566
+    invoke-direct {v0, v11, v14}, Lorg/telegram/messenger/ImageReceiver;->recycleBitmap(Ljava/lang/String;I)V
 
     const/4 v12, 0x3
 
-    .line 534
-    invoke-direct {v0, v15, v12}, Lorg/telegram/messenger/ImageReceiver;->recycleBitmap(Ljava/lang/String;I)V
+    .line 567
+    invoke-direct {v0, v13, v12}, Lorg/telegram/messenger/ImageReceiver;->recycleBitmap(Ljava/lang/String;I)V
 
-    .line 535
+    .line 568
     iget-object v12, v0, Lorg/telegram/messenger/ImageReceiver;->thumbShader:Landroid/graphics/BitmapShader;
 
     iput-object v12, v0, Lorg/telegram/messenger/ImageReceiver;->crossfadeShader:Landroid/graphics/BitmapShader;
 
-    .line 536
+    .line 569
     iget-object v12, v0, Lorg/telegram/messenger/ImageReceiver;->staticThumbDrawable:Landroid/graphics/drawable/Drawable;
 
     iput-object v12, v0, Lorg/telegram/messenger/ImageReceiver;->crossfadeImage:Landroid/graphics/drawable/Drawable;
 
-    .line 537
-    iput-boolean v10, v0, Lorg/telegram/messenger/ImageReceiver;->crossfadingWithThumb:Z
+    .line 570
+    iput-boolean v15, v0, Lorg/telegram/messenger/ImageReceiver;->crossfadingWithThumb:Z
 
-    .line 538
+    .line 571
     iput-object v11, v0, Lorg/telegram/messenger/ImageReceiver;->crossfadeKey:Ljava/lang/String;
 
-    .line 539
+    .line 572
     iput-object v11, v0, Lorg/telegram/messenger/ImageReceiver;->currentThumbDrawable:Landroid/graphics/drawable/Drawable;
 
-    .line 540
+    .line 573
     iput-object v11, v0, Lorg/telegram/messenger/ImageReceiver;->currentThumbKey:Ljava/lang/String;
 
-    goto :goto_241
+    goto :goto_24d
 
-    .line 542
-    :cond_288
-    invoke-direct {v0, v14, v10}, Lorg/telegram/messenger/ImageReceiver;->recycleBitmap(Ljava/lang/String;I)V
+    .line 575
+    :cond_294
+    invoke-direct {v0, v10, v15}, Lorg/telegram/messenger/ImageReceiver;->recycleBitmap(Ljava/lang/String;I)V
 
     const/4 v12, 0x1
 
-    .line 543
+    .line 576
     invoke-direct {v0, v7, v12}, Lorg/telegram/messenger/ImageReceiver;->recycleBitmap(Ljava/lang/String;I)V
 
-    .line 544
-    invoke-direct {v0, v11, v13}, Lorg/telegram/messenger/ImageReceiver;->recycleBitmap(Ljava/lang/String;I)V
+    .line 577
+    invoke-direct {v0, v11, v14}, Lorg/telegram/messenger/ImageReceiver;->recycleBitmap(Ljava/lang/String;I)V
 
-    const/4 v13, 0x3
+    const/4 v14, 0x3
 
-    .line 545
-    invoke-direct {v0, v15, v13}, Lorg/telegram/messenger/ImageReceiver;->recycleBitmap(Ljava/lang/String;I)V
+    .line 578
+    invoke-direct {v0, v13, v14}, Lorg/telegram/messenger/ImageReceiver;->recycleBitmap(Ljava/lang/String;I)V
 
-    .line 546
+    .line 579
     iput-object v11, v0, Lorg/telegram/messenger/ImageReceiver;->crossfadeShader:Landroid/graphics/BitmapShader;
 
-    goto :goto_2ab
+    goto :goto_2b7
 
-    :cond_299
-    const/4 v10, 0x0
-
+    :cond_2a5
     const/4 v11, 0x0
 
     const/4 v12, 0x1
 
-    .line 549
-    invoke-direct {v0, v14, v10}, Lorg/telegram/messenger/ImageReceiver;->recycleBitmap(Ljava/lang/String;I)V
+    const/4 v15, 0x0
 
-    .line 550
+    .line 582
+    invoke-direct {v0, v10, v15}, Lorg/telegram/messenger/ImageReceiver;->recycleBitmap(Ljava/lang/String;I)V
+
+    .line 583
     invoke-direct {v0, v7, v12}, Lorg/telegram/messenger/ImageReceiver;->recycleBitmap(Ljava/lang/String;I)V
 
-    .line 551
-    invoke-direct {v0, v11, v13}, Lorg/telegram/messenger/ImageReceiver;->recycleBitmap(Ljava/lang/String;I)V
+    .line 584
+    invoke-direct {v0, v11, v14}, Lorg/telegram/messenger/ImageReceiver;->recycleBitmap(Ljava/lang/String;I)V
 
-    const/4 v13, 0x3
+    const/4 v14, 0x3
 
-    .line 552
-    invoke-direct {v0, v15, v13}, Lorg/telegram/messenger/ImageReceiver;->recycleBitmap(Ljava/lang/String;I)V
+    .line 585
+    invoke-direct {v0, v13, v14}, Lorg/telegram/messenger/ImageReceiver;->recycleBitmap(Ljava/lang/String;I)V
 
-    .line 553
+    .line 586
     iput-object v11, v0, Lorg/telegram/messenger/ImageReceiver;->crossfadeShader:Landroid/graphics/BitmapShader;
 
-    .line 556
-    :goto_2ab
+    .line 589
+    :goto_2b7
     iput-object v3, v0, Lorg/telegram/messenger/ImageReceiver;->currentImageLocation:Lorg/telegram/messenger/ImageLocation;
 
-    .line 557
+    .line 590
     iput-object v4, v0, Lorg/telegram/messenger/ImageReceiver;->currentImageFilter:Ljava/lang/String;
 
-    .line 558
-    iput-object v14, v0, Lorg/telegram/messenger/ImageReceiver;->currentImageKey:Ljava/lang/String;
+    .line 591
+    iput-object v10, v0, Lorg/telegram/messenger/ImageReceiver;->currentImageKey:Ljava/lang/String;
 
-    .line 559
+    .line 592
     iput-object v1, v0, Lorg/telegram/messenger/ImageReceiver;->currentMediaLocation:Lorg/telegram/messenger/ImageLocation;
 
-    .line 560
+    .line 593
     iput-object v2, v0, Lorg/telegram/messenger/ImageReceiver;->currentMediaFilter:Ljava/lang/String;
 
-    .line 561
-    iput-object v15, v0, Lorg/telegram/messenger/ImageReceiver;->currentMediaKey:Ljava/lang/String;
+    .line 594
+    iput-object v13, v0, Lorg/telegram/messenger/ImageReceiver;->currentMediaKey:Ljava/lang/String;
 
-    .line 562
+    .line 595
     iput-object v5, v0, Lorg/telegram/messenger/ImageReceiver;->currentThumbLocation:Lorg/telegram/messenger/ImageLocation;
 
-    .line 563
+    .line 596
     iput-object v6, v0, Lorg/telegram/messenger/ImageReceiver;->currentThumbFilter:Ljava/lang/String;
 
-    .line 564
+    .line 597
     iput-object v7, v0, Lorg/telegram/messenger/ImageReceiver;->currentThumbKey:Ljava/lang/String;
 
-    .line 566
+    .line 599
     iput-object v9, v0, Lorg/telegram/messenger/ImageReceiver;->currentParentObject:Ljava/lang/Object;
 
-    .line 567
+    .line 600
     iput-object v8, v0, Lorg/telegram/messenger/ImageReceiver;->currentExt:Ljava/lang/String;
 
-    move/from16 v1, p8
+    move-wide/from16 v1, p8
 
-    .line 568
-    iput v1, v0, Lorg/telegram/messenger/ImageReceiver;->currentSize:I
+    .line 601
+    iput-wide v1, v0, Lorg/telegram/messenger/ImageReceiver;->currentSize:J
 
-    move/from16 v1, p11
+    move/from16 v1, p12
 
-    .line 569
+    .line 602
     iput v1, v0, Lorg/telegram/messenger/ImageReceiver;->currentCacheType:I
 
     move-object/from16 v1, p7
 
-    .line 570
+    .line 603
     iput-object v1, v0, Lorg/telegram/messenger/ImageReceiver;->staticThumbDrawable:Landroid/graphics/drawable/Drawable;
 
     const/4 v1, 0x0
 
-    .line 571
+    .line 604
     iput-object v1, v0, Lorg/telegram/messenger/ImageReceiver;->imageShader:Landroid/graphics/BitmapShader;
 
-    .line 572
+    .line 605
     iput-object v1, v0, Lorg/telegram/messenger/ImageReceiver;->composeShader:Landroid/graphics/ComposeShader;
 
-    .line 573
+    .line 606
     iput-object v1, v0, Lorg/telegram/messenger/ImageReceiver;->thumbShader:Landroid/graphics/BitmapShader;
 
-    .line 574
+    .line 607
     iput-object v1, v0, Lorg/telegram/messenger/ImageReceiver;->mediaShader:Landroid/graphics/BitmapShader;
 
-    .line 575
+    .line 608
     iput-object v1, v0, Lorg/telegram/messenger/ImageReceiver;->legacyShader:Landroid/graphics/BitmapShader;
 
-    .line 576
+    .line 609
     iput-object v1, v0, Lorg/telegram/messenger/ImageReceiver;->legacyCanvas:Landroid/graphics/Canvas;
 
-    .line 577
+    .line 610
     iget-object v2, v0, Lorg/telegram/messenger/ImageReceiver;->roundPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v2, v1}, Landroid/graphics/Paint;->setShader(Landroid/graphics/Shader;)Landroid/graphics/Shader;
 
-    .line 578
+    .line 611
     iget-object v2, v0, Lorg/telegram/messenger/ImageReceiver;->legacyBitmap:Landroid/graphics/Bitmap;
 
-    if-eqz v2, :cond_2e8
+    if-eqz v2, :cond_2f4
 
-    .line 579
+    .line 612
     invoke-virtual {v2}, Landroid/graphics/Bitmap;->recycle()V
 
-    .line 580
+    .line 613
     iput-object v1, v0, Lorg/telegram/messenger/ImageReceiver;->legacyBitmap:Landroid/graphics/Bitmap;
 
-    :cond_2e8
+    :cond_2f4
     const/high16 v1, 0x3f800000    # 1.0f
 
-    .line 582
+    .line 615
     iput v1, v0, Lorg/telegram/messenger/ImageReceiver;->currentAlpha:F
 
-    .line 583
+    .line 616
     iput v1, v0, Lorg/telegram/messenger/ImageReceiver;->previousAlpha:F
 
-    .line 585
+    .line 618
     iget-object v1, v0, Lorg/telegram/messenger/ImageReceiver;->staticThumbDrawable:Landroid/graphics/drawable/Drawable;
 
     instance-of v2, v1, Lorg/telegram/messenger/SvgHelper$SvgDrawable;
 
-    if-eqz v2, :cond_2f9
+    if-eqz v2, :cond_305
 
-    .line 586
+    .line 619
     check-cast v1, Lorg/telegram/messenger/SvgHelper$SvgDrawable;
 
     invoke-virtual {v1, v0}, Lorg/telegram/messenger/SvgHelper$SvgDrawable;->setParent(Lorg/telegram/messenger/ImageReceiver;)V
 
-    .line 588
-    :cond_2f9
+    .line 621
+    :cond_305
     iget-object v1, v0, Lorg/telegram/messenger/ImageReceiver;->staticThumbDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-direct {v0, v1}, Lorg/telegram/messenger/ImageReceiver;->updateDrawableRadius(Landroid/graphics/drawable/Drawable;)V
 
-    .line 590
+    .line 623
     iget-object v1, v0, Lorg/telegram/messenger/ImageReceiver;->delegate:Lorg/telegram/messenger/ImageReceiver$ImageReceiverDelegate;
 
-    if-eqz v1, :cond_325
+    if-eqz v1, :cond_330
 
-    .line 591
+    .line 624
     iget-object v2, v0, Lorg/telegram/messenger/ImageReceiver;->currentImageDrawable:Landroid/graphics/drawable/Drawable;
 
-    if-nez v2, :cond_315
+    if-nez v2, :cond_321
 
     iget-object v3, v0, Lorg/telegram/messenger/ImageReceiver;->currentThumbDrawable:Landroid/graphics/drawable/Drawable;
 
-    if-nez v3, :cond_315
+    if-nez v3, :cond_321
 
     iget-object v3, v0, Lorg/telegram/messenger/ImageReceiver;->staticThumbDrawable:Landroid/graphics/drawable/Drawable;
 
-    if-nez v3, :cond_315
+    if-nez v3, :cond_321
 
     iget-object v3, v0, Lorg/telegram/messenger/ImageReceiver;->currentMediaDrawable:Landroid/graphics/drawable/Drawable;
 
-    if-eqz v3, :cond_313
-
-    goto :goto_315
-
-    :cond_313
-    const/4 v3, 0x0
-
-    goto :goto_316
-
-    :cond_315
-    :goto_315
-    const/4 v3, 0x1
-
-    :goto_316
-    if-nez v2, :cond_31f
-
-    iget-object v2, v0, Lorg/telegram/messenger/ImageReceiver;->currentMediaDrawable:Landroid/graphics/drawable/Drawable;
-
-    if-nez v2, :cond_31f
-
-    const/4 v2, 0x0
-
-    const/4 v10, 0x1
+    if-eqz v3, :cond_31f
 
     goto :goto_321
 
     :cond_31f
-    const/4 v2, 0x0
-
     const/4 v10, 0x0
 
+    goto :goto_322
+
+    :cond_321
     :goto_321
-    invoke-interface {v1, v0, v3, v10, v2}, Lorg/telegram/messenger/ImageReceiver$ImageReceiverDelegate;->didSetImage(Lorg/telegram/messenger/ImageReceiver;ZZZ)V
+    const/4 v10, 0x1
 
-    goto :goto_326
+    :goto_322
+    if-nez v2, :cond_32a
 
-    :cond_325
+    iget-object v2, v0, Lorg/telegram/messenger/ImageReceiver;->currentMediaDrawable:Landroid/graphics/drawable/Drawable;
+
+    if-nez v2, :cond_32a
+
+    const/4 v2, 0x1
+
+    goto :goto_32b
+
+    :cond_32a
     const/4 v2, 0x0
 
-    .line 594
-    :goto_326
+    :goto_32b
+    const/4 v3, 0x0
+
+    invoke-interface {v1, v0, v10, v2, v3}, Lorg/telegram/messenger/ImageReceiver$ImageReceiverDelegate;->didSetImage(Lorg/telegram/messenger/ImageReceiver;ZZZ)V
+
+    goto :goto_331
+
+    :cond_330
+    const/4 v3, 0x0
+
+    .line 627
+    :goto_331
     invoke-static {}, Lorg/telegram/messenger/ImageLoader;->getInstance()Lorg/telegram/messenger/ImageLoader;
 
     move-result-object v1
 
     invoke-virtual {v1, v0}, Lorg/telegram/messenger/ImageLoader;->loadImageForImageReceiver(Lorg/telegram/messenger/ImageReceiver;)V
 
-    .line 595
+    .line 628
     iget-object v1, v0, Lorg/telegram/messenger/ImageReceiver;->parentView:Landroid/view/View;
 
-    if-eqz v1, :cond_34a
+    if-eqz v1, :cond_355
 
-    .line 596
-    iget-boolean v3, v0, Lorg/telegram/messenger/ImageReceiver;->invalidateAll:Z
+    .line 629
+    iget-boolean v2, v0, Lorg/telegram/messenger/ImageReceiver;->invalidateAll:Z
 
-    if-eqz v3, :cond_339
+    if-eqz v2, :cond_344
 
-    .line 597
+    .line 630
     invoke-virtual {v1}, Landroid/view/View;->invalidate()V
 
-    goto :goto_34a
+    goto :goto_355
 
-    .line 599
-    :cond_339
-    iget v3, v0, Lorg/telegram/messenger/ImageReceiver;->imageX:F
+    .line 632
+    :cond_344
+    iget v2, v0, Lorg/telegram/messenger/ImageReceiver;->imageX:F
 
-    float-to-int v4, v3
+    float-to-int v4, v2
 
     iget v5, v0, Lorg/telegram/messenger/ImageReceiver;->imageY:F
 
@@ -8914,9 +8923,9 @@
 
     iget v7, v0, Lorg/telegram/messenger/ImageReceiver;->imageW:F
 
-    add-float/2addr v3, v7
+    add-float/2addr v2, v7
 
-    float-to-int v3, v3
+    float-to-int v2, v2
 
     iget v7, v0, Lorg/telegram/messenger/ImageReceiver;->imageH:F
 
@@ -8924,14 +8933,14 @@
 
     float-to-int v5, v5
 
-    invoke-virtual {v1, v4, v6, v3, v5}, Landroid/view/View;->invalidate(IIII)V
+    invoke-virtual {v1, v4, v6, v2, v5}, Landroid/view/View;->invalidate(IIII)V
 
-    .line 603
-    :cond_34a
-    :goto_34a
+    .line 636
+    :cond_355
+    :goto_355
     instance-of v1, v9, Lorg/telegram/messenger/MessageObject;
 
-    if-eqz v1, :cond_359
+    if-eqz v1, :cond_364
 
     move-object v1, v9
 
@@ -8941,17 +8950,17 @@
 
     move-result v1
 
-    if-eqz v1, :cond_359
+    if-eqz v1, :cond_364
 
-    const/4 v11, 0x1
+    const/4 v13, 0x1
 
-    goto :goto_35a
+    goto :goto_365
 
-    :cond_359
-    const/4 v11, 0x0
+    :cond_364
+    const/4 v13, 0x0
 
-    :goto_35a
-    iput-boolean v11, v0, Lorg/telegram/messenger/ImageReceiver;->isRoundVideo:Z
+    :goto_365
+    iput-boolean v13, v0, Lorg/telegram/messenger/ImageReceiver;->isRoundVideo:Z
 
     return-void
 .end method
@@ -8963,7 +8972,7 @@
 
     if-eqz p1, :cond_9
 
-    .line 659
+    .line 692
     new-instance v1, Landroid/graphics/drawable/BitmapDrawable;
 
     invoke-direct {v1, v0, p1}, Landroid/graphics/drawable/BitmapDrawable;-><init>(Landroid/content/res/Resources;Landroid/graphics/Bitmap;)V
@@ -8979,7 +8988,7 @@
 .method public setImageBitmap(Landroid/graphics/drawable/Drawable;)V
     .registers 9
 
-    .line 663
+    .line 696
     invoke-static {}, Lorg/telegram/messenger/ImageLoader;->getInstance()Lorg/telegram/messenger/ImageLoader;
 
     move-result-object v0
@@ -8988,7 +8997,7 @@
 
     invoke-virtual {v0, p0, v1}, Lorg/telegram/messenger/ImageLoader;->cancelLoadingForImageReceiver(Lorg/telegram/messenger/ImageReceiver;Z)V
 
-    .line 665
+    .line 698
     iget-boolean v0, p0, Lorg/telegram/messenger/ImageReceiver;->crossfadeWithOldImage:Z
 
     const/4 v2, 0x4
@@ -8999,7 +9008,7 @@
 
     if-eqz v0, :cond_72
 
-    .line 666
+    .line 699
     iget-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->currentImageDrawable:Landroid/graphics/drawable/Drawable;
 
     const/4 v5, 0x3
@@ -9008,102 +9017,102 @@
 
     if-eqz v0, :cond_2d
 
-    .line 667
+    .line 700
     invoke-direct {p0, v4, v1}, Lorg/telegram/messenger/ImageReceiver;->recycleBitmap(Ljava/lang/String;I)V
 
-    .line 668
+    .line 701
     invoke-direct {p0, v4, v6}, Lorg/telegram/messenger/ImageReceiver;->recycleBitmap(Ljava/lang/String;I)V
 
-    .line 669
+    .line 702
     invoke-direct {p0, v4, v5}, Lorg/telegram/messenger/ImageReceiver;->recycleBitmap(Ljava/lang/String;I)V
 
-    .line 670
+    .line 703
     iget-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->imageShader:Landroid/graphics/BitmapShader;
 
     iput-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->crossfadeShader:Landroid/graphics/BitmapShader;
 
-    .line 671
+    .line 704
     iget-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->currentImageDrawable:Landroid/graphics/drawable/Drawable;
 
     iput-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->crossfadeImage:Landroid/graphics/drawable/Drawable;
 
-    .line 672
+    .line 705
     iget-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->currentImageKey:Ljava/lang/String;
 
     iput-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->crossfadeKey:Ljava/lang/String;
 
-    .line 673
+    .line 706
     iput-boolean v1, p0, Lorg/telegram/messenger/ImageReceiver;->crossfadingWithThumb:Z
 
     goto :goto_7b
 
-    .line 674
+    .line 707
     :cond_2d
     iget-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->currentThumbDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eqz v0, :cond_49
 
-    .line 675
+    .line 708
     invoke-direct {p0, v4, v3}, Lorg/telegram/messenger/ImageReceiver;->recycleBitmap(Ljava/lang/String;I)V
 
-    .line 676
+    .line 709
     invoke-direct {p0, v4, v6}, Lorg/telegram/messenger/ImageReceiver;->recycleBitmap(Ljava/lang/String;I)V
 
-    .line 677
+    .line 710
     invoke-direct {p0, v4, v5}, Lorg/telegram/messenger/ImageReceiver;->recycleBitmap(Ljava/lang/String;I)V
 
-    .line 678
+    .line 711
     iget-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->thumbShader:Landroid/graphics/BitmapShader;
 
     iput-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->crossfadeShader:Landroid/graphics/BitmapShader;
 
-    .line 679
+    .line 712
     iget-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->currentThumbDrawable:Landroid/graphics/drawable/Drawable;
 
     iput-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->crossfadeImage:Landroid/graphics/drawable/Drawable;
 
-    .line 680
+    .line 713
     iget-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->currentThumbKey:Ljava/lang/String;
 
     iput-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->crossfadeKey:Ljava/lang/String;
 
-    .line 681
+    .line 714
     iput-boolean v1, p0, Lorg/telegram/messenger/ImageReceiver;->crossfadingWithThumb:Z
 
     goto :goto_7b
 
-    .line 682
+    .line 715
     :cond_49
     iget-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->staticThumbDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eqz v0, :cond_66
 
-    .line 683
+    .line 716
     invoke-direct {p0, v4, v3}, Lorg/telegram/messenger/ImageReceiver;->recycleBitmap(Ljava/lang/String;I)V
 
-    .line 684
+    .line 717
     invoke-direct {p0, v4, v1}, Lorg/telegram/messenger/ImageReceiver;->recycleBitmap(Ljava/lang/String;I)V
 
-    .line 685
+    .line 718
     invoke-direct {p0, v4, v6}, Lorg/telegram/messenger/ImageReceiver;->recycleBitmap(Ljava/lang/String;I)V
 
-    .line 686
+    .line 719
     invoke-direct {p0, v4, v5}, Lorg/telegram/messenger/ImageReceiver;->recycleBitmap(Ljava/lang/String;I)V
 
-    .line 687
+    .line 720
     iget-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->thumbShader:Landroid/graphics/BitmapShader;
 
     iput-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->crossfadeShader:Landroid/graphics/BitmapShader;
 
-    .line 688
+    .line 721
     iget-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->staticThumbDrawable:Landroid/graphics/drawable/Drawable;
 
     iput-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->crossfadeImage:Landroid/graphics/drawable/Drawable;
 
-    .line 689
+    .line 722
     iput-boolean v1, p0, Lorg/telegram/messenger/ImageReceiver;->crossfadingWithThumb:Z
 
-    .line 690
+    .line 723
     iput-object v4, p0, Lorg/telegram/messenger/ImageReceiver;->crossfadeKey:Ljava/lang/String;
 
     goto :goto_7b
@@ -9114,14 +9123,14 @@
     :goto_67
     if-ge v0, v2, :cond_6f
 
-    .line 693
+    .line 726
     invoke-direct {p0, v4, v0}, Lorg/telegram/messenger/ImageReceiver;->recycleBitmap(Ljava/lang/String;I)V
 
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_67
 
-    .line 695
+    .line 728
     :cond_6f
     iput-object v4, p0, Lorg/telegram/messenger/ImageReceiver;->crossfadeShader:Landroid/graphics/BitmapShader;
 
@@ -9133,14 +9142,14 @@
     :goto_73
     if-ge v0, v2, :cond_7b
 
-    .line 699
+    .line 732
     invoke-direct {p0, v4, v0}, Lorg/telegram/messenger/ImageReceiver;->recycleBitmap(Ljava/lang/String;I)V
 
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_73
 
-    .line 703
+    .line 736
     :cond_7b
     :goto_7b
     iget-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->staticThumbDrawable:Landroid/graphics/drawable/Drawable;
@@ -9149,272 +9158,285 @@
 
     if-eqz v2, :cond_86
 
-    .line 704
+    .line 737
     check-cast v0, Lorg/telegram/ui/Components/RecyclableDrawable;
 
-    .line 705
+    .line 738
     invoke-virtual {v0}, Lorg/telegram/ui/Components/RecyclableDrawable;->recycle()V
 
-    .line 707
+    .line 740
     :cond_86
     instance-of v0, p1, Lorg/telegram/ui/Components/AnimatedFileDrawable;
 
-    if-eqz v0, :cond_bb
+    if-eqz v0, :cond_b9
 
-    .line 708
+    .line 741
     move-object v0, p1
 
     check-cast v0, Lorg/telegram/ui/Components/AnimatedFileDrawable;
 
-    .line 709
+    .line 742
     iget-object v2, p0, Lorg/telegram/messenger/ImageReceiver;->parentView:Landroid/view/View;
 
     invoke-virtual {v0, v2}, Lorg/telegram/ui/Components/AnimatedFileDrawable;->setParentView(Landroid/view/View;)V
 
-    .line 710
+    .line 743
     iget-boolean v2, p0, Lorg/telegram/messenger/ImageReceiver;->attachedToWindow:Z
 
-    if-eqz v2, :cond_9b
+    if-eqz v2, :cond_99
 
-    .line 711
-    iget-object v2, p0, Lorg/telegram/messenger/ImageReceiver;->parentView:Landroid/view/View;
+    .line 744
+    invoke-virtual {v0, p0}, Lorg/telegram/ui/Components/AnimatedFileDrawable;->addParent(Lorg/telegram/messenger/ImageReceiver;)V
 
-    invoke-virtual {v0, v2}, Lorg/telegram/ui/Components/AnimatedFileDrawable;->addParent(Landroid/view/View;)V
-
-    .line 713
-    :cond_9b
+    .line 746
+    :cond_99
     iget-boolean v2, p0, Lorg/telegram/messenger/ImageReceiver;->useSharedAnimationQueue:Z
 
-    if-nez v2, :cond_a6
+    if-nez v2, :cond_a4
 
     iget-boolean v2, v0, Lorg/telegram/ui/Components/AnimatedFileDrawable;->isWebmSticker:Z
 
-    if-eqz v2, :cond_a4
+    if-eqz v2, :cond_a2
 
-    goto :goto_a6
+    goto :goto_a4
 
-    :cond_a4
+    :cond_a2
     const/4 v2, 0x0
 
-    goto :goto_a7
+    goto :goto_a5
 
-    :cond_a6
-    :goto_a6
+    :cond_a4
+    :goto_a4
     const/4 v2, 0x1
 
-    :goto_a7
+    :goto_a5
     invoke-virtual {v0, v2}, Lorg/telegram/ui/Components/AnimatedFileDrawable;->setUseSharedQueue(Z)V
 
-    .line 714
+    .line 747
     iget-boolean v2, p0, Lorg/telegram/messenger/ImageReceiver;->allowStartAnimation:Z
 
-    if-eqz v2, :cond_b5
+    if-eqz v2, :cond_b3
 
     iget v2, p0, Lorg/telegram/messenger/ImageReceiver;->currentOpenedLayerFlags:I
 
-    if-nez v2, :cond_b5
+    if-nez v2, :cond_b3
 
-    .line 715
-    invoke-virtual {v0}, Lorg/telegram/ui/Components/AnimatedFileDrawable;->start()V
+    .line 748
+    invoke-virtual {v0}, Lorg/telegram/ui/Components/AnimatedFileDrawable;->checkRepeat()V
 
-    .line 717
-    :cond_b5
+    .line 750
+    :cond_b3
     iget-boolean v2, p0, Lorg/telegram/messenger/ImageReceiver;->allowDecodeSingleFrame:Z
 
     invoke-virtual {v0, v2}, Lorg/telegram/ui/Components/AnimatedFileDrawable;->setAllowDecodeSingleFrame(Z)V
 
-    goto :goto_db
+    goto :goto_d9
 
-    .line 718
-    :cond_bb
+    .line 751
+    :cond_b9
     instance-of v0, p1, Lorg/telegram/ui/Components/RLottieDrawable;
 
-    if-eqz v0, :cond_db
+    if-eqz v0, :cond_d9
 
-    .line 719
+    .line 752
     move-object v0, p1
 
     check-cast v0, Lorg/telegram/ui/Components/RLottieDrawable;
 
-    .line 720
+    .line 753
     iget-object v2, p0, Lorg/telegram/messenger/ImageReceiver;->parentView:Landroid/view/View;
 
     invoke-virtual {v0, v2}, Lorg/telegram/ui/Components/RLottieDrawable;->addParentView(Landroid/view/View;)V
 
-    .line 721
+    .line 754
     iget-boolean v2, p0, Lorg/telegram/messenger/ImageReceiver;->allowStartLottieAnimation:Z
 
-    if-eqz v2, :cond_d8
+    if-eqz v2, :cond_d6
 
     invoke-virtual {v0}, Lorg/telegram/ui/Components/RLottieDrawable;->isHeavyDrawable()Z
 
     move-result v2
 
-    if-eqz v2, :cond_d5
+    if-eqz v2, :cond_d3
 
     iget v2, p0, Lorg/telegram/messenger/ImageReceiver;->currentOpenedLayerFlags:I
 
-    if-nez v2, :cond_d8
+    if-nez v2, :cond_d6
 
-    .line 722
-    :cond_d5
+    .line 755
+    :cond_d3
     invoke-virtual {v0}, Lorg/telegram/ui/Components/RLottieDrawable;->start()V
 
-    .line 724
-    :cond_d8
+    .line 757
+    :cond_d6
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/RLottieDrawable;->setAllowDecodeSingleFrame(Z)V
 
-    .line 726
-    :cond_db
-    :goto_db
+    .line 759
+    :cond_d9
+    :goto_d9
     iput-object v4, p0, Lorg/telegram/messenger/ImageReceiver;->thumbShader:Landroid/graphics/BitmapShader;
 
-    .line 727
+    .line 760
     iget-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->roundPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, v4}, Landroid/graphics/Paint;->setShader(Landroid/graphics/Shader;)Landroid/graphics/Shader;
 
-    .line 728
+    .line 761
     iput-object p1, p0, Lorg/telegram/messenger/ImageReceiver;->staticThumbDrawable:Landroid/graphics/drawable/Drawable;
 
-    .line 729
+    .line 762
     invoke-direct {p0, p1}, Lorg/telegram/messenger/ImageReceiver;->updateDrawableRadius(Landroid/graphics/drawable/Drawable;)V
 
-    .line 730
+    .line 763
     iput-object v4, p0, Lorg/telegram/messenger/ImageReceiver;->currentMediaLocation:Lorg/telegram/messenger/ImageLocation;
 
-    .line 731
+    .line 764
     iput-object v4, p0, Lorg/telegram/messenger/ImageReceiver;->currentMediaFilter:Ljava/lang/String;
 
-    .line 732
+    .line 765
+    iget-object p1, p0, Lorg/telegram/messenger/ImageReceiver;->currentMediaDrawable:Landroid/graphics/drawable/Drawable;
+
+    instance-of v0, p1, Lorg/telegram/ui/Components/AnimatedFileDrawable;
+
+    if-eqz v0, :cond_f4
+
+    .line 766
+    check-cast p1, Lorg/telegram/ui/Components/AnimatedFileDrawable;
+
+    invoke-virtual {p1, p0}, Lorg/telegram/ui/Components/AnimatedFileDrawable;->removeParent(Lorg/telegram/messenger/ImageReceiver;)V
+
+    .line 768
+    :cond_f4
     iput-object v4, p0, Lorg/telegram/messenger/ImageReceiver;->currentMediaDrawable:Landroid/graphics/drawable/Drawable;
 
-    .line 733
+    .line 769
     iput-object v4, p0, Lorg/telegram/messenger/ImageReceiver;->currentMediaKey:Ljava/lang/String;
 
-    .line 734
+    .line 770
     iput-object v4, p0, Lorg/telegram/messenger/ImageReceiver;->mediaShader:Landroid/graphics/BitmapShader;
 
-    .line 736
+    .line 772
     iput-object v4, p0, Lorg/telegram/messenger/ImageReceiver;->currentImageLocation:Lorg/telegram/messenger/ImageLocation;
 
-    .line 737
+    .line 773
     iput-object v4, p0, Lorg/telegram/messenger/ImageReceiver;->currentImageFilter:Ljava/lang/String;
 
-    .line 738
+    .line 774
     iput-object v4, p0, Lorg/telegram/messenger/ImageReceiver;->currentImageDrawable:Landroid/graphics/drawable/Drawable;
 
-    .line 739
+    .line 775
     iput-object v4, p0, Lorg/telegram/messenger/ImageReceiver;->currentImageKey:Ljava/lang/String;
 
-    .line 740
+    .line 776
     iput-object v4, p0, Lorg/telegram/messenger/ImageReceiver;->imageShader:Landroid/graphics/BitmapShader;
 
-    .line 741
+    .line 777
     iput-object v4, p0, Lorg/telegram/messenger/ImageReceiver;->composeShader:Landroid/graphics/ComposeShader;
 
-    .line 742
+    .line 778
     iput-object v4, p0, Lorg/telegram/messenger/ImageReceiver;->legacyShader:Landroid/graphics/BitmapShader;
 
-    .line 743
+    .line 779
     iput-object v4, p0, Lorg/telegram/messenger/ImageReceiver;->legacyCanvas:Landroid/graphics/Canvas;
 
-    .line 744
+    .line 780
     iget-object p1, p0, Lorg/telegram/messenger/ImageReceiver;->legacyBitmap:Landroid/graphics/Bitmap;
 
-    if-eqz p1, :cond_10a
+    if-eqz p1, :cond_113
 
-    .line 745
+    .line 781
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->recycle()V
 
-    .line 746
+    .line 782
     iput-object v4, p0, Lorg/telegram/messenger/ImageReceiver;->legacyBitmap:Landroid/graphics/Bitmap;
 
-    .line 749
-    :cond_10a
+    .line 785
+    :cond_113
     iput-object v4, p0, Lorg/telegram/messenger/ImageReceiver;->currentThumbLocation:Lorg/telegram/messenger/ImageLocation;
 
-    .line 750
+    .line 786
     iput-object v4, p0, Lorg/telegram/messenger/ImageReceiver;->currentThumbFilter:Ljava/lang/String;
 
-    .line 751
+    .line 787
     iput-object v4, p0, Lorg/telegram/messenger/ImageReceiver;->currentThumbKey:Ljava/lang/String;
 
-    .line 753
+    .line 789
     iput-boolean v3, p0, Lorg/telegram/messenger/ImageReceiver;->currentKeyQuality:Z
 
-    .line 754
+    .line 790
     iput-object v4, p0, Lorg/telegram/messenger/ImageReceiver;->currentExt:Ljava/lang/String;
 
-    .line 755
-    iput v3, p0, Lorg/telegram/messenger/ImageReceiver;->currentSize:I
+    const-wide/16 v4, 0x0
 
-    .line 756
+    .line 791
+    iput-wide v4, p0, Lorg/telegram/messenger/ImageReceiver;->currentSize:J
+
+    .line 792
     iput v3, p0, Lorg/telegram/messenger/ImageReceiver;->currentCacheType:I
 
     const/high16 p1, 0x3f800000    # 1.0f
 
-    .line 757
+    .line 793
     iput p1, p0, Lorg/telegram/messenger/ImageReceiver;->currentAlpha:F
 
-    .line 758
+    .line 794
     iput p1, p0, Lorg/telegram/messenger/ImageReceiver;->previousAlpha:F
 
-    .line 760
+    .line 796
     iget-object p1, p0, Lorg/telegram/messenger/ImageReceiver;->setImageBackup:Lorg/telegram/messenger/ImageReceiver$SetImageBackup;
 
-    if-eqz p1, :cond_125
+    if-eqz p1, :cond_130
 
-    .line 761
+    .line 797
     invoke-static {p1}, Lorg/telegram/messenger/ImageReceiver$SetImageBackup;->access$100(Lorg/telegram/messenger/ImageReceiver$SetImageBackup;)V
 
-    .line 764
-    :cond_125
+    .line 800
+    :cond_130
     iget-object p1, p0, Lorg/telegram/messenger/ImageReceiver;->delegate:Lorg/telegram/messenger/ImageReceiver$ImageReceiverDelegate;
 
-    if-eqz p1, :cond_138
+    if-eqz p1, :cond_143
 
-    .line 765
+    .line 801
     iget-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->currentThumbDrawable:Landroid/graphics/drawable/Drawable;
 
-    if-nez v0, :cond_134
+    if-nez v0, :cond_13f
 
     iget-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->staticThumbDrawable:Landroid/graphics/drawable/Drawable;
 
-    if-eqz v0, :cond_132
+    if-eqz v0, :cond_13d
 
-    goto :goto_134
+    goto :goto_13f
 
-    :cond_132
+    :cond_13d
     const/4 v0, 0x0
 
-    goto :goto_135
+    goto :goto_140
 
-    :cond_134
-    :goto_134
+    :cond_13f
+    :goto_13f
     const/4 v0, 0x1
 
-    :goto_135
+    :goto_140
     invoke-interface {p1, p0, v0, v1, v3}, Lorg/telegram/messenger/ImageReceiver$ImageReceiverDelegate;->didSetImage(Lorg/telegram/messenger/ImageReceiver;ZZZ)V
 
-    .line 767
-    :cond_138
+    .line 803
+    :cond_143
     iget-object p1, p0, Lorg/telegram/messenger/ImageReceiver;->parentView:Landroid/view/View;
 
-    if-eqz p1, :cond_155
+    if-eqz p1, :cond_160
 
-    .line 768
+    .line 804
     iget-boolean v0, p0, Lorg/telegram/messenger/ImageReceiver;->invalidateAll:Z
 
-    if-eqz v0, :cond_144
+    if-eqz v0, :cond_14f
 
-    .line 769
+    .line 805
     invoke-virtual {p1}, Landroid/view/View;->invalidate()V
 
-    goto :goto_155
+    goto :goto_160
 
-    .line 771
-    :cond_144
+    .line 807
+    :cond_14f
     iget v0, p0, Lorg/telegram/messenger/ImageReceiver;->imageX:F
 
     float-to-int v2, v0
@@ -9437,52 +9459,52 @@
 
     invoke-virtual {p1, v2, v5, v0, v4}, Landroid/view/View;->invalidate(IIII)V
 
-    .line 774
-    :cond_155
-    :goto_155
+    .line 810
+    :cond_160
+    :goto_160
     iget-boolean p1, p0, Lorg/telegram/messenger/ImageReceiver;->forceCrossfade:Z
 
-    if-eqz p1, :cond_176
+    if-eqz p1, :cond_181
 
     iget-boolean p1, p0, Lorg/telegram/messenger/ImageReceiver;->crossfadeWithOldImage:Z
 
-    if-eqz p1, :cond_176
+    if-eqz p1, :cond_181
 
     iget-object p1, p0, Lorg/telegram/messenger/ImageReceiver;->crossfadeImage:Landroid/graphics/drawable/Drawable;
 
-    if-eqz p1, :cond_176
+    if-eqz p1, :cond_181
 
     const/4 p1, 0x0
 
-    .line 775
+    .line 811
     iput p1, p0, Lorg/telegram/messenger/ImageReceiver;->currentAlpha:F
 
-    .line 776
+    .line 812
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v4
 
     iput-wide v4, p0, Lorg/telegram/messenger/ImageReceiver;->lastUpdateAlphaTime:J
 
-    .line 777
+    .line 813
     iget-object p1, p0, Lorg/telegram/messenger/ImageReceiver;->currentThumbDrawable:Landroid/graphics/drawable/Drawable;
 
-    if-nez p1, :cond_174
+    if-nez p1, :cond_17f
 
     iget-object p1, p0, Lorg/telegram/messenger/ImageReceiver;->staticThumbDrawable:Landroid/graphics/drawable/Drawable;
 
-    if-eqz p1, :cond_173
+    if-eqz p1, :cond_17e
 
-    goto :goto_174
+    goto :goto_17f
 
-    :cond_173
+    :cond_17e
     const/4 v1, 0x0
 
-    :cond_174
-    :goto_174
+    :cond_17f
+    :goto_17f
     iput-boolean v1, p0, Lorg/telegram/messenger/ImageReceiver;->crossfadeWithThumb:Z
 
-    :cond_176
+    :cond_181
     return-void
 .end method
 
@@ -9491,16 +9513,16 @@
 
     const/4 v0, 0x0
 
-    if-eqz p1, :cond_269
+    if-eqz p1, :cond_267
 
-    if-eqz p2, :cond_269
+    if-eqz p2, :cond_267
 
-    .line 2145
+    .line 2147
     iget v1, p0, Lorg/telegram/messenger/ImageReceiver;->currentGuid:I
 
     if-eq v1, p5, :cond_b
 
-    goto/16 :goto_269
+    goto/16 :goto_267
 
     :cond_b
     const/4 p5, 0x0
@@ -9511,7 +9533,7 @@
 
     if-nez p3, :cond_c5
 
-    .line 2149
+    .line 2151
     iget-object p3, p0, Lorg/telegram/messenger/ImageReceiver;->currentImageKey:Ljava/lang/String;
 
     invoke-virtual {p2, p3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -9522,13 +9544,13 @@
 
     return v0
 
-    .line 2152
+    .line 2154
     :cond_1a
     instance-of p2, p1, Lorg/telegram/ui/Components/AnimatedFileDrawable;
 
     if-nez p2, :cond_28
 
-    .line 2153
+    .line 2155
     invoke-static {}, Lorg/telegram/messenger/ImageLoader;->getInstance()Lorg/telegram/messenger/ImageLoader;
 
     move-result-object p2
@@ -9539,25 +9561,25 @@
 
     goto :goto_3f
 
-    .line 2155
+    .line 2157
     :cond_28
     move-object p2, p1
 
     check-cast p2, Lorg/telegram/ui/Components/AnimatedFileDrawable;
 
-    .line 2156
+    .line 2158
     iget-wide v3, p0, Lorg/telegram/messenger/ImageReceiver;->startTime:J
 
     iget-wide v5, p0, Lorg/telegram/messenger/ImageReceiver;->endTime:J
 
     invoke-virtual {p2, v3, v4, v5, v6}, Lorg/telegram/ui/Components/AnimatedFileDrawable;->setStartEndTime(JJ)V
 
-    .line 2157
+    .line 2159
     iget-boolean p2, p2, Lorg/telegram/ui/Components/AnimatedFileDrawable;->isWebmSticker:Z
 
     if-eqz p2, :cond_3f
 
-    .line 2158
+    .line 2160
     invoke-static {}, Lorg/telegram/messenger/ImageLoader;->getInstance()Lorg/telegram/messenger/ImageLoader;
 
     move-result-object p2
@@ -9566,17 +9588,17 @@
 
     invoke-virtual {p2, p3}, Lorg/telegram/messenger/ImageLoader;->incrementUseCount(Ljava/lang/String;)V
 
-    .line 2161
+    .line 2163
     :cond_3f
     :goto_3f
     iput-object p1, p0, Lorg/telegram/messenger/ImageReceiver;->currentImageDrawable:Landroid/graphics/drawable/Drawable;
 
-    .line 2162
+    .line 2164
     instance-of p2, p1, Lorg/telegram/messenger/ExtendedBitmapDrawable;
 
     if-eqz p2, :cond_4e
 
-    .line 2163
+    .line 2165
     move-object p2, p1
 
     check-cast p2, Lorg/telegram/messenger/ExtendedBitmapDrawable;
@@ -9587,11 +9609,11 @@
 
     iput p2, p0, Lorg/telegram/messenger/ImageReceiver;->imageOrientation:I
 
-    .line 2165
+    .line 2167
     :cond_4e
     invoke-direct {p0, p1}, Lorg/telegram/messenger/ImageReceiver;->updateDrawableRadius(Landroid/graphics/drawable/Drawable;)V
 
-    .line 2167
+    .line 2169
     iget-boolean p2, p0, Lorg/telegram/messenger/ImageReceiver;->isVisible:Z
 
     if-eqz p2, :cond_bf
@@ -9612,7 +9634,7 @@
 
     if-eqz p2, :cond_bf
 
-    .line 2169
+    .line 2171
     iget-object p2, p0, Lorg/telegram/messenger/ImageReceiver;->currentMediaDrawable:Landroid/graphics/drawable/Drawable;
 
     instance-of p3, p2, Lorg/telegram/ui/Components/AnimatedFileDrawable;
@@ -9632,7 +9654,7 @@
 
     goto :goto_88
 
-    .line 2171
+    .line 2173
     :cond_73
     iget-object p2, p0, Lorg/telegram/messenger/ImageReceiver;->currentImageDrawable:Landroid/graphics/drawable/Drawable;
 
@@ -9640,7 +9662,7 @@
 
     if-eqz p2, :cond_87
 
-    .line 2172
+    .line 2174
     iget-object p2, p0, Lorg/telegram/messenger/ImageReceiver;->staticThumbDrawable:Landroid/graphics/drawable/Drawable;
 
     instance-of p3, p2, Lorg/telegram/ui/Components/LoadingStickerDrawable;
@@ -9661,7 +9683,7 @@
     :goto_88
     if-eqz p2, :cond_1d3
 
-    .line 2174
+    .line 2176
     iget-object p2, p0, Lorg/telegram/messenger/ImageReceiver;->currentThumbDrawable:Landroid/graphics/drawable/Drawable;
 
     if-nez p2, :cond_96
@@ -9677,34 +9699,34 @@
     :cond_96
     if-eqz p2, :cond_a1
 
-    .line 2175
+    .line 2177
     iget-object p2, p0, Lorg/telegram/messenger/ImageReceiver;->staticThumbDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eqz p2, :cond_a1
 
-    .line 2176
+    .line 2178
     iget p2, p0, Lorg/telegram/messenger/ImageReceiver;->currentAlpha:F
 
     iput p2, p0, Lorg/telegram/messenger/ImageReceiver;->previousAlpha:F
 
     goto :goto_a3
 
-    .line 2178
+    .line 2180
     :cond_a1
     iput v2, p0, Lorg/telegram/messenger/ImageReceiver;->previousAlpha:F
 
-    .line 2180
+    .line 2182
     :goto_a3
     iput p5, p0, Lorg/telegram/messenger/ImageReceiver;->currentAlpha:F
 
-    .line 2181
+    .line 2183
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide p2
 
     iput-wide p2, p0, Lorg/telegram/messenger/ImageReceiver;->lastUpdateAlphaTime:J
 
-    .line 2182
+    .line 2184
     iget-object p2, p0, Lorg/telegram/messenger/ImageReceiver;->crossfadeImage:Landroid/graphics/drawable/Drawable;
 
     if-nez p2, :cond_ba
@@ -9733,11 +9755,11 @@
 
     goto/16 :goto_1d3
 
-    .line 2185
+    .line 2187
     :cond_bf
     iput v2, p0, Lorg/telegram/messenger/ImageReceiver;->currentAlpha:F
 
-    .line 2186
+    .line 2188
     iput v2, p0, Lorg/telegram/messenger/ImageReceiver;->previousAlpha:F
 
     goto/16 :goto_1d3
@@ -9747,7 +9769,7 @@
 
     if-ne p3, v3, :cond_14a
 
-    .line 2189
+    .line 2191
     iget-object p3, p0, Lorg/telegram/messenger/ImageReceiver;->currentMediaKey:Ljava/lang/String;
 
     invoke-virtual {p2, p3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -9758,13 +9780,13 @@
 
     return v0
 
-    .line 2192
+    .line 2194
     :cond_d1
     instance-of p2, p1, Lorg/telegram/ui/Components/AnimatedFileDrawable;
 
     if-nez p2, :cond_df
 
-    .line 2193
+    .line 2195
     invoke-static {}, Lorg/telegram/messenger/ImageLoader;->getInstance()Lorg/telegram/messenger/ImageLoader;
 
     move-result-object p2
@@ -9775,49 +9797,49 @@
 
     goto :goto_f6
 
-    .line 2195
+    .line 2197
     :cond_df
     move-object p2, p1
 
     check-cast p2, Lorg/telegram/ui/Components/AnimatedFileDrawable;
 
-    .line 2196
+    .line 2198
     iget-wide v3, p0, Lorg/telegram/messenger/ImageReceiver;->startTime:J
 
     iget-wide v5, p0, Lorg/telegram/messenger/ImageReceiver;->endTime:J
 
     invoke-virtual {p2, v3, v4, v5, v6}, Lorg/telegram/ui/Components/AnimatedFileDrawable;->setStartEndTime(JJ)V
 
-    .line 2197
+    .line 2199
     iget-boolean p2, p2, Lorg/telegram/ui/Components/AnimatedFileDrawable;->isWebmSticker:Z
 
     if-eqz p2, :cond_f6
 
-    .line 2198
+    .line 2200
     invoke-static {}, Lorg/telegram/messenger/ImageLoader;->getInstance()Lorg/telegram/messenger/ImageLoader;
 
     move-result-object p2
 
-    iget-object p3, p0, Lorg/telegram/messenger/ImageReceiver;->currentImageKey:Ljava/lang/String;
+    iget-object p3, p0, Lorg/telegram/messenger/ImageReceiver;->currentMediaKey:Ljava/lang/String;
 
     invoke-virtual {p2, p3}, Lorg/telegram/messenger/ImageLoader;->incrementUseCount(Ljava/lang/String;)V
 
-    .line 2201
+    .line 2203
     :cond_f6
     :goto_f6
     iput-object p1, p0, Lorg/telegram/messenger/ImageReceiver;->currentMediaDrawable:Landroid/graphics/drawable/Drawable;
 
-    .line 2202
+    .line 2204
     invoke-direct {p0, p1}, Lorg/telegram/messenger/ImageReceiver;->updateDrawableRadius(Landroid/graphics/drawable/Drawable;)V
 
-    .line 2204
+    .line 2206
     iget-object p2, p0, Lorg/telegram/messenger/ImageReceiver;->currentImageDrawable:Landroid/graphics/drawable/Drawable;
 
     if-nez p2, :cond_1d3
 
     if-nez p4, :cond_105
 
-    .line 2206
+    .line 2208
     iget-boolean p2, p0, Lorg/telegram/messenger/ImageReceiver;->forcePreview:Z
 
     if-eqz p2, :cond_109
@@ -9827,7 +9849,7 @@
 
     if-eqz p2, :cond_144
 
-    .line 2207
+    .line 2209
     :cond_109
     iget-object p2, p0, Lorg/telegram/messenger/ImageReceiver;->currentThumbDrawable:Landroid/graphics/drawable/Drawable;
 
@@ -9851,34 +9873,34 @@
     :cond_11b
     if-eqz p2, :cond_126
 
-    .line 2208
+    .line 2210
     iget-object p2, p0, Lorg/telegram/messenger/ImageReceiver;->staticThumbDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eqz p2, :cond_126
 
-    .line 2209
+    .line 2211
     iget p2, p0, Lorg/telegram/messenger/ImageReceiver;->currentAlpha:F
 
     iput p2, p0, Lorg/telegram/messenger/ImageReceiver;->previousAlpha:F
 
     goto :goto_128
 
-    .line 2211
+    .line 2213
     :cond_126
     iput v2, p0, Lorg/telegram/messenger/ImageReceiver;->previousAlpha:F
 
-    .line 2213
+    .line 2215
     :goto_128
     iput p5, p0, Lorg/telegram/messenger/ImageReceiver;->currentAlpha:F
 
-    .line 2214
+    .line 2216
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide p2
 
     iput-wide p2, p0, Lorg/telegram/messenger/ImageReceiver;->lastUpdateAlphaTime:J
 
-    .line 2215
+    .line 2217
     iget-object p2, p0, Lorg/telegram/messenger/ImageReceiver;->crossfadeImage:Landroid/graphics/drawable/Drawable;
 
     if-nez p2, :cond_13f
@@ -9907,11 +9929,11 @@
 
     goto/16 :goto_1d3
 
-    .line 2218
+    .line 2220
     :cond_144
     iput v2, p0, Lorg/telegram/messenger/ImageReceiver;->currentAlpha:F
 
-    .line 2219
+    .line 2221
     iput v2, p0, Lorg/telegram/messenger/ImageReceiver;->previousAlpha:F
 
     goto/16 :goto_1d3
@@ -9919,27 +9941,27 @@
     :cond_14a
     if-ne p3, v1, :cond_1d3
 
-    .line 2223
+    .line 2225
     iget-object p3, p0, Lorg/telegram/messenger/ImageReceiver;->currentThumbDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eqz p3, :cond_151
 
     return v0
 
-    .line 2226
+    .line 2228
     :cond_151
     iget-boolean p3, p0, Lorg/telegram/messenger/ImageReceiver;->forcePreview:Z
 
     if-nez p3, :cond_173
 
-    .line 2227
+    .line 2229
     invoke-virtual {p0}, Lorg/telegram/messenger/ImageReceiver;->getAnimation()Lorg/telegram/ui/Components/AnimatedFileDrawable;
 
     move-result-object p3
 
     if-eqz p3, :cond_162
 
-    .line 2228
+    .line 2230
     invoke-virtual {p3}, Lorg/telegram/ui/Components/AnimatedFileDrawable;->hasBitmap()Z
 
     move-result p3
@@ -9948,7 +9970,7 @@
 
     return v0
 
-    .line 2231
+    .line 2233
     :cond_162
     iget-object p3, p0, Lorg/telegram/messenger/ImageReceiver;->currentImageDrawable:Landroid/graphics/drawable/Drawable;
 
@@ -9970,7 +9992,7 @@
     :cond_172
     return v0
 
-    .line 2235
+    .line 2237
     :cond_173
     iget-object p3, p0, Lorg/telegram/messenger/ImageReceiver;->currentThumbKey:Ljava/lang/String;
 
@@ -9982,7 +10004,7 @@
 
     return v0
 
-    .line 2238
+    .line 2240
     :cond_17c
     invoke-static {}, Lorg/telegram/messenger/ImageLoader;->getInstance()Lorg/telegram/messenger/ImageLoader;
 
@@ -9992,15 +10014,15 @@
 
     invoke-virtual {p2, p3}, Lorg/telegram/messenger/ImageLoader;->incrementUseCount(Ljava/lang/String;)V
 
-    .line 2240
+    .line 2242
     iput-object p1, p0, Lorg/telegram/messenger/ImageReceiver;->currentThumbDrawable:Landroid/graphics/drawable/Drawable;
 
-    .line 2241
+    .line 2243
     instance-of p2, p1, Lorg/telegram/messenger/ExtendedBitmapDrawable;
 
     if-eqz p2, :cond_194
 
-    .line 2242
+    .line 2244
     move-object p2, p1
 
     check-cast p2, Lorg/telegram/messenger/ExtendedBitmapDrawable;
@@ -10011,20 +10033,20 @@
 
     iput p2, p0, Lorg/telegram/messenger/ImageReceiver;->thumbOrientation:I
 
-    .line 2244
+    .line 2246
     :cond_194
     invoke-direct {p0, p1}, Lorg/telegram/messenger/ImageReceiver;->updateDrawableRadius(Landroid/graphics/drawable/Drawable;)V
 
     if-nez p4, :cond_1cf
 
-    .line 2246
+    .line 2248
     iget-byte p2, p0, Lorg/telegram/messenger/ImageReceiver;->crossfadeAlpha:B
 
     const/4 p3, 0x2
 
     if-eq p2, p3, :cond_1cf
 
-    .line 2247
+    .line 2249
     iget-object p2, p0, Lorg/telegram/messenger/ImageReceiver;->currentParentObject:Ljava/lang/Object;
 
     instance-of p3, p2, Lorg/telegram/messenger/MessageObject;
@@ -10049,29 +10071,29 @@
 
     if-eqz p2, :cond_1bb
 
-    .line 2248
+    .line 2250
     iput v2, p0, Lorg/telegram/messenger/ImageReceiver;->currentAlpha:F
 
-    .line 2249
+    .line 2251
     iput v2, p0, Lorg/telegram/messenger/ImageReceiver;->previousAlpha:F
 
     goto :goto_1d3
 
-    .line 2251
+    .line 2253
     :cond_1bb
     iput p5, p0, Lorg/telegram/messenger/ImageReceiver;->currentAlpha:F
 
-    .line 2252
+    .line 2254
     iput v2, p0, Lorg/telegram/messenger/ImageReceiver;->previousAlpha:F
 
-    .line 2253
+    .line 2255
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide p2
 
     iput-wide p2, p0, Lorg/telegram/messenger/ImageReceiver;->lastUpdateAlphaTime:J
 
-    .line 2254
+    .line 2256
     iget-object p2, p0, Lorg/telegram/messenger/ImageReceiver;->staticThumbDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eqz p2, :cond_1cb
@@ -10088,21 +10110,21 @@
 
     goto :goto_1d3
 
-    .line 2257
+    .line 2259
     :cond_1cf
     iput v2, p0, Lorg/telegram/messenger/ImageReceiver;->currentAlpha:F
 
-    .line 2258
+    .line 2260
     iput v2, p0, Lorg/telegram/messenger/ImageReceiver;->previousAlpha:F
 
-    .line 2261
+    .line 2263
     :cond_1d3
     :goto_1d3
     iget-object p2, p0, Lorg/telegram/messenger/ImageReceiver;->delegate:Lorg/telegram/messenger/ImageReceiver$ImageReceiverDelegate;
 
     if-eqz p2, :cond_1f7
 
-    .line 2262
+    .line 2264
     iget-object p3, p0, Lorg/telegram/messenger/ImageReceiver;->currentImageDrawable:Landroid/graphics/drawable/Drawable;
 
     if-nez p3, :cond_1ea
@@ -10147,126 +10169,124 @@
     :goto_1f4
     invoke-interface {p2, p0, p5, p3, p4}, Lorg/telegram/messenger/ImageReceiver$ImageReceiverDelegate;->didSetImage(Lorg/telegram/messenger/ImageReceiver;ZZZ)V
 
-    .line 2264
+    .line 2266
     :cond_1f7
     instance-of p2, p1, Lorg/telegram/ui/Components/AnimatedFileDrawable;
 
-    if-eqz p2, :cond_225
+    if-eqz p2, :cond_223
 
-    .line 2265
+    .line 2267
     check-cast p1, Lorg/telegram/ui/Components/AnimatedFileDrawable;
 
-    .line 2266
+    .line 2268
     iget-boolean p2, p0, Lorg/telegram/messenger/ImageReceiver;->useSharedAnimationQueue:Z
 
     invoke-virtual {p1, p2}, Lorg/telegram/ui/Components/AnimatedFileDrawable;->setUseSharedQueue(Z)V
 
-    .line 2267
+    .line 2269
     iget-boolean p2, p0, Lorg/telegram/messenger/ImageReceiver;->attachedToWindow:Z
 
-    if-eqz p2, :cond_20b
-
-    .line 2268
-    iget-object p2, p0, Lorg/telegram/messenger/ImageReceiver;->parentView:Landroid/view/View;
-
-    invoke-virtual {p1, p2}, Lorg/telegram/ui/Components/AnimatedFileDrawable;->addParent(Landroid/view/View;)V
+    if-eqz p2, :cond_209
 
     .line 2270
-    :cond_20b
+    invoke-virtual {p1, p0}, Lorg/telegram/ui/Components/AnimatedFileDrawable;->addParent(Lorg/telegram/messenger/ImageReceiver;)V
+
+    .line 2272
+    :cond_209
     iget-boolean p2, p0, Lorg/telegram/messenger/ImageReceiver;->allowStartAnimation:Z
 
-    if-eqz p2, :cond_216
+    if-eqz p2, :cond_214
 
     iget p2, p0, Lorg/telegram/messenger/ImageReceiver;->currentOpenedLayerFlags:I
 
-    if-nez p2, :cond_216
-
-    .line 2271
-    invoke-virtual {p1}, Lorg/telegram/ui/Components/AnimatedFileDrawable;->start()V
+    if-nez p2, :cond_214
 
     .line 2273
-    :cond_216
+    invoke-virtual {p1}, Lorg/telegram/ui/Components/AnimatedFileDrawable;->checkRepeat()V
+
+    .line 2275
+    :cond_214
     iget-boolean p2, p0, Lorg/telegram/messenger/ImageReceiver;->allowDecodeSingleFrame:Z
 
     invoke-virtual {p1, p2}, Lorg/telegram/ui/Components/AnimatedFileDrawable;->setAllowDecodeSingleFrame(Z)V
 
-    .line 2274
+    .line 2276
     iput-boolean v0, p0, Lorg/telegram/messenger/ImageReceiver;->animationReadySent:Z
 
-    .line 2275
+    .line 2277
     iget-object p1, p0, Lorg/telegram/messenger/ImageReceiver;->parentView:Landroid/view/View;
 
-    if-eqz p1, :cond_24b
-
-    .line 2276
-    invoke-virtual {p1}, Landroid/view/View;->invalidate()V
-
-    goto :goto_24b
+    if-eqz p1, :cond_249
 
     .line 2278
-    :cond_225
-    instance-of p2, p1, Lorg/telegram/ui/Components/RLottieDrawable;
+    invoke-virtual {p1}, Landroid/view/View;->invalidate()V
 
-    if-eqz p2, :cond_24b
-
-    .line 2279
-    check-cast p1, Lorg/telegram/ui/Components/RLottieDrawable;
+    goto :goto_249
 
     .line 2280
+    :cond_223
+    instance-of p2, p1, Lorg/telegram/ui/Components/RLottieDrawable;
+
+    if-eqz p2, :cond_249
+
+    .line 2281
+    check-cast p1, Lorg/telegram/ui/Components/RLottieDrawable;
+
+    .line 2282
     iget-object p2, p0, Lorg/telegram/messenger/ImageReceiver;->parentView:Landroid/view/View;
 
     invoke-virtual {p1, p2}, Lorg/telegram/ui/Components/RLottieDrawable;->addParentView(Landroid/view/View;)V
 
-    .line 2281
+    .line 2283
     iget-boolean p2, p0, Lorg/telegram/messenger/ImageReceiver;->allowStartLottieAnimation:Z
 
-    if-eqz p2, :cond_241
+    if-eqz p2, :cond_23f
 
     invoke-virtual {p1}, Lorg/telegram/ui/Components/RLottieDrawable;->isHeavyDrawable()Z
 
     move-result p2
 
-    if-eqz p2, :cond_23e
+    if-eqz p2, :cond_23c
 
     iget p2, p0, Lorg/telegram/messenger/ImageReceiver;->currentOpenedLayerFlags:I
 
-    if-nez p2, :cond_241
-
-    .line 2282
-    :cond_23e
-    invoke-virtual {p1}, Lorg/telegram/ui/Components/RLottieDrawable;->start()V
+    if-nez p2, :cond_23f
 
     .line 2284
-    :cond_241
+    :cond_23c
+    invoke-virtual {p1}, Lorg/telegram/ui/Components/RLottieDrawable;->start()V
+
+    .line 2286
+    :cond_23f
     invoke-virtual {p1, v1}, Lorg/telegram/ui/Components/RLottieDrawable;->setAllowDecodeSingleFrame(Z)V
 
-    .line 2285
+    .line 2287
     iget p2, p0, Lorg/telegram/messenger/ImageReceiver;->autoRepeat:I
 
     invoke-virtual {p1, p2}, Lorg/telegram/ui/Components/RLottieDrawable;->setAutoRepeat(I)V
 
-    .line 2286
+    .line 2288
     iput-boolean v0, p0, Lorg/telegram/messenger/ImageReceiver;->animationReadySent:Z
 
-    .line 2288
-    :cond_24b
-    :goto_24b
+    .line 2290
+    :cond_249
+    :goto_249
     iget-object p1, p0, Lorg/telegram/messenger/ImageReceiver;->parentView:Landroid/view/View;
 
-    if-eqz p1, :cond_268
+    if-eqz p1, :cond_266
 
-    .line 2289
+    .line 2291
     iget-boolean p2, p0, Lorg/telegram/messenger/ImageReceiver;->invalidateAll:Z
 
-    if-eqz p2, :cond_257
-
-    .line 2290
-    invoke-virtual {p1}, Landroid/view/View;->invalidate()V
-
-    goto :goto_268
+    if-eqz p2, :cond_255
 
     .line 2292
-    :cond_257
+    invoke-virtual {p1}, Landroid/view/View;->invalidate()V
+
+    goto :goto_266
+
+    .line 2294
+    :cond_255
     iget p2, p0, Lorg/telegram/messenger/ImageReceiver;->imageX:F
 
     float-to-int p3, p2
@@ -10289,30 +10309,71 @@
 
     invoke-virtual {p1, p3, p5, p2, p4}, Landroid/view/View;->invalidate(IIII)V
 
-    :cond_268
-    :goto_268
+    :cond_266
+    :goto_266
     return v1
 
-    :cond_269
-    :goto_269
+    :cond_267
+    :goto_267
     return v0
 .end method
 
 .method public setImageCoords(FFFF)V
     .registers 5
 
-    .line 1826
+    .line 1819
     iput p1, p0, Lorg/telegram/messenger/ImageReceiver;->imageX:F
 
-    .line 1827
+    .line 1820
     iput p2, p0, Lorg/telegram/messenger/ImageReceiver;->imageY:F
 
-    .line 1828
+    .line 1821
     iput p3, p0, Lorg/telegram/messenger/ImageReceiver;->imageW:F
 
-    .line 1829
+    .line 1822
     iput p4, p0, Lorg/telegram/messenger/ImageReceiver;->imageH:F
 
+    return-void
+.end method
+
+.method public setImageCoords(Landroid/graphics/Rect;)V
+    .registers 3
+
+    if-eqz p1, :cond_1a
+
+    .line 1827
+    iget v0, p1, Landroid/graphics/Rect;->left:I
+
+    int-to-float v0, v0
+
+    iput v0, p0, Lorg/telegram/messenger/ImageReceiver;->imageX:F
+
+    .line 1828
+    iget v0, p1, Landroid/graphics/Rect;->top:I
+
+    int-to-float v0, v0
+
+    iput v0, p0, Lorg/telegram/messenger/ImageReceiver;->imageY:F
+
+    .line 1829
+    invoke-virtual {p1}, Landroid/graphics/Rect;->width()I
+
+    move-result v0
+
+    int-to-float v0, v0
+
+    iput v0, p0, Lorg/telegram/messenger/ImageReceiver;->imageW:F
+
+    .line 1830
+    invoke-virtual {p1}, Landroid/graphics/Rect;->height()I
+
+    move-result p1
+
+    int-to-float p1, p1
+
+    iput p1, p0, Lorg/telegram/messenger/ImageReceiver;->imageH:F
+
+    :cond_1a
     return-void
 .end method
 
@@ -10321,7 +10382,7 @@
 
     int-to-float p1, p1
 
-    .line 1822
+    .line 1815
     iput p1, p0, Lorg/telegram/messenger/ImageReceiver;->imageW:F
 
     return-void
@@ -10332,7 +10393,7 @@
 
     int-to-float p1, p1
 
-    .line 1814
+    .line 1807
     iput p1, p0, Lorg/telegram/messenger/ImageReceiver;->imageX:F
 
     return-void
@@ -10341,7 +10402,7 @@
 .method public setImageY(F)V
     .registers 2
 
-    .line 1818
+    .line 1811
     iput p1, p0, Lorg/telegram/messenger/ImageReceiver;->imageY:F
 
     return-void
@@ -10350,7 +10411,7 @@
 .method public setInvalidateAll(Z)V
     .registers 2
 
-    .line 638
+    .line 671
     iput-boolean p1, p0, Lorg/telegram/messenger/ImageReceiver;->invalidateAll:Z
 
     return-void
@@ -10359,7 +10420,7 @@
 .method public setLayerNum(I)V
     .registers 2
 
-    .line 655
+    .line 688
     iput p1, p0, Lorg/telegram/messenger/ImageReceiver;->currentLayerNum:I
 
     return-void
@@ -10368,7 +10429,7 @@
 .method public setManualAlphaAnimator(Z)V
     .registers 2
 
-    .line 1572
+    .line 1565
     iput-boolean p1, p0, Lorg/telegram/messenger/ImageReceiver;->manualAlphaAnimator:Z
 
     return-void
@@ -10377,20 +10438,20 @@
 .method public setMediaStartEndTime(JJ)V
     .registers 7
 
-    .line 2299
+    .line 2301
     iput-wide p1, p0, Lorg/telegram/messenger/ImageReceiver;->startTime:J
 
-    .line 2300
+    .line 2302
     iput-wide p3, p0, Lorg/telegram/messenger/ImageReceiver;->endTime:J
 
-    .line 2302
+    .line 2304
     iget-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->currentMediaDrawable:Landroid/graphics/drawable/Drawable;
 
     instance-of v1, v0, Lorg/telegram/ui/Components/AnimatedFileDrawable;
 
     if-eqz v1, :cond_f
 
-    .line 2303
+    .line 2305
     check-cast v0, Lorg/telegram/ui/Components/AnimatedFileDrawable;
 
     invoke-virtual {v0, p1, p2, p3, p4}, Lorg/telegram/ui/Components/AnimatedFileDrawable;->setStartEndTime(JJ)V
@@ -10402,7 +10463,7 @@
 .method public setNeedsQualityThumb(Z)V
     .registers 2
 
-    .line 1993
+    .line 1995
     iput-boolean p1, p0, Lorg/telegram/messenger/ImageReceiver;->needsQualityThumb:Z
 
     return-void
@@ -10428,13 +10489,13 @@
 
     goto :goto_5
 
-    .line 633
+    .line 666
     :cond_c
     iput p1, p0, Lorg/telegram/messenger/ImageReceiver;->thumbOrientation:I
 
     iput p1, p0, Lorg/telegram/messenger/ImageReceiver;->imageOrientation:I
 
-    .line 634
+    .line 667
     iput-boolean p2, p0, Lorg/telegram/messenger/ImageReceiver;->centerRotation:Z
 
     return-void
@@ -10443,7 +10504,7 @@
 .method public setParam(I)V
     .registers 2
 
-    .line 2137
+    .line 2139
     iput p1, p0, Lorg/telegram/messenger/ImageReceiver;->param:I
 
     return-void
@@ -10452,17 +10513,17 @@
 .method public setParentView(Landroid/view/View;)V
     .registers 3
 
-    .line 1806
+    .line 1799
     iput-object p1, p0, Lorg/telegram/messenger/ImageReceiver;->parentView:Landroid/view/View;
 
-    .line 1807
+    .line 1800
     invoke-virtual {p0}, Lorg/telegram/messenger/ImageReceiver;->getAnimation()Lorg/telegram/ui/Components/AnimatedFileDrawable;
 
     move-result-object p1
 
     if-eqz p1, :cond_d
 
-    .line 1809
+    .line 1802
     iget-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->parentView:Landroid/view/View;
 
     invoke-virtual {p1, v0}, Lorg/telegram/ui/Components/AnimatedFileDrawable;->setParentView(Landroid/view/View;)V
@@ -10474,7 +10535,7 @@
 .method public setPressed(I)V
     .registers 2
 
-    .line 619
+    .line 652
     iput p1, p0, Lorg/telegram/messenger/ImageReceiver;->isPressed:I
 
     return-void
@@ -10483,7 +10544,7 @@
 .method public setQualityThumbDocument(Lorg/telegram/tgnet/TLRPC$Document;)V
     .registers 2
 
-    .line 1997
+    .line 1999
     iput-object p1, p0, Lorg/telegram/messenger/ImageReceiver;->qulityThumbDocument:Lorg/telegram/tgnet/TLRPC$Document;
 
     return-void
@@ -10512,7 +10573,7 @@
 
     aput p1, v0, v1
 
-    .line 1945
+    .line 1947
     invoke-virtual {p0, v0}, Lorg/telegram/messenger/ImageReceiver;->setRoundRadius([I)V
 
     return-void
@@ -10541,7 +10602,7 @@
 
     aput p4, v0, p1
 
-    .line 1949
+    .line 1951
     invoke-virtual {p0, v0}, Lorg/telegram/messenger/ImageReceiver;->setRoundRadius([I)V
 
     return-void
@@ -10552,19 +10613,19 @@
 
     const/4 v0, 0x0
 
-    .line 1954
+    .line 1956
     aget v1, p1, v0
 
     const/4 v2, 0x1
 
-    .line 1955
+    .line 1957
     iput-boolean v2, p0, Lorg/telegram/messenger/ImageReceiver;->isRoundRect:Z
 
     const/4 v3, 0x0
 
     const/4 v4, 0x0
 
-    .line 1956
+    .line 1958
     :goto_8
     iget-object v5, p0, Lorg/telegram/messenger/ImageReceiver;->roundRadius:[I
 
@@ -10572,7 +10633,7 @@
 
     if-ge v3, v6, :cond_21
 
-    .line 1957
+    .line 1959
     aget v6, v5, v3
 
     aget v7, p1, v3
@@ -10581,16 +10642,16 @@
 
     const/4 v4, 0x1
 
-    .line 1960
+    .line 1962
     :cond_14
     aget v6, p1, v3
 
     if-eq v1, v6, :cond_1a
 
-    .line 1961
+    .line 1963
     iput-boolean v0, p0, Lorg/telegram/messenger/ImageReceiver;->isRoundRect:Z
 
-    .line 1963
+    .line 1965
     :cond_1a
     aget v6, p1, v3
 
@@ -10603,7 +10664,7 @@
     :cond_21
     if-eqz v4, :cond_48
 
-    .line 1966
+    .line 1968
     iget-object p1, p0, Lorg/telegram/messenger/ImageReceiver;->currentImageDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eqz p1, :cond_2e
@@ -10612,10 +10673,10 @@
 
     if-nez v0, :cond_2e
 
-    .line 1967
+    .line 1969
     invoke-direct {p0, p1}, Lorg/telegram/messenger/ImageReceiver;->updateDrawableRadius(Landroid/graphics/drawable/Drawable;)V
 
-    .line 1969
+    .line 1971
     :cond_2e
     iget-object p1, p0, Lorg/telegram/messenger/ImageReceiver;->currentMediaDrawable:Landroid/graphics/drawable/Drawable;
 
@@ -10625,27 +10686,27 @@
 
     if-nez v0, :cond_39
 
-    .line 1970
+    .line 1972
     invoke-direct {p0, p1}, Lorg/telegram/messenger/ImageReceiver;->updateDrawableRadius(Landroid/graphics/drawable/Drawable;)V
 
-    .line 1972
+    .line 1974
     :cond_39
     iget-object p1, p0, Lorg/telegram/messenger/ImageReceiver;->currentThumbDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eqz p1, :cond_41
 
-    .line 1973
+    .line 1975
     invoke-direct {p0, p1}, Lorg/telegram/messenger/ImageReceiver;->updateDrawableRadius(Landroid/graphics/drawable/Drawable;)V
 
     goto :goto_48
 
-    .line 1974
+    .line 1976
     :cond_41
     iget-object p1, p0, Lorg/telegram/messenger/ImageReceiver;->staticThumbDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eqz p1, :cond_48
 
-    .line 1975
+    .line 1977
     invoke-direct {p0, p1}, Lorg/telegram/messenger/ImageReceiver;->updateDrawableRadius(Landroid/graphics/drawable/Drawable;)V
 
     :cond_48
@@ -10656,7 +10717,7 @@
 .method public setShouldGenerateQualityThumb(Z)V
     .registers 2
 
-    .line 2021
+    .line 2023
     iput-boolean p1, p0, Lorg/telegram/messenger/ImageReceiver;->shouldGenerateQualityThumb:Z
 
     return-void
@@ -10665,7 +10726,7 @@
 .method public setSideClip(F)V
     .registers 2
 
-    .line 1833
+    .line 1835
     iput p1, p0, Lorg/telegram/messenger/ImageReceiver;->sideClip:F
 
     return-void
@@ -10674,7 +10735,7 @@
 .method public setStrippedLocation(Lorg/telegram/messenger/ImageLocation;)V
     .registers 2
 
-    .line 307
+    .line 310
     iput-object p1, p0, Lorg/telegram/messenger/ImageReceiver;->strippedLocation:Lorg/telegram/messenger/ImageLocation;
 
     return-void
@@ -10687,7 +10748,7 @@
 
     if-ne p2, v0, :cond_6
 
-    .line 2128
+    .line 2130
     iput p1, p0, Lorg/telegram/messenger/ImageReceiver;->thumbTag:I
 
     goto :goto_e
@@ -10697,12 +10758,12 @@
 
     if-ne p2, v0, :cond_c
 
-    .line 2130
+    .line 2132
     iput p1, p0, Lorg/telegram/messenger/ImageReceiver;->mediaTag:I
 
     goto :goto_e
 
-    .line 2132
+    .line 2134
     :cond_c
     iput p1, p0, Lorg/telegram/messenger/ImageReceiver;->imageTag:I
 
@@ -10713,7 +10774,7 @@
 .method public setUniqKeyPrefix(Ljava/lang/String;)V
     .registers 2
 
-    .line 2466
+    .line 2468
     iput-object p1, p0, Lorg/telegram/messenger/ImageReceiver;->uniqKeyPrefix:Ljava/lang/String;
 
     return-void
@@ -10722,7 +10783,7 @@
 .method public setUseRoundForThumbDrawable(Z)V
     .registers 2
 
-    .line 984
+    .line 990
     iput-boolean p1, p0, Lorg/telegram/messenger/ImageReceiver;->useRoundForThumb:Z
 
     return-void
@@ -10731,7 +10792,7 @@
 .method public setUseSharedAnimationQueue(Z)V
     .registers 2
 
-    .line 2053
+    .line 2055
     iput-boolean p1, p0, Lorg/telegram/messenger/ImageReceiver;->useSharedAnimationQueue:Z
 
     return-void
@@ -10740,20 +10801,20 @@
 .method public setVisible(ZZ)V
     .registers 4
 
-    .line 1736
+    .line 1729
     iget-boolean v0, p0, Lorg/telegram/messenger/ImageReceiver;->isVisible:Z
 
     if-ne v0, p1, :cond_5
 
     return-void
 
-    .line 1739
+    .line 1732
     :cond_5
     iput-boolean p1, p0, Lorg/telegram/messenger/ImageReceiver;->isVisible:Z
 
     if-eqz p2, :cond_c
 
-    .line 1741
+    .line 1734
     invoke-virtual {p0}, Lorg/telegram/messenger/ImageReceiver;->invalidate()V
 
     :cond_c
@@ -10763,19 +10824,19 @@
 .method public skipDraw()V
     .registers 3
 
-    .line 1429
+    .line 1422
     invoke-virtual {p0}, Lorg/telegram/messenger/ImageReceiver;->getLottieAnimation()Lorg/telegram/ui/Components/RLottieDrawable;
 
     move-result-object v0
 
     if-eqz v0, :cond_e
 
-    .line 1431
+    .line 1424
     iget-object v1, p0, Lorg/telegram/messenger/ImageReceiver;->parentView:Landroid/view/View;
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/RLottieDrawable;->setCurrentParentView(Landroid/view/View;)V
 
-    .line 1432
+    .line 1425
     invoke-virtual {v0}, Lorg/telegram/ui/Components/RLottieDrawable;->updateCurrentFrame()V
 
     :cond_e
@@ -10785,24 +10846,24 @@
 .method public startAnimation()V
     .registers 3
 
-    .line 2061
+    .line 2063
     invoke-virtual {p0}, Lorg/telegram/messenger/ImageReceiver;->getAnimation()Lorg/telegram/ui/Components/AnimatedFileDrawable;
 
     move-result-object v0
 
     if-eqz v0, :cond_f
 
-    .line 2063
+    .line 2065
     iget-boolean v1, p0, Lorg/telegram/messenger/ImageReceiver;->useSharedAnimationQueue:Z
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/AnimatedFileDrawable;->setUseSharedQueue(Z)V
 
-    .line 2064
+    .line 2066
     invoke-virtual {v0}, Lorg/telegram/ui/Components/AnimatedFileDrawable;->start()V
 
     goto :goto_1e
 
-    .line 2066
+    .line 2068
     :cond_f
     invoke-virtual {p0}, Lorg/telegram/messenger/ImageReceiver;->getLottieAnimation()Lorg/telegram/ui/Components/RLottieDrawable;
 
@@ -10810,14 +10871,14 @@
 
     if-eqz v0, :cond_1e
 
-    .line 2067
+    .line 2069
     invoke-virtual {v0}, Lorg/telegram/ui/Components/RLottieDrawable;->isRunning()Z
 
     move-result v1
 
     if-nez v1, :cond_1e
 
-    .line 2068
+    .line 2070
     invoke-virtual {v0}, Lorg/telegram/ui/Components/RLottieDrawable;->restart()Z
 
     :cond_1e
@@ -10830,21 +10891,21 @@
 
     const/4 v0, 0x0
 
-    .line 2455
+    .line 2457
     iput-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->currentThumbKey:Ljava/lang/String;
 
-    .line 2456
+    .line 2458
     iput-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->currentThumbDrawable:Landroid/graphics/drawable/Drawable;
 
-    .line 2457
+    .line 2459
     iput-object v0, p0, Lorg/telegram/messenger/ImageReceiver;->thumbShader:Landroid/graphics/BitmapShader;
 
-    .line 2458
+    .line 2460
     iget-object v1, p0, Lorg/telegram/messenger/ImageReceiver;->roundPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v1, v0}, Landroid/graphics/Paint;->setShader(Landroid/graphics/Shader;)Landroid/graphics/Shader;
 
-    .line 2459
+    .line 2461
     new-instance v1, Landroid/graphics/drawable/BitmapDrawable;
 
     invoke-direct {v1, v0, p1}, Landroid/graphics/drawable/BitmapDrawable;-><init>(Landroid/content/res/Resources;Landroid/graphics/Bitmap;)V
@@ -10853,15 +10914,15 @@
 
     const/4 p1, 0x1
 
-    .line 2460
+    .line 2462
     iput-boolean p1, p0, Lorg/telegram/messenger/ImageReceiver;->crossfadeWithThumb:Z
 
     const/4 p1, 0x0
 
-    .line 2461
+    .line 2463
     iput p1, p0, Lorg/telegram/messenger/ImageReceiver;->currentAlpha:F
 
-    .line 2462
+    .line 2464
     invoke-direct {p0, v1}, Lorg/telegram/messenger/ImageReceiver;->updateDrawableRadius(Landroid/graphics/drawable/Drawable;)V
 
     return-void
@@ -10870,19 +10931,19 @@
 .method public stopAnimation()V
     .registers 3
 
-    .line 2074
+    .line 2076
     invoke-virtual {p0}, Lorg/telegram/messenger/ImageReceiver;->getAnimation()Lorg/telegram/ui/Components/AnimatedFileDrawable;
 
     move-result-object v0
 
     if-eqz v0, :cond_a
 
-    .line 2076
+    .line 2078
     invoke-virtual {v0}, Lorg/telegram/ui/Components/AnimatedFileDrawable;->stop()V
 
     goto :goto_19
 
-    .line 2078
+    .line 2080
     :cond_a
     invoke-virtual {p0}, Lorg/telegram/messenger/ImageReceiver;->getLottieAnimation()Lorg/telegram/ui/Components/RLottieDrawable;
 
@@ -10890,14 +10951,14 @@
 
     if-eqz v0, :cond_19
 
-    .line 2079
+    .line 2081
     invoke-virtual {v0}, Lorg/telegram/ui/Components/RLottieDrawable;->isRunning()Z
 
     move-result v1
 
     if-nez v1, :cond_19
 
-    .line 2080
+    .line 2082
     invoke-virtual {v0}, Lorg/telegram/ui/Components/RLottieDrawable;->stop()V
 
     :cond_19

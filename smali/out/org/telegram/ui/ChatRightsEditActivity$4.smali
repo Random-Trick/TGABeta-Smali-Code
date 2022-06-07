@@ -18,7 +18,7 @@
 .method constructor <init>(Lorg/telegram/ui/ChatRightsEditActivity;Landroid/content/Context;IZ)V
     .registers 5
 
-    .line 425
+    .line 422
     invoke-direct {p0, p2, p3, p4}, Landroidx/recyclerview/widget/LinearLayoutManager;-><init>(Landroid/content/Context;IZ)V
 
     return-void

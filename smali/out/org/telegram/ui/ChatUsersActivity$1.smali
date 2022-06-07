@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/ChatUsersActivity;)V
     .registers 2
 
-    .line 677
+    .line 671
     iput-object p1, p0, Lorg/telegram/ui/ChatUsersActivity$1;->this$0:Lorg/telegram/ui/ChatUsersActivity;
 
     invoke-direct {p0}, Lorg/telegram/ui/ActionBar/ActionBar$ActionBarMenuOnItemClick;-><init>()V
@@ -39,7 +39,7 @@
 
     if-ne p1, v0, :cond_11
 
-    .line 681
+    .line 675
     iget-object p1, p0, Lorg/telegram/ui/ChatUsersActivity$1;->this$0:Lorg/telegram/ui/ChatUsersActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/ChatUsersActivity;->access$800(Lorg/telegram/ui/ChatUsersActivity;)Z
@@ -48,7 +48,7 @@
 
     if-eqz p1, :cond_19
 
-    .line 682
+    .line 676
     iget-object p1, p0, Lorg/telegram/ui/ChatUsersActivity$1;->this$0:Lorg/telegram/ui/ChatUsersActivity;
 
     invoke-virtual {p1}, Lorg/telegram/ui/ActionBar/BaseFragment;->finishFragment()V
@@ -60,7 +60,7 @@
 
     if-ne p1, v0, :cond_19
 
-    .line 685
+    .line 679
     iget-object p1, p0, Lorg/telegram/ui/ChatUsersActivity$1;->this$0:Lorg/telegram/ui/ChatUsersActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/ChatUsersActivity;->access$900(Lorg/telegram/ui/ChatUsersActivity;)V

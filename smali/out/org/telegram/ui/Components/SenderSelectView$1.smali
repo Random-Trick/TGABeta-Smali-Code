@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/SenderSelectView;)V
     .registers 2
 
-    .line 197
+    .line 212
     iput-object p1, p0, Lorg/telegram/ui/Components/SenderSelectView$1;->this$0:Lorg/telegram/ui/Components/SenderSelectView;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -35,7 +35,7 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .registers 3
 
-    .line 200
+    .line 215
     iget-object v0, p0, Lorg/telegram/ui/Components/SenderSelectView$1;->this$0:Lorg/telegram/ui/Components/SenderSelectView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/SenderSelectView;->access$000(Lorg/telegram/ui/Components/SenderSelectView;)Landroid/animation/ValueAnimator;
@@ -44,7 +44,7 @@
 
     if-ne p1, v0, :cond_e
 
-    .line 201
+    .line 216
     iget-object p1, p0, Lorg/telegram/ui/Components/SenderSelectView$1;->this$0:Lorg/telegram/ui/Components/SenderSelectView;
 
     const/4 v0, 0x0

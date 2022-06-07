@@ -27,7 +27,7 @@
 .method constructor <init>(Lorg/telegram/ui/FilterUsersActivity;)V
     .registers 2
 
-    .line 543
+    .line 544
     iput-object p1, p0, Lorg/telegram/ui/FilterUsersActivity$6;->this$0:Lorg/telegram/ui/FilterUsersActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -46,7 +46,7 @@
 
     if-ne p2, v0, :cond_108
 
-    .line 550
+    .line 551
     invoke-virtual {p3}, Landroid/view/KeyEvent;->getAction()I
 
     move-result p2
@@ -55,7 +55,7 @@
 
     if-nez p2, :cond_1e
 
-    .line 551
+    .line 552
     iget-object p2, p0, Lorg/telegram/ui/FilterUsersActivity$6;->this$0:Lorg/telegram/ui/FilterUsersActivity;
 
     invoke-static {p2}, Lorg/telegram/ui/FilterUsersActivity;->access$000(Lorg/telegram/ui/FilterUsersActivity;)Lorg/telegram/ui/Components/EditTextBoldCursor;
@@ -78,7 +78,7 @@
 
     goto/16 :goto_108
 
-    .line 552
+    .line 553
     :cond_1e
     invoke-virtual {p3}, Landroid/view/KeyEvent;->getAction()I
 
@@ -102,7 +102,7 @@
 
     if-nez p2, :cond_108
 
-    .line 553
+    .line 554
     iget-object p1, p0, Lorg/telegram/ui/FilterUsersActivity$6;->this$0:Lorg/telegram/ui/FilterUsersActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/FilterUsersActivity;->access$400(Lorg/telegram/ui/FilterUsersActivity;)Ljava/util/ArrayList;
@@ -127,7 +127,7 @@
 
     check-cast p1, Lorg/telegram/ui/Components/GroupCreateSpan;
 
-    .line 554
+    .line 555
     iget-object p2, p0, Lorg/telegram/ui/FilterUsersActivity$6;->this$0:Lorg/telegram/ui/FilterUsersActivity;
 
     invoke-static {p2}, Lorg/telegram/ui/FilterUsersActivity;->access$1800(Lorg/telegram/ui/FilterUsersActivity;)Lorg/telegram/ui/FilterUsersActivity$SpansContainer;
@@ -136,7 +136,7 @@
 
     invoke-virtual {p2, p1}, Lorg/telegram/ui/FilterUsersActivity$SpansContainer;->removeSpan(Lorg/telegram/ui/Components/GroupCreateSpan;)V
 
-    .line 555
+    .line 556
     invoke-virtual {p1}, Lorg/telegram/ui/Components/GroupCreateSpan;->getUid()J
 
     move-result-wide p2
@@ -147,7 +147,7 @@
 
     if-nez v3, :cond_6a
 
-    .line 556
+    .line 557
     iget-object p1, p0, Lorg/telegram/ui/FilterUsersActivity$6;->this$0:Lorg/telegram/ui/FilterUsersActivity;
 
     sget p2, Lorg/telegram/messenger/MessagesController;->DIALOG_FILTER_FLAG_CONTACTS:I
@@ -158,7 +158,7 @@
 
     goto/16 :goto_fd
 
-    .line 557
+    .line 558
     :cond_6a
     invoke-virtual {p1}, Lorg/telegram/ui/Components/GroupCreateSpan;->getUid()J
 
@@ -170,7 +170,7 @@
 
     if-nez v3, :cond_80
 
-    .line 558
+    .line 559
     iget-object p1, p0, Lorg/telegram/ui/FilterUsersActivity$6;->this$0:Lorg/telegram/ui/FilterUsersActivity;
 
     sget p2, Lorg/telegram/messenger/MessagesController;->DIALOG_FILTER_FLAG_NON_CONTACTS:I
@@ -181,7 +181,7 @@
 
     goto/16 :goto_fd
 
-    .line 559
+    .line 560
     :cond_80
     invoke-virtual {p1}, Lorg/telegram/ui/Components/GroupCreateSpan;->getUid()J
 
@@ -193,7 +193,7 @@
 
     if-nez v3, :cond_95
 
-    .line 560
+    .line 561
     iget-object p1, p0, Lorg/telegram/ui/FilterUsersActivity$6;->this$0:Lorg/telegram/ui/FilterUsersActivity;
 
     sget p2, Lorg/telegram/messenger/MessagesController;->DIALOG_FILTER_FLAG_GROUPS:I
@@ -204,7 +204,7 @@
 
     goto :goto_fd
 
-    .line 561
+    .line 562
     :cond_95
     invoke-virtual {p1}, Lorg/telegram/ui/Components/GroupCreateSpan;->getUid()J
 
@@ -216,7 +216,7 @@
 
     if-nez v3, :cond_aa
 
-    .line 562
+    .line 563
     iget-object p1, p0, Lorg/telegram/ui/FilterUsersActivity$6;->this$0:Lorg/telegram/ui/FilterUsersActivity;
 
     sget p2, Lorg/telegram/messenger/MessagesController;->DIALOG_FILTER_FLAG_CHANNELS:I
@@ -227,7 +227,7 @@
 
     goto :goto_fd
 
-    .line 563
+    .line 564
     :cond_aa
     invoke-virtual {p1}, Lorg/telegram/ui/Components/GroupCreateSpan;->getUid()J
 
@@ -239,7 +239,7 @@
 
     if-nez v3, :cond_bf
 
-    .line 564
+    .line 565
     iget-object p1, p0, Lorg/telegram/ui/FilterUsersActivity$6;->this$0:Lorg/telegram/ui/FilterUsersActivity;
 
     sget p2, Lorg/telegram/messenger/MessagesController;->DIALOG_FILTER_FLAG_BOTS:I
@@ -250,7 +250,7 @@
 
     goto :goto_fd
 
-    .line 565
+    .line 566
     :cond_bf
     invoke-virtual {p1}, Lorg/telegram/ui/Components/GroupCreateSpan;->getUid()J
 
@@ -262,7 +262,7 @@
 
     if-nez v3, :cond_d4
 
-    .line 566
+    .line 567
     iget-object p1, p0, Lorg/telegram/ui/FilterUsersActivity$6;->this$0:Lorg/telegram/ui/FilterUsersActivity;
 
     sget p2, Lorg/telegram/messenger/MessagesController;->DIALOG_FILTER_FLAG_EXCLUDE_MUTED:I
@@ -273,7 +273,7 @@
 
     goto :goto_fd
 
-    .line 567
+    .line 568
     :cond_d4
     invoke-virtual {p1}, Lorg/telegram/ui/Components/GroupCreateSpan;->getUid()J
 
@@ -285,7 +285,7 @@
 
     if-nez v3, :cond_e9
 
-    .line 568
+    .line 569
     iget-object p1, p0, Lorg/telegram/ui/FilterUsersActivity$6;->this$0:Lorg/telegram/ui/FilterUsersActivity;
 
     sget p2, Lorg/telegram/messenger/MessagesController;->DIALOG_FILTER_FLAG_EXCLUDE_READ:I
@@ -296,7 +296,7 @@
 
     goto :goto_fd
 
-    .line 569
+    .line 570
     :cond_e9
     invoke-virtual {p1}, Lorg/telegram/ui/Components/GroupCreateSpan;->getUid()J
 
@@ -308,7 +308,7 @@
 
     if-nez p3, :cond_fd
 
-    .line 570
+    .line 571
     iget-object p1, p0, Lorg/telegram/ui/FilterUsersActivity$6;->this$0:Lorg/telegram/ui/FilterUsersActivity;
 
     sget p2, Lorg/telegram/messenger/MessagesController;->DIALOG_FILTER_FLAG_EXCLUDE_ARCHIVED:I
@@ -317,14 +317,14 @@
 
     invoke-static {p1, p2}, Lorg/telegram/ui/FilterUsersActivity;->access$1972(Lorg/telegram/ui/FilterUsersActivity;I)I
 
-    .line 572
+    .line 573
     :cond_fd
     :goto_fd
     iget-object p1, p0, Lorg/telegram/ui/FilterUsersActivity$6;->this$0:Lorg/telegram/ui/FilterUsersActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/FilterUsersActivity;->access$2000(Lorg/telegram/ui/FilterUsersActivity;)V
 
-    .line 573
+    .line 574
     iget-object p1, p0, Lorg/telegram/ui/FilterUsersActivity$6;->this$0:Lorg/telegram/ui/FilterUsersActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/FilterUsersActivity;->access$2100(Lorg/telegram/ui/FilterUsersActivity;)V

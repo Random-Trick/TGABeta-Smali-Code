@@ -2,7 +2,7 @@
 .super Lj$/util/stream/i0;
 
 # interfaces
-.implements Lj$/util/stream/l3;
+.implements Lj$/util/stream/k3;
 
 
 # direct methods

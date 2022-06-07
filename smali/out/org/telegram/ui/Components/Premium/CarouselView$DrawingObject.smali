@@ -28,7 +28,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 244
+    .line 326
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -44,14 +44,20 @@
     return p1
 .end method
 
-.method public draw(Landroid/graphics/Canvas;FF)V
-    .registers 4
+.method public draw(Landroid/graphics/Canvas;FFF)V
+    .registers 5
 
     return-void
 .end method
 
-.method public onAttachToWindow(Landroid/view/View;)V
-    .registers 2
+.method public hideAnimation()V
+    .registers 1
+
+    return-void
+.end method
+
+.method public onAttachToWindow(Landroid/view/View;I)V
+    .registers 3
 
     return-void
 .end method

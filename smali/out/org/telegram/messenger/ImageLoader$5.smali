@@ -91,7 +91,7 @@
 .method constructor <init>(Lorg/telegram/messenger/ImageLoader;I)V
     .registers 3
 
-    .line 1895
+    .line 1914
     iput-object p1, p0, Lorg/telegram/messenger/ImageLoader$5;->this$0:Lorg/telegram/messenger/ImageLoader;
 
     iput p2, p0, Lorg/telegram/messenger/ImageLoader$5;->val$currentAccount:I
@@ -104,12 +104,12 @@
 .method private synthetic lambda$fileDidFailedLoad$6(Ljava/lang/String;II)V
     .registers 7
 
-    .line 1956
+    .line 1975
     iget-object v0, p0, Lorg/telegram/messenger/ImageLoader$5;->this$0:Lorg/telegram/messenger/ImageLoader;
 
-    invoke-static {v0, p1, p2}, Lorg/telegram/messenger/ImageLoader;->access$3700(Lorg/telegram/messenger/ImageLoader;Ljava/lang/String;I)V
+    invoke-static {v0, p1, p2}, Lorg/telegram/messenger/ImageLoader;->access$3800(Lorg/telegram/messenger/ImageLoader;Ljava/lang/String;I)V
 
-    .line 1957
+    .line 1976
     invoke-static {p3}, Lorg/telegram/messenger/NotificationCenter;->getInstance(I)Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object p3
@@ -140,7 +140,7 @@
 .method private static synthetic lambda$fileDidFailedUpload$3(ILjava/lang/String;Z)V
     .registers 6
 
-    .line 1918
+    .line 1937
     invoke-static {p0}, Lorg/telegram/messenger/NotificationCenter;->getInstance(I)Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object p0
@@ -171,14 +171,14 @@
 .method private synthetic lambda$fileDidFailedUpload$4(ILjava/lang/String;Z)V
     .registers 5
 
-    .line 1918
+    .line 1937
     new-instance v0, Lorg/telegram/messenger/ImageLoader$5$$ExternalSyntheticLambda3;
 
     invoke-direct {v0, p1, p2, p3}, Lorg/telegram/messenger/ImageLoader$5$$ExternalSyntheticLambda3;-><init>(ILjava/lang/String;Z)V
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 1919
+    .line 1938
     iget-object p1, p0, Lorg/telegram/messenger/ImageLoader$5;->this$0:Lorg/telegram/messenger/ImageLoader;
 
     invoke-static {p1}, Lorg/telegram/messenger/ImageLoader;->access$100(Lorg/telegram/messenger/ImageLoader;)Lj$/util/concurrent/ConcurrentHashMap;
@@ -193,7 +193,7 @@
 .method private synthetic lambda$fileDidLoaded$5(Ljava/io/File;Ljava/lang/String;Ljava/lang/Object;II)V
     .registers 13
 
-    .line 1927
+    .line 1946
     sget v0, Lorg/telegram/messenger/SharedConfig;->saveToGalleryFlags:I
 
     const/4 v1, 0x1
@@ -220,16 +220,16 @@
 
     if-eqz v0, :cond_4c
 
-    .line 1928
+    .line 1947
     :cond_18
     instance-of v0, p3, Lorg/telegram/messenger/MessageObject;
 
     if-eqz v0, :cond_4c
 
-    .line 1929
+    .line 1948
     check-cast p3, Lorg/telegram/messenger/MessageObject;
 
-    .line 1931
+    .line 1950
     invoke-virtual {p3}, Lorg/telegram/messenger/MessageObject;->getDialogId()J
 
     move-result-wide v3
@@ -244,7 +244,7 @@
 
     goto :goto_40
 
-    .line 1936
+    .line 1955
     :cond_2a
     invoke-static {p4}, Lorg/telegram/messenger/MessagesController;->getInstance(I)Lorg/telegram/messenger/MessagesController;
 
@@ -273,7 +273,7 @@
     :cond_3f
     const/4 p3, 0x2
 
-    .line 1942
+    .line 1961
     :goto_40
     sget v0, Lorg/telegram/messenger/SharedConfig;->saveToGalleryFlags:I
 
@@ -281,14 +281,14 @@
 
     if-eqz p3, :cond_4c
 
-    .line 1943
+    .line 1962
     invoke-virtual {p1}, Ljava/io/File;->toString()Ljava/lang/String;
 
     move-result-object p3
 
     invoke-static {p3}, Lorg/telegram/messenger/AndroidUtilities;->addMediaToGallery(Ljava/lang/String;)V
 
-    .line 1947
+    .line 1966
     :cond_4c
     invoke-static {p4}, Lorg/telegram/messenger/NotificationCenter;->getInstance(I)Lorg/telegram/messenger/NotificationCenter;
 
@@ -306,7 +306,7 @@
 
     invoke-virtual {p3, p4, v0}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 1948
+    .line 1967
     iget-object p3, p0, Lorg/telegram/messenger/ImageLoader$5;->this$0:Lorg/telegram/messenger/ImageLoader;
 
     invoke-static {p3, p2, p1, p5}, Lorg/telegram/messenger/ImageLoader;->access$800(Lorg/telegram/messenger/ImageLoader;Ljava/lang/String;Ljava/io/File;I)V
@@ -317,7 +317,7 @@
 .method private static synthetic lambda$fileDidUploaded$1(ILjava/lang/String;Lorg/telegram/tgnet/TLRPC$InputFile;Lorg/telegram/tgnet/TLRPC$InputEncryptedFile;[B[BJ)V
     .registers 11
 
-    .line 1910
+    .line 1929
     invoke-static {p0}, Lorg/telegram/messenger/NotificationCenter;->getInstance(I)Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object p0
@@ -364,7 +364,7 @@
 .method private synthetic lambda$fileDidUploaded$2(ILjava/lang/String;Lorg/telegram/tgnet/TLRPC$InputFile;Lorg/telegram/tgnet/TLRPC$InputEncryptedFile;[B[BJ)V
     .registers 19
 
-    .line 1910
+    .line 1929
     new-instance v9, Lorg/telegram/messenger/ImageLoader$5$$ExternalSyntheticLambda2;
 
     move-object v0, v9
@@ -389,7 +389,7 @@
 
     move-object v0, p0
 
-    .line 1911
+    .line 1930
     iget-object v1, v0, Lorg/telegram/messenger/ImageLoader$5;->this$0:Lorg/telegram/messenger/ImageLoader;
 
     invoke-static {v1}, Lorg/telegram/messenger/ImageLoader;->access$100(Lorg/telegram/messenger/ImageLoader;)Lj$/util/concurrent/ConcurrentHashMap;
@@ -404,7 +404,7 @@
 .method private static synthetic lambda$fileLoadProgressChanged$7(ILjava/lang/String;JJ)V
     .registers 9
 
-    .line 1967
+    .line 1986
     invoke-static {p0}, Lorg/telegram/messenger/NotificationCenter;->getInstance(I)Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object p0
@@ -443,7 +443,7 @@
 .method private static synthetic lambda$fileUploadProgressChanged$0(ILjava/lang/String;JJZ)V
     .registers 10
 
-    .line 1903
+    .line 1922
     invoke-static {p0}, Lorg/telegram/messenger/NotificationCenter;->getInstance(I)Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object p0
@@ -492,7 +492,7 @@
 .method public fileDidFailedLoad(Ljava/lang/String;I)V
     .registers 5
 
-    .line 1954
+    .line 1973
     iget-object v0, p0, Lorg/telegram/messenger/ImageLoader$5;->this$0:Lorg/telegram/messenger/ImageLoader;
 
     invoke-static {v0}, Lorg/telegram/messenger/ImageLoader;->access$100(Lorg/telegram/messenger/ImageLoader;)Lj$/util/concurrent/ConcurrentHashMap;
@@ -501,7 +501,7 @@
 
     invoke-virtual {v0, p1}, Lj$/util/concurrent/ConcurrentHashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1955
+    .line 1974
     iget v0, p0, Lorg/telegram/messenger/ImageLoader$5;->val$currentAccount:I
 
     new-instance v1, Lorg/telegram/messenger/ImageLoader$5$$ExternalSyntheticLambda7;
@@ -516,7 +516,7 @@
 .method public fileDidFailedUpload(Ljava/lang/String;Z)V
     .registers 6
 
-    .line 1917
+    .line 1936
     sget-object v0, Lorg/telegram/messenger/Utilities;->stageQueue:Lorg/telegram/messenger/DispatchQueue;
 
     iget v1, p0, Lorg/telegram/messenger/ImageLoader$5;->val$currentAccount:I
@@ -533,7 +533,7 @@
 .method public fileDidLoaded(Ljava/lang/String;Ljava/io/File;Ljava/lang/Object;I)V
     .registers 13
 
-    .line 1925
+    .line 1944
     iget-object v0, p0, Lorg/telegram/messenger/ImageLoader$5;->this$0:Lorg/telegram/messenger/ImageLoader;
 
     invoke-static {v0}, Lorg/telegram/messenger/ImageLoader;->access$100(Lorg/telegram/messenger/ImageLoader;)Lj$/util/concurrent/ConcurrentHashMap;
@@ -542,7 +542,7 @@
 
     invoke-virtual {v0, p1}, Lj$/util/concurrent/ConcurrentHashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1926
+    .line 1945
     iget v6, p0, Lorg/telegram/messenger/ImageLoader$5;->val$currentAccount:I
 
     new-instance v0, Lorg/telegram/messenger/ImageLoader$5$$ExternalSyntheticLambda6;
@@ -569,7 +569,7 @@
 .method public fileDidUploaded(Ljava/lang/String;Lorg/telegram/tgnet/TLRPC$InputFile;Lorg/telegram/tgnet/TLRPC$InputEncryptedFile;[B[BJ)V
     .registers 21
 
-    .line 1909
+    .line 1928
     sget-object v0, Lorg/telegram/messenger/Utilities;->stageQueue:Lorg/telegram/messenger/DispatchQueue;
 
     move-object v11, p0
@@ -608,7 +608,7 @@
 
     move-object v1, p1
 
-    .line 1963
+    .line 1982
     iget-object v2, v0, Lorg/telegram/messenger/ImageLoader$5;->this$0:Lorg/telegram/messenger/ImageLoader;
 
     invoke-static {v2}, Lorg/telegram/messenger/ImageLoader;->access$100(Lorg/telegram/messenger/ImageLoader;)Lj$/util/concurrent/ConcurrentHashMap;
@@ -631,12 +631,12 @@
 
     invoke-virtual {v2, p2, v3}, Lj$/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1964
+    .line 1983
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v2
 
-    .line 1965
+    .line 1984
     iget-wide v5, v1, Lorg/telegram/messenger/FileLoadOperation;->lastProgressUpdateTime:J
 
     const-wide/16 v7, 0x0
@@ -657,11 +657,11 @@
 
     if-nez v5, :cond_3e
 
-    .line 1966
+    .line 1985
     :cond_2d
     iput-wide v2, v1, Lorg/telegram/messenger/FileLoadOperation;->lastProgressUpdateTime:J
 
-    .line 1967
+    .line 1986
     iget v2, v0, Lorg/telegram/messenger/ImageLoader$5;->val$currentAccount:I
 
     new-instance v8, Lorg/telegram/messenger/ImageLoader$5$$ExternalSyntheticLambda0;
@@ -689,7 +689,7 @@
 
     move-object v1, p1
 
-    .line 1898
+    .line 1917
     iget-object v2, v0, Lorg/telegram/messenger/ImageLoader$5;->this$0:Lorg/telegram/messenger/ImageLoader;
 
     invoke-static {v2}, Lorg/telegram/messenger/ImageLoader;->access$100(Lorg/telegram/messenger/ImageLoader;)Lj$/util/concurrent/ConcurrentHashMap;
@@ -712,12 +712,12 @@
 
     invoke-virtual {v2, p2, v3}, Lj$/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1899
+    .line 1918
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v2
 
-    .line 1900
+    .line 1919
     iget-wide v5, v1, Lorg/telegram/messenger/FileUploadOperation;->lastProgressUpdateTime:J
 
     const-wide/16 v7, 0x0
@@ -738,11 +738,11 @@
 
     if-nez v5, :cond_3f
 
-    .line 1901
+    .line 1920
     :cond_2d
     iput-wide v2, v1, Lorg/telegram/messenger/FileUploadOperation;->lastProgressUpdateTime:J
 
-    .line 1903
+    .line 1922
     iget v2, v0, Lorg/telegram/messenger/ImageLoader$5;->val$currentAccount:I
 
     new-instance v9, Lorg/telegram/messenger/ImageLoader$5$$ExternalSyntheticLambda1;

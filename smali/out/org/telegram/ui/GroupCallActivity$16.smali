@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/GroupCallActivity;)V
     .registers 2
 
-    .line 3437
+    .line 3442
     iput-object p1, p0, Lorg/telegram/ui/GroupCallActivity$16;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-direct {p0}, Landroidx/recyclerview/widget/RecyclerView$OnScrollListener;-><init>()V
@@ -35,10 +35,10 @@
 .method public onScrolled(Landroidx/recyclerview/widget/RecyclerView;II)V
     .registers 4
 
-    .line 3440
+    .line 3445
     invoke-super {p0, p1, p2, p3}, Landroidx/recyclerview/widget/RecyclerView$OnScrollListener;->onScrolled(Landroidx/recyclerview/widget/RecyclerView;II)V
 
-    .line 3441
+    .line 3446
     iget-object p1, p0, Lorg/telegram/ui/GroupCallActivity$16;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/GroupCallActivity;->access$11600(Lorg/telegram/ui/GroupCallActivity;)Landroid/view/ViewGroup;

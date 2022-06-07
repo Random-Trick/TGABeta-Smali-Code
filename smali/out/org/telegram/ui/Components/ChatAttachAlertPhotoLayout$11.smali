@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/ChatAttachAlertPhotoLayout;)V
     .registers 2
 
-    .line 1049
+    .line 1041
     iput-object p1, p0, Lorg/telegram/ui/Components/ChatAttachAlertPhotoLayout$11;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertPhotoLayout;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -35,10 +35,10 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .registers 6
 
-    .line 1052
+    .line 1044
     iget-object p1, p0, Lorg/telegram/ui/Components/ChatAttachAlertPhotoLayout$11;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertPhotoLayout;
 
-    invoke-static {p1}, Lorg/telegram/ui/Components/ChatAttachAlertPhotoLayout;->access$2000(Lorg/telegram/ui/Components/ChatAttachAlertPhotoLayout;)Landroid/widget/ImageView;
+    invoke-static {p1}, Lorg/telegram/ui/Components/ChatAttachAlertPhotoLayout;->access$1900(Lorg/telegram/ui/Components/ChatAttachAlertPhotoLayout;)Landroid/widget/ImageView;
 
     move-result-object p1
 
@@ -54,20 +54,20 @@
 
     if-eqz v0, :cond_16
 
-    const v0, 0x7f0700a8
+    const v0, 0x7f07008b
 
     goto :goto_19
 
     :cond_16
-    const v0, 0x7f0700a9
+    const v0, 0x7f07008c
 
     :goto_19
     invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 1053
+    .line 1045
     iget-object p1, p0, Lorg/telegram/ui/Components/ChatAttachAlertPhotoLayout$11;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertPhotoLayout;
 
-    invoke-static {p1}, Lorg/telegram/ui/Components/ChatAttachAlertPhotoLayout;->access$2000(Lorg/telegram/ui/Components/ChatAttachAlertPhotoLayout;)Landroid/widget/ImageView;
+    invoke-static {p1}, Lorg/telegram/ui/Components/ChatAttachAlertPhotoLayout;->access$1900(Lorg/telegram/ui/Components/ChatAttachAlertPhotoLayout;)Landroid/widget/ImageView;
 
     move-result-object p1
 

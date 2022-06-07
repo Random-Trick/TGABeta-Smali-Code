@@ -63,7 +63,7 @@
 
     iget-object v6, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity$$ExternalSyntheticLambda6;->f$6:Ljava/util/ArrayList;
 
-    invoke-static/range {v0 .. v6}, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->$r8$lambda$cUkvVuZl4hZFa8i4o3bnOROtDRE(Lorg/telegram/ui/NotificationsCustomSettingsActivity;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;)V
+    invoke-static/range {v0 .. v6}, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->$r8$lambda$_zCXK3BppNMbQFJtvzAJhxxeAE0(Lorg/telegram/ui/NotificationsCustomSettingsActivity;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;)V
 
     return-void
 .end method

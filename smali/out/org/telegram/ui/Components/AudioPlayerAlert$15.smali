@@ -24,7 +24,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/AudioPlayerAlert;Landroid/content/Context;)V
     .registers 3
 
-    .line 1094
+    .line 1095
     iput-object p1, p0, Lorg/telegram/ui/Components/AudioPlayerAlert$15;->this$0:Lorg/telegram/ui/Components/AudioPlayerAlert;
 
     invoke-direct {p0, p2}, Lorg/telegram/ui/Components/RecyclerListView;-><init>(Landroid/content/Context;)V
@@ -37,7 +37,7 @@
 .method protected allowSelectChildAtPosition(FF)Z
     .registers 4
 
-    .line 1120
+    .line 1121
     iget-object p1, p0, Lorg/telegram/ui/Components/AudioPlayerAlert$15;->this$0:Lorg/telegram/ui/Components/AudioPlayerAlert;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/AudioPlayerAlert;->access$900(Lorg/telegram/ui/Components/AudioPlayerAlert;)Landroid/widget/FrameLayout;
@@ -80,10 +80,10 @@
 .method protected onLayout(ZIIII)V
     .registers 16
 
-    .line 1100
+    .line 1101
     invoke-super/range {p0 .. p5}, Lorg/telegram/ui/Components/RecyclerListView;->onLayout(ZIIII)V
 
-    .line 1102
+    .line 1103
     iget-object p1, p0, Lorg/telegram/ui/Components/AudioPlayerAlert$15;->this$0:Lorg/telegram/ui/Components/AudioPlayerAlert;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/AudioPlayerAlert;->access$4400(Lorg/telegram/ui/Components/AudioPlayerAlert;)I
@@ -110,10 +110,10 @@
 
     if-nez p1, :cond_4d
 
-    .line 1103
+    .line 1104
     iput-boolean v1, p0, Lorg/telegram/ui/Components/AudioPlayerAlert$15;->ignoreLayout:Z
 
-    .line 1104
+    .line 1105
     iget-object p1, p0, Lorg/telegram/ui/Components/AudioPlayerAlert$15;->this$0:Lorg/telegram/ui/Components/AudioPlayerAlert;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/AudioPlayerAlert;->access$4500(Lorg/telegram/ui/Components/AudioPlayerAlert;)Landroidx/recyclerview/widget/LinearLayoutManager;
@@ -158,20 +158,20 @@
 
     move v9, p5
 
-    .line 1105
+    .line 1106
     invoke-super/range {v4 .. v9}, Lorg/telegram/ui/Components/RecyclerListView;->onLayout(ZIIII)V
 
-    .line 1106
+    .line 1107
     iput-boolean v2, p0, Lorg/telegram/ui/Components/AudioPlayerAlert$15;->ignoreLayout:Z
 
-    .line 1107
+    .line 1108
     iget-object p1, p0, Lorg/telegram/ui/Components/AudioPlayerAlert$15;->this$0:Lorg/telegram/ui/Components/AudioPlayerAlert;
 
     invoke-static {p1, v0}, Lorg/telegram/ui/Components/AudioPlayerAlert;->access$4402(Lorg/telegram/ui/Components/AudioPlayerAlert;I)I
 
     goto :goto_6f
 
-    .line 1108
+    .line 1109
     :cond_4d
     iget-object p1, p0, Lorg/telegram/ui/Components/AudioPlayerAlert$15;->this$0:Lorg/telegram/ui/Components/AudioPlayerAlert;
 
@@ -181,15 +181,15 @@
 
     if-eqz p1, :cond_6f
 
-    .line 1109
+    .line 1110
     iget-object p1, p0, Lorg/telegram/ui/Components/AudioPlayerAlert$15;->this$0:Lorg/telegram/ui/Components/AudioPlayerAlert;
 
     invoke-static {p1, v2}, Lorg/telegram/ui/Components/AudioPlayerAlert;->access$6502(Lorg/telegram/ui/Components/AudioPlayerAlert;Z)Z
 
-    .line 1110
+    .line 1111
     iput-boolean v1, p0, Lorg/telegram/ui/Components/AudioPlayerAlert$15;->ignoreLayout:Z
 
-    .line 1111
+    .line 1112
     iget-object p1, p0, Lorg/telegram/ui/Components/AudioPlayerAlert$15;->this$0:Lorg/telegram/ui/Components/AudioPlayerAlert;
 
     invoke-static {p1, v1}, Lorg/telegram/ui/Components/AudioPlayerAlert;->access$6600(Lorg/telegram/ui/Components/AudioPlayerAlert;Z)Z
@@ -210,10 +210,10 @@
 
     move v8, p5
 
-    .line 1112
+    .line 1113
     invoke-super/range {v3 .. v8}, Lorg/telegram/ui/Components/RecyclerListView;->onLayout(ZIIII)V
 
-    .line 1114
+    .line 1115
     :cond_6d
     iput-boolean v2, p0, Lorg/telegram/ui/Components/AudioPlayerAlert$15;->ignoreLayout:Z
 
@@ -225,14 +225,14 @@
 .method public requestLayout()V
     .registers 2
 
-    .line 1125
+    .line 1126
     iget-boolean v0, p0, Lorg/telegram/ui/Components/AudioPlayerAlert$15;->ignoreLayout:Z
 
     if-eqz v0, :cond_5
 
     return-void
 
-    .line 1128
+    .line 1129
     :cond_5
     invoke-super {p0}, Lorg/telegram/ui/Components/RecyclerListView;->requestLayout()V
 

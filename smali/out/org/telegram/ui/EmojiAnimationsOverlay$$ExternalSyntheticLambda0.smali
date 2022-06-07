@@ -27,7 +27,7 @@
 
     iget-object v0, p0, Lorg/telegram/ui/EmojiAnimationsOverlay$$ExternalSyntheticLambda0;->f$0:Lorg/telegram/ui/EmojiAnimationsOverlay;
 
-    invoke-static {v0}, Lorg/telegram/ui/EmojiAnimationsOverlay;->$r8$lambda$KgpJsfAGLeaVzRe7TX1IoAdHDQM(Lorg/telegram/ui/EmojiAnimationsOverlay;)V
+    invoke-static {v0}, Lorg/telegram/ui/EmojiAnimationsOverlay;->$r8$lambda$apesflTQwmJ6t6M7bof6DX09RY0(Lorg/telegram/ui/EmojiAnimationsOverlay;)V
 
     return-void
 .end method

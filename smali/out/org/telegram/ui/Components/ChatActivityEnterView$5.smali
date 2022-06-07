@@ -27,7 +27,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/ChatActivityEnterView;Ljava/lang/Class;Ljava/lang/String;)V
     .registers 4
 
-    .line 583
+    .line 585
     invoke-direct {p0, p2, p3}, Landroid/util/Property;-><init>(Ljava/lang/Class;Ljava/lang/String;)V
 
     return-void
@@ -38,7 +38,7 @@
 .method public get(Lorg/telegram/ui/Components/ChatActivityEnterView$RecordCircle;)Ljava/lang/Float;
     .registers 2
 
-    .line 586
+    .line 588
     invoke-virtual {p1}, Lorg/telegram/ui/Components/ChatActivityEnterView$RecordCircle;->getScale()F
 
     move-result p1
@@ -53,7 +53,7 @@
 .method public bridge synthetic get(Ljava/lang/Object;)Ljava/lang/Object;
     .registers 2
 
-    .line 583
+    .line 585
     check-cast p1, Lorg/telegram/ui/Components/ChatActivityEnterView$RecordCircle;
 
     invoke-virtual {p0, p1}, Lorg/telegram/ui/Components/ChatActivityEnterView$5;->get(Lorg/telegram/ui/Components/ChatActivityEnterView$RecordCircle;)Ljava/lang/Float;
@@ -66,7 +66,7 @@
 .method public bridge synthetic set(Ljava/lang/Object;Ljava/lang/Object;)V
     .registers 3
 
-    .line 583
+    .line 585
     check-cast p1, Lorg/telegram/ui/Components/ChatActivityEnterView$RecordCircle;
 
     check-cast p2, Ljava/lang/Float;
@@ -79,7 +79,7 @@
 .method public set(Lorg/telegram/ui/Components/ChatActivityEnterView$RecordCircle;Ljava/lang/Float;)V
     .registers 3
 
-    .line 591
+    .line 593
     invoke-virtual {p2}, Ljava/lang/Float;->floatValue()F
 
     move-result p2

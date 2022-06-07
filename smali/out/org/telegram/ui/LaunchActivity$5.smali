@@ -18,7 +18,7 @@
 .method constructor <init>(Lorg/telegram/ui/LaunchActivity;Landroid/content/Context;)V
     .registers 3
 
-    .line 418
+    .line 430
     invoke-direct {p0, p2}, Lorg/telegram/ui/Components/SizeNotifierFrameLayout;-><init>(Landroid/content/Context;)V
 
     return-void

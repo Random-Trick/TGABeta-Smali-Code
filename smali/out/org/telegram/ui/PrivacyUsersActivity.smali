@@ -712,7 +712,7 @@
 
     new-array v1, v3, [Ljava/lang/CharSequence;
 
-    const v3, 0x7f0e11dc
+    const v3, 0x7f0e12a9
 
     const-string v4, "Unblock"
 
@@ -728,7 +728,7 @@
     :cond_24
     new-array v1, v3, [Ljava/lang/CharSequence;
 
-    const v3, 0x7f0e0540
+    const v3, 0x7f0e0591
 
     const-string v4, "Delete"
 
@@ -939,7 +939,7 @@
     .line 113
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
-    const v1, 0x7f070140
+    const v1, 0x7f070109
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/ActionBar;->setBackButtonImage(I)V
 
@@ -960,7 +960,7 @@
     .line 116
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
-    const v3, 0x7f0e02b5
+    const v3, 0x7f0e02ec
 
     const-string v4, "BlockedUsers"
 
@@ -983,7 +983,7 @@
     .line 119
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
-    const v3, 0x7f0e070a
+    const v3, 0x7f0e075f
 
     const-string v4, "FilterAlwaysShow"
 
@@ -999,7 +999,7 @@
     :cond_37
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
-    const v3, 0x7f0e0730
+    const v3, 0x7f0e0785
 
     const-string v4, "FilterNeverShow"
 
@@ -1025,7 +1025,7 @@
     .line 126
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
-    const v3, 0x7f0e015a
+    const v3, 0x7f0e0187
 
     const-string v4, "AlwaysAllow"
 
@@ -1041,7 +1041,7 @@
     :cond_5d
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
-    const v3, 0x7f0e0a7f
+    const v3, 0x7f0e0b06
 
     const-string v4, "NeverAllow"
 
@@ -1062,7 +1062,7 @@
     .line 132
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
-    const v3, 0x7f0e015c
+    const v3, 0x7f0e0189
 
     const-string v4, "AlwaysShareWithTitle"
 
@@ -1078,7 +1078,7 @@
     :cond_7f
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
-    const v3, 0x7f0e0a81
+    const v3, 0x7f0e0b08
 
     const-string v4, "NeverShareWithTitle"
 
@@ -1129,7 +1129,7 @@
 
     if-ne v4, v1, :cond_c1
 
-    const v4, 0x7f0e0aa6
+    const v4, 0x7f0e0b2d
 
     const-string v5, "NoBlocked"
 
@@ -1143,7 +1143,7 @@
     goto :goto_cd
 
     :cond_c1
-    const v4, 0x7f0e0aae
+    const v4, 0x7f0e0b35
 
     const-string v5, "NoContacts"
 

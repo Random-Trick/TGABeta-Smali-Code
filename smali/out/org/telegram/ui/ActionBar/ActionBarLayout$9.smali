@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lorg/telegram/ui/ActionBar/ActionBarLayout;->closeLastFragment(Z)V
+    value = Lorg/telegram/ui/ActionBar/ActionBarLayout;->closeLastFragment(ZZ)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -25,7 +25,7 @@
 .method constructor <init>(Lorg/telegram/ui/ActionBar/ActionBarLayout;)V
     .registers 2
 
-    .line 1595
+    .line 1719
     iput-object p1, p0, Lorg/telegram/ui/ActionBar/ActionBarLayout$9;->this$0:Lorg/telegram/ui/ActionBar/ActionBarLayout;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public run()V
     .registers 4
 
-    .line 1598
+    .line 1722
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/ActionBarLayout$9;->this$0:Lorg/telegram/ui/ActionBar/ActionBarLayout;
 
     invoke-static {v0}, Lorg/telegram/ui/ActionBar/ActionBarLayout;->access$100(Lorg/telegram/ui/ActionBar/ActionBarLayout;)Ljava/lang/Runnable;
@@ -49,7 +49,7 @@
 
     return-void
 
-    .line 1601
+    .line 1725
     :cond_9
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/ActionBarLayout$9;->this$0:Lorg/telegram/ui/ActionBar/ActionBarLayout;
 
@@ -57,14 +57,14 @@
 
     invoke-static {v0, v1}, Lorg/telegram/ui/ActionBar/ActionBarLayout;->access$102(Lorg/telegram/ui/ActionBar/ActionBarLayout;Ljava/lang/Runnable;)Ljava/lang/Runnable;
 
-    .line 1602
+    .line 1726
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/ActionBarLayout$9;->this$0:Lorg/telegram/ui/ActionBar/ActionBarLayout;
 
     const/4 v1, 0x1
 
     const/4 v2, 0x0
 
-    invoke-static {v0, v2, v1, v2}, Lorg/telegram/ui/ActionBar/ActionBarLayout;->access$1600(Lorg/telegram/ui/ActionBar/ActionBarLayout;ZZZ)V
+    invoke-static {v0, v2, v1, v2}, Lorg/telegram/ui/ActionBar/ActionBarLayout;->access$1800(Lorg/telegram/ui/ActionBar/ActionBarLayout;ZZZ)V
 
     return-void
 .end method

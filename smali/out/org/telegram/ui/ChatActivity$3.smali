@@ -25,7 +25,7 @@
 .method constructor <init>(Lorg/telegram/ui/ChatActivity;)V
     .registers 2
 
-    .line 865
+    .line 878
     iput-object p1, p0, Lorg/telegram/ui/ChatActivity$3;->this$0:Lorg/telegram/ui/ChatActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,14 +38,14 @@
 .method public needPostpone(II[Ljava/lang/Object;)Z
     .registers 7
 
-    .line 868
+    .line 881
     sget p2, Lorg/telegram/messenger/NotificationCenter;->didReceiveNewMessages:I
 
     const/4 v0, 0x0
 
     if-ne p1, p2, :cond_21
 
-    .line 869
+    .line 882
     aget-object p1, p3, v0
 
     check-cast p1, Ljava/lang/Long;
@@ -54,7 +54,7 @@
 
     move-result-wide p1
 
-    .line 870
+    .line 883
     iget-object p3, p0, Lorg/telegram/ui/ChatActivity$3;->this$0:Lorg/telegram/ui/ChatActivity;
 
     invoke-static {p3}, Lorg/telegram/ui/ChatActivity;->access$400(Lorg/telegram/ui/ChatActivity;)Z

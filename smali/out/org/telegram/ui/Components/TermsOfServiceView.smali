@@ -163,7 +163,7 @@
 
     invoke-direct {v7, v1}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
 
-    const v8, 0x7f0701ca
+    const v8, 0x7f070199
 
     .line 60
     invoke-virtual {v7, v8}, Landroid/widget/ImageView;->setImageResource(I)V
@@ -226,7 +226,7 @@
     .line 67
     iget-object v7, v0, Lorg/telegram/ui/Components/TermsOfServiceView;->titleTextView:Landroid/widget/TextView;
 
-    const v10, 0x7f0e0e1a
+    const v10, 0x7f0e0ec3
 
     const-string v11, "PrivacyPolicyAndTerms"
 
@@ -398,7 +398,7 @@
 
     invoke-direct {v2, v1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
-    const v5, 0x7f0e053b
+    const v5, 0x7f0e058c
 
     const-string v7, "Decline"
 
@@ -506,7 +506,7 @@
 
     invoke-direct {v2, v1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
-    const v7, 0x7f0e008f
+    const v7, 0x7f0e00b7
 
     const-string v10, "Accept"
 
@@ -783,7 +783,7 @@
     if-eq p1, p2, :cond_68
 
     :cond_1f
-    const p1, 0x7f0e0660
+    const p1, 0x7f0e06b2
 
     const-string p2, "ErrorOccurred"
 
@@ -823,7 +823,7 @@
 
     invoke-direct {p2, p3}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    const p3, 0x7f0e017c
+    const p3, 0x7f0e01b1
 
     const-string v0, "AppName"
 
@@ -837,7 +837,7 @@
     .line 123
     invoke-virtual {p2, p1}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const p1, 0x7f0e0bae
+    const p1, 0x7f0e0c38
 
     const-string p3, "OK"
 
@@ -933,7 +933,7 @@
 
     const-string p2, "TosDeclineDeleteAccount"
 
-    const v0, 0x7f0e11b5
+    const v0, 0x7f0e1281
 
     .line 100
     invoke-static {p2, v0}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -944,7 +944,7 @@
 
     const-string p2, "AppName"
 
-    const v0, 0x7f0e017c
+    const v0, 0x7f0e01b1
 
     .line 101
     invoke-static {p2, v0}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -955,7 +955,7 @@
 
     const-string p2, "Deactivate"
 
-    const v0, 0x7f0e0520
+    const v0, 0x7f0e056f
 
     .line 102
     invoke-static {p2, v0}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -970,7 +970,7 @@
 
     const-string p2, "Cancel"
 
-    const v0, 0x7f0e0331
+    const v0, 0x7f0e036d
 
     .line 130
     invoke-static {p2, v0}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -1001,7 +1001,7 @@
 
     const-string p1, "TermsOfService"
 
-    const v1, 0x7f0e115b
+    const v1, 0x7f0e1225
 
     .line 97
     invoke-static {p1, v1}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -1012,7 +1012,7 @@
 
     const-string p1, "DeclineDeactivate"
 
-    const v1, 0x7f0e053d
+    const v1, 0x7f0e058e
 
     .line 98
     invoke-static {p1, v1}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -1027,7 +1027,7 @@
 
     const-string p1, "Back"
 
-    const v1, 0x7f0e0281
+    const v1, 0x7f0e02b6
 
     .line 133
     invoke-static {p1, v1}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -1040,7 +1040,7 @@
 
     const-string p1, "TosUpdateDecline"
 
-    const v1, 0x7f0e11b6
+    const v1, 0x7f0e1282
 
     .line 134
     invoke-static {p1, v1}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -1065,14 +1065,14 @@
 .end method
 
 .method private synthetic lambda$new$6(Landroid/view/View;)V
-    .registers 7
+    .registers 8
 
     .line 148
     iget-object v0, p0, Lorg/telegram/ui/Components/TermsOfServiceView;->currentTos:Lorg/telegram/tgnet/TLRPC$TL_help_termsOfService;
 
     iget v0, v0, Lorg/telegram/tgnet/TLRPC$TL_help_termsOfService;->min_age_confirm:I
 
-    if-eqz v0, :cond_59
+    if-eqz v0, :cond_5b
 
     .line 149
     new-instance v0, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
@@ -1083,7 +1083,7 @@
 
     invoke-direct {v0, p1}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    const p1, 0x7f0e11b3
+    const p1, 0x7f0e127f
 
     const-string v1, "TosAgeTitle"
 
@@ -1094,7 +1094,7 @@
 
     invoke-virtual {v0, p1}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const p1, 0x7f0e0148
+    const p1, 0x7f0e0170
 
     const-string v1, "Agree"
 
@@ -1109,7 +1109,7 @@
 
     invoke-virtual {v0, p1, v1}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const p1, 0x7f0e0331
+    const p1, 0x7f0e036d
 
     const-string v1, "Cancel"
 
@@ -1122,26 +1122,28 @@
 
     invoke-virtual {v0, p1, v1}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setNegativeButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const p1, 0x7f0e11b2
+    const p1, 0x7f0e127e
 
     const/4 v1, 0x1
 
     new-array v1, v1, [Ljava/lang/Object;
 
-    const/4 v2, 0x0
-
     .line 153
-    iget-object v3, p0, Lorg/telegram/ui/Components/TermsOfServiceView;->currentTos:Lorg/telegram/tgnet/TLRPC$TL_help_termsOfService;
+    iget-object v2, p0, Lorg/telegram/ui/Components/TermsOfServiceView;->currentTos:Lorg/telegram/tgnet/TLRPC$TL_help_termsOfService;
 
-    iget v3, v3, Lorg/telegram/tgnet/TLRPC$TL_help_termsOfService;->min_age_confirm:I
+    iget v2, v2, Lorg/telegram/tgnet/TLRPC$TL_help_termsOfService;->min_age_confirm:I
 
-    const-string v4, "Years"
+    const/4 v3, 0x0
 
-    invoke-static {v4, v3}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    new-array v4, v3, [Ljava/lang/Object;
 
-    move-result-object v3
+    const-string v5, "Years"
 
-    aput-object v3, v1, v2
+    invoke-static {v5, v2, v4}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v2
+
+    aput-object v2, v1, v3
 
     const-string v2, "TosAgeText"
 
@@ -1154,13 +1156,13 @@
     .line 154
     invoke-virtual {v0}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->show()Lorg/telegram/ui/ActionBar/AlertDialog;
 
-    goto :goto_5c
+    goto :goto_5e
 
     .line 156
-    :cond_59
+    :cond_5b
     invoke-direct {p0}, Lorg/telegram/ui/Components/TermsOfServiceView;->accept()V
 
-    :goto_5c
+    :goto_5e
     return-void
 .end method
 

@@ -27,7 +27,7 @@
 
     iget-object v0, p0, Lorg/telegram/ui/PaymentFormActivity$$ExternalSyntheticLambda22;->f$0:Lorg/telegram/ui/PaymentFormActivity;
 
-    invoke-static {v0, p1, p2}, Lorg/telegram/ui/PaymentFormActivity;->$r8$lambda$ufBXhrNbvJlVLqcHkReQdB857HQ(Lorg/telegram/ui/PaymentFormActivity;Landroid/view/View;Landroid/view/MotionEvent;)Z
+    invoke-static {v0, p1, p2}, Lorg/telegram/ui/PaymentFormActivity;->$r8$lambda$IfUWsdY6A3YdC7z4Rkp3xdEZ1P8(Lorg/telegram/ui/PaymentFormActivity;Landroid/view/View;Landroid/view/MotionEvent;)Z
 
     move-result p1
 

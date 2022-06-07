@@ -194,7 +194,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0e0ad8
+    const v1, 0x7f0e0b60
 
     const-string v2, "NoResult"
 
@@ -248,7 +248,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f0e0aaa
+    const v3, 0x7f0e0b31
 
     const-string v4, "NoChats"
 

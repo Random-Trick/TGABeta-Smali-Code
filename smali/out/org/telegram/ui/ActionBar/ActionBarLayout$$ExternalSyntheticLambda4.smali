@@ -10,7 +10,7 @@
 
 .field public final synthetic f$1:Z
 
-.field public final synthetic f$2:Landroid/view/View;
+.field public final synthetic f$2:Lorg/telegram/ui/ActionBar/ActionBarPopupWindow$ActionBarPopupWindowLayout;
 
 .field public final synthetic f$3:Z
 
@@ -20,7 +20,7 @@
 
 
 # direct methods
-.method public synthetic constructor <init>(Lorg/telegram/ui/ActionBar/ActionBarLayout;ZLandroid/view/View;ZLorg/telegram/ui/ActionBar/BaseFragment;Lorg/telegram/ui/ActionBar/BaseFragment;)V
+.method public synthetic constructor <init>(Lorg/telegram/ui/ActionBar/ActionBarLayout;ZLorg/telegram/ui/ActionBar/ActionBarPopupWindow$ActionBarPopupWindowLayout;ZLorg/telegram/ui/ActionBar/BaseFragment;Lorg/telegram/ui/ActionBar/BaseFragment;)V
     .registers 7
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -29,7 +29,7 @@
 
     iput-boolean p2, p0, Lorg/telegram/ui/ActionBar/ActionBarLayout$$ExternalSyntheticLambda4;->f$1:Z
 
-    iput-object p3, p0, Lorg/telegram/ui/ActionBar/ActionBarLayout$$ExternalSyntheticLambda4;->f$2:Landroid/view/View;
+    iput-object p3, p0, Lorg/telegram/ui/ActionBar/ActionBarLayout$$ExternalSyntheticLambda4;->f$2:Lorg/telegram/ui/ActionBar/ActionBarPopupWindow$ActionBarPopupWindowLayout;
 
     iput-boolean p4, p0, Lorg/telegram/ui/ActionBar/ActionBarLayout$$ExternalSyntheticLambda4;->f$3:Z
 
@@ -49,7 +49,7 @@
 
     iget-boolean v1, p0, Lorg/telegram/ui/ActionBar/ActionBarLayout$$ExternalSyntheticLambda4;->f$1:Z
 
-    iget-object v2, p0, Lorg/telegram/ui/ActionBar/ActionBarLayout$$ExternalSyntheticLambda4;->f$2:Landroid/view/View;
+    iget-object v2, p0, Lorg/telegram/ui/ActionBar/ActionBarLayout$$ExternalSyntheticLambda4;->f$2:Lorg/telegram/ui/ActionBar/ActionBarPopupWindow$ActionBarPopupWindowLayout;
 
     iget-boolean v3, p0, Lorg/telegram/ui/ActionBar/ActionBarLayout$$ExternalSyntheticLambda4;->f$3:Z
 
@@ -57,7 +57,7 @@
 
     iget-object v5, p0, Lorg/telegram/ui/ActionBar/ActionBarLayout$$ExternalSyntheticLambda4;->f$5:Lorg/telegram/ui/ActionBar/BaseFragment;
 
-    invoke-static/range {v0 .. v5}, Lorg/telegram/ui/ActionBar/ActionBarLayout;->$r8$lambda$GpvFiKLetRH9xOeBZ9Z9tIR7Vyo(Lorg/telegram/ui/ActionBar/ActionBarLayout;ZLandroid/view/View;ZLorg/telegram/ui/ActionBar/BaseFragment;Lorg/telegram/ui/ActionBar/BaseFragment;)V
+    invoke-static/range {v0 .. v5}, Lorg/telegram/ui/ActionBar/ActionBarLayout;->$r8$lambda$6Ta9Kpf2VUSEEBTF91I8xN8X88o(Lorg/telegram/ui/ActionBar/ActionBarLayout;ZLorg/telegram/ui/ActionBar/ActionBarPopupWindow$ActionBarPopupWindowLayout;ZLorg/telegram/ui/ActionBar/BaseFragment;Lorg/telegram/ui/ActionBar/BaseFragment;)V
 
     return-void
 .end method

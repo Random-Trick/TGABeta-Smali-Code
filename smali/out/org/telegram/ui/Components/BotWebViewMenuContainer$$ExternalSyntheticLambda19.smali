@@ -2,44 +2,32 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lorg/telegram/ui/Components/SimpleFloatPropertyCompat$Getter;
+.implements Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout$WebViewSwipeContainer$Delegate;
 
 
-# static fields
-.field public static final synthetic INSTANCE:Lorg/telegram/ui/Components/BotWebViewMenuContainer$$ExternalSyntheticLambda19;
+# instance fields
+.field public final synthetic f$0:Lorg/telegram/ui/Components/BotWebViewMenuContainer;
 
 
 # direct methods
-.method static synthetic constructor <clinit>()V
-    .registers 1
-
-    new-instance v0, Lorg/telegram/ui/Components/BotWebViewMenuContainer$$ExternalSyntheticLambda19;
-
-    invoke-direct {v0}, Lorg/telegram/ui/Components/BotWebViewMenuContainer$$ExternalSyntheticLambda19;-><init>()V
-
-    sput-object v0, Lorg/telegram/ui/Components/BotWebViewMenuContainer$$ExternalSyntheticLambda19;->INSTANCE:Lorg/telegram/ui/Components/BotWebViewMenuContainer$$ExternalSyntheticLambda19;
-
-    return-void
-.end method
-
-.method private synthetic constructor <init>()V
-    .registers 1
+.method public synthetic constructor <init>(Lorg/telegram/ui/Components/BotWebViewMenuContainer;)V
+    .registers 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lorg/telegram/ui/Components/BotWebViewMenuContainer$$ExternalSyntheticLambda19;->f$0:Lorg/telegram/ui/Components/BotWebViewMenuContainer;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final get(Ljava/lang/Object;)F
+.method public final onDismiss()V
     .registers 2
 
-    check-cast p1, Lorg/telegram/ui/Components/BotWebViewMenuContainer;
+    iget-object v0, p0, Lorg/telegram/ui/Components/BotWebViewMenuContainer$$ExternalSyntheticLambda19;->f$0:Lorg/telegram/ui/Components/BotWebViewMenuContainer;
 
-    invoke-static {p1}, Lorg/telegram/ui/Components/BotWebViewMenuContainer;->$r8$lambda$AvzuPBoviy0aKUVCvG219Wo6Mo8(Lorg/telegram/ui/Components/BotWebViewMenuContainer;)F
+    invoke-virtual {v0}, Lorg/telegram/ui/Components/BotWebViewMenuContainer;->dismiss()V
 
-    move-result p1
-
-    return p1
+    return-void
 .end method

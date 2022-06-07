@@ -43,16 +43,16 @@
 .method public constructor <init>(Lorg/telegram/ui/ArticleViewer;Landroid/content/Context;Lorg/telegram/ui/ArticleViewer$WebpageAdapter;)V
     .registers 7
 
-    .line 10963
+    .line 10964
     iput-object p1, p0, Lorg/telegram/ui/ArticleViewer$BlockPreformattedCell;->this$0:Lorg/telegram/ui/ArticleViewer;
 
-    .line 10964
+    .line 10965
     invoke-direct {p0, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    .line 10965
+    .line 10966
     iput-object p3, p0, Lorg/telegram/ui/ArticleViewer$BlockPreformattedCell;->parentAdapter:Lorg/telegram/ui/ArticleViewer$WebpageAdapter;
 
-    .line 10967
+    .line 10968
     new-instance p3, Lorg/telegram/ui/ArticleViewer$BlockPreformattedCell$1;
 
     invoke-direct {p3, p0, p2, p1}, Lorg/telegram/ui/ArticleViewer$BlockPreformattedCell$1;-><init>(Lorg/telegram/ui/ArticleViewer$BlockPreformattedCell;Landroid/content/Context;Lorg/telegram/ui/ArticleViewer;)V
@@ -61,7 +61,7 @@
 
     const/high16 v0, 0x41000000    # 8.0f
 
-    .line 10985
+    .line 10986
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v1
@@ -74,7 +74,7 @@
 
     invoke-virtual {p3, v2, v1, v2, v0}, Landroid/widget/HorizontalScrollView;->setPadding(IIII)V
 
-    .line 10986
+    .line 10987
     iget-object p3, p0, Lorg/telegram/ui/ArticleViewer$BlockPreformattedCell;->scrollView:Landroid/widget/HorizontalScrollView;
 
     const/4 v0, -0x1
@@ -87,14 +87,14 @@
 
     invoke-virtual {p0, p3, v1}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 10988
+    .line 10989
     new-instance p3, Lorg/telegram/ui/ArticleViewer$BlockPreformattedCell$2;
 
     invoke-direct {p3, p0, p2, p1}, Lorg/telegram/ui/ArticleViewer$BlockPreformattedCell$2;-><init>(Lorg/telegram/ui/ArticleViewer$BlockPreformattedCell;Landroid/content/Context;Lorg/telegram/ui/ArticleViewer;)V
 
     iput-object p3, p0, Lorg/telegram/ui/ArticleViewer$BlockPreformattedCell;->textContainer:Landroid/view/View;
 
-    .line 11025
+    .line 11026
     new-instance p1, Landroid/widget/FrameLayout$LayoutParams;
 
     const/4 p2, -0x2
@@ -103,7 +103,7 @@
 
     const/high16 p2, 0x41800000    # 16.0f
 
-    .line 11026
+    .line 11027
     invoke-static {p2}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result p2
@@ -114,7 +114,7 @@
 
     const/high16 p2, 0x41400000    # 12.0f
 
-    .line 11027
+    .line 11028
     invoke-static {p2}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result p2
@@ -123,21 +123,21 @@
 
     iput p2, p1, Landroid/widget/FrameLayout$LayoutParams;->topMargin:I
 
-    .line 11028
+    .line 11029
     iget-object p2, p0, Lorg/telegram/ui/ArticleViewer$BlockPreformattedCell;->scrollView:Landroid/widget/HorizontalScrollView;
 
     iget-object p3, p0, Lorg/telegram/ui/ArticleViewer$BlockPreformattedCell;->textContainer:Landroid/view/View;
 
     invoke-virtual {p2, p3, p1}, Landroid/widget/HorizontalScrollView;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 11030
+    .line 11031
     sget p1, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 p2, 0x17
 
     if-lt p1, p2, :cond_60
 
-    .line 11031
+    .line 11032
     iget-object p1, p0, Lorg/telegram/ui/ArticleViewer$BlockPreformattedCell;->scrollView:Landroid/widget/HorizontalScrollView;
 
     new-instance p2, Lorg/telegram/ui/ArticleViewer$BlockPreformattedCell$$ExternalSyntheticLambda0;
@@ -146,7 +146,7 @@
 
     invoke-virtual {p1, p2}, Landroid/widget/HorizontalScrollView;->setOnScrollChangeListener(Landroid/view/View$OnScrollChangeListener;)V
 
-    .line 11038
+    .line 11039
     :cond_60
     invoke-virtual {p0, v2}, Landroid/widget/FrameLayout;->setWillNotDraw(Z)V
 
@@ -156,7 +156,7 @@
 .method static synthetic access$20500(Lorg/telegram/ui/ArticleViewer$BlockPreformattedCell;)Landroid/view/View;
     .registers 1
 
-    .line 10953
+    .line 10954
     iget-object p0, p0, Lorg/telegram/ui/ArticleViewer$BlockPreformattedCell;->textContainer:Landroid/view/View;
 
     return-object p0
@@ -165,7 +165,7 @@
 .method static synthetic access$20600(Lorg/telegram/ui/ArticleViewer$BlockPreformattedCell;)Lorg/telegram/tgnet/TLRPC$TL_pageBlockPreformatted;
     .registers 1
 
-    .line 10953
+    .line 10954
     iget-object p0, p0, Lorg/telegram/ui/ArticleViewer$BlockPreformattedCell;->currentBlock:Lorg/telegram/tgnet/TLRPC$TL_pageBlockPreformatted;
 
     return-object p0
@@ -174,7 +174,7 @@
 .method static synthetic access$20700(Lorg/telegram/ui/ArticleViewer$BlockPreformattedCell;)Lorg/telegram/ui/ArticleViewer$DrawingText;
     .registers 1
 
-    .line 10953
+    .line 10954
     iget-object p0, p0, Lorg/telegram/ui/ArticleViewer$BlockPreformattedCell;->textLayout:Lorg/telegram/ui/ArticleViewer$DrawingText;
 
     return-object p0
@@ -183,7 +183,7 @@
 .method static synthetic access$20702(Lorg/telegram/ui/ArticleViewer$BlockPreformattedCell;Lorg/telegram/ui/ArticleViewer$DrawingText;)Lorg/telegram/ui/ArticleViewer$DrawingText;
     .registers 2
 
-    .line 10953
+    .line 10954
     iput-object p1, p0, Lorg/telegram/ui/ArticleViewer$BlockPreformattedCell;->textLayout:Lorg/telegram/ui/ArticleViewer$DrawingText;
 
     return-object p1
@@ -192,7 +192,7 @@
 .method static synthetic access$20800(Lorg/telegram/ui/ArticleViewer$BlockPreformattedCell;)Lorg/telegram/ui/ArticleViewer$WebpageAdapter;
     .registers 1
 
-    .line 10953
+    .line 10954
     iget-object p0, p0, Lorg/telegram/ui/ArticleViewer$BlockPreformattedCell;->parentAdapter:Lorg/telegram/ui/ArticleViewer$WebpageAdapter;
 
     return-object p0
@@ -201,7 +201,7 @@
 .method private synthetic lambda$new$0(Landroid/view/View;IIII)V
     .registers 6
 
-    .line 11032
+    .line 11033
     iget-object p1, p0, Lorg/telegram/ui/ArticleViewer$BlockPreformattedCell;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     iget-object p1, p1, Lorg/telegram/ui/ArticleViewer;->textSelectionHelper:Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;
@@ -214,7 +214,7 @@
 
     if-eqz p1, :cond_13
 
-    .line 11033
+    .line 11034
     iget-object p1, p0, Lorg/telegram/ui/ArticleViewer$BlockPreformattedCell;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     iget-object p1, p1, Lorg/telegram/ui/ArticleViewer;->textSelectionHelper:Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;
@@ -238,12 +238,12 @@
         }
     .end annotation
 
-    .line 11064
+    .line 11065
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockPreformattedCell;->textLayout:Lorg/telegram/ui/ArticleViewer$DrawingText;
 
     if-eqz v0, :cond_7
 
-    .line 11065
+    .line 11066
     invoke-virtual {p1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     :cond_7
@@ -253,12 +253,12 @@
 .method public invalidate()V
     .registers 2
 
-    .line 11071
+    .line 11072
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockPreformattedCell;->textContainer:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->invalidate()V
 
-    .line 11072
+    .line 11073
     invoke-super {p0}, Landroid/widget/FrameLayout;->invalidate()V
 
     return-void
@@ -267,7 +267,7 @@
 .method protected onDraw(Landroid/graphics/Canvas;)V
     .registers 9
 
-    .line 11056
+    .line 11057
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockPreformattedCell;->currentBlock:Lorg/telegram/tgnet/TLRPC$TL_pageBlockPreformatted;
 
     if-nez v0, :cond_5
@@ -279,7 +279,7 @@
 
     const/high16 v0, 0x41000000    # 8.0f
 
-    .line 11059
+    .line 11060
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v1
@@ -318,12 +318,12 @@
 .method protected onMeasure(II)V
     .registers 5
 
-    .line 11049
+    .line 11050
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result p1
 
-    .line 11050
+    .line 11051
     iget-object p2, p0, Lorg/telegram/ui/ArticleViewer$BlockPreformattedCell;->scrollView:Landroid/widget/HorizontalScrollView;
 
     const/high16 v0, 0x40000000    # 2.0f
@@ -340,7 +340,7 @@
 
     invoke-virtual {p2, v0, v1}, Landroid/widget/HorizontalScrollView;->measure(II)V
 
-    .line 11051
+    .line 11052
     iget-object p2, p0, Lorg/telegram/ui/ArticleViewer$BlockPreformattedCell;->scrollView:Landroid/widget/HorizontalScrollView;
 
     invoke-virtual {p2}, Landroid/widget/HorizontalScrollView;->getMeasuredHeight()I
@@ -355,17 +355,17 @@
 .method public setBlock(Lorg/telegram/tgnet/TLRPC$TL_pageBlockPreformatted;)V
     .registers 3
 
-    .line 11042
+    .line 11043
     iput-object p1, p0, Lorg/telegram/ui/ArticleViewer$BlockPreformattedCell;->currentBlock:Lorg/telegram/tgnet/TLRPC$TL_pageBlockPreformatted;
 
-    .line 11043
+    .line 11044
     iget-object p1, p0, Lorg/telegram/ui/ArticleViewer$BlockPreformattedCell;->scrollView:Landroid/widget/HorizontalScrollView;
 
     const/4 v0, 0x0
 
     invoke-virtual {p1, v0}, Landroid/widget/HorizontalScrollView;->setScrollX(I)V
 
-    .line 11044
+    .line 11045
     iget-object p1, p0, Lorg/telegram/ui/ArticleViewer$BlockPreformattedCell;->textContainer:Landroid/view/View;
 
     invoke-virtual {p1}, Landroid/view/View;->requestLayout()V

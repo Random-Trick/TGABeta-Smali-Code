@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lorg/telegram/ui/Delegates/ChatActivityMemberRequestsDelegate$Callback;
+.implements Lorg/telegram/ui/Components/RecyclerListView$OnItemClickListener;
 
 
 # instance fields
@@ -22,12 +22,12 @@
 
 
 # virtual methods
-.method public final onEnterOffsetChanged()V
-    .registers 2
+.method public final onItemClick(Landroid/view/View;I)V
+    .registers 4
 
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda247;->f$0:Lorg/telegram/ui/ChatActivity;
 
-    invoke-static {v0}, Lorg/telegram/ui/ChatActivity;->$r8$lambda$mB_KLWGyyTCyiLOW0qrYvY8tIH0(Lorg/telegram/ui/ChatActivity;)V
+    invoke-static {v0, p1, p2}, Lorg/telegram/ui/ChatActivity;->$r8$lambda$nj_FdzSeuGOSyRgvBeBG8KlF49E(Lorg/telegram/ui/ChatActivity;Landroid/view/View;I)V
 
     return-void
 .end method

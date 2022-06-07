@@ -31,10 +31,10 @@
 .method public constructor <init>()V
     .registers 2
 
-    .line 52776
+    .line 53241
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
-    .line 52780
+    .line 53245
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -49,12 +49,12 @@
 .method public deserializeResponse(Lorg/telegram/tgnet/AbstractSerializedData;IZ)Lorg/telegram/tgnet/TLObject;
     .registers 8
 
-    .line 52783
+    .line 53248
     new-instance p2, Lorg/telegram/tgnet/TLRPC$Vector;
 
     invoke-direct {p2}, Lorg/telegram/tgnet/TLRPC$Vector;-><init>()V
 
-    .line 52784
+    .line 53249
     invoke-virtual {p1, p3}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
@@ -64,7 +64,7 @@
     :goto_a
     if-ge v1, v0, :cond_1c
 
-    .line 52786
+    .line 53251
     iget-object v2, p2, Lorg/telegram/tgnet/TLRPC$Vector;->objects:Ljava/util/ArrayList;
 
     invoke-virtual {p1, p3}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
@@ -88,29 +88,29 @@
 .method public serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
     .registers 5
 
-    .line 52792
+    .line 53257
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_phone_checkGroupCall;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 52793
+    .line 53258
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_phone_checkGroupCall;->call:Lorg/telegram/tgnet/TLRPC$TL_inputGroupCall;
 
     invoke-virtual {v0, p1}, Lorg/telegram/tgnet/TLRPC$TL_inputGroupCall;->serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
 
     const v0, 0x1cb5c415
 
-    .line 52794
+    .line 53259
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 52795
+    .line 53260
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_phone_checkGroupCall;->sources:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
-    .line 52796
+    .line 53261
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
     const/4 v1, 0x0
@@ -118,7 +118,7 @@
     :goto_1a
     if-ge v1, v0, :cond_2e
 
-    .line 52798
+    .line 53263
     iget-object v2, p0, Lorg/telegram/tgnet/TLRPC$TL_phone_checkGroupCall;->sources:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;

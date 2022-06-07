@@ -25,7 +25,7 @@
 .method constructor <init>(Lorg/telegram/ui/PhotoViewer;)V
     .registers 2
 
-    .line 416
+    .line 417
     iput-object p1, p0, Lorg/telegram/ui/PhotoViewer$2;->this$0:Lorg/telegram/ui/PhotoViewer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public run()V
     .registers 4
 
-    .line 419
+    .line 420
     iget-object v0, p0, Lorg/telegram/ui/PhotoViewer$2;->this$0:Lorg/telegram/ui/PhotoViewer;
 
     invoke-static {v0}, Lorg/telegram/ui/PhotoViewer;->access$100(Lorg/telegram/ui/PhotoViewer;)Z
@@ -59,7 +59,7 @@
 
     if-nez v0, :cond_61
 
-    .line 420
+    .line 421
     iget-object v0, p0, Lorg/telegram/ui/PhotoViewer$2;->this$0:Lorg/telegram/ui/PhotoViewer;
 
     invoke-static {v0}, Lorg/telegram/ui/PhotoViewer;->access$300(Lorg/telegram/ui/PhotoViewer;)Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
@@ -82,7 +82,7 @@
 
     return-void
 
-    .line 423
+    .line 424
     :cond_29
     iget-object v0, p0, Lorg/telegram/ui/PhotoViewer$2;->this$0:Lorg/telegram/ui/PhotoViewer;
 
@@ -106,7 +106,7 @@
 
     return-void
 
-    .line 426
+    .line 427
     :cond_3e
     iget-object v0, p0, Lorg/telegram/ui/PhotoViewer$2;->this$0:Lorg/telegram/ui/PhotoViewer;
 
@@ -130,7 +130,7 @@
 
     return-void
 
-    .line 429
+    .line 430
     :cond_53
     invoke-static {}, Lorg/telegram/ui/PhotoViewer;->access$600()Lorg/telegram/ui/PhotoViewer;
 
@@ -147,7 +147,7 @@
 
     const/4 v2, 0x1
 
-    .line 432
+    .line 433
     invoke-static {v1, v0, v2}, Lorg/telegram/ui/PhotoViewer;->access$700(Lorg/telegram/ui/PhotoViewer;ZZ)V
 
     :cond_61

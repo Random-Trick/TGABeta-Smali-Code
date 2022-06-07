@@ -15,11 +15,15 @@
 
 
 # instance fields
+.field document:Lorg/telegram/tgnet/TLRPC$Document;
+
 .field imageReceiver:Lorg/telegram/messenger/ImageReceiver;
 
 .field isOut:Z
 
 .field public isPremiumSticker:Z
+
+.field public lastH:F
 
 .field public lastW:F
 
@@ -42,10 +46,10 @@
 .method private constructor <init>(Lorg/telegram/ui/EmojiAnimationsOverlay;)V
     .registers 2
 
-    .line 528
+    .line 613
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 540
+    .line 626
     new-instance p1, Lorg/telegram/messenger/ImageReceiver;
 
     invoke-direct {p1}, Lorg/telegram/messenger/ImageReceiver;-><init>()V
@@ -58,7 +62,7 @@
 .method synthetic constructor <init>(Lorg/telegram/ui/EmojiAnimationsOverlay;Lorg/telegram/ui/EmojiAnimationsOverlay$1;)V
     .registers 3
 
-    .line 528
+    .line 613
     invoke-direct {p0, p1}, Lorg/telegram/ui/EmojiAnimationsOverlay$DrawingObject;-><init>(Lorg/telegram/ui/EmojiAnimationsOverlay;)V
 
     return-void

@@ -758,7 +758,7 @@
 
     if-eqz v1, :cond_43
 
-    const v1, 0x7f0e071f
+    const v1, 0x7f0e0774
 
     const-string v2, "FilterDiscardNewTitle"
 
@@ -769,7 +769,7 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const v1, 0x7f0e071d
+    const v1, 0x7f0e0772
 
     const-string v2, "FilterDiscardNewAlert"
 
@@ -780,7 +780,7 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const v1, 0x7f0e071e
+    const v1, 0x7f0e0773
 
     const-string v2, "FilterDiscardNewSave"
 
@@ -798,7 +798,7 @@
     goto :goto_6c
 
     :cond_43
-    const v1, 0x7f0e0720
+    const v1, 0x7f0e0775
 
     const-string v2, "FilterDiscardTitle"
 
@@ -809,7 +809,7 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const v1, 0x7f0e071c
+    const v1, 0x7f0e0771
 
     const-string v2, "FilterDiscardAlert"
 
@@ -820,7 +820,7 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const v1, 0x7f0e0188
+    const v1, 0x7f0e01bd
 
     const-string v2, "ApplyTheme"
 
@@ -836,7 +836,7 @@
     invoke-virtual {v0, v1, v2}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
     :goto_6c
-    const v1, 0x7f0e0c3f
+    const v1, 0x7f0e0cc9
 
     const-string v2, "PassportDiscard"
 
@@ -1118,7 +1118,7 @@
 
     if-eqz v1, :cond_2e
 
-    const v0, 0x7f0e072f
+    const v0, 0x7f0e0784
 
     const-string v1, "FilterNameUnread"
 
@@ -1137,7 +1137,7 @@
 
     if-eqz v0, :cond_a7
 
-    const v0, 0x7f0e072e
+    const v0, 0x7f0e0783
 
     const-string v1, "FilterNameNonMuted"
 
@@ -1162,7 +1162,7 @@
 
     if-nez v0, :cond_a7
 
-    const v0, 0x7f0e0718
+    const v0, 0x7f0e076d
 
     const-string v1, "FilterContacts"
 
@@ -1187,7 +1187,7 @@
 
     if-nez v0, :cond_a7
 
-    const v0, 0x7f0e0736
+    const v0, 0x7f0e078b
 
     const-string v1, "FilterNonContacts"
 
@@ -1212,7 +1212,7 @@
 
     if-nez v0, :cond_a7
 
-    const v0, 0x7f0e0729
+    const v0, 0x7f0e077e
 
     const-string v1, "FilterGroups"
 
@@ -1237,7 +1237,7 @@
 
     if-nez v0, :cond_a7
 
-    const v0, 0x7f0e070e
+    const v0, 0x7f0e0763
 
     const-string v1, "FilterBots"
 
@@ -1262,7 +1262,7 @@
 
     if-nez v0, :cond_a7
 
-    const v0, 0x7f0e070f
+    const v0, 0x7f0e0764
 
     const-string v1, "FilterChannels"
 
@@ -1876,7 +1876,7 @@
 
     invoke-direct {p1, p2}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    const p2, 0x7f0e0719
+    const p2, 0x7f0e076e
 
     const-string v0, "FilterDelete"
 
@@ -1887,7 +1887,7 @@
 
     invoke-virtual {p1, p2}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const p2, 0x7f0e071a
+    const p2, 0x7f0e076f
 
     const-string v0, "FilterDeleteAlert"
 
@@ -1898,7 +1898,7 @@
 
     invoke-virtual {p1, p2}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const p2, 0x7f0e0331
+    const p2, 0x7f0e036d
 
     const-string v0, "Cancel"
 
@@ -1911,7 +1911,7 @@
 
     invoke-virtual {p1, p2, v0}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setNegativeButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const p2, 0x7f0e0540
+    const p2, 0x7f0e0591
 
     const-string v0, "Delete"
 
@@ -2701,7 +2701,7 @@
     const/4 v6, 0x0
 
     :goto_42
-    iput-boolean v6, v4, Lorg/telegram/tgnet/TLRPC$TL_dialogFilter;->contacts:Z
+    iput-boolean v6, v4, Lorg/telegram/tgnet/TLRPC$DialogFilter;->contacts:Z
 
     .line 600
     sget v6, Lorg/telegram/messenger/MessagesController;->DIALOG_FILTER_FLAG_NON_CONTACTS:I
@@ -2718,7 +2718,7 @@
     const/4 v6, 0x0
 
     :goto_4d
-    iput-boolean v6, v4, Lorg/telegram/tgnet/TLRPC$TL_dialogFilter;->non_contacts:Z
+    iput-boolean v6, v4, Lorg/telegram/tgnet/TLRPC$DialogFilter;->non_contacts:Z
 
     .line 601
     sget v6, Lorg/telegram/messenger/MessagesController;->DIALOG_FILTER_FLAG_GROUPS:I
@@ -2735,7 +2735,7 @@
     const/4 v6, 0x0
 
     :goto_58
-    iput-boolean v6, v4, Lorg/telegram/tgnet/TLRPC$TL_dialogFilter;->groups:Z
+    iput-boolean v6, v4, Lorg/telegram/tgnet/TLRPC$DialogFilter;->groups:Z
 
     .line 602
     sget v6, Lorg/telegram/messenger/MessagesController;->DIALOG_FILTER_FLAG_CHANNELS:I
@@ -2752,7 +2752,7 @@
     const/4 v6, 0x0
 
     :goto_63
-    iput-boolean v6, v4, Lorg/telegram/tgnet/TLRPC$TL_dialogFilter;->broadcasts:Z
+    iput-boolean v6, v4, Lorg/telegram/tgnet/TLRPC$DialogFilter;->broadcasts:Z
 
     .line 603
     sget v6, Lorg/telegram/messenger/MessagesController;->DIALOG_FILTER_FLAG_BOTS:I
@@ -2769,7 +2769,7 @@
     const/4 v6, 0x0
 
     :goto_6e
-    iput-boolean v6, v4, Lorg/telegram/tgnet/TLRPC$TL_dialogFilter;->bots:Z
+    iput-boolean v6, v4, Lorg/telegram/tgnet/TLRPC$DialogFilter;->bots:Z
 
     .line 604
     sget v6, Lorg/telegram/messenger/MessagesController;->DIALOG_FILTER_FLAG_EXCLUDE_MUTED:I
@@ -2786,7 +2786,7 @@
     const/4 v6, 0x0
 
     :goto_79
-    iput-boolean v6, v4, Lorg/telegram/tgnet/TLRPC$TL_dialogFilter;->exclude_muted:Z
+    iput-boolean v6, v4, Lorg/telegram/tgnet/TLRPC$DialogFilter;->exclude_muted:Z
 
     .line 605
     sget v6, Lorg/telegram/messenger/MessagesController;->DIALOG_FILTER_FLAG_EXCLUDE_READ:I
@@ -2803,7 +2803,7 @@
     const/4 v6, 0x0
 
     :goto_84
-    iput-boolean v6, v4, Lorg/telegram/tgnet/TLRPC$TL_dialogFilter;->exclude_read:Z
+    iput-boolean v6, v4, Lorg/telegram/tgnet/TLRPC$DialogFilter;->exclude_read:Z
 
     .line 606
     sget v6, Lorg/telegram/messenger/MessagesController;->DIALOG_FILTER_FLAG_EXCLUDE_ARCHIVED:I
@@ -2820,17 +2820,17 @@
     const/4 v6, 0x0
 
     :goto_8f
-    iput-boolean v6, v4, Lorg/telegram/tgnet/TLRPC$TL_dialogFilter;->exclude_archived:Z
+    iput-boolean v6, v4, Lorg/telegram/tgnet/TLRPC$DialogFilter;->exclude_archived:Z
 
     .line 607
     iget v6, v14, Lorg/telegram/messenger/MessagesController$DialogFilter;->id:I
 
-    iput v6, v4, Lorg/telegram/tgnet/TLRPC$TL_dialogFilter;->id:I
+    iput v6, v4, Lorg/telegram/tgnet/TLRPC$DialogFilter;->id:I
 
     move-object/from16 v13, p2
 
     .line 608
-    iput-object v13, v4, Lorg/telegram/tgnet/TLRPC$TL_dialogFilter;->title:Ljava/lang/String;
+    iput-object v13, v4, Lorg/telegram/tgnet/TLRPC$DialogFilter;->title:Ljava/lang/String;
 
     .line 609
     invoke-virtual/range {p11 .. p11}, Lorg/telegram/ui/ActionBar/BaseFragment;->getMessagesController()Lorg/telegram/messenger/MessagesController;
@@ -2905,7 +2905,7 @@
     .line 635
     iget-object v8, v15, Lorg/telegram/tgnet/TLRPC$TL_messages_updateDialogFilter;->filter:Lorg/telegram/tgnet/TLRPC$TL_dialogFilter;
 
-    iget-object v8, v8, Lorg/telegram/tgnet/TLRPC$TL_dialogFilter;->include_peers:Ljava/util/ArrayList;
+    iget-object v8, v8, Lorg/telegram/tgnet/TLRPC$DialogFilter;->include_peers:Ljava/util/ArrayList;
 
     move-object/from16 v9, p3
 
@@ -2917,7 +2917,7 @@
     .line 638
     iget-object v8, v15, Lorg/telegram/tgnet/TLRPC$TL_messages_updateDialogFilter;->filter:Lorg/telegram/tgnet/TLRPC$TL_dialogFilter;
 
-    iget-object v8, v8, Lorg/telegram/tgnet/TLRPC$TL_dialogFilter;->exclude_peers:Ljava/util/ArrayList;
+    iget-object v8, v8, Lorg/telegram/tgnet/TLRPC$DialogFilter;->exclude_peers:Ljava/util/ArrayList;
 
     move-object/from16 v9, p4
 
@@ -2927,7 +2927,7 @@
     :cond_e1
     iget-object v8, v15, Lorg/telegram/tgnet/TLRPC$TL_messages_updateDialogFilter;->filter:Lorg/telegram/tgnet/TLRPC$TL_dialogFilter;
 
-    iget-object v8, v8, Lorg/telegram/tgnet/TLRPC$TL_dialogFilter;->pinned_peers:Ljava/util/ArrayList;
+    iget-object v8, v8, Lorg/telegram/tgnet/TLRPC$DialogFilter;->pinned_peers:Ljava/util/ArrayList;
 
     move-object v9, v6
 
@@ -3301,7 +3301,7 @@
 
     if-eqz p4, :cond_54
 
-    const v3, 0x7f0e0742
+    const v3, 0x7f0e0796
 
     const-string v4, "FilterRemoveInclusionTitle"
 
@@ -3317,7 +3317,7 @@
 
     if-eqz v3, :cond_2e
 
-    const p3, 0x7f0e0741
+    const p3, 0x7f0e0795
 
     new-array v2, v2, [Ljava/lang/Object;
 
@@ -3340,7 +3340,7 @@
 
     if-eqz p3, :cond_43
 
-    const p3, 0x7f0e0743
+    const p3, 0x7f0e0797
 
     new-array v2, v2, [Ljava/lang/Object;
 
@@ -3358,7 +3358,7 @@
     goto :goto_9a
 
     :cond_43
-    const p3, 0x7f0e0740
+    const p3, 0x7f0e0794
 
     new-array v2, v2, [Ljava/lang/Object;
 
@@ -3376,7 +3376,7 @@
     goto :goto_9a
 
     :cond_54
-    const v3, 0x7f0e073c
+    const v3, 0x7f0e0791
 
     const-string v4, "FilterRemoveExclusionTitle"
 
@@ -3392,7 +3392,7 @@
 
     if-eqz v3, :cond_75
 
-    const p3, 0x7f0e073b
+    const p3, 0x7f0e0790
 
     new-array v2, v2, [Ljava/lang/Object;
 
@@ -3415,7 +3415,7 @@
 
     if-eqz p3, :cond_8a
 
-    const p3, 0x7f0e073d
+    const p3, 0x7f0e0792
 
     new-array v2, v2, [Ljava/lang/Object;
 
@@ -3433,7 +3433,7 @@
     goto :goto_9a
 
     :cond_8a
-    const p3, 0x7f0e073a
+    const p3, 0x7f0e078f
 
     new-array v2, v2, [Ljava/lang/Object;
 
@@ -3449,7 +3449,7 @@
     invoke-virtual {v0, p2}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
     :goto_9a
-    const p2, 0x7f0e0331
+    const p2, 0x7f0e036d
 
     const-string p3, "Cancel"
 
@@ -3462,7 +3462,7 @@
 
     invoke-virtual {v0, p2, p3}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setNegativeButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const p2, 0x7f0e10d8
+    const p2, 0x7f0e1197
 
     const-string p3, "StickersRemove"
 
@@ -4058,7 +4058,7 @@
     .line 275
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
-    const v1, 0x7f070140
+    const v1, 0x7f070109
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/ActionBar;->setBackButtonImage(I)V
 
@@ -4086,7 +4086,7 @@
     .line 279
     iget-object v2, p0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
-    const v4, 0x7f0e0731
+    const v4, 0x7f0e0786
 
     const-string v5, "FilterNew"
 
@@ -4146,7 +4146,7 @@
 
     invoke-virtual {v2, v4}, Lorg/telegram/ui/ActionBar/ActionBar;->setActionBarMenuOnItemClick(Lorg/telegram/ui/ActionBar/ActionBar$ActionBarMenuOnItemClick;)V
 
-    const v2, 0x7f0e0f56
+    const v2, 0x7f0e100e
 
     const-string v4, "Save"
 

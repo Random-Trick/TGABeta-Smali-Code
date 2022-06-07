@@ -2,54 +2,40 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lorg/telegram/ui/Components/AlertsCreator$ScheduleDatePickerDelegate;
+.implements Lorg/telegram/ui/ActionBar/ThemeDescription$ThemeDescriptionDelegate;
 
 
 # instance fields
 .field public final synthetic f$0:Lorg/telegram/ui/ChatActivity;
 
-.field public final synthetic f$1:Lorg/telegram/tgnet/TLRPC$TL_document;
-
-.field public final synthetic f$2:Ljava/lang/String;
-
-.field public final synthetic f$3:Ljava/lang/Object;
-
 
 # direct methods
-.method public synthetic constructor <init>(Lorg/telegram/ui/ChatActivity;Lorg/telegram/tgnet/TLRPC$TL_document;Ljava/lang/String;Ljava/lang/Object;)V
-    .registers 5
+.method public synthetic constructor <init>(Lorg/telegram/ui/ChatActivity;)V
+    .registers 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda231;->f$0:Lorg/telegram/ui/ChatActivity;
-
-    iput-object p2, p0, Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda231;->f$1:Lorg/telegram/tgnet/TLRPC$TL_document;
-
-    iput-object p3, p0, Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda231;->f$2:Ljava/lang/String;
-
-    iput-object p4, p0, Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda231;->f$3:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final didSelectDate(ZI)V
-    .registers 9
+.method public final didSetColor()V
+    .registers 2
 
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda231;->f$0:Lorg/telegram/ui/ChatActivity;
 
-    iget-object v1, p0, Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda231;->f$1:Lorg/telegram/tgnet/TLRPC$TL_document;
+    invoke-static {v0}, Lorg/telegram/ui/ChatActivity;->$r8$lambda$Je4eUhltLBLJBzxClJ1pLvdPiLE(Lorg/telegram/ui/ChatActivity;)V
 
-    iget-object v2, p0, Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda231;->f$2:Ljava/lang/String;
+    return-void
+.end method
 
-    iget-object v3, p0, Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda231;->f$3:Ljava/lang/Object;
+.method public synthetic onAnimationProgress(F)V
+    .registers 2
 
-    move v4, p1
-
-    move v5, p2
-
-    invoke-static/range {v0 .. v5}, Lorg/telegram/ui/ChatActivity;->$r8$lambda$F0XVjlr9Cldh0incWGYp_zd4XaA(Lorg/telegram/ui/ChatActivity;Lorg/telegram/tgnet/TLRPC$TL_document;Ljava/lang/String;Ljava/lang/Object;ZI)V
+    invoke-static {p0, p1}, Lorg/telegram/ui/ActionBar/ThemeDescription$ThemeDescriptionDelegate$-CC;->$default$onAnimationProgress(Lorg/telegram/ui/ActionBar/ThemeDescription$ThemeDescriptionDelegate;F)V
 
     return-void
 .end method

@@ -24,7 +24,7 @@
 .method constructor <init>(Lorg/telegram/ui/ArticleViewer;Z)V
     .registers 3
 
-    .line 4320
+    .line 4321
     iput-object p1, p0, Lorg/telegram/ui/ArticleViewer$24;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     iput-boolean p2, p0, Lorg/telegram/ui/ArticleViewer$24;->val$show:Z
@@ -39,7 +39,7 @@
 .method public onAnimationCancel(Landroid/animation/Animator;)V
     .registers 3
 
-    .line 4334
+    .line 4335
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$24;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     invoke-static {v0}, Lorg/telegram/ui/ArticleViewer;->access$10800(Lorg/telegram/ui/ArticleViewer;)Landroid/animation/AnimatorSet;
@@ -60,7 +60,7 @@
 
     if-eqz p1, :cond_1a
 
-    .line 4335
+    .line 4336
     iget-object p1, p0, Lorg/telegram/ui/ArticleViewer$24;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     const/4 v0, 0x0
@@ -74,7 +74,7 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .registers 3
 
-    .line 4323
+    .line 4324
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$24;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     invoke-static {v0}, Lorg/telegram/ui/ArticleViewer;->access$10800(Lorg/telegram/ui/ArticleViewer;)Landroid/animation/AnimatorSet;
@@ -95,14 +95,14 @@
 
     if-eqz p1, :cond_2c
 
-    .line 4324
+    .line 4325
     iget-boolean p1, p0, Lorg/telegram/ui/ArticleViewer$24;->val$show:Z
 
     const/4 v0, 0x4
 
     if-nez p1, :cond_23
 
-    .line 4325
+    .line 4326
     iget-object p1, p0, Lorg/telegram/ui/ArticleViewer$24;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     invoke-static {p1}, Lorg/telegram/ui/ArticleViewer;->access$10900(Lorg/telegram/ui/ArticleViewer;)Lorg/telegram/ui/Components/ContextProgressView;
@@ -113,7 +113,7 @@
 
     goto :goto_2c
 
-    .line 4327
+    .line 4328
     :cond_23
     iget-object p1, p0, Lorg/telegram/ui/ArticleViewer$24;->this$0:Lorg/telegram/ui/ArticleViewer;
 

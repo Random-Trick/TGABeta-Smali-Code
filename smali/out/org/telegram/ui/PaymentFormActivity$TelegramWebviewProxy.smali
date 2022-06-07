@@ -30,7 +30,7 @@
 .method private constructor <init>(Lorg/telegram/ui/PaymentFormActivity;)V
     .registers 2
 
-    .line 295
+    .line 337
     iput-object p1, p0, Lorg/telegram/ui/PaymentFormActivity$TelegramWebviewProxy;->this$0:Lorg/telegram/ui/PaymentFormActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +41,7 @@
 .method synthetic constructor <init>(Lorg/telegram/ui/PaymentFormActivity;Lorg/telegram/ui/PaymentFormActivity$1;)V
     .registers 3
 
-    .line 295
+    .line 337
     invoke-direct {p0, p1}, Lorg/telegram/ui/PaymentFormActivity$TelegramWebviewProxy;-><init>(Lorg/telegram/ui/PaymentFormActivity;)V
 
     return-void
@@ -50,7 +50,7 @@
 .method private synthetic lambda$postEvent$0(Ljava/lang/String;Ljava/lang/String;)V
     .registers 5
 
-    .line 299
+    .line 341
     iget-object v0, p0, Lorg/telegram/ui/PaymentFormActivity$TelegramWebviewProxy;->this$0:Lorg/telegram/ui/PaymentFormActivity;
 
     invoke-virtual {v0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getParentActivity()Landroid/app/Activity;
@@ -64,14 +64,14 @@
     :cond_9
     const-string v0, "payment_form_submit"
 
-    .line 302
+    .line 344
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
     if-eqz p1, :cond_3f
 
-    .line 304
+    .line 346
     :try_start_11
     new-instance p1, Lorg/json/JSONObject;
 
@@ -79,12 +79,12 @@
 
     const-string v0, "credentials"
 
-    .line 305
+    .line 347
     invoke-virtual {p1, v0}, Lorg/json/JSONObject;->getJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
 
     move-result-object v0
 
-    .line 306
+    .line 348
     iget-object v1, p0, Lorg/telegram/ui/PaymentFormActivity$TelegramWebviewProxy;->this$0:Lorg/telegram/ui/PaymentFormActivity;
 
     invoke-virtual {v0}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
@@ -93,7 +93,7 @@
 
     invoke-static {v1, v0}, Lorg/telegram/ui/PaymentFormActivity;->access$002(Lorg/telegram/ui/PaymentFormActivity;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 307
+    .line 349
     iget-object v0, p0, Lorg/telegram/ui/PaymentFormActivity$TelegramWebviewProxy;->this$0:Lorg/telegram/ui/PaymentFormActivity;
 
     const-string v1, "title"
@@ -111,15 +111,15 @@
     :catchall_31
     move-exception p1
 
-    .line 309
+    .line 351
     iget-object v0, p0, Lorg/telegram/ui/PaymentFormActivity$TelegramWebviewProxy;->this$0:Lorg/telegram/ui/PaymentFormActivity;
 
     invoke-static {v0, p2}, Lorg/telegram/ui/PaymentFormActivity;->access$002(Lorg/telegram/ui/PaymentFormActivity;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 310
+    .line 352
     invoke-static {p1}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
-    .line 312
+    .line 354
     :goto_3a
     iget-object p1, p0, Lorg/telegram/ui/PaymentFormActivity$TelegramWebviewProxy;->this$0:Lorg/telegram/ui/PaymentFormActivity;
 
@@ -136,7 +136,7 @@
     .annotation runtime Landroid/webkit/JavascriptInterface;
     .end annotation
 
-    .line 298
+    .line 340
     new-instance v0, Lorg/telegram/ui/PaymentFormActivity$TelegramWebviewProxy$$ExternalSyntheticLambda0;
 
     invoke-direct {v0, p0, p1, p2}, Lorg/telegram/ui/PaymentFormActivity$TelegramWebviewProxy$$ExternalSyntheticLambda0;-><init>(Lorg/telegram/ui/PaymentFormActivity$TelegramWebviewProxy;Ljava/lang/String;Ljava/lang/String;)V

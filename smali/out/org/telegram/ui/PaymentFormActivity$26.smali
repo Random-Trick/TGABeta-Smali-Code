@@ -34,7 +34,7 @@
 .method constructor <init>(Lorg/telegram/ui/PaymentFormActivity;Lcom/stripe/android/model/Card;)V
     .registers 3
 
-    .line 3340
+    .line 3580
     iput-object p1, p0, Lorg/telegram/ui/PaymentFormActivity$26;->this$0:Lorg/telegram/ui/PaymentFormActivity;
 
     iput-object p2, p0, Lorg/telegram/ui/PaymentFormActivity$26;->val$card:Lcom/stripe/android/model/Card;
@@ -49,7 +49,7 @@
 .method protected bridge synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
     .registers 2
 
-    .line 3340
+    .line 3580
     invoke-virtual {p0, p1}, Lorg/telegram/ui/PaymentFormActivity$26;->doInBackground([Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
@@ -68,20 +68,20 @@
 
     const/4 v2, 0x0
 
-    .line 3345
+    .line 3585
     :try_start_7
     new-instance v3, Lorg/json/JSONObject;
 
     invoke-direct {v3}, Lorg/json/JSONObject;-><init>()V
 
-    .line 3346
+    .line 3586
     new-instance v4, Lorg/json/JSONObject;
 
     invoke-direct {v4}, Lorg/json/JSONObject;-><init>()V
 
     const-string v5, "number"
 
-    .line 3347
+    .line 3587
     iget-object v6, p0, Lorg/telegram/ui/PaymentFormActivity$26;->val$card:Lcom/stripe/android/model/Card;
 
     invoke-virtual {v6}, Lcom/stripe/android/model/Card;->getNumber()Ljava/lang/String;
@@ -92,7 +92,7 @@
 
     const-string v5, "expiration_month"
 
-    .line 3348
+    .line 3588
     sget-object v6, Ljava/util/Locale;->US:Ljava/util/Locale;
 
     const-string v7, "%02d"
@@ -119,7 +119,7 @@
 
     const-string v5, "expiration_year"
 
-    .line 3349
+    .line 3589
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -142,7 +142,7 @@
 
     const-string v5, "security_code"
 
-    .line 3350
+    .line 3590
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -163,10 +163,10 @@
 
     invoke-virtual {v4, v5, v6}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 3351
+    .line 3591
     invoke-virtual {v3, v0, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 3354
+    .line 3594
     iget-object v4, p0, Lorg/telegram/ui/PaymentFormActivity$26;->this$0:Lorg/telegram/ui/PaymentFormActivity;
 
     invoke-static {v4}, Lorg/telegram/ui/PaymentFormActivity;->access$3000(Lorg/telegram/ui/PaymentFormActivity;)Lorg/telegram/tgnet/TLRPC$TL_payments_paymentForm;
@@ -179,7 +179,7 @@
 
     if-eqz v4, :cond_80
 
-    .line 3355
+    .line 3595
     new-instance v4, Ljava/net/URL;
 
     const-string v5, "https://tgb-playground.smart-glocal.com/cds/v1/tokenize/card"
@@ -188,7 +188,7 @@
 
     goto :goto_87
 
-    .line 3357
+    .line 3597
     :cond_80
     new-instance v4, Ljava/net/URL;
 
@@ -196,7 +196,7 @@
 
     invoke-direct {v4, v5}, Ljava/net/URL;-><init>(Ljava/lang/String;)V
 
-    .line 3359
+    .line 3599
     :goto_87
     invoke-virtual {v4}, Ljava/net/URL;->openConnection()Ljava/net/URLConnection;
 
@@ -209,36 +209,36 @@
 
     const/16 v5, 0x7530
 
-    .line 3360
+    .line 3600
     :try_start_8f
     invoke-virtual {v4, v5}, Ljava/net/HttpURLConnection;->setConnectTimeout(I)V
 
     const v5, 0x13880
 
-    .line 3361
+    .line 3601
     invoke-virtual {v4, v5}, Ljava/net/HttpURLConnection;->setReadTimeout(I)V
 
-    .line 3362
+    .line 3602
     invoke-virtual {v4, v11}, Ljava/net/HttpURLConnection;->setUseCaches(Z)V
 
-    .line 3363
+    .line 3603
     invoke-virtual {v4, v8}, Ljava/net/HttpURLConnection;->setDoOutput(Z)V
 
     const-string v5, "POST"
 
-    .line 3364
+    .line 3604
     invoke-virtual {v4, v5}, Ljava/net/HttpURLConnection;->setRequestMethod(Ljava/lang/String;)V
 
     const-string v5, "Content-Type"
 
     const-string v6, "application/json"
 
-    .line 3365
+    .line 3605
     invoke-virtual {v4, v5, v6}, Ljava/net/HttpURLConnection;->setRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v5, "X-PUBLIC-TOKEN"
 
-    .line 3366
+    .line 3606
     iget-object v6, p0, Lorg/telegram/ui/PaymentFormActivity$26;->this$0:Lorg/telegram/ui/PaymentFormActivity;
 
     invoke-static {v6}, Lorg/telegram/ui/PaymentFormActivity;->access$3700(Lorg/telegram/ui/PaymentFormActivity;)Ljava/lang/String;
@@ -247,7 +247,7 @@
 
     invoke-virtual {v4, v5, v6}, Ljava/net/HttpURLConnection;->setRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3368
+    .line 3608
     invoke-virtual {v4}, Ljava/net/HttpURLConnection;->getOutputStream()Ljava/io/OutputStream;
 
     move-result-object v5
@@ -255,7 +255,7 @@
     .catch Ljava/lang/Exception; {:try_start_8f .. :try_end_b9} :catch_127
     .catchall {:try_start_8f .. :try_end_b9} :catchall_136
 
-    .line 3369
+    .line 3609
     :try_start_b9
     invoke-virtual {v3}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
 
@@ -271,11 +271,11 @@
     :try_end_c6
     .catchall {:try_start_b9 .. :try_end_c6} :catchall_120
 
-    .line 3370
+    .line 3610
     :try_start_c6
     invoke-virtual {v5}, Ljava/io/OutputStream;->close()V
 
-    .line 3372
+    .line 3612
     invoke-virtual {v4}, Ljava/net/HttpURLConnection;->getResponseCode()I
 
     move-result v3
@@ -288,12 +288,12 @@
 
     if-ge v3, v5, :cond_101
 
-    .line 3374
+    .line 3614
     new-instance v1, Lorg/json/JSONObject;
 
     invoke-direct {v1}, Lorg/json/JSONObject;-><init>()V
 
-    .line 3375
+    .line 3615
     new-instance v3, Lorg/json/JSONObject;
 
     invoke-virtual {v4}, Ljava/net/HttpURLConnection;->getInputStream()Ljava/io/InputStream;
@@ -308,7 +308,7 @@
 
     const-string v5, "data"
 
-    .line 3376
+    .line 3616
     invoke-virtual {v3, v5}, Lorg/json/JSONObject;->getJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
 
     move-result-object v3
@@ -317,15 +317,15 @@
 
     move-result-object v3
 
-    .line 3377
+    .line 3617
     invoke-virtual {v1, p1, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
     const-string p1, "type"
 
-    .line 3378
+    .line 3618
     invoke-virtual {v1, p1, v0}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 3379
+    .line 3619
     invoke-virtual {v1}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
 
     move-result-object p1
@@ -333,19 +333,19 @@
     .catch Ljava/lang/Exception; {:try_start_c6 .. :try_end_fd} :catch_127
     .catchall {:try_start_c6 .. :try_end_fd} :catchall_136
 
-    .line 3389
+    .line 3629
     invoke-virtual {v4}, Ljava/net/HttpURLConnection;->disconnect()V
 
     return-object p1
 
-    .line 3381
+    .line 3621
     :cond_101
     :try_start_101
     sget-boolean p1, Lorg/telegram/messenger/BuildVars;->DEBUG_VERSION:Z
 
     if-eqz p1, :cond_132
 
-    .line 3382
+    .line 3622
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -378,7 +378,7 @@
 
     if-eqz v5, :cond_126
 
-    .line 3368
+    .line 3608
     :try_start_123
     invoke-virtual {v5}, Ljava/io/OutputStream;->close()V
     :try_end_126
@@ -407,7 +407,7 @@
 
     move-object v4, v2
 
-    .line 3386
+    .line 3626
     :goto_12d
     :try_start_12d
     invoke-static {p1}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
@@ -416,7 +416,7 @@
 
     if-eqz v4, :cond_135
 
-    .line 3389
+    .line 3629
     :cond_132
     :goto_132
     invoke-virtual {v4}, Ljava/net/HttpURLConnection;->disconnect()V
@@ -434,7 +434,7 @@
 
     invoke-virtual {v2}, Ljava/net/HttpURLConnection;->disconnect()V
 
-    .line 3391
+    .line 3631
     :cond_13d
     throw p1
 .end method
@@ -442,7 +442,7 @@
 .method protected bridge synthetic onPostExecute(Ljava/lang/Object;)V
     .registers 2
 
-    .line 3340
+    .line 3580
     check-cast p1, Ljava/lang/String;
 
     invoke-virtual {p0, p1}, Lorg/telegram/ui/PaymentFormActivity$26;->onPostExecute(Ljava/lang/String;)V
@@ -453,7 +453,7 @@
 .method protected onPostExecute(Ljava/lang/String;)V
     .registers 4
 
-    .line 3397
+    .line 3637
     iget-object v0, p0, Lorg/telegram/ui/PaymentFormActivity$26;->this$0:Lorg/telegram/ui/PaymentFormActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/PaymentFormActivity;->access$3600(Lorg/telegram/ui/PaymentFormActivity;)Z
@@ -467,10 +467,10 @@
     :cond_9
     if-nez p1, :cond_1a
 
-    .line 3401
+    .line 3641
     iget-object p1, p0, Lorg/telegram/ui/PaymentFormActivity$26;->this$0:Lorg/telegram/ui/PaymentFormActivity;
 
-    const v0, 0x7f0e0ce7
+    const v0, 0x7f0e0d72
 
     const-string v1, "PaymentConnectionFailed"
 
@@ -482,18 +482,18 @@
 
     goto :goto_24
 
-    .line 3403
+    .line 3643
     :cond_1a
     iget-object v0, p0, Lorg/telegram/ui/PaymentFormActivity$26;->this$0:Lorg/telegram/ui/PaymentFormActivity;
 
     invoke-static {v0, p1}, Lorg/telegram/ui/PaymentFormActivity;->access$002(Lorg/telegram/ui/PaymentFormActivity;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 3404
+    .line 3644
     iget-object p1, p0, Lorg/telegram/ui/PaymentFormActivity$26;->this$0:Lorg/telegram/ui/PaymentFormActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/PaymentFormActivity;->access$200(Lorg/telegram/ui/PaymentFormActivity;)V
 
-    .line 3406
+    .line 3646
     :goto_24
     iget-object p1, p0, Lorg/telegram/ui/PaymentFormActivity$26;->this$0:Lorg/telegram/ui/PaymentFormActivity;
 
@@ -503,7 +503,7 @@
 
     invoke-static {p1, v0, v1}, Lorg/telegram/ui/PaymentFormActivity;->access$2500(Lorg/telegram/ui/PaymentFormActivity;ZZ)V
 
-    .line 3407
+    .line 3647
     iget-object p1, p0, Lorg/telegram/ui/PaymentFormActivity$26;->this$0:Lorg/telegram/ui/PaymentFormActivity;
 
     invoke-static {p1, v1}, Lorg/telegram/ui/PaymentFormActivity;->access$600(Lorg/telegram/ui/PaymentFormActivity;Z)V

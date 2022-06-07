@@ -1,11 +1,11 @@
 .class Lorg/telegram/ui/ChatActivity$48;
-.super Landroid/animation/AnimatorListenerAdapter;
+.super Lorg/telegram/ui/EmojiAnimationsOverlay;
 .source "ChatActivity.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lorg/telegram/ui/ChatActivity;->dimBehindView(FZ)V
+    value = Lorg/telegram/ui/ChatActivity;->createView(Landroid/content/Context;)Landroid/view/View;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,49 +19,46 @@
 
 
 # direct methods
-.method constructor <init>(Lorg/telegram/ui/ChatActivity;)V
-    .registers 2
+.method constructor <init>(Lorg/telegram/ui/ChatActivity;Lorg/telegram/ui/ChatActivity;Landroid/widget/FrameLayout;Lorg/telegram/ui/Components/RecyclerListView;IJI)V
+    .registers 18
 
-    .line 8313
-    iput-object p1, p0, Lorg/telegram/ui/ChatActivity$48;->this$0:Lorg/telegram/ui/ChatActivity;
+    move-object v8, p0
 
-    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
+    move-object v0, p1
+
+    .line 8371
+    iput-object v0, v8, Lorg/telegram/ui/ChatActivity$48;->this$0:Lorg/telegram/ui/ChatActivity;
+
+    move-object v0, p0
+
+    move-object v1, p2
+
+    move-object v2, p3
+
+    move-object v3, p4
+
+    move v4, p5
+
+    move-wide v5, p6
+
+    move/from16 v7, p8
+
+    invoke-direct/range {v0 .. v7}, Lorg/telegram/ui/EmojiAnimationsOverlay;-><init>(Lorg/telegram/ui/ChatActivity;Landroid/widget/FrameLayout;Lorg/telegram/ui/Components/RecyclerListView;IJI)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onAnimationEnd(Landroid/animation/Animator;)V
+.method public onAllEffectsEnd()V
     .registers 3
 
-    .line 8316
-    iget-object p1, p0, Lorg/telegram/ui/ChatActivity$48;->this$0:Lorg/telegram/ui/ChatActivity;
+    .line 8374
+    iget-object v0, p0, Lorg/telegram/ui/ChatActivity$48;->this$0:Lorg/telegram/ui/ChatActivity;
 
-    const/4 v0, 0x0
+    const/4 v1, 0x0
 
-    invoke-static {p1, v0}, Lorg/telegram/ui/ChatActivity;->access$10402(Lorg/telegram/ui/ChatActivity;Landroid/view/View;)Landroid/view/View;
-
-    .line 8317
-    iget-object p1, p0, Lorg/telegram/ui/ChatActivity$48;->this$0:Lorg/telegram/ui/ChatActivity;
-
-    invoke-static {p1, v0}, Lorg/telegram/ui/ChatActivity;->access$13602(Lorg/telegram/ui/ChatActivity;Ljava/lang/String;)Ljava/lang/String;
-
-    .line 8318
-    iget-object p1, p0, Lorg/telegram/ui/ChatActivity$48;->this$0:Lorg/telegram/ui/ChatActivity;
-
-    iget-object p1, p1, Lorg/telegram/ui/ChatActivity;->contentView:Lorg/telegram/ui/Components/SizeNotifierFrameLayout;
-
-    invoke-virtual {p1}, Landroid/widget/FrameLayout;->invalidate()V
-
-    .line 8319
-    iget-object p1, p0, Lorg/telegram/ui/ChatActivity$48;->this$0:Lorg/telegram/ui/ChatActivity;
-
-    invoke-static {p1}, Lorg/telegram/ui/ChatActivity;->access$2200(Lorg/telegram/ui/ChatActivity;)Lorg/telegram/ui/Components/RecyclerListView;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Landroid/view/ViewGroup;->invalidate()V
+    invoke-virtual {v0, v1}, Lorg/telegram/ui/ChatActivity;->updateMessagesVisiblePart(Z)V
 
     return-void
 .end method

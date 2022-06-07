@@ -23,7 +23,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 3460
+    .line 3500
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -32,7 +32,7 @@
 .method public static TLdeserialize(Lorg/telegram/tgnet/AbstractSerializedData;IZ)Lorg/telegram/tgnet/TLRPC$TL_labeledPrice;
     .registers 4
 
-    .line 3467
+    .line 3507
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_labeledPrice;->constructor:I
 
     if-eq v0, p1, :cond_1e
@@ -43,7 +43,7 @@
 
     return-object p0
 
-    .line 3469
+    .line 3509
     :cond_8
     new-instance p0, Ljava/lang/RuntimeException;
 
@@ -69,13 +69,13 @@
 
     throw p0
 
-    .line 3474
+    .line 3514
     :cond_1e
     new-instance p1, Lorg/telegram/tgnet/TLRPC$TL_labeledPrice;
 
     invoke-direct {p1}, Lorg/telegram/tgnet/TLRPC$TL_labeledPrice;-><init>()V
 
-    .line 3475
+    .line 3515
     invoke-virtual {p1, p0, p2}, Lorg/telegram/tgnet/TLRPC$TL_labeledPrice;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
     return-object p1
@@ -86,14 +86,14 @@
 .method public readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
     .registers 4
 
-    .line 3480
+    .line 3520
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readString(Z)Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_labeledPrice;->label:Ljava/lang/String;
 
-    .line 3481
+    .line 3521
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt64(Z)J
 
     move-result-wide p1
@@ -106,17 +106,17 @@
 .method public serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
     .registers 4
 
-    .line 3485
+    .line 3525
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_labeledPrice;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 3486
+    .line 3526
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_labeledPrice;->label:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeString(Ljava/lang/String;)V
 
-    .line 3487
+    .line 3527
     iget-wide v0, p0, Lorg/telegram/tgnet/TLRPC$TL_labeledPrice;->amount:J
 
     invoke-virtual {p1, v0, v1}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt64(J)V

@@ -101,7 +101,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setScaleType(Landroid/widget/ImageView$ScaleType;)V
 
-    const v1, 0x7f0703c0
+    const v1, 0x7f0703c3
 
     .line 174
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
@@ -288,7 +288,7 @@
 
     const-string v0, "Search"
 
-    const v1, 0x7f0e0f74
+    const v1, 0x7f0e1030
 
     invoke-static {v0, v1}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 

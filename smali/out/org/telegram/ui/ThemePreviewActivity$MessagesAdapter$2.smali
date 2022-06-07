@@ -21,7 +21,7 @@
 .method constructor <init>(Lorg/telegram/ui/ThemePreviewActivity$MessagesAdapter;)V
     .registers 2
 
-    .line 4419
+    .line 4409
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -53,6 +53,14 @@
     .registers 4
 
     invoke-static {p0, p1, p2, p3}, Lorg/telegram/ui/Cells/ChatMessageCell$ChatMessageCellDelegate$-CC;->$default$didLongPress(Lorg/telegram/ui/Cells/ChatMessageCell$ChatMessageCellDelegate;Lorg/telegram/ui/Cells/ChatMessageCell;FF)V
+
+    return-void
+.end method
+
+.method public synthetic didLongPressBotButton(Lorg/telegram/ui/Cells/ChatMessageCell;Lorg/telegram/tgnet/TLRPC$KeyboardButton;)V
+    .registers 3
+
+    invoke-static {p0, p1, p2}, Lorg/telegram/ui/Cells/ChatMessageCell$ChatMessageCellDelegate$-CC;->$default$didLongPressBotButton(Lorg/telegram/ui/Cells/ChatMessageCell$ChatMessageCellDelegate;Lorg/telegram/ui/Cells/ChatMessageCell;Lorg/telegram/tgnet/TLRPC$KeyboardButton;)V
 
     return-void
 .end method
@@ -319,6 +327,14 @@
     .registers 1
 
     invoke-static {p0}, Lorg/telegram/ui/Cells/ChatMessageCell$ChatMessageCellDelegate$-CC;->$default$needReloadPolls(Lorg/telegram/ui/Cells/ChatMessageCell$ChatMessageCellDelegate;)V
+
+    return-void
+.end method
+
+.method public synthetic needShowPremiumFeatures()V
+    .registers 1
+
+    invoke-static {p0}, Lorg/telegram/ui/Cells/ChatMessageCell$ChatMessageCellDelegate$-CC;->$default$needShowPremiumFeatures(Lorg/telegram/ui/Cells/ChatMessageCell$ChatMessageCellDelegate;)V
 
     return-void
 .end method

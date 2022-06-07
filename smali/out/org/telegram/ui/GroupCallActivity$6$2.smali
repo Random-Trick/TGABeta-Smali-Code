@@ -27,7 +27,7 @@
 .method constructor <init>(Lorg/telegram/ui/GroupCallActivity$6;Lorg/telegram/ui/Components/EditTextBoldCursor;)V
     .registers 3
 
-    .line 2022
+    .line 2025
     iput-object p2, p0, Lorg/telegram/ui/GroupCallActivity$6$2;->val$editText:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,14 +40,14 @@
 .method public afterTextChanged(Landroid/text/Editable;)V
     .registers 5
 
-    .line 2038
+    .line 2041
     iget-boolean v0, p0, Lorg/telegram/ui/GroupCallActivity$6$2;->ignoreTextChange:Z
 
     if-eqz v0, :cond_5
 
     return-void
 
-    .line 2041
+    .line 2044
     :cond_5
     invoke-interface {p1}, Landroid/text/Editable;->length()I
 
@@ -59,17 +59,17 @@
 
     const/4 v0, 0x1
 
-    .line 2042
+    .line 2045
     iput-boolean v0, p0, Lorg/telegram/ui/GroupCallActivity$6$2;->ignoreTextChange:Z
 
-    .line 2043
+    .line 2046
     invoke-interface {p1}, Landroid/text/Editable;->length()I
 
     move-result v0
 
     invoke-interface {p1, v1, v0}, Landroid/text/Editable;->delete(II)Landroid/text/Editable;
 
-    .line 2044
+    .line 2047
     iget-object p1, p0, Lorg/telegram/ui/GroupCallActivity$6$2;->val$editText:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     const/high16 v0, 0x40000000    # 2.0f
@@ -78,7 +78,7 @@
 
     invoke-static {p1, v0, v1}, Lorg/telegram/messenger/AndroidUtilities;->shakeView(Landroid/view/View;FI)V
 
-    .line 2045
+    .line 2048
     iget-object p1, p0, Lorg/telegram/ui/GroupCallActivity$6$2;->val$editText:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     const/4 v0, 0x3
@@ -87,7 +87,7 @@
 
     invoke-virtual {p1, v0, v2}, Landroid/widget/EditText;->performHapticFeedback(II)Z
 
-    .line 2046
+    .line 2049
     iput-boolean v1, p0, Lorg/telegram/ui/GroupCallActivity$6$2;->ignoreTextChange:Z
 
     :cond_28

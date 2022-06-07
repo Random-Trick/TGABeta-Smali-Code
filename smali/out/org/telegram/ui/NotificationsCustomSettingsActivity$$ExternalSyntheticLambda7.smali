@@ -45,7 +45,7 @@
 
     iget v3, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity$$ExternalSyntheticLambda7;->f$3:I
 
-    invoke-static {v0, v1, v2, v3, p1}, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->$r8$lambda$R7jYVrP2VrGfwn4uPC3mWhwFhrI(Lorg/telegram/ui/NotificationsCustomSettingsActivity;Lorg/telegram/ui/Cells/NotificationsCheckCell;Landroidx/recyclerview/widget/RecyclerView$ViewHolder;II)V
+    invoke-static {v0, v1, v2, v3, p1}, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->$r8$lambda$YVabcR2XI177j8FG2LbfvBSwGmU(Lorg/telegram/ui/NotificationsCustomSettingsActivity;Lorg/telegram/ui/Cells/NotificationsCheckCell;Landroidx/recyclerview/widget/RecyclerView$ViewHolder;II)V
 
     return-void
 .end method

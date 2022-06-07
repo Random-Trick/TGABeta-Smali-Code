@@ -26,7 +26,7 @@
 .method constructor <init>(Landroidx/recyclerview/widget/ChatListItemAnimator;Landroidx/recyclerview/widget/RecyclerView$ViewHolder;Landroid/view/View;)V
     .registers 4
 
-    .line 1368
+    .line 1378
     iput-object p1, p0, Landroidx/recyclerview/widget/ChatListItemAnimator$10;->this$0:Landroidx/recyclerview/widget/ChatListItemAnimator;
 
     iput-object p2, p0, Landroidx/recyclerview/widget/ChatListItemAnimator$10;->val$holder:Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
@@ -43,7 +43,7 @@
 .method public onAnimationCancel(Landroid/animation/Animator;)V
     .registers 3
 
-    .line 1376
+    .line 1386
     iget-object p1, p0, Landroidx/recyclerview/widget/ChatListItemAnimator$10;->val$view:Landroid/view/View;
 
     const/high16 v0, 0x3f800000    # 1.0f
@@ -56,39 +56,39 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .registers 3
 
-    .line 1381
+    .line 1391
     invoke-virtual {p1}, Landroid/animation/Animator;->removeAllListeners()V
 
-    .line 1382
+    .line 1392
     iget-object p1, p0, Landroidx/recyclerview/widget/ChatListItemAnimator$10;->val$view:Landroid/view/View;
 
     const/high16 v0, 0x3f800000    # 1.0f
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setAlpha(F)V
 
-    .line 1383
+    .line 1393
     iget-object p1, p0, Landroidx/recyclerview/widget/ChatListItemAnimator$10;->val$view:Landroid/view/View;
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setScaleX(F)V
 
-    .line 1384
+    .line 1394
     iget-object p1, p0, Landroidx/recyclerview/widget/ChatListItemAnimator$10;->val$view:Landroid/view/View;
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setScaleY(F)V
 
-    .line 1385
+    .line 1395
     iget-object p1, p0, Landroidx/recyclerview/widget/ChatListItemAnimator$10;->val$view:Landroid/view/View;
 
     const/4 v0, 0x0
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setTranslationY(F)V
 
-    .line 1386
+    .line 1396
     iget-object p1, p0, Landroidx/recyclerview/widget/ChatListItemAnimator$10;->val$view:Landroid/view/View;
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setTranslationY(F)V
 
-    .line 1387
+    .line 1397
     iget-object p1, p0, Landroidx/recyclerview/widget/ChatListItemAnimator$10;->this$0:Landroidx/recyclerview/widget/ChatListItemAnimator;
 
     iget-object p1, p1, Landroidx/recyclerview/widget/DefaultItemAnimator;->mAddAnimations:Ljava/util/ArrayList;
@@ -101,14 +101,14 @@
 
     if-eqz p1, :cond_37
 
-    .line 1388
+    .line 1398
     iget-object p1, p0, Landroidx/recyclerview/widget/ChatListItemAnimator$10;->this$0:Landroidx/recyclerview/widget/ChatListItemAnimator;
 
     iget-object v0, p0, Landroidx/recyclerview/widget/ChatListItemAnimator$10;->val$holder:Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
 
     invoke-virtual {p1, v0}, Landroidx/recyclerview/widget/SimpleItemAnimator;->dispatchAddFinished(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
 
-    .line 1389
+    .line 1399
     iget-object p1, p0, Landroidx/recyclerview/widget/ChatListItemAnimator$10;->this$0:Landroidx/recyclerview/widget/ChatListItemAnimator;
 
     invoke-virtual {p1}, Landroidx/recyclerview/widget/DefaultItemAnimator;->dispatchFinishedWhenDone()V
@@ -120,7 +120,7 @@
 .method public onAnimationStart(Landroid/animation/Animator;)V
     .registers 3
 
-    .line 1371
+    .line 1381
     iget-object p1, p0, Landroidx/recyclerview/widget/ChatListItemAnimator$10;->this$0:Landroidx/recyclerview/widget/ChatListItemAnimator;
 
     iget-object v0, p0, Landroidx/recyclerview/widget/ChatListItemAnimator$10;->val$holder:Landroidx/recyclerview/widget/RecyclerView$ViewHolder;

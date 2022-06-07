@@ -7,20 +7,20 @@
 
 
 # direct methods
-.method constructor <init>(Lj$/util/stream/d0;Lj$/util/stream/z2;Lj$/util/y;)V
+.method constructor <init>(Lj$/util/stream/d0;Lj$/util/stream/y2;Lj$/util/u;)V
     .registers 4
 
-    invoke-direct {p0, p2, p3}, Lj$/util/stream/d;-><init>(Lj$/util/stream/z2;Lj$/util/y;)V
+    invoke-direct {p0, p2, p3}, Lj$/util/stream/d;-><init>(Lj$/util/stream/y2;Lj$/util/u;)V
 
     iput-object p1, p0, Lj$/util/stream/j0;->j:Lj$/util/stream/d0;
 
     return-void
 .end method
 
-.method constructor <init>(Lj$/util/stream/j0;Lj$/util/y;)V
+.method constructor <init>(Lj$/util/stream/j0;Lj$/util/u;)V
     .registers 3
 
-    invoke-direct {p0, p1, p2}, Lj$/util/stream/d;-><init>(Lj$/util/stream/d;Lj$/util/y;)V
+    invoke-direct {p0, p1, p2}, Lj$/util/stream/d;-><init>(Lj$/util/stream/d;Lj$/util/u;)V
 
     iget-object p1, p1, Lj$/util/stream/j0;->j:Lj$/util/stream/d0;
 
@@ -80,7 +80,7 @@
 .method protected a()Ljava/lang/Object;
     .registers 4
 
-    iget-object v0, p0, Lj$/util/stream/f;->a:Lj$/util/stream/z2;
+    iget-object v0, p0, Lj$/util/stream/f;->a:Lj$/util/stream/y2;
 
     iget-object v1, p0, Lj$/util/stream/j0;->j:Lj$/util/stream/d0;
 
@@ -90,13 +90,13 @@
 
     move-result-object v1
 
-    check-cast v1, Lj$/util/stream/P4;
+    check-cast v1, Lj$/util/stream/O4;
 
-    iget-object v2, p0, Lj$/util/stream/f;->b:Lj$/util/y;
+    iget-object v2, p0, Lj$/util/stream/f;->b:Lj$/util/u;
 
-    invoke-virtual {v0, v1, v2}, Lj$/util/stream/z2;->u0(Lj$/util/stream/n3;Lj$/util/y;)Lj$/util/stream/n3;
+    invoke-virtual {v0, v1, v2}, Lj$/util/stream/y2;->u0(Lj$/util/stream/m3;Lj$/util/u;)Lj$/util/stream/m3;
 
-    check-cast v1, Lj$/util/stream/P4;
+    check-cast v1, Lj$/util/stream/O4;
 
     invoke-interface {v1}, Lj$/util/function/y;->get()Ljava/lang/Object;
 
@@ -128,13 +128,13 @@
     return-object v2
 .end method
 
-.method protected f(Lj$/util/y;)Lj$/util/stream/f;
+.method protected f(Lj$/util/u;)Lj$/util/stream/f;
     .registers 3
 
     .line 1
     new-instance v0, Lj$/util/stream/j0;
 
-    invoke-direct {v0, p0, p1}, Lj$/util/stream/j0;-><init>(Lj$/util/stream/j0;Lj$/util/y;)V
+    invoke-direct {v0, p0, p1}, Lj$/util/stream/j0;-><init>(Lj$/util/stream/j0;Lj$/util/u;)V
 
     return-object v0
 .end method
@@ -207,7 +207,7 @@
     .line 1
     :cond_2d
     :goto_2d
-    iput-object v0, p0, Lj$/util/stream/f;->b:Lj$/util/y;
+    iput-object v0, p0, Lj$/util/stream/f;->b:Lj$/util/u;
 
     iput-object v0, p0, Lj$/util/stream/f;->e:Lj$/util/stream/f;
 

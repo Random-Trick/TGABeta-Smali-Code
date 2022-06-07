@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;)V
     .registers 2
 
-    .line 6026
+    .line 6169
     iput-object p1, p0, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView$1;->this$0:Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -35,17 +35,17 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .registers 2
 
-    .line 6049
+    .line 6192
     invoke-static {}, Lorg/telegram/messenger/AndroidUtilities;->isAccessibilityTouchExplorationEnabled()Z
 
     move-result p1
 
     if-eqz p1, :cond_f
 
-    .line 6050
+    .line 6193
     iget-object p1, p0, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView$1;->this$0:Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;
 
-    invoke-static {p1}, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->access$7100(Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;)Landroid/widget/FrameLayout;
+    invoke-static {p1}, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->access$7200(Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;)Landroid/widget/FrameLayout;
 
     move-result-object p1
 
@@ -58,10 +58,10 @@
 .method public onAnimationStart(Landroid/animation/Animator;)V
     .registers 7
 
-    .line 6029
+    .line 6172
     iget-object p1, p0, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView$1;->this$0:Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;
 
-    invoke-static {p1}, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->access$13300(Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;)Landroid/view/View;
+    invoke-static {p1}, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->access$14000(Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;)Landroid/view/View;
 
     move-result-object p1
 
@@ -69,10 +69,10 @@
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
 
-    .line 6033
+    .line 6176
     iget-object p1, p0, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView$1;->this$0:Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;
 
-    invoke-static {p1}, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->access$13400(Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;)Landroid/view/ViewGroup;
+    invoke-static {p1}, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->access$14100(Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;)Landroid/view/ViewGroup;
 
     move-result-object p1
 
@@ -88,10 +88,10 @@
 
     float-to-int p1, p1
 
-    .line 6034
+    .line 6177
     iget-object v2, p0, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView$1;->this$0:Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;
 
-    invoke-static {v2}, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->access$13400(Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;)Landroid/view/ViewGroup;
+    invoke-static {v2}, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->access$14100(Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;)Landroid/view/ViewGroup;
 
     move-result-object v2
 
@@ -105,33 +105,33 @@
 
     float-to-int v1, v2
 
-    .line 6035
+    .line 6178
     sget-object v2, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
 
     invoke-static {p1, v1, v2}, Landroid/graphics/Bitmap;->createBitmap(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
 
     move-result-object v2
 
-    .line 6036
+    .line 6179
     new-instance v3, Landroid/graphics/Canvas;
 
     invoke-direct {v3, v2}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
 
     const v4, 0x3dcccccd    # 0.1f
 
-    .line 6037
+    .line 6180
     invoke-virtual {v3, v4, v4}, Landroid/graphics/Canvas;->scale(FF)V
 
-    .line 6038
+    .line 6181
     iget-object v4, p0, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView$1;->this$0:Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;
 
-    invoke-static {v4}, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->access$13400(Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;)Landroid/view/ViewGroup;
+    invoke-static {v4}, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->access$14100(Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;)Landroid/view/ViewGroup;
 
     move-result-object v4
 
     invoke-virtual {v4, v3}, Landroid/view/ViewGroup;->draw(Landroid/graphics/Canvas;)V
 
-    .line 6039
+    .line 6182
     invoke-static {p1, v1}, Ljava/lang/Math;->max(II)I
 
     move-result p1
@@ -144,10 +144,10 @@
 
     invoke-static {v2, p1}, Lorg/telegram/messenger/Utilities;->stackBlurBitmap(Landroid/graphics/Bitmap;I)V
 
-    .line 6040
+    .line 6183
     iget-object p1, p0, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView$1;->this$0:Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;
 
-    invoke-static {p1}, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->access$13500(Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;)Landroid/view/View;
+    invoke-static {p1}, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->access$14200(Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;)Landroid/view/View;
 
     move-result-object p1
 
@@ -167,10 +167,10 @@
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    .line 6041
+    .line 6184
     iget-object p1, p0, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView$1;->this$0:Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;
 
-    invoke-static {p1}, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->access$13500(Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;)Landroid/view/View;
+    invoke-static {p1}, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->access$14200(Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;)Landroid/view/View;
 
     move-result-object p1
 
@@ -178,10 +178,10 @@
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setAlpha(F)V
 
-    .line 6042
+    .line 6185
     iget-object p1, p0, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView$1;->this$0:Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;
 
-    invoke-static {p1}, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->access$13500(Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;)Landroid/view/View;
+    invoke-static {p1}, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->access$14200(Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;)Landroid/view/View;
 
     move-result-object p1
 
@@ -189,10 +189,10 @@
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
 
-    .line 6044
+    .line 6187
     iget-object p1, p0, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView$1;->this$0:Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;
 
-    invoke-static {p1}, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->access$13400(Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;)Landroid/view/ViewGroup;
+    invoke-static {p1}, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->access$14100(Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;)Landroid/view/ViewGroup;
 
     move-result-object p1
 

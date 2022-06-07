@@ -295,7 +295,7 @@
 
     move-result-object v5
 
-    const v6, 0x7f0703b4
+    const v6, 0x7f0703b9
 
     invoke-virtual {v5, v6}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -344,7 +344,7 @@
 
     new-array v1, v1, [Landroid/graphics/drawable/Drawable;
 
-    const v5, 0x7f0703e1
+    const v5, 0x7f0703d8
 
     const v6, -0xb4b4b5
 
@@ -357,7 +357,7 @@
 
     aput-object v5, v1, v4
 
-    const v5, 0x7f0703df
+    const v5, 0x7f0703d6
 
     .line 451
     invoke-static {p1, v5, v6, v7}, Lorg/telegram/ui/ActionBar/Theme;->createEmojiIconSelectorDrawable(Landroid/content/Context;III)Landroid/graphics/drawable/Drawable;
@@ -615,7 +615,7 @@
 
     invoke-direct {p3, p1}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
-    const v1, 0x7f07012d
+    const v1, 0x7f0700fc
 
     const v9, -0x1d1a19
 
@@ -751,7 +751,7 @@
     .line 635
     iget-object p3, p0, Lorg/telegram/ui/Components/StickerMasksAlert;->stickersButton:Landroid/widget/ImageView;
 
-    const v1, 0x7f0703d2
+    const v1, 0x7f0703ca
 
     invoke-static {p1, v1, v8, v7}, Lorg/telegram/ui/ActionBar/Theme;->createEmojiIconSelectorDrawable(Landroid/content/Context;III)Landroid/graphics/drawable/Drawable;
 
@@ -819,7 +819,7 @@
     .line 662
     iget-object v3, p0, Lorg/telegram/ui/Components/StickerMasksAlert;->masksButton:Landroid/widget/ImageView;
 
-    const v6, 0x7f070168
+    const v6, 0x7f07012b
 
     invoke-static {p1, v6, v8, v7}, Lorg/telegram/ui/ActionBar/Theme;->createEmojiIconSelectorDrawable(Landroid/content/Context;III)Landroid/graphics/drawable/Drawable;
 
@@ -2251,7 +2251,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f0e06eb
+    const v4, 0x7f0e073d
 
     const-string v5, "FavoriteStickers"
 
@@ -2296,7 +2296,7 @@
 
     move-result-object v1
 
-    const v3, 0x7f0e0e9c
+    const v3, 0x7f0e0f48
 
     const-string v4, "RecentStickers"
 
@@ -2457,7 +2457,7 @@
 
     invoke-virtual {v5, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const v3, 0x7f0e0076
+    const v3, 0x7f0e0098
 
     const-string v6, "AccDescrStickerSet"
 

@@ -35,7 +35,7 @@
 .method constructor <init>(Lorg/telegram/messenger/SendMessagesHelper$ImportingStickers;Lorg/telegram/tgnet/TLRPC$TL_stickers_createStickerSet;)V
     .registers 3
 
-    .line 417
+    .line 422
     iput-object p1, p0, Lorg/telegram/messenger/SendMessagesHelper$ImportingStickers$1;->this$1:Lorg/telegram/messenger/SendMessagesHelper$ImportingStickers;
 
     iput-object p2, p0, Lorg/telegram/messenger/SendMessagesHelper$ImportingStickers$1;->val$req:Lorg/telegram/tgnet/TLRPC$TL_stickers_createStickerSet;
@@ -48,7 +48,7 @@
 .method private synthetic lambda$run$0(Lorg/telegram/tgnet/TLRPC$TL_error;Lorg/telegram/tgnet/TLRPC$TL_stickers_createStickerSet;Lorg/telegram/tgnet/TLObject;)V
     .registers 11
 
-    .line 421
+    .line 426
     iget-object v0, p0, Lorg/telegram/messenger/SendMessagesHelper$ImportingStickers$1;->this$1:Lorg/telegram/messenger/SendMessagesHelper$ImportingStickers;
 
     iget-object v0, v0, Lorg/telegram/messenger/SendMessagesHelper$ImportingStickers;->this$0:Lorg/telegram/messenger/SendMessagesHelper;
@@ -69,7 +69,7 @@
 
     if-nez p1, :cond_29
 
-    .line 423
+    .line 428
     iget-object p1, p0, Lorg/telegram/messenger/SendMessagesHelper$ImportingStickers$1;->this$1:Lorg/telegram/messenger/SendMessagesHelper$ImportingStickers;
 
     iget-object p1, p1, Lorg/telegram/messenger/SendMessagesHelper$ImportingStickers;->this$0:Lorg/telegram/messenger/SendMessagesHelper;
@@ -92,7 +92,7 @@
 
     goto :goto_44
 
-    .line 425
+    .line 430
     :cond_29
     iget-object v2, p0, Lorg/telegram/messenger/SendMessagesHelper$ImportingStickers$1;->this$1:Lorg/telegram/messenger/SendMessagesHelper$ImportingStickers;
 
@@ -122,13 +122,13 @@
 
     invoke-virtual {v2, v3, v4}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 427
+    .line 432
     :goto_44
     instance-of p1, p3, Lorg/telegram/tgnet/TLRPC$TL_messages_stickerSet;
 
     if-eqz p1, :cond_79
 
-    .line 428
+    .line 433
     iget-object p1, p0, Lorg/telegram/messenger/SendMessagesHelper$ImportingStickers$1;->this$1:Lorg/telegram/messenger/SendMessagesHelper$ImportingStickers;
 
     iget-object p1, p1, Lorg/telegram/messenger/SendMessagesHelper$ImportingStickers;->this$0:Lorg/telegram/messenger/SendMessagesHelper;
@@ -145,7 +145,7 @@
 
     if-eqz p1, :cond_68
 
-    .line 429
+    .line 434
     iget-object p1, p0, Lorg/telegram/messenger/SendMessagesHelper$ImportingStickers$1;->this$1:Lorg/telegram/messenger/SendMessagesHelper$ImportingStickers;
 
     iget-object p1, p1, Lorg/telegram/messenger/SendMessagesHelper$ImportingStickers;->this$0:Lorg/telegram/messenger/SendMessagesHelper;
@@ -162,7 +162,7 @@
 
     goto :goto_79
 
-    .line 431
+    .line 436
     :cond_68
     iget-object p1, p0, Lorg/telegram/messenger/SendMessagesHelper$ImportingStickers$1;->this$1:Lorg/telegram/messenger/SendMessagesHelper$ImportingStickers;
 
@@ -196,7 +196,7 @@
 .method public run(Lorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/TLRPC$TL_error;)V
     .registers 5
 
-    .line 420
+    .line 425
     iget-object v0, p0, Lorg/telegram/messenger/SendMessagesHelper$ImportingStickers$1;->val$req:Lorg/telegram/tgnet/TLRPC$TL_stickers_createStickerSet;
 
     new-instance v1, Lorg/telegram/messenger/SendMessagesHelper$ImportingStickers$1$$ExternalSyntheticLambda0;

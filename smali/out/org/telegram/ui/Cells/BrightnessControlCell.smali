@@ -25,7 +25,7 @@
 
     iput-object v0, p0, Lorg/telegram/ui/Cells/BrightnessControlCell;->leftImageView:Landroid/widget/ImageView;
 
-    const v1, 0x7f070086
+    const v1, 0x7f0701dc
 
     .line 37
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
@@ -109,7 +109,7 @@
 
     iput-object v0, p0, Lorg/telegram/ui/Cells/BrightnessControlCell;->rightImageView:Landroid/widget/ImageView;
 
-    const p1, 0x7f070085
+    const p1, 0x7f0701db
 
     .line 69
     invoke-virtual {v0, p1}, Landroid/widget/ImageView;->setImageResource(I)V

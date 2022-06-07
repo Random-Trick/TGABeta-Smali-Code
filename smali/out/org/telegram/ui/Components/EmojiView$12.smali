@@ -26,7 +26,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/EmojiView;Landroid/content/Context;)V
     .registers 3
 
-    .line 1486
+    .line 1492
     iput-object p1, p0, Lorg/telegram/ui/Components/EmojiView$12;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-direct {p0, p2}, Lorg/telegram/ui/Components/RecyclerListView;-><init>(Landroid/content/Context;)V
@@ -39,7 +39,7 @@
 .method public onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
     .registers 8
 
-    .line 1493
+    .line 1499
     invoke-static {}, Lorg/telegram/ui/ContentPreviewViewer;->getInstance()Lorg/telegram/ui/ContentPreviewViewer;
 
     move-result-object v0
@@ -66,7 +66,7 @@
 
     move-result v0
 
-    .line 1494
+    .line 1500
     invoke-super {p0, p1}, Lorg/telegram/ui/Components/RecyclerListView;->onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
 
     move-result p1
@@ -93,7 +93,7 @@
 .method protected onLayout(ZIIII)V
     .registers 9
 
-    .line 1508
+    .line 1514
     iget-object v0, p0, Lorg/telegram/ui/Components/EmojiView$12;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/EmojiView;->access$6900(Lorg/telegram/ui/Components/EmojiView;)Z
@@ -116,10 +116,10 @@
 
     if-le v0, v1, :cond_3a
 
-    .line 1509
+    .line 1515
     iput-boolean v1, p0, Lorg/telegram/ui/Components/EmojiView$12;->ignoreLayout:Z
 
-    .line 1510
+    .line 1516
     iget-object v0, p0, Lorg/telegram/ui/Components/EmojiView$12;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/EmojiView;->access$7000(Lorg/telegram/ui/Components/EmojiView;)Lorg/telegram/ui/Components/EmojiView$GifLayoutManager;
@@ -130,7 +130,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroidx/recyclerview/widget/LinearLayoutManager;->scrollToPositionWithOffset(II)V
 
-    .line 1511
+    .line 1517
     iget-object v0, p0, Lorg/telegram/ui/Components/EmojiView$12;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/EmojiView;->access$7100(Lorg/telegram/ui/Components/EmojiView;)Lorg/telegram/ui/Components/EmojiView$SearchField;
@@ -139,7 +139,7 @@
 
     invoke-virtual {v0, v2}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
-    .line 1512
+    .line 1518
     iget-object v0, p0, Lorg/telegram/ui/Components/EmojiView$12;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/EmojiView;->access$7200(Lorg/telegram/ui/Components/EmojiView;)Lorg/telegram/ui/Components/ScrollSlidingTabStrip;
@@ -148,19 +148,19 @@
 
     invoke-virtual {v0, v2, v2}, Lorg/telegram/ui/Components/ScrollSlidingTabStrip;->onPageScrolled(II)V
 
-    .line 1513
+    .line 1519
     iget-object v0, p0, Lorg/telegram/ui/Components/EmojiView$12;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-static {v0, v2}, Lorg/telegram/ui/Components/EmojiView;->access$6902(Lorg/telegram/ui/Components/EmojiView;Z)Z
 
-    .line 1514
+    .line 1520
     iput-boolean v2, p0, Lorg/telegram/ui/Components/EmojiView$12;->ignoreLayout:Z
 
-    .line 1516
+    .line 1522
     :cond_3a
     invoke-super/range {p0 .. p5}, Lorg/telegram/ui/Components/RecyclerListView;->onLayout(ZIIII)V
 
-    .line 1517
+    .line 1523
     iget-object p1, p0, Lorg/telegram/ui/Components/EmojiView$12;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-static {p1, v1}, Lorg/telegram/ui/Components/EmojiView;->access$3100(Lorg/telegram/ui/Components/EmojiView;Z)V
@@ -171,15 +171,15 @@
 .method protected onMeasure(II)V
     .registers 3
 
-    .line 1499
+    .line 1505
     invoke-super {p0, p1, p2}, Lorg/telegram/ui/Components/RecyclerListView;->onMeasure(II)V
 
-    .line 1500
+    .line 1506
     iget-boolean p1, p0, Lorg/telegram/ui/Components/EmojiView$12;->wasMeasured:Z
 
     if-nez p1, :cond_13
 
-    .line 1501
+    .line 1507
     iget-object p1, p0, Lorg/telegram/ui/Components/EmojiView$12;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/EmojiView;->access$600(Lorg/telegram/ui/Components/EmojiView;)Lorg/telegram/ui/Components/EmojiView$GifAdapter;
@@ -190,7 +190,7 @@
 
     const/4 p1, 0x1
 
-    .line 1502
+    .line 1508
     iput-boolean p1, p0, Lorg/telegram/ui/Components/EmojiView$12;->wasMeasured:Z
 
     :cond_13
@@ -200,14 +200,14 @@
 .method public requestLayout()V
     .registers 2
 
-    .line 1522
+    .line 1528
     iget-boolean v0, p0, Lorg/telegram/ui/Components/EmojiView$12;->ignoreLayout:Z
 
     if-eqz v0, :cond_5
 
     return-void
 
-    .line 1525
+    .line 1531
     :cond_5
     invoke-super {p0}, Lorg/telegram/ui/Components/RecyclerListView;->requestLayout()V
 

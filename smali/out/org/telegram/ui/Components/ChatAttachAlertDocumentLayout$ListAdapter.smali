@@ -54,33 +54,33 @@
 .method public constructor <init>(Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout;Landroid/content/Context;)V
     .registers 3
 
-    .line 1377
+    .line 1378
     iput-object p1, p0, Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout$ListAdapter;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout;
 
     invoke-direct {p0}, Lorg/telegram/ui/Components/RecyclerListView$SelectionAdapter;-><init>()V
-
-    .line 1370
-    new-instance p1, Ljava/util/ArrayList;
-
-    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object p1, p0, Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout$ListAdapter;->items:Ljava/util/ArrayList;
 
     .line 1371
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object p1, p0, Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout$ListAdapter;->history:Ljava/util/ArrayList;
+    iput-object p1, p0, Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout$ListAdapter;->items:Ljava/util/ArrayList;
 
     .line 1372
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
+    iput-object p1, p0, Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout$ListAdapter;->history:Ljava/util/ArrayList;
+
+    .line 1373
+    new-instance p1, Ljava/util/ArrayList;
+
+    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
+
     iput-object p1, p0, Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout$ListAdapter;->recentItems:Ljava/util/ArrayList;
 
-    .line 1378
+    .line 1379
     iput-object p2, p0, Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout$ListAdapter;->mContext:Landroid/content/Context;
 
     return-void
@@ -89,7 +89,7 @@
 .method static synthetic access$1700(Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout$ListAdapter;)Ljava/util/ArrayList;
     .registers 1
 
-    .line 1368
+    .line 1369
     iget-object p0, p0, Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout$ListAdapter;->history:Ljava/util/ArrayList;
 
     return-object p0
@@ -98,7 +98,7 @@
 .method static synthetic access$1800(Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout$ListAdapter;)Ljava/util/ArrayList;
     .registers 1
 
-    .line 1368
+    .line 1369
     iget-object p0, p0, Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout$ListAdapter;->items:Ljava/util/ArrayList;
 
     return-object p0
@@ -107,7 +107,7 @@
 .method static synthetic access$1900(Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout$ListAdapter;)Ljava/util/ArrayList;
     .registers 1
 
-    .line 1368
+    .line 1369
     iget-object p0, p0, Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout$ListAdapter;->recentItems:Ljava/util/ArrayList;
 
     return-object p0
@@ -118,7 +118,7 @@
 .method public getItem(I)Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout$ListItem;
     .registers 4
 
-    .line 1396
+    .line 1397
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout$ListAdapter;->items:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -127,7 +127,7 @@
 
     if-ge p1, v0, :cond_11
 
-    .line 1398
+    .line 1399
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout$ListAdapter;->items:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -138,7 +138,7 @@
 
     return-object p1
 
-    .line 1399
+    .line 1400
     :cond_11
     iget-object v1, p0, Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout$ListAdapter;->history:Ljava/util/ArrayList;
 
@@ -162,7 +162,7 @@
 
     if-eq p1, v0, :cond_41
 
-    .line 1400
+    .line 1401
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout$ListAdapter;->items:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -173,7 +173,7 @@
 
     sub-int/2addr p1, v0
 
-    .line 1401
+    .line 1402
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout$ListAdapter;->recentItems:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -182,7 +182,7 @@
 
     if-ge p1, v0, :cond_41
 
-    .line 1402
+    .line 1403
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout$ListAdapter;->recentItems:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -202,14 +202,14 @@
 .method public getItemCount()I
     .registers 3
 
-    .line 1388
+    .line 1389
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout$ListAdapter;->items:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
-    .line 1389
+    .line 1390
     iget-object v1, p0, Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout$ListAdapter;->history:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->isEmpty()Z
@@ -226,7 +226,7 @@
 
     if-nez v1, :cond_1f
 
-    .line 1390
+    .line 1391
     iget-object v1, p0, Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout$ListAdapter;->recentItems:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
@@ -246,7 +246,7 @@
 .method public getItemViewType(I)I
     .registers 4
 
-    .line 1410
+    .line 1411
     invoke-virtual {p0}, Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout$ListAdapter;->getItemCount()I
 
     move-result v0
@@ -261,7 +261,7 @@
 
     return p1
 
-    .line 1413
+    .line 1414
     :cond_a
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout$ListAdapter;->items:Ljava/util/ArrayList;
 
@@ -291,7 +291,7 @@
 .method public isEnabled(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)Z
     .registers 3
 
-    .line 1383
+    .line 1384
     invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->getItemViewType()I
 
     move-result p1
@@ -312,10 +312,10 @@
 .method public notifyDataSetChanged()V
     .registers 2
 
-    .line 1479
+    .line 1480
     invoke-super {p0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->notifyDataSetChanged()V
 
-    .line 1480
+    .line 1481
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout$ListAdapter;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout;->access$2500(Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout;)V
@@ -326,7 +326,7 @@
 .method public onBindViewHolder(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;I)V
     .registers 13
 
-    .line 1450
+    .line 1451
     invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->getItemViewType()I
 
     move-result v0
@@ -339,25 +339,25 @@
 
     goto/16 :goto_9f
 
-    .line 1460
+    .line 1461
     :cond_b
     invoke-virtual {p0, p2}, Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout$ListAdapter;->getItem(I)Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout$ListItem;
 
     move-result-object v0
 
-    .line 1461
+    .line 1462
     iget-object p1, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     check-cast p1, Lorg/telegram/ui/Cells/SharedDocumentCell;
 
-    .line 1462
+    .line 1463
     iget v7, v0, Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout$ListItem;->icon:I
 
     const/4 v9, 0x0
 
     if-eqz v7, :cond_2f
 
-    .line 1463
+    .line 1464
     iget-object v3, v0, Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout$ListItem;->title:Ljava/lang/String;
 
     iget-object v4, v0, Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout$ListItem;->subtitle:Ljava/lang/String;
@@ -390,7 +390,7 @@
 
     goto :goto_50
 
-    .line 1465
+    .line 1466
     :cond_2f
     iget-object p2, v0, Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout$ListItem;->ext:Ljava/lang/String;
 
@@ -414,7 +414,7 @@
 
     move-result-object v5
 
-    .line 1466
+    .line 1467
     iget-object v3, v0, Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout$ListItem;->title:Ljava/lang/String;
 
     iget-object v4, v0, Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout$ListItem;->subtitle:Ljava/lang/String;
@@ -429,13 +429,13 @@
 
     invoke-virtual/range {v2 .. v8}, Lorg/telegram/ui/Cells/SharedDocumentCell;->setTextAndValueAndTypeAndThumb(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IZ)V
 
-    .line 1468
+    .line 1469
     :goto_50
     iget-object p2, v0, Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout$ListItem;->file:Ljava/io/File;
 
     if-eqz p2, :cond_6f
 
-    .line 1469
+    .line 1470
     iget-object p2, p0, Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout$ListAdapter;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout;
 
     invoke-static {p2}, Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout;->access$2400(Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout;)Ljava/util/HashMap;
@@ -464,7 +464,7 @@
 
     goto :goto_9f
 
-    .line 1471
+    .line 1472
     :cond_6f
     iget-object p2, p0, Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout$ListAdapter;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout;
 
@@ -478,13 +478,13 @@
 
     goto :goto_9f
 
-    .line 1452
+    .line 1453
     :cond_7a
     iget-object p1, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     check-cast p1, Lorg/telegram/ui/Cells/HeaderCell;
 
-    .line 1453
+    .line 1454
     iget-object p2, p0, Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout$ListAdapter;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout;
 
     invoke-static {p2}, Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout;->access$2300(Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout;)Z
@@ -493,11 +493,11 @@
 
     if-eqz p2, :cond_93
 
-    const p2, 0x7f0e0e9a
+    const p2, 0x7f0e0f46
 
     const-string v0, "RecentFilesAZ"
 
-    .line 1454
+    .line 1455
     invoke-static {v0, p2}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object p2
@@ -507,11 +507,11 @@
     goto :goto_9f
 
     :cond_93
-    const p2, 0x7f0e0e99
+    const p2, 0x7f0e0f45
 
     const-string v0, "RecentFiles"
 
-    .line 1456
+    .line 1457
     invoke-static {v0, p2}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object p2
@@ -535,7 +535,7 @@
 
     if-eq p2, v0, :cond_10
 
-    .line 1442
+    .line 1443
     new-instance p1, Landroid/view/View;
 
     iget-object p2, p0, Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout$ListAdapter;->mContext:Landroid/content/Context;
@@ -544,7 +544,7 @@
 
     goto :goto_53
 
-    .line 1434
+    .line 1435
     :cond_10
     new-instance p2, Lorg/telegram/ui/Cells/ShadowSectionCell;
 
@@ -552,10 +552,10 @@
 
     invoke-direct {p2, v0}, Lorg/telegram/ui/Cells/ShadowSectionCell;-><init>(Landroid/content/Context;)V
 
-    .line 1435
+    .line 1436
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout$ListAdapter;->mContext:Landroid/content/Context;
 
-    const v1, 0x7f07012c
+    const v1, 0x7f0700fb
 
     const-string v2, "windowBackgroundGrayShadow"
 
@@ -563,7 +563,7 @@
 
     move-result-object v0
 
-    .line 1436
+    .line 1437
     new-instance v1, Lorg/telegram/ui/Components/CombinedDrawable;
 
     new-instance v2, Landroid/graphics/drawable/ColorDrawable;
@@ -580,15 +580,15 @@
 
     invoke-direct {v1, v2, v0}, Lorg/telegram/ui/Components/CombinedDrawable;-><init>(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
 
-    .line 1437
+    .line 1438
     invoke-virtual {v1, p1}, Lorg/telegram/ui/Components/CombinedDrawable;->setFullsize(Z)V
 
-    .line 1438
+    .line 1439
     invoke-virtual {p2, v1}, Landroid/view/View;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
     goto :goto_46
 
-    .line 1431
+    .line 1432
     :cond_3b
     new-instance p2, Lorg/telegram/ui/Cells/SharedDocumentCell;
 
@@ -605,7 +605,7 @@
 
     goto :goto_53
 
-    .line 1428
+    .line 1429
     :cond_48
     new-instance p1, Lorg/telegram/ui/Cells/HeaderCell;
 
@@ -617,7 +617,7 @@
 
     invoke-direct {p1, p2, v0}, Lorg/telegram/ui/Cells/HeaderCell;-><init>(Landroid/content/Context;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)V
 
-    .line 1445
+    .line 1446
     :goto_53
     new-instance p2, Lorg/telegram/ui/Components/RecyclerListView$Holder;
 

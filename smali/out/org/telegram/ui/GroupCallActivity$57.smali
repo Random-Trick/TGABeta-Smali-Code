@@ -26,7 +26,7 @@
 .method constructor <init>(Lorg/telegram/ui/GroupCallActivity;Lorg/telegram/ui/Components/voip/GroupCallMiniTextureView;Z)V
     .registers 4
 
-    .line 7689
+    .line 7694
     iput-object p1, p0, Lorg/telegram/ui/GroupCallActivity$57;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     iput-object p2, p0, Lorg/telegram/ui/GroupCallActivity$57;->val$videoRenderer:Lorg/telegram/ui/Components/voip/GroupCallMiniTextureView;
@@ -43,17 +43,17 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .registers 6
 
-    .line 7692
+    .line 7697
     iget-object p1, p0, Lorg/telegram/ui/GroupCallActivity$57;->val$videoRenderer:Lorg/telegram/ui/Components/voip/GroupCallMiniTextureView;
 
     const/4 v0, 0x0
 
     if-eqz p1, :cond_7
 
-    .line 7693
+    .line 7698
     iput-boolean v0, p1, Lorg/telegram/ui/Components/voip/GroupCallMiniTextureView;->animateToScrimView:Z
 
-    .line 7695
+    .line 7700
     :cond_7
     iget-object p1, p0, Lorg/telegram/ui/GroupCallActivity$57;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
@@ -73,12 +73,12 @@
 
     invoke-virtual {p1, v1}, Lorg/telegram/messenger/NotificationCenter;->onAnimationFinish(I)V
 
-    .line 7696
+    .line 7701
     iget-object p1, p0, Lorg/telegram/ui/GroupCallActivity$57;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-static {p1, v0}, Lorg/telegram/ui/GroupCallActivity;->access$19202(Lorg/telegram/ui/GroupCallActivity;Z)Z
 
-    .line 7697
+    .line 7702
     iget-object p1, p0, Lorg/telegram/ui/GroupCallActivity$57;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     iget-boolean v1, p0, Lorg/telegram/ui/GroupCallActivity$57;->val$enter:Z
@@ -99,7 +99,7 @@
     :goto_2c
     invoke-static {p1, v1}, Lorg/telegram/ui/GroupCallActivity;->access$10002(Lorg/telegram/ui/GroupCallActivity;F)F
 
-    .line 7698
+    .line 7703
     iget-object p1, p0, Lorg/telegram/ui/GroupCallActivity$57;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/GroupCallActivity;->access$5000(Lorg/telegram/ui/GroupCallActivity;)Lorg/telegram/ui/Components/voip/GroupCallRenderersContainer;
@@ -114,12 +114,12 @@
 
     iput v1, p1, Lorg/telegram/ui/Components/voip/GroupCallRenderersContainer;->progressToScrimView:F
 
-    .line 7699
+    .line 7704
     iget-boolean p1, p0, Lorg/telegram/ui/GroupCallActivity$57;->val$enter:Z
 
     if-nez p1, :cond_b9
 
-    .line 7700
+    .line 7705
     iget-object p1, p0, Lorg/telegram/ui/GroupCallActivity$57;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/GroupCallActivity;->access$9700(Lorg/telegram/ui/GroupCallActivity;)Landroid/graphics/Paint;
@@ -128,12 +128,12 @@
 
     invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 7701
+    .line 7706
     iget-object p1, p0, Lorg/telegram/ui/GroupCallActivity$57;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/GroupCallActivity;->access$18900(Lorg/telegram/ui/GroupCallActivity;)V
 
-    .line 7702
+    .line 7707
     iget-object p1, p0, Lorg/telegram/ui/GroupCallActivity$57;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/GroupCallActivity;->access$7700(Lorg/telegram/ui/GroupCallActivity;)Landroid/view/View;
@@ -146,7 +146,7 @@
 
     if-eqz p1, :cond_6a
 
-    .line 7703
+    .line 7708
     iget-object p1, p0, Lorg/telegram/ui/GroupCallActivity$57;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/GroupCallActivity;->access$19300(Lorg/telegram/ui/GroupCallActivity;)Landroid/view/ViewGroup;
@@ -161,7 +161,7 @@
 
     invoke-virtual {p1, v1}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
 
-    .line 7705
+    .line 7710
     :cond_6a
     iget-object p1, p0, Lorg/telegram/ui/GroupCallActivity$57;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
@@ -169,7 +169,7 @@
 
     invoke-static {p1, v1}, Lorg/telegram/ui/GroupCallActivity;->access$7702(Lorg/telegram/ui/GroupCallActivity;Landroid/view/View;)Landroid/view/View;
 
-    .line 7706
+    .line 7711
     iget-object p1, p0, Lorg/telegram/ui/GroupCallActivity$57;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/GroupCallActivity;->access$7800(Lorg/telegram/ui/GroupCallActivity;)Landroid/widget/FrameLayout;
@@ -180,12 +180,12 @@
 
     invoke-virtual {p1, v1}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
-    .line 7707
+    .line 7712
     iget-object p1, p0, Lorg/telegram/ui/GroupCallActivity$57;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-static {p1, v0}, Lorg/telegram/ui/GroupCallActivity;->access$8002(Lorg/telegram/ui/GroupCallActivity;Z)Z
 
-    .line 7708
+    .line 7713
     iget-object p1, p0, Lorg/telegram/ui/GroupCallActivity$57;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/GroupCallActivity;->access$5600(Lorg/telegram/ui/GroupCallActivity;)Lorg/telegram/ui/Components/FillLastGridLayoutManager;
@@ -196,7 +196,7 @@
 
     invoke-virtual {p1, v2}, Lorg/telegram/ui/Components/FillLastGridLayoutManager;->setCanScrollVertically(Z)V
 
-    .line 7710
+    .line 7715
     iget-object p1, p0, Lorg/telegram/ui/GroupCallActivity$57;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/GroupCallActivity;->access$19400(Lorg/telegram/ui/GroupCallActivity;)Landroid/view/View;
@@ -205,7 +205,7 @@
 
     invoke-virtual {p1, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 7712
+    .line 7717
     iget-object p1, p0, Lorg/telegram/ui/GroupCallActivity$57;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/GroupCallActivity;->access$16600(Lorg/telegram/ui/GroupCallActivity;)Z
@@ -214,17 +214,17 @@
 
     if-eqz p1, :cond_a5
 
-    .line 7713
+    .line 7718
     iget-object p1, p0, Lorg/telegram/ui/GroupCallActivity$57;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-static {p1, v0}, Lorg/telegram/ui/GroupCallActivity;->access$16602(Lorg/telegram/ui/GroupCallActivity;Z)Z
 
-    .line 7714
+    .line 7719
     iget-object p1, p0, Lorg/telegram/ui/GroupCallActivity$57;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-static {p1, v2}, Lorg/telegram/ui/GroupCallActivity;->access$5900(Lorg/telegram/ui/GroupCallActivity;Z)V
 
-    .line 7717
+    .line 7722
     :cond_a5
     iget-object p1, p0, Lorg/telegram/ui/GroupCallActivity$57;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
@@ -234,7 +234,7 @@
 
     if-eqz p1, :cond_e6
 
-    .line 7718
+    .line 7723
     iget-object p1, p0, Lorg/telegram/ui/GroupCallActivity$57;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/GroupCallActivity;->access$10200(Lorg/telegram/ui/GroupCallActivity;)Lorg/telegram/ui/Components/voip/GroupCallMiniTextureView;
@@ -247,7 +247,7 @@
 
     goto :goto_e6
 
-    .line 7721
+    .line 7726
     :cond_b9
     iget-object p1, p0, Lorg/telegram/ui/GroupCallActivity$57;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
@@ -257,7 +257,7 @@
 
     invoke-virtual {p1, v2}, Landroid/widget/FrameLayout;->setAlpha(F)V
 
-    .line 7722
+    .line 7727
     iget-object p1, p0, Lorg/telegram/ui/GroupCallActivity$57;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/GroupCallActivity;->access$7800(Lorg/telegram/ui/GroupCallActivity;)Landroid/widget/FrameLayout;
@@ -266,7 +266,7 @@
 
     invoke-virtual {p1, v2}, Landroid/widget/FrameLayout;->setScaleX(F)V
 
-    .line 7723
+    .line 7728
     iget-object p1, p0, Lorg/telegram/ui/GroupCallActivity$57;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/GroupCallActivity;->access$7800(Lorg/telegram/ui/GroupCallActivity;)Landroid/widget/FrameLayout;
@@ -275,7 +275,7 @@
 
     invoke-virtual {p1, v2}, Landroid/widget/FrameLayout;->setScaleY(F)V
 
-    .line 7724
+    .line 7729
     iget-object p1, p0, Lorg/telegram/ui/GroupCallActivity$57;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/GroupCallActivity;->access$7800(Lorg/telegram/ui/GroupCallActivity;)Landroid/widget/FrameLayout;
@@ -284,7 +284,7 @@
 
     invoke-virtual {p1, v3}, Landroid/widget/FrameLayout;->setTranslationX(F)V
 
-    .line 7725
+    .line 7730
     iget-object p1, p0, Lorg/telegram/ui/GroupCallActivity$57;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/GroupCallActivity;->access$7800(Lorg/telegram/ui/GroupCallActivity;)Landroid/widget/FrameLayout;
@@ -293,14 +293,14 @@
 
     invoke-virtual {p1, v3}, Landroid/widget/FrameLayout;->setTranslationY(F)V
 
-    .line 7727
+    .line 7732
     :cond_e6
     :goto_e6
     iget-object p1, p0, Lorg/telegram/ui/GroupCallActivity$57;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/GroupCallActivity;->access$17400(Lorg/telegram/ui/GroupCallActivity;)V
 
-    .line 7728
+    .line 7733
     iget-object p1, p0, Lorg/telegram/ui/GroupCallActivity$57;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/GroupCallActivity;->access$19500(Lorg/telegram/ui/GroupCallActivity;)Landroid/view/ViewGroup;
@@ -309,7 +309,7 @@
 
     invoke-virtual {p1}, Landroid/view/ViewGroup;->invalidate()V
 
-    .line 7729
+    .line 7734
     iget-object p1, p0, Lorg/telegram/ui/GroupCallActivity$57;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/GroupCallActivity;->access$17100(Lorg/telegram/ui/GroupCallActivity;)Lorg/telegram/ui/Components/ProfileGalleryView;
@@ -318,7 +318,7 @@
 
     invoke-virtual {p1}, Landroid/view/ViewGroup;->invalidate()V
 
-    .line 7730
+    .line 7735
     iget-object p1, p0, Lorg/telegram/ui/GroupCallActivity$57;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/GroupCallActivity;->access$5700(Lorg/telegram/ui/GroupCallActivity;)Lorg/telegram/ui/Components/RecyclerListView;

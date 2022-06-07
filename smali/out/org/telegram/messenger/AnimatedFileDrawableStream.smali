@@ -21,7 +21,7 @@
 
 .field private ignored:Z
 
-.field private lastOffset:I
+.field private lastOffset:J
 
 .field private loadOperation:Lorg/telegram/messenger/FileLoadOperation;
 
@@ -254,70 +254,86 @@
 .end method
 
 .method public read(II)I
-    .registers 15
+    .registers 19
+
+    move-object/from16 v8, p0
+
+    move/from16 v0, p1
+
+    move/from16 v9, p2
 
     .line 43
-    iget-object v0, p0, Lorg/telegram/messenger/AnimatedFileDrawableStream;->sync:Ljava/lang/Object;
+    iget-object v1, v8, Lorg/telegram/messenger/AnimatedFileDrawableStream;->sync:Ljava/lang/Object;
 
-    monitor-enter v0
+    monitor-enter v1
 
     .line 44
-    :try_start_3
-    iget-boolean v1, p0, Lorg/telegram/messenger/AnimatedFileDrawableStream;->canceled:Z
+    :try_start_9
+    iget-boolean v2, v8, Lorg/telegram/messenger/AnimatedFileDrawableStream;->canceled:Z
 
-    const/4 v2, 0x0
+    const/4 v10, 0x0
 
-    if-eqz v1, :cond_a
+    if-eqz v2, :cond_10
 
     .line 45
-    monitor-exit v0
+    monitor-exit v1
 
-    return v2
+    return v10
 
     .line 47
-    :cond_a
-    monitor-exit v0
-    :try_end_b
-    .catchall {:try_start_3 .. :try_end_b} :catchall_8b
+    :cond_10
+    monitor-exit v1
+    :try_end_11
+    .catchall {:try_start_9 .. :try_end_11} :catchall_a7
 
-    if-nez p2, :cond_e
+    if-nez v9, :cond_14
 
-    return v2
+    return v10
 
-    :cond_e
-    const/4 v0, 0x0
+    :cond_14
+    const-wide/16 v11, 0x0
 
-    :cond_f
-    :goto_f
-    if-nez v0, :cond_82
+    move-wide v1, v11
+
+    :goto_17
+    cmp-long v3, v1, v11
+
+    if-nez v3, :cond_9c
 
     .line 54
-    :try_start_11
-    iget-object v1, p0, Lorg/telegram/messenger/AnimatedFileDrawableStream;->loadOperation:Lorg/telegram/messenger/FileLoadOperation;
+    :try_start_1b
+    iget-object v3, v8, Lorg/telegram/messenger/AnimatedFileDrawableStream;->loadOperation:Lorg/telegram/messenger/FileLoadOperation;
 
-    invoke-virtual {v1, p1, p2}, Lorg/telegram/messenger/FileLoadOperation;->getDownloadedLengthFromOffset(II)[I
+    int-to-long v4, v9
 
-    move-result-object v1
+    invoke-virtual {v3, v0, v4, v5}, Lorg/telegram/messenger/FileLoadOperation;->getDownloadedLengthFromOffset(IJ)[J
+
+    move-result-object v3
 
     .line 55
-    aget v0, v1, v2
+    aget-wide v13, v3, v10
+    :try_end_24
+    .catch Ljava/lang/Exception; {:try_start_1b .. :try_end_24} :catch_a1
 
     .line 56
-    iget-boolean v3, p0, Lorg/telegram/messenger/AnimatedFileDrawableStream;->finishedLoadingFile:Z
+    :try_start_24
+    iget-boolean v1, v8, Lorg/telegram/messenger/AnimatedFileDrawableStream;->finishedLoadingFile:Z
 
-    const/4 v4, 0x1
+    const/4 v15, 0x1
 
-    if-nez v3, :cond_30
+    if-nez v1, :cond_3d
 
-    aget v1, v1, v4
+    aget-wide v1, v3, v15
 
-    if-eqz v1, :cond_30
+    cmp-long v3, v1, v11
+
+    if-eqz v3, :cond_3d
 
     .line 57
-    iput-boolean v4, p0, Lorg/telegram/messenger/AnimatedFileDrawableStream;->finishedLoadingFile:Z
+    iput-boolean v15, v8, Lorg/telegram/messenger/AnimatedFileDrawableStream;->finishedLoadingFile:Z
 
     .line 58
-    iget-object v1, p0, Lorg/telegram/messenger/AnimatedFileDrawableStream;->loadOperation:Lorg/telegram/messenger/FileLoadOperation;
+    iget-object v1, v8, Lorg/telegram/messenger/AnimatedFileDrawableStream;->loadOperation:Lorg/telegram/messenger/FileLoadOperation;
 
     invoke-virtual {v1}, Lorg/telegram/messenger/FileLoadOperation;->getCacheFileFinal()Ljava/io/File;
 
@@ -327,162 +343,189 @@
 
     move-result-object v1
 
-    iput-object v1, p0, Lorg/telegram/messenger/AnimatedFileDrawableStream;->finishedFilePath:Ljava/lang/String;
+    iput-object v1, v8, Lorg/telegram/messenger/AnimatedFileDrawableStream;->finishedFilePath:Ljava/lang/String;
 
-    :cond_30
-    if-nez v0, :cond_f
+    :cond_3d
+    cmp-long v1, v13, v11
+
+    if-nez v1, :cond_96
 
     .line 61
-    iget-object v1, p0, Lorg/telegram/messenger/AnimatedFileDrawableStream;->loadOperation:Lorg/telegram/messenger/FileLoadOperation;
+    iget-object v1, v8, Lorg/telegram/messenger/AnimatedFileDrawableStream;->loadOperation:Lorg/telegram/messenger/FileLoadOperation;
 
     invoke-virtual {v1}, Lorg/telegram/messenger/FileLoadOperation;->isPaused()Z
 
     move-result v1
 
-    if-nez v1, :cond_42
+    if-nez v1, :cond_54
 
-    iget v1, p0, Lorg/telegram/messenger/AnimatedFileDrawableStream;->lastOffset:I
+    iget-wide v1, v8, Lorg/telegram/messenger/AnimatedFileDrawableStream;->lastOffset:J
 
-    if-ne v1, p1, :cond_42
+    int-to-long v3, v0
 
-    iget-boolean v1, p0, Lorg/telegram/messenger/AnimatedFileDrawableStream;->preview:Z
+    cmp-long v5, v1, v3
 
-    if-eqz v1, :cond_55
+    if-nez v5, :cond_54
+
+    iget-boolean v1, v8, Lorg/telegram/messenger/AnimatedFileDrawableStream;->preview:Z
+
+    if-eqz v1, :cond_69
 
     .line 62
-    :cond_42
-    iget v1, p0, Lorg/telegram/messenger/AnimatedFileDrawableStream;->currentAccount:I
-
-    invoke-static {v1}, Lorg/telegram/messenger/FileLoader;->getInstance(I)Lorg/telegram/messenger/FileLoader;
-
-    move-result-object v5
-
-    iget-object v7, p0, Lorg/telegram/messenger/AnimatedFileDrawableStream;->document:Lorg/telegram/tgnet/TLRPC$Document;
-
-    iget-object v8, p0, Lorg/telegram/messenger/AnimatedFileDrawableStream;->location:Lorg/telegram/messenger/ImageLocation;
-
-    iget-object v9, p0, Lorg/telegram/messenger/AnimatedFileDrawableStream;->parentObject:Ljava/lang/Object;
-
-    iget-boolean v11, p0, Lorg/telegram/messenger/AnimatedFileDrawableStream;->preview:Z
-
-    move-object v6, p0
-
-    move v10, p1
-
-    invoke-virtual/range {v5 .. v11}, Lorg/telegram/messenger/FileLoader;->loadStreamFile(Lorg/telegram/messenger/FileLoadOperationStream;Lorg/telegram/tgnet/TLRPC$Document;Lorg/telegram/messenger/ImageLocation;Ljava/lang/Object;IZ)Lorg/telegram/messenger/FileLoadOperation;
-
-    .line 64
-    :cond_55
-    iget-object v1, p0, Lorg/telegram/messenger/AnimatedFileDrawableStream;->sync:Ljava/lang/Object;
-
-    monitor-enter v1
-    :try_end_58
-    .catch Ljava/lang/Exception; {:try_start_11 .. :try_end_58} :catch_86
-
-    .line 65
-    :try_start_58
-    iget-boolean v3, p0, Lorg/telegram/messenger/AnimatedFileDrawableStream;->canceled:Z
-
-    if-eqz v3, :cond_5e
-
-    .line 66
-    monitor-exit v1
-
-    return v2
-
-    .line 68
-    :cond_5e
-    new-instance v3, Ljava/util/concurrent/CountDownLatch;
-
-    invoke-direct {v3, v4}, Ljava/util/concurrent/CountDownLatch;-><init>(I)V
-
-    iput-object v3, p0, Lorg/telegram/messenger/AnimatedFileDrawableStream;->countDownLatch:Ljava/util/concurrent/CountDownLatch;
-
-    .line 69
-    monitor-exit v1
-    :try_end_66
-    .catchall {:try_start_58 .. :try_end_66} :catchall_7f
-
-    .line 70
-    :try_start_66
-    iget-boolean v1, p0, Lorg/telegram/messenger/AnimatedFileDrawableStream;->preview:Z
-
-    if-nez v1, :cond_75
-
-    .line 71
-    iget v1, p0, Lorg/telegram/messenger/AnimatedFileDrawableStream;->currentAccount:I
+    :cond_54
+    iget v1, v8, Lorg/telegram/messenger/AnimatedFileDrawableStream;->currentAccount:I
 
     invoke-static {v1}, Lorg/telegram/messenger/FileLoader;->getInstance(I)Lorg/telegram/messenger/FileLoader;
 
     move-result-object v1
 
-    iget-object v3, p0, Lorg/telegram/messenger/AnimatedFileDrawableStream;->document:Lorg/telegram/tgnet/TLRPC$Document;
+    iget-object v3, v8, Lorg/telegram/messenger/AnimatedFileDrawableStream;->document:Lorg/telegram/tgnet/TLRPC$Document;
 
-    invoke-virtual {v1, v3, v2, v4}, Lorg/telegram/messenger/FileLoader;->setLoadingVideo(Lorg/telegram/tgnet/TLRPC$Document;ZZ)V
+    iget-object v4, v8, Lorg/telegram/messenger/AnimatedFileDrawableStream;->location:Lorg/telegram/messenger/ImageLocation;
+
+    iget-object v5, v8, Lorg/telegram/messenger/AnimatedFileDrawableStream;->parentObject:Ljava/lang/Object;
+
+    iget-boolean v7, v8, Lorg/telegram/messenger/AnimatedFileDrawableStream;->preview:Z
+
+    move-object/from16 v2, p0
+
+    move/from16 v6, p1
+
+    invoke-virtual/range {v1 .. v7}, Lorg/telegram/messenger/FileLoader;->loadStreamFile(Lorg/telegram/messenger/FileLoadOperationStream;Lorg/telegram/tgnet/TLRPC$Document;Lorg/telegram/messenger/ImageLocation;Ljava/lang/Object;IZ)Lorg/telegram/messenger/FileLoadOperation;
+
+    .line 64
+    :cond_69
+    iget-object v1, v8, Lorg/telegram/messenger/AnimatedFileDrawableStream;->sync:Ljava/lang/Object;
+
+    monitor-enter v1
+    :try_end_6c
+    .catch Ljava/lang/Exception; {:try_start_24 .. :try_end_6c} :catch_99
+
+    .line 65
+    :try_start_6c
+    iget-boolean v2, v8, Lorg/telegram/messenger/AnimatedFileDrawableStream;->canceled:Z
+
+    if-eqz v2, :cond_72
+
+    .line 66
+    monitor-exit v1
+
+    return v10
+
+    .line 68
+    :cond_72
+    new-instance v2, Ljava/util/concurrent/CountDownLatch;
+
+    invoke-direct {v2, v15}, Ljava/util/concurrent/CountDownLatch;-><init>(I)V
+
+    iput-object v2, v8, Lorg/telegram/messenger/AnimatedFileDrawableStream;->countDownLatch:Ljava/util/concurrent/CountDownLatch;
+
+    .line 69
+    monitor-exit v1
+    :try_end_7a
+    .catchall {:try_start_6c .. :try_end_7a} :catchall_93
+
+    .line 70
+    :try_start_7a
+    iget-boolean v1, v8, Lorg/telegram/messenger/AnimatedFileDrawableStream;->preview:Z
+
+    if-nez v1, :cond_89
+
+    .line 71
+    iget v1, v8, Lorg/telegram/messenger/AnimatedFileDrawableStream;->currentAccount:I
+
+    invoke-static {v1}, Lorg/telegram/messenger/FileLoader;->getInstance(I)Lorg/telegram/messenger/FileLoader;
+
+    move-result-object v1
+
+    iget-object v2, v8, Lorg/telegram/messenger/AnimatedFileDrawableStream;->document:Lorg/telegram/tgnet/TLRPC$Document;
+
+    invoke-virtual {v1, v2, v10, v15}, Lorg/telegram/messenger/FileLoader;->setLoadingVideo(Lorg/telegram/tgnet/TLRPC$Document;ZZ)V
 
     .line 73
-    :cond_75
-    iput-boolean v4, p0, Lorg/telegram/messenger/AnimatedFileDrawableStream;->waitingForLoad:Z
+    :cond_89
+    iput-boolean v15, v8, Lorg/telegram/messenger/AnimatedFileDrawableStream;->waitingForLoad:Z
 
     .line 74
-    iget-object v1, p0, Lorg/telegram/messenger/AnimatedFileDrawableStream;->countDownLatch:Ljava/util/concurrent/CountDownLatch;
+    iget-object v1, v8, Lorg/telegram/messenger/AnimatedFileDrawableStream;->countDownLatch:Ljava/util/concurrent/CountDownLatch;
 
     invoke-virtual {v1}, Ljava/util/concurrent/CountDownLatch;->await()V
 
     .line 75
-    iput-boolean v2, p0, Lorg/telegram/messenger/AnimatedFileDrawableStream;->waitingForLoad:Z
-    :try_end_7e
-    .catch Ljava/lang/Exception; {:try_start_66 .. :try_end_7e} :catch_86
+    iput-boolean v10, v8, Lorg/telegram/messenger/AnimatedFileDrawableStream;->waitingForLoad:Z
+    :try_end_92
+    .catch Ljava/lang/Exception; {:try_start_7a .. :try_end_92} :catch_99
 
-    goto :goto_f
+    goto :goto_96
 
-    :catchall_7f
-    move-exception p1
+    :catchall_93
+    move-exception v0
 
     .line 69
-    :try_start_80
+    :try_start_94
     monitor-exit v1
-    :try_end_81
-    .catchall {:try_start_80 .. :try_end_81} :catchall_7f
+    :try_end_95
+    .catchall {:try_start_94 .. :try_end_95} :catchall_93
 
-    :try_start_81
-    throw p1
+    :try_start_95
+    throw v0
+    :try_end_96
+    .catch Ljava/lang/Exception; {:try_start_95 .. :try_end_96} :catch_99
 
-    :cond_82
-    add-int/2addr p1, v0
+    :cond_96
+    :goto_96
+    move-wide v1, v13
+
+    goto/16 :goto_17
+
+    :catch_99
+    move-exception v0
+
+    move-wide v1, v13
+
+    goto :goto_a2
+
+    :cond_9c
+    int-to-long v3, v0
+
+    add-long/2addr v3, v1
 
     .line 78
-    iput p1, p0, Lorg/telegram/messenger/AnimatedFileDrawableStream;->lastOffset:I
-    :try_end_85
-    .catch Ljava/lang/Exception; {:try_start_81 .. :try_end_85} :catch_86
+    :try_start_9e
+    iput-wide v3, v8, Lorg/telegram/messenger/AnimatedFileDrawableStream;->lastOffset:J
+    :try_end_a0
+    .catch Ljava/lang/Exception; {:try_start_9e .. :try_end_a0} :catch_a1
 
-    goto :goto_8a
+    goto :goto_a5
 
-    :catch_86
-    move-exception p1
+    :catch_a1
+    move-exception v0
 
     .line 80
-    invoke-static {p1, v2}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;Z)V
+    :goto_a2
+    invoke-static {v0, v10}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;Z)V
 
-    :goto_8a
+    :goto_a5
+    long-to-int v0, v1
+
     return v0
 
-    :catchall_8b
-    move-exception p1
+    :catchall_a7
+    move-exception v0
 
     .line 47
-    :try_start_8c
-    monitor-exit v0
-    :try_end_8d
-    .catchall {:try_start_8c .. :try_end_8d} :catchall_8b
+    :try_start_a8
+    monitor-exit v1
+    :try_end_a9
+    .catchall {:try_start_a8 .. :try_end_a9} :catchall_a7
 
-    goto :goto_8f
+    goto :goto_ab
 
-    :goto_8e
-    throw p1
+    :goto_aa
+    throw v0
 
-    :goto_8f
-    goto :goto_8e
+    :goto_ab
+    goto :goto_aa
 .end method
 
 .method public reset()V

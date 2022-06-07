@@ -949,7 +949,7 @@
 
     invoke-virtual {v1, v0, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    const p1, 0x7f0e1029
+    const p1, 0x7f0e10e7
 
     const-string v0, "ShareLink"
 
@@ -2037,7 +2037,7 @@
 
     const-string v3, "ProxyDetails"
 
-    const v4, 0x7f0e0e30
+    const v4, 0x7f0e0ed9
 
     invoke-static {v3, v4}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
@@ -2048,7 +2048,7 @@
     .line 196
     iget-object v2, v0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
-    const v3, 0x7f070140
+    const v3, 0x7f070109
 
     invoke-virtual {v2, v3}, Lorg/telegram/ui/ActionBar/ActionBar;->setBackButtonImage(I)V
 
@@ -2088,7 +2088,7 @@
 
     move-result-object v2
 
-    const v4, 0x7f07015e
+    const v4, 0x7f07010a
 
     const/high16 v5, 0x42600000    # 56.0f
 
@@ -2104,7 +2104,7 @@
 
     iput-object v2, v0, Lorg/telegram/ui/ProxySettingsActivity;->doneItem:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
-    const v4, 0x7f0e05dd
+    const v4, 0x7f0e062e
 
     const-string v5, "Done"
 
@@ -2243,7 +2243,7 @@
 
     aget-object v5, v5, v4
 
-    const v9, 0x7f0e121c
+    const v9, 0x7f0e12e9
 
     const-string v10, "UseProxySocks5"
 
@@ -2273,7 +2273,7 @@
 
     aget-object v5, v5, v4
 
-    const v9, 0x7f0e121f
+    const v9, 0x7f0e12ec
 
     const-string v10, "UseProxyTelegram"
 
@@ -2724,7 +2724,7 @@
 
     aget-object v2, v2, v4
 
-    const v12, 0x7f0e121a
+    const v12, 0x7f0e12e7
 
     const-string v13, "UseProxySecret"
 
@@ -2753,7 +2753,7 @@
 
     aget-object v2, v2, v4
 
-    const v12, 0x7f0e1218
+    const v12, 0x7f0e12e5
 
     const-string v13, "UseProxyPassword"
 
@@ -2782,7 +2782,7 @@
 
     aget-object v2, v2, v4
 
-    const v12, 0x7f0e1223
+    const v12, 0x7f0e12f0
 
     const-string v13, "UseProxyUsername"
 
@@ -2811,7 +2811,7 @@
 
     aget-object v2, v2, v4
 
-    const v12, 0x7f0e1219
+    const v12, 0x7f0e12e6
 
     const-string v13, "UseProxyPort"
 
@@ -2854,7 +2854,7 @@
 
     aget-object v2, v2, v4
 
-    const v12, 0x7f0e1214
+    const v12, 0x7f0e12e1
 
     const-string v13, "UseProxyAddress"
 
@@ -2956,7 +2956,7 @@
     :goto_372
     const-string v4, "windowBackgroundGrayShadow"
 
-    const v11, 0x7f07012d
+    const v11, 0x7f0700fc
 
     const/16 v12, 0x8
 
@@ -2989,7 +2989,7 @@
 
     aget-object v4, v4, v2
 
-    const v11, 0x7f0e1217
+    const v11, 0x7f0e12e4
 
     const-string v12, "UseProxyInfo"
 
@@ -3011,7 +3011,7 @@
 
     invoke-direct {v11}, Ljava/lang/StringBuilder;-><init>()V
 
-    const v13, 0x7f0e1221
+    const v13, 0x7f0e12ee
 
     const-string v14, "UseProxyTelegramInfo"
 
@@ -3025,7 +3025,7 @@
 
     invoke-virtual {v11, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const v13, 0x7f0e1222
+    const v13, 0x7f0e12ef
 
     const-string v14, "UseProxyTelegramInfo2"
 
@@ -3090,7 +3090,7 @@
     .line 448
     iget-object v2, v0, Lorg/telegram/ui/ProxySettingsActivity;->pasteCell:Lorg/telegram/ui/Cells/TextSettingsCell;
 
-    const v13, 0x7f0e0cd0
+    const v13, 0x7f0e0d5a
 
     const-string v14, "PasteFromClipboard"
 
@@ -3205,7 +3205,7 @@
     .line 493
     iget-object v2, v0, Lorg/telegram/ui/ProxySettingsActivity;->shareCell:Lorg/telegram/ui/Cells/TextSettingsCell;
 
-    const v5, 0x7f0e1028
+    const v5, 0x7f0e10e6
 
     const-string v12, "ShareFile"
 

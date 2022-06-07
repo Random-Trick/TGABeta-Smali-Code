@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/ProfileActivity$PagerIndicatorView;Lorg/telegram/ui/ProfileActivity;)V
     .registers 3
 
-    .line 1234
+    .line 1249
     iput-object p1, p0, Lorg/telegram/ui/ProfileActivity$PagerIndicatorView$3;->this$1:Lorg/telegram/ui/ProfileActivity$PagerIndicatorView;
 
     invoke-direct {p0}, Landroid/database/DataSetObserver;-><init>()V
@@ -35,7 +35,7 @@
 .method public onChanged()V
     .registers 4
 
-    .line 1237
+    .line 1252
     iget-object v0, p0, Lorg/telegram/ui/ProfileActivity$PagerIndicatorView$3;->this$1:Lorg/telegram/ui/ProfileActivity$PagerIndicatorView;
 
     iget-object v0, v0, Lorg/telegram/ui/ProfileActivity$PagerIndicatorView;->this$0:Lorg/telegram/ui/ProfileActivity;
@@ -48,7 +48,7 @@
 
     move-result v0
 
-    .line 1238
+    .line 1253
     iget-object v1, p0, Lorg/telegram/ui/ProfileActivity$PagerIndicatorView$3;->this$1:Lorg/telegram/ui/ProfileActivity$PagerIndicatorView;
 
     iget-object v1, v1, Lorg/telegram/ui/ProfileActivity$PagerIndicatorView;->this$0:Lorg/telegram/ui/ProfileActivity;
@@ -81,14 +81,14 @@
 
     if-eqz v0, :cond_32
 
-    .line 1239
+    .line 1254
     iget-object v0, p0, Lorg/telegram/ui/ProfileActivity$PagerIndicatorView$3;->this$1:Lorg/telegram/ui/ProfileActivity$PagerIndicatorView;
 
     iget-object v0, v0, Lorg/telegram/ui/ProfileActivity$PagerIndicatorView;->this$0:Lorg/telegram/ui/ProfileActivity;
 
     invoke-static {v0, v1}, Lorg/telegram/ui/ProfileActivity;->access$1802(Lorg/telegram/ui/ProfileActivity;I)I
 
-    .line 1241
+    .line 1256
     :cond_32
     iget-object v0, p0, Lorg/telegram/ui/ProfileActivity$PagerIndicatorView$3;->this$1:Lorg/telegram/ui/ProfileActivity$PagerIndicatorView;
 
@@ -96,14 +96,14 @@
 
     invoke-static {v0, v1}, Lorg/telegram/ui/ProfileActivity$PagerIndicatorView;->access$3500(Lorg/telegram/ui/ProfileActivity$PagerIndicatorView;Z)V
 
-    .line 1242
+    .line 1257
     iget-object v0, p0, Lorg/telegram/ui/ProfileActivity$PagerIndicatorView$3;->this$1:Lorg/telegram/ui/ProfileActivity$PagerIndicatorView;
 
     const/high16 v1, 0x3f800000    # 1.0f
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ProfileActivity$PagerIndicatorView;->refreshVisibility(F)V
 
-    .line 1243
+    .line 1258
     iget-object v0, p0, Lorg/telegram/ui/ProfileActivity$PagerIndicatorView$3;->this$1:Lorg/telegram/ui/ProfileActivity$PagerIndicatorView;
 
     invoke-static {v0}, Lorg/telegram/ui/ProfileActivity$PagerIndicatorView;->access$3600(Lorg/telegram/ui/ProfileActivity$PagerIndicatorView;)V

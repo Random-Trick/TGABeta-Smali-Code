@@ -55,7 +55,7 @@
 
     iget-object v0, p0, Lj$/wrappers/f;->a:Lj$/util/r;
 
-    invoke-interface {v0, p1}, Lj$/util/s;->forEachRemaining(Ljava/lang/Object;)V
+    invoke-interface {v0, p1}, Lj$/util/p;->forEachRemaining(Ljava/lang/Object;)V
 
     return-void
 .end method

@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/ActionBar/ActionBarMenuItem;Landroid/content/Context;)V
     .registers 3
 
-    .line 1260
+    .line 1254
     iput-object p1, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuItem$9;->this$0:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
     invoke-direct {p0, p2}, Lorg/telegram/ui/Components/EditTextBoldCursor;-><init>(Landroid/content/Context;)V
@@ -39,7 +39,7 @@
 
     if-ne p1, v0, :cond_69
 
-    .line 1276
+    .line 1270
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuItem$9;->this$0:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
     invoke-static {v0}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->access$300(Lorg/telegram/ui/ActionBar/ActionBarMenuItem;)Lorg/telegram/ui/Components/EditTextBoldCursor;
@@ -85,7 +85,7 @@
 
     if-eqz v0, :cond_69
 
-    .line 1277
+    .line 1271
     :cond_30
     iget-object p1, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuItem$9;->this$0:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
@@ -97,7 +97,7 @@
 
     if-eqz p1, :cond_5f
 
-    .line 1278
+    .line 1272
     iget-object p1, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuItem$9;->this$0:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
     invoke-static {p1}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->access$900(Lorg/telegram/ui/ActionBar/ActionBarMenuItem;)Ljava/util/ArrayList;
@@ -122,17 +122,17 @@
 
     check-cast p1, Lorg/telegram/ui/Adapters/FiltersView$MediaFilterData;
 
-    .line 1279
+    .line 1273
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuItem$9;->this$0:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
     iget-object v0, v0, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->listener:Lorg/telegram/ui/ActionBar/ActionBarMenuItem$ActionBarMenuItemSearchListener;
 
     if-eqz v0, :cond_59
 
-    .line 1280
+    .line 1274
     invoke-virtual {v0, p1}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem$ActionBarMenuItemSearchListener;->onSearchFilterCleared(Lorg/telegram/ui/Adapters/FiltersView$MediaFilterData;)V
 
-    .line 1282
+    .line 1276
     :cond_59
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuItem$9;->this$0:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
@@ -140,7 +140,7 @@
 
     goto :goto_68
 
-    .line 1284
+    .line 1278
     :cond_5f
     iget-object p1, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuItem$9;->this$0:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
@@ -153,7 +153,7 @@
     :goto_68
     return p2
 
-    .line 1288
+    .line 1282
     :cond_69
     invoke-super {p0, p1, p2}, Landroid/widget/EditText;->onKeyDown(ILandroid/view/KeyEvent;)Z
 
@@ -165,15 +165,15 @@
 .method protected onMeasure(II)V
     .registers 3
 
-    .line 1264
+    .line 1258
     invoke-super {p0, p1, p2}, Lorg/telegram/ui/Components/EditTextBoldCursor;->onMeasure(II)V
 
-    .line 1265
+    .line 1259
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result p1
 
-    .line 1266
+    .line 1260
     invoke-virtual {p0}, Landroid/widget/EditText;->getMeasuredWidth()I
 
     move-result p2
@@ -202,7 +202,7 @@
 .method protected onSelectionChanged(II)V
     .registers 3
 
-    .line 1271
+    .line 1265
     invoke-super {p0, p1, p2}, Lorg/telegram/ui/Components/EditTextEffects;->onSelectionChanged(II)V
 
     return-void
@@ -211,12 +211,12 @@
 .method public onTouchEvent(Landroid/view/MotionEvent;)Z
     .registers 4
 
-    .line 1293
+    .line 1287
     invoke-super {p0, p1}, Lorg/telegram/ui/Components/EditTextBoldCursor;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
     move-result v0
 
-    .line 1294
+    .line 1288
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result p1
@@ -225,17 +225,17 @@
 
     if-ne p1, v1, :cond_17
 
-    .line 1295
+    .line 1289
     invoke-static {p0}, Lorg/telegram/messenger/AndroidUtilities;->showKeyboard(Landroid/view/View;)Z
 
     move-result p1
 
     if-nez p1, :cond_17
 
-    .line 1296
+    .line 1290
     invoke-virtual {p0}, Landroid/widget/EditText;->clearFocus()V
 
-    .line 1297
+    .line 1291
     invoke-virtual {p0}, Landroid/widget/EditText;->requestFocus()Z
 
     :cond_17

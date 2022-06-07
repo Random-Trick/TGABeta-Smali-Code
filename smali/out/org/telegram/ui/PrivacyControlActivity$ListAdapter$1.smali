@@ -24,7 +24,7 @@
 .method constructor <init>(Lorg/telegram/ui/PrivacyControlActivity$ListAdapter;Ljava/lang/String;)V
     .registers 3
 
-    .line 1017
+    .line 1018
     iput-object p1, p0, Lorg/telegram/ui/PrivacyControlActivity$ListAdapter$1;->this$1:Lorg/telegram/ui/PrivacyControlActivity$ListAdapter;
 
     iput-object p2, p0, Lorg/telegram/ui/PrivacyControlActivity$ListAdapter$1;->val$phoneLinkStr:Ljava/lang/String;
@@ -39,7 +39,7 @@
 .method public onClick(Landroid/view/View;)V
     .registers 4
 
-    .line 1020
+    .line 1021
     sget-object p1, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     const-string v0, "clipboard"
@@ -50,7 +50,7 @@
 
     check-cast p1, Landroid/content/ClipboardManager;
 
-    .line 1021
+    .line 1022
     iget-object v0, p0, Lorg/telegram/ui/PrivacyControlActivity$ListAdapter$1;->val$phoneLinkStr:Ljava/lang/String;
 
     const-string v1, "label"
@@ -59,15 +59,8 @@
 
     move-result-object v0
 
-    .line 1022
-    invoke-virtual {p1, v0}, Landroid/content/ClipboardManager;->setPrimaryClip(Landroid/content/ClipData;)V
-
     .line 1023
-    sget p1, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v0, 0x1f
-
-    if-ge p1, v0, :cond_33
+    invoke-virtual {p1, v0}, Landroid/content/ClipboardManager;->setPrimaryClip(Landroid/content/ClipData;)V
 
     .line 1024
     iget-object p1, p0, Lorg/telegram/ui/PrivacyControlActivity$ListAdapter$1;->this$1:Lorg/telegram/ui/PrivacyControlActivity$ListAdapter;
@@ -78,20 +71,27 @@
 
     move-result-object p1
 
-    const v0, 0x7f0e0d47
+    const-string v0, "LinkCopied"
 
-    const-string v1, "PhoneCopied"
+    const v1, 0x7f0e09b7
 
-    invoke-static {v1, v0}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
+    invoke-static {v0, v1}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lorg/telegram/ui/Components/BulletinFactory;->createCopyBulletin(Ljava/lang/String;)Lorg/telegram/ui/Components/Bulletin;
+    iget-object v1, p0, Lorg/telegram/ui/PrivacyControlActivity$ListAdapter$1;->this$1:Lorg/telegram/ui/PrivacyControlActivity$ListAdapter;
+
+    iget-object v1, v1, Lorg/telegram/ui/PrivacyControlActivity$ListAdapter;->this$0:Lorg/telegram/ui/PrivacyControlActivity;
+
+    invoke-virtual {v1}, Lorg/telegram/ui/ActionBar/BaseFragment;->getResourceProvider()Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;
+
+    move-result-object v1
+
+    invoke-virtual {p1, v0, v1}, Lorg/telegram/ui/Components/BulletinFactory;->createCopyLinkBulletin(Ljava/lang/String;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)Lorg/telegram/ui/Components/Bulletin;
 
     move-result-object p1
 
     invoke-virtual {p1}, Lorg/telegram/ui/Components/Bulletin;->show()Lorg/telegram/ui/Components/Bulletin;
 
-    :cond_33
     return-void
 .end method

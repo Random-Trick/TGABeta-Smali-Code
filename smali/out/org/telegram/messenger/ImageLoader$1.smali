@@ -30,7 +30,7 @@
 .method constructor <init>(Lorg/telegram/messenger/ImageLoader;I)V
     .registers 3
 
-    .line 1810
+    .line 1817
     iput-object p1, p0, Lorg/telegram/messenger/ImageLoader$1;->this$0:Lorg/telegram/messenger/ImageLoader;
 
     invoke-direct {p0, p2}, Lorg/telegram/messenger/LruCache;-><init>(I)V
@@ -43,10 +43,10 @@
 .method protected entryRemoved(ZLjava/lang/String;Landroid/graphics/drawable/BitmapDrawable;Landroid/graphics/drawable/BitmapDrawable;)V
     .registers 5
 
-    .line 1818
+    .line 1825
     iget-object p1, p0, Lorg/telegram/messenger/ImageLoader$1;->this$0:Lorg/telegram/messenger/ImageLoader;
 
-    invoke-static {p1}, Lorg/telegram/messenger/ImageLoader;->access$3500(Lorg/telegram/messenger/ImageLoader;)Ljava/lang/String;
+    invoke-static {p1}, Lorg/telegram/messenger/ImageLoader;->access$3600(Lorg/telegram/messenger/ImageLoader;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -54,7 +54,7 @@
 
     iget-object p1, p0, Lorg/telegram/messenger/ImageLoader$1;->this$0:Lorg/telegram/messenger/ImageLoader;
 
-    invoke-static {p1}, Lorg/telegram/messenger/ImageLoader;->access$3500(Lorg/telegram/messenger/ImageLoader;)Ljava/lang/String;
+    invoke-static {p1}, Lorg/telegram/messenger/ImageLoader;->access$3600(Lorg/telegram/messenger/ImageLoader;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -66,11 +66,11 @@
 
     return-void
 
-    .line 1821
+    .line 1828
     :cond_15
     iget-object p1, p0, Lorg/telegram/messenger/ImageLoader$1;->this$0:Lorg/telegram/messenger/ImageLoader;
 
-    invoke-static {p1}, Lorg/telegram/messenger/ImageLoader;->access$3600(Lorg/telegram/messenger/ImageLoader;)Ljava/util/HashMap;
+    invoke-static {p1}, Lorg/telegram/messenger/ImageLoader;->access$3700(Lorg/telegram/messenger/ImageLoader;)Ljava/util/HashMap;
 
     move-result-object p1
 
@@ -82,35 +82,35 @@
 
     if-eqz p1, :cond_29
 
-    .line 1822
+    .line 1829
     invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
     move-result p1
 
     if-nez p1, :cond_3e
 
-    .line 1823
+    .line 1830
     :cond_29
     invoke-virtual {p3}, Landroid/graphics/drawable/BitmapDrawable;->getBitmap()Landroid/graphics/Bitmap;
 
     move-result-object p1
 
-    .line 1824
+    .line 1831
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->isRecycled()Z
 
     move-result p2
 
     if-nez p2, :cond_3e
 
-    .line 1825
+    .line 1832
     new-instance p2, Ljava/util/ArrayList;
 
     invoke-direct {p2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1826
+    .line 1833
     invoke-virtual {p2, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1827
+    .line 1834
     invoke-static {p2}, Lorg/telegram/messenger/AndroidUtilities;->recycleBitmaps(Ljava/util/ArrayList;)V
 
     :cond_3e
@@ -120,7 +120,7 @@
 .method protected bridge synthetic entryRemoved(ZLjava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V
     .registers 5
 
-    .line 1810
+    .line 1817
     check-cast p3, Landroid/graphics/drawable/BitmapDrawable;
 
     check-cast p4, Landroid/graphics/drawable/BitmapDrawable;
@@ -133,7 +133,7 @@
 .method protected sizeOf(Ljava/lang/String;Landroid/graphics/drawable/BitmapDrawable;)I
     .registers 3
 
-    .line 1813
+    .line 1820
     invoke-virtual {p2}, Landroid/graphics/drawable/BitmapDrawable;->getBitmap()Landroid/graphics/Bitmap;
 
     move-result-object p1
@@ -148,7 +148,7 @@
 .method protected bridge synthetic sizeOf(Ljava/lang/String;Ljava/lang/Object;)I
     .registers 3
 
-    .line 1810
+    .line 1817
     check-cast p2, Landroid/graphics/drawable/BitmapDrawable;
 
     invoke-virtual {p0, p1, p2}, Lorg/telegram/messenger/ImageLoader$1;->sizeOf(Ljava/lang/String;Landroid/graphics/drawable/BitmapDrawable;)I

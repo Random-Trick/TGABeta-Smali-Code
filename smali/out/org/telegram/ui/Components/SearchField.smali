@@ -135,7 +135,7 @@
     .line 51
     iget-object p3, p0, Lorg/telegram/ui/Components/SearchField;->searchIconImageView:Landroid/widget/ImageView;
 
-    const v0, 0x7f0703c0
+    const v0, 0x7f0703c3
 
     invoke-virtual {p3, v0}, Landroid/widget/ImageView;->setImageResource(I)V
 

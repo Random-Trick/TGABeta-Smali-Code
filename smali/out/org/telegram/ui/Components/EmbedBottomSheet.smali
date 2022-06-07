@@ -908,7 +908,7 @@
 
     invoke-virtual {v15, v9, v6, v13, v6}, Landroid/widget/TextView;->setPadding(IIII)V
 
-    const v9, 0x7f0e047b
+    const v9, 0x7f0e04c8
 
     const-string v13, "Close"
 
@@ -980,14 +980,14 @@
     .line 732
     iget-object v2, v0, Lorg/telegram/ui/Components/EmbedBottomSheet;->pipButton:Landroid/widget/ImageView;
 
-    const v13, 0x7f070412
+    const v13, 0x7f070126
 
     invoke-virtual {v2, v13}, Landroid/widget/ImageView;->setImageResource(I)V
 
     .line 733
     iget-object v2, v0, Lorg/telegram/ui/Components/EmbedBottomSheet;->pipButton:Landroid/widget/ImageView;
 
-    const v13, 0x7f0e004b
+    const v13, 0x7f0e0068
 
     const-string v15, "AccDescrPipMode"
 
@@ -1086,12 +1086,12 @@
 
     invoke-virtual {v12, v13}, Landroid/widget/ImageView;->setScaleType(Landroid/widget/ImageView$ScaleType;)V
 
-    const v13, 0x7f07040a
+    const v13, 0x7f070201
 
     .line 815
     invoke-virtual {v12, v13}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    const v13, 0x7f0e04d4
+    const v13, 0x7f0e0523
 
     const-string v15, "CopyLink"
 
@@ -1209,7 +1209,7 @@
     .line 830
     iget-object v8, v0, Lorg/telegram/ui/Components/EmbedBottomSheet;->copyTextButton:Landroid/widget/TextView;
 
-    const v12, 0x7f0e04d2
+    const v12, 0x7f0e0521
 
     const-string v13, "Copy"
 
@@ -1300,7 +1300,7 @@
 
     invoke-virtual {v2, v1, v6, v4, v6}, Landroid/widget/TextView;->setPadding(IIII)V
 
-    const v1, 0x7f0e0bc6
+    const v1, 0x7f0e0c50
 
     const-string v4, "OpenInBrowser"
 

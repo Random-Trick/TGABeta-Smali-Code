@@ -5782,7 +5782,7 @@
 .end method
 
 .method public openMedia(Lorg/telegram/messenger/MessageObject;Lorg/telegram/ui/PhotoViewer$PhotoViewerProvider;Ljava/lang/Runnable;)V
-    .registers 28
+    .registers 29
 
     move-object/from16 v1, p0
 
@@ -5790,38 +5790,38 @@
 
     move-object/from16 v2, p2
 
-    const-string v10, "window"
+    const-string v11, "window"
 
     .line 681
     iget-object v3, v1, Lorg/telegram/ui/SecretMediaViewer;->parentActivity:Landroid/app/Activity;
 
-    if-eqz v3, :cond_424
+    if-eqz v3, :cond_434
 
-    if-eqz v0, :cond_424
+    if-eqz v0, :cond_434
 
     invoke-virtual/range {p1 .. p1}, Lorg/telegram/messenger/MessageObject;->needDrawBluredPreview()Z
 
     move-result v3
 
-    if-eqz v3, :cond_424
+    if-eqz v3, :cond_434
 
     if-nez v2, :cond_18
 
-    goto/16 :goto_424
+    goto/16 :goto_434
 
     :cond_18
-    const/4 v11, 0x0
-
     const/4 v12, 0x0
 
-    const/4 v13, 0x1
+    const/4 v13, 0x0
+
+    const/4 v14, 0x1
 
     .line 684
-    invoke-interface {v2, v0, v11, v12, v13}, Lorg/telegram/ui/PhotoViewer$PhotoViewerProvider;->getPlaceForPhoto(Lorg/telegram/messenger/MessageObject;Lorg/telegram/tgnet/TLRPC$FileLocation;IZ)Lorg/telegram/ui/PhotoViewer$PlaceProviderObject;
+    invoke-interface {v2, v0, v12, v13, v14}, Lorg/telegram/ui/PhotoViewer$PhotoViewerProvider;->getPlaceForPhoto(Lorg/telegram/messenger/MessageObject;Lorg/telegram/tgnet/TLRPC$FileLocation;IZ)Lorg/telegram/ui/PhotoViewer$PlaceProviderObject;
 
-    move-result-object v14
+    move-result-object v15
 
-    if-nez v14, :cond_22
+    if-nez v15, :cond_22
 
     return-void
 
@@ -5842,23 +5842,23 @@
     iput-wide v2, v1, Lorg/telegram/ui/SecretMediaViewer;->closeTime:J
 
     .line 694
-    iput-boolean v13, v1, Lorg/telegram/ui/SecretMediaViewer;->isActionBarVisible:Z
+    iput-boolean v14, v1, Lorg/telegram/ui/SecretMediaViewer;->isActionBarVisible:Z
 
     .line 695
-    iput-boolean v13, v1, Lorg/telegram/ui/SecretMediaViewer;->isPhotoVisible:Z
+    iput-boolean v14, v1, Lorg/telegram/ui/SecretMediaViewer;->isPhotoVisible:Z
 
     .line 696
-    iput-boolean v12, v1, Lorg/telegram/ui/SecretMediaViewer;->draggingDown:Z
+    iput-boolean v13, v1, Lorg/telegram/ui/SecretMediaViewer;->draggingDown:Z
 
     .line 697
     iget-object v2, v1, Lorg/telegram/ui/SecretMediaViewer;->aspectRatioFrameLayout:Lcom/google/android/exoplayer2/ui/AspectRatioFrameLayout;
 
-    const/4 v15, 0x4
+    const/4 v10, 0x4
 
     if-eqz v2, :cond_3c
 
     .line 698
-    invoke-virtual {v2, v15}, Landroid/widget/FrameLayout;->setVisibility(I)V
+    invoke-virtual {v2, v10}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
     .line 700
     :cond_3c
@@ -5893,19 +5893,19 @@
     iput v2, v1, Lorg/telegram/ui/SecretMediaViewer;->moveStartY:F
 
     .line 710
-    iput-boolean v12, v1, Lorg/telegram/ui/SecretMediaViewer;->zooming:Z
+    iput-boolean v13, v1, Lorg/telegram/ui/SecretMediaViewer;->zooming:Z
 
     .line 711
-    iput-boolean v12, v1, Lorg/telegram/ui/SecretMediaViewer;->moving:Z
+    iput-boolean v13, v1, Lorg/telegram/ui/SecretMediaViewer;->moving:Z
 
     .line 712
-    iput-boolean v12, v1, Lorg/telegram/ui/SecretMediaViewer;->doubleTap:Z
+    iput-boolean v13, v1, Lorg/telegram/ui/SecretMediaViewer;->doubleTap:Z
 
     .line 713
-    iput-boolean v12, v1, Lorg/telegram/ui/SecretMediaViewer;->invalidCoords:Z
+    iput-boolean v13, v1, Lorg/telegram/ui/SecretMediaViewer;->invalidCoords:Z
 
     .line 714
-    iput-boolean v13, v1, Lorg/telegram/ui/SecretMediaViewer;->canDragDown:Z
+    iput-boolean v14, v1, Lorg/telegram/ui/SecretMediaViewer;->canDragDown:Z
 
     .line 715
     iget v4, v1, Lorg/telegram/ui/SecretMediaViewer;->scale:F
@@ -5915,7 +5915,7 @@
     .line 716
     iget-object v4, v1, Lorg/telegram/ui/SecretMediaViewer;->photoBackgroundDrawable:Lorg/telegram/ui/SecretMediaViewer$PhotoBackgroundDrawable;
 
-    invoke-virtual {v4, v12}, Lorg/telegram/ui/SecretMediaViewer$PhotoBackgroundDrawable;->setAlpha(I)V
+    invoke-virtual {v4, v13}, Lorg/telegram/ui/SecretMediaViewer$PhotoBackgroundDrawable;->setAlpha(I)V
 
     .line 717
     iget-object v4, v1, Lorg/telegram/ui/SecretMediaViewer;->containerView:Lorg/telegram/ui/SecretMediaViewer$FrameLayoutDrawer;
@@ -5925,7 +5925,7 @@
     .line 718
     iget-object v4, v1, Lorg/telegram/ui/SecretMediaViewer;->containerView:Lorg/telegram/ui/SecretMediaViewer$FrameLayoutDrawer;
 
-    invoke-virtual {v4, v12}, Landroid/widget/FrameLayout;->setVisibility(I)V
+    invoke-virtual {v4, v13}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
     .line 719
     iget-object v4, v1, Lorg/telegram/ui/SecretMediaViewer;->secretDeleteTimer:Lorg/telegram/ui/SecretMediaViewer$SecretDeleteTimer;
@@ -5933,24 +5933,24 @@
     invoke-virtual {v4, v3}, Landroid/widget/FrameLayout;->setAlpha(F)V
 
     .line 720
-    iput-boolean v12, v1, Lorg/telegram/ui/SecretMediaViewer;->isVideo:Z
+    iput-boolean v13, v1, Lorg/telegram/ui/SecretMediaViewer;->isVideo:Z
 
     .line 721
-    iput-boolean v12, v1, Lorg/telegram/ui/SecretMediaViewer;->videoWatchedOneTime:Z
+    iput-boolean v13, v1, Lorg/telegram/ui/SecretMediaViewer;->videoWatchedOneTime:Z
 
     .line 722
-    iput-boolean v12, v1, Lorg/telegram/ui/SecretMediaViewer;->closeVideoAfterWatch:Z
+    iput-boolean v13, v1, Lorg/telegram/ui/SecretMediaViewer;->closeVideoAfterWatch:Z
 
     .line 723
-    iput-boolean v13, v1, Lorg/telegram/ui/SecretMediaViewer;->disableShowCheck:Z
+    iput-boolean v14, v1, Lorg/telegram/ui/SecretMediaViewer;->disableShowCheck:Z
 
     .line 724
     iget-object v4, v1, Lorg/telegram/ui/SecretMediaViewer;->centerImage:Lorg/telegram/messenger/ImageReceiver;
 
-    invoke-virtual {v4, v12}, Lorg/telegram/messenger/ImageReceiver;->setManualAlphaAnimator(Z)V
+    invoke-virtual {v4, v13}, Lorg/telegram/messenger/ImageReceiver;->setManualAlphaAnimator(Z)V
 
     .line 726
-    iget-object v4, v14, Lorg/telegram/ui/PhotoViewer$PlaceProviderObject;->imageReceiver:Lorg/telegram/messenger/ImageReceiver;
+    iget-object v4, v15, Lorg/telegram/ui/PhotoViewer$PlaceProviderObject;->imageReceiver:Lorg/telegram/messenger/ImageReceiver;
 
     invoke-virtual {v4}, Lorg/telegram/messenger/ImageReceiver;->getDrawRegion()Landroid/graphics/RectF;
 
@@ -5976,9 +5976,9 @@
 
     sget v9, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    const/16 v15, 0x15
+    const/16 v10, 0x15
 
-    if-lt v9, v15, :cond_9f
+    if-lt v9, v10, :cond_9f
 
     sget v9, Lorg/telegram/messenger/AndroidUtilities;->statusBarHeight:I
 
@@ -5994,19 +5994,19 @@
 
     div-float v9, v5, v9
 
-    int-to-float v12, v7
+    int-to-float v13, v7
 
-    div-float v12, v6, v12
+    div-float v13, v6, v13
 
     .line 732
-    invoke-static {v9, v12}, Ljava/lang/Math;->max(FF)F
+    invoke-static {v9, v13}, Ljava/lang/Math;->max(FF)F
 
     move-result v9
 
     iput v9, v1, Lorg/telegram/ui/SecretMediaViewer;->scale:F
 
     .line 734
-    iget-object v9, v14, Lorg/telegram/ui/PhotoViewer$PlaceProviderObject;->radius:[I
+    iget-object v9, v15, Lorg/telegram/ui/PhotoViewer$PlaceProviderObject;->radius:[I
 
     if-eqz v9, :cond_c7
 
@@ -6021,18 +6021,18 @@
 
     .line 736
     :goto_b7
-    iget-object v12, v14, Lorg/telegram/ui/PhotoViewer$PlaceProviderObject;->radius:[I
+    iget-object v13, v15, Lorg/telegram/ui/PhotoViewer$PlaceProviderObject;->radius:[I
 
-    array-length v3, v12
+    array-length v3, v13
 
     if-ge v9, v3, :cond_c9
 
     .line 737
     iget-object v3, v1, Lorg/telegram/ui/SecretMediaViewer;->animateFromRadius:[I
 
-    aget v12, v12, v9
+    aget v13, v13, v9
 
-    aput v12, v3, v9
+    aput v13, v3, v9
 
     add-int/lit8 v9, v9, 0x1
 
@@ -6042,11 +6042,11 @@
 
     .line 740
     :cond_c7
-    iput-object v11, v1, Lorg/telegram/ui/SecretMediaViewer;->animateFromRadius:[I
+    iput-object v12, v1, Lorg/telegram/ui/SecretMediaViewer;->animateFromRadius:[I
 
     .line 742
     :cond_c9
-    iget v3, v14, Lorg/telegram/ui/PhotoViewer$PlaceProviderObject;->viewX:I
+    iget v3, v15, Lorg/telegram/ui/PhotoViewer$PlaceProviderObject;->viewX:I
 
     int-to-float v3, v3
 
@@ -6054,9 +6054,9 @@
 
     add-float/2addr v3, v9
 
-    const/high16 v12, 0x40000000    # 2.0f
+    const/high16 v13, 0x40000000    # 2.0f
 
-    div-float/2addr v5, v12
+    div-float/2addr v5, v13
 
     add-float/2addr v3, v5
 
@@ -6071,7 +6071,7 @@
     iput v3, v1, Lorg/telegram/ui/SecretMediaViewer;->translationX:F
 
     .line 743
-    iget v3, v14, Lorg/telegram/ui/PhotoViewer$PlaceProviderObject;->viewY:I
+    iget v3, v15, Lorg/telegram/ui/PhotoViewer$PlaceProviderObject;->viewY:I
 
     int-to-float v3, v3
 
@@ -6079,7 +6079,7 @@
 
     add-float/2addr v3, v8
 
-    div-float v8, v6, v12
+    div-float v8, v6, v13
 
     add-float/2addr v3, v8
 
@@ -6092,7 +6092,7 @@
     iput v3, v1, Lorg/telegram/ui/SecretMediaViewer;->translationY:F
 
     .line 744
-    iget-object v3, v14, Lorg/telegram/ui/PhotoViewer$PlaceProviderObject;->imageReceiver:Lorg/telegram/messenger/ImageReceiver;
+    iget-object v3, v15, Lorg/telegram/ui/PhotoViewer$PlaceProviderObject;->imageReceiver:Lorg/telegram/messenger/ImageReceiver;
 
     invoke-virtual {v3}, Lorg/telegram/messenger/ImageReceiver;->getImageX()F
 
@@ -6109,7 +6109,7 @@
     .line 745
     iget v3, v4, Landroid/graphics/RectF;->top:F
 
-    iget-object v7, v14, Lorg/telegram/ui/PhotoViewer$PlaceProviderObject;->imageReceiver:Lorg/telegram/messenger/ImageReceiver;
+    iget-object v7, v15, Lorg/telegram/ui/PhotoViewer$PlaceProviderObject;->imageReceiver:Lorg/telegram/messenger/ImageReceiver;
 
     invoke-virtual {v7}, Lorg/telegram/messenger/ImageReceiver;->getImageY()F
 
@@ -6126,40 +6126,40 @@
     new-array v7, v5, [I
 
     .line 747
-    iget-object v8, v14, Lorg/telegram/ui/PhotoViewer$PlaceProviderObject;->parentView:Landroid/view/View;
+    iget-object v8, v15, Lorg/telegram/ui/PhotoViewer$PlaceProviderObject;->parentView:Landroid/view/View;
 
     invoke-virtual {v8, v7}, Landroid/view/View;->getLocationInWindow([I)V
 
     .line 748
-    aget v8, v7, v13
+    aget v8, v7, v14
 
     sget v9, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    if-lt v9, v15, :cond_111
+    if-lt v9, v10, :cond_111
 
-    const/4 v12, 0x0
+    const/4 v13, 0x0
 
     goto :goto_113
 
     :cond_111
-    sget v12, Lorg/telegram/messenger/AndroidUtilities;->statusBarHeight:I
+    sget v13, Lorg/telegram/messenger/AndroidUtilities;->statusBarHeight:I
 
     :goto_113
-    sub-int/2addr v8, v12
+    sub-int/2addr v8, v13
 
     int-to-float v8, v8
 
-    iget v12, v14, Lorg/telegram/ui/PhotoViewer$PlaceProviderObject;->viewY:I
+    iget v13, v15, Lorg/telegram/ui/PhotoViewer$PlaceProviderObject;->viewY:I
 
-    int-to-float v12, v12
+    int-to-float v13, v13
 
     iget v5, v4, Landroid/graphics/RectF;->top:F
 
-    add-float/2addr v12, v5
+    add-float/2addr v13, v5
 
-    sub-float/2addr v8, v12
+    sub-float/2addr v8, v13
 
-    iget v5, v14, Lorg/telegram/ui/PhotoViewer$PlaceProviderObject;->clipTopAddition:I
+    iget v5, v15, Lorg/telegram/ui/PhotoViewer$PlaceProviderObject;->clipTopAddition:I
 
     int-to-float v5, v5
 
@@ -6181,7 +6181,7 @@
     iput v5, v1, Lorg/telegram/ui/SecretMediaViewer;->clipTop:F
 
     .line 750
-    iget v5, v14, Lorg/telegram/ui/PhotoViewer$PlaceProviderObject;->viewY:I
+    iget v5, v15, Lorg/telegram/ui/PhotoViewer$PlaceProviderObject;->viewY:I
 
     int-to-float v5, v5
 
@@ -6195,9 +6195,9 @@
 
     add-float/2addr v5, v4
 
-    aget v4, v7, v13
+    aget v4, v7, v14
 
-    iget-object v6, v14, Lorg/telegram/ui/PhotoViewer$PlaceProviderObject;->parentView:Landroid/view/View;
+    iget-object v6, v15, Lorg/telegram/ui/PhotoViewer$PlaceProviderObject;->parentView:Landroid/view/View;
 
     invoke-virtual {v6}, Landroid/view/View;->getHeight()I
 
@@ -6205,7 +6205,7 @@
 
     add-int/2addr v4, v6
 
-    if-lt v9, v15, :cond_143
+    if-lt v9, v10, :cond_143
 
     const/4 v6, 0x0
 
@@ -6221,7 +6221,7 @@
 
     sub-float/2addr v5, v4
 
-    iget v4, v14, Lorg/telegram/ui/PhotoViewer$PlaceProviderObject;->clipBottomAddition:I
+    iget v4, v15, Lorg/telegram/ui/PhotoViewer$PlaceProviderObject;->clipBottomAddition:I
 
     int-to-float v4, v4
 
@@ -6302,10 +6302,10 @@
     iput v2, v1, Lorg/telegram/ui/SecretMediaViewer;->animateToScale:F
 
     .line 767
-    iput-boolean v13, v1, Lorg/telegram/ui/SecretMediaViewer;->animateToRadius:Z
+    iput-boolean v14, v1, Lorg/telegram/ui/SecretMediaViewer;->animateToRadius:Z
 
     .line 768
-    iput-boolean v13, v1, Lorg/telegram/ui/SecretMediaViewer;->zoomAnimation:Z
+    iput-boolean v14, v1, Lorg/telegram/ui/SecretMediaViewer;->zoomAnimation:Z
 
     .line 770
     iget v2, v1, Lorg/telegram/ui/SecretMediaViewer;->currentAccount:I
@@ -6354,7 +6354,7 @@
     const/4 v2, 0x0
 
     .line 774
-    invoke-direct {v1, v13, v2}, Lorg/telegram/ui/SecretMediaViewer;->toggleActionBar(ZZ)V
+    invoke-direct {v1, v14, v2}, Lorg/telegram/ui/SecretMediaViewer;->toggleActionBar(ZZ)V
 
     .line 776
     iput-object v0, v1, Lorg/telegram/ui/SecretMediaViewer;->currentMessageObject:Lorg/telegram/messenger/MessageObject;
@@ -6373,11 +6373,11 @@
     invoke-virtual {v3}, Lorg/telegram/messenger/ImageReceiver$BitmapHolder;->release()V
 
     .line 780
-    iput-object v11, v1, Lorg/telegram/ui/SecretMediaViewer;->currentThumb:Lorg/telegram/messenger/ImageReceiver$BitmapHolder;
+    iput-object v12, v1, Lorg/telegram/ui/SecretMediaViewer;->currentThumb:Lorg/telegram/messenger/ImageReceiver$BitmapHolder;
 
     .line 782
     :cond_1ca
-    iget-object v3, v14, Lorg/telegram/ui/PhotoViewer$PlaceProviderObject;->imageReceiver:Lorg/telegram/messenger/ImageReceiver;
+    iget-object v3, v15, Lorg/telegram/ui/PhotoViewer$PlaceProviderObject;->imageReceiver:Lorg/telegram/messenger/ImageReceiver;
 
     invoke-virtual {v3}, Lorg/telegram/messenger/ImageReceiver;->getThumbBitmapSafe()Lorg/telegram/messenger/ImageReceiver$BitmapHolder;
 
@@ -6385,21 +6385,21 @@
 
     iput-object v3, v1, Lorg/telegram/ui/SecretMediaViewer;->currentThumb:Lorg/telegram/messenger/ImageReceiver$BitmapHolder;
 
-    const-wide/16 v16, 0x3e8
+    const-wide/16 v17, 0x3e8
 
-    if-eqz v2, :cond_2dd
+    if-eqz v2, :cond_2e7
 
     .line 784
     invoke-static {v2}, Lorg/telegram/messenger/MessageObject;->isGifDocument(Lorg/telegram/tgnet/TLRPC$Document;)Z
 
     move-result v3
 
-    if-eqz v3, :cond_227
+    if-eqz v3, :cond_22d
 
     .line 785
     iget-object v3, v1, Lorg/telegram/ui/SecretMediaViewer;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
-    const v4, 0x7f0e05b3
+    const v4, 0x7f0e0604
 
     const-string v5, "DisappearingGif"
 
@@ -6435,14 +6435,14 @@
     goto :goto_201
 
     :cond_200
-    move-object v6, v11
+    move-object v6, v12
 
     :goto_201
-    const/4 v7, -0x1
+    const-wide/16 v7, -0x1
 
-    const/4 v8, 0x0
+    const/4 v9, 0x0
 
-    const/4 v9, 0x1
+    const/4 v13, 0x1
 
     move-object v2, v3
 
@@ -6454,13 +6454,19 @@
 
     move-object v5, v6
 
-    move v6, v7
+    move-wide v6, v7
 
-    move-object v7, v8
+    move-object v8, v9
 
-    move-object/from16 v8, p1
+    move-object/from16 v9, p1
 
-    invoke-virtual/range {v2 .. v9}, Lorg/telegram/messenger/ImageReceiver;->setImage(Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Landroid/graphics/drawable/Drawable;ILjava/lang/String;Ljava/lang/Object;I)V
+    const/16 v12, 0x15
+
+    const/16 v16, 0x4
+
+    move v10, v13
+
+    invoke-virtual/range {v2 .. v10}, Lorg/telegram/messenger/ImageReceiver;->setImage(Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Landroid/graphics/drawable/Drawable;JLjava/lang/String;Ljava/lang/Object;I)V
 
     .line 787
     iget-object v2, v1, Lorg/telegram/ui/SecretMediaViewer;->secretDeleteTimer:Lorg/telegram/ui/SecretMediaViewer$SecretDeleteTimer;
@@ -6471,32 +6477,34 @@
 
     int-to-long v3, v3
 
-    mul-long v19, v3, v16
+    mul-long v20, v3, v17
 
     iget v0, v0, Lorg/telegram/tgnet/TLRPC$Message;->ttl:I
 
     int-to-long v3, v0
 
-    const/16 v23, 0x0
+    const/16 v24, 0x0
 
-    move-object/from16 v18, v2
+    move-object/from16 v19, v2
 
-    move-wide/from16 v21, v3
+    move-wide/from16 v22, v3
 
-    invoke-static/range {v18 .. v23}, Lorg/telegram/ui/SecretMediaViewer$SecretDeleteTimer;->access$2600(Lorg/telegram/ui/SecretMediaViewer$SecretDeleteTimer;JJZ)V
+    invoke-static/range {v19 .. v24}, Lorg/telegram/ui/SecretMediaViewer$SecretDeleteTimer;->access$2600(Lorg/telegram/ui/SecretMediaViewer$SecretDeleteTimer;JJZ)V
 
-    goto/16 :goto_332
+    goto/16 :goto_340
 
-    :cond_227
-    const/4 v12, 0x2
+    :cond_22d
+    const/16 v12, 0x15
+
+    const/16 v16, 0x4
 
     .line 789
-    iput v13, v1, Lorg/telegram/ui/SecretMediaViewer;->playerRetryPlayCount:I
+    iput v14, v1, Lorg/telegram/ui/SecretMediaViewer;->playerRetryPlayCount:I
 
     .line 790
     iget-object v2, v1, Lorg/telegram/ui/SecretMediaViewer;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
-    const v3, 0x7f0e05b5
+    const v3, 0x7f0e0606
 
     const-string v4, "DisappearingVideo"
 
@@ -6520,15 +6528,15 @@
 
     move-result v3
 
-    if-eqz v3, :cond_24b
+    if-eqz v3, :cond_254
 
     .line 793
     invoke-direct {v1, v2}, Lorg/telegram/ui/SecretMediaViewer;->preparePlayer(Ljava/io/File;)V
 
-    goto :goto_27b
+    goto :goto_284
 
     .line 795
-    :cond_24b
+    :cond_254
     iget v2, v1, Lorg/telegram/ui/SecretMediaViewer;->currentAccount:I
 
     invoke-static {v2}, Lorg/telegram/messenger/FileLoader;->getInstance(I)Lorg/telegram/messenger/FileLoader;
@@ -6569,17 +6577,17 @@
 
     move-result v4
 
-    if-eqz v4, :cond_278
+    if-eqz v4, :cond_281
 
     move-object v2, v3
 
     .line 800
-    :cond_278
+    :cond_281
     invoke-direct {v1, v2}, Lorg/telegram/ui/SecretMediaViewer;->preparePlayer(Ljava/io/File;)V
 
     .line 802
-    :goto_27b
-    iput-boolean v13, v1, Lorg/telegram/ui/SecretMediaViewer;->isVideo:Z
+    :goto_284
+    iput-boolean v14, v1, Lorg/telegram/ui/SecretMediaViewer;->isVideo:Z
 
     .line 803
     iget-object v2, v1, Lorg/telegram/ui/SecretMediaViewer;->centerImage:Lorg/telegram/messenger/ImageReceiver;
@@ -6590,7 +6598,7 @@
 
     iget-object v5, v1, Lorg/telegram/ui/SecretMediaViewer;->currentThumb:Lorg/telegram/messenger/ImageReceiver$BitmapHolder;
 
-    if-eqz v5, :cond_28f
+    if-eqz v5, :cond_298
 
     new-instance v5, Landroid/graphics/drawable/BitmapDrawable;
 
@@ -6600,21 +6608,21 @@
 
     invoke-direct {v5, v6}, Landroid/graphics/drawable/BitmapDrawable;-><init>(Landroid/graphics/Bitmap;)V
 
-    goto :goto_290
+    goto :goto_299
 
-    :cond_28f
-    move-object v5, v11
+    :cond_298
+    const/4 v5, 0x0
 
-    :goto_290
-    const/4 v6, -0x1
+    :goto_299
+    const-wide/16 v6, -0x1
 
-    const/4 v7, 0x0
+    const/4 v8, 0x0
 
-    const/4 v9, 0x2
+    const/4 v10, 0x2
 
-    move-object/from16 v8, p1
+    move-object/from16 v9, p1
 
-    invoke-virtual/range {v2 .. v9}, Lorg/telegram/messenger/ImageReceiver;->setImage(Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Landroid/graphics/drawable/Drawable;ILjava/lang/String;Ljava/lang/Object;I)V
+    invoke-virtual/range {v2 .. v10}, Lorg/telegram/messenger/ImageReceiver;->setImage(Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Landroid/graphics/drawable/Drawable;JLjava/lang/String;Ljava/lang/Object;I)V
 
     .line 804
     iget-object v2, v0, Lorg/telegram/messenger/MessageObject;->messageOwner:Lorg/telegram/tgnet/TLRPC$Message;
@@ -6623,7 +6631,7 @@
 
     int-to-long v2, v2
 
-    mul-long v2, v2, v16
+    mul-long v2, v2, v17
 
     .line 805
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -6642,7 +6650,7 @@
 
     int-to-long v6, v6
 
-    mul-long v6, v6, v16
+    mul-long v6, v6, v17
 
     add-long/2addr v4, v6
 
@@ -6655,29 +6663,29 @@
 
     int-to-long v4, v4
 
-    mul-long v4, v4, v16
+    mul-long v4, v4, v17
 
     cmp-long v6, v4, v2
 
-    if-lez v6, :cond_2cc
+    if-lez v6, :cond_2d6
 
     .line 809
     iget-object v0, v1, Lorg/telegram/ui/SecretMediaViewer;->secretDeleteTimer:Lorg/telegram/ui/SecretMediaViewer$SecretDeleteTimer;
 
-    const-wide/16 v19, -0x1
+    const-wide/16 v20, -0x1
 
-    const-wide/16 v21, -0x1
+    const-wide/16 v22, -0x1
 
-    const/16 v23, 0x1
+    const/16 v24, 0x1
 
-    move-object/from16 v18, v0
+    move-object/from16 v19, v0
 
-    invoke-static/range {v18 .. v23}, Lorg/telegram/ui/SecretMediaViewer$SecretDeleteTimer;->access$2600(Lorg/telegram/ui/SecretMediaViewer$SecretDeleteTimer;JJZ)V
+    invoke-static/range {v19 .. v24}, Lorg/telegram/ui/SecretMediaViewer$SecretDeleteTimer;->access$2600(Lorg/telegram/ui/SecretMediaViewer$SecretDeleteTimer;JJZ)V
 
-    goto/16 :goto_332
+    goto/16 :goto_340
 
     .line 811
-    :cond_2cc
+    :cond_2d6
     iget-object v2, v1, Lorg/telegram/ui/SecretMediaViewer;->secretDeleteTimer:Lorg/telegram/ui/SecretMediaViewer$SecretDeleteTimer;
 
     iget-object v0, v0, Lorg/telegram/messenger/MessageObject;->messageOwner:Lorg/telegram/tgnet/TLRPC$Message;
@@ -6686,7 +6694,7 @@
 
     int-to-long v3, v3
 
-    mul-long v3, v3, v16
+    mul-long v3, v3, v17
 
     iget v0, v0, Lorg/telegram/tgnet/TLRPC$Message;->ttl:I
 
@@ -6696,15 +6704,17 @@
 
     invoke-static/range {v2 .. v7}, Lorg/telegram/ui/SecretMediaViewer$SecretDeleteTimer;->access$2600(Lorg/telegram/ui/SecretMediaViewer$SecretDeleteTimer;JJZ)V
 
-    goto :goto_332
+    goto :goto_340
 
-    :cond_2dd
-    const/4 v12, 0x2
+    :cond_2e7
+    const/16 v12, 0x15
+
+    const/16 v16, 0x4
 
     .line 815
     iget-object v2, v1, Lorg/telegram/ui/SecretMediaViewer;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
-    const v3, 0x7f0e05b4
+    const v3, 0x7f0e0605
 
     const-string v4, "DisappearingPhoto"
 
@@ -6738,7 +6748,7 @@
 
     iget-object v2, v1, Lorg/telegram/ui/SecretMediaViewer;->currentThumb:Lorg/telegram/messenger/ImageReceiver$BitmapHolder;
 
-    if-eqz v2, :cond_30e
+    if-eqz v2, :cond_31b
 
     new-instance v2, Landroid/graphics/drawable/BitmapDrawable;
 
@@ -6750,17 +6760,17 @@
 
     move-object v6, v2
 
-    goto :goto_30f
+    goto :goto_31c
 
-    :cond_30e
-    move-object v6, v11
+    :cond_31b
+    const/4 v6, 0x0
 
-    :goto_30f
-    const/4 v7, -0x1
+    :goto_31c
+    const-wide/16 v7, -0x1
 
-    const/4 v8, 0x0
+    const/4 v9, 0x0
 
-    const/4 v9, 0x2
+    const/4 v10, 0x2
 
     move-object v2, v3
 
@@ -6770,13 +6780,13 @@
 
     move-object v5, v6
 
-    move v6, v7
+    move-wide v6, v7
 
-    move-object v7, v8
+    move-object v8, v9
 
-    move-object/from16 v8, p1
+    move-object/from16 v9, p1
 
-    invoke-virtual/range {v2 .. v9}, Lorg/telegram/messenger/ImageReceiver;->setImage(Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Landroid/graphics/drawable/Drawable;ILjava/lang/String;Ljava/lang/Object;I)V
+    invoke-virtual/range {v2 .. v10}, Lorg/telegram/messenger/ImageReceiver;->setImage(Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Landroid/graphics/drawable/Drawable;JLjava/lang/String;Ljava/lang/Object;I)V
 
     .line 818
     iget-object v2, v1, Lorg/telegram/ui/SecretMediaViewer;->secretDeleteTimer:Lorg/telegram/ui/SecretMediaViewer$SecretDeleteTimer;
@@ -6787,35 +6797,35 @@
 
     int-to-long v3, v3
 
-    mul-long v19, v3, v16
+    mul-long v20, v3, v17
 
     iget v0, v0, Lorg/telegram/tgnet/TLRPC$Message;->ttl:I
 
     int-to-long v3, v0
 
-    const/16 v23, 0x0
+    const/16 v24, 0x0
 
-    move-object/from16 v18, v2
+    move-object/from16 v19, v2
 
-    move-wide/from16 v21, v3
+    move-wide/from16 v22, v3
 
-    invoke-static/range {v18 .. v23}, Lorg/telegram/ui/SecretMediaViewer$SecretDeleteTimer;->access$2600(Lorg/telegram/ui/SecretMediaViewer$SecretDeleteTimer;JJZ)V
+    invoke-static/range {v19 .. v24}, Lorg/telegram/ui/SecretMediaViewer$SecretDeleteTimer;->access$2600(Lorg/telegram/ui/SecretMediaViewer$SecretDeleteTimer;JJZ)V
 
     .line 821
-    :goto_332
-    :try_start_332
+    :goto_340
+    :try_start_340
     iget-object v0, v1, Lorg/telegram/ui/SecretMediaViewer;->windowView:Landroid/widget/FrameLayout;
 
     invoke-virtual {v0}, Landroid/widget/FrameLayout;->getParent()Landroid/view/ViewParent;
 
     move-result-object v0
 
-    if-eqz v0, :cond_34c
+    if-eqz v0, :cond_35a
 
     .line 822
     iget-object v0, v1, Lorg/telegram/ui/SecretMediaViewer;->parentActivity:Landroid/app/Activity;
 
-    invoke-virtual {v0, v10}, Landroid/app/Activity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {v0, v11}, Landroid/app/Activity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -6825,23 +6835,23 @@
     iget-object v2, v1, Lorg/telegram/ui/SecretMediaViewer;->windowView:Landroid/widget/FrameLayout;
 
     invoke-interface {v0, v2}, Landroid/view/WindowManager;->removeView(Landroid/view/View;)V
-    :try_end_347
-    .catch Ljava/lang/Exception; {:try_start_332 .. :try_end_347} :catch_348
+    :try_end_355
+    .catch Ljava/lang/Exception; {:try_start_340 .. :try_end_355} :catch_356
 
-    goto :goto_34c
+    goto :goto_35a
 
-    :catch_348
+    :catch_356
     move-exception v0
 
     .line 826
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     .line 829
-    :cond_34c
-    :goto_34c
+    :cond_35a
+    :goto_35a
     iget-object v0, v1, Lorg/telegram/ui/SecretMediaViewer;->parentActivity:Landroid/app/Activity;
 
-    invoke-virtual {v0, v10}, Landroid/app/Activity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {v0, v11}, Landroid/app/Activity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -6860,7 +6870,7 @@
     invoke-virtual {v0}, Landroid/widget/FrameLayout;->invalidate()V
 
     .line 832
-    iput-boolean v13, v1, Lorg/telegram/ui/SecretMediaViewer;->isVisible:Z
+    iput-boolean v14, v1, Lorg/telegram/ui/SecretMediaViewer;->isVisible:Z
 
     .line 834
     iget-object v0, v1, Lorg/telegram/ui/SecretMediaViewer;->parentActivity:Landroid/app/Activity;
@@ -6872,7 +6882,7 @@
     .line 835
     sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    if-lt v2, v15, :cond_381
+    if-lt v2, v12, :cond_38f
 
     .line 836
     invoke-virtual {v0}, Landroid/view/Window;->getNavigationBarColor()I
@@ -6899,7 +6909,7 @@
     invoke-static {v0, v3}, Lorg/telegram/messenger/AndroidUtilities;->setNavigationBarColor(Landroid/view/Window;I)V
 
     .line 842
-    :cond_381
+    :cond_38f
     new-instance v0, Landroid/animation/AnimatorSet;
 
     invoke-direct {v0}, Landroid/animation/AnimatorSet;-><init>()V
@@ -6915,12 +6925,14 @@
 
     sget-object v5, Landroid/view/View;->ALPHA:Landroid/util/Property;
 
-    new-array v6, v12, [F
+    const/4 v6, 0x2
 
-    fill-array-data v6, :array_426
+    new-array v7, v6, [F
+
+    fill-array-data v7, :array_436
 
     .line 844
-    invoke-static {v4, v5, v6}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
+    invoke-static {v4, v5, v7}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
 
     move-result-object v4
 
@@ -6932,42 +6944,42 @@
 
     sget-object v5, Landroid/view/View;->ALPHA:Landroid/util/Property;
 
-    new-array v6, v12, [F
+    new-array v7, v6, [F
 
-    fill-array-data v6, :array_42e
+    fill-array-data v7, :array_43e
 
     .line 845
-    invoke-static {v4, v5, v6}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
+    invoke-static {v4, v5, v7}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
 
     move-result-object v4
 
-    aput-object v4, v3, v13
+    aput-object v4, v3, v14
 
     iget-object v4, v1, Lorg/telegram/ui/SecretMediaViewer;->photoBackgroundDrawable:Lorg/telegram/ui/SecretMediaViewer$PhotoBackgroundDrawable;
 
     sget-object v5, Lorg/telegram/ui/Components/AnimationProperties;->COLOR_DRAWABLE_ALPHA:Landroid/util/Property;
 
-    new-array v6, v12, [I
+    new-array v7, v6, [I
 
-    fill-array-data v6, :array_436
+    fill-array-data v7, :array_446
 
     .line 846
-    invoke-static {v4, v5, v6}, Landroid/animation/ObjectAnimator;->ofInt(Ljava/lang/Object;Landroid/util/Property;[I)Landroid/animation/ObjectAnimator;
+    invoke-static {v4, v5, v7}, Landroid/animation/ObjectAnimator;->ofInt(Ljava/lang/Object;Landroid/util/Property;[I)Landroid/animation/ObjectAnimator;
 
     move-result-object v4
 
-    aput-object v4, v3, v12
+    aput-object v4, v3, v6
 
     iget-object v4, v1, Lorg/telegram/ui/SecretMediaViewer;->secretDeleteTimer:Lorg/telegram/ui/SecretMediaViewer$SecretDeleteTimer;
 
     sget-object v5, Landroid/view/View;->ALPHA:Landroid/util/Property;
 
-    new-array v6, v12, [F
+    new-array v7, v6, [F
 
-    fill-array-data v6, :array_43e
+    fill-array-data v7, :array_44e
 
     .line 847
-    invoke-static {v4, v5, v6}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
+    invoke-static {v4, v5, v7}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
 
     move-result-object v4
 
@@ -6975,9 +6987,9 @@
 
     aput-object v4, v3, v5
 
-    new-array v4, v12, [F
+    new-array v4, v6, [F
 
-    fill-array-data v4, :array_446
+    fill-array-data v4, :array_456
 
     const-string v6, "animationValue"
 
@@ -6986,9 +6998,7 @@
 
     move-result-object v4
 
-    const/4 v6, 0x4
-
-    aput-object v4, v3, v6
+    aput-object v4, v3, v16
 
     .line 843
     invoke-virtual {v0, v3}, Landroid/animation/AnimatorSet;->playTogether([Landroid/animation/Animator;)V
@@ -7030,15 +7040,19 @@
 
     const/16 v0, 0x12
 
-    if-lt v2, v0, :cond_405
+    if-lt v2, v0, :cond_415
 
     .line 880
     iget-object v0, v1, Lorg/telegram/ui/SecretMediaViewer;->containerView:Lorg/telegram/ui/SecretMediaViewer$FrameLayoutDrawer;
 
-    invoke-virtual {v0, v12, v11}, Landroid/widget/FrameLayout;->setLayerType(ILandroid/graphics/Paint;)V
+    const/4 v2, 0x0
+
+    const/4 v3, 0x2
+
+    invoke-virtual {v0, v3, v2}, Landroid/widget/FrameLayout;->setLayerType(ILandroid/graphics/Paint;)V
 
     .line 882
-    :cond_405
+    :cond_415
     iget-object v0, v1, Lorg/telegram/ui/SecretMediaViewer;->imageMoveAnimation:Landroid/animation/AnimatorSet;
 
     new-instance v2, Landroid/view/animation/DecelerateInterpolator;
@@ -7059,7 +7073,7 @@
 
     new-instance v2, Lorg/telegram/ui/SecretMediaViewer$$ExternalSyntheticLambda4;
 
-    invoke-direct {v2, v1, v14}, Lorg/telegram/ui/SecretMediaViewer$$ExternalSyntheticLambda4;-><init>(Lorg/telegram/ui/SecretMediaViewer;Lorg/telegram/ui/PhotoViewer$PlaceProviderObject;)V
+    invoke-direct {v2, v1, v15}, Lorg/telegram/ui/SecretMediaViewer$$ExternalSyntheticLambda4;-><init>(Lorg/telegram/ui/SecretMediaViewer;Lorg/telegram/ui/PhotoViewer$PlaceProviderObject;)V
 
     invoke-static {v0, v2}, Lorg/telegram/ui/SecretMediaViewer$PhotoBackgroundDrawable;->access$2902(Lorg/telegram/ui/SecretMediaViewer$PhotoBackgroundDrawable;Ljava/lang/Runnable;)Ljava/lang/Runnable;
 
@@ -7068,28 +7082,16 @@
 
     invoke-virtual {v0}, Landroid/animation/AnimatorSet;->start()V
 
-    :cond_424
-    :goto_424
+    :cond_434
+    :goto_434
     return-void
 
     nop
 
-    :array_426
-    .array-data 4
-        0x0
-        0x3f800000    # 1.0f
-    .end array-data
-
-    :array_42e
-    .array-data 4
-        0x0
-        0x3f800000    # 1.0f
-    .end array-data
-
     :array_436
     .array-data 4
         0x0
-        0xff
+        0x3f800000    # 1.0f
     .end array-data
 
     :array_43e
@@ -7099,6 +7101,18 @@
     .end array-data
 
     :array_446
+    .array-data 4
+        0x0
+        0xff
+    .end array-data
+
+    :array_44e
+    .array-data 4
+        0x0
+        0x3f800000    # 1.0f
+    .end array-data
+
+    :array_456
     .array-data 4
         0x0
         0x3f800000    # 1.0f
@@ -7314,7 +7328,7 @@
     .line 643
     iget-object v2, p0, Lorg/telegram/ui/SecretMediaViewer;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
-    const v5, 0x7f070140
+    const v5, 0x7f070109
 
     invoke-virtual {v2, v5}, Lorg/telegram/ui/ActionBar/ActionBar;->setBackButtonImage(I)V
 

@@ -69,7 +69,7 @@
 
     iget-wide v8, p0, Lorg/telegram/messenger/MessagesController$$ExternalSyntheticLambda119;->f$7:J
 
-    invoke-static/range {v0 .. v9}, Lorg/telegram/messenger/MessagesController;->$r8$lambda$LEU0O-2yMpQL_OMQQbMtqVaB7Ho(Lorg/telegram/messenger/MessagesController;Ljava/util/ArrayList;JLorg/telegram/tgnet/TLRPC$updates_ChannelDifference;Lorg/telegram/tgnet/TLRPC$Chat;Landroidx/collection/LongSparseArray;IJ)V
+    invoke-static/range {v0 .. v9}, Lorg/telegram/messenger/MessagesController;->$r8$lambda$C_13_3EcRYJepokHASu37fPQCr0(Lorg/telegram/messenger/MessagesController;Ljava/util/ArrayList;JLorg/telegram/tgnet/TLRPC$updates_ChannelDifference;Lorg/telegram/tgnet/TLRPC$Chat;Landroidx/collection/LongSparseArray;IJ)V
 
     return-void
 .end method

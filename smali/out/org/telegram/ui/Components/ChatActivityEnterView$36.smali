@@ -24,7 +24,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/ChatActivityEnterView;Z)V
     .registers 3
 
-    .line 4040
+    .line 4072
     iput-object p1, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$36;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     iput-boolean p2, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$36;->val$show:Z
@@ -39,7 +39,7 @@
 .method public onAnimationCancel(Landroid/animation/Animator;)V
     .registers 3
 
-    .line 4054
+    .line 4086
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$36;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$10200(Lorg/telegram/ui/Components/ChatActivityEnterView;)Landroid/animation/AnimatorSet;
@@ -60,7 +60,7 @@
 
     if-eqz p1, :cond_1a
 
-    .line 4055
+    .line 4087
     iget-object p1, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$36;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     const/4 v0, 0x0
@@ -74,7 +74,7 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .registers 3
 
-    .line 4043
+    .line 4075
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$36;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$10200(Lorg/telegram/ui/Components/ChatActivityEnterView;)Landroid/animation/AnimatorSet;
@@ -95,14 +95,14 @@
 
     if-eqz p1, :cond_2c
 
-    .line 4044
+    .line 4076
     iget-boolean p1, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$36;->val$show:Z
 
     const/4 v0, 0x4
 
     if-nez p1, :cond_23
 
-    .line 4045
+    .line 4077
     iget-object p1, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$36;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$10300(Lorg/telegram/ui/Components/ChatActivityEnterView;)Lorg/telegram/ui/Components/ContextProgressView;
@@ -113,7 +113,7 @@
 
     goto :goto_2c
 
-    .line 4047
+    .line 4079
     :cond_23
     iget-object p1, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$36;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 

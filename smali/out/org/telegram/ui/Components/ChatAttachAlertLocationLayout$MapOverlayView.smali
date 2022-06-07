@@ -49,13 +49,13 @@
 .method public constructor <init>(Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;Landroid/content/Context;)V
     .registers 3
 
-    .line 236
+    .line 234
     iput-object p1, p0, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout$MapOverlayView;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;
 
-    .line 237
+    .line 235
     invoke-direct {p0, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    .line 234
+    .line 232
     new-instance p1, Ljava/util/HashMap;
 
     invoke-direct {p1}, Ljava/util/HashMap;-><init>()V
@@ -68,7 +68,7 @@
 .method private synthetic lambda$addInfoView$0(Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout$VenueLocation;ZI)V
     .registers 6
 
-    .line 267
+    .line 265
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout$MapOverlayView;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;->access$700(Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;)Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout$LocationActivityDelegate;
@@ -85,7 +85,7 @@
 
     invoke-interface {v0, p1, v1, p2, p3}, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout$LocationActivityDelegate;->didSelectLocation(Lorg/telegram/tgnet/TLRPC$MessageMedia;IZI)V
 
-    .line 268
+    .line 266
     iget-object p1, p0, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout$MapOverlayView;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;
 
     iget-object p1, p1, Lorg/telegram/ui/Components/ChatAttachAlert$AttachAlertLayout;->parentAlert:Lorg/telegram/ui/Components/ChatAttachAlert;
@@ -100,7 +100,7 @@
 .method private synthetic lambda$addInfoView$1(Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout$VenueLocation;Landroid/view/View;)V
     .registers 6
 
-    .line 264
+    .line 262
     iget-object p2, p0, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout$MapOverlayView;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;
 
     iget-object p2, p2, Lorg/telegram/ui/Components/ChatAttachAlert$AttachAlertLayout;->parentAlert:Lorg/telegram/ui/Components/ChatAttachAlert;
@@ -109,14 +109,14 @@
 
     check-cast p2, Lorg/telegram/ui/ChatActivity;
 
-    .line 265
+    .line 263
     invoke-virtual {p2}, Lorg/telegram/ui/ChatActivity;->isInScheduleMode()Z
 
     move-result v0
 
     if-eqz v0, :cond_25
 
-    .line 266
+    .line 264
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout$MapOverlayView;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;->access$500(Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;)Landroid/app/Activity;
@@ -139,7 +139,7 @@
 
     goto :goto_3f
 
-    .line 271
+    .line 269
     :cond_25
     iget-object p2, p0, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout$MapOverlayView;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;
 
@@ -161,7 +161,7 @@
 
     invoke-interface {p2, p1, v0, v2, v1}, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout$LocationActivityDelegate;->didSelectLocation(Lorg/telegram/tgnet/TLRPC$MessageMedia;IZI)V
 
-    .line 272
+    .line 270
     iget-object p1, p0, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout$MapOverlayView;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;
 
     iget-object p1, p1, Lorg/telegram/ui/Components/ChatAttachAlert$AttachAlertLayout;->parentAlert:Lorg/telegram/ui/Components/ChatAttachAlert;
@@ -181,14 +181,14 @@
 
     move-object/from16 v1, p1
 
-    .line 241
+    .line 239
     invoke-virtual/range {p1 .. p1}, Lcom/google/android/gms/maps/model/Marker;->getTag()Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout$VenueLocation;
 
-    .line 242
+    .line 240
     iget-object v3, v0, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout$MapOverlayView;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;
 
     invoke-static {v3}, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;->access$000(Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;)Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout$VenueLocation;
@@ -199,7 +199,7 @@
 
     return-void
 
-    .line 245
+    .line 243
     :cond_13
     iget-object v3, v0, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout$MapOverlayView;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;
 
@@ -207,7 +207,7 @@
 
     invoke-static {v3, v4}, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;->access$100(Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;Z)V
 
-    .line 246
+    .line 244
     iget-object v3, v0, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout$MapOverlayView;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;
 
     invoke-static {v3}, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;->access$200(Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;)Lcom/google/android/gms/maps/model/Marker;
@@ -218,7 +218,7 @@
 
     if-eqz v3, :cond_30
 
-    .line 247
+    .line 245
     iget-object v3, v0, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout$MapOverlayView;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;
 
     invoke-static {v3}, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;->access$200(Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;)Lcom/google/android/gms/maps/model/Marker;
@@ -227,28 +227,28 @@
 
     invoke-virtual {v0, v3}, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout$MapOverlayView;->removeInfoView(Lcom/google/android/gms/maps/model/Marker;)V
 
-    .line 248
+    .line 246
     iget-object v3, v0, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout$MapOverlayView;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;
 
     invoke-static {v3, v4}, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;->access$202(Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;Lcom/google/android/gms/maps/model/Marker;)Lcom/google/android/gms/maps/model/Marker;
 
-    .line 250
+    .line 248
     :cond_30
     iget-object v3, v0, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout$MapOverlayView;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;
 
     invoke-static {v3, v2}, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;->access$002(Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout$VenueLocation;)Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout$VenueLocation;
 
-    .line 251
+    .line 249
     iget-object v3, v0, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout$MapOverlayView;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;
 
     invoke-static {v3, v1}, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;->access$202(Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;Lcom/google/android/gms/maps/model/Marker;)Lcom/google/android/gms/maps/model/Marker;
 
-    .line 253
+    .line 251
     invoke-virtual/range {p0 .. p0}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
 
     move-result-object v3
 
-    .line 255
+    .line 253
     new-instance v5, Landroid/widget/FrameLayout;
 
     invoke-direct {v5, v3}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
@@ -257,14 +257,14 @@
 
     const/4 v7, -0x2
 
-    .line 256
+    .line 254
     invoke-static {v7, v6}, Lorg/telegram/ui/Components/LayoutHelper;->createFrame(IF)Landroid/widget/FrameLayout$LayoutParams;
 
     move-result-object v6
 
     invoke-virtual {v0, v5, v6}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 258
+    .line 256
     iget-object v6, v0, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout$MapOverlayView;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;
 
     new-instance v8, Landroid/widget/FrameLayout;
@@ -273,18 +273,18 @@
 
     invoke-static {v6, v8}, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;->access$302(Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;Landroid/widget/FrameLayout;)Landroid/widget/FrameLayout;
 
-    .line 259
+    .line 257
     iget-object v6, v0, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout$MapOverlayView;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;
 
     invoke-static {v6}, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;->access$300(Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;)Landroid/widget/FrameLayout;
 
     move-result-object v6
 
-    const v8, 0x7f070405
+    const v8, 0x7f0703ec
 
     invoke-virtual {v6, v8}, Landroid/widget/FrameLayout;->setBackgroundResource(I)V
 
-    .line 260
+    .line 258
     iget-object v6, v0, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout$MapOverlayView;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;
 
     invoke-static {v6}, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;->access$300(Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;)Landroid/widget/FrameLayout;
@@ -311,7 +311,7 @@
 
     invoke-virtual {v6, v8}, Landroid/graphics/drawable/Drawable;->setColorFilter(Landroid/graphics/ColorFilter;)V
 
-    .line 261
+    .line 259
     iget-object v6, v0, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout$MapOverlayView;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;
 
     invoke-static {v6}, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;->access$300(Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;)Landroid/widget/FrameLayout;
@@ -326,7 +326,7 @@
 
     invoke-virtual {v5, v6, v7}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 262
+    .line 260
     iget-object v6, v0, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout$MapOverlayView;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;
 
     invoke-static {v6}, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;->access$300(Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;)Landroid/widget/FrameLayout;
@@ -337,7 +337,7 @@
 
     invoke-virtual {v6, v7}, Landroid/widget/FrameLayout;->setAlpha(F)V
 
-    .line 263
+    .line 261
     iget-object v6, v0, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout$MapOverlayView;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;
 
     invoke-static {v6}, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;->access$300(Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;)Landroid/widget/FrameLayout;
@@ -350,7 +350,7 @@
 
     invoke-virtual {v6, v7}, Landroid/widget/FrameLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 276
+    .line 274
     new-instance v6, Landroid/widget/TextView;
 
     invoke-direct {v6, v3}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
@@ -359,21 +359,21 @@
 
     const/4 v8, 0x1
 
-    .line 277
+    .line 275
     invoke-virtual {v6, v8, v7}, Landroid/widget/TextView;->setTextSize(IF)V
 
-    .line 278
+    .line 276
     invoke-virtual {v6, v8}, Landroid/widget/TextView;->setMaxLines(I)V
 
-    .line 279
+    .line 277
     sget-object v7, Landroid/text/TextUtils$TruncateAt;->END:Landroid/text/TextUtils$TruncateAt;
 
     invoke-virtual {v6, v7}, Landroid/widget/TextView;->setEllipsize(Landroid/text/TextUtils$TruncateAt;)V
 
-    .line 280
+    .line 278
     invoke-virtual {v6, v8}, Landroid/widget/TextView;->setSingleLine(Z)V
 
-    .line 281
+    .line 279
     iget-object v7, v0, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout$MapOverlayView;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;
 
     const-string v9, "windowBackgroundWhiteBlackText"
@@ -386,14 +386,14 @@
 
     const-string v7, "fonts/rmedium.ttf"
 
-    .line 282
+    .line 280
     invoke-static {v7}, Lorg/telegram/messenger/AndroidUtilities;->getTypeface(Ljava/lang/String;)Landroid/graphics/Typeface;
 
     move-result-object v7
 
     invoke-virtual {v6, v7}, Landroid/widget/TextView;->setTypeface(Landroid/graphics/Typeface;)V
 
-    .line 283
+    .line 281
     sget-boolean v7, Lorg/telegram/messenger/LocaleController;->isRTL:Z
 
     const/4 v9, 0x5
@@ -412,7 +412,7 @@
     :goto_d9
     invoke-virtual {v6, v7}, Landroid/widget/TextView;->setGravity(I)V
 
-    .line 284
+    .line 282
     iget-object v7, v0, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout$MapOverlayView;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;
 
     invoke-static {v7}, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;->access$300(Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;)Landroid/widget/FrameLayout;
@@ -451,28 +451,28 @@
 
     invoke-virtual {v7, v6, v11}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 286
+    .line 284
     new-instance v7, Landroid/widget/TextView;
 
     invoke-direct {v7, v3}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
     const/high16 v11, 0x41600000    # 14.0f
 
-    .line 287
+    .line 285
     invoke-virtual {v7, v8, v11}, Landroid/widget/TextView;->setTextSize(IF)V
 
-    .line 288
+    .line 286
     invoke-virtual {v7, v8}, Landroid/widget/TextView;->setMaxLines(I)V
 
-    .line 289
+    .line 287
     sget-object v11, Landroid/text/TextUtils$TruncateAt;->END:Landroid/text/TextUtils$TruncateAt;
 
     invoke-virtual {v7, v11}, Landroid/widget/TextView;->setEllipsize(Landroid/text/TextUtils$TruncateAt;)V
 
-    .line 290
+    .line 288
     invoke-virtual {v7, v8}, Landroid/widget/TextView;->setSingleLine(Z)V
 
-    .line 291
+    .line 289
     iget-object v8, v0, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout$MapOverlayView;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;
 
     const-string v11, "windowBackgroundWhiteGrayText3"
@@ -483,7 +483,7 @@
 
     invoke-virtual {v7, v8}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 292
+    .line 290
     sget-boolean v8, Lorg/telegram/messenger/LocaleController;->isRTL:Z
 
     if-eqz v8, :cond_123
@@ -498,7 +498,7 @@
     :goto_124
     invoke-virtual {v7, v8}, Landroid/widget/TextView;->setGravity(I)V
 
-    .line 293
+    .line 291
     iget-object v8, v0, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout$MapOverlayView;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;
 
     invoke-static {v8}, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;->access$300(Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;)Landroid/widget/FrameLayout;
@@ -535,32 +535,32 @@
 
     invoke-virtual {v8, v7, v9}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 295
+    .line 293
     iget-object v8, v2, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout$VenueLocation;->venue:Lorg/telegram/tgnet/TLRPC$TL_messageMediaVenue;
 
     iget-object v8, v8, Lorg/telegram/tgnet/TLRPC$MessageMedia;->title:Ljava/lang/String;
 
     invoke-virtual {v6, v8}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    const v6, 0x7f0e1136
+    const v6, 0x7f0e11fa
 
     const-string v8, "TapToSendLocation"
 
-    .line 296
+    .line 294
     invoke-static {v8, v6}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v6
 
     invoke-virtual {v7, v6}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 298
+    .line 296
     new-instance v6, Landroid/widget/FrameLayout;
 
     invoke-direct {v6, v3}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
     const/high16 v7, 0x42100000    # 36.0f
 
-    .line 299
+    .line 297
     invoke-static {v7}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v7
@@ -591,19 +591,19 @@
 
     const/high16 v14, 0x40800000    # 4.0f
 
-    .line 300
+    .line 298
     invoke-static/range {v8 .. v14}, Lorg/telegram/ui/Components/LayoutHelper;->createFrame(IFIFFFF)Landroid/widget/FrameLayout$LayoutParams;
 
     move-result-object v7
 
     invoke-virtual {v5, v6, v7}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 302
+    .line 300
     new-instance v7, Lorg/telegram/ui/Components/BackupImageView;
 
     invoke-direct {v7, v3}, Lorg/telegram/ui/Components/BackupImageView;-><init>(Landroid/content/Context;)V
 
-    .line 303
+    .line 301
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -632,7 +632,7 @@
 
     const/16 v3, 0x1e
 
-    .line 304
+    .line 302
     invoke-static {v3, v3, v2}, Lorg/telegram/ui/Components/LayoutHelper;->createFrame(III)Landroid/widget/FrameLayout$LayoutParams;
 
     move-result-object v2
@@ -643,14 +643,14 @@
 
     new-array v2, v2, [F
 
-    .line 306
+    .line 304
     fill-array-data v2, :array_1e4
 
     invoke-static {v2}, Landroid/animation/ValueAnimator;->ofFloat([F)Landroid/animation/ValueAnimator;
 
     move-result-object v2
 
-    .line 307
+    .line 305
     new-instance v3, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout$MapOverlayView$1;
 
     invoke-direct {v3, v0, v6}, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout$MapOverlayView$1;-><init>(Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout$MapOverlayView;Landroid/widget/FrameLayout;)V
@@ -659,18 +659,18 @@
 
     const-wide/16 v6, 0x168
 
-    .line 340
+    .line 338
     invoke-virtual {v2, v6, v7}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
-    .line 341
+    .line 339
     invoke-virtual {v2}, Landroid/animation/ValueAnimator;->start()V
 
-    .line 343
+    .line 341
     iget-object v2, v0, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout$MapOverlayView;->views:Ljava/util/HashMap;
 
     invoke-virtual {v2, v1, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 345
+    .line 343
     iget-object v2, v0, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout$MapOverlayView;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;
 
     invoke-static {v2}, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;->access$400(Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;)Lcom/google/android/gms/maps/GoogleMap;
@@ -701,7 +701,7 @@
 .method public removeInfoView(Lcom/google/android/gms/maps/model/Marker;)V
     .registers 3
 
-    .line 349
+    .line 347
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout$MapOverlayView;->views:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -712,10 +712,10 @@
 
     if-eqz v0, :cond_12
 
-    .line 351
+    .line 349
     invoke-virtual {p0, v0}, Landroid/widget/FrameLayout;->removeView(Landroid/view/View;)V
 
-    .line 352
+    .line 350
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout$MapOverlayView;->views:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
@@ -727,7 +727,7 @@
 .method public updatePositions()V
     .registers 7
 
-    .line 357
+    .line 355
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout$MapOverlayView;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;->access$400(Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;)Lcom/google/android/gms/maps/GoogleMap;
@@ -738,7 +738,7 @@
 
     return-void
 
-    .line 360
+    .line 358
     :cond_9
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout$MapOverlayView;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;
 
@@ -750,7 +750,7 @@
 
     move-result-object v0
 
-    .line 361
+    .line 359
     iget-object v1, p0, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout$MapOverlayView;->views:Ljava/util/HashMap;
 
     invoke-virtual {v1}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
@@ -774,21 +774,21 @@
 
     check-cast v2, Ljava/util/Map$Entry;
 
-    .line 362
+    .line 360
     invoke-interface {v2}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Lcom/google/android/gms/maps/model/Marker;
 
-    .line 363
+    .line 361
     invoke-interface {v2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Landroid/view/View;
 
-    .line 364
+    .line 362
     invoke-virtual {v3}, Lcom/google/android/gms/maps/model/Marker;->getPosition()Lcom/google/android/gms/maps/model/LatLng;
 
     move-result-object v3
@@ -797,7 +797,7 @@
 
     move-result-object v3
 
-    .line 365
+    .line 363
     iget v4, v3, Landroid/graphics/Point;->x:I
 
     invoke-virtual {v2}, Landroid/view/View;->getMeasuredWidth()I
@@ -812,7 +812,7 @@
 
     invoke-virtual {v2, v4}, Landroid/view/View;->setTranslationX(F)V
 
-    .line 366
+    .line 364
     iget v3, v3, Landroid/graphics/Point;->y:I
 
     invoke-virtual {v2}, Landroid/view/View;->getMeasuredHeight()I

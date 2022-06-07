@@ -10,12 +10,10 @@
 
 .field public final synthetic f$1:Ljava/lang/String;
 
-.field public final synthetic f$2:Ljava/lang/Runnable;
-
 
 # direct methods
-.method public synthetic constructor <init>(Lorg/telegram/messenger/SendMessagesHelper;Ljava/lang/String;Ljava/lang/Runnable;)V
-    .registers 4
+.method public synthetic constructor <init>(Lorg/telegram/messenger/SendMessagesHelper;Ljava/lang/String;)V
+    .registers 3
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -23,23 +21,19 @@
 
     iput-object p2, p0, Lorg/telegram/messenger/SendMessagesHelper$$ExternalSyntheticLambda28;->f$1:Ljava/lang/String;
 
-    iput-object p3, p0, Lorg/telegram/messenger/SendMessagesHelper$$ExternalSyntheticLambda28;->f$2:Ljava/lang/Runnable;
-
     return-void
 .end method
 
 
 # virtual methods
 .method public final run()V
-    .registers 4
+    .registers 3
 
     iget-object v0, p0, Lorg/telegram/messenger/SendMessagesHelper$$ExternalSyntheticLambda28;->f$0:Lorg/telegram/messenger/SendMessagesHelper;
 
     iget-object v1, p0, Lorg/telegram/messenger/SendMessagesHelper$$ExternalSyntheticLambda28;->f$1:Ljava/lang/String;
 
-    iget-object v2, p0, Lorg/telegram/messenger/SendMessagesHelper$$ExternalSyntheticLambda28;->f$2:Ljava/lang/Runnable;
-
-    invoke-static {v0, v1, v2}, Lorg/telegram/messenger/SendMessagesHelper;->$r8$lambda$IvUXJX8PTv5tnQvdVRP-rWnhuk4(Lorg/telegram/messenger/SendMessagesHelper;Ljava/lang/String;Ljava/lang/Runnable;)V
+    invoke-static {v0, v1}, Lorg/telegram/messenger/SendMessagesHelper;->$r8$lambda$zC6-JcYaGJVKRNcA2jXkLBtNlmA(Lorg/telegram/messenger/SendMessagesHelper;Ljava/lang/String;)V
 
     return-void
 .end method

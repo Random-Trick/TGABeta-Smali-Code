@@ -24,7 +24,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/ScrollSlidingTextTabStrip;Landroid/content/Context;I)V
     .registers 4
 
-    .line 264
+    .line 270
     iput-object p1, p0, Lorg/telegram/ui/Components/ScrollSlidingTextTabStrip$3;->this$0:Lorg/telegram/ui/Components/ScrollSlidingTextTabStrip;
 
     iput p3, p0, Lorg/telegram/ui/Components/ScrollSlidingTextTabStrip$3;->val$id:I
@@ -39,10 +39,10 @@
 .method public onInitializeAccessibilityNodeInfo(Landroid/view/accessibility/AccessibilityNodeInfo;)V
     .registers 4
 
-    .line 267
+    .line 273
     invoke-super {p0, p1}, Landroid/widget/TextView;->onInitializeAccessibilityNodeInfo(Landroid/view/accessibility/AccessibilityNodeInfo;)V
 
-    .line 268
+    .line 274
     iget-object v0, p0, Lorg/telegram/ui/Components/ScrollSlidingTextTabStrip$3;->this$0:Lorg/telegram/ui/Components/ScrollSlidingTextTabStrip;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/ScrollSlidingTextTabStrip;->access$600(Lorg/telegram/ui/Components/ScrollSlidingTextTabStrip;)I

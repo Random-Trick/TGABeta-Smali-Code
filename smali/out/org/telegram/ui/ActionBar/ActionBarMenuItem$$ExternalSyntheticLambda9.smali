@@ -27,7 +27,7 @@
 
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuItem$$ExternalSyntheticLambda9;->f$0:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
-    invoke-static {v0}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->$r8$lambda$cKY57oqZh4kcygiViMXgyw_jQQU(Lorg/telegram/ui/ActionBar/ActionBarMenuItem;)V
+    invoke-static {v0}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->$r8$lambda$2fr2uZYysWBWoolgqJHp7Z4gkEY(Lorg/telegram/ui/ActionBar/ActionBarMenuItem;)V
 
     return-void
 .end method

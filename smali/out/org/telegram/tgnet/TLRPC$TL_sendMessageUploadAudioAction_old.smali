@@ -17,7 +17,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 5951
+    .line 6016
     invoke-direct {p0}, Lorg/telegram/tgnet/TLRPC$TL_sendMessageUploadAudioAction;-><init>()V
 
     return-void
@@ -34,7 +34,7 @@
 .method public serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
     .registers 3
 
-    .line 5959
+    .line 6024
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_sendMessageUploadAudioAction_old;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V

@@ -27,7 +27,7 @@
 
     iget-object v0, p0, Lorg/telegram/ui/LaunchActivity$$ExternalSyntheticLambda2;->f$0:[Z
 
-    invoke-static {v0, p1}, Lorg/telegram/ui/LaunchActivity;->$r8$lambda$nLyMy76_KvW3tXVDjNFg8oUTQ4A([ZLandroid/content/DialogInterface;)V
+    invoke-static {v0, p1}, Lorg/telegram/ui/LaunchActivity;->$r8$lambda$DKEu4z04rBfNC-WlN0TXu0TZS0E([ZLandroid/content/DialogInterface;)V
 
     return-void
 .end method

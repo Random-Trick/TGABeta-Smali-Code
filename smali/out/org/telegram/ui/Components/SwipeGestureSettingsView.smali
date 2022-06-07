@@ -75,10 +75,10 @@
 
     move-object/from16 v1, p1
 
-    .line 56
+    .line 60
     invoke-direct/range {p0 .. p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    .line 32
+    .line 36
     new-instance v2, Landroid/graphics/Paint;
 
     const/4 v3, 0x1
@@ -87,28 +87,28 @@
 
     iput-object v2, v0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->outlinePaint:Landroid/graphics/Paint;
 
-    .line 33
+    .line 37
     new-instance v2, Landroid/graphics/Paint;
 
     invoke-direct {v2, v3}, Landroid/graphics/Paint;-><init>(I)V
 
     iput-object v2, v0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->filledPaint:Landroid/graphics/Paint;
 
-    .line 34
+    .line 38
     new-instance v2, Landroid/graphics/Paint;
 
     invoke-direct {v2, v3}, Landroid/graphics/Paint;-><init>(I)V
 
     iput-object v2, v0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->linePaint:Landroid/graphics/Paint;
 
-    .line 35
+    .line 39
     new-instance v2, Landroid/graphics/Paint;
 
     invoke-direct {v2, v3}, Landroid/graphics/Paint;-><init>(I)V
 
     iput-object v2, v0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->pickerDividersPaint:Landroid/graphics/Paint;
 
-    .line 37
+    .line 41
     new-instance v2, Landroid/graphics/RectF;
 
     invoke-direct {v2}, Landroid/graphics/RectF;-><init>()V
@@ -119,36 +119,36 @@
 
     new-array v4, v2, [Ljava/lang/String;
 
-    .line 41
+    .line 45
     iput-object v4, v0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->strings:[Ljava/lang/String;
 
     new-array v5, v2, [Ljava/lang/String;
 
-    .line 42
+    .line 46
     iput-object v5, v0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->backgroundKeys:[Ljava/lang/String;
 
     new-array v2, v2, [Lorg/telegram/ui/Components/RLottieDrawable;
 
-    .line 43
+    .line 47
     iput-object v2, v0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->icons:[Lorg/telegram/ui/Components/RLottieDrawable;
 
     const/4 v2, 0x2
 
     new-array v5, v2, [Lorg/telegram/ui/Components/RLottieImageView;
 
-    .line 46
+    .line 50
     iput-object v5, v0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->iconViews:[Lorg/telegram/ui/Components/RLottieImageView;
 
     const/high16 v5, 0x3f800000    # 1.0f
 
-    .line 50
+    .line 54
     iput v5, v0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->colorProgress:F
 
     const-string v6, "SwipeSettingsPin"
 
-    const v7, 0x7f0e1115
+    const v7, 0x7f0e11d9
 
-    .line 58
+    .line 62
     invoke-static {v6, v7}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v6
@@ -157,12 +157,12 @@
 
     aput-object v6, v4, v7
 
-    .line 59
+    .line 63
     iget-object v4, v0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->strings:[Ljava/lang/String;
 
     const-string v6, "SwipeSettingsRead"
 
-    const v8, 0x7f0e1116
+    const v8, 0x7f0e11da
 
     invoke-static {v6, v8}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
@@ -170,12 +170,12 @@
 
     aput-object v6, v4, v3
 
-    .line 60
+    .line 64
     iget-object v4, v0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->strings:[Ljava/lang/String;
 
     const-string v6, "SwipeSettingsArchive"
 
-    const v8, 0x7f0e1111
+    const v8, 0x7f0e11d5
 
     invoke-static {v6, v8}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
@@ -183,12 +183,12 @@
 
     aput-object v6, v4, v2
 
-    .line 61
+    .line 65
     iget-object v4, v0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->strings:[Ljava/lang/String;
 
     const-string v6, "SwipeSettingsMute"
 
-    const v8, 0x7f0e1114
+    const v8, 0x7f0e11d8
 
     invoke-static {v6, v8}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
@@ -198,12 +198,12 @@
 
     aput-object v6, v4, v8
 
-    .line 62
+    .line 66
     iget-object v4, v0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->strings:[Ljava/lang/String;
 
     const-string v6, "SwipeSettingsDelete"
 
-    const v9, 0x7f0e1112
+    const v9, 0x7f0e11d6
 
     invoke-static {v6, v9}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
@@ -213,12 +213,12 @@
 
     aput-object v6, v4, v9
 
-    .line 63
+    .line 67
     iget-object v4, v0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->strings:[Ljava/lang/String;
 
     const-string v6, "SwipeSettingsFolders"
 
-    const v10, 0x7f0e1113
+    const v10, 0x7f0e11d7
 
     invoke-static {v6, v10}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
@@ -228,40 +228,40 @@
 
     aput-object v6, v4, v10
 
-    .line 65
+    .line 69
     iget-object v4, v0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->backgroundKeys:[Ljava/lang/String;
 
     const-string v6, "chats_archiveBackground"
 
     aput-object v6, v4, v7
 
-    .line 66
+    .line 70
     aput-object v6, v4, v3
 
-    .line 67
+    .line 71
     aput-object v6, v4, v2
 
-    .line 68
+    .line 72
     aput-object v6, v4, v8
 
     const-string v6, "dialogSwipeRemove"
 
-    .line 69
+    .line 73
     aput-object v6, v4, v9
 
     const-string v6, "chats_archivePinBackground"
 
-    .line 70
+    .line 74
     aput-object v6, v4, v10
 
-    .line 72
+    .line 76
     iget-object v4, v0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->outlinePaint:Landroid/graphics/Paint;
 
     sget-object v6, Landroid/graphics/Paint$Style;->STROKE:Landroid/graphics/Paint$Style;
 
     invoke-virtual {v4, v6}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
-    .line 73
+    .line 77
     iget-object v4, v0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->outlinePaint:Landroid/graphics/Paint;
 
     invoke-static {v5}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -272,21 +272,21 @@
 
     invoke-virtual {v4, v6}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
-    .line 75
+    .line 79
     iget-object v4, v0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->linePaint:Landroid/graphics/Paint;
 
     sget-object v6, Landroid/graphics/Paint$Style;->STROKE:Landroid/graphics/Paint$Style;
 
     invoke-virtual {v4, v6}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
-    .line 76
+    .line 80
     iget-object v4, v0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->linePaint:Landroid/graphics/Paint;
 
     sget-object v6, Landroid/graphics/Paint$Cap;->ROUND:Landroid/graphics/Paint$Cap;
 
     invoke-virtual {v4, v6}, Landroid/graphics/Paint;->setStrokeCap(Landroid/graphics/Paint$Cap;)V
 
-    .line 77
+    .line 81
     iget-object v4, v0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->linePaint:Landroid/graphics/Paint;
 
     const/high16 v6, 0x40a00000    # 5.0f
@@ -299,21 +299,21 @@
 
     invoke-virtual {v4, v6}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
-    .line 79
+    .line 83
     iget-object v4, v0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->pickerDividersPaint:Landroid/graphics/Paint;
 
     sget-object v6, Landroid/graphics/Paint$Style;->STROKE:Landroid/graphics/Paint$Style;
 
     invoke-virtual {v4, v6}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
-    .line 80
+    .line 84
     iget-object v4, v0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->pickerDividersPaint:Landroid/graphics/Paint;
 
     sget-object v6, Landroid/graphics/Paint$Cap;->ROUND:Landroid/graphics/Paint$Cap;
 
     invoke-virtual {v4, v6}, Landroid/graphics/Paint;->setStrokeCap(Landroid/graphics/Paint$Cap;)V
 
-    .line 81
+    .line 85
     iget-object v4, v0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->pickerDividersPaint:Landroid/graphics/Paint;
 
     const/high16 v6, 0x40000000    # 2.0f
@@ -326,7 +326,7 @@
 
     invoke-virtual {v4, v6}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
-    .line 83
+    .line 87
     new-instance v4, Lorg/telegram/ui/Components/SwipeGestureSettingsView$1;
 
     const/16 v6, 0xd
@@ -335,15 +335,15 @@
 
     iput-object v4, v0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->picker:Lorg/telegram/ui/Components/NumberPicker;
 
-    .line 95
+    .line 99
     invoke-virtual {v4, v7}, Lorg/telegram/ui/Components/NumberPicker;->setMinValue(I)V
 
-    .line 96
+    .line 100
     iget-object v4, v0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->picker:Lorg/telegram/ui/Components/NumberPicker;
 
     invoke-virtual {v4, v7}, Lorg/telegram/ui/Components/NumberPicker;->setDrawDividers(Z)V
 
-    .line 97
+    .line 101
     invoke-static/range {p2 .. p2}, Lorg/telegram/messenger/MessagesController;->getInstance(I)Lorg/telegram/messenger/MessagesController;
 
     move-result-object v4
@@ -358,7 +358,7 @@
 
     iput-boolean v4, v0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->hasTabs:Z
 
-    .line 98
+    .line 102
     iget-object v6, v0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->picker:Lorg/telegram/ui/Components/NumberPicker;
 
     if-eqz v4, :cond_111
@@ -381,7 +381,7 @@
     :goto_115
     invoke-virtual {v6, v4}, Lorg/telegram/ui/Components/NumberPicker;->setMaxValue(I)V
 
-    .line 99
+    .line 103
     iget-object v4, v0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->picker:Lorg/telegram/ui/Components/NumberPicker;
 
     new-instance v6, Lorg/telegram/ui/Components/SwipeGestureSettingsView$$ExternalSyntheticLambda1;
@@ -390,7 +390,7 @@
 
     invoke-virtual {v4, v6}, Lorg/telegram/ui/Components/NumberPicker;->setFormatter(Lorg/telegram/ui/Components/NumberPicker$Formatter;)V
 
-    .line 100
+    .line 104
     iget-object v4, v0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->picker:Lorg/telegram/ui/Components/NumberPicker;
 
     new-instance v6, Lorg/telegram/ui/Components/SwipeGestureSettingsView$$ExternalSyntheticLambda2;
@@ -399,7 +399,12 @@
 
     invoke-virtual {v4, v6}, Lorg/telegram/ui/Components/NumberPicker;->setOnValueChangedListener(Lorg/telegram/ui/Components/NumberPicker$OnValueChangeListener;)V
 
-    .line 108
+    .line 111
+    iget-object v4, v0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->picker:Lorg/telegram/ui/Components/NumberPicker;
+
+    invoke-virtual {v4, v2}, Landroid/widget/LinearLayout;->setImportantForAccessibility(I)V
+
+    .line 112
     iget-object v4, v0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->picker:Lorg/telegram/ui/Components/NumberPicker;
 
     invoke-static/range {p2 .. p2}, Lorg/telegram/messenger/SharedConfig;->getChatSwipeAction(I)I
@@ -408,7 +413,7 @@
 
     invoke-virtual {v4, v6}, Lorg/telegram/ui/Components/NumberPicker;->setValue(I)V
 
-    .line 110
+    .line 114
     iget-object v4, v0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->picker:Lorg/telegram/ui/Components/NumberPicker;
 
     const/16 v11, 0x84
@@ -431,18 +436,18 @@
 
     invoke-virtual {v0, v4, v6}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 112
+    .line 116
     invoke-virtual {v0, v7}, Landroid/widget/FrameLayout;->setWillNotDraw(Z)V
 
-    .line 114
+    .line 118
     iput v7, v0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->currentIconIndex:I
 
     const/4 v4, 0x0
 
-    :goto_150
-    if-ge v4, v2, :cond_175
+    :goto_155
+    if-ge v4, v2, :cond_17a
 
-    .line 116
+    .line 120
     iget-object v6, v0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->iconViews:[Lorg/telegram/ui/Components/RLottieImageView;
 
     new-instance v8, Lorg/telegram/ui/Components/RLottieImageView;
@@ -451,7 +456,7 @@
 
     aput-object v8, v6, v4
 
-    .line 117
+    .line 121
     iget-object v6, v0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->iconViews:[Lorg/telegram/ui/Components/RLottieImageView;
 
     aget-object v6, v6, v4
@@ -478,10 +483,10 @@
 
     add-int/lit8 v4, v4, 0x1
 
-    goto :goto_150
+    goto :goto_155
 
-    .line 120
-    :cond_175
+    .line 124
+    :cond_17a
     iget-object v1, v0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->picker:Lorg/telegram/ui/Components/NumberPicker;
 
     invoke-virtual {v1}, Lorg/telegram/ui/Components/NumberPicker;->getValue()I
@@ -492,16 +497,16 @@
 
     move-result-object v1
 
-    if-eqz v1, :cond_190
+    if-eqz v1, :cond_195
 
-    .line 122
+    .line 126
     iget-object v2, v0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->iconViews:[Lorg/telegram/ui/Components/RLottieImageView;
 
     aget-object v2, v2, v7
 
     invoke-virtual {v2, v1}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 123
+    .line 127
     invoke-virtual {v1}, Lorg/telegram/ui/Components/RLottieDrawable;->getFramesCount()I
 
     move-result v2
@@ -510,8 +515,8 @@
 
     invoke-virtual {v1, v2}, Lorg/telegram/ui/Components/RLottieDrawable;->setCurrentFrame(I)V
 
-    .line 125
-    :cond_190
+    .line 129
+    :cond_195
     iget-object v1, v0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->iconViews:[Lorg/telegram/ui/Components/RLottieImageView;
 
     aget-object v1, v1, v7
@@ -520,31 +525,31 @@
 
     invoke-static {v1, v3, v2, v7}, Lorg/telegram/messenger/AndroidUtilities;->updateViewVisibilityAnimated(Landroid/view/View;ZFZ)V
 
-    .line 126
+    .line 130
     iget-object v1, v0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->iconViews:[Lorg/telegram/ui/Components/RLottieImageView;
 
     aget-object v1, v1, v3
 
     invoke-static {v1, v7, v2, v7}, Lorg/telegram/messenger/AndroidUtilities;->updateViewVisibilityAnimated(Landroid/view/View;ZFZ)V
 
-    .line 128
+    .line 132
     iget-object v1, v0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->picker:Lorg/telegram/ui/Components/NumberPicker;
 
     invoke-virtual {v1}, Lorg/telegram/ui/Components/NumberPicker;->getValue()I
 
     move-result v1
 
-    if-ne v1, v10, :cond_1a9
+    if-ne v1, v10, :cond_1ae
 
-    goto :goto_1aa
+    goto :goto_1af
 
-    :cond_1a9
+    :cond_1ae
     const/4 v5, 0x0
 
-    :goto_1aa
+    :goto_1af
     iput v5, v0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->progressToSwipeFolders:F
 
-    .line 129
+    .line 133
     iget-object v1, v0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->picker:Lorg/telegram/ui/Components/NumberPicker;
 
     invoke-virtual {v1}, Lorg/telegram/ui/Components/NumberPicker;->getValue()I
@@ -559,7 +564,7 @@
 .method private synthetic lambda$new$0(I)Ljava/lang/String;
     .registers 3
 
-    .line 99
+    .line 103
     iget-object v0, p0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->strings:[Ljava/lang/String;
 
     aget-object p1, v0, p1
@@ -570,20 +575,20 @@
 .method private synthetic lambda$new$1(Lorg/telegram/ui/Components/NumberPicker;II)V
     .registers 4
 
-    .line 101
+    .line 105
     invoke-direct {p0}, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->swapIcons()V
 
-    .line 103
+    .line 107
     invoke-static {p3}, Lorg/telegram/messenger/SharedConfig;->updateChatListSwipeSetting(I)V
 
-    .line 104
+    .line 108
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->invalidate()V
 
     const/4 p2, 0x3
 
     const/4 p3, 0x2
 
-    .line 105
+    .line 109
     invoke-virtual {p1, p2, p3}, Landroid/widget/LinearLayout;->performHapticFeedback(II)Z
 
     return-void
@@ -594,10 +599,10 @@
 
     const/4 v0, 0x0
 
-    .line 158
+    .line 162
     iput-object v0, p0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->swapIconRunnable:Ljava/lang/Runnable;
 
-    .line 159
+    .line 163
     invoke-direct {p0}, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->swapIcons()V
 
     return-void
@@ -606,14 +611,14 @@
 .method private swapIcons()V
     .registers 6
 
-    .line 136
+    .line 140
     iget-object v0, p0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->swapIconRunnable:Ljava/lang/Runnable;
 
     if-eqz v0, :cond_5
 
     return-void
 
-    .line 139
+    .line 143
     :cond_5
     iget-object v0, p0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->picker:Lorg/telegram/ui/Components/NumberPicker;
 
@@ -621,15 +626,15 @@
 
     move-result v0
 
-    .line 140
+    .line 144
     iget v1, p0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->currentIconValue:I
 
     if-eq v1, v0, :cond_61
 
-    .line 141
+    .line 145
     iput v0, p0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->currentIconValue:I
 
-    .line 142
+    .line 146
     iget v1, p0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->currentIconIndex:I
 
     const/4 v2, 0x1
@@ -638,7 +643,7 @@
 
     rem-int/lit8 v1, v1, 0x2
 
-    .line 143
+    .line 147
     invoke-virtual {p0, v0}, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->getIcon(I)Lorg/telegram/ui/Components/RLottieDrawable;
 
     move-result-object v0
@@ -647,7 +652,7 @@
 
     if-eqz v0, :cond_3a
 
-    .line 145
+    .line 149
     iget-object v4, p0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->iconViews:[Lorg/telegram/ui/Components/RLottieImageView;
 
     aget-object v4, v4, v1
@@ -658,10 +663,10 @@
 
     if-eqz v4, :cond_2b
 
-    .line 146
+    .line 150
     invoke-virtual {v0, v3, v3}, Lorg/telegram/ui/Components/RLottieDrawable;->setCurrentFrame(IZ)V
 
-    .line 148
+    .line 152
     :cond_2b
     iget-object v4, p0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->iconViews:[Lorg/telegram/ui/Components/RLottieImageView;
 
@@ -669,7 +674,7 @@
 
     invoke-virtual {v4, v0}, Lorg/telegram/ui/Components/RLottieImageView;->setAnimation(Lorg/telegram/ui/Components/RLottieDrawable;)V
 
-    .line 149
+    .line 153
     iget-object v0, p0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->iconViews:[Lorg/telegram/ui/Components/RLottieImageView;
 
     aget-object v0, v0, v1
@@ -678,7 +683,7 @@
 
     goto :goto_41
 
-    .line 151
+    .line 155
     :cond_3a
     iget-object v0, p0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->iconViews:[Lorg/telegram/ui/Components/RLottieImageView;
 
@@ -686,7 +691,7 @@
 
     invoke-virtual {v0}, Lorg/telegram/ui/Components/RLottieImageView;->clearAnimationDrawable()V
 
-    .line 153
+    .line 157
     :goto_41
     iget-object v0, p0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->iconViews:[Lorg/telegram/ui/Components/RLottieImageView;
 
@@ -698,17 +703,17 @@
 
     invoke-static {v0, v3, v4, v2}, Lorg/telegram/messenger/AndroidUtilities;->updateViewVisibilityAnimated(Landroid/view/View;ZFZ)V
 
-    .line 154
+    .line 158
     iget-object v0, p0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->iconViews:[Lorg/telegram/ui/Components/RLottieImageView;
 
     aget-object v0, v0, v1
 
     invoke-static {v0, v2, v4, v2}, Lorg/telegram/messenger/AndroidUtilities;->updateViewVisibilityAnimated(Landroid/view/View;ZFZ)V
 
-    .line 155
+    .line 159
     iput v1, p0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->currentIconIndex:I
 
-    .line 157
+    .line 161
     new-instance v0, Lorg/telegram/ui/Components/SwipeGestureSettingsView$$ExternalSyntheticLambda0;
 
     invoke-direct {v0, p0}, Lorg/telegram/ui/Components/SwipeGestureSettingsView$$ExternalSyntheticLambda0;-><init>(Lorg/telegram/ui/Components/SwipeGestureSettingsView;)V
@@ -728,7 +733,7 @@
 .method public getIcon(I)Lorg/telegram/ui/Components/RLottieDrawable;
     .registers 11
 
-    .line 273
+    .line 277
     iget-object v0, p0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->icons:[Lorg/telegram/ui/Components/RLottieDrawable;
 
     aget-object v1, v0, p1
@@ -794,7 +799,7 @@
 
     const v3, 0x7f0d0082
 
-    .line 296
+    .line 300
     :goto_3e
     new-instance v1, Lorg/telegram/ui/Components/RLottieDrawable;
 
@@ -832,10 +837,10 @@
 
     aput-object v1, v0, p1
 
-    .line 297
+    .line 301
     invoke-virtual {p0, p1}, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->updateIconColor(I)V
 
-    .line 300
+    .line 304
     :cond_66
     iget-object v0, p0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->icons:[Lorg/telegram/ui/Components/RLottieDrawable;
 
@@ -851,10 +856,10 @@
 
     move-object/from16 v7, p1
 
-    .line 171
+    .line 175
     invoke-super/range {p0 .. p1}, Landroid/widget/FrameLayout;->onDraw(Landroid/graphics/Canvas;)V
 
-    .line 173
+    .line 177
     iget-object v1, v0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->picker:Lorg/telegram/ui/Components/NumberPicker;
 
     invoke-virtual {v1}, Lorg/telegram/ui/Components/NumberPicker;->getValue()I
@@ -885,7 +890,7 @@
 
     if-eqz v1, :cond_3e
 
-    .line 175
+    .line 179
     iget v6, v0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->progressToSwipeFolders:F
 
     cmpl-float v9, v6, v5
@@ -894,19 +899,19 @@
 
     add-float/2addr v6, v4
 
-    .line 176
+    .line 180
     iput v6, v0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->progressToSwipeFolders:F
 
     cmpl-float v1, v6, v5
 
     if-lez v1, :cond_2c
 
-    .line 178
+    .line 182
     iput v5, v0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->progressToSwipeFolders:F
 
     goto :goto_61
 
-    .line 180
+    .line 184
     :cond_2c
     iget-object v1, v0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->iconViews:[Lorg/telegram/ui/Components/RLottieImageView;
 
@@ -914,14 +919,14 @@
 
     invoke-virtual {v1}, Landroid/widget/ImageView;->invalidate()V
 
-    .line 181
+    .line 185
     iget-object v1, v0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->iconViews:[Lorg/telegram/ui/Components/RLottieImageView;
 
     aget-object v1, v1, v2
 
     invoke-virtual {v1}, Landroid/widget/ImageView;->invalidate()V
 
-    .line 182
+    .line 186
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->invalidate()V
 
     goto :goto_61
@@ -929,7 +934,7 @@
     :cond_3e
     if-nez v1, :cond_61
 
-    .line 184
+    .line 188
     iget v1, v0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->progressToSwipeFolders:F
 
     cmpl-float v6, v1, v8
@@ -938,19 +943,19 @@
 
     sub-float/2addr v1, v4
 
-    .line 185
+    .line 189
     iput v1, v0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->progressToSwipeFolders:F
 
     cmpg-float v1, v1, v8
 
     if-gez v1, :cond_50
 
-    .line 187
+    .line 191
     iput v8, v0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->progressToSwipeFolders:F
 
     goto :goto_61
 
-    .line 189
+    .line 193
     :cond_50
     iget-object v1, v0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->iconViews:[Lorg/telegram/ui/Components/RLottieImageView;
 
@@ -958,17 +963,17 @@
 
     invoke-virtual {v1}, Landroid/widget/ImageView;->invalidate()V
 
-    .line 190
+    .line 194
     iget-object v1, v0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->iconViews:[Lorg/telegram/ui/Components/RLottieImageView;
 
     aget-object v1, v1, v2
 
     invoke-virtual {v1}, Landroid/widget/ImageView;->invalidate()V
 
-    .line 191
+    .line 195
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->invalidate()V
 
-    .line 194
+    .line 198
     :cond_61
     :goto_61
     iget-object v1, v0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->outlinePaint:Landroid/graphics/Paint;
@@ -981,7 +986,7 @@
 
     invoke-virtual {v1, v3}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 196
+    .line 200
     iget-object v1, v0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->linePaint:Landroid/graphics/Paint;
 
     invoke-static {v2}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
@@ -990,7 +995,7 @@
 
     invoke-virtual {v1, v3}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 198
+    .line 202
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getMeasuredWidth()I
 
     move-result v1
@@ -1019,12 +1024,12 @@
 
     sub-int/2addr v1, v3
 
-    .line 199
+    .line 203
     invoke-static {v4}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v3
 
-    .line 201
+    .line 205
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getMeasuredHeight()I
 
     move-result v4
@@ -1039,7 +1044,7 @@
 
     div-int/lit8 v4, v4, 0x2
 
-    .line 203
+    .line 207
     iget-object v6, v0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->rect:Landroid/graphics/RectF;
 
     int-to-float v3, v3
@@ -1058,7 +1063,7 @@
 
     invoke-virtual {v6, v3, v9, v10, v11}, Landroid/graphics/RectF;->set(FFFF)V
 
-    .line 207
+    .line 211
     iget-object v6, v0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->currentColorKey:Ljava/lang/String;
 
     const v10, 0x3f666666    # 0.9f
@@ -1067,7 +1072,7 @@
 
     if-nez v6, :cond_d5
 
-    .line 208
+    .line 212
     iget-object v6, v0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->backgroundKeys:[Ljava/lang/String;
 
     iget-object v12, v0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->picker:Lorg/telegram/ui/Components/NumberPicker;
@@ -1080,10 +1085,10 @@
 
     iput-object v6, v0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->currentColorKey:Ljava/lang/String;
 
-    .line 209
+    .line 213
     iput v5, v0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->colorProgress:F
 
-    .line 210
+    .line 214
     invoke-static {v11}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
 
     move-result v6
@@ -1098,12 +1103,12 @@
 
     move-result v6
 
-    .line 211
+    .line 215
     iput v6, v0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->fromColor:I
 
     goto :goto_10d
 
-    .line 212
+    .line 216
     :cond_d5
     iget-object v6, v0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->backgroundKeys:[Ljava/lang/String;
 
@@ -1123,7 +1128,7 @@
 
     if-nez v6, :cond_10d
 
-    .line 213
+    .line 217
     iget v6, v0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->fromColor:I
 
     invoke-static {v11}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
@@ -1148,10 +1153,10 @@
 
     iput v6, v0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->fromColor:I
 
-    .line 214
+    .line 218
     iput v8, v0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->colorProgress:F
 
-    .line 215
+    .line 219
     iget-object v6, v0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->backgroundKeys:[Ljava/lang/String;
 
     iget-object v12, v0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->picker:Lorg/telegram/ui/Components/NumberPicker;
@@ -1164,7 +1169,7 @@
 
     iput-object v6, v0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->currentColorKey:Ljava/lang/String;
 
-    .line 218
+    .line 222
     :cond_10d
     :goto_10d
     iget v6, v0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->colorProgress:F
@@ -1177,23 +1182,23 @@
 
     add-float/2addr v6, v12
 
-    .line 219
+    .line 223
     iput v6, v0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->colorProgress:F
 
     cmpl-float v6, v6, v5
 
     if-lez v6, :cond_120
 
-    .line 221
+    .line 225
     iput v5, v0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->colorProgress:F
 
     goto :goto_123
 
-    .line 223
+    .line 227
     :cond_120
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->invalidate()V
 
-    .line 227
+    .line 231
     :cond_123
     :goto_123
     iget v6, v0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->fromColor:I
@@ -1218,12 +1223,12 @@
 
     move-result v6
 
-    .line 229
+    .line 233
     iget-object v10, v0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->filledPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v10, v6}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 230
+    .line 234
     iget-object v6, v0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->rect:Landroid/graphics/RectF;
 
     const/high16 v10, 0x40c00000    # 6.0f
@@ -1244,7 +1249,7 @@
 
     invoke-virtual {v7, v6, v12, v13, v14}, Landroid/graphics/Canvas;->drawRoundRect(Landroid/graphics/RectF;FFLandroid/graphics/Paint;)V
 
-    .line 232
+    .line 236
     iget-object v6, v0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->filledPaint:Landroid/graphics/Paint;
 
     invoke-static {v11}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
@@ -1253,14 +1258,14 @@
 
     invoke-virtual {v6, v11}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 233
+    .line 237
     iget-object v6, v0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->filledPaint:Landroid/graphics/Paint;
 
     const/16 v11, 0xff
 
     invoke-virtual {v6, v11}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 246
+    .line 250
     iget-object v6, v0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->rect:Landroid/graphics/RectF;
 
     const/high16 v11, 0x42680000    # 58.0f
@@ -1283,7 +1288,7 @@
 
     invoke-virtual {v6, v3, v9, v1, v4}, Landroid/graphics/RectF;->set(FFFF)V
 
-    .line 248
+    .line 252
     iget-object v1, v0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->rect:Landroid/graphics/RectF;
 
     invoke-static {v5}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -1304,7 +1309,7 @@
 
     invoke-virtual {v1, v3, v4}, Landroid/graphics/RectF;->inset(FF)V
 
-    .line 249
+    .line 253
     iget-object v1, v0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->rect:Landroid/graphics/RectF;
 
     invoke-static {v10}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -1323,14 +1328,14 @@
 
     invoke-virtual {v7, v1, v3, v4, v5}, Landroid/graphics/Canvas;->drawRoundRect(Landroid/graphics/RectF;FFLandroid/graphics/Paint;)V
 
-    .line 250
+    .line 254
     iget-object v1, v0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->outlinePaint:Landroid/graphics/Paint;
 
     const/16 v3, 0x1f
 
     invoke-virtual {v1, v3}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 251
+    .line 255
     iget-object v1, v0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->rect:Landroid/graphics/RectF;
 
     invoke-static {v10}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -1349,15 +1354,15 @@
 
     invoke-virtual {v7, v1, v3, v4, v5}, Landroid/graphics/Canvas;->drawRoundRect(Landroid/graphics/RectF;FFLandroid/graphics/Paint;)V
 
-    .line 253
+    .line 257
     invoke-virtual/range {p1 .. p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 254
+    .line 258
     iget-object v1, v0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->rect:Landroid/graphics/RectF;
 
     invoke-virtual {v7, v1}, Landroid/graphics/Canvas;->clipRect(Landroid/graphics/RectF;)Z
 
-    .line 259
+    .line 263
     iget-object v1, v0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->filledPaint:Landroid/graphics/Paint;
 
     invoke-static {v2}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
@@ -1366,14 +1371,14 @@
 
     invoke-virtual {v1, v2}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 260
+    .line 264
     iget-object v1, v0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->filledPaint:Landroid/graphics/Paint;
 
     const/16 v2, 0x3c
 
     invoke-virtual {v1, v2}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 261
+    .line 265
     iget-object v1, v0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->rect:Landroid/graphics/RectF;
 
     iget v2, v1, Landroid/graphics/RectF;->left:F
@@ -1396,7 +1401,7 @@
 
     invoke-virtual {v7, v2, v1, v3, v4}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
 
-    .line 263
+    .line 267
     iget-object v1, v0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->rect:Landroid/graphics/RectF;
 
     invoke-virtual {v1}, Landroid/graphics/RectF;->centerY()F
@@ -1411,14 +1416,14 @@
 
     sub-float v5, v1, v2
 
-    .line 264
+    .line 268
     iget-object v1, v0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->linePaint:Landroid/graphics/Paint;
 
     const/16 v2, 0x39
 
     invoke-virtual {v1, v2}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 265
+    .line 269
     iget-object v1, v0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->rect:Landroid/graphics/RectF;
 
     iget v1, v1, Landroid/graphics/RectF;->left:F
@@ -1457,7 +1462,7 @@
 
     invoke-virtual/range {v1 .. v6}, Landroid/graphics/Canvas;->drawLine(FFFFLandroid/graphics/Paint;)V
 
-    .line 267
+    .line 271
     iget-object v1, v0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->rect:Landroid/graphics/RectF;
 
     invoke-virtual {v1}, Landroid/graphics/RectF;->centerY()F
@@ -1472,7 +1477,7 @@
 
     add-float v5, v1, v2
 
-    .line 268
+    .line 272
     iget-object v1, v0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->rect:Landroid/graphics/RectF;
 
     iget v1, v1, Landroid/graphics/RectF;->left:F
@@ -1507,16 +1512,117 @@
 
     invoke-virtual/range {v1 .. v6}, Landroid/graphics/Canvas;->drawLine(FFFFLandroid/graphics/Paint;)V
 
-    .line 269
+    .line 273
     invoke-virtual/range {p1 .. p1}, Landroid/graphics/Canvas;->restore()V
 
+    return-void
+.end method
+
+.method public onInitializeAccessibilityEvent(Landroid/view/accessibility/AccessibilityEvent;)V
+    .registers 4
+
+    .line 347
+    invoke-super {p0, p1}, Landroid/widget/FrameLayout;->onInitializeAccessibilityEvent(Landroid/view/accessibility/AccessibilityEvent;)V
+
+    .line 348
+    invoke-virtual {p1}, Landroid/view/accessibility/AccessibilityEvent;->getEventType()I
+
+    move-result p1
+
+    const/4 v0, 0x1
+
+    if-ne p1, v0, :cond_28
+
+    .line 349
+    iget-object p1, p0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->picker:Lorg/telegram/ui/Components/NumberPicker;
+
+    invoke-virtual {p1}, Lorg/telegram/ui/Components/NumberPicker;->getValue()I
+
+    move-result p1
+
+    add-int/2addr p1, v0
+
+    .line 350
+    iget-object v1, p0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->picker:Lorg/telegram/ui/Components/NumberPicker;
+
+    invoke-virtual {v1}, Lorg/telegram/ui/Components/NumberPicker;->getMaxValue()I
+
+    move-result v1
+
+    if-gt p1, v1, :cond_1b
+
+    if-gez p1, :cond_1c
+
+    :cond_1b
+    const/4 p1, 0x0
+
+    .line 353
+    :cond_1c
+    iget-object v1, p0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->strings:[Ljava/lang/String;
+
+    aget-object p1, v1, p1
+
+    invoke-virtual {p0, p1}, Landroid/widget/FrameLayout;->setContentDescription(Ljava/lang/CharSequence;)V
+
+    .line 354
+    iget-object p1, p0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->picker:Lorg/telegram/ui/Components/NumberPicker;
+
+    invoke-virtual {p1, v0}, Lorg/telegram/ui/Components/NumberPicker;->changeValueByOne(Z)V
+
+    :cond_28
+    return-void
+.end method
+
+.method public onInitializeAccessibilityNodeInfo(Landroid/view/accessibility/AccessibilityNodeInfo;)V
+    .registers 5
+
+    .line 337
+    invoke-super {p0, p1}, Landroid/widget/FrameLayout;->onInitializeAccessibilityNodeInfo(Landroid/view/accessibility/AccessibilityNodeInfo;)V
+
+    const/4 v0, 0x1
+
+    .line 338
+    invoke-virtual {p1, v0}, Landroid/view/accessibility/AccessibilityNodeInfo;->setEnabled(Z)V
+
+    .line 339
+    iget-object v0, p0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->strings:[Ljava/lang/String;
+
+    iget-object v1, p0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->picker:Lorg/telegram/ui/Components/NumberPicker;
+
+    invoke-virtual {v1}, Lorg/telegram/ui/Components/NumberPicker;->getValue()I
+
+    move-result v1
+
+    aget-object v0, v0, v1
+
+    invoke-virtual {p1, v0}, Landroid/view/accessibility/AccessibilityNodeInfo;->setContentDescription(Ljava/lang/CharSequence;)V
+
+    .line 340
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x15
+
+    if-lt v0, v1, :cond_25
+
+    .line 341
+    new-instance v0, Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;
+
+    const/16 v1, 0x10
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;-><init>(ILjava/lang/CharSequence;)V
+
+    invoke-virtual {p1, v0}, Landroid/view/accessibility/AccessibilityNodeInfo;->addAction(Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;)V
+
+    :cond_25
     return-void
 .end method
 
 .method protected onMeasure(II)V
     .registers 4
 
-    .line 166
+    .line 170
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result p1
@@ -1545,13 +1651,13 @@
 .method public setBackgroundColor(I)V
     .registers 3
 
-    .line 325
+    .line 329
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->setBackgroundColor(I)V
 
-    .line 326
+    .line 330
     invoke-virtual {p0}, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->updateColors()V
 
-    .line 327
+    .line 331
     iget-object p1, p0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->picker:Lorg/telegram/ui/Components/NumberPicker;
 
     const-string v0, "dialogTextBlack"
@@ -1562,7 +1668,7 @@
 
     invoke-virtual {p1, v0}, Lorg/telegram/ui/Components/NumberPicker;->setTextColor(I)V
 
-    .line 328
+    .line 332
     iget-object p1, p0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->picker:Lorg/telegram/ui/Components/NumberPicker;
 
     invoke-virtual {p1}, Landroid/widget/LinearLayout;->invalidate()V
@@ -1575,7 +1681,7 @@
 
     const/4 v0, 0x0
 
-    .line 318
+    .line 322
     :goto_1
     iget-object v1, p0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->icons:[Lorg/telegram/ui/Components/RLottieDrawable;
 
@@ -1583,7 +1689,7 @@
 
     if-ge v0, v1, :cond_c
 
-    .line 319
+    .line 323
     invoke-virtual {p0, v0}, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->updateIconColor(I)V
 
     add-int/lit8 v0, v0, 0x1
@@ -1597,7 +1703,7 @@
 .method public updateIconColor(I)V
     .registers 6
 
-    .line 304
+    .line 308
     iget-object v0, p0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->icons:[Lorg/telegram/ui/Components/RLottieDrawable;
 
     aget-object v0, v0, p1
@@ -1606,7 +1712,7 @@
 
     const-string v0, "windowBackgroundWhite"
 
-    .line 305
+    .line 309
     invoke-static {v0}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
 
     move-result v0
@@ -1625,7 +1731,7 @@
 
     const-string v1, "chats_archiveIcon"
 
-    .line 306
+    .line 310
     invoke-static {v1}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
 
     move-result v1
@@ -1634,7 +1740,7 @@
 
     if-ne p1, v2, :cond_3e
 
-    .line 308
+    .line 312
     iget-object v2, p0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->icons:[Lorg/telegram/ui/Components/RLottieDrawable;
 
     aget-object v2, v2, p1
@@ -1643,7 +1749,7 @@
 
     invoke-virtual {v2, v3, v0}, Lorg/telegram/ui/Components/RLottieDrawable;->setLayerColor(Ljava/lang/String;I)V
 
-    .line 309
+    .line 313
     iget-object v0, p0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->icons:[Lorg/telegram/ui/Components/RLottieDrawable;
 
     aget-object v0, v0, p1
@@ -1652,7 +1758,7 @@
 
     invoke-virtual {v0, v2, v1}, Lorg/telegram/ui/Components/RLottieDrawable;->setLayerColor(Ljava/lang/String;I)V
 
-    .line 310
+    .line 314
     iget-object v0, p0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->icons:[Lorg/telegram/ui/Components/RLottieDrawable;
 
     aget-object p1, v0, p1
@@ -1663,7 +1769,7 @@
 
     goto :goto_4c
 
-    .line 312
+    .line 316
     :cond_3e
     iget-object v0, p0, Lorg/telegram/ui/Components/SwipeGestureSettingsView;->icons:[Lorg/telegram/ui/Components/RLottieDrawable;
 

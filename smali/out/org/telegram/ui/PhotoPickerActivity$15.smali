@@ -1,11 +1,11 @@
 .class Lorg/telegram/ui/PhotoPickerActivity$15;
-.super Landroid/animation/AnimatorListenerAdapter;
+.super Landroid/view/View;
 .source "PhotoPickerActivity.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lorg/telegram/ui/PhotoPickerActivity;->showCommentTextView(ZZ)Z
+    value = Lorg/telegram/ui/PhotoPickerActivity;->createView(Landroid/content/Context;)Landroid/view/View;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -17,97 +17,310 @@
 # instance fields
 .field final synthetic this$0:Lorg/telegram/ui/PhotoPickerActivity;
 
-.field final synthetic val$show:Z
-
 
 # direct methods
-.method constructor <init>(Lorg/telegram/ui/PhotoPickerActivity;Z)V
+.method constructor <init>(Lorg/telegram/ui/PhotoPickerActivity;Landroid/content/Context;)V
     .registers 3
 
-    .line 1367
+    .line 1159
     iput-object p1, p0, Lorg/telegram/ui/PhotoPickerActivity$15;->this$0:Lorg/telegram/ui/PhotoPickerActivity;
 
-    iput-boolean p2, p0, Lorg/telegram/ui/PhotoPickerActivity$15;->val$show:Z
-
-    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
+    invoke-direct {p0, p2}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onAnimationCancel(Landroid/animation/Animator;)V
-    .registers 3
+.method protected onDraw(Landroid/graphics/Canvas;)V
+    .registers 12
 
-    .line 1381
-    iget-object v0, p0, Lorg/telegram/ui/PhotoPickerActivity$15;->this$0:Lorg/telegram/ui/PhotoPickerActivity;
+    const/4 v0, 0x1
 
-    invoke-static {v0}, Lorg/telegram/ui/PhotoPickerActivity;->access$3900(Lorg/telegram/ui/PhotoPickerActivity;)Landroid/animation/AnimatorSet;
+    new-array v1, v0, [Ljava/lang/Object;
 
-    move-result-object v0
+    .line 1162
+    iget-object v2, p0, Lorg/telegram/ui/PhotoPickerActivity$15;->this$0:Lorg/telegram/ui/PhotoPickerActivity;
 
-    invoke-virtual {p1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    invoke-static {v2}, Lorg/telegram/ui/PhotoPickerActivity;->access$600(Lorg/telegram/ui/PhotoPickerActivity;)Ljava/util/ArrayList;
 
-    move-result p1
+    move-result-object v2
 
-    if-eqz p1, :cond_12
+    invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
 
-    .line 1382
-    iget-object p1, p0, Lorg/telegram/ui/PhotoPickerActivity$15;->this$0:Lorg/telegram/ui/PhotoPickerActivity;
+    move-result v2
 
-    const/4 v0, 0x0
+    invoke-static {v0, v2}, Ljava/lang/Math;->max(II)I
 
-    invoke-static {p1, v0}, Lorg/telegram/ui/PhotoPickerActivity;->access$3902(Lorg/telegram/ui/PhotoPickerActivity;Landroid/animation/AnimatorSet;)Landroid/animation/AnimatorSet;
+    move-result v0
 
-    :cond_12
-    return-void
-.end method
-
-.method public onAnimationEnd(Landroid/animation/Animator;)V
-    .registers 3
-
-    .line 1370
-    iget-object v0, p0, Lorg/telegram/ui/PhotoPickerActivity$15;->this$0:Lorg/telegram/ui/PhotoPickerActivity;
-
-    invoke-static {v0}, Lorg/telegram/ui/PhotoPickerActivity;->access$3900(Lorg/telegram/ui/PhotoPickerActivity;)Landroid/animation/AnimatorSet;
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    const/4 v2, 0x0
 
-    move-result p1
+    aput-object v0, v1, v2
 
-    if-eqz p1, :cond_25
+    const-string v0, "%d"
 
-    .line 1371
-    iget-boolean p1, p0, Lorg/telegram/ui/PhotoPickerActivity$15;->val$show:Z
+    invoke-static {v0, v1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
-    if-nez p1, :cond_1f
+    move-result-object v0
 
-    .line 1372
-    iget-object p1, p0, Lorg/telegram/ui/PhotoPickerActivity$15;->this$0:Lorg/telegram/ui/PhotoPickerActivity;
+    .line 1163
+    iget-object v1, p0, Lorg/telegram/ui/PhotoPickerActivity$15;->this$0:Lorg/telegram/ui/PhotoPickerActivity;
 
-    iget-object p1, p1, Lorg/telegram/ui/PhotoPickerActivity;->frameLayout2:Landroid/widget/FrameLayout;
+    invoke-static {v1}, Lorg/telegram/ui/PhotoPickerActivity;->access$3600(Lorg/telegram/ui/PhotoPickerActivity;)Landroid/text/TextPaint;
 
-    const/4 v0, 0x4
+    move-result-object v1
 
-    invoke-virtual {p1, v0}, Landroid/widget/FrameLayout;->setVisibility(I)V
+    invoke-virtual {v1, v0}, Landroid/text/TextPaint;->measureText(Ljava/lang/String;)F
 
-    .line 1373
-    iget-object p1, p0, Lorg/telegram/ui/PhotoPickerActivity$15;->this$0:Lorg/telegram/ui/PhotoPickerActivity;
+    move-result v1
 
-    iget-object p1, p1, Lorg/telegram/ui/PhotoPickerActivity;->writeButtonContainer:Landroid/widget/FrameLayout;
+    float-to-double v1, v1
 
-    invoke-virtual {p1, v0}, Landroid/widget/FrameLayout;->setVisibility(I)V
+    invoke-static {v1, v2}, Ljava/lang/Math;->ceil(D)D
 
-    .line 1375
-    :cond_1f
-    iget-object p1, p0, Lorg/telegram/ui/PhotoPickerActivity$15;->this$0:Lorg/telegram/ui/PhotoPickerActivity;
+    move-result-wide v1
 
-    const/4 v0, 0x0
+    double-to-int v1, v1
 
-    invoke-static {p1, v0}, Lorg/telegram/ui/PhotoPickerActivity;->access$3902(Lorg/telegram/ui/PhotoPickerActivity;Landroid/animation/AnimatorSet;)Landroid/animation/AnimatorSet;
+    const/high16 v2, 0x41800000    # 16.0f
 
-    :cond_25
+    .line 1164
+    invoke-static {v2}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
+
+    move-result v2
+
+    add-int/2addr v2, v1
+
+    const/high16 v3, 0x41c00000    # 24.0f
+
+    invoke-static {v3}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
+
+    move-result v3
+
+    invoke-static {v2, v3}, Ljava/lang/Math;->max(II)I
+
+    move-result v2
+
+    .line 1165
+    invoke-virtual {p0}, Landroid/view/View;->getMeasuredWidth()I
+
+    move-result v3
+
+    div-int/lit8 v3, v3, 0x2
+
+    .line 1166
+    invoke-virtual {p0}, Landroid/view/View;->getMeasuredHeight()I
+
+    move-result v4
+
+    div-int/lit8 v4, v4, 0x2
+
+    .line 1168
+    iget-object v4, p0, Lorg/telegram/ui/PhotoPickerActivity$15;->this$0:Lorg/telegram/ui/PhotoPickerActivity;
+
+    invoke-static {v4}, Lorg/telegram/ui/PhotoPickerActivity;->access$3600(Lorg/telegram/ui/PhotoPickerActivity;)Landroid/text/TextPaint;
+
+    move-result-object v4
+
+    const-string v5, "dialogRoundCheckBoxCheck"
+
+    invoke-static {v5}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
+
+    move-result v5
+
+    invoke-virtual {v4, v5}, Landroid/text/TextPaint;->setColor(I)V
+
+    .line 1169
+    iget-object v4, p0, Lorg/telegram/ui/PhotoPickerActivity$15;->this$0:Lorg/telegram/ui/PhotoPickerActivity;
+
+    invoke-static {v4}, Lorg/telegram/ui/PhotoPickerActivity;->access$3800(Lorg/telegram/ui/PhotoPickerActivity;)Landroid/graphics/Paint;
+
+    move-result-object v4
+
+    iget-object v5, p0, Lorg/telegram/ui/PhotoPickerActivity$15;->this$0:Lorg/telegram/ui/PhotoPickerActivity;
+
+    invoke-static {v5}, Lorg/telegram/ui/PhotoPickerActivity;->access$3700(Lorg/telegram/ui/PhotoPickerActivity;)Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-static {v5}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
+
+    move-result v5
+
+    invoke-virtual {v4, v5}, Landroid/graphics/Paint;->setColor(I)V
+
+    .line 1170
+    iget-object v4, p0, Lorg/telegram/ui/PhotoPickerActivity$15;->this$0:Lorg/telegram/ui/PhotoPickerActivity;
+
+    invoke-static {v4}, Lorg/telegram/ui/PhotoPickerActivity;->access$3900(Lorg/telegram/ui/PhotoPickerActivity;)Landroid/graphics/RectF;
+
+    move-result-object v4
+
+    div-int/lit8 v2, v2, 0x2
+
+    sub-int v5, v3, v2
+
+    int-to-float v6, v5
+
+    add-int/2addr v2, v3
+
+    int-to-float v7, v2
+
+    invoke-virtual {p0}, Landroid/view/View;->getMeasuredHeight()I
+
+    move-result v8
+
+    int-to-float v8, v8
+
+    const/4 v9, 0x0
+
+    invoke-virtual {v4, v6, v9, v7, v8}, Landroid/graphics/RectF;->set(FFFF)V
+
+    .line 1171
+    iget-object v4, p0, Lorg/telegram/ui/PhotoPickerActivity$15;->this$0:Lorg/telegram/ui/PhotoPickerActivity;
+
+    invoke-static {v4}, Lorg/telegram/ui/PhotoPickerActivity;->access$3900(Lorg/telegram/ui/PhotoPickerActivity;)Landroid/graphics/RectF;
+
+    move-result-object v4
+
+    const/high16 v6, 0x41400000    # 12.0f
+
+    invoke-static {v6}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
+
+    move-result v7
+
+    int-to-float v7, v7
+
+    invoke-static {v6}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
+
+    move-result v6
+
+    int-to-float v6, v6
+
+    iget-object v8, p0, Lorg/telegram/ui/PhotoPickerActivity$15;->this$0:Lorg/telegram/ui/PhotoPickerActivity;
+
+    invoke-static {v8}, Lorg/telegram/ui/PhotoPickerActivity;->access$3800(Lorg/telegram/ui/PhotoPickerActivity;)Landroid/graphics/Paint;
+
+    move-result-object v8
+
+    invoke-virtual {p1, v4, v7, v6, v8}, Landroid/graphics/Canvas;->drawRoundRect(Landroid/graphics/RectF;FFLandroid/graphics/Paint;)V
+
+    .line 1173
+    iget-object v4, p0, Lorg/telegram/ui/PhotoPickerActivity$15;->this$0:Lorg/telegram/ui/PhotoPickerActivity;
+
+    invoke-static {v4}, Lorg/telegram/ui/PhotoPickerActivity;->access$3800(Lorg/telegram/ui/PhotoPickerActivity;)Landroid/graphics/Paint;
+
+    move-result-object v4
+
+    const-string v6, "dialogRoundCheckBox"
+
+    invoke-static {v6}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
+
+    move-result v6
+
+    invoke-virtual {v4, v6}, Landroid/graphics/Paint;->setColor(I)V
+
+    .line 1174
+    iget-object v4, p0, Lorg/telegram/ui/PhotoPickerActivity$15;->this$0:Lorg/telegram/ui/PhotoPickerActivity;
+
+    invoke-static {v4}, Lorg/telegram/ui/PhotoPickerActivity;->access$3900(Lorg/telegram/ui/PhotoPickerActivity;)Landroid/graphics/RectF;
+
+    move-result-object v4
+
+    const/high16 v6, 0x40000000    # 2.0f
+
+    invoke-static {v6}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
+
+    move-result v7
+
+    add-int/2addr v5, v7
+
+    int-to-float v5, v5
+
+    invoke-static {v6}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
+
+    move-result v7
+
+    int-to-float v7, v7
+
+    invoke-static {v6}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
+
+    move-result v8
+
+    sub-int/2addr v2, v8
+
+    int-to-float v2, v2
+
+    invoke-virtual {p0}, Landroid/view/View;->getMeasuredHeight()I
+
+    move-result v8
+
+    invoke-static {v6}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
+
+    move-result v6
+
+    sub-int/2addr v8, v6
+
+    int-to-float v6, v8
+
+    invoke-virtual {v4, v5, v7, v2, v6}, Landroid/graphics/RectF;->set(FFFF)V
+
+    .line 1175
+    iget-object v2, p0, Lorg/telegram/ui/PhotoPickerActivity$15;->this$0:Lorg/telegram/ui/PhotoPickerActivity;
+
+    invoke-static {v2}, Lorg/telegram/ui/PhotoPickerActivity;->access$3900(Lorg/telegram/ui/PhotoPickerActivity;)Landroid/graphics/RectF;
+
+    move-result-object v2
+
+    const/high16 v4, 0x41200000    # 10.0f
+
+    invoke-static {v4}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
+
+    move-result v5
+
+    int-to-float v5, v5
+
+    invoke-static {v4}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
+
+    move-result v4
+
+    int-to-float v4, v4
+
+    iget-object v6, p0, Lorg/telegram/ui/PhotoPickerActivity$15;->this$0:Lorg/telegram/ui/PhotoPickerActivity;
+
+    invoke-static {v6}, Lorg/telegram/ui/PhotoPickerActivity;->access$3800(Lorg/telegram/ui/PhotoPickerActivity;)Landroid/graphics/Paint;
+
+    move-result-object v6
+
+    invoke-virtual {p1, v2, v5, v4, v6}, Landroid/graphics/Canvas;->drawRoundRect(Landroid/graphics/RectF;FFLandroid/graphics/Paint;)V
+
+    .line 1177
+    div-int/lit8 v1, v1, 0x2
+
+    sub-int/2addr v3, v1
+
+    int-to-float v1, v3
+
+    const v2, 0x4181999a    # 16.2f
+
+    invoke-static {v2}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
+
+    move-result v2
+
+    int-to-float v2, v2
+
+    iget-object v3, p0, Lorg/telegram/ui/PhotoPickerActivity$15;->this$0:Lorg/telegram/ui/PhotoPickerActivity;
+
+    invoke-static {v3}, Lorg/telegram/ui/PhotoPickerActivity;->access$3600(Lorg/telegram/ui/PhotoPickerActivity;)Landroid/text/TextPaint;
+
+    move-result-object v3
+
+    invoke-virtual {p1, v0, v1, v2, v3}, Landroid/graphics/Canvas;->drawText(Ljava/lang/String;FFLandroid/graphics/Paint;)V
+
     return-void
 .end method

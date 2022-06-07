@@ -8,7 +8,7 @@
     .registers 5
     .param p0, "_this"    # Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;
 
-    .line 2712
+    .line 2718
     invoke-static {p1, p2, p3, p4}, Lorg/telegram/ui/ActionBar/Theme;->applyServiceShaderMatrix(IIFF)V
 
     return-void
@@ -18,14 +18,14 @@
     .registers 3
     .param p0, "_this"    # Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;
 
-    .line 2689
+    .line 2695
     invoke-interface {p0, p1}, Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;->getColor(Ljava/lang/String;)Ljava/lang/Integer;
 
     move-result-object v0
 
     if-eqz v0, :cond_b
 
-    .line 2690
+    .line 2696
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
     move-result p1
@@ -45,7 +45,7 @@
     .registers 2
     .param p0, "_this"    # Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;
 
-    .line 2694
+    .line 2700
     invoke-interface {p0, p1}, Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;->getColor(Ljava/lang/String;)Ljava/lang/Integer;
 
     move-result-object p1

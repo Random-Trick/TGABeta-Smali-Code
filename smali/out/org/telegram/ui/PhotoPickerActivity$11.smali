@@ -1,6 +1,9 @@
 .class Lorg/telegram/ui/PhotoPickerActivity$11;
-.super Landroid/widget/FrameLayout;
+.super Ljava/lang/Object;
 .source "PhotoPickerActivity.java"
+
+# interfaces
+.implements Landroid/text/TextWatcher;
 
 
 # annotations
@@ -19,60 +22,52 @@
 
 
 # direct methods
-.method constructor <init>(Lorg/telegram/ui/PhotoPickerActivity;Landroid/content/Context;)V
-    .registers 3
+.method constructor <init>(Lorg/telegram/ui/PhotoPickerActivity;)V
+    .registers 2
 
-    .line 993
+    .line 1001
     iput-object p1, p0, Lorg/telegram/ui/PhotoPickerActivity$11;->this$0:Lorg/telegram/ui/PhotoPickerActivity;
 
-    invoke-direct {p0, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onInitializeAccessibilityNodeInfo(Landroid/view/accessibility/AccessibilityNodeInfo;)V
-    .registers 4
+.method public afterTextChanged(Landroid/text/Editable;)V
+    .registers 3
 
-    .line 996
-    invoke-super {p0, p1}, Landroid/widget/FrameLayout;->onInitializeAccessibilityNodeInfo(Landroid/view/accessibility/AccessibilityNodeInfo;)V
-
-    .line 997
+    .line 1014
     iget-object v0, p0, Lorg/telegram/ui/PhotoPickerActivity$11;->this$0:Lorg/telegram/ui/PhotoPickerActivity;
 
-    invoke-static {v0}, Lorg/telegram/ui/PhotoPickerActivity;->access$500(Lorg/telegram/ui/PhotoPickerActivity;)Ljava/util/HashMap;
+    invoke-static {v0}, Lorg/telegram/ui/PhotoPickerActivity;->access$1000(Lorg/telegram/ui/PhotoPickerActivity;)Lorg/telegram/ui/PhotoPickerActivity$PhotoPickerActivityDelegate;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Ljava/util/HashMap;->size()I
+    if-eqz v0, :cond_11
 
-    move-result v0
+    .line 1015
+    iget-object v0, p0, Lorg/telegram/ui/PhotoPickerActivity$11;->this$0:Lorg/telegram/ui/PhotoPickerActivity;
 
-    const-string v1, "AccDescrSendPhotos"
-
-    invoke-static {v1, v0}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Landroid/view/accessibility/AccessibilityNodeInfo;->setText(Ljava/lang/CharSequence;)V
-
-    .line 998
-    const-class v0, Landroid/widget/Button;
-
-    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    invoke-static {v0}, Lorg/telegram/ui/PhotoPickerActivity;->access$1000(Lorg/telegram/ui/PhotoPickerActivity;)Lorg/telegram/ui/PhotoPickerActivity$PhotoPickerActivityDelegate;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Landroid/view/accessibility/AccessibilityNodeInfo;->setClassName(Ljava/lang/CharSequence;)V
+    invoke-interface {v0, p1}, Lorg/telegram/ui/PhotoPickerActivity$PhotoPickerActivityDelegate;->onCaptionChanged(Ljava/lang/CharSequence;)V
 
-    const/4 v0, 0x1
+    :cond_11
+    return-void
+.end method
 
-    .line 999
-    invoke-virtual {p1, v0}, Landroid/view/accessibility/AccessibilityNodeInfo;->setLongClickable(Z)V
+.method public beforeTextChanged(Ljava/lang/CharSequence;III)V
+    .registers 5
 
-    .line 1000
-    invoke-virtual {p1, v0}, Landroid/view/accessibility/AccessibilityNodeInfo;->setClickable(Z)V
+    return-void
+.end method
+
+.method public onTextChanged(Ljava/lang/CharSequence;III)V
+    .registers 5
 
     return-void
 .end method

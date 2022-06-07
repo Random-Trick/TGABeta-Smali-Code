@@ -25,7 +25,7 @@
 .method constructor <init>(Lorg/telegram/ui/ChatActivity;)V
     .registers 2
 
-    .line 6501
+    .line 6591
     iput-object p1, p0, Lorg/telegram/ui/ChatActivity$26;->this$0:Lorg/telegram/ui/ChatActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public canSchedule()Z
     .registers 2
 
-    .line 6514
+    .line 6604
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$26;->this$0:Lorg/telegram/ui/ChatActivity;
 
     invoke-virtual {v0}, Lorg/telegram/ui/ChatActivity;->canScheduleMessage()Z
@@ -51,7 +51,7 @@
 .method public getDialogId()J
     .registers 3
 
-    .line 6538
+    .line 6628
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$26;->this$0:Lorg/telegram/ui/ChatActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/ChatActivity;->access$500(Lorg/telegram/ui/ChatActivity;)J
@@ -82,10 +82,10 @@
 .method public isInScheduleMode()Z
     .registers 3
 
-    .line 6519
+    .line 6609
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$26;->this$0:Lorg/telegram/ui/ChatActivity;
 
-    invoke-static {v0}, Lorg/telegram/ui/ChatActivity;->access$19200(Lorg/telegram/ui/ChatActivity;)I
+    invoke-static {v0}, Lorg/telegram/ui/ChatActivity;->access$19300(Lorg/telegram/ui/ChatActivity;)I
 
     move-result v0
 
@@ -143,9 +143,9 @@
 .method public openSet(Lorg/telegram/tgnet/TLRPC$InputStickerSet;Z)V
     .registers 11
 
-    if-eqz p1, :cond_3e
+    if-eqz p1, :cond_3c
 
-    .line 6524
+    .line 6614
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$26;->this$0:Lorg/telegram/ui/ChatActivity;
 
     invoke-virtual {v0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getParentActivity()Landroid/app/Activity;
@@ -154,25 +154,25 @@
 
     if-nez v0, :cond_b
 
-    goto :goto_3e
+    goto :goto_3c
 
-    .line 6527
+    .line 6617
     :cond_b
     new-instance v4, Lorg/telegram/tgnet/TLRPC$TL_inputStickerSetID;
 
     invoke-direct {v4}, Lorg/telegram/tgnet/TLRPC$TL_inputStickerSetID;-><init>()V
 
-    .line 6528
+    .line 6618
     iget-wide v0, p1, Lorg/telegram/tgnet/TLRPC$InputStickerSet;->access_hash:J
 
     iput-wide v0, v4, Lorg/telegram/tgnet/TLRPC$InputStickerSet;->access_hash:J
 
-    .line 6529
+    .line 6619
     iget-wide v0, p1, Lorg/telegram/tgnet/TLRPC$InputStickerSet;->id:J
 
     iput-wide v0, v4, Lorg/telegram/tgnet/TLRPC$InputStickerSet;->id:J
 
-    .line 6530
+    .line 6620
     new-instance p1, Lorg/telegram/ui/Components/StickersAlert;
 
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$26;->this$0:Lorg/telegram/ui/ChatActivity;
@@ -187,15 +187,13 @@
 
     iget-object v6, v3, Lorg/telegram/ui/ChatActivity;->chatActivityEnterView:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
-    invoke-static {v3}, Lorg/telegram/ui/ChatActivity;->access$3100(Lorg/telegram/ui/ChatActivity;)Lorg/telegram/ui/ChatActivity$ThemeDelegate;
-
-    move-result-object v7
+    iget-object v7, v3, Lorg/telegram/ui/ChatActivity;->themeDelegate:Lorg/telegram/ui/ChatActivity$ThemeDelegate;
 
     move-object v1, p1
 
     invoke-direct/range {v1 .. v7}, Lorg/telegram/ui/Components/StickersAlert;-><init>(Landroid/content/Context;Lorg/telegram/ui/ActionBar/BaseFragment;Lorg/telegram/tgnet/TLRPC$InputStickerSet;Lorg/telegram/tgnet/TLRPC$TL_messages_stickerSet;Lorg/telegram/ui/Components/StickersAlert$StickersAlertDelegate;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)V
 
-    .line 6531
+    .line 6621
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$26;->this$0:Lorg/telegram/ui/ChatActivity;
 
     invoke-virtual {v0}, Lorg/telegram/ui/ChatActivity;->isKeyboardVisible()Z
@@ -204,16 +202,16 @@
 
     invoke-virtual {p1, v0}, Lorg/telegram/ui/ActionBar/BottomSheet;->setCalcMandatoryInsets(Z)V
 
-    .line 6532
+    .line 6622
     invoke-virtual {p1, p2}, Lorg/telegram/ui/Components/StickersAlert;->setClearsInputField(Z)V
 
-    .line 6533
+    .line 6623
     iget-object p2, p0, Lorg/telegram/ui/ChatActivity$26;->this$0:Lorg/telegram/ui/ChatActivity;
 
     invoke-virtual {p2, p1}, Lorg/telegram/ui/ActionBar/BaseFragment;->showDialog(Landroid/app/Dialog;)Landroid/app/Dialog;
 
-    :cond_3e
-    :goto_3e
+    :cond_3c
+    :goto_3c
     return-void
 .end method
 
@@ -236,7 +234,7 @@
 .method public sendSticker(Lorg/telegram/tgnet/TLRPC$Document;Ljava/lang/String;Ljava/lang/Object;ZI)V
     .registers 15
 
-    .line 6504
+    .line 6594
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$26;->this$0:Lorg/telegram/ui/ChatActivity;
 
     iget-object v1, v0, Lorg/telegram/ui/ChatActivity;->chatActivityEnterView:Lorg/telegram/ui/Components/ChatActivityEnterView;

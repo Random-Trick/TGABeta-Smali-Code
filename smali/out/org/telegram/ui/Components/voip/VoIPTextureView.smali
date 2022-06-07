@@ -397,7 +397,7 @@
     .line 166
     iget-object v1, v0, Lorg/telegram/ui/Components/voip/VoIPTextureView;->screencastImage:Landroid/widget/ImageView;
 
-    const v5, 0x7f070395
+    const v5, 0x7f0703a3
 
     invoke-virtual {v1, v5}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -437,7 +437,7 @@
 
     iput-object v1, v0, Lorg/telegram/ui/Components/voip/VoIPTextureView;->screencastText:Landroid/widget/TextView;
 
-    const v5, 0x7f0e13bd
+    const v5, 0x7f0e148b
 
     const-string v6, "VoipVideoScreenSharing"
 

@@ -1,32 +1,22 @@
-.class Lj$/util/t;
-.super Lj$/util/L;
+.class public interface abstract Lj$/util/t;
+.super Ljava/lang/Object;
 
-
-# instance fields
-.field final synthetic f:Ljava/util/SortedSet;
-
-
-# direct methods
-.method constructor <init>(Ljava/util/SortedSet;Ljava/util/Collection;I)V
-    .registers 4
-
-    iput-object p1, p0, Lj$/util/t;->f:Ljava/util/SortedSet;
-
-    invoke-direct {p0, p2, p3}, Lj$/util/L;-><init>(Ljava/util/Collection;I)V
-
-    return-void
-.end method
+# interfaces
+.implements Lj$/util/w;
 
 
 # virtual methods
-.method public getComparator()Ljava/util/Comparator;
-    .registers 2
+.method public abstract b(Lj$/util/function/Consumer;)Z
+.end method
 
-    iget-object v0, p0, Lj$/util/t;->f:Ljava/util/SortedSet;
+.method public abstract e(Lj$/util/function/f;)V
+.end method
 
-    invoke-interface {v0}, Ljava/util/SortedSet;->comparator()Ljava/util/Comparator;
+.method public abstract forEachRemaining(Lj$/util/function/Consumer;)V
+.end method
 
-    move-result-object v0
+.method public abstract k(Lj$/util/function/f;)Z
+.end method
 
-    return-object v0
+.method public abstract trySplit()Lj$/util/t;
 .end method

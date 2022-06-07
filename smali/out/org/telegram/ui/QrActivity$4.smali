@@ -35,7 +35,7 @@
 .method constructor <init>(Lorg/telegram/ui/QrActivity;)V
     .registers 2
 
-    .line 349
+    .line 357
     iput-object p1, p0, Lorg/telegram/ui/QrActivity$4;->this$0:Lorg/telegram/ui/QrActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -48,7 +48,7 @@
 .method public bridge synthetic onComplete(Ljava/lang/Object;)V
     .registers 2
 
-    .line 349
+    .line 357
     check-cast p1, Ljava/util/List;
 
     invoke-virtual {p0, p1}, Lorg/telegram/ui/QrActivity$4;->onComplete(Ljava/util/List;)V
@@ -67,12 +67,12 @@
         }
     .end annotation
 
-    .line 352
+    .line 360
     iget-object v0, p0, Lorg/telegram/ui/QrActivity$4;->this$0:Lorg/telegram/ui/QrActivity;
 
     invoke-static {v0, p1}, Lorg/telegram/ui/QrActivity;->access$1400(Lorg/telegram/ui/QrActivity;Ljava/util/List;)V
 
-    .line 353
+    .line 361
     invoke-static {p1}, Lorg/telegram/ui/QrActivity;->access$1502(Ljava/util/List;)Ljava/util/List;
 
     return-void
@@ -81,7 +81,7 @@
 .method public onError(Lorg/telegram/tgnet/TLRPC$TL_error;)V
     .registers 4
 
-    .line 357
+    .line 365
     iget-object v0, p0, Lorg/telegram/ui/QrActivity$4;->this$0:Lorg/telegram/ui/QrActivity;
 
     invoke-virtual {v0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getParentActivity()Landroid/app/Activity;

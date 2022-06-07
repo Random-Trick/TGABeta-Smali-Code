@@ -24,7 +24,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/GroupCallRecordAlert;Landroid/content/Context;)V
     .registers 3
 
-    .line 54
+    .line 56
     iput-object p1, p0, Lorg/telegram/ui/Components/GroupCallRecordAlert$1;->this$0:Lorg/telegram/ui/Components/GroupCallRecordAlert;
 
     invoke-direct {p0, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
@@ -37,10 +37,10 @@
 .method protected onLayout(ZIIII)V
     .registers 6
 
-    .line 76
+    .line 78
     invoke-super/range {p0 .. p5}, Landroid/widget/FrameLayout;->onLayout(ZIIII)V
 
-    .line 77
+    .line 79
     iget-object p1, p0, Lorg/telegram/ui/Components/GroupCallRecordAlert$1;->this$0:Lorg/telegram/ui/Components/GroupCallRecordAlert;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/GroupCallRecordAlert;->access$300(Lorg/telegram/ui/Components/GroupCallRecordAlert;)V
@@ -51,7 +51,7 @@
 .method protected onMeasure(II)V
     .registers 11
 
-    .line 60
+    .line 62
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result v0
@@ -71,7 +71,7 @@
     :cond_d
     const/4 p2, 0x0
 
-    .line 61
+    .line 63
     :goto_e
     iget-object v0, p0, Lorg/telegram/ui/Components/GroupCallRecordAlert$1;->this$0:Lorg/telegram/ui/Components/GroupCallRecordAlert;
 
@@ -89,7 +89,7 @@
 
     const/high16 p2, 0x42a00000    # 80.0f
 
-    .line 63
+    .line 65
     invoke-static {p2}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result p2
@@ -103,7 +103,7 @@
     :cond_27
     const/high16 p2, 0x41800000    # 16.0f
 
-    .line 65
+    .line 67
     invoke-static {p2}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result p2
@@ -112,7 +112,7 @@
 
     iput p2, v0, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
 
-    .line 67
+    .line 69
     :goto_31
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
@@ -120,7 +120,7 @@
 
     const/high16 v0, 0x43480000    # 200.0f
 
-    .line 68
+    .line 70
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v0
@@ -129,7 +129,7 @@
 
     div-int/lit8 p2, p2, 0x2
 
-    .line 69
+    .line 71
     iget-object v0, p0, Lorg/telegram/ui/Components/GroupCallRecordAlert$1;->this$0:Lorg/telegram/ui/Components/GroupCallRecordAlert;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/GroupCallRecordAlert;->access$100(Lorg/telegram/ui/Components/GroupCallRecordAlert;)Landroidx/viewpager/widget/ViewPager;
@@ -140,7 +140,7 @@
 
     const/high16 p2, 0x43b90000    # 370.0f
 
-    .line 70
+    .line 72
     invoke-static {p2}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result p2
@@ -153,7 +153,7 @@
 
     invoke-super {p0, p1, p2}, Landroid/widget/FrameLayout;->onMeasure(II)V
 
-    .line 71
+    .line 73
     iget-object p1, p0, Lorg/telegram/ui/Components/GroupCallRecordAlert$1;->this$0:Lorg/telegram/ui/Components/GroupCallRecordAlert;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/GroupCallRecordAlert;->access$200(Lorg/telegram/ui/Components/GroupCallRecordAlert;)Landroid/widget/LinearLayout;
@@ -188,14 +188,14 @@
 .method public requestLayout()V
     .registers 2
 
-    .line 82
+    .line 84
     iget-boolean v0, p0, Lorg/telegram/ui/Components/GroupCallRecordAlert$1;->ignoreLayout:Z
 
     if-eqz v0, :cond_5
 
     return-void
 
-    .line 85
+    .line 87
     :cond_5
     invoke-super {p0}, Landroid/widget/FrameLayout;->requestLayout()V
 

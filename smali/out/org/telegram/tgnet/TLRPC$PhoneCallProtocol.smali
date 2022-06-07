@@ -29,10 +29,10 @@
 .method public constructor <init>()V
     .registers 2
 
-    .line 58080
+    .line 58561
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
-    .line 58086
+    .line 58567
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -57,7 +57,7 @@
 
     goto :goto_17
 
-    .line 58092
+    .line 58573
     :cond_c
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_phoneCallProtocol;
 
@@ -65,7 +65,7 @@
 
     goto :goto_17
 
-    .line 58095
+    .line 58576
     :cond_12
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_phoneCallProtocol_layer110;
 
@@ -78,7 +78,7 @@
 
     goto :goto_32
 
-    .line 58099
+    .line 58580
     :cond_1c
     new-instance p0, Ljava/lang/RuntimeException;
 
@@ -108,7 +108,7 @@
     :goto_32
     if-eqz v0, :cond_37
 
-    .line 58102
+    .line 58583
     invoke-virtual {v0, p0, p2}, Lorg/telegram/tgnet/TLObject;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
     :cond_37

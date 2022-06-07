@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lj$/util/function/w;
+.implements Lj$/util/function/y;
 
 
 # static fields
@@ -32,29 +32,12 @@
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;J)V
-    .registers 9
+.method public final get()Ljava/lang/Object;
+    .registers 2
 
-    check-cast p1, [J
+    const/4 v0, 0x2
 
-    const/4 v0, 0x0
+    new-array v0, v0, [J
 
-    .line 1
-    aget-wide v1, p1, v0
-
-    const-wide/16 v3, 0x1
-
-    add-long/2addr v1, v3
-
-    aput-wide v1, p1, v0
-
-    const/4 v0, 0x1
-
-    aget-wide v1, p1, v0
-
-    add-long/2addr v1, p2
-
-    aput-wide v1, p1, v0
-
-    return-void
+    return-object v0
 .end method

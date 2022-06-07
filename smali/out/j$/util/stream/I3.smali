@@ -3,50 +3,50 @@
 
 
 # instance fields
-.field private c:Lj$/util/stream/X3;
+.field private c:Lj$/util/stream/Y3;
 
 
 # direct methods
-.method constructor <init>(Lj$/util/stream/n3;)V
+.method constructor <init>(Lj$/util/stream/m3;)V
     .registers 2
 
-    invoke-direct {p0, p1}, Lj$/util/stream/E3;-><init>(Lj$/util/stream/n3;)V
+    invoke-direct {p0, p1}, Lj$/util/stream/E3;-><init>(Lj$/util/stream/m3;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public accept(I)V
-    .registers 3
+.method public accept(J)V
+    .registers 4
 
-    iget-object v0, p0, Lj$/util/stream/I3;->c:Lj$/util/stream/X3;
+    iget-object v0, p0, Lj$/util/stream/I3;->c:Lj$/util/stream/Y3;
 
-    invoke-virtual {v0, p1}, Lj$/util/stream/X3;->accept(I)V
+    invoke-virtual {v0, p1, p2}, Lj$/util/stream/Y3;->accept(J)V
 
     return-void
 .end method
 
 .method public m()V
-    .registers 6
+    .registers 7
 
-    iget-object v0, p0, Lj$/util/stream/I3;->c:Lj$/util/stream/X3;
+    iget-object v0, p0, Lj$/util/stream/I3;->c:Lj$/util/stream/Y3;
 
-    invoke-virtual {v0}, Lj$/util/stream/a4;->e()Ljava/lang/Object;
+    invoke-virtual {v0}, Lj$/util/stream/Z3;->e()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, [I
+    check-cast v0, [J
 
-    invoke-static {v0}, Ljava/util/Arrays;->sort([I)V
+    invoke-static {v0}, Ljava/util/Arrays;->sort([J)V
 
-    iget-object v1, p0, Lj$/util/stream/h3;->a:Lj$/util/stream/n3;
+    iget-object v1, p0, Lj$/util/stream/h3;->a:Lj$/util/stream/m3;
 
     array-length v2, v0
 
     int-to-long v2, v2
 
-    invoke-interface {v1, v2, v3}, Lj$/util/stream/n3;->n(J)V
+    invoke-interface {v1, v2, v3}, Lj$/util/stream/m3;->n(J)V
 
     iget-boolean v1, p0, Lj$/util/stream/E3;->b:Z
 
@@ -59,11 +59,11 @@
     :goto_18
     if-ge v2, v1, :cond_3a
 
-    aget v3, v0, v2
+    aget-wide v3, v0, v2
 
-    iget-object v4, p0, Lj$/util/stream/h3;->a:Lj$/util/stream/n3;
+    iget-object v5, p0, Lj$/util/stream/h3;->a:Lj$/util/stream/m3;
 
-    invoke-interface {v4, v3}, Lj$/util/stream/n3;->accept(I)V
+    invoke-interface {v5, v3, v4}, Lj$/util/stream/m3;->accept(J)V
 
     add-int/lit8 v2, v2, 0x1
 
@@ -75,22 +75,22 @@
     :goto_25
     if-ge v2, v1, :cond_3a
 
-    aget v3, v0, v2
+    aget-wide v3, v0, v2
 
-    iget-object v4, p0, Lj$/util/stream/h3;->a:Lj$/util/stream/n3;
+    iget-object v5, p0, Lj$/util/stream/h3;->a:Lj$/util/stream/m3;
 
-    invoke-interface {v4}, Lj$/util/stream/n3;->o()Z
+    invoke-interface {v5}, Lj$/util/stream/m3;->o()Z
 
-    move-result v4
+    move-result v5
 
-    if-eqz v4, :cond_32
+    if-eqz v5, :cond_32
 
     goto :goto_3a
 
     :cond_32
-    iget-object v4, p0, Lj$/util/stream/h3;->a:Lj$/util/stream/n3;
+    iget-object v5, p0, Lj$/util/stream/h3;->a:Lj$/util/stream/m3;
 
-    invoke-interface {v4, v3}, Lj$/util/stream/n3;->accept(I)V
+    invoke-interface {v5, v3, v4}, Lj$/util/stream/m3;->accept(J)V
 
     add-int/lit8 v2, v2, 0x1
 
@@ -98,9 +98,9 @@
 
     :cond_3a
     :goto_3a
-    iget-object v0, p0, Lj$/util/stream/h3;->a:Lj$/util/stream/n3;
+    iget-object v0, p0, Lj$/util/stream/h3;->a:Lj$/util/stream/m3;
 
-    invoke-interface {v0}, Lj$/util/stream/n3;->m()V
+    invoke-interface {v0}, Lj$/util/stream/m3;->m()V
 
     return-void
 .end method
@@ -118,21 +118,21 @@
 
     cmp-long v2, p1, v0
 
-    new-instance v0, Lj$/util/stream/X3;
+    new-instance v0, Lj$/util/stream/Y3;
 
     if-lez v2, :cond_14
 
     long-to-int p2, p1
 
-    invoke-direct {v0, p2}, Lj$/util/stream/X3;-><init>(I)V
+    invoke-direct {v0, p2}, Lj$/util/stream/Y3;-><init>(I)V
 
     goto :goto_17
 
     :cond_14
-    invoke-direct {v0}, Lj$/util/stream/X3;-><init>()V
+    invoke-direct {v0}, Lj$/util/stream/Y3;-><init>()V
 
     :goto_17
-    iput-object v0, p0, Lj$/util/stream/I3;->c:Lj$/util/stream/X3;
+    iput-object v0, p0, Lj$/util/stream/I3;->c:Lj$/util/stream/Y3;
 
     return-void
 

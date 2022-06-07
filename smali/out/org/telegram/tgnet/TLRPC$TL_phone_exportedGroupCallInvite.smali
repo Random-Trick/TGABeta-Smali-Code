@@ -21,7 +21,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 44718
+    .line 45170
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -30,7 +30,7 @@
 .method public static TLdeserialize(Lorg/telegram/tgnet/AbstractSerializedData;IZ)Lorg/telegram/tgnet/TLRPC$TL_phone_exportedGroupCallInvite;
     .registers 4
 
-    .line 44724
+    .line 45176
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_phone_exportedGroupCallInvite;->constructor:I
 
     if-eq v0, p1, :cond_1e
@@ -41,7 +41,7 @@
 
     return-object p0
 
-    .line 44726
+    .line 45178
     :cond_8
     new-instance p0, Ljava/lang/RuntimeException;
 
@@ -67,13 +67,13 @@
 
     throw p0
 
-    .line 44731
+    .line 45183
     :cond_1e
     new-instance p1, Lorg/telegram/tgnet/TLRPC$TL_phone_exportedGroupCallInvite;
 
     invoke-direct {p1}, Lorg/telegram/tgnet/TLRPC$TL_phone_exportedGroupCallInvite;-><init>()V
 
-    .line 44732
+    .line 45184
     invoke-virtual {p1, p0, p2}, Lorg/telegram/tgnet/TLRPC$TL_phone_exportedGroupCallInvite;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
     return-object p1
@@ -84,7 +84,7 @@
 .method public readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
     .registers 3
 
-    .line 44737
+    .line 45189
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readString(Z)Ljava/lang/String;
 
     move-result-object p1
@@ -97,12 +97,12 @@
 .method public serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
     .registers 3
 
-    .line 44741
+    .line 45193
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_phone_exportedGroupCallInvite;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 44742
+    .line 45194
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_phone_exportedGroupCallInvite;->link:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeString(Ljava/lang/String;)V

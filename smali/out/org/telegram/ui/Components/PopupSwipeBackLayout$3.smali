@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/PopupSwipeBackLayout;)V
     .registers 2
 
-    .line 463
+    .line 488
     iput-object p1, p0, Lorg/telegram/ui/Components/PopupSwipeBackLayout$3;->this$0:Lorg/telegram/ui/Components/PopupSwipeBackLayout;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -35,19 +35,19 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .registers 3
 
-    .line 466
+    .line 491
     iget-object p1, p0, Lorg/telegram/ui/Components/PopupSwipeBackLayout$3;->this$0:Lorg/telegram/ui/Components/PopupSwipeBackLayout;
 
     const/4 v0, 0x0
 
     invoke-static {p1, v0}, Lorg/telegram/ui/Components/PopupSwipeBackLayout;->access$502(Lorg/telegram/ui/Components/PopupSwipeBackLayout;Z)Z
 
-    .line 467
+    .line 492
     iget-object p1, p0, Lorg/telegram/ui/Components/PopupSwipeBackLayout$3;->this$0:Lorg/telegram/ui/Components/PopupSwipeBackLayout;
 
     const/4 v0, 0x0
 
-    invoke-static {p1, v0}, Lorg/telegram/ui/Components/PopupSwipeBackLayout;->access$902(Lorg/telegram/ui/Components/PopupSwipeBackLayout;Landroid/animation/ValueAnimator;)Landroid/animation/ValueAnimator;
+    invoke-static {p1, v0}, Lorg/telegram/ui/Components/PopupSwipeBackLayout;->access$1002(Lorg/telegram/ui/Components/PopupSwipeBackLayout;Landroid/animation/ValueAnimator;)Landroid/animation/ValueAnimator;
 
     return-void
 .end method

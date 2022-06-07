@@ -133,7 +133,7 @@
 
     if-eqz v0, :cond_51
 
-    const v0, 0x7f0e0334
+    const v0, 0x7f0e0370
 
     const-string v2, "CancelEmailQuestion"
 
@@ -145,7 +145,7 @@
     goto :goto_5a
 
     :cond_51
-    const v0, 0x7f0e033e
+    const v0, 0x7f0e037a
 
     const-string v2, "CancelPasswordQuestion"
 
@@ -155,7 +155,7 @@
     move-result-object v0
 
     :goto_5a
-    const v2, 0x7f0e0335
+    const v2, 0x7f0e0371
 
     const-string v3, "CancelEmailQuestionTitle"
 
@@ -186,7 +186,7 @@
 
     invoke-virtual {p1, v3, v0}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const v0, 0x7f0e0331
+    const v0, 0x7f0e036d
 
     const-string v2, "Cancel"
 

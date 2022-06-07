@@ -35,7 +35,7 @@
 .method public final run(Lorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/TLRPC$TL_error;)V
     .registers 3
 
-    invoke-static {p1, p2}, Lorg/telegram/messenger/MessagesController;->$r8$lambda$tgNjZ1KvgF0_UipWA9ogLFqW69o(Lorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/TLRPC$TL_error;)V
+    invoke-static {p1, p2}, Lorg/telegram/messenger/MessagesController;->$r8$lambda$sy89soFGRZdkB-h8xpVUfaHVV-8(Lorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/TLRPC$TL_error;)V
 
     return-void
 .end method

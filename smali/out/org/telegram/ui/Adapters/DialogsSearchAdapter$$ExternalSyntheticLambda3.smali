@@ -2,44 +2,32 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field public final synthetic f$0:I
-
-.field public final synthetic f$1:I
-
-.field public final synthetic f$2:Lorg/telegram/ui/Adapters/DialogsSearchAdapter$OnRecentSearchLoaded;
+.field public final synthetic f$0:Lorg/telegram/ui/Adapters/DialogsSearchAdapter;
 
 
 # direct methods
-.method public synthetic constructor <init>(IILorg/telegram/ui/Adapters/DialogsSearchAdapter$OnRecentSearchLoaded;)V
-    .registers 4
+.method public synthetic constructor <init>(Lorg/telegram/ui/Adapters/DialogsSearchAdapter;)V
+    .registers 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$$ExternalSyntheticLambda3;->f$0:I
-
-    iput p2, p0, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$$ExternalSyntheticLambda3;->f$1:I
-
-    iput-object p3, p0, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$$ExternalSyntheticLambda3;->f$2:Lorg/telegram/ui/Adapters/DialogsSearchAdapter$OnRecentSearchLoaded;
+    iput-object p1, p0, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$$ExternalSyntheticLambda3;->f$0:Lorg/telegram/ui/Adapters/DialogsSearchAdapter;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .registers 4
+.method public final onClick(Landroid/view/View;)V
+    .registers 3
 
-    iget v0, p0, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$$ExternalSyntheticLambda3;->f$0:I
+    iget-object v0, p0, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$$ExternalSyntheticLambda3;->f$0:Lorg/telegram/ui/Adapters/DialogsSearchAdapter;
 
-    iget v1, p0, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$$ExternalSyntheticLambda3;->f$1:I
-
-    iget-object v2, p0, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$$ExternalSyntheticLambda3;->f$2:Lorg/telegram/ui/Adapters/DialogsSearchAdapter$OnRecentSearchLoaded;
-
-    invoke-static {v0, v1, v2}, Lorg/telegram/ui/Adapters/DialogsSearchAdapter;->$r8$lambda$DyqO_uhsabmie-AxwKo38X3Dn0A(IILorg/telegram/ui/Adapters/DialogsSearchAdapter$OnRecentSearchLoaded;)V
+    invoke-static {v0, p1}, Lorg/telegram/ui/Adapters/DialogsSearchAdapter;->$r8$lambda$o79XLwWlVObmQNA8yLxkQkulze4(Lorg/telegram/ui/Adapters/DialogsSearchAdapter;Landroid/view/View;)V
 
     return-void
 .end method

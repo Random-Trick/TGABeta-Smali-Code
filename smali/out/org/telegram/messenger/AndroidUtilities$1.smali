@@ -22,7 +22,7 @@
 .method constructor <init>(Ljava/lang/Runnable;)V
     .registers 2
 
-    .line 425
+    .line 434
     iput-object p1, p0, Lorg/telegram/messenger/AndroidUtilities$1;->val$runnable:Ljava/lang/Runnable;
 
     invoke-direct {p0}, Landroid/text/style/ClickableSpan;-><init>()V
@@ -35,7 +35,7 @@
 .method public onClick(Landroid/view/View;)V
     .registers 2
 
-    .line 435
+    .line 444
     iget-object p1, p0, Lorg/telegram/messenger/AndroidUtilities$1;->val$runnable:Ljava/lang/Runnable;
 
     invoke-interface {p1}, Ljava/lang/Runnable;->run()V
@@ -46,12 +46,12 @@
 .method public updateDrawState(Landroid/text/TextPaint;)V
     .registers 3
 
-    .line 429
+    .line 438
     invoke-super {p0, p1}, Landroid/text/style/ClickableSpan;->updateDrawState(Landroid/text/TextPaint;)V
 
     const/4 v0, 0x0
 
-    .line 430
+    .line 439
     invoke-virtual {p1, v0}, Landroid/text/TextPaint;->setUnderlineText(Z)V
 
     return-void

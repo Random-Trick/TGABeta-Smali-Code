@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/ChatAvatarContainer;Landroid/content/Context;Z)V
     .registers 4
 
-    .line 92
+    .line 104
     iput-boolean p3, p0, Lorg/telegram/ui/Components/ChatAvatarContainer$1;->val$avatarClickable:Z
 
     invoke-direct {p0, p2}, Lorg/telegram/ui/Components/BackupImageView;-><init>(Landroid/content/Context;)V
@@ -35,10 +35,10 @@
 .method public onInitializeAccessibilityNodeInfo(Landroid/view/accessibility/AccessibilityNodeInfo;)V
     .registers 6
 
-    .line 95
+    .line 107
     invoke-super {p0, p1}, Landroid/view/View;->onInitializeAccessibilityNodeInfo(Landroid/view/accessibility/AccessibilityNodeInfo;)V
 
-    .line 96
+    .line 108
     iget-boolean v0, p0, Lorg/telegram/ui/Components/ChatAvatarContainer$1;->val$avatarClickable:Z
 
     if-eqz v0, :cond_37
@@ -53,30 +53,30 @@
 
     if-eqz v0, :cond_37
 
-    const v0, 0x7f0e004f
+    const v0, 0x7f0e006e
 
     const-string v1, "AccDescrProfilePicture"
 
-    .line 97
+    .line 109
     invoke-static {v1, v0}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v0
 
     invoke-virtual {p1, v0}, Landroid/view/accessibility/AccessibilityNodeInfo;->setText(Ljava/lang/CharSequence;)V
 
-    .line 98
+    .line 110
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x15
 
     if-lt v0, v1, :cond_3b
 
-    .line 99
+    .line 111
     new-instance v0, Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;
 
     const/16 v1, 0x10
 
-    const v2, 0x7f0e0bbd
+    const v2, 0x7f0e0c47
 
     const-string v3, "Open"
 
@@ -93,7 +93,7 @@
     :cond_37
     const/4 v0, 0x0
 
-    .line 102
+    .line 114
     invoke-virtual {p1, v0}, Landroid/view/accessibility/AccessibilityNodeInfo;->setVisibleToUser(Z)V
 
     :cond_3b

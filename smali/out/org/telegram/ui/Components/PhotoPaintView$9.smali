@@ -18,7 +18,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/PhotoPaintView;Landroid/content/Context;)V
     .registers 3
 
-    .line 1395
+    .line 1400
     invoke-direct {p0, p2}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
 
     return-void

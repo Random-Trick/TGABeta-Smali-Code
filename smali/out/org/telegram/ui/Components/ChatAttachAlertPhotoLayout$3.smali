@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/ChatAttachAlertPhotoLayout;Landroid/content/Context;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)V
     .registers 4
 
-    .line 544
+    .line 537
     iput-object p1, p0, Lorg/telegram/ui/Components/ChatAttachAlertPhotoLayout$3;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertPhotoLayout;
 
     invoke-direct {p0, p2, p3}, Lorg/telegram/ui/Components/RecyclerListView;-><init>(Landroid/content/Context;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)V
@@ -35,7 +35,7 @@
 .method public onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
     .registers 6
 
-    .line 555
+    .line 548
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v0
@@ -72,7 +72,7 @@
 
     return v2
 
-    .line 558
+    .line 551
     :cond_20
     invoke-super {p0, p1}, Lorg/telegram/ui/Components/RecyclerListView;->onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
 
@@ -84,10 +84,10 @@
 .method protected onLayout(ZIIII)V
     .registers 6
 
-    .line 563
+    .line 556
     invoke-super/range {p0 .. p5}, Lorg/telegram/ui/Components/RecyclerListView;->onLayout(ZIIII)V
 
-    .line 564
+    .line 557
     invoke-static {}, Lorg/telegram/ui/PhotoViewer;->getInstance()Lorg/telegram/ui/PhotoViewer;
 
     move-result-object p1
@@ -100,7 +100,7 @@
 .method public onTouchEvent(Landroid/view/MotionEvent;)Z
     .registers 6
 
-    .line 547
+    .line 540
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v0
@@ -137,7 +137,7 @@
 
     return v2
 
-    .line 550
+    .line 543
     :cond_20
     invoke-super {p0, p1}, Lorg/telegram/ui/Components/RecyclerListView;->onTouchEvent(Landroid/view/MotionEvent;)Z
 

@@ -24,7 +24,7 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .registers 2
 
-    .line 208
+    .line 206
     invoke-direct {p0, p1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
     return-void
@@ -33,7 +33,7 @@
 .method private updateTranslationY()V
     .registers 3
 
-    .line 228
+    .line 226
     iget v0, p0, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout$SearchButton;->currentTranslationY:F
 
     iget v1, p0, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout$SearchButton;->additionanTranslationY:F
@@ -50,7 +50,7 @@
 .method public getTranslationX()F
     .registers 2
 
-    .line 213
+    .line 211
     iget v0, p0, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout$SearchButton;->additionanTranslationY:F
 
     return v0
@@ -59,10 +59,10 @@
 .method public setTranslation(F)V
     .registers 2
 
-    .line 223
+    .line 221
     iput p1, p0, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout$SearchButton;->currentTranslationY:F
 
-    .line 224
+    .line 222
     invoke-direct {p0}, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout$SearchButton;->updateTranslationY()V
 
     return-void
@@ -71,10 +71,10 @@
 .method public setTranslationX(F)V
     .registers 2
 
-    .line 218
+    .line 216
     iput p1, p0, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout$SearchButton;->additionanTranslationY:F
 
-    .line 219
+    .line 217
     invoke-direct {p0}, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout$SearchButton;->updateTranslationY()V
 
     return-void

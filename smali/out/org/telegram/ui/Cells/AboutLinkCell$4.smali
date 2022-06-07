@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/Cells/AboutLinkCell;)V
     .registers 2
 
-    .line 544
+    .line 552
     iput-object p1, p0, Lorg/telegram/ui/Cells/AboutLinkCell$4;->this$0:Lorg/telegram/ui/Cells/AboutLinkCell;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -35,12 +35,12 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .registers 3
 
-    .line 547
+    .line 555
     iget-object p1, p0, Lorg/telegram/ui/Cells/AboutLinkCell$4;->this$0:Lorg/telegram/ui/Cells/AboutLinkCell;
 
     invoke-virtual {p1}, Lorg/telegram/ui/Cells/AboutLinkCell;->didResizeEnd()V
 
-    .line 548
+    .line 556
     iget-object p1, p0, Lorg/telegram/ui/Cells/AboutLinkCell$4;->this$0:Lorg/telegram/ui/Cells/AboutLinkCell;
 
     invoke-static {p1}, Lorg/telegram/ui/Cells/AboutLinkCell;->access$1400(Lorg/telegram/ui/Cells/AboutLinkCell;)Landroid/widget/FrameLayout;
@@ -53,7 +53,7 @@
 
     if-nez p1, :cond_20
 
-    .line 549
+    .line 557
     iget-object p1, p0, Lorg/telegram/ui/Cells/AboutLinkCell$4;->this$0:Lorg/telegram/ui/Cells/AboutLinkCell;
 
     invoke-static {p1}, Lorg/telegram/ui/Cells/AboutLinkCell;->access$1400(Lorg/telegram/ui/Cells/AboutLinkCell;)Landroid/widget/FrameLayout;
@@ -68,7 +68,7 @@
 
     invoke-virtual {p1, v0}, Landroid/widget/FrameLayout;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    .line 551
+    .line 559
     :cond_20
     iget-object p1, p0, Lorg/telegram/ui/Cells/AboutLinkCell$4;->this$0:Lorg/telegram/ui/Cells/AboutLinkCell;
 
@@ -82,7 +82,7 @@
 .method public onAnimationStart(Landroid/animation/Animator;)V
     .registers 2
 
-    .line 556
+    .line 564
     iget-object p1, p0, Lorg/telegram/ui/Cells/AboutLinkCell$4;->this$0:Lorg/telegram/ui/Cells/AboutLinkCell;
 
     invoke-virtual {p1}, Lorg/telegram/ui/Cells/AboutLinkCell;->didResizeStart()V

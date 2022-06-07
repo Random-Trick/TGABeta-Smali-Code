@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lorg/telegram/messenger/GenericProvider;
+.implements Ljava/lang/Runnable;
 
 
 # static fields
@@ -32,14 +32,10 @@
 
 
 # virtual methods
-.method public final provide(Ljava/lang/Object;)Ljava/lang/Object;
-    .registers 2
+.method public final run()V
+    .registers 1
 
-    check-cast p1, Ljava/lang/Void;
+    invoke-static {}, Lorg/telegram/messenger/MediaDataController;->$r8$lambda$HPmNGm3aBw2hPMBFwDIPx_DOqKQ()V
 
-    invoke-static {p1}, Lorg/telegram/messenger/MediaDataController;->$r8$lambda$01bSkT78hFY4PkVhYukrGJUaUcE(Ljava/lang/Void;)Lorg/telegram/tgnet/TLRPC$MessageEntity;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method

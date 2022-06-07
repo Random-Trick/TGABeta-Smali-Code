@@ -19,6 +19,10 @@
 
 .field final synthetic val$animateButton:Z
 
+.field final synthetic val$animateImage:Lorg/telegram/ui/Components/BackupImageView;
+
+.field final synthetic val$animateName:Z
+
 .field final synthetic val$animateText:Z
 
 .field final synthetic val$buttonTextView:Lorg/telegram/ui/ChatActivity$PinnedMessageButton;
@@ -27,27 +31,27 @@
 
 .field final synthetic val$nameTextView:Lorg/telegram/ui/ChatActivity$TrackingWidthSimpleTextView;
 
-.field final synthetic val$noImage:Z
-
 
 # direct methods
-.method constructor <init>(Lorg/telegram/ui/ChatActivity;Lorg/telegram/ui/ChatActivity$TrackingWidthSimpleTextView;ZLorg/telegram/ui/ActionBar/SimpleTextView;ZLorg/telegram/ui/ChatActivity$PinnedMessageButton;Z)V
-    .registers 8
+.method constructor <init>(Lorg/telegram/ui/ChatActivity;ZZLorg/telegram/ui/Components/BackupImageView;Lorg/telegram/ui/ChatActivity$TrackingWidthSimpleTextView;Lorg/telegram/ui/ActionBar/SimpleTextView;ZLorg/telegram/ui/ChatActivity$PinnedMessageButton;)V
+    .registers 9
 
-    .line 19452
+    .line 19653
     iput-object p1, p0, Lorg/telegram/ui/ChatActivity$92;->this$0:Lorg/telegram/ui/ChatActivity;
 
-    iput-object p2, p0, Lorg/telegram/ui/ChatActivity$92;->val$nameTextView:Lorg/telegram/ui/ChatActivity$TrackingWidthSimpleTextView;
+    iput-boolean p2, p0, Lorg/telegram/ui/ChatActivity$92;->val$animateName:Z
 
     iput-boolean p3, p0, Lorg/telegram/ui/ChatActivity$92;->val$animateText:Z
 
-    iput-object p4, p0, Lorg/telegram/ui/ChatActivity$92;->val$messageTextView:Lorg/telegram/ui/ActionBar/SimpleTextView;
+    iput-object p4, p0, Lorg/telegram/ui/ChatActivity$92;->val$animateImage:Lorg/telegram/ui/Components/BackupImageView;
 
-    iput-boolean p5, p0, Lorg/telegram/ui/ChatActivity$92;->val$animateButton:Z
+    iput-object p5, p0, Lorg/telegram/ui/ChatActivity$92;->val$nameTextView:Lorg/telegram/ui/ChatActivity$TrackingWidthSimpleTextView;
 
-    iput-object p6, p0, Lorg/telegram/ui/ChatActivity$92;->val$buttonTextView:Lorg/telegram/ui/ChatActivity$PinnedMessageButton;
+    iput-object p6, p0, Lorg/telegram/ui/ChatActivity$92;->val$messageTextView:Lorg/telegram/ui/ActionBar/SimpleTextView;
 
-    iput-boolean p7, p0, Lorg/telegram/ui/ChatActivity$92;->val$noImage:Z
+    iput-boolean p7, p0, Lorg/telegram/ui/ChatActivity$92;->val$animateButton:Z
+
+    iput-object p8, p0, Lorg/telegram/ui/ChatActivity$92;->val$buttonTextView:Lorg/telegram/ui/ChatActivity$PinnedMessageButton;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
 
@@ -56,517 +60,257 @@
 
 
 # virtual methods
-.method public onAnimationEnd(Landroid/animation/Animator;)V
-    .registers 9
+.method public onAnimationCancel(Landroid/animation/Animator;)V
+    .registers 4
 
-    .line 19455
+    .line 19657
     iget-object p1, p0, Lorg/telegram/ui/ChatActivity$92;->this$0:Lorg/telegram/ui/ChatActivity;
 
-    invoke-static {p1}, Lorg/telegram/ui/ChatActivity;->access$36000(Lorg/telegram/ui/ChatActivity;)Lorg/telegram/ui/Components/NumberTextView;
+    invoke-static {p1}, Lorg/telegram/ui/ChatActivity;->access$23300(Lorg/telegram/ui/ChatActivity;)[Landroid/animation/AnimatorSet;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
+    const/4 v0, 0x0
+
+    const/4 v1, 0x1
+
+    aput-object v0, p1, v1
+
+    .line 19658
+    iget-object p1, p0, Lorg/telegram/ui/ChatActivity$92;->this$0:Lorg/telegram/ui/ChatActivity;
+
+    invoke-static {p1}, Lorg/telegram/ui/ChatActivity;->access$36400(Lorg/telegram/ui/ChatActivity;)[Lorg/telegram/ui/Components/BackupImageView;
 
     move-result-object p1
 
-    const/4 v0, 0x4
+    aget-object p1, p1, v1
 
-    const/high16 v1, 0x3f800000    # 1.0f
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->setTranslationY(F)V
+
+    return-void
+.end method
+
+.method public onAnimationEnd(Landroid/animation/Animator;)V
+    .registers 8
+
+    .line 19663
+    iget-object v0, p0, Lorg/telegram/ui/ChatActivity$92;->this$0:Lorg/telegram/ui/ChatActivity;
+
+    invoke-static {v0}, Lorg/telegram/ui/ChatActivity;->access$23300(Lorg/telegram/ui/ChatActivity;)[Landroid/animation/AnimatorSet;
+
+    move-result-object v0
+
+    const/4 v1, 0x1
+
+    aget-object v0, v0, v1
+
+    invoke-virtual {p1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_c5
+
+    .line 19664
+    iget-boolean p1, p0, Lorg/telegram/ui/ChatActivity$92;->val$animateName:Z
+
+    if-nez p1, :cond_27
+
+    iget-boolean p1, p0, Lorg/telegram/ui/ChatActivity$92;->val$animateText:Z
+
+    if-nez p1, :cond_27
+
+    iget-object p1, p0, Lorg/telegram/ui/ChatActivity$92;->val$animateImage:Lorg/telegram/ui/Components/BackupImageView;
+
+    if-eqz p1, :cond_1c
+
+    goto :goto_27
+
+    .line 19702
+    :cond_1c
+    iget-object p1, p0, Lorg/telegram/ui/ChatActivity$92;->this$0:Lorg/telegram/ui/ChatActivity;
+
+    invoke-static {p1}, Lorg/telegram/ui/ChatActivity;->access$23300(Lorg/telegram/ui/ChatActivity;)[Landroid/animation/AnimatorSet;
+
+    move-result-object p1
+
+    const/4 v0, 0x0
+
+    aput-object v0, p1, v1
+
+    goto/16 :goto_c5
+
+    .line 19665
+    :cond_27
+    :goto_27
+    iget-object p1, p0, Lorg/telegram/ui/ChatActivity$92;->this$0:Lorg/telegram/ui/ChatActivity;
+
+    invoke-static {p1}, Lorg/telegram/ui/ChatActivity;->access$23300(Lorg/telegram/ui/ChatActivity;)[Landroid/animation/AnimatorSet;
+
+    move-result-object p1
+
+    new-instance v0, Landroid/animation/AnimatorSet;
+
+    invoke-direct {v0}, Landroid/animation/AnimatorSet;-><init>()V
+
+    aput-object v0, p1, v1
+
+    .line 19666
+    iget-object p1, p0, Lorg/telegram/ui/ChatActivity$92;->this$0:Lorg/telegram/ui/ChatActivity;
+
+    invoke-static {p1}, Lorg/telegram/ui/ChatActivity;->access$23300(Lorg/telegram/ui/ChatActivity;)[Landroid/animation/AnimatorSet;
+
+    move-result-object p1
+
+    aget-object p1, p1, v1
+
+    sget-object v0, Lorg/telegram/ui/Components/CubicBezierInterpolator;->EASE_OUT_QUINT:Lorg/telegram/ui/Components/CubicBezierInterpolator;
+
+    invoke-virtual {p1, v0}, Landroid/animation/AnimatorSet;->setInterpolator(Landroid/animation/TimeInterpolator;)V
+
+    .line 19667
+    iget-object p1, p0, Lorg/telegram/ui/ChatActivity$92;->this$0:Lorg/telegram/ui/ChatActivity;
+
+    invoke-static {p1}, Lorg/telegram/ui/ChatActivity;->access$23300(Lorg/telegram/ui/ChatActivity;)[Landroid/animation/AnimatorSet;
+
+    move-result-object p1
+
+    aget-object p1, p1, v1
+
+    const-wide/16 v2, 0x168
+
+    invoke-virtual {p1, v2, v3}, Landroid/animation/AnimatorSet;->setDuration(J)Landroid/animation/AnimatorSet;
+
+    .line 19668
+    new-instance p1, Ljava/util/ArrayList;
+
+    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
+
+    .line 19669
+    iget-boolean v0, p0, Lorg/telegram/ui/ChatActivity$92;->val$animateName:Z
 
     const/4 v2, 0x0
 
-    const/4 v3, 0x1
+    const/4 v3, 0x0
 
-    if-eqz p1, :cond_3d
+    if-eqz v0, :cond_68
 
-    .line 19456
+    .line 19670
+    iget-object v0, p0, Lorg/telegram/ui/ChatActivity$92;->val$nameTextView:Lorg/telegram/ui/ChatActivity$TrackingWidthSimpleTextView;
+
+    sget-object v4, Landroid/view/View;->TRANSLATION_Y:Landroid/util/Property;
+
+    new-array v5, v1, [F
+
+    aput v2, v5, v3
+
+    invoke-static {v0, v4, v5}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 19672
+    :cond_68
+    iget-boolean v0, p0, Lorg/telegram/ui/ChatActivity$92;->val$animateText:Z
+
+    if-eqz v0, :cond_7b
+
+    .line 19673
+    iget-object v0, p0, Lorg/telegram/ui/ChatActivity$92;->val$messageTextView:Lorg/telegram/ui/ActionBar/SimpleTextView;
+
+    sget-object v4, Landroid/view/View;->TRANSLATION_Y:Landroid/util/Property;
+
+    new-array v5, v1, [F
+
+    aput v2, v5, v3
+
+    invoke-static {v0, v4, v5}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 19675
+    :cond_7b
+    iget-boolean v0, p0, Lorg/telegram/ui/ChatActivity$92;->val$animateButton:Z
+
+    if-eqz v0, :cond_8e
+
+    .line 19676
+    iget-object v0, p0, Lorg/telegram/ui/ChatActivity$92;->val$buttonTextView:Lorg/telegram/ui/ChatActivity$PinnedMessageButton;
+
+    sget-object v4, Landroid/view/View;->TRANSLATION_Y:Landroid/util/Property;
+
+    new-array v5, v1, [F
+
+    aput v2, v5, v3
+
+    invoke-static {v0, v4, v5}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 19678
+    :cond_8e
+    iget-object v0, p0, Lorg/telegram/ui/ChatActivity$92;->val$animateImage:Lorg/telegram/ui/Components/BackupImageView;
+
+    if-eqz v0, :cond_9f
+
+    .line 19679
+    sget-object v4, Landroid/view/View;->TRANSLATION_Y:Landroid/util/Property;
+
+    new-array v5, v1, [F
+
+    aput v2, v5, v3
+
+    invoke-static {v0, v4, v5}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 19681
+    :cond_9f
+    iget-object v0, p0, Lorg/telegram/ui/ChatActivity$92;->this$0:Lorg/telegram/ui/ChatActivity;
+
+    invoke-static {v0}, Lorg/telegram/ui/ChatActivity;->access$23300(Lorg/telegram/ui/ChatActivity;)[Landroid/animation/AnimatorSet;
+
+    move-result-object v0
+
+    aget-object v0, v0, v1
+
+    new-instance v2, Lorg/telegram/ui/ChatActivity$92$1;
+
+    invoke-direct {v2, p0}, Lorg/telegram/ui/ChatActivity$92$1;-><init>(Lorg/telegram/ui/ChatActivity$92;)V
+
+    invoke-virtual {v0, v2}, Landroid/animation/AnimatorSet;->addListener(Landroid/animation/Animator$AnimatorListener;)V
+
+    .line 19699
+    iget-object v0, p0, Lorg/telegram/ui/ChatActivity$92;->this$0:Lorg/telegram/ui/ChatActivity;
+
+    invoke-static {v0}, Lorg/telegram/ui/ChatActivity;->access$23300(Lorg/telegram/ui/ChatActivity;)[Landroid/animation/AnimatorSet;
+
+    move-result-object v0
+
+    aget-object v0, v0, v1
+
+    invoke-virtual {v0, p1}, Landroid/animation/AnimatorSet;->playTogether(Ljava/util/Collection;)V
+
+    .line 19700
     iget-object p1, p0, Lorg/telegram/ui/ChatActivity$92;->this$0:Lorg/telegram/ui/ChatActivity;
 
-    invoke-static {p1}, Lorg/telegram/ui/ChatActivity;->access$36000(Lorg/telegram/ui/ChatActivity;)Lorg/telegram/ui/Components/NumberTextView;
+    invoke-static {p1}, Lorg/telegram/ui/ChatActivity;->access$23300(Lorg/telegram/ui/ChatActivity;)[Landroid/animation/AnimatorSet;
 
     move-result-object p1
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
+    aget-object p1, p1, v1
 
-    .line 19457
-    iget-object p1, p0, Lorg/telegram/ui/ChatActivity$92;->this$0:Lorg/telegram/ui/ChatActivity;
+    invoke-virtual {p1}, Landroid/animation/AnimatorSet;->start()V
 
-    invoke-static {p1}, Lorg/telegram/ui/ChatActivity;->access$31300(Lorg/telegram/ui/ChatActivity;)I
-
-    move-result p1
-
-    .line 19458
-    iget-object v4, p0, Lorg/telegram/ui/ChatActivity$92;->this$0:Lorg/telegram/ui/ChatActivity;
-
-    invoke-static {v4}, Lorg/telegram/ui/ChatActivity;->access$36000(Lorg/telegram/ui/ChatActivity;)Lorg/telegram/ui/Components/NumberTextView;
-
-    move-result-object v4
-
-    add-int/lit8 v5, p1, -0x1
-
-    iget-object v6, p0, Lorg/telegram/ui/ChatActivity$92;->this$0:Lorg/telegram/ui/ChatActivity;
-
-    invoke-static {v6}, Lorg/telegram/ui/ChatActivity;->access$36100(Lorg/telegram/ui/ChatActivity;)[I
-
-    move-result-object v6
-
-    aget v6, v6, v2
-
-    sub-int/2addr p1, v6
-
-    invoke-static {v3, p1}, Ljava/lang/Math;->max(II)I
-
-    move-result p1
-
-    invoke-static {v5, p1}, Ljava/lang/Math;->min(II)I
-
-    move-result p1
-
-    invoke-virtual {v4, p1, v2}, Lorg/telegram/ui/Components/NumberTextView;->setNumber(IZ)V
-
-    goto :goto_46
-
-    .line 19460
-    :cond_3d
-    iget-object p1, p0, Lorg/telegram/ui/ChatActivity$92;->this$0:Lorg/telegram/ui/ChatActivity;
-
-    invoke-static {p1}, Lorg/telegram/ui/ChatActivity;->access$36000(Lorg/telegram/ui/ChatActivity;)Lorg/telegram/ui/Components/NumberTextView;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v1}, Landroid/view/View;->setAlpha(F)V
-
-    .line 19462
-    :goto_46
-    iget-object p1, p0, Lorg/telegram/ui/ChatActivity$92;->this$0:Lorg/telegram/ui/ChatActivity;
-
-    invoke-static {p1}, Lorg/telegram/ui/ChatActivity;->access$36000(Lorg/telegram/ui/ChatActivity;)Lorg/telegram/ui/Components/NumberTextView;
-
-    move-result-object p1
-
-    const/4 v4, 0x0
-
-    invoke-virtual {p1, v4}, Landroid/view/View;->setTranslationY(F)V
-
-    .line 19463
-    iget-object p1, p0, Lorg/telegram/ui/ChatActivity$92;->this$0:Lorg/telegram/ui/ChatActivity;
-
-    invoke-static {p1}, Lorg/telegram/ui/ChatActivity;->access$23400(Lorg/telegram/ui/ChatActivity;)[Lorg/telegram/ui/ActionBar/SimpleTextView;
-
-    move-result-object p1
-
-    aget-object p1, p1, v2
-
-    invoke-virtual {p1, v4}, Landroid/view/View;->setTranslationX(F)V
-
-    .line 19464
-    iget-object p1, p0, Lorg/telegram/ui/ChatActivity$92;->this$0:Lorg/telegram/ui/ChatActivity;
-
-    invoke-static {p1}, Lorg/telegram/ui/ChatActivity;->access$23400(Lorg/telegram/ui/ChatActivity;)[Lorg/telegram/ui/ActionBar/SimpleTextView;
-
-    move-result-object p1
-
-    aget-object p1, p1, v3
-
-    invoke-virtual {p1, v4}, Landroid/view/View;->setTranslationX(F)V
-
-    .line 19465
-    iget-object p1, p0, Lorg/telegram/ui/ChatActivity$92;->this$0:Lorg/telegram/ui/ChatActivity;
-
-    invoke-static {p1}, Lorg/telegram/ui/ChatActivity;->access$36000(Lorg/telegram/ui/ChatActivity;)Lorg/telegram/ui/Components/NumberTextView;
-
-    move-result-object p1
-
-    iget-object v5, p0, Lorg/telegram/ui/ChatActivity$92;->this$0:Lorg/telegram/ui/ChatActivity;
-
-    invoke-static {v5}, Lorg/telegram/ui/ChatActivity;->access$36200(Lorg/telegram/ui/ChatActivity;)I
-
-    move-result v5
-
-    int-to-float v5, v5
-
-    invoke-virtual {p1, v5}, Landroid/view/View;->setTranslationX(F)V
-
-    .line 19466
-    iget-object p1, p0, Lorg/telegram/ui/ChatActivity$92;->val$nameTextView:Lorg/telegram/ui/ChatActivity$TrackingWidthSimpleTextView;
-
-    invoke-virtual {p1, v4}, Landroid/view/View;->setTranslationY(F)V
-
-    .line 19467
-    iget-boolean p1, p0, Lorg/telegram/ui/ChatActivity$92;->val$animateText:Z
-
-    if-nez p1, :cond_84
-
-    .line 19468
-    iget-object p1, p0, Lorg/telegram/ui/ChatActivity$92;->val$nameTextView:Lorg/telegram/ui/ChatActivity$TrackingWidthSimpleTextView;
-
-    invoke-virtual {p1, v4}, Landroid/view/View;->setTranslationY(F)V
-
-    .line 19470
-    :cond_84
-    iget-boolean p1, p0, Lorg/telegram/ui/ChatActivity$92;->val$animateText:Z
-
-    if-nez p1, :cond_8d
-
-    .line 19471
-    iget-object p1, p0, Lorg/telegram/ui/ChatActivity$92;->val$messageTextView:Lorg/telegram/ui/ActionBar/SimpleTextView;
-
-    invoke-virtual {p1, v4}, Landroid/view/View;->setTranslationY(F)V
-
-    .line 19473
-    :cond_8d
-    iget-boolean p1, p0, Lorg/telegram/ui/ChatActivity$92;->val$animateButton:Z
-
-    if-nez p1, :cond_96
-
-    .line 19474
-    iget-object p1, p0, Lorg/telegram/ui/ChatActivity$92;->val$buttonTextView:Lorg/telegram/ui/ChatActivity$PinnedMessageButton;
-
-    invoke-virtual {p1, v4}, Landroid/widget/TextView;->setTranslationY(F)V
-
-    .line 19476
-    :cond_96
-    iget-object p1, p0, Lorg/telegram/ui/ChatActivity$92;->this$0:Lorg/telegram/ui/ChatActivity;
-
-    invoke-static {p1}, Lorg/telegram/ui/ChatActivity;->access$36300(Lorg/telegram/ui/ChatActivity;)[Lorg/telegram/ui/ChatActivity$TrackingWidthSimpleTextView;
-
-    move-result-object p1
-
-    aget-object p1, p1, v2
-
-    invoke-virtual {p1, v4}, Landroid/view/View;->setTranslationX(F)V
-
-    .line 19477
-    iget-object p1, p0, Lorg/telegram/ui/ChatActivity$92;->this$0:Lorg/telegram/ui/ChatActivity;
-
-    invoke-static {p1}, Lorg/telegram/ui/ChatActivity;->access$36300(Lorg/telegram/ui/ChatActivity;)[Lorg/telegram/ui/ChatActivity$TrackingWidthSimpleTextView;
-
-    move-result-object p1
-
-    aget-object p1, p1, v3
-
-    invoke-virtual {p1, v4}, Landroid/view/View;->setTranslationX(F)V
-
-    .line 19478
-    iget-object p1, p0, Lorg/telegram/ui/ChatActivity$92;->this$0:Lorg/telegram/ui/ChatActivity;
-
-    invoke-static {p1}, Lorg/telegram/ui/ChatActivity;->access$35900(Lorg/telegram/ui/ChatActivity;)[Lorg/telegram/ui/Components/BackupImageView;
-
-    move-result-object p1
-
-    aget-object p1, p1, v3
-
-    invoke-virtual {p1, v1}, Landroid/view/View;->setAlpha(F)V
-
-    .line 19479
-    iget-object p1, p0, Lorg/telegram/ui/ChatActivity$92;->this$0:Lorg/telegram/ui/ChatActivity;
-
-    invoke-static {p1}, Lorg/telegram/ui/ChatActivity;->access$35900(Lorg/telegram/ui/ChatActivity;)[Lorg/telegram/ui/Components/BackupImageView;
-
-    move-result-object p1
-
-    aget-object p1, p1, v3
-
-    invoke-virtual {p1, v1}, Landroid/view/View;->setScaleX(F)V
-
-    .line 19480
-    iget-object p1, p0, Lorg/telegram/ui/ChatActivity$92;->this$0:Lorg/telegram/ui/ChatActivity;
-
-    invoke-static {p1}, Lorg/telegram/ui/ChatActivity;->access$35900(Lorg/telegram/ui/ChatActivity;)[Lorg/telegram/ui/Components/BackupImageView;
-
-    move-result-object p1
-
-    aget-object p1, p1, v3
-
-    invoke-virtual {p1, v1}, Landroid/view/View;->setScaleY(F)V
-
-    .line 19481
-    iget-object p1, p0, Lorg/telegram/ui/ChatActivity$92;->this$0:Lorg/telegram/ui/ChatActivity;
-
-    invoke-static {p1}, Lorg/telegram/ui/ChatActivity;->access$35900(Lorg/telegram/ui/ChatActivity;)[Lorg/telegram/ui/Components/BackupImageView;
-
-    move-result-object p1
-
-    aget-object p1, p1, v2
-
-    invoke-virtual {p1, v1}, Landroid/view/View;->setAlpha(F)V
-
-    .line 19482
-    iget-object p1, p0, Lorg/telegram/ui/ChatActivity$92;->this$0:Lorg/telegram/ui/ChatActivity;
-
-    invoke-static {p1}, Lorg/telegram/ui/ChatActivity;->access$35900(Lorg/telegram/ui/ChatActivity;)[Lorg/telegram/ui/Components/BackupImageView;
-
-    move-result-object p1
-
-    aget-object p1, p1, v2
-
-    invoke-virtual {p1, v1}, Landroid/view/View;->setScaleX(F)V
-
-    .line 19483
-    iget-object p1, p0, Lorg/telegram/ui/ChatActivity$92;->this$0:Lorg/telegram/ui/ChatActivity;
-
-    invoke-static {p1}, Lorg/telegram/ui/ChatActivity;->access$35900(Lorg/telegram/ui/ChatActivity;)[Lorg/telegram/ui/Components/BackupImageView;
-
-    move-result-object p1
-
-    aget-object p1, p1, v2
-
-    invoke-virtual {p1, v1}, Landroid/view/View;->setScaleY(F)V
-
-    .line 19484
-    iget-object p1, p0, Lorg/telegram/ui/ChatActivity$92;->this$0:Lorg/telegram/ui/ChatActivity;
-
-    invoke-static {p1}, Lorg/telegram/ui/ChatActivity;->access$23400(Lorg/telegram/ui/ChatActivity;)[Lorg/telegram/ui/ActionBar/SimpleTextView;
-
-    move-result-object p1
-
-    iget-object v4, p0, Lorg/telegram/ui/ChatActivity$92;->this$0:Lorg/telegram/ui/ChatActivity;
-
-    invoke-static {v4}, Lorg/telegram/ui/ChatActivity;->access$23400(Lorg/telegram/ui/ChatActivity;)[Lorg/telegram/ui/ActionBar/SimpleTextView;
-
-    move-result-object v4
-
-    aget-object v4, v4, v2
-
-    aput-object v4, p1, v3
-
-    .line 19485
-    iget-object p1, p0, Lorg/telegram/ui/ChatActivity$92;->this$0:Lorg/telegram/ui/ChatActivity;
-
-    invoke-static {p1}, Lorg/telegram/ui/ChatActivity;->access$23400(Lorg/telegram/ui/ChatActivity;)[Lorg/telegram/ui/ActionBar/SimpleTextView;
-
-    move-result-object p1
-
-    iget-object v4, p0, Lorg/telegram/ui/ChatActivity$92;->val$messageTextView:Lorg/telegram/ui/ActionBar/SimpleTextView;
-
-    aput-object v4, p1, v2
-
-    .line 19486
-    iget-object p1, p0, Lorg/telegram/ui/ChatActivity$92;->this$0:Lorg/telegram/ui/ChatActivity;
-
-    invoke-static {p1}, Lorg/telegram/ui/ChatActivity;->access$23400(Lorg/telegram/ui/ChatActivity;)[Lorg/telegram/ui/ActionBar/SimpleTextView;
-
-    move-result-object p1
-
-    aget-object p1, p1, v3
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
-
-    .line 19487
-    iget-object p1, p0, Lorg/telegram/ui/ChatActivity$92;->this$0:Lorg/telegram/ui/ChatActivity;
-
-    invoke-static {p1}, Lorg/telegram/ui/ChatActivity;->access$36400(Lorg/telegram/ui/ChatActivity;)[Lorg/telegram/ui/ChatActivity$PinnedMessageButton;
-
-    move-result-object p1
-
-    iget-object v4, p0, Lorg/telegram/ui/ChatActivity$92;->this$0:Lorg/telegram/ui/ChatActivity;
-
-    invoke-static {v4}, Lorg/telegram/ui/ChatActivity;->access$36400(Lorg/telegram/ui/ChatActivity;)[Lorg/telegram/ui/ChatActivity$PinnedMessageButton;
-
-    move-result-object v4
-
-    aget-object v4, v4, v2
-
-    aput-object v4, p1, v3
-
-    .line 19488
-    iget-object p1, p0, Lorg/telegram/ui/ChatActivity$92;->this$0:Lorg/telegram/ui/ChatActivity;
-
-    invoke-static {p1}, Lorg/telegram/ui/ChatActivity;->access$36400(Lorg/telegram/ui/ChatActivity;)[Lorg/telegram/ui/ChatActivity$PinnedMessageButton;
-
-    move-result-object p1
-
-    iget-object v4, p0, Lorg/telegram/ui/ChatActivity$92;->val$buttonTextView:Lorg/telegram/ui/ChatActivity$PinnedMessageButton;
-
-    aput-object v4, p1, v2
-
-    .line 19489
-    iget-object p1, p0, Lorg/telegram/ui/ChatActivity$92;->this$0:Lorg/telegram/ui/ChatActivity;
-
-    invoke-static {p1}, Lorg/telegram/ui/ChatActivity;->access$36400(Lorg/telegram/ui/ChatActivity;)[Lorg/telegram/ui/ChatActivity$PinnedMessageButton;
-
-    move-result-object p1
-
-    aget-object p1, p1, v3
-
-    invoke-virtual {p1, v0}, Landroid/widget/TextView;->setVisibility(I)V
-
-    .line 19490
-    iget-object p1, p0, Lorg/telegram/ui/ChatActivity$92;->val$nameTextView:Lorg/telegram/ui/ChatActivity$TrackingWidthSimpleTextView;
-
-    iget-object v4, p0, Lorg/telegram/ui/ChatActivity$92;->this$0:Lorg/telegram/ui/ChatActivity;
-
-    invoke-static {v4}, Lorg/telegram/ui/ChatActivity;->access$36300(Lorg/telegram/ui/ChatActivity;)[Lorg/telegram/ui/ChatActivity$TrackingWidthSimpleTextView;
-
-    move-result-object v4
-
-    aget-object v4, v4, v2
-
-    if-eq p1, v4, :cond_169
-
-    .line 19491
-    iget-object p1, p0, Lorg/telegram/ui/ChatActivity$92;->this$0:Lorg/telegram/ui/ChatActivity;
-
-    invoke-static {p1}, Lorg/telegram/ui/ChatActivity;->access$36300(Lorg/telegram/ui/ChatActivity;)[Lorg/telegram/ui/ChatActivity$TrackingWidthSimpleTextView;
-
-    move-result-object p1
-
-    iget-object v4, p0, Lorg/telegram/ui/ChatActivity$92;->this$0:Lorg/telegram/ui/ChatActivity;
-
-    invoke-static {v4}, Lorg/telegram/ui/ChatActivity;->access$36300(Lorg/telegram/ui/ChatActivity;)[Lorg/telegram/ui/ChatActivity$TrackingWidthSimpleTextView;
-
-    move-result-object v4
-
-    aget-object v4, v4, v2
-
-    aput-object v4, p1, v3
-
-    .line 19492
-    iget-object p1, p0, Lorg/telegram/ui/ChatActivity$92;->this$0:Lorg/telegram/ui/ChatActivity;
-
-    invoke-static {p1}, Lorg/telegram/ui/ChatActivity;->access$36300(Lorg/telegram/ui/ChatActivity;)[Lorg/telegram/ui/ChatActivity$TrackingWidthSimpleTextView;
-
-    move-result-object p1
-
-    iget-object v4, p0, Lorg/telegram/ui/ChatActivity$92;->val$nameTextView:Lorg/telegram/ui/ChatActivity$TrackingWidthSimpleTextView;
-
-    aput-object v4, p1, v2
-
-    .line 19493
-    iget-object p1, p0, Lorg/telegram/ui/ChatActivity$92;->this$0:Lorg/telegram/ui/ChatActivity;
-
-    invoke-static {p1}, Lorg/telegram/ui/ChatActivity;->access$36300(Lorg/telegram/ui/ChatActivity;)[Lorg/telegram/ui/ChatActivity$TrackingWidthSimpleTextView;
-
-    move-result-object p1
-
-    aget-object p1, p1, v3
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
-
-    .line 19495
-    :cond_169
-    iget-boolean p1, p0, Lorg/telegram/ui/ChatActivity$92;->val$noImage:Z
-
-    const/4 v4, 0x0
-
-    if-eqz p1, :cond_184
-
-    .line 19496
-    iget-object p1, p0, Lorg/telegram/ui/ChatActivity$92;->this$0:Lorg/telegram/ui/ChatActivity;
-
-    invoke-static {p1}, Lorg/telegram/ui/ChatActivity;->access$35900(Lorg/telegram/ui/ChatActivity;)[Lorg/telegram/ui/Components/BackupImageView;
-
-    move-result-object p1
-
-    aget-object p1, p1, v3
-
-    invoke-virtual {p1, v4}, Lorg/telegram/ui/Components/BackupImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
-
-    .line 19497
-    iget-object p1, p0, Lorg/telegram/ui/ChatActivity$92;->this$0:Lorg/telegram/ui/ChatActivity;
-
-    invoke-static {p1}, Lorg/telegram/ui/ChatActivity;->access$35900(Lorg/telegram/ui/ChatActivity;)[Lorg/telegram/ui/Components/BackupImageView;
-
-    move-result-object p1
-
-    aget-object p1, p1, v3
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
-
-    .line 19499
-    :cond_184
-    iget-object p1, p0, Lorg/telegram/ui/ChatActivity$92;->this$0:Lorg/telegram/ui/ChatActivity;
-
-    invoke-static {p1}, Lorg/telegram/ui/ChatActivity;->access$35900(Lorg/telegram/ui/ChatActivity;)[Lorg/telegram/ui/Components/BackupImageView;
-
-    move-result-object p1
-
-    aget-object p1, p1, v3
-
-    .line 19500
-    iget-object v5, p0, Lorg/telegram/ui/ChatActivity$92;->this$0:Lorg/telegram/ui/ChatActivity;
-
-    invoke-static {v5}, Lorg/telegram/ui/ChatActivity;->access$35900(Lorg/telegram/ui/ChatActivity;)[Lorg/telegram/ui/Components/BackupImageView;
-
-    move-result-object v5
-
-    iget-object v6, p0, Lorg/telegram/ui/ChatActivity$92;->this$0:Lorg/telegram/ui/ChatActivity;
-
-    invoke-static {v6}, Lorg/telegram/ui/ChatActivity;->access$35900(Lorg/telegram/ui/ChatActivity;)[Lorg/telegram/ui/Components/BackupImageView;
-
-    move-result-object v6
-
-    aget-object v6, v6, v2
-
-    aput-object v6, v5, v3
-
-    .line 19501
-    iget-object v5, p0, Lorg/telegram/ui/ChatActivity$92;->this$0:Lorg/telegram/ui/ChatActivity;
-
-    invoke-static {v5}, Lorg/telegram/ui/ChatActivity;->access$35900(Lorg/telegram/ui/ChatActivity;)[Lorg/telegram/ui/Components/BackupImageView;
-
-    move-result-object v5
-
-    aput-object p1, v5, v2
-
-    .line 19502
-    iget-object p1, p0, Lorg/telegram/ui/ChatActivity$92;->this$0:Lorg/telegram/ui/ChatActivity;
-
-    invoke-static {p1}, Lorg/telegram/ui/ChatActivity;->access$35900(Lorg/telegram/ui/ChatActivity;)[Lorg/telegram/ui/Components/BackupImageView;
-
-    move-result-object p1
-
-    aget-object p1, p1, v3
-
-    invoke-virtual {p1, v1}, Landroid/view/View;->setAlpha(F)V
-
-    .line 19503
-    iget-object p1, p0, Lorg/telegram/ui/ChatActivity$92;->this$0:Lorg/telegram/ui/ChatActivity;
-
-    invoke-static {p1}, Lorg/telegram/ui/ChatActivity;->access$35900(Lorg/telegram/ui/ChatActivity;)[Lorg/telegram/ui/Components/BackupImageView;
-
-    move-result-object p1
-
-    aget-object p1, p1, v3
-
-    invoke-virtual {p1, v1}, Landroid/view/View;->setScaleX(F)V
-
-    .line 19504
-    iget-object p1, p0, Lorg/telegram/ui/ChatActivity$92;->this$0:Lorg/telegram/ui/ChatActivity;
-
-    invoke-static {p1}, Lorg/telegram/ui/ChatActivity;->access$35900(Lorg/telegram/ui/ChatActivity;)[Lorg/telegram/ui/Components/BackupImageView;
-
-    move-result-object p1
-
-    aget-object p1, p1, v3
-
-    invoke-virtual {p1, v1}, Landroid/view/View;->setScaleY(F)V
-
-    .line 19505
-    iget-object p1, p0, Lorg/telegram/ui/ChatActivity$92;->this$0:Lorg/telegram/ui/ChatActivity;
-
-    invoke-static {p1}, Lorg/telegram/ui/ChatActivity;->access$35900(Lorg/telegram/ui/ChatActivity;)[Lorg/telegram/ui/Components/BackupImageView;
-
-    move-result-object p1
-
-    aget-object p1, p1, v3
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
-
-    .line 19507
-    iget-object p1, p0, Lorg/telegram/ui/ChatActivity$92;->this$0:Lorg/telegram/ui/ChatActivity;
-
-    invoke-static {p1}, Lorg/telegram/ui/ChatActivity;->access$23200(Lorg/telegram/ui/ChatActivity;)[Landroid/animation/AnimatorSet;
-
-    move-result-object p1
-
-    aput-object v4, p1, v2
-
-    .line 19508
-    iget-object p1, p0, Lorg/telegram/ui/ChatActivity$92;->this$0:Lorg/telegram/ui/ChatActivity;
-
-    invoke-static {p1, v2}, Lorg/telegram/ui/ChatActivity;->access$23102(Lorg/telegram/ui/ChatActivity;Z)Z
-
+    :cond_c5
+    :goto_c5
     return-void
 .end method

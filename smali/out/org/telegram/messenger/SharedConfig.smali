@@ -63,6 +63,8 @@
 
 .field public static dayNightThemeSwitchHintCount:I = 0x0
 
+.field public static debugWebView:Z = false
+
 .field private static devicePerformanceClass:I = 0x0
 
 .field public static directShare:Z = false
@@ -277,24 +279,24 @@
 
     new-array v1, v0, [B
 
-    .line 72
+    .line 73
     sput-object v1, Lorg/telegram/messenger/SharedConfig;->passcodeSalt:[B
-
-    .line 104
-    new-instance v1, Ljava/lang/Object;
-
-    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
-
-    sput-object v1, Lorg/telegram/messenger/SharedConfig;->sync:Ljava/lang/Object;
 
     .line 105
     new-instance v1, Ljava/lang/Object;
 
     invoke-direct {v1}, Ljava/lang/Object;-><init>()V
 
+    sput-object v1, Lorg/telegram/messenger/SharedConfig;->sync:Ljava/lang/Object;
+
+    .line 106
+    new-instance v1, Ljava/lang/Object;
+
+    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
+
     sput-object v1, Lorg/telegram/messenger/SharedConfig;->localIdSync:Ljava/lang/Object;
 
-    .line 109
+    .line 110
     sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/4 v2, 0x1
@@ -313,82 +315,82 @@
     :goto_1d
     sput-boolean v1, Lorg/telegram/messenger/SharedConfig;->chatBubbles:Z
 
-    .line 110
+    .line 111
     sput-boolean v2, Lorg/telegram/messenger/SharedConfig;->autoplayGifs:Z
 
-    .line 111
+    .line 112
     sput-boolean v2, Lorg/telegram/messenger/SharedConfig;->autoplayVideo:Z
 
-    .line 112
+    .line 113
     sput-boolean v0, Lorg/telegram/messenger/SharedConfig;->raiseToSpeak:Z
 
-    .line 113
+    .line 114
     sput-boolean v2, Lorg/telegram/messenger/SharedConfig;->customTabs:Z
 
-    .line 114
+    .line 115
     sput-boolean v2, Lorg/telegram/messenger/SharedConfig;->directShare:Z
 
-    .line 115
+    .line 116
     sput-boolean v2, Lorg/telegram/messenger/SharedConfig;->inappCamera:Z
 
-    .line 116
+    .line 117
     sput-boolean v2, Lorg/telegram/messenger/SharedConfig;->roundCamera16to9:Z
 
-    .line 117
+    .line 118
     sput-boolean v0, Lorg/telegram/messenger/SharedConfig;->noSoundHintShowed:Z
 
-    .line 118
+    .line 119
     sput-boolean v2, Lorg/telegram/messenger/SharedConfig;->streamMedia:Z
 
-    .line 119
+    .line 120
     sput-boolean v0, Lorg/telegram/messenger/SharedConfig;->streamAllVideo:Z
 
-    .line 120
+    .line 121
     sput-boolean v0, Lorg/telegram/messenger/SharedConfig;->streamMkv:Z
 
-    .line 121
+    .line 122
     sput-boolean v2, Lorg/telegram/messenger/SharedConfig;->saveStreamMedia:Z
 
-    .line 122
+    .line 123
     sput-boolean v2, Lorg/telegram/messenger/SharedConfig;->smoothKeyboard:Z
 
-    .line 123
+    .line 124
     sput-boolean v2, Lorg/telegram/messenger/SharedConfig;->pauseMusicOnRecord:Z
 
-    .line 124
+    .line 125
     sput-boolean v2, Lorg/telegram/messenger/SharedConfig;->chatBlur:Z
 
-    .line 126
+    .line 127
     sput-boolean v2, Lorg/telegram/messenger/SharedConfig;->noStatusBar:Z
 
-    .line 133
+    .line 135
     sput-boolean v2, Lorg/telegram/messenger/SharedConfig;->showNotificationsForAllAccounts:Z
 
     const/16 v0, 0x10
 
-    .line 137
+    .line 139
     sput v0, Lorg/telegram/messenger/SharedConfig;->fontSize:I
 
     const/16 v1, 0x11
 
-    .line 138
+    .line 140
     sput v1, Lorg/telegram/messenger/SharedConfig;->bubbleRadius:I
 
-    .line 139
+    .line 141
     sput v0, Lorg/telegram/messenger/SharedConfig;->ivFontSize:I
 
     const/4 v0, 0x3
 
-    .line 157
+    .line 159
     sput v0, Lorg/telegram/messenger/SharedConfig;->mediaColumnsCount:I
 
-    .line 158
+    .line 160
     sput v0, Lorg/telegram/messenger/SharedConfig;->fastScrollHintCount:I
 
-    .line 162
+    .line 164
     invoke-static {}, Lorg/telegram/messenger/SharedConfig;->loadConfig()V
 
-    .line 200
+    .line 202
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -401,7 +403,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 41
+    .line 42
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -410,10 +412,10 @@
 .method public static addProxy(Lorg/telegram/messenger/SharedConfig$ProxyInfo;)Lorg/telegram/messenger/SharedConfig$ProxyInfo;
     .registers 6
 
-    .line 1066
+    .line 1084
     invoke-static {}, Lorg/telegram/messenger/SharedConfig;->loadProxyList()V
 
-    .line 1067
+    .line 1085
     sget-object v0, Lorg/telegram/messenger/SharedConfig;->proxyList:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -425,7 +427,7 @@
     :goto_a
     if-ge v1, v0, :cond_46
 
-    .line 1069
+    .line 1087
     sget-object v2, Lorg/telegram/messenger/SharedConfig;->proxyList:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -434,7 +436,7 @@
 
     check-cast v2, Lorg/telegram/messenger/SharedConfig$ProxyInfo;
 
-    .line 1070
+    .line 1088
     iget-object v3, p0, Lorg/telegram/messenger/SharedConfig$ProxyInfo;->address:Ljava/lang/String;
 
     iget-object v4, v2, Lorg/telegram/messenger/SharedConfig$ProxyInfo;->address:Ljava/lang/String;
@@ -488,13 +490,13 @@
 
     goto :goto_a
 
-    .line 1074
+    .line 1092
     :cond_46
     sget-object v0, Lorg/telegram/messenger/SharedConfig;->proxyList:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1075
+    .line 1093
     invoke-static {}, Lorg/telegram/messenger/SharedConfig;->saveProxyList()V
 
     return-object p0
@@ -503,7 +505,7 @@
 .method public static canBlurChat()Z
     .registers 2
 
-    .line 1237
+    .line 1255
     invoke-static {}, Lorg/telegram/messenger/SharedConfig;->getDevicePerformanceClass()I
 
     move-result v0
@@ -526,7 +528,7 @@
 .method public static chatBlurEnabled()Z
     .registers 1
 
-    .line 1240
+    .line 1258
     invoke-static {}, Lorg/telegram/messenger/SharedConfig;->canBlurChat()Z
 
     move-result v0
@@ -551,7 +553,7 @@
 .method public static checkKeepMedia()V
     .registers 4
 
-    .line 690
+    .line 697
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
@@ -562,7 +564,7 @@
 
     long-to-int v1, v0
 
-    .line 691
+    .line 698
     sget v0, Lorg/telegram/messenger/SharedConfig;->lastKeepMediaCheckTime:I
 
     sub-int v0, v1, v0
@@ -577,18 +579,18 @@
 
     return-void
 
-    .line 694
+    .line 701
     :cond_15
     sput v1, Lorg/telegram/messenger/SharedConfig;->lastKeepMediaCheckTime:I
 
     const/4 v0, 0x4
 
-    .line 695
+    .line 702
     invoke-static {v0}, Lorg/telegram/messenger/FileLoader;->checkDirectory(I)Ljava/io/File;
 
     move-result-object v0
 
-    .line 696
+    .line 703
     sget-object v2, Lorg/telegram/messenger/Utilities;->cacheClearQueue:Lorg/telegram/messenger/DispatchQueue;
 
     new-instance v3, Lorg/telegram/messenger/SharedConfig$$ExternalSyntheticLambda1;
@@ -603,14 +605,14 @@
 .method public static checkLogsToDelete()V
     .registers 4
 
-    .line 665
+    .line 672
     sget-boolean v0, Lorg/telegram/messenger/BuildVars;->LOGS_ENABLED:Z
 
     if-nez v0, :cond_5
 
     return-void
 
-    .line 668
+    .line 675
     :cond_5
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -622,7 +624,7 @@
 
     long-to-int v1, v0
 
-    .line 669
+    .line 676
     sget v0, Lorg/telegram/messenger/SharedConfig;->lastLogsCheckTime:I
 
     sub-int v0, v1, v0
@@ -637,11 +639,11 @@
 
     return-void
 
-    .line 672
+    .line 679
     :cond_1a
     sput v1, Lorg/telegram/messenger/SharedConfig;->lastLogsCheckTime:I
 
-    .line 673
+    .line 680
     sget-object v0, Lorg/telegram/messenger/Utilities;->cacheClearQueue:Lorg/telegram/messenger/DispatchQueue;
 
     new-instance v2, Lorg/telegram/messenger/SharedConfig$$ExternalSyntheticLambda0;
@@ -656,7 +658,7 @@
 .method public static checkPasscode(Ljava/lang/String;)Z
     .registers 7
 
-    .line 516
+    .line 523
     sget-object v0, Lorg/telegram/messenger/SharedConfig;->passcodeSalt:[B
 
     array-length v0, v0
@@ -667,9 +669,9 @@
 
     const/4 v3, 0x0
 
-    if-nez v0, :cond_4d
+    if-nez v0, :cond_4e
 
-    .line 517
+    .line 524
     invoke-static {p0}, Lorg/telegram/messenger/Utilities;->MD5(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -680,44 +682,44 @@
 
     move-result v0
 
-    if-eqz v0, :cond_4c
+    if-eqz v0, :cond_4d
 
     :try_start_16
     new-array v4, v2, [B
 
-    .line 520
+    .line 527
     sput-object v4, Lorg/telegram/messenger/SharedConfig;->passcodeSalt:[B
 
-    .line 521
+    .line 528
     sget-object v4, Lorg/telegram/messenger/Utilities;->random:Ljava/security/SecureRandom;
 
     sget-object v5, Lorg/telegram/messenger/SharedConfig;->passcodeSalt:[B
 
     invoke-virtual {v4, v5}, Ljava/security/SecureRandom;->nextBytes([B)V
 
-    .line 522
+    .line 529
     invoke-virtual {p0, v1}, Ljava/lang/String;->getBytes(Ljava/lang/String;)[B
 
     move-result-object p0
 
-    .line 523
+    .line 530
     array-length v1, p0
 
     add-int/lit8 v1, v1, 0x20
 
     new-array v4, v1, [B
 
-    .line 524
+    .line 531
     sget-object v5, Lorg/telegram/messenger/SharedConfig;->passcodeSalt:[B
 
     invoke-static {v5, v3, v4, v3, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 525
+    .line 532
     array-length v5, p0
 
     invoke-static {p0, v3, v4, v2, v5}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 526
+    .line 533
     sget-object v5, Lorg/telegram/messenger/SharedConfig;->passcodeSalt:[B
 
     array-length p0, p0
@@ -726,8 +728,10 @@
 
     invoke-static {v5, v3, v4, p0, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 527
-    invoke-static {v4, v3, v1}, Lorg/telegram/messenger/Utilities;->computeSHA256([BII)[B
+    int-to-long v1, v1
+
+    .line 534
+    invoke-static {v4, v3, v1, v2}, Lorg/telegram/messenger/Utilities;->computeSHA256([BIJ)[B
 
     move-result-object p0
 
@@ -737,48 +741,48 @@
 
     sput-object p0, Lorg/telegram/messenger/SharedConfig;->passcodeHash:Ljava/lang/String;
 
-    .line 528
+    .line 535
     invoke-static {}, Lorg/telegram/messenger/SharedConfig;->saveConfig()V
-    :try_end_47
-    .catch Ljava/lang/Exception; {:try_start_16 .. :try_end_47} :catch_48
+    :try_end_48
+    .catch Ljava/lang/Exception; {:try_start_16 .. :try_end_48} :catch_49
 
-    goto :goto_4c
+    goto :goto_4d
 
-    :catch_48
+    :catch_49
     move-exception p0
 
-    .line 530
+    .line 537
     invoke-static {p0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
-    :cond_4c
-    :goto_4c
+    :cond_4d
+    :goto_4d
     return v0
 
-    .line 536
-    :cond_4d
-    :try_start_4d
+    .line 543
+    :cond_4e
+    :try_start_4e
     invoke-virtual {p0, v1}, Ljava/lang/String;->getBytes(Ljava/lang/String;)[B
 
     move-result-object p0
 
-    .line 537
+    .line 544
     array-length v0, p0
 
     add-int/lit8 v0, v0, 0x20
 
     new-array v1, v0, [B
 
-    .line 538
+    .line 545
     sget-object v4, Lorg/telegram/messenger/SharedConfig;->passcodeSalt:[B
 
     invoke-static {v4, v3, v1, v3, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 539
+    .line 546
     array-length v4, p0
 
     invoke-static {p0, v3, v1, v2, v4}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 540
+    .line 547
     sget-object v4, Lorg/telegram/messenger/SharedConfig;->passcodeSalt:[B
 
     array-length p0, p0
@@ -787,8 +791,10 @@
 
     invoke-static {v4, v3, v1, p0, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 541
-    invoke-static {v1, v3, v0}, Lorg/telegram/messenger/Utilities;->computeSHA256([BII)[B
+    int-to-long v4, v0
+
+    .line 548
+    invoke-static {v1, v3, v4, v5}, Lorg/telegram/messenger/Utilities;->computeSHA256([BIJ)[B
 
     move-result-object p0
 
@@ -796,21 +802,21 @@
 
     move-result-object p0
 
-    .line 542
+    .line 549
     sget-object v0, Lorg/telegram/messenger/SharedConfig;->passcodeHash:Ljava/lang/String;
 
     invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
-    :try_end_74
-    .catch Ljava/lang/Exception; {:try_start_4d .. :try_end_74} :catch_75
+    :try_end_76
+    .catch Ljava/lang/Exception; {:try_start_4e .. :try_end_76} :catch_77
 
     return p0
 
-    :catch_75
+    :catch_77
     move-exception p0
 
-    .line 544
+    .line 551
     invoke-static {p0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     return v3
@@ -819,7 +825,7 @@
 .method public static checkSaveToGalleryFiles()V
     .registers 2
 
-    .line 1102
+    .line 1120
     sget-object v0, Lorg/telegram/messenger/Utilities;->globalQueue:Lorg/telegram/messenger/DispatchQueue;
 
     sget-object v1, Lorg/telegram/messenger/SharedConfig$$ExternalSyntheticLambda2;->INSTANCE:Lorg/telegram/messenger/SharedConfig$$ExternalSyntheticLambda2;
@@ -834,84 +840,84 @@
 
     const/4 v0, 0x0
 
-    .line 551
+    .line 558
     sput-boolean v0, Lorg/telegram/messenger/SharedConfig;->saveIncomingPhotos:Z
 
-    .line 552
+    .line 559
     sput-boolean v0, Lorg/telegram/messenger/SharedConfig;->appLocked:Z
 
-    .line 553
+    .line 560
     sput v0, Lorg/telegram/messenger/SharedConfig;->passcodeType:I
 
     const-wide/16 v1, 0x0
 
-    .line 554
+    .line 561
     sput-wide v1, Lorg/telegram/messenger/SharedConfig;->passcodeRetryInMs:J
 
-    .line 555
+    .line 562
     sput-wide v1, Lorg/telegram/messenger/SharedConfig;->lastUptimeMillis:J
 
-    .line 556
+    .line 563
     sput v0, Lorg/telegram/messenger/SharedConfig;->badPasscodeTries:I
 
     const-string v1, ""
 
-    .line 557
+    .line 564
     sput-object v1, Lorg/telegram/messenger/SharedConfig;->passcodeHash:Ljava/lang/String;
 
     new-array v1, v0, [B
 
-    .line 558
+    .line 565
     sput-object v1, Lorg/telegram/messenger/SharedConfig;->passcodeSalt:[B
 
     const/16 v1, 0xe10
 
-    .line 559
+    .line 566
     sput v1, Lorg/telegram/messenger/SharedConfig;->autoLockIn:I
 
-    .line 560
+    .line 567
     sput v0, Lorg/telegram/messenger/SharedConfig;->lastPauseTime:I
 
     const/4 v1, 0x1
 
-    .line 561
+    .line 568
     sput-boolean v1, Lorg/telegram/messenger/SharedConfig;->useFingerprint:Z
 
-    .line 562
+    .line 569
     sput-boolean v0, Lorg/telegram/messenger/SharedConfig;->isWaitingForPasscodeEnter:Z
 
-    .line 563
+    .line 570
     sput-boolean v0, Lorg/telegram/messenger/SharedConfig;->allowScreenCapture:Z
 
-    .line 564
+    .line 571
     sget-object v1, Lorg/telegram/messenger/BuildVars;->BUILD_VERSION_STRING:Ljava/lang/String;
 
     sput-object v1, Lorg/telegram/messenger/SharedConfig;->lastUpdateVersion:Ljava/lang/String;
 
-    .line 565
+    .line 572
     sput v0, Lorg/telegram/messenger/SharedConfig;->textSelectionHintShows:I
 
-    .line 566
+    .line 573
     sput v0, Lorg/telegram/messenger/SharedConfig;->scheduledOrNoSoundHintShows:I
 
-    .line 567
+    .line 574
     sput v0, Lorg/telegram/messenger/SharedConfig;->lockRecordAudioVideoHint:I
 
-    .line 568
+    .line 575
     sput-boolean v0, Lorg/telegram/messenger/SharedConfig;->forwardingOptionsHintShown:Z
 
     const/4 v0, 0x3
 
-    .line 569
+    .line 576
     sput v0, Lorg/telegram/messenger/SharedConfig;->messageSeenHintCount:I
 
-    .line 570
+    .line 577
     sput v0, Lorg/telegram/messenger/SharedConfig;->emojiInteractionsHintCount:I
 
-    .line 571
+    .line 578
     sput v0, Lorg/telegram/messenger/SharedConfig;->dayNightThemeSwitchHintCount:I
 
-    .line 572
+    .line 579
     invoke-static {}, Lorg/telegram/messenger/SharedConfig;->saveConfig()V
 
     return-void
@@ -920,17 +926,17 @@
 .method public static deleteProxy(Lorg/telegram/messenger/SharedConfig$ProxyInfo;)V
     .registers 11
 
-    .line 1080
+    .line 1098
     sget-object v0, Lorg/telegram/messenger/SharedConfig;->currentProxy:Lorg/telegram/messenger/SharedConfig$ProxyInfo;
 
     if-ne v0, p0, :cond_4d
 
     const/4 v0, 0x0
 
-    .line 1081
+    .line 1099
     sput-object v0, Lorg/telegram/messenger/SharedConfig;->currentProxy:Lorg/telegram/messenger/SharedConfig$ProxyInfo;
 
-    .line 1082
+    .line 1100
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getGlobalMainSettings()Landroid/content/SharedPreferences;
 
     move-result-object v0
@@ -939,12 +945,12 @@
 
     const/4 v2, 0x0
 
-    .line 1083
+    .line 1101
     invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v3
 
-    .line 1084
+    .line 1102
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
@@ -953,40 +959,40 @@
 
     const-string v5, ""
 
-    .line 1085
+    .line 1103
     invoke-interface {v0, v4, v5}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
     const-string v4, "proxy_pass"
 
-    .line 1086
+    .line 1104
     invoke-interface {v0, v4, v5}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
     const-string v4, "proxy_user"
 
-    .line 1087
+    .line 1105
     invoke-interface {v0, v4, v5}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
     const-string v4, "proxy_secret"
 
-    .line 1088
+    .line 1106
     invoke-interface {v0, v4, v5}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
     const/16 v4, 0x438
 
     const-string v5, "proxy_port"
 
-    .line 1089
+    .line 1107
     invoke-interface {v0, v5, v4}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
-    .line 1090
+    .line 1108
     invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
     const-string v1, "proxy_enabled_calls"
 
-    .line 1091
+    .line 1109
     invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
-    .line 1092
+    .line 1110
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     if-eqz v3, :cond_4d
@@ -1003,16 +1009,16 @@
 
     const-string v9, ""
 
-    .line 1094
+    .line 1112
     invoke-static/range {v4 .. v9}, Lorg/telegram/tgnet/ConnectionsManager;->setProxySettings(ZLjava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1097
+    .line 1115
     :cond_4d
     sget-object v0, Lorg/telegram/messenger/SharedConfig;->proxyList:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p0}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 1098
+    .line 1116
     invoke-static {}, Lorg/telegram/messenger/SharedConfig;->saveProxyList()V
 
     return-void
@@ -1021,27 +1027,27 @@
 .method public static forwardingOptionsHintHintShowed()V
     .registers 3
 
-    .line 621
+    .line 628
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getGlobalMainSettings()Landroid/content/SharedPreferences;
 
     move-result-object v0
 
-    .line 622
+    .line 629
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
     const/4 v1, 0x1
 
-    .line 623
+    .line 630
     sput-boolean v1, Lorg/telegram/messenger/SharedConfig;->forwardingOptionsHintShown:Z
 
     const-string v2, "forwardingOptionsHintShown"
 
-    .line 624
+    .line 631
     invoke-interface {v0, v2, v1}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
-    .line 625
+    .line 632
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     return-void
@@ -1050,7 +1056,7 @@
 .method public static getChatSwipeAction(I)I
     .registers 4
 
-    .line 1132
+    .line 1150
     sget v0, Lorg/telegram/messenger/SharedConfig;->chatSwipeAction:I
 
     const/4 v1, 0x2
@@ -1061,7 +1067,7 @@
 
     if-ne v0, v2, :cond_15
 
-    .line 1133
+    .line 1151
     invoke-static {p0}, Lorg/telegram/messenger/MessagesController;->getInstance(I)Lorg/telegram/messenger/MessagesController;
 
     move-result-object p0
@@ -1076,13 +1082,13 @@
 
     return v1
 
-    .line 1136
+    .line 1154
     :cond_15
     sget p0, Lorg/telegram/messenger/SharedConfig;->chatSwipeAction:I
 
     return p0
 
-    .line 1137
+    .line 1155
     :cond_18
     invoke-static {p0}, Lorg/telegram/messenger/MessagesController;->getInstance(I)Lorg/telegram/messenger/MessagesController;
 
@@ -1114,19 +1120,19 @@
         }
     .end annotation
 
-    .line 459
+    .line 466
     sget-object v0, Lorg/telegram/messenger/SharedConfig;->passportConfigMap:Ljava/util/HashMap;
 
     if-nez v0, :cond_38
 
-    .line 460
+    .line 467
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     sput-object v0, Lorg/telegram/messenger/SharedConfig;->passportConfigMap:Ljava/util/HashMap;
 
-    .line 462
+    .line 469
     :try_start_b
     new-instance v0, Lorg/json/JSONObject;
 
@@ -1134,12 +1140,12 @@
 
     invoke-direct {v0, v1}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
 
-    .line 463
+    .line 470
     invoke-virtual {v0}, Lorg/json/JSONObject;->keys()Ljava/util/Iterator;
 
     move-result-object v1
 
-    .line 464
+    .line 471
     :goto_16
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
@@ -1147,14 +1153,14 @@
 
     if-eqz v2, :cond_38
 
-    .line 465
+    .line 472
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Ljava/lang/String;
 
-    .line 466
+    .line 473
     sget-object v3, Lorg/telegram/messenger/SharedConfig;->passportConfigMap:Ljava/util/HashMap;
 
     invoke-virtual {v2}, Ljava/lang/String;->toUpperCase()Ljava/lang/String;
@@ -1178,10 +1184,10 @@
     :catchall_34
     move-exception v0
 
-    .line 469
+    .line 476
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
-    .line 472
+    .line 479
     :cond_38
     sget-object v0, Lorg/telegram/messenger/SharedConfig;->passportConfigMap:Ljava/util/HashMap;
 
@@ -1191,20 +1197,20 @@
 .method public static getDevicePerformanceClass()I
     .registers 13
 
-    .line 1183
+    .line 1201
     sget v0, Lorg/telegram/messenger/SharedConfig;->devicePerformanceClass:I
 
     const/4 v1, -0x1
 
     if-ne v0, v1, :cond_dc
 
-    .line 1184
+    .line 1202
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    .line 1185
+    .line 1203
     sget v2, Lorg/telegram/tgnet/ConnectionsManager;->CPU_COUNT:I
 
-    .line 1186
+    .line 1204
     sget-object v3, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     const-string v4, "activity"
@@ -1232,7 +1238,7 @@
 
     if-ge v5, v2, :cond_4e
 
-    .line 1191
+    .line 1209
     :try_start_1e
     new-instance v9, Ljava/io/RandomAccessFile;
 
@@ -1256,14 +1262,14 @@
 
     invoke-direct {v9, v8, v10}, Ljava/io/RandomAccessFile;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1192
+    .line 1210
     invoke-virtual {v9}, Ljava/io/RandomAccessFile;->readLine()Ljava/lang/String;
 
     move-result-object v8
 
     if-eqz v8, :cond_48
 
-    .line 1194
+    .line 1212
     invoke-static {v8}, Lorg/telegram/messenger/Utilities;->parseInt(Ljava/lang/CharSequence;)Ljava/lang/Integer;
 
     move-result-object v8
@@ -1278,7 +1284,7 @@
 
     add-int/lit8 v6, v6, 0x1
 
-    .line 1197
+    .line 1215
     :cond_48
     invoke-virtual {v9}, Ljava/io/RandomAccessFile;->close()V
     :try_end_4b
@@ -1305,7 +1311,7 @@
 
     float-to-double v5, v5
 
-    .line 1200
+    .line 1218
     invoke-static {v5, v6}, Ljava/lang/Math;->ceil(D)D
 
     move-result-wide v5
@@ -1389,31 +1395,31 @@
 
     goto :goto_a2
 
-    .line 1207
+    .line 1225
     :cond_9f
     sput v7, Lorg/telegram/messenger/SharedConfig;->devicePerformanceClass:I
 
     goto :goto_a7
 
-    .line 1205
+    .line 1223
     :cond_a2
     :goto_a2
     sput v8, Lorg/telegram/messenger/SharedConfig;->devicePerformanceClass:I
 
     goto :goto_a7
 
-    .line 1203
+    .line 1221
     :cond_a5
     :goto_a5
     sput v4, Lorg/telegram/messenger/SharedConfig;->devicePerformanceClass:I
 
-    .line 1209
+    .line 1227
     :goto_a7
     sget-boolean v1, Lorg/telegram/messenger/BuildVars;->LOGS_ENABLED:Z
 
     if-eqz v1, :cond_dc
 
-    .line 1210
+    .line 1228
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1452,7 +1458,7 @@
 
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->d(Ljava/lang/String;)V
 
-    .line 1214
+    .line 1232
     :cond_dc
     sget v0, Lorg/telegram/messenger/SharedConfig;->devicePerformanceClass:I
 
@@ -1462,12 +1468,12 @@
 .method public static getLastLocalId()I
     .registers 3
 
-    .line 261
+    .line 263
     sget-object v0, Lorg/telegram/messenger/SharedConfig;->localIdSync:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 262
+    .line 264
     :try_start_3
     sget v1, Lorg/telegram/messenger/SharedConfig;->lastLocalId:I
 
@@ -1475,7 +1481,7 @@
 
     sput v2, Lorg/telegram/messenger/SharedConfig;->lastLocalId:I
 
-    .line 263
+    .line 265
     monitor-exit v0
 
     return v1
@@ -1493,7 +1499,7 @@
 .method public static increaseBadPasscodeTries()V
     .registers 2
 
-    .line 419
+    .line 426
     sget v0, Lorg/telegram/messenger/SharedConfig;->badPasscodeTries:I
 
     add-int/lit8 v0, v0, 0x1
@@ -1524,7 +1530,7 @@
 
     const-wide/16 v0, 0x7530
 
-    .line 438
+    .line 445
     sput-wide v0, Lorg/telegram/messenger/SharedConfig;->passcodeRetryInMs:J
 
     goto :goto_34
@@ -1532,7 +1538,7 @@
     :cond_1c
     const-wide/16 v0, 0x61a8
 
-    .line 435
+    .line 442
     sput-wide v0, Lorg/telegram/messenger/SharedConfig;->passcodeRetryInMs:J
 
     goto :goto_34
@@ -1540,7 +1546,7 @@
     :cond_21
     const-wide/16 v0, 0x4e20
 
-    .line 432
+    .line 439
     sput-wide v0, Lorg/telegram/messenger/SharedConfig;->passcodeRetryInMs:J
 
     goto :goto_34
@@ -1548,7 +1554,7 @@
     :cond_26
     const-wide/16 v0, 0x3a98
 
-    .line 429
+    .line 436
     sput-wide v0, Lorg/telegram/messenger/SharedConfig;->passcodeRetryInMs:J
 
     goto :goto_34
@@ -1556,7 +1562,7 @@
     :cond_2b
     const-wide/16 v0, 0x2710
 
-    .line 426
+    .line 433
     sput-wide v0, Lorg/telegram/messenger/SharedConfig;->passcodeRetryInMs:J
 
     goto :goto_34
@@ -1564,10 +1570,10 @@
     :cond_30
     const-wide/16 v0, 0x1388
 
-    .line 423
+    .line 430
     sput-wide v0, Lorg/telegram/messenger/SharedConfig;->passcodeRetryInMs:J
 
-    .line 441
+    .line 448
     :goto_34
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
@@ -1575,7 +1581,7 @@
 
     sput-wide v0, Lorg/telegram/messenger/SharedConfig;->lastUptimeMillis:J
 
-    .line 443
+    .line 450
     :cond_3a
     invoke-static {}, Lorg/telegram/messenger/SharedConfig;->saveConfig()V
 
@@ -1585,17 +1591,17 @@
 .method public static increaseLockRecordAudioVideoHintShowed()V
     .registers 3
 
-    .line 636
+    .line 643
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getGlobalMainSettings()Landroid/content/SharedPreferences;
 
     move-result-object v0
 
-    .line 637
+    .line 644
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
-    .line 638
+    .line 645
     sget v1, Lorg/telegram/messenger/SharedConfig;->lockRecordAudioVideoHint:I
 
     add-int/lit8 v1, v1, 0x1
@@ -1606,7 +1612,7 @@
 
     invoke-interface {v0, v2, v1}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
-    .line 639
+    .line 646
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     return-void
@@ -1615,17 +1621,17 @@
 .method public static increaseScheduledOrNoSuoundHintShowed()V
     .registers 3
 
-    .line 614
+    .line 621
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getGlobalMainSettings()Landroid/content/SharedPreferences;
 
     move-result-object v0
 
-    .line 615
+    .line 622
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
-    .line 616
+    .line 623
     sget v1, Lorg/telegram/messenger/SharedConfig;->scheduledOrNoSoundHintShows:I
 
     add-int/lit8 v1, v1, 0x1
@@ -1636,7 +1642,7 @@
 
     invoke-interface {v0, v2, v1}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
-    .line 617
+    .line 624
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     return-void
@@ -1645,17 +1651,17 @@
 .method public static increaseSearchAsListHintShows()V
     .registers 3
 
-    .line 650
+    .line 657
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getGlobalMainSettings()Landroid/content/SharedPreferences;
 
     move-result-object v0
 
-    .line 651
+    .line 658
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
-    .line 652
+    .line 659
     sget v1, Lorg/telegram/messenger/SharedConfig;->searchMessagesAsListHintShows:I
 
     add-int/lit8 v1, v1, 0x1
@@ -1666,7 +1672,7 @@
 
     invoke-interface {v0, v2, v1}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
-    .line 653
+    .line 660
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     return-void
@@ -1675,17 +1681,17 @@
 .method public static increaseTextSelectionHintShowed()V
     .registers 3
 
-    .line 600
+    .line 607
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getGlobalMainSettings()Landroid/content/SharedPreferences;
 
     move-result-object v0
 
-    .line 601
+    .line 608
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
-    .line 602
+    .line 609
     sget v1, Lorg/telegram/messenger/SharedConfig;->textSelectionHintShows:I
 
     add-int/lit8 v1, v1, 0x1
@@ -1696,7 +1702,7 @@
 
     invoke-interface {v0, v2, v1}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
-    .line 603
+    .line 610
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     return-void
@@ -1705,7 +1711,7 @@
 .method public static isAppUpdateAvailable()Z
     .registers 3
 
-    .line 476
+    .line 483
     sget-object v0, Lorg/telegram/messenger/SharedConfig;->pendingAppUpdate:Lorg/telegram/tgnet/TLRPC$TL_help_appUpdate;
 
     const/4 v1, 0x0
@@ -1724,7 +1730,7 @@
 
     goto :goto_2e
 
-    .line 481
+    .line 488
     :cond_10
     :try_start_10
     sget-object v0, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
@@ -1743,7 +1749,7 @@
 
     move-result-object v0
 
-    .line 482
+    .line 489
     iget v0, v0, Landroid/content/pm/PackageInfo;->versionCode:I
     :try_end_22
     .catch Ljava/lang/Exception; {:try_start_10 .. :try_end_22} :catch_23
@@ -1753,13 +1759,13 @@
     :catch_23
     move-exception v0
 
-    .line 484
+    .line 491
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
-    .line 485
+    .line 492
     sget v0, Lorg/telegram/messenger/BuildVars;->BUILD_VERSION:I
 
-    .line 487
+    .line 494
     :goto_29
     sget v2, Lorg/telegram/messenger/SharedConfig;->pendingAppUpdateBuildVersion:I
 
@@ -1775,7 +1781,7 @@
 .method public static isPassportConfigLoaded()Z
     .registers 1
 
-    .line 447
+    .line 454
     sget-object v0, Lorg/telegram/messenger/SharedConfig;->passportConfigMap:Ljava/util/HashMap;
 
     if-eqz v0, :cond_6
@@ -1794,14 +1800,14 @@
 .method public static isSecretMapPreviewSet()Z
     .registers 2
 
-    .line 861
+    .line 879
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getGlobalMainSettings()Landroid/content/SharedPreferences;
 
     move-result-object v0
 
     const-string v1, "mapPreviewType"
 
-    .line 862
+    .line 880
     invoke-interface {v0, v1}, Landroid/content/SharedPreferences;->contains(Ljava/lang/String;)Z
 
     move-result v0
@@ -1812,7 +1818,7 @@
 .method private static synthetic lambda$checkKeepMedia$1(ILjava/io/File;)V
     .registers 10
 
-    .line 697
+    .line 704
     sget v0, Lorg/telegram/messenger/SharedConfig;->keepMedia:I
 
     const v1, 0x15180
@@ -1848,7 +1854,7 @@
 
     int-to-long v3, v0
 
-    .line 707
+    .line 714
     invoke-static {}, Lorg/telegram/messenger/ImageLoader;->getInstance()Lorg/telegram/messenger/ImageLoader;
 
     move-result-object v0
@@ -1859,7 +1865,7 @@
 
     const/4 v5, 0x0
 
-    .line 708
+    .line 715
     :goto_22
     invoke-virtual {v0}, Landroid/util/SparseArray;->size()I
 
@@ -1867,7 +1873,7 @@
 
     if-ge v5, v6, :cond_45
 
-    .line 709
+    .line 716
     invoke-virtual {v0, v5}, Landroid/util/SparseArray;->keyAt(I)I
 
     move-result v6
@@ -1878,7 +1884,7 @@
 
     goto :goto_42
 
-    .line 713
+    .line 720
     :cond_30
     :try_start_30
     invoke-virtual {v0, v5}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
@@ -1900,7 +1906,7 @@
     :catchall_3e
     move-exception v6
 
-    .line 715
+    .line 722
     invoke-static {v6}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     :goto_42
@@ -1908,7 +1914,7 @@
 
     goto :goto_22
 
-    .line 719
+    .line 726
     :cond_45
     new-instance v0, Ljava/io/File;
 
@@ -1916,7 +1922,7 @@
 
     invoke-direct {v0, p1, v3}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 720
+    .line 727
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
     move-result p1
@@ -1927,7 +1933,7 @@
 
     int-to-long p0, p0
 
-    .line 723
+    .line 730
     :try_start_54
     invoke-virtual {v0}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
@@ -1942,29 +1948,29 @@
     :catchall_5c
     move-exception p0
 
-    .line 725
+    .line 732
     invoke-static {p0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
-    .line 728
+    .line 735
     :cond_60
     :goto_60
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getGlobalMainSettings()Landroid/content/SharedPreferences;
 
     move-result-object p0
 
-    .line 729
+    .line 736
     invoke-interface {p0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object p0
 
-    .line 730
+    .line 737
     sget p1, Lorg/telegram/messenger/SharedConfig;->lastKeepMediaCheckTime:I
 
     const-string v0, "lastKeepMediaCheckTime"
 
     invoke-interface {p0, v0, p1}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
-    .line 731
+    .line 738
     invoke-interface {p0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     return-void
@@ -1979,7 +1985,7 @@
 
     int-to-long v0, p0
 
-    .line 676
+    .line 683
     :try_start_5
     sget-object p0, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
@@ -1989,7 +1995,7 @@
 
     move-result-object p0
 
-    .line 677
+    .line 684
     new-instance v2, Ljava/io/File;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -2012,7 +2018,7 @@
 
     invoke-direct {v2, p0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 678
+    .line 685
     invoke-virtual {v2}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object p0
@@ -2028,28 +2034,28 @@
     :catchall_2f
     move-exception p0
 
-    .line 680
+    .line 687
     invoke-static {p0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
-    .line 682
+    .line 689
     :goto_33
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getGlobalMainSettings()Landroid/content/SharedPreferences;
 
     move-result-object p0
 
-    .line 683
+    .line 690
     invoke-interface {p0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object p0
 
-    .line 684
+    .line 691
     sget v0, Lorg/telegram/messenger/SharedConfig;->lastLogsCheckTime:I
 
     const-string v1, "lastLogsCheckTime"
 
     invoke-interface {p0, v1, v0}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
-    .line 685
+    .line 692
     invoke-interface {p0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     return-void
@@ -2058,7 +2064,7 @@
 .method private static synthetic lambda$checkSaveToGalleryFiles$3()V
     .registers 4
 
-    .line 1104
+    .line 1122
     :try_start_0
     new-instance v0, Ljava/io/File;
 
@@ -2070,27 +2076,27 @@
 
     invoke-direct {v0, v1, v2}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 1105
+    .line 1123
     new-instance v1, Ljava/io/File;
 
     const-string v2, "Telegram Images"
 
     invoke-direct {v1, v0, v2}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 1106
+    .line 1124
     invoke-virtual {v1}, Ljava/io/File;->mkdir()Z
 
-    .line 1107
+    .line 1125
     new-instance v2, Ljava/io/File;
 
     const-string v3, "Telegram Video"
 
     invoke-direct {v2, v0, v3}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 1108
+    .line 1126
     invoke-virtual {v2}, Ljava/io/File;->mkdir()Z
 
-    .line 1110
+    .line 1128
     sget v0, Lorg/telegram/messenger/SharedConfig;->saveToGalleryFlags:I
     :try_end_21
     .catchall {:try_start_0 .. :try_end_21} :catchall_64
@@ -2106,7 +2112,7 @@
 
     goto :goto_47
 
-    .line 1118
+    .line 1136
     :cond_2a
     invoke-virtual {v1}, Ljava/io/File;->isDirectory()Z
 
@@ -2114,14 +2120,14 @@
 
     if-eqz v0, :cond_38
 
-    .line 1119
+    .line 1137
     new-instance v0, Ljava/io/File;
 
     invoke-direct {v0, v1, v3}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->createEmptyFile(Ljava/io/File;)V
 
-    .line 1121
+    .line 1139
     :cond_38
     invoke-virtual {v2}, Ljava/io/File;->isDirectory()Z
 
@@ -2129,7 +2135,7 @@
 
     if-eqz v0, :cond_68
 
-    .line 1122
+    .line 1140
     new-instance v0, Ljava/io/File;
 
     invoke-direct {v0, v2, v3}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
@@ -2138,7 +2144,7 @@
 
     goto :goto_68
 
-    .line 1111
+    .line 1129
     :cond_47
     :goto_47
     invoke-virtual {v1}, Ljava/io/File;->isDirectory()Z
@@ -2147,14 +2153,14 @@
 
     if-eqz v0, :cond_55
 
-    .line 1112
+    .line 1130
     new-instance v0, Ljava/io/File;
 
     invoke-direct {v0, v1, v3}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Ljava/io/File;->delete()Z
 
-    .line 1114
+    .line 1132
     :cond_55
     invoke-virtual {v2}, Ljava/io/File;->isDirectory()Z
 
@@ -2162,7 +2168,7 @@
 
     if-eqz v0, :cond_68
 
-    .line 1115
+    .line 1133
     new-instance v0, Ljava/io/File;
 
     invoke-direct {v0, v2, v3}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
@@ -2176,7 +2182,7 @@
     :catchall_64
     move-exception v0
 
-    .line 1126
+    .line 1144
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     :cond_68
@@ -2187,7 +2193,7 @@
 .method private static synthetic lambda$toggleSaveToGalleryFlag$2()V
     .registers 0
 
-    .line 823
+    .line 841
     invoke-static {}, Lorg/telegram/messenger/SharedConfig;->checkSaveToGalleryFiles()V
 
     return-void
@@ -2196,24 +2202,24 @@
 .method public static loadConfig()V
     .registers 10
 
-    .line 268
+    .line 270
     sget-object v0, Lorg/telegram/messenger/SharedConfig;->sync:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 269
+    .line 271
     :try_start_3
     sget-boolean v1, Lorg/telegram/messenger/SharedConfig;->configLoaded:Z
 
-    if-nez v1, :cond_395
+    if-nez v1, :cond_3a8
 
     sget-object v1, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     if-nez v1, :cond_d
 
-    goto/16 :goto_395
+    goto/16 :goto_3a8
 
-    .line 273
+    .line 275
     :cond_d
     sget-object v1, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
@@ -2227,7 +2233,7 @@
 
     invoke-static {v1}, Lorg/telegram/messenger/SharedConfig$BackgroundActivityPrefs;->access$002(Landroid/content/SharedPreferences;)Landroid/content/SharedPreferences;
 
-    .line 275
+    .line 277
     sget-object v1, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     const-string v2, "userconfing"
@@ -2238,7 +2244,7 @@
 
     const-string v2, "saveIncomingPhotos"
 
-    .line 276
+    .line 278
     invoke-interface {v1, v2, v3}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v2
@@ -2249,7 +2255,7 @@
 
     const-string v4, ""
 
-    .line 277
+    .line 279
     invoke-interface {v1, v2, v4}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
@@ -2258,7 +2264,7 @@
 
     const-string v2, "appLocked"
 
-    .line 278
+    .line 280
     invoke-interface {v1, v2, v3}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v2
@@ -2267,7 +2273,7 @@
 
     const-string v2, "passcodeType"
 
-    .line 279
+    .line 281
     invoke-interface {v1, v2, v3}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
 
     move-result v2
@@ -2278,7 +2284,7 @@
 
     const-wide/16 v4, 0x0
 
-    .line 280
+    .line 282
     invoke-interface {v1, v2, v4, v5}, Landroid/content/SharedPreferences;->getLong(Ljava/lang/String;J)J
 
     move-result-wide v6
@@ -2287,7 +2293,7 @@
 
     const-string v2, "lastUptimeMillis"
 
-    .line 281
+    .line 283
     invoke-interface {v1, v2, v4, v5}, Landroid/content/SharedPreferences;->getLong(Ljava/lang/String;J)J
 
     move-result-wide v4
@@ -2296,7 +2302,7 @@
 
     const-string v2, "badPasscodeTries"
 
-    .line 282
+    .line 284
     invoke-interface {v1, v2, v3}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
 
     move-result v2
@@ -2307,7 +2313,7 @@
 
     const/16 v4, 0xe10
 
-    .line 283
+    .line 285
     invoke-interface {v1, v2, v4}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
 
     move-result v2
@@ -2316,7 +2322,7 @@
 
     const-string v2, "lastPauseTime"
 
-    .line 284
+    .line 286
     invoke-interface {v1, v2, v3}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
 
     move-result v2
@@ -2327,7 +2333,7 @@
 
     const/4 v4, 0x1
 
-    .line 285
+    .line 287
     invoke-interface {v1, v2, v4}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v2
@@ -2338,7 +2344,7 @@
 
     const-string v5, "3.5"
 
-    .line 286
+    .line 288
     invoke-interface {v1, v2, v5}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
@@ -2347,7 +2353,7 @@
 
     const-string v2, "allowScreenCapture"
 
-    .line 287
+    .line 289
     invoke-interface {v1, v2, v3}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v2
@@ -2358,7 +2364,7 @@
 
     const v5, -0x33450
 
-    .line 288
+    .line 290
     invoke-interface {v1, v2, v5}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
 
     move-result v2
@@ -2369,7 +2375,7 @@
 
     const-string v5, ""
 
-    .line 289
+    .line 291
     invoke-interface {v1, v2, v5}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
@@ -2378,7 +2384,7 @@
 
     const-string v2, "pushStatSent"
 
-    .line 290
+    .line 292
     invoke-interface {v1, v2, v3}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v2
@@ -2389,7 +2395,7 @@
 
     const-string v5, ""
 
-    .line 291
+    .line 293
     invoke-interface {v1, v2, v5}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
@@ -2398,7 +2404,7 @@
 
     const-string v2, "passportConfigHash"
 
-    .line 292
+    .line 294
     invoke-interface {v1, v2, v3}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
 
     move-result v2
@@ -2409,7 +2415,7 @@
 
     const/4 v5, 0x0
 
-    .line 293
+    .line 295
     invoke-interface {v1, v2, v5}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
@@ -2418,26 +2424,26 @@
 
     const-string v2, "pushAuthKey"
 
-    .line 294
+    .line 296
     invoke-interface {v1, v2, v5}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 295
+    .line 297
     invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v6
 
     if-nez v6, :cond_d4
 
-    .line 296
+    .line 298
     invoke-static {v2, v3}, Landroid/util/Base64;->decode(Ljava/lang/String;I)[B
 
     move-result-object v2
 
     sput-object v2, Lorg/telegram/messenger/SharedConfig;->pushAuthKey:[B
 
-    .line 299
+    .line 301
     :cond_d4
     sget-object v2, Lorg/telegram/messenger/SharedConfig;->passcodeHash:Ljava/lang/String;
 
@@ -2451,7 +2457,7 @@
 
     if-nez v2, :cond_ed
 
-    .line 300
+    .line 302
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v6
@@ -2473,19 +2479,19 @@
 
     const-string v6, ""
 
-    .line 303
+    .line 305
     invoke-interface {v1, v2, v6}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 304
+    .line 306
     invoke-virtual {v2}, Ljava/lang/String;->length()I
 
     move-result v6
 
     if-lez v6, :cond_102
 
-    .line 305
+    .line 307
     invoke-static {v2, v3}, Landroid/util/Base64;->decode(Ljava/lang/String;I)[B
 
     move-result-object v2
@@ -2497,13 +2503,13 @@
     :cond_102
     new-array v2, v3, [B
 
-    .line 307
+    .line 309
     sput-object v2, Lorg/telegram/messenger/SharedConfig;->passcodeSalt:[B
 
     :goto_106
     const-string v2, "appUpdateCheckTime"
 
-    .line 309
+    .line 311
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v6
@@ -2514,12 +2520,12 @@
 
     sput-wide v6, Lorg/telegram/messenger/SharedConfig;->lastUpdateCheckTime:J
     :try_end_112
-    .catchall {:try_start_3 .. :try_end_112} :catchall_397
+    .catchall {:try_start_3 .. :try_end_112} :catchall_3aa
 
     :try_start_112
     const-string v2, "appUpdate"
 
-    .line 311
+    .line 313
     invoke-interface {v1, v2, v5}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
@@ -2528,7 +2534,7 @@
 
     const-string v6, "appUpdateBuild"
 
-    .line 313
+    .line 315
     sget v7, Lorg/telegram/messenger/BuildVars;->BUILD_VERSION:I
 
     invoke-interface {v1, v6, v7}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
@@ -2537,19 +2543,19 @@
 
     sput v1, Lorg/telegram/messenger/SharedConfig;->pendingAppUpdateBuildVersion:I
 
-    .line 314
+    .line 316
     invoke-static {v2, v3}, Landroid/util/Base64;->decode(Ljava/lang/String;I)[B
 
     move-result-object v1
 
     if-eqz v1, :cond_13e
 
-    .line 316
+    .line 318
     new-instance v2, Lorg/telegram/tgnet/SerializedData;
 
     invoke-direct {v2, v1}, Lorg/telegram/tgnet/SerializedData;-><init>([B)V
 
-    .line 317
+    .line 319
     invoke-virtual {v2, v3}, Lorg/telegram/tgnet/SerializedData;->readInt32(Z)I
 
     move-result v1
@@ -2562,19 +2568,19 @@
 
     sput-object v1, Lorg/telegram/messenger/SharedConfig;->pendingAppUpdate:Lorg/telegram/tgnet/TLRPC$TL_help_appUpdate;
 
-    .line 318
+    .line 320
     invoke-virtual {v2}, Lorg/telegram/tgnet/SerializedData;->cleanup()V
 
-    .line 321
+    .line 323
     :cond_13e
     sget-object v1, Lorg/telegram/messenger/SharedConfig;->pendingAppUpdate:Lorg/telegram/tgnet/TLRPC$TL_help_appUpdate;
     :try_end_140
     .catch Ljava/lang/Exception; {:try_start_112 .. :try_end_140} :catch_17f
-    .catchall {:try_start_112 .. :try_end_140} :catchall_397
+    .catchall {:try_start_112 .. :try_end_140} :catchall_3aa
 
     if-eqz v1, :cond_183
 
-    .line 326
+    .line 328
     :try_start_142
     sget-object v1, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
@@ -2592,18 +2598,18 @@
 
     move-result-object v1
 
-    .line 327
+    .line 329
     iget v2, v1, Landroid/content/pm/PackageInfo;->versionCode:I
     :try_end_154
     .catch Ljava/lang/Exception; {:try_start_142 .. :try_end_154} :catch_159
-    .catchall {:try_start_142 .. :try_end_154} :catchall_397
+    .catchall {:try_start_142 .. :try_end_154} :catchall_3aa
 
-    .line 328
+    .line 330
     :try_start_154
     iget-object v1, v1, Landroid/content/pm/PackageInfo;->versionName:Ljava/lang/String;
     :try_end_156
     .catch Ljava/lang/Exception; {:try_start_154 .. :try_end_156} :catch_157
-    .catchall {:try_start_154 .. :try_end_156} :catchall_397
+    .catchall {:try_start_154 .. :try_end_156} :catchall_3aa
 
     goto :goto_15f
 
@@ -2617,7 +2623,7 @@
 
     const/4 v2, 0x0
 
-    .line 330
+    .line 332
     :goto_15b
     :try_start_15b
     invoke-static {v1}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
@@ -2627,16 +2633,16 @@
     :goto_15f
     if-nez v2, :cond_163
 
-    .line 333
+    .line 335
     sget v2, Lorg/telegram/messenger/BuildVars;->BUILD_VERSION:I
 
     :cond_163
     if-nez v1, :cond_167
 
-    .line 336
+    .line 338
     sget-object v1, Lorg/telegram/messenger/BuildVars;->BUILD_VERSION_STRING:Ljava/lang/String;
 
-    .line 338
+    .line 340
     :cond_167
     sget v6, Lorg/telegram/messenger/SharedConfig;->pendingAppUpdateBuildVersion:I
 
@@ -2654,28 +2660,28 @@
 
     if-ltz v1, :cond_183
 
-    .line 339
+    .line 341
     :cond_177
     sput-object v5, Lorg/telegram/messenger/SharedConfig;->pendingAppUpdate:Lorg/telegram/tgnet/TLRPC$TL_help_appUpdate;
 
-    .line 340
+    .line 342
     sget-object v1, Lorg/telegram/messenger/SharedConfig$$ExternalSyntheticLambda4;->INSTANCE:Lorg/telegram/messenger/SharedConfig$$ExternalSyntheticLambda4;
 
     invoke-static {v1}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
     :try_end_17e
     .catch Ljava/lang/Exception; {:try_start_15b .. :try_end_17e} :catch_17f
-    .catchall {:try_start_15b .. :try_end_17e} :catchall_397
+    .catchall {:try_start_15b .. :try_end_17e} :catchall_3aa
 
     goto :goto_183
 
     :catch_17f
     move-exception v1
 
-    .line 344
+    .line 346
     :try_start_180
     invoke-static {v1}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
-    .line 347
+    .line 349
     :cond_183
     :goto_183
     sget-object v1, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
@@ -2688,7 +2694,7 @@
 
     const-string v2, "save_gallery"
 
-    .line 348
+    .line 350
     invoke-interface {v1, v2, v3}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v2
@@ -2697,10 +2703,10 @@
 
     const/4 v2, 0x7
 
-    .line 350
+    .line 352
     sput v2, Lorg/telegram/messenger/SharedConfig;->saveToGalleryFlags:I
 
-    .line 351
+    .line 353
     invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v2
@@ -2726,7 +2732,7 @@
     :cond_1ac
     const-string v2, "save_gallery_flags"
 
-    .line 353
+    .line 355
     invoke-interface {v1, v2, v3}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
 
     move-result v2
@@ -2736,7 +2742,7 @@
     :goto_1b4
     const-string v2, "autoplay_gif"
 
-    .line 355
+    .line 357
     invoke-interface {v1, v2, v4}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v2
@@ -2745,7 +2751,7 @@
 
     const-string v2, "autoplay_video"
 
-    .line 356
+    .line 358
     invoke-interface {v1, v2, v4}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v2
@@ -2756,7 +2762,7 @@
 
     const/4 v6, 0x2
 
-    .line 357
+    .line 359
     invoke-interface {v1, v2, v6}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
 
     move-result v2
@@ -2765,7 +2771,7 @@
 
     const-string v2, "raise_to_speak"
 
-    .line 358
+    .line 360
     invoke-interface {v1, v2, v3}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v2
@@ -2774,7 +2780,7 @@
 
     const-string v2, "custom_tabs"
 
-    .line 359
+    .line 361
     invoke-interface {v1, v2, v4}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v2
@@ -2783,7 +2789,7 @@
 
     const-string v2, "direct_share"
 
-    .line 360
+    .line 362
     invoke-interface {v1, v2, v4}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v2
@@ -2792,7 +2798,7 @@
 
     const-string v2, "shuffleMusic"
 
-    .line 361
+    .line 363
     invoke-interface {v1, v2, v3}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v2
@@ -2803,7 +2809,7 @@
 
     const-string v2, "playOrderReversed"
 
-    .line 362
+    .line 364
     invoke-interface {v1, v2, v3}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v2
@@ -2822,7 +2828,7 @@
 
     const-string v2, "inappCamera"
 
-    .line 363
+    .line 365
     invoke-interface {v1, v2, v4}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v2
@@ -2831,19 +2837,19 @@
 
     const-string v2, "cameraCache"
 
-    .line 364
+    .line 366
     invoke-interface {v1, v2}, Landroid/content/SharedPreferences;->contains(Ljava/lang/String;)Z
 
     move-result v2
 
     sput-boolean v2, Lorg/telegram/messenger/SharedConfig;->hasCameraCache:Z
 
-    .line 365
+    .line 367
     sput-boolean v4, Lorg/telegram/messenger/SharedConfig;->roundCamera16to9:Z
 
     const-string v2, "repeatMode"
 
-    .line 366
+    .line 368
     invoke-interface {v1, v2, v3}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
 
     move-result v2
@@ -2852,7 +2858,7 @@
 
     const-string v2, "fons_size"
 
-    .line 367
+    .line 369
     invoke-static {}, Lorg/telegram/messenger/AndroidUtilities;->isTablet()Z
 
     move-result v7
@@ -2877,7 +2883,7 @@
 
     const/16 v7, 0x11
 
-    .line 368
+    .line 370
     invoke-interface {v1, v2, v7}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
 
     move-result v2
@@ -2886,7 +2892,7 @@
 
     const-string v2, "iv_font_size"
 
-    .line 369
+    .line 371
     sget v7, Lorg/telegram/messenger/SharedConfig;->fontSize:I
 
     invoke-interface {v1, v2, v7}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
@@ -2897,7 +2903,7 @@
 
     const-string v2, "allowBigEmoji"
 
-    .line 370
+    .line 372
     invoke-interface {v1, v2, v4}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v2
@@ -2906,7 +2912,7 @@
 
     const-string v2, "useSystemEmoji"
 
-    .line 371
+    .line 373
     invoke-interface {v1, v2, v3}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v2
@@ -2915,7 +2921,7 @@
 
     const-string v2, "streamMedia"
 
-    .line 372
+    .line 374
     invoke-interface {v1, v2, v4}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v2
@@ -2924,7 +2930,7 @@
 
     const-string v2, "saveStreamMedia"
 
-    .line 373
+    .line 375
     invoke-interface {v1, v2, v4}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v2
@@ -2933,7 +2939,7 @@
 
     const-string v2, "smoothKeyboard2"
 
-    .line 374
+    .line 376
     invoke-interface {v1, v2, v4}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v2
@@ -2942,7 +2948,7 @@
 
     const-string v2, "pauseMusicOnRecord"
 
-    .line 375
+    .line 377
     invoke-interface {v1, v2, v3}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v2
@@ -2951,7 +2957,7 @@
 
     const-string v2, "chatBlur"
 
-    .line 376
+    .line 378
     invoke-interface {v1, v2, v4}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v2
@@ -2960,7 +2966,7 @@
 
     const-string v2, "streamAllVideo"
 
-    .line 377
+    .line 379
     sget-boolean v7, Lorg/telegram/messenger/BuildVars;->DEBUG_VERSION:Z
 
     invoke-interface {v1, v2, v7}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
@@ -2971,7 +2977,7 @@
 
     const-string v2, "streamMkv"
 
-    .line 378
+    .line 380
     invoke-interface {v1, v2, v3}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v2
@@ -2980,7 +2986,7 @@
 
     const-string v2, "suggestStickers"
 
-    .line 379
+    .line 381
     invoke-interface {v1, v2, v3}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
 
     move-result v2
@@ -2989,7 +2995,7 @@
 
     const-string v2, "sortContactsByName"
 
-    .line 380
+    .line 382
     invoke-interface {v1, v2, v3}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v2
@@ -2998,7 +3004,7 @@
 
     const-string v2, "sortFilesByName"
 
-    .line 381
+    .line 383
     invoke-interface {v1, v2, v3}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v2
@@ -3007,7 +3013,7 @@
 
     const-string v2, "noSoundHintShowed"
 
-    .line 382
+    .line 384
     invoke-interface {v1, v2, v3}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v2
@@ -3016,7 +3022,7 @@
 
     const-string v2, "directShareHash2"
 
-    .line 383
+    .line 385
     invoke-interface {v1, v2, v5}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
@@ -3025,7 +3031,7 @@
 
     const-string v2, "useThreeLinesLayout"
 
-    .line 384
+    .line 386
     invoke-interface {v1, v2, v3}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v2
@@ -3034,7 +3040,7 @@
 
     const-string v2, "archiveHidden"
 
-    .line 385
+    .line 387
     invoke-interface {v1, v2, v3}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v2
@@ -3043,7 +3049,7 @@
 
     const-string v2, "distanceSystemType"
 
-    .line 386
+    .line 388
     invoke-interface {v1, v2, v3}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
 
     move-result v2
@@ -3054,7 +3060,7 @@
 
     const/4 v5, -0x1
 
-    .line 387
+    .line 389
     invoke-interface {v1, v2, v5}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
 
     move-result v2
@@ -3063,7 +3069,7 @@
 
     const-string v2, "loopStickers"
 
-    .line 388
+    .line 390
     invoke-interface {v1, v2, v4}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v2
@@ -3072,7 +3078,7 @@
 
     const-string v2, "keep_media"
 
-    .line 389
+    .line 391
     invoke-interface {v1, v2, v6}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
 
     move-result v2
@@ -3081,7 +3087,7 @@
 
     const-string v2, "noStatusBar"
 
-    .line 390
+    .line 392
     invoke-interface {v1, v2, v4}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v2
@@ -3090,16 +3096,25 @@
 
     const-string v2, "forceRtmpStream"
 
-    .line 391
+    .line 393
     invoke-interface {v1, v2, v3}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v2
 
     sput-boolean v2, Lorg/telegram/messenger/SharedConfig;->forceRtmpStream:Z
 
+    const-string v2, "debugWebView"
+
+    .line 394
+    invoke-interface {v1, v2, v3}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
+
+    move-result v2
+
+    sput-boolean v2, Lorg/telegram/messenger/SharedConfig;->debugWebView:Z
+
     const-string v2, "lastKeepMediaCheckTime"
 
-    .line 392
+    .line 395
     invoke-interface {v1, v2, v3}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
 
     move-result v2
@@ -3108,7 +3123,7 @@
 
     const-string v2, "lastLogsCheckTime"
 
-    .line 393
+    .line 396
     invoke-interface {v1, v2, v3}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
 
     move-result v2
@@ -3117,7 +3132,7 @@
 
     const-string v2, "searchMessagesAsListHintShows"
 
-    .line 394
+    .line 397
     invoke-interface {v1, v2, v3}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
 
     move-result v2
@@ -3126,7 +3141,7 @@
 
     const-string v2, "searchMessagesAsListUsed"
 
-    .line 395
+    .line 398
     invoke-interface {v1, v2, v3}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v2
@@ -3135,7 +3150,7 @@
 
     const-string v2, "stickersReorderingHintUsed"
 
-    .line 396
+    .line 399
     invoke-interface {v1, v2, v3}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v2
@@ -3144,7 +3159,7 @@
 
     const-string v2, "textSelectionHintShows"
 
-    .line 397
+    .line 400
     invoke-interface {v1, v2, v3}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
 
     move-result v2
@@ -3153,7 +3168,7 @@
 
     const-string v2, "scheduledOrNoSoundHintShows"
 
-    .line 398
+    .line 401
     invoke-interface {v1, v2, v3}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
 
     move-result v2
@@ -3162,7 +3177,7 @@
 
     const-string v2, "forwardingOptionsHintShown"
 
-    .line 399
+    .line 402
     invoke-interface {v1, v2, v3}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v2
@@ -3171,7 +3186,7 @@
 
     const-string v2, "lockRecordAudioVideoHint"
 
-    .line 400
+    .line 403
     invoke-interface {v1, v2, v3}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
 
     move-result v2
@@ -3180,7 +3195,7 @@
 
     const-string v2, "disableVoiceAudioEffects"
 
-    .line 401
+    .line 404
     invoke-interface {v1, v2, v3}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v2
@@ -3189,7 +3204,7 @@
 
     const-string v2, "noiseSupression"
 
-    .line 402
+    .line 405
     invoke-interface {v1, v2, v3}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v2
@@ -3198,7 +3213,7 @@
 
     const-string v2, "ChatSwipeAction"
 
-    .line 403
+    .line 406
     invoke-interface {v1, v2, v5}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
 
     move-result v2
@@ -3209,7 +3224,7 @@
 
     const/4 v5, 0x3
 
-    .line 404
+    .line 407
     invoke-interface {v1, v2, v5}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
 
     move-result v2
@@ -3218,7 +3233,7 @@
 
     const-string v2, "emojiInteractionsHintCount"
 
-    .line 405
+    .line 408
     invoke-interface {v1, v2, v5}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
 
     move-result v2
@@ -3227,7 +3242,7 @@
 
     const-string v2, "dayNightThemeSwitchHintCount"
 
-    .line 406
+    .line 409
     invoke-interface {v1, v2, v5}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
 
     move-result v2
@@ -3236,7 +3251,7 @@
 
     const-string v2, "mediaColumnsCount"
 
-    .line 407
+    .line 410
     invoke-interface {v1, v2, v5}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
 
     move-result v2
@@ -3245,7 +3260,7 @@
 
     const-string v2, "fastScrollHintCount"
 
-    .line 408
+    .line 411
     invoke-interface {v1, v2, v5}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
 
     move-result v2
@@ -3254,14 +3269,14 @@
 
     const-string v2, "dontAskManageStorage"
 
-    .line 409
+    .line 412
     invoke-interface {v1, v2, v3}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v1
 
     sput-boolean v1, Lorg/telegram/messenger/SharedConfig;->dontAskManageStorage:Z
 
-    .line 411
+    .line 414
     sget-object v1, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     const-string v2, "Notifications"
@@ -3272,35 +3287,48 @@
 
     const-string v2, "AllAccounts"
 
-    .line 412
+    .line 415
     invoke-interface {v1, v2, v4}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v1
 
     sput-boolean v1, Lorg/telegram/messenger/SharedConfig;->showNotificationsForAllAccounts:Z
 
-    .line 414
+    .line 417
     sput-boolean v4, Lorg/telegram/messenger/SharedConfig;->configLoaded:Z
 
-    .line 415
+    .line 419
+    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v2, 0x13
+
+    if-lt v1, v2, :cond_3a6
+
+    .line 420
+    sget-boolean v1, Lorg/telegram/messenger/SharedConfig;->debugWebView:Z
+
+    invoke-static {v1}, Landroid/webkit/WebView;->setWebContentsDebuggingEnabled(Z)V
+
+    .line 422
+    :cond_3a6
     monitor-exit v0
 
     return-void
 
-    .line 270
-    :cond_395
-    :goto_395
+    .line 272
+    :cond_3a8
+    :goto_3a8
     monitor-exit v0
 
     return-void
 
-    :catchall_397
+    :catchall_3aa
     move-exception v1
 
-    .line 415
+    .line 422
     monitor-exit v0
-    :try_end_399
-    .catchall {:try_start_180 .. :try_end_399} :catchall_397
+    :try_end_3ac
+    .catchall {:try_start_180 .. :try_end_3ac} :catchall_3aa
 
     throw v1
 .end method
@@ -3308,14 +3336,14 @@
 .method public static loadProxyList()V
     .registers 16
 
-    .line 1008
+    .line 1026
     sget-boolean v0, Lorg/telegram/messenger/SharedConfig;->proxyListLoaded:Z
 
     if-eqz v0, :cond_5
 
     return-void
 
-    .line 1011
+    .line 1029
     :cond_5
     sget-object v0, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
@@ -3331,28 +3359,28 @@
 
     const-string v3, ""
 
-    .line 1012
+    .line 1030
     invoke-interface {v0, v1, v3}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
     const-string v1, "proxy_user"
 
-    .line 1013
+    .line 1031
     invoke-interface {v0, v1, v3}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v7
 
     const-string v1, "proxy_pass"
 
-    .line 1014
+    .line 1032
     invoke-interface {v0, v1, v3}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v8
 
     const-string v1, "proxy_secret"
 
-    .line 1015
+    .line 1033
     invoke-interface {v0, v1, v3}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v9
@@ -3361,51 +3389,51 @@
 
     const-string v3, "proxy_port"
 
-    .line 1016
+    .line 1034
     invoke-interface {v0, v3, v1}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
 
     move-result v6
 
     const/4 v1, 0x1
 
-    .line 1018
+    .line 1036
     sput-boolean v1, Lorg/telegram/messenger/SharedConfig;->proxyListLoaded:Z
 
-    .line 1019
+    .line 1037
     sget-object v1, Lorg/telegram/messenger/SharedConfig;->proxyList:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->clear()V
 
     const/4 v1, 0x0
 
-    .line 1020
+    .line 1038
     sput-object v1, Lorg/telegram/messenger/SharedConfig;->currentProxy:Lorg/telegram/messenger/SharedConfig$ProxyInfo;
 
     const-string v3, "proxy_list"
 
-    .line 1021
+    .line 1039
     invoke-interface {v0, v3, v1}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1022
+    .line 1040
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
     if-nez v1, :cond_a4
 
-    .line 1023
+    .line 1041
     invoke-static {v0, v2}, Landroid/util/Base64;->decode(Ljava/lang/String;I)[B
 
     move-result-object v0
 
-    .line 1024
+    .line 1042
     new-instance v1, Lorg/telegram/tgnet/SerializedData;
 
     invoke-direct {v1, v0}, Lorg/telegram/tgnet/SerializedData;-><init>([B)V
 
-    .line 1025
+    .line 1043
     invoke-virtual {v1, v2}, Lorg/telegram/tgnet/SerializedData;->readInt32(Z)I
 
     move-result v0
@@ -3415,30 +3443,30 @@
     :goto_55
     if-ge v3, v0, :cond_a1
 
-    .line 1027
+    .line 1045
     new-instance v4, Lorg/telegram/messenger/SharedConfig$ProxyInfo;
 
-    .line 1028
+    .line 1046
     invoke-virtual {v1, v2}, Lorg/telegram/tgnet/SerializedData;->readString(Z)Ljava/lang/String;
 
     move-result-object v11
 
-    .line 1029
+    .line 1047
     invoke-virtual {v1, v2}, Lorg/telegram/tgnet/SerializedData;->readInt32(Z)I
 
     move-result v12
 
-    .line 1030
+    .line 1048
     invoke-virtual {v1, v2}, Lorg/telegram/tgnet/SerializedData;->readString(Z)Ljava/lang/String;
 
     move-result-object v13
 
-    .line 1031
+    .line 1049
     invoke-virtual {v1, v2}, Lorg/telegram/tgnet/SerializedData;->readString(Z)Ljava/lang/String;
 
     move-result-object v14
 
-    .line 1032
+    .line 1050
     invoke-virtual {v1, v2}, Lorg/telegram/tgnet/SerializedData;->readString(Z)Ljava/lang/String;
 
     move-result-object v15
@@ -3447,12 +3475,12 @@
 
     invoke-direct/range {v10 .. v15}, Lorg/telegram/messenger/SharedConfig$ProxyInfo;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1033
+    .line 1051
     sget-object v10, Lorg/telegram/messenger/SharedConfig;->proxyList:Ljava/util/ArrayList;
 
     invoke-virtual {v10, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1034
+    .line 1052
     sget-object v10, Lorg/telegram/messenger/SharedConfig;->currentProxy:Lorg/telegram/messenger/SharedConfig$ProxyInfo;
 
     if-nez v10, :cond_9e
@@ -3463,7 +3491,7 @@
 
     if-nez v10, :cond_9e
 
-    .line 1035
+    .line 1053
     iget-object v10, v4, Lorg/telegram/messenger/SharedConfig$ProxyInfo;->address:Ljava/lang/String;
 
     invoke-virtual {v5, v10}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -3492,7 +3520,7 @@
 
     if-eqz v10, :cond_9e
 
-    .line 1036
+    .line 1054
     sput-object v4, Lorg/telegram/messenger/SharedConfig;->currentProxy:Lorg/telegram/messenger/SharedConfig$ProxyInfo;
 
     :cond_9e
@@ -3500,11 +3528,11 @@
 
     goto :goto_55
 
-    .line 1040
+    .line 1058
     :cond_a1
     invoke-virtual {v1}, Lorg/telegram/tgnet/SerializedData;->cleanup()V
 
-    .line 1042
+    .line 1060
     :cond_a4
     sget-object v0, Lorg/telegram/messenger/SharedConfig;->currentProxy:Lorg/telegram/messenger/SharedConfig$ProxyInfo;
 
@@ -3516,7 +3544,7 @@
 
     if-nez v0, :cond_bb
 
-    .line 1043
+    .line 1061
     new-instance v0, Lorg/telegram/messenger/SharedConfig$ProxyInfo;
 
     move-object v4, v0
@@ -3525,7 +3553,7 @@
 
     sput-object v0, Lorg/telegram/messenger/SharedConfig;->currentProxy:Lorg/telegram/messenger/SharedConfig$ProxyInfo;
 
-    .line 1044
+    .line 1062
     sget-object v1, Lorg/telegram/messenger/SharedConfig;->proxyList:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v2, v0}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
@@ -3537,12 +3565,12 @@
 .method public static removeLockRecordAudioVideoHint()V
     .registers 3
 
-    .line 643
+    .line 650
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getGlobalMainSettings()Landroid/content/SharedPreferences;
 
     move-result-object v0
 
-    .line 644
+    .line 651
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
@@ -3551,10 +3579,10 @@
 
     const/4 v2, 0x3
 
-    .line 645
+    .line 652
     invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
-    .line 646
+    .line 653
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     return-void
@@ -3563,12 +3591,12 @@
 .method public static removeScheduledOrNoSoundHint()V
     .registers 3
 
-    .line 629
+    .line 636
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getGlobalMainSettings()Landroid/content/SharedPreferences;
 
     move-result-object v0
 
-    .line 630
+    .line 637
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
@@ -3577,10 +3605,10 @@
 
     const/4 v2, 0x3
 
-    .line 631
+    .line 638
     invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
-    .line 632
+    .line 639
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     return-void
@@ -3589,12 +3617,12 @@
 .method public static removeTextSelectionHint()V
     .registers 3
 
-    .line 607
+    .line 614
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getGlobalMainSettings()Landroid/content/SharedPreferences;
 
     move-result-object v0
 
-    .line 608
+    .line 615
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
@@ -3603,10 +3631,10 @@
 
     const/4 v2, 0x3
 
-    .line 609
+    .line 616
     invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
-    .line 610
+    .line 617
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     return-void
@@ -3615,12 +3643,12 @@
 .method public static saveConfig()V
     .registers 6
 
-    .line 205
+    .line 207
     sget-object v0, Lorg/telegram/messenger/SharedConfig;->sync:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 207
+    .line 209
     :try_start_3
     sget-object v1, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
@@ -3632,28 +3660,28 @@
 
     move-result-object v1
 
-    .line 208
+    .line 210
     invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v1
 
     const-string v2, "saveIncomingPhotos"
 
-    .line 209
+    .line 211
     sget-boolean v4, Lorg/telegram/messenger/SharedConfig;->saveIncomingPhotos:Z
 
     invoke-interface {v1, v2, v4}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
     const-string v2, "passcodeHash1"
 
-    .line 210
+    .line 212
     sget-object v4, Lorg/telegram/messenger/SharedConfig;->passcodeHash:Ljava/lang/String;
 
     invoke-interface {v1, v2, v4}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
     const-string v2, "passcodeSalt"
 
-    .line 211
+    .line 213
     sget-object v4, Lorg/telegram/messenger/SharedConfig;->passcodeSalt:[B
 
     array-length v5, v4
@@ -3674,91 +3702,91 @@
 
     const-string v2, "appLocked"
 
-    .line 212
+    .line 214
     sget-boolean v4, Lorg/telegram/messenger/SharedConfig;->appLocked:Z
 
     invoke-interface {v1, v2, v4}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
     const-string v2, "passcodeType"
 
-    .line 213
+    .line 215
     sget v4, Lorg/telegram/messenger/SharedConfig;->passcodeType:I
 
     invoke-interface {v1, v2, v4}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
     const-string v2, "passcodeRetryInMs"
 
-    .line 214
+    .line 216
     sget-wide v4, Lorg/telegram/messenger/SharedConfig;->passcodeRetryInMs:J
 
     invoke-interface {v1, v2, v4, v5}, Landroid/content/SharedPreferences$Editor;->putLong(Ljava/lang/String;J)Landroid/content/SharedPreferences$Editor;
 
     const-string v2, "lastUptimeMillis"
 
-    .line 215
+    .line 217
     sget-wide v4, Lorg/telegram/messenger/SharedConfig;->lastUptimeMillis:J
 
     invoke-interface {v1, v2, v4, v5}, Landroid/content/SharedPreferences$Editor;->putLong(Ljava/lang/String;J)Landroid/content/SharedPreferences$Editor;
 
     const-string v2, "badPasscodeTries"
 
-    .line 216
+    .line 218
     sget v4, Lorg/telegram/messenger/SharedConfig;->badPasscodeTries:I
 
     invoke-interface {v1, v2, v4}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
     const-string v2, "autoLockIn"
 
-    .line 217
+    .line 219
     sget v4, Lorg/telegram/messenger/SharedConfig;->autoLockIn:I
 
     invoke-interface {v1, v2, v4}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
     const-string v2, "lastPauseTime"
 
-    .line 218
+    .line 220
     sget v4, Lorg/telegram/messenger/SharedConfig;->lastPauseTime:I
 
     invoke-interface {v1, v2, v4}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
     const-string v2, "lastUpdateVersion2"
 
-    .line 219
+    .line 221
     sget-object v4, Lorg/telegram/messenger/SharedConfig;->lastUpdateVersion:Ljava/lang/String;
 
     invoke-interface {v1, v2, v4}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
     const-string v2, "useFingerprint"
 
-    .line 220
+    .line 222
     sget-boolean v4, Lorg/telegram/messenger/SharedConfig;->useFingerprint:Z
 
     invoke-interface {v1, v2, v4}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
     const-string v2, "allowScreenCapture"
 
-    .line 221
+    .line 223
     sget-boolean v4, Lorg/telegram/messenger/SharedConfig;->allowScreenCapture:Z
 
     invoke-interface {v1, v2, v4}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
     const-string v2, "pushString2"
 
-    .line 222
+    .line 224
     sget-object v4, Lorg/telegram/messenger/SharedConfig;->pushString:Ljava/lang/String;
 
     invoke-interface {v1, v2, v4}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
     const-string v2, "pushStatSent"
 
-    .line 223
+    .line 225
     sget-boolean v4, Lorg/telegram/messenger/SharedConfig;->pushStatSent:Z
 
     invoke-interface {v1, v2, v4}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
     const-string v2, "pushAuthKey"
 
-    .line 224
+    .line 226
     sget-object v4, Lorg/telegram/messenger/SharedConfig;->pushAuthKey:[B
 
     if-eqz v4, :cond_8e
@@ -3777,70 +3805,70 @@
 
     const-string v2, "lastLocalId"
 
-    .line 225
+    .line 227
     sget v4, Lorg/telegram/messenger/SharedConfig;->lastLocalId:I
 
     invoke-interface {v1, v2, v4}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
     const-string v2, "passportConfigJson"
 
-    .line 226
+    .line 228
     sget-object v4, Lorg/telegram/messenger/SharedConfig;->passportConfigJson:Ljava/lang/String;
 
     invoke-interface {v1, v2, v4}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
     const-string v2, "passportConfigHash"
 
-    .line 227
+    .line 229
     sget v4, Lorg/telegram/messenger/SharedConfig;->passportConfigHash:I
 
     invoke-interface {v1, v2, v4}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
     const-string v2, "sortContactsByName"
 
-    .line 228
+    .line 230
     sget-boolean v4, Lorg/telegram/messenger/SharedConfig;->sortContactsByName:Z
 
     invoke-interface {v1, v2, v4}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
     const-string v2, "sortFilesByName"
 
-    .line 229
+    .line 231
     sget-boolean v4, Lorg/telegram/messenger/SharedConfig;->sortFilesByName:Z
 
     invoke-interface {v1, v2, v4}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
     const-string v2, "textSelectionHintShows"
 
-    .line 230
+    .line 232
     sget v4, Lorg/telegram/messenger/SharedConfig;->textSelectionHintShows:I
 
     invoke-interface {v1, v2, v4}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
     const-string v2, "scheduledOrNoSoundHintShows"
 
-    .line 231
+    .line 233
     sget v4, Lorg/telegram/messenger/SharedConfig;->scheduledOrNoSoundHintShows:I
 
     invoke-interface {v1, v2, v4}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
     const-string v2, "forwardingOptionsHintShown"
 
-    .line 232
+    .line 234
     sget-boolean v4, Lorg/telegram/messenger/SharedConfig;->forwardingOptionsHintShown:Z
 
     invoke-interface {v1, v2, v4}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
     const-string v2, "lockRecordAudioVideoHint"
 
-    .line 233
+    .line 235
     sget v4, Lorg/telegram/messenger/SharedConfig;->lockRecordAudioVideoHint:I
 
     invoke-interface {v1, v2, v4}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
     const-string v2, "storageCacheDir"
 
-    .line 234
+    .line 236
     sget-object v4, Lorg/telegram/messenger/SharedConfig;->storageCacheDir:Ljava/lang/String;
 
     invoke-static {v4}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -3859,7 +3887,7 @@
     :goto_e1
     invoke-interface {v1, v2, v4}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
-    .line 236
+    .line 238
     sget-object v2, Lorg/telegram/messenger/SharedConfig;->pendingAppUpdate:Lorg/telegram/tgnet/TLRPC$TL_help_appUpdate;
     :try_end_e6
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_e6} :catch_120
@@ -3867,7 +3895,7 @@
 
     if-eqz v2, :cond_10e
 
-    .line 238
+    .line 240
     :try_start_e8
     new-instance v4, Lorg/telegram/tgnet/SerializedData;
 
@@ -3877,12 +3905,12 @@
 
     invoke-direct {v4, v2}, Lorg/telegram/tgnet/SerializedData;-><init>(I)V
 
-    .line 239
+    .line 241
     sget-object v2, Lorg/telegram/messenger/SharedConfig;->pendingAppUpdate:Lorg/telegram/tgnet/TLRPC$TL_help_appUpdate;
 
     invoke-virtual {v2, v4}, Lorg/telegram/tgnet/TLRPC$TL_help_appUpdate;->serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
 
-    .line 240
+    .line 242
     invoke-virtual {v4}, Lorg/telegram/tgnet/SerializedData;->toByteArray()[B
 
     move-result-object v2
@@ -3893,17 +3921,17 @@
 
     const-string v3, "appUpdate"
 
-    .line 241
+    .line 243
     invoke-interface {v1, v3, v2}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
     const-string v2, "appUpdateBuild"
 
-    .line 242
+    .line 244
     sget v3, Lorg/telegram/messenger/SharedConfig;->pendingAppUpdateBuildVersion:I
 
     invoke-interface {v1, v2, v3}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
-    .line 243
+    .line 245
     invoke-virtual {v4}, Lorg/telegram/tgnet/SerializedData;->cleanup()V
     :try_end_10d
     .catch Ljava/lang/Exception; {:try_start_e8 .. :try_end_10d} :catch_113
@@ -3915,19 +3943,19 @@
     :try_start_10e
     const-string v2, "appUpdate"
 
-    .line 248
+    .line 250
     invoke-interface {v1, v2}, Landroid/content/SharedPreferences$Editor;->remove(Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
     :catch_113
     :goto_113
     const-string v2, "appUpdateCheckTime"
 
-    .line 250
+    .line 252
     sget-wide v3, Lorg/telegram/messenger/SharedConfig;->lastUpdateCheckTime:J
 
     invoke-interface {v1, v2, v3, v4}, Landroid/content/SharedPreferences$Editor;->putLong(Ljava/lang/String;J)Landroid/content/SharedPreferences$Editor;
 
-    .line 252
+    .line 254
     invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->apply()V
     :try_end_11d
     .catch Ljava/lang/Exception; {:try_start_10e .. :try_end_11d} :catch_120
@@ -3943,11 +3971,11 @@
     :catch_120
     move-exception v1
 
-    .line 254
+    .line 256
     :try_start_121
     invoke-static {v1}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
-    .line 256
+    .line 258
     :goto_124
     monitor-exit v0
 
@@ -3964,19 +3992,19 @@
 .method public static saveProxyList()V
     .registers 7
 
-    .line 1049
+    .line 1067
     new-instance v0, Lorg/telegram/tgnet/SerializedData;
 
     invoke-direct {v0}, Lorg/telegram/tgnet/SerializedData;-><init>()V
 
-    .line 1050
+    .line 1068
     sget-object v1, Lorg/telegram/messenger/SharedConfig;->proxyList:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
     move-result v1
 
-    .line 1051
+    .line 1069
     invoke-virtual {v0, v1}, Lorg/telegram/tgnet/SerializedData;->writeInt32(I)V
 
     const/4 v2, 0x0
@@ -3986,7 +4014,7 @@
     :goto_10
     if-ge v3, v1, :cond_47
 
-    .line 1053
+    .line 1071
     sget-object v4, Lorg/telegram/messenger/SharedConfig;->proxyList:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -3995,7 +4023,7 @@
 
     check-cast v4, Lorg/telegram/messenger/SharedConfig$ProxyInfo;
 
-    .line 1054
+    .line 1072
     iget-object v5, v4, Lorg/telegram/messenger/SharedConfig$ProxyInfo;->address:Ljava/lang/String;
 
     const-string v6, ""
@@ -4010,12 +4038,12 @@
     :goto_22
     invoke-virtual {v0, v5}, Lorg/telegram/tgnet/SerializedData;->writeString(Ljava/lang/String;)V
 
-    .line 1055
+    .line 1073
     iget v5, v4, Lorg/telegram/messenger/SharedConfig$ProxyInfo;->port:I
 
     invoke-virtual {v0, v5}, Lorg/telegram/tgnet/SerializedData;->writeInt32(I)V
 
-    .line 1056
+    .line 1074
     iget-object v5, v4, Lorg/telegram/messenger/SharedConfig$ProxyInfo;->username:Ljava/lang/String;
 
     if-eqz v5, :cond_2f
@@ -4028,7 +4056,7 @@
     :goto_30
     invoke-virtual {v0, v5}, Lorg/telegram/tgnet/SerializedData;->writeString(Ljava/lang/String;)V
 
-    .line 1057
+    .line 1075
     iget-object v5, v4, Lorg/telegram/messenger/SharedConfig$ProxyInfo;->password:Ljava/lang/String;
 
     if-eqz v5, :cond_38
@@ -4041,7 +4069,7 @@
     :goto_39
     invoke-virtual {v0, v5}, Lorg/telegram/tgnet/SerializedData;->writeString(Ljava/lang/String;)V
 
-    .line 1058
+    .line 1076
     iget-object v4, v4, Lorg/telegram/messenger/SharedConfig$ProxyInfo;->secret:Ljava/lang/String;
 
     if-eqz v4, :cond_41
@@ -4055,7 +4083,7 @@
 
     goto :goto_10
 
-    .line 1060
+    .line 1078
     :cond_47
     sget-object v1, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
@@ -4065,7 +4093,7 @@
 
     move-result-object v1
 
-    .line 1061
+    .line 1079
     invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v1
@@ -4088,7 +4116,7 @@
 
     invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 1062
+    .line 1080
     invoke-virtual {v0}, Lorg/telegram/tgnet/SerializedData;->cleanup()V
 
     return-void
@@ -4097,30 +4125,30 @@
 .method public static setDistanceSystemType(I)V
     .registers 3
 
-    .line 999
+    .line 1017
     sput p0, Lorg/telegram/messenger/SharedConfig;->distanceSystemType:I
 
-    .line 1000
+    .line 1018
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getGlobalMainSettings()Landroid/content/SharedPreferences;
 
     move-result-object p0
 
-    .line 1001
+    .line 1019
     invoke-interface {p0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object p0
 
-    .line 1002
+    .line 1020
     sget v0, Lorg/telegram/messenger/SharedConfig;->distanceSystemType:I
 
     const-string v1, "distanceSystemType"
 
     invoke-interface {p0, v1, v0}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
-    .line 1003
+    .line 1021
     invoke-interface {p0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 1004
+    .line 1022
     invoke-static {}, Lorg/telegram/messenger/LocaleController;->resetImperialSystemType()V
 
     return-void
@@ -4129,10 +4157,10 @@
 .method public static setDontAskManageStorage(Z)V
     .registers 3
 
-    .line 1232
+    .line 1250
     sput-boolean p0, Lorg/telegram/messenger/SharedConfig;->dontAskManageStorage:Z
 
-    .line 1233
+    .line 1251
     sget-object p0, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     const-string v0, "mainconfig"
@@ -4163,15 +4191,15 @@
 .method public static setFastScrollHintCount(I)V
     .registers 3
 
-    .line 1225
+    .line 1243
     sget v0, Lorg/telegram/messenger/SharedConfig;->fastScrollHintCount:I
 
     if-eq v0, p0, :cond_1e
 
-    .line 1226
+    .line 1244
     sput p0, Lorg/telegram/messenger/SharedConfig;->fastScrollHintCount:I
 
-    .line 1227
+    .line 1245
     sget-object p0, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     const/4 v0, 0x0
@@ -4203,27 +4231,27 @@
 .method public static setKeepMedia(I)V
     .registers 3
 
-    .line 657
+    .line 664
     sput p0, Lorg/telegram/messenger/SharedConfig;->keepMedia:I
 
-    .line 658
+    .line 665
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getGlobalMainSettings()Landroid/content/SharedPreferences;
 
     move-result-object p0
 
-    .line 659
+    .line 666
     invoke-interface {p0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object p0
 
-    .line 660
+    .line 667
     sget v0, Lorg/telegram/messenger/SharedConfig;->keepMedia:I
 
     const-string v1, "keep_media"
 
     invoke-interface {p0, v1, v0}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
-    .line 661
+    .line 668
     invoke-interface {p0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     return-void
@@ -4232,15 +4260,15 @@
 .method public static setMediaColumnsCount(I)V
     .registers 3
 
-    .line 1218
+    .line 1236
     sget v0, Lorg/telegram/messenger/SharedConfig;->mediaColumnsCount:I
 
     if-eq v0, p0, :cond_1e
 
-    .line 1219
+    .line 1237
     sput p0, Lorg/telegram/messenger/SharedConfig;->mediaColumnsCount:I
 
-    .line 1220
+    .line 1238
     sget-object p0, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     const/4 v0, 0x0
@@ -4274,7 +4302,7 @@
 
     const/4 v0, 0x0
 
-    .line 494
+    .line 501
     :try_start_1
     sget-object v1, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
@@ -4292,12 +4320,12 @@
 
     move-result-object v1
 
-    .line 495
+    .line 502
     iget v2, v1, Landroid/content/pm/PackageInfo;->versionCode:I
     :try_end_13
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_13} :catch_18
 
-    .line 496
+    .line 503
     :try_start_13
     iget-object v1, v1, Landroid/content/pm/PackageInfo;->versionName:Ljava/lang/String;
     :try_end_15
@@ -4315,7 +4343,7 @@
 
     const/4 v2, 0x0
 
-    .line 498
+    .line 505
     :goto_1a
     invoke-static {v1}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
@@ -4324,16 +4352,16 @@
     :goto_1e
     if-nez v2, :cond_22
 
-    .line 501
+    .line 508
     sget v2, Lorg/telegram/messenger/BuildVars;->BUILD_VERSION:I
 
     :cond_22
     if-nez v1, :cond_26
 
-    .line 504
+    .line 511
     sget-object v1, Lorg/telegram/messenger/BuildVars;->BUILD_VERSION_STRING:Ljava/lang/String;
 
-    .line 506
+    .line 513
     :cond_26
     iget-object v3, p0, Lorg/telegram/tgnet/TLRPC$TL_help_appUpdate;->version:Ljava/lang/String;
 
@@ -4347,14 +4375,14 @@
 
     goto :goto_3a
 
-    .line 509
+    .line 516
     :cond_31
     sput-object p0, Lorg/telegram/messenger/SharedConfig;->pendingAppUpdate:Lorg/telegram/tgnet/TLRPC$TL_help_appUpdate;
 
-    .line 510
+    .line 517
     sput v2, Lorg/telegram/messenger/SharedConfig;->pendingAppUpdateBuildVersion:I
 
-    .line 511
+    .line 518
     invoke-static {}, Lorg/telegram/messenger/SharedConfig;->saveConfig()V
 
     const/4 p0, 0x1
@@ -4369,35 +4397,35 @@
 .method public static setNoSoundHintShowed(Z)V
     .registers 3
 
-    .line 874
+    .line 892
     sget-boolean v0, Lorg/telegram/messenger/SharedConfig;->noSoundHintShowed:Z
 
     if-ne v0, p0, :cond_5
 
     return-void
 
-    .line 877
+    .line 895
     :cond_5
     sput-boolean p0, Lorg/telegram/messenger/SharedConfig;->noSoundHintShowed:Z
 
-    .line 878
+    .line 896
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getGlobalMainSettings()Landroid/content/SharedPreferences;
 
     move-result-object p0
 
-    .line 879
+    .line 897
     invoke-interface {p0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object p0
 
-    .line 880
+    .line 898
     sget-boolean v0, Lorg/telegram/messenger/SharedConfig;->noSoundHintShowed:Z
 
     const-string v1, "noSoundHintShowed"
 
     invoke-interface {p0, v1, v0}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
-    .line 881
+    .line 899
     invoke-interface {p0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     return-void
@@ -4408,19 +4436,19 @@
 
     const/4 v0, 0x0
 
-    .line 451
+    .line 458
     sput-object v0, Lorg/telegram/messenger/SharedConfig;->passportConfigMap:Ljava/util/HashMap;
 
-    .line 452
+    .line 459
     sput-object p0, Lorg/telegram/messenger/SharedConfig;->passportConfigJson:Ljava/lang/String;
 
-    .line 453
+    .line 460
     sput p1, Lorg/telegram/messenger/SharedConfig;->passportConfigHash:I
 
-    .line 454
+    .line 461
     invoke-static {}, Lorg/telegram/messenger/SharedConfig;->saveConfig()V
 
-    .line 455
+    .line 462
     invoke-static {}, Lorg/telegram/messenger/SharedConfig;->getCountryLangs()Ljava/util/HashMap;
 
     return-void
@@ -4437,10 +4465,10 @@
 
     if-ne p0, v2, :cond_a
 
-    .line 785
+    .line 803
     sput-boolean v0, Lorg/telegram/messenger/SharedConfig;->shuffleMusic:Z
 
-    .line 786
+    .line 804
     sput-boolean v1, Lorg/telegram/messenger/SharedConfig;->playOrderReversed:Z
 
     goto :goto_15
@@ -4448,22 +4476,22 @@
     :cond_a
     if-ne p0, v0, :cond_11
 
-    .line 788
+    .line 806
     sput-boolean v0, Lorg/telegram/messenger/SharedConfig;->playOrderReversed:Z
 
-    .line 789
+    .line 807
     sput-boolean v1, Lorg/telegram/messenger/SharedConfig;->shuffleMusic:Z
 
     goto :goto_15
 
-    .line 791
+    .line 809
     :cond_11
     sput-boolean v1, Lorg/telegram/messenger/SharedConfig;->playOrderReversed:Z
 
-    .line 792
+    .line 810
     sput-boolean v1, Lorg/telegram/messenger/SharedConfig;->shuffleMusic:Z
 
-    .line 794
+    .line 812
     :goto_15
     invoke-static {}, Lorg/telegram/messenger/MediaController;->getInstance()Lorg/telegram/messenger/MediaController;
 
@@ -4471,31 +4499,31 @@
 
     invoke-virtual {p0}, Lorg/telegram/messenger/MediaController;->checkIsNextMediaFileDownloaded()V
 
-    .line 795
+    .line 813
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getGlobalMainSettings()Landroid/content/SharedPreferences;
 
     move-result-object p0
 
-    .line 796
+    .line 814
     invoke-interface {p0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object p0
 
-    .line 797
+    .line 815
     sget-boolean v0, Lorg/telegram/messenger/SharedConfig;->shuffleMusic:Z
 
     const-string v1, "shuffleMusic"
 
     invoke-interface {p0, v1, v0}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
-    .line 798
+    .line 816
     sget-boolean v0, Lorg/telegram/messenger/SharedConfig;->playOrderReversed:Z
 
     const-string v1, "playOrderReversed"
 
     invoke-interface {p0, v1, v0}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
-    .line 799
+    .line 817
     invoke-interface {p0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     return-void
@@ -4504,7 +4532,7 @@
 .method public static setRepeatMode(I)V
     .registers 3
 
-    .line 803
+    .line 821
     sput p0, Lorg/telegram/messenger/SharedConfig;->repeatMode:I
 
     if-ltz p0, :cond_7
@@ -4516,28 +4544,28 @@
     :cond_7
     const/4 p0, 0x0
 
-    .line 805
+    .line 823
     sput p0, Lorg/telegram/messenger/SharedConfig;->repeatMode:I
 
-    .line 807
+    .line 825
     :cond_a
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getGlobalMainSettings()Landroid/content/SharedPreferences;
 
     move-result-object p0
 
-    .line 808
+    .line 826
     invoke-interface {p0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object p0
 
-    .line 809
+    .line 827
     sget v0, Lorg/telegram/messenger/SharedConfig;->repeatMode:I
 
     const-string v1, "repeatMode"
 
     invoke-interface {p0, v1, v0}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
-    .line 810
+    .line 828
     invoke-interface {p0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     return-void
@@ -4546,27 +4574,27 @@
 .method public static setSearchMessagesAsListUsed(Z)V
     .registers 3
 
-    .line 584
+    .line 591
     sput-boolean p0, Lorg/telegram/messenger/SharedConfig;->searchMessagesAsListUsed:Z
 
-    .line 585
+    .line 592
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getGlobalMainSettings()Landroid/content/SharedPreferences;
 
     move-result-object p0
 
-    .line 586
+    .line 593
     invoke-interface {p0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object p0
 
-    .line 587
+    .line 594
     sget-boolean v0, Lorg/telegram/messenger/SharedConfig;->searchMessagesAsListUsed:Z
 
     const-string v1, "searchMessagesAsListUsed"
 
     invoke-interface {p0, v1, v0}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
-    .line 588
+    .line 595
     invoke-interface {p0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     return-void
@@ -4575,27 +4603,27 @@
 .method public static setSecretMapPreviewType(I)V
     .registers 3
 
-    .line 866
+    .line 884
     sput p0, Lorg/telegram/messenger/SharedConfig;->mapPreviewType:I
 
-    .line 867
+    .line 885
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getGlobalMainSettings()Landroid/content/SharedPreferences;
 
     move-result-object p0
 
-    .line 868
+    .line 886
     invoke-interface {p0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object p0
 
-    .line 869
+    .line 887
     sget v0, Lorg/telegram/messenger/SharedConfig;->mapPreviewType:I
 
     const-string v1, "mapPreviewType"
 
     invoke-interface {p0, v1, v0}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
-    .line 870
+    .line 888
     invoke-interface {p0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     return-void
@@ -4604,27 +4632,27 @@
 .method public static setStickersReorderingHintUsed(Z)V
     .registers 3
 
-    .line 592
+    .line 599
     sput-boolean p0, Lorg/telegram/messenger/SharedConfig;->stickersReorderingHintUsed:Z
 
-    .line 593
+    .line 600
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getGlobalMainSettings()Landroid/content/SharedPreferences;
 
     move-result-object p0
 
-    .line 594
+    .line 601
     invoke-interface {p0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object p0
 
-    .line 595
+    .line 602
     sget-boolean v0, Lorg/telegram/messenger/SharedConfig;->stickersReorderingHintUsed:Z
 
     const-string v1, "stickersReorderingHintUsed"
 
     invoke-interface {p0, v1, v0}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
-    .line 596
+    .line 603
     invoke-interface {p0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     return-void
@@ -4633,27 +4661,27 @@
 .method public static setSuggestStickers(I)V
     .registers 3
 
-    .line 576
+    .line 583
     sput p0, Lorg/telegram/messenger/SharedConfig;->suggestStickers:I
 
-    .line 577
+    .line 584
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getGlobalMainSettings()Landroid/content/SharedPreferences;
 
     move-result-object p0
 
-    .line 578
+    .line 585
     invoke-interface {p0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object p0
 
-    .line 579
+    .line 586
     sget v0, Lorg/telegram/messenger/SharedConfig;->suggestStickers:I
 
     const-string v1, "suggestStickers"
 
     invoke-interface {p0, v1, v0}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
-    .line 580
+    .line 587
     invoke-interface {p0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     return-void
@@ -4662,30 +4690,30 @@
 .method public static setUseThreeLinesLayout(Z)V
     .registers 5
 
-    .line 836
+    .line 854
     sput-boolean p0, Lorg/telegram/messenger/SharedConfig;->useThreeLinesLayout:Z
 
-    .line 837
+    .line 855
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getGlobalMainSettings()Landroid/content/SharedPreferences;
 
     move-result-object p0
 
-    .line 838
+    .line 856
     invoke-interface {p0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object p0
 
-    .line 839
+    .line 857
     sget-boolean v0, Lorg/telegram/messenger/SharedConfig;->useThreeLinesLayout:Z
 
     const-string v1, "useThreeLinesLayout"
 
     invoke-interface {p0, v1, v0}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
-    .line 840
+    .line 858
     invoke-interface {p0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 841
+    .line 859
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getGlobalInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object p0
@@ -4710,31 +4738,31 @@
 .method public static toggleArchiveHidden()V
     .registers 3
 
-    .line 845
+    .line 863
     sget-boolean v0, Lorg/telegram/messenger/SharedConfig;->archiveHidden:Z
 
     xor-int/lit8 v0, v0, 0x1
 
     sput-boolean v0, Lorg/telegram/messenger/SharedConfig;->archiveHidden:Z
 
-    .line 846
+    .line 864
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getGlobalMainSettings()Landroid/content/SharedPreferences;
 
     move-result-object v0
 
-    .line 847
+    .line 865
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
-    .line 848
+    .line 866
     sget-boolean v1, Lorg/telegram/messenger/SharedConfig;->archiveHidden:Z
 
     const-string v2, "archiveHidden"
 
     invoke-interface {v0, v2, v1}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
-    .line 849
+    .line 867
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     return-void
@@ -4743,31 +4771,31 @@
 .method public static toggleAutoplayGifs()V
     .registers 3
 
-    .line 828
+    .line 846
     sget-boolean v0, Lorg/telegram/messenger/SharedConfig;->autoplayGifs:Z
 
     xor-int/lit8 v0, v0, 0x1
 
     sput-boolean v0, Lorg/telegram/messenger/SharedConfig;->autoplayGifs:Z
 
-    .line 829
+    .line 847
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getGlobalMainSettings()Landroid/content/SharedPreferences;
 
     move-result-object v0
 
-    .line 830
+    .line 848
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
-    .line 831
+    .line 849
     sget-boolean v1, Lorg/telegram/messenger/SharedConfig;->autoplayGifs:Z
 
     const-string v2, "autoplay_gif"
 
     invoke-interface {v0, v2, v1}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
-    .line 832
+    .line 850
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     return-void
@@ -4776,31 +4804,31 @@
 .method public static toggleAutoplayVideo()V
     .registers 3
 
-    .line 853
+    .line 871
     sget-boolean v0, Lorg/telegram/messenger/SharedConfig;->autoplayVideo:Z
 
     xor-int/lit8 v0, v0, 0x1
 
     sput-boolean v0, Lorg/telegram/messenger/SharedConfig;->autoplayVideo:Z
 
-    .line 854
+    .line 872
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getGlobalMainSettings()Landroid/content/SharedPreferences;
 
     move-result-object v0
 
-    .line 855
+    .line 873
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
-    .line 856
+    .line 874
     sget-boolean v1, Lorg/telegram/messenger/SharedConfig;->autoplayVideo:Z
 
     const-string v2, "autoplay_video"
 
     invoke-interface {v0, v2, v1}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
-    .line 857
+    .line 875
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     return-void
@@ -4809,31 +4837,31 @@
 .method public static toggleBigEmoji()V
     .registers 3
 
-    .line 776
+    .line 794
     sget-boolean v0, Lorg/telegram/messenger/SharedConfig;->allowBigEmoji:Z
 
     xor-int/lit8 v0, v0, 0x1
 
     sput-boolean v0, Lorg/telegram/messenger/SharedConfig;->allowBigEmoji:Z
 
-    .line 777
+    .line 795
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getGlobalMainSettings()Landroid/content/SharedPreferences;
 
     move-result-object v0
 
-    .line 778
+    .line 796
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
-    .line 779
+    .line 797
     sget-boolean v1, Lorg/telegram/messenger/SharedConfig;->allowBigEmoji:Z
 
     const-string v2, "allowBigEmoji"
 
     invoke-interface {v0, v2, v1}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
-    .line 780
+    .line 798
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     return-void
@@ -4842,31 +4870,31 @@
 .method public static toggleChatBlur()V
     .registers 3
 
-    .line 975
+    .line 993
     sget-boolean v0, Lorg/telegram/messenger/SharedConfig;->chatBlur:Z
 
     xor-int/lit8 v0, v0, 0x1
 
     sput-boolean v0, Lorg/telegram/messenger/SharedConfig;->chatBlur:Z
 
-    .line 976
+    .line 994
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getGlobalMainSettings()Landroid/content/SharedPreferences;
 
     move-result-object v0
 
-    .line 977
+    .line 995
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
-    .line 978
+    .line 996
     sget-boolean v1, Lorg/telegram/messenger/SharedConfig;->chatBlur:Z
 
     const-string v2, "chatBlur"
 
     invoke-interface {v0, v2, v1}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
-    .line 979
+    .line 997
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     return-void
@@ -4875,32 +4903,76 @@
 .method public static toggleCustomTabs()V
     .registers 3
 
-    .line 893
+    .line 911
     sget-boolean v0, Lorg/telegram/messenger/SharedConfig;->customTabs:Z
 
     xor-int/lit8 v0, v0, 0x1
 
     sput-boolean v0, Lorg/telegram/messenger/SharedConfig;->customTabs:Z
 
-    .line 894
+    .line 912
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getGlobalMainSettings()Landroid/content/SharedPreferences;
 
     move-result-object v0
 
-    .line 895
+    .line 913
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
-    .line 896
+    .line 914
     sget-boolean v1, Lorg/telegram/messenger/SharedConfig;->customTabs:Z
 
     const-string v2, "custom_tabs"
 
     invoke-interface {v0, v2, v1}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
-    .line 897
+    .line 915
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
+
+    return-void
+.end method
+
+.method public static toggleDebugWebView()V
+    .registers 3
+
+    .line 767
+    sget-boolean v0, Lorg/telegram/messenger/SharedConfig;->debugWebView:Z
+
+    xor-int/lit8 v0, v0, 0x1
+
+    sput-boolean v0, Lorg/telegram/messenger/SharedConfig;->debugWebView:Z
+
+    .line 768
+    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v2, 0x13
+
+    if-lt v1, v2, :cond_f
+
+    .line 769
+    invoke-static {v0}, Landroid/webkit/WebView;->setWebContentsDebuggingEnabled(Z)V
+
+    .line 771
+    :cond_f
+    invoke-static {}, Lorg/telegram/messenger/MessagesController;->getGlobalMainSettings()Landroid/content/SharedPreferences;
+
+    move-result-object v0
+
+    .line 772
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v0
+
+    .line 773
+    sget-boolean v1, Lorg/telegram/messenger/SharedConfig;->debugWebView:Z
+
+    const-string v2, "debugWebView"
+
+    invoke-interface {v0, v2, v1}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
+
+    .line 774
+    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
 
     return-void
 .end method
@@ -4908,39 +4980,39 @@
 .method public static toggleDirectShare()V
     .registers 3
 
-    .line 901
+    .line 919
     sget-boolean v0, Lorg/telegram/messenger/SharedConfig;->directShare:Z
 
     xor-int/lit8 v0, v0, 0x1
 
     sput-boolean v0, Lorg/telegram/messenger/SharedConfig;->directShare:Z
 
-    .line 902
+    .line 920
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getGlobalMainSettings()Landroid/content/SharedPreferences;
 
     move-result-object v0
 
-    .line 903
+    .line 921
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
-    .line 904
+    .line 922
     sget-boolean v1, Lorg/telegram/messenger/SharedConfig;->directShare:Z
 
     const-string v2, "direct_share"
 
     invoke-interface {v0, v2, v1}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
-    .line 905
+    .line 923
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 906
+    .line 924
     sget-object v0, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     invoke-static {v0}, Landroidx/core/content/pm/ShortcutManagerCompat;->removeAllDynamicShortcuts(Landroid/content/Context;)V
 
-    .line 907
+    .line 925
     sget v0, Lorg/telegram/messenger/UserConfig;->selectedAccount:I
 
     invoke-static {v0}, Lorg/telegram/messenger/MediaDataController;->getInstance(I)Lorg/telegram/messenger/MediaDataController;
@@ -4955,31 +5027,31 @@
 .method public static toggleDisableVoiceAudioEffects()V
     .registers 3
 
-    .line 736
+    .line 743
     sget-boolean v0, Lorg/telegram/messenger/SharedConfig;->disableVoiceAudioEffects:Z
 
     xor-int/lit8 v0, v0, 0x1
 
     sput-boolean v0, Lorg/telegram/messenger/SharedConfig;->disableVoiceAudioEffects:Z
 
-    .line 737
+    .line 744
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getGlobalMainSettings()Landroid/content/SharedPreferences;
 
     move-result-object v0
 
-    .line 738
+    .line 745
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
-    .line 739
+    .line 746
     sget-boolean v1, Lorg/telegram/messenger/SharedConfig;->disableVoiceAudioEffects:Z
 
     const-string v2, "disableVoiceAudioEffects"
 
     invoke-interface {v0, v2, v1}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
-    .line 740
+    .line 747
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     return-void
@@ -4988,31 +5060,31 @@
 .method public static toggleForceRTMPStream()V
     .registers 3
 
-    .line 752
+    .line 759
     sget-boolean v0, Lorg/telegram/messenger/SharedConfig;->forceRtmpStream:Z
 
     xor-int/lit8 v0, v0, 0x1
 
     sput-boolean v0, Lorg/telegram/messenger/SharedConfig;->forceRtmpStream:Z
 
-    .line 753
+    .line 760
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getGlobalMainSettings()Landroid/content/SharedPreferences;
 
     move-result-object v0
 
-    .line 754
+    .line 761
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
-    .line 755
+    .line 762
     sget-boolean v1, Lorg/telegram/messenger/SharedConfig;->forceRtmpStream:Z
 
     const-string v2, "forceRtmpStream"
 
     invoke-interface {v0, v2, v1}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
-    .line 756
+    .line 763
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
 
     return-void
@@ -5021,31 +5093,31 @@
 .method public static toggleInappCamera()V
     .registers 3
 
-    .line 983
+    .line 1001
     sget-boolean v0, Lorg/telegram/messenger/SharedConfig;->inappCamera:Z
 
     xor-int/lit8 v0, v0, 0x1
 
     sput-boolean v0, Lorg/telegram/messenger/SharedConfig;->inappCamera:Z
 
-    .line 984
+    .line 1002
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getGlobalMainSettings()Landroid/content/SharedPreferences;
 
     move-result-object v0
 
-    .line 985
+    .line 1003
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
-    .line 986
+    .line 1004
     sget-boolean v1, Lorg/telegram/messenger/SharedConfig;->inappCamera:Z
 
     const-string v2, "inappCamera"
 
     invoke-interface {v0, v2, v1}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
-    .line 987
+    .line 1005
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     return-void
@@ -5054,31 +5126,31 @@
 .method public static toggleLoopStickers()V
     .registers 3
 
-    .line 768
+    .line 786
     sget-boolean v0, Lorg/telegram/messenger/SharedConfig;->loopStickers:Z
 
     xor-int/lit8 v0, v0, 0x1
 
     sput-boolean v0, Lorg/telegram/messenger/SharedConfig;->loopStickers:Z
 
-    .line 769
+    .line 787
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getGlobalMainSettings()Landroid/content/SharedPreferences;
 
     move-result-object v0
 
-    .line 770
+    .line 788
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
-    .line 771
+    .line 789
     sget-boolean v1, Lorg/telegram/messenger/SharedConfig;->loopStickers:Z
 
     const-string v2, "loopStickers"
 
     invoke-interface {v0, v2, v1}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
-    .line 772
+    .line 790
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     return-void
@@ -5087,31 +5159,31 @@
 .method public static toggleNoStatusBar()V
     .registers 3
 
-    .line 760
+    .line 778
     sget-boolean v0, Lorg/telegram/messenger/SharedConfig;->noStatusBar:Z
 
     xor-int/lit8 v0, v0, 0x1
 
     sput-boolean v0, Lorg/telegram/messenger/SharedConfig;->noStatusBar:Z
 
-    .line 761
+    .line 779
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getGlobalMainSettings()Landroid/content/SharedPreferences;
 
     move-result-object v0
 
-    .line 762
+    .line 780
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
-    .line 763
+    .line 781
     sget-boolean v1, Lorg/telegram/messenger/SharedConfig;->noStatusBar:Z
 
     const-string v2, "noStatusBar"
 
     invoke-interface {v0, v2, v1}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
-    .line 764
+    .line 782
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     return-void
@@ -5120,31 +5192,31 @@
 .method public static toggleNoiseSupression()V
     .registers 3
 
-    .line 744
+    .line 751
     sget-boolean v0, Lorg/telegram/messenger/SharedConfig;->noiseSupression:Z
 
     xor-int/lit8 v0, v0, 0x1
 
     sput-boolean v0, Lorg/telegram/messenger/SharedConfig;->noiseSupression:Z
 
-    .line 745
+    .line 752
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getGlobalMainSettings()Landroid/content/SharedPreferences;
 
     move-result-object v0
 
-    .line 746
+    .line 753
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
-    .line 747
+    .line 754
     sget-boolean v1, Lorg/telegram/messenger/SharedConfig;->noiseSupression:Z
 
     const-string v2, "noiseSupression"
 
     invoke-interface {v0, v2, v1}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
-    .line 748
+    .line 755
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     return-void
@@ -5153,31 +5225,31 @@
 .method public static togglePauseMusicOnRecord()V
     .registers 3
 
-    .line 967
+    .line 985
     sget-boolean v0, Lorg/telegram/messenger/SharedConfig;->pauseMusicOnRecord:Z
 
     xor-int/lit8 v0, v0, 0x1
 
     sput-boolean v0, Lorg/telegram/messenger/SharedConfig;->pauseMusicOnRecord:Z
 
-    .line 968
+    .line 986
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getGlobalMainSettings()Landroid/content/SharedPreferences;
 
     move-result-object v0
 
-    .line 969
+    .line 987
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
-    .line 970
+    .line 988
     sget-boolean v1, Lorg/telegram/messenger/SharedConfig;->pauseMusicOnRecord:Z
 
     const-string v2, "pauseMusicOnRecord"
 
     invoke-interface {v0, v2, v1}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
-    .line 971
+    .line 989
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     return-void
@@ -5186,31 +5258,31 @@
 .method public static toggleRoundCamera16to9()V
     .registers 3
 
-    .line 991
+    .line 1009
     sget-boolean v0, Lorg/telegram/messenger/SharedConfig;->roundCamera16to9:Z
 
     xor-int/lit8 v0, v0, 0x1
 
     sput-boolean v0, Lorg/telegram/messenger/SharedConfig;->roundCamera16to9:Z
 
-    .line 992
+    .line 1010
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getGlobalMainSettings()Landroid/content/SharedPreferences;
 
     move-result-object v0
 
-    .line 993
+    .line 1011
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
-    .line 994
+    .line 1012
     sget-boolean v1, Lorg/telegram/messenger/SharedConfig;->roundCamera16to9:Z
 
     const-string v2, "roundCamera16to9"
 
     invoke-interface {v0, v2, v1}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
-    .line 995
+    .line 1013
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     return-void
@@ -5219,31 +5291,31 @@
 .method public static toggleSaveStreamMedia()V
     .registers 3
 
-    .line 951
+    .line 969
     sget-boolean v0, Lorg/telegram/messenger/SharedConfig;->saveStreamMedia:Z
 
     xor-int/lit8 v0, v0, 0x1
 
     sput-boolean v0, Lorg/telegram/messenger/SharedConfig;->saveStreamMedia:Z
 
-    .line 952
+    .line 970
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getGlobalMainSettings()Landroid/content/SharedPreferences;
 
     move-result-object v0
 
-    .line 953
+    .line 971
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
-    .line 954
+    .line 972
     sget-boolean v1, Lorg/telegram/messenger/SharedConfig;->saveStreamMedia:Z
 
     const-string v2, "saveStreamMedia"
 
     invoke-interface {v0, v2, v1}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
-    .line 955
+    .line 973
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     return-void
@@ -5252,7 +5324,7 @@
 .method public static toggleSaveToGalleryFlag(I)V
     .registers 3
 
-    .line 814
+    .line 832
     sget v0, Lorg/telegram/messenger/SharedConfig;->saveToGalleryFlags:I
 
     and-int v1, v0, p0
@@ -5263,7 +5335,7 @@
 
     and-int/2addr p0, v0
 
-    .line 815
+    .line 833
     sput p0, Lorg/telegram/messenger/SharedConfig;->saveToGalleryFlags:I
 
     goto :goto_f
@@ -5271,16 +5343,16 @@
     :cond_c
     or-int/2addr p0, v0
 
-    .line 817
+    .line 835
     sput p0, Lorg/telegram/messenger/SharedConfig;->saveToGalleryFlags:I
 
-    .line 819
+    .line 837
     :goto_f
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getGlobalMainSettings()Landroid/content/SharedPreferences;
 
     move-result-object p0
 
-    .line 820
+    .line 838
     invoke-interface {p0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object p0
@@ -5295,14 +5367,14 @@
 
     invoke-interface {p0}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    .line 821
+    .line 839
     invoke-static {}, Lorg/telegram/messenger/ImageLoader;->getInstance()Lorg/telegram/messenger/ImageLoader;
 
     move-result-object p0
 
     invoke-virtual {p0}, Lorg/telegram/messenger/ImageLoader;->checkMediaPaths()V
 
-    .line 822
+    .line 840
     invoke-static {}, Lorg/telegram/messenger/ImageLoader;->getInstance()Lorg/telegram/messenger/ImageLoader;
 
     move-result-object p0
@@ -5321,31 +5393,31 @@
 .method public static toggleSmoothKeyboard()V
     .registers 3
 
-    .line 959
+    .line 977
     sget-boolean v0, Lorg/telegram/messenger/SharedConfig;->smoothKeyboard:Z
 
     xor-int/lit8 v0, v0, 0x1
 
     sput-boolean v0, Lorg/telegram/messenger/SharedConfig;->smoothKeyboard:Z
 
-    .line 960
+    .line 978
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getGlobalMainSettings()Landroid/content/SharedPreferences;
 
     move-result-object v0
 
-    .line 961
+    .line 979
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
-    .line 962
+    .line 980
     sget-boolean v1, Lorg/telegram/messenger/SharedConfig;->smoothKeyboard:Z
 
     const-string v2, "smoothKeyboard2"
 
     invoke-interface {v0, v2, v1}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
-    .line 963
+    .line 981
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     return-void
@@ -5354,31 +5426,31 @@
 .method public static toggleSortContactsByName()V
     .registers 3
 
-    .line 919
+    .line 937
     sget-boolean v0, Lorg/telegram/messenger/SharedConfig;->sortContactsByName:Z
 
     xor-int/lit8 v0, v0, 0x1
 
     sput-boolean v0, Lorg/telegram/messenger/SharedConfig;->sortContactsByName:Z
 
-    .line 920
+    .line 938
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getGlobalMainSettings()Landroid/content/SharedPreferences;
 
     move-result-object v0
 
-    .line 921
+    .line 939
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
-    .line 922
+    .line 940
     sget-boolean v1, Lorg/telegram/messenger/SharedConfig;->sortContactsByName:Z
 
     const-string v2, "sortContactsByName"
 
     invoke-interface {v0, v2, v1}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
-    .line 923
+    .line 941
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     return-void
@@ -5387,31 +5459,31 @@
 .method public static toggleSortFilesByName()V
     .registers 3
 
-    .line 927
+    .line 945
     sget-boolean v0, Lorg/telegram/messenger/SharedConfig;->sortFilesByName:Z
 
     xor-int/lit8 v0, v0, 0x1
 
     sput-boolean v0, Lorg/telegram/messenger/SharedConfig;->sortFilesByName:Z
 
-    .line 928
+    .line 946
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getGlobalMainSettings()Landroid/content/SharedPreferences;
 
     move-result-object v0
 
-    .line 929
+    .line 947
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
-    .line 930
+    .line 948
     sget-boolean v1, Lorg/telegram/messenger/SharedConfig;->sortFilesByName:Z
 
     const-string v2, "sortFilesByName"
 
     invoke-interface {v0, v2, v1}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
-    .line 931
+    .line 949
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     return-void
@@ -5420,31 +5492,31 @@
 .method public static toggleStreamAllVideo()V
     .registers 3
 
-    .line 935
+    .line 953
     sget-boolean v0, Lorg/telegram/messenger/SharedConfig;->streamAllVideo:Z
 
     xor-int/lit8 v0, v0, 0x1
 
     sput-boolean v0, Lorg/telegram/messenger/SharedConfig;->streamAllVideo:Z
 
-    .line 936
+    .line 954
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getGlobalMainSettings()Landroid/content/SharedPreferences;
 
     move-result-object v0
 
-    .line 937
+    .line 955
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
-    .line 938
+    .line 956
     sget-boolean v1, Lorg/telegram/messenger/SharedConfig;->streamAllVideo:Z
 
     const-string v2, "streamAllVideo"
 
     invoke-interface {v0, v2, v1}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
-    .line 939
+    .line 957
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     return-void
@@ -5453,31 +5525,31 @@
 .method public static toggleStreamMedia()V
     .registers 3
 
-    .line 911
+    .line 929
     sget-boolean v0, Lorg/telegram/messenger/SharedConfig;->streamMedia:Z
 
     xor-int/lit8 v0, v0, 0x1
 
     sput-boolean v0, Lorg/telegram/messenger/SharedConfig;->streamMedia:Z
 
-    .line 912
+    .line 930
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getGlobalMainSettings()Landroid/content/SharedPreferences;
 
     move-result-object v0
 
-    .line 913
+    .line 931
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
-    .line 914
+    .line 932
     sget-boolean v1, Lorg/telegram/messenger/SharedConfig;->streamMedia:Z
 
     const-string v2, "streamMedia"
 
     invoke-interface {v0, v2, v1}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
-    .line 915
+    .line 933
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     return-void
@@ -5486,31 +5558,31 @@
 .method public static toggleStreamMkv()V
     .registers 3
 
-    .line 943
+    .line 961
     sget-boolean v0, Lorg/telegram/messenger/SharedConfig;->streamMkv:Z
 
     xor-int/lit8 v0, v0, 0x1
 
     sput-boolean v0, Lorg/telegram/messenger/SharedConfig;->streamMkv:Z
 
-    .line 944
+    .line 962
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getGlobalMainSettings()Landroid/content/SharedPreferences;
 
     move-result-object v0
 
-    .line 945
+    .line 963
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
-    .line 946
+    .line 964
     sget-boolean v1, Lorg/telegram/messenger/SharedConfig;->streamMkv:Z
 
     const-string v2, "streamMkv"
 
     invoke-interface {v0, v2, v1}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
-    .line 947
+    .line 965
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     return-void
@@ -5519,31 +5591,31 @@
 .method public static toogleRaiseToSpeak()V
     .registers 3
 
-    .line 885
+    .line 903
     sget-boolean v0, Lorg/telegram/messenger/SharedConfig;->raiseToSpeak:Z
 
     xor-int/lit8 v0, v0, 0x1
 
     sput-boolean v0, Lorg/telegram/messenger/SharedConfig;->raiseToSpeak:Z
 
-    .line 886
+    .line 904
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getGlobalMainSettings()Landroid/content/SharedPreferences;
 
     move-result-object v0
 
-    .line 887
+    .line 905
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
-    .line 888
+    .line 906
     sget-boolean v1, Lorg/telegram/messenger/SharedConfig;->raiseToSpeak:Z
 
     const-string v2, "raise_to_speak"
 
     invoke-interface {v0, v2, v1}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
-    .line 889
+    .line 907
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     return-void
@@ -5552,10 +5624,10 @@
 .method public static updateChatListSwipeSetting(I)V
     .registers 3
 
-    .line 1145
+    .line 1163
     sput p0, Lorg/telegram/messenger/SharedConfig;->chatSwipeAction:I
 
-    .line 1146
+    .line 1164
     sget-object p0, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     const-string v0, "mainconfig"
@@ -5566,7 +5638,7 @@
 
     move-result-object p0
 
-    .line 1147
+    .line 1165
     invoke-interface {p0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object p0
@@ -5587,10 +5659,10 @@
 .method public static updateDayNightThemeSwitchHintCount(I)V
     .registers 3
 
-    .line 1164
+    .line 1182
     sput p0, Lorg/telegram/messenger/SharedConfig;->dayNightThemeSwitchHintCount:I
 
-    .line 1165
+    .line 1183
     sget-object p0, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     const-string v0, "mainconfig"
@@ -5601,7 +5673,7 @@
 
     move-result-object p0
 
-    .line 1166
+    .line 1184
     invoke-interface {p0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object p0
@@ -5622,10 +5694,10 @@
 .method public static updateEmojiInteractionsHintCount(I)V
     .registers 3
 
-    .line 1157
+    .line 1175
     sput p0, Lorg/telegram/messenger/SharedConfig;->emojiInteractionsHintCount:I
 
-    .line 1158
+    .line 1176
     sget-object p0, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     const-string v0, "mainconfig"
@@ -5636,7 +5708,7 @@
 
     move-result-object p0
 
-    .line 1159
+    .line 1177
     invoke-interface {p0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object p0
@@ -5657,10 +5729,10 @@
 .method public static updateMessageSeenHintCount(I)V
     .registers 3
 
-    .line 1151
+    .line 1169
     sput p0, Lorg/telegram/messenger/SharedConfig;->messageSeenHintCount:I
 
-    .line 1152
+    .line 1170
     sget-object p0, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     const-string v0, "mainconfig"
@@ -5671,7 +5743,7 @@
 
     move-result-object p0
 
-    .line 1153
+    .line 1171
     invoke-interface {p0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object p0

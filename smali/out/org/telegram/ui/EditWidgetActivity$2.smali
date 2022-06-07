@@ -122,7 +122,7 @@
     goto :goto_51
 
     :cond_e
-    const v0, 0x7f080098
+    const v0, 0x7f080099
 
     .line 864
     invoke-virtual {p1, v0}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
@@ -164,7 +164,7 @@
 
     new-array p4, p3, [Ljava/lang/CharSequence;
 
-    const v0, 0x7f0e0540
+    const v0, 0x7f0e0591
 
     const-string v2, "Delete"
 

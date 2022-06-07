@@ -25,7 +25,7 @@
 
     const-string v1, "SharedMediaFastScrollHint"
 
-    const v2, 0x7f0e1045
+    const v2, 0x7f0e1103
 
     .line 32
     invoke-static {v1, v2}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;

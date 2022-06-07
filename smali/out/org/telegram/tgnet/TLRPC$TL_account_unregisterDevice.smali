@@ -33,10 +33,10 @@
 .method public constructor <init>()V
     .registers 2
 
-    .line 45913
+    .line 46365
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
-    .line 45918
+    .line 46370
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -51,7 +51,7 @@
 .method public deserializeResponse(Lorg/telegram/tgnet/AbstractSerializedData;IZ)Lorg/telegram/tgnet/TLObject;
     .registers 4
 
-    .line 45921
+    .line 46373
     invoke-static {p1, p2, p3}, Lorg/telegram/tgnet/TLRPC$Bool;->TLdeserialize(Lorg/telegram/tgnet/AbstractSerializedData;IZ)Lorg/telegram/tgnet/TLRPC$Bool;
 
     move-result-object p1
@@ -62,34 +62,34 @@
 .method public serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
     .registers 6
 
-    .line 45925
+    .line 46377
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_account_unregisterDevice;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 45926
+    .line 46378
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_account_unregisterDevice;->token_type:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 45927
+    .line 46379
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_account_unregisterDevice;->token:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeString(Ljava/lang/String;)V
 
     const v0, 0x1cb5c415
 
-    .line 45928
+    .line 46380
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 45929
+    .line 46381
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_account_unregisterDevice;->other_uids:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
-    .line 45930
+    .line 46382
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
     const/4 v1, 0x0
@@ -97,7 +97,7 @@
     :goto_1f
     if-ge v1, v0, :cond_33
 
-    .line 45932
+    .line 46384
     iget-object v2, p0, Lorg/telegram/tgnet/TLRPC$TL_account_unregisterDevice;->other_uids:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;

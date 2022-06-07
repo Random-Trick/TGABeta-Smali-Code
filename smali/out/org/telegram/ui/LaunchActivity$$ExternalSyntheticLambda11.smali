@@ -39,7 +39,7 @@
 
     iget v2, p0, Lorg/telegram/ui/LaunchActivity$$ExternalSyntheticLambda11;->f$2:I
 
-    invoke-static {v0, v1, v2, p1, p2}, Lorg/telegram/ui/LaunchActivity;->$r8$lambda$Plt_zyeJKnnpmJW6rVHD_4yrQh8(Lorg/telegram/ui/LaunchActivity;Ljava/util/HashMap;ILandroid/content/DialogInterface;I)V
+    invoke-static {v0, v1, v2, p1, p2}, Lorg/telegram/ui/LaunchActivity;->$r8$lambda$I2nZt3fs8Uxt7nid6lpDMGx0hOs(Lorg/telegram/ui/LaunchActivity;Ljava/util/HashMap;ILandroid/content/DialogInterface;I)V
 
     return-void
 .end method

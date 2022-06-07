@@ -91,7 +91,7 @@
     goto :goto_36
 
     :cond_2d
-    const p0, 0x7f0e0830
+    const p0, 0x7f0e088a
 
     const-string p1, "HiddenName"
 
@@ -202,7 +202,7 @@
 
     :cond_3c
     :goto_3c
-    const p0, 0x7f0e0830
+    const p0, 0x7f0e088a
 
     const-string v0, "HiddenName"
 

@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/LinkActionView;Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
     .registers 5
 
-    .line 356
+    .line 359
     iput-object p1, p0, Lorg/telegram/ui/Components/LinkActionView$5;->this$0:Lorg/telegram/ui/Components/LinkActionView;
 
     invoke-direct {p0, p2, p3, p4}, Lorg/telegram/ui/Components/QRCodeBottomSheet;-><init>(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
@@ -35,10 +35,10 @@
 .method public dismiss()V
     .registers 3
 
-    .line 359
+    .line 362
     invoke-super {p0}, Lorg/telegram/ui/ActionBar/BottomSheet;->dismiss()V
 
-    .line 360
+    .line 363
     iget-object v0, p0, Lorg/telegram/ui/Components/LinkActionView$5;->this$0:Lorg/telegram/ui/Components/LinkActionView;
 
     const/4 v1, 0x0

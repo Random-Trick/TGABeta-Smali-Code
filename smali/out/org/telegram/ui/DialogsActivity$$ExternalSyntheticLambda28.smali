@@ -2,32 +2,42 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Landroid/view/View$OnTouchListener;
 
 
-# instance fields
-.field public final synthetic f$0:Lorg/telegram/ui/DialogsActivity;
+# static fields
+.field public static final synthetic INSTANCE:Lorg/telegram/ui/DialogsActivity$$ExternalSyntheticLambda28;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lorg/telegram/ui/DialogsActivity;)V
-    .registers 2
+.method static synthetic constructor <clinit>()V
+    .registers 1
+
+    new-instance v0, Lorg/telegram/ui/DialogsActivity$$ExternalSyntheticLambda28;
+
+    invoke-direct {v0}, Lorg/telegram/ui/DialogsActivity$$ExternalSyntheticLambda28;-><init>()V
+
+    sput-object v0, Lorg/telegram/ui/DialogsActivity$$ExternalSyntheticLambda28;->INSTANCE:Lorg/telegram/ui/DialogsActivity$$ExternalSyntheticLambda28;
+
+    return-void
+.end method
+
+.method private synthetic constructor <init>()V
+    .registers 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lorg/telegram/ui/DialogsActivity$$ExternalSyntheticLambda28;->f$0:Lorg/telegram/ui/DialogsActivity;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .registers 2
+.method public final onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
+    .registers 3
 
-    iget-object v0, p0, Lorg/telegram/ui/DialogsActivity$$ExternalSyntheticLambda28;->f$0:Lorg/telegram/ui/DialogsActivity;
+    invoke-static {p1, p2}, Lorg/telegram/ui/DialogsActivity;->$r8$lambda$1wTDFCi3JWq4rPj7zBz5qIS10oE(Landroid/view/View;Landroid/view/MotionEvent;)Z
 
-    invoke-static {v0}, Lorg/telegram/ui/DialogsActivity;->$r8$lambda$14XJtdjkczu_t5Twhq3CpR8r6k0(Lorg/telegram/ui/DialogsActivity;)V
+    move-result p1
 
-    return-void
+    return p1
 .end method

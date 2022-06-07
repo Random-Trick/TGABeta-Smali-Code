@@ -119,10 +119,10 @@
 .method public constructor <init>()V
     .registers 6
 
-    .line 969
+    .line 970
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 970
+    .line 971
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -133,7 +133,7 @@
 
     new-array v1, v0, [Landroid/util/SparseArray;
 
-    .line 971
+    .line 972
     new-instance v2, Landroid/util/SparseArray;
 
     invoke-direct {v2}, Landroid/util/SparseArray;-><init>()V
@@ -152,21 +152,21 @@
 
     iput-object v1, p0, Lorg/telegram/ui/Components/SharedMediaLayout$SharedMediaData;->messagesDict:[Landroid/util/SparseArray;
 
-    .line 972
+    .line 973
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v1, p0, Lorg/telegram/ui/Components/SharedMediaLayout$SharedMediaData;->sections:Ljava/util/ArrayList;
 
-    .line 973
+    .line 974
     new-instance v1, Ljava/util/HashMap;
 
     invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
     iput-object v1, p0, Lorg/telegram/ui/Components/SharedMediaLayout$SharedMediaData;->sectionArrays:Ljava/util/HashMap;
 
-    .line 974
+    .line 975
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
@@ -175,32 +175,32 @@
 
     new-array v1, v0, [Z
 
-    .line 978
+    .line 979
     fill-array-data v1, :array_56
 
     iput-object v1, p0, Lorg/telegram/ui/Components/SharedMediaLayout$SharedMediaData;->endReached:[Z
 
     new-array v0, v0, [I
 
-    .line 979
+    .line 980
     fill-array-data v0, :array_5c
 
     iput-object v0, p0, Lorg/telegram/ui/Components/SharedMediaLayout$SharedMediaData;->max_id:[I
 
-    .line 981
+    .line 982
     iput-boolean v4, p0, Lorg/telegram/ui/Components/SharedMediaLayout$SharedMediaData;->startReached:Z
 
-    .line 987
+    .line 988
     iput v3, p0, Lorg/telegram/ui/Components/SharedMediaLayout$SharedMediaData;->filterType:I
 
-    .line 989
+    .line 990
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/ui/Components/SharedMediaLayout$SharedMediaData;->frozenMessages:Ljava/util/ArrayList;
 
-    .line 995
+    .line 996
     new-instance v0, Landroidx/recyclerview/widget/RecyclerView$RecycledViewPool;
 
     invoke-direct {v0}, Landroidx/recyclerview/widget/RecyclerView$RecycledViewPool;-><init>()V
@@ -229,7 +229,7 @@
 .method static synthetic access$2300(Lorg/telegram/ui/Components/SharedMediaLayout$SharedMediaData;)Z
     .registers 1
 
-    .line 969
+    .line 970
     iget-boolean p0, p0, Lorg/telegram/ui/Components/SharedMediaLayout$SharedMediaData;->hasPhotos:Z
 
     return p0
@@ -238,34 +238,43 @@
 .method static synthetic access$2400(Lorg/telegram/ui/Components/SharedMediaLayout$SharedMediaData;)Z
     .registers 1
 
-    .line 969
+    .line 970
     iget-boolean p0, p0, Lorg/telegram/ui/Components/SharedMediaLayout$SharedMediaData;->hasVideos:Z
 
     return p0
 .end method
 
-.method static synthetic access$6900(Lorg/telegram/ui/Components/SharedMediaLayout$SharedMediaData;)I
+.method static synthetic access$700(Lorg/telegram/ui/Components/SharedMediaLayout$SharedMediaData;)I
     .registers 1
 
-    .line 969
+    .line 970
+    iget p0, p0, Lorg/telegram/ui/Components/SharedMediaLayout$SharedMediaData;->startOffset:I
+
+    return p0
+.end method
+
+.method static synthetic access$7000(Lorg/telegram/ui/Components/SharedMediaLayout$SharedMediaData;)I
+    .registers 1
+
+    .line 970
     iget p0, p0, Lorg/telegram/ui/Components/SharedMediaLayout$SharedMediaData;->endLoadingStubs:I
 
     return p0
 .end method
 
-.method static synthetic access$6902(Lorg/telegram/ui/Components/SharedMediaLayout$SharedMediaData;I)I
+.method static synthetic access$7002(Lorg/telegram/ui/Components/SharedMediaLayout$SharedMediaData;I)I
     .registers 2
 
-    .line 969
+    .line 970
     iput p1, p0, Lorg/telegram/ui/Components/SharedMediaLayout$SharedMediaData;->endLoadingStubs:I
 
     return p1
 .end method
 
-.method static synthetic access$6910(Lorg/telegram/ui/Components/SharedMediaLayout$SharedMediaData;)I
+.method static synthetic access$7010(Lorg/telegram/ui/Components/SharedMediaLayout$SharedMediaData;)I
     .registers 3
 
-    .line 969
+    .line 970
     iget v0, p0, Lorg/telegram/ui/Components/SharedMediaLayout$SharedMediaData;->endLoadingStubs:I
 
     add-int/lit8 v1, v0, -0x1
@@ -275,19 +284,10 @@
     return v0
 .end method
 
-.method static synthetic access$700(Lorg/telegram/ui/Components/SharedMediaLayout$SharedMediaData;)I
-    .registers 1
-
-    .line 969
-    iget p0, p0, Lorg/telegram/ui/Components/SharedMediaLayout$SharedMediaData;->startOffset:I
-
-    return p0
-.end method
-
 .method static synthetic access$702(Lorg/telegram/ui/Components/SharedMediaLayout$SharedMediaData;I)I
     .registers 2
 
-    .line 969
+    .line 970
     iput p1, p0, Lorg/telegram/ui/Components/SharedMediaLayout$SharedMediaData;->startOffset:I
 
     return p1
@@ -296,7 +296,7 @@
 .method static synthetic access$710(Lorg/telegram/ui/Components/SharedMediaLayout$SharedMediaData;)I
     .registers 3
 
-    .line 969
+    .line 970
     iget v0, p0, Lorg/telegram/ui/Components/SharedMediaLayout$SharedMediaData;->startOffset:I
 
     add-int/lit8 v1, v0, -0x1
@@ -311,7 +311,7 @@
 .method public addMessage(Lorg/telegram/messenger/MessageObject;IZZ)Z
     .registers 9
 
-    .line 1010
+    .line 1011
     iget-object v0, p0, Lorg/telegram/ui/Components/SharedMediaLayout$SharedMediaData;->messagesDict:[Landroid/util/SparseArray;
 
     aget-object v0, v0, p2
@@ -330,7 +330,7 @@
 
     return v1
 
-    .line 1013
+    .line 1014
     :cond_10
     iget-object v0, p0, Lorg/telegram/ui/Components/SharedMediaLayout$SharedMediaData;->sectionArrays:Ljava/util/HashMap;
 
@@ -344,12 +344,12 @@
 
     if-nez v0, :cond_39
 
-    .line 1015
+    .line 1016
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1016
+    .line 1017
     iget-object v2, p0, Lorg/telegram/ui/Components/SharedMediaLayout$SharedMediaData;->sectionArrays:Ljava/util/HashMap;
 
     iget-object v3, p1, Lorg/telegram/messenger/MessageObject;->monthKey:Ljava/lang/String;
@@ -358,7 +358,7 @@
 
     if-eqz p3, :cond_32
 
-    .line 1018
+    .line 1019
     iget-object v2, p0, Lorg/telegram/ui/Components/SharedMediaLayout$SharedMediaData;->sections:Ljava/util/ArrayList;
 
     iget-object v3, p1, Lorg/telegram/messenger/MessageObject;->monthKey:Ljava/lang/String;
@@ -367,7 +367,7 @@
 
     goto :goto_39
 
-    .line 1020
+    .line 1021
     :cond_32
     iget-object v2, p0, Lorg/telegram/ui/Components/SharedMediaLayout$SharedMediaData;->sections:Ljava/util/ArrayList;
 
@@ -379,26 +379,26 @@
     :goto_39
     if-eqz p3, :cond_44
 
-    .line 1024
+    .line 1025
     invoke-virtual {v0, v1, p1}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
 
-    .line 1025
+    .line 1026
     iget-object p3, p0, Lorg/telegram/ui/Components/SharedMediaLayout$SharedMediaData;->messages:Ljava/util/ArrayList;
 
     invoke-virtual {p3, v1, p1}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
 
     goto :goto_4c
 
-    .line 1027
+    .line 1028
     :cond_44
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1028
+    .line 1029
     iget-object p3, p0, Lorg/telegram/ui/Components/SharedMediaLayout$SharedMediaData;->messages:Ljava/util/ArrayList;
 
     invoke-virtual {p3, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1030
+    .line 1031
     :goto_4c
     iget-object p3, p0, Lorg/telegram/ui/Components/SharedMediaLayout$SharedMediaData;->messagesDict:[Landroid/util/SparseArray;
 
@@ -412,14 +412,14 @@
 
     if-nez p4, :cond_7c
 
-    .line 1032
+    .line 1033
     invoke-virtual {p1}, Lorg/telegram/messenger/MessageObject;->getId()I
 
     move-result p3
 
     if-lez p3, :cond_98
 
-    .line 1033
+    .line 1034
     iget-object p3, p0, Lorg/telegram/ui/Components/SharedMediaLayout$SharedMediaData;->max_id:[I
 
     invoke-virtual {p1}, Lorg/telegram/messenger/MessageObject;->getId()I
@@ -436,7 +436,7 @@
 
     aput p4, p3, p2
 
-    .line 1034
+    .line 1035
     invoke-virtual {p1}, Lorg/telegram/messenger/MessageObject;->getId()I
 
     move-result p2
@@ -451,7 +451,7 @@
 
     goto :goto_98
 
-    .line 1037
+    .line 1038
     :cond_7c
     iget-object p3, p0, Lorg/telegram/ui/Components/SharedMediaLayout$SharedMediaData;->max_id:[I
 
@@ -469,7 +469,7 @@
 
     aput p4, p3, p2
 
-    .line 1038
+    .line 1039
     invoke-virtual {p1}, Lorg/telegram/messenger/MessageObject;->getId()I
 
     move-result p2
@@ -482,7 +482,7 @@
 
     iput p2, p0, Lorg/telegram/ui/Components/SharedMediaLayout$SharedMediaData;->min_id:I
 
-    .line 1040
+    .line 1041
     :cond_98
     :goto_98
     iget-boolean p2, p0, Lorg/telegram/ui/Components/SharedMediaLayout$SharedMediaData;->hasVideos:Z
@@ -497,10 +497,10 @@
 
     if-eqz p2, :cond_a5
 
-    .line 1041
+    .line 1042
     iput-boolean p3, p0, Lorg/telegram/ui/Components/SharedMediaLayout$SharedMediaData;->hasVideos:Z
 
-    .line 1043
+    .line 1044
     :cond_a5
     iget-boolean p2, p0, Lorg/telegram/ui/Components/SharedMediaLayout$SharedMediaData;->hasPhotos:Z
 
@@ -512,7 +512,7 @@
 
     if-eqz p1, :cond_b1
 
-    .line 1044
+    .line 1045
     iput-boolean p3, p0, Lorg/telegram/ui/Components/SharedMediaLayout$SharedMediaData;->hasPhotos:Z
 
     :cond_b1
@@ -522,7 +522,7 @@
 .method public deleteMessage(II)Lorg/telegram/messenger/MessageObject;
     .registers 6
 
-    .line 1050
+    .line 1051
     iget-object v0, p0, Lorg/telegram/ui/Components/SharedMediaLayout$SharedMediaData;->messagesDict:[Landroid/util/SparseArray;
 
     aget-object v0, v0, p2
@@ -539,7 +539,7 @@
 
     return-object v0
 
-    .line 1054
+    .line 1055
     :cond_e
     iget-object v1, p0, Lorg/telegram/ui/Components/SharedMediaLayout$SharedMediaData;->sectionArrays:Ljava/util/HashMap;
 
@@ -555,16 +555,16 @@
 
     return-object v0
 
-    .line 1058
+    .line 1059
     :cond_1b
     invoke-virtual {v1, p1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 1059
+    .line 1060
     iget-object v0, p0, Lorg/telegram/ui/Components/SharedMediaLayout$SharedMediaData;->messages:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 1060
+    .line 1061
     iget-object v0, p0, Lorg/telegram/ui/Components/SharedMediaLayout$SharedMediaData;->messagesDict:[Landroid/util/SparseArray;
 
     aget-object p2, v0, p2
@@ -575,28 +575,28 @@
 
     invoke-virtual {p2, v0}, Landroid/util/SparseArray;->remove(I)V
 
-    .line 1061
+    .line 1062
     invoke-virtual {v1}, Ljava/util/ArrayList;->isEmpty()Z
 
     move-result p2
 
     if-eqz p2, :cond_42
 
-    .line 1062
+    .line 1063
     iget-object p2, p0, Lorg/telegram/ui/Components/SharedMediaLayout$SharedMediaData;->sectionArrays:Ljava/util/HashMap;
 
     iget-object v0, p1, Lorg/telegram/messenger/MessageObject;->monthKey:Ljava/lang/String;
 
     invoke-virtual {p2, v0}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1063
+    .line 1064
     iget-object p2, p0, Lorg/telegram/ui/Components/SharedMediaLayout$SharedMediaData;->sections:Ljava/util/ArrayList;
 
     iget-object v0, p1, Lorg/telegram/messenger/MessageObject;->monthKey:Ljava/lang/String;
 
     invoke-virtual {p2, v0}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 1065
+    .line 1066
     :cond_42
     iget p2, p0, Lorg/telegram/ui/Components/SharedMediaLayout$SharedMediaData;->totalCount:I
 
@@ -610,7 +610,7 @@
 .method public getEndLoadingStubs()I
     .registers 2
 
-    .line 1101
+    .line 1102
     iget-boolean v0, p0, Lorg/telegram/ui/Components/SharedMediaLayout$SharedMediaData;->isFrozen:Z
 
     if-eqz v0, :cond_7
@@ -637,7 +637,7 @@
         }
     .end annotation
 
-    .line 1080
+    .line 1081
     iget-boolean v0, p0, Lorg/telegram/ui/Components/SharedMediaLayout$SharedMediaData;->isFrozen:Z
 
     if-eqz v0, :cond_7
@@ -656,7 +656,7 @@
 .method public getStartOffset()I
     .registers 2
 
-    .line 1084
+    .line 1085
     iget-boolean v0, p0, Lorg/telegram/ui/Components/SharedMediaLayout$SharedMediaData;->isFrozen:Z
 
     if-eqz v0, :cond_7
@@ -675,7 +675,7 @@
 .method public replaceMid(II)V
     .registers 6
 
-    .line 1070
+    .line 1071
     iget-object v0, p0, Lorg/telegram/ui/Components/SharedMediaLayout$SharedMediaData;->messagesDict:[Landroid/util/SparseArray;
 
     const/4 v1, 0x0
@@ -690,26 +690,26 @@
 
     if-eqz v0, :cond_29
 
-    .line 1072
+    .line 1073
     iget-object v2, p0, Lorg/telegram/ui/Components/SharedMediaLayout$SharedMediaData;->messagesDict:[Landroid/util/SparseArray;
 
     aget-object v2, v2, v1
 
     invoke-virtual {v2, p1}, Landroid/util/SparseArray;->remove(I)V
 
-    .line 1073
+    .line 1074
     iget-object p1, p0, Lorg/telegram/ui/Components/SharedMediaLayout$SharedMediaData;->messagesDict:[Landroid/util/SparseArray;
 
     aget-object p1, p1, v1
 
     invoke-virtual {p1, p2, v0}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 1074
+    .line 1075
     iget-object p1, v0, Lorg/telegram/messenger/MessageObject;->messageOwner:Lorg/telegram/tgnet/TLRPC$Message;
 
     iput p2, p1, Lorg/telegram/tgnet/TLRPC$Message;->id:I
 
-    .line 1075
+    .line 1076
     iget-object p1, p0, Lorg/telegram/ui/Components/SharedMediaLayout$SharedMediaData;->max_id:[I
 
     aget v0, p1, v1
@@ -727,7 +727,7 @@
 .method public setEndReached(IZ)V
     .registers 4
 
-    .line 1006
+    .line 1007
     iget-object v0, p0, Lorg/telegram/ui/Components/SharedMediaLayout$SharedMediaData;->endReached:[Z
 
     aput-boolean p2, v0, p1
@@ -738,35 +738,35 @@
 .method public setListFrozen(Z)V
     .registers 3
 
-    .line 1088
+    .line 1089
     iget-boolean v0, p0, Lorg/telegram/ui/Components/SharedMediaLayout$SharedMediaData;->isFrozen:Z
 
     if-ne v0, p1, :cond_5
 
     return-void
 
-    .line 1091
+    .line 1092
     :cond_5
     iput-boolean p1, p0, Lorg/telegram/ui/Components/SharedMediaLayout$SharedMediaData;->isFrozen:Z
 
     if-eqz p1, :cond_1d
 
-    .line 1093
+    .line 1094
     iget p1, p0, Lorg/telegram/ui/Components/SharedMediaLayout$SharedMediaData;->startOffset:I
 
     iput p1, p0, Lorg/telegram/ui/Components/SharedMediaLayout$SharedMediaData;->frozenStartOffset:I
 
-    .line 1094
+    .line 1095
     iget p1, p0, Lorg/telegram/ui/Components/SharedMediaLayout$SharedMediaData;->endLoadingStubs:I
 
     iput p1, p0, Lorg/telegram/ui/Components/SharedMediaLayout$SharedMediaData;->frozenEndLoadingStubs:I
 
-    .line 1095
+    .line 1096
     iget-object p1, p0, Lorg/telegram/ui/Components/SharedMediaLayout$SharedMediaData;->frozenMessages:Ljava/util/ArrayList;
 
     invoke-virtual {p1}, Ljava/util/ArrayList;->clear()V
 
-    .line 1096
+    .line 1097
     iget-object p1, p0, Lorg/telegram/ui/Components/SharedMediaLayout$SharedMediaData;->frozenMessages:Ljava/util/ArrayList;
 
     iget-object v0, p0, Lorg/telegram/ui/Components/SharedMediaLayout$SharedMediaData;->messages:Ljava/util/ArrayList;
@@ -780,7 +780,7 @@
 .method public setMaxId(II)V
     .registers 4
 
-    .line 1002
+    .line 1003
     iget-object v0, p0, Lorg/telegram/ui/Components/SharedMediaLayout$SharedMediaData;->max_id:[I
 
     aput p2, v0, p1
@@ -791,7 +791,7 @@
 .method public setTotalCount(I)V
     .registers 2
 
-    .line 998
+    .line 999
     iput p1, p0, Lorg/telegram/ui/Components/SharedMediaLayout$SharedMediaData;->totalCount:I
 
     return-void

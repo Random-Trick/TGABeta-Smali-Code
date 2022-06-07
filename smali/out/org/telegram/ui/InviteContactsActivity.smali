@@ -474,7 +474,7 @@
 
     const-string v1, "NoContacts"
 
-    const v2, 0x7f0e0aae
+    const v2, 0x7f0e0b35
 
     invoke-static {v1, v2}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
@@ -1052,7 +1052,7 @@
     .line 320
     iget-object v4, v0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
-    const v5, 0x7f070140
+    const v5, 0x7f070109
 
     invoke-virtual {v4, v5}, Lorg/telegram/ui/ActionBar/ActionBar;->setBackButtonImage(I)V
 
@@ -1068,7 +1068,7 @@
 
     const-string v6, "InviteFriends"
 
-    const v7, 0x7f0e08af
+    const v7, 0x7f0e090c
 
     invoke-static {v6, v7}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
@@ -1268,7 +1268,7 @@
     .line 431
     iget-object v3, v0, Lorg/telegram/ui/InviteContactsActivity;->editText:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
-    const v6, 0x7f0e0f85
+    const v6, 0x7f0e1041
 
     const-string v9, "SearchFriends"
 
@@ -1342,7 +1342,7 @@
     :goto_134
     iget-object v3, v0, Lorg/telegram/ui/InviteContactsActivity;->emptyView:Lorg/telegram/ui/Components/EmptyTextProgressView;
 
-    const v6, 0x7f0e0aae
+    const v6, 0x7f0e0b35
 
     const-string v9, "NoContacts"
 
@@ -1483,7 +1483,7 @@
     .line 571
     iget-object v3, v0, Lorg/telegram/ui/InviteContactsActivity;->infoTextView:Landroid/widget/TextView;
 
-    const v11, 0x7f0e08b0
+    const v11, 0x7f0e090d
 
     const-string v12, "InviteFriendsHelp"
 
@@ -1754,7 +1754,7 @@
     .line 623
     iget-object v1, v0, Lorg/telegram/ui/InviteContactsActivity;->textView:Landroid/widget/TextView;
 
-    const v2, 0x7f0e08c4
+    const v2, 0x7f0e0929
 
     const-string v4, "InviteToTelegram"
 

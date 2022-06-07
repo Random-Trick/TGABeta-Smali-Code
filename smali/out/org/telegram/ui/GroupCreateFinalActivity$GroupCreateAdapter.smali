@@ -163,22 +163,24 @@
 
     move-result v0
 
-    const/4 v1, 0x1
+    const/4 v1, 0x0
 
-    if-eq v0, v1, :cond_3f
+    const/4 v2, 0x1
 
-    const/4 v1, 0x2
+    if-eq v0, v2, :cond_3f
 
-    if-eq v0, v1, :cond_1d
+    const/4 v2, 0x2
+
+    if-eq v0, v2, :cond_1d
 
     const/4 p2, 0x3
 
-    if-eq v0, p2, :cond_e
+    if-eq v0, p2, :cond_f
 
-    goto :goto_6d
+    goto :goto_6f
 
     .line 944
-    :cond_e
+    :cond_f
     iget-object p1, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     check-cast p1, Lorg/telegram/ui/Cells/TextSettingsCell;
@@ -190,11 +192,9 @@
 
     move-result-object p2
 
-    const/4 v0, 0x0
+    invoke-virtual {p1, p2, v1}, Lorg/telegram/ui/Cells/TextSettingsCell;->setText(Ljava/lang/CharSequence;Z)V
 
-    invoke-virtual {p1, p2, v0}, Lorg/telegram/ui/Cells/TextSettingsCell;->setText(Ljava/lang/CharSequence;Z)V
-
-    goto :goto_6d
+    goto :goto_6f
 
     .line 938
     :cond_1d
@@ -234,7 +234,7 @@
     .line 940
     invoke-virtual {p1, p2, v0, v0}, Lorg/telegram/ui/Cells/GroupCreateUserCell;->setObject(Ljava/lang/Object;Ljava/lang/CharSequence;Ljava/lang/CharSequence;)V
 
-    goto :goto_6d
+    goto :goto_6f
 
     .line 929
     :cond_3f
@@ -251,9 +251,9 @@
 
     if-eqz v0, :cond_5a
 
-    if-ne p2, v1, :cond_5a
+    if-ne p2, v2, :cond_5a
 
-    const p2, 0x7f0e01f1
+    const p2, 0x7f0e0226
 
     const-string v0, "AttachLocation"
 
@@ -264,7 +264,7 @@
 
     invoke-virtual {p1, p2}, Lorg/telegram/ui/Cells/HeaderCell;->setText(Ljava/lang/CharSequence;)V
 
-    goto :goto_6d
+    goto :goto_6f
 
     .line 933
     :cond_5a
@@ -278,15 +278,17 @@
 
     move-result p2
 
-    const-string v0, "Members"
+    new-array v0, v1, [Ljava/lang/Object;
 
-    invoke-static {v0, p2}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    const-string v1, "Members"
+
+    invoke-static {v1, p2, v0}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p2
 
     invoke-virtual {p1, p2}, Lorg/telegram/ui/Cells/HeaderCell;->setText(Ljava/lang/CharSequence;)V
 
-    :goto_6d
+    :goto_6f
     return-void
 .end method
 
@@ -352,7 +354,7 @@
     .line 903
     iget-object v0, p0, Lorg/telegram/ui/GroupCreateFinalActivity$GroupCreateAdapter;->context:Landroid/content/Context;
 
-    const v1, 0x7f07012e
+    const v1, 0x7f0700fd
 
     const-string v2, "windowBackgroundGrayShadow"
 

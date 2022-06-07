@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/ChannelCreateActivity;Landroid/content/Context;)V
     .registers 3
 
-    .line 516
+    .line 567
     iput-object p1, p0, Lorg/telegram/ui/ChannelCreateActivity$5;->this$0:Lorg/telegram/ui/ChannelCreateActivity;
 
     invoke-direct {p0, p2}, Lorg/telegram/ui/Components/RLottieImageView;-><init>(Landroid/content/Context;)V
@@ -35,13 +35,13 @@
 .method public invalidate()V
     .registers 2
 
-    .line 525
+    .line 576
     invoke-super {p0}, Landroid/widget/ImageView;->invalidate()V
 
-    .line 526
+    .line 577
     iget-object v0, p0, Lorg/telegram/ui/ChannelCreateActivity$5;->this$0:Lorg/telegram/ui/ChannelCreateActivity;
 
-    invoke-static {v0}, Lorg/telegram/ui/ChannelCreateActivity;->access$1700(Lorg/telegram/ui/ChannelCreateActivity;)Landroid/view/View;
+    invoke-static {v0}, Lorg/telegram/ui/ChannelCreateActivity;->access$1800(Lorg/telegram/ui/ChannelCreateActivity;)Landroid/view/View;
 
     move-result-object v0
 
@@ -53,13 +53,13 @@
 .method public invalidate(IIII)V
     .registers 5
 
-    .line 519
+    .line 570
     invoke-super {p0, p1, p2, p3, p4}, Landroid/widget/ImageView;->invalidate(IIII)V
 
-    .line 520
+    .line 571
     iget-object p1, p0, Lorg/telegram/ui/ChannelCreateActivity$5;->this$0:Lorg/telegram/ui/ChannelCreateActivity;
 
-    invoke-static {p1}, Lorg/telegram/ui/ChannelCreateActivity;->access$1700(Lorg/telegram/ui/ChannelCreateActivity;)Landroid/view/View;
+    invoke-static {p1}, Lorg/telegram/ui/ChannelCreateActivity;->access$1800(Lorg/telegram/ui/ChannelCreateActivity;)Landroid/view/View;
 
     move-result-object p1
 

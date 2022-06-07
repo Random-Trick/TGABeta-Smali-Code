@@ -31,6 +31,8 @@
 
 .field private undoAction:Ljava/lang/Runnable;
 
+.field private undoTextView:Landroid/widget/TextView;
+
 
 # direct methods
 .method public static synthetic $r8$lambda$ZcC07tOvziCU898jeBvFoVD_7Dk(Lorg/telegram/ui/Components/Bulletin$UndoButton;Landroid/view/View;)V
@@ -54,224 +56,236 @@
 
     const/4 v0, 0x0
 
-    .line 1159
+    .line 1165
     invoke-direct {p0, p1, p2, v0}, Lorg/telegram/ui/Components/Bulletin$UndoButton;-><init>(Landroid/content/Context;ZLorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)V
 
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;ZLorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)V
-    .registers 21
+    .registers 11
 
-    move-object/from16 v0, p0
+    .line 1169
+    invoke-direct {p0, p1}, Lorg/telegram/ui/Components/Bulletin$Button;-><init>(Landroid/content/Context;)V
 
-    .line 1163
-    invoke-direct/range {p0 .. p1}, Lorg/telegram/ui/Components/Bulletin$Button;-><init>(Landroid/content/Context;)V
+    .line 1170
+    iput-object p3, p0, Lorg/telegram/ui/Components/Bulletin$UndoButton;->resourcesProvider:Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;
 
-    move-object/from16 v1, p3
+    const-string p3, "undo_cancelColor"
 
-    .line 1164
-    iput-object v1, v0, Lorg/telegram/ui/Components/Bulletin$UndoButton;->resourcesProvider:Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;
+    .line 1172
+    invoke-direct {p0, p3}, Lorg/telegram/ui/Components/Bulletin$UndoButton;->getThemedColor(Ljava/lang/String;)I
 
-    const-string v1, "undo_cancelColor"
+    move-result p3
 
-    .line 1166
-    invoke-direct {v0, v1}, Lorg/telegram/ui/Components/Bulletin$UndoButton;->getThemedColor(Ljava/lang/String;)I
+    const/16 v0, 0x10
 
-    move-result v1
+    const/high16 v1, 0x19000000
+
+    const v2, 0xffffff
+
+    const/4 v3, 0x0
+
+    if-eqz p2, :cond_8a
+
+    .line 1175
+    new-instance p2, Landroid/widget/TextView;
+
+    invoke-direct {p2, p1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
+
+    iput-object p2, p0, Lorg/telegram/ui/Components/Bulletin$UndoButton;->undoTextView:Landroid/widget/TextView;
+
+    .line 1176
+    new-instance p1, Lorg/telegram/ui/Components/Bulletin$UndoButton$$ExternalSyntheticLambda0;
+
+    invoke-direct {p1, p0}, Lorg/telegram/ui/Components/Bulletin$UndoButton$$ExternalSyntheticLambda0;-><init>(Lorg/telegram/ui/Components/Bulletin$UndoButton;)V
+
+    invoke-virtual {p2, p1}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    .line 1177
+    sget-boolean p1, Lorg/telegram/messenger/LocaleController;->isRTL:Z
+
+    const/4 p2, 0x0
+
+    const/high16 v4, 0x41800000    # 16.0f
+
+    if-eqz p1, :cond_30
+
+    invoke-static {v4}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
+
+    move-result p1
+
+    goto :goto_31
+
+    :cond_30
+    const/4 p1, 0x0
+
+    .line 1178
+    :goto_31
+    sget-boolean v5, Lorg/telegram/messenger/LocaleController;->isRTL:Z
+
+    if-eqz v5, :cond_36
+
+    goto :goto_3a
+
+    :cond_36
+    invoke-static {v4}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
+
+    move-result p2
+
+    .line 1179
+    :goto_3a
+    iget-object v5, p0, Lorg/telegram/ui/Components/Bulletin$UndoButton;->undoTextView:Landroid/widget/TextView;
+
+    and-int/2addr v2, p3
+
+    or-int/2addr v1, v2
+
+    invoke-static {v1, p1, p2}, Lorg/telegram/ui/ActionBar/Theme;->createCircleSelectorDrawable(III)Landroid/graphics/drawable/Drawable;
+
+    move-result-object p1
+
+    invoke-virtual {v5, p1}, Landroid/widget/TextView;->setBackground(Landroid/graphics/drawable/Drawable;)V
+
+    .line 1180
+    iget-object p1, p0, Lorg/telegram/ui/Components/Bulletin$UndoButton;->undoTextView:Landroid/widget/TextView;
+
+    const/4 p2, 0x1
+
+    const/high16 v1, 0x41600000    # 14.0f
+
+    invoke-virtual {p1, p2, v1}, Landroid/widget/TextView;->setTextSize(IF)V
+
+    .line 1181
+    iget-object p1, p0, Lorg/telegram/ui/Components/Bulletin$UndoButton;->undoTextView:Landroid/widget/TextView;
+
+    const-string p2, "fonts/rmedium.ttf"
+
+    invoke-static {p2}, Lorg/telegram/messenger/AndroidUtilities;->getTypeface(Ljava/lang/String;)Landroid/graphics/Typeface;
+
+    move-result-object p2
+
+    invoke-virtual {p1, p2}, Landroid/widget/TextView;->setTypeface(Landroid/graphics/Typeface;)V
+
+    .line 1182
+    iget-object p1, p0, Lorg/telegram/ui/Components/Bulletin$UndoButton;->undoTextView:Landroid/widget/TextView;
+
+    invoke-virtual {p1, p3}, Landroid/widget/TextView;->setTextColor(I)V
+
+    .line 1183
+    iget-object p1, p0, Lorg/telegram/ui/Components/Bulletin$UndoButton;->undoTextView:Landroid/widget/TextView;
+
+    const p2, 0x7f0e12ac
+
+    const-string p3, "Undo"
+
+    invoke-static {p3, p2}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-virtual {p1, p2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    .line 1184
+    iget-object p1, p0, Lorg/telegram/ui/Components/Bulletin$UndoButton;->undoTextView:Landroid/widget/TextView;
+
+    invoke-virtual {p1, v0}, Landroid/widget/TextView;->setGravity(I)V
+
+    .line 1185
+    iget-object p1, p0, Lorg/telegram/ui/Components/Bulletin$UndoButton;->undoTextView:Landroid/widget/TextView;
+
+    invoke-static {p1, v4, v3, v4, v3}, Lorg/telegram/ui/Components/ViewHelper;->setPaddingRelative(Landroid/view/View;FFFF)V
+
+    .line 1186
+    iget-object p1, p0, Lorg/telegram/ui/Components/Bulletin$UndoButton;->undoTextView:Landroid/widget/TextView;
+
+    const/high16 v0, -0x40000000    # -2.0f
+
+    const/high16 v1, 0x42400000    # 48.0f
 
     const/16 v2, 0x10
 
-    const/high16 v3, 0x19000000
+    const/high16 v3, 0x41000000    # 8.0f
 
-    const v4, 0xffffff
+    const/4 v4, 0x0
 
     const/4 v5, 0x0
 
-    if-eqz p2, :cond_7f
+    const/4 v6, 0x0
 
-    .line 1169
-    new-instance v6, Landroid/widget/TextView;
+    invoke-static/range {v0 .. v6}, Lorg/telegram/ui/Components/LayoutHelper;->createFrameRelatively(FFIFFFF)Landroid/widget/FrameLayout$LayoutParams;
 
-    move-object/from16 v7, p1
+    move-result-object p2
 
-    invoke-direct {v6, v7}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
+    invoke-virtual {p0, p1, p2}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 1170
-    new-instance v7, Lorg/telegram/ui/Components/Bulletin$UndoButton$$ExternalSyntheticLambda0;
-
-    invoke-direct {v7, v0}, Lorg/telegram/ui/Components/Bulletin$UndoButton$$ExternalSyntheticLambda0;-><init>(Lorg/telegram/ui/Components/Bulletin$UndoButton;)V
-
-    invoke-virtual {v6, v7}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    .line 1171
-    sget-boolean v7, Lorg/telegram/messenger/LocaleController;->isRTL:Z
-
-    const/4 v8, 0x0
-
-    const/high16 v9, 0x41800000    # 16.0f
-
-    if-eqz v7, :cond_34
-
-    invoke-static {v9}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
-
-    move-result v7
-
-    goto :goto_35
-
-    :cond_34
-    const/4 v7, 0x0
-
-    .line 1172
-    :goto_35
-    sget-boolean v10, Lorg/telegram/messenger/LocaleController;->isRTL:Z
-
-    if-eqz v10, :cond_3a
-
-    goto :goto_3e
-
-    :cond_3a
-    invoke-static {v9}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
-
-    move-result v8
-
-    :goto_3e
-    and-int/2addr v4, v1
-
-    or-int/2addr v3, v4
-
-    .line 1173
-    invoke-static {v3, v7, v8}, Lorg/telegram/ui/ActionBar/Theme;->createCircleSelectorDrawable(III)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v3
-
-    invoke-virtual {v6, v3}, Landroid/widget/TextView;->setBackground(Landroid/graphics/drawable/Drawable;)V
-
-    const/4 v3, 0x1
-
-    const/high16 v4, 0x41600000    # 14.0f
-
-    .line 1174
-    invoke-virtual {v6, v3, v4}, Landroid/widget/TextView;->setTextSize(IF)V
-
-    const-string v3, "fonts/rmedium.ttf"
-
-    .line 1175
-    invoke-static {v3}, Lorg/telegram/messenger/AndroidUtilities;->getTypeface(Ljava/lang/String;)Landroid/graphics/Typeface;
-
-    move-result-object v3
-
-    invoke-virtual {v6, v3}, Landroid/widget/TextView;->setTypeface(Landroid/graphics/Typeface;)V
-
-    .line 1176
-    invoke-virtual {v6, v1}, Landroid/widget/TextView;->setTextColor(I)V
-
-    const v1, 0x7f0e11df
-
-    const-string v3, "Undo"
-
-    .line 1177
-    invoke-static {v3, v1}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v6, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    .line 1178
-    invoke-virtual {v6, v2}, Landroid/widget/TextView;->setGravity(I)V
-
-    .line 1179
-    invoke-static {v6, v9, v5, v9, v5}, Lorg/telegram/ui/Components/ViewHelper;->setPaddingRelative(Landroid/view/View;FFFF)V
-
-    const/high16 v10, -0x40000000    # -2.0f
-
-    const/high16 v11, 0x42400000    # 48.0f
-
-    const/16 v12, 0x10
-
-    const/high16 v13, 0x41000000    # 8.0f
-
-    const/4 v14, 0x0
-
-    const/4 v15, 0x0
-
-    const/16 v16, 0x0
-
-    .line 1180
-    invoke-static/range {v10 .. v16}, Lorg/telegram/ui/Components/LayoutHelper;->createFrameRelatively(FFIFFFF)Landroid/widget/FrameLayout$LayoutParams;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v6, v1}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
-
-    goto :goto_b9
-
-    .line 1182
-    :cond_7f
-    new-instance v6, Landroid/widget/ImageView;
-
-    invoke-virtual/range {p0 .. p0}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
-
-    move-result-object v7
-
-    invoke-direct {v6, v7}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
-
-    .line 1183
-    new-instance v7, Lorg/telegram/ui/Components/Bulletin$UndoButton$$ExternalSyntheticLambda1;
-
-    invoke-direct {v7, v0}, Lorg/telegram/ui/Components/Bulletin$UndoButton$$ExternalSyntheticLambda1;-><init>(Lorg/telegram/ui/Components/Bulletin$UndoButton;)V
-
-    invoke-virtual {v6, v7}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    const v7, 0x7f0700bd
-
-    .line 1184
-    invoke-virtual {v6, v7}, Landroid/widget/ImageView;->setImageResource(I)V
-
-    .line 1185
-    new-instance v7, Landroid/graphics/PorterDuffColorFilter;
-
-    sget-object v8, Landroid/graphics/PorterDuff$Mode;->MULTIPLY:Landroid/graphics/PorterDuff$Mode;
-
-    invoke-direct {v7, v1, v8}, Landroid/graphics/PorterDuffColorFilter;-><init>(ILandroid/graphics/PorterDuff$Mode;)V
-
-    invoke-virtual {v6, v7}, Landroid/widget/ImageView;->setColorFilter(Landroid/graphics/ColorFilter;)V
-
-    and-int/2addr v1, v4
-
-    or-int/2addr v1, v3
-
-    .line 1186
-    invoke-static {v1}, Lorg/telegram/ui/ActionBar/Theme;->createSelectorDrawable(I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v1
-
-    invoke-virtual {v6, v1}, Landroid/widget/ImageView;->setBackground(Landroid/graphics/drawable/Drawable;)V
-
-    const/high16 v1, 0x41400000    # 12.0f
-
-    .line 1187
-    invoke-static {v6, v5, v1, v5, v1}, Lorg/telegram/ui/Components/ViewHelper;->setPaddingRelative(Landroid/view/View;FFFF)V
-
-    const/high16 v1, 0x42600000    # 56.0f
-
-    const/high16 v3, 0x42400000    # 48.0f
+    goto :goto_c5
 
     .line 1188
-    invoke-static {v1, v3, v2}, Lorg/telegram/ui/Components/LayoutHelper;->createFrameRelatively(FFI)Landroid/widget/FrameLayout$LayoutParams;
+    :cond_8a
+    new-instance p1, Landroid/widget/ImageView;
 
-    move-result-object v1
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
 
-    invoke-virtual {v0, v6, v1}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+    move-result-object p2
 
-    :goto_b9
+    invoke-direct {p1, p2}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
+
+    .line 1189
+    new-instance p2, Lorg/telegram/ui/Components/Bulletin$UndoButton$$ExternalSyntheticLambda1;
+
+    invoke-direct {p2, p0}, Lorg/telegram/ui/Components/Bulletin$UndoButton$$ExternalSyntheticLambda1;-><init>(Lorg/telegram/ui/Components/Bulletin$UndoButton;)V
+
+    invoke-virtual {p1, p2}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    const p2, 0x7f07009e
+
+    .line 1190
+    invoke-virtual {p1, p2}, Landroid/widget/ImageView;->setImageResource(I)V
+
+    .line 1191
+    new-instance p2, Landroid/graphics/PorterDuffColorFilter;
+
+    sget-object v4, Landroid/graphics/PorterDuff$Mode;->MULTIPLY:Landroid/graphics/PorterDuff$Mode;
+
+    invoke-direct {p2, p3, v4}, Landroid/graphics/PorterDuffColorFilter;-><init>(ILandroid/graphics/PorterDuff$Mode;)V
+
+    invoke-virtual {p1, p2}, Landroid/widget/ImageView;->setColorFilter(Landroid/graphics/ColorFilter;)V
+
+    and-int p2, p3, v2
+
+    or-int/2addr p2, v1
+
+    .line 1192
+    invoke-static {p2}, Lorg/telegram/ui/ActionBar/Theme;->createSelectorDrawable(I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object p2
+
+    invoke-virtual {p1, p2}, Landroid/widget/ImageView;->setBackground(Landroid/graphics/drawable/Drawable;)V
+
+    const/high16 p2, 0x41400000    # 12.0f
+
+    .line 1193
+    invoke-static {p1, v3, p2, v3, p2}, Lorg/telegram/ui/Components/ViewHelper;->setPaddingRelative(Landroid/view/View;FFFF)V
+
+    const/high16 p2, 0x42600000    # 56.0f
+
+    const/high16 p3, 0x42400000    # 48.0f
+
+    .line 1194
+    invoke-static {p2, p3, v0}, Lorg/telegram/ui/Components/LayoutHelper;->createFrameRelatively(FFI)Landroid/widget/FrameLayout$LayoutParams;
+
+    move-result-object p2
+
+    invoke-virtual {p0, p1, p2}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+
+    :goto_c5
     return-void
 .end method
 
 .method private getThemedColor(Ljava/lang/String;)I
     .registers 3
 
-    .line 1226
+    .line 1239
     iget-object v0, p0, Lorg/telegram/ui/Components/Bulletin$UndoButton;->resourcesProvider:Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;
 
     if-eqz v0, :cond_9
@@ -288,7 +302,7 @@
     :goto_a
     if-eqz v0, :cond_11
 
-    .line 1227
+    .line 1240
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
     move-result p1
@@ -307,7 +321,7 @@
 .method private synthetic lambda$new$0(Landroid/view/View;)V
     .registers 2
 
-    .line 1170
+    .line 1176
     invoke-virtual {p0}, Lorg/telegram/ui/Components/Bulletin$UndoButton;->undo()V
 
     return-void
@@ -316,7 +330,7 @@
 .method private synthetic lambda$new$1(Landroid/view/View;)V
     .registers 2
 
-    .line 1183
+    .line 1189
     invoke-virtual {p0}, Lorg/telegram/ui/Components/Bulletin$UndoButton;->undo()V
 
     return-void
@@ -327,7 +341,7 @@
 .method public onAttach(Lorg/telegram/ui/Components/Bulletin$Layout;Lorg/telegram/ui/Components/Bulletin;)V
     .registers 3
 
-    .line 1204
+    .line 1217
     iput-object p2, p0, Lorg/telegram/ui/Components/Bulletin$UndoButton;->bulletin:Lorg/telegram/ui/Components/Bulletin;
 
     return-void
@@ -338,10 +352,10 @@
 
     const/4 p1, 0x0
 
-    .line 1209
+    .line 1222
     iput-object p1, p0, Lorg/telegram/ui/Components/Bulletin$UndoButton;->bulletin:Lorg/telegram/ui/Components/Bulletin;
 
-    .line 1210
+    .line 1223
     iget-object p1, p0, Lorg/telegram/ui/Components/Bulletin$UndoButton;->delayedAction:Ljava/lang/Runnable;
 
     if-eqz p1, :cond_e
@@ -350,7 +364,7 @@
 
     if-nez v0, :cond_e
 
-    .line 1211
+    .line 1224
     invoke-interface {p1}, Ljava/lang/Runnable;->run()V
 
     :cond_e
@@ -360,16 +374,31 @@
 .method public setDelayedAction(Ljava/lang/Runnable;)Lorg/telegram/ui/Components/Bulletin$UndoButton;
     .registers 2
 
-    .line 1221
+    .line 1234
     iput-object p1, p0, Lorg/telegram/ui/Components/Bulletin$UndoButton;->delayedAction:Ljava/lang/Runnable;
 
+    return-object p0
+.end method
+
+.method public setText(Ljava/lang/CharSequence;)Lorg/telegram/ui/Components/Bulletin$UndoButton;
+    .registers 3
+
+    .line 1199
+    iget-object v0, p0, Lorg/telegram/ui/Components/Bulletin$UndoButton;->undoTextView:Landroid/widget/TextView;
+
+    if-eqz v0, :cond_7
+
+    .line 1200
+    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    :cond_7
     return-object p0
 .end method
 
 .method public setUndoAction(Ljava/lang/Runnable;)Lorg/telegram/ui/Components/Bulletin$UndoButton;
     .registers 2
 
-    .line 1216
+    .line 1229
     iput-object p1, p0, Lorg/telegram/ui/Components/Bulletin$UndoButton;->undoAction:Ljava/lang/Runnable;
 
     return-object p0
@@ -378,25 +407,25 @@
 .method public undo()V
     .registers 2
 
-    .line 1193
+    .line 1206
     iget-object v0, p0, Lorg/telegram/ui/Components/Bulletin$UndoButton;->bulletin:Lorg/telegram/ui/Components/Bulletin;
 
     if-eqz v0, :cond_13
 
     const/4 v0, 0x1
 
-    .line 1194
+    .line 1207
     iput-boolean v0, p0, Lorg/telegram/ui/Components/Bulletin$UndoButton;->isUndone:Z
 
-    .line 1195
+    .line 1208
     iget-object v0, p0, Lorg/telegram/ui/Components/Bulletin$UndoButton;->undoAction:Ljava/lang/Runnable;
 
     if-eqz v0, :cond_e
 
-    .line 1196
+    .line 1209
     invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 
-    .line 1198
+    .line 1211
     :cond_e
     iget-object v0, p0, Lorg/telegram/ui/Components/Bulletin$UndoButton;->bulletin:Lorg/telegram/ui/Components/Bulletin;
 

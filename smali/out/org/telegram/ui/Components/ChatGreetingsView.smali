@@ -170,7 +170,7 @@
     .line 61
     iget-object p1, p0, Lorg/telegram/ui/Components/ChatGreetingsView;->titleView:Landroid/widget/TextView;
 
-    const p2, 0x7f0e0ac4
+    const p2, 0x7f0e0b4b
 
     const-string p3, "NoMessages"
 
@@ -183,7 +183,7 @@
     .line 62
     iget-object p1, p0, Lorg/telegram/ui/Components/ChatGreetingsView;->descriptionView:Landroid/widget/TextView;
 
-    const p2, 0x7f0e0ac6
+    const p2, 0x7f0e0b4d
 
     const-string p3, "NoMessagesGreetingsDescription"
 
@@ -199,7 +199,7 @@
     :cond_92
     iget-object p1, p0, Lorg/telegram/ui/Components/ChatGreetingsView;->titleView:Landroid/widget/TextView;
 
-    const p6, 0x7f0e0a77
+    const p6, 0x7f0e0afe
 
     const/4 v1, 0x2
 
@@ -230,7 +230,7 @@
     .line 65
     iget-object p1, p0, Lorg/telegram/ui/Components/ChatGreetingsView;->descriptionView:Landroid/widget/TextView;
 
-    const p2, 0x7f0e0a76
+    const p2, 0x7f0e0afd
 
     const-string p3, "NearbyPeopleGreetingsDescription"
 
@@ -240,13 +240,24 @@
 
     invoke-virtual {p1, p2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 68
+    .line 67
     :goto_bd
+    iget-object p1, p0, Lorg/telegram/ui/Components/ChatGreetingsView;->stickerToSendView:Lorg/telegram/ui/Components/BackupImageView;
+
+    iget-object p2, p0, Lorg/telegram/ui/Components/ChatGreetingsView;->descriptionView:Landroid/widget/TextView;
+
+    invoke-virtual {p2}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
+
+    move-result-object p2
+
+    invoke-virtual {p1, p2}, Landroid/view/View;->setContentDescription(Ljava/lang/CharSequence;)V
+
+    .line 69
     iput-object p5, p0, Lorg/telegram/ui/Components/ChatGreetingsView;->preloadedGreetingsSticker:Lorg/telegram/tgnet/TLRPC$Document;
 
-    if-nez p5, :cond_cb
+    if-nez p5, :cond_d6
 
-    .line 70
+    .line 71
     invoke-static {p4}, Lorg/telegram/messenger/MediaDataController;->getInstance(I)Lorg/telegram/messenger/MediaDataController;
 
     move-result-object p1
@@ -257,8 +268,8 @@
 
     iput-object p1, p0, Lorg/telegram/ui/Components/ChatGreetingsView;->preloadedGreetingsSticker:Lorg/telegram/tgnet/TLRPC$Document;
 
-    .line 72
-    :cond_cb
+    .line 73
+    :cond_d6
     iget-object p1, p0, Lorg/telegram/ui/Components/ChatGreetingsView;->preloadedGreetingsSticker:Lorg/telegram/tgnet/TLRPC$Document;
 
     invoke-direct {p0, p1}, Lorg/telegram/ui/Components/ChatGreetingsView;->setSticker(Lorg/telegram/tgnet/TLRPC$Document;)V
@@ -269,14 +280,14 @@
 .method public static createFilter(Lorg/telegram/tgnet/TLRPC$Document;)Ljava/lang/String;
     .registers 8
 
-    .line 98
+    .line 99
     invoke-static {}, Lorg/telegram/messenger/AndroidUtilities;->isTablet()Z
 
     move-result v0
 
     if-eqz v0, :cond_f
 
-    .line 99
+    .line 100
     invoke-static {}, Lorg/telegram/messenger/AndroidUtilities;->getMinTabletSide()I
 
     move-result v0
@@ -287,7 +298,7 @@
 
     goto :goto_1c
 
-    .line 101
+    .line 102
     :cond_f
     sget-object v0, Lorg/telegram/messenger/AndroidUtilities;->displaySize:Landroid/graphics/Point;
 
@@ -310,7 +321,7 @@
 
     const/4 v2, 0x0
 
-    .line 103
+    .line 104
     :goto_20
     iget-object v3, p0, Lorg/telegram/tgnet/TLRPC$Document;->attributes:Ljava/util/ArrayList;
 
@@ -320,7 +331,7 @@
 
     if-ge v2, v3, :cond_3c
 
-    .line 104
+    .line 105
     iget-object v3, p0, Lorg/telegram/tgnet/TLRPC$Document;->attributes:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -329,15 +340,15 @@
 
     check-cast v3, Lorg/telegram/tgnet/TLRPC$DocumentAttribute;
 
-    .line 105
+    .line 106
     instance-of v4, v3, Lorg/telegram/tgnet/TLRPC$TL_documentAttributeImageSize;
 
     if-eqz v4, :cond_39
 
-    .line 106
+    .line 107
     iget v2, v3, Lorg/telegram/tgnet/TLRPC$DocumentAttribute;->w:I
 
-    .line 107
+    .line 108
     iget v3, v3, Lorg/telegram/tgnet/TLRPC$DocumentAttribute;->h:I
 
     goto :goto_3e
@@ -355,7 +366,7 @@
     :goto_3e
     const/4 v4, 0x1
 
-    .line 111
+    .line 112
     invoke-static {p0, v4}, Lorg/telegram/messenger/MessageObject;->isAnimatedStickerDocument(Lorg/telegram/tgnet/TLRPC$Document;Z)Z
 
     move-result p0
@@ -377,7 +388,7 @@
 
     const/high16 p0, 0x42c80000    # 100.0f
 
-    .line 117
+    .line 118
     invoke-static {p0}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result p0
@@ -420,7 +431,7 @@
     :cond_6d
     int-to-float v0, v2
 
-    .line 126
+    .line 127
     sget v2, Lorg/telegram/messenger/AndroidUtilities;->density:F
 
     div-float/2addr v0, v2
@@ -433,7 +444,7 @@
 
     float-to-int p0, p0
 
-    .line 128
+    .line 129
     sget-object v2, Ljava/util/Locale;->US:Ljava/util/Locale;
 
     const/4 v3, 0x2
@@ -464,12 +475,12 @@
 .method private fetchSticker()V
     .registers 2
 
-    .line 183
+    .line 184
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatGreetingsView;->preloadedGreetingsSticker:Lorg/telegram/tgnet/TLRPC$Document;
 
     if-nez v0, :cond_13
 
-    .line 184
+    .line 185
     iget v0, p0, Lorg/telegram/ui/Components/ChatGreetingsView;->currentAccount:I
 
     invoke-static {v0}, Lorg/telegram/messenger/MediaDataController;->getInstance(I)Lorg/telegram/messenger/MediaDataController;
@@ -482,7 +493,7 @@
 
     iput-object v0, p0, Lorg/telegram/ui/Components/ChatGreetingsView;->preloadedGreetingsSticker:Lorg/telegram/tgnet/TLRPC$Document;
 
-    .line 185
+    .line 186
     invoke-direct {p0, v0}, Lorg/telegram/ui/Components/ChatGreetingsView;->setSticker(Lorg/telegram/tgnet/TLRPC$Document;)V
 
     :cond_13
@@ -492,7 +503,7 @@
 .method private getThemedColor(Ljava/lang/String;)I
     .registers 3
 
-    .line 190
+    .line 191
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatGreetingsView;->resourcesProvider:Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;
 
     if-eqz v0, :cond_9
@@ -509,7 +520,7 @@
     :goto_a
     if-eqz v0, :cond_11
 
-    .line 191
+    .line 192
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
     move-result p1
@@ -528,12 +539,12 @@
 .method private synthetic lambda$setSticker$0(Lorg/telegram/tgnet/TLRPC$Document;Landroid/view/View;)V
     .registers 3
 
-    .line 87
+    .line 88
     iget-object p2, p0, Lorg/telegram/ui/Components/ChatGreetingsView;->listener:Lorg/telegram/ui/Components/ChatGreetingsView$Listener;
 
     if-eqz p2, :cond_7
 
-    .line 88
+    .line 89
     invoke-interface {p2, p1}, Lorg/telegram/ui/Components/ChatGreetingsView$Listener;->onGreetings(Lorg/telegram/tgnet/TLRPC$Document;)V
 
     :cond_7
@@ -552,14 +563,14 @@
 
     const-string v1, "chat_serviceBackground"
 
-    .line 79
+    .line 80
     invoke-static {p1, v1, v0}, Lorg/telegram/messenger/DocumentObject;->getSvgThumb(Lorg/telegram/tgnet/TLRPC$Document;Ljava/lang/String;F)Lorg/telegram/messenger/SvgHelper$SvgDrawable;
 
     move-result-object v5
 
     if-eqz v5, :cond_1d
 
-    .line 81
+    .line 82
     iget-object v2, p0, Lorg/telegram/ui/Components/ChatGreetingsView;->stickerToSendView:Lorg/telegram/ui/Components/BackupImageView;
 
     invoke-static {p1}, Lorg/telegram/messenger/ImageLocation;->getForDocument(Lorg/telegram/tgnet/TLRPC$Document;)Lorg/telegram/messenger/ImageLocation;
@@ -578,7 +589,7 @@
 
     goto :goto_39
 
-    .line 83
+    .line 84
     :cond_1d
     iget-object v0, p1, Lorg/telegram/tgnet/TLRPC$Document;->thumbs:Ljava/util/ArrayList;
 
@@ -588,7 +599,7 @@
 
     move-result-object v0
 
-    .line 84
+    .line 85
     iget-object v1, p0, Lorg/telegram/ui/Components/ChatGreetingsView;->stickerToSendView:Lorg/telegram/ui/Components/BackupImageView;
 
     invoke-static {p1}, Lorg/telegram/messenger/ImageLocation;->getForDocument(Lorg/telegram/tgnet/TLRPC$Document;)Lorg/telegram/messenger/ImageLocation;
@@ -611,7 +622,7 @@
 
     invoke-virtual/range {v1 .. v7}, Lorg/telegram/ui/Components/BackupImageView;->setImage(Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;ILjava/lang/Object;)V
 
-    .line 86
+    .line 87
     :goto_39
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatGreetingsView;->stickerToSendView:Lorg/telegram/ui/Components/BackupImageView;
 
@@ -627,7 +638,7 @@
 .method private updateColors()V
     .registers 4
 
-    .line 132
+    .line 133
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatGreetingsView;->titleView:Landroid/widget/TextView;
 
     const-string v1, "chat_serviceText"
@@ -638,7 +649,7 @@
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 133
+    .line 134
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatGreetingsView;->descriptionView:Landroid/widget/TextView;
 
     invoke-direct {p0, v1}, Lorg/telegram/ui/Components/ChatGreetingsView;->getThemedColor(Ljava/lang/String;)I
@@ -655,10 +666,10 @@
 .method protected onAttachedToWindow()V
     .registers 1
 
-    .line 173
+    .line 174
     invoke-super {p0}, Landroid/widget/LinearLayout;->onAttachedToWindow()V
 
-    .line 174
+    .line 175
     invoke-direct {p0}, Lorg/telegram/ui/Components/ChatGreetingsView;->fetchSticker()V
 
     return-void
@@ -667,7 +678,7 @@
 .method protected onDetachedFromWindow()V
     .registers 1
 
-    .line 179
+    .line 180
     invoke-super {p0}, Landroid/widget/LinearLayout;->onDetachedFromWindow()V
 
     return-void
@@ -678,25 +689,25 @@
 
     const/4 v0, 0x1
 
-    .line 148
+    .line 149
     iput-boolean v0, p0, Lorg/telegram/ui/Components/ChatGreetingsView;->ignoreLayot:Z
 
-    .line 149
+    .line 150
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatGreetingsView;->descriptionView:Landroid/widget/TextView;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 150
+    .line 151
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatGreetingsView;->stickerToSendView:Lorg/telegram/ui/Components/BackupImageView;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 151
+    .line 152
     invoke-super {p0, p1, p2}, Landroid/widget/LinearLayout;->onMeasure(II)V
 
-    .line 152
+    .line 153
     invoke-virtual {p0}, Landroid/widget/LinearLayout;->getMeasuredHeight()I
 
     move-result v0
@@ -707,36 +718,36 @@
 
     if-le v0, v2, :cond_28
 
-    .line 153
+    .line 154
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatGreetingsView;->descriptionView:Landroid/widget/TextView;
 
     const/16 v2, 0x8
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 154
+    .line 155
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatGreetingsView;->stickerToSendView:Lorg/telegram/ui/Components/BackupImageView;
 
     invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
 
     goto :goto_32
 
-    .line 156
+    .line 157
     :cond_28
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatGreetingsView;->descriptionView:Landroid/widget/TextView;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 157
+    .line 158
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatGreetingsView;->stickerToSendView:Lorg/telegram/ui/Components/BackupImageView;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 159
+    .line 160
     :goto_32
     iput-boolean v1, p0, Lorg/telegram/ui/Components/ChatGreetingsView;->ignoreLayot:Z
 
-    .line 160
+    .line 161
     invoke-super {p0, p1, p2}, Landroid/widget/LinearLayout;->onMeasure(II)V
 
     return-void
@@ -745,14 +756,14 @@
 .method public requestLayout()V
     .registers 2
 
-    .line 165
+    .line 166
     iget-boolean v0, p0, Lorg/telegram/ui/Components/ChatGreetingsView;->ignoreLayot:Z
 
     if-eqz v0, :cond_5
 
     return-void
 
-    .line 168
+    .line 169
     :cond_5
     invoke-super {p0}, Landroid/widget/LinearLayout;->requestLayout()V
 
@@ -762,7 +773,7 @@
 .method public setListener(Lorg/telegram/ui/Components/ChatGreetingsView$Listener;)V
     .registers 2
 
-    .line 137
+    .line 138
     iput-object p1, p0, Lorg/telegram/ui/Components/ChatGreetingsView;->listener:Lorg/telegram/ui/Components/ChatGreetingsView$Listener;
 
     return-void

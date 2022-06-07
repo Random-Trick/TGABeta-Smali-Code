@@ -18,7 +18,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/ShareAlert;)V
     .registers 2
 
-    .line 1295
+    .line 1306
     invoke-direct {p0}, Landroid/view/ViewOutlineProvider;-><init>()V
 
     return-void
@@ -36,7 +36,7 @@
 
     const/high16 p1, 0x42600000    # 56.0f
 
-    .line 1299
+    .line 1310
     invoke-static {p1}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v0

@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lorg/telegram/ui/EmojiAnimationsOverlay;->onTapItem(Lorg/telegram/ui/Cells/ChatMessageCell;Lorg/telegram/ui/ChatActivity;)V
+    value = Lorg/telegram/ui/EmojiAnimationsOverlay;->onTapItem(Lorg/telegram/ui/Cells/ChatMessageCell;Lorg/telegram/ui/ChatActivity;)Z
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -27,7 +27,7 @@
 .method constructor <init>(Lorg/telegram/ui/EmojiAnimationsOverlay;Lorg/telegram/ui/Components/Bulletin;)V
     .registers 3
 
-    .line 316
+    .line 332
     iput-object p1, p0, Lorg/telegram/ui/EmojiAnimationsOverlay$2;->this$0:Lorg/telegram/ui/EmojiAnimationsOverlay;
 
     iput-object p2, p0, Lorg/telegram/ui/EmojiAnimationsOverlay$2;->val$bulletin:Lorg/telegram/ui/Components/Bulletin;
@@ -42,12 +42,12 @@
 .method public run()V
     .registers 3
 
-    .line 319
+    .line 335
     iget-object v0, p0, Lorg/telegram/ui/EmojiAnimationsOverlay$2;->val$bulletin:Lorg/telegram/ui/Components/Bulletin;
 
     invoke-virtual {v0}, Lorg/telegram/ui/Components/Bulletin;->show()Lorg/telegram/ui/Components/Bulletin;
 
-    .line 320
+    .line 336
     iget-object v0, p0, Lorg/telegram/ui/EmojiAnimationsOverlay$2;->this$0:Lorg/telegram/ui/EmojiAnimationsOverlay;
 
     const/4 v1, 0x0

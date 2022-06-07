@@ -1,6 +1,9 @@
 .class Lorg/telegram/ui/ChatActivity$94;
-.super Landroid/animation/AnimatorListenerAdapter;
+.super Ljava/lang/Object;
 .source "ChatActivity.java"
+
+# interfaces
+.implements Landroid/view/View$OnClickListener;
 
 
 # annotations
@@ -17,87 +20,52 @@
 # instance fields
 .field final synthetic this$0:Lorg/telegram/ui/ChatActivity;
 
+.field final synthetic val$chatWithAdmin:Ljava/lang/String;
+
+.field final synthetic val$chatWithAdminChannel:Z
+
+.field final synthetic val$chatWithAdminDate:I
+
+.field final synthetic val$user:Lorg/telegram/tgnet/TLRPC$User;
+
 
 # direct methods
-.method constructor <init>(Lorg/telegram/ui/ChatActivity;)V
-    .registers 2
+.method constructor <init>(Lorg/telegram/ui/ChatActivity;Lorg/telegram/tgnet/TLRPC$User;Ljava/lang/String;ZI)V
+    .registers 6
 
-    .line 19796
+    .line 19932
     iput-object p1, p0, Lorg/telegram/ui/ChatActivity$94;->this$0:Lorg/telegram/ui/ChatActivity;
 
-    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
+    iput-object p2, p0, Lorg/telegram/ui/ChatActivity$94;->val$user:Lorg/telegram/tgnet/TLRPC$User;
+
+    iput-object p3, p0, Lorg/telegram/ui/ChatActivity$94;->val$chatWithAdmin:Ljava/lang/String;
+
+    iput-boolean p4, p0, Lorg/telegram/ui/ChatActivity$94;->val$chatWithAdminChannel:Z
+
+    iput p5, p0, Lorg/telegram/ui/ChatActivity$94;->val$chatWithAdminDate:I
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onAnimationCancel(Landroid/animation/Animator;)V
-    .registers 3
+.method public onClick(Landroid/view/View;)V
+    .registers 6
 
-    .line 19806
-    iget-object v0, p0, Lorg/telegram/ui/ChatActivity$94;->this$0:Lorg/telegram/ui/ChatActivity;
-
-    invoke-static {v0}, Lorg/telegram/ui/ChatActivity;->access$36500(Lorg/telegram/ui/ChatActivity;)Landroid/animation/AnimatorSet;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_1a
-
-    iget-object v0, p0, Lorg/telegram/ui/ChatActivity$94;->this$0:Lorg/telegram/ui/ChatActivity;
-
-    invoke-static {v0}, Lorg/telegram/ui/ChatActivity;->access$36500(Lorg/telegram/ui/ChatActivity;)Landroid/animation/AnimatorSet;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_1a
-
-    .line 19807
+    .line 19935
     iget-object p1, p0, Lorg/telegram/ui/ChatActivity$94;->this$0:Lorg/telegram/ui/ChatActivity;
 
-    const/4 v0, 0x0
+    iget-object v0, p0, Lorg/telegram/ui/ChatActivity$94;->val$user:Lorg/telegram/tgnet/TLRPC$User;
 
-    invoke-static {p1, v0}, Lorg/telegram/ui/ChatActivity;->access$36502(Lorg/telegram/ui/ChatActivity;Landroid/animation/AnimatorSet;)Landroid/animation/AnimatorSet;
+    iget-object v1, p0, Lorg/telegram/ui/ChatActivity$94;->val$chatWithAdmin:Ljava/lang/String;
 
-    :cond_1a
-    return-void
-.end method
+    iget-boolean v2, p0, Lorg/telegram/ui/ChatActivity$94;->val$chatWithAdminChannel:Z
 
-.method public onAnimationEnd(Landroid/animation/Animator;)V
-    .registers 3
+    iget v3, p0, Lorg/telegram/ui/ChatActivity$94;->val$chatWithAdminDate:I
 
-    .line 19799
-    iget-object v0, p0, Lorg/telegram/ui/ChatActivity$94;->this$0:Lorg/telegram/ui/ChatActivity;
+    invoke-static {p1, v0, v1, v2, v3}, Lorg/telegram/ui/Components/AlertsCreator;->showChatWithAdmin(Lorg/telegram/ui/ActionBar/BaseFragment;Lorg/telegram/tgnet/TLRPC$User;Ljava/lang/String;ZI)V
 
-    invoke-static {v0}, Lorg/telegram/ui/ChatActivity;->access$36500(Lorg/telegram/ui/ChatActivity;)Landroid/animation/AnimatorSet;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_1a
-
-    iget-object v0, p0, Lorg/telegram/ui/ChatActivity$94;->this$0:Lorg/telegram/ui/ChatActivity;
-
-    invoke-static {v0}, Lorg/telegram/ui/ChatActivity;->access$36500(Lorg/telegram/ui/ChatActivity;)Landroid/animation/AnimatorSet;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_1a
-
-    .line 19800
-    iget-object p1, p0, Lorg/telegram/ui/ChatActivity$94;->this$0:Lorg/telegram/ui/ChatActivity;
-
-    const/4 v0, 0x0
-
-    invoke-static {p1, v0}, Lorg/telegram/ui/ChatActivity;->access$36502(Lorg/telegram/ui/ChatActivity;Landroid/animation/AnimatorSet;)Landroid/animation/AnimatorSet;
-
-    :cond_1a
     return-void
 .end method

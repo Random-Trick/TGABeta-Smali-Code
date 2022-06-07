@@ -33,10 +33,10 @@
 .method public constructor <init>()V
     .registers 2
 
-    .line 29615
+    .line 30043
     invoke-direct {p0}, Lorg/telegram/tgnet/TLRPC$Update;-><init>()V
 
-    .line 29620
+    .line 30048
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -51,7 +51,7 @@
 .method public readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
     .registers 7
 
-    .line 29623
+    .line 30051
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
@@ -62,14 +62,14 @@
 
     if-eqz v0, :cond_10
 
-    .line 29625
+    .line 30053
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
 
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$TL_updatePinnedDialogs;->folder_id:I
 
-    .line 29627
+    .line 30055
     :cond_10
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_updatePinnedDialogs;->flags:I
 
@@ -79,7 +79,7 @@
 
     if-eqz v0, :cond_50
 
-    .line 29628
+    .line 30056
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
@@ -94,7 +94,7 @@
 
     return-void
 
-    .line 29631
+    .line 30059
     :cond_23
     new-instance p1, Ljava/lang/RuntimeException;
 
@@ -116,7 +116,7 @@
 
     throw p1
 
-    .line 29635
+    .line 30063
     :cond_37
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
@@ -125,7 +125,7 @@
     :goto_3b
     if-ge v3, v0, :cond_50
 
-    .line 29637
+    .line 30065
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v1
@@ -138,7 +138,7 @@
 
     return-void
 
-    .line 29641
+    .line 30069
     :cond_48
     iget-object v2, p0, Lorg/telegram/tgnet/TLRPC$TL_updatePinnedDialogs;->order:Ljava/util/ArrayList;
 
@@ -155,29 +155,29 @@
 .method public serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
     .registers 5
 
-    .line 29647
+    .line 30075
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_updatePinnedDialogs;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 29648
+    .line 30076
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_updatePinnedDialogs;->flags:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 29649
+    .line 30077
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_updatePinnedDialogs;->flags:I
 
     and-int/lit8 v0, v0, 0x2
 
     if-eqz v0, :cond_15
 
-    .line 29650
+    .line 30078
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_updatePinnedDialogs;->folder_id:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 29652
+    .line 30080
     :cond_15
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_updatePinnedDialogs;->flags:I
 
@@ -187,17 +187,17 @@
 
     const v0, 0x1cb5c415
 
-    .line 29653
+    .line 30081
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 29654
+    .line 30082
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_updatePinnedDialogs;->order:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
-    .line 29655
+    .line 30083
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
     const/4 v1, 0x0
@@ -205,7 +205,7 @@
     :goto_2b
     if-ge v1, v0, :cond_3b
 
-    .line 29657
+    .line 30085
     iget-object v2, p0, Lorg/telegram/tgnet/TLRPC$TL_updatePinnedDialogs;->order:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;

@@ -28,12 +28,12 @@
 .method public constructor <init>(Lorg/telegram/ui/Components/EditTextBoldCursor;Landroid/view/ActionMode$Callback;)V
     .registers 3
 
-    .line 151
+    .line 153
     iput-object p1, p0, Lorg/telegram/ui/Components/EditTextBoldCursor$ActionModeCallback2Wrapper;->this$0:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     invoke-direct {p0}, Landroid/view/ActionMode$Callback2;-><init>()V
 
-    .line 152
+    .line 154
     iput-object p2, p0, Lorg/telegram/ui/Components/EditTextBoldCursor$ActionModeCallback2Wrapper;->mWrapped:Landroid/view/ActionMode$Callback;
 
     return-void
@@ -44,7 +44,7 @@
 .method public onActionItemClicked(Landroid/view/ActionMode;Landroid/view/MenuItem;)Z
     .registers 4
 
-    .line 164
+    .line 166
     iget-object v0, p0, Lorg/telegram/ui/Components/EditTextBoldCursor$ActionModeCallback2Wrapper;->mWrapped:Landroid/view/ActionMode$Callback;
 
     invoke-interface {v0, p1, p2}, Landroid/view/ActionMode$Callback;->onActionItemClicked(Landroid/view/ActionMode;Landroid/view/MenuItem;)Z
@@ -57,7 +57,7 @@
 .method public onCreateActionMode(Landroid/view/ActionMode;Landroid/view/Menu;)Z
     .registers 4
 
-    .line 156
+    .line 158
     iget-object v0, p0, Lorg/telegram/ui/Components/EditTextBoldCursor$ActionModeCallback2Wrapper;->mWrapped:Landroid/view/ActionMode$Callback;
 
     invoke-interface {v0, p1, p2}, Landroid/view/ActionMode$Callback;->onCreateActionMode(Landroid/view/ActionMode;Landroid/view/Menu;)Z
@@ -70,17 +70,17 @@
 .method public onDestroyActionMode(Landroid/view/ActionMode;)V
     .registers 3
 
-    .line 168
+    .line 170
     iget-object v0, p0, Lorg/telegram/ui/Components/EditTextBoldCursor$ActionModeCallback2Wrapper;->mWrapped:Landroid/view/ActionMode$Callback;
 
     invoke-interface {v0, p1}, Landroid/view/ActionMode$Callback;->onDestroyActionMode(Landroid/view/ActionMode;)V
 
-    .line 169
+    .line 171
     iget-object p1, p0, Lorg/telegram/ui/Components/EditTextBoldCursor$ActionModeCallback2Wrapper;->this$0:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/EditTextBoldCursor;->access$100(Lorg/telegram/ui/Components/EditTextBoldCursor;)V
 
-    .line 170
+    .line 172
     iget-object p1, p0, Lorg/telegram/ui/Components/EditTextBoldCursor$ActionModeCallback2Wrapper;->this$0:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     const/4 v0, 0x0
@@ -93,21 +93,21 @@
 .method public onGetContentRect(Landroid/view/ActionMode;Landroid/view/View;Landroid/graphics/Rect;)V
     .registers 6
 
-    .line 175
+    .line 177
     iget-object v0, p0, Lorg/telegram/ui/Components/EditTextBoldCursor$ActionModeCallback2Wrapper;->mWrapped:Landroid/view/ActionMode$Callback;
 
     instance-of v1, v0, Landroid/view/ActionMode$Callback2;
 
     if-eqz v1, :cond_c
 
-    .line 176
+    .line 178
     check-cast v0, Landroid/view/ActionMode$Callback2;
 
     invoke-virtual {v0, p1, p2, p3}, Landroid/view/ActionMode$Callback2;->onGetContentRect(Landroid/view/ActionMode;Landroid/view/View;Landroid/graphics/Rect;)V
 
     goto :goto_f
 
-    .line 178
+    .line 180
     :cond_c
     invoke-super {p0, p1, p2, p3}, Landroid/view/ActionMode$Callback2;->onGetContentRect(Landroid/view/ActionMode;Landroid/view/View;Landroid/graphics/Rect;)V
 
@@ -118,7 +118,7 @@
 .method public onPrepareActionMode(Landroid/view/ActionMode;Landroid/view/Menu;)Z
     .registers 4
 
-    .line 160
+    .line 162
     iget-object v0, p0, Lorg/telegram/ui/Components/EditTextBoldCursor$ActionModeCallback2Wrapper;->mWrapped:Landroid/view/ActionMode$Callback;
 
     invoke-interface {v0, p1, p2}, Landroid/view/ActionMode$Callback;->onPrepareActionMode(Landroid/view/ActionMode;Landroid/view/Menu;)Z

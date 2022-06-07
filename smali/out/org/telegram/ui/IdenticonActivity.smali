@@ -551,7 +551,7 @@
     .line 105
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
-    const v1, 0x7f070140
+    const v1, 0x7f070109
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/ActionBar;->setBackButtonImage(I)V
 
@@ -567,7 +567,7 @@
 
     const-string v2, "EncryptionKey"
 
-    const v3, 0x7f0e064b
+    const v3, 0x7f0e069d
 
     invoke-static {v2, v3}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
@@ -1136,7 +1136,7 @@
     .line 218
     invoke-virtual {v2}, Landroid/text/SpannableStringBuilder;->clear()V
 
-    const p1, 0x7f0e064c
+    const p1, 0x7f0e069e
 
     const/4 v4, 0x2
 
@@ -1177,7 +1177,7 @@
     .line 223
     new-instance v0, Lorg/telegram/ui/Components/URLSpanReplacement;
 
-    const v1, 0x7f0e064d
+    const v1, 0x7f0e069f
 
     const-string v3, "EncryptionKeyLink"
 

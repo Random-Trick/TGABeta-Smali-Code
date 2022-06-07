@@ -28,7 +28,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/TranslateAlert;Landroid/content/Context;Landroid/graphics/Paint;)V
     .registers 4
 
-    .line 283
+    .line 284
     iput-object p1, p0, Lorg/telegram/ui/Components/TranslateAlert$2;->this$0:Lorg/telegram/ui/Components/TranslateAlert;
 
     iput-object p3, p0, Lorg/telegram/ui/Components/TranslateAlert$2;->val$containerPaint:Landroid/graphics/Paint;
@@ -37,22 +37,22 @@
 
     const p1, 0x7fffffff
 
-    .line 284
+    .line 285
     iput p1, p0, Lorg/telegram/ui/Components/TranslateAlert$2;->contentHeight:I
 
-    .line 317
+    .line 318
     new-instance p1, Landroid/graphics/Path;
 
     invoke-direct {p1}, Landroid/graphics/Path;-><init>()V
 
-    .line 318
+    .line 319
     new-instance p1, Landroid/graphics/RectF;
 
     invoke-direct {p1}, Landroid/graphics/RectF;-><init>()V
 
     iput-object p1, p0, Lorg/telegram/ui/Components/TranslateAlert$2;->containerRect:Landroid/graphics/RectF;
 
-    .line 319
+    .line 320
     new-instance p1, Landroid/graphics/RectF;
 
     invoke-direct {p1}, Landroid/graphics/RectF;-><init>()V
@@ -65,7 +65,7 @@
 .method protected onDraw(Landroid/graphics/Canvas;)V
     .registers 9
 
-    .line 322
+    .line 323
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getWidth()I
 
     move-result v0
@@ -94,10 +94,10 @@
 
     const/4 v4, 0x0
 
-    .line 323
+    .line 324
     invoke-virtual {p1, v4, v4, v0, v1}, Landroid/graphics/Canvas;->clipRect(IIII)Z
 
-    .line 325
+    .line 326
     iget-object v4, p0, Lorg/telegram/ui/Components/TranslateAlert$2;->containerRect:Landroid/graphics/RectF;
 
     int-to-float v0, v0
@@ -110,7 +110,7 @@
 
     invoke-virtual {v4, v6, v6, v0, v5}, Landroid/graphics/RectF;->set(FFFF)V
 
-    .line 326
+    .line 327
     iget-object v0, p0, Lorg/telegram/ui/Components/TranslateAlert$2;->this$0:Lorg/telegram/ui/Components/TranslateAlert;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/TranslateAlert;->access$700(Lorg/telegram/ui/Components/TranslateAlert;)F
@@ -125,7 +125,7 @@
 
     invoke-virtual {p1, v6, v3}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 328
+    .line 329
     iget-object v0, p0, Lorg/telegram/ui/Components/TranslateAlert$2;->containerRect:Landroid/graphics/RectF;
 
     int-to-float v1, v2
@@ -134,7 +134,7 @@
 
     invoke-virtual {p1, v0, v1, v1, v2}, Landroid/graphics/Canvas;->drawRoundRect(Landroid/graphics/RectF;FFLandroid/graphics/Paint;)V
 
-    .line 329
+    .line 330
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->onDraw(Landroid/graphics/Canvas;)V
 
     return-void
@@ -143,10 +143,10 @@
 .method protected onLayout(ZIIII)V
     .registers 6
 
-    .line 313
+    .line 314
     invoke-super/range {p0 .. p5}, Landroid/widget/FrameLayout;->onLayout(ZIIII)V
 
-    .line 314
+    .line 315
     iget p1, p0, Lorg/telegram/ui/Components/TranslateAlert$2;->contentHeight:I
 
     sub-int/2addr p5, p3
@@ -163,15 +163,15 @@
 .method protected onMeasure(II)V
     .registers 8
 
-    .line 287
+    .line 288
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result p2
 
-    .line 288
+    .line 289
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
-    .line 289
+    .line 290
     sget-object v0, Lorg/telegram/messenger/AndroidUtilities;->displayMetrics:Landroid/util/DisplayMetrics;
 
     iget v0, v0, Landroid/util/DisplayMetrics;->heightPixels:I
@@ -188,7 +188,7 @@
 
     float-to-int v0, v0
 
-    .line 290
+    .line 291
     iget-object v1, p0, Lorg/telegram/ui/Components/TranslateAlert$2;->this$0:Lorg/telegram/ui/Components/TranslateAlert;
 
     invoke-static {v1}, Lorg/telegram/ui/Components/TranslateAlert;->access$200(Lorg/telegram/ui/Components/TranslateAlert;)Lorg/telegram/ui/Components/TranslateAlert$TextBlocksLayout;
@@ -211,14 +211,14 @@
 
     if-gtz v1, :cond_69
 
-    .line 291
+    .line 292
     iget-object v1, p0, Lorg/telegram/ui/Components/TranslateAlert$2;->this$0:Lorg/telegram/ui/Components/TranslateAlert;
 
     invoke-static {v1}, Lorg/telegram/ui/Components/TranslateAlert;->access$200(Lorg/telegram/ui/Components/TranslateAlert;)Lorg/telegram/ui/Components/TranslateAlert$TextBlocksLayout;
 
     move-result-object v1
 
-    .line 292
+    .line 293
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result v3
@@ -277,10 +277,10 @@
 
     const/4 v4, 0x0
 
-    .line 291
+    .line 292
     invoke-virtual {v1, v3, v4}, Landroid/view/ViewGroup;->measure(II)V
 
-    .line 296
+    .line 297
     :cond_69
     iget-object v1, p0, Lorg/telegram/ui/Components/TranslateAlert$2;->this$0:Lorg/telegram/ui/Components/TranslateAlert;
 
@@ -294,7 +294,7 @@
 
     int-to-float v1, v0
 
-    .line 297
+    .line 298
     sget-object v3, Lorg/telegram/messenger/AndroidUtilities;->displayMetrics:Landroid/util/DisplayMetrics;
 
     iget v3, v3, Landroid/util/DisplayMetrics;->heightPixels:I
@@ -315,7 +315,7 @@
 
     float-to-int v0, v1
 
-    .line 298
+    .line 299
     iget-object v1, p0, Lorg/telegram/ui/Components/TranslateAlert$2;->this$0:Lorg/telegram/ui/Components/TranslateAlert;
 
     invoke-static {v1}, Lorg/telegram/ui/Components/TranslateAlert;->access$600(Lorg/telegram/ui/Components/TranslateAlert;)V
@@ -328,7 +328,7 @@
 
     const/high16 v3, 0x43f00000    # 480.0f
 
-    .line 301
+    .line 302
     invoke-static {v3}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v3
@@ -345,22 +345,22 @@
 
     float-to-int p2, p2
 
-    .line 302
+    .line 303
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getMode(I)I
 
     move-result p1
 
-    .line 300
+    .line 301
     invoke-static {p2, p1}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
 
     move-result p1
 
-    .line 304
+    .line 305
     invoke-static {v0, v2}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
 
     move-result p2
 
-    .line 299
+    .line 300
     invoke-super {p0, p1, p2}, Landroid/widget/FrameLayout;->onMeasure(II)V
 
     return-void

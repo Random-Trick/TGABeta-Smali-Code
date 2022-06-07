@@ -45,7 +45,7 @@
 
     iget-object v3, p0, Lorg/telegram/ui/LaunchActivity$$ExternalSyntheticLambda38;->f$3:Ljava/lang/String;
 
-    invoke-static {v0, v1, v2, v3}, Lorg/telegram/ui/LaunchActivity;->$r8$lambda$WpyF4IdB0MAnJMATKURM_KkfddI(Lorg/telegram/ui/LaunchActivity;Ljava/util/HashMap;[Lorg/telegram/messenger/LocaleController$LocaleInfo;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2, v3}, Lorg/telegram/ui/LaunchActivity;->$r8$lambda$C2OD201_3pXyDQ8Qx31xHV1cUxs(Lorg/telegram/ui/LaunchActivity;Ljava/util/HashMap;[Lorg/telegram/messenger/LocaleController$LocaleInfo;Ljava/lang/String;)V
 
     return-void
 .end method

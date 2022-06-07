@@ -25,7 +25,7 @@
 .method constructor <init>(Lorg/telegram/ui/StickersActivity$ListAdapter;)V
     .registers 2
 
-    .line 579
+    .line 728
     iput-object p1, p0, Lorg/telegram/ui/StickersActivity$ListAdapter$1;->this$1:Lorg/telegram/ui/StickersActivity$ListAdapter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public didCopy()Z
     .registers 2
 
-    .line 587
+    .line 736
     iget-object v0, p0, Lorg/telegram/ui/StickersActivity$ListAdapter$1;->this$1:Lorg/telegram/ui/StickersActivity$ListAdapter;
 
     invoke-virtual {v0}, Lorg/telegram/ui/StickersActivity$ListAdapter;->clearSelected()V
@@ -51,7 +51,7 @@
 .method public didShare()V
     .registers 2
 
-    .line 582
+    .line 731
     iget-object v0, p0, Lorg/telegram/ui/StickersActivity$ListAdapter$1;->this$1:Lorg/telegram/ui/StickersActivity$ListAdapter;
 
     invoke-virtual {v0}, Lorg/telegram/ui/StickersActivity$ListAdapter;->clearSelected()V

@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/GroupCallActivity;)V
     .registers 2
 
-    .line 8199
+    .line 8204
     iput-object p1, p0, Lorg/telegram/ui/GroupCallActivity$58;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-direct {p0}, Landroidx/recyclerview/widget/DiffUtil$Callback;-><init>()V
@@ -43,7 +43,7 @@
 .method public areItemsTheSame(II)Z
     .registers 11
 
-    .line 8213
+    .line 8218
     iget-object v0, p0, Lorg/telegram/ui/GroupCallActivity$58;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/GroupCallActivity;->access$6000(Lorg/telegram/ui/GroupCallActivity;)Lorg/telegram/ui/GroupCallActivity$ListAdapter;
@@ -60,7 +60,7 @@
 
     if-ltz v0, :cond_4c
 
-    .line 8214
+    .line 8219
     iget-object v0, p0, Lorg/telegram/ui/GroupCallActivity$58;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/GroupCallActivity;->access$20400(Lorg/telegram/ui/GroupCallActivity;)I
@@ -83,7 +83,7 @@
 
     return v2
 
-    .line 8216
+    .line 8221
     :cond_23
     iget-object v0, p0, Lorg/telegram/ui/GroupCallActivity$58;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
@@ -108,7 +108,7 @@
     :cond_37
     iget-object v0, p0, Lorg/telegram/ui/GroupCallActivity$58;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
-    .line 8217
+    .line 8222
     invoke-static {v0}, Lorg/telegram/ui/GroupCallActivity;->access$20400(Lorg/telegram/ui/GroupCallActivity;)I
 
     move-result v0
@@ -130,7 +130,7 @@
     :cond_4b
     return v1
 
-    .line 8221
+    .line 8226
     :cond_4c
     iget-object v0, p0, Lorg/telegram/ui/GroupCallActivity$58;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
@@ -144,7 +144,7 @@
 
     if-ltz v0, :cond_96
 
-    .line 8222
+    .line 8227
     iget-object v0, p0, Lorg/telegram/ui/GroupCallActivity$58;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/GroupCallActivity;->access$20500(Lorg/telegram/ui/GroupCallActivity;)I
@@ -167,7 +167,7 @@
 
     return v2
 
-    .line 8224
+    .line 8229
     :cond_6d
     iget-object v0, p0, Lorg/telegram/ui/GroupCallActivity$58;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
@@ -192,7 +192,7 @@
     :cond_81
     iget-object v0, p0, Lorg/telegram/ui/GroupCallActivity$58;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
-    .line 8225
+    .line 8230
     invoke-static {v0}, Lorg/telegram/ui/GroupCallActivity;->access$20500(Lorg/telegram/ui/GroupCallActivity;)I
 
     move-result v0
@@ -214,7 +214,7 @@
     :cond_95
     return v1
 
-    .line 8229
+    .line 8234
     :cond_96
     iget-object v0, p0, Lorg/telegram/ui/GroupCallActivity$58;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
@@ -250,7 +250,7 @@
 
     return v2
 
-    .line 8232
+    .line 8237
     :cond_b7
     iget-object v0, p0, Lorg/telegram/ui/GroupCallActivity$58;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
@@ -278,7 +278,7 @@
 
     return v2
 
-    .line 8234
+    .line 8239
     :cond_ce
     iget-object v0, p0, Lorg/telegram/ui/GroupCallActivity$58;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
@@ -306,7 +306,7 @@
 
     goto/16 :goto_1fd
 
-    .line 8237
+    .line 8242
     :cond_e6
     iget-object v0, p0, Lorg/telegram/ui/GroupCallActivity$58;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
@@ -334,7 +334,7 @@
 
     iget-object v0, p0, Lorg/telegram/ui/GroupCallActivity$58;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
-    .line 8238
+    .line 8243
     invoke-static {v0}, Lorg/telegram/ui/GroupCallActivity;->access$20700(Lorg/telegram/ui/GroupCallActivity;)I
 
     move-result v0
@@ -349,7 +349,7 @@
 
     if-ge p1, v0, :cond_139
 
-    .line 8239
+    .line 8244
     iget-object v0, p0, Lorg/telegram/ui/GroupCallActivity$58;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/GroupCallActivity;->access$20000(Lorg/telegram/ui/GroupCallActivity;)Ljava/util/ArrayList;
@@ -370,7 +370,7 @@
 
     check-cast p1, Lorg/telegram/messenger/ChatObject$VideoParticipant;
 
-    .line 8240
+    .line 8245
     iget-object v0, p0, Lorg/telegram/ui/GroupCallActivity$58;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     iget-object v1, v0, Lorg/telegram/ui/GroupCallActivity;->visibleVideoParticipants:Ljava/util/ArrayList;
@@ -391,14 +391,14 @@
 
     check-cast p2, Lorg/telegram/messenger/ChatObject$VideoParticipant;
 
-    .line 8241
+    .line 8246
     invoke-virtual {p1, p2}, Lorg/telegram/messenger/ChatObject$VideoParticipant;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
     return p1
 
-    .line 8242
+    .line 8247
     :cond_139
     iget-object v0, p0, Lorg/telegram/ui/GroupCallActivity$58;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
@@ -426,7 +426,7 @@
 
     iget-object v0, p0, Lorg/telegram/ui/GroupCallActivity$58;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
-    .line 8243
+    .line 8248
     invoke-static {v0}, Lorg/telegram/ui/GroupCallActivity;->access$20900(Lorg/telegram/ui/GroupCallActivity;)I
 
     move-result v0
@@ -441,7 +441,7 @@
 
     if-ge p1, v0, :cond_1a8
 
-    .line 8244
+    .line 8249
     iget-object v0, p0, Lorg/telegram/ui/GroupCallActivity$58;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/GroupCallActivity;->access$19600(Lorg/telegram/ui/GroupCallActivity;)Ljava/util/ArrayList;
@@ -462,7 +462,7 @@
 
     check-cast v0, Lorg/telegram/tgnet/TLRPC$TL_groupCallParticipant;
 
-    .line 8245
+    .line 8250
     iget-object v3, p0, Lorg/telegram/ui/GroupCallActivity$58;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     iget-object v4, v3, Lorg/telegram/ui/GroupCallActivity;->call:Lorg/telegram/messenger/ChatObject$Call;
@@ -485,7 +485,7 @@
 
     check-cast v3, Lorg/telegram/tgnet/TLRPC$TL_groupCallParticipant;
 
-    .line 8246
+    .line 8251
     iget-object v4, v0, Lorg/telegram/tgnet/TLRPC$TL_groupCallParticipant;->peer:Lorg/telegram/tgnet/TLRPC$Peer;
 
     invoke-static {v4}, Lorg/telegram/messenger/MessageObject;->getPeerId(Lorg/telegram/tgnet/TLRPC$Peer;)J
@@ -520,7 +520,7 @@
     :cond_1a7
     return v1
 
-    .line 8247
+    .line 8252
     :cond_1a8
     iget-object v0, p0, Lorg/telegram/ui/GroupCallActivity$58;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
@@ -548,7 +548,7 @@
 
     iget-object v0, p0, Lorg/telegram/ui/GroupCallActivity$58;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
-    .line 8248
+    .line 8253
     invoke-static {v0}, Lorg/telegram/ui/GroupCallActivity;->access$21100(Lorg/telegram/ui/GroupCallActivity;)I
 
     move-result v0
@@ -563,7 +563,7 @@
 
     if-ge p1, v0, :cond_1fd
 
-    .line 8249
+    .line 8254
     iget-object v0, p0, Lorg/telegram/ui/GroupCallActivity$58;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/GroupCallActivity;->access$19700(Lorg/telegram/ui/GroupCallActivity;)Ljava/util/ArrayList;
@@ -584,7 +584,7 @@
 
     check-cast p1, Ljava/lang/Long;
 
-    .line 8250
+    .line 8255
     iget-object v0, p0, Lorg/telegram/ui/GroupCallActivity$58;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     iget-object v1, v0, Lorg/telegram/ui/GroupCallActivity;->call:Lorg/telegram/messenger/ChatObject$Call;
@@ -607,7 +607,7 @@
 
     check-cast p2, Ljava/lang/Long;
 
-    .line 8251
+    .line 8256
     invoke-virtual {p1, p2}, Ljava/lang/Long;->equals(Ljava/lang/Object;)Z
 
     move-result p1
@@ -622,7 +622,7 @@
 .method public getNewListSize()I
     .registers 2
 
-    .line 8208
+    .line 8213
     iget-object v0, p0, Lorg/telegram/ui/GroupCallActivity$58;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/GroupCallActivity;->access$6000(Lorg/telegram/ui/GroupCallActivity;)Lorg/telegram/ui/GroupCallActivity$ListAdapter;
@@ -639,7 +639,7 @@
 .method public getOldListSize()I
     .registers 2
 
-    .line 8203
+    .line 8208
     iget-object v0, p0, Lorg/telegram/ui/GroupCallActivity$58;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/GroupCallActivity;->access$20200(Lorg/telegram/ui/GroupCallActivity;)I

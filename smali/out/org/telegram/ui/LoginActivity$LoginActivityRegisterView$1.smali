@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/LoginActivity$LoginActivityRegisterView;Landroid/content/Context;Lorg/telegram/ui/LoginActivity;)V
     .registers 4
 
-    .line 5160
+    .line 5300
     iput-object p1, p0, Lorg/telegram/ui/LoginActivity$LoginActivityRegisterView$1;->this$1:Lorg/telegram/ui/LoginActivity$LoginActivityRegisterView;
 
     invoke-direct {p0, p2}, Lorg/telegram/ui/Components/BackupImageView;-><init>(Landroid/content/Context;)V
@@ -35,25 +35,25 @@
 .method public invalidate()V
     .registers 2
 
-    .line 5163
+    .line 5303
     iget-object v0, p0, Lorg/telegram/ui/LoginActivity$LoginActivityRegisterView$1;->this$1:Lorg/telegram/ui/LoginActivity$LoginActivityRegisterView;
 
-    invoke-static {v0}, Lorg/telegram/ui/LoginActivity$LoginActivityRegisterView;->access$11300(Lorg/telegram/ui/LoginActivity$LoginActivityRegisterView;)Landroid/view/View;
+    invoke-static {v0}, Lorg/telegram/ui/LoginActivity$LoginActivityRegisterView;->access$12000(Lorg/telegram/ui/LoginActivity$LoginActivityRegisterView;)Landroid/view/View;
 
     move-result-object v0
 
     if-eqz v0, :cond_11
 
-    .line 5164
+    .line 5304
     iget-object v0, p0, Lorg/telegram/ui/LoginActivity$LoginActivityRegisterView$1;->this$1:Lorg/telegram/ui/LoginActivity$LoginActivityRegisterView;
 
-    invoke-static {v0}, Lorg/telegram/ui/LoginActivity$LoginActivityRegisterView;->access$11300(Lorg/telegram/ui/LoginActivity$LoginActivityRegisterView;)Landroid/view/View;
+    invoke-static {v0}, Lorg/telegram/ui/LoginActivity$LoginActivityRegisterView;->access$12000(Lorg/telegram/ui/LoginActivity$LoginActivityRegisterView;)Landroid/view/View;
 
     move-result-object v0
 
     invoke-virtual {v0}, Landroid/view/View;->invalidate()V
 
-    .line 5166
+    .line 5306
     :cond_11
     invoke-super {p0}, Landroid/view/View;->invalidate()V
 
@@ -63,25 +63,25 @@
 .method public invalidate(IIII)V
     .registers 6
 
-    .line 5171
+    .line 5311
     iget-object v0, p0, Lorg/telegram/ui/LoginActivity$LoginActivityRegisterView$1;->this$1:Lorg/telegram/ui/LoginActivity$LoginActivityRegisterView;
 
-    invoke-static {v0}, Lorg/telegram/ui/LoginActivity$LoginActivityRegisterView;->access$11300(Lorg/telegram/ui/LoginActivity$LoginActivityRegisterView;)Landroid/view/View;
+    invoke-static {v0}, Lorg/telegram/ui/LoginActivity$LoginActivityRegisterView;->access$12000(Lorg/telegram/ui/LoginActivity$LoginActivityRegisterView;)Landroid/view/View;
 
     move-result-object v0
 
     if-eqz v0, :cond_11
 
-    .line 5172
+    .line 5312
     iget-object v0, p0, Lorg/telegram/ui/LoginActivity$LoginActivityRegisterView$1;->this$1:Lorg/telegram/ui/LoginActivity$LoginActivityRegisterView;
 
-    invoke-static {v0}, Lorg/telegram/ui/LoginActivity$LoginActivityRegisterView;->access$11300(Lorg/telegram/ui/LoginActivity$LoginActivityRegisterView;)Landroid/view/View;
+    invoke-static {v0}, Lorg/telegram/ui/LoginActivity$LoginActivityRegisterView;->access$12000(Lorg/telegram/ui/LoginActivity$LoginActivityRegisterView;)Landroid/view/View;
 
     move-result-object v0
 
     invoke-virtual {v0}, Landroid/view/View;->invalidate()V
 
-    .line 5174
+    .line 5314
     :cond_11
     invoke-super {p0, p1, p2, p3, p4}, Landroid/view/View;->invalidate(IIII)V
 

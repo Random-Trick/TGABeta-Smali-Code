@@ -1,112 +1,58 @@
-.class public interface abstract Lj$/util/stream/M0;
+.class public final synthetic Lj$/util/stream/M0;
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lj$/util/stream/g;
+.implements Lj$/util/function/BiConsumer;
+
+
+# static fields
+.field public static final synthetic a:Lj$/util/stream/M0;
+
+
+# direct methods
+.method static synthetic constructor <clinit>()V
+    .registers 1
+
+    new-instance v0, Lj$/util/stream/M0;
+
+    invoke-direct {v0}, Lj$/util/stream/M0;-><init>()V
+
+    sput-object v0, Lj$/util/stream/M0;->a:Lj$/util/stream/M0;
+
+    return-void
+.end method
+
+.method private synthetic constructor <init>()V
+    .registers 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public abstract A(Lj$/wrappers/X;)Lj$/util/stream/U;
+.method public final accept(Ljava/lang/Object;Ljava/lang/Object;)V
+    .registers 3
+
+    check-cast p1, Lj$/util/i;
+
+    check-cast p2, Lj$/util/i;
+
+    invoke-virtual {p1, p2}, Lj$/util/i;->b(Lj$/util/i;)V
+
+    return-void
 .end method
 
-.method public abstract C(Lj$/wrappers/V;)Z
-.end method
+.method public b(Lj$/util/function/BiConsumer;)Lj$/util/function/BiConsumer;
+    .registers 3
 
-.method public abstract F(Lj$/wrappers/V;)Z
-.end method
+    .line 1
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-.method public abstract I(Lj$/util/function/l;)V
-.end method
+    new-instance v0, Lj$/util/concurrent/a;
 
-.method public abstract J(Lj$/util/function/m;)Lj$/util/stream/Stream;
-.end method
+    invoke-direct {v0, p0, p1}, Lj$/util/concurrent/a;-><init>(Lj$/util/function/BiConsumer;Lj$/util/function/BiConsumer;)V
 
-.method public abstract N(ILj$/util/function/j;)I
-.end method
-
-.method public abstract P(Lj$/util/function/m;)Lj$/util/stream/M0;
-.end method
-
-.method public abstract U(Lj$/util/function/l;)V
-.end method
-
-.method public abstract a0(Lj$/util/function/j;)Lj$/util/k;
-.end method
-
-.method public abstract asDoubleStream()Lj$/util/stream/U;
-.end method
-
-.method public abstract asLongStream()Lj$/util/stream/f1;
-.end method
-
-.method public abstract average()Lj$/util/j;
-.end method
-
-.method public abstract boxed()Lj$/util/stream/Stream;
-.end method
-
-.method public abstract c0(Lj$/util/function/l;)Lj$/util/stream/M0;
-.end method
-
-.method public abstract count()J
-.end method
-
-.method public abstract distinct()Lj$/util/stream/M0;
-.end method
-
-.method public abstract f(Lj$/util/function/n;)Lj$/util/stream/f1;
-.end method
-
-.method public abstract findAny()Lj$/util/k;
-.end method
-
-.method public abstract findFirst()Lj$/util/k;
-.end method
-
-.method public abstract h(Lj$/wrappers/V;)Lj$/util/stream/M0;
-.end method
-
-.method public abstract iterator()Lj$/util/p;
-.end method
-
-.method public abstract k0(Lj$/util/function/y;Lj$/util/function/v;Lj$/util/function/BiConsumer;)Ljava/lang/Object;
-.end method
-
-.method public abstract limit(J)Lj$/util/stream/M0;
-.end method
-
-.method public abstract max()Lj$/util/k;
-.end method
-
-.method public abstract min()Lj$/util/k;
-.end method
-
-.method public abstract parallel()Lj$/util/stream/M0;
-.end method
-
-.method public abstract q(Lj$/wrappers/b0;)Lj$/util/stream/M0;
-.end method
-
-.method public abstract sequential()Lj$/util/stream/M0;
-.end method
-
-.method public abstract skip(J)Lj$/util/stream/M0;
-.end method
-
-.method public abstract sorted()Lj$/util/stream/M0;
-.end method
-
-.method public abstract spliterator()Lj$/util/v;
-.end method
-
-.method public abstract sum()I
-.end method
-
-.method public abstract summaryStatistics()Lj$/util/h;
-.end method
-
-.method public abstract toArray()[I
-.end method
-
-.method public abstract v(Lj$/wrappers/V;)Z
+    return-object v0
 .end method

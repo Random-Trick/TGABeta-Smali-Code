@@ -1479,7 +1479,7 @@
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
-    const v4, 0x7f0e129b
+    const v4, 0x7f0e1369
 
     const-string v5, "ViewMessageStatistic"
 
@@ -1497,7 +1497,7 @@
 
     invoke-virtual {v0, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    const v4, 0x7f0702d8
+    const v4, 0x7f0702fa
 
     .line 498
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1506,7 +1506,7 @@
 
     invoke-virtual {v3, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    const v4, 0x7f0e129a
+    const v4, 0x7f0e1368
 
     const-string v5, "ViewMessage"
 
@@ -1524,7 +1524,7 @@
 
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    const v2, 0x7f0701ed
+    const v2, 0x7f070276
 
     .line 502
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -2176,13 +2176,13 @@
     .line 181
     instance-of v2, v1, Lorg/telegram/tgnet/TLRPC$TL_stats_broadcastStats;
 
-    const v5, 0x7f0e082a
+    const v5, 0x7f0e0884
 
     const-string v6, "GrowthChartTitle"
 
     const/4 v7, 0x3
 
-    const v8, 0x7f0e11af
+    const v8, 0x7f0e127b
 
     const-string v9, "TopHoursChartTitle"
 
@@ -2208,7 +2208,7 @@
     .line 185
     iget-object v12, v3, Lorg/telegram/tgnet/TLRPC$TL_stats_broadcastStats;->iv_interactions_graph:Lorg/telegram/tgnet/TLRPC$StatsGraph;
 
-    const v13, 0x7f0e0856
+    const v13, 0x7f0e08b1
 
     const-string v4, "IVInteractionsChartTitle"
 
@@ -2225,7 +2225,7 @@
     .line 186
     iget-object v4, v3, Lorg/telegram/tgnet/TLRPC$TL_stats_broadcastStats;->followers_graph:Lorg/telegram/tgnet/TLRPC$StatsGraph;
 
-    const v12, 0x7f0e075b
+    const v12, 0x7f0e07b1
 
     const-string v13, "FollowersChartTitle"
 
@@ -2255,7 +2255,7 @@
     .line 188
     iget-object v4, v3, Lorg/telegram/tgnet/TLRPC$TL_stats_broadcastStats;->interactions_graph:Lorg/telegram/tgnet/TLRPC$StatsGraph;
 
-    const v12, 0x7f0e0899
+    const v12, 0x7f0e08f6
 
     const-string v13, "InteractionsChartTitle"
 
@@ -2285,7 +2285,7 @@
     .line 190
     iget-object v4, v3, Lorg/telegram/tgnet/TLRPC$TL_stats_broadcastStats;->views_by_source_graph:Lorg/telegram/tgnet/TLRPC$StatsGraph;
 
-    const v12, 0x7f0e12ad
+    const v12, 0x7f0e137b
 
     const-string v13, "ViewsBySourceChartTitle"
 
@@ -2304,7 +2304,7 @@
     .line 191
     iget-object v4, v3, Lorg/telegram/tgnet/TLRPC$TL_stats_broadcastStats;->new_followers_by_source_graph:Lorg/telegram/tgnet/TLRPC$StatsGraph;
 
-    const v12, 0x7f0e0a8a
+    const v12, 0x7f0e0b11
 
     const-string v13, "NewFollowersBySourceChartTitle"
 
@@ -2323,7 +2323,7 @@
     .line 192
     iget-object v4, v3, Lorg/telegram/tgnet/TLRPC$TL_stats_broadcastStats;->languages_graph:Lorg/telegram/tgnet/TLRPC$StatsGraph;
 
-    const v12, 0x7f0e0909
+    const v12, 0x7f0e096e
 
     const-string v13, "LanguagesChartTitle"
 
@@ -2342,7 +2342,7 @@
     .line 193
     iget-object v4, v3, Lorg/telegram/tgnet/TLRPC$TL_stats_broadcastStats;->mute_graph:Lorg/telegram/tgnet/TLRPC$StatsGraph;
 
-    const v12, 0x7f0e0b77
+    const v12, 0x7f0e0c01
 
     const-string v13, "NotificationsChartTitle"
 
@@ -2555,7 +2555,7 @@
     .line 240
     iget-object v3, v1, Lorg/telegram/tgnet/TLRPC$TL_stats_megagroupStats;->members_graph:Lorg/telegram/tgnet/TLRPC$StatsGraph;
 
-    const v4, 0x7f0e0811
+    const v4, 0x7f0e0869
 
     const-string v5, "GroupMembersChartTitle"
 
@@ -2572,7 +2572,7 @@
     .line 241
     iget-object v3, v1, Lorg/telegram/tgnet/TLRPC$TL_stats_megagroupStats;->new_members_by_source_graph:Lorg/telegram/tgnet/TLRPC$StatsGraph;
 
-    const v4, 0x7f0e0a8d
+    const v4, 0x7f0e0b14
 
     const-string v5, "NewMembersBySourceChartTitle"
 
@@ -2589,7 +2589,7 @@
     .line 242
     iget-object v3, v1, Lorg/telegram/tgnet/TLRPC$TL_stats_megagroupStats;->languages_graph:Lorg/telegram/tgnet/TLRPC$StatsGraph;
 
-    const v4, 0x7f0e09dd
+    const v4, 0x7f0e0a64
 
     const-string v5, "MembersLanguageChartTitle"
 
@@ -2606,7 +2606,7 @@
     .line 243
     iget-object v3, v1, Lorg/telegram/tgnet/TLRPC$TL_stats_megagroupStats;->messages_graph:Lorg/telegram/tgnet/TLRPC$StatsGraph;
 
-    const v4, 0x7f0e0a18
+    const v4, 0x7f0e0a9f
 
     const-string v5, "MessagesChartTitle"
 
@@ -2623,7 +2623,7 @@
     .line 244
     iget-object v3, v1, Lorg/telegram/tgnet/TLRPC$TL_stats_megagroupStats;->actions_graph:Lorg/telegram/tgnet/TLRPC$StatsGraph;
 
-    const v4, 0x7f0e0103
+    const v4, 0x7f0e012b
 
     const-string v5, "ActionsChartTitle"
 
@@ -2657,7 +2657,7 @@
     .line 246
     iget-object v3, v1, Lorg/telegram/tgnet/TLRPC$TL_stats_megagroupStats;->weekdays_graph:Lorg/telegram/tgnet/TLRPC$StatsGraph;
 
-    const v5, 0x7f0e11ae
+    const v5, 0x7f0e127a
 
     const-string v6, "TopDaysOfWeekChartTitle"
 
@@ -3179,7 +3179,7 @@
     .line 1919
     sget-object v0, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
-    const v1, 0x7f07012c
+    const v1, 0x7f0700fb
 
     const-string v2, "windowBackgroundGrayShadow"
 
@@ -3344,7 +3344,7 @@
 
     const-string v6, "LoadingStats"
 
-    const v7, 0x7f0e095a
+    const v7, 0x7f0e09e1
 
     .line 418
     invoke-static {v6, v7}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -3380,7 +3380,7 @@
 
     const-string v8, "LoadingStatsDescription"
 
-    const v9, 0x7f0e095b
+    const v9, 0x7f0e09e2
 
     .line 425
     invoke-static {v8, v9}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -3637,7 +3637,7 @@
     .line 548
     iget-object v1, v0, Lorg/telegram/ui/StatisticActivity;->avatarContainer:Lorg/telegram/ui/Components/ChatAvatarContainer;
 
-    const v2, 0x7f0e10ca
+    const v2, 0x7f0e1189
 
     const-string v4, "Statistics"
 

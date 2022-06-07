@@ -25,7 +25,7 @@
 .method constructor <init>(Landroidx/recyclerview/widget/RecyclerView;)V
     .registers 2
 
-    .line 649
+    .line 650
     iput-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$2;->this$0:Landroidx/recyclerview/widget/RecyclerView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,17 +38,17 @@
 .method public run()V
     .registers 3
 
-    .line 652
+    .line 653
     iget-object v0, p0, Landroidx/recyclerview/widget/RecyclerView$2;->this$0:Landroidx/recyclerview/widget/RecyclerView;
 
     iget-object v0, v0, Landroidx/recyclerview/widget/RecyclerView;->mItemAnimator:Landroidx/recyclerview/widget/RecyclerView$ItemAnimator;
 
     if-eqz v0, :cond_9
 
-    .line 653
+    .line 654
     invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView$ItemAnimator;->runPendingAnimations()V
 
-    .line 655
+    .line 656
     :cond_9
     iget-object v0, p0, Landroidx/recyclerview/widget/RecyclerView$2;->this$0:Landroidx/recyclerview/widget/RecyclerView;
 

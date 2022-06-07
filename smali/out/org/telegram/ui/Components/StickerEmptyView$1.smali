@@ -25,7 +25,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/StickerEmptyView;)V
     .registers 2
 
-    .line 49
+    .line 50
     iput-object p1, p0, Lorg/telegram/ui/Components/StickerEmptyView$1;->this$0:Lorg/telegram/ui/Components/StickerEmptyView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public run()V
     .registers 6
 
-    .line 52
+    .line 53
     iget-object v0, p0, Lorg/telegram/ui/Components/StickerEmptyView$1;->this$0:Lorg/telegram/ui/Components/StickerEmptyView;
 
     iget-object v1, v0, Lorg/telegram/ui/Components/StickerEmptyView;->progressView:Landroid/view/View;
@@ -49,21 +49,12 @@
 
     if-eqz v1, :cond_44
 
-    .line 53
+    .line 54
     invoke-virtual {v1}, Landroid/view/View;->getVisibility()I
 
     move-result v0
 
     if-eqz v0, :cond_20
-
-    .line 54
-    iget-object v0, p0, Lorg/telegram/ui/Components/StickerEmptyView$1;->this$0:Lorg/telegram/ui/Components/StickerEmptyView;
-
-    iget-object v0, v0, Lorg/telegram/ui/Components/StickerEmptyView;->progressView:Landroid/view/View;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
     .line 55
     iget-object v0, p0, Lorg/telegram/ui/Components/StickerEmptyView$1;->this$0:Lorg/telegram/ui/Components/StickerEmptyView;
@@ -72,9 +63,18 @@
 
     const/4 v1, 0x0
 
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+
+    .line 56
+    iget-object v0, p0, Lorg/telegram/ui/Components/StickerEmptyView$1;->this$0:Lorg/telegram/ui/Components/StickerEmptyView;
+
+    iget-object v0, v0, Lorg/telegram/ui/Components/StickerEmptyView;->progressView:Landroid/view/View;
+
+    const/4 v1, 0x0
+
     invoke-virtual {v0, v1}, Landroid/view/View;->setAlpha(F)V
 
-    .line 57
+    .line 58
     :cond_20
     iget-object v0, p0, Lorg/telegram/ui/Components/StickerEmptyView$1;->this$0:Lorg/telegram/ui/Components/StickerEmptyView;
 
@@ -92,7 +92,7 @@
 
     invoke-virtual {v0}, Landroid/view/ViewPropertyAnimator;->cancel()V
 
-    .line 58
+    .line 59
     iget-object v0, p0, Lorg/telegram/ui/Components/StickerEmptyView$1;->this$0:Lorg/telegram/ui/Components/StickerEmptyView;
 
     iget-object v0, v0, Lorg/telegram/ui/Components/StickerEmptyView;->progressView:Landroid/view/View;
@@ -113,7 +113,7 @@
 
     goto :goto_5f
 
-    .line 60
+    .line 61
     :cond_44
     invoke-static {v0}, Lorg/telegram/ui/Components/StickerEmptyView;->access$000(Lorg/telegram/ui/Components/StickerEmptyView;)Lorg/telegram/ui/Components/RadialProgressView;
 

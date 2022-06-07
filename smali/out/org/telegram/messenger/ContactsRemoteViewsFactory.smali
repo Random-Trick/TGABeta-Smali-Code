@@ -236,9 +236,9 @@
 
     invoke-direct {v0, v2, v3}, Landroid/widget/RemoteViews;-><init>(Ljava/lang/String;I)V
 
-    const v2, 0x7f0800e4
+    const v2, 0x7f0800e5
 
-    const v3, 0x7f0e13e1
+    const v3, 0x7f0e14af
 
     const-string v4, "WidgetLoggedOff"
 
@@ -278,9 +278,9 @@
 
     invoke-direct {v0, v2, v5}, Landroid/widget/RemoteViews;-><init>(Ljava/lang/String;I)V
 
-    const v2, 0x7f0800e6
+    const v2, 0x7f0800e7
 
-    const v5, 0x7f0e1135
+    const v5, 0x7f0e11f9
 
     const-string v6, "TapToEditWidgetShort"
 
@@ -325,7 +325,7 @@
     .line 90
     invoke-virtual {v3, v2}, Landroid/content/Intent;->putExtras(Landroid/os/Bundle;)Landroid/content/Intent;
 
-    const v2, 0x7f0800e5
+    const v2, 0x7f0800e6
 
     .line 91
     invoke-virtual {v0, v2, v3}, Landroid/widget/RemoteViews;->setOnClickFillInIntent(ILandroid/content/Intent;)V
@@ -443,7 +443,7 @@
 
     if-eqz v14, :cond_df
 
-    const v14, 0x7f0e0f65
+    const v14, 0x7f0e1021
 
     const-string v15, "SavedMessages"
 
@@ -462,7 +462,7 @@
 
     if-eqz v14, :cond_ef
 
-    const v14, 0x7f0e0ed5
+    const v14, 0x7f0e0f82
 
     const-string v15, "RepliesTitle"
 
@@ -481,7 +481,7 @@
 
     if-eqz v14, :cond_ff
 
-    const v14, 0x7f0e0830
+    const v14, 0x7f0e088a
 
     const-string v15, "HiddenName"
 

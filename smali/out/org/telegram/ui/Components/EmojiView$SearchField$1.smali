@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/EmojiView$SearchField;Lorg/telegram/ui/Components/EmojiView;)V
     .registers 3
 
-    .line 499
+    .line 505
     iput-object p1, p0, Lorg/telegram/ui/Components/EmojiView$SearchField$1;->this$1:Lorg/telegram/ui/Components/EmojiView$SearchField;
 
     invoke-direct {p0}, Lorg/telegram/ui/Components/CloseProgressDrawable2;-><init>()V
@@ -35,7 +35,7 @@
 .method protected getCurrentColor()I
     .registers 3
 
-    .line 502
+    .line 508
     iget-object v0, p0, Lorg/telegram/ui/Components/EmojiView$SearchField$1;->this$1:Lorg/telegram/ui/Components/EmojiView$SearchField;
 
     iget-object v0, v0, Lorg/telegram/ui/Components/EmojiView$SearchField;->this$0:Lorg/telegram/ui/Components/EmojiView;

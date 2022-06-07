@@ -2,38 +2,32 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lorg/telegram/messenger/MessagesController$ErrorDelegate;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic f$0:Lorg/telegram/ui/ChatActivity;
-
-.field public final synthetic f$1:Landroid/content/Context;
+.field public final synthetic f$0:[Lorg/telegram/ui/ActionBar/AlertDialog;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lorg/telegram/ui/ChatActivity;Landroid/content/Context;)V
-    .registers 3
+.method public synthetic constructor <init>([Lorg/telegram/ui/ActionBar/AlertDialog;)V
+    .registers 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda203;->f$0:Lorg/telegram/ui/ChatActivity;
-
-    iput-object p2, p0, Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda203;->f$1:Landroid/content/Context;
+    iput-object p1, p0, Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda203;->f$0:[Lorg/telegram/ui/ActionBar/AlertDialog;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run(Lorg/telegram/tgnet/TLRPC$TL_error;)V
-    .registers 4
+.method public final run()V
+    .registers 2
 
-    iget-object v0, p0, Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda203;->f$0:Lorg/telegram/ui/ChatActivity;
+    iget-object v0, p0, Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda203;->f$0:[Lorg/telegram/ui/ActionBar/AlertDialog;
 
-    iget-object v1, p0, Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda203;->f$1:Landroid/content/Context;
-
-    invoke-static {v0, v1, p1}, Lorg/telegram/ui/ChatActivity;->$r8$lambda$UrhL-7NccRPjl3LJkqmCL7WRAdY(Lorg/telegram/ui/ChatActivity;Landroid/content/Context;Lorg/telegram/tgnet/TLRPC$TL_error;)V
+    invoke-static {v0}, Lorg/telegram/ui/ChatActivity;->$r8$lambda$9WJocHjVX-q1gq076TM7GG2E4hU([Lorg/telegram/ui/ActionBar/AlertDialog;)V
 
     return-void
 .end method

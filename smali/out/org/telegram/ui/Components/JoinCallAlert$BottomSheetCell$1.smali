@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/JoinCallAlert$BottomSheetCell;)V
     .registers 2
 
-    .line 170
+    .line 176
     iput-object p1, p0, Lorg/telegram/ui/Components/JoinCallAlert$BottomSheetCell$1;->this$1:Lorg/telegram/ui/Components/JoinCallAlert$BottomSheetCell;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -35,7 +35,7 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .registers 6
 
-    .line 173
+    .line 179
     iget-object p1, p0, Lorg/telegram/ui/Components/JoinCallAlert$BottomSheetCell$1;->this$1:Lorg/telegram/ui/Components/JoinCallAlert$BottomSheetCell;
 
     iget-object p1, p1, Lorg/telegram/ui/Components/JoinCallAlert$BottomSheetCell;->this$0:Lorg/telegram/ui/Components/JoinCallAlert;
@@ -44,7 +44,7 @@
 
     invoke-static {p1, v0}, Lorg/telegram/ui/Components/JoinCallAlert;->access$002(Lorg/telegram/ui/Components/JoinCallAlert;Z)Z
 
-    .line 174
+    .line 180
     iget-object p1, p0, Lorg/telegram/ui/Components/JoinCallAlert$BottomSheetCell$1;->this$1:Lorg/telegram/ui/Components/JoinCallAlert$BottomSheetCell;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/JoinCallAlert$BottomSheetCell;->access$100(Lorg/telegram/ui/Components/JoinCallAlert$BottomSheetCell;)[Landroid/widget/TextView;
@@ -53,7 +53,7 @@
 
     aget-object p1, p1, v0
 
-    .line 175
+    .line 181
     iget-object v1, p0, Lorg/telegram/ui/Components/JoinCallAlert$BottomSheetCell$1;->this$1:Lorg/telegram/ui/Components/JoinCallAlert$BottomSheetCell;
 
     invoke-static {v1}, Lorg/telegram/ui/Components/JoinCallAlert$BottomSheetCell;->access$100(Lorg/telegram/ui/Components/JoinCallAlert$BottomSheetCell;)[Landroid/widget/TextView;
@@ -72,7 +72,7 @@
 
     aput-object v2, v1, v0
 
-    .line 176
+    .line 182
     iget-object v0, p0, Lorg/telegram/ui/Components/JoinCallAlert$BottomSheetCell$1;->this$1:Lorg/telegram/ui/Components/JoinCallAlert$BottomSheetCell;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/JoinCallAlert$BottomSheetCell;->access$100(Lorg/telegram/ui/Components/JoinCallAlert$BottomSheetCell;)[Landroid/widget/TextView;

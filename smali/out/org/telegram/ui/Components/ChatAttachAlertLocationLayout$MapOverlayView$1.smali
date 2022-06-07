@@ -31,7 +31,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout$MapOverlayView;Landroid/widget/FrameLayout;)V
     .registers 3
 
-    .line 307
+    .line 305
     iput-object p1, p0, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout$MapOverlayView$1;->this$1:Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout$MapOverlayView;
 
     iput-object p2, p0, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout$MapOverlayView$1;->val$iconLayout:Landroid/widget/FrameLayout;
@@ -42,7 +42,7 @@
 
     new-array p1, p1, [F
 
-    .line 310
+    .line 308
     fill-array-data p1, :array_10
 
     iput-object p1, p0, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout$MapOverlayView$1;->animatorValues:[F
@@ -61,7 +61,7 @@
 .method public onAnimationUpdate(Landroid/animation/ValueAnimator;)V
     .registers 9
 
-    .line 314
+    .line 312
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout$MapOverlayView$1;->animatorValues:[F
 
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedFraction()F
@@ -78,7 +78,7 @@
 
     if-ltz v0, :cond_81
 
-    .line 315
+    .line 313
     iget-boolean v0, p0, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout$MapOverlayView$1;->startedInner:Z
 
     if-nez v0, :cond_81
@@ -93,7 +93,7 @@
 
     if-eqz v0, :cond_81
 
-    .line 316
+    .line 314
     new-instance v0, Landroid/animation/AnimatorSet;
 
     invoke-direct {v0}, Landroid/animation/AnimatorSet;-><init>()V
@@ -104,12 +104,12 @@
 
     const/4 v2, 0x0
 
-    .line 317
+    .line 315
     iget-object v3, p0, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout$MapOverlayView$1;->this$1:Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout$MapOverlayView;
 
     iget-object v3, v3, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout$MapOverlayView;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;
 
-    .line 318
+    .line 316
     invoke-static {v3}, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;->access$300(Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;)Landroid/widget/FrameLayout;
 
     move-result-object v3
@@ -132,7 +132,7 @@
 
     iget-object v2, v2, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout$MapOverlayView;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;
 
-    .line 319
+    .line 317
     invoke-static {v2}, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;->access$300(Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;)Landroid/widget/FrameLayout;
 
     move-result-object v2
@@ -155,7 +155,7 @@
 
     iget-object v2, v2, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout$MapOverlayView;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;
 
-    .line 320
+    .line 318
     invoke-static {v2}, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;->access$300(Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;)Landroid/widget/FrameLayout;
 
     move-result-object v2
@@ -172,10 +172,10 @@
 
     aput-object v2, v1, v5
 
-    .line 317
+    .line 315
     invoke-virtual {v0, v1}, Landroid/animation/AnimatorSet;->playTogether([Landroid/animation/Animator;)V
 
-    .line 321
+    .line 319
     new-instance v1, Landroid/view/animation/OvershootInterpolator;
 
     const v2, 0x3f828f5c    # 1.02f
@@ -186,13 +186,13 @@
 
     const-wide/16 v1, 0xfa
 
-    .line 322
+    .line 320
     invoke-virtual {v0, v1, v2}, Landroid/animation/AnimatorSet;->setDuration(J)Landroid/animation/AnimatorSet;
 
-    .line 323
+    .line 321
     invoke-virtual {v0}, Landroid/animation/AnimatorSet;->start()V
 
-    .line 324
+    .line 322
     iput-boolean v3, p0, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout$MapOverlayView$1;->startedInner:Z
 
     :cond_81
@@ -204,7 +204,7 @@
 
     if-gtz v2, :cond_94
 
-    .line 328
+    .line 326
     sget-object v2, Lorg/telegram/ui/Components/CubicBezierInterpolator;->EASE_OUT:Lorg/telegram/ui/Components/CubicBezierInterpolator;
 
     div-float/2addr p1, v1
@@ -230,7 +230,7 @@
 
     const v1, 0x3e4ccccd    # 0.2f
 
-    .line 331
+    .line 329
     sget-object v3, Lorg/telegram/ui/Components/CubicBezierInterpolator;->EASE_OUT:Lorg/telegram/ui/Components/CubicBezierInterpolator;
 
     div-float/2addr p1, v2
@@ -252,7 +252,7 @@
 
     const v1, 0x3dcccccd    # 0.1f
 
-    .line 334
+    .line 332
     sget-object v3, Lorg/telegram/ui/Components/CubicBezierInterpolator;->EASE_OUT:Lorg/telegram/ui/Components/CubicBezierInterpolator;
 
     div-float/2addr p1, v2
@@ -265,13 +265,13 @@
 
     add-float/2addr p1, v0
 
-    .line 336
+    .line 334
     :goto_bd
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout$MapOverlayView$1;->val$iconLayout:Landroid/widget/FrameLayout;
 
     invoke-virtual {v0, p1}, Landroid/widget/FrameLayout;->setScaleX(F)V
 
-    .line 337
+    .line 335
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout$MapOverlayView$1;->val$iconLayout:Landroid/widget/FrameLayout;
 
     invoke-virtual {v0, p1}, Landroid/widget/FrameLayout;->setScaleY(F)V

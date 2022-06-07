@@ -124,171 +124,162 @@
 
 # virtual methods
 .method public addRect(FFFFLandroid/graphics/Path$Direction;)V
-    .registers 19
-
-    move-object v6, p0
+    .registers 13
 
     .line 85
-    iget v0, v6, Lorg/telegram/ui/Components/LinkPath;->heightOffset:F
+    iget v0, p0, Lorg/telegram/ui/Components/LinkPath;->heightOffset:F
 
     add-float v1, p2, v0
 
-    add-float v0, p4, v0
+    add-float/2addr v0, p4
 
     .line 87
-    iget v2, v6, Lorg/telegram/ui/Components/LinkPath;->lastTop:F
+    iget v2, p0, Lorg/telegram/ui/Components/LinkPath;->lastTop:F
 
-    const/4 v3, 0x1
+    const/high16 v3, -0x40800000    # -1.0f
 
-    const/high16 v4, -0x40800000    # -1.0f
+    cmpl-float v3, v2, v3
 
-    cmpl-float v4, v2, v4
-
-    if-nez v4, :cond_13
+    if-nez v3, :cond_10
 
     .line 88
-    iput v1, v6, Lorg/telegram/ui/Components/LinkPath;->lastTop:F
+    iput v1, p0, Lorg/telegram/ui/Components/LinkPath;->lastTop:F
 
-    goto :goto_1e
+    goto :goto_1c
 
-    :cond_13
+    :cond_10
     cmpl-float v2, v2, v1
 
-    if-eqz v2, :cond_1e
+    if-eqz v2, :cond_1c
 
     .line 90
-    iput v1, v6, Lorg/telegram/ui/Components/LinkPath;->lastTop:F
+    iput v1, p0, Lorg/telegram/ui/Components/LinkPath;->lastTop:F
 
     .line 91
-    iget v2, v6, Lorg/telegram/ui/Components/LinkPath;->currentLine:I
+    iget v2, p0, Lorg/telegram/ui/Components/LinkPath;->currentLine:I
 
-    add-int/2addr v2, v3
+    add-int/lit8 v2, v2, 0x1
 
-    iput v2, v6, Lorg/telegram/ui/Components/LinkPath;->currentLine:I
+    iput v2, p0, Lorg/telegram/ui/Components/LinkPath;->currentLine:I
 
     .line 93
-    :cond_1e
-    :goto_1e
-    iget-object v2, v6, Lorg/telegram/ui/Components/LinkPath;->currentLayout:Landroid/text/Layout;
+    :cond_1c
+    :goto_1c
+    iget-object v2, p0, Lorg/telegram/ui/Components/LinkPath;->currentLayout:Landroid/text/Layout;
 
-    iget v4, v6, Lorg/telegram/ui/Components/LinkPath;->currentLine:I
+    iget v3, p0, Lorg/telegram/ui/Components/LinkPath;->currentLine:I
 
-    invoke-virtual {v2, v4}, Landroid/text/Layout;->getLineRight(I)F
+    invoke-virtual {v2, v3}, Landroid/text/Layout;->getLineRight(I)F
 
     move-result v2
 
     .line 94
-    iget-object v4, v6, Lorg/telegram/ui/Components/LinkPath;->currentLayout:Landroid/text/Layout;
+    iget-object v3, p0, Lorg/telegram/ui/Components/LinkPath;->currentLayout:Landroid/text/Layout;
 
-    iget v5, v6, Lorg/telegram/ui/Components/LinkPath;->currentLine:I
+    iget v4, p0, Lorg/telegram/ui/Components/LinkPath;->currentLine:I
 
-    invoke-virtual {v4, v5}, Landroid/text/Layout;->getLineLeft(I)F
+    invoke-virtual {v3, v4}, Landroid/text/Layout;->getLineLeft(I)F
 
-    move-result v4
+    move-result v3
 
-    cmpl-float v5, p1, v2
+    cmpl-float v4, p1, v2
 
-    if-gez v5, :cond_106
+    if-gez v4, :cond_bc
 
-    cmpg-float v5, p1, v4
+    cmpg-float v4, p1, v3
 
-    if-gtz v5, :cond_3c
+    if-gtz v4, :cond_3a
 
-    cmpg-float v5, p3, v4
+    cmpg-float v4, p3, v3
 
-    if-gtz v5, :cond_3c
+    if-gtz v4, :cond_3a
 
-    goto/16 :goto_106
+    goto/16 :goto_bc
 
-    :cond_3c
-    cmpl-float v5, p3, v2
+    :cond_3a
+    cmpl-float v4, p3, v2
 
-    if-lez v5, :cond_42
+    if-lez v4, :cond_40
 
-    move v5, v2
+    move v4, v2
 
-    goto :goto_44
+    goto :goto_41
 
-    :cond_42
-    move/from16 v5, p3
+    :cond_40
+    move v4, p3
 
-    :goto_44
-    cmpg-float v2, p1, v4
+    :goto_41
+    cmpg-float v2, p1, v3
 
-    if-gez v2, :cond_49
+    if-gez v2, :cond_46
 
-    goto :goto_4a
+    goto :goto_47
 
-    :cond_49
-    move v4, p1
+    :cond_46
+    move v3, p1
 
     .line 106
-    :goto_4a
+    :goto_47
     sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    const/16 v7, 0x1c
+    const/16 v5, 0x1c
 
-    const/4 v8, 0x0
+    const/4 v6, 0x0
 
-    if-lt v2, v7, :cond_7b
+    if-lt v2, v5, :cond_78
 
     sub-float v2, v0, v1
 
     .line 108
-    iget v7, v6, Lorg/telegram/ui/Components/LinkPath;->lineHeight:I
+    iget v5, p0, Lorg/telegram/ui/Components/LinkPath;->lineHeight:I
 
-    int-to-float v7, v7
+    int-to-float v5, v5
 
-    cmpl-float v2, v2, v7
+    cmpl-float v2, v2, v5
 
-    if-lez v2, :cond_8f
+    if-lez v2, :cond_8a
 
     .line 109
-    iget v2, v6, Lorg/telegram/ui/Components/LinkPath;->heightOffset:F
+    iget v2, p0, Lorg/telegram/ui/Components/LinkPath;->heightOffset:F
 
-    iget-object v7, v6, Lorg/telegram/ui/Components/LinkPath;->currentLayout:Landroid/text/Layout;
+    iget-object v5, p0, Lorg/telegram/ui/Components/LinkPath;->currentLayout:Landroid/text/Layout;
 
-    invoke-virtual {v7}, Landroid/text/Layout;->getHeight()I
+    invoke-virtual {v5}, Landroid/text/Layout;->getHeight()I
 
-    move-result v7
+    move-result v5
 
-    int-to-float v7, v7
+    int-to-float v5, v5
 
-    cmpl-float v0, v0, v7
+    cmpl-float v0, v0, v5
 
-    if-eqz v0, :cond_78
+    if-eqz v0, :cond_75
 
-    iget-object v0, v6, Lorg/telegram/ui/Components/LinkPath;->currentLayout:Landroid/text/Layout;
+    iget-object v0, p0, Lorg/telegram/ui/Components/LinkPath;->currentLayout:Landroid/text/Layout;
 
-    iget v7, v6, Lorg/telegram/ui/Components/LinkPath;->currentLine:I
+    iget v5, p0, Lorg/telegram/ui/Components/LinkPath;->currentLine:I
 
-    invoke-virtual {v0, v7}, Landroid/text/Layout;->getLineBottom(I)I
+    invoke-virtual {v0, v5}, Landroid/text/Layout;->getLineBottom(I)I
 
     move-result v0
 
     int-to-float v0, v0
 
-    iget-object v7, v6, Lorg/telegram/ui/Components/LinkPath;->currentLayout:Landroid/text/Layout;
+    iget-object v5, p0, Lorg/telegram/ui/Components/LinkPath;->currentLayout:Landroid/text/Layout;
 
-    invoke-virtual {v7}, Landroid/text/Layout;->getSpacingAdd()F
+    invoke-virtual {v5}, Landroid/text/Layout;->getSpacingAdd()F
 
-    move-result v7
+    move-result v5
 
-    sub-float/2addr v0, v7
+    sub-float v6, v0, v5
 
-    goto :goto_79
+    :cond_75
+    add-float v0, v2, v6
 
-    :cond_78
-    const/4 v0, 0x0
-
-    :goto_79
-    add-float/2addr v0, v2
-
-    goto :goto_8f
+    goto :goto_8a
 
     .line 112
-    :cond_7b
-    iget-object v2, v6, Lorg/telegram/ui/Components/LinkPath;->currentLayout:Landroid/text/Layout;
+    :cond_78
+    iget-object v2, p0, Lorg/telegram/ui/Components/LinkPath;->currentLayout:Landroid/text/Layout;
 
     invoke-virtual {v2}, Landroid/text/Layout;->getHeight()I
 
@@ -298,190 +289,101 @@
 
     cmpl-float v2, v0, v2
 
-    if-eqz v2, :cond_8d
+    if-eqz v2, :cond_89
 
-    iget-object v2, v6, Lorg/telegram/ui/Components/LinkPath;->currentLayout:Landroid/text/Layout;
+    iget-object v2, p0, Lorg/telegram/ui/Components/LinkPath;->currentLayout:Landroid/text/Layout;
 
     invoke-virtual {v2}, Landroid/text/Layout;->getSpacingAdd()F
 
-    move-result v2
+    move-result v6
 
-    goto :goto_8e
-
-    :cond_8d
-    const/4 v2, 0x0
-
-    :goto_8e
-    sub-float/2addr v0, v2
+    :cond_89
+    sub-float/2addr v0, v6
 
     .line 114
-    :cond_8f
-    :goto_8f
-    iget v2, v6, Lorg/telegram/ui/Components/LinkPath;->baselineShift:I
+    :cond_8a
+    :goto_8a
+    iget v2, p0, Lorg/telegram/ui/Components/LinkPath;->baselineShift:I
 
-    if-gez v2, :cond_96
+    if-gez v2, :cond_91
 
     int-to-float v2, v2
 
     add-float/2addr v0, v2
 
-    goto :goto_9a
+    goto :goto_95
 
-    :cond_96
-    if-lez v2, :cond_9a
+    :cond_91
+    if-lez v2, :cond_95
 
     int-to-float v2, v2
 
     add-float/2addr v1, v2
 
-    :cond_9a
-    :goto_9a
-    move v7, v0
+    :cond_95
+    :goto_95
+    move v5, v0
 
     move v2, v1
 
     .line 119
-    iget-boolean v0, v6, Lorg/telegram/ui/Components/LinkPath;->useRoundRect:Z
+    iget-boolean v0, p0, Lorg/telegram/ui/Components/LinkPath;->useRoundRect:Z
 
-    if-eqz v0, :cond_fd
+    if-eqz v0, :cond_b4
 
-    .line 120
-    iget-object v0, v6, Lorg/telegram/ui/Components/LinkPath;->currentLayout:Landroid/text/Layout;
-
-    invoke-virtual {v0}, Landroid/text/Layout;->getText()Ljava/lang/CharSequence;
-
-    move-result-object v0
-
-    .line 121
-    iget-object v1, v6, Lorg/telegram/ui/Components/LinkPath;->currentLayout:Landroid/text/Layout;
-
-    iget v9, v6, Lorg/telegram/ui/Components/LinkPath;->currentLine:I
-
-    invoke-virtual {v1, v9, v4}, Landroid/text/Layout;->getOffsetForHorizontal(IF)I
-
-    move-result v1
-
-    iget-object v9, v6, Lorg/telegram/ui/Components/LinkPath;->currentLayout:Landroid/text/Layout;
-
-    iget v10, v6, Lorg/telegram/ui/Components/LinkPath;->currentLine:I
-
-    invoke-virtual {v9, v10, v5}, Landroid/text/Layout;->getOffsetForHorizontal(IF)I
-
-    move-result v9
-
-    add-int/2addr v9, v3
-
-    const/16 v10, 0x20
-
-    const/4 v11, 0x0
-
-    if-ltz v1, :cond_ca
-
-    .line 122
-    invoke-interface {v0}, Ljava/lang/CharSequence;->length()I
-
-    move-result v12
-
-    if-ge v1, v12, :cond_ca
-
-    invoke-interface {v0, v1}, Ljava/lang/CharSequence;->charAt(I)C
-
-    move-result v1
-
-    if-ne v1, v10, :cond_ca
-
-    const/4 v1, 0x1
-
-    goto :goto_cb
-
-    :cond_ca
-    const/4 v1, 0x0
-
-    :goto_cb
-    if-ltz v9, :cond_da
-
-    .line 123
-    invoke-interface {v0}, Ljava/lang/CharSequence;->length()I
-
-    move-result v12
-
-    if-ge v9, v12, :cond_da
-
-    invoke-interface {v0, v9}, Ljava/lang/CharSequence;->charAt(I)C
+    .line 124
+    invoke-static {}, Lorg/telegram/ui/Components/LinkPath;->getRadius()I
 
     move-result v0
 
-    if-ne v0, v10, :cond_da
+    int-to-float v0, v0
 
-    goto :goto_db
+    const/high16 v1, 0x40000000    # 2.0f
 
-    :cond_da
-    const/4 v3, 0x0
+    div-float/2addr v0, v1
 
-    :goto_db
-    const/high16 v0, 0x40000000    # 2.0f
+    sub-float/2addr v3, v0
 
-    if-eqz v1, :cond_e1
-
-    const/4 v1, 0x0
-
-    goto :goto_e7
-
-    .line 124
-    :cond_e1
     invoke-static {}, Lorg/telegram/ui/Components/LinkPath;->getRadius()I
 
-    move-result v1
+    move-result v0
 
-    int-to-float v1, v1
+    int-to-float v0, v0
 
-    div-float/2addr v1, v0
+    div-float/2addr v0, v1
 
-    :goto_e7
-    sub-float v1, v4, v1
-
-    if-eqz v3, :cond_ec
-
-    goto :goto_f3
-
-    :cond_ec
-    invoke-static {}, Lorg/telegram/ui/Components/LinkPath;->getRadius()I
-
-    move-result v3
-
-    int-to-float v3, v3
-
-    div-float v8, v3, v0
-
-    :goto_f3
-    add-float v3, v5, v8
+    add-float/2addr v4, v0
 
     move-object v0, p0
 
-    move v4, v7
+    move v1, v3
 
-    move-object/from16 v5, p5
+    move v3, v4
+
+    move v4, v5
+
+    move-object v5, p5
 
     invoke-super/range {v0 .. v5}, Landroid/graphics/Path;->addRect(FFFFLandroid/graphics/Path$Direction;)V
 
-    goto :goto_106
+    goto :goto_bc
 
-    :cond_fd
+    :cond_b4
     move-object v0, p0
 
-    move v1, v4
+    move v1, v3
 
-    move v3, v5
+    move v3, v4
 
-    move v4, v7
+    move v4, v5
 
-    move-object/from16 v5, p5
+    move-object v5, p5
 
     .line 126
     invoke-super/range {v0 .. v5}, Landroid/graphics/Path;->addRect(FFFFLandroid/graphics/Path$Direction;)V
 
-    :cond_106
-    :goto_106
+    :cond_bc
+    :goto_bc
     return-void
 .end method
 

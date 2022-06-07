@@ -24,7 +24,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/EmojiView;Landroid/content/Context;)V
     .registers 3
 
-    .line 1156
+    .line 1162
     iput-object p1, p0, Lorg/telegram/ui/Components/EmojiView$4;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-direct {p0, p2}, Lorg/telegram/ui/Components/RecyclerListView;-><init>(Landroid/content/Context;)V
@@ -37,7 +37,7 @@
 .method protected onLayout(ZIIII)V
     .registers 9
 
-    .line 1171
+    .line 1177
     iget-object v0, p0, Lorg/telegram/ui/Components/EmojiView$4;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/EmojiView;->access$4200(Lorg/telegram/ui/Components/EmojiView;)Z
@@ -56,10 +56,10 @@
 
     if-eqz v0, :cond_24
 
-    .line 1172
+    .line 1178
     iput-boolean v1, p0, Lorg/telegram/ui/Components/EmojiView$4;->ignoreLayout:Z
 
-    .line 1173
+    .line 1179
     iget-object v0, p0, Lorg/telegram/ui/Components/EmojiView$4;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/EmojiView;->access$4100(Lorg/telegram/ui/Components/EmojiView;)Landroidx/recyclerview/widget/GridLayoutManager;
@@ -70,19 +70,19 @@
 
     invoke-virtual {v0, v1, v2}, Landroidx/recyclerview/widget/LinearLayoutManager;->scrollToPositionWithOffset(II)V
 
-    .line 1174
+    .line 1180
     iget-object v0, p0, Lorg/telegram/ui/Components/EmojiView$4;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-static {v0, v2}, Lorg/telegram/ui/Components/EmojiView;->access$4302(Lorg/telegram/ui/Components/EmojiView;Z)Z
 
-    .line 1175
+    .line 1181
     iput-boolean v2, p0, Lorg/telegram/ui/Components/EmojiView$4;->ignoreLayout:Z
 
-    .line 1177
+    .line 1183
     :cond_24
     invoke-super/range {p0 .. p5}, Lorg/telegram/ui/Components/RecyclerListView;->onLayout(ZIIII)V
 
-    .line 1178
+    .line 1184
     iget-object p1, p0, Lorg/telegram/ui/Components/EmojiView$4;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-static {p1, v1}, Lorg/telegram/ui/Components/EmojiView;->access$3000(Lorg/telegram/ui/Components/EmojiView;Z)V
@@ -95,15 +95,15 @@
 
     const/4 v0, 0x1
 
-    .line 1162
+    .line 1168
     iput-boolean v0, p0, Lorg/telegram/ui/Components/EmojiView$4;->ignoreLayout:Z
 
-    .line 1163
+    .line 1169
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result v1
 
-    .line 1164
+    .line 1170
     iget-object v2, p0, Lorg/telegram/ui/Components/EmojiView$4;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-static {v2}, Lorg/telegram/ui/Components/EmojiView;->access$4100(Lorg/telegram/ui/Components/EmojiView;)Landroidx/recyclerview/widget/GridLayoutManager;
@@ -138,10 +138,10 @@
 
     const/4 v0, 0x0
 
-    .line 1165
+    .line 1171
     iput-boolean v0, p0, Lorg/telegram/ui/Components/EmojiView$4;->ignoreLayout:Z
 
-    .line 1166
+    .line 1172
     invoke-super {p0, p1, p2}, Lorg/telegram/ui/Components/RecyclerListView;->onMeasure(II)V
 
     return-void
@@ -150,7 +150,7 @@
 .method public onTouchEvent(Landroid/view/MotionEvent;)Z
     .registers 13
 
-    .line 1191
+    .line 1197
     iget-object v0, p0, Lorg/telegram/ui/Components/EmojiView$4;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/EmojiView;->access$4400(Lorg/telegram/ui/Components/EmojiView;)Lorg/telegram/ui/Components/EmojiView$ImageViewEmoji;
@@ -159,7 +159,7 @@
 
     if-eqz v0, :cond_19d
 
-    .line 1192
+    .line 1198
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v0
@@ -184,7 +184,7 @@
 
     goto/16 :goto_c9
 
-    .line 1242
+    .line 1248
     :cond_1d
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
@@ -192,7 +192,7 @@
 
     if-ne v0, v1, :cond_19c
 
-    .line 1244
+    .line 1250
     iget-object v0, p0, Lorg/telegram/ui/Components/EmojiView$4;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/EmojiView;->access$4900(Lorg/telegram/ui/Components/EmojiView;)F
@@ -205,7 +205,7 @@
 
     if-eqz v0, :cond_6c
 
-    .line 1245
+    .line 1251
     iget-object v0, p0, Lorg/telegram/ui/Components/EmojiView$4;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/EmojiView;->access$4900(Lorg/telegram/ui/Components/EmojiView;)F
@@ -263,14 +263,14 @@
 
     goto :goto_6d
 
-    .line 1246
+    .line 1252
     :cond_62
     :goto_62
     iget-object v0, p0, Lorg/telegram/ui/Components/EmojiView$4;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-static {v0, v4}, Lorg/telegram/ui/Components/EmojiView;->access$4902(Lorg/telegram/ui/Components/EmojiView;F)F
 
-    .line 1247
+    .line 1253
     iget-object v0, p0, Lorg/telegram/ui/Components/EmojiView$4;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-static {v0, v4}, Lorg/telegram/ui/Components/EmojiView;->access$5002(Lorg/telegram/ui/Components/EmojiView;F)F
@@ -281,7 +281,7 @@
     :goto_6d
     if-nez v0, :cond_19c
 
-    .line 1253
+    .line 1259
     iget-object v0, p0, Lorg/telegram/ui/Components/EmojiView$4;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/EmojiView;->access$5100(Lorg/telegram/ui/Components/EmojiView;)[I
@@ -290,7 +290,7 @@
 
     invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->getLocationOnScreen([I)V
 
-    .line 1254
+    .line 1260
     iget-object v0, p0, Lorg/telegram/ui/Components/EmojiView$4;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/EmojiView;->access$5100(Lorg/telegram/ui/Components/EmojiView;)[I
@@ -307,7 +307,7 @@
 
     add-float/2addr v0, p1
 
-    .line 1255
+    .line 1261
     iget-object p1, p0, Lorg/telegram/ui/Components/EmojiView$4;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/EmojiView;->access$4600(Lorg/telegram/ui/Components/EmojiView;)Lorg/telegram/ui/Components/EmojiView$EmojiColorPickerView;
@@ -322,7 +322,7 @@
 
     invoke-virtual {p1, v2}, Landroid/view/View;->getLocationOnScreen([I)V
 
-    .line 1256
+    .line 1262
     iget-object p1, p0, Lorg/telegram/ui/Components/EmojiView$4;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/EmojiView;->access$5100(Lorg/telegram/ui/Components/EmojiView;)[I
@@ -343,7 +343,7 @@
 
     sub-float/2addr v0, p1
 
-    .line 1257
+    .line 1263
     iget-object p1, p0, Lorg/telegram/ui/Components/EmojiView$4;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/EmojiView;->access$4000(Lorg/telegram/ui/Components/EmojiView;)I
@@ -378,7 +378,7 @@
     :cond_bd
     move v3, p1
 
-    .line 1263
+    .line 1269
     :goto_be
     iget-object p1, p0, Lorg/telegram/ui/Components/EmojiView$4;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
@@ -390,7 +390,7 @@
 
     goto/16 :goto_19c
 
-    .line 1193
+    .line 1199
     :cond_c9
     :goto_c9
     iget-object p1, p0, Lorg/telegram/ui/Components/EmojiView$4;->this$0:Lorg/telegram/ui/Components/EmojiView;
@@ -415,7 +415,7 @@
 
     if-eqz p1, :cond_18d
 
-    .line 1194
+    .line 1200
     iget-object p1, p0, Lorg/telegram/ui/Components/EmojiView$4;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/EmojiView;->access$4500(Lorg/telegram/ui/Components/EmojiView;)Lorg/telegram/ui/Components/EmojiView$EmojiPopupWindow;
@@ -424,7 +424,7 @@
 
     invoke-virtual {p1}, Lorg/telegram/ui/Components/EmojiView$EmojiPopupWindow;->dismiss()V
 
-    .line 1197
+    .line 1203
     iget-object p1, p0, Lorg/telegram/ui/Components/EmojiView$4;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/EmojiView;->access$4600(Lorg/telegram/ui/Components/EmojiView;)Lorg/telegram/ui/Components/EmojiView$EmojiColorPickerView;
@@ -484,7 +484,7 @@
     :cond_110
     move-object p1, v10
 
-    .line 1214
+    .line 1220
     :goto_111
     iget-object v1, p0, Lorg/telegram/ui/Components/EmojiView$4;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
@@ -498,7 +498,7 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 1215
+    .line 1221
     iget-object v2, p0, Lorg/telegram/ui/Components/EmojiView$4;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-static {v2}, Lorg/telegram/ui/Components/EmojiView;->access$4400(Lorg/telegram/ui/Components/EmojiView;)Lorg/telegram/ui/Components/EmojiView$ImageViewEmoji;
@@ -513,25 +513,25 @@
 
     if-eqz p1, :cond_135
 
-    .line 1217
+    .line 1223
     sget-object v2, Lorg/telegram/messenger/Emoji;->emojiColor:Ljava/util/HashMap;
 
     invoke-virtual {v2, v1, p1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1218
+    .line 1224
     invoke-static {v1, p1}, Lorg/telegram/ui/Components/EmojiView;->access$3700(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
     goto :goto_13a
 
-    .line 1220
+    .line 1226
     :cond_135
     sget-object p1, Lorg/telegram/messenger/Emoji;->emojiColor:Ljava/util/HashMap;
 
     invoke-virtual {p1, v1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1222
+    .line 1228
     :goto_13a
     iget-object p1, p0, Lorg/telegram/ui/Components/EmojiView$4;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
@@ -555,7 +555,7 @@
 
     invoke-virtual {p1, v1, v2}, Lorg/telegram/ui/Components/EmojiView$ImageViewEmoji;->setImageDrawable(Landroid/graphics/drawable/Drawable;Z)V
 
-    .line 1223
+    .line 1229
     iget-object p1, p0, Lorg/telegram/ui/Components/EmojiView$4;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/EmojiView;->access$4400(Lorg/telegram/ui/Components/EmojiView;)Lorg/telegram/ui/Components/EmojiView$ImageViewEmoji;
@@ -564,7 +564,7 @@
 
     invoke-static {p1, v0}, Lorg/telegram/ui/Components/EmojiView$ImageViewEmoji;->access$4800(Lorg/telegram/ui/Components/EmojiView$ImageViewEmoji;Ljava/lang/String;)V
 
-    .line 1224
+    .line 1230
     invoke-static {}, Lorg/telegram/messenger/Emoji;->saveEmojiColors()V
 
     goto :goto_18d
@@ -572,34 +572,34 @@
     :cond_15e
     const-string v2, ""
 
-    .line 1226
+    .line 1232
     invoke-virtual {v1, v10, v2}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 1227
+    .line 1233
     invoke-virtual {v1, v9, v2}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 1228
+    .line 1234
     invoke-virtual {v1, v8, v2}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 1229
+    .line 1235
     invoke-virtual {v1, v7, v2}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 1230
+    .line 1236
     invoke-virtual {v1, v6, v2}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
 
     move-result-object v1
 
     if-eqz p1, :cond_184
 
-    .line 1233
+    .line 1239
     iget-object v2, p0, Lorg/telegram/ui/Components/EmojiView$4;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-static {v2}, Lorg/telegram/ui/Components/EmojiView;->access$4400(Lorg/telegram/ui/Components/EmojiView;)Lorg/telegram/ui/Components/EmojiView$ImageViewEmoji;
@@ -614,7 +614,7 @@
 
     goto :goto_18d
 
-    .line 1235
+    .line 1241
     :cond_184
     iget-object p1, p0, Lorg/telegram/ui/Components/EmojiView$4;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
@@ -624,19 +624,19 @@
 
     invoke-static {p1, v1}, Lorg/telegram/ui/Components/EmojiView$ImageViewEmoji;->access$4800(Lorg/telegram/ui/Components/EmojiView$ImageViewEmoji;Ljava/lang/String;)V
 
-    .line 1239
+    .line 1245
     :cond_18d
     :goto_18d
     iget-object p1, p0, Lorg/telegram/ui/Components/EmojiView$4;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-static {p1, v0}, Lorg/telegram/ui/Components/EmojiView;->access$4402(Lorg/telegram/ui/Components/EmojiView;Lorg/telegram/ui/Components/EmojiView$ImageViewEmoji;)Lorg/telegram/ui/Components/EmojiView$ImageViewEmoji;
 
-    .line 1240
+    .line 1246
     iget-object p1, p0, Lorg/telegram/ui/Components/EmojiView$4;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-static {p1, v4}, Lorg/telegram/ui/Components/EmojiView;->access$4902(Lorg/telegram/ui/Components/EmojiView;F)F
 
-    .line 1241
+    .line 1247
     iget-object p1, p0, Lorg/telegram/ui/Components/EmojiView$4;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-static {p1, v4}, Lorg/telegram/ui/Components/EmojiView;->access$5002(Lorg/telegram/ui/Components/EmojiView;F)F
@@ -645,7 +645,7 @@
     :goto_19c
     return v5
 
-    .line 1268
+    .line 1274
     :cond_19d
     iget-object v0, p0, Lorg/telegram/ui/Components/EmojiView$4;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
@@ -655,7 +655,7 @@
 
     invoke-static {v0, v1}, Lorg/telegram/ui/Components/EmojiView;->access$5202(Lorg/telegram/ui/Components/EmojiView;F)F
 
-    .line 1269
+    .line 1275
     iget-object v0, p0, Lorg/telegram/ui/Components/EmojiView$4;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
@@ -664,7 +664,7 @@
 
     invoke-static {v0, v1}, Lorg/telegram/ui/Components/EmojiView;->access$5302(Lorg/telegram/ui/Components/EmojiView;F)F
 
-    .line 1270
+    .line 1276
     invoke-super {p0, p1}, Lorg/telegram/ui/Components/RecyclerListView;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
     move-result p1
@@ -675,14 +675,14 @@
 .method public requestLayout()V
     .registers 2
 
-    .line 1183
+    .line 1189
     iget-boolean v0, p0, Lorg/telegram/ui/Components/EmojiView$4;->ignoreLayout:Z
 
     if-eqz v0, :cond_5
 
     return-void
 
-    .line 1186
+    .line 1192
     :cond_5
     invoke-super {p0}, Lorg/telegram/ui/Components/RecyclerListView;->requestLayout()V
 

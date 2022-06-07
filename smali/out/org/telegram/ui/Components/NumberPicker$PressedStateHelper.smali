@@ -108,7 +108,7 @@
     .line 1099
     iget-object v1, p0, Lorg/telegram/ui/Components/NumberPicker$PressedStateHelper;->this$0:Lorg/telegram/ui/Components/NumberPicker;
 
-    invoke-static {v1}, Lorg/telegram/ui/Components/NumberPicker;->access$300(Lorg/telegram/ui/Components/NumberPicker;)Z
+    invoke-static {v1}, Lorg/telegram/ui/Components/NumberPicker;->access$200(Lorg/telegram/ui/Components/NumberPicker;)Z
 
     move-result v1
 
@@ -117,12 +117,12 @@
     .line 1100
     iget-object v1, p0, Lorg/telegram/ui/Components/NumberPicker$PressedStateHelper;->this$0:Lorg/telegram/ui/Components/NumberPicker;
 
-    invoke-static {v1, v0}, Lorg/telegram/ui/Components/NumberPicker;->access$302(Lorg/telegram/ui/Components/NumberPicker;Z)Z
+    invoke-static {v1, v0}, Lorg/telegram/ui/Components/NumberPicker;->access$202(Lorg/telegram/ui/Components/NumberPicker;Z)Z
 
     .line 1101
     iget-object v1, p0, Lorg/telegram/ui/Components/NumberPicker$PressedStateHelper;->this$0:Lorg/telegram/ui/Components/NumberPicker;
 
-    invoke-static {v1}, Lorg/telegram/ui/Components/NumberPicker;->access$400(Lorg/telegram/ui/Components/NumberPicker;)I
+    invoke-static {v1}, Lorg/telegram/ui/Components/NumberPicker;->access$300(Lorg/telegram/ui/Components/NumberPicker;)I
 
     move-result v2
 
@@ -144,12 +144,12 @@
     :cond_2c
     iget-object v1, p0, Lorg/telegram/ui/Components/NumberPicker$PressedStateHelper;->this$0:Lorg/telegram/ui/Components/NumberPicker;
 
-    invoke-static {v1, v0}, Lorg/telegram/ui/Components/NumberPicker;->access$502(Lorg/telegram/ui/Components/NumberPicker;Z)Z
+    invoke-static {v1, v0}, Lorg/telegram/ui/Components/NumberPicker;->access$402(Lorg/telegram/ui/Components/NumberPicker;Z)Z
 
     .line 1104
     iget-object v1, p0, Lorg/telegram/ui/Components/NumberPicker$PressedStateHelper;->this$0:Lorg/telegram/ui/Components/NumberPicker;
 
-    invoke-static {v1}, Lorg/telegram/ui/Components/NumberPicker;->access$500(Lorg/telegram/ui/Components/NumberPicker;)Z
+    invoke-static {v1}, Lorg/telegram/ui/Components/NumberPicker;->access$400(Lorg/telegram/ui/Components/NumberPicker;)Z
 
     move-result v1
 
@@ -164,7 +164,7 @@
 
     iget-object v3, p0, Lorg/telegram/ui/Components/NumberPicker$PressedStateHelper;->this$0:Lorg/telegram/ui/Components/NumberPicker;
 
-    invoke-static {v3}, Lorg/telegram/ui/Components/NumberPicker;->access$600(Lorg/telegram/ui/Components/NumberPicker;)I
+    invoke-static {v3}, Lorg/telegram/ui/Components/NumberPicker;->access$500(Lorg/telegram/ui/Components/NumberPicker;)I
 
     move-result v3
 
@@ -206,7 +206,7 @@
     :cond_13
     iget-object v0, p0, Lorg/telegram/ui/Components/NumberPicker$PressedStateHelper;->this$0:Lorg/telegram/ui/Components/NumberPicker;
 
-    invoke-static {v0}, Lorg/telegram/ui/Components/NumberPicker;->access$500(Lorg/telegram/ui/Components/NumberPicker;)Z
+    invoke-static {v0}, Lorg/telegram/ui/Components/NumberPicker;->access$400(Lorg/telegram/ui/Components/NumberPicker;)Z
 
     move-result v0
 
@@ -229,7 +229,7 @@
     :cond_25
     iget-object v0, p0, Lorg/telegram/ui/Components/NumberPicker$PressedStateHelper;->this$0:Lorg/telegram/ui/Components/NumberPicker;
 
-    invoke-static {v0, v3}, Lorg/telegram/ui/Components/NumberPicker;->access$580(Lorg/telegram/ui/Components/NumberPicker;I)Z
+    invoke-static {v0, v3}, Lorg/telegram/ui/Components/NumberPicker;->access$480(Lorg/telegram/ui/Components/NumberPicker;I)Z
 
     .line 1157
     iget-object v0, p0, Lorg/telegram/ui/Components/NumberPicker$PressedStateHelper;->this$0:Lorg/telegram/ui/Components/NumberPicker;
@@ -240,7 +240,7 @@
 
     iget-object v3, p0, Lorg/telegram/ui/Components/NumberPicker$PressedStateHelper;->this$0:Lorg/telegram/ui/Components/NumberPicker;
 
-    invoke-static {v3}, Lorg/telegram/ui/Components/NumberPicker;->access$600(Lorg/telegram/ui/Components/NumberPicker;)I
+    invoke-static {v3}, Lorg/telegram/ui/Components/NumberPicker;->access$500(Lorg/telegram/ui/Components/NumberPicker;)I
 
     move-result v3
 
@@ -252,7 +252,7 @@
     :cond_3a
     iget-object v0, p0, Lorg/telegram/ui/Components/NumberPicker$PressedStateHelper;->this$0:Lorg/telegram/ui/Components/NumberPicker;
 
-    invoke-static {v0}, Lorg/telegram/ui/Components/NumberPicker;->access$300(Lorg/telegram/ui/Components/NumberPicker;)Z
+    invoke-static {v0}, Lorg/telegram/ui/Components/NumberPicker;->access$200(Lorg/telegram/ui/Components/NumberPicker;)Z
 
     move-result v0
 
@@ -275,12 +275,12 @@
     :cond_4c
     iget-object v0, p0, Lorg/telegram/ui/Components/NumberPicker$PressedStateHelper;->this$0:Lorg/telegram/ui/Components/NumberPicker;
 
-    invoke-static {v0, v3}, Lorg/telegram/ui/Components/NumberPicker;->access$380(Lorg/telegram/ui/Components/NumberPicker;I)Z
+    invoke-static {v0, v3}, Lorg/telegram/ui/Components/NumberPicker;->access$280(Lorg/telegram/ui/Components/NumberPicker;I)Z
 
     .line 1148
     iget-object v0, p0, Lorg/telegram/ui/Components/NumberPicker$PressedStateHelper;->this$0:Lorg/telegram/ui/Components/NumberPicker;
 
-    invoke-static {v0}, Lorg/telegram/ui/Components/NumberPicker;->access$400(Lorg/telegram/ui/Components/NumberPicker;)I
+    invoke-static {v0}, Lorg/telegram/ui/Components/NumberPicker;->access$300(Lorg/telegram/ui/Components/NumberPicker;)I
 
     move-result v1
 
@@ -314,7 +314,7 @@
     :cond_6e
     iget-object v0, p0, Lorg/telegram/ui/Components/NumberPicker$PressedStateHelper;->this$0:Lorg/telegram/ui/Components/NumberPicker;
 
-    invoke-static {v0, v3}, Lorg/telegram/ui/Components/NumberPicker;->access$502(Lorg/telegram/ui/Components/NumberPicker;Z)Z
+    invoke-static {v0, v3}, Lorg/telegram/ui/Components/NumberPicker;->access$402(Lorg/telegram/ui/Components/NumberPicker;Z)Z
 
     .line 1135
     iget-object v0, p0, Lorg/telegram/ui/Components/NumberPicker$PressedStateHelper;->this$0:Lorg/telegram/ui/Components/NumberPicker;
@@ -325,7 +325,7 @@
 
     iget-object v3, p0, Lorg/telegram/ui/Components/NumberPicker$PressedStateHelper;->this$0:Lorg/telegram/ui/Components/NumberPicker;
 
-    invoke-static {v3}, Lorg/telegram/ui/Components/NumberPicker;->access$600(Lorg/telegram/ui/Components/NumberPicker;)I
+    invoke-static {v3}, Lorg/telegram/ui/Components/NumberPicker;->access$500(Lorg/telegram/ui/Components/NumberPicker;)I
 
     move-result v3
 
@@ -337,12 +337,12 @@
     :cond_83
     iget-object v0, p0, Lorg/telegram/ui/Components/NumberPicker$PressedStateHelper;->this$0:Lorg/telegram/ui/Components/NumberPicker;
 
-    invoke-static {v0, v3}, Lorg/telegram/ui/Components/NumberPicker;->access$302(Lorg/telegram/ui/Components/NumberPicker;Z)Z
+    invoke-static {v0, v3}, Lorg/telegram/ui/Components/NumberPicker;->access$202(Lorg/telegram/ui/Components/NumberPicker;Z)Z
 
     .line 1130
     iget-object v0, p0, Lorg/telegram/ui/Components/NumberPicker$PressedStateHelper;->this$0:Lorg/telegram/ui/Components/NumberPicker;
 
-    invoke-static {v0}, Lorg/telegram/ui/Components/NumberPicker;->access$400(Lorg/telegram/ui/Components/NumberPicker;)I
+    invoke-static {v0}, Lorg/telegram/ui/Components/NumberPicker;->access$300(Lorg/telegram/ui/Components/NumberPicker;)I
 
     move-result v1
 

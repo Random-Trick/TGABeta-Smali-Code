@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/DialogsActivity;Landroid/content/Context;)V
     .registers 3
 
-    .line 2233
+    .line 2275
     iput-object p1, p0, Lorg/telegram/ui/DialogsActivity$5;->this$0:Lorg/telegram/ui/DialogsActivity;
 
     invoke-direct {p0, p2}, Lorg/telegram/ui/Components/FilterTabsView;-><init>(Landroid/content/Context;)V
@@ -35,7 +35,7 @@
 .method public onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
     .registers 4
 
-    .line 2236
+    .line 2278
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getParent()Landroid/view/ViewParent;
 
     move-result-object v0
@@ -44,14 +44,14 @@
 
     invoke-interface {v0, v1}, Landroid/view/ViewParent;->requestDisallowInterceptTouchEvent(Z)V
 
-    .line 2237
+    .line 2279
     iget-object v0, p0, Lorg/telegram/ui/DialogsActivity$5;->this$0:Lorg/telegram/ui/DialogsActivity;
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Lorg/telegram/ui/DialogsActivity;->access$302(Lorg/telegram/ui/DialogsActivity;Z)Z
 
-    .line 2238
+    .line 2280
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
 
     move-result p1
@@ -62,10 +62,10 @@
 .method protected onLayout(ZIIII)V
     .registers 6
 
-    .line 2254
+    .line 2296
     invoke-super/range {p0 .. p5}, Lorg/telegram/ui/Components/FilterTabsView;->onLayout(ZIIII)V
 
-    .line 2255
+    .line 2297
     iget-object p1, p0, Lorg/telegram/ui/DialogsActivity$5;->this$0:Lorg/telegram/ui/DialogsActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/DialogsActivity;->access$5600(Lorg/telegram/ui/DialogsActivity;)Landroid/view/View;
@@ -74,7 +74,7 @@
 
     if-eqz p1, :cond_23
 
-    .line 2256
+    .line 2298
     iget-object p1, p0, Lorg/telegram/ui/DialogsActivity$5;->this$0:Lorg/telegram/ui/DialogsActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/DialogsActivity;->access$5600(Lorg/telegram/ui/DialogsActivity;)Landroid/view/View;
@@ -89,10 +89,10 @@
 
     invoke-virtual {p1, p2}, Landroid/view/View;->getLocationInWindow([I)V
 
-    .line 2257
+    .line 2299
     iget-object p1, p0, Lorg/telegram/ui/DialogsActivity$5;->this$0:Lorg/telegram/ui/DialogsActivity;
 
-    invoke-static {p1}, Lorg/telegram/ui/DialogsActivity;->access$20100(Lorg/telegram/ui/DialogsActivity;)Landroid/view/View;
+    invoke-static {p1}, Lorg/telegram/ui/DialogsActivity;->access$20500(Lorg/telegram/ui/DialogsActivity;)Landroid/view/View;
 
     move-result-object p1
 
@@ -105,7 +105,7 @@
 .method public setTranslationY(F)V
     .registers 3
 
-    .line 2243
+    .line 2285
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getTranslationY()F
 
     move-result v0
@@ -114,27 +114,27 @@
 
     if-eqz v0, :cond_21
 
-    .line 2244
+    .line 2286
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->setTranslationY(F)V
 
-    .line 2245
+    .line 2287
     iget-object p1, p0, Lorg/telegram/ui/DialogsActivity$5;->this$0:Lorg/telegram/ui/DialogsActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/DialogsActivity;->access$1300(Lorg/telegram/ui/DialogsActivity;)V
 
-    .line 2246
+    .line 2288
     iget-object p1, p0, Lorg/telegram/ui/DialogsActivity$5;->this$0:Lorg/telegram/ui/DialogsActivity;
 
-    invoke-static {p1}, Lorg/telegram/ui/DialogsActivity;->access$19900(Lorg/telegram/ui/DialogsActivity;)Landroid/view/View;
+    invoke-static {p1}, Lorg/telegram/ui/DialogsActivity;->access$20300(Lorg/telegram/ui/DialogsActivity;)Landroid/view/View;
 
     move-result-object p1
 
     if-eqz p1, :cond_21
 
-    .line 2247
+    .line 2289
     iget-object p1, p0, Lorg/telegram/ui/DialogsActivity$5;->this$0:Lorg/telegram/ui/DialogsActivity;
 
-    invoke-static {p1}, Lorg/telegram/ui/DialogsActivity;->access$20000(Lorg/telegram/ui/DialogsActivity;)Landroid/view/View;
+    invoke-static {p1}, Lorg/telegram/ui/DialogsActivity;->access$20400(Lorg/telegram/ui/DialogsActivity;)Landroid/view/View;
 
     move-result-object p1
 

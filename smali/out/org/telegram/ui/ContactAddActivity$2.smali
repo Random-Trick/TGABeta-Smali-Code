@@ -1,9 +1,6 @@
 .class Lorg/telegram/ui/ContactAddActivity$2;
-.super Ljava/lang/Object;
+.super Lorg/telegram/ui/Components/EditTextBoldCursor;
 .source "ContactAddActivity.java"
-
-# interfaces
-.implements Landroid/view/View$OnFocusChangeListener;
 
 
 # annotations
@@ -18,49 +15,32 @@
 
 
 # instance fields
-.field focused:Z
-
 .field final synthetic this$0:Lorg/telegram/ui/ContactAddActivity;
 
 
 # direct methods
-.method constructor <init>(Lorg/telegram/ui/ContactAddActivity;)V
-    .registers 2
+.method constructor <init>(Lorg/telegram/ui/ContactAddActivity;Landroid/content/Context;)V
+    .registers 3
 
-    .line 193
+    .line 181
     iput-object p1, p0, Lorg/telegram/ui/ContactAddActivity$2;->this$0:Lorg/telegram/ui/ContactAddActivity;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Lorg/telegram/ui/Components/EditTextBoldCursor;-><init>(Landroid/content/Context;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onFocusChange(Landroid/view/View;Z)V
-    .registers 3
+.method protected getResourcesProvider()Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;
+    .registers 2
 
-    .line 197
-    iget-object p1, p0, Lorg/telegram/ui/ContactAddActivity$2;->this$0:Lorg/telegram/ui/ContactAddActivity;
+    .line 184
+    iget-object v0, p0, Lorg/telegram/ui/ContactAddActivity$2;->this$0:Lorg/telegram/ui/ContactAddActivity;
 
-    iget-boolean p1, p1, Lorg/telegram/ui/ContactAddActivity;->paused:Z
+    invoke-static {v0}, Lorg/telegram/ui/ContactAddActivity;->access$700(Lorg/telegram/ui/ContactAddActivity;)Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;
 
-    if-nez p1, :cond_11
+    move-result-object v0
 
-    if-nez p2, :cond_11
-
-    iget-boolean p1, p0, Lorg/telegram/ui/ContactAddActivity$2;->focused:Z
-
-    if-eqz p1, :cond_11
-
-    const-string p1, "changed"
-
-    .line 198
-    invoke-static {p1}, Lorg/telegram/messenger/FileLog;->d(Ljava/lang/String;)V
-
-    .line 200
-    :cond_11
-    iput-boolean p2, p0, Lorg/telegram/ui/ContactAddActivity$2;->focused:Z
-
-    return-void
+    return-object v0
 .end method

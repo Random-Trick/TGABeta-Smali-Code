@@ -2,32 +2,44 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
 
 
 # instance fields
-.field public final synthetic f$0:Ljava/lang/Runnable;
+.field public final synthetic f$0:Lorg/telegram/ui/Components/ChatAttachAlert$1;
+
+.field public final synthetic f$1:I
+
+.field public final synthetic f$2:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/Runnable;)V
-    .registers 2
+.method public synthetic constructor <init>(Lorg/telegram/ui/Components/ChatAttachAlert$1;II)V
+    .registers 4
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lorg/telegram/ui/Components/ChatAttachAlert$1$$ExternalSyntheticLambda1;->f$0:Ljava/lang/Runnable;
+    iput-object p1, p0, Lorg/telegram/ui/Components/ChatAttachAlert$1$$ExternalSyntheticLambda1;->f$0:Lorg/telegram/ui/Components/ChatAttachAlert$1;
+
+    iput p2, p0, Lorg/telegram/ui/Components/ChatAttachAlert$1$$ExternalSyntheticLambda1;->f$1:I
+
+    iput p3, p0, Lorg/telegram/ui/Components/ChatAttachAlert$1$$ExternalSyntheticLambda1;->f$2:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .registers 2
+.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
+    .registers 5
 
-    iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlert$1$$ExternalSyntheticLambda1;->f$0:Ljava/lang/Runnable;
+    iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlert$1$$ExternalSyntheticLambda1;->f$0:Lorg/telegram/ui/Components/ChatAttachAlert$1;
 
-    invoke-static {v0}, Lorg/telegram/ui/Components/ChatAttachAlert$1;->$r8$lambda$lGleu6mWbuiyR4dI3yQL-Ih8EEk(Ljava/lang/Runnable;)V
+    iget v1, p0, Lorg/telegram/ui/Components/ChatAttachAlert$1$$ExternalSyntheticLambda1;->f$1:I
+
+    iget v2, p0, Lorg/telegram/ui/Components/ChatAttachAlert$1$$ExternalSyntheticLambda1;->f$2:I
+
+    invoke-static {v0, v1, v2, p1}, Lorg/telegram/ui/Components/ChatAttachAlert$1;->$r8$lambda$wsvANjNzXFND_wb72TMB5FrTQoY(Lorg/telegram/ui/Components/ChatAttachAlert$1;IILandroid/animation/ValueAnimator;)V
 
     return-void
 .end method

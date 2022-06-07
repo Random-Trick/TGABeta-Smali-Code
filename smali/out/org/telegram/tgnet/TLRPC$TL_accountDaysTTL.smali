@@ -21,7 +21,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 44332
+    .line 44784
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -30,7 +30,7 @@
 .method public static TLdeserialize(Lorg/telegram/tgnet/AbstractSerializedData;IZ)Lorg/telegram/tgnet/TLRPC$TL_accountDaysTTL;
     .registers 4
 
-    .line 44338
+    .line 44790
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_accountDaysTTL;->constructor:I
 
     if-eq v0, p1, :cond_1e
@@ -41,7 +41,7 @@
 
     return-object p0
 
-    .line 44340
+    .line 44792
     :cond_8
     new-instance p0, Ljava/lang/RuntimeException;
 
@@ -67,13 +67,13 @@
 
     throw p0
 
-    .line 44345
+    .line 44797
     :cond_1e
     new-instance p1, Lorg/telegram/tgnet/TLRPC$TL_accountDaysTTL;
 
     invoke-direct {p1}, Lorg/telegram/tgnet/TLRPC$TL_accountDaysTTL;-><init>()V
 
-    .line 44346
+    .line 44798
     invoke-virtual {p1, p0, p2}, Lorg/telegram/tgnet/TLRPC$TL_accountDaysTTL;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
     return-object p1
@@ -84,7 +84,7 @@
 .method public readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
     .registers 3
 
-    .line 44351
+    .line 44803
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result p1
@@ -97,12 +97,12 @@
 .method public serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
     .registers 3
 
-    .line 44355
+    .line 44807
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_accountDaysTTL;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 44356
+    .line 44808
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_accountDaysTTL;->days:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V

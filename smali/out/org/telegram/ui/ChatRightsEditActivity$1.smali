@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/ChatRightsEditActivity;)V
     .registers 2
 
-    .line 369
+    .line 366
     iput-object p1, p0, Lorg/telegram/ui/ChatRightsEditActivity$1;->this$0:Lorg/telegram/ui/ChatRightsEditActivity;
 
     invoke-direct {p0}, Lorg/telegram/ui/ActionBar/ActionBar$ActionBarMenuOnItemClick;-><init>()V
@@ -39,7 +39,7 @@
 
     if-ne p1, v0, :cond_11
 
-    .line 373
+    .line 370
     iget-object p1, p0, Lorg/telegram/ui/ChatRightsEditActivity$1;->this$0:Lorg/telegram/ui/ChatRightsEditActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/ChatRightsEditActivity;->access$000(Lorg/telegram/ui/ChatRightsEditActivity;)Z
@@ -48,7 +48,7 @@
 
     if-eqz p1, :cond_19
 
-    .line 374
+    .line 371
     iget-object p1, p0, Lorg/telegram/ui/ChatRightsEditActivity$1;->this$0:Lorg/telegram/ui/ChatRightsEditActivity;
 
     invoke-virtual {p1}, Lorg/telegram/ui/ActionBar/BaseFragment;->finishFragment()V
@@ -60,7 +60,7 @@
 
     if-ne p1, v0, :cond_19
 
-    .line 377
+    .line 374
     iget-object p1, p0, Lorg/telegram/ui/ChatRightsEditActivity$1;->this$0:Lorg/telegram/ui/ChatRightsEditActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/ChatRightsEditActivity;->access$100(Lorg/telegram/ui/ChatRightsEditActivity;)V

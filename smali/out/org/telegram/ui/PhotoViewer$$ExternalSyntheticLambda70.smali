@@ -2,40 +2,40 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lorg/telegram/messenger/ImageReceiver$ImageReceiverDelegate;
+.implements Lorg/telegram/messenger/FileLoader$FileResolver;
 
 
 # instance fields
 .field public final synthetic f$0:Lorg/telegram/ui/PhotoViewer;
 
+.field public final synthetic f$1:Lorg/telegram/tgnet/TLRPC$Message;
+
 
 # direct methods
-.method public synthetic constructor <init>(Lorg/telegram/ui/PhotoViewer;)V
-    .registers 2
+.method public synthetic constructor <init>(Lorg/telegram/ui/PhotoViewer;Lorg/telegram/tgnet/TLRPC$Message;)V
+    .registers 3
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lorg/telegram/ui/PhotoViewer$$ExternalSyntheticLambda70;->f$0:Lorg/telegram/ui/PhotoViewer;
+
+    iput-object p2, p0, Lorg/telegram/ui/PhotoViewer$$ExternalSyntheticLambda70;->f$1:Lorg/telegram/tgnet/TLRPC$Message;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final didSetImage(Lorg/telegram/messenger/ImageReceiver;ZZZ)V
-    .registers 6
+.method public final getFile()Ljava/io/File;
+    .registers 3
 
     iget-object v0, p0, Lorg/telegram/ui/PhotoViewer$$ExternalSyntheticLambda70;->f$0:Lorg/telegram/ui/PhotoViewer;
 
-    invoke-static {v0, p1, p2, p3, p4}, Lorg/telegram/ui/PhotoViewer;->$r8$lambda$JE9WkXlOmKyka4eVOavN_tkNfXw(Lorg/telegram/ui/PhotoViewer;Lorg/telegram/messenger/ImageReceiver;ZZZ)V
+    iget-object v1, p0, Lorg/telegram/ui/PhotoViewer$$ExternalSyntheticLambda70;->f$1:Lorg/telegram/tgnet/TLRPC$Message;
 
-    return-void
-.end method
+    invoke-static {v0, v1}, Lorg/telegram/ui/PhotoViewer;->$r8$lambda$-kthS6T6mr9wXyG11qzsuVsJWzA(Lorg/telegram/ui/PhotoViewer;Lorg/telegram/tgnet/TLRPC$Message;)Ljava/io/File;
 
-.method public synthetic onAnimationReady(Lorg/telegram/messenger/ImageReceiver;)V
-    .registers 2
+    move-result-object v0
 
-    invoke-static {p0, p1}, Lorg/telegram/messenger/ImageReceiver$ImageReceiverDelegate$-CC;->$default$onAnimationReady(Lorg/telegram/messenger/ImageReceiver$ImageReceiverDelegate;Lorg/telegram/messenger/ImageReceiver;)V
-
-    return-void
+    return-object v0
 .end method

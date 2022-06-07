@@ -268,7 +268,7 @@
 
     iput-object v2, p0, Lorg/telegram/ui/ActionBar/FloatingToolbar$FloatingToolbarPopup;->mFastOutLinearInInterpolator:Landroid/view/animation/Interpolator;
 
-    const v2, 0x7f07011a
+    const v2, 0x7f0700eb
 
     .line 332
     invoke-virtual {p2, v2}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
@@ -284,7 +284,7 @@
     .line 333
     invoke-virtual {v2, v0}, Landroid/graphics/drawable/Drawable;->setAutoMirrored(Z)V
 
-    const v2, 0x7f070118
+    const v2, 0x7f0700e9
 
     .line 334
     invoke-virtual {p2, v2}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
@@ -300,7 +300,7 @@
     .line 335
     invoke-virtual {v2, v0}, Landroid/graphics/drawable/Drawable;->setAutoMirrored(Z)V
 
-    const v2, 0x7f070119
+    const v2, 0x7f0700ea
 
     .line 336
     invoke-virtual {p2, v2}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
@@ -318,7 +318,7 @@
     .line 337
     invoke-virtual {v2, v0}, Landroid/graphics/drawable/AnimatedVectorDrawable;->setAutoMirrored(Z)V
 
-    const v2, 0x7f07011b
+    const v2, 0x7f0700ec
 
     .line 338
     invoke-virtual {p2, v2}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
@@ -2729,7 +2729,7 @@
     .line 664
     iget-boolean v0, p0, Lorg/telegram/ui/ActionBar/FloatingToolbar$FloatingToolbarPopup;->mIsOverflowOpen:Z
 
-    const v1, 0x7f0e0033
+    const v1, 0x7f0e003e
 
     const-string v2, "AccDescrMoreOptions"
 

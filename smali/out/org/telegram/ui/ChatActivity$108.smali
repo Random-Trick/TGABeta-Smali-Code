@@ -3,12 +3,12 @@
 .source "ChatActivity.java"
 
 # interfaces
-.implements Lorg/telegram/ui/ChatActivity$ChatActivityDelegate;
+.implements Lorg/telegram/ui/Components/ReactionsContainerLayout$ReactionsContainerDelegate;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lorg/telegram/ui/ChatActivity;->openReportChat(I)V
+    value = Lorg/telegram/ui/ChatActivity;->createMenu(Landroid/view/View;ZZFFZ)Z
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,13 +20,21 @@
 # instance fields
 .field final synthetic this$0:Lorg/telegram/ui/ChatActivity;
 
+.field final synthetic val$finalReactionsLayout:Lorg/telegram/ui/Components/ReactionsContainerLayout;
+
+.field final synthetic val$primaryMessage:Lorg/telegram/messenger/MessageObject;
+
 
 # direct methods
-.method constructor <init>(Lorg/telegram/ui/ChatActivity;)V
-    .registers 2
+.method constructor <init>(Lorg/telegram/ui/ChatActivity;Lorg/telegram/messenger/MessageObject;Lorg/telegram/ui/Components/ReactionsContainerLayout;)V
+    .registers 4
 
-    .line 22271
+    .line 22159
     iput-object p1, p0, Lorg/telegram/ui/ChatActivity$108;->this$0:Lorg/telegram/ui/ChatActivity;
+
+    iput-object p2, p0, Lorg/telegram/ui/ChatActivity$108;->val$primaryMessage:Lorg/telegram/messenger/MessageObject;
+
+    iput-object p3, p0, Lorg/telegram/ui/ChatActivity$108;->val$finalReactionsLayout:Lorg/telegram/ui/Components/ReactionsContainerLayout;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -35,47 +43,27 @@
 
 
 # virtual methods
-.method public onReport()V
-    .registers 6
+.method public onReactionClicked(Landroid/view/View;Lorg/telegram/tgnet/TLRPC$TL_availableReaction;Z)V
+    .registers 12
 
-    .line 22274
+    .line 22162
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$108;->this$0:Lorg/telegram/ui/ChatActivity;
 
-    invoke-static {v0}, Lorg/telegram/ui/ChatActivity;->access$3600(Lorg/telegram/ui/ChatActivity;)Lorg/telegram/ui/Components/UndoView;
+    iget-object v1, p0, Lorg/telegram/ui/ChatActivity$108;->val$primaryMessage:Lorg/telegram/messenger/MessageObject;
 
-    move-result-object v0
+    iget-object v2, p0, Lorg/telegram/ui/ChatActivity$108;->val$finalReactionsLayout:Lorg/telegram/ui/Components/ReactionsContainerLayout;
 
-    const-wide/16 v1, 0x0
-
-    const/16 v3, 0x4a
+    const/4 v3, 0x0
 
     const/4 v4, 0x0
 
-    invoke-virtual {v0, v1, v2, v3, v4}, Lorg/telegram/ui/Components/UndoView;->showWithAction(JILjava/lang/Runnable;)V
+    const/4 v6, 0x0
 
-    return-void
-.end method
+    move-object v5, p2
 
-.method public synthetic onUnpin(ZZ)V
-    .registers 3
+    move v7, p3
 
-    invoke-static {p0, p1, p2}, Lorg/telegram/ui/ChatActivity$ChatActivityDelegate$-CC;->$default$onUnpin(Lorg/telegram/ui/ChatActivity$ChatActivityDelegate;ZZ)V
-
-    return-void
-.end method
-
-.method public synthetic openReplyMessage(I)V
-    .registers 2
-
-    invoke-static {p0, p1}, Lorg/telegram/ui/ChatActivity$ChatActivityDelegate$-CC;->$default$openReplyMessage(Lorg/telegram/ui/ChatActivity$ChatActivityDelegate;I)V
-
-    return-void
-.end method
-
-.method public synthetic openSearch(Ljava/lang/String;)V
-    .registers 2
-
-    invoke-static {p0, p1}, Lorg/telegram/ui/ChatActivity$ChatActivityDelegate$-CC;->$default$openSearch(Lorg/telegram/ui/ChatActivity$ChatActivityDelegate;Ljava/lang/String;)V
+    invoke-static/range {v0 .. v7}, Lorg/telegram/ui/ChatActivity;->access$3100(Lorg/telegram/ui/ChatActivity;Lorg/telegram/messenger/MessageObject;Lorg/telegram/ui/Components/ReactionsContainerLayout;FFLorg/telegram/tgnet/TLRPC$TL_availableReaction;ZZ)V
 
     return-void
 .end method

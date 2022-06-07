@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;)V
     .registers 2
 
-    .line 6101
+    .line 6244
     iput-object p1, p0, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView$3;->this$0:Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -33,9 +33,9 @@
 
 # virtual methods
 .method public onAnimationEnd(Landroid/animation/Animator;)V
-    .registers 3
+    .registers 7
 
-    .line 6104
+    .line 6247
     iget-object p1, p0, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView$3;->this$0:Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;
 
     invoke-virtual {p1}, Landroid/widget/FrameLayout;->getParent()Landroid/view/ViewParent;
@@ -46,7 +46,7 @@
 
     if-eqz p1, :cond_17
 
-    .line 6105
+    .line 6248
     iget-object p1, p0, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView$3;->this$0:Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;
 
     invoke-virtual {p1}, Landroid/widget/FrameLayout;->getParent()Landroid/view/ViewParent;
@@ -59,17 +59,66 @@
 
     invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
 
-    .line 6107
+    .line 6251
     :cond_17
+    sget p1, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v0, 0x15
+
+    const/4 v1, 0x0
+
+    if-lt p1, v0, :cond_43
+
+    .line 6252
     iget-object p1, p0, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView$3;->this$0:Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;
 
-    invoke-static {p1}, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->access$13300(Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;)Landroid/view/View;
+    invoke-static {p1}, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->access$14000(Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;)Landroid/view/View;
 
     move-result-object p1
 
-    const/4 v0, 0x0
+    sget-object v0, Landroid/view/View;->TRANSLATION_Z:Landroid/util/Property;
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
+    const/4 v2, 0x2
+
+    new-array v2, v2, [F
+
+    const/4 v3, 0x0
+
+    aput v3, v2, v1
+
+    const/4 v3, 0x1
+
+    const/high16 v4, 0x40000000    # 2.0f
+
+    invoke-static {v4}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
+
+    move-result v4
+
+    int-to-float v4, v4
+
+    aput v4, v2, v3
+
+    invoke-static {p1, v0, v2}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
+
+    move-result-object p1
+
+    const-wide/16 v2, 0x96
+
+    invoke-virtual {p1, v2, v3}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroid/animation/ObjectAnimator;->start()V
+
+    .line 6254
+    :cond_43
+    iget-object p1, p0, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView$3;->this$0:Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;
+
+    invoke-static {p1}, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->access$14000(Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;)Landroid/view/View;
+
+    move-result-object p1
+
+    invoke-virtual {p1, v1}, Landroid/view/View;->setVisibility(I)V
 
     return-void
 .end method

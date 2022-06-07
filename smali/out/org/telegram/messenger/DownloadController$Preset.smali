@@ -27,12 +27,12 @@
 
 .field public preloadVideo:Z
 
-.field public sizes:[I
+.field public sizes:[J
 
 
 # direct methods
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
-    .registers 12
+    .registers 13
 
     .line 105
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,10 +44,10 @@
     .line 84
     iput-object v1, p0, Lorg/telegram/messenger/DownloadController$Preset;->mask:[I
 
-    new-array v1, v0, [I
+    new-array v1, v0, [J
 
     .line 85
-    iput-object v1, p0, Lorg/telegram/messenger/DownloadController$Preset;->sizes:[I
+    iput-object v1, p0, Lorg/telegram/messenger/DownloadController$Preset;->sizes:[J
 
     const-string v1, "_"
 
@@ -61,7 +61,7 @@
 
     const/16 v3, 0xb
 
-    if-lt v2, v3, :cond_114
+    if-lt v2, v3, :cond_118
 
     .line 109
     iget-object v2, p0, Lorg/telegram/messenger/DownloadController$Preset;->mask:[I
@@ -132,7 +132,7 @@
     aput v8, v2, v7
 
     .line 113
-    iget-object v2, p0, Lorg/telegram/messenger/DownloadController$Preset;->sizes:[I
+    iget-object v2, p0, Lorg/telegram/messenger/DownloadController$Preset;->sizes:[J
 
     aget-object v0, p1, v0
 
@@ -144,10 +144,12 @@
 
     move-result v0
 
-    aput v0, v2, v4
+    int-to-long v8, v0
+
+    aput-wide v8, v2, v4
 
     .line 114
-    iget-object v0, p0, Lorg/telegram/messenger/DownloadController$Preset;->sizes:[I
+    iget-object v0, p0, Lorg/telegram/messenger/DownloadController$Preset;->sizes:[J
 
     const/4 v2, 0x5
 
@@ -161,10 +163,12 @@
 
     move-result v2
 
-    aput v2, v0, v5
+    int-to-long v8, v2
+
+    aput-wide v8, v0, v5
 
     .line 115
-    iget-object v0, p0, Lorg/telegram/messenger/DownloadController$Preset;->sizes:[I
+    iget-object v0, p0, Lorg/telegram/messenger/DownloadController$Preset;->sizes:[J
 
     const/4 v2, 0x6
 
@@ -178,10 +182,12 @@
 
     move-result v2
 
-    aput v2, v0, v6
+    int-to-long v8, v2
+
+    aput-wide v8, v0, v6
 
     .line 116
-    iget-object v0, p0, Lorg/telegram/messenger/DownloadController$Preset;->sizes:[I
+    iget-object v0, p0, Lorg/telegram/messenger/DownloadController$Preset;->sizes:[J
 
     const/4 v2, 0x7
 
@@ -195,7 +201,9 @@
 
     move-result v2
 
-    aput v2, v0, v7
+    int-to-long v8, v2
+
+    aput-wide v8, v0, v7
 
     const/16 v0, 0x8
 
@@ -210,16 +218,16 @@
 
     move-result v0
 
-    if-ne v0, v5, :cond_9e
+    if-ne v0, v5, :cond_a2
 
     const/4 v0, 0x1
 
-    goto :goto_9f
+    goto :goto_a3
 
-    :cond_9e
+    :cond_a2
     const/4 v0, 0x0
 
-    :goto_9f
+    :goto_a3
     iput-boolean v0, p0, Lorg/telegram/messenger/DownloadController$Preset;->preloadVideo:Z
 
     const/16 v0, 0x9
@@ -235,16 +243,16 @@
 
     move-result v0
 
-    if-ne v0, v5, :cond_b1
+    if-ne v0, v5, :cond_b5
 
     const/4 v0, 0x1
 
-    goto :goto_b2
+    goto :goto_b6
 
-    :cond_b1
+    :cond_b5
     const/4 v0, 0x0
 
-    :goto_b2
+    :goto_b6
     iput-boolean v0, p0, Lorg/telegram/messenger/DownloadController$Preset;->preloadMusic:Z
 
     const/16 v0, 0xa
@@ -260,16 +268,16 @@
 
     move-result v0
 
-    if-ne v0, v5, :cond_c4
+    if-ne v0, v5, :cond_c8
 
     const/4 v0, 0x1
 
-    goto :goto_c5
+    goto :goto_c9
 
-    :cond_c4
+    :cond_c8
     const/4 v0, 0x0
 
-    :goto_c5
+    :goto_c9
     iput-boolean v0, p0, Lorg/telegram/messenger/DownloadController$Preset;->enabled:Z
 
     .line 120
@@ -277,7 +285,7 @@
 
     const/16 v2, 0xc
 
-    if-lt v0, v2, :cond_dd
+    if-lt v0, v2, :cond_e1
 
     .line 121
     aget-object v0, p1, v3
@@ -290,19 +298,19 @@
 
     move-result v0
 
-    if-ne v0, v5, :cond_d9
+    if-ne v0, v5, :cond_dd
 
     const/4 v4, 0x1
 
-    :cond_d9
+    :cond_dd
     iput-boolean v4, p0, Lorg/telegram/messenger/DownloadController$Preset;->lessCallData:Z
 
     const/4 v0, 0x0
 
-    goto :goto_f0
+    goto :goto_f4
 
     .line 123
-    :cond_dd
+    :cond_e1
     invoke-virtual {p2, v1}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v0
@@ -318,20 +326,20 @@
 
     move-result v3
 
-    if-ne v3, v5, :cond_ee
+    if-ne v3, v5, :cond_f2
 
     const/4 v4, 0x1
 
-    :cond_ee
+    :cond_f2
     iput-boolean v4, p0, Lorg/telegram/messenger/DownloadController$Preset;->lessCallData:Z
 
     .line 127
-    :goto_f0
+    :goto_f4
     array-length v3, p1
 
     const/16 v4, 0xd
 
-    if-lt v3, v4, :cond_102
+    if-lt v3, v4, :cond_106
 
     .line 128
     aget-object p1, p1, v2
@@ -346,10 +354,10 @@
 
     iput p1, p0, Lorg/telegram/messenger/DownloadController$Preset;->maxVideoBitrate:I
 
-    goto :goto_114
+    goto :goto_118
 
-    :cond_102
-    if-nez v0, :cond_108
+    :cond_106
+    if-nez v0, :cond_10c
 
     .line 131
     invoke-virtual {p2, v1}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
@@ -357,7 +365,7 @@
     move-result-object v0
 
     .line 133
-    :cond_108
+    :cond_10c
     aget-object p1, v0, v2
 
     invoke-static {p1}, Lorg/telegram/messenger/Utilities;->parseInt(Ljava/lang/CharSequence;)Ljava/lang/Integer;
@@ -370,13 +378,13 @@
 
     iput p1, p0, Lorg/telegram/messenger/DownloadController$Preset;->maxVideoBitrate:I
 
-    :cond_114
-    :goto_114
+    :cond_118
+    :goto_118
     return-void
 .end method
 
-.method public constructor <init>([IIIIZZZZI)V
-    .registers 13
+.method public constructor <init>([IJJJZZZZI)V
+    .registers 16
 
     .line 92
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -388,10 +396,10 @@
     .line 84
     iput-object v1, p0, Lorg/telegram/messenger/DownloadController$Preset;->mask:[I
 
-    new-array v0, v0, [I
+    new-array v0, v0, [J
 
     .line 85
-    iput-object v0, p0, Lorg/telegram/messenger/DownloadController$Preset;->sizes:[I
+    iput-object v0, p0, Lorg/telegram/messenger/DownloadController$Preset;->sizes:[J
 
     .line 93
     array-length v0, v1
@@ -401,41 +409,41 @@
     invoke-static {p1, v2, v1, v2, v0}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
     .line 94
-    iget-object p1, p0, Lorg/telegram/messenger/DownloadController$Preset;->sizes:[I
+    iget-object p1, p0, Lorg/telegram/messenger/DownloadController$Preset;->sizes:[J
 
-    aput p2, p1, v2
+    aput-wide p2, p1, v2
 
     const/4 p2, 0x1
 
     .line 95
-    aput p3, p1, p2
+    aput-wide p4, p1, p2
 
     const/4 p2, 0x2
 
     .line 96
-    aput p4, p1, p2
+    aput-wide p6, p1, p2
 
     const/4 p2, 0x3
 
-    const/high16 p3, 0x80000
+    const-wide/32 p3, 0x80000
 
     .line 97
-    aput p3, p1, p2
+    aput-wide p3, p1, p2
 
     .line 98
-    iput-boolean p5, p0, Lorg/telegram/messenger/DownloadController$Preset;->preloadVideo:Z
+    iput-boolean p8, p0, Lorg/telegram/messenger/DownloadController$Preset;->preloadVideo:Z
 
     .line 99
-    iput-boolean p6, p0, Lorg/telegram/messenger/DownloadController$Preset;->preloadMusic:Z
+    iput-boolean p9, p0, Lorg/telegram/messenger/DownloadController$Preset;->preloadMusic:Z
 
     .line 100
-    iput-boolean p8, p0, Lorg/telegram/messenger/DownloadController$Preset;->lessCallData:Z
+    iput-boolean p11, p0, Lorg/telegram/messenger/DownloadController$Preset;->lessCallData:Z
 
     .line 101
-    iput p9, p0, Lorg/telegram/messenger/DownloadController$Preset;->maxVideoBitrate:I
+    iput p12, p0, Lorg/telegram/messenger/DownloadController$Preset;->maxVideoBitrate:I
 
     .line 102
-    iput-boolean p7, p0, Lorg/telegram/messenger/DownloadController$Preset;->enabled:Z
+    iput-boolean p10, p0, Lorg/telegram/messenger/DownloadController$Preset;->enabled:Z
 
     return-void
 .end method
@@ -443,7 +451,7 @@
 
 # virtual methods
 .method public equals(Lorg/telegram/messenger/DownloadController$Preset;)Z
-    .registers 10
+    .registers 13
 
     .line 189
     iget-object v0, p0, Lorg/telegram/messenger/DownloadController$Preset;->mask:[I
@@ -458,13 +466,13 @@
 
     const/4 v5, 0x1
 
-    if-ne v2, v4, :cond_4f
+    if-ne v2, v4, :cond_57
 
     aget v2, v0, v5
 
     aget v4, v3, v5
 
-    if-ne v2, v4, :cond_4f
+    if-ne v2, v4, :cond_57
 
     const/4 v2, 0x2
 
@@ -472,7 +480,7 @@
 
     aget v6, v3, v2
 
-    if-ne v4, v6, :cond_4f
+    if-ne v4, v6, :cond_57
 
     const/4 v4, 0x3
 
@@ -480,57 +488,65 @@
 
     aget v3, v3, v4
 
-    if-ne v0, v3, :cond_4f
+    if-ne v0, v3, :cond_57
 
-    iget-object v0, p0, Lorg/telegram/messenger/DownloadController$Preset;->sizes:[I
+    iget-object v0, p0, Lorg/telegram/messenger/DownloadController$Preset;->sizes:[J
 
-    aget v3, v0, v1
+    aget-wide v6, v0, v1
 
-    iget-object v6, p1, Lorg/telegram/messenger/DownloadController$Preset;->sizes:[I
+    iget-object v3, p1, Lorg/telegram/messenger/DownloadController$Preset;->sizes:[J
 
-    aget v7, v6, v1
+    aget-wide v8, v3, v1
 
-    if-ne v3, v7, :cond_4f
+    cmp-long v10, v6, v8
 
-    aget v3, v0, v5
+    if-nez v10, :cond_57
 
-    aget v7, v6, v5
+    aget-wide v6, v0, v5
 
-    if-ne v3, v7, :cond_4f
+    aget-wide v8, v3, v5
 
-    aget v3, v0, v2
+    cmp-long v10, v6, v8
 
-    aget v2, v6, v2
+    if-nez v10, :cond_57
 
-    if-ne v3, v2, :cond_4f
+    aget-wide v6, v0, v2
 
-    aget v0, v0, v4
+    aget-wide v8, v3, v2
 
-    aget v2, v6, v4
+    cmp-long v2, v6, v8
 
-    if-ne v0, v2, :cond_4f
+    if-nez v2, :cond_57
+
+    aget-wide v6, v0, v4
+
+    aget-wide v2, v3, v4
+
+    cmp-long v0, v6, v2
+
+    if-nez v0, :cond_57
 
     iget-boolean v0, p0, Lorg/telegram/messenger/DownloadController$Preset;->preloadVideo:Z
 
     iget-boolean v2, p1, Lorg/telegram/messenger/DownloadController$Preset;->preloadVideo:Z
 
-    if-ne v0, v2, :cond_4f
+    if-ne v0, v2, :cond_57
 
     iget-boolean v0, p0, Lorg/telegram/messenger/DownloadController$Preset;->preloadMusic:Z
 
     iget-boolean v2, p1, Lorg/telegram/messenger/DownloadController$Preset;->preloadMusic:Z
 
-    if-ne v0, v2, :cond_4f
+    if-ne v0, v2, :cond_57
 
     iget v0, p0, Lorg/telegram/messenger/DownloadController$Preset;->maxVideoBitrate:I
 
     iget p1, p1, Lorg/telegram/messenger/DownloadController$Preset;->maxVideoBitrate:I
 
-    if-ne v0, p1, :cond_4f
+    if-ne v0, p1, :cond_57
 
     const/4 v1, 0x1
 
-    :cond_4f
+    :cond_57
     return v1
 .end method
 
@@ -582,9 +598,9 @@
     invoke-static {v0, v3, v1, v3, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
     .line 140
-    iget-object v0, p1, Lorg/telegram/messenger/DownloadController$Preset;->sizes:[I
+    iget-object v0, p1, Lorg/telegram/messenger/DownloadController$Preset;->sizes:[J
 
-    iget-object v1, p0, Lorg/telegram/messenger/DownloadController$Preset;->sizes:[I
+    iget-object v1, p0, Lorg/telegram/messenger/DownloadController$Preset;->sizes:[J
 
     array-length v2, v1
 
@@ -614,7 +630,7 @@
 .end method
 
 .method public set(Lorg/telegram/tgnet/TLRPC$TL_autoDownloadSettings;)V
-    .registers 7
+    .registers 10
 
     .line 148
     iget-boolean v0, p1, Lorg/telegram/tgnet/TLRPC$TL_autoDownloadSettings;->audio_preload_next:Z
@@ -637,7 +653,7 @@
     iput v0, p0, Lorg/telegram/messenger/DownloadController$Preset;->maxVideoBitrate:I
 
     .line 152
-    iget-object v0, p0, Lorg/telegram/messenger/DownloadController$Preset;->sizes:[I
+    iget-object v0, p0, Lorg/telegram/messenger/DownloadController$Preset;->sizes:[J
 
     iget v1, p1, Lorg/telegram/tgnet/TLRPC$TL_autoDownloadSettings;->photo_size_max:I
 
@@ -647,64 +663,68 @@
 
     move-result v1
 
+    int-to-long v1, v1
+
     const/4 v3, 0x0
 
-    aput v1, v0, v3
+    aput-wide v1, v0, v3
 
     .line 153
-    iget-object v0, p0, Lorg/telegram/messenger/DownloadController$Preset;->sizes:[I
+    iget-object v0, p0, Lorg/telegram/messenger/DownloadController$Preset;->sizes:[J
 
-    iget v1, p1, Lorg/telegram/tgnet/TLRPC$TL_autoDownloadSettings;->video_size_max:I
+    iget-wide v1, p1, Lorg/telegram/tgnet/TLRPC$TL_autoDownloadSettings;->video_size_max:J
 
-    invoke-static {v2, v1}, Ljava/lang/Math;->max(II)I
+    const-wide/32 v4, 0x7d000
 
-    move-result v1
+    invoke-static {v4, v5, v1, v2}, Ljava/lang/Math;->max(JJ)J
 
-    const/4 v4, 0x1
+    move-result-wide v1
 
-    aput v1, v0, v4
+    const/4 v6, 0x1
+
+    aput-wide v1, v0, v6
 
     .line 154
-    iget-object v0, p0, Lorg/telegram/messenger/DownloadController$Preset;->sizes:[I
+    iget-object v0, p0, Lorg/telegram/messenger/DownloadController$Preset;->sizes:[J
 
-    iget v1, p1, Lorg/telegram/tgnet/TLRPC$TL_autoDownloadSettings;->file_size_max:I
+    iget-wide v1, p1, Lorg/telegram/tgnet/TLRPC$TL_autoDownloadSettings;->file_size_max:J
 
-    invoke-static {v2, v1}, Ljava/lang/Math;->max(II)I
+    invoke-static {v4, v5, v1, v2}, Ljava/lang/Math;->max(JJ)J
 
-    move-result v1
+    move-result-wide v1
 
-    const/4 v2, 0x2
+    const/4 v4, 0x2
 
-    aput v1, v0, v2
+    aput-wide v1, v0, v4
 
     .line 155
-    :goto_34
+    :goto_38
     iget-object v0, p0, Lorg/telegram/messenger/DownloadController$Preset;->mask:[I
 
     array-length v1, v0
 
-    if-ge v3, v1, :cond_7a
+    if-ge v3, v1, :cond_84
 
     .line 156
     iget v1, p1, Lorg/telegram/tgnet/TLRPC$TL_autoDownloadSettings;->photo_size_max:I
 
-    if-eqz v1, :cond_47
+    if-eqz v1, :cond_4b
 
     iget-boolean v1, p1, Lorg/telegram/tgnet/TLRPC$TL_autoDownloadSettings;->disabled:Z
 
-    if-nez v1, :cond_47
+    if-nez v1, :cond_4b
 
     .line 157
     aget v1, v0, v3
 
-    or-int/2addr v1, v4
+    or-int/2addr v1, v6
 
     aput v1, v0, v3
 
-    goto :goto_4d
+    goto :goto_51
 
     .line 159
-    :cond_47
+    :cond_4b
     aget v1, v0, v3
 
     and-int/lit8 v1, v1, -0x2
@@ -712,14 +732,18 @@
     aput v1, v0, v3
 
     .line 161
-    :goto_4d
-    iget v1, p1, Lorg/telegram/tgnet/TLRPC$TL_autoDownloadSettings;->video_size_max:I
+    :goto_51
+    iget-wide v1, p1, Lorg/telegram/tgnet/TLRPC$TL_autoDownloadSettings;->video_size_max:J
 
-    if-eqz v1, :cond_5c
+    const-wide/16 v4, 0x0
+
+    cmp-long v7, v1, v4
+
+    if-eqz v7, :cond_64
 
     iget-boolean v1, p1, Lorg/telegram/tgnet/TLRPC$TL_autoDownloadSettings;->disabled:Z
 
-    if-nez v1, :cond_5c
+    if-nez v1, :cond_64
 
     .line 162
     aget v1, v0, v3
@@ -728,10 +752,10 @@
 
     aput v1, v0, v3
 
-    goto :goto_62
+    goto :goto_6a
 
     .line 164
-    :cond_5c
+    :cond_64
     aget v1, v0, v3
 
     and-int/lit8 v1, v1, -0x5
@@ -739,14 +763,16 @@
     aput v1, v0, v3
 
     .line 166
-    :goto_62
-    iget v1, p1, Lorg/telegram/tgnet/TLRPC$TL_autoDownloadSettings;->file_size_max:I
+    :goto_6a
+    iget-wide v1, p1, Lorg/telegram/tgnet/TLRPC$TL_autoDownloadSettings;->file_size_max:J
 
-    if-eqz v1, :cond_71
+    cmp-long v7, v1, v4
+
+    if-eqz v7, :cond_7b
 
     iget-boolean v1, p1, Lorg/telegram/tgnet/TLRPC$TL_autoDownloadSettings;->disabled:Z
 
-    if-nez v1, :cond_71
+    if-nez v1, :cond_7b
 
     .line 167
     aget v1, v0, v3
@@ -755,22 +781,22 @@
 
     aput v1, v0, v3
 
-    goto :goto_77
+    goto :goto_81
 
     .line 169
-    :cond_71
+    :cond_7b
     aget v1, v0, v3
 
     and-int/lit8 v1, v1, -0x9
 
     aput v1, v0, v3
 
-    :goto_77
+    :goto_81
     add-int/lit8 v3, v3, 0x1
 
-    goto :goto_34
+    goto :goto_38
 
-    :cond_7a
+    :cond_84
     return-void
 .end method
 
@@ -824,35 +850,35 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v3, p0, Lorg/telegram/messenger/DownloadController$Preset;->sizes:[I
+    iget-object v3, p0, Lorg/telegram/messenger/DownloadController$Preset;->sizes:[J
 
-    aget v2, v3, v2
+    aget-wide v2, v3, v2
 
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v2, p0, Lorg/telegram/messenger/DownloadController$Preset;->sizes:[I
-
-    aget v2, v2, v4
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v2, p0, Lorg/telegram/messenger/DownloadController$Preset;->sizes:[I
+    iget-object v2, p0, Lorg/telegram/messenger/DownloadController$Preset;->sizes:[J
 
-    aget v2, v2, v5
+    aget-wide v3, v2, v4
 
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v3, v4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v2, p0, Lorg/telegram/messenger/DownloadController$Preset;->sizes:[I
+    iget-object v2, p0, Lorg/telegram/messenger/DownloadController$Preset;->sizes:[J
 
-    aget v2, v2, v6
+    aget-wide v3, v2, v5
 
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v3, v4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v2, p0, Lorg/telegram/messenger/DownloadController$Preset;->sizes:[J
+
+    aget-wide v3, v2, v6
+
+    invoke-virtual {v0, v3, v4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

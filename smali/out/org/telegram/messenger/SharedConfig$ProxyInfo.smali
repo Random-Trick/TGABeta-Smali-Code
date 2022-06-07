@@ -40,47 +40,47 @@
 .method public constructor <init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .registers 6
 
-    .line 179
+    .line 181
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 180
+    .line 182
     iput-object p1, p0, Lorg/telegram/messenger/SharedConfig$ProxyInfo;->address:Ljava/lang/String;
 
-    .line 181
+    .line 183
     iput p2, p0, Lorg/telegram/messenger/SharedConfig$ProxyInfo;->port:I
 
-    .line 182
+    .line 184
     iput-object p3, p0, Lorg/telegram/messenger/SharedConfig$ProxyInfo;->username:Ljava/lang/String;
 
-    .line 183
+    .line 185
     iput-object p4, p0, Lorg/telegram/messenger/SharedConfig$ProxyInfo;->password:Ljava/lang/String;
 
-    .line 184
+    .line 186
     iput-object p5, p0, Lorg/telegram/messenger/SharedConfig$ProxyInfo;->secret:Ljava/lang/String;
 
     const-string p2, ""
 
     if-nez p1, :cond_13
 
-    .line 186
+    .line 188
     iput-object p2, p0, Lorg/telegram/messenger/SharedConfig$ProxyInfo;->address:Ljava/lang/String;
 
     :cond_13
     if-nez p4, :cond_17
 
-    .line 189
+    .line 191
     iput-object p2, p0, Lorg/telegram/messenger/SharedConfig$ProxyInfo;->password:Ljava/lang/String;
 
     :cond_17
     if-nez p3, :cond_1b
 
-    .line 192
+    .line 194
     iput-object p2, p0, Lorg/telegram/messenger/SharedConfig$ProxyInfo;->username:Ljava/lang/String;
 
     :cond_1b
     if-nez p5, :cond_1f
 
-    .line 195
+    .line 197
     iput-object p2, p0, Lorg/telegram/messenger/SharedConfig$ProxyInfo;->secret:Ljava/lang/String;
 
     :cond_1f

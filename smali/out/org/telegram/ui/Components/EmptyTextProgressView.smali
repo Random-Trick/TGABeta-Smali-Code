@@ -218,7 +218,7 @@
     .line 81
     iget-object v1, v0, Lorg/telegram/ui/Components/EmptyTextProgressView;->textView:Landroid/widget/TextView;
 
-    const v5, 0x7f0e0ad8
+    const v5, 0x7f0e0b60
 
     const-string v6, "NoResult"
 

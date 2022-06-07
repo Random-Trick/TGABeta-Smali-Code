@@ -1,52 +1,90 @@
-.class public final synthetic Lj$/util/stream/y4;
-.super Ljava/lang/Object;
+.class final Lj$/util/stream/y4;
+.super Lj$/util/stream/z4;
 
 # interfaces
-.implements Lj$/util/function/q;
-
-
-# static fields
-.field public static final synthetic a:Lj$/util/stream/y4;
+.implements Lj$/util/v;
 
 
 # direct methods
-.method static synthetic constructor <clinit>()V
-    .registers 1
+.method constructor <init>(Lj$/util/v;JJ)V
+    .registers 6
 
-    new-instance v0, Lj$/util/stream/y4;
-
-    invoke-direct {v0}, Lj$/util/stream/y4;-><init>()V
-
-    sput-object v0, Lj$/util/stream/y4;->a:Lj$/util/stream/y4;
+    invoke-direct/range {p0 .. p5}, Lj$/util/stream/z4;-><init>(Lj$/util/w;JJ)V
 
     return-void
 .end method
 
-.method private synthetic constructor <init>()V
-    .registers 1
+.method constructor <init>(Lj$/util/v;JJJJ)V
+    .registers 21
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v10, 0x0
+
+    move-object v0, p0
+
+    move-object v1, p1
+
+    move-wide v2, p2
+
+    move-wide v4, p4
+
+    move-wide/from16 v6, p6
+
+    move-wide/from16 v8, p8
+
+    invoke-direct/range {v0 .. v10}, Lj$/util/stream/z4;-><init>(Lj$/util/w;JJJJLj$/util/stream/o1;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final accept(J)V
-    .registers 3
+.method protected a(Lj$/util/u;JJJJ)Lj$/util/u;
+    .registers 21
 
-    return-void
-.end method
+    move-object v1, p1
 
-.method public f(Lj$/util/function/q;)Lj$/util/function/q;
-    .registers 3
+    check-cast v1, Lj$/util/v;
 
     .line 1
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    new-instance v10, Lj$/util/stream/y4;
 
-    new-instance v0, Lj$/util/function/p;
+    move-object v0, v10
 
-    invoke-direct {v0, p0, p1}, Lj$/util/function/p;-><init>(Lj$/util/function/q;Lj$/util/function/q;)V
+    move-wide v2, p2
+
+    move-wide v4, p4
+
+    move-wide/from16 v6, p6
+
+    move-wide/from16 v8, p8
+
+    invoke-direct/range {v0 .. v9}, Lj$/util/stream/y4;-><init>(Lj$/util/v;JJJJ)V
+
+    return-object v10
+.end method
+
+.method public synthetic b(Lj$/util/function/Consumer;)Z
+    .registers 2
+
+    invoke-static {p0, p1}, Lj$/util/a;->l(Lj$/util/v;Lj$/util/function/Consumer;)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method protected bridge synthetic f()Ljava/lang/Object;
+    .registers 2
+
+    sget-object v0, Lj$/util/stream/x4;->a:Lj$/util/stream/x4;
 
     return-object v0
+.end method
+
+.method public synthetic forEachRemaining(Lj$/util/function/Consumer;)V
+    .registers 2
+
+    invoke-static {p0, p1}, Lj$/util/a;->d(Lj$/util/v;Lj$/util/function/Consumer;)V
+
+    return-void
 .end method

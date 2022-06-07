@@ -18,7 +18,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 3058
+    .line 3061
     invoke-direct {p0}, Lorg/telegram/messenger/LocaleController$PluralRules;-><init>()V
 
     return-void
@@ -29,10 +29,10 @@
 .method public quantityForNumber(I)I
     .registers 6
 
-    .line 3060
+    .line 3063
     rem-int/lit8 v0, p1, 0x64
 
-    .line 3061
+    .line 3064
     rem-int/lit8 p1, p1, 0xa
 
     const/16 v1, 0xb

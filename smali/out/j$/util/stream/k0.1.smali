@@ -2,7 +2,7 @@
 .super Lj$/util/stream/o0;
 
 # interfaces
-.implements Lj$/util/stream/k3;
+.implements Lj$/util/stream/j3;
 
 
 # instance fields
@@ -46,7 +46,7 @@
 .method public synthetic e(Ljava/lang/Double;)V
     .registers 2
 
-    invoke-static {p0, p1}, Lj$/util/stream/p1;->a(Lj$/util/stream/k3;Ljava/lang/Double;)V
+    invoke-static {p0, p1}, Lj$/util/stream/o1;->a(Lj$/util/stream/j3;Ljava/lang/Double;)V
 
     return-void
 .end method

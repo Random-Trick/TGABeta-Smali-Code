@@ -257,14 +257,14 @@
 
     if-eqz v0, :cond_1a
 
-    const v0, 0x7f0e13b5
+    const v0, 0x7f0e1483
 
     const-string v1, "VoipUnmute"
 
     goto :goto_1f
 
     :cond_1a
-    const v0, 0x7f0e137b
+    const v0, 0x7f0e1449
 
     const-string v1, "VoipMute"
 

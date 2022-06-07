@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lorg/telegram/ui/Components/ChatAttachAlertAudioLayout$AudioSelectDelegate;
+.implements Lorg/telegram/ui/Components/AlertsCreator$ScheduleDatePickerDelegate;
 
 
 # instance fields
@@ -22,12 +22,12 @@
 
 
 # virtual methods
-.method public final didSelectAudio(Ljava/util/ArrayList;Ljava/lang/CharSequence;ZI)V
-    .registers 6
+.method public final didSelectDate(ZI)V
+    .registers 4
 
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlert$$ExternalSyntheticLambda29;->f$0:Lorg/telegram/ui/Components/ChatAttachAlert;
 
-    invoke-static {v0, p1, p2, p3, p4}, Lorg/telegram/ui/Components/ChatAttachAlert;->$r8$lambda$SMZNTPhqAdSwj6giBot-o_ww6cQ(Lorg/telegram/ui/Components/ChatAttachAlert;Ljava/util/ArrayList;Ljava/lang/CharSequence;ZI)V
+    invoke-static {v0, p1, p2}, Lorg/telegram/ui/Components/ChatAttachAlert;->$r8$lambda$APx70H49W-9jy5y7nB3huS6AbV8(Lorg/telegram/ui/Components/ChatAttachAlert;ZI)V
 
     return-void
 .end method

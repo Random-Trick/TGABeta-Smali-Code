@@ -30,7 +30,7 @@
 .method constructor <init>(Lorg/telegram/ui/ArticleViewer;)V
     .registers 2
 
-    .line 4261
+    .line 4262
     iput-object p1, p0, Lorg/telegram/ui/ArticleViewer$23;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -41,7 +41,7 @@
 .method private synthetic lambda$onAnimationEnd$0()V
     .registers 3
 
-    .line 4265
+    .line 4266
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$23;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     invoke-static {v0}, Lorg/telegram/ui/ArticleViewer;->access$10600(Lorg/telegram/ui/ArticleViewer;)I
@@ -60,7 +60,7 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/messenger/NotificationCenter;->onAnimationFinish(I)V
 
-    .line 4266
+    .line 4267
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$23;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     invoke-static {v0}, Lorg/telegram/ui/ArticleViewer;->access$10700(Lorg/telegram/ui/ArticleViewer;)Ljava/lang/Runnable;
@@ -69,7 +69,7 @@
 
     if-eqz v0, :cond_2a
 
-    .line 4267
+    .line 4268
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$23;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     invoke-static {v0}, Lorg/telegram/ui/ArticleViewer;->access$10700(Lorg/telegram/ui/ArticleViewer;)Ljava/lang/Runnable;
@@ -78,7 +78,7 @@
 
     invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 
-    .line 4268
+    .line 4269
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$23;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     const/4 v1, 0x0
@@ -94,7 +94,7 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .registers 2
 
-    .line 4264
+    .line 4265
     new-instance p1, Lorg/telegram/ui/ArticleViewer$23$$ExternalSyntheticLambda0;
 
     invoke-direct {p1, p0}, Lorg/telegram/ui/ArticleViewer$23$$ExternalSyntheticLambda0;-><init>(Lorg/telegram/ui/ArticleViewer$23;)V

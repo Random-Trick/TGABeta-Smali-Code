@@ -21,7 +21,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 49740
+    .line 50205
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -32,12 +32,12 @@
 .method public deserializeResponse(Lorg/telegram/tgnet/AbstractSerializedData;IZ)Lorg/telegram/tgnet/TLObject;
     .registers 8
 
-    .line 49746
+    .line 50211
     new-instance p2, Lorg/telegram/tgnet/TLRPC$Vector;
 
     invoke-direct {p2}, Lorg/telegram/tgnet/TLRPC$Vector;-><init>()V
 
-    .line 49747
+    .line 50212
     invoke-virtual {p1, p3}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
@@ -47,7 +47,7 @@
     :goto_a
     if-ge v1, v0, :cond_1f
 
-    .line 49749
+    .line 50214
     invoke-virtual {p1, p3}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v2
@@ -60,7 +60,7 @@
 
     return-object p2
 
-    .line 49753
+    .line 50218
     :cond_17
     iget-object v3, p2, Lorg/telegram/tgnet/TLRPC$Vector;->objects:Ljava/util/ArrayList;
 
@@ -77,12 +77,12 @@
 .method public serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
     .registers 3
 
-    .line 49759
+    .line 50224
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_messages_getAttachedStickers;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 49760
+    .line 50225
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_messages_getAttachedStickers;->media:Lorg/telegram/tgnet/TLRPC$InputStickeredMedia;
 
     invoke-virtual {v0, p1}, Lorg/telegram/tgnet/TLObject;->serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V

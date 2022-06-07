@@ -126,7 +126,7 @@
 
     invoke-direct {v1, p1}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
 
-    const v3, 0x7f07017b
+    const v3, 0x7f07013e
 
     .line 83
     invoke-virtual {v1, v3}, Landroid/widget/ImageView;->setImageResource(I)V
@@ -312,7 +312,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f07030a
+    const v1, 0x7f070332
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -377,7 +377,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const v4, 0x7f0e0201
+    const v4, 0x7f0e0236
 
     const-string v5, "AttachVideo"
 
@@ -442,7 +442,7 @@
 
     invoke-virtual {v1, v4}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
-    const v1, 0x7f0e01fb
+    const v1, 0x7f0e0230
 
     const-string v4, "AttachPhoto"
 
@@ -500,7 +500,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f07030a
+    const v1, 0x7f070332
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 

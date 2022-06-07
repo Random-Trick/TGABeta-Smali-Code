@@ -47,7 +47,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 46574
+    .line 47026
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -58,7 +58,7 @@
 .method public deserializeResponse(Lorg/telegram/tgnet/AbstractSerializedData;IZ)Lorg/telegram/tgnet/TLObject;
     .registers 4
 
-    .line 46593
+    .line 47045
     invoke-static {p1, p2, p3}, Lorg/telegram/tgnet/TLRPC$messages_Messages;->TLdeserialize(Lorg/telegram/tgnet/AbstractSerializedData;IZ)Lorg/telegram/tgnet/TLRPC$messages_Messages;
 
     move-result-object p1
@@ -69,39 +69,39 @@
 .method public serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
     .registers 4
 
-    .line 46597
+    .line 47049
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_messages_search;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 46598
+    .line 47050
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_messages_search;->flags:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 46599
+    .line 47051
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_messages_search;->peer:Lorg/telegram/tgnet/TLRPC$InputPeer;
 
     invoke-virtual {v0, p1}, Lorg/telegram/tgnet/TLObject;->serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
 
-    .line 46600
+    .line 47052
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_messages_search;->q:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeString(Ljava/lang/String;)V
 
-    .line 46601
+    .line 47053
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_messages_search;->flags:I
 
     and-int/lit8 v0, v0, 0x1
 
     if-eqz v0, :cond_1f
 
-    .line 46602
+    .line 47054
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_messages_search;->from_id:Lorg/telegram/tgnet/TLRPC$InputPeer;
 
     invoke-virtual {v0, p1}, Lorg/telegram/tgnet/TLObject;->serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
 
-    .line 46604
+    .line 47056
     :cond_1f
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_messages_search;->flags:I
 
@@ -109,53 +109,53 @@
 
     if-eqz v0, :cond_2a
 
-    .line 46605
+    .line 47057
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_messages_search;->top_msg_id:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 46607
+    .line 47059
     :cond_2a
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_messages_search;->filter:Lorg/telegram/tgnet/TLRPC$MessagesFilter;
 
     invoke-virtual {v0, p1}, Lorg/telegram/tgnet/TLObject;->serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
 
-    .line 46608
+    .line 47060
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_messages_search;->min_date:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 46609
+    .line 47061
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_messages_search;->max_date:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 46610
+    .line 47062
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_messages_search;->offset_id:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 46611
+    .line 47063
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_messages_search;->add_offset:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 46612
+    .line 47064
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_messages_search;->limit:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 46613
+    .line 47065
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_messages_search;->max_id:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 46614
+    .line 47066
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_messages_search;->min_id:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 46615
+    .line 47067
     iget-wide v0, p0, Lorg/telegram/tgnet/TLRPC$TL_messages_search;->hash:J
 
     invoke-virtual {p1, v0, v1}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt64(J)V

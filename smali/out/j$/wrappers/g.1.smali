@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lj$/util/y;
+.implements Lj$/util/u;
 
 
 # instance fields
@@ -20,7 +20,7 @@
     return-void
 .end method
 
-.method public static synthetic a(Ljava/util/Spliterator;)Lj$/util/y;
+.method public static synthetic a(Ljava/util/Spliterator;)Lj$/util/u;
     .registers 2
 
     if-nez p0, :cond_4
@@ -36,7 +36,7 @@
 
     check-cast p0, Lj$/wrappers/h;
 
-    iget-object p0, p0, Lj$/wrappers/h;->a:Lj$/util/y;
+    iget-object p0, p0, Lj$/wrappers/h;->a:Lj$/util/u;
 
     return-object p0
 
@@ -140,7 +140,7 @@
     return p1
 .end method
 
-.method public synthetic trySplit()Lj$/util/y;
+.method public synthetic trySplit()Lj$/util/u;
     .registers 2
 
     iget-object v0, p0, Lj$/wrappers/g;->a:Ljava/util/Spliterator;
@@ -149,7 +149,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lj$/wrappers/g;->a(Ljava/util/Spliterator;)Lj$/util/y;
+    invoke-static {v0}, Lj$/wrappers/g;->a(Ljava/util/Spliterator;)Lj$/util/u;
 
     move-result-object v0
 

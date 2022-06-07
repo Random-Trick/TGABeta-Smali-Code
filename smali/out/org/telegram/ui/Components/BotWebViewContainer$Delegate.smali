@@ -21,11 +21,23 @@
 .method public abstract onSendWebViewData(Ljava/lang/String;)V
 .end method
 
+.method public abstract onSetBackButtonVisible(Z)V
+.end method
+
 .method public abstract onSetupMainButton(ZZLjava/lang/String;IIZ)V
 .end method
 
 .method public abstract onWebAppExpand()V
 .end method
 
+.method public abstract onWebAppOpenInvoice(Ljava/lang/String;Lorg/telegram/tgnet/TLObject;)V
+.end method
+
 .method public abstract onWebAppReady()V
+.end method
+
+.method public abstract onWebAppSetActionBarColor(Ljava/lang/String;)V
+.end method
+
+.method public abstract onWebAppSetBackgroundColor(I)V
 .end method

@@ -132,7 +132,7 @@
     .line 3434
     iget-object p1, p0, Lorg/telegram/ui/PassportActivity$12;->val$field:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
-    const v0, 0x7f0e0cc2
+    const v0, 0x7f0e0d4c
 
     const-string v1, "PassportUseLatinOnly"
 

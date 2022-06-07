@@ -285,15 +285,15 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lorg/telegram/messenger/Utilities;->parseInt(Ljava/lang/CharSequence;)Ljava/lang/Integer;
+    invoke-static {v1}, Lorg/telegram/messenger/Utilities;->parseLong(Ljava/lang/String;)Ljava/lang/Long;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
+    invoke-virtual {v1}, Ljava/lang/Long;->longValue()J
 
-    move-result v1
+    move-result-wide v1
 
-    iput v1, v0, Lorg/telegram/tgnet/TLRPC$Document;->size:I
+    iput-wide v1, v0, Lorg/telegram/tgnet/TLRPC$Document;->size:J
 
     .line 61
     iget-object v0, p0, Lorg/telegram/messenger/FileStreamLoadOperation;->document:Lorg/telegram/tgnet/TLRPC$Document;
@@ -458,26 +458,24 @@
 
     cmp-long v4, v0, v2
 
-    if-nez v4, :cond_10e
+    if-nez v4, :cond_10d
 
     iget-object v0, p0, Lorg/telegram/messenger/FileStreamLoadOperation;->document:Lorg/telegram/tgnet/TLRPC$Document;
 
-    iget v0, v0, Lorg/telegram/tgnet/TLRPC$Document;->size:I
-
-    int-to-long v0, v0
+    iget-wide v0, v0, Lorg/telegram/tgnet/TLRPC$Document;->size:J
 
     iget-wide v2, p1, Lcom/google/android/exoplayer2/upstream/DataSpec;->position:J
 
     sub-long/2addr v0, v2
 
-    :cond_10e
+    :cond_10d
     iput-wide v0, p0, Lorg/telegram/messenger/FileStreamLoadOperation;->bytesRemaining:J
 
     const-wide/16 v2, 0x0
 
     cmp-long v4, v0, v2
 
-    if-ltz v4, :cond_138
+    if-ltz v4, :cond_137
 
     const/4 v0, 0x1
 
@@ -490,7 +488,7 @@
     .line 79
     iget-object p1, p0, Lorg/telegram/messenger/FileStreamLoadOperation;->loadOperation:Lorg/telegram/messenger/FileLoadOperation;
 
-    if-eqz p1, :cond_135
+    if-eqz p1, :cond_134
 
     .line 80
     new-instance p1, Ljava/io/RandomAccessFile;
@@ -515,13 +513,13 @@
     invoke-virtual {p1, v0, v1}, Ljava/io/RandomAccessFile;->seek(J)V
 
     .line 83
-    :cond_135
+    :cond_134
     iget-wide v0, p0, Lorg/telegram/messenger/FileStreamLoadOperation;->bytesRemaining:J
 
     return-wide v0
 
     .line 75
-    :cond_138
+    :cond_137
     new-instance p1, Ljava/io/EOFException;
 
     invoke-direct {p1}, Ljava/io/EOFException;-><init>()V
@@ -571,24 +569,28 @@
 
     :cond_15
     :goto_15
-    if-nez v1, :cond_45
+    if-nez v1, :cond_47
 
     .line 98
     :try_start_17
     iget-boolean v2, p0, Lorg/telegram/messenger/FileStreamLoadOperation;->opened:Z
 
-    if-eqz v2, :cond_45
+    if-eqz v2, :cond_47
 
     .line 99
     iget-object v1, p0, Lorg/telegram/messenger/FileStreamLoadOperation;->loadOperation:Lorg/telegram/messenger/FileLoadOperation;
 
     iget v2, p0, Lorg/telegram/messenger/FileStreamLoadOperation;->currentOffset:I
 
-    invoke-virtual {v1, v2, p3}, Lorg/telegram/messenger/FileLoadOperation;->getDownloadedLengthFromOffset(II)[I
+    int-to-long v3, p3
+
+    invoke-virtual {v1, v2, v3, v4}, Lorg/telegram/messenger/FileLoadOperation;->getDownloadedLengthFromOffset(IJ)[J
 
     move-result-object v1
 
-    aget v1, v1, v0
+    aget-wide v2, v1, v0
+
+    long-to-int v1, v2
 
     if-nez v1, :cond_15
 
@@ -628,15 +630,15 @@
     goto :goto_15
 
     .line 106
-    :cond_45
+    :cond_47
     iget-boolean p3, p0, Lorg/telegram/messenger/FileStreamLoadOperation;->opened:Z
 
-    if-nez p3, :cond_4a
+    if-nez p3, :cond_4c
 
     return v0
 
     .line 109
-    :cond_4a
+    :cond_4c
     iget-object p3, p0, Lorg/telegram/messenger/FileStreamLoadOperation;->file:Ljava/io/RandomAccessFile;
 
     invoke-virtual {p3, p1, p2, v1}, Ljava/io/RandomAccessFile;->readFully([BII)V
@@ -659,12 +661,12 @@
 
     .line 112
     invoke-virtual {p0, v1}, Lcom/google/android/exoplayer2/upstream/BaseDataSource;->bytesTransferred(I)V
-    :try_end_5d
-    .catch Ljava/lang/Exception; {:try_start_17 .. :try_end_5d} :catch_5e
+    :try_end_5f
+    .catch Ljava/lang/Exception; {:try_start_17 .. :try_end_5f} :catch_60
 
     return v1
 
-    :catch_5e
+    :catch_60
     move-exception p1
 
     .line 114
@@ -672,11 +674,11 @@
 
     invoke-direct {p2, p1}, Ljava/io/IOException;-><init>(Ljava/lang/Throwable;)V
 
-    goto :goto_66
+    goto :goto_68
 
-    :goto_65
+    :goto_67
     throw p2
 
-    :goto_66
-    goto :goto_65
+    :goto_68
+    goto :goto_67
 .end method

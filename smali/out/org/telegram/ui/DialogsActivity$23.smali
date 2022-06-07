@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/DialogsActivity;Landroid/content/Context;)V
     .registers 3
 
-    .line 3511
+    .line 3583
     iput-object p1, p0, Lorg/telegram/ui/DialogsActivity$23;->this$0:Lorg/telegram/ui/DialogsActivity;
 
     invoke-direct {p0, p2}, Landroid/view/View;-><init>(Landroid/content/Context;)V
@@ -39,10 +39,10 @@
 
     new-array v1, v0, [Ljava/lang/Object;
 
-    .line 3514
+    .line 3586
     iget-object v2, p0, Lorg/telegram/ui/DialogsActivity$23;->this$0:Lorg/telegram/ui/DialogsActivity;
 
-    invoke-static {v2}, Lorg/telegram/ui/DialogsActivity;->access$23800(Lorg/telegram/ui/DialogsActivity;)Ljava/util/ArrayList;
+    invoke-static {v2}, Lorg/telegram/ui/DialogsActivity;->access$24300(Lorg/telegram/ui/DialogsActivity;)Ljava/util/ArrayList;
 
     move-result-object v2
 
@@ -68,10 +68,10 @@
 
     move-result-object v0
 
-    .line 3515
+    .line 3587
     iget-object v1, p0, Lorg/telegram/ui/DialogsActivity$23;->this$0:Lorg/telegram/ui/DialogsActivity;
 
-    invoke-static {v1}, Lorg/telegram/ui/DialogsActivity;->access$25100(Lorg/telegram/ui/DialogsActivity;)Landroid/text/TextPaint;
+    invoke-static {v1}, Lorg/telegram/ui/DialogsActivity;->access$25600(Lorg/telegram/ui/DialogsActivity;)Landroid/text/TextPaint;
 
     move-result-object v1
 
@@ -89,7 +89,7 @@
 
     const/high16 v2, 0x41800000    # 16.0f
 
-    .line 3516
+    .line 3588
     invoke-static {v2}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v2
@@ -106,24 +106,24 @@
 
     move-result v2
 
-    .line 3517
+    .line 3589
     invoke-virtual {p0}, Landroid/view/View;->getMeasuredWidth()I
 
     move-result v3
 
     div-int/lit8 v3, v3, 0x2
 
-    .line 3518
+    .line 3590
     invoke-virtual {p0}, Landroid/view/View;->getMeasuredHeight()I
 
     move-result v4
 
     div-int/lit8 v4, v4, 0x2
 
-    .line 3520
+    .line 3592
     iget-object v4, p0, Lorg/telegram/ui/DialogsActivity$23;->this$0:Lorg/telegram/ui/DialogsActivity;
 
-    invoke-static {v4}, Lorg/telegram/ui/DialogsActivity;->access$25100(Lorg/telegram/ui/DialogsActivity;)Landroid/text/TextPaint;
+    invoke-static {v4}, Lorg/telegram/ui/DialogsActivity;->access$25600(Lorg/telegram/ui/DialogsActivity;)Landroid/text/TextPaint;
 
     move-result-object v4
 
@@ -137,10 +137,10 @@
 
     invoke-virtual {v4, v5}, Landroid/text/TextPaint;->setColor(I)V
 
-    .line 3521
+    .line 3593
     iget-object v4, p0, Lorg/telegram/ui/DialogsActivity$23;->this$0:Lorg/telegram/ui/DialogsActivity;
 
-    invoke-static {v4}, Lorg/telegram/ui/DialogsActivity;->access$25200(Lorg/telegram/ui/DialogsActivity;)Landroid/graphics/Paint;
+    invoke-static {v4}, Lorg/telegram/ui/DialogsActivity;->access$25700(Lorg/telegram/ui/DialogsActivity;)Landroid/graphics/Paint;
 
     move-result-object v4
 
@@ -166,10 +166,10 @@
 
     invoke-virtual {v4, v5}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 3522
+    .line 3594
     iget-object v4, p0, Lorg/telegram/ui/DialogsActivity$23;->this$0:Lorg/telegram/ui/DialogsActivity;
 
-    invoke-static {v4}, Lorg/telegram/ui/DialogsActivity;->access$25300(Lorg/telegram/ui/DialogsActivity;)Landroid/graphics/RectF;
+    invoke-static {v4}, Lorg/telegram/ui/DialogsActivity;->access$25800(Lorg/telegram/ui/DialogsActivity;)Landroid/graphics/RectF;
 
     move-result-object v4
 
@@ -193,10 +193,10 @@
 
     invoke-virtual {v4, v6, v7, v8, v9}, Landroid/graphics/RectF;->set(FFFF)V
 
-    .line 3523
+    .line 3595
     iget-object v4, p0, Lorg/telegram/ui/DialogsActivity$23;->this$0:Lorg/telegram/ui/DialogsActivity;
 
-    invoke-static {v4}, Lorg/telegram/ui/DialogsActivity;->access$25300(Lorg/telegram/ui/DialogsActivity;)Landroid/graphics/RectF;
+    invoke-static {v4}, Lorg/telegram/ui/DialogsActivity;->access$25800(Lorg/telegram/ui/DialogsActivity;)Landroid/graphics/RectF;
 
     move-result-object v4
 
@@ -216,16 +216,16 @@
 
     iget-object v8, p0, Lorg/telegram/ui/DialogsActivity$23;->this$0:Lorg/telegram/ui/DialogsActivity;
 
-    invoke-static {v8}, Lorg/telegram/ui/DialogsActivity;->access$25200(Lorg/telegram/ui/DialogsActivity;)Landroid/graphics/Paint;
+    invoke-static {v8}, Lorg/telegram/ui/DialogsActivity;->access$25700(Lorg/telegram/ui/DialogsActivity;)Landroid/graphics/Paint;
 
     move-result-object v8
 
     invoke-virtual {p1, v4, v7, v6, v8}, Landroid/graphics/Canvas;->drawRoundRect(Landroid/graphics/RectF;FFLandroid/graphics/Paint;)V
 
-    .line 3525
+    .line 3597
     iget-object v4, p0, Lorg/telegram/ui/DialogsActivity$23;->this$0:Lorg/telegram/ui/DialogsActivity;
 
-    invoke-static {v4}, Lorg/telegram/ui/DialogsActivity;->access$25200(Lorg/telegram/ui/DialogsActivity;)Landroid/graphics/Paint;
+    invoke-static {v4}, Lorg/telegram/ui/DialogsActivity;->access$25700(Lorg/telegram/ui/DialogsActivity;)Landroid/graphics/Paint;
 
     move-result-object v4
 
@@ -239,10 +239,10 @@
 
     invoke-virtual {v4, v6}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 3526
+    .line 3598
     iget-object v4, p0, Lorg/telegram/ui/DialogsActivity$23;->this$0:Lorg/telegram/ui/DialogsActivity;
 
-    invoke-static {v4}, Lorg/telegram/ui/DialogsActivity;->access$25300(Lorg/telegram/ui/DialogsActivity;)Landroid/graphics/RectF;
+    invoke-static {v4}, Lorg/telegram/ui/DialogsActivity;->access$25800(Lorg/telegram/ui/DialogsActivity;)Landroid/graphics/RectF;
 
     move-result-object v4
 
@@ -284,10 +284,10 @@
 
     invoke-virtual {v4, v5, v7, v2, v6}, Landroid/graphics/RectF;->set(FFFF)V
 
-    .line 3527
+    .line 3599
     iget-object v2, p0, Lorg/telegram/ui/DialogsActivity$23;->this$0:Lorg/telegram/ui/DialogsActivity;
 
-    invoke-static {v2}, Lorg/telegram/ui/DialogsActivity;->access$25300(Lorg/telegram/ui/DialogsActivity;)Landroid/graphics/RectF;
+    invoke-static {v2}, Lorg/telegram/ui/DialogsActivity;->access$25800(Lorg/telegram/ui/DialogsActivity;)Landroid/graphics/RectF;
 
     move-result-object v2
 
@@ -307,13 +307,13 @@
 
     iget-object v6, p0, Lorg/telegram/ui/DialogsActivity$23;->this$0:Lorg/telegram/ui/DialogsActivity;
 
-    invoke-static {v6}, Lorg/telegram/ui/DialogsActivity;->access$25200(Lorg/telegram/ui/DialogsActivity;)Landroid/graphics/Paint;
+    invoke-static {v6}, Lorg/telegram/ui/DialogsActivity;->access$25700(Lorg/telegram/ui/DialogsActivity;)Landroid/graphics/Paint;
 
     move-result-object v6
 
     invoke-virtual {p1, v2, v5, v4, v6}, Landroid/graphics/Canvas;->drawRoundRect(Landroid/graphics/RectF;FFLandroid/graphics/Paint;)V
 
-    .line 3529
+    .line 3601
     div-int/lit8 v1, v1, 0x2
 
     sub-int/2addr v3, v1
@@ -330,7 +330,7 @@
 
     iget-object v3, p0, Lorg/telegram/ui/DialogsActivity$23;->this$0:Lorg/telegram/ui/DialogsActivity;
 
-    invoke-static {v3}, Lorg/telegram/ui/DialogsActivity;->access$25100(Lorg/telegram/ui/DialogsActivity;)Landroid/text/TextPaint;
+    invoke-static {v3}, Lorg/telegram/ui/DialogsActivity;->access$25600(Lorg/telegram/ui/DialogsActivity;)Landroid/text/TextPaint;
 
     move-result-object v3
 

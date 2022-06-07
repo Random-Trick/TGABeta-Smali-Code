@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/ActionBar/BottomSheet;Landroid/content/Context;)V
     .registers 3
 
-    .line 893
+    .line 922
     iput-object p1, p0, Lorg/telegram/ui/ActionBar/BottomSheet$2;->this$0:Lorg/telegram/ui/ActionBar/BottomSheet;
 
     invoke-direct {p0, p1, p2}, Lorg/telegram/ui/ActionBar/BottomSheet$ContainerView;-><init>(Lorg/telegram/ui/ActionBar/BottomSheet;Landroid/content/Context;)V
@@ -32,12 +32,26 @@
 
 
 # virtual methods
+.method protected dispatchDraw(Landroid/graphics/Canvas;)V
+    .registers 3
+
+    .line 935
+    invoke-super {p0, p1}, Lorg/telegram/ui/ActionBar/BottomSheet$ContainerView;->dispatchDraw(Landroid/graphics/Canvas;)V
+
+    .line 936
+    iget-object v0, p0, Lorg/telegram/ui/ActionBar/BottomSheet$2;->this$0:Lorg/telegram/ui/ActionBar/BottomSheet;
+
+    invoke-virtual {v0, p1}, Lorg/telegram/ui/ActionBar/BottomSheet;->mainContainerDispatchDraw(Landroid/graphics/Canvas;)V
+
+    return-void
+.end method
+
 .method public drawChild(Landroid/graphics/Canvas;Landroid/view/View;J)Z
     .registers 7
 
     const/4 v0, 0x1
 
-    .line 897
+    .line 926
     :try_start_1
     iget-object v1, p0, Lorg/telegram/ui/ActionBar/BottomSheet$2;->this$0:Lorg/telegram/ui/ActionBar/BottomSheet;
 
@@ -66,7 +80,7 @@
     :catch_12
     move-exception p1
 
-    .line 899
+    .line 928
     invoke-static {p1}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     return v0

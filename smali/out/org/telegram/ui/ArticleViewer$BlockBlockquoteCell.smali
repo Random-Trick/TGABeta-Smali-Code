@@ -39,22 +39,22 @@
 .method public constructor <init>(Lorg/telegram/ui/ArticleViewer;Landroid/content/Context;Lorg/telegram/ui/ArticleViewer$WebpageAdapter;)V
     .registers 4
 
-    .line 9708
+    .line 9709
     iput-object p1, p0, Lorg/telegram/ui/ArticleViewer$BlockBlockquoteCell;->this$0:Lorg/telegram/ui/ArticleViewer;
 
-    .line 9709
+    .line 9710
     invoke-direct {p0, p2}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
     const/high16 p1, 0x41000000    # 8.0f
 
-    .line 9702
+    .line 9703
     invoke-static {p1}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result p1
 
     iput p1, p0, Lorg/telegram/ui/ArticleViewer$BlockBlockquoteCell;->textY:I
 
-    .line 9710
+    .line 9711
     iput-object p3, p0, Lorg/telegram/ui/ArticleViewer$BlockBlockquoteCell;->parentAdapter:Lorg/telegram/ui/ArticleViewer$WebpageAdapter;
 
     return-void
@@ -73,21 +73,21 @@
         }
     .end annotation
 
-    .line 9807
+    .line 9808
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockBlockquoteCell;->textLayout:Lorg/telegram/ui/ArticleViewer$DrawingText;
 
     if-eqz v0, :cond_7
 
-    .line 9808
+    .line 9809
     invoke-virtual {p1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 9810
+    .line 9811
     :cond_7
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockBlockquoteCell;->textLayout2:Lorg/telegram/ui/ArticleViewer$DrawingText;
 
     if-eqz v0, :cond_e
 
-    .line 9811
+    .line 9812
     invoke-virtual {p1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     :cond_e
@@ -97,14 +97,14 @@
 .method protected onDraw(Landroid/graphics/Canvas;)V
     .registers 12
 
-    .line 9776
+    .line 9777
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockBlockquoteCell;->currentBlock:Lorg/telegram/tgnet/TLRPC$TL_pageBlockBlockquote;
 
     if-nez v0, :cond_5
 
     return-void
 
-    .line 9780
+    .line 9781
     :cond_5
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockBlockquoteCell;->textLayout:Lorg/telegram/ui/ArticleViewer$DrawingText;
 
@@ -112,10 +112,10 @@
 
     if-eqz v0, :cond_25
 
-    .line 9781
+    .line 9782
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 9782
+    .line 9783
     iget v0, p0, Lorg/telegram/ui/ArticleViewer$BlockBlockquoteCell;->textX:I
 
     int-to-float v0, v0
@@ -126,19 +126,19 @@
 
     invoke-virtual {p1, v0, v2}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 9783
+    .line 9784
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockBlockquoteCell;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     const/4 v2, 0x1
 
     invoke-static {v0, p1, p0, v1}, Lorg/telegram/ui/ArticleViewer;->access$13800(Lorg/telegram/ui/ArticleViewer;Landroid/graphics/Canvas;Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleSelectableView;I)V
 
-    .line 9784
+    .line 9785
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockBlockquoteCell;->textLayout:Lorg/telegram/ui/ArticleViewer$DrawingText;
 
     invoke-virtual {v0, p1, p0}, Lorg/telegram/ui/ArticleViewer$DrawingText;->draw(Landroid/graphics/Canvas;Landroid/view/View;)V
 
-    .line 9785
+    .line 9786
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
     goto :goto_26
@@ -146,16 +146,16 @@
     :cond_25
     const/4 v2, 0x0
 
-    .line 9787
+    .line 9788
     :goto_26
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockBlockquoteCell;->textLayout2:Lorg/telegram/ui/ArticleViewer$DrawingText;
 
     if-eqz v0, :cond_43
 
-    .line 9788
+    .line 9789
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 9789
+    .line 9790
     iget v0, p0, Lorg/telegram/ui/ArticleViewer$BlockBlockquoteCell;->textX:I
 
     int-to-float v0, v0
@@ -166,20 +166,20 @@
 
     invoke-virtual {p1, v0, v3}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 9790
+    .line 9791
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockBlockquoteCell;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     invoke-static {v0, p1, p0, v2}, Lorg/telegram/ui/ArticleViewer;->access$13800(Lorg/telegram/ui/ArticleViewer;Landroid/graphics/Canvas;Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleSelectableView;I)V
 
-    .line 9791
+    .line 9792
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockBlockquoteCell;->textLayout2:Lorg/telegram/ui/ArticleViewer$DrawingText;
 
     invoke-virtual {v0, p1, p0}, Lorg/telegram/ui/ArticleViewer$DrawingText;->draw(Landroid/graphics/Canvas;Landroid/view/View;)V
 
-    .line 9792
+    .line 9793
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
-    .line 9794
+    .line 9795
     :cond_43
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockBlockquoteCell;->parentAdapter:Lorg/telegram/ui/ArticleViewer$WebpageAdapter;
 
@@ -193,7 +193,7 @@
 
     if-eqz v0, :cond_79
 
-    .line 9795
+    .line 9796
     invoke-virtual {p0}, Landroid/view/View;->getMeasuredWidth()I
 
     move-result v0
@@ -206,7 +206,7 @@
 
     int-to-float v5, v0
 
-    .line 9796
+    .line 9797
     invoke-static {v3}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v4
@@ -245,7 +245,7 @@
 
     goto :goto_ac
 
-    .line 9798
+    .line 9799
     :cond_79
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockBlockquoteCell;->currentBlock:Lorg/telegram/tgnet/TLRPC$TL_pageBlockBlockquote;
 
@@ -305,7 +305,7 @@
 
     invoke-virtual/range {v4 .. v9}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    .line 9800
+    .line 9801
     :goto_ac
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockBlockquoteCell;->currentBlock:Lorg/telegram/tgnet/TLRPC$TL_pageBlockBlockquote;
 
@@ -315,7 +315,7 @@
 
     const/high16 v0, 0x41900000    # 18.0f
 
-    .line 9801
+    .line 9802
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v0
@@ -364,26 +364,26 @@
 .method protected onMeasure(II)V
     .registers 13
 
-    .line 9725
+    .line 9726
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result p1
 
-    .line 9728
+    .line 9729
     iget-object p2, p0, Lorg/telegram/ui/ArticleViewer$BlockBlockquoteCell;->currentBlock:Lorg/telegram/tgnet/TLRPC$TL_pageBlockBlockquote;
 
     if-eqz p2, :cond_d6
 
     const/high16 p2, 0x42480000    # 50.0f
 
-    .line 9729
+    .line 9730
     invoke-static {p2}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result p2
 
     sub-int p2, p1, p2
 
-    .line 9730
+    .line 9731
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockBlockquoteCell;->currentBlock:Lorg/telegram/tgnet/TLRPC$TL_pageBlockBlockquote;
 
     iget v0, v0, Lorg/telegram/tgnet/TLRPC$PageBlock;->level:I
@@ -394,14 +394,14 @@
 
     int-to-float v0, v0
 
-    .line 9731
+    .line 9732
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v0
 
     sub-int/2addr p2, v0
 
-    .line 9733
+    .line 9734
     :cond_1e
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockBlockquoteCell;->this$0:Lorg/telegram/ui/ArticleViewer;
 
@@ -431,7 +431,7 @@
 
     if-eqz v0, :cond_44
 
-    .line 9735
+    .line 9736
     invoke-static {v8}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v0
@@ -453,7 +453,7 @@
     :cond_44
     const/4 v9, 0x0
 
-    .line 9737
+    .line 9738
     :goto_45
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockBlockquoteCell;->currentBlock:Lorg/telegram/tgnet/TLRPC$TL_pageBlockBlockquote;
 
@@ -463,7 +463,7 @@
 
     if-lez v0, :cond_78
 
-    .line 9738
+    .line 9739
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockBlockquoteCell;->parentAdapter:Lorg/telegram/ui/ArticleViewer$WebpageAdapter;
 
     invoke-static {v0}, Lorg/telegram/ui/ArticleViewer$WebpageAdapter;->access$7100(Lorg/telegram/ui/ArticleViewer$WebpageAdapter;)Z
@@ -472,7 +472,7 @@
 
     if-eqz v0, :cond_65
 
-    .line 9739
+    .line 9740
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockBlockquoteCell;->currentBlock:Lorg/telegram/tgnet/TLRPC$TL_pageBlockBlockquote;
 
     iget v0, v0, Lorg/telegram/tgnet/TLRPC$PageBlock;->level:I
@@ -491,7 +491,7 @@
 
     goto :goto_8f
 
-    .line 9741
+    .line 9742
     :cond_65
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockBlockquoteCell;->currentBlock:Lorg/telegram/tgnet/TLRPC$TL_pageBlockBlockquote;
 
@@ -515,7 +515,7 @@
 
     goto :goto_8f
 
-    .line 9744
+    .line 9745
     :cond_78
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockBlockquoteCell;->parentAdapter:Lorg/telegram/ui/ArticleViewer$WebpageAdapter;
 
@@ -527,7 +527,7 @@
 
     const/high16 v0, 0x41600000    # 14.0f
 
-    .line 9745
+    .line 9746
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v0
@@ -536,7 +536,7 @@
 
     goto :goto_8f
 
-    .line 9747
+    .line 9748
     :cond_89
     invoke-static {v1}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
@@ -544,7 +544,7 @@
 
     iput v0, p0, Lorg/telegram/ui/ArticleViewer$BlockBlockquoteCell;->textX:I
 
-    .line 9750
+    .line 9751
     :goto_8f
     invoke-static {v8}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
@@ -554,7 +554,7 @@
 
     iput v5, p0, Lorg/telegram/ui/ArticleViewer$BlockBlockquoteCell;->textY2:I
 
-    .line 9751
+    .line 9752
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockBlockquoteCell;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     const/4 v2, 0x0
@@ -577,7 +577,7 @@
 
     if-eqz p2, :cond_b6
 
-    .line 9753
+    .line 9754
     invoke-static {v8}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result p2
@@ -595,41 +595,41 @@
     :cond_b6
     if-eqz v9, :cond_bd
 
-    .line 9756
+    .line 9757
     invoke-static {v8}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result p2
 
     add-int/2addr v9, p2
 
-    .line 9758
+    .line 9759
     :cond_bd
     iget-object p2, p0, Lorg/telegram/ui/ArticleViewer$BlockBlockquoteCell;->textLayout:Lorg/telegram/ui/ArticleViewer$DrawingText;
 
     if-eqz p2, :cond_c9
 
-    .line 9759
+    .line 9760
     iget v0, p0, Lorg/telegram/ui/ArticleViewer$BlockBlockquoteCell;->textX:I
 
     iput v0, p2, Lorg/telegram/ui/ArticleViewer$DrawingText;->x:I
 
-    .line 9760
+    .line 9761
     iget v0, p0, Lorg/telegram/ui/ArticleViewer$BlockBlockquoteCell;->textY:I
 
     iput v0, p2, Lorg/telegram/ui/ArticleViewer$DrawingText;->y:I
 
-    .line 9763
+    .line 9764
     :cond_c9
     iget-object p2, p0, Lorg/telegram/ui/ArticleViewer$BlockBlockquoteCell;->textLayout2:Lorg/telegram/ui/ArticleViewer$DrawingText;
 
     if-eqz p2, :cond_d7
 
-    .line 9764
+    .line 9765
     iget v0, p0, Lorg/telegram/ui/ArticleViewer$BlockBlockquoteCell;->textX:I
 
     iput v0, p2, Lorg/telegram/ui/ArticleViewer$DrawingText;->x:I
 
-    .line 9765
+    .line 9766
     iget v0, p0, Lorg/telegram/ui/ArticleViewer$BlockBlockquoteCell;->textY2:I
 
     iput v0, p2, Lorg/telegram/ui/ArticleViewer$DrawingText;->y:I
@@ -639,7 +639,7 @@
     :cond_d6
     const/4 v9, 0x1
 
-    .line 9771
+    .line 9772
     :cond_d7
     :goto_d7
     invoke-virtual {p0, p1, v9}, Landroid/view/View;->setMeasuredDimension(II)V
@@ -650,7 +650,7 @@
 .method public onTouchEvent(Landroid/view/MotionEvent;)Z
     .registers 10
 
-    .line 9720
+    .line 9721
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockBlockquoteCell;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     iget-object v1, p0, Lorg/telegram/ui/ArticleViewer$BlockBlockquoteCell;->parentAdapter:Lorg/telegram/ui/ArticleViewer$WebpageAdapter;
@@ -715,10 +715,10 @@
 .method public setBlock(Lorg/telegram/tgnet/TLRPC$TL_pageBlockBlockquote;)V
     .registers 2
 
-    .line 9714
+    .line 9715
     iput-object p1, p0, Lorg/telegram/ui/ArticleViewer$BlockBlockquoteCell;->currentBlock:Lorg/telegram/tgnet/TLRPC$TL_pageBlockBlockquote;
 
-    .line 9715
+    .line 9716
     invoke-virtual {p0}, Landroid/view/View;->requestLayout()V
 
     return-void

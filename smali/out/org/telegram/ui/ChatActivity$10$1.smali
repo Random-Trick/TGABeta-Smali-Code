@@ -43,7 +43,7 @@
 .method constructor <init>(Lorg/telegram/ui/ChatActivity$10;Z)V
     .registers 3
 
-    .line 2291
+    .line 2315
     iput-object p1, p0, Lorg/telegram/ui/ChatActivity$10$1;->this$1:Lorg/telegram/ui/ChatActivity$10;
 
     iput-boolean p2, p0, Lorg/telegram/ui/ChatActivity$10$1;->val$canDeleteHistory:Z
@@ -56,7 +56,7 @@
 .method private synthetic lambda$run$0(ZZ)V
     .registers 4
 
-    .line 2297
+    .line 2321
     iget-object p2, p0, Lorg/telegram/ui/ChatActivity$10$1;->this$1:Lorg/telegram/ui/ChatActivity$10;
 
     iget-object p2, p2, Lorg/telegram/ui/ChatActivity$10;->this$0:Lorg/telegram/ui/ChatActivity;
@@ -73,9 +73,9 @@
 
     const/16 v0, 0x32
 
-    if-lt p2, v0, :cond_23
+    if-lt p2, v0, :cond_21
 
-    .line 2297
+    .line 2321
     iget-object p2, p0, Lorg/telegram/ui/ChatActivity$10$1;->this$1:Lorg/telegram/ui/ChatActivity$10;
 
     iget-object v0, p2, Lorg/telegram/ui/ChatActivity$10;->this$0:Lorg/telegram/ui/ChatActivity;
@@ -102,18 +102,16 @@
 
     iget-object p2, p2, Lorg/telegram/ui/ChatActivity$10;->this$0:Lorg/telegram/ui/ChatActivity;
 
-    invoke-static {p2}, Lorg/telegram/ui/ChatActivity;->access$3100(Lorg/telegram/ui/ChatActivity;)Lorg/telegram/ui/ChatActivity$ThemeDelegate;
-
-    move-result-object v10
+    iget-object v10, p2, Lorg/telegram/ui/ChatActivity;->themeDelegate:Lorg/telegram/ui/ChatActivity$ThemeDelegate;
 
     move v8, p1
 
     invoke-static/range {v0 .. v10}, Lorg/telegram/ui/Components/AlertsCreator;->createClearOrDeleteDialogAlert(Lorg/telegram/ui/ActionBar/BaseFragment;ZZZLorg/telegram/tgnet/TLRPC$Chat;Lorg/telegram/tgnet/TLRPC$User;ZZZLorg/telegram/messenger/MessagesStorage$BooleanCallback;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)V
 
-    goto :goto_2b
+    goto :goto_29
 
-    .line 2299
-    :cond_23
+    .line 2323
+    :cond_21
     iget-object p2, p0, Lorg/telegram/ui/ChatActivity$10$1;->this$1:Lorg/telegram/ui/ChatActivity$10;
 
     iget-object p2, p2, Lorg/telegram/ui/ChatActivity$10;->this$0:Lorg/telegram/ui/ChatActivity;
@@ -122,7 +120,7 @@
 
     invoke-virtual {p2, v0, p1}, Lorg/telegram/ui/ChatActivity;->performHistoryClear(ZZ)V
 
-    :goto_2b
+    :goto_29
     return-void
 .end method
 
@@ -133,7 +131,7 @@
 
     if-eqz p1, :cond_25
 
-    .line 2294
+    .line 2318
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$10$1;->this$1:Lorg/telegram/ui/ChatActivity$10;
 
     iget-object v0, v0, Lorg/telegram/ui/ChatActivity$10;->this$0:Lorg/telegram/ui/ChatActivity;
@@ -146,7 +144,7 @@
 
     if-eqz v1, :cond_25
 
-    .line 2295
+    .line 2319
     :cond_e
     invoke-virtual {v0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getMessagesStorage()Lorg/telegram/messenger/MessagesStorage;
 
@@ -170,7 +168,7 @@
 
     goto :goto_2e
 
-    .line 2303
+    .line 2327
     :cond_25
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$10$1;->this$1:Lorg/telegram/ui/ChatActivity$10;
 

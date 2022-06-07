@@ -718,7 +718,7 @@
 
     const-string v1, "UpdateAppAlert"
 
-    const v2, 0x7f0e11fc
+    const v2, 0x7f0e12c9
 
     invoke-static {v1, v2}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
@@ -810,7 +810,7 @@
 
     move-result-object p1
 
-    const p2, 0x7f0e11fc
+    const p2, 0x7f0e12c9
 
     const-string v2, "UpdateAppAlert"
 
@@ -826,7 +826,7 @@
     :cond_4f
     iget-object p1, p0, Lorg/telegram/ui/PassportActivity$8;->this$0:Lorg/telegram/ui/PassportActivity;
 
-    const v2, 0x7f0e017c
+    const v2, 0x7f0e01b1
 
     const-string v3, "AppName"
 
@@ -1265,7 +1265,7 @@
 .end method
 
 .method private synthetic lambda$run$16(ZLorg/telegram/tgnet/TLRPC$TL_error;)V
-    .registers 7
+    .registers 8
 
     const/4 v0, 0x0
 
@@ -1301,7 +1301,7 @@
 
     move-result-object p1
 
-    if-eqz p1, :cond_aa
+    if-eqz p1, :cond_ae
 
     iget-object p1, p0, Lorg/telegram/ui/PassportActivity$8;->this$0:Lorg/telegram/ui/PassportActivity;
 
@@ -1315,7 +1315,7 @@
 
     move-result p1
 
-    if-nez p1, :cond_aa
+    if-nez p1, :cond_ae
 
     .line 1917
     iget-object p1, p0, Lorg/telegram/ui/PassportActivity$8;->this$0:Lorg/telegram/ui/PassportActivity;
@@ -1339,7 +1339,7 @@
 
     invoke-static {p1}, Lorg/telegram/messenger/AndroidUtilities;->showKeyboard(Landroid/view/View;)Z
 
-    goto :goto_aa
+    goto :goto_ae
 
     .line 1921
     :cond_47
@@ -1365,7 +1365,7 @@
 
     invoke-static {p1, v1}, Lorg/telegram/ui/PassportActivity;->access$14500(Lorg/telegram/ui/PassportActivity;Z)V
 
-    goto :goto_aa
+    goto :goto_ae
 
     .line 1924
     :cond_5d
@@ -1377,11 +1377,11 @@
 
     move-result p1
 
-    const v2, 0x7f0e017c
+    const v2, 0x7f0e01b1
 
     const-string v3, "AppName"
 
-    if-eqz p1, :cond_9f
+    if-eqz p1, :cond_a3
 
     .line 1925
     iget-object p1, p2, Lorg/telegram/tgnet/TLRPC$TL_error;->text:Ljava/lang/String;
@@ -1396,36 +1396,40 @@
 
     const/16 p2, 0x3c
 
-    if-ge p1, p2, :cond_81
+    if-ge p1, p2, :cond_83
 
-    const-string p2, "Seconds"
+    new-array p2, v0, [Ljava/lang/Object;
+
+    const-string v4, "Seconds"
 
     .line 1928
-    invoke-static {p2, p1}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    invoke-static {v4, p1, p2}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
 
-    goto :goto_88
+    goto :goto_8c
 
     .line 1930
-    :cond_81
+    :cond_83
     div-int/2addr p1, p2
 
-    const-string p2, "Minutes"
+    new-array p2, v0, [Ljava/lang/Object;
 
-    invoke-static {p2, p1}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    const-string v4, "Minutes"
+
+    invoke-static {v4, p1, p2}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
 
     .line 1932
-    :goto_88
+    :goto_8c
     iget-object p2, p0, Lorg/telegram/ui/PassportActivity$8;->this$0:Lorg/telegram/ui/PassportActivity;
 
     invoke-static {v3, v2}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v2
 
-    const v3, 0x7f0e0759
+    const v3, 0x7f0e07ad
 
     new-array v1, v1, [Ljava/lang/Object;
 
@@ -1439,10 +1443,10 @@
 
     invoke-static {p2, v2, p1}, Lorg/telegram/ui/PassportActivity;->access$7800(Lorg/telegram/ui/PassportActivity;Ljava/lang/String;Ljava/lang/String;)V
 
-    goto :goto_aa
+    goto :goto_ae
 
     .line 1934
-    :cond_9f
+    :cond_a3
     iget-object p1, p0, Lorg/telegram/ui/PassportActivity$8;->this$0:Lorg/telegram/ui/PassportActivity;
 
     invoke-static {v3, v2}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -1453,8 +1457,8 @@
 
     invoke-static {p1, v0, p2}, Lorg/telegram/ui/PassportActivity;->access$7800(Lorg/telegram/ui/PassportActivity;Ljava/lang/String;Ljava/lang/String;)V
 
-    :cond_aa
-    :goto_aa
+    :cond_ae
+    :goto_ae
     return-void
 .end method
 

@@ -1,11 +1,11 @@
 .class Lorg/telegram/ui/ChatActivity$83;
-.super Landroid/animation/AnimatorListenerAdapter;
+.super Lorg/telegram/ui/Components/GigagroupConvertAlert;
 .source "ChatActivity.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lorg/telegram/ui/ChatActivity;->updateBottomOverlay()V
+    value = Lorg/telegram/ui/ChatActivity;->lambda$showGigagroupConvertAlert$122(Landroid/content/DialogInterface;I)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,42 +19,114 @@
 
 
 # direct methods
-.method constructor <init>(Lorg/telegram/ui/ChatActivity;)V
+.method public static synthetic $r8$lambda$UvUtEqnV2h0arBXyeeAzadSHWnQ(Lorg/telegram/ui/ChatActivity$83;Z)V
     .registers 2
 
-    .line 18605
+    invoke-direct {p0, p1}, Lorg/telegram/ui/ChatActivity$83;->lambda$onCovert$0(Z)V
+
+    return-void
+.end method
+
+.method constructor <init>(Lorg/telegram/ui/ChatActivity;Landroid/content/Context;Lorg/telegram/ui/ActionBar/BaseFragment;)V
+    .registers 4
+
+    .line 17151
     iput-object p1, p0, Lorg/telegram/ui/ChatActivity$83;->this$0:Lorg/telegram/ui/ChatActivity;
 
-    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
+    invoke-direct {p0, p2, p3}, Lorg/telegram/ui/Components/GigagroupConvertAlert;-><init>(Landroid/content/Context;Lorg/telegram/ui/ActionBar/BaseFragment;)V
 
+    return-void
+.end method
+
+.method private synthetic lambda$onCovert$0(Z)V
+    .registers 6
+
+    if-eqz p1, :cond_10
+
+    .line 17156
+    iget-object p1, p0, Lorg/telegram/ui/ChatActivity$83;->this$0:Lorg/telegram/ui/ChatActivity;
+
+    invoke-static {p1}, Lorg/telegram/ui/ChatActivity;->access$3600(Lorg/telegram/ui/ChatActivity;)Lorg/telegram/ui/Components/UndoView;
+
+    move-result-object p1
+
+    const-wide/16 v0, 0x0
+
+    const/16 v2, 0x4c
+
+    const/4 v3, 0x0
+
+    invoke-virtual {p1, v0, v1, v2, v3}, Lorg/telegram/ui/Components/UndoView;->showWithAction(JILjava/lang/Runnable;)V
+
+    :cond_10
     return-void
 .end method
 
 
 # virtual methods
-.method public onAnimationEnd(Landroid/animation/Animator;)V
-    .registers 3
+.method protected onCancel()V
+    .registers 6
 
-    .line 18608
-    invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationEnd(Landroid/animation/Animator;)V
+    .line 17163
+    iget-object v0, p0, Lorg/telegram/ui/ChatActivity$83;->this$0:Lorg/telegram/ui/ChatActivity;
 
-    .line 18609
-    iget-object p1, p0, Lorg/telegram/ui/ChatActivity$83;->this$0:Lorg/telegram/ui/ChatActivity;
+    invoke-static {v0}, Lorg/telegram/ui/ChatActivity;->access$3600(Lorg/telegram/ui/ChatActivity;)Lorg/telegram/ui/Components/UndoView;
 
-    iget-object p1, p1, Lorg/telegram/ui/ChatActivity;->chatActivityEnterView:Lorg/telegram/ui/Components/ChatActivityEnterView;
+    move-result-object v0
 
-    const/4 v0, 0x4
+    const-wide/16 v1, 0x0
 
-    invoke-virtual {p1, v0}, Lorg/telegram/ui/Components/ChatActivityEnterView;->setVisibility(I)V
+    const/16 v3, 0x4b
 
-    .line 18610
-    iget-object p1, p0, Lorg/telegram/ui/ChatActivity$83;->this$0:Lorg/telegram/ui/ChatActivity;
+    const/4 v4, 0x0
 
-    invoke-static {p1}, Lorg/telegram/ui/ChatActivity;->access$14200(Lorg/telegram/ui/ChatActivity;)Lorg/telegram/ui/Components/BlurredFrameLayout;
+    invoke-virtual {v0, v1, v2, v3, v4}, Lorg/telegram/ui/Components/UndoView;->showWithAction(JILjava/lang/Runnable;)V
 
-    move-result-object p1
+    .line 17164
+    iget-object v0, p0, Lorg/telegram/ui/ChatActivity$83;->this$0:Lorg/telegram/ui/ChatActivity;
 
-    invoke-virtual {p1, v0}, Landroid/widget/FrameLayout;->setVisibility(I)V
+    invoke-virtual {v0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getMessagesController()Lorg/telegram/messenger/MessagesController;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lorg/telegram/ui/ChatActivity$83;->this$0:Lorg/telegram/ui/ChatActivity;
+
+    invoke-static {v1}, Lorg/telegram/ui/ChatActivity;->access$500(Lorg/telegram/ui/ChatActivity;)J
+
+    move-result-wide v1
+
+    const-string v3, "CONVERT_GIGAGROUP"
+
+    invoke-virtual {v0, v1, v2, v3}, Lorg/telegram/messenger/MessagesController;->removeSuggestion(JLjava/lang/String;)V
+
+    return-void
+.end method
+
+.method protected onCovert()V
+    .registers 6
+
+    .line 17154
+    iget-object v0, p0, Lorg/telegram/ui/ChatActivity$83;->this$0:Lorg/telegram/ui/ChatActivity;
+
+    invoke-virtual {v0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getMessagesController()Lorg/telegram/messenger/MessagesController;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lorg/telegram/ui/ChatActivity$83;->this$0:Lorg/telegram/ui/ChatActivity;
+
+    invoke-virtual {v1}, Lorg/telegram/ui/ActionBar/BaseFragment;->getParentActivity()Landroid/app/Activity;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lorg/telegram/ui/ChatActivity$83;->this$0:Lorg/telegram/ui/ChatActivity;
+
+    iget-object v3, v2, Lorg/telegram/ui/ChatActivity;->currentChat:Lorg/telegram/tgnet/TLRPC$Chat;
+
+    new-instance v4, Lorg/telegram/ui/ChatActivity$83$$ExternalSyntheticLambda0;
+
+    invoke-direct {v4, p0}, Lorg/telegram/ui/ChatActivity$83$$ExternalSyntheticLambda0;-><init>(Lorg/telegram/ui/ChatActivity$83;)V
+
+    invoke-virtual {v0, v1, v3, v2, v4}, Lorg/telegram/messenger/MessagesController;->convertToGigaGroup(Landroid/content/Context;Lorg/telegram/tgnet/TLRPC$Chat;Lorg/telegram/ui/ActionBar/BaseFragment;Lorg/telegram/messenger/MessagesStorage$BooleanCallback;)V
 
     return-void
 .end method

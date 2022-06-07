@@ -26,7 +26,7 @@
 
     move-object/from16 v0, p9
 
-    .line 3043
+    .line 3094
     iput-object v0, v8, Lorg/telegram/ui/DialogsActivity$14;->val$viewPage:Lorg/telegram/ui/DialogsActivity$ViewPage;
 
     move-object v0, p0
@@ -55,16 +55,16 @@
 .method public notifyDataSetChanged()V
     .registers 3
 
-    .line 3046
+    .line 3097
     iget-object v0, p0, Lorg/telegram/ui/DialogsActivity$14;->val$viewPage:Lorg/telegram/ui/DialogsActivity$ViewPage;
 
     invoke-virtual {p0}, Lorg/telegram/ui/Adapters/DialogsAdapter;->getItemCount()I
 
     move-result v1
 
-    invoke-static {v0, v1}, Lorg/telegram/ui/DialogsActivity$ViewPage;->access$10802(Lorg/telegram/ui/DialogsActivity$ViewPage;I)I
+    invoke-static {v0, v1}, Lorg/telegram/ui/DialogsActivity$ViewPage;->access$11202(Lorg/telegram/ui/DialogsActivity$ViewPage;I)I
 
-    .line 3048
+    .line 3099
     :try_start_9
     invoke-super {p0}, Lorg/telegram/ui/Adapters/DialogsAdapter;->notifyDataSetChanged()V
     :try_end_c
@@ -75,7 +75,7 @@
     :catch_d
     move-exception v0
 
-    .line 3050
+    .line 3101
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     :goto_11

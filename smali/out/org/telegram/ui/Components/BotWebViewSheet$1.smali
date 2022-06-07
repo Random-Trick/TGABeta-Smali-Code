@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/BotWebViewSheet;Landroid/content/Context;)V
     .registers 3
 
-    .line 129
+    .line 154
     iput-object p1, p0, Lorg/telegram/ui/Components/BotWebViewSheet$1;->this$0:Lorg/telegram/ui/Components/BotWebViewSheet;
 
     invoke-direct {p0, p2}, Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout$WebViewSwipeContainer;-><init>(Landroid/content/Context;)V
@@ -35,12 +35,12 @@
 .method protected onMeasure(II)V
     .registers 7
 
-    .line 132
+    .line 157
     invoke-static {p2}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result v0
 
-    .line 135
+    .line 160
     invoke-static {}, Lorg/telegram/messenger/AndroidUtilities;->isTablet()Z
 
     move-result v1
@@ -65,7 +65,7 @@
 
     goto :goto_1c
 
-    .line 138
+    .line 163
     :cond_18
     div-int/lit8 v0, v0, 0x5
 
@@ -78,7 +78,7 @@
 
     const/4 v0, 0x0
 
-    .line 144
+    .line 169
     :cond_20
     invoke-virtual {p0}, Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout$WebViewSwipeContainer;->getOffsetY()F
 
@@ -98,22 +98,22 @@
 
     if-nez v2, :cond_3f
 
-    .line 145
+    .line 170
     iget-object v2, p0, Lorg/telegram/ui/Components/BotWebViewSheet$1;->this$0:Lorg/telegram/ui/Components/BotWebViewSheet;
 
     const/4 v3, 0x1
 
     invoke-static {v2, v3}, Lorg/telegram/ui/Components/BotWebViewSheet;->access$102(Lorg/telegram/ui/Components/BotWebViewSheet;Z)Z
 
-    .line 146
+    .line 171
     invoke-virtual {p0, v0}, Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout$WebViewSwipeContainer;->setOffsetY(F)V
 
-    .line 147
+    .line 172
     iget-object v0, p0, Lorg/telegram/ui/Components/BotWebViewSheet$1;->this$0:Lorg/telegram/ui/Components/BotWebViewSheet;
 
     invoke-static {v0, v1}, Lorg/telegram/ui/Components/BotWebViewSheet;->access$102(Lorg/telegram/ui/Components/BotWebViewSheet;Z)Z
 
-    .line 150
+    .line 175
     :cond_3f
     invoke-static {}, Lorg/telegram/messenger/AndroidUtilities;->isTablet()Z
 
@@ -133,7 +133,7 @@
 
     if-nez v0, :cond_66
 
-    .line 151
+    .line 176
     sget-object p1, Lorg/telegram/messenger/AndroidUtilities;->displaySize:Landroid/graphics/Point;
 
     iget v0, p1, Landroid/graphics/Point;->x:I
@@ -156,7 +156,7 @@
 
     move-result p1
 
-    .line 153
+    .line 178
     :cond_66
     invoke-static {p2}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
@@ -215,7 +215,7 @@
 .method public requestLayout()V
     .registers 2
 
-    .line 158
+    .line 183
     iget-object v0, p0, Lorg/telegram/ui/Components/BotWebViewSheet$1;->this$0:Lorg/telegram/ui/Components/BotWebViewSheet;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/BotWebViewSheet;->access$100(Lorg/telegram/ui/Components/BotWebViewSheet;)Z
@@ -226,7 +226,7 @@
 
     return-void
 
-    .line 161
+    .line 186
     :cond_9
     invoke-super {p0}, Landroid/widget/FrameLayout;->requestLayout()V
 

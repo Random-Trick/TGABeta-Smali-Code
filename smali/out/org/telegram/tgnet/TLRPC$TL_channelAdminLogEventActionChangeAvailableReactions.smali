@@ -39,17 +39,17 @@
 .method public constructor <init>()V
     .registers 2
 
-    .line 38288
+    .line 38740
     invoke-direct {p0}, Lorg/telegram/tgnet/TLRPC$ChannelAdminLogEventAction;-><init>()V
 
-    .line 38291
+    .line 38743
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_channelAdminLogEventActionChangeAvailableReactions;->prev_value:Ljava/util/ArrayList;
 
-    .line 38292
+    .line 38744
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -64,7 +64,7 @@
 .method public readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
     .registers 11
 
-    .line 38295
+    .line 38747
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
@@ -83,7 +83,7 @@
 
     return-void
 
-    .line 38298
+    .line 38750
     :cond_10
     new-instance p1, Ljava/lang/RuntimeException;
 
@@ -103,7 +103,7 @@
 
     throw p1
 
-    .line 38302
+    .line 38754
     :cond_22
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
@@ -114,7 +114,7 @@
     :goto_27
     if-ge v5, v0, :cond_35
 
-    .line 38304
+    .line 38756
     iget-object v6, p0, Lorg/telegram/tgnet/TLRPC$TL_channelAdminLogEventActionChangeAvailableReactions;->prev_value:Ljava/util/ArrayList;
 
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readString(Z)Ljava/lang/String;
@@ -127,7 +127,7 @@
 
     goto :goto_27
 
-    .line 38306
+    .line 38758
     :cond_35
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
@@ -139,7 +139,7 @@
 
     return-void
 
-    .line 38309
+    .line 38761
     :cond_3e
     new-instance p1, Ljava/lang/RuntimeException;
 
@@ -159,7 +159,7 @@
 
     throw p1
 
-    .line 38313
+    .line 38765
     :cond_50
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
@@ -168,7 +168,7 @@
     :goto_54
     if-ge v4, v0, :cond_62
 
-    .line 38315
+    .line 38767
     iget-object v1, p0, Lorg/telegram/tgnet/TLRPC$TL_channelAdminLogEventActionChangeAvailableReactions;->new_value:Ljava/util/ArrayList;
 
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readString(Z)Ljava/lang/String;
@@ -188,24 +188,24 @@
 .method public serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
     .registers 7
 
-    .line 38320
+    .line 38772
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_channelAdminLogEventActionChangeAvailableReactions;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
     const v0, 0x1cb5c415
 
-    .line 38321
+    .line 38773
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 38322
+    .line 38774
     iget-object v1, p0, Lorg/telegram/tgnet/TLRPC$TL_channelAdminLogEventActionChangeAvailableReactions;->prev_value:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
     move-result v1
 
-    .line 38323
+    .line 38775
     invoke-virtual {p1, v1}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
     const/4 v2, 0x0
@@ -215,7 +215,7 @@
     :goto_16
     if-ge v3, v1, :cond_26
 
-    .line 38325
+    .line 38777
     iget-object v4, p0, Lorg/telegram/tgnet/TLRPC$TL_channelAdminLogEventActionChangeAvailableReactions;->prev_value:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -230,24 +230,24 @@
 
     goto :goto_16
 
-    .line 38327
+    .line 38779
     :cond_26
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 38328
+    .line 38780
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_channelAdminLogEventActionChangeAvailableReactions;->new_value:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
-    .line 38329
+    .line 38781
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
     :goto_32
     if-ge v2, v0, :cond_42
 
-    .line 38331
+    .line 38783
     iget-object v1, p0, Lorg/telegram/tgnet/TLRPC$TL_channelAdminLogEventActionChangeAvailableReactions;->new_value:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;

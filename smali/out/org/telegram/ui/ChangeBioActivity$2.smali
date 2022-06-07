@@ -1,5 +1,5 @@
 .class Lorg/telegram/ui/ChangeBioActivity$2;
-.super Lorg/telegram/ui/Components/CodepointsLengthInputFilter;
+.super Lorg/telegram/ui/Components/EditTextBoldCursor;
 .source "ChangeBioActivity.java"
 
 
@@ -19,115 +19,83 @@
 
 
 # direct methods
-.method constructor <init>(Lorg/telegram/ui/ChangeBioActivity;I)V
+.method constructor <init>(Lorg/telegram/ui/ChangeBioActivity;Landroid/content/Context;)V
     .registers 3
 
-    .line 101
+    .line 89
     iput-object p1, p0, Lorg/telegram/ui/ChangeBioActivity$2;->this$0:Lorg/telegram/ui/ChangeBioActivity;
 
-    invoke-direct {p0, p2}, Lorg/telegram/ui/Components/CodepointsLengthInputFilter;-><init>(I)V
+    invoke-direct {p0, p2}, Lorg/telegram/ui/Components/EditTextBoldCursor;-><init>(Landroid/content/Context;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public filter(Ljava/lang/CharSequence;IILandroid/text/Spanned;II)Ljava/lang/CharSequence;
-    .registers 9
+.method public onInitializeAccessibilityNodeInfo(Landroid/view/accessibility/AccessibilityNodeInfo;)V
+    .registers 6
 
-    if-eqz p1, :cond_22
+    .line 92
+    invoke-super {p0, p1}, Lorg/telegram/ui/Components/EditTextBoldCursor;->onInitializeAccessibilityNodeInfo(Landroid/view/accessibility/AccessibilityNodeInfo;)V
 
-    .line 104
-    invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
+    .line 93
+    invoke-virtual {p0}, Landroid/widget/EditText;->getEditableText()Landroid/text/Editable;
 
-    move-result v0
+    move-result-object v0
 
-    if-lez v0, :cond_22
+    .line 94
+    iget-object v1, p0, Lorg/telegram/ui/ChangeBioActivity$2;->this$0:Lorg/telegram/ui/ChangeBioActivity;
 
-    const/16 v0, 0xa
+    invoke-virtual {v1}, Lorg/telegram/ui/ActionBar/BaseFragment;->getMessagesController()Lorg/telegram/messenger/MessagesController;
 
-    invoke-static {p1, v0}, Landroid/text/TextUtils;->indexOf(Ljava/lang/CharSequence;C)I
+    move-result-object v1
 
-    move-result v0
-
-    invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
+    invoke-virtual {v1}, Lorg/telegram/messenger/MessagesController;->getAboutLimit()I
 
     move-result v1
 
-    add-int/lit8 v1, v1, -0x1
+    invoke-interface {v0}, Landroid/text/Editable;->length()I
 
-    if-ne v0, v1, :cond_22
+    move-result v2
 
-    .line 105
-    iget-object p1, p0, Lorg/telegram/ui/ChangeBioActivity$2;->this$0:Lorg/telegram/ui/ChangeBioActivity;
+    const/4 v3, 0x0
 
-    invoke-static {p1}, Lorg/telegram/ui/ChangeBioActivity;->access$100(Lorg/telegram/ui/ChangeBioActivity;)Landroid/view/View;
+    invoke-static {v0, v3, v2}, Ljava/lang/Character;->codePointCount(Ljava/lang/CharSequence;II)I
 
-    move-result-object p1
+    move-result v0
 
-    invoke-virtual {p1}, Landroid/view/View;->performClick()Z
+    sub-int/2addr v1, v0
 
-    const-string p1, ""
+    .line 95
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    return-object p1
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 108
-    :cond_22
-    invoke-super/range {p0 .. p6}, Lorg/telegram/ui/Components/CodepointsLengthInputFilter;->filter(Ljava/lang/CharSequence;IILandroid/text/Spanned;II)Ljava/lang/CharSequence;
+    invoke-virtual {p0}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
 
-    move-result-object p2
+    move-result-object v2
 
-    if-eqz p2, :cond_55
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    if-eqz p1, :cond_55
+    const-string v2, ", "
 
-    .line 109
-    invoke-interface {p2}, Ljava/lang/CharSequence;->length()I
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result p3
+    new-array v2, v3, [Ljava/lang/Object;
 
-    invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
+    const-string v3, "PeopleJoinedRemaining"
 
-    move-result p1
+    invoke-static {v3, v1, v2}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
-    if-eq p3, p1, :cond_55
+    move-result-object v1
 
-    .line 110
-    iget-object p1, p0, Lorg/telegram/ui/ChangeBioActivity$2;->this$0:Lorg/telegram/ui/ChangeBioActivity;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1}, Lorg/telegram/ui/ActionBar/BaseFragment;->getParentActivity()Landroid/app/Activity;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object v0
 
-    const-string p3, "vibrator"
+    invoke-virtual {p1, v0}, Landroid/view/accessibility/AccessibilityNodeInfo;->setText(Ljava/lang/CharSequence;)V
 
-    invoke-virtual {p1, p3}, Landroid/app/Activity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Landroid/os/Vibrator;
-
-    if-eqz p1, :cond_49
-
-    const-wide/16 p3, 0xc8
-
-    .line 112
-    invoke-virtual {p1, p3, p4}, Landroid/os/Vibrator;->vibrate(J)V
-
-    .line 114
-    :cond_49
-    iget-object p1, p0, Lorg/telegram/ui/ChangeBioActivity$2;->this$0:Lorg/telegram/ui/ChangeBioActivity;
-
-    invoke-static {p1}, Lorg/telegram/ui/ChangeBioActivity;->access$200(Lorg/telegram/ui/ChangeBioActivity;)Lorg/telegram/ui/Components/NumberTextView;
-
-    move-result-object p1
-
-    const/high16 p3, 0x40000000    # 2.0f
-
-    const/4 p4, 0x0
-
-    invoke-static {p1, p3, p4}, Lorg/telegram/messenger/AndroidUtilities;->shakeView(Landroid/view/View;FI)V
-
-    :cond_55
-    return-object p2
+    return-void
 .end method

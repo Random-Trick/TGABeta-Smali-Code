@@ -27,7 +27,7 @@
 
     iget-object v0, p0, Lorg/telegram/messenger/SendMessagesHelper$$ExternalSyntheticLambda18;->f$0:Lorg/telegram/messenger/MessagesStorage$LongCallback;
 
-    invoke-static {v0}, Lorg/telegram/messenger/SendMessagesHelper;->$r8$lambda$cRXf0t0oEJ5bzgG6hGKYXChONGc(Lorg/telegram/messenger/MessagesStorage$LongCallback;)V
+    invoke-static {v0}, Lorg/telegram/messenger/SendMessagesHelper;->$r8$lambda$SbL7Y-3Qvhwhg3m6wdisteAw_YA(Lorg/telegram/messenger/MessagesStorage$LongCallback;)V
 
     return-void
 .end method

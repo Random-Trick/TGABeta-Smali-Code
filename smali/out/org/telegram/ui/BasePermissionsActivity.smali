@@ -153,7 +153,7 @@
     goto/16 :goto_12d
 
     :cond_26
-    const p1, 0x7f0e1382
+    const p1, 0x7f0e1450
 
     const-string p2, "VoipNeedCameraPermission"
 
@@ -186,7 +186,7 @@
 
     const p1, 0x7f0d005b
 
-    const p2, 0x7f0e0d3b
+    const p2, 0x7f0e0dc9
 
     const-string p3, "PermissionNoContactsSharing"
 
@@ -214,7 +214,7 @@
     :cond_5d
     const/4 v3, 0x3
 
-    const v5, 0x7f0e0d3a
+    const v5, 0x7f0e0dc8
 
     const-string v6, "PermissionNoCameraWithHint"
 
@@ -367,7 +367,7 @@
     if-nez v9, :cond_df
 
     :cond_d2
-    const p1, 0x7f0e0d39
+    const p1, 0x7f0e0dc7
 
     const-string p2, "PermissionNoCameraMicVideo"
 
@@ -385,7 +385,7 @@
 
     const p1, 0x7f0d005e
 
-    const p2, 0x7f0e0d37
+    const p2, 0x7f0e0dc5
 
     const-string p3, "PermissionNoAudioWithHint"
 
@@ -436,7 +436,7 @@
 
     if-ne p1, v5, :cond_119
 
-    const p1, 0x7f0e0d41
+    const p1, 0x7f0e0dcf
 
     const-string p3, "PermissionNoStorageAvatar"
 
@@ -448,7 +448,7 @@
     goto :goto_122
 
     :cond_119
-    const p1, 0x7f0e0d44
+    const p1, 0x7f0e0dd2
 
     const-string p3, "PermissionStorageWithHint"
 
@@ -510,7 +510,7 @@
 
     const-string p2, "PermissionOpenSettings"
 
-    const v0, 0x7f0e0d42
+    const v0, 0x7f0e0dd0
 
     .line 104
     invoke-static {p2, v0}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -527,7 +527,7 @@
 
     const-string p2, "ContactsPermissionAlertNotNow"
 
-    const v0, 0x7f0e04c7
+    const v0, 0x7f0e0516
 
     .line 113
     invoke-static {p2, v0}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;

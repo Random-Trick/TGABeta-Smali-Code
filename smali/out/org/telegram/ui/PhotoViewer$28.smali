@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/PhotoViewer;Landroid/content/Context;I)V
     .registers 4
 
-    .line 5702
+    .line 5833
     iput-object p1, p0, Lorg/telegram/ui/PhotoViewer$28;->this$0:Lorg/telegram/ui/PhotoViewer;
 
     invoke-direct {p0, p2, p3}, Lorg/telegram/ui/Components/CheckBox;-><init>(Landroid/content/Context;I)V
@@ -35,10 +35,10 @@
 .method public onTouchEvent(Landroid/view/MotionEvent;)Z
     .registers 3
 
-    .line 5705
+    .line 5836
     iget-object v0, p0, Lorg/telegram/ui/PhotoViewer$28;->this$0:Lorg/telegram/ui/PhotoViewer;
 
-    invoke-static {v0}, Lorg/telegram/ui/PhotoViewer;->access$10300(Lorg/telegram/ui/PhotoViewer;)Z
+    invoke-static {v0}, Lorg/telegram/ui/PhotoViewer;->access$10200(Lorg/telegram/ui/PhotoViewer;)Z
 
     move-result v0
 

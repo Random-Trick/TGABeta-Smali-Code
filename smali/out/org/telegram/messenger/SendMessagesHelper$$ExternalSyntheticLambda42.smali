@@ -10,13 +10,13 @@
 
 .field public final synthetic f$1:Lorg/telegram/tgnet/TLObject;
 
-.field public final synthetic f$2:Lorg/telegram/tgnet/TLRPC$InputMedia;
+.field public final synthetic f$2:Lorg/telegram/messenger/SendMessagesHelper$DelayedMessage;
 
-.field public final synthetic f$3:Lorg/telegram/messenger/SendMessagesHelper$DelayedMessage;
+.field public final synthetic f$3:Ljava/lang/String;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lorg/telegram/messenger/SendMessagesHelper;Lorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/TLRPC$InputMedia;Lorg/telegram/messenger/SendMessagesHelper$DelayedMessage;)V
+.method public synthetic constructor <init>(Lorg/telegram/messenger/SendMessagesHelper;Lorg/telegram/tgnet/TLObject;Lorg/telegram/messenger/SendMessagesHelper$DelayedMessage;Ljava/lang/String;)V
     .registers 5
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -25,9 +25,9 @@
 
     iput-object p2, p0, Lorg/telegram/messenger/SendMessagesHelper$$ExternalSyntheticLambda42;->f$1:Lorg/telegram/tgnet/TLObject;
 
-    iput-object p3, p0, Lorg/telegram/messenger/SendMessagesHelper$$ExternalSyntheticLambda42;->f$2:Lorg/telegram/tgnet/TLRPC$InputMedia;
+    iput-object p3, p0, Lorg/telegram/messenger/SendMessagesHelper$$ExternalSyntheticLambda42;->f$2:Lorg/telegram/messenger/SendMessagesHelper$DelayedMessage;
 
-    iput-object p4, p0, Lorg/telegram/messenger/SendMessagesHelper$$ExternalSyntheticLambda42;->f$3:Lorg/telegram/messenger/SendMessagesHelper$DelayedMessage;
+    iput-object p4, p0, Lorg/telegram/messenger/SendMessagesHelper$$ExternalSyntheticLambda42;->f$3:Ljava/lang/String;
 
     return-void
 .end method
@@ -41,11 +41,11 @@
 
     iget-object v1, p0, Lorg/telegram/messenger/SendMessagesHelper$$ExternalSyntheticLambda42;->f$1:Lorg/telegram/tgnet/TLObject;
 
-    iget-object v2, p0, Lorg/telegram/messenger/SendMessagesHelper$$ExternalSyntheticLambda42;->f$2:Lorg/telegram/tgnet/TLRPC$InputMedia;
+    iget-object v2, p0, Lorg/telegram/messenger/SendMessagesHelper$$ExternalSyntheticLambda42;->f$2:Lorg/telegram/messenger/SendMessagesHelper$DelayedMessage;
 
-    iget-object v3, p0, Lorg/telegram/messenger/SendMessagesHelper$$ExternalSyntheticLambda42;->f$3:Lorg/telegram/messenger/SendMessagesHelper$DelayedMessage;
+    iget-object v3, p0, Lorg/telegram/messenger/SendMessagesHelper$$ExternalSyntheticLambda42;->f$3:Ljava/lang/String;
 
-    invoke-static {v0, v1, v2, v3}, Lorg/telegram/messenger/SendMessagesHelper;->$r8$lambda$7wpviGFWkJkBPlsO0v5_byaX8SU(Lorg/telegram/messenger/SendMessagesHelper;Lorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/TLRPC$InputMedia;Lorg/telegram/messenger/SendMessagesHelper$DelayedMessage;)V
+    invoke-static {v0, v1, v2, v3}, Lorg/telegram/messenger/SendMessagesHelper;->$r8$lambda$GWJsUjKj8gk8fehEt-u_zjsbD-E(Lorg/telegram/messenger/SendMessagesHelper;Lorg/telegram/tgnet/TLObject;Lorg/telegram/messenger/SendMessagesHelper$DelayedMessage;Ljava/lang/String;)V
 
     return-void
 .end method

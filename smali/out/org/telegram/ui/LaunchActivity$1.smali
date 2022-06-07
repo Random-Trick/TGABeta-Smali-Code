@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/LaunchActivity;Landroid/content/Context;)V
     .registers 3
 
-    .line 306
+    .line 318
     iput-object p1, p0, Lorg/telegram/ui/LaunchActivity$1;->this$0:Lorg/telegram/ui/LaunchActivity;
 
     invoke-direct {p0, p2}, Lorg/telegram/ui/ActionBar/ActionBarLayout;-><init>(Landroid/content/Context;)V
@@ -35,10 +35,10 @@
 .method public setThemeAnimationValue(F)V
     .registers 3
 
-    .line 309
+    .line 321
     invoke-super {p0, p1}, Lorg/telegram/ui/ActionBar/ActionBarLayout;->setThemeAnimationValue(F)V
 
-    .line 310
+    .line 322
     invoke-static {}, Lorg/telegram/ui/ArticleViewer;->hasInstance()Z
 
     move-result v0
@@ -55,14 +55,14 @@
 
     if-eqz v0, :cond_1a
 
-    .line 311
+    .line 323
     invoke-static {}, Lorg/telegram/ui/ArticleViewer;->getInstance()Lorg/telegram/ui/ArticleViewer;
 
     move-result-object v0
 
     invoke-virtual {v0, p1}, Lorg/telegram/ui/ArticleViewer;->updateThemeColors(F)V
 
-    .line 313
+    .line 325
     :cond_1a
     iget-object p1, p0, Lorg/telegram/ui/LaunchActivity$1;->this$0:Lorg/telegram/ui/LaunchActivity;
 
@@ -76,14 +76,14 @@
 
     invoke-virtual {p1, v0}, Lorg/telegram/ui/ActionBar/DrawerLayoutContainer;->setBehindKeyboardColor(I)V
 
-    .line 314
+    .line 326
     invoke-static {}, Lorg/telegram/ui/PhotoViewer;->hasInstance()Z
 
     move-result p1
 
     if-eqz p1, :cond_34
 
-    .line 315
+    .line 327
     invoke-static {}, Lorg/telegram/ui/PhotoViewer;->getInstance()Lorg/telegram/ui/PhotoViewer;
 
     move-result-object p1

@@ -41,7 +41,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/ChatActivityEnterView;)V
     .registers 2
 
-    .line 7238
+    .line 7282
     iput-object p1, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$58;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -52,7 +52,7 @@
 .method private synthetic lambda$onClearEmojiRecent$1(Landroid/content/DialogInterface;I)V
     .registers 3
 
-    .line 7370
+    .line 7414
     iget-object p1, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$58;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$700(Lorg/telegram/ui/Components/ChatActivityEnterView;)Lorg/telegram/ui/Components/EmojiView;
@@ -67,7 +67,7 @@
 .method private synthetic lambda$onGifSelected$0(Landroid/view/View;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/Object;ZI)V
     .registers 7
 
-    .line 7304
+    .line 7348
     invoke-virtual/range {p0 .. p6}, Lorg/telegram/ui/Components/ChatActivityEnterView$58;->onGifSelected(Landroid/view/View;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/Object;ZI)V
 
     return-void
@@ -78,7 +78,7 @@
 .method public canSchedule()Z
     .registers 2
 
-    .line 7437
+    .line 7481
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$58;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$2600(Lorg/telegram/ui/Components/ChatActivityEnterView;)Lorg/telegram/ui/ChatActivity;
@@ -113,7 +113,7 @@
 .method public getDialogId()J
     .registers 3
 
-    .line 7447
+    .line 7491
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$58;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$2900(Lorg/telegram/ui/Components/ChatActivityEnterView;)J
@@ -126,7 +126,7 @@
 .method public getProgressToSearchOpened()F
     .registers 2
 
-    .line 7484
+    .line 7528
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$58;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$12900(Lorg/telegram/ui/Components/ChatActivityEnterView;)F
@@ -139,7 +139,7 @@
 .method public getThreadId()I
     .registers 2
 
-    .line 7452
+    .line 7496
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$58;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$12800(Lorg/telegram/ui/Components/ChatActivityEnterView;)I
@@ -152,7 +152,7 @@
 .method public invalidateEnterView()V
     .registers 2
 
-    .line 7479
+    .line 7523
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$58;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-virtual {v0}, Landroid/widget/FrameLayout;->invalidate()V
@@ -163,7 +163,7 @@
 .method public isExpanded()Z
     .registers 2
 
-    .line 7432
+    .line 7476
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$58;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$1000(Lorg/telegram/ui/Components/ChatActivityEnterView;)Z
@@ -176,7 +176,7 @@
 .method public isInScheduleMode()Z
     .registers 2
 
-    .line 7442
+    .line 7486
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$58;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$2600(Lorg/telegram/ui/Components/ChatActivityEnterView;)Lorg/telegram/ui/ChatActivity;
@@ -211,7 +211,7 @@
 .method public isSearchOpened()Z
     .registers 2
 
-    .line 7427
+    .line 7471
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$58;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$1100(Lorg/telegram/ui/Components/ChatActivityEnterView;)I
@@ -234,7 +234,7 @@
 .method public onBackspace()Z
     .registers 5
 
-    .line 7242
+    .line 7286
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$58;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     iget-object v0, v0, Lorg/telegram/ui/Components/ChatActivityEnterView;->messageEditText:Lorg/telegram/ui/Components/EditTextCaption;
@@ -249,7 +249,7 @@
 
     return v1
 
-    .line 7245
+    .line 7289
     :cond_c
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$58;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
@@ -271,7 +271,7 @@
 .method public onClearEmojiRecent()V
     .registers 4
 
-    .line 7364
+    .line 7408
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$58;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$2600(Lorg/telegram/ui/Components/ChatActivityEnterView;)Lorg/telegram/ui/ChatActivity;
@@ -290,7 +290,7 @@
 
     goto :goto_69
 
-    .line 7367
+    .line 7411
     :cond_11
     new-instance v0, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
@@ -308,33 +308,33 @@
 
     invoke-direct {v0, v1, v2}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;-><init>(Landroid/content/Context;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)V
 
-    const v1, 0x7f0e017c
+    const v1, 0x7f0e01b1
 
     const-string v2, "AppName"
 
-    .line 7368
+    .line 7412
     invoke-static {v2, v1}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const v1, 0x7f0e0471
+    const v1, 0x7f0e04b6
 
     const-string v2, "ClearRecentEmoji"
 
-    .line 7369
+    .line 7413
     invoke-static {v2, v1}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const v1, 0x7f0e0460
+    const v1, 0x7f0e04a5
 
     const-string v2, "ClearButton"
 
-    .line 7370
+    .line 7414
     invoke-static {v2, v1}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v1
@@ -349,11 +349,11 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const v1, 0x7f0e0331
+    const v1, 0x7f0e036d
 
     const-string v2, "Cancel"
 
-    .line 7371
+    .line 7415
     invoke-static {v2, v1}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v1
@@ -362,7 +362,7 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setNegativeButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 7372
+    .line 7416
     iget-object v1, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$58;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {v1}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$2600(Lorg/telegram/ui/Components/ChatActivityEnterView;)Lorg/telegram/ui/ChatActivity;
@@ -383,7 +383,7 @@
 .method public onEmojiSelected(Ljava/lang/String;)V
     .registers 6
 
-    .line 7251
+    .line 7295
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$58;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     iget-object v0, v0, Lorg/telegram/ui/Components/ChatActivityEnterView;->messageEditText:Lorg/telegram/ui/Components/EditTextCaption;
@@ -398,7 +398,7 @@
 
     const/4 v0, 0x0
 
-    .line 7256
+    .line 7300
     :cond_c
     :try_start_c
     iget-object v2, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$58;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
@@ -407,7 +407,7 @@
 
     invoke-static {v2, v3}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$7502(Lorg/telegram/ui/Components/ChatActivityEnterView;I)I
 
-    .line 7257
+    .line 7301
     iget-object v2, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$58;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     iget-object v2, v2, Lorg/telegram/ui/Components/ChatActivityEnterView;->messageEditText:Lorg/telegram/ui/Components/EditTextCaption;
@@ -430,7 +430,7 @@
 
     move-result-object p1
 
-    .line 7258
+    .line 7302
     iget-object v2, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$58;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     iget-object v2, v2, Lorg/telegram/ui/Components/ChatActivityEnterView;->messageEditText:Lorg/telegram/ui/Components/EditTextCaption;
@@ -445,14 +445,14 @@
 
     invoke-virtual {v2, v3}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
-    .line 7259
+    .line 7303
     invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
 
     move-result p1
 
     add-int/2addr v0, p1
 
-    .line 7260
+    .line 7304
     iget-object p1, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$58;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     iget-object p1, p1, Lorg/telegram/ui/Components/ChatActivityEnterView;->messageEditText:Lorg/telegram/ui/Components/EditTextCaption;
@@ -472,13 +472,13 @@
     :catch_46
     move-exception p1
 
-    .line 7262
+    .line 7306
     :try_start_47
     invoke-static {p1}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
     :try_end_4a
     .catchall {:try_start_47 .. :try_end_4a} :catchall_44
 
-    .line 7264
+    .line 7308
     :goto_4a
     iget-object p1, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$58;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
@@ -491,7 +491,7 @@
 
     invoke-static {v0, v1}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$7502(Lorg/telegram/ui/Components/ChatActivityEnterView;I)I
 
-    .line 7265
+    .line 7309
     throw p1
 .end method
 
@@ -506,7 +506,7 @@
 
     move/from16 v0, p6
 
-    .line 7303
+    .line 7347
     invoke-virtual/range {p0 .. p0}, Lorg/telegram/ui/Components/ChatActivityEnterView$58;->isInScheduleMode()Z
 
     move-result v1
@@ -515,7 +515,7 @@
 
     if-nez v0, :cond_3b
 
-    .line 7304
+    .line 7348
     iget-object v0, v6, Lorg/telegram/ui/Components/ChatActivityEnterView$58;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$1600(Lorg/telegram/ui/Components/ChatActivityEnterView;)Landroid/app/Activity;
@@ -558,7 +558,7 @@
 
     goto/16 :goto_1ad
 
-    .line 7306
+    .line 7350
     :cond_3b
     iget-object v1, v6, Lorg/telegram/ui/Components/ChatActivityEnterView$58;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
@@ -576,7 +576,7 @@
 
     if-nez v1, :cond_71
 
-    .line 7307
+    .line 7351
     iget-object v0, v6, Lorg/telegram/ui/Components/ChatActivityEnterView$58;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$1500(Lorg/telegram/ui/Components/ChatActivityEnterView;)Lorg/telegram/ui/Components/ChatActivityEnterView$ChatActivityEnterViewDelegate;
@@ -585,7 +585,7 @@
 
     if-eqz v0, :cond_70
 
-    .line 7308
+    .line 7352
     iget-object v0, v6, Lorg/telegram/ui/Components/ChatActivityEnterView$58;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$1500(Lorg/telegram/ui/Components/ChatActivityEnterView;)Lorg/telegram/ui/Components/ChatActivityEnterView$ChatActivityEnterViewDelegate;
@@ -621,7 +621,7 @@
     :cond_70
     return-void
 
-    .line 7312
+    .line 7356
     :cond_71
     iget-object v1, v6, Lorg/telegram/ui/Components/ChatActivityEnterView$58;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
@@ -633,7 +633,7 @@
 
     if-eqz v1, :cond_90
 
-    .line 7313
+    .line 7357
     iget-object v1, v6, Lorg/telegram/ui/Components/ChatActivityEnterView$58;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {v1}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$1100(Lorg/telegram/ui/Components/ChatActivityEnterView;)I
@@ -642,7 +642,7 @@
 
     if-eqz v1, :cond_8b
 
-    .line 7314
+    .line 7358
     iget-object v1, v6, Lorg/telegram/ui/Components/ChatActivityEnterView$58;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {v1}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$700(Lorg/telegram/ui/Components/ChatActivityEnterView;)Lorg/telegram/ui/Components/EmojiView;
@@ -651,13 +651,13 @@
 
     invoke-virtual {v1}, Lorg/telegram/ui/Components/EmojiView;->hideSearchKeyboard()V
 
-    .line 7316
+    .line 7360
     :cond_8b
     iget-object v1, v6, Lorg/telegram/ui/Components/ChatActivityEnterView$58;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-virtual {v1, v4, v2, v4}, Lorg/telegram/ui/Components/ChatActivityEnterView;->setStickersExpanded(ZZZ)V
 
-    .line 7318
+    .line 7362
     :cond_90
     instance-of v1, v3, Lorg/telegram/tgnet/TLRPC$Document;
 
@@ -665,12 +665,12 @@
 
     if-eqz v1, :cond_f1
 
-    .line 7319
+    .line 7363
     move-object v1, v3
 
     check-cast v1, Lorg/telegram/tgnet/TLRPC$Document;
 
-    .line 7320
+    .line 7364
     iget-object v2, v6, Lorg/telegram/ui/Components/ChatActivityEnterView$58;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {v2}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$2800(Lorg/telegram/ui/Components/ChatActivityEnterView;)I
@@ -713,7 +713,7 @@
 
     invoke-virtual/range {v7 .. v17}, Lorg/telegram/messenger/SendMessagesHelper;->sendSticker(Lorg/telegram/tgnet/TLRPC$Document;Ljava/lang/String;JLorg/telegram/messenger/MessageObject;Lorg/telegram/messenger/MessageObject;Ljava/lang/Object;Lorg/telegram/messenger/MessageObject$SendAnimationData;ZI)V
 
-    .line 7321
+    .line 7365
     iget-object v2, v6, Lorg/telegram/ui/Components/ChatActivityEnterView$58;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {v2}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$2800(Lorg/telegram/ui/Components/ChatActivityEnterView;)I
@@ -734,7 +734,7 @@
 
     invoke-virtual {v2, v1, v4}, Lorg/telegram/messenger/MediaDataController;->addRecentGif(Lorg/telegram/tgnet/TLRPC$Document;I)V
 
-    .line 7322
+    .line 7366
     iget-object v2, v6, Lorg/telegram/ui/Components/ChatActivityEnterView$58;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {v2}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$2900(Lorg/telegram/ui/Components/ChatActivityEnterView;)J
@@ -747,7 +747,7 @@
 
     if-eqz v2, :cond_199
 
-    .line 7323
+    .line 7367
     iget-object v2, v6, Lorg/telegram/ui/Components/ChatActivityEnterView$58;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {v2}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$6000(Lorg/telegram/ui/Components/ChatActivityEnterView;)Lorg/telegram/messenger/AccountInstance;
@@ -762,23 +762,23 @@
 
     goto/16 :goto_199
 
-    .line 7325
+    .line 7369
     :cond_f1
     instance-of v1, v3, Lorg/telegram/tgnet/TLRPC$BotInlineResult;
 
     if-eqz v1, :cond_199
 
-    .line 7326
+    .line 7370
     move-object v8, v3
 
     check-cast v8, Lorg/telegram/tgnet/TLRPC$BotInlineResult;
 
-    .line 7328
+    .line 7372
     iget-object v1, v8, Lorg/telegram/tgnet/TLRPC$BotInlineResult;->document:Lorg/telegram/tgnet/TLRPC$Document;
 
     if-eqz v1, :cond_12d
 
-    .line 7329
+    .line 7373
     iget-object v1, v6, Lorg/telegram/ui/Components/ChatActivityEnterView$58;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {v1}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$2800(Lorg/telegram/ui/Components/ChatActivityEnterView;)I
@@ -801,7 +801,7 @@
 
     invoke-virtual {v1, v3, v7}, Lorg/telegram/messenger/MediaDataController;->addRecentGif(Lorg/telegram/tgnet/TLRPC$Document;I)V
 
-    .line 7330
+    .line 7374
     iget-object v1, v6, Lorg/telegram/ui/Components/ChatActivityEnterView$58;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {v1}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$2900(Lorg/telegram/ui/Components/ChatActivityEnterView;)J
@@ -814,7 +814,7 @@
 
     if-eqz v1, :cond_12d
 
-    .line 7331
+    .line 7375
     iget-object v1, v6, Lorg/telegram/ui/Components/ChatActivityEnterView$58;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {v1}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$6000(Lorg/telegram/ui/Components/ChatActivityEnterView;)Lorg/telegram/messenger/AccountInstance;
@@ -829,25 +829,25 @@
 
     invoke-virtual {v1, v5, v3}, Lorg/telegram/messenger/MessagesController;->saveGif(Ljava/lang/Object;Lorg/telegram/tgnet/TLRPC$Document;)V
 
-    .line 7335
+    .line 7379
     :cond_12d
     move-object v1, v5
 
     check-cast v1, Lorg/telegram/tgnet/TLRPC$User;
 
-    .line 7337
+    .line 7381
     new-instance v9, Ljava/util/HashMap;
 
     invoke-direct {v9}, Ljava/util/HashMap;-><init>()V
 
-    .line 7338
+    .line 7382
     iget-object v1, v8, Lorg/telegram/tgnet/TLRPC$BotInlineResult;->id:Ljava/lang/String;
 
     const-string v3, "id"
 
     invoke-virtual {v9, v3, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 7339
+    .line 7383
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -872,10 +872,10 @@
 
     const-string v3, "1"
 
-    .line 7340
+    .line 7384
     invoke-virtual {v9, v1, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 7342
+    .line 7386
     iget-object v1, v6, Lorg/telegram/ui/Components/ChatActivityEnterView$58;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {v1}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$6000(Lorg/telegram/ui/Components/ChatActivityEnterView;)Lorg/telegram/messenger/AccountInstance;
@@ -906,7 +906,7 @@
 
     invoke-static/range {v7 .. v15}, Lorg/telegram/messenger/SendMessagesHelper;->prepareSendingBotContextResult(Lorg/telegram/messenger/AccountInstance;Lorg/telegram/tgnet/TLRPC$BotInlineResult;Ljava/util/HashMap;JLorg/telegram/messenger/MessageObject;Lorg/telegram/messenger/MessageObject;ZI)V
 
-    .line 7344
+    .line 7388
     iget-object v1, v6, Lorg/telegram/ui/Components/ChatActivityEnterView$58;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {v1}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$1100(Lorg/telegram/ui/Components/ChatActivityEnterView;)I
@@ -915,12 +915,12 @@
 
     if-eqz v1, :cond_199
 
-    .line 7345
+    .line 7389
     iget-object v1, v6, Lorg/telegram/ui/Components/ChatActivityEnterView$58;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {v1, v4, v2}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$1200(Lorg/telegram/ui/Components/ChatActivityEnterView;IZ)V
 
-    .line 7346
+    .line 7390
     iget-object v1, v6, Lorg/telegram/ui/Components/ChatActivityEnterView$58;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {v1}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$700(Lorg/telegram/ui/Components/ChatActivityEnterView;)Lorg/telegram/ui/Components/EmojiView;
@@ -929,7 +929,7 @@
 
     invoke-virtual {v1, v2}, Lorg/telegram/ui/Components/EmojiView;->closeSearch(Z)V
 
-    .line 7347
+    .line 7391
     iget-object v1, v6, Lorg/telegram/ui/Components/ChatActivityEnterView$58;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {v1}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$700(Lorg/telegram/ui/Components/ChatActivityEnterView;)Lorg/telegram/ui/Components/EmojiView;
@@ -938,7 +938,7 @@
 
     invoke-virtual {v1}, Lorg/telegram/ui/Components/EmojiView;->hideSearchKeyboard()V
 
-    .line 7350
+    .line 7394
     :cond_199
     :goto_199
     iget-object v1, v6, Lorg/telegram/ui/Components/ChatActivityEnterView$58;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
@@ -949,7 +949,7 @@
 
     if-eqz v1, :cond_1ad
 
-    .line 7351
+    .line 7395
     iget-object v1, v6, Lorg/telegram/ui/Components/ChatActivityEnterView$58;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {v1}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$1500(Lorg/telegram/ui/Components/ChatActivityEnterView;)Lorg/telegram/ui/Components/ChatActivityEnterView$ChatActivityEnterViewDelegate;
@@ -970,7 +970,7 @@
 .method public onSearchOpenClose(I)V
     .registers 4
 
-    .line 7416
+    .line 7460
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$58;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     const/4 v1, 0x1
@@ -979,14 +979,14 @@
 
     if-eqz p1, :cond_e
 
-    .line 7418
+    .line 7462
     iget-object p1, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$58;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     const/4 v0, 0x0
 
     invoke-virtual {p1, v1, v1, v0}, Lorg/telegram/ui/Components/ChatActivityEnterView;->setStickersExpanded(ZZZ)V
 
-    .line 7420
+    .line 7464
     :cond_e
     iget-object p1, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$58;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
@@ -1006,7 +1006,7 @@
 
     if-ne p1, v0, :cond_24
 
-    .line 7421
+    .line 7465
     iget-object p1, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$58;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$1300(Lorg/telegram/ui/Components/ChatActivityEnterView;)V
@@ -1018,7 +1018,7 @@
 .method public onShowStickerSet(Lorg/telegram/tgnet/TLRPC$StickerSet;Lorg/telegram/tgnet/TLRPC$InputStickerSet;)V
     .registers 12
 
-    .line 7377
+    .line 7421
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$58;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$12400(Lorg/telegram/ui/Components/ChatActivityEnterView;)Lorg/telegram/ui/Components/TrendingStickersAlert;
@@ -1039,7 +1039,7 @@
 
     if-nez v0, :cond_22
 
-    .line 7378
+    .line 7422
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$58;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$12400(Lorg/telegram/ui/Components/ChatActivityEnterView;)Lorg/telegram/ui/Components/TrendingStickersAlert;
@@ -1054,7 +1054,7 @@
 
     return-void
 
-    .line 7381
+    .line 7425
     :cond_22
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$58;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
@@ -1077,17 +1077,17 @@
     :cond_33
     if-eqz p1, :cond_42
 
-    .line 7385
+    .line 7429
     new-instance p2, Lorg/telegram/tgnet/TLRPC$TL_inputStickerSetID;
 
     invoke-direct {p2}, Lorg/telegram/tgnet/TLRPC$TL_inputStickerSetID;-><init>()V
 
-    .line 7386
+    .line 7430
     iget-wide v0, p1, Lorg/telegram/tgnet/TLRPC$StickerSet;->access_hash:J
 
     iput-wide v0, p2, Lorg/telegram/tgnet/TLRPC$InputStickerSet;->access_hash:J
 
-    .line 7387
+    .line 7431
     iget-wide v0, p1, Lorg/telegram/tgnet/TLRPC$StickerSet;->id:J
 
     iput-wide v0, p2, Lorg/telegram/tgnet/TLRPC$InputStickerSet;->id:J
@@ -1095,7 +1095,7 @@
     :cond_42
     move-object v5, p2
 
-    .line 7389
+    .line 7433
     iget-object p1, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$58;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$2600(Lorg/telegram/ui/Components/ChatActivityEnterView;)Lorg/telegram/ui/ChatActivity;
@@ -1140,7 +1140,7 @@
 
     move-object v0, p0
 
-    .line 7270
+    .line 7314
     iget-object v1, v0, Lorg/telegram/ui/Components/ChatActivityEnterView$58;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {v1}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$12400(Lorg/telegram/ui/Components/ChatActivityEnterView;)Lorg/telegram/ui/Components/TrendingStickersAlert;
@@ -1149,7 +1149,7 @@
 
     if-eqz v1, :cond_18
 
-    .line 7271
+    .line 7315
     iget-object v1, v0, Lorg/telegram/ui/Components/ChatActivityEnterView$58;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {v1}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$12400(Lorg/telegram/ui/Components/ChatActivityEnterView;)Lorg/telegram/ui/Components/TrendingStickersAlert;
@@ -1158,14 +1158,14 @@
 
     invoke-virtual {v1}, Lorg/telegram/ui/Components/TrendingStickersAlert;->dismiss()V
 
-    .line 7272
+    .line 7316
     iget-object v1, v0, Lorg/telegram/ui/Components/ChatActivityEnterView$58;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     const/4 v2, 0x0
 
     invoke-static {v1, v2}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$12402(Lorg/telegram/ui/Components/ChatActivityEnterView;Lorg/telegram/ui/Components/TrendingStickersAlert;)Lorg/telegram/ui/Components/TrendingStickersAlert;
 
-    .line 7274
+    .line 7318
     :cond_18
     iget-object v1, v0, Lorg/telegram/ui/Components/ChatActivityEnterView$58;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
@@ -1183,7 +1183,7 @@
 
     if-nez v1, :cond_4d
 
-    .line 7275
+    .line 7319
     iget-object v1, v0, Lorg/telegram/ui/Components/ChatActivityEnterView$58;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {v1}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$1500(Lorg/telegram/ui/Components/ChatActivityEnterView;)Lorg/telegram/ui/Components/ChatActivityEnterView$ChatActivityEnterViewDelegate;
@@ -1192,7 +1192,7 @@
 
     if-eqz v1, :cond_4c
 
-    .line 7276
+    .line 7320
     iget-object v1, v0, Lorg/telegram/ui/Components/ChatActivityEnterView$58;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {v1}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$1500(Lorg/telegram/ui/Components/ChatActivityEnterView;)Lorg/telegram/ui/Components/ChatActivityEnterView$ChatActivityEnterViewDelegate;
@@ -1228,7 +1228,7 @@
     :cond_4c
     return-void
 
-    .line 7280
+    .line 7324
     :cond_4d
     iget-object v1, v0, Lorg/telegram/ui/Components/ChatActivityEnterView$58;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
@@ -1238,7 +1238,7 @@
 
     if-eqz v1, :cond_7e
 
-    .line 7281
+    .line 7325
     iget-object v1, v0, Lorg/telegram/ui/Components/ChatActivityEnterView$58;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {v1}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$1100(Lorg/telegram/ui/Components/ChatActivityEnterView;)I
@@ -1249,12 +1249,12 @@
 
     if-eqz v1, :cond_79
 
-    .line 7282
+    .line 7326
     iget-object v1, v0, Lorg/telegram/ui/Components/ChatActivityEnterView$58;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {v1, v3, v2}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$1200(Lorg/telegram/ui/Components/ChatActivityEnterView;IZ)V
 
-    .line 7283
+    .line 7327
     iget-object v1, v0, Lorg/telegram/ui/Components/ChatActivityEnterView$58;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {v1}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$700(Lorg/telegram/ui/Components/ChatActivityEnterView;)Lorg/telegram/ui/Components/EmojiView;
@@ -1267,7 +1267,7 @@
 
     invoke-virtual {v1, v2, v4, v5}, Lorg/telegram/ui/Components/EmojiView;->closeSearch(ZJ)V
 
-    .line 7284
+    .line 7328
     iget-object v1, v0, Lorg/telegram/ui/Components/ChatActivityEnterView$58;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {v1}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$700(Lorg/telegram/ui/Components/ChatActivityEnterView;)Lorg/telegram/ui/Components/EmojiView;
@@ -1276,13 +1276,13 @@
 
     invoke-virtual {v1}, Lorg/telegram/ui/Components/EmojiView;->hideSearchKeyboard()V
 
-    .line 7286
+    .line 7330
     :cond_79
     iget-object v1, v0, Lorg/telegram/ui/Components/ChatActivityEnterView$58;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-virtual {v1, v3, v2, v3}, Lorg/telegram/ui/Components/ChatActivityEnterView;->setStickersExpanded(ZZZ)V
 
-    .line 7288
+    .line 7332
     :cond_7e
     iget-object v4, v0, Lorg/telegram/ui/Components/ChatActivityEnterView$58;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
@@ -1302,7 +1302,7 @@
 
     invoke-virtual/range {v4 .. v11}, Lorg/telegram/ui/Components/ChatActivityEnterView;->onStickerSelected(Lorg/telegram/tgnet/TLRPC$Document;Ljava/lang/String;Ljava/lang/Object;Lorg/telegram/messenger/MessageObject$SendAnimationData;ZZI)V
 
-    .line 7289
+    .line 7333
     iget-object v1, v0, Lorg/telegram/ui/Components/ChatActivityEnterView$58;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {v1}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$2900(Lorg/telegram/ui/Components/ChatActivityEnterView;)J
@@ -1321,7 +1321,7 @@
 
     if-eqz v1, :cond_b0
 
-    .line 7290
+    .line 7334
     iget-object v1, v0, Lorg/telegram/ui/Components/ChatActivityEnterView$58;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {v1}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$6000(Lorg/telegram/ui/Components/ChatActivityEnterView;)Lorg/telegram/messenger/AccountInstance;
@@ -1345,7 +1345,7 @@
 .method public onStickerSetAdd(Lorg/telegram/tgnet/TLRPC$StickerSetCovered;)V
     .registers 10
 
-    .line 7394
+    .line 7438
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$58;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$2800(Lorg/telegram/ui/Components/ChatActivityEnterView;)I
@@ -1384,7 +1384,7 @@
 .method public onStickerSetRemove(Lorg/telegram/tgnet/TLRPC$StickerSetCovered;)V
     .registers 10
 
-    .line 7399
+    .line 7443
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$58;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$2800(Lorg/telegram/ui/Components/ChatActivityEnterView;)I
@@ -1423,7 +1423,7 @@
 .method public onStickersGroupClick(J)V
     .registers 5
 
-    .line 7404
+    .line 7448
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$58;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$2600(Lorg/telegram/ui/Components/ChatActivityEnterView;)Lorg/telegram/ui/ChatActivity;
@@ -1432,27 +1432,27 @@
 
     if-eqz v0, :cond_2b
 
-    .line 7405
+    .line 7449
     invoke-static {}, Lorg/telegram/messenger/AndroidUtilities;->isTablet()Z
 
     move-result v0
 
     if-eqz v0, :cond_14
 
-    .line 7406
+    .line 7450
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$58;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/ChatActivityEnterView;->hidePopup(Z)V
+    invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/ChatActivityEnterView;->hidePopup(Z)Z
 
-    .line 7408
+    .line 7452
     :cond_14
     new-instance v0, Lorg/telegram/ui/GroupStickersActivity;
 
     invoke-direct {v0, p1, p2}, Lorg/telegram/ui/GroupStickersActivity;-><init>(J)V
 
-    .line 7409
+    .line 7453
     iget-object p1, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$58;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$12700(Lorg/telegram/ui/Components/ChatActivityEnterView;)Lorg/telegram/tgnet/TLRPC$ChatFull;
@@ -1461,7 +1461,7 @@
 
     invoke-virtual {v0, p1}, Lorg/telegram/ui/GroupStickersActivity;->setInfo(Lorg/telegram/tgnet/TLRPC$ChatFull;)V
 
-    .line 7410
+    .line 7454
     iget-object p1, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$58;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$2600(Lorg/telegram/ui/Components/ChatActivityEnterView;)Lorg/telegram/ui/ChatActivity;
@@ -1477,7 +1477,7 @@
 .method public onStickersSettingsClick()V
     .registers 4
 
-    .line 7296
+    .line 7340
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$58;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$2600(Lorg/telegram/ui/Components/ChatActivityEnterView;)Lorg/telegram/ui/ChatActivity;
@@ -1486,7 +1486,7 @@
 
     if-eqz v0, :cond_17
 
-    .line 7297
+    .line 7341
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$58;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$2600(Lorg/telegram/ui/Components/ChatActivityEnterView;)Lorg/telegram/ui/ChatActivity;
@@ -1508,7 +1508,7 @@
 .method public onTabOpened(I)V
     .registers 4
 
-    .line 7358
+    .line 7402
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$58;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$1500(Lorg/telegram/ui/Components/ChatActivityEnterView;)Lorg/telegram/ui/Components/ChatActivityEnterView$ChatActivityEnterViewDelegate;
@@ -1529,7 +1529,7 @@
     :goto_c
     invoke-interface {v0, p1}, Lorg/telegram/ui/Components/ChatActivityEnterView$ChatActivityEnterViewDelegate;->onStickersTab(Z)V
 
-    .line 7359
+    .line 7403
     iget-object p1, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$58;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$12600(Lorg/telegram/ui/Components/ChatActivityEnterView;)Ljava/lang/Runnable;
@@ -1544,7 +1544,7 @@
 .method public showTrendingStickersAlert(Lorg/telegram/ui/Components/TrendingStickersLayout;)V
     .registers 10
 
-    .line 7457
+    .line 7501
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$58;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$1600(Lorg/telegram/ui/Components/ChatActivityEnterView;)Landroid/app/Activity;
@@ -1561,7 +1561,7 @@
 
     if-eqz v0, :cond_4a
 
-    .line 7458
+    .line 7502
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$58;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     new-instance v7, Lorg/telegram/ui/Components/ChatActivityEnterView$58$1;
@@ -1594,7 +1594,7 @@
 
     invoke-static {v0, v7}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$12402(Lorg/telegram/ui/Components/ChatActivityEnterView;Lorg/telegram/ui/Components/TrendingStickersAlert;)Lorg/telegram/ui/Components/TrendingStickersAlert;
 
-    .line 7470
+    .line 7514
     iget-object p1, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$58;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$1500(Lorg/telegram/ui/Components/ChatActivityEnterView;)Lorg/telegram/ui/Components/ChatActivityEnterView$ChatActivityEnterViewDelegate;
@@ -1603,7 +1603,7 @@
 
     if-eqz p1, :cond_41
 
-    .line 7471
+    .line 7515
     iget-object p1, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$58;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$1500(Lorg/telegram/ui/Components/ChatActivityEnterView;)Lorg/telegram/ui/Components/ChatActivityEnterView$ChatActivityEnterViewDelegate;
@@ -1614,7 +1614,7 @@
 
     invoke-interface {p1, v0}, Lorg/telegram/ui/Components/ChatActivityEnterView$ChatActivityEnterViewDelegate;->onTrendingStickersShowed(Z)V
 
-    .line 7473
+    .line 7517
     :cond_41
     iget-object p1, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$58;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 

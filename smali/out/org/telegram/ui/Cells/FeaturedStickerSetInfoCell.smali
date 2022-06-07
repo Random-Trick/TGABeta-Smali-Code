@@ -270,7 +270,7 @@
     .line 108
     iget-object p2, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;->addButton:Lorg/telegram/ui/Components/ProgressButton;
 
-    const p4, 0x7f0e0104
+    const p4, 0x7f0e012c
 
     const-string p5, "Add"
 
@@ -371,7 +371,7 @@
     .line 121
     iget-object p1, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;->delButton:Landroid/widget/TextView;
 
-    const p2, 0x7f0e10d8
+    const p2, 0x7f0e1197
 
     const-string p4, "StickersRemove"
 
@@ -1376,9 +1376,13 @@
 
     iget p5, p5, Lorg/telegram/tgnet/TLRPC$StickerSet;->count:I
 
-    const-string v0, "Stickers"
+    const/4 v0, 0x0
 
-    invoke-static {v0, p5}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    new-array v3, v0, [Ljava/lang/Object;
+
+    const-string v4, "Stickers"
+
+    invoke-static {v4, p5, v3}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p5
 
@@ -1390,86 +1394,84 @@
     .line 198
     iget-boolean p2, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;->canAddRemove:Z
 
-    if-eqz p2, :cond_189
+    if-eqz p2, :cond_18b
 
     .line 199
     iget-boolean p2, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;->hasOnClick:Z
 
-    if-eqz p2, :cond_182
+    if-eqz p2, :cond_184
 
     .line 200
     iget-object p2, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;->addButton:Lorg/telegram/ui/Components/ProgressButton;
 
-    const/4 p4, 0x0
-
-    invoke-virtual {p2, p4}, Landroid/widget/Button;->setVisibility(I)V
+    invoke-virtual {p2, v0}, Landroid/widget/Button;->setVisibility(I)V
 
     const/4 p2, 0x1
 
-    if-nez p6, :cond_66
+    if-nez p6, :cond_68
 
     .line 201
-    iget p5, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;->currentAccount:I
+    iget p4, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;->currentAccount:I
 
-    invoke-static {p5}, Lorg/telegram/messenger/MediaDataController;->getInstance(I)Lorg/telegram/messenger/MediaDataController;
+    invoke-static {p4}, Lorg/telegram/messenger/MediaDataController;->getInstance(I)Lorg/telegram/messenger/MediaDataController;
 
-    move-result-object p5
+    move-result-object p4
 
     iget-object p1, p1, Lorg/telegram/tgnet/TLRPC$StickerSetCovered;->set:Lorg/telegram/tgnet/TLRPC$StickerSet;
 
-    iget-wide v3, p1, Lorg/telegram/tgnet/TLRPC$StickerSet;->id:J
+    iget-wide p5, p1, Lorg/telegram/tgnet/TLRPC$StickerSet;->id:J
 
-    invoke-virtual {p5, v3, v4}, Lorg/telegram/messenger/MediaDataController;->isStickerPackInstalled(J)Z
+    invoke-virtual {p4, p5, p6}, Lorg/telegram/messenger/MediaDataController;->isStickerPackInstalled(J)Z
 
     move-result p1
 
-    if-eqz p1, :cond_64
+    if-eqz p1, :cond_66
 
-    goto :goto_66
-
-    :cond_64
-    const/4 p1, 0x0
-
-    goto :goto_67
+    goto :goto_68
 
     :cond_66
-    :goto_66
+    const/4 p1, 0x0
+
+    goto :goto_69
+
+    :cond_68
+    :goto_68
     const/4 p1, 0x1
 
-    :goto_67
+    :goto_69
     iput-boolean p1, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;->isInstalled:Z
 
-    const/4 p5, 0x4
+    const/4 p4, 0x4
 
-    if-eqz p3, :cond_12e
+    if-eqz p3, :cond_130
 
-    if-eqz p1, :cond_74
+    if-eqz p1, :cond_76
 
     .line 204
     iget-object p1, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;->delButton:Landroid/widget/TextView;
 
-    invoke-virtual {p1, p4}, Landroid/widget/TextView;->setVisibility(I)V
+    invoke-virtual {p1, v0}, Landroid/widget/TextView;->setVisibility(I)V
 
-    goto :goto_79
+    goto :goto_7b
 
     .line 206
-    :cond_74
+    :cond_76
     iget-object p1, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;->addButton:Lorg/telegram/ui/Components/ProgressButton;
 
-    invoke-virtual {p1, p4}, Landroid/widget/Button;->setVisibility(I)V
+    invoke-virtual {p1, v0}, Landroid/widget/Button;->setVisibility(I)V
 
     .line 208
-    :goto_79
+    :goto_7b
     new-instance p1, Landroid/animation/AnimatorSet;
 
     invoke-direct {p1}, Landroid/animation/AnimatorSet;-><init>()V
 
     iput-object p1, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;->animatorSet:Landroid/animation/AnimatorSet;
 
-    const-wide/16 v3, 0xfa
+    const-wide/16 p5, 0xfa
 
     .line 209
-    invoke-virtual {p1, v3, v4}, Landroid/animation/AnimatorSet;->setDuration(J)Landroid/animation/AnimatorSet;
+    invoke-virtual {p1, p5, p6}, Landroid/animation/AnimatorSet;->setDuration(J)Landroid/animation/AnimatorSet;
 
     .line 210
     iget-object p1, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;->animatorSet:Landroid/animation/AnimatorSet;
@@ -1478,63 +1480,63 @@
 
     new-array p3, p3, [Landroid/animation/Animator;
 
-    iget-object p6, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;->delButton:Landroid/widget/TextView;
+    iget-object p5, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;->delButton:Landroid/widget/TextView;
 
-    sget-object v0, Landroid/view/View;->ALPHA:Landroid/util/Property;
+    sget-object p6, Landroid/view/View;->ALPHA:Landroid/util/Property;
 
     new-array v3, p2, [F
 
     .line 211
     iget-boolean v4, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;->isInstalled:Z
 
-    if-eqz v4, :cond_97
+    if-eqz v4, :cond_99
 
     const/high16 v4, 0x3f800000    # 1.0f
 
-    goto :goto_98
+    goto :goto_9a
 
-    :cond_97
+    :cond_99
     const/4 v4, 0x0
 
-    :goto_98
-    aput v4, v3, p4
+    :goto_9a
+    aput v4, v3, v0
 
-    invoke-static {p6, v0, v3}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
+    invoke-static {p5, p6, v3}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
 
-    move-result-object p6
+    move-result-object p5
 
-    aput-object p6, p3, p4
+    aput-object p5, p3, v0
 
-    iget-object p6, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;->delButton:Landroid/widget/TextView;
+    iget-object p5, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;->delButton:Landroid/widget/TextView;
 
-    sget-object v0, Landroid/view/View;->SCALE_X:Landroid/util/Property;
+    sget-object p6, Landroid/view/View;->SCALE_X:Landroid/util/Property;
 
     new-array v3, p2, [F
 
     .line 212
     iget-boolean v4, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;->isInstalled:Z
 
-    if-eqz v4, :cond_ad
+    if-eqz v4, :cond_af
 
     const/high16 v4, 0x3f800000    # 1.0f
 
-    goto :goto_ae
+    goto :goto_b0
 
-    :cond_ad
+    :cond_af
     const/4 v4, 0x0
 
-    :goto_ae
-    aput v4, v3, p4
+    :goto_b0
+    aput v4, v3, v0
 
-    invoke-static {p6, v0, v3}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
+    invoke-static {p5, p6, v3}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
 
-    move-result-object p6
+    move-result-object p5
 
-    aput-object p6, p3, p2
+    aput-object p5, p3, p2
 
-    const/4 p6, 0x2
+    const/4 p5, 0x2
 
-    iget-object v0, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;->delButton:Landroid/widget/TextView;
+    iget-object p6, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;->delButton:Landroid/widget/TextView;
 
     sget-object v3, Landroid/view/View;->SCALE_Y:Landroid/util/Property;
 
@@ -1543,27 +1545,27 @@
     .line 213
     iget-boolean v5, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;->isInstalled:Z
 
-    if-eqz v5, :cond_c4
+    if-eqz v5, :cond_c6
 
     const/high16 v5, 0x3f800000    # 1.0f
 
-    goto :goto_c5
+    goto :goto_c7
 
-    :cond_c4
+    :cond_c6
     const/4 v5, 0x0
 
-    :goto_c5
-    aput v5, v4, p4
+    :goto_c7
+    aput v5, v4, v0
 
-    invoke-static {v0, v3, v4}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
+    invoke-static {p6, v3, v4}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
 
-    move-result-object v0
+    move-result-object p6
 
-    aput-object v0, p3, p6
+    aput-object p6, p3, p5
 
-    const/4 p6, 0x3
+    const/4 p5, 0x3
 
-    iget-object v0, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;->addButton:Lorg/telegram/ui/Components/ProgressButton;
+    iget-object p6, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;->addButton:Lorg/telegram/ui/Components/ProgressButton;
 
     sget-object v3, Landroid/view/View;->ALPHA:Landroid/util/Property;
 
@@ -1572,74 +1574,74 @@
     .line 214
     iget-boolean v5, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;->isInstalled:Z
 
-    if-eqz v5, :cond_da
+    if-eqz v5, :cond_dc
 
     const/4 v5, 0x0
 
-    goto :goto_dc
+    goto :goto_de
 
-    :cond_da
+    :cond_dc
     const/high16 v5, 0x3f800000    # 1.0f
 
-    :goto_dc
-    aput v5, v4, p4
+    :goto_de
+    aput v5, v4, v0
 
-    invoke-static {v0, v3, v4}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
+    invoke-static {p6, v3, v4}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
 
-    move-result-object v0
+    move-result-object p6
 
-    aput-object v0, p3, p6
+    aput-object p6, p3, p5
 
-    iget-object p6, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;->addButton:Lorg/telegram/ui/Components/ProgressButton;
+    iget-object p5, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;->addButton:Lorg/telegram/ui/Components/ProgressButton;
 
-    sget-object v0, Landroid/view/View;->SCALE_X:Landroid/util/Property;
+    sget-object p6, Landroid/view/View;->SCALE_X:Landroid/util/Property;
 
     new-array v3, p2, [F
 
     .line 215
     iget-boolean v4, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;->isInstalled:Z
 
-    if-eqz v4, :cond_f0
+    if-eqz v4, :cond_f2
 
     const/4 v4, 0x0
 
-    goto :goto_f2
+    goto :goto_f4
 
-    :cond_f0
+    :cond_f2
     const/high16 v4, 0x3f800000    # 1.0f
 
-    :goto_f2
-    aput v4, v3, p4
+    :goto_f4
+    aput v4, v3, v0
 
-    invoke-static {p6, v0, v3}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
+    invoke-static {p5, p6, v3}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
 
-    move-result-object p6
+    move-result-object p5
 
-    aput-object p6, p3, p5
+    aput-object p5, p3, p4
 
-    const/4 p5, 0x5
+    const/4 p4, 0x5
 
-    iget-object p6, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;->addButton:Lorg/telegram/ui/Components/ProgressButton;
+    iget-object p5, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;->addButton:Lorg/telegram/ui/Components/ProgressButton;
 
-    sget-object v0, Landroid/view/View;->SCALE_Y:Landroid/util/Property;
+    sget-object p6, Landroid/view/View;->SCALE_Y:Landroid/util/Property;
 
     new-array p2, p2, [F
 
     .line 216
     iget-boolean v3, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;->isInstalled:Z
 
-    if-eqz v3, :cond_106
+    if-eqz v3, :cond_108
 
     const/4 v1, 0x0
 
-    :cond_106
-    aput v1, p2, p4
+    :cond_108
+    aput v1, p2, v0
 
-    invoke-static {p6, v0, p2}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
+    invoke-static {p5, p6, p2}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
 
     move-result-object p2
 
-    aput-object p2, p3, p5
+    aput-object p2, p3, p4
 
     .line 210
     invoke-virtual {p1, p3}, Landroid/animation/AnimatorSet;->playTogether([Landroid/animation/Animator;)V
@@ -1669,15 +1671,15 @@
 
     invoke-virtual {p1}, Landroid/animation/AnimatorSet;->start()V
 
-    goto :goto_189
+    goto :goto_18b
 
-    :cond_12e
-    if-eqz p1, :cond_159
+    :cond_130
+    if-eqz p1, :cond_15b
 
     .line 231
     iget-object p1, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;->delButton:Landroid/widget/TextView;
 
-    invoke-virtual {p1, p4}, Landroid/widget/TextView;->setVisibility(I)V
+    invoke-virtual {p1, v0}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 232
     iget-object p1, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;->delButton:Landroid/widget/TextView;
@@ -1697,7 +1699,7 @@
     .line 235
     iget-object p1, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;->addButton:Lorg/telegram/ui/Components/ProgressButton;
 
-    invoke-virtual {p1, p5}, Landroid/widget/Button;->setVisibility(I)V
+    invoke-virtual {p1, p4}, Landroid/widget/Button;->setVisibility(I)V
 
     .line 236
     iget-object p1, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;->addButton:Lorg/telegram/ui/Components/ProgressButton;
@@ -1714,13 +1716,13 @@
 
     invoke-virtual {p1, v2}, Landroid/widget/Button;->setScaleY(F)V
 
-    goto :goto_189
+    goto :goto_18b
 
     .line 240
-    :cond_159
+    :cond_15b
     iget-object p1, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;->addButton:Lorg/telegram/ui/Components/ProgressButton;
 
-    invoke-virtual {p1, p4}, Landroid/widget/Button;->setVisibility(I)V
+    invoke-virtual {p1, v0}, Landroid/widget/Button;->setVisibility(I)V
 
     .line 241
     iget-object p1, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;->addButton:Lorg/telegram/ui/Components/ProgressButton;
@@ -1740,7 +1742,7 @@
     .line 244
     iget-object p1, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;->delButton:Landroid/widget/TextView;
 
-    invoke-virtual {p1, p5}, Landroid/widget/TextView;->setVisibility(I)V
+    invoke-virtual {p1, p4}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 245
     iget-object p1, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;->delButton:Landroid/widget/TextView;
@@ -1757,18 +1759,18 @@
 
     invoke-virtual {p1, v2}, Landroid/widget/TextView;->setScaleY(F)V
 
-    goto :goto_189
+    goto :goto_18b
 
     .line 251
-    :cond_182
+    :cond_184
     iget-object p1, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;->addButton:Lorg/telegram/ui/Components/ProgressButton;
 
     const/16 p2, 0x8
 
     invoke-virtual {p1, p2}, Landroid/widget/Button;->setVisibility(I)V
 
-    :cond_189
-    :goto_189
+    :cond_18b
+    :goto_18b
     return-void
 .end method
 

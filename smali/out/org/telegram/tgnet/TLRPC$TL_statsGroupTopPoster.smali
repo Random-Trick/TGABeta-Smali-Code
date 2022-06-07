@@ -25,7 +25,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 21362
+    .line 21543
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -34,7 +34,7 @@
 .method public static TLdeserialize(Lorg/telegram/tgnet/AbstractSerializedData;IZ)Lorg/telegram/tgnet/TLRPC$TL_statsGroupTopPoster;
     .registers 4
 
-    .line 21370
+    .line 21551
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_statsGroupTopPoster;->constructor:I
 
     if-eq v0, p1, :cond_1e
@@ -45,7 +45,7 @@
 
     return-object p0
 
-    .line 21372
+    .line 21553
     :cond_8
     new-instance p0, Ljava/lang/RuntimeException;
 
@@ -71,13 +71,13 @@
 
     throw p0
 
-    .line 21377
+    .line 21558
     :cond_1e
     new-instance p1, Lorg/telegram/tgnet/TLRPC$TL_statsGroupTopPoster;
 
     invoke-direct {p1}, Lorg/telegram/tgnet/TLRPC$TL_statsGroupTopPoster;-><init>()V
 
-    .line 21378
+    .line 21559
     invoke-virtual {p1, p0, p2}, Lorg/telegram/tgnet/TLRPC$TL_statsGroupTopPoster;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
     return-object p1
@@ -88,21 +88,21 @@
 .method public readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
     .registers 5
 
-    .line 21383
+    .line 21564
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt64(Z)J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lorg/telegram/tgnet/TLRPC$TL_statsGroupTopPoster;->user_id:J
 
-    .line 21384
+    .line 21565
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
 
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$TL_statsGroupTopPoster;->messages:I
 
-    .line 21385
+    .line 21566
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result p1
@@ -115,22 +115,22 @@
 .method public serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
     .registers 4
 
-    .line 21389
+    .line 21570
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_statsGroupTopPoster;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 21390
+    .line 21571
     iget-wide v0, p0, Lorg/telegram/tgnet/TLRPC$TL_statsGroupTopPoster;->user_id:J
 
     invoke-virtual {p1, v0, v1}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt64(J)V
 
-    .line 21391
+    .line 21572
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_statsGroupTopPoster;->messages:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 21392
+    .line 21573
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_statsGroupTopPoster;->avg_chars:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V

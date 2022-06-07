@@ -152,7 +152,7 @@
 
     const p2, 0x7f0d004d
 
-    const p3, 0x7f0e0937
+    const p3, 0x7f0e09be
 
     const-string p4, "LinkHashExpired"
 
@@ -582,7 +582,7 @@
 
     const v0, 0x7f0d004d
 
-    const v1, 0x7f0e0937
+    const v1, 0x7f0e09be
 
     const-string v2, "LinkHashExpired"
 

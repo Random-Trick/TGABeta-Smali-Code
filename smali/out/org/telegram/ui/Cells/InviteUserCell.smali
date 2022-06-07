@@ -558,28 +558,30 @@
 
     iget v0, p1, Lorg/telegram/messenger/ContactsController$Contact;->imported:I
 
-    if-lez v0, :cond_4d
+    const/4 v1, 0x0
+
+    if-lez v0, :cond_50
 
     .line 104
     iget-object p1, p0, Lorg/telegram/ui/Cells/InviteUserCell;->statusTextView:Lorg/telegram/ui/ActionBar/SimpleTextView;
 
-    const-string v1, "TelegramContacts"
+    new-array v1, v1, [Ljava/lang/Object;
 
-    invoke-static {v1, v0}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    const-string v2, "TelegramContacts"
+
+    invoke-static {v2, v0, v1}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
     invoke-virtual {p1, v0}, Lorg/telegram/ui/ActionBar/SimpleTextView;->setText(Ljava/lang/CharSequence;)Z
 
-    goto :goto_5b
+    goto :goto_5d
 
     .line 106
-    :cond_4d
+    :cond_50
     iget-object v0, p0, Lorg/telegram/ui/Cells/InviteUserCell;->statusTextView:Lorg/telegram/ui/ActionBar/SimpleTextView;
 
     iget-object p1, p1, Lorg/telegram/messenger/ContactsController$Contact;->phones:Ljava/util/ArrayList;
-
-    const/4 v1, 0x0
 
     invoke-virtual {p1, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -590,7 +592,7 @@
     invoke-virtual {v0, p1}, Lorg/telegram/ui/ActionBar/SimpleTextView;->setText(Ljava/lang/CharSequence;)Z
 
     .line 109
-    :goto_5b
+    :goto_5d
     iget-object p1, p0, Lorg/telegram/ui/Cells/InviteUserCell;->avatarImageView:Lorg/telegram/ui/Components/BackupImageView;
 
     iget-object v0, p0, Lorg/telegram/ui/Cells/InviteUserCell;->avatarDrawable:Lorg/telegram/ui/Components/AvatarDrawable;

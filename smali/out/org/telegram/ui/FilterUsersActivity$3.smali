@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/FilterUsersActivity;Landroid/content/Context;)V
     .registers 3
 
-    .line 467
+    .line 468
     iput-object p1, p0, Lorg/telegram/ui/FilterUsersActivity$3;->this$0:Lorg/telegram/ui/FilterUsersActivity;
 
     invoke-direct {p0, p2}, Landroid/widget/ScrollView;-><init>(Landroid/content/Context;)V
@@ -35,7 +35,7 @@
 .method public requestChildRectangleOnScreen(Landroid/view/View;Landroid/graphics/Rect;Z)Z
     .registers 7
 
-    .line 470
+    .line 471
     iget-object v0, p0, Lorg/telegram/ui/FilterUsersActivity$3;->this$0:Lorg/telegram/ui/FilterUsersActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/FilterUsersActivity;->access$300(Lorg/telegram/ui/FilterUsersActivity;)Z
@@ -44,7 +44,7 @@
 
     if-eqz v0, :cond_f
 
-    .line 471
+    .line 472
     iget-object p1, p0, Lorg/telegram/ui/FilterUsersActivity$3;->this$0:Lorg/telegram/ui/FilterUsersActivity;
 
     const/4 p2, 0x0
@@ -53,7 +53,7 @@
 
     return p2
 
-    .line 474
+    .line 475
     :cond_f
     invoke-virtual {p1}, Landroid/view/View;->getLeft()I
 
@@ -77,7 +77,7 @@
 
     invoke-virtual {p2, v0, v1}, Landroid/graphics/Rect;->offset(II)V
 
-    .line 475
+    .line 476
     iget v0, p2, Landroid/graphics/Rect;->top:I
 
     iget-object v1, p0, Lorg/telegram/ui/FilterUsersActivity$3;->this$0:Lorg/telegram/ui/FilterUsersActivity;
@@ -98,7 +98,7 @@
 
     iput v0, p2, Landroid/graphics/Rect;->top:I
 
-    .line 476
+    .line 477
     iget v0, p2, Landroid/graphics/Rect;->bottom:I
 
     iget-object v1, p0, Lorg/telegram/ui/FilterUsersActivity$3;->this$0:Lorg/telegram/ui/FilterUsersActivity;
@@ -119,7 +119,7 @@
 
     iput v0, p2, Landroid/graphics/Rect;->bottom:I
 
-    .line 477
+    .line 478
     invoke-super {p0, p1, p2, p3}, Landroid/widget/ScrollView;->requestChildRectangleOnScreen(Landroid/view/View;Landroid/graphics/Rect;Z)Z
 
     move-result p1

@@ -27,7 +27,7 @@
 
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout$$ExternalSyntheticLambda0;->f$0:Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout;
 
-    invoke-static {v0, p1}, Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout;->$r8$lambda$R_DP2rNghNkhto471SBNrl4F1zU(Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout;Landroid/animation/ValueAnimator;)V
+    invoke-static {v0, p1}, Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout;->$r8$lambda$dfxFPMb7b2eMs3D5i4-rvinr6og(Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout;Landroid/animation/ValueAnimator;)V
 
     return-void
 .end method

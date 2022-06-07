@@ -17,7 +17,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 22577
+    .line 22767
     invoke-direct {p0}, Lorg/telegram/tgnet/TLRPC$MessageAction;-><init>()V
 
     return-void
@@ -28,7 +28,7 @@
 .method public readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
     .registers 7
 
-    .line 22582
+    .line 22772
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
@@ -48,25 +48,25 @@
     :cond_d
     const/4 v0, 0x0
 
-    .line 22583
+    .line 22773
     :goto_e
     iput-boolean v0, p0, Lorg/telegram/tgnet/TLRPC$MessageAction;->video:Z
 
-    .line 22584
+    .line 22774
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt64(Z)J
 
     move-result-wide v2
 
     iput-wide v2, p0, Lorg/telegram/tgnet/TLRPC$MessageAction;->call_id:J
 
-    .line 22585
+    .line 22775
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$MessageAction;->flags:I
 
     and-int/2addr v0, v1
 
     if-eqz v0, :cond_25
 
-    .line 22586
+    .line 22776
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
@@ -77,7 +77,7 @@
 
     iput-object v0, p0, Lorg/telegram/tgnet/TLRPC$MessageAction;->reason:Lorg/telegram/tgnet/TLRPC$PhoneCallDiscardReason;
 
-    .line 22588
+    .line 22778
     :cond_25
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$MessageAction;->flags:I
 
@@ -85,7 +85,7 @@
 
     if-eqz v0, :cond_31
 
-    .line 22589
+    .line 22779
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result p1
@@ -99,12 +99,12 @@
 .method public serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
     .registers 4
 
-    .line 22594
+    .line 22784
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_messageActionPhoneCall;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 22595
+    .line 22785
     iget-boolean v0, p0, Lorg/telegram/tgnet/TLRPC$MessageAction;->video:Z
 
     if-eqz v0, :cond_e
@@ -123,27 +123,27 @@
     :goto_12
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$MessageAction;->flags:I
 
-    .line 22596
+    .line 22786
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 22597
+    .line 22787
     iget-wide v0, p0, Lorg/telegram/tgnet/TLRPC$MessageAction;->call_id:J
 
     invoke-virtual {p1, v0, v1}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt64(J)V
 
-    .line 22598
+    .line 22788
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$MessageAction;->flags:I
 
     and-int/lit8 v0, v0, 0x1
 
     if-eqz v0, :cond_27
 
-    .line 22599
+    .line 22789
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$MessageAction;->reason:Lorg/telegram/tgnet/TLRPC$PhoneCallDiscardReason;
 
     invoke-virtual {v0, p1}, Lorg/telegram/tgnet/TLObject;->serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
 
-    .line 22601
+    .line 22791
     :cond_27
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$MessageAction;->flags:I
 
@@ -151,7 +151,7 @@
 
     if-eqz v0, :cond_32
 
-    .line 22602
+    .line 22792
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$MessageAction;->duration:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V

@@ -76,7 +76,7 @@
     const/4 v1, 0x0
 
     :goto_6
-    const/4 v2, 0x3
+    const/4 v2, 0x4
 
     if-ge v1, v2, :cond_1b
 
@@ -142,7 +142,7 @@
     const/4 v0, 0x0
 
     :goto_1
-    const/4 v1, 0x3
+    const/4 v1, 0x4
 
     if-ge v0, v1, :cond_e
 
@@ -204,14 +204,14 @@
 
     move-result v1
 
-    const/4 v2, 0x0
+    const/4 v2, 0x1
 
-    const/4 v3, 0x1
+    const/4 v3, 0x0
 
-    if-ne v1, v3, :cond_5f
+    if-ne v1, v2, :cond_5f
 
     .line 99
-    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    invoke-virtual {v0, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -254,7 +254,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0e01ee
+    const v1, 0x7f0e0223
 
     const-string v4, "AttachLiveLocationIsSharing"
 
@@ -263,7 +263,7 @@
 
     move-result-object v1
 
-    goto :goto_72
+    goto :goto_74
 
     .line 107
     :cond_41
@@ -292,7 +292,7 @@
     const-string v0, ""
 
     :goto_55
-    const v1, 0x7f0e01ef
+    const v1, 0x7f0e0224
 
     const-string v4, "AttachLiveLocationIsSharingChat"
 
@@ -301,7 +301,7 @@
 
     move-result-object v1
 
-    goto :goto_72
+    goto :goto_74
 
     .line 116
     :cond_5f
@@ -309,13 +309,15 @@
 
     move-result v0
 
-    const-string v1, "Chats"
+    new-array v1, v3, [Ljava/lang/Object;
 
-    invoke-static {v1, v0}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    const-string v4, "Chats"
+
+    invoke-static {v4, v0, v1}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
-    const v1, 0x7f0e01f0
+    const v1, 0x7f0e0225
 
     const-string v4, "AttachLiveLocationIsSharingChats"
 
@@ -324,12 +326,12 @@
 
     move-result-object v1
 
-    :goto_72
+    :goto_74
     const/4 v4, 0x2
 
     new-array v4, v4, [Ljava/lang/Object;
 
-    const v5, 0x7f0e01ed
+    const v5, 0x7f0e0222
 
     const-string v6, "AttachLiveLocation"
 
@@ -338,9 +340,9 @@
 
     move-result-object v5
 
-    aput-object v5, v4, v2
+    aput-object v5, v4, v3
 
-    aput-object v0, v4, v3
+    aput-object v0, v4, v2
 
     invoke-static {v1, v4}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
@@ -356,7 +358,7 @@
 
     invoke-virtual {v1, v0}, Landroidx/core/app/NotificationCompat$Builder;->setContentText(Ljava/lang/CharSequence;)Landroidx/core/app/NotificationCompat$Builder;
 
-    if-eqz p1, :cond_a2
+    if-eqz p1, :cond_a4
 
     .line 123
     sget-object p1, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
@@ -375,7 +377,7 @@
 
     invoke-virtual {p1, v0, v1}, Landroidx/core/app/NotificationManagerCompat;->notify(ILandroid/app/Notification;)V
 
-    :cond_a2
+    :cond_a4
     return-void
 .end method
 
@@ -560,7 +562,7 @@
     .line 139
     iget-object v0, p0, Lorg/telegram/messenger/LocationSharingService;->builder:Landroidx/core/app/NotificationCompat$Builder;
 
-    const v1, 0x7f0701ba
+    const v1, 0x7f07018d
 
     invoke-virtual {v0, v1}, Landroidx/core/app/NotificationCompat$Builder;->setSmallIcon(I)Landroidx/core/app/NotificationCompat$Builder;
 
@@ -582,7 +584,7 @@
     .line 143
     iget-object p1, p0, Lorg/telegram/messenger/LocationSharingService;->builder:Landroidx/core/app/NotificationCompat$Builder;
 
-    const v0, 0x7f0e017c
+    const v0, 0x7f0e01b1
 
     const-string v1, "AppName"
 
@@ -604,7 +606,7 @@
     .line 145
     iget-object v0, p0, Lorg/telegram/messenger/LocationSharingService;->builder:Landroidx/core/app/NotificationCompat$Builder;
 
-    const v1, 0x7f0e10e7
+    const v1, 0x7f0e11a6
 
     const-string v2, "StopLiveLocation"
 

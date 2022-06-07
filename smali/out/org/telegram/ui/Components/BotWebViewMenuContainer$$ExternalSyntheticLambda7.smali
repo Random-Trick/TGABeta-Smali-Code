@@ -27,7 +27,7 @@
 
     iget-object v0, p0, Lorg/telegram/ui/Components/BotWebViewMenuContainer$$ExternalSyntheticLambda7;->f$0:Lorg/telegram/ui/Components/BotWebViewMenuContainer;
 
-    invoke-static {v0, p1, p2, p3}, Lorg/telegram/ui/Components/BotWebViewMenuContainer;->$r8$lambda$fL5LQeD17owJ-ZYp8gQuI7UbvTo(Lorg/telegram/ui/Components/BotWebViewMenuContainer;Landroidx/dynamicanimation/animation/DynamicAnimation;FF)V
+    invoke-static {v0, p1, p2, p3}, Lorg/telegram/ui/Components/BotWebViewMenuContainer;->$r8$lambda$uvDQ6wcPdzVJW6HCGS4ugD2w_H0(Lorg/telegram/ui/Components/BotWebViewMenuContainer;Landroidx/dynamicanimation/animation/DynamicAnimation;FF)V
 
     return-void
 .end method

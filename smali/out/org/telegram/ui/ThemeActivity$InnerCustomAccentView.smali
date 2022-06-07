@@ -24,10 +24,10 @@
 .method constructor <init>(Landroid/content/Context;)V
     .registers 3
 
-    .line 1475
+    .line 1466
     invoke-direct {p0, p1}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
-    .line 1471
+    .line 1462
     new-instance p1, Landroid/graphics/Paint;
 
     const/4 v0, 0x1
@@ -40,7 +40,7 @@
 
     new-array p1, p1, [I
 
-    .line 1472
+    .line 1463
     iput-object p1, p0, Lorg/telegram/ui/ThemeActivity$InnerCustomAccentView;->colors:[I
 
     return-void
@@ -49,7 +49,7 @@
 .method static synthetic access$2300(Lorg/telegram/ui/ThemeActivity$InnerCustomAccentView;Lorg/telegram/ui/ActionBar/Theme$ThemeInfo;)V
     .registers 2
 
-    .line 1470
+    .line 1461
     invoke-direct {p0, p1}, Lorg/telegram/ui/ThemeActivity$InnerCustomAccentView;->setTheme(Lorg/telegram/ui/ActionBar/Theme$ThemeInfo;)V
 
     return-void
@@ -58,7 +58,7 @@
 .method private setTheme(Lorg/telegram/ui/ActionBar/Theme$ThemeInfo;)V
     .registers 9
 
-    .line 1479
+    .line 1470
     iget v0, p1, Lorg/telegram/ui/ActionBar/Theme$ThemeInfo;->defaultAccentCount:I
 
     const/4 v1, 0x7
@@ -71,7 +71,7 @@
 
     const/4 v2, 0x6
 
-    .line 1480
+    .line 1471
     invoke-virtual {p1, v2}, Lorg/telegram/ui/ActionBar/Theme$ThemeInfo;->getAccentColor(I)I
 
     move-result v3
@@ -133,7 +133,7 @@
     :cond_3d
     new-array p1, v1, [I
 
-    .line 1482
+    .line 1473
     iput-object p1, p0, Lorg/telegram/ui/ThemeActivity$InnerCustomAccentView;->colors:[I
 
     :goto_41
@@ -145,7 +145,7 @@
 .method protected onDraw(Landroid/graphics/Canvas;)V
     .registers 13
 
-    .line 1496
+    .line 1487
     invoke-virtual {p0}, Landroid/view/View;->getMeasuredWidth()I
 
     move-result v0
@@ -156,7 +156,7 @@
 
     mul-float v0, v0, v1
 
-    .line 1497
+    .line 1488
     invoke-virtual {p0}, Landroid/view/View;->getMeasuredHeight()I
 
     move-result v2
@@ -167,7 +167,7 @@
 
     const/high16 v1, 0x40a00000    # 5.0f
 
-    .line 1499
+    .line 1490
     invoke-static {v1}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v1
@@ -176,7 +176,7 @@
 
     const/high16 v3, 0x41a00000    # 20.0f
 
-    .line 1500
+    .line 1491
     invoke-static {v3}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v3
@@ -185,14 +185,14 @@
 
     sub-float/2addr v3, v1
 
-    .line 1502
+    .line 1493
     iget-object v4, p0, Lorg/telegram/ui/ThemeActivity$InnerCustomAccentView;->paint:Landroid/graphics/Paint;
 
     sget-object v5, Landroid/graphics/Paint$Style;->FILL:Landroid/graphics/Paint$Style;
 
     invoke-virtual {v4, v5}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
-    .line 1504
+    .line 1495
     iget-object v4, p0, Lorg/telegram/ui/ThemeActivity$InnerCustomAccentView;->paint:Landroid/graphics/Paint;
 
     iget-object v5, p0, Lorg/telegram/ui/ThemeActivity$InnerCustomAccentView;->colors:[I
@@ -203,7 +203,7 @@
 
     invoke-virtual {v4, v5}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 1505
+    .line 1496
     iget-object v4, p0, Lorg/telegram/ui/ThemeActivity$InnerCustomAccentView;->paint:Landroid/graphics/Paint;
 
     invoke-virtual {p1, v0, v2, v1, v4}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
@@ -215,7 +215,7 @@
 
     if-ge v6, v7, :cond_62
 
-    .line 1509
+    .line 1500
     invoke-static {v4, v5}, Ljava/lang/Math;->sin(D)D
 
     move-result-wide v7
@@ -226,7 +226,7 @@
 
     add-float/2addr v7, v0
 
-    .line 1510
+    .line 1501
     invoke-static {v4, v5}, Ljava/lang/Math;->cos(D)D
 
     move-result-wide v8
@@ -237,7 +237,7 @@
 
     sub-float v8, v2, v8
 
-    .line 1512
+    .line 1503
     iget-object v9, p0, Lorg/telegram/ui/ThemeActivity$InnerCustomAccentView;->paint:Landroid/graphics/Paint;
 
     iget-object v10, p0, Lorg/telegram/ui/ThemeActivity$InnerCustomAccentView;->colors:[I
@@ -248,7 +248,7 @@
 
     invoke-virtual {v9, v10}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 1513
+    .line 1504
     iget-object v9, p0, Lorg/telegram/ui/ThemeActivity$InnerCustomAccentView;->paint:Landroid/graphics/Paint;
 
     invoke-virtual {p1, v7, v8, v1, v9}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
@@ -266,21 +266,21 @@
 .method public onInitializeAccessibilityNodeInfo(Landroid/view/accessibility/AccessibilityNodeInfo;)V
     .registers 4
 
-    .line 1521
+    .line 1512
     invoke-super {p0, p1}, Landroid/view/View;->onInitializeAccessibilityNodeInfo(Landroid/view/accessibility/AccessibilityNodeInfo;)V
 
     const-string v0, "ColorPickerMainColor"
 
-    const v1, 0x7f0e0486
+    const v1, 0x7f0e04d3
 
-    .line 1522
+    .line 1513
     invoke-static {v0, v1}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v0
 
     invoke-virtual {p1, v0}, Landroid/view/accessibility/AccessibilityNodeInfo;->setText(Ljava/lang/CharSequence;)V
 
-    .line 1523
+    .line 1514
     const-class v0, Landroid/widget/Button;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -291,7 +291,7 @@
 
     const/4 v0, 0x1
 
-    .line 1524
+    .line 1515
     invoke-virtual {p1, v0}, Landroid/view/accessibility/AccessibilityNodeInfo;->setEnabled(Z)V
 
     return-void
@@ -302,7 +302,7 @@
 
     const/high16 p1, 0x42780000    # 62.0f
 
-    .line 1489
+    .line 1480
     invoke-static {p1}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result p2
@@ -313,7 +313,7 @@
 
     move-result p2
 
-    .line 1490
+    .line 1481
     invoke-static {p1}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result p1
@@ -322,7 +322,7 @@
 
     move-result p1
 
-    .line 1488
+    .line 1479
     invoke-super {p0, p2, p1}, Landroid/view/View;->onMeasure(II)V
 
     return-void

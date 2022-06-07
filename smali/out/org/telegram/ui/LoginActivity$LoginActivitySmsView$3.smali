@@ -18,7 +18,7 @@
 .method constructor <init>(Lorg/telegram/ui/LoginActivity$LoginActivitySmsView;Landroid/content/Context;Lorg/telegram/ui/LoginActivity;)V
     .registers 4
 
-    .line 2917
+    .line 2973
     invoke-direct {p0, p2}, Landroid/widget/ViewSwitcher;-><init>(Landroid/content/Context;)V
 
     return-void
@@ -31,7 +31,7 @@
 
     const/high16 p2, 0x42c80000    # 100.0f
 
-    .line 2920
+    .line 2976
     invoke-static {p2}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result p2

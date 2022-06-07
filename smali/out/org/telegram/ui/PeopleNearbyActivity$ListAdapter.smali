@@ -230,9 +230,9 @@
 
     const/4 v5, 0x1
 
-    if-eqz v0, :cond_136
+    if-eqz v0, :cond_138
 
-    if-eq v0, v5, :cond_f1
+    if-eq v0, v5, :cond_f3
 
     if-eq v0, v1, :cond_44
 
@@ -240,7 +240,7 @@
 
     if-eq v0, v1, :cond_14
 
-    goto/16 :goto_1fc
+    goto/16 :goto_200
 
     .line 1022
     :cond_14
@@ -257,7 +257,7 @@
 
     if-ne p2, v0, :cond_2e
 
-    const p2, 0x7f0e0d2a
+    const p2, 0x7f0e0db8
 
     const-string v0, "PeopleNearbyHeader"
 
@@ -268,7 +268,7 @@
 
     invoke-virtual {p1, p2}, Lorg/telegram/ui/Cells/HeaderCell;->setText(Ljava/lang/CharSequence;)V
 
-    goto/16 :goto_1fc
+    goto/16 :goto_200
 
     .line 1025
     :cond_2e
@@ -278,9 +278,9 @@
 
     move-result v0
 
-    if-ne p2, v0, :cond_1fc
+    if-ne p2, v0, :cond_200
 
-    const p2, 0x7f0e0421
+    const p2, 0x7f0e0463
 
     const-string v0, "ChatsNearbyHeader"
 
@@ -291,7 +291,7 @@
 
     invoke-virtual {p1, p2}, Lorg/telegram/ui/Cells/HeaderCell;->setText(Ljava/lang/CharSequence;)V
 
-    goto/16 :goto_1fc
+    goto/16 :goto_200
 
     .line 1006
     :cond_44
@@ -315,7 +315,7 @@
 
     if-ne p2, v0, :cond_71
 
-    const p2, 0x7f0e0a73
+    const p2, 0x7f0e0afa
 
     const-string v0, "NearbyCreateGroup"
 
@@ -324,7 +324,7 @@
 
     move-result-object p2
 
-    const v0, 0x7f070138
+    const v0, 0x7f070237
 
     iget-object v1, p0, Lorg/telegram/ui/PeopleNearbyActivity$ListAdapter;->this$0:Lorg/telegram/ui/PeopleNearbyActivity;
 
@@ -339,7 +339,7 @@
     :cond_6c
     invoke-virtual {p1, p2, v3, v0, v4}, Lorg/telegram/ui/Cells/ManageChatTextCell;->setText(Ljava/lang/String;Ljava/lang/String;IZ)V
 
-    goto/16 :goto_1fc
+    goto/16 :goto_200
 
     .line 1010
     :cond_71
@@ -386,7 +386,7 @@
 
     if-eqz p2, :cond_b5
 
-    const p2, 0x7f0e10f3
+    const p2, 0x7f0e11b2
 
     const-string v0, "StopShowingMe"
 
@@ -395,7 +395,7 @@
 
     move-result-object p2
 
-    const v0, 0x7f07004c
+    const v0, 0x7f07027f
 
     iget-object v1, p0, Lorg/telegram/ui/PeopleNearbyActivity$ListAdapter;->this$0:Lorg/telegram/ui/PeopleNearbyActivity;
 
@@ -415,10 +415,10 @@
     .line 1013
     invoke-virtual {p1, p2, p2}, Lorg/telegram/ui/Cells/ManageChatTextCell;->setColors(Ljava/lang/String;Ljava/lang/String;)V
 
-    goto/16 :goto_1fc
+    goto/16 :goto_200
 
     :cond_b5
-    const p2, 0x7f0e0988
+    const p2, 0x7f0e0a0f
 
     const-string v0, "MakeMyselfVisible"
 
@@ -427,7 +427,7 @@
 
     move-result-object p2
 
-    const v0, 0x7f07004d
+    const v0, 0x7f07027b
 
     iget-object v1, p0, Lorg/telegram/ui/PeopleNearbyActivity$ListAdapter;->this$0:Lorg/telegram/ui/PeopleNearbyActivity;
 
@@ -442,7 +442,7 @@
     :cond_ca
     invoke-virtual {p1, p2, v3, v0, v4}, Lorg/telegram/ui/Cells/ManageChatTextCell;->setText(Ljava/lang/String;Ljava/lang/String;IZ)V
 
-    goto/16 :goto_1fc
+    goto/16 :goto_200
 
     .line 1017
     :cond_cf
@@ -452,7 +452,7 @@
 
     move-result v0
 
-    if-ne p2, v0, :cond_1fc
+    if-ne p2, v0, :cond_200
 
     .line 1018
     iget-object p2, p0, Lorg/telegram/ui/PeopleNearbyActivity$ListAdapter;->this$0:Lorg/telegram/ui/PeopleNearbyActivity;
@@ -467,20 +467,22 @@
 
     add-int/lit8 p2, p2, -0x5
 
-    const-string v0, "ShowVotes"
+    new-array v0, v4, [Ljava/lang/Object;
 
-    invoke-static {v0, p2}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    const-string v1, "ShowVotes"
+
+    invoke-static {v1, p2, v0}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p2
 
-    const v0, 0x7f07005d
+    const v0, 0x7f07004b
 
     invoke-virtual {p1, p2, v3, v0, v4}, Lorg/telegram/ui/Cells/ManageChatTextCell;->setText(Ljava/lang/String;Ljava/lang/String;IZ)V
 
-    goto/16 :goto_1fc
+    goto/16 :goto_200
 
     .line 996
-    :cond_f1
+    :cond_f3
     iget-object p1, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     check-cast p1, Lorg/telegram/ui/Cells/ShadowSectionCell;
@@ -492,11 +494,11 @@
 
     move-result v0
 
-    const v1, 0x7f07012c
+    const v1, 0x7f0700fb
 
     const-string v2, "windowBackgroundGrayShadow"
 
-    if-ne p2, v0, :cond_10d
+    if-ne p2, v0, :cond_10f
 
     .line 998
     iget-object p2, p0, Lorg/telegram/ui/PeopleNearbyActivity$ListAdapter;->mContext:Landroid/content/Context;
@@ -507,22 +509,22 @@
 
     invoke-virtual {p1, p2}, Landroid/view/View;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    goto/16 :goto_1fc
+    goto/16 :goto_200
 
     .line 999
-    :cond_10d
+    :cond_10f
     iget-object v0, p0, Lorg/telegram/ui/PeopleNearbyActivity$ListAdapter;->this$0:Lorg/telegram/ui/PeopleNearbyActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/PeopleNearbyActivity;->access$1600(Lorg/telegram/ui/PeopleNearbyActivity;)I
 
     move-result v0
 
-    if-ne p2, v0, :cond_123
+    if-ne p2, v0, :cond_125
 
     .line 1000
     iget-object p2, p0, Lorg/telegram/ui/PeopleNearbyActivity$ListAdapter;->mContext:Landroid/content/Context;
 
-    const v0, 0x7f07012d
+    const v0, 0x7f0700fc
 
     invoke-static {p2, v0, v2}, Lorg/telegram/ui/ActionBar/Theme;->getThemedDrawable(Landroid/content/Context;ILjava/lang/String;)Landroid/graphics/drawable/Drawable;
 
@@ -530,17 +532,17 @@
 
     invoke-virtual {p1, p2}, Landroid/view/View;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    goto/16 :goto_1fc
+    goto/16 :goto_200
 
     .line 1001
-    :cond_123
+    :cond_125
     iget-object v0, p0, Lorg/telegram/ui/PeopleNearbyActivity$ListAdapter;->this$0:Lorg/telegram/ui/PeopleNearbyActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/PeopleNearbyActivity;->access$1000(Lorg/telegram/ui/PeopleNearbyActivity;)I
 
     move-result v0
 
-    if-ne p2, v0, :cond_1fc
+    if-ne p2, v0, :cond_200
 
     .line 1002
     iget-object p2, p0, Lorg/telegram/ui/PeopleNearbyActivity$ListAdapter;->mContext:Landroid/content/Context;
@@ -551,10 +553,10 @@
 
     invoke-virtual {p1, p2}, Landroid/view/View;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    goto/16 :goto_1fc
+    goto/16 :goto_200
 
     .line 967
-    :cond_136
+    :cond_138
     iget-object p1, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     check-cast p1, Lorg/telegram/ui/Cells/ManageChatUserCell;
@@ -573,7 +575,7 @@
 
     move-result v0
 
-    if-lt p2, v0, :cond_193
+    if-lt p2, v0, :cond_195
 
     iget-object v0, p0, Lorg/telegram/ui/PeopleNearbyActivity$ListAdapter;->this$0:Lorg/telegram/ui/PeopleNearbyActivity;
 
@@ -581,7 +583,7 @@
 
     move-result v0
 
-    if-ge p2, v0, :cond_193
+    if-ge p2, v0, :cond_195
 
     .line 970
     iget-object v0, p0, Lorg/telegram/ui/PeopleNearbyActivity$ListAdapter;->this$0:Lorg/telegram/ui/PeopleNearbyActivity;
@@ -624,7 +626,7 @@
 
     move-result-object v1
 
-    if-eqz v1, :cond_1fc
+    if-eqz v1, :cond_200
 
     .line 974
     invoke-direct {p0, v0}, Lorg/telegram/ui/PeopleNearbyActivity$ListAdapter;->formatDistance(Lorg/telegram/tgnet/TLRPC$TL_peerLocated;)Ljava/lang/String;
@@ -637,7 +639,7 @@
 
     move-result v6
 
-    if-ne v6, v2, :cond_18e
+    if-ne v6, v2, :cond_190
 
     iget-object v2, p0, Lorg/telegram/ui/PeopleNearbyActivity$ListAdapter;->this$0:Lorg/telegram/ui/PeopleNearbyActivity;
 
@@ -647,25 +649,25 @@
 
     sub-int/2addr v2, v5
 
-    if-eq p2, v2, :cond_18f
+    if-eq p2, v2, :cond_191
 
-    :cond_18e
+    :cond_190
     const/4 v4, 0x1
 
-    :cond_18f
+    :cond_191
     invoke-virtual {p1, v1, v3, v0, v4}, Lorg/telegram/ui/Cells/ManageChatUserCell;->setData(Ljava/lang/Object;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)V
 
-    goto :goto_1fc
+    goto :goto_200
 
     .line 976
-    :cond_193
+    :cond_195
     iget-object v0, p0, Lorg/telegram/ui/PeopleNearbyActivity$ListAdapter;->this$0:Lorg/telegram/ui/PeopleNearbyActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/PeopleNearbyActivity;->access$600(Lorg/telegram/ui/PeopleNearbyActivity;)I
 
     move-result v0
 
-    if-lt p2, v0, :cond_1fc
+    if-lt p2, v0, :cond_200
 
     iget-object v0, p0, Lorg/telegram/ui/PeopleNearbyActivity$ListAdapter;->this$0:Lorg/telegram/ui/PeopleNearbyActivity;
 
@@ -673,7 +675,7 @@
 
     move-result v0
 
-    if-ge p2, v0, :cond_1fc
+    if-ge p2, v0, :cond_200
 
     .line 977
     iget-object v0, p0, Lorg/telegram/ui/PeopleNearbyActivity$ListAdapter;->this$0:Lorg/telegram/ui/PeopleNearbyActivity;
@@ -702,19 +704,19 @@
 
     instance-of v6, v2, Lorg/telegram/tgnet/TLRPC$TL_peerChat;
 
-    if-eqz v6, :cond_1bf
+    if-eqz v6, :cond_1c1
 
     .line 981
     iget-wide v6, v2, Lorg/telegram/tgnet/TLRPC$Peer;->chat_id:J
 
-    goto :goto_1c1
+    goto :goto_1c3
 
     .line 983
-    :cond_1bf
+    :cond_1c1
     iget-wide v6, v2, Lorg/telegram/tgnet/TLRPC$Peer;->channel_id:J
 
     .line 985
-    :goto_1c1
+    :goto_1c3
     iget-object v2, p0, Lorg/telegram/ui/PeopleNearbyActivity$ListAdapter;->this$0:Lorg/telegram/ui/PeopleNearbyActivity;
 
     invoke-virtual {v2}, Lorg/telegram/ui/ActionBar/BaseFragment;->getMessagesController()Lorg/telegram/messenger/MessagesController;
@@ -729,7 +731,7 @@
 
     move-result-object v2
 
-    if-eqz v2, :cond_1fc
+    if-eqz v2, :cond_200
 
     .line 987
     invoke-direct {p0, v0}, Lorg/telegram/ui/PeopleNearbyActivity$ListAdapter;->formatDistance(Lorg/telegram/tgnet/TLRPC$TL_peerLocated;)Ljava/lang/String;
@@ -739,16 +741,18 @@
     .line 988
     iget v6, v2, Lorg/telegram/tgnet/TLRPC$Chat;->participants_count:I
 
-    if-eqz v6, :cond_1eb
+    if-eqz v6, :cond_1ef
 
     new-array v1, v1, [Ljava/lang/Object;
 
     aput-object v0, v1, v4
 
-    const-string v0, "Members"
+    new-array v0, v4, [Ljava/lang/Object;
+
+    const-string v7, "Members"
 
     .line 989
-    invoke-static {v0, v6}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    invoke-static {v7, v6, v0}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -761,7 +765,7 @@
     move-result-object v0
 
     .line 991
-    :cond_1eb
+    :cond_1ef
     iget-object v1, p0, Lorg/telegram/ui/PeopleNearbyActivity$ListAdapter;->this$0:Lorg/telegram/ui/PeopleNearbyActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/PeopleNearbyActivity;->access$800(Lorg/telegram/ui/PeopleNearbyActivity;)Ljava/util/ArrayList;
@@ -774,15 +778,15 @@
 
     sub-int/2addr v1, v5
 
-    if-eq p2, v1, :cond_1f9
+    if-eq p2, v1, :cond_1fd
 
     const/4 v4, 0x1
 
-    :cond_1f9
+    :cond_1fd
     invoke-virtual {p1, v2, v3, v0, v4}, Lorg/telegram/ui/Cells/ManageChatUserCell;->setData(Ljava/lang/Object;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)V
 
-    :cond_1fc
-    :goto_1fc
+    :cond_200
+    :goto_200
     return-void
 .end method
 

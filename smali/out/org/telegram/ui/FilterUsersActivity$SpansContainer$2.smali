@@ -24,7 +24,7 @@
 .method constructor <init>(Lorg/telegram/ui/FilterUsersActivity$SpansContainer;Lorg/telegram/ui/Components/GroupCreateSpan;)V
     .registers 3
 
-    .line 315
+    .line 316
     iput-object p1, p0, Lorg/telegram/ui/FilterUsersActivity$SpansContainer$2;->this$1:Lorg/telegram/ui/FilterUsersActivity$SpansContainer;
 
     iput-object p2, p0, Lorg/telegram/ui/FilterUsersActivity$SpansContainer$2;->val$span:Lorg/telegram/ui/Components/GroupCreateSpan;
@@ -39,33 +39,33 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .registers 3
 
-    .line 318
+    .line 319
     iget-object p1, p0, Lorg/telegram/ui/FilterUsersActivity$SpansContainer$2;->this$1:Lorg/telegram/ui/FilterUsersActivity$SpansContainer;
 
     iget-object v0, p0, Lorg/telegram/ui/FilterUsersActivity$SpansContainer$2;->val$span:Lorg/telegram/ui/Components/GroupCreateSpan;
 
     invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
 
-    .line 319
+    .line 320
     iget-object p1, p0, Lorg/telegram/ui/FilterUsersActivity$SpansContainer$2;->this$1:Lorg/telegram/ui/FilterUsersActivity$SpansContainer;
 
     const/4 v0, 0x0
 
     invoke-static {p1, v0}, Lorg/telegram/ui/FilterUsersActivity$SpansContainer;->access$1002(Lorg/telegram/ui/FilterUsersActivity$SpansContainer;Landroid/view/View;)Landroid/view/View;
 
-    .line 320
+    .line 321
     iget-object p1, p0, Lorg/telegram/ui/FilterUsersActivity$SpansContainer$2;->this$1:Lorg/telegram/ui/FilterUsersActivity$SpansContainer;
 
     invoke-static {p1, v0}, Lorg/telegram/ui/FilterUsersActivity$SpansContainer;->access$802(Lorg/telegram/ui/FilterUsersActivity$SpansContainer;Landroid/animation/AnimatorSet;)Landroid/animation/AnimatorSet;
 
-    .line 321
+    .line 322
     iget-object p1, p0, Lorg/telegram/ui/FilterUsersActivity$SpansContainer$2;->this$1:Lorg/telegram/ui/FilterUsersActivity$SpansContainer;
 
     const/4 v0, 0x0
 
     invoke-static {p1, v0}, Lorg/telegram/ui/FilterUsersActivity$SpansContainer;->access$902(Lorg/telegram/ui/FilterUsersActivity$SpansContainer;Z)Z
 
-    .line 322
+    .line 323
     iget-object p1, p0, Lorg/telegram/ui/FilterUsersActivity$SpansContainer$2;->this$1:Lorg/telegram/ui/FilterUsersActivity$SpansContainer;
 
     iget-object p1, p1, Lorg/telegram/ui/FilterUsersActivity$SpansContainer;->this$0:Lorg/telegram/ui/FilterUsersActivity;
@@ -78,7 +78,7 @@
 
     invoke-virtual {p1, v0}, Lorg/telegram/ui/Components/EditTextBoldCursor;->setAllowDrawCursor(Z)V
 
-    .line 323
+    .line 324
     iget-object p1, p0, Lorg/telegram/ui/FilterUsersActivity$SpansContainer$2;->this$1:Lorg/telegram/ui/FilterUsersActivity$SpansContainer;
 
     iget-object p1, p1, Lorg/telegram/ui/FilterUsersActivity$SpansContainer;->this$0:Lorg/telegram/ui/FilterUsersActivity;
@@ -93,7 +93,7 @@
 
     if-eqz p1, :cond_3d
 
-    .line 324
+    .line 325
     iget-object p1, p0, Lorg/telegram/ui/FilterUsersActivity$SpansContainer$2;->this$1:Lorg/telegram/ui/FilterUsersActivity$SpansContainer;
 
     iget-object p1, p1, Lorg/telegram/ui/FilterUsersActivity$SpansContainer;->this$0:Lorg/telegram/ui/FilterUsersActivity;

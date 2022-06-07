@@ -2,38 +2,42 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Landroid/webkit/ValueCallback;
 
 
-# instance fields
-.field public final synthetic f$0:Lorg/telegram/ui/Components/BotWebViewContainer;
-
-.field public final synthetic f$1:Lorg/telegram/tgnet/TLObject;
+# static fields
+.field public static final synthetic INSTANCE:Lorg/telegram/ui/Components/BotWebViewContainer$$ExternalSyntheticLambda2;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lorg/telegram/ui/Components/BotWebViewContainer;Lorg/telegram/tgnet/TLObject;)V
-    .registers 3
+.method static synthetic constructor <clinit>()V
+    .registers 1
+
+    new-instance v0, Lorg/telegram/ui/Components/BotWebViewContainer$$ExternalSyntheticLambda2;
+
+    invoke-direct {v0}, Lorg/telegram/ui/Components/BotWebViewContainer$$ExternalSyntheticLambda2;-><init>()V
+
+    sput-object v0, Lorg/telegram/ui/Components/BotWebViewContainer$$ExternalSyntheticLambda2;->INSTANCE:Lorg/telegram/ui/Components/BotWebViewContainer$$ExternalSyntheticLambda2;
+
+    return-void
+.end method
+
+.method private synthetic constructor <init>()V
+    .registers 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lorg/telegram/ui/Components/BotWebViewContainer$$ExternalSyntheticLambda2;->f$0:Lorg/telegram/ui/Components/BotWebViewContainer;
-
-    iput-object p2, p0, Lorg/telegram/ui/Components/BotWebViewContainer$$ExternalSyntheticLambda2;->f$1:Lorg/telegram/tgnet/TLObject;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .registers 3
+.method public final onReceiveValue(Ljava/lang/Object;)V
+    .registers 2
 
-    iget-object v0, p0, Lorg/telegram/ui/Components/BotWebViewContainer$$ExternalSyntheticLambda2;->f$0:Lorg/telegram/ui/Components/BotWebViewContainer;
+    check-cast p1, Ljava/lang/String;
 
-    iget-object v1, p0, Lorg/telegram/ui/Components/BotWebViewContainer$$ExternalSyntheticLambda2;->f$1:Lorg/telegram/tgnet/TLObject;
-
-    invoke-static {v0, v1}, Lorg/telegram/ui/Components/BotWebViewContainer;->$r8$lambda$SCUhvmXNxwfCssobaZ3vS5mb9tE(Lorg/telegram/ui/Components/BotWebViewContainer;Lorg/telegram/tgnet/TLObject;)V
+    invoke-static {p1}, Lorg/telegram/ui/Components/BotWebViewContainer;->$r8$lambda$ep-lWfpb4jAiv6XQEy9sHnI8X9c(Ljava/lang/String;)V
 
     return-void
 .end method

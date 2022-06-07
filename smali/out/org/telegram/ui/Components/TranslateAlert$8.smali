@@ -24,7 +24,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/TranslateAlert;Landroid/text/style/URLSpan;)V
     .registers 3
 
-    .line 948
+    .line 950
     iput-object p1, p0, Lorg/telegram/ui/Components/TranslateAlert$8;->this$0:Lorg/telegram/ui/Components/TranslateAlert;
 
     iput-object p2, p0, Lorg/telegram/ui/Components/TranslateAlert$8;->val$urlSpan:Landroid/text/style/URLSpan;
@@ -39,7 +39,7 @@
 .method public onClick(Landroid/view/View;)V
     .registers 4
 
-    .line 951
+    .line 953
     iget-object p1, p0, Lorg/telegram/ui/Components/TranslateAlert$8;->this$0:Lorg/telegram/ui/Components/TranslateAlert;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/TranslateAlert;->access$2200(Lorg/telegram/ui/Components/TranslateAlert;)Lorg/telegram/ui/Components/TranslateAlert$OnLinkPress;
@@ -48,7 +48,7 @@
 
     if-eqz p1, :cond_22
 
-    .line 952
+    .line 954
     iget-object p1, p0, Lorg/telegram/ui/Components/TranslateAlert$8;->this$0:Lorg/telegram/ui/Components/TranslateAlert;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/TranslateAlert;->access$2200(Lorg/telegram/ui/Components/TranslateAlert;)Lorg/telegram/ui/Components/TranslateAlert$OnLinkPress;
@@ -63,21 +63,21 @@
 
     if-eqz p1, :cond_32
 
-    .line 953
+    .line 955
     iget-object p1, p0, Lorg/telegram/ui/Components/TranslateAlert$8;->this$0:Lorg/telegram/ui/Components/TranslateAlert;
 
     const/4 v0, 0x1
 
     invoke-static {p1, v0}, Lorg/telegram/ui/Components/TranslateAlert;->access$2302(Lorg/telegram/ui/Components/TranslateAlert;Z)Z
 
-    .line 954
+    .line 956
     iget-object p1, p0, Lorg/telegram/ui/Components/TranslateAlert$8;->this$0:Lorg/telegram/ui/Components/TranslateAlert;
 
     invoke-virtual {p1}, Lorg/telegram/ui/Components/TranslateAlert;->dismiss()V
 
     goto :goto_32
 
-    .line 957
+    .line 959
     :cond_22
     iget-object p1, p0, Lorg/telegram/ui/Components/TranslateAlert$8;->this$0:Lorg/telegram/ui/Components/TranslateAlert;
 
@@ -103,7 +103,7 @@
 .method public updateDrawState(Landroid/text/TextPaint;)V
     .registers 4
 
-    .line 963
+    .line 965
     invoke-virtual {p1}, Landroid/text/TextPaint;->getAlpha()I
 
     move-result v0
@@ -120,7 +120,7 @@
 
     move-result v0
 
-    .line 964
+    .line 966
     iget-object v1, p0, Lorg/telegram/ui/Components/TranslateAlert$8;->val$urlSpan:Landroid/text/style/URLSpan;
 
     instance-of v1, v1, Lorg/telegram/ui/Components/URLSpanNoUnderline;
@@ -129,20 +129,20 @@
 
     const/4 v1, 0x1
 
-    .line 965
+    .line 967
     invoke-virtual {p1, v1}, Landroid/text/TextPaint;->setUnderlineText(Z)V
 
     :cond_1a
     const-string v1, "dialogTextLink"
 
-    .line 967
+    .line 969
     invoke-static {v1}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
 
     move-result v1
 
     invoke-virtual {p1, v1}, Landroid/text/TextPaint;->setColor(I)V
 
-    .line 968
+    .line 970
     invoke-virtual {p1, v0}, Landroid/text/TextPaint;->setAlpha(I)V
 
     return-void

@@ -24,7 +24,7 @@
 .method constructor <init>(Lorg/telegram/ui/ChatEditActivity;Z)V
     .registers 3
 
-    .line 1224
+    .line 1221
     iput-object p1, p0, Lorg/telegram/ui/ChatEditActivity$9;->this$0:Lorg/telegram/ui/ChatEditActivity;
 
     iput-boolean p2, p0, Lorg/telegram/ui/ChatEditActivity$9;->val$show:Z
@@ -39,7 +39,7 @@
 .method public onAnimationCancel(Landroid/animation/Animator;)V
     .registers 3
 
-    .line 1239
+    .line 1236
     iget-object p1, p0, Lorg/telegram/ui/ChatEditActivity$9;->this$0:Lorg/telegram/ui/ChatEditActivity;
 
     const/4 v0, 0x0
@@ -52,7 +52,7 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .registers 3
 
-    .line 1227
+    .line 1224
     iget-object p1, p0, Lorg/telegram/ui/ChatEditActivity$9;->this$0:Lorg/telegram/ui/ChatEditActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/ChatEditActivity;->access$1100(Lorg/telegram/ui/ChatEditActivity;)Landroid/animation/AnimatorSet;
@@ -71,13 +71,13 @@
 
     goto :goto_2e
 
-    .line 1230
+    .line 1227
     :cond_11
     iget-boolean p1, p0, Lorg/telegram/ui/ChatEditActivity$9;->val$show:Z
 
     if-nez p1, :cond_28
 
-    .line 1231
+    .line 1228
     iget-object p1, p0, Lorg/telegram/ui/ChatEditActivity$9;->this$0:Lorg/telegram/ui/ChatEditActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/ChatEditActivity;->access$1200(Lorg/telegram/ui/ChatEditActivity;)Lorg/telegram/ui/Components/RadialProgressView;
@@ -88,7 +88,7 @@
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
 
-    .line 1232
+    .line 1229
     iget-object p1, p0, Lorg/telegram/ui/ChatEditActivity$9;->this$0:Lorg/telegram/ui/ChatEditActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/ChatEditActivity;->access$900(Lorg/telegram/ui/ChatEditActivity;)Landroid/view/View;
@@ -97,7 +97,7 @@
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
 
-    .line 1234
+    .line 1231
     :cond_28
     iget-object p1, p0, Lorg/telegram/ui/ChatEditActivity$9;->this$0:Lorg/telegram/ui/ChatEditActivity;
 

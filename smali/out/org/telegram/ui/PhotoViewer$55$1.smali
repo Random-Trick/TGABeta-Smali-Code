@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/PhotoViewer$55;)V
     .registers 2
 
-    .line 8927
+    .line 9110
     iput-object p1, p0, Lorg/telegram/ui/PhotoViewer$55$1;->this$1:Lorg/telegram/ui/PhotoViewer$55;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -35,12 +35,12 @@
 .method public onAnimationStart(Landroid/animation/Animator;)V
     .registers 5
 
-    .line 8930
+    .line 9113
     iget-object p1, p0, Lorg/telegram/ui/PhotoViewer$55$1;->this$1:Lorg/telegram/ui/PhotoViewer$55;
 
     iget-object p1, p1, Lorg/telegram/ui/PhotoViewer$55;->this$0:Lorg/telegram/ui/PhotoViewer;
 
-    invoke-static {p1}, Lorg/telegram/ui/PhotoViewer;->access$7600(Lorg/telegram/ui/PhotoViewer;)Landroid/widget/FrameLayout;
+    invoke-static {p1}, Lorg/telegram/ui/PhotoViewer;->access$7500(Lorg/telegram/ui/PhotoViewer;)Landroid/widget/FrameLayout;
 
     move-result-object p1
 
@@ -48,34 +48,34 @@
 
     invoke-virtual {p1, v0}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
-    .line 8931
+    .line 9114
     iget-object p1, p0, Lorg/telegram/ui/PhotoViewer$55$1;->this$1:Lorg/telegram/ui/PhotoViewer$55;
 
     iget-object p1, p1, Lorg/telegram/ui/PhotoViewer$55;->this$0:Lorg/telegram/ui/PhotoViewer;
 
-    invoke-static {p1}, Lorg/telegram/ui/PhotoViewer;->access$7700(Lorg/telegram/ui/PhotoViewer;)Landroid/widget/ImageView;
+    invoke-static {p1}, Lorg/telegram/ui/PhotoViewer;->access$7600(Lorg/telegram/ui/PhotoViewer;)Landroid/widget/ImageView;
 
     move-result-object p1
 
     invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 8932
+    .line 9115
     iget-object p1, p0, Lorg/telegram/ui/PhotoViewer$55$1;->this$1:Lorg/telegram/ui/PhotoViewer$55;
 
     iget-object p1, p1, Lorg/telegram/ui/PhotoViewer$55;->this$0:Lorg/telegram/ui/PhotoViewer;
 
-    invoke-static {p1}, Lorg/telegram/ui/PhotoViewer;->access$7000(Lorg/telegram/ui/PhotoViewer;)Lorg/telegram/ui/ActionBar/ActionBar;
+    invoke-static {p1}, Lorg/telegram/ui/PhotoViewer;->access$6900(Lorg/telegram/ui/PhotoViewer;)Lorg/telegram/ui/ActionBar/ActionBar;
 
     move-result-object p1
 
     invoke-virtual {p1, v0}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
-    .line 8933
+    .line 9116
     iget-object p1, p0, Lorg/telegram/ui/PhotoViewer$55$1;->this$1:Lorg/telegram/ui/PhotoViewer$55;
 
     iget-object p1, p1, Lorg/telegram/ui/PhotoViewer$55;->this$0:Lorg/telegram/ui/PhotoViewer;
 
-    invoke-static {p1}, Lorg/telegram/ui/PhotoViewer;->access$8600(Lorg/telegram/ui/PhotoViewer;)Z
+    invoke-static {p1}, Lorg/telegram/ui/PhotoViewer;->access$8500(Lorg/telegram/ui/PhotoViewer;)Z
 
     move-result p1
 
@@ -83,12 +83,12 @@
 
     if-eqz p1, :cond_49
 
-    .line 8934
+    .line 9117
     iget-object p1, p0, Lorg/telegram/ui/PhotoViewer$55$1;->this$1:Lorg/telegram/ui/PhotoViewer$55;
 
     iget-object p1, p1, Lorg/telegram/ui/PhotoViewer$55;->this$0:Lorg/telegram/ui/PhotoViewer;
 
-    invoke-static {p1}, Lorg/telegram/ui/PhotoViewer;->access$8700(Lorg/telegram/ui/PhotoViewer;)Lorg/telegram/ui/PhotoViewer$CaptionTextViewSwitcher;
+    invoke-static {p1}, Lorg/telegram/ui/PhotoViewer;->access$8600(Lorg/telegram/ui/PhotoViewer;)Lorg/telegram/ui/PhotoViewer$CaptionTextViewSwitcher;
 
     move-result-object p1
 
@@ -96,7 +96,7 @@
 
     iget-object v2, v2, Lorg/telegram/ui/PhotoViewer$55;->this$0:Lorg/telegram/ui/PhotoViewer;
 
-    invoke-static {v2}, Lorg/telegram/ui/PhotoViewer;->access$8700(Lorg/telegram/ui/PhotoViewer;)Lorg/telegram/ui/PhotoViewer$CaptionTextViewSwitcher;
+    invoke-static {v2}, Lorg/telegram/ui/PhotoViewer;->access$8600(Lorg/telegram/ui/PhotoViewer;)Lorg/telegram/ui/PhotoViewer$CaptionTextViewSwitcher;
 
     move-result-object v2
 
@@ -116,7 +116,7 @@
     :goto_46
     invoke-virtual {p1, v2}, Lorg/telegram/ui/PhotoViewer$CaptionTextViewSwitcher;->setVisibility(I)V
 
-    .line 8936
+    .line 9119
     :cond_49
     iget-object p1, p0, Lorg/telegram/ui/PhotoViewer$55$1;->this$1:Lorg/telegram/ui/PhotoViewer$55;
 
@@ -167,7 +167,7 @@
 
     iget-object p1, p1, Lorg/telegram/ui/PhotoViewer$55;->this$0:Lorg/telegram/ui/PhotoViewer;
 
-    invoke-static {p1}, Lorg/telegram/ui/PhotoViewer;->access$24300(Lorg/telegram/ui/PhotoViewer;)Ljava/util/ArrayList;
+    invoke-static {p1}, Lorg/telegram/ui/PhotoViewer;->access$24400(Lorg/telegram/ui/PhotoViewer;)Ljava/util/ArrayList;
 
     move-result-object p1
 
@@ -179,24 +179,24 @@
 
     if-le p1, v1, :cond_98
 
-    .line 8937
+    .line 9120
     :cond_82
     iget-object p1, p0, Lorg/telegram/ui/PhotoViewer$55$1;->this$1:Lorg/telegram/ui/PhotoViewer$55;
 
     iget-object p1, p1, Lorg/telegram/ui/PhotoViewer$55;->this$0:Lorg/telegram/ui/PhotoViewer;
 
-    invoke-static {p1}, Lorg/telegram/ui/PhotoViewer;->access$7200(Lorg/telegram/ui/PhotoViewer;)Lorg/telegram/ui/Components/CheckBox;
+    invoke-static {p1}, Lorg/telegram/ui/PhotoViewer;->access$7100(Lorg/telegram/ui/PhotoViewer;)Lorg/telegram/ui/Components/CheckBox;
 
     move-result-object p1
 
     invoke-virtual {p1, v0}, Lorg/telegram/ui/Components/CheckBox;->setVisibility(I)V
 
-    .line 8938
+    .line 9121
     iget-object p1, p0, Lorg/telegram/ui/PhotoViewer$55$1;->this$1:Lorg/telegram/ui/PhotoViewer$55;
 
     iget-object p1, p1, Lorg/telegram/ui/PhotoViewer$55;->this$0:Lorg/telegram/ui/PhotoViewer;
 
-    invoke-static {p1}, Lorg/telegram/ui/PhotoViewer;->access$7300(Lorg/telegram/ui/PhotoViewer;)Lorg/telegram/ui/PhotoViewer$CounterView;
+    invoke-static {p1}, Lorg/telegram/ui/PhotoViewer;->access$7200(Lorg/telegram/ui/PhotoViewer;)Lorg/telegram/ui/PhotoViewer$CounterView;
 
     move-result-object p1
 

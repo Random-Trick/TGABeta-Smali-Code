@@ -27,7 +27,7 @@
 
     iget-object v0, p0, Lorg/telegram/ui/StickersActivity$ListAdapter$$ExternalSyntheticLambda2;->f$0:Lorg/telegram/ui/StickersActivity$ListAdapter;
 
-    invoke-static {v0, p1}, Lorg/telegram/ui/StickersActivity$ListAdapter;->$r8$lambda$U55jmesGCua8DLcQ88jM3WUc_UU(Lorg/telegram/ui/StickersActivity$ListAdapter;Landroid/view/View;)V
+    invoke-static {v0, p1}, Lorg/telegram/ui/StickersActivity$ListAdapter;->$r8$lambda$FybHhAxhGBtRqebdYFmkZsDfqI4(Lorg/telegram/ui/StickersActivity$ListAdapter;Landroid/view/View;)V
 
     return-void
 .end method

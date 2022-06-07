@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/Cells/TextCheckCell;)V
     .registers 2
 
-    .line 247
+    .line 258
     iput-object p1, p0, Lorg/telegram/ui/Cells/TextCheckCell$2;->this$0:Lorg/telegram/ui/Cells/TextCheckCell;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -35,7 +35,7 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .registers 3
 
-    .line 250
+    .line 261
     iget-object p1, p0, Lorg/telegram/ui/Cells/TextCheckCell$2;->this$0:Lorg/telegram/ui/Cells/TextCheckCell;
 
     invoke-static {p1}, Lorg/telegram/ui/Cells/TextCheckCell;->access$200(Lorg/telegram/ui/Cells/TextCheckCell;)I
@@ -44,14 +44,14 @@
 
     invoke-virtual {p1, v0}, Lorg/telegram/ui/Cells/TextCheckCell;->setBackgroundColor(I)V
 
-    .line 251
+    .line 262
     iget-object p1, p0, Lorg/telegram/ui/Cells/TextCheckCell$2;->this$0:Lorg/telegram/ui/Cells/TextCheckCell;
 
     const/4 v0, 0x0
 
     invoke-static {p1, v0}, Lorg/telegram/ui/Cells/TextCheckCell;->access$202(Lorg/telegram/ui/Cells/TextCheckCell;I)I
 
-    .line 252
+    .line 263
     iget-object p1, p0, Lorg/telegram/ui/Cells/TextCheckCell$2;->this$0:Lorg/telegram/ui/Cells/TextCheckCell;
 
     invoke-virtual {p1}, Landroid/widget/FrameLayout;->invalidate()V

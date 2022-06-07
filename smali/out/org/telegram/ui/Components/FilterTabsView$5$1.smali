@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/FilterTabsView$5;Landroid/content/Context;)V
     .registers 3
 
-    .line 870
+    .line 957
     iput-object p1, p0, Lorg/telegram/ui/Components/FilterTabsView$5$1;->this$1:Lorg/telegram/ui/Components/FilterTabsView$5;
 
     invoke-direct {p0, p2}, Landroidx/recyclerview/widget/LinearSmoothScroller;-><init>(Landroid/content/Context;)V
@@ -35,7 +35,7 @@
 .method protected onTargetFound(Landroid/view/View;Landroidx/recyclerview/widget/RecyclerView$State;Landroidx/recyclerview/widget/RecyclerView$SmoothScroller$Action;)V
     .registers 8
 
-    .line 873
+    .line 960
     invoke-virtual {p0}, Landroidx/recyclerview/widget/LinearSmoothScroller;->getHorizontalSnapPreference()I
 
     move-result p2
@@ -52,7 +52,7 @@
 
     if-nez p2, :cond_1c
 
-    .line 874
+    .line 961
     invoke-virtual {p1}, Landroid/view/View;->getLeft()I
 
     move-result v2
@@ -72,7 +72,7 @@
 
     if-nez p2, :cond_3e
 
-    .line 876
+    .line 963
     invoke-virtual {p1}, Landroid/view/View;->getRight()I
 
     move-result v2
@@ -93,7 +93,7 @@
 
     if-le v2, v1, :cond_3e
 
-    .line 877
+    .line 964
     :cond_33
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
@@ -103,7 +103,7 @@
 
     goto :goto_3e
 
-    .line 875
+    .line 962
     :cond_39
     :goto_39
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -112,7 +112,7 @@
 
     add-int/2addr p2, v0
 
-    .line 880
+    .line 967
     :cond_3e
     :goto_3e
     invoke-virtual {p0}, Landroidx/recyclerview/widget/LinearSmoothScroller;->getVerticalSnapPreference()I
@@ -131,7 +131,7 @@
 
     int-to-double v0, v0
 
-    .line 881
+    .line 968
     invoke-static {v0, v1}, Ljava/lang/Math;->sqrt(D)D
 
     move-result-wide v0
@@ -140,7 +140,7 @@
 
     const/16 v1, 0xb4
 
-    .line 882
+    .line 969
     invoke-virtual {p0, v0}, Landroidx/recyclerview/widget/LinearSmoothScroller;->calculateTimeForDeceleration(I)I
 
     move-result v0
@@ -155,7 +155,7 @@
 
     neg-int p1, p1
 
-    .line 884
+    .line 971
     iget-object v1, p0, Landroidx/recyclerview/widget/LinearSmoothScroller;->mDecelerateInterpolator:Landroid/view/animation/DecelerateInterpolator;
 
     invoke-virtual {p3, p2, p1, v0, v1}, Landroidx/recyclerview/widget/RecyclerView$SmoothScroller$Action;->update(IIILandroid/view/animation/Interpolator;)V

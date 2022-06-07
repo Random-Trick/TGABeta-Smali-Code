@@ -24,12 +24,12 @@
 .method public constructor <init>(Lorg/telegram/ui/Components/SharedMediaLayout;Landroid/content/Context;)V
     .registers 3
 
-    .line 5873
+    .line 5882
     iput-object p1, p0, Lorg/telegram/ui/Components/SharedMediaLayout$GifAdapter;->this$0:Lorg/telegram/ui/Components/SharedMediaLayout;
 
     invoke-direct {p0}, Lorg/telegram/ui/Components/RecyclerListView$SelectionAdapter;-><init>()V
 
-    .line 5874
+    .line 5883
     iput-object p2, p0, Lorg/telegram/ui/Components/SharedMediaLayout$GifAdapter;->mContext:Landroid/content/Context;
 
     return-void
@@ -40,7 +40,7 @@
 .method public getItemCount()I
     .registers 3
 
-    .line 5887
+    .line 5896
     iget-object v0, p0, Lorg/telegram/ui/Components/SharedMediaLayout$GifAdapter;->this$0:Lorg/telegram/ui/Components/SharedMediaLayout;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/SharedMediaLayout;->access$600(Lorg/telegram/ui/Components/SharedMediaLayout;)[Lorg/telegram/ui/Components/SharedMediaLayout$SharedMediaData;
@@ -75,7 +75,7 @@
 
     return v0
 
-    .line 5890
+    .line 5899
     :cond_1f
     iget-object v0, p0, Lorg/telegram/ui/Components/SharedMediaLayout$GifAdapter;->this$0:Lorg/telegram/ui/Components/SharedMediaLayout;
 
@@ -105,7 +105,7 @@
 .method public getItemViewType(I)I
     .registers 3
 
-    .line 5900
+    .line 5909
     iget-object p1, p0, Lorg/telegram/ui/Components/SharedMediaLayout$GifAdapter;->this$0:Lorg/telegram/ui/Components/SharedMediaLayout;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/SharedMediaLayout;->access$600(Lorg/telegram/ui/Components/SharedMediaLayout;)[Lorg/telegram/ui/Components/SharedMediaLayout$SharedMediaData;
@@ -149,7 +149,7 @@
 .method public isEnabled(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)Z
     .registers 3
 
-    .line 5879
+    .line 5888
     iget-object p1, p0, Lorg/telegram/ui/Components/SharedMediaLayout$GifAdapter;->this$0:Lorg/telegram/ui/Components/SharedMediaLayout;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/SharedMediaLayout;->access$600(Lorg/telegram/ui/Components/SharedMediaLayout;)[Lorg/telegram/ui/Components/SharedMediaLayout$SharedMediaData;
@@ -193,7 +193,7 @@
 .method public onBindViewHolder(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;I)V
     .registers 11
 
-    .line 5920
+    .line 5929
     invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->getItemViewType()I
 
     move-result v0
@@ -202,7 +202,7 @@
 
     if-eq v0, v1, :cond_6b
 
-    .line 5921
+    .line 5930
     iget-object v0, p0, Lorg/telegram/ui/Components/SharedMediaLayout$GifAdapter;->this$0:Lorg/telegram/ui/Components/SharedMediaLayout;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/SharedMediaLayout;->access$600(Lorg/telegram/ui/Components/SharedMediaLayout;)[Lorg/telegram/ui/Components/SharedMediaLayout$SharedMediaData;
@@ -221,19 +221,19 @@
 
     check-cast p2, Lorg/telegram/messenger/MessageObject;
 
-    .line 5922
+    .line 5931
     invoke-virtual {p2}, Lorg/telegram/messenger/MessageObject;->getDocument()Lorg/telegram/tgnet/TLRPC$Document;
 
     move-result-object v0
 
     if-eqz v0, :cond_6b
 
-    .line 5924
+    .line 5933
     iget-object p1, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     check-cast p1, Lorg/telegram/ui/Cells/ContextLinkCell;
 
-    .line 5925
+    .line 5934
     iget-object v2, p2, Lorg/telegram/messenger/MessageObject;->messageOwner:Lorg/telegram/tgnet/TLRPC$Message;
 
     iget v2, v2, Lorg/telegram/tgnet/TLRPC$Message;->date:I
@@ -242,19 +242,19 @@
 
     invoke-virtual {p1, v0, p2, v2, v3}, Lorg/telegram/ui/Cells/ContextLinkCell;->setGif(Lorg/telegram/tgnet/TLRPC$Document;Ljava/lang/Object;IZ)V
 
-    .line 5926
+    .line 5935
     iget-object v0, p0, Lorg/telegram/ui/Components/SharedMediaLayout$GifAdapter;->this$0:Lorg/telegram/ui/Components/SharedMediaLayout;
 
-    invoke-static {v0}, Lorg/telegram/ui/Components/SharedMediaLayout;->access$7500(Lorg/telegram/ui/Components/SharedMediaLayout;)Z
+    invoke-static {v0}, Lorg/telegram/ui/Components/SharedMediaLayout;->access$7600(Lorg/telegram/ui/Components/SharedMediaLayout;)Z
 
     move-result v0
 
     if-eqz v0, :cond_61
 
-    .line 5927
+    .line 5936
     iget-object v0, p0, Lorg/telegram/ui/Components/SharedMediaLayout$GifAdapter;->this$0:Lorg/telegram/ui/Components/SharedMediaLayout;
 
-    invoke-static {v0}, Lorg/telegram/ui/Components/SharedMediaLayout;->access$7700(Lorg/telegram/ui/Components/SharedMediaLayout;)[Landroid/util/SparseArray;
+    invoke-static {v0}, Lorg/telegram/ui/Components/SharedMediaLayout;->access$7900(Lorg/telegram/ui/Components/SharedMediaLayout;)[Landroid/util/SparseArray;
 
     move-result-object v0
 
@@ -307,7 +307,7 @@
 
     goto :goto_6b
 
-    .line 5929
+    .line 5938
     :cond_61
     iget-object p2, p0, Lorg/telegram/ui/Components/SharedMediaLayout$GifAdapter;->this$0:Lorg/telegram/ui/Components/SharedMediaLayout;
 
@@ -325,13 +325,13 @@
 .end method
 
 .method public onCreateViewHolder(Landroid/view/ViewGroup;I)Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
-    .registers 5
+    .registers 6
 
     const/4 p1, 0x1
 
-    if-ne p2, p1, :cond_1f
+    if-ne p2, p1, :cond_25
 
-    .line 5909
+    .line 5918
     iget-object p1, p0, Lorg/telegram/ui/Components/SharedMediaLayout$GifAdapter;->mContext:Landroid/content/Context;
 
     const/4 p2, 0x5
@@ -342,11 +342,17 @@
 
     move-result-wide v0
 
-    invoke-static {p1, p2, v0, v1}, Lorg/telegram/ui/Components/SharedMediaLayout;->createEmptyStubView(Landroid/content/Context;IJ)Landroid/view/View;
+    iget-object v2, p0, Lorg/telegram/ui/Components/SharedMediaLayout$GifAdapter;->this$0:Lorg/telegram/ui/Components/SharedMediaLayout;
+
+    invoke-static {v2}, Lorg/telegram/ui/Components/SharedMediaLayout;->access$7800(Lorg/telegram/ui/Components/SharedMediaLayout;)Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;
+
+    move-result-object v2
+
+    invoke-static {p1, p2, v0, v1, v2}, Lorg/telegram/ui/Components/SharedMediaLayout;->createEmptyStubView(Landroid/content/Context;IJLorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)Landroid/view/View;
 
     move-result-object p1
 
-    .line 5910
+    .line 5919
     new-instance p2, Landroidx/recyclerview/widget/RecyclerView$LayoutParams;
 
     const/4 v0, -0x1
@@ -355,25 +361,31 @@
 
     invoke-virtual {p1, p2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 5911
+    .line 5920
     new-instance p2, Lorg/telegram/ui/Components/RecyclerListView$Holder;
 
     invoke-direct {p2, p1}, Lorg/telegram/ui/Components/RecyclerListView$Holder;-><init>(Landroid/view/View;)V
 
     return-object p2
 
-    .line 5913
-    :cond_1f
+    .line 5922
+    :cond_25
     new-instance p2, Lorg/telegram/ui/Cells/ContextLinkCell;
 
     iget-object v0, p0, Lorg/telegram/ui/Components/SharedMediaLayout$GifAdapter;->mContext:Landroid/content/Context;
 
-    invoke-direct {p2, v0, p1}, Lorg/telegram/ui/Cells/ContextLinkCell;-><init>(Landroid/content/Context;Z)V
+    iget-object v1, p0, Lorg/telegram/ui/Components/SharedMediaLayout$GifAdapter;->this$0:Lorg/telegram/ui/Components/SharedMediaLayout;
 
-    .line 5914
+    invoke-static {v1}, Lorg/telegram/ui/Components/SharedMediaLayout;->access$7800(Lorg/telegram/ui/Components/SharedMediaLayout;)Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;
+
+    move-result-object v1
+
+    invoke-direct {p2, v0, p1, v1}, Lorg/telegram/ui/Cells/ContextLinkCell;-><init>(Landroid/content/Context;ZLorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)V
+
+    .line 5923
     invoke-virtual {p2, p1}, Lorg/telegram/ui/Cells/ContextLinkCell;->setCanPreviewGif(Z)V
 
-    .line 5915
+    .line 5924
     new-instance p1, Lorg/telegram/ui/Components/RecyclerListView$Holder;
 
     invoke-direct {p1, p2}, Lorg/telegram/ui/Components/RecyclerListView$Holder;-><init>(Landroid/view/View;)V
@@ -384,22 +396,22 @@
 .method public onViewAttachedToWindow(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
     .registers 5
 
-    .line 5937
+    .line 5946
     iget-object p1, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     instance-of v0, p1, Lorg/telegram/ui/Cells/ContextLinkCell;
 
     if-eqz v0, :cond_2a
 
-    .line 5938
+    .line 5947
     check-cast p1, Lorg/telegram/ui/Cells/ContextLinkCell;
 
-    .line 5939
+    .line 5948
     invoke-virtual {p1}, Lorg/telegram/ui/Cells/ContextLinkCell;->getPhotoImage()Lorg/telegram/messenger/ImageReceiver;
 
     move-result-object p1
 
-    .line 5940
+    .line 5949
     iget-object v0, p0, Lorg/telegram/ui/Components/SharedMediaLayout$GifAdapter;->this$0:Lorg/telegram/ui/Components/SharedMediaLayout;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/SharedMediaLayout;->access$400(Lorg/telegram/ui/Components/SharedMediaLayout;)[Lorg/telegram/ui/Components/SharedMediaLayout$MediaPage;
@@ -420,19 +432,19 @@
 
     const/4 v0, 0x1
 
-    .line 5941
+    .line 5950
     invoke-virtual {p1, v0}, Lorg/telegram/messenger/ImageReceiver;->setAllowStartAnimation(Z)V
 
-    .line 5942
+    .line 5951
     invoke-virtual {p1}, Lorg/telegram/messenger/ImageReceiver;->startAnimation()V
 
     goto :goto_2a
 
-    .line 5944
+    .line 5953
     :cond_24
     invoke-virtual {p1, v1}, Lorg/telegram/messenger/ImageReceiver;->setAllowStartAnimation(Z)V
 
-    .line 5945
+    .line 5954
     invoke-virtual {p1}, Lorg/telegram/messenger/ImageReceiver;->stopAnimation()V
 
     :cond_2a

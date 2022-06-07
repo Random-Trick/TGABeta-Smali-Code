@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lorg/telegram/ui/Adapters/DialogsSearchAdapter;-><init>(Landroid/content/Context;II)V
+    value = Lorg/telegram/ui/Adapters/DialogsSearchAdapter;-><init>(Landroid/content/Context;IILandroidx/recyclerview/widget/DefaultItemAnimator;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -25,7 +25,7 @@
 .method constructor <init>(Lorg/telegram/ui/Adapters/DialogsSearchAdapter;)V
     .registers 2
 
-    .line 197
+    .line 210
     iput-object p1, p0, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$1;->this$0:Lorg/telegram/ui/Adapters/DialogsSearchAdapter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public canApplySearchResults(I)Z
     .registers 3
 
-    .line 231
+    .line 244
     iget-object v0, p0, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$1;->this$0:Lorg/telegram/ui/Adapters/DialogsSearchAdapter;
 
     invoke-static {v0}, Lorg/telegram/ui/Adapters/DialogsSearchAdapter;->access$800(Lorg/telegram/ui/Adapters/DialogsSearchAdapter;)I
@@ -81,7 +81,7 @@
 .method public onDataSetChanged(I)V
     .registers 5
 
-    .line 200
+    .line 213
     iget-object v0, p0, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$1;->this$0:Lorg/telegram/ui/Adapters/DialogsSearchAdapter;
 
     iget v1, v0, Lorg/telegram/ui/Adapters/DialogsSearchAdapter;->waitingResponseCount:I
@@ -92,10 +92,10 @@
 
     iput v1, v0, Lorg/telegram/ui/Adapters/DialogsSearchAdapter;->waitingResponseCount:I
 
-    .line 201
+    .line 214
     invoke-static {v0, p1}, Lorg/telegram/ui/Adapters/DialogsSearchAdapter;->access$002(Lorg/telegram/ui/Adapters/DialogsSearchAdapter;I)I
 
-    .line 202
+    .line 215
     iget-object v0, p0, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$1;->this$0:Lorg/telegram/ui/Adapters/DialogsSearchAdapter;
 
     invoke-static {v0}, Lorg/telegram/ui/Adapters/DialogsSearchAdapter;->access$100(Lorg/telegram/ui/Adapters/DialogsSearchAdapter;)I
@@ -104,7 +104,7 @@
 
     if-eq v0, p1, :cond_1c
 
-    .line 203
+    .line 216
     iget-object v0, p0, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$1;->this$0:Lorg/telegram/ui/Adapters/DialogsSearchAdapter;
 
     invoke-static {v0}, Lorg/telegram/ui/Adapters/DialogsSearchAdapter;->access$200(Lorg/telegram/ui/Adapters/DialogsSearchAdapter;)Ljava/util/ArrayList;
@@ -113,7 +113,7 @@
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 205
+    .line 218
     :cond_1c
     iget-object v0, p0, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$1;->this$0:Lorg/telegram/ui/Adapters/DialogsSearchAdapter;
 
@@ -123,7 +123,7 @@
 
     if-eq v0, p1, :cond_2d
 
-    .line 206
+    .line 219
     iget-object p1, p0, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$1;->this$0:Lorg/telegram/ui/Adapters/DialogsSearchAdapter;
 
     invoke-static {p1}, Lorg/telegram/ui/Adapters/DialogsSearchAdapter;->access$400(Lorg/telegram/ui/Adapters/DialogsSearchAdapter;)Ljava/util/ArrayList;
@@ -132,13 +132,13 @@
 
     invoke-virtual {p1}, Ljava/util/ArrayList;->clear()V
 
-    .line 208
+    .line 221
     :cond_2d
     iget-object p1, p0, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$1;->this$0:Lorg/telegram/ui/Adapters/DialogsSearchAdapter;
 
     invoke-static {p1, v2}, Lorg/telegram/ui/Adapters/DialogsSearchAdapter;->access$502(Lorg/telegram/ui/Adapters/DialogsSearchAdapter;Z)Z
 
-    .line 209
+    .line 222
     iget-object p1, p0, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$1;->this$0:Lorg/telegram/ui/Adapters/DialogsSearchAdapter;
 
     invoke-static {p1}, Lorg/telegram/ui/Adapters/DialogsSearchAdapter;->access$600(Lorg/telegram/ui/Adapters/DialogsSearchAdapter;)Lorg/telegram/ui/Adapters/DialogsSearchAdapter$DialogsSearchAdapterDelegate;
@@ -147,7 +147,7 @@
 
     if-eqz p1, :cond_4c
 
-    .line 210
+    .line 223
     iget-object p1, p0, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$1;->this$0:Lorg/telegram/ui/Adapters/DialogsSearchAdapter;
 
     invoke-static {p1}, Lorg/telegram/ui/Adapters/DialogsSearchAdapter;->access$600(Lorg/telegram/ui/Adapters/DialogsSearchAdapter;)Lorg/telegram/ui/Adapters/DialogsSearchAdapter$DialogsSearchAdapterDelegate;
@@ -170,13 +170,13 @@
     :goto_49
     invoke-interface {p1, v0, v2}, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$DialogsSearchAdapterDelegate;->searchStateChanged(ZZ)V
 
-    .line 212
+    .line 225
     :cond_4c
     iget-object p1, p0, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$1;->this$0:Lorg/telegram/ui/Adapters/DialogsSearchAdapter;
 
     invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->notifyDataSetChanged()V
 
-    .line 213
+    .line 226
     iget-object p1, p0, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$1;->this$0:Lorg/telegram/ui/Adapters/DialogsSearchAdapter;
 
     invoke-static {p1}, Lorg/telegram/ui/Adapters/DialogsSearchAdapter;->access$600(Lorg/telegram/ui/Adapters/DialogsSearchAdapter;)Lorg/telegram/ui/Adapters/DialogsSearchAdapter$DialogsSearchAdapterDelegate;
@@ -185,7 +185,7 @@
 
     if-eqz p1, :cond_62
 
-    .line 214
+    .line 227
     iget-object p1, p0, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$1;->this$0:Lorg/telegram/ui/Adapters/DialogsSearchAdapter;
 
     invoke-static {p1}, Lorg/telegram/ui/Adapters/DialogsSearchAdapter;->access$600(Lorg/telegram/ui/Adapters/DialogsSearchAdapter;)Lorg/telegram/ui/Adapters/DialogsSearchAdapter$DialogsSearchAdapterDelegate;
@@ -217,7 +217,7 @@
 
     const/4 v0, 0x0
 
-    .line 220
+    .line 233
     :goto_2
     invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
 
@@ -225,7 +225,7 @@
 
     if-ge v0, v1, :cond_1c
 
-    .line 221
+    .line 234
     iget-object v1, p0, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$1;->this$0:Lorg/telegram/ui/Adapters/DialogsSearchAdapter;
 
     invoke-static {v1}, Lorg/telegram/ui/Adapters/DialogsSearchAdapter;->access$700(Lorg/telegram/ui/Adapters/DialogsSearchAdapter;)Ljava/util/ArrayList;
@@ -246,7 +246,7 @@
 
     goto :goto_2
 
-    .line 223
+    .line 236
     :cond_1c
     iget-object p1, p0, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$1;->this$0:Lorg/telegram/ui/Adapters/DialogsSearchAdapter;
 
@@ -256,7 +256,7 @@
 
     if-eqz p1, :cond_36
 
-    .line 224
+    .line 237
     iget-object p1, p0, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$1;->this$0:Lorg/telegram/ui/Adapters/DialogsSearchAdapter;
 
     invoke-static {p1}, Lorg/telegram/ui/Adapters/DialogsSearchAdapter;->access$600(Lorg/telegram/ui/Adapters/DialogsSearchAdapter;)Lorg/telegram/ui/Adapters/DialogsSearchAdapter$DialogsSearchAdapterDelegate;
@@ -279,7 +279,7 @@
     :goto_33
     invoke-interface {p1, v0, p2}, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$DialogsSearchAdapterDelegate;->searchStateChanged(ZZ)V
 
-    .line 226
+    .line 239
     :cond_36
     iget-object p1, p0, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$1;->this$0:Lorg/telegram/ui/Adapters/DialogsSearchAdapter;
 

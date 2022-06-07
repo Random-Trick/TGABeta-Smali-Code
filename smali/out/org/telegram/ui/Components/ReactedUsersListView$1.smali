@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/ReactedUsersListView;Landroid/content/Context;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)V
     .registers 4
 
-    .line 71
+    .line 75
     iput-object p1, p0, Lorg/telegram/ui/Components/ReactedUsersListView$1;->this$0:Lorg/telegram/ui/Components/ReactedUsersListView;
 
     invoke-direct {p0, p2, p3}, Lorg/telegram/ui/Components/RecyclerListView;-><init>(Landroid/content/Context;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)V
@@ -35,10 +35,10 @@
 .method protected onMeasure(II)V
     .registers 3
 
-    .line 74
+    .line 78
     invoke-super {p0, p1, p2}, Lorg/telegram/ui/Components/RecyclerListView;->onMeasure(II)V
 
-    .line 75
+    .line 79
     iget-object p1, p0, Lorg/telegram/ui/Components/ReactedUsersListView$1;->this$0:Lorg/telegram/ui/Components/ReactedUsersListView;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/ReactedUsersListView;->access$000(Lorg/telegram/ui/Components/ReactedUsersListView;)V

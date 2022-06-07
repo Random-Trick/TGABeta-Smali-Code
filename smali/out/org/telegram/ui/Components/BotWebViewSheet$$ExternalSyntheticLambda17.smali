@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lorg/telegram/ui/Components/SizeNotifierFrameLayout$SizeNotifierFrameLayoutDelegate;
+.implements Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout$WebViewSwipeContainer$Delegate;
 
 
 # instance fields
@@ -22,12 +22,12 @@
 
 
 # virtual methods
-.method public final onSizeChanged(IZ)V
-    .registers 4
+.method public final onDismiss()V
+    .registers 2
 
     iget-object v0, p0, Lorg/telegram/ui/Components/BotWebViewSheet$$ExternalSyntheticLambda17;->f$0:Lorg/telegram/ui/Components/BotWebViewSheet;
 
-    invoke-static {v0, p1, p2}, Lorg/telegram/ui/Components/BotWebViewSheet;->$r8$lambda$hKH9Dus7WRVBVQ9KUzrjSz-qBhE(Lorg/telegram/ui/Components/BotWebViewSheet;IZ)V
+    invoke-virtual {v0}, Lorg/telegram/ui/Components/BotWebViewSheet;->dismiss()V
 
     return-void
 .end method

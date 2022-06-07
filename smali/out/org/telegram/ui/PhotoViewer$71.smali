@@ -30,7 +30,7 @@
 .method constructor <init>(Lorg/telegram/ui/PhotoViewer;)V
     .registers 2
 
-    .line 13418
+    .line 13607
     iput-object p1, p0, Lorg/telegram/ui/PhotoViewer$71;->this$0:Lorg/telegram/ui/PhotoViewer;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -41,30 +41,30 @@
 .method private synthetic lambda$onAnimationEnd$0()V
     .registers 3
 
-    .line 13422
+    .line 13611
     iget-object v0, p0, Lorg/telegram/ui/PhotoViewer$71;->this$0:Lorg/telegram/ui/PhotoViewer;
 
-    invoke-static {v0}, Lorg/telegram/ui/PhotoViewer;->access$26500(Lorg/telegram/ui/PhotoViewer;)Ljava/lang/Runnable;
+    invoke-static {v0}, Lorg/telegram/ui/PhotoViewer;->access$26600(Lorg/telegram/ui/PhotoViewer;)Ljava/lang/Runnable;
 
     move-result-object v0
 
     if-eqz v0, :cond_17
 
-    .line 13423
+    .line 13612
     iget-object v0, p0, Lorg/telegram/ui/PhotoViewer$71;->this$0:Lorg/telegram/ui/PhotoViewer;
 
-    invoke-static {v0}, Lorg/telegram/ui/PhotoViewer;->access$26500(Lorg/telegram/ui/PhotoViewer;)Ljava/lang/Runnable;
+    invoke-static {v0}, Lorg/telegram/ui/PhotoViewer;->access$26600(Lorg/telegram/ui/PhotoViewer;)Ljava/lang/Runnable;
 
     move-result-object v0
 
     invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 
-    .line 13424
+    .line 13613
     iget-object v0, p0, Lorg/telegram/ui/PhotoViewer$71;->this$0:Lorg/telegram/ui/PhotoViewer;
 
     const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Lorg/telegram/ui/PhotoViewer;->access$26502(Lorg/telegram/ui/PhotoViewer;Ljava/lang/Runnable;)Ljava/lang/Runnable;
+    invoke-static {v0, v1}, Lorg/telegram/ui/PhotoViewer;->access$26602(Lorg/telegram/ui/PhotoViewer;Ljava/lang/Runnable;)Ljava/lang/Runnable;
 
     :cond_17
     return-void
@@ -75,7 +75,7 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .registers 2
 
-    .line 13421
+    .line 13610
     new-instance p1, Lorg/telegram/ui/PhotoViewer$71$$ExternalSyntheticLambda0;
 
     invoke-direct {p1, p0}, Lorg/telegram/ui/PhotoViewer$71$$ExternalSyntheticLambda0;-><init>(Lorg/telegram/ui/PhotoViewer$71;)V

@@ -2,46 +2,32 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lorg/telegram/ui/Components/NumberPicker$Formatter;
+.implements Lorg/telegram/ui/ActionBar/ActionBarMenuItem$ActionBarMenuItemDelegate;
 
 
 # instance fields
-.field public final synthetic f$0:J
-
-.field public final synthetic f$1:Ljava/util/Calendar;
-
-.field public final synthetic f$2:I
+.field public final synthetic f$0:Lorg/telegram/ui/GroupCallActivity;
 
 
 # direct methods
-.method public synthetic constructor <init>(JLjava/util/Calendar;I)V
-    .registers 5
+.method public synthetic constructor <init>(Lorg/telegram/ui/GroupCallActivity;)V
+    .registers 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Lorg/telegram/ui/GroupCallActivity$$ExternalSyntheticLambda55;->f$0:J
-
-    iput-object p3, p0, Lorg/telegram/ui/GroupCallActivity$$ExternalSyntheticLambda55;->f$1:Ljava/util/Calendar;
-
-    iput p4, p0, Lorg/telegram/ui/GroupCallActivity$$ExternalSyntheticLambda55;->f$2:I
+    iput-object p1, p0, Lorg/telegram/ui/GroupCallActivity$$ExternalSyntheticLambda55;->f$0:Lorg/telegram/ui/GroupCallActivity;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final format(I)Ljava/lang/String;
-    .registers 6
+.method public final onItemClick(I)V
+    .registers 3
 
-    iget-wide v0, p0, Lorg/telegram/ui/GroupCallActivity$$ExternalSyntheticLambda55;->f$0:J
+    iget-object v0, p0, Lorg/telegram/ui/GroupCallActivity$$ExternalSyntheticLambda55;->f$0:Lorg/telegram/ui/GroupCallActivity;
 
-    iget-object v2, p0, Lorg/telegram/ui/GroupCallActivity$$ExternalSyntheticLambda55;->f$1:Ljava/util/Calendar;
+    invoke-static {v0, p1}, Lorg/telegram/ui/GroupCallActivity;->$r8$lambda$x503LiBygDGrfWXqFf7BKSgqFgc(Lorg/telegram/ui/GroupCallActivity;I)V
 
-    iget v3, p0, Lorg/telegram/ui/GroupCallActivity$$ExternalSyntheticLambda55;->f$2:I
-
-    invoke-static {v0, v1, v2, v3, p1}, Lorg/telegram/ui/GroupCallActivity;->$r8$lambda$LVdv5AtrTbWS63PIWxx1-OEfvVc(JLjava/util/Calendar;II)Ljava/lang/String;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method

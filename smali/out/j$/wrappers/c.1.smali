@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lj$/util/p;
+.implements Lj$/util/p$a;
 
 
 # instance fields
@@ -20,7 +20,7 @@
     return-void
 .end method
 
-.method public static synthetic a(Ljava/util/PrimitiveIterator$OfInt;)Lj$/util/p;
+.method public static synthetic a(Ljava/util/PrimitiveIterator$OfInt;)Lj$/util/p$a;
     .registers 2
 
     if-nez p0, :cond_4
@@ -36,7 +36,7 @@
 
     check-cast p0, Lj$/wrappers/d;
 
-    iget-object p0, p0, Lj$/wrappers/d;->a:Lj$/util/p;
+    iget-object p0, p0, Lj$/wrappers/d;->a:Lj$/util/p$a;
 
     return-object p0
 

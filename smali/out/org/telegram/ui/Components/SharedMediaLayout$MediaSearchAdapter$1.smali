@@ -19,13 +19,13 @@
 
 
 # direct methods
-.method constructor <init>(Lorg/telegram/ui/Components/SharedMediaLayout$MediaSearchAdapter;Landroid/content/Context;)V
-    .registers 3
+.method constructor <init>(Lorg/telegram/ui/Components/SharedMediaLayout$MediaSearchAdapter;Landroid/content/Context;ILorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)V
+    .registers 5
 
-    .line 5807
+    .line 5816
     iput-object p1, p0, Lorg/telegram/ui/Components/SharedMediaLayout$MediaSearchAdapter$1;->this$1:Lorg/telegram/ui/Components/SharedMediaLayout$MediaSearchAdapter;
 
-    invoke-direct {p0, p2}, Lorg/telegram/ui/Cells/SharedAudioCell;-><init>(Landroid/content/Context;)V
+    invoke-direct {p0, p2, p3, p4}, Lorg/telegram/ui/Cells/SharedAudioCell;-><init>(Landroid/content/Context;ILorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)V
 
     return-void
 .end method
@@ -35,7 +35,7 @@
 .method public needPlayMessage(Lorg/telegram/messenger/MessageObject;)Z
     .registers 6
 
-    .line 5810
+    .line 5819
     invoke-virtual {p1}, Lorg/telegram/messenger/MessageObject;->isVoice()Z
 
     move-result v0
@@ -52,7 +52,7 @@
 
     goto :goto_2c
 
-    .line 5817
+    .line 5826
     :cond_e
     invoke-virtual {p1}, Lorg/telegram/messenger/MessageObject;->isMusic()Z
 
@@ -60,14 +60,14 @@
 
     if-eqz v0, :cond_2b
 
-    .line 5818
+    .line 5827
     invoke-static {}, Lorg/telegram/messenger/MediaController;->getInstance()Lorg/telegram/messenger/MediaController;
 
     move-result-object v0
 
     iget-object v1, p0, Lorg/telegram/ui/Components/SharedMediaLayout$MediaSearchAdapter$1;->this$1:Lorg/telegram/ui/Components/SharedMediaLayout$MediaSearchAdapter;
 
-    invoke-static {v1}, Lorg/telegram/ui/Components/SharedMediaLayout$MediaSearchAdapter;->access$8200(Lorg/telegram/ui/Components/SharedMediaLayout$MediaSearchAdapter;)Ljava/util/ArrayList;
+    invoke-static {v1}, Lorg/telegram/ui/Components/SharedMediaLayout$MediaSearchAdapter;->access$8400(Lorg/telegram/ui/Components/SharedMediaLayout$MediaSearchAdapter;)Ljava/util/ArrayList;
 
     move-result-object v1
 
@@ -88,7 +88,7 @@
     :cond_2b
     return v1
 
-    .line 5811
+    .line 5820
     :cond_2c
     :goto_2c
     invoke-static {}, Lorg/telegram/messenger/MediaController;->getInstance()Lorg/telegram/messenger/MediaController;
@@ -99,7 +99,7 @@
 
     move-result v0
 
-    .line 5812
+    .line 5821
     invoke-static {}, Lorg/telegram/messenger/MediaController;->getInstance()Lorg/telegram/messenger/MediaController;
 
     move-result-object v2
@@ -108,7 +108,7 @@
 
     iget-object v3, p0, Lorg/telegram/ui/Components/SharedMediaLayout$MediaSearchAdapter$1;->this$1:Lorg/telegram/ui/Components/SharedMediaLayout$MediaSearchAdapter;
 
-    invoke-static {v3}, Lorg/telegram/ui/Components/SharedMediaLayout$MediaSearchAdapter;->access$8200(Lorg/telegram/ui/Components/SharedMediaLayout$MediaSearchAdapter;)Ljava/util/ArrayList;
+    invoke-static {v3}, Lorg/telegram/ui/Components/SharedMediaLayout$MediaSearchAdapter;->access$8400(Lorg/telegram/ui/Components/SharedMediaLayout$MediaSearchAdapter;)Ljava/util/ArrayList;
 
     move-result-object v3
 
@@ -120,14 +120,14 @@
     :goto_42
     invoke-virtual {v2, v3, v1}, Lorg/telegram/messenger/MediaController;->setVoiceMessagesPlaylist(Ljava/util/ArrayList;Z)V
 
-    .line 5813
+    .line 5822
     invoke-virtual {p1}, Lorg/telegram/messenger/MessageObject;->isRoundVideo()Z
 
     move-result p1
 
     if-eqz p1, :cond_52
 
-    .line 5814
+    .line 5823
     invoke-static {}, Lorg/telegram/messenger/MediaController;->getInstance()Lorg/telegram/messenger/MediaController;
 
     move-result-object p1

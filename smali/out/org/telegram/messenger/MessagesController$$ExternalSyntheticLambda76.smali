@@ -45,7 +45,7 @@
 
     iget-boolean v4, p0, Lorg/telegram/messenger/MessagesController$$ExternalSyntheticLambda76;->f$3:Z
 
-    invoke-static {v0, v1, v2, v3, v4}, Lorg/telegram/messenger/MessagesController;->$r8$lambda$LO8S_dWd2X5aaYLVXq414L_58Es(Lorg/telegram/messenger/MessagesController;JLandroidx/collection/LongSparseArray;Z)V
+    invoke-static {v0, v1, v2, v3, v4}, Lorg/telegram/messenger/MessagesController;->$r8$lambda$BRRGKwbBfio1CZzNIvQTBzuWeBg(Lorg/telegram/messenger/MessagesController;JLandroidx/collection/LongSparseArray;Z)V
 
     return-void
 .end method

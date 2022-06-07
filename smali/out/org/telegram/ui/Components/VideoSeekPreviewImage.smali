@@ -165,7 +165,7 @@
 
     move-result-object p1
 
-    const v1, 0x7f07041a
+    const v1, 0x7f0703fd
 
     invoke-virtual {p1, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -358,7 +358,9 @@
 
     move-result v0
 
-    iput v0, v6, Lorg/telegram/tgnet/TLRPC$Document;->size:I
+    int-to-long v0, v0
+
+    iput-wide v0, v6, Lorg/telegram/tgnet/TLRPC$Document;->size:J
 
     const-string v0, "dc"
 
@@ -441,7 +443,7 @@
 
     move-result p1
 
-    if-eqz p1, :cond_df
+    if-eqz p1, :cond_e0
 
     .line 185
     new-instance p1, Ljava/io/File;
@@ -482,10 +484,10 @@
 
     move-result-object p1
 
-    goto :goto_ec
+    goto :goto_ed
 
     .line 187
-    :cond_df
+    :cond_e0
     invoke-static {v11}, Lorg/telegram/messenger/FileLoader;->getInstance(I)Lorg/telegram/messenger/FileLoader;
 
     move-result-object p1
@@ -501,7 +503,7 @@
     move-result-object p1
 
     .line 189
-    :goto_ec
+    :goto_ed
     new-instance v0, Lorg/telegram/ui/Components/AnimatedFileDrawable;
 
     new-instance v2, Ljava/io/File;
@@ -510,9 +512,7 @@
 
     const/4 v3, 0x1
 
-    iget p1, v6, Lorg/telegram/tgnet/TLRPC$Document;->size:I
-
-    int-to-long v4, p1
+    iget-wide v4, v6, Lorg/telegram/tgnet/TLRPC$Document;->size:J
 
     const/4 v7, 0x0
 

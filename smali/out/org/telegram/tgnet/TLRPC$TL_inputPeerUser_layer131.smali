@@ -17,7 +17,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 44560
+    .line 45012
     invoke-direct {p0}, Lorg/telegram/tgnet/TLRPC$TL_inputPeerUser;-><init>()V
 
     return-void
@@ -28,7 +28,7 @@
 .method public readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
     .registers 5
 
-    .line 44565
+    .line 45017
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
@@ -37,7 +37,7 @@
 
     iput-wide v0, p0, Lorg/telegram/tgnet/TLRPC$InputPeer;->user_id:J
 
-    .line 44566
+    .line 45018
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt64(Z)J
 
     move-result-wide p1
@@ -50,19 +50,19 @@
 .method public serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
     .registers 4
 
-    .line 44570
+    .line 45022
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_inputPeerUser_layer131;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 44571
+    .line 45023
     iget-wide v0, p0, Lorg/telegram/tgnet/TLRPC$InputPeer;->user_id:J
 
     long-to-int v1, v0
 
     invoke-virtual {p1, v1}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 44572
+    .line 45024
     iget-wide v0, p0, Lorg/telegram/tgnet/TLRPC$InputPeer;->access_hash:J
 
     invoke-virtual {p1, v0, v1}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt64(J)V

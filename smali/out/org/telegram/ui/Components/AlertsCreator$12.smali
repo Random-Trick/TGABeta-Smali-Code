@@ -18,7 +18,7 @@
 .method constructor <init>(Landroid/content/Context;)V
     .registers 2
 
-    .line 2612
+    .line 2636
     invoke-direct {p0, p1}, Lorg/telegram/ui/Components/NumberPicker;-><init>(Landroid/content/Context;)V
 
     return-void
@@ -27,12 +27,16 @@
 
 # virtual methods
 .method protected getContentDescription(I)Ljava/lang/CharSequence;
-    .registers 3
+    .registers 4
 
-    const-string v0, "Minutes"
+    const/4 v0, 0x0
 
-    .line 2615
-    invoke-static {v0, p1}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    new-array v0, v0, [Ljava/lang/Object;
+
+    const-string v1, "Minutes"
+
+    .line 2639
+    invoke-static {v1, p1, v0}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
 

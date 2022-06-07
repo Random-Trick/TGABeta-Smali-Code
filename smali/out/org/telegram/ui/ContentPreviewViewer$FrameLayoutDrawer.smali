@@ -22,15 +22,15 @@
 .method public constructor <init>(Lorg/telegram/ui/ContentPreviewViewer;Landroid/content/Context;)V
     .registers 3
 
-    .line 76
+    .line 78
     iput-object p1, p0, Lorg/telegram/ui/ContentPreviewViewer$FrameLayoutDrawer;->this$0:Lorg/telegram/ui/ContentPreviewViewer;
 
-    .line 77
+    .line 79
     invoke-direct {p0, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
     const/4 p1, 0x0
 
-    .line 78
+    .line 80
     invoke-virtual {p0, p1}, Landroid/widget/FrameLayout;->setWillNotDraw(Z)V
 
     return-void
@@ -41,7 +41,7 @@
 .method protected onDraw(Landroid/graphics/Canvas;)V
     .registers 3
 
-    .line 83
+    .line 85
     iget-object v0, p0, Lorg/telegram/ui/ContentPreviewViewer$FrameLayoutDrawer;->this$0:Lorg/telegram/ui/ContentPreviewViewer;
 
     invoke-static {v0, p1}, Lorg/telegram/ui/ContentPreviewViewer;->access$000(Lorg/telegram/ui/ContentPreviewViewer;Landroid/graphics/Canvas;)V

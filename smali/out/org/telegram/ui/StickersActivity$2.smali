@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/StickersActivity;Landroid/content/Context;)V
     .registers 3
 
-    .line 246
+    .line 262
     iput-object p1, p0, Lorg/telegram/ui/StickersActivity$2;->this$0:Lorg/telegram/ui/StickersActivity;
 
     invoke-direct {p0, p2}, Landroidx/recyclerview/widget/LinearLayoutManager;-><init>(Landroid/content/Context;)V
@@ -35,7 +35,7 @@
 .method protected calculateExtraLayoutSpace(Landroidx/recyclerview/widget/RecyclerView$State;[I)V
     .registers 4
 
-    .line 254
+    .line 270
     iget-object p1, p0, Lorg/telegram/ui/StickersActivity$2;->this$0:Lorg/telegram/ui/StickersActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/StickersActivity;->access$200(Lorg/telegram/ui/StickersActivity;)Lorg/telegram/ui/Components/RecyclerListView;

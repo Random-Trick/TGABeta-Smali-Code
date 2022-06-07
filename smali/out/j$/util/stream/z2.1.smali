@@ -1,44 +1,227 @@
-.class abstract Lj$/util/stream/z2;
-.super Ljava/lang/Object;
+.class Lj$/util/stream/z2;
+.super Lj$/util/stream/U2;
+
+
+# instance fields
+.field public final synthetic b:I
+
+.field final synthetic c:Ljava/lang/Object;
+
+.field final synthetic d:Ljava/lang/Object;
+
+.field final synthetic e:Ljava/lang/Object;
 
 
 # direct methods
-.method constructor <init>()V
-    .registers 1
+.method public constructor <init>(Lj$/util/stream/e4;Lj$/util/function/BiConsumer;Lj$/util/function/BiConsumer;Lj$/util/function/y;)V
+    .registers 6
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x3
+
+    iput v0, p0, Lj$/util/stream/z2;->b:I
+
+    .line 1
+    iput-object p2, p0, Lj$/util/stream/z2;->c:Ljava/lang/Object;
+
+    iput-object p3, p0, Lj$/util/stream/z2;->d:Ljava/lang/Object;
+
+    iput-object p4, p0, Lj$/util/stream/z2;->e:Ljava/lang/Object;
+
+    invoke-direct {p0, p1}, Lj$/util/stream/U2;-><init>(Lj$/util/stream/e4;)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Lj$/util/stream/e4;Lj$/util/function/b;Lj$/util/function/BiFunction;Ljava/lang/Object;)V
+    .registers 6
+
+    const/4 v0, 0x2
+
+    iput v0, p0, Lj$/util/stream/z2;->b:I
+
+    .line 2
+    iput-object p2, p0, Lj$/util/stream/z2;->c:Ljava/lang/Object;
+
+    iput-object p3, p0, Lj$/util/stream/z2;->d:Ljava/lang/Object;
+
+    iput-object p4, p0, Lj$/util/stream/z2;->e:Ljava/lang/Object;
+
+    invoke-direct {p0, p1}, Lj$/util/stream/U2;-><init>(Lj$/util/stream/e4;)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Lj$/util/stream/e4;Lj$/util/function/b;Lj$/util/function/u;Lj$/util/function/y;)V
+    .registers 6
+
+    const/4 v0, 0x1
+
+    iput v0, p0, Lj$/util/stream/z2;->b:I
+
+    .line 3
+    iput-object p2, p0, Lj$/util/stream/z2;->c:Ljava/lang/Object;
+
+    iput-object p3, p0, Lj$/util/stream/z2;->d:Ljava/lang/Object;
+
+    iput-object p4, p0, Lj$/util/stream/z2;->e:Ljava/lang/Object;
+
+    invoke-direct {p0, p1}, Lj$/util/stream/U2;-><init>(Lj$/util/stream/e4;)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Lj$/util/stream/e4;Lj$/util/function/b;Lj$/util/function/v;Lj$/util/function/y;)V
+    .registers 6
+
+    const/4 v0, 0x4
+
+    iput v0, p0, Lj$/util/stream/z2;->b:I
+
+    .line 4
+    iput-object p2, p0, Lj$/util/stream/z2;->c:Ljava/lang/Object;
+
+    iput-object p3, p0, Lj$/util/stream/z2;->d:Ljava/lang/Object;
+
+    iput-object p4, p0, Lj$/util/stream/z2;->e:Ljava/lang/Object;
+
+    invoke-direct {p0, p1}, Lj$/util/stream/U2;-><init>(Lj$/util/stream/e4;)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Lj$/util/stream/e4;Lj$/util/function/b;Lj$/util/function/w;Lj$/util/function/y;)V
+    .registers 6
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Lj$/util/stream/z2;->b:I
+
+    .line 5
+    iput-object p2, p0, Lj$/util/stream/z2;->c:Ljava/lang/Object;
+
+    iput-object p3, p0, Lj$/util/stream/z2;->d:Ljava/lang/Object;
+
+    iput-object p4, p0, Lj$/util/stream/z2;->e:Ljava/lang/Object;
+
+    invoke-direct {p0, p1}, Lj$/util/stream/U2;-><init>(Lj$/util/stream/e4;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method abstract n0(Lj$/util/stream/n3;Lj$/util/y;)V
-.end method
+.method public a()Lj$/util/stream/S2;
+    .registers 5
 
-.method abstract o0(Lj$/util/stream/n3;Lj$/util/y;)V
-.end method
+    iget v0, p0, Lj$/util/stream/z2;->b:I
 
-.method abstract p0(Lj$/util/y;ZLj$/util/function/m;)Lj$/util/stream/B1;
-.end method
+    packed-switch v0, :pswitch_data_5e
 
-.method abstract q0(Lj$/util/y;)J
-.end method
+    goto :goto_4c
 
-.method abstract r0()Lj$/util/stream/f4;
-.end method
+    .line 1
+    :pswitch_6
+    new-instance v0, Lj$/util/stream/K2;
 
-.method abstract s0()I
-.end method
+    iget-object v1, p0, Lj$/util/stream/z2;->e:Ljava/lang/Object;
 
-.method abstract t0(JLj$/util/function/m;)Lj$/util/stream/t1;
-.end method
+    check-cast v1, Lj$/util/function/y;
 
-.method abstract u0(Lj$/util/stream/n3;Lj$/util/y;)Lj$/util/stream/n3;
-.end method
+    iget-object v2, p0, Lj$/util/stream/z2;->d:Ljava/lang/Object;
 
-.method abstract v0(Lj$/util/stream/n3;)Lj$/util/stream/n3;
-.end method
+    check-cast v2, Lj$/util/function/BiConsumer;
 
-.method abstract w0(Lj$/util/y;)Lj$/util/y;
+    iget-object v3, p0, Lj$/util/stream/z2;->c:Ljava/lang/Object;
+
+    check-cast v3, Lj$/util/function/BiConsumer;
+
+    invoke-direct {v0, v1, v2, v3}, Lj$/util/stream/K2;-><init>(Lj$/util/function/y;Lj$/util/function/BiConsumer;Lj$/util/function/BiConsumer;)V
+
+    return-object v0
+
+    .line 2
+    :pswitch_18
+    new-instance v0, Lj$/util/stream/G2;
+
+    iget-object v1, p0, Lj$/util/stream/z2;->e:Ljava/lang/Object;
+
+    iget-object v2, p0, Lj$/util/stream/z2;->d:Ljava/lang/Object;
+
+    check-cast v2, Lj$/util/function/BiFunction;
+
+    iget-object v3, p0, Lj$/util/stream/z2;->c:Ljava/lang/Object;
+
+    check-cast v3, Lj$/util/function/b;
+
+    invoke-direct {v0, v1, v2, v3}, Lj$/util/stream/G2;-><init>(Ljava/lang/Object;Lj$/util/function/BiFunction;Lj$/util/function/b;)V
+
+    return-object v0
+
+    .line 3
+    :pswitch_28
+    new-instance v0, Lj$/util/stream/F2;
+
+    iget-object v1, p0, Lj$/util/stream/z2;->e:Ljava/lang/Object;
+
+    check-cast v1, Lj$/util/function/y;
+
+    iget-object v2, p0, Lj$/util/stream/z2;->d:Ljava/lang/Object;
+
+    check-cast v2, Lj$/util/function/u;
+
+    iget-object v3, p0, Lj$/util/stream/z2;->c:Ljava/lang/Object;
+
+    check-cast v3, Lj$/util/function/b;
+
+    invoke-direct {v0, v1, v2, v3}, Lj$/util/stream/F2;-><init>(Lj$/util/function/y;Lj$/util/function/u;Lj$/util/function/b;)V
+
+    return-object v0
+
+    .line 4
+    :pswitch_3a
+    new-instance v0, Lj$/util/stream/A2;
+
+    iget-object v1, p0, Lj$/util/stream/z2;->e:Ljava/lang/Object;
+
+    check-cast v1, Lj$/util/function/y;
+
+    iget-object v2, p0, Lj$/util/stream/z2;->d:Ljava/lang/Object;
+
+    check-cast v2, Lj$/util/function/w;
+
+    iget-object v3, p0, Lj$/util/stream/z2;->c:Ljava/lang/Object;
+
+    check-cast v3, Lj$/util/function/b;
+
+    invoke-direct {v0, v1, v2, v3}, Lj$/util/stream/A2;-><init>(Lj$/util/function/y;Lj$/util/function/w;Lj$/util/function/b;)V
+
+    return-object v0
+
+    .line 5
+    :goto_4c
+    new-instance v0, Lj$/util/stream/O2;
+
+    iget-object v1, p0, Lj$/util/stream/z2;->e:Ljava/lang/Object;
+
+    check-cast v1, Lj$/util/function/y;
+
+    iget-object v2, p0, Lj$/util/stream/z2;->d:Ljava/lang/Object;
+
+    check-cast v2, Lj$/util/function/v;
+
+    iget-object v3, p0, Lj$/util/stream/z2;->c:Ljava/lang/Object;
+
+    check-cast v3, Lj$/util/function/b;
+
+    invoke-direct {v0, v1, v2, v3}, Lj$/util/stream/O2;-><init>(Lj$/util/function/y;Lj$/util/function/v;Lj$/util/function/b;)V
+
+    return-object v0
+
+    :pswitch_data_5e
+    .packed-switch 0x0
+        :pswitch_3a
+        :pswitch_28
+        :pswitch_18
+        :pswitch_6
+    .end packed-switch
 .end method

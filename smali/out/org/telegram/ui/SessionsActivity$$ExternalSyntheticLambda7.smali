@@ -12,10 +12,12 @@
 
 .field public final synthetic f$2:Lorg/telegram/tgnet/TLObject;
 
+.field public final synthetic f$3:Z
+
 
 # direct methods
-.method public synthetic constructor <init>(Lorg/telegram/ui/SessionsActivity;Lorg/telegram/tgnet/TLRPC$TL_error;Lorg/telegram/tgnet/TLObject;)V
-    .registers 4
+.method public synthetic constructor <init>(Lorg/telegram/ui/SessionsActivity;Lorg/telegram/tgnet/TLRPC$TL_error;Lorg/telegram/tgnet/TLObject;Z)V
+    .registers 5
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,13 +27,15 @@
 
     iput-object p3, p0, Lorg/telegram/ui/SessionsActivity$$ExternalSyntheticLambda7;->f$2:Lorg/telegram/tgnet/TLObject;
 
+    iput-boolean p4, p0, Lorg/telegram/ui/SessionsActivity$$ExternalSyntheticLambda7;->f$3:Z
+
     return-void
 .end method
 
 
 # virtual methods
 .method public final run()V
-    .registers 4
+    .registers 5
 
     iget-object v0, p0, Lorg/telegram/ui/SessionsActivity$$ExternalSyntheticLambda7;->f$0:Lorg/telegram/ui/SessionsActivity;
 
@@ -39,7 +43,9 @@
 
     iget-object v2, p0, Lorg/telegram/ui/SessionsActivity$$ExternalSyntheticLambda7;->f$2:Lorg/telegram/tgnet/TLObject;
 
-    invoke-static {v0, v1, v2}, Lorg/telegram/ui/SessionsActivity;->$r8$lambda$BtYp-_Dqi05o0gvvxmz3tQxqW0U(Lorg/telegram/ui/SessionsActivity;Lorg/telegram/tgnet/TLRPC$TL_error;Lorg/telegram/tgnet/TLObject;)V
+    iget-boolean v3, p0, Lorg/telegram/ui/SessionsActivity$$ExternalSyntheticLambda7;->f$3:Z
+
+    invoke-static {v0, v1, v2, v3}, Lorg/telegram/ui/SessionsActivity;->$r8$lambda$0UAwaNc3nHsdNe1S768AmwQZfF4(Lorg/telegram/ui/SessionsActivity;Lorg/telegram/tgnet/TLRPC$TL_error;Lorg/telegram/tgnet/TLObject;Z)V
 
     return-void
 .end method

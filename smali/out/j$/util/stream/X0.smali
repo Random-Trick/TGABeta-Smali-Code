@@ -2,117 +2,42 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lj$/util/function/q;
+.implements Lj$/util/function/r;
 
 
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Ljava/lang/Object;
+# static fields
+.field public static final synthetic a:Lj$/util/stream/X0;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lj$/util/stream/a1;)V
-    .registers 3
+.method static synthetic constructor <clinit>()V
+    .registers 1
 
-    const/4 v0, 0x1
+    new-instance v0, Lj$/util/stream/X0;
 
-    iput v0, p0, Lj$/util/stream/X0;->a:I
+    invoke-direct {v0}, Lj$/util/stream/X0;-><init>()V
 
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lj$/util/stream/X0;->b:Ljava/lang/Object;
+    sput-object v0, Lj$/util/stream/X0;->a:Lj$/util/stream/X0;
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lj$/util/stream/n3;)V
-    .registers 3
+.method private synthetic constructor <init>()V
+    .registers 1
 
-    const/4 v0, 0x0
-
-    iput v0, p0, Lj$/util/stream/X0;->a:I
-
-    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lj$/util/stream/X0;->b:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final accept(J)V
-    .registers 4
-
-    iget v0, p0, Lj$/util/stream/X0;->a:I
-
-    packed-switch v0, :pswitch_data_18
-
-    goto :goto_e
-
-    .line 1
-    :pswitch_6
-    iget-object v0, p0, Lj$/util/stream/X0;->b:Ljava/lang/Object;
-
-    check-cast v0, Lj$/util/stream/n3;
-
-    invoke-interface {v0, p1, p2}, Lj$/util/stream/n3;->accept(J)V
-
-    return-void
-
-    .line 2
-    :goto_e
-    iget-object v0, p0, Lj$/util/stream/X0;->b:Ljava/lang/Object;
-
-    check-cast v0, Lj$/util/stream/a1;
-
-    .line 3
-    iget-object v0, v0, Lj$/util/stream/i3;->a:Lj$/util/stream/n3;
-
-    invoke-interface {v0, p1, p2}, Lj$/util/stream/n3;->accept(J)V
-
-    return-void
-
-    :pswitch_data_18
-    .packed-switch 0x0
-        :pswitch_6
-    .end packed-switch
-.end method
-
-.method public f(Lj$/util/function/q;)Lj$/util/function/q;
+.method public final apply(J)Ljava/lang/Object;
     .registers 3
 
-    iget v0, p0, Lj$/util/stream/X0;->a:I
+    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    packed-switch v0, :pswitch_data_18
+    move-result-object p1
 
-    goto :goto_f
-
-    .line 1
-    :pswitch_6
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v0, Lj$/util/function/p;
-
-    invoke-direct {v0, p0, p1}, Lj$/util/function/p;-><init>(Lj$/util/function/q;Lj$/util/function/q;)V
-
-    return-object v0
-
-    .line 2
-    :goto_f
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v0, Lj$/util/function/p;
-
-    invoke-direct {v0, p0, p1}, Lj$/util/function/p;-><init>(Lj$/util/function/q;Lj$/util/function/q;)V
-
-    return-object v0
-
-    :pswitch_data_18
-    .packed-switch 0x0
-        :pswitch_6
-    .end packed-switch
+    return-object p1
 .end method

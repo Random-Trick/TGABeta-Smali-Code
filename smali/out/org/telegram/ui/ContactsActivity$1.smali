@@ -101,12 +101,12 @@
 
     if-eqz v0, :cond_3c
 
-    const v0, 0x7f0700da
+    const v0, 0x7f070200
 
     goto :goto_3f
 
     :cond_3c
-    const v0, 0x7f0700d9
+    const v0, 0x7f0701fe
 
     :goto_3f
     invoke-virtual {p1, v0}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->setIcon(I)V

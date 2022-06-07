@@ -45,7 +45,7 @@
 
     iget-object v4, p0, Lorg/telegram/messenger/MessagesStorage$$ExternalSyntheticLambda114;->f$3:Ljava/util/concurrent/CountDownLatch;
 
-    invoke-static {v0, v1, v2, v3, v4}, Lorg/telegram/messenger/MessagesStorage;->$r8$lambda$UTSob6q9MtCK6Z5m5D9RHDrws1Y(Lorg/telegram/messenger/MessagesStorage;J[ZLjava/util/concurrent/CountDownLatch;)V
+    invoke-static {v0, v1, v2, v3, v4}, Lorg/telegram/messenger/MessagesStorage;->$r8$lambda$gjNoYsJzw2NmcjleoAkNsU5nJbw(Lorg/telegram/messenger/MessagesStorage;J[ZLjava/util/concurrent/CountDownLatch;)V
 
     return-void
 .end method

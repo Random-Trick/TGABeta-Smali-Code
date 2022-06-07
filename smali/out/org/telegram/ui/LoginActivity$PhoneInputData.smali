@@ -34,7 +34,7 @@
 .method private constructor <init>()V
     .registers 1
 
-    .line 6133
+    .line 6280
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -43,7 +43,7 @@
 .method synthetic constructor <init>(Lorg/telegram/ui/LoginActivity$1;)V
     .registers 2
 
-    .line 6133
+    .line 6280
     invoke-direct {p0}, Lorg/telegram/ui/LoginActivity$PhoneInputData;-><init>()V
 
     return-void
@@ -52,7 +52,7 @@
 .method static synthetic access$1500(Lorg/telegram/ui/LoginActivity$PhoneInputData;)Ljava/util/List;
     .registers 1
 
-    .line 6133
+    .line 6280
     iget-object p0, p0, Lorg/telegram/ui/LoginActivity$PhoneInputData;->patterns:Ljava/util/List;
 
     return-object p0
@@ -61,7 +61,7 @@
 .method static synthetic access$1502(Lorg/telegram/ui/LoginActivity$PhoneInputData;Ljava/util/List;)Ljava/util/List;
     .registers 2
 
-    .line 6133
+    .line 6280
     iput-object p1, p0, Lorg/telegram/ui/LoginActivity$PhoneInputData;->patterns:Ljava/util/List;
 
     return-object p1
@@ -70,7 +70,7 @@
 .method static synthetic access$1600(Lorg/telegram/ui/LoginActivity$PhoneInputData;)Lorg/telegram/ui/CountrySelectActivity$Country;
     .registers 1
 
-    .line 6133
+    .line 6280
     iget-object p0, p0, Lorg/telegram/ui/LoginActivity$PhoneInputData;->country:Lorg/telegram/ui/CountrySelectActivity$Country;
 
     return-object p0
@@ -79,7 +79,7 @@
 .method static synthetic access$1602(Lorg/telegram/ui/LoginActivity$PhoneInputData;Lorg/telegram/ui/CountrySelectActivity$Country;)Lorg/telegram/ui/CountrySelectActivity$Country;
     .registers 2
 
-    .line 6133
+    .line 6280
     iput-object p1, p0, Lorg/telegram/ui/LoginActivity$PhoneInputData;->country:Lorg/telegram/ui/CountrySelectActivity$Country;
 
     return-object p1
@@ -88,7 +88,7 @@
 .method static synthetic access$1700(Lorg/telegram/ui/LoginActivity$PhoneInputData;)Ljava/lang/String;
     .registers 1
 
-    .line 6133
+    .line 6280
     iget-object p0, p0, Lorg/telegram/ui/LoginActivity$PhoneInputData;->phoneNumber:Ljava/lang/String;
 
     return-object p0
@@ -97,7 +97,7 @@
 .method static synthetic access$1702(Lorg/telegram/ui/LoginActivity$PhoneInputData;Ljava/lang/String;)Ljava/lang/String;
     .registers 2
 
-    .line 6133
+    .line 6280
     iput-object p1, p0, Lorg/telegram/ui/LoginActivity$PhoneInputData;->phoneNumber:Ljava/lang/String;
 
     return-object p1

@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout$WebViewSwipeContainer$Delegate;
+.implements Lorg/telegram/tgnet/RequestDelegate;
 
 
 # instance fields
@@ -22,12 +22,12 @@
 
 
 # virtual methods
-.method public final onDismiss()V
-    .registers 2
+.method public final run(Lorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/TLRPC$TL_error;)V
+    .registers 4
 
     iget-object v0, p0, Lorg/telegram/ui/Components/BotWebViewMenuContainer$$ExternalSyntheticLambda18;->f$0:Lorg/telegram/ui/Components/BotWebViewMenuContainer;
 
-    invoke-virtual {v0}, Lorg/telegram/ui/Components/BotWebViewMenuContainer;->dismiss()V
+    invoke-static {v0, p1, p2}, Lorg/telegram/ui/Components/BotWebViewMenuContainer;->$r8$lambda$orkueHO6ZEY7x2CoToTvCIaztns(Lorg/telegram/ui/Components/BotWebViewMenuContainer;Lorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/TLRPC$TL_error;)V
 
     return-void
 .end method

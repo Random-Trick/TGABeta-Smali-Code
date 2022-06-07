@@ -26,7 +26,7 @@
 
     move-object v0, p1
 
-    .line 24463
+    .line 24879
     iput-object v0, v12, Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$1$1;->this$2:Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$1;
 
     move-object v0, p0
@@ -63,10 +63,10 @@
 .method public dismissInternal()V
     .registers 3
 
-    .line 24466
+    .line 24882
     invoke-super {p0}, Lorg/telegram/ui/Components/ShareAlert;->dismissInternal()V
 
-    .line 24467
+    .line 24883
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$1$1;->this$2:Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$1;
 
     iget-object v0, v0, Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$1;->this$1:Lorg/telegram/ui/ChatActivity$ChatActivityAdapter;
@@ -83,13 +83,13 @@
 
     iget-object v1, v1, Lorg/telegram/ui/ChatActivity$ChatActivityAdapter;->this$0:Lorg/telegram/ui/ChatActivity;
 
-    invoke-static {v1}, Lorg/telegram/ui/ChatActivity;->access$38600(Lorg/telegram/ui/ChatActivity;)I
+    invoke-static {v1}, Lorg/telegram/ui/ChatActivity;->access$39100(Lorg/telegram/ui/ChatActivity;)I
 
     move-result v1
 
     invoke-static {v0, v1}, Lorg/telegram/messenger/AndroidUtilities;->requestAdjustResize(Landroid/app/Activity;I)V
 
-    .line 24468
+    .line 24884
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$1$1;->this$2:Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$1;
 
     iget-object v0, v0, Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$1;->this$1:Lorg/telegram/ui/ChatActivity$ChatActivityAdapter;
@@ -104,14 +104,14 @@
 
     if-nez v0, :cond_35
 
-    .line 24469
+    .line 24885
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$1$1;->this$2:Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$1;
 
     iget-object v0, v0, Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$1;->this$1:Lorg/telegram/ui/ChatActivity$ChatActivityAdapter;
 
     iget-object v0, v0, Lorg/telegram/ui/ChatActivity$ChatActivityAdapter;->this$0:Lorg/telegram/ui/ChatActivity;
 
-    invoke-static {v0}, Lorg/telegram/ui/ChatActivity;->access$38700(Lorg/telegram/ui/ChatActivity;)Landroid/view/View;
+    invoke-static {v0}, Lorg/telegram/ui/ChatActivity;->access$39200(Lorg/telegram/ui/ChatActivity;)Landroid/view/View;
 
     move-result-object v0
 
@@ -132,7 +132,7 @@
         }
     .end annotation
 
-    .line 24475
+    .line 24891
     invoke-virtual {p1}, Landroidx/collection/LongSparseArray;->size()I
 
     move-result v0
@@ -141,7 +141,7 @@
 
     if-ne v0, v1, :cond_24
 
-    .line 24476
+    .line 24892
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$1$1;->this$2:Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$1;
 
     iget-object v0, v0, Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$1;->this$1:Lorg/telegram/ui/ChatActivity$ChatActivityAdapter;
@@ -172,7 +172,7 @@
 
     goto :goto_43
 
-    .line 24478
+    .line 24894
     :cond_24
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$1$1;->this$2:Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$1;
 

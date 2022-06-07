@@ -2,38 +2,44 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lorg/telegram/tgnet/RequestDelegate;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
 .field public final synthetic f$0:Lorg/telegram/ui/LoginActivity$LoginActivitySmsView;
 
-.field public final synthetic f$1:Landroid/os/Bundle;
+.field public final synthetic f$1:Lorg/telegram/tgnet/TLRPC$TL_error;
+
+.field public final synthetic f$2:Lorg/telegram/tgnet/TLRPC$TL_account_confirmPhone;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lorg/telegram/ui/LoginActivity$LoginActivitySmsView;Landroid/os/Bundle;)V
-    .registers 3
+.method public synthetic constructor <init>(Lorg/telegram/ui/LoginActivity$LoginActivitySmsView;Lorg/telegram/tgnet/TLRPC$TL_error;Lorg/telegram/tgnet/TLRPC$TL_account_confirmPhone;)V
+    .registers 4
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$$ExternalSyntheticLambda31;->f$0:Lorg/telegram/ui/LoginActivity$LoginActivitySmsView;
 
-    iput-object p2, p0, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$$ExternalSyntheticLambda31;->f$1:Landroid/os/Bundle;
+    iput-object p2, p0, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$$ExternalSyntheticLambda31;->f$1:Lorg/telegram/tgnet/TLRPC$TL_error;
+
+    iput-object p3, p0, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$$ExternalSyntheticLambda31;->f$2:Lorg/telegram/tgnet/TLRPC$TL_account_confirmPhone;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run(Lorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/TLRPC$TL_error;)V
-    .registers 5
+.method public final run()V
+    .registers 4
 
     iget-object v0, p0, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$$ExternalSyntheticLambda31;->f$0:Lorg/telegram/ui/LoginActivity$LoginActivitySmsView;
 
-    iget-object v1, p0, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$$ExternalSyntheticLambda31;->f$1:Landroid/os/Bundle;
+    iget-object v1, p0, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$$ExternalSyntheticLambda31;->f$1:Lorg/telegram/tgnet/TLRPC$TL_error;
 
-    invoke-static {v0, v1, p1, p2}, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView;->$r8$lambda$a-0j1Hro9dubhlKSnswM8xP-A8c(Lorg/telegram/ui/LoginActivity$LoginActivitySmsView;Landroid/os/Bundle;Lorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/TLRPC$TL_error;)V
+    iget-object v2, p0, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$$ExternalSyntheticLambda31;->f$2:Lorg/telegram/tgnet/TLRPC$TL_account_confirmPhone;
+
+    invoke-static {v0, v1, v2}, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView;->$r8$lambda$lh5D4891cLFj_N5UBlo2IO-bdVI(Lorg/telegram/ui/LoginActivity$LoginActivitySmsView;Lorg/telegram/tgnet/TLRPC$TL_error;Lorg/telegram/tgnet/TLRPC$TL_account_confirmPhone;)V
 
     return-void
 .end method

@@ -10,16 +10,26 @@
 
 .field public final synthetic f$1:Ljava/io/File;
 
-.field public final synthetic f$2:Z
+.field public final synthetic f$2:Ljava/io/File;
 
-.field public final synthetic f$3:Lorg/telegram/messenger/MessageObject;
+.field public final synthetic f$3:Lorg/telegram/messenger/FileLoader$FileResolver;
 
-.field public final synthetic f$4:Z
+.field public final synthetic f$4:I
+
+.field public final synthetic f$5:Lorg/telegram/messenger/MessageObject;
+
+.field public final synthetic f$6:Z
+
+.field public final synthetic f$7:Z
+
+.field public final synthetic f$8:Z
+
+.field public final synthetic f$9:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(Lorg/telegram/ui/PhotoViewer;Ljava/io/File;ZLorg/telegram/messenger/MessageObject;Z)V
-    .registers 6
+.method public synthetic constructor <init>(Lorg/telegram/ui/PhotoViewer;Ljava/io/File;Ljava/io/File;Lorg/telegram/messenger/FileLoader$FileResolver;ILorg/telegram/messenger/MessageObject;ZZZZ)V
+    .registers 11
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -27,11 +37,21 @@
 
     iput-object p2, p0, Lorg/telegram/ui/PhotoViewer$$ExternalSyntheticLambda59;->f$1:Ljava/io/File;
 
-    iput-boolean p3, p0, Lorg/telegram/ui/PhotoViewer$$ExternalSyntheticLambda59;->f$2:Z
+    iput-object p3, p0, Lorg/telegram/ui/PhotoViewer$$ExternalSyntheticLambda59;->f$2:Ljava/io/File;
 
-    iput-object p4, p0, Lorg/telegram/ui/PhotoViewer$$ExternalSyntheticLambda59;->f$3:Lorg/telegram/messenger/MessageObject;
+    iput-object p4, p0, Lorg/telegram/ui/PhotoViewer$$ExternalSyntheticLambda59;->f$3:Lorg/telegram/messenger/FileLoader$FileResolver;
 
-    iput-boolean p5, p0, Lorg/telegram/ui/PhotoViewer$$ExternalSyntheticLambda59;->f$4:Z
+    iput p5, p0, Lorg/telegram/ui/PhotoViewer$$ExternalSyntheticLambda59;->f$4:I
+
+    iput-object p6, p0, Lorg/telegram/ui/PhotoViewer$$ExternalSyntheticLambda59;->f$5:Lorg/telegram/messenger/MessageObject;
+
+    iput-boolean p7, p0, Lorg/telegram/ui/PhotoViewer$$ExternalSyntheticLambda59;->f$6:Z
+
+    iput-boolean p8, p0, Lorg/telegram/ui/PhotoViewer$$ExternalSyntheticLambda59;->f$7:Z
+
+    iput-boolean p9, p0, Lorg/telegram/ui/PhotoViewer$$ExternalSyntheticLambda59;->f$8:Z
+
+    iput-boolean p10, p0, Lorg/telegram/ui/PhotoViewer$$ExternalSyntheticLambda59;->f$9:Z
 
     return-void
 .end method
@@ -39,19 +59,29 @@
 
 # virtual methods
 .method public final run()V
-    .registers 6
+    .registers 11
 
     iget-object v0, p0, Lorg/telegram/ui/PhotoViewer$$ExternalSyntheticLambda59;->f$0:Lorg/telegram/ui/PhotoViewer;
 
     iget-object v1, p0, Lorg/telegram/ui/PhotoViewer$$ExternalSyntheticLambda59;->f$1:Ljava/io/File;
 
-    iget-boolean v2, p0, Lorg/telegram/ui/PhotoViewer$$ExternalSyntheticLambda59;->f$2:Z
+    iget-object v2, p0, Lorg/telegram/ui/PhotoViewer$$ExternalSyntheticLambda59;->f$2:Ljava/io/File;
 
-    iget-object v3, p0, Lorg/telegram/ui/PhotoViewer$$ExternalSyntheticLambda59;->f$3:Lorg/telegram/messenger/MessageObject;
+    iget-object v3, p0, Lorg/telegram/ui/PhotoViewer$$ExternalSyntheticLambda59;->f$3:Lorg/telegram/messenger/FileLoader$FileResolver;
 
-    iget-boolean v4, p0, Lorg/telegram/ui/PhotoViewer$$ExternalSyntheticLambda59;->f$4:Z
+    iget v4, p0, Lorg/telegram/ui/PhotoViewer$$ExternalSyntheticLambda59;->f$4:I
 
-    invoke-static {v0, v1, v2, v3, v4}, Lorg/telegram/ui/PhotoViewer;->$r8$lambda$KXDnPP3kQ4sm36nlRLwoCXaDiJo(Lorg/telegram/ui/PhotoViewer;Ljava/io/File;ZLorg/telegram/messenger/MessageObject;Z)V
+    iget-object v5, p0, Lorg/telegram/ui/PhotoViewer$$ExternalSyntheticLambda59;->f$5:Lorg/telegram/messenger/MessageObject;
+
+    iget-boolean v6, p0, Lorg/telegram/ui/PhotoViewer$$ExternalSyntheticLambda59;->f$6:Z
+
+    iget-boolean v7, p0, Lorg/telegram/ui/PhotoViewer$$ExternalSyntheticLambda59;->f$7:Z
+
+    iget-boolean v8, p0, Lorg/telegram/ui/PhotoViewer$$ExternalSyntheticLambda59;->f$8:Z
+
+    iget-boolean v9, p0, Lorg/telegram/ui/PhotoViewer$$ExternalSyntheticLambda59;->f$9:Z
+
+    invoke-static/range {v0 .. v9}, Lorg/telegram/ui/PhotoViewer;->$r8$lambda$lmvmen1TqdZL1-Lv5xvg9VtlOmE(Lorg/telegram/ui/PhotoViewer;Ljava/io/File;Ljava/io/File;Lorg/telegram/messenger/FileLoader$FileResolver;ILorg/telegram/messenger/MessageObject;ZZZZ)V
 
     return-void
 .end method

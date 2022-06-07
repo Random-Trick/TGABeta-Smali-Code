@@ -25,7 +25,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/EmojiView;)V
     .registers 2
 
-    .line 2047
+    .line 2063
     iput-object p1, p0, Lorg/telegram/ui/Components/EmojiView$25;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,12 +44,12 @@
 .method public onPageScrolled(IFI)V
     .registers 10
 
-    .line 2050
+    .line 2066
     iget-object v0, p0, Lorg/telegram/ui/Components/EmojiView$25;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-static {v0, p1, p2}, Lorg/telegram/ui/Components/EmojiView;->access$9600(Lorg/telegram/ui/Components/EmojiView;IF)V
 
-    .line 2051
+    .line 2067
     iget-object v0, p0, Lorg/telegram/ui/Components/EmojiView$25;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-virtual {v0}, Landroid/widget/FrameLayout;->getMeasuredWidth()I
@@ -74,14 +74,14 @@
 
     invoke-static {v0, p1, v1, p3}, Lorg/telegram/ui/Components/EmojiView;->access$9700(Lorg/telegram/ui/Components/EmojiView;III)V
 
-    .line 2052
+    .line 2068
     iget-object p3, p0, Lorg/telegram/ui/Components/EmojiView$25;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     const/4 v0, 0x1
 
     invoke-static {p3, v0, v0}, Lorg/telegram/ui/Components/EmojiView;->access$3600(Lorg/telegram/ui/Components/EmojiView;ZZ)V
 
-    .line 2054
+    .line 2070
     iget-object p3, p0, Lorg/telegram/ui/Components/EmojiView$25;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-static {p3}, Lorg/telegram/ui/Components/EmojiView;->access$3300(Lorg/telegram/ui/Components/EmojiView;)Landroidx/viewpager/widget/ViewPager;
@@ -94,7 +94,7 @@
 
     if-nez p3, :cond_35
 
-    .line 2056
+    .line 2072
     iget-object p3, p0, Lorg/telegram/ui/Components/EmojiView$25;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-static {p3}, Lorg/telegram/ui/Components/EmojiView;->access$9800(Lorg/telegram/ui/Components/EmojiView;)Lorg/telegram/ui/Components/EmojiView$SearchField;
@@ -106,7 +106,7 @@
     :cond_35
     if-ne p3, v0, :cond_3e
 
-    .line 2058
+    .line 2074
     iget-object p3, p0, Lorg/telegram/ui/Components/EmojiView$25;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-static {p3}, Lorg/telegram/ui/Components/EmojiView;->access$7100(Lorg/telegram/ui/Components/EmojiView;)Lorg/telegram/ui/Components/EmojiView$SearchField;
@@ -115,7 +115,7 @@
 
     goto :goto_44
 
-    .line 2060
+    .line 2076
     :cond_3e
     iget-object p3, p0, Lorg/telegram/ui/Components/EmojiView$25;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
@@ -123,7 +123,7 @@
 
     move-result-object p3
 
-    .line 2062
+    .line 2078
     :goto_44
     invoke-static {p3}, Lorg/telegram/ui/Components/EmojiView$SearchField;->access$1300(Lorg/telegram/ui/Components/EmojiView$SearchField;)Lorg/telegram/ui/Components/EditTextBoldCursor;
 
@@ -148,7 +148,7 @@
 
     if-nez v3, :cond_5e
 
-    .line 2066
+    .line 2082
     iget-object v4, p0, Lorg/telegram/ui/Components/EmojiView$25;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-static {v4}, Lorg/telegram/ui/Components/EmojiView;->access$9800(Lorg/telegram/ui/Components/EmojiView;)Lorg/telegram/ui/Components/EmojiView$SearchField;
@@ -160,7 +160,7 @@
     :cond_5e
     if-ne v3, v0, :cond_67
 
-    .line 2068
+    .line 2084
     iget-object v4, p0, Lorg/telegram/ui/Components/EmojiView$25;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-static {v4}, Lorg/telegram/ui/Components/EmojiView;->access$7100(Lorg/telegram/ui/Components/EmojiView;)Lorg/telegram/ui/Components/EmojiView$SearchField;
@@ -169,7 +169,7 @@
 
     goto :goto_6d
 
-    .line 2070
+    .line 2086
     :cond_67
     iget-object v4, p0, Lorg/telegram/ui/Components/EmojiView$25;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
@@ -182,7 +182,7 @@
 
     if-eq v4, p3, :cond_9c
 
-    .line 2072
+    .line 2088
     invoke-static {v4}, Lorg/telegram/ui/Components/EmojiView$SearchField;->access$1300(Lorg/telegram/ui/Components/EmojiView$SearchField;)Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     move-result-object v5
@@ -209,7 +209,7 @@
 
     goto :goto_9c
 
-    .line 2075
+    .line 2091
     :cond_8a
     invoke-static {v4}, Lorg/telegram/ui/Components/EmojiView$SearchField;->access$1300(Lorg/telegram/ui/Components/EmojiView$SearchField;)Lorg/telegram/ui/Components/EditTextBoldCursor;
 
@@ -217,7 +217,7 @@
 
     invoke-virtual {v5, v1}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
-    .line 2076
+    .line 2092
     invoke-static {v4}, Lorg/telegram/ui/Components/EmojiView$SearchField;->access$1300(Lorg/telegram/ui/Components/EmojiView$SearchField;)Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     move-result-object v4
@@ -234,7 +234,7 @@
 
     goto :goto_52
 
-    .line 2078
+    .line 2094
     :cond_9f
     iget-object p3, p0, Lorg/telegram/ui/Components/EmojiView$25;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
@@ -258,7 +258,7 @@
     :goto_ac
     invoke-static {p3, v0}, Lorg/telegram/ui/Components/EmojiView;->access$9000(Lorg/telegram/ui/Components/EmojiView;Z)V
 
-    .line 2079
+    .line 2095
     iget-object p1, p0, Lorg/telegram/ui/Components/EmojiView$25;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/EmojiView;->access$300(Lorg/telegram/ui/Components/EmojiView;)V
@@ -269,12 +269,12 @@
 .method public onPageSelected(I)V
     .registers 6
 
-    .line 2084
+    .line 2100
     iget-object v0, p0, Lorg/telegram/ui/Components/EmojiView$25;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/EmojiView;->access$10000(Lorg/telegram/ui/Components/EmojiView;)V
 
-    .line 2085
+    .line 2101
     iget-object v0, p0, Lorg/telegram/ui/Components/EmojiView$25;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     const/4 v1, 0x0
@@ -293,7 +293,7 @@
     :goto_e
     invoke-static {v0, v3, v2}, Lorg/telegram/ui/Components/EmojiView;->access$10100(Lorg/telegram/ui/Components/EmojiView;ZZ)V
 
-    .line 2086
+    .line 2102
     iget-object v0, p0, Lorg/telegram/ui/Components/EmojiView$25;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     const/4 v3, 0x2
@@ -305,7 +305,7 @@
     :cond_17
     invoke-static {v0, v1, v2}, Lorg/telegram/ui/Components/EmojiView;->access$10200(Lorg/telegram/ui/Components/EmojiView;ZZ)V
 
-    .line 2087
+    .line 2103
     iget-object v0, p0, Lorg/telegram/ui/Components/EmojiView$25;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/EmojiView;->access$400(Lorg/telegram/ui/Components/EmojiView;)Lorg/telegram/ui/Components/EmojiView$EmojiViewDelegate;
@@ -320,7 +320,7 @@
 
     if-nez p1, :cond_3e
 
-    .line 2089
+    .line 2105
     iget-object p1, p0, Lorg/telegram/ui/Components/EmojiView$25;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/EmojiView;->access$9800(Lorg/telegram/ui/Components/EmojiView;)Lorg/telegram/ui/Components/EmojiView$SearchField;
@@ -329,7 +329,7 @@
 
     if-eqz p1, :cond_6b
 
-    .line 2090
+    .line 2106
     iget-object p1, p0, Lorg/telegram/ui/Components/EmojiView$25;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/EmojiView;->access$9800(Lorg/telegram/ui/Components/EmojiView;)Lorg/telegram/ui/Components/EmojiView$SearchField;
@@ -347,7 +347,7 @@
     :cond_3e
     if-ne p1, v2, :cond_56
 
-    .line 2093
+    .line 2109
     iget-object p1, p0, Lorg/telegram/ui/Components/EmojiView$25;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/EmojiView;->access$7100(Lorg/telegram/ui/Components/EmojiView;)Lorg/telegram/ui/Components/EmojiView$SearchField;
@@ -356,7 +356,7 @@
 
     if-eqz p1, :cond_6b
 
-    .line 2094
+    .line 2110
     iget-object p1, p0, Lorg/telegram/ui/Components/EmojiView$25;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/EmojiView;->access$7100(Lorg/telegram/ui/Components/EmojiView;)Lorg/telegram/ui/Components/EmojiView$SearchField;
@@ -371,7 +371,7 @@
 
     goto :goto_6b
 
-    .line 2097
+    .line 2113
     :cond_56
     iget-object p1, p0, Lorg/telegram/ui/Components/EmojiView$25;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
@@ -381,7 +381,7 @@
 
     if-eqz p1, :cond_6b
 
-    .line 2098
+    .line 2114
     iget-object p1, p0, Lorg/telegram/ui/Components/EmojiView$25;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/EmojiView;->access$9900(Lorg/telegram/ui/Components/EmojiView;)Lorg/telegram/ui/Components/EmojiView$SearchField;

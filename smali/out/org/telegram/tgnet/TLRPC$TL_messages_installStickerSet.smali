@@ -23,7 +23,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 49157
+    .line 49622
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -34,7 +34,7 @@
 .method public deserializeResponse(Lorg/telegram/tgnet/AbstractSerializedData;IZ)Lorg/telegram/tgnet/TLObject;
     .registers 4
 
-    .line 49164
+    .line 49629
     invoke-static {p1, p2, p3}, Lorg/telegram/tgnet/TLRPC$messages_StickerSetInstallResult;->TLdeserialize(Lorg/telegram/tgnet/AbstractSerializedData;IZ)Lorg/telegram/tgnet/TLRPC$messages_StickerSetInstallResult;
 
     move-result-object p1
@@ -45,17 +45,17 @@
 .method public serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
     .registers 3
 
-    .line 49168
+    .line 49633
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_messages_installStickerSet;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 49169
+    .line 49634
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_messages_installStickerSet;->stickerset:Lorg/telegram/tgnet/TLRPC$InputStickerSet;
 
     invoke-virtual {v0, p1}, Lorg/telegram/tgnet/TLObject;->serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
 
-    .line 49170
+    .line 49635
     iget-boolean v0, p0, Lorg/telegram/tgnet/TLRPC$TL_messages_installStickerSet;->archived:Z
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeBool(Z)V

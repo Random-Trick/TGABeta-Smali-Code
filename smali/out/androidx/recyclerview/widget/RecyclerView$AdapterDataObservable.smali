@@ -26,7 +26,7 @@
 .method constructor <init>()V
     .registers 1
 
-    .line 12169
+    .line 12170
     invoke-direct {p0}, Landroid/database/Observable;-><init>()V
 
     return-void
@@ -37,7 +37,7 @@
 .method public hasObservers()Z
     .registers 2
 
-    .line 12171
+    .line 12172
     iget-object v0, p0, Landroid/database/Observable;->mObservers:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
@@ -52,7 +52,7 @@
 .method public notifyChanged()V
     .registers 3
 
-    .line 12179
+    .line 12180
     iget-object v0, p0, Landroid/database/Observable;->mObservers:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -64,7 +64,7 @@
     :goto_8
     if-ltz v0, :cond_18
 
-    .line 12180
+    .line 12181
     iget-object v1, p0, Landroid/database/Observable;->mObservers:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -86,7 +86,7 @@
 .method public notifyItemMoved(II)V
     .registers 6
 
-    .line 12220
+    .line 12221
     iget-object v0, p0, Landroid/database/Observable;->mObservers:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -100,7 +100,7 @@
     :goto_8
     if-ltz v0, :cond_18
 
-    .line 12221
+    .line 12222
     iget-object v2, p0, Landroid/database/Observable;->mObservers:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -124,7 +124,7 @@
 
     const/4 v0, 0x0
 
-    .line 12185
+    .line 12186
     invoke-virtual {p0, p1, p2, v0}, Landroidx/recyclerview/widget/RecyclerView$AdapterDataObservable;->notifyItemRangeChanged(IILjava/lang/Object;)V
 
     return-void
@@ -133,7 +133,7 @@
 .method public notifyItemRangeChanged(IILjava/lang/Object;)V
     .registers 6
 
-    .line 12194
+    .line 12195
     iget-object v0, p0, Landroid/database/Observable;->mObservers:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -145,7 +145,7 @@
     :goto_8
     if-ltz v0, :cond_18
 
-    .line 12195
+    .line 12196
     iget-object v1, p0, Landroid/database/Observable;->mObservers:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -167,7 +167,7 @@
 .method public notifyItemRangeInserted(II)V
     .registers 5
 
-    .line 12204
+    .line 12205
     iget-object v0, p0, Landroid/database/Observable;->mObservers:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -179,7 +179,7 @@
     :goto_8
     if-ltz v0, :cond_18
 
-    .line 12205
+    .line 12206
     iget-object v1, p0, Landroid/database/Observable;->mObservers:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -201,7 +201,7 @@
 .method public notifyItemRangeRemoved(II)V
     .registers 5
 
-    .line 12214
+    .line 12215
     iget-object v0, p0, Landroid/database/Observable;->mObservers:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -213,7 +213,7 @@
     :goto_8
     if-ltz v0, :cond_18
 
-    .line 12215
+    .line 12216
     iget-object v1, p0, Landroid/database/Observable;->mObservers:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;

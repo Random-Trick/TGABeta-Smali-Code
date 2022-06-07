@@ -756,7 +756,7 @@
 
     :cond_188
     :goto_188
-    const v4, 0x7f070082
+    const v4, 0x7f070069
 
     .line 142
     invoke-virtual {v3, v4}, Landroid/widget/ImageView;->setImageResource(I)V

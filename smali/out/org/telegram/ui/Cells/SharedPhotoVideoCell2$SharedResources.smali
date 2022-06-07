@@ -35,8 +35,8 @@
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .registers 5
+.method public constructor <init>(Landroid/content/Context;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)V
+    .registers 6
 
     .line 443
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -102,7 +102,7 @@
 
     invoke-virtual {v0, v1}, Landroid/text/TextPaint;->setTypeface(Landroid/graphics/Typeface;)Landroid/graphics/Typeface;
 
-    const v0, 0x7f070358
+    const v0, 0x7f07036f
 
     .line 447
     invoke-static {p1, v0}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
@@ -131,11 +131,11 @@
 
     const-string v0, "sharedMedia_photoPlaceholder"
 
-    invoke-static {v0}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
+    invoke-static {v0, p2}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)I
 
-    move-result v0
+    move-result p2
 
-    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setColor(I)V
+    invoke-virtual {p1, p2}, Landroid/graphics/Paint;->setColor(I)V
 
     return-void
 .end method

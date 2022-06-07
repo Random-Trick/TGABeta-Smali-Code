@@ -30,7 +30,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/StickersAlert;)V
     .registers 2
 
-    .line 399
+    .line 411
     iput-object p1, p0, Lorg/telegram/ui/Components/StickersAlert$2;->this$0:Lorg/telegram/ui/Components/StickersAlert;
 
     invoke-direct {p0}, Landroid/transition/Transition;-><init>()V
@@ -41,21 +41,21 @@
 .method private synthetic lambda$createAnimator$0(IILandroid/animation/ValueAnimator;)V
     .registers 5
 
-    .line 420
+    .line 432
     invoke-virtual {p3}, Landroid/animation/ValueAnimator;->getAnimatedFraction()F
 
     move-result p3
 
-    .line 421
+    .line 433
     iget-object v0, p0, Lorg/telegram/ui/Components/StickersAlert$2;->this$0:Lorg/telegram/ui/Components/StickersAlert;
 
-    invoke-static {v0}, Lorg/telegram/ui/Components/StickersAlert;->access$1900(Lorg/telegram/ui/Components/StickersAlert;)Lorg/telegram/ui/Components/RecyclerListView;
+    invoke-static {v0}, Lorg/telegram/ui/Components/StickersAlert;->access$1100(Lorg/telegram/ui/Components/StickersAlert;)Lorg/telegram/ui/Components/RecyclerListView;
 
     move-result-object v0
 
     invoke-virtual {v0, p3}, Landroid/view/ViewGroup;->setAlpha(F)V
 
-    .line 422
+    .line 434
     iget-object v0, p0, Lorg/telegram/ui/Components/StickersAlert$2;->this$0:Lorg/telegram/ui/Components/StickersAlert;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/StickersAlert;->access$5900(Lorg/telegram/ui/Components/StickersAlert;)Landroid/widget/TextView;
@@ -76,17 +76,17 @@
 
     float-to-int p1, p1
 
-    .line 425
+    .line 437
     iget-object p3, p0, Lorg/telegram/ui/Components/StickersAlert$2;->this$0:Lorg/telegram/ui/Components/StickersAlert;
 
     add-int/2addr p2, p1
 
     invoke-static {p3, p2}, Lorg/telegram/ui/Components/StickersAlert;->access$6000(Lorg/telegram/ui/Components/StickersAlert;I)V
 
-    .line 426
+    .line 438
     iget-object p2, p0, Lorg/telegram/ui/Components/StickersAlert$2;->this$0:Lorg/telegram/ui/Components/StickersAlert;
 
-    invoke-static {p2}, Lorg/telegram/ui/Components/StickersAlert;->access$1900(Lorg/telegram/ui/Components/StickersAlert;)Lorg/telegram/ui/Components/RecyclerListView;
+    invoke-static {p2}, Lorg/telegram/ui/Components/StickersAlert;->access$1100(Lorg/telegram/ui/Components/StickersAlert;)Lorg/telegram/ui/Components/RecyclerListView;
 
     move-result-object p2
 
@@ -103,7 +103,7 @@
 .method public captureEndValues(Landroid/transition/TransitionValues;)V
     .registers 5
 
-    .line 409
+    .line 421
     iget-object v0, p1, Landroid/transition/TransitionValues;->values:Ljava/util/Map;
 
     sget-object v1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
@@ -112,7 +112,7 @@
 
     invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 410
+    .line 422
     iget-object p1, p1, Landroid/transition/TransitionValues;->values:Ljava/util/Map;
 
     iget-object v0, p0, Lorg/telegram/ui/Components/StickersAlert$2;->this$0:Lorg/telegram/ui/Components/StickersAlert;
@@ -147,7 +147,7 @@
 .method public captureStartValues(Landroid/transition/TransitionValues;)V
     .registers 5
 
-    .line 403
+    .line 415
     iget-object v0, p1, Landroid/transition/TransitionValues;->values:Ljava/util/Map;
 
     sget-object v1, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
@@ -156,7 +156,7 @@
 
     invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 404
+    .line 416
     iget-object p1, p1, Landroid/transition/TransitionValues;->values:Ljava/util/Map;
 
     iget-object v0, p0, Lorg/telegram/ui/Components/StickersAlert$2;->this$0:Lorg/telegram/ui/Components/StickersAlert;
@@ -191,14 +191,14 @@
 .method public createAnimator(Landroid/view/ViewGroup;Landroid/transition/TransitionValues;Landroid/transition/TransitionValues;)Landroid/animation/Animator;
     .registers 6
 
-    .line 415
+    .line 427
     iget-object p1, p0, Lorg/telegram/ui/Components/StickersAlert$2;->this$0:Lorg/telegram/ui/Components/StickersAlert;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/StickersAlert;->access$600(Lorg/telegram/ui/Components/StickersAlert;)I
 
     move-result p1
 
-    .line 416
+    .line 428
     iget-object p2, p2, Landroid/transition/TransitionValues;->values:Ljava/util/Map;
 
     const-string v0, "offset"
@@ -231,7 +231,7 @@
 
     new-array p3, p3, [F
 
-    .line 417
+    .line 429
     fill-array-data p3, :array_3a
 
     invoke-static {p3}, Landroid/animation/ValueAnimator;->ofFloat([F)Landroid/animation/ValueAnimator;
@@ -240,10 +240,10 @@
 
     const-wide/16 v0, 0xfa
 
-    .line 418
+    .line 430
     invoke-virtual {p3, v0, v1}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
-    .line 419
+    .line 431
     new-instance v0, Lorg/telegram/ui/Components/StickersAlert$2$$ExternalSyntheticLambda0;
 
     invoke-direct {v0, p0, p2, p1}, Lorg/telegram/ui/Components/StickersAlert$2$$ExternalSyntheticLambda0;-><init>(Lorg/telegram/ui/Components/StickersAlert$2;II)V

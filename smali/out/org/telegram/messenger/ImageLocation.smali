@@ -14,7 +14,7 @@
 # instance fields
 .field public access_hash:J
 
-.field public currentSize:I
+.field public currentSize:J
 
 .field public dc_id:I
 
@@ -237,7 +237,7 @@
 .end method
 
 .method public static getForDocument(Lorg/telegram/tgnet/TLRPC$Document;)Lorg/telegram/messenger/ImageLocation;
-    .registers 3
+    .registers 4
 
     if-nez p0, :cond_4
 
@@ -265,9 +265,9 @@
     iput-object v1, v0, Lorg/telegram/messenger/ImageLocation;->iv:[B
 
     .line 67
-    iget p0, p0, Lorg/telegram/tgnet/TLRPC$Document;->size:I
+    iget-wide v1, p0, Lorg/telegram/tgnet/TLRPC$Document;->size:J
 
-    iput p0, v0, Lorg/telegram/messenger/ImageLocation;->currentSize:I
+    iput-wide v1, v0, Lorg/telegram/messenger/ImageLocation;->currentSize:J
 
     return-object v0
 .end method
@@ -510,9 +510,9 @@
 .end method
 
 .method private static getForPhoto(Lorg/telegram/tgnet/TLRPC$FileLocation;ILorg/telegram/tgnet/TLRPC$Photo;Lorg/telegram/tgnet/TLRPC$Document;Lorg/telegram/tgnet/TLRPC$InputPeer;IILorg/telegram/tgnet/TLRPC$InputStickerSet;Ljava/lang/String;)Lorg/telegram/messenger/ImageLocation;
-    .registers 10
+    .registers 12
 
-    if-eqz p0, :cond_6e
+    if-eqz p0, :cond_6f
 
     if-nez p2, :cond_b
 
@@ -522,7 +522,7 @@
 
     if-nez p3, :cond_b
 
-    goto :goto_6e
+    goto :goto_6f
 
     .line 266
     :cond_b
@@ -536,8 +536,10 @@
     .line 268
     iput-object p2, v0, Lorg/telegram/messenger/ImageLocation;->photo:Lorg/telegram/tgnet/TLRPC$Photo;
 
+    int-to-long v1, p1
+
     .line 269
-    iput p1, v0, Lorg/telegram/messenger/ImageLocation;->currentSize:I
+    iput-wide v1, v0, Lorg/telegram/messenger/ImageLocation;->currentSize:J
 
     .line 270
     iput-object p4, v0, Lorg/telegram/messenger/ImageLocation;->photoPeer:Lorg/telegram/tgnet/TLRPC$InputPeer;
@@ -551,14 +553,14 @@
     .line 273
     instance-of p1, p0, Lorg/telegram/tgnet/TLRPC$TL_fileLocationToBeDeprecated;
 
-    if-eqz p1, :cond_46
+    if-eqz p1, :cond_47
 
     .line 274
     check-cast p0, Lorg/telegram/tgnet/TLRPC$TL_fileLocationToBeDeprecated;
 
     iput-object p0, v0, Lorg/telegram/messenger/ImageLocation;->location:Lorg/telegram/tgnet/TLRPC$TL_fileLocationToBeDeprecated;
 
-    if-eqz p2, :cond_35
+    if-eqz p2, :cond_36
 
     .line 276
     iget-object p0, p2, Lorg/telegram/tgnet/TLRPC$Photo;->file_reference:[B
@@ -578,10 +580,10 @@
     .line 279
     iput-object p8, v0, Lorg/telegram/messenger/ImageLocation;->thumbSize:Ljava/lang/String;
 
-    goto :goto_6d
+    goto :goto_6e
 
-    :cond_35
-    if-eqz p3, :cond_6d
+    :cond_36
+    if-eqz p3, :cond_6e
 
     .line 281
     iget-object p0, p3, Lorg/telegram/tgnet/TLRPC$Document;->file_reference:[B
@@ -601,10 +603,10 @@
     .line 284
     iput-object p8, v0, Lorg/telegram/messenger/ImageLocation;->thumbSize:Ljava/lang/String;
 
-    goto :goto_6d
+    goto :goto_6e
 
     .line 287
-    :cond_46
+    :cond_47
     new-instance p1, Lorg/telegram/tgnet/TLRPC$TL_fileLocationToBeDeprecated;
 
     invoke-direct {p1}, Lorg/telegram/tgnet/TLRPC$TL_fileLocationToBeDeprecated;-><init>()V
@@ -651,12 +653,12 @@
 
     iput-wide p0, v0, Lorg/telegram/messenger/ImageLocation;->access_hash:J
 
-    :cond_6d
-    :goto_6d
-    return-object v0
-
     :cond_6e
     :goto_6e
+    return-object v0
+
+    :cond_6f
+    :goto_6f
     const/4 p0, 0x0
 
     return-object p0
@@ -1102,7 +1104,7 @@
 .end method
 
 .method public static getForWebFile(Lorg/telegram/messenger/WebFile;)Lorg/telegram/messenger/ImageLocation;
-    .registers 2
+    .registers 4
 
     if-nez p0, :cond_4
 
@@ -1122,7 +1124,9 @@
     .line 77
     iget p0, p0, Lorg/telegram/messenger/WebFile;->size:I
 
-    iput p0, v0, Lorg/telegram/messenger/ImageLocation;->currentSize:I
+    int-to-long v1, p0
+
+    iput-wide v1, v0, Lorg/telegram/messenger/ImageLocation;->currentSize:J
 
     return-object v0
 .end method
@@ -1702,62 +1706,65 @@
     return-object p1
 .end method
 
-.method public getSize()I
-    .registers 2
+.method public getSize()J
+    .registers 3
 
     .line 365
     iget-object v0, p0, Lorg/telegram/messenger/ImageLocation;->photoSize:Lorg/telegram/tgnet/TLRPC$PhotoSize;
 
-    if-eqz v0, :cond_7
+    if-eqz v0, :cond_8
 
     .line 366
     iget v0, v0, Lorg/telegram/tgnet/TLRPC$PhotoSize;->size:I
 
-    return v0
+    :goto_6
+    int-to-long v0, v0
+
+    return-wide v0
 
     .line 367
-    :cond_7
+    :cond_8
     iget-object v0, p0, Lorg/telegram/messenger/ImageLocation;->secureDocument:Lorg/telegram/messenger/SecureDocument;
 
-    if-eqz v0, :cond_12
+    if-eqz v0, :cond_13
 
     .line 368
     iget-object v0, v0, Lorg/telegram/messenger/SecureDocument;->secureFile:Lorg/telegram/tgnet/TLRPC$TL_secureFile;
 
-    if-eqz v0, :cond_20
+    if-eqz v0, :cond_21
 
     .line 369
-    iget v0, v0, Lorg/telegram/tgnet/TLRPC$TL_secureFile;->size:I
+    iget-wide v0, v0, Lorg/telegram/tgnet/TLRPC$TL_secureFile;->size:J
 
-    return v0
+    return-wide v0
 
     .line 371
-    :cond_12
+    :cond_13
     iget-object v0, p0, Lorg/telegram/messenger/ImageLocation;->document:Lorg/telegram/tgnet/TLRPC$Document;
 
-    if-eqz v0, :cond_19
+    if-eqz v0, :cond_1a
 
     .line 372
-    iget v0, v0, Lorg/telegram/tgnet/TLRPC$Document;->size:I
+    iget-wide v0, v0, Lorg/telegram/tgnet/TLRPC$Document;->size:J
 
-    return v0
+    return-wide v0
 
     .line 373
-    :cond_19
+    :cond_1a
     iget-object v0, p0, Lorg/telegram/messenger/ImageLocation;->webFile:Lorg/telegram/messenger/WebFile;
 
-    if-eqz v0, :cond_20
+    if-eqz v0, :cond_21
 
     .line 374
     iget v0, v0, Lorg/telegram/messenger/WebFile;->size:I
 
-    return v0
+    goto :goto_6
 
     .line 376
-    :cond_20
-    iget v0, p0, Lorg/telegram/messenger/ImageLocation;->currentSize:I
+    :cond_21
+    iget-wide v0, p0, Lorg/telegram/messenger/ImageLocation;->currentSize:J
 
-    return v0
+    return-wide v0
 .end method
 
 .method public isEncrypted()Z

@@ -54,12 +54,12 @@
 
     if-nez v0, :cond_c
 
-    const v0, 0x7f0e0c0d
+    const v0, 0x7f0e0c97
 
     goto :goto_f
 
     :cond_c
-    const v0, 0x7f0e0c0c
+    const v0, 0x7f0e0c96
 
     :goto_f
     invoke-static {v0}, Lorg/telegram/messenger/LocaleController;->getString(I)Ljava/lang/String;
@@ -77,12 +77,12 @@
 
     if-nez v0, :cond_22
 
-    const v0, 0x7f07029d
+    const v0, 0x7f070290
 
     goto :goto_25
 
     :cond_22
-    const v0, 0x7f0702a2
+    const v0, 0x7f0702a3
 
     :goto_25
     invoke-virtual {p1, v0}, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;->setIcon(I)V

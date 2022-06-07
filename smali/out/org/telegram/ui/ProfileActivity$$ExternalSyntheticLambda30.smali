@@ -2,32 +2,32 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lorg/telegram/tgnet/RequestDelegate;
+.implements Lorg/telegram/messenger/LanguageDetector$ExceptionCallback;
 
 
 # instance fields
-.field public final synthetic f$0:Lorg/telegram/ui/ProfileActivity;
+.field public final synthetic f$0:Ljava/lang/Runnable;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lorg/telegram/ui/ProfileActivity;)V
+.method public synthetic constructor <init>(Ljava/lang/Runnable;)V
     .registers 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lorg/telegram/ui/ProfileActivity$$ExternalSyntheticLambda30;->f$0:Lorg/telegram/ui/ProfileActivity;
+    iput-object p1, p0, Lorg/telegram/ui/ProfileActivity$$ExternalSyntheticLambda30;->f$0:Ljava/lang/Runnable;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run(Lorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/TLRPC$TL_error;)V
-    .registers 4
+.method public final run(Ljava/lang/Exception;)V
+    .registers 3
 
-    iget-object v0, p0, Lorg/telegram/ui/ProfileActivity$$ExternalSyntheticLambda30;->f$0:Lorg/telegram/ui/ProfileActivity;
+    iget-object v0, p0, Lorg/telegram/ui/ProfileActivity$$ExternalSyntheticLambda30;->f$0:Ljava/lang/Runnable;
 
-    invoke-static {v0, p1, p2}, Lorg/telegram/ui/ProfileActivity;->$r8$lambda$_FVDtG454c8NKFyfGjeNvPi0OSU(Lorg/telegram/ui/ProfileActivity;Lorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/TLRPC$TL_error;)V
+    invoke-static {v0, p1}, Lorg/telegram/ui/ProfileActivity;->$r8$lambda$BdXAhBkgU7HgUFeK7WCgAGwSsCI(Ljava/lang/Runnable;Ljava/lang/Exception;)V
 
     return-void
 .end method

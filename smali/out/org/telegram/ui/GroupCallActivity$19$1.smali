@@ -25,7 +25,7 @@
 .method constructor <init>(Lorg/telegram/ui/GroupCallActivity$19;)V
     .registers 2
 
-    .line 4183
+    .line 4188
     iput-object p1, p0, Lorg/telegram/ui/GroupCallActivity$19$1;->this$1:Lorg/telegram/ui/GroupCallActivity$19;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public run()V
     .registers 3
 
-    .line 4186
+    .line 4191
     iget-object v0, p0, Lorg/telegram/ui/GroupCallActivity$19$1;->this$1:Lorg/telegram/ui/GroupCallActivity$19;
 
     iget-object v0, v0, Lorg/telegram/ui/GroupCallActivity$19;->this$0:Lorg/telegram/ui/GroupCallActivity;
@@ -57,7 +57,7 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/RLottieImageView;->setAnimation(Lorg/telegram/ui/Components/RLottieDrawable;)V
 
-    .line 4187
+    .line 4192
     iget-object v0, p0, Lorg/telegram/ui/GroupCallActivity$19$1;->this$1:Lorg/telegram/ui/GroupCallActivity$19;
 
     iget-object v0, v0, Lorg/telegram/ui/GroupCallActivity$19;->this$0:Lorg/telegram/ui/GroupCallActivity;

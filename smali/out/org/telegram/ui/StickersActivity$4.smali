@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field final oldList:Ljava/util/List;
+.field oldList:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
@@ -34,19 +34,19 @@
 .method constructor <init>(Lorg/telegram/ui/StickersActivity;Ljava/util/List;)V
     .registers 3
 
-    .line 399
+    .line 433
     iput-object p1, p0, Lorg/telegram/ui/StickersActivity$4;->this$0:Lorg/telegram/ui/StickersActivity;
 
     iput-object p2, p0, Lorg/telegram/ui/StickersActivity$4;->val$newList:Ljava/util/List;
 
     invoke-direct {p0}, Landroidx/recyclerview/widget/DiffUtil$Callback;-><init>()V
 
-    .line 401
+    .line 435
     invoke-static {p1}, Lorg/telegram/ui/StickersActivity;->access$000(Lorg/telegram/ui/StickersActivity;)Lorg/telegram/ui/StickersActivity$ListAdapter;
 
     move-result-object p1
 
-    invoke-static {p1}, Lorg/telegram/ui/StickersActivity$ListAdapter;->access$600(Lorg/telegram/ui/StickersActivity$ListAdapter;)Ljava/util/List;
+    invoke-static {p1}, Lorg/telegram/ui/StickersActivity$ListAdapter;->access$700(Lorg/telegram/ui/StickersActivity$ListAdapter;)Ljava/util/List;
 
     move-result-object p1
 
@@ -60,7 +60,7 @@
 .method public areContentsTheSame(II)Z
     .registers 5
 
-    .line 420
+    .line 454
     iget-object v0, p0, Lorg/telegram/ui/StickersActivity$4;->oldList:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -71,7 +71,7 @@
 
     iget-object p1, p1, Lorg/telegram/tgnet/TLRPC$messages_StickerSet;->set:Lorg/telegram/tgnet/TLRPC$StickerSet;
 
-    .line 421
+    .line 455
     iget-object v0, p0, Lorg/telegram/ui/StickersActivity$4;->val$newList:Ljava/util/List;
 
     invoke-interface {v0, p2}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -82,7 +82,7 @@
 
     iget-object p2, p2, Lorg/telegram/tgnet/TLRPC$messages_StickerSet;->set:Lorg/telegram/tgnet/TLRPC$StickerSet;
 
-    .line 422
+    .line 456
     iget-object v0, p1, Lorg/telegram/tgnet/TLRPC$StickerSet;->title:Ljava/lang/String;
 
     iget-object v1, p2, Lorg/telegram/tgnet/TLRPC$StickerSet;->title:Ljava/lang/String;
@@ -113,7 +113,7 @@
 .method public areItemsTheSame(II)Z
     .registers 6
 
-    .line 415
+    .line 449
     iget-object v0, p0, Lorg/telegram/ui/StickersActivity$4;->oldList:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -156,7 +156,7 @@
 .method public getNewListSize()I
     .registers 2
 
-    .line 410
+    .line 444
     iget-object v0, p0, Lorg/telegram/ui/StickersActivity$4;->val$newList:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -169,7 +169,7 @@
 .method public getOldListSize()I
     .registers 2
 
-    .line 405
+    .line 439
     iget-object v0, p0, Lorg/telegram/ui/StickersActivity$4;->oldList:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I

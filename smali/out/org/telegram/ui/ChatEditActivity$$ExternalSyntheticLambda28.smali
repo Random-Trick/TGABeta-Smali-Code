@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lorg/telegram/tgnet/RequestDelegate;
+.implements Lorg/telegram/messenger/MessagesStorage$LongCallback;
 
 
 # instance fields
@@ -22,12 +22,12 @@
 
 
 # virtual methods
-.method public final run(Lorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/TLRPC$TL_error;)V
+.method public final run(J)V
     .registers 4
 
     iget-object v0, p0, Lorg/telegram/ui/ChatEditActivity$$ExternalSyntheticLambda28;->f$0:Lorg/telegram/ui/ChatEditActivity;
 
-    invoke-static {v0, p1, p2}, Lorg/telegram/ui/ChatEditActivity;->$r8$lambda$HGjXQXSDYBgiLlQEvkToEuQhP3A(Lorg/telegram/ui/ChatEditActivity;Lorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/TLRPC$TL_error;)V
+    invoke-static {v0, p1, p2}, Lorg/telegram/ui/ChatEditActivity;->$r8$lambda$jcN3_187BN3McsxbmqS86qL3FnQ(Lorg/telegram/ui/ChatEditActivity;J)V
 
     return-void
 .end method

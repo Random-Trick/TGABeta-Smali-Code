@@ -24,7 +24,7 @@
 .method constructor <init>(Lorg/telegram/ui/NewContactActivity;Z)V
     .registers 3
 
-    .line 764
+    .line 763
     iput-object p1, p0, Lorg/telegram/ui/NewContactActivity$6;->this$0:Lorg/telegram/ui/NewContactActivity;
 
     iput-boolean p2, p0, Lorg/telegram/ui/NewContactActivity$6;->val$show:Z
@@ -39,7 +39,7 @@
 .method public onAnimationCancel(Landroid/animation/Animator;)V
     .registers 3
 
-    .line 778
+    .line 777
     iget-object v0, p0, Lorg/telegram/ui/NewContactActivity$6;->this$0:Lorg/telegram/ui/NewContactActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/NewContactActivity;->access$2200(Lorg/telegram/ui/NewContactActivity;)Landroid/animation/AnimatorSet;
@@ -60,7 +60,7 @@
 
     if-eqz p1, :cond_1a
 
-    .line 779
+    .line 778
     iget-object p1, p0, Lorg/telegram/ui/NewContactActivity$6;->this$0:Lorg/telegram/ui/NewContactActivity;
 
     const/4 v0, 0x0
@@ -74,7 +74,7 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .registers 3
 
-    .line 767
+    .line 766
     iget-object v0, p0, Lorg/telegram/ui/NewContactActivity$6;->this$0:Lorg/telegram/ui/NewContactActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/NewContactActivity;->access$2200(Lorg/telegram/ui/NewContactActivity;)Landroid/animation/AnimatorSet;
@@ -95,14 +95,14 @@
 
     if-eqz p1, :cond_30
 
-    .line 768
+    .line 767
     iget-boolean p1, p0, Lorg/telegram/ui/NewContactActivity$6;->val$show:Z
 
     const/4 v0, 0x4
 
     if-nez p1, :cond_23
 
-    .line 769
+    .line 768
     iget-object p1, p0, Lorg/telegram/ui/NewContactActivity$6;->this$0:Lorg/telegram/ui/NewContactActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/NewContactActivity;->access$2300(Lorg/telegram/ui/NewContactActivity;)Lorg/telegram/ui/Components/ContextProgressView;
@@ -113,7 +113,7 @@
 
     goto :goto_30
 
-    .line 771
+    .line 770
     :cond_23
     iget-object p1, p0, Lorg/telegram/ui/NewContactActivity$6;->this$0:Lorg/telegram/ui/NewContactActivity;
 

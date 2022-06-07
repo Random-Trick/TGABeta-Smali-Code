@@ -24,7 +24,7 @@
 .method constructor <init>(Lorg/telegram/ui/ActionBar/ActionBarMenuItem;Landroid/content/Context;Landroid/view/View;)V
     .registers 4
 
-    .line 662
+    .line 656
     iput-object p1, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuItem$1;->this$0:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
     iput-object p3, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuItem$1;->val$topView:Landroid/view/View;
@@ -39,7 +39,7 @@
 .method protected onMeasure(II)V
     .registers 6
 
-    .line 665
+    .line 659
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuItem$1;->this$0:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
     invoke-static {v0}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->access$000(Lorg/telegram/ui/ActionBar/ActionBarMenuItem;)Lorg/telegram/ui/ActionBar/ActionBarPopupWindow$ActionBarPopupWindowLayout;
@@ -48,7 +48,7 @@
 
     invoke-virtual {v0, p1, p2}, Landroid/widget/FrameLayout;->measure(II)V
 
-    .line 666
+    .line 660
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuItem$1;->this$0:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
     invoke-static {v0}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->access$000(Lorg/telegram/ui/ActionBar/ActionBarMenuItem;)Lorg/telegram/ui/ActionBar/ActionBarPopupWindow$ActionBarPopupWindowLayout;
@@ -61,7 +61,7 @@
 
     if-eqz v0, :cond_31
 
-    .line 667
+    .line 661
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuItem$1;->val$topView:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
@@ -92,7 +92,7 @@
 
     goto :goto_4a
 
-    .line 669
+    .line 663
     :cond_31
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuItem$1;->val$topView:Landroid/view/View;
 
@@ -120,7 +120,7 @@
 
     iput v1, v0, Landroid/view/ViewGroup$LayoutParams;->width:I
 
-    .line 671
+    .line 665
     :goto_4a
     invoke-super {p0, p1, p2}, Landroid/widget/LinearLayout;->onMeasure(II)V
 

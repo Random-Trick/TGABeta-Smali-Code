@@ -758,7 +758,7 @@
 
     sget-object v2, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
-    const v3, 0x7f070399
+    const v3, 0x7f0703a7
 
     invoke-static {v2, v3}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
@@ -1332,11 +1332,11 @@
     .line 589
     iput-boolean v4, v0, Lorg/telegram/ui/FilteredSearchView;->isLoading:Z
 
-    const v5, 0x7f0e0f7a
+    const v5, 0x7f0e1036
 
     const-string v6, "SearchEmptyViewFilteredSubtitle2"
 
-    const v7, 0x7f0e0f81
+    const v7, 0x7f0e103d
 
     const-string v8, "SearchEmptyViewTitle2"
 
@@ -1548,7 +1548,7 @@
     :cond_da
     add-int/lit8 v11, v11, 0x1
 
-    const v5, 0x7f0e0f7a
+    const v5, 0x7f0e1036
 
     goto :goto_8d
 
@@ -1634,7 +1634,7 @@
 
     iget-object v5, v5, Lorg/telegram/ui/Components/StickerEmptyView;->title:Landroid/widget/TextView;
 
-    const v6, 0x7f0e0f80
+    const v6, 0x7f0e103c
 
     const-string v7, "SearchEmptyViewTitle"
 
@@ -1649,7 +1649,7 @@
 
     if-ne v5, v9, :cond_13d
 
-    const v5, 0x7f0e0f7b
+    const v5, 0x7f0e1037
 
     const-string v6, "SearchEmptyViewFilteredSubtitleFiles"
 
@@ -1663,7 +1663,7 @@
     :cond_13d
     if-nez v5, :cond_149
 
-    const v5, 0x7f0e0f7d
+    const v5, 0x7f0e1039
 
     const-string v6, "SearchEmptyViewFilteredSubtitleMedia"
 
@@ -1677,7 +1677,7 @@
     :cond_149
     if-ne v5, v11, :cond_155
 
-    const v5, 0x7f0e0f7c
+    const v5, 0x7f0e1038
 
     const-string v6, "SearchEmptyViewFilteredSubtitleLinks"
 
@@ -1691,7 +1691,7 @@
     :cond_155
     if-ne v5, v12, :cond_161
 
-    const v5, 0x7f0e0f7e
+    const v5, 0x7f0e103a
 
     const-string v6, "SearchEmptyViewFilteredSubtitleMusic"
 
@@ -1703,7 +1703,7 @@
     goto :goto_16a
 
     :cond_161
-    const v5, 0x7f0e0f7f
+    const v5, 0x7f0e103b
 
     const-string v6, "SearchEmptyViewFilteredSubtitleVoice"
 
@@ -1753,7 +1753,7 @@
 
     iget-object v5, v5, Lorg/telegram/ui/Components/StickerEmptyView;->subtitle:Landroid/widget/TextView;
 
-    const v7, 0x7f0e0f7a
+    const v7, 0x7f0e1036
 
     invoke-static {v6, v7}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
@@ -1908,7 +1908,7 @@
 
     if-lt v2, v12, :cond_26a
 
-    const v2, 0x7f0e0f65
+    const v2, 0x7f0e1021
 
     const-string v3, "SavedMessages"
 
@@ -2039,7 +2039,7 @@
 
     if-lt v2, v12, :cond_29b
 
-    const v2, 0x7f0e019a
+    const v2, 0x7f0e01cf
 
     const-string v3, "ArchiveSearchFilter"
 
@@ -4287,31 +4287,25 @@
 
     aput-object v4, v14, v1
 
-    const/4 v4, 0x3
+    new-array v4, v5, [Landroid/graphics/drawable/Drawable;
 
-    new-array v6, v4, [Landroid/graphics/drawable/Drawable;
+    sget-object v6, Lorg/telegram/ui/ActionBar/Theme;->dialogs_scamDrawable:Lorg/telegram/ui/Components/ScamDrawable;
 
-    sget-object v10, Lorg/telegram/ui/ActionBar/Theme;->dialogs_groupDrawable:Landroid/graphics/drawable/Drawable;
+    aput-object v6, v4, v3
 
-    aput-object v10, v6, v3
+    sget-object v6, Lorg/telegram/ui/ActionBar/Theme;->dialogs_fakeDrawable:Lorg/telegram/ui/Components/ScamDrawable;
 
-    sget-object v10, Lorg/telegram/ui/ActionBar/Theme;->dialogs_broadcastDrawable:Landroid/graphics/drawable/Drawable;
-
-    aput-object v10, v6, v1
-
-    sget-object v10, Lorg/telegram/ui/ActionBar/Theme;->dialogs_botDrawable:Landroid/graphics/drawable/Drawable;
-
-    aput-object v10, v6, v5
+    aput-object v6, v4, v1
 
     const/4 v13, 0x0
 
     const/16 v17, 0x0
 
-    const-string v18, "chats_nameIcon"
+    const-string v18, "chats_draft"
 
     move-object v11, v0
 
-    move-object/from16 v16, v6
+    move-object/from16 v16, v4
 
     invoke-direct/range {v11 .. v18}, Lorg/telegram/ui/ActionBar/ThemeDescription;-><init>(Landroid/view/View;I[Ljava/lang/Class;Landroid/graphics/Paint;[Landroid/graphics/drawable/Drawable;Lorg/telegram/ui/ActionBar/ThemeDescription$ThemeDescriptionDelegate;Ljava/lang/String;)V
 
@@ -4320,27 +4314,23 @@
     .line 1734
     new-instance v0, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
-    iget-object v6, v8, Lorg/telegram/ui/FilteredSearchView;->recyclerListView:Lorg/telegram/ui/Components/RecyclerListView;
+    iget-object v4, v8, Lorg/telegram/ui/FilteredSearchView;->recyclerListView:Lorg/telegram/ui/Components/RecyclerListView;
 
-    new-array v10, v5, [Ljava/lang/Class;
+    new-array v6, v1, [Ljava/lang/Class;
 
-    const-class v11, Lorg/telegram/ui/Cells/DialogCell;
+    const-class v10, Lorg/telegram/ui/Cells/DialogCell;
+
+    aput-object v10, v6, v3
+
+    new-array v10, v5, [Landroid/graphics/drawable/Drawable;
+
+    sget-object v11, Lorg/telegram/ui/ActionBar/Theme;->dialogs_pinnedDrawable:Landroid/graphics/drawable/Drawable;
 
     aput-object v11, v10, v3
 
-    const-class v11, Lorg/telegram/ui/Cells/ProfileSearchCell;
+    sget-object v11, Lorg/telegram/ui/ActionBar/Theme;->dialogs_reorderDrawable:Landroid/graphics/drawable/Drawable;
 
     aput-object v11, v10, v1
-
-    new-array v11, v5, [Landroid/graphics/drawable/Drawable;
-
-    sget-object v12, Lorg/telegram/ui/ActionBar/Theme;->dialogs_scamDrawable:Lorg/telegram/ui/Components/ScamDrawable;
-
-    aput-object v12, v11, v3
-
-    sget-object v12, Lorg/telegram/ui/ActionBar/Theme;->dialogs_fakeDrawable:Lorg/telegram/ui/Components/ScamDrawable;
-
-    aput-object v12, v11, v1
 
     const/16 v21, 0x0
 
@@ -4348,15 +4338,15 @@
 
     const/16 v25, 0x0
 
-    const-string v26, "chats_draft"
+    const-string v26, "chats_pinnedIcon"
 
     move-object/from16 v19, v0
 
-    move-object/from16 v20, v6
+    move-object/from16 v20, v4
 
-    move-object/from16 v22, v10
+    move-object/from16 v22, v6
 
-    move-object/from16 v24, v11
+    move-object/from16 v24, v10
 
     invoke-direct/range {v19 .. v26}, Lorg/telegram/ui/ActionBar/ThemeDescription;-><init>(Landroid/view/View;I[Ljava/lang/Class;Landroid/graphics/Paint;[Landroid/graphics/drawable/Drawable;Lorg/telegram/ui/ActionBar/ThemeDescription$ThemeDescriptionDelegate;Ljava/lang/String;)V
 
@@ -4365,37 +4355,45 @@
     .line 1735
     new-instance v0, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
-    iget-object v13, v8, Lorg/telegram/ui/FilteredSearchView;->recyclerListView:Lorg/telegram/ui/Components/RecyclerListView;
+    iget-object v12, v8, Lorg/telegram/ui/FilteredSearchView;->recyclerListView:Lorg/telegram/ui/Components/RecyclerListView;
 
-    new-array v15, v1, [Ljava/lang/Class;
+    new-array v14, v5, [Ljava/lang/Class;
 
-    const-class v6, Lorg/telegram/ui/Cells/DialogCell;
+    const-class v4, Lorg/telegram/ui/Cells/DialogCell;
 
-    aput-object v6, v15, v3
+    aput-object v4, v14, v3
 
-    new-array v6, v5, [Landroid/graphics/drawable/Drawable;
+    const-class v4, Lorg/telegram/ui/Cells/ProfileSearchCell;
 
-    sget-object v10, Lorg/telegram/ui/ActionBar/Theme;->dialogs_pinnedDrawable:Landroid/graphics/drawable/Drawable;
+    aput-object v4, v14, v1
 
-    aput-object v10, v6, v3
+    const/4 v4, 0x3
 
-    sget-object v10, Lorg/telegram/ui/ActionBar/Theme;->dialogs_reorderDrawable:Landroid/graphics/drawable/Drawable;
+    new-array v6, v4, [Landroid/graphics/Paint;
+
+    sget-object v10, Lorg/telegram/ui/ActionBar/Theme;->dialogs_namePaint:[Landroid/text/TextPaint;
+
+    aget-object v11, v10, v3
+
+    aput-object v11, v6, v3
+
+    aget-object v10, v10, v1
 
     aput-object v10, v6, v1
 
-    const/4 v14, 0x0
+    sget-object v10, Lorg/telegram/ui/ActionBar/Theme;->dialogs_searchNamePaint:Landroid/text/TextPaint;
 
-    const/16 v16, 0x0
+    aput-object v10, v6, v5
 
     const/16 v18, 0x0
 
-    const-string v19, "chats_pinnedIcon"
+    const-string v19, "chats_name"
 
-    move-object v12, v0
+    move-object v11, v0
 
-    move-object/from16 v17, v6
+    move-object/from16 v16, v6
 
-    invoke-direct/range {v12 .. v19}, Lorg/telegram/ui/ActionBar/ThemeDescription;-><init>(Landroid/view/View;I[Ljava/lang/Class;Landroid/graphics/Paint;[Landroid/graphics/drawable/Drawable;Lorg/telegram/ui/ActionBar/ThemeDescription$ThemeDescriptionDelegate;Ljava/lang/String;)V
+    invoke-direct/range {v11 .. v19}, Lorg/telegram/ui/ActionBar/ThemeDescription;-><init>(Landroid/view/View;I[Ljava/lang/Class;[Ljava/lang/String;[Landroid/graphics/Paint;[Landroid/graphics/drawable/Drawable;Lorg/telegram/ui/ActionBar/ThemeDescription$ThemeDescriptionDelegate;Ljava/lang/String;)V
 
     invoke-virtual {v9, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -4414,21 +4412,21 @@
 
     aput-object v11, v10, v1
 
-    new-array v11, v4, [Landroid/graphics/Paint;
+    new-array v4, v4, [Landroid/graphics/Paint;
 
-    sget-object v12, Lorg/telegram/ui/ActionBar/Theme;->dialogs_namePaint:[Landroid/text/TextPaint;
+    sget-object v11, Lorg/telegram/ui/ActionBar/Theme;->dialogs_nameEncryptedPaint:[Landroid/text/TextPaint;
 
-    aget-object v13, v12, v3
+    aget-object v12, v11, v3
 
-    aput-object v13, v11, v3
+    aput-object v12, v4, v3
 
-    aget-object v12, v12, v1
+    aget-object v11, v11, v1
 
-    aput-object v12, v11, v1
+    aput-object v11, v4, v1
 
-    sget-object v12, Lorg/telegram/ui/ActionBar/Theme;->dialogs_searchNamePaint:Landroid/text/TextPaint;
+    sget-object v11, Lorg/telegram/ui/ActionBar/Theme;->dialogs_searchNameEncryptedPaint:Landroid/text/TextPaint;
 
-    aput-object v12, v11, v5
+    aput-object v11, v4, v5
 
     const/16 v22, 0x0
 
@@ -4438,7 +4436,7 @@
 
     const/16 v27, 0x0
 
-    const-string v28, "chats_name"
+    const-string v28, "chats_secretName"
 
     move-object/from16 v20, v0
 
@@ -4446,7 +4444,7 @@
 
     move-object/from16 v23, v10
 
-    move-object/from16 v25, v11
+    move-object/from16 v25, v4
 
     invoke-direct/range {v20 .. v28}, Lorg/telegram/ui/ActionBar/ThemeDescription;-><init>(Landroid/view/View;I[Ljava/lang/Class;[Ljava/lang/String;[Landroid/graphics/Paint;[Landroid/graphics/drawable/Drawable;Lorg/telegram/ui/ActionBar/ThemeDescription$ThemeDescriptionDelegate;Ljava/lang/String;)V
 
@@ -4455,43 +4453,25 @@
     .line 1737
     new-instance v0, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
-    iget-object v13, v8, Lorg/telegram/ui/FilteredSearchView;->recyclerListView:Lorg/telegram/ui/Components/RecyclerListView;
+    iget-object v12, v8, Lorg/telegram/ui/FilteredSearchView;->recyclerListView:Lorg/telegram/ui/Components/RecyclerListView;
 
-    new-array v15, v5, [Ljava/lang/Class;
+    new-array v14, v1, [Ljava/lang/Class;
 
-    const-class v6, Lorg/telegram/ui/Cells/DialogCell;
+    const-class v4, Lorg/telegram/ui/Cells/DialogCell;
 
-    aput-object v6, v15, v3
+    aput-object v4, v14, v3
 
-    const-class v6, Lorg/telegram/ui/Cells/ProfileSearchCell;
+    sget-object v4, Lorg/telegram/ui/ActionBar/Theme;->dialogs_messagePaint:[Landroid/text/TextPaint;
 
-    aput-object v6, v15, v1
+    aget-object v15, v4, v1
 
-    new-array v4, v4, [Landroid/graphics/Paint;
+    const/16 v16, 0x0
 
-    sget-object v6, Lorg/telegram/ui/ActionBar/Theme;->dialogs_nameEncryptedPaint:[Landroid/text/TextPaint;
+    const-string v18, "chats_message_threeLines"
 
-    aget-object v10, v6, v3
+    move-object v11, v0
 
-    aput-object v10, v4, v3
-
-    aget-object v6, v6, v1
-
-    aput-object v6, v4, v1
-
-    sget-object v6, Lorg/telegram/ui/ActionBar/Theme;->dialogs_searchNameEncryptedPaint:Landroid/text/TextPaint;
-
-    aput-object v6, v4, v5
-
-    const/16 v19, 0x0
-
-    const-string v20, "chats_secretName"
-
-    move-object v12, v0
-
-    move-object/from16 v17, v4
-
-    invoke-direct/range {v12 .. v20}, Lorg/telegram/ui/ActionBar/ThemeDescription;-><init>(Landroid/view/View;I[Ljava/lang/Class;[Ljava/lang/String;[Landroid/graphics/Paint;[Landroid/graphics/drawable/Drawable;Lorg/telegram/ui/ActionBar/ThemeDescription$ThemeDescriptionDelegate;Ljava/lang/String;)V
+    invoke-direct/range {v11 .. v18}, Lorg/telegram/ui/ActionBar/ThemeDescription;-><init>(Landroid/view/View;I[Ljava/lang/Class;Landroid/graphics/Paint;[Landroid/graphics/drawable/Drawable;Lorg/telegram/ui/ActionBar/ThemeDescription$ThemeDescriptionDelegate;Ljava/lang/String;)V
 
     invoke-virtual {v9, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -4508,19 +4488,21 @@
 
     sget-object v10, Lorg/telegram/ui/ActionBar/Theme;->dialogs_messagePaint:[Landroid/text/TextPaint;
 
-    aget-object v25, v10, v1
+    aget-object v23, v10, v3
 
-    const/16 v23, 0x0
+    const/16 v21, 0x0
 
-    const-string v28, "chats_message_threeLines"
+    const/16 v25, 0x0
 
-    move-object/from16 v21, v0
+    const-string v26, "chats_message"
 
-    move-object/from16 v22, v4
+    move-object/from16 v19, v0
 
-    move-object/from16 v24, v6
+    move-object/from16 v20, v4
 
-    invoke-direct/range {v21 .. v28}, Lorg/telegram/ui/ActionBar/ThemeDescription;-><init>(Landroid/view/View;I[Ljava/lang/Class;Landroid/graphics/Paint;[Landroid/graphics/drawable/Drawable;Lorg/telegram/ui/ActionBar/ThemeDescription$ThemeDescriptionDelegate;Ljava/lang/String;)V
+    move-object/from16 v22, v6
+
+    invoke-direct/range {v19 .. v26}, Lorg/telegram/ui/ActionBar/ThemeDescription;-><init>(Landroid/view/View;I[Ljava/lang/Class;Landroid/graphics/Paint;[Landroid/graphics/drawable/Drawable;Lorg/telegram/ui/ActionBar/ThemeDescription$ThemeDescriptionDelegate;Ljava/lang/String;)V
 
     invoke-virtual {v9, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -4535,15 +4517,13 @@
 
     aput-object v4, v13, v3
 
-    sget-object v4, Lorg/telegram/ui/ActionBar/Theme;->dialogs_messagePaint:[Landroid/text/TextPaint;
-
-    aget-object v14, v4, v3
+    sget-object v14, Lorg/telegram/ui/ActionBar/Theme;->dialogs_messageNamePaint:Landroid/text/TextPaint;
 
     const/4 v12, 0x0
 
     const/4 v15, 0x0
 
-    const-string v17, "chats_message"
+    const-string v17, "chats_nameMessage_threeLines"
 
     move-object v10, v0
 
@@ -4562,15 +4542,13 @@
 
     aput-object v10, v6, v3
 
-    sget-object v22, Lorg/telegram/ui/ActionBar/Theme;->dialogs_messageNamePaint:Landroid/text/TextPaint;
-
     const/16 v20, 0x0
+
+    const/16 v22, 0x0
 
     const/16 v23, 0x0
 
-    const/16 v24, 0x0
-
-    const-string v25, "chats_nameMessage_threeLines"
+    const-string v25, "chats_draft"
 
     move-object/from16 v18, v0
 
@@ -4582,7 +4560,7 @@
 
     invoke-virtual {v9, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1741
+    .line 1742
     new-instance v0, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v11, v8, Lorg/telegram/ui/FilteredSearchView;->recyclerListView:Lorg/telegram/ui/Components/RecyclerListView;
@@ -4593,13 +4571,17 @@
 
     aput-object v4, v13, v3
 
+    sget-object v15, Lorg/telegram/ui/ActionBar/Theme;->dialogs_messagePrintingPaint:[Landroid/text/TextPaint;
+
     const/4 v14, 0x0
 
-    const-string v17, "chats_draft"
+    const/16 v17, 0x0
+
+    const-string v18, "chats_actionMessage"
 
     move-object v10, v0
 
-    invoke-direct/range {v10 .. v17}, Lorg/telegram/ui/ActionBar/ThemeDescription;-><init>(Landroid/view/View;I[Ljava/lang/Class;Landroid/graphics/Paint;[Landroid/graphics/drawable/Drawable;Lorg/telegram/ui/ActionBar/ThemeDescription$ThemeDescriptionDelegate;Ljava/lang/String;)V
+    invoke-direct/range {v10 .. v18}, Lorg/telegram/ui/ActionBar/ThemeDescription;-><init>(Landroid/view/View;I[Ljava/lang/Class;[Ljava/lang/String;[Landroid/graphics/Paint;[Landroid/graphics/drawable/Drawable;Lorg/telegram/ui/ActionBar/ThemeDescription$ThemeDescriptionDelegate;Ljava/lang/String;)V
 
     invoke-virtual {v9, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -4614,21 +4596,21 @@
 
     aput-object v10, v6, v3
 
-    sget-object v23, Lorg/telegram/ui/ActionBar/Theme;->dialogs_messagePrintingPaint:[Landroid/text/TextPaint;
+    sget-object v23, Lorg/telegram/ui/ActionBar/Theme;->dialogs_timePaint:Landroid/text/TextPaint;
 
-    const/16 v22, 0x0
+    const/16 v21, 0x0
 
     const/16 v25, 0x0
 
-    const-string v26, "chats_actionMessage"
+    const-string v26, "chats_date"
 
-    move-object/from16 v18, v0
+    move-object/from16 v19, v0
 
-    move-object/from16 v19, v4
+    move-object/from16 v20, v4
 
-    move-object/from16 v21, v6
+    move-object/from16 v22, v6
 
-    invoke-direct/range {v18 .. v26}, Lorg/telegram/ui/ActionBar/ThemeDescription;-><init>(Landroid/view/View;I[Ljava/lang/Class;[Ljava/lang/String;[Landroid/graphics/Paint;[Landroid/graphics/drawable/Drawable;Lorg/telegram/ui/ActionBar/ThemeDescription$ThemeDescriptionDelegate;Ljava/lang/String;)V
+    invoke-direct/range {v19 .. v26}, Lorg/telegram/ui/ActionBar/ThemeDescription;-><init>(Landroid/view/View;I[Ljava/lang/Class;Landroid/graphics/Paint;[Landroid/graphics/drawable/Drawable;Lorg/telegram/ui/ActionBar/ThemeDescription$ThemeDescriptionDelegate;Ljava/lang/String;)V
 
     invoke-virtual {v9, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -4643,9 +4625,11 @@
 
     aput-object v4, v13, v3
 
-    sget-object v14, Lorg/telegram/ui/ActionBar/Theme;->dialogs_timePaint:Landroid/text/TextPaint;
+    sget-object v14, Lorg/telegram/ui/ActionBar/Theme;->dialogs_pinnedPaint:Landroid/graphics/Paint;
 
-    const-string v17, "chats_date"
+    const/4 v15, 0x0
+
+    const-string v17, "chats_pinnedOverlay"
 
     move-object v10, v0
 
@@ -4664,11 +4648,13 @@
 
     aput-object v10, v6, v3
 
-    sget-object v22, Lorg/telegram/ui/ActionBar/Theme;->dialogs_pinnedPaint:Landroid/graphics/Paint;
+    sget-object v22, Lorg/telegram/ui/ActionBar/Theme;->dialogs_tabletSeletedPaint:Landroid/graphics/Paint;
+
+    const/16 v20, 0x0
 
     const/16 v23, 0x0
 
-    const-string v25, "chats_pinnedOverlay"
+    const-string v25, "chats_tabletSelectedOverlay"
 
     move-object/from16 v18, v0
 
@@ -4691,9 +4677,15 @@
 
     aput-object v4, v13, v3
 
-    sget-object v14, Lorg/telegram/ui/ActionBar/Theme;->dialogs_tabletSeletedPaint:Landroid/graphics/Paint;
+    new-array v15, v1, [Landroid/graphics/drawable/Drawable;
 
-    const-string v17, "chats_tabletSelectedOverlay"
+    sget-object v4, Lorg/telegram/ui/ActionBar/Theme;->dialogs_checkDrawable:Landroid/graphics/drawable/Drawable;
+
+    aput-object v4, v15, v3
+
+    const/4 v14, 0x0
+
+    const-string v17, "chats_sentCheck"
 
     move-object v10, v0
 
@@ -4712,15 +4704,19 @@
 
     aput-object v10, v6, v3
 
-    new-array v10, v1, [Landroid/graphics/drawable/Drawable;
+    new-array v10, v5, [Landroid/graphics/drawable/Drawable;
 
-    sget-object v11, Lorg/telegram/ui/ActionBar/Theme;->dialogs_checkDrawable:Landroid/graphics/drawable/Drawable;
+    sget-object v11, Lorg/telegram/ui/ActionBar/Theme;->dialogs_checkReadDrawable:Landroid/graphics/drawable/Drawable;
 
     aput-object v11, v10, v3
 
+    sget-object v11, Lorg/telegram/ui/ActionBar/Theme;->dialogs_halfCheckDrawable:Landroid/graphics/drawable/Drawable;
+
+    aput-object v11, v10, v1
+
     const/16 v22, 0x0
 
-    const-string v25, "chats_sentCheck"
+    const-string v25, "chats_sentReadCheck"
 
     move-object/from16 v18, v0
 
@@ -4745,21 +4741,19 @@
 
     aput-object v4, v14, v3
 
-    new-array v4, v5, [Landroid/graphics/drawable/Drawable;
+    new-array v4, v1, [Landroid/graphics/drawable/Drawable;
 
-    sget-object v6, Lorg/telegram/ui/ActionBar/Theme;->dialogs_checkReadDrawable:Landroid/graphics/drawable/Drawable;
+    sget-object v6, Lorg/telegram/ui/ActionBar/Theme;->dialogs_clockDrawable:Landroid/graphics/drawable/Drawable;
 
     aput-object v6, v4, v3
 
-    sget-object v6, Lorg/telegram/ui/ActionBar/Theme;->dialogs_halfCheckDrawable:Landroid/graphics/drawable/Drawable;
-
-    aput-object v6, v4, v1
-
     const/4 v13, 0x0
+
+    const/4 v15, 0x0
 
     const/16 v17, 0x0
 
-    const-string v18, "chats_sentReadCheck"
+    const-string v18, "chats_sentClock"
 
     move-object v11, v0
 
@@ -4780,27 +4774,19 @@
 
     aput-object v10, v6, v3
 
-    new-array v10, v1, [Landroid/graphics/drawable/Drawable;
-
-    sget-object v11, Lorg/telegram/ui/ActionBar/Theme;->dialogs_clockDrawable:Landroid/graphics/drawable/Drawable;
-
-    aput-object v11, v10, v3
+    sget-object v23, Lorg/telegram/ui/ActionBar/Theme;->dialogs_errorPaint:Landroid/graphics/Paint;
 
     const/16 v21, 0x0
 
-    const/16 v23, 0x0
-
     const/16 v25, 0x0
 
-    const-string v26, "chats_sentClock"
+    const-string v26, "chats_sentError"
 
     move-object/from16 v19, v0
 
     move-object/from16 v20, v4
 
     move-object/from16 v22, v6
-
-    move-object/from16 v24, v10
 
     invoke-direct/range {v19 .. v26}, Lorg/telegram/ui/ActionBar/ThemeDescription;-><init>(Landroid/view/View;I[Ljava/lang/Class;Landroid/graphics/Paint;[Landroid/graphics/drawable/Drawable;Lorg/telegram/ui/ActionBar/ThemeDescription$ThemeDescriptionDelegate;Ljava/lang/String;)V
 
@@ -4809,23 +4795,31 @@
     .line 1750
     new-instance v0, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
-    iget-object v12, v8, Lorg/telegram/ui/FilteredSearchView;->recyclerListView:Lorg/telegram/ui/Components/RecyclerListView;
+    iget-object v11, v8, Lorg/telegram/ui/FilteredSearchView;->recyclerListView:Lorg/telegram/ui/Components/RecyclerListView;
 
-    new-array v14, v1, [Ljava/lang/Class;
+    new-array v13, v1, [Ljava/lang/Class;
 
     const-class v4, Lorg/telegram/ui/Cells/DialogCell;
 
-    aput-object v4, v14, v3
+    aput-object v4, v13, v3
 
-    sget-object v15, Lorg/telegram/ui/ActionBar/Theme;->dialogs_errorPaint:Landroid/graphics/Paint;
+    new-array v15, v1, [Landroid/graphics/drawable/Drawable;
+
+    sget-object v4, Lorg/telegram/ui/ActionBar/Theme;->dialogs_errorDrawable:Landroid/graphics/drawable/Drawable;
+
+    aput-object v4, v15, v3
+
+    const/4 v12, 0x0
+
+    const/4 v14, 0x0
 
     const/16 v16, 0x0
 
-    const-string v18, "chats_sentError"
+    const-string v17, "chats_sentErrorIcon"
 
-    move-object v11, v0
+    move-object v10, v0
 
-    invoke-direct/range {v11 .. v18}, Lorg/telegram/ui/ActionBar/ThemeDescription;-><init>(Landroid/view/View;I[Ljava/lang/Class;Landroid/graphics/Paint;[Landroid/graphics/drawable/Drawable;Lorg/telegram/ui/ActionBar/ThemeDescription$ThemeDescriptionDelegate;Ljava/lang/String;)V
+    invoke-direct/range {v10 .. v17}, Lorg/telegram/ui/ActionBar/ThemeDescription;-><init>(Landroid/view/View;I[Ljava/lang/Class;Landroid/graphics/Paint;[Landroid/graphics/drawable/Drawable;Lorg/telegram/ui/ActionBar/ThemeDescription$ThemeDescriptionDelegate;Ljava/lang/String;)V
 
     invoke-virtual {v9, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -4834,29 +4828,37 @@
 
     iget-object v4, v8, Lorg/telegram/ui/FilteredSearchView;->recyclerListView:Lorg/telegram/ui/Components/RecyclerListView;
 
-    new-array v6, v1, [Ljava/lang/Class;
+    new-array v6, v5, [Ljava/lang/Class;
 
     const-class v10, Lorg/telegram/ui/Cells/DialogCell;
 
     aput-object v10, v6, v3
 
+    const-class v10, Lorg/telegram/ui/Cells/ProfileSearchCell;
+
+    aput-object v10, v6, v1
+
     new-array v10, v1, [Landroid/graphics/drawable/Drawable;
 
-    sget-object v11, Lorg/telegram/ui/ActionBar/Theme;->dialogs_errorDrawable:Landroid/graphics/drawable/Drawable;
+    sget-object v11, Lorg/telegram/ui/ActionBar/Theme;->dialogs_verifiedCheckDrawable:Landroid/graphics/drawable/Drawable;
 
     aput-object v11, v10, v3
 
-    const-string v26, "chats_sentErrorIcon"
+    const/16 v20, 0x0
 
-    move-object/from16 v19, v0
+    const/16 v22, 0x0
 
-    move-object/from16 v20, v4
+    const-string v25, "chats_verifiedCheck"
 
-    move-object/from16 v22, v6
+    move-object/from16 v18, v0
 
-    move-object/from16 v24, v10
+    move-object/from16 v19, v4
 
-    invoke-direct/range {v19 .. v26}, Lorg/telegram/ui/ActionBar/ThemeDescription;-><init>(Landroid/view/View;I[Ljava/lang/Class;Landroid/graphics/Paint;[Landroid/graphics/drawable/Drawable;Lorg/telegram/ui/ActionBar/ThemeDescription$ThemeDescriptionDelegate;Ljava/lang/String;)V
+    move-object/from16 v21, v6
+
+    move-object/from16 v23, v10
+
+    invoke-direct/range {v18 .. v25}, Lorg/telegram/ui/ActionBar/ThemeDescription;-><init>(Landroid/view/View;I[Ljava/lang/Class;Landroid/graphics/Paint;[Landroid/graphics/drawable/Drawable;Lorg/telegram/ui/ActionBar/ThemeDescription$ThemeDescriptionDelegate;Ljava/lang/String;)V
 
     invoke-virtual {v9, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -4877,13 +4879,17 @@
 
     new-array v4, v1, [Landroid/graphics/drawable/Drawable;
 
-    sget-object v6, Lorg/telegram/ui/ActionBar/Theme;->dialogs_verifiedCheckDrawable:Landroid/graphics/drawable/Drawable;
+    sget-object v5, Lorg/telegram/ui/ActionBar/Theme;->dialogs_verifiedDrawable:Landroid/graphics/drawable/Drawable;
 
-    aput-object v6, v4, v3
+    aput-object v5, v4, v3
+
+    const/4 v13, 0x0
 
     const/4 v15, 0x0
 
-    const-string v18, "chats_verifiedCheck"
+    const/16 v17, 0x0
+
+    const-string v18, "chats_verifiedBackground"
 
     move-object v11, v0
 
@@ -4898,23 +4904,25 @@
 
     iget-object v4, v8, Lorg/telegram/ui/FilteredSearchView;->recyclerListView:Lorg/telegram/ui/Components/RecyclerListView;
 
-    new-array v5, v5, [Ljava/lang/Class;
+    new-array v5, v1, [Ljava/lang/Class;
 
     const-class v6, Lorg/telegram/ui/Cells/DialogCell;
 
     aput-object v6, v5, v3
 
-    const-class v6, Lorg/telegram/ui/Cells/ProfileSearchCell;
-
-    aput-object v6, v5, v1
-
     new-array v6, v1, [Landroid/graphics/drawable/Drawable;
 
-    sget-object v10, Lorg/telegram/ui/ActionBar/Theme;->dialogs_verifiedDrawable:Landroid/graphics/drawable/Drawable;
+    sget-object v10, Lorg/telegram/ui/ActionBar/Theme;->dialogs_muteDrawable:Landroid/graphics/drawable/Drawable;
 
     aput-object v10, v6, v3
 
-    const-string v26, "chats_verifiedBackground"
+    const/16 v21, 0x0
+
+    const/16 v23, 0x0
+
+    const/16 v25, 0x0
+
+    const-string v26, "chats_muteIcon"
 
     move-object/from16 v19, v0
 
@@ -4941,7 +4949,7 @@
 
     new-array v15, v1, [Landroid/graphics/drawable/Drawable;
 
-    sget-object v4, Lorg/telegram/ui/ActionBar/Theme;->dialogs_muteDrawable:Landroid/graphics/drawable/Drawable;
+    sget-object v4, Lorg/telegram/ui/ActionBar/Theme;->dialogs_mentionDrawable:Landroid/graphics/drawable/Drawable;
 
     aput-object v4, v15, v3
 
@@ -4951,7 +4959,7 @@
 
     const/16 v16, 0x0
 
-    const-string v17, "chats_muteIcon"
+    const-string v17, "chats_mentionIcon"
 
     move-object v10, v0
 
@@ -4959,7 +4967,7 @@
 
     invoke-virtual {v9, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1755
+    .line 1756
     new-instance v0, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v4, v8, Lorg/telegram/ui/FilteredSearchView;->recyclerListView:Lorg/telegram/ui/Components/RecyclerListView;
@@ -4970,27 +4978,19 @@
 
     aput-object v6, v5, v3
 
-    new-array v6, v1, [Landroid/graphics/drawable/Drawable;
-
-    sget-object v10, Lorg/telegram/ui/ActionBar/Theme;->dialogs_mentionDrawable:Landroid/graphics/drawable/Drawable;
-
-    aput-object v10, v6, v3
-
     const/16 v20, 0x0
 
     const/16 v22, 0x0
 
     const/16 v24, 0x0
 
-    const-string v25, "chats_mentionIcon"
+    const-string v25, "chats_archivePinBackground"
 
     move-object/from16 v18, v0
 
     move-object/from16 v19, v4
 
     move-object/from16 v21, v5
-
-    move-object/from16 v23, v6
 
     invoke-direct/range {v18 .. v25}, Lorg/telegram/ui/ActionBar/ThemeDescription;-><init>(Landroid/view/View;I[Ljava/lang/Class;Landroid/graphics/Paint;[Landroid/graphics/drawable/Drawable;Lorg/telegram/ui/ActionBar/ThemeDescription$ThemeDescriptionDelegate;Ljava/lang/String;)V
 
@@ -5009,7 +5009,7 @@
 
     const/4 v15, 0x0
 
-    const-string v17, "chats_archivePinBackground"
+    const-string v17, "chats_archiveBackground"
 
     move-object v10, v0
 
@@ -5017,7 +5017,7 @@
 
     invoke-virtual {v9, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1758
+    .line 1759
     new-instance v0, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v4, v8, Lorg/telegram/ui/FilteredSearchView;->recyclerListView:Lorg/telegram/ui/Components/RecyclerListView;
@@ -5028,9 +5028,7 @@
 
     aput-object v6, v5, v3
 
-    const/16 v23, 0x0
-
-    const-string v25, "chats_archiveBackground"
+    const-string v25, "chats_onlineCircle"
 
     move-object/from16 v18, v0
 
@@ -5053,7 +5051,7 @@
 
     aput-object v4, v13, v3
 
-    const-string v17, "chats_onlineCircle"
+    const-string v17, "windowBackgroundWhite"
 
     move-object v10, v0
 
@@ -5066,57 +5064,7 @@
 
     iget-object v4, v8, Lorg/telegram/ui/FilteredSearchView;->recyclerListView:Lorg/telegram/ui/Components/RecyclerListView;
 
-    new-array v5, v1, [Ljava/lang/Class;
-
-    const-class v6, Lorg/telegram/ui/Cells/DialogCell;
-
-    aput-object v6, v5, v3
-
-    const-string v25, "windowBackgroundWhite"
-
-    move-object/from16 v18, v0
-
-    move-object/from16 v19, v4
-
-    move-object/from16 v21, v5
-
-    invoke-direct/range {v18 .. v25}, Lorg/telegram/ui/ActionBar/ThemeDescription;-><init>(Landroid/view/View;I[Ljava/lang/Class;Landroid/graphics/Paint;[Landroid/graphics/drawable/Drawable;Lorg/telegram/ui/ActionBar/ThemeDescription$ThemeDescriptionDelegate;Ljava/lang/String;)V
-
-    invoke-virtual {v9, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    .line 1762
-    new-instance v0, Lorg/telegram/ui/ActionBar/ThemeDescription;
-
-    iget-object v11, v8, Lorg/telegram/ui/FilteredSearchView;->recyclerListView:Lorg/telegram/ui/Components/RecyclerListView;
-
-    sget v12, Lorg/telegram/ui/ActionBar/ThemeDescription;->FLAG_CHECKBOX:I
-
-    new-array v13, v1, [Ljava/lang/Class;
-
-    const-class v4, Lorg/telegram/ui/Cells/DialogCell;
-
-    aput-object v4, v13, v3
-
-    new-array v14, v1, [Ljava/lang/String;
-
-    aput-object v2, v14, v3
-
-    const/16 v17, 0x0
-
-    const-string v18, "windowBackgroundWhite"
-
-    move-object v10, v0
-
-    invoke-direct/range {v10 .. v18}, Lorg/telegram/ui/ActionBar/ThemeDescription;-><init>(Landroid/view/View;I[Ljava/lang/Class;[Ljava/lang/String;[Landroid/graphics/Paint;[Landroid/graphics/drawable/Drawable;Lorg/telegram/ui/ActionBar/ThemeDescription$ThemeDescriptionDelegate;Ljava/lang/String;)V
-
-    invoke-virtual {v9, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    .line 1763
-    new-instance v0, Lorg/telegram/ui/ActionBar/ThemeDescription;
-
-    iget-object v4, v8, Lorg/telegram/ui/FilteredSearchView;->recyclerListView:Lorg/telegram/ui/Components/RecyclerListView;
-
-    sget v21, Lorg/telegram/ui/ActionBar/ThemeDescription;->FLAG_CHECKBOXCHECK:I
+    sget v20, Lorg/telegram/ui/ActionBar/ThemeDescription;->FLAG_CHECKBOX:I
 
     new-array v5, v1, [Ljava/lang/Class;
 
@@ -5130,17 +5078,75 @@
 
     const/16 v25, 0x0
 
+    const-string v26, "windowBackgroundWhite"
+
+    move-object/from16 v18, v0
+
+    move-object/from16 v19, v4
+
+    move-object/from16 v21, v5
+
+    move-object/from16 v22, v6
+
+    invoke-direct/range {v18 .. v26}, Lorg/telegram/ui/ActionBar/ThemeDescription;-><init>(Landroid/view/View;I[Ljava/lang/Class;[Ljava/lang/String;[Landroid/graphics/Paint;[Landroid/graphics/drawable/Drawable;Lorg/telegram/ui/ActionBar/ThemeDescription$ThemeDescriptionDelegate;Ljava/lang/String;)V
+
+    invoke-virtual {v9, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 1762
+    new-instance v0, Lorg/telegram/ui/ActionBar/ThemeDescription;
+
+    iget-object v11, v8, Lorg/telegram/ui/FilteredSearchView;->recyclerListView:Lorg/telegram/ui/Components/RecyclerListView;
+
+    sget v12, Lorg/telegram/ui/ActionBar/ThemeDescription;->FLAG_CHECKBOXCHECK:I
+
+    new-array v13, v1, [Ljava/lang/Class;
+
+    const-class v4, Lorg/telegram/ui/Cells/DialogCell;
+
+    aput-object v4, v13, v3
+
+    new-array v14, v1, [Ljava/lang/String;
+
+    aput-object v2, v14, v3
+
+    const/16 v17, 0x0
+
+    const-string v18, "checkboxCheck"
+
+    move-object v10, v0
+
+    invoke-direct/range {v10 .. v18}, Lorg/telegram/ui/ActionBar/ThemeDescription;-><init>(Landroid/view/View;I[Ljava/lang/Class;[Ljava/lang/String;[Landroid/graphics/Paint;[Landroid/graphics/drawable/Drawable;Lorg/telegram/ui/ActionBar/ThemeDescription$ThemeDescriptionDelegate;Ljava/lang/String;)V
+
+    invoke-virtual {v9, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 1764
+    new-instance v0, Lorg/telegram/ui/ActionBar/ThemeDescription;
+
+    iget-object v2, v8, Lorg/telegram/ui/FilteredSearchView;->recyclerListView:Lorg/telegram/ui/Components/RecyclerListView;
+
+    sget v21, Lorg/telegram/ui/ActionBar/ThemeDescription;->FLAG_SECTIONS:I
+
+    new-array v4, v1, [Ljava/lang/Class;
+
+    const-class v5, Lorg/telegram/ui/Cells/GraySectionCell;
+
+    aput-object v5, v4, v3
+
+    new-array v5, v1, [Ljava/lang/String;
+
+    aput-object v7, v5, v3
+
     const/16 v26, 0x0
 
-    const-string v27, "checkboxCheck"
+    const-string v27, "key_graySectionText"
 
     move-object/from16 v19, v0
 
-    move-object/from16 v20, v4
+    move-object/from16 v20, v2
 
-    move-object/from16 v22, v5
+    move-object/from16 v22, v4
 
-    move-object/from16 v23, v6
+    move-object/from16 v23, v5
 
     invoke-direct/range {v19 .. v27}, Lorg/telegram/ui/ActionBar/ThemeDescription;-><init>(Landroid/view/View;I[Ljava/lang/Class;[Ljava/lang/String;[Landroid/graphics/Paint;[Landroid/graphics/drawable/Drawable;Lorg/telegram/ui/ActionBar/ThemeDescription$ThemeDescriptionDelegate;Ljava/lang/String;)V
 
@@ -5151,54 +5157,50 @@
 
     iget-object v11, v8, Lorg/telegram/ui/FilteredSearchView;->recyclerListView:Lorg/telegram/ui/Components/RecyclerListView;
 
-    sget v12, Lorg/telegram/ui/ActionBar/ThemeDescription;->FLAG_SECTIONS:I
+    sget v2, Lorg/telegram/ui/ActionBar/ThemeDescription;->FLAG_CELLBACKGROUNDCOLOR:I
+
+    sget v4, Lorg/telegram/ui/ActionBar/ThemeDescription;->FLAG_SECTIONS:I
+
+    or-int v12, v2, v4
 
     new-array v13, v1, [Ljava/lang/Class;
 
-    const-class v2, Lorg/telegram/ui/Cells/GraySectionCell;
+    const-class v1, Lorg/telegram/ui/Cells/GraySectionCell;
 
-    aput-object v2, v13, v3
+    aput-object v1, v13, v3
 
-    new-array v14, v1, [Ljava/lang/String;
+    const/4 v14, 0x0
 
-    aput-object v7, v14, v3
-
-    const-string v18, "key_graySectionText"
+    const-string v17, "graySection"
 
     move-object v10, v0
 
-    invoke-direct/range {v10 .. v18}, Lorg/telegram/ui/ActionBar/ThemeDescription;-><init>(Landroid/view/View;I[Ljava/lang/Class;[Ljava/lang/String;[Landroid/graphics/Paint;[Landroid/graphics/drawable/Drawable;Lorg/telegram/ui/ActionBar/ThemeDescription$ThemeDescriptionDelegate;Ljava/lang/String;)V
+    invoke-direct/range {v10 .. v17}, Lorg/telegram/ui/ActionBar/ThemeDescription;-><init>(Landroid/view/View;I[Ljava/lang/Class;Landroid/graphics/Paint;[Landroid/graphics/drawable/Drawable;Lorg/telegram/ui/ActionBar/ThemeDescription$ThemeDescriptionDelegate;Ljava/lang/String;)V
 
     invoke-virtual {v9, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1766
+    .line 1767
     new-instance v0, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
-    iget-object v2, v8, Lorg/telegram/ui/FilteredSearchView;->recyclerListView:Lorg/telegram/ui/Components/RecyclerListView;
+    iget-object v1, v8, Lorg/telegram/ui/FilteredSearchView;->emptyView:Lorg/telegram/ui/Components/StickerEmptyView;
 
-    sget v4, Lorg/telegram/ui/ActionBar/ThemeDescription;->FLAG_CELLBACKGROUNDCOLOR:I
+    iget-object v1, v1, Lorg/telegram/ui/Components/StickerEmptyView;->title:Landroid/widget/TextView;
 
-    sget v5, Lorg/telegram/ui/ActionBar/ThemeDescription;->FLAG_SECTIONS:I
+    sget v20, Lorg/telegram/ui/ActionBar/ThemeDescription;->FLAG_TEXTCOLOR:I
 
-    or-int v21, v4, v5
+    const/16 v21, 0x0
 
-    new-array v1, v1, [Ljava/lang/Class;
-
-    const-class v4, Lorg/telegram/ui/Cells/GraySectionCell;
-
-    aput-object v4, v1, v3
+    const/16 v22, 0x0
 
     const/16 v23, 0x0
 
-    const-string v26, "graySection"
+    const-string v25, "windowBackgroundWhiteBlackText"
 
-    move-object/from16 v19, v0
+    move-object/from16 v18, v0
 
-    move-object/from16 v20, v2
+    move-object/from16 v19, v1
 
-    move-object/from16 v22, v1
-
-    invoke-direct/range {v19 .. v26}, Lorg/telegram/ui/ActionBar/ThemeDescription;-><init>(Landroid/view/View;I[Ljava/lang/Class;Landroid/graphics/Paint;[Landroid/graphics/drawable/Drawable;Lorg/telegram/ui/ActionBar/ThemeDescription$ThemeDescriptionDelegate;Ljava/lang/String;)V
+    invoke-direct/range {v18 .. v25}, Lorg/telegram/ui/ActionBar/ThemeDescription;-><init>(Landroid/view/View;I[Ljava/lang/Class;Landroid/graphics/Paint;[Landroid/graphics/drawable/Drawable;Lorg/telegram/ui/ActionBar/ThemeDescription$ThemeDescriptionDelegate;Ljava/lang/String;)V
 
     invoke-virtual {v9, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -5207,42 +5209,17 @@
 
     iget-object v1, v8, Lorg/telegram/ui/FilteredSearchView;->emptyView:Lorg/telegram/ui/Components/StickerEmptyView;
 
-    iget-object v11, v1, Lorg/telegram/ui/Components/StickerEmptyView;->title:Landroid/widget/TextView;
+    iget-object v11, v1, Lorg/telegram/ui/Components/StickerEmptyView;->subtitle:Landroid/widget/TextView;
 
     sget v12, Lorg/telegram/ui/ActionBar/ThemeDescription;->FLAG_TEXTCOLOR:I
 
     const/4 v13, 0x0
 
-    const/4 v14, 0x0
-
-    const-string v17, "windowBackgroundWhiteBlackText"
+    const-string v17, "windowBackgroundWhiteGrayText"
 
     move-object v10, v0
 
     invoke-direct/range {v10 .. v17}, Lorg/telegram/ui/ActionBar/ThemeDescription;-><init>(Landroid/view/View;I[Ljava/lang/Class;Landroid/graphics/Paint;[Landroid/graphics/drawable/Drawable;Lorg/telegram/ui/ActionBar/ThemeDescription$ThemeDescriptionDelegate;Ljava/lang/String;)V
-
-    invoke-virtual {v9, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    .line 1769
-    new-instance v0, Lorg/telegram/ui/ActionBar/ThemeDescription;
-
-    iget-object v1, v8, Lorg/telegram/ui/FilteredSearchView;->emptyView:Lorg/telegram/ui/Components/StickerEmptyView;
-
-    iget-object v1, v1, Lorg/telegram/ui/Components/StickerEmptyView;->subtitle:Landroid/widget/TextView;
-
-    sget v20, Lorg/telegram/ui/ActionBar/ThemeDescription;->FLAG_TEXTCOLOR:I
-
-    const/16 v21, 0x0
-
-    const/16 v22, 0x0
-
-    const-string v25, "windowBackgroundWhiteGrayText"
-
-    move-object/from16 v18, v0
-
-    move-object/from16 v19, v1
-
-    invoke-direct/range {v18 .. v25}, Lorg/telegram/ui/ActionBar/ThemeDescription;-><init>(Landroid/view/View;I[Ljava/lang/Class;Landroid/graphics/Paint;[Landroid/graphics/drawable/Drawable;Lorg/telegram/ui/ActionBar/ThemeDescription$ThemeDescriptionDelegate;Ljava/lang/String;)V
 
     invoke-virtual {v9, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 

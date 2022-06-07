@@ -8,6 +8,8 @@
 
 .field private avatarImageView:Lorg/telegram/ui/Components/BackupImageView;
 
+.field checkBox:Lorg/telegram/ui/Components/CheckBox2;
+
 .field private currentAccount:I
 
 .field private currentChannel:Lorg/telegram/tgnet/TLRPC$Chat;
@@ -22,396 +24,536 @@
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Landroid/view/View$OnClickListener;)V
-    .registers 19
+.method public constructor <init>(Landroid/content/Context;Landroid/view/View$OnClickListener;ZI)V
+    .registers 21
 
     move-object/from16 v0, p0
 
     move-object/from16 v1, p1
 
+    move-object/from16 v2, p2
+
     .line 47
     invoke-direct/range {p0 .. p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    .line 44
-    sget v2, Lorg/telegram/messenger/UserConfig;->selectedAccount:I
+    .line 43
+    sget v3, Lorg/telegram/messenger/UserConfig;->selectedAccount:I
 
-    iput v2, v0, Lorg/telegram/ui/Cells/AdminedChannelCell;->currentAccount:I
+    iput v3, v0, Lorg/telegram/ui/Cells/AdminedChannelCell;->currentAccount:I
 
     .line 49
-    new-instance v2, Lorg/telegram/ui/Components/AvatarDrawable;
+    new-instance v3, Lorg/telegram/ui/Components/AvatarDrawable;
 
-    invoke-direct {v2}, Lorg/telegram/ui/Components/AvatarDrawable;-><init>()V
+    invoke-direct {v3}, Lorg/telegram/ui/Components/AvatarDrawable;-><init>()V
 
-    iput-object v2, v0, Lorg/telegram/ui/Cells/AdminedChannelCell;->avatarDrawable:Lorg/telegram/ui/Components/AvatarDrawable;
+    iput-object v3, v0, Lorg/telegram/ui/Cells/AdminedChannelCell;->avatarDrawable:Lorg/telegram/ui/Components/AvatarDrawable;
+
+    .line 50
+    new-instance v3, Lorg/telegram/ui/Components/BackupImageView;
+
+    invoke-direct {v3, v1}, Lorg/telegram/ui/Components/BackupImageView;-><init>(Landroid/content/Context;)V
+
+    iput-object v3, v0, Lorg/telegram/ui/Cells/AdminedChannelCell;->avatarImageView:Lorg/telegram/ui/Components/BackupImageView;
+
+    const/high16 v4, 0x41c00000    # 24.0f
 
     .line 51
-    new-instance v2, Lorg/telegram/ui/Components/BackupImageView;
+    invoke-static {v4}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
-    invoke-direct {v2, v1}, Lorg/telegram/ui/Components/BackupImageView;-><init>(Landroid/content/Context;)V
+    move-result v4
 
-    iput-object v2, v0, Lorg/telegram/ui/Cells/AdminedChannelCell;->avatarImageView:Lorg/telegram/ui/Components/BackupImageView;
-
-    const/high16 v3, 0x41c00000    # 24.0f
+    invoke-virtual {v3, v4}, Lorg/telegram/ui/Components/BackupImageView;->setRoundRadius(I)V
 
     .line 52
-    invoke-static {v3}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
+    iget-object v3, v0, Lorg/telegram/ui/Cells/AdminedChannelCell;->avatarImageView:Lorg/telegram/ui/Components/BackupImageView;
 
-    move-result v3
+    sget-boolean v4, Lorg/telegram/messenger/LocaleController;->isRTL:Z
 
-    invoke-virtual {v2, v3}, Lorg/telegram/ui/Components/BackupImageView;->setRoundRadius(I)V
+    const/4 v5, 0x5
 
-    .line 53
-    iget-object v2, v0, Lorg/telegram/ui/Cells/AdminedChannelCell;->avatarImageView:Lorg/telegram/ui/Components/BackupImageView;
-
-    sget-boolean v3, Lorg/telegram/messenger/LocaleController;->isRTL:Z
-
-    const/4 v4, 0x5
-
-    const/4 v5, 0x3
-
-    if-eqz v3, :cond_2c
-
-    const/4 v6, 0x5
-
-    goto :goto_2d
-
-    :cond_2c
     const/4 v6, 0x3
 
-    :goto_2d
-    or-int/lit8 v9, v6, 0x30
+    if-eqz v4, :cond_2e
 
-    const/high16 v6, 0x41400000    # 12.0f
+    const/4 v7, 0x5
 
-    const/4 v14, 0x0
+    goto :goto_2f
 
-    if-eqz v3, :cond_36
+    :cond_2e
+    const/4 v7, 0x3
 
-    const/4 v10, 0x0
+    :goto_2f
+    or-int/lit8 v10, v7, 0x30
 
-    goto :goto_38
+    const/4 v7, 0x0
+
+    if-eqz v4, :cond_36
+
+    const/4 v11, 0x0
+
+    goto :goto_3a
 
     :cond_36
-    const/high16 v10, 0x41400000    # 12.0f
+    add-int/lit8 v8, p4, 0xc
 
-    :goto_38
-    const/high16 v11, 0x41400000    # 12.0f
+    int-to-float v8, v8
 
-    if-eqz v3, :cond_3f
+    move v11, v8
 
-    const/high16 v12, 0x41400000    # 12.0f
+    :goto_3a
+    const/high16 v12, 0x40c00000    # 6.0f
 
-    goto :goto_40
+    if-eqz v4, :cond_43
 
-    :cond_3f
-    const/4 v12, 0x0
+    add-int/lit8 v4, p4, 0xc
 
-    :goto_40
+    int-to-float v4, v4
+
+    move v13, v4
+
+    goto :goto_44
+
+    :cond_43
     const/4 v13, 0x0
 
-    const/16 v7, 0x30
+    :goto_44
+    const/high16 v14, 0x40c00000    # 6.0f
 
-    const/high16 v8, 0x42400000    # 48.0f
+    const/16 v8, 0x30
 
-    invoke-static/range {v7 .. v13}, Lorg/telegram/ui/Components/LayoutHelper;->createFrame(IFIFFFF)Landroid/widget/FrameLayout$LayoutParams;
+    const/high16 v9, 0x42400000    # 48.0f
 
-    move-result-object v3
+    invoke-static/range {v8 .. v14}, Lorg/telegram/ui/Components/LayoutHelper;->createFrame(IFIFFFF)Landroid/widget/FrameLayout$LayoutParams;
 
-    invoke-virtual {v0, v2, v3}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+    move-result-object v4
+
+    invoke-virtual {v0, v3, v4}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+
+    if-eqz p3, :cond_97
 
     .line 55
-    new-instance v2, Lorg/telegram/ui/ActionBar/SimpleTextView;
+    new-instance v3, Lorg/telegram/ui/Components/CheckBox2;
 
-    invoke-direct {v2, v1}, Lorg/telegram/ui/ActionBar/SimpleTextView;-><init>(Landroid/content/Context;)V
+    const/16 v4, 0x15
 
-    iput-object v2, v0, Lorg/telegram/ui/Cells/AdminedChannelCell;->nameTextView:Lorg/telegram/ui/ActionBar/SimpleTextView;
+    invoke-direct {v3, v1, v4}, Lorg/telegram/ui/Components/CheckBox2;-><init>(Landroid/content/Context;I)V
 
-    const-string v3, "windowBackgroundWhiteBlackText"
+    iput-object v3, v0, Lorg/telegram/ui/Cells/AdminedChannelCell;->checkBox:Lorg/telegram/ui/Components/CheckBox2;
+
+    const/4 v4, 0x0
+
+    const-string v8, "windowBackgroundWhite"
+
+    const-string v9, "checkboxCheck"
 
     .line 56
-    invoke-static {v3}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
-
-    move-result v3
-
-    invoke-virtual {v2, v3}, Lorg/telegram/ui/ActionBar/SimpleTextView;->setTextColor(I)V
+    invoke-virtual {v3, v4, v8, v9}, Lorg/telegram/ui/Components/CheckBox2;->setColor(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 57
-    iget-object v2, v0, Lorg/telegram/ui/Cells/AdminedChannelCell;->nameTextView:Lorg/telegram/ui/ActionBar/SimpleTextView;
+    iget-object v3, v0, Lorg/telegram/ui/Cells/AdminedChannelCell;->checkBox:Lorg/telegram/ui/Components/CheckBox2;
 
-    const/16 v3, 0x11
+    const/4 v4, 0x0
 
-    invoke-virtual {v2, v3}, Lorg/telegram/ui/ActionBar/SimpleTextView;->setTextSize(I)V
+    invoke-virtual {v3, v4}, Lorg/telegram/ui/Components/CheckBox2;->setDrawUnchecked(Z)V
 
     .line 58
-    iget-object v2, v0, Lorg/telegram/ui/Cells/AdminedChannelCell;->nameTextView:Lorg/telegram/ui/ActionBar/SimpleTextView;
+    iget-object v3, v0, Lorg/telegram/ui/Cells/AdminedChannelCell;->checkBox:Lorg/telegram/ui/Components/CheckBox2;
 
-    sget-boolean v3, Lorg/telegram/messenger/LocaleController;->isRTL:Z
-
-    if-eqz v3, :cond_6b
-
-    const/4 v3, 0x5
-
-    goto :goto_6c
-
-    :cond_6b
-    const/4 v3, 0x3
-
-    :goto_6c
-    or-int/lit8 v3, v3, 0x30
-
-    invoke-virtual {v2, v3}, Lorg/telegram/ui/ActionBar/SimpleTextView;->setGravity(I)V
+    invoke-virtual {v3, v6}, Lorg/telegram/ui/Components/CheckBox2;->setDrawBackgroundAsArc(I)V
 
     .line 59
-    iget-object v2, v0, Lorg/telegram/ui/Cells/AdminedChannelCell;->nameTextView:Lorg/telegram/ui/ActionBar/SimpleTextView;
+    iget-object v3, v0, Lorg/telegram/ui/Cells/AdminedChannelCell;->checkBox:Lorg/telegram/ui/Components/CheckBox2;
 
-    const/4 v6, -0x1
+    const/16 v8, 0x18
 
-    const/high16 v7, 0x41a00000    # 20.0f
+    const/high16 v9, 0x41c00000    # 24.0f
 
-    sget-boolean v3, Lorg/telegram/messenger/LocaleController;->isRTL:Z
+    sget-boolean v4, Lorg/telegram/messenger/LocaleController;->isRTL:Z
 
-    if-eqz v3, :cond_7c
+    if-eqz v4, :cond_7b
 
-    const/4 v8, 0x5
+    const/4 v10, 0x5
 
-    goto :goto_7d
+    goto :goto_7c
 
-    :cond_7c
-    const/4 v8, 0x3
+    :cond_7b
+    const/4 v10, 0x3
 
-    :goto_7d
-    or-int/lit8 v8, v8, 0x30
+    :goto_7c
+    or-int/lit8 v10, v10, 0x30
 
-    const/high16 v13, 0x42780000    # 62.0f
+    if-eqz v4, :cond_82
 
-    const/high16 v15, 0x42920000    # 73.0f
+    const/4 v11, 0x0
 
-    if-eqz v3, :cond_88
+    goto :goto_85
 
-    const/high16 v9, 0x42780000    # 62.0f
+    :cond_82
+    add-int/lit8 v11, p4, 0x2a
 
-    goto :goto_8a
+    int-to-float v11, v11
 
-    :cond_88
-    const/high16 v9, 0x42920000    # 73.0f
+    :goto_85
+    const/high16 v12, 0x42000000    # 32.0f
 
-    :goto_8a
-    const/high16 v10, 0x41780000    # 15.5f
+    if-eqz v4, :cond_8e
 
-    if-eqz v3, :cond_91
+    add-int/lit8 v4, p4, 0x2a
 
-    const/high16 v11, 0x42920000    # 73.0f
+    int-to-float v4, v4
 
-    goto :goto_93
+    move v13, v4
 
-    :cond_91
-    const/high16 v11, 0x42780000    # 62.0f
+    goto :goto_8f
 
-    :goto_93
-    const/4 v12, 0x0
+    :cond_8e
+    const/4 v13, 0x0
 
-    invoke-static/range {v6 .. v12}, Lorg/telegram/ui/Components/LayoutHelper;->createFrame(IFIFFFF)Landroid/widget/FrameLayout$LayoutParams;
+    :goto_8f
+    const/4 v14, 0x0
 
-    move-result-object v3
+    invoke-static/range {v8 .. v14}, Lorg/telegram/ui/Components/LayoutHelper;->createFrame(IFIFFFF)Landroid/widget/FrameLayout$LayoutParams;
 
-    invoke-virtual {v0, v2, v3}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+    move-result-object v4
 
-    .line 61
-    new-instance v2, Lorg/telegram/ui/ActionBar/SimpleTextView;
+    invoke-virtual {v0, v3, v4}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    invoke-direct {v2, v1}, Lorg/telegram/ui/ActionBar/SimpleTextView;-><init>(Landroid/content/Context;)V
+    :cond_97
+    if-nez v2, :cond_9c
 
-    iput-object v2, v0, Lorg/telegram/ui/Cells/AdminedChannelCell;->statusTextView:Lorg/telegram/ui/ActionBar/SimpleTextView;
+    const/16 v3, 0x18
 
-    const/16 v3, 0xe
+    goto :goto_9e
 
-    .line 62
-    invoke-virtual {v2, v3}, Lorg/telegram/ui/ActionBar/SimpleTextView;->setTextSize(I)V
+    :cond_9c
+    const/16 v3, 0x3e
 
     .line 63
-    iget-object v2, v0, Lorg/telegram/ui/Cells/AdminedChannelCell;->statusTextView:Lorg/telegram/ui/ActionBar/SimpleTextView;
+    :goto_9e
+    new-instance v4, Lorg/telegram/ui/ActionBar/SimpleTextView;
 
-    const-string v3, "windowBackgroundWhiteGrayText"
+    invoke-direct {v4, v1}, Lorg/telegram/ui/ActionBar/SimpleTextView;-><init>(Landroid/content/Context;)V
 
-    invoke-static {v3}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
+    iput-object v4, v0, Lorg/telegram/ui/Cells/AdminedChannelCell;->nameTextView:Lorg/telegram/ui/ActionBar/SimpleTextView;
 
-    move-result v6
-
-    invoke-virtual {v2, v6}, Lorg/telegram/ui/ActionBar/SimpleTextView;->setTextColor(I)V
+    const-string v8, "windowBackgroundWhiteBlackText"
 
     .line 64
-    iget-object v2, v0, Lorg/telegram/ui/Cells/AdminedChannelCell;->statusTextView:Lorg/telegram/ui/ActionBar/SimpleTextView;
+    invoke-static {v8}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
 
-    const-string v6, "windowBackgroundWhiteLinkText"
+    move-result v8
 
-    invoke-static {v6}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
-
-    move-result v6
-
-    invoke-virtual {v2, v6}, Lorg/telegram/ui/ActionBar/SimpleTextView;->setLinkTextColor(I)V
+    invoke-virtual {v4, v8}, Lorg/telegram/ui/ActionBar/SimpleTextView;->setTextColor(I)V
 
     .line 65
-    iget-object v2, v0, Lorg/telegram/ui/Cells/AdminedChannelCell;->statusTextView:Lorg/telegram/ui/ActionBar/SimpleTextView;
+    iget-object v4, v0, Lorg/telegram/ui/Cells/AdminedChannelCell;->nameTextView:Lorg/telegram/ui/ActionBar/SimpleTextView;
 
-    sget-boolean v6, Lorg/telegram/messenger/LocaleController;->isRTL:Z
+    const/16 v8, 0x11
 
-    if-eqz v6, :cond_c5
-
-    const/4 v6, 0x5
-
-    goto :goto_c6
-
-    :cond_c5
-    const/4 v6, 0x3
-
-    :goto_c6
-    or-int/lit8 v6, v6, 0x30
-
-    invoke-virtual {v2, v6}, Lorg/telegram/ui/ActionBar/SimpleTextView;->setGravity(I)V
+    invoke-virtual {v4, v8}, Lorg/telegram/ui/ActionBar/SimpleTextView;->setTextSize(I)V
 
     .line 66
-    iget-object v2, v0, Lorg/telegram/ui/Cells/AdminedChannelCell;->statusTextView:Lorg/telegram/ui/ActionBar/SimpleTextView;
-
-    const/4 v6, -0x1
-
-    const/high16 v7, 0x41a00000    # 20.0f
+    iget-object v4, v0, Lorg/telegram/ui/Cells/AdminedChannelCell;->nameTextView:Lorg/telegram/ui/ActionBar/SimpleTextView;
 
     sget-boolean v8, Lorg/telegram/messenger/LocaleController;->isRTL:Z
 
-    if-eqz v8, :cond_d6
+    if-eqz v8, :cond_bd
 
-    const/4 v9, 0x5
+    const/4 v8, 0x5
 
-    goto :goto_d7
+    goto :goto_be
 
-    :cond_d6
-    const/4 v9, 0x3
+    :cond_bd
+    const/4 v8, 0x3
 
-    :goto_d7
-    or-int/lit8 v9, v9, 0x30
+    :goto_be
+    or-int/lit8 v8, v8, 0x30
 
-    if-eqz v8, :cond_de
+    invoke-virtual {v4, v8}, Lorg/telegram/ui/ActionBar/SimpleTextView;->setGravity(I)V
 
-    const/high16 v10, 0x42780000    # 62.0f
+    .line 67
+    iget-object v4, v0, Lorg/telegram/ui/Cells/AdminedChannelCell;->nameTextView:Lorg/telegram/ui/ActionBar/SimpleTextView;
 
-    goto :goto_e0
+    const/4 v8, -0x1
 
-    :cond_de
-    const/high16 v10, 0x42920000    # 73.0f
+    const/high16 v9, 0x41a00000    # 20.0f
 
-    :goto_e0
-    const/high16 v11, 0x421a0000    # 38.5f
+    sget-boolean v10, Lorg/telegram/messenger/LocaleController;->isRTL:Z
 
-    if-eqz v8, :cond_e6
+    if-eqz v10, :cond_ce
 
-    const/high16 v13, 0x42920000    # 73.0f
+    const/4 v11, 0x5
 
-    :cond_e6
-    const/4 v12, 0x0
+    goto :goto_cf
 
-    move v8, v9
+    :cond_ce
+    const/4 v11, 0x3
 
-    move v9, v10
+    :goto_cf
+    or-int/lit8 v11, v11, 0x30
+
+    if-eqz v10, :cond_d5
+
+    int-to-float v12, v3
+
+    goto :goto_d8
+
+    :cond_d5
+    add-int/lit8 v12, p4, 0x49
+
+    int-to-float v12, v12
+
+    :goto_d8
+    const/high16 v13, 0x41180000    # 9.5f
+
+    if-eqz v10, :cond_e0
+
+    add-int/lit8 v10, p4, 0x49
+
+    int-to-float v10, v10
+
+    goto :goto_e1
+
+    :cond_e0
+    int-to-float v10, v3
+
+    :goto_e1
+    move v14, v10
+
+    const/4 v15, 0x0
 
     move v10, v11
 
-    move v11, v13
+    move v11, v12
 
-    invoke-static/range {v6 .. v12}, Lorg/telegram/ui/Components/LayoutHelper;->createFrame(IFIFFFF)Landroid/widget/FrameLayout$LayoutParams;
+    move v12, v13
 
-    move-result-object v6
+    move v13, v14
 
-    invoke-virtual {v0, v2, v6}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+    move v14, v15
 
-    .line 68
-    new-instance v2, Landroid/widget/ImageView;
+    invoke-static/range {v8 .. v14}, Lorg/telegram/ui/Components/LayoutHelper;->createFrame(IFIFFFF)Landroid/widget/FrameLayout$LayoutParams;
 
-    invoke-direct {v2, v1}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
+    move-result-object v8
 
-    iput-object v2, v0, Lorg/telegram/ui/Cells/AdminedChannelCell;->deleteButton:Landroid/widget/ImageView;
+    invoke-virtual {v0, v4, v8}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 69
-    sget-object v1, Landroid/widget/ImageView$ScaleType;->CENTER:Landroid/widget/ImageView$ScaleType;
+    new-instance v4, Lorg/telegram/ui/ActionBar/SimpleTextView;
 
-    invoke-virtual {v2, v1}, Landroid/widget/ImageView;->setScaleType(Landroid/widget/ImageView$ScaleType;)V
+    invoke-direct {v4, v1}, Lorg/telegram/ui/ActionBar/SimpleTextView;-><init>(Landroid/content/Context;)V
+
+    iput-object v4, v0, Lorg/telegram/ui/Cells/AdminedChannelCell;->statusTextView:Lorg/telegram/ui/ActionBar/SimpleTextView;
+
+    const/16 v8, 0xe
 
     .line 70
-    iget-object v1, v0, Lorg/telegram/ui/Cells/AdminedChannelCell;->deleteButton:Landroid/widget/ImageView;
-
-    const v2, 0x7f07029a
-
-    invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setImageResource(I)V
+    invoke-virtual {v4, v8}, Lorg/telegram/ui/ActionBar/SimpleTextView;->setTextSize(I)V
 
     .line 71
+    iget-object v4, v0, Lorg/telegram/ui/Cells/AdminedChannelCell;->statusTextView:Lorg/telegram/ui/ActionBar/SimpleTextView;
+
+    const-string v8, "windowBackgroundWhiteGrayText"
+
+    invoke-static {v8}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
+
+    move-result v9
+
+    invoke-virtual {v4, v9}, Lorg/telegram/ui/ActionBar/SimpleTextView;->setTextColor(I)V
+
+    .line 72
+    iget-object v4, v0, Lorg/telegram/ui/Cells/AdminedChannelCell;->statusTextView:Lorg/telegram/ui/ActionBar/SimpleTextView;
+
+    const-string v9, "windowBackgroundWhiteLinkText"
+
+    invoke-static {v9}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
+
+    move-result v9
+
+    invoke-virtual {v4, v9}, Lorg/telegram/ui/ActionBar/SimpleTextView;->setLinkTextColor(I)V
+
+    .line 73
+    iget-object v4, v0, Lorg/telegram/ui/Cells/AdminedChannelCell;->statusTextView:Lorg/telegram/ui/ActionBar/SimpleTextView;
+
+    sget-boolean v9, Lorg/telegram/messenger/LocaleController;->isRTL:Z
+
+    if-eqz v9, :cond_119
+
+    const/4 v9, 0x5
+
+    goto :goto_11a
+
+    :cond_119
+    const/4 v9, 0x3
+
+    :goto_11a
+    or-int/lit8 v9, v9, 0x30
+
+    invoke-virtual {v4, v9}, Lorg/telegram/ui/ActionBar/SimpleTextView;->setGravity(I)V
+
+    .line 74
+    iget-object v4, v0, Lorg/telegram/ui/Cells/AdminedChannelCell;->statusTextView:Lorg/telegram/ui/ActionBar/SimpleTextView;
+
+    const/4 v9, -0x1
+
+    const/high16 v10, 0x41a00000    # 20.0f
+
+    sget-boolean v11, Lorg/telegram/messenger/LocaleController;->isRTL:Z
+
+    if-eqz v11, :cond_12a
+
+    const/4 v12, 0x5
+
+    goto :goto_12b
+
+    :cond_12a
+    const/4 v12, 0x3
+
+    :goto_12b
+    or-int/lit8 v12, v12, 0x30
+
+    if-eqz v11, :cond_131
+
+    int-to-float v13, v3
+
+    goto :goto_134
+
+    :cond_131
+    add-int/lit8 v13, p4, 0x49
+
+    int-to-float v13, v13
+
+    :goto_134
+    const/high16 v14, 0x42020000    # 32.5f
+
+    if-eqz v11, :cond_13a
+
+    add-int/lit8 v3, p4, 0x49
+
+    :cond_13a
+    int-to-float v3, v3
+
+    const/high16 v15, 0x40c00000    # 6.0f
+
+    move v11, v12
+
+    move v12, v13
+
+    move v13, v14
+
+    move v14, v3
+
+    invoke-static/range {v9 .. v15}, Lorg/telegram/ui/Components/LayoutHelper;->createFrame(IFIFFFF)Landroid/widget/FrameLayout$LayoutParams;
+
+    move-result-object v3
+
+    invoke-virtual {v0, v4, v3}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+
+    if-eqz v2, :cond_1a7
+
+    .line 77
+    new-instance v3, Landroid/widget/ImageView;
+
+    invoke-direct {v3, v1}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
+
+    iput-object v3, v0, Lorg/telegram/ui/Cells/AdminedChannelCell;->deleteButton:Landroid/widget/ImageView;
+
+    .line 78
+    sget-object v1, Landroid/widget/ImageView$ScaleType;->CENTER:Landroid/widget/ImageView$ScaleType;
+
+    invoke-virtual {v3, v1}, Landroid/widget/ImageView;->setScaleType(Landroid/widget/ImageView$ScaleType;)V
+
+    .line 79
     iget-object v1, v0, Lorg/telegram/ui/Cells/AdminedChannelCell;->deleteButton:Landroid/widget/ImageView;
 
-    move-object/from16 v2, p2
+    const v3, 0x7f070289
+
+    invoke-virtual {v1, v3}, Landroid/widget/ImageView;->setImageResource(I)V
+
+    .line 80
+    iget-object v1, v0, Lorg/telegram/ui/Cells/AdminedChannelCell;->deleteButton:Landroid/widget/ImageView;
 
     invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 72
+    .line 81
+    iget-object v1, v0, Lorg/telegram/ui/Cells/AdminedChannelCell;->deleteButton:Landroid/widget/ImageView;
+
+    const-string v2, "listSelectorSDK21"
+
+    invoke-static {v2}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
+
+    move-result v2
+
+    invoke-static {v2}, Lorg/telegram/ui/ActionBar/Theme;->createSelectorDrawable(I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setBackground(Landroid/graphics/drawable/Drawable;)V
+
+    .line 82
     iget-object v1, v0, Lorg/telegram/ui/Cells/AdminedChannelCell;->deleteButton:Landroid/widget/ImageView;
 
     new-instance v2, Landroid/graphics/PorterDuffColorFilter;
 
-    invoke-static {v3}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
+    invoke-static {v8}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
 
     move-result v3
 
-    sget-object v6, Landroid/graphics/PorterDuff$Mode;->MULTIPLY:Landroid/graphics/PorterDuff$Mode;
+    sget-object v4, Landroid/graphics/PorterDuff$Mode;->MULTIPLY:Landroid/graphics/PorterDuff$Mode;
 
-    invoke-direct {v2, v3, v6}, Landroid/graphics/PorterDuffColorFilter;-><init>(ILandroid/graphics/PorterDuff$Mode;)V
+    invoke-direct {v2, v3, v4}, Landroid/graphics/PorterDuffColorFilter;-><init>(ILandroid/graphics/PorterDuff$Mode;)V
 
     invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setColorFilter(Landroid/graphics/ColorFilter;)V
 
-    .line 73
+    .line 83
     iget-object v1, v0, Lorg/telegram/ui/Cells/AdminedChannelCell;->deleteButton:Landroid/widget/ImageView;
 
-    const/16 v6, 0x30
+    const/16 v8, 0x30
 
-    const/high16 v7, 0x42400000    # 48.0f
+    const/high16 v9, 0x42400000    # 48.0f
 
     sget-boolean v2, Lorg/telegram/messenger/LocaleController;->isRTL:Z
 
-    if-eqz v2, :cond_128
+    if-eqz v2, :cond_18d
 
-    const/4 v4, 0x3
+    const/4 v5, 0x3
 
-    :cond_128
-    or-int/lit8 v8, v4, 0x30
+    :cond_18d
+    or-int/lit8 v10, v5, 0x30
 
     const/high16 v3, 0x40e00000    # 7.0f
 
-    if-eqz v2, :cond_131
+    if-eqz v2, :cond_196
 
-    const/high16 v9, 0x40e00000    # 7.0f
-
-    goto :goto_132
-
-    :cond_131
-    const/4 v9, 0x0
-
-    :goto_132
-    const/high16 v10, 0x41400000    # 12.0f
-
-    if-eqz v2, :cond_138
-
-    const/4 v11, 0x0
-
-    goto :goto_13a
-
-    :cond_138
     const/high16 v11, 0x40e00000    # 7.0f
 
-    :goto_13a
-    const/4 v12, 0x0
+    goto :goto_197
 
-    invoke-static/range {v6 .. v12}, Lorg/telegram/ui/Components/LayoutHelper;->createFrame(IFIFFFF)Landroid/widget/FrameLayout$LayoutParams;
+    :cond_196
+    const/4 v11, 0x0
+
+    :goto_197
+    const/high16 v12, 0x40c00000    # 6.0f
+
+    if-eqz v2, :cond_19d
+
+    const/4 v13, 0x0
+
+    goto :goto_19f
+
+    :cond_19d
+    const/high16 v13, 0x40e00000    # 7.0f
+
+    :goto_19f
+    const/4 v14, 0x0
+
+    invoke-static/range {v8 .. v14}, Lorg/telegram/ui/Components/LayoutHelper;->createFrame(IFIFFFF)Landroid/widget/FrameLayout$LayoutParams;
 
     move-result-object v2
 
     invoke-virtual {v0, v1, v2}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
+    :cond_1a7
     return-void
 .end method
 
@@ -420,7 +562,7 @@
 .method public getCurrentChannel()Lorg/telegram/tgnet/TLRPC$Chat;
     .registers 2
 
-    .line 94
+    .line 105
     iget-object v0, p0, Lorg/telegram/ui/Cells/AdminedChannelCell;->currentChannel:Lorg/telegram/tgnet/TLRPC$Chat;
 
     return-object v0
@@ -429,7 +571,7 @@
 .method public getDeleteButton()Landroid/widget/ImageView;
     .registers 2
 
-    .line 116
+    .line 127
     iget-object v0, p0, Lorg/telegram/ui/Cells/AdminedChannelCell;->deleteButton:Landroid/widget/ImageView;
 
     return-object v0
@@ -438,7 +580,7 @@
 .method public getNameTextView()Lorg/telegram/ui/ActionBar/SimpleTextView;
     .registers 2
 
-    .line 108
+    .line 119
     iget-object v0, p0, Lorg/telegram/ui/Cells/AdminedChannelCell;->nameTextView:Lorg/telegram/ui/ActionBar/SimpleTextView;
 
     return-object v0
@@ -447,7 +589,7 @@
 .method public getStatusTextView()Lorg/telegram/ui/ActionBar/SimpleTextView;
     .registers 2
 
-    .line 112
+    .line 123
     iget-object v0, p0, Lorg/telegram/ui/Cells/AdminedChannelCell;->statusTextView:Lorg/telegram/ui/ActionBar/SimpleTextView;
 
     return-object v0
@@ -464,7 +606,7 @@
 .method protected onMeasure(II)V
     .registers 4
 
-    .line 99
+    .line 110
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result p1
@@ -507,7 +649,7 @@
 .method public setChannel(Lorg/telegram/tgnet/TLRPC$Chat;Z)V
     .registers 8
 
-    .line 77
+    .line 88
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -530,22 +672,22 @@
 
     move-result-object v0
 
-    .line 78
+    .line 89
     iput-object p1, p0, Lorg/telegram/ui/Cells/AdminedChannelCell;->currentChannel:Lorg/telegram/tgnet/TLRPC$Chat;
 
-    .line 79
+    .line 90
     iget-object v1, p0, Lorg/telegram/ui/Cells/AdminedChannelCell;->avatarDrawable:Lorg/telegram/ui/Components/AvatarDrawable;
 
     invoke-virtual {v1, p1}, Lorg/telegram/ui/Components/AvatarDrawable;->setInfo(Lorg/telegram/tgnet/TLRPC$Chat;)V
 
-    .line 80
+    .line 91
     iget-object v1, p0, Lorg/telegram/ui/Cells/AdminedChannelCell;->nameTextView:Lorg/telegram/ui/ActionBar/SimpleTextView;
 
     iget-object v2, p1, Lorg/telegram/tgnet/TLRPC$Chat;->title:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Lorg/telegram/ui/ActionBar/SimpleTextView;->setText(Ljava/lang/CharSequence;)Z
 
-    .line 81
+    .line 92
     new-instance v1, Landroid/text/SpannableStringBuilder;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -564,7 +706,7 @@
 
     invoke-direct {v1, v2}, Landroid/text/SpannableStringBuilder;-><init>(Ljava/lang/CharSequence;)V
 
-    .line 82
+    .line 93
     new-instance v2, Lorg/telegram/ui/Components/URLSpanNoUnderline;
 
     const-string v3, ""
@@ -583,20 +725,31 @@
 
     invoke-virtual {v1, v2, v0, v3, v4}, Landroid/text/SpannableStringBuilder;->setSpan(Ljava/lang/Object;III)V
 
-    .line 83
+    .line 94
     iget-object v0, p0, Lorg/telegram/ui/Cells/AdminedChannelCell;->statusTextView:Lorg/telegram/ui/ActionBar/SimpleTextView;
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/SimpleTextView;->setText(Ljava/lang/CharSequence;)Z
 
-    .line 84
+    .line 95
     iget-object v0, p0, Lorg/telegram/ui/Cells/AdminedChannelCell;->avatarImageView:Lorg/telegram/ui/Components/BackupImageView;
 
     iget-object v1, p0, Lorg/telegram/ui/Cells/AdminedChannelCell;->avatarDrawable:Lorg/telegram/ui/Components/AvatarDrawable;
 
     invoke-virtual {v0, p1, v1}, Lorg/telegram/ui/Components/BackupImageView;->setForUserOrChat(Lorg/telegram/tgnet/TLObject;Lorg/telegram/ui/Components/AvatarDrawable;)V
 
-    .line 85
+    .line 96
     iput-boolean p2, p0, Lorg/telegram/ui/Cells/AdminedChannelCell;->isLast:Z
+
+    return-void
+.end method
+
+.method public setChecked(ZZ)V
+    .registers 4
+
+    .line 131
+    iget-object v0, p0, Lorg/telegram/ui/Cells/AdminedChannelCell;->checkBox:Lorg/telegram/ui/Components/CheckBox2;
+
+    invoke-virtual {v0, p1, p2}, Lorg/telegram/ui/Components/CheckBox2;->setChecked(ZZ)V
 
     return-void
 .end method
@@ -604,14 +757,14 @@
 .method public update()V
     .registers 3
 
-    .line 89
+    .line 100
     iget-object v0, p0, Lorg/telegram/ui/Cells/AdminedChannelCell;->avatarDrawable:Lorg/telegram/ui/Components/AvatarDrawable;
 
     iget-object v1, p0, Lorg/telegram/ui/Cells/AdminedChannelCell;->currentChannel:Lorg/telegram/tgnet/TLRPC$Chat;
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/AvatarDrawable;->setInfo(Lorg/telegram/tgnet/TLRPC$Chat;)V
 
-    .line 90
+    .line 101
     iget-object v0, p0, Lorg/telegram/ui/Cells/AdminedChannelCell;->avatarImageView:Lorg/telegram/ui/Components/BackupImageView;
 
     invoke-virtual {v0}, Landroid/view/View;->invalidate()V

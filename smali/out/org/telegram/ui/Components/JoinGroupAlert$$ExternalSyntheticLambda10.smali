@@ -26,14 +26,16 @@
 
 
 # virtual methods
-.method public final run(Lorg/telegram/tgnet/TLRPC$TL_error;)V
+.method public final run(Lorg/telegram/tgnet/TLRPC$TL_error;)Z
     .registers 4
 
     iget-object v0, p0, Lorg/telegram/ui/Components/JoinGroupAlert$$ExternalSyntheticLambda10;->f$0:Lorg/telegram/ui/Components/JoinGroupAlert;
 
     iget-boolean v1, p0, Lorg/telegram/ui/Components/JoinGroupAlert$$ExternalSyntheticLambda10;->f$1:Z
 
-    invoke-static {v0, v1, p1}, Lorg/telegram/ui/Components/JoinGroupAlert;->$r8$lambda$f9IN680Ck9HbhfopLwRs1YDaK84(Lorg/telegram/ui/Components/JoinGroupAlert;ZLorg/telegram/tgnet/TLRPC$TL_error;)V
+    invoke-static {v0, v1, p1}, Lorg/telegram/ui/Components/JoinGroupAlert;->$r8$lambda$hkN7_LCXluMTV-Y2BZgcR_uLDOc(Lorg/telegram/ui/Components/JoinGroupAlert;ZLorg/telegram/tgnet/TLRPC$TL_error;)Z
 
-    return-void
+    move-result p1
+
+    return p1
 .end method

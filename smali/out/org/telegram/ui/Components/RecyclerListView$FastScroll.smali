@@ -250,7 +250,7 @@
 
     invoke-virtual {v2, v4}, Landroid/graphics/Paint;->setColor(I)V
 
-    const v2, 0x7f07008c
+    const v2, 0x7f07006f
 
     .line 474
     invoke-static {p2, v2}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
@@ -359,7 +359,7 @@
 
     iput p1, p0, Lorg/telegram/ui/Components/RecyclerListView$FastScroll;->touchSlop:F
 
-    const p1, 0x7f0700f9
+    const p1, 0x7f0700d5
 
     .line 486
     invoke-static {p2, p1}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;

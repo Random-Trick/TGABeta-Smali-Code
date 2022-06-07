@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lorg/telegram/ui/DialogsActivity$DialogsActivityDelegate;
+.implements Lorg/telegram/ui/ProfileNotificationsActivity$ProfileNotificationsActivityDelegate;
 
 
 # instance fields
@@ -22,12 +22,20 @@
 
 
 # virtual methods
-.method public final didSelectDialogs(Lorg/telegram/ui/DialogsActivity;Ljava/util/ArrayList;Ljava/lang/CharSequence;Z)V
-    .registers 6
+.method public final didCreateNewException(Lorg/telegram/ui/NotificationsSettingsActivity$NotificationException;)V
+    .registers 3
 
     iget-object v0, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity$$ExternalSyntheticLambda11;->f$0:Lorg/telegram/ui/NotificationsCustomSettingsActivity;
 
-    invoke-static {v0, p1, p2, p3, p4}, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->$r8$lambda$D6c2OvRBQwa9GvS65_ZUqg0Amtg(Lorg/telegram/ui/NotificationsCustomSettingsActivity;Lorg/telegram/ui/DialogsActivity;Ljava/util/ArrayList;Ljava/lang/CharSequence;Z)V
+    invoke-static {v0, p1}, Lorg/telegram/ui/NotificationsCustomSettingsActivity;->$r8$lambda$0vPSAhH3PvmQ7a3OslGVaKcbXUk(Lorg/telegram/ui/NotificationsCustomSettingsActivity;Lorg/telegram/ui/NotificationsSettingsActivity$NotificationException;)V
+
+    return-void
+.end method
+
+.method public synthetic didRemoveException(J)V
+    .registers 3
+
+    invoke-static {p0, p1, p2}, Lorg/telegram/ui/ProfileNotificationsActivity$ProfileNotificationsActivityDelegate$-CC;->$default$didRemoveException(Lorg/telegram/ui/ProfileNotificationsActivity$ProfileNotificationsActivityDelegate;J)V
 
     return-void
 .end method

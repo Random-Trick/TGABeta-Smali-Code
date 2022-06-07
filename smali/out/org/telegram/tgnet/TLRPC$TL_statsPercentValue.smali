@@ -23,7 +23,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 38560
+    .line 39012
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -32,7 +32,7 @@
 .method public static TLdeserialize(Lorg/telegram/tgnet/AbstractSerializedData;IZ)Lorg/telegram/tgnet/TLRPC$TL_statsPercentValue;
     .registers 4
 
-    .line 38567
+    .line 39019
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_statsPercentValue;->constructor:I
 
     if-eq v0, p1, :cond_1e
@@ -43,7 +43,7 @@
 
     return-object p0
 
-    .line 38569
+    .line 39021
     :cond_8
     new-instance p0, Ljava/lang/RuntimeException;
 
@@ -69,13 +69,13 @@
 
     throw p0
 
-    .line 38574
+    .line 39026
     :cond_1e
     new-instance p1, Lorg/telegram/tgnet/TLRPC$TL_statsPercentValue;
 
     invoke-direct {p1}, Lorg/telegram/tgnet/TLRPC$TL_statsPercentValue;-><init>()V
 
-    .line 38575
+    .line 39027
     invoke-virtual {p1, p0, p2}, Lorg/telegram/tgnet/TLRPC$TL_statsPercentValue;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
     return-object p1
@@ -86,14 +86,14 @@
 .method public readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
     .registers 5
 
-    .line 38580
+    .line 39032
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readDouble(Z)D
 
     move-result-wide v0
 
     iput-wide v0, p0, Lorg/telegram/tgnet/TLRPC$TL_statsPercentValue;->part:D
 
-    .line 38581
+    .line 39033
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readDouble(Z)D
 
     move-result-wide p1
@@ -106,17 +106,17 @@
 .method public serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
     .registers 4
 
-    .line 38585
+    .line 39037
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_statsPercentValue;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 38586
+    .line 39038
     iget-wide v0, p0, Lorg/telegram/tgnet/TLRPC$TL_statsPercentValue;->part:D
 
     invoke-virtual {p1, v0, v1}, Lorg/telegram/tgnet/AbstractSerializedData;->writeDouble(D)V
 
-    .line 38587
+    .line 39039
     iget-wide v0, p0, Lorg/telegram/tgnet/TLRPC$TL_statsPercentValue;->total:D
 
     invoke-virtual {p1, v0, v1}, Lorg/telegram/tgnet/AbstractSerializedData;->writeDouble(D)V

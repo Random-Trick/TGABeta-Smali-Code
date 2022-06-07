@@ -452,7 +452,7 @@
 
     const/16 v1, 0x21
 
-    const v2, 0x7f0703ae
+    const v2, 0x7f0703b3
 
     const-string v3, " > "
 
@@ -857,7 +857,7 @@
 
     move-result-object v6
 
-    const v7, 0x7f0703ae
+    const v7, 0x7f0703b3
 
     invoke-virtual {v6, v7}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 

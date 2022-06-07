@@ -24,7 +24,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/ShareAlert;Z)V
     .registers 3
 
-    .line 1817
+    .line 1830
     iput-object p1, p0, Lorg/telegram/ui/Components/ShareAlert$20;->this$0:Lorg/telegram/ui/Components/ShareAlert;
 
     iput-boolean p2, p0, Lorg/telegram/ui/Components/ShareAlert$20;->val$show:Z
@@ -39,10 +39,10 @@
 .method public onAnimationCancel(Landroid/animation/Animator;)V
     .registers 3
 
-    .line 1831
+    .line 1844
     iget-object v0, p0, Lorg/telegram/ui/Components/ShareAlert$20;->this$0:Lorg/telegram/ui/Components/ShareAlert;
 
-    invoke-static {v0}, Lorg/telegram/ui/Components/ShareAlert;->access$10800(Lorg/telegram/ui/Components/ShareAlert;)Landroid/animation/AnimatorSet;
+    invoke-static {v0}, Lorg/telegram/ui/Components/ShareAlert;->access$10600(Lorg/telegram/ui/Components/ShareAlert;)Landroid/animation/AnimatorSet;
 
     move-result-object v0
 
@@ -52,12 +52,12 @@
 
     if-eqz p1, :cond_12
 
-    .line 1832
+    .line 1845
     iget-object p1, p0, Lorg/telegram/ui/Components/ShareAlert$20;->this$0:Lorg/telegram/ui/Components/ShareAlert;
 
     const/4 v0, 0x0
 
-    invoke-static {p1, v0}, Lorg/telegram/ui/Components/ShareAlert;->access$10802(Lorg/telegram/ui/Components/ShareAlert;Landroid/animation/AnimatorSet;)Landroid/animation/AnimatorSet;
+    invoke-static {p1, v0}, Lorg/telegram/ui/Components/ShareAlert;->access$10602(Lorg/telegram/ui/Components/ShareAlert;Landroid/animation/AnimatorSet;)Landroid/animation/AnimatorSet;
 
     :cond_12
     return-void
@@ -66,10 +66,10 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .registers 3
 
-    .line 1820
+    .line 1833
     iget-object v0, p0, Lorg/telegram/ui/Components/ShareAlert$20;->this$0:Lorg/telegram/ui/Components/ShareAlert;
 
-    invoke-static {v0}, Lorg/telegram/ui/Components/ShareAlert;->access$10800(Lorg/telegram/ui/Components/ShareAlert;)Landroid/animation/AnimatorSet;
+    invoke-static {v0}, Lorg/telegram/ui/Components/ShareAlert;->access$10600(Lorg/telegram/ui/Components/ShareAlert;)Landroid/animation/AnimatorSet;
 
     move-result-object v0
 
@@ -79,12 +79,12 @@
 
     if-eqz p1, :cond_29
 
-    .line 1821
+    .line 1834
     iget-boolean p1, p0, Lorg/telegram/ui/Components/ShareAlert$20;->val$show:Z
 
     if-nez p1, :cond_23
 
-    .line 1822
+    .line 1835
     iget-object p1, p0, Lorg/telegram/ui/Components/ShareAlert$20;->this$0:Lorg/telegram/ui/Components/ShareAlert;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/ShareAlert;->access$4500(Lorg/telegram/ui/Components/ShareAlert;)Landroid/widget/FrameLayout;
@@ -95,7 +95,7 @@
 
     invoke-virtual {p1, v0}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
-    .line 1823
+    .line 1836
     iget-object p1, p0, Lorg/telegram/ui/Components/ShareAlert$20;->this$0:Lorg/telegram/ui/Components/ShareAlert;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/ShareAlert;->access$4700(Lorg/telegram/ui/Components/ShareAlert;)Landroid/widget/FrameLayout;
@@ -104,13 +104,13 @@
 
     invoke-virtual {p1, v0}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
-    .line 1825
+    .line 1838
     :cond_23
     iget-object p1, p0, Lorg/telegram/ui/Components/ShareAlert$20;->this$0:Lorg/telegram/ui/Components/ShareAlert;
 
     const/4 v0, 0x0
 
-    invoke-static {p1, v0}, Lorg/telegram/ui/Components/ShareAlert;->access$10802(Lorg/telegram/ui/Components/ShareAlert;Landroid/animation/AnimatorSet;)Landroid/animation/AnimatorSet;
+    invoke-static {p1, v0}, Lorg/telegram/ui/Components/ShareAlert;->access$10602(Lorg/telegram/ui/Components/ShareAlert;Landroid/animation/AnimatorSet;)Landroid/animation/AnimatorSet;
 
     :cond_29
     return-void

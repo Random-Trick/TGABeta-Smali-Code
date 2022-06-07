@@ -351,14 +351,14 @@
 
     if-eqz p3, :cond_10e
 
-    const v8, 0x7f0e0137
+    const v8, 0x7f0e015f
 
     const-string v11, "AddToChannel"
 
     goto :goto_113
 
     :cond_10e
-    const v8, 0x7f0e013c
+    const v8, 0x7f0e0164
 
     const-string v11, "AddToGroup"
 
@@ -531,7 +531,7 @@
     .line 76
     invoke-virtual {v11, v3, v9, v3, v9}, Landroid/widget/TextView;->setPadding(IIII)V
 
-    const v2, 0x7f0e05d3
+    const v2, 0x7f0e0624
 
     const-string v3, "Dismiss"
 
@@ -910,7 +910,7 @@
     .line 104
     iget-object p1, p0, Lorg/telegram/ui/Cells/MemberRequestCell;->statusTextView:Lorg/telegram/ui/ActionBar/SimpleTextView;
 
-    const p2, 0x7f0e0f0e
+    const p2, 0x7f0e0fbb
 
     new-array v0, v0, [Ljava/lang/Object;
 
@@ -939,7 +939,7 @@
     .line 108
     iget-object p2, p0, Lorg/telegram/ui/Cells/MemberRequestCell;->statusTextView:Lorg/telegram/ui/ActionBar/SimpleTextView;
 
-    const v2, 0x7f0e0145
+    const v2, 0x7f0e016d
 
     const/4 v3, 0x2
 

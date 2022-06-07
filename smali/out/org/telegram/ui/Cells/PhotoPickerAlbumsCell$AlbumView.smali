@@ -70,7 +70,7 @@
     .line 57
     invoke-virtual {v1, v5}, Landroid/widget/LinearLayout;->setOrientation(I)V
 
-    const v6, 0x7f070058
+    const v6, 0x7f070046
 
     .line 58
     invoke-virtual {v1, v6}, Landroid/widget/LinearLayout;->setBackgroundResource(I)V

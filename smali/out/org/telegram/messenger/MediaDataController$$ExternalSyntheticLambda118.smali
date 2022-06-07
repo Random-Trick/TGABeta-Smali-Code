@@ -2,46 +2,68 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Ljava/util/Comparator;
+.implements Ljava/lang/Runnable;
 
 
-# static fields
-.field public static final synthetic INSTANCE:Lorg/telegram/messenger/MediaDataController$$ExternalSyntheticLambda118;
+# instance fields
+.field public final synthetic f$0:Lorg/telegram/messenger/MediaDataController;
+
+.field public final synthetic f$1:[Ljava/lang/String;
+
+.field public final synthetic f$2:Lorg/telegram/messenger/MediaDataController$KeywordResultCallback;
+
+.field public final synthetic f$3:Ljava/lang/String;
+
+.field public final synthetic f$4:Z
+
+.field public final synthetic f$5:Ljava/util/ArrayList;
+
+.field public final synthetic f$6:Ljava/util/concurrent/CountDownLatch;
 
 
 # direct methods
-.method static synthetic constructor <clinit>()V
-    .registers 1
-
-    new-instance v0, Lorg/telegram/messenger/MediaDataController$$ExternalSyntheticLambda118;
-
-    invoke-direct {v0}, Lorg/telegram/messenger/MediaDataController$$ExternalSyntheticLambda118;-><init>()V
-
-    sput-object v0, Lorg/telegram/messenger/MediaDataController$$ExternalSyntheticLambda118;->INSTANCE:Lorg/telegram/messenger/MediaDataController$$ExternalSyntheticLambda118;
-
-    return-void
-.end method
-
-.method private synthetic constructor <init>()V
-    .registers 1
+.method public synthetic constructor <init>(Lorg/telegram/messenger/MediaDataController;[Ljava/lang/String;Lorg/telegram/messenger/MediaDataController$KeywordResultCallback;Ljava/lang/String;ZLjava/util/ArrayList;Ljava/util/concurrent/CountDownLatch;)V
+    .registers 8
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lorg/telegram/messenger/MediaDataController$$ExternalSyntheticLambda118;->f$0:Lorg/telegram/messenger/MediaDataController;
+
+    iput-object p2, p0, Lorg/telegram/messenger/MediaDataController$$ExternalSyntheticLambda118;->f$1:[Ljava/lang/String;
+
+    iput-object p3, p0, Lorg/telegram/messenger/MediaDataController$$ExternalSyntheticLambda118;->f$2:Lorg/telegram/messenger/MediaDataController$KeywordResultCallback;
+
+    iput-object p4, p0, Lorg/telegram/messenger/MediaDataController$$ExternalSyntheticLambda118;->f$3:Ljava/lang/String;
+
+    iput-boolean p5, p0, Lorg/telegram/messenger/MediaDataController$$ExternalSyntheticLambda118;->f$4:Z
+
+    iput-object p6, p0, Lorg/telegram/messenger/MediaDataController$$ExternalSyntheticLambda118;->f$5:Ljava/util/ArrayList;
+
+    iput-object p7, p0, Lorg/telegram/messenger/MediaDataController$$ExternalSyntheticLambda118;->f$6:Ljava/util/concurrent/CountDownLatch;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final compare(Ljava/lang/Object;Ljava/lang/Object;)I
-    .registers 3
+.method public final run()V
+    .registers 8
 
-    check-cast p1, Lorg/telegram/tgnet/TLRPC$MessageEntity;
+    iget-object v0, p0, Lorg/telegram/messenger/MediaDataController$$ExternalSyntheticLambda118;->f$0:Lorg/telegram/messenger/MediaDataController;
 
-    check-cast p2, Lorg/telegram/tgnet/TLRPC$MessageEntity;
+    iget-object v1, p0, Lorg/telegram/messenger/MediaDataController$$ExternalSyntheticLambda118;->f$1:[Ljava/lang/String;
 
-    invoke-static {p1, p2}, Lorg/telegram/messenger/MediaDataController;->$r8$lambda$YIWueTPmoKU58PXhai2s0uwwTXA(Lorg/telegram/tgnet/TLRPC$MessageEntity;Lorg/telegram/tgnet/TLRPC$MessageEntity;)I
+    iget-object v2, p0, Lorg/telegram/messenger/MediaDataController$$ExternalSyntheticLambda118;->f$2:Lorg/telegram/messenger/MediaDataController$KeywordResultCallback;
 
-    move-result p1
+    iget-object v3, p0, Lorg/telegram/messenger/MediaDataController$$ExternalSyntheticLambda118;->f$3:Ljava/lang/String;
 
-    return p1
+    iget-boolean v4, p0, Lorg/telegram/messenger/MediaDataController$$ExternalSyntheticLambda118;->f$4:Z
+
+    iget-object v5, p0, Lorg/telegram/messenger/MediaDataController$$ExternalSyntheticLambda118;->f$5:Ljava/util/ArrayList;
+
+    iget-object v6, p0, Lorg/telegram/messenger/MediaDataController$$ExternalSyntheticLambda118;->f$6:Ljava/util/concurrent/CountDownLatch;
+
+    invoke-static/range {v0 .. v6}, Lorg/telegram/messenger/MediaDataController;->$r8$lambda$TX_Ic86KaICSCE7j4sDuY4DBors(Lorg/telegram/messenger/MediaDataController;[Ljava/lang/String;Lorg/telegram/messenger/MediaDataController$KeywordResultCallback;Ljava/lang/String;ZLjava/util/ArrayList;Ljava/util/concurrent/CountDownLatch;)V
+
+    return-void
 .end method

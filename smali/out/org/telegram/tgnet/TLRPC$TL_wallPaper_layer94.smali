@@ -17,7 +17,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 43528
+    .line 43980
     invoke-direct {p0}, Lorg/telegram/tgnet/TLRPC$TL_wallPaper;-><init>()V
 
     return-void
@@ -28,14 +28,14 @@
 .method public readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
     .registers 7
 
-    .line 43533
+    .line 43985
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt64(Z)J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lorg/telegram/tgnet/TLRPC$WallPaper;->id:J
 
-    .line 43534
+    .line 43986
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
@@ -57,7 +57,7 @@
     :cond_14
     const/4 v1, 0x0
 
-    .line 43535
+    .line 43987
     :goto_15
     iput-boolean v1, p0, Lorg/telegram/tgnet/TLRPC$WallPaper;->creator:Z
 
@@ -67,25 +67,25 @@
 
     const/4 v2, 0x1
 
-    .line 43536
+    .line 43988
     :cond_1c
     iput-boolean v2, p0, Lorg/telegram/tgnet/TLRPC$WallPaper;->isDefault:Z
 
-    .line 43537
+    .line 43989
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt64(Z)J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lorg/telegram/tgnet/TLRPC$WallPaper;->access_hash:J
 
-    .line 43538
+    .line 43990
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readString(Z)Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/telegram/tgnet/TLRPC$WallPaper;->slug:Ljava/lang/String;
 
-    .line 43539
+    .line 43991
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
@@ -102,17 +102,17 @@
 .method public serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
     .registers 4
 
-    .line 43543
+    .line 43995
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_wallPaper_layer94;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 43544
+    .line 43996
     iget-wide v0, p0, Lorg/telegram/tgnet/TLRPC$WallPaper;->id:J
 
     invoke-virtual {p1, v0, v1}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt64(J)V
 
-    .line 43545
+    .line 43997
     iget-boolean v0, p0, Lorg/telegram/tgnet/TLRPC$WallPaper;->creator:Z
 
     if-eqz v0, :cond_13
@@ -131,7 +131,7 @@
     :goto_17
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$WallPaper;->flags:I
 
-    .line 43546
+    .line 43998
     iget-boolean v1, p0, Lorg/telegram/tgnet/TLRPC$WallPaper;->isDefault:Z
 
     if-eqz v1, :cond_20
@@ -146,20 +146,20 @@
     :goto_22
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$WallPaper;->flags:I
 
-    .line 43547
+    .line 43999
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 43548
+    .line 44000
     iget-wide v0, p0, Lorg/telegram/tgnet/TLRPC$WallPaper;->access_hash:J
 
     invoke-virtual {p1, v0, v1}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt64(J)V
 
-    .line 43549
+    .line 44001
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$WallPaper;->slug:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeString(Ljava/lang/String;)V
 
-    .line 43550
+    .line 44002
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$WallPaper;->document:Lorg/telegram/tgnet/TLRPC$Document;
 
     invoke-virtual {v0, p1}, Lorg/telegram/tgnet/TLObject;->serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V

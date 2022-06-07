@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/ChatActivity;Landroid/content/Context;Lorg/telegram/ui/Components/SizeNotifierFrameLayout;)V
     .registers 4
 
-    .line 6914
+    .line 7004
     iput-object p1, p0, Lorg/telegram/ui/ChatActivity$34;->this$0:Lorg/telegram/ui/ChatActivity;
 
     invoke-direct {p0, p2, p3}, Lorg/telegram/ui/Components/BlurredFrameLayout;-><init>(Landroid/content/Context;Lorg/telegram/ui/Components/SizeNotifierFrameLayout;)V
@@ -35,14 +35,14 @@
 .method public onDraw(Landroid/graphics/Canvas;)V
     .registers 12
 
-    .line 6917
+    .line 7007
     sget-object v0, Lorg/telegram/ui/ActionBar/Theme;->chat_composeShadowDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
 
     move-result v0
 
-    .line 6918
+    .line 7008
     sget-object v1, Lorg/telegram/ui/ActionBar/Theme;->chat_composeShadowDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getMeasuredWidth()I
@@ -53,12 +53,12 @@
 
     invoke-virtual {v1, v3, v3, v2, v0}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 6919
+    .line 7009
     sget-object v1, Lorg/telegram/ui/ActionBar/Theme;->chat_composeShadowDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v1, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 6920
+    .line 7010
     sget-object v7, Lorg/telegram/messenger/AndroidUtilities;->rectTmp2:Landroid/graphics/Rect;
 
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getMeasuredWidth()I
@@ -71,7 +71,7 @@
 
     invoke-virtual {v7, v3, v0, v1, v2}, Landroid/graphics/Rect;->set(IIII)V
 
-    .line 6921
+    .line 7011
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$34;->this$0:Lorg/telegram/ui/ChatActivity;
 
     iget-object v4, v0, Lorg/telegram/ui/ChatActivity;->contentView:Lorg/telegram/ui/Components/SizeNotifierFrameLayout;
@@ -84,7 +84,7 @@
 
     const-string v1, "paintChatComposeBackground"
 
-    invoke-static {v0, v1}, Lorg/telegram/ui/ChatActivity;->access$24900(Lorg/telegram/ui/ChatActivity;Ljava/lang/String;)Landroid/graphics/Paint;
+    invoke-static {v0, v1}, Lorg/telegram/ui/ChatActivity;->access$25000(Lorg/telegram/ui/ChatActivity;Ljava/lang/String;)Landroid/graphics/Paint;
 
     move-result-object v8
 

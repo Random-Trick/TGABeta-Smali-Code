@@ -10,14 +10,12 @@
 
 .field public final synthetic f$1:Lorg/telegram/tgnet/TLRPC$TL_error;
 
-.field public final synthetic f$2:Lorg/telegram/ui/ActionBar/BaseFragment;
-
-.field public final synthetic f$3:Lorg/telegram/tgnet/TLRPC$TL_messages_editMessage;
+.field public final synthetic f$2:Lorg/telegram/tgnet/TLRPC$TL_messages_forwardMessages;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lorg/telegram/messenger/SendMessagesHelper;Lorg/telegram/tgnet/TLRPC$TL_error;Lorg/telegram/ui/ActionBar/BaseFragment;Lorg/telegram/tgnet/TLRPC$TL_messages_editMessage;)V
-    .registers 5
+.method public synthetic constructor <init>(Lorg/telegram/messenger/SendMessagesHelper;Lorg/telegram/tgnet/TLRPC$TL_error;Lorg/telegram/tgnet/TLRPC$TL_messages_forwardMessages;)V
+    .registers 4
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,9 +23,7 @@
 
     iput-object p2, p0, Lorg/telegram/messenger/SendMessagesHelper$$ExternalSyntheticLambda59;->f$1:Lorg/telegram/tgnet/TLRPC$TL_error;
 
-    iput-object p3, p0, Lorg/telegram/messenger/SendMessagesHelper$$ExternalSyntheticLambda59;->f$2:Lorg/telegram/ui/ActionBar/BaseFragment;
-
-    iput-object p4, p0, Lorg/telegram/messenger/SendMessagesHelper$$ExternalSyntheticLambda59;->f$3:Lorg/telegram/tgnet/TLRPC$TL_messages_editMessage;
+    iput-object p3, p0, Lorg/telegram/messenger/SendMessagesHelper$$ExternalSyntheticLambda59;->f$2:Lorg/telegram/tgnet/TLRPC$TL_messages_forwardMessages;
 
     return-void
 .end method
@@ -35,17 +31,15 @@
 
 # virtual methods
 .method public final run()V
-    .registers 5
+    .registers 4
 
     iget-object v0, p0, Lorg/telegram/messenger/SendMessagesHelper$$ExternalSyntheticLambda59;->f$0:Lorg/telegram/messenger/SendMessagesHelper;
 
     iget-object v1, p0, Lorg/telegram/messenger/SendMessagesHelper$$ExternalSyntheticLambda59;->f$1:Lorg/telegram/tgnet/TLRPC$TL_error;
 
-    iget-object v2, p0, Lorg/telegram/messenger/SendMessagesHelper$$ExternalSyntheticLambda59;->f$2:Lorg/telegram/ui/ActionBar/BaseFragment;
+    iget-object v2, p0, Lorg/telegram/messenger/SendMessagesHelper$$ExternalSyntheticLambda59;->f$2:Lorg/telegram/tgnet/TLRPC$TL_messages_forwardMessages;
 
-    iget-object v3, p0, Lorg/telegram/messenger/SendMessagesHelper$$ExternalSyntheticLambda59;->f$3:Lorg/telegram/tgnet/TLRPC$TL_messages_editMessage;
-
-    invoke-static {v0, v1, v2, v3}, Lorg/telegram/messenger/SendMessagesHelper;->$r8$lambda$AWTxe2W1byyUL3OpcjkKWSAXqGo(Lorg/telegram/messenger/SendMessagesHelper;Lorg/telegram/tgnet/TLRPC$TL_error;Lorg/telegram/ui/ActionBar/BaseFragment;Lorg/telegram/tgnet/TLRPC$TL_messages_editMessage;)V
+    invoke-static {v0, v1, v2}, Lorg/telegram/messenger/SendMessagesHelper;->$r8$lambda$E4-vRm1tztsVSgsrqRaskAEhfJQ(Lorg/telegram/messenger/SendMessagesHelper;Lorg/telegram/tgnet/TLRPC$TL_error;Lorg/telegram/tgnet/TLRPC$TL_messages_forwardMessages;)V
 
     return-void
 .end method

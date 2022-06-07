@@ -88,7 +88,7 @@
 
     invoke-virtual {p3}, Landroid/graphics/Path;->reset()V
 
-    const p3, 0x7f08009b
+    const p3, 0x7f08009c
 
     .line 395
     invoke-virtual {p0, p3}, Landroid/widget/FrameLayout;->getTag(I)Ljava/lang/Object;

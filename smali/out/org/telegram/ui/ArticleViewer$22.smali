@@ -24,7 +24,7 @@
 .method constructor <init>(Lorg/telegram/ui/ArticleViewer;Z)V
     .registers 3
 
-    .line 3775
+    .line 3776
     iput-object p1, p0, Lorg/telegram/ui/ArticleViewer$22;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     iput-boolean p2, p0, Lorg/telegram/ui/ArticleViewer$22;->val$show:Z
@@ -39,26 +39,17 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .registers 3
 
-    .line 3778
+    .line 3779
     iget-boolean p1, p0, Lorg/telegram/ui/ArticleViewer$22;->val$show:Z
 
     const/4 v0, 0x4
 
     if-eqz p1, :cond_26
 
-    .line 3779
-    iget-object p1, p0, Lorg/telegram/ui/ArticleViewer$22;->this$0:Lorg/telegram/ui/ArticleViewer;
-
-    invoke-static {p1}, Lorg/telegram/ui/ArticleViewer;->access$10200(Lorg/telegram/ui/ArticleViewer;)V
-
     .line 3780
     iget-object p1, p0, Lorg/telegram/ui/ArticleViewer$22;->this$0:Lorg/telegram/ui/ArticleViewer;
 
-    invoke-static {p1}, Lorg/telegram/ui/ArticleViewer;->access$5600(Lorg/telegram/ui/ArticleViewer;)Lorg/telegram/ui/Components/EditTextBoldCursor;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Landroid/widget/EditText;->requestFocus()Z
+    invoke-static {p1}, Lorg/telegram/ui/ArticleViewer;->access$10200(Lorg/telegram/ui/ArticleViewer;)V
 
     .line 3781
     iget-object p1, p0, Lorg/telegram/ui/ArticleViewer$22;->this$0:Lorg/telegram/ui/ArticleViewer;
@@ -67,9 +58,18 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lorg/telegram/messenger/AndroidUtilities;->showKeyboard(Landroid/view/View;)Z
+    invoke-virtual {p1}, Landroid/widget/EditText;->requestFocus()Z
 
     .line 3782
+    iget-object p1, p0, Lorg/telegram/ui/ArticleViewer$22;->this$0:Lorg/telegram/ui/ArticleViewer;
+
+    invoke-static {p1}, Lorg/telegram/ui/ArticleViewer;->access$5600(Lorg/telegram/ui/ArticleViewer;)Lorg/telegram/ui/Components/EditTextBoldCursor;
+
+    move-result-object p1
+
+    invoke-static {p1}, Lorg/telegram/messenger/AndroidUtilities;->showKeyboard(Landroid/view/View;)Z
+
+    .line 3783
     iget-object p1, p0, Lorg/telegram/ui/ArticleViewer$22;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     invoke-static {p1}, Lorg/telegram/ui/ArticleViewer;->access$2700(Lorg/telegram/ui/ArticleViewer;)Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
@@ -80,7 +80,7 @@
 
     goto :goto_43
 
-    .line 3784
+    .line 3785
     :cond_26
     iget-object p1, p0, Lorg/telegram/ui/ArticleViewer$22;->this$0:Lorg/telegram/ui/ArticleViewer;
 
@@ -90,7 +90,7 @@
 
     invoke-virtual {p1, v0}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
-    .line 3785
+    .line 3786
     iget-object p1, p0, Lorg/telegram/ui/ArticleViewer$22;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     invoke-static {p1}, Lorg/telegram/ui/ArticleViewer;->access$10300(Lorg/telegram/ui/ArticleViewer;)Landroid/widget/FrameLayout;
@@ -99,7 +99,7 @@
 
     invoke-virtual {p1, v0}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
-    .line 3786
+    .line 3787
     iget-object p1, p0, Lorg/telegram/ui/ArticleViewer$22;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     invoke-static {p1}, Lorg/telegram/ui/ArticleViewer;->access$5600(Lorg/telegram/ui/ArticleViewer;)Lorg/telegram/ui/Components/EditTextBoldCursor;
@@ -117,12 +117,12 @@
 .method public onAnimationStart(Landroid/animation/Animator;)V
     .registers 4
 
-    .line 3792
+    .line 3793
     iget-boolean p1, p0, Lorg/telegram/ui/ArticleViewer$22;->val$show:Z
 
     if-nez p1, :cond_10
 
-    .line 3793
+    .line 3794
     iget-object p1, p0, Lorg/telegram/ui/ArticleViewer$22;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     invoke-static {p1}, Lorg/telegram/ui/ArticleViewer;->access$10400(Lorg/telegram/ui/ArticleViewer;)Lorg/telegram/ui/ActionBar/BackDrawable;

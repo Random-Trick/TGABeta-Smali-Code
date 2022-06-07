@@ -1,269 +1,228 @@
-.class final Lj$/util/stream/D4;
-.super Lj$/util/stream/E4;
+.class abstract Lj$/util/stream/D4;
+.super Ljava/lang/Object;
 
-# interfaces
-.implements Lj$/util/y;
+
+# instance fields
+.field final a:J
+
+.field final b:J
+
+.field c:Lj$/util/u;
+
+.field d:J
+
+.field e:J
 
 
 # direct methods
-.method constructor <init>(Lj$/util/y;JJ)V
-    .registers 18
-
-    invoke-interface {p1}, Lj$/util/y;->estimateSize()J
-
-    move-result-wide v0
-
-    move-wide/from16 v6, p4
-
-    invoke-static {v0, v1, v6, v7}, Ljava/lang/Math;->min(JJ)J
-
-    move-result-wide v10
-
-    const-wide/16 v8, 0x0
-
-    move-object v2, p0
-
-    move-object v3, p1
-
-    move-wide v4, p2
-
-    .line 1
-    invoke-direct/range {v2 .. v11}, Lj$/util/stream/E4;-><init>(Lj$/util/y;JJJJ)V
-
-    return-void
-.end method
-
-.method private constructor <init>(Lj$/util/y;JJJJ)V
+.method constructor <init>(Lj$/util/u;JJJJ)V
     .registers 10
 
-    invoke-direct/range {p0 .. p9}, Lj$/util/stream/E4;-><init>(Lj$/util/y;JJJJ)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lj$/util/stream/D4;->c:Lj$/util/u;
+
+    iput-wide p2, p0, Lj$/util/stream/D4;->a:J
+
+    iput-wide p4, p0, Lj$/util/stream/D4;->b:J
+
+    iput-wide p6, p0, Lj$/util/stream/D4;->d:J
+
+    iput-wide p8, p0, Lj$/util/stream/D4;->e:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected a(Lj$/util/y;JJJJ)Lj$/util/y;
-    .registers 21
-
-    new-instance v10, Lj$/util/stream/D4;
-
-    move-object v0, v10
-
-    move-object v1, p1
-
-    move-wide v2, p2
-
-    move-wide v4, p4
-
-    move-wide/from16 v6, p6
-
-    move-wide/from16 v8, p8
-
-    invoke-direct/range {v0 .. v9}, Lj$/util/stream/D4;-><init>(Lj$/util/y;JJJJ)V
-
-    return-object v10
+.method protected abstract a(Lj$/util/u;JJJJ)Lj$/util/u;
 .end method
 
-.method public b(Lj$/util/function/Consumer;)Z
-    .registers 10
+.method public characteristics()I
+    .registers 2
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget-object v0, p0, Lj$/util/stream/D4;->c:Lj$/util/u;
 
-    iget-wide v0, p0, Lj$/util/stream/E4;->a:J
+    invoke-interface {v0}, Lj$/util/u;->characteristics()I
 
-    iget-wide v2, p0, Lj$/util/stream/E4;->e:J
+    move-result v0
+
+    return v0
+.end method
+
+.method public estimateSize()J
+    .registers 7
+
+    iget-wide v0, p0, Lj$/util/stream/D4;->a:J
+
+    iget-wide v2, p0, Lj$/util/stream/D4;->e:J
+
+    cmp-long v4, v0, v2
+
+    if-gez v4, :cond_10
+
+    iget-wide v4, p0, Lj$/util/stream/D4;->d:J
+
+    invoke-static {v0, v1, v4, v5}, Ljava/lang/Math;->max(JJ)J
+
+    move-result-wide v0
+
+    sub-long/2addr v2, v0
+
+    goto :goto_12
+
+    :cond_10
+    const-wide/16 v2, 0x0
+
+    :goto_12
+    return-wide v2
+.end method
+
+.method public bridge synthetic trySplit()Lj$/util/t;
+    .registers 2
+
+    invoke-virtual {p0}, Lj$/util/stream/D4;->trySplit()Lj$/util/u;
+
+    move-result-object v0
+
+    check-cast v0, Lj$/util/t;
+
+    return-object v0
+.end method
+
+.method public bridge synthetic trySplit()Lj$/util/u$a;
+    .registers 2
+
+    invoke-virtual {p0}, Lj$/util/stream/D4;->trySplit()Lj$/util/u;
+
+    move-result-object v0
+
+    check-cast v0, Lj$/util/u$a;
+
+    return-object v0
+.end method
+
+.method public trySplit()Lj$/util/u;
+    .registers 16
+
+    iget-wide v0, p0, Lj$/util/stream/D4;->a:J
+
+    iget-wide v2, p0, Lj$/util/stream/D4;->e:J
 
     const/4 v4, 0x0
 
     cmp-long v5, v0, v2
 
-    if-ltz v5, :cond_d
+    if-ltz v5, :cond_a
 
-    return v4
+    return-object v4
 
-    :cond_d
-    :goto_d
-    iget-wide v0, p0, Lj$/util/stream/E4;->a:J
+    :cond_a
+    iget-wide v0, p0, Lj$/util/stream/D4;->d:J
 
-    iget-wide v2, p0, Lj$/util/stream/E4;->d:J
+    cmp-long v5, v0, v2
 
-    const-wide/16 v5, 0x1
+    if-ltz v5, :cond_11
 
-    cmp-long v7, v0, v2
+    return-object v4
 
-    if-lez v7, :cond_24
+    :cond_11
+    :goto_11
+    iget-object v0, p0, Lj$/util/stream/D4;->c:Lj$/util/u;
 
-    iget-object v0, p0, Lj$/util/stream/E4;->c:Lj$/util/y;
+    invoke-interface {v0}, Lj$/util/u;->trySplit()Lj$/util/u;
 
-    sget-object v1, Lj$/util/stream/C4;->a:Lj$/util/stream/C4;
+    move-result-object v6
 
-    invoke-interface {v0, v1}, Lj$/util/y;->b(Lj$/util/function/Consumer;)Z
+    if-nez v6, :cond_1a
 
-    iget-wide v0, p0, Lj$/util/stream/E4;->d:J
+    return-object v4
 
-    add-long/2addr v0, v5
+    :cond_1a
+    iget-wide v0, p0, Lj$/util/stream/D4;->d:J
 
-    iput-wide v0, p0, Lj$/util/stream/E4;->d:J
+    invoke-interface {v6}, Lj$/util/u;->estimateSize()J
 
-    goto :goto_d
+    move-result-wide v2
 
-    :cond_24
-    iget-wide v0, p0, Lj$/util/stream/E4;->e:J
+    add-long/2addr v2, v0
 
-    cmp-long v7, v2, v0
+    iget-wide v0, p0, Lj$/util/stream/D4;->b:J
 
-    if-ltz v7, :cond_2b
+    invoke-static {v2, v3, v0, v1}, Ljava/lang/Math;->min(JJ)J
 
-    return v4
+    move-result-wide v13
 
-    :cond_2b
-    add-long/2addr v2, v5
+    iget-wide v7, p0, Lj$/util/stream/D4;->a:J
 
-    iput-wide v2, p0, Lj$/util/stream/E4;->d:J
+    cmp-long v0, v7, v13
 
-    iget-object v0, p0, Lj$/util/stream/E4;->c:Lj$/util/y;
+    if-ltz v0, :cond_30
 
-    invoke-interface {v0, p1}, Lj$/util/y;->b(Lj$/util/function/Consumer;)Z
+    iput-wide v13, p0, Lj$/util/stream/D4;->d:J
 
-    move-result p1
+    goto :goto_11
 
-    return p1
+    :cond_30
+    iget-wide v9, p0, Lj$/util/stream/D4;->b:J
+
+    cmp-long v0, v13, v9
+
+    if-ltz v0, :cond_3b
+
+    iput-object v6, p0, Lj$/util/stream/D4;->c:Lj$/util/u;
+
+    iput-wide v13, p0, Lj$/util/stream/D4;->e:J
+
+    goto :goto_11
+
+    :cond_3b
+    iget-wide v11, p0, Lj$/util/stream/D4;->d:J
+
+    cmp-long v0, v11, v7
+
+    if-ltz v0, :cond_48
+
+    cmp-long v0, v2, v9
+
+    if-gtz v0, :cond_48
+
+    iput-wide v13, p0, Lj$/util/stream/D4;->d:J
+
+    return-object v6
+
+    :cond_48
+    iput-wide v13, p0, Lj$/util/stream/D4;->d:J
+
+    move-object v5, p0
+
+    invoke-virtual/range {v5 .. v14}, Lj$/util/stream/D4;->a(Lj$/util/u;JJJJ)Lj$/util/u;
+
+    move-result-object v0
+
+    return-object v0
 .end method
 
-.method public forEachRemaining(Lj$/util/function/Consumer;)V
-    .registers 9
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget-wide v0, p0, Lj$/util/stream/E4;->a:J
-
-    iget-wide v2, p0, Lj$/util/stream/E4;->e:J
-
-    cmp-long v4, v0, v2
-
-    if-ltz v4, :cond_c
-
-    return-void
-
-    :cond_c
-    iget-wide v4, p0, Lj$/util/stream/E4;->d:J
-
-    cmp-long v6, v4, v2
-
-    if-ltz v6, :cond_13
-
-    return-void
-
-    :cond_13
-    cmp-long v2, v4, v0
-
-    if-ltz v2, :cond_2e
-
-    iget-object v0, p0, Lj$/util/stream/E4;->c:Lj$/util/y;
-
-    invoke-interface {v0}, Lj$/util/y;->estimateSize()J
-
-    move-result-wide v0
-
-    add-long/2addr v0, v4
-
-    iget-wide v2, p0, Lj$/util/stream/E4;->b:J
-
-    cmp-long v4, v0, v2
-
-    if-gtz v4, :cond_2e
-
-    iget-object v0, p0, Lj$/util/stream/E4;->c:Lj$/util/y;
-
-    invoke-interface {v0, p1}, Lj$/util/y;->forEachRemaining(Lj$/util/function/Consumer;)V
-
-    iget-wide v0, p0, Lj$/util/stream/E4;->e:J
-
-    iput-wide v0, p0, Lj$/util/stream/E4;->d:J
-
-    goto :goto_58
-
-    :cond_2e
-    :goto_2e
-    iget-wide v0, p0, Lj$/util/stream/E4;->a:J
-
-    iget-wide v2, p0, Lj$/util/stream/E4;->d:J
-
-    const-wide/16 v4, 0x1
-
-    cmp-long v6, v0, v2
-
-    if-lez v6, :cond_45
-
-    iget-object v0, p0, Lj$/util/stream/E4;->c:Lj$/util/y;
-
-    sget-object v1, Lj$/util/stream/B4;->a:Lj$/util/stream/B4;
-
-    invoke-interface {v0, v1}, Lj$/util/y;->b(Lj$/util/function/Consumer;)Z
-
-    iget-wide v0, p0, Lj$/util/stream/E4;->d:J
-
-    add-long/2addr v0, v4
-
-    iput-wide v0, p0, Lj$/util/stream/E4;->d:J
-
-    goto :goto_2e
-
-    :cond_45
-    :goto_45
-    iget-wide v0, p0, Lj$/util/stream/E4;->d:J
-
-    iget-wide v2, p0, Lj$/util/stream/E4;->e:J
-
-    cmp-long v6, v0, v2
-
-    if-gez v6, :cond_58
-
-    iget-object v0, p0, Lj$/util/stream/E4;->c:Lj$/util/y;
-
-    invoke-interface {v0, p1}, Lj$/util/y;->b(Lj$/util/function/Consumer;)Z
-
-    iget-wide v0, p0, Lj$/util/stream/E4;->d:J
-
-    add-long/2addr v0, v4
-
-    iput-wide v0, p0, Lj$/util/stream/E4;->d:J
-
-    goto :goto_45
-
-    :cond_58
-    :goto_58
-    return-void
-.end method
-
-.method public getComparator()Ljava/util/Comparator;
+.method public bridge synthetic trySplit()Lj$/util/v;
     .registers 2
 
-    .line 1
-    new-instance v0, Ljava/lang/IllegalStateException;
+    invoke-virtual {p0}, Lj$/util/stream/D4;->trySplit()Lj$/util/u;
 
-    invoke-direct {v0}, Ljava/lang/IllegalStateException;-><init>()V
+    move-result-object v0
 
-    throw v0
+    check-cast v0, Lj$/util/v;
+
+    return-object v0
 .end method
 
-.method public synthetic getExactSizeIfKnown()J
-    .registers 3
-
-    invoke-static {p0}, Lj$/util/a;->e(Lj$/util/y;)J
-
-    move-result-wide v0
-
-    return-wide v0
-.end method
-
-.method public synthetic hasCharacteristics(I)Z
+.method public bridge synthetic trySplit()Lj$/util/w;
     .registers 2
 
-    invoke-static {p0, p1}, Lj$/util/a;->f(Lj$/util/y;I)Z
+    invoke-virtual {p0}, Lj$/util/stream/D4;->trySplit()Lj$/util/u;
 
-    move-result p1
+    move-result-object v0
 
-    return p1
+    check-cast v0, Lj$/util/w;
+
+    return-object v0
 .end method

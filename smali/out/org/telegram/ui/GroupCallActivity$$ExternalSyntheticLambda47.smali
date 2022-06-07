@@ -2,32 +2,40 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lorg/telegram/messenger/voip/NativeInstance$AudioLevelsCallback;
+.implements Ljava/lang/Runnable;
 
 
-# instance fields
-.field public final synthetic f$0:Lorg/telegram/ui/GroupCallActivity;
+# static fields
+.field public static final synthetic INSTANCE:Lorg/telegram/ui/GroupCallActivity$$ExternalSyntheticLambda47;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lorg/telegram/ui/GroupCallActivity;)V
-    .registers 2
+.method static synthetic constructor <clinit>()V
+    .registers 1
+
+    new-instance v0, Lorg/telegram/ui/GroupCallActivity$$ExternalSyntheticLambda47;
+
+    invoke-direct {v0}, Lorg/telegram/ui/GroupCallActivity$$ExternalSyntheticLambda47;-><init>()V
+
+    sput-object v0, Lorg/telegram/ui/GroupCallActivity$$ExternalSyntheticLambda47;->INSTANCE:Lorg/telegram/ui/GroupCallActivity$$ExternalSyntheticLambda47;
+
+    return-void
+.end method
+
+.method private synthetic constructor <init>()V
+    .registers 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lorg/telegram/ui/GroupCallActivity$$ExternalSyntheticLambda47;->f$0:Lorg/telegram/ui/GroupCallActivity;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run([I[F[Z)V
-    .registers 5
+.method public final run()V
+    .registers 1
 
-    iget-object v0, p0, Lorg/telegram/ui/GroupCallActivity$$ExternalSyntheticLambda47;->f$0:Lorg/telegram/ui/GroupCallActivity;
-
-    invoke-static {v0, p1, p2, p3}, Lorg/telegram/ui/GroupCallActivity;->$r8$lambda$CDAstUeY1nlHMbUdC8gMFgpMZ6s(Lorg/telegram/ui/GroupCallActivity;[I[F[Z)V
+    invoke-static {}, Lorg/telegram/ui/Components/voip/RTMPStreamPipOverlay;->show()V
 
     return-void
 .end method

@@ -66,10 +66,10 @@
 .method public constructor <init>(I)V
     .registers 2
 
-    .line 1300
+    .line 1299
     invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
 
-    .line 1301
+    .line 1300
     iput p1, p0, Lorg/telegram/tgnet/ConnectionsManager$FirebaseTask;->currentAccount:I
 
     return-void
@@ -80,10 +80,10 @@
 
     const/4 p1, 0x0
 
-    .line 1320
+    .line 1319
     invoke-static {p1}, Lorg/telegram/tgnet/ConnectionsManager;->access$202(Landroid/os/AsyncTask;)Landroid/os/AsyncTask;
 
-    .line 1321
+    .line 1320
     iget-object v0, p0, Lorg/telegram/tgnet/ConnectionsManager$FirebaseTask;->firebaseRemoteConfig:Lcom/google/firebase/remoteconfig/FirebaseRemoteConfig;
 
     const-string v1, "ipconfigv3"
@@ -92,7 +92,7 @@
 
     move-result-object v0
 
-    .line 1322
+    .line 1321
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
@@ -101,12 +101,12 @@
 
     if-nez v1, :cond_47
 
-    .line 1323
+    .line 1322
     invoke-static {v0, v2}, Landroid/util/Base64;->decode(Ljava/lang/String;I)[B
 
     move-result-object p1
 
-    .line 1325
+    .line 1324
     :try_start_17
     new-instance v0, Lorg/telegram/tgnet/NativeByteBuffer;
 
@@ -114,10 +114,10 @@
 
     invoke-direct {v0, v1}, Lorg/telegram/tgnet/NativeByteBuffer;-><init>(I)V
 
-    .line 1326
+    .line 1325
     invoke-virtual {v0, p1}, Lorg/telegram/tgnet/NativeByteBuffer;->writeBytes([B)V
 
-    .line 1327
+    .line 1326
     iget-object p1, p0, Lorg/telegram/tgnet/ConnectionsManager$FirebaseTask;->firebaseRemoteConfig:Lcom/google/firebase/remoteconfig/FirebaseRemoteConfig;
 
     invoke-virtual {p1}, Lcom/google/firebase/remoteconfig/FirebaseRemoteConfig;->getInfo()Lcom/google/firebase/remoteconfig/FirebaseRemoteConfigInfo;
@@ -134,7 +134,7 @@
 
     long-to-int p1, v1
 
-    .line 1328
+    .line 1327
     iget v1, p0, Lorg/telegram/tgnet/ConnectionsManager$FirebaseTask;->currentAccount:I
 
     iget-wide v2, v0, Lorg/telegram/tgnet/NativeByteBuffer;->address:J
@@ -160,12 +160,12 @@
     :catch_42
     move-exception p1
 
-    .line 1330
+    .line 1329
     invoke-static {p1}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     goto :goto_6f
 
-    .line 1333
+    .line 1332
     :cond_47
     sget-boolean v0, Lorg/telegram/messenger/BuildVars;->LOGS_ENABLED:Z
 
@@ -173,15 +173,15 @@
 
     const-string v0, "failed to get firebase result"
 
-    .line 1334
+    .line 1333
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->d(Ljava/lang/String;)V
 
     const-string v0, "start dns txt task"
 
-    .line 1335
+    .line 1334
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->d(Ljava/lang/String;)V
 
-    .line 1337
+    .line 1336
     :cond_55
     new-instance v0, Lorg/telegram/tgnet/ConnectionsManager$DnsTxtLoadTask;
 
@@ -189,7 +189,7 @@
 
     invoke-direct {v0, v1}, Lorg/telegram/tgnet/ConnectionsManager$DnsTxtLoadTask;-><init>(I)V
 
-    .line 1338
+    .line 1337
     sget-object v1, Landroid/os/AsyncTask;->THREAD_POOL_EXECUTOR:Ljava/util/concurrent/Executor;
 
     const/4 v3, 0x3
@@ -208,7 +208,7 @@
 
     invoke-virtual {v0, v1, v3}, Landroid/os/AsyncTask;->executeOnExecutor(Ljava/util/concurrent/Executor;[Ljava/lang/Object;)Landroid/os/AsyncTask;
 
-    .line 1339
+    .line 1338
     invoke-static {v0}, Lorg/telegram/tgnet/ConnectionsManager;->access$202(Landroid/os/AsyncTask;)Landroid/os/AsyncTask;
 
     :goto_6f
@@ -220,7 +220,7 @@
 
     if-eqz p1, :cond_10
 
-    .line 1319
+    .line 1318
     iget-object p1, p0, Lorg/telegram/tgnet/ConnectionsManager$FirebaseTask;->firebaseRemoteConfig:Lcom/google/firebase/remoteconfig/FirebaseRemoteConfig;
 
     invoke-virtual {p1}, Lcom/google/firebase/remoteconfig/FirebaseRemoteConfig;->activate()Lcom/google/android/gms/tasks/Task;
@@ -240,12 +240,12 @@
 .method private synthetic lambda$doInBackground$2(Lcom/google/android/gms/tasks/Task;)V
     .registers 4
 
-    .line 1316
+    .line 1315
     invoke-virtual {p1}, Lcom/google/android/gms/tasks/Task;->isSuccessful()Z
 
     move-result p1
 
-    .line 1317
+    .line 1316
     sget-object v0, Lorg/telegram/messenger/Utilities;->stageQueue:Lorg/telegram/messenger/DispatchQueue;
 
     new-instance v1, Lorg/telegram/tgnet/ConnectionsManager$FirebaseTask$$ExternalSyntheticLambda3;
@@ -260,22 +260,22 @@
 .method private synthetic lambda$doInBackground$3()V
     .registers 6
 
-    .line 1347
+    .line 1346
     sget-boolean v0, Lorg/telegram/messenger/BuildVars;->LOGS_ENABLED:Z
 
     if-eqz v0, :cond_e
 
     const-string v0, "failed to get firebase result"
 
-    .line 1348
+    .line 1347
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->d(Ljava/lang/String;)V
 
     const-string v0, "start dns txt task"
 
-    .line 1349
+    .line 1348
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->d(Ljava/lang/String;)V
 
-    .line 1351
+    .line 1350
     :cond_e
     new-instance v0, Lorg/telegram/tgnet/ConnectionsManager$DnsTxtLoadTask;
 
@@ -283,7 +283,7 @@
 
     invoke-direct {v0, v1}, Lorg/telegram/tgnet/ConnectionsManager$DnsTxtLoadTask;-><init>(I)V
 
-    .line 1352
+    .line 1351
     sget-object v1, Landroid/os/AsyncTask;->THREAD_POOL_EXECUTOR:Ljava/util/concurrent/Executor;
 
     const/4 v2, 0x3
@@ -306,7 +306,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/os/AsyncTask;->executeOnExecutor(Ljava/util/concurrent/Executor;[Ljava/lang/Object;)Landroid/os/AsyncTask;
 
-    .line 1353
+    .line 1352
     invoke-static {v0}, Lorg/telegram/tgnet/ConnectionsManager;->access$202(Landroid/os/AsyncTask;)Landroid/os/AsyncTask;
 
     return-void
@@ -317,7 +317,7 @@
 .method protected bridge synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
     .registers 2
 
-    .line 1294
+    .line 1293
     check-cast p1, [Ljava/lang/Void;
 
     invoke-virtual {p0, p1}, Lorg/telegram/tgnet/ConnectionsManager$FirebaseTask;->doInBackground([Ljava/lang/Void;)Lorg/telegram/tgnet/NativeByteBuffer;
@@ -330,7 +330,7 @@
 .method protected varargs doInBackground([Ljava/lang/Void;)Lorg/telegram/tgnet/NativeByteBuffer;
     .registers 4
 
-    .line 1306
+    .line 1305
     :try_start_0
     iget p1, p0, Lorg/telegram/tgnet/ConnectionsManager$FirebaseTask;->currentAccount:I
 
@@ -340,7 +340,7 @@
 
     if-nez p1, :cond_3d
 
-    .line 1309
+    .line 1308
     invoke-static {}, Lcom/google/firebase/remoteconfig/FirebaseRemoteConfig;->getInstance()Lcom/google/firebase/remoteconfig/FirebaseRemoteConfig;
 
     move-result-object p1
@@ -349,17 +349,17 @@
 
     const-string v0, "ipconfigv3"
 
-    .line 1310
+    .line 1309
     invoke-virtual {p1, v0}, Lcom/google/firebase/remoteconfig/FirebaseRemoteConfig;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 1311
+    .line 1310
     sget-boolean v0, Lorg/telegram/messenger/BuildVars;->LOGS_ENABLED:Z
 
     if-eqz v0, :cond_2c
 
-    .line 1312
+    .line 1311
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -376,7 +376,7 @@
 
     invoke-static {p1}, Lorg/telegram/messenger/FileLog;->d(Ljava/lang/String;)V
 
-    .line 1315
+    .line 1314
     :cond_2c
     iget-object p1, p0, Lorg/telegram/tgnet/ConnectionsManager$FirebaseTask;->firebaseRemoteConfig:Lcom/google/firebase/remoteconfig/FirebaseRemoteConfig;
 
@@ -394,7 +394,7 @@
 
     goto :goto_53
 
-    .line 1307
+    .line 1306
     :cond_3d
     new-instance p1, Ljava/lang/Exception;
 
@@ -409,7 +409,7 @@
     :catchall_45
     move-exception p1
 
-    .line 1346
+    .line 1345
     sget-object v0, Lorg/telegram/messenger/Utilities;->stageQueue:Lorg/telegram/messenger/DispatchQueue;
 
     new-instance v1, Lorg/telegram/tgnet/ConnectionsManager$FirebaseTask$$ExternalSyntheticLambda2;
@@ -418,7 +418,7 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/messenger/DispatchQueue;->postRunnable(Ljava/lang/Runnable;)Z
 
-    .line 1355
+    .line 1354
     invoke-static {p1}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     :goto_53
@@ -430,7 +430,7 @@
 .method protected bridge synthetic onPostExecute(Ljava/lang/Object;)V
     .registers 2
 
-    .line 1294
+    .line 1293
     check-cast p1, Lorg/telegram/tgnet/NativeByteBuffer;
 
     invoke-virtual {p0, p1}, Lorg/telegram/tgnet/ConnectionsManager$FirebaseTask;->onPostExecute(Lorg/telegram/tgnet/NativeByteBuffer;)V

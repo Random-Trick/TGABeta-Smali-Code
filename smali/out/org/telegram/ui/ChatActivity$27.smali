@@ -18,7 +18,7 @@
 .method constructor <init>(Lorg/telegram/ui/ChatActivity;)V
     .registers 2
 
-    .line 6701
+    .line 6791
     invoke-direct {p0}, Landroid/view/ViewOutlineProvider;-><init>()V
 
     return-void
@@ -31,7 +31,7 @@
 
     const/high16 p1, 0x42280000    # 42.0f
 
-    .line 6704
+    .line 6794
     invoke-static {p1}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v0

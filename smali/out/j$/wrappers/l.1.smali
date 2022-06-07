@@ -6,21 +6,21 @@
 
 
 # instance fields
-.field final synthetic a:Lj$/util/v;
+.field final synthetic a:Lj$/util/u$a;
 
 
 # direct methods
-.method private synthetic constructor <init>(Lj$/util/v;)V
+.method private synthetic constructor <init>(Lj$/util/u$a;)V
     .registers 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lj$/wrappers/l;->a:Lj$/util/v;
+    iput-object p1, p0, Lj$/wrappers/l;->a:Lj$/util/u$a;
 
     return-void
 .end method
 
-.method public static synthetic a(Lj$/util/v;)Ljava/util/Spliterator$OfInt;
+.method public static synthetic a(Lj$/util/u$a;)Ljava/util/Spliterator$OfInt;
     .registers 2
 
     if-nez p0, :cond_4
@@ -43,7 +43,7 @@
     :cond_d
     new-instance v0, Lj$/wrappers/l;
 
-    invoke-direct {v0, p0}, Lj$/wrappers/l;-><init>(Lj$/util/v;)V
+    invoke-direct {v0, p0}, Lj$/wrappers/l;-><init>(Lj$/util/u$a;)V
 
     return-object v0
 .end method
@@ -53,9 +53,9 @@
 .method public synthetic characteristics()I
     .registers 2
 
-    iget-object v0, p0, Lj$/wrappers/l;->a:Lj$/util/v;
+    iget-object v0, p0, Lj$/wrappers/l;->a:Lj$/util/u$a;
 
-    invoke-interface {v0}, Lj$/util/y;->characteristics()I
+    invoke-interface {v0}, Lj$/util/u;->characteristics()I
 
     move-result v0
 
@@ -65,9 +65,9 @@
 .method public synthetic estimateSize()J
     .registers 3
 
-    iget-object v0, p0, Lj$/wrappers/l;->a:Lj$/util/v;
+    iget-object v0, p0, Lj$/wrappers/l;->a:Lj$/util/u$a;
 
-    invoke-interface {v0}, Lj$/util/y;->estimateSize()J
+    invoke-interface {v0}, Lj$/util/u;->estimateSize()J
 
     move-result-wide v0
 
@@ -77,9 +77,9 @@
 .method public synthetic forEachRemaining(Ljava/lang/Object;)V
     .registers 3
 
-    iget-object v0, p0, Lj$/wrappers/l;->a:Lj$/util/v;
+    iget-object v0, p0, Lj$/wrappers/l;->a:Lj$/util/u$a;
 
-    invoke-interface {v0, p1}, Lj$/util/x;->forEachRemaining(Ljava/lang/Object;)V
+    invoke-interface {v0, p1}, Lj$/util/w;->forEachRemaining(Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -87,13 +87,13 @@
 .method public synthetic forEachRemaining(Ljava/util/function/Consumer;)V
     .registers 3
 
-    iget-object v0, p0, Lj$/wrappers/l;->a:Lj$/util/v;
+    iget-object v0, p0, Lj$/wrappers/l;->a:Lj$/util/u$a;
 
     invoke-static {p1}, Lj$/wrappers/w;->b(Ljava/util/function/Consumer;)Lj$/util/function/Consumer;
 
     move-result-object p1
 
-    invoke-interface {v0, p1}, Lj$/util/v;->forEachRemaining(Lj$/util/function/Consumer;)V
+    invoke-interface {v0, p1}, Lj$/util/u$a;->forEachRemaining(Lj$/util/function/Consumer;)V
 
     return-void
 .end method
@@ -101,13 +101,13 @@
 .method public synthetic forEachRemaining(Ljava/util/function/IntConsumer;)V
     .registers 3
 
-    iget-object v0, p0, Lj$/wrappers/l;->a:Lj$/util/v;
+    iget-object v0, p0, Lj$/wrappers/l;->a:Lj$/util/u$a;
 
     invoke-static {p1}, Lj$/wrappers/Q;->b(Ljava/util/function/IntConsumer;)Lj$/util/function/l;
 
     move-result-object p1
 
-    invoke-interface {v0, p1}, Lj$/util/v;->c(Lj$/util/function/l;)V
+    invoke-interface {v0, p1}, Lj$/util/u$a;->c(Lj$/util/function/l;)V
 
     return-void
 .end method
@@ -115,9 +115,9 @@
 .method public synthetic getComparator()Ljava/util/Comparator;
     .registers 2
 
-    iget-object v0, p0, Lj$/wrappers/l;->a:Lj$/util/v;
+    iget-object v0, p0, Lj$/wrappers/l;->a:Lj$/util/u$a;
 
-    invoke-interface {v0}, Lj$/util/y;->getComparator()Ljava/util/Comparator;
+    invoke-interface {v0}, Lj$/util/u;->getComparator()Ljava/util/Comparator;
 
     move-result-object v0
 
@@ -127,9 +127,9 @@
 .method public synthetic getExactSizeIfKnown()J
     .registers 3
 
-    iget-object v0, p0, Lj$/wrappers/l;->a:Lj$/util/v;
+    iget-object v0, p0, Lj$/wrappers/l;->a:Lj$/util/u$a;
 
-    invoke-interface {v0}, Lj$/util/y;->getExactSizeIfKnown()J
+    invoke-interface {v0}, Lj$/util/u;->getExactSizeIfKnown()J
 
     move-result-wide v0
 
@@ -139,9 +139,9 @@
 .method public synthetic hasCharacteristics(I)Z
     .registers 3
 
-    iget-object v0, p0, Lj$/wrappers/l;->a:Lj$/util/v;
+    iget-object v0, p0, Lj$/wrappers/l;->a:Lj$/util/u$a;
 
-    invoke-interface {v0, p1}, Lj$/util/y;->hasCharacteristics(I)Z
+    invoke-interface {v0, p1}, Lj$/util/u;->hasCharacteristics(I)Z
 
     move-result p1
 
@@ -151,9 +151,9 @@
 .method public synthetic tryAdvance(Ljava/lang/Object;)Z
     .registers 3
 
-    iget-object v0, p0, Lj$/wrappers/l;->a:Lj$/util/v;
+    iget-object v0, p0, Lj$/wrappers/l;->a:Lj$/util/u$a;
 
-    invoke-interface {v0, p1}, Lj$/util/x;->tryAdvance(Ljava/lang/Object;)Z
+    invoke-interface {v0, p1}, Lj$/util/w;->tryAdvance(Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -163,13 +163,13 @@
 .method public synthetic tryAdvance(Ljava/util/function/Consumer;)Z
     .registers 3
 
-    iget-object v0, p0, Lj$/wrappers/l;->a:Lj$/util/v;
+    iget-object v0, p0, Lj$/wrappers/l;->a:Lj$/util/u$a;
 
     invoke-static {p1}, Lj$/wrappers/w;->b(Ljava/util/function/Consumer;)Lj$/util/function/Consumer;
 
     move-result-object p1
 
-    invoke-interface {v0, p1}, Lj$/util/v;->b(Lj$/util/function/Consumer;)Z
+    invoke-interface {v0, p1}, Lj$/util/u$a;->b(Lj$/util/function/Consumer;)Z
 
     move-result p1
 
@@ -179,13 +179,13 @@
 .method public synthetic tryAdvance(Ljava/util/function/IntConsumer;)Z
     .registers 3
 
-    iget-object v0, p0, Lj$/wrappers/l;->a:Lj$/util/v;
+    iget-object v0, p0, Lj$/wrappers/l;->a:Lj$/util/u$a;
 
     invoke-static {p1}, Lj$/wrappers/Q;->b(Ljava/util/function/IntConsumer;)Lj$/util/function/l;
 
     move-result-object p1
 
-    invoke-interface {v0, p1}, Lj$/util/v;->g(Lj$/util/function/l;)Z
+    invoke-interface {v0, p1}, Lj$/util/u$a;->g(Lj$/util/function/l;)Z
 
     move-result p1
 
@@ -195,13 +195,13 @@
 .method public synthetic trySplit()Ljava/util/Spliterator$OfInt;
     .registers 2
 
-    iget-object v0, p0, Lj$/wrappers/l;->a:Lj$/util/v;
+    iget-object v0, p0, Lj$/wrappers/l;->a:Lj$/util/u$a;
 
-    invoke-interface {v0}, Lj$/util/v;->trySplit()Lj$/util/v;
+    invoke-interface {v0}, Lj$/util/u$a;->trySplit()Lj$/util/u$a;
 
     move-result-object v0
 
-    invoke-static {v0}, Lj$/wrappers/l;->a(Lj$/util/v;)Ljava/util/Spliterator$OfInt;
+    invoke-static {v0}, Lj$/wrappers/l;->a(Lj$/util/u$a;)Ljava/util/Spliterator$OfInt;
 
     move-result-object v0
 
@@ -211,13 +211,13 @@
 .method public synthetic trySplit()Ljava/util/Spliterator$OfPrimitive;
     .registers 2
 
-    iget-object v0, p0, Lj$/wrappers/l;->a:Lj$/util/v;
+    iget-object v0, p0, Lj$/wrappers/l;->a:Lj$/util/u$a;
 
-    invoke-interface {v0}, Lj$/util/x;->trySplit()Lj$/util/x;
+    invoke-interface {v0}, Lj$/util/w;->trySplit()Lj$/util/w;
 
     move-result-object v0
 
-    invoke-static {v0}, Lj$/wrappers/p;->a(Lj$/util/x;)Ljava/util/Spliterator$OfPrimitive;
+    invoke-static {v0}, Lj$/wrappers/p;->a(Lj$/util/w;)Ljava/util/Spliterator$OfPrimitive;
 
     move-result-object v0
 
@@ -227,13 +227,13 @@
 .method public synthetic trySplit()Ljava/util/Spliterator;
     .registers 2
 
-    iget-object v0, p0, Lj$/wrappers/l;->a:Lj$/util/v;
+    iget-object v0, p0, Lj$/wrappers/l;->a:Lj$/util/u$a;
 
-    invoke-interface {v0}, Lj$/util/y;->trySplit()Lj$/util/y;
+    invoke-interface {v0}, Lj$/util/u;->trySplit()Lj$/util/u;
 
     move-result-object v0
 
-    invoke-static {v0}, Lj$/wrappers/h;->a(Lj$/util/y;)Ljava/util/Spliterator;
+    invoke-static {v0}, Lj$/wrappers/h;->a(Lj$/util/u;)Ljava/util/Spliterator;
 
     move-result-object v0
 

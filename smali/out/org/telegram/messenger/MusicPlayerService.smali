@@ -508,7 +508,7 @@
 
     invoke-direct {v11, v1}, Landroid/app/Notification$Builder;-><init>(Landroid/content/Context;)V
 
-    const v12, 0x7f07035a
+    const v12, 0x7f070371
 
     .line 257
     invoke-virtual {v11, v12}, Landroid/app/Notification$Builder;->setSmallIcon(I)Landroid/app/Notification$Builder;
@@ -636,7 +636,7 @@
     invoke-virtual {v11, v0}, Landroid/app/Notification$Builder;->setLargeIcon(Landroid/graphics/Bitmap;)Landroid/app/Notification$Builder;
 
     :goto_1af
-    const v0, 0x7f0e0aa0
+    const v0, 0x7f0e0b27
 
     const-string v5, "Next"
 
@@ -645,7 +645,7 @@
 
     move-result-object v0
 
-    const v5, 0x7f0e004e
+    const v5, 0x7f0e006d
 
     const-string v7, "AccDescrPrevious"
 
@@ -683,7 +683,7 @@
     .line 285
     new-instance v7, Landroid/app/Notification$Action$Builder;
 
-    const v9, 0x7f07014f
+    const v9, 0x7f070114
 
     invoke-direct {v7, v9, v5, v6}, Landroid/app/Notification$Action$Builder;-><init>(ILjava/lang/CharSequence;Landroid/app/PendingIntent;)V
 
@@ -697,9 +697,9 @@
 
     new-instance v6, Landroid/app/Notification$Action$Builder;
 
-    const v7, 0x7f0701be
+    const v7, 0x7f070191
 
-    const v9, 0x7f0e0958
+    const v9, 0x7f0e09df
 
     const-string v12, "Loading"
 
@@ -722,7 +722,7 @@
 
     new-instance v6, Landroid/app/Notification$Action$Builder;
 
-    const v7, 0x7f07014c
+    const v7, 0x7f070111
 
     invoke-direct {v6, v7, v0, v10}, Landroid/app/Notification$Action$Builder;-><init>(ILjava/lang/CharSequence;Landroid/app/PendingIntent;)V
 
@@ -800,14 +800,14 @@
 
     if-eqz v8, :cond_24c
 
-    const v2, 0x7f0e000a
+    const v2, 0x7f0e000d
 
     const-string v3, "AccActionPause"
 
     goto :goto_251
 
     :cond_24c
-    const v2, 0x7f0e000b
+    const v2, 0x7f0e000e
 
     const-string v3, "AccActionPlay"
 
@@ -820,7 +820,7 @@
     .line 294
     new-instance v3, Landroid/app/Notification$Action$Builder;
 
-    const v7, 0x7f07014f
+    const v7, 0x7f070114
 
     invoke-direct {v3, v7, v5, v6}, Landroid/app/Notification$Action$Builder;-><init>(ILjava/lang/CharSequence;Landroid/app/PendingIntent;)V
 
@@ -836,12 +836,12 @@
 
     if-eqz v8, :cond_26d
 
-    const v6, 0x7f07014d
+    const v6, 0x7f070112
 
     goto :goto_270
 
     :cond_26d
-    const v6, 0x7f07014e
+    const v6, 0x7f070113
 
     .line 295
     :goto_270
@@ -857,7 +857,7 @@
 
     new-instance v3, Landroid/app/Notification$Action$Builder;
 
-    const v5, 0x7f07014c
+    const v5, 0x7f070111
 
     invoke-direct {v3, v5, v0, v10}, Landroid/app/Notification$Action$Builder;-><init>(ILjava/lang/CharSequence;Landroid/app/PendingIntent;)V
 
@@ -1052,7 +1052,7 @@
 
     invoke-direct {v2, v7}, Landroidx/core/app/NotificationCompat$Builder;-><init>(Landroid/content/Context;)V
 
-    const v7, 0x7f07035a
+    const v7, 0x7f070371
 
     .line 330
     invoke-virtual {v2, v7}, Landroidx/core/app/NotificationCompat$Builder;->setSmallIcon(I)Landroidx/core/app/NotificationCompat$Builder;
@@ -1104,7 +1104,7 @@
     invoke-virtual {v1, v12}, Lorg/telegram/messenger/MusicPlayerService;->setListeners(Landroid/widget/RemoteViews;)V
 
     :cond_356
-    const v0, 0x7f0800ab
+    const v0, 0x7f0800ac
 
     if-eqz v13, :cond_36a
 
@@ -1129,7 +1129,7 @@
     :cond_36a
     iget-object v5, v2, Landroid/app/Notification;->contentView:Landroid/widget/RemoteViews;
 
-    const v7, 0x7f070309
+    const v7, 0x7f070331
 
     invoke-virtual {v5, v0, v7}, Landroid/widget/RemoteViews;->setImageViewResource(II)V
 
@@ -1141,7 +1141,7 @@
     .line 353
     iget-object v5, v2, Landroid/app/Notification;->bigContentView:Landroid/widget/RemoteViews;
 
-    const v7, 0x7f070308
+    const v7, 0x7f070330
 
     invoke-virtual {v5, v0, v7}, Landroid/widget/RemoteViews;->setImageViewResource(II)V
 
@@ -1156,15 +1156,15 @@
 
     move-result v0
 
-    const v5, 0x7f0800b2
+    const v5, 0x7f0800b3
 
-    const v7, 0x7f0800af
+    const v7, 0x7f0800b0
 
-    const v8, 0x7f0800b3
+    const v8, 0x7f0800b4
 
-    const v9, 0x7f0800b1
+    const v9, 0x7f0800b2
 
-    const v10, 0x7f0800b0
+    const v10, 0x7f0800b1
 
     if-eqz v0, :cond_3d2
 
@@ -1348,14 +1348,14 @@
     :goto_437
     iget-object v0, v2, Landroid/app/Notification;->contentView:Landroid/widget/RemoteViews;
 
-    const v5, 0x7f0800b4
+    const v5, 0x7f0800b5
 
     invoke-virtual {v0, v5, v6}, Landroid/widget/RemoteViews;->setTextViewText(ILjava/lang/CharSequence;)V
 
     .line 397
     iget-object v0, v2, Landroid/app/Notification;->contentView:Landroid/widget/RemoteViews;
 
-    const v7, 0x7f0800ad
+    const v7, 0x7f0800ae
 
     invoke-virtual {v0, v7, v3}, Landroid/widget/RemoteViews;->setTextViewText(ILjava/lang/CharSequence;)V
 
@@ -1377,7 +1377,7 @@
     .line 401
     iget-object v0, v2, Landroid/app/Notification;->bigContentView:Landroid/widget/RemoteViews;
 
-    const v5, 0x7f0800ac
+    const v5, 0x7f0800ad
 
     if-eqz v4, :cond_46b
 
@@ -1747,7 +1747,7 @@
 .end method
 
 .method private loadArtworkFromUrl(Ljava/lang/String;ZZ)Landroid/graphics/Bitmap;
-    .registers 13
+    .registers 14
 
     .line 193
     invoke-static {p1}, Lorg/telegram/messenger/ImageLoader;->getHttpFileName(Ljava/lang/String;)Ljava/lang/String;
@@ -1804,7 +1804,7 @@
     return-object p1
 
     :cond_2a
-    if-eqz p3, :cond_40
+    if-eqz p3, :cond_41
 
     .line 203
     invoke-virtual {v0}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
@@ -1813,7 +1813,7 @@
 
     iput-object p3, p0, Lorg/telegram/messenger/MusicPlayerService;->loadingFilePath:Ljava/lang/String;
 
-    if-nez p2, :cond_42
+    if-nez p2, :cond_43
 
     .line 205
     iget-object v3, p0, Lorg/telegram/messenger/MusicPlayerService;->imageReceiver:Lorg/telegram/messenger/ImageReceiver;
@@ -1822,22 +1822,22 @@
 
     const/4 v7, 0x0
 
-    const/4 v8, 0x0
+    const-wide/16 v8, 0x0
 
     const-string v5, "48_48"
 
     move-object v4, p1
 
-    invoke-virtual/range {v3 .. v8}, Lorg/telegram/messenger/ImageReceiver;->setImage(Ljava/lang/String;Ljava/lang/String;Landroid/graphics/drawable/Drawable;Ljava/lang/String;I)V
+    invoke-virtual/range {v3 .. v9}, Lorg/telegram/messenger/ImageReceiver;->setImage(Ljava/lang/String;Ljava/lang/String;Landroid/graphics/drawable/Drawable;Ljava/lang/String;J)V
 
-    goto :goto_42
+    goto :goto_43
 
     .line 208
-    :cond_40
+    :cond_41
     iput-object v2, p0, Lorg/telegram/messenger/MusicPlayerService;->loadingFilePath:Ljava/lang/String;
 
-    :cond_42
-    :goto_42
+    :cond_43
+    :goto_43
     return-object v2
 .end method
 
@@ -2177,7 +2177,7 @@
     const/4 v1, 0x0
 
     :goto_c
-    const/4 v2, 0x3
+    const/4 v2, 0x4
 
     if-ge v1, v2, :cond_36
 
@@ -2285,7 +2285,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f070308
+    const v2, 0x7f070330
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -2407,7 +2407,7 @@
     const/4 v0, 0x0
 
     :goto_2a
-    const/4 v1, 0x3
+    const/4 v1, 0x4
 
     if-ge v0, v1, :cond_54
 
@@ -2652,7 +2652,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0800b2
+    const v1, 0x7f0800b3
 
     .line 484
     invoke-virtual {p1, v1, v0}, Landroid/widget/RemoteViews;->setOnClickPendingIntent(ILandroid/app/PendingIntent;)V
@@ -2672,7 +2672,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0800ae
+    const v1, 0x7f0800af
 
     .line 486
     invoke-virtual {p1, v1, v0}, Landroid/widget/RemoteViews;->setOnClickPendingIntent(ILandroid/app/PendingIntent;)V
@@ -2692,7 +2692,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0800b0
+    const v1, 0x7f0800b1
 
     .line 488
     invoke-virtual {p1, v1, v0}, Landroid/widget/RemoteViews;->setOnClickPendingIntent(ILandroid/app/PendingIntent;)V
@@ -2712,7 +2712,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0800af
+    const v1, 0x7f0800b0
 
     .line 490
     invoke-virtual {p1, v1, v0}, Landroid/widget/RemoteViews;->setOnClickPendingIntent(ILandroid/app/PendingIntent;)V
@@ -2732,7 +2732,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0800b1
+    const v1, 0x7f0800b2
 
     .line 492
     invoke-virtual {p1, v1, v0}, Landroid/widget/RemoteViews;->setOnClickPendingIntent(ILandroid/app/PendingIntent;)V

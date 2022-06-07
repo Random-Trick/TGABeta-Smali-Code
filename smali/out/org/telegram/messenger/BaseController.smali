@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field protected currentAccount:I
+.field protected final currentAccount:I
 
 .field private parentAccountInstance:Lorg/telegram/messenger/AccountInstance;
 

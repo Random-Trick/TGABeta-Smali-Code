@@ -33,7 +33,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/ChatActivityEnterView;Lorg/telegram/messenger/MessageObject;JLorg/telegram/tgnet/TLRPC$KeyboardButton;Lorg/telegram/messenger/MessageObject;)V
     .registers 7
 
-    .line 7096
+    .line 7140
     iput-object p1, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$56;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     iput-object p2, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$56;->val$messageObject:Lorg/telegram/messenger/MessageObject;
@@ -54,7 +54,7 @@
 .method public run()V
     .registers 14
 
-    .line 7099
+    .line 7143
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$56;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$11700(Lorg/telegram/ui/Components/ChatActivityEnterView;)Lorg/telegram/ui/Components/SizeNotifierFrameLayout;
@@ -73,19 +73,19 @@
 
     if-le v0, v1, :cond_1d
 
-    .line 7100
+    .line 7144
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$56;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->hideKeyboard(Landroid/view/View;)V
 
     const-wide/16 v0, 0x96
 
-    .line 7101
+    .line 7145
     invoke-static {p0, v0, v1}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;J)V
 
     return-void
 
-    .line 7105
+    .line 7149
     :cond_1d
     new-instance v0, Lorg/telegram/ui/Components/BotWebViewSheet;
 
@@ -103,7 +103,7 @@
 
     invoke-direct {v0, v1, v2}, Lorg/telegram/ui/Components/BotWebViewSheet;-><init>(Landroid/content/Context;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)V
 
-    .line 7106
+    .line 7150
     iget-object v1, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$56;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {v1}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$1600(Lorg/telegram/ui/Components/ChatActivityEnterView;)Landroid/app/Activity;
@@ -112,7 +112,7 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/BotWebViewSheet;->setParentActivity(Landroid/app/Activity;)V
 
-    .line 7107
+    .line 7151
     iget-object v1, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$56;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {v1}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$2800(Lorg/telegram/ui/Components/ChatActivityEnterView;)I
@@ -157,9 +157,9 @@
 
     move-object v2, v0
 
-    invoke-virtual/range {v2 .. v12}, Lorg/telegram/ui/Components/BotWebViewSheet;->requestWebView(IJJLjava/lang/String;Ljava/lang/String;ZIZ)V
+    invoke-virtual/range {v2 .. v12}, Lorg/telegram/ui/Components/BotWebViewSheet;->requestWebView(IJJLjava/lang/String;Ljava/lang/String;IIZ)V
 
-    .line 7108
+    .line 7152
     invoke-virtual {v0}, Lorg/telegram/ui/Components/BotWebViewSheet;->show()V
 
     return-void

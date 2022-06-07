@@ -37,7 +37,7 @@
 
     check-cast p1, Lorg/telegram/ui/Components/PipVideoOverlay;
 
-    invoke-static {p1}, Lorg/telegram/ui/Components/PipVideoOverlay;->$r8$lambda$gS0lTgjzqS43tgTnbdT5gRzcQEo(Lorg/telegram/ui/Components/PipVideoOverlay;)F
+    invoke-static {p1}, Lorg/telegram/ui/Components/PipVideoOverlay;->$r8$lambda$ffb0euJahxLcKbwa8KjIpGlMsjM(Lorg/telegram/ui/Components/PipVideoOverlay;)F
 
     move-result p1
 

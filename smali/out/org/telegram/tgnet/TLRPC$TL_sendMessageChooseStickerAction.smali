@@ -17,7 +17,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 6044
+    .line 6109
     invoke-direct {p0}, Lorg/telegram/tgnet/TLRPC$SendMessageAction;-><init>()V
 
     return-void
@@ -28,7 +28,7 @@
 .method public serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
     .registers 3
 
-    .line 6049
+    .line 6114
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_sendMessageChooseStickerAction;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V

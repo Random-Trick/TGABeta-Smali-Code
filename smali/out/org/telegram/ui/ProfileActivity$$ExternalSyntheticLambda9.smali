@@ -8,22 +8,34 @@
 # instance fields
 .field public final synthetic f$0:Lorg/telegram/ui/ProfileActivity;
 
-.field public final synthetic f$1:Ljava/util/ArrayList;
+.field public final synthetic f$1:Lorg/telegram/tgnet/TLRPC$ChannelParticipant;
 
-.field public final synthetic f$2:Lorg/telegram/tgnet/TLRPC$User;
+.field public final synthetic f$2:I
+
+.field public final synthetic f$3:Lorg/telegram/tgnet/TLRPC$User;
+
+.field public final synthetic f$4:Lorg/telegram/tgnet/TLRPC$ChatParticipant;
+
+.field public final synthetic f$5:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(Lorg/telegram/ui/ProfileActivity;Ljava/util/ArrayList;Lorg/telegram/tgnet/TLRPC$User;)V
-    .registers 4
+.method public synthetic constructor <init>(Lorg/telegram/ui/ProfileActivity;Lorg/telegram/tgnet/TLRPC$ChannelParticipant;ILorg/telegram/tgnet/TLRPC$User;Lorg/telegram/tgnet/TLRPC$ChatParticipant;Z)V
+    .registers 7
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lorg/telegram/ui/ProfileActivity$$ExternalSyntheticLambda9;->f$0:Lorg/telegram/ui/ProfileActivity;
 
-    iput-object p2, p0, Lorg/telegram/ui/ProfileActivity$$ExternalSyntheticLambda9;->f$1:Ljava/util/ArrayList;
+    iput-object p2, p0, Lorg/telegram/ui/ProfileActivity$$ExternalSyntheticLambda9;->f$1:Lorg/telegram/tgnet/TLRPC$ChannelParticipant;
 
-    iput-object p3, p0, Lorg/telegram/ui/ProfileActivity$$ExternalSyntheticLambda9;->f$2:Lorg/telegram/tgnet/TLRPC$User;
+    iput p3, p0, Lorg/telegram/ui/ProfileActivity$$ExternalSyntheticLambda9;->f$2:I
+
+    iput-object p4, p0, Lorg/telegram/ui/ProfileActivity$$ExternalSyntheticLambda9;->f$3:Lorg/telegram/tgnet/TLRPC$User;
+
+    iput-object p5, p0, Lorg/telegram/ui/ProfileActivity$$ExternalSyntheticLambda9;->f$4:Lorg/telegram/tgnet/TLRPC$ChatParticipant;
+
+    iput-boolean p6, p0, Lorg/telegram/ui/ProfileActivity$$ExternalSyntheticLambda9;->f$5:Z
 
     return-void
 .end method
@@ -31,15 +43,25 @@
 
 # virtual methods
 .method public final onClick(Landroid/content/DialogInterface;I)V
-    .registers 6
+    .registers 11
 
     iget-object v0, p0, Lorg/telegram/ui/ProfileActivity$$ExternalSyntheticLambda9;->f$0:Lorg/telegram/ui/ProfileActivity;
 
-    iget-object v1, p0, Lorg/telegram/ui/ProfileActivity$$ExternalSyntheticLambda9;->f$1:Ljava/util/ArrayList;
+    iget-object v1, p0, Lorg/telegram/ui/ProfileActivity$$ExternalSyntheticLambda9;->f$1:Lorg/telegram/tgnet/TLRPC$ChannelParticipant;
 
-    iget-object v2, p0, Lorg/telegram/ui/ProfileActivity$$ExternalSyntheticLambda9;->f$2:Lorg/telegram/tgnet/TLRPC$User;
+    iget v2, p0, Lorg/telegram/ui/ProfileActivity$$ExternalSyntheticLambda9;->f$2:I
 
-    invoke-static {v0, v1, v2, p1, p2}, Lorg/telegram/ui/ProfileActivity;->$r8$lambda$EqkkXtU5S1isIrV_O8Kj6KJuJhQ(Lorg/telegram/ui/ProfileActivity;Ljava/util/ArrayList;Lorg/telegram/tgnet/TLRPC$User;Landroid/content/DialogInterface;I)V
+    iget-object v3, p0, Lorg/telegram/ui/ProfileActivity$$ExternalSyntheticLambda9;->f$3:Lorg/telegram/tgnet/TLRPC$User;
+
+    iget-object v4, p0, Lorg/telegram/ui/ProfileActivity$$ExternalSyntheticLambda9;->f$4:Lorg/telegram/tgnet/TLRPC$ChatParticipant;
+
+    iget-boolean v5, p0, Lorg/telegram/ui/ProfileActivity$$ExternalSyntheticLambda9;->f$5:Z
+
+    move-object v6, p1
+
+    move v7, p2
+
+    invoke-static/range {v0 .. v7}, Lorg/telegram/ui/ProfileActivity;->$r8$lambda$EuGzCFVCEzn2pxV3byZ-nHn2Yyw(Lorg/telegram/ui/ProfileActivity;Lorg/telegram/tgnet/TLRPC$ChannelParticipant;ILorg/telegram/tgnet/TLRPC$User;Lorg/telegram/tgnet/TLRPC$ChatParticipant;ZLandroid/content/DialogInterface;I)V
 
     return-void
 .end method

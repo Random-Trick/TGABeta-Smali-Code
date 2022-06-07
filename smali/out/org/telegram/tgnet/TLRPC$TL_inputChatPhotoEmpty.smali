@@ -17,7 +17,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 43823
+    .line 44275
     invoke-direct {p0}, Lorg/telegram/tgnet/TLRPC$InputChatPhoto;-><init>()V
 
     return-void
@@ -28,7 +28,7 @@
 .method public serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
     .registers 3
 
-    .line 43828
+    .line 44280
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_inputChatPhotoEmpty;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V

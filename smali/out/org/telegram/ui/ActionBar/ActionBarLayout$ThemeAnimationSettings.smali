@@ -50,29 +50,29 @@
 .method public constructor <init>(Lorg/telegram/ui/ActionBar/Theme$ThemeInfo;IZZ)V
     .registers 7
 
-    .line 234
+    .line 309
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x1
 
-    .line 226
+    .line 301
     iput-boolean v0, p0, Lorg/telegram/ui/ActionBar/ActionBarLayout$ThemeAnimationSettings;->applyTheme:Z
 
     const-wide/16 v0, 0xc8
 
-    .line 231
+    .line 306
     iput-wide v0, p0, Lorg/telegram/ui/ActionBar/ActionBarLayout$ThemeAnimationSettings;->duration:J
 
-    .line 235
+    .line 310
     iput-object p1, p0, Lorg/telegram/ui/ActionBar/ActionBarLayout$ThemeAnimationSettings;->theme:Lorg/telegram/ui/ActionBar/Theme$ThemeInfo;
 
-    .line 236
+    .line 311
     iput p2, p0, Lorg/telegram/ui/ActionBar/ActionBarLayout$ThemeAnimationSettings;->accentId:I
 
-    .line 237
+    .line 312
     iput-boolean p3, p0, Lorg/telegram/ui/ActionBar/ActionBarLayout$ThemeAnimationSettings;->nightTheme:Z
 
-    .line 238
+    .line 313
     iput-boolean p4, p0, Lorg/telegram/ui/ActionBar/ActionBarLayout$ThemeAnimationSettings;->instant:Z
 
     return-void

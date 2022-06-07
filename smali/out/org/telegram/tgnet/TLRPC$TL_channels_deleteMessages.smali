@@ -31,10 +31,10 @@
 .method public constructor <init>()V
     .registers 2
 
-    .line 51680
+    .line 52145
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
-    .line 51684
+    .line 52149
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -47,7 +47,7 @@
 .method public static TLdeserialize(Lorg/telegram/tgnet/AbstractSerializedData;IZ)Lorg/telegram/tgnet/TLRPC$TL_channels_deleteMessages;
     .registers 4
 
-    .line 51687
+    .line 52152
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_channels_deleteMessages;->constructor:I
 
     if-eq v0, p1, :cond_1e
@@ -58,7 +58,7 @@
 
     return-object p0
 
-    .line 51689
+    .line 52154
     :cond_8
     new-instance p0, Ljava/lang/RuntimeException;
 
@@ -84,13 +84,13 @@
 
     throw p0
 
-    .line 51694
+    .line 52159
     :cond_1e
     new-instance p1, Lorg/telegram/tgnet/TLRPC$TL_channels_deleteMessages;
 
     invoke-direct {p1}, Lorg/telegram/tgnet/TLRPC$TL_channels_deleteMessages;-><init>()V
 
-    .line 51695
+    .line 52160
     invoke-virtual {p1, p0, p2}, Lorg/telegram/tgnet/TLRPC$TL_channels_deleteMessages;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
     return-object p1
@@ -101,7 +101,7 @@
 .method public deserializeResponse(Lorg/telegram/tgnet/AbstractSerializedData;IZ)Lorg/telegram/tgnet/TLObject;
     .registers 4
 
-    .line 51700
+    .line 52165
     invoke-static {p1, p2, p3}, Lorg/telegram/tgnet/TLRPC$TL_messages_affectedMessages;->TLdeserialize(Lorg/telegram/tgnet/AbstractSerializedData;IZ)Lorg/telegram/tgnet/TLRPC$TL_messages_affectedMessages;
 
     move-result-object p1
@@ -112,7 +112,7 @@
 .method public readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
     .registers 7
 
-    .line 51704
+    .line 52169
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
@@ -123,7 +123,7 @@
 
     iput-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_channels_deleteMessages;->channel:Lorg/telegram/tgnet/TLRPC$InputChannel;
 
-    .line 51705
+    .line 52170
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
@@ -138,7 +138,7 @@
 
     return-void
 
-    .line 51708
+    .line 52173
     :cond_17
     new-instance p1, Ljava/lang/RuntimeException;
 
@@ -162,7 +162,7 @@
 
     throw p1
 
-    .line 51712
+    .line 52177
     :cond_2c
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
@@ -171,7 +171,7 @@
     :goto_30
     if-ge v1, v0, :cond_42
 
-    .line 51714
+    .line 52179
     iget-object v2, p0, Lorg/telegram/tgnet/TLRPC$TL_channels_deleteMessages;->id:Ljava/util/ArrayList;
 
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
@@ -195,29 +195,29 @@
 .method public serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
     .registers 5
 
-    .line 51719
+    .line 52184
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_channels_deleteMessages;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 51720
+    .line 52185
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_channels_deleteMessages;->channel:Lorg/telegram/tgnet/TLRPC$InputChannel;
 
     invoke-virtual {v0, p1}, Lorg/telegram/tgnet/TLObject;->serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
 
     const v0, 0x1cb5c415
 
-    .line 51721
+    .line 52186
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 51722
+    .line 52187
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_channels_deleteMessages;->id:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
-    .line 51723
+    .line 52188
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
     const/4 v1, 0x0
@@ -225,7 +225,7 @@
     :goto_1a
     if-ge v1, v0, :cond_2e
 
-    .line 51725
+    .line 52190
     iget-object v2, p0, Lorg/telegram/tgnet/TLRPC$TL_channels_deleteMessages;->id:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;

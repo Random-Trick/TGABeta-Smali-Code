@@ -3,14 +3,18 @@
 
 
 # instance fields
-.field protected b:Z
+.field protected final b:Ljava/util/Comparator;
+
+.field protected c:Z
 
 
 # direct methods
-.method constructor <init>(Lj$/util/stream/n3;)V
-    .registers 2
+.method constructor <init>(Lj$/util/stream/m3;Ljava/util/Comparator;)V
+    .registers 3
 
-    invoke-direct {p0, p1}, Lj$/util/stream/i3;-><init>(Lj$/util/stream/n3;)V
+    invoke-direct {p0, p1}, Lj$/util/stream/i3;-><init>(Lj$/util/stream/m3;)V
+
+    iput-object p2, p0, Lj$/util/stream/F3;->b:Ljava/util/Comparator;
 
     return-void
 .end method
@@ -22,7 +26,7 @@
 
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lj$/util/stream/F3;->b:Z
+    iput-boolean v0, p0, Lj$/util/stream/F3;->c:Z
 
     const/4 v0, 0x0
 

@@ -789,7 +789,7 @@
 
     const/4 v1, 0x1
 
-    if-eqz v0, :cond_17a
+    if-eqz v0, :cond_17c
 
     const/4 v2, 0x6
 
@@ -797,7 +797,7 @@
 
     const/4 v4, 0x0
 
-    if-eq v0, v2, :cond_f5
+    if-eq v0, v2, :cond_f7
 
     const/4 v2, 0x2
 
@@ -807,7 +807,7 @@
 
     if-eq v0, p2, :cond_14
 
-    goto/16 :goto_1d1
+    goto/16 :goto_1d3
 
     .line 608
     :cond_14
@@ -827,7 +827,7 @@
 
     move-result-object p2
 
-    const v0, 0x7f070366
+    const v0, 0x7f07037d
 
     invoke-virtual {p2, v0}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -840,7 +840,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f070367
+    const v1, 0x7f07037e
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -881,7 +881,7 @@
 
     invoke-direct {v1, p2, v0}, Lorg/telegram/ui/Components/CombinedDrawable;-><init>(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
 
-    const p2, 0x7f0e010a
+    const p2, 0x7f0e0132
 
     const-string v0, "AddAnOption"
 
@@ -892,7 +892,7 @@
 
     invoke-virtual {p1, p2, v1, v4}, Lorg/telegram/ui/Cells/TextCell;->setTextAndIcon(Ljava/lang/String;Landroid/graphics/drawable/Drawable;Z)V
 
-    goto/16 :goto_1d1
+    goto/16 :goto_1d3
 
     .line 588
     :cond_6a
@@ -906,7 +906,7 @@
     .line 590
     iget-object v0, p0, Lorg/telegram/ui/PollCreateActivity$ListAdapter;->mContext:Landroid/content/Context;
 
-    const v2, 0x7f07012d
+    const v2, 0x7f0700fc
 
     const-string v5, "windowBackgroundGrayShadow"
 
@@ -925,7 +925,7 @@
 
     if-ne p2, v0, :cond_95
 
-    const p2, 0x7f0e0109
+    const p2, 0x7f0e0131
 
     const-string v0, "AddAnExplanationInfo"
 
@@ -936,7 +936,7 @@
 
     invoke-virtual {p1, p2}, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;->setText(Ljava/lang/CharSequence;)V
 
-    goto/16 :goto_1d1
+    goto/16 :goto_1d3
 
     .line 593
     :cond_95
@@ -965,10 +965,10 @@
     .line 596
     invoke-virtual {p1, v3}, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;->setText(Ljava/lang/CharSequence;)V
 
-    goto/16 :goto_1d1
+    goto/16 :goto_1d3
 
     :cond_af
-    const p2, 0x7f0e0e75
+    const p2, 0x7f0e0f20
 
     const-string v0, "QuizInfo"
 
@@ -979,7 +979,7 @@
 
     invoke-virtual {p1, p2}, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;->setText(Ljava/lang/CharSequence;)V
 
-    goto/16 :goto_1d1
+    goto/16 :goto_1d3
 
     .line 600
     :cond_bd
@@ -993,7 +993,7 @@
 
     if-gtz p2, :cond_d5
 
-    const p2, 0x7f0e010c
+    const p2, 0x7f0e0134
 
     const-string v0, "AddAnOptionInfoMax"
 
@@ -1004,10 +1004,10 @@
 
     invoke-virtual {p1, p2}, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;->setText(Ljava/lang/CharSequence;)V
 
-    goto/16 :goto_1d1
+    goto/16 :goto_1d3
 
     :cond_d5
-    const p2, 0x7f0e010b
+    const p2, 0x7f0e0133
 
     new-array v0, v1, [Ljava/lang/Object;
 
@@ -1020,9 +1020,11 @@
 
     rsub-int/lit8 v1, v1, 0xa
 
-    const-string v2, "Option"
+    new-array v2, v4, [Ljava/lang/Object;
 
-    invoke-static {v2, v1}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    const-string v3, "Option"
+
+    invoke-static {v3, v1, v2}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -1036,10 +1038,10 @@
 
     invoke-virtual {p1, p2}, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;->setText(Ljava/lang/CharSequence;)V
 
-    goto/16 :goto_1d1
+    goto/16 :goto_1d3
 
     .line 619
-    :cond_f5
+    :cond_f7
     iget-object p1, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     check-cast p1, Lorg/telegram/ui/Cells/TextCheckCell;
@@ -1053,9 +1055,9 @@
 
     const/4 v2, -0x1
 
-    if-ne p2, v0, :cond_12a
+    if-ne p2, v0, :cond_12c
 
-    const p2, 0x7f0e0d9f
+    const p2, 0x7f0e0e2f
 
     const-string v0, "PollAnonymous"
 
@@ -1076,7 +1078,7 @@
 
     move-result v5
 
-    if-ne v5, v2, :cond_121
+    if-ne v5, v2, :cond_123
 
     iget-object v5, p0, Lorg/telegram/ui/PollCreateActivity$ListAdapter;->this$0:Lorg/telegram/ui/PollCreateActivity;
 
@@ -1084,30 +1086,30 @@
 
     move-result v5
 
-    if-eq v5, v2, :cond_122
+    if-eq v5, v2, :cond_124
 
-    :cond_121
+    :cond_123
     const/4 v4, 0x1
 
-    :cond_122
+    :cond_124
     invoke-virtual {p1, p2, v0, v4}, Lorg/telegram/ui/Cells/TextCheckCell;->setTextAndCheck(Ljava/lang/String;ZZ)V
 
     .line 622
     invoke-virtual {p1, v1, v3}, Lorg/telegram/ui/Cells/TextCheckCell;->setEnabled(ZLjava/util/ArrayList;)V
 
-    goto/16 :goto_1d1
+    goto/16 :goto_1d3
 
     .line 623
-    :cond_12a
+    :cond_12c
     iget-object v0, p0, Lorg/telegram/ui/PollCreateActivity$ListAdapter;->this$0:Lorg/telegram/ui/PollCreateActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/PollCreateActivity;->access$2400(Lorg/telegram/ui/PollCreateActivity;)I
 
     move-result v0
 
-    if-ne p2, v0, :cond_152
+    if-ne p2, v0, :cond_154
 
-    const p2, 0x7f0e0da3
+    const p2, 0x7f0e0e33
 
     const-string v0, "PollMultiple"
 
@@ -1128,29 +1130,29 @@
 
     move-result v5
 
-    if-eq v5, v2, :cond_14a
+    if-eq v5, v2, :cond_14c
 
     const/4 v4, 0x1
 
-    :cond_14a
+    :cond_14c
     invoke-virtual {p1, p2, v0, v4}, Lorg/telegram/ui/Cells/TextCheckCell;->setTextAndCheck(Ljava/lang/String;ZZ)V
 
     .line 625
     invoke-virtual {p1, v1, v3}, Lorg/telegram/ui/Cells/TextCheckCell;->setEnabled(ZLjava/util/ArrayList;)V
 
-    goto/16 :goto_1d1
+    goto/16 :goto_1d3
 
     .line 626
-    :cond_152
+    :cond_154
     iget-object v0, p0, Lorg/telegram/ui/PollCreateActivity$ListAdapter;->this$0:Lorg/telegram/ui/PollCreateActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/PollCreateActivity;->access$2500(Lorg/telegram/ui/PollCreateActivity;)I
 
     move-result v0
 
-    if-ne p2, v0, :cond_1d1
+    if-ne p2, v0, :cond_1d3
 
-    const p2, 0x7f0e0da5
+    const p2, 0x7f0e0e35
 
     const-string v0, "PollQuiz"
 
@@ -1174,20 +1176,20 @@
 
     move-result p2
 
-    if-nez p2, :cond_175
+    if-nez p2, :cond_177
 
-    goto :goto_176
+    goto :goto_178
 
-    :cond_175
+    :cond_177
     const/4 v1, 0x0
 
-    :goto_176
+    :goto_178
     invoke-virtual {p1, v1, v3}, Lorg/telegram/ui/Cells/TextCheckCell;->setEnabled(ZLjava/util/ArrayList;)V
 
-    goto :goto_1d1
+    goto :goto_1d3
 
     .line 573
-    :cond_17a
+    :cond_17c
     iget-object p1, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     check-cast p1, Lorg/telegram/ui/Cells/HeaderCell;
@@ -1199,9 +1201,9 @@
 
     move-result v0
 
-    if-ne p2, v0, :cond_193
+    if-ne p2, v0, :cond_195
 
-    const p2, 0x7f0e0da4
+    const p2, 0x7f0e0e34
 
     const-string v0, "PollQuestion"
 
@@ -1212,17 +1214,17 @@
 
     invoke-virtual {p1, p2}, Lorg/telegram/ui/Cells/HeaderCell;->setText(Ljava/lang/CharSequence;)V
 
-    goto :goto_1d1
+    goto :goto_1d3
 
     .line 576
-    :cond_193
+    :cond_195
     iget-object v0, p0, Lorg/telegram/ui/PollCreateActivity$ListAdapter;->this$0:Lorg/telegram/ui/PollCreateActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/PollCreateActivity;->access$1700(Lorg/telegram/ui/PollCreateActivity;)I
 
     move-result v0
 
-    if-ne p2, v0, :cond_1bd
+    if-ne p2, v0, :cond_1bf
 
     .line 577
     iget-object p2, p0, Lorg/telegram/ui/PollCreateActivity$ListAdapter;->this$0:Lorg/telegram/ui/PollCreateActivity;
@@ -1231,9 +1233,9 @@
 
     move-result p2
 
-    if-ne p2, v1, :cond_1b0
+    if-ne p2, v1, :cond_1b2
 
-    const p2, 0x7f0e0e74
+    const p2, 0x7f0e0f1f
 
     const-string v0, "QuizAnswers"
 
@@ -1244,10 +1246,10 @@
 
     invoke-virtual {p1, p2}, Lorg/telegram/ui/Cells/HeaderCell;->setText(Ljava/lang/CharSequence;)V
 
-    goto :goto_1d1
+    goto :goto_1d3
 
-    :cond_1b0
-    const p2, 0x7f0e0173
+    :cond_1b2
+    const p2, 0x7f0e01a0
 
     const-string v0, "AnswerOptions"
 
@@ -1258,19 +1260,19 @@
 
     invoke-virtual {p1, p2}, Lorg/telegram/ui/Cells/HeaderCell;->setText(Ljava/lang/CharSequence;)V
 
-    goto :goto_1d1
+    goto :goto_1d3
 
     .line 582
-    :cond_1bd
+    :cond_1bf
     iget-object v0, p0, Lorg/telegram/ui/PollCreateActivity$ListAdapter;->this$0:Lorg/telegram/ui/PollCreateActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/PollCreateActivity;->access$1900(Lorg/telegram/ui/PollCreateActivity;)I
 
     move-result v0
 
-    if-ne p2, v0, :cond_1d1
+    if-ne p2, v0, :cond_1d3
 
-    const p2, 0x7f0e1019
+    const p2, 0x7f0e10d7
 
     const-string v0, "Settings"
 
@@ -1281,8 +1283,8 @@
 
     invoke-virtual {p1, p2}, Lorg/telegram/ui/Cells/HeaderCell;->setText(Ljava/lang/CharSequence;)V
 
-    :cond_1d1
-    :goto_1d1
+    :cond_1d3
+    :goto_1d3
     return-void
 .end method
 
@@ -1579,7 +1581,7 @@
     move-result-object v2
 
     :cond_25
-    const v4, 0x7f0e0e6e
+    const v4, 0x7f0e0f19
 
     const-string v5, "QuestionHint"
 
@@ -1641,7 +1643,7 @@
 
     aget-object v2, v5, v2
 
-    const v5, 0x7f0e0bd3
+    const v5, 0x7f0e0c5d
 
     const-string v6, "OptionHint"
 
@@ -1720,7 +1722,7 @@
     move-result-object v2
 
     :cond_a6
-    const v4, 0x7f0e0108
+    const v4, 0x7f0e0130
 
     const-string v5, "AddAnExplanation"
 

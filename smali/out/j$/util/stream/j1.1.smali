@@ -1,96 +1,91 @@
-.class Lj$/util/stream/j1;
-.super Lj$/util/stream/k1;
+.class abstract Lj$/util/stream/j1;
+.super Ljava/lang/Object;
 
 # interfaces
-.implements Lj$/util/stream/k3;
+.implements Lj$/util/stream/m3;
 
 
 # instance fields
-.field final synthetic c:Lj$/util/stream/l1;
+.field a:Z
 
-.field final synthetic d:Lj$/wrappers/E;
+.field b:Z
 
 
 # direct methods
-.method constructor <init>(Lj$/util/stream/l1;Lj$/wrappers/E;)V
-    .registers 3
+.method constructor <init>(Lj$/util/stream/k1;)V
+    .registers 2
 
-    iput-object p1, p0, Lj$/util/stream/j1;->c:Lj$/util/stream/l1;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lj$/util/stream/j1;->d:Lj$/wrappers/E;
+    invoke-static {p1}, Lj$/util/stream/k1;->b(Lj$/util/stream/k1;)Z
 
-    invoke-direct {p0, p1}, Lj$/util/stream/k1;-><init>(Lj$/util/stream/l1;)V
+    move-result p1
+
+    xor-int/lit8 p1, p1, 0x1
+
+    iput-boolean p1, p0, Lj$/util/stream/j1;->b:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public accept(D)V
-    .registers 4
-
-    iget-boolean v0, p0, Lj$/util/stream/k1;->a:Z
-
-    if-nez v0, :cond_1d
-
-    iget-object v0, p0, Lj$/util/stream/j1;->d:Lj$/wrappers/E;
-
-    invoke-virtual {v0, p1, p2}, Lj$/wrappers/E;->b(D)Z
-
-    move-result p1
-
-    iget-object p2, p0, Lj$/util/stream/j1;->c:Lj$/util/stream/l1;
-
-    invoke-static {p2}, Lj$/util/stream/l1;->a(Lj$/util/stream/l1;)Z
-
-    move-result p2
-
-    if-ne p1, p2, :cond_1d
-
-    const/4 p1, 0x1
-
-    iput-boolean p1, p0, Lj$/util/stream/k1;->a:Z
-
-    iget-object p1, p0, Lj$/util/stream/j1;->c:Lj$/util/stream/l1;
-
-    invoke-static {p1}, Lj$/util/stream/l1;->b(Lj$/util/stream/l1;)Z
-
-    move-result p1
-
-    iput-boolean p1, p0, Lj$/util/stream/k1;->b:Z
-
-    :cond_1d
-    return-void
-.end method
-
-.method public bridge synthetic accept(Ljava/lang/Object;)V
-    .registers 2
-
-    .line 1
-    check-cast p1, Ljava/lang/Double;
-
-    invoke-virtual {p0, p1}, Lj$/util/stream/j1;->b(Ljava/lang/Double;)V
-
-    return-void
-.end method
-
-.method public synthetic b(Ljava/lang/Double;)V
-    .registers 2
-
-    invoke-static {p0, p1}, Lj$/util/stream/p1;->a(Lj$/util/stream/k3;Ljava/lang/Double;)V
-
-    return-void
-.end method
-
-.method public j(Lj$/util/function/f;)Lj$/util/function/f;
+.method public synthetic accept(D)V
     .registers 3
 
-    .line 1
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-static {p0}, Lj$/util/stream/o1;->f(Lj$/util/stream/m3;)V
 
-    new-instance v0, Lj$/util/function/e;
+    const/4 p1, 0x0
 
-    invoke-direct {v0, p0, p1}, Lj$/util/function/e;-><init>(Lj$/util/function/f;Lj$/util/function/f;)V
+    throw p1
+.end method
 
-    return-object v0
+.method public synthetic accept(I)V
+    .registers 2
+
+    invoke-static {p0}, Lj$/util/stream/o1;->d(Lj$/util/stream/m3;)V
+
+    const/4 p1, 0x0
+
+    throw p1
+.end method
+
+.method public synthetic accept(J)V
+    .registers 3
+
+    invoke-static {p0}, Lj$/util/stream/o1;->e(Lj$/util/stream/m3;)V
+
+    const/4 p1, 0x0
+
+    throw p1
+.end method
+
+.method public synthetic andThen(Lj$/util/function/Consumer;)Lj$/util/function/Consumer;
+    .registers 2
+
+    invoke-static {p0, p1}, Lj$/util/function/Consumer$-CC;->$default$andThen(Lj$/util/function/Consumer;Lj$/util/function/Consumer;)Lj$/util/function/Consumer;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public synthetic m()V
+    .registers 1
+
+    return-void
+.end method
+
+.method public synthetic n(J)V
+    .registers 3
+
+    return-void
+.end method
+
+.method public o()Z
+    .registers 2
+
+    iget-boolean v0, p0, Lj$/util/stream/j1;->a:Z
+
+    return v0
 .end method

@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lorg/telegram/ui/Components/SimpleFloatPropertyCompat$Setter;
+.implements Lorg/telegram/ui/Components/SimpleFloatPropertyCompat$Getter;
 
 
 # static fields
@@ -32,12 +32,14 @@
 
 
 # virtual methods
-.method public final set(Ljava/lang/Object;F)V
-    .registers 3
+.method public final get(Ljava/lang/Object;)F
+    .registers 2
 
     check-cast p1, Lorg/telegram/ui/Components/BotWebViewMenuContainer;
 
-    invoke-static {p1, p2}, Lorg/telegram/ui/Components/BotWebViewMenuContainer;->$r8$lambda$OJ_ayh8Ckrni5nXSjIjNQICktU8(Lorg/telegram/ui/Components/BotWebViewMenuContainer;F)V
+    invoke-static {p1}, Lorg/telegram/ui/Components/BotWebViewMenuContainer;->$r8$lambda$AvzuPBoviy0aKUVCvG219Wo6Mo8(Lorg/telegram/ui/Components/BotWebViewMenuContainer;)F
 
-    return-void
+    move-result p1
+
+    return p1
 .end method

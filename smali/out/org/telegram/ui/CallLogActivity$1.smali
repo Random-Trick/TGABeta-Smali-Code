@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/CallLogActivity;)V
     .registers 2
 
-    .line 442
+    .line 429
     iput-object p1, p0, Lorg/telegram/ui/CallLogActivity$1;->this$0:Lorg/telegram/ui/CallLogActivity;
 
     invoke-direct {p0}, Lorg/telegram/ui/ActionBar/ActionBar$ActionBarMenuOnItemClick;-><init>()V
@@ -41,10 +41,10 @@
 
     if-ne p1, v1, :cond_1c
 
-    .line 446
+    .line 433
     iget-object p1, p0, Lorg/telegram/ui/CallLogActivity$1;->this$0:Lorg/telegram/ui/CallLogActivity;
 
-    invoke-static {p1}, Lorg/telegram/ui/CallLogActivity;->access$500(Lorg/telegram/ui/CallLogActivity;)Lorg/telegram/ui/ActionBar/ActionBar;
+    invoke-static {p1}, Lorg/telegram/ui/CallLogActivity;->access$400(Lorg/telegram/ui/CallLogActivity;)Lorg/telegram/ui/ActionBar/ActionBar;
 
     move-result-object p1
 
@@ -54,14 +54,14 @@
 
     if-eqz p1, :cond_16
 
-    .line 447
+    .line 434
     iget-object p1, p0, Lorg/telegram/ui/CallLogActivity$1;->this$0:Lorg/telegram/ui/CallLogActivity;
 
-    invoke-static {p1, v0}, Lorg/telegram/ui/CallLogActivity;->access$600(Lorg/telegram/ui/CallLogActivity;Z)V
+    invoke-static {p1, v0}, Lorg/telegram/ui/CallLogActivity;->access$500(Lorg/telegram/ui/CallLogActivity;Z)V
 
     goto :goto_2d
 
-    .line 449
+    .line 436
     :cond_16
     iget-object p1, p0, Lorg/telegram/ui/CallLogActivity$1;->this$0:Lorg/telegram/ui/CallLogActivity;
 
@@ -72,10 +72,10 @@
     :cond_1c
     if-ne p1, v0, :cond_24
 
-    .line 452
+    .line 439
     iget-object p1, p0, Lorg/telegram/ui/CallLogActivity$1;->this$0:Lorg/telegram/ui/CallLogActivity;
 
-    invoke-static {p1, v0}, Lorg/telegram/ui/CallLogActivity;->access$700(Lorg/telegram/ui/CallLogActivity;Z)V
+    invoke-static {p1, v0}, Lorg/telegram/ui/CallLogActivity;->access$600(Lorg/telegram/ui/CallLogActivity;Z)V
 
     goto :goto_2d
 
@@ -84,12 +84,12 @@
 
     if-ne p1, v0, :cond_2d
 
-    .line 454
+    .line 441
     iget-object p1, p0, Lorg/telegram/ui/CallLogActivity$1;->this$0:Lorg/telegram/ui/CallLogActivity;
 
     const/4 v0, 0x0
 
-    invoke-static {p1, v0}, Lorg/telegram/ui/CallLogActivity;->access$700(Lorg/telegram/ui/CallLogActivity;Z)V
+    invoke-static {p1, v0}, Lorg/telegram/ui/CallLogActivity;->access$600(Lorg/telegram/ui/CallLogActivity;Z)V
 
     :cond_2d
     :goto_2d

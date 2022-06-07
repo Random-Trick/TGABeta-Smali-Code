@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/LaunchActivity;Landroid/content/Context;)V
     .registers 3
 
-    .line 487
+    .line 499
     iput-object p1, p0, Lorg/telegram/ui/LaunchActivity$6;->this$0:Lorg/telegram/ui/LaunchActivity;
 
     invoke-direct {p0, p2}, Lorg/telegram/ui/Components/RecyclerListView;-><init>(Landroid/content/Context;)V
@@ -35,7 +35,7 @@
 .method public drawChild(Landroid/graphics/Canvas;Landroid/view/View;J)Z
     .registers 10
 
-    .line 491
+    .line 503
     iget-object v0, p0, Lorg/telegram/ui/LaunchActivity$6;->this$0:Lorg/telegram/ui/LaunchActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/LaunchActivity;->access$800(Lorg/telegram/ui/LaunchActivity;)Lorg/telegram/ui/Components/SideMenultItemAnimator;
@@ -68,14 +68,14 @@
 
     if-eqz v0, :cond_3b
 
-    .line 492
+    .line 504
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
     move-result v0
 
     const/4 v1, 0x0
 
-    .line 493
+    .line 505
     iget-object v2, p0, Lorg/telegram/ui/LaunchActivity$6;->this$0:Lorg/telegram/ui/LaunchActivity;
 
     invoke-static {v2}, Lorg/telegram/ui/LaunchActivity;->access$800(Lorg/telegram/ui/LaunchActivity;)Lorg/telegram/ui/Components/SideMenultItemAnimator;
@@ -101,7 +101,7 @@
     :cond_3b
     const/4 v0, -0x1
 
-    .line 495
+    .line 507
     :goto_3c
     invoke-super {p0, p1, p2, p3, p4}, Landroidx/recyclerview/widget/RecyclerView;->drawChild(Landroid/graphics/Canvas;Landroid/view/View;J)Z
 
@@ -109,13 +109,13 @@
 
     if-ltz v0, :cond_4b
 
-    .line 497
+    .line 509
     invoke-virtual {p1, v0}, Landroid/graphics/Canvas;->restoreToCount(I)V
 
-    .line 498
+    .line 510
     invoke-virtual {p0}, Landroid/view/ViewGroup;->invalidate()V
 
-    .line 499
+    .line 511
     invoke-virtual {p0}, Lorg/telegram/ui/Components/RecyclerListView;->invalidateViews()V
 
     :cond_4b

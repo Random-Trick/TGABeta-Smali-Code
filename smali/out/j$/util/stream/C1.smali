@@ -1,86 +1,95 @@
-.class abstract synthetic Lj$/util/stream/C1;
+.class abstract Lj$/util/stream/C1;
 .super Ljava/lang/Object;
 
+# interfaces
+.implements Lj$/util/stream/A1;
 
-# static fields
-.field static final synthetic a:[I
+
+# instance fields
+.field protected final a:Lj$/util/stream/A1;
+
+.field protected final b:Lj$/util/stream/A1;
+
+.field private final c:J
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method constructor <init>(Lj$/util/stream/A1;Lj$/util/stream/A1;)V
+    .registers 5
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lj$/util/stream/C1;->a:Lj$/util/stream/A1;
+
+    iput-object p2, p0, Lj$/util/stream/C1;->b:Lj$/util/stream/A1;
+
+    invoke-interface {p1}, Lj$/util/stream/A1;->count()J
+
+    move-result-wide v0
+
+    invoke-interface {p2}, Lj$/util/stream/A1;->count()J
+
+    move-result-wide p1
+
+    add-long/2addr v0, p1
+
+    iput-wide v0, p0, Lj$/util/stream/C1;->c:J
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public b(I)Lj$/util/stream/A1;
     .registers 3
 
-    invoke-static {}, Lj$/util/stream/f4;->values()[Lj$/util/stream/f4;
+    if-nez p1, :cond_5
 
-    move-result-object v0
+    iget-object p1, p0, Lj$/util/stream/C1;->a:Lj$/util/stream/A1;
 
-    array-length v0, v0
+    return-object p1
 
-    new-array v0, v0, [I
+    :cond_5
+    const/4 v0, 0x1
 
-    sput-object v0, Lj$/util/stream/C1;->a:[I
+    if-ne p1, v0, :cond_b
 
-    :try_start_9
-    sget-object v1, Lj$/util/stream/f4;->REFERENCE:Lj$/util/stream/f4;
+    iget-object p1, p0, Lj$/util/stream/C1;->b:Lj$/util/stream/A1;
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+    return-object p1
 
-    move-result v1
+    :cond_b
+    new-instance p1, Ljava/lang/IndexOutOfBoundsException;
 
-    const/4 v2, 0x1
+    invoke-direct {p1}, Ljava/lang/IndexOutOfBoundsException;-><init>()V
 
-    aput v2, v0, v1
-    :try_end_12
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_9 .. :try_end_12} :catch_12
+    throw p1
+.end method
 
-    :catch_12
-    :try_start_12
-    sget-object v0, Lj$/util/stream/C1;->a:[I
+.method public bridge synthetic b(I)Lj$/util/stream/z1;
+    .registers 2
 
-    sget-object v1, Lj$/util/stream/f4;->INT_VALUE:Lj$/util/stream/f4;
+    invoke-virtual {p0, p1}, Lj$/util/stream/C1;->b(I)Lj$/util/stream/A1;
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+    move-result-object p1
 
-    move-result v1
+    check-cast p1, Lj$/util/stream/z1;
 
-    const/4 v2, 0x2
+    return-object p1
+.end method
 
-    aput v2, v0, v1
-    :try_end_1d
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_12 .. :try_end_1d} :catch_1d
+.method public count()J
+    .registers 3
 
-    :catch_1d
-    :try_start_1d
-    sget-object v0, Lj$/util/stream/C1;->a:[I
+    iget-wide v0, p0, Lj$/util/stream/C1;->c:J
 
-    sget-object v1, Lj$/util/stream/f4;->LONG_VALUE:Lj$/util/stream/f4;
+    return-wide v0
+.end method
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+.method public p()I
+    .registers 2
 
-    move-result v1
+    const/4 v0, 0x2
 
-    const/4 v2, 0x3
-
-    aput v2, v0, v1
-    :try_end_28
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1d .. :try_end_28} :catch_28
-
-    :catch_28
-    :try_start_28
-    sget-object v0, Lj$/util/stream/C1;->a:[I
-
-    sget-object v1, Lj$/util/stream/f4;->DOUBLE_VALUE:Lj$/util/stream/f4;
-
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x4
-
-    aput v2, v0, v1
-    :try_end_33
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_28 .. :try_end_33} :catch_33
-
-    :catch_33
-    return-void
+    return v0
 .end method

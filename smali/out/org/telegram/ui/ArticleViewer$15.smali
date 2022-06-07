@@ -18,7 +18,7 @@
 .method constructor <init>(Lorg/telegram/ui/ArticleViewer;)V
     .registers 2
 
-    .line 3477
+    .line 3478
     invoke-direct {p0}, Lorg/telegram/ui/Components/CloseProgressDrawable2;-><init>()V
 
     return-void
@@ -31,7 +31,7 @@
 
     const-string v0, "windowBackgroundWhiteBlackText"
 
-    .line 3480
+    .line 3481
     invoke-static {v0}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
 
     move-result v0

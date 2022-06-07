@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/FilterTabsView;)V
     .registers 2
 
-    .line 1057
+    .line 1155
     iput-object p1, p0, Lorg/telegram/ui/Components/FilterTabsView$7;->this$0:Lorg/telegram/ui/Components/FilterTabsView;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -35,16 +35,16 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .registers 3
 
-    .line 1060
+    .line 1158
     iget-object p1, p0, Lorg/telegram/ui/Components/FilterTabsView$7;->this$0:Lorg/telegram/ui/Components/FilterTabsView;
 
-    invoke-static {p1}, Lorg/telegram/ui/Components/FilterTabsView;->access$2700(Lorg/telegram/ui/Components/FilterTabsView;)Ljava/lang/String;
+    invoke-static {p1}, Lorg/telegram/ui/Components/FilterTabsView;->access$3000(Lorg/telegram/ui/Components/FilterTabsView;)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {p1, v0}, Lorg/telegram/ui/Components/FilterTabsView;->access$2602(Lorg/telegram/ui/Components/FilterTabsView;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, v0}, Lorg/telegram/ui/Components/FilterTabsView;->access$2902(Lorg/telegram/ui/Components/FilterTabsView;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 1061
+    .line 1159
     iget-object p1, p0, Lorg/telegram/ui/Components/FilterTabsView$7;->this$0:Lorg/telegram/ui/Components/FilterTabsView;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/FilterTabsView;->access$1800(Lorg/telegram/ui/Components/FilterTabsView;)Ljava/lang/String;
@@ -53,7 +53,7 @@
 
     invoke-static {p1, v0}, Lorg/telegram/ui/Components/FilterTabsView;->access$1902(Lorg/telegram/ui/Components/FilterTabsView;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 1062
+    .line 1160
     iget-object p1, p0, Lorg/telegram/ui/Components/FilterTabsView$7;->this$0:Lorg/telegram/ui/Components/FilterTabsView;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/FilterTabsView;->access$900(Lorg/telegram/ui/Components/FilterTabsView;)Ljava/lang/String;
@@ -62,7 +62,7 @@
 
     invoke-static {p1, v0}, Lorg/telegram/ui/Components/FilterTabsView;->access$802(Lorg/telegram/ui/Components/FilterTabsView;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 1063
+    .line 1161
     iget-object p1, p0, Lorg/telegram/ui/Components/FilterTabsView$7;->this$0:Lorg/telegram/ui/Components/FilterTabsView;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/FilterTabsView;->access$1100(Lorg/telegram/ui/Components/FilterTabsView;)Ljava/lang/String;
@@ -71,24 +71,24 @@
 
     invoke-static {p1, v0}, Lorg/telegram/ui/Components/FilterTabsView;->access$1002(Lorg/telegram/ui/Components/FilterTabsView;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 1064
+    .line 1162
     iget-object p1, p0, Lorg/telegram/ui/Components/FilterTabsView$7;->this$0:Lorg/telegram/ui/Components/FilterTabsView;
 
     const/4 v0, 0x0
 
-    invoke-static {p1, v0}, Lorg/telegram/ui/Components/FilterTabsView;->access$2702(Lorg/telegram/ui/Components/FilterTabsView;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, v0}, Lorg/telegram/ui/Components/FilterTabsView;->access$3002(Lorg/telegram/ui/Components/FilterTabsView;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 1065
+    .line 1163
     iget-object p1, p0, Lorg/telegram/ui/Components/FilterTabsView$7;->this$0:Lorg/telegram/ui/Components/FilterTabsView;
 
     invoke-static {p1, v0}, Lorg/telegram/ui/Components/FilterTabsView;->access$902(Lorg/telegram/ui/Components/FilterTabsView;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 1066
+    .line 1164
     iget-object p1, p0, Lorg/telegram/ui/Components/FilterTabsView$7;->this$0:Lorg/telegram/ui/Components/FilterTabsView;
 
     invoke-static {p1, v0}, Lorg/telegram/ui/Components/FilterTabsView;->access$1102(Lorg/telegram/ui/Components/FilterTabsView;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 1067
+    .line 1165
     iget-object p1, p0, Lorg/telegram/ui/Components/FilterTabsView$7;->this$0:Lorg/telegram/ui/Components/FilterTabsView;
 
     invoke-static {p1, v0}, Lorg/telegram/ui/Components/FilterTabsView;->access$1802(Lorg/telegram/ui/Components/FilterTabsView;Ljava/lang/String;)Ljava/lang/String;

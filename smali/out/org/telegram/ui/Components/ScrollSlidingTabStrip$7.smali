@@ -22,7 +22,7 @@
 .method static constructor <clinit>()V
     .registers 3
 
-    .line 188
+    .line 189
     invoke-static {}, Lorg/telegram/ui/Components/ScrollSlidingTabStrip$Type;->values()[Lorg/telegram/ui/Components/ScrollSlidingTabStrip$Type;
 
     move-result-object v0

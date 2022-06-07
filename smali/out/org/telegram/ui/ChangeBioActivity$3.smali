@@ -1,9 +1,6 @@
 .class Lorg/telegram/ui/ChangeBioActivity$3;
-.super Ljava/lang/Object;
+.super Lorg/telegram/ui/Components/CodepointsLengthInputFilter;
 .source "ChangeBioActivity.java"
-
-# interfaces
-.implements Landroid/text/TextWatcher;
 
 
 # annotations
@@ -22,56 +19,115 @@
 
 
 # direct methods
-.method constructor <init>(Lorg/telegram/ui/ChangeBioActivity;)V
-    .registers 2
+.method constructor <init>(Lorg/telegram/ui/ChangeBioActivity;I)V
+    .registers 3
 
-    .line 132
+    .line 110
     iput-object p1, p0, Lorg/telegram/ui/ChangeBioActivity$3;->this$0:Lorg/telegram/ui/ChangeBioActivity;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Lorg/telegram/ui/Components/CodepointsLengthInputFilter;-><init>(I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public afterTextChanged(Landroid/text/Editable;)V
-    .registers 5
+.method public filter(Ljava/lang/CharSequence;IILandroid/text/Spanned;II)Ljava/lang/CharSequence;
+    .registers 9
 
-    .line 145
-    iget-object v0, p0, Lorg/telegram/ui/ChangeBioActivity$3;->this$0:Lorg/telegram/ui/ChangeBioActivity;
+    if-eqz p1, :cond_22
 
-    invoke-static {v0}, Lorg/telegram/ui/ChangeBioActivity;->access$200(Lorg/telegram/ui/ChangeBioActivity;)Lorg/telegram/ui/Components/NumberTextView;
+    .line 113
+    invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
 
-    move-result-object v0
+    move-result v0
 
-    invoke-interface {p1}, Landroid/text/Editable;->length()I
+    if-lez v0, :cond_22
+
+    const/16 v0, 0xa
+
+    invoke-static {p1, v0}, Landroid/text/TextUtils;->indexOf(Ljava/lang/CharSequence;C)I
+
+    move-result v0
+
+    invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
 
     move-result v1
 
-    const/4 v2, 0x0
+    add-int/lit8 v1, v1, -0x1
 
-    invoke-static {p1, v2, v1}, Ljava/lang/Character;->codePointCount(Ljava/lang/CharSequence;II)I
+    if-ne v0, v1, :cond_22
+
+    .line 114
+    iget-object p1, p0, Lorg/telegram/ui/ChangeBioActivity$3;->this$0:Lorg/telegram/ui/ChangeBioActivity;
+
+    invoke-static {p1}, Lorg/telegram/ui/ChangeBioActivity;->access$100(Lorg/telegram/ui/ChangeBioActivity;)Landroid/view/View;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroid/view/View;->performClick()Z
+
+    const-string p1, ""
+
+    return-object p1
+
+    .line 117
+    :cond_22
+    invoke-super/range {p0 .. p6}, Lorg/telegram/ui/Components/CodepointsLengthInputFilter;->filter(Ljava/lang/CharSequence;IILandroid/text/Spanned;II)Ljava/lang/CharSequence;
+
+    move-result-object p2
+
+    if-eqz p2, :cond_55
+
+    if-eqz p1, :cond_55
+
+    .line 118
+    invoke-interface {p2}, Ljava/lang/CharSequence;->length()I
+
+    move-result p3
+
+    invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
 
     move-result p1
 
-    rsub-int/lit8 p1, p1, 0x46
+    if-eq p3, p1, :cond_55
 
-    const/4 v1, 0x1
+    .line 119
+    iget-object p1, p0, Lorg/telegram/ui/ChangeBioActivity$3;->this$0:Lorg/telegram/ui/ChangeBioActivity;
 
-    invoke-virtual {v0, p1, v1}, Lorg/telegram/ui/Components/NumberTextView;->setNumber(IZ)V
+    invoke-virtual {p1}, Lorg/telegram/ui/ActionBar/BaseFragment;->getParentActivity()Landroid/app/Activity;
 
-    return-void
-.end method
+    move-result-object p1
 
-.method public beforeTextChanged(Ljava/lang/CharSequence;III)V
-    .registers 5
+    const-string p3, "vibrator"
 
-    return-void
-.end method
+    invoke-virtual {p1, p3}, Landroid/app/Activity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
-.method public onTextChanged(Ljava/lang/CharSequence;III)V
-    .registers 5
+    move-result-object p1
 
-    return-void
+    check-cast p1, Landroid/os/Vibrator;
+
+    if-eqz p1, :cond_49
+
+    const-wide/16 p3, 0xc8
+
+    .line 121
+    invoke-virtual {p1, p3, p4}, Landroid/os/Vibrator;->vibrate(J)V
+
+    .line 123
+    :cond_49
+    iget-object p1, p0, Lorg/telegram/ui/ChangeBioActivity$3;->this$0:Lorg/telegram/ui/ChangeBioActivity;
+
+    invoke-static {p1}, Lorg/telegram/ui/ChangeBioActivity;->access$200(Lorg/telegram/ui/ChangeBioActivity;)Lorg/telegram/ui/Components/NumberTextView;
+
+    move-result-object p1
+
+    const/high16 p3, 0x40000000    # 2.0f
+
+    const/4 p4, 0x0
+
+    invoke-static {p1, p3, p4}, Lorg/telegram/messenger/AndroidUtilities;->shakeView(Landroid/view/View;FI)V
+
+    :cond_55
+    return-object p2
 .end method

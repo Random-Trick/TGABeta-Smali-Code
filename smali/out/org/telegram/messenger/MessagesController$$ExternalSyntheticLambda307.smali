@@ -10,14 +10,16 @@
 
 .field public final synthetic f$1:J
 
-.field public final synthetic f$2:Z
+.field public final synthetic f$2:Lorg/telegram/ui/ActionBar/BaseFragment;
 
-.field public final synthetic f$3:Ljava/util/ArrayList;
+.field public final synthetic f$3:Lorg/telegram/tgnet/TLRPC$TL_messages_editChatDefaultBannedRights;
+
+.field public final synthetic f$4:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(Lorg/telegram/messenger/MessagesController;JZLjava/util/ArrayList;)V
-    .registers 6
+.method public synthetic constructor <init>(Lorg/telegram/messenger/MessagesController;JLorg/telegram/ui/ActionBar/BaseFragment;Lorg/telegram/tgnet/TLRPC$TL_messages_editChatDefaultBannedRights;Z)V
+    .registers 7
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,9 +27,11 @@
 
     iput-wide p2, p0, Lorg/telegram/messenger/MessagesController$$ExternalSyntheticLambda307;->f$1:J
 
-    iput-boolean p4, p0, Lorg/telegram/messenger/MessagesController$$ExternalSyntheticLambda307;->f$2:Z
+    iput-object p4, p0, Lorg/telegram/messenger/MessagesController$$ExternalSyntheticLambda307;->f$2:Lorg/telegram/ui/ActionBar/BaseFragment;
 
-    iput-object p5, p0, Lorg/telegram/messenger/MessagesController$$ExternalSyntheticLambda307;->f$3:Ljava/util/ArrayList;
+    iput-object p5, p0, Lorg/telegram/messenger/MessagesController$$ExternalSyntheticLambda307;->f$3:Lorg/telegram/tgnet/TLRPC$TL_messages_editChatDefaultBannedRights;
+
+    iput-boolean p6, p0, Lorg/telegram/messenger/MessagesController$$ExternalSyntheticLambda307;->f$4:Z
 
     return-void
 .end method
@@ -35,21 +39,23 @@
 
 # virtual methods
 .method public final run(Lorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/TLRPC$TL_error;)V
-    .registers 10
+    .registers 11
 
     iget-object v0, p0, Lorg/telegram/messenger/MessagesController$$ExternalSyntheticLambda307;->f$0:Lorg/telegram/messenger/MessagesController;
 
     iget-wide v1, p0, Lorg/telegram/messenger/MessagesController$$ExternalSyntheticLambda307;->f$1:J
 
-    iget-boolean v3, p0, Lorg/telegram/messenger/MessagesController$$ExternalSyntheticLambda307;->f$2:Z
+    iget-object v3, p0, Lorg/telegram/messenger/MessagesController$$ExternalSyntheticLambda307;->f$2:Lorg/telegram/ui/ActionBar/BaseFragment;
 
-    iget-object v4, p0, Lorg/telegram/messenger/MessagesController$$ExternalSyntheticLambda307;->f$3:Ljava/util/ArrayList;
+    iget-object v4, p0, Lorg/telegram/messenger/MessagesController$$ExternalSyntheticLambda307;->f$3:Lorg/telegram/tgnet/TLRPC$TL_messages_editChatDefaultBannedRights;
 
-    move-object v5, p1
+    iget-boolean v5, p0, Lorg/telegram/messenger/MessagesController$$ExternalSyntheticLambda307;->f$4:Z
 
-    move-object v6, p2
+    move-object v6, p1
 
-    invoke-static/range {v0 .. v6}, Lorg/telegram/messenger/MessagesController;->$r8$lambda$e44yCXF-9rvT6DUUX9015-hEIVw(Lorg/telegram/messenger/MessagesController;JZLjava/util/ArrayList;Lorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/TLRPC$TL_error;)V
+    move-object v7, p2
+
+    invoke-static/range {v0 .. v7}, Lorg/telegram/messenger/MessagesController;->$r8$lambda$tbQIabm_DzkdsqGAU352DtcMfQU(Lorg/telegram/messenger/MessagesController;JLorg/telegram/ui/ActionBar/BaseFragment;Lorg/telegram/tgnet/TLRPC$TL_messages_editChatDefaultBannedRights;ZLorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/TLRPC$TL_error;)V
 
     return-void
 .end method

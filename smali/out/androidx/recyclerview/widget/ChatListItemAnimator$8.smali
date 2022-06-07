@@ -28,7 +28,7 @@
 .method constructor <init>(Landroidx/recyclerview/widget/ChatListItemAnimator;Landroidx/recyclerview/widget/DefaultItemAnimator$ChangeInfo;Landroid/view/ViewPropertyAnimator;Landroid/view/View;)V
     .registers 5
 
-    .line 979
+    .line 989
     iput-object p1, p0, Landroidx/recyclerview/widget/ChatListItemAnimator$8;->this$0:Landroidx/recyclerview/widget/ChatListItemAnimator;
 
     iput-object p2, p0, Landroidx/recyclerview/widget/ChatListItemAnimator$8;->val$changeInfo:Landroidx/recyclerview/widget/DefaultItemAnimator$ChangeInfo;
@@ -47,31 +47,31 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .registers 4
 
-    .line 987
+    .line 997
     iget-object p1, p0, Landroidx/recyclerview/widget/ChatListItemAnimator$8;->val$newViewAnimation:Landroid/view/ViewPropertyAnimator;
 
     const/4 v0, 0x0
 
     invoke-virtual {p1, v0}, Landroid/view/ViewPropertyAnimator;->setListener(Landroid/animation/Animator$AnimatorListener;)Landroid/view/ViewPropertyAnimator;
 
-    .line 988
+    .line 998
     iget-object p1, p0, Landroidx/recyclerview/widget/ChatListItemAnimator$8;->val$newView:Landroid/view/View;
 
     const/high16 v0, 0x3f800000    # 1.0f
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setAlpha(F)V
 
-    .line 989
+    .line 999
     iget-object p1, p0, Landroidx/recyclerview/widget/ChatListItemAnimator$8;->val$newView:Landroid/view/View;
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setScaleX(F)V
 
-    .line 990
+    .line 1000
     iget-object p1, p0, Landroidx/recyclerview/widget/ChatListItemAnimator$8;->val$newView:Landroid/view/View;
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setScaleX(F)V
 
-    .line 991
+    .line 1001
     iget-object p1, p0, Landroidx/recyclerview/widget/ChatListItemAnimator$8;->val$newView:Landroid/view/View;
 
     instance-of v0, p1, Lorg/telegram/ui/Cells/ChatMessageCell;
@@ -80,24 +80,24 @@
 
     if-eqz v0, :cond_24
 
-    .line 992
+    .line 1002
     check-cast p1, Lorg/telegram/ui/Cells/ChatMessageCell;
 
     invoke-virtual {p1, v1}, Lorg/telegram/ui/Cells/ChatMessageCell;->setAnimationOffsetX(F)V
 
     goto :goto_27
 
-    .line 994
+    .line 1004
     :cond_24
     invoke-virtual {p1, v1}, Landroid/view/View;->setTranslationX(F)V
 
-    .line 996
+    .line 1006
     :goto_27
     iget-object p1, p0, Landroidx/recyclerview/widget/ChatListItemAnimator$8;->val$newView:Landroid/view/View;
 
     invoke-virtual {p1, v1}, Landroid/view/View;->setTranslationY(F)V
 
-    .line 998
+    .line 1008
     iget-object p1, p0, Landroidx/recyclerview/widget/ChatListItemAnimator$8;->this$0:Landroidx/recyclerview/widget/ChatListItemAnimator;
 
     iget-object p1, p1, Landroidx/recyclerview/widget/DefaultItemAnimator;->mChangeAnimations:Ljava/util/ArrayList;
@@ -112,7 +112,7 @@
 
     if-eqz p1, :cond_49
 
-    .line 999
+    .line 1009
     iget-object p1, p0, Landroidx/recyclerview/widget/ChatListItemAnimator$8;->this$0:Landroidx/recyclerview/widget/ChatListItemAnimator;
 
     iget-object v0, p0, Landroidx/recyclerview/widget/ChatListItemAnimator$8;->val$changeInfo:Landroidx/recyclerview/widget/DefaultItemAnimator$ChangeInfo;
@@ -123,7 +123,7 @@
 
     invoke-virtual {p1, v0, v1}, Landroidx/recyclerview/widget/SimpleItemAnimator;->dispatchChangeFinished(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;Z)V
 
-    .line 1000
+    .line 1010
     iget-object p1, p0, Landroidx/recyclerview/widget/ChatListItemAnimator$8;->this$0:Landroidx/recyclerview/widget/ChatListItemAnimator;
 
     invoke-virtual {p1}, Landroidx/recyclerview/widget/DefaultItemAnimator;->dispatchFinishedWhenDone()V
@@ -135,7 +135,7 @@
 .method public onAnimationStart(Landroid/animation/Animator;)V
     .registers 4
 
-    .line 982
+    .line 992
     iget-object p1, p0, Landroidx/recyclerview/widget/ChatListItemAnimator$8;->this$0:Landroidx/recyclerview/widget/ChatListItemAnimator;
 
     iget-object v0, p0, Landroidx/recyclerview/widget/ChatListItemAnimator$8;->val$changeInfo:Landroidx/recyclerview/widget/DefaultItemAnimator$ChangeInfo;

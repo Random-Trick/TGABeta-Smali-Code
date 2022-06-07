@@ -174,7 +174,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f0e108d
+    const v3, 0x7f0e114c
 
     new-array v4, v6, [Ljava/lang/Object;
 
@@ -209,7 +209,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f0e0321
+    const v3, 0x7f0e035d
 
     new-array v4, v6, [Ljava/lang/Object;
 
@@ -437,7 +437,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0e0326
+    const v1, 0x7f0e0362
 
     const-string v2, "Calling"
 
@@ -457,7 +457,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0e0ff1
+    const v1, 0x7f0e10ae
 
     const-string v2, "SendingSms"
 

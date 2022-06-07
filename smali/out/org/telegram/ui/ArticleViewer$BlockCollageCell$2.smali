@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/ArticleViewer$BlockCollageCell;Lorg/telegram/ui/ArticleViewer;)V
     .registers 3
 
-    .line 8110
+    .line 8111
     iput-object p1, p0, Lorg/telegram/ui/ArticleViewer$BlockCollageCell$2;->this$1:Lorg/telegram/ui/ArticleViewer$BlockCollageCell;
 
     invoke-direct {p0}, Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;-><init>()V
@@ -37,15 +37,15 @@
 
     const/4 p3, 0x0
 
-    .line 8113
+    .line 8114
     iput p3, p1, Landroid/graphics/Rect;->bottom:I
 
-    .line 8115
+    .line 8116
     instance-of p4, p2, Lorg/telegram/ui/ArticleViewer$BlockPhotoCell;
 
     if-eqz p4, :cond_1c
 
-    .line 8116
+    .line 8117
     iget-object p4, p0, Lorg/telegram/ui/ArticleViewer$BlockCollageCell$2;->this$1:Lorg/telegram/ui/ArticleViewer$BlockCollageCell;
 
     invoke-static {p4}, Lorg/telegram/ui/ArticleViewer$BlockCollageCell;->access$17100(Lorg/telegram/ui/ArticleViewer$BlockCollageCell;)Lorg/telegram/ui/ArticleViewer$BlockCollageCell$GroupedMessages;
@@ -68,13 +68,13 @@
 
     goto :goto_36
 
-    .line 8117
+    .line 8118
     :cond_1c
     instance-of p4, p2, Lorg/telegram/ui/ArticleViewer$BlockVideoCell;
 
     if-eqz p4, :cond_35
 
-    .line 8118
+    .line 8119
     iget-object p4, p0, Lorg/telegram/ui/ArticleViewer$BlockCollageCell$2;->this$1:Lorg/telegram/ui/ArticleViewer$BlockCollageCell;
 
     invoke-static {p4}, Lorg/telegram/ui/ArticleViewer$BlockCollageCell;->access$17100(Lorg/telegram/ui/ArticleViewer$BlockCollageCell;)Lorg/telegram/ui/ArticleViewer$BlockCollageCell$GroupedMessages;
@@ -103,12 +103,12 @@
     :goto_36
     if-eqz p2, :cond_c0
 
-    .line 8122
+    .line 8123
     iget-object p4, p2, Lorg/telegram/messenger/MessageObject$GroupedMessagePosition;->siblingHeights:[F
 
     if-eqz p4, :cond_c0
 
-    .line 8123
+    .line 8124
     sget-object p4, Lorg/telegram/messenger/AndroidUtilities;->displaySize:Landroid/graphics/Point;
 
     iget v0, p4, Landroid/graphics/Point;->x:I
@@ -129,7 +129,7 @@
 
     const/4 v1, 0x0
 
-    .line 8125
+    .line 8126
     :goto_4d
     iget-object v2, p2, Lorg/telegram/messenger/MessageObject$GroupedMessagePosition;->siblingHeights:[F
 
@@ -137,7 +137,7 @@
 
     if-ge v0, v3, :cond_60
 
-    .line 8126
+    .line 8127
     aget v2, v2, v0
 
     mul-float v2, v2, p4
@@ -156,7 +156,7 @@
 
     goto :goto_4d
 
-    .line 8128
+    .line 8129
     :cond_60
     iget-byte v0, p2, Lorg/telegram/messenger/MessageObject$GroupedMessagePosition;->maxY:B
 
@@ -174,7 +174,7 @@
 
     add-int/2addr v1, v0
 
-    .line 8129
+    .line 8130
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockCollageCell$2;->this$1:Lorg/telegram/ui/ArticleViewer$BlockCollageCell;
 
     invoke-static {v0}, Lorg/telegram/ui/ArticleViewer$BlockCollageCell;->access$17100(Lorg/telegram/ui/ArticleViewer$BlockCollageCell;)Lorg/telegram/ui/ArticleViewer$BlockCollageCell$GroupedMessages;
@@ -190,7 +190,7 @@
     :goto_7a
     if-ge p3, v0, :cond_bd
 
-    .line 8131
+    .line 8132
     iget-object v2, p0, Lorg/telegram/ui/ArticleViewer$BlockCollageCell$2;->this$1:Lorg/telegram/ui/ArticleViewer$BlockCollageCell;
 
     invoke-static {v2}, Lorg/telegram/ui/ArticleViewer$BlockCollageCell;->access$17100(Lorg/telegram/ui/ArticleViewer$BlockCollageCell;)Lorg/telegram/ui/ArticleViewer$BlockCollageCell$GroupedMessages;
@@ -205,7 +205,7 @@
 
     check-cast v2, Lorg/telegram/messenger/MessageObject$GroupedMessagePosition;
 
-    .line 8132
+    .line 8133
     iget-byte v3, v2, Lorg/telegram/messenger/MessageObject$GroupedMessagePosition;->minY:B
 
     iget-byte v4, p2, Lorg/telegram/messenger/MessageObject$GroupedMessagePosition;->minY:B
@@ -237,7 +237,7 @@
     :cond_a5
     if-ne v3, v4, :cond_ba
 
-    .line 8136
+    .line 8137
     iget p2, v2, Lorg/telegram/messenger/MessageObject$GroupedMessagePosition;->ph:F
 
     mul-float p4, p4, p2
@@ -272,7 +272,7 @@
     :goto_bd
     neg-int p2, v1
 
-    .line 8140
+    .line 8141
     iput p2, p1, Landroid/graphics/Rect;->bottom:I
 
     :cond_c0

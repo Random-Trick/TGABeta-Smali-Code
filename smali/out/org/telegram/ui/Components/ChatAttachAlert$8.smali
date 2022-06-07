@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/ChatAttachAlert;Landroid/content/Context;)V
     .registers 3
 
-    .line 1691
+    .line 1767
     iput-object p1, p0, Lorg/telegram/ui/Components/ChatAttachAlert$8;->this$0:Lorg/telegram/ui/Components/ChatAttachAlert;
 
     invoke-direct {p0, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
@@ -35,7 +35,7 @@
 .method public onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
     .registers 3
 
-    .line 1709
+    .line 1785
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlert$8;->this$0:Lorg/telegram/ui/Components/ChatAttachAlert;
 
     iget-object v0, v0, Lorg/telegram/ui/Components/ChatAttachAlert;->headerView:Landroid/widget/FrameLayout;
@@ -50,7 +50,7 @@
 
     return p1
 
-    .line 1712
+    .line 1788
     :cond_c
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
 
@@ -62,7 +62,7 @@
 .method public onTouchEvent(Landroid/view/MotionEvent;)Z
     .registers 3
 
-    .line 1701
+    .line 1777
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlert$8;->this$0:Lorg/telegram/ui/Components/ChatAttachAlert;
 
     iget-object v0, v0, Lorg/telegram/ui/Components/ChatAttachAlert;->headerView:Landroid/widget/FrameLayout;
@@ -77,7 +77,7 @@
 
     return p1
 
-    .line 1704
+    .line 1780
     :cond_c
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
@@ -89,20 +89,20 @@
 .method public setAlpha(F)V
     .registers 3
 
-    .line 1694
+    .line 1770
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->setAlpha(F)V
 
-    .line 1695
+    .line 1771
     iget-object p1, p0, Lorg/telegram/ui/Components/ChatAttachAlert$8;->this$0:Lorg/telegram/ui/Components/ChatAttachAlert;
 
     const/4 v0, 0x0
 
-    invoke-static {p1, v0}, Lorg/telegram/ui/Components/ChatAttachAlert;->access$1200(Lorg/telegram/ui/Components/ChatAttachAlert;I)V
+    invoke-static {p1, v0}, Lorg/telegram/ui/Components/ChatAttachAlert;->access$1500(Lorg/telegram/ui/Components/ChatAttachAlert;I)V
 
-    .line 1696
+    .line 1772
     iget-object p1, p0, Lorg/telegram/ui/Components/ChatAttachAlert$8;->this$0:Lorg/telegram/ui/Components/ChatAttachAlert;
 
-    invoke-static {p1}, Lorg/telegram/ui/Components/ChatAttachAlert;->access$10300(Lorg/telegram/ui/Components/ChatAttachAlert;)Landroid/view/ViewGroup;
+    invoke-static {p1}, Lorg/telegram/ui/Components/ChatAttachAlert;->access$10600(Lorg/telegram/ui/Components/ChatAttachAlert;)Landroid/view/ViewGroup;
 
     move-result-object p1
 

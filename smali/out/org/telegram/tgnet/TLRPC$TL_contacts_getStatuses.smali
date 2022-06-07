@@ -17,7 +17,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 46183
+    .line 46635
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -28,12 +28,12 @@
 .method public deserializeResponse(Lorg/telegram/tgnet/AbstractSerializedData;IZ)Lorg/telegram/tgnet/TLObject;
     .registers 8
 
-    .line 46188
+    .line 46640
     new-instance p2, Lorg/telegram/tgnet/TLRPC$Vector;
 
     invoke-direct {p2}, Lorg/telegram/tgnet/TLRPC$Vector;-><init>()V
 
-    .line 46189
+    .line 46641
     invoke-virtual {p1, p3}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
@@ -43,7 +43,7 @@
     :goto_a
     if-ge v1, v0, :cond_1f
 
-    .line 46191
+    .line 46643
     invoke-virtual {p1, p3}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v2
@@ -56,7 +56,7 @@
 
     return-object p2
 
-    .line 46195
+    .line 46647
     :cond_17
     iget-object v3, p2, Lorg/telegram/tgnet/TLRPC$Vector;->objects:Ljava/util/ArrayList;
 
@@ -73,7 +73,7 @@
 .method public serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
     .registers 3
 
-    .line 46201
+    .line 46653
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_contacts_getStatuses;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V

@@ -187,12 +187,12 @@
     :try_start_4
     const-string v1, "MD5"
 
-    .line 393
+    .line 424
     invoke-static {v1}, Ljava/security/MessageDigest;->getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;
 
     move-result-object v1
 
-    .line 394
+    .line 425
     invoke-static {p0}, Lorg/telegram/messenger/AndroidUtilities;->getStringBytes(Ljava/lang/String;)[B
 
     move-result-object p0
@@ -201,20 +201,20 @@
 
     move-result-object p0
 
-    .line 395
+    .line 426
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
     const/4 v2, 0x0
 
-    .line 396
+    .line 427
     :goto_18
     array-length v3, p0
 
     if-ge v2, v3, :cond_31
 
-    .line 397
+    .line 428
     aget-byte v3, p0, v2
 
     and-int/lit16 v3, v3, 0xff
@@ -239,7 +239,7 @@
 
     goto :goto_18
 
-    .line 399
+    .line 430
     :cond_31
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -252,7 +252,7 @@
     :catch_36
     move-exception p0
 
-    .line 401
+    .line 432
     invoke-static {p0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     return-object v0
@@ -296,7 +296,7 @@
 .method public static native aesCtrDecryption(Ljava/nio/ByteBuffer;[B[BII)V
 .end method
 
-.method public static native aesCtrDecryptionByteArray([B[B[BIII)V
+.method public static native aesCtrDecryptionByteArray([B[B[BIJI)V
 .end method
 
 .method private static native aesIgeEncryption(Ljava/nio/ByteBuffer;[B[BZII)V
@@ -384,7 +384,7 @@
 
     if-ltz p3, :cond_2c
 
-    .line 233
+    .line 264
     array-length v1, p0
 
     sub-int/2addr v1, p1
@@ -414,7 +414,7 @@
 
     move v2, p1
 
-    .line 237
+    .line 268
     :goto_1a
     array-length v3, p0
 
@@ -422,7 +422,7 @@
 
     add-int v3, v2, p1
 
-    .line 238
+    .line 269
     aget-byte v3, p0, v3
 
     add-int v4, v2, p3
@@ -578,7 +578,7 @@
 
     return-object p0
 
-    .line 156
+    .line 187
     :cond_5
     array-length v0, p0
 
@@ -588,20 +588,20 @@
 
     const/4 v1, 0x0
 
-    .line 158
+    .line 189
     :goto_b
     array-length v2, p0
 
     if-ge v1, v2, :cond_27
 
-    .line 159
+    .line 190
     aget-byte v2, p0, v1
 
     and-int/lit16 v2, v2, 0xff
 
     mul-int/lit8 v3, v1, 0x2
 
-    .line 160
+    .line 191
     sget-object v4, Lorg/telegram/messenger/Utilities;->hexArray:[C
 
     ushr-int/lit8 v5, v2, 0x4
@@ -614,7 +614,7 @@
 
     and-int/lit8 v2, v2, 0xf
 
-    .line 161
+    .line 192
     aget-char v2, v4, v2
 
     aput-char v2, v0, v3
@@ -623,7 +623,7 @@
 
     goto :goto_b
 
-    .line 163
+    .line 194
     :cond_27
     new-instance p0, Ljava/lang/String;
 
@@ -637,7 +637,7 @@
 
     const/4 v0, 0x3
 
-    .line 377
+    .line 408
     aget-byte v0, p0, v0
 
     and-int/lit16 v0, v0, 0xff
@@ -680,7 +680,7 @@
 
     const/4 v0, 0x7
 
-    .line 372
+    .line 403
     aget-byte v0, p0, v0
 
     int-to-long v0, v0
@@ -792,9 +792,29 @@
 .end method
 
 .method public static clamp(FFF)F
-    .registers 3
+    .registers 4
 
-    .line 407
+    .line 438
+    invoke-static {p0}, Ljava/lang/Float;->isNaN(F)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_7
+
+    return p2
+
+    .line 441
+    :cond_7
+    invoke-static {p0}, Ljava/lang/Float;->isInfinite(F)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_e
+
+    return p1
+
+    .line 444
+    :cond_e
     invoke-static {p0, p1}, Ljava/lang/Math;->min(FF)F
 
     move-result p0
@@ -818,7 +838,7 @@
 
     const v1, 0x186a0
 
-    .line 335
+    .line 366
     invoke-static {p0, p1, v0, v1}, Lorg/telegram/messenger/Utilities;->pbkdf2([B[B[BI)I
 
     return-object v0
@@ -827,7 +847,7 @@
 .method public static computeSHA1(Ljava/nio/ByteBuffer;)[B
     .registers 3
 
-    .line 275
+    .line 306
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->limit()I
 
     move-result v0
@@ -844,12 +864,12 @@
 .method public static computeSHA1(Ljava/nio/ByteBuffer;II)[B
     .registers 6
 
-    .line 257
+    .line 288
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->position()I
 
     move-result v0
 
-    .line 258
+    .line 289
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->limit()I
 
     move-result v1
@@ -857,21 +877,21 @@
     :try_start_8
     const-string v2, "SHA-1"
 
-    .line 260
+    .line 291
     invoke-static {v2}, Ljava/security/MessageDigest;->getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;
 
     move-result-object v2
 
-    .line 261
+    .line 292
     invoke-virtual {p0, p1}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
-    .line 262
+    .line 293
     invoke-virtual {p0, p2}, Ljava/nio/ByteBuffer;->limit(I)Ljava/nio/Buffer;
 
-    .line 263
+    .line 294
     invoke-virtual {v2, p0}, Ljava/security/MessageDigest;->update(Ljava/nio/ByteBuffer;)V
 
-    .line 264
+    .line 295
     invoke-virtual {v2}, Ljava/security/MessageDigest;->digest()[B
 
     move-result-object p1
@@ -879,10 +899,10 @@
     .catch Ljava/lang/Exception; {:try_start_8 .. :try_end_1b} :catch_24
     .catchall {:try_start_8 .. :try_end_1b} :catchall_22
 
-    .line 268
+    .line 299
     invoke-virtual {p0, v1}, Ljava/nio/ByteBuffer;->limit(I)Ljava/nio/Buffer;
 
-    .line 269
+    .line 300
     invoke-virtual {p0, v0}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
     return-object p1
@@ -895,16 +915,16 @@
     :catch_24
     move-exception p1
 
-    .line 266
+    .line 297
     :try_start_25
     invoke-static {p1}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
     :try_end_28
     .catchall {:try_start_25 .. :try_end_28} :catchall_22
 
-    .line 268
+    .line 299
     invoke-virtual {p0, v1}, Ljava/nio/ByteBuffer;->limit(I)Ljava/nio/Buffer;
 
-    .line 269
+    .line 300
     invoke-virtual {p0, v0}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
     const/16 p0, 0x14
@@ -913,21 +933,21 @@
 
     return-object p0
 
-    .line 268
+    .line 299
     :goto_33
     invoke-virtual {p0, v1}, Ljava/nio/ByteBuffer;->limit(I)Ljava/nio/Buffer;
 
-    .line 269
+    .line 300
     invoke-virtual {p0, v0}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
-    .line 270
+    .line 301
     throw p1
 .end method
 
 .method public static computeSHA1([B)[B
     .registers 3
 
-    .line 279
+    .line 310
     array-length v0, p0
 
     const/4 v1, 0x0
@@ -945,15 +965,15 @@
     :try_start_0
     const-string v0, "SHA-1"
 
-    .line 247
+    .line 278
     invoke-static {v0}, Ljava/security/MessageDigest;->getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;
 
     move-result-object v0
 
-    .line 248
+    .line 279
     invoke-virtual {v0, p0, p1, p2}, Ljava/security/MessageDigest;->update([BII)V
 
-    .line 249
+    .line 280
     invoke-virtual {v0}, Ljava/security/MessageDigest;->digest()[B
 
     move-result-object p0
@@ -965,7 +985,7 @@
     :catch_e
     move-exception p0
 
-    .line 251
+    .line 282
     invoke-static {p0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     const/16 p0, 0x14
@@ -976,52 +996,18 @@
 .end method
 
 .method public static computeSHA256([B)[B
-    .registers 3
-
-    .line 283
-    array-length v0, p0
-
-    const/4 v1, 0x0
-
-    invoke-static {p0, v1, v0}, Lorg/telegram/messenger/Utilities;->computeSHA256([BII)[B
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static computeSHA256([BII)[B
     .registers 4
 
-    :try_start_0
-    const-string v0, "SHA-256"
+    .line 314
+    array-length v0, p0
 
-    .line 288
-    invoke-static {v0}, Ljava/security/MessageDigest;->getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;
+    int-to-long v0, v0
 
-    move-result-object v0
+    const/4 v2, 0x0
 
-    .line 289
-    invoke-virtual {v0, p0, p1, p2}, Ljava/security/MessageDigest;->update([BII)V
-
-    .line 290
-    invoke-virtual {v0}, Ljava/security/MessageDigest;->digest()[B
+    invoke-static {p0, v2, v0, v1}, Lorg/telegram/messenger/Utilities;->computeSHA256([BIJ)[B
 
     move-result-object p0
-    :try_end_d
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_d} :catch_e
-
-    return-object p0
-
-    :catch_e
-    move-exception p0
-
-    .line 292
-    invoke-static {p0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
-
-    const/16 p0, 0x20
-
-    new-array p0, p0, [B
 
     return-object p0
 .end method
@@ -1029,12 +1015,12 @@
 .method public static computeSHA256([BIILjava/nio/ByteBuffer;II)[B
     .registers 9
 
-    .line 353
+    .line 384
     invoke-virtual {p3}, Ljava/nio/ByteBuffer;->position()I
 
     move-result v0
 
-    .line 354
+    .line 385
     invoke-virtual {p3}, Ljava/nio/ByteBuffer;->limit()I
 
     move-result v1
@@ -1042,24 +1028,24 @@
     :try_start_8
     const-string v2, "SHA-256"
 
-    .line 356
+    .line 387
     invoke-static {v2}, Ljava/security/MessageDigest;->getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;
 
     move-result-object v2
 
-    .line 357
+    .line 388
     invoke-virtual {v2, p0, p1, p2}, Ljava/security/MessageDigest;->update([BII)V
 
-    .line 358
+    .line 389
     invoke-virtual {p3, p4}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
-    .line 359
+    .line 390
     invoke-virtual {p3, p5}, Ljava/nio/ByteBuffer;->limit(I)Ljava/nio/Buffer;
 
-    .line 360
+    .line 391
     invoke-virtual {v2, p3}, Ljava/security/MessageDigest;->update(Ljava/nio/ByteBuffer;)V
 
-    .line 361
+    .line 392
     invoke-virtual {v2}, Ljava/security/MessageDigest;->digest()[B
 
     move-result-object p0
@@ -1067,10 +1053,10 @@
     .catch Ljava/lang/Exception; {:try_start_8 .. :try_end_1e} :catch_27
     .catchall {:try_start_8 .. :try_end_1e} :catchall_25
 
-    .line 365
+    .line 396
     invoke-virtual {p3, v1}, Ljava/nio/ByteBuffer;->limit(I)Ljava/nio/Buffer;
 
-    .line 366
+    .line 397
     invoke-virtual {p3, v0}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
     return-object p0
@@ -1083,16 +1069,16 @@
     :catch_27
     move-exception p0
 
-    .line 363
+    .line 394
     :try_start_28
     invoke-static {p0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
     :try_end_2b
     .catchall {:try_start_28 .. :try_end_2b} :catchall_25
 
-    .line 365
+    .line 396
     invoke-virtual {p3, v1}, Ljava/nio/ByteBuffer;->limit(I)Ljava/nio/Buffer;
 
-    .line 366
+    .line 397
     invoke-virtual {p3, v0}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
     const/16 p0, 0x20
@@ -1101,15 +1087,53 @@
 
     return-object p0
 
-    .line 365
+    .line 396
     :goto_36
     invoke-virtual {p3, v1}, Ljava/nio/ByteBuffer;->limit(I)Ljava/nio/Buffer;
 
-    .line 366
+    .line 397
     invoke-virtual {p3, v0}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
-    .line 367
+    .line 398
     throw p0
+.end method
+
+.method public static computeSHA256([BIJ)[B
+    .registers 5
+
+    :try_start_0
+    const-string v0, "SHA-256"
+
+    .line 319
+    invoke-static {v0}, Ljava/security/MessageDigest;->getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;
+
+    move-result-object v0
+
+    long-to-int p3, p2
+
+    .line 320
+    invoke-virtual {v0, p0, p1, p3}, Ljava/security/MessageDigest;->update([BII)V
+
+    .line 321
+    invoke-virtual {v0}, Ljava/security/MessageDigest;->digest()[B
+
+    move-result-object p0
+    :try_end_e
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_e} :catch_f
+
+    return-object p0
+
+    :catch_f
+    move-exception p0
+
+    .line 323
+    invoke-static {p0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
+
+    const/16 p0, 0x20
+
+    new-array p0, p0, [B
+
+    return-object p0
 .end method
 
 .method public static varargs computeSHA256([[B)[B
@@ -1118,7 +1142,7 @@
     :try_start_0
     const-string v0, "SHA-256"
 
-    .line 299
+    .line 330
     invoke-static {v0}, Ljava/security/MessageDigest;->getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;
 
     move-result-object v0
@@ -1127,13 +1151,13 @@
 
     const/4 v2, 0x0
 
-    .line 300
+    .line 331
     :goto_8
     array-length v3, p0
 
     if-ge v2, v3, :cond_16
 
-    .line 301
+    .line 332
     aget-object v3, p0, v2
 
     aget-object v4, p0, v2
@@ -1146,7 +1170,7 @@
 
     goto :goto_8
 
-    .line 303
+    .line 334
     :cond_16
     invoke-virtual {v0}, Ljava/security/MessageDigest;->digest()[B
 
@@ -1159,7 +1183,7 @@
     :catch_1b
     move-exception p0
 
-    .line 305
+    .line 336
     invoke-static {p0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     const/16 p0, 0x20
@@ -1175,19 +1199,19 @@
     :try_start_0
     const-string v0, "SHA-512"
 
-    .line 312
+    .line 343
     invoke-static {v0}, Ljava/security/MessageDigest;->getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;
 
     move-result-object v0
 
     const/4 v1, 0x0
 
-    .line 313
+    .line 344
     array-length v2, p0
 
     invoke-virtual {v0, p0, v1, v2}, Ljava/security/MessageDigest;->update([BII)V
 
-    .line 314
+    .line 345
     invoke-virtual {v0}, Ljava/security/MessageDigest;->digest()[B
 
     move-result-object p0
@@ -1199,7 +1223,7 @@
     :catch_10
     move-exception p0
 
-    .line 316
+    .line 347
     invoke-static {p0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     const/16 p0, 0x40
@@ -1215,24 +1239,24 @@
     :try_start_0
     const-string v0, "SHA-512"
 
-    .line 323
+    .line 354
     invoke-static {v0}, Ljava/security/MessageDigest;->getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;
 
     move-result-object v0
 
-    .line 324
+    .line 355
     array-length v1, p0
 
     const/4 v2, 0x0
 
     invoke-virtual {v0, p0, v2, v1}, Ljava/security/MessageDigest;->update([BII)V
 
-    .line 325
+    .line 356
     array-length p0, p1
 
     invoke-virtual {v0, p1, v2, p0}, Ljava/security/MessageDigest;->update([BII)V
 
-    .line 326
+    .line 357
     invoke-virtual {v0}, Ljava/security/MessageDigest;->digest()[B
 
     move-result-object p0
@@ -1244,7 +1268,7 @@
     :catch_14
     move-exception p0
 
-    .line 328
+    .line 359
     invoke-static {p0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     const/16 p0, 0x40
@@ -1260,29 +1284,29 @@
     :try_start_0
     const-string v0, "SHA-512"
 
-    .line 341
+    .line 372
     invoke-static {v0}, Ljava/security/MessageDigest;->getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;
 
     move-result-object v0
 
-    .line 342
+    .line 373
     array-length v1, p0
 
     const/4 v2, 0x0
 
     invoke-virtual {v0, p0, v2, v1}, Ljava/security/MessageDigest;->update([BII)V
 
-    .line 343
+    .line 374
     array-length p0, p1
 
     invoke-virtual {v0, p1, v2, p0}, Ljava/security/MessageDigest;->update([BII)V
 
-    .line 344
+    .line 375
     array-length p0, p2
 
     invoke-virtual {v0, p2, v2, p0}, Ljava/security/MessageDigest;->update([BII)V
 
-    .line 345
+    .line 376
     invoke-virtual {v0}, Ljava/security/MessageDigest;->digest()[B
 
     move-result-object p0
@@ -1294,7 +1318,7 @@
     :catch_18
     move-exception p0
 
-    .line 347
+    .line 378
     invoke-static {p0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     const/16 p0, 0x40
@@ -1318,7 +1342,7 @@
 
     const/16 v0, 0x10
 
-    .line 411
+    .line 448
     invoke-static {v0}, Lorg/telegram/messenger/Utilities;->generateRandomString(I)Ljava/lang/String;
 
     move-result-object v0
@@ -1329,7 +1353,7 @@
 .method public static generateRandomString(I)Ljava/lang/String;
     .registers 5
 
-    .line 415
+    .line 452
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1339,7 +1363,7 @@
     :goto_6
     if-ge v1, p0, :cond_1c
 
-    .line 417
+    .line 454
     sget-object v2, Lorg/telegram/messenger/Utilities;->fastRandom:Ljava/util/Random;
 
     const/16 v3, 0x3e
@@ -1360,7 +1384,7 @@
 
     goto :goto_6
 
-    .line 419
+    .line 456
     :cond_1c
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -1381,13 +1405,13 @@
 
     return-object p0
 
-    .line 170
+    .line 201
     :cond_4
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v0
 
-    .line 171
+    .line 202
     div-int/lit8 v1, v0, 0x2
 
     new-array v1, v1, [B
@@ -1397,7 +1421,7 @@
     :goto_d
     if-ge v2, v0, :cond_2e
 
-    .line 173
+    .line 204
     div-int/lit8 v3, v2, 0x2
 
     invoke-virtual {p0, v2}, Ljava/lang/String;->charAt(I)C
@@ -1481,7 +1505,7 @@
 
     const-wide/16 v0, 0x1
 
-    .line 229
+    .line 260
     invoke-static {v0, v1}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
 
     move-result-object v2
@@ -1532,7 +1556,7 @@
 
     goto/16 :goto_b9
 
-    .line 183
+    .line 214
     :cond_9
     array-length v3, p0
 
@@ -1546,7 +1570,7 @@
 
     goto/16 :goto_b9
 
-    .line 187
+    .line 218
     :cond_14
     new-instance v3, Ljava/math/BigInteger;
 
@@ -1558,7 +1582,7 @@
 
     const-wide/16 v5, 0x8
 
-    .line 190
+    .line 221
     invoke-static {v5, v6}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
 
     move-result-object p1
@@ -1567,7 +1591,7 @@
 
     move-result-object p1
 
-    .line 191
+    .line 222
     invoke-virtual {p1}, Ljava/math/BigInteger;->intValue()I
 
     move-result p1
@@ -1583,7 +1607,7 @@
 
     const-wide/16 v5, 0x3
 
-    .line 195
+    .line 226
     invoke-static {v5, v6}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
 
     move-result-object p1
@@ -1592,7 +1616,7 @@
 
     move-result-object p1
 
-    .line 196
+    .line 227
     invoke-virtual {p1}, Ljava/math/BigInteger;->intValue()I
 
     move-result p1
@@ -1608,7 +1632,7 @@
 
     const-wide/16 v5, 0x5
 
-    .line 200
+    .line 231
     invoke-static {v5, v6}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
 
     move-result-object p1
@@ -1617,7 +1641,7 @@
 
     move-result-object p1
 
-    .line 201
+    .line 232
     invoke-virtual {p1}, Ljava/math/BigInteger;->intValue()I
 
     move-result p1
@@ -1637,7 +1661,7 @@
 
     const-wide/16 v5, 0x18
 
-    .line 206
+    .line 237
     invoke-static {v5, v6}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
 
     move-result-object p1
@@ -1646,7 +1670,7 @@
 
     move-result-object p1
 
-    .line 207
+    .line 238
     invoke-virtual {p1}, Ljava/math/BigInteger;->intValue()I
 
     move-result p1
@@ -1666,7 +1690,7 @@
 
     const-wide/16 v7, 0x7
 
-    .line 212
+    .line 243
     invoke-static {v7, v8}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
 
     move-result-object p1
@@ -1675,7 +1699,7 @@
 
     move-result-object p1
 
-    .line 213
+    .line 244
     invoke-virtual {p1}, Ljava/math/BigInteger;->intValue()I
 
     move-result p1
@@ -1688,7 +1712,7 @@
 
     return v1
 
-    .line 219
+    .line 250
     :cond_89
     invoke-static {p0}, Lorg/telegram/messenger/Utilities;->bytesToHex([B)Ljava/lang/String;
 
@@ -1696,7 +1720,7 @@
 
     const-string p1, "C71CAEB9C6B1C9048E6C522F70F13F73980D40238E3E21C14934D037563D930F48198A0AA7C14058229493D22530F4DBFA336F6E0AC925139543AED44CCE7C3720FD51F69458705AC68CD4FE6B6B13ABDC9746512969328454F18FAF8C595F642477FE96BB2A941D5BCD1D4AC8CC49880708FA9B378E3C4F3A9060BEE67CF9A4A4A695811051907E162753B56B0F6B410DBA74D8A84B2A14B3144E0EF1284754FD17ED950D5965B4B9DD46582DB1178D169C6BC465B0D6FF9CA3928FEF5B9AE4E418FC15E83EBEA0F87FA9FF5EED70050DED2849F47BF959D956850CE929851F0D8115F635B105EE2E4E15D04B2454BF6F4FADF034B10403119CD8E3B92FCC5B"
 
-    .line 220
+    .line 251
     invoke-virtual {p0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -1708,7 +1732,7 @@
     :cond_96
     const-wide/16 p0, 0x1
 
-    .line 224
+    .line 255
     invoke-static {p0, p1}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
 
     move-result-object p0
@@ -1729,7 +1753,7 @@
 
     const/16 p1, 0x1e
 
-    .line 225
+    .line 256
     invoke-virtual {v3, p1}, Ljava/math/BigInteger;->isProbablePrime(I)Z
 
     move-result v0
@@ -1755,8 +1779,67 @@
 .method public static native needInvert(Ljava/lang/Object;IIII)I
 .end method
 
+.method private static parseInt(Ljava/lang/String;)I
+    .registers 6
+
+    .line 143
+    invoke-virtual {p0}, Ljava/lang/String;->length()I
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    .line 144
+    invoke-virtual {p0, v1}, Ljava/lang/String;->charAt(I)C
+
+    move-result v2
+
+    const/4 v3, 0x1
+
+    const/16 v4, 0x2d
+
+    if-ne v2, v4, :cond_10
+
+    const/4 v2, 0x0
+
+    goto :goto_13
+
+    :cond_10
+    rsub-int/lit8 v1, v2, 0x30
+
+    const/4 v2, 0x1
+
+    :goto_13
+    if-ge v3, v0, :cond_22
+
+    mul-int/lit8 v1, v1, 0xa
+
+    add-int/lit8 v1, v1, 0x30
+
+    add-int/lit8 v4, v3, 0x1
+
+    .line 152
+    invoke-virtual {p0, v3}, Ljava/lang/String;->charAt(I)C
+
+    move-result v3
+
+    sub-int/2addr v1, v3
+
+    move v3, v4
+
+    goto :goto_13
+
+    :cond_22
+    if-eqz v2, :cond_25
+
+    neg-int v1, v1
+
+    :cond_25
+    return v1
+.end method
+
 .method public static parseInt(Ljava/lang/CharSequence;)Ljava/lang/Integer;
-    .registers 3
+    .registers 6
 
     const/4 v0, 0x0
 
@@ -1769,39 +1852,95 @@
 
     return-object p0
 
-    .line 116
     :cond_8
-    :try_start_8
-    sget-object v1, Lorg/telegram/messenger/Utilities;->pattern:Ljava/util/regex/Pattern;
+    const/4 v1, -0x1
 
-    invoke-virtual {v1, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
-
-    move-result-object p0
+    const/4 v2, 0x0
 
     .line 117
-    invoke-virtual {p0}, Ljava/util/regex/Matcher;->find()Z
+    :goto_a
+    :try_start_a
+    invoke-interface {p0}, Ljava/lang/CharSequence;->length()I
 
-    move-result v1
+    move-result v3
 
-    if-eqz v1, :cond_1d
+    if-ge v2, v3, :cond_34
 
     .line 118
-    invoke-virtual {p0, v0}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
+    invoke-interface {p0, v2}, Ljava/lang/CharSequence;->charAt(I)C
+
+    move-result v3
+
+    const/16 v4, 0x2d
+
+    if-eq v3, v4, :cond_23
+
+    const/16 v4, 0x30
+
+    if-lt v3, v4, :cond_21
+
+    const/16 v4, 0x39
+
+    if-gt v3, v4, :cond_21
+
+    goto :goto_23
+
+    :cond_21
+    const/4 v3, 0x0
+
+    goto :goto_24
+
+    :cond_23
+    :goto_23
+    const/4 v3, 0x1
+
+    :goto_24
+    if-eqz v3, :cond_2a
+
+    if-gez v1, :cond_2a
+
+    move v1, v2
+
+    goto :goto_31
+
+    :cond_2a
+    if-nez v3, :cond_31
+
+    if-ltz v1, :cond_31
+
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_34
+
+    :cond_31
+    :goto_31
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_a
+
+    :cond_34
+    :goto_34
+    if-ltz v1, :cond_42
+
+    .line 128
+    invoke-interface {p0, v1, v2}, Ljava/lang/CharSequence;->subSequence(II)Ljava/lang/CharSequence;
 
     move-result-object p0
 
-    .line 119
+    invoke-interface {p0}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    .line 130
     invoke-static {p0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
-    move-result p0
-    :try_end_1c
-    .catch Ljava/lang/Exception; {:try_start_8 .. :try_end_1c} :catch_1d
+    move-result v0
+    :try_end_42
+    .catch Ljava/lang/Exception; {:try_start_a .. :try_end_42} :catch_42
 
-    move v0, p0
-
-    .line 124
-    :catch_1d
-    :cond_1d
+    .line 138
+    :catch_42
+    :cond_42
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -1812,14 +1951,14 @@
 .method public static parseIntToString(Ljava/lang/String;)Ljava/lang/String;
     .registers 2
 
-    .line 145
+    .line 176
     sget-object v0, Lorg/telegram/messenger/Utilities;->pattern:Ljava/util/regex/Pattern;
 
     invoke-virtual {v0, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
 
     move-result-object p0
 
-    .line 146
+    .line 177
     invoke-virtual {p0}, Ljava/util/regex/Matcher;->find()Z
 
     move-result v0
@@ -1828,7 +1967,7 @@
 
     const/4 v0, 0x0
 
-    .line 147
+    .line 178
     invoke-virtual {p0, v0}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object p0
@@ -1848,14 +1987,14 @@
 
     if-nez p0, :cond_9
 
-    .line 129
+    .line 160
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object p0
 
     return-object p0
 
-    .line 133
+    .line 164
     :cond_9
     :try_start_9
     sget-object v2, Lorg/telegram/messenger/Utilities;->pattern:Ljava/util/regex/Pattern;
@@ -1864,7 +2003,7 @@
 
     move-result-object p0
 
-    .line 134
+    .line 165
     invoke-virtual {p0}, Ljava/util/regex/Matcher;->find()Z
 
     move-result v2
@@ -1873,19 +2012,19 @@
 
     const/4 v2, 0x0
 
-    .line 135
+    .line 166
     invoke-virtual {p0, v2}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object p0
 
-    .line 136
+    .line 167
     invoke-static {p0}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
 
     move-result-wide v0
     :try_end_1e
     .catch Ljava/lang/Exception; {:try_start_9 .. :try_end_1e} :catch_1e
 
-    .line 141
+    .line 172
     :catch_1e
     :cond_1e
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;

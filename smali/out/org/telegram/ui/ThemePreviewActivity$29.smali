@@ -30,7 +30,7 @@
 .method constructor <init>(Lorg/telegram/ui/ThemePreviewActivity;ZIIZ)V
     .registers 6
 
-    .line 3307
+    .line 3297
     iput-object p1, p0, Lorg/telegram/ui/ThemePreviewActivity$29;->this$0:Lorg/telegram/ui/ThemePreviewActivity;
 
     iput-boolean p2, p0, Lorg/telegram/ui/ThemePreviewActivity$29;->val$show:Z
@@ -51,14 +51,14 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .registers 5
 
-    .line 3310
+    .line 3300
     iget-object p1, p0, Lorg/telegram/ui/ThemePreviewActivity$29;->this$0:Lorg/telegram/ui/ThemePreviewActivity;
 
     const/4 v0, 0x0
 
     invoke-static {p1, v0}, Lorg/telegram/ui/ThemePreviewActivity;->access$7002(Lorg/telegram/ui/ThemePreviewActivity;Landroid/animation/AnimatorSet;)Landroid/animation/AnimatorSet;
 
-    .line 3311
+    .line 3301
     iget-boolean p1, p0, Lorg/telegram/ui/ThemePreviewActivity$29;->val$show:Z
 
     const/4 v0, 0x4
@@ -81,7 +81,7 @@
 
     if-nez p1, :cond_38
 
-    .line 3312
+    .line 3302
     iget-object p1, p0, Lorg/telegram/ui/ThemePreviewActivity$29;->this$0:Lorg/telegram/ui/ThemePreviewActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/ThemePreviewActivity;->access$1600(Lorg/telegram/ui/ThemePreviewActivity;)[Landroid/widget/FrameLayout;
@@ -96,7 +96,7 @@
 
     invoke-virtual {p1, v1}, Landroid/widget/FrameLayout;->setAlpha(F)V
 
-    .line 3313
+    .line 3303
     iget-object p1, p0, Lorg/telegram/ui/ThemePreviewActivity$29;->this$0:Lorg/telegram/ui/ThemePreviewActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/ThemePreviewActivity;->access$1600(Lorg/telegram/ui/ThemePreviewActivity;)[Landroid/widget/FrameLayout;
@@ -111,13 +111,13 @@
 
     goto :goto_49
 
-    .line 3314
+    .line 3304
     :cond_38
     iget-boolean p1, p0, Lorg/telegram/ui/ThemePreviewActivity$29;->val$show:Z
 
     if-nez p1, :cond_49
 
-    .line 3315
+    .line 3305
     iget-object p1, p0, Lorg/telegram/ui/ThemePreviewActivity$29;->this$0:Lorg/telegram/ui/ThemePreviewActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/ThemePreviewActivity;->access$1600(Lorg/telegram/ui/ThemePreviewActivity;)[Landroid/widget/FrameLayout;
@@ -130,7 +130,7 @@
 
     invoke-virtual {p1, v0}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
-    .line 3317
+    .line 3307
     :cond_49
     :goto_49
     iget-object p1, p0, Lorg/telegram/ui/ThemePreviewActivity$29;->this$0:Lorg/telegram/ui/ThemePreviewActivity;
@@ -155,13 +155,13 @@
 
     goto :goto_6f
 
-    .line 3320
+    .line 3310
     :cond_5c
     iget p1, p0, Lorg/telegram/ui/ThemePreviewActivity$29;->val$num:I
 
     if-ne p1, v2, :cond_7f
 
-    .line 3321
+    .line 3311
     iget-object p1, p0, Lorg/telegram/ui/ThemePreviewActivity$29;->this$0:Lorg/telegram/ui/ThemePreviewActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/ThemePreviewActivity;->access$1600(Lorg/telegram/ui/ThemePreviewActivity;)[Landroid/widget/FrameLayout;
@@ -178,7 +178,7 @@
 
     goto :goto_7f
 
-    .line 3318
+    .line 3308
     :cond_6f
     :goto_6f
     iget-object p1, p0, Lorg/telegram/ui/ThemePreviewActivity$29;->this$0:Lorg/telegram/ui/ThemePreviewActivity;

@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView$2;)V
     .registers 2
 
-    .line 319
+    .line 316
     iput-object p1, p0, Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView$2$1;->this$1:Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView$2;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -35,12 +35,12 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .registers 3
 
-    .line 322
+    .line 319
     iget-object p1, p0, Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView$2$1;->this$1:Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView$2;
 
     iget-object p1, p1, Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView$2;->this$0:Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView;
 
-    invoke-static {p1}, Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView;->access$900(Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView;)Lorg/telegram/ui/Components/NumberTextView;
+    invoke-static {p1}, Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView;->access$800(Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView;)Lorg/telegram/ui/Components/NumberTextView;
 
     move-result-object p1
 

@@ -194,7 +194,7 @@
     .line 69
     iget-object p1, p0, Lorg/telegram/ui/Cells/ArchiveHintInnerCell;->headerTextView:Landroid/widget/TextView;
 
-    const p2, 0x7f0e0194
+    const p2, 0x7f0e01c9
 
     const-string v0, "ArchiveHintHeader3"
 
@@ -207,7 +207,7 @@
     .line 70
     iget-object p1, p0, Lorg/telegram/ui/Cells/ArchiveHintInnerCell;->messageTextView:Landroid/widget/TextView;
 
-    const p2, 0x7f0e0197
+    const p2, 0x7f0e01cc
 
     const-string v0, "ArchiveHintText3"
 
@@ -220,7 +220,7 @@
     .line 71
     iget-object p1, p0, Lorg/telegram/ui/Cells/ArchiveHintInnerCell;->imageView:Landroid/widget/ImageView;
 
-    const p2, 0x7f0700b5
+    const p2, 0x7f070098
 
     invoke-virtual {p1, p2}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -253,7 +253,7 @@
     .line 62
     iget-object p1, p0, Lorg/telegram/ui/Cells/ArchiveHintInnerCell;->headerTextView:Landroid/widget/TextView;
 
-    const p2, 0x7f0e0193
+    const p2, 0x7f0e01c8
 
     const-string v0, "ArchiveHintHeader2"
 
@@ -266,7 +266,7 @@
     .line 63
     iget-object p1, p0, Lorg/telegram/ui/Cells/ArchiveHintInnerCell;->messageTextView:Landroid/widget/TextView;
 
-    const p2, 0x7f0e0196
+    const p2, 0x7f0e01cb
 
     const-string v0, "ArchiveHintText2"
 
@@ -279,7 +279,7 @@
     .line 64
     iget-object p1, p0, Lorg/telegram/ui/Cells/ArchiveHintInnerCell;->imageView:Landroid/widget/ImageView;
 
-    const p2, 0x7f0700b4
+    const p2, 0x7f070097
 
     invoke-virtual {p1, p2}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -316,7 +316,7 @@
 
     iput-object p2, p0, Lorg/telegram/ui/Cells/ArchiveHintInnerCell;->imageView2:Landroid/widget/ImageView;
 
-    const p1, 0x7f0700b1
+    const p1, 0x7f070094
 
     .line 50
     invoke-virtual {p2, p1}, Landroid/widget/ImageView;->setImageResource(I)V
@@ -354,7 +354,7 @@
     .line 54
     iget-object p1, p0, Lorg/telegram/ui/Cells/ArchiveHintInnerCell;->headerTextView:Landroid/widget/TextView;
 
-    const p2, 0x7f0e0192
+    const p2, 0x7f0e01c7
 
     const-string v0, "ArchiveHintHeader1"
 
@@ -367,7 +367,7 @@
     .line 55
     iget-object p1, p0, Lorg/telegram/ui/Cells/ArchiveHintInnerCell;->messageTextView:Landroid/widget/TextView;
 
-    const p2, 0x7f0e0195
+    const p2, 0x7f0e01ca
 
     const-string v0, "ArchiveHintText1"
 
@@ -380,7 +380,7 @@
     .line 56
     iget-object p1, p0, Lorg/telegram/ui/Cells/ArchiveHintInnerCell;->imageView:Landroid/widget/ImageView;
 
-    const p2, 0x7f0700b2
+    const p2, 0x7f070095
 
     invoke-virtual {p1, p2}, Landroid/widget/ImageView;->setImageResource(I)V
 

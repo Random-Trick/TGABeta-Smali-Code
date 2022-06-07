@@ -351,7 +351,7 @@
 .method static constructor <clinit>()V
     .registers 1
 
-    const/4 v0, 0x3
+    const/4 v0, 0x4
 
     new-array v0, v0, [Lorg/telegram/messenger/DownloadController;
 
@@ -362,7 +362,7 @@
 .end method
 
 .method public constructor <init>(I)V
-    .registers 31
+    .registers 36
 
     move-object/from16 v0, p0
 
@@ -563,7 +563,7 @@
 
     const-string v13, "mobilePreset"
 
-    if-nez v4, :cond_268
+    if-nez v4, :cond_271
 
     invoke-virtual/range {p0 .. p0}, Lorg/telegram/messenger/BaseController;->getUserConfig()Lorg/telegram/messenger/UserConfig;
 
@@ -575,7 +575,7 @@
 
     if-nez v16, :cond_cf
 
-    goto/16 :goto_268
+    goto/16 :goto_271
 
     :cond_cf
     const/4 v4, 0x4
@@ -588,13 +588,13 @@
 
     const/4 v15, 0x7
 
-    new-array v14, v15, [I
+    new-array v14, v15, [J
 
-    new-array v1, v15, [I
+    new-array v1, v15, [J
 
-    new-array v15, v15, [I
+    new-array v15, v15, [J
 
-    move-object/from16 v26, v8
+    move-object/from16 v29, v8
 
     const/4 v8, 0x0
 
@@ -606,7 +606,7 @@
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    move-object/from16 v27, v9
+    move-object/from16 v30, v9
 
     const-string v9, "mobileDataDownloadMask"
 
@@ -753,224 +753,230 @@
     :goto_167
     add-int/lit8 v8, v8, 0x1
 
-    move-object/from16 v9, v27
+    move-object/from16 v9, v30
 
     const/4 v4, 0x4
 
     goto/16 :goto_e0
 
     :cond_16e
-    move-object/from16 v27, v9
+    move-object/from16 v30, v9
 
     const/4 v9, 0x1
 
     .line 278
     iget-object v4, v0, Lorg/telegram/messenger/DownloadController;->mediumPreset:Lorg/telegram/messenger/DownloadController$Preset;
 
-    iget-object v4, v4, Lorg/telegram/messenger/DownloadController$Preset;->sizes:[I
+    iget-object v4, v4, Lorg/telegram/messenger/DownloadController$Preset;->sizes:[J
 
-    aget v4, v4, v9
+    move-object v8, v10
 
-    const-string v8, "mobileMaxDownloadSize2"
+    move-object/from16 v31, v11
 
-    invoke-interface {v2, v8, v4}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
+    aget-wide v10, v4, v9
 
-    move-result v4
+    const-string v4, "mobileMaxDownloadSize2"
 
-    const/4 v8, 0x2
+    invoke-interface {v2, v4, v10, v11}, Landroid/content/SharedPreferences;->getLong(Ljava/lang/String;J)J
 
-    aput v4, v14, v8
+    move-result-wide v9
+
+    const/4 v4, 0x2
+
+    aput-wide v9, v14, v4
 
     .line 279
-    iget-object v4, v0, Lorg/telegram/messenger/DownloadController;->mediumPreset:Lorg/telegram/messenger/DownloadController$Preset;
+    iget-object v9, v0, Lorg/telegram/messenger/DownloadController;->mediumPreset:Lorg/telegram/messenger/DownloadController$Preset;
 
-    iget-object v4, v4, Lorg/telegram/messenger/DownloadController$Preset;->sizes:[I
+    iget-object v9, v9, Lorg/telegram/messenger/DownloadController$Preset;->sizes:[J
 
-    aget v4, v4, v8
+    aget-wide v10, v9, v4
 
     const-string v9, "mobileMaxDownloadSize3"
 
-    invoke-interface {v2, v9, v4}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
+    invoke-interface {v2, v9, v10, v11}, Landroid/content/SharedPreferences;->getLong(Ljava/lang/String;J)J
 
-    move-result v4
+    move-result-wide v9
 
-    const/4 v9, 0x3
+    const/4 v11, 0x3
 
-    aput v4, v14, v9
+    aput-wide v9, v14, v11
 
     .line 280
-    iget-object v4, v0, Lorg/telegram/messenger/DownloadController;->highPreset:Lorg/telegram/messenger/DownloadController$Preset;
+    iget-object v9, v0, Lorg/telegram/messenger/DownloadController;->highPreset:Lorg/telegram/messenger/DownloadController$Preset;
 
-    iget-object v4, v4, Lorg/telegram/messenger/DownloadController$Preset;->sizes:[I
+    iget-object v9, v9, Lorg/telegram/messenger/DownloadController$Preset;->sizes:[J
 
-    const/4 v9, 0x1
+    move-object v11, v5
 
-    aget v4, v4, v9
+    const/4 v10, 0x1
+
+    aget-wide v4, v9, v10
 
     const-string v9, "wifiMaxDownloadSize2"
 
-    invoke-interface {v2, v9, v4}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
+    invoke-interface {v2, v9, v4, v5}, Landroid/content/SharedPreferences;->getLong(Ljava/lang/String;J)J
 
-    move-result v4
+    move-result-wide v4
 
-    aput v4, v1, v8
+    const/4 v9, 0x2
+
+    aput-wide v4, v1, v9
 
     .line 281
     iget-object v4, v0, Lorg/telegram/messenger/DownloadController;->highPreset:Lorg/telegram/messenger/DownloadController$Preset;
 
-    iget-object v4, v4, Lorg/telegram/messenger/DownloadController$Preset;->sizes:[I
+    iget-object v4, v4, Lorg/telegram/messenger/DownloadController$Preset;->sizes:[J
 
-    aget v4, v4, v8
+    move-object v10, v12
 
-    const-string v9, "wifiMaxDownloadSize3"
+    move-object/from16 v32, v13
 
-    invoke-interface {v2, v9, v4}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
+    aget-wide v12, v4, v9
 
-    move-result v4
+    const-string v4, "wifiMaxDownloadSize3"
 
-    const/4 v9, 0x3
+    invoke-interface {v2, v4, v12, v13}, Landroid/content/SharedPreferences;->getLong(Ljava/lang/String;J)J
 
-    aput v4, v1, v9
+    move-result-wide v4
+
+    const/4 v12, 0x3
+
+    aput-wide v4, v1, v12
 
     .line 282
     iget-object v4, v0, Lorg/telegram/messenger/DownloadController;->lowPreset:Lorg/telegram/messenger/DownloadController$Preset;
 
-    iget-object v4, v4, Lorg/telegram/messenger/DownloadController$Preset;->sizes:[I
+    iget-object v4, v4, Lorg/telegram/messenger/DownloadController$Preset;->sizes:[J
 
-    const/4 v9, 0x1
+    const/4 v5, 0x1
 
-    aget v4, v4, v9
+    aget-wide v12, v4, v5
 
-    const-string v9, "roamingMaxDownloadSize2"
+    const-string v4, "roamingMaxDownloadSize2"
 
-    invoke-interface {v2, v9, v4}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
+    invoke-interface {v2, v4, v12, v13}, Landroid/content/SharedPreferences;->getLong(Ljava/lang/String;J)J
 
-    move-result v4
+    move-result-wide v12
 
-    aput v4, v15, v8
+    aput-wide v12, v15, v9
 
     .line 283
     iget-object v4, v0, Lorg/telegram/messenger/DownloadController;->lowPreset:Lorg/telegram/messenger/DownloadController$Preset;
 
-    iget-object v4, v4, Lorg/telegram/messenger/DownloadController$Preset;->sizes:[I
+    iget-object v4, v4, Lorg/telegram/messenger/DownloadController$Preset;->sizes:[J
 
-    aget v4, v4, v8
+    aget-wide v12, v4, v9
 
-    const-string v9, "roamingMaxDownloadSize3"
+    const-string v4, "roamingMaxDownloadSize3"
 
-    invoke-interface {v2, v9, v4}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
+    invoke-interface {v2, v4, v12, v13}, Landroid/content/SharedPreferences;->getLong(Ljava/lang/String;J)J
 
-    move-result v4
+    move-result-wide v12
 
-    const/4 v9, 0x3
+    const/4 v4, 0x3
 
-    aput v4, v15, v9
+    aput-wide v12, v15, v4
 
-    const-string v4, "globalAutodownloadEnabled"
-
-    const/4 v9, 0x1
+    const-string v12, "globalAutodownloadEnabled"
 
     .line 285
-    invoke-interface {v2, v4, v9}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
+    invoke-interface {v2, v12, v5}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
-    move-result v4
+    move-result v12
 
     .line 286
-    new-instance v9, Lorg/telegram/messenger/DownloadController$Preset;
+    new-instance v5, Lorg/telegram/messenger/DownloadController$Preset;
 
-    iget-object v8, v0, Lorg/telegram/messenger/DownloadController;->mediumPreset:Lorg/telegram/messenger/DownloadController$Preset;
+    iget-object v13, v0, Lorg/telegram/messenger/DownloadController;->mediumPreset:Lorg/telegram/messenger/DownloadController$Preset;
 
-    iget-object v8, v8, Lorg/telegram/messenger/DownloadController$Preset;->sizes:[I
+    iget-object v13, v13, Lorg/telegram/messenger/DownloadController$Preset;->sizes:[J
 
     const/16 v16, 0x0
 
-    aget v18, v8, v16
+    aget-wide v18, v13, v16
 
-    const/4 v8, 0x2
+    aget-wide v20, v14, v9
 
-    aget v19, v14, v8
+    aget-wide v22, v14, v4
 
-    const/4 v8, 0x3
+    const/16 v24, 0x1
 
-    aget v20, v14, v8
+    const/16 v25, 0x1
 
-    const/16 v21, 0x1
+    const/16 v27, 0x0
 
-    const/16 v22, 0x1
-
-    const/16 v24, 0x0
-
-    const/16 v25, 0x64
-
-    move-object/from16 v16, v9
-
-    move-object/from16 v17, v5
-
-    move/from16 v23, v4
-
-    invoke-direct/range {v16 .. v25}, Lorg/telegram/messenger/DownloadController$Preset;-><init>([IIIIZZZZI)V
-
-    iput-object v9, v0, Lorg/telegram/messenger/DownloadController;->mobilePreset:Lorg/telegram/messenger/DownloadController$Preset;
-
-    .line 287
-    new-instance v5, Lorg/telegram/messenger/DownloadController$Preset;
-
-    iget-object v8, v0, Lorg/telegram/messenger/DownloadController;->highPreset:Lorg/telegram/messenger/DownloadController$Preset;
-
-    iget-object v8, v8, Lorg/telegram/messenger/DownloadController$Preset;->sizes:[I
-
-    const/4 v9, 0x0
-
-    aget v18, v8, v9
-
-    const/4 v8, 0x2
-
-    aget v19, v1, v8
-
-    const/4 v8, 0x3
-
-    aget v20, v1, v8
+    const/16 v28, 0x64
 
     move-object/from16 v16, v5
 
+    move-object/from16 v17, v11
+
+    move/from16 v26, v12
+
+    invoke-direct/range {v16 .. v28}, Lorg/telegram/messenger/DownloadController$Preset;-><init>([IJJJZZZZI)V
+
+    iput-object v5, v0, Lorg/telegram/messenger/DownloadController;->mobilePreset:Lorg/telegram/messenger/DownloadController$Preset;
+
+    .line 287
+    new-instance v4, Lorg/telegram/messenger/DownloadController$Preset;
+
+    iget-object v5, v0, Lorg/telegram/messenger/DownloadController;->highPreset:Lorg/telegram/messenger/DownloadController$Preset;
+
+    iget-object v5, v5, Lorg/telegram/messenger/DownloadController$Preset;->sizes:[J
+
+    const/4 v9, 0x0
+
+    aget-wide v18, v5, v9
+
+    const/4 v5, 0x2
+
+    aget-wide v20, v1, v5
+
+    const/4 v5, 0x3
+
+    aget-wide v22, v1, v5
+
+    move-object/from16 v16, v4
+
     move-object/from16 v17, v6
 
-    invoke-direct/range {v16 .. v25}, Lorg/telegram/messenger/DownloadController$Preset;-><init>([IIIIZZZZI)V
+    invoke-direct/range {v16 .. v28}, Lorg/telegram/messenger/DownloadController$Preset;-><init>([IJJJZZZZI)V
 
-    iput-object v5, v0, Lorg/telegram/messenger/DownloadController;->wifiPreset:Lorg/telegram/messenger/DownloadController$Preset;
+    iput-object v4, v0, Lorg/telegram/messenger/DownloadController;->wifiPreset:Lorg/telegram/messenger/DownloadController$Preset;
 
     .line 288
     new-instance v1, Lorg/telegram/messenger/DownloadController$Preset;
 
-    iget-object v5, v0, Lorg/telegram/messenger/DownloadController;->lowPreset:Lorg/telegram/messenger/DownloadController$Preset;
+    iget-object v4, v0, Lorg/telegram/messenger/DownloadController;->lowPreset:Lorg/telegram/messenger/DownloadController$Preset;
 
-    iget-object v5, v5, Lorg/telegram/messenger/DownloadController$Preset;->sizes:[I
+    iget-object v4, v4, Lorg/telegram/messenger/DownloadController$Preset;->sizes:[J
 
-    const/4 v6, 0x0
+    const/4 v5, 0x0
 
-    aget v18, v5, v6
+    aget-wide v18, v4, v5
 
-    const/4 v5, 0x2
+    const/4 v4, 0x2
 
-    aget v19, v15, v5
+    aget-wide v20, v15, v4
 
-    const/4 v5, 0x3
+    const/4 v4, 0x3
 
-    aget v20, v15, v5
+    aget-wide v22, v15, v4
 
-    const/16 v21, 0x0
+    const/16 v24, 0x0
 
-    const/16 v22, 0x0
+    const/16 v25, 0x0
 
-    const/16 v24, 0x1
+    const/16 v27, 0x1
 
-    const/16 v25, 0x32
+    const/16 v28, 0x32
 
     move-object/from16 v16, v1
 
     move-object/from16 v17, v7
 
-    invoke-direct/range {v16 .. v25}, Lorg/telegram/messenger/DownloadController$Preset;-><init>([IIIIZZZZI)V
+    invoke-direct/range {v16 .. v28}, Lorg/telegram/messenger/DownloadController$Preset;-><init>([IJJJZZZZI)V
 
     iput-object v1, v0, Lorg/telegram/messenger/DownloadController;->roamingPreset:Lorg/telegram/messenger/DownloadController$Preset;
 
@@ -991,7 +997,9 @@
 
     move-result-object v2
 
-    invoke-interface {v1, v13, v2}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+    move-object/from16 v9, v32
+
+    invoke-interface {v1, v9, v2}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
     .line 293
     iget-object v2, v0, Lorg/telegram/messenger/DownloadController;->wifiPreset:Lorg/telegram/messenger/DownloadController$Preset;
@@ -1000,7 +1008,7 @@
 
     move-result-object v2
 
-    invoke-interface {v1, v12, v2}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+    invoke-interface {v1, v10, v2}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
     .line 294
     iget-object v2, v0, Lorg/telegram/messenger/DownloadController;->roamingPreset:Lorg/telegram/messenger/DownloadController$Preset;
@@ -1009,6 +1017,8 @@
 
     move-result-object v2
 
+    move-object/from16 v11, v31
+
     invoke-interface {v1, v11, v2}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
     const/4 v2, 0x3
@@ -1016,50 +1026,56 @@
     .line 295
     iput v2, v0, Lorg/telegram/messenger/DownloadController;->currentMobilePreset:I
 
-    invoke-interface {v1, v10, v2}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
+    invoke-interface {v1, v8, v2}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
     .line 296
     iput v2, v0, Lorg/telegram/messenger/DownloadController;->currentWifiPreset:I
 
-    move-object/from16 v8, v27
+    move-object/from16 v12, v30
 
-    invoke-interface {v1, v8, v2}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
+    invoke-interface {v1, v12, v2}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
     .line 297
     iput v2, v0, Lorg/telegram/messenger/DownloadController;->currentRoamingPreset:I
 
-    move-object/from16 v9, v26
+    move-object/from16 v13, v29
 
-    invoke-interface {v1, v9, v2}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
+    invoke-interface {v1, v13, v2}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
     .line 298
     invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    goto :goto_2af
+    goto :goto_2bb
 
-    :cond_268
-    :goto_268
-    move-object/from16 v28, v9
+    :cond_271
+    :goto_271
+    move-object/from16 v33, v13
 
-    move-object v9, v8
+    move-object v13, v8
 
-    move-object/from16 v8, v28
+    move-object v8, v10
+
+    move-object v10, v12
+
+    move-object v12, v9
+
+    move-object/from16 v9, v33
 
     .line 248
     new-instance v1, Lorg/telegram/messenger/DownloadController$Preset;
 
-    invoke-interface {v2, v13, v6}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-interface {v2, v9, v6}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v13
+    move-result-object v9
 
-    invoke-direct {v1, v13, v6}, Lorg/telegram/messenger/DownloadController$Preset;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v9, v6}, Lorg/telegram/messenger/DownloadController$Preset;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     iput-object v1, v0, Lorg/telegram/messenger/DownloadController;->mobilePreset:Lorg/telegram/messenger/DownloadController$Preset;
 
     .line 249
     new-instance v1, Lorg/telegram/messenger/DownloadController$Preset;
 
-    invoke-interface {v2, v12, v7}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-interface {v2, v10, v7}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v6
 
@@ -1081,27 +1097,27 @@
     const/4 v1, 0x3
 
     .line 251
-    invoke-interface {v2, v10, v1}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
+    invoke-interface {v2, v8, v1}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
 
     move-result v5
 
     iput v5, v0, Lorg/telegram/messenger/DownloadController;->currentMobilePreset:I
 
     .line 252
-    invoke-interface {v2, v8, v1}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
+    invoke-interface {v2, v12, v1}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
 
     move-result v5
 
     iput v5, v0, Lorg/telegram/messenger/DownloadController;->currentWifiPreset:I
 
     .line 253
-    invoke-interface {v2, v9, v1}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
+    invoke-interface {v2, v13, v1}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
 
     move-result v1
 
     iput v1, v0, Lorg/telegram/messenger/DownloadController;->currentRoamingPreset:I
 
-    if-nez v4, :cond_2af
+    if-nez v4, :cond_2bb
 
     .line 255
     invoke-interface {v2}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
@@ -1117,8 +1133,8 @@
     invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     .line 301
-    :cond_2af
-    :goto_2af
+    :cond_2bb
+    :goto_2bb
     new-instance v1, Lorg/telegram/messenger/DownloadController$$ExternalSyntheticLambda0;
 
     invoke-direct {v1, v0}, Lorg/telegram/messenger/DownloadController$$ExternalSyntheticLambda0;-><init>(Lorg/telegram/messenger/DownloadController;)V
@@ -1151,12 +1167,12 @@
 
     move-result v1
 
-    if-eqz v1, :cond_2d5
+    if-eqz v1, :cond_2e1
 
     .line 321
     invoke-virtual/range {p0 .. p0}, Lorg/telegram/messenger/DownloadController;->checkAutodownloadSettings()V
 
-    :cond_2d5
+    :cond_2e1
     return-void
 .end method
 
@@ -2628,7 +2644,7 @@
 
     aput-object v2, v1, v0
 
-    const v2, 0x7f0e09f6
+    const v2, 0x7f0e0a7d
 
     new-array v0, v0, [Ljava/lang/Object;
 
@@ -3205,411 +3221,425 @@
 .end method
 
 .method public canDownloadMedia(Lorg/telegram/tgnet/TLRPC$Message;)I
-    .registers 13
+    .registers 19
 
-    const/4 v0, 0x0
+    move-object/from16 v0, p0
 
-    if-nez p1, :cond_4
+    move-object/from16 v1, p1
 
-    return v0
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_8
+
+    return v2
 
     .line 616
-    :cond_4
-    invoke-static {p1}, Lorg/telegram/messenger/MessageObject;->isVideoMessage(Lorg/telegram/tgnet/TLRPC$Message;)Z
+    :cond_8
+    invoke-static/range {p1 .. p1}, Lorg/telegram/messenger/MessageObject;->isVideoMessage(Lorg/telegram/tgnet/TLRPC$Message;)Z
 
-    move-result v1
+    move-result v3
 
-    const/4 v2, 0x1
-
-    const/4 v3, 0x2
-
-    if-nez v1, :cond_46
-
-    invoke-static {p1}, Lorg/telegram/messenger/MessageObject;->isGifMessage(Lorg/telegram/tgnet/TLRPC$Message;)Z
-
-    move-result v4
-
-    if-nez v4, :cond_46
-
-    invoke-static {p1}, Lorg/telegram/messenger/MessageObject;->isRoundVideoMessage(Lorg/telegram/tgnet/TLRPC$Message;)Z
-
-    move-result v4
-
-    if-nez v4, :cond_46
-
-    invoke-static {p1}, Lorg/telegram/messenger/MessageObject;->isGameMessage(Lorg/telegram/tgnet/TLRPC$Message;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_1f
-
-    goto :goto_46
-
-    .line 618
-    :cond_1f
-    invoke-static {p1}, Lorg/telegram/messenger/MessageObject;->isVoiceMessage(Lorg/telegram/tgnet/TLRPC$Message;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_27
-
-    const/4 v4, 0x2
-
-    goto :goto_47
-
-    .line 620
-    :cond_27
-    invoke-static {p1}, Lorg/telegram/messenger/MessageObject;->isPhoto(Lorg/telegram/tgnet/TLRPC$Message;)Z
-
-    move-result v4
-
-    if-nez v4, :cond_44
-
-    invoke-static {p1}, Lorg/telegram/messenger/MessageObject;->isStickerMessage(Lorg/telegram/tgnet/TLRPC$Message;)Z
-
-    move-result v4
-
-    if-nez v4, :cond_44
-
-    invoke-static {p1}, Lorg/telegram/messenger/MessageObject;->isAnimatedStickerMessage(Lorg/telegram/tgnet/TLRPC$Message;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_3a
-
-    goto :goto_44
-
-    .line 622
-    :cond_3a
-    invoke-static {p1}, Lorg/telegram/messenger/MessageObject;->getDocument(Lorg/telegram/tgnet/TLRPC$Message;)Lorg/telegram/tgnet/TLRPC$Document;
-
-    move-result-object v4
-
-    if-eqz v4, :cond_43
-
-    const/16 v4, 0x8
-
-    goto :goto_47
-
-    :cond_43
-    return v0
-
-    :cond_44
-    :goto_44
     const/4 v4, 0x1
 
-    goto :goto_47
+    const/4 v5, 0x2
 
-    :cond_46
-    :goto_46
-    const/4 v4, 0x4
+    if-nez v3, :cond_4a
+
+    invoke-static/range {p1 .. p1}, Lorg/telegram/messenger/MessageObject;->isGifMessage(Lorg/telegram/tgnet/TLRPC$Message;)Z
+
+    move-result v6
+
+    if-nez v6, :cond_4a
+
+    invoke-static/range {p1 .. p1}, Lorg/telegram/messenger/MessageObject;->isRoundVideoMessage(Lorg/telegram/tgnet/TLRPC$Message;)Z
+
+    move-result v6
+
+    if-nez v6, :cond_4a
+
+    invoke-static/range {p1 .. p1}, Lorg/telegram/messenger/MessageObject;->isGameMessage(Lorg/telegram/tgnet/TLRPC$Message;)Z
+
+    move-result v6
+
+    if-eqz v6, :cond_23
+
+    goto :goto_4a
+
+    .line 618
+    :cond_23
+    invoke-static/range {p1 .. p1}, Lorg/telegram/messenger/MessageObject;->isVoiceMessage(Lorg/telegram/tgnet/TLRPC$Message;)Z
+
+    move-result v6
+
+    if-eqz v6, :cond_2b
+
+    const/4 v6, 0x2
+
+    goto :goto_4b
+
+    .line 620
+    :cond_2b
+    invoke-static/range {p1 .. p1}, Lorg/telegram/messenger/MessageObject;->isPhoto(Lorg/telegram/tgnet/TLRPC$Message;)Z
+
+    move-result v6
+
+    if-nez v6, :cond_48
+
+    invoke-static/range {p1 .. p1}, Lorg/telegram/messenger/MessageObject;->isStickerMessage(Lorg/telegram/tgnet/TLRPC$Message;)Z
+
+    move-result v6
+
+    if-nez v6, :cond_48
+
+    invoke-static/range {p1 .. p1}, Lorg/telegram/messenger/MessageObject;->isAnimatedStickerMessage(Lorg/telegram/tgnet/TLRPC$Message;)Z
+
+    move-result v6
+
+    if-eqz v6, :cond_3e
+
+    goto :goto_48
+
+    .line 622
+    :cond_3e
+    invoke-static/range {p1 .. p1}, Lorg/telegram/messenger/MessageObject;->getDocument(Lorg/telegram/tgnet/TLRPC$Message;)Lorg/telegram/tgnet/TLRPC$Document;
+
+    move-result-object v6
+
+    if-eqz v6, :cond_47
+
+    const/16 v6, 0x8
+
+    goto :goto_4b
+
+    :cond_47
+    return v2
+
+    :cond_48
+    :goto_48
+    const/4 v6, 0x1
+
+    goto :goto_4b
+
+    :cond_4a
+    :goto_4a
+    const/4 v6, 0x4
 
     .line 628
-    :goto_47
-    iget-object v5, p1, Lorg/telegram/tgnet/TLRPC$Message;->peer_id:Lorg/telegram/tgnet/TLRPC$Peer;
-
-    if-eqz v5, :cond_c9
-
-    .line 630
-    iget-wide v6, v5, Lorg/telegram/tgnet/TLRPC$Peer;->user_id:J
+    :goto_4b
+    iget-object v7, v1, Lorg/telegram/tgnet/TLRPC$Message;->peer_id:Lorg/telegram/tgnet/TLRPC$Peer;
 
     const-wide/16 v8, 0x0
 
-    cmp-long v10, v6, v8
+    if-eqz v7, :cond_cd
 
-    if-eqz v10, :cond_67
+    .line 630
+    iget-wide v10, v7, Lorg/telegram/tgnet/TLRPC$Peer;->user_id:J
+
+    cmp-long v12, v10, v8
+
+    if-eqz v12, :cond_6b
 
     .line 631
-    invoke-virtual {p0}, Lorg/telegram/messenger/BaseController;->getContactsController()Lorg/telegram/messenger/ContactsController;
+    invoke-virtual/range {p0 .. p0}, Lorg/telegram/messenger/BaseController;->getContactsController()Lorg/telegram/messenger/ContactsController;
 
-    move-result-object v6
+    move-result-object v10
 
-    iget-object v6, v6, Lorg/telegram/messenger/ContactsController;->contactsDict:Lj$/util/concurrent/ConcurrentHashMap;
+    iget-object v10, v10, Lorg/telegram/messenger/ContactsController;->contactsDict:Lj$/util/concurrent/ConcurrentHashMap;
 
-    iget-wide v7, v5, Lorg/telegram/tgnet/TLRPC$Peer;->user_id:J
+    iget-wide v11, v7, Lorg/telegram/tgnet/TLRPC$Peer;->user_id:J
 
-    invoke-static {v7, v8}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v11, v12}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    move-result-object v5
+    move-result-object v7
 
-    invoke-virtual {v6, v5}, Lj$/util/concurrent/ConcurrentHashMap;->containsKey(Ljava/lang/Object;)Z
-
-    move-result v5
-
-    if-eqz v5, :cond_c9
-
-    :goto_65
-    const/4 v5, 0x0
-
-    goto :goto_ca
-
-    .line 636
-    :cond_67
-    iget-wide v6, v5, Lorg/telegram/tgnet/TLRPC$Peer;->chat_id:J
-
-    cmp-long v10, v6, v8
-
-    if-eqz v10, :cond_8a
-
-    .line 637
-    iget-object v5, p1, Lorg/telegram/tgnet/TLRPC$Message;->from_id:Lorg/telegram/tgnet/TLRPC$Peer;
-
-    instance-of v5, v5, Lorg/telegram/tgnet/TLRPC$TL_peerUser;
-
-    if-eqz v5, :cond_88
-
-    invoke-virtual {p0}, Lorg/telegram/messenger/BaseController;->getContactsController()Lorg/telegram/messenger/ContactsController;
-
-    move-result-object v5
-
-    iget-object v5, v5, Lorg/telegram/messenger/ContactsController;->contactsDict:Lj$/util/concurrent/ConcurrentHashMap;
-
-    iget-object v6, p1, Lorg/telegram/tgnet/TLRPC$Message;->from_id:Lorg/telegram/tgnet/TLRPC$Peer;
-
-    iget-wide v6, v6, Lorg/telegram/tgnet/TLRPC$Peer;->user_id:J
-
-    invoke-static {v6, v7}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v6
-
-    invoke-virtual {v5, v6}, Lj$/util/concurrent/ConcurrentHashMap;->containsKey(Ljava/lang/Object;)Z
-
-    move-result v5
-
-    if-eqz v5, :cond_88
-
-    goto :goto_65
-
-    :cond_88
-    const/4 v5, 0x2
-
-    goto :goto_ca
-
-    .line 643
-    :cond_8a
-    iget-wide v5, v5, Lorg/telegram/tgnet/TLRPC$Peer;->channel_id:J
-
-    cmp-long v7, v5, v8
-
-    if-eqz v7, :cond_a1
-
-    invoke-virtual {p0}, Lorg/telegram/messenger/BaseController;->getMessagesController()Lorg/telegram/messenger/MessagesController;
-
-    move-result-object v5
-
-    iget-object v6, p1, Lorg/telegram/tgnet/TLRPC$Message;->peer_id:Lorg/telegram/tgnet/TLRPC$Peer;
-
-    iget-wide v6, v6, Lorg/telegram/tgnet/TLRPC$Peer;->channel_id:J
-
-    invoke-static {v6, v7}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v6
-
-    invoke-virtual {v5, v6}, Lorg/telegram/messenger/MessagesController;->getChat(Ljava/lang/Long;)Lorg/telegram/tgnet/TLRPC$Chat;
-
-    move-result-object v5
-
-    goto :goto_a2
-
-    :cond_a1
-    const/4 v5, 0x0
-
-    .line 644
-    :goto_a2
-    invoke-static {v5}, Lorg/telegram/messenger/ChatObject;->isChannel(Lorg/telegram/tgnet/TLRPC$Chat;)Z
-
-    move-result v6
-
-    if-eqz v6, :cond_c7
-
-    iget-boolean v5, v5, Lorg/telegram/tgnet/TLRPC$Chat;->megagroup:Z
-
-    if-eqz v5, :cond_c7
-
-    .line 645
-    iget-object v5, p1, Lorg/telegram/tgnet/TLRPC$Message;->from_id:Lorg/telegram/tgnet/TLRPC$Peer;
-
-    instance-of v5, v5, Lorg/telegram/tgnet/TLRPC$TL_peerUser;
-
-    if-eqz v5, :cond_88
-
-    invoke-virtual {p0}, Lorg/telegram/messenger/BaseController;->getContactsController()Lorg/telegram/messenger/ContactsController;
-
-    move-result-object v5
-
-    iget-object v5, v5, Lorg/telegram/messenger/ContactsController;->contactsDict:Lj$/util/concurrent/ConcurrentHashMap;
-
-    iget-object v6, p1, Lorg/telegram/tgnet/TLRPC$Message;->from_id:Lorg/telegram/tgnet/TLRPC$Peer;
-
-    iget-wide v6, v6, Lorg/telegram/tgnet/TLRPC$Peer;->user_id:J
-
-    invoke-static {v6, v7}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v6
-
-    invoke-virtual {v5, v6}, Lj$/util/concurrent/ConcurrentHashMap;->containsKey(Ljava/lang/Object;)Z
-
-    move-result v5
-
-    if-eqz v5, :cond_88
-
-    goto :goto_65
-
-    :cond_c7
-    const/4 v5, 0x3
-
-    goto :goto_ca
-
-    :cond_c9
-    const/4 v5, 0x1
-
-    .line 658
-    :goto_ca
-    invoke-static {}, Lorg/telegram/messenger/ApplicationLoader;->getAutodownloadNetworkType()I
-
-    move-result v6
-
-    if-ne v6, v2, :cond_dc
-
-    .line 660
-    iget-object v6, p0, Lorg/telegram/messenger/DownloadController;->wifiPreset:Lorg/telegram/messenger/DownloadController$Preset;
-
-    iget-boolean v6, v6, Lorg/telegram/messenger/DownloadController$Preset;->enabled:Z
-
-    if-nez v6, :cond_d7
-
-    return v0
-
-    .line 663
-    :cond_d7
-    invoke-virtual {p0}, Lorg/telegram/messenger/DownloadController;->getCurrentWiFiPreset()Lorg/telegram/messenger/DownloadController$Preset;
-
-    move-result-object v6
-
-    goto :goto_f5
-
-    :cond_dc
-    if-ne v6, v3, :cond_ea
-
-    .line 666
-    iget-object v6, p0, Lorg/telegram/messenger/DownloadController;->roamingPreset:Lorg/telegram/messenger/DownloadController$Preset;
-
-    iget-boolean v6, v6, Lorg/telegram/messenger/DownloadController$Preset;->enabled:Z
-
-    if-nez v6, :cond_e5
-
-    return v0
-
-    .line 669
-    :cond_e5
-    invoke-virtual {p0}, Lorg/telegram/messenger/DownloadController;->getCurrentRoamingPreset()Lorg/telegram/messenger/DownloadController$Preset;
-
-    move-result-object v6
-
-    goto :goto_f5
-
-    .line 671
-    :cond_ea
-    iget-object v6, p0, Lorg/telegram/messenger/DownloadController;->mobilePreset:Lorg/telegram/messenger/DownloadController$Preset;
-
-    iget-boolean v6, v6, Lorg/telegram/messenger/DownloadController$Preset;->enabled:Z
-
-    if-nez v6, :cond_f1
-
-    return v0
-
-    .line 674
-    :cond_f1
-    invoke-virtual {p0}, Lorg/telegram/messenger/DownloadController;->getCurrentMobilePreset()Lorg/telegram/messenger/DownloadController$Preset;
-
-    move-result-object v6
-
-    .line 676
-    :goto_f5
-    iget-object v7, v6, Lorg/telegram/messenger/DownloadController$Preset;->mask:[I
-
-    aget v5, v7, v5
-
-    if-ne v4, v3, :cond_10a
-
-    const/high16 v7, 0x80000
-
-    .line 679
-    iget-object v8, v6, Lorg/telegram/messenger/DownloadController$Preset;->sizes:[I
-
-    invoke-static {v4}, Lorg/telegram/messenger/DownloadController;->typeToIndex(I)I
-
-    move-result v9
-
-    aget v8, v8, v9
-
-    invoke-static {v7, v8}, Ljava/lang/Math;->max(II)I
+    invoke-virtual {v10, v7}, Lj$/util/concurrent/ConcurrentHashMap;->containsKey(Ljava/lang/Object;)Z
 
     move-result v7
 
-    goto :goto_112
+    if-eqz v7, :cond_cd
+
+    :goto_69
+    const/4 v7, 0x0
+
+    goto :goto_ce
+
+    .line 636
+    :cond_6b
+    iget-wide v10, v7, Lorg/telegram/tgnet/TLRPC$Peer;->chat_id:J
+
+    cmp-long v12, v10, v8
+
+    if-eqz v12, :cond_8e
+
+    .line 637
+    iget-object v7, v1, Lorg/telegram/tgnet/TLRPC$Message;->from_id:Lorg/telegram/tgnet/TLRPC$Peer;
+
+    instance-of v7, v7, Lorg/telegram/tgnet/TLRPC$TL_peerUser;
+
+    if-eqz v7, :cond_8c
+
+    invoke-virtual/range {p0 .. p0}, Lorg/telegram/messenger/BaseController;->getContactsController()Lorg/telegram/messenger/ContactsController;
+
+    move-result-object v7
+
+    iget-object v7, v7, Lorg/telegram/messenger/ContactsController;->contactsDict:Lj$/util/concurrent/ConcurrentHashMap;
+
+    iget-object v10, v1, Lorg/telegram/tgnet/TLRPC$Message;->from_id:Lorg/telegram/tgnet/TLRPC$Peer;
+
+    iget-wide v10, v10, Lorg/telegram/tgnet/TLRPC$Peer;->user_id:J
+
+    invoke-static {v10, v11}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v10
+
+    invoke-virtual {v7, v10}, Lj$/util/concurrent/ConcurrentHashMap;->containsKey(Ljava/lang/Object;)Z
+
+    move-result v7
+
+    if-eqz v7, :cond_8c
+
+    goto :goto_69
+
+    :cond_8c
+    const/4 v7, 0x2
+
+    goto :goto_ce
+
+    .line 643
+    :cond_8e
+    iget-wide v10, v7, Lorg/telegram/tgnet/TLRPC$Peer;->channel_id:J
+
+    cmp-long v7, v10, v8
+
+    if-eqz v7, :cond_a5
+
+    invoke-virtual/range {p0 .. p0}, Lorg/telegram/messenger/BaseController;->getMessagesController()Lorg/telegram/messenger/MessagesController;
+
+    move-result-object v7
+
+    iget-object v10, v1, Lorg/telegram/tgnet/TLRPC$Message;->peer_id:Lorg/telegram/tgnet/TLRPC$Peer;
+
+    iget-wide v10, v10, Lorg/telegram/tgnet/TLRPC$Peer;->channel_id:J
+
+    invoke-static {v10, v11}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v10
+
+    invoke-virtual {v7, v10}, Lorg/telegram/messenger/MessagesController;->getChat(Ljava/lang/Long;)Lorg/telegram/tgnet/TLRPC$Chat;
+
+    move-result-object v7
+
+    goto :goto_a6
+
+    :cond_a5
+    const/4 v7, 0x0
+
+    .line 644
+    :goto_a6
+    invoke-static {v7}, Lorg/telegram/messenger/ChatObject;->isChannel(Lorg/telegram/tgnet/TLRPC$Chat;)Z
+
+    move-result v10
+
+    if-eqz v10, :cond_cb
+
+    iget-boolean v7, v7, Lorg/telegram/tgnet/TLRPC$Chat;->megagroup:Z
+
+    if-eqz v7, :cond_cb
+
+    .line 645
+    iget-object v7, v1, Lorg/telegram/tgnet/TLRPC$Message;->from_id:Lorg/telegram/tgnet/TLRPC$Peer;
+
+    instance-of v7, v7, Lorg/telegram/tgnet/TLRPC$TL_peerUser;
+
+    if-eqz v7, :cond_8c
+
+    invoke-virtual/range {p0 .. p0}, Lorg/telegram/messenger/BaseController;->getContactsController()Lorg/telegram/messenger/ContactsController;
+
+    move-result-object v7
+
+    iget-object v7, v7, Lorg/telegram/messenger/ContactsController;->contactsDict:Lj$/util/concurrent/ConcurrentHashMap;
+
+    iget-object v10, v1, Lorg/telegram/tgnet/TLRPC$Message;->from_id:Lorg/telegram/tgnet/TLRPC$Peer;
+
+    iget-wide v10, v10, Lorg/telegram/tgnet/TLRPC$Peer;->user_id:J
+
+    invoke-static {v10, v11}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v10
+
+    invoke-virtual {v7, v10}, Lj$/util/concurrent/ConcurrentHashMap;->containsKey(Ljava/lang/Object;)Z
+
+    move-result v7
+
+    if-eqz v7, :cond_8c
+
+    goto :goto_69
+
+    :cond_cb
+    const/4 v7, 0x3
+
+    goto :goto_ce
+
+    :cond_cd
+    const/4 v7, 0x1
+
+    .line 658
+    :goto_ce
+    invoke-static {}, Lorg/telegram/messenger/ApplicationLoader;->getAutodownloadNetworkType()I
+
+    move-result v10
+
+    if-ne v10, v4, :cond_e0
+
+    .line 660
+    iget-object v10, v0, Lorg/telegram/messenger/DownloadController;->wifiPreset:Lorg/telegram/messenger/DownloadController$Preset;
+
+    iget-boolean v10, v10, Lorg/telegram/messenger/DownloadController$Preset;->enabled:Z
+
+    if-nez v10, :cond_db
+
+    return v2
+
+    .line 663
+    :cond_db
+    invoke-virtual/range {p0 .. p0}, Lorg/telegram/messenger/DownloadController;->getCurrentWiFiPreset()Lorg/telegram/messenger/DownloadController$Preset;
+
+    move-result-object v10
+
+    goto :goto_f9
+
+    :cond_e0
+    if-ne v10, v5, :cond_ee
+
+    .line 666
+    iget-object v10, v0, Lorg/telegram/messenger/DownloadController;->roamingPreset:Lorg/telegram/messenger/DownloadController$Preset;
+
+    iget-boolean v10, v10, Lorg/telegram/messenger/DownloadController$Preset;->enabled:Z
+
+    if-nez v10, :cond_e9
+
+    return v2
+
+    .line 669
+    :cond_e9
+    invoke-virtual/range {p0 .. p0}, Lorg/telegram/messenger/DownloadController;->getCurrentRoamingPreset()Lorg/telegram/messenger/DownloadController$Preset;
+
+    move-result-object v10
+
+    goto :goto_f9
+
+    .line 671
+    :cond_ee
+    iget-object v10, v0, Lorg/telegram/messenger/DownloadController;->mobilePreset:Lorg/telegram/messenger/DownloadController$Preset;
+
+    iget-boolean v10, v10, Lorg/telegram/messenger/DownloadController$Preset;->enabled:Z
+
+    if-nez v10, :cond_f5
+
+    return v2
+
+    .line 674
+    :cond_f5
+    invoke-virtual/range {p0 .. p0}, Lorg/telegram/messenger/DownloadController;->getCurrentMobilePreset()Lorg/telegram/messenger/DownloadController$Preset;
+
+    move-result-object v10
+
+    .line 676
+    :goto_f9
+    iget-object v11, v10, Lorg/telegram/messenger/DownloadController$Preset;->mask:[I
+
+    aget v7, v11, v7
+
+    if-ne v6, v5, :cond_10f
+
+    const-wide/32 v11, 0x80000
+
+    .line 679
+    iget-object v13, v10, Lorg/telegram/messenger/DownloadController$Preset;->sizes:[J
+
+    invoke-static {v6}, Lorg/telegram/messenger/DownloadController;->typeToIndex(I)I
+
+    move-result v14
+
+    aget-wide v14, v13, v14
+
+    invoke-static {v11, v12, v14, v15}, Ljava/lang/Math;->max(JJ)J
+
+    move-result-wide v11
+
+    goto :goto_118
 
     .line 681
-    :cond_10a
-    iget-object v7, v6, Lorg/telegram/messenger/DownloadController$Preset;->sizes:[I
+    :cond_10f
+    iget-object v11, v10, Lorg/telegram/messenger/DownloadController$Preset;->sizes:[J
 
-    invoke-static {v4}, Lorg/telegram/messenger/DownloadController;->typeToIndex(I)I
+    invoke-static {v6}, Lorg/telegram/messenger/DownloadController;->typeToIndex(I)I
 
-    move-result v8
+    move-result v12
 
-    aget v7, v7, v8
+    aget-wide v12, v11, v12
+
+    move-wide v11, v12
 
     .line 683
-    :goto_112
-    invoke-static {p1}, Lorg/telegram/messenger/MessageObject;->getMessageSize(Lorg/telegram/tgnet/TLRPC$Message;)I
+    :goto_118
+    invoke-static/range {p1 .. p1}, Lorg/telegram/messenger/MessageObject;->getMessageSize(Lorg/telegram/tgnet/TLRPC$Message;)J
 
-    move-result p1
+    move-result-wide v13
 
-    if-eqz v1, :cond_128
+    if-eqz v3, :cond_133
 
     .line 684
-    iget-boolean v1, v6, Lorg/telegram/messenger/DownloadController$Preset;->preloadVideo:Z
+    iget-boolean v1, v10, Lorg/telegram/messenger/DownloadController$Preset;->preloadVideo:Z
 
-    if-eqz v1, :cond_128
+    if-eqz v1, :cond_133
 
-    if-le p1, v7, :cond_128
+    cmp-long v1, v13, v11
 
-    const/high16 v1, 0x200000
+    if-lez v1, :cond_133
 
-    if-le v7, v1, :cond_128
+    const-wide/32 v15, 0x200000
 
-    and-int p1, v5, v4
+    cmp-long v1, v11, v15
 
-    if-eqz p1, :cond_127
+    if-lez v1, :cond_133
 
-    const/4 v0, 0x2
+    and-int v1, v7, v6
 
-    :cond_127
-    return v0
+    if-eqz v1, :cond_132
 
-    :cond_128
-    if-eq v4, v2, :cond_12e
+    const/4 v2, 0x2
 
-    if-eqz p1, :cond_135
+    :cond_132
+    return v2
 
-    if-gt p1, v7, :cond_135
+    :cond_133
+    if-eq v6, v4, :cond_13d
 
-    :cond_12e
-    if-eq v4, v3, :cond_134
+    cmp-long v1, v13, v8
 
-    and-int p1, v5, v4
+    if-eqz v1, :cond_144
 
-    if-eqz p1, :cond_135
+    cmp-long v1, v13, v11
 
-    :cond_134
-    const/4 v0, 0x1
+    if-gtz v1, :cond_144
 
-    :cond_135
-    return v0
+    :cond_13d
+    if-eq v6, v5, :cond_143
+
+    and-int v1, v7, v6
+
+    if-eqz v1, :cond_144
+
+    :cond_143
+    const/4 v2, 0x1
+
+    :cond_144
+    return v2
 .end method
 
-.method public canDownloadMedia(II)Z
-    .registers 9
+.method public canDownloadMedia(IJ)Z
+    .registers 13
 
     .line 587
     invoke-static {}, Lorg/telegram/messenger/ApplicationLoader;->getAutodownloadNetworkType()I
@@ -3684,31 +3714,37 @@
     aget v4, v4, v3
 
     .line 606
-    iget-object v0, v0, Lorg/telegram/messenger/DownloadController$Preset;->sizes:[I
+    iget-object v0, v0, Lorg/telegram/messenger/DownloadController$Preset;->sizes:[J
 
     invoke-static {p1}, Lorg/telegram/messenger/DownloadController;->typeToIndex(I)I
 
     move-result v5
 
-    aget v0, v0, v5
+    aget-wide v5, v0, v5
 
-    if-eq p1, v3, :cond_40
+    if-eq p1, v3, :cond_46
 
-    if-eqz p2, :cond_46
+    const-wide/16 v7, 0x0
 
-    if-gt p2, v0, :cond_46
+    cmp-long v0, p2, v7
 
-    :cond_40
-    if-eq p1, v1, :cond_45
+    if-eqz v0, :cond_4c
+
+    cmp-long v0, p2, v5
+
+    if-gtz v0, :cond_4c
+
+    :cond_46
+    if-eq p1, v1, :cond_4b
 
     and-int/2addr p1, v4
 
-    if-eqz p1, :cond_46
+    if-eqz p1, :cond_4c
 
-    :cond_45
+    :cond_4b
     const/4 v2, 0x1
 
-    :cond_46
+    :cond_4c
     return v2
 .end method
 
@@ -7034,44 +7070,43 @@
 
     if-eqz v4, :cond_6f
 
-    iget-object v4, p1, Lorg/telegram/messenger/DownloadController$Preset;->sizes:[I
+    iget-object v4, p1, Lorg/telegram/messenger/DownloadController$Preset;->sizes:[J
 
-    aget v4, v4, v2
+    aget-wide v7, v4, v2
 
-    goto :goto_70
+    long-to-int v2, v7
 
     :cond_6f
-    const/4 v4, 0x0
+    iput v2, v3, Lorg/telegram/tgnet/TLRPC$TL_autoDownloadSettings;->photo_size_max:I
 
-    :goto_70
-    iput v4, v3, Lorg/telegram/tgnet/TLRPC$TL_autoDownloadSettings;->photo_size_max:I
+    const-wide/16 v7, 0x0
 
-    if-eqz v5, :cond_79
+    if-eqz v5, :cond_7a
 
     .line 772
-    iget-object v4, p1, Lorg/telegram/messenger/DownloadController$Preset;->sizes:[I
+    iget-object v2, p1, Lorg/telegram/messenger/DownloadController$Preset;->sizes:[J
 
-    aget v1, v4, v1
+    aget-wide v1, v2, v1
 
-    goto :goto_7a
+    goto :goto_7b
 
-    :cond_79
-    const/4 v1, 0x0
+    :cond_7a
+    move-wide v1, v7
 
-    :goto_7a
-    iput v1, v3, Lorg/telegram/tgnet/TLRPC$TL_autoDownloadSettings;->video_size_max:I
+    :goto_7b
+    iput-wide v1, v3, Lorg/telegram/tgnet/TLRPC$TL_autoDownloadSettings;->video_size_max:J
 
-    if-eqz v6, :cond_83
+    if-eqz v6, :cond_84
 
     .line 773
-    iget-object p1, p1, Lorg/telegram/messenger/DownloadController$Preset;->sizes:[I
+    iget-object p1, p1, Lorg/telegram/messenger/DownloadController$Preset;->sizes:[J
 
     const/4 v1, 0x2
 
-    aget v2, p1, v1
+    aget-wide v7, p1, v1
 
-    :cond_83
-    iput v2, v3, Lorg/telegram/tgnet/TLRPC$TL_autoDownloadSettings;->file_size_max:I
+    :cond_84
+    iput-wide v7, v3, Lorg/telegram/tgnet/TLRPC$TL_autoDownloadSettings;->file_size_max:J
 
     .line 774
     invoke-virtual {p0}, Lorg/telegram/messenger/BaseController;->getConnectionsManager()Lorg/telegram/tgnet/ConnectionsManager;

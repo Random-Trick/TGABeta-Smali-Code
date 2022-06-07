@@ -25,7 +25,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 32637
+    .line 33086
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -34,7 +34,7 @@
 .method public static TLdeserialize(Lorg/telegram/tgnet/AbstractSerializedData;IZ)Lorg/telegram/tgnet/TLRPC$TL_secureData;
     .registers 4
 
-    .line 32645
+    .line 33094
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_secureData;->constructor:I
 
     if-eq v0, p1, :cond_1e
@@ -45,7 +45,7 @@
 
     return-object p0
 
-    .line 32647
+    .line 33096
     :cond_8
     new-instance p0, Ljava/lang/RuntimeException;
 
@@ -71,13 +71,13 @@
 
     throw p0
 
-    .line 32652
+    .line 33101
     :cond_1e
     new-instance p1, Lorg/telegram/tgnet/TLRPC$TL_secureData;
 
     invoke-direct {p1}, Lorg/telegram/tgnet/TLRPC$TL_secureData;-><init>()V
 
-    .line 32653
+    .line 33102
     invoke-virtual {p1, p0, p2}, Lorg/telegram/tgnet/TLRPC$TL_secureData;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
     return-object p1
@@ -88,21 +88,21 @@
 .method public readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
     .registers 4
 
-    .line 32658
+    .line 33107
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readByteArray(Z)[B
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_secureData;->data:[B
 
-    .line 32659
+    .line 33108
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readByteArray(Z)[B
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_secureData;->data_hash:[B
 
-    .line 32660
+    .line 33109
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readByteArray(Z)[B
 
     move-result-object p1
@@ -115,22 +115,22 @@
 .method public serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
     .registers 3
 
-    .line 32664
+    .line 33113
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_secureData;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 32665
+    .line 33114
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_secureData;->data:[B
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeByteArray([B)V
 
-    .line 32666
+    .line 33115
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_secureData;->data_hash:[B
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeByteArray([B)V
 
-    .line 32667
+    .line 33116
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_secureData;->secret:[B
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeByteArray([B)V

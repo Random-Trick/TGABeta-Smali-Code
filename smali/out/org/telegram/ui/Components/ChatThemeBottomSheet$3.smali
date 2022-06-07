@@ -3,12 +3,12 @@
 .source "ChatThemeBottomSheet.java"
 
 # interfaces
-.implements Lorg/telegram/tgnet/ResultCallback;
+.implements Ljava/lang/Runnable;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lorg/telegram/ui/Components/ChatThemeBottomSheet;->onCreate(Landroid/os/Bundle;)V
+    value = Lorg/telegram/ui/Components/ChatThemeBottomSheet;->lambda$new$1(Lorg/telegram/ui/ChatActivity$ThemeDelegate;Landroid/view/View;I)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -16,27 +16,21 @@
     name = null
 .end annotation
 
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Object;",
-        "Lorg/telegram/tgnet/ResultCallback<",
-        "Ljava/util/List<",
-        "Lorg/telegram/ui/ActionBar/EmojiThemes;",
-        ">;>;"
-    }
-.end annotation
-
 
 # instance fields
 .field final synthetic this$0:Lorg/telegram/ui/Components/ChatThemeBottomSheet;
 
+.field final synthetic val$position:I
+
 
 # direct methods
-.method constructor <init>(Lorg/telegram/ui/Components/ChatThemeBottomSheet;)V
-    .registers 2
+.method constructor <init>(Lorg/telegram/ui/Components/ChatThemeBottomSheet;I)V
+    .registers 3
 
-    .line 250
+    .line 185
     iput-object p1, p0, Lorg/telegram/ui/Components/ChatThemeBottomSheet$3;->this$0:Lorg/telegram/ui/Components/ChatThemeBottomSheet;
+
+    iput p2, p0, Lorg/telegram/ui/Components/ChatThemeBottomSheet$3;->val$position:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -45,74 +39,96 @@
 
 
 # virtual methods
-.method public bridge synthetic onComplete(Ljava/lang/Object;)V
-    .registers 2
-
-    .line 250
-    check-cast p1, Ljava/util/List;
-
-    invoke-virtual {p0, p1}, Lorg/telegram/ui/Components/ChatThemeBottomSheet$3;->onComplete(Ljava/util/List;)V
-
-    return-void
-.end method
-
-.method public onComplete(Ljava/util/List;)V
-    .registers 3
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/List<",
-            "Lorg/telegram/ui/ActionBar/EmojiThemes;",
-            ">;)V"
-        }
-    .end annotation
-
-    if-eqz p1, :cond_11
-
-    .line 253
-    invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
-
-    move-result v0
-
-    if-nez v0, :cond_11
-
-    .line 254
-    iget-object v0, p0, Lorg/telegram/ui/Components/ChatThemeBottomSheet$3;->this$0:Lorg/telegram/ui/Components/ChatThemeBottomSheet;
-
-    invoke-static {v0}, Lorg/telegram/ui/Components/ChatThemeBottomSheet;->access$000(Lorg/telegram/ui/Components/ChatThemeBottomSheet;)Lorg/telegram/ui/ChatActivity$ThemeDelegate;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Lorg/telegram/ui/ChatActivity$ThemeDelegate;->setCachedThemes(Ljava/util/List;)V
-
-    .line 256
-    :cond_11
-    iget-object v0, p0, Lorg/telegram/ui/Components/ChatThemeBottomSheet$3;->this$0:Lorg/telegram/ui/Components/ChatThemeBottomSheet;
-
-    invoke-static {v0, p1}, Lorg/telegram/ui/Components/ChatThemeBottomSheet;->access$100(Lorg/telegram/ui/Components/ChatThemeBottomSheet;Ljava/util/List;)V
-
-    return-void
-.end method
-
-.method public onError(Lorg/telegram/tgnet/TLRPC$TL_error;)V
+.method public run()V
     .registers 4
 
-    .line 261
+    .line 188
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatThemeBottomSheet$3;->this$0:Lorg/telegram/ui/Components/ChatThemeBottomSheet;
 
-    invoke-virtual {v0}, Landroid/app/Dialog;->getContext()Landroid/content/Context;
+    invoke-static {v0}, Lorg/telegram/ui/Components/ChatThemeBottomSheet;->access$1500(Lorg/telegram/ui/Components/ChatThemeBottomSheet;)Lorg/telegram/ui/Components/RecyclerListView;
 
     move-result-object v0
 
-    iget-object p1, p1, Lorg/telegram/tgnet/TLRPC$TL_error;->text:Ljava/lang/String;
+    invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView;->getLayoutManager()Landroidx/recyclerview/widget/RecyclerView$LayoutManager;
 
-    const/4 v1, 0x0
+    move-result-object v0
 
-    invoke-static {v0, p1, v1}, Landroid/widget/Toast;->makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;
+    if-eqz v0, :cond_48
 
-    move-result-object p1
+    .line 190
+    iget v1, p0, Lorg/telegram/ui/Components/ChatThemeBottomSheet$3;->val$position:I
 
-    invoke-virtual {p1}, Landroid/widget/Toast;->show()V
+    iget-object v2, p0, Lorg/telegram/ui/Components/ChatThemeBottomSheet$3;->this$0:Lorg/telegram/ui/Components/ChatThemeBottomSheet;
+
+    invoke-static {v2}, Lorg/telegram/ui/Components/ChatThemeBottomSheet;->access$1600(Lorg/telegram/ui/Components/ChatThemeBottomSheet;)I
+
+    move-result v2
+
+    if-le v1, v2, :cond_2d
+
+    .line 191
+    iget v1, p0, Lorg/telegram/ui/Components/ChatThemeBottomSheet$3;->val$position:I
+
+    add-int/lit8 v1, v1, 0x1
+
+    iget-object v2, p0, Lorg/telegram/ui/Components/ChatThemeBottomSheet$3;->this$0:Lorg/telegram/ui/Components/ChatThemeBottomSheet;
+
+    invoke-static {v2}, Lorg/telegram/ui/Components/ChatThemeBottomSheet;->access$1700(Lorg/telegram/ui/Components/ChatThemeBottomSheet;)Lorg/telegram/ui/Components/ChatThemeBottomSheet$Adapter;
+
+    move-result-object v2
+
+    iget-object v2, v2, Lorg/telegram/ui/Components/ChatThemeBottomSheet$Adapter;->items:Ljava/util/List;
+
+    invoke-interface {v2}, Ljava/util/List;->size()I
+
+    move-result v2
+
+    add-int/lit8 v2, v2, -0x1
+
+    invoke-static {v1, v2}, Ljava/lang/Math;->min(II)I
+
+    move-result v1
+
+    goto :goto_36
+
+    .line 192
+    :cond_2d
+    iget v1, p0, Lorg/telegram/ui/Components/ChatThemeBottomSheet$3;->val$position:I
+
+    add-int/lit8 v1, v1, -0x1
+
+    const/4 v2, 0x0
+
+    invoke-static {v1, v2}, Ljava/lang/Math;->max(II)I
+
+    move-result v1
+
+    .line 193
+    :goto_36
+    iget-object v2, p0, Lorg/telegram/ui/Components/ChatThemeBottomSheet$3;->this$0:Lorg/telegram/ui/Components/ChatThemeBottomSheet;
+
+    invoke-static {v2}, Lorg/telegram/ui/Components/ChatThemeBottomSheet;->access$1800(Lorg/telegram/ui/Components/ChatThemeBottomSheet;)Landroidx/recyclerview/widget/LinearSmoothScroller;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v1}, Landroidx/recyclerview/widget/RecyclerView$SmoothScroller;->setTargetPosition(I)V
+
+    .line 194
+    iget-object v1, p0, Lorg/telegram/ui/Components/ChatThemeBottomSheet$3;->this$0:Lorg/telegram/ui/Components/ChatThemeBottomSheet;
+
+    invoke-static {v1}, Lorg/telegram/ui/Components/ChatThemeBottomSheet;->access$1800(Lorg/telegram/ui/Components/ChatThemeBottomSheet;)Landroidx/recyclerview/widget/LinearSmoothScroller;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->startSmoothScroll(Landroidx/recyclerview/widget/RecyclerView$SmoothScroller;)V
+
+    .line 196
+    :cond_48
+    iget-object v0, p0, Lorg/telegram/ui/Components/ChatThemeBottomSheet$3;->this$0:Lorg/telegram/ui/Components/ChatThemeBottomSheet;
+
+    iget v1, p0, Lorg/telegram/ui/Components/ChatThemeBottomSheet$3;->val$position:I
+
+    invoke-static {v0, v1}, Lorg/telegram/ui/Components/ChatThemeBottomSheet;->access$1602(Lorg/telegram/ui/Components/ChatThemeBottomSheet;I)I
 
     return-void
 .end method

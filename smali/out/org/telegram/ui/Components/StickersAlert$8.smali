@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/StickersAlert;)V
     .registers 2
 
-    .line 645
+    .line 670
     iput-object p1, p0, Lorg/telegram/ui/Components/StickersAlert$8;->this$0:Lorg/telegram/ui/Components/StickersAlert;
 
     invoke-direct {p0}, Landroidx/recyclerview/widget/RecyclerView$OnScrollListener;-><init>()V
@@ -35,7 +35,7 @@
 .method public onScrolled(Landroidx/recyclerview/widget/RecyclerView;II)V
     .registers 4
 
-    .line 648
+    .line 673
     iget-object p1, p0, Lorg/telegram/ui/Components/StickersAlert$8;->this$0:Lorg/telegram/ui/Components/StickersAlert;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/StickersAlert;->access$2100(Lorg/telegram/ui/Components/StickersAlert;)V

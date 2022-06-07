@@ -31,7 +31,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/ChatActivityEnterView;Landroid/app/Activity;Lorg/telegram/ui/ChatActivity;)V
     .registers 4
 
-    .line 2505
+    .line 2520
     iput-object p1, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$20;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     iput-object p2, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$20;->val$context:Landroid/app/Activity;
@@ -48,7 +48,7 @@
 .method public onClick(Landroid/view/View;)V
     .registers 7
 
-    .line 2511
+    .line 2526
     iget-object p1, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$20;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$8900(Lorg/telegram/ui/Components/ChatActivityEnterView;)Z
@@ -61,7 +61,7 @@
 
     invoke-static {p1, v0}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$8902(Lorg/telegram/ui/Components/ChatActivityEnterView;Z)Z
 
-    .line 2512
+    .line 2527
     iget-object p1, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$20;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$9000(Lorg/telegram/ui/Components/ChatActivityEnterView;)Lorg/telegram/ui/Components/CrossOutDrawable;
@@ -70,14 +70,14 @@
 
     if-nez p1, :cond_24
 
-    .line 2513
+    .line 2528
     iget-object p1, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$20;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     new-instance v0, Lorg/telegram/ui/Components/CrossOutDrawable;
 
     iget-object v2, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$20;->val$context:Landroid/app/Activity;
 
-    const v3, 0x7f07018d
+    const v3, 0x7f070164
 
     const-string v4, "chat_messagePanelIcons"
 
@@ -85,7 +85,7 @@
 
     invoke-static {p1, v0}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$9002(Lorg/telegram/ui/Components/ChatActivityEnterView;Lorg/telegram/ui/Components/CrossOutDrawable;)Lorg/telegram/ui/Components/CrossOutDrawable;
 
-    .line 2515
+    .line 2530
     :cond_24
     iget-object p1, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$20;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
@@ -101,7 +101,7 @@
 
     invoke-virtual {p1, v0, v1}, Lorg/telegram/ui/Components/CrossOutDrawable;->setCrossOut(ZZ)V
 
-    .line 2516
+    .line 2531
     iget-object p1, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$20;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$9100(Lorg/telegram/ui/Components/ChatActivityEnterView;)Landroid/widget/ImageView;
@@ -116,7 +116,7 @@
 
     invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 2517
+    .line 2532
     iget-object p1, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$20;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$2800(Lorg/telegram/ui/Components/ChatActivityEnterView;)I
@@ -163,7 +163,7 @@
 
     invoke-interface {p1}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 2518
+    .line 2533
     iget-object p1, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$20;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$2800(Lorg/telegram/ui/Components/ChatActivityEnterView;)I
@@ -182,13 +182,13 @@
 
     invoke-virtual {p1, v2, v3}, Lorg/telegram/messenger/NotificationsController;->updateServerNotificationsSettings(J)V
 
-    .line 2520
+    .line 2535
     :try_start_87
     iget-object p1, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$20;->visibleToast:Landroid/widget/Toast;
 
     if-eqz p1, :cond_93
 
-    .line 2521
+    .line 2536
     invoke-virtual {p1}, Landroid/widget/Toast;->cancel()V
     :try_end_8e
     .catch Ljava/lang/Exception; {:try_start_87 .. :try_end_8e} :catch_8f
@@ -198,10 +198,10 @@
     :catch_8f
     move-exception p1
 
-    .line 2524
+    .line 2539
     invoke-static {p1}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
-    .line 2526
+    .line 2541
     :cond_93
     :goto_93
     iget-object p1, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$20;->val$fragment:Lorg/telegram/ui/ChatActivity;
@@ -232,7 +232,7 @@
 
     invoke-virtual {p1, v2, v3, v0, v4}, Lorg/telegram/ui/Components/UndoView;->showWithAction(JILjava/lang/Runnable;)V
 
-    .line 2527
+    .line 2542
     iget-object p1, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$20;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$9100(Lorg/telegram/ui/Components/ChatActivityEnterView;)Landroid/widget/ImageView;
@@ -247,14 +247,14 @@
 
     if-eqz v0, :cond_c0
 
-    const v0, 0x7f0e001b
+    const v0, 0x7f0e0020
 
     const-string v2, "AccDescrChanSilentOn"
 
     goto :goto_c5
 
     :cond_c0
-    const v0, 0x7f0e001a
+    const v0, 0x7f0e001f
 
     const-string v2, "AccDescrChanSilentOff"
 
@@ -265,7 +265,7 @@
 
     invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setContentDescription(Ljava/lang/CharSequence;)V
 
-    .line 2528
+    .line 2543
     iget-object p1, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$20;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-virtual {p1, v1}, Lorg/telegram/ui/Components/ChatActivityEnterView;->updateFieldHint(Z)V

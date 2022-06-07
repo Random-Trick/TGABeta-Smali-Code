@@ -167,7 +167,7 @@
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Lorg/telegram/tgnet/TLRPC$TL_chatInviteExported;Lorg/telegram/tgnet/TLRPC$ChatFull;Ljava/util/HashMap;Lorg/telegram/ui/ActionBar/BaseFragment;JZZ)V
-    .registers 29
+    .registers 28
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -324,44 +324,44 @@
     .line 215
     invoke-static {v9}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
-    move-result v10
+    move-result v9
 
-    iput v10, v8, Landroid/widget/FrameLayout$LayoutParams;->topMargin:I
+    iput v9, v8, Landroid/widget/FrameLayout$LayoutParams;->topMargin:I
 
     .line 216
-    new-instance v10, Landroid/view/View;
+    new-instance v9, Landroid/view/View;
 
-    invoke-direct {v10, v1}, Landroid/view/View;-><init>(Landroid/content/Context;)V
+    invoke-direct {v9, v1}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
-    iput-object v10, v0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->shadow:Landroid/view/View;
+    iput-object v9, v0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->shadow:Landroid/view/View;
 
-    const/4 v11, 0x0
+    const/4 v10, 0x0
 
     .line 217
-    invoke-virtual {v10, v11}, Landroid/view/View;->setAlpha(F)V
+    invoke-virtual {v9, v10}, Landroid/view/View;->setAlpha(F)V
 
     .line 218
-    iget-object v10, v0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->shadow:Landroid/view/View;
+    iget-object v9, v0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->shadow:Landroid/view/View;
 
-    const/4 v12, 0x4
+    const/4 v11, 0x4
 
-    invoke-virtual {v10, v12}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v9, v11}, Landroid/view/View;->setVisibility(I)V
 
     .line 219
-    iget-object v10, v0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->shadow:Landroid/view/View;
+    iget-object v9, v0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->shadow:Landroid/view/View;
 
     invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v13
+    move-result-object v12
 
-    invoke-virtual {v10, v13}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
+    invoke-virtual {v9, v12}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
     .line 220
-    iget-object v10, v0, Lorg/telegram/ui/ActionBar/BottomSheet;->containerView:Landroid/view/ViewGroup;
+    iget-object v9, v0, Lorg/telegram/ui/ActionBar/BottomSheet;->containerView:Landroid/view/ViewGroup;
 
-    iget-object v13, v0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->shadow:Landroid/view/View;
+    iget-object v12, v0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->shadow:Landroid/view/View;
 
-    invoke-virtual {v10, v13, v8}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {v9, v12, v8}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 222
     new-instance v8, Lorg/telegram/ui/Components/InviteLinkBottomSheet$2;
@@ -370,74 +370,74 @@
 
     iput-object v8, v0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
-    const/16 v10, 0xe
+    const/16 v9, 0xe
 
     .line 259
-    invoke-static {v10}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v9}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v10
+    move-result-object v9
 
-    invoke-virtual {v8, v10}, Landroid/view/ViewGroup;->setTag(Ljava/lang/Object;)V
+    invoke-virtual {v8, v9}, Landroid/view/ViewGroup;->setTag(Ljava/lang/Object;)V
 
     .line 260
     new-instance v8, Landroidx/recyclerview/widget/LinearLayoutManager;
 
     invoke-virtual/range {p0 .. p0}, Landroid/app/Dialog;->getContext()Landroid/content/Context;
 
-    move-result-object v10
+    move-result-object v9
 
-    invoke-direct {v8, v10, v7, v6}, Landroidx/recyclerview/widget/LinearLayoutManager;-><init>(Landroid/content/Context;IZ)V
+    invoke-direct {v8, v9, v7, v6}, Landroidx/recyclerview/widget/LinearLayoutManager;-><init>(Landroid/content/Context;IZ)V
 
     .line 261
-    iget-object v10, v0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->listView:Lorg/telegram/ui/Components/RecyclerListView;
+    iget-object v9, v0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
-    invoke-virtual {v10, v8}, Landroidx/recyclerview/widget/RecyclerView;->setLayoutManager(Landroidx/recyclerview/widget/RecyclerView$LayoutManager;)V
+    invoke-virtual {v9, v8}, Landroidx/recyclerview/widget/RecyclerView;->setLayoutManager(Landroidx/recyclerview/widget/RecyclerView$LayoutManager;)V
 
     .line 262
-    iget-object v10, v0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->listView:Lorg/telegram/ui/Components/RecyclerListView;
+    iget-object v9, v0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
-    new-instance v13, Lorg/telegram/ui/Components/InviteLinkBottomSheet$Adapter;
+    new-instance v12, Lorg/telegram/ui/Components/InviteLinkBottomSheet$Adapter;
 
-    const/4 v14, 0x0
+    const/4 v13, 0x0
 
-    invoke-direct {v13, v0, v14}, Lorg/telegram/ui/Components/InviteLinkBottomSheet$Adapter;-><init>(Lorg/telegram/ui/Components/InviteLinkBottomSheet;Lorg/telegram/ui/Components/InviteLinkBottomSheet$1;)V
+    invoke-direct {v12, v0, v13}, Lorg/telegram/ui/Components/InviteLinkBottomSheet$Adapter;-><init>(Lorg/telegram/ui/Components/InviteLinkBottomSheet;Lorg/telegram/ui/Components/InviteLinkBottomSheet$1;)V
 
-    iput-object v13, v0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->adapter:Lorg/telegram/ui/Components/InviteLinkBottomSheet$Adapter;
+    iput-object v12, v0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->adapter:Lorg/telegram/ui/Components/InviteLinkBottomSheet$Adapter;
 
-    invoke-virtual {v10, v13}, Lorg/telegram/ui/Components/RecyclerListView;->setAdapter(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
+    invoke-virtual {v9, v12}, Lorg/telegram/ui/Components/RecyclerListView;->setAdapter(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
     .line 263
-    iget-object v10, v0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->listView:Lorg/telegram/ui/Components/RecyclerListView;
+    iget-object v9, v0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
-    invoke-virtual {v10, v6}, Lorg/telegram/ui/Components/RecyclerListView;->setVerticalScrollBarEnabled(Z)V
+    invoke-virtual {v9, v6}, Lorg/telegram/ui/Components/RecyclerListView;->setVerticalScrollBarEnabled(Z)V
 
     .line 264
-    iget-object v10, v0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->listView:Lorg/telegram/ui/Components/RecyclerListView;
+    iget-object v9, v0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
-    invoke-virtual {v10, v6}, Landroidx/recyclerview/widget/RecyclerView;->setClipToPadding(Z)V
+    invoke-virtual {v9, v6}, Landroidx/recyclerview/widget/RecyclerView;->setClipToPadding(Z)V
 
     .line 265
-    iget-object v10, v0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->listView:Lorg/telegram/ui/Components/RecyclerListView;
+    iget-object v9, v0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
-    invoke-virtual {v10, v7}, Landroidx/recyclerview/widget/RecyclerView;->setNestedScrollingEnabled(Z)V
+    invoke-virtual {v9, v7}, Landroidx/recyclerview/widget/RecyclerView;->setNestedScrollingEnabled(Z)V
 
     .line 266
-    iget-object v10, v0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->listView:Lorg/telegram/ui/Components/RecyclerListView;
+    iget-object v9, v0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
-    new-instance v13, Lorg/telegram/ui/Components/InviteLinkBottomSheet$3;
+    new-instance v12, Lorg/telegram/ui/Components/InviteLinkBottomSheet$3;
 
-    invoke-direct {v13, v0, v8}, Lorg/telegram/ui/Components/InviteLinkBottomSheet$3;-><init>(Lorg/telegram/ui/Components/InviteLinkBottomSheet;Landroidx/recyclerview/widget/LinearLayoutManager;)V
+    invoke-direct {v12, v0, v8}, Lorg/telegram/ui/Components/InviteLinkBottomSheet$3;-><init>(Lorg/telegram/ui/Components/InviteLinkBottomSheet;Landroidx/recyclerview/widget/LinearLayoutManager;)V
 
-    invoke-virtual {v10, v13}, Lorg/telegram/ui/Components/RecyclerListView;->setOnScrollListener(Landroidx/recyclerview/widget/RecyclerView$OnScrollListener;)V
+    invoke-virtual {v9, v12}, Lorg/telegram/ui/Components/RecyclerListView;->setOnScrollListener(Landroidx/recyclerview/widget/RecyclerView$OnScrollListener;)V
 
     .line 278
     iget-object v8, v0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
-    new-instance v10, Lorg/telegram/ui/Components/InviteLinkBottomSheet$$ExternalSyntheticLambda4;
+    new-instance v9, Lorg/telegram/ui/Components/InviteLinkBottomSheet$$ExternalSyntheticLambda4;
 
-    invoke-direct {v10, v0, v2, v3, v4}, Lorg/telegram/ui/Components/InviteLinkBottomSheet$$ExternalSyntheticLambda4;-><init>(Lorg/telegram/ui/Components/InviteLinkBottomSheet;Lorg/telegram/tgnet/TLRPC$TL_chatInviteExported;Ljava/util/HashMap;Lorg/telegram/ui/ActionBar/BaseFragment;)V
+    invoke-direct {v9, v0, v2, v3, v4}, Lorg/telegram/ui/Components/InviteLinkBottomSheet$$ExternalSyntheticLambda4;-><init>(Lorg/telegram/ui/Components/InviteLinkBottomSheet;Lorg/telegram/tgnet/TLRPC$TL_chatInviteExported;Ljava/util/HashMap;Lorg/telegram/ui/ActionBar/BaseFragment;)V
 
-    invoke-virtual {v8, v10}, Lorg/telegram/ui/Components/RecyclerListView;->setOnItemClickListener(Lorg/telegram/ui/Components/RecyclerListView$OnItemClickListener;)V
+    invoke-virtual {v8, v9}, Lorg/telegram/ui/Components/RecyclerListView;->setOnItemClickListener(Lorg/telegram/ui/Components/RecyclerListView$OnItemClickListener;)V
 
     .line 306
     new-instance v4, Landroid/widget/TextView;
@@ -471,7 +471,7 @@
     .line 311
     iget-object v1, v0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->titleTextView:Landroid/widget/TextView;
 
-    const/high16 v4, 0x41900000    # 18.0f
+    const/high16 v4, 0x41b80000    # 23.0f
 
     invoke-static {v4}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
@@ -501,7 +501,7 @@
 
     invoke-virtual {v1, v4}, Landroid/widget/TextView;->setTypeface(Landroid/graphics/Typeface;)V
 
-    const v1, 0x7f0e08b1
+    const v1, 0x7f0e090e
 
     const-string v4, "InviteLink"
 
@@ -515,7 +515,7 @@
     .line 316
     iget-object v1, v0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->titleTextView:Landroid/widget/TextView;
 
-    const v4, 0x7f0e06e4
+    const v4, 0x7f0e0736
 
     const-string v5, "ExpiredLink"
 
@@ -536,7 +536,7 @@
     .line 318
     iget-object v1, v0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->titleTextView:Landroid/widget/TextView;
 
-    const v4, 0x7f0e0f51
+    const v4, 0x7f0e1009
 
     const-string v5, "RevokedLink"
 
@@ -580,12 +580,12 @@
     .line 326
     iget-object v1, v0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->titleTextView:Landroid/widget/TextView;
 
-    invoke-virtual {v1, v12}, Landroid/widget/TextView;->setVisibility(I)V
+    invoke-virtual {v1, v11}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 327
     iget-object v1, v0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->titleTextView:Landroid/widget/TextView;
 
-    invoke-virtual {v1, v11}, Landroid/widget/TextView;->setAlpha(F)V
+    invoke-virtual {v1, v10}, Landroid/widget/TextView;->setAlpha(F)V
 
     .line 329
     :goto_179
@@ -640,31 +640,33 @@
 
     iget-object v4, v0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
-    const/4 v12, -0x1
+    const/4 v11, -0x1
 
-    const/high16 v13, -0x40800000    # -1.0f
+    const/high16 v12, -0x40800000    # -1.0f
 
-    const/16 v14, 0x33
+    const/16 v13, 0x33
 
-    const/4 v15, 0x0
+    const/4 v14, 0x0
 
     iget-boolean v5, v0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->titleVisible:Z
 
-    if-nez v5, :cond_1b6
+    const/high16 v6, 0x42300000    # 44.0f
 
+    if-nez v5, :cond_1b7
+
+    const/4 v15, 0x0
+
+    goto :goto_1b9
+
+    :cond_1b7
+    const/high16 v15, 0x42300000    # 44.0f
+
+    :goto_1b9
     const/16 v16, 0x0
 
-    goto :goto_1b8
-
-    :cond_1b6
-    const/high16 v16, 0x42400000    # 48.0f
-
-    :goto_1b8
     const/16 v17, 0x0
 
-    const/16 v18, 0x0
-
-    invoke-static/range {v12 .. v18}, Lorg/telegram/ui/Components/LayoutHelper;->createFrame(IFIFFFF)Landroid/widget/FrameLayout$LayoutParams;
+    invoke-static/range {v11 .. v17}, Lorg/telegram/ui/Components/LayoutHelper;->createFrame(IFIFFFF)Landroid/widget/FrameLayout$LayoutParams;
 
     move-result-object v5
 
@@ -675,33 +677,33 @@
 
     iget-object v4, v0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->titleTextView:Landroid/widget/TextView;
 
-    const/4 v10, -0x1
+    const/4 v7, -0x1
 
     iget-boolean v5, v0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->titleVisible:Z
 
-    if-nez v5, :cond_1cf
+    if-nez v5, :cond_1d0
 
-    const/high16 v11, 0x42400000    # 48.0f
+    const/high16 v8, 0x42300000    # 44.0f
 
-    goto :goto_1d3
+    goto :goto_1d4
 
-    :cond_1cf
-    const/high16 v9, 0x42480000    # 50.0f
+    :cond_1d0
+    const/high16 v6, 0x42480000    # 50.0f
 
-    const/high16 v11, 0x42480000    # 50.0f
+    const/high16 v8, 0x42480000    # 50.0f
 
-    :goto_1d3
-    const/16 v12, 0x33
+    :goto_1d4
+    const/16 v9, 0x33
+
+    const/4 v10, 0x0
+
+    const/4 v11, 0x0
+
+    const/4 v12, 0x0
 
     const/4 v13, 0x0
 
-    const/4 v14, 0x0
-
-    const/4 v15, 0x0
-
-    const/16 v16, 0x0
-
-    invoke-static/range {v10 .. v16}, Lorg/telegram/ui/Components/LayoutHelper;->createFrame(IFIFFFF)Landroid/widget/FrameLayout$LayoutParams;
+    invoke-static/range {v7 .. v13}, Lorg/telegram/ui/Components/LayoutHelper;->createFrame(IFIFFFF)Landroid/widget/FrameLayout$LayoutParams;
 
     move-result-object v5
 
@@ -1074,17 +1076,17 @@
 
     if-nez p1, :cond_46
 
-    .line 944
+    .line 945
     check-cast p2, Lorg/telegram/tgnet/TLRPC$TL_messages_chatInviteImporters;
 
-    .line 945
+    .line 946
     iget-object p1, p2, Lorg/telegram/tgnet/TLRPC$TL_messages_chatInviteImporters;->importers:Ljava/util/ArrayList;
 
     invoke-interface {p3, p1}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
     const/4 p1, 0x0
 
-    .line 946
+    .line 947
     :goto_b
     iget-object v1, p2, Lorg/telegram/tgnet/TLRPC$TL_messages_chatInviteImporters;->users:Ljava/util/ArrayList;
 
@@ -1094,7 +1096,7 @@
 
     if-ge p1, v1, :cond_29
 
-    .line 947
+    .line 948
     iget-object v1, p2, Lorg/telegram/tgnet/TLRPC$TL_messages_chatInviteImporters;->users:Ljava/util/ArrayList;
 
     invoke-virtual {v1, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1103,7 +1105,7 @@
 
     check-cast v1, Lorg/telegram/tgnet/TLRPC$User;
 
-    .line 948
+    .line 949
     iget-object v2, p0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->users:Ljava/util/HashMap;
 
     iget-wide v3, v1, Lorg/telegram/tgnet/TLRPC$User;->id:J
@@ -1123,7 +1125,7 @@
 
     if-eqz p4, :cond_37
 
-    .line 951
+    .line 952
     invoke-interface {p3}, Ljava/util/List;->size()I
 
     move-result p3
@@ -1139,7 +1141,7 @@
 
     goto :goto_41
 
-    .line 952
+    .line 953
     :cond_37
     invoke-interface {p3}, Ljava/util/List;->size()I
 
@@ -1155,10 +1157,10 @@
     :goto_41
     iput-boolean p1, p0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->hasMore:Z
 
-    .line 953
+    .line 954
     invoke-direct {p0}, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->updateRows()V
 
-    .line 955
+    .line 956
     :cond_46
     iput-boolean v0, p0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->usersLoading:Z
 
@@ -1168,7 +1170,7 @@
 .method private synthetic lambda$loadUsers$4(Ljava/util/List;ZZLorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/TLRPC$TL_error;)V
     .registers 14
 
-    .line 942
+    .line 943
     new-instance v7, Lorg/telegram/ui/Components/InviteLinkBottomSheet$$ExternalSyntheticLambda0;
 
     move-object v0, v7
@@ -1420,7 +1422,7 @@
 
     if-eqz p1, :cond_a
 
-    .line 873
+    .line 874
     iget-object v0, p0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->shadow:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->getTag()Ljava/lang/Object;
@@ -1440,7 +1442,7 @@
 
     if-nez v0, :cond_8c
 
-    .line 874
+    .line 875
     :cond_14
     iget-object v0, p0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->shadow:Landroid/view/View;
 
@@ -1464,26 +1466,26 @@
 
     if-eqz p1, :cond_2f
 
-    .line 876
+    .line 877
     iget-object v2, p0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->shadow:Landroid/view/View;
 
     invoke-virtual {v2, v0}, Landroid/view/View;->setVisibility(I)V
 
-    .line 877
+    .line 878
     iget-object v2, p0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->titleTextView:Landroid/widget/TextView;
 
     invoke-virtual {v2, v0}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 879
+    .line 880
     :cond_2f
     iget-object v2, p0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->shadowAnimation:Landroid/animation/AnimatorSet;
 
     if-eqz v2, :cond_36
 
-    .line 880
+    .line 881
     invoke-virtual {v2}, Landroid/animation/AnimatorSet;->cancel()V
 
-    .line 882
+    .line 883
     :cond_36
     new-instance v2, Landroid/animation/AnimatorSet;
 
@@ -1493,7 +1495,7 @@
 
     new-array v3, v1, [Landroid/animation/Animator;
 
-    .line 883
+    .line 884
     iget-object v4, p0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->shadow:Landroid/view/View;
 
     sget-object v5, Landroid/view/View;->ALPHA:Landroid/util/Property;
@@ -1524,12 +1526,12 @@
 
     invoke-virtual {v2, v3}, Landroid/animation/AnimatorSet;->playTogether([Landroid/animation/Animator;)V
 
-    .line 884
+    .line 885
     iget-boolean v2, p0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->titleVisible:Z
 
     if-nez v2, :cond_76
 
-    .line 885
+    .line 886
     iget-object v2, p0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->shadowAnimation:Landroid/animation/AnimatorSet;
 
     new-array v3, v1, [Landroid/animation/Animator;
@@ -1558,7 +1560,7 @@
 
     invoke-virtual {v2, v3}, Landroid/animation/AnimatorSet;->playTogether([Landroid/animation/Animator;)V
 
-    .line 887
+    .line 888
     :cond_76
     iget-object v0, p0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->shadowAnimation:Landroid/animation/AnimatorSet;
 
@@ -1566,7 +1568,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/animation/AnimatorSet;->setDuration(J)Landroid/animation/AnimatorSet;
 
-    .line 888
+    .line 889
     iget-object v0, p0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->shadowAnimation:Landroid/animation/AnimatorSet;
 
     new-instance v1, Lorg/telegram/ui/Components/InviteLinkBottomSheet$5;
@@ -1575,7 +1577,7 @@
 
     invoke-virtual {v0, v1}, Landroid/animation/AnimatorSet;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 906
+    .line 907
     iget-object p1, p0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->shadowAnimation:Landroid/animation/AnimatorSet;
 
     invoke-virtual {p1}, Landroid/animation/AnimatorSet;->start()V
@@ -1590,7 +1592,7 @@
     .line 387
     instance-of v0, p1, Lorg/telegram/ui/Cells/HeaderCell;
 
-    const v1, 0x7f07012c
+    const v1, 0x7f0700fb
 
     const/4 v2, 0x1
 
@@ -1722,7 +1724,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f07012d
+    const v1, 0x7f0700fc
 
     invoke-static {v0, v1, v3}, Lorg/telegram/ui/ActionBar/Theme;->getThemedDrawable(Landroid/content/Context;ILjava/lang/String;)Landroid/graphics/drawable/Drawable;
 
@@ -1797,7 +1799,7 @@
 .method private updateLayout()V
     .registers 4
 
-    .line 845
+    .line 846
     iget-object v0, p0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     invoke-virtual {v0}, Landroid/view/ViewGroup;->getChildCount()I
@@ -1806,7 +1808,7 @@
 
     if-gtz v0, :cond_29
 
-    .line 846
+    .line 847
     iget-object v0, p0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     invoke-virtual {v0}, Landroid/view/ViewGroup;->getPaddingTop()I
@@ -1817,7 +1819,7 @@
 
     invoke-virtual {v0, v1}, Landroidx/recyclerview/widget/RecyclerView;->setTopGlowOffset(I)V
 
-    .line 847
+    .line 848
     iget-object v0, p0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->titleTextView:Landroid/widget/TextView;
 
     iget v1, p0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->scrollOffsetY:I
@@ -1826,7 +1828,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTranslationY(F)V
 
-    .line 848
+    .line 849
     iget-object v0, p0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->shadow:Landroid/view/View;
 
     iget v1, p0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->scrollOffsetY:I
@@ -1835,14 +1837,14 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setTranslationY(F)V
 
-    .line 849
+    .line 850
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/BottomSheet;->containerView:Landroid/view/ViewGroup;
 
     invoke-virtual {v0}, Landroid/view/ViewGroup;->invalidate()V
 
     return-void
 
-    .line 852
+    .line 853
     :cond_29
     iget-object v0, p0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
@@ -1852,7 +1854,7 @@
 
     move-result-object v0
 
-    .line 853
+    .line 854
     iget-object v2, p0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     invoke-virtual {v2, v0}, Landroidx/recyclerview/widget/RecyclerView;->findContainingViewHolder(Landroid/view/View;)Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
@@ -1861,7 +1863,7 @@
 
     check-cast v2, Lorg/telegram/ui/Components/RecyclerListView$Holder;
 
-    .line 854
+    .line 855
     invoke-virtual {v0}, Landroid/view/View;->getTop()I
 
     move-result v0
@@ -1870,14 +1872,14 @@
 
     if-eqz v2, :cond_4b
 
-    .line 856
+    .line 857
     invoke-virtual {v2}, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->getAdapterPosition()I
 
     move-result v2
 
     if-nez v2, :cond_4b
 
-    .line 858
+    .line 859
     invoke-direct {p0, v1}, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->runShadowAnimation(Z)V
 
     move v1, v0
@@ -1887,35 +1889,35 @@
     :cond_4b
     const/4 v0, 0x1
 
-    .line 860
+    .line 861
     invoke-direct {p0, v0}, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->runShadowAnimation(Z)V
 
-    .line 862
+    .line 863
     :goto_4f
     iget v0, p0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->scrollOffsetY:I
 
     if-eq v0, v1, :cond_71
 
-    .line 863
+    .line 864
     iget-object v0, p0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     iput v1, p0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->scrollOffsetY:I
 
     invoke-virtual {v0, v1}, Landroidx/recyclerview/widget/RecyclerView;->setTopGlowOffset(I)V
 
-    .line 864
+    .line 865
     iget-object v0, p0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->titleTextView:Landroid/widget/TextView;
 
     if-eqz v0, :cond_64
 
-    .line 865
+    .line 866
     iget v1, p0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->scrollOffsetY:I
 
     int-to-float v1, v1
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTranslationY(F)V
 
-    .line 867
+    .line 868
     :cond_64
     iget-object v0, p0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->shadow:Landroid/view/View;
 
@@ -1925,7 +1927,7 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setTranslationY(F)V
 
-    .line 868
+    .line 869
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/BottomSheet;->containerView:Landroid/view/ViewGroup;
 
     invoke-virtual {v0}, Landroid/view/ViewGroup;->invalidate()V
@@ -1935,7 +1937,7 @@
 .end method
 
 .method private updateRows()V
-    .registers 6
+    .registers 7
 
     const/4 v0, 0x0
 
@@ -2043,9 +2045,9 @@
 
     if-gtz v4, :cond_58
 
-    iget v4, v2, Lorg/telegram/tgnet/TLRPC$TL_chatInviteExported;->usage_limit:I
+    iget v5, v2, Lorg/telegram/tgnet/TLRPC$TL_chatInviteExported;->usage_limit:I
 
-    if-gtz v4, :cond_58
+    if-gtz v5, :cond_58
 
     iget v2, v2, Lorg/telegram/tgnet/TLRPC$TL_chatInviteExported;->requested:I
 
@@ -2062,119 +2064,159 @@
     :goto_58
     const/4 v2, 0x1
 
-    .line 468
+    .line 467
     :goto_59
-    iget-object v4, p0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->joinedUsers:Ljava/util/ArrayList;
+    iget-object v5, p0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->joinedUsers:Ljava/util/ArrayList;
 
-    invoke-virtual {v4}, Ljava/util/ArrayList;->isEmpty()Z
+    invoke-virtual {v5}, Ljava/util/ArrayList;->size()I
 
-    move-result v4
+    move-result v5
 
-    if-nez v4, :cond_83
+    if-gt v4, v5, :cond_74
+
+    iget-object v4, p0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->invite:Lorg/telegram/tgnet/TLRPC$TL_chatInviteExported;
+
+    iget-boolean v5, v4, Lorg/telegram/tgnet/TLRPC$TL_chatInviteExported;->request_needed:Z
+
+    if-eqz v5, :cond_72
+
+    iget v4, v4, Lorg/telegram/tgnet/TLRPC$TL_chatInviteExported;->requested:I
+
+    iget-object v5, p0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->requestedUsers:Ljava/util/ArrayList;
+
+    invoke-virtual {v5}, Ljava/util/ArrayList;->size()I
+
+    move-result v5
+
+    if-le v4, v5, :cond_72
+
+    goto :goto_74
+
+    :cond_72
+    const/4 v4, 0x0
+
+    goto :goto_75
+
+    :cond_74
+    :goto_74
+    const/4 v4, 0x1
 
     .line 469
+    :goto_75
+    iget-object v5, p0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->joinedUsers:Ljava/util/ArrayList;
+
+    invoke-virtual {v5}, Ljava/util/ArrayList;->isEmpty()Z
+
+    move-result v5
+
+    if-nez v5, :cond_9f
+
+    .line 470
     iget v0, p0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->rowCount:I
 
-    add-int/lit8 v4, v0, 0x1
+    add-int/lit8 v5, v0, 0x1
 
-    iput v4, p0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->rowCount:I
+    iput v5, p0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->rowCount:I
 
     iput v0, p0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->dividerRow:I
 
-    add-int/lit8 v0, v4, 0x1
-
-    .line 470
-    iput v0, p0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->rowCount:I
-
-    iput v4, p0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->joinedHeaderRow:I
+    add-int/lit8 v0, v5, 0x1
 
     .line 471
-    iput v0, p0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->joinedStartRow:I
+    iput v0, p0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->rowCount:I
+
+    iput v5, p0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->joinedHeaderRow:I
 
     .line 472
-    iget-object v4, p0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->joinedUsers:Ljava/util/ArrayList;
+    iput v0, p0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->joinedStartRow:I
 
-    invoke-virtual {v4}, Ljava/util/ArrayList;->size()I
+    .line 473
+    iget-object v5, p0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->joinedUsers:Ljava/util/ArrayList;
 
-    move-result v4
+    invoke-virtual {v5}, Ljava/util/ArrayList;->size()I
 
-    add-int/2addr v0, v4
+    move-result v5
+
+    add-int/2addr v0, v5
 
     iput v0, p0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->rowCount:I
 
-    .line 473
+    .line 474
     iput v0, p0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->joinedEndRow:I
 
-    add-int/lit8 v4, v0, 0x1
+    add-int/lit8 v5, v0, 0x1
 
-    .line 474
-    iput v4, p0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->rowCount:I
+    .line 475
+    iput v5, p0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->rowCount:I
 
     iput v0, p0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->emptyView2:I
 
     const/4 v0, 0x1
 
-    .line 477
-    :cond_83
-    iget-object v4, p0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->requestedUsers:Ljava/util/ArrayList;
-
-    invoke-virtual {v4}, Ljava/util/ArrayList;->isEmpty()Z
-
-    move-result v4
-
-    if-nez v4, :cond_ad
-
     .line 478
+    :cond_9f
+    iget-object v5, p0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->requestedUsers:Ljava/util/ArrayList;
+
+    invoke-virtual {v5}, Ljava/util/ArrayList;->isEmpty()Z
+
+    move-result v5
+
+    if-nez v5, :cond_c9
+
+    .line 479
     iget v0, p0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->rowCount:I
 
-    add-int/lit8 v4, v0, 0x1
+    add-int/lit8 v5, v0, 0x1
 
-    iput v4, p0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->rowCount:I
+    iput v5, p0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->rowCount:I
 
     iput v0, p0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->divider2Row:I
 
-    add-int/lit8 v0, v4, 0x1
-
-    .line 479
-    iput v0, p0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->rowCount:I
-
-    iput v4, p0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->requestedHeaderRow:I
+    add-int/lit8 v0, v5, 0x1
 
     .line 480
-    iput v0, p0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->requestedStartRow:I
+    iput v0, p0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->rowCount:I
+
+    iput v5, p0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->requestedHeaderRow:I
 
     .line 481
-    iget-object v4, p0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->requestedUsers:Ljava/util/ArrayList;
+    iput v0, p0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->requestedStartRow:I
 
-    invoke-virtual {v4}, Ljava/util/ArrayList;->size()I
+    .line 482
+    iget-object v5, p0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->requestedUsers:Ljava/util/ArrayList;
 
-    move-result v4
+    invoke-virtual {v5}, Ljava/util/ArrayList;->size()I
 
-    add-int/2addr v0, v4
+    move-result v5
+
+    add-int/2addr v0, v5
 
     iput v0, p0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->rowCount:I
 
-    .line 482
+    .line 483
     iput v0, p0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->requestedEndRow:I
 
-    add-int/lit8 v4, v0, 0x1
+    add-int/lit8 v5, v0, 0x1
 
-    .line 483
-    iput v4, p0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->rowCount:I
+    .line 484
+    iput v5, p0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->rowCount:I
 
     iput v0, p0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->emptyView3:I
 
-    goto :goto_ae
+    goto :goto_ca
 
-    :cond_ad
+    :cond_c9
     move v3, v0
 
-    :goto_ae
-    if-eqz v2, :cond_c6
+    :goto_ca
+    if-nez v2, :cond_ce
 
-    if-nez v3, :cond_c6
+    if-eqz v4, :cond_e4
 
-    .line 488
+    :cond_ce
+    if-nez v3, :cond_e4
+
+    .line 489
     iget v0, p0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->rowCount:I
 
     add-int/lit8 v2, v0, 0x1
@@ -2185,25 +2227,25 @@
 
     add-int/lit8 v0, v2, 0x1
 
-    .line 489
+    .line 490
     iput v0, p0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->rowCount:I
 
     iput v2, p0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->loadingRow:I
 
     add-int/lit8 v2, v0, 0x1
 
-    .line 490
+    .line 491
     iput v2, p0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->rowCount:I
 
     iput v0, p0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->emptyView2:I
 
-    .line 493
-    :cond_c6
+    .line 494
+    :cond_e4
     iget v0, p0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->emptyHintRow:I
 
-    if-ne v0, v1, :cond_d2
+    if-ne v0, v1, :cond_f0
 
-    .line 494
+    .line 495
     iget v0, p0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->rowCount:I
 
     add-int/lit8 v1, v0, 0x1
@@ -2212,8 +2254,8 @@
 
     iput v0, p0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->divider3Row:I
 
-    .line 497
-    :cond_d2
+    .line 498
+    :cond_f0
     iget-object v0, p0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->adapter:Lorg/telegram/ui/Components/InviteLinkBottomSheet$Adapter;
 
     invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->notifyDataSetChanged()V
@@ -2234,14 +2276,14 @@
 .method public loadUsers()V
     .registers 11
 
-    .line 911
+    .line 912
     iget-boolean v0, p0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->usersLoading:Z
 
     if-eqz v0, :cond_5
 
     return-void
 
-    .line 915
+    .line 916
     :cond_5
     iget-object v0, p0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->invite:Lorg/telegram/tgnet/TLRPC$TL_chatInviteExported;
 
@@ -2266,7 +2308,7 @@
     :cond_15
     const/4 v0, 0x0
 
-    .line 916
+    .line 917
     :goto_16
     iget-object v1, p0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->invite:Lorg/telegram/tgnet/TLRPC$TL_chatInviteExported;
 
@@ -2304,7 +2346,7 @@
     :goto_2f
     if-eqz v2, :cond_34
 
-    .line 926
+    .line 927
     iget-object v0, p0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->requestedUsers:Ljava/util/ArrayList;
 
     goto :goto_36
@@ -2312,27 +2354,27 @@
     :cond_34
     iget-object v0, p0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->joinedUsers:Ljava/util/ArrayList;
 
-    .line 927
+    .line 928
     :goto_36
     new-instance v4, Lorg/telegram/tgnet/TLRPC$TL_messages_getChatInviteImporters;
 
     invoke-direct {v4}, Lorg/telegram/tgnet/TLRPC$TL_messages_getChatInviteImporters;-><init>()V
 
-    .line 928
+    .line 929
     iget v5, v4, Lorg/telegram/tgnet/TLRPC$TL_messages_getChatInviteImporters;->flags:I
 
     or-int/lit8 v5, v5, 0x2
 
     iput v5, v4, Lorg/telegram/tgnet/TLRPC$TL_messages_getChatInviteImporters;->flags:I
 
-    .line 929
+    .line 930
     iget-object v5, p0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->invite:Lorg/telegram/tgnet/TLRPC$TL_chatInviteExported;
 
     iget-object v5, v5, Lorg/telegram/tgnet/TLRPC$TL_chatInviteExported;->link:Ljava/lang/String;
 
     iput-object v5, v4, Lorg/telegram/tgnet/TLRPC$TL_messages_getChatInviteImporters;->link:Ljava/lang/String;
 
-    .line 930
+    .line 931
     sget v5, Lorg/telegram/messenger/UserConfig;->selectedAccount:I
 
     invoke-static {v5}, Lorg/telegram/messenger/MessagesController;->getInstance(I)Lorg/telegram/messenger/MessagesController;
@@ -2349,17 +2391,17 @@
 
     iput-object v5, v4, Lorg/telegram/tgnet/TLRPC$TL_messages_getChatInviteImporters;->peer:Lorg/telegram/tgnet/TLRPC$InputPeer;
 
-    .line 931
+    .line 932
     iput-boolean v2, v4, Lorg/telegram/tgnet/TLRPC$TL_messages_getChatInviteImporters;->requested:Z
 
-    .line 932
+    .line 933
     invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
 
     move-result v5
 
     if-eqz v5, :cond_66
 
-    .line 933
+    .line 934
     new-instance v5, Lorg/telegram/tgnet/TLRPC$TL_inputUserEmpty;
 
     invoke-direct {v5}, Lorg/telegram/tgnet/TLRPC$TL_inputUserEmpty;-><init>()V
@@ -2368,7 +2410,7 @@
 
     goto :goto_8f
 
-    .line 935
+    .line 936
     :cond_66
     invoke-interface {v0}, Ljava/util/List;->size()I
 
@@ -2382,7 +2424,7 @@
 
     check-cast v5, Lorg/telegram/tgnet/TLRPC$TL_chatInviteImporter;
 
-    .line 936
+    .line 937
     iget v6, p0, Lorg/telegram/ui/ActionBar/BottomSheet;->currentAccount:I
 
     invoke-static {v6}, Lorg/telegram/messenger/MessagesController;->getInstance(I)Lorg/telegram/messenger/MessagesController;
@@ -2409,16 +2451,16 @@
 
     iput-object v6, v4, Lorg/telegram/tgnet/TLRPC$TL_messages_getChatInviteImporters;->offset_user:Lorg/telegram/tgnet/TLRPC$InputUser;
 
-    .line 937
+    .line 938
     iget v5, v5, Lorg/telegram/tgnet/TLRPC$TL_chatInviteImporter;->date:I
 
     iput v5, v4, Lorg/telegram/tgnet/TLRPC$TL_messages_getChatInviteImporters;->offset_date:I
 
-    .line 940
+    .line 941
     :goto_8f
     iput-boolean v3, p0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->usersLoading:Z
 
-    .line 941
+    .line 942
     sget v3, Lorg/telegram/messenger/UserConfig;->selectedAccount:I
 
     invoke-static {v3}, Lorg/telegram/tgnet/ConnectionsManager;->getInstance(I)Lorg/telegram/tgnet/ConnectionsManager;
@@ -2438,7 +2480,7 @@
 .method public setCanEdit(Z)V
     .registers 2
 
-    .line 1028
+    .line 1029
     iput-boolean p1, p0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->canEdit:Z
 
     return-void
@@ -2447,7 +2489,7 @@
 .method public setInviteDelegate(Lorg/telegram/ui/Components/InviteLinkBottomSheet$InviteDelegate;)V
     .registers 2
 
-    .line 961
+    .line 962
     iput-object p1, p0, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->inviteDelegate:Lorg/telegram/ui/Components/InviteLinkBottomSheet$InviteDelegate;
 
     return-void

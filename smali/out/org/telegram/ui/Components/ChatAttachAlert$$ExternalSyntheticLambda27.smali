@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lorg/telegram/ui/Components/AlertsCreator$ScheduleDatePickerDelegate;
+.implements Lorg/telegram/ui/ActionBar/ActionBarMenuItem$ActionBarMenuItemDelegate;
 
 
 # instance fields
@@ -22,12 +22,12 @@
 
 
 # virtual methods
-.method public final didSelectDate(ZI)V
-    .registers 4
+.method public final onItemClick(I)V
+    .registers 3
 
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlert$$ExternalSyntheticLambda27;->f$0:Lorg/telegram/ui/Components/ChatAttachAlert;
 
-    invoke-static {v0, p1, p2}, Lorg/telegram/ui/Components/ChatAttachAlert;->$r8$lambda$APx70H49W-9jy5y7nB3huS6AbV8(Lorg/telegram/ui/Components/ChatAttachAlert;ZI)V
+    invoke-static {v0, p1}, Lorg/telegram/ui/Components/ChatAttachAlert;->$r8$lambda$rOwmYcNHBB2DehAHscs4CcFAWyU(Lorg/telegram/ui/Components/ChatAttachAlert;I)V
 
     return-void
 .end method

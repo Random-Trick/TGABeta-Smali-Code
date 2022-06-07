@@ -27,7 +27,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 28559
+    .line 28933
     invoke-direct {p0}, Lorg/telegram/tgnet/TLRPC$Update;-><init>()V
 
     return-void
@@ -38,7 +38,7 @@
 .method public readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
     .registers 5
 
-    .line 28568
+    .line 28942
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
@@ -56,7 +56,7 @@
     :cond_c
     const/4 v1, 0x0
 
-    .line 28569
+    .line 28943
     :goto_d
     iput-boolean v1, p0, Lorg/telegram/tgnet/TLRPC$TL_updateDialogPinned;->pinned:Z
 
@@ -64,14 +64,14 @@
 
     if-eqz v0, :cond_19
 
-    .line 28571
+    .line 28945
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
 
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$TL_updateDialogPinned;->folder_id:I
 
-    .line 28573
+    .line 28947
     :cond_19
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
@@ -89,12 +89,12 @@
 .method public serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
     .registers 3
 
-    .line 28577
+    .line 28951
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_updateDialogPinned;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 28578
+    .line 28952
     iget-boolean v0, p0, Lorg/telegram/tgnet/TLRPC$TL_updateDialogPinned;->pinned:Z
 
     if-eqz v0, :cond_e
@@ -113,22 +113,22 @@
     :goto_12
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$TL_updateDialogPinned;->flags:I
 
-    .line 28579
+    .line 28953
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 28580
+    .line 28954
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_updateDialogPinned;->flags:I
 
     and-int/lit8 v0, v0, 0x2
 
     if-eqz v0, :cond_22
 
-    .line 28581
+    .line 28955
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_updateDialogPinned;->folder_id:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 28583
+    .line 28957
     :cond_22
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_updateDialogPinned;->peer:Lorg/telegram/tgnet/TLRPC$DialogPeer;
 

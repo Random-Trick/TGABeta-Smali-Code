@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lorg/telegram/ui/ChatUsersActivity;->lambda$createView$1(Landroid/view/View;I)V
+    value = Lorg/telegram/ui/ChatUsersActivity;->lambda$createView$1(Landroid/content/Context;Landroid/view/View;I)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -30,7 +30,7 @@
 .method constructor <init>(Lorg/telegram/ui/ChatUsersActivity;Landroid/content/Context;Lorg/telegram/ui/ActionBar/BaseFragment;)V
     .registers 4
 
-    .line 1017
+    .line 1053
     iput-object p1, p0, Lorg/telegram/ui/ChatUsersActivity$10;->this$0:Lorg/telegram/ui/ChatUsersActivity;
 
     invoke-direct {p0, p2, p3}, Lorg/telegram/ui/Components/GigagroupConvertAlert;-><init>(Landroid/content/Context;Lorg/telegram/ui/ActionBar/BaseFragment;)V
@@ -43,7 +43,7 @@
 
     if-eqz p1, :cond_70
 
-    .line 1021
+    .line 1057
     iget-object p1, p0, Lorg/telegram/ui/ChatUsersActivity$10;->this$0:Lorg/telegram/ui/ChatUsersActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/ChatUsersActivity;->access$8500(Lorg/telegram/ui/ChatUsersActivity;)Lorg/telegram/ui/ActionBar/ActionBarLayout;
@@ -52,7 +52,7 @@
 
     if-eqz p1, :cond_70
 
-    .line 1022
+    .line 1058
     iget-object p1, p0, Lorg/telegram/ui/ChatUsersActivity$10;->this$0:Lorg/telegram/ui/ChatUsersActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/ChatUsersActivity;->access$8700(Lorg/telegram/ui/ChatUsersActivity;)Lorg/telegram/ui/ActionBar/ActionBarLayout;
@@ -81,20 +81,20 @@
 
     check-cast p1, Lorg/telegram/ui/ActionBar/BaseFragment;
 
-    .line 1023
+    .line 1059
     instance-of v0, p1, Lorg/telegram/ui/ChatEditActivity;
 
     if-eqz v0, :cond_6b
 
-    .line 1024
+    .line 1060
     invoke-virtual {p1}, Lorg/telegram/ui/ActionBar/BaseFragment;->removeSelfFromStack()V
 
-    .line 1026
+    .line 1062
     new-instance p1, Landroid/os/Bundle;
 
     invoke-direct {p1}, Landroid/os/Bundle;-><init>()V
 
-    .line 1027
+    .line 1063
     iget-object v0, p0, Lorg/telegram/ui/ChatUsersActivity$10;->this$0:Lorg/telegram/ui/ChatUsersActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/ChatUsersActivity;->access$2700(Lorg/telegram/ui/ChatUsersActivity;)J
@@ -105,12 +105,12 @@
 
     invoke-virtual {p1, v2, v0, v1}, Landroid/os/Bundle;->putLong(Ljava/lang/String;J)V
 
-    .line 1028
+    .line 1064
     new-instance v0, Lorg/telegram/ui/ChatEditActivity;
 
     invoke-direct {v0, p1}, Lorg/telegram/ui/ChatEditActivity;-><init>(Landroid/os/Bundle;)V
 
-    .line 1029
+    .line 1065
     iget-object p1, p0, Lorg/telegram/ui/ChatUsersActivity$10;->this$0:Lorg/telegram/ui/ChatUsersActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/ChatUsersActivity;->access$500(Lorg/telegram/ui/ChatUsersActivity;)Lorg/telegram/tgnet/TLRPC$ChatFull;
@@ -119,7 +119,7 @@
 
     invoke-virtual {v0, p1}, Lorg/telegram/ui/ChatEditActivity;->setInfo(Lorg/telegram/tgnet/TLRPC$ChatFull;)V
 
-    .line 1030
+    .line 1066
     iget-object p1, p0, Lorg/telegram/ui/ChatUsersActivity$10;->this$0:Lorg/telegram/ui/ChatUsersActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/ChatUsersActivity;->access$8900(Lorg/telegram/ui/ChatUsersActivity;)Lorg/telegram/ui/ActionBar/ActionBarLayout;
@@ -142,17 +142,17 @@
 
     invoke-virtual {p1, v0, v1}, Lorg/telegram/ui/ActionBar/ActionBarLayout;->addFragmentToStack(Lorg/telegram/ui/ActionBar/BaseFragment;I)Z
 
-    .line 1031
+    .line 1067
     iget-object p1, p0, Lorg/telegram/ui/ChatUsersActivity$10;->this$0:Lorg/telegram/ui/ChatUsersActivity;
 
     invoke-virtual {p1}, Lorg/telegram/ui/ActionBar/BaseFragment;->finishFragment()V
 
-    .line 1032
+    .line 1068
     invoke-virtual {v0}, Lorg/telegram/ui/ChatEditActivity;->showConvertTooltip()V
 
     goto :goto_70
 
-    .line 1034
+    .line 1070
     :cond_6b
     iget-object p1, p0, Lorg/telegram/ui/ChatUsersActivity$10;->this$0:Lorg/telegram/ui/ChatUsersActivity;
 
@@ -174,7 +174,7 @@
 .method protected onCovert()V
     .registers 6
 
-    .line 1020
+    .line 1056
     iget-object v0, p0, Lorg/telegram/ui/ChatUsersActivity$10;->this$0:Lorg/telegram/ui/ChatUsersActivity;
 
     invoke-virtual {v0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getMessagesController()Lorg/telegram/messenger/MessagesController;

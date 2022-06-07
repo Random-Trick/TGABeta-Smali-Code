@@ -94,7 +94,7 @@
 
     if-nez p2, :cond_50
 
-    const p1, 0x7f0e0f68
+    const p1, 0x7f0e1024
 
     const-string p2, "ScamMessage"
 
@@ -108,7 +108,7 @@
     goto :goto_5b
 
     :cond_50
-    const p1, 0x7f0e06ea
+    const p1, 0x7f0e073c
 
     const-string p2, "FakeMessage"
 
@@ -152,7 +152,7 @@
 
     if-nez v0, :cond_e
 
-    const v0, 0x7f0e0f68
+    const v0, 0x7f0e1024
 
     const-string v1, "ScamMessage"
 
@@ -164,7 +164,7 @@
     goto :goto_17
 
     :cond_e
-    const v0, 0x7f0e06ea
+    const v0, 0x7f0e073c
 
     const-string v1, "FakeMessage"
 

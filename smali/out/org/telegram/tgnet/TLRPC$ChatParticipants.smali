@@ -29,10 +29,10 @@
 .method public constructor <init>()V
     .registers 2
 
-    .line 36429
+    .line 36881
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
-    .line 36433
+    .line 36885
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -51,7 +51,7 @@
 
     goto :goto_28
 
-    .line 36453
+    .line 36905
     :sswitch_5
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_chatParticipants_old;
 
@@ -59,7 +59,7 @@
 
     goto :goto_28
 
-    .line 36444
+    .line 36896
     :sswitch_b
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_chatParticipants_layer131;
 
@@ -67,7 +67,7 @@
 
     goto :goto_28
 
-    .line 36450
+    .line 36902
     :sswitch_11
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_chatParticipants;
 
@@ -75,7 +75,7 @@
 
     goto :goto_28
 
-    .line 36456
+    .line 36908
     :sswitch_17
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_chatParticipantsForbidden_old;
 
@@ -83,7 +83,7 @@
 
     goto :goto_28
 
-    .line 36441
+    .line 36893
     :sswitch_1d
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_chatParticipantsForbidden_layer131;
 
@@ -91,7 +91,7 @@
 
     goto :goto_28
 
-    .line 36447
+    .line 36899
     :sswitch_23
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_chatParticipantsForbidden;
 
@@ -104,7 +104,7 @@
 
     goto :goto_43
 
-    .line 36460
+    .line 36912
     :cond_2d
     new-instance p0, Ljava/lang/RuntimeException;
 
@@ -134,7 +134,7 @@
     :goto_43
     if-eqz v0, :cond_48
 
-    .line 36463
+    .line 36915
     invoke-virtual {v0, p0, p2}, Lorg/telegram/tgnet/TLObject;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
     :cond_48

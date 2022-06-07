@@ -2,38 +2,44 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lorg/telegram/tgnet/RequestDelegate;
+.implements Lorg/telegram/messenger/GenericProvider;
 
 
-# instance fields
-.field public final synthetic f$0:Lorg/telegram/messenger/MediaDataController;
-
-.field public final synthetic f$1:I
+# static fields
+.field public static final synthetic INSTANCE:Lorg/telegram/messenger/MediaDataController$$ExternalSyntheticLambda131;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lorg/telegram/messenger/MediaDataController;I)V
-    .registers 3
+.method static synthetic constructor <clinit>()V
+    .registers 1
+
+    new-instance v0, Lorg/telegram/messenger/MediaDataController$$ExternalSyntheticLambda131;
+
+    invoke-direct {v0}, Lorg/telegram/messenger/MediaDataController$$ExternalSyntheticLambda131;-><init>()V
+
+    sput-object v0, Lorg/telegram/messenger/MediaDataController$$ExternalSyntheticLambda131;->INSTANCE:Lorg/telegram/messenger/MediaDataController$$ExternalSyntheticLambda131;
+
+    return-void
+.end method
+
+.method private synthetic constructor <init>()V
+    .registers 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lorg/telegram/messenger/MediaDataController$$ExternalSyntheticLambda131;->f$0:Lorg/telegram/messenger/MediaDataController;
-
-    iput p2, p0, Lorg/telegram/messenger/MediaDataController$$ExternalSyntheticLambda131;->f$1:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run(Lorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/TLRPC$TL_error;)V
-    .registers 5
+.method public final provide(Ljava/lang/Object;)Ljava/lang/Object;
+    .registers 2
 
-    iget-object v0, p0, Lorg/telegram/messenger/MediaDataController$$ExternalSyntheticLambda131;->f$0:Lorg/telegram/messenger/MediaDataController;
+    check-cast p1, Ljava/lang/Void;
 
-    iget v1, p0, Lorg/telegram/messenger/MediaDataController$$ExternalSyntheticLambda131;->f$1:I
+    invoke-static {p1}, Lorg/telegram/messenger/MediaDataController;->$r8$lambda$caAvJiS-3ZGqr9GFB1FA8vFMkpY(Ljava/lang/Void;)Lorg/telegram/tgnet/TLRPC$MessageEntity;
 
-    invoke-static {v0, v1, p1, p2}, Lorg/telegram/messenger/MediaDataController;->$r8$lambda$-5ENze9HuRK1-VC5yge2sln7vTs(Lorg/telegram/messenger/MediaDataController;ILorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/TLRPC$TL_error;)V
+    move-result-object p1
 
-    return-void
+    return-object p1
 .end method

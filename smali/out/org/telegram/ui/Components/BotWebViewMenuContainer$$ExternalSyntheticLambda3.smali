@@ -29,7 +29,7 @@
 
     check-cast p1, Ljava/lang/Float;
 
-    invoke-static {v0, p1}, Lorg/telegram/ui/Components/BotWebViewMenuContainer;->$r8$lambda$KQomBdgi2OOyCPgcXuTvRm5E0og(Lorg/telegram/ui/Components/BotWebViewMenuContainer;Ljava/lang/Float;)V
+    invoke-static {v0, p1}, Lorg/telegram/ui/Components/BotWebViewMenuContainer;->$r8$lambda$1BXTA0htMFtC7jrwGTiNW_MCk8Q(Lorg/telegram/ui/Components/BotWebViewMenuContainer;Ljava/lang/Float;)V
 
     return-void
 .end method

@@ -7,7 +7,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 4537
+    .line 4602
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -32,7 +32,7 @@
 
     goto :goto_22
 
-    .line 4546
+    .line 4611
     :cond_11
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_statsGraphAsync;
 
@@ -40,7 +40,7 @@
 
     goto :goto_22
 
-    .line 4549
+    .line 4614
     :cond_17
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_statsGraphError;
 
@@ -48,7 +48,7 @@
 
     goto :goto_22
 
-    .line 4543
+    .line 4608
     :cond_1d
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_statsGraph;
 
@@ -61,7 +61,7 @@
 
     goto :goto_3d
 
-    .line 4553
+    .line 4618
     :cond_27
     new-instance p0, Ljava/lang/RuntimeException;
 
@@ -91,7 +91,7 @@
     :goto_3d
     if-eqz v0, :cond_42
 
-    .line 4556
+    .line 4621
     invoke-virtual {v0, p0, p2}, Lorg/telegram/tgnet/TLObject;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
     :cond_42

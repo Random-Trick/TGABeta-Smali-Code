@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/ActionBar/ActionBar;)V
     .registers 2
 
-    .line 1295
+    .line 1317
     iput-object p1, p0, Lorg/telegram/ui/ActionBar/ActionBar$5;->this$0:Lorg/telegram/ui/ActionBar/ActionBar;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -35,7 +35,7 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .registers 6
 
-    .line 1298
+    .line 1320
     iget-object p1, p0, Lorg/telegram/ui/ActionBar/ActionBar$5;->this$0:Lorg/telegram/ui/ActionBar/ActionBar;
 
     invoke-static {p1}, Lorg/telegram/ui/ActionBar/ActionBar;->access$500(Lorg/telegram/ui/ActionBar/ActionBar;)[Lorg/telegram/ui/ActionBar/SimpleTextView;
@@ -62,7 +62,7 @@
 
     if-eqz p1, :cond_32
 
-    .line 1299
+    .line 1321
     iget-object p1, p0, Lorg/telegram/ui/ActionBar/ActionBar$5;->this$0:Lorg/telegram/ui/ActionBar/ActionBar;
 
     invoke-static {p1}, Lorg/telegram/ui/ActionBar/ActionBar;->access$500(Lorg/telegram/ui/ActionBar/ActionBar;)[Lorg/telegram/ui/ActionBar/SimpleTextView;
@@ -77,7 +77,7 @@
 
     check-cast p1, Landroid/view/ViewGroup;
 
-    .line 1300
+    .line 1322
     iget-object v1, p0, Lorg/telegram/ui/ActionBar/ActionBar$5;->this$0:Lorg/telegram/ui/ActionBar/ActionBar;
 
     invoke-static {v1}, Lorg/telegram/ui/ActionBar/ActionBar;->access$500(Lorg/telegram/ui/ActionBar/ActionBar;)[Lorg/telegram/ui/ActionBar/SimpleTextView;
@@ -88,7 +88,7 @@
 
     invoke-virtual {p1, v1}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
 
-    .line 1302
+    .line 1324
     :cond_32
     iget-object p1, p0, Lorg/telegram/ui/ActionBar/ActionBar$5;->this$0:Lorg/telegram/ui/ActionBar/ActionBar;
 
@@ -102,7 +102,7 @@
 
     invoke-virtual {v1, p1}, Lorg/telegram/ui/Components/EllipsizeSpanAnimator;->removeView(Landroid/view/View;)V
 
-    .line 1303
+    .line 1325
     iget-object p1, p0, Lorg/telegram/ui/ActionBar/ActionBar$5;->this$0:Lorg/telegram/ui/ActionBar/ActionBar;
 
     invoke-static {p1}, Lorg/telegram/ui/ActionBar/ActionBar;->access$500(Lorg/telegram/ui/ActionBar/ActionBar;)[Lorg/telegram/ui/ActionBar/SimpleTextView;
@@ -113,14 +113,14 @@
 
     aput-object v1, p1, v0
 
-    .line 1304
+    .line 1326
     iget-object p1, p0, Lorg/telegram/ui/ActionBar/ActionBar$5;->this$0:Lorg/telegram/ui/ActionBar/ActionBar;
 
     const/4 v1, 0x0
 
     iput-boolean v1, p1, Lorg/telegram/ui/ActionBar/ActionBar;->overlayTitleAnimationInProgress:Z
 
-    .line 1305
+    .line 1327
     invoke-static {p1}, Lorg/telegram/ui/ActionBar/ActionBar;->access$1100(Lorg/telegram/ui/ActionBar/ActionBar;)[Ljava/lang/Object;
 
     move-result-object v2

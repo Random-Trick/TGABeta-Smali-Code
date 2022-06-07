@@ -25,7 +25,7 @@
 .method constructor <init>(Lorg/telegram/ui/DialogsActivity;)V
     .registers 2
 
-    .line 4426
+    .line 4514
     iput-object p1, p0, Lorg/telegram/ui/DialogsActivity$31;->this$0:Lorg/telegram/ui/DialogsActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -56,10 +56,10 @@
 .method public onOffsetChange(F)V
     .registers 4
 
-    .line 4429
+    .line 4517
     iget-object v0, p0, Lorg/telegram/ui/DialogsActivity$31;->this$0:Lorg/telegram/ui/DialogsActivity;
 
-    invoke-static {v0}, Lorg/telegram/ui/DialogsActivity;->access$21800(Lorg/telegram/ui/DialogsActivity;)[Lorg/telegram/ui/Components/UndoView;
+    invoke-static {v0}, Lorg/telegram/ui/DialogsActivity;->access$22300(Lorg/telegram/ui/DialogsActivity;)[Lorg/telegram/ui/Components/UndoView;
 
     move-result-object v0
 
@@ -71,7 +71,7 @@
 
     iget-object v0, p0, Lorg/telegram/ui/DialogsActivity$31;->this$0:Lorg/telegram/ui/DialogsActivity;
 
-    invoke-static {v0}, Lorg/telegram/ui/DialogsActivity;->access$21800(Lorg/telegram/ui/DialogsActivity;)[Lorg/telegram/ui/Components/UndoView;
+    invoke-static {v0}, Lorg/telegram/ui/DialogsActivity;->access$22300(Lorg/telegram/ui/DialogsActivity;)[Lorg/telegram/ui/Components/UndoView;
 
     move-result-object v0
 
@@ -85,16 +85,16 @@
 
     return-void
 
-    .line 4432
+    .line 4520
     :cond_1a
     iget-object v0, p0, Lorg/telegram/ui/DialogsActivity$31;->this$0:Lorg/telegram/ui/DialogsActivity;
 
-    invoke-static {v0, p1}, Lorg/telegram/ui/DialogsActivity;->access$25702(Lorg/telegram/ui/DialogsActivity;F)F
+    invoke-static {v0, p1}, Lorg/telegram/ui/DialogsActivity;->access$26202(Lorg/telegram/ui/DialogsActivity;F)F
 
-    .line 4433
+    .line 4521
     iget-object p1, p0, Lorg/telegram/ui/DialogsActivity$31;->this$0:Lorg/telegram/ui/DialogsActivity;
 
-    invoke-static {p1}, Lorg/telegram/ui/DialogsActivity;->access$25700(Lorg/telegram/ui/DialogsActivity;)F
+    invoke-static {p1}, Lorg/telegram/ui/DialogsActivity;->access$26200(Lorg/telegram/ui/DialogsActivity;)F
 
     move-result p1
 
@@ -104,25 +104,25 @@
 
     if-gez p1, :cond_2f
 
-    .line 4434
+    .line 4522
     iget-object p1, p0, Lorg/telegram/ui/DialogsActivity$31;->this$0:Lorg/telegram/ui/DialogsActivity;
 
-    invoke-static {p1, v0}, Lorg/telegram/ui/DialogsActivity;->access$25702(Lorg/telegram/ui/DialogsActivity;F)F
+    invoke-static {p1, v0}, Lorg/telegram/ui/DialogsActivity;->access$26202(Lorg/telegram/ui/DialogsActivity;F)F
 
-    .line 4436
+    .line 4524
     :cond_2f
     iget-object p1, p0, Lorg/telegram/ui/DialogsActivity$31;->this$0:Lorg/telegram/ui/DialogsActivity;
 
-    invoke-static {p1}, Lorg/telegram/ui/DialogsActivity;->access$18300(Lorg/telegram/ui/DialogsActivity;)Z
+    invoke-static {p1}, Lorg/telegram/ui/DialogsActivity;->access$18700(Lorg/telegram/ui/DialogsActivity;)Z
 
     move-result p1
 
     if-nez p1, :cond_3c
 
-    .line 4437
+    .line 4525
     iget-object p1, p0, Lorg/telegram/ui/DialogsActivity$31;->this$0:Lorg/telegram/ui/DialogsActivity;
 
-    invoke-static {p1}, Lorg/telegram/ui/DialogsActivity;->access$18600(Lorg/telegram/ui/DialogsActivity;)V
+    invoke-static {p1}, Lorg/telegram/ui/DialogsActivity;->access$19000(Lorg/telegram/ui/DialogsActivity;)V
 
     :cond_3c
     return-void
@@ -131,10 +131,10 @@
 .method public onShow(Lorg/telegram/ui/Components/Bulletin;)V
     .registers 4
 
-    .line 4443
+    .line 4531
     iget-object p1, p0, Lorg/telegram/ui/DialogsActivity$31;->this$0:Lorg/telegram/ui/DialogsActivity;
 
-    invoke-static {p1}, Lorg/telegram/ui/DialogsActivity;->access$21800(Lorg/telegram/ui/DialogsActivity;)[Lorg/telegram/ui/Components/UndoView;
+    invoke-static {p1}, Lorg/telegram/ui/DialogsActivity;->access$22300(Lorg/telegram/ui/DialogsActivity;)[Lorg/telegram/ui/Components/UndoView;
 
     move-result-object p1
 
@@ -146,7 +146,7 @@
 
     iget-object p1, p0, Lorg/telegram/ui/DialogsActivity$31;->this$0:Lorg/telegram/ui/DialogsActivity;
 
-    invoke-static {p1}, Lorg/telegram/ui/DialogsActivity;->access$21800(Lorg/telegram/ui/DialogsActivity;)[Lorg/telegram/ui/Components/UndoView;
+    invoke-static {p1}, Lorg/telegram/ui/DialogsActivity;->access$22300(Lorg/telegram/ui/DialogsActivity;)[Lorg/telegram/ui/Components/UndoView;
 
     move-result-object p1
 
@@ -158,10 +158,10 @@
 
     if-nez p1, :cond_26
 
-    .line 4444
+    .line 4532
     iget-object p1, p0, Lorg/telegram/ui/DialogsActivity$31;->this$0:Lorg/telegram/ui/DialogsActivity;
 
-    invoke-static {p1}, Lorg/telegram/ui/DialogsActivity;->access$21800(Lorg/telegram/ui/DialogsActivity;)[Lorg/telegram/ui/Components/UndoView;
+    invoke-static {p1}, Lorg/telegram/ui/DialogsActivity;->access$22300(Lorg/telegram/ui/DialogsActivity;)[Lorg/telegram/ui/Components/UndoView;
 
     move-result-object p1
 

@@ -8,14 +8,18 @@
 # instance fields
 .field public final synthetic f$0:Lorg/telegram/ui/Components/BotWebViewMenuContainer;
 
+.field public final synthetic f$1:Ljava/lang/Runnable;
+
 
 # direct methods
-.method public synthetic constructor <init>(Lorg/telegram/ui/Components/BotWebViewMenuContainer;)V
-    .registers 2
+.method public synthetic constructor <init>(Lorg/telegram/ui/Components/BotWebViewMenuContainer;Ljava/lang/Runnable;)V
+    .registers 3
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lorg/telegram/ui/Components/BotWebViewMenuContainer$$ExternalSyntheticLambda12;->f$0:Lorg/telegram/ui/Components/BotWebViewMenuContainer;
+
+    iput-object p2, p0, Lorg/telegram/ui/Components/BotWebViewMenuContainer$$ExternalSyntheticLambda12;->f$1:Ljava/lang/Runnable;
 
     return-void
 .end method
@@ -23,11 +27,13 @@
 
 # virtual methods
 .method public final run()V
-    .registers 2
+    .registers 3
 
     iget-object v0, p0, Lorg/telegram/ui/Components/BotWebViewMenuContainer$$ExternalSyntheticLambda12;->f$0:Lorg/telegram/ui/Components/BotWebViewMenuContainer;
 
-    invoke-static {v0}, Lorg/telegram/ui/Components/BotWebViewMenuContainer;->$r8$lambda$oznLZEXb1C2UXpP8ZojHl2JDYbE(Lorg/telegram/ui/Components/BotWebViewMenuContainer;)V
+    iget-object v1, p0, Lorg/telegram/ui/Components/BotWebViewMenuContainer$$ExternalSyntheticLambda12;->f$1:Ljava/lang/Runnable;
+
+    invoke-static {v0, v1}, Lorg/telegram/ui/Components/BotWebViewMenuContainer;->$r8$lambda$mRDdTHfHLwO09ojbm6E35viPEsM(Lorg/telegram/ui/Components/BotWebViewMenuContainer;Ljava/lang/Runnable;)V
 
     return-void
 .end method

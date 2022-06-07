@@ -48,7 +48,7 @@
 
     iput-object p2, p0, Lorg/telegram/ui/Cells/LocationLoadingCell;->imageView:Landroid/widget/ImageView;
 
-    const v0, 0x7f0701c0
+    const v0, 0x7f070192
 
     .line 42
     invoke-virtual {p2, v0}, Landroid/widget/ImageView;->setImageResource(I)V
@@ -139,7 +139,7 @@
 
     const-string p2, "NoPlacesFound"
 
-    const v0, 0x7f0e0ace
+    const v0, 0x7f0e0b56
 
     invoke-static {p2, v0}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 

@@ -876,7 +876,7 @@
 
     invoke-virtual {v5, v6, v7}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    const p2, 0x7f0e007a
+    const p2, 0x7f0e009c
 
     .line 226
     invoke-static {p2}, Lorg/telegram/messenger/LocaleController;->getString(I)Ljava/lang/String;
@@ -1018,7 +1018,7 @@
 
     move-result v2
 
-    const v3, 0x7f0701a7
+    const v3, 0x7f07017d
 
     const/16 v4, 0x11
 
@@ -1404,7 +1404,7 @@
 
     invoke-virtual {v7}, Lorg/telegram/ui/ActionBar/Theme$ThemeInfo;->isDark()Z
 
-    const v7, 0x7f0e007a
+    const v7, 0x7f0e009c
 
     invoke-static {v7}, Lorg/telegram/messenger/LocaleController;->getString(I)Ljava/lang/String;
 
@@ -1534,7 +1534,7 @@
 
     iput-object v5, v0, Lorg/telegram/ui/IntroActivity;->startMessagingButton:Landroid/widget/TextView;
 
-    const v7, 0x7f0e10b6
+    const v7, 0x7f0e1175
 
     const-string v10, "StartMessaging"
 
@@ -1978,7 +1978,7 @@
 
     const-string v2, "Page1Title"
 
-    const v3, 0x7f0e0bea
+    const v3, 0x7f0e0c74
 
     .line 125
     invoke-static {v2, v3}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -1991,7 +1991,7 @@
 
     const-string v2, "Page2Title"
 
-    const v4, 0x7f0e0bec
+    const v4, 0x7f0e0c76
 
     .line 126
     invoke-static {v2, v4}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -2004,7 +2004,7 @@
 
     const-string v2, "Page3Title"
 
-    const v5, 0x7f0e0bee
+    const v5, 0x7f0e0c78
 
     .line 127
     invoke-static {v2, v5}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -2017,7 +2017,7 @@
 
     const-string v2, "Page5Title"
 
-    const v6, 0x7f0e0bf2
+    const v6, 0x7f0e0c7c
 
     .line 128
     invoke-static {v2, v6}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -2030,7 +2030,7 @@
 
     const-string v2, "Page4Title"
 
-    const v7, 0x7f0e0bf0
+    const v7, 0x7f0e0c7a
 
     .line 129
     invoke-static {v2, v7}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -2043,7 +2043,7 @@
 
     const-string v2, "Page6Title"
 
-    const v8, 0x7f0e0bf4
+    const v8, 0x7f0e0c7e
 
     .line 130
     invoke-static {v2, v8}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -2060,7 +2060,7 @@
 
     const-string v1, "Page1Message"
 
-    const v2, 0x7f0e0be9
+    const v2, 0x7f0e0c73
 
     .line 133
     invoke-static {v1, v2}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -2071,7 +2071,7 @@
 
     const-string v1, "Page2Message"
 
-    const v2, 0x7f0e0beb
+    const v2, 0x7f0e0c75
 
     .line 134
     invoke-static {v1, v2}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -2082,7 +2082,7 @@
 
     const-string v1, "Page3Message"
 
-    const v2, 0x7f0e0bed
+    const v2, 0x7f0e0c77
 
     .line 135
     invoke-static {v1, v2}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -2093,7 +2093,7 @@
 
     const-string v1, "Page5Message"
 
-    const v2, 0x7f0e0bf1
+    const v2, 0x7f0e0c7b
 
     .line 136
     invoke-static {v1, v2}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -2104,7 +2104,7 @@
 
     const-string v1, "Page4Message"
 
-    const v2, 0x7f0e0bef
+    const v2, 0x7f0e0c79
 
     .line 137
     invoke-static {v1, v2}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -2115,7 +2115,7 @@
 
     const-string v1, "Page6Message"
 
-    const v2, 0x7f0e0bf3
+    const v2, 0x7f0e0c7d
 
     .line 138
     invoke-static {v1, v2}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;

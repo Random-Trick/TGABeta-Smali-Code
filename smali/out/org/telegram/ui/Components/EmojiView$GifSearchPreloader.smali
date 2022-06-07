@@ -48,12 +48,12 @@
 .method private constructor <init>(Lorg/telegram/ui/Components/EmojiView;)V
     .registers 2
 
-    .line 5299
+    .line 5385
     iput-object p1, p0, Lorg/telegram/ui/Components/EmojiView$GifSearchPreloader;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 5301
+    .line 5387
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
@@ -66,7 +66,7 @@
 .method synthetic constructor <init>(Lorg/telegram/ui/Components/EmojiView;Lorg/telegram/ui/Components/EmojiView$1;)V
     .registers 3
 
-    .line 5299
+    .line 5385
     invoke-direct {p0, p1}, Lorg/telegram/ui/Components/EmojiView$GifSearchPreloader;-><init>(Lorg/telegram/ui/Components/EmojiView;)V
 
     return-void
@@ -75,7 +75,7 @@
 .method private synthetic lambda$preload$0(Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;Lorg/telegram/tgnet/TLObject;)V
     .registers 6
 
-    .line 5318
+    .line 5404
     invoke-direct/range {p0 .. p5}, Lorg/telegram/ui/Components/EmojiView$GifSearchPreloader;->processResponse(Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;Lorg/telegram/tgnet/TLObject;)V
 
     return-void
@@ -84,7 +84,7 @@
 .method private synthetic lambda$preload$1(Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;Lorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/TLRPC$TL_error;)V
     .registers 14
 
-    .line 5318
+    .line 5404
     new-instance p6, Lorg/telegram/ui/Components/EmojiView$GifSearchPreloader$$ExternalSyntheticLambda0;
 
     move-object v0, p6
@@ -111,7 +111,7 @@
 .method private preload(Ljava/lang/String;Ljava/lang/String;Z)V
     .registers 12
 
-    .line 5312
+    .line 5398
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -134,10 +134,10 @@
 
     if-eqz p3, :cond_28
 
-    .line 5314
+    .line 5400
     iget-object v1, p0, Lorg/telegram/ui/Components/EmojiView$GifSearchPreloader;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
-    invoke-static {v1}, Lorg/telegram/ui/Components/EmojiView;->access$15100(Lorg/telegram/ui/Components/EmojiView;)Ljava/util/Map;
+    invoke-static {v1}, Lorg/telegram/ui/Components/EmojiView;->access$15200(Lorg/telegram/ui/Components/EmojiView;)Ljava/util/Map;
 
     move-result-object v1
 
@@ -149,7 +149,7 @@
 
     return-void
 
-    .line 5318
+    .line 5404
     :cond_28
     new-instance v1, Lorg/telegram/ui/Components/EmojiView$GifSearchPreloader$$ExternalSyntheticLambda1;
 
@@ -169,12 +169,12 @@
 
     if-eqz p3, :cond_48
 
-    .line 5321
+    .line 5407
     iget-object p1, p0, Lorg/telegram/ui/Components/EmojiView$GifSearchPreloader;->loadingKeys:Ljava/util/List;
 
     invoke-interface {p1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 5322
+    .line 5408
     iget-object p1, p0, Lorg/telegram/ui/Components/EmojiView$GifSearchPreloader;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/EmojiView;->access$6500(Lorg/telegram/ui/Components/EmojiView;)I
@@ -189,7 +189,7 @@
 
     goto :goto_8c
 
-    .line 5324
+    .line 5410
     :cond_48
     iget-object p3, p0, Lorg/telegram/ui/Components/EmojiView$GifSearchPreloader;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
@@ -201,27 +201,27 @@
 
     move-result-object p3
 
-    .line 5325
+    .line 5411
     iget-object v2, p3, Lorg/telegram/messenger/MessagesController;->gifSearchBot:Ljava/lang/String;
 
     invoke-virtual {p3, v2}, Lorg/telegram/messenger/MessagesController;->getUserOrChat(Ljava/lang/String;)Lorg/telegram/tgnet/TLObject;
 
     move-result-object v2
 
-    .line 5326
+    .line 5412
     instance-of v3, v2, Lorg/telegram/tgnet/TLRPC$User;
 
     if-nez v3, :cond_5d
 
     return-void
 
-    .line 5329
+    .line 5415
     :cond_5d
     iget-object v3, p0, Lorg/telegram/ui/Components/EmojiView$GifSearchPreloader;->loadingKeys:Ljava/util/List;
 
     invoke-interface {v3, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 5330
+    .line 5416
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_messages_getInlineBotResults;
 
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_messages_getInlineBotResults;-><init>()V
@@ -230,11 +230,11 @@
 
     const-string p1, ""
 
-    .line 5331
+    .line 5417
     :cond_6b
     iput-object p1, v0, Lorg/telegram/tgnet/TLRPC$TL_messages_getInlineBotResults;->query:Ljava/lang/String;
 
-    .line 5332
+    .line 5418
     check-cast v2, Lorg/telegram/tgnet/TLRPC$User;
 
     invoke-virtual {p3, v2}, Lorg/telegram/messenger/MessagesController;->getInputUser(Lorg/telegram/tgnet/TLRPC$User;)Lorg/telegram/tgnet/TLRPC$InputUser;
@@ -243,17 +243,17 @@
 
     iput-object p1, v0, Lorg/telegram/tgnet/TLRPC$TL_messages_getInlineBotResults;->bot:Lorg/telegram/tgnet/TLRPC$InputUser;
 
-    .line 5333
+    .line 5419
     iput-object p2, v0, Lorg/telegram/tgnet/TLRPC$TL_messages_getInlineBotResults;->offset:Ljava/lang/String;
 
-    .line 5334
+    .line 5420
     new-instance p1, Lorg/telegram/tgnet/TLRPC$TL_inputPeerEmpty;
 
     invoke-direct {p1}, Lorg/telegram/tgnet/TLRPC$TL_inputPeerEmpty;-><init>()V
 
     iput-object p1, v0, Lorg/telegram/tgnet/TLRPC$TL_messages_getInlineBotResults;->peer:Lorg/telegram/tgnet/TLRPC$InputPeer;
 
-    .line 5335
+    .line 5421
     iget-object p1, p0, Lorg/telegram/ui/Components/EmojiView$GifSearchPreloader;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/EmojiView;->access$6500(Lorg/telegram/ui/Components/EmojiView;)I
@@ -275,12 +275,12 @@
 .method private processResponse(Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;Lorg/telegram/tgnet/TLObject;)V
     .registers 15
 
-    .line 5340
+    .line 5426
     iget-object v0, p0, Lorg/telegram/ui/Components/EmojiView$GifSearchPreloader;->loadingKeys:Ljava/util/List;
 
     invoke-interface {v0, p4}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
-    .line 5342
+    .line 5428
     iget-object v0, p0, Lorg/telegram/ui/Components/EmojiView$GifSearchPreloader;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/EmojiView;->access$700(Lorg/telegram/ui/Components/EmojiView;)Lorg/telegram/ui/Components/EmojiView$GifAdapter;
@@ -309,7 +309,7 @@
 
     if-eqz v0, :cond_32
 
-    .line 5343
+    .line 5429
     iget-object v0, p0, Lorg/telegram/ui/Components/EmojiView$GifSearchPreloader;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/EmojiView;->access$700(Lorg/telegram/ui/Components/EmojiView;)Lorg/telegram/ui/Components/EmojiView$GifAdapter;
@@ -330,14 +330,14 @@
 
     move-object v8, p5
 
-    invoke-static/range {v1 .. v8}, Lorg/telegram/ui/Components/EmojiView$GifAdapter;->access$15300(Lorg/telegram/ui/Components/EmojiView$GifAdapter;Ljava/lang/String;Ljava/lang/String;ZZZLjava/lang/String;Lorg/telegram/tgnet/TLObject;)V
+    invoke-static/range {v1 .. v8}, Lorg/telegram/ui/Components/EmojiView$GifAdapter;->access$15400(Lorg/telegram/ui/Components/EmojiView$GifAdapter;Ljava/lang/String;Ljava/lang/String;ZZZLjava/lang/String;Lorg/telegram/tgnet/TLObject;)V
 
     goto :goto_63
 
     :cond_32
     if-eqz p3, :cond_48
 
-    .line 5345
+    .line 5431
     instance-of p3, p5, Lorg/telegram/tgnet/TLRPC$messages_BotResults;
 
     if-eqz p3, :cond_43
@@ -357,12 +357,12 @@
     :cond_43
     const/4 p3, 0x0
 
-    .line 5346
+    .line 5432
     invoke-direct {p0, p1, p2, p3}, Lorg/telegram/ui/Components/EmojiView$GifSearchPreloader;->preload(Ljava/lang/String;Ljava/lang/String;Z)V
 
     goto :goto_63
 
-    .line 5347
+    .line 5433
     :cond_48
     instance-of p1, p5, Lorg/telegram/tgnet/TLRPC$messages_BotResults;
 
@@ -370,7 +370,7 @@
 
     iget-object p1, p0, Lorg/telegram/ui/Components/EmojiView$GifSearchPreloader;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
-    invoke-static {p1}, Lorg/telegram/ui/Components/EmojiView;->access$15100(Lorg/telegram/ui/Components/EmojiView;)Ljava/util/Map;
+    invoke-static {p1}, Lorg/telegram/ui/Components/EmojiView;->access$15200(Lorg/telegram/ui/Components/EmojiView;)Ljava/util/Map;
 
     move-result-object p1
 
@@ -380,10 +380,10 @@
 
     if-nez p1, :cond_63
 
-    .line 5348
+    .line 5434
     iget-object p1, p0, Lorg/telegram/ui/Components/EmojiView$GifSearchPreloader;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
-    invoke-static {p1}, Lorg/telegram/ui/Components/EmojiView;->access$15100(Lorg/telegram/ui/Components/EmojiView;)Ljava/util/Map;
+    invoke-static {p1}, Lorg/telegram/ui/Components/EmojiView;->access$15200(Lorg/telegram/ui/Components/EmojiView;)Ljava/util/Map;
 
     move-result-object p1
 
@@ -401,7 +401,7 @@
 .method public isLoading(Ljava/lang/String;)Z
     .registers 3
 
-    .line 5304
+    .line 5390
     iget-object v0, p0, Lorg/telegram/ui/Components/EmojiView$GifSearchPreloader;->loadingKeys:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
@@ -418,7 +418,7 @@
 
     const/4 v1, 0x1
 
-    .line 5308
+    .line 5394
     invoke-direct {p0, p1, v0, v1}, Lorg/telegram/ui/Components/EmojiView$GifSearchPreloader;->preload(Ljava/lang/String;Ljava/lang/String;Z)V
 
     return-void

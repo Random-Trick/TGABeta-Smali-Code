@@ -57,7 +57,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;)V
     .registers 2
 
-    .line 5528
+    .line 5614
     iput-object p1, p0, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter$1;->this$1:Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -65,10 +65,10 @@
     return-void
 .end method
 
-.method static synthetic access$16300(Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter$1;)V
+.method static synthetic access$16400(Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter$1;)V
     .registers 1
 
-    .line 5528
+    .line 5614
     invoke-direct {p0}, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter$1;->clear()V
 
     return-void
@@ -77,7 +77,7 @@
 .method private clear()V
     .registers 3
 
-    .line 5531
+    .line 5617
     iget-object v0, p0, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter$1;->this$1:Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;
 
     iget-boolean v1, v0, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;->cleared:Z
@@ -89,26 +89,17 @@
     :cond_7
     const/4 v1, 0x1
 
-    .line 5534
+    .line 5620
     iput-boolean v1, v0, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;->cleared:Z
 
-    .line 5535
-    invoke-static {v0}, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;->access$15500(Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;)Ljava/util/HashMap;
+    .line 5621
+    invoke-static {v0}, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;->access$15600(Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;)Ljava/util/HashMap;
 
     move-result-object v0
 
     invoke-virtual {v0}, Ljava/util/HashMap;->clear()V
 
-    .line 5536
-    iget-object v0, p0, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter$1;->this$1:Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;
-
-    invoke-static {v0}, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;->access$15600(Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;)Ljava/util/ArrayList;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
-
-    .line 5537
+    .line 5622
     iget-object v0, p0, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter$1;->this$1:Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;->access$15700(Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;)Ljava/util/ArrayList;
@@ -117,7 +108,7 @@
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 5538
+    .line 5623
     iget-object v0, p0, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter$1;->this$1:Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;->access$15800(Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;)Ljava/util/ArrayList;
@@ -126,19 +117,28 @@
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 5539
+    .line 5624
     iget-object v0, p0, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter$1;->this$1:Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;
 
-    invoke-static {v0}, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;->access$15900(Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;)Ljava/util/HashMap;
+    invoke-static {v0}, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;->access$15900(Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;)Ljava/util/ArrayList;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
+
+    .line 5625
+    iget-object v0, p0, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter$1;->this$1:Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;
+
+    invoke-static {v0}, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;->access$16000(Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;)Ljava/util/HashMap;
 
     move-result-object v0
 
     invoke-virtual {v0}, Ljava/util/HashMap;->clear()V
 
-    .line 5540
+    .line 5626
     iget-object v0, p0, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter$1;->this$1:Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;
 
-    invoke-static {v0}, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;->access$16000(Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;)Ljava/util/HashMap;
+    invoke-static {v0}, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;->access$16100(Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;)Ljava/util/HashMap;
 
     move-result-object v0
 
@@ -150,12 +150,12 @@
 .method private synthetic lambda$run$0(Lorg/telegram/tgnet/TLRPC$TL_messages_searchStickerSets;Lorg/telegram/tgnet/TLObject;)V
     .registers 4
 
-    .line 5655
+    .line 5741
     iget-object p1, p1, Lorg/telegram/tgnet/TLRPC$TL_messages_searchStickerSets;->q:Ljava/lang/String;
 
     iget-object v0, p0, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter$1;->this$1:Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;
 
-    invoke-static {v0}, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;->access$16100(Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;)Ljava/lang/String;
+    invoke-static {v0}, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;->access$16200(Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -165,10 +165,10 @@
 
     if-eqz p1, :cond_61
 
-    .line 5656
+    .line 5742
     invoke-direct {p0}, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter$1;->clear()V
 
-    .line 5657
+    .line 5743
     iget-object p1, p0, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter$1;->this$1:Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;
 
     iget-object p1, p1, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;->this$0:Lorg/telegram/ui/Components/EmojiView;
@@ -183,14 +183,14 @@
 
     invoke-virtual {p1}, Lorg/telegram/ui/Components/CloseProgressDrawable2;->stopAnimation()V
 
-    .line 5658
+    .line 5744
     iget-object p1, p0, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter$1;->this$1:Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;
 
     const/4 v0, 0x0
 
-    invoke-static {p1, v0}, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;->access$16402(Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;I)I
+    invoke-static {p1, v0}, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;->access$16502(Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;I)I
 
-    .line 5659
+    .line 5745
     iget-object p1, p0, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter$1;->this$1:Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;
 
     iget-object p1, p1, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;->this$0:Lorg/telegram/ui/Components/EmojiView;
@@ -213,7 +213,7 @@
 
     if-eq p1, v0, :cond_4f
 
-    .line 5660
+    .line 5746
     iget-object p1, p0, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter$1;->this$1:Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;
 
     iget-object p1, p1, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;->this$0:Lorg/telegram/ui/Components/EmojiView;
@@ -232,14 +232,14 @@
 
     invoke-virtual {p1, v0}, Lorg/telegram/ui/Components/RecyclerListView;->setAdapter(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
-    .line 5662
+    .line 5748
     :cond_4f
     check-cast p2, Lorg/telegram/tgnet/TLRPC$TL_messages_foundStickerSets;
 
-    .line 5663
+    .line 5749
     iget-object p1, p0, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter$1;->this$1:Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;
 
-    invoke-static {p1}, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;->access$15800(Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;)Ljava/util/ArrayList;
+    invoke-static {p1}, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;->access$15900(Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;)Ljava/util/ArrayList;
 
     move-result-object p1
 
@@ -247,7 +247,7 @@
 
     invoke-virtual {p1, p2}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
-    .line 5664
+    .line 5750
     iget-object p1, p0, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter$1;->this$1:Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;
 
     invoke-virtual {p1}, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;->notifyDataSetChanged()V
@@ -259,12 +259,12 @@
 .method private synthetic lambda$run$1(Lorg/telegram/tgnet/TLRPC$TL_messages_searchStickerSets;Lorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/TLRPC$TL_error;)V
     .registers 4
 
-    .line 5653
+    .line 5739
     instance-of p3, p2, Lorg/telegram/tgnet/TLRPC$TL_messages_foundStickerSets;
 
     if-eqz p3, :cond_c
 
-    .line 5654
+    .line 5740
     new-instance p3, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter$1$$ExternalSyntheticLambda1;
 
     invoke-direct {p3, p0, p1, p2}, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter$1$$ExternalSyntheticLambda1;-><init>(Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter$1;Lorg/telegram/tgnet/TLRPC$TL_messages_searchStickerSets;Lorg/telegram/tgnet/TLObject;)V
@@ -278,12 +278,12 @@
 .method private synthetic lambda$run$2(Lorg/telegram/tgnet/TLRPC$TL_messages_getStickers;Lorg/telegram/tgnet/TLObject;Ljava/util/ArrayList;Landroid/util/LongSparseArray;)V
     .registers 10
 
-    .line 5674
+    .line 5760
     iget-object p1, p1, Lorg/telegram/tgnet/TLRPC$TL_messages_getStickers;->emoticon:Ljava/lang/String;
 
     iget-object v0, p0, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter$1;->this$1:Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;
 
-    invoke-static {v0}, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;->access$16100(Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;)Ljava/lang/String;
+    invoke-static {v0}, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;->access$16200(Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -293,30 +293,30 @@
 
     if-eqz p1, :cond_63
 
-    .line 5675
+    .line 5761
     iget-object p1, p0, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter$1;->this$1:Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;
 
     const/4 v0, 0x0
 
-    invoke-static {p1, v0}, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;->access$16502(Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;I)I
+    invoke-static {p1, v0}, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;->access$16602(Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;I)I
 
-    .line 5676
+    .line 5762
     instance-of p1, p2, Lorg/telegram/tgnet/TLRPC$TL_messages_stickers;
 
     if-nez p1, :cond_19
 
     return-void
 
-    .line 5679
+    .line 5765
     :cond_19
     check-cast p2, Lorg/telegram/tgnet/TLRPC$TL_messages_stickers;
 
-    .line 5680
+    .line 5766
     invoke-virtual {p3}, Ljava/util/ArrayList;->size()I
 
     move-result p1
 
-    .line 5681
+    .line 5767
     iget-object v1, p2, Lorg/telegram/tgnet/TLRPC$TL_messages_stickers;->stickers:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
@@ -326,7 +326,7 @@
     :goto_25
     if-ge v0, v1, :cond_3e
 
-    .line 5682
+    .line 5768
     iget-object v2, p2, Lorg/telegram/tgnet/TLRPC$TL_messages_stickers;->stickers:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -335,7 +335,7 @@
 
     check-cast v2, Lorg/telegram/tgnet/TLRPC$Document;
 
-    .line 5683
+    .line 5769
     iget-wide v3, v2, Lorg/telegram/tgnet/TLRPC$Document;->id:J
 
     invoke-virtual {p4, v3, v4}, Landroid/util/LongSparseArray;->indexOfKey(J)I
@@ -346,7 +346,7 @@
 
     goto :goto_3b
 
-    .line 5686
+    .line 5772
     :cond_38
     invoke-virtual {p3, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -355,7 +355,7 @@
 
     goto :goto_25
 
-    .line 5688
+    .line 5774
     :cond_3e
     invoke-virtual {p3}, Ljava/util/ArrayList;->size()I
 
@@ -363,16 +363,16 @@
 
     if-eq p1, p2, :cond_63
 
-    .line 5690
+    .line 5776
     iget-object p2, p0, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter$1;->this$1:Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;
 
-    invoke-static {p2}, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;->access$15500(Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;)Ljava/util/HashMap;
+    invoke-static {p2}, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;->access$15600(Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;)Ljava/util/HashMap;
 
     move-result-object p2
 
     iget-object p4, p0, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter$1;->this$1:Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;
 
-    invoke-static {p4}, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;->access$16100(Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;)Ljava/lang/String;
+    invoke-static {p4}, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;->access$16200(Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;)Ljava/lang/String;
 
     move-result-object p4
 
@@ -380,16 +380,16 @@
 
     if-nez p1, :cond_5e
 
-    .line 5692
+    .line 5778
     iget-object p1, p0, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter$1;->this$1:Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;
 
-    invoke-static {p1}, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;->access$15600(Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;)Ljava/util/ArrayList;
+    invoke-static {p1}, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;->access$15700(Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;)Ljava/util/ArrayList;
 
     move-result-object p1
 
     invoke-virtual {p1, p3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 5694
+    .line 5780
     :cond_5e
     iget-object p1, p0, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter$1;->this$1:Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;
 
@@ -402,7 +402,7 @@
 .method private synthetic lambda$run$3(Lorg/telegram/tgnet/TLRPC$TL_messages_getStickers;Ljava/util/ArrayList;Landroid/util/LongSparseArray;Lorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/TLRPC$TL_error;)V
     .registers 12
 
-    .line 5673
+    .line 5759
     new-instance p5, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter$1$$ExternalSyntheticLambda0;
 
     move-object v0, p5
@@ -429,10 +429,10 @@
 .method public run()V
     .registers 14
 
-    .line 5545
+    .line 5631
     iget-object v0, p0, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter$1;->this$1:Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;
 
-    invoke-static {v0}, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;->access$16100(Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;)Ljava/lang/String;
+    invoke-static {v0}, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;->access$16200(Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -444,7 +444,7 @@
 
     return-void
 
-    .line 5548
+    .line 5634
     :cond_d
     iget-object v0, p0, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter$1;->this$1:Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;
 
@@ -460,29 +460,29 @@
 
     invoke-virtual {v0}, Lorg/telegram/ui/Components/CloseProgressDrawable2;->startAnimation()V
 
-    .line 5549
+    .line 5635
     iget-object v0, p0, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter$1;->this$1:Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;
 
     const/4 v1, 0x0
 
     iput-boolean v1, v0, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;->cleared:Z
 
-    .line 5550
-    invoke-static {v0}, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;->access$16204(Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;)I
+    .line 5636
+    invoke-static {v0}, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;->access$16304(Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;)I
 
     move-result v0
 
-    .line 5552
+    .line 5638
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2, v1}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 5553
+    .line 5639
     new-instance v3, Landroid/util/LongSparseArray;
 
     invoke-direct {v3, v1}, Landroid/util/LongSparseArray;-><init>(I)V
 
-    .line 5554
+    .line 5640
     iget-object v4, p0, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter$1;->this$1:Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;
 
     iget-object v4, v4, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;->this$0:Lorg/telegram/ui/Components/EmojiView;
@@ -499,10 +499,10 @@
 
     move-result-object v4
 
-    .line 5555
+    .line 5641
     iget-object v5, p0, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter$1;->this$1:Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;
 
-    invoke-static {v5}, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;->access$16100(Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;)Ljava/lang/String;
+    invoke-static {v5}, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;->access$16200(Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;)Ljava/lang/String;
 
     move-result-object v5
 
@@ -516,14 +516,14 @@
 
     if-gt v5, v6, :cond_122
 
-    .line 5556
+    .line 5642
     iget-object v5, p0, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter$1;->this$1:Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;
 
-    invoke-static {v5}, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;->access$16100(Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;)Ljava/lang/String;
+    invoke-static {v5}, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;->access$16200(Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;)Ljava/lang/String;
 
     move-result-object v5
 
-    .line 5557
+    .line 5643
     invoke-interface {v5}, Ljava/lang/CharSequence;->length()I
 
     move-result v6
@@ -539,7 +539,7 @@
 
     if-ge v8, v9, :cond_b2
 
-    .line 5559
+    .line 5645
     invoke-interface {v5, v8}, Ljava/lang/CharSequence;->charAt(I)C
 
     move-result v9
@@ -596,7 +596,7 @@
     :cond_97
     new-array v9, v10, [Ljava/lang/CharSequence;
 
-    .line 5560
+    .line 5646
     invoke-interface {v5, v1, v8}, Ljava/lang/CharSequence;->subSequence(II)Ljava/lang/CharSequence;
 
     move-result-object v10
@@ -623,7 +623,7 @@
 
     goto :goto_d5
 
-    .line 5563
+    .line 5649
     :cond_b2
     invoke-interface {v5, v8}, Ljava/lang/CharSequence;->charAt(I)C
 
@@ -635,7 +635,7 @@
 
     new-array v9, v10, [Ljava/lang/CharSequence;
 
-    .line 5564
+    .line 5650
     invoke-interface {v5, v1, v8}, Ljava/lang/CharSequence;->subSequence(II)Ljava/lang/CharSequence;
 
     move-result-object v10
@@ -671,7 +671,7 @@
     :cond_d9
     if-eqz v4, :cond_e6
 
-    .line 5569
+    .line 5655
     invoke-interface {v5}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
     move-result-object v5
@@ -690,20 +690,20 @@
     :goto_e7
     if-eqz v5, :cond_122
 
-    .line 5570
+    .line 5656
     invoke-virtual {v5}, Ljava/util/ArrayList;->isEmpty()Z
 
     move-result v6
 
     if-nez v6, :cond_122
 
-    .line 5571
+    .line 5657
     invoke-direct {p0}, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter$1;->clear()V
 
-    .line 5572
+    .line 5658
     invoke-virtual {v2, v5}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
-    .line 5573
+    .line 5659
     invoke-virtual {v5}, Ljava/util/ArrayList;->size()I
 
     move-result v6
@@ -713,14 +713,14 @@
     :goto_fa
     if-ge v8, v6, :cond_10a
 
-    .line 5574
+    .line 5660
     invoke-virtual {v5, v8}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v9
 
     check-cast v9, Lorg/telegram/tgnet/TLRPC$Document;
 
-    .line 5575
+    .line 5661
     iget-wide v10, v9, Lorg/telegram/tgnet/TLRPC$Document;->id:J
 
     invoke-virtual {v3, v10, v11, v9}, Landroid/util/LongSparseArray;->put(JLjava/lang/Object;)V
@@ -729,26 +729,26 @@
 
     goto :goto_fa
 
-    .line 5577
+    .line 5663
     :cond_10a
     iget-object v5, p0, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter$1;->this$1:Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;
 
-    invoke-static {v5}, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;->access$15500(Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;)Ljava/util/HashMap;
+    invoke-static {v5}, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;->access$15600(Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;)Ljava/util/HashMap;
 
     move-result-object v5
 
     iget-object v6, p0, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter$1;->this$1:Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;
 
-    invoke-static {v6}, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;->access$16100(Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;)Ljava/lang/String;
+    invoke-static {v6}, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;->access$16200(Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;)Ljava/lang/String;
 
     move-result-object v6
 
     invoke-virtual {v5, v2, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 5578
+    .line 5664
     iget-object v5, p0, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter$1;->this$1:Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;
 
-    invoke-static {v5}, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;->access$15600(Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;)Ljava/util/ArrayList;
+    invoke-static {v5}, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;->access$15700(Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;)Ljava/util/ArrayList;
 
     move-result-object v5
 
@@ -757,7 +757,7 @@
     :cond_122
     if-eqz v4, :cond_180
 
-    .line 5581
+    .line 5667
     invoke-virtual {v4}, Ljava/util/HashMap;->isEmpty()Z
 
     move-result v5
@@ -766,7 +766,7 @@
 
     iget-object v5, p0, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter$1;->this$1:Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;
 
-    invoke-static {v5}, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;->access$16100(Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;)Ljava/lang/String;
+    invoke-static {v5}, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;->access$16200(Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;)Ljava/lang/String;
 
     move-result-object v5
 
@@ -776,12 +776,12 @@
 
     if-le v5, v7, :cond_180
 
-    .line 5582
+    .line 5668
     invoke-static {}, Lorg/telegram/messenger/AndroidUtilities;->getCurrentKeyboardLanguage()[Ljava/lang/String;
 
     move-result-object v5
 
-    .line 5583
+    .line 5669
     iget-object v6, p0, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter$1;->this$1:Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;
 
     iget-object v6, v6, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;->this$0:Lorg/telegram/ui/Components/EmojiView;
@@ -796,7 +796,7 @@
 
     if-nez v6, :cond_157
 
-    .line 5584
+    .line 5670
     iget-object v6, p0, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter$1;->this$1:Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;
 
     iget-object v6, v6, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;->this$0:Lorg/telegram/ui/Components/EmojiView;
@@ -811,7 +811,7 @@
 
     invoke-virtual {v6, v5}, Lorg/telegram/messenger/MediaDataController;->fetchNewEmojiKeywords([Ljava/lang/String;)V
 
-    .line 5586
+    .line 5672
     :cond_157
     iget-object v6, p0, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter$1;->this$1:Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;
 
@@ -819,7 +819,7 @@
 
     invoke-static {v6, v5}, Lorg/telegram/ui/Components/EmojiView;->access$6402(Lorg/telegram/ui/Components/EmojiView;[Ljava/lang/String;)[Ljava/lang/String;
 
-    .line 5587
+    .line 5673
     iget-object v5, p0, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter$1;->this$1:Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;
 
     iget-object v5, v5, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;->this$0:Lorg/telegram/ui/Components/EmojiView;
@@ -842,7 +842,7 @@
 
     iget-object v7, p0, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter$1;->this$1:Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;
 
-    invoke-static {v7}, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;->access$16100(Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;)Ljava/lang/String;
+    invoke-static {v7}, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;->access$16200(Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;)Ljava/lang/String;
 
     move-result-object v7
 
@@ -852,7 +852,7 @@
 
     invoke-virtual {v5, v6, v7, v1, v8}, Lorg/telegram/messenger/MediaDataController;->getEmojiSuggestions([Ljava/lang/String;Ljava/lang/String;ZLorg/telegram/messenger/MediaDataController$KeywordResultCallback;)V
 
-    .line 5612
+    .line 5698
     :cond_180
     iget-object v0, p0, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter$1;->this$1:Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;
 
@@ -870,7 +870,7 @@
 
     move-result-object v0
 
-    .line 5614
+    .line 5700
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
     move-result v4
@@ -882,21 +882,21 @@
 
     if-ge v5, v4, :cond_211
 
-    .line 5615
+    .line 5701
     invoke-virtual {v0, v5}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v7
 
     check-cast v7, Lorg/telegram/tgnet/TLRPC$TL_messages_stickerSet;
 
-    .line 5616
+    .line 5702
     iget-object v8, v7, Lorg/telegram/tgnet/TLRPC$messages_StickerSet;->set:Lorg/telegram/tgnet/TLRPC$StickerSet;
 
     iget-object v8, v8, Lorg/telegram/tgnet/TLRPC$StickerSet;->title:Ljava/lang/String;
 
     iget-object v9, p0, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter$1;->this$1:Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;
 
-    invoke-static {v9}, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;->access$16100(Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;)Ljava/lang/String;
+    invoke-static {v9}, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;->access$16200(Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;)Ljava/lang/String;
 
     move-result-object v9
 
@@ -908,7 +908,7 @@
 
     if-eqz v8, :cond_1bd
 
-    .line 5617
+    .line 5703
     iget-object v9, v7, Lorg/telegram/tgnet/TLRPC$messages_StickerSet;->set:Lorg/telegram/tgnet/TLRPC$StickerSet;
 
     iget-object v9, v9, Lorg/telegram/tgnet/TLRPC$StickerSet;->title:Ljava/lang/String;
@@ -921,23 +921,23 @@
 
     if-ne v9, v6, :cond_20e
 
-    .line 5618
+    .line 5704
     :cond_1bd
     invoke-direct {p0}, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter$1;->clear()V
 
-    .line 5619
+    .line 5705
     iget-object v6, p0, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter$1;->this$1:Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;
 
-    invoke-static {v6}, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;->access$15700(Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;)Ljava/util/ArrayList;
+    invoke-static {v6}, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;->access$15800(Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;)Ljava/util/ArrayList;
 
     move-result-object v6
 
     invoke-virtual {v6, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 5620
+    .line 5706
     iget-object v6, p0, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter$1;->this$1:Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;
 
-    invoke-static {v6}, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;->access$16000(Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;)Ljava/util/HashMap;
+    invoke-static {v6}, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;->access$16100(Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;)Ljava/util/HashMap;
 
     move-result-object v6
 
@@ -949,7 +949,7 @@
 
     goto :goto_20e
 
-    .line 5622
+    .line 5708
     :cond_1d7
     iget-object v8, v7, Lorg/telegram/tgnet/TLRPC$messages_StickerSet;->set:Lorg/telegram/tgnet/TLRPC$StickerSet;
 
@@ -959,7 +959,7 @@
 
     iget-object v9, p0, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter$1;->this$1:Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;
 
-    invoke-static {v9}, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;->access$16100(Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;)Ljava/lang/String;
+    invoke-static {v9}, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;->access$16200(Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;)Ljava/lang/String;
 
     move-result-object v9
 
@@ -971,7 +971,7 @@
 
     if-eqz v8, :cond_1f7
 
-    .line 5623
+    .line 5709
     iget-object v9, v7, Lorg/telegram/tgnet/TLRPC$messages_StickerSet;->set:Lorg/telegram/tgnet/TLRPC$StickerSet;
 
     iget-object v9, v9, Lorg/telegram/tgnet/TLRPC$StickerSet;->short_name:Ljava/lang/String;
@@ -984,23 +984,23 @@
 
     if-ne v8, v6, :cond_20e
 
-    .line 5624
+    .line 5710
     :cond_1f7
     invoke-direct {p0}, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter$1;->clear()V
 
-    .line 5625
+    .line 5711
     iget-object v6, p0, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter$1;->this$1:Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;
 
-    invoke-static {v6}, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;->access$15700(Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;)Ljava/util/ArrayList;
+    invoke-static {v6}, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;->access$15800(Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;)Ljava/util/ArrayList;
 
     move-result-object v6
 
     invoke-virtual {v6, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 5626
+    .line 5712
     iget-object v6, p0, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter$1;->this$1:Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;
 
-    invoke-static {v6}, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;->access$15900(Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;)Ljava/util/HashMap;
+    invoke-static {v6}, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;->access$16000(Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;)Ljava/util/HashMap;
 
     move-result-object v6
 
@@ -1014,7 +1014,7 @@
 
     goto :goto_195
 
-    .line 5630
+    .line 5716
     :cond_211
     iget-object v0, p0, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter$1;->this$1:Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;
 
@@ -1034,7 +1034,7 @@
 
     move-result-object v0
 
-    .line 5631
+    .line 5717
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
     move-result v4
@@ -1042,21 +1042,21 @@
     :goto_226
     if-ge v1, v4, :cond_2a0
 
-    .line 5632
+    .line 5718
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v5
 
     check-cast v5, Lorg/telegram/tgnet/TLRPC$TL_messages_stickerSet;
 
-    .line 5633
+    .line 5719
     iget-object v7, v5, Lorg/telegram/tgnet/TLRPC$messages_StickerSet;->set:Lorg/telegram/tgnet/TLRPC$StickerSet;
 
     iget-object v7, v7, Lorg/telegram/tgnet/TLRPC$StickerSet;->title:Ljava/lang/String;
 
     iget-object v8, p0, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter$1;->this$1:Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;
 
-    invoke-static {v8}, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;->access$16100(Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;)Ljava/lang/String;
+    invoke-static {v8}, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;->access$16200(Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;)Ljava/lang/String;
 
     move-result-object v8
 
@@ -1068,7 +1068,7 @@
 
     if-eqz v7, :cond_24c
 
-    .line 5634
+    .line 5720
     iget-object v8, v5, Lorg/telegram/tgnet/TLRPC$messages_StickerSet;->set:Lorg/telegram/tgnet/TLRPC$StickerSet;
 
     iget-object v8, v8, Lorg/telegram/tgnet/TLRPC$StickerSet;->title:Ljava/lang/String;
@@ -1081,23 +1081,23 @@
 
     if-ne v8, v6, :cond_29d
 
-    .line 5635
+    .line 5721
     :cond_24c
     invoke-direct {p0}, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter$1;->clear()V
 
-    .line 5636
+    .line 5722
     iget-object v8, p0, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter$1;->this$1:Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;
 
-    invoke-static {v8}, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;->access$15700(Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;)Ljava/util/ArrayList;
+    invoke-static {v8}, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;->access$15800(Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;)Ljava/util/ArrayList;
 
     move-result-object v8
 
     invoke-virtual {v8, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 5637
+    .line 5723
     iget-object v8, p0, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter$1;->this$1:Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;
 
-    invoke-static {v8}, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;->access$16000(Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;)Ljava/util/HashMap;
+    invoke-static {v8}, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;->access$16100(Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;)Ljava/util/HashMap;
 
     move-result-object v8
 
@@ -1109,7 +1109,7 @@
 
     goto :goto_29d
 
-    .line 5639
+    .line 5725
     :cond_266
     iget-object v7, v5, Lorg/telegram/tgnet/TLRPC$messages_StickerSet;->set:Lorg/telegram/tgnet/TLRPC$StickerSet;
 
@@ -1119,7 +1119,7 @@
 
     iget-object v8, p0, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter$1;->this$1:Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;
 
-    invoke-static {v8}, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;->access$16100(Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;)Ljava/lang/String;
+    invoke-static {v8}, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;->access$16200(Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;)Ljava/lang/String;
 
     move-result-object v8
 
@@ -1131,7 +1131,7 @@
 
     if-eqz v7, :cond_286
 
-    .line 5640
+    .line 5726
     iget-object v8, v5, Lorg/telegram/tgnet/TLRPC$messages_StickerSet;->set:Lorg/telegram/tgnet/TLRPC$StickerSet;
 
     iget-object v8, v8, Lorg/telegram/tgnet/TLRPC$StickerSet;->short_name:Ljava/lang/String;
@@ -1144,23 +1144,23 @@
 
     if-ne v7, v6, :cond_29d
 
-    .line 5641
+    .line 5727
     :cond_286
     invoke-direct {p0}, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter$1;->clear()V
 
-    .line 5642
+    .line 5728
     iget-object v7, p0, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter$1;->this$1:Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;
 
-    invoke-static {v7}, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;->access$15700(Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;)Ljava/util/ArrayList;
+    invoke-static {v7}, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;->access$15800(Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;)Ljava/util/ArrayList;
 
     move-result-object v7
 
     invoke-virtual {v7, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 5643
+    .line 5729
     iget-object v7, p0, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter$1;->this$1:Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;
 
-    invoke-static {v7}, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;->access$15900(Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;)Ljava/util/HashMap;
+    invoke-static {v7}, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;->access$16000(Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;)Ljava/util/HashMap;
 
     move-result-object v7
 
@@ -1174,11 +1174,11 @@
 
     goto :goto_226
 
-    .line 5647
+    .line 5733
     :cond_2a0
     iget-object v0, p0, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter$1;->this$1:Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;
 
-    invoke-static {v0}, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;->access$15700(Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;)Ljava/util/ArrayList;
+    invoke-static {v0}, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;->access$15800(Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;)Ljava/util/ArrayList;
 
     move-result-object v0
 
@@ -1190,7 +1190,7 @@
 
     iget-object v0, p0, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter$1;->this$1:Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;
 
-    invoke-static {v0}, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;->access$15500(Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;)Ljava/util/HashMap;
+    invoke-static {v0}, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;->access$15600(Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;)Ljava/util/HashMap;
 
     move-result-object v0
 
@@ -1223,7 +1223,7 @@
 
     if-eq v0, v1, :cond_2e1
 
-    .line 5648
+    .line 5734
     iget-object v0, p0, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter$1;->this$1:Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;
 
     iget-object v0, v0, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;->this$0:Lorg/telegram/ui/Components/EmojiView;
@@ -1242,22 +1242,22 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/RecyclerListView;->setAdapter(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
-    .line 5650
+    .line 5736
     :cond_2e1
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_messages_searchStickerSets;
 
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_messages_searchStickerSets;-><init>()V
 
-    .line 5651
+    .line 5737
     iget-object v1, p0, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter$1;->this$1:Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;
 
-    invoke-static {v1}, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;->access$16100(Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;)Ljava/lang/String;
+    invoke-static {v1}, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;->access$16200(Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;)Ljava/lang/String;
 
     move-result-object v1
 
     iput-object v1, v0, Lorg/telegram/tgnet/TLRPC$TL_messages_searchStickerSets;->q:Ljava/lang/String;
 
-    .line 5652
+    .line 5738
     iget-object v1, p0, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter$1;->this$1:Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;
 
     iget-object v4, v1, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;->this$0:Lorg/telegram/ui/Components/EmojiView;
@@ -1278,12 +1278,12 @@
 
     move-result v0
 
-    invoke-static {v1, v0}, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;->access$16402(Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;I)I
+    invoke-static {v1, v0}, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;->access$16502(Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;I)I
 
-    .line 5669
+    .line 5755
     iget-object v0, p0, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter$1;->this$1:Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;
 
-    invoke-static {v0}, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;->access$16100(Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;)Ljava/lang/String;
+    invoke-static {v0}, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;->access$16200(Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1293,15 +1293,15 @@
 
     if-eqz v0, :cond_33b
 
-    .line 5670
+    .line 5756
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_messages_getStickers;
 
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_messages_getStickers;-><init>()V
 
-    .line 5671
+    .line 5757
     iget-object v1, p0, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter$1;->this$1:Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;
 
-    invoke-static {v1}, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;->access$16100(Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;)Ljava/lang/String;
+    invoke-static {v1}, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;->access$16200(Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -1309,10 +1309,10 @@
 
     const-wide/16 v4, 0x0
 
-    .line 5672
+    .line 5758
     iput-wide v4, v0, Lorg/telegram/tgnet/TLRPC$TL_messages_getStickers;->hash:J
 
-    .line 5673
+    .line 5759
     iget-object v1, p0, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter$1;->this$1:Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;
 
     iget-object v4, v1, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;->this$0:Lorg/telegram/ui/Components/EmojiView;
@@ -1333,9 +1333,9 @@
 
     move-result v0
 
-    invoke-static {v1, v0}, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;->access$16502(Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;I)I
+    invoke-static {v1, v0}, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;->access$16602(Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;I)I
 
-    .line 5699
+    .line 5785
     :cond_33b
     iget-object v0, p0, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter$1;->this$1:Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;
 

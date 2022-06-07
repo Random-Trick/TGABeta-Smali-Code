@@ -2,42 +2,42 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lorg/telegram/ui/DialogsActivity$DialogsActivityDelegate;
+.implements Lorg/telegram/ui/Components/SenderSelectPopup$OnSelectCallback;
 
 
 # instance fields
 .field public final synthetic f$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
-.field public final synthetic f$1:Lorg/telegram/messenger/MessageObject;
+.field public final synthetic f$1:Lorg/telegram/tgnet/TLRPC$ChatFull;
 
-.field public final synthetic f$2:Lorg/telegram/tgnet/TLRPC$KeyboardButton;
+.field public final synthetic f$2:Lorg/telegram/messenger/MessagesController;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lorg/telegram/ui/Components/ChatActivityEnterView;Lorg/telegram/messenger/MessageObject;Lorg/telegram/tgnet/TLRPC$KeyboardButton;)V
+.method public synthetic constructor <init>(Lorg/telegram/ui/Components/ChatActivityEnterView;Lorg/telegram/tgnet/TLRPC$ChatFull;Lorg/telegram/messenger/MessagesController;)V
     .registers 4
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$$ExternalSyntheticLambda59;->f$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
-    iput-object p2, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$$ExternalSyntheticLambda59;->f$1:Lorg/telegram/messenger/MessageObject;
+    iput-object p2, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$$ExternalSyntheticLambda59;->f$1:Lorg/telegram/tgnet/TLRPC$ChatFull;
 
-    iput-object p3, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$$ExternalSyntheticLambda59;->f$2:Lorg/telegram/tgnet/TLRPC$KeyboardButton;
+    iput-object p3, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$$ExternalSyntheticLambda59;->f$2:Lorg/telegram/messenger/MessagesController;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final didSelectDialogs(Lorg/telegram/ui/DialogsActivity;Ljava/util/ArrayList;Ljava/lang/CharSequence;Z)V
-    .registers 12
+.method public final onPeerSelected(Landroidx/recyclerview/widget/RecyclerView;Lorg/telegram/ui/Components/SenderSelectPopup$SenderView;Lorg/telegram/tgnet/TLRPC$Peer;)V
+    .registers 10
 
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$$ExternalSyntheticLambda59;->f$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
-    iget-object v1, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$$ExternalSyntheticLambda59;->f$1:Lorg/telegram/messenger/MessageObject;
+    iget-object v1, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$$ExternalSyntheticLambda59;->f$1:Lorg/telegram/tgnet/TLRPC$ChatFull;
 
-    iget-object v2, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$$ExternalSyntheticLambda59;->f$2:Lorg/telegram/tgnet/TLRPC$KeyboardButton;
+    iget-object v2, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$$ExternalSyntheticLambda59;->f$2:Lorg/telegram/messenger/MessagesController;
 
     move-object v3, p1
 
@@ -45,9 +45,7 @@
 
     move-object v5, p3
 
-    move v6, p4
-
-    invoke-static/range {v0 .. v6}, Lorg/telegram/ui/Components/ChatActivityEnterView;->$r8$lambda$nkNtBufWzAyCeFku2bNK4EFsPvY(Lorg/telegram/ui/Components/ChatActivityEnterView;Lorg/telegram/messenger/MessageObject;Lorg/telegram/tgnet/TLRPC$KeyboardButton;Lorg/telegram/ui/DialogsActivity;Ljava/util/ArrayList;Ljava/lang/CharSequence;Z)V
+    invoke-static/range {v0 .. v5}, Lorg/telegram/ui/Components/ChatActivityEnterView;->$r8$lambda$T6ndRa0aqB1GVB0sZVm9n2UXb0M(Lorg/telegram/ui/Components/ChatActivityEnterView;Lorg/telegram/tgnet/TLRPC$ChatFull;Lorg/telegram/messenger/MessagesController;Landroidx/recyclerview/widget/RecyclerView;Lorg/telegram/ui/Components/SenderSelectPopup$SenderView;Lorg/telegram/tgnet/TLRPC$Peer;)V
 
     return-void
 .end method

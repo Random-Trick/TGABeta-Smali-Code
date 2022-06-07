@@ -18,7 +18,7 @@
 .method constructor <init>(Lorg/telegram/ui/GroupCallActivity$ListAdapter;Landroid/content/Context;)V
     .registers 3
 
-    .line 8114
+    .line 8119
     invoke-direct {p0, p2}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
     return-void
@@ -29,7 +29,7 @@
 .method protected onMeasure(II)V
     .registers 4
 
-    .line 8117
+    .line 8122
     sget-boolean p2, Lorg/telegram/ui/GroupCallActivity;->isLandscapeMode:Z
 
     if-eqz p2, :cond_6

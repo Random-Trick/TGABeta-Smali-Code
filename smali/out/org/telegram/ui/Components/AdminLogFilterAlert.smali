@@ -298,7 +298,7 @@
 
     move-result-object p4
 
-    const v1, 0x7f0703b4
+    const v1, 0x7f0703b9
 
     invoke-virtual {p4, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -445,7 +445,7 @@
 
     invoke-direct {p4, p1}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
-    const v1, 0x7f07013e
+    const v1, 0x7f070107
 
     .line 335
     invoke-virtual {p4, v1}, Landroid/view/View;->setBackgroundResource(I)V
@@ -482,7 +482,7 @@
     .line 340
     iget-object p1, p0, Lorg/telegram/ui/Components/AdminLogFilterAlert;->saveButton:Lorg/telegram/ui/ActionBar/BottomSheet$BottomSheetCell;
 
-    const p3, 0x7f0e0f56
+    const p3, 0x7f0e100e
 
     const-string p4, "Save"
 

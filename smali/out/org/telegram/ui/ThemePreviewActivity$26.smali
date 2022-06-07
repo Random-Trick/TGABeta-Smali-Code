@@ -24,12 +24,12 @@
 .method constructor <init>(Lorg/telegram/ui/ThemePreviewActivity;Landroid/content/Context;)V
     .registers 3
 
-    .line 2016
+    .line 2010
     iput-object p1, p0, Lorg/telegram/ui/ThemePreviewActivity$26;->this$0:Lorg/telegram/ui/ThemePreviewActivity;
 
     invoke-direct {p0, p2}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
-    .line 2018
+    .line 2012
     new-instance p1, Landroid/graphics/Paint;
 
     const/4 p2, 0x1
@@ -46,7 +46,7 @@
 .method protected onDraw(Landroid/graphics/Canvas;)V
     .registers 8
 
-    .line 2022
+    .line 2016
     iget-object v0, p0, Lorg/telegram/ui/ThemePreviewActivity$26;->this$0:Lorg/telegram/ui/ThemePreviewActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/ThemePreviewActivity;->access$6800(Lorg/telegram/ui/ThemePreviewActivity;)Landroidx/viewpager/widget/ViewPager;
@@ -57,7 +57,7 @@
 
     move-result v0
 
-    .line 2023
+    .line 2017
     iget-object v1, p0, Lorg/telegram/ui/ThemePreviewActivity$26;->paint:Landroid/graphics/Paint;
 
     iget-object v2, p0, Lorg/telegram/ui/ThemePreviewActivity$26;->this$0:Lorg/telegram/ui/ThemePreviewActivity;
@@ -77,7 +77,7 @@
 
     if-ge v1, v2, :cond_47
 
-    .line 2025
+    .line 2019
     iget-object v2, p0, Lorg/telegram/ui/ThemePreviewActivity$26;->paint:Landroid/graphics/Paint;
 
     if-ne v1, v0, :cond_22
@@ -98,7 +98,7 @@
 
     int-to-float v2, v2
 
-    .line 2026
+    .line 2020
     invoke-static {v2}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v2

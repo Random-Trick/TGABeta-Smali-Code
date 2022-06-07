@@ -132,7 +132,7 @@
     return-object v0
 .end method
 
-.method public synthetic spliterator()Lj$/util/y;
+.method public synthetic spliterator()Lj$/util/u;
     .registers 2
 
     iget-object v0, p0, Lj$/wrappers/H0;->a:Ljava/util/stream/BaseStream;
@@ -141,7 +141,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lj$/wrappers/g;->a(Ljava/util/Spliterator;)Lj$/util/y;
+    invoke-static {v0}, Lj$/wrappers/g;->a(Ljava/util/Spliterator;)Lj$/util/u;
 
     move-result-object v0
 

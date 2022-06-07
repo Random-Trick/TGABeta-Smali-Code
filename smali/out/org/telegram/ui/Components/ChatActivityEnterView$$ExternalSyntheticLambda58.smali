@@ -2,50 +2,32 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lorg/telegram/ui/Components/SenderSelectPopup$OnSelectCallback;
+.implements Lorg/telegram/ui/Components/EditTextCaption$EditTextCaptionDelegate;
 
 
 # instance fields
 .field public final synthetic f$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
-.field public final synthetic f$1:Lorg/telegram/tgnet/TLRPC$ChatFull;
-
-.field public final synthetic f$2:Lorg/telegram/messenger/MessagesController;
-
 
 # direct methods
-.method public synthetic constructor <init>(Lorg/telegram/ui/Components/ChatActivityEnterView;Lorg/telegram/tgnet/TLRPC$ChatFull;Lorg/telegram/messenger/MessagesController;)V
-    .registers 4
+.method public synthetic constructor <init>(Lorg/telegram/ui/Components/ChatActivityEnterView;)V
+    .registers 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$$ExternalSyntheticLambda58;->f$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
-
-    iput-object p2, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$$ExternalSyntheticLambda58;->f$1:Lorg/telegram/tgnet/TLRPC$ChatFull;
-
-    iput-object p3, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$$ExternalSyntheticLambda58;->f$2:Lorg/telegram/messenger/MessagesController;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onPeerSelected(Landroidx/recyclerview/widget/RecyclerView;Lorg/telegram/ui/Components/SenderSelectPopup$SenderView;Lorg/telegram/tgnet/TLRPC$Peer;)V
-    .registers 10
+.method public final onSpansChanged()V
+    .registers 2
 
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$$ExternalSyntheticLambda58;->f$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
-    iget-object v1, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$$ExternalSyntheticLambda58;->f$1:Lorg/telegram/tgnet/TLRPC$ChatFull;
-
-    iget-object v2, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$$ExternalSyntheticLambda58;->f$2:Lorg/telegram/messenger/MessagesController;
-
-    move-object v3, p1
-
-    move-object v4, p2
-
-    move-object v5, p3
-
-    invoke-static/range {v0 .. v5}, Lorg/telegram/ui/Components/ChatActivityEnterView;->$r8$lambda$IeDJbCYsbg6IfBMDgA1oHFPeQBw(Lorg/telegram/ui/Components/ChatActivityEnterView;Lorg/telegram/tgnet/TLRPC$ChatFull;Lorg/telegram/messenger/MessagesController;Landroidx/recyclerview/widget/RecyclerView;Lorg/telegram/ui/Components/SenderSelectPopup$SenderView;Lorg/telegram/tgnet/TLRPC$Peer;)V
+    invoke-static {v0}, Lorg/telegram/ui/Components/ChatActivityEnterView;->$r8$lambda$Bfo7SVCESIz6OG71SZVvtF_rjLU(Lorg/telegram/ui/Components/ChatActivityEnterView;)V
 
     return-void
 .end method

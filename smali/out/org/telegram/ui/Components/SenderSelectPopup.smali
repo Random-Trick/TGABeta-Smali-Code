@@ -177,7 +177,7 @@
     .line 84
     invoke-virtual {p0, v0}, Landroid/widget/PopupWindow;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    const v0, 0x7f07036d
+    const v0, 0x7f070384
 
     .line 86
     invoke-static {p1, v0}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
@@ -303,7 +303,7 @@
 
     const-string v1, "SendMessageAsTitle"
 
-    const v3, 0x7f0e0fdd
+    const v3, 0x7f0e109a
 
     invoke-static {v1, v3}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
@@ -417,7 +417,7 @@
 
     iput-object p3, p0, Lorg/telegram/ui/Components/SenderSelectPopup;->headerShadow:Landroid/view/View;
 
-    const p3, 0x7f07013d
+    const p3, 0x7f070106
 
     .line 196
     invoke-static {p1, p3}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;

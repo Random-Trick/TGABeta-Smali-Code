@@ -620,7 +620,7 @@
 
     move-result v3
 
-    if-eqz v3, :cond_45b
+    if-eqz v3, :cond_459
 
     const/4 v4, -0x1
 
@@ -632,21 +632,21 @@
 
     const/4 v8, 0x1
 
-    if-eq v3, v8, :cond_308
+    if-eq v3, v8, :cond_306
 
-    if-eq v3, v6, :cond_26a
+    if-eq v3, v6, :cond_268
 
     const/4 v9, 0x4
 
-    if-eq v3, v5, :cond_194
+    if-eq v3, v5, :cond_192
 
-    if-eq v3, v9, :cond_17a
+    if-eq v3, v9, :cond_178
 
     const/4 v4, 0x5
 
     if-eq v3, v4, :cond_1f
 
-    goto/16 :goto_482
+    goto/16 :goto_480
 
     .line 591
     :cond_1f
@@ -670,7 +670,7 @@
 
     if-ne v2, v1, :cond_58
 
-    const v1, 0x7f0e13d7
+    const v1, 0x7f0e14a5
 
     const-string v2, "WhenUsingMobileData"
 
@@ -724,7 +724,7 @@
 
     if-ne v2, v1, :cond_86
 
-    const v1, 0x7f0e13d5
+    const v1, 0x7f0e14a3
 
     const-string v2, "WhenConnectedOnWiFi"
 
@@ -766,7 +766,7 @@
     goto :goto_56
 
     :cond_86
-    const v1, 0x7f0e13d6
+    const v1, 0x7f0e14a4
 
     const-string v2, "WhenRoaming"
 
@@ -878,13 +878,13 @@
     :cond_da
     iget-boolean v1, v3, Lorg/telegram/messenger/DownloadController$Preset;->enabled:Z
 
-    if-eqz v1, :cond_156
+    if-eqz v1, :cond_154
 
-    if-eqz v5, :cond_156
+    if-eqz v5, :cond_154
 
     if-eqz v4, :cond_ee
 
-    const v1, 0x7f0e0251
+    const v1, 0x7f0e0286
 
     const-string v5, "AutoDownloadPhotosOn"
 
@@ -900,7 +900,7 @@
 
     const-string v5, " (%1$s)"
 
-    if-eqz v6, :cond_124
+    if-eqz v6, :cond_123
 
     .line 634
     invoke-virtual {v12}, Ljava/lang/StringBuilder;->length()I
@@ -913,7 +913,7 @@
     invoke-virtual {v12, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     :cond_fd
-    const v14, 0x7f0e025b
+    const v14, 0x7f0e0290
 
     const-string v15, "AutoDownloadVideosOn"
 
@@ -927,17 +927,15 @@
     new-array v14, v8, [Ljava/lang/Object;
 
     .line 638
-    iget-object v15, v3, Lorg/telegram/messenger/DownloadController$Preset;->sizes:[I
+    iget-object v15, v3, Lorg/telegram/messenger/DownloadController$Preset;->sizes:[J
 
     invoke-static {v9}, Lorg/telegram/messenger/DownloadController;->typeToIndex(I)I
 
     move-result v9
 
-    aget v9, v15, v9
-
     move-object/from16 p1, v10
 
-    int-to-long v9, v9
+    aget-wide v9, v15, v9
 
     invoke-static {v9, v10, v8}, Lorg/telegram/messenger/AndroidUtilities;->formatFileSize(JZ)Ljava/lang/String;
 
@@ -951,26 +949,26 @@
 
     invoke-virtual {v12, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    goto :goto_126
+    goto :goto_125
 
-    :cond_124
+    :cond_123
     move-object/from16 p1, v10
 
-    :goto_126
-    if-eqz v13, :cond_164
+    :goto_125
+    if-eqz v13, :cond_162
 
     .line 641
     invoke-virtual {v12}, Ljava/lang/StringBuilder;->length()I
 
     move-result v9
 
-    if-lez v9, :cond_131
+    if-lez v9, :cond_130
 
     .line 642
     invoke-virtual {v12, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :cond_131
-    const v1, 0x7f0e023d
+    :cond_130
+    const v1, 0x7f0e0272
 
     const-string v9, "AutoDownloadFilesOn"
 
@@ -984,15 +982,13 @@
     new-array v1, v8, [Ljava/lang/Object;
 
     .line 645
-    iget-object v3, v3, Lorg/telegram/messenger/DownloadController$Preset;->sizes:[I
+    iget-object v3, v3, Lorg/telegram/messenger/DownloadController$Preset;->sizes:[J
 
     invoke-static/range {v16 .. v16}, Lorg/telegram/messenger/DownloadController;->typeToIndex(I)I
 
     move-result v9
 
-    aget v3, v3, v9
-
-    int-to-long v9, v3
+    aget-wide v9, v3, v9
 
     invoke-static {v9, v10, v8}, Lorg/telegram/messenger/AndroidUtilities;->formatFileSize(JZ)Ljava/lang/String;
 
@@ -1006,12 +1002,12 @@
 
     invoke-virtual {v12, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    goto :goto_164
+    goto :goto_162
 
-    :cond_156
+    :cond_154
     move-object/from16 p1, v10
 
-    const v1, 0x7f0e0ac0
+    const v1, 0x7f0e0b47
 
     const-string v3, "NoMediaAutoDownload"
 
@@ -1022,25 +1018,25 @@
 
     invoke-virtual {v12, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :cond_164
-    :goto_164
-    if-nez v4, :cond_16a
+    :cond_162
+    :goto_162
+    if-nez v4, :cond_168
 
-    if-nez v6, :cond_16a
+    if-nez v6, :cond_168
 
-    if-eqz v13, :cond_16e
+    if-eqz v13, :cond_16c
 
-    :cond_16a
-    if-eqz v2, :cond_16e
+    :cond_168
+    if-eqz v2, :cond_16c
 
     const/4 v13, 0x1
 
-    goto :goto_16f
+    goto :goto_16d
 
-    :cond_16e
+    :cond_16c
     const/4 v13, 0x0
 
-    :goto_16f
+    :goto_16d
     const/4 v14, 0x0
 
     const/4 v15, 0x1
@@ -1052,10 +1048,10 @@
     .line 650
     invoke-virtual/range {v10 .. v16}, Lorg/telegram/ui/Cells/NotificationsCheckCell;->setTextAndValueAndCheck(Ljava/lang/String;Ljava/lang/CharSequence;ZIZZ)V
 
-    goto/16 :goto_482
+    goto/16 :goto_480
 
     .line 584
-    :cond_17a
+    :cond_178
     iget-object v1, v1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     check-cast v1, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
@@ -1067,9 +1063,9 @@
 
     move-result v3
 
-    if-ne v2, v3, :cond_482
+    if-ne v2, v3, :cond_480
 
-    const v2, 0x7f0e0638
+    const v2, 0x7f0e068a
 
     const-string v3, "EnableAllStreamingInfo"
 
@@ -1080,10 +1076,10 @@
 
     invoke-virtual {v1, v2}, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;->setText(Ljava/lang/CharSequence;)V
 
-    goto/16 :goto_482
+    goto/16 :goto_480
 
     .line 561
-    :cond_194
+    :cond_192
     iget-object v1, v1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     check-cast v1, Lorg/telegram/ui/Cells/TextCheckCell;
@@ -1095,9 +1091,9 @@
 
     move-result v3
 
-    if-ne v2, v3, :cond_1b9
+    if-ne v2, v3, :cond_1b7
 
-    const v2, 0x7f0e063f
+    const v2, 0x7f0e0691
 
     const-string v3, "EnableStreaming"
 
@@ -1114,36 +1110,36 @@
 
     move-result v5
 
-    if-eq v5, v4, :cond_1b4
+    if-eq v5, v4, :cond_1b2
 
     const/4 v7, 0x1
 
-    :cond_1b4
+    :cond_1b2
     invoke-virtual {v1, v2, v3, v7}, Lorg/telegram/ui/Cells/TextCheckCell;->setTextAndCheck(Ljava/lang/String;ZZ)V
 
-    goto/16 :goto_482
+    goto/16 :goto_480
 
     .line 564
-    :cond_1b9
+    :cond_1b7
     iget-object v3, v0, Lorg/telegram/ui/DataSettingsActivity$ListAdapter;->this$0:Lorg/telegram/ui/DataSettingsActivity;
 
     invoke-static {v3}, Lorg/telegram/ui/DataSettingsActivity;->access$2000(Lorg/telegram/ui/DataSettingsActivity;)I
 
     move-result v3
 
-    if-ne v2, v3, :cond_1c3
+    if-ne v2, v3, :cond_1c1
 
-    goto/16 :goto_482
+    goto/16 :goto_480
 
     .line 566
-    :cond_1c3
+    :cond_1c1
     iget-object v3, v0, Lorg/telegram/ui/DataSettingsActivity$ListAdapter;->this$0:Lorg/telegram/ui/DataSettingsActivity;
 
     invoke-static {v3}, Lorg/telegram/ui/DataSettingsActivity;->access$2100(Lorg/telegram/ui/DataSettingsActivity;)I
 
     move-result v3
 
-    if-ne v2, v3, :cond_1d4
+    if-ne v2, v3, :cond_1d2
 
     .line 567
     sget-boolean v2, Lorg/telegram/messenger/SharedConfig;->streamMkv:Z
@@ -1152,17 +1148,17 @@
 
     invoke-virtual {v1, v3, v2, v8}, Lorg/telegram/ui/Cells/TextCheckCell;->setTextAndCheck(Ljava/lang/String;ZZ)V
 
-    goto/16 :goto_482
+    goto/16 :goto_480
 
     .line 568
-    :cond_1d4
+    :cond_1d2
     iget-object v3, v0, Lorg/telegram/ui/DataSettingsActivity$ListAdapter;->this$0:Lorg/telegram/ui/DataSettingsActivity;
 
     invoke-static {v3}, Lorg/telegram/ui/DataSettingsActivity;->access$1900(Lorg/telegram/ui/DataSettingsActivity;)I
 
     move-result v3
 
-    if-ne v2, v3, :cond_1e5
+    if-ne v2, v3, :cond_1e3
 
     .line 569
     sget-boolean v2, Lorg/telegram/messenger/SharedConfig;->streamAllVideo:Z
@@ -1171,19 +1167,19 @@
 
     invoke-virtual {v1, v3, v2, v7}, Lorg/telegram/ui/Cells/TextCheckCell;->setTextAndCheck(Ljava/lang/String;ZZ)V
 
-    goto/16 :goto_482
+    goto/16 :goto_480
 
     .line 570
-    :cond_1e5
+    :cond_1e3
     iget-object v3, v0, Lorg/telegram/ui/DataSettingsActivity$ListAdapter;->this$0:Lorg/telegram/ui/DataSettingsActivity;
 
     invoke-static {v3}, Lorg/telegram/ui/DataSettingsActivity;->access$2200(Lorg/telegram/ui/DataSettingsActivity;)I
 
     move-result v3
 
-    if-ne v2, v3, :cond_1fd
+    if-ne v2, v3, :cond_1fb
 
-    const v2, 0x7f0e0279
+    const v2, 0x7f0e02ae
 
     const-string v3, "AutoplayGIF"
 
@@ -1196,19 +1192,19 @@
 
     invoke-virtual {v1, v2, v3, v8}, Lorg/telegram/ui/Cells/TextCheckCell;->setTextAndCheck(Ljava/lang/String;ZZ)V
 
-    goto/16 :goto_482
+    goto/16 :goto_480
 
     .line 572
-    :cond_1fd
+    :cond_1fb
     iget-object v3, v0, Lorg/telegram/ui/DataSettingsActivity$ListAdapter;->this$0:Lorg/telegram/ui/DataSettingsActivity;
 
     invoke-static {v3}, Lorg/telegram/ui/DataSettingsActivity;->access$2300(Lorg/telegram/ui/DataSettingsActivity;)I
 
     move-result v3
 
-    if-ne v2, v3, :cond_215
+    if-ne v2, v3, :cond_213
 
-    const v2, 0x7f0e027b
+    const v2, 0x7f0e02b0
 
     const-string v3, "AutoplayVideo"
 
@@ -1221,19 +1217,19 @@
 
     invoke-virtual {v1, v2, v3, v7}, Lorg/telegram/ui/Cells/TextCheckCell;->setTextAndCheck(Ljava/lang/String;ZZ)V
 
-    goto/16 :goto_482
+    goto/16 :goto_480
 
     .line 574
-    :cond_215
+    :cond_213
     iget-object v3, v0, Lorg/telegram/ui/DataSettingsActivity$ListAdapter;->this$0:Lorg/telegram/ui/DataSettingsActivity;
 
     invoke-static {v3}, Lorg/telegram/ui/DataSettingsActivity;->access$2400(Lorg/telegram/ui/DataSettingsActivity;)I
 
     move-result v3
 
-    if-ne v2, v3, :cond_231
+    if-ne v2, v3, :cond_22f
 
-    const v2, 0x7f0e0f62
+    const v2, 0x7f0e101c
 
     const-string v3, "SaveToGalleryPrivate"
 
@@ -1246,26 +1242,26 @@
 
     and-int/2addr v3, v8
 
-    if-eqz v3, :cond_22c
+    if-eqz v3, :cond_22a
 
     const/4 v7, 0x1
 
-    :cond_22c
+    :cond_22a
     invoke-virtual {v1, v2, v7, v8}, Lorg/telegram/ui/Cells/TextCheckCell;->setTextAndCheck(Ljava/lang/String;ZZ)V
 
-    goto/16 :goto_482
+    goto/16 :goto_480
 
     .line 576
-    :cond_231
+    :cond_22f
     iget-object v3, v0, Lorg/telegram/ui/DataSettingsActivity$ListAdapter;->this$0:Lorg/telegram/ui/DataSettingsActivity;
 
     invoke-static {v3}, Lorg/telegram/ui/DataSettingsActivity;->access$2500(Lorg/telegram/ui/DataSettingsActivity;)I
 
     move-result v3
 
-    if-ne v2, v3, :cond_24d
+    if-ne v2, v3, :cond_24b
 
-    const v2, 0x7f0e0f61
+    const v2, 0x7f0e101b    # 1.88834E38f
 
     const-string v3, "SaveToGalleryGroups"
 
@@ -1278,26 +1274,26 @@
 
     and-int/2addr v3, v6
 
-    if-eqz v3, :cond_248
+    if-eqz v3, :cond_246
 
     const/4 v7, 0x1
 
-    :cond_248
+    :cond_246
     invoke-virtual {v1, v2, v7, v8}, Lorg/telegram/ui/Cells/TextCheckCell;->setTextAndCheck(Ljava/lang/String;ZZ)V
 
-    goto/16 :goto_482
+    goto/16 :goto_480
 
     .line 578
-    :cond_24d
+    :cond_24b
     iget-object v3, v0, Lorg/telegram/ui/DataSettingsActivity$ListAdapter;->this$0:Lorg/telegram/ui/DataSettingsActivity;
 
     invoke-static {v3}, Lorg/telegram/ui/DataSettingsActivity;->access$2600(Lorg/telegram/ui/DataSettingsActivity;)I
 
     move-result v3
 
-    if-ne v2, v3, :cond_482
+    if-ne v2, v3, :cond_480
 
-    const v2, 0x7f0e0f60
+    const v2, 0x7f0e101a
 
     const-string v3, "SaveToGalleryChannels"
 
@@ -1310,20 +1306,20 @@
 
     and-int/2addr v3, v9
 
-    if-eqz v3, :cond_264
+    if-eqz v3, :cond_262
 
-    goto :goto_265
+    goto :goto_263
 
-    :cond_264
+    :cond_262
     const/4 v8, 0x0
 
-    :goto_265
+    :goto_263
     invoke-virtual {v1, v2, v8, v7}, Lorg/telegram/ui/Cells/TextCheckCell;->setTextAndCheck(Ljava/lang/String;ZZ)V
 
-    goto/16 :goto_482
+    goto/16 :goto_480
 
     .line 542
-    :cond_26a
+    :cond_268
     iget-object v1, v1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     check-cast v1, Lorg/telegram/ui/Cells/HeaderCell;
@@ -1335,9 +1331,9 @@
 
     move-result v3
 
-    if-ne v2, v3, :cond_284
+    if-ne v2, v3, :cond_282
 
-    const v2, 0x7f0e0277
+    const v2, 0x7f0e02ac
 
     const-string v3, "AutomaticMediaDownload"
 
@@ -1348,19 +1344,19 @@
 
     invoke-virtual {v1, v2}, Lorg/telegram/ui/Cells/HeaderCell;->setText(Ljava/lang/CharSequence;)V
 
-    goto/16 :goto_482
+    goto/16 :goto_480
 
     .line 545
-    :cond_284
+    :cond_282
     iget-object v3, v0, Lorg/telegram/ui/DataSettingsActivity$ListAdapter;->this$0:Lorg/telegram/ui/DataSettingsActivity;
 
     invoke-static {v3}, Lorg/telegram/ui/DataSettingsActivity;->access$1200(Lorg/telegram/ui/DataSettingsActivity;)I
 
     move-result v3
 
-    if-ne v2, v3, :cond_29a
+    if-ne v2, v3, :cond_298
 
-    const v2, 0x7f0e0507
+    const v2, 0x7f0e0556
 
     const-string v3, "DataUsage"
 
@@ -1371,19 +1367,19 @@
 
     invoke-virtual {v1, v2}, Lorg/telegram/ui/Cells/HeaderCell;->setText(Ljava/lang/CharSequence;)V
 
-    goto/16 :goto_482
+    goto/16 :goto_480
 
     .line 547
-    :cond_29a
+    :cond_298
     iget-object v3, v0, Lorg/telegram/ui/DataSettingsActivity$ListAdapter;->this$0:Lorg/telegram/ui/DataSettingsActivity;
 
     invoke-static {v3}, Lorg/telegram/ui/DataSettingsActivity;->access$1300(Lorg/telegram/ui/DataSettingsActivity;)I
 
     move-result v3
 
-    if-ne v2, v3, :cond_2b0
+    if-ne v2, v3, :cond_2ae
 
-    const v2, 0x7f0e0327
+    const v2, 0x7f0e0363
 
     const-string v3, "Calls"
 
@@ -1394,19 +1390,19 @@
 
     invoke-virtual {v1, v2}, Lorg/telegram/ui/Cells/HeaderCell;->setText(Ljava/lang/CharSequence;)V
 
-    goto/16 :goto_482
+    goto/16 :goto_480
 
     .line 549
-    :cond_2b0
+    :cond_2ae
     iget-object v3, v0, Lorg/telegram/ui/DataSettingsActivity$ListAdapter;->this$0:Lorg/telegram/ui/DataSettingsActivity;
 
     invoke-static {v3}, Lorg/telegram/ui/DataSettingsActivity;->access$1400(Lorg/telegram/ui/DataSettingsActivity;)I
 
     move-result v3
 
-    if-ne v2, v3, :cond_2c6
+    if-ne v2, v3, :cond_2c4
 
-    const v2, 0x7f0e0e2e
+    const v2, 0x7f0e0ed7
 
     const-string v3, "Proxy"
 
@@ -1417,19 +1413,19 @@
 
     invoke-virtual {v1, v2}, Lorg/telegram/ui/Cells/HeaderCell;->setText(Ljava/lang/CharSequence;)V
 
-    goto/16 :goto_482
+    goto/16 :goto_480
 
     .line 551
-    :cond_2c6
+    :cond_2c4
     iget-object v3, v0, Lorg/telegram/ui/DataSettingsActivity$ListAdapter;->this$0:Lorg/telegram/ui/DataSettingsActivity;
 
     invoke-static {v3}, Lorg/telegram/ui/DataSettingsActivity;->access$1500(Lorg/telegram/ui/DataSettingsActivity;)I
 
     move-result v3
 
-    if-ne v2, v3, :cond_2dc
+    if-ne v2, v3, :cond_2da
 
-    const v2, 0x7f0e10f7
+    const v2, 0x7f0e11b6
 
     const-string v3, "Streaming"
 
@@ -1440,19 +1436,19 @@
 
     invoke-virtual {v1, v2}, Lorg/telegram/ui/Cells/HeaderCell;->setText(Ljava/lang/CharSequence;)V
 
-    goto/16 :goto_482
+    goto/16 :goto_480
 
     .line 553
-    :cond_2dc
+    :cond_2da
     iget-object v3, v0, Lorg/telegram/ui/DataSettingsActivity$ListAdapter;->this$0:Lorg/telegram/ui/DataSettingsActivity;
 
     invoke-static {v3}, Lorg/telegram/ui/DataSettingsActivity;->access$1600(Lorg/telegram/ui/DataSettingsActivity;)I
 
     move-result v3
 
-    if-ne v2, v3, :cond_2f2
+    if-ne v2, v3, :cond_2f0
 
-    const v2, 0x7f0e027a
+    const v2, 0x7f0e02af
 
     const-string v3, "AutoplayMedia"
 
@@ -1463,19 +1459,19 @@
 
     invoke-virtual {v1, v2}, Lorg/telegram/ui/Cells/HeaderCell;->setText(Ljava/lang/CharSequence;)V
 
-    goto/16 :goto_482
+    goto/16 :goto_480
 
     .line 555
-    :cond_2f2
+    :cond_2f0
     iget-object v3, v0, Lorg/telegram/ui/DataSettingsActivity$ListAdapter;->this$0:Lorg/telegram/ui/DataSettingsActivity;
 
     invoke-static {v3}, Lorg/telegram/ui/DataSettingsActivity;->access$1700(Lorg/telegram/ui/DataSettingsActivity;)I
 
     move-result v3
 
-    if-ne v2, v3, :cond_482
+    if-ne v2, v3, :cond_480
 
-    const v2, 0x7f0e0f5f
+    const v2, 0x7f0e1019
 
     const-string v3, "SaveToGallery"
 
@@ -1486,10 +1482,10 @@
 
     invoke-virtual {v1, v2}, Lorg/telegram/ui/Cells/HeaderCell;->setText(Ljava/lang/CharSequence;)V
 
-    goto/16 :goto_482
+    goto/16 :goto_480
 
     .line 491
-    :cond_308
+    :cond_306
     iget-object v1, v1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     check-cast v1, Lorg/telegram/ui/Cells/TextSettingsCell;
@@ -1513,9 +1509,9 @@
 
     move-result v3
 
-    if-ne v2, v3, :cond_32e
+    if-ne v2, v3, :cond_32c
 
-    const v2, 0x7f0e10f6
+    const v2, 0x7f0e11b5
 
     const-string v3, "StorageUsage"
 
@@ -1526,17 +1522,17 @@
 
     invoke-virtual {v1, v2, v8}, Lorg/telegram/ui/Cells/TextSettingsCell;->setText(Ljava/lang/CharSequence;Z)V
 
-    goto/16 :goto_482
+    goto/16 :goto_480
 
     .line 496
-    :cond_32e
+    :cond_32c
     iget-object v3, v0, Lorg/telegram/ui/DataSettingsActivity$ListAdapter;->this$0:Lorg/telegram/ui/DataSettingsActivity;
 
     invoke-static {v3}, Lorg/telegram/ui/DataSettingsActivity;->access$300(Lorg/telegram/ui/DataSettingsActivity;)I
 
     move-result v3
 
-    if-ne v2, v3, :cond_383
+    if-ne v2, v3, :cond_381
 
     .line 497
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getGlobalMainSettings()Landroid/content/SharedPreferences;
@@ -1556,18 +1552,18 @@
 
     move-result v2
 
-    if-eqz v2, :cond_36c
+    if-eqz v2, :cond_36a
 
-    if-eq v2, v8, :cond_362
+    if-eq v2, v8, :cond_360
 
-    if-eq v2, v6, :cond_358
+    if-eq v2, v6, :cond_356
 
-    if-eq v2, v5, :cond_34e
+    if-eq v2, v5, :cond_34c
 
-    goto :goto_375
+    goto :goto_373
 
-    :cond_34e
-    const v2, 0x7f0e1213
+    :cond_34c
+    const v2, 0x7f0e12e0    # 1.8884838E38f
 
     const-string v3, "UseLessDataOnRoaming"
 
@@ -1576,10 +1572,10 @@
 
     move-result-object v3
 
-    goto :goto_375
+    goto :goto_373
 
-    :cond_358
-    const v2, 0x7f0e1210
+    :cond_356
+    const v2, 0x7f0e12dd
 
     const-string v3, "UseLessDataAlways"
 
@@ -1588,10 +1584,10 @@
 
     move-result-object v3
 
-    goto :goto_375
+    goto :goto_373
 
-    :cond_362
-    const v2, 0x7f0e1212
+    :cond_360
+    const v2, 0x7f0e12df
 
     const-string v3, "UseLessDataOnMobile"
 
@@ -1600,10 +1596,10 @@
 
     move-result-object v3
 
-    goto :goto_375
+    goto :goto_373
 
-    :cond_36c
-    const v2, 0x7f0e1211
+    :cond_36a
+    const v2, 0x7f0e12de
 
     const-string v3, "UseLessDataNever"
 
@@ -1612,8 +1608,8 @@
 
     move-result-object v3
 
-    :goto_375
-    const v2, 0x7f0e13b6
+    :goto_373
+    const v2, 0x7f0e1484
 
     const-string v4, "VoipUseLessData"
 
@@ -1624,19 +1620,19 @@
 
     invoke-virtual {v1, v2, v3, v8}, Lorg/telegram/ui/Cells/TextSettingsCell;->setTextAndValue(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)V
 
-    goto/16 :goto_482
+    goto/16 :goto_480
 
     .line 514
-    :cond_383
+    :cond_381
     iget-object v3, v0, Lorg/telegram/ui/DataSettingsActivity$ListAdapter;->this$0:Lorg/telegram/ui/DataSettingsActivity;
 
     invoke-static {v3}, Lorg/telegram/ui/DataSettingsActivity;->access$400(Lorg/telegram/ui/DataSettingsActivity;)I
 
     move-result v3
 
-    if-ne v2, v3, :cond_3a2
+    if-ne v2, v3, :cond_3a0
 
-    const v2, 0x7f0e0a7a
+    const v2, 0x7f0e0b01
 
     const-string v3, "NetworkUsage"
 
@@ -1651,24 +1647,24 @@
 
     move-result v3
 
-    if-eq v3, v4, :cond_39d
+    if-eq v3, v4, :cond_39b
 
     const/4 v7, 0x1
 
-    :cond_39d
+    :cond_39b
     invoke-virtual {v1, v2, v7}, Lorg/telegram/ui/Cells/TextSettingsCell;->setText(Ljava/lang/CharSequence;Z)V
 
-    goto/16 :goto_482
+    goto/16 :goto_480
 
     .line 516
-    :cond_3a2
+    :cond_3a0
     iget-object v3, v0, Lorg/telegram/ui/DataSettingsActivity$ListAdapter;->this$0:Lorg/telegram/ui/DataSettingsActivity;
 
     invoke-static {v3}, Lorg/telegram/ui/DataSettingsActivity;->access$500(Lorg/telegram/ui/DataSettingsActivity;)I
 
     move-result v3
 
-    if-ne v2, v3, :cond_3fa
+    if-ne v2, v3, :cond_3f8
 
     .line 517
     iget-object v2, v0, Lorg/telegram/ui/DataSettingsActivity$ListAdapter;->this$0:Lorg/telegram/ui/DataSettingsActivity;
@@ -1694,7 +1690,7 @@
 
     move-result v3
 
-    if-nez v3, :cond_3ec
+    if-nez v3, :cond_3ea
 
     .line 519
     iget-object v3, v0, Lorg/telegram/ui/DataSettingsActivity$ListAdapter;->this$0:Lorg/telegram/ui/DataSettingsActivity;
@@ -1709,8 +1705,8 @@
 
     const/4 v4, 0x0
 
-    :goto_3cd
-    if-ge v4, v3, :cond_3ec
+    :goto_3cb
+    if-ge v4, v3, :cond_3ea
 
     .line 520
     iget-object v5, v0, Lorg/telegram/ui/DataSettingsActivity$ListAdapter;->this$0:Lorg/telegram/ui/DataSettingsActivity;
@@ -1736,20 +1732,20 @@
 
     move-result v6
 
-    if-eqz v6, :cond_3e9
+    if-eqz v6, :cond_3e7
 
     move-object v2, v5
 
-    goto :goto_3ec
+    goto :goto_3ea
 
-    :cond_3e9
+    :cond_3e7
     add-int/lit8 v4, v4, 0x1
 
-    goto :goto_3cd
+    goto :goto_3cb
 
-    :cond_3ec
-    :goto_3ec
-    const v3, 0x7f0e10f5
+    :cond_3ea
+    :goto_3ea
+    const v3, 0x7f0e11b4
 
     const-string v4, "StoragePath"
 
@@ -1760,19 +1756,19 @@
 
     invoke-virtual {v1, v3, v2, v7}, Lorg/telegram/ui/Cells/TextSettingsCell;->setTextAndValue(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)V
 
-    goto/16 :goto_482
+    goto/16 :goto_480
 
     .line 528
-    :cond_3fa
+    :cond_3f8
     iget-object v3, v0, Lorg/telegram/ui/DataSettingsActivity$ListAdapter;->this$0:Lorg/telegram/ui/DataSettingsActivity;
 
     invoke-static {v3}, Lorg/telegram/ui/DataSettingsActivity;->access$700(Lorg/telegram/ui/DataSettingsActivity;)I
 
     move-result v3
 
-    if-ne v2, v3, :cond_410
+    if-ne v2, v3, :cond_40e
 
-    const v2, 0x7f0e0e31
+    const v2, 0x7f0e0eda
 
     const-string v3, "ProxySettings"
 
@@ -1783,17 +1779,17 @@
 
     invoke-virtual {v1, v2, v7}, Lorg/telegram/ui/Cells/TextSettingsCell;->setText(Ljava/lang/CharSequence;Z)V
 
-    goto/16 :goto_482
+    goto/16 :goto_480
 
     .line 530
-    :cond_410
+    :cond_40e
     iget-object v3, v0, Lorg/telegram/ui/DataSettingsActivity$ListAdapter;->this$0:Lorg/telegram/ui/DataSettingsActivity;
 
     invoke-static {v3}, Lorg/telegram/ui/DataSettingsActivity;->access$800(Lorg/telegram/ui/DataSettingsActivity;)I
 
     move-result v3
 
-    if-ne v2, v3, :cond_431
+    if-ne v2, v3, :cond_42f
 
     .line 531
     invoke-virtual {v1, v8}, Lorg/telegram/ui/Cells/TextSettingsCell;->setCanDisable(Z)V
@@ -1807,7 +1803,7 @@
 
     invoke-virtual {v1, v2}, Lorg/telegram/ui/Cells/TextSettingsCell;->setTextColor(I)V
 
-    const v2, 0x7f0e0f18
+    const v2, 0x7f0e0fc5
 
     const-string v3, "ResetAutomaticMediaDownload"
 
@@ -1818,19 +1814,19 @@
 
     invoke-virtual {v1, v2, v7}, Lorg/telegram/ui/Cells/TextSettingsCell;->setText(Ljava/lang/CharSequence;Z)V
 
-    goto :goto_482
+    goto :goto_480
 
     .line 534
-    :cond_431
+    :cond_42f
     iget-object v3, v0, Lorg/telegram/ui/DataSettingsActivity$ListAdapter;->this$0:Lorg/telegram/ui/DataSettingsActivity;
 
     invoke-static {v3}, Lorg/telegram/ui/DataSettingsActivity;->access$900(Lorg/telegram/ui/DataSettingsActivity;)I
 
     move-result v3
 
-    if-ne v2, v3, :cond_446
+    if-ne v2, v3, :cond_444
 
-    const v2, 0x7f0e139d
+    const v2, 0x7f0e146b
 
     const-string v3, "VoipQuickReplies"
 
@@ -1841,19 +1837,19 @@
 
     invoke-virtual {v1, v2, v7}, Lorg/telegram/ui/Cells/TextSettingsCell;->setText(Ljava/lang/CharSequence;Z)V
 
-    goto :goto_482
+    goto :goto_480
 
     .line 536
-    :cond_446
+    :cond_444
     iget-object v3, v0, Lorg/telegram/ui/DataSettingsActivity$ListAdapter;->this$0:Lorg/telegram/ui/DataSettingsActivity;
 
     invoke-static {v3}, Lorg/telegram/ui/DataSettingsActivity;->access$1000(Lorg/telegram/ui/DataSettingsActivity;)I
 
     move-result v3
 
-    if-ne v2, v3, :cond_482
+    if-ne v2, v3, :cond_480
 
-    const v2, 0x7f0e0dfc
+    const v2, 0x7f0e0ea5
 
     const-string v3, "PrivacyDeleteCloudDrafts"
 
@@ -1864,10 +1860,10 @@
 
     invoke-virtual {v1, v2, v7}, Lorg/telegram/ui/Cells/TextSettingsCell;->setText(Ljava/lang/CharSequence;Z)V
 
-    goto :goto_482
+    goto :goto_480
 
     .line 483
-    :cond_45b
+    :cond_459
     iget-object v3, v0, Lorg/telegram/ui/DataSettingsActivity$ListAdapter;->this$0:Lorg/telegram/ui/DataSettingsActivity;
 
     invoke-static {v3}, Lorg/telegram/ui/DataSettingsActivity;->access$100(Lorg/telegram/ui/DataSettingsActivity;)I
@@ -1876,14 +1872,14 @@
 
     const-string v4, "windowBackgroundGrayShadow"
 
-    if-ne v2, v3, :cond_474
+    if-ne v2, v3, :cond_472
 
     .line 484
     iget-object v1, v1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     iget-object v2, v0, Lorg/telegram/ui/DataSettingsActivity$ListAdapter;->mContext:Landroid/content/Context;
 
-    const v3, 0x7f07012d
+    const v3, 0x7f0700fc
 
     invoke-static {v2, v3, v4}, Lorg/telegram/ui/ActionBar/Theme;->getThemedDrawable(Landroid/content/Context;ILjava/lang/String;)Landroid/graphics/drawable/Drawable;
 
@@ -1891,15 +1887,15 @@
 
     invoke-virtual {v1, v2}, Landroid/view/View;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    goto :goto_482
+    goto :goto_480
 
     .line 486
-    :cond_474
+    :cond_472
     iget-object v1, v1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     iget-object v2, v0, Lorg/telegram/ui/DataSettingsActivity$ListAdapter;->mContext:Landroid/content/Context;
 
-    const v3, 0x7f07012c
+    const v3, 0x7f0700fb
 
     invoke-static {v2, v3, v4}, Lorg/telegram/ui/ActionBar/Theme;->getThemedDrawable(Landroid/content/Context;ILjava/lang/String;)Landroid/graphics/drawable/Drawable;
 
@@ -1907,8 +1903,8 @@
 
     invoke-virtual {v1, v2}, Landroid/view/View;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    :cond_482
-    :goto_482
+    :cond_480
+    :goto_480
     return-void
 .end method
 
@@ -1962,7 +1958,7 @@
     .line 716
     iget-object p2, p0, Lorg/telegram/ui/DataSettingsActivity$ListAdapter;->mContext:Landroid/content/Context;
 
-    const v0, 0x7f07012c
+    const v0, 0x7f0700fb
 
     const-string v1, "windowBackgroundGrayShadow"
 

@@ -183,31 +183,31 @@
 .method public constructor <init>()V
     .registers 2
 
-    .line 69
+    .line 68
     invoke-direct {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;-><init>()V
 
-    .line 85
+    .line 84
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/ui/NewContactActivity;->countriesArray:Ljava/util/ArrayList;
 
-    .line 86
+    .line 85
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/ui/NewContactActivity;->countriesMap:Ljava/util/HashMap;
 
-    .line 87
+    .line 86
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/ui/NewContactActivity;->codesMap:Ljava/util/HashMap;
 
-    .line 88
+    .line 87
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -220,7 +220,7 @@
 .method static synthetic access$000(Lorg/telegram/ui/NewContactActivity;)Z
     .registers 1
 
-    .line 69
+    .line 68
     iget-boolean p0, p0, Lorg/telegram/ui/NewContactActivity;->donePressed:Z
 
     return p0
@@ -229,7 +229,7 @@
 .method static synthetic access$002(Lorg/telegram/ui/NewContactActivity;Z)Z
     .registers 2
 
-    .line 69
+    .line 68
     iput-boolean p1, p0, Lorg/telegram/ui/NewContactActivity;->donePressed:Z
 
     return p1
@@ -238,7 +238,7 @@
 .method static synthetic access$100(Lorg/telegram/ui/NewContactActivity;)Lorg/telegram/ui/Components/EditTextBoldCursor;
     .registers 1
 
-    .line 69
+    .line 68
     iget-object p0, p0, Lorg/telegram/ui/NewContactActivity;->firstNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     return-object p0
@@ -247,7 +247,7 @@
 .method static synthetic access$1000(Lorg/telegram/ui/NewContactActivity;)I
     .registers 1
 
-    .line 69
+    .line 68
     iget p0, p0, Lorg/telegram/ui/ActionBar/BaseFragment;->currentAccount:I
 
     return p0
@@ -256,7 +256,7 @@
 .method static synthetic access$1100(Lorg/telegram/ui/NewContactActivity;)I
     .registers 1
 
-    .line 69
+    .line 68
     iget p0, p0, Lorg/telegram/ui/ActionBar/BaseFragment;->currentAccount:I
 
     return p0
@@ -265,7 +265,7 @@
 .method static synthetic access$1200(Lorg/telegram/ui/NewContactActivity;)V
     .registers 1
 
-    .line 69
+    .line 68
     invoke-direct {p0}, Lorg/telegram/ui/NewContactActivity;->invalidateAvatar()V
 
     return-void
@@ -274,7 +274,7 @@
 .method static synthetic access$1300(Lorg/telegram/ui/NewContactActivity;)Z
     .registers 1
 
-    .line 69
+    .line 68
     iget-boolean p0, p0, Lorg/telegram/ui/NewContactActivity;->ignoreOnTextChange:Z
 
     return p0
@@ -283,7 +283,7 @@
 .method static synthetic access$1302(Lorg/telegram/ui/NewContactActivity;Z)Z
     .registers 2
 
-    .line 69
+    .line 68
     iput-boolean p1, p0, Lorg/telegram/ui/NewContactActivity;->ignoreOnTextChange:Z
 
     return p1
@@ -292,7 +292,7 @@
 .method static synthetic access$1400(Lorg/telegram/ui/NewContactActivity;)Landroid/widget/TextView;
     .registers 1
 
-    .line 69
+    .line 68
     iget-object p0, p0, Lorg/telegram/ui/NewContactActivity;->countryButton:Landroid/widget/TextView;
 
     return-object p0
@@ -301,7 +301,7 @@
 .method static synthetic access$1502(Lorg/telegram/ui/NewContactActivity;I)I
     .registers 2
 
-    .line 69
+    .line 68
     iput p1, p0, Lorg/telegram/ui/NewContactActivity;->countryState:I
 
     return p1
@@ -310,7 +310,7 @@
 .method static synthetic access$1600(Lorg/telegram/ui/NewContactActivity;)Ljava/util/HashMap;
     .registers 1
 
-    .line 69
+    .line 68
     iget-object p0, p0, Lorg/telegram/ui/NewContactActivity;->codesMap:Ljava/util/HashMap;
 
     return-object p0
@@ -319,7 +319,7 @@
 .method static synthetic access$1700(Lorg/telegram/ui/NewContactActivity;)Ljava/util/ArrayList;
     .registers 1
 
-    .line 69
+    .line 68
     iget-object p0, p0, Lorg/telegram/ui/NewContactActivity;->countriesArray:Ljava/util/ArrayList;
 
     return-object p0
@@ -328,7 +328,7 @@
 .method static synthetic access$1802(Lorg/telegram/ui/NewContactActivity;Z)Z
     .registers 2
 
-    .line 69
+    .line 68
     iput-boolean p1, p0, Lorg/telegram/ui/NewContactActivity;->ignoreSelection:Z
 
     return p1
@@ -337,7 +337,7 @@
 .method static synthetic access$1900(Lorg/telegram/ui/NewContactActivity;)Ljava/util/HashMap;
     .registers 1
 
-    .line 69
+    .line 68
     iget-object p0, p0, Lorg/telegram/ui/NewContactActivity;->phoneFormatMap:Ljava/util/HashMap;
 
     return-object p0
@@ -346,7 +346,7 @@
 .method static synthetic access$200(Lorg/telegram/ui/NewContactActivity;)Lorg/telegram/ui/Components/EditTextBoldCursor;
     .registers 1
 
-    .line 69
+    .line 68
     iget-object p0, p0, Lorg/telegram/ui/NewContactActivity;->codeField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     return-object p0
@@ -355,7 +355,7 @@
 .method static synthetic access$2000(Lorg/telegram/ui/NewContactActivity;)Ljava/lang/String;
     .registers 1
 
-    .line 69
+    .line 68
     iget-object p0, p0, Lorg/telegram/ui/NewContactActivity;->initialPhoneNumber:Ljava/lang/String;
 
     return-object p0
@@ -364,7 +364,7 @@
 .method static synthetic access$2100(Lorg/telegram/ui/NewContactActivity;)Z
     .registers 1
 
-    .line 69
+    .line 68
     iget-boolean p0, p0, Lorg/telegram/ui/NewContactActivity;->ignoreOnPhoneChange:Z
 
     return p0
@@ -373,7 +373,7 @@
 .method static synthetic access$2102(Lorg/telegram/ui/NewContactActivity;Z)Z
     .registers 2
 
-    .line 69
+    .line 68
     iput-boolean p1, p0, Lorg/telegram/ui/NewContactActivity;->ignoreOnPhoneChange:Z
 
     return p1
@@ -382,7 +382,7 @@
 .method static synthetic access$2200(Lorg/telegram/ui/NewContactActivity;)Landroid/animation/AnimatorSet;
     .registers 1
 
-    .line 69
+    .line 68
     iget-object p0, p0, Lorg/telegram/ui/NewContactActivity;->editDoneItemAnimation:Landroid/animation/AnimatorSet;
 
     return-object p0
@@ -391,7 +391,7 @@
 .method static synthetic access$2202(Lorg/telegram/ui/NewContactActivity;Landroid/animation/AnimatorSet;)Landroid/animation/AnimatorSet;
     .registers 2
 
-    .line 69
+    .line 68
     iput-object p1, p0, Lorg/telegram/ui/NewContactActivity;->editDoneItemAnimation:Landroid/animation/AnimatorSet;
 
     return-object p1
@@ -400,7 +400,7 @@
 .method static synthetic access$2300(Lorg/telegram/ui/NewContactActivity;)Lorg/telegram/ui/Components/ContextProgressView;
     .registers 1
 
-    .line 69
+    .line 68
     iget-object p0, p0, Lorg/telegram/ui/NewContactActivity;->editDoneItemProgress:Lorg/telegram/ui/Components/ContextProgressView;
 
     return-object p0
@@ -409,7 +409,7 @@
 .method static synthetic access$2400(Lorg/telegram/ui/NewContactActivity;)Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
     .registers 1
 
-    .line 69
+    .line 68
     iget-object p0, p0, Lorg/telegram/ui/NewContactActivity;->editDoneItem:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
     return-object p0
@@ -418,7 +418,7 @@
 .method static synthetic access$300(Lorg/telegram/ui/NewContactActivity;)Lorg/telegram/ui/Components/HintEditText;
     .registers 1
 
-    .line 69
+    .line 68
     iget-object p0, p0, Lorg/telegram/ui/NewContactActivity;->phoneField:Lorg/telegram/ui/Components/HintEditText;
 
     return-object p0
@@ -427,7 +427,7 @@
 .method static synthetic access$400(Lorg/telegram/ui/NewContactActivity;ZZ)V
     .registers 3
 
-    .line 69
+    .line 68
     invoke-direct {p0, p1, p2}, Lorg/telegram/ui/NewContactActivity;->showEditDoneProgress(ZZ)V
 
     return-void
@@ -436,7 +436,7 @@
 .method static synthetic access$500(Lorg/telegram/ui/NewContactActivity;)Lorg/telegram/ui/Components/EditTextBoldCursor;
     .registers 1
 
-    .line 69
+    .line 68
     iget-object p0, p0, Lorg/telegram/ui/NewContactActivity;->lastNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     return-object p0
@@ -445,7 +445,7 @@
 .method static synthetic access$600(Lorg/telegram/ui/NewContactActivity;)I
     .registers 1
 
-    .line 69
+    .line 68
     iget p0, p0, Lorg/telegram/ui/ActionBar/BaseFragment;->currentAccount:I
 
     return p0
@@ -454,7 +454,7 @@
 .method static synthetic access$700(Lorg/telegram/ui/NewContactActivity;)I
     .registers 1
 
-    .line 69
+    .line 68
     iget p0, p0, Lorg/telegram/ui/ActionBar/BaseFragment;->classGuid:I
 
     return p0
@@ -463,7 +463,7 @@
 .method static synthetic access$800(Lorg/telegram/ui/NewContactActivity;)I
     .registers 1
 
-    .line 69
+    .line 68
     iget p0, p0, Lorg/telegram/ui/ActionBar/BaseFragment;->currentAccount:I
 
     return p0
@@ -472,7 +472,7 @@
 .method static synthetic access$900(Lorg/telegram/ui/NewContactActivity;)I
     .registers 1
 
-    .line 69
+    .line 68
     iget p0, p0, Lorg/telegram/ui/ActionBar/BaseFragment;->currentAccount:I
 
     return p0
@@ -481,14 +481,14 @@
 .method public static getPhoneNumber(Landroid/content/Context;Lorg/telegram/tgnet/TLRPC$User;Ljava/lang/String;Z)Ljava/lang/String;
     .registers 9
 
-    .line 627
+    .line 626
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     const/4 v1, 0x0
 
-    .line 629
+    .line 628
     :try_start_6
     new-instance v2, Ljava/io/BufferedReader;
 
@@ -512,7 +512,7 @@
 
     invoke-direct {v2, v3}, Ljava/io/BufferedReader;-><init>(Ljava/io/Reader;)V
 
-    .line 631
+    .line 630
     :goto_1e
     invoke-virtual {v2}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
 
@@ -522,12 +522,12 @@
 
     const-string v3, ";"
 
-    .line 632
+    .line 631
     invoke-virtual {p0, v3}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object p0
 
-    .line 633
+    .line 632
     aget-object v3, p0, v1
 
     const/4 v4, 0x2
@@ -538,7 +538,7 @@
 
     goto :goto_1e
 
-    .line 635
+    .line 634
     :cond_33
     invoke-virtual {v2}, Ljava/io/BufferedReader;->close()V
     :try_end_36
@@ -549,13 +549,13 @@
     :catch_37
     move-exception p0
 
-    .line 637
+    .line 636
     invoke-static {p0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     :goto_3b
     const-string p0, "+"
 
-    .line 639
+    .line 638
     invoke-virtual {p2, p0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v2
@@ -569,7 +569,7 @@
 
     if-eqz p1, :cond_7a
 
-    .line 641
+    .line 640
     iget-object p3, p1, Lorg/telegram/tgnet/TLRPC$User;->phone:Ljava/lang/String;
 
     invoke-static {p3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -580,7 +580,7 @@
 
     goto :goto_7a
 
-    .line 644
+    .line 643
     :cond_51
     iget-object p1, p1, Lorg/telegram/tgnet/TLRPC$User;->phone:Ljava/lang/String;
 
@@ -591,12 +591,12 @@
 
     if-lt p3, v2, :cond_79
 
-    .line 646
+    .line 645
     invoke-virtual {p1, v1, p3}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 647
+    .line 646
     invoke-virtual {v0, v2}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v3
@@ -605,7 +605,7 @@
 
     if-eqz v3, :cond_76
 
-    .line 649
+    .line 648
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -630,7 +630,7 @@
     :cond_79
     return-object p2
 
-    .line 642
+    .line 641
     :cond_7a
     :goto_7a
     new-instance p1, Ljava/lang/StringBuilder;
@@ -651,7 +651,7 @@
 .method private invalidateAvatar()V
     .registers 6
 
-    .line 657
+    .line 656
     iget-object v0, p0, Lorg/telegram/ui/NewContactActivity;->avatarDrawable:Lorg/telegram/ui/Components/AvatarDrawable;
 
     iget-object v1, p0, Lorg/telegram/ui/NewContactActivity;->firstNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
@@ -678,7 +678,7 @@
 
     invoke-virtual {v0, v3, v4, v1, v2}, Lorg/telegram/ui/Components/AvatarDrawable;->setInfo(JLjava/lang/String;Ljava/lang/String;)V
 
-    .line 658
+    .line 657
     iget-object v0, p0, Lorg/telegram/ui/NewContactActivity;->avatarImage:Lorg/telegram/ui/Components/BackupImageView;
 
     invoke-virtual {v0}, Landroid/view/View;->invalidate()V
@@ -701,12 +701,12 @@
 
     if-ne p2, p1, :cond_13
 
-    .line 238
+    .line 237
     iget-object p1, p0, Lorg/telegram/ui/NewContactActivity;->lastNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     invoke-virtual {p1}, Landroid/widget/EditText;->requestFocus()Z
 
-    .line 239
+    .line 238
     iget-object p1, p0, Lorg/telegram/ui/NewContactActivity;->lastNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     invoke-virtual {p1}, Landroid/widget/EditText;->length()I
@@ -732,12 +732,12 @@
 
     if-ne p2, p1, :cond_13
 
-    .line 285
+    .line 284
     iget-object p1, p0, Lorg/telegram/ui/NewContactActivity;->phoneField:Lorg/telegram/ui/Components/HintEditText;
 
     invoke-virtual {p1}, Landroid/widget/EditText;->requestFocus()Z
 
-    .line 286
+    .line 285
     iget-object p1, p0, Lorg/telegram/ui/NewContactActivity;->phoneField:Lorg/telegram/ui/Components/HintEditText;
 
     invoke-virtual {p1}, Landroid/widget/EditText;->length()I
@@ -759,17 +759,17 @@
 .method private synthetic lambda$createView$3(Lorg/telegram/ui/CountrySelectActivity$Country;)V
     .registers 3
 
-    .line 325
+    .line 324
     iget-object p1, p1, Lorg/telegram/ui/CountrySelectActivity$Country;->name:Ljava/lang/String;
 
     invoke-virtual {p0, p1}, Lorg/telegram/ui/NewContactActivity;->selectCountry(Ljava/lang/String;)V
 
-    .line 326
+    .line 325
     iget-object p1, p0, Lorg/telegram/ui/NewContactActivity;->phoneField:Lorg/telegram/ui/Components/HintEditText;
 
     invoke-virtual {p1}, Landroid/widget/EditText;->requestFocus()Z
 
-    .line 327
+    .line 326
     iget-object p1, p0, Lorg/telegram/ui/NewContactActivity;->phoneField:Lorg/telegram/ui/Components/HintEditText;
 
     invoke-virtual {p1}, Landroid/widget/EditText;->length()I
@@ -784,21 +784,21 @@
 .method private synthetic lambda$createView$4(Landroid/view/View;)V
     .registers 3
 
-    .line 323
+    .line 322
     new-instance p1, Lorg/telegram/ui/CountrySelectActivity;
 
     const/4 v0, 0x1
 
     invoke-direct {p1, v0}, Lorg/telegram/ui/CountrySelectActivity;-><init>(Z)V
 
-    .line 324
+    .line 323
     new-instance v0, Lorg/telegram/ui/NewContactActivity$$ExternalSyntheticLambda8;
 
     invoke-direct {v0, p0}, Lorg/telegram/ui/NewContactActivity$$ExternalSyntheticLambda8;-><init>(Lorg/telegram/ui/NewContactActivity;)V
 
     invoke-virtual {p1, v0}, Lorg/telegram/ui/CountrySelectActivity;->setCountrySelectActivityDelegate(Lorg/telegram/ui/CountrySelectActivity$CountrySelectActivityDelegate;)V
 
-    .line 329
+    .line 328
     invoke-virtual {p0, p1}, Lorg/telegram/ui/ActionBar/BaseFragment;->presentFragment(Lorg/telegram/ui/ActionBar/BaseFragment;)Z
 
     return-void
@@ -811,12 +811,12 @@
 
     if-ne p2, p1, :cond_13
 
-    .line 442
+    .line 441
     iget-object p1, p0, Lorg/telegram/ui/NewContactActivity;->phoneField:Lorg/telegram/ui/Components/HintEditText;
 
     invoke-virtual {p1}, Landroid/widget/EditText;->requestFocus()Z
 
-    .line 443
+    .line 442
     iget-object p1, p0, Lorg/telegram/ui/NewContactActivity;->phoneField:Lorg/telegram/ui/Components/HintEditText;
 
     invoke-virtual {p1}, Landroid/widget/EditText;->length()I
@@ -842,7 +842,7 @@
 
     if-ne p2, p1, :cond_a
 
-    .line 540
+    .line 539
     iget-object p1, p0, Lorg/telegram/ui/NewContactActivity;->editDoneItem:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
     invoke-virtual {p1}, Landroid/widget/FrameLayout;->performClick()Z
@@ -864,7 +864,7 @@
 
     if-ne p2, p1, :cond_21
 
-    .line 546
+    .line 545
     iget-object p1, p0, Lorg/telegram/ui/NewContactActivity;->phoneField:Lorg/telegram/ui/Components/HintEditText;
 
     invoke-virtual {p1}, Landroid/widget/EditText;->length()I
@@ -873,12 +873,12 @@
 
     if-nez p1, :cond_21
 
-    .line 547
+    .line 546
     iget-object p1, p0, Lorg/telegram/ui/NewContactActivity;->codeField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     invoke-virtual {p1}, Landroid/widget/EditText;->requestFocus()Z
 
-    .line 548
+    .line 547
     iget-object p1, p0, Lorg/telegram/ui/NewContactActivity;->codeField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     invoke-virtual {p1}, Landroid/widget/EditText;->length()I
@@ -887,7 +887,7 @@
 
     invoke-virtual {p1, p2}, Lorg/telegram/ui/Components/EditTextBoldCursor;->setSelection(I)V
 
-    .line 549
+    .line 548
     iget-object p1, p0, Lorg/telegram/ui/NewContactActivity;->codeField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     invoke-virtual {p1, p3}, Landroid/widget/EditText;->dispatchKeyEvent(Landroid/view/KeyEvent;)Z
@@ -905,12 +905,12 @@
 .method private synthetic lambda$getThemeDescriptions$8()V
     .registers 2
 
-    .line 793
+    .line 792
     iget-object v0, p0, Lorg/telegram/ui/NewContactActivity;->avatarImage:Lorg/telegram/ui/Components/BackupImageView;
 
     if-eqz v0, :cond_7
 
-    .line 794
+    .line 793
     invoke-direct {p0}, Lorg/telegram/ui/NewContactActivity;->invalidateAvatar()V
 
     :cond_7
@@ -924,12 +924,12 @@
 
     move/from16 v1, p1
 
-    .line 715
+    .line 714
     iget-object v2, v0, Lorg/telegram/ui/NewContactActivity;->editDoneItemAnimation:Landroid/animation/AnimatorSet;
 
     if-eqz v2, :cond_b
 
-    .line 716
+    .line 715
     invoke-virtual {v2}, Landroid/animation/AnimatorSet;->cancel()V
 
     :cond_b
@@ -949,7 +949,7 @@
 
     if-eqz v1, :cond_57
 
-    .line 720
+    .line 719
     iget-object v1, v0, Lorg/telegram/ui/NewContactActivity;->editDoneItem:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
     invoke-virtual {v1}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->getContentView()Landroid/view/View;
@@ -957,6 +957,15 @@
     move-result-object v1
 
     invoke-virtual {v1, v4}, Landroid/view/View;->setScaleX(F)V
+
+    .line 720
+    iget-object v1, v0, Lorg/telegram/ui/NewContactActivity;->editDoneItem:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
+
+    invoke-virtual {v1}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->getContentView()Landroid/view/View;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v4}, Landroid/view/View;->setScaleY(F)V
 
     .line 721
     iget-object v1, v0, Lorg/telegram/ui/NewContactActivity;->editDoneItem:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
@@ -965,33 +974,24 @@
 
     move-result-object v1
 
-    invoke-virtual {v1, v4}, Landroid/view/View;->setScaleY(F)V
-
-    .line 722
-    iget-object v1, v0, Lorg/telegram/ui/NewContactActivity;->editDoneItem:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
-
-    invoke-virtual {v1}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->getContentView()Landroid/view/View;
-
-    move-result-object v1
-
     invoke-virtual {v1, v3}, Landroid/view/View;->setAlpha(F)V
 
-    .line 723
+    .line 722
     iget-object v1, v0, Lorg/telegram/ui/NewContactActivity;->editDoneItemProgress:Lorg/telegram/ui/Components/ContextProgressView;
 
     invoke-virtual {v1, v5}, Landroid/view/View;->setScaleX(F)V
 
-    .line 724
+    .line 723
     iget-object v1, v0, Lorg/telegram/ui/NewContactActivity;->editDoneItemProgress:Lorg/telegram/ui/Components/ContextProgressView;
 
     invoke-virtual {v1, v5}, Landroid/view/View;->setScaleY(F)V
 
-    .line 725
+    .line 724
     iget-object v1, v0, Lorg/telegram/ui/NewContactActivity;->editDoneItemProgress:Lorg/telegram/ui/Components/ContextProgressView;
 
     invoke-virtual {v1, v5}, Landroid/view/View;->setAlpha(F)V
 
-    .line 726
+    .line 725
     iget-object v1, v0, Lorg/telegram/ui/NewContactActivity;->editDoneItem:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
     invoke-virtual {v1}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->getContentView()Landroid/view/View;
@@ -1000,35 +1000,35 @@
 
     invoke-virtual {v1, v2}, Landroid/view/View;->setVisibility(I)V
 
-    .line 727
+    .line 726
     iget-object v1, v0, Lorg/telegram/ui/NewContactActivity;->editDoneItemProgress:Lorg/telegram/ui/Components/ContextProgressView;
 
     invoke-virtual {v1, v7}, Lorg/telegram/ui/Components/ContextProgressView;->setVisibility(I)V
 
-    .line 728
+    .line 727
     iget-object v1, v0, Lorg/telegram/ui/NewContactActivity;->editDoneItem:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
     invoke-virtual {v1, v7}, Landroid/widget/FrameLayout;->setEnabled(Z)V
 
     goto/16 :goto_191
 
-    .line 730
+    .line 729
     :cond_57
     iget-object v1, v0, Lorg/telegram/ui/NewContactActivity;->editDoneItemProgress:Lorg/telegram/ui/Components/ContextProgressView;
 
     invoke-virtual {v1, v4}, Landroid/view/View;->setScaleX(F)V
 
-    .line 731
+    .line 730
     iget-object v1, v0, Lorg/telegram/ui/NewContactActivity;->editDoneItemProgress:Lorg/telegram/ui/Components/ContextProgressView;
 
     invoke-virtual {v1, v4}, Landroid/view/View;->setScaleY(F)V
 
-    .line 732
+    .line 731
     iget-object v1, v0, Lorg/telegram/ui/NewContactActivity;->editDoneItemProgress:Lorg/telegram/ui/Components/ContextProgressView;
 
     invoke-virtual {v1, v3}, Landroid/view/View;->setAlpha(F)V
 
-    .line 733
+    .line 732
     iget-object v1, v0, Lorg/telegram/ui/NewContactActivity;->editDoneItem:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
     invoke-virtual {v1}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->getContentView()Landroid/view/View;
@@ -1037,7 +1037,7 @@
 
     invoke-virtual {v1, v5}, Landroid/view/View;->setScaleX(F)V
 
-    .line 734
+    .line 733
     iget-object v1, v0, Lorg/telegram/ui/NewContactActivity;->editDoneItem:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
     invoke-virtual {v1}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->getContentView()Landroid/view/View;
@@ -1046,7 +1046,7 @@
 
     invoke-virtual {v1, v5}, Landroid/view/View;->setScaleY(F)V
 
-    .line 735
+    .line 734
     iget-object v1, v0, Lorg/telegram/ui/NewContactActivity;->editDoneItem:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
     invoke-virtual {v1}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->getContentView()Landroid/view/View;
@@ -1055,7 +1055,7 @@
 
     invoke-virtual {v1, v5}, Landroid/view/View;->setAlpha(F)V
 
-    .line 736
+    .line 735
     iget-object v1, v0, Lorg/telegram/ui/NewContactActivity;->editDoneItem:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
     invoke-virtual {v1}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->getContentView()Landroid/view/View;
@@ -1064,19 +1064,19 @@
 
     invoke-virtual {v1, v7}, Landroid/view/View;->setVisibility(I)V
 
-    .line 737
+    .line 736
     iget-object v1, v0, Lorg/telegram/ui/NewContactActivity;->editDoneItemProgress:Lorg/telegram/ui/Components/ContextProgressView;
 
     invoke-virtual {v1, v2}, Lorg/telegram/ui/Components/ContextProgressView;->setVisibility(I)V
 
-    .line 738
+    .line 737
     iget-object v1, v0, Lorg/telegram/ui/NewContactActivity;->editDoneItem:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
     invoke-virtual {v1, v6}, Landroid/widget/FrameLayout;->setEnabled(Z)V
 
     goto/16 :goto_191
 
-    .line 741
+    .line 740
     :cond_96
     new-instance v8, Landroid/animation/AnimatorSet;
 
@@ -1098,24 +1098,24 @@
 
     if-eqz v1, :cond_110
 
-    .line 743
+    .line 742
     iget-object v15, v0, Lorg/telegram/ui/NewContactActivity;->editDoneItemProgress:Lorg/telegram/ui/Components/ContextProgressView;
 
     invoke-virtual {v15, v7}, Lorg/telegram/ui/Components/ContextProgressView;->setVisibility(I)V
 
-    .line 744
+    .line 743
     iget-object v15, v0, Lorg/telegram/ui/NewContactActivity;->editDoneItem:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
     invoke-virtual {v15, v7}, Landroid/widget/FrameLayout;->setEnabled(Z)V
 
-    .line 745
+    .line 744
     iget-object v15, v0, Lorg/telegram/ui/NewContactActivity;->editDoneItemAnimation:Landroid/animation/AnimatorSet;
 
     new-array v11, v11, [Landroid/animation/Animator;
 
     iget-object v8, v0, Lorg/telegram/ui/NewContactActivity;->editDoneItem:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
-    .line 746
+    .line 745
     invoke-virtual {v8}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->getContentView()Landroid/view/View;
 
     move-result-object v8
@@ -1132,7 +1132,7 @@
 
     iget-object v2, v0, Lorg/telegram/ui/NewContactActivity;->editDoneItem:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
-    .line 747
+    .line 746
     invoke-virtual {v2}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->getContentView()Landroid/view/View;
 
     move-result-object v2
@@ -1149,7 +1149,7 @@
 
     iget-object v2, v0, Lorg/telegram/ui/NewContactActivity;->editDoneItem:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
-    .line 748
+    .line 747
     invoke-virtual {v2}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->getContentView()Landroid/view/View;
 
     move-result-object v2
@@ -1170,7 +1170,7 @@
 
     aput v5, v3, v7
 
-    .line 749
+    .line 748
     invoke-static {v2, v14, v3}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Ljava/lang/String;[F)Landroid/animation/ObjectAnimator;
 
     move-result-object v2
@@ -1183,7 +1183,7 @@
 
     aput v5, v3, v7
 
-    .line 750
+    .line 749
     invoke-static {v2, v13, v3}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Ljava/lang/String;[F)Landroid/animation/ObjectAnimator;
 
     move-result-object v2
@@ -1198,7 +1198,7 @@
 
     aput v5, v3, v7
 
-    .line 751
+    .line 750
     invoke-static {v2, v12, v3}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Ljava/lang/String;[F)Landroid/animation/ObjectAnimator;
 
     move-result-object v2
@@ -1207,12 +1207,12 @@
 
     aput-object v2, v11, v3
 
-    .line 745
+    .line 744
     invoke-virtual {v15, v11}, Landroid/animation/AnimatorSet;->playTogether([Landroid/animation/Animator;)V
 
     goto :goto_17b
 
-    .line 753
+    .line 752
     :cond_110
     iget-object v2, v0, Lorg/telegram/ui/NewContactActivity;->editDoneItem:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
@@ -1222,12 +1222,12 @@
 
     invoke-virtual {v2, v7}, Landroid/view/View;->setVisibility(I)V
 
-    .line 754
+    .line 753
     iget-object v2, v0, Lorg/telegram/ui/NewContactActivity;->editDoneItem:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
     invoke-virtual {v2, v6}, Landroid/widget/FrameLayout;->setEnabled(Z)V
 
-    .line 755
+    .line 754
     iget-object v2, v0, Lorg/telegram/ui/NewContactActivity;->editDoneItemAnimation:Landroid/animation/AnimatorSet;
 
     new-array v8, v11, [Landroid/animation/Animator;
@@ -1238,7 +1238,7 @@
 
     aput v4, v15, v7
 
-    .line 756
+    .line 755
     invoke-static {v11, v14, v15}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Ljava/lang/String;[F)Landroid/animation/ObjectAnimator;
 
     move-result-object v11
@@ -1251,7 +1251,7 @@
 
     aput v4, v15, v7
 
-    .line 757
+    .line 756
     invoke-static {v11, v13, v15}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Ljava/lang/String;[F)Landroid/animation/ObjectAnimator;
 
     move-result-object v4
@@ -1264,7 +1264,7 @@
 
     aput v3, v11, v7
 
-    .line 758
+    .line 757
     invoke-static {v4, v12, v11}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Ljava/lang/String;[F)Landroid/animation/ObjectAnimator;
 
     move-result-object v3
@@ -1273,7 +1273,7 @@
 
     iget-object v3, v0, Lorg/telegram/ui/NewContactActivity;->editDoneItem:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
-    .line 759
+    .line 758
     invoke-virtual {v3}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->getContentView()Landroid/view/View;
 
     move-result-object v3
@@ -1290,7 +1290,7 @@
 
     iget-object v3, v0, Lorg/telegram/ui/NewContactActivity;->editDoneItem:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
-    .line 760
+    .line 759
     invoke-virtual {v3}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->getContentView()Landroid/view/View;
 
     move-result-object v3
@@ -1309,7 +1309,7 @@
 
     iget-object v3, v0, Lorg/telegram/ui/NewContactActivity;->editDoneItem:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
-    .line 761
+    .line 760
     invoke-virtual {v3}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->getContentView()Landroid/view/View;
 
     move-result-object v3
@@ -1326,10 +1326,10 @@
 
     aput-object v3, v8, v4
 
-    .line 755
+    .line 754
     invoke-virtual {v2, v8}, Landroid/animation/AnimatorSet;->playTogether([Landroid/animation/Animator;)V
 
-    .line 764
+    .line 763
     :goto_17b
     iget-object v2, v0, Lorg/telegram/ui/NewContactActivity;->editDoneItemAnimation:Landroid/animation/AnimatorSet;
 
@@ -1339,14 +1339,14 @@
 
     invoke-virtual {v2, v3}, Landroid/animation/AnimatorSet;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 783
+    .line 782
     iget-object v1, v0, Lorg/telegram/ui/NewContactActivity;->editDoneItemAnimation:Landroid/animation/AnimatorSet;
 
     const-wide/16 v2, 0x96
 
     invoke-virtual {v1, v2, v3}, Landroid/animation/AnimatorSet;->setDuration(J)Landroid/animation/AnimatorSet;
 
-    .line 784
+    .line 783
     iget-object v1, v0, Lorg/telegram/ui/NewContactActivity;->editDoneItemAnimation:Landroid/animation/AnimatorSet;
 
     invoke-virtual {v1}, Landroid/animation/AnimatorSet;->start()V
@@ -1364,26 +1364,26 @@
 
     move-object/from16 v0, p1
 
-    .line 104
+    .line 103
     iget-object v2, v1, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
-    const v3, 0x7f070140
+    const v3, 0x7f070109
 
     invoke-virtual {v2, v3}, Lorg/telegram/ui/ActionBar/ActionBar;->setBackButtonImage(I)V
 
-    .line 105
+    .line 104
     iget-object v2, v1, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     const/4 v3, 0x1
 
     invoke-virtual {v2, v3}, Lorg/telegram/ui/ActionBar/ActionBar;->setAllowOverlayTitle(Z)V
 
-    .line 106
+    .line 105
     iget-object v2, v1, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     const-string v4, "AddContactTitle"
 
-    const v5, 0x7f0e011f
+    const v5, 0x7f0e0147
 
     invoke-static {v4, v5}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
@@ -1391,7 +1391,7 @@
 
     invoke-virtual {v2, v4}, Lorg/telegram/ui/ActionBar/ActionBar;->setTitle(Ljava/lang/CharSequence;)V
 
-    .line 107
+    .line 106
     iget-object v2, v1, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     new-instance v4, Lorg/telegram/ui/NewContactActivity$1;
@@ -1400,7 +1400,7 @@
 
     invoke-virtual {v2, v4}, Lorg/telegram/ui/ActionBar/ActionBar;->setActionBarMenuOnItemClick(Lorg/telegram/ui/ActionBar/ActionBar$ActionBarMenuOnItemClick;)V
 
-    .line 187
+    .line 186
     new-instance v2, Lorg/telegram/ui/Components/AvatarDrawable;
 
     invoke-direct {v2}, Lorg/telegram/ui/Components/AvatarDrawable;-><init>()V
@@ -1411,10 +1411,10 @@
 
     const-string v6, ""
 
-    .line 188
+    .line 187
     invoke-virtual {v2, v4, v5, v6, v6}, Lorg/telegram/ui/Components/AvatarDrawable;->setInfo(JLjava/lang/String;Ljava/lang/String;)V
 
-    .line 190
+    .line 189
     iget-object v2, v1, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     invoke-virtual {v2}, Lorg/telegram/ui/ActionBar/ActionBar;->createMenu()Lorg/telegram/ui/ActionBar/ActionBarMenu;
@@ -1423,12 +1423,12 @@
 
     const/high16 v4, 0x42600000    # 56.0f
 
-    .line 191
+    .line 190
     invoke-static {v4}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v4
 
-    const v5, 0x7f07015e
+    const v5, 0x7f07010a
 
     invoke-virtual {v2, v3, v5, v4}, Lorg/telegram/ui/ActionBar/ActionBarMenu;->addItemWithWidth(III)Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
@@ -1438,23 +1438,23 @@
 
     const-string v4, "Done"
 
-    const v5, 0x7f0e05dd
+    const v5, 0x7f0e062e
 
-    .line 192
+    .line 191
     invoke-static {v4, v5}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v4
 
     invoke-virtual {v2, v4}, Landroid/widget/FrameLayout;->setContentDescription(Ljava/lang/CharSequence;)V
 
-    .line 194
+    .line 193
     new-instance v2, Lorg/telegram/ui/Components/ContextProgressView;
 
     invoke-direct {v2, v0, v3}, Lorg/telegram/ui/Components/ContextProgressView;-><init>(Landroid/content/Context;I)V
 
     iput-object v2, v1, Lorg/telegram/ui/NewContactActivity;->editDoneItemProgress:Lorg/telegram/ui/Components/ContextProgressView;
 
-    .line 195
+    .line 194
     iget-object v4, v1, Lorg/telegram/ui/NewContactActivity;->editDoneItem:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
     const/4 v5, -0x1
@@ -1467,21 +1467,21 @@
 
     invoke-virtual {v4, v2, v6}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 196
+    .line 195
     iget-object v2, v1, Lorg/telegram/ui/NewContactActivity;->editDoneItemProgress:Lorg/telegram/ui/Components/ContextProgressView;
 
     const/4 v4, 0x4
 
     invoke-virtual {v2, v4}, Lorg/telegram/ui/Components/ContextProgressView;->setVisibility(I)V
 
-    .line 198
+    .line 197
     new-instance v2, Landroid/widget/ScrollView;
 
     invoke-direct {v2, v0}, Landroid/widget/ScrollView;-><init>(Landroid/content/Context;)V
 
     iput-object v2, v1, Lorg/telegram/ui/ActionBar/BaseFragment;->fragmentView:Landroid/view/View;
 
-    .line 200
+    .line 199
     new-instance v2, Landroid/widget/LinearLayout;
 
     invoke-direct {v2, v0}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
@@ -1490,7 +1490,7 @@
 
     const/high16 v6, 0x41c00000    # 24.0f
 
-    .line 201
+    .line 200
     invoke-static {v6}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v7
@@ -1503,12 +1503,12 @@
 
     invoke-virtual {v2, v7, v8, v6, v8}, Landroid/widget/LinearLayout;->setPadding(IIII)V
 
-    .line 202
+    .line 201
     iget-object v2, v1, Lorg/telegram/ui/NewContactActivity;->contentLayout:Landroid/widget/LinearLayout;
 
     invoke-virtual {v2, v3}, Landroid/widget/LinearLayout;->setOrientation(I)V
 
-    .line 203
+    .line 202
     iget-object v2, v1, Lorg/telegram/ui/ActionBar/BaseFragment;->fragmentView:Landroid/view/View;
 
     check-cast v2, Landroid/widget/ScrollView;
@@ -1525,19 +1525,19 @@
 
     invoke-virtual {v2, v6, v9}, Landroid/widget/ScrollView;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 204
+    .line 203
     iget-object v2, v1, Lorg/telegram/ui/NewContactActivity;->contentLayout:Landroid/widget/LinearLayout;
 
     sget-object v6, Lorg/telegram/ui/NewContactActivity$$ExternalSyntheticLambda2;->INSTANCE:Lorg/telegram/ui/NewContactActivity$$ExternalSyntheticLambda2;
 
     invoke-virtual {v2, v6}, Landroid/widget/LinearLayout;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    .line 206
+    .line 205
     new-instance v2, Landroid/widget/FrameLayout;
 
     invoke-direct {v2, v0}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    .line 207
+    .line 206
     iget-object v6, v1, Lorg/telegram/ui/NewContactActivity;->contentLayout:Landroid/widget/LinearLayout;
 
     const/4 v9, -0x1
@@ -1558,19 +1558,19 @@
 
     invoke-virtual {v6, v2, v9}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 209
+    .line 208
     new-instance v6, Lorg/telegram/ui/Components/BackupImageView;
 
     invoke-direct {v6, v0}, Lorg/telegram/ui/Components/BackupImageView;-><init>(Landroid/content/Context;)V
 
     iput-object v6, v1, Lorg/telegram/ui/NewContactActivity;->avatarImage:Lorg/telegram/ui/Components/BackupImageView;
 
-    .line 210
+    .line 209
     iget-object v9, v1, Lorg/telegram/ui/NewContactActivity;->avatarDrawable:Lorg/telegram/ui/Components/AvatarDrawable;
 
     invoke-virtual {v6, v9}, Lorg/telegram/ui/Components/BackupImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 211
+    .line 210
     iget-object v6, v1, Lorg/telegram/ui/NewContactActivity;->avatarImage:Lorg/telegram/ui/Components/BackupImageView;
 
     const/16 v9, 0x3c
@@ -1591,7 +1591,7 @@
 
     invoke-virtual {v2, v6, v9}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 214
+    .line 213
     new-instance v6, Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     invoke-direct {v6, v0}, Lorg/telegram/ui/Components/EditTextBoldCursor;-><init>(Landroid/content/Context;)V
@@ -1600,10 +1600,10 @@
 
     const/high16 v9, 0x41900000    # 18.0f
 
-    .line 215
+    .line 214
     invoke-virtual {v6, v3, v9}, Landroid/widget/EditText;->setTextSize(IF)V
 
-    .line 216
+    .line 215
     iget-object v6, v1, Lorg/telegram/ui/NewContactActivity;->firstNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     const-string v10, "windowBackgroundWhiteHintText"
@@ -1614,7 +1614,7 @@
 
     invoke-virtual {v6, v11}, Landroid/widget/EditText;->setHintTextColor(I)V
 
-    .line 217
+    .line 216
     iget-object v6, v1, Lorg/telegram/ui/NewContactActivity;->firstNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     const-string v11, "windowBackgroundWhiteBlackText"
@@ -1625,29 +1625,29 @@
 
     invoke-virtual {v6, v12}, Landroid/widget/EditText;->setTextColor(I)V
 
-    .line 218
+    .line 217
     iget-object v6, v1, Lorg/telegram/ui/NewContactActivity;->firstNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     invoke-virtual {v6, v3}, Landroid/widget/EditText;->setMaxLines(I)V
 
-    .line 219
+    .line 218
     iget-object v6, v1, Lorg/telegram/ui/NewContactActivity;->firstNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     invoke-virtual {v6, v3}, Landroid/widget/EditText;->setLines(I)V
 
-    .line 220
+    .line 219
     iget-object v6, v1, Lorg/telegram/ui/NewContactActivity;->firstNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     invoke-virtual {v6, v3}, Landroid/widget/EditText;->setSingleLine(Z)V
 
-    .line 221
+    .line 220
     iget-object v6, v1, Lorg/telegram/ui/NewContactActivity;->firstNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     const/4 v12, 0x0
 
     invoke-virtual {v6, v12}, Landroid/widget/EditText;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    .line 222
+    .line 221
     iget-object v6, v1, Lorg/telegram/ui/NewContactActivity;->firstNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     const-string v13, "windowBackgroundWhiteInputField"
@@ -1670,33 +1670,33 @@
 
     invoke-virtual {v6, v14, v4, v7}, Lorg/telegram/ui/Components/EditTextBoldCursor;->setLineColors(III)V
 
-    .line 223
+    .line 222
     iget-object v4, v1, Lorg/telegram/ui/NewContactActivity;->firstNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     const/4 v6, 0x3
 
     invoke-virtual {v4, v6}, Landroid/widget/EditText;->setGravity(I)V
 
-    .line 224
+    .line 223
     iget-object v4, v1, Lorg/telegram/ui/NewContactActivity;->firstNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     const v7, 0xc000
 
     invoke-virtual {v4, v7}, Landroid/widget/EditText;->setInputType(I)V
 
-    .line 225
+    .line 224
     iget-object v4, v1, Lorg/telegram/ui/NewContactActivity;->firstNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     const/4 v14, 0x5
 
     invoke-virtual {v4, v14}, Landroid/widget/EditText;->setImeOptions(I)V
 
-    .line 226
+    .line 225
     iget-object v4, v1, Lorg/telegram/ui/NewContactActivity;->firstNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     const-string v8, "FirstName"
 
-    const v14, 0x7f0e0756
+    const v14, 0x7f0e07aa
 
     invoke-static {v8, v14}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
@@ -1704,7 +1704,7 @@
 
     invoke-virtual {v4, v8}, Landroid/widget/EditText;->setHint(Ljava/lang/CharSequence;)V
 
-    .line 227
+    .line 226
     iget-object v4, v1, Lorg/telegram/ui/NewContactActivity;->firstNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     invoke-static {v11}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
@@ -1713,7 +1713,7 @@
 
     invoke-virtual {v4, v8}, Lorg/telegram/ui/Components/EditTextBoldCursor;->setCursorColor(I)V
 
-    .line 228
+    .line 227
     iget-object v4, v1, Lorg/telegram/ui/NewContactActivity;->firstNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     const/high16 v8, 0x41a00000    # 20.0f
@@ -1724,24 +1724,24 @@
 
     invoke-virtual {v4, v14}, Lorg/telegram/ui/Components/EditTextBoldCursor;->setCursorSize(I)V
 
-    .line 229
+    .line 228
     iget-object v4, v1, Lorg/telegram/ui/NewContactActivity;->firstNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     const/high16 v14, 0x3fc00000    # 1.5f
 
     invoke-virtual {v4, v14}, Lorg/telegram/ui/Components/EditTextBoldCursor;->setCursorWidth(F)V
 
-    .line 230
+    .line 229
     iget-object v4, v1, Lorg/telegram/ui/NewContactActivity;->initialFirstName:Ljava/lang/String;
 
     if-eqz v4, :cond_176
 
-    .line 231
+    .line 230
     iget-object v14, v1, Lorg/telegram/ui/NewContactActivity;->firstNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     invoke-virtual {v14, v4}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
-    .line 232
+    .line 231
     iput-object v12, v1, Lorg/telegram/ui/NewContactActivity;->initialFirstName:Ljava/lang/String;
 
     const/4 v4, 0x1
@@ -1751,7 +1751,7 @@
     :cond_176
     const/4 v4, 0x0
 
-    .line 235
+    .line 234
     :goto_177
     iget-object v14, v1, Lorg/telegram/ui/NewContactActivity;->firstNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
@@ -1775,7 +1775,7 @@
 
     invoke-virtual {v2, v14, v8}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 236
+    .line 235
     iget-object v8, v1, Lorg/telegram/ui/NewContactActivity;->firstNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     new-instance v14, Lorg/telegram/ui/NewContactActivity$$ExternalSyntheticLambda5;
@@ -1784,7 +1784,7 @@
 
     invoke-virtual {v8, v14}, Landroid/widget/EditText;->setOnEditorActionListener(Landroid/widget/TextView$OnEditorActionListener;)V
 
-    .line 244
+    .line 243
     iget-object v8, v1, Lorg/telegram/ui/NewContactActivity;->firstNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     new-instance v14, Lorg/telegram/ui/NewContactActivity$2;
@@ -1793,17 +1793,17 @@
 
     invoke-virtual {v8, v14}, Lorg/telegram/ui/Components/EditTextBoldCursor;->addTextChangedListener(Landroid/text/TextWatcher;)V
 
-    .line 261
+    .line 260
     new-instance v8, Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     invoke-direct {v8, v0}, Lorg/telegram/ui/Components/EditTextBoldCursor;-><init>(Landroid/content/Context;)V
 
     iput-object v8, v1, Lorg/telegram/ui/NewContactActivity;->lastNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
-    .line 262
+    .line 261
     invoke-virtual {v8, v3, v9}, Landroid/widget/EditText;->setTextSize(IF)V
 
-    .line 263
+    .line 262
     iget-object v8, v1, Lorg/telegram/ui/NewContactActivity;->lastNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     invoke-static {v10}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
@@ -1812,7 +1812,7 @@
 
     invoke-virtual {v8, v14}, Landroid/widget/EditText;->setHintTextColor(I)V
 
-    .line 264
+    .line 263
     iget-object v8, v1, Lorg/telegram/ui/NewContactActivity;->lastNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     invoke-static {v11}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
@@ -1821,12 +1821,12 @@
 
     invoke-virtual {v8, v14}, Landroid/widget/EditText;->setTextColor(I)V
 
-    .line 265
+    .line 264
     iget-object v8, v1, Lorg/telegram/ui/NewContactActivity;->lastNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     invoke-virtual {v8, v12}, Landroid/widget/EditText;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    .line 266
+    .line 265
     iget-object v8, v1, Lorg/telegram/ui/NewContactActivity;->lastNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     invoke-virtual {v1, v13}, Lorg/telegram/ui/ActionBar/BaseFragment;->getThemedColor(Ljava/lang/String;)I
@@ -1843,42 +1843,42 @@
 
     invoke-virtual {v8, v14, v9, v12}, Lorg/telegram/ui/Components/EditTextBoldCursor;->setLineColors(III)V
 
-    .line 267
+    .line 266
     iget-object v8, v1, Lorg/telegram/ui/NewContactActivity;->lastNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     invoke-virtual {v8, v3}, Landroid/widget/EditText;->setMaxLines(I)V
 
-    .line 268
+    .line 267
     iget-object v8, v1, Lorg/telegram/ui/NewContactActivity;->lastNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     invoke-virtual {v8, v3}, Landroid/widget/EditText;->setLines(I)V
 
-    .line 269
+    .line 268
     iget-object v8, v1, Lorg/telegram/ui/NewContactActivity;->lastNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     invoke-virtual {v8, v3}, Landroid/widget/EditText;->setSingleLine(Z)V
 
-    .line 270
+    .line 269
     iget-object v8, v1, Lorg/telegram/ui/NewContactActivity;->lastNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     invoke-virtual {v8, v6}, Landroid/widget/EditText;->setGravity(I)V
 
-    .line 271
+    .line 270
     iget-object v8, v1, Lorg/telegram/ui/NewContactActivity;->lastNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     invoke-virtual {v8, v7}, Landroid/widget/EditText;->setInputType(I)V
 
-    .line 272
+    .line 271
     iget-object v7, v1, Lorg/telegram/ui/NewContactActivity;->lastNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     const/4 v8, 0x5
 
     invoke-virtual {v7, v8}, Landroid/widget/EditText;->setImeOptions(I)V
 
-    .line 273
+    .line 272
     iget-object v7, v1, Lorg/telegram/ui/NewContactActivity;->lastNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
-    const v8, 0x7f0e0911
+    const v8, 0x7f0e0977
 
     const-string v9, "LastName"
 
@@ -1888,7 +1888,7 @@
 
     invoke-virtual {v7, v8}, Landroid/widget/EditText;->setHint(Ljava/lang/CharSequence;)V
 
-    .line 274
+    .line 273
     iget-object v7, v1, Lorg/telegram/ui/NewContactActivity;->lastNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     invoke-static {v11}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
@@ -1897,7 +1897,7 @@
 
     invoke-virtual {v7, v8}, Lorg/telegram/ui/Components/EditTextBoldCursor;->setCursorColor(I)V
 
-    .line 275
+    .line 274
     iget-object v7, v1, Lorg/telegram/ui/NewContactActivity;->lastNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     const/high16 v8, 0x41a00000    # 20.0f
@@ -1908,31 +1908,31 @@
 
     invoke-virtual {v7, v9}, Lorg/telegram/ui/Components/EditTextBoldCursor;->setCursorSize(I)V
 
-    .line 276
+    .line 275
     iget-object v7, v1, Lorg/telegram/ui/NewContactActivity;->lastNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     const/high16 v8, 0x3fc00000    # 1.5f
 
     invoke-virtual {v7, v8}, Lorg/telegram/ui/Components/EditTextBoldCursor;->setCursorWidth(F)V
 
-    .line 277
+    .line 276
     iget-object v7, v1, Lorg/telegram/ui/NewContactActivity;->initialLastName:Ljava/lang/String;
 
     if-eqz v7, :cond_229
 
-    .line 278
+    .line 277
     iget-object v4, v1, Lorg/telegram/ui/NewContactActivity;->lastNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     invoke-virtual {v4, v7}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
     const/4 v4, 0x0
 
-    .line 279
+    .line 278
     iput-object v4, v1, Lorg/telegram/ui/NewContactActivity;->initialLastName:Ljava/lang/String;
 
     const/4 v4, 0x1
 
-    .line 282
+    .line 281
     :cond_229
     iget-object v7, v1, Lorg/telegram/ui/NewContactActivity;->lastNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
@@ -1956,7 +1956,7 @@
 
     invoke-virtual {v2, v7, v8}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 283
+    .line 282
     iget-object v2, v1, Lorg/telegram/ui/NewContactActivity;->lastNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     new-instance v7, Lorg/telegram/ui/NewContactActivity$$ExternalSyntheticLambda6;
@@ -1965,7 +1965,7 @@
 
     invoke-virtual {v2, v7}, Landroid/widget/EditText;->setOnEditorActionListener(Landroid/widget/TextView$OnEditorActionListener;)V
 
-    .line 291
+    .line 290
     iget-object v2, v1, Lorg/telegram/ui/NewContactActivity;->lastNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     new-instance v7, Lorg/telegram/ui/NewContactActivity$3;
@@ -1976,10 +1976,10 @@
 
     if-eqz v4, :cond_259
 
-    .line 309
+    .line 308
     invoke-direct/range {p0 .. p0}, Lorg/telegram/ui/NewContactActivity;->invalidateAvatar()V
 
-    .line 312
+    .line 311
     :cond_259
     new-instance v2, Landroid/widget/TextView;
 
@@ -1989,10 +1989,10 @@
 
     const/high16 v4, 0x41900000    # 18.0f
 
-    .line 313
+    .line 312
     invoke-virtual {v2, v3, v4}, Landroid/widget/TextView;->setTextSize(IF)V
 
-    .line 314
+    .line 313
     iget-object v2, v1, Lorg/telegram/ui/NewContactActivity;->countryButton:Landroid/widget/TextView;
 
     const/high16 v4, 0x40800000    # 4.0f
@@ -2009,7 +2009,7 @@
 
     invoke-virtual {v2, v8, v7, v8, v4}, Landroid/widget/TextView;->setPadding(IIII)V
 
-    .line 315
+    .line 314
     iget-object v2, v1, Lorg/telegram/ui/NewContactActivity;->countryButton:Landroid/widget/TextView;
 
     invoke-static {v11}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
@@ -2018,29 +2018,29 @@
 
     invoke-virtual {v2, v4}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 316
+    .line 315
     iget-object v2, v1, Lorg/telegram/ui/NewContactActivity;->countryButton:Landroid/widget/TextView;
 
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setMaxLines(I)V
 
-    .line 317
+    .line 316
     iget-object v2, v1, Lorg/telegram/ui/NewContactActivity;->countryButton:Landroid/widget/TextView;
 
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setSingleLine(Z)V
 
-    .line 318
+    .line 317
     iget-object v2, v1, Lorg/telegram/ui/NewContactActivity;->countryButton:Landroid/widget/TextView;
 
     sget-object v4, Landroid/text/TextUtils$TruncateAt;->END:Landroid/text/TextUtils$TruncateAt;
 
     invoke-virtual {v2, v4}, Landroid/widget/TextView;->setEllipsize(Landroid/text/TextUtils$TruncateAt;)V
 
-    .line 319
+    .line 318
     iget-object v2, v1, Lorg/telegram/ui/NewContactActivity;->countryButton:Landroid/widget/TextView;
 
     invoke-virtual {v2, v6}, Landroid/widget/TextView;->setGravity(I)V
 
-    .line 320
+    .line 319
     iget-object v2, v1, Lorg/telegram/ui/NewContactActivity;->countryButton:Landroid/widget/TextView;
 
     invoke-static {v3}, Lorg/telegram/ui/ActionBar/Theme;->getSelectorDrawable(Z)Landroid/graphics/drawable/Drawable;
@@ -2049,7 +2049,7 @@
 
     invoke-virtual {v2, v4}, Landroid/widget/TextView;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    .line 321
+    .line 320
     iget-object v2, v1, Lorg/telegram/ui/NewContactActivity;->contentLayout:Landroid/widget/LinearLayout;
 
     iget-object v4, v1, Lorg/telegram/ui/NewContactActivity;->countryButton:Landroid/widget/TextView;
@@ -2072,7 +2072,7 @@
 
     invoke-virtual {v2, v4, v7}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 322
+    .line 321
     iget-object v2, v1, Lorg/telegram/ui/NewContactActivity;->countryButton:Landroid/widget/TextView;
 
     new-instance v4, Lorg/telegram/ui/NewContactActivity$$ExternalSyntheticLambda0;
@@ -2081,7 +2081,7 @@
 
     invoke-virtual {v2, v4}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 332
+    .line 331
     new-instance v2, Landroid/view/View;
 
     invoke-direct {v2, v0}, Landroid/view/View;-><init>(Landroid/content/Context;)V
@@ -2090,7 +2090,7 @@
 
     const/high16 v4, 0x41000000    # 8.0f
 
-    .line 333
+    .line 332
     invoke-static {v4}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v7
@@ -2103,7 +2103,7 @@
 
     invoke-virtual {v2, v7, v8, v4, v8}, Landroid/view/View;->setPadding(IIII)V
 
-    .line 334
+    .line 333
     iget-object v2, v1, Lorg/telegram/ui/NewContactActivity;->lineView:Landroid/view/View;
 
     const-string v4, "windowBackgroundWhiteGrayLine"
@@ -2114,7 +2114,7 @@
 
     invoke-virtual {v2, v4}, Landroid/view/View;->setBackgroundColor(I)V
 
-    .line 335
+    .line 334
     iget-object v2, v1, Lorg/telegram/ui/NewContactActivity;->contentLayout:Landroid/widget/LinearLayout;
 
     iget-object v4, v1, Lorg/telegram/ui/NewContactActivity;->lineView:Landroid/view/View;
@@ -2131,17 +2131,17 @@
 
     invoke-virtual {v2, v4, v7}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 337
+    .line 336
     new-instance v2, Landroid/widget/LinearLayout;
 
     invoke-direct {v2, v0}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
 
     const/4 v4, 0x0
 
-    .line 338
+    .line 337
     invoke-virtual {v2, v4}, Landroid/widget/LinearLayout;->setOrientation(I)V
 
-    .line 339
+    .line 338
     iget-object v4, v1, Lorg/telegram/ui/NewContactActivity;->contentLayout:Landroid/widget/LinearLayout;
 
     const/16 v24, -0x2
@@ -2154,7 +2154,7 @@
 
     invoke-virtual {v4, v2, v7}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 341
+    .line 340
     new-instance v4, Landroid/widget/TextView;
 
     invoke-direct {v4, v0}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
@@ -2163,10 +2163,10 @@
 
     const-string v7, "+"
 
-    .line 342
+    .line 341
     invoke-virtual {v4, v7}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 343
+    .line 342
     iget-object v4, v1, Lorg/telegram/ui/NewContactActivity;->textView:Landroid/widget/TextView;
 
     invoke-static {v11}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
@@ -2175,21 +2175,21 @@
 
     invoke-virtual {v4, v7}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 344
+    .line 343
     iget-object v4, v1, Lorg/telegram/ui/NewContactActivity;->textView:Landroid/widget/TextView;
 
     const/high16 v7, 0x41900000    # 18.0f
 
     invoke-virtual {v4, v3, v7}, Landroid/widget/TextView;->setTextSize(IF)V
 
-    .line 345
+    .line 344
     iget-object v4, v1, Lorg/telegram/ui/NewContactActivity;->textView:Landroid/widget/TextView;
 
     const/4 v7, 0x2
 
     invoke-virtual {v4, v7}, Landroid/widget/TextView;->setImportantForAccessibility(I)V
 
-    .line 346
+    .line 345
     iget-object v4, v1, Lorg/telegram/ui/NewContactActivity;->textView:Landroid/widget/TextView;
 
     const/4 v8, -0x2
@@ -2200,17 +2200,17 @@
 
     invoke-virtual {v2, v4, v8}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 348
+    .line 347
     new-instance v4, Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     invoke-direct {v4, v0}, Lorg/telegram/ui/Components/EditTextBoldCursor;-><init>(Landroid/content/Context;)V
 
     iput-object v4, v1, Lorg/telegram/ui/NewContactActivity;->codeField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
-    .line 349
+    .line 348
     invoke-virtual {v4, v6}, Landroid/widget/EditText;->setInputType(I)V
 
-    .line 350
+    .line 349
     iget-object v4, v1, Lorg/telegram/ui/NewContactActivity;->codeField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     invoke-static {v11}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
@@ -2219,14 +2219,14 @@
 
     invoke-virtual {v4, v8}, Landroid/widget/EditText;->setTextColor(I)V
 
-    .line 351
+    .line 350
     iget-object v4, v1, Lorg/telegram/ui/NewContactActivity;->codeField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     const/4 v8, 0x0
 
     invoke-virtual {v4, v8}, Landroid/widget/EditText;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 352
+    .line 351
     iget-object v4, v1, Lorg/telegram/ui/NewContactActivity;->codeField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     invoke-virtual {v1, v13}, Lorg/telegram/ui/ActionBar/BaseFragment;->getThemedColor(Ljava/lang/String;)I
@@ -2243,7 +2243,7 @@
 
     invoke-virtual {v4, v8, v9, v12}, Lorg/telegram/ui/Components/EditTextBoldCursor;->setLineColors(III)V
 
-    .line 353
+    .line 352
     iget-object v4, v1, Lorg/telegram/ui/NewContactActivity;->codeField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     invoke-static {v11}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
@@ -2252,7 +2252,7 @@
 
     invoke-virtual {v4, v8}, Lorg/telegram/ui/Components/EditTextBoldCursor;->setCursorColor(I)V
 
-    .line 354
+    .line 353
     iget-object v4, v1, Lorg/telegram/ui/NewContactActivity;->codeField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     const/high16 v8, 0x41a00000    # 20.0f
@@ -2263,14 +2263,14 @@
 
     invoke-virtual {v4, v9}, Lorg/telegram/ui/Components/EditTextBoldCursor;->setCursorSize(I)V
 
-    .line 355
+    .line 354
     iget-object v4, v1, Lorg/telegram/ui/NewContactActivity;->codeField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     const/high16 v8, 0x3fc00000    # 1.5f
 
     invoke-virtual {v4, v8}, Lorg/telegram/ui/Components/EditTextBoldCursor;->setCursorWidth(F)V
 
-    .line 356
+    .line 355
     iget-object v4, v1, Lorg/telegram/ui/NewContactActivity;->codeField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     const/high16 v8, 0x41200000    # 10.0f
@@ -2283,33 +2283,33 @@
 
     invoke-virtual {v4, v8, v9, v9, v9}, Landroid/widget/EditText;->setPadding(IIII)V
 
-    .line 357
+    .line 356
     iget-object v4, v1, Lorg/telegram/ui/NewContactActivity;->codeField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     const/high16 v8, 0x41900000    # 18.0f
 
     invoke-virtual {v4, v3, v8}, Landroid/widget/EditText;->setTextSize(IF)V
 
-    .line 358
+    .line 357
     iget-object v4, v1, Lorg/telegram/ui/NewContactActivity;->codeField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     invoke-virtual {v4, v3}, Landroid/widget/EditText;->setMaxLines(I)V
 
-    .line 359
+    .line 358
     iget-object v4, v1, Lorg/telegram/ui/NewContactActivity;->codeField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     const/16 v8, 0x13
 
     invoke-virtual {v4, v8}, Landroid/widget/EditText;->setGravity(I)V
 
-    .line 360
+    .line 359
     iget-object v4, v1, Lorg/telegram/ui/NewContactActivity;->codeField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     const v8, 0x10000005
 
     invoke-virtual {v4, v8}, Landroid/widget/EditText;->setImeOptions(I)V
 
-    .line 361
+    .line 360
     iget-object v4, v1, Lorg/telegram/ui/NewContactActivity;->codeField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     const/16 v23, 0x37
@@ -2328,7 +2328,7 @@
 
     invoke-virtual {v2, v4, v8}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 362
+    .line 361
     iget-object v4, v1, Lorg/telegram/ui/NewContactActivity;->codeField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     new-instance v8, Lorg/telegram/ui/NewContactActivity$4;
@@ -2337,7 +2337,7 @@
 
     invoke-virtual {v4, v8}, Lorg/telegram/ui/Components/EditTextBoldCursor;->addTextChangedListener(Landroid/text/TextWatcher;)V
 
-    .line 440
+    .line 439
     iget-object v4, v1, Lorg/telegram/ui/NewContactActivity;->codeField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     new-instance v8, Lorg/telegram/ui/NewContactActivity$$ExternalSyntheticLambda3;
@@ -2346,17 +2346,17 @@
 
     invoke-virtual {v4, v8}, Landroid/widget/EditText;->setOnEditorActionListener(Landroid/widget/TextView$OnEditorActionListener;)V
 
-    .line 449
+    .line 448
     new-instance v4, Lorg/telegram/ui/Components/HintEditText;
 
     invoke-direct {v4, v0}, Lorg/telegram/ui/Components/HintEditText;-><init>(Landroid/content/Context;)V
 
     iput-object v4, v1, Lorg/telegram/ui/NewContactActivity;->phoneField:Lorg/telegram/ui/Components/HintEditText;
 
-    .line 450
+    .line 449
     invoke-virtual {v4, v6}, Landroid/widget/EditText;->setInputType(I)V
 
-    .line 451
+    .line 450
     iget-object v4, v1, Lorg/telegram/ui/NewContactActivity;->phoneField:Lorg/telegram/ui/Components/HintEditText;
 
     invoke-static {v11}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
@@ -2365,7 +2365,7 @@
 
     invoke-virtual {v4, v8}, Landroid/widget/EditText;->setTextColor(I)V
 
-    .line 452
+    .line 451
     iget-object v4, v1, Lorg/telegram/ui/NewContactActivity;->phoneField:Lorg/telegram/ui/Components/HintEditText;
 
     invoke-static {v10}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
@@ -2374,14 +2374,14 @@
 
     invoke-virtual {v4, v8}, Landroid/widget/EditText;->setHintTextColor(I)V
 
-    .line 453
+    .line 452
     iget-object v4, v1, Lorg/telegram/ui/NewContactActivity;->phoneField:Lorg/telegram/ui/Components/HintEditText;
 
     const/4 v8, 0x0
 
     invoke-virtual {v4, v8}, Landroid/widget/EditText;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 454
+    .line 453
     iget-object v4, v1, Lorg/telegram/ui/NewContactActivity;->phoneField:Lorg/telegram/ui/Components/HintEditText;
 
     invoke-virtual {v1, v13}, Lorg/telegram/ui/ActionBar/BaseFragment;->getThemedColor(Ljava/lang/String;)I
@@ -2398,14 +2398,14 @@
 
     invoke-virtual {v4, v8, v9, v5}, Lorg/telegram/ui/Components/EditTextBoldCursor;->setLineColors(III)V
 
-    .line 455
+    .line 454
     iget-object v4, v1, Lorg/telegram/ui/NewContactActivity;->phoneField:Lorg/telegram/ui/Components/HintEditText;
 
     const/4 v5, 0x0
 
     invoke-virtual {v4, v5, v5, v5, v5}, Landroid/widget/EditText;->setPadding(IIII)V
 
-    .line 456
+    .line 455
     iget-object v4, v1, Lorg/telegram/ui/NewContactActivity;->phoneField:Lorg/telegram/ui/Components/HintEditText;
 
     invoke-static {v11}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
@@ -2414,7 +2414,7 @@
 
     invoke-virtual {v4, v5}, Lorg/telegram/ui/Components/EditTextBoldCursor;->setCursorColor(I)V
 
-    .line 457
+    .line 456
     iget-object v4, v1, Lorg/telegram/ui/NewContactActivity;->phoneField:Lorg/telegram/ui/Components/HintEditText;
 
     const/high16 v5, 0x41a00000    # 20.0f
@@ -2425,40 +2425,40 @@
 
     invoke-virtual {v4, v5}, Lorg/telegram/ui/Components/EditTextBoldCursor;->setCursorSize(I)V
 
-    .line 458
+    .line 457
     iget-object v4, v1, Lorg/telegram/ui/NewContactActivity;->phoneField:Lorg/telegram/ui/Components/HintEditText;
 
     const/high16 v5, 0x3fc00000    # 1.5f
 
     invoke-virtual {v4, v5}, Lorg/telegram/ui/Components/EditTextBoldCursor;->setCursorWidth(F)V
 
-    .line 459
+    .line 458
     iget-object v4, v1, Lorg/telegram/ui/NewContactActivity;->phoneField:Lorg/telegram/ui/Components/HintEditText;
 
     const/high16 v5, 0x41900000    # 18.0f
 
     invoke-virtual {v4, v3, v5}, Lorg/telegram/ui/Components/HintEditText;->setTextSize(IF)V
 
-    .line 460
+    .line 459
     iget-object v4, v1, Lorg/telegram/ui/NewContactActivity;->phoneField:Lorg/telegram/ui/Components/HintEditText;
 
     invoke-virtual {v4, v3}, Landroid/widget/EditText;->setMaxLines(I)V
 
-    .line 461
+    .line 460
     iget-object v4, v1, Lorg/telegram/ui/NewContactActivity;->phoneField:Lorg/telegram/ui/Components/HintEditText;
 
     const/16 v5, 0x13
 
     invoke-virtual {v4, v5}, Landroid/widget/EditText;->setGravity(I)V
 
-    .line 462
+    .line 461
     iget-object v4, v1, Lorg/telegram/ui/NewContactActivity;->phoneField:Lorg/telegram/ui/Components/HintEditText;
 
     const v5, 0x10000006
 
     invoke-virtual {v4, v5}, Landroid/widget/EditText;->setImeOptions(I)V
 
-    .line 463
+    .line 462
     iget-object v4, v1, Lorg/telegram/ui/NewContactActivity;->phoneField:Lorg/telegram/ui/Components/HintEditText;
 
     const/high16 v5, 0x42100000    # 36.0f
@@ -2471,7 +2471,7 @@
 
     invoke-virtual {v2, v4, v5}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 464
+    .line 463
     iget-object v2, v1, Lorg/telegram/ui/NewContactActivity;->phoneField:Lorg/telegram/ui/Components/HintEditText;
 
     new-instance v4, Lorg/telegram/ui/NewContactActivity$5;
@@ -2480,7 +2480,7 @@
 
     invoke-virtual {v2, v4}, Lorg/telegram/ui/Components/EditTextBoldCursor;->addTextChangedListener(Landroid/text/TextWatcher;)V
 
-    .line 538
+    .line 537
     iget-object v2, v1, Lorg/telegram/ui/NewContactActivity;->phoneField:Lorg/telegram/ui/Components/HintEditText;
 
     new-instance v4, Lorg/telegram/ui/NewContactActivity$$ExternalSyntheticLambda4;
@@ -2489,7 +2489,7 @@
 
     invoke-virtual {v2, v4}, Landroid/widget/EditText;->setOnEditorActionListener(Landroid/widget/TextView$OnEditorActionListener;)V
 
-    .line 545
+    .line 544
     iget-object v2, v1, Lorg/telegram/ui/NewContactActivity;->phoneField:Lorg/telegram/ui/Components/HintEditText;
 
     new-instance v4, Lorg/telegram/ui/NewContactActivity$$ExternalSyntheticLambda1;
@@ -2498,12 +2498,12 @@
 
     invoke-virtual {v2, v4}, Landroid/widget/EditText;->setOnKeyListener(Landroid/view/View$OnKeyListener;)V
 
-    .line 555
+    .line 554
     new-instance v2, Ljava/util/HashMap;
 
     invoke-direct {v2}, Ljava/util/HashMap;-><init>()V
 
-    .line 557
+    .line 556
     :try_start_462
     new-instance v4, Ljava/io/BufferedReader;
 
@@ -2527,7 +2527,7 @@
 
     invoke-direct {v4, v5}, Ljava/io/BufferedReader;-><init>(Ljava/io/Reader;)V
 
-    .line 559
+    .line 558
     :goto_47a
     invoke-virtual {v4}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
 
@@ -2537,12 +2537,12 @@
 
     const-string v5, ";"
 
-    .line 560
+    .line 559
     invoke-virtual {v0, v5}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v0
 
-    .line 561
+    .line 560
     iget-object v5, v1, Lorg/telegram/ui/NewContactActivity;->countriesArray:Ljava/util/ArrayList;
 
     aget-object v8, v0, v7
@@ -2551,7 +2551,7 @@
 
     invoke-virtual {v5, v9, v8}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
 
-    .line 562
+    .line 561
     iget-object v5, v1, Lorg/telegram/ui/NewContactActivity;->countriesMap:Ljava/util/HashMap;
 
     aget-object v8, v0, v7
@@ -2560,7 +2560,7 @@
 
     invoke-virtual {v5, v8, v10}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 563
+    .line 562
     iget-object v5, v1, Lorg/telegram/ui/NewContactActivity;->codesMap:Ljava/util/HashMap;
 
     aget-object v8, v0, v9
@@ -2569,12 +2569,12 @@
 
     invoke-virtual {v5, v8, v9}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 564
+    .line 563
     array-length v5, v0
 
     if-le v5, v6, :cond_4ad
 
-    .line 565
+    .line 564
     iget-object v5, v1, Lorg/telegram/ui/NewContactActivity;->phoneFormatMap:Ljava/util/HashMap;
 
     const/4 v8, 0x0
@@ -2585,7 +2585,7 @@
 
     invoke-virtual {v5, v9, v8}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 567
+    .line 566
     :cond_4ad
     aget-object v5, v0, v3
 
@@ -2595,7 +2595,7 @@
 
     goto :goto_47a
 
-    .line 569
+    .line 568
     :cond_4b5
     invoke-virtual {v4}, Ljava/io/BufferedReader;->close()V
     :try_end_4b8
@@ -2606,18 +2606,18 @@
     :catch_4b9
     move-exception v0
 
-    .line 571
+    .line 570
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
-    .line 574
+    .line 573
     :goto_4bd
     iget-object v0, v1, Lorg/telegram/ui/NewContactActivity;->countriesArray:Ljava/util/ArrayList;
 
-    sget-object v4, Lorg/telegram/ui/ChangePhoneActivity$PhoneView$$ExternalSyntheticLambda6;->INSTANCE:Lorg/telegram/ui/ChangePhoneActivity$PhoneView$$ExternalSyntheticLambda6;
+    sget-object v4, Lorg/telegram/ui/CountrySelectActivity$CountryAdapter$$ExternalSyntheticLambda0;->INSTANCE:Lorg/telegram/ui/CountrySelectActivity$CountryAdapter$$ExternalSyntheticLambda0;
 
     invoke-static {v0, v4}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
 
-    .line 576
+    .line 575
     iget-object v0, v1, Lorg/telegram/ui/NewContactActivity;->initialPhoneNumber:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -2626,7 +2626,7 @@
 
     if-nez v0, :cond_52a
 
-    .line 577
+    .line 576
     invoke-virtual/range {p0 .. p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getUserConfig()Lorg/telegram/messenger/UserConfig;
 
     move-result-object v0
@@ -2635,7 +2635,7 @@
 
     move-result-object v0
 
-    .line 578
+    .line 577
     iget-object v2, v1, Lorg/telegram/ui/NewContactActivity;->initialPhoneNumber:Ljava/lang/String;
 
     const-string v4, "+"
@@ -2646,7 +2646,7 @@
 
     if-eqz v2, :cond_4eb
 
-    .line 579
+    .line 578
     iget-object v0, v1, Lorg/telegram/ui/NewContactActivity;->codeField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     iget-object v2, v1, Lorg/telegram/ui/NewContactActivity;->initialPhoneNumber:Ljava/lang/String;
@@ -2662,7 +2662,7 @@
 
     goto :goto_527
 
-    .line 580
+    .line 579
     :cond_4eb
     iget-boolean v2, v1, Lorg/telegram/ui/NewContactActivity;->initialPhoneNumberWithCountryCode:Z
 
@@ -2680,7 +2680,7 @@
 
     goto :goto_51f
 
-    .line 583
+    .line 582
     :cond_4fa
     iget-object v0, v0, Lorg/telegram/tgnet/TLRPC$User;->phone:Ljava/lang/String;
 
@@ -2691,12 +2691,12 @@
 
     const/4 v2, 0x0
 
-    .line 585
+    .line 584
     invoke-virtual {v0, v2, v4}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v5
 
-    .line 586
+    .line 585
     iget-object v6, v1, Lorg/telegram/ui/NewContactActivity;->codesMap:Ljava/util/HashMap;
 
     invoke-virtual {v6, v5}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -2707,7 +2707,7 @@
 
     if-eqz v6, :cond_514
 
-    .line 588
+    .line 587
     iget-object v0, v1, Lorg/telegram/ui/NewContactActivity;->codeField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     invoke-virtual {v0, v5}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
@@ -2719,7 +2719,7 @@
 
     goto :goto_4fd
 
-    .line 592
+    .line 591
     :cond_517
     :goto_517
     iget-object v0, v1, Lorg/telegram/ui/NewContactActivity;->phoneField:Lorg/telegram/ui/Components/HintEditText;
@@ -2730,7 +2730,7 @@
 
     goto :goto_4e9
 
-    .line 581
+    .line 580
     :cond_51f
     :goto_51f
     iget-object v0, v1, Lorg/telegram/ui/NewContactActivity;->codeField:Lorg/telegram/ui/Components/EditTextBoldCursor;
@@ -2741,13 +2741,13 @@
 
     goto :goto_4e9
 
-    .line 594
+    .line 593
     :goto_527
     iput-object v2, v1, Lorg/telegram/ui/NewContactActivity;->initialPhoneNumber:Ljava/lang/String;
 
     goto :goto_581
 
-    .line 598
+    .line 597
     :cond_52a
     :try_start_52a
     sget-object v0, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
@@ -2762,7 +2762,7 @@
 
     if-eqz v0, :cond_544
 
-    .line 600
+    .line 599
     invoke-virtual {v0}, Landroid/telephony/TelephonyManager;->getSimCountryIso()Ljava/lang/String;
 
     move-result-object v0
@@ -2780,7 +2780,7 @@
     :catch_540
     move-exception v0
 
-    .line 603
+    .line 602
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     :cond_544
@@ -2789,7 +2789,7 @@
     :goto_545
     if-eqz v4, :cond_565
 
-    .line 607
+    .line 606
     invoke-virtual {v2, v4}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -2798,7 +2798,7 @@
 
     if-eqz v0, :cond_565
 
-    .line 609
+    .line 608
     iget-object v2, v1, Lorg/telegram/ui/NewContactActivity;->countriesArray:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v0}, Ljava/util/ArrayList;->indexOf(Ljava/lang/Object;)I
@@ -2809,7 +2809,7 @@
 
     if-eq v2, v3, :cond_565
 
-    .line 611
+    .line 610
     iget-object v2, v1, Lorg/telegram/ui/NewContactActivity;->codeField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     iget-object v3, v1, Lorg/telegram/ui/NewContactActivity;->countriesMap:Ljava/util/HashMap;
@@ -2822,7 +2822,7 @@
 
     invoke-virtual {v2, v0}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
-    .line 616
+    .line 615
     :cond_565
     iget-object v0, v1, Lorg/telegram/ui/NewContactActivity;->codeField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
@@ -2832,10 +2832,10 @@
 
     if-nez v0, :cond_581
 
-    .line 617
+    .line 616
     iget-object v0, v1, Lorg/telegram/ui/NewContactActivity;->countryButton:Landroid/widget/TextView;
 
-    const v2, 0x7f0e0447
+    const v2, 0x7f0e0489
 
     const-string v3, "ChooseCountry"
 
@@ -2845,14 +2845,14 @@
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 618
+    .line 617
     iget-object v0, v1, Lorg/telegram/ui/NewContactActivity;->phoneField:Lorg/telegram/ui/Components/HintEditText;
 
     const/4 v2, 0x0
 
     invoke-virtual {v0, v2}, Lorg/telegram/ui/Components/HintEditText;->setHintText(Ljava/lang/String;)V
 
-    .line 623
+    .line 622
     :cond_581
     :goto_581
     iget-object v0, v1, Lorg/telegram/ui/ActionBar/BaseFragment;->fragmentView:Landroid/view/View;
@@ -2873,17 +2873,17 @@
 
     move-object/from16 v0, p0
 
-    .line 790
+    .line 789
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 792
+    .line 791
     new-instance v10, Lorg/telegram/ui/NewContactActivity$$ExternalSyntheticLambda7;
 
     invoke-direct {v10, v0}, Lorg/telegram/ui/NewContactActivity$$ExternalSyntheticLambda7;-><init>(Lorg/telegram/ui/NewContactActivity;)V
 
-    .line 798
+    .line 797
     new-instance v11, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v3, v0, Lorg/telegram/ui/ActionBar/BaseFragment;->fragmentView:Landroid/view/View;
@@ -2906,7 +2906,7 @@
 
     invoke-virtual {v1, v11}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 800
+    .line 799
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v13, v0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
@@ -2929,7 +2929,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 801
+    .line 800
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v3, v0, Lorg/telegram/ui/ActionBar/BaseFragment;->fragmentView:Landroid/view/View;
@@ -2954,7 +2954,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 802
+    .line 801
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v12, v0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
@@ -2971,7 +2971,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 803
+    .line 802
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v3, v0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
@@ -2990,7 +2990,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 804
+    .line 803
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v12, v0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
@@ -3005,7 +3005,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 806
+    .line 805
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v3, v0, Lorg/telegram/ui/NewContactActivity;->firstNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
@@ -3019,27 +3019,27 @@
     move-object/from16 v20, v3
 
     invoke-direct/range {v19 .. v26}, Lorg/telegram/ui/ActionBar/ThemeDescription;-><init>(Landroid/view/View;I[Ljava/lang/Class;Landroid/graphics/Paint;[Landroid/graphics/drawable/Drawable;Lorg/telegram/ui/ActionBar/ThemeDescription$ThemeDescriptionDelegate;Ljava/lang/String;)V
+
+    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 806
+    new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
+
+    iget-object v12, v0, Lorg/telegram/ui/NewContactActivity;->firstNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
+
+    sget v13, Lorg/telegram/ui/ActionBar/ThemeDescription;->FLAG_HINTTEXTCOLOR:I
+
+    const-string v18, "windowBackgroundWhiteHintText"
+
+    move-object v11, v2
+
+    invoke-direct/range {v11 .. v18}, Lorg/telegram/ui/ActionBar/ThemeDescription;-><init>(Landroid/view/View;I[Ljava/lang/Class;Landroid/graphics/Paint;[Landroid/graphics/drawable/Drawable;Lorg/telegram/ui/ActionBar/ThemeDescription$ThemeDescriptionDelegate;Ljava/lang/String;)V
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 807
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
-    iget-object v12, v0, Lorg/telegram/ui/NewContactActivity;->firstNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
-
-    sget v13, Lorg/telegram/ui/ActionBar/ThemeDescription;->FLAG_HINTTEXTCOLOR:I
-
-    const-string v18, "windowBackgroundWhiteHintText"
-
-    move-object v11, v2
-
-    invoke-direct/range {v11 .. v18}, Lorg/telegram/ui/ActionBar/ThemeDescription;-><init>(Landroid/view/View;I[Ljava/lang/Class;Landroid/graphics/Paint;[Landroid/graphics/drawable/Drawable;Lorg/telegram/ui/ActionBar/ThemeDescription$ThemeDescriptionDelegate;Ljava/lang/String;)V
-
-    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    .line 808
-    new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
-
     iget-object v3, v0, Lorg/telegram/ui/NewContactActivity;->firstNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     sget v21, Lorg/telegram/ui/ActionBar/ThemeDescription;->FLAG_BACKGROUNDFILTER:I
@@ -3054,7 +3054,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 809
+    .line 808
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v12, v0, Lorg/telegram/ui/NewContactActivity;->firstNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
@@ -3073,7 +3073,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 811
+    .line 810
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v3, v0, Lorg/telegram/ui/NewContactActivity;->lastNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
@@ -3090,7 +3090,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 812
+    .line 811
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v12, v0, Lorg/telegram/ui/NewContactActivity;->lastNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
@@ -3105,7 +3105,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 813
+    .line 812
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v3, v0, Lorg/telegram/ui/NewContactActivity;->lastNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
@@ -3122,7 +3122,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 814
+    .line 813
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v12, v0, Lorg/telegram/ui/NewContactActivity;->lastNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
@@ -3141,7 +3141,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 816
+    .line 815
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v3, v0, Lorg/telegram/ui/NewContactActivity;->codeField:Lorg/telegram/ui/Components/EditTextBoldCursor;
@@ -3158,7 +3158,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 817
+    .line 816
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v12, v0, Lorg/telegram/ui/NewContactActivity;->codeField:Lorg/telegram/ui/Components/EditTextBoldCursor;
@@ -3173,7 +3173,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 818
+    .line 817
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v3, v0, Lorg/telegram/ui/NewContactActivity;->codeField:Lorg/telegram/ui/Components/EditTextBoldCursor;
@@ -3194,7 +3194,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 820
+    .line 819
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v12, v0, Lorg/telegram/ui/NewContactActivity;->phoneField:Lorg/telegram/ui/Components/HintEditText;
@@ -3209,7 +3209,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 821
+    .line 820
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v3, v0, Lorg/telegram/ui/NewContactActivity;->phoneField:Lorg/telegram/ui/Components/HintEditText;
@@ -3226,7 +3226,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 822
+    .line 821
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v12, v0, Lorg/telegram/ui/NewContactActivity;->phoneField:Lorg/telegram/ui/Components/HintEditText;
@@ -3241,7 +3241,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 823
+    .line 822
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v3, v0, Lorg/telegram/ui/NewContactActivity;->phoneField:Lorg/telegram/ui/Components/HintEditText;
@@ -3262,7 +3262,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 825
+    .line 824
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v12, v0, Lorg/telegram/ui/NewContactActivity;->textView:Landroid/widget/TextView;
@@ -3277,7 +3277,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 827
+    .line 826
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v3, v0, Lorg/telegram/ui/NewContactActivity;->lineView:Landroid/view/View;
@@ -3294,7 +3294,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 829
+    .line 828
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v12, v0, Lorg/telegram/ui/NewContactActivity;->countryButton:Landroid/widget/TextView;
@@ -3309,7 +3309,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 830
+    .line 829
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v3, v0, Lorg/telegram/ui/NewContactActivity;->countryButton:Landroid/widget/TextView;
@@ -3326,7 +3326,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 831
+    .line 830
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v12, v0, Lorg/telegram/ui/NewContactActivity;->countryButton:Landroid/widget/TextView;
@@ -3341,7 +3341,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 833
+    .line 832
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v3, v0, Lorg/telegram/ui/NewContactActivity;->editDoneItemProgress:Lorg/telegram/ui/Components/ContextProgressView;
@@ -3358,7 +3358,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 834
+    .line 833
     new-instance v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     iget-object v12, v0, Lorg/telegram/ui/NewContactActivity;->editDoneItemProgress:Lorg/telegram/ui/Components/ContextProgressView;
@@ -3373,7 +3373,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 836
+    .line 835
     new-instance v11, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     sget-object v7, Lorg/telegram/ui/ActionBar/Theme;->avatarDrawables:[Landroid/graphics/drawable/Drawable;
@@ -3394,7 +3394,7 @@
 
     invoke-virtual {v1, v11}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 837
+    .line 836
     new-instance v11, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     const/4 v7, 0x0
@@ -3407,7 +3407,7 @@
 
     invoke-virtual {v1, v11}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 838
+    .line 837
     new-instance v11, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     const-string v9, "avatar_backgroundOrange"
@@ -3418,7 +3418,7 @@
 
     invoke-virtual {v1, v11}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 839
+    .line 838
     new-instance v11, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     const-string v9, "avatar_backgroundViolet"
@@ -3429,7 +3429,7 @@
 
     invoke-virtual {v1, v11}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 840
+    .line 839
     new-instance v11, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     const-string v9, "avatar_backgroundGreen"
@@ -3440,7 +3440,7 @@
 
     invoke-virtual {v1, v11}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 841
+    .line 840
     new-instance v11, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     const-string v9, "avatar_backgroundCyan"
@@ -3451,7 +3451,7 @@
 
     invoke-virtual {v1, v11}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 842
+    .line 841
     new-instance v11, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     const-string v9, "avatar_backgroundBlue"
@@ -3462,7 +3462,7 @@
 
     invoke-virtual {v1, v11}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 843
+    .line 842
     new-instance v11, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     const-string v9, "avatar_backgroundPink"
@@ -3488,14 +3488,14 @@
         }
     .end annotation
 
-    .line 699
+    .line 698
     iget-boolean p1, p0, Lorg/telegram/ui/NewContactActivity;->ignoreSelection:Z
 
     const/4 p2, 0x0
 
     if-eqz p1, :cond_8
 
-    .line 700
+    .line 699
     iput-boolean p2, p0, Lorg/telegram/ui/NewContactActivity;->ignoreSelection:Z
 
     return-void
@@ -3503,10 +3503,10 @@
     :cond_8
     const/4 p1, 0x1
 
-    .line 703
+    .line 702
     iput-boolean p1, p0, Lorg/telegram/ui/NewContactActivity;->ignoreOnTextChange:Z
 
-    .line 704
+    .line 703
     iget-object p1, p0, Lorg/telegram/ui/NewContactActivity;->countriesArray:Ljava/util/ArrayList;
 
     invoke-virtual {p1, p3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -3515,7 +3515,7 @@
 
     check-cast p1, Ljava/lang/String;
 
-    .line 705
+    .line 704
     iget-object p3, p0, Lorg/telegram/ui/NewContactActivity;->codeField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     iget-object p4, p0, Lorg/telegram/ui/NewContactActivity;->countriesMap:Ljava/util/HashMap;
@@ -3528,7 +3528,7 @@
 
     invoke-virtual {p3, p1}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
-    .line 706
+    .line 705
     iput-boolean p2, p0, Lorg/telegram/ui/NewContactActivity;->ignoreOnTextChange:Z
 
     return-void
@@ -3552,7 +3552,7 @@
 
     if-eqz p1, :cond_14
 
-    .line 664
+    .line 663
     iget-object p1, p0, Lorg/telegram/ui/NewContactActivity;->contentLayout:Landroid/widget/LinearLayout;
 
     invoke-virtual {p1}, Landroid/widget/LinearLayout;->findFocus()Landroid/view/View;
@@ -3561,15 +3561,15 @@
 
     if-nez p1, :cond_11
 
-    .line 666
+    .line 665
     iget-object p1, p0, Lorg/telegram/ui/NewContactActivity;->firstNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     invoke-virtual {p1}, Landroid/widget/EditText;->requestFocus()Z
 
-    .line 667
+    .line 666
     iget-object p1, p0, Lorg/telegram/ui/NewContactActivity;->firstNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
-    .line 669
+    .line 668
     :cond_11
     invoke-static {p1}, Lorg/telegram/messenger/AndroidUtilities;->showKeyboard(Landroid/view/View;)Z
 
@@ -3580,7 +3580,7 @@
 .method public selectCountry(Ljava/lang/String;)V
     .registers 5
 
-    .line 684
+    .line 683
     iget-object v0, p0, Lorg/telegram/ui/NewContactActivity;->countriesArray:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->indexOf(Ljava/lang/Object;)I
@@ -3593,10 +3593,10 @@
 
     const/4 v0, 0x1
 
-    .line 686
+    .line 685
     iput-boolean v0, p0, Lorg/telegram/ui/NewContactActivity;->ignoreOnTextChange:Z
 
-    .line 687
+    .line 686
     iget-object v0, p0, Lorg/telegram/ui/NewContactActivity;->countriesMap:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -3605,17 +3605,17 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 688
+    .line 687
     iget-object v1, p0, Lorg/telegram/ui/NewContactActivity;->codeField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     invoke-virtual {v1, v0}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
-    .line 689
+    .line 688
     iget-object v1, p0, Lorg/telegram/ui/NewContactActivity;->countryButton:Landroid/widget/TextView;
 
     invoke-virtual {v1, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 690
+    .line 689
     iget-object p1, p0, Lorg/telegram/ui/NewContactActivity;->phoneFormatMap:Ljava/util/HashMap;
 
     invoke-virtual {p1, v0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -3624,7 +3624,7 @@
 
     check-cast p1, Ljava/lang/String;
 
-    .line 691
+    .line 690
     iget-object v0, p0, Lorg/telegram/ui/NewContactActivity;->phoneField:Lorg/telegram/ui/Components/HintEditText;
 
     if-eqz p1, :cond_33
@@ -3647,7 +3647,7 @@
 
     const/4 p1, 0x0
 
-    .line 693
+    .line 692
     iput-boolean p1, p0, Lorg/telegram/ui/NewContactActivity;->ignoreOnTextChange:Z
 
     :cond_3a
@@ -3657,10 +3657,10 @@
 .method public setInitialName(Ljava/lang/String;Ljava/lang/String;)V
     .registers 3
 
-    .line 679
+    .line 678
     iput-object p1, p0, Lorg/telegram/ui/NewContactActivity;->initialFirstName:Ljava/lang/String;
 
-    .line 680
+    .line 679
     iput-object p2, p0, Lorg/telegram/ui/NewContactActivity;->initialLastName:Ljava/lang/String;
 
     return-void
@@ -3669,10 +3669,10 @@
 .method public setInitialPhoneNumber(Ljava/lang/String;Z)V
     .registers 3
 
-    .line 674
+    .line 673
     iput-object p1, p0, Lorg/telegram/ui/NewContactActivity;->initialPhoneNumber:Ljava/lang/String;
 
-    .line 675
+    .line 674
     iput-boolean p2, p0, Lorg/telegram/ui/NewContactActivity;->initialPhoneNumberWithCountryCode:Z
 
     return-void

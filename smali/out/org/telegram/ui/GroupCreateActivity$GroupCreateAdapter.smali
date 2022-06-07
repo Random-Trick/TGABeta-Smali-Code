@@ -1550,11 +1550,11 @@
     .line 1417
     iget v0, p0, Lorg/telegram/ui/GroupCreateActivity$GroupCreateAdapter;->inviteViaLink:I
 
-    const v2, 0x7f07037d
+    const v2, 0x7f070257
 
     if-ne v0, p2, :cond_28
 
-    const p2, 0x7f0e0384
+    const p2, 0x7f0e03c3
 
     const-string v0, "ChannelInviteViaLink"
 
@@ -1568,7 +1568,7 @@
     goto/16 :goto_197
 
     :cond_28
-    const p2, 0x7f0e08c2
+    const p2, 0x7f0e091f
 
     const-string v0, "InviteToGroupByLink"
 
@@ -2016,7 +2016,7 @@
 
     if-eqz p2, :cond_197
 
-    const p2, 0x7f0e07fe
+    const p2, 0x7f0e0856
 
     const-string v0, "GlobalSearch"
 
@@ -2085,7 +2085,7 @@
     .line 1311
     iget-object p1, p2, Lorg/telegram/ui/Components/StickerEmptyView;->title:Landroid/widget/TextView;
 
-    const v1, 0x7f0e0aae
+    const v1, 0x7f0e0b35
 
     const-string v2, "NoContacts"
 

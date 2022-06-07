@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # instance fields
@@ -22,12 +22,12 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .registers 3
+.method public final onClick(Landroid/content/DialogInterface;I)V
+    .registers 4
 
     iget-object v0, p0, Lorg/telegram/ui/Components/EmojiView$StickersGridAdapter$$ExternalSyntheticLambda0;->f$0:Lorg/telegram/ui/Components/EmojiView$StickersGridAdapter;
 
-    invoke-static {v0, p1}, Lorg/telegram/ui/Components/EmojiView$StickersGridAdapter;->$r8$lambda$UDZi0vIGPivE_Qr9rhhnvvjApYE(Lorg/telegram/ui/Components/EmojiView$StickersGridAdapter;Landroid/view/View;)V
+    invoke-static {v0, p1, p2}, Lorg/telegram/ui/Components/EmojiView$StickersGridAdapter;->$r8$lambda$zoQaMeP8PxL-4g8qQl-JH4Gti1g(Lorg/telegram/ui/Components/EmojiView$StickersGridAdapter;Landroid/content/DialogInterface;I)V
 
     return-void
 .end method

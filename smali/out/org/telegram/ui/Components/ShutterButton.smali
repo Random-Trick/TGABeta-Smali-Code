@@ -64,7 +64,7 @@
 
     move-result-object p1
 
-    const v0, 0x7f0700a7
+    const v0, 0x7f07008a
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -549,7 +549,7 @@
 
     move-result v1
 
-    const v2, 0x7f0e000d
+    const v2, 0x7f0e0010
 
     const-string v3, "AccActionTakePicture"
 
@@ -570,7 +570,7 @@
 
     move-result v1
 
-    const v2, 0x7f0e000c
+    const v2, 0x7f0e000f
 
     const-string v3, "AccActionRecordVideo"
 

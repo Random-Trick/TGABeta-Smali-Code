@@ -83,13 +83,13 @@
 .method public constructor <init>(Lorg/telegram/ui/ProfileActivity;Landroid/content/Context;)V
     .registers 10
 
-    .line 737
+    .line 752
     iput-object p1, p0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->this$0:Lorg/telegram/ui/ProfileActivity;
 
-    .line 738
+    .line 753
     invoke-direct {p0, p2}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
-    .line 706
+    .line 721
     invoke-static {p1}, Lorg/telegram/ui/ProfileActivity;->access$1400(Lorg/telegram/ui/ProfileActivity;)Lorg/telegram/ui/ActionBar/ActionBar;
 
     move-result-object p2
@@ -118,21 +118,21 @@
     :goto_1a
     iput p2, p0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->statusBarHeight:I
 
-    .line 708
+    .line 723
     new-instance p2, Landroid/graphics/Rect;
 
     invoke-direct {p2}, Landroid/graphics/Rect;-><init>()V
 
     iput-object p2, p0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->topOverlayRect:Landroid/graphics/Rect;
 
-    .line 709
+    .line 724
     new-instance p2, Landroid/graphics/Rect;
 
     invoke-direct {p2}, Landroid/graphics/Rect;-><init>()V
 
     iput-object p2, p0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->bottomOverlayRect:Landroid/graphics/Rect;
 
-    .line 710
+    .line 725
     new-instance p2, Landroid/graphics/RectF;
 
     invoke-direct {p2}, Landroid/graphics/RectF;-><init>()V
@@ -143,52 +143,52 @@
 
     new-array v1, p2, [F
 
-    .line 715
+    .line 730
     fill-array-data v1, :array_e8
 
     iput-object v1, p0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->animatorValues:[F
 
     new-array v1, p2, [Landroid/graphics/drawable/GradientDrawable;
 
-    .line 720
+    .line 735
     iput-object v1, p0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->pressedOverlayGradient:[Landroid/graphics/drawable/GradientDrawable;
 
     new-array v1, p2, [Z
 
-    .line 721
+    .line 736
     iput-object v1, p0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->pressedOverlayVisible:[Z
 
     new-array v1, p2, [F
 
-    .line 722
+    .line 737
     iput-object v1, p0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->pressedOverlayAlpha:[F
 
     const/4 v1, 0x0
 
-    .line 726
+    .line 741
     iput v1, p0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->alpha:F
 
     const/4 v1, 0x0
 
-    .line 727
+    .line 742
     iput-object v1, p0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->alphas:[F
 
     const/4 v1, -0x1
 
-    .line 730
+    .line 745
     iput v1, p0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->previousSelectedPotision:I
 
     const/4 v2, 0x1
 
-    .line 735
+    .line 750
     iput v2, p0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->currentLoadingAnimationDirection:I
 
     const/16 v3, 0x8
 
-    .line 739
+    .line 754
     invoke-virtual {p0, v3}, Landroid/view/View;->setVisibility(I)V
 
-    .line 741
+    .line 756
     new-instance v3, Landroid/graphics/Paint;
 
     invoke-direct {v3, v2}, Landroid/graphics/Paint;-><init>(I)V
@@ -197,20 +197,20 @@
 
     const v4, 0x55ffffff    # 3.518437E13f
 
-    .line 742
+    .line 757
     invoke-virtual {v3, v4}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 743
+    .line 758
     new-instance v3, Landroid/graphics/Paint;
 
     invoke-direct {v3, v2}, Landroid/graphics/Paint;-><init>(I)V
 
     iput-object v3, p0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->selectedBarPaint:Landroid/graphics/Paint;
 
-    .line 744
+    .line 759
     invoke-virtual {v3, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 746
+    .line 761
     new-instance v1, Landroid/graphics/drawable/GradientDrawable;
 
     sget-object v3, Landroid/graphics/drawable/GradientDrawable$Orientation;->TOP_BOTTOM:Landroid/graphics/drawable/GradientDrawable$Orientation;
@@ -223,10 +223,10 @@
 
     iput-object v1, p0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->topOverlayGradient:Landroid/graphics/drawable/GradientDrawable;
 
-    .line 747
+    .line 762
     invoke-virtual {v1, v0}, Landroid/graphics/drawable/GradientDrawable;->setShape(I)V
 
-    .line 749
+    .line 764
     new-instance v1, Landroid/graphics/drawable/GradientDrawable;
 
     sget-object v3, Landroid/graphics/drawable/GradientDrawable$Orientation;->BOTTOM_TOP:Landroid/graphics/drawable/GradientDrawable$Orientation;
@@ -239,7 +239,7 @@
 
     iput-object v1, p0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->bottomOverlayGradient:Landroid/graphics/drawable/GradientDrawable;
 
-    .line 750
+    .line 765
     invoke-virtual {v1, v0}, Landroid/graphics/drawable/GradientDrawable;->setShape(I)V
 
     const/4 v1, 0x0
@@ -249,7 +249,7 @@
 
     if-nez v1, :cond_97
 
-    .line 753
+    .line 768
     sget-object v3, Landroid/graphics/drawable/GradientDrawable$Orientation;->LEFT_RIGHT:Landroid/graphics/drawable/GradientDrawable$Orientation;
 
     goto :goto_99
@@ -257,7 +257,7 @@
     :cond_97
     sget-object v3, Landroid/graphics/drawable/GradientDrawable$Orientation;->RIGHT_LEFT:Landroid/graphics/drawable/GradientDrawable$Orientation;
 
-    .line 754
+    .line 769
     :goto_99
     iget-object v4, p0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->pressedOverlayGradient:[Landroid/graphics/drawable/GradientDrawable;
 
@@ -271,7 +271,7 @@
 
     aput-object v5, v4, v1
 
-    .line 755
+    .line 770
     iget-object v3, p0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->pressedOverlayGradient:[Landroid/graphics/drawable/GradientDrawable;
 
     aget-object v3, v3, v1
@@ -282,7 +282,7 @@
 
     goto :goto_90
 
-    .line 758
+    .line 773
     :cond_b1
     new-instance v0, Landroid/graphics/Paint;
 
@@ -292,17 +292,17 @@
 
     const/high16 v1, -0x1000000
 
-    .line 759
+    .line 774
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
     const/16 v1, 0x42
 
-    .line 760
+    .line 775
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setAlpha(I)V
 
     new-array p2, p2, [F
 
-    .line 761
+    .line 776
     fill-array-data p2, :array_108
 
     invoke-static {p2}, Landroid/animation/ValueAnimator;->ofFloat([F)Landroid/animation/ValueAnimator;
@@ -313,22 +313,22 @@
 
     const-wide/16 v0, 0xfa
 
-    .line 762
+    .line 777
     invoke-virtual {p2, v0, v1}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
-    .line 763
+    .line 778
     sget-object v0, Lorg/telegram/ui/Components/CubicBezierInterpolator;->EASE_BOTH:Lorg/telegram/ui/Components/CubicBezierInterpolator;
 
     invoke-virtual {p2, v0}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 764
+    .line 779
     new-instance v0, Lorg/telegram/ui/ProfileActivity$OverlaysView$$ExternalSyntheticLambda0;
 
     invoke-direct {v0, p0}, Lorg/telegram/ui/ProfileActivity$OverlaysView$$ExternalSyntheticLambda0;-><init>(Lorg/telegram/ui/ProfileActivity$OverlaysView;)V
 
     invoke-virtual {p2, v0}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    .line 768
+    .line 783
     new-instance v0, Lorg/telegram/ui/ProfileActivity$OverlaysView$1;
 
     invoke-direct {v0, p0, p1}, Lorg/telegram/ui/ProfileActivity$OverlaysView$1;-><init>(Lorg/telegram/ui/ProfileActivity$OverlaysView;Lorg/telegram/ui/ProfileActivity;)V
@@ -371,16 +371,16 @@
 .method static synthetic access$1600(Lorg/telegram/ui/ProfileActivity$OverlaysView;)Z
     .registers 1
 
-    .line 704
+    .line 719
     iget-boolean p0, p0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->isOverlaysVisible:Z
 
     return p0
 .end method
 
-.method static synthetic access$16300(Lorg/telegram/ui/ProfileActivity$OverlaysView;)Landroid/animation/ValueAnimator;
+.method static synthetic access$16500(Lorg/telegram/ui/ProfileActivity$OverlaysView;)Landroid/animation/ValueAnimator;
     .registers 1
 
-    .line 704
+    .line 719
     iget-object p0, p0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->animator:Landroid/animation/ValueAnimator;
 
     return-object p0
@@ -389,7 +389,7 @@
 .method private synthetic lambda$new$0(Landroid/animation/ValueAnimator;)V
     .registers 3
 
-    .line 765
+    .line 780
     iget-object v0, p0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->animatorValues:[F
 
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedFraction()F
@@ -404,7 +404,7 @@
 
     const/4 v0, 0x1
 
-    .line 766
+    .line 781
     invoke-virtual {p0, p1, v0}, Lorg/telegram/ui/ProfileActivity$OverlaysView;->setAlphaValue(FZ)V
 
     return-void
@@ -415,7 +415,7 @@
 .method public isOverlaysVisible()Z
     .registers 2
 
-    .line 809
+    .line 824
     iget-boolean v0, p0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->isOverlaysVisible:Z
 
     return v0
@@ -424,7 +424,7 @@
 .method public onDown(Z)V
     .registers 4
 
-    .line 996
+    .line 1011
     iget-object v0, p0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->pressedOverlayVisible:[Z
 
     const/4 v1, 0x1
@@ -433,7 +433,7 @@
 
     aput-boolean v1, v0, p1
 
-    .line 997
+    .line 1012
     invoke-virtual {p0}, Landroid/view/View;->postInvalidateOnAnimation()V
 
     return-void
@@ -457,7 +457,7 @@
 
     if-ge v3, v5, :cond_29
 
-    .line 848
+    .line 863
     iget-object v5, v0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->pressedOverlayAlpha:[F
 
     aget v7, v5, v3
@@ -466,7 +466,7 @@
 
     if-lez v6, :cond_26
 
-    .line 849
+    .line 864
     iget-object v6, v0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->pressedOverlayGradient:[Landroid/graphics/drawable/GradientDrawable;
 
     aget-object v6, v6, v3
@@ -479,7 +479,7 @@
 
     invoke-virtual {v6, v4}, Landroid/graphics/drawable/GradientDrawable;->setAlpha(I)V
 
-    .line 850
+    .line 865
     iget-object v4, v0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->pressedOverlayGradient:[Landroid/graphics/drawable/GradientDrawable;
 
     aget-object v4, v4, v3
@@ -491,32 +491,32 @@
 
     goto :goto_5
 
-    .line 854
+    .line 869
     :cond_29
     iget-object v3, v0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->topOverlayGradient:Landroid/graphics/drawable/GradientDrawable;
 
     invoke-virtual {v3, v1}, Landroid/graphics/drawable/GradientDrawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 855
+    .line 870
     iget-object v3, v0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->bottomOverlayGradient:Landroid/graphics/drawable/GradientDrawable;
 
     invoke-virtual {v3, v1}, Landroid/graphics/drawable/GradientDrawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 856
+    .line 871
     iget-object v3, v0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->topOverlayRect:Landroid/graphics/Rect;
 
     iget-object v7, v0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->backgroundPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v1, v3, v7}, Landroid/graphics/Canvas;->drawRect(Landroid/graphics/Rect;Landroid/graphics/Paint;)V
 
-    .line 857
+    .line 872
     iget-object v3, v0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->bottomOverlayRect:Landroid/graphics/Rect;
 
     iget-object v7, v0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->backgroundPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v1, v3, v7}, Landroid/graphics/Canvas;->drawRect(Landroid/graphics/Rect;Landroid/graphics/Paint;)V
 
-    .line 859
+    .line 874
     iget-object v3, v0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->this$0:Lorg/telegram/ui/ProfileActivity;
 
     invoke-static {v3}, Lorg/telegram/ui/ProfileActivity;->access$1700(Lorg/telegram/ui/ProfileActivity;)Lorg/telegram/ui/Components/ProfileGalleryView;
@@ -527,7 +527,7 @@
 
     move-result v3
 
-    .line 860
+    .line 875
     iget-object v7, v0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->this$0:Lorg/telegram/ui/ProfileActivity;
 
     invoke-static {v7}, Lorg/telegram/ui/ProfileActivity;->access$1700(Lorg/telegram/ui/ProfileActivity;)Lorg/telegram/ui/Components/ProfileGalleryView;
@@ -540,7 +540,7 @@
 
     iput v7, v0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->selectedPosition:I
 
-    .line 862
+    .line 877
     iget-object v7, v0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->alphas:[F
 
     if-eqz v7, :cond_5e
@@ -549,22 +549,22 @@
 
     if-eq v7, v3, :cond_65
 
-    .line 863
+    .line 878
     :cond_5e
     new-array v7, v3, [F
 
     iput-object v7, v0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->alphas:[F
 
-    .line 864
+    .line 879
     invoke-static {v7, v6}, Ljava/util/Arrays;->fill([FF)V
 
-    .line 869
+    .line 884
     :cond_65
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v7
 
-    .line 870
+    .line 885
     iget-wide v9, v0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->lastTime:J
 
     sub-long v9, v7, v9
@@ -584,7 +584,7 @@
     :cond_79
     const-wide/16 v9, 0x11
 
-    .line 874
+    .line 889
     :cond_7b
     iput-wide v7, v0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->lastTime:J
 
@@ -598,7 +598,7 @@
 
     if-gt v3, v12, :cond_2d0
 
-    .line 877
+    .line 892
     iget-object v12, v0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->this$0:Lorg/telegram/ui/ProfileActivity;
 
     invoke-static {v12}, Lorg/telegram/ui/ProfileActivity;->access$1800(Lorg/telegram/ui/ProfileActivity;)I
@@ -609,17 +609,17 @@
 
     if-nez v12, :cond_97
 
-    .line 878
+    .line 893
     iput v6, v0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->alpha:F
 
-    .line 879
+    .line 894
     iget-object v12, v0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->this$0:Lorg/telegram/ui/ProfileActivity;
 
     invoke-static {v12, v13}, Lorg/telegram/ui/ProfileActivity;->access$1802(Lorg/telegram/ui/ProfileActivity;I)I
 
     goto :goto_a6
 
-    .line 880
+    .line 895
     :cond_97
     iget-object v12, v0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->this$0:Lorg/telegram/ui/ProfileActivity;
 
@@ -629,15 +629,15 @@
 
     if-ne v12, v8, :cond_a6
 
-    .line 881
+    .line 896
     iput v6, v0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->alpha:F
 
-    .line 882
+    .line 897
     iget-object v12, v0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->this$0:Lorg/telegram/ui/ProfileActivity;
 
     invoke-static {v12, v5}, Lorg/telegram/ui/ProfileActivity;->access$1802(Lorg/telegram/ui/ProfileActivity;I)I
 
-    .line 884
+    .line 899
     :cond_a6
     :goto_a6
     iget-object v12, v0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->this$0:Lorg/telegram/ui/ProfileActivity;
@@ -650,7 +650,7 @@
 
     if-ne v12, v5, :cond_c4
 
-    .line 885
+    .line 900
     iget-object v12, v0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->barPaint:Landroid/graphics/Paint;
 
     iget v15, v0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->alpha:F
@@ -661,7 +661,7 @@
 
     invoke-virtual {v12, v15}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 886
+    .line 901
     iget-object v12, v0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->selectedBarPaint:Landroid/graphics/Paint;
 
     iget v15, v0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->alpha:F
@@ -672,7 +672,7 @@
 
     invoke-virtual {v12, v4}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 888
+    .line 903
     :cond_c4
     invoke-virtual/range {p0 .. p0}, Landroid/view/View;->getMeasuredWidth()I
 
@@ -702,7 +702,7 @@
 
     const/high16 v12, 0x40800000    # 4.0f
 
-    .line 889
+    .line 904
     invoke-static {v12}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v12
@@ -746,7 +746,7 @@
 
     int-to-float v8, v8
 
-    .line 891
+    .line 906
     invoke-static {v8}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v8
@@ -757,7 +757,7 @@
 
     const/16 v17, 0x55
 
-    .line 894
+    .line 909
     iget v7, v0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->previousSelectedPotision:I
 
     const/16 v18, 0x50
@@ -780,10 +780,10 @@
 
     if-lez v7, :cond_168
 
-    .line 895
+    .line 910
     iget v7, v0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->previousSelectedProgress:F
 
-    .line 896
+    .line 911
     invoke-virtual/range {p1 .. p1}, Landroid/graphics/Canvas;->save()I
 
     int-to-float v15, v8
@@ -800,7 +800,7 @@
 
     int-to-float v6, v6
 
-    .line 897
+    .line 912
     invoke-static/range {v19 .. v19}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v16
@@ -811,7 +811,7 @@
 
     invoke-virtual {v1, v5, v13, v6, v11}, Landroid/graphics/Canvas;->clipRect(FFFF)Z
 
-    .line 898
+    .line 913
     iget-object v5, v0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->rect:Landroid/graphics/RectF;
 
     invoke-static/range {v19 .. v19}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -824,7 +824,7 @@
 
     invoke-virtual {v5, v15, v13, v6, v11}, Landroid/graphics/RectF;->set(FFFF)V
 
-    .line 899
+    .line 914
     iget-object v5, v0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->barPaint:Landroid/graphics/Paint;
 
     iget v6, v0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->alpha:F
@@ -835,7 +835,7 @@
 
     invoke-virtual {v5, v6}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 900
+    .line 915
     iget-object v5, v0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->rect:Landroid/graphics/RectF;
 
     const/high16 v6, 0x3f800000    # 1.0f
@@ -856,7 +856,7 @@
 
     invoke-virtual {v1, v5, v11, v6, v13}, Landroid/graphics/Canvas;->drawRoundRect(Landroid/graphics/RectF;FFLandroid/graphics/Paint;)V
 
-    .line 902
+    .line 917
     invoke-virtual/range {p1 .. p1}, Landroid/graphics/Canvas;->restore()V
 
     const/16 v5, 0x50
@@ -868,13 +868,13 @@
 
     goto/16 :goto_207
 
-    .line 904
+    .line 919
     :cond_168
     iget v5, v0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->selectedPosition:I
 
     if-ne v2, v5, :cond_201
 
-    .line 905
+    .line 920
     iget-object v5, v0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->this$0:Lorg/telegram/ui/ProfileActivity;
 
     invoke-static {v5}, Lorg/telegram/ui/ProfileActivity;->access$1700(Lorg/telegram/ui/ProfileActivity;)Lorg/telegram/ui/Components/ProfileGalleryView;
@@ -887,7 +887,7 @@
 
     if-eqz v5, :cond_1fa
 
-    .line 906
+    .line 921
     iget-object v5, v0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->this$0:Lorg/telegram/ui/ProfileActivity;
 
     invoke-static {v5}, Lorg/telegram/ui/ProfileActivity;->access$1700(Lorg/telegram/ui/ProfileActivity;)Lorg/telegram/ui/Components/ProfileGalleryView;
@@ -906,7 +906,7 @@
 
     if-gtz v6, :cond_195
 
-    .line 907
+    .line 922
     iget-object v6, v0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->this$0:Lorg/telegram/ui/ProfileActivity;
 
     invoke-static {v6}, Lorg/telegram/ui/ProfileActivity;->access$1700(Lorg/telegram/ui/ProfileActivity;)Lorg/telegram/ui/Components/ProfileGalleryView;
@@ -926,7 +926,7 @@
 
     if-lez v6, :cond_1c0
 
-    .line 908
+    .line 923
     :cond_19b
     iget v5, v0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->currentLoadingAnimationProgress:F
 
@@ -950,12 +950,12 @@
 
     if-lez v14, :cond_1b5
 
-    .line 910
+    .line 925
     iput v13, v0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->currentLoadingAnimationProgress:F
 
     mul-int/lit8 v6, v6, -0x1
 
-    .line 911
+    .line 926
     iput v6, v0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->currentLoadingAnimationDirection:I
 
     goto :goto_1c0
@@ -967,15 +967,15 @@
 
     if-gtz v5, :cond_1c0
 
-    .line 913
+    .line 928
     iput v13, v0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->currentLoadingAnimationProgress:F
 
     mul-int/lit8 v6, v6, -0x1
 
-    .line 914
+    .line 929
     iput v6, v0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->currentLoadingAnimationDirection:I
 
-    .line 917
+    .line 932
     :cond_1c0
     :goto_1c0
     iget-object v5, v0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->rect:Landroid/graphics/RectF;
@@ -998,7 +998,7 @@
 
     invoke-virtual {v5, v6, v13, v14, v15}, Landroid/graphics/RectF;->set(FFFF)V
 
-    .line 918
+    .line 933
     iget-object v5, v0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->barPaint:Landroid/graphics/Paint;
 
     const/high16 v6, 0x42400000    # 48.0f
@@ -1019,7 +1019,7 @@
 
     invoke-virtual {v5, v11}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 919
+    .line 934
     iget-object v5, v0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->rect:Landroid/graphics/RectF;
 
     const/high16 v11, 0x3f800000    # 1.0f
@@ -1049,7 +1049,7 @@
 
     const/high16 v11, 0x3f800000    # 1.0f
 
-    .line 923
+    .line 938
     iput v11, v0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->currentProgress:F
 
     goto :goto_203
@@ -1062,7 +1062,7 @@
 
     const/high16 v7, 0x3f800000    # 1.0f
 
-    .line 928
+    .line 943
     :goto_207
     iget-object v11, v0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->rect:Landroid/graphics/RectF;
 
@@ -1086,12 +1086,12 @@
 
     invoke-virtual {v11, v8, v13, v14, v7}, Landroid/graphics/RectF;->set(FFFF)V
 
-    .line 930
+    .line 945
     iget v7, v0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->selectedPosition:I
 
     if-eq v2, v7, :cond_241
 
-    .line 931
+    .line 946
     iget-object v7, v0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->this$0:Lorg/telegram/ui/ProfileActivity;
 
     invoke-static {v7}, Lorg/telegram/ui/ProfileActivity;->access$1800(Lorg/telegram/ui/ProfileActivity;)I
@@ -1102,7 +1102,7 @@
 
     if-ne v7, v8, :cond_247
 
-    .line 932
+    .line 947
     iget-object v7, v0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->barPaint:Landroid/graphics/Paint;
 
     const/16 v8, 0xff
@@ -1133,7 +1133,7 @@
 
     goto :goto_247
 
-    .line 935
+    .line 950
     :cond_241
     iget-object v5, v0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->alphas:[F
 
@@ -1141,7 +1141,7 @@
 
     aput v7, v5, v2
 
-    .line 938
+    .line 953
     :cond_247
     :goto_247
     iget-object v5, v0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->rect:Landroid/graphics/RectF;
@@ -1190,7 +1190,7 @@
 
     goto/16 :goto_f5
 
-    .line 941
+    .line 956
     :cond_26d
     iget-object v1, v0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->this$0:Lorg/telegram/ui/ProfileActivity;
 
@@ -1202,7 +1202,7 @@
 
     if-ne v1, v2, :cond_294
 
-    .line 942
+    .line 957
     iget v1, v0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->alpha:F
 
     const/high16 v2, 0x3f800000    # 1.0f
@@ -1219,14 +1219,14 @@
 
     add-float/2addr v1, v3
 
-    .line 943
+    .line 958
     iput v1, v0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->alpha:F
 
     cmpl-float v1, v1, v2
 
     if-lez v1, :cond_28b
 
-    .line 945
+    .line 960
     iput v2, v0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->alpha:F
 
     :cond_28b
@@ -1234,7 +1234,7 @@
 
     goto :goto_2d1
 
-    .line 949
+    .line 964
     :cond_28d
     iget-object v1, v0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->this$0:Lorg/telegram/ui/ProfileActivity;
 
@@ -1247,7 +1247,7 @@
     :cond_294
     const/4 v2, 0x3
 
-    .line 951
+    .line 966
     iget-object v1, v0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->this$0:Lorg/telegram/ui/ProfileActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/ProfileActivity;->access$1800(Lorg/telegram/ui/ProfileActivity;)I
@@ -1258,7 +1258,7 @@
 
     const/4 v1, 0x0
 
-    .line 952
+    .line 967
     :goto_29e
     iget-object v2, v0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->alphas:[F
 
@@ -1266,7 +1266,7 @@
 
     if-ge v1, v3, :cond_2d1
 
-    .line 953
+    .line 968
     iget v3, v0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->selectedPosition:I
 
     const/4 v4, -0x1
@@ -1281,7 +1281,7 @@
 
     if-lez v3, :cond_2c7
 
-    .line 954
+    .line 969
     aget v3, v2, v1
 
     long-to-float v6, v9
@@ -1292,22 +1292,22 @@
 
     aput v3, v2, v1
 
-    .line 955
+    .line 970
     aget v3, v2, v1
 
     cmpg-float v3, v3, v5
 
     if-gtz v3, :cond_2c5
 
-    .line 956
+    .line 971
     aput v5, v2, v1
 
-    .line 957
+    .line 972
     iget v2, v0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->previousSelectedPotision:I
 
     if-ne v1, v2, :cond_2c5
 
-    .line 958
+    .line 973
     iput v4, v0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->previousSelectedPotision:I
 
     :cond_2c5
@@ -1315,13 +1315,13 @@
 
     goto :goto_2cd
 
-    .line 962
+    .line 977
     :cond_2c7
     iget v2, v0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->previousSelectedPotision:I
 
     if-ne v1, v2, :cond_2cd
 
-    .line 963
+    .line 978
     iput v4, v0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->previousSelectedPotision:I
 
     :cond_2cd
@@ -1342,14 +1342,14 @@
     :goto_2d3
     if-ge v2, v1, :cond_31f
 
-    .line 970
+    .line 985
     iget-object v3, v0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->pressedOverlayVisible:[Z
 
     aget-boolean v3, v3, v2
 
     if-eqz v3, :cond_2fc
 
-    .line 971
+    .line 986
     iget-object v3, v0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->pressedOverlayAlpha:[F
 
     aget v4, v3, v2
@@ -1360,7 +1360,7 @@
 
     if-gez v4, :cond_2fa
 
-    .line 972
+    .line 987
     aget v4, v3, v2
 
     long-to-float v6, v9
@@ -1373,14 +1373,14 @@
 
     aput v4, v3, v2
 
-    .line 973
+    .line 988
     aget v4, v3, v2
 
     cmpl-float v4, v4, v5
 
     if-lez v4, :cond_2f6
 
-    .line 974
+    .line 989
     aput v5, v3, v2
 
     :cond_2f6
@@ -1398,7 +1398,7 @@
     :cond_2fc
     const/high16 v5, 0x3f800000    # 1.0f
 
-    .line 979
+    .line 994
     iget-object v3, v0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->pressedOverlayAlpha:[F
 
     aget v4, v3, v2
@@ -1409,7 +1409,7 @@
 
     if-lez v4, :cond_31a
 
-    .line 980
+    .line 995
     aget v4, v3, v2
 
     long-to-float v7, v9
@@ -1422,14 +1422,14 @@
 
     aput v4, v3, v2
 
-    .line 981
+    .line 996
     aget v4, v3, v2
 
     cmpg-float v4, v4, v6
 
     if-gez v4, :cond_318
 
-    .line 982
+    .line 997
     aput v6, v3, v2
 
     :cond_318
@@ -1450,7 +1450,7 @@
     :cond_31f
     if-eqz v15, :cond_324
 
-    .line 990
+    .line 1005
     invoke-virtual/range {p0 .. p0}, Landroid/view/View;->postInvalidateOnAnimation()V
 
     :cond_324
@@ -1460,7 +1460,7 @@
 .method public onPhotosLoaded()V
     .registers 2
 
-    .line 1008
+    .line 1023
     iget-object v0, p0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->this$0:Lorg/telegram/ui/ProfileActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/ProfileActivity;->access$2000(Lorg/telegram/ui/ProfileActivity;)V
@@ -1471,14 +1471,14 @@
 .method public onRelease()V
     .registers 3
 
-    .line 1002
+    .line 1017
     iget-object v0, p0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->pressedOverlayVisible:[Z
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Ljava/util/Arrays;->fill([ZZ)V
 
-    .line 1003
+    .line 1018
     invoke-virtual {p0}, Landroid/view/View;->postInvalidateOnAnimation()V
 
     return-void
@@ -1487,7 +1487,7 @@
 .method protected onSizeChanged(IIII)V
     .registers 10
 
-    .line 835
+    .line 850
     iget p3, p0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->statusBarHeight:I
 
     invoke-static {}, Lorg/telegram/ui/ActionBar/ActionBar;->getCurrentActionBarHeight()I
@@ -1496,7 +1496,7 @@
 
     add-int/2addr p3, p4
 
-    .line 837
+    .line 852
     iget-object p4, p0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->topOverlayRect:Landroid/graphics/Rect;
 
     int-to-float v0, p3
@@ -1511,7 +1511,7 @@
 
     invoke-virtual {p4, v2, v2, p1, v0}, Landroid/graphics/Rect;->set(IIII)V
 
-    .line 838
+    .line 853
     iget-object p4, p0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->bottomOverlayRect:Landroid/graphics/Rect;
 
     int-to-float v0, p2
@@ -1532,7 +1532,7 @@
 
     invoke-virtual {p4, v2, v0, p1, p2}, Landroid/graphics/Rect;->set(IIII)V
 
-    .line 839
+    .line 854
     iget-object p4, p0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->topOverlayGradient:Landroid/graphics/drawable/GradientDrawable;
 
     iget-object v0, p0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->topOverlayRect:Landroid/graphics/Rect;
@@ -1549,7 +1549,7 @@
 
     invoke-virtual {p4, v2, v0, p1, p3}, Landroid/graphics/drawable/GradientDrawable;->setBounds(IIII)V
 
-    .line 840
+    .line 855
     iget-object p3, p0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->bottomOverlayGradient:Landroid/graphics/drawable/GradientDrawable;
 
     invoke-static {v3}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -1572,7 +1572,7 @@
 
     invoke-virtual {p3, v2, p4, p1, v0}, Landroid/graphics/drawable/GradientDrawable;->setBounds(IIII)V
 
-    .line 841
+    .line 856
     iget-object p3, p0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->pressedOverlayGradient:[Landroid/graphics/drawable/GradientDrawable;
 
     aget-object p3, p3, v2
@@ -1581,7 +1581,7 @@
 
     invoke-virtual {p3, v2, v2, p4, p2}, Landroid/graphics/drawable/GradientDrawable;->setBounds(IIII)V
 
-    .line 842
+    .line 857
     iget-object p3, p0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->pressedOverlayGradient:[Landroid/graphics/drawable/GradientDrawable;
 
     const/4 v0, 0x1
@@ -1598,7 +1598,7 @@
 .method public onVideoSet()V
     .registers 1
 
-    .line 1013
+    .line 1028
     invoke-virtual {p0}, Landroid/view/View;->invalidate()V
 
     return-void
@@ -1607,24 +1607,24 @@
 .method public saveCurrentPageProgress()V
     .registers 2
 
-    .line 784
+    .line 799
     iget v0, p0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->currentProgress:F
 
     iput v0, p0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->previousSelectedProgress:F
 
-    .line 785
+    .line 800
     iget v0, p0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->selectedPosition:I
 
     iput v0, p0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->previousSelectedPotision:I
 
     const/4 v0, 0x0
 
-    .line 786
+    .line 801
     iput v0, p0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->currentLoadingAnimationProgress:F
 
     const/4 v0, 0x1
 
-    .line 787
+    .line 802
     iput v0, p0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->currentLoadingAnimationDirection:I
 
     return-void
@@ -1633,7 +1633,7 @@
 .method public setAlphaValue(FZ)V
     .registers 6
 
-    .line 791
+    .line 806
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x12
@@ -1646,17 +1646,17 @@
 
     float-to-int v0, v0
 
-    .line 793
+    .line 808
     iget-object v1, p0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->topOverlayGradient:Landroid/graphics/drawable/GradientDrawable;
 
     invoke-virtual {v1, v0}, Landroid/graphics/drawable/GradientDrawable;->setAlpha(I)V
 
-    .line 794
+    .line 809
     iget-object v1, p0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->bottomOverlayGradient:Landroid/graphics/drawable/GradientDrawable;
 
     invoke-virtual {v1, v0}, Landroid/graphics/drawable/GradientDrawable;->setAlpha(I)V
 
-    .line 795
+    .line 810
     iget-object v1, p0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->backgroundPaint:Landroid/graphics/Paint;
 
     const/high16 v2, 0x42840000    # 66.0f
@@ -1667,7 +1667,7 @@
 
     invoke-virtual {v1, v2}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 796
+    .line 811
     iget-object v1, p0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->barPaint:Landroid/graphics/Paint;
 
     const/high16 v2, 0x42aa0000    # 85.0f
@@ -1678,27 +1678,27 @@
 
     invoke-virtual {v1, v2}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 797
+    .line 812
     iget-object v1, p0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->selectedBarPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v1, v0}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 798
+    .line 813
     iput p1, p0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->alpha:F
 
     goto :goto_34
 
-    .line 800
+    .line 815
     :cond_31
     invoke-virtual {p0, p1}, Landroid/view/View;->setAlpha(F)V
 
     :goto_34
     if-nez p2, :cond_38
 
-    .line 803
+    .line 818
     iput p1, p0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->currentAnimationValue:F
 
-    .line 805
+    .line 820
     :cond_38
     invoke-virtual {p0}, Landroid/view/View;->invalidate()V
 
@@ -1710,12 +1710,12 @@
 
     const/4 v0, 0x1
 
-    .line 813
+    .line 828
     iput-boolean v0, p0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->isOverlaysVisible:Z
 
     const/4 v0, 0x0
 
-    .line 814
+    .line 829
     invoke-virtual {p0, v0}, Landroid/view/View;->setVisibility(I)V
 
     return-void
@@ -1724,20 +1724,20 @@
 .method public setOverlaysVisible(ZF)V
     .registers 9
 
-    .line 818
+    .line 833
     iget-boolean v0, p0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->isOverlaysVisible:Z
 
     if-eq p1, v0, :cond_3f
 
-    .line 819
+    .line 834
     iput-boolean p1, p0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->isOverlaysVisible:Z
 
-    .line 820
+    .line 835
     iget-object v0, p0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->animator:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ValueAnimator;->cancel()V
 
-    .line 821
+    .line 836
     iget-object v0, p0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->animatorValues:[F
 
     iget v1, p0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->currentAnimationValue:F
@@ -1752,7 +1752,7 @@
 
     if-eqz p1, :cond_25
 
-    .line 823
+    .line 838
     iget-object v3, p0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->animator:Landroid/animation/ValueAnimator;
 
     sub-float v4, v1, v0
@@ -1767,7 +1767,7 @@
 
     goto :goto_2e
 
-    .line 825
+    .line 840
     :cond_25
     iget-object v3, p0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->animator:Landroid/animation/ValueAnimator;
 
@@ -1779,7 +1779,7 @@
 
     invoke-virtual {v3, v4, v5}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
-    .line 827
+    .line 842
     :goto_2e
     iget-object p2, p0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->animatorValues:[F
 
@@ -1796,11 +1796,11 @@
     :cond_37
     const/4 v1, 0x0
 
-    .line 828
+    .line 843
     :goto_38
     aput v1, p2, v0
 
-    .line 829
+    .line 844
     iget-object p1, p0, Lorg/telegram/ui/ProfileActivity$OverlaysView;->animator:Landroid/animation/ValueAnimator;
 
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->start()V

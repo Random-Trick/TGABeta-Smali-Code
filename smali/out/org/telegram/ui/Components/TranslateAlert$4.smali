@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/TranslateAlert;Landroid/content/Context;)V
     .registers 3
 
-    .line 435
+    .line 436
     iput-object p1, p0, Lorg/telegram/ui/Components/TranslateAlert$4;->this$0:Lorg/telegram/ui/Components/TranslateAlert;
 
     invoke-direct {p0, p2}, Landroidx/core/widget/NestedScrollView;-><init>(Landroid/content/Context;)V
@@ -35,7 +35,7 @@
 .method public onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
     .registers 4
 
-    .line 438
+    .line 439
     iget-object v0, p0, Lorg/telegram/ui/Components/TranslateAlert$4;->this$0:Lorg/telegram/ui/Components/TranslateAlert;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/TranslateAlert;->access$900(Lorg/telegram/ui/Components/TranslateAlert;)Z
@@ -84,7 +84,7 @@
 .method public onNestedScroll(Landroid/view/View;IIII)V
     .registers 6
 
-    .line 443
+    .line 444
     invoke-super/range {p0 .. p5}, Landroidx/core/widget/NestedScrollView;->onNestedScroll(Landroid/view/View;IIII)V
 
     return-void
@@ -93,10 +93,10 @@
 .method protected onScrollChanged(IIII)V
     .registers 5
 
-    .line 448
+    .line 449
     invoke-super {p0, p1, p2, p3, p4}, Landroidx/core/widget/NestedScrollView;->onScrollChanged(IIII)V
 
-    .line 449
+    .line 450
     iget-object p1, p0, Lorg/telegram/ui/Components/TranslateAlert$4;->this$0:Lorg/telegram/ui/Components/TranslateAlert;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/TranslateAlert;->access$1100(Lorg/telegram/ui/Components/TranslateAlert;)Z
@@ -105,7 +105,7 @@
 
     if-eqz p1, :cond_13
 
-    .line 450
+    .line 451
     iget-object p1, p0, Lorg/telegram/ui/Components/TranslateAlert$4;->this$0:Lorg/telegram/ui/Components/TranslateAlert;
 
     const/high16 p2, 0x3f800000    # 1.0f

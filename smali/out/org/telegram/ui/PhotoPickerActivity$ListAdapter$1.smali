@@ -25,7 +25,7 @@
 .method constructor <init>(Lorg/telegram/ui/PhotoPickerActivity$ListAdapter;)V
     .registers 2
 
-    .line 1781
+    .line 1812
     iput-object p1, p0, Lorg/telegram/ui/PhotoPickerActivity$ListAdapter$1;->this$1:Lorg/telegram/ui/PhotoPickerActivity$ListAdapter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,12 +36,12 @@
 .method private checkSlowMode()V
     .registers 6
 
-    .line 1784
+    .line 1815
     iget-object v0, p0, Lorg/telegram/ui/PhotoPickerActivity$ListAdapter$1;->this$1:Lorg/telegram/ui/PhotoPickerActivity$ListAdapter;
 
     iget-object v0, v0, Lorg/telegram/ui/PhotoPickerActivity$ListAdapter;->this$0:Lorg/telegram/ui/PhotoPickerActivity;
 
-    invoke-static {v0}, Lorg/telegram/ui/PhotoPickerActivity;->access$4100(Lorg/telegram/ui/PhotoPickerActivity;)Z
+    invoke-static {v0}, Lorg/telegram/ui/PhotoPickerActivity;->access$4200(Lorg/telegram/ui/PhotoPickerActivity;)Z
 
     move-result v0
 
@@ -51,18 +51,18 @@
 
     iget-object v0, v0, Lorg/telegram/ui/PhotoPickerActivity$ListAdapter;->this$0:Lorg/telegram/ui/PhotoPickerActivity;
 
-    invoke-static {v0}, Lorg/telegram/ui/PhotoPickerActivity;->access$4200(Lorg/telegram/ui/PhotoPickerActivity;)Lorg/telegram/ui/ChatActivity;
+    invoke-static {v0}, Lorg/telegram/ui/PhotoPickerActivity;->access$4300(Lorg/telegram/ui/PhotoPickerActivity;)Lorg/telegram/ui/ChatActivity;
 
     move-result-object v0
 
     if-eqz v0, :cond_62
 
-    .line 1785
+    .line 1816
     iget-object v0, p0, Lorg/telegram/ui/PhotoPickerActivity$ListAdapter$1;->this$1:Lorg/telegram/ui/PhotoPickerActivity$ListAdapter;
 
     iget-object v0, v0, Lorg/telegram/ui/PhotoPickerActivity$ListAdapter;->this$0:Lorg/telegram/ui/PhotoPickerActivity;
 
-    invoke-static {v0}, Lorg/telegram/ui/PhotoPickerActivity;->access$4200(Lorg/telegram/ui/PhotoPickerActivity;)Lorg/telegram/ui/ChatActivity;
+    invoke-static {v0}, Lorg/telegram/ui/PhotoPickerActivity;->access$4300(Lorg/telegram/ui/PhotoPickerActivity;)Lorg/telegram/ui/ChatActivity;
 
     move-result-object v0
 
@@ -72,7 +72,7 @@
 
     if-eqz v0, :cond_62
 
-    .line 1786
+    .line 1817
     invoke-static {v0}, Lorg/telegram/messenger/ChatObject;->hasAdminRights(Lorg/telegram/tgnet/TLRPC$Chat;)Z
 
     move-result v1
@@ -83,12 +83,12 @@
 
     if-eqz v0, :cond_62
 
-    .line 1787
+    .line 1818
     iget-object v0, p0, Lorg/telegram/ui/PhotoPickerActivity$ListAdapter$1;->this$1:Lorg/telegram/ui/PhotoPickerActivity$ListAdapter;
 
     iget-object v0, v0, Lorg/telegram/ui/PhotoPickerActivity$ListAdapter;->this$0:Lorg/telegram/ui/PhotoPickerActivity;
 
-    invoke-static {v0}, Lorg/telegram/ui/PhotoPickerActivity;->access$3000(Lorg/telegram/ui/PhotoPickerActivity;)I
+    invoke-static {v0}, Lorg/telegram/ui/PhotoPickerActivity;->access$3100(Lorg/telegram/ui/PhotoPickerActivity;)I
 
     move-result v0
 
@@ -96,12 +96,12 @@
 
     if-eq v0, v1, :cond_62
 
-    .line 1788
+    .line 1819
     iget-object v0, p0, Lorg/telegram/ui/PhotoPickerActivity$ListAdapter$1;->this$1:Lorg/telegram/ui/PhotoPickerActivity$ListAdapter;
 
     iget-object v0, v0, Lorg/telegram/ui/PhotoPickerActivity$ListAdapter;->this$0:Lorg/telegram/ui/PhotoPickerActivity;
 
-    const v2, 0x7f0e107d
+    const v2, 0x7f0e113c
 
     const-string v3, "Slowmode"
 
@@ -109,7 +109,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f0e1084
+    const v3, 0x7f0e1143    # 1.8884E38f
 
     const-string v4, "SlowmodeSelectSendError"
 
@@ -119,12 +119,12 @@
 
     invoke-static {v0, v2, v3}, Lorg/telegram/ui/Components/AlertsCreator;->showSimpleAlert(Lorg/telegram/ui/ActionBar/BaseFragment;Ljava/lang/String;Ljava/lang/String;)Landroid/app/Dialog;
 
-    .line 1789
+    .line 1820
     iget-object v0, p0, Lorg/telegram/ui/PhotoPickerActivity$ListAdapter$1;->this$1:Lorg/telegram/ui/PhotoPickerActivity$ListAdapter;
 
     iget-object v0, v0, Lorg/telegram/ui/PhotoPickerActivity$ListAdapter;->this$0:Lorg/telegram/ui/PhotoPickerActivity;
 
-    invoke-static {v0}, Lorg/telegram/ui/PhotoPickerActivity;->access$3000(Lorg/telegram/ui/PhotoPickerActivity;)I
+    invoke-static {v0}, Lorg/telegram/ui/PhotoPickerActivity;->access$3100(Lorg/telegram/ui/PhotoPickerActivity;)I
 
     move-result v0
 
@@ -132,12 +132,12 @@
 
     if-ne v0, v2, :cond_62
 
-    .line 1790
+    .line 1821
     iget-object v0, p0, Lorg/telegram/ui/PhotoPickerActivity$ListAdapter$1;->this$1:Lorg/telegram/ui/PhotoPickerActivity$ListAdapter;
 
     iget-object v0, v0, Lorg/telegram/ui/PhotoPickerActivity$ListAdapter;->this$0:Lorg/telegram/ui/PhotoPickerActivity;
 
-    invoke-static {v0, v1}, Lorg/telegram/ui/PhotoPickerActivity;->access$3002(Lorg/telegram/ui/PhotoPickerActivity;I)I
+    invoke-static {v0, v1}, Lorg/telegram/ui/PhotoPickerActivity;->access$3102(Lorg/telegram/ui/PhotoPickerActivity;I)I
 
     :cond_62
     return-void
@@ -148,7 +148,7 @@
 .method public onCheckClick(Lorg/telegram/ui/Cells/PhotoAttachPhotoCell;)V
     .registers 9
 
-    .line 1799
+    .line 1830
     invoke-virtual {p1}, Landroid/widget/FrameLayout;->getTag()Ljava/lang/Object;
 
     move-result-object v0
@@ -159,7 +159,7 @@
 
     move-result v0
 
-    .line 1801
+    .line 1832
     iget-object v1, p0, Lorg/telegram/ui/PhotoPickerActivity$ListAdapter$1;->this$1:Lorg/telegram/ui/PhotoPickerActivity$ListAdapter;
 
     iget-object v1, v1, Lorg/telegram/ui/PhotoPickerActivity$ListAdapter;->this$0:Lorg/telegram/ui/PhotoPickerActivity;
@@ -174,7 +174,7 @@
 
     if-eqz v1, :cond_82
 
-    .line 1802
+    .line 1833
     iget-object v1, p0, Lorg/telegram/ui/PhotoPickerActivity$ListAdapter$1;->this$1:Lorg/telegram/ui/PhotoPickerActivity$ListAdapter;
 
     iget-object v1, v1, Lorg/telegram/ui/PhotoPickerActivity$ListAdapter;->this$0:Lorg/telegram/ui/PhotoPickerActivity;
@@ -191,7 +191,7 @@
 
     check-cast v1, Lorg/telegram/messenger/MediaController$PhotoEntry;
 
-    .line 1803
+    .line 1834
     iget-object v4, p0, Lorg/telegram/ui/PhotoPickerActivity$ListAdapter$1;->this$1:Lorg/telegram/ui/PhotoPickerActivity$ListAdapter;
 
     iget-object v4, v4, Lorg/telegram/ui/PhotoPickerActivity$ListAdapter;->this$0:Lorg/telegram/ui/PhotoPickerActivity;
@@ -214,12 +214,12 @@
 
     if-eqz v4, :cond_5f
 
-    .line 1804
+    .line 1835
     iget-object v5, p0, Lorg/telegram/ui/PhotoPickerActivity$ListAdapter$1;->this$1:Lorg/telegram/ui/PhotoPickerActivity$ListAdapter;
 
     iget-object v5, v5, Lorg/telegram/ui/PhotoPickerActivity$ListAdapter;->this$0:Lorg/telegram/ui/PhotoPickerActivity;
 
-    invoke-static {v5}, Lorg/telegram/ui/PhotoPickerActivity;->access$4300(Lorg/telegram/ui/PhotoPickerActivity;)I
+    invoke-static {v5}, Lorg/telegram/ui/PhotoPickerActivity;->access$4400(Lorg/telegram/ui/PhotoPickerActivity;)I
 
     move-result v5
 
@@ -241,18 +241,18 @@
 
     iget-object v6, v6, Lorg/telegram/ui/PhotoPickerActivity$ListAdapter;->this$0:Lorg/telegram/ui/PhotoPickerActivity;
 
-    invoke-static {v6}, Lorg/telegram/ui/PhotoPickerActivity;->access$4300(Lorg/telegram/ui/PhotoPickerActivity;)I
+    invoke-static {v6}, Lorg/telegram/ui/PhotoPickerActivity;->access$4400(Lorg/telegram/ui/PhotoPickerActivity;)I
 
     move-result v6
 
     if-lt v5, v6, :cond_5f
 
-    .line 1805
+    .line 1836
     invoke-direct {p0}, Lorg/telegram/ui/PhotoPickerActivity$ListAdapter$1;->checkSlowMode()V
 
     return-void
 
-    .line 1808
+    .line 1839
     :cond_5f
     iget-object v5, p0, Lorg/telegram/ui/PhotoPickerActivity$ListAdapter$1;->this$1:Lorg/telegram/ui/PhotoPickerActivity$ListAdapter;
 
@@ -278,11 +278,11 @@
 
     move-result v2
 
-    .line 1809
+    .line 1840
     :cond_77
     invoke-virtual {p1, v2, v4, v3}, Lorg/telegram/ui/Cells/PhotoAttachPhotoCell;->setChecked(IZZ)V
 
-    .line 1810
+    .line 1841
     iget-object p1, p0, Lorg/telegram/ui/PhotoPickerActivity$ListAdapter$1;->this$1:Lorg/telegram/ui/PhotoPickerActivity$ListAdapter;
 
     iget-object p1, p1, Lorg/telegram/ui/PhotoPickerActivity$ListAdapter;->this$0:Lorg/telegram/ui/PhotoPickerActivity;
@@ -291,7 +291,7 @@
 
     goto :goto_f6
 
-    .line 1812
+    .line 1843
     :cond_82
     iget-object v1, p0, Lorg/telegram/ui/PhotoPickerActivity$ListAdapter$1;->this$1:Lorg/telegram/ui/PhotoPickerActivity$ListAdapter;
 
@@ -307,7 +307,7 @@
 
     invoke-static {v1}, Lorg/telegram/messenger/AndroidUtilities;->hideKeyboard(Landroid/view/View;)V
 
-    .line 1813
+    .line 1844
     iget-object v1, p0, Lorg/telegram/ui/PhotoPickerActivity$ListAdapter$1;->this$1:Lorg/telegram/ui/PhotoPickerActivity$ListAdapter;
 
     iget-object v1, v1, Lorg/telegram/ui/PhotoPickerActivity$ListAdapter;->this$0:Lorg/telegram/ui/PhotoPickerActivity;
@@ -322,7 +322,7 @@
 
     check-cast v1, Lorg/telegram/messenger/MediaController$SearchImage;
 
-    .line 1814
+    .line 1845
     iget-object v4, p0, Lorg/telegram/ui/PhotoPickerActivity$ListAdapter$1;->this$1:Lorg/telegram/ui/PhotoPickerActivity$ListAdapter;
 
     iget-object v4, v4, Lorg/telegram/ui/PhotoPickerActivity$ListAdapter;->this$0:Lorg/telegram/ui/PhotoPickerActivity;
@@ -341,12 +341,12 @@
 
     if-eqz v4, :cond_d4
 
-    .line 1815
+    .line 1846
     iget-object v5, p0, Lorg/telegram/ui/PhotoPickerActivity$ListAdapter$1;->this$1:Lorg/telegram/ui/PhotoPickerActivity$ListAdapter;
 
     iget-object v5, v5, Lorg/telegram/ui/PhotoPickerActivity$ListAdapter;->this$0:Lorg/telegram/ui/PhotoPickerActivity;
 
-    invoke-static {v5}, Lorg/telegram/ui/PhotoPickerActivity;->access$4300(Lorg/telegram/ui/PhotoPickerActivity;)I
+    invoke-static {v5}, Lorg/telegram/ui/PhotoPickerActivity;->access$4400(Lorg/telegram/ui/PhotoPickerActivity;)I
 
     move-result v5
 
@@ -368,18 +368,18 @@
 
     iget-object v6, v6, Lorg/telegram/ui/PhotoPickerActivity$ListAdapter;->this$0:Lorg/telegram/ui/PhotoPickerActivity;
 
-    invoke-static {v6}, Lorg/telegram/ui/PhotoPickerActivity;->access$4300(Lorg/telegram/ui/PhotoPickerActivity;)I
+    invoke-static {v6}, Lorg/telegram/ui/PhotoPickerActivity;->access$4400(Lorg/telegram/ui/PhotoPickerActivity;)I
 
     move-result v6
 
     if-lt v5, v6, :cond_d4
 
-    .line 1816
+    .line 1847
     invoke-direct {p0}, Lorg/telegram/ui/PhotoPickerActivity$ListAdapter$1;->checkSlowMode()V
 
     return-void
 
-    .line 1819
+    .line 1850
     :cond_d4
     iget-object v5, p0, Lorg/telegram/ui/PhotoPickerActivity$ListAdapter$1;->this$1:Lorg/telegram/ui/PhotoPickerActivity$ListAdapter;
 
@@ -405,18 +405,18 @@
 
     move-result v2
 
-    .line 1820
+    .line 1851
     :cond_ec
     invoke-virtual {p1, v2, v4, v3}, Lorg/telegram/ui/Cells/PhotoAttachPhotoCell;->setChecked(IZZ)V
 
-    .line 1821
+    .line 1852
     iget-object p1, p0, Lorg/telegram/ui/PhotoPickerActivity$ListAdapter$1;->this$1:Lorg/telegram/ui/PhotoPickerActivity$ListAdapter;
 
     iget-object p1, p1, Lorg/telegram/ui/PhotoPickerActivity$ListAdapter;->this$0:Lorg/telegram/ui/PhotoPickerActivity;
 
     invoke-static {p1, v1, v0}, Lorg/telegram/ui/PhotoPickerActivity;->access$900(Lorg/telegram/ui/PhotoPickerActivity;Ljava/lang/Object;I)I
 
-    .line 1823
+    .line 1854
     :goto_f6
     iget-object p1, p0, Lorg/telegram/ui/PhotoPickerActivity$ListAdapter$1;->this$1:Lorg/telegram/ui/PhotoPickerActivity$ListAdapter;
 
@@ -432,7 +432,7 @@
     :goto_fe
     invoke-virtual {p1, v3}, Lorg/telegram/ui/PhotoPickerActivity;->updatePhotosButton(I)V
 
-    .line 1824
+    .line 1855
     iget-object p1, p0, Lorg/telegram/ui/PhotoPickerActivity$ListAdapter$1;->this$1:Lorg/telegram/ui/PhotoPickerActivity$ListAdapter;
 
     iget-object p1, p1, Lorg/telegram/ui/PhotoPickerActivity$ListAdapter;->this$0:Lorg/telegram/ui/PhotoPickerActivity;

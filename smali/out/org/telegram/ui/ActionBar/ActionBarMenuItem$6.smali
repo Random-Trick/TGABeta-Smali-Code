@@ -27,7 +27,7 @@
 .method constructor <init>(Lorg/telegram/ui/ActionBar/ActionBarMenuItem;F)V
     .registers 3
 
-    .line 1004
+    .line 998
     iput-object p1, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuItem$6;->this$0:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
     iput p2, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuItem$6;->val$oldX:F
@@ -42,7 +42,7 @@
 .method public onPreDraw()Z
     .registers 4
 
-    .line 1007
+    .line 1001
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuItem$6;->this$0:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
     invoke-static {v0}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->access$300(Lorg/telegram/ui/ActionBar/ActionBarMenuItem;)Lorg/telegram/ui/Components/EditTextBoldCursor;
@@ -55,7 +55,7 @@
 
     invoke-virtual {v0, p0}, Landroid/view/ViewTreeObserver;->removeOnPreDrawListener(Landroid/view/ViewTreeObserver$OnPreDrawListener;)V
 
-    .line 1008
+    .line 1002
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuItem$6;->this$0:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
     invoke-static {v0}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->access$300(Lorg/telegram/ui/ActionBar/ActionBarMenuItem;)Lorg/telegram/ui/Components/EditTextBoldCursor;
@@ -72,7 +72,7 @@
 
     if-eqz v0, :cond_33
 
-    .line 1009
+    .line 1003
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuItem$6;->this$0:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
     invoke-static {v0}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->access$300(Lorg/telegram/ui/ActionBar/ActionBarMenuItem;)Lorg/telegram/ui/Components/EditTextBoldCursor;
@@ -95,7 +95,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->setTranslationX(F)V
 
-    .line 1011
+    .line 1005
     :cond_33
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuItem$6;->this$0:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 

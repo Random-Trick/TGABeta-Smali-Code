@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lj$/util/v;
+.implements Lj$/util/u$a;
 
 
 # instance fields
@@ -75,7 +75,7 @@
 .method public synthetic b(Lj$/util/function/Consumer;)Z
     .registers 2
 
-    invoke-static {p0, p1}, Lj$/util/a;->k(Lj$/util/v;Lj$/util/function/Consumer;)Z
+    invoke-static {p0, p1}, Lj$/util/a;->k(Lj$/util/u$a;Lj$/util/function/Consumer;)Z
 
     move-result p1
 
@@ -147,7 +147,7 @@
 .method public synthetic forEachRemaining(Lj$/util/function/Consumer;)V
     .registers 2
 
-    invoke-static {p0, p1}, Lj$/util/a;->c(Lj$/util/v;Lj$/util/function/Consumer;)V
+    invoke-static {p0, p1}, Lj$/util/a;->c(Lj$/util/u$a;Lj$/util/function/Consumer;)V
 
     return-void
 .end method
@@ -219,7 +219,7 @@
 .method public synthetic getExactSizeIfKnown()J
     .registers 3
 
-    invoke-static {p0}, Lj$/util/a;->e(Lj$/util/y;)J
+    invoke-static {p0}, Lj$/util/a;->e(Lj$/util/u;)J
 
     move-result-wide v0
 
@@ -229,7 +229,7 @@
 .method public synthetic hasCharacteristics(I)Z
     .registers 2
 
-    invoke-static {p0, p1}, Lj$/util/a;->f(Lj$/util/y;I)Z
+    invoke-static {p0, p1}, Lj$/util/a;->f(Lj$/util/u;I)Z
 
     move-result p1
 
@@ -248,7 +248,7 @@
     return p1
 .end method
 
-.method public bridge synthetic trySplit()Lj$/util/v;
+.method public bridge synthetic trySplit()Lj$/util/u$a;
     .registers 2
 
     invoke-virtual {p0}, Lj$/util/concurrent/g;->a()Lj$/util/concurrent/g;
@@ -258,7 +258,7 @@
     return-object v0
 .end method
 
-.method public bridge synthetic trySplit()Lj$/util/x;
+.method public bridge synthetic trySplit()Lj$/util/u;
     .registers 2
 
     invoke-virtual {p0}, Lj$/util/concurrent/g;->a()Lj$/util/concurrent/g;
@@ -268,7 +268,7 @@
     return-object v0
 .end method
 
-.method public bridge synthetic trySplit()Lj$/util/y;
+.method public bridge synthetic trySplit()Lj$/util/w;
     .registers 2
 
     invoke-virtual {p0}, Lj$/util/concurrent/g;->a()Lj$/util/concurrent/g;

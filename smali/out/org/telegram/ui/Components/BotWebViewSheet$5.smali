@@ -1,11 +1,11 @@
 .class Lorg/telegram/ui/Components/BotWebViewSheet$5;
-.super Landroid/animation/AnimatorListenerAdapter;
+.super Lorg/telegram/ui/Components/RadialProgressView;
 .source "BotWebViewSheet.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lorg/telegram/ui/Components/BotWebViewSheet;->lambda$new$8(Ljava/lang/Float;)V
+    value = Lorg/telegram/ui/Components/BotWebViewSheet;-><init>(Landroid/content/Context;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -14,37 +14,89 @@
 .end annotation
 
 
-# instance fields
-.field final synthetic this$0:Lorg/telegram/ui/Components/BotWebViewSheet;
-
-
 # direct methods
-.method constructor <init>(Lorg/telegram/ui/Components/BotWebViewSheet;)V
-    .registers 2
+.method constructor <init>(Lorg/telegram/ui/Components/BotWebViewSheet;Landroid/content/Context;)V
+    .registers 3
 
-    .line 349
-    iput-object p1, p0, Lorg/telegram/ui/Components/BotWebViewSheet$5;->this$0:Lorg/telegram/ui/Components/BotWebViewSheet;
-
-    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
+    .line 425
+    invoke-direct {p0, p2}, Lorg/telegram/ui/Components/RadialProgressView;-><init>(Landroid/content/Context;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onAnimationEnd(Landroid/animation/Animator;)V
-    .registers 3
+.method protected onMeasure(II)V
+    .registers 5
 
-    .line 352
-    iget-object p1, p0, Lorg/telegram/ui/Components/BotWebViewSheet$5;->this$0:Lorg/telegram/ui/Components/BotWebViewSheet;
+    .line 428
+    invoke-super {p0, p1, p2}, Landroid/view/View;->onMeasure(II)V
 
-    invoke-static {p1}, Lorg/telegram/ui/Components/BotWebViewSheet;->access$2000(Lorg/telegram/ui/Components/BotWebViewSheet;)Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout$WebProgressView;
+    .line 430
+    invoke-virtual {p0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object p1
 
-    const/16 v0, 0x8
+    check-cast p1, Landroid/view/ViewGroup$MarginLayoutParams;
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
+    .line 431
+    invoke-static {}, Lorg/telegram/messenger/AndroidUtilities;->isTablet()Z
 
+    move-result p2
+
+    const/high16 v0, 0x41200000    # 10.0f
+
+    if-eqz p2, :cond_35
+
+    sget-boolean p2, Lorg/telegram/messenger/AndroidUtilities;->isInMultiwindow:Z
+
+    if-nez p2, :cond_35
+
+    invoke-static {}, Lorg/telegram/messenger/AndroidUtilities;->isSmallTablet()Z
+
+    move-result p2
+
+    if-nez p2, :cond_35
+
+    .line 432
+    invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
+
+    move-result p2
+
+    int-to-float p2, p2
+
+    sget-object v0, Lorg/telegram/messenger/AndroidUtilities;->displaySize:Landroid/graphics/Point;
+
+    iget v1, v0, Landroid/graphics/Point;->x:I
+
+    iget v0, v0, Landroid/graphics/Point;->y:I
+
+    invoke-static {v1, v0}, Ljava/lang/Math;->min(II)I
+
+    move-result v0
+
+    int-to-float v0, v0
+
+    const v1, 0x3dcccccd    # 0.1f
+
+    mul-float v0, v0, v1
+
+    add-float/2addr p2, v0
+
+    float-to-int p2, p2
+
+    iput p2, p1, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
+
+    goto :goto_3b
+
+    .line 434
+    :cond_35
+    invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
+
+    move-result p2
+
+    iput p2, p1, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
+
+    :goto_3b
     return-void
 .end method

@@ -25,7 +25,7 @@
 .method constructor <init>(Lorg/telegram/ui/Adapters/MentionsAdapter;)V
     .registers 2
 
-    .line 180
+    .line 179
     iput-object p1, p0, Lorg/telegram/ui/Adapters/MentionsAdapter$3;->this$0:Lorg/telegram/ui/Adapters/MentionsAdapter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -68,7 +68,7 @@
 .method public onDataSetChanged(I)V
     .registers 2
 
-    .line 183
+    .line 182
     iget-object p1, p0, Lorg/telegram/ui/Adapters/MentionsAdapter$3;->this$0:Lorg/telegram/ui/Adapters/MentionsAdapter;
 
     invoke-virtual {p1}, Lorg/telegram/ui/Adapters/MentionsAdapter;->notifyDataSetChanged()V
@@ -91,7 +91,7 @@
         }
     .end annotation
 
-    .line 188
+    .line 187
     iget-object p1, p0, Lorg/telegram/ui/Adapters/MentionsAdapter$3;->this$0:Lorg/telegram/ui/Adapters/MentionsAdapter;
 
     invoke-static {p1}, Lorg/telegram/ui/Adapters/MentionsAdapter;->access$500(Lorg/telegram/ui/Adapters/MentionsAdapter;)Ljava/lang/String;
@@ -100,7 +100,7 @@
 
     if-eqz p1, :cond_29
 
-    .line 189
+    .line 188
     iget-object v0, p0, Lorg/telegram/ui/Adapters/MentionsAdapter$3;->this$0:Lorg/telegram/ui/Adapters/MentionsAdapter;
 
     invoke-static {v0}, Lorg/telegram/ui/Adapters/MentionsAdapter;->access$500(Lorg/telegram/ui/Adapters/MentionsAdapter;)Ljava/lang/String;

@@ -17,7 +17,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 16091
+    .line 16254
     invoke-direct {p0}, Lorg/telegram/tgnet/TLRPC$BaseTheme;-><init>()V
 
     return-void
@@ -28,7 +28,7 @@
 .method public serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
     .registers 3
 
-    .line 16096
+    .line 16259
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_baseThemeDay;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V

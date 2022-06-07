@@ -53,24 +53,24 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .registers 5
 
-    .line 308
+    .line 310
     invoke-direct {p0, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
     const/4 v0, 0x3
 
-    .line 298
+    .line 300
     iput v0, p0, Lorg/telegram/ui/Cells/WallpaperCell;->spanCount:I
 
     const/4 v0, 0x5
 
     new-array v0, v0, [Lorg/telegram/ui/Cells/WallpaperCell$WallpaperView;
 
-    .line 310
+    .line 312
     iput-object v0, p0, Lorg/telegram/ui/Cells/WallpaperCell;->wallpaperViews:[Lorg/telegram/ui/Cells/WallpaperCell$WallpaperView;
 
     const/4 v0, 0x0
 
-    .line 311
+    .line 313
     :goto_c
     iget-object v1, p0, Lorg/telegram/ui/Cells/WallpaperCell;->wallpaperViews:[Lorg/telegram/ui/Cells/WallpaperCell$WallpaperView;
 
@@ -78,24 +78,24 @@
 
     if-ge v0, v2, :cond_2e
 
-    .line 312
+    .line 314
     new-instance v2, Lorg/telegram/ui/Cells/WallpaperCell$WallpaperView;
 
     invoke-direct {v2, p0, p1}, Lorg/telegram/ui/Cells/WallpaperCell$WallpaperView;-><init>(Lorg/telegram/ui/Cells/WallpaperCell;Landroid/content/Context;)V
 
     aput-object v2, v1, v0
 
-    .line 314
+    .line 316
     invoke-virtual {p0, v2}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;)V
 
-    .line 315
+    .line 317
     new-instance v1, Lorg/telegram/ui/Cells/WallpaperCell$$ExternalSyntheticLambda0;
 
     invoke-direct {v1, p0, v2, v0}, Lorg/telegram/ui/Cells/WallpaperCell$$ExternalSyntheticLambda0;-><init>(Lorg/telegram/ui/Cells/WallpaperCell;Lorg/telegram/ui/Cells/WallpaperCell$WallpaperView;I)V
 
     invoke-virtual {v2, v1}, Landroid/widget/FrameLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 316
+    .line 318
     new-instance v1, Lorg/telegram/ui/Cells/WallpaperCell$$ExternalSyntheticLambda1;
 
     invoke-direct {v1, p0, v2, v0}, Lorg/telegram/ui/Cells/WallpaperCell$$ExternalSyntheticLambda1;-><init>(Lorg/telegram/ui/Cells/WallpaperCell;Lorg/telegram/ui/Cells/WallpaperCell$WallpaperView;I)V
@@ -106,7 +106,7 @@
 
     goto :goto_c
 
-    .line 319
+    .line 321
     :cond_2e
     new-instance v0, Landroid/graphics/Paint;
 
@@ -116,10 +116,10 @@
 
     const/high16 v1, 0x33000000
 
-    .line 320
+    .line 322
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 322
+    .line 324
     new-instance v0, Landroid/graphics/Paint;
 
     const/4 v1, 0x1
@@ -128,12 +128,12 @@
 
     iput-object v0, p0, Lorg/telegram/ui/Cells/WallpaperCell;->circlePaint:Landroid/graphics/Paint;
 
-    .line 324
+    .line 326
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
 
-    const v0, 0x7f07006a
+    const v0, 0x7f070054
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -145,7 +145,7 @@
 
     iput-object p1, p0, Lorg/telegram/ui/Cells/WallpaperCell;->checkDrawable:Landroid/graphics/drawable/Drawable;
 
-    .line 326
+    .line 328
     new-instance p1, Landroid/graphics/Paint;
 
     invoke-direct {p1}, Landroid/graphics/Paint;-><init>()V
@@ -154,7 +154,7 @@
 
     const-string v0, "sharedMedia_photoPlaceholder"
 
-    .line 327
+    .line 329
     invoke-static {v0}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
 
     move-result v0
@@ -203,7 +203,7 @@
 .method private synthetic lambda$new$0(Lorg/telegram/ui/Cells/WallpaperCell$WallpaperView;ILandroid/view/View;)V
     .registers 4
 
-    .line 315
+    .line 317
     invoke-static {p1}, Lorg/telegram/ui/Cells/WallpaperCell$WallpaperView;->access$000(Lorg/telegram/ui/Cells/WallpaperCell$WallpaperView;)Ljava/lang/Object;
 
     move-result-object p1
@@ -216,7 +216,7 @@
 .method private synthetic lambda$new$1(Lorg/telegram/ui/Cells/WallpaperCell$WallpaperView;ILandroid/view/View;)Z
     .registers 4
 
-    .line 316
+    .line 318
     invoke-static {p1}, Lorg/telegram/ui/Cells/WallpaperCell$WallpaperView;->access$000(Lorg/telegram/ui/Cells/WallpaperCell$WallpaperView;)Ljava/lang/Object;
 
     move-result-object p1
@@ -233,18 +233,18 @@
 .method public invalidate()V
     .registers 3
 
-    .line 390
+    .line 392
     invoke-super {p0}, Landroid/widget/FrameLayout;->invalidate()V
 
     const/4 v0, 0x0
 
-    .line 391
+    .line 393
     :goto_4
     iget v1, p0, Lorg/telegram/ui/Cells/WallpaperCell;->spanCount:I
 
     if-ge v0, v1, :cond_12
 
-    .line 392
+    .line 394
     iget-object v1, p0, Lorg/telegram/ui/Cells/WallpaperCell;->wallpaperViews:[Lorg/telegram/ui/Cells/WallpaperCell$WallpaperView;
 
     aget-object v1, v1, v0
@@ -264,12 +264,12 @@
 
     const/high16 p1, 0x41600000    # 14.0f
 
-    .line 354
+    .line 356
     invoke-static {p1}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result p2
 
-    .line 355
+    .line 357
     iget-boolean p3, p0, Lorg/telegram/ui/Cells/WallpaperCell;->isTop:Z
 
     const/4 p4, 0x0
@@ -285,13 +285,13 @@
     :cond_10
     const/4 p1, 0x0
 
-    .line 356
+    .line 358
     :goto_11
     iget p3, p0, Lorg/telegram/ui/Cells/WallpaperCell;->spanCount:I
 
     if-ge p4, p3, :cond_38
 
-    .line 357
+    .line 359
     iget-object p3, p0, Lorg/telegram/ui/Cells/WallpaperCell;->wallpaperViews:[Lorg/telegram/ui/Cells/WallpaperCell$WallpaperView;
 
     aget-object p3, p3, p4
@@ -300,7 +300,7 @@
 
     move-result p3
 
-    .line 358
+    .line 360
     iget-object p5, p0, Lorg/telegram/ui/Cells/WallpaperCell;->wallpaperViews:[Lorg/telegram/ui/Cells/WallpaperCell$WallpaperView;
 
     aget-object v0, p5, p4
@@ -319,7 +319,7 @@
 
     const/high16 p5, 0x40c00000    # 6.0f
 
-    .line 359
+    .line 361
     invoke-static {p5}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result p5
@@ -339,12 +339,12 @@
 .method protected onMeasure(II)V
     .registers 9
 
-    .line 340
+    .line 342
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result p1
 
-    .line 341
+    .line 343
     iget p2, p0, Lorg/telegram/ui/Cells/WallpaperCell;->spanCount:I
 
     add-int/lit8 p2, p2, -0x1
@@ -361,12 +361,12 @@
 
     sub-int p2, p1, p2
 
-    .line 342
+    .line 344
     iget v0, p0, Lorg/telegram/ui/Cells/WallpaperCell;->spanCount:I
 
     div-int v0, p2, v0
 
-    .line 343
+    .line 345
     iget v1, p0, Lorg/telegram/ui/Cells/WallpaperCell;->currentType:I
 
     if-nez v1, :cond_22
@@ -382,7 +382,7 @@
     :cond_22
     move v1, v0
 
-    .line 344
+    .line 346
     :goto_23
     iget-boolean v2, p0, Lorg/telegram/ui/Cells/WallpaperCell;->isTop:Z
 
@@ -422,13 +422,13 @@
 
     invoke-virtual {p0, p1, v2}, Landroid/widget/FrameLayout;->setMeasuredDimension(II)V
 
-    .line 346
+    .line 348
     :goto_40
     iget p1, p0, Lorg/telegram/ui/Cells/WallpaperCell;->spanCount:I
 
     if-ge v4, p1, :cond_60
 
-    .line 347
+    .line 349
     iget-object v2, p0, Lorg/telegram/ui/Cells/WallpaperCell;->wallpaperViews:[Lorg/telegram/ui/Cells/WallpaperCell$WallpaperView;
 
     aget-object v2, v2, v4
@@ -484,7 +484,7 @@
 .method public setChecked(IZZ)V
     .registers 5
 
-    .line 385
+    .line 387
     iget-object v0, p0, Lorg/telegram/ui/Cells/WallpaperCell;->wallpaperViews:[Lorg/telegram/ui/Cells/WallpaperCell$WallpaperView;
 
     aget-object p1, v0, p1
@@ -497,20 +497,20 @@
 .method public setParams(IZZ)V
     .registers 6
 
-    .line 364
+    .line 366
     iput p1, p0, Lorg/telegram/ui/Cells/WallpaperCell;->spanCount:I
 
-    .line 365
+    .line 367
     iput-boolean p2, p0, Lorg/telegram/ui/Cells/WallpaperCell;->isTop:Z
 
-    .line 366
+    .line 368
     iput-boolean p3, p0, Lorg/telegram/ui/Cells/WallpaperCell;->isBottom:Z
 
     const/4 p2, 0x0
 
     const/4 p3, 0x0
 
-    .line 367
+    .line 369
     :goto_8
     iget-object v0, p0, Lorg/telegram/ui/Cells/WallpaperCell;->wallpaperViews:[Lorg/telegram/ui/Cells/WallpaperCell$WallpaperView;
 
@@ -518,7 +518,7 @@
 
     if-ge p3, v1, :cond_22
 
-    .line 368
+    .line 370
     aget-object v0, v0, p3
 
     if-ge p3, p1, :cond_13
@@ -533,7 +533,7 @@
     :goto_15
     invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
-    .line 369
+    .line 371
     iget-object v0, p0, Lorg/telegram/ui/Cells/WallpaperCell;->wallpaperViews:[Lorg/telegram/ui/Cells/WallpaperCell$WallpaperView;
 
     aget-object v0, v0, p3
@@ -551,12 +551,12 @@
 .method public setWallpaper(IILjava/lang/Object;Ljava/lang/Object;Landroid/graphics/drawable/Drawable;Z)V
     .registers 8
 
-    .line 374
+    .line 376
     iput p1, p0, Lorg/telegram/ui/Cells/WallpaperCell;->currentType:I
 
     if-nez p3, :cond_15
 
-    .line 376
+    .line 378
     iget-object p1, p0, Lorg/telegram/ui/Cells/WallpaperCell;->wallpaperViews:[Lorg/telegram/ui/Cells/WallpaperCell$WallpaperView;
 
     aget-object p1, p1, p2
@@ -565,7 +565,7 @@
 
     invoke-virtual {p1, p3}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
-    .line 377
+    .line 379
     iget-object p1, p0, Lorg/telegram/ui/Cells/WallpaperCell;->wallpaperViews:[Lorg/telegram/ui/Cells/WallpaperCell$WallpaperView;
 
     aget-object p1, p1, p2
@@ -574,7 +574,7 @@
 
     goto :goto_24
 
-    .line 379
+    .line 381
     :cond_15
     iget-object p1, p0, Lorg/telegram/ui/Cells/WallpaperCell;->wallpaperViews:[Lorg/telegram/ui/Cells/WallpaperCell$WallpaperView;
 
@@ -584,7 +584,7 @@
 
     invoke-virtual {p1, v0}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
-    .line 380
+    .line 382
     iget-object p1, p0, Lorg/telegram/ui/Cells/WallpaperCell;->wallpaperViews:[Lorg/telegram/ui/Cells/WallpaperCell$WallpaperView;
 
     aget-object p1, p1, p2

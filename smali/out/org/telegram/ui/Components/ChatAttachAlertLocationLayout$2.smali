@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;Landroid/content/Context;)V
     .registers 3
 
-    .line 472
+    .line 470
     iput-object p1, p0, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout$2;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;
 
     invoke-direct {p0, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
@@ -35,7 +35,7 @@
 .method public dispatchTouchEvent(Landroid/view/MotionEvent;)Z
     .registers 5
 
-    .line 506
+    .line 504
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
 
     move-result v0
@@ -62,7 +62,7 @@
 
     return p1
 
-    .line 509
+    .line 507
     :cond_16
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->dispatchTouchEvent(Landroid/view/MotionEvent;)Z
 
@@ -74,10 +74,10 @@
 .method protected drawChild(Landroid/graphics/Canvas;Landroid/view/View;J)Z
     .registers 8
 
-    .line 483
+    .line 481
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 484
+    .line 482
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getMeasuredWidth()I
 
     move-result v0
@@ -98,12 +98,12 @@
 
     invoke-virtual {p1, v2, v2, v0, v1}, Landroid/graphics/Canvas;->clipRect(IIII)Z
 
-    .line 485
+    .line 483
     invoke-super {p0, p1, p2, p3, p4}, Landroid/widget/FrameLayout;->drawChild(Landroid/graphics/Canvas;Landroid/view/View;J)Z
 
     move-result p2
 
-    .line 486
+    .line 484
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
     return p2
@@ -112,7 +112,7 @@
 .method protected onDraw(Landroid/graphics/Canvas;)V
     .registers 9
 
-    .line 492
+    .line 490
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout$2;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;->access$2200(Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;)Landroid/graphics/Paint;
@@ -129,7 +129,7 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 493
+    .line 491
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getMeasuredWidth()I
 
     move-result v0
@@ -170,7 +170,7 @@
 .method public onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
     .registers 5
 
-    .line 498
+    .line 496
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
 
     move-result v0
@@ -197,7 +197,7 @@
 
     return p1
 
-    .line 501
+    .line 499
     :cond_16
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
 
@@ -209,10 +209,10 @@
 .method protected onMeasure(II)V
     .registers 3
 
-    .line 475
+    .line 473
     invoke-super {p0, p1, p2}, Landroid/widget/FrameLayout;->onMeasure(II)V
 
-    .line 476
+    .line 474
     iget-object p1, p0, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout$2;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;->access$2000(Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;)Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout$MapOverlayView;
@@ -221,7 +221,7 @@
 
     if-eqz p1, :cond_14
 
-    .line 477
+    .line 475
     iget-object p1, p0, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout$2;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;->access$2000(Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;)Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout$MapOverlayView;

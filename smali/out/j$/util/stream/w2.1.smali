@@ -1,182 +1,126 @@
-.class Lj$/util/stream/w2;
-.super Lj$/util/stream/x2;
+.class abstract Lj$/util/stream/w2;
+.super Ljava/util/concurrent/CountedCompleter;
 
 
 # instance fields
-.field public final synthetic c:I
+.field protected final a:Lj$/util/stream/A1;
 
-.field private final d:Ljava/lang/Object;
+.field protected final b:I
 
 
 # direct methods
-.method public constructor <init>(Lj$/util/stream/A1;Ljava/lang/Object;I)V
-    .registers 5
+.method constructor <init>(Lj$/util/stream/A1;I)V
+    .registers 3
 
-    const/4 v0, 0x0
+    invoke-direct {p0}, Ljava/util/concurrent/CountedCompleter;-><init>()V
 
-    iput v0, p0, Lj$/util/stream/w2;->c:I
+    iput-object p1, p0, Lj$/util/stream/w2;->a:Lj$/util/stream/A1;
 
-    .line 1
-    invoke-direct {p0, p1, p3}, Lj$/util/stream/x2;-><init>(Lj$/util/stream/B1;I)V
-
-    iput-object p2, p0, Lj$/util/stream/w2;->d:Ljava/lang/Object;
+    iput p2, p0, Lj$/util/stream/w2;->b:I
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lj$/util/stream/A1;Ljava/lang/Object;ILj$/util/stream/C1;)V
-    .registers 5
+.method constructor <init>(Lj$/util/stream/w2;Lj$/util/stream/A1;I)V
+    .registers 4
 
-    const/4 p4, 0x0
+    invoke-direct {p0, p1}, Ljava/util/concurrent/CountedCompleter;-><init>(Ljava/util/concurrent/CountedCompleter;)V
 
-    iput p4, p0, Lj$/util/stream/w2;->c:I
+    iput-object p2, p0, Lj$/util/stream/w2;->a:Lj$/util/stream/A1;
 
-    .line 2
-    invoke-direct {p0, p1, p2, p3}, Lj$/util/stream/w2;-><init>(Lj$/util/stream/A1;Ljava/lang/Object;I)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Lj$/util/stream/B1;[Ljava/lang/Object;ILj$/util/stream/C1;)V
-    .registers 5
-
-    const/4 p4, 0x1
-
-    iput p4, p0, Lj$/util/stream/w2;->c:I
-
-    .line 3
-    iput p4, p0, Lj$/util/stream/w2;->c:I
-
-    .line 4
-    invoke-direct {p0, p1, p3}, Lj$/util/stream/x2;-><init>(Lj$/util/stream/B1;I)V
-
-    iput-object p2, p0, Lj$/util/stream/w2;->d:Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lj$/util/stream/w2;Lj$/util/stream/A1;I)V
-    .registers 5
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Lj$/util/stream/w2;->c:I
-
-    .line 5
-    invoke-direct {p0, p1, p2, p3}, Lj$/util/stream/x2;-><init>(Lj$/util/stream/x2;Lj$/util/stream/B1;I)V
-
-    iget-object p1, p1, Lj$/util/stream/w2;->d:Ljava/lang/Object;
-
-    iput-object p1, p0, Lj$/util/stream/w2;->d:Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lj$/util/stream/w2;Lj$/util/stream/B1;I)V
-    .registers 5
-
-    const/4 v0, 0x1
-
-    iput v0, p0, Lj$/util/stream/w2;->c:I
-
-    .line 6
-    invoke-direct {p0, p1, p2, p3}, Lj$/util/stream/x2;-><init>(Lj$/util/stream/x2;Lj$/util/stream/B1;I)V
-
-    iget-object p1, p1, Lj$/util/stream/w2;->d:Ljava/lang/Object;
-
-    check-cast p1, [Ljava/lang/Object;
-
-    iput-object p1, p0, Lj$/util/stream/w2;->d:Ljava/lang/Object;
+    iput p3, p0, Lj$/util/stream/w2;->b:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method a()V
-    .registers 4
-
-    iget v0, p0, Lj$/util/stream/w2;->c:I
-
-    packed-switch v0, :pswitch_data_1e
-
-    goto :goto_12
-
-    .line 1
-    :pswitch_6
-    iget-object v0, p0, Lj$/util/stream/x2;->a:Lj$/util/stream/B1;
-
-    check-cast v0, Lj$/util/stream/A1;
-
-    iget-object v1, p0, Lj$/util/stream/w2;->d:Ljava/lang/Object;
-
-    iget v2, p0, Lj$/util/stream/x2;->b:I
-
-    invoke-interface {v0, v1, v2}, Lj$/util/stream/A1;->d(Ljava/lang/Object;I)V
-
-    return-void
-
-    .line 2
-    :goto_12
-    iget-object v0, p0, Lj$/util/stream/x2;->a:Lj$/util/stream/B1;
-
-    iget-object v1, p0, Lj$/util/stream/w2;->d:Ljava/lang/Object;
-
-    check-cast v1, [Ljava/lang/Object;
-
-    iget v2, p0, Lj$/util/stream/x2;->b:I
-
-    invoke-interface {v0, v1, v2}, Lj$/util/stream/B1;->i([Ljava/lang/Object;I)V
-
-    return-void
-
-    :pswitch_data_1e
-    .packed-switch 0x0
-        :pswitch_6
-    .end packed-switch
+.method abstract a()V
 .end method
 
-.method b(II)Lj$/util/stream/x2;
-    .registers 5
+.method abstract b(II)Lj$/util/stream/w2;
+.end method
 
-    iget v0, p0, Lj$/util/stream/w2;->c:I
+.method public compute()V
+    .registers 9
 
-    packed-switch v0, :pswitch_data_20
+    move-object v0, p0
 
-    goto :goto_14
+    :goto_1
+    iget-object v1, v0, Lj$/util/stream/w2;->a:Lj$/util/stream/A1;
 
-    .line 1
-    :pswitch_6
-    new-instance v0, Lj$/util/stream/w2;
+    invoke-interface {v1}, Lj$/util/stream/A1;->p()I
 
-    iget-object v1, p0, Lj$/util/stream/x2;->a:Lj$/util/stream/B1;
+    move-result v1
 
-    check-cast v1, Lj$/util/stream/A1;
+    if-nez v1, :cond_10
 
-    invoke-interface {v1, p1}, Lj$/util/stream/A1;->b(I)Lj$/util/stream/A1;
+    invoke-virtual {v0}, Lj$/util/stream/w2;->a()V
 
-    move-result-object p1
+    invoke-virtual {v0}, Ljava/util/concurrent/CountedCompleter;->propagateCompletion()V
 
-    invoke-direct {v0, p0, p1, p2}, Lj$/util/stream/w2;-><init>(Lj$/util/stream/w2;Lj$/util/stream/A1;I)V
+    return-void
 
-    return-object v0
+    :cond_10
+    iget-object v1, v0, Lj$/util/stream/w2;->a:Lj$/util/stream/A1;
 
-    .line 2
-    :goto_14
-    new-instance v0, Lj$/util/stream/w2;
+    invoke-interface {v1}, Lj$/util/stream/A1;->p()I
 
-    iget-object v1, p0, Lj$/util/stream/x2;->a:Lj$/util/stream/B1;
+    move-result v1
 
-    invoke-interface {v1, p1}, Lj$/util/stream/B1;->b(I)Lj$/util/stream/B1;
+    add-int/lit8 v1, v1, -0x1
 
-    move-result-object p1
+    invoke-virtual {v0, v1}, Ljava/util/concurrent/CountedCompleter;->setPendingCount(I)V
 
-    invoke-direct {v0, p0, p1, p2}, Lj$/util/stream/w2;-><init>(Lj$/util/stream/w2;Lj$/util/stream/B1;I)V
+    const/4 v1, 0x0
 
-    return-object v0
+    const/4 v2, 0x0
 
-    :pswitch_data_20
-    .packed-switch 0x0
-        :pswitch_6
-    .end packed-switch
+    :goto_1d
+    iget-object v3, v0, Lj$/util/stream/w2;->a:Lj$/util/stream/A1;
+
+    invoke-interface {v3}, Lj$/util/stream/A1;->p()I
+
+    move-result v3
+
+    add-int/lit8 v3, v3, -0x1
+
+    if-ge v1, v3, :cond_3d
+
+    iget v3, v0, Lj$/util/stream/w2;->b:I
+
+    add-int/2addr v3, v2
+
+    invoke-virtual {v0, v1, v3}, Lj$/util/stream/w2;->b(II)Lj$/util/stream/w2;
+
+    move-result-object v3
+
+    int-to-long v4, v2
+
+    iget-object v2, v3, Lj$/util/stream/w2;->a:Lj$/util/stream/A1;
+
+    invoke-interface {v2}, Lj$/util/stream/A1;->count()J
+
+    move-result-wide v6
+
+    add-long/2addr v4, v6
+
+    long-to-int v2, v4
+
+    invoke-virtual {v3}, Ljava/util/concurrent/CountedCompleter;->fork()Ljava/util/concurrent/ForkJoinTask;
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_1d
+
+    :cond_3d
+    iget v3, v0, Lj$/util/stream/w2;->b:I
+
+    add-int/2addr v3, v2
+
+    invoke-virtual {v0, v1, v3}, Lj$/util/stream/w2;->b(II)Lj$/util/stream/w2;
+
+    move-result-object v0
+
+    goto :goto_1
 .end method

@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/ArticleViewer;Landroid/content/Context;)V
     .registers 3
 
-    .line 3015
+    .line 3016
     iput-object p1, p0, Lorg/telegram/ui/ArticleViewer$7;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     invoke-direct {p0, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
@@ -35,7 +35,7 @@
 .method protected drawChild(Landroid/graphics/Canvas;Landroid/view/View;J)Z
     .registers 15
 
-    .line 3018
+    .line 3019
     iget-object v2, p0, Lorg/telegram/ui/ArticleViewer$7;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     invoke-static {v2}, Lorg/telegram/ui/ArticleViewer;->access$2200(Lorg/telegram/ui/ArticleViewer;)Lorg/telegram/ui/ArticleViewer$WindowView;
@@ -48,12 +48,12 @@
 
     if-eqz v2, :cond_e0
 
-    .line 3019
+    .line 3020
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getMeasuredWidth()I
 
     move-result v2
 
-    .line 3020
+    .line 3021
     iget-object v3, p0, Lorg/telegram/ui/ArticleViewer$7;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     invoke-static {v3}, Lorg/telegram/ui/ArticleViewer;->access$3200(Lorg/telegram/ui/ArticleViewer;)[Lorg/telegram/ui/Components/RecyclerListView;
@@ -70,7 +70,7 @@
 
     float-to-int v3, v3
 
-    .line 3024
+    .line 3025
     iget-object v5, p0, Lorg/telegram/ui/ArticleViewer$7;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     invoke-static {v5}, Lorg/telegram/ui/ArticleViewer;->access$3200(Lorg/telegram/ui/ArticleViewer;)[Lorg/telegram/ui/Components/RecyclerListView;
@@ -87,7 +87,7 @@
 
     goto :goto_38
 
-    .line 3026
+    .line 3027
     :cond_2b
     iget-object v5, p0, Lorg/telegram/ui/ArticleViewer$7;->this$0:Lorg/telegram/ui/ArticleViewer;
 
@@ -109,30 +109,30 @@
     :goto_38
     const/4 v5, 0x0
 
-    .line 3030
+    .line 3031
     :goto_39
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
     move-result v8
 
-    .line 3031
+    .line 3032
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getHeight()I
 
     move-result v9
 
     invoke-virtual {p1, v5, v4, v7, v9}, Landroid/graphics/Canvas;->clipRect(IIII)Z
 
-    .line 3032
+    .line 3033
     invoke-super {p0, p1, p2, p3, p4}, Landroid/widget/FrameLayout;->drawChild(Landroid/graphics/Canvas;Landroid/view/View;J)Z
 
     move-result v9
 
-    .line 3033
+    .line 3034
     invoke-virtual {p1, v8}, Landroid/graphics/Canvas;->restoreToCount(I)V
 
     if-eqz v3, :cond_df
 
-    .line 3036
+    .line 3037
     iget-object v8, p0, Lorg/telegram/ui/ArticleViewer$7;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     invoke-static {v8}, Lorg/telegram/ui/ArticleViewer;->access$3200(Lorg/telegram/ui/ArticleViewer;)[Lorg/telegram/ui/Components/RecyclerListView;
@@ -151,7 +151,7 @@
 
     const/high16 v4, 0x41a00000    # 20.0f
 
-    .line 3037
+    .line 3038
     invoke-static {v4}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v4
@@ -170,7 +170,7 @@
 
     move-result v2
 
-    .line 3038
+    .line 3039
     iget-object v4, p0, Lorg/telegram/ui/ArticleViewer$7;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     invoke-static {v4}, Lorg/telegram/ui/ArticleViewer;->access$3900(Lorg/telegram/ui/ArticleViewer;)Landroid/graphics/drawable/Drawable;
@@ -199,7 +199,7 @@
 
     invoke-virtual {v4, v5, v6, v3, v1}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 3039
+    .line 3040
     iget-object v1, p0, Lorg/telegram/ui/ArticleViewer$7;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     invoke-static {v1}, Lorg/telegram/ui/ArticleViewer;->access$3900(Lorg/telegram/ui/ArticleViewer;)Landroid/graphics/drawable/Drawable;
@@ -214,7 +214,7 @@
 
     invoke-virtual {v1, v2}, Landroid/graphics/drawable/Drawable;->setAlpha(I)V
 
-    .line 3040
+    .line 3041
     iget-object v1, p0, Lorg/telegram/ui/ArticleViewer$7;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     invoke-static {v1}, Lorg/telegram/ui/ArticleViewer;->access$3900(Lorg/telegram/ui/ArticleViewer;)Landroid/graphics/drawable/Drawable;
@@ -225,7 +225,7 @@
 
     goto :goto_df
 
-    .line 3041
+    .line 3042
     :cond_a1
     iget-object v4, p0, Lorg/telegram/ui/ArticleViewer$7;->this$0:Lorg/telegram/ui/ArticleViewer;
 
@@ -247,7 +247,7 @@
 
     div-float/2addr v3, v2
 
-    .line 3042
+    .line 3043
     invoke-static {v1, v3}, Ljava/lang/Math;->min(FF)F
 
     move-result v1
@@ -261,7 +261,7 @@
     :cond_bc
     move v8, v1
 
-    .line 3046
+    .line 3047
     :goto_bd
     iget-object v1, p0, Lorg/telegram/ui/ArticleViewer$7;->this$0:Lorg/telegram/ui/ArticleViewer;
 
@@ -285,7 +285,7 @@
 
     int-to-float v3, v7
 
-    .line 3047
+    .line 3048
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getHeight()I
 
     move-result v4
@@ -306,7 +306,7 @@
     :goto_df
     return v9
 
-    .line 3053
+    .line 3054
     :cond_e0
     invoke-super {p0, p1, p2, p3, p4}, Landroid/widget/FrameLayout;->drawChild(Landroid/graphics/Canvas;Landroid/view/View;J)Z
 

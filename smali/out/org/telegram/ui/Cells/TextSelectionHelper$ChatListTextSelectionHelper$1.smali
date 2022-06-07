@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/Cells/TextSelectionHelper$ChatListTextSelectionHelper;Lorg/telegram/ui/Cells/ChatMessageCell;)V
     .registers 3
 
-    .line 1916
+    .line 1915
     iput-object p2, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ChatListTextSelectionHelper$1;->val$cell:Lorg/telegram/ui/Cells/ChatMessageCell;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -35,7 +35,7 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .registers 3
 
-    .line 1919
+    .line 1918
     iget-object p1, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ChatListTextSelectionHelper$1;->val$cell:Lorg/telegram/ui/Cells/ChatMessageCell;
 
     const/4 v0, 0x0

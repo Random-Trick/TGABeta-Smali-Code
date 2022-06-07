@@ -40,7 +40,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/SearchDownloadsContainer;IIIIILjava/util/ArrayList;IILjava/util/ArrayList;)V
     .registers 11
 
-    .line 331
+    .line 334
     iput-object p1, p0, Lorg/telegram/ui/Components/SearchDownloadsContainer$3;->this$0:Lorg/telegram/ui/Components/SearchDownloadsContainer;
 
     iput p2, p0, Lorg/telegram/ui/Components/SearchDownloadsContainer$3;->val$oldRowCount:I
@@ -71,7 +71,7 @@
 .method public areContentsTheSame(II)Z
     .registers 3
 
-    .line 374
+    .line 377
     invoke-virtual {p0, p1, p2}, Lorg/telegram/ui/Components/SearchDownloadsContainer$3;->areItemsTheSame(II)Z
 
     move-result p1
@@ -88,7 +88,7 @@
 
     if-ltz p2, :cond_1b
 
-    .line 345
+    .line 348
     iget v1, p0, Lorg/telegram/ui/Components/SearchDownloadsContainer$3;->val$oldDownloadingFilesHeader:I
 
     if-ne p1, v1, :cond_10
@@ -101,7 +101,7 @@
 
     return v0
 
-    .line 348
+    .line 351
     :cond_10
     iget v1, p0, Lorg/telegram/ui/Components/SearchDownloadsContainer$3;->val$oldRecentFilesHeader:I
 
@@ -115,7 +115,7 @@
 
     return v0
 
-    .line 355
+    .line 358
     :cond_1b
     iget v1, p0, Lorg/telegram/ui/Components/SearchDownloadsContainer$3;->val$oldDownloadingFilesStartRow:I
 
@@ -127,7 +127,7 @@
 
     if-ge p1, v3, :cond_2e
 
-    .line 356
+    .line 359
     iget-object v3, p0, Lorg/telegram/ui/Components/SearchDownloadsContainer$3;->val$oldDownloadingLoadingFiles:Ljava/util/ArrayList;
 
     sub-int/2addr p1, v1
@@ -140,7 +140,7 @@
 
     goto :goto_41
 
-    .line 357
+    .line 360
     :cond_2e
     iget v1, p0, Lorg/telegram/ui/Components/SearchDownloadsContainer$3;->val$oldRecentFilesStartRow:I
 
@@ -150,7 +150,7 @@
 
     if-ge p1, v3, :cond_40
 
-    .line 358
+    .line 361
     iget-object v3, p0, Lorg/telegram/ui/Components/SearchDownloadsContainer$3;->val$oldRecentLoadingFiles:Ljava/util/ArrayList;
 
     sub-int/2addr p1, v1
@@ -166,7 +166,7 @@
     :cond_40
     move-object p1, v2
 
-    .line 361
+    .line 364
     :goto_41
     iget-object v1, p0, Lorg/telegram/ui/Components/SearchDownloadsContainer$3;->this$0:Lorg/telegram/ui/Components/SearchDownloadsContainer;
 
@@ -178,7 +178,7 @@
 
     if-ge p2, v4, :cond_56
 
-    .line 362
+    .line 365
     iget-object v1, v1, Lorg/telegram/ui/Components/SearchDownloadsContainer;->currentLoadingFiles:Ljava/util/ArrayList;
 
     sub-int/2addr p2, v3
@@ -193,7 +193,7 @@
 
     goto :goto_68
 
-    .line 363
+    .line 366
     :cond_56
     iget v3, v1, Lorg/telegram/ui/Components/SearchDownloadsContainer;->recentFilesStartRow:I
 
@@ -203,7 +203,7 @@
 
     if-ge p2, v4, :cond_68
 
-    .line 364
+    .line 367
     iget-object v1, v1, Lorg/telegram/ui/Components/SearchDownloadsContainer;->recentLoadingFiles:Ljava/util/ArrayList;
 
     sub-int/2addr p2, v3
@@ -224,7 +224,7 @@
 
     if-eqz p1, :cond_80
 
-    .line 367
+    .line 370
     invoke-virtual {v2}, Lorg/telegram/messenger/MessageObject;->getDocument()Lorg/telegram/tgnet/TLRPC$Document;
 
     move-result-object v1
@@ -256,7 +256,7 @@
 .method public getNewListSize()I
     .registers 2
 
-    .line 339
+    .line 342
     iget-object v0, p0, Lorg/telegram/ui/Components/SearchDownloadsContainer$3;->this$0:Lorg/telegram/ui/Components/SearchDownloadsContainer;
 
     iget v0, v0, Lorg/telegram/ui/Components/SearchDownloadsContainer;->rowCount:I
@@ -267,7 +267,7 @@
 .method public getOldListSize()I
     .registers 2
 
-    .line 334
+    .line 337
     iget v0, p0, Lorg/telegram/ui/Components/SearchDownloadsContainer$3;->val$oldRowCount:I
 
     return v0

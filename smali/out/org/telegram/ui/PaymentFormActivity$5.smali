@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/PaymentFormActivity;Landroid/content/Context;)V
     .registers 3
 
-    .line 1038
+    .line 1115
     iput-object p1, p0, Lorg/telegram/ui/PaymentFormActivity$5;->this$0:Lorg/telegram/ui/PaymentFormActivity;
 
     invoke-direct {p0, p2}, Landroid/webkit/WebView;-><init>(Landroid/content/Context;)V
@@ -35,7 +35,7 @@
 .method protected onMeasure(II)V
     .registers 3
 
-    .line 1047
+    .line 1124
     invoke-super {p0, p1, p2}, Landroid/webkit/WebView;->onMeasure(II)V
 
     return-void
@@ -44,7 +44,7 @@
 .method public onTouchEvent(Landroid/view/MotionEvent;)Z
     .registers 4
 
-    .line 1041
+    .line 1118
     iget-object v0, p0, Lorg/telegram/ui/PaymentFormActivity$5;->this$0:Lorg/telegram/ui/PaymentFormActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/PaymentFormActivity;->access$2000(Lorg/telegram/ui/PaymentFormActivity;)Landroid/view/View;
@@ -57,7 +57,7 @@
 
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->requestDisallowInterceptTouchEvent(Z)V
 
-    .line 1042
+    .line 1119
     invoke-super {p0, p1}, Landroid/webkit/WebView;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
     move-result p1

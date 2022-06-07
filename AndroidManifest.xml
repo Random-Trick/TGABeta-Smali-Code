@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:versionCode="26489"
+    android:versionCode="26809"
     android:versionName="8.7.2"
     android:installLocation="0"
     android:compileSdkVersion="31"
@@ -227,6 +227,9 @@
         android:name="me.everything.badger.permission.BADGE_COUNT_WRITE" />
 
     <uses-permission
+        android:name="com.android.vending.BILLING" />
+
+    <uses-permission
         android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <uses-permission
@@ -243,7 +246,7 @@
 
     <application
         android:theme="@ref/0x7f0f0021"
-        android:label="@ref/0x7f0e017d"
+        android:label="@ref/0x7f0e01b2"
         android:icon="@ref/0x7f0c0000"
         android:name="org.telegram.messenger.ApplicationLoader"
         android:manageSpaceActivity="org.telegram.ui.ExternalActionActivity"
@@ -311,12 +314,6 @@
 
                 <action
                     android:name="android.intent.action.MAIN" />
-
-                <category
-                    android:name="android.intent.category.LAUNCHER" />
-
-                <category
-                    android:name="android.intent.category.MULTIWINDOW_LAUNCHER" />
             </intent-filter>
 
             <intent-filter>
@@ -496,6 +493,130 @@
 
                 <data
                     android:mimeType="vnd.android.cursor.item/vnd.org.telegram.messenger.android.call.video" />
+            </intent-filter>
+        </activity-alias>
+
+        <activity-alias
+            android:icon="@ref/0x7f0c0003"
+            android:name="org.telegram.messenger.NoxIcon"
+            android:enabled="false"
+            android:exported="true"
+            android:targetActivity="org.telegram.ui.LaunchActivity"
+            android:roundIcon="@ref/0x7f0c0004">
+
+            <intent-filter>
+
+                <action
+                    android:name="android.intent.action.MAIN" />
+
+                <category
+                    android:name="android.intent.category.LAUNCHER" />
+
+                <category
+                    android:name="android.intent.category.MULTIWINDOW_LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+
+        <activity-alias
+            android:icon="@ref/0x7f0c0012"
+            android:name="org.telegram.messenger.TurboIcon"
+            android:enabled="false"
+            android:exported="true"
+            android:targetActivity="org.telegram.ui.LaunchActivity"
+            android:roundIcon="@ref/0x7f0c0013">
+
+            <intent-filter>
+
+                <action
+                    android:name="android.intent.action.MAIN" />
+
+                <category
+                    android:name="android.intent.category.LAUNCHER" />
+
+                <category
+                    android:name="android.intent.category.MULTIWINDOW_LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+
+        <activity-alias
+            android:icon="@ref/0x7f0c0009"
+            android:name="org.telegram.messenger.PremiumIcon"
+            android:enabled="false"
+            android:exported="true"
+            android:targetActivity="org.telegram.ui.LaunchActivity"
+            android:roundIcon="@ref/0x7f0c000a">
+
+            <intent-filter>
+
+                <action
+                    android:name="android.intent.action.MAIN" />
+
+                <category
+                    android:name="android.intent.category.LAUNCHER" />
+
+                <category
+                    android:name="android.intent.category.MULTIWINDOW_LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+
+        <activity-alias
+            android:icon="@ref/0x7f0c000c"
+            android:name="org.telegram.messenger.AquaIcon"
+            android:enabled="false"
+            android:exported="true"
+            android:targetActivity="org.telegram.ui.LaunchActivity"
+            android:roundIcon="@ref/0x7f0c000d">
+
+            <intent-filter>
+
+                <action
+                    android:name="android.intent.action.MAIN" />
+
+                <category
+                    android:name="android.intent.category.LAUNCHER" />
+
+                <category
+                    android:name="android.intent.category.MULTIWINDOW_LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+
+        <activity-alias
+            android:icon="@ref/0x7f0c0018"
+            android:name="org.telegram.messenger.VintageIcon"
+            android:enabled="false"
+            android:exported="true"
+            android:targetActivity="org.telegram.ui.LaunchActivity"
+            android:roundIcon="@ref/0x7f0c0019">
+
+            <intent-filter>
+
+                <action
+                    android:name="android.intent.action.MAIN" />
+
+                <category
+                    android:name="android.intent.category.LAUNCHER" />
+
+                <category
+                    android:name="android.intent.category.MULTIWINDOW_LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+
+        <activity-alias
+            android:name="org.telegram.messenger.DefaultIcon"
+            android:enabled="true"
+            android:exported="true"
+            android:targetActivity="org.telegram.ui.LaunchActivity">
+
+            <intent-filter>
+
+                <action
+                    android:name="android.intent.action.MAIN" />
+
+                <category
+                    android:name="android.intent.category.LAUNCHER" />
+
+                <category
+                    android:name="android.intent.category.MULTIWINDOW_LAUNCHER" />
             </intent-filter>
         </activity-alias>
 
@@ -978,7 +1099,7 @@
 
         <meta-data
             android:name="com.google.android.gms.car.notification.SmallIcon"
-            android:resource="@ref/0x7f070172" />
+            android:resource="@ref/0x7f070135" />
 
         <meta-data
             android:name="com.google.android.gms.car.application"
@@ -1144,6 +1265,16 @@
                     android:name="android.intent.action.DOWNLOAD_NOTIFICATION_CLICKED" />
             </intent-filter>
         </receiver>
+
+        <meta-data
+            android:name="com.google.android.play.billingclient.version"
+            android:value="5.0.0" />
+
+        <activity
+            android:theme="@ref/0x01030010"
+            android:name="com.android.billingclient.api.ProxyBillingActivity"
+            android:exported="false"
+            android:configChanges="0x5b0" />
 
         <service
             android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"

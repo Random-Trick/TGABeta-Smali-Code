@@ -23,7 +23,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 22112
+    .line 22302
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -34,12 +34,12 @@
 .method public deserializeResponse(Lorg/telegram/tgnet/AbstractSerializedData;IZ)Lorg/telegram/tgnet/TLObject;
     .registers 9
 
-    .line 22119
+    .line 22309
     new-instance p2, Lorg/telegram/tgnet/TLRPC$Vector;
 
     invoke-direct {p2}, Lorg/telegram/tgnet/TLRPC$Vector;-><init>()V
 
-    .line 22120
+    .line 22310
     invoke-virtual {p1, p3}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
@@ -49,7 +49,7 @@
     :goto_a
     if-ge v1, v0, :cond_1c
 
-    .line 22122
+    .line 22312
     iget-object v2, p2, Lorg/telegram/tgnet/TLRPC$Vector;->objects:Ljava/util/ArrayList;
 
     invoke-virtual {p1, p3}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt64(Z)J
@@ -73,17 +73,17 @@
 .method public serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
     .registers 3
 
-    .line 22128
+    .line 22318
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_messages_getMessageReadParticipants;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 22129
+    .line 22319
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_messages_getMessageReadParticipants;->peer:Lorg/telegram/tgnet/TLRPC$InputPeer;
 
     invoke-virtual {v0, p1}, Lorg/telegram/tgnet/TLObject;->serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
 
-    .line 22130
+    .line 22320
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_messages_getMessageReadParticipants;->msg_id:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V

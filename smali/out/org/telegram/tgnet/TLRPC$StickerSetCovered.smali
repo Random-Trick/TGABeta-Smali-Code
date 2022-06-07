@@ -23,10 +23,10 @@
 .method public constructor <init>()V
     .registers 2
 
-    .line 27169
+    .line 27537
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
-    .line 27171
+    .line 27539
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -51,7 +51,7 @@
 
     goto :goto_17
 
-    .line 27181
+    .line 27549
     :cond_c
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_stickerSetCovered;
 
@@ -59,7 +59,7 @@
 
     goto :goto_17
 
-    .line 27178
+    .line 27546
     :cond_12
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_stickerSetMultiCovered;
 
@@ -72,7 +72,7 @@
 
     goto :goto_32
 
-    .line 27185
+    .line 27553
     :cond_1c
     new-instance p0, Ljava/lang/RuntimeException;
 
@@ -102,7 +102,7 @@
     :goto_32
     if-eqz v0, :cond_37
 
-    .line 27188
+    .line 27556
     invoke-virtual {v0, p0, p2}, Lorg/telegram/tgnet/TLObject;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
     :cond_37

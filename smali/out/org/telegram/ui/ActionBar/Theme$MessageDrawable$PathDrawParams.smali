@@ -28,17 +28,17 @@
 .method public constructor <init>()V
     .registers 2
 
-    .line 889
+    .line 890
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 890
+    .line 891
     new-instance v0, Landroid/graphics/Path;
 
     invoke-direct {v0}, Landroid/graphics/Path;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/ui/ActionBar/Theme$MessageDrawable$PathDrawParams;->path:Landroid/graphics/Path;
 
-    .line 891
+    .line 892
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
@@ -53,7 +53,7 @@
 .method public invalidatePath(Landroid/graphics/Rect;ZZ)Z
     .registers 7
 
-    .line 896
+    .line 897
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/Theme$MessageDrawable$PathDrawParams;->lastRect:Landroid/graphics/Rect;
 
     invoke-virtual {v0}, Landroid/graphics/Rect;->isEmpty()Z
@@ -111,14 +111,14 @@
     :goto_31
     const/4 v0, 0x1
 
-    .line 897
+    .line 898
     :goto_32
     iput-boolean p3, p0, Lorg/telegram/ui/ActionBar/Theme$MessageDrawable$PathDrawParams;->lastDrawFullTop:Z
 
-    .line 898
+    .line 899
     iput-boolean p2, p0, Lorg/telegram/ui/ActionBar/Theme$MessageDrawable$PathDrawParams;->lastDrawFullBottom:Z
 
-    .line 899
+    .line 900
     iget-object p2, p0, Lorg/telegram/ui/ActionBar/Theme$MessageDrawable$PathDrawParams;->lastRect:Landroid/graphics/Rect;
 
     invoke-virtual {p2, p1}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V

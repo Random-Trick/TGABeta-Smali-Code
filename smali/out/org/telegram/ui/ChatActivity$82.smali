@@ -1,11 +1,11 @@
 .class Lorg/telegram/ui/ChatActivity$82;
-.super Lorg/telegram/ui/Components/GigagroupConvertAlert;
+.super Lorg/telegram/ui/PhotoViewer$EmptyPhotoViewerProvider;
 .source "ChatActivity.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lorg/telegram/ui/ChatActivity;->lambda$showGigagroupConvertAlert$122(Landroid/content/DialogInterface;I)V
+    value = Lorg/telegram/ui/ChatActivity;->openEditingMessageInPhotoEditor()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -17,116 +17,208 @@
 # instance fields
 .field final synthetic this$0:Lorg/telegram/ui/ChatActivity;
 
+.field final synthetic val$entry:Lorg/telegram/messenger/MediaController$PhotoEntry;
+
+.field final synthetic val$object:Lorg/telegram/messenger/MessageObject;
+
 
 # direct methods
-.method public static synthetic $r8$lambda$9wzKKuzDQ4nwzJDlqFxeg8svct4(Lorg/telegram/ui/ChatActivity$82;Z)V
-    .registers 2
-
-    invoke-direct {p0, p1}, Lorg/telegram/ui/ChatActivity$82;->lambda$onCovert$0(Z)V
-
-    return-void
-.end method
-
-.method constructor <init>(Lorg/telegram/ui/ChatActivity;Landroid/content/Context;Lorg/telegram/ui/ActionBar/BaseFragment;)V
+.method constructor <init>(Lorg/telegram/ui/ChatActivity;Lorg/telegram/messenger/MessageObject;Lorg/telegram/messenger/MediaController$PhotoEntry;)V
     .registers 4
 
-    .line 16927
+    .line 13732
     iput-object p1, p0, Lorg/telegram/ui/ChatActivity$82;->this$0:Lorg/telegram/ui/ChatActivity;
 
-    invoke-direct {p0, p2, p3}, Lorg/telegram/ui/Components/GigagroupConvertAlert;-><init>(Landroid/content/Context;Lorg/telegram/ui/ActionBar/BaseFragment;)V
+    iput-object p2, p0, Lorg/telegram/ui/ChatActivity$82;->val$object:Lorg/telegram/messenger/MessageObject;
 
-    return-void
-.end method
+    iput-object p3, p0, Lorg/telegram/ui/ChatActivity$82;->val$entry:Lorg/telegram/messenger/MediaController$PhotoEntry;
 
-.method private synthetic lambda$onCovert$0(Z)V
-    .registers 6
+    invoke-direct {p0}, Lorg/telegram/ui/PhotoViewer$EmptyPhotoViewerProvider;-><init>()V
 
-    if-eqz p1, :cond_10
-
-    .line 16932
-    iget-object p1, p0, Lorg/telegram/ui/ChatActivity$82;->this$0:Lorg/telegram/ui/ChatActivity;
-
-    invoke-static {p1}, Lorg/telegram/ui/ChatActivity;->access$3600(Lorg/telegram/ui/ChatActivity;)Lorg/telegram/ui/Components/UndoView;
-
-    move-result-object p1
-
-    const-wide/16 v0, 0x0
-
-    const/16 v2, 0x4c
-
-    const/4 v3, 0x0
-
-    invoke-virtual {p1, v0, v1, v2, v3}, Lorg/telegram/ui/Components/UndoView;->showWithAction(JILjava/lang/Runnable;)V
-
-    :cond_10
     return-void
 .end method
 
 
 # virtual methods
-.method protected onCancel()V
+.method public allowSendingSubmenu()Z
+    .registers 2
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public canCaptureMorePhotos()Z
+    .registers 2
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public closeKeyboard()Z
+    .registers 3
+
+    .line 13774
+    iget-object v0, p0, Lorg/telegram/ui/ChatActivity$82;->this$0:Lorg/telegram/ui/ChatActivity;
+
+    iget-object v1, v0, Lorg/telegram/ui/ChatActivity;->chatActivityEnterView:Lorg/telegram/ui/Components/ChatActivityEnterView;
+
+    if-eqz v1, :cond_15
+
+    invoke-virtual {v0}, Lorg/telegram/ui/ChatActivity;->isKeyboardVisible()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_15
+
+    .line 13775
+    iget-object v0, p0, Lorg/telegram/ui/ChatActivity$82;->this$0:Lorg/telegram/ui/ChatActivity;
+
+    iget-object v0, v0, Lorg/telegram/ui/ChatActivity;->chatActivityEnterView:Lorg/telegram/ui/Components/ChatActivityEnterView;
+
+    invoke-virtual {v0}, Lorg/telegram/ui/Components/ChatActivityEnterView;->closeKeyboard()V
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_15
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public getEditingMessageObject()Lorg/telegram/messenger/MessageObject;
+    .registers 3
+
+    .line 13762
+    iget-object v0, p0, Lorg/telegram/ui/ChatActivity$82;->this$0:Lorg/telegram/ui/ChatActivity;
+
+    invoke-static {v0}, Lorg/telegram/ui/ChatActivity;->access$28300(Lorg/telegram/ui/ChatActivity;)Lorg/telegram/messenger/MessageObject;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lorg/telegram/ui/ChatActivity$82;->val$object:Lorg/telegram/messenger/MessageObject;
+
+    if-ne v0, v1, :cond_b
+
+    goto :goto_c
+
+    :cond_b
+    const/4 v1, 0x0
+
+    :goto_c
+    return-object v1
+.end method
+
+.method public getPlaceForPhoto(Lorg/telegram/messenger/MessageObject;Lorg/telegram/tgnet/TLRPC$FileLocation;IZ)Lorg/telegram/ui/PhotoViewer$PlaceProviderObject;
     .registers 6
 
-    .line 16939
+    .line 13735
+    iget-object p1, p0, Lorg/telegram/ui/ChatActivity$82;->this$0:Lorg/telegram/ui/ChatActivity;
+
+    iget-object p2, p0, Lorg/telegram/ui/ChatActivity$82;->val$object:Lorg/telegram/messenger/MessageObject;
+
+    const/4 p3, 0x0
+
+    const/4 v0, 0x1
+
+    invoke-static {p1, p2, p3, p4, v0}, Lorg/telegram/ui/ChatActivity;->access$700(Lorg/telegram/ui/ChatActivity;Lorg/telegram/messenger/MessageObject;Lorg/telegram/tgnet/TLRPC$FileLocation;ZZ)Lorg/telegram/ui/PhotoViewer$PlaceProviderObject;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public onCaptionChanged(Ljava/lang/CharSequence;)V
+    .registers 4
+
+    .line 13767
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$82;->this$0:Lorg/telegram/ui/ChatActivity;
 
-    invoke-static {v0}, Lorg/telegram/ui/ChatActivity;->access$3600(Lorg/telegram/ui/ChatActivity;)Lorg/telegram/ui/Components/UndoView;
+    invoke-static {v0}, Lorg/telegram/ui/ChatActivity;->access$28300(Lorg/telegram/ui/ChatActivity;)Lorg/telegram/messenger/MessageObject;
 
     move-result-object v0
 
-    const-wide/16 v1, 0x0
+    iget-object v1, p0, Lorg/telegram/ui/ChatActivity$82;->val$object:Lorg/telegram/messenger/MessageObject;
 
-    const/16 v3, 0x4b
+    if-ne v0, v1, :cond_12
 
-    const/4 v4, 0x0
-
-    invoke-virtual {v0, v1, v2, v3, v4}, Lorg/telegram/ui/Components/UndoView;->showWithAction(JILjava/lang/Runnable;)V
-
-    .line 16940
+    .line 13768
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$82;->this$0:Lorg/telegram/ui/ChatActivity;
 
-    invoke-virtual {v0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getMessagesController()Lorg/telegram/messenger/MessagesController;
+    iget-object v0, v0, Lorg/telegram/ui/ChatActivity;->chatActivityEnterView:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
-    move-result-object v0
+    const/4 v1, 0x1
 
-    iget-object v1, p0, Lorg/telegram/ui/ChatActivity$82;->this$0:Lorg/telegram/ui/ChatActivity;
+    invoke-virtual {v0, p1, v1}, Lorg/telegram/ui/Components/ChatActivityEnterView;->setFieldText(Ljava/lang/CharSequence;Z)V
 
-    invoke-static {v1}, Lorg/telegram/ui/ChatActivity;->access$500(Lorg/telegram/ui/ChatActivity;)J
-
-    move-result-wide v1
-
-    const-string v3, "CONVERT_GIGAGROUP"
-
-    invoke-virtual {v0, v1, v2, v3}, Lorg/telegram/messenger/MessagesController;->removeSuggestion(JLjava/lang/String;)V
-
+    :cond_12
     return-void
 .end method
 
-.method protected onCovert()V
-    .registers 6
+.method public sendButtonPressed(ILorg/telegram/messenger/VideoEditedInfo;ZIZ)V
+    .registers 13
 
-    .line 16930
-    iget-object v0, p0, Lorg/telegram/ui/ChatActivity$82;->this$0:Lorg/telegram/ui/ChatActivity;
+    .line 13740
+    iget-object p1, p0, Lorg/telegram/ui/ChatActivity$82;->this$0:Lorg/telegram/ui/ChatActivity;
 
-    invoke-virtual {v0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getMessagesController()Lorg/telegram/messenger/MessagesController;
+    invoke-static {p1}, Lorg/telegram/ui/ChatActivity;->access$28300(Lorg/telegram/ui/ChatActivity;)Lorg/telegram/messenger/MessageObject;
 
-    move-result-object v0
+    move-result-object p1
 
+    iget-object v0, p0, Lorg/telegram/ui/ChatActivity$82;->val$object:Lorg/telegram/messenger/MessageObject;
+
+    if-eq p1, v0, :cond_b
+
+    return-void
+
+    .line 13743
+    :cond_b
+    iget-object v2, p0, Lorg/telegram/ui/ChatActivity$82;->val$entry:Lorg/telegram/messenger/MediaController$PhotoEntry;
+
+    iget-boolean p1, v2, Lorg/telegram/messenger/MediaController$MediaEditState;->isCropped:Z
+
+    if-nez p1, :cond_24
+
+    iget-boolean p1, v2, Lorg/telegram/messenger/MediaController$MediaEditState;->isPainted:Z
+
+    if-nez p1, :cond_24
+
+    iget-boolean p1, v2, Lorg/telegram/messenger/MediaController$MediaEditState;->isFiltered:Z
+
+    if-nez p1, :cond_24
+
+    if-eqz p2, :cond_1c
+
+    goto :goto_24
+
+    .line 13746
+    :cond_1c
+    iget-object p1, p0, Lorg/telegram/ui/ChatActivity$82;->this$0:Lorg/telegram/ui/ChatActivity;
+
+    iget-object p1, p1, Lorg/telegram/ui/ChatActivity;->chatActivityEnterView:Lorg/telegram/ui/Components/ChatActivityEnterView;
+
+    invoke-virtual {p1}, Lorg/telegram/ui/Components/ChatActivityEnterView;->doneEditingMessage()V
+
+    goto :goto_2d
+
+    .line 13744
+    :cond_24
+    :goto_24
     iget-object v1, p0, Lorg/telegram/ui/ChatActivity$82;->this$0:Lorg/telegram/ui/ChatActivity;
 
-    invoke-virtual {v1}, Lorg/telegram/ui/ActionBar/BaseFragment;->getParentActivity()Landroid/app/Activity;
+    move-object v3, p2
 
-    move-result-object v1
+    move v4, p3
 
-    iget-object v2, p0, Lorg/telegram/ui/ChatActivity$82;->this$0:Lorg/telegram/ui/ChatActivity;
+    move v5, p4
 
-    iget-object v3, v2, Lorg/telegram/ui/ChatActivity;->currentChat:Lorg/telegram/tgnet/TLRPC$Chat;
+    move v6, p5
 
-    new-instance v4, Lorg/telegram/ui/ChatActivity$82$$ExternalSyntheticLambda0;
+    invoke-virtual/range {v1 .. v6}, Lorg/telegram/ui/ChatActivity;->sendMedia(Lorg/telegram/messenger/MediaController$PhotoEntry;Lorg/telegram/messenger/VideoEditedInfo;ZIZ)V
 
-    invoke-direct {v4, p0}, Lorg/telegram/ui/ChatActivity$82$$ExternalSyntheticLambda0;-><init>(Lorg/telegram/ui/ChatActivity$82;)V
-
-    invoke-virtual {v0, v1, v3, v2, v4}, Lorg/telegram/messenger/MessagesController;->convertToGigaGroup(Landroid/content/Context;Lorg/telegram/tgnet/TLRPC$Chat;Lorg/telegram/ui/ActionBar/BaseFragment;Lorg/telegram/messenger/MessagesStorage$BooleanCallback;)V
-
+    :goto_2d
     return-void
 .end method

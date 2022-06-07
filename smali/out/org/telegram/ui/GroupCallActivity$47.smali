@@ -25,7 +25,7 @@
 .method constructor <init>(Lorg/telegram/ui/GroupCallActivity;)V
     .registers 2
 
-    .line 5979
+    .line 5984
     iput-object p1, p0, Lorg/telegram/ui/GroupCallActivity$47;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,14 +38,14 @@
 .method public didCopy()Z
     .registers 10
 
-    .line 5982
+    .line 5987
     invoke-static {}, Lorg/telegram/messenger/AndroidUtilities;->shouldShowClipboardToast()Z
 
     move-result v0
 
     if-eqz v0, :cond_17
 
-    .line 5983
+    .line 5988
     iget-object v0, p0, Lorg/telegram/ui/GroupCallActivity$47;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-virtual {v0}, Lorg/telegram/ui/GroupCallActivity;->getUndoView()Lorg/telegram/ui/Components/UndoView;

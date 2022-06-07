@@ -399,7 +399,7 @@
     .line 105
     iget-object v2, v0, Lorg/telegram/ui/Components/HintView;->textView:Landroid/widget/TextView;
 
-    const v4, 0x7f0e027c
+    const v4, 0x7f0e02b1
 
     const-string v8, "AutoplayVideoInfo"
 
@@ -416,7 +416,7 @@
 
     iput-object v2, v0, Lorg/telegram/ui/Components/HintView;->imageView:Landroid/widget/ImageView;
 
-    const v4, 0x7f070401
+    const v4, 0x7f0703e9
 
     .line 108
     invoke-virtual {v2, v4}, Landroid/widget/ImageView;->setImageResource(I)V
@@ -476,12 +476,12 @@
 
     if-eqz v3, :cond_166
 
-    const v1, 0x7f070400
+    const v1, 0x7f0703e8
 
     goto :goto_169
 
     :cond_166
-    const v1, 0x7f0703ff
+    const v1, 0x7f0703e7
 
     .line 115
     :goto_169
@@ -1693,7 +1693,7 @@
 
     move-result v2
 
-    goto/16 :goto_17f
+    goto/16 :goto_183
 
     :cond_7b
     :goto_7b
@@ -1704,7 +1704,7 @@
 
     const/16 v13, 0x3e8
 
-    if-ne v10, v4, :cond_101
+    if-ne v10, v4, :cond_105
 
     .line 177
     move-object/from16 v10, p2
@@ -1728,7 +1728,7 @@
     .line 182
     iget-object v2, v0, Lorg/telegram/ui/Components/HintView;->textView:Landroid/widget/TextView;
 
-    const v10, 0x7f0e0da7
+    const v10, 0x7f0e0e37
 
     const-string v14, "PollSelectOption"
 
@@ -1738,7 +1738,7 @@
 
     invoke-virtual {v2, v10}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    goto :goto_f2
+    goto :goto_f6
 
     .line 184
     :cond_9f
@@ -1750,7 +1750,7 @@
 
     move-result v2
 
-    if-eqz v2, :cond_ce
+    if-eqz v2, :cond_d0
 
     .line 185
     invoke-virtual {v10}, Ljava/lang/Integer;->intValue()I
@@ -1762,7 +1762,7 @@
     .line 186
     iget-object v2, v0, Lorg/telegram/ui/Components/HintView;->textView:Landroid/widget/TextView;
 
-    const v10, 0x7f0e0aec
+    const v10, 0x7f0e0b75
 
     const-string v14, "NoVotesQuiz"
 
@@ -1772,7 +1772,7 @@
 
     invoke-virtual {v2, v10}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    goto :goto_f2
+    goto :goto_f6
 
     .line 188
     :cond_be
@@ -1782,28 +1782,30 @@
 
     move-result v10
 
-    const-string v14, "Answer"
+    new-array v14, v5, [Ljava/lang/Object;
 
-    invoke-static {v14, v10}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    const-string v15, "Answer"
+
+    invoke-static {v15, v10, v14}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v10
 
     invoke-virtual {v2, v10}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    goto :goto_f2
+    goto :goto_f6
 
     .line 191
-    :cond_ce
+    :cond_d0
     invoke-virtual {v10}, Ljava/lang/Integer;->intValue()I
 
     move-result v2
 
-    if-nez v2, :cond_e3
+    if-nez v2, :cond_e5
 
     .line 192
     iget-object v2, v0, Lorg/telegram/ui/Components/HintView;->textView:Landroid/widget/TextView;
 
-    const v10, 0x7f0e0aeb
+    const v10, 0x7f0e0b74
 
     const-string v14, "NoVotes"
 
@@ -1813,26 +1815,28 @@
 
     invoke-virtual {v2, v10}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    goto :goto_f2
+    goto :goto_f6
 
     .line 194
-    :cond_e3
+    :cond_e5
     iget-object v2, v0, Lorg/telegram/ui/Components/HintView;->textView:Landroid/widget/TextView;
 
     invoke-virtual {v10}, Ljava/lang/Integer;->intValue()I
 
     move-result v10
 
-    const-string v14, "Vote"
+    new-array v14, v5, [Ljava/lang/Object;
 
-    invoke-static {v14, v10}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    const-string v15, "Vote"
+
+    invoke-static {v15, v10, v14}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v10
 
     invoke-virtual {v2, v10}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 198
-    :goto_f2
+    :goto_f6
     invoke-static {v13, v12}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
 
     move-result v2
@@ -1845,10 +1849,10 @@
 
     move/from16 v2, p3
 
-    goto/16 :goto_17f
+    goto/16 :goto_183
 
     .line 200
-    :cond_101
+    :cond_105
     invoke-virtual/range {p1 .. p1}, Lorg/telegram/ui/Cells/ChatMessageCell;->getMessageObject()Lorg/telegram/messenger/MessageObject;
 
     move-result-object v2
@@ -1856,12 +1860,12 @@
     .line 201
     iget-object v10, v0, Lorg/telegram/ui/Components/HintView;->overrideText:Ljava/lang/String;
 
-    if-nez v10, :cond_118
+    if-nez v10, :cond_11c
 
     .line 202
     iget-object v10, v0, Lorg/telegram/ui/Components/HintView;->textView:Landroid/widget/TextView;
 
-    const v14, 0x7f0e082f
+    const v14, 0x7f0e0889
 
     const-string v15, "HidAccount"
 
@@ -1871,16 +1875,16 @@
 
     invoke-virtual {v10, v14}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    goto :goto_11d
+    goto :goto_121
 
     .line 204
-    :cond_118
+    :cond_11c
     iget-object v14, v0, Lorg/telegram/ui/Components/HintView;->textView:Landroid/widget/TextView;
 
     invoke-virtual {v14, v10}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 206
-    :goto_11d
+    :goto_121
     invoke-static {v13, v12}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
 
     move-result v10
@@ -1896,7 +1900,7 @@
 
     move-result-object v10
 
-    if-eqz v10, :cond_151
+    if-eqz v10, :cond_155
 
     .line 209
     iget-wide v12, v10, Lorg/telegram/tgnet/TLRPC$User;->id:J
@@ -1905,7 +1909,7 @@
 
     cmp-long v10, v12, v14
 
-    if-nez v10, :cond_151
+    if-nez v10, :cond_155
 
     .line 210
     invoke-virtual/range {p1 .. p1}, Landroid/view/ViewGroup;->getMeasuredHeight()I
@@ -1936,12 +1940,12 @@
 
     sub-int/2addr v2, v10
 
-    :goto_14f
+    :goto_153
     add-int/2addr v9, v2
 
-    goto :goto_16b
+    goto :goto_16f
 
-    :cond_151
+    :cond_155
     const/high16 v10, 0x41b00000    # 22.0f
 
     .line 212
@@ -1956,13 +1960,13 @@
 
     move-result v2
 
-    if-nez v2, :cond_16b
+    if-nez v2, :cond_16f
 
     invoke-virtual/range {p1 .. p1}, Lorg/telegram/ui/Cells/ChatMessageCell;->isDrawNameLayout()Z
 
     move-result v2
 
-    if-eqz v2, :cond_16b
+    if-eqz v2, :cond_16f
 
     const/high16 v2, 0x41a00000    # 20.0f
 
@@ -1971,14 +1975,14 @@
 
     move-result v2
 
-    goto :goto_14f
+    goto :goto_153
 
     .line 217
-    :cond_16b
-    :goto_16b
+    :cond_16f
+    :goto_16f
     iget-boolean v2, v0, Lorg/telegram/ui/Components/HintView;->isTopArrow:Z
 
-    if-nez v2, :cond_17b
+    if-nez v2, :cond_17f
 
     invoke-virtual/range {p0 .. p0}, Landroid/widget/FrameLayout;->getMeasuredHeight()I
 
@@ -1990,18 +1994,18 @@
 
     add-int/2addr v2, v10
 
-    if-gt v9, v2, :cond_17b
+    if-gt v9, v2, :cond_17f
 
     return v5
 
     .line 220
-    :cond_17b
+    :cond_17f
     invoke-virtual/range {p1 .. p1}, Lorg/telegram/ui/Cells/ChatMessageCell;->getForwardNameCenterX()I
 
     move-result v2
 
     .line 223
-    :goto_17f
+    :goto_183
     invoke-virtual {v7}, Landroid/view/View;->getMeasuredWidth()I
 
     move-result v10
@@ -2009,7 +2013,7 @@
     .line 224
     iget-boolean v12, v0, Lorg/telegram/ui/Components/HintView;->isTopArrow:Z
 
-    if-eqz v12, :cond_197
+    if-eqz v12, :cond_19b
 
     .line 225
     iget v9, v0, Lorg/telegram/ui/Components/HintView;->extraTranslationY:F
@@ -2028,10 +2032,10 @@
 
     invoke-virtual {v0, v9}, Landroid/widget/FrameLayout;->setTranslationY(F)V
 
-    goto :goto_1a5
+    goto :goto_1a9
 
     .line 227
-    :cond_197
+    :cond_19b
     iget v12, v0, Lorg/telegram/ui/Components/HintView;->extraTranslationY:F
 
     invoke-virtual/range {p0 .. p0}, Landroid/widget/FrameLayout;->getMeasuredHeight()I
@@ -2049,7 +2053,7 @@
     invoke-virtual {v0, v12}, Landroid/widget/FrameLayout;->setTranslationY(F)V
 
     .line 229
-    :goto_1a5
+    :goto_1a9
     invoke-virtual/range {p1 .. p1}, Landroid/view/ViewGroup;->getLeft()I
 
     move-result v9
@@ -2066,7 +2070,7 @@
     .line 231
     iget v13, v0, Lorg/telegram/ui/Components/HintView;->currentType:I
 
-    if-ne v13, v4, :cond_1cd
+    if-ne v13, v4, :cond_1d1
 
     .line 232
     invoke-virtual/range {p0 .. p0}, Landroid/widget/FrameLayout;->getMeasuredWidth()I
@@ -2096,17 +2100,17 @@
 
     add-int/2addr v12, v4
 
-    goto :goto_1ea
+    goto :goto_1ee
 
     .line 235
-    :cond_1cd
+    :cond_1d1
     invoke-virtual {v7}, Landroid/view/View;->getMeasuredWidth()I
 
     move-result v4
 
     div-int/2addr v4, v3
 
-    if-le v9, v4, :cond_1e6
+    if-le v9, v4, :cond_1ea
 
     .line 236
     invoke-virtual/range {p0 .. p0}, Landroid/widget/FrameLayout;->getMeasuredWidth()I
@@ -2130,16 +2134,16 @@
 
     add-int/2addr v12, v10
 
-    goto :goto_1ea
+    goto :goto_1ee
 
-    :cond_1e6
+    :cond_1ea
     const/4 v4, 0x0
 
     .line 240
     invoke-virtual {v0, v4}, Landroid/widget/FrameLayout;->setTranslationX(F)V
 
     .line 242
-    :goto_1ea
+    :goto_1ee
     invoke-virtual/range {p1 .. p1}, Landroid/view/ViewGroup;->getLeft()I
 
     move-result v4
@@ -2172,7 +2176,7 @@
 
     div-int/2addr v4, v3
 
-    if-le v9, v4, :cond_224
+    if-le v9, v4, :cond_228
 
     .line 245
     invoke-static {v11}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -2183,7 +2187,7 @@
 
     cmpg-float v4, v2, v4
 
-    if-gez v4, :cond_269
+    if-gez v4, :cond_26d
 
     .line 246
     invoke-static {v11}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -2210,10 +2214,10 @@
 
     invoke-virtual {v7, v2}, Landroid/widget/ImageView;->setTranslationX(F)V
 
-    goto :goto_269
+    goto :goto_26d
 
     .line 251
-    :cond_224
+    :cond_228
     invoke-virtual/range {p0 .. p0}, Landroid/widget/FrameLayout;->getMeasuredWidth()I
 
     move-result v4
@@ -2230,7 +2234,7 @@
 
     cmpl-float v4, v2, v4
 
-    if-lez v4, :cond_24b
+    if-lez v4, :cond_24f
 
     .line 252
     invoke-virtual/range {p0 .. p0}, Landroid/widget/FrameLayout;->getMeasuredWidth()I
@@ -2259,10 +2263,10 @@
 
     invoke-virtual {v7, v2}, Landroid/widget/ImageView;->setTranslationX(F)V
 
-    goto :goto_269
+    goto :goto_26d
 
     .line 255
-    :cond_24b
+    :cond_24f
     invoke-static {v11}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v4
@@ -2271,7 +2275,7 @@
 
     cmpg-float v4, v2, v4
 
-    if-gez v4, :cond_269
+    if-gez v4, :cond_26d
 
     .line 256
     invoke-static {v11}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -2299,14 +2303,14 @@
     invoke-virtual {v7, v2}, Landroid/widget/ImageView;->setTranslationX(F)V
 
     .line 262
-    :cond_269
-    :goto_269
+    :cond_26d
+    :goto_26d
     iput-object v1, v0, Lorg/telegram/ui/Components/HintView;->messageCell:Lorg/telegram/ui/Cells/ChatMessageCell;
 
     .line 263
     iget-object v1, v0, Lorg/telegram/ui/Components/HintView;->animatorSet:Landroid/animation/AnimatorSet;
 
-    if-eqz v1, :cond_274
+    if-eqz v1, :cond_278
 
     .line 264
     invoke-virtual {v1}, Landroid/animation/AnimatorSet;->cancel()V
@@ -2315,7 +2319,7 @@
     iput-object v6, v0, Lorg/telegram/ui/Components/HintView;->animatorSet:Landroid/animation/AnimatorSet;
 
     .line 268
-    :cond_274
+    :cond_278
     invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -2325,7 +2329,7 @@
     .line 269
     invoke-virtual {v0, v5}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
-    if-eqz p5, :cond_2b0
+    if-eqz p5, :cond_2b4
 
     .line 271
     new-instance v1, Landroid/animation/AnimatorSet;
@@ -2341,7 +2345,7 @@
 
     new-array v3, v3, [F
 
-    fill-array-data v3, :array_2b6
+    fill-array-data v3, :array_2ba
 
     .line 273
     invoke-static {v0, v4, v3}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
@@ -2374,18 +2378,18 @@
 
     invoke-virtual {v1}, Landroid/animation/AnimatorSet;->start()V
 
-    goto :goto_2b5
+    goto :goto_2b9
 
-    :cond_2b0
+    :cond_2b4
     const/high16 v1, 0x3f800000    # 1.0f
 
     .line 285
     invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->setAlpha(F)V
 
-    :goto_2b5
+    :goto_2b9
     return v8
 
-    :array_2b6
+    :array_2ba
     .array-data 4
         0x0
         0x3f800000    # 1.0f

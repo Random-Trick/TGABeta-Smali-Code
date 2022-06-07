@@ -18,7 +18,7 @@
 .method constructor <init>(Lorg/telegram/ui/GroupCallActivity$ListAdapter;Landroid/content/Context;)V
     .registers 3
 
-    .line 8084
+    .line 8089
     invoke-direct {p0, p2}, Lorg/telegram/ui/Cells/GroupCallInvitedCell;-><init>(Landroid/content/Context;)V
 
     return-void
@@ -29,7 +29,7 @@
 .method protected onMeasure(II)V
     .registers 4
 
-    .line 8087
+    .line 8092
     invoke-static {}, Lorg/telegram/messenger/AndroidUtilities;->isTablet()Z
 
     move-result v0
@@ -38,7 +38,7 @@
 
     const/high16 v0, 0x43d20000    # 420.0f
 
-    .line 8088
+    .line 8093
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v0
@@ -53,7 +53,7 @@
 
     const/high16 v0, 0x40000000    # 2.0f
 
-    .line 8089
+    .line 8094
     invoke-static {p1, v0}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
 
     move-result p1
@@ -62,7 +62,7 @@
 
     goto :goto_21
 
-    .line 8091
+    .line 8096
     :cond_1e
     invoke-super {p0, p1, p2}, Lorg/telegram/ui/Cells/GroupCallInvitedCell;->onMeasure(II)V
 

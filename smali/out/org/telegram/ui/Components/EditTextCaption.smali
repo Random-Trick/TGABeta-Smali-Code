@@ -420,7 +420,7 @@
     return v0
 
     :cond_2e
-    const v1, 0x7f08008f
+    const v1, 0x7f080090
 
     if-ne p1, v1, :cond_37
 
@@ -430,7 +430,7 @@
     return v0
 
     :cond_37
-    const v1, 0x7f080090
+    const v1, 0x7f080091
 
     if-ne p1, v1, :cond_40
 
@@ -440,7 +440,7 @@
     return v0
 
     :cond_40
-    const v1, 0x7f08008e
+    const v1, 0x7f08008f
 
     if-ne p1, v1, :cond_49
 
@@ -652,7 +652,7 @@
 
     const-string v1, "CreateLink"
 
-    const v2, 0x7f0e04e2
+    const v2, 0x7f0e0531
 
     .line 161
     invoke-static {v1, v2}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -693,7 +693,7 @@
 
     const-string v3, "URL"
 
-    const v4, 0x7f0e11d7
+    const v4, 0x7f0e12a4
 
     .line 172
     invoke-static {v3, v4}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -792,7 +792,7 @@
     move-result v6
 
     :goto_8f
-    const v7, 0x7f0e0bae
+    const v7, 0x7f0e0c38
 
     const-string v8, "OK"
 
@@ -807,7 +807,7 @@
 
     invoke-virtual {v0, v7, v8}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const v5, 0x7f0e0331
+    const v5, 0x7f0e036d
 
     const-string v6, "Cancel"
 
@@ -1060,9 +1060,9 @@
     .line 487
     new-instance v0, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;
 
-    const v1, 0x7f08008e
+    const v1, 0x7f08008f
 
-    const v2, 0x7f0e10a7
+    const v2, 0x7f0e1166
 
     const-string v3, "Spoiler"
 
@@ -1079,7 +1079,7 @@
 
     const v1, 0x7f080085
 
-    const v2, 0x7f0e02c2
+    const v2, 0x7f0e02f9
 
     const-string v3, "Bold"
 
@@ -1096,7 +1096,7 @@
 
     const v1, 0x7f080088
 
-    const v2, 0x7f0e08d8
+    const v2, 0x7f0e093d
 
     const-string v3, "Italic"
 
@@ -1113,7 +1113,7 @@
 
     const v1, 0x7f08008a
 
-    const v2, 0x7f0e0a59
+    const v2, 0x7f0e0ae0
 
     const-string v3, "Mono"
 
@@ -1128,9 +1128,9 @@
     .line 491
     new-instance v0, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;
 
-    const v1, 0x7f08008f
+    const v1, 0x7f080090
 
-    const v2, 0x7f0e10f8
+    const v2, 0x7f0e11b7
 
     const-string v3, "Strike"
 
@@ -1145,9 +1145,9 @@
     .line 492
     new-instance v0, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;
 
-    const v1, 0x7f080090
+    const v1, 0x7f080091
 
-    const v2, 0x7f0e11de
+    const v2, 0x7f0e12ab
 
     const-string v3, "Underline"
 
@@ -1164,7 +1164,7 @@
 
     const v1, 0x7f080089
 
-    const v2, 0x7f0e04e2
+    const v2, 0x7f0e0531
 
     const-string v3, "CreateLink"
 
@@ -1181,7 +1181,7 @@
 
     const v1, 0x7f08008c
 
-    const v2, 0x7f0e0eaf
+    const v2, 0x7f0e0f5b
 
     const-string v3, "Regular"
 

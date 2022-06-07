@@ -162,11 +162,11 @@
 
     const-string v1, "windowBackgroundGrayShadow"
 
-    const v2, 0x7f07012d
+    const v2, 0x7f0700fc
 
     if-ne p2, v0, :cond_33
 
-    const p2, 0x7f0e1003
+    const p2, 0x7f0e10c0
 
     const-string v0, "SetAdditionalPasswordInfo"
 
@@ -198,7 +198,7 @@
 
     if-ne p2, v0, :cond_cb
 
-    const p2, 0x7f0e0641
+    const p2, 0x7f0e0693
 
     const-string v0, "EnabledPasswordText"
 
@@ -247,7 +247,7 @@
 
     if-ne p2, v0, :cond_77
 
-    const p2, 0x7f0e0353
+    const p2, 0x7f0e0391
 
     const-string v0, "ChangePassword"
 
@@ -270,7 +270,7 @@
 
     if-ne p2, v0, :cond_8c
 
-    const p2, 0x7f0e1002
+    const p2, 0x7f0e10bf
 
     const-string v0, "SetAdditionalPassword"
 
@@ -293,7 +293,7 @@
 
     if-ne p2, v0, :cond_a1
 
-    const p2, 0x7f0e11c0
+    const p2, 0x7f0e128d
 
     const-string v0, "TurnPasswordOff"
 
@@ -318,7 +318,7 @@
 
     if-ne p2, v0, :cond_b7
 
-    const p2, 0x7f0e035c
+    const p2, 0x7f0e039a
 
     const-string v0, "ChangeRecoveryEmail"
 
@@ -341,7 +341,7 @@
 
     if-ne p2, v0, :cond_cb
 
-    const p2, 0x7f0e100d
+    const p2, 0x7f0e10cb
 
     const-string v0, "SetRecoveryEmail"
 

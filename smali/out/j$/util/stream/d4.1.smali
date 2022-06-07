@@ -3,98 +3,520 @@
 
 
 # static fields
-.field public static final enum OP:Lj$/util/stream/d4;
+.field public static final enum DISTINCT:Lj$/util/stream/d4;
 
-.field public static final enum SPLITERATOR:Lj$/util/stream/d4;
+.field public static final enum ORDERED:Lj$/util/stream/d4;
 
-.field public static final enum STREAM:Lj$/util/stream/d4;
+.field public static final enum SHORT_CIRCUIT:Lj$/util/stream/d4;
 
-.field public static final enum TERMINAL_OP:Lj$/util/stream/d4;
+.field public static final enum SIZED:Lj$/util/stream/d4;
 
-.field public static final enum UPSTREAM_TERMINAL_OP:Lj$/util/stream/d4;
+.field public static final enum SORTED:Lj$/util/stream/d4;
 
-.field private static final synthetic a:[Lj$/util/stream/d4;
+.field static final f:I
+
+.field static final g:I
+
+.field static final h:I
+
+.field private static final i:I
+
+.field private static final j:I
+
+.field private static final k:I
+
+.field static final l:I
+
+.field static final m:I
+
+.field static final n:I
+
+.field static final o:I
+
+.field static final p:I
+
+.field static final q:I
+
+.field static final r:I
+
+.field static final s:I
+
+.field static final t:I
+
+.field static final u:I
+
+.field private static final synthetic v:[Lj$/util/stream/d4;
+
+
+# instance fields
+.field private final a:Ljava/util/Map;
+
+.field private final b:I
+
+.field private final c:I
+
+.field private final d:I
+
+.field private final e:I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .registers 11
+    .registers 16
 
     new-instance v0, Lj$/util/stream/d4;
 
-    const-string v1, "SPLITERATOR"
+    sget-object v1, Lj$/util/stream/c4;->SPLITERATOR:Lj$/util/stream/c4;
 
-    const/4 v2, 0x0
+    invoke-static {v1}, Lj$/util/stream/d4;->f(Lj$/util/stream/c4;)Lj$/util/stream/b4;
 
-    invoke-direct {v0, v1, v2}, Lj$/util/stream/d4;-><init>(Ljava/lang/String;I)V
+    move-result-object v2
 
-    sput-object v0, Lj$/util/stream/d4;->SPLITERATOR:Lj$/util/stream/d4;
+    sget-object v3, Lj$/util/stream/c4;->STREAM:Lj$/util/stream/c4;
 
-    new-instance v1, Lj$/util/stream/d4;
+    invoke-virtual {v2, v3}, Lj$/util/stream/b4;->b(Lj$/util/stream/c4;)Lj$/util/stream/b4;
 
-    const-string v3, "STREAM"
+    sget-object v4, Lj$/util/stream/c4;->OP:Lj$/util/stream/c4;
 
-    const/4 v4, 0x1
+    invoke-virtual {v2, v4}, Lj$/util/stream/b4;->c(Lj$/util/stream/c4;)Lj$/util/stream/b4;
 
-    invoke-direct {v1, v3, v4}, Lj$/util/stream/d4;-><init>(Ljava/lang/String;I)V
+    const-string v5, "DISTINCT"
 
-    sput-object v1, Lj$/util/stream/d4;->STREAM:Lj$/util/stream/d4;
+    const/4 v6, 0x0
 
-    new-instance v3, Lj$/util/stream/d4;
+    invoke-direct {v0, v5, v6, v6, v2}, Lj$/util/stream/d4;-><init>(Ljava/lang/String;IILj$/util/stream/b4;)V
 
-    const-string v5, "OP"
+    sput-object v0, Lj$/util/stream/d4;->DISTINCT:Lj$/util/stream/d4;
 
-    const/4 v6, 0x2
+    new-instance v2, Lj$/util/stream/d4;
 
-    invoke-direct {v3, v5, v6}, Lj$/util/stream/d4;-><init>(Ljava/lang/String;I)V
+    invoke-static {v1}, Lj$/util/stream/d4;->f(Lj$/util/stream/c4;)Lj$/util/stream/b4;
 
-    sput-object v3, Lj$/util/stream/d4;->OP:Lj$/util/stream/d4;
+    move-result-object v5
+
+    invoke-virtual {v5, v3}, Lj$/util/stream/b4;->b(Lj$/util/stream/c4;)Lj$/util/stream/b4;
+
+    invoke-virtual {v5, v4}, Lj$/util/stream/b4;->c(Lj$/util/stream/c4;)Lj$/util/stream/b4;
+
+    const-string v7, "SORTED"
+
+    const/4 v8, 0x1
+
+    invoke-direct {v2, v7, v8, v8, v5}, Lj$/util/stream/d4;-><init>(Ljava/lang/String;IILj$/util/stream/b4;)V
+
+    sput-object v2, Lj$/util/stream/d4;->SORTED:Lj$/util/stream/d4;
 
     new-instance v5, Lj$/util/stream/d4;
 
-    const-string v7, "TERMINAL_OP"
+    invoke-static {v1}, Lj$/util/stream/d4;->f(Lj$/util/stream/c4;)Lj$/util/stream/b4;
 
-    const/4 v8, 0x3
+    move-result-object v7
 
-    invoke-direct {v5, v7, v8}, Lj$/util/stream/d4;-><init>(Ljava/lang/String;I)V
+    invoke-virtual {v7, v3}, Lj$/util/stream/b4;->b(Lj$/util/stream/c4;)Lj$/util/stream/b4;
 
-    sput-object v5, Lj$/util/stream/d4;->TERMINAL_OP:Lj$/util/stream/d4;
+    invoke-virtual {v7, v4}, Lj$/util/stream/b4;->c(Lj$/util/stream/c4;)Lj$/util/stream/b4;
+
+    sget-object v9, Lj$/util/stream/c4;->TERMINAL_OP:Lj$/util/stream/c4;
+
+    invoke-virtual {v7, v9}, Lj$/util/stream/b4;->a(Lj$/util/stream/c4;)Lj$/util/stream/b4;
+
+    sget-object v10, Lj$/util/stream/c4;->UPSTREAM_TERMINAL_OP:Lj$/util/stream/c4;
+
+    invoke-virtual {v7, v10}, Lj$/util/stream/b4;->a(Lj$/util/stream/c4;)Lj$/util/stream/b4;
+
+    const-string v11, "ORDERED"
+
+    const/4 v12, 0x2
+
+    invoke-direct {v5, v11, v12, v12, v7}, Lj$/util/stream/d4;-><init>(Ljava/lang/String;IILj$/util/stream/b4;)V
+
+    sput-object v5, Lj$/util/stream/d4;->ORDERED:Lj$/util/stream/d4;
 
     new-instance v7, Lj$/util/stream/d4;
 
-    const-string v9, "UPSTREAM_TERMINAL_OP"
+    invoke-static {v1}, Lj$/util/stream/d4;->f(Lj$/util/stream/c4;)Lj$/util/stream/b4;
 
-    const/4 v10, 0x4
+    move-result-object v11
 
-    invoke-direct {v7, v9, v10}, Lj$/util/stream/d4;-><init>(Ljava/lang/String;I)V
+    invoke-virtual {v11, v3}, Lj$/util/stream/b4;->b(Lj$/util/stream/c4;)Lj$/util/stream/b4;
 
-    sput-object v7, Lj$/util/stream/d4;->UPSTREAM_TERMINAL_OP:Lj$/util/stream/d4;
+    invoke-virtual {v11, v4}, Lj$/util/stream/b4;->a(Lj$/util/stream/c4;)Lj$/util/stream/b4;
 
-    const/4 v9, 0x5
+    const-string v13, "SIZED"
 
-    new-array v9, v9, [Lj$/util/stream/d4;
+    const/4 v14, 0x3
 
-    aput-object v0, v9, v2
+    invoke-direct {v7, v13, v14, v14, v11}, Lj$/util/stream/d4;-><init>(Ljava/lang/String;IILj$/util/stream/b4;)V
 
-    aput-object v1, v9, v4
+    sput-object v7, Lj$/util/stream/d4;->SIZED:Lj$/util/stream/d4;
 
-    aput-object v3, v9, v6
+    new-instance v11, Lj$/util/stream/d4;
 
-    aput-object v5, v9, v8
+    invoke-static {v4}, Lj$/util/stream/d4;->f(Lj$/util/stream/c4;)Lj$/util/stream/b4;
 
-    aput-object v7, v9, v10
+    move-result-object v13
 
-    sput-object v9, Lj$/util/stream/d4;->a:[Lj$/util/stream/d4;
+    invoke-virtual {v13, v9}, Lj$/util/stream/b4;->b(Lj$/util/stream/c4;)Lj$/util/stream/b4;
+
+    const-string v15, "SHORT_CIRCUIT"
+
+    const/4 v14, 0x4
+
+    const/16 v12, 0xc
+
+    invoke-direct {v11, v15, v14, v12, v13}, Lj$/util/stream/d4;-><init>(Ljava/lang/String;IILj$/util/stream/b4;)V
+
+    sput-object v11, Lj$/util/stream/d4;->SHORT_CIRCUIT:Lj$/util/stream/d4;
+
+    const/4 v12, 0x5
+
+    new-array v12, v12, [Lj$/util/stream/d4;
+
+    aput-object v0, v12, v6
+
+    aput-object v2, v12, v8
+
+    const/4 v8, 0x2
+
+    aput-object v5, v12, v8
+
+    const/4 v8, 0x3
+
+    aput-object v7, v12, v8
+
+    aput-object v11, v12, v14
+
+    sput-object v12, Lj$/util/stream/d4;->v:[Lj$/util/stream/d4;
+
+    invoke-static {v1}, Lj$/util/stream/d4;->b(Lj$/util/stream/c4;)I
+
+    move-result v1
+
+    sput v1, Lj$/util/stream/d4;->f:I
+
+    invoke-static {v3}, Lj$/util/stream/d4;->b(Lj$/util/stream/c4;)I
+
+    move-result v1
+
+    sput v1, Lj$/util/stream/d4;->g:I
+
+    invoke-static {v4}, Lj$/util/stream/d4;->b(Lj$/util/stream/c4;)I
+
+    move-result v3
+
+    sput v3, Lj$/util/stream/d4;->h:I
+
+    invoke-static {v9}, Lj$/util/stream/d4;->b(Lj$/util/stream/c4;)I
+
+    invoke-static {v10}, Lj$/util/stream/d4;->b(Lj$/util/stream/c4;)I
+
+    .line 1
+    invoke-static {}, Lj$/util/stream/d4;->values()[Lj$/util/stream/d4;
+
+    move-result-object v3
+
+    array-length v4, v3
+
+    const/4 v8, 0x0
+
+    :goto_a2
+    if-ge v6, v4, :cond_ac
+
+    aget-object v9, v3, v6
+
+    iget v9, v9, Lj$/util/stream/d4;->e:I
+
+    or-int/2addr v8, v9
+
+    add-int/lit8 v6, v6, 0x1
+
+    goto :goto_a2
+
+    .line 2
+    :cond_ac
+    sput v8, Lj$/util/stream/d4;->i:I
+
+    sput v1, Lj$/util/stream/d4;->j:I
+
+    shl-int/lit8 v3, v1, 0x1
+
+    sput v3, Lj$/util/stream/d4;->k:I
+
+    or-int/2addr v1, v3
+
+    sput v1, Lj$/util/stream/d4;->l:I
+
+    iget v1, v0, Lj$/util/stream/d4;->c:I
+
+    sput v1, Lj$/util/stream/d4;->m:I
+
+    iget v0, v0, Lj$/util/stream/d4;->d:I
+
+    sput v0, Lj$/util/stream/d4;->n:I
+
+    iget v0, v2, Lj$/util/stream/d4;->c:I
+
+    sput v0, Lj$/util/stream/d4;->o:I
+
+    iget v0, v2, Lj$/util/stream/d4;->d:I
+
+    sput v0, Lj$/util/stream/d4;->p:I
+
+    iget v0, v5, Lj$/util/stream/d4;->c:I
+
+    sput v0, Lj$/util/stream/d4;->q:I
+
+    iget v0, v5, Lj$/util/stream/d4;->d:I
+
+    sput v0, Lj$/util/stream/d4;->r:I
+
+    iget v0, v7, Lj$/util/stream/d4;->c:I
+
+    sput v0, Lj$/util/stream/d4;->s:I
+
+    iget v0, v7, Lj$/util/stream/d4;->d:I
+
+    sput v0, Lj$/util/stream/d4;->t:I
+
+    iget v0, v11, Lj$/util/stream/d4;->c:I
+
+    sput v0, Lj$/util/stream/d4;->u:I
 
     return-void
 .end method
 
-.method private constructor <init>(Ljava/lang/String;I)V
-    .registers 3
+.method private constructor <init>(Ljava/lang/String;IILj$/util/stream/b4;)V
+    .registers 11
 
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
+    .line 1
+    invoke-static {}, Lj$/util/stream/c4;->values()[Lj$/util/stream/c4;
+
+    move-result-object p1
+
+    array-length p2, p1
+
+    const/4 v0, 0x0
+
+    const/4 v1, 0x0
+
+    :goto_a
+    if-ge v1, p2, :cond_24
+
+    aget-object v2, p1, v1
+
+    iget-object v3, p4, Lj$/util/stream/b4;->a:Ljava/util/Map;
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v4
+
+    .line 2
+    instance-of v5, v3, Lj$/util/Map;
+
+    if-eqz v5, :cond_1e
+
+    check-cast v3, Lj$/util/Map;
+
+    invoke-interface {v3, v2, v4}, Lj$/util/Map;->putIfAbsent(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    goto :goto_21
+
+    :cond_1e
+    invoke-static {v3, v2, v4}, Lj$/util/Map$-CC;->$default$putIfAbsent(Ljava/util/Map;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    :goto_21
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_a
+
+    .line 3
+    :cond_24
+    iget-object p1, p4, Lj$/util/stream/b4;->a:Ljava/util/Map;
+
+    .line 4
+    iput-object p1, p0, Lj$/util/stream/d4;->a:Ljava/util/Map;
+
+    const/4 p1, 0x2
+
+    mul-int/lit8 p3, p3, 0x2
+
+    iput p3, p0, Lj$/util/stream/d4;->b:I
+
+    const/4 p2, 0x1
+
+    shl-int/2addr p2, p3
+
+    iput p2, p0, Lj$/util/stream/d4;->c:I
+
+    shl-int/2addr p1, p3
+
+    iput p1, p0, Lj$/util/stream/d4;->d:I
+
+    const/4 p1, 0x3
+
+    shl-int/2addr p1, p3
+
+    iput p1, p0, Lj$/util/stream/d4;->e:I
+
     return-void
+.end method
+
+.method static a(II)I
+    .registers 4
+
+    if-nez p0, :cond_5
+
+    .line 1
+    sget v0, Lj$/util/stream/d4;->i:I
+
+    goto :goto_13
+
+    :cond_5
+    sget v0, Lj$/util/stream/d4;->j:I
+
+    and-int/2addr v0, p0
+
+    shl-int/lit8 v0, v0, 0x1
+
+    or-int/2addr v0, p0
+
+    sget v1, Lj$/util/stream/d4;->k:I
+
+    and-int/2addr v1, p0
+
+    shr-int/lit8 v1, v1, 0x1
+
+    or-int/2addr v0, v1
+
+    xor-int/lit8 v0, v0, -0x1
+
+    :goto_13
+    and-int/2addr p1, v0
+
+    or-int/2addr p0, p1
+
+    return p0
+.end method
+
+.method private static b(Lj$/util/stream/c4;)I
+    .registers 7
+
+    invoke-static {}, Lj$/util/stream/d4;->values()[Lj$/util/stream/d4;
+
+    move-result-object v0
+
+    array-length v1, v0
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x0
+
+    :goto_7
+    if-ge v2, v1, :cond_1f
+
+    aget-object v4, v0, v2
+
+    iget-object v5, v4, Lj$/util/stream/d4;->a:Ljava/util/Map;
+
+    invoke-interface {v5, p0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Ljava/lang/Integer;
+
+    invoke-virtual {v5}, Ljava/lang/Integer;->intValue()I
+
+    move-result v5
+
+    iget v4, v4, Lj$/util/stream/d4;->b:I
+
+    shl-int v4, v5, v4
+
+    or-int/2addr v3, v4
+
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_7
+
+    :cond_1f
+    return v3
+.end method
+
+.method static c(Lj$/util/u;)I
+    .registers 3
+
+    invoke-interface {p0}, Lj$/util/u;->characteristics()I
+
+    move-result v0
+
+    and-int/lit8 v1, v0, 0x4
+
+    if-eqz v1, :cond_14
+
+    invoke-interface {p0}, Lj$/util/u;->getComparator()Ljava/util/Comparator;
+
+    move-result-object p0
+
+    if-eqz p0, :cond_14
+
+    sget p0, Lj$/util/stream/d4;->f:I
+
+    and-int/2addr p0, v0
+
+    and-int/lit8 p0, p0, -0x5
+
+    return p0
+
+    :cond_14
+    sget p0, Lj$/util/stream/d4;->f:I
+
+    and-int/2addr p0, v0
+
+    return p0
+.end method
+
+.method private static f(Lj$/util/stream/c4;)Lj$/util/stream/b4;
+    .registers 4
+
+    new-instance v0, Lj$/util/stream/b4;
+
+    new-instance v1, Ljava/util/EnumMap;
+
+    const-class v2, Lj$/util/stream/c4;
+
+    invoke-direct {v1, v2}, Ljava/util/EnumMap;-><init>(Ljava/lang/Class;)V
+
+    invoke-direct {v0, v1}, Lj$/util/stream/b4;-><init>(Ljava/util/Map;)V
+
+    const/4 v2, 0x1
+
+    .line 1
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    .line 2
+    invoke-interface {v1, p0, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method static g(I)I
+    .registers 3
+
+    xor-int/lit8 v0, p0, -0x1
+
+    shr-int/lit8 v0, v0, 0x1
+
+    sget v1, Lj$/util/stream/d4;->j:I
+
+    and-int/2addr v0, v1
+
+    and-int/2addr p0, v0
+
+    return p0
 .end method
 
 .method public static valueOf(Ljava/lang/String;)Lj$/util/stream/d4;
@@ -114,7 +536,7 @@
 .method public static values()[Lj$/util/stream/d4;
     .registers 1
 
-    sget-object v0, Lj$/util/stream/d4;->a:[Lj$/util/stream/d4;
+    sget-object v0, Lj$/util/stream/d4;->v:[Lj$/util/stream/d4;
 
     invoke-virtual {v0}, [Lj$/util/stream/d4;->clone()Ljava/lang/Object;
 
@@ -123,4 +545,48 @@
     check-cast v0, [Lj$/util/stream/d4;
 
     return-object v0
+.end method
+
+
+# virtual methods
+.method d(I)Z
+    .registers 3
+
+    iget v0, p0, Lj$/util/stream/d4;->e:I
+
+    and-int/2addr p1, v0
+
+    iget v0, p0, Lj$/util/stream/d4;->c:I
+
+    if-ne p1, v0, :cond_9
+
+    const/4 p1, 0x1
+
+    goto :goto_a
+
+    :cond_9
+    const/4 p1, 0x0
+
+    :goto_a
+    return p1
+.end method
+
+.method e(I)Z
+    .registers 3
+
+    iget v0, p0, Lj$/util/stream/d4;->e:I
+
+    and-int/2addr p1, v0
+
+    if-ne p1, v0, :cond_7
+
+    const/4 p1, 0x1
+
+    goto :goto_8
+
+    :cond_7
+    const/4 p1, 0x0
+
+    :goto_8
+    return p1
 .end method

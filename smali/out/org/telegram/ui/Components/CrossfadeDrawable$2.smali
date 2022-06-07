@@ -25,7 +25,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/CrossfadeDrawable;)V
     .registers 2
 
-    .line 37
+    .line 46
     iput-object p1, p0, Lorg/telegram/ui/Components/CrossfadeDrawable$2;->this$0:Lorg/telegram/ui/Components/CrossfadeDrawable;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public invalidateDrawable(Landroid/graphics/drawable/Drawable;)V
     .registers 3
 
-    .line 40
+    .line 49
     iget-object p1, p0, Lorg/telegram/ui/Components/CrossfadeDrawable$2;->this$0:Lorg/telegram/ui/Components/CrossfadeDrawable;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/CrossfadeDrawable;->access$000(Lorg/telegram/ui/Components/CrossfadeDrawable;)F
@@ -51,7 +51,7 @@
 
     if-lez p1, :cond_10
 
-    .line 41
+    .line 50
     iget-object p1, p0, Lorg/telegram/ui/Components/CrossfadeDrawable$2;->this$0:Lorg/telegram/ui/Components/CrossfadeDrawable;
 
     invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V

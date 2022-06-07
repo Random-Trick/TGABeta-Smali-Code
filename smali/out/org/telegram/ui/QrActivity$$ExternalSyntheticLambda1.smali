@@ -33,7 +33,7 @@
 
     iget-object v1, p0, Lorg/telegram/ui/QrActivity$$ExternalSyntheticLambda1;->f$1:[I
 
-    invoke-static {v0, v1, p1}, Lorg/telegram/ui/QrActivity;->$r8$lambda$QIHkAQloPFL_yUGWmBBvVuxDavQ(Lorg/telegram/ui/QrActivity;[ILandroid/animation/ValueAnimator;)V
+    invoke-static {v0, v1, p1}, Lorg/telegram/ui/QrActivity;->$r8$lambda$6GsiLDDY-LAqXCZgkO5fK3AtgVA(Lorg/telegram/ui/QrActivity;[ILandroid/animation/ValueAnimator;)V
 
     return-void
 .end method

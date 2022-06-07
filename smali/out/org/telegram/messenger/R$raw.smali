@@ -288,101 +288,107 @@
 
 .field public static final timer_3:I = 0x7f0d0088
 
-.field public static final tsv_monkey_close:I = 0x7f0d0089
+.field public static final transcribe_in:I = 0x7f0d0089
 
-.field public static final tsv_setup_email_sent:I = 0x7f0d008a
+.field public static final transcribe_out:I = 0x7f0d008a
 
-.field public static final tsv_setup_hint:I = 0x7f0d008b
+.field public static final tsv_monkey_close:I = 0x7f0d008b
 
-.field public static final tsv_setup_intro:I = 0x7f0d008c
+.field public static final tsv_setup_email_sent:I = 0x7f0d008c
 
-.field public static final tsv_setup_mail:I = 0x7f0d008d
+.field public static final tsv_setup_hint:I = 0x7f0d008d
 
-.field public static final tsv_setup_monkey_close_and_peek:I = 0x7f0d008e
+.field public static final tsv_setup_intro:I = 0x7f0d008e
 
-.field public static final tsv_setup_monkey_close_and_peek_to_idle:I = 0x7f0d008f
+.field public static final tsv_setup_mail:I = 0x7f0d008f
 
-.field public static final tsv_setup_monkey_idle1:I = 0x7f0d0090
+.field public static final tsv_setup_monkey_close_and_peek:I = 0x7f0d0090
 
-.field public static final tsv_setup_monkey_idle2:I = 0x7f0d0091
+.field public static final tsv_setup_monkey_close_and_peek_to_idle:I = 0x7f0d0091
 
-.field public static final tsv_setup_monkey_peek:I = 0x7f0d0092
+.field public static final tsv_setup_monkey_idle1:I = 0x7f0d0092
 
-.field public static final tsv_setup_monkey_tracking:I = 0x7f0d0093
+.field public static final tsv_setup_monkey_idle2:I = 0x7f0d0093
 
-.field public static final ubuntu_30:I = 0x7f0d0094
+.field public static final tsv_setup_monkey_peek:I = 0x7f0d0094
 
-.field public static final utyan_call:I = 0x7f0d0095
+.field public static final tsv_setup_monkey_tracking:I = 0x7f0d0095
 
-.field public static final utyan_change_number:I = 0x7f0d0096
+.field public static final ubuntu_30:I = 0x7f0d0096
 
-.field public static final utyan_gigagroup:I = 0x7f0d0097
+.field public static final utyan_call:I = 0x7f0d0097
 
-.field public static final utyan_newborn:I = 0x7f0d0098
+.field public static final utyan_change_number:I = 0x7f0d0098
 
-.field public static final utyan_passcode:I = 0x7f0d0099
+.field public static final utyan_gigagroup:I = 0x7f0d0099
 
-.field public static final utyan_private:I = 0x7f0d009a
+.field public static final utyan_newborn:I = 0x7f0d009a
 
-.field public static final utyan_schedule:I = 0x7f0d009b
+.field public static final utyan_passcode:I = 0x7f0d009b
 
-.field public static final voice_mini:I = 0x7f0d009c
+.field public static final utyan_private:I = 0x7f0d009c
 
-.field public static final voice_muted:I = 0x7f0d009d
+.field public static final utyan_saved_messages:I = 0x7f0d009d
 
-.field public static final voice_outlined:I = 0x7f0d009e
+.field public static final utyan_schedule:I = 0x7f0d009e
 
-.field public static final voice_outlined2:I = 0x7f0d009f
+.field public static final voice_mini:I = 0x7f0d009f
 
-.field public static final voicechat_connecting:I = 0x7f0d00a0
+.field public static final voice_muted:I = 0x7f0d00a0
 
-.field public static final voicechat_join:I = 0x7f0d00a1
+.field public static final voice_outlined:I = 0x7f0d00a1
 
-.field public static final voicechat_leave:I = 0x7f0d00a2
+.field public static final voice_outlined2:I = 0x7f0d00a2
 
-.field public static final voip_allow_talk:I = 0x7f0d00a3
+.field public static final voicechat_connecting:I = 0x7f0d00a3
 
-.field public static final voip_busy:I = 0x7f0d00a4
+.field public static final voicechat_join:I = 0x7f0d00a4
 
-.field public static final voip_connecting:I = 0x7f0d00a5
+.field public static final voicechat_leave:I = 0x7f0d00a5
 
-.field public static final voip_end:I = 0x7f0d00a6
+.field public static final voip_allow_talk:I = 0x7f0d00a6
 
-.field public static final voip_failed:I = 0x7f0d00a7
+.field public static final voip_busy:I = 0x7f0d00a7
 
-.field public static final voip_filled:I = 0x7f0d00a8
+.field public static final voip_connecting:I = 0x7f0d00a8
 
-.field public static final voip_group_removed:I = 0x7f0d00a9
+.field public static final voip_end:I = 0x7f0d00a9
 
-.field public static final voip_invite:I = 0x7f0d00aa
+.field public static final voip_failed:I = 0x7f0d00aa
 
-.field public static final voip_muted:I = 0x7f0d00ab
+.field public static final voip_filled:I = 0x7f0d00ab
 
-.field public static final voip_onallowtalk:I = 0x7f0d00ac
+.field public static final voip_group_removed:I = 0x7f0d00ac
 
-.field public static final voip_record_saved:I = 0x7f0d00ad
+.field public static final voip_invite:I = 0x7f0d00ad
 
-.field public static final voip_record_start:I = 0x7f0d00ae
+.field public static final voip_muted:I = 0x7f0d00ae
 
-.field public static final voip_recordstart:I = 0x7f0d00af
+.field public static final voip_onallowtalk:I = 0x7f0d00af
 
-.field public static final voip_ringback:I = 0x7f0d00b0
+.field public static final voip_record_saved:I = 0x7f0d00b0
 
-.field public static final voip_unmuted:I = 0x7f0d00b1
+.field public static final voip_record_start:I = 0x7f0d00b1
 
-.field public static final wallet_allset:I = 0x7f0d00b2
+.field public static final voip_recordstart:I = 0x7f0d00b2
 
-.field public static final wallet_congrats:I = 0x7f0d00b3
+.field public static final voip_ringback:I = 0x7f0d00b3
 
-.field public static final wallet_perfect:I = 0x7f0d00b4
+.field public static final voip_unmuted:I = 0x7f0d00b4
 
-.field public static final wallet_science:I = 0x7f0d00b5
+.field public static final wallet_allset:I = 0x7f0d00b5
 
-.field public static final windows_30:I = 0x7f0d00b6
+.field public static final wallet_congrats:I = 0x7f0d00b6
 
-.field public static final write_contacts_fab_icon:I = 0x7f0d00b7
+.field public static final wallet_perfect:I = 0x7f0d00b7
 
-.field public static final write_contacts_fab_icon_reverse:I = 0x7f0d00b8
+.field public static final wallet_science:I = 0x7f0d00b8
+
+.field public static final windows_30:I = 0x7f0d00b9
+
+.field public static final write_contacts_fab_icon:I = 0x7f0d00ba
+
+.field public static final write_contacts_fab_icon_reverse:I = 0x7f0d00bb
 
 
 # direct methods

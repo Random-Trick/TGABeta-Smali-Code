@@ -25,7 +25,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/ReactionsContainerLayout$ReactionHolderView;)V
     .registers 2
 
-    .line 608
+    .line 662
     iput-object p1, p0, Lorg/telegram/ui/Components/ReactionsContainerLayout$ReactionHolderView$1;->this$1:Lorg/telegram/ui/Components/ReactionsContainerLayout$ReactionHolderView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public run()V
     .registers 2
 
-    .line 611
+    .line 665
     iget-object v0, p0, Lorg/telegram/ui/Components/ReactionsContainerLayout$ReactionHolderView$1;->this$1:Lorg/telegram/ui/Components/ReactionsContainerLayout$ReactionHolderView;
 
     iget-object v0, v0, Lorg/telegram/ui/Components/ReactionsContainerLayout$ReactionHolderView;->backupImageView:Lorg/telegram/ui/Components/BackupImageView;
@@ -89,7 +89,7 @@
 
     if-nez v0, :cond_41
 
-    .line 612
+    .line 666
     iget-object v0, p0, Lorg/telegram/ui/Components/ReactionsContainerLayout$ReactionHolderView$1;->this$1:Lorg/telegram/ui/Components/ReactionsContainerLayout$ReactionHolderView;
 
     iget-object v0, v0, Lorg/telegram/ui/Components/ReactionsContainerLayout$ReactionHolderView;->backupImageView:Lorg/telegram/ui/Components/BackupImageView;

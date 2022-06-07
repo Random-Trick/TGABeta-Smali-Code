@@ -417,7 +417,7 @@
     .line 100
     iget-object p2, p0, Lorg/telegram/messenger/VideoEncodingService;->builder:Landroidx/core/app/NotificationCompat$Builder;
 
-    const v1, 0x7f0e017c
+    const v1, 0x7f0e01b1
 
     const-string v2, "AppName"
 
@@ -434,7 +434,7 @@
 
     const-string p2, "SendingGif"
 
-    const v1, 0x7f0e0fef
+    const v1, 0x7f0e10ac
 
     invoke-static {p2, v1}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
@@ -459,7 +459,7 @@
 
     const-string p2, "SendingVideo"
 
-    const v1, 0x7f0e0ff2
+    const v1, 0x7f0e10af
 
     invoke-static {p2, v1}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 

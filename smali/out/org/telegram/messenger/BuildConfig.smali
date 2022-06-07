@@ -12,7 +12,7 @@
 
 .field public static final FLAVOR:Ljava/lang/String; = "afat"
 
-.field public static final VERSION_CODE:I = 0x6779
+.field public static final VERSION_CODE:I = 0x68b9
 
 .field public static final VERSION_NAME:Ljava/lang/String; = "8.7.2"
 

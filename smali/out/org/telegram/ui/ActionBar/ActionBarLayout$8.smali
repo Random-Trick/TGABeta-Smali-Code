@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lorg/telegram/ui/ActionBar/ActionBarLayout;->movePreviewFragment(F)V
+    value = Lorg/telegram/ui/ActionBar/ActionBarLayout;->expandPreviewFragment()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,7 +24,7 @@
 .method constructor <init>(Lorg/telegram/ui/ActionBar/ActionBarLayout;Lorg/telegram/ui/ActionBar/BaseFragment;)V
     .registers 3
 
-    .line 1454
+    .line 1582
     iput-object p1, p0, Lorg/telegram/ui/ActionBar/ActionBarLayout$8;->this$0:Lorg/telegram/ui/ActionBar/ActionBarLayout;
 
     iput-object p2, p0, Lorg/telegram/ui/ActionBar/ActionBarLayout$8;->val$fragment:Lorg/telegram/ui/ActionBar/BaseFragment;
@@ -39,14 +39,14 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .registers 3
 
-    .line 1457
+    .line 1585
     iget-object p1, p0, Lorg/telegram/ui/ActionBar/ActionBarLayout$8;->this$0:Lorg/telegram/ui/ActionBar/ActionBarLayout;
 
     const/4 v0, 0x0
 
-    invoke-static {p1, v0}, Lorg/telegram/ui/ActionBar/ActionBarLayout;->access$2102(Lorg/telegram/ui/ActionBar/ActionBarLayout;Z)Z
+    invoke-static {p1, v0}, Lorg/telegram/ui/ActionBar/ActionBarLayout;->access$2302(Lorg/telegram/ui/ActionBar/ActionBarLayout;Z)Z
 
-    .line 1458
+    .line 1586
     iget-object p1, p0, Lorg/telegram/ui/ActionBar/ActionBarLayout$8;->val$fragment:Lorg/telegram/ui/ActionBar/BaseFragment;
 
     invoke-virtual {p1}, Lorg/telegram/ui/ActionBar/BaseFragment;->onPreviewOpenAnimationEnd()V

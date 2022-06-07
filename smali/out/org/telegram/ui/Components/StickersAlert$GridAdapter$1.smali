@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/StickersAlert$GridAdapter;Landroid/content/Context;Z)V
     .registers 4
 
-    .line 1582
+    .line 1614
     iput-object p1, p0, Lorg/telegram/ui/Components/StickersAlert$GridAdapter$1;->this$1:Lorg/telegram/ui/Components/StickersAlert$GridAdapter;
 
     invoke-direct {p0, p2, p3}, Lorg/telegram/ui/Cells/StickerEmojiCell;-><init>(Landroid/content/Context;Z)V
@@ -35,7 +35,7 @@
 .method public onMeasure(II)V
     .registers 4
 
-    .line 1584
+    .line 1616
     iget-object p1, p0, Lorg/telegram/ui/Components/StickersAlert$GridAdapter$1;->this$1:Lorg/telegram/ui/Components/StickersAlert$GridAdapter;
 
     iget-object p1, p1, Lorg/telegram/ui/Components/StickersAlert$GridAdapter;->this$0:Lorg/telegram/ui/Components/StickersAlert;

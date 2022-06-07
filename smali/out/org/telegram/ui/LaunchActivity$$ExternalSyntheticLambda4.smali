@@ -49,7 +49,7 @@
 
     move v5, p2
 
-    invoke-static/range {v0 .. v5}, Lorg/telegram/ui/LaunchActivity;->$r8$lambda$Bm6E0ep9qYW0tJlHRyRKKbXIaBo(ILjava/util/HashMap;ZZLandroid/content/DialogInterface;I)V
+    invoke-static/range {v0 .. v5}, Lorg/telegram/ui/LaunchActivity;->$r8$lambda$KG5pMcc-395ySBINq3AuK-Dxdpk(ILjava/util/HashMap;ZZLandroid/content/DialogInterface;I)V
 
     return-void
 .end method

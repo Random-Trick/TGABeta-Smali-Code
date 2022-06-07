@@ -2,10 +2,10 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lj$/util/stream/t1;
+.implements Lj$/util/stream/s1;
 .implements Lj$/util/stream/l3;
 
 
 # virtual methods
-.method public abstract a()Lj$/util/stream/x1;
+.method public abstract a()Lj$/util/stream/y1;
 .end method

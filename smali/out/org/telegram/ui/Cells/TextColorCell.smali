@@ -18,6 +18,8 @@
 
 .field private needDivider:Z
 
+.field private resourcesProvider:Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;
+
 .field private textView:Landroid/widget/TextView;
 
 
@@ -29,14 +31,14 @@
 
     new-array v1, v0, [I
 
-    .line 39
+    .line 40
     fill-array-data v1, :array_12
 
     sput-object v1, Lorg/telegram/ui/Cells/TextColorCell;->colors:[I
 
     new-array v0, v0, [I
 
-    .line 40
+    .line 41
     fill-array-data v0, :array_28
 
     sput-object v0, Lorg/telegram/ui/Cells/TextColorCell;->colorsToSave:[I
@@ -73,32 +75,46 @@
 .end method
 
 .method public constructor <init>(Landroid/content/Context;)V
+    .registers 3
+
+    const/4 v0, 0x0
+
+    .line 44
+    invoke-direct {p0, p1, v0}, Lorg/telegram/ui/Cells/TextColorCell;-><init>(Landroid/content/Context;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/content/Context;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)V
     .registers 12
 
-    .line 43
+    .line 48
     invoke-direct {p0, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
     const/high16 v0, 0x3f800000    # 1.0f
 
-    .line 35
+    .line 36
     iput v0, p0, Lorg/telegram/ui/Cells/TextColorCell;->alpha:F
 
-    .line 45
+    .line 49
+    iput-object p2, p0, Lorg/telegram/ui/Cells/TextColorCell;->resourcesProvider:Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;
+
+    .line 51
     sget-object v0, Lorg/telegram/ui/Cells/TextColorCell;->colorPaint:Landroid/graphics/Paint;
 
     const/4 v1, 0x1
 
-    if-nez v0, :cond_13
+    if-nez v0, :cond_15
 
-    .line 46
+    .line 52
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0, v1}, Landroid/graphics/Paint;-><init>(I)V
 
     sput-object v0, Lorg/telegram/ui/Cells/TextColorCell;->colorPaint:Landroid/graphics/Paint;
 
-    .line 49
-    :cond_13
+    .line 55
+    :cond_15
     new-instance v0, Landroid/widget/TextView;
 
     invoke-direct {v0, p1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
@@ -107,90 +123,90 @@
 
     const-string p1, "windowBackgroundWhiteBlackText"
 
-    .line 50
-    invoke-static {p1}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
+    .line 56
+    invoke-static {p1, p2}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)I
 
     move-result p1
 
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 51
+    .line 57
     iget-object p1, p0, Lorg/telegram/ui/Cells/TextColorCell;->textView:Landroid/widget/TextView;
 
-    const/high16 v0, 0x41800000    # 16.0f
+    const/high16 p2, 0x41800000    # 16.0f
 
-    invoke-virtual {p1, v1, v0}, Landroid/widget/TextView;->setTextSize(IF)V
+    invoke-virtual {p1, v1, p2}, Landroid/widget/TextView;->setTextSize(IF)V
 
-    .line 52
+    .line 58
     iget-object p1, p0, Lorg/telegram/ui/Cells/TextColorCell;->textView:Landroid/widget/TextView;
 
     invoke-virtual {p1, v1}, Landroid/widget/TextView;->setLines(I)V
 
-    .line 53
+    .line 59
     iget-object p1, p0, Lorg/telegram/ui/Cells/TextColorCell;->textView:Landroid/widget/TextView;
 
     invoke-virtual {p1, v1}, Landroid/widget/TextView;->setMaxLines(I)V
 
-    .line 54
+    .line 60
     iget-object p1, p0, Lorg/telegram/ui/Cells/TextColorCell;->textView:Landroid/widget/TextView;
 
     invoke-virtual {p1, v1}, Landroid/widget/TextView;->setSingleLine(Z)V
 
-    .line 55
+    .line 61
     iget-object p1, p0, Lorg/telegram/ui/Cells/TextColorCell;->textView:Landroid/widget/TextView;
 
-    sget-boolean v0, Lorg/telegram/messenger/LocaleController;->isRTL:Z
-
-    const/4 v1, 0x5
-
-    const/4 v2, 0x3
-
-    if-eqz v0, :cond_43
+    sget-boolean p2, Lorg/telegram/messenger/LocaleController;->isRTL:Z
 
     const/4 v0, 0x5
 
-    goto :goto_44
-
-    :cond_43
-    const/4 v0, 0x3
-
-    :goto_44
-    or-int/lit8 v0, v0, 0x10
-
-    invoke-virtual {p1, v0}, Landroid/widget/TextView;->setGravity(I)V
-
-    .line 56
-    iget-object p1, p0, Lorg/telegram/ui/Cells/TextColorCell;->textView:Landroid/widget/TextView;
-
-    const/4 v3, -0x1
-
-    const/high16 v4, -0x40800000    # -1.0f
-
-    sget-boolean v0, Lorg/telegram/messenger/LocaleController;->isRTL:Z
-
-    if-eqz v0, :cond_53
-
-    goto :goto_54
-
-    :cond_53
     const/4 v1, 0x3
 
-    :goto_54
-    or-int/lit8 v5, v1, 0x30
+    if-eqz p2, :cond_45
 
-    const/high16 v6, 0x41a80000    # 21.0f
+    const/4 p2, 0x5
 
-    const/4 v7, 0x0
+    goto :goto_46
 
-    const/high16 v8, 0x41a80000    # 21.0f
+    :cond_45
+    const/4 p2, 0x3
 
-    const/4 v9, 0x0
+    :goto_46
+    or-int/lit8 p2, p2, 0x10
 
-    invoke-static/range {v3 .. v9}, Lorg/telegram/ui/Components/LayoutHelper;->createFrame(IFIFFFF)Landroid/widget/FrameLayout$LayoutParams;
+    invoke-virtual {p1, p2}, Landroid/widget/TextView;->setGravity(I)V
 
-    move-result-object v0
+    .line 62
+    iget-object p1, p0, Lorg/telegram/ui/Cells/TextColorCell;->textView:Landroid/widget/TextView;
 
-    invoke-virtual {p0, p1, v0}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+    const/4 v2, -0x1
+
+    const/high16 v3, -0x40800000    # -1.0f
+
+    sget-boolean p2, Lorg/telegram/messenger/LocaleController;->isRTL:Z
+
+    if-eqz p2, :cond_55
+
+    goto :goto_56
+
+    :cond_55
+    const/4 v0, 0x3
+
+    :goto_56
+    or-int/lit8 v4, v0, 0x30
+
+    const/high16 v5, 0x41a80000    # 21.0f
+
+    const/4 v6, 0x0
+
+    const/high16 v7, 0x41a80000    # 21.0f
+
+    const/4 v8, 0x0
+
+    invoke-static/range {v2 .. v8}, Lorg/telegram/ui/Components/LayoutHelper;->createFrame(IFIFFFF)Landroid/widget/FrameLayout$LayoutParams;
+
+    move-result-object p2
+
+    invoke-virtual {p0, p1, p2}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
     return-void
 .end method
@@ -202,7 +218,7 @@
     .annotation build Landroidx/annotation/Keep;
     .end annotation
 
-    .line 69
+    .line 75
     iget v0, p0, Lorg/telegram/ui/Cells/TextColorCell;->alpha:F
 
     return v0
@@ -211,12 +227,12 @@
 .method protected onDraw(Landroid/graphics/Canvas;)V
     .registers 10
 
-    .line 98
+    .line 104
     iget-boolean v0, p0, Lorg/telegram/ui/Cells/TextColorCell;->needDivider:Z
 
     if-eqz v0, :cond_37
 
-    .line 99
+    .line 105
     sget-boolean v0, Lorg/telegram/messenger/LocaleController;->isRTL:Z
 
     const/high16 v1, 0x41a00000    # 20.0f
@@ -283,18 +299,18 @@
 
     invoke-virtual/range {v2 .. v7}, Landroid/graphics/Canvas;->drawLine(FFFFLandroid/graphics/Paint;)V
 
-    .line 101
+    .line 107
     :cond_37
     iget v0, p0, Lorg/telegram/ui/Cells/TextColorCell;->currentColor:I
 
     if-eqz v0, :cond_74
 
-    .line 102
+    .line 108
     sget-object v1, Lorg/telegram/ui/Cells/TextColorCell;->colorPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v1, v0}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 103
+    .line 109
     sget-object v0, Lorg/telegram/ui/Cells/TextColorCell;->colorPaint:Landroid/graphics/Paint;
 
     const/high16 v1, 0x437f0000    # 255.0f
@@ -307,7 +323,7 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 104
+    .line 110
     sget-boolean v0, Lorg/telegram/messenger/LocaleController;->isRTL:Z
 
     const/high16 v1, 0x42040000    # 33.0f
@@ -361,7 +377,7 @@
 .method protected onMeasure(II)V
     .registers 5
 
-    .line 74
+    .line 80
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result p1
@@ -396,10 +412,10 @@
     .annotation build Landroidx/annotation/Keep;
     .end annotation
 
-    .line 62
+    .line 68
     iput p1, p0, Lorg/telegram/ui/Cells/TextColorCell;->alpha:F
 
-    .line 63
+    .line 69
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->invalidate()V
 
     return-void
@@ -416,7 +432,7 @@
         }
     .end annotation
 
-    .line 86
+    .line 92
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->setEnabled(Z)V
 
     const/high16 v0, 0x3f800000    # 1.0f
@@ -425,7 +441,7 @@
 
     if-eqz p2, :cond_34
 
-    .line 88
+    .line 94
     iget-object v2, p0, Lorg/telegram/ui/Cells/TextColorCell;->textView:Landroid/widget/TextView;
 
     sget-object v3, Landroid/view/View;->ALPHA:Landroid/util/Property;
@@ -454,7 +470,7 @@
 
     invoke-virtual {p2, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 89
+    .line 95
     sget-object v2, Landroid/view/View;->ALPHA:Landroid/util/Property;
 
     new-array v3, v4, [F
@@ -477,7 +493,7 @@
 
     goto :goto_48
 
-    .line 91
+    .line 97
     :cond_34
     iget-object p2, p0, Lorg/telegram/ui/Cells/TextColorCell;->textView:Landroid/widget/TextView;
 
@@ -500,7 +516,7 @@
     :cond_43
     const/high16 v0, 0x3f000000    # 0.5f
 
-    .line 92
+    .line 98
     :goto_45
     invoke-virtual {p0, v0}, Lorg/telegram/ui/Cells/TextColorCell;->setAlpha(F)V
 
@@ -511,15 +527,15 @@
 .method public setTextAndColor(Ljava/lang/String;IZ)V
     .registers 5
 
-    .line 78
+    .line 84
     iget-object v0, p0, Lorg/telegram/ui/Cells/TextColorCell;->textView:Landroid/widget/TextView;
 
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 79
+    .line 85
     iput-boolean p3, p0, Lorg/telegram/ui/Cells/TextColorCell;->needDivider:Z
 
-    .line 80
+    .line 86
     iput p2, p0, Lorg/telegram/ui/Cells/TextColorCell;->currentColor:I
 
     if-nez p3, :cond_f
@@ -533,11 +549,11 @@
     :cond_f
     const/4 p1, 0x0
 
-    .line 81
+    .line 87
     :goto_10
     invoke-virtual {p0, p1}, Landroid/widget/FrameLayout;->setWillNotDraw(Z)V
 
-    .line 82
+    .line 88
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->invalidate()V
 
     return-void

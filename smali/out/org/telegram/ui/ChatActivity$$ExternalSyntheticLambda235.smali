@@ -2,38 +2,44 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lorg/telegram/ui/Components/ReactedUsersListView$OnHeightChangedListener;
+.implements Lorg/telegram/ui/Components/AlertsCreator$ScheduleDatePickerDelegate;
 
 
 # instance fields
-.field public final synthetic f$0:Lorg/telegram/ui/ActionBar/ActionBarPopupWindow$ActionBarPopupWindowLayout;
+.field public final synthetic f$0:Lorg/telegram/ui/ChatActivity;
 
-.field public final synthetic f$1:[I
+.field public final synthetic f$1:Lorg/telegram/messenger/MessageObject$GroupedMessages;
+
+.field public final synthetic f$2:Lorg/telegram/messenger/MessageObject;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lorg/telegram/ui/ActionBar/ActionBarPopupWindow$ActionBarPopupWindowLayout;[I)V
-    .registers 3
+.method public synthetic constructor <init>(Lorg/telegram/ui/ChatActivity;Lorg/telegram/messenger/MessageObject$GroupedMessages;Lorg/telegram/messenger/MessageObject;)V
+    .registers 4
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda235;->f$0:Lorg/telegram/ui/ActionBar/ActionBarPopupWindow$ActionBarPopupWindowLayout;
+    iput-object p1, p0, Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda235;->f$0:Lorg/telegram/ui/ChatActivity;
 
-    iput-object p2, p0, Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda235;->f$1:[I
+    iput-object p2, p0, Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda235;->f$1:Lorg/telegram/messenger/MessageObject$GroupedMessages;
+
+    iput-object p3, p0, Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda235;->f$2:Lorg/telegram/messenger/MessageObject;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onHeightChanged(Lorg/telegram/ui/Components/ReactedUsersListView;I)V
-    .registers 5
+.method public final didSelectDate(ZI)V
+    .registers 6
 
-    iget-object v0, p0, Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda235;->f$0:Lorg/telegram/ui/ActionBar/ActionBarPopupWindow$ActionBarPopupWindowLayout;
+    iget-object v0, p0, Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda235;->f$0:Lorg/telegram/ui/ChatActivity;
 
-    iget-object v1, p0, Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda235;->f$1:[I
+    iget-object v1, p0, Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda235;->f$1:Lorg/telegram/messenger/MessageObject$GroupedMessages;
 
-    invoke-static {v0, v1, p1, p2}, Lorg/telegram/ui/ChatActivity;->$r8$lambda$36SGGHcksqv1y3_pNyJNUXCpS5Y(Lorg/telegram/ui/ActionBar/ActionBarPopupWindow$ActionBarPopupWindowLayout;[ILorg/telegram/ui/Components/ReactedUsersListView;I)V
+    iget-object v2, p0, Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda235;->f$2:Lorg/telegram/messenger/MessageObject;
+
+    invoke-static {v0, v1, v2, p1, p2}, Lorg/telegram/ui/ChatActivity;->$r8$lambda$q6MLsAbxwVJIkZ7Y4Jmg2vEji2k(Lorg/telegram/ui/ChatActivity;Lorg/telegram/messenger/MessageObject$GroupedMessages;Lorg/telegram/messenger/MessageObject;ZI)V
 
     return-void
 .end method

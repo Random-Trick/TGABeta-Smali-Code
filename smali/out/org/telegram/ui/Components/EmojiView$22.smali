@@ -21,7 +21,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/EmojiView;)V
     .registers 2
 
-    .line 1990
+    .line 2006
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

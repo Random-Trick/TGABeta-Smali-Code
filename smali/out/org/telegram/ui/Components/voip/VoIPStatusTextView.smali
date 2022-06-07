@@ -207,7 +207,7 @@
     .line 66
     new-instance v2, Landroid/text/SpannableStringBuilder;
 
-    const v4, 0x7f0e13a0
+    const v4, 0x7f0e146e
 
     const-string v5, "VoipReconnecting"
 

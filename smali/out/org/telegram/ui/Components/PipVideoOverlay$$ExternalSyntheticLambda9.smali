@@ -2,44 +2,32 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lorg/telegram/ui/Components/SimpleFloatPropertyCompat$Getter;
+.implements Ljava/lang/Runnable;
 
 
-# static fields
-.field public static final synthetic INSTANCE:Lorg/telegram/ui/Components/PipVideoOverlay$$ExternalSyntheticLambda9;
+# instance fields
+.field public final synthetic f$0:Lorg/telegram/ui/Components/PipVideoOverlay;
 
 
 # direct methods
-.method static synthetic constructor <clinit>()V
-    .registers 1
-
-    new-instance v0, Lorg/telegram/ui/Components/PipVideoOverlay$$ExternalSyntheticLambda9;
-
-    invoke-direct {v0}, Lorg/telegram/ui/Components/PipVideoOverlay$$ExternalSyntheticLambda9;-><init>()V
-
-    sput-object v0, Lorg/telegram/ui/Components/PipVideoOverlay$$ExternalSyntheticLambda9;->INSTANCE:Lorg/telegram/ui/Components/PipVideoOverlay$$ExternalSyntheticLambda9;
-
-    return-void
-.end method
-
-.method private synthetic constructor <init>()V
-    .registers 1
+.method public synthetic constructor <init>(Lorg/telegram/ui/Components/PipVideoOverlay;)V
+    .registers 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lorg/telegram/ui/Components/PipVideoOverlay$$ExternalSyntheticLambda9;->f$0:Lorg/telegram/ui/Components/PipVideoOverlay;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final get(Ljava/lang/Object;)F
+.method public final run()V
     .registers 2
 
-    check-cast p1, Lorg/telegram/ui/Components/PipVideoOverlay;
+    iget-object v0, p0, Lorg/telegram/ui/Components/PipVideoOverlay$$ExternalSyntheticLambda9;->f$0:Lorg/telegram/ui/Components/PipVideoOverlay;
 
-    invoke-static {p1}, Lorg/telegram/ui/Components/PipVideoOverlay;->$r8$lambda$ffb0euJahxLcKbwa8KjIpGlMsjM(Lorg/telegram/ui/Components/PipVideoOverlay;)F
+    invoke-static {v0}, Lorg/telegram/ui/Components/PipVideoOverlay;->$r8$lambda$b2uSkODP6guYjGex8mTib28K4pE(Lorg/telegram/ui/Components/PipVideoOverlay;)V
 
-    move-result p1
-
-    return p1
+    return-void
 .end method

@@ -24,14 +24,14 @@
 
 .field public final synthetic f$7:Ljava/lang/String;
 
-.field public final synthetic f$8:I
+.field public final synthetic f$8:J
 
 .field public final synthetic f$9:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lorg/telegram/messenger/FileLoader;Lorg/telegram/tgnet/TLRPC$Document;Lorg/telegram/messenger/SecureDocument;Lorg/telegram/messenger/WebFile;Lorg/telegram/tgnet/TLRPC$TL_fileLocationToBeDeprecated;Lorg/telegram/messenger/ImageLocation;Ljava/lang/Object;Ljava/lang/String;III)V
-    .registers 12
+.method public synthetic constructor <init>(Lorg/telegram/messenger/FileLoader;Lorg/telegram/tgnet/TLRPC$Document;Lorg/telegram/messenger/SecureDocument;Lorg/telegram/messenger/WebFile;Lorg/telegram/tgnet/TLRPC$TL_fileLocationToBeDeprecated;Lorg/telegram/messenger/ImageLocation;Ljava/lang/Object;Ljava/lang/String;JII)V
+    .registers 13
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -51,11 +51,11 @@
 
     iput-object p8, p0, Lorg/telegram/messenger/FileLoader$$ExternalSyntheticLambda5;->f$7:Ljava/lang/String;
 
-    iput p9, p0, Lorg/telegram/messenger/FileLoader$$ExternalSyntheticLambda5;->f$8:I
+    iput-wide p9, p0, Lorg/telegram/messenger/FileLoader$$ExternalSyntheticLambda5;->f$8:J
 
-    iput p10, p0, Lorg/telegram/messenger/FileLoader$$ExternalSyntheticLambda5;->f$9:I
+    iput p11, p0, Lorg/telegram/messenger/FileLoader$$ExternalSyntheticLambda5;->f$9:I
 
-    iput p11, p0, Lorg/telegram/messenger/FileLoader$$ExternalSyntheticLambda5;->f$10:I
+    iput p12, p0, Lorg/telegram/messenger/FileLoader$$ExternalSyntheticLambda5;->f$10:I
 
     return-void
 .end method
@@ -63,7 +63,7 @@
 
 # virtual methods
 .method public final run()V
-    .registers 12
+    .registers 13
 
     iget-object v0, p0, Lorg/telegram/messenger/FileLoader$$ExternalSyntheticLambda5;->f$0:Lorg/telegram/messenger/FileLoader;
 
@@ -81,13 +81,13 @@
 
     iget-object v7, p0, Lorg/telegram/messenger/FileLoader$$ExternalSyntheticLambda5;->f$7:Ljava/lang/String;
 
-    iget v8, p0, Lorg/telegram/messenger/FileLoader$$ExternalSyntheticLambda5;->f$8:I
+    iget-wide v8, p0, Lorg/telegram/messenger/FileLoader$$ExternalSyntheticLambda5;->f$8:J
 
-    iget v9, p0, Lorg/telegram/messenger/FileLoader$$ExternalSyntheticLambda5;->f$9:I
+    iget v10, p0, Lorg/telegram/messenger/FileLoader$$ExternalSyntheticLambda5;->f$9:I
 
-    iget v10, p0, Lorg/telegram/messenger/FileLoader$$ExternalSyntheticLambda5;->f$10:I
+    iget v11, p0, Lorg/telegram/messenger/FileLoader$$ExternalSyntheticLambda5;->f$10:I
 
-    invoke-static/range {v0 .. v10}, Lorg/telegram/messenger/FileLoader;->$r8$lambda$lzkPZMuLOIgVT1L-2KNsepAZZKo(Lorg/telegram/messenger/FileLoader;Lorg/telegram/tgnet/TLRPC$Document;Lorg/telegram/messenger/SecureDocument;Lorg/telegram/messenger/WebFile;Lorg/telegram/tgnet/TLRPC$TL_fileLocationToBeDeprecated;Lorg/telegram/messenger/ImageLocation;Ljava/lang/Object;Ljava/lang/String;III)V
+    invoke-static/range {v0 .. v11}, Lorg/telegram/messenger/FileLoader;->$r8$lambda$J2DR8n7pmNMJbGWnIIlNh7hGof4(Lorg/telegram/messenger/FileLoader;Lorg/telegram/tgnet/TLRPC$Document;Lorg/telegram/messenger/SecureDocument;Lorg/telegram/messenger/WebFile;Lorg/telegram/tgnet/TLRPC$TL_fileLocationToBeDeprecated;Lorg/telegram/messenger/ImageLocation;Ljava/lang/Object;Ljava/lang/String;JII)V
 
     return-void
 .end method

@@ -30,7 +30,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/BotWebViewContainer$1;Landroid/view/View;)V
     .registers 3
 
-    .line 125
+    .line 135
     iput-object p1, p0, Lorg/telegram/ui/Components/BotWebViewContainer$1$1;->this$1:Lorg/telegram/ui/Components/BotWebViewContainer$1;
 
     invoke-direct {p0, p2}, Lorg/telegram/messenger/ImageReceiver;-><init>(Landroid/view/View;)V
@@ -41,7 +41,7 @@
 .method private synthetic lambda$setImageBitmapByKey$0(Landroid/animation/ValueAnimator;)V
     .registers 3
 
-    .line 131
+    .line 141
     iget-object v0, p0, Lorg/telegram/ui/Components/BotWebViewContainer$1$1;->this$1:Lorg/telegram/ui/Components/BotWebViewContainer$1;
 
     iget-object v0, v0, Lorg/telegram/ui/Components/BackupImageView;->imageReceiver:Lorg/telegram/messenger/ImageReceiver;
@@ -58,7 +58,7 @@
 
     invoke-virtual {v0, p1}, Lorg/telegram/messenger/ImageReceiver;->setAlpha(F)V
 
-    .line 132
+    .line 142
     invoke-virtual {p0}, Lorg/telegram/messenger/ImageReceiver;->invalidate()V
 
     return-void
@@ -69,7 +69,7 @@
 .method protected setImageBitmapByKey(Landroid/graphics/drawable/Drawable;Ljava/lang/String;IZI)Z
     .registers 6
 
-    .line 128
+    .line 138
     invoke-super/range {p0 .. p5}, Lorg/telegram/messenger/ImageReceiver;->setImageBitmapByKey(Landroid/graphics/drawable/Drawable;Ljava/lang/String;IZI)Z
 
     move-result p1
@@ -78,7 +78,7 @@
 
     new-array p2, p2, [F
 
-    .line 129
+    .line 139
     fill-array-data p2, :array_20
 
     invoke-static {p2}, Landroid/animation/ValueAnimator;->ofFloat([F)Landroid/animation/ValueAnimator;
@@ -91,14 +91,14 @@
 
     move-result-object p2
 
-    .line 130
+    .line 140
     new-instance p3, Lorg/telegram/ui/Components/BotWebViewContainer$1$1$$ExternalSyntheticLambda0;
 
     invoke-direct {p3, p0}, Lorg/telegram/ui/Components/BotWebViewContainer$1$1$$ExternalSyntheticLambda0;-><init>(Lorg/telegram/ui/Components/BotWebViewContainer$1$1;)V
 
     invoke-virtual {p2, p3}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    .line 134
+    .line 144
     invoke-virtual {p2}, Landroid/animation/ValueAnimator;->start()V
 
     return p1

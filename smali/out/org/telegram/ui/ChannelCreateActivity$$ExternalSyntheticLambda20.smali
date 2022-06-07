@@ -27,7 +27,7 @@
 
     iget-object v0, p0, Lorg/telegram/ui/ChannelCreateActivity$$ExternalSyntheticLambda20;->f$0:Lorg/telegram/ui/ChannelCreateActivity;
 
-    invoke-static {v0, p1, p2}, Lorg/telegram/ui/ChannelCreateActivity;->$r8$lambda$y7P66j47oQJ7kTEIWw4PjkDwLkk(Lorg/telegram/ui/ChannelCreateActivity;Lorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/TLRPC$TL_error;)V
+    invoke-static {v0, p1, p2}, Lorg/telegram/ui/ChannelCreateActivity;->$r8$lambda$0VvbzhZaNHBM6ib98Vp6Rt_YB3M(Lorg/telegram/ui/ChannelCreateActivity;Lorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/TLRPC$TL_error;)V
 
     return-void
 .end method

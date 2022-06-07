@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/ActionBar/ActionBarPopupWindow;)V
     .registers 2
 
-    .line 837
+    .line 894
     iput-object p1, p0, Lorg/telegram/ui/ActionBar/ActionBarPopupWindow$2;->this$0:Lorg/telegram/ui/ActionBar/ActionBarPopupWindow;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -35,30 +35,30 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .registers 3
 
-    .line 840
+    .line 897
     iget-object p1, p0, Lorg/telegram/ui/ActionBar/ActionBarPopupWindow$2;->this$0:Lorg/telegram/ui/ActionBar/ActionBarPopupWindow;
 
     const/4 v0, 0x0
 
-    invoke-static {p1, v0}, Lorg/telegram/ui/ActionBar/ActionBarPopupWindow;->access$1002(Lorg/telegram/ui/ActionBar/ActionBarPopupWindow;Landroid/animation/AnimatorSet;)Landroid/animation/AnimatorSet;
+    invoke-static {p1, v0}, Lorg/telegram/ui/ActionBar/ActionBarPopupWindow;->access$1102(Lorg/telegram/ui/ActionBar/ActionBarPopupWindow;Landroid/animation/AnimatorSet;)Landroid/animation/AnimatorSet;
 
-    .line 841
+    .line 898
     iget-object p1, p0, Lorg/telegram/ui/ActionBar/ActionBarPopupWindow$2;->this$0:Lorg/telegram/ui/ActionBar/ActionBarPopupWindow;
 
     const/4 v0, 0x0
 
-    invoke-static {p1, v0}, Lorg/telegram/ui/ActionBar/ActionBarPopupWindow;->access$1102(Lorg/telegram/ui/ActionBar/ActionBarPopupWindow;Z)Z
+    invoke-static {p1, v0}, Lorg/telegram/ui/ActionBar/ActionBarPopupWindow;->access$1202(Lorg/telegram/ui/ActionBar/ActionBarPopupWindow;Z)Z
 
-    .line 842
+    .line 899
     iget-object p1, p0, Lorg/telegram/ui/ActionBar/ActionBarPopupWindow$2;->this$0:Lorg/telegram/ui/ActionBar/ActionBarPopupWindow;
 
     invoke-virtual {p1, v0}, Landroid/widget/PopupWindow;->setFocusable(Z)V
 
-    .line 844
+    .line 901
     :try_start_11
     iget-object p1, p0, Lorg/telegram/ui/ActionBar/ActionBarPopupWindow$2;->this$0:Lorg/telegram/ui/ActionBar/ActionBarPopupWindow;
 
-    invoke-static {p1}, Lorg/telegram/ui/ActionBar/ActionBarPopupWindow;->access$1201(Lorg/telegram/ui/ActionBar/ActionBarPopupWindow;)V
+    invoke-static {p1}, Lorg/telegram/ui/ActionBar/ActionBarPopupWindow;->access$1301(Lorg/telegram/ui/ActionBar/ActionBarPopupWindow;)V
     :try_end_16
     .catch Ljava/lang/Exception; {:try_start_11 .. :try_end_16} :catch_17
 
@@ -67,25 +67,25 @@
     :catch_17
     nop
 
-    .line 848
+    .line 905
     :goto_18
     iget-object p1, p0, Lorg/telegram/ui/ActionBar/ActionBarPopupWindow$2;->this$0:Lorg/telegram/ui/ActionBar/ActionBarPopupWindow;
 
-    invoke-static {p1}, Lorg/telegram/ui/ActionBar/ActionBarPopupWindow;->access$1300(Lorg/telegram/ui/ActionBar/ActionBarPopupWindow;)V
+    invoke-static {p1}, Lorg/telegram/ui/ActionBar/ActionBarPopupWindow;->access$1400(Lorg/telegram/ui/ActionBar/ActionBarPopupWindow;)V
 
-    .line 849
+    .line 906
     iget-object p1, p0, Lorg/telegram/ui/ActionBar/ActionBarPopupWindow$2;->this$0:Lorg/telegram/ui/ActionBar/ActionBarPopupWindow;
 
-    invoke-static {p1}, Lorg/telegram/ui/ActionBar/ActionBarPopupWindow;->access$1400(Lorg/telegram/ui/ActionBar/ActionBarPopupWindow;)Z
+    invoke-static {p1}, Lorg/telegram/ui/ActionBar/ActionBarPopupWindow;->access$1500(Lorg/telegram/ui/ActionBar/ActionBarPopupWindow;)Z
 
     move-result p1
 
     if-eqz p1, :cond_38
 
-    .line 850
+    .line 907
     iget-object p1, p0, Lorg/telegram/ui/ActionBar/ActionBarPopupWindow$2;->this$0:Lorg/telegram/ui/ActionBar/ActionBarPopupWindow;
 
-    invoke-static {p1}, Lorg/telegram/ui/ActionBar/ActionBarPopupWindow;->access$1600(Lorg/telegram/ui/ActionBar/ActionBarPopupWindow;)I
+    invoke-static {p1}, Lorg/telegram/ui/ActionBar/ActionBarPopupWindow;->access$1700(Lorg/telegram/ui/ActionBar/ActionBarPopupWindow;)I
 
     move-result p1
 
@@ -95,7 +95,7 @@
 
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/ActionBarPopupWindow$2;->this$0:Lorg/telegram/ui/ActionBar/ActionBarPopupWindow;
 
-    invoke-static {v0}, Lorg/telegram/ui/ActionBar/ActionBarPopupWindow;->access$1500(Lorg/telegram/ui/ActionBar/ActionBarPopupWindow;)I
+    invoke-static {v0}, Lorg/telegram/ui/ActionBar/ActionBarPopupWindow;->access$1600(Lorg/telegram/ui/ActionBar/ActionBarPopupWindow;)I
 
     move-result v0
 

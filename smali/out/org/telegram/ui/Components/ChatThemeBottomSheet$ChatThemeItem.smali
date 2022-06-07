@@ -32,10 +32,10 @@
 .method public constructor <init>(Lorg/telegram/ui/ActionBar/EmojiThemes;)V
     .registers 2
 
-    .line 899
+    .line 914
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 900
+    .line 915
     iput-object p1, p0, Lorg/telegram/ui/Components/ChatThemeBottomSheet$ChatThemeItem;->chatTheme:Lorg/telegram/ui/ActionBar/EmojiThemes;
 
     return-void

@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/DialogsActivity;Ljava/lang/String;Ljava/lang/String;Lorg/telegram/ui/DialogsActivity$ViewPage;)V
     .registers 5
 
-    .line 3029
+    .line 3080
     iput-object p4, p0, Lorg/telegram/ui/DialogsActivity$13;->val$viewPage:Lorg/telegram/ui/DialogsActivity$ViewPage;
 
     invoke-direct {p0, p2, p3}, Lorg/telegram/ui/Components/PullForegroundDrawable;-><init>(Ljava/lang/String;Ljava/lang/String;)V
@@ -35,10 +35,10 @@
 .method protected getViewOffset()F
     .registers 2
 
-    .line 3032
+    .line 3083
     iget-object v0, p0, Lorg/telegram/ui/DialogsActivity$13;->val$viewPage:Lorg/telegram/ui/DialogsActivity$ViewPage;
 
-    invoke-static {v0}, Lorg/telegram/ui/DialogsActivity$ViewPage;->access$10100(Lorg/telegram/ui/DialogsActivity$ViewPage;)Lorg/telegram/ui/DialogsActivity$DialogsRecyclerView;
+    invoke-static {v0}, Lorg/telegram/ui/DialogsActivity$ViewPage;->access$10400(Lorg/telegram/ui/DialogsActivity$ViewPage;)Lorg/telegram/ui/DialogsActivity$DialogsRecyclerView;
 
     move-result-object v0
 

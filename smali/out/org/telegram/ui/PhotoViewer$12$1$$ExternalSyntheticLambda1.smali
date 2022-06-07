@@ -2,50 +2,38 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # instance fields
 .field public final synthetic f$0:Lorg/telegram/ui/PhotoViewer$12$1;
 
-.field public final synthetic f$1:Landroid/widget/FrameLayout;
-
-.field public final synthetic f$2:Landroidx/collection/LongSparseArray;
-
-.field public final synthetic f$3:I
+.field public final synthetic f$1:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(Lorg/telegram/ui/PhotoViewer$12$1;Landroid/widget/FrameLayout;Landroidx/collection/LongSparseArray;I)V
-    .registers 5
+.method public synthetic constructor <init>(Lorg/telegram/ui/PhotoViewer$12$1;Z)V
+    .registers 3
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lorg/telegram/ui/PhotoViewer$12$1$$ExternalSyntheticLambda1;->f$0:Lorg/telegram/ui/PhotoViewer$12$1;
 
-    iput-object p2, p0, Lorg/telegram/ui/PhotoViewer$12$1$$ExternalSyntheticLambda1;->f$1:Landroid/widget/FrameLayout;
-
-    iput-object p3, p0, Lorg/telegram/ui/PhotoViewer$12$1$$ExternalSyntheticLambda1;->f$2:Landroidx/collection/LongSparseArray;
-
-    iput p4, p0, Lorg/telegram/ui/PhotoViewer$12$1$$ExternalSyntheticLambda1;->f$3:I
+    iput-boolean p2, p0, Lorg/telegram/ui/PhotoViewer$12$1$$ExternalSyntheticLambda1;->f$1:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
+.method public final onClick(Landroid/content/DialogInterface;I)V
     .registers 5
 
     iget-object v0, p0, Lorg/telegram/ui/PhotoViewer$12$1$$ExternalSyntheticLambda1;->f$0:Lorg/telegram/ui/PhotoViewer$12$1;
 
-    iget-object v1, p0, Lorg/telegram/ui/PhotoViewer$12$1$$ExternalSyntheticLambda1;->f$1:Landroid/widget/FrameLayout;
+    iget-boolean v1, p0, Lorg/telegram/ui/PhotoViewer$12$1$$ExternalSyntheticLambda1;->f$1:Z
 
-    iget-object v2, p0, Lorg/telegram/ui/PhotoViewer$12$1$$ExternalSyntheticLambda1;->f$2:Landroidx/collection/LongSparseArray;
-
-    iget v3, p0, Lorg/telegram/ui/PhotoViewer$12$1$$ExternalSyntheticLambda1;->f$3:I
-
-    invoke-static {v0, v1, v2, v3}, Lorg/telegram/ui/PhotoViewer$12$1;->$r8$lambda$q3BnXMNvzkCWAQ60fHnahCeEFfU(Lorg/telegram/ui/PhotoViewer$12$1;Landroid/widget/FrameLayout;Landroidx/collection/LongSparseArray;I)V
+    invoke-static {v0, v1, p1, p2}, Lorg/telegram/ui/PhotoViewer$12$1;->$r8$lambda$BYWkGhe_KHwx16x4Xc33c6UTP3U(Lorg/telegram/ui/PhotoViewer$12$1;ZLandroid/content/DialogInterface;I)V
 
     return-void
 .end method

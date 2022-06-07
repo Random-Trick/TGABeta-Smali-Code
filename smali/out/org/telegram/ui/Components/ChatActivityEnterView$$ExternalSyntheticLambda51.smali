@@ -2,32 +2,40 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lorg/telegram/ui/ActionBar/ActionBarPopupWindow$OnDispatchKeyEventListener;
+.implements Ljava/lang/Runnable;
 
 
-# instance fields
-.field public final synthetic f$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
+# static fields
+.field public static final synthetic INSTANCE:Lorg/telegram/ui/Components/ChatActivityEnterView$$ExternalSyntheticLambda51;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lorg/telegram/ui/Components/ChatActivityEnterView;)V
-    .registers 2
+.method static synthetic constructor <clinit>()V
+    .registers 1
+
+    new-instance v0, Lorg/telegram/ui/Components/ChatActivityEnterView$$ExternalSyntheticLambda51;
+
+    invoke-direct {v0}, Lorg/telegram/ui/Components/ChatActivityEnterView$$ExternalSyntheticLambda51;-><init>()V
+
+    sput-object v0, Lorg/telegram/ui/Components/ChatActivityEnterView$$ExternalSyntheticLambda51;->INSTANCE:Lorg/telegram/ui/Components/ChatActivityEnterView$$ExternalSyntheticLambda51;
+
+    return-void
+.end method
+
+.method private synthetic constructor <init>()V
+    .registers 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$$ExternalSyntheticLambda51;->f$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onDispatchKeyEvent(Landroid/view/KeyEvent;)V
-    .registers 3
+.method public final run()V
+    .registers 1
 
-    iget-object v0, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$$ExternalSyntheticLambda51;->f$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
-
-    invoke-static {v0, p1}, Lorg/telegram/ui/Components/ChatActivityEnterView;->$r8$lambda$DvMznYWdv214XyPeiz2xOY8VomM(Lorg/telegram/ui/Components/ChatActivityEnterView;Landroid/view/KeyEvent;)V
+    invoke-static {}, Lorg/telegram/ui/Components/ChatActivityEnterView;->$r8$lambda$z1aHsMUSf14HGyRwWsnxbh5SDjg()V
 
     return-void
 .end method

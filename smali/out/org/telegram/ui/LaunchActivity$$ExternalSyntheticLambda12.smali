@@ -33,7 +33,7 @@
 
     iget-object v1, p0, Lorg/telegram/ui/LaunchActivity$$ExternalSyntheticLambda12;->f$1:[Lorg/telegram/messenger/LocaleController$LocaleInfo;
 
-    invoke-static {v0, v1, p1, p2}, Lorg/telegram/ui/LaunchActivity;->$r8$lambda$8lwfnvLuVM_7KWULUlOSp2F9C9g(Lorg/telegram/ui/LaunchActivity;[Lorg/telegram/messenger/LocaleController$LocaleInfo;Landroid/content/DialogInterface;I)V
+    invoke-static {v0, v1, p1, p2}, Lorg/telegram/ui/LaunchActivity;->$r8$lambda$x6berlzKBYHJfMfF8FN25A62Apg(Lorg/telegram/ui/LaunchActivity;[Lorg/telegram/messenger/LocaleController$LocaleInfo;Landroid/content/DialogInterface;I)V
 
     return-void
 .end method

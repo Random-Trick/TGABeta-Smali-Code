@@ -1,4 +1,4 @@
-.class abstract Lorg/telegram/ui/Components/voip/AcceptDeclineView$AcceptDeclineAccessibilityNodeProvider;
+.class public abstract Lorg/telegram/ui/Components/voip/AcceptDeclineView$AcceptDeclineAccessibilityNodeProvider;
 .super Landroid/view/accessibility/AccessibilityNodeProvider;
 .source "AcceptDeclineView.java"
 
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x40a
+    accessFlags = 0x409
     name = "AcceptDeclineAccessibilityNodeProvider"
 .end annotation
 
@@ -27,7 +27,7 @@
 
 
 # direct methods
-.method private constructor <init>(Landroid/view/View;I)V
+.method protected constructor <init>(Landroid/view/View;I)V
     .registers 4
 
     .line 506
@@ -65,15 +65,6 @@
     check-cast p1, Landroid/view/accessibility/AccessibilityManager;
 
     iput-object p1, p0, Lorg/telegram/ui/Components/voip/AcceptDeclineView$AcceptDeclineAccessibilityNodeProvider;->accessibilityManager:Landroid/view/accessibility/AccessibilityManager;
-
-    return-void
-.end method
-
-.method synthetic constructor <init>(Landroid/view/View;ILorg/telegram/ui/Components/voip/AcceptDeclineView$1;)V
-    .registers 4
-
-    .line 497
-    invoke-direct {p0, p1, p2}, Lorg/telegram/ui/Components/voip/AcceptDeclineView$AcceptDeclineAccessibilityNodeProvider;-><init>(Landroid/view/View;I)V
 
     return-void
 .end method

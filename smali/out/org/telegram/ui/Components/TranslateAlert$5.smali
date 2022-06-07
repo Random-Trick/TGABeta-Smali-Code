@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/TranslateAlert;Landroid/content/Context;)V
     .registers 3
 
-    .line 456
+    .line 457
     iput-object p1, p0, Lorg/telegram/ui/Components/TranslateAlert$5;->this$0:Lorg/telegram/ui/Components/TranslateAlert;
 
     invoke-direct {p0, p2}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
@@ -35,10 +35,10 @@
 .method protected onDraw(Landroid/graphics/Canvas;)V
     .registers 4
 
-    .line 463
+    .line 464
     invoke-super {p0, p1}, Landroid/widget/TextView;->onDraw(Landroid/graphics/Canvas;)V
 
-    .line 464
+    .line 465
     invoke-virtual {p0}, Landroid/widget/TextView;->getPaddingLeft()I
 
     move-result v0
@@ -53,7 +53,7 @@
 
     invoke-virtual {p1, v0, v1}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 465
+    .line 466
     iget-object v0, p0, Lorg/telegram/ui/Components/TranslateAlert$5;->this$0:Lorg/telegram/ui/Components/TranslateAlert;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/TranslateAlert;->access$1400(Lorg/telegram/ui/Components/TranslateAlert;)Lorg/telegram/ui/Components/LinkSpanDrawable$LinkCollector;
@@ -74,7 +74,7 @@
 
     if-eqz p1, :cond_27
 
-    .line 466
+    .line 467
     invoke-virtual {p0}, Landroid/widget/TextView;->invalidate()V
 
     :cond_27
@@ -84,7 +84,7 @@
 .method protected onMeasure(II)V
     .registers 3
 
-    .line 459
+    .line 460
     invoke-static {}, Lorg/telegram/ui/Components/TranslateAlert;->access$1300()I
 
     move-result p2
@@ -101,14 +101,14 @@
 
     if-ne p1, v0, :cond_67
 
-    .line 471
+    .line 472
     invoke-virtual {p0}, Landroid/widget/TextView;->isFocused()Z
 
     move-result v0
 
     if-eqz v0, :cond_67
 
-    .line 472
+    .line 473
     sget-object p1, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     const-string v0, "clipboard"
@@ -119,12 +119,12 @@
 
     check-cast p1, Landroid/content/ClipboardManager;
 
-    .line 475
+    .line 476
     invoke-virtual {p0}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
 
     move-result-object v0
 
-    .line 476
+    .line 477
     invoke-virtual {p0}, Landroid/widget/TextView;->getSelectionStart()I
 
     move-result v1
@@ -143,7 +143,7 @@
 
     move-result v1
 
-    .line 477
+    .line 478
     invoke-virtual {p0}, Landroid/widget/TextView;->getSelectionStart()I
 
     move-result v3
@@ -160,22 +160,22 @@
 
     move-result v2
 
-    .line 475
+    .line 476
     invoke-interface {v0, v1, v2}, Ljava/lang/CharSequence;->subSequence(II)Ljava/lang/CharSequence;
 
     move-result-object v0
 
     const-string v1, "label"
 
-    .line 473
+    .line 474
     invoke-static {v1, v0}, Landroid/content/ClipData;->newPlainText(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Landroid/content/ClipData;
 
     move-result-object v0
 
-    .line 480
+    .line 481
     invoke-virtual {p1, v0}, Landroid/content/ClipboardManager;->setPrimaryClip(Landroid/content/ClipData;)V
 
-    .line 481
+    .line 482
     iget-object p1, p0, Lorg/telegram/ui/Components/TranslateAlert$5;->this$0:Lorg/telegram/ui/Components/TranslateAlert;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/TranslateAlert;->access$1500(Lorg/telegram/ui/Components/TranslateAlert;)Landroid/widget/FrameLayout;
@@ -188,7 +188,7 @@
 
     move-result-object p1
 
-    const v0, 0x7f0e115d
+    const v0, 0x7f0e1227
 
     const-string v1, "TextCopied"
 
@@ -202,14 +202,14 @@
 
     invoke-virtual {p1}, Lorg/telegram/ui/Components/Bulletin;->show()Lorg/telegram/ui/Components/Bulletin;
 
-    .line 482
+    .line 483
     invoke-virtual {p0}, Landroid/widget/TextView;->clearFocus()V
 
     const/4 p1, 0x1
 
     return p1
 
-    .line 485
+    .line 486
     :cond_67
     invoke-super {p0, p1}, Landroid/widget/TextView;->onTextContextMenuItem(I)Z
 

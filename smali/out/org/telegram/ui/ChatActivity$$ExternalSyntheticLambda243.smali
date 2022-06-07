@@ -2,38 +2,32 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lorg/telegram/ui/Components/RecyclerListView$OnItemClickListener;
+.implements Lorg/telegram/ui/Components/RecyclerAnimationScrollHelper$ScrollListener;
 
 
 # instance fields
 .field public final synthetic f$0:Lorg/telegram/ui/ChatActivity;
 
-.field public final synthetic f$1:Lorg/telegram/ui/MessageSeenView;
-
 
 # direct methods
-.method public synthetic constructor <init>(Lorg/telegram/ui/ChatActivity;Lorg/telegram/ui/MessageSeenView;)V
-    .registers 3
+.method public synthetic constructor <init>(Lorg/telegram/ui/ChatActivity;)V
+    .registers 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda243;->f$0:Lorg/telegram/ui/ChatActivity;
-
-    iput-object p2, p0, Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda243;->f$1:Lorg/telegram/ui/MessageSeenView;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onItemClick(Landroid/view/View;I)V
-    .registers 5
+.method public final onScroll()V
+    .registers 2
 
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda243;->f$0:Lorg/telegram/ui/ChatActivity;
 
-    iget-object v1, p0, Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda243;->f$1:Lorg/telegram/ui/MessageSeenView;
-
-    invoke-static {v0, v1, p1, p2}, Lorg/telegram/ui/ChatActivity;->$r8$lambda$Z1of1EYSkoFOkqa3ZGCpn049Xzg(Lorg/telegram/ui/ChatActivity;Lorg/telegram/ui/MessageSeenView;Landroid/view/View;I)V
+    invoke-virtual {v0}, Lorg/telegram/ui/ChatActivity;->invalidateMessagesVisiblePart()V
 
     return-void
 .end method

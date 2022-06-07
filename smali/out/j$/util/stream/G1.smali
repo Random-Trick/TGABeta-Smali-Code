@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lj$/util/function/b;
+.implements Lj$/util/function/r;
 
 
 # static fields
@@ -32,29 +32,12 @@
 
 
 # virtual methods
-.method public andThen(Lj$/util/function/Function;)Lj$/util/function/BiFunction;
+.method public final apply(J)Ljava/lang/Object;
     .registers 3
 
-    .line 1
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-static {p1, p2}, Lj$/util/stream/x2;->j(J)Lj$/util/stream/p1;
 
-    new-instance v0, Lj$/util/concurrent/a;
+    move-result-object p1
 
-    invoke-direct {v0, p0, p1}, Lj$/util/concurrent/a;-><init>(Lj$/util/function/BiFunction;Lj$/util/function/Function;)V
-
-    return-object v0
-.end method
-
-.method public final apply(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .registers 4
-
-    new-instance v0, Lj$/util/stream/P1;
-
-    check-cast p1, Lj$/util/stream/v1;
-
-    check-cast p2, Lj$/util/stream/v1;
-
-    invoke-direct {v0, p1, p2}, Lj$/util/stream/P1;-><init>(Lj$/util/stream/v1;Lj$/util/stream/v1;)V
-
-    return-object v0
+    return-object p1
 .end method

@@ -17,7 +17,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 54054
+    .line 54529
     invoke-direct {p0}, Lorg/telegram/tgnet/TLRPC$TL_pageBlockEmbedPost;-><init>()V
 
     return-void
@@ -28,42 +28,42 @@
 .method public readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
     .registers 7
 
-    .line 54059
+    .line 54534
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readString(Z)Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_pageBlockEmbedPost;->url:Ljava/lang/String;
 
-    .line 54060
+    .line 54535
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt64(Z)J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lorg/telegram/tgnet/TLRPC$TL_pageBlockEmbedPost;->webpage_id:J
 
-    .line 54061
+    .line 54536
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt64(Z)J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lorg/telegram/tgnet/TLRPC$TL_pageBlockEmbedPost;->author_photo_id:J
 
-    .line 54062
+    .line 54537
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readString(Z)Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_pageBlockEmbedPost;->author:Ljava/lang/String;
 
-    .line 54063
+    .line 54538
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
 
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$TL_pageBlockEmbedPost;->date:I
 
-    .line 54064
+    .line 54539
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
@@ -78,7 +78,7 @@
 
     return-void
 
-    .line 54067
+    .line 54542
     :cond_2b
     new-instance p1, Ljava/lang/RuntimeException;
 
@@ -102,7 +102,7 @@
 
     throw p1
 
-    .line 54071
+    .line 54546
     :cond_40
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
@@ -111,7 +111,7 @@
     :goto_44
     if-ge v1, v0, :cond_59
 
-    .line 54073
+    .line 54548
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v2
@@ -124,7 +124,7 @@
 
     return-void
 
-    .line 54077
+    .line 54552
     :cond_51
     iget-object v3, p0, Lorg/telegram/tgnet/TLRPC$TL_pageBlockEmbedPost;->blocks:Ljava/util/ArrayList;
 
@@ -134,7 +134,7 @@
 
     goto :goto_44
 
-    .line 54079
+    .line 54554
     :cond_59
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_pageCaption;
 
@@ -142,7 +142,7 @@
 
     iput-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_pageBlockEmbedPost;->caption:Lorg/telegram/tgnet/TLRPC$TL_pageCaption;
 
-    .line 54080
+    .line 54555
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v1
@@ -153,7 +153,7 @@
 
     iput-object p1, v0, Lorg/telegram/tgnet/TLRPC$TL_pageCaption;->text:Lorg/telegram/tgnet/TLRPC$RichText;
 
-    .line 54081
+    .line 54556
     iget-object p1, p0, Lorg/telegram/tgnet/TLRPC$TL_pageBlockEmbedPost;->caption:Lorg/telegram/tgnet/TLRPC$TL_pageCaption;
 
     new-instance p2, Lorg/telegram/tgnet/TLRPC$TL_textEmpty;
@@ -168,49 +168,49 @@
 .method public serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
     .registers 5
 
-    .line 54085
+    .line 54560
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_pageBlockEmbedPost_layer82;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 54086
+    .line 54561
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_pageBlockEmbedPost;->url:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeString(Ljava/lang/String;)V
 
-    .line 54087
+    .line 54562
     iget-wide v0, p0, Lorg/telegram/tgnet/TLRPC$TL_pageBlockEmbedPost;->webpage_id:J
 
     invoke-virtual {p1, v0, v1}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt64(J)V
 
-    .line 54088
+    .line 54563
     iget-wide v0, p0, Lorg/telegram/tgnet/TLRPC$TL_pageBlockEmbedPost;->author_photo_id:J
 
     invoke-virtual {p1, v0, v1}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt64(J)V
 
-    .line 54089
+    .line 54564
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_pageBlockEmbedPost;->author:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeString(Ljava/lang/String;)V
 
-    .line 54090
+    .line 54565
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_pageBlockEmbedPost;->date:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
     const v0, 0x1cb5c415
 
-    .line 54091
+    .line 54566
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 54092
+    .line 54567
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_pageBlockEmbedPost;->blocks:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
-    .line 54093
+    .line 54568
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
     const/4 v1, 0x0
@@ -218,7 +218,7 @@
     :goto_2e
     if-ge v1, v0, :cond_3e
 
-    .line 54095
+    .line 54570
     iget-object v2, p0, Lorg/telegram/tgnet/TLRPC$TL_pageBlockEmbedPost;->blocks:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -233,7 +233,7 @@
 
     goto :goto_2e
 
-    .line 54097
+    .line 54572
     :cond_3e
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_pageBlockEmbedPost;->caption:Lorg/telegram/tgnet/TLRPC$TL_pageCaption;
 

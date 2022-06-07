@@ -37,7 +37,7 @@
 .method constructor <init>(Lorg/telegram/messenger/MediaDataController;Ljava/util/ArrayList;I)V
     .registers 4
 
-    .line 6061
+    .line 6263
     iput-object p1, p0, Lorg/telegram/messenger/MediaDataController$3;->this$0:Lorg/telegram/messenger/MediaDataController;
 
     iput-object p2, p0, Lorg/telegram/messenger/MediaDataController$3;->val$previewItems:Ljava/util/ArrayList;
@@ -52,21 +52,21 @@
 .method private synthetic lambda$run$0(Ljava/util/ArrayList;)V
     .registers 4
 
-    .line 6068
+    .line 6270
     iget-object v0, p0, Lorg/telegram/messenger/MediaDataController$3;->this$0:Lorg/telegram/messenger/MediaDataController;
 
     iget-object v0, v0, Lorg/telegram/messenger/MediaDataController;->defaultEmojiThemes:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 6069
+    .line 6271
     iget-object v0, p0, Lorg/telegram/messenger/MediaDataController$3;->this$0:Lorg/telegram/messenger/MediaDataController;
 
     iget-object v0, v0, Lorg/telegram/messenger/MediaDataController;->defaultEmojiThemes:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
-    .line 6070
+    .line 6272
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getGlobalInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object p1
@@ -89,7 +89,7 @@
 
     const/4 v0, 0x0
 
-    .line 6064
+    .line 6266
     :goto_1
     iget-object v1, p0, Lorg/telegram/messenger/MediaDataController$3;->val$previewItems:Ljava/util/ArrayList;
 
@@ -99,7 +99,7 @@
 
     if-ge v0, v1, :cond_1b
 
-    .line 6065
+    .line 6267
     iget-object v1, p0, Lorg/telegram/messenger/MediaDataController$3;->val$previewItems:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -118,7 +118,7 @@
 
     goto :goto_1
 
-    .line 6067
+    .line 6269
     :cond_1b
     iget-object v0, p0, Lorg/telegram/messenger/MediaDataController$3;->val$previewItems:Ljava/util/ArrayList;
 

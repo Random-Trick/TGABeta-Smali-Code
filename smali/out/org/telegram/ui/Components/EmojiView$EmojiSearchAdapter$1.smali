@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/EmojiView$EmojiSearchAdapter;Landroid/content/Context;)V
     .registers 3
 
-    .line 4645
+    .line 4731
     iput-object p1, p0, Lorg/telegram/ui/Components/EmojiView$EmojiSearchAdapter$1;->this$1:Lorg/telegram/ui/Components/EmojiView$EmojiSearchAdapter;
 
     invoke-direct {p0, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
@@ -35,7 +35,7 @@
 .method protected onMeasure(II)V
     .registers 4
 
-    .line 4649
+    .line 4735
     iget-object p2, p0, Lorg/telegram/ui/Components/EmojiView$EmojiSearchAdapter$1;->this$1:Lorg/telegram/ui/Components/EmojiView$EmojiSearchAdapter;
 
     iget-object p2, p2, Lorg/telegram/ui/Components/EmojiView$EmojiSearchAdapter;->this$0:Lorg/telegram/ui/Components/EmojiView;
@@ -48,7 +48,7 @@
 
     if-eqz p2, :cond_1c
 
-    .line 4651
+    .line 4737
     invoke-virtual {p2}, Landroid/view/View;->getMeasuredHeight()I
 
     move-result p2
@@ -72,12 +72,12 @@
     :cond_1c
     const/high16 p2, 0x42f00000    # 120.0f
 
-    .line 4653
+    .line 4739
     invoke-static {p2}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result p2
 
-    .line 4655
+    .line 4741
     :goto_22
     iget-object v0, p0, Lorg/telegram/ui/Components/EmojiView$EmojiSearchAdapter$1;->this$1:Lorg/telegram/ui/Components/EmojiView$EmojiSearchAdapter;
 

@@ -4,7 +4,7 @@
 
 
 # static fields
-.field public static constructor:I = -0x24efce90
+.field public static constructor:I = -0x49370ed5
 
 
 # instance fields
@@ -12,9 +12,7 @@
 
 .field public info:Lorg/telegram/tgnet/TLRPC$TL_paymentRequestedInfo;
 
-.field public msg_id:I
-
-.field public peer:Lorg/telegram/tgnet/TLRPC$InputPeer;
+.field public invoice:Lorg/telegram/tgnet/TLRPC$InputInvoice;
 
 .field public save:Z
 
@@ -29,7 +27,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 53160
+    .line 53623
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -40,7 +38,7 @@
 .method public deserializeResponse(Lorg/telegram/tgnet/AbstractSerializedData;IZ)Lorg/telegram/tgnet/TLObject;
     .registers 4
 
-    .line 53170
+    .line 53632
     invoke-static {p1, p2, p3}, Lorg/telegram/tgnet/TLRPC$TL_payments_validatedRequestedInfo;->TLdeserialize(Lorg/telegram/tgnet/AbstractSerializedData;IZ)Lorg/telegram/tgnet/TLRPC$TL_payments_validatedRequestedInfo;
 
     move-result-object p1
@@ -51,12 +49,12 @@
 .method public serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
     .registers 3
 
-    .line 53174
+    .line 53636
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_payments_validateRequestedInfo;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 53175
+    .line 53637
     iget-boolean v0, p0, Lorg/telegram/tgnet/TLRPC$TL_payments_validateRequestedInfo;->save:Z
 
     if-eqz v0, :cond_e
@@ -75,20 +73,15 @@
     :goto_12
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$TL_payments_validateRequestedInfo;->flags:I
 
-    .line 53176
+    .line 53638
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 53177
-    iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_payments_validateRequestedInfo;->peer:Lorg/telegram/tgnet/TLRPC$InputPeer;
+    .line 53639
+    iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_payments_validateRequestedInfo;->invoice:Lorg/telegram/tgnet/TLRPC$InputInvoice;
 
     invoke-virtual {v0, p1}, Lorg/telegram/tgnet/TLObject;->serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
 
-    .line 53178
-    iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_payments_validateRequestedInfo;->msg_id:I
-
-    invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
-
-    .line 53179
+    .line 53640
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_payments_validateRequestedInfo;->info:Lorg/telegram/tgnet/TLRPC$TL_paymentRequestedInfo;
 
     invoke-virtual {v0, p1}, Lorg/telegram/tgnet/TLRPC$TL_paymentRequestedInfo;->serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V

@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/EmojiView;Landroid/content/Context;I)V
     .registers 4
 
-    .line 1699
+    .line 1705
     iput-object p1, p0, Lorg/telegram/ui/Components/EmojiView$16;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-direct {p0, p2, p3}, Landroidx/recyclerview/widget/GridLayoutManager;-><init>(Landroid/content/Context;I)V
@@ -35,14 +35,14 @@
 .method public scrollVerticallyBy(ILandroidx/recyclerview/widget/RecyclerView$Recycler;Landroidx/recyclerview/widget/RecyclerView$State;)I
     .registers 4
 
-    .line 1713
+    .line 1719
     invoke-super {p0, p1, p2, p3}, Landroidx/recyclerview/widget/GridLayoutManager;->scrollVerticallyBy(ILandroidx/recyclerview/widget/RecyclerView$Recycler;Landroidx/recyclerview/widget/RecyclerView$State;)I
 
     move-result p1
 
     if-eqz p1, :cond_1e
 
-    .line 1714
+    .line 1720
     iget-object p2, p0, Lorg/telegram/ui/Components/EmojiView$16;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-static {p2}, Lorg/telegram/ui/Components/EmojiView;->access$7500(Lorg/telegram/ui/Components/EmojiView;)Lorg/telegram/ui/Components/RecyclerListView;
@@ -57,19 +57,19 @@
 
     if-ne p2, p3, :cond_1e
 
-    .line 1715
+    .line 1721
     iget-object p2, p0, Lorg/telegram/ui/Components/EmojiView$16;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     const/4 p3, 0x0
 
     invoke-static {p2, p3}, Lorg/telegram/ui/Components/EmojiView;->access$202(Lorg/telegram/ui/Components/EmojiView;Z)Z
 
-    .line 1716
+    .line 1722
     iget-object p2, p0, Lorg/telegram/ui/Components/EmojiView$16;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-static {p2}, Lorg/telegram/ui/Components/EmojiView;->access$300(Lorg/telegram/ui/Components/EmojiView;)V
 
-    .line 1718
+    .line 1724
     :cond_1e
     iget-object p2, p0, Lorg/telegram/ui/Components/EmojiView$16;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
@@ -79,12 +79,12 @@
 
     if-nez p2, :cond_2b
 
-    .line 1719
+    .line 1725
     iget-object p2, p0, Lorg/telegram/ui/Components/EmojiView$16;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-static {p2}, Lorg/telegram/ui/Components/EmojiView;->access$2500(Lorg/telegram/ui/Components/EmojiView;)V
 
-    .line 1721
+    .line 1727
     :cond_2b
     iget-object p2, p0, Lorg/telegram/ui/Components/EmojiView$16;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
@@ -100,7 +100,7 @@
 .method public smoothScrollToPosition(Landroidx/recyclerview/widget/RecyclerView;Landroidx/recyclerview/widget/RecyclerView$State;I)V
     .registers 5
 
-    .line 1703
+    .line 1709
     :try_start_0
     new-instance p2, Landroidx/recyclerview/widget/LinearSmoothScrollerCustom;
 
@@ -112,10 +112,10 @@
 
     invoke-direct {p2, p1, v0}, Landroidx/recyclerview/widget/LinearSmoothScrollerCustom;-><init>(Landroid/content/Context;I)V
 
-    .line 1704
+    .line 1710
     invoke-virtual {p2, p3}, Landroidx/recyclerview/widget/RecyclerView$SmoothScroller;->setTargetPosition(I)V
 
-    .line 1705
+    .line 1711
     invoke-virtual {p0, p2}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->startSmoothScroll(Landroidx/recyclerview/widget/RecyclerView$SmoothScroller;)V
     :try_end_10
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_10} :catch_11
@@ -125,7 +125,7 @@
     :catch_11
     move-exception p1
 
-    .line 1707
+    .line 1713
     invoke-static {p1}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     :goto_15

@@ -42,14 +42,14 @@
 
     const/4 v0, 0x0
 
-    invoke-static {p1, v0}, Lorg/telegram/ui/PhotoPickerSearchActivity;->access$2102(Lorg/telegram/ui/PhotoPickerSearchActivity;Landroid/animation/AnimatorSet;)Landroid/animation/AnimatorSet;
+    invoke-static {p1, v0}, Lorg/telegram/ui/PhotoPickerSearchActivity;->access$1902(Lorg/telegram/ui/PhotoPickerSearchActivity;Landroid/animation/AnimatorSet;)Landroid/animation/AnimatorSet;
 
     .line 522
     iget-object p1, p0, Lorg/telegram/ui/PhotoPickerSearchActivity$4$1;->this$1:Lorg/telegram/ui/PhotoPickerSearchActivity$4;
 
     iget-object p1, p1, Lorg/telegram/ui/PhotoPickerSearchActivity$4;->this$0:Lorg/telegram/ui/PhotoPickerSearchActivity;
 
-    invoke-static {p1}, Lorg/telegram/ui/PhotoPickerSearchActivity;->access$2000(Lorg/telegram/ui/PhotoPickerSearchActivity;)Z
+    invoke-static {p1}, Lorg/telegram/ui/PhotoPickerSearchActivity;->access$1800(Lorg/telegram/ui/PhotoPickerSearchActivity;)Z
 
     move-result p1
 
@@ -205,24 +205,24 @@
 
     iget-object p1, p1, Lorg/telegram/ui/PhotoPickerSearchActivity$4;->this$0:Lorg/telegram/ui/PhotoPickerSearchActivity;
 
-    invoke-static {p1, v2}, Lorg/telegram/ui/PhotoPickerSearchActivity;->access$1902(Lorg/telegram/ui/PhotoPickerSearchActivity;Z)Z
+    invoke-static {p1, v2}, Lorg/telegram/ui/PhotoPickerSearchActivity;->access$1702(Lorg/telegram/ui/PhotoPickerSearchActivity;Z)Z
 
     .line 533
     iget-object p1, p0, Lorg/telegram/ui/PhotoPickerSearchActivity$4$1;->this$1:Lorg/telegram/ui/PhotoPickerSearchActivity$4;
 
-    invoke-static {p1, v2}, Lorg/telegram/ui/PhotoPickerSearchActivity$4;->access$2802(Lorg/telegram/ui/PhotoPickerSearchActivity$4;Z)Z
+    invoke-static {p1, v2}, Lorg/telegram/ui/PhotoPickerSearchActivity$4;->access$2602(Lorg/telegram/ui/PhotoPickerSearchActivity$4;Z)Z
 
     .line 534
     iget-object p1, p0, Lorg/telegram/ui/PhotoPickerSearchActivity$4$1;->this$1:Lorg/telegram/ui/PhotoPickerSearchActivity$4;
 
-    invoke-static {p1, v2}, Lorg/telegram/ui/PhotoPickerSearchActivity$4;->access$2902(Lorg/telegram/ui/PhotoPickerSearchActivity$4;Z)Z
+    invoke-static {p1, v2}, Lorg/telegram/ui/PhotoPickerSearchActivity$4;->access$2702(Lorg/telegram/ui/PhotoPickerSearchActivity$4;Z)Z
 
     .line 535
     iget-object p1, p0, Lorg/telegram/ui/PhotoPickerSearchActivity$4$1;->this$1:Lorg/telegram/ui/PhotoPickerSearchActivity$4;
 
     iget-object p1, p1, Lorg/telegram/ui/PhotoPickerSearchActivity$4;->this$0:Lorg/telegram/ui/PhotoPickerSearchActivity;
 
-    invoke-static {p1}, Lorg/telegram/ui/PhotoPickerSearchActivity;->access$3000(Lorg/telegram/ui/PhotoPickerSearchActivity;)Lorg/telegram/ui/ActionBar/ActionBar;
+    invoke-static {p1}, Lorg/telegram/ui/PhotoPickerSearchActivity;->access$2800(Lorg/telegram/ui/PhotoPickerSearchActivity;)Lorg/telegram/ui/ActionBar/ActionBar;
 
     move-result-object p1
 

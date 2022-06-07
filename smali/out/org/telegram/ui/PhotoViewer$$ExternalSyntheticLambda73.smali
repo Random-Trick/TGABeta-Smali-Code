@@ -2,42 +2,32 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lorg/telegram/ui/Components/NumberPicker$Formatter;
+.implements Lorg/telegram/ui/Components/AlertsCreator$ScheduleDatePickerDelegate;
 
 
-# static fields
-.field public static final synthetic INSTANCE:Lorg/telegram/ui/PhotoViewer$$ExternalSyntheticLambda73;
+# instance fields
+.field public final synthetic f$0:Lorg/telegram/ui/PhotoViewer;
 
 
 # direct methods
-.method static synthetic constructor <clinit>()V
-    .registers 1
-
-    new-instance v0, Lorg/telegram/ui/PhotoViewer$$ExternalSyntheticLambda73;
-
-    invoke-direct {v0}, Lorg/telegram/ui/PhotoViewer$$ExternalSyntheticLambda73;-><init>()V
-
-    sput-object v0, Lorg/telegram/ui/PhotoViewer$$ExternalSyntheticLambda73;->INSTANCE:Lorg/telegram/ui/PhotoViewer$$ExternalSyntheticLambda73;
-
-    return-void
-.end method
-
-.method private synthetic constructor <init>()V
-    .registers 1
+.method public synthetic constructor <init>(Lorg/telegram/ui/PhotoViewer;)V
+    .registers 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lorg/telegram/ui/PhotoViewer$$ExternalSyntheticLambda73;->f$0:Lorg/telegram/ui/PhotoViewer;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final format(I)Ljava/lang/String;
-    .registers 2
+.method public final didSelectDate(ZI)V
+    .registers 4
 
-    invoke-static {p1}, Lorg/telegram/ui/PhotoViewer;->$r8$lambda$fk42hW6b-I_z-_g9i8uqptDYFaA(I)Ljava/lang/String;
+    iget-object v0, p0, Lorg/telegram/ui/PhotoViewer$$ExternalSyntheticLambda73;->f$0:Lorg/telegram/ui/PhotoViewer;
 
-    move-result-object p1
+    invoke-static {v0, p1, p2}, Lorg/telegram/ui/PhotoViewer;->$r8$lambda$tDcL99jQbAj5gTwxZm9NtBynzEU(Lorg/telegram/ui/PhotoViewer;ZI)V
 
-    return-object p1
+    return-void
 .end method

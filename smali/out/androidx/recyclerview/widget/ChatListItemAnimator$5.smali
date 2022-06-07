@@ -22,7 +22,7 @@
 .method constructor <init>(Landroidx/recyclerview/widget/ChatListItemAnimator;Lorg/telegram/messenger/MessageObject$GroupedMessages$TransitionParams;)V
     .registers 3
 
-    .line 810
+    .line 820
     iput-object p2, p0, Landroidx/recyclerview/widget/ChatListItemAnimator$5;->val$groupTransitionParams:Lorg/telegram/messenger/MessageObject$GroupedMessages$TransitionParams;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -35,14 +35,14 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .registers 3
 
-    .line 813
+    .line 823
     iget-object p1, p0, Landroidx/recyclerview/widget/ChatListItemAnimator$5;->val$groupTransitionParams:Lorg/telegram/messenger/MessageObject$GroupedMessages$TransitionParams;
 
     const/4 v0, 0x0
 
     iput-boolean v0, p1, Lorg/telegram/messenger/MessageObject$GroupedMessages$TransitionParams;->backgroundChangeBounds:Z
 
-    .line 814
+    .line 824
     iput-boolean v0, p1, Lorg/telegram/messenger/MessageObject$GroupedMessages$TransitionParams;->drawBackgroundForDeletedItems:Z
 
     return-void

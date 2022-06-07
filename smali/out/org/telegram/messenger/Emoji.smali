@@ -8,7 +8,8 @@
     value = {
         Lorg/telegram/messenger/Emoji$EmojiSpan;,
         Lorg/telegram/messenger/Emoji$DrawableInfo;,
-        Lorg/telegram/messenger/Emoji$EmojiDrawable;
+        Lorg/telegram/messenger/Emoji$EmojiDrawable;,
+        Lorg/telegram/messenger/Emoji$AnimatedEmojiDrawable;
     }
 .end annotation
 
@@ -112,7 +113,7 @@
 .method static constructor <clinit>()V
     .registers 8
 
-    .line 39
+    .line 50
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -121,69 +122,69 @@
 
     const/4 v0, 0x0
 
-    .line 42
+    .line 53
     sput-boolean v0, Lorg/telegram/messenger/Emoji;->inited:Z
 
     const/16 v1, 0x8
 
     new-array v2, v1, [I
 
-    .line 44
+    .line 55
     fill-array-data v2, :array_98
 
     sput-object v2, Lorg/telegram/messenger/Emoji;->emojiCounts:[I
 
     new-array v2, v1, [[Landroid/graphics/Bitmap;
 
-    .line 45
+    .line 56
     sput-object v2, Lorg/telegram/messenger/Emoji;->emojiBmp:[[Landroid/graphics/Bitmap;
 
     new-array v1, v1, [[Z
 
-    .line 46
+    .line 57
     sput-object v1, Lorg/telegram/messenger/Emoji;->loadingEmoji:[[Z
 
-    .line 48
+    .line 59
     new-instance v1, Ljava/util/HashMap;
 
     invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
     sput-object v1, Lorg/telegram/messenger/Emoji;->emojiUseHistory:Ljava/util/HashMap;
 
-    .line 49
+    .line 60
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
     sput-object v1, Lorg/telegram/messenger/Emoji;->recentEmoji:Ljava/util/ArrayList;
 
-    .line 50
+    .line 61
     new-instance v1, Ljava/util/HashMap;
 
     invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
     sput-object v1, Lorg/telegram/messenger/Emoji;->emojiColor:Ljava/util/HashMap;
 
-    .line 52
+    .line 63
     sget-object v1, Lorg/telegram/messenger/Emoji$$ExternalSyntheticLambda1;->INSTANCE:Lorg/telegram/messenger/Emoji$$ExternalSyntheticLambda1;
 
     sput-object v1, Lorg/telegram/messenger/Emoji;->invalidateUiRunnable:Ljava/lang/Runnable;
 
     const/4 v1, 0x1
 
-    .line 54
+    .line 65
     sput-boolean v1, Lorg/telegram/messenger/Emoji;->emojiDrawingUseAlpha:Z
 
     const/high16 v1, 0x41a00000    # 20.0f
 
-    .line 59
+    .line 70
     invoke-static {v1}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v1
 
     sput v1, Lorg/telegram/messenger/Emoji;->drawImgSize:I
 
-    .line 60
+    .line 71
     invoke-static {}, Lorg/telegram/messenger/AndroidUtilities;->isTablet()Z
 
     move-result v1
@@ -206,7 +207,7 @@
 
     const/4 v1, 0x0
 
-    .line 61
+    .line 72
     :goto_51
     sget-object v2, Lorg/telegram/messenger/Emoji;->emojiBmp:[[Landroid/graphics/Bitmap;
 
@@ -214,7 +215,7 @@
 
     if-ge v1, v3, :cond_69
 
-    .line 62
+    .line 73
     sget-object v3, Lorg/telegram/messenger/Emoji;->emojiCounts:[I
 
     aget v4, v3, v1
@@ -223,7 +224,7 @@
 
     aput-object v4, v2, v1
 
-    .line 63
+    .line 74
     sget-object v2, Lorg/telegram/messenger/Emoji;->loadingEmoji:[[Z
 
     aget v3, v3, v1
@@ -239,7 +240,7 @@
     :cond_69
     const/4 v1, 0x0
 
-    .line 66
+    .line 77
     :goto_6a
     sget-object v2, Lorg/telegram/messenger/EmojiData;->data:[[Ljava/lang/String;
 
@@ -249,7 +250,7 @@
 
     const/4 v2, 0x0
 
-    .line 68
+    .line 79
     :goto_70
     sget-object v3, Lorg/telegram/messenger/EmojiData;->data:[[Ljava/lang/String;
 
@@ -259,7 +260,7 @@
 
     if-ge v2, v4, :cond_8a
 
-    .line 69
+    .line 80
     sget-object v4, Lorg/telegram/messenger/Emoji;->rects:Ljava/util/HashMap;
 
     aget-object v3, v3, v1
@@ -285,7 +286,7 @@
 
     goto :goto_6a
 
-    .line 72
+    .line 83
     :cond_8d
     new-instance v1, Landroid/graphics/Paint;
 
@@ -293,7 +294,7 @@
 
     sput-object v1, Lorg/telegram/messenger/Emoji;->placeholderPaint:Landroid/graphics/Paint;
 
-    .line 73
+    .line 84
     invoke-virtual {v1, v0}, Landroid/graphics/Paint;->setColor(I)V
 
     return-void
@@ -314,7 +315,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 37
+    .line 48
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -323,7 +324,7 @@
 .method static synthetic access$100()I
     .registers 1
 
-    .line 37
+    .line 48
     sget v0, Lorg/telegram/messenger/Emoji;->bigImgSize:I
 
     return v0
@@ -332,34 +333,34 @@
 .method static synthetic access$200()I
     .registers 1
 
-    .line 37
+    .line 48
     sget v0, Lorg/telegram/messenger/Emoji;->drawImgSize:I
 
     return v0
 .end method
 
-.method static synthetic access$300(BS)V
+.method static synthetic access$400(BS)V
     .registers 2
 
-    .line 37
+    .line 48
     invoke-static {p0, p1}, Lorg/telegram/messenger/Emoji;->loadEmoji(BS)V
 
     return-void
 .end method
 
-.method static synthetic access$400()Landroid/graphics/Paint;
+.method static synthetic access$500()Landroid/graphics/Paint;
     .registers 1
 
-    .line 37
+    .line 48
     sget-object v0, Lorg/telegram/messenger/Emoji;->placeholderPaint:Landroid/graphics/Paint;
 
     return-object v0
 .end method
 
-.method static synthetic access$500()[[Landroid/graphics/Bitmap;
+.method static synthetic access$600()[[Landroid/graphics/Bitmap;
     .registers 1
 
-    .line 37
+    .line 48
     sget-object v0, Lorg/telegram/messenger/Emoji;->emojiBmp:[[Landroid/graphics/Bitmap;
 
     return-object v0
@@ -368,7 +369,7 @@
 .method public static addRecentEmoji(Ljava/lang/String;)V
     .registers 4
 
-    .line 561
+    .line 734
     sget-object v0, Lorg/telegram/messenger/Emoji;->emojiUseHistory:Ljava/util/HashMap;
 
     invoke-virtual {v0, p0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -381,12 +382,12 @@
 
     const/4 v0, 0x0
 
-    .line 563
+    .line 736
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
-    .line 565
+    .line 738
     :cond_f
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
@@ -404,7 +405,7 @@
 
     if-lt v1, v2, :cond_3d
 
-    .line 566
+    .line 739
     sget-object v1, Lorg/telegram/messenger/Emoji;->recentEmoji:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
@@ -419,12 +420,12 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 567
+    .line 740
     sget-object v2, Lorg/telegram/messenger/Emoji;->emojiUseHistory:Ljava/util/HashMap;
 
     invoke-virtual {v2, v1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 568
+    .line 741
     sget-object v1, Lorg/telegram/messenger/Emoji;->recentEmoji:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
@@ -435,7 +436,7 @@
 
     invoke-virtual {v1, v2, p0}, Ljava/util/ArrayList;->set(ILjava/lang/Object;)Ljava/lang/Object;
 
-    .line 570
+    .line 743
     :cond_3d
     sget-object v1, Lorg/telegram/messenger/Emoji;->emojiUseHistory:Ljava/util/HashMap;
 
@@ -457,12 +458,12 @@
 .method public static clearRecentEmoji()V
     .registers 3
 
-    .line 614
+    .line 787
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getGlobalEmojiSettings()Landroid/content/SharedPreferences;
 
     move-result-object v0
 
-    .line 615
+    .line 788
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
@@ -477,17 +478,17 @@
 
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 616
+    .line 789
     sget-object v0, Lorg/telegram/messenger/Emoji;->emojiUseHistory:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->clear()V
 
-    .line 617
+    .line 790
     sget-object v0, Lorg/telegram/messenger/Emoji;->recentEmoji:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 618
+    .line 791
     invoke-static {}, Lorg/telegram/messenger/Emoji;->saveRecentEmoji()V
 
     return-void
@@ -496,7 +497,7 @@
 .method public static fixEmoji(Ljava/lang/String;)Ljava/lang/String;
     .registers 8
 
-    .line 144
+    .line 152
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v0
@@ -508,7 +509,7 @@
     :goto_6
     if-ge v2, v0, :cond_96
 
-    .line 146
+    .line 154
     invoke-virtual {p0, v2}, Ljava/lang/String;->charAt(I)C
 
     move-result v3
@@ -531,7 +532,7 @@
 
     add-int/lit8 v3, v2, 0x1
 
-    .line 149
+    .line 157
     invoke-virtual {p0, v3}, Ljava/lang/String;->charAt(I)C
 
     move-result v5
@@ -559,7 +560,7 @@
 
     goto :goto_92
 
-    .line 151
+    .line 159
     :cond_3b
     :goto_3b
     new-instance v3, Ljava/lang/StringBuilder;
@@ -609,7 +610,7 @@
 
     if-gt v3, v5, :cond_92
 
-    .line 163
+    .line 171
     sget-object v5, Lorg/telegram/messenger/EmojiData;->emojiToFE0FMap:Ljava/util/HashMap;
 
     invoke-static {v3}, Ljava/lang/Character;->valueOf(C)Ljava/lang/Character;
@@ -622,7 +623,7 @@
 
     if-eqz v3, :cond_92
 
-    .line 164
+    .line 172
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -660,10 +661,89 @@
     return-object p0
 .end method
 
+.method public static getAnimatedEmojiBigDrawable(Lorg/telegram/tgnet/TLRPC$Document;Landroid/graphics/drawable/Drawable;Ljava/util/concurrent/atomic/AtomicReference;)Landroid/graphics/drawable/Drawable;
+    .registers 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lorg/telegram/tgnet/TLRPC$Document;",
+            "Landroid/graphics/drawable/Drawable;",
+            "Ljava/util/concurrent/atomic/AtomicReference<",
+            "Ljava/lang/ref/WeakReference<",
+            "Landroid/view/View;",
+            ">;>;)",
+            "Landroid/graphics/drawable/Drawable;"
+        }
+    .end annotation
+
+    .line 201
+    invoke-static {p0, p1, p2}, Lorg/telegram/messenger/Emoji;->getAnimatedEmojiDrawable(Lorg/telegram/tgnet/TLRPC$Document;Landroid/graphics/drawable/Drawable;Ljava/util/concurrent/atomic/AtomicReference;)Lorg/telegram/messenger/Emoji$AnimatedEmojiDrawable;
+
+    move-result-object p0
+
+    if-nez p0, :cond_8
+
+    const/4 p0, 0x0
+
+    return-object p0
+
+    .line 205
+    :cond_8
+    sget p1, Lorg/telegram/messenger/Emoji;->bigImgSize:I
+
+    const/4 p2, 0x0
+
+    invoke-virtual {p0, p2, p2, p1, p1}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
+
+    const/4 p1, 0x1
+
+    .line 206
+    iput-boolean p1, p0, Lorg/telegram/messenger/Emoji$AnimatedEmojiDrawable;->fullSize:Z
+
+    return-object p0
+.end method
+
+.method public static getAnimatedEmojiDrawable(Lorg/telegram/tgnet/TLRPC$Document;Landroid/graphics/drawable/Drawable;Ljava/util/concurrent/atomic/AtomicReference;)Lorg/telegram/messenger/Emoji$AnimatedEmojiDrawable;
+    .registers 4
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lorg/telegram/tgnet/TLRPC$Document;",
+            "Landroid/graphics/drawable/Drawable;",
+            "Ljava/util/concurrent/atomic/AtomicReference<",
+            "Ljava/lang/ref/WeakReference<",
+            "Landroid/view/View;",
+            ">;>;)",
+            "Lorg/telegram/messenger/Emoji$AnimatedEmojiDrawable;"
+        }
+    .end annotation
+
+    if-nez p0, :cond_4
+
+    const/4 p0, 0x0
+
+    return-object p0
+
+    .line 195
+    :cond_4
+    new-instance v0, Lorg/telegram/messenger/Emoji$AnimatedEmojiDrawable;
+
+    invoke-direct {v0, p0, p1, p2}, Lorg/telegram/messenger/Emoji$AnimatedEmojiDrawable;-><init>(Lorg/telegram/tgnet/TLRPC$Document;Landroid/graphics/drawable/Drawable;Ljava/util/concurrent/atomic/AtomicReference;)V
+
+    .line 196
+    sget p0, Lorg/telegram/messenger/Emoji;->drawImgSize:I
+
+    const/4 p1, 0x0
+
+    invoke-virtual {v0, p1, p1, p0, p0}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
+
+    return-object v0
+.end method
+
 .method private static getDrawableInfo(Ljava/lang/CharSequence;)Lorg/telegram/messenger/Emoji$DrawableInfo;
     .registers 3
 
-    .line 184
+    .line 211
     sget-object v0, Lorg/telegram/messenger/Emoji;->rects:Ljava/util/HashMap;
 
     invoke-virtual {v0, p0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -674,7 +754,7 @@
 
     if-nez v0, :cond_1d
 
-    .line 186
+    .line 213
     sget-object v1, Lorg/telegram/messenger/EmojiData;->emojiAliasMap:Ljava/util/HashMap;
 
     invoke-virtual {v1, p0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -685,7 +765,7 @@
 
     if-eqz p0, :cond_1d
 
-    .line 188
+    .line 215
     sget-object v0, Lorg/telegram/messenger/Emoji;->rects:Ljava/util/HashMap;
 
     invoke-virtual {v0, p0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -703,14 +783,14 @@
 .method public static getEmojiBigDrawable(Ljava/lang/String;)Landroid/graphics/drawable/Drawable;
     .registers 3
 
-    .line 209
+    .line 236
     invoke-static {p0}, Lorg/telegram/messenger/Emoji;->getEmojiDrawable(Ljava/lang/CharSequence;)Lorg/telegram/messenger/Emoji$EmojiDrawable;
 
     move-result-object v0
 
     if-nez v0, :cond_14
 
-    .line 211
+    .line 238
     sget-object v1, Lorg/telegram/messenger/EmojiData;->emojiAliasMap:Ljava/util/HashMap;
 
     invoke-virtual {v1, p0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -721,7 +801,7 @@
 
     if-eqz p0, :cond_14
 
-    .line 213
+    .line 240
     invoke-static {p0}, Lorg/telegram/messenger/Emoji;->getEmojiDrawable(Ljava/lang/CharSequence;)Lorg/telegram/messenger/Emoji$EmojiDrawable;
 
     move-result-object v0
@@ -733,7 +813,7 @@
 
     return-object p0
 
-    .line 219
+    .line 246
     :cond_18
     sget p0, Lorg/telegram/messenger/Emoji;->bigImgSize:I
 
@@ -743,7 +823,7 @@
 
     const/4 p0, 0x1
 
-    .line 220
+    .line 247
     invoke-static {v0, p0}, Lorg/telegram/messenger/Emoji$EmojiDrawable;->access$002(Lorg/telegram/messenger/Emoji$EmojiDrawable;Z)Z
 
     return-object v0
@@ -752,7 +832,7 @@
 .method public static getEmojiDrawable(Ljava/lang/CharSequence;)Lorg/telegram/messenger/Emoji$EmojiDrawable;
     .registers 3
 
-    .line 174
+    .line 182
     invoke-static {p0}, Lorg/telegram/messenger/Emoji;->getDrawableInfo(Ljava/lang/CharSequence;)Lorg/telegram/messenger/Emoji$DrawableInfo;
 
     move-result-object p0
@@ -763,13 +843,13 @@
 
     return-object p0
 
-    .line 178
+    .line 186
     :cond_8
     new-instance v0, Lorg/telegram/messenger/Emoji$EmojiDrawable;
 
     invoke-direct {v0, p0}, Lorg/telegram/messenger/Emoji$EmojiDrawable;-><init>(Lorg/telegram/messenger/Emoji$DrawableInfo;)V
 
-    .line 179
+    .line 187
     sget p0, Lorg/telegram/messenger/Emoji;->drawImgSize:I
 
     const/4 v1, 0x0
@@ -782,7 +862,7 @@
 .method private static inArray(C[C)Z
     .registers 6
 
-    .line 307
+    .line 446
     array-length v0, p1
 
     const/4 v1, 0x0
@@ -812,17 +892,17 @@
 .method public static invalidateAll(Landroid/view/View;)V
     .registers 3
 
-    .line 132
+    .line 140
     instance-of v0, p0, Landroid/view/ViewGroup;
 
     if-eqz v0, :cond_17
 
-    .line 133
+    .line 141
     check-cast p0, Landroid/view/ViewGroup;
 
     const/4 v0, 0x0
 
-    .line 134
+    .line 142
     :goto_7
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
 
@@ -830,7 +910,7 @@
 
     if-ge v0, v1, :cond_1e
 
-    .line 135
+    .line 143
     invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v1
@@ -841,13 +921,13 @@
 
     goto :goto_7
 
-    .line 137
+    .line 145
     :cond_17
     instance-of v0, p0, Landroid/widget/TextView;
 
     if-eqz v0, :cond_1e
 
-    .line 138
+    .line 146
     invoke-virtual {p0}, Landroid/view/View;->invalidate()V
 
     :cond_1e
@@ -857,7 +937,7 @@
 .method public static isValidEmoji(Ljava/lang/CharSequence;)Z
     .registers 4
 
-    .line 195
+    .line 222
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -868,7 +948,7 @@
 
     return v1
 
-    .line 198
+    .line 225
     :cond_8
     sget-object v0, Lorg/telegram/messenger/Emoji;->rects:Ljava/util/HashMap;
 
@@ -880,7 +960,7 @@
 
     if-nez v0, :cond_25
 
-    .line 200
+    .line 227
     sget-object v2, Lorg/telegram/messenger/EmojiData;->emojiAliasMap:Ljava/util/HashMap;
 
     invoke-virtual {v2, p0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -891,7 +971,7 @@
 
     if-eqz p0, :cond_25
 
-    .line 202
+    .line 229
     sget-object v0, Lorg/telegram/messenger/Emoji;->rects:Ljava/util/HashMap;
 
     invoke-virtual {v0, p0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -914,10 +994,10 @@
 .method private static synthetic lambda$loadEmoji$1(BS)V
     .registers 3
 
-    .line 90
+    .line 101
     invoke-static {p0, p1}, Lorg/telegram/messenger/Emoji;->loadEmojiInternal(BS)V
 
-    .line 91
+    .line 102
     sget-object v0, Lorg/telegram/messenger/Emoji;->loadingEmoji:[[Z
 
     aget-object p0, v0, p0
@@ -932,7 +1012,7 @@
 .method private static synthetic lambda$sortEmoji$2(Ljava/lang/String;Ljava/lang/String;)I
     .registers 5
 
-    .line 579
+    .line 752
     sget-object v0, Lorg/telegram/messenger/Emoji;->emojiUseHistory:Ljava/util/HashMap;
 
     invoke-virtual {v0, p0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -941,7 +1021,7 @@
 
     check-cast p0, Ljava/lang/Integer;
 
-    .line 580
+    .line 753
     sget-object v0, Lorg/telegram/messenger/Emoji;->emojiUseHistory:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -952,7 +1032,7 @@
 
     const/4 v0, 0x0
 
-    .line 582
+    .line 755
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -966,7 +1046,7 @@
 
     move-object p1, v1
 
-    .line 587
+    .line 760
     :cond_1b
     invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
 
@@ -982,7 +1062,7 @@
 
     return p0
 
-    .line 589
+    .line 762
     :cond_27
     invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
 
@@ -1005,7 +1085,7 @@
 .method private static synthetic lambda$static$0()V
     .registers 3
 
-    .line 52
+    .line 63
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getGlobalInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v0
@@ -1024,7 +1104,7 @@
 .method private static loadEmoji(BS)V
     .registers 4
 
-    .line 84
+    .line 95
     sget-object v0, Lorg/telegram/messenger/Emoji;->emojiBmp:[[Landroid/graphics/Bitmap;
 
     aget-object v0, v0, p0
@@ -1033,7 +1113,7 @@
 
     if-nez v0, :cond_20
 
-    .line 85
+    .line 96
     sget-object v0, Lorg/telegram/messenger/Emoji;->loadingEmoji:[[Z
 
     aget-object v1, v0, p0
@@ -1044,7 +1124,7 @@
 
     return-void
 
-    .line 88
+    .line 99
     :cond_11
     aget-object v0, v0, p0
 
@@ -1052,7 +1132,7 @@
 
     aput-boolean v1, v0, p1
 
-    .line 89
+    .line 100
     sget-object v0, Lorg/telegram/messenger/Utilities;->globalQueue:Lorg/telegram/messenger/DispatchQueue;
 
     new-instance v1, Lorg/telegram/messenger/Emoji$$ExternalSyntheticLambda0;
@@ -1068,7 +1148,7 @@
 .method private static loadEmojiInternal(BS)V
     .registers 12
 
-    .line 99
+    .line 110
     :try_start_0
     sget v0, Lorg/telegram/messenger/AndroidUtilities;->density:F
     :try_end_2
@@ -1094,7 +1174,7 @@
     :goto_d
     const/4 v1, 0x0
 
-    .line 110
+    .line 118
     :try_start_e
     sget-object v4, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
@@ -1144,23 +1224,23 @@
 
     move-result-object v2
 
-    .line 111
+    .line 119
     new-instance v3, Landroid/graphics/BitmapFactory$Options;
 
     invoke-direct {v3}, Landroid/graphics/BitmapFactory$Options;-><init>()V
 
-    .line 112
+    .line 120
     iput-boolean v9, v3, Landroid/graphics/BitmapFactory$Options;->inJustDecodeBounds:Z
 
-    .line 113
+    .line 121
     iput v0, v3, Landroid/graphics/BitmapFactory$Options;->inSampleSize:I
 
-    .line 114
+    .line 122
     invoke-static {v2, v1, v3}, Landroid/graphics/BitmapFactory;->decodeStream(Ljava/io/InputStream;Landroid/graphics/Rect;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
     move-result-object v1
 
-    .line 115
+    .line 123
     invoke-virtual {v2}, Ljava/io/InputStream;->close()V
     :try_end_50
     .catchall {:try_start_e .. :try_end_50} :catchall_51
@@ -1170,11 +1250,11 @@
     :catchall_51
     move-exception v0
 
-    .line 117
+    .line 125
     :try_start_52
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
-    .line 121
+    .line 129
     :goto_55
     sget-object v0, Lorg/telegram/messenger/Emoji;->emojiBmp:[[Landroid/graphics/Bitmap;
 
@@ -1182,12 +1262,12 @@
 
     aput-object v1, p0, p1
 
-    .line 122
+    .line 130
     sget-object p0, Lorg/telegram/messenger/Emoji;->invalidateUiRunnable:Ljava/lang/Runnable;
 
     invoke-static {p0}, Lorg/telegram/messenger/AndroidUtilities;->cancelRunOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 123
+    .line 131
     sget-object p0, Lorg/telegram/messenger/Emoji;->invalidateUiRunnable:Ljava/lang/Runnable;
 
     invoke-static {p0}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
@@ -1199,14 +1279,14 @@
     :catchall_66
     move-exception p0
 
-    .line 125
+    .line 133
     sget-boolean p1, Lorg/telegram/messenger/BuildVars;->LOGS_ENABLED:Z
 
     if-eqz p1, :cond_70
 
     const-string p1, "Error loading emoji"
 
-    .line 126
+    .line 134
     invoke-static {p1, p0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :cond_70
@@ -1227,7 +1307,7 @@
 
     const-string v4, "emojis"
 
-    .line 622
+    .line 795
     sget-boolean v5, Lorg/telegram/messenger/Emoji;->recentEmojiLoaded:Z
 
     if-eqz v5, :cond_f
@@ -1237,23 +1317,23 @@
     :cond_f
     const/4 v5, 0x1
 
-    .line 625
+    .line 798
     sput-boolean v5, Lorg/telegram/messenger/Emoji;->recentEmojiLoaded:Z
 
-    .line 626
+    .line 799
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getGlobalEmojiSettings()Landroid/content/SharedPreferences;
 
     move-result-object v6
 
     const/4 v7, 0x0
 
-    .line 630
+    .line 803
     :try_start_17
     sget-object v8, Lorg/telegram/messenger/Emoji;->emojiUseHistory:Ljava/util/HashMap;
 
     invoke-virtual {v8}, Ljava/util/HashMap;->clear()V
 
-    .line 631
+    .line 804
     invoke-interface {v6, v4}, Landroid/content/SharedPreferences;->contains(Ljava/lang/String;)Z
 
     move-result v8
@@ -1262,26 +1342,26 @@
 
     if-eqz v8, :cond_8c
 
-    .line 632
+    .line 805
     invoke-interface {v6, v4, v3}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v8
 
     if-eqz v8, :cond_7d
 
-    .line 633
+    .line 806
     invoke-virtual {v8}, Ljava/lang/String;->length()I
 
     move-result v11
 
     if-lez v11, :cond_7d
 
-    .line 634
+    .line 807
     invoke-virtual {v8, v2}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v8
 
-    .line 635
+    .line 808
     array-length v11, v8
 
     const/4 v12, 0x0
@@ -1291,12 +1371,12 @@
 
     aget-object v13, v8, v12
 
-    .line 636
+    .line 809
     invoke-virtual {v13, v1}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v13
 
-    .line 637
+    .line 810
     aget-object v14, v13, v7
 
     invoke-static {v14}, Lorg/telegram/messenger/Utilities;->parseLong(Ljava/lang/String;)Ljava/lang/Long;
@@ -1307,7 +1387,7 @@
 
     move-result-wide v14
 
-    .line 638
+    .line 811
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -1321,7 +1401,7 @@
 
     int-to-char v10, v10
 
-    .line 641
+    .line 814
     invoke-virtual {v5, v7, v10}, Ljava/lang/StringBuilder;->insert(IC)Ljava/lang/StringBuilder;
 
     const/16 v10, 0x10
@@ -1343,7 +1423,7 @@
 
     goto :goto_4d
 
-    .line 647
+    .line 820
     :cond_62
     :goto_62
     invoke-virtual {v5}, Ljava/lang/StringBuilder;->length()I
@@ -1352,7 +1432,7 @@
 
     if-lez v9, :cond_78
 
-    .line 648
+    .line 821
     sget-object v9, Lorg/telegram/messenger/Emoji;->emojiUseHistory:Ljava/util/HashMap;
 
     invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -1378,7 +1458,7 @@
 
     goto :goto_35
 
-    .line 652
+    .line 825
     :cond_7d
     invoke-interface {v6}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
@@ -1390,7 +1470,7 @@
 
     invoke-interface {v4}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 653
+    .line 826
     invoke-static {}, Lorg/telegram/messenger/Emoji;->saveRecentEmoji()V
 
     goto :goto_b9
@@ -1398,26 +1478,26 @@
     :cond_8c
     const-string v4, "emojis2"
 
-    .line 655
+    .line 828
     invoke-interface {v6, v4, v3}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
     if-eqz v4, :cond_b9
 
-    .line 656
+    .line 829
     invoke-virtual {v4}, Ljava/lang/String;->length()I
 
     move-result v5
 
     if-lez v5, :cond_b9
 
-    .line 657
+    .line 830
     invoke-virtual {v4, v2}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v4
 
-    .line 658
+    .line 831
     array-length v5, v4
 
     const/4 v8, 0x0
@@ -1427,12 +1507,12 @@
 
     aget-object v9, v4, v8
 
-    .line 659
+    .line 832
     invoke-virtual {v9, v1}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v9
 
-    .line 660
+    .line 833
     sget-object v10, Lorg/telegram/messenger/Emoji;->emojiUseHistory:Ljava/util/HashMap;
 
     aget-object v11, v9, v7
@@ -1451,7 +1531,7 @@
 
     goto :goto_a0
 
-    .line 664
+    .line 837
     :cond_b9
     :goto_b9
     sget-object v4, Lorg/telegram/messenger/Emoji;->emojiUseHistory:Ljava/util/HashMap;
@@ -1462,7 +1542,7 @@
 
     if-eqz v4, :cond_1b0
 
-    .line 665
+    .line 838
     invoke-interface {v6, v0, v7}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v4
@@ -1680,7 +1760,7 @@
     :goto_18f
     if-ge v8, v4, :cond_1a1
 
-    .line 674
+    .line 847
     sget-object v9, Lorg/telegram/messenger/Emoji;->emojiUseHistory:Ljava/util/HashMap;
 
     aget-object v10, v5, v8
@@ -1697,7 +1777,7 @@
 
     goto :goto_18f
 
-    .line 676
+    .line 849
     :cond_1a1
     invoke-interface {v6}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
@@ -1711,10 +1791,10 @@
 
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 677
+    .line 850
     invoke-static {}, Lorg/telegram/messenger/Emoji;->saveRecentEmoji()V
 
-    .line 680
+    .line 853
     :cond_1b0
     invoke-static {}, Lorg/telegram/messenger/Emoji;->sortEmoji()V
     :try_end_1b3
@@ -1725,49 +1805,49 @@
     :catch_1b4
     move-exception v0
 
-    .line 682
+    .line 855
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     :goto_1b8
     :try_start_1b8
     const-string v0, "color"
 
-    .line 686
+    .line 859
     invoke-interface {v6, v0, v3}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     if-eqz v0, :cond_1e5
 
-    .line 687
+    .line 860
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
     move-result v3
 
     if-lez v3, :cond_1e5
 
-    .line 688
+    .line 861
     invoke-virtual {v0, v2}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v0
 
     const/4 v2, 0x0
 
-    .line 689
+    .line 862
     :goto_1cb
     array-length v3, v0
 
     if-ge v2, v3, :cond_1e5
 
-    .line 690
+    .line 863
     aget-object v3, v0, v2
 
-    .line 691
+    .line 864
     invoke-virtual {v3, v1}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v3
 
-    .line 692
+    .line 865
     sget-object v4, Lorg/telegram/messenger/Emoji;->emojiColor:Ljava/util/HashMap;
 
     aget-object v5, v3, v7
@@ -1787,7 +1867,7 @@
     :catch_1e1
     move-exception v0
 
-    .line 696
+    .line 869
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     :cond_1e5
@@ -1797,14 +1877,14 @@
 .method public static preloadEmoji(Ljava/lang/CharSequence;)V
     .registers 2
 
-    .line 77
+    .line 88
     invoke-static {p0}, Lorg/telegram/messenger/Emoji;->getDrawableInfo(Ljava/lang/CharSequence;)Lorg/telegram/messenger/Emoji$DrawableInfo;
 
     move-result-object p0
 
     if-eqz p0, :cond_d
 
-    .line 79
+    .line 90
     iget-byte v0, p0, Lorg/telegram/messenger/Emoji$DrawableInfo;->page:B
 
     iget-short p0, p0, Lorg/telegram/messenger/Emoji$DrawableInfo;->page2:S
@@ -1816,12 +1896,62 @@
 .end method
 
 .method public static replaceEmoji(Ljava/lang/CharSequence;Landroid/graphics/Paint$FontMetricsInt;IZ)Ljava/lang/CharSequence;
-    .registers 5
+    .registers 11
 
-    const/4 v0, 0x0
+    const/4 v4, 0x0
 
-    .line 316
-    invoke-static {p0, p1, p2, p3, v0}, Lorg/telegram/messenger/Emoji;->replaceEmoji(Ljava/lang/CharSequence;Landroid/graphics/Paint$FontMetricsInt;IZ[I)Ljava/lang/CharSequence;
+    const/4 v5, 0x0
+
+    const/4 v6, 0x0
+
+    move-object v0, p0
+
+    move-object v1, p1
+
+    move v2, p2
+
+    move v3, p3
+
+    .line 455
+    invoke-static/range {v0 .. v6}, Lorg/telegram/messenger/Emoji;->replaceEmoji(Ljava/lang/CharSequence;Landroid/graphics/Paint$FontMetricsInt;IZ[IZLjava/util/concurrent/atomic/AtomicReference;)Ljava/lang/CharSequence;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static replaceEmoji(Ljava/lang/CharSequence;Landroid/graphics/Paint$FontMetricsInt;IZZLjava/util/concurrent/atomic/AtomicReference;)Ljava/lang/CharSequence;
+    .registers 13
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/CharSequence;",
+            "Landroid/graphics/Paint$FontMetricsInt;",
+            "IZZ",
+            "Ljava/util/concurrent/atomic/AtomicReference<",
+            "Ljava/lang/ref/WeakReference<",
+            "Landroid/view/View;",
+            ">;>;)",
+            "Ljava/lang/CharSequence;"
+        }
+    .end annotation
+
+    const/4 v4, 0x0
+
+    move-object v0, p0
+
+    move-object v1, p1
+
+    move v2, p2
+
+    move v3, p3
+
+    move v5, p4
+
+    move-object v6, p5
+
+    .line 460
+    invoke-static/range {v0 .. v6}, Lorg/telegram/messenger/Emoji;->replaceEmoji(Ljava/lang/CharSequence;Landroid/graphics/Paint$FontMetricsInt;IZ[IZLjava/util/concurrent/atomic/AtomicReference;)Ljava/lang/CharSequence;
 
     move-result-object p0
 
@@ -1829,16 +1959,54 @@
 .end method
 
 .method public static replaceEmoji(Ljava/lang/CharSequence;Landroid/graphics/Paint$FontMetricsInt;IZ[I)Ljava/lang/CharSequence;
-    .registers 30
+    .registers 12
+
+    const/4 v5, 0x0
+
+    const/4 v6, 0x0
+
+    move-object v0, p0
+
+    move-object v1, p1
+
+    move v2, p2
+
+    move v3, p3
+
+    move-object v4, p4
+
+    .line 464
+    invoke-static/range {v0 .. v6}, Lorg/telegram/messenger/Emoji;->replaceEmoji(Ljava/lang/CharSequence;Landroid/graphics/Paint$FontMetricsInt;IZ[IZLjava/util/concurrent/atomic/AtomicReference;)Ljava/lang/CharSequence;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static replaceEmoji(Ljava/lang/CharSequence;Landroid/graphics/Paint$FontMetricsInt;IZ[IZLjava/util/concurrent/atomic/AtomicReference;)Ljava/lang/CharSequence;
+    .registers 33
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/CharSequence;",
+            "Landroid/graphics/Paint$FontMetricsInt;",
+            "IZ[IZ",
+            "Ljava/util/concurrent/atomic/AtomicReference<",
+            "Ljava/lang/ref/WeakReference<",
+            "Landroid/view/View;",
+            ">;>;)",
+            "Ljava/lang/CharSequence;"
+        }
+    .end annotation
 
     move-object/from16 v1, p0
 
-    .line 320
+    .line 469
     sget-boolean v0, Lorg/telegram/messenger/SharedConfig;->useSystemEmoji:Z
 
-    if-nez v0, :cond_29d
+    if-nez v0, :cond_2df
 
-    if-eqz v1, :cond_29d
+    if-eqz v1, :cond_2df
 
     invoke-interface/range {p0 .. p0}, Ljava/lang/CharSequence;->length()I
 
@@ -1846,24 +2014,24 @@
 
     if-nez v0, :cond_10
 
-    goto/16 :goto_29d
+    goto/16 :goto_2df
 
     :cond_10
     if-nez p3, :cond_1a
 
-    .line 324
+    .line 473
     instance-of v0, v1, Landroid/text/Spannable;
 
     if-eqz v0, :cond_1a
 
-    .line 325
+    .line 474
     move-object v0, v1
 
     check-cast v0, Landroid/text/Spannable;
 
     goto :goto_26
 
-    .line 327
+    .line 476
     :cond_1a
     invoke-static {}, Landroid/text/Spannable$Factory;->getInstance()Landroid/text/Spannable$Factory;
 
@@ -1877,7 +2045,7 @@
 
     move-result-object v0
 
-    .line 335
+    .line 484
     :goto_26
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -1885,22 +2053,25 @@
 
     invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    .line 340
+    .line 489
     invoke-interface/range {p0 .. p0}, Ljava/lang/CharSequence;->length()I
 
     move-result v4
 
-    const-wide/16 v5, 0x0
+    .line 496
+    new-instance v5, Ljava/util/ArrayList;
 
-    move-object/from16 v9, p4
+    invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
 
-    move-wide v11, v5
+    move-object/from16 v10, p4
 
-    const/4 v10, 0x0
+    const/4 v9, 0x0
 
-    const/4 v13, -0x1
+    const/4 v11, 0x0
 
-    const/4 v14, 0x0
+    const-wide/16 v12, 0x0
+
+    const/4 v14, -0x1
 
     const/4 v15, 0x0
 
@@ -1908,768 +2079,831 @@
 
     const/16 v17, 0x0
 
-    :goto_3e
-    if-ge v10, v4, :cond_291
+    :goto_42
+    if-ge v11, v4, :cond_28b
 
-    .line 349
-    :try_start_40
-    invoke-interface {v1, v10}, Ljava/lang/CharSequence;->charAt(I)C
-
-    move-result v8
-
-    const v3, 0xd83c
-
-    const/4 v7, 0x1
-
-    if-lt v8, v3, :cond_52
-
-    const v3, 0xd83e
-
-    if-le v8, v3, :cond_50
-
-    goto :goto_52
-
-    :cond_50
-    :goto_50
-    const/4 v3, -0x1
-
-    goto :goto_78
-
-    :cond_52
-    :goto_52
-    cmp-long v3, v11, v5
-
-    if-eqz v3, :cond_8a
-
-    const-wide v19, -0x100000000L
-
-    and-long v19, v11, v19
-
-    cmp-long v3, v19, v5
-
-    if-nez v3, :cond_8a
-
-    const-wide/32 v19, 0xffff
-
-    and-long v19, v11, v19
-
-    const-wide/32 v21, 0xd83c
-
-    cmp-long v3, v19, v21
-
-    if-nez v3, :cond_8a
-
-    const v3, 0xdde6
-
-    if-lt v8, v3, :cond_8a
-
-    const v3, 0xddff
-
-    if-gt v8, v3, :cond_8a
-
-    goto :goto_50
-
-    :goto_78
-    if-ne v13, v3, :cond_7b
-
-    move v13, v10
-
-    .line 355
-    :cond_7b
-    invoke-virtual {v2, v8}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    add-int/lit8 v14, v14, 0x1
-
-    const/16 v3, 0x10
-
-    shl-long/2addr v11, v3
-
-    move/from16 v18, v4
-
-    int-to-long v3, v8
-
-    or-long/2addr v11, v3
-
-    :cond_87
-    :goto_87
-    const/4 v3, 0x0
-
-    goto/16 :goto_11d
-
-    :cond_8a
-    move/from16 v18, v4
-
-    .line 359
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->length()I
+    .line 500
+    :try_start_44
+    invoke-interface {v1, v11}, Ljava/lang/CharSequence;->charAt(I)C
 
     move-result v3
 
-    if-lez v3, :cond_a9
+    const v8, 0xd83c
 
-    const/16 v3, 0x2640
+    const/4 v6, 0x1
 
-    if-eq v8, v3, :cond_9e
+    if-lt v3, v8, :cond_56
 
-    const/16 v3, 0x2642
+    const v7, 0xd83e
 
-    if-eq v8, v3, :cond_9e
+    if-le v3, v7, :cond_54
 
-    const/16 v3, 0x2695
+    goto :goto_56
 
-    if-ne v8, v3, :cond_a9
+    :cond_54
+    :goto_54
+    const/4 v7, -0x1
 
-    .line 360
-    :cond_9e
-    invoke-virtual {v2, v8}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    goto :goto_7e
 
-    :goto_a1
-    add-int/lit8 v14, v14, 0x1
+    :cond_56
+    :goto_56
+    const-wide/16 v18, 0x0
 
-    move-wide v11, v5
+    cmp-long v7, v12, v18
 
-    :goto_a4
-    const/4 v3, 0x0
+    if-eqz v7, :cond_8e
 
-    const/16 v16, 0x1
+    const-wide v20, -0x100000000L
 
-    goto/16 :goto_11d
+    and-long v20, v12, v20
 
-    :cond_a9
-    cmp-long v3, v11, v5
+    cmp-long v7, v20, v18
 
-    if-lez v3, :cond_ba
+    if-nez v7, :cond_8e
 
-    const v3, 0xf000
+    const-wide/32 v20, 0xffff
 
-    and-int/2addr v3, v8
+    and-long v20, v12, v20
 
-    const v4, 0xd000
+    const-wide/32 v22, 0xd83c
 
-    if-ne v3, v4, :cond_ba
+    cmp-long v7, v20, v22
 
-    .line 365
-    invoke-virtual {v2, v8}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    if-nez v7, :cond_8e
 
-    goto :goto_a1
+    const v7, 0xdde6
 
-    :cond_ba
-    const/16 v3, 0x20e3
+    if-lt v3, v7, :cond_8e
 
-    if-ne v8, v3, :cond_e2
+    const v7, 0xddff
 
-    if-lez v10, :cond_87
+    if-gt v3, v7, :cond_8e
 
-    .line 371
-    invoke-interface {v1, v15}, Ljava/lang/CharSequence;->charAt(I)C
+    goto :goto_54
 
-    move-result v3
+    :goto_7e
+    if-ne v14, v7, :cond_81
 
-    const/16 v4, 0x30
+    move v14, v11
 
-    if-lt v3, v4, :cond_cc
-
-    const/16 v4, 0x39
-
-    if-le v3, v4, :cond_d4
-
-    :cond_cc
-    const/16 v4, 0x23
-
-    if-eq v3, v4, :cond_d4
-
-    const/16 v4, 0x2a
-
-    if-ne v3, v4, :cond_87
-
-    :cond_d4
-    sub-int v4, v10, v15
-
-    add-int/lit8 v14, v4, 0x1
-
-    .line 375
+    .line 506
+    :cond_81
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 376
-    invoke-virtual {v2, v8}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    add-int/lit8 v15, v15, 0x1
 
-    move v13, v15
+    const/16 v7, 0x10
+
+    shl-long/2addr v12, v7
+
+    int-to-long v7, v3
+
+    or-long/2addr v12, v7
+
+    :cond_8b
+    :goto_8b
+    const/4 v7, 0x0
+
+    goto/16 :goto_124
+
+    .line 510
+    :cond_8e
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->length()I
+
+    move-result v7
+
+    if-lez v7, :cond_ac
+
+    const/16 v7, 0x2640
+
+    if-eq v3, v7, :cond_a0
+
+    const/16 v7, 0x2642
+
+    if-eq v3, v7, :cond_a0
+
+    const/16 v7, 0x2695
+
+    if-ne v3, v7, :cond_ac
+
+    .line 511
+    :cond_a0
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    :goto_a3
+    add-int/lit8 v15, v15, 0x1
+
+    const/4 v7, 0x0
+
+    const-wide/16 v12, 0x0
+
+    :goto_a8
+    const/16 v16, 0x1
+
+    goto/16 :goto_124
+
+    :cond_ac
+    const-wide/16 v7, 0x0
+
+    cmp-long v18, v12, v7
+
+    if-lez v18, :cond_c0
+
+    const v18, 0xf000
+
+    and-int v7, v3, v18
+
+    const v8, 0xd000
+
+    if-ne v7, v8, :cond_c0
+
+    .line 516
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    goto :goto_a3
+
+    :cond_c0
+    const/16 v7, 0x20e3
+
+    if-ne v3, v7, :cond_e8
+
+    if-lez v11, :cond_8b
+
+    .line 522
+    invoke-interface {v1, v9}, Ljava/lang/CharSequence;->charAt(I)C
+
+    move-result v7
+
+    const/16 v8, 0x30
+
+    if-lt v7, v8, :cond_d2
+
+    const/16 v8, 0x39
+
+    if-le v7, v8, :cond_da
+
+    :cond_d2
+    const/16 v8, 0x23
+
+    if-eq v7, v8, :cond_da
+
+    const/16 v8, 0x2a
+
+    if-ne v7, v8, :cond_8b
+
+    :cond_da
+    sub-int v8, v11, v9
+
+    add-int/lit8 v15, v8, 0x1
+
+    .line 526
+    invoke-virtual {v2, v7}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    .line 527
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    move v14, v9
 
     const/16 v16, 0x1
 
-    goto :goto_87
+    goto :goto_8b
 
-    :cond_e2
-    const/16 v3, 0xa9
+    :cond_e8
+    const/16 v7, 0xa9
 
-    if-eq v8, v3, :cond_f5
+    if-eq v3, v7, :cond_fb
 
-    const/16 v3, 0xae
+    const/16 v7, 0xae
 
-    if-eq v8, v3, :cond_f5
+    if-eq v3, v7, :cond_fb
 
-    const/16 v3, 0x203c
+    const/16 v7, 0x203c
 
-    if-lt v8, v3, :cond_f3
+    if-lt v3, v7, :cond_f9
 
-    const/16 v3, 0x3299
+    const/16 v7, 0x3299
 
-    if-gt v8, v3, :cond_f3
+    if-gt v3, v7, :cond_f9
 
-    goto :goto_f5
+    goto :goto_fb
 
-    :cond_f3
-    const/4 v3, -0x1
+    :cond_f9
+    const/4 v7, -0x1
 
-    goto :goto_10b
+    goto :goto_112
 
-    .line 380
-    :cond_f5
-    :goto_f5
-    sget-object v3, Lorg/telegram/messenger/EmojiData;->dataCharsMap:Ljava/util/HashMap;
+    .line 531
+    :cond_fb
+    :goto_fb
+    sget-object v7, Lorg/telegram/messenger/EmojiData;->dataCharsMap:Ljava/util/HashMap;
 
-    invoke-static {v8}, Ljava/lang/Character;->valueOf(C)Ljava/lang/Character;
+    invoke-static {v3}, Ljava/lang/Character;->valueOf(C)Ljava/lang/Character;
 
-    move-result-object v4
+    move-result-object v8
 
-    invoke-virtual {v3, v4}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
+    invoke-virtual {v7, v8}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
 
-    move-result v3
+    move-result v7
 
-    if-eqz v3, :cond_f3
+    if-eqz v7, :cond_f9
 
-    const/4 v3, -0x1
+    const/4 v7, -0x1
 
-    if-ne v13, v3, :cond_105
+    if-ne v14, v7, :cond_10b
 
-    move v13, v10
+    move v14, v11
 
-    :cond_105
-    add-int/lit8 v14, v14, 0x1
+    :cond_10b
+    add-int/lit8 v15, v15, 0x1
 
-    .line 385
-    invoke-virtual {v2, v8}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    .line 536
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    goto :goto_a4
+    const/4 v7, 0x0
 
-    :goto_10b
-    if-eq v13, v3, :cond_117
+    goto :goto_a8
 
-    const/4 v3, 0x0
+    :goto_112
+    if-eq v14, v7, :cond_11e
 
-    .line 388
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->setLength(I)V
+    const/4 v7, 0x0
 
-    const/4 v3, 0x0
+    .line 539
+    invoke-virtual {v2, v7}, Ljava/lang/StringBuilder;->setLength(I)V
 
-    const/4 v13, -0x1
+    const/4 v7, 0x0
 
-    const/4 v14, 0x0
+    const/4 v14, -0x1
+
+    const/4 v15, 0x0
 
     const/16 v16, 0x0
 
-    goto :goto_11d
+    goto :goto_124
 
-    :cond_117
-    const v3, 0xfe0f
+    :cond_11e
+    const v7, 0xfe0f
 
-    if-eq v8, v3, :cond_87
+    if-eq v3, v7, :cond_8b
 
-    const/4 v3, 0x1
+    const/4 v7, 0x1
 
-    :goto_11d
-    if-eqz v16, :cond_188
+    :goto_124
+    if-eqz v16, :cond_18f
 
-    add-int/lit8 v5, v10, 0x2
+    add-int/lit8 v6, v11, 0x2
 
-    move/from16 v6, v18
+    if-ge v6, v4, :cond_18f
 
-    if-ge v5, v6, :cond_18a
+    add-int/lit8 v8, v11, 0x1
 
-    add-int/lit8 v7, v10, 0x1
+    .line 547
+    invoke-interface {v1, v8}, Ljava/lang/CharSequence;->charAt(I)C
 
-    .line 396
-    invoke-interface {v1, v7}, Ljava/lang/CharSequence;->charAt(I)C
+    move-result v9
 
-    move-result v4
+    move/from16 v24, v7
 
-    const v15, 0xd83c
+    const v7, 0xd83c
 
-    if-ne v4, v15, :cond_14b
+    if-ne v9, v7, :cond_152
 
-    .line 398
-    invoke-interface {v1, v5}, Ljava/lang/CharSequence;->charAt(I)C
+    .line 549
+    invoke-interface {v1, v6}, Ljava/lang/CharSequence;->charAt(I)C
 
-    move-result v4
+    move-result v7
 
-    const v15, 0xdffb
+    const v9, 0xdffb
 
-    if-lt v4, v15, :cond_18a
+    if-lt v7, v9, :cond_191
 
-    const v15, 0xdfff
+    const v9, 0xdfff
 
-    if-gt v4, v15, :cond_18a
+    if-gt v7, v9, :cond_191
 
-    add-int/lit8 v10, v10, 0x3
+    add-int/lit8 v11, v11, 0x3
 
-    .line 400
-    invoke-interface {v1, v7, v10}, Ljava/lang/CharSequence;->subSequence(II)Ljava/lang/CharSequence;
-
-    move-result-object v4
-
-    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
-
-    add-int/lit8 v14, v14, 0x2
-
-    move v15, v5
-
-    goto :goto_18b
-
-    .line 404
-    :cond_14b
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->length()I
-
-    move-result v5
-
-    const/4 v15, 0x2
-
-    if-lt v5, v15, :cond_18a
-
-    const/4 v5, 0x0
-
-    invoke-virtual {v2, v5}, Ljava/lang/StringBuilder;->charAt(I)C
-
-    move-result v15
-
-    const v5, 0xd83c
-
-    if-ne v15, v5, :cond_18a
-
-    const/4 v5, 0x1
-
-    invoke-virtual {v2, v5}, Ljava/lang/StringBuilder;->charAt(I)C
-
-    move-result v15
-
-    const v5, 0xdff4
-
-    if-ne v15, v5, :cond_18a
-
-    const v5, 0xdb40
-
-    if-ne v4, v5, :cond_18a
-
-    :goto_16b
-    add-int/lit8 v4, v7, 0x2
-
-    .line 407
-    invoke-interface {v1, v7, v4}, Ljava/lang/CharSequence;->subSequence(II)Ljava/lang/CharSequence;
+    .line 551
+    invoke-interface {v1, v8, v11}, Ljava/lang/CharSequence;->subSequence(II)Ljava/lang/CharSequence;
 
     move-result-object v7
 
     invoke-virtual {v2, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
+    add-int/lit8 v15, v15, 0x2
+
+    move v9, v6
+
+    goto :goto_192
+
+    .line 555
+    :cond_152
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->length()I
+
+    move-result v6
+
     const/4 v7, 0x2
 
-    add-int/2addr v14, v7
+    if-lt v6, v7, :cond_191
 
-    .line 410
+    const/4 v6, 0x0
+
+    invoke-virtual {v2, v6}, Ljava/lang/StringBuilder;->charAt(I)C
+
+    move-result v7
+
+    const v6, 0xd83c
+
+    if-ne v7, v6, :cond_191
+
+    const/4 v6, 0x1
+
+    invoke-virtual {v2, v6}, Ljava/lang/StringBuilder;->charAt(I)C
+
+    move-result v7
+
+    const v6, 0xdff4
+
+    if-ne v7, v6, :cond_191
+
+    const v6, 0xdb40
+
+    if-ne v9, v6, :cond_191
+
+    :goto_172
+    add-int/lit8 v7, v8, 0x2
+
+    .line 558
+    invoke-interface {v1, v8, v7}, Ljava/lang/CharSequence;->subSequence(II)Ljava/lang/CharSequence;
+
+    move-result-object v8
+
+    invoke-virtual {v2, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
+
+    const/4 v8, 0x2
+
+    add-int/2addr v15, v8
+
+    .line 561
     invoke-interface/range {p0 .. p0}, Ljava/lang/CharSequence;->length()I
 
-    move-result v10
+    move-result v9
 
-    if-ge v4, v10, :cond_185
+    if-ge v7, v9, :cond_18c
 
-    invoke-interface {v1, v4}, Ljava/lang/CharSequence;->charAt(I)C
-
-    move-result v10
-
-    if-eq v10, v5, :cond_183
-
-    goto :goto_185
-
-    :cond_183
-    move v7, v4
-
-    goto :goto_16b
-
-    :cond_185
-    :goto_185
-    add-int/lit8 v10, v4, -0x1
-
-    goto :goto_18a
-
-    :cond_188
-    move/from16 v6, v18
-
-    :cond_18a
-    :goto_18a
-    move v15, v10
-
-    :goto_18b
-    move v4, v3
-
-    move v5, v15
-
-    const/4 v3, 0x0
-
-    :goto_18e
-    const/4 v7, 0x3
-
-    if-ge v3, v7, :cond_1f3
-
-    add-int/lit8 v7, v5, 0x1
-
-    if-ge v7, v6, :cond_1e7
-
-    .line 422
     invoke-interface {v1, v7}, Ljava/lang/CharSequence;->charAt(I)C
 
-    move-result v10
+    move-result v9
 
-    move-wide/from16 v23, v11
+    if-eq v9, v6, :cond_18a
 
-    const/4 v11, 0x1
+    goto :goto_18c
 
-    if-ne v3, v11, :cond_1b7
+    :cond_18a
+    move v8, v7
 
-    const/16 v11, 0x200d
+    goto :goto_172
 
-    if-ne v10, v11, :cond_1e9
+    :cond_18c
+    :goto_18c
+    add-int/lit8 v11, v7, -0x1
 
-    .line 424
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->length()I
+    goto :goto_191
+
+    :cond_18f
+    move/from16 v24, v7
+
+    :cond_191
+    :goto_191
+    move v9, v11
+
+    :goto_192
+    move v7, v9
+
+    const/4 v6, 0x0
+
+    :goto_194
+    const/4 v8, 0x3
+
+    if-ge v6, v8, :cond_1f2
+
+    add-int/lit8 v8, v7, 0x1
+
+    if-ge v8, v4, :cond_1e8
+
+    .line 573
+    invoke-interface {v1, v8}, Ljava/lang/CharSequence;->charAt(I)C
 
     move-result v11
 
-    if-lez v11, :cond_1e9
+    move/from16 v25, v9
 
-    .line 426
-    invoke-virtual {v2, v10}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    const/4 v9, 0x1
 
-    add-int/lit8 v14, v14, 0x1
+    if-ne v6, v9, :cond_1bc
 
-    move v5, v7
+    const/16 v9, 0x200d
 
-    const/4 v4, 0x0
+    if-ne v11, v9, :cond_1ea
 
-    const v11, 0xfe0f
+    .line 575
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->length()I
 
-    const/16 v12, 0x2a
+    move-result v9
+
+    if-lez v9, :cond_1ea
+
+    .line 577
+    invoke-virtual {v2, v11}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    add-int/lit8 v15, v15, 0x1
+
+    move v7, v8
+
+    const v9, 0xfe0f
 
     const/16 v16, 0x0
 
-    goto :goto_1ee
+    const/16 v24, 0x0
 
-    :cond_1b7
-    const/4 v11, -0x1
+    goto :goto_1ed
 
-    const/16 v12, 0x2a
+    :cond_1bc
+    const/4 v9, -0x1
 
-    if-ne v13, v11, :cond_1ca
+    if-ne v14, v9, :cond_1cf
 
-    if-eq v8, v12, :cond_1ca
+    const/16 v9, 0x2a
 
-    const/16 v11, 0x23
+    if-eq v3, v9, :cond_1cf
 
-    if-eq v8, v11, :cond_1ca
+    const/16 v9, 0x23
 
-    const/16 v11, 0x30
+    if-eq v3, v9, :cond_1cf
 
-    if-lt v8, v11, :cond_1e3
+    const/16 v9, 0x30
 
-    const/16 v11, 0x39
+    if-lt v3, v9, :cond_1ea
 
-    if-gt v8, v11, :cond_1e3
+    const/16 v9, 0x39
 
-    :cond_1ca
-    const v11, 0xfe00
+    if-gt v3, v9, :cond_1ea
 
-    if-lt v10, v11, :cond_1e3
+    :cond_1cf
+    const v9, 0xfe00
 
-    const v11, 0xfe0f
+    if-lt v11, v9, :cond_1ea
 
-    if-gt v10, v11, :cond_1ee
+    const v9, 0xfe0f
 
-    add-int/lit8 v14, v14, 0x1
+    if-gt v11, v9, :cond_1ed
 
-    if-nez v16, :cond_1e1
+    add-int/lit8 v15, v15, 0x1
 
-    add-int/lit8 v5, v7, 0x1
+    if-nez v16, :cond_1e6
 
-    if-lt v5, v6, :cond_1de
+    add-int/lit8 v7, v8, 0x1
 
-    const/4 v5, 0x1
-
-    goto :goto_1df
-
-    :cond_1de
-    const/4 v5, 0x0
-
-    :goto_1df
-    move/from16 v16, v5
-
-    :cond_1e1
-    move v5, v7
-
-    goto :goto_1ee
-
-    :cond_1e3
-    const v11, 0xfe0f
-
-    goto :goto_1ee
-
-    :cond_1e7
-    move-wide/from16 v23, v11
-
-    :cond_1e9
-    const v11, 0xfe0f
-
-    const/16 v12, 0x2a
-
-    :cond_1ee
-    :goto_1ee
-    add-int/lit8 v3, v3, 0x1
-
-    move-wide/from16 v11, v23
-
-    goto :goto_18e
-
-    :cond_1f3
-    move-wide/from16 v23, v11
-
-    if-eqz v4, :cond_1fe
-
-    if-eqz v9, :cond_1fe
-
-    const/4 v3, 0x0
-
-    .line 443
-    aput v3, v9, v3
-
-    const/4 v3, 0x0
-
-    move-object v9, v3
-
-    :cond_1fe
-    if-eqz v16, :cond_229
-
-    add-int/lit8 v3, v5, 0x2
-
-    if-ge v3, v6, :cond_229
-
-    add-int/lit8 v4, v5, 0x1
-
-    .line 446
-    invoke-interface {v1, v4}, Ljava/lang/CharSequence;->charAt(I)C
-
-    move-result v7
-
-    const v8, 0xd83c
-
-    if-ne v7, v8, :cond_229
-
-    .line 447
-    invoke-interface {v1, v3}, Ljava/lang/CharSequence;->charAt(I)C
-
-    move-result v7
-
-    const v8, 0xdffb
-
-    if-lt v7, v8, :cond_229
-
-    const v8, 0xdfff
-
-    if-gt v7, v8, :cond_229
-
-    add-int/lit8 v5, v5, 0x3
-
-    .line 449
-    invoke-interface {v1, v4, v5}, Ljava/lang/CharSequence;->subSequence(II)Ljava/lang/CharSequence;
-
-    move-result-object v4
-
-    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
-
-    add-int/lit8 v14, v14, 0x2
-
-    move v5, v3
-
-    :cond_229
-    if-eqz v16, :cond_265
-
-    if-eqz v9, :cond_235
-
-    const/4 v3, 0x0
-
-    .line 456
-    aget v4, v9, v3
+    if-lt v7, v4, :cond_1e3
 
     const/4 v7, 0x1
 
-    add-int/2addr v4, v7
+    goto :goto_1e4
 
-    aput v4, v9, v3
+    :cond_1e3
+    const/4 v7, 0x0
 
-    goto :goto_236
+    :goto_1e4
+    move/from16 v16, v7
 
-    :cond_235
+    :cond_1e6
+    move v7, v8
+
+    goto :goto_1ed
+
+    :cond_1e8
+    move/from16 v25, v9
+
+    :cond_1ea
+    const v9, 0xfe0f
+
+    :cond_1ed
+    :goto_1ed
+    add-int/lit8 v6, v6, 0x1
+
+    move/from16 v9, v25
+
+    goto :goto_194
+
+    :cond_1f2
+    move/from16 v25, v9
+
+    if-eqz v24, :cond_1fd
+
+    if-eqz v10, :cond_1fd
+
     const/4 v3, 0x0
 
-    .line 458
-    :goto_236
+    .line 594
+    aput v3, v10, v3
+
+    const/4 v3, 0x0
+
+    move-object v10, v3
+
+    :cond_1fd
+    if-eqz v16, :cond_228
+
+    add-int/lit8 v3, v7, 0x2
+
+    if-ge v3, v4, :cond_228
+
+    add-int/lit8 v6, v7, 0x1
+
+    .line 597
+    invoke-interface {v1, v6}, Ljava/lang/CharSequence;->charAt(I)C
+
+    move-result v8
+
+    const v9, 0xd83c
+
+    if-ne v8, v9, :cond_228
+
+    .line 598
+    invoke-interface {v1, v3}, Ljava/lang/CharSequence;->charAt(I)C
+
+    move-result v8
+
+    const v9, 0xdffb
+
+    if-lt v8, v9, :cond_228
+
+    const v9, 0xdfff
+
+    if-gt v8, v9, :cond_228
+
+    add-int/lit8 v7, v7, 0x3
+
+    .line 600
+    invoke-interface {v1, v6, v7}, Ljava/lang/CharSequence;->subSequence(II)Ljava/lang/CharSequence;
+
+    move-result-object v6
+
+    invoke-virtual {v2, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
+
+    add-int/lit8 v15, v15, 0x2
+
+    move v7, v3
+
+    :cond_228
+    if-eqz v16, :cond_266
+
+    if-eqz v10, :cond_234
+
+    const/4 v3, 0x0
+
+    .line 607
+    aget v6, v10, v3
+
+    const/4 v8, 0x1
+
+    add-int/2addr v6, v8
+
+    aput v6, v10, v3
+
+    goto :goto_235
+
+    :cond_234
+    const/4 v3, 0x0
+
+    .line 609
+    :goto_235
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->length()I
 
-    move-result v4
+    move-result v6
 
-    invoke-virtual {v2, v3, v4}, Ljava/lang/StringBuilder;->subSequence(II)Ljava/lang/CharSequence;
+    invoke-virtual {v2, v3, v6}, Ljava/lang/StringBuilder;->subSequence(II)Ljava/lang/CharSequence;
 
-    move-result-object v4
+    move-result-object v6
 
-    .line 459
-    invoke-static {v4}, Lorg/telegram/messenger/Emoji;->getEmojiDrawable(Ljava/lang/CharSequence;)Lorg/telegram/messenger/Emoji$EmojiDrawable;
+    .line 610
+    invoke-static {v6}, Lorg/telegram/messenger/Emoji;->getDrawableInfo(Ljava/lang/CharSequence;)Lorg/telegram/messenger/Emoji$DrawableInfo;
 
-    move-result-object v4
+    move-result-object v3
 
-    if-eqz v4, :cond_257
+    if-eqz v3, :cond_25b
 
-    .line 461
-    new-instance v7, Lorg/telegram/messenger/Emoji$EmojiSpan;
+    .line 611
+    new-instance v3, Landroid/util/Pair;
 
-    move-object/from16 v8, p1
+    new-instance v8, Landroid/util/Pair;
 
-    move/from16 v10, p2
+    invoke-static {v14}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    invoke-direct {v7, v4, v3, v10, v8}, Lorg/telegram/messenger/Emoji$EmojiSpan;-><init>(Lorg/telegram/messenger/Emoji$EmojiDrawable;IILandroid/graphics/Paint$FontMetricsInt;)V
+    move-result-object v9
 
-    add-int/2addr v14, v13
+    add-int/2addr v14, v15
 
-    const/16 v3, 0x21
+    invoke-static {v14}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    .line 462
-    invoke-interface {v0, v7, v13, v14, v3}, Landroid/text/Spannable;->setSpan(Ljava/lang/Object;III)V
+    move-result-object v11
+
+    invoke-direct {v8, v9, v11}, Landroid/util/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    invoke-direct {v3, v8, v6}, Landroid/util/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    invoke-virtual {v5, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     add-int/lit8 v17, v17, 0x1
 
+    :cond_25b
     const/4 v3, 0x0
 
-    goto :goto_25b
-
-    :cond_257
-    move-object/from16 v8, p1
-
-    move/from16 v10, p2
-
-    .line 467
-    :goto_25b
+    .line 616
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->setLength(I)V
 
     move/from16 v3, v17
 
-    const/4 v13, -0x1
+    const/4 v14, -0x1
 
-    const/4 v14, 0x0
+    const/4 v15, 0x0
 
     const/16 v16, 0x0
 
-    goto :goto_26b
+    goto :goto_268
 
-    :cond_265
-    move-object/from16 v8, p1
-
-    move/from16 v10, p2
-
+    :cond_266
     move/from16 v3, v17
 
-    .line 470
-    :goto_26b
-    sget v4, Landroid/os/Build$VERSION;->SDK_INT:I
+    .line 619
+    :goto_268
+    sget v6, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    const/16 v7, 0x17
+    const/16 v8, 0x17
 
-    if-lt v4, v7, :cond_275
+    if-lt v6, v8, :cond_272
 
-    const/16 v7, 0x1d
+    const/16 v8, 0x1d
 
-    if-lt v4, v7, :cond_27e
+    if-lt v6, v8, :cond_27b
 
-    :cond_275
-    sget-boolean v4, Lorg/telegram/messenger/BuildVars;->DEBUG_PRIVATE_VERSION:Z
-    :try_end_277
-    .catch Ljava/lang/Exception; {:try_start_40 .. :try_end_277} :catch_28c
+    :cond_272
+    sget-boolean v6, Lorg/telegram/messenger/BuildVars;->DEBUG_PRIVATE_VERSION:Z
+    :try_end_274
+    .catch Ljava/lang/Exception; {:try_start_44 .. :try_end_274} :catch_286
 
-    if-nez v4, :cond_27e
+    if-nez v6, :cond_27b
 
-    const/16 v4, 0x32
+    const/16 v6, 0x32
 
-    if-lt v3, v4, :cond_27e
+    if-lt v3, v6, :cond_27b
 
-    goto :goto_291
+    goto :goto_28b
 
-    :cond_27e
-    const/4 v4, 0x1
+    :cond_27b
+    const/4 v6, 0x1
 
-    add-int/2addr v4, v5
+    add-int/lit8 v11, v7, 0x1
 
     move/from16 v17, v3
 
-    move v10, v4
-
-    move v4, v6
-
-    move-wide/from16 v11, v23
+    move/from16 v9, v25
 
     const/16 v3, 0x10
 
-    const-wide/16 v5, 0x0
+    goto/16 :goto_42
 
-    goto/16 :goto_3e
-
-    :catch_28c
+    :catch_286
     move-exception v0
 
-    .line 475
+    .line 624
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     return-object v1
 
-    :cond_291
-    :goto_291
-    if-eqz v9, :cond_29c
+    :cond_28b
+    :goto_28b
+    const/4 v7, 0x0
 
-    .line 478
+    .line 627
+    :goto_28c
+    invoke-virtual {v5}, Ljava/util/ArrayList;->size()I
+
+    move-result v1
+
+    if-ge v7, v1, :cond_2d3
+
+    .line 628
+    invoke-virtual {v5, v7}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/util/Pair;
+
+    iget-object v1, v1, Landroid/util/Pair;->first:Ljava/lang/Object;
+
+    check-cast v1, Landroid/util/Pair;
+
+    .line 629
+    invoke-virtual {v5, v7}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Landroid/util/Pair;
+
+    iget-object v3, v3, Landroid/util/Pair;->second:Ljava/lang/Object;
+
+    check-cast v3, Ljava/lang/CharSequence;
+
+    .line 631
+    invoke-static {v3}, Lorg/telegram/messenger/Emoji;->getEmojiDrawable(Ljava/lang/CharSequence;)Lorg/telegram/messenger/Emoji$EmojiDrawable;
+
+    move-result-object v3
+
+    if-eqz v3, :cond_2cc
+
+    .line 639
+    new-instance v4, Lorg/telegram/messenger/Emoji$EmojiSpan;
+
+    move-object/from16 v6, p1
+
+    move/from16 v8, p2
+
+    const/4 v9, 0x0
+
+    invoke-direct {v4, v3, v9, v8, v6}, Lorg/telegram/messenger/Emoji$EmojiSpan;-><init>(Landroid/graphics/drawable/Drawable;IILandroid/graphics/Paint$FontMetricsInt;)V
+
+    .line 640
+    iget-object v3, v1, Landroid/util/Pair;->first:Ljava/lang/Object;
+
+    check-cast v3, Ljava/lang/Integer;
+
+    invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
+
+    move-result v3
+
+    iget-object v1, v1, Landroid/util/Pair;->second:Ljava/lang/Object;
+
+    check-cast v1, Ljava/lang/Integer;
+
+    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
+
+    move-result v1
+
+    const/16 v9, 0x21
+
+    invoke-interface {v0, v4, v3, v1, v9}, Landroid/text/Spannable;->setSpan(Ljava/lang/Object;III)V
+
+    goto :goto_2d0
+
+    :cond_2cc
+    move-object/from16 v6, p1
+
+    move/from16 v8, p2
+
+    :goto_2d0
+    add-int/lit8 v7, v7, 0x1
+
+    goto :goto_28c
+
+    :cond_2d3
+    if-eqz v10, :cond_2de
+
+    .line 643
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->length()I
 
     move-result v1
 
-    if-eqz v1, :cond_29c
+    if-eqz v1, :cond_2de
 
     const/4 v1, 0x0
 
-    .line 479
-    aput v1, v9, v1
+    .line 644
+    aput v1, v10, v1
 
-    :cond_29c
+    :cond_2de
     return-object v0
 
-    :cond_29d
-    :goto_29d
+    :cond_2df
+    :goto_2df
     return-object v1
 .end method
 
 .method public static saveEmojiColors()V
     .registers 5
 
-    .line 701
+    .line 874
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getGlobalEmojiSettings()Landroid/content/SharedPreferences;
 
     move-result-object v0
 
-    .line 702
+    .line 875
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 703
+    .line 876
     sget-object v2, Lorg/telegram/messenger/Emoji;->emojiColor:Ljava/util/HashMap;
 
     invoke-virtual {v2}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
@@ -2693,7 +2927,7 @@
 
     check-cast v3, Ljava/util/Map$Entry;
 
-    .line 704
+    .line 877
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->length()I
 
     move-result v4
@@ -2702,10 +2936,10 @@
 
     const-string v4, ","
 
-    .line 705
+    .line 878
     invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 707
+    .line 880
     :cond_2a
     invoke-interface {v3}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
@@ -2717,10 +2951,10 @@
 
     const-string v4, "="
 
-    .line 708
+    .line 881
     invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 709
+    .line 882
     invoke-interface {v3}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v3
@@ -2731,7 +2965,7 @@
 
     goto :goto_13
 
-    .line 711
+    .line 884
     :cond_42
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
@@ -2755,17 +2989,17 @@
 .method public static saveRecentEmoji()V
     .registers 5
 
-    .line 600
+    .line 773
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getGlobalEmojiSettings()Landroid/content/SharedPreferences;
 
     move-result-object v0
 
-    .line 601
+    .line 774
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 602
+    .line 775
     sget-object v2, Lorg/telegram/messenger/Emoji;->emojiUseHistory:Ljava/util/HashMap;
 
     invoke-virtual {v2}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
@@ -2789,7 +3023,7 @@
 
     check-cast v3, Ljava/util/Map$Entry;
 
-    .line 603
+    .line 776
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->length()I
 
     move-result v4
@@ -2798,10 +3032,10 @@
 
     const-string v4, ","
 
-    .line 604
+    .line 777
     invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 606
+    .line 779
     :cond_2a
     invoke-interface {v3}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
@@ -2813,10 +3047,10 @@
 
     const-string v4, "="
 
-    .line 607
+    .line 780
     invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 608
+    .line 781
     invoke-interface {v3}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v3
@@ -2825,7 +3059,7 @@
 
     goto :goto_13
 
-    .line 610
+    .line 783
     :cond_40
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
@@ -2849,12 +3083,12 @@
 .method public static sortEmoji()V
     .registers 3
 
-    .line 574
+    .line 747
     sget-object v0, Lorg/telegram/messenger/Emoji;->recentEmoji:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 575
+    .line 748
     sget-object v0, Lorg/telegram/messenger/Emoji;->emojiUseHistory:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
@@ -2878,7 +3112,7 @@
 
     check-cast v1, Ljava/util/Map$Entry;
 
-    .line 576
+    .line 749
     sget-object v2, Lorg/telegram/messenger/Emoji;->recentEmoji:Ljava/util/ArrayList;
 
     invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
@@ -2891,7 +3125,7 @@
 
     goto :goto_f
 
-    .line 578
+    .line 751
     :cond_27
     sget-object v0, Lorg/telegram/messenger/Emoji;->recentEmoji:Ljava/util/ArrayList;
 
@@ -2899,7 +3133,7 @@
 
     invoke-static {v0, v1}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
 
-    .line 594
+    .line 767
     :goto_2e
     sget-object v0, Lorg/telegram/messenger/Emoji;->recentEmoji:Ljava/util/ArrayList;
 
@@ -2911,7 +3145,7 @@
 
     if-le v0, v1, :cond_44
 
-    .line 595
+    .line 768
     sget-object v0, Lorg/telegram/messenger/Emoji;->recentEmoji:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I

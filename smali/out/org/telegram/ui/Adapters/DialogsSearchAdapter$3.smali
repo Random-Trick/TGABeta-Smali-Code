@@ -18,7 +18,7 @@
 .method constructor <init>(Lorg/telegram/ui/Adapters/DialogsSearchAdapter;Landroid/content/Context;)V
     .registers 3
 
-    .line 976
+    .line 1065
     invoke-direct {p0, p2}, Landroidx/recyclerview/widget/LinearLayoutManager;-><init>(Landroid/content/Context;)V
 
     return-void

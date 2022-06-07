@@ -562,7 +562,7 @@
     .line 257
     new-instance v12, Lorg/telegram/ui/Components/CrossOutDrawable;
 
-    const v13, 0x7f0702a3
+    const v13, 0x7f0702a4
 
     const/4 v14, 0x0
 
@@ -651,7 +651,7 @@
     .line 268
     iget-object v2, v0, Lorg/telegram/ui/Components/voip/GroupCallRenderersContainer;->pinTextView:Landroid/widget/TextView;
 
-    const v12, 0x7f0e0323
+    const v12, 0x7f0e035f
 
     const-string v13, "CallVideoPin"
 
@@ -688,7 +688,7 @@
     .line 274
     iget-object v2, v0, Lorg/telegram/ui/Components/voip/GroupCallRenderersContainer;->unpinTextView:Landroid/widget/TextView;
 
-    const v4, 0x7f0e0325
+    const v4, 0x7f0e0361
 
     const-string v7, "CallVideoUnpin"
 
@@ -740,14 +740,14 @@
     .line 283
     iget-object v2, v0, Lorg/telegram/ui/Components/voip/GroupCallRenderersContainer;->pipView:Landroid/widget/ImageView;
 
-    const v7, 0x7f070163
+    const v7, 0x7f070126
 
     invoke-virtual {v2, v7}, Landroid/widget/ImageView;->setImageResource(I)V
 
     .line 284
     iget-object v2, v0, Lorg/telegram/ui/Components/voip/GroupCallRenderersContainer;->pipView:Landroid/widget/ImageView;
 
-    const v7, 0x7f0e004b
+    const v7, 0x7f0e0068
 
     invoke-static {v7}, Lorg/telegram/messenger/LocaleController;->getString(I)Ljava/lang/String;
 
@@ -7072,7 +7072,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f07024a
+    const v1, 0x7f0701e3
 
     invoke-static {v0, v1}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 

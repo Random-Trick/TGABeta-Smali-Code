@@ -17,7 +17,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 51551
+    .line 52016
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -28,12 +28,12 @@
 .method public deserializeResponse(Lorg/telegram/tgnet/AbstractSerializedData;IZ)Lorg/telegram/tgnet/TLObject;
     .registers 8
 
-    .line 51556
+    .line 52021
     new-instance p2, Lorg/telegram/tgnet/TLRPC$Vector;
 
     invoke-direct {p2}, Lorg/telegram/tgnet/TLRPC$Vector;-><init>()V
 
-    .line 51557
+    .line 52022
     invoke-virtual {p1, p3}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
@@ -43,7 +43,7 @@
     :goto_a
     if-ge v1, v0, :cond_1f
 
-    .line 51559
+    .line 52024
     invoke-virtual {p1, p3}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v2
@@ -56,7 +56,7 @@
 
     return-object p2
 
-    .line 51563
+    .line 52028
     :cond_17
     iget-object v3, p2, Lorg/telegram/tgnet/TLRPC$Vector;->objects:Ljava/util/ArrayList;
 
@@ -73,7 +73,7 @@
 .method public serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
     .registers 3
 
-    .line 51569
+    .line 52034
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_messages_getDialogUnreadMarks;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V

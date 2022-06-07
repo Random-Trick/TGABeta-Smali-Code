@@ -87,7 +87,7 @@
 
     iput-object v1, p0, Lorg/telegram/ui/Cells/LocationPoweredCell;->imageView:Landroid/widget/ImageView;
 
-    const v5, 0x7f070117
+    const v5, 0x7f0700e8
 
     .line 47
     invoke-virtual {v1, v5}, Landroid/widget/ImageView;->setImageResource(I)V

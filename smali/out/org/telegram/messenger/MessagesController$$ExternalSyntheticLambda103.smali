@@ -51,7 +51,7 @@
 
     iget-object v4, p0, Lorg/telegram/messenger/MessagesController$$ExternalSyntheticLambda103;->f$4:Lorg/telegram/ui/ActionBar/Theme$ThemeInfo;
 
-    invoke-static {v0, v1, v2, v3, v4}, Lorg/telegram/messenger/MessagesController;->$r8$lambda$6mcUbl3_0cgIesotOHE38_FCdN8(Lorg/telegram/messenger/MessagesController;Ljava/lang/String;Ljava/io/File;Lorg/telegram/ui/ActionBar/Theme$ThemeAccent;Lorg/telegram/ui/ActionBar/Theme$ThemeInfo;)V
+    invoke-static {v0, v1, v2, v3, v4}, Lorg/telegram/messenger/MessagesController;->$r8$lambda$SlstFs4-F0LhLI16WNUev6IUkY4(Lorg/telegram/messenger/MessagesController;Ljava/lang/String;Ljava/io/File;Lorg/telegram/ui/ActionBar/Theme$ThemeAccent;Lorg/telegram/ui/ActionBar/Theme$ThemeInfo;)V
 
     return-void
 .end method

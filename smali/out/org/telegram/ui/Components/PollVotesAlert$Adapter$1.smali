@@ -37,7 +37,7 @@
 .method protected onCollapseClick()V
     .registers 4
 
-    const v0, 0x7f080098
+    const v0, 0x7f080099
 
     .line 1047
     invoke-virtual {p0, v0}, Landroid/widget/FrameLayout;->getTag(I)Ljava/lang/Object;

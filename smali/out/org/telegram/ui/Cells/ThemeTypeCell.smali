@@ -177,7 +177,7 @@
     .line 51
     iget-object p1, p0, Lorg/telegram/ui/Cells/ThemeTypeCell;->checkImage:Landroid/widget/ImageView;
 
-    const v0, 0x7f0703d8
+    const v0, 0x7f0703cf
 
     invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setImageResource(I)V
 

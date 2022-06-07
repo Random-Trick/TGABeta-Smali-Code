@@ -130,7 +130,7 @@
     return-object p1
 .end method
 
-.method public synthetic R(Lj$/wrappers/G;)Lj$/util/stream/M0;
+.method public synthetic R(Lj$/wrappers/G;)Lj$/util/stream/IntStream;
     .registers 3
 
     iget-object v0, p0, Lj$/wrappers/L0;->a:Ljava/util/stream/DoubleStream;
@@ -151,7 +151,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lj$/wrappers/N0;->n0(Ljava/util/stream/IntStream;)Lj$/util/stream/M0;
+    invoke-static {p1}, Lj$/wrappers/$r8$wrapper$java$util$stream$IntStream$-V-WRP;->convert(Ljava/util/stream/IntStream;)Lj$/util/stream/IntStream;
 
     move-result-object p1
 
@@ -576,7 +576,7 @@
     return-object v0
 .end method
 
-.method public synthetic spliterator()Lj$/util/u;
+.method public synthetic spliterator()Lj$/util/t;
     .registers 2
 
     iget-object v0, p0, Lj$/wrappers/L0;->a:Ljava/util/stream/DoubleStream;
@@ -585,14 +585,14 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lj$/wrappers/i;->a(Ljava/util/Spliterator$OfDouble;)Lj$/util/u;
+    invoke-static {v0}, Lj$/wrappers/i;->a(Ljava/util/Spliterator$OfDouble;)Lj$/util/t;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public synthetic spliterator()Lj$/util/y;
+.method public synthetic spliterator()Lj$/util/u;
     .registers 2
 
     iget-object v0, p0, Lj$/wrappers/L0;->a:Ljava/util/stream/DoubleStream;
@@ -601,7 +601,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lj$/wrappers/g;->a(Ljava/util/Spliterator;)Lj$/util/y;
+    invoke-static {v0}, Lj$/wrappers/g;->a(Ljava/util/Spliterator;)Lj$/util/u;
 
     move-result-object v0
 
@@ -685,7 +685,7 @@
     return-object p1
 .end method
 
-.method public synthetic x(Lj$/util/function/h;)Lj$/util/stream/f1;
+.method public synthetic x(Lj$/util/function/h;)Lj$/util/stream/e1;
     .registers 3
 
     iget-object v0, p0, Lj$/wrappers/L0;->a:Ljava/util/stream/DoubleStream;
@@ -698,7 +698,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lj$/wrappers/P0;->n0(Ljava/util/stream/LongStream;)Lj$/util/stream/f1;
+    invoke-static {p1}, Lj$/wrappers/N0;->n0(Ljava/util/stream/LongStream;)Lj$/util/stream/e1;
 
     move-result-object p1
 

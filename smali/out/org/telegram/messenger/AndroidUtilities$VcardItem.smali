@@ -36,10 +36,10 @@
 .method public constructor <init>()V
     .registers 2
 
-    .line 1094
+    .line 1103
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1095
+    .line 1104
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -48,12 +48,12 @@
 
     const-string v0, ""
 
-    .line 1096
+    .line 1105
     iput-object v0, p0, Lorg/telegram/messenger/AndroidUtilities$VcardItem;->fullData:Ljava/lang/String;
 
     const/4 v0, 0x1
 
-    .line 1098
+    .line 1107
     iput-boolean v0, p0, Lorg/telegram/messenger/AndroidUtilities$VcardItem;->checked:Z
 
     return-void
@@ -64,7 +64,7 @@
 .method public getRawType(Z)Ljava/lang/String;
     .registers 8
 
-    .line 1218
+    .line 1227
     iget-object v0, p0, Lorg/telegram/messenger/AndroidUtilities$VcardItem;->fullData:Ljava/lang/String;
 
     const/16 v1, 0x3a
@@ -79,7 +79,7 @@
 
     return-object v1
 
-    .line 1222
+    .line 1231
     :cond_d
     iget-object v2, p0, Lorg/telegram/messenger/AndroidUtilities$VcardItem;->fullData:Ljava/lang/String;
 
@@ -89,7 +89,7 @@
 
     move-result-object v0
 
-    .line 1223
+    .line 1232
     iget v2, p0, Lorg/telegram/messenger/AndroidUtilities$VcardItem;->type:I
 
     const/16 v4, 0x14
@@ -100,24 +100,24 @@
 
     const/4 v2, 0x2
 
-    .line 1224
+    .line 1233
     invoke-virtual {v0, v2}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1225
+    .line 1234
     invoke-virtual {v0, v5}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v0
 
     if-eqz p1, :cond_2a
 
-    .line 1227
+    .line 1236
     aget-object v1, v0, v3
 
     goto :goto_32
 
-    .line 1228
+    .line 1237
     :cond_2a
     array-length p1, v0
 
@@ -125,7 +125,7 @@
 
     if-le p1, v2, :cond_32
 
-    .line 1229
+    .line 1238
     array-length p1, v0
 
     sub-int/2addr p1, v2
@@ -136,19 +136,19 @@
     :goto_32
     return-object v1
 
-    .line 1234
+    .line 1243
     :cond_33
     invoke-virtual {v0, v5}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object p1
 
-    .line 1235
+    .line 1244
     :goto_37
     array-length v1, p1
 
     if-ge v3, v1, :cond_4a
 
-    .line 1236
+    .line 1245
     aget-object v1, p1, v3
 
     const/16 v2, 0x3d
@@ -161,7 +161,7 @@
 
     goto :goto_47
 
-    .line 1239
+    .line 1248
     :cond_45
     aget-object v0, p1, v3
 
@@ -177,7 +177,7 @@
 .method public getRawValue()[Ljava/lang/String;
     .registers 12
 
-    .line 1101
+    .line 1110
     iget-object v0, p0, Lorg/telegram/messenger/AndroidUtilities$VcardItem;->fullData:Ljava/lang/String;
 
     const/16 v1, 0x3a
@@ -194,7 +194,7 @@
 
     return-object v0
 
-    .line 1106
+    .line 1115
     :cond_e
     iget-object v2, p0, Lorg/telegram/messenger/AndroidUtilities$VcardItem;->fullData:Ljava/lang/String;
 
@@ -202,7 +202,7 @@
 
     move-result-object v2
 
-    .line 1107
+    .line 1116
     iget-object v3, p0, Lorg/telegram/messenger/AndroidUtilities$VcardItem;->fullData:Ljava/lang/String;
 
     const/4 v4, 0x1
@@ -217,7 +217,7 @@
 
     const-string v5, ";"
 
-    .line 1111
+    .line 1120
     invoke-virtual {v2, v5}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v2
@@ -226,13 +226,13 @@
 
     const/4 v7, 0x0
 
-    .line 1112
+    .line 1121
     :goto_26
     array-length v8, v2
 
     if-ge v7, v8, :cond_52
 
-    .line 1113
+    .line 1122
     aget-object v8, v2, v7
 
     const-string v9, "="
@@ -241,7 +241,7 @@
 
     move-result-object v8
 
-    .line 1114
+    .line 1123
     array-length v9, v8
 
     const/4 v10, 0x2
@@ -250,7 +250,7 @@
 
     goto :goto_4f
 
-    .line 1117
+    .line 1126
     :cond_36
     aget-object v9, v8, v1
 
@@ -262,12 +262,12 @@
 
     if-eqz v9, :cond_43
 
-    .line 1118
+    .line 1127
     aget-object v6, v8, v4
 
     goto :goto_4f
 
-    .line 1119
+    .line 1128
     :cond_43
     aget-object v9, v8, v1
 
@@ -279,7 +279,7 @@
 
     if-eqz v9, :cond_4f
 
-    .line 1120
+    .line 1129
     aget-object v3, v8, v4
 
     :cond_4f
@@ -288,19 +288,19 @@
 
     goto :goto_26
 
-    .line 1123
+    .line 1132
     :cond_52
     invoke-virtual {v0, v5}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1125
+    .line 1134
     :goto_56
     array-length v2, v0
 
     if-ge v1, v2, :cond_85
 
-    .line 1126
+    .line 1135
     aget-object v2, v0, v1
 
     invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -316,14 +316,14 @@
 
     const-string v2, "QUOTED-PRINTABLE"
 
-    .line 1129
+    .line 1138
     invoke-virtual {v3, v2}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v2
 
     if-eqz v2, :cond_82
 
-    .line 1130
+    .line 1139
     aget-object v2, v0, v1
 
     invoke-static {v2}, Lorg/telegram/messenger/AndroidUtilities;->getStringBytes(Ljava/lang/String;)[B
@@ -336,12 +336,12 @@
 
     if-eqz v2, :cond_82
 
-    .line 1131
+    .line 1140
     array-length v4, v2
 
     if-eqz v4, :cond_82
 
-    .line 1133
+    .line 1142
     :try_start_7b
     new-instance v4, Ljava/lang/String;
 
@@ -365,18 +365,18 @@
 .method public getType()Ljava/lang/String;
     .registers 10
 
-    .line 1247
+    .line 1256
     iget v0, p0, Lorg/telegram/messenger/AndroidUtilities$VcardItem;->type:I
 
     const/4 v1, 0x5
 
     if-ne v0, v1, :cond_f
 
-    const v0, 0x7f0e04b8
+    const v0, 0x7f0e0507
 
     const-string v1, "ContactBirthday"
 
-    .line 1248
+    .line 1257
     invoke-static {v1, v0}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v0
@@ -390,7 +390,7 @@
 
     if-ne v0, v2, :cond_33
 
-    .line 1250
+    .line 1259
     invoke-virtual {p0, v3}, Lorg/telegram/messenger/AndroidUtilities$VcardItem;->getRawType(Z)Ljava/lang/String;
 
     move-result-object v0
@@ -403,11 +403,11 @@
 
     if-eqz v0, :cond_29
 
-    const v0, 0x7f0e04b9
+    const v0, 0x7f0e0508
 
     const-string v1, "ContactJob"
 
-    .line 1251
+    .line 1260
     invoke-static {v1, v0}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v0
@@ -415,18 +415,18 @@
     return-object v0
 
     :cond_29
-    const v0, 0x7f0e04ba
+    const v0, 0x7f0e0509
 
     const-string v1, "ContactJobTitle"
 
-    .line 1253
+    .line 1262
     invoke-static {v1, v0}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
 
-    .line 1256
+    .line 1265
     :cond_33
     iget-object v0, p0, Lorg/telegram/messenger/AndroidUtilities$VcardItem;->fullData:Ljava/lang/String;
 
@@ -442,7 +442,7 @@
 
     return-object v0
 
-    .line 1260
+    .line 1269
     :cond_40
     iget-object v2, p0, Lorg/telegram/messenger/AndroidUtilities$VcardItem;->fullData:Ljava/lang/String;
 
@@ -452,7 +452,7 @@
 
     move-result-object v0
 
-    .line 1261
+    .line 1270
     iget v2, p0, Lorg/telegram/messenger/AndroidUtilities$VcardItem;->type:I
 
     const/16 v5, 0x14
@@ -463,22 +463,22 @@
 
     if-ne v2, v5, :cond_5c
 
-    .line 1262
+    .line 1271
     invoke-virtual {v0, v7}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1263
+    .line 1272
     invoke-virtual {v0, v6}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1264
+    .line 1273
     aget-object v0, v0, v4
 
     goto/16 :goto_101
 
-    .line 1266
+    .line 1275
     :cond_5c
     invoke-virtual {v0, v6}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
@@ -486,13 +486,13 @@
 
     const/4 v5, 0x0
 
-    .line 1267
+    .line 1276
     :goto_61
     array-length v6, v2
 
     if-ge v5, v6, :cond_74
 
-    .line 1268
+    .line 1277
     aget-object v6, v2, v5
 
     const/16 v8, 0x3d
@@ -505,7 +505,7 @@
 
     goto :goto_71
 
-    .line 1271
+    .line 1280
     :cond_6f
     aget-object v0, v2, v5
 
@@ -517,19 +517,19 @@
     :cond_74
     const-string v2, "X-"
 
-    .line 1273
+    .line 1282
     invoke-virtual {v0, v2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v2
 
     if-eqz v2, :cond_80
 
-    .line 1274
+    .line 1283
     invoke-virtual {v0, v7}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1276
+    .line 1285
     :cond_80
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
@@ -642,11 +642,11 @@
     goto :goto_101
 
     :pswitch_d0
-    const v0, 0x7f0e0d54
+    const v0, 0x7f0e0de2
 
     const-string v1, "PhoneOther"
 
-    .line 1288
+    .line 1297
     invoke-static {v1, v0}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v0
@@ -654,11 +654,11 @@
     goto :goto_101
 
     :pswitch_da
-    const v0, 0x7f0e0d55
+    const v0, 0x7f0e0de3
 
     const-string v1, "PhoneWork"
 
-    .line 1291
+    .line 1300
     invoke-static {v1, v0}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v0
@@ -666,11 +666,11 @@
     goto :goto_101
 
     :pswitch_e4
-    const v0, 0x7f0e0d4a
+    const v0, 0x7f0e0dd8
 
     const-string v1, "PhoneMain"
 
-    .line 1278
+    .line 1287
     invoke-static {v1, v0}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v0
@@ -678,11 +678,11 @@
     goto :goto_101
 
     :pswitch_ee
-    const v0, 0x7f0e0d49
+    const v0, 0x7f0e0dd7
 
     const-string v1, "PhoneHome"
 
-    .line 1281
+    .line 1290
     invoke-static {v1, v0}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v0
@@ -690,16 +690,16 @@
     goto :goto_101
 
     :pswitch_f8
-    const v0, 0x7f0e0d4b
+    const v0, 0x7f0e0dd9
 
     const-string v1, "PhoneMobile"
 
-    .line 1285
+    .line 1294
     invoke-static {v1, v0}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1295
+    .line 1304
     :goto_101
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -757,12 +757,12 @@
 .method public getValue(Z)Ljava/lang/String;
     .registers 14
 
-    .line 1144
+    .line 1153
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 1146
+    .line 1155
     iget-object v1, p0, Lorg/telegram/messenger/AndroidUtilities$VcardItem;->fullData:Ljava/lang/String;
 
     const/16 v2, 0x3a
@@ -777,7 +777,7 @@
 
     return-object p1
 
-    .line 1151
+    .line 1160
     :cond_12
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->length()I
 
@@ -787,10 +787,10 @@
 
     const-string v2, ", "
 
-    .line 1152
+    .line 1161
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1155
+    .line 1164
     :cond_1d
     iget-object v2, p0, Lorg/telegram/messenger/AndroidUtilities$VcardItem;->fullData:Ljava/lang/String;
 
@@ -800,7 +800,7 @@
 
     move-result-object v2
 
-    .line 1156
+    .line 1165
     iget-object v4, p0, Lorg/telegram/messenger/AndroidUtilities$VcardItem;->fullData:Ljava/lang/String;
 
     const/4 v5, 0x1
@@ -815,7 +815,7 @@
 
     const-string v6, ";"
 
-    .line 1160
+    .line 1169
     invoke-virtual {v2, v6}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v2
@@ -824,7 +824,7 @@
 
     const/4 v8, 0x0
 
-    .line 1161
+    .line 1170
     :goto_36
     array-length v9, v2
 
@@ -832,7 +832,7 @@
 
     if-ge v8, v9, :cond_62
 
-    .line 1162
+    .line 1171
     aget-object v9, v2, v8
 
     const-string v11, "="
@@ -841,14 +841,14 @@
 
     move-result-object v9
 
-    .line 1163
+    .line 1172
     array-length v11, v9
 
     if-eq v11, v10, :cond_46
 
     goto :goto_5f
 
-    .line 1166
+    .line 1175
     :cond_46
     aget-object v10, v9, v3
 
@@ -860,12 +860,12 @@
 
     if-eqz v10, :cond_53
 
-    .line 1167
+    .line 1176
     aget-object v7, v9, v5
 
     goto :goto_5f
 
-    .line 1168
+    .line 1177
     :cond_53
     aget-object v10, v9, v3
 
@@ -877,7 +877,7 @@
 
     if-eqz v10, :cond_5f
 
-    .line 1169
+    .line 1178
     aget-object v4, v9, v5
 
     :cond_5f
@@ -886,7 +886,7 @@
 
     goto :goto_36
 
-    .line 1172
+    .line 1181
     :cond_62
     invoke-virtual {v1, v6}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
@@ -896,13 +896,13 @@
 
     const/4 v6, 0x0
 
-    .line 1174
+    .line 1183
     :goto_68
     array-length v8, v1
 
     if-ge v2, v8, :cond_b8
 
-    .line 1175
+    .line 1184
     aget-object v8, v1, v2
 
     invoke-static {v8}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -918,14 +918,14 @@
 
     const-string v8, "QUOTED-PRINTABLE"
 
-    .line 1178
+    .line 1187
     invoke-virtual {v4, v8}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v8
 
     if-eqz v8, :cond_96
 
-    .line 1179
+    .line 1188
     aget-object v8, v1, v2
 
     invoke-static {v8}, Lorg/telegram/messenger/AndroidUtilities;->getStringBytes(Ljava/lang/String;)[B
@@ -938,12 +938,12 @@
 
     if-eqz v8, :cond_96
 
-    .line 1180
+    .line 1189
     array-length v9, v8
 
     if-eqz v9, :cond_96
 
-    .line 1182
+    .line 1191
     :try_start_8d
     new-instance v9, Ljava/lang/String;
 
@@ -962,7 +962,7 @@
     :goto_96
     if-eqz v6, :cond_a3
 
-    .line 1188
+    .line 1197
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->length()I
 
     move-result v8
@@ -971,10 +971,10 @@
 
     const-string v8, " "
 
-    .line 1189
+    .line 1198
     invoke-virtual {v0, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1191
+    .line 1200
     :cond_a3
     aget-object v8, v1, v2
 
@@ -982,7 +982,7 @@
 
     if-nez v6, :cond_b5
 
-    .line 1193
+    .line 1202
     aget-object v6, v1, v2
 
     invoke-virtual {v6}, Ljava/lang/String;->length()I
@@ -1007,12 +1007,12 @@
     :cond_b8
     if-eqz p1, :cond_122
 
-    .line 1198
+    .line 1207
     iget p1, p0, Lorg/telegram/messenger/AndroidUtilities$VcardItem;->type:I
 
     if-nez p1, :cond_cb
 
-    .line 1199
+    .line 1208
     invoke-static {}, Lorg/telegram/PhoneFormat/PhoneFormat;->getInstance()Lorg/telegram/PhoneFormat/PhoneFormat;
 
     move-result-object p1
@@ -1032,7 +1032,7 @@
 
     if-ne p1, v1, :cond_122
 
-    .line 1201
+    .line 1210
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
@@ -1043,12 +1043,12 @@
 
     move-result-object p1
 
-    .line 1202
+    .line 1211
     array-length v2, p1
 
     if-lez v2, :cond_122
 
-    .line 1203
+    .line 1212
     aget-object p1, p1, v3
 
     const-string v2, "-"
@@ -1057,19 +1057,19 @@
 
     move-result-object p1
 
-    .line 1204
+    .line 1213
     array-length v2, p1
 
     const/4 v4, 0x3
 
     if-ne v2, v4, :cond_122
 
-    .line 1205
+    .line 1214
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
     move-result-object v0
 
-    .line 1206
+    .line 1215
     aget-object v2, p1, v3
 
     invoke-static {v2}, Lorg/telegram/messenger/Utilities;->parseInt(Ljava/lang/CharSequence;)Ljava/lang/Integer;
@@ -1082,7 +1082,7 @@
 
     invoke-virtual {v0, v5, v2}, Ljava/util/Calendar;->set(II)V
 
-    .line 1207
+    .line 1216
     aget-object v2, p1, v5
 
     invoke-static {v2}, Lorg/telegram/messenger/Utilities;->parseInt(Ljava/lang/CharSequence;)Ljava/lang/Integer;
@@ -1097,7 +1097,7 @@
 
     invoke-virtual {v0, v10, v2}, Ljava/util/Calendar;->set(II)V
 
-    .line 1208
+    .line 1217
     aget-object p1, p1, v10
 
     invoke-static {p1}, Lorg/telegram/messenger/Utilities;->parseInt(Ljava/lang/CharSequence;)Ljava/lang/Integer;
@@ -1110,7 +1110,7 @@
 
     invoke-virtual {v0, v1, p1}, Ljava/util/Calendar;->set(II)V
 
-    .line 1209
+    .line 1218
     invoke-static {}, Lorg/telegram/messenger/LocaleController;->getInstance()Lorg/telegram/messenger/LocaleController;
 
     move-result-object p1
@@ -1127,7 +1127,7 @@
 
     return-object p1
 
-    .line 1214
+    .line 1223
     :cond_122
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 

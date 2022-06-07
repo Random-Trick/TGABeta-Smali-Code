@@ -363,7 +363,7 @@
 
     if-ne p2, v0, :cond_29
 
-    const p2, 0x7f0e03a5
+    const p2, 0x7f0e03e4
 
     const-string v0, "ChannelOtherMembers"
 
@@ -395,7 +395,7 @@
 
     if-eqz p2, :cond_47
 
-    const p2, 0x7f0e1402
+    const p2, 0x7f0e14d0
 
     const-string v0, "YourContactsToInvite"
 
@@ -409,7 +409,7 @@
     goto/16 :goto_11b
 
     :cond_47
-    const p2, 0x7f0e0808
+    const p2, 0x7f0e0860
 
     const-string v0, "GroupContacts"
 
@@ -487,7 +487,7 @@
     const/4 v8, 0x0
 
     :goto_8a
-    const p1, 0x7f0e1317
+    const p1, 0x7f0e13e5
 
     const-string p2, "VoipGroupCopyInviteLink"
 
@@ -498,7 +498,7 @@
 
     const/4 v5, 0x0
 
-    const v6, 0x7f070277
+    const v6, 0x7f070256
 
     const/4 v7, 0x7
 
@@ -803,7 +803,7 @@
 
     invoke-direct {p2, v3, v0, v1, v4}, Lorg/telegram/ui/Cells/ManageChatUserCell;-><init>(Landroid/content/Context;IIZ)V
 
-    const v0, 0x7f070274
+    const v0, 0x7f07024b
 
     .line 820
     invoke-virtual {p2, v0}, Lorg/telegram/ui/Cells/ManageChatUserCell;->setCustomRightImage(I)V

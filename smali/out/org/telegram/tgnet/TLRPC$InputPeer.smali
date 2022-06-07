@@ -21,7 +21,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 44428
+    .line 44880
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -36,7 +36,7 @@
 
     goto :goto_4c
 
-    .line 44459
+    .line 44911
     :sswitch_5
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_inputPeerEmpty;
 
@@ -44,7 +44,7 @@
 
     goto :goto_4c
 
-    .line 44441
+    .line 44893
     :sswitch_b
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_inputPeerSelf;
 
@@ -52,7 +52,7 @@
 
     goto :goto_4c
 
-    .line 44456
+    .line 44908
     :sswitch_11
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_inputPeerUser_layer131;
 
@@ -60,7 +60,7 @@
 
     goto :goto_4c
 
-    .line 44465
+    .line 44917
     :sswitch_17
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_inputPeerChat;
 
@@ -68,7 +68,7 @@
 
     goto :goto_4c
 
-    .line 44453
+    .line 44905
     :sswitch_1d
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_inputPeerChannel;
 
@@ -76,7 +76,7 @@
 
     goto :goto_4c
 
-    .line 44468
+    .line 44920
     :sswitch_23
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_inputPeerChannel_layer131;
 
@@ -84,7 +84,7 @@
 
     goto :goto_4c
 
-    .line 44474
+    .line 44926
     :sswitch_29
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_inputPeerUserFromMessage_layer131;
 
@@ -92,7 +92,7 @@
 
     goto :goto_4c
 
-    .line 44450
+    .line 44902
     :sswitch_2f
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_inputPeerChat_layer131;
 
@@ -100,7 +100,7 @@
 
     goto :goto_4c
 
-    .line 44447
+    .line 44899
     :sswitch_35
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_inputPeerUser;
 
@@ -108,7 +108,7 @@
 
     goto :goto_4c
 
-    .line 44462
+    .line 44914
     :sswitch_3b
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_inputPeerChannelFromMessage;
 
@@ -116,7 +116,7 @@
 
     goto :goto_4c
 
-    .line 44444
+    .line 44896
     :sswitch_41
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_inputPeerUserFromMessage;
 
@@ -124,7 +124,7 @@
 
     goto :goto_4c
 
-    .line 44471
+    .line 44923
     :sswitch_47
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_inputPeerChannelFromMessage_layer131;
 
@@ -137,7 +137,7 @@
 
     goto :goto_67
 
-    .line 44478
+    .line 44930
     :cond_51
     new-instance p0, Ljava/lang/RuntimeException;
 
@@ -167,7 +167,7 @@
     :goto_67
     if-eqz v0, :cond_6c
 
-    .line 44481
+    .line 44933
     invoke-virtual {v0, p0, p2}, Lorg/telegram/tgnet/TLObject;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
     :cond_6c

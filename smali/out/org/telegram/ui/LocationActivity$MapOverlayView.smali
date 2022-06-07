@@ -283,7 +283,7 @@
 
     move-result-object v6
 
-    const v8, 0x7f070405
+    const v8, 0x7f0703ec
 
     invoke-virtual {v6, v8}, Landroid/widget/FrameLayout;->setBackgroundResource(I)V
 
@@ -539,7 +539,7 @@
 
     invoke-virtual {v6, v8}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    const v6, 0x7f0e1136
+    const v6, 0x7f0e11fa
 
     const-string v8, "TapToSendLocation"
 

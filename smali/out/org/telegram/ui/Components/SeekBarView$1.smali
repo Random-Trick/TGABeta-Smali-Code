@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/SeekBarView;Z)V
     .registers 3
 
-    .line 92
+    .line 94
     iput-object p1, p0, Lorg/telegram/ui/Components/SeekBarView$1;->this$0:Lorg/telegram/ui/Components/SeekBarView;
 
     invoke-direct {p0, p2}, Lorg/telegram/ui/Components/FloatSeekBarAccessibilityDelegate;-><init>(Z)V
@@ -35,7 +35,7 @@
 .method public getContentDescription(Landroid/view/View;)Ljava/lang/CharSequence;
     .registers 2
 
-    .line 120
+    .line 122
     iget-object p1, p0, Lorg/telegram/ui/Components/SeekBarView$1;->this$0:Lorg/telegram/ui/Components/SeekBarView;
 
     iget-object p1, p1, Lorg/telegram/ui/Components/SeekBarView;->delegate:Lorg/telegram/ui/Components/SeekBarView$SeekBarViewDelegate;
@@ -58,7 +58,7 @@
 .method protected getDelta()F
     .registers 3
 
-    .line 110
+    .line 112
     iget-object v0, p0, Lorg/telegram/ui/Components/SeekBarView$1;->this$0:Lorg/telegram/ui/Components/SeekBarView;
 
     iget-object v0, v0, Lorg/telegram/ui/Components/SeekBarView;->delegate:Lorg/telegram/ui/Components/SeekBarView$SeekBarViewDelegate;
@@ -77,7 +77,7 @@
 
     return v1
 
-    .line 114
+    .line 116
     :cond_f
     invoke-super {p0}, Lorg/telegram/ui/Components/FloatSeekBarAccessibilityDelegate;->getDelta()F
 
@@ -89,7 +89,7 @@
 .method public getProgress()F
     .registers 2
 
-    .line 95
+    .line 97
     iget-object v0, p0, Lorg/telegram/ui/Components/SeekBarView$1;->this$0:Lorg/telegram/ui/Components/SeekBarView;
 
     invoke-virtual {v0}, Lorg/telegram/ui/Components/SeekBarView;->getProgress()F
@@ -102,29 +102,29 @@
 .method public setProgress(F)V
     .registers 4
 
-    .line 100
+    .line 102
     iget-object v0, p0, Lorg/telegram/ui/Components/SeekBarView$1;->this$0:Lorg/telegram/ui/Components/SeekBarView;
 
     const/4 v1, 0x1
 
     invoke-static {v0, v1}, Lorg/telegram/ui/Components/SeekBarView;->access$002(Lorg/telegram/ui/Components/SeekBarView;Z)Z
 
-    .line 101
+    .line 103
     iget-object v0, p0, Lorg/telegram/ui/Components/SeekBarView$1;->this$0:Lorg/telegram/ui/Components/SeekBarView;
 
     invoke-virtual {v0, p1}, Lorg/telegram/ui/Components/SeekBarView;->setProgress(F)V
 
-    .line 102
+    .line 104
     iget-object v0, p0, Lorg/telegram/ui/Components/SeekBarView$1;->this$0:Lorg/telegram/ui/Components/SeekBarView;
 
     iget-object v0, v0, Lorg/telegram/ui/Components/SeekBarView;->delegate:Lorg/telegram/ui/Components/SeekBarView$SeekBarViewDelegate;
 
     if-eqz v0, :cond_14
 
-    .line 103
+    .line 105
     invoke-interface {v0, v1, p1}, Lorg/telegram/ui/Components/SeekBarView$SeekBarViewDelegate;->onSeekBarDrag(ZF)V
 
-    .line 105
+    .line 107
     :cond_14
     iget-object p1, p0, Lorg/telegram/ui/Components/SeekBarView$1;->this$0:Lorg/telegram/ui/Components/SeekBarView;
 

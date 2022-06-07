@@ -50,14 +50,14 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .registers 7
 
-    .line 2271
+    .line 2302
     invoke-direct {p0, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
     const/4 v0, 0x2
 
     new-array v1, v0, [Lorg/telegram/ui/Components/BackupImageView;
 
-    .line 2265
+    .line 2296
     iput-object v1, p0, Lorg/telegram/ui/Components/AudioPlayerAlert$CoverContainer;->imageViews:[Lorg/telegram/ui/Components/BackupImageView;
 
     const/4 v1, 0x0
@@ -65,7 +65,7 @@
     :goto_9
     if-ge v1, v0, :cond_4e
 
-    .line 2273
+    .line 2304
     iget-object v2, p0, Lorg/telegram/ui/Components/AudioPlayerAlert$CoverContainer;->imageViews:[Lorg/telegram/ui/Components/BackupImageView;
 
     new-instance v3, Lorg/telegram/ui/Components/BackupImageView;
@@ -74,7 +74,7 @@
 
     aput-object v3, v2, v1
 
-    .line 2275
+    .line 2306
     iget-object v2, p0, Lorg/telegram/ui/Components/AudioPlayerAlert$CoverContainer;->imageViews:[Lorg/telegram/ui/Components/BackupImageView;
 
     aget-object v2, v2, v1
@@ -89,7 +89,7 @@
 
     invoke-virtual {v2, v3}, Lorg/telegram/messenger/ImageReceiver;->setDelegate(Lorg/telegram/messenger/ImageReceiver$ImageReceiverDelegate;)V
 
-    .line 2280
+    .line 2311
     iget-object v2, p0, Lorg/telegram/ui/Components/AudioPlayerAlert$CoverContainer;->imageViews:[Lorg/telegram/ui/Components/BackupImageView;
 
     aget-object v2, v2, v1
@@ -106,7 +106,7 @@
 
     if-ne v1, v2, :cond_3d
 
-    .line 2282
+    .line 2313
     iget-object v2, p0, Lorg/telegram/ui/Components/AudioPlayerAlert$CoverContainer;->imageViews:[Lorg/telegram/ui/Components/BackupImageView;
 
     aget-object v2, v2, v1
@@ -115,7 +115,7 @@
 
     invoke-virtual {v2, v3}, Landroid/view/View;->setVisibility(I)V
 
-    .line 2284
+    .line 2315
     :cond_3d
     iget-object v2, p0, Lorg/telegram/ui/Components/AudioPlayerAlert$CoverContainer;->imageViews:[Lorg/telegram/ui/Components/BackupImageView;
 
@@ -142,12 +142,12 @@
 .method private synthetic lambda$new$0(ILorg/telegram/messenger/ImageReceiver;ZZZ)V
     .registers 6
 
-    .line 2276
+    .line 2307
     iget p3, p0, Lorg/telegram/ui/Components/AudioPlayerAlert$CoverContainer;->activeIndex:I
 
     if-ne p1, p3, :cond_7
 
-    .line 2277
+    .line 2308
     invoke-virtual {p0, p2}, Lorg/telegram/ui/Components/AudioPlayerAlert$CoverContainer;->onImageUpdated(Lorg/telegram/messenger/ImageReceiver;)V
 
     :cond_7
@@ -157,7 +157,7 @@
 .method private static synthetic lambda$switchImageViews$1(Lorg/telegram/ui/Components/BackupImageView;ZLandroid/animation/ValueAnimator;)V
     .registers 4
 
-    .line 2316
+    .line 2347
     invoke-virtual {p2}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
     move-result-object v0
@@ -168,15 +168,15 @@
 
     move-result v0
 
-    .line 2317
+    .line 2348
     invoke-virtual {p0, v0}, Landroid/view/View;->setScaleX(F)V
 
-    .line 2318
+    .line 2349
     invoke-virtual {p0, v0}, Landroid/view/View;->setScaleY(F)V
 
     if-nez p1, :cond_19
 
-    .line 2320
+    .line 2351
     invoke-virtual {p2}, Landroid/animation/ValueAnimator;->getAnimatedFraction()F
 
     move-result p1
@@ -190,7 +190,7 @@
 .method private static synthetic lambda$switchImageViews$2(Lorg/telegram/ui/Components/BackupImageView;Lorg/telegram/ui/Components/BackupImageView;Landroid/animation/ValueAnimator;)V
     .registers 5
 
-    .line 2329
+    .line 2360
     invoke-virtual {p2}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
     move-result-object v0
@@ -201,13 +201,13 @@
 
     move-result v0
 
-    .line 2330
+    .line 2361
     invoke-virtual {p0, v0}, Landroid/view/View;->setScaleX(F)V
 
-    .line 2331
+    .line 2362
     invoke-virtual {p0, v0}, Landroid/view/View;->setScaleY(F)V
 
-    .line 2332
+    .line 2363
     invoke-virtual {p2}, Landroid/animation/ValueAnimator;->getAnimatedFraction()F
 
     move-result p2
@@ -218,7 +218,7 @@
 
     if-lez v1, :cond_30
 
-    .line 2333
+    .line 2364
     invoke-virtual {p1}, Lorg/telegram/ui/Components/BackupImageView;->getImageReceiver()Lorg/telegram/messenger/ImageReceiver;
 
     move-result-object p1
@@ -239,7 +239,7 @@
 
     sub-float/2addr p1, p2
 
-    .line 2334
+    .line 2365
     invoke-virtual {p0, p1}, Landroid/view/View;->setAlpha(F)V
 
     :cond_30
@@ -251,7 +251,7 @@
 .method public final getImageReceiver()Lorg/telegram/messenger/ImageReceiver;
     .registers 2
 
-    .line 2363
+    .line 2394
     invoke-virtual {p0}, Lorg/telegram/ui/Components/AudioPlayerAlert$CoverContainer;->getImageView()Lorg/telegram/ui/Components/BackupImageView;
 
     move-result-object v0
@@ -266,7 +266,7 @@
 .method public final getImageView()Lorg/telegram/ui/Components/BackupImageView;
     .registers 3
 
-    .line 2355
+    .line 2386
     iget-object v0, p0, Lorg/telegram/ui/Components/AudioPlayerAlert$CoverContainer;->imageViews:[Lorg/telegram/ui/Components/BackupImageView;
 
     iget v1, p0, Lorg/telegram/ui/Components/AudioPlayerAlert$CoverContainer;->activeIndex:I
@@ -279,7 +279,7 @@
 .method public final getNextImageView()Lorg/telegram/ui/Components/BackupImageView;
     .registers 3
 
-    .line 2359
+    .line 2390
     iget-object v0, p0, Lorg/telegram/ui/Components/AudioPlayerAlert$CoverContainer;->imageViews:[Lorg/telegram/ui/Components/BackupImageView;
 
     iget v1, p0, Lorg/telegram/ui/Components/AudioPlayerAlert$CoverContainer;->activeIndex:I
@@ -305,15 +305,15 @@
 .method public final switchImageViews()V
     .registers 12
 
-    .line 2289
+    .line 2320
     iget-object v0, p0, Lorg/telegram/ui/Components/AudioPlayerAlert$CoverContainer;->animatorSet:Landroid/animation/AnimatorSet;
 
     if-eqz v0, :cond_7
 
-    .line 2290
+    .line 2321
     invoke-virtual {v0}, Landroid/animation/AnimatorSet;->cancel()V
 
-    .line 2292
+    .line 2323
     :cond_7
     new-instance v0, Landroid/animation/AnimatorSet;
 
@@ -321,7 +321,7 @@
 
     iput-object v0, p0, Lorg/telegram/ui/Components/AudioPlayerAlert$CoverContainer;->animatorSet:Landroid/animation/AnimatorSet;
 
-    .line 2293
+    .line 2324
     iget v0, p0, Lorg/telegram/ui/Components/AudioPlayerAlert$CoverContainer;->activeIndex:I
 
     const/4 v1, 0x1
@@ -340,17 +340,17 @@
     :goto_17
     iput v0, p0, Lorg/telegram/ui/Components/AudioPlayerAlert$CoverContainer;->activeIndex:I
 
-    .line 2295
+    .line 2326
     iget-object v3, p0, Lorg/telegram/ui/Components/AudioPlayerAlert$CoverContainer;->imageViews:[Lorg/telegram/ui/Components/BackupImageView;
 
     xor-int/lit8 v4, v0, 0x1
 
     aget-object v4, v3, v4
 
-    .line 2296
+    .line 2327
     aget-object v0, v3, v0
 
-    .line 2298
+    .line 2329
     invoke-virtual {v4}, Lorg/telegram/ui/Components/BackupImageView;->getImageReceiver()Lorg/telegram/messenger/ImageReceiver;
 
     move-result-object v3
@@ -368,24 +368,24 @@
     :cond_2e
     const/4 v5, 0x0
 
-    .line 2300
+    .line 2331
     :goto_2f
     invoke-virtual {v0, v5}, Landroid/view/View;->setAlpha(F)V
 
     const v5, 0x3f4ccccd    # 0.8f
 
-    .line 2301
+    .line 2332
     invoke-virtual {v0, v5}, Landroid/view/View;->setScaleX(F)V
 
-    .line 2302
+    .line 2333
     invoke-virtual {v0, v5}, Landroid/view/View;->setScaleY(F)V
 
-    .line 2303
+    .line 2334
     invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
 
     if-eqz v3, :cond_44
 
-    .line 2306
+    .line 2337
     invoke-virtual {v4}, Landroid/view/View;->bringToFront()V
 
     goto :goto_4d
@@ -393,12 +393,12 @@
     :cond_44
     const/16 v6, 0x8
 
-    .line 2308
+    .line 2339
     invoke-virtual {v4, v6}, Landroid/view/View;->setVisibility(I)V
 
     const/4 v6, 0x0
 
-    .line 2309
+    .line 2340
     invoke-virtual {v4, v6}, Lorg/telegram/ui/Components/BackupImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
     :goto_4d
@@ -406,7 +406,7 @@
 
     new-array v7, v6, [F
 
-    .line 2312
+    .line 2343
     fill-array-data v7, :array_a8
 
     invoke-static {v7}, Landroid/animation/ValueAnimator;->ofFloat([F)Landroid/animation/ValueAnimator;
@@ -415,15 +415,15 @@
 
     const-wide/16 v8, 0x7d
 
-    .line 2313
+    .line 2344
     invoke-virtual {v7, v8, v9}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
-    .line 2314
+    .line 2345
     sget-object v10, Lorg/telegram/ui/Components/CubicBezierInterpolator;->EASE_OUT:Lorg/telegram/ui/Components/CubicBezierInterpolator;
 
     invoke-virtual {v7, v10}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 2315
+    .line 2346
     new-instance v10, Lorg/telegram/ui/Components/AudioPlayerAlert$CoverContainer$$ExternalSyntheticLambda1;
 
     invoke-direct {v10, v0, v3}, Lorg/telegram/ui/Components/AudioPlayerAlert$CoverContainer$$ExternalSyntheticLambda1;-><init>(Lorg/telegram/ui/Components/BackupImageView;Z)V
@@ -434,7 +434,7 @@
 
     new-array v3, v6, [F
 
-    .line 2325
+    .line 2356
     invoke-virtual {v4}, Landroid/view/View;->getScaleX()F
 
     move-result v10
@@ -447,29 +447,29 @@
 
     move-result-object v3
 
-    .line 2326
+    .line 2357
     invoke-virtual {v3, v8, v9}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
-    .line 2327
+    .line 2358
     sget-object v5, Lorg/telegram/ui/Components/CubicBezierInterpolator;->EASE_IN:Lorg/telegram/ui/Components/CubicBezierInterpolator;
 
     invoke-virtual {v3, v5}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 2328
+    .line 2359
     new-instance v5, Lorg/telegram/ui/Components/AudioPlayerAlert$CoverContainer$$ExternalSyntheticLambda0;
 
     invoke-direct {v5, v4, v0}, Lorg/telegram/ui/Components/AudioPlayerAlert$CoverContainer$$ExternalSyntheticLambda0;-><init>(Lorg/telegram/ui/Components/BackupImageView;Lorg/telegram/ui/Components/BackupImageView;)V
 
     invoke-virtual {v3, v5}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    .line 2337
+    .line 2368
     new-instance v0, Lorg/telegram/ui/Components/AudioPlayerAlert$CoverContainer$1;
 
     invoke-direct {v0, p0, v4}, Lorg/telegram/ui/Components/AudioPlayerAlert$CoverContainer$1;-><init>(Lorg/telegram/ui/Components/AudioPlayerAlert$CoverContainer;Lorg/telegram/ui/Components/BackupImageView;)V
 
     invoke-virtual {v3, v0}, Landroid/animation/ValueAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 2346
+    .line 2377
     iget-object v0, p0, Lorg/telegram/ui/Components/AudioPlayerAlert$CoverContainer;->animatorSet:Landroid/animation/AnimatorSet;
 
     new-array v4, v6, [Landroid/animation/Animator;
@@ -482,13 +482,13 @@
 
     goto :goto_a2
 
-    .line 2348
+    .line 2379
     :cond_9d
     iget-object v0, p0, Lorg/telegram/ui/Components/AudioPlayerAlert$CoverContainer;->animatorSet:Landroid/animation/AnimatorSet;
 
     invoke-virtual {v0, v7}, Landroid/animation/AnimatorSet;->play(Landroid/animation/Animator;)Landroid/animation/AnimatorSet$Builder;
 
-    .line 2351
+    .line 2382
     :goto_a2
     iget-object v0, p0, Lorg/telegram/ui/Components/AudioPlayerAlert$CoverContainer;->animatorSet:Landroid/animation/AnimatorSet;
 

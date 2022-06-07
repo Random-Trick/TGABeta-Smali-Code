@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/FilterUsersActivity$SpansContainer;)V
     .registers 2
 
-    .line 280
+    .line 281
     iput-object p1, p0, Lorg/telegram/ui/FilterUsersActivity$SpansContainer$1;->this$1:Lorg/telegram/ui/FilterUsersActivity$SpansContainer;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -35,26 +35,26 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .registers 3
 
-    .line 283
+    .line 284
     iget-object p1, p0, Lorg/telegram/ui/FilterUsersActivity$SpansContainer$1;->this$1:Lorg/telegram/ui/FilterUsersActivity$SpansContainer;
 
     const/4 v0, 0x0
 
     invoke-static {p1, v0}, Lorg/telegram/ui/FilterUsersActivity$SpansContainer;->access$702(Lorg/telegram/ui/FilterUsersActivity$SpansContainer;Landroid/view/View;)Landroid/view/View;
 
-    .line 284
+    .line 285
     iget-object p1, p0, Lorg/telegram/ui/FilterUsersActivity$SpansContainer$1;->this$1:Lorg/telegram/ui/FilterUsersActivity$SpansContainer;
 
     invoke-static {p1, v0}, Lorg/telegram/ui/FilterUsersActivity$SpansContainer;->access$802(Lorg/telegram/ui/FilterUsersActivity$SpansContainer;Landroid/animation/AnimatorSet;)Landroid/animation/AnimatorSet;
 
-    .line 285
+    .line 286
     iget-object p1, p0, Lorg/telegram/ui/FilterUsersActivity$SpansContainer$1;->this$1:Lorg/telegram/ui/FilterUsersActivity$SpansContainer;
 
     const/4 v0, 0x0
 
     invoke-static {p1, v0}, Lorg/telegram/ui/FilterUsersActivity$SpansContainer;->access$902(Lorg/telegram/ui/FilterUsersActivity$SpansContainer;Z)Z
 
-    .line 286
+    .line 287
     iget-object p1, p0, Lorg/telegram/ui/FilterUsersActivity$SpansContainer$1;->this$1:Lorg/telegram/ui/FilterUsersActivity$SpansContainer;
 
     iget-object p1, p1, Lorg/telegram/ui/FilterUsersActivity$SpansContainer;->this$0:Lorg/telegram/ui/FilterUsersActivity;

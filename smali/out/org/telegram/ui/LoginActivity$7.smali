@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/LoginActivity;)V
     .registers 2
 
-    .line 691
+    .line 715
     iput-object p1, p0, Lorg/telegram/ui/LoginActivity$7;->this$0:Lorg/telegram/ui/LoginActivity;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -35,7 +35,7 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .registers 3
 
-    .line 694
+    .line 718
     iget-object p1, p0, Lorg/telegram/ui/LoginActivity$7;->this$0:Lorg/telegram/ui/LoginActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/LoginActivity;->access$700(Lorg/telegram/ui/LoginActivity;)Lorg/telegram/ui/Components/CustomPhoneKeyboardView;

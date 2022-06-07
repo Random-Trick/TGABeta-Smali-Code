@@ -17,7 +17,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 26739
+    .line 27107
     invoke-direct {p0}, Lorg/telegram/tgnet/TLRPC$InputMedia;-><init>()V
 
     return-void
@@ -28,28 +28,28 @@
 .method public readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
     .registers 4
 
-    .line 26743
+    .line 27111
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readString(Z)Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/telegram/tgnet/TLRPC$InputMedia;->phone_number:Ljava/lang/String;
 
-    .line 26744
+    .line 27112
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readString(Z)Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/telegram/tgnet/TLRPC$InputMedia;->first_name:Ljava/lang/String;
 
-    .line 26745
+    .line 27113
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readString(Z)Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/telegram/tgnet/TLRPC$InputMedia;->last_name:Ljava/lang/String;
 
-    .line 26746
+    .line 27114
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readString(Z)Ljava/lang/String;
 
     move-result-object p1
@@ -62,27 +62,27 @@
 .method public serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
     .registers 3
 
-    .line 26750
+    .line 27118
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_inputMediaContact;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 26751
+    .line 27119
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$InputMedia;->phone_number:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeString(Ljava/lang/String;)V
 
-    .line 26752
+    .line 27120
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$InputMedia;->first_name:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeString(Ljava/lang/String;)V
 
-    .line 26753
+    .line 27121
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$InputMedia;->last_name:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeString(Ljava/lang/String;)V
 
-    .line 26754
+    .line 27122
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$InputMedia;->vcard:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeString(Ljava/lang/String;)V

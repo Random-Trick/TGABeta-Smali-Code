@@ -50,37 +50,37 @@
 .method public constructor <init>(Landroid/content/Context;ILorg/telegram/ui/Cells/PatternCell$PatternCellDelegate;)V
     .registers 6
 
-    .line 71
+    .line 73
     invoke-direct {p0, p1}, Lorg/telegram/ui/Components/BackupImageView;-><init>(Landroid/content/Context;)V
 
-    .line 38
+    .line 40
     new-instance p1, Landroid/graphics/RectF;
 
     invoke-direct {p1}, Landroid/graphics/RectF;-><init>()V
 
     iput-object p1, p0, Lorg/telegram/ui/Cells/PatternCell;->rect:Landroid/graphics/RectF;
 
-    .line 42
+    .line 44
     sget p1, Lorg/telegram/messenger/UserConfig;->selectedAccount:I
 
     iput p1, p0, Lorg/telegram/ui/Cells/PatternCell;->currentAccount:I
 
     const/high16 p1, 0x40c00000    # 6.0f
 
-    .line 72
+    .line 74
     invoke-static {p1}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result p1
 
     invoke-virtual {p0, p1}, Lorg/telegram/ui/Components/BackupImageView;->setRoundRadius(I)V
 
-    .line 73
+    .line 75
     iput p2, p0, Lorg/telegram/ui/Cells/PatternCell;->maxWallpaperSize:I
 
-    .line 74
+    .line 76
     iput-object p3, p0, Lorg/telegram/ui/Cells/PatternCell;->delegate:Lorg/telegram/ui/Cells/PatternCell$PatternCellDelegate;
 
-    .line 76
+    .line 78
     new-instance p1, Lorg/telegram/ui/Components/RadialProgress2;
 
     invoke-direct {p1, p0}, Lorg/telegram/ui/Components/RadialProgress2;-><init>(Landroid/view/View;)V
@@ -89,7 +89,7 @@
 
     const/high16 p2, 0x41f00000    # 30.0f
 
-    .line 77
+    .line 79
     invoke-static {p2}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result p3
@@ -110,7 +110,7 @@
 
     invoke-virtual {p1, p3, p2, v1, v0}, Lorg/telegram/ui/Components/RadialProgress2;->setProgressRect(IIII)V
 
-    .line 79
+    .line 81
     new-instance p1, Landroid/graphics/Paint;
 
     const/4 p2, 0x3
@@ -119,7 +119,7 @@
 
     iput-object p1, p0, Lorg/telegram/ui/Cells/PatternCell;->backgroundPaint:Landroid/graphics/Paint;
 
-    .line 81
+    .line 83
     iget p1, p0, Lorg/telegram/ui/Cells/PatternCell;->currentAccount:I
 
     invoke-static {p1}, Lorg/telegram/messenger/DownloadController;->getInstance(I)Lorg/telegram/messenger/DownloadController;
@@ -132,14 +132,14 @@
 
     iput p1, p0, Lorg/telegram/ui/Cells/PatternCell;->TAG:I
 
-    .line 83
+    .line 85
     sget p1, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 p2, 0x15
 
     if-lt p1, p2, :cond_5f
 
-    .line 84
+    .line 86
     new-instance p1, Lorg/telegram/ui/Cells/PatternCell$1;
 
     invoke-direct {p1, p0}, Lorg/telegram/ui/Cells/PatternCell$1;-><init>(Lorg/telegram/ui/Cells/PatternCell;)V
@@ -148,7 +148,7 @@
 
     const/4 p1, 0x1
 
-    .line 90
+    .line 92
     invoke-virtual {p0, p1}, Landroid/view/View;->setClipToOutline(Z)V
 
     :cond_5f
@@ -158,7 +158,7 @@
 .method private updateButtonState(Ljava/lang/Object;ZZ)V
     .registers 9
 
-    .line 129
+    .line 130
     instance-of v0, p1, Lorg/telegram/tgnet/TLRPC$TL_wallPaper;
 
     const/4 v1, 0x6
@@ -171,7 +171,7 @@
 
     goto :goto_11
 
-    .line 170
+    .line 171
     :cond_a
     iget-object p1, p0, Lorg/telegram/ui/Cells/PatternCell;->radialProgress:Lorg/telegram/ui/Components/RadialProgress2;
 
@@ -185,17 +185,17 @@
 
     if-eqz v0, :cond_30
 
-    .line 134
+    .line 135
     check-cast p1, Lorg/telegram/tgnet/TLRPC$TL_wallPaper;
 
-    .line 135
+    .line 136
     iget-object v0, p1, Lorg/telegram/tgnet/TLRPC$WallPaper;->document:Lorg/telegram/tgnet/TLRPC$Document;
 
     invoke-static {v0}, Lorg/telegram/messenger/FileLoader;->getAttachFileName(Lorg/telegram/tgnet/TLObject;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 136
+    .line 137
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v3
@@ -204,7 +204,7 @@
 
     return-void
 
-    .line 139
+    .line 140
     :cond_23
     iget v3, p0, Lorg/telegram/ui/Cells/PatternCell;->currentAccount:I
 
@@ -220,16 +220,16 @@
 
     goto :goto_63
 
-    .line 141
+    .line 142
     :cond_30
     check-cast p1, Lorg/telegram/messenger/MediaController$SearchImage;
 
-    .line 142
+    .line 143
     iget-object v0, p1, Lorg/telegram/messenger/MediaController$SearchImage;->photo:Lorg/telegram/tgnet/TLRPC$Photo;
 
     if-eqz v0, :cond_50
 
-    .line 143
+    .line 144
     iget-object p1, v0, Lorg/telegram/tgnet/TLRPC$Photo;->sizes:Ljava/util/ArrayList;
 
     iget v0, p0, Lorg/telegram/ui/Cells/PatternCell;->maxWallpaperSize:I
@@ -238,7 +238,7 @@
 
     move-result-object p1
 
-    .line 144
+    .line 145
     iget v0, p0, Lorg/telegram/ui/Cells/PatternCell;->currentAccount:I
 
     invoke-static {v0}, Lorg/telegram/messenger/FileLoader;->getInstance(I)Lorg/telegram/messenger/FileLoader;
@@ -249,7 +249,7 @@
 
     move-result-object v0
 
-    .line 145
+    .line 146
     invoke-static {p1}, Lorg/telegram/messenger/FileLoader;->getAttachFileName(Lorg/telegram/tgnet/TLObject;)Ljava/lang/String;
 
     move-result-object p1
@@ -262,7 +262,7 @@
 
     goto :goto_5c
 
-    .line 147
+    .line 148
     :cond_50
     iget-object p1, p1, Lorg/telegram/messenger/MediaController$SearchImage;->imageUrl:Ljava/lang/String;
 
@@ -272,12 +272,12 @@
 
     move-result-object p1
 
-    .line 148
+    .line 149
     invoke-virtual {p1}, Ljava/io/File;->getName()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 150
+    .line 151
     :goto_5c
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -287,7 +287,7 @@
 
     return-void
 
-    .line 154
+    .line 155
     :cond_63
     :goto_63
     invoke-virtual {p1}, Ljava/io/File;->exists()Z
@@ -296,7 +296,7 @@
 
     if-eqz p1, :cond_7f
 
-    .line 155
+    .line 156
     iget p1, p0, Lorg/telegram/ui/Cells/PatternCell;->currentAccount:I
 
     invoke-static {p1}, Lorg/telegram/messenger/DownloadController;->getInstance(I)Lorg/telegram/messenger/DownloadController;
@@ -305,21 +305,21 @@
 
     invoke-virtual {p1, p0}, Lorg/telegram/messenger/DownloadController;->removeLoadingFileObserver(Lorg/telegram/messenger/DownloadController$FileDownloadProgressListener;)V
 
-    .line 156
+    .line 157
     iget-object p1, p0, Lorg/telegram/ui/Cells/PatternCell;->radialProgress:Lorg/telegram/ui/Components/RadialProgress2;
 
     const/high16 v0, 0x3f800000    # 1.0f
 
     invoke-virtual {p1, v0, p3}, Lorg/telegram/ui/Components/RadialProgress2;->setProgress(FZ)V
 
-    .line 157
+    .line 158
     iget-object p1, p0, Lorg/telegram/ui/Cells/PatternCell;->radialProgress:Lorg/telegram/ui/Components/RadialProgress2;
 
     invoke-virtual {p1, v1, p2, p3}, Lorg/telegram/ui/Components/RadialProgress2;->setIcon(IZZ)V
 
     goto :goto_b3
 
-    .line 159
+    .line 160
     :cond_7f
     iget p1, p0, Lorg/telegram/ui/Cells/PatternCell;->currentAccount:I
 
@@ -331,7 +331,7 @@
 
     invoke-virtual {p1, v0, v1, p0}, Lorg/telegram/messenger/DownloadController;->addLoadingFileObserver(Ljava/lang/String;Lorg/telegram/messenger/MessageObject;Lorg/telegram/messenger/DownloadController$FileDownloadProgressListener;)V
 
-    .line 160
+    .line 161
     iget p1, p0, Lorg/telegram/ui/Cells/PatternCell;->currentAccount:I
 
     invoke-static {p1}, Lorg/telegram/messenger/FileLoader;->getInstance(I)Lorg/telegram/messenger/FileLoader;
@@ -340,7 +340,7 @@
 
     invoke-virtual {p1, v0}, Lorg/telegram/messenger/FileLoader;->isLoadingFile(Ljava/lang/String;)Z
 
-    .line 161
+    .line 162
     invoke-static {}, Lorg/telegram/messenger/ImageLoader;->getInstance()Lorg/telegram/messenger/ImageLoader;
 
     move-result-object p1
@@ -351,7 +351,7 @@
 
     if-eqz p1, :cond_a6
 
-    .line 163
+    .line 164
     iget-object v0, p0, Lorg/telegram/ui/Cells/PatternCell;->radialProgress:Lorg/telegram/ui/Components/RadialProgress2;
 
     invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
@@ -362,7 +362,7 @@
 
     goto :goto_ac
 
-    .line 165
+    .line 166
     :cond_a6
     iget-object p1, p0, Lorg/telegram/ui/Cells/PatternCell;->radialProgress:Lorg/telegram/ui/Components/RadialProgress2;
 
@@ -370,7 +370,7 @@
 
     invoke-virtual {p1, v0, p3}, Lorg/telegram/ui/Components/RadialProgress2;->setProgress(FZ)V
 
-    .line 167
+    .line 168
     :goto_ac
     iget-object p1, p0, Lorg/telegram/ui/Cells/PatternCell;->radialProgress:Lorg/telegram/ui/Components/RadialProgress2;
 
@@ -387,7 +387,7 @@
 .method public getObserverTag()I
     .registers 2
 
-    .line 292
+    .line 293
     iget v0, p0, Lorg/telegram/ui/Cells/PatternCell;->TAG:I
 
     return v0
@@ -396,7 +396,7 @@
 .method public invalidate()V
     .registers 1
 
-    .line 125
+    .line 126
     invoke-super {p0}, Landroid/view/View;->invalidate()V
 
     return-void
@@ -405,12 +405,12 @@
 .method protected onAttachedToWindow()V
     .registers 2
 
-    .line 108
+    .line 109
     invoke-super {p0}, Lorg/telegram/ui/Components/BackupImageView;->onAttachedToWindow()V
 
     const/4 v0, 0x0
 
-    .line 109
+    .line 110
     invoke-virtual {p0, v0}, Lorg/telegram/ui/Cells/PatternCell;->updateSelected(Z)V
 
     return-void
@@ -428,56 +428,56 @@
 
     move-object/from16 v1, p1
 
-    .line 177
+    .line 178
     iget-object v2, v0, Lorg/telegram/ui/Cells/PatternCell;->delegate:Lorg/telegram/ui/Cells/PatternCell$PatternCellDelegate;
 
     invoke-interface {v2}, Lorg/telegram/ui/Cells/PatternCell$PatternCellDelegate;->getIntensity()F
 
     move-result v2
 
-    .line 179
+    .line 180
     iget-object v3, v0, Lorg/telegram/ui/Components/BackupImageView;->imageReceiver:Lorg/telegram/messenger/ImageReceiver;
 
     const/4 v4, 0x0
 
     invoke-virtual {v3, v4}, Lorg/telegram/messenger/ImageReceiver;->setBlendMode(Ljava/lang/Object;)V
 
-    .line 181
+    .line 182
     iget-object v3, v0, Lorg/telegram/ui/Cells/PatternCell;->delegate:Lorg/telegram/ui/Cells/PatternCell$PatternCellDelegate;
 
     invoke-interface {v3}, Lorg/telegram/ui/Cells/PatternCell$PatternCellDelegate;->getBackgroundColor()I
 
     move-result v3
 
-    .line 182
+    .line 183
     iget-object v5, v0, Lorg/telegram/ui/Cells/PatternCell;->delegate:Lorg/telegram/ui/Cells/PatternCell$PatternCellDelegate;
 
     invoke-interface {v5}, Lorg/telegram/ui/Cells/PatternCell$PatternCellDelegate;->getBackgroundGradientColor1()I
 
     move-result v7
 
-    .line 183
+    .line 184
     iget-object v5, v0, Lorg/telegram/ui/Cells/PatternCell;->delegate:Lorg/telegram/ui/Cells/PatternCell$PatternCellDelegate;
 
     invoke-interface {v5}, Lorg/telegram/ui/Cells/PatternCell$PatternCellDelegate;->getBackgroundGradientColor2()I
 
     move-result v8
 
-    .line 184
+    .line 185
     iget-object v5, v0, Lorg/telegram/ui/Cells/PatternCell;->delegate:Lorg/telegram/ui/Cells/PatternCell$PatternCellDelegate;
 
     invoke-interface {v5}, Lorg/telegram/ui/Cells/PatternCell$PatternCellDelegate;->getBackgroundGradientColor3()I
 
     move-result v9
 
-    .line 185
+    .line 186
     iget-object v5, v0, Lorg/telegram/ui/Cells/PatternCell;->delegate:Lorg/telegram/ui/Cells/PatternCell$PatternCellDelegate;
 
     invoke-interface {v5}, Lorg/telegram/ui/Cells/PatternCell$PatternCellDelegate;->getBackgroundGradientAngle()I
 
     move-result v5
 
-    .line 186
+    .line 187
     iget-object v6, v0, Lorg/telegram/ui/Cells/PatternCell;->delegate:Lorg/telegram/ui/Cells/PatternCell$PatternCellDelegate;
 
     invoke-interface {v6}, Lorg/telegram/ui/Cells/PatternCell$PatternCellDelegate;->getCheckColor()I
@@ -492,7 +492,7 @@
 
     if-eqz v7, :cond_f6
 
-    .line 189
+    .line 190
     iget-object v6, v0, Lorg/telegram/ui/Cells/PatternCell;->gradientShader:Landroid/graphics/LinearGradient;
 
     if-eqz v6, :cond_52
@@ -517,28 +517,28 @@
 
     if-eq v5, v6, :cond_ff
 
-    .line 190
+    .line 191
     :cond_52
     iput v3, v0, Lorg/telegram/ui/Cells/PatternCell;->currentBackgroundColor:I
 
-    .line 191
+    .line 192
     iput v7, v0, Lorg/telegram/ui/Cells/PatternCell;->currentGradientColor1:I
 
-    .line 192
+    .line 193
     iput v8, v0, Lorg/telegram/ui/Cells/PatternCell;->currentGradientColor2:I
 
-    .line 193
+    .line 194
     iput v9, v0, Lorg/telegram/ui/Cells/PatternCell;->currentGradientColor3:I
 
-    .line 194
+    .line 195
     iput v5, v0, Lorg/telegram/ui/Cells/PatternCell;->currentGradientAngle:I
 
     if-eqz v8, :cond_b7
 
-    .line 197
+    .line 198
     iput-object v4, v0, Lorg/telegram/ui/Cells/PatternCell;->gradientShader:Landroid/graphics/LinearGradient;
 
-    .line 198
+    .line 199
     iget-object v5, v0, Lorg/telegram/ui/Cells/PatternCell;->backgroundDrawable:Lorg/telegram/ui/Components/MotionBackgroundDrawable;
 
     if-eqz v5, :cond_6b
@@ -549,12 +549,12 @@
 
     move v6, v3
 
-    .line 199
+    .line 200
     invoke-virtual/range {v5 .. v11}, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->setColors(IIIIIZ)V
 
     goto :goto_81
 
-    .line 201
+    .line 202
     :cond_6b
     new-instance v11, Lorg/telegram/ui/Components/MotionBackgroundDrawable;
 
@@ -568,14 +568,14 @@
 
     iput-object v11, v0, Lorg/telegram/ui/Cells/PatternCell;->backgroundDrawable:Lorg/telegram/ui/Components/MotionBackgroundDrawable;
 
-    .line 202
+    .line 203
     invoke-static {v13}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v5
 
     invoke-virtual {v11, v5}, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->setRoundRadius(I)V
 
-    .line 203
+    .line 204
     iget-object v5, v0, Lorg/telegram/ui/Cells/PatternCell;->backgroundDrawable:Lorg/telegram/ui/Components/MotionBackgroundDrawable;
 
     invoke-virtual {v5, v0}, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->setParentView(Landroid/view/View;)V
@@ -585,7 +585,7 @@
 
     if-gez v2, :cond_91
 
-    .line 206
+    .line 207
     iget-object v2, v0, Lorg/telegram/ui/Components/BackupImageView;->imageReceiver:Lorg/telegram/messenger/ImageReceiver;
 
     iget-object v4, v0, Lorg/telegram/ui/Cells/PatternCell;->backgroundDrawable:Lorg/telegram/ui/Components/MotionBackgroundDrawable;
@@ -598,20 +598,20 @@
 
     goto :goto_ff
 
-    .line 208
+    .line 209
     :cond_91
     iget-object v2, v0, Lorg/telegram/ui/Components/BackupImageView;->imageReceiver:Lorg/telegram/messenger/ImageReceiver;
 
     invoke-virtual {v2, v4}, Lorg/telegram/messenger/ImageReceiver;->setGradientBitmap(Landroid/graphics/Bitmap;)V
 
-    .line 209
+    .line 210
     sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v4, 0x1d
 
     if-lt v2, v4, :cond_a4
 
-    .line 210
+    .line 211
     iget-object v2, v0, Lorg/telegram/ui/Components/BackupImageView;->imageReceiver:Lorg/telegram/messenger/ImageReceiver;
 
     sget-object v4, Landroid/graphics/BlendMode;->SOFT_LIGHT:Landroid/graphics/BlendMode;
@@ -620,7 +620,7 @@
 
     goto :goto_ff
 
-    .line 212
+    .line 213
     :cond_a4
     iget-object v2, v0, Lorg/telegram/ui/Components/BackupImageView;->imageReceiver:Lorg/telegram/messenger/ImageReceiver;
 
@@ -640,7 +640,7 @@
 
     goto :goto_ff
 
-    .line 216
+    .line 217
     :cond_b7
     invoke-virtual/range {p0 .. p0}, Landroid/view/View;->getMeasuredWidth()I
 
@@ -654,7 +654,7 @@
 
     move-result-object v2
 
-    .line 217
+    .line 218
     new-instance v5, Landroid/graphics/LinearGradient;
 
     iget v6, v2, Landroid/graphics/Rect;->left:I
@@ -703,36 +703,36 @@
 
     iput-object v5, v0, Lorg/telegram/ui/Cells/PatternCell;->gradientShader:Landroid/graphics/LinearGradient;
 
-    .line 218
+    .line 219
     iput-object v4, v0, Lorg/telegram/ui/Cells/PatternCell;->backgroundDrawable:Lorg/telegram/ui/Components/MotionBackgroundDrawable;
 
-    .line 219
+    .line 220
     iget-object v2, v0, Lorg/telegram/ui/Components/BackupImageView;->imageReceiver:Lorg/telegram/messenger/ImageReceiver;
 
     invoke-virtual {v2, v4}, Lorg/telegram/messenger/ImageReceiver;->setGradientBitmap(Landroid/graphics/Bitmap;)V
 
     goto :goto_ff
 
-    .line 223
+    .line 224
     :cond_f6
     iput-object v4, v0, Lorg/telegram/ui/Cells/PatternCell;->gradientShader:Landroid/graphics/LinearGradient;
 
-    .line 224
+    .line 225
     iput-object v4, v0, Lorg/telegram/ui/Cells/PatternCell;->backgroundDrawable:Lorg/telegram/ui/Components/MotionBackgroundDrawable;
 
-    .line 225
+    .line 226
     iget-object v2, v0, Lorg/telegram/ui/Components/BackupImageView;->imageReceiver:Lorg/telegram/messenger/ImageReceiver;
 
     invoke-virtual {v2, v4}, Lorg/telegram/messenger/ImageReceiver;->setGradientBitmap(Landroid/graphics/Bitmap;)V
 
-    .line 227
+    .line 228
     :cond_ff
     :goto_ff
     iget-object v2, v0, Lorg/telegram/ui/Cells/PatternCell;->backgroundDrawable:Lorg/telegram/ui/Components/MotionBackgroundDrawable;
 
     if-eqz v2, :cond_114
 
-    .line 228
+    .line 229
     invoke-virtual/range {p0 .. p0}, Landroid/view/View;->getMeasuredWidth()I
 
     move-result v3
@@ -743,14 +743,14 @@
 
     invoke-virtual {v2, v15, v15, v3, v4}, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->setBounds(IIII)V
 
-    .line 229
+    .line 230
     iget-object v2, v0, Lorg/telegram/ui/Cells/PatternCell;->backgroundDrawable:Lorg/telegram/ui/Components/MotionBackgroundDrawable;
 
     invoke-virtual {v2, v1}, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->draw(Landroid/graphics/Canvas;)V
 
     goto :goto_144
 
-    .line 231
+    .line 232
     :cond_114
     iget-object v2, v0, Lorg/telegram/ui/Cells/PatternCell;->backgroundPaint:Landroid/graphics/Paint;
 
@@ -758,17 +758,17 @@
 
     invoke-virtual {v2, v4}, Landroid/graphics/Paint;->setShader(Landroid/graphics/Shader;)Landroid/graphics/Shader;
 
-    .line 232
+    .line 233
     iget-object v2, v0, Lorg/telegram/ui/Cells/PatternCell;->gradientShader:Landroid/graphics/LinearGradient;
 
     if-nez v2, :cond_124
 
-    .line 233
+    .line 234
     iget-object v2, v0, Lorg/telegram/ui/Cells/PatternCell;->backgroundPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v2, v3}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 235
+    .line 236
     :cond_124
     iget-object v2, v0, Lorg/telegram/ui/Cells/PatternCell;->rect:Landroid/graphics/RectF;
 
@@ -786,7 +786,7 @@
 
     invoke-virtual {v2, v14, v14, v3, v4}, Landroid/graphics/RectF;->set(FFFF)V
 
-    .line 236
+    .line 237
     iget-object v2, v0, Lorg/telegram/ui/Cells/PatternCell;->rect:Landroid/graphics/RectF;
 
     invoke-static {v13}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -805,11 +805,11 @@
 
     invoke-virtual {v1, v2, v3, v4, v5}, Landroid/graphics/Canvas;->drawRoundRect(Landroid/graphics/RectF;FFLandroid/graphics/Paint;)V
 
-    .line 239
+    .line 240
     :goto_144
     invoke-super/range {p0 .. p1}, Lorg/telegram/ui/Components/BackupImageView;->onDraw(Landroid/graphics/Canvas;)V
 
-    .line 241
+    .line 242
     iget-object v2, v0, Lorg/telegram/ui/Cells/PatternCell;->radialProgress:Lorg/telegram/ui/Components/RadialProgress2;
 
     invoke-virtual {v2}, Lorg/telegram/ui/Components/RadialProgress2;->getIcon()I
@@ -820,14 +820,14 @@
 
     if-eq v2, v3, :cond_15b
 
-    .line 242
+    .line 243
     iget-object v2, v0, Lorg/telegram/ui/Cells/PatternCell;->radialProgress:Lorg/telegram/ui/Components/RadialProgress2;
 
     const/4 v3, -0x1
 
     invoke-virtual {v2, v12, v12, v3, v3}, Lorg/telegram/ui/Components/RadialProgress2;->setColors(IIII)V
 
-    .line 243
+    .line 244
     iget-object v2, v0, Lorg/telegram/ui/Cells/PatternCell;->radialProgress:Lorg/telegram/ui/Components/RadialProgress2;
 
     invoke-virtual {v2, v1}, Lorg/telegram/ui/Components/RadialProgress2;->draw(Landroid/graphics/Canvas;)V
@@ -839,14 +839,14 @@
 .method public onFailedDownload(Ljava/lang/String;Z)V
     .registers 10
 
-    .line 254
+    .line 255
     iget-object p1, p0, Lorg/telegram/ui/Cells/PatternCell;->delegate:Lorg/telegram/ui/Cells/PatternCell$PatternCellDelegate;
 
     invoke-interface {p1}, Lorg/telegram/ui/Cells/PatternCell$PatternCellDelegate;->getSelectedPattern()Lorg/telegram/tgnet/TLRPC$TL_wallPaper;
 
     move-result-object p1
 
-    .line 255
+    .line 256
     iget-object v0, p0, Lorg/telegram/ui/Cells/PatternCell;->currentPattern:Lorg/telegram/tgnet/TLRPC$TL_wallPaper;
 
     const/4 v1, 0x0
@@ -883,7 +883,7 @@
 
     if-eqz p2, :cond_28
 
-    .line 258
+    .line 259
     iget-object p1, p0, Lorg/telegram/ui/Cells/PatternCell;->radialProgress:Lorg/telegram/ui/Components/RadialProgress2;
 
     const/4 p2, 0x4
@@ -892,7 +892,7 @@
 
     goto :goto_2b
 
-    .line 260
+    .line 261
     :cond_28
     invoke-direct {p0, v0, v2, p2}, Lorg/telegram/ui/Cells/PatternCell;->updateButtonState(Ljava/lang/Object;ZZ)V
 
@@ -906,7 +906,7 @@
 
     const/high16 p1, 0x42c80000    # 100.0f
 
-    .line 249
+    .line 250
     invoke-static {p1}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result p2
@@ -923,7 +923,7 @@
 .method public onProgressDownload(Ljava/lang/String;JJ)V
     .registers 8
 
-    .line 277
+    .line 278
     iget-object p1, p0, Lorg/telegram/ui/Cells/PatternCell;->radialProgress:Lorg/telegram/ui/Components/RadialProgress2;
 
     long-to-float p2, p2
@@ -942,14 +942,14 @@
 
     invoke-virtual {p1, p2, p3}, Lorg/telegram/ui/Components/RadialProgress2;->setProgress(FZ)V
 
-    .line 278
+    .line 279
     iget-object p1, p0, Lorg/telegram/ui/Cells/PatternCell;->delegate:Lorg/telegram/ui/Cells/PatternCell$PatternCellDelegate;
 
     invoke-interface {p1}, Lorg/telegram/ui/Cells/PatternCell$PatternCellDelegate;->getSelectedPattern()Lorg/telegram/tgnet/TLRPC$TL_wallPaper;
 
     move-result-object p1
 
-    .line 279
+    .line 280
     iget-object p2, p0, Lorg/telegram/ui/Cells/PatternCell;->currentPattern:Lorg/telegram/tgnet/TLRPC$TL_wallPaper;
 
     const/4 p4, 0x0
@@ -982,7 +982,7 @@
     :goto_2b
     if-eqz p1, :cond_3c
 
-    .line 280
+    .line 281
     iget-object p1, p0, Lorg/telegram/ui/Cells/PatternCell;->radialProgress:Lorg/telegram/ui/Components/RadialProgress2;
 
     invoke-virtual {p1}, Lorg/telegram/ui/Components/RadialProgress2;->getIcon()I
@@ -993,7 +993,7 @@
 
     if-eq p1, p2, :cond_3c
 
-    .line 281
+    .line 282
     iget-object p1, p0, Lorg/telegram/ui/Cells/PatternCell;->currentPattern:Lorg/telegram/tgnet/TLRPC$TL_wallPaper;
 
     invoke-direct {p0, p1, p4, p3}, Lorg/telegram/ui/Cells/PatternCell;->updateButtonState(Ljava/lang/Object;ZZ)V
@@ -1011,7 +1011,7 @@
 .method public onSuccessDownload(Ljava/lang/String;)V
     .registers 9
 
-    .line 267
+    .line 268
     iget-object p1, p0, Lorg/telegram/ui/Cells/PatternCell;->radialProgress:Lorg/telegram/ui/Components/RadialProgress2;
 
     const/high16 v0, 0x3f800000    # 1.0f
@@ -1020,14 +1020,14 @@
 
     invoke-virtual {p1, v0, v1}, Lorg/telegram/ui/Components/RadialProgress2;->setProgress(FZ)V
 
-    .line 268
+    .line 269
     iget-object p1, p0, Lorg/telegram/ui/Cells/PatternCell;->delegate:Lorg/telegram/ui/Cells/PatternCell$PatternCellDelegate;
 
     invoke-interface {p1}, Lorg/telegram/ui/Cells/PatternCell$PatternCellDelegate;->getSelectedPattern()Lorg/telegram/tgnet/TLRPC$TL_wallPaper;
 
     move-result-object p1
 
-    .line 269
+    .line 270
     iget-object v0, p0, Lorg/telegram/ui/Cells/PatternCell;->currentPattern:Lorg/telegram/tgnet/TLRPC$TL_wallPaper;
 
     const/4 v2, 0x0
@@ -1060,7 +1060,7 @@
     :goto_24
     if-eqz p1, :cond_29
 
-    .line 271
+    .line 272
     invoke-direct {p0, v0, v2, v1}, Lorg/telegram/ui/Cells/PatternCell;->updateButtonState(Ljava/lang/Object;ZZ)V
 
     :cond_29
@@ -1070,78 +1070,63 @@
 .method public setPattern(Lorg/telegram/tgnet/TLRPC$TL_wallPaper;)V
     .registers 14
 
-    .line 95
+    .line 97
     iput-object p1, p0, Lorg/telegram/ui/Cells/PatternCell;->currentPattern:Lorg/telegram/tgnet/TLRPC$TL_wallPaper;
 
-    if-eqz p1, :cond_38
-
-    const/high16 v0, 0x42c80000    # 100.0f
-
-    .line 97
-    invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
-
-    move-result v0
-
-    .line 98
-    iget-object v1, p1, Lorg/telegram/tgnet/TLRPC$WallPaper;->document:Lorg/telegram/tgnet/TLRPC$Document;
-
-    iget-object v1, v1, Lorg/telegram/tgnet/TLRPC$Document;->thumbs:Ljava/util/ArrayList;
-
-    invoke-static {v1, v0}, Lorg/telegram/messenger/FileLoader;->getClosestPhotoSizeWithSize(Ljava/util/ArrayList;I)Lorg/telegram/tgnet/TLRPC$PhotoSize;
-
-    move-result-object v1
+    if-eqz p1, :cond_27
 
     .line 99
-    iget-object v2, p1, Lorg/telegram/tgnet/TLRPC$WallPaper;->document:Lorg/telegram/tgnet/TLRPC$Document;
+    iget-object v0, p1, Lorg/telegram/tgnet/TLRPC$WallPaper;->document:Lorg/telegram/tgnet/TLRPC$Document;
 
-    invoke-static {v1, v2}, Lorg/telegram/messenger/ImageLocation;->getForDocument(Lorg/telegram/tgnet/TLRPC$PhotoSize;Lorg/telegram/tgnet/TLRPC$Document;)Lorg/telegram/messenger/ImageLocation;
+    iget-object v0, v0, Lorg/telegram/tgnet/TLRPC$Document;->thumbs:Ljava/util/ArrayList;
 
-    move-result-object v4
+    const/high16 v1, 0x42c80000    # 100.0f
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    invoke-static {v1}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    move-result v1
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-static {v0, v1}, Lorg/telegram/messenger/FileLoader;->getClosestPhotoSizeWithSize(Ljava/util/ArrayList;I)Lorg/telegram/tgnet/TLRPC$PhotoSize;
 
-    const-string v2, "_"
+    move-result-object v0
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    .line 100
+    iget-object v1, p1, Lorg/telegram/tgnet/TLRPC$WallPaper;->document:Lorg/telegram/tgnet/TLRPC$Document;
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-static {v0, v1}, Lorg/telegram/messenger/ImageLocation;->getForDocument(Lorg/telegram/tgnet/TLRPC$PhotoSize;Lorg/telegram/tgnet/TLRPC$Document;)Lorg/telegram/messenger/ImageLocation;
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result-object v3
 
-    move-result-object v5
+    const/4 v5, 0x0
 
     const/4 v6, 0x0
 
-    const/4 v7, 0x0
-
-    const/4 v9, 0x0
+    const-wide/16 v8, 0x0
 
     const/4 v10, 0x1
 
-    const-string v8, "png"
+    const-string v4, "100_100"
 
-    move-object v3, p0
+    const-string v7, "png"
+
+    move-object v2, p0
 
     move-object v11, p1
 
-    invoke-virtual/range {v3 .. v11}, Lorg/telegram/ui/Components/BackupImageView;->setImage(Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Ljava/lang/String;IILjava/lang/Object;)V
+    invoke-virtual/range {v2 .. v11}, Lorg/telegram/ui/Components/BackupImageView;->setImage(Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Ljava/lang/String;JILjava/lang/Object;)V
 
-    goto :goto_3c
+    goto :goto_2b
 
-    :cond_38
+    :cond_27
     const/4 p1, 0x0
 
-    .line 101
+    .line 102
     invoke-virtual {p0, p1}, Lorg/telegram/ui/Components/BackupImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    :goto_3c
+    :goto_2b
     const/4 p1, 0x0
 
-    .line 103
+    .line 104
     invoke-virtual {p0, p1}, Lorg/telegram/ui/Cells/PatternCell;->updateSelected(Z)V
 
     return-void
@@ -1150,14 +1135,14 @@
 .method public updateSelected(Z)V
     .registers 9
 
-    .line 113
+    .line 114
     iget-object v0, p0, Lorg/telegram/ui/Cells/PatternCell;->delegate:Lorg/telegram/ui/Cells/PatternCell$PatternCellDelegate;
 
     invoke-interface {v0}, Lorg/telegram/ui/Cells/PatternCell$PatternCellDelegate;->getSelectedPattern()Lorg/telegram/tgnet/TLRPC$TL_wallPaper;
 
     move-result-object v0
 
-    .line 114
+    .line 115
     iget-object v1, p0, Lorg/telegram/ui/Cells/PatternCell;->currentPattern:Lorg/telegram/tgnet/TLRPC$TL_wallPaper;
 
     const/4 v2, 0x0
@@ -1190,12 +1175,12 @@
     :goto_1c
     if-eqz v1, :cond_22
 
-    .line 116
+    .line 117
     invoke-direct {p0, v0, v2, p1}, Lorg/telegram/ui/Cells/PatternCell;->updateButtonState(Ljava/lang/Object;ZZ)V
 
     goto :goto_28
 
-    .line 118
+    .line 119
     :cond_22
     iget-object v0, p0, Lorg/telegram/ui/Cells/PatternCell;->radialProgress:Lorg/telegram/ui/Components/RadialProgress2;
 
@@ -1203,7 +1188,7 @@
 
     invoke-virtual {v0, v1, v2, p1}, Lorg/telegram/ui/Components/RadialProgress2;->setIcon(IZZ)V
 
-    .line 120
+    .line 121
     :goto_28
     invoke-virtual {p0}, Lorg/telegram/ui/Cells/PatternCell;->invalidate()V
 

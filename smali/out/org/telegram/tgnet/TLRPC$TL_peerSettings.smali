@@ -45,7 +45,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 6329
+    .line 6394
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -54,7 +54,7 @@
 .method public static TLdeserialize(Lorg/telegram/tgnet/AbstractSerializedData;IZ)Lorg/telegram/tgnet/TLRPC$TL_peerSettings;
     .registers 4
 
-    .line 6347
+    .line 6412
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_peerSettings;->constructor:I
 
     if-eq v0, p1, :cond_1e
@@ -65,7 +65,7 @@
 
     return-object p0
 
-    .line 6349
+    .line 6414
     :cond_8
     new-instance p0, Ljava/lang/RuntimeException;
 
@@ -91,13 +91,13 @@
 
     throw p0
 
-    .line 6354
+    .line 6419
     :cond_1e
     new-instance p1, Lorg/telegram/tgnet/TLRPC$TL_peerSettings;
 
     invoke-direct {p1}, Lorg/telegram/tgnet/TLRPC$TL_peerSettings;-><init>()V
 
-    .line 6355
+    .line 6420
     invoke-virtual {p1, p0, p2}, Lorg/telegram/tgnet/TLRPC$TL_peerSettings;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
     return-object p1
@@ -108,7 +108,7 @@
 .method public readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
     .registers 7
 
-    .line 6360
+    .line 6425
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
@@ -130,7 +130,7 @@
     :cond_e
     const/4 v1, 0x0
 
-    .line 6361
+    .line 6426
     :goto_f
     iput-boolean v1, p0, Lorg/telegram/tgnet/TLRPC$TL_peerSettings;->report_spam:Z
 
@@ -145,7 +145,7 @@
     :cond_17
     const/4 v1, 0x0
 
-    .line 6362
+    .line 6427
     :goto_18
     iput-boolean v1, p0, Lorg/telegram/tgnet/TLRPC$TL_peerSettings;->add_contact:Z
 
@@ -160,7 +160,7 @@
     :cond_20
     const/4 v1, 0x0
 
-    .line 6363
+    .line 6428
     :goto_21
     iput-boolean v1, p0, Lorg/telegram/tgnet/TLRPC$TL_peerSettings;->block_contact:Z
 
@@ -175,7 +175,7 @@
     :cond_29
     const/4 v1, 0x0
 
-    .line 6364
+    .line 6429
     :goto_2a
     iput-boolean v1, p0, Lorg/telegram/tgnet/TLRPC$TL_peerSettings;->share_contact:Z
 
@@ -190,7 +190,7 @@
     :cond_32
     const/4 v1, 0x0
 
-    .line 6365
+    .line 6430
     :goto_33
     iput-boolean v1, p0, Lorg/telegram/tgnet/TLRPC$TL_peerSettings;->need_contacts_exception:Z
 
@@ -205,7 +205,7 @@
     :cond_3b
     const/4 v1, 0x0
 
-    .line 6366
+    .line 6431
     :goto_3c
     iput-boolean v1, p0, Lorg/telegram/tgnet/TLRPC$TL_peerSettings;->report_geo:Z
 
@@ -220,7 +220,7 @@
     :cond_44
     const/4 v1, 0x0
 
-    .line 6367
+    .line 6432
     :goto_45
     iput-boolean v1, p0, Lorg/telegram/tgnet/TLRPC$TL_peerSettings;->autoarchived:Z
 
@@ -235,7 +235,7 @@
     :cond_4d
     const/4 v1, 0x0
 
-    .line 6368
+    .line 6433
     :goto_4e
     iput-boolean v1, p0, Lorg/telegram/tgnet/TLRPC$TL_peerSettings;->invite_members:Z
 
@@ -245,7 +245,7 @@
 
     const/4 v2, 0x1
 
-    .line 6369
+    .line 6434
     :cond_55
     iput-boolean v2, p0, Lorg/telegram/tgnet/TLRPC$TL_peerSettings;->request_chat_broadcast:Z
 
@@ -253,14 +253,14 @@
 
     if-eqz v0, :cond_61
 
-    .line 6371
+    .line 6436
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
 
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$TL_peerSettings;->geo_distance:I
 
-    .line 6373
+    .line 6438
     :cond_61
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_peerSettings;->flags:I
 
@@ -268,14 +268,14 @@
 
     if-eqz v0, :cond_6d
 
-    .line 6374
+    .line 6439
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readString(Z)Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_peerSettings;->request_chat_title:Ljava/lang/String;
 
-    .line 6376
+    .line 6441
     :cond_6d
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_peerSettings;->flags:I
 
@@ -283,7 +283,7 @@
 
     if-eqz v0, :cond_79
 
-    .line 6377
+    .line 6442
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result p1
@@ -297,12 +297,12 @@
 .method public serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
     .registers 4
 
-    .line 6382
+    .line 6447
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_peerSettings;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 6383
+    .line 6448
     iget-boolean v0, p0, Lorg/telegram/tgnet/TLRPC$TL_peerSettings;->report_spam:Z
 
     if-eqz v0, :cond_e
@@ -321,7 +321,7 @@
     :goto_12
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$TL_peerSettings;->flags:I
 
-    .line 6384
+    .line 6449
     iget-boolean v1, p0, Lorg/telegram/tgnet/TLRPC$TL_peerSettings;->add_contact:Z
 
     if-eqz v1, :cond_1b
@@ -336,7 +336,7 @@
     :goto_1d
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$TL_peerSettings;->flags:I
 
-    .line 6385
+    .line 6450
     iget-boolean v1, p0, Lorg/telegram/tgnet/TLRPC$TL_peerSettings;->block_contact:Z
 
     if-eqz v1, :cond_26
@@ -351,7 +351,7 @@
     :goto_28
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$TL_peerSettings;->flags:I
 
-    .line 6386
+    .line 6451
     iget-boolean v1, p0, Lorg/telegram/tgnet/TLRPC$TL_peerSettings;->share_contact:Z
 
     if-eqz v1, :cond_31
@@ -366,7 +366,7 @@
     :goto_33
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$TL_peerSettings;->flags:I
 
-    .line 6387
+    .line 6452
     iget-boolean v1, p0, Lorg/telegram/tgnet/TLRPC$TL_peerSettings;->need_contacts_exception:Z
 
     if-eqz v1, :cond_3c
@@ -381,7 +381,7 @@
     :goto_3e
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$TL_peerSettings;->flags:I
 
-    .line 6388
+    .line 6453
     iget-boolean v1, p0, Lorg/telegram/tgnet/TLRPC$TL_peerSettings;->report_geo:Z
 
     if-eqz v1, :cond_47
@@ -396,7 +396,7 @@
     :goto_49
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$TL_peerSettings;->flags:I
 
-    .line 6389
+    .line 6454
     iget-boolean v1, p0, Lorg/telegram/tgnet/TLRPC$TL_peerSettings;->autoarchived:Z
 
     if-eqz v1, :cond_52
@@ -411,7 +411,7 @@
     :goto_54
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$TL_peerSettings;->flags:I
 
-    .line 6390
+    .line 6455
     iget-boolean v1, p0, Lorg/telegram/tgnet/TLRPC$TL_peerSettings;->invite_members:Z
 
     if-eqz v1, :cond_5d
@@ -426,7 +426,7 @@
     :goto_5f
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$TL_peerSettings;->flags:I
 
-    .line 6391
+    .line 6456
     iget-boolean v1, p0, Lorg/telegram/tgnet/TLRPC$TL_peerSettings;->request_chat_broadcast:Z
 
     if-eqz v1, :cond_68
@@ -441,22 +441,22 @@
     :goto_6a
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$TL_peerSettings;->flags:I
 
-    .line 6392
+    .line 6457
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 6393
+    .line 6458
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_peerSettings;->flags:I
 
     and-int/lit8 v0, v0, 0x40
 
     if-eqz v0, :cond_7a
 
-    .line 6394
+    .line 6459
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_peerSettings;->geo_distance:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 6396
+    .line 6461
     :cond_7a
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_peerSettings;->flags:I
 
@@ -464,12 +464,12 @@
 
     if-eqz v0, :cond_85
 
-    .line 6397
+    .line 6462
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_peerSettings;->request_chat_title:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeString(Ljava/lang/String;)V
 
-    .line 6399
+    .line 6464
     :cond_85
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_peerSettings;->flags:I
 
@@ -477,7 +477,7 @@
 
     if-eqz v0, :cond_90
 
-    .line 6400
+    .line 6465
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_peerSettings;->request_chat_date:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V

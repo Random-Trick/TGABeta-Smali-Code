@@ -24,10 +24,10 @@
 .method private constructor <init>(Lorg/telegram/ui/Components/SearchViewPager$ViewPagerAdapter;I)V
     .registers 3
 
-    .line 843
+    .line 893
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 844
+    .line 894
     iput p2, p0, Lorg/telegram/ui/Components/SearchViewPager$ViewPagerAdapter$Item;->type:I
 
     return-void
@@ -36,16 +36,16 @@
 .method synthetic constructor <init>(Lorg/telegram/ui/Components/SearchViewPager$ViewPagerAdapter;ILorg/telegram/ui/Components/SearchViewPager$1;)V
     .registers 4
 
-    .line 839
+    .line 889
     invoke-direct {p0, p1, p2}, Lorg/telegram/ui/Components/SearchViewPager$ViewPagerAdapter$Item;-><init>(Lorg/telegram/ui/Components/SearchViewPager$ViewPagerAdapter;I)V
 
     return-void
 .end method
 
-.method static synthetic access$300(Lorg/telegram/ui/Components/SearchViewPager$ViewPagerAdapter$Item;)I
+.method static synthetic access$400(Lorg/telegram/ui/Components/SearchViewPager$ViewPagerAdapter$Item;)I
     .registers 1
 
-    .line 839
+    .line 889
     iget p0, p0, Lorg/telegram/ui/Components/SearchViewPager$ViewPagerAdapter$Item;->type:I
 
     return p0

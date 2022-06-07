@@ -224,7 +224,7 @@
 
     move-result p2
 
-    const v0, 0x7f070050
+    const v0, 0x7f0702c3
 
     const-string v6, "windowBackgroundWhiteRedText5"
 
@@ -246,7 +246,7 @@
     .line 977
     invoke-virtual {p1, v6, v6}, Lorg/telegram/ui/Cells/ManageChatTextCell;->setColors(Ljava/lang/String;Ljava/lang/String;)V
 
-    const p2, 0x7f0e05d1
+    const p2, 0x7f0e0622
 
     const-string v1, "DiscussionUnlinkGroup"
 
@@ -267,7 +267,7 @@
     .line 980
     invoke-virtual {p1, p2, v0}, Lorg/telegram/ui/Cells/ManageChatTextCell;->setColors(Ljava/lang/String;Ljava/lang/String;)V
 
-    const p2, 0x7f0e05c4
+    const p2, 0x7f0e0615
 
     const-string v0, "DiscussionCreateGroup"
 
@@ -276,7 +276,7 @@
 
     move-result-object p2
 
-    const v0, 0x7f0701fb
+    const v0, 0x7f070235
 
     invoke-virtual {p1, p2, v5, v0, v4}, Lorg/telegram/ui/Cells/ManageChatTextCell;->setText(Ljava/lang/String;Ljava/lang/String;IZ)V
 
@@ -286,7 +286,7 @@
     :cond_58
     invoke-virtual {p1, v6, v6}, Lorg/telegram/ui/Cells/ManageChatTextCell;->setColors(Ljava/lang/String;Ljava/lang/String;)V
 
-    const p2, 0x7f0e05cf
+    const p2, 0x7f0e0620
 
     const-string v1, "DiscussionUnlinkChannel"
 
@@ -323,7 +323,7 @@
 
     if-eqz p2, :cond_8a
 
-    const p2, 0x7f0e05c2
+    const p2, 0x7f0e0613
 
     const-string v0, "DiscussionChannelHelp2"
 
@@ -337,7 +337,7 @@
     goto :goto_ec
 
     :cond_8a
-    const p2, 0x7f0e05c6
+    const p2, 0x7f0e0617
 
     const-string v0, "DiscussionGroupHelp2"
 
@@ -555,7 +555,7 @@
     .line 863
     iget-object p2, p0, Lorg/telegram/ui/ChatLinkActivity$ListAdapter;->mContext:Landroid/content/Context;
 
-    const v0, 0x7f07012d
+    const v0, 0x7f0700fc
 
     const-string v1, "windowBackgroundGrayShadow"
 

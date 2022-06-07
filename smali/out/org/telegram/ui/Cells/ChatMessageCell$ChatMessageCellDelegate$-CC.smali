@@ -26,6 +26,12 @@
     return-void
 .end method
 
+.method public static $default$didLongPressBotButton(Lorg/telegram/ui/Cells/ChatMessageCell$ChatMessageCellDelegate;Lorg/telegram/ui/Cells/ChatMessageCell;Lorg/telegram/tgnet/TLRPC$KeyboardButton;)V
+    .registers 3
+
+    return-void
+.end method
+
 .method public static $default$didLongPressChannelAvatar(Lorg/telegram/ui/Cells/ChatMessageCell$ChatMessageCellDelegate;Lorg/telegram/ui/Cells/ChatMessageCell;Lorg/telegram/tgnet/TLRPC$Chat;IFF)Z
     .registers 6
 
@@ -234,6 +240,12 @@
 .end method
 
 .method public static $default$needReloadPolls(Lorg/telegram/ui/Cells/ChatMessageCell$ChatMessageCellDelegate;)V
+    .registers 1
+
+    return-void
+.end method
+
+.method public static $default$needShowPremiumFeatures(Lorg/telegram/ui/Cells/ChatMessageCell$ChatMessageCellDelegate;)V
     .registers 1
 
     return-void

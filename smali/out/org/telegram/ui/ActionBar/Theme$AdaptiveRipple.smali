@@ -22,7 +22,7 @@
 .method private static varargs calcRadii([F)[F
     .registers 11
 
-    .line 6377
+    .line 6410
     array-length v0, p0
 
     const/16 v1, 0x8
@@ -31,12 +31,12 @@
 
     new-array p0, v1, [F
 
-    .line 6378
+    .line 6411
     fill-array-data p0, :array_196
 
     return-object p0
 
-    .line 6379
+    .line 6412
     :cond_b
     array-length v0, p0
 
@@ -60,7 +60,7 @@
 
     new-array v0, v1, [F
 
-    .line 6380
+    .line 6413
     aget v1, p0, v9
 
     invoke-static {v1}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -143,7 +143,7 @@
 
     return-object v0
 
-    .line 6381
+    .line 6414
     :cond_61
     array-length v0, p0
 
@@ -151,7 +151,7 @@
 
     new-array v0, v1, [F
 
-    .line 6382
+    .line 6415
     aget v1, p0, v9
 
     invoke-static {v1}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -234,7 +234,7 @@
 
     return-object v0
 
-    .line 6383
+    .line 6416
     :cond_af
     array-length v0, p0
 
@@ -242,7 +242,7 @@
 
     new-array v0, v1, [F
 
-    .line 6384
+    .line 6417
     aget v1, p0, v9
 
     invoke-static {v1}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -325,7 +325,7 @@
 
     return-object v0
 
-    .line 6385
+    .line 6418
     :cond_fd
     array-length v0, p0
 
@@ -333,7 +333,7 @@
 
     new-array v0, v1, [F
 
-    .line 6386
+    .line 6419
     aget v1, p0, v9
 
     invoke-static {v1}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -419,7 +419,7 @@
     :cond_14b
     new-array v0, v1, [F
 
-    .line 6388
+    .line 6421
     aget v1, p0, v9
 
     invoke-static {v1}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -518,7 +518,7 @@
 .method private static calcRippleColor(I)I
     .registers 7
 
-    .line 6402
+    .line 6435
     sget-object v0, Lorg/telegram/ui/ActionBar/Theme$AdaptiveRipple;->tempHSV:[F
 
     if-nez v0, :cond_9
@@ -527,16 +527,16 @@
 
     new-array v0, v0, [F
 
-    .line 6403
+    .line 6436
     sput-object v0, Lorg/telegram/ui/ActionBar/Theme$AdaptiveRipple;->tempHSV:[F
 
-    .line 6405
+    .line 6438
     :cond_9
     sget-object v0, Lorg/telegram/ui/ActionBar/Theme$AdaptiveRipple;->tempHSV:[F
 
     invoke-static {p0, v0}, Landroid/graphics/Color;->colorToHSV(I[F)V
 
-    .line 6406
+    .line 6439
     sget-object p0, Lorg/telegram/ui/ActionBar/Theme$AdaptiveRipple;->tempHSV:[F
 
     const/4 v0, 0x1
@@ -555,7 +555,7 @@
 
     if-lez v1, :cond_53
 
-    .line 6409
+    .line 6442
     aget v1, p0, v0
 
     invoke-static {}, Lorg/telegram/ui/ActionBar/Theme;->isCurrentThemeDark()Z
@@ -584,7 +584,7 @@
 
     aput v1, p0, v0
 
-    .line 6410
+    .line 6443
     sget-object p0, Lorg/telegram/ui/ActionBar/Theme$AdaptiveRipple;->tempHSV:[F
 
     aget v0, p0, v5
@@ -617,7 +617,7 @@
 
     goto :goto_6d
 
-    .line 6412
+    .line 6445
     :cond_53
     aget v0, p0, v5
 
@@ -650,7 +650,7 @@
     :goto_6d
     const/16 p0, 0x7f
 
-    .line 6414
+    .line 6447
     sget-object v0, Lorg/telegram/ui/ActionBar/Theme$AdaptiveRipple;->tempHSV:[F
 
     invoke-static {p0, v0}, Landroid/graphics/Color;->HSVToColor(I[F)I
@@ -667,14 +667,14 @@
 
     if-eqz p0, :cond_25
 
-    .line 6252
+    .line 6285
     invoke-static {p2}, Lorg/telegram/ui/ActionBar/Theme$AdaptiveRipple;->hasNonzeroRadii([F)Z
 
     move-result v1
 
     if-eqz v1, :cond_20
 
-    .line 6253
+    .line 6286
     new-instance v1, Landroid/graphics/drawable/ShapeDrawable;
 
     new-instance v2, Landroid/graphics/drawable/shapes/RoundRectShape;
@@ -687,7 +687,7 @@
 
     invoke-direct {v1, v2}, Landroid/graphics/drawable/ShapeDrawable;-><init>(Landroid/graphics/drawable/shapes/Shape;)V
 
-    .line 6254
+    .line 6287
     invoke-virtual {v1}, Landroid/graphics/drawable/ShapeDrawable;->getPaint()Landroid/graphics/Paint;
 
     move-result-object v0
@@ -698,13 +698,13 @@
 
     goto :goto_25
 
-    .line 6256
+    .line 6289
     :cond_20
     new-instance v0, Landroid/graphics/drawable/ColorDrawable;
 
     invoke-direct {v0, p0}, Landroid/graphics/drawable/ColorDrawable;-><init>(I)V
 
-    .line 6259
+    .line 6292
     :cond_25
     :goto_25
     invoke-static {v0, p1, p2}, Lorg/telegram/ui/ActionBar/Theme$AdaptiveRipple;->createRect(Landroid/graphics/drawable/Drawable;I[F)Landroid/graphics/drawable/Drawable;
@@ -717,7 +717,7 @@
 .method private static varargs createRect(Landroid/graphics/drawable/Drawable;I[F)Landroid/graphics/drawable/Drawable;
     .registers 9
 
-    .line 6266
+    .line 6299
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/4 v1, 0x0
@@ -730,14 +730,14 @@
 
     if-lt v0, v4, :cond_3b
 
-    .line 6268
+    .line 6301
     invoke-static {p2}, Lorg/telegram/ui/ActionBar/Theme$AdaptiveRipple;->hasNonzeroRadii([F)Z
 
     move-result v0
 
     if-eqz v0, :cond_26
 
-    .line 6269
+    .line 6302
     new-instance v0, Landroid/graphics/drawable/ShapeDrawable;
 
     new-instance v4, Landroid/graphics/drawable/shapes/RoundRectShape;
@@ -750,7 +750,7 @@
 
     invoke-direct {v0, v4}, Landroid/graphics/drawable/ShapeDrawable;-><init>(Landroid/graphics/drawable/shapes/Shape;)V
 
-    .line 6270
+    .line 6303
     invoke-virtual {v0}, Landroid/graphics/drawable/ShapeDrawable;->getPaint()Landroid/graphics/Paint;
 
     move-result-object p2
@@ -761,7 +761,7 @@
 
     move-object v3, v0
 
-    .line 6272
+    .line 6305
     :cond_26
     new-instance p2, Landroid/graphics/drawable/RippleDrawable;
 
@@ -783,20 +783,20 @@
 
     return-object p2
 
-    .line 6281
+    .line 6314
     :cond_3b
     new-instance v0, Landroid/graphics/drawable/StateListDrawable;
 
     invoke-direct {v0}, Landroid/graphics/drawable/StateListDrawable;-><init>()V
 
-    .line 6283
+    .line 6316
     invoke-static {p2}, Lorg/telegram/ui/ActionBar/Theme$AdaptiveRipple;->hasNonzeroRadii([F)Z
 
     move-result v4
 
     if-eqz v4, :cond_5c
 
-    .line 6284
+    .line 6317
     new-instance v4, Landroid/graphics/drawable/ShapeDrawable;
 
     new-instance v5, Landroid/graphics/drawable/shapes/RoundRectShape;
@@ -809,7 +809,7 @@
 
     invoke-direct {v4, v5}, Landroid/graphics/drawable/ShapeDrawable;-><init>(Landroid/graphics/drawable/shapes/Shape;)V
 
-    .line 6285
+    .line 6318
     invoke-virtual {v4}, Landroid/graphics/drawable/ShapeDrawable;->getPaint()Landroid/graphics/Paint;
 
     move-result-object p2
@@ -818,13 +818,13 @@
 
     goto :goto_61
 
-    .line 6287
+    .line 6320
     :cond_5c
     new-instance v4, Landroid/graphics/drawable/ColorDrawable;
 
     invoke-direct {v4, p1}, Landroid/graphics/drawable/ColorDrawable;-><init>(I)V
 
-    .line 6289
+    .line 6322
     :goto_61
     new-instance p1, Landroid/graphics/drawable/LayerDrawable;
 
@@ -844,7 +844,7 @@
 
     aput v3, p2, v1
 
-    .line 6290
+    .line 6323
     invoke-virtual {v0, p2, p1}, Landroid/graphics/drawable/StateListDrawable;->addState([ILandroid/graphics/drawable/Drawable;)V
 
     new-array p2, v2, [I
@@ -853,10 +853,10 @@
 
     aput v2, p2, v1
 
-    .line 6291
+    .line 6324
     invoke-virtual {v0, p2, p1}, Landroid/graphics/drawable/StateListDrawable;->addState([ILandroid/graphics/drawable/Drawable;)V
 
-    .line 6292
+    .line 6325
     sget-object p1, Landroid/util/StateSet;->WILD_CARD:[I
 
     invoke-virtual {v0, p1, p0}, Landroid/graphics/drawable/StateListDrawable;->addState([ILandroid/graphics/drawable/Drawable;)V
@@ -867,7 +867,7 @@
 .method public static filledRect(I)Landroid/graphics/drawable/Drawable;
     .registers 3
 
-    .line 6237
+    .line 6270
     invoke-static {p0}, Lorg/telegram/ui/ActionBar/Theme$AdaptiveRipple;->calcRippleColor(I)I
 
     move-result v0
@@ -886,7 +886,7 @@
 .method public static varargs filledRect(I[F)Landroid/graphics/drawable/Drawable;
     .registers 3
 
-    .line 6240
+    .line 6273
     invoke-static {p0}, Lorg/telegram/ui/ActionBar/Theme$AdaptiveRipple;->calcRippleColor(I)I
 
     move-result v0
@@ -901,7 +901,7 @@
 .method public static varargs filledRect(Ljava/lang/String;[F)Landroid/graphics/drawable/Drawable;
     .registers 2
 
-    .line 6231
+    .line 6264
     invoke-static {p0}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
 
     move-result p0
@@ -923,7 +923,7 @@
     :goto_2
     const/16 v2, 0x8
 
-    .line 6392
+    .line 6425
     array-length v3, p0
 
     invoke-static {v2, v3}, Ljava/lang/Math;->min(II)I
@@ -932,7 +932,7 @@
 
     if-ge v1, v2, :cond_17
 
-    .line 6393
+    .line 6426
     aget v2, p0, v1
 
     const/4 v3, 0x0
@@ -959,7 +959,7 @@
 
     const-string v0, "windowBackgroundWhite"
 
-    .line 6202
+    .line 6235
     invoke-static {v0}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
 
     move-result v0
@@ -984,7 +984,7 @@
 
     aput v2, v0, v1
 
-    .line 6211
+    .line 6244
     invoke-static {p0, v0}, Lorg/telegram/ui/ActionBar/Theme$AdaptiveRipple;->rect(I[F)Landroid/graphics/drawable/Drawable;
 
     move-result-object p0
@@ -995,7 +995,7 @@
 .method public static varargs rect(I[F)Landroid/graphics/drawable/Drawable;
     .registers 3
 
-    .line 6214
+    .line 6247
     invoke-static {p0}, Lorg/telegram/ui/ActionBar/Theme$AdaptiveRipple;->calcRippleColor(I)I
 
     move-result p0

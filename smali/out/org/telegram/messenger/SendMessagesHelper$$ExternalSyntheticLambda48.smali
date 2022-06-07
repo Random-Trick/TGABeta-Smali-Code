@@ -12,17 +12,15 @@
 
 .field public final synthetic f$2:I
 
-.field public final synthetic f$3:Z
+.field public final synthetic f$3:J
 
-.field public final synthetic f$4:Ljava/util/ArrayList;
+.field public final synthetic f$4:I
 
-.field public final synthetic f$5:I
-
-.field public final synthetic f$6:Ljava/lang/String;
+.field public final synthetic f$5:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(Lorg/telegram/messenger/SendMessagesHelper;Lorg/telegram/tgnet/TLRPC$Message;IZLjava/util/ArrayList;ILjava/lang/String;)V
+.method public synthetic constructor <init>(Lorg/telegram/messenger/SendMessagesHelper;Lorg/telegram/tgnet/TLRPC$Message;IJIZ)V
     .registers 8
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -33,13 +31,11 @@
 
     iput p3, p0, Lorg/telegram/messenger/SendMessagesHelper$$ExternalSyntheticLambda48;->f$2:I
 
-    iput-boolean p4, p0, Lorg/telegram/messenger/SendMessagesHelper$$ExternalSyntheticLambda48;->f$3:Z
+    iput-wide p4, p0, Lorg/telegram/messenger/SendMessagesHelper$$ExternalSyntheticLambda48;->f$3:J
 
-    iput-object p5, p0, Lorg/telegram/messenger/SendMessagesHelper$$ExternalSyntheticLambda48;->f$4:Ljava/util/ArrayList;
+    iput p6, p0, Lorg/telegram/messenger/SendMessagesHelper$$ExternalSyntheticLambda48;->f$4:I
 
-    iput p6, p0, Lorg/telegram/messenger/SendMessagesHelper$$ExternalSyntheticLambda48;->f$5:I
-
-    iput-object p7, p0, Lorg/telegram/messenger/SendMessagesHelper$$ExternalSyntheticLambda48;->f$6:Ljava/lang/String;
+    iput-boolean p7, p0, Lorg/telegram/messenger/SendMessagesHelper$$ExternalSyntheticLambda48;->f$5:Z
 
     return-void
 .end method
@@ -55,15 +51,13 @@
 
     iget v2, p0, Lorg/telegram/messenger/SendMessagesHelper$$ExternalSyntheticLambda48;->f$2:I
 
-    iget-boolean v3, p0, Lorg/telegram/messenger/SendMessagesHelper$$ExternalSyntheticLambda48;->f$3:Z
+    iget-wide v3, p0, Lorg/telegram/messenger/SendMessagesHelper$$ExternalSyntheticLambda48;->f$3:J
 
-    iget-object v4, p0, Lorg/telegram/messenger/SendMessagesHelper$$ExternalSyntheticLambda48;->f$4:Ljava/util/ArrayList;
+    iget v5, p0, Lorg/telegram/messenger/SendMessagesHelper$$ExternalSyntheticLambda48;->f$4:I
 
-    iget v5, p0, Lorg/telegram/messenger/SendMessagesHelper$$ExternalSyntheticLambda48;->f$5:I
+    iget-boolean v6, p0, Lorg/telegram/messenger/SendMessagesHelper$$ExternalSyntheticLambda48;->f$5:Z
 
-    iget-object v6, p0, Lorg/telegram/messenger/SendMessagesHelper$$ExternalSyntheticLambda48;->f$6:Ljava/lang/String;
-
-    invoke-static/range {v0 .. v6}, Lorg/telegram/messenger/SendMessagesHelper;->$r8$lambda$TmBCET23v4woQKD8RMXOqjTJWRA(Lorg/telegram/messenger/SendMessagesHelper;Lorg/telegram/tgnet/TLRPC$Message;IZLjava/util/ArrayList;ILjava/lang/String;)V
+    invoke-static/range {v0 .. v6}, Lorg/telegram/messenger/SendMessagesHelper;->$r8$lambda$huHj8jCBRt0HgCVyopRI3XSUzBc(Lorg/telegram/messenger/SendMessagesHelper;Lorg/telegram/tgnet/TLRPC$Message;IJIZ)V
 
     return-void
 .end method

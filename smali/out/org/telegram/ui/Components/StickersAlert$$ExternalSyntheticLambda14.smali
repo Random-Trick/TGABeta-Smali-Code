@@ -2,32 +2,40 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/widget/TextView$OnEditorActionListener;
+.implements Landroid/view/View$OnTouchListener;
 
 
-# instance fields
-.field public final synthetic f$0:Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
+# static fields
+.field public static final synthetic INSTANCE:Lorg/telegram/ui/Components/StickersAlert$$ExternalSyntheticLambda14;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lorg/telegram/ui/ActionBar/AlertDialog$Builder;)V
-    .registers 2
+.method static synthetic constructor <clinit>()V
+    .registers 1
+
+    new-instance v0, Lorg/telegram/ui/Components/StickersAlert$$ExternalSyntheticLambda14;
+
+    invoke-direct {v0}, Lorg/telegram/ui/Components/StickersAlert$$ExternalSyntheticLambda14;-><init>()V
+
+    sput-object v0, Lorg/telegram/ui/Components/StickersAlert$$ExternalSyntheticLambda14;->INSTANCE:Lorg/telegram/ui/Components/StickersAlert$$ExternalSyntheticLambda14;
+
+    return-void
+.end method
+
+.method private synthetic constructor <init>()V
+    .registers 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lorg/telegram/ui/Components/StickersAlert$$ExternalSyntheticLambda14;->f$0:Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onEditorAction(Landroid/widget/TextView;ILandroid/view/KeyEvent;)Z
-    .registers 5
+.method public final onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
+    .registers 3
 
-    iget-object v0, p0, Lorg/telegram/ui/Components/StickersAlert$$ExternalSyntheticLambda14;->f$0:Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
-
-    invoke-static {v0, p1, p2, p3}, Lorg/telegram/ui/Components/StickersAlert;->$r8$lambda$aUiVhRAl6-fg9aqc5yH56fcrm1s(Lorg/telegram/ui/ActionBar/AlertDialog$Builder;Landroid/widget/TextView;ILandroid/view/KeyEvent;)Z
+    invoke-static {p1, p2}, Lorg/telegram/ui/Components/StickersAlert;->$r8$lambda$U2fzU6MGFyYds8j1PrPauRe8d8o(Landroid/view/View;Landroid/view/MotionEvent;)Z
 
     move-result p1
 

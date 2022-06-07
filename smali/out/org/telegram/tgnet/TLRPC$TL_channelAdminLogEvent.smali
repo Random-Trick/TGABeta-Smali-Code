@@ -27,7 +27,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 5577
+    .line 5642
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -36,7 +36,7 @@
 .method public static TLdeserialize(Lorg/telegram/tgnet/AbstractSerializedData;IZ)Lorg/telegram/tgnet/TLRPC$TL_channelAdminLogEvent;
     .registers 4
 
-    .line 5586
+    .line 5651
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_channelAdminLogEvent;->constructor:I
 
     if-eq v0, p1, :cond_1e
@@ -47,7 +47,7 @@
 
     return-object p0
 
-    .line 5588
+    .line 5653
     :cond_8
     new-instance p0, Ljava/lang/RuntimeException;
 
@@ -73,13 +73,13 @@
 
     throw p0
 
-    .line 5593
+    .line 5658
     :cond_1e
     new-instance p1, Lorg/telegram/tgnet/TLRPC$TL_channelAdminLogEvent;
 
     invoke-direct {p1}, Lorg/telegram/tgnet/TLRPC$TL_channelAdminLogEvent;-><init>()V
 
-    .line 5594
+    .line 5659
     invoke-virtual {p1, p0, p2}, Lorg/telegram/tgnet/TLRPC$TL_channelAdminLogEvent;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
     return-object p1
@@ -90,28 +90,28 @@
 .method public readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
     .registers 5
 
-    .line 5599
+    .line 5664
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt64(Z)J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lorg/telegram/tgnet/TLRPC$TL_channelAdminLogEvent;->id:J
 
-    .line 5600
+    .line 5665
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
 
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$TL_channelAdminLogEvent;->date:I
 
-    .line 5601
+    .line 5666
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt64(Z)J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lorg/telegram/tgnet/TLRPC$TL_channelAdminLogEvent;->user_id:J
 
-    .line 5602
+    .line 5667
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
@@ -128,27 +128,27 @@
 .method public serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
     .registers 4
 
-    .line 5606
+    .line 5671
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_channelAdminLogEvent;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 5607
+    .line 5672
     iget-wide v0, p0, Lorg/telegram/tgnet/TLRPC$TL_channelAdminLogEvent;->id:J
 
     invoke-virtual {p1, v0, v1}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt64(J)V
 
-    .line 5608
+    .line 5673
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_channelAdminLogEvent;->date:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 5609
+    .line 5674
     iget-wide v0, p0, Lorg/telegram/tgnet/TLRPC$TL_channelAdminLogEvent;->user_id:J
 
     invoke-virtual {p1, v0, v1}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt64(J)V
 
-    .line 5610
+    .line 5675
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_channelAdminLogEvent;->action:Lorg/telegram/tgnet/TLRPC$ChannelAdminLogEventAction;
 
     invoke-virtual {v0, p1}, Lorg/telegram/tgnet/TLObject;->serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V

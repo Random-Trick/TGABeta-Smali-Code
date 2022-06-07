@@ -82,7 +82,7 @@
 
     if-eqz v3, :cond_38
 
-    const v3, 0x7f0e1377
+    const v3, 0x7f0e1445
 
     const-string v4, "VoipInVideoCallBranding"
 
@@ -96,7 +96,7 @@
     goto :goto_44
 
     :cond_38
-    const v3, 0x7f0e1375
+    const v3, 0x7f0e1443
 
     const-string v4, "VoipInCallBranding"
 

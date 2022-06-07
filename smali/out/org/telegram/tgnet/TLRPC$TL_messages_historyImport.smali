@@ -21,7 +21,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 9201
+    .line 9364
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -30,7 +30,7 @@
 .method public static TLdeserialize(Lorg/telegram/tgnet/AbstractSerializedData;IZ)Lorg/telegram/tgnet/TLRPC$TL_messages_historyImport;
     .registers 4
 
-    .line 9207
+    .line 9370
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_messages_historyImport;->constructor:I
 
     if-eq v0, p1, :cond_1e
@@ -41,7 +41,7 @@
 
     return-object p0
 
-    .line 9209
+    .line 9372
     :cond_8
     new-instance p0, Ljava/lang/RuntimeException;
 
@@ -67,13 +67,13 @@
 
     throw p0
 
-    .line 9214
+    .line 9377
     :cond_1e
     new-instance p1, Lorg/telegram/tgnet/TLRPC$TL_messages_historyImport;
 
     invoke-direct {p1}, Lorg/telegram/tgnet/TLRPC$TL_messages_historyImport;-><init>()V
 
-    .line 9215
+    .line 9378
     invoke-virtual {p1, p0, p2}, Lorg/telegram/tgnet/TLRPC$TL_messages_historyImport;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
     return-object p1
@@ -84,7 +84,7 @@
 .method public readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
     .registers 3
 
-    .line 9220
+    .line 9383
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt64(Z)J
 
     move-result-wide p1
@@ -97,12 +97,12 @@
 .method public serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
     .registers 4
 
-    .line 9224
+    .line 9387
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_messages_historyImport;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 9225
+    .line 9388
     iget-wide v0, p0, Lorg/telegram/tgnet/TLRPC$TL_messages_historyImport;->id:J
 
     invoke-virtual {p1, v0, v1}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt64(J)V

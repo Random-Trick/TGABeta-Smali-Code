@@ -377,7 +377,7 @@
     .line 250
     iget-object p2, p0, Lorg/telegram/ui/FeaturedStickersActivity$ListAdapter;->mContext:Landroid/content/Context;
 
-    const v0, 0x7f07012d
+    const v0, 0x7f0700fc
 
     const-string v1, "windowBackgroundGrayShadow"
 

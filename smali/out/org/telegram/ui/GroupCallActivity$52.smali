@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/GroupCallActivity;)V
     .registers 2
 
-    .line 6677
+    .line 6682
     iput-object p1, p0, Lorg/telegram/ui/GroupCallActivity$52;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -35,7 +35,7 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .registers 6
 
-    .line 6680
+    .line 6685
     iget-object p1, p0, Lorg/telegram/ui/GroupCallActivity$52;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/GroupCallActivity;->access$18400(Lorg/telegram/ui/GroupCallActivity;)Landroid/animation/ValueAnimator;
@@ -44,14 +44,14 @@
 
     if-eqz p1, :cond_46
 
-    .line 6681
+    .line 6686
     iget-object p1, p0, Lorg/telegram/ui/GroupCallActivity$52;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     const/4 v0, 0x0
 
     invoke-static {p1, v0}, Lorg/telegram/ui/GroupCallActivity;->access$18402(Lorg/telegram/ui/GroupCallActivity;Landroid/animation/ValueAnimator;)Landroid/animation/ValueAnimator;
 
-    .line 6682
+    .line 6687
     iget-object p1, p0, Lorg/telegram/ui/GroupCallActivity$52;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/GroupCallActivity;->access$5400(Lorg/telegram/ui/GroupCallActivity;)[Landroid/widget/TextView;
@@ -62,7 +62,7 @@
 
     aget-object p1, p1, v0
 
-    .line 6683
+    .line 6688
     iget-object v1, p0, Lorg/telegram/ui/GroupCallActivity$52;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/GroupCallActivity;->access$5400(Lorg/telegram/ui/GroupCallActivity;)[Landroid/widget/TextView;
@@ -81,7 +81,7 @@
 
     aput-object v2, v1, v0
 
-    .line 6684
+    .line 6689
     iget-object v1, p0, Lorg/telegram/ui/GroupCallActivity$52;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/GroupCallActivity;->access$5400(Lorg/telegram/ui/GroupCallActivity;)[Landroid/widget/TextView;
@@ -92,7 +92,7 @@
 
     const/4 v1, 0x4
 
-    .line 6685
+    .line 6690
     invoke-virtual {p1, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
     :goto_34
@@ -100,7 +100,7 @@
 
     if-ge v0, p1, :cond_46
 
-    .line 6687
+    .line 6692
     iget-object p1, p0, Lorg/telegram/ui/GroupCallActivity$52;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/GroupCallActivity;->access$5400(Lorg/telegram/ui/GroupCallActivity;)[Landroid/widget/TextView;

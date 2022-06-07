@@ -22,7 +22,7 @@
     return-void
 .end method
 
-.method public static b(Ljava/util/Collection;)Lj$/util/y;
+.method public static b(Ljava/util/Collection;)Lj$/util/u;
     .registers 3
 
     instance-of v0, p0, Lj$/util/b;
@@ -31,7 +31,7 @@
 
     check-cast p0, Lj$/util/b;
 
-    invoke-interface {p0}, Lj$/util/b;->spliterator()Lj$/util/y;
+    invoke-interface {p0}, Lj$/util/b;->spliterator()Lj$/util/u;
 
     move-result-object p0
 
@@ -45,13 +45,13 @@
     check-cast p0, Ljava/util/LinkedHashSet;
 
     .line 1
-    new-instance v0, Lj$/util/L;
+    new-instance v0, Lj$/util/J;
 
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     const/16 v1, 0x11
 
-    invoke-direct {v0, p0, v1}, Lj$/util/L;-><init>(Ljava/util/Collection;I)V
+    invoke-direct {v0, p0, v1}, Lj$/util/J;-><init>(Ljava/util/Collection;I)V
 
     return-object v0
 
@@ -64,11 +64,11 @@
     check-cast p0, Ljava/util/SortedSet;
 
     .line 3
-    new-instance v0, Lj$/util/t;
+    new-instance v0, Lj$/util/s;
 
     const/16 v1, 0x15
 
-    invoke-direct {v0, p0, p0, v1}, Lj$/util/t;-><init>(Ljava/util/SortedSet;Ljava/util/Collection;I)V
+    invoke-direct {v0, p0, p0, v1}, Lj$/util/s;-><init>(Ljava/util/SortedSet;Ljava/util/Collection;I)V
 
     return-object v0
 
@@ -81,13 +81,13 @@
     check-cast p0, Ljava/util/Set;
 
     .line 5
-    new-instance v0, Lj$/util/L;
+    new-instance v0, Lj$/util/J;
 
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     const/4 v1, 0x1
 
-    invoke-direct {v0, p0, v1}, Lj$/util/L;-><init>(Ljava/util/Collection;I)V
+    invoke-direct {v0, p0, v1}, Lj$/util/J;-><init>(Ljava/util/Collection;I)V
 
     return-object v0
 
@@ -100,25 +100,25 @@
     check-cast p0, Ljava/util/List;
 
     .line 7
-    new-instance v0, Lj$/util/L;
+    new-instance v0, Lj$/util/J;
 
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     const/16 v1, 0x10
 
-    invoke-direct {v0, p0, v1}, Lj$/util/L;-><init>(Ljava/util/Collection;I)V
+    invoke-direct {v0, p0, v1}, Lj$/util/J;-><init>(Ljava/util/Collection;I)V
 
     return-object v0
 
     .line 8
     :cond_4b
-    new-instance v0, Lj$/util/L;
+    new-instance v0, Lj$/util/J;
 
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p0, v1}, Lj$/util/L;-><init>(Ljava/util/Collection;I)V
+    invoke-direct {v0, p0, v1}, Lj$/util/J;-><init>(Ljava/util/Collection;I)V
 
     return-object v0
 .end method

@@ -81,7 +81,7 @@
 
     move-result-object p2
 
-    const p3, 0x7f0703b4
+    const p3, 0x7f0703b9
 
     invoke-virtual {p2, p3}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -230,7 +230,7 @@
 
     invoke-direct {p2, p1}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
-    const p3, 0x7f07013e
+    const p3, 0x7f070107
 
     .line 173
     invoke-virtual {p2, p3}, Landroid/view/View;->setBackgroundResource(I)V
@@ -308,7 +308,7 @@
 
     const-string v1, "StopAllLocationSharings"
 
-    const v2, 0x7f0e10e5
+    const v2, 0x7f0e11a4
 
     invoke-static {v1, v2}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
@@ -341,7 +341,7 @@
 
     const-string v1, "Close"
 
-    const v2, 0x7f0e047b
+    const v2, 0x7f0e04c8
 
     invoke-static {v1, v2}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
@@ -508,7 +508,7 @@
     const/4 v0, 0x0
 
     :goto_1
-    const/4 v1, 0x3
+    const/4 v1, 0x4
 
     if-ge v0, v1, :cond_1f
 
@@ -593,7 +593,7 @@
     const/4 p1, 0x0
 
     :goto_1
-    const/4 v0, 0x3
+    const/4 v0, 0x4
 
     if-ge p1, v0, :cond_e
 

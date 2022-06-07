@@ -18,7 +18,7 @@
 .method constructor <init>(Lorg/telegram/ui/PaymentFormActivity;Landroid/content/Context;)V
     .registers 3
 
-    .line 2184
+    .line 2326
     invoke-direct {p0, p2}, Landroid/webkit/WebView;-><init>(Landroid/content/Context;)V
 
     return-void
@@ -29,7 +29,7 @@
 .method public onTouchEvent(Landroid/view/MotionEvent;)Z
     .registers 4
 
-    .line 2187
+    .line 2329
     invoke-virtual {p0}, Landroid/webkit/WebView;->getParent()Landroid/view/ViewParent;
 
     move-result-object v0
@@ -38,7 +38,7 @@
 
     invoke-interface {v0, v1}, Landroid/view/ViewParent;->requestDisallowInterceptTouchEvent(Z)V
 
-    .line 2188
+    .line 2330
     invoke-super {p0, p1}, Landroid/webkit/WebView;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
     move-result p1

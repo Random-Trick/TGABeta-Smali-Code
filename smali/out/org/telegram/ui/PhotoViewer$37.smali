@@ -50,12 +50,12 @@
 .method constructor <init>(Lorg/telegram/ui/PhotoViewer;Landroid/content/Context;)V
     .registers 3
 
-    .line 6227
+    .line 6361
     iput-object p1, p0, Lorg/telegram/ui/PhotoViewer$37;->this$0:Lorg/telegram/ui/PhotoViewer;
 
     invoke-direct {p0, p2}, Lorg/telegram/ui/Components/spoilers/SpoilersTextView;-><init>(Landroid/content/Context;)V
 
-    .line 6230
+    .line 6364
     new-instance p1, Lorg/telegram/ui/Components/LinkSpanDrawable$LinkCollector;
 
     invoke-direct {p1, p0}, Lorg/telegram/ui/Components/LinkSpanDrawable$LinkCollector;-><init>(Landroid/view/View;)V
@@ -68,7 +68,7 @@
 .method private synthetic lambda$onTouchEvent$0()V
     .registers 2
 
-    .line 6264
+    .line 6398
     iget-object v0, p0, Lorg/telegram/ui/PhotoViewer$37;->links:Lorg/telegram/ui/Components/LinkSpanDrawable$LinkCollector;
 
     invoke-virtual {v0}, Lorg/telegram/ui/Components/LinkSpanDrawable$LinkCollector;->clear()V
@@ -79,7 +79,7 @@
 .method private synthetic lambda$onTouchEvent$1(Lorg/telegram/ui/Components/LinkSpanDrawable;)V
     .registers 4
 
-    .line 6263
+    .line 6397
     iget-object v0, p0, Lorg/telegram/ui/PhotoViewer$37;->pressedLink:Lorg/telegram/ui/Components/LinkSpanDrawable;
 
     if-ne p1, v0, :cond_23
@@ -94,7 +94,7 @@
 
     if-eqz p1, :cond_23
 
-    .line 6264
+    .line 6398
     iget-object p1, p0, Lorg/telegram/ui/PhotoViewer$37;->this$0:Lorg/telegram/ui/PhotoViewer;
 
     iget-object v0, p0, Lorg/telegram/ui/PhotoViewer$37;->pressedLink:Lorg/telegram/ui/Components/LinkSpanDrawable;
@@ -109,11 +109,11 @@
 
     invoke-direct {v1, p0}, Lorg/telegram/ui/PhotoViewer$37$$ExternalSyntheticLambda0;-><init>(Lorg/telegram/ui/PhotoViewer$37;)V
 
-    invoke-static {p1, v0, p0, v1}, Lorg/telegram/ui/PhotoViewer;->access$19600(Lorg/telegram/ui/PhotoViewer;Landroid/text/style/URLSpan;Landroid/widget/TextView;Ljava/lang/Runnable;)V
+    invoke-static {p1, v0, p0, v1}, Lorg/telegram/ui/PhotoViewer;->access$19700(Lorg/telegram/ui/PhotoViewer;Landroid/text/style/URLSpan;Landroid/widget/TextView;Ljava/lang/Runnable;)V
 
     const/4 p1, 0x0
 
-    .line 6265
+    .line 6399
     iput-object p1, p0, Lorg/telegram/ui/PhotoViewer$37;->pressedLink:Lorg/telegram/ui/Components/LinkSpanDrawable;
 
     :cond_23
@@ -125,10 +125,10 @@
 .method protected onDraw(Landroid/graphics/Canvas;)V
     .registers 4
 
-    .line 6300
+    .line 6434
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 6301
+    .line 6435
     invoke-virtual {p0}, Landroid/widget/TextView;->getPaddingLeft()I
 
     move-result v0
@@ -139,7 +139,7 @@
 
     invoke-virtual {p1, v0, v1}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 6302
+    .line 6436
     iget-object v0, p0, Lorg/telegram/ui/PhotoViewer$37;->links:Lorg/telegram/ui/Components/LinkSpanDrawable$LinkCollector;
 
     invoke-virtual {v0, p1}, Lorg/telegram/ui/Components/LinkSpanDrawable$LinkCollector;->draw(Landroid/graphics/Canvas;)Z
@@ -148,14 +148,14 @@
 
     if-eqz v0, :cond_17
 
-    .line 6303
+    .line 6437
     invoke-virtual {p0}, Landroid/widget/TextView;->invalidate()V
 
-    .line 6305
+    .line 6439
     :cond_17
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
-    .line 6306
+    .line 6440
     invoke-super {p0, p1}, Lorg/telegram/ui/Components/spoilers/SpoilersTextView;->onDraw(Landroid/graphics/Canvas;)V
 
     return-void
@@ -164,7 +164,7 @@
 .method public onTouchEvent(Landroid/view/MotionEvent;)Z
     .registers 11
 
-    .line 6236
+    .line 6370
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v0
@@ -189,7 +189,7 @@
 
     goto :goto_28
 
-    .line 6279
+    .line 6413
     :cond_14
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
@@ -199,12 +199,12 @@
 
     if-ne v0, v4, :cond_25
 
-    .line 6280
+    .line 6414
     iget-object v0, p0, Lorg/telegram/ui/PhotoViewer$37;->links:Lorg/telegram/ui/Components/LinkSpanDrawable$LinkCollector;
 
     invoke-virtual {v0}, Lorg/telegram/ui/Components/LinkSpanDrawable$LinkCollector;->clear()V
 
-    .line 6281
+    .line 6415
     iput-object v1, p0, Lorg/telegram/ui/PhotoViewer$37;->pressedLink:Lorg/telegram/ui/Components/LinkSpanDrawable;
 
     :goto_22
@@ -217,7 +217,7 @@
 
     goto/16 :goto_119
 
-    .line 6237
+    .line 6371
     :cond_28
     :goto_28
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
@@ -234,7 +234,7 @@
 
     float-to-int v0, v0
 
-    .line 6238
+    .line 6372
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
 
     move-result v4
@@ -249,7 +249,7 @@
 
     float-to-int v4, v4
 
-    .line 6239
+    .line 6373
     invoke-virtual {p0}, Landroid/widget/TextView;->getLayout()Landroid/text/Layout;
 
     move-result-object v5
@@ -258,7 +258,7 @@
 
     move-result v5
 
-    .line 6240
+    .line 6374
     invoke-virtual {p0}, Landroid/widget/TextView;->getLayout()Landroid/text/Layout;
 
     move-result-object v6
@@ -269,7 +269,7 @@
 
     move-result v6
 
-    .line 6241
+    .line 6375
     invoke-virtual {p0}, Landroid/widget/TextView;->getLayout()Landroid/text/Layout;
 
     move-result-object v7
@@ -282,7 +282,7 @@
 
     if-gtz v8, :cond_f1
 
-    .line 6244
+    .line 6378
     invoke-virtual {p0}, Landroid/widget/TextView;->getLayout()Landroid/text/Layout;
 
     move-result-object v8
@@ -309,7 +309,7 @@
 
     if-gt v4, v0, :cond_f1
 
-    .line 6245
+    .line 6379
     new-instance v0, Landroid/text/SpannableString;
 
     invoke-virtual {p0}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
@@ -318,7 +318,7 @@
 
     invoke-direct {v0, v4}, Landroid/text/SpannableString;-><init>(Ljava/lang/CharSequence;)V
 
-    .line 6246
+    .line 6380
     const-class v4, Landroid/text/style/ClickableSpan;
 
     invoke-interface {v0, v6, v6, v4}, Landroid/text/Spannable;->getSpans(IILjava/lang/Class;)[Ljava/lang/Object;
@@ -327,27 +327,27 @@
 
     check-cast v4, [Landroid/text/style/ClickableSpan;
 
-    .line 6247
+    .line 6381
     array-length v5, v4
 
     if-eqz v5, :cond_f1
 
-    .line 6248
+    .line 6382
     aget-object v5, v4, v2
 
-    .line 6249
+    .line 6383
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v6
 
     if-nez v6, :cond_f2
 
-    .line 6251
+    .line 6385
     iget-object v6, p0, Lorg/telegram/ui/PhotoViewer$37;->links:Lorg/telegram/ui/Components/LinkSpanDrawable$LinkCollector;
 
     invoke-virtual {v6}, Lorg/telegram/ui/Components/LinkSpanDrawable$LinkCollector;->clear()V
 
-    .line 6252
+    .line 6386
     new-instance v6, Lorg/telegram/ui/Components/LinkSpanDrawable;
 
     aget-object v4, v4, v2
@@ -366,17 +366,17 @@
 
     const v4, 0x6662a9e3
 
-    .line 6253
+    .line 6387
     invoke-virtual {v6, v4}, Lorg/telegram/ui/Components/LinkSpanDrawable;->setColor(I)V
 
-    .line 6254
+    .line 6388
     iget-object v4, p0, Lorg/telegram/ui/PhotoViewer$37;->links:Lorg/telegram/ui/Components/LinkSpanDrawable$LinkCollector;
 
     iget-object v6, p0, Lorg/telegram/ui/PhotoViewer$37;->pressedLink:Lorg/telegram/ui/Components/LinkSpanDrawable;
 
     invoke-virtual {v4, v6}, Lorg/telegram/ui/Components/LinkSpanDrawable$LinkCollector;->addLink(Lorg/telegram/ui/Components/LinkSpanDrawable;)V
 
-    .line 6255
+    .line 6389
     iget-object v4, p0, Lorg/telegram/ui/PhotoViewer$37;->pressedLink:Lorg/telegram/ui/Components/LinkSpanDrawable;
 
     invoke-virtual {v4}, Lorg/telegram/ui/Components/LinkSpanDrawable;->getSpan()Landroid/text/style/CharacterStyle;
@@ -387,7 +387,7 @@
 
     move-result v4
 
-    .line 6256
+    .line 6390
     iget-object v6, p0, Lorg/telegram/ui/PhotoViewer$37;->pressedLink:Lorg/telegram/ui/Components/LinkSpanDrawable;
 
     invoke-virtual {v6}, Lorg/telegram/ui/Components/LinkSpanDrawable;->getSpan()Landroid/text/style/CharacterStyle;
@@ -398,14 +398,14 @@
 
     move-result v0
 
-    .line 6257
+    .line 6391
     iget-object v6, p0, Lorg/telegram/ui/PhotoViewer$37;->pressedLink:Lorg/telegram/ui/Components/LinkSpanDrawable;
 
     invoke-virtual {v6}, Lorg/telegram/ui/Components/LinkSpanDrawable;->obtainNewPath()Lorg/telegram/ui/Components/LinkPath;
 
     move-result-object v6
 
-    .line 6258
+    .line 6392
     invoke-virtual {p0}, Landroid/widget/TextView;->getLayout()Landroid/text/Layout;
 
     move-result-object v7
@@ -418,29 +418,29 @@
 
     invoke-virtual {v6, v7, v4, v8}, Lorg/telegram/ui/Components/LinkPath;->setCurrentLayout(Landroid/text/Layout;IF)V
 
-    .line 6259
+    .line 6393
     invoke-virtual {p0}, Landroid/widget/TextView;->getLayout()Landroid/text/Layout;
 
     move-result-object v7
 
     invoke-virtual {v7, v4, v0, v6}, Landroid/text/Layout;->getSelectionPath(IILandroid/graphics/Path;)V
 
-    .line 6261
+    .line 6395
     iget-object v0, p0, Lorg/telegram/ui/PhotoViewer$37;->pressedLink:Lorg/telegram/ui/Components/LinkSpanDrawable;
 
-    .line 6262
+    .line 6396
     new-instance v4, Lorg/telegram/ui/PhotoViewer$37$$ExternalSyntheticLambda1;
 
     invoke-direct {v4, p0, v0}, Lorg/telegram/ui/PhotoViewer$37$$ExternalSyntheticLambda1;-><init>(Lorg/telegram/ui/PhotoViewer$37;Lorg/telegram/ui/Components/LinkSpanDrawable;)V
 
-    .line 6267
+    .line 6401
     invoke-static {}, Landroid/view/ViewConfiguration;->getLongPressTimeout()I
 
     move-result v0
 
     int-to-long v6, v0
 
-    .line 6262
+    .line 6396
     invoke-virtual {p0, v4, v6, v7}, Landroid/widget/TextView;->postDelayed(Ljava/lang/Runnable;J)Z
 
     const/4 v0, 0x1
@@ -453,7 +453,7 @@
     :cond_f2
     const/4 v0, 0x0
 
-    .line 6271
+    .line 6405
     :goto_f3
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
@@ -461,12 +461,12 @@
 
     if-ne v4, v3, :cond_119
 
-    .line 6272
+    .line 6406
     iget-object v0, p0, Lorg/telegram/ui/PhotoViewer$37;->links:Lorg/telegram/ui/Components/LinkSpanDrawable$LinkCollector;
 
     invoke-virtual {v0}, Lorg/telegram/ui/Components/LinkSpanDrawable$LinkCollector;->clear()V
 
-    .line 6273
+    .line 6407
     iget-object v0, p0, Lorg/telegram/ui/PhotoViewer$37;->pressedLink:Lorg/telegram/ui/Components/LinkSpanDrawable;
 
     if-eqz v0, :cond_115
@@ -477,7 +477,7 @@
 
     if-ne v0, v5, :cond_115
 
-    .line 6274
+    .line 6408
     iget-object v0, p0, Lorg/telegram/ui/PhotoViewer$37;->this$0:Lorg/telegram/ui/PhotoViewer;
 
     iget-object v4, p0, Lorg/telegram/ui/PhotoViewer$37;->pressedLink:Lorg/telegram/ui/Components/LinkSpanDrawable;
@@ -488,9 +488,9 @@
 
     check-cast v4, Landroid/text/style/ClickableSpan;
 
-    invoke-static {v0, v4, p0}, Lorg/telegram/ui/PhotoViewer;->access$19500(Lorg/telegram/ui/PhotoViewer;Landroid/text/style/ClickableSpan;Landroid/widget/TextView;)V
+    invoke-static {v0, v4, p0}, Lorg/telegram/ui/PhotoViewer;->access$19600(Lorg/telegram/ui/PhotoViewer;Landroid/text/style/ClickableSpan;Landroid/widget/TextView;)V
 
-    .line 6276
+    .line 6410
     :cond_115
     iput-object v1, p0, Lorg/telegram/ui/PhotoViewer$37;->pressedLink:Lorg/telegram/ui/Components/LinkSpanDrawable;
 
@@ -500,7 +500,7 @@
     :goto_119
     if-nez v0, :cond_124
 
-    .line 6285
+    .line 6419
     invoke-super {p0, p1}, Landroid/widget/TextView;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
     move-result p1
@@ -518,11 +518,11 @@
     :goto_124
     const/4 p1, 0x1
 
-    .line 6286
+    .line 6420
     :goto_125
     iget-object v0, p0, Lorg/telegram/ui/PhotoViewer$37;->this$0:Lorg/telegram/ui/PhotoViewer;
 
-    invoke-static {v0}, Lorg/telegram/ui/PhotoViewer;->access$10300(Lorg/telegram/ui/PhotoViewer;)Z
+    invoke-static {v0}, Lorg/telegram/ui/PhotoViewer;->access$10200(Lorg/telegram/ui/PhotoViewer;)Z
 
     move-result v0
 
@@ -539,7 +539,7 @@
 .method public setPressed(Z)V
     .registers 3
 
-    .line 6291
+    .line 6425
     invoke-virtual {p0}, Landroid/widget/TextView;->isPressed()Z
 
     move-result v0
@@ -553,13 +553,13 @@
     :cond_8
     const/4 v0, 0x0
 
-    .line 6292
+    .line 6426
     :goto_9
     invoke-super {p0, p1}, Landroid/widget/TextView;->setPressed(Z)V
 
     if-eqz v0, :cond_11
 
-    .line 6294
+    .line 6428
     invoke-virtual {p0}, Landroid/widget/TextView;->invalidate()V
 
     :cond_11

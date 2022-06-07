@@ -441,27 +441,27 @@
 
     const/4 v1, 0x1
 
-    if-eq v0, v1, :cond_1e3
+    if-eq v0, v1, :cond_1e5
 
     const/4 v2, 0x2
 
     const/4 v3, 0x0
 
-    if-eq v0, v2, :cond_142
+    if-eq v0, v2, :cond_144
 
     const/4 v2, 0x3
 
-    if-eq v0, v2, :cond_e6
+    if-eq v0, v2, :cond_e8
 
     const/4 v2, 0x5
 
-    if-eq v0, v2, :cond_88
+    if-eq v0, v2, :cond_8a
 
     const/16 v2, 0xa
 
     if-eq v0, v2, :cond_17
 
-    goto/16 :goto_288
+    goto/16 :goto_28a
 
     .line 882
     :cond_17
@@ -575,36 +575,38 @@
     move-object p2, v2
 
     :goto_73
-    if-eqz p2, :cond_288
+    if-eqz p2, :cond_28a
 
     .line 901
     iget-object v2, p2, Lorg/telegram/tgnet/TLRPC$User;->first_name:Ljava/lang/String;
 
-    iget-object v3, p2, Lorg/telegram/tgnet/TLRPC$User;->last_name:Ljava/lang/String;
+    iget-object v4, p2, Lorg/telegram/tgnet/TLRPC$User;->last_name:Ljava/lang/String;
 
-    invoke-static {v2, v3}, Lorg/telegram/messenger/ContactsController;->formatName(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2, v4}, Lorg/telegram/messenger/ContactsController;->formatName(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    const-string v3, "InviteLinkCount"
+    new-array v3, v3, [Ljava/lang/Object;
 
-    invoke-static {v3, v0}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    const-string v4, "InviteLinkCount"
+
+    invoke-static {v4, v0, v3}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
     invoke-virtual {p1, p2, v2, v0, v1}, Lorg/telegram/ui/Cells/ManageChatUserCell;->setData(Ljava/lang/Object;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)V
 
-    goto/16 :goto_288
+    goto/16 :goto_28a
 
     .line 866
-    :cond_88
+    :cond_8a
     iget-object v0, p0, Lorg/telegram/ui/ManageLinksActivity$ListAdapter;->this$0:Lorg/telegram/ui/ManageLinksActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/ManageLinksActivity;->access$600(Lorg/telegram/ui/ManageLinksActivity;)I
 
     move-result v0
 
-    if-lt p2, v0, :cond_b6
+    if-lt p2, v0, :cond_b8
 
     iget-object v0, p0, Lorg/telegram/ui/ManageLinksActivity$ListAdapter;->this$0:Lorg/telegram/ui/ManageLinksActivity;
 
@@ -612,7 +614,7 @@
 
     move-result v0
 
-    if-ge p2, v0, :cond_b6
+    if-ge p2, v0, :cond_b8
 
     .line 867
     iget-object v0, p0, Lorg/telegram/ui/ManageLinksActivity$ListAdapter;->this$0:Lorg/telegram/ui/ManageLinksActivity;
@@ -644,12 +646,12 @@
 
     sub-int/2addr v2, v1
 
-    if-ne p2, v2, :cond_d4
+    if-ne p2, v2, :cond_d6
 
-    goto :goto_d3
+    goto :goto_d5
 
     .line 872
-    :cond_b6
+    :cond_b8
     iget-object v0, p0, Lorg/telegram/ui/ManageLinksActivity$ListAdapter;->this$0:Lorg/telegram/ui/ManageLinksActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/ManageLinksActivity;->access$2800(Lorg/telegram/ui/ManageLinksActivity;)Ljava/util/ArrayList;
@@ -679,13 +681,13 @@
 
     sub-int/2addr v2, v1
 
-    if-ne p2, v2, :cond_d4
+    if-ne p2, v2, :cond_d6
 
-    :goto_d3
+    :goto_d5
     const/4 v1, 0x0
 
     .line 877
-    :cond_d4
+    :cond_d6
     iget-object p1, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     check-cast p1, Lorg/telegram/ui/ManageLinksActivity$LinkCell;
@@ -704,10 +706,10 @@
     .line 879
     iput-boolean v1, p1, Lorg/telegram/ui/ManageLinksActivity$LinkCell;->drawDivider:Z
 
-    goto/16 :goto_288
+    goto/16 :goto_28a
 
     .line 854
-    :cond_e6
+    :cond_e8
     iget-object p1, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     check-cast p1, Lorg/telegram/ui/Cells/CreationTextCell;
@@ -719,7 +721,7 @@
 
     move-result-object p2
 
-    const v0, 0x7f070366
+    const v0, 0x7f07037d
 
     invoke-virtual {p2, v0}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -732,7 +734,7 @@
 
     move-result-object v0
 
-    const v2, 0x7f070367
+    const v2, 0x7f07037e
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -773,7 +775,7 @@
 
     invoke-direct {v2, p2, v0}, Lorg/telegram/ui/Components/CombinedDrawable;-><init>(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
 
-    const p2, 0x7f0e04e7
+    const p2, 0x7f0e0536
 
     const-string v0, "CreateNewLink"
 
@@ -796,10 +798,10 @@
 
     invoke-virtual {p1, p2, v2, v0}, Lorg/telegram/ui/Cells/CreationTextCell;->setTextAndIcon(Ljava/lang/String;Landroid/graphics/drawable/Drawable;Z)V
 
-    goto/16 :goto_288
+    goto/16 :goto_28a
 
     .line 815
-    :cond_142
+    :cond_144
     iget-object p1, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     check-cast p1, Lorg/telegram/ui/Components/LinkActionView;
@@ -825,16 +827,16 @@
 
     cmp-long p2, v4, v6
 
-    if-nez p2, :cond_15e
+    if-nez p2, :cond_160
 
     const/4 p2, 0x1
 
-    goto :goto_15f
+    goto :goto_161
 
-    :cond_15e
+    :cond_160
     const/4 p2, 0x0
 
-    :goto_15f
+    :goto_161
     invoke-virtual {p1, p2}, Lorg/telegram/ui/Components/LinkActionView;->setCanEdit(Z)V
 
     .line 817
@@ -846,7 +848,7 @@
 
     const/4 v0, 0x0
 
-    if-eqz p2, :cond_1ad
+    if-eqz p2, :cond_1af
 
     iget-object p2, p0, Lorg/telegram/ui/ManageLinksActivity$ListAdapter;->this$0:Lorg/telegram/ui/ManageLinksActivity;
 
@@ -868,7 +870,7 @@
 
     cmp-long p2, v4, v6
 
-    if-nez p2, :cond_1ad
+    if-nez p2, :cond_1af
 
     .line 818
     iget-object p2, p0, Lorg/telegram/ui/ManageLinksActivity$ListAdapter;->this$0:Lorg/telegram/ui/ManageLinksActivity;
@@ -877,7 +879,7 @@
 
     move-result-object p2
 
-    if-eqz p2, :cond_288
+    if-eqz p2, :cond_28a
 
     .line 819
     new-instance p2, Ljava/lang/StringBuilder;
@@ -910,10 +912,10 @@
     .line 821
     invoke-virtual {p1, v1}, Lorg/telegram/ui/Components/LinkActionView;->hideRevokeOption(Z)V
 
-    goto/16 :goto_288
+    goto/16 :goto_28a
 
     .line 824
-    :cond_1ad
+    :cond_1af
     iget-object p2, p0, Lorg/telegram/ui/ManageLinksActivity$ListAdapter;->this$0:Lorg/telegram/ui/ManageLinksActivity;
 
     invoke-static {p2}, Lorg/telegram/ui/ManageLinksActivity;->access$2200(Lorg/telegram/ui/ManageLinksActivity;)Z
@@ -931,7 +933,7 @@
 
     move-result-object p2
 
-    if-eqz p2, :cond_1d5
+    if-eqz p2, :cond_1d7
 
     .line 826
     iget-object p2, p0, Lorg/telegram/ui/ManageLinksActivity$ListAdapter;->this$0:Lorg/telegram/ui/ManageLinksActivity;
@@ -954,10 +956,10 @@
 
     invoke-virtual {p1, p2, v0, v1}, Lorg/telegram/ui/Components/LinkActionView;->loadUsers(Lorg/telegram/tgnet/TLRPC$TL_chatInviteExported;J)V
 
-    goto/16 :goto_288
+    goto/16 :goto_28a
 
     .line 830
-    :cond_1d5
+    :cond_1d7
     invoke-virtual {p1, v0}, Lorg/telegram/ui/Components/LinkActionView;->setLink(Ljava/lang/String;)V
 
     .line 831
@@ -969,10 +971,10 @@
 
     invoke-virtual {p1, v0, v1, v2}, Lorg/telegram/ui/Components/LinkActionView;->loadUsers(Lorg/telegram/tgnet/TLRPC$TL_chatInviteExported;J)V
 
-    goto/16 :goto_288
+    goto/16 :goto_28a
 
     .line 836
-    :cond_1e3
+    :cond_1e5
     iget-object p1, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     check-cast p1, Lorg/telegram/ui/Cells/HeaderCell;
@@ -984,7 +986,7 @@
 
     move-result v0
 
-    if-ne p2, v0, :cond_24a
+    if-ne p2, v0, :cond_24c
 
     .line 838
     iget-object p2, p0, Lorg/telegram/ui/ManageLinksActivity$ListAdapter;->this$0:Lorg/telegram/ui/ManageLinksActivity;
@@ -993,7 +995,7 @@
 
     move-result p2
 
-    if-eqz p2, :cond_21a
+    if-eqz p2, :cond_21c
 
     iget-object p2, p0, Lorg/telegram/ui/ManageLinksActivity$ListAdapter;->this$0:Lorg/telegram/ui/ManageLinksActivity;
 
@@ -1015,9 +1017,9 @@
 
     cmp-long p2, v0, v2
 
-    if-nez p2, :cond_21a
+    if-nez p2, :cond_21c
 
-    const p2, 0x7f0e0e3e
+    const p2, 0x7f0e0ee7
 
     const-string v0, "PublicLink"
 
@@ -1028,10 +1030,10 @@
 
     invoke-virtual {p1, p2}, Lorg/telegram/ui/Cells/HeaderCell;->setText(Ljava/lang/CharSequence;)V
 
-    goto :goto_288
+    goto :goto_28a
 
     .line 840
-    :cond_21a
+    :cond_21c
     iget-object p2, p0, Lorg/telegram/ui/ManageLinksActivity$ListAdapter;->this$0:Lorg/telegram/ui/ManageLinksActivity;
 
     invoke-static {p2}, Lorg/telegram/ui/ManageLinksActivity;->access$1900(Lorg/telegram/ui/ManageLinksActivity;)J
@@ -1052,9 +1054,9 @@
 
     cmp-long p2, v0, v2
 
-    if-nez p2, :cond_23d
+    if-nez p2, :cond_23f
 
-    const p2, 0x7f0e0383
+    const p2, 0x7f0e03c2
 
     const-string v0, "ChannelInviteLinkTitle"
 
@@ -1065,10 +1067,10 @@
 
     invoke-virtual {p1, p2}, Lorg/telegram/ui/Cells/HeaderCell;->setText(Ljava/lang/CharSequence;)V
 
-    goto :goto_288
+    goto :goto_28a
 
-    :cond_23d
-    const p2, 0x7f0e0d2d
+    :cond_23f
+    const p2, 0x7f0e0dbb
 
     const-string v0, "PermanentLinkForThisAdmin"
 
@@ -1079,19 +1081,19 @@
 
     invoke-virtual {p1, p2}, Lorg/telegram/ui/Cells/HeaderCell;->setText(Ljava/lang/CharSequence;)V
 
-    goto :goto_288
+    goto :goto_28a
 
     .line 845
-    :cond_24a
+    :cond_24c
     iget-object v0, p0, Lorg/telegram/ui/ManageLinksActivity$ListAdapter;->this$0:Lorg/telegram/ui/ManageLinksActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/ManageLinksActivity;->access$2400(Lorg/telegram/ui/ManageLinksActivity;)I
 
     move-result v0
 
-    if-ne p2, v0, :cond_25f
+    if-ne p2, v0, :cond_261
 
-    const p2, 0x7f0e0f52
+    const p2, 0x7f0e100a
 
     const-string v0, "RevokedLinks"
 
@@ -1102,19 +1104,19 @@
 
     invoke-virtual {p1, p2}, Lorg/telegram/ui/Cells/HeaderCell;->setText(Ljava/lang/CharSequence;)V
 
-    goto :goto_288
+    goto :goto_28a
 
     .line 847
-    :cond_25f
+    :cond_261
     iget-object v0, p0, Lorg/telegram/ui/ManageLinksActivity$ListAdapter;->this$0:Lorg/telegram/ui/ManageLinksActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/ManageLinksActivity;->access$2500(Lorg/telegram/ui/ManageLinksActivity;)I
 
     move-result v0
 
-    if-ne p2, v0, :cond_274
+    if-ne p2, v0, :cond_276
 
-    const p2, 0x7f0e094b
+    const p2, 0x7f0e09d2
 
     const-string v0, "LinksCreatedByThisAdmin"
 
@@ -1125,19 +1127,19 @@
 
     invoke-virtual {p1, p2}, Lorg/telegram/ui/Cells/HeaderCell;->setText(Ljava/lang/CharSequence;)V
 
-    goto :goto_288
+    goto :goto_28a
 
     .line 849
-    :cond_274
+    :cond_276
     iget-object v0, p0, Lorg/telegram/ui/ManageLinksActivity$ListAdapter;->this$0:Lorg/telegram/ui/ManageLinksActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/ManageLinksActivity;->access$2600(Lorg/telegram/ui/ManageLinksActivity;)I
 
     move-result v0
 
-    if-ne p2, v0, :cond_288
+    if-ne p2, v0, :cond_28a
 
-    const p2, 0x7f0e094a
+    const p2, 0x7f0e09d1
 
     const-string v0, "LinksCreatedByOtherAdmins"
 
@@ -1148,8 +1150,8 @@
 
     invoke-virtual {p1, p2}, Lorg/telegram/ui/Cells/HeaderCell;->setText(Ljava/lang/CharSequence;)V
 
-    :cond_288
-    :goto_288
+    :cond_28a
+    :goto_28a
     return-void
 .end method
 
@@ -1162,7 +1164,7 @@
 
     const/4 v1, 0x0
 
-    const v2, 0x7f07012d
+    const v2, 0x7f0700fc
 
     const-string v3, "windowBackgroundWhite"
 
@@ -1217,7 +1219,7 @@
 
     invoke-direct {p2, v0}, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;-><init>(Landroid/content/Context;)V
 
-    const v0, 0x7f0e04e8
+    const v0, 0x7f0e0537
 
     const-string v1, "CreateNewLinkHelp"
 
@@ -1254,7 +1256,7 @@
 
     invoke-virtual {p1, p2}, Landroid/widget/FrameLayout;->setBackgroundColor(I)V
 
-    const p2, 0x7f0e054d
+    const p2, 0x7f0e059e
 
     const-string v0, "DeleteAllRevokedLinks"
 

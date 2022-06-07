@@ -25,7 +25,7 @@
 .method constructor <init>(Lorg/telegram/ui/GroupCallActivity;)V
     .registers 2
 
-    .line 384
+    .line 386
     iput-object p1, p0, Lorg/telegram/ui/GroupCallActivity$1;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,16 +36,16 @@
 
 # virtual methods
 .method public run()V
-    .registers 5
+    .registers 6
 
-    .line 387
+    .line 389
     iget-object v0, p0, Lorg/telegram/ui/GroupCallActivity$1;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/GroupCallActivity;->access$000(Lorg/telegram/ui/GroupCallActivity;)Lorg/telegram/ui/ActionBar/SimpleTextView;
 
     move-result-object v0
 
-    if-eqz v0, :cond_ab
+    if-eqz v0, :cond_ae
 
     iget-object v0, p0, Lorg/telegram/ui/GroupCallActivity$1;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
@@ -55,9 +55,9 @@
 
     if-eqz v0, :cond_12
 
-    goto/16 :goto_ab
+    goto/16 :goto_ae
 
-    .line 391
+    .line 393
     :cond_12
     iget-object v0, p0, Lorg/telegram/ui/GroupCallActivity$1;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
@@ -65,14 +65,14 @@
 
     if-eqz v1, :cond_1d
 
-    .line 392
+    .line 394
     iget-object v0, v1, Lorg/telegram/messenger/ChatObject$Call;->call:Lorg/telegram/tgnet/TLRPC$GroupCall;
 
     iget v0, v0, Lorg/telegram/tgnet/TLRPC$GroupCall;->schedule_date:I
 
     goto :goto_21
 
-    .line 394
+    .line 396
     :cond_1d
     invoke-static {v0}, Lorg/telegram/ui/GroupCallActivity;->access$100(Lorg/telegram/ui/GroupCallActivity;)I
 
@@ -83,7 +83,7 @@
 
     return-void
 
-    .line 399
+    .line 401
     :cond_24
     iget-object v1, p0, Lorg/telegram/ui/GroupCallActivity$1;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
@@ -103,9 +103,9 @@
 
     const v2, 0x15180
 
-    if-lt v1, v2, :cond_52
+    if-lt v1, v2, :cond_55
 
-    .line 401
+    .line 403
     iget-object v2, p0, Lorg/telegram/ui/GroupCallActivity$1;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-static {v2}, Lorg/telegram/ui/GroupCallActivity;->access$000(Lorg/telegram/ui/GroupCallActivity;)Lorg/telegram/ui/ActionBar/SimpleTextView;
@@ -122,18 +122,22 @@
 
     move-result v1
 
-    const-string v3, "Days"
+    const/4 v3, 0x0
 
-    invoke-static {v3, v1}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    new-array v3, v3, [Ljava/lang/Object;
+
+    const-string v4, "Days"
+
+    invoke-static {v4, v1, v3}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v2, v1}, Lorg/telegram/ui/ActionBar/SimpleTextView;->setText(Ljava/lang/CharSequence;)Z
 
-    goto :goto_91
+    goto :goto_94
 
-    .line 403
-    :cond_52
+    .line 405
+    :cond_55
     iget-object v2, p0, Lorg/telegram/ui/GroupCallActivity$1;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-static {v2}, Lorg/telegram/ui/GroupCallActivity;->access$000(Lorg/telegram/ui/GroupCallActivity;)Lorg/telegram/ui/ActionBar/SimpleTextView;
@@ -150,9 +154,9 @@
 
     invoke-virtual {v2, v3}, Lorg/telegram/ui/ActionBar/SimpleTextView;->setText(Ljava/lang/CharSequence;)Z
 
-    if-gez v1, :cond_91
+    if-gez v1, :cond_94
 
-    .line 404
+    .line 406
     iget-object v1, p0, Lorg/telegram/ui/GroupCallActivity$1;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/GroupCallActivity;->access$300(Lorg/telegram/ui/GroupCallActivity;)Lorg/telegram/ui/ActionBar/SimpleTextView;
@@ -163,9 +167,9 @@
 
     move-result-object v1
 
-    if-nez v1, :cond_91
+    if-nez v1, :cond_94
 
-    .line 405
+    .line 407
     iget-object v1, p0, Lorg/telegram/ui/GroupCallActivity$1;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/GroupCallActivity;->access$300(Lorg/telegram/ui/GroupCallActivity;)Lorg/telegram/ui/ActionBar/SimpleTextView;
@@ -180,14 +184,14 @@
 
     invoke-virtual {v1, v2}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
-    .line 406
+    .line 408
     iget-object v1, p0, Lorg/telegram/ui/GroupCallActivity$1;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/GroupCallActivity;->access$300(Lorg/telegram/ui/GroupCallActivity;)Lorg/telegram/ui/ActionBar/SimpleTextView;
 
     move-result-object v1
 
-    const v2, 0x7f0e12f2
+    const v2, 0x7f0e13c0
 
     const-string v3, "VoipChatLateBy"
 
@@ -197,9 +201,9 @@
 
     invoke-virtual {v1, v2}, Lorg/telegram/ui/ActionBar/SimpleTextView;->setText(Ljava/lang/CharSequence;)Z
 
-    .line 409
-    :cond_91
-    :goto_91
+    .line 411
+    :cond_94
+    :goto_94
     iget-object v1, p0, Lorg/telegram/ui/GroupCallActivity$1;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/GroupCallActivity;->access$400(Lorg/telegram/ui/GroupCallActivity;)Lorg/telegram/ui/ActionBar/SimpleTextView;
@@ -216,7 +220,7 @@
 
     invoke-virtual {v1, v0}, Lorg/telegram/ui/ActionBar/SimpleTextView;->setText(Ljava/lang/CharSequence;)Z
 
-    .line 410
+    .line 412
     iget-object v0, p0, Lorg/telegram/ui/GroupCallActivity$1;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/GroupCallActivity;->access$500(Lorg/telegram/ui/GroupCallActivity;)Ljava/lang/Runnable;
@@ -227,7 +231,7 @@
 
     invoke-static {v0, v1, v2}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;J)V
 
-    :cond_ab
-    :goto_ab
+    :cond_ae
+    :goto_ae
     return-void
 .end method

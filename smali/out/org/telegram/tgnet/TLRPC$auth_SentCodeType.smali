@@ -15,7 +15,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 6159
+    .line 6224
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -30,7 +30,7 @@
 
     goto :goto_22
 
-    .line 6171
+    .line 6236
     :sswitch_5
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_auth_sentCodeTypeCall;
 
@@ -38,7 +38,7 @@
 
     goto :goto_22
 
-    .line 6168
+    .line 6233
     :sswitch_b
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_auth_sentCodeTypeApp;
 
@@ -46,7 +46,7 @@
 
     goto :goto_22
 
-    .line 6180
+    .line 6245
     :sswitch_11
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_auth_sentCodeTypeSms;
 
@@ -54,7 +54,7 @@
 
     goto :goto_22
 
-    .line 6174
+    .line 6239
     :sswitch_17
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_auth_sentCodeTypeFlashCall;
 
@@ -62,7 +62,7 @@
 
     goto :goto_22
 
-    .line 6177
+    .line 6242
     :sswitch_1d
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_auth_sentCodeTypeMissedCall;
 
@@ -75,7 +75,7 @@
 
     goto :goto_3d
 
-    .line 6184
+    .line 6249
     :cond_27
     new-instance p0, Ljava/lang/RuntimeException;
 
@@ -105,7 +105,7 @@
     :goto_3d
     if-eqz v0, :cond_42
 
-    .line 6187
+    .line 6252
     invoke-virtual {v0, p0, p2}, Lorg/telegram/tgnet/TLObject;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
     :cond_42

@@ -97,7 +97,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0e0ad8
+    const v1, 0x7f0e0b60
 
     const-string v2, "NoResult"
 
@@ -143,7 +143,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0e0aae
+    const v2, 0x7f0e0b35
 
     const-string v3, "NoContacts"
 

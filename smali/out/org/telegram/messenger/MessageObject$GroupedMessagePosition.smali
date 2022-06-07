@@ -50,7 +50,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 472
+    .line 488
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -63,36 +63,36 @@
 
     int-to-byte p1, p1
 
-    .line 491
+    .line 507
     iput-byte p1, p0, Lorg/telegram/messenger/MessageObject$GroupedMessagePosition;->minX:B
 
     int-to-byte p1, p2
 
-    .line 492
+    .line 508
     iput-byte p1, p0, Lorg/telegram/messenger/MessageObject$GroupedMessagePosition;->maxX:B
 
     int-to-byte p1, p3
 
-    .line 493
+    .line 509
     iput-byte p1, p0, Lorg/telegram/messenger/MessageObject$GroupedMessagePosition;->minY:B
 
     int-to-byte p1, p4
 
-    .line 494
+    .line 510
     iput-byte p1, p0, Lorg/telegram/messenger/MessageObject$GroupedMessagePosition;->maxY:B
 
-    .line 495
+    .line 511
     iput p5, p0, Lorg/telegram/messenger/MessageObject$GroupedMessagePosition;->pw:I
 
-    .line 496
+    .line 512
     iput p5, p0, Lorg/telegram/messenger/MessageObject$GroupedMessagePosition;->spanSize:I
 
-    .line 497
+    .line 513
     iput p6, p0, Lorg/telegram/messenger/MessageObject$GroupedMessagePosition;->ph:F
 
     int-to-byte p1, p7
 
-    .line 498
+    .line 514
     iput p1, p0, Lorg/telegram/messenger/MessageObject$GroupedMessagePosition;->flags:I
 
     return-void

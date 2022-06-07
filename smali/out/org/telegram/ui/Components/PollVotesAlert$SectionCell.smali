@@ -531,7 +531,7 @@
 .end method
 
 .method public setText(Ljava/lang/String;III)V
-    .registers 9
+    .registers 10
 
     .line 212
     iget-object v0, p0, Lorg/telegram/ui/Components/PollVotesAlert$SectionCell;->textView:Landroid/widget/TextView;
@@ -641,16 +641,16 @@
 
     add-int/2addr v0, v2
 
-    const/16 v3, 0x21
+    const/16 v4, 0x21
 
-    invoke-virtual {v1, p2, v2, v0, v3}, Landroid/text/SpannableStringBuilder;->setSpan(Ljava/lang/Object;III)V
+    invoke-virtual {v1, p2, v2, v0, v4}, Landroid/text/SpannableStringBuilder;->setSpan(Ljava/lang/Object;III)V
 
     .line 221
     iget-object p2, p0, Lorg/telegram/ui/Components/PollVotesAlert$SectionCell;->middleTextView:Landroid/widget/TextView;
 
     invoke-virtual {p2, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    if-nez p4, :cond_91
+    if-nez p4, :cond_95
 
     .line 223
     iget-object p1, p0, Lorg/telegram/ui/Components/PollVotesAlert$SectionCell;->this$0:Lorg/telegram/ui/Components/PollVotesAlert;
@@ -661,42 +661,46 @@
 
     iget-boolean p1, p1, Lorg/telegram/tgnet/TLRPC$Poll;->quiz:Z
 
-    if-eqz p1, :cond_85
+    if-eqz p1, :cond_87
 
     .line 224
     iget-object p1, p0, Lorg/telegram/ui/Components/PollVotesAlert$SectionCell;->righTextView:Landroid/widget/TextView;
 
-    const-string p2, "Answer"
+    new-array p2, v3, [Ljava/lang/Object;
 
-    invoke-static {p2, p3}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    const-string p4, "Answer"
+
+    invoke-static {p4, p3, p2}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p2
 
     invoke-virtual {p1, p2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    goto :goto_b0
+    goto :goto_b4
 
     .line 226
-    :cond_85
+    :cond_87
     iget-object p1, p0, Lorg/telegram/ui/Components/PollVotesAlert$SectionCell;->righTextView:Landroid/widget/TextView;
 
-    const-string p2, "Vote"
+    new-array p2, v3, [Ljava/lang/Object;
 
-    invoke-static {p2, p3}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    const-string p4, "Vote"
+
+    invoke-static {p4, p3, p2}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p2
 
     invoke-virtual {p1, p2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    goto :goto_b0
+    goto :goto_b4
 
-    :cond_91
-    if-ne p4, p1, :cond_a2
+    :cond_95
+    if-ne p4, p1, :cond_a6
 
     .line 229
     iget-object p1, p0, Lorg/telegram/ui/Components/PollVotesAlert$SectionCell;->righTextView:Landroid/widget/TextView;
 
-    const p2, 0x7f0e0da2
+    const p2, 0x7f0e0e32
 
     const-string p3, "PollExpand"
 
@@ -706,13 +710,13 @@
 
     invoke-virtual {p1, p2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    goto :goto_b0
+    goto :goto_b4
 
     .line 231
-    :cond_a2
+    :cond_a6
     iget-object p1, p0, Lorg/telegram/ui/Components/PollVotesAlert$SectionCell;->righTextView:Landroid/widget/TextView;
 
-    const p2, 0x7f0e0da1
+    const p2, 0x7f0e0e31
 
     const-string p3, "PollCollapse"
 
@@ -722,6 +726,6 @@
 
     invoke-virtual {p1, p2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    :goto_b0
+    :goto_b4
     return-void
 .end method

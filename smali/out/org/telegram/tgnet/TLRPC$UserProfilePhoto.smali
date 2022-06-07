@@ -25,7 +25,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 31045
+    .line 31473
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -40,7 +40,7 @@
 
     goto :goto_2e
 
-    .line 31060
+    .line 31488
     :sswitch_5
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_userProfilePhoto_layer126;
 
@@ -48,7 +48,7 @@
 
     goto :goto_2e
 
-    .line 31066
+    .line 31494
     :sswitch_b
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_userProfilePhotoEmpty;
 
@@ -56,7 +56,7 @@
 
     goto :goto_2e
 
-    .line 31063
+    .line 31491
     :sswitch_11
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_userProfilePhoto_layer115;
 
@@ -64,7 +64,7 @@
 
     goto :goto_2e
 
-    .line 31069
+    .line 31497
     :sswitch_17
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_userProfilePhoto_layer97;
 
@@ -72,7 +72,7 @@
 
     goto :goto_2e
 
-    .line 31075
+    .line 31503
     :sswitch_1d
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_userProfilePhoto_layer127;
 
@@ -80,7 +80,7 @@
 
     goto :goto_2e
 
-    .line 31072
+    .line 31500
     :sswitch_23
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_userProfilePhoto_old;
 
@@ -88,7 +88,7 @@
 
     goto :goto_2e
 
-    .line 31078
+    .line 31506
     :sswitch_29
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_userProfilePhoto;
 
@@ -101,7 +101,7 @@
 
     goto :goto_49
 
-    .line 31082
+    .line 31510
     :cond_33
     new-instance p0, Ljava/lang/RuntimeException;
 
@@ -131,7 +131,7 @@
     :goto_49
     if-eqz v0, :cond_4e
 
-    .line 31085
+    .line 31513
     invoke-virtual {v0, p0, p2}, Lorg/telegram/tgnet/TLObject;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
     :cond_4e

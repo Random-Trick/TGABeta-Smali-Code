@@ -31,14 +31,14 @@
 .method constructor <init>(Lorg/telegram/ui/PaymentFormActivity;)V
     .registers 2
 
-    .line 1373
+    .line 1450
     iput-object p1, p0, Lorg/telegram/ui/PaymentFormActivity$8;->this$0:Lorg/telegram/ui/PaymentFormActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 p1, -0x1
 
-    .line 1375
+    .line 1452
     iput p1, p0, Lorg/telegram/ui/PaymentFormActivity$8;->characterAction:I
 
     return-void
@@ -49,7 +49,7 @@
 .method public afterTextChanged(Landroid/text/Editable;)V
     .registers 14
 
-    .line 1404
+    .line 1481
     iget-object p1, p0, Lorg/telegram/ui/PaymentFormActivity$8;->this$0:Lorg/telegram/ui/PaymentFormActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/PaymentFormActivity;->access$2700(Lorg/telegram/ui/PaymentFormActivity;)Z
@@ -60,7 +60,7 @@
 
     return-void
 
-    .line 1407
+    .line 1484
     :cond_9
     iget-object p1, p0, Lorg/telegram/ui/PaymentFormActivity$8;->this$0:Lorg/telegram/ui/PaymentFormActivity;
 
@@ -72,12 +72,12 @@
 
     aget-object p1, p1, v0
 
-    .line 1408
+    .line 1485
     invoke-virtual {p1}, Landroid/widget/EditText;->getSelectionStart()I
 
     move-result v1
 
-    .line 1410
+    .line 1487
     invoke-virtual {p1}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
 
     move-result-object v2
@@ -86,7 +86,7 @@
 
     move-result-object v2
 
-    .line 1411
+    .line 1488
     iget v3, p0, Lorg/telegram/ui/PaymentFormActivity$8;->characterAction:I
 
     const/4 v4, 0x3
@@ -95,7 +95,7 @@
 
     if-ne v3, v4, :cond_42
 
-    .line 1412
+    .line 1489
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -124,7 +124,7 @@
 
     add-int/lit8 v1, v1, -0x1
 
-    .line 1415
+    .line 1492
     :cond_42
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -136,7 +136,7 @@
 
     const/4 v6, 0x0
 
-    .line 1416
+    .line 1493
     :goto_4c
     invoke-virtual {v2}, Ljava/lang/String;->length()I
 
@@ -146,21 +146,21 @@
 
     add-int/lit8 v7, v6, 0x1
 
-    .line 1417
+    .line 1494
     invoke-virtual {v2, v6, v7}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v6
 
     const-string v8, "0123456789"
 
-    .line 1418
+    .line 1495
     invoke-virtual {v8, v6}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v8
 
     if-eqz v8, :cond_63
 
-    .line 1419
+    .line 1496
     invoke-virtual {v3, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     :cond_63
@@ -168,13 +168,13 @@
 
     goto :goto_4c
 
-    .line 1422
+    .line 1499
     :cond_65
     iget-object v2, p0, Lorg/telegram/ui/PaymentFormActivity$8;->this$0:Lorg/telegram/ui/PaymentFormActivity;
 
     invoke-static {v2, v0}, Lorg/telegram/ui/PaymentFormActivity;->access$2702(Lorg/telegram/ui/PaymentFormActivity;Z)Z
 
-    .line 1423
+    .line 1500
     iget-object v2, p0, Lorg/telegram/ui/PaymentFormActivity$8;->this$0:Lorg/telegram/ui/PaymentFormActivity;
 
     invoke-static {v2}, Lorg/telegram/ui/PaymentFormActivity;->access$1500(Lorg/telegram/ui/PaymentFormActivity;)[Lorg/telegram/ui/Components/EditTextBoldCursor;
@@ -183,93 +183,95 @@
 
     aget-object v2, v2, v0
 
-    const-string v6, "windowBackgroundWhiteBlackText"
+    iget-object v6, p0, Lorg/telegram/ui/PaymentFormActivity$8;->this$0:Lorg/telegram/ui/PaymentFormActivity;
 
-    invoke-static {v6}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
+    const-string v7, "windowBackgroundWhiteBlackText"
+
+    invoke-virtual {v6, v7}, Lorg/telegram/ui/ActionBar/BaseFragment;->getThemedColor(Ljava/lang/String;)I
 
     move-result v6
 
     invoke-virtual {v2, v6}, Landroid/widget/EditText;->setTextColor(I)V
 
-    .line 1424
+    .line 1501
     invoke-virtual {v3}, Ljava/lang/StringBuilder;->length()I
 
     move-result v2
 
     const/4 v6, 0x4
 
-    if-le v2, v6, :cond_85
+    if-le v2, v6, :cond_87
 
-    .line 1425
+    .line 1502
     invoke-virtual {v3, v6}, Ljava/lang/StringBuilder;->setLength(I)V
 
-    .line 1427
-    :cond_85
+    .line 1504
+    :cond_87
     invoke-virtual {v3}, Ljava/lang/StringBuilder;->length()I
 
     move-result v2
 
     const/4 v7, 0x2
 
-    if-ge v2, v7, :cond_8e
+    if-ge v2, v7, :cond_90
 
-    .line 1428
+    .line 1505
     iput-boolean v5, p0, Lorg/telegram/ui/PaymentFormActivity$8;->isYear:Z
 
-    .line 1431
-    :cond_8e
+    .line 1508
+    :cond_90
     iget-boolean v2, p0, Lorg/telegram/ui/PaymentFormActivity$8;->isYear:Z
 
     const/16 v8, 0xc
 
     const-string v9, "windowBackgroundWhiteRedText4"
 
-    if-eqz v2, :cond_10e
+    if-eqz v2, :cond_115
 
-    .line 1432
+    .line 1509
     invoke-virtual {v3}, Ljava/lang/StringBuilder;->length()I
 
     move-result v2
 
-    if-le v2, v7, :cond_9e
+    if-le v2, v7, :cond_a0
 
     const/4 v2, 0x2
 
-    goto :goto_9f
+    goto :goto_a1
 
-    :cond_9e
+    :cond_a0
     const/4 v2, 0x1
 
-    :goto_9f
+    :goto_a1
     new-array v10, v2, [Ljava/lang/String;
 
-    .line 1433
+    .line 1510
     invoke-virtual {v3, v5, v7}, Ljava/lang/StringBuilder;->substring(II)Ljava/lang/String;
 
     move-result-object v11
 
     aput-object v11, v10, v5
 
-    if-ne v2, v7, :cond_af
+    if-ne v2, v7, :cond_b1
 
-    .line 1435
+    .line 1512
     invoke-virtual {v3, v7}, Ljava/lang/StringBuilder;->substring(I)Ljava/lang/String;
 
     move-result-object v11
 
     aput-object v11, v10, v0
 
-    .line 1437
-    :cond_af
+    .line 1514
+    :cond_b1
     invoke-virtual {v3}, Ljava/lang/StringBuilder;->length()I
 
     move-result v11
 
-    if-ne v11, v6, :cond_f0
+    if-ne v11, v6, :cond_f5
 
-    if-ne v2, v7, :cond_f0
+    if-ne v2, v7, :cond_f5
 
-    .line 1438
+    .line 1515
     aget-object v2, v10, v5
 
     invoke-static {v2}, Lorg/telegram/messenger/Utilities;->parseInt(Ljava/lang/CharSequence;)Ljava/lang/Integer;
@@ -280,7 +282,7 @@
 
     move-result v2
 
-    .line 1439
+    .line 1516
     aget-object v8, v10, v0
 
     invoke-static {v8}, Lorg/telegram/messenger/Utilities;->parseInt(Ljava/lang/CharSequence;)Ljava/lang/Integer;
@@ -293,31 +295,31 @@
 
     add-int/lit16 v8, v8, 0x7d0
 
-    .line 1440
+    .line 1517
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
     move-result-object v10
 
-    .line 1441
+    .line 1518
     invoke-virtual {v10, v0}, Ljava/util/Calendar;->get(I)I
 
     move-result v11
 
-    .line 1442
+    .line 1519
     invoke-virtual {v10, v7}, Ljava/util/Calendar;->get(I)I
 
     move-result v10
 
     add-int/2addr v10, v0
 
-    if-lt v8, v11, :cond_e0
+    if-lt v8, v11, :cond_e2
 
-    if-ne v8, v11, :cond_157
+    if-ne v8, v11, :cond_160
 
-    if-ge v2, v10, :cond_157
+    if-ge v2, v10, :cond_160
 
-    .line 1444
-    :cond_e0
+    .line 1521
+    :cond_e2
     iget-object v2, p0, Lorg/telegram/ui/PaymentFormActivity$8;->this$0:Lorg/telegram/ui/PaymentFormActivity;
 
     invoke-static {v2}, Lorg/telegram/ui/PaymentFormActivity;->access$1500(Lorg/telegram/ui/PaymentFormActivity;)[Lorg/telegram/ui/Components/EditTextBoldCursor;
@@ -326,16 +328,18 @@
 
     aget-object v2, v2, v0
 
-    invoke-static {v9}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
+    iget-object v8, p0, Lorg/telegram/ui/PaymentFormActivity$8;->this$0:Lorg/telegram/ui/PaymentFormActivity;
+
+    invoke-virtual {v8, v9}, Lorg/telegram/ui/ActionBar/BaseFragment;->getThemedColor(Ljava/lang/String;)I
 
     move-result v8
 
     invoke-virtual {v2, v8}, Landroid/widget/EditText;->setTextColor(I)V
 
-    goto :goto_158
+    goto/16 :goto_161
 
-    .line 1448
-    :cond_f0
+    .line 1525
+    :cond_f5
     aget-object v2, v10, v5
 
     invoke-static {v2}, Lorg/telegram/messenger/Utilities;->parseInt(Ljava/lang/CharSequence;)Ljava/lang/Integer;
@@ -346,12 +350,12 @@
 
     move-result v2
 
-    if-gt v2, v8, :cond_fe
+    if-gt v2, v8, :cond_103
 
-    if-nez v2, :cond_157
+    if-nez v2, :cond_160
 
-    .line 1450
-    :cond_fe
+    .line 1527
+    :cond_103
     iget-object v2, p0, Lorg/telegram/ui/PaymentFormActivity$8;->this$0:Lorg/telegram/ui/PaymentFormActivity;
 
     invoke-static {v2}, Lorg/telegram/ui/PaymentFormActivity;->access$1500(Lorg/telegram/ui/PaymentFormActivity;)[Lorg/telegram/ui/Components/EditTextBoldCursor;
@@ -360,23 +364,25 @@
 
     aget-object v2, v2, v0
 
-    invoke-static {v9}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
+    iget-object v8, p0, Lorg/telegram/ui/PaymentFormActivity$8;->this$0:Lorg/telegram/ui/PaymentFormActivity;
+
+    invoke-virtual {v8, v9}, Lorg/telegram/ui/ActionBar/BaseFragment;->getThemedColor(Ljava/lang/String;)I
 
     move-result v8
 
     invoke-virtual {v2, v8}, Landroid/widget/EditText;->setTextColor(I)V
 
-    goto :goto_158
+    goto :goto_161
 
-    .line 1455
-    :cond_10e
+    .line 1532
+    :cond_115
     invoke-virtual {v3}, Ljava/lang/StringBuilder;->length()I
 
     move-result v2
 
-    if-ne v2, v0, :cond_12c
+    if-ne v2, v0, :cond_133
 
-    .line 1456
+    .line 1533
     invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v2
@@ -389,28 +395,28 @@
 
     move-result v2
 
-    if-eq v2, v0, :cond_157
+    if-eq v2, v0, :cond_160
 
-    if-eqz v2, :cond_157
+    if-eqz v2, :cond_160
 
     const-string v0, "0"
 
-    .line 1458
+    .line 1535
     invoke-virtual {v3, v5, v0}, Ljava/lang/StringBuilder;->insert(ILjava/lang/String;)Ljava/lang/StringBuilder;
 
     add-int/lit8 v1, v1, 0x1
 
-    goto :goto_157
+    goto :goto_160
 
-    .line 1461
-    :cond_12c
+    .line 1538
+    :cond_133
     invoke-virtual {v3}, Ljava/lang/StringBuilder;->length()I
 
     move-result v2
 
-    if-ne v2, v7, :cond_157
+    if-ne v2, v7, :cond_160
 
-    .line 1462
+    .line 1539
     invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v2
@@ -423,20 +429,20 @@
 
     move-result v2
 
-    if-gt v2, v8, :cond_145
+    if-gt v2, v8, :cond_14c
 
-    if-nez v2, :cond_143
+    if-nez v2, :cond_14a
 
-    goto :goto_145
+    goto :goto_14c
 
-    :cond_143
+    :cond_14a
     const/4 v0, 0x0
 
-    goto :goto_154
+    goto :goto_15d
 
-    .line 1464
-    :cond_145
-    :goto_145
+    .line 1541
+    :cond_14c
+    :goto_14c
     iget-object v2, p0, Lorg/telegram/ui/PaymentFormActivity$8;->this$0:Lorg/telegram/ui/PaymentFormActivity;
 
     invoke-static {v2}, Lorg/telegram/ui/PaymentFormActivity;->access$1500(Lorg/telegram/ui/PaymentFormActivity;)[Lorg/telegram/ui/Components/EditTextBoldCursor;
@@ -445,32 +451,34 @@
 
     aget-object v2, v2, v0
 
-    invoke-static {v9}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
+    iget-object v8, p0, Lorg/telegram/ui/PaymentFormActivity$8;->this$0:Lorg/telegram/ui/PaymentFormActivity;
+
+    invoke-virtual {v8, v9}, Lorg/telegram/ui/ActionBar/BaseFragment;->getThemedColor(Ljava/lang/String;)I
 
     move-result v8
 
     invoke-virtual {v2, v8}, Landroid/widget/EditText;->setTextColor(I)V
 
-    :goto_154
+    :goto_15d
     add-int/lit8 v1, v1, 0x1
 
-    goto :goto_158
+    goto :goto_161
 
-    :cond_157
-    :goto_157
+    :cond_160
+    :goto_160
     const/4 v0, 0x0
 
-    :goto_158
-    if-nez v0, :cond_174
+    :goto_161
+    if-nez v0, :cond_17d
 
-    .line 1470
+    .line 1547
     invoke-virtual {v3}, Ljava/lang/StringBuilder;->length()I
 
     move-result v0
 
-    if-ne v0, v6, :cond_174
+    if-ne v0, v6, :cond_17d
 
-    .line 1471
+    .line 1548
     iget-object v0, p0, Lorg/telegram/ui/PaymentFormActivity$8;->this$0:Lorg/telegram/ui/PaymentFormActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/PaymentFormActivity;->access$1500(Lorg/telegram/ui/PaymentFormActivity;)[Lorg/telegram/ui/Components/EditTextBoldCursor;
@@ -483,60 +491,60 @@
 
     move-result v2
 
-    if-eqz v2, :cond_16f
+    if-eqz v2, :cond_178
 
     const/4 v4, 0x2
 
-    :cond_16f
+    :cond_178
     aget-object v0, v0, v4
 
     invoke-virtual {v0}, Landroid/widget/EditText;->requestFocus()Z
 
-    .line 1473
-    :cond_174
+    .line 1550
+    :cond_17d
     invoke-virtual {v3}, Ljava/lang/StringBuilder;->length()I
 
     move-result v0
 
     const/16 v2, 0x2f
 
-    if-ne v0, v7, :cond_182
+    if-ne v0, v7, :cond_18b
 
-    .line 1474
+    .line 1551
     invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    :goto_17f
+    :goto_188
     add-int/lit8 v1, v1, 0x1
 
-    goto :goto_192
+    goto :goto_19b
 
-    .line 1476
-    :cond_182
+    .line 1553
+    :cond_18b
     invoke-virtual {v3}, Ljava/lang/StringBuilder;->length()I
 
     move-result v0
 
-    if-le v0, v7, :cond_192
+    if-le v0, v7, :cond_19b
 
     invoke-virtual {v3, v7}, Ljava/lang/StringBuilder;->charAt(I)C
 
     move-result v0
 
-    if-eq v0, v2, :cond_192
+    if-eq v0, v2, :cond_19b
 
-    .line 1477
+    .line 1554
     invoke-virtual {v3, v7, v2}, Ljava/lang/StringBuilder;->insert(IC)Ljava/lang/StringBuilder;
 
-    goto :goto_17f
+    goto :goto_188
 
-    .line 1481
-    :cond_192
-    :goto_192
+    .line 1558
+    :cond_19b
+    :goto_19b
     invoke-virtual {p1, v3}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
-    if-ltz v1, :cond_1a2
+    if-ltz v1, :cond_1ab
 
-    .line 1483
+    .line 1560
     invoke-virtual {p1}, Landroid/widget/EditText;->length()I
 
     move-result v0
@@ -547,8 +555,8 @@
 
     invoke-virtual {p1, v0}, Landroid/widget/EditText;->setSelection(I)V
 
-    .line 1485
-    :cond_1a2
+    .line 1562
+    :cond_1ab
     iget-object p1, p0, Lorg/telegram/ui/PaymentFormActivity$8;->this$0:Lorg/telegram/ui/PaymentFormActivity;
 
     invoke-static {p1, v5}, Lorg/telegram/ui/PaymentFormActivity;->access$2702(Lorg/telegram/ui/PaymentFormActivity;Z)Z
@@ -571,7 +579,7 @@
 
     if-ne p4, v3, :cond_21
 
-    .line 1382
+    .line 1459
     iget-object p1, p0, Lorg/telegram/ui/PaymentFormActivity$8;->this$0:Lorg/telegram/ui/PaymentFormActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/PaymentFormActivity;->access$1500(Lorg/telegram/ui/PaymentFormActivity;)[Lorg/telegram/ui/Components/EditTextBoldCursor;
@@ -595,7 +603,7 @@
     :cond_1c
     iput-boolean v0, p0, Lorg/telegram/ui/PaymentFormActivity$8;->isYear:Z
 
-    .line 1383
+    .line 1460
     iput v3, p0, Lorg/telegram/ui/PaymentFormActivity$8;->characterAction:I
 
     goto :goto_3c
@@ -605,7 +613,7 @@
 
     if-nez p4, :cond_3a
 
-    .line 1385
+    .line 1462
     invoke-interface {p1, p2}, Ljava/lang/CharSequence;->charAt(I)C
 
     move-result p1
@@ -614,17 +622,17 @@
 
     if-lez p2, :cond_36
 
-    .line 1386
+    .line 1463
     iput-boolean v0, p0, Lorg/telegram/ui/PaymentFormActivity$8;->isYear:Z
 
     const/4 p1, 0x3
 
-    .line 1387
+    .line 1464
     iput p1, p0, Lorg/telegram/ui/PaymentFormActivity$8;->characterAction:I
 
     sub-int/2addr p2, v3
 
-    .line 1388
+    .line 1465
     iput p2, p0, Lorg/telegram/ui/PaymentFormActivity$8;->actionPosition:I
 
     goto :goto_3c
@@ -632,12 +640,12 @@
     :cond_36
     const/4 p1, 0x2
 
-    .line 1390
+    .line 1467
     iput p1, p0, Lorg/telegram/ui/PaymentFormActivity$8;->characterAction:I
 
     goto :goto_3c
 
-    .line 1393
+    .line 1470
     :cond_3a
     iput v2, p0, Lorg/telegram/ui/PaymentFormActivity$8;->characterAction:I
 

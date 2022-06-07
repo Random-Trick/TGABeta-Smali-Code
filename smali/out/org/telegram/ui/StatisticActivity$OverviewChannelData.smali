@@ -95,7 +95,7 @@
     move-result v5
 
     :goto_23
-    const v6, 0x7f0e075b
+    const v6, 0x7f0e07b1
 
     const-string v9, "FollowersChartTitle"
 
@@ -310,7 +310,7 @@
     move-result v3
 
     :goto_d3
-    const v4, 0x7f0e1053
+    const v4, 0x7f0e1111
 
     const-string v5, "SharesPerPost"
 
@@ -509,7 +509,7 @@
     move-result v4
 
     :goto_175
-    const v3, 0x7f0e12ae
+    const v3, 0x7f0e137c
 
     const-string v5, "ViewsPerPost"
 
@@ -681,7 +681,7 @@
 
     double-to-float v1, v2
 
-    const v2, 0x7f0e0640
+    const v2, 0x7f0e0692
 
     const-string v3, "EnabledNotifications"
 

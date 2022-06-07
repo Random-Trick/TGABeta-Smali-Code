@@ -1,30 +1,41 @@
 .class final Lj$/util/stream/X1;
-.super Lj$/util/stream/b2;
+.super Lj$/util/stream/a2;
 
 # interfaces
-.implements Lj$/util/stream/v1;
+.implements Lj$/util/stream/w1;
 
 
 # direct methods
 .method constructor <init>()V
     .registers 1
 
-    invoke-direct {p0}, Lj$/util/stream/b2;-><init>()V
+    invoke-direct {p0}, Lj$/util/stream/a2;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public synthetic a([Ljava/lang/Double;I)V
+.method public synthetic a([Ljava/lang/Integer;I)V
     .registers 3
 
-    invoke-static {p0, p1, p2}, Lj$/util/stream/p1;->h(Lj$/util/stream/v1;[Ljava/lang/Double;I)V
+    invoke-static {p0, p1, p2}, Lj$/util/stream/o1;->i(Lj$/util/stream/w1;[Ljava/lang/Integer;I)V
 
     return-void
 .end method
 
-.method public b(I)Lj$/util/stream/A1;
+.method public bridge synthetic b(I)Lj$/util/stream/A1;
+    .registers 2
+
+    .line 2
+    invoke-virtual {p0, p1}, Lj$/util/stream/X1;->b(I)Lj$/util/stream/z1;
+
+    const/4 p1, 0x0
+
+    throw p1
+.end method
+
+.method public b(I)Lj$/util/stream/z1;
     .registers 2
 
     .line 1
@@ -35,32 +46,21 @@
     throw p1
 .end method
 
-.method public bridge synthetic b(I)Lj$/util/stream/B1;
-    .registers 2
-
-    .line 2
-    invoke-virtual {p0, p1}, Lj$/util/stream/X1;->b(I)Lj$/util/stream/A1;
-
-    const/4 p1, 0x0
-
-    throw p1
-.end method
-
 .method public e()Ljava/lang/Object;
     .registers 2
 
     .line 1
-    invoke-static {}, Lj$/util/stream/y2;->c()[D
+    invoke-static {}, Lj$/util/stream/x2;->a()[I
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public synthetic f(JJLj$/util/function/m;)Lj$/util/stream/v1;
+.method public synthetic f(JJLj$/util/function/m;)Lj$/util/stream/w1;
     .registers 6
 
-    invoke-static/range {p0 .. p5}, Lj$/util/stream/p1;->n(Lj$/util/stream/v1;JJLj$/util/function/m;)Lj$/util/stream/v1;
+    invoke-static/range {p0 .. p5}, Lj$/util/stream/o1;->o(Lj$/util/stream/w1;JJLj$/util/function/m;)Lj$/util/stream/w1;
 
     move-result-object p1
 
@@ -70,7 +70,7 @@
 .method public synthetic forEach(Lj$/util/function/Consumer;)V
     .registers 2
 
-    invoke-static {p0, p1}, Lj$/util/stream/p1;->k(Lj$/util/stream/v1;Lj$/util/function/Consumer;)V
+    invoke-static {p0, p1}, Lj$/util/stream/o1;->l(Lj$/util/stream/w1;Lj$/util/function/Consumer;)V
 
     return-void
 .end method
@@ -79,40 +79,40 @@
     .registers 3
 
     .line 1
-    check-cast p1, [Ljava/lang/Double;
+    check-cast p1, [Ljava/lang/Integer;
 
-    invoke-virtual {p0, p1, p2}, Lj$/util/stream/X1;->a([Ljava/lang/Double;I)V
+    invoke-virtual {p0, p1, p2}, Lj$/util/stream/X1;->a([Ljava/lang/Integer;I)V
 
     return-void
 .end method
 
-.method public bridge synthetic r(JJLj$/util/function/m;)Lj$/util/stream/B1;
+.method public bridge synthetic r(JJLj$/util/function/m;)Lj$/util/stream/A1;
     .registers 6
 
     .line 1
-    invoke-virtual/range {p0 .. p5}, Lj$/util/stream/X1;->f(JJLj$/util/function/m;)Lj$/util/stream/v1;
+    invoke-virtual/range {p0 .. p5}, Lj$/util/stream/X1;->f(JJLj$/util/function/m;)Lj$/util/stream/w1;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public spliterator()Lj$/util/x;
+.method public spliterator()Lj$/util/u;
     .registers 2
 
-    .line 1
-    invoke-static {}, Lj$/util/N;->b()Lj$/util/u;
+    .line 2
+    invoke-static {}, Lj$/util/L;->c()Lj$/util/u$a;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public spliterator()Lj$/util/y;
+.method public spliterator()Lj$/util/w;
     .registers 2
 
-    .line 2
-    invoke-static {}, Lj$/util/N;->b()Lj$/util/u;
+    .line 1
+    invoke-static {}, Lj$/util/L;->c()Lj$/util/u$a;
 
     move-result-object v0
 

@@ -17,7 +17,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 24752
+    .line 25019
     invoke-direct {p0}, Lorg/telegram/tgnet/TLRPC$SecureValueType;-><init>()V
 
     return-void
@@ -28,7 +28,7 @@
 .method public serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
     .registers 3
 
-    .line 24757
+    .line 25024
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_secureValueTypeInternalPassport;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V

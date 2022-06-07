@@ -2723,7 +2723,7 @@
     .line 255
     iget-object v2, v0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
-    const v3, 0x7f070140
+    const v3, 0x7f070109
 
     invoke-virtual {v2, v3}, Lorg/telegram/ui/ActionBar/ActionBar;->setBackButtonImage(I)V
 
@@ -2959,7 +2959,7 @@
     :goto_dd
     iget v5, v0, Lorg/telegram/ui/CameraScanActivity;->currentType:I
 
-    const v9, 0x7f0e021a
+    const v9, 0x7f0e024f
 
     const-string v10, "AuthAnotherClientScan"
 
@@ -3083,7 +3083,7 @@
     .line 556
     iget-object v1, v0, Lorg/telegram/ui/CameraScanActivity;->titleTextView:Landroid/widget/TextView;
 
-    const v2, 0x7f0e0cad
+    const v2, 0x7f0e0d37
 
     const-string v3, "PassportScanPassport"
 
@@ -3096,7 +3096,7 @@
     .line 557
     iget-object v1, v0, Lorg/telegram/ui/CameraScanActivity;->descriptionText:Landroid/widget/TextView;
 
-    const v2, 0x7f0e0cae
+    const v2, 0x7f0e0d38
 
     const-string v3, "PassportScanPassportInfo"
 
@@ -3149,7 +3149,7 @@
     goto/16 :goto_22d
 
     :cond_199
-    const v5, 0x7f0e0217
+    const v5, 0x7f0e024c
 
     const-string v9, "AuthAnotherClientInfo5"
 
@@ -3165,7 +3165,7 @@
 
     new-array v5, v6, [Ljava/lang/String;
 
-    const v10, 0x7f0e0212
+    const v10, 0x7f0e0247
 
     const-string v12, "AuthAnotherClientDownloadClientUrl"
 
@@ -3176,7 +3176,7 @@
 
     aput-object v10, v5, v4
 
-    const v10, 0x7f0e021d
+    const v10, 0x7f0e0252
 
     const-string v12, "AuthAnotherWebClientUrl"
 
@@ -3345,7 +3345,7 @@
     :cond_24f
     iget-object v3, v0, Lorg/telegram/ui/CameraScanActivity;->recognizedMrzView:Landroid/widget/TextView;
 
-    const v4, 0x7f0e0218
+    const v4, 0x7f0e024d
 
     const-string v5, "AuthAnotherClientNotFound"
 
@@ -3383,7 +3383,7 @@
     .line 613
     iget-object v3, v0, Lorg/telegram/ui/CameraScanActivity;->galleryButton:Landroid/widget/ImageView;
 
-    const v5, 0x7f07038a
+    const v5, 0x7f070398
 
     invoke-virtual {v3, v5}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -3444,7 +3444,7 @@
     .line 669
     iget-object v1, v0, Lorg/telegram/ui/CameraScanActivity;->flashButton:Landroid/widget/ImageView;
 
-    const v3, 0x7f070389
+    const v3, 0x7f070397
 
     invoke-virtual {v1, v3}, Landroid/widget/ImageView;->setImageResource(I)V
 

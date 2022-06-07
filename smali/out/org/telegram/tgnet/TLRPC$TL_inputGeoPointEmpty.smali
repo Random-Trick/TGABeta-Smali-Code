@@ -17,7 +17,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 8869
+    .line 9032
     invoke-direct {p0}, Lorg/telegram/tgnet/TLRPC$InputGeoPoint;-><init>()V
 
     return-void
@@ -28,7 +28,7 @@
 .method public serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
     .registers 3
 
-    .line 8874
+    .line 9037
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_inputGeoPointEmpty;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V

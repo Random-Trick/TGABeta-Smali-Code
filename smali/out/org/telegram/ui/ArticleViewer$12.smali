@@ -21,7 +21,7 @@
 .method constructor <init>(Lorg/telegram/ui/ArticleViewer;)V
     .registers 2
 
-    .line 3377
+    .line 3378
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

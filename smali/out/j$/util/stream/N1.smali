@@ -1,60 +1,144 @@
-.class public final synthetic Lj$/util/stream/N1;
-.super Ljava/lang/Object;
-
-# interfaces
-.implements Lj$/util/function/b;
+.class Lj$/util/stream/N1;
+.super Lj$/util/stream/f;
 
 
-# static fields
-.field public static final synthetic a:Lj$/util/stream/N1;
+# instance fields
+.field protected final h:Lj$/util/stream/y2;
+
+.field protected final i:Lj$/util/function/r;
+
+.field protected final j:Lj$/util/function/b;
 
 
 # direct methods
-.method static synthetic constructor <clinit>()V
-    .registers 1
+.method constructor <init>(Lj$/util/stream/N1;Lj$/util/u;)V
+    .registers 3
 
-    new-instance v0, Lj$/util/stream/N1;
+    invoke-direct {p0, p1, p2}, Lj$/util/stream/f;-><init>(Lj$/util/stream/f;Lj$/util/u;)V
 
-    invoke-direct {v0}, Lj$/util/stream/N1;-><init>()V
+    iget-object p2, p1, Lj$/util/stream/N1;->h:Lj$/util/stream/y2;
 
-    sput-object v0, Lj$/util/stream/N1;->a:Lj$/util/stream/N1;
+    iput-object p2, p0, Lj$/util/stream/N1;->h:Lj$/util/stream/y2;
+
+    iget-object p2, p1, Lj$/util/stream/N1;->i:Lj$/util/function/r;
+
+    iput-object p2, p0, Lj$/util/stream/N1;->i:Lj$/util/function/r;
+
+    iget-object p1, p1, Lj$/util/stream/N1;->j:Lj$/util/function/b;
+
+    iput-object p1, p0, Lj$/util/stream/N1;->j:Lj$/util/function/b;
 
     return-void
 .end method
 
-.method private synthetic constructor <init>()V
-    .registers 1
+.method constructor <init>(Lj$/util/stream/y2;Lj$/util/u;Lj$/util/function/r;Lj$/util/function/b;)V
+    .registers 5
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2}, Lj$/util/stream/f;-><init>(Lj$/util/stream/y2;Lj$/util/u;)V
+
+    iput-object p1, p0, Lj$/util/stream/N1;->h:Lj$/util/stream/y2;
+
+    iput-object p3, p0, Lj$/util/stream/N1;->i:Lj$/util/function/r;
+
+    iput-object p4, p0, Lj$/util/stream/N1;->j:Lj$/util/function/b;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public andThen(Lj$/util/function/Function;)Lj$/util/function/BiFunction;
-    .registers 3
+.method protected a()Ljava/lang/Object;
+    .registers 4
 
     .line 1
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget-object v0, p0, Lj$/util/stream/N1;->i:Lj$/util/function/r;
 
-    new-instance v0, Lj$/util/concurrent/a;
+    iget-object v1, p0, Lj$/util/stream/N1;->h:Lj$/util/stream/y2;
 
-    invoke-direct {v0, p0, p1}, Lj$/util/concurrent/a;-><init>(Lj$/util/function/BiFunction;Lj$/util/function/Function;)V
+    iget-object v2, p0, Lj$/util/stream/f;->b:Lj$/util/u;
+
+    invoke-virtual {v1, v2}, Lj$/util/stream/y2;->q0(Lj$/util/u;)J
+
+    move-result-wide v1
+
+    invoke-interface {v0, v1, v2}, Lj$/util/function/r;->apply(J)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lj$/util/stream/s1;
+
+    iget-object v1, p0, Lj$/util/stream/N1;->h:Lj$/util/stream/y2;
+
+    iget-object v2, p0, Lj$/util/stream/f;->b:Lj$/util/u;
+
+    invoke-virtual {v1, v0, v2}, Lj$/util/stream/y2;->u0(Lj$/util/stream/m3;Lj$/util/u;)Lj$/util/stream/m3;
+
+    invoke-interface {v0}, Lj$/util/stream/s1;->a()Lj$/util/stream/A1;
+
+    move-result-object v0
 
     return-object v0
 .end method
 
-.method public final apply(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .registers 4
+.method protected f(Lj$/util/u;)Lj$/util/stream/f;
+    .registers 3
 
-    new-instance v0, Lj$/util/stream/T1;
+    .line 1
+    new-instance v0, Lj$/util/stream/N1;
 
-    check-cast p1, Lj$/util/stream/B1;
-
-    check-cast p2, Lj$/util/stream/B1;
-
-    invoke-direct {v0, p1, p2}, Lj$/util/stream/T1;-><init>(Lj$/util/stream/B1;Lj$/util/stream/B1;)V
+    invoke-direct {v0, p0, p1}, Lj$/util/stream/N1;-><init>(Lj$/util/stream/N1;Lj$/util/u;)V
 
     return-object v0
+.end method
+
+.method public onCompletion(Ljava/util/concurrent/CountedCompleter;)V
+    .registers 4
+
+    invoke-virtual {p0}, Lj$/util/stream/f;->d()Z
+
+    move-result p1
+
+    if-nez p1, :cond_25
+
+    iget-object p1, p0, Lj$/util/stream/N1;->j:Lj$/util/function/b;
+
+    iget-object v0, p0, Lj$/util/stream/f;->d:Lj$/util/stream/f;
+
+    check-cast v0, Lj$/util/stream/N1;
+
+    invoke-virtual {v0}, Lj$/util/stream/f;->b()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lj$/util/stream/A1;
+
+    iget-object v1, p0, Lj$/util/stream/f;->e:Lj$/util/stream/f;
+
+    check-cast v1, Lj$/util/stream/N1;
+
+    invoke-virtual {v1}, Lj$/util/stream/f;->b()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lj$/util/stream/A1;
+
+    invoke-interface {p1, v0, v1}, Lj$/util/function/BiFunction;->apply(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lj$/util/stream/A1;
+
+    invoke-virtual {p0, p1}, Lj$/util/stream/f;->g(Ljava/lang/Object;)V
+
+    :cond_25
+    const/4 p1, 0x0
+
+    .line 1
+    iput-object p1, p0, Lj$/util/stream/f;->b:Lj$/util/u;
+
+    iput-object p1, p0, Lj$/util/stream/f;->e:Lj$/util/stream/f;
+
+    iput-object p1, p0, Lj$/util/stream/f;->d:Lj$/util/stream/f;
+
+    return-void
 .end method

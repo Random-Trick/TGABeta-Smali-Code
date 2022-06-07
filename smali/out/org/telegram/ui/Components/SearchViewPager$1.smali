@@ -19,13 +19,13 @@
 
 
 # direct methods
-.method constructor <init>(Lorg/telegram/ui/Components/SearchViewPager;Landroid/content/Context;II)V
-    .registers 5
+.method constructor <init>(Lorg/telegram/ui/Components/SearchViewPager;Landroid/content/Context;IILandroidx/recyclerview/widget/DefaultItemAnimator;)V
+    .registers 6
 
-    .line 102
+    .line 118
     iput-object p1, p0, Lorg/telegram/ui/Components/SearchViewPager$1;->this$0:Lorg/telegram/ui/Components/SearchViewPager;
 
-    invoke-direct {p0, p2, p3, p4}, Lorg/telegram/ui/Adapters/DialogsSearchAdapter;-><init>(Landroid/content/Context;II)V
+    invoke-direct {p0, p2, p3, p4, p5}, Lorg/telegram/ui/Adapters/DialogsSearchAdapter;-><init>(Landroid/content/Context;IILandroidx/recyclerview/widget/DefaultItemAnimator;)V
 
     return-void
 .end method
@@ -35,15 +35,15 @@
 .method public notifyDataSetChanged()V
     .registers 5
 
-    .line 105
+    .line 121
     invoke-virtual {p0}, Lorg/telegram/ui/Adapters/DialogsSearchAdapter;->getCurrentItemCount()I
 
     move-result v0
 
-    .line 106
+    .line 122
     invoke-super {p0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->notifyDataSetChanged()V
 
-    .line 107
+    .line 123
     iget-object v1, p0, Lorg/telegram/ui/Components/SearchViewPager$1;->this$0:Lorg/telegram/ui/Components/SearchViewPager;
 
     invoke-static {v1}, Lorg/telegram/ui/Components/SearchViewPager;->access$000(Lorg/telegram/ui/Components/SearchViewPager;)Z
@@ -60,17 +60,17 @@
 
     if-eqz v1, :cond_1f
 
-    .line 108
+    .line 124
     invoke-virtual {v1, v2}, Landroidx/recyclerview/widget/RecyclerView;->scrollToPosition(I)V
 
-    .line 109
+    .line 125
     iget-object v1, p0, Lorg/telegram/ui/Components/SearchViewPager$1;->this$0:Lorg/telegram/ui/Components/SearchViewPager;
 
     const/4 v3, 0x1
 
     invoke-static {v1, v3}, Lorg/telegram/ui/Components/SearchViewPager;->access$002(Lorg/telegram/ui/Components/SearchViewPager;Z)Z
 
-    .line 111
+    .line 127
     :cond_1f
     invoke-virtual {p0}, Lorg/telegram/ui/Adapters/DialogsSearchAdapter;->getItemCount()I
 
@@ -86,7 +86,7 @@
 
     if-nez v0, :cond_34
 
-    .line 112
+    .line 128
     iget-object v0, p0, Lorg/telegram/ui/Components/SearchViewPager$1;->this$0:Lorg/telegram/ui/Components/SearchViewPager;
 
     iget-object v0, v0, Lorg/telegram/ui/Components/SearchViewPager;->emptyView:Lorg/telegram/ui/Components/StickerEmptyView;

@@ -24,7 +24,7 @@
 .method constructor <init>(Lorg/telegram/ui/ChatActivity;Landroid/content/Context;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;Lorg/telegram/ui/ContentPreviewViewer$ContentPreviewViewerDelegate;)V
     .registers 5
 
-    .line 7637
+    .line 7786
     iput-object p1, p0, Lorg/telegram/ui/ChatActivity$39;->this$0:Lorg/telegram/ui/ChatActivity;
 
     iput-object p4, p0, Lorg/telegram/ui/ChatActivity$39;->val$contentPreviewViewerDelegate:Lorg/telegram/ui/ContentPreviewViewer$ContentPreviewViewerDelegate;
@@ -39,14 +39,14 @@
 .method public onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
     .registers 8
 
-    .line 7640
+    .line 7789
     invoke-static {}, Lorg/telegram/ui/ContentPreviewViewer;->getInstance()Lorg/telegram/ui/ContentPreviewViewer;
 
     move-result-object v0
 
     iget-object v1, p0, Lorg/telegram/ui/ChatActivity$39;->this$0:Lorg/telegram/ui/ChatActivity;
 
-    invoke-static {v1}, Lorg/telegram/ui/ChatActivity;->access$29400(Lorg/telegram/ui/ChatActivity;)Lorg/telegram/ui/Components/RecyclerListView;
+    invoke-static {v1}, Lorg/telegram/ui/ChatActivity;->access$29900(Lorg/telegram/ui/ChatActivity;)Lorg/telegram/ui/Components/RecyclerListView;
 
     move-result-object v2
 
@@ -54,9 +54,7 @@
 
     iget-object v1, p0, Lorg/telegram/ui/ChatActivity$39;->this$0:Lorg/telegram/ui/ChatActivity;
 
-    invoke-static {v1}, Lorg/telegram/ui/ChatActivity;->access$3100(Lorg/telegram/ui/ChatActivity;)Lorg/telegram/ui/ChatActivity$ThemeDelegate;
-
-    move-result-object v5
+    iget-object v5, v1, Lorg/telegram/ui/ChatActivity;->themeDelegate:Lorg/telegram/ui/ChatActivity$ThemeDelegate;
 
     const/4 v3, 0x0
 
@@ -66,26 +64,26 @@
 
     move-result v0
 
-    .line 7641
+    .line 7790
     invoke-super {p0, p1}, Lorg/telegram/ui/Components/RecyclerListView;->onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
 
     move-result p1
 
-    if-nez p1, :cond_23
+    if-nez p1, :cond_21
 
-    if-eqz v0, :cond_21
+    if-eqz v0, :cond_1f
 
-    goto :goto_23
+    goto :goto_21
 
-    :cond_21
+    :cond_1f
     const/4 p1, 0x0
 
-    goto :goto_24
+    goto :goto_22
 
-    :cond_23
-    :goto_23
+    :cond_21
+    :goto_21
     const/4 p1, 0x1
 
-    :goto_24
+    :goto_22
     return p1
 .end method

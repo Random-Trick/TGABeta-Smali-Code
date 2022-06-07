@@ -24,7 +24,7 @@
 .method constructor <init>(Lorg/telegram/ui/ChannelCreateActivity;Landroid/content/Context;)V
     .registers 3
 
-    .line 323
+    .line 373
     iput-object p1, p0, Lorg/telegram/ui/ChannelCreateActivity$2;->this$0:Lorg/telegram/ui/ChannelCreateActivity;
 
     invoke-direct {p0, p2}, Lorg/telegram/ui/Components/SizeNotifierFrameLayout;-><init>(Landroid/content/Context;)V
@@ -37,19 +37,19 @@
 .method protected onLayout(ZIIII)V
     .registers 16
 
-    .line 368
+    .line 418
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getChildCount()I
 
     move-result p1
 
-    .line 370
+    .line 420
     invoke-virtual {p0}, Lorg/telegram/ui/Components/SizeNotifierFrameLayout;->measureKeyboardHeight()I
 
     move-result v0
 
     const/high16 v1, 0x41a00000    # 20.0f
 
-    .line 371
+    .line 421
     invoke-static {v1}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v1
@@ -70,7 +70,7 @@
 
     iget-object v1, p0, Lorg/telegram/ui/ChannelCreateActivity$2;->this$0:Lorg/telegram/ui/ChannelCreateActivity;
 
-    invoke-static {v1}, Lorg/telegram/ui/ChannelCreateActivity;->access$200(Lorg/telegram/ui/ChannelCreateActivity;)Lorg/telegram/ui/Components/EditTextEmoji;
+    invoke-static {v1}, Lorg/telegram/ui/ChannelCreateActivity;->access$300(Lorg/telegram/ui/ChannelCreateActivity;)Lorg/telegram/ui/Components/EditTextEmoji;
 
     move-result-object v1
 
@@ -83,19 +83,19 @@
     :cond_26
     const/4 v1, 0x0
 
-    .line 372
+    .line 422
     :goto_27
     invoke-virtual {p0, v1}, Lorg/telegram/ui/Components/SizeNotifierFrameLayout;->setBottomClip(I)V
 
     :goto_2a
     if-ge v2, p1, :cond_cf
 
-    .line 375
+    .line 425
     invoke-virtual {p0, v2}, Landroid/widget/FrameLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v3
 
-    .line 376
+    .line 426
     invoke-virtual {v3}, Landroid/view/View;->getVisibility()I
 
     move-result v4
@@ -106,7 +106,7 @@
 
     goto/16 :goto_cb
 
-    .line 379
+    .line 429
     :cond_3a
     invoke-virtual {v3}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
@@ -114,17 +114,17 @@
 
     check-cast v4, Landroid/widget/FrameLayout$LayoutParams;
 
-    .line 381
+    .line 431
     invoke-virtual {v3}, Landroid/view/View;->getMeasuredWidth()I
 
     move-result v5
 
-    .line 382
+    .line 432
     invoke-virtual {v3}, Landroid/view/View;->getMeasuredHeight()I
 
     move-result v6
 
-    .line 387
+    .line 437
     iget v7, v4, Landroid/widget/FrameLayout$LayoutParams;->gravity:I
 
     const/4 v8, -0x1
@@ -148,7 +148,7 @@
 
     if-eq v8, v9, :cond_5e
 
-    .line 404
+    .line 454
     iget v8, v4, Landroid/widget/FrameLayout$LayoutParams;->leftMargin:I
 
     goto :goto_6e
@@ -156,7 +156,7 @@
     :cond_5e
     sub-int v8, p4, v5
 
-    .line 400
+    .line 450
     iget v9, v4, Landroid/widget/FrameLayout$LayoutParams;->rightMargin:I
 
     goto :goto_6d
@@ -166,7 +166,7 @@
 
     sub-int/2addr v8, v5
 
-    .line 397
+    .line 447
     div-int/lit8 v8, v8, 0x2
 
     iget v9, v4, Landroid/widget/FrameLayout$LayoutParams;->leftMargin:I
@@ -191,7 +191,7 @@
 
     if-eq v7, v9, :cond_7d
 
-    .line 418
+    .line 468
     iget v4, v4, Landroid/widget/FrameLayout$LayoutParams;->topMargin:I
 
     goto :goto_99
@@ -203,12 +203,12 @@
 
     sub-int/2addr v7, v6
 
-    .line 415
+    .line 465
     iget v4, v4, Landroid/widget/FrameLayout$LayoutParams;->bottomMargin:I
 
     goto :goto_97
 
-    .line 409
+    .line 459
     :cond_84
     iget v4, v4, Landroid/widget/FrameLayout$LayoutParams;->topMargin:I
 
@@ -227,7 +227,7 @@
 
     sub-int/2addr v7, v6
 
-    .line 412
+    .line 462
     div-int/lit8 v7, v7, 0x2
 
     iget v9, v4, Landroid/widget/FrameLayout$LayoutParams;->topMargin:I
@@ -239,11 +239,11 @@
     :goto_97
     sub-int v4, v7, v4
 
-    .line 421
+    .line 471
     :goto_99
     iget-object v7, p0, Lorg/telegram/ui/ChannelCreateActivity$2;->this$0:Lorg/telegram/ui/ChannelCreateActivity;
 
-    invoke-static {v7}, Lorg/telegram/ui/ChannelCreateActivity;->access$200(Lorg/telegram/ui/ChannelCreateActivity;)Lorg/telegram/ui/Components/EditTextEmoji;
+    invoke-static {v7}, Lorg/telegram/ui/ChannelCreateActivity;->access$300(Lorg/telegram/ui/ChannelCreateActivity;)Lorg/telegram/ui/Components/EditTextEmoji;
 
     move-result-object v7
 
@@ -251,7 +251,7 @@
 
     iget-object v7, p0, Lorg/telegram/ui/ChannelCreateActivity$2;->this$0:Lorg/telegram/ui/ChannelCreateActivity;
 
-    invoke-static {v7}, Lorg/telegram/ui/ChannelCreateActivity;->access$200(Lorg/telegram/ui/ChannelCreateActivity;)Lorg/telegram/ui/Components/EditTextEmoji;
+    invoke-static {v7}, Lorg/telegram/ui/ChannelCreateActivity;->access$300(Lorg/telegram/ui/ChannelCreateActivity;)Lorg/telegram/ui/Components/EditTextEmoji;
 
     move-result-object v7
 
@@ -261,14 +261,14 @@
 
     if-eqz v7, :cond_c6
 
-    .line 422
+    .line 472
     invoke-static {}, Lorg/telegram/messenger/AndroidUtilities;->isTablet()Z
 
     move-result v4
 
     if-eqz v4, :cond_bc
 
-    .line 423
+    .line 473
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getMeasuredHeight()I
 
     move-result v4
@@ -279,7 +279,7 @@
 
     goto :goto_c5
 
-    .line 425
+    .line 475
     :cond_bc
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getMeasuredHeight()I
 
@@ -299,7 +299,7 @@
 
     add-int/2addr v6, v4
 
-    .line 428
+    .line 478
     invoke-virtual {v3, v8, v4, v5, v6}, Landroid/view/View;->layout(IIII)V
 
     :goto_cb
@@ -307,7 +307,7 @@
 
     goto/16 :goto_2a
 
-    .line 431
+    .line 481
     :cond_cf
     invoke-virtual {p0}, Lorg/telegram/ui/Components/SizeNotifierFrameLayout;->notifyHeightChanged()V
 
@@ -317,30 +317,30 @@
 .method protected onMeasure(II)V
     .registers 14
 
-    .line 329
+    .line 379
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result v0
 
-    .line 330
+    .line 380
     invoke-static {p2}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result v1
 
-    .line 332
+    .line 382
     invoke-virtual {p0, v0, v1}, Landroid/widget/FrameLayout;->setMeasuredDimension(II)V
 
-    .line 333
+    .line 383
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getPaddingTop()I
 
     move-result v2
 
     sub-int/2addr v1, v2
 
-    .line 335
+    .line 385
     iget-object v2, p0, Lorg/telegram/ui/ChannelCreateActivity$2;->this$0:Lorg/telegram/ui/ChannelCreateActivity;
 
-    invoke-static {v2}, Lorg/telegram/ui/ChannelCreateActivity;->access$1500(Lorg/telegram/ui/ChannelCreateActivity;)Lorg/telegram/ui/ActionBar/ActionBar;
+    invoke-static {v2}, Lorg/telegram/ui/ChannelCreateActivity;->access$1600(Lorg/telegram/ui/ChannelCreateActivity;)Lorg/telegram/ui/ActionBar/ActionBar;
 
     move-result-object v4
 
@@ -356,14 +356,14 @@
 
     invoke-virtual/range {v3 .. v8}, Landroid/widget/FrameLayout;->measureChildWithMargins(Landroid/view/View;IIII)V
 
-    .line 337
+    .line 387
     invoke-virtual {p0}, Lorg/telegram/ui/Components/SizeNotifierFrameLayout;->measureKeyboardHeight()I
 
     move-result v2
 
     const/high16 v3, 0x41a00000    # 20.0f
 
-    .line 338
+    .line 388
     invoke-static {v3}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v3
@@ -374,22 +374,22 @@
 
     const/4 v2, 0x1
 
-    .line 339
+    .line 389
     iput-boolean v2, p0, Lorg/telegram/ui/ChannelCreateActivity$2;->ignoreLayout:Z
 
-    .line 340
+    .line 390
     iget-object v2, p0, Lorg/telegram/ui/ChannelCreateActivity$2;->this$0:Lorg/telegram/ui/ChannelCreateActivity;
 
-    invoke-static {v2}, Lorg/telegram/ui/ChannelCreateActivity;->access$200(Lorg/telegram/ui/ChannelCreateActivity;)Lorg/telegram/ui/Components/EditTextEmoji;
+    invoke-static {v2}, Lorg/telegram/ui/ChannelCreateActivity;->access$300(Lorg/telegram/ui/ChannelCreateActivity;)Lorg/telegram/ui/Components/EditTextEmoji;
 
     move-result-object v2
 
     invoke-virtual {v2}, Lorg/telegram/ui/Components/EditTextEmoji;->hideEmojiView()V
 
-    .line 341
+    .line 391
     iput-boolean v4, p0, Lorg/telegram/ui/ChannelCreateActivity$2;->ignoreLayout:Z
 
-    .line 344
+    .line 394
     :cond_39
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getChildCount()I
 
@@ -398,14 +398,14 @@
     :goto_3d
     if-ge v4, v2, :cond_d9
 
-    .line 346
+    .line 396
     invoke-virtual {p0, v4}, Landroid/widget/FrameLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v6
 
     if-eqz v6, :cond_d5
 
-    .line 347
+    .line 397
     invoke-virtual {v6}, Landroid/view/View;->getVisibility()I
 
     move-result v3
@@ -416,7 +416,7 @@
 
     iget-object v3, p0, Lorg/telegram/ui/ChannelCreateActivity$2;->this$0:Lorg/telegram/ui/ChannelCreateActivity;
 
-    invoke-static {v3}, Lorg/telegram/ui/ChannelCreateActivity;->access$1600(Lorg/telegram/ui/ChannelCreateActivity;)Lorg/telegram/ui/ActionBar/ActionBar;
+    invoke-static {v3}, Lorg/telegram/ui/ChannelCreateActivity;->access$1700(Lorg/telegram/ui/ChannelCreateActivity;)Lorg/telegram/ui/ActionBar/ActionBar;
 
     move-result-object v3
 
@@ -424,11 +424,11 @@
 
     goto/16 :goto_d5
 
-    .line 350
+    .line 400
     :cond_57
     iget-object v3, p0, Lorg/telegram/ui/ChannelCreateActivity$2;->this$0:Lorg/telegram/ui/ChannelCreateActivity;
 
-    invoke-static {v3}, Lorg/telegram/ui/ChannelCreateActivity;->access$200(Lorg/telegram/ui/ChannelCreateActivity;)Lorg/telegram/ui/Components/EditTextEmoji;
+    invoke-static {v3}, Lorg/telegram/ui/ChannelCreateActivity;->access$300(Lorg/telegram/ui/ChannelCreateActivity;)Lorg/telegram/ui/Components/EditTextEmoji;
 
     move-result-object v3
 
@@ -436,7 +436,7 @@
 
     iget-object v3, p0, Lorg/telegram/ui/ChannelCreateActivity$2;->this$0:Lorg/telegram/ui/ChannelCreateActivity;
 
-    invoke-static {v3}, Lorg/telegram/ui/ChannelCreateActivity;->access$200(Lorg/telegram/ui/ChannelCreateActivity;)Lorg/telegram/ui/Components/EditTextEmoji;
+    invoke-static {v3}, Lorg/telegram/ui/ChannelCreateActivity;->access$300(Lorg/telegram/ui/ChannelCreateActivity;)Lorg/telegram/ui/Components/EditTextEmoji;
 
     move-result-object v3
 
@@ -446,7 +446,7 @@
 
     if-eqz v3, :cond_cd
 
-    .line 351
+    .line 401
     sget-boolean v3, Lorg/telegram/messenger/AndroidUtilities;->isInMultiwindow:Z
 
     const/high16 v5, 0x40000000    # 2.0f
@@ -461,7 +461,7 @@
 
     goto :goto_8a
 
-    .line 358
+    .line 408
     :cond_78
     invoke-static {v0, v5}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
 
@@ -481,7 +481,7 @@
 
     goto :goto_d5
 
-    .line 352
+    .line 402
     :cond_8a
     :goto_8a
     invoke-static {}, Lorg/telegram/messenger/AndroidUtilities;->isTablet()Z
@@ -490,7 +490,7 @@
 
     if-eqz v3, :cond_b8
 
-    .line 353
+    .line 403
     invoke-static {v0, v5}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
 
     move-result v3
@@ -535,7 +535,7 @@
 
     goto :goto_d5
 
-    .line 355
+    .line 405
     :cond_b8
     invoke-static {v0, v5}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
 
@@ -570,7 +570,7 @@
 
     move v9, p2
 
-    .line 361
+    .line 411
     invoke-virtual/range {v5 .. v10}, Landroid/widget/FrameLayout;->measureChildWithMargins(Landroid/view/View;IIII)V
 
     :cond_d5
@@ -586,14 +586,14 @@
 .method public requestLayout()V
     .registers 2
 
-    .line 436
+    .line 486
     iget-boolean v0, p0, Lorg/telegram/ui/ChannelCreateActivity$2;->ignoreLayout:Z
 
     if-eqz v0, :cond_5
 
     return-void
 
-    .line 439
+    .line 489
     :cond_5
     invoke-super {p0}, Landroid/widget/FrameLayout;->requestLayout()V
 

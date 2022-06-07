@@ -18,7 +18,7 @@
 .method constructor <init>(Lorg/telegram/ui/MessageSeenView;Landroid/content/Context;)V
     .registers 3
 
-    .line 250
+    .line 251
     invoke-direct {p0, p2}, Lorg/telegram/ui/Components/RecyclerListView;-><init>(Landroid/content/Context;)V
 
     return-void
@@ -29,14 +29,14 @@
 .method protected onMeasure(II)V
     .registers 6
 
-    .line 253
+    .line 254
     invoke-static {p2}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result p2
 
     const/high16 v0, 0x41000000    # 8.0f
 
-    .line 254
+    .line 255
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v0
@@ -69,7 +69,7 @@
     :goto_1f
     const/high16 v0, 0x40000000    # 2.0f
 
-    .line 260
+    .line 261
     invoke-static {p2, v0}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
 
     move-result p2

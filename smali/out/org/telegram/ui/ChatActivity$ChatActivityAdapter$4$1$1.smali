@@ -26,7 +26,7 @@
 .method constructor <init>(Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$4$1;Ljava/lang/String;)V
     .registers 3
 
-    .line 25506
+    .line 25945
     invoke-direct {p0, p2}, Lorg/telegram/ui/Components/AnimationProperties$FloatProperty;-><init>(Ljava/lang/String;)V
 
     return-void
@@ -37,7 +37,7 @@
 .method public get(Lorg/telegram/ui/Cells/ChatMessageCell;)Ljava/lang/Float;
     .registers 2
 
-    .line 25514
+    .line 25953
     invoke-virtual {p1}, Lorg/telegram/ui/Cells/ChatMessageCell;->getTimeAlpha()F
 
     move-result p1
@@ -52,7 +52,7 @@
 .method public bridge synthetic get(Ljava/lang/Object;)Ljava/lang/Object;
     .registers 2
 
-    .line 25506
+    .line 25945
     check-cast p1, Lorg/telegram/ui/Cells/ChatMessageCell;
 
     invoke-virtual {p0, p1}, Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$4$1$1;->get(Lorg/telegram/ui/Cells/ChatMessageCell;)Ljava/lang/Float;
@@ -65,7 +65,7 @@
 .method public bridge synthetic setValue(Ljava/lang/Object;F)V
     .registers 3
 
-    .line 25506
+    .line 25945
     check-cast p1, Lorg/telegram/ui/Cells/ChatMessageCell;
 
     invoke-virtual {p0, p1, p2}, Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$4$1$1;->setValue(Lorg/telegram/ui/Cells/ChatMessageCell;F)V
@@ -76,7 +76,7 @@
 .method public setValue(Lorg/telegram/ui/Cells/ChatMessageCell;F)V
     .registers 3
 
-    .line 25509
+    .line 25948
     invoke-virtual {p1, p2}, Lorg/telegram/ui/Cells/ChatMessageCell;->setTimeAlpha(F)V
 
     return-void

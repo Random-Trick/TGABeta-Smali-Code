@@ -31,10 +31,10 @@
 .method public constructor <init>()V
     .registers 2
 
-    .line 21427
+    .line 21608
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
-    .line 21431
+    .line 21612
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -47,7 +47,7 @@
 .method public static TLdeserialize(Lorg/telegram/tgnet/AbstractSerializedData;IZ)Lorg/telegram/tgnet/TLRPC$TL_payments_bankCardData;
     .registers 4
 
-    .line 21434
+    .line 21615
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_payments_bankCardData;->constructor:I
 
     if-eq v0, p1, :cond_1e
@@ -58,7 +58,7 @@
 
     return-object p0
 
-    .line 21436
+    .line 21617
     :cond_8
     new-instance p0, Ljava/lang/RuntimeException;
 
@@ -84,13 +84,13 @@
 
     throw p0
 
-    .line 21441
+    .line 21622
     :cond_1e
     new-instance p1, Lorg/telegram/tgnet/TLRPC$TL_payments_bankCardData;
 
     invoke-direct {p1}, Lorg/telegram/tgnet/TLRPC$TL_payments_bankCardData;-><init>()V
 
-    .line 21442
+    .line 21623
     invoke-virtual {p1, p0, p2}, Lorg/telegram/tgnet/TLRPC$TL_payments_bankCardData;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
     return-object p1
@@ -101,14 +101,14 @@
 .method public readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
     .registers 7
 
-    .line 21447
+    .line 21628
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readString(Z)Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_payments_bankCardData;->title:Ljava/lang/String;
 
-    .line 21448
+    .line 21629
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
@@ -123,7 +123,7 @@
 
     return-void
 
-    .line 21451
+    .line 21632
     :cond_13
     new-instance p1, Ljava/lang/RuntimeException;
 
@@ -147,7 +147,7 @@
 
     throw p1
 
-    .line 21455
+    .line 21636
     :cond_28
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
@@ -156,7 +156,7 @@
     :goto_2c
     if-ge v1, v0, :cond_41
 
-    .line 21457
+    .line 21638
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v2
@@ -169,7 +169,7 @@
 
     return-void
 
-    .line 21461
+    .line 21642
     :cond_39
     iget-object v3, p0, Lorg/telegram/tgnet/TLRPC$TL_payments_bankCardData;->open_urls:Ljava/util/ArrayList;
 
@@ -186,29 +186,29 @@
 .method public serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
     .registers 5
 
-    .line 21466
+    .line 21647
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_payments_bankCardData;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 21467
+    .line 21648
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_payments_bankCardData;->title:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeString(Ljava/lang/String;)V
 
     const v0, 0x1cb5c415
 
-    .line 21468
+    .line 21649
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 21469
+    .line 21650
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_payments_bankCardData;->open_urls:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
-    .line 21470
+    .line 21651
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
     const/4 v1, 0x0
@@ -216,7 +216,7 @@
     :goto_1a
     if-ge v1, v0, :cond_2a
 
-    .line 21472
+    .line 21653
     iget-object v2, p0, Lorg/telegram/tgnet/TLRPC$TL_payments_bankCardData;->open_urls:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;

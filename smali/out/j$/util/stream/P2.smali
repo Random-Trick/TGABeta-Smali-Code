@@ -1,155 +1,39 @@
 .class Lj$/util/stream/P2;
 .super Lj$/util/stream/U2;
 
-# interfaces
-.implements Lj$/util/stream/T2;
-.implements Lj$/util/stream/l3;
-
 
 # instance fields
-.field final synthetic b:Lj$/util/function/y;
+.field final synthetic b:Lj$/util/function/o;
 
-.field final synthetic c:Lj$/util/function/v;
-
-.field final synthetic d:Lj$/util/function/b;
+.field final synthetic c:J
 
 
 # direct methods
-.method constructor <init>(Lj$/util/function/y;Lj$/util/function/v;Lj$/util/function/b;)V
-    .registers 4
+.method constructor <init>(Lj$/util/stream/e4;Lj$/util/function/o;J)V
+    .registers 5
 
-    iput-object p1, p0, Lj$/util/stream/P2;->b:Lj$/util/function/y;
+    iput-object p2, p0, Lj$/util/stream/P2;->b:Lj$/util/function/o;
 
-    iput-object p2, p0, Lj$/util/stream/P2;->c:Lj$/util/function/v;
+    iput-wide p3, p0, Lj$/util/stream/P2;->c:J
 
-    iput-object p3, p0, Lj$/util/stream/P2;->d:Lj$/util/function/b;
-
-    invoke-direct {p0}, Lj$/util/stream/U2;-><init>()V
+    invoke-direct {p0, p1}, Lj$/util/stream/U2;-><init>(Lj$/util/stream/e4;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public synthetic accept(D)V
-    .registers 3
-
-    invoke-static {p0}, Lj$/util/stream/p1;->f(Lj$/util/stream/n3;)V
-
-    const/4 p1, 0x0
-
-    throw p1
-.end method
-
-.method public accept(I)V
-    .registers 4
-
-    iget-object v0, p0, Lj$/util/stream/P2;->c:Lj$/util/function/v;
-
-    iget-object v1, p0, Lj$/util/stream/U2;->a:Ljava/lang/Object;
-
-    invoke-interface {v0, v1, p1}, Lj$/util/function/v;->accept(Ljava/lang/Object;I)V
-
-    return-void
-.end method
-
-.method public synthetic accept(J)V
-    .registers 3
-
-    invoke-static {p0}, Lj$/util/stream/p1;->e(Lj$/util/stream/n3;)V
-
-    const/4 p1, 0x0
-
-    throw p1
-.end method
-
-.method public bridge synthetic accept(Ljava/lang/Object;)V
-    .registers 2
+.method public a()Lj$/util/stream/S2;
+    .registers 5
 
     .line 1
-    check-cast p1, Ljava/lang/Integer;
+    new-instance v0, Lj$/util/stream/Q2;
 
-    invoke-virtual {p0, p1}, Lj$/util/stream/P2;->b(Ljava/lang/Integer;)V
+    iget-wide v1, p0, Lj$/util/stream/P2;->c:J
 
-    return-void
-.end method
+    iget-object v3, p0, Lj$/util/stream/P2;->b:Lj$/util/function/o;
 
-.method public synthetic andThen(Lj$/util/function/Consumer;)Lj$/util/function/Consumer;
-    .registers 2
-
-    invoke-static {p0, p1}, Lj$/util/function/Consumer$-CC;->$default$andThen(Lj$/util/function/Consumer;Lj$/util/function/Consumer;)Lj$/util/function/Consumer;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public synthetic b(Ljava/lang/Integer;)V
-    .registers 2
-
-    invoke-static {p0, p1}, Lj$/util/stream/p1;->b(Lj$/util/stream/l3;Ljava/lang/Integer;)V
-
-    return-void
-.end method
-
-.method public h(Lj$/util/stream/T2;)V
-    .registers 4
-
-    check-cast p1, Lj$/util/stream/P2;
-
-    .line 1
-    iget-object v0, p0, Lj$/util/stream/P2;->d:Lj$/util/function/b;
-
-    iget-object v1, p0, Lj$/util/stream/U2;->a:Ljava/lang/Object;
-
-    iget-object p1, p1, Lj$/util/stream/U2;->a:Ljava/lang/Object;
-
-    invoke-interface {v0, v1, p1}, Lj$/util/function/BiFunction;->apply(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lj$/util/stream/U2;->a:Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method public l(Lj$/util/function/l;)Lj$/util/function/l;
-    .registers 3
-
-    .line 1
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v0, Lj$/util/function/k;
-
-    invoke-direct {v0, p0, p1}, Lj$/util/function/k;-><init>(Lj$/util/function/l;Lj$/util/function/l;)V
+    invoke-direct {v0, v1, v2, v3}, Lj$/util/stream/Q2;-><init>(JLj$/util/function/o;)V
 
     return-object v0
-.end method
-
-.method public synthetic m()V
-    .registers 1
-
-    return-void
-.end method
-
-.method public n(J)V
-    .registers 3
-
-    iget-object p1, p0, Lj$/util/stream/P2;->b:Lj$/util/function/y;
-
-    invoke-interface {p1}, Lj$/util/function/y;->get()Ljava/lang/Object;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lj$/util/stream/U2;->a:Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method public synthetic o()Z
-    .registers 2
-
-    const/4 v0, 0x0
-
-    return v0
 .end method

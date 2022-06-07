@@ -26,16 +26,16 @@
 .method public constructor <init>(ILjava/lang/String;I)V
     .registers 4
 
-    .line 345
+    .line 344
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 346
+    .line 345
     iput p3, p0, Lorg/telegram/ui/Adapters/DrawerLayoutAdapter$Item;->icon:I
 
-    .line 347
+    .line 346
     iput p1, p0, Lorg/telegram/ui/Adapters/DrawerLayoutAdapter$Item;->id:I
 
-    .line 348
+    .line 347
     iput-object p2, p0, Lorg/telegram/ui/Adapters/DrawerLayoutAdapter$Item;->text:Ljava/lang/String;
 
     return-void
@@ -46,7 +46,7 @@
 .method public bind(Lorg/telegram/ui/Cells/DrawerActionCell;)V
     .registers 5
 
-    .line 352
+    .line 351
     iget v0, p0, Lorg/telegram/ui/Adapters/DrawerLayoutAdapter$Item;->id:I
 
     iget-object v1, p0, Lorg/telegram/ui/Adapters/DrawerLayoutAdapter$Item;->text:Ljava/lang/String;

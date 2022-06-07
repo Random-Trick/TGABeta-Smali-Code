@@ -25,7 +25,7 @@
 .method constructor <init>(Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;Lorg/telegram/ui/ArticleViewer;)V
     .registers 3
 
-    .line 7095
+    .line 7096
     iput-object p1, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell$1;->this$1:Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -54,7 +54,7 @@
 .method public onInitFailed()V
     .registers 8
 
-    .line 7098
+    .line 7099
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell$1;->this$1:Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;
 
     invoke-static {v0}, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->access$15000(Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;)Lorg/telegram/ui/ArticleViewer$BlockEmbedCell$TouchyWebView;
@@ -65,7 +65,7 @@
 
     invoke-virtual {v0, v1}, Landroid/webkit/WebView;->setVisibility(I)V
 
-    .line 7099
+    .line 7100
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell$1;->this$1:Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;
 
     invoke-static {v0}, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->access$15100(Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;)Lorg/telegram/ui/Components/WebPlayerView;
@@ -76,7 +76,7 @@
 
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->setVisibility(I)V
 
-    .line 7100
+    .line 7101
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell$1;->this$1:Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;
 
     invoke-static {v0}, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->access$15100(Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;)Lorg/telegram/ui/Components/WebPlayerView;
@@ -95,12 +95,12 @@
 
     invoke-virtual/range {v1 .. v6}, Lorg/telegram/ui/Components/WebPlayerView;->loadVideo(Ljava/lang/String;Lorg/telegram/tgnet/TLRPC$Photo;Ljava/lang/Object;Ljava/lang/String;Z)Z
 
-    .line 7101
+    .line 7102
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    .line 7102
+    .line 7103
     sget-object v1, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
@@ -111,7 +111,7 @@
 
     invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 7103
+    .line 7104
     iget-object v1, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell$1;->this$1:Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;
 
     invoke-static {v1}, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->access$15000(Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;)Lorg/telegram/ui/ArticleViewer$BlockEmbedCell$TouchyWebView;
@@ -144,7 +144,7 @@
 
     if-eqz p2, :cond_3f
 
-    .line 7155
+    .line 7156
     iget-object p2, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell$1;->this$1:Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;
 
     iget-object p2, p2, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->this$0:Lorg/telegram/ui/ArticleViewer;
@@ -165,7 +165,7 @@
 
     if-eq p2, p1, :cond_23
 
-    .line 7156
+    .line 7157
     iget-object p2, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell$1;->this$1:Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;
 
     iget-object p2, p2, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->this$0:Lorg/telegram/ui/ArticleViewer;
@@ -176,7 +176,7 @@
 
     invoke-virtual {p2}, Lorg/telegram/ui/Components/WebPlayerView;->pause()V
 
-    .line 7158
+    .line 7159
     :cond_23
     iget-object p2, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell$1;->this$1:Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;
 
@@ -184,7 +184,7 @@
 
     invoke-static {p2, p1}, Lorg/telegram/ui/ArticleViewer;->access$15502(Lorg/telegram/ui/ArticleViewer;Lorg/telegram/ui/Components/WebPlayerView;)Lorg/telegram/ui/Components/WebPlayerView;
 
-    .line 7160
+    .line 7161
     :try_start_2a
     iget-object p1, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell$1;->this$1:Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;
 
@@ -207,12 +207,12 @@
     :catch_3a
     move-exception p1
 
-    .line 7162
+    .line 7163
     invoke-static {p1}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     goto :goto_65
 
-    .line 7165
+    .line 7166
     :cond_3f
     iget-object p2, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell$1;->this$1:Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;
 
@@ -224,7 +224,7 @@
 
     if-ne p2, p1, :cond_51
 
-    .line 7166
+    .line 7167
     iget-object p1, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell$1;->this$1:Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;
 
     iget-object p1, p1, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->this$0:Lorg/telegram/ui/ArticleViewer;
@@ -233,7 +233,7 @@
 
     invoke-static {p1, p2}, Lorg/telegram/ui/ArticleViewer;->access$15502(Lorg/telegram/ui/ArticleViewer;Lorg/telegram/ui/Components/WebPlayerView;)Lorg/telegram/ui/Components/WebPlayerView;
 
-    .line 7169
+    .line 7170
     :cond_51
     :try_start_51
     iget-object p1, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell$1;->this$1:Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;
@@ -257,7 +257,7 @@
     :catch_61
     move-exception p1
 
-    .line 7171
+    .line 7172
     invoke-static {p1}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     :goto_65
@@ -267,7 +267,7 @@
 .method public onSharePressed()V
     .registers 10
 
-    .line 7146
+    .line 7147
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell$1;->this$1:Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;
 
     iget-object v0, v0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->this$0:Lorg/telegram/ui/ArticleViewer;
@@ -280,7 +280,7 @@
 
     return-void
 
-    .line 7149
+    .line 7150
     :cond_b
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell$1;->this$1:Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;
 
@@ -340,7 +340,7 @@
 
     if-eqz p2, :cond_59
 
-    .line 7119
+    .line 7120
     iget-object p2, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell$1;->this$1:Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;
 
     iget-object p2, p2, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->this$0:Lorg/telegram/ui/ArticleViewer;
@@ -367,7 +367,7 @@
 
     invoke-virtual {p2, p5, v2}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 7120
+    .line 7121
     iget-object p2, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell$1;->this$1:Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;
 
     iget-object p2, p2, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->this$0:Lorg/telegram/ui/ArticleViewer;
@@ -380,7 +380,7 @@
 
     invoke-virtual {p2, p5}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
-    .line 7121
+    .line 7122
     iget-object p2, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell$1;->this$1:Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;
 
     iget-object p2, p2, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->this$0:Lorg/telegram/ui/ArticleViewer;
@@ -391,7 +391,7 @@
 
     invoke-virtual {p2, p3, p4}, Lcom/google/android/exoplayer2/ui/AspectRatioFrameLayout;->setAspectRatio(FI)V
 
-    .line 7122
+    .line 7123
     iget-object p2, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell$1;->this$1:Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;
 
     iget-object p3, p2, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->this$0:Lorg/telegram/ui/ArticleViewer;
@@ -402,7 +402,7 @@
 
     invoke-static {p3, p2}, Lorg/telegram/ui/ArticleViewer;->access$15402(Lorg/telegram/ui/ArticleViewer;Lorg/telegram/ui/Components/WebPlayerView;)Lorg/telegram/ui/Components/WebPlayerView;
 
-    .line 7123
+    .line 7124
     iget-object p2, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell$1;->this$1:Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;
 
     iget-object p2, p2, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->this$0:Lorg/telegram/ui/ArticleViewer;
@@ -417,7 +417,7 @@
 
     invoke-virtual {p2, p1, p3}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 7124
+    .line 7125
     iget-object p1, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell$1;->this$1:Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;
 
     iget-object p1, p1, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->this$0:Lorg/telegram/ui/ArticleViewer;
@@ -430,7 +430,7 @@
 
     goto :goto_8d
 
-    .line 7126
+    .line 7127
     :cond_59
     iget-object p1, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell$1;->this$1:Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;
 
@@ -450,7 +450,7 @@
 
     invoke-virtual {p1, p2}, Landroid/widget/FrameLayout;->removeView(Landroid/view/View;)V
 
-    .line 7127
+    .line 7128
     iget-object p1, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell$1;->this$1:Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;
 
     iget-object p1, p1, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->this$0:Lorg/telegram/ui/ArticleViewer;
@@ -459,7 +459,7 @@
 
     invoke-static {p1, p2}, Lorg/telegram/ui/ArticleViewer;->access$15402(Lorg/telegram/ui/ArticleViewer;Lorg/telegram/ui/Components/WebPlayerView;)Lorg/telegram/ui/Components/WebPlayerView;
 
-    .line 7128
+    .line 7129
     iget-object p1, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell$1;->this$1:Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;
 
     iget-object p1, p1, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->this$0:Lorg/telegram/ui/ArticleViewer;
@@ -472,7 +472,7 @@
 
     invoke-virtual {p1, p2}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
-    .line 7129
+    .line 7130
     iget-object p1, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell$1;->this$1:Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;
 
     iget-object p1, p1, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->this$0:Lorg/telegram/ui/ArticleViewer;
@@ -485,7 +485,7 @@
 
     invoke-virtual {p1, p2}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
-    .line 7131
+    .line 7132
     :goto_8d
     iget-object p1, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell$1;->this$1:Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;
 
@@ -501,7 +501,7 @@
 .method public onVideoSizeChanged(FI)V
     .registers 4
 
-    .line 7108
+    .line 7109
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell$1;->this$1:Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;
 
     iget-object v0, v0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->this$0:Lorg/telegram/ui/ArticleViewer;

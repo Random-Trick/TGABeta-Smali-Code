@@ -19,6 +19,8 @@
 
 .field private hasBackground:Z
 
+.field private text:Ljava/lang/CharSequence;
+
 .field private textView:[Landroid/widget/TextView;
 
 .field final synthetic this$0:Lorg/telegram/ui/Components/JoinCallAlert;
@@ -28,37 +30,37 @@
 .method public constructor <init>(Lorg/telegram/ui/Components/JoinCallAlert;Landroid/content/Context;Z)V
     .registers 16
 
-    .line 116
+    .line 117
     iput-object p1, p0, Lorg/telegram/ui/Components/JoinCallAlert$BottomSheetCell;->this$0:Lorg/telegram/ui/Components/JoinCallAlert;
 
-    .line 117
+    .line 118
     invoke-direct {p0, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
     const/4 p1, 0x2
 
     new-array v0, p1, [Landroid/widget/TextView;
 
-    .line 113
+    .line 114
     iput-object v0, p0, Lorg/telegram/ui/Components/JoinCallAlert$BottomSheetCell;->textView:[Landroid/widget/TextView;
 
     xor-int/lit8 v0, p3, 0x1
 
-    .line 119
+    .line 120
     iput-boolean v0, p0, Lorg/telegram/ui/Components/JoinCallAlert$BottomSheetCell;->hasBackground:Z
 
     const/4 v0, 0x0
 
-    .line 120
+    .line 121
     invoke-virtual {p0, v0}, Landroid/widget/FrameLayout;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    .line 122
+    .line 123
     new-instance v0, Landroid/view/View;
 
     invoke-direct {v0, p2}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lorg/telegram/ui/Components/JoinCallAlert$BottomSheetCell;->background:Landroid/view/View;
 
-    .line 123
+    .line 124
     iget-boolean v1, p0, Lorg/telegram/ui/Components/JoinCallAlert$BottomSheetCell;->hasBackground:Z
 
     const-string v2, "featuredStickers_addButton"
@@ -75,14 +77,14 @@
 
     aput v5, v1, v3
 
-    .line 124
+    .line 125
     invoke-static {v2, v1}, Lorg/telegram/ui/ActionBar/Theme$AdaptiveRipple;->filledRect(Ljava/lang/String;[F)Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    .line 126
+    .line 127
     :cond_2e
     iget-object v0, p0, Lorg/telegram/ui/Components/JoinCallAlert$BottomSheetCell;->background:Landroid/view/View;
 
@@ -121,9 +123,9 @@
     const/4 p3, 0x0
 
     :goto_4b
-    if-ge p3, p1, :cond_e6
+    if-ge p3, p1, :cond_f4
 
-    .line 129
+    .line 130
     iget-object v0, p0, Lorg/telegram/ui/Components/JoinCallAlert$BottomSheetCell;->textView:[Landroid/widget/TextView;
 
     new-instance v5, Landroid/widget/TextView;
@@ -132,28 +134,35 @@
 
     aput-object v5, v0, p3
 
-    .line 130
-    iget-object v0, p0, Lorg/telegram/ui/Components/JoinCallAlert$BottomSheetCell;->textView:[Landroid/widget/TextView;
-
-    aget-object v0, v0, p3
-
-    invoke-virtual {v0, v4}, Landroid/widget/TextView;->setLines(I)V
-
     .line 131
     iget-object v0, p0, Lorg/telegram/ui/Components/JoinCallAlert$BottomSheetCell;->textView:[Landroid/widget/TextView;
 
     aget-object v0, v0, p3
 
-    invoke-virtual {v0, v4}, Landroid/widget/TextView;->setSingleLine(Z)V
+    invoke-virtual {v0, v3}, Landroid/widget/TextView;->setFocusable(Z)V
 
     .line 132
     iget-object v0, p0, Lorg/telegram/ui/Components/JoinCallAlert$BottomSheetCell;->textView:[Landroid/widget/TextView;
 
     aget-object v0, v0, p3
 
-    invoke-virtual {v0, v4}, Landroid/widget/TextView;->setGravity(I)V
+    invoke-virtual {v0, v4}, Landroid/widget/TextView;->setLines(I)V
 
     .line 133
+    iget-object v0, p0, Lorg/telegram/ui/Components/JoinCallAlert$BottomSheetCell;->textView:[Landroid/widget/TextView;
+
+    aget-object v0, v0, p3
+
+    invoke-virtual {v0, v4}, Landroid/widget/TextView;->setSingleLine(Z)V
+
+    .line 134
+    iget-object v0, p0, Lorg/telegram/ui/Components/JoinCallAlert$BottomSheetCell;->textView:[Landroid/widget/TextView;
+
+    aget-object v0, v0, p3
+
+    invoke-virtual {v0, v4}, Landroid/widget/TextView;->setGravity(I)V
+
+    .line 135
     iget-object v0, p0, Lorg/telegram/ui/Components/JoinCallAlert$BottomSheetCell;->textView:[Landroid/widget/TextView;
 
     aget-object v0, v0, p3
@@ -162,7 +171,7 @@
 
     invoke-virtual {v0, v5}, Landroid/widget/TextView;->setEllipsize(Landroid/text/TextUtils$TruncateAt;)V
 
-    .line 134
+    .line 136
     iget-object v0, p0, Lorg/telegram/ui/Components/JoinCallAlert$BottomSheetCell;->textView:[Landroid/widget/TextView;
 
     aget-object v0, v0, p3
@@ -171,12 +180,12 @@
 
     invoke-virtual {v0, v5}, Landroid/widget/TextView;->setGravity(I)V
 
-    .line 135
+    .line 137
     iget-boolean v0, p0, Lorg/telegram/ui/Components/JoinCallAlert$BottomSheetCell;->hasBackground:Z
 
-    if-eqz v0, :cond_9c
+    if-eqz v0, :cond_a3
 
-    .line 136
+    .line 138
     iget-object v0, p0, Lorg/telegram/ui/Components/JoinCallAlert$BottomSheetCell;->textView:[Landroid/widget/TextView;
 
     aget-object v0, v0, p3
@@ -189,7 +198,7 @@
 
     invoke-virtual {v0, v5}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 137
+    .line 139
     iget-object v0, p0, Lorg/telegram/ui/Components/JoinCallAlert$BottomSheetCell;->textView:[Landroid/widget/TextView;
 
     aget-object v0, v0, p3
@@ -202,10 +211,10 @@
 
     invoke-virtual {v0, v5}, Landroid/widget/TextView;->setTypeface(Landroid/graphics/Typeface;)V
 
-    goto :goto_a7
+    goto :goto_ae
 
-    .line 139
-    :cond_9c
+    .line 141
+    :cond_a3
     iget-object v0, p0, Lorg/telegram/ui/Components/JoinCallAlert$BottomSheetCell;->textView:[Landroid/widget/TextView;
 
     aget-object v0, v0, p3
@@ -216,8 +225,15 @@
 
     invoke-virtual {v0, v5}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 141
-    :goto_a7
+    .line 143
+    :goto_ae
+    iget-object v0, p0, Lorg/telegram/ui/Components/JoinCallAlert$BottomSheetCell;->textView:[Landroid/widget/TextView;
+
+    aget-object v0, v0, p3
+
+    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setImportantForAccessibility(I)V
+
+    .line 144
     iget-object v0, p0, Lorg/telegram/ui/Components/JoinCallAlert$BottomSheetCell;->textView:[Landroid/widget/TextView;
 
     aget-object v0, v0, p3
@@ -226,30 +242,30 @@
 
     invoke-virtual {v0, v4, v5}, Landroid/widget/TextView;->setTextSize(IF)V
 
-    .line 142
+    .line 145
     iget-object v0, p0, Lorg/telegram/ui/Components/JoinCallAlert$BottomSheetCell;->textView:[Landroid/widget/TextView;
 
     aget-object v0, v0, p3
 
     iget-boolean v5, p0, Lorg/telegram/ui/Components/JoinCallAlert$BottomSheetCell;->hasBackground:Z
 
-    if-eqz v5, :cond_ba
+    if-eqz v5, :cond_c8
 
     const/4 v5, 0x0
 
-    goto :goto_c0
+    goto :goto_ce
 
-    :cond_ba
+    :cond_c8
     const/high16 v5, 0x41500000    # 13.0f
 
     invoke-static {v5}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v5
 
-    :goto_c0
+    :goto_ce
     invoke-virtual {v0, v3, v3, v3, v5}, Landroid/widget/TextView;->setPadding(IIII)V
 
-    .line 143
+    .line 146
     iget-object v0, p0, Lorg/telegram/ui/Components/JoinCallAlert$BottomSheetCell;->textView:[Landroid/widget/TextView;
 
     aget-object v0, v0, p3
@@ -274,28 +290,28 @@
 
     invoke-virtual {p0, v0, v5}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    if-ne p3, v4, :cond_e2
+    if-ne p3, v4, :cond_f0
 
-    .line 145
+    .line 148
     iget-object v0, p0, Lorg/telegram/ui/Components/JoinCallAlert$BottomSheetCell;->textView:[Landroid/widget/TextView;
 
     aget-object v0, v0, p3
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setAlpha(F)V
 
-    :cond_e2
+    :cond_f0
     add-int/lit8 p3, p3, 0x1
 
     goto/16 :goto_4b
 
-    :cond_e6
+    :cond_f4
     return-void
 .end method
 
 .method static synthetic access$100(Lorg/telegram/ui/Components/JoinCallAlert$BottomSheetCell;)[Landroid/widget/TextView;
     .registers 1
 
-    .line 110
+    .line 111
     iget-object p0, p0, Lorg/telegram/ui/Components/JoinCallAlert$BottomSheetCell;->textView:[Landroid/widget/TextView;
 
     return-object p0
@@ -304,7 +320,7 @@
 .method static synthetic access$1300(Lorg/telegram/ui/Components/JoinCallAlert$BottomSheetCell;)Landroid/view/View;
     .registers 1
 
-    .line 110
+    .line 111
     iget-object p0, p0, Lorg/telegram/ui/Components/JoinCallAlert$BottomSheetCell;->background:Landroid/view/View;
 
     return-object p0
@@ -312,10 +328,38 @@
 
 
 # virtual methods
+.method public onInitializeAccessibilityNodeInfo(Landroid/view/accessibility/AccessibilityNodeInfo;)V
+    .registers 3
+
+    .line 191
+    invoke-super {p0, p1}, Landroid/widget/FrameLayout;->onInitializeAccessibilityNodeInfo(Landroid/view/accessibility/AccessibilityNodeInfo;)V
+
+    const-string v0, "android.widget.Button"
+
+    .line 192
+    invoke-virtual {p1, v0}, Landroid/view/accessibility/AccessibilityNodeInfo;->setClassName(Ljava/lang/CharSequence;)V
+
+    const/4 v0, 0x1
+
+    .line 193
+    invoke-virtual {p1, v0}, Landroid/view/accessibility/AccessibilityNodeInfo;->setClickable(Z)V
+
+    .line 194
+    iget-object v0, p0, Lorg/telegram/ui/Components/JoinCallAlert$BottomSheetCell;->text:Ljava/lang/CharSequence;
+
+    if-eqz v0, :cond_13
+
+    .line 195
+    invoke-virtual {p1, v0}, Landroid/view/accessibility/AccessibilityNodeInfo;->setContentDescription(Ljava/lang/CharSequence;)V
+
+    :cond_13
+    return-void
+.end method
+
 .method protected onMeasure(II)V
     .registers 4
 
-    .line 152
+    .line 155
     iget-boolean p2, p0, Lorg/telegram/ui/Components/JoinCallAlert$BottomSheetCell;->hasBackground:Z
 
     if-eqz p2, :cond_7
@@ -346,21 +390,24 @@
 .method public setText(Ljava/lang/CharSequence;Z)V
     .registers 12
 
+    .line 161
+    iput-object p1, p0, Lorg/telegram/ui/Components/JoinCallAlert$BottomSheetCell;->text:Ljava/lang/CharSequence;
+
     const/4 v0, 0x0
 
-    if-nez p2, :cond_c
+    if-nez p2, :cond_e
 
-    .line 157
+    .line 163
     iget-object p2, p0, Lorg/telegram/ui/Components/JoinCallAlert$BottomSheetCell;->textView:[Landroid/widget/TextView;
 
     aget-object p2, p2, v0
 
     invoke-virtual {p2, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    goto/16 :goto_8f
+    goto/16 :goto_91
 
-    .line 159
-    :cond_c
+    .line 165
+    :cond_e
     iget-object p2, p0, Lorg/telegram/ui/Components/JoinCallAlert$BottomSheetCell;->textView:[Landroid/widget/TextView;
 
     const/4 v1, 0x1
@@ -369,22 +416,22 @@
 
     invoke-virtual {p2, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 160
+    .line 166
     iget-object p1, p0, Lorg/telegram/ui/Components/JoinCallAlert$BottomSheetCell;->this$0:Lorg/telegram/ui/Components/JoinCallAlert;
 
     invoke-static {p1, v1}, Lorg/telegram/ui/Components/JoinCallAlert;->access$002(Lorg/telegram/ui/Components/JoinCallAlert;Z)Z
 
-    .line 161
+    .line 167
     new-instance p1, Landroid/animation/AnimatorSet;
 
     invoke-direct {p1}, Landroid/animation/AnimatorSet;-><init>()V
 
     const-wide/16 v2, 0xb4
 
-    .line 162
+    .line 168
     invoke-virtual {p1, v2, v3}, Landroid/animation/AnimatorSet;->setDuration(J)Landroid/animation/AnimatorSet;
 
-    .line 163
+    .line 169
     sget-object p2, Lorg/telegram/ui/Components/CubicBezierInterpolator;->EASE_OUT:Lorg/telegram/ui/Components/CubicBezierInterpolator;
 
     invoke-virtual {p1, p2}, Landroid/animation/AnimatorSet;->setInterpolator(Landroid/animation/TimeInterpolator;)V
@@ -393,7 +440,7 @@
 
     new-array p2, p2, [Landroid/animation/Animator;
 
-    .line 164
+    .line 170
     iget-object v2, p0, Lorg/telegram/ui/Components/JoinCallAlert$BottomSheetCell;->textView:[Landroid/widget/TextView;
 
     aget-object v2, v2, v0
@@ -404,9 +451,9 @@
 
     new-array v5, v4, [F
 
-    fill-array-data v5, :array_90
+    fill-array-data v5, :array_92
 
-    .line 165
+    .line 171
     invoke-static {v2, v3, v5}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
 
     move-result-object v2
@@ -427,7 +474,7 @@
 
     const/high16 v7, 0x41200000    # 10.0f
 
-    .line 166
+    .line 172
     invoke-static {v7}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v8
@@ -452,9 +499,9 @@
 
     new-array v5, v4, [F
 
-    fill-array-data v5, :array_98
+    fill-array-data v5, :array_9a
 
-    .line 167
+    .line 173
     invoke-static {v2, v3, v5}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
 
     move-result-object v2
@@ -471,7 +518,7 @@
 
     new-array v4, v4, [F
 
-    .line 168
+    .line 174
     invoke-static {v7}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v7
@@ -488,29 +535,29 @@
 
     aput-object v0, p2, v2
 
-    .line 164
+    .line 170
     invoke-virtual {p1, p2}, Landroid/animation/AnimatorSet;->playTogether([Landroid/animation/Animator;)V
 
-    .line 170
+    .line 176
     new-instance p2, Lorg/telegram/ui/Components/JoinCallAlert$BottomSheetCell$1;
 
     invoke-direct {p2, p0}, Lorg/telegram/ui/Components/JoinCallAlert$BottomSheetCell$1;-><init>(Lorg/telegram/ui/Components/JoinCallAlert$BottomSheetCell;)V
 
     invoke-virtual {p1, p2}, Landroid/animation/AnimatorSet;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 179
+    .line 185
     invoke-virtual {p1}, Landroid/animation/AnimatorSet;->start()V
 
-    :goto_8f
+    :goto_91
     return-void
 
-    :array_90
+    :array_92
     .array-data 4
         0x3f800000    # 1.0f
         0x0
     .end array-data
 
-    :array_98
+    :array_9a
     .array-data 4
         0x0
         0x3f800000    # 1.0f

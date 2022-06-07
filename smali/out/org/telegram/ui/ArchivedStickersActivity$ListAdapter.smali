@@ -416,7 +416,7 @@
     .line 343
     invoke-virtual {p1, v2}, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;->setBottomPadding(I)V
 
-    const p2, 0x7f0e01a7
+    const p2, 0x7f0e01dc
 
     const-string v0, "ArchivedStickersInfo"
 
@@ -455,7 +455,7 @@
 
     const-string v0, "windowBackgroundGrayShadow"
 
-    const v1, 0x7f07012d
+    const v1, 0x7f0700fc
 
     if-eq p2, p1, :cond_20
 

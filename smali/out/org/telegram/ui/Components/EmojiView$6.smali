@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/EmojiView;I)V
     .registers 3
 
-    .line 1299
+    .line 1305
     iput-object p1, p0, Lorg/telegram/ui/Components/EmojiView$6;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-direct {p0, p1, p2}, Lorg/telegram/ui/Components/EmojiView$TypedScrollListener;-><init>(Lorg/telegram/ui/Components/EmojiView;I)V
@@ -35,7 +35,7 @@
 .method public onScrolled(Landroidx/recyclerview/widget/RecyclerView;II)V
     .registers 10
 
-    .line 1302
+    .line 1308
     iget-object v0, p0, Lorg/telegram/ui/Components/EmojiView$6;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/EmojiView;->access$4100(Lorg/telegram/ui/Components/EmojiView;)Landroidx/recyclerview/widget/GridLayoutManager;
@@ -50,7 +50,7 @@
 
     if-eq v0, v1, :cond_42
 
-    .line 1305
+    .line 1311
     sget-object v1, Lorg/telegram/messenger/Emoji;->recentEmoji:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
@@ -71,7 +71,7 @@
 
     const/4 v3, 0x0
 
-    .line 1307
+    .line 1313
     :goto_1e
     sget-object v4, Lorg/telegram/messenger/EmojiData;->dataColored:[[Ljava/lang/String;
 
@@ -79,7 +79,7 @@
 
     if-ge v3, v5, :cond_38
 
-    .line 1308
+    .line 1314
     aget-object v4, v4, v3
 
     array-length v4, v4
@@ -90,7 +90,7 @@
 
     if-ge v0, v1, :cond_35
 
-    .line 1310
+    .line 1316
     sget-object v0, Lorg/telegram/messenger/Emoji;->recentEmoji:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
@@ -111,7 +111,7 @@
     :cond_38
     const/4 v3, 0x0
 
-    .line 1316
+    .line 1322
     :goto_39
     iget-object v0, p0, Lorg/telegram/ui/Components/EmojiView$6;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
@@ -121,7 +121,7 @@
 
     invoke-virtual {v0, v3, v2}, Lorg/telegram/ui/Components/ScrollSlidingTabStrip;->onPageScrolled(II)V
 
-    .line 1318
+    .line 1324
     :cond_42
     invoke-super {p0, p1, p2, p3}, Lorg/telegram/ui/Components/EmojiView$TypedScrollListener;->onScrolled(Landroidx/recyclerview/widget/RecyclerView;II)V
 

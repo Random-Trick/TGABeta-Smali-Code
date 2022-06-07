@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/NotificationsCustomSettingsActivity;)V
     .registers 2
 
-    .line 145
+    .line 148
     iput-object p1, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity$1;->this$0:Lorg/telegram/ui/NotificationsCustomSettingsActivity;
 
     invoke-direct {p0}, Lorg/telegram/ui/ActionBar/ActionBar$ActionBarMenuOnItemClick;-><init>()V
@@ -39,7 +39,7 @@
 
     if-ne p1, v0, :cond_8
 
-    .line 149
+    .line 152
     iget-object p1, p0, Lorg/telegram/ui/NotificationsCustomSettingsActivity$1;->this$0:Lorg/telegram/ui/NotificationsCustomSettingsActivity;
 
     invoke-virtual {p1}, Lorg/telegram/ui/ActionBar/BaseFragment;->finishFragment()V

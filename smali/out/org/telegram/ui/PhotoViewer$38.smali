@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/PhotoViewer;Lorg/telegram/messenger/ImageReceiver;)V
     .registers 3
 
-    .line 6386
+    .line 6521
     iput-object p2, p0, Lorg/telegram/ui/PhotoViewer$38;->val$imageReceiver:Lorg/telegram/messenger/ImageReceiver;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -35,7 +35,7 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .registers 3
 
-    .line 6389
+    .line 6524
     iget-object p1, p0, Lorg/telegram/ui/PhotoViewer$38;->val$imageReceiver:Lorg/telegram/messenger/ImageReceiver;
 
     const/high16 v0, 0x3f800000    # 1.0f

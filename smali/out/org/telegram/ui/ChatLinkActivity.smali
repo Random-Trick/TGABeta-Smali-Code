@@ -1082,7 +1082,7 @@
 
     if-eqz v3, :cond_cd
 
-    const v3, 0x7f0e05d1
+    const v3, 0x7f0e0622
 
     const-string v5, "DiscussionUnlinkGroup"
 
@@ -1091,7 +1091,7 @@
 
     move-result-object v3
 
-    const v5, 0x7f0e05d0
+    const v5, 0x7f0e0621
 
     new-array v0, v0, [Ljava/lang/Object;
 
@@ -1109,14 +1109,14 @@
     goto :goto_e3
 
     :cond_cd
-    const v3, 0x7f0e05cf
+    const v3, 0x7f0e0620
 
     .line 424
     invoke-static {v4, v3}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v3
 
-    const v5, 0x7f0e05d2
+    const v5, 0x7f0e0623
 
     new-array v0, v0, [Ljava/lang/Object;
 
@@ -1142,7 +1142,7 @@
 
     invoke-virtual {v2, p1}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const p1, 0x7f0e05ce
+    const p1, 0x7f0e061f
 
     .line 429
     invoke-static {v4, p1}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -1155,7 +1155,7 @@
 
     invoke-virtual {v2, p1, p2}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const p1, 0x7f0e0331
+    const p1, 0x7f0e036d
 
     const-string p2, "Cancel"
 
@@ -1916,7 +1916,7 @@
 
     if-eqz v8, :cond_82
 
-    const v8, 0x7f0e05cc
+    const v8, 0x7f0e061d
 
     new-array v10, v10, [Ljava/lang/Object;
 
@@ -1951,7 +1951,7 @@
 
     if-eqz v8, :cond_a2
 
-    const v8, 0x7f0e05ca
+    const v8, 0x7f0e061b
 
     new-array v10, v10, [Ljava/lang/Object;
 
@@ -1975,7 +1975,7 @@
     goto :goto_b7
 
     :cond_a2
-    const v8, 0x7f0e05cb
+    const v8, 0x7f0e061c
 
     new-array v10, v10, [Ljava/lang/Object;
 
@@ -2013,7 +2013,7 @@
 
     invoke-virtual {v8, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const v3, 0x7f0e05c9
+    const v3, 0x7f0e061a
 
     const-string v10, "DiscussionLinkGroupAlertHistory"
 
@@ -2273,7 +2273,7 @@
     .line 540
     invoke-virtual {v10, v1, v8}, Lorg/telegram/ui/Components/BackupImageView;->setForUserOrChat(Lorg/telegram/tgnet/TLObject;Lorg/telegram/ui/Components/AvatarDrawable;)V
 
-    const v3, 0x7f0e05c8
+    const v3, 0x7f0e0619
 
     const-string v4, "DiscussionLinkGroup"
 
@@ -2288,7 +2288,7 @@
 
     invoke-virtual {v6, v3, v4}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const v1, 0x7f0e0331
+    const v1, 0x7f0e036d
 
     const-string v2, "Cancel"
 
@@ -2481,7 +2481,7 @@
 
     move-result v1
 
-    if-lez v1, :cond_b2
+    if-lez v1, :cond_be
 
     iget-object v1, p0, Lorg/telegram/ui/ChatLinkActivity;->info:Lorg/telegram/tgnet/TLRPC$ChatFull;
 
@@ -2489,7 +2489,7 @@
 
     cmp-long v5, v1, v3
 
-    if-eqz v5, :cond_b2
+    if-eqz v5, :cond_be
 
     .line 207
     :cond_8d
@@ -2511,23 +2511,36 @@
     iget-object v1, p0, Lorg/telegram/ui/ChatLinkActivity;->currentChat:Lorg/telegram/tgnet/TLRPC$Chat;
 
     :goto_9c
-    if-eqz v1, :cond_b2
+    if-eqz v1, :cond_be
 
     .line 208
-    iget-boolean v2, v1, Lorg/telegram/tgnet/TLRPC$Chat;->creator:Z
+    iget-object v2, v1, Lorg/telegram/tgnet/TLRPC$Chat;->username:Ljava/lang/String;
+
+    invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v2
 
     if-nez v2, :cond_aa
 
+    iget-boolean v2, p0, Lorg/telegram/ui/ChatLinkActivity;->isChannel:Z
+
+    if-eqz v2, :cond_be
+
+    :cond_aa
+    iget-boolean v2, v1, Lorg/telegram/tgnet/TLRPC$Chat;->creator:Z
+
+    if-nez v2, :cond_b6
+
     iget-object v1, v1, Lorg/telegram/tgnet/TLRPC$Chat;->admin_rights:Lorg/telegram/tgnet/TLRPC$TL_chatAdminRights;
 
-    if-eqz v1, :cond_b2
+    if-eqz v1, :cond_be
 
     iget-boolean v1, v1, Lorg/telegram/tgnet/TLRPC$TL_chatAdminRights;->ban_users:Z
 
-    if-eqz v1, :cond_b2
+    if-eqz v1, :cond_be
 
     .line 209
-    :cond_aa
+    :cond_b6
     iget v1, p0, Lorg/telegram/ui/ChatLinkActivity;->rowCount:I
 
     add-int/lit8 v2, v1, 0x1
@@ -2537,19 +2550,19 @@
     iput v1, p0, Lorg/telegram/ui/ChatLinkActivity;->joinToSendRow:I
 
     .line 213
-    :cond_b2
+    :cond_be
     iget-object v1, p0, Lorg/telegram/ui/ChatLinkActivity;->listViewAdapter:Lorg/telegram/ui/ChatLinkActivity$ListAdapter;
 
-    if-eqz v1, :cond_b9
+    if-eqz v1, :cond_c5
 
     .line 214
     invoke-virtual {v1}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->notifyDataSetChanged()V
 
     .line 216
-    :cond_b9
+    :cond_c5
     iget-object v1, p0, Lorg/telegram/ui/ChatLinkActivity;->searchItem:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
-    if-eqz v1, :cond_cd
+    if-eqz v1, :cond_d9
 
     .line 217
     iget-object v2, p0, Lorg/telegram/ui/ChatLinkActivity;->chats:Ljava/util/ArrayList;
@@ -2560,17 +2573,17 @@
 
     const/16 v3, 0xa
 
-    if-le v2, v3, :cond_c8
+    if-le v2, v3, :cond_d4
 
-    goto :goto_ca
+    goto :goto_d6
 
-    :cond_c8
+    :cond_d4
     const/16 v0, 0x8
 
-    :goto_ca
+    :goto_d6
     invoke-virtual {v1, v0}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
-    :cond_cd
+    :cond_d9
     return-void
 .end method
 
@@ -2587,7 +2600,7 @@
     .line 289
     iget-object v1, p0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
-    const v2, 0x7f070140
+    const v2, 0x7f070109
 
     invoke-virtual {v1, v2}, Lorg/telegram/ui/ActionBar/ActionBar;->setBackButtonImage(I)V
 
@@ -2603,7 +2616,7 @@
 
     const-string v3, "Discussion"
 
-    const v4, 0x7f0e05c0
+    const v4, 0x7f0e0611
 
     invoke-static {v3, v4}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
@@ -2627,7 +2640,7 @@
 
     move-result-object v1
 
-    const v3, 0x7f07014a
+    const v3, 0x7f070110
 
     .line 302
     invoke-virtual {v1, v0, v3}, Lorg/telegram/ui/ActionBar/ActionBarMenu;->addItem(II)Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
@@ -2650,7 +2663,7 @@
 
     const-string v3, "Search"
 
-    const v4, 0x7f0e0f74
+    const v4, 0x7f0e1030
 
     .line 345
     invoke-static {v3, v4}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -2707,7 +2720,7 @@
 
     const-string v4, "NoResult"
 
-    const v5, 0x7f0e0ad8
+    const v5, 0x7f0e0b60
 
     invoke-static {v4, v5}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 

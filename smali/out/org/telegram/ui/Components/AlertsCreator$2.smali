@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lorg/telegram/ui/Components/AlertsCreator;->createSupportAlert(Lorg/telegram/ui/ActionBar/BaseFragment;)Lorg/telegram/ui/ActionBar/AlertDialog;
+    value = Lorg/telegram/ui/Components/AlertsCreator;->createSupportAlert(Lorg/telegram/ui/ActionBar/BaseFragment;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)Lorg/telegram/ui/ActionBar/AlertDialog;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
 .method constructor <init>(Ljava/lang/String;Lorg/telegram/ui/ActionBar/BaseFragment;)V
     .registers 3
 
-    .line 1112
+    .line 1129
     iput-object p2, p0, Lorg/telegram/ui/Components/AlertsCreator$2;->val$fragment:Lorg/telegram/ui/ActionBar/BaseFragment;
 
     invoke-direct {p0, p1}, Lorg/telegram/ui/Components/URLSpanNoUnderline;-><init>(Ljava/lang/String;)V
@@ -35,12 +35,12 @@
 .method public onClick(Landroid/view/View;)V
     .registers 3
 
-    .line 1115
+    .line 1132
     iget-object v0, p0, Lorg/telegram/ui/Components/AlertsCreator$2;->val$fragment:Lorg/telegram/ui/ActionBar/BaseFragment;
 
     invoke-virtual {v0}, Lorg/telegram/ui/ActionBar/BaseFragment;->dismissCurrentDialog()V
 
-    .line 1116
+    .line 1133
     invoke-super {p0, p1}, Lorg/telegram/ui/Components/URLSpanNoUnderline;->onClick(Landroid/view/View;)V
 
     return-void

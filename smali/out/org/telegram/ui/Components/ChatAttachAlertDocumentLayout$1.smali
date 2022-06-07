@@ -30,7 +30,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout;)V
     .registers 2
 
-    .line 175
+    .line 176
     iput-object p1, p0, Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout$1;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -41,7 +41,7 @@
 .method private synthetic lambda$onReceive$0()V
     .registers 3
 
-    .line 180
+    .line 181
     :try_start_0
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout$1;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout;
 
@@ -51,14 +51,14 @@
 
     if-nez v0, :cond_e
 
-    .line 181
+    .line 182
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout$1;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout;->access$200(Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout;)V
 
     goto :goto_17
 
-    .line 183
+    .line 184
     :cond_e
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout$1;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout;
 
@@ -68,7 +68,7 @@
 
     invoke-static {v0, v1}, Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout;->access$300(Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout;Ljava/io/File;)Z
 
-    .line 185
+    .line 186
     :goto_17
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout$1;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout;
 
@@ -81,7 +81,7 @@
     :catch_1d
     move-exception v0
 
-    .line 187
+    .line 188
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     :goto_21
@@ -93,12 +93,12 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .registers 5
 
-    .line 178
+    .line 179
     new-instance p1, Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout$1$$ExternalSyntheticLambda0;
 
     invoke-direct {p1, p0}, Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout$1$$ExternalSyntheticLambda0;-><init>(Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout$1;)V
 
-    .line 190
+    .line 191
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p2
@@ -111,7 +111,7 @@
 
     if-eqz p2, :cond_1d
 
-    .line 191
+    .line 192
     iget-object p2, p0, Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout$1;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout;
 
     invoke-static {p2}, Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout;->access$000(Lorg/telegram/ui/Components/ChatAttachAlertDocumentLayout;)Lorg/telegram/ui/Components/RecyclerListView;
@@ -124,7 +124,7 @@
 
     goto :goto_20
 
-    .line 193
+    .line 194
     :cond_1d
     invoke-interface {p1}, Ljava/lang/Runnable;->run()V
 

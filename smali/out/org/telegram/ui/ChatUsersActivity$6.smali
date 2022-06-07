@@ -24,14 +24,14 @@
 .method constructor <init>(Lorg/telegram/ui/ChatUsersActivity;)V
     .registers 2
 
-    .line 798
+    .line 795
     iput-object p1, p0, Lorg/telegram/ui/ChatUsersActivity$6;->this$0:Lorg/telegram/ui/ChatUsersActivity;
 
     invoke-direct {p0}, Landroidx/recyclerview/widget/DefaultItemAnimator;-><init>()V
 
     const/4 p1, -0x1
 
-    .line 825
+    .line 822
     iput p1, p0, Lorg/telegram/ui/ChatUsersActivity$6;->animationIndex:I
 
     return-void
@@ -82,10 +82,10 @@
 .method protected onAllAnimationsDone()V
     .registers 3
 
-    .line 829
+    .line 826
     invoke-super {p0}, Landroidx/recyclerview/widget/DefaultItemAnimator;->onAllAnimationsDone()V
 
-    .line 830
+    .line 827
     iget-object v0, p0, Lorg/telegram/ui/ChatUsersActivity$6;->this$0:Lorg/telegram/ui/ChatUsersActivity;
 
     invoke-virtual {v0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getNotificationCenter()Lorg/telegram/messenger/NotificationCenter;
@@ -102,7 +102,7 @@
 .method public runPendingAnimations()V
     .registers 5
 
-    .line 835
+    .line 832
     iget-object v0, p0, Landroidx/recyclerview/widget/DefaultItemAnimator;->mPendingRemovals:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
@@ -111,7 +111,7 @@
 
     xor-int/lit8 v0, v0, 0x1
 
-    .line 836
+    .line 833
     iget-object v1, p0, Landroidx/recyclerview/widget/DefaultItemAnimator;->mPendingMoves:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->isEmpty()Z
@@ -120,7 +120,7 @@
 
     xor-int/lit8 v1, v1, 0x1
 
-    .line 837
+    .line 834
     iget-object v2, p0, Landroidx/recyclerview/widget/DefaultItemAnimator;->mPendingChanges:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->isEmpty()Z
@@ -129,7 +129,7 @@
 
     xor-int/lit8 v2, v2, 0x1
 
-    .line 838
+    .line 835
     iget-object v3, p0, Landroidx/recyclerview/widget/DefaultItemAnimator;->mPendingAdditions:Ljava/util/ArrayList;
 
     invoke-virtual {v3}, Ljava/util/ArrayList;->isEmpty()Z
@@ -146,7 +146,7 @@
 
     if-eqz v2, :cond_37
 
-    .line 840
+    .line 837
     :cond_28
     iget-object v0, p0, Lorg/telegram/ui/ChatUsersActivity$6;->this$0:Lorg/telegram/ui/ChatUsersActivity;
 
@@ -164,7 +164,7 @@
 
     iput v0, p0, Lorg/telegram/ui/ChatUsersActivity$6;->animationIndex:I
 
-    .line 842
+    .line 839
     :cond_37
     invoke-super {p0}, Landroidx/recyclerview/widget/DefaultItemAnimator;->runPendingAnimations()V
 

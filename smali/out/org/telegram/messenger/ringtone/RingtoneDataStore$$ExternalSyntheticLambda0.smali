@@ -27,7 +27,7 @@
 
     iget-object v0, p0, Lorg/telegram/messenger/ringtone/RingtoneDataStore$$ExternalSyntheticLambda0;->f$0:Lorg/telegram/messenger/ringtone/RingtoneDataStore;
 
-    invoke-static {v0}, Lorg/telegram/messenger/ringtone/RingtoneDataStore;->$r8$lambda$bZX4Up8huS0yoa7CEsypxnClapU(Lorg/telegram/messenger/ringtone/RingtoneDataStore;)V
+    invoke-static {v0}, Lorg/telegram/messenger/ringtone/RingtoneDataStore;->$r8$lambda$F55wIJ5tIJ2p65YJw58iS8GEx_c(Lorg/telegram/messenger/ringtone/RingtoneDataStore;)V
 
     return-void
 .end method

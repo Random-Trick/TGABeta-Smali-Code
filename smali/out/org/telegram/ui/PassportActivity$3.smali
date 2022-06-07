@@ -446,7 +446,7 @@
 
     aget-object v1, v1, v12
 
-    const v2, 0x7f0e0cc2
+    const v2, 0x7f0e0d4c
 
     const-string v3, "PassportUseLatinOnly"
 
@@ -647,7 +647,7 @@
 
     invoke-direct {v13, v0}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    const v0, 0x7f0e0c8c
+    const v0, 0x7f0e0d16
 
     new-array v1, v9, [Ljava/lang/Object;
 
@@ -666,7 +666,7 @@
 
     invoke-virtual {v13, v0}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const v0, 0x7f0e017c
+    const v0, 0x7f0e01b1
 
     const-string v1, "AppName"
 
@@ -677,7 +677,7 @@
 
     invoke-virtual {v13, v0}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const v0, 0x7f0e05dd
+    const v0, 0x7f0e062e
 
     const-string v1, "Done"
 
@@ -700,7 +700,7 @@
 
     invoke-virtual {v13, v14, v15}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const v0, 0x7f0e05e8
+    const v0, 0x7f0e063a
 
     const-string v1, "Edit"
 
@@ -1549,7 +1549,7 @@
 
     invoke-direct {v1, v2}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
-    const v2, 0x7f0e0c54
+    const v2, 0x7f0e0cde
 
     const-string v7, "PassportInfo2"
 
@@ -1594,7 +1594,7 @@
     .line 1121
     new-instance v3, Lorg/telegram/ui/PassportActivity$3$1;
 
-    const v8, 0x7f0e0c56
+    const v8, 0x7f0e0ce0
 
     const-string v10, "PassportInfoUrl"
 
@@ -1680,7 +1680,7 @@
     .line 1138
     invoke-virtual {v2, v1}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setView(Landroid/view/View;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const v1, 0x7f0e0c55
+    const v1, 0x7f0e0cdf
 
     const-string v3, "PassportInfoTitle"
 
@@ -1691,7 +1691,7 @@
 
     invoke-virtual {v2, v1}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const v1, 0x7f0e047b
+    const v1, 0x7f0e04c8
 
     const-string v3, "Close"
 

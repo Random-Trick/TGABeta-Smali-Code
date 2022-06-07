@@ -60,159 +60,129 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .registers 14
+    .registers 8
 
     const/4 v0, 0x5
 
-    new-array v0, v0, [Lorg/telegram/ui/Adapters/FiltersView$MediaFilterData;
+    new-array v1, v0, [Lorg/telegram/ui/Adapters/FiltersView$MediaFilterData;
 
     .line 71
-    new-instance v7, Lorg/telegram/ui/Adapters/FiltersView$MediaFilterData;
+    new-instance v2, Lorg/telegram/ui/Adapters/FiltersView$MediaFilterData;
 
-    const-string v1, "SharedMediaTab2"
+    const-string v3, "SharedMediaTab2"
 
-    const v2, 0x7f0e1046
+    const v4, 0x7f0e1104
 
     .line 72
-    invoke-static {v1, v2}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
+    invoke-static {v3, v4}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
-    move-result-object v4
+    move-result-object v3
 
-    new-instance v5, Lorg/telegram/tgnet/TLRPC$TL_inputMessagesFilterPhotoVideo;
+    new-instance v4, Lorg/telegram/tgnet/TLRPC$TL_inputMessagesFilterPhotoVideo;
 
-    invoke-direct {v5}, Lorg/telegram/tgnet/TLRPC$TL_inputMessagesFilterPhotoVideo;-><init>()V
+    invoke-direct {v4}, Lorg/telegram/tgnet/TLRPC$TL_inputMessagesFilterPhotoVideo;-><init>()V
 
-    const v2, 0x7f0703a4
-
-    const v3, 0x7f0703a5
+    const v5, 0x7f0703ae
 
     const/4 v6, 0x0
 
-    move-object v1, v7
+    invoke-direct {v2, v5, v3, v4, v6}, Lorg/telegram/ui/Adapters/FiltersView$MediaFilterData;-><init>(ILjava/lang/String;Lorg/telegram/tgnet/TLRPC$MessagesFilter;I)V
 
-    invoke-direct/range {v1 .. v6}, Lorg/telegram/ui/Adapters/FiltersView$MediaFilterData;-><init>(IILjava/lang/String;Lorg/telegram/tgnet/TLRPC$MessagesFilter;I)V
+    aput-object v2, v1, v6
 
-    const/4 v1, 0x0
+    new-instance v2, Lorg/telegram/ui/Adapters/FiltersView$MediaFilterData;
 
-    aput-object v7, v0, v1
+    const-string v3, "SharedLinksTab2"
 
-    new-instance v1, Lorg/telegram/ui/Adapters/FiltersView$MediaFilterData;
-
-    const-string v2, "SharedLinksTab2"
-
-    const v3, 0x7f0e1043
+    const v4, 0x7f0e1101
 
     .line 73
-    invoke-static {v2, v3}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
+    invoke-static {v3, v4}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
-    move-result-object v11
+    move-result-object v3
 
-    new-instance v12, Lorg/telegram/tgnet/TLRPC$TL_inputMessagesFilterUrl;
+    new-instance v4, Lorg/telegram/tgnet/TLRPC$TL_inputMessagesFilterUrl;
 
-    invoke-direct {v12}, Lorg/telegram/tgnet/TLRPC$TL_inputMessagesFilterUrl;-><init>()V
+    invoke-direct {v4}, Lorg/telegram/tgnet/TLRPC$TL_inputMessagesFilterUrl;-><init>()V
 
-    const v9, 0x7f0703a2
+    const v5, 0x7f0703ad
 
-    const v10, 0x7f0703a3
+    const/4 v6, 0x2
 
-    const/4 v13, 0x2
+    invoke-direct {v2, v5, v3, v4, v6}, Lorg/telegram/ui/Adapters/FiltersView$MediaFilterData;-><init>(ILjava/lang/String;Lorg/telegram/tgnet/TLRPC$MessagesFilter;I)V
 
-    move-object v8, v1
+    const/4 v3, 0x1
 
-    invoke-direct/range {v8 .. v13}, Lorg/telegram/ui/Adapters/FiltersView$MediaFilterData;-><init>(IILjava/lang/String;Lorg/telegram/tgnet/TLRPC$MessagesFilter;I)V
+    aput-object v2, v1, v3
 
-    const/4 v2, 0x1
+    new-instance v2, Lorg/telegram/ui/Adapters/FiltersView$MediaFilterData;
 
-    aput-object v1, v0, v2
+    const-string v4, "SharedFilesTab2"
 
-    new-instance v1, Lorg/telegram/ui/Adapters/FiltersView$MediaFilterData;
-
-    const-string v2, "SharedFilesTab2"
-
-    const v3, 0x7f0e103f
+    const v5, 0x7f0e10fd
 
     .line 74
-    invoke-static {v2, v3}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
+    invoke-static {v4, v5}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
-    move-result-object v6
+    move-result-object v4
 
-    new-instance v7, Lorg/telegram/tgnet/TLRPC$TL_inputMessagesFilterDocument;
+    new-instance v5, Lorg/telegram/tgnet/TLRPC$TL_inputMessagesFilterDocument;
 
-    invoke-direct {v7}, Lorg/telegram/tgnet/TLRPC$TL_inputMessagesFilterDocument;-><init>()V
+    invoke-direct {v5}, Lorg/telegram/tgnet/TLRPC$TL_inputMessagesFilterDocument;-><init>()V
 
-    const v4, 0x7f07039f
+    const v7, 0x7f0703ac
 
-    const v5, 0x7f0703a0
+    invoke-direct {v2, v7, v4, v5, v3}, Lorg/telegram/ui/Adapters/FiltersView$MediaFilterData;-><init>(ILjava/lang/String;Lorg/telegram/tgnet/TLRPC$MessagesFilter;I)V
 
-    const/4 v8, 0x1
+    aput-object v2, v1, v6
 
-    move-object v3, v1
+    new-instance v2, Lorg/telegram/ui/Adapters/FiltersView$MediaFilterData;
 
-    invoke-direct/range {v3 .. v8}, Lorg/telegram/ui/Adapters/FiltersView$MediaFilterData;-><init>(IILjava/lang/String;Lorg/telegram/tgnet/TLRPC$MessagesFilter;I)V
+    const-string v3, "SharedMusicTab2"
 
-    const/4 v2, 0x2
-
-    aput-object v1, v0, v2
-
-    new-instance v1, Lorg/telegram/ui/Adapters/FiltersView$MediaFilterData;
-
-    const-string v2, "SharedMusicTab2"
-
-    const v3, 0x7f0e1048
+    const v4, 0x7f0e1106
 
     .line 75
-    invoke-static {v2, v3}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
+    invoke-static {v3, v4}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
-    move-result-object v6
+    move-result-object v3
 
-    new-instance v7, Lorg/telegram/tgnet/TLRPC$TL_inputMessagesFilterMusic;
+    new-instance v4, Lorg/telegram/tgnet/TLRPC$TL_inputMessagesFilterMusic;
 
-    invoke-direct {v7}, Lorg/telegram/tgnet/TLRPC$TL_inputMessagesFilterMusic;-><init>()V
+    invoke-direct {v4}, Lorg/telegram/tgnet/TLRPC$TL_inputMessagesFilterMusic;-><init>()V
 
-    const v4, 0x7f0703a6
+    const v5, 0x7f0703af
 
-    const v5, 0x7f0703a7
+    const/4 v6, 0x3
 
-    const/4 v8, 0x3
+    invoke-direct {v2, v5, v3, v4, v6}, Lorg/telegram/ui/Adapters/FiltersView$MediaFilterData;-><init>(ILjava/lang/String;Lorg/telegram/tgnet/TLRPC$MessagesFilter;I)V
 
-    move-object v3, v1
+    aput-object v2, v1, v6
 
-    invoke-direct/range {v3 .. v8}, Lorg/telegram/ui/Adapters/FiltersView$MediaFilterData;-><init>(IILjava/lang/String;Lorg/telegram/tgnet/TLRPC$MessagesFilter;I)V
+    new-instance v2, Lorg/telegram/ui/Adapters/FiltersView$MediaFilterData;
 
-    const/4 v2, 0x3
+    const-string v3, "SharedVoiceTab2"
 
-    aput-object v1, v0, v2
-
-    new-instance v1, Lorg/telegram/ui/Adapters/FiltersView$MediaFilterData;
-
-    const-string v2, "SharedVoiceTab2"
-
-    const v3, 0x7f0e104c
+    const v4, 0x7f0e110a
 
     .line 76
-    invoke-static {v2, v3}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
+    invoke-static {v3, v4}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
-    move-result-object v6
+    move-result-object v3
 
-    new-instance v7, Lorg/telegram/tgnet/TLRPC$TL_inputMessagesFilterRoundVoice;
+    new-instance v4, Lorg/telegram/tgnet/TLRPC$TL_inputMessagesFilterRoundVoice;
 
-    invoke-direct {v7}, Lorg/telegram/tgnet/TLRPC$TL_inputMessagesFilterRoundVoice;-><init>()V
+    invoke-direct {v4}, Lorg/telegram/tgnet/TLRPC$TL_inputMessagesFilterRoundVoice;-><init>()V
 
-    const v4, 0x7f0703aa
+    const v5, 0x7f0703b1
 
-    const v5, 0x7f0703ab
+    invoke-direct {v2, v5, v3, v4, v0}, Lorg/telegram/ui/Adapters/FiltersView$MediaFilterData;-><init>(ILjava/lang/String;Lorg/telegram/tgnet/TLRPC$MessagesFilter;I)V
 
-    const/4 v8, 0x5
+    const/4 v0, 0x4
 
-    move-object v3, v1
+    aput-object v2, v1, v0
 
-    invoke-direct/range {v3 .. v8}, Lorg/telegram/ui/Adapters/FiltersView$MediaFilterData;-><init>(IILjava/lang/String;Lorg/telegram/tgnet/TLRPC$MessagesFilter;I)V
-
-    const/4 v2, 0x4
-
-    aput-object v1, v0, v2
-
-    sput-object v0, Lorg/telegram/ui/Adapters/FiltersView;->filters:[Lorg/telegram/ui/Adapters/FiltersView$MediaFilterData;
+    sput-object v1, Lorg/telegram/ui/Adapters/FiltersView;->filters:[Lorg/telegram/ui/Adapters/FiltersView$MediaFilterData;
 
     const-string v0, "20[0-9]{1,2}"
 
@@ -264,15 +234,13 @@
     new-array v0, v0, [I
 
     .line 283
-    fill-array-data v0, :array_ce
+    fill-array-data v0, :array_b4
 
     sput-object v0, Lorg/telegram/ui/Adapters/FiltersView;->numberOfDaysEachMonth:[I
 
     return-void
 
-    nop
-
-    :array_ce
+    :array_b4
     .array-data 4
         0x1f
         0x1d
@@ -774,7 +742,7 @@
     :cond_14
     const-string v2, "SearchTipToday"
 
-    const v4, 0x7f0e0f93
+    const v4, 0x7f0e104f
 
     .line 294
     invoke-static {v2, v4}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -812,7 +780,7 @@
     :cond_36
     const-string v2, "SearchTipYesterday"
 
-    const v4, 0x7f0e0f94
+    const v4, 0x7f0e1050
 
     .line 307
     invoke-static {v2, v4}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -1855,7 +1823,7 @@
 
     const-string v2, "January"
 
-    const v3, 0x7f0e08d9
+    const v3, 0x7f0e093e
 
     .line 541
     invoke-static {v2, v3}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -1872,7 +1840,7 @@
 
     const-string v2, "February"
 
-    const v4, 0x7f0e06f1
+    const v4, 0x7f0e0745
 
     .line 542
     invoke-static {v2, v4}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -1889,7 +1857,7 @@
 
     const-string v2, "March"
 
-    const v5, 0x7f0e099b
+    const v5, 0x7f0e0a22
 
     .line 543
     invoke-static {v2, v5}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -1906,7 +1874,7 @@
 
     const-string v2, "April"
 
-    const v6, 0x7f0e018c
+    const v6, 0x7f0e01c1
 
     .line 544
     invoke-static {v2, v6}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -1923,7 +1891,7 @@
 
     const-string v2, "May"
 
-    const v6, 0x7f0e09ab
+    const v6, 0x7f0e0a32
 
     .line 545
     invoke-static {v2, v6}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -1940,7 +1908,7 @@
 
     const-string v2, "June"
 
-    const v6, 0x7f0e08f2
+    const v6, 0x7f0e0957
 
     .line 546
     invoke-static {v2, v6}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -1957,7 +1925,7 @@
 
     const-string v2, "July"
 
-    const v6, 0x7f0e08f0
+    const v6, 0x7f0e0955
 
     .line 547
     invoke-static {v2, v6}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -1974,7 +1942,7 @@
 
     const-string v2, "August"
 
-    const v6, 0x7f0e0210
+    const v6, 0x7f0e0245
 
     .line 548
     invoke-static {v2, v6}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -1991,7 +1959,7 @@
 
     const-string v2, "September"
 
-    const v6, 0x7f0e0ffb
+    const v6, 0x7f0e10b8
 
     .line 549
     invoke-static {v2, v6}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -2008,7 +1976,7 @@
 
     const-string v2, "October"
 
-    const v6, 0x7f0e0baf
+    const v6, 0x7f0e0c39
 
     .line 550
     invoke-static {v2, v6}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -2025,7 +1993,7 @@
 
     const-string v2, "November"
 
-    const v6, 0x7f0e0bab
+    const v6, 0x7f0e0c35
 
     .line 551
     invoke-static {v2, v6}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -2042,7 +2010,7 @@
 
     const-string v2, "December"
 
-    const v6, 0x7f0e053a
+    const v6, 0x7f0e058b
 
     .line 552
     invoke-static {v2, v6}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -2217,12 +2185,12 @@
         }
     .end annotation
 
-    .line 843
+    .line 841
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 844
+    .line 842
     new-instance v9, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     const/4 v3, 0x0
@@ -2245,7 +2213,7 @@
 
     invoke-virtual {v0, v9}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 845
+    .line 843
     new-instance v1, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     const/4 v12, 0x0
@@ -2312,7 +2280,7 @@
 .method public onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
     .registers 3
 
-    .line 851
+    .line 849
     invoke-virtual {p0}, Landroid/view/ViewGroup;->isEnabled()Z
 
     move-result v0
@@ -2323,7 +2291,7 @@
 
     return p1
 
-    .line 854
+    .line 852
     :cond_8
     invoke-super {p0, p1}, Lorg/telegram/ui/Components/RecyclerListView;->onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
 
@@ -2356,7 +2324,7 @@
 .method public onTouchEvent(Landroid/view/MotionEvent;)Z
     .registers 3
 
-    .line 859
+    .line 857
     invoke-virtual {p0}, Landroid/view/ViewGroup;->isEnabled()Z
 
     move-result v0
@@ -2367,7 +2335,7 @@
 
     return p1
 
-    .line 862
+    .line 860
     :cond_8
     invoke-super {p0, p1}, Lorg/telegram/ui/Components/RecyclerListView;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
@@ -2377,7 +2345,7 @@
 .end method
 
 .method public setUsersAndDates(Ljava/util/ArrayList;Ljava/util/ArrayList;Z)V
-    .registers 14
+    .registers 16
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -2409,245 +2377,215 @@
 
     const/4 v0, 0x0
 
-    if-eqz p1, :cond_9d
-
     const/4 v1, 0x0
 
+    if-eqz p1, :cond_8d
+
+    const/4 v2, 0x0
+
     .line 228
-    :goto_15
+    :goto_16
     invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
 
-    move-result v2
+    move-result v3
 
-    if-ge v1, v2, :cond_9d
+    if-ge v2, v3, :cond_8d
 
     .line 229
-    invoke-virtual {p1, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    invoke-virtual {p1, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
-    move-result-object v2
+    move-result-object v3
 
     .line 230
-    instance-of v3, v2, Lorg/telegram/tgnet/TLRPC$User;
+    instance-of v4, v3, Lorg/telegram/tgnet/TLRPC$User;
 
-    const/16 v4, 0xa
+    const/4 v5, 0x4
 
-    if-eqz v3, :cond_63
+    const v6, 0x7f0703b0
+
+    const/16 v7, 0xa
+
+    if-eqz v4, :cond_5e
 
     .line 231
-    check-cast v2, Lorg/telegram/tgnet/TLRPC$User;
+    check-cast v3, Lorg/telegram/tgnet/TLRPC$User;
 
     .line 233
-    sget v3, Lorg/telegram/messenger/UserConfig;->selectedAccount:I
+    sget v4, Lorg/telegram/messenger/UserConfig;->selectedAccount:I
 
-    invoke-static {v3}, Lorg/telegram/messenger/UserConfig;->getInstance(I)Lorg/telegram/messenger/UserConfig;
+    invoke-static {v4}, Lorg/telegram/messenger/UserConfig;->getInstance(I)Lorg/telegram/messenger/UserConfig;
 
-    move-result-object v3
+    move-result-object v4
 
-    invoke-virtual {v3}, Lorg/telegram/messenger/UserConfig;->getCurrentUser()Lorg/telegram/tgnet/TLRPC$User;
+    invoke-virtual {v4}, Lorg/telegram/messenger/UserConfig;->getCurrentUser()Lorg/telegram/tgnet/TLRPC$User;
 
-    move-result-object v3
+    move-result-object v4
 
-    iget-wide v5, v3, Lorg/telegram/tgnet/TLRPC$User;->id:J
+    iget-wide v8, v4, Lorg/telegram/tgnet/TLRPC$User;->id:J
 
-    iget-wide v7, v2, Lorg/telegram/tgnet/TLRPC$User;->id:J
+    iget-wide v10, v3, Lorg/telegram/tgnet/TLRPC$User;->id:J
 
-    cmp-long v3, v5, v7
+    cmp-long v4, v8, v10
 
-    if-nez v3, :cond_43
+    if-nez v4, :cond_48
 
-    const v3, 0x7f0e0f65
+    const v4, 0x7f0e1021
 
-    const-string v4, "SavedMessages"
+    const-string v7, "SavedMessages"
 
     .line 234
-    invoke-static {v4, v3}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
+    invoke-static {v7, v4}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v4
 
-    goto :goto_4b
+    goto :goto_50
 
     .line 236
-    :cond_43
-    iget-object v3, v2, Lorg/telegram/tgnet/TLRPC$User;->first_name:Ljava/lang/String;
+    :cond_48
+    iget-object v4, v3, Lorg/telegram/tgnet/TLRPC$User;->first_name:Ljava/lang/String;
 
-    iget-object v5, v2, Lorg/telegram/tgnet/TLRPC$User;->last_name:Ljava/lang/String;
+    iget-object v8, v3, Lorg/telegram/tgnet/TLRPC$User;->last_name:Ljava/lang/String;
 
-    invoke-static {v3, v5, v4}, Lorg/telegram/messenger/ContactsController;->formatName(Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/String;
+    invoke-static {v4, v8, v7}, Lorg/telegram/messenger/ContactsController;->formatName(Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/String;
 
-    move-result-object v3
-
-    :goto_4b
-    move-object v7, v3
+    move-result-object v4
 
     .line 238
-    new-instance v3, Lorg/telegram/ui/Adapters/FiltersView$MediaFilterData;
+    :goto_50
+    new-instance v7, Lorg/telegram/ui/Adapters/FiltersView$MediaFilterData;
 
-    const v5, 0x7f0703a8
-
-    const v6, 0x7f0703a9
-
-    const/4 v8, 0x0
-
-    const/4 v9, 0x4
-
-    move-object v4, v3
-
-    invoke-direct/range {v4 .. v9}, Lorg/telegram/ui/Adapters/FiltersView$MediaFilterData;-><init>(IILjava/lang/String;Lorg/telegram/tgnet/TLRPC$MessagesFilter;I)V
+    invoke-direct {v7, v6, v4, v0, v5}, Lorg/telegram/ui/Adapters/FiltersView$MediaFilterData;-><init>(ILjava/lang/String;Lorg/telegram/tgnet/TLRPC$MessagesFilter;I)V
 
     .line 239
-    invoke-virtual {v3, v2}, Lorg/telegram/ui/Adapters/FiltersView$MediaFilterData;->setUser(Lorg/telegram/tgnet/TLObject;)V
+    invoke-virtual {v7, v3}, Lorg/telegram/ui/Adapters/FiltersView$MediaFilterData;->setUser(Lorg/telegram/tgnet/TLObject;)V
 
     .line 240
-    iget-object v2, p0, Lorg/telegram/ui/Adapters/FiltersView;->usersFilters:Ljava/util/ArrayList;
+    iget-object v3, p0, Lorg/telegram/ui/Adapters/FiltersView;->usersFilters:Ljava/util/ArrayList;
 
-    invoke-virtual {v2, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v3, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    goto :goto_99
+    goto :goto_8a
 
     .line 241
-    :cond_63
-    instance-of v3, v2, Lorg/telegram/tgnet/TLRPC$Chat;
+    :cond_5e
+    instance-of v4, v3, Lorg/telegram/tgnet/TLRPC$Chat;
 
-    if-eqz v3, :cond_99
+    if-eqz v4, :cond_8a
 
     .line 242
-    check-cast v2, Lorg/telegram/tgnet/TLRPC$Chat;
+    check-cast v3, Lorg/telegram/tgnet/TLRPC$Chat;
 
     .line 243
-    iget-object v3, v2, Lorg/telegram/tgnet/TLRPC$Chat;->title:Ljava/lang/String;
+    iget-object v4, v3, Lorg/telegram/tgnet/TLRPC$Chat;->title:Ljava/lang/String;
 
     .line 244
-    invoke-virtual {v3}, Ljava/lang/String;->length()I
+    invoke-virtual {v4}, Ljava/lang/String;->length()I
 
-    move-result v5
+    move-result v8
 
-    const/16 v6, 0xc
+    const/16 v9, 0xc
 
-    if-le v5, v6, :cond_82
+    if-le v8, v9, :cond_7d
 
-    const/4 v5, 0x1
+    const/4 v8, 0x1
 
-    new-array v5, v5, [Ljava/lang/Object;
+    new-array v8, v8, [Ljava/lang/Object;
 
     .line 245
-    invoke-virtual {v3, v0, v4}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+    invoke-virtual {v4, v1, v7}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v4
 
-    aput-object v3, v5, v0
+    aput-object v4, v8, v1
 
-    const-string v3, "%s..."
+    const-string v4, "%s..."
 
-    invoke-static {v3, v5}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {v4, v8}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
-    move-result-object v3
-
-    :cond_82
-    move-object v7, v3
+    move-result-object v4
 
     .line 247
-    new-instance v3, Lorg/telegram/ui/Adapters/FiltersView$MediaFilterData;
+    :cond_7d
+    new-instance v7, Lorg/telegram/ui/Adapters/FiltersView$MediaFilterData;
 
-    const v5, 0x7f0703a8
-
-    const v6, 0x7f0703a9
-
-    const/4 v8, 0x0
-
-    const/4 v9, 0x4
-
-    move-object v4, v3
-
-    invoke-direct/range {v4 .. v9}, Lorg/telegram/ui/Adapters/FiltersView$MediaFilterData;-><init>(IILjava/lang/String;Lorg/telegram/tgnet/TLRPC$MessagesFilter;I)V
+    invoke-direct {v7, v6, v4, v0, v5}, Lorg/telegram/ui/Adapters/FiltersView$MediaFilterData;-><init>(ILjava/lang/String;Lorg/telegram/tgnet/TLRPC$MessagesFilter;I)V
 
     .line 248
-    invoke-virtual {v3, v2}, Lorg/telegram/ui/Adapters/FiltersView$MediaFilterData;->setUser(Lorg/telegram/tgnet/TLObject;)V
+    invoke-virtual {v7, v3}, Lorg/telegram/ui/Adapters/FiltersView$MediaFilterData;->setUser(Lorg/telegram/tgnet/TLObject;)V
 
     .line 249
-    iget-object v2, p0, Lorg/telegram/ui/Adapters/FiltersView;->usersFilters:Ljava/util/ArrayList;
+    iget-object v3, p0, Lorg/telegram/ui/Adapters/FiltersView;->usersFilters:Ljava/util/ArrayList;
 
-    invoke-virtual {v2, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v3, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    :cond_99
-    :goto_99
-    add-int/lit8 v1, v1, 0x1
+    :cond_8a
+    :goto_8a
+    add-int/lit8 v2, v2, 0x1
 
-    goto/16 :goto_15
+    goto :goto_16
 
-    :cond_9d
-    if-eqz p2, :cond_c7
+    :cond_8d
+    if-eqz p2, :cond_b2
 
     const/4 p1, 0x0
 
     .line 254
-    :goto_a0
+    :goto_90
     invoke-virtual {p2}, Ljava/util/ArrayList;->size()I
 
-    move-result v1
+    move-result v2
 
-    if-ge p1, v1, :cond_c7
+    if-ge p1, v2, :cond_b2
 
     .line 255
     invoke-virtual {p2, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v2
 
-    check-cast v1, Lorg/telegram/ui/Adapters/FiltersView$DateData;
+    check-cast v2, Lorg/telegram/ui/Adapters/FiltersView$DateData;
 
     .line 256
-    new-instance v8, Lorg/telegram/ui/Adapters/FiltersView$MediaFilterData;
+    new-instance v3, Lorg/telegram/ui/Adapters/FiltersView$MediaFilterData;
 
-    const v3, 0x7f07039d
+    const v4, 0x7f0703ab
 
-    const v4, 0x7f07039e
+    iget-object v5, v2, Lorg/telegram/ui/Adapters/FiltersView$DateData;->title:Ljava/lang/String;
 
-    iget-object v5, v1, Lorg/telegram/ui/Adapters/FiltersView$DateData;->title:Ljava/lang/String;
+    const/4 v6, 0x6
 
-    const/4 v6, 0x0
-
-    const/4 v7, 0x6
-
-    move-object v2, v8
-
-    invoke-direct/range {v2 .. v7}, Lorg/telegram/ui/Adapters/FiltersView$MediaFilterData;-><init>(IILjava/lang/String;Lorg/telegram/tgnet/TLRPC$MessagesFilter;I)V
+    invoke-direct {v3, v4, v5, v0, v6}, Lorg/telegram/ui/Adapters/FiltersView$MediaFilterData;-><init>(ILjava/lang/String;Lorg/telegram/tgnet/TLRPC$MessagesFilter;I)V
 
     .line 257
-    invoke-virtual {v8, v1}, Lorg/telegram/ui/Adapters/FiltersView$MediaFilterData;->setDate(Lorg/telegram/ui/Adapters/FiltersView$DateData;)V
+    invoke-virtual {v3, v2}, Lorg/telegram/ui/Adapters/FiltersView$MediaFilterData;->setDate(Lorg/telegram/ui/Adapters/FiltersView$DateData;)V
 
     .line 258
-    iget-object v1, p0, Lorg/telegram/ui/Adapters/FiltersView;->usersFilters:Ljava/util/ArrayList;
+    iget-object v2, p0, Lorg/telegram/ui/Adapters/FiltersView;->usersFilters:Ljava/util/ArrayList;
 
-    invoke-virtual {v1, v8}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v2, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     add-int/lit8 p1, p1, 0x1
 
-    goto :goto_a0
+    goto :goto_90
 
-    :cond_c7
-    if-eqz p3, :cond_e5
+    :cond_b2
+    if-eqz p3, :cond_cb
 
     .line 262
     new-instance p1, Lorg/telegram/ui/Adapters/FiltersView$MediaFilterData;
 
-    const v2, 0x7f0700b0
+    const p2, 0x7f070093
 
-    const v3, 0x7f0700b0
+    const p3, 0x7f0e01cf
 
-    const p2, 0x7f0e019a
+    const-string v2, "ArchiveSearchFilter"
 
-    const-string p3, "ArchiveSearchFilter"
+    invoke-static {v2, p3}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
-    invoke-static {p3, p2}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
+    move-result-object p3
 
-    move-result-object v4
+    const/4 v2, 0x7
 
-    const/4 v5, 0x0
-
-    const/4 v6, 0x7
-
-    move-object v1, p1
-
-    invoke-direct/range {v1 .. v6}, Lorg/telegram/ui/Adapters/FiltersView$MediaFilterData;-><init>(IILjava/lang/String;Lorg/telegram/tgnet/TLRPC$MessagesFilter;I)V
+    invoke-direct {p1, p2, p3, v0, v2}, Lorg/telegram/ui/Adapters/FiltersView$MediaFilterData;-><init>(ILjava/lang/String;Lorg/telegram/tgnet/TLRPC$MessagesFilter;I)V
 
     .line 263
     iget-object p2, p0, Lorg/telegram/ui/Adapters/FiltersView;->usersFilters:Ljava/util/ArrayList;
@@ -2655,12 +2593,12 @@
     invoke-virtual {p2, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 265
-    :cond_e5
+    :cond_cb
     invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Landroidx/recyclerview/widget/RecyclerView$Adapter;
 
     move-result-object p1
 
-    if-eqz p1, :cond_10f
+    if-eqz p1, :cond_f4
 
     .line 266
     new-instance p1, Lorg/telegram/ui/Adapters/FiltersView$UpdateCallback;
@@ -2669,9 +2607,7 @@
 
     move-result-object p2
 
-    const/4 p3, 0x0
-
-    invoke-direct {p1, p2, p3}, Lorg/telegram/ui/Adapters/FiltersView$UpdateCallback;-><init>(Landroidx/recyclerview/widget/RecyclerView$Adapter;Lorg/telegram/ui/Adapters/FiltersView$1;)V
+    invoke-direct {p1, p2, v0}, Lorg/telegram/ui/Adapters/FiltersView$UpdateCallback;-><init>(Landroidx/recyclerview/widget/RecyclerView$Adapter;Lorg/telegram/ui/Adapters/FiltersView$1;)V
 
     .line 267
     iget-object p2, p0, Lorg/telegram/ui/Adapters/FiltersView;->diffUtilsCallback:Landroidx/recyclerview/widget/DiffUtil$Callback;
@@ -2689,18 +2625,18 @@
 
     move-result p2
 
-    if-nez p2, :cond_10f
+    if-nez p2, :cond_f4
 
     iget-boolean p1, p1, Lorg/telegram/ui/Adapters/FiltersView$UpdateCallback;->changed:Z
 
-    if-eqz p1, :cond_10f
+    if-eqz p1, :cond_f4
 
     .line 269
     iget-object p1, p0, Lorg/telegram/ui/Adapters/FiltersView;->layoutManager:Landroidx/recyclerview/widget/LinearLayoutManager;
 
-    invoke-virtual {p1, v0, v0}, Landroidx/recyclerview/widget/LinearLayoutManager;->scrollToPositionWithOffset(II)V
+    invoke-virtual {p1, v1, v1}, Landroidx/recyclerview/widget/LinearLayoutManager;->scrollToPositionWithOffset(II)V
 
-    :cond_10f
+    :cond_f4
     return-void
 .end method
 

@@ -1,11 +1,11 @@
 .class Lorg/telegram/ui/ProfileActivity$28;
-.super Landroid/animation/AnimatorListenerAdapter;
+.super Lorg/telegram/ui/Components/AnimationProperties$FloatProperty;
 .source "ProfileActivity.java"
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lorg/telegram/ui/ProfileActivity;->setMediaHeaderVisible(Z)V
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lorg/telegram/ui/ProfileActivity;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -13,249 +13,499 @@
     name = null
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lorg/telegram/ui/Components/AnimationProperties$FloatProperty<",
+        "Lorg/telegram/ui/ActionBar/ActionBar;",
+        ">;"
+    }
+.end annotation
+
 
 # instance fields
 .field final synthetic this$0:Lorg/telegram/ui/ProfileActivity;
 
-.field final synthetic val$mediaSearchItem:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
-
 
 # direct methods
-.method constructor <init>(Lorg/telegram/ui/ProfileActivity;Lorg/telegram/ui/ActionBar/ActionBarMenuItem;)V
+.method constructor <init>(Lorg/telegram/ui/ProfileActivity;Ljava/lang/String;)V
     .registers 3
 
-    .line 4308
+    .line 4252
     iput-object p1, p0, Lorg/telegram/ui/ProfileActivity$28;->this$0:Lorg/telegram/ui/ProfileActivity;
 
-    iput-object p2, p0, Lorg/telegram/ui/ProfileActivity$28;->val$mediaSearchItem:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
-
-    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
+    invoke-direct {p0, p2}, Lorg/telegram/ui/Components/AnimationProperties$FloatProperty;-><init>(Ljava/lang/String;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onAnimationCancel(Landroid/animation/Animator;)V
-    .registers 3
+.method public get(Lorg/telegram/ui/ActionBar/ActionBar;)Ljava/lang/Float;
+    .registers 2
 
-    .line 4347
+    .line 4309
     iget-object p1, p0, Lorg/telegram/ui/ProfileActivity$28;->this$0:Lorg/telegram/ui/ProfileActivity;
 
-    const/4 v0, 0x0
+    invoke-static {p1}, Lorg/telegram/ui/ProfileActivity;->access$1000(Lorg/telegram/ui/ProfileActivity;)F
 
-    invoke-static {p1, v0}, Lorg/telegram/ui/ProfileActivity;->access$15702(Lorg/telegram/ui/ProfileActivity;Landroid/animation/AnimatorSet;)Landroid/animation/AnimatorSet;
+    move-result p1
+
+    invoke-static {p1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public bridge synthetic get(Ljava/lang/Object;)Ljava/lang/Object;
+    .registers 2
+
+    .line 4252
+    check-cast p1, Lorg/telegram/ui/ActionBar/ActionBar;
+
+    invoke-virtual {p0, p1}, Lorg/telegram/ui/ProfileActivity$28;->get(Lorg/telegram/ui/ActionBar/ActionBar;)Ljava/lang/Float;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public bridge synthetic setValue(Ljava/lang/Object;F)V
+    .registers 3
+
+    .line 4252
+    check-cast p1, Lorg/telegram/ui/ActionBar/ActionBar;
+
+    invoke-virtual {p0, p1, p2}, Lorg/telegram/ui/ProfileActivity$28;->setValue(Lorg/telegram/ui/ActionBar/ActionBar;F)V
 
     return-void
 .end method
 
-.method public onAnimationEnd(Landroid/animation/Animator;)V
-    .registers 8
+.method public setValue(Lorg/telegram/ui/ActionBar/ActionBar;F)V
+    .registers 9
 
-    .line 4311
+    .line 4255
     iget-object p1, p0, Lorg/telegram/ui/ProfileActivity$28;->this$0:Lorg/telegram/ui/ProfileActivity;
 
-    invoke-static {p1}, Lorg/telegram/ui/ProfileActivity;->access$15700(Lorg/telegram/ui/ProfileActivity;)Landroid/animation/AnimatorSet;
+    invoke-static {p1, p2}, Lorg/telegram/ui/ProfileActivity;->access$1002(Lorg/telegram/ui/ProfileActivity;F)F
+
+    .line 4256
+    iget-object p1, p0, Lorg/telegram/ui/ProfileActivity$28;->this$0:Lorg/telegram/ui/ProfileActivity;
+
+    invoke-static {p1}, Lorg/telegram/ui/ProfileActivity;->access$100(Lorg/telegram/ui/ProfileActivity;)Lorg/telegram/ui/ProfileActivity$TopView;
 
     move-result-object p1
 
-    if-eqz p1, :cond_b7
+    invoke-virtual {p1}, Landroid/view/View;->invalidate()V
 
-    .line 4312
+    .line 4258
     iget-object p1, p0, Lorg/telegram/ui/ProfileActivity$28;->this$0:Lorg/telegram/ui/ProfileActivity;
 
-    invoke-static {p1}, Lorg/telegram/ui/ProfileActivity;->access$10500(Lorg/telegram/ui/ProfileActivity;)Z
+    const-string v0, "profile_title"
+
+    invoke-virtual {p1, v0}, Lorg/telegram/ui/ProfileActivity;->getThemedColor(Ljava/lang/String;)I
 
     move-result p1
 
-    if-eqz p1, :cond_4f
+    .line 4259
+    iget-object v0, p0, Lorg/telegram/ui/ProfileActivity$28;->this$0:Lorg/telegram/ui/ProfileActivity;
 
-    .line 4313
-    iget-object p1, p0, Lorg/telegram/ui/ProfileActivity$28;->this$0:Lorg/telegram/ui/ProfileActivity;
+    const-string v1, "player_actionBarTitle"
 
-    invoke-static {p1}, Lorg/telegram/ui/ProfileActivity;->access$3100(Lorg/telegram/ui/ProfileActivity;)Z
+    invoke-virtual {v0, v1}, Lorg/telegram/ui/ProfileActivity;->getThemedColor(Ljava/lang/String;)I
+
+    move-result v0
+
+    const/high16 v2, 0x3f800000    # 1.0f
+
+    .line 4260
+    invoke-static {p1, v0, p2, v2}, Lorg/telegram/messenger/AndroidUtilities;->getOffsetColor(IIFF)I
 
     move-result p1
 
-    const/16 v0, 0x8
+    .line 4261
+    iget-object v3, p0, Lorg/telegram/ui/ProfileActivity$28;->this$0:Lorg/telegram/ui/ProfileActivity;
 
-    if-eqz p1, :cond_23
+    invoke-static {v3}, Lorg/telegram/ui/ProfileActivity;->access$8100(Lorg/telegram/ui/ProfileActivity;)[Lorg/telegram/ui/ActionBar/SimpleTextView;
 
-    .line 4314
+    move-result-object v3
+
+    const/4 v4, 0x1
+
+    aget-object v3, v3, v4
+
+    invoke-virtual {v3, p1}, Lorg/telegram/ui/ActionBar/SimpleTextView;->setTextColor(I)V
+
+    .line 4262
+    iget-object v3, p0, Lorg/telegram/ui/ProfileActivity$28;->this$0:Lorg/telegram/ui/ProfileActivity;
+
+    invoke-static {v3}, Lorg/telegram/ui/ProfileActivity;->access$15000(Lorg/telegram/ui/ProfileActivity;)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v3
+
+    if-eqz v3, :cond_43
+
+    .line 4263
+    iget-object v3, p0, Lorg/telegram/ui/ProfileActivity$28;->this$0:Lorg/telegram/ui/ProfileActivity;
+
+    invoke-static {v3}, Lorg/telegram/ui/ProfileActivity;->access$15000(Lorg/telegram/ui/ProfileActivity;)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v3
+
+    sget-object v4, Landroid/graphics/PorterDuff$Mode;->MULTIPLY:Landroid/graphics/PorterDuff$Mode;
+
+    invoke-virtual {v3, p1, v4}, Landroid/graphics/drawable/Drawable;->setColorFilter(ILandroid/graphics/PorterDuff$Mode;)V
+
+    .line 4265
+    :cond_43
     iget-object p1, p0, Lorg/telegram/ui/ProfileActivity$28;->this$0:Lorg/telegram/ui/ProfileActivity;
 
-    invoke-static {p1}, Lorg/telegram/ui/ProfileActivity;->access$3200(Lorg/telegram/ui/ProfileActivity;)Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
+    invoke-static {p1}, Lorg/telegram/ui/ProfileActivity;->access$15100(Lorg/telegram/ui/ProfileActivity;)Lorg/telegram/ui/Components/ScamDrawable;
 
     move-result-object p1
 
-    invoke-virtual {p1, v0}, Landroid/widget/FrameLayout;->setVisibility(I)V
+    if-eqz p1, :cond_60
 
-    .line 4316
-    :cond_23
+    .line 4266
     iget-object p1, p0, Lorg/telegram/ui/ProfileActivity$28;->this$0:Lorg/telegram/ui/ProfileActivity;
 
-    invoke-static {p1}, Lorg/telegram/ui/ProfileActivity;->access$3300(Lorg/telegram/ui/ProfileActivity;)Z
+    const-string v3, "avatar_subtitleInProfileBlue"
+
+    invoke-virtual {p1, v3}, Lorg/telegram/ui/ProfileActivity;->getThemedColor(Ljava/lang/String;)I
 
     move-result p1
 
-    if-eqz p1, :cond_34
+    .line 4267
+    iget-object v3, p0, Lorg/telegram/ui/ProfileActivity$28;->this$0:Lorg/telegram/ui/ProfileActivity;
 
-    .line 4317
-    iget-object p1, p0, Lorg/telegram/ui/ProfileActivity$28;->this$0:Lorg/telegram/ui/ProfileActivity;
+    invoke-static {v3}, Lorg/telegram/ui/ProfileActivity;->access$15100(Lorg/telegram/ui/ProfileActivity;)Lorg/telegram/ui/Components/ScamDrawable;
 
-    invoke-static {p1}, Lorg/telegram/ui/ProfileActivity;->access$3400(Lorg/telegram/ui/ProfileActivity;)Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
+    move-result-object v3
 
-    move-result-object p1
-
-    invoke-virtual {p1, v0}, Landroid/widget/FrameLayout;->setVisibility(I)V
-
-    .line 4319
-    :cond_34
-    iget-object p1, p0, Lorg/telegram/ui/ProfileActivity$28;->this$0:Lorg/telegram/ui/ProfileActivity;
-
-    invoke-static {p1}, Lorg/telegram/ui/ProfileActivity;->access$2900(Lorg/telegram/ui/ProfileActivity;)Z
+    invoke-static {p1, v0, p2, v2}, Lorg/telegram/messenger/AndroidUtilities;->getOffsetColor(IIFF)I
 
     move-result p1
 
-    if-eqz p1, :cond_45
+    invoke-virtual {v3, p1}, Lorg/telegram/ui/Components/ScamDrawable;->setColor(I)V
 
-    .line 4320
+    .line 4270
+    :cond_60
     iget-object p1, p0, Lorg/telegram/ui/ProfileActivity$28;->this$0:Lorg/telegram/ui/ProfileActivity;
 
-    invoke-static {p1}, Lorg/telegram/ui/ProfileActivity;->access$3000(Lorg/telegram/ui/ProfileActivity;)Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
+    const-string v0, "actionBarDefaultIcon"
+
+    invoke-virtual {p1, v0}, Lorg/telegram/ui/ProfileActivity;->getThemedColor(Ljava/lang/String;)I
+
+    move-result p1
+
+    .line 4271
+    iget-object v3, p0, Lorg/telegram/ui/ProfileActivity$28;->this$0:Lorg/telegram/ui/ProfileActivity;
+
+    const-string v4, "windowBackgroundWhiteGrayText2"
+
+    invoke-virtual {v3, v4}, Lorg/telegram/ui/ProfileActivity;->getThemedColor(Ljava/lang/String;)I
+
+    move-result v3
+
+    .line 4272
+    iget-object v4, p0, Lorg/telegram/ui/ProfileActivity$28;->this$0:Lorg/telegram/ui/ProfileActivity;
+
+    invoke-static {v4}, Lorg/telegram/ui/ProfileActivity;->access$15200(Lorg/telegram/ui/ProfileActivity;)Lorg/telegram/ui/ActionBar/ActionBar;
+
+    move-result-object v4
+
+    invoke-static {p1, v3, p2, v2}, Lorg/telegram/messenger/AndroidUtilities;->getOffsetColor(IIFF)I
+
+    move-result p1
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v4, p1, v3}, Lorg/telegram/ui/ActionBar/ActionBar;->setItemsColor(IZ)V
+
+    .line 4274
+    iget-object p1, p0, Lorg/telegram/ui/ProfileActivity$28;->this$0:Lorg/telegram/ui/ProfileActivity;
+
+    const-string v4, "avatar_actionBarSelectorBlue"
+
+    invoke-virtual {p1, v4}, Lorg/telegram/ui/ProfileActivity;->getThemedColor(Ljava/lang/String;)I
+
+    move-result p1
+
+    .line 4275
+    iget-object v4, p0, Lorg/telegram/ui/ProfileActivity$28;->this$0:Lorg/telegram/ui/ProfileActivity;
+
+    const-string v5, "actionBarActionModeDefaultSelector"
+
+    invoke-virtual {v4, v5}, Lorg/telegram/ui/ProfileActivity;->getThemedColor(Ljava/lang/String;)I
+
+    move-result v4
+
+    .line 4276
+    iget-object v5, p0, Lorg/telegram/ui/ProfileActivity$28;->this$0:Lorg/telegram/ui/ProfileActivity;
+
+    invoke-static {v5}, Lorg/telegram/ui/ProfileActivity;->access$15300(Lorg/telegram/ui/ProfileActivity;)Lorg/telegram/ui/ActionBar/ActionBar;
+
+    move-result-object v5
+
+    invoke-static {p1, v4, p2, v2}, Lorg/telegram/messenger/AndroidUtilities;->getOffsetColor(IIFF)I
+
+    move-result p1
+
+    invoke-virtual {v5, p1, v3}, Lorg/telegram/ui/ActionBar/ActionBar;->setItemsBackgroundColor(IZ)V
+
+    .line 4278
+    iget-object p1, p0, Lorg/telegram/ui/ProfileActivity$28;->this$0:Lorg/telegram/ui/ProfileActivity;
+
+    invoke-static {p1}, Lorg/telegram/ui/ProfileActivity;->access$100(Lorg/telegram/ui/ProfileActivity;)Lorg/telegram/ui/ProfileActivity$TopView;
 
     move-result-object p1
 
-    invoke-virtual {p1, v0}, Landroid/widget/FrameLayout;->setVisibility(I)V
+    invoke-virtual {p1}, Landroid/view/View;->invalidate()V
 
-    .line 4322
-    :cond_45
+    .line 4279
     iget-object p1, p0, Lorg/telegram/ui/ProfileActivity$28;->this$0:Lorg/telegram/ui/ProfileActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/ProfileActivity;->access$3800(Lorg/telegram/ui/ProfileActivity;)Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
     move-result-object p1
 
-    invoke-virtual {p1, v0}, Landroid/widget/FrameLayout;->setVisibility(I)V
+    iget-object v3, p0, Lorg/telegram/ui/ProfileActivity$28;->this$0:Lorg/telegram/ui/ProfileActivity;
 
-    goto :goto_b7
+    invoke-virtual {v3, v0}, Lorg/telegram/ui/ProfileActivity;->getThemedColor(Ljava/lang/String;)I
 
-    .line 4324
-    :cond_4f
+    move-result v3
+
+    invoke-virtual {p1, v3}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->setIconColor(I)V
+
+    .line 4280
     iget-object p1, p0, Lorg/telegram/ui/ProfileActivity$28;->this$0:Lorg/telegram/ui/ProfileActivity;
 
-    invoke-static {p1}, Lorg/telegram/ui/ProfileActivity;->access$2300(Lorg/telegram/ui/ProfileActivity;)Lorg/telegram/ui/Components/SharedMediaLayout;
+    invoke-static {p1}, Lorg/telegram/ui/ProfileActivity;->access$3200(Lorg/telegram/ui/ProfileActivity;)Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
     move-result-object p1
-
-    invoke-virtual {p1}, Lorg/telegram/ui/Components/SharedMediaLayout;->isSearchItemVisible()Z
-
-    move-result p1
-
-    const/4 v0, 0x0
-
-    if-eqz p1, :cond_61
-
-    .line 4325
-    iget-object p1, p0, Lorg/telegram/ui/ProfileActivity$28;->val$mediaSearchItem:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
-
-    invoke-virtual {p1, v0}, Landroid/widget/FrameLayout;->setVisibility(I)V
-
-    .line 4328
-    :cond_61
-    iget-object p1, p0, Lorg/telegram/ui/ProfileActivity$28;->this$0:Lorg/telegram/ui/ProfileActivity;
-
-    invoke-static {p1}, Lorg/telegram/ui/ProfileActivity;->access$2300(Lorg/telegram/ui/ProfileActivity;)Lorg/telegram/ui/Components/SharedMediaLayout;
-
-    move-result-object p1
-
-    iget-object p1, p1, Lorg/telegram/ui/Components/SharedMediaLayout;->photoVideoOptionsItem:Landroid/widget/ImageView;
-
-    const/4 v1, 0x4
-
-    invoke-virtual {p1, v1}, Landroid/widget/ImageView;->setVisibility(I)V
-
-    .line 4330
-    iget-object p1, p0, Lorg/telegram/ui/ProfileActivity$28;->this$0:Lorg/telegram/ui/ProfileActivity;
-
-    new-instance v1, Landroid/animation/AnimatorSet;
-
-    invoke-direct {v1}, Landroid/animation/AnimatorSet;-><init>()V
-
-    invoke-static {p1, v1}, Lorg/telegram/ui/ProfileActivity;->access$15802(Lorg/telegram/ui/ProfileActivity;Landroid/animation/AnimatorSet;)Landroid/animation/AnimatorSet;
-
-    .line 4331
-    iget-object p1, p0, Lorg/telegram/ui/ProfileActivity$28;->this$0:Lorg/telegram/ui/ProfileActivity;
-
-    invoke-static {p1}, Lorg/telegram/ui/ProfileActivity;->access$15800(Lorg/telegram/ui/ProfileActivity;)Landroid/animation/AnimatorSet;
-
-    move-result-object p1
-
-    const/4 v1, 0x1
-
-    new-array v2, v1, [Landroid/animation/Animator;
 
     iget-object v3, p0, Lorg/telegram/ui/ProfileActivity$28;->this$0:Lorg/telegram/ui/ProfileActivity;
 
-    invoke-static {v3}, Lorg/telegram/ui/ProfileActivity;->access$15900(Lorg/telegram/ui/ProfileActivity;)Landroid/util/Property;
+    invoke-virtual {v3, v0}, Lorg/telegram/ui/ProfileActivity;->getThemedColor(Ljava/lang/String;)I
+
+    move-result v3
+
+    invoke-virtual {p1, v3}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->setIconColor(I)V
+
+    .line 4281
+    iget-object p1, p0, Lorg/telegram/ui/ProfileActivity$28;->this$0:Lorg/telegram/ui/ProfileActivity;
+
+    invoke-static {p1}, Lorg/telegram/ui/ProfileActivity;->access$3400(Lorg/telegram/ui/ProfileActivity;)Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
+
+    move-result-object p1
+
+    iget-object v3, p0, Lorg/telegram/ui/ProfileActivity$28;->this$0:Lorg/telegram/ui/ProfileActivity;
+
+    invoke-virtual {v3, v0}, Lorg/telegram/ui/ProfileActivity;->getThemedColor(Ljava/lang/String;)I
+
+    move-result v3
+
+    invoke-virtual {p1, v3}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->setIconColor(I)V
+
+    .line 4282
+    iget-object p1, p0, Lorg/telegram/ui/ProfileActivity$28;->this$0:Lorg/telegram/ui/ProfileActivity;
+
+    invoke-static {p1}, Lorg/telegram/ui/ProfileActivity;->access$3000(Lorg/telegram/ui/ProfileActivity;)Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
+
+    move-result-object p1
+
+    iget-object v3, p0, Lorg/telegram/ui/ProfileActivity$28;->this$0:Lorg/telegram/ui/ProfileActivity;
+
+    invoke-virtual {v3, v0}, Lorg/telegram/ui/ProfileActivity;->getThemedColor(Ljava/lang/String;)I
+
+    move-result v0
+
+    invoke-virtual {p1, v0}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->setIconColor(I)V
+
+    .line 4284
+    iget-object p1, p0, Lorg/telegram/ui/ProfileActivity$28;->this$0:Lorg/telegram/ui/ProfileActivity;
+
+    invoke-static {p1}, Lorg/telegram/ui/ProfileActivity;->access$15400(Lorg/telegram/ui/ProfileActivity;)Landroid/graphics/drawable/Drawable;
+
+    move-result-object p1
+
+    const-string v0, "profile_verifiedBackground"
+
+    if-eqz p1, :cond_105
+
+    .line 4285
+    iget-object p1, p0, Lorg/telegram/ui/ProfileActivity$28;->this$0:Lorg/telegram/ui/ProfileActivity;
+
+    invoke-virtual {p1, v0}, Lorg/telegram/ui/ProfileActivity;->getThemedColor(Ljava/lang/String;)I
+
+    move-result p1
+
+    .line 4286
+    iget-object v3, p0, Lorg/telegram/ui/ProfileActivity$28;->this$0:Lorg/telegram/ui/ProfileActivity;
+
+    invoke-virtual {v3, v1}, Lorg/telegram/ui/ProfileActivity;->getThemedColor(Ljava/lang/String;)I
+
+    move-result v3
+
+    .line 4287
+    iget-object v4, p0, Lorg/telegram/ui/ProfileActivity$28;->this$0:Lorg/telegram/ui/ProfileActivity;
+
+    invoke-static {v4}, Lorg/telegram/ui/ProfileActivity;->access$15400(Lorg/telegram/ui/ProfileActivity;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v4
 
-    new-array v1, v1, [F
+    invoke-static {p1, v3, p2, v2}, Lorg/telegram/messenger/AndroidUtilities;->getOffsetColor(IIFF)I
 
-    const/high16 v5, 0x3f800000    # 1.0f
+    move-result p1
 
-    aput v5, v1, v0
+    sget-object v3, Landroid/graphics/PorterDuff$Mode;->MULTIPLY:Landroid/graphics/PorterDuff$Mode;
 
-    invoke-static {v3, v4, v1}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
+    invoke-virtual {v4, p1, v3}, Landroid/graphics/drawable/Drawable;->setColorFilter(ILandroid/graphics/PorterDuff$Mode;)V
+
+    .line 4290
+    :cond_105
+    iget-object p1, p0, Lorg/telegram/ui/ProfileActivity$28;->this$0:Lorg/telegram/ui/ProfileActivity;
+
+    invoke-static {p1}, Lorg/telegram/ui/ProfileActivity;->access$15500(Lorg/telegram/ui/ProfileActivity;)Landroid/graphics/drawable/Drawable;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_12c
+
+    .line 4291
+    iget-object p1, p0, Lorg/telegram/ui/ProfileActivity$28;->this$0:Lorg/telegram/ui/ProfileActivity;
+
+    const-string v3, "profile_verifiedCheck"
+
+    invoke-virtual {p1, v3}, Lorg/telegram/ui/ProfileActivity;->getThemedColor(Ljava/lang/String;)I
+
+    move-result p1
+
+    .line 4292
+    iget-object v3, p0, Lorg/telegram/ui/ProfileActivity$28;->this$0:Lorg/telegram/ui/ProfileActivity;
+
+    const-string v4, "windowBackgroundWhite"
+
+    invoke-virtual {v3, v4}, Lorg/telegram/ui/ProfileActivity;->getThemedColor(Ljava/lang/String;)I
+
+    move-result v3
+
+    .line 4293
+    iget-object v4, p0, Lorg/telegram/ui/ProfileActivity$28;->this$0:Lorg/telegram/ui/ProfileActivity;
+
+    invoke-static {v4}, Lorg/telegram/ui/ProfileActivity;->access$15500(Lorg/telegram/ui/ProfileActivity;)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v4
+
+    invoke-static {p1, v3, p2, v2}, Lorg/telegram/messenger/AndroidUtilities;->getOffsetColor(IIFF)I
+
+    move-result p1
+
+    sget-object v3, Landroid/graphics/PorterDuff$Mode;->MULTIPLY:Landroid/graphics/PorterDuff$Mode;
+
+    invoke-virtual {v4, p1, v3}, Landroid/graphics/drawable/Drawable;->setColorFilter(ILandroid/graphics/PorterDuff$Mode;)V
+
+    .line 4296
+    :cond_12c
+    iget-object p1, p0, Lorg/telegram/ui/ProfileActivity$28;->this$0:Lorg/telegram/ui/ProfileActivity;
+
+    invoke-static {p1}, Lorg/telegram/ui/ProfileActivity;->access$15600(Lorg/telegram/ui/ProfileActivity;)Landroid/graphics/drawable/Drawable;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_14f
+
+    .line 4297
+    iget-object p1, p0, Lorg/telegram/ui/ProfileActivity$28;->this$0:Lorg/telegram/ui/ProfileActivity;
+
+    invoke-virtual {p1, v0}, Lorg/telegram/ui/ProfileActivity;->getThemedColor(Ljava/lang/String;)I
+
+    move-result p1
+
+    .line 4298
+    iget-object v0, p0, Lorg/telegram/ui/ProfileActivity$28;->this$0:Lorg/telegram/ui/ProfileActivity;
+
+    invoke-virtual {v0, v1}, Lorg/telegram/ui/ProfileActivity;->getThemedColor(Ljava/lang/String;)I
+
+    move-result v0
+
+    .line 4299
+    iget-object v1, p0, Lorg/telegram/ui/ProfileActivity$28;->this$0:Lorg/telegram/ui/ProfileActivity;
+
+    invoke-static {v1}, Lorg/telegram/ui/ProfileActivity;->access$15600(Lorg/telegram/ui/ProfileActivity;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
 
-    aput-object v1, v2, v0
+    invoke-static {p1, v0, p2, v2}, Lorg/telegram/messenger/AndroidUtilities;->getOffsetColor(IIFF)I
 
-    invoke-virtual {p1, v2}, Landroid/animation/AnimatorSet;->playTogether([Landroid/animation/Animator;)V
+    move-result p1
 
-    .line 4332
+    sget-object p2, Landroid/graphics/PorterDuff$Mode;->MULTIPLY:Landroid/graphics/PorterDuff$Mode;
+
+    invoke-virtual {v1, p1, p2}, Landroid/graphics/drawable/Drawable;->setColorFilter(ILandroid/graphics/PorterDuff$Mode;)V
+
+    .line 4302
+    :cond_14f
     iget-object p1, p0, Lorg/telegram/ui/ProfileActivity$28;->this$0:Lorg/telegram/ui/ProfileActivity;
 
-    invoke-static {p1}, Lorg/telegram/ui/ProfileActivity;->access$15800(Lorg/telegram/ui/ProfileActivity;)Landroid/animation/AnimatorSet;
+    invoke-static {p1}, Lorg/telegram/ui/ProfileActivity;->access$15700(Lorg/telegram/ui/ProfileActivity;)Lorg/telegram/ui/ProfileActivity$PagerIndicatorView;
 
     move-result-object p1
 
-    const-wide/16 v0, 0x64
-
-    invoke-virtual {p1, v0, v1}, Landroid/animation/AnimatorSet;->setDuration(J)Landroid/animation/AnimatorSet;
-
-    .line 4333
-    iget-object p1, p0, Lorg/telegram/ui/ProfileActivity$28;->this$0:Lorg/telegram/ui/ProfileActivity;
-
-    invoke-static {p1}, Lorg/telegram/ui/ProfileActivity;->access$15800(Lorg/telegram/ui/ProfileActivity;)Landroid/animation/AnimatorSet;
+    invoke-static {p1}, Lorg/telegram/ui/ProfileActivity$PagerIndicatorView;->access$15800(Lorg/telegram/ui/ProfileActivity$PagerIndicatorView;)Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
     move-result-object p1
 
-    new-instance v0, Lorg/telegram/ui/ProfileActivity$28$1;
+    if-eqz p1, :cond_188
 
-    invoke-direct {v0, p0}, Lorg/telegram/ui/ProfileActivity$28$1;-><init>(Lorg/telegram/ui/ProfileActivity$28;)V
-
-    invoke-virtual {p1, v0}, Landroid/animation/AnimatorSet;->addListener(Landroid/animation/Animator$AnimatorListener;)V
-
-    .line 4339
     iget-object p1, p0, Lorg/telegram/ui/ProfileActivity$28;->this$0:Lorg/telegram/ui/ProfileActivity;
 
-    invoke-static {p1}, Lorg/telegram/ui/ProfileActivity;->access$15800(Lorg/telegram/ui/ProfileActivity;)Landroid/animation/AnimatorSet;
+    invoke-static {p1}, Lorg/telegram/ui/ProfileActivity;->access$3300(Lorg/telegram/ui/ProfileActivity;)Z
 
-    move-result-object p1
+    move-result p1
 
-    invoke-virtual {p1}, Landroid/animation/AnimatorSet;->start()V
+    if-nez p1, :cond_173
 
-    .line 4342
-    :cond_b7
-    :goto_b7
     iget-object p1, p0, Lorg/telegram/ui/ProfileActivity$28;->this$0:Lorg/telegram/ui/ProfileActivity;
 
-    const/4 v0, 0x0
+    invoke-static {p1}, Lorg/telegram/ui/ProfileActivity;->access$2900(Lorg/telegram/ui/ProfileActivity;)Z
 
-    invoke-static {p1, v0}, Lorg/telegram/ui/ProfileActivity;->access$15702(Lorg/telegram/ui/ProfileActivity;Landroid/animation/AnimatorSet;)Landroid/animation/AnimatorSet;
+    move-result p1
 
+    if-nez p1, :cond_173
+
+    iget-object p1, p0, Lorg/telegram/ui/ProfileActivity$28;->this$0:Lorg/telegram/ui/ProfileActivity;
+
+    invoke-static {p1}, Lorg/telegram/ui/ProfileActivity;->access$3100(Lorg/telegram/ui/ProfileActivity;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_188
+
+    .line 4303
+    :cond_173
+    iget-object p1, p0, Lorg/telegram/ui/ProfileActivity$28;->this$0:Lorg/telegram/ui/ProfileActivity;
+
+    invoke-static {p1}, Lorg/telegram/ui/ProfileActivity;->access$800(Lorg/telegram/ui/ProfileActivity;)F
+
+    move-result p2
+
+    const/high16 v0, 0x42b00000    # 88.0f
+
+    invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
+
+    move-result v0
+
+    int-to-float v0, v0
+
+    div-float/2addr p2, v0
+
+    invoke-static {v2, p2}, Ljava/lang/Math;->min(FF)F
+
+    move-result p2
+
+    invoke-static {p1, p2}, Lorg/telegram/ui/ProfileActivity;->access$15900(Lorg/telegram/ui/ProfileActivity;F)V
+
+    :cond_188
     return-void
 .end method

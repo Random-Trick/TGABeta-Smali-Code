@@ -336,7 +336,7 @@
 
     invoke-virtual {v0, v2, v3, v1, v4}, Lorg/telegram/ui/Components/PollVotesAlert$SectionCell;->setText(Ljava/lang/String;III)V
 
-    const v1, 0x7f080098
+    const v1, 0x7f080099
 
     .line 1078
     invoke-virtual {v0, v1, p1}, Landroid/widget/FrameLayout;->setTag(ILjava/lang/Object;)V
@@ -407,13 +407,13 @@
 
     const/4 v1, 0x0
 
-    if-eq p2, v0, :cond_33
+    if-eq p2, v0, :cond_35
 
     const/4 v0, 0x3
 
     if-eq p2, v0, :cond_d
 
-    goto/16 :goto_9a
+    goto/16 :goto_9c
 
     .line 1138
     :cond_d
@@ -445,20 +445,22 @@
 
     sub-int/2addr p3, p1
 
-    const-string p1, "ShowVotes"
+    new-array p1, v1, [Ljava/lang/Object;
 
-    invoke-static {p1, p3}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    const-string v0, "ShowVotes"
+
+    invoke-static {v0, p3, p1}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
 
-    const p3, 0x7f07005d
+    const p3, 0x7f07004b
 
     invoke-virtual {p2, p1, p3, v1}, Lorg/telegram/ui/Cells/TextCell;->setTextAndIcon(Ljava/lang/String;IZ)V
 
-    goto :goto_9a
+    goto :goto_9c
 
     .line 1122
-    :cond_33
+    :cond_35
     iget-object p2, p3, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     check-cast p2, Lorg/telegram/ui/Components/PollVotesAlert$SectionCell;
@@ -500,8 +502,8 @@
 
     move-result p3
 
-    :goto_59
-    if-ge v1, p3, :cond_9a
+    :goto_5b
+    if-ge v1, p3, :cond_9c
 
     .line 1127
     iget-object v0, p0, Lorg/telegram/ui/Components/PollVotesAlert$Adapter;->this$0:Lorg/telegram/ui/Components/PollVotesAlert;
@@ -527,7 +529,7 @@
 
     move-result v2
 
-    if-eqz v2, :cond_97
+    if-eqz v2, :cond_99
 
     .line 1129
     iget-object p3, p0, Lorg/telegram/ui/Components/PollVotesAlert$Adapter;->this$0:Lorg/telegram/ui/Components/PollVotesAlert;
@@ -559,20 +561,20 @@
 
     invoke-virtual {p2, v0, v1, p3, v2}, Lorg/telegram/ui/Components/PollVotesAlert$SectionCell;->setText(Ljava/lang/String;III)V
 
-    const p3, 0x7f080098
+    const p3, 0x7f080099
 
     .line 1131
     invoke-virtual {p2, p3, p1}, Landroid/widget/FrameLayout;->setTag(ILjava/lang/Object;)V
 
-    goto :goto_9a
+    goto :goto_9c
 
-    :cond_97
+    :cond_99
     add-int/lit8 v1, v1, 0x1
 
-    goto :goto_59
+    goto :goto_5b
 
-    :cond_9a
-    :goto_9a
+    :cond_9c
+    :goto_9c
     return-void
 .end method
 

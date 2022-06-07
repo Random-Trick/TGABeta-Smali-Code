@@ -29,7 +29,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 28659
+    .line 29033
     invoke-direct {p0}, Lorg/telegram/tgnet/TLRPC$Update;-><init>()V
 
     return-void
@@ -40,35 +40,35 @@
 .method public readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
     .registers 5
 
-    .line 28669
+    .line 29043
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
 
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$TL_updateChannelUserTyping;->flags:I
 
-    .line 28670
+    .line 29044
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt64(Z)J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lorg/telegram/tgnet/TLRPC$TL_updateChannelUserTyping;->channel_id:J
 
-    .line 28671
+    .line 29045
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_updateChannelUserTyping;->flags:I
 
     and-int/lit8 v0, v0, 0x1
 
     if-eqz v0, :cond_18
 
-    .line 28672
+    .line 29046
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
 
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$TL_updateChannelUserTyping;->top_msg_id:I
 
-    .line 28674
+    .line 29048
     :cond_18
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
@@ -80,7 +80,7 @@
 
     iput-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_updateChannelUserTyping;->from_id:Lorg/telegram/tgnet/TLRPC$Peer;
 
-    .line 28675
+    .line 29049
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
@@ -97,40 +97,40 @@
 .method public serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
     .registers 4
 
-    .line 28679
+    .line 29053
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_updateChannelUserTyping;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 28680
+    .line 29054
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_updateChannelUserTyping;->flags:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 28681
+    .line 29055
     iget-wide v0, p0, Lorg/telegram/tgnet/TLRPC$TL_updateChannelUserTyping;->channel_id:J
 
     invoke-virtual {p1, v0, v1}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt64(J)V
 
-    .line 28682
+    .line 29056
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_updateChannelUserTyping;->flags:I
 
     and-int/lit8 v0, v0, 0x1
 
     if-eqz v0, :cond_1a
 
-    .line 28683
+    .line 29057
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_updateChannelUserTyping;->top_msg_id:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 28685
+    .line 29059
     :cond_1a
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_updateChannelUserTyping;->from_id:Lorg/telegram/tgnet/TLRPC$Peer;
 
     invoke-virtual {v0, p1}, Lorg/telegram/tgnet/TLObject;->serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
 
-    .line 28686
+    .line 29060
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_updateChannelUserTyping;->action:Lorg/telegram/tgnet/TLRPC$SendMessageAction;
 
     invoke-virtual {v0, p1}, Lorg/telegram/tgnet/TLObject;->serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V

@@ -27,7 +27,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lj$/util/stream/n3;)V
+.method public synthetic constructor <init>(Lj$/util/stream/m3;)V
     .registers 3
 
     const/4 v0, 0x0
@@ -57,9 +57,9 @@
     :pswitch_6
     iget-object v0, p0, Lj$/util/stream/B0;->b:Ljava/lang/Object;
 
-    check-cast v0, Lj$/util/stream/n3;
+    check-cast v0, Lj$/util/stream/m3;
 
-    invoke-interface {v0, p1}, Lj$/util/stream/n3;->accept(I)V
+    invoke-interface {v0, p1}, Lj$/util/stream/m3;->accept(I)V
 
     return-void
 
@@ -70,9 +70,9 @@
     check-cast v0, Lj$/util/stream/F0;
 
     .line 3
-    iget-object v0, v0, Lj$/util/stream/h3;->a:Lj$/util/stream/n3;
+    iget-object v0, v0, Lj$/util/stream/g3;->a:Lj$/util/stream/m3;
 
-    invoke-interface {v0, p1}, Lj$/util/stream/n3;->accept(I)V
+    invoke-interface {v0, p1}, Lj$/util/stream/m3;->accept(I)V
 
     return-void
 

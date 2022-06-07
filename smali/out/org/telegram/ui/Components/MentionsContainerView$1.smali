@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/MentionsContainerView;Landroid/content/Context;)V
     .registers 3
 
-    .line 61
+    .line 64
     iput-object p1, p0, Lorg/telegram/ui/Components/MentionsContainerView$1;->this$0:Lorg/telegram/ui/Components/MentionsContainerView;
 
     invoke-direct {p0, p2}, Landroidx/recyclerview/widget/LinearLayoutManager;-><init>(Landroid/content/Context;)V
@@ -35,10 +35,10 @@
 .method public setReverseLayout(Z)V
     .registers 4
 
-    .line 69
+    .line 72
     invoke-super {p0, p1}, Landroidx/recyclerview/widget/LinearLayoutManager;->setReverseLayout(Z)V
 
-    .line 70
+    .line 73
     iget-object v0, p0, Lorg/telegram/ui/Components/MentionsContainerView$1;->this$0:Lorg/telegram/ui/Components/MentionsContainerView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/MentionsContainerView;->access$000(Lorg/telegram/ui/Components/MentionsContainerView;)Lorg/telegram/ui/Components/MentionsContainerView$MentionsListView;

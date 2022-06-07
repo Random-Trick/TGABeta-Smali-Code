@@ -74,7 +74,7 @@
 .method private checkLayout()V
     .registers 3
 
-    .line 154
+    .line 155
     iget-object v0, p0, Lorg/telegram/ui/Components/ExtendedGridLayoutManager;->itemSpans:Landroid/util/SparseIntArray;
 
     invoke-virtual {v0}, Landroid/util/SparseIntArray;->size()I
@@ -95,7 +95,7 @@
 
     if-eq v0, v1, :cond_22
 
-    .line 155
+    .line 156
     :cond_14
     invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->getWidth()I
 
@@ -103,7 +103,7 @@
 
     iput v0, p0, Lorg/telegram/ui/Components/ExtendedGridLayoutManager;->calculatedWidth:I
 
-    .line 156
+    .line 157
     invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->getWidth()I
 
     move-result v0
@@ -189,14 +189,14 @@
     :goto_32
     const/4 v10, 0x1
 
-    if-ge v7, v6, :cond_f2
+    if-ge v7, v6, :cond_f9
 
-    if-nez v7, :cond_4e
+    if-nez v7, :cond_55
 
     .line 70
     iget-boolean v11, v0, Lorg/telegram/ui/Components/ExtendedGridLayoutManager;->firstRowFullWidth:Z
 
-    if-eqz v11, :cond_4e
+    if-eqz v11, :cond_55
 
     .line 71
     iget-object v8, v0, Lorg/telegram/ui/Components/ExtendedGridLayoutManager;->itemSpans:Landroid/util/SparseIntArray;
@@ -210,6 +210,13 @@
     invoke-virtual {v8, v7, v9}, Landroid/util/SparseIntArray;->put(II)V
 
     .line 72
+    iget-object v8, v0, Lorg/telegram/ui/Components/ExtendedGridLayoutManager;->itemsToRow:Landroid/util/SparseIntArray;
+
+    iget v9, v0, Lorg/telegram/ui/Components/ExtendedGridLayoutManager;->rowsCount:I
+
+    invoke-virtual {v8, v3, v9}, Landroid/util/SparseIntArray;->put(II)V
+
+    .line 73
     iget v8, v0, Lorg/telegram/ui/Components/ExtendedGridLayoutManager;->rowsCount:I
 
     add-int/2addr v8, v10
@@ -220,27 +227,15 @@
 
     const/4 v9, 0x0
 
-    goto/16 :goto_ed
+    goto/16 :goto_f4
 
-    :cond_4e
-    if-ge v7, v4, :cond_55
+    :cond_55
+    if-ge v7, v4, :cond_5c
 
-    .line 78
+    .line 79
     invoke-direct {v0, v7}, Lorg/telegram/ui/Components/ExtendedGridLayoutManager;->sizeForItem(I)Lorg/telegram/ui/Components/Size;
 
     move-result-object v11
-
-    goto :goto_56
-
-    :cond_55
-    const/4 v11, 0x0
-
-    :goto_56
-    if-nez v11, :cond_5f
-
-    if-eqz v9, :cond_5c
-
-    const/4 v11, 0x1
 
     goto :goto_5d
 
@@ -248,14 +243,26 @@
     const/4 v11, 0x0
 
     :goto_5d
+    if-nez v11, :cond_66
+
+    if-eqz v9, :cond_63
+
+    const/4 v11, 0x1
+
+    goto :goto_64
+
+    :cond_63
+    const/4 v11, 0x0
+
+    :goto_64
     move v12, v5
 
-    goto :goto_88
+    goto :goto_8f
 
-    :cond_5f
+    :cond_66
     int-to-float v12, v5
 
-    .line 85
+    .line 86
     iget v13, v11, Lorg/telegram/ui/Components/Size;->width:F
 
     iget v11, v11, Lorg/telegram/ui/Components/Size;->height:F
@@ -282,56 +289,56 @@
 
     move-result v11
 
-    if-lt v8, v11, :cond_82
+    if-lt v8, v11, :cond_89
 
     const/16 v12, 0x21
 
-    if-le v11, v12, :cond_80
+    if-le v11, v12, :cond_87
 
     add-int/lit8 v12, v11, -0xf
 
-    if-ge v8, v12, :cond_80
+    if-ge v8, v12, :cond_87
 
-    goto :goto_82
+    goto :goto_89
 
-    :cond_80
+    :cond_87
     const/4 v12, 0x0
 
-    goto :goto_83
+    goto :goto_8a
 
-    :cond_82
-    :goto_82
+    :cond_89
+    :goto_89
     const/4 v12, 0x1
 
-    :goto_83
+    :goto_8a
     move/from16 v17, v12
 
     move v12, v11
 
     move/from16 v11, v17
 
-    :goto_88
-    if-eqz v11, :cond_c8
+    :goto_8f
+    if-eqz v11, :cond_cf
 
-    if-eqz v8, :cond_bd
+    if-eqz v8, :cond_c4
 
-    .line 90
+    .line 91
     div-int v11, v8, v9
 
     sub-int v13, v7, v9
 
     move v14, v13
 
-    :goto_91
+    :goto_98
     add-int v15, v13, v9
 
-    if-ge v14, v15, :cond_b4
+    if-ge v14, v15, :cond_bb
 
     add-int/lit8 v15, v15, -0x1
 
-    if-ne v14, v15, :cond_a5
+    if-ne v14, v15, :cond_ac
 
-    .line 93
+    .line 94
     iget-object v15, v0, Lorg/telegram/ui/Components/ExtendedGridLayoutManager;->itemSpans:Landroid/util/SparseIntArray;
 
     invoke-virtual {v15, v14}, Landroid/util/SparseIntArray;->get(I)I
@@ -342,10 +349,10 @@
 
     invoke-virtual {v15, v14, v3}, Landroid/util/SparseIntArray;->put(II)V
 
-    goto :goto_af
+    goto :goto_b6
 
-    .line 95
-    :cond_a5
+    .line 96
+    :cond_ac
     iget-object v3, v0, Lorg/telegram/ui/Components/ExtendedGridLayoutManager;->itemSpans:Landroid/util/SparseIntArray;
 
     invoke-virtual {v3, v14}, Landroid/util/SparseIntArray;->get(I)I
@@ -356,17 +363,17 @@
 
     invoke-virtual {v3, v14, v15}, Landroid/util/SparseIntArray;->put(II)V
 
-    :goto_af
+    :goto_b6
     sub-int/2addr v8, v11
 
     add-int/lit8 v14, v14, 0x1
 
     const/4 v3, 0x0
 
-    goto :goto_91
+    goto :goto_98
 
-    .line 99
-    :cond_b4
+    .line 100
+    :cond_bb
     iget-object v3, v0, Lorg/telegram/ui/Components/ExtendedGridLayoutManager;->itemsToRow:Landroid/util/SparseIntArray;
 
     add-int/lit8 v8, v7, -0x1
@@ -375,13 +382,13 @@
 
     invoke-virtual {v3, v8, v9}, Landroid/util/SparseIntArray;->put(II)V
 
-    :cond_bd
-    if-ne v7, v4, :cond_c0
+    :cond_c4
+    if-ne v7, v4, :cond_c7
 
-    goto :goto_f2
+    goto :goto_f9
 
-    .line 104
-    :cond_c0
+    .line 105
+    :cond_c7
     iget v3, v0, Lorg/telegram/ui/Components/ExtendedGridLayoutManager;->rowsCount:I
 
     add-int/2addr v3, v10
@@ -392,21 +399,21 @@
 
     const/4 v9, 0x0
 
-    goto :goto_cb
+    goto :goto_d2
 
-    :cond_c8
-    if-ge v8, v12, :cond_cb
+    :cond_cf
+    if-ge v8, v12, :cond_d2
 
     move v12, v8
 
-    .line 113
-    :cond_cb
-    :goto_cb
+    .line 114
+    :cond_d2
+    :goto_d2
     iget v3, v0, Lorg/telegram/ui/Components/ExtendedGridLayoutManager;->rowsCount:I
 
-    if-nez v3, :cond_d7
+    if-nez v3, :cond_de
 
-    .line 114
+    .line 115
     iget v3, v0, Lorg/telegram/ui/Components/ExtendedGridLayoutManager;->firstRowMax:I
 
     invoke-static {v3, v7}, Ljava/lang/Math;->max(II)I
@@ -415,43 +422,43 @@
 
     iput v3, v0, Lorg/telegram/ui/Components/ExtendedGridLayoutManager;->firstRowMax:I
 
-    :cond_d7
+    :cond_de
     add-int/lit8 v3, v4, -0x1
 
-    if-ne v7, v3, :cond_e6
-
-    .line 116
-    iget-boolean v3, v0, Lorg/telegram/ui/Components/ExtendedGridLayoutManager;->lastRowFullWidth:Z
-
-    if-nez v3, :cond_e6
+    if-ne v7, v3, :cond_ed
 
     .line 117
+    iget-boolean v3, v0, Lorg/telegram/ui/Components/ExtendedGridLayoutManager;->lastRowFullWidth:Z
+
+    if-nez v3, :cond_ed
+
+    .line 118
     iget-object v3, v0, Lorg/telegram/ui/Components/ExtendedGridLayoutManager;->itemsToRow:Landroid/util/SparseIntArray;
 
     iget v11, v0, Lorg/telegram/ui/Components/ExtendedGridLayoutManager;->rowsCount:I
 
     invoke-virtual {v3, v7, v11}, Landroid/util/SparseIntArray;->put(II)V
 
-    :cond_e6
+    :cond_ed
     add-int/2addr v9, v10
 
     sub-int/2addr v8, v12
 
-    .line 123
+    .line 124
     iget-object v3, v0, Lorg/telegram/ui/Components/ExtendedGridLayoutManager;->itemSpans:Landroid/util/SparseIntArray;
 
     invoke-virtual {v3, v7, v12}, Landroid/util/SparseIntArray;->put(II)V
 
-    :goto_ed
+    :goto_f4
     add-int/lit8 v7, v7, 0x1
 
     const/4 v3, 0x0
 
     goto/16 :goto_32
 
-    .line 125
-    :cond_f2
-    :goto_f2
+    .line 126
+    :cond_f9
+    :goto_f9
     iget v1, v0, Lorg/telegram/ui/Components/ExtendedGridLayoutManager;->rowsCount:I
 
     add-int/2addr v1, v10
@@ -464,7 +471,7 @@
 .method private sizeForItem(I)Lorg/telegram/ui/Components/Size;
     .registers 2
 
-    .line 129
+    .line 130
     invoke-virtual {p0, p1}, Lorg/telegram/ui/Components/ExtendedGridLayoutManager;->getSizeForItem(I)Lorg/telegram/ui/Components/Size;
 
     move-result-object p1
@@ -487,7 +494,7 @@
 
     return-object p1
 
-    .line 136
+    .line 137
     :cond_4
     iget v0, p1, Lorg/telegram/ui/Components/Size;->width:F
 
@@ -499,10 +506,10 @@
 
     if-nez v0, :cond_f
 
-    .line 137
+    .line 138
     iput v1, p1, Lorg/telegram/ui/Components/Size;->width:F
 
-    .line 139
+    .line 140
     :cond_f
     iget v0, p1, Lorg/telegram/ui/Components/Size;->height:F
 
@@ -510,10 +517,10 @@
 
     if-nez v0, :cond_17
 
-    .line 140
+    .line 141
     iput v1, p1, Lorg/telegram/ui/Components/Size;->height:F
 
-    .line 142
+    .line 143
     :cond_17
     iget v0, p1, Lorg/telegram/ui/Components/Size;->width:F
 
@@ -533,7 +540,7 @@
 
     if-gez v2, :cond_32
 
-    .line 144
+    .line 145
     :cond_2a
     invoke-static {v0, v1}, Ljava/lang/Math;->max(FF)F
 
@@ -558,7 +565,7 @@
 .method protected getFlowItemCount()I
     .registers 2
 
-    .line 183
+    .line 184
     invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->getItemCount()I
 
     move-result v0
@@ -569,7 +576,7 @@
 .method public getRowCountForAccessibility(Landroidx/recyclerview/widget/RecyclerView$Recycler;Landroidx/recyclerview/widget/RecyclerView$State;)I
     .registers 3
 
-    .line 188
+    .line 189
     invoke-virtual {p2}, Landroidx/recyclerview/widget/RecyclerView$State;->getItemCount()I
 
     move-result p1
@@ -580,17 +587,17 @@
 .method public getRowsCount(I)I
     .registers 3
 
-    .line 166
+    .line 167
     iget v0, p0, Lorg/telegram/ui/Components/ExtendedGridLayoutManager;->rowsCount:I
 
     if-nez v0, :cond_8
 
     int-to-float p1, p1
 
-    .line 167
+    .line 168
     invoke-direct {p0, p1}, Lorg/telegram/ui/Components/ExtendedGridLayoutManager;->prepareLayout(F)V
 
-    .line 169
+    .line 170
     :cond_8
     iget p1, p0, Lorg/telegram/ui/Components/ExtendedGridLayoutManager;->rowsCount:I
 
@@ -600,7 +607,7 @@
 .method protected getSizeForItem(I)Lorg/telegram/ui/Components/Size;
     .registers 3
 
-    .line 150
+    .line 151
     new-instance p1, Lorg/telegram/ui/Components/Size;
 
     const/high16 v0, 0x42c80000    # 100.0f
@@ -613,10 +620,10 @@
 .method public getSpanSizeForItem(I)I
     .registers 3
 
-    .line 161
+    .line 162
     invoke-direct {p0}, Lorg/telegram/ui/Components/ExtendedGridLayoutManager;->checkLayout()V
 
-    .line 162
+    .line 163
     iget-object v0, p0, Lorg/telegram/ui/Components/ExtendedGridLayoutManager;->itemSpans:Landroid/util/SparseIntArray;
 
     invoke-virtual {v0, p1}, Landroid/util/SparseIntArray;->get(I)I
@@ -629,10 +636,10 @@
 .method public isFirstRow(I)Z
     .registers 3
 
-    .line 178
+    .line 179
     invoke-direct {p0}, Lorg/telegram/ui/Components/ExtendedGridLayoutManager;->checkLayout()V
 
-    .line 179
+    .line 180
     iget v0, p0, Lorg/telegram/ui/Components/ExtendedGridLayoutManager;->firstRowMax:I
 
     if-gt p1, v0, :cond_9
@@ -651,10 +658,10 @@
 .method public isLastInRow(I)Z
     .registers 4
 
-    .line 173
+    .line 174
     invoke-direct {p0}, Lorg/telegram/ui/Components/ExtendedGridLayoutManager;->checkLayout()V
 
-    .line 174
+    .line 175
     iget-object v0, p0, Lorg/telegram/ui/Components/ExtendedGridLayoutManager;->itemsToRow:Landroid/util/SparseIntArray;
 
     const v1, 0x7fffffff

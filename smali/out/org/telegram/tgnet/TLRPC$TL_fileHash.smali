@@ -4,7 +4,7 @@
 
 
 # static fields
-.field public static constructor:I = 0x6242c773
+.field public static constructor:I = -0xc64fca4
 
 
 # instance fields
@@ -12,7 +12,7 @@
 
 .field public limit:I
 
-.field public offset:I
+.field public offset:J
 
 
 # direct methods
@@ -25,7 +25,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 45106
+    .line 45558
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -34,7 +34,7 @@
 .method public static TLdeserialize(Lorg/telegram/tgnet/AbstractSerializedData;IZ)Lorg/telegram/tgnet/TLRPC$TL_fileHash;
     .registers 4
 
-    .line 45114
+    .line 45566
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_fileHash;->constructor:I
 
     if-eq v0, p1, :cond_1e
@@ -45,7 +45,7 @@
 
     return-object p0
 
-    .line 45116
+    .line 45568
     :cond_8
     new-instance p0, Ljava/lang/RuntimeException;
 
@@ -71,13 +71,13 @@
 
     throw p0
 
-    .line 45121
+    .line 45573
     :cond_1e
     new-instance p1, Lorg/telegram/tgnet/TLRPC$TL_fileHash;
 
     invoke-direct {p1}, Lorg/telegram/tgnet/TLRPC$TL_fileHash;-><init>()V
 
-    .line 45122
+    .line 45574
     invoke-virtual {p1, p0, p2}, Lorg/telegram/tgnet/TLRPC$TL_fileHash;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
     return-object p1
@@ -86,23 +86,23 @@
 
 # virtual methods
 .method public readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
-    .registers 4
+    .registers 5
 
-    .line 45127
-    invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
+    .line 45579
+    invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt64(Z)J
 
-    move-result v0
+    move-result-wide v0
 
-    iput v0, p0, Lorg/telegram/tgnet/TLRPC$TL_fileHash;->offset:I
+    iput-wide v0, p0, Lorg/telegram/tgnet/TLRPC$TL_fileHash;->offset:J
 
-    .line 45128
+    .line 45580
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
 
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$TL_fileHash;->limit:I
 
-    .line 45129
+    .line 45581
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readByteArray(Z)[B
 
     move-result-object p1
@@ -113,24 +113,24 @@
 .end method
 
 .method public serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
-    .registers 3
+    .registers 4
 
-    .line 45133
+    .line 45585
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_fileHash;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 45134
-    iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_fileHash;->offset:I
+    .line 45586
+    iget-wide v0, p0, Lorg/telegram/tgnet/TLRPC$TL_fileHash;->offset:J
 
-    invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
+    invoke-virtual {p1, v0, v1}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt64(J)V
 
-    .line 45135
+    .line 45587
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_fileHash;->limit:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 45136
+    .line 45588
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_fileHash;->hash:[B
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeByteArray([B)V

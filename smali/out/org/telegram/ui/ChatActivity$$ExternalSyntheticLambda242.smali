@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lorg/telegram/ui/Components/RecyclerListView$OnItemClickListener;
+.implements Lorg/telegram/ui/Components/ReactedUsersListView$OnProfileSelectedListener;
 
 
 # instance fields
@@ -22,12 +22,12 @@
 
 
 # virtual methods
-.method public final onItemClick(Landroid/view/View;I)V
-    .registers 4
+.method public final onProfileSelected(Lorg/telegram/ui/Components/ReactedUsersListView;J)V
+    .registers 5
 
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda242;->f$0:Lorg/telegram/ui/ChatActivity;
 
-    invoke-static {v0, p1, p2}, Lorg/telegram/ui/ChatActivity;->$r8$lambda$nj_FdzSeuGOSyRgvBeBG8KlF49E(Lorg/telegram/ui/ChatActivity;Landroid/view/View;I)V
+    invoke-static {v0, p1, p2, p3}, Lorg/telegram/ui/ChatActivity;->$r8$lambda$kbVUv42cHtbMRO9Gp3KX3Y-ETfQ(Lorg/telegram/ui/ChatActivity;Lorg/telegram/ui/Components/ReactedUsersListView;J)V
 
     return-void
 .end method

@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;Landroid/content/Context;)V
     .registers 3
 
-    .line 903
+    .line 901
     iput-object p1, p0, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout$10;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;
 
     invoke-direct {p0, p2}, Lorg/telegram/ui/Adapters/LocationActivitySearchAdapter;-><init>(Landroid/content/Context;)V
@@ -35,7 +35,7 @@
 .method public notifyDataSetChanged()V
     .registers 6
 
-    .line 906
+    .line 904
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout$10;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;->access$900(Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;)Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
@@ -44,7 +44,7 @@
 
     if-eqz v0, :cond_1b
 
-    .line 907
+    .line 905
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout$10;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;->access$900(Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;)Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
@@ -63,7 +63,7 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->setShowSearchProgress(Z)V
 
-    .line 909
+    .line 907
     :cond_1b
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout$10;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;
 
@@ -73,14 +73,14 @@
 
     if-eqz v0, :cond_49
 
-    .line 910
+    .line 908
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout$10;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;->access$3500(Lorg/telegram/ui/Components/ChatAttachAlertLocationLayout;)Landroid/widget/TextView;
 
     move-result-object v0
 
-    const v1, 0x7f0e0acf
+    const v1, 0x7f0e0b57
 
     const/4 v2, 0x1
 
@@ -112,7 +112,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 912
+    .line 910
     :cond_49
     invoke-super {p0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->notifyDataSetChanged()V
 

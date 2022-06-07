@@ -24,7 +24,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/SharedMediaLayout;Z)V
     .registers 3
 
-    .line 3621
+    .line 3634
     iput-object p1, p0, Lorg/telegram/ui/Components/SharedMediaLayout$26;->this$0:Lorg/telegram/ui/Components/SharedMediaLayout;
 
     iput-boolean p2, p0, Lorg/telegram/ui/Components/SharedMediaLayout$26;->val$show:Z
@@ -39,12 +39,12 @@
 .method public onAnimationCancel(Landroid/animation/Animator;)V
     .registers 3
 
-    .line 3624
+    .line 3637
     iget-object p1, p0, Lorg/telegram/ui/Components/SharedMediaLayout$26;->this$0:Lorg/telegram/ui/Components/SharedMediaLayout;
 
     const/4 v0, 0x0
 
-    invoke-static {p1, v0}, Lorg/telegram/ui/Components/SharedMediaLayout;->access$6702(Lorg/telegram/ui/Components/SharedMediaLayout;Landroid/animation/AnimatorSet;)Landroid/animation/AnimatorSet;
+    invoke-static {p1, v0}, Lorg/telegram/ui/Components/SharedMediaLayout;->access$6802(Lorg/telegram/ui/Components/SharedMediaLayout;Landroid/animation/AnimatorSet;)Landroid/animation/AnimatorSet;
 
     return-void
 .end method
@@ -52,10 +52,10 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .registers 3
 
-    .line 3629
+    .line 3642
     iget-object p1, p0, Lorg/telegram/ui/Components/SharedMediaLayout$26;->this$0:Lorg/telegram/ui/Components/SharedMediaLayout;
 
-    invoke-static {p1}, Lorg/telegram/ui/Components/SharedMediaLayout;->access$6700(Lorg/telegram/ui/Components/SharedMediaLayout;)Landroid/animation/AnimatorSet;
+    invoke-static {p1}, Lorg/telegram/ui/Components/SharedMediaLayout;->access$6800(Lorg/telegram/ui/Components/SharedMediaLayout;)Landroid/animation/AnimatorSet;
 
     move-result-object p1
 
@@ -63,23 +63,23 @@
 
     return-void
 
-    .line 3632
+    .line 3645
     :cond_9
     iget-object p1, p0, Lorg/telegram/ui/Components/SharedMediaLayout$26;->this$0:Lorg/telegram/ui/Components/SharedMediaLayout;
 
     const/4 v0, 0x0
 
-    invoke-static {p1, v0}, Lorg/telegram/ui/Components/SharedMediaLayout;->access$6702(Lorg/telegram/ui/Components/SharedMediaLayout;Landroid/animation/AnimatorSet;)Landroid/animation/AnimatorSet;
+    invoke-static {p1, v0}, Lorg/telegram/ui/Components/SharedMediaLayout;->access$6802(Lorg/telegram/ui/Components/SharedMediaLayout;Landroid/animation/AnimatorSet;)Landroid/animation/AnimatorSet;
 
-    .line 3633
+    .line 3646
     iget-boolean p1, p0, Lorg/telegram/ui/Components/SharedMediaLayout$26;->val$show:Z
 
     if-nez p1, :cond_1d
 
-    .line 3634
+    .line 3647
     iget-object p1, p0, Lorg/telegram/ui/Components/SharedMediaLayout$26;->this$0:Lorg/telegram/ui/Components/SharedMediaLayout;
 
-    invoke-static {p1}, Lorg/telegram/ui/Components/SharedMediaLayout;->access$6800(Lorg/telegram/ui/Components/SharedMediaLayout;)Landroid/widget/LinearLayout;
+    invoke-static {p1}, Lorg/telegram/ui/Components/SharedMediaLayout;->access$6900(Lorg/telegram/ui/Components/SharedMediaLayout;)Landroid/widget/LinearLayout;
 
     move-result-object p1
 

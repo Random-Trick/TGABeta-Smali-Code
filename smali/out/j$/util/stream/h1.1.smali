@@ -1,63 +1,63 @@
 .class Lj$/util/stream/h1;
-.super Lj$/util/stream/k1;
+.super Lj$/util/stream/j1;
 
 # interfaces
 .implements Lj$/util/stream/l3;
 
 
 # instance fields
-.field final synthetic c:Lj$/util/stream/l1;
+.field final synthetic c:Lj$/util/stream/k1;
 
-.field final synthetic d:Lj$/wrappers/V;
+.field final synthetic d:Lj$/wrappers/j0;
 
 
 # direct methods
-.method constructor <init>(Lj$/util/stream/l1;Lj$/wrappers/V;)V
+.method constructor <init>(Lj$/util/stream/k1;Lj$/wrappers/j0;)V
     .registers 3
 
-    iput-object p1, p0, Lj$/util/stream/h1;->c:Lj$/util/stream/l1;
+    iput-object p1, p0, Lj$/util/stream/h1;->c:Lj$/util/stream/k1;
 
-    iput-object p2, p0, Lj$/util/stream/h1;->d:Lj$/wrappers/V;
+    iput-object p2, p0, Lj$/util/stream/h1;->d:Lj$/wrappers/j0;
 
-    invoke-direct {p0, p1}, Lj$/util/stream/k1;-><init>(Lj$/util/stream/l1;)V
+    invoke-direct {p0, p1}, Lj$/util/stream/j1;-><init>(Lj$/util/stream/k1;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public accept(I)V
-    .registers 3
+.method public accept(J)V
+    .registers 4
 
-    iget-boolean v0, p0, Lj$/util/stream/k1;->a:Z
+    iget-boolean v0, p0, Lj$/util/stream/j1;->a:Z
 
     if-nez v0, :cond_1d
 
-    iget-object v0, p0, Lj$/util/stream/h1;->d:Lj$/wrappers/V;
+    iget-object v0, p0, Lj$/util/stream/h1;->d:Lj$/wrappers/j0;
 
-    invoke-virtual {v0, p1}, Lj$/wrappers/V;->b(I)Z
+    invoke-virtual {v0, p1, p2}, Lj$/wrappers/j0;->b(J)Z
 
     move-result p1
 
-    iget-object v0, p0, Lj$/util/stream/h1;->c:Lj$/util/stream/l1;
+    iget-object p2, p0, Lj$/util/stream/h1;->c:Lj$/util/stream/k1;
 
-    invoke-static {v0}, Lj$/util/stream/l1;->a(Lj$/util/stream/l1;)Z
+    invoke-static {p2}, Lj$/util/stream/k1;->a(Lj$/util/stream/k1;)Z
 
-    move-result v0
+    move-result p2
 
-    if-ne p1, v0, :cond_1d
+    if-ne p1, p2, :cond_1d
 
     const/4 p1, 0x1
 
-    iput-boolean p1, p0, Lj$/util/stream/k1;->a:Z
+    iput-boolean p1, p0, Lj$/util/stream/j1;->a:Z
 
-    iget-object p1, p0, Lj$/util/stream/h1;->c:Lj$/util/stream/l1;
+    iget-object p1, p0, Lj$/util/stream/h1;->c:Lj$/util/stream/k1;
 
-    invoke-static {p1}, Lj$/util/stream/l1;->b(Lj$/util/stream/l1;)Z
+    invoke-static {p1}, Lj$/util/stream/k1;->b(Lj$/util/stream/k1;)Z
 
     move-result p1
 
-    iput-boolean p1, p0, Lj$/util/stream/k1;->b:Z
+    iput-boolean p1, p0, Lj$/util/stream/j1;->b:Z
 
     :cond_1d
     return-void
@@ -67,30 +67,30 @@
     .registers 2
 
     .line 1
-    check-cast p1, Ljava/lang/Integer;
+    check-cast p1, Ljava/lang/Long;
 
-    invoke-virtual {p0, p1}, Lj$/util/stream/h1;->b(Ljava/lang/Integer;)V
+    invoke-virtual {p0, p1}, Lj$/util/stream/h1;->b(Ljava/lang/Long;)V
 
     return-void
 .end method
 
-.method public synthetic b(Ljava/lang/Integer;)V
+.method public synthetic b(Ljava/lang/Long;)V
     .registers 2
 
-    invoke-static {p0, p1}, Lj$/util/stream/p1;->b(Lj$/util/stream/l3;Ljava/lang/Integer;)V
+    invoke-static {p0, p1}, Lj$/util/stream/o1;->c(Lj$/util/stream/l3;Ljava/lang/Long;)V
 
     return-void
 .end method
 
-.method public l(Lj$/util/function/l;)Lj$/util/function/l;
+.method public f(Lj$/util/function/q;)Lj$/util/function/q;
     .registers 3
 
     .line 1
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    new-instance v0, Lj$/util/function/k;
+    new-instance v0, Lj$/util/function/p;
 
-    invoke-direct {v0, p0, p1}, Lj$/util/function/k;-><init>(Lj$/util/function/l;Lj$/util/function/l;)V
+    invoke-direct {v0, p0, p1}, Lj$/util/function/p;-><init>(Lj$/util/function/q;Lj$/util/function/q;)V
 
     return-object v0
 .end method

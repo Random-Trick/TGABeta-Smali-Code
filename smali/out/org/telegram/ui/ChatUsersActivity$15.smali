@@ -35,7 +35,7 @@
 .method constructor <init>(Lorg/telegram/ui/ChatUsersActivity;IJIZ[Z)V
     .registers 8
 
-    .line 1503
+    .line 1539
     iput-object p1, p0, Lorg/telegram/ui/ChatUsersActivity$15;->this$0:Lorg/telegram/ui/ChatUsersActivity;
 
     iput p2, p0, Lorg/telegram/ui/ChatUsersActivity$15;->val$type:I
@@ -58,7 +58,7 @@
 .method public didChangeOwner(Lorg/telegram/tgnet/TLRPC$User;)V
     .registers 3
 
-    .line 1564
+    .line 1600
     iget-object v0, p0, Lorg/telegram/ui/ChatUsersActivity$15;->this$0:Lorg/telegram/ui/ChatUsersActivity;
 
     invoke-static {v0, p1}, Lorg/telegram/ui/ChatUsersActivity;->access$2400(Lorg/telegram/ui/ChatUsersActivity;Lorg/telegram/tgnet/TLRPC$User;)V
@@ -69,7 +69,7 @@
 .method public didSetRights(ILorg/telegram/tgnet/TLRPC$TL_chatAdminRights;Lorg/telegram/tgnet/TLRPC$TL_chatBannedRights;Ljava/lang/String;)V
     .registers 13
 
-    .line 1506
+    .line 1542
     iget v0, p0, Lorg/telegram/ui/ChatUsersActivity$15;->val$type:I
 
     const/4 v1, 0x1
@@ -80,7 +80,7 @@
 
     const/4 v2, 0x0
 
-    .line 1507
+    .line 1543
     :goto_7
     iget-object v3, p0, Lorg/telegram/ui/ChatUsersActivity$15;->this$0:Lorg/telegram/ui/ChatUsersActivity;
 
@@ -94,7 +94,7 @@
 
     if-ge v2, v3, :cond_cb
 
-    .line 1508
+    .line 1544
     iget-object v3, p0, Lorg/telegram/ui/ChatUsersActivity$15;->this$0:Lorg/telegram/ui/ChatUsersActivity;
 
     invoke-static {v3}, Lorg/telegram/ui/ChatUsersActivity;->access$2100(Lorg/telegram/ui/ChatUsersActivity;)Ljava/util/ArrayList;
@@ -107,15 +107,15 @@
 
     check-cast v3, Lorg/telegram/tgnet/TLObject;
 
-    .line 1509
+    .line 1545
     instance-of v4, v3, Lorg/telegram/tgnet/TLRPC$ChannelParticipant;
 
     if-eqz v4, :cond_84
 
-    .line 1510
+    .line 1546
     check-cast v3, Lorg/telegram/tgnet/TLRPC$ChannelParticipant;
 
-    .line 1511
+    .line 1547
     iget-object v3, v3, Lorg/telegram/tgnet/TLRPC$ChannelParticipant;->peer:Lorg/telegram/tgnet/TLRPC$Peer;
 
     invoke-static {v3}, Lorg/telegram/messenger/MessageObject;->getPeerId(Lorg/telegram/tgnet/TLRPC$Peer;)J
@@ -130,27 +130,27 @@
 
     if-ne p1, v1, :cond_39
 
-    .line 1514
+    .line 1550
     new-instance v3, Lorg/telegram/tgnet/TLRPC$TL_channelParticipantAdmin;
 
     invoke-direct {v3}, Lorg/telegram/tgnet/TLRPC$TL_channelParticipantAdmin;-><init>()V
 
     goto :goto_3e
 
-    .line 1516
+    .line 1552
     :cond_39
     new-instance v3, Lorg/telegram/tgnet/TLRPC$TL_channelParticipant;
 
     invoke-direct {v3}, Lorg/telegram/tgnet/TLRPC$TL_channelParticipant;-><init>()V
 
-    .line 1518
+    .line 1554
     :goto_3e
     iput-object p2, v3, Lorg/telegram/tgnet/TLRPC$ChannelParticipant;->admin_rights:Lorg/telegram/tgnet/TLRPC$TL_chatAdminRights;
 
-    .line 1519
+    .line 1555
     iput-object p3, v3, Lorg/telegram/tgnet/TLRPC$ChannelParticipant;->banned_rights:Lorg/telegram/tgnet/TLRPC$TL_chatBannedRights;
 
-    .line 1520
+    .line 1556
     iget-object p2, p0, Lorg/telegram/ui/ChatUsersActivity$15;->this$0:Lorg/telegram/ui/ChatUsersActivity;
 
     invoke-virtual {p2}, Lorg/telegram/ui/ActionBar/BaseFragment;->getUserConfig()Lorg/telegram/messenger/UserConfig;
@@ -163,7 +163,7 @@
 
     iput-wide p2, v3, Lorg/telegram/tgnet/TLRPC$ChannelParticipant;->inviter_id:J
 
-    .line 1521
+    .line 1557
     iget-wide p2, p0, Lorg/telegram/ui/ChatUsersActivity$15;->val$peerId:J
 
     const-wide/16 v4, 0x0
@@ -172,21 +172,21 @@
 
     if-lez v6, :cond_62
 
-    .line 1522
+    .line 1558
     new-instance p2, Lorg/telegram/tgnet/TLRPC$TL_peerUser;
 
     invoke-direct {p2}, Lorg/telegram/tgnet/TLRPC$TL_peerUser;-><init>()V
 
     iput-object p2, v3, Lorg/telegram/tgnet/TLRPC$ChannelParticipant;->peer:Lorg/telegram/tgnet/TLRPC$Peer;
 
-    .line 1523
+    .line 1559
     iget-wide v4, p0, Lorg/telegram/ui/ChatUsersActivity$15;->val$peerId:J
 
     iput-wide v4, p2, Lorg/telegram/tgnet/TLRPC$Peer;->user_id:J
 
     goto :goto_6e
 
-    .line 1525
+    .line 1561
     :cond_62
     new-instance p2, Lorg/telegram/tgnet/TLRPC$TL_peerChannel;
 
@@ -194,30 +194,30 @@
 
     iput-object p2, v3, Lorg/telegram/tgnet/TLRPC$ChannelParticipant;->peer:Lorg/telegram/tgnet/TLRPC$Peer;
 
-    .line 1526
+    .line 1562
     iget-wide v4, p0, Lorg/telegram/ui/ChatUsersActivity$15;->val$peerId:J
 
     neg-long v4, v4
 
     iput-wide v4, p2, Lorg/telegram/tgnet/TLRPC$Peer;->channel_id:J
 
-    .line 1528
+    .line 1564
     :goto_6e
     iget p2, p0, Lorg/telegram/ui/ChatUsersActivity$15;->val$date:I
 
     iput p2, v3, Lorg/telegram/tgnet/TLRPC$ChannelParticipant;->date:I
 
-    .line 1529
+    .line 1565
     iget p2, v3, Lorg/telegram/tgnet/TLRPC$ChannelParticipant;->flags:I
 
     or-int/lit8 p2, p2, 0x4
 
     iput p2, v3, Lorg/telegram/tgnet/TLRPC$ChannelParticipant;->flags:I
 
-    .line 1530
+    .line 1566
     iput-object p4, v3, Lorg/telegram/tgnet/TLRPC$ChannelParticipant;->rank:Ljava/lang/String;
 
-    .line 1531
+    .line 1567
     iget-object p2, p0, Lorg/telegram/ui/ChatUsersActivity$15;->this$0:Lorg/telegram/ui/ChatUsersActivity;
 
     invoke-static {p2}, Lorg/telegram/ui/ChatUsersActivity;->access$2100(Lorg/telegram/ui/ChatUsersActivity;)Ljava/util/ArrayList;
@@ -228,47 +228,47 @@
 
     goto :goto_cb
 
-    .line 1534
+    .line 1570
     :cond_84
     instance-of v4, v3, Lorg/telegram/tgnet/TLRPC$ChatParticipant;
 
     if-eqz v4, :cond_c7
 
-    .line 1535
+    .line 1571
     check-cast v3, Lorg/telegram/tgnet/TLRPC$ChatParticipant;
 
     if-ne p1, v1, :cond_92
 
-    .line 1538
+    .line 1574
     new-instance v4, Lorg/telegram/tgnet/TLRPC$TL_chatParticipantAdmin;
 
     invoke-direct {v4}, Lorg/telegram/tgnet/TLRPC$TL_chatParticipantAdmin;-><init>()V
 
     goto :goto_97
 
-    .line 1540
+    .line 1576
     :cond_92
     new-instance v4, Lorg/telegram/tgnet/TLRPC$TL_chatParticipant;
 
     invoke-direct {v4}, Lorg/telegram/tgnet/TLRPC$TL_chatParticipant;-><init>()V
 
-    .line 1542
+    .line 1578
     :goto_97
     iget-wide v5, v3, Lorg/telegram/tgnet/TLRPC$ChatParticipant;->user_id:J
 
     iput-wide v5, v4, Lorg/telegram/tgnet/TLRPC$ChatParticipant;->user_id:J
 
-    .line 1543
+    .line 1579
     iget v5, v3, Lorg/telegram/tgnet/TLRPC$ChatParticipant;->date:I
 
     iput v5, v4, Lorg/telegram/tgnet/TLRPC$ChatParticipant;->date:I
 
-    .line 1544
+    .line 1580
     iget-wide v5, v3, Lorg/telegram/tgnet/TLRPC$ChatParticipant;->inviter_id:J
 
     iput-wide v5, v4, Lorg/telegram/tgnet/TLRPC$ChatParticipant;->inviter_id:J
 
-    .line 1545
+    .line 1581
     iget-object v5, p0, Lorg/telegram/ui/ChatUsersActivity$15;->this$0:Lorg/telegram/ui/ChatUsersActivity;
 
     invoke-static {v5}, Lorg/telegram/ui/ChatUsersActivity;->access$500(Lorg/telegram/ui/ChatUsersActivity;)Lorg/telegram/tgnet/TLRPC$ChatFull;
@@ -285,7 +285,7 @@
 
     if-ltz v3, :cond_c0
 
-    .line 1547
+    .line 1583
     iget-object v5, p0, Lorg/telegram/ui/ChatUsersActivity$15;->this$0:Lorg/telegram/ui/ChatUsersActivity;
 
     invoke-static {v5}, Lorg/telegram/ui/ChatUsersActivity;->access$500(Lorg/telegram/ui/ChatUsersActivity;)Lorg/telegram/tgnet/TLRPC$ChatFull;
@@ -298,7 +298,7 @@
 
     invoke-virtual {v5, v3, v4}, Ljava/util/ArrayList;->set(ILjava/lang/Object;)Ljava/lang/Object;
 
-    .line 1549
+    .line 1585
     :cond_c0
     iget-object v3, p0, Lorg/telegram/ui/ChatUsersActivity$15;->this$0:Lorg/telegram/ui/ChatUsersActivity;
 
@@ -315,12 +315,12 @@
     :goto_cb
     if-ne p1, v1, :cond_e1
 
-    .line 1552
+    .line 1588
     iget-boolean p1, p0, Lorg/telegram/ui/ChatUsersActivity$15;->val$isAdmin:Z
 
     if-nez p1, :cond_e1
 
-    .line 1553
+    .line 1589
     iget-object p1, p0, Lorg/telegram/ui/ChatUsersActivity$15;->val$needShowBulletin:[Z
 
     aput-boolean v1, p1, v0
@@ -332,7 +332,7 @@
 
     if-nez p1, :cond_e1
 
-    .line 1557
+    .line 1593
     iget-object p1, p0, Lorg/telegram/ui/ChatUsersActivity$15;->this$0:Lorg/telegram/ui/ChatUsersActivity;
 
     iget-wide p2, p0, Lorg/telegram/ui/ChatUsersActivity$15;->val$peerId:J

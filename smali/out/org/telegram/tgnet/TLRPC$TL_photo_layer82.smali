@@ -17,7 +17,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 32090
+    .line 32539
     invoke-direct {p0}, Lorg/telegram/tgnet/TLRPC$TL_photo;-><init>()V
 
     return-void
@@ -28,7 +28,7 @@
 .method public readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
     .registers 15
 
-    .line 32095
+    .line 32544
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
@@ -50,32 +50,32 @@
     :cond_d
     const/4 v0, 0x0
 
-    .line 32096
+    .line 32545
     :goto_e
     iput-boolean v0, p0, Lorg/telegram/tgnet/TLRPC$Photo;->has_stickers:Z
 
-    .line 32097
+    .line 32546
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt64(Z)J
 
     move-result-wide v3
 
     iput-wide v3, p0, Lorg/telegram/tgnet/TLRPC$Photo;->id:J
 
-    .line 32098
+    .line 32547
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt64(Z)J
 
     move-result-wide v3
 
     iput-wide v3, p0, Lorg/telegram/tgnet/TLRPC$Photo;->access_hash:J
 
-    .line 32099
+    .line 32548
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
 
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$Photo;->date:I
 
-    .line 32100
+    .line 32549
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
@@ -88,7 +88,7 @@
 
     return-void
 
-    .line 32103
+    .line 32552
     :cond_2e
     new-instance p1, Ljava/lang/RuntimeException;
 
@@ -110,7 +110,7 @@
 
     throw p1
 
-    .line 32107
+    .line 32556
     :cond_42
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
@@ -125,7 +125,7 @@
 
     const-wide/16 v7, 0x0
 
-    .line 32109
+    .line 32558
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v10
@@ -142,7 +142,7 @@
 
     return-void
 
-    .line 32113
+    .line 32562
     :cond_5b
     iget-object v3, p0, Lorg/telegram/tgnet/TLRPC$Photo;->sizes:Ljava/util/ArrayList;
 
@@ -159,12 +159,12 @@
 .method public serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
     .registers 5
 
-    .line 32118
+    .line 32567
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_photo_layer82;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 32119
+    .line 32568
     iget-boolean v0, p0, Lorg/telegram/tgnet/TLRPC$Photo;->has_stickers:Z
 
     if-eqz v0, :cond_e
@@ -183,37 +183,37 @@
     :goto_12
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$Photo;->flags:I
 
-    .line 32120
+    .line 32569
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 32121
+    .line 32570
     iget-wide v0, p0, Lorg/telegram/tgnet/TLRPC$Photo;->id:J
 
     invoke-virtual {p1, v0, v1}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt64(J)V
 
-    .line 32122
+    .line 32571
     iget-wide v0, p0, Lorg/telegram/tgnet/TLRPC$Photo;->access_hash:J
 
     invoke-virtual {p1, v0, v1}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt64(J)V
 
-    .line 32123
+    .line 32572
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$Photo;->date:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
     const v0, 0x1cb5c415
 
-    .line 32124
+    .line 32573
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 32125
+    .line 32574
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$Photo;->sizes:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
-    .line 32126
+    .line 32575
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
     const/4 v1, 0x0
@@ -221,7 +221,7 @@
     :goto_36
     if-ge v1, v0, :cond_46
 
-    .line 32128
+    .line 32577
     iget-object v2, p0, Lorg/telegram/tgnet/TLRPC$Photo;->sizes:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;

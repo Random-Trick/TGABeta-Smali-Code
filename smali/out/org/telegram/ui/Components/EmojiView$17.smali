@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/EmojiView;)V
     .registers 2
 
-    .line 1725
+    .line 1731
     iput-object p1, p0, Lorg/telegram/ui/Components/EmojiView$17;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-direct {p0}, Landroidx/recyclerview/widget/GridLayoutManager$SpanSizeLookup;-><init>()V
@@ -35,7 +35,7 @@
 .method public getSpanSize(I)I
     .registers 5
 
-    .line 1728
+    .line 1734
     iget-object v0, p0, Lorg/telegram/ui/Components/EmojiView$17;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/EmojiView;->access$7500(Lorg/telegram/ui/Components/EmojiView;)Lorg/telegram/ui/Components/RecyclerListView;
@@ -58,7 +58,7 @@
 
     if-nez p1, :cond_20
 
-    .line 1730
+    .line 1736
     iget-object p1, p0, Lorg/telegram/ui/Components/EmojiView$17;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/EmojiView;->access$7700(Lorg/telegram/ui/Components/EmojiView;)Lorg/telegram/ui/Components/EmojiView$StickersGridAdapter;
@@ -71,7 +71,7 @@
 
     return p1
 
-    .line 1732
+    .line 1738
     :cond_20
     iget-object v0, p0, Lorg/telegram/ui/Components/EmojiView$17;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
@@ -85,7 +85,7 @@
 
     if-eq p1, v0, :cond_4f
 
-    .line 1733
+    .line 1739
     iget-object v0, p0, Lorg/telegram/ui/Components/EmojiView$17;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/EmojiView;->access$7700(Lorg/telegram/ui/Components/EmojiView;)Lorg/telegram/ui/Components/EmojiView$StickersGridAdapter;
@@ -102,7 +102,7 @@
 
     if-eqz v0, :cond_4e
 
-    .line 1734
+    .line 1740
     iget-object v0, p0, Lorg/telegram/ui/Components/EmojiView$17;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/EmojiView;->access$7700(Lorg/telegram/ui/Components/EmojiView;)Lorg/telegram/ui/Components/EmojiView$StickersGridAdapter;
@@ -124,7 +124,7 @@
     :cond_4e
     return v2
 
-    .line 1738
+    .line 1744
     :cond_4f
     iget-object p1, p0, Lorg/telegram/ui/Components/EmojiView$17;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
@@ -138,7 +138,7 @@
 
     return p1
 
-    .line 1740
+    .line 1746
     :cond_5a
     iget-object v0, p0, Lorg/telegram/ui/Components/EmojiView$17;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
@@ -152,7 +152,7 @@
 
     if-eq p1, v0, :cond_89
 
-    .line 1741
+    .line 1747
     iget-object v0, p0, Lorg/telegram/ui/Components/EmojiView$17;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/EmojiView;->access$1800(Lorg/telegram/ui/Components/EmojiView;)Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;
@@ -169,7 +169,7 @@
 
     if-eqz v0, :cond_88
 
-    .line 1742
+    .line 1748
     iget-object v0, p0, Lorg/telegram/ui/Components/EmojiView$17;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/EmojiView;->access$1800(Lorg/telegram/ui/Components/EmojiView;)Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;
@@ -191,7 +191,7 @@
     :cond_88
     return v2
 
-    .line 1746
+    .line 1752
     :cond_89
     iget-object p1, p0, Lorg/telegram/ui/Components/EmojiView$17;->this$0:Lorg/telegram/ui/Components/EmojiView;
 

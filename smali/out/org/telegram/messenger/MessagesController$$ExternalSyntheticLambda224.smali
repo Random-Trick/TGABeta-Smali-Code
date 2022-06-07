@@ -35,11 +35,11 @@
 .method public final compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .registers 3
 
-    check-cast p1, Lorg/telegram/tgnet/TLRPC$Updates;
+    check-cast p1, Lorg/telegram/messenger/MessagesController$DialogFilter;
 
-    check-cast p2, Lorg/telegram/tgnet/TLRPC$Updates;
+    check-cast p2, Lorg/telegram/messenger/MessagesController$DialogFilter;
 
-    invoke-static {p1, p2}, Lorg/telegram/messenger/MessagesController;->$r8$lambda$D4H49wrpU9snQQ7hbGGvPvlFyUA(Lorg/telegram/tgnet/TLRPC$Updates;Lorg/telegram/tgnet/TLRPC$Updates;)I
+    invoke-static {p1, p2}, Lorg/telegram/messenger/MessagesController;->$r8$lambda$aWPcUvRUGDYYPd-tMKrxsQqoOS0(Lorg/telegram/messenger/MessagesController$DialogFilter;Lorg/telegram/messenger/MessagesController$DialogFilter;)I
 
     move-result p1
 

@@ -27,7 +27,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/EmojiView$GifAdapter;Ljava/lang/String;)V
     .registers 3
 
-    .line 5135
+    .line 5221
     iput-object p1, p0, Lorg/telegram/ui/Components/EmojiView$GifAdapter$1;->this$1:Lorg/telegram/ui/Components/EmojiView$GifAdapter;
 
     iput-object p2, p0, Lorg/telegram/ui/Components/EmojiView$GifAdapter$1;->val$text:Ljava/lang/String;
@@ -42,7 +42,7 @@
 .method public run()V
     .registers 5
 
-    .line 5138
+    .line 5224
     iget-object v0, p0, Lorg/telegram/ui/Components/EmojiView$GifAdapter$1;->this$1:Lorg/telegram/ui/Components/EmojiView$GifAdapter;
 
     iget-object v1, p0, Lorg/telegram/ui/Components/EmojiView$GifAdapter$1;->val$text:Ljava/lang/String;

@@ -8,18 +8,18 @@
 # instance fields
 .field public final synthetic f$0:Lorg/telegram/ui/ChatEditTypeActivity;
 
-.field public final synthetic f$1:Lorg/telegram/tgnet/TLRPC$TL_error;
+.field public final synthetic f$1:Lorg/telegram/tgnet/TLObject;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lorg/telegram/ui/ChatEditTypeActivity;Lorg/telegram/tgnet/TLRPC$TL_error;)V
+.method public synthetic constructor <init>(Lorg/telegram/ui/ChatEditTypeActivity;Lorg/telegram/tgnet/TLObject;)V
     .registers 3
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lorg/telegram/ui/ChatEditTypeActivity$$ExternalSyntheticLambda10;->f$0:Lorg/telegram/ui/ChatEditTypeActivity;
 
-    iput-object p2, p0, Lorg/telegram/ui/ChatEditTypeActivity$$ExternalSyntheticLambda10;->f$1:Lorg/telegram/tgnet/TLRPC$TL_error;
+    iput-object p2, p0, Lorg/telegram/ui/ChatEditTypeActivity$$ExternalSyntheticLambda10;->f$1:Lorg/telegram/tgnet/TLObject;
 
     return-void
 .end method
@@ -31,9 +31,9 @@
 
     iget-object v0, p0, Lorg/telegram/ui/ChatEditTypeActivity$$ExternalSyntheticLambda10;->f$0:Lorg/telegram/ui/ChatEditTypeActivity;
 
-    iget-object v1, p0, Lorg/telegram/ui/ChatEditTypeActivity$$ExternalSyntheticLambda10;->f$1:Lorg/telegram/tgnet/TLRPC$TL_error;
+    iget-object v1, p0, Lorg/telegram/ui/ChatEditTypeActivity$$ExternalSyntheticLambda10;->f$1:Lorg/telegram/tgnet/TLObject;
 
-    invoke-static {v0, v1}, Lorg/telegram/ui/ChatEditTypeActivity;->$r8$lambda$V992hs0mvI5TcUmUNBP56yHOjYM(Lorg/telegram/ui/ChatEditTypeActivity;Lorg/telegram/tgnet/TLRPC$TL_error;)V
+    invoke-static {v0, v1}, Lorg/telegram/ui/ChatEditTypeActivity;->$r8$lambda$jA9UivD9X1tDOZoP45v7Fl_JP1c(Lorg/telegram/ui/ChatEditTypeActivity;Lorg/telegram/tgnet/TLObject;)V
 
     return-void
 .end method

@@ -22,12 +22,14 @@
 
 
 # virtual methods
-.method public final run(Lorg/telegram/tgnet/TLRPC$TL_error;)V
+.method public final run(Lorg/telegram/tgnet/TLRPC$TL_error;)Z
     .registers 3
 
     iget-object v0, p0, Lorg/telegram/ui/ChatRightsEditActivity$$ExternalSyntheticLambda19;->f$0:Lorg/telegram/ui/ChatRightsEditActivity;
 
-    invoke-static {v0, p1}, Lorg/telegram/ui/ChatRightsEditActivity;->$r8$lambda$oak7pKYZvu6jv0GbM-kKzeOd1O8(Lorg/telegram/ui/ChatRightsEditActivity;Lorg/telegram/tgnet/TLRPC$TL_error;)V
+    invoke-static {v0, p1}, Lorg/telegram/ui/ChatRightsEditActivity;->$r8$lambda$sUqdRDnDAc8l0ksD476QxEFntLI(Lorg/telegram/ui/ChatRightsEditActivity;Lorg/telegram/tgnet/TLRPC$TL_error;)Z
 
-    return-void
+    move-result p1
+
+    return p1
 .end method

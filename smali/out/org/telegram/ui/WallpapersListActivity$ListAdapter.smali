@@ -192,7 +192,7 @@
 
     if-ne p2, v0, :cond_27e
 
-    const p2, 0x7f0e0f1e
+    const p2, 0x7f0e0fcb
 
     const-string v0, "ResetChatBackgroundsInfo"
 
@@ -837,7 +837,7 @@
 
     if-ne p2, v0, :cond_252
 
-    const p2, 0x7f0e0fbf
+    const p2, 0x7f0e107c
 
     const-string v0, "SelectFromGallery"
 
@@ -846,7 +846,7 @@
 
     move-result-object p2
 
-    const v0, 0x7f070380
+    const v0, 0x7f0702a1
 
     invoke-virtual {p1, p2, v0, v2}, Lorg/telegram/ui/Cells/TextCell;->setTextAndIcon(Ljava/lang/String;IZ)V
 
@@ -862,7 +862,7 @@
 
     if-ne p2, v0, :cond_26a
 
-    const p2, 0x7f0e1008
+    const p2, 0x7f0e10c6
 
     const-string v0, "SetColor"
 
@@ -871,7 +871,7 @@
 
     move-result-object p2
 
-    const v0, 0x7f070210
+    const v0, 0x7f070288
 
     invoke-virtual {p1, p2, v0, v2}, Lorg/telegram/ui/Cells/TextCell;->setTextAndIcon(Ljava/lang/String;IZ)V
 
@@ -887,7 +887,7 @@
 
     if-ne p2, v0, :cond_27e
 
-    const p2, 0x7f0e0f1b
+    const p2, 0x7f0e0fc8
 
     const-string v0, "ResetChatBackgrounds"
 
@@ -912,7 +912,7 @@
 
     const-string v0, "windowBackgroundGrayShadow"
 
-    const v1, 0x7f07012d
+    const v1, 0x7f0700fc
 
     const/4 v2, 0x1
 
@@ -994,7 +994,7 @@
     goto :goto_50
 
     :cond_4d
-    const v1, 0x7f07012c
+    const v1, 0x7f0700fb
 
     :goto_50
     invoke-static {v3, v1, v0}, Lorg/telegram/ui/ActionBar/Theme;->getThemedDrawable(Landroid/content/Context;ILjava/lang/String;)Landroid/graphics/drawable/Drawable;

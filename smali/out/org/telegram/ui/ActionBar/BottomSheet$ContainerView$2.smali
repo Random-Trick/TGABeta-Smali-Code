@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/ActionBar/BottomSheet$ContainerView;)V
     .registers 2
 
-    .line 486
+    .line 500
     iput-object p1, p0, Lorg/telegram/ui/ActionBar/BottomSheet$ContainerView$2;->this$1:Lorg/telegram/ui/ActionBar/BottomSheet$ContainerView;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -35,7 +35,7 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .registers 3
 
-    .line 489
+    .line 503
     iget-object p1, p0, Lorg/telegram/ui/ActionBar/BottomSheet$ContainerView$2;->this$1:Lorg/telegram/ui/ActionBar/BottomSheet$ContainerView;
 
     iget-object p1, p1, Lorg/telegram/ui/ActionBar/BottomSheet$ContainerView;->this$0:Lorg/telegram/ui/ActionBar/BottomSheet;
@@ -46,7 +46,7 @@
 
     invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->setTranslationY(F)V
 
-    .line 490
+    .line 504
     iget-object p1, p0, Lorg/telegram/ui/ActionBar/BottomSheet$ContainerView$2;->this$1:Lorg/telegram/ui/ActionBar/BottomSheet$ContainerView;
 
     invoke-virtual {p1}, Landroid/widget/FrameLayout;->invalidate()V

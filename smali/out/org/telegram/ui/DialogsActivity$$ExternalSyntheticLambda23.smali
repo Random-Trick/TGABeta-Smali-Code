@@ -2,40 +2,38 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/view/View$OnLongClickListener;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
 .field public final synthetic f$0:Lorg/telegram/ui/DialogsActivity;
 
-.field public final synthetic f$1:Landroid/widget/FrameLayout;
+.field public final synthetic f$1:J
 
 
 # direct methods
-.method public synthetic constructor <init>(Lorg/telegram/ui/DialogsActivity;Landroid/widget/FrameLayout;)V
-    .registers 3
+.method public synthetic constructor <init>(Lorg/telegram/ui/DialogsActivity;J)V
+    .registers 4
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lorg/telegram/ui/DialogsActivity$$ExternalSyntheticLambda23;->f$0:Lorg/telegram/ui/DialogsActivity;
 
-    iput-object p2, p0, Lorg/telegram/ui/DialogsActivity$$ExternalSyntheticLambda23;->f$1:Landroid/widget/FrameLayout;
+    iput-wide p2, p0, Lorg/telegram/ui/DialogsActivity$$ExternalSyntheticLambda23;->f$1:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onLongClick(Landroid/view/View;)Z
-    .registers 4
+.method public final onClick(Landroid/view/View;)V
+    .registers 5
 
     iget-object v0, p0, Lorg/telegram/ui/DialogsActivity$$ExternalSyntheticLambda23;->f$0:Lorg/telegram/ui/DialogsActivity;
 
-    iget-object v1, p0, Lorg/telegram/ui/DialogsActivity$$ExternalSyntheticLambda23;->f$1:Landroid/widget/FrameLayout;
+    iget-wide v1, p0, Lorg/telegram/ui/DialogsActivity$$ExternalSyntheticLambda23;->f$1:J
 
-    invoke-static {v0, v1, p1}, Lorg/telegram/ui/DialogsActivity;->$r8$lambda$qiJRU13pfu8jsQX-bsASjZlFHxw(Lorg/telegram/ui/DialogsActivity;Landroid/widget/FrameLayout;Landroid/view/View;)Z
+    invoke-static {v0, v1, v2, p1}, Lorg/telegram/ui/DialogsActivity;->$r8$lambda$w5SAG2pNZO4g4YTbDxwxmTHbWPk(Lorg/telegram/ui/DialogsActivity;JLandroid/view/View;)V
 
-    move-result p1
-
-    return p1
+    return-void
 .end method

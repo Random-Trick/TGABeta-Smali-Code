@@ -372,7 +372,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_361
+    if-eqz v0, :cond_368
 
     const/4 v1, -0x1
 
@@ -380,17 +380,17 @@
 
     const/4 v3, 0x1
 
-    if-eq v0, v3, :cond_149
+    if-eq v0, v3, :cond_14d
 
     const/4 v4, 0x3
 
-    const v5, 0x7f07012d
+    const v5, 0x7f0700fc
 
-    const v6, 0x7f07012c
+    const v6, 0x7f0700fb
 
     const-string v7, "windowBackgroundGrayShadow"
 
-    if-eq v0, v4, :cond_127
+    if-eq v0, v4, :cond_12b
 
     const/4 v4, 0x4
 
@@ -400,7 +400,7 @@
 
     if-eq v0, v2, :cond_1e
 
-    goto/16 :goto_38e
+    goto/16 :goto_395
 
     .line 1007
     :cond_1e
@@ -417,7 +417,7 @@
 
     if-ne p2, v2, :cond_37
 
-    const v2, 0x7f0e072b
+    const v2, 0x7f0e0780
 
     const-string v3, "FilterIncludeInfo"
 
@@ -440,7 +440,7 @@
 
     if-ne p2, v2, :cond_4b
 
-    const v2, 0x7f0e0726
+    const v2, 0x7f0e077b
 
     const-string v3, "FilterExcludeInfo"
 
@@ -481,7 +481,7 @@
 
     invoke-virtual {p1, p2}, Landroid/view/View;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    goto/16 :goto_38e
+    goto/16 :goto_395
 
     .line 1016
     :cond_68
@@ -495,7 +495,7 @@
 
     invoke-virtual {p1, p2}, Landroid/view/View;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    goto/16 :goto_38e
+    goto/16 :goto_395
 
     .line 987
     :cond_75
@@ -519,7 +519,7 @@
     .line 989
     invoke-virtual {p1, p2, v0}, Lorg/telegram/ui/Cells/TextCell;->setColors(Ljava/lang/String;Ljava/lang/String;)V
 
-    const p2, 0x7f0e0719
+    const p2, 0x7f0e076e
 
     const-string v0, "FilterDelete"
 
@@ -530,7 +530,7 @@
 
     invoke-virtual {p1, p2, v2}, Lorg/telegram/ui/Cells/TextCell;->setText(Ljava/lang/String;Z)V
 
-    goto/16 :goto_38e
+    goto/16 :goto_395
 
     .line 991
     :cond_95
@@ -540,7 +540,7 @@
 
     move-result v0
 
-    const v1, 0x7f07005d
+    const v1, 0x7f07004b
 
     const-string v4, "FilterShowMoreChats"
 
@@ -548,7 +548,7 @@
 
     const-string v6, "switchTrackChecked"
 
-    if-ne p2, v0, :cond_be
+    if-ne p2, v0, :cond_c0
 
     .line 992
     invoke-virtual {p1, v6, v5}, Lorg/telegram/ui/Cells/TextCell;->setColors(Ljava/lang/String;Ljava/lang/String;)V
@@ -566,23 +566,25 @@
 
     add-int/lit8 p2, p2, -0x5
 
-    invoke-static {v4, p2}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    new-array v0, v2, [Ljava/lang/Object;
+
+    invoke-static {v4, p2, v0}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p2
 
     invoke-virtual {p1, p2, v1, v2}, Lorg/telegram/ui/Cells/TextCell;->setTextAndIcon(Ljava/lang/String;IZ)V
 
-    goto/16 :goto_38e
+    goto/16 :goto_395
 
     .line 994
-    :cond_be
+    :cond_c0
     iget-object v0, p0, Lorg/telegram/ui/FilterCreateActivity$ListAdapter;->this$0:Lorg/telegram/ui/FilterCreateActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/FilterCreateActivity;->access$1800(Lorg/telegram/ui/FilterCreateActivity;)I
 
     move-result v0
 
-    if-ne p2, v0, :cond_de
+    if-ne p2, v0, :cond_e2
 
     .line 995
     invoke-virtual {p1, v6, v5}, Lorg/telegram/ui/Cells/TextCell;->setColors(Ljava/lang/String;Ljava/lang/String;)V
@@ -600,30 +602,32 @@
 
     add-int/lit8 p2, p2, -0x5
 
-    invoke-static {v4, p2}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    new-array v0, v2, [Ljava/lang/Object;
+
+    invoke-static {v4, p2, v0}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p2
 
     invoke-virtual {p1, p2, v1, v2}, Lorg/telegram/ui/Cells/TextCell;->setTextAndIcon(Ljava/lang/String;IZ)V
 
-    goto/16 :goto_38e
+    goto/16 :goto_395
 
     .line 997
-    :cond_de
+    :cond_e2
     iget-object v0, p0, Lorg/telegram/ui/FilterCreateActivity$ListAdapter;->this$0:Lorg/telegram/ui/FilterCreateActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/FilterCreateActivity;->access$3000(Lorg/telegram/ui/FilterCreateActivity;)I
 
     move-result v0
 
-    const v1, 0x7f070049
+    const v1, 0x7f0701ed
 
-    if-ne p2, v0, :cond_104
+    if-ne p2, v0, :cond_108
 
     .line 998
     invoke-virtual {p1, v6, v5}, Lorg/telegram/ui/Cells/TextCell;->setColors(Ljava/lang/String;Ljava/lang/String;)V
 
-    const v0, 0x7f0e0701
+    const v0, 0x7f0e0756
 
     const-string v4, "FilterAddChats"
 
@@ -640,29 +644,29 @@
 
     move-result v4
 
-    if-eq p2, v4, :cond_ff
+    if-eq p2, v4, :cond_103
 
     const/4 v2, 0x1
 
-    :cond_ff
+    :cond_103
     invoke-virtual {p1, v0, v1, v2}, Lorg/telegram/ui/Cells/TextCell;->setTextAndIcon(Ljava/lang/String;IZ)V
 
-    goto/16 :goto_38e
+    goto/16 :goto_395
 
     .line 1000
-    :cond_104
+    :cond_108
     iget-object v0, p0, Lorg/telegram/ui/FilterCreateActivity$ListAdapter;->this$0:Lorg/telegram/ui/FilterCreateActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/FilterCreateActivity;->access$3100(Lorg/telegram/ui/FilterCreateActivity;)I
 
     move-result v0
 
-    if-ne p2, v0, :cond_38e
+    if-ne p2, v0, :cond_395
 
     .line 1001
     invoke-virtual {p1, v6, v5}, Lorg/telegram/ui/Cells/TextCell;->setColors(Ljava/lang/String;Ljava/lang/String;)V
 
-    const v0, 0x7f0e0739
+    const v0, 0x7f0e078e
 
     const-string v4, "FilterRemoveChats"
 
@@ -679,24 +683,24 @@
 
     move-result v4
 
-    if-eq p2, v4, :cond_122
+    if-eq p2, v4, :cond_126
 
     const/4 v2, 0x1
 
-    :cond_122
+    :cond_126
     invoke-virtual {p1, v0, v1, v2}, Lorg/telegram/ui/Cells/TextCell;->setTextAndIcon(Ljava/lang/String;IZ)V
 
-    goto/16 :goto_38e
+    goto/16 :goto_395
 
     .line 979
-    :cond_127
+    :cond_12b
     iget-object v0, p0, Lorg/telegram/ui/FilterCreateActivity$ListAdapter;->this$0:Lorg/telegram/ui/FilterCreateActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/FilterCreateActivity;->access$2800(Lorg/telegram/ui/FilterCreateActivity;)I
 
     move-result v0
 
-    if-ne p2, v0, :cond_13c
+    if-ne p2, v0, :cond_140
 
     .line 980
     iget-object p1, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
@@ -709,10 +713,10 @@
 
     invoke-virtual {p1, p2}, Landroid/view/View;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    goto/16 :goto_38e
+    goto/16 :goto_395
 
     .line 982
-    :cond_13c
+    :cond_140
     iget-object p1, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     iget-object p2, p0, Lorg/telegram/ui/FilterCreateActivity$ListAdapter;->mContext:Landroid/content/Context;
@@ -723,10 +727,10 @@
 
     invoke-virtual {p1, p2}, Landroid/view/View;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    goto/16 :goto_38e
+    goto/16 :goto_395
 
     .line 892
-    :cond_149
+    :cond_14d
     iget-object p1, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     move-object v4, p1
@@ -740,7 +744,7 @@
 
     move-result p1
 
-    if-lt p2, p1, :cond_186
+    if-lt p2, p1, :cond_18b
 
     iget-object p1, p0, Lorg/telegram/ui/FilterCreateActivity$ListAdapter;->this$0:Lorg/telegram/ui/FilterCreateActivity;
 
@@ -748,7 +752,7 @@
 
     move-result p1
 
-    if-ge p2, p1, :cond_186
+    if-ge p2, p1, :cond_18b
 
     .line 896
     iget-object p1, p0, Lorg/telegram/ui/FilterCreateActivity$ListAdapter;->this$0:Lorg/telegram/ui/FilterCreateActivity;
@@ -778,7 +782,7 @@
 
     move-result v0
 
-    if-ne v0, v1, :cond_183
+    if-ne v0, v1, :cond_189
 
     iget-object v0, p0, Lorg/telegram/ui/FilterCreateActivity$ListAdapter;->this$0:Lorg/telegram/ui/FilterCreateActivity;
 
@@ -788,26 +792,28 @@
 
     sub-int/2addr v0, v3
 
-    if-eq p2, v0, :cond_184
+    if-eq p2, v0, :cond_188
 
-    :cond_183
-    :goto_183
-    const/4 v2, 0x1
+    goto :goto_189
 
-    :cond_184
-    move v9, v2
+    :cond_188
+    const/4 v3, 0x0
 
-    goto :goto_1bc
+    :cond_189
+    :goto_189
+    move v9, v3
+
+    goto :goto_1c1
 
     .line 898
-    :cond_186
+    :cond_18b
     iget-object p1, p0, Lorg/telegram/ui/FilterCreateActivity$ListAdapter;->this$0:Lorg/telegram/ui/FilterCreateActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/FilterCreateActivity;->access$1500(Lorg/telegram/ui/FilterCreateActivity;)I
 
     move-result p1
 
-    if-lt p2, p1, :cond_26c
+    if-lt p2, p1, :cond_273
 
     iget-object p1, p0, Lorg/telegram/ui/FilterCreateActivity$ListAdapter;->this$0:Lorg/telegram/ui/FilterCreateActivity;
 
@@ -815,7 +821,7 @@
 
     move-result p1
 
-    if-ge p2, p1, :cond_26c
+    if-ge p2, p1, :cond_273
 
     .line 899
     iget-object p1, p0, Lorg/telegram/ui/FilterCreateActivity$ListAdapter;->this$0:Lorg/telegram/ui/FilterCreateActivity;
@@ -845,7 +851,7 @@
 
     move-result v0
 
-    if-ne v0, v1, :cond_183
+    if-ne v0, v1, :cond_189
 
     iget-object v0, p0, Lorg/telegram/ui/FilterCreateActivity$ListAdapter;->this$0:Lorg/telegram/ui/FilterCreateActivity;
 
@@ -855,21 +861,21 @@
 
     sub-int/2addr v0, v3
 
-    if-eq p2, v0, :cond_184
+    if-eq p2, v0, :cond_188
 
-    goto :goto_183
+    goto :goto_189
 
     .line 941
-    :goto_1bc
+    :goto_1c1
     invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
 
     move-result-wide v0
 
-    const-wide/16 v2, 0x0
+    const-wide/16 v5, 0x0
 
-    cmp-long p2, v0, v2
+    cmp-long p2, v0, v5
 
-    if-lez p2, :cond_200
+    if-lez p2, :cond_205
 
     .line 942
     iget-object p2, p0, Lorg/telegram/ui/FilterCreateActivity$ListAdapter;->this$0:Lorg/telegram/ui/FilterCreateActivity;
@@ -882,14 +888,14 @@
 
     move-result-object v5
 
-    if-eqz v5, :cond_38e
+    if-eqz v5, :cond_395
 
     .line 945
     iget-boolean p1, v5, Lorg/telegram/tgnet/TLRPC$User;->bot:Z
 
-    if-eqz p1, :cond_1e1
+    if-eqz p1, :cond_1e6
 
-    const p1, 0x7f0e02c3
+    const p1, 0x7f0e02fa
 
     const-string p2, "Bot"
 
@@ -898,18 +904,18 @@
 
     move-result-object p1
 
-    :goto_1df
+    :goto_1e4
     move-object v7, p1
 
-    goto :goto_1f9
+    goto :goto_1fe
 
     .line 947
-    :cond_1e1
+    :cond_1e6
     iget-boolean p1, v5, Lorg/telegram/tgnet/TLRPC$User;->contact:Z
 
-    if-eqz p1, :cond_1ef
+    if-eqz p1, :cond_1f4
 
-    const p1, 0x7f0e0717
+    const p1, 0x7f0e076c
 
     const-string p2, "FilterContact"
 
@@ -918,10 +924,10 @@
 
     move-result-object p1
 
-    goto :goto_1df
+    goto :goto_1e4
 
-    :cond_1ef
-    const p1, 0x7f0e0735
+    :cond_1f4
+    const p1, 0x7f0e078a
 
     const-string p2, "FilterNonContact"
 
@@ -930,9 +936,9 @@
 
     move-result-object p1
 
-    goto :goto_1df
+    goto :goto_1e4
 
-    :goto_1f9
+    :goto_1fe
     const/4 v6, 0x0
 
     const/4 v8, 0x0
@@ -940,10 +946,10 @@
     .line 952
     invoke-virtual/range {v4 .. v9}, Lorg/telegram/ui/Cells/UserCell;->setData(Ljava/lang/Object;Ljava/lang/CharSequence;Ljava/lang/CharSequence;IZ)V
 
-    goto/16 :goto_38e
+    goto/16 :goto_395
 
     .line 955
-    :cond_200
+    :cond_205
     iget-object p2, p0, Lorg/telegram/ui/FilterCreateActivity$ListAdapter;->this$0:Lorg/telegram/ui/FilterCreateActivity;
 
     invoke-virtual {p2}, Lorg/telegram/ui/ActionBar/BaseFragment;->getMessagesController()Lorg/telegram/messenger/MessagesController;
@@ -964,47 +970,49 @@
 
     move-result-object v5
 
-    if-eqz v5, :cond_38e
+    if-eqz v5, :cond_395
 
     .line 958
     iget p1, v5, Lorg/telegram/tgnet/TLRPC$Chat;->participants_count:I
 
-    if-eqz p1, :cond_221
+    if-eqz p1, :cond_228
 
-    const-string p2, "Members"
+    new-array p2, v2, [Ljava/lang/Object;
+
+    const-string v0, "Members"
 
     .line 959
-    invoke-static {p2, p1}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    invoke-static {v0, p1, p2}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
 
-    :goto_21f
+    :goto_226
     move-object v7, p1
 
-    goto :goto_265
+    goto :goto_26c
 
     .line 960
-    :cond_221
+    :cond_228
     iget-object p1, v5, Lorg/telegram/tgnet/TLRPC$Chat;->username:Ljava/lang/String;
 
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result p1
 
-    if-eqz p1, :cond_247
+    if-eqz p1, :cond_24e
 
     .line 961
     invoke-static {v5}, Lorg/telegram/messenger/ChatObject;->isChannel(Lorg/telegram/tgnet/TLRPC$Chat;)Z
 
     move-result p1
 
-    if-eqz p1, :cond_23d
+    if-eqz p1, :cond_244
 
     iget-boolean p1, v5, Lorg/telegram/tgnet/TLRPC$Chat;->megagroup:Z
 
-    if-nez p1, :cond_23d
+    if-nez p1, :cond_244
 
-    const p1, 0x7f0e03ac
+    const p1, 0x7f0e03eb
 
     const-string p2, "ChannelPrivate"
 
@@ -1013,10 +1021,10 @@
 
     move-result-object p1
 
-    goto :goto_21f
+    goto :goto_226
 
-    :cond_23d
-    const p1, 0x7f0e09c9
+    :cond_244
+    const p1, 0x7f0e0a50
 
     const-string p2, "MegaPrivate"
 
@@ -1025,21 +1033,21 @@
 
     move-result-object p1
 
-    goto :goto_21f
+    goto :goto_226
 
     .line 967
-    :cond_247
+    :cond_24e
     invoke-static {v5}, Lorg/telegram/messenger/ChatObject;->isChannel(Lorg/telegram/tgnet/TLRPC$Chat;)Z
 
     move-result p1
 
-    if-eqz p1, :cond_25b
+    if-eqz p1, :cond_262
 
     iget-boolean p1, v5, Lorg/telegram/tgnet/TLRPC$Chat;->megagroup:Z
 
-    if-nez p1, :cond_25b
+    if-nez p1, :cond_262
 
-    const p1, 0x7f0e03af
+    const p1, 0x7f0e03ee
 
     const-string p2, "ChannelPublic"
 
@@ -1048,10 +1056,10 @@
 
     move-result-object p1
 
-    goto :goto_21f
+    goto :goto_226
 
-    :cond_25b
-    const p1, 0x7f0e09cc
+    :cond_262
+    const p1, 0x7f0e0a53
 
     const-string p2, "MegaPublic"
 
@@ -1060,9 +1068,9 @@
 
     move-result-object p1
 
-    goto :goto_21f
+    goto :goto_226
 
-    :goto_265
+    :goto_26c
     const/4 v6, 0x0
 
     const/4 v8, 0x0
@@ -1070,19 +1078,19 @@
     .line 973
     invoke-virtual/range {v4 .. v9}, Lorg/telegram/ui/Cells/UserCell;->setData(Ljava/lang/Object;Ljava/lang/CharSequence;Ljava/lang/CharSequence;IZ)V
 
-    goto/16 :goto_38e
+    goto/16 :goto_395
 
     .line 905
-    :cond_26c
+    :cond_273
     iget-object p1, p0, Lorg/telegram/ui/FilterCreateActivity$ListAdapter;->this$0:Lorg/telegram/ui/FilterCreateActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/FilterCreateActivity;->access$1900(Lorg/telegram/ui/FilterCreateActivity;)I
 
     move-result p1
 
-    if-ne p2, p1, :cond_28e
+    if-ne p2, p1, :cond_295
 
-    const p1, 0x7f0e0718
+    const p1, 0x7f0e076d
 
     const-string v0, "FilterContacts"
 
@@ -1100,33 +1108,33 @@
 
     move-result v0
 
-    if-eq p2, v0, :cond_287
+    if-eq p2, v0, :cond_28e
 
     const/4 v2, 0x1
 
-    :cond_287
+    :cond_28e
     const-string p2, "contacts"
 
-    :goto_289
+    :goto_290
     move-object v6, p1
 
     move-object v5, p2
 
     move v9, v2
 
-    goto/16 :goto_35b
+    goto/16 :goto_362
 
     .line 909
-    :cond_28e
+    :cond_295
     iget-object p1, p0, Lorg/telegram/ui/FilterCreateActivity$ListAdapter;->this$0:Lorg/telegram/ui/FilterCreateActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/FilterCreateActivity;->access$2100(Lorg/telegram/ui/FilterCreateActivity;)I
 
     move-result p1
 
-    if-ne p2, p1, :cond_2ac
+    if-ne p2, p1, :cond_2b3
 
-    const p1, 0x7f0e0736
+    const p1, 0x7f0e078b
 
     const-string v0, "FilterNonContacts"
 
@@ -1144,26 +1152,26 @@
 
     move-result v0
 
-    if-eq p2, v0, :cond_2a9
+    if-eq p2, v0, :cond_2b0
 
     const/4 v2, 0x1
 
-    :cond_2a9
+    :cond_2b0
     const-string p2, "non_contacts"
 
-    goto :goto_289
+    goto :goto_290
 
     .line 913
-    :cond_2ac
+    :cond_2b3
     iget-object p1, p0, Lorg/telegram/ui/FilterCreateActivity$ListAdapter;->this$0:Lorg/telegram/ui/FilterCreateActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/FilterCreateActivity;->access$2200(Lorg/telegram/ui/FilterCreateActivity;)I
 
     move-result p1
 
-    if-ne p2, p1, :cond_2ca
+    if-ne p2, p1, :cond_2d1
 
-    const p1, 0x7f0e0729
+    const p1, 0x7f0e077e
 
     const-string v0, "FilterGroups"
 
@@ -1181,26 +1189,26 @@
 
     move-result v0
 
-    if-eq p2, v0, :cond_2c7
+    if-eq p2, v0, :cond_2ce
 
     const/4 v2, 0x1
 
-    :cond_2c7
+    :cond_2ce
     const-string p2, "groups"
 
-    goto :goto_289
+    goto :goto_290
 
     .line 917
-    :cond_2ca
+    :cond_2d1
     iget-object p1, p0, Lorg/telegram/ui/FilterCreateActivity$ListAdapter;->this$0:Lorg/telegram/ui/FilterCreateActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/FilterCreateActivity;->access$2300(Lorg/telegram/ui/FilterCreateActivity;)I
 
     move-result p1
 
-    if-ne p2, p1, :cond_2e8
+    if-ne p2, p1, :cond_2ef
 
-    const p1, 0x7f0e070f
+    const p1, 0x7f0e0764
 
     const-string v0, "FilterChannels"
 
@@ -1218,26 +1226,26 @@
 
     move-result v0
 
-    if-eq p2, v0, :cond_2e5
+    if-eq p2, v0, :cond_2ec
 
     const/4 v2, 0x1
 
-    :cond_2e5
+    :cond_2ec
     const-string p2, "channels"
 
-    goto :goto_289
+    goto :goto_290
 
     .line 921
-    :cond_2e8
+    :cond_2ef
     iget-object p1, p0, Lorg/telegram/ui/FilterCreateActivity$ListAdapter;->this$0:Lorg/telegram/ui/FilterCreateActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/FilterCreateActivity;->access$2400(Lorg/telegram/ui/FilterCreateActivity;)I
 
     move-result p1
 
-    if-ne p2, p1, :cond_306
+    if-ne p2, p1, :cond_30d
 
-    const p1, 0x7f0e070e
+    const p1, 0x7f0e0763
 
     const-string v0, "FilterBots"
 
@@ -1255,26 +1263,26 @@
 
     move-result v0
 
-    if-eq p2, v0, :cond_303
+    if-eq p2, v0, :cond_30a
 
     const/4 v2, 0x1
 
-    :cond_303
+    :cond_30a
     const-string p2, "bots"
 
-    goto :goto_289
+    goto :goto_290
 
     .line 925
-    :cond_306
+    :cond_30d
     iget-object p1, p0, Lorg/telegram/ui/FilterCreateActivity$ListAdapter;->this$0:Lorg/telegram/ui/FilterCreateActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/FilterCreateActivity;->access$2500(Lorg/telegram/ui/FilterCreateActivity;)I
 
     move-result p1
 
-    if-ne p2, p1, :cond_325
+    if-ne p2, p1, :cond_32c
 
-    const p1, 0x7f0e072c
+    const p1, 0x7f0e0781
 
     const-string v0, "FilterMuted"
 
@@ -1292,26 +1300,26 @@
 
     move-result v0
 
-    if-eq p2, v0, :cond_321
+    if-eq p2, v0, :cond_328
 
     const/4 v2, 0x1
 
-    :cond_321
+    :cond_328
     const-string p2, "muted"
 
-    goto/16 :goto_289
+    goto/16 :goto_290
 
     .line 929
-    :cond_325
+    :cond_32c
     iget-object p1, p0, Lorg/telegram/ui/FilterCreateActivity$ListAdapter;->this$0:Lorg/telegram/ui/FilterCreateActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/FilterCreateActivity;->access$2700(Lorg/telegram/ui/FilterCreateActivity;)I
 
     move-result p1
 
-    if-ne p2, p1, :cond_344
+    if-ne p2, p1, :cond_34b
 
-    const p1, 0x7f0e0737
+    const p1, 0x7f0e078c
 
     const-string v0, "FilterRead"
 
@@ -1329,17 +1337,17 @@
 
     move-result v0
 
-    if-eq p2, v0, :cond_340
+    if-eq p2, v0, :cond_347
 
     const/4 v2, 0x1
 
-    :cond_340
+    :cond_347
     const-string p2, "read"
 
-    goto/16 :goto_289
+    goto/16 :goto_290
 
-    :cond_344
-    const p1, 0x7f0e070b
+    :cond_34b
+    const p1, 0x7f0e0760
 
     const-string v0, "FilterArchived"
 
@@ -1357,16 +1365,16 @@
 
     move-result v0
 
-    if-eq p2, v0, :cond_357
+    if-eq p2, v0, :cond_35e
 
     const/4 v2, 0x1
 
-    :cond_357
+    :cond_35e
     const-string p2, "archived"
 
-    goto/16 :goto_289
+    goto/16 :goto_290
 
-    :goto_35b
+    :goto_362
     const/4 v7, 0x0
 
     const/4 v8, 0x0
@@ -1377,7 +1385,7 @@
     return-void
 
     .line 883
-    :cond_361
+    :cond_368
     iget-object p1, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     check-cast p1, Lorg/telegram/ui/Cells/HeaderCell;
@@ -1389,9 +1397,9 @@
 
     move-result v0
 
-    if-ne p2, v0, :cond_37a
+    if-ne p2, v0, :cond_381
 
-    const p2, 0x7f0e072a
+    const p2, 0x7f0e077f
 
     const-string v0, "FilterInclude"
 
@@ -1402,19 +1410,19 @@
 
     invoke-virtual {p1, p2}, Lorg/telegram/ui/Cells/HeaderCell;->setText(Ljava/lang/CharSequence;)V
 
-    goto :goto_38e
+    goto :goto_395
 
     .line 886
-    :cond_37a
+    :cond_381
     iget-object v0, p0, Lorg/telegram/ui/FilterCreateActivity$ListAdapter;->this$0:Lorg/telegram/ui/FilterCreateActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/FilterCreateActivity;->access$1000(Lorg/telegram/ui/FilterCreateActivity;)I
 
     move-result v0
 
-    if-ne p2, v0, :cond_38e
+    if-ne p2, v0, :cond_395
 
-    const p2, 0x7f0e0724
+    const p2, 0x7f0e0779
 
     const-string v0, "FilterExclude"
 
@@ -1425,8 +1433,8 @@
 
     invoke-virtual {p1, p2}, Lorg/telegram/ui/Cells/HeaderCell;->setText(Ljava/lang/CharSequence;)V
 
-    :cond_38e
-    :goto_38e
+    :cond_395
+    :goto_395
     return-void
 .end method
 
@@ -1657,7 +1665,7 @@
     const-string v0, ""
 
     :goto_2b
-    const v1, 0x7f0e072d
+    const v1, 0x7f0e0782
 
     const-string v2, "FilterNameHint"
 

@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/ReactionsContainerLayout$LeftRightShadowsListener;Ljava/lang/Runnable;)V
     .registers 3
 
-    .line 590
+    .line 644
     iput-object p2, p0, Lorg/telegram/ui/Components/ReactionsContainerLayout$LeftRightShadowsListener$1;->val$onEnd:Ljava/lang/Runnable;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -35,7 +35,7 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .registers 2
 
-    .line 593
+    .line 647
     iget-object p1, p0, Lorg/telegram/ui/Components/ReactionsContainerLayout$LeftRightShadowsListener$1;->val$onEnd:Ljava/lang/Runnable;
 
     invoke-interface {p1}, Ljava/lang/Runnable;->run()V

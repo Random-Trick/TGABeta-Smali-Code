@@ -235,7 +235,7 @@
 
     invoke-direct {p2, p1}, Lorg/telegram/ui/Cells/GraySectionCell;-><init>(Landroid/content/Context;)V
 
-    const p1, 0x7f0e0f8f
+    const p1, 0x7f0e104b
 
     const-string v0, "SearchMessages"
 

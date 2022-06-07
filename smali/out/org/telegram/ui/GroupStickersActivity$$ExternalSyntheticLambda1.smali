@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lorg/telegram/tgnet/RequestDelegate;
 
 
 # instance fields
@@ -22,12 +22,12 @@
 
 
 # virtual methods
-.method public final run()V
-    .registers 2
+.method public final run(Lorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/TLRPC$TL_error;)V
+    .registers 4
 
     iget-object v0, p0, Lorg/telegram/ui/GroupStickersActivity$$ExternalSyntheticLambda1;->f$0:Lorg/telegram/ui/GroupStickersActivity;
 
-    invoke-static {v0}, Lorg/telegram/ui/GroupStickersActivity;->$r8$lambda$SxMHGaJOyjy4XiB-1Jb91-6feqE(Lorg/telegram/ui/GroupStickersActivity;)V
+    invoke-static {v0, p1, p2}, Lorg/telegram/ui/GroupStickersActivity;->$r8$lambda$ZGallJITZL7GYuIG6P0t50wFuG4(Lorg/telegram/ui/GroupStickersActivity;Lorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/TLRPC$TL_error;)V
 
     return-void
 .end method

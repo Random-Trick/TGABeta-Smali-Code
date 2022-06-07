@@ -25,7 +25,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter;Lorg/telegram/ui/Components/ShareAlert;)V
     .registers 3
 
-    .line 2028
+    .line 2041
     iput-object p1, p0, Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter$1;->this$1:Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,10 +38,10 @@
 .method public canApplySearchResults(I)Z
     .registers 3
 
-    .line 2047
+    .line 2060
     iget-object v0, p0, Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter$1;->this$1:Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter;
 
-    invoke-static {v0}, Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter;->access$11900(Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter;)I
+    invoke-static {v0}, Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter;->access$11700(Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter;)I
 
     move-result v0
 
@@ -81,36 +81,36 @@
 .method public onDataSetChanged(I)V
     .registers 5
 
-    .line 2031
+    .line 2044
     iget-object v0, p0, Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter$1;->this$1:Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter;
 
-    invoke-static {v0, p1}, Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter;->access$11502(Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter;I)I
+    invoke-static {v0, p1}, Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter;->access$11302(Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter;I)I
 
-    .line 2032
+    .line 2045
     iget-object v0, p0, Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter$1;->this$1:Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter;
 
-    invoke-static {v0}, Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter;->access$11600(Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter;)I
+    invoke-static {v0}, Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter;->access$11400(Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter;)I
 
     move-result v0
 
     if-eq v0, p1, :cond_16
 
-    .line 2033
+    .line 2046
     iget-object p1, p0, Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter$1;->this$1:Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter;
 
-    invoke-static {p1}, Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter;->access$11700(Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter;)Ljava/util/ArrayList;
+    invoke-static {p1}, Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter;->access$11500(Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter;)Ljava/util/ArrayList;
 
     move-result-object p1
 
     invoke-virtual {p1}, Ljava/util/ArrayList;->clear()V
 
-    .line 2035
+    .line 2048
     :cond_16
     iget-object p1, p0, Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter$1;->this$1:Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter;
 
     iget v0, p1, Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter;->lastItemCont:I
 
-    .line 2036
+    .line 2049
     invoke-virtual {p1}, Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter;->getItemCount()I
 
     move-result p1
@@ -121,7 +121,7 @@
 
     iget-object p1, p0, Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter$1;->this$1:Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter;
 
-    invoke-static {p1}, Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter;->access$11800(Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter;)Lorg/telegram/ui/Adapters/SearchAdapterHelper;
+    invoke-static {p1}, Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter;->access$11600(Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter;)Lorg/telegram/ui/Adapters/SearchAdapterHelper;
 
     move-result-object p1
 
@@ -137,7 +137,7 @@
 
     if-nez v2, :cond_3e
 
-    .line 2037
+    .line 2050
     iget-object p1, p1, Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter;->this$0:Lorg/telegram/ui/Components/ShareAlert;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/ShareAlert;->access$1900(Lorg/telegram/ui/Components/ShareAlert;)Lorg/telegram/ui/Components/StickerEmptyView;
@@ -150,7 +150,7 @@
 
     goto :goto_47
 
-    .line 2039
+    .line 2052
     :cond_3e
     iget-object p1, p0, Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter$1;->this$1:Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter;
 
@@ -160,13 +160,13 @@
 
     invoke-virtual {p1, v0}, Lorg/telegram/ui/Components/RecyclerItemsEnterAnimator;->showItemsAnimated(I)V
 
-    .line 2041
+    .line 2054
     :goto_47
     iget-object p1, p0, Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter$1;->this$1:Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter;
 
     invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->notifyDataSetChanged()V
 
-    .line 2042
+    .line 2055
     iget-object p1, p0, Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter$1;->this$1:Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter;
 
     iget-object p1, p1, Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter;->this$0:Lorg/telegram/ui/Components/ShareAlert;

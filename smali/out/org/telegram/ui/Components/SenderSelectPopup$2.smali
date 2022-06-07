@@ -115,7 +115,7 @@
 
     cmp-long v6, v0, v2
 
-    if-gez v6, :cond_71
+    if-gez v6, :cond_73
 
     .line 153
     iget-object v2, p0, Lorg/telegram/ui/Components/SenderSelectPopup$2;->val$messagesController:Lorg/telegram/messenger/MessagesController;
@@ -130,7 +130,7 @@
 
     move-result-object v0
 
-    if-eqz v0, :cond_5b
+    if-eqz v0, :cond_5d
 
     .line 155
     iget-object v1, p1, Lorg/telegram/ui/Components/SenderSelectPopup$SenderView;->title:Landroid/widget/TextView;
@@ -162,7 +162,9 @@
     :goto_4d
     iget v3, v0, Lorg/telegram/tgnet/TLRPC$Chat;->participants_count:I
 
-    invoke-static {v2, v3}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    new-array v6, v5, [Ljava/lang/Object;
+
+    invoke-static {v2, v3, v6}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -174,14 +176,14 @@
     invoke-virtual {v1, v0}, Lorg/telegram/ui/Components/SimpleAvatarView;->setAvatar(Lorg/telegram/tgnet/TLObject;)V
 
     .line 159
-    :cond_5b
+    :cond_5d
     iget-object p1, p1, Lorg/telegram/ui/Components/SenderSelectPopup$SenderView;->avatar:Lorg/telegram/ui/Components/SimpleAvatarView;
 
     iget-object v0, p0, Lorg/telegram/ui/Components/SenderSelectPopup$2;->val$chatFull:Lorg/telegram/tgnet/TLRPC$ChatFull;
 
     iget-object v0, v0, Lorg/telegram/tgnet/TLRPC$ChatFull;->default_send_as:Lorg/telegram/tgnet/TLRPC$Peer;
 
-    if-eqz v0, :cond_6c
+    if-eqz v0, :cond_6e
 
     iget-wide v0, v0, Lorg/telegram/tgnet/TLRPC$Peer;->channel_id:J
 
@@ -189,20 +191,20 @@
 
     cmp-long p2, v0, v2
 
-    if-nez p2, :cond_6c
+    if-nez p2, :cond_6e
 
-    goto :goto_6d
+    goto :goto_6f
 
-    :cond_6c
+    :cond_6e
     const/4 v4, 0x0
 
-    :goto_6d
+    :goto_6f
     invoke-virtual {p1, v4, v5}, Lorg/telegram/ui/Components/SimpleAvatarView;->setSelected(ZZ)V
 
-    goto :goto_ae
+    goto :goto_b0
 
     .line 161
-    :cond_71
+    :cond_73
     iget-object v2, p0, Lorg/telegram/ui/Components/SenderSelectPopup$2;->val$messagesController:Lorg/telegram/messenger/MessagesController;
 
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -213,7 +215,7 @@
 
     move-result-object v0
 
-    if-eqz v0, :cond_99
+    if-eqz v0, :cond_9b
 
     .line 163
     iget-object v1, p1, Lorg/telegram/ui/Components/SenderSelectPopup$SenderView;->title:Landroid/widget/TextView;
@@ -227,7 +229,7 @@
     .line 164
     iget-object v1, p1, Lorg/telegram/ui/Components/SenderSelectPopup$SenderView;->subtitle:Landroid/widget/TextView;
 
-    const v2, 0x7f0e1344
+    const v2, 0x7f0e1412
 
     const-string v3, "VoipGroupPersonalAccount"
 
@@ -243,14 +245,14 @@
     invoke-virtual {v1, v0}, Lorg/telegram/ui/Components/SimpleAvatarView;->setAvatar(Lorg/telegram/tgnet/TLObject;)V
 
     .line 167
-    :cond_99
+    :cond_9b
     iget-object p1, p1, Lorg/telegram/ui/Components/SenderSelectPopup$SenderView;->avatar:Lorg/telegram/ui/Components/SimpleAvatarView;
 
     iget-object v0, p0, Lorg/telegram/ui/Components/SenderSelectPopup$2;->val$chatFull:Lorg/telegram/tgnet/TLRPC$ChatFull;
 
     iget-object v0, v0, Lorg/telegram/tgnet/TLRPC$ChatFull;->default_send_as:Lorg/telegram/tgnet/TLRPC$Peer;
 
-    if-eqz v0, :cond_aa
+    if-eqz v0, :cond_ac
 
     iget-wide v0, v0, Lorg/telegram/tgnet/TLRPC$Peer;->user_id:J
 
@@ -258,17 +260,17 @@
 
     cmp-long p2, v0, v2
 
-    if-nez p2, :cond_aa
+    if-nez p2, :cond_ac
 
-    goto :goto_ab
+    goto :goto_ad
 
-    :cond_aa
+    :cond_ac
     const/4 v4, 0x0
 
-    :goto_ab
+    :goto_ad
     invoke-virtual {p1, v4, v5}, Lorg/telegram/ui/Components/SimpleAvatarView;->setSelected(ZZ)V
 
-    :goto_ae
+    :goto_b0
     return-void
 .end method
 

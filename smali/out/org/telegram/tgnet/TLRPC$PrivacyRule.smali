@@ -7,7 +7,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 6886
+    .line 6951
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -22,7 +22,7 @@
 
     goto :goto_34
 
-    .line 6898
+    .line 6963
     :sswitch_5
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_privacyValueAllowChatParticipants;
 
@@ -30,7 +30,7 @@
 
     goto :goto_34
 
-    .line 6904
+    .line 6969
     :sswitch_b
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_privacyValueAllowAll;
 
@@ -38,7 +38,7 @@
 
     goto :goto_34
 
-    .line 6901
+    .line 6966
     :sswitch_11
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_privacyValueDisallowChatParticipants;
 
@@ -46,7 +46,7 @@
 
     goto :goto_34
 
-    .line 6913
+    .line 6978
     :sswitch_17
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_privacyValueAllowContacts;
 
@@ -54,7 +54,7 @@
 
     goto :goto_34
 
-    .line 6892
+    .line 6957
     :sswitch_1d
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_privacyValueDisallowContacts;
 
@@ -62,7 +62,7 @@
 
     goto :goto_34
 
-    .line 6895
+    .line 6960
     :sswitch_23
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_privacyValueDisallowUsers;
 
@@ -70,7 +70,7 @@
 
     goto :goto_34
 
-    .line 6910
+    .line 6975
     :sswitch_29
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_privacyValueAllowUsers;
 
@@ -78,7 +78,7 @@
 
     goto :goto_34
 
-    .line 6907
+    .line 6972
     :sswitch_2f
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_privacyValueDisallowAll;
 
@@ -91,7 +91,7 @@
 
     goto :goto_4f
 
-    .line 6917
+    .line 6982
     :cond_39
     new-instance p0, Ljava/lang/RuntimeException;
 
@@ -121,7 +121,7 @@
     :goto_4f
     if-eqz v0, :cond_54
 
-    .line 6920
+    .line 6985
     invoke-virtual {v0, p0, p2}, Lorg/telegram/tgnet/TLObject;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
     :cond_54

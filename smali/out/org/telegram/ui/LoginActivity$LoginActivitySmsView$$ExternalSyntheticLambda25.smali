@@ -8,18 +8,18 @@
 # instance fields
 .field public final synthetic f$0:Lorg/telegram/ui/LoginActivity$LoginActivitySmsView;
 
-.field public final synthetic f$1:Lorg/telegram/tgnet/TLRPC$TL_error;
+.field public final synthetic f$1:Lorg/telegram/tgnet/TLObject;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lorg/telegram/ui/LoginActivity$LoginActivitySmsView;Lorg/telegram/tgnet/TLRPC$TL_error;)V
+.method public synthetic constructor <init>(Lorg/telegram/ui/LoginActivity$LoginActivitySmsView;Lorg/telegram/tgnet/TLObject;)V
     .registers 3
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$$ExternalSyntheticLambda25;->f$0:Lorg/telegram/ui/LoginActivity$LoginActivitySmsView;
 
-    iput-object p2, p0, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$$ExternalSyntheticLambda25;->f$1:Lorg/telegram/tgnet/TLRPC$TL_error;
+    iput-object p2, p0, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$$ExternalSyntheticLambda25;->f$1:Lorg/telegram/tgnet/TLObject;
 
     return-void
 .end method
@@ -31,9 +31,9 @@
 
     iget-object v0, p0, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$$ExternalSyntheticLambda25;->f$0:Lorg/telegram/ui/LoginActivity$LoginActivitySmsView;
 
-    iget-object v1, p0, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$$ExternalSyntheticLambda25;->f$1:Lorg/telegram/tgnet/TLRPC$TL_error;
+    iget-object v1, p0, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$$ExternalSyntheticLambda25;->f$1:Lorg/telegram/tgnet/TLObject;
 
-    invoke-static {v0, v1}, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView;->$r8$lambda$6YRC3bz45CArTL1FLhnlu98lr_A(Lorg/telegram/ui/LoginActivity$LoginActivitySmsView;Lorg/telegram/tgnet/TLRPC$TL_error;)V
+    invoke-static {v0, v1}, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView;->$r8$lambda$MVDK4waxiIRnL8krH63fORWpSpc(Lorg/telegram/ui/LoginActivity$LoginActivitySmsView;Lorg/telegram/tgnet/TLObject;)V
 
     return-void
 .end method

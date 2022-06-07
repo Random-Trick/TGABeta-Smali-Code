@@ -33,7 +33,7 @@
 
     const-string v6, "SponsoredMessageInfo"
 
-    const v7, 0x7f0e10ad
+    const v7, 0x7f0e116c
 
     .line 34
     invoke-static {v6, v7}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -72,7 +72,7 @@
 
     const-string v8, "SponsoredMessageInfoDescription1"
 
-    const v9, 0x7f0e10ae
+    const v9, 0x7f0e116d
 
     .line 40
     invoke-static {v8, v9}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -113,7 +113,7 @@
 
     const-string v12, "SponsoredMessageInfoDescription2"
 
-    const v13, 0x7f0e10af
+    const v13, 0x7f0e116e
 
     .line 46
     invoke-static {v12, v13}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -148,7 +148,7 @@
 
     const-string v13, "SponsoredMessageInfoDescription3"
 
-    const v14, 0x7f0e10b0
+    const v14, 0x7f0e116f
 
     .line 52
     invoke-static {v13, v14}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -233,7 +233,7 @@
 
     const-string v11, "SponsoredMessageAlertLearnMoreUrl"
 
-    const v13, 0x7f0e10aa
+    const v13, 0x7f0e1169
 
     .line 78
     invoke-static {v11, v13}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -283,7 +283,7 @@
 
     const-string v1, "SponsoredMessageInfoDescription4"
 
-    const v11, 0x7f0e10b1
+    const v11, 0x7f0e1170
 
     .line 86
     invoke-static {v1, v11}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;

@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lj$/util/function/A;
+.implements Lj$/util/function/BiConsumer;
 
 
 # static fields
@@ -32,15 +32,46 @@
 
 
 # virtual methods
-.method public final applyAsLong(Ljava/lang/Object;)J
-    .registers 4
+.method public final accept(Ljava/lang/Object;Ljava/lang/Object;)V
+    .registers 8
 
-    check-cast p1, Ljava/lang/Long;
+    check-cast p1, [J
+
+    check-cast p2, [J
+
+    const/4 v0, 0x0
 
     .line 1
-    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
+    aget-wide v1, p1, v0
 
-    move-result-wide v0
+    aget-wide v3, p2, v0
 
-    return-wide v0
+    add-long/2addr v1, v3
+
+    aput-wide v1, p1, v0
+
+    const/4 v0, 0x1
+
+    aget-wide v1, p1, v0
+
+    aget-wide v3, p2, v0
+
+    add-long/2addr v1, v3
+
+    aput-wide v1, p1, v0
+
+    return-void
+.end method
+
+.method public b(Lj$/util/function/BiConsumer;)Lj$/util/function/BiConsumer;
+    .registers 3
+
+    .line 1
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v0, Lj$/util/concurrent/a;
+
+    invoke-direct {v0, p0, p1}, Lj$/util/concurrent/a;-><init>(Lj$/util/function/BiConsumer;Lj$/util/function/BiConsumer;)V
+
+    return-object v0
 .end method

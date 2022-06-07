@@ -946,7 +946,7 @@
 
     if-eqz v0, :cond_2d
 
-    const v0, 0x7f0e0039
+    const v0, 0x7f0e0045
 
     const/4 v1, 0x2
 

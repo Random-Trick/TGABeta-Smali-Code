@@ -78,48 +78,48 @@
 .method public constructor <init>()V
     .registers 2
 
-    .line 2045
+    .line 2044
     invoke-direct {p0}, Lorg/telegram/ui/Cells/TextSelectionHelper;-><init>()V
 
     const/4 v0, -0x1
 
-    .line 2029
+    .line 2028
     iput v0, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->startViewPosition:I
 
-    .line 2030
+    .line 2029
     iput v0, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->startViewChildPosition:I
 
-    .line 2033
+    .line 2032
     iput v0, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->endViewPosition:I
 
-    .line 2034
+    .line 2033
     iput v0, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->endViewChildPosition:I
 
-    .line 2037
+    .line 2036
     iput v0, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->maybeTextIndex:I
 
-    .line 2039
+    .line 2038
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->textByPosition:Landroid/util/SparseArray;
 
-    .line 2040
+    .line 2039
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->prefixTextByPosition:Landroid/util/SparseArray;
 
-    .line 2041
+    .line 2040
     new-instance v0, Landroid/util/SparseIntArray;
 
     invoke-direct {v0}, Landroid/util/SparseIntArray;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->childCountByPosition:Landroid/util/SparseIntArray;
 
-    .line 2050
+    .line 2049
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -128,10 +128,10 @@
 
     const/4 v0, 0x1
 
-    .line 2046
+    .line 2045
     iput-boolean v0, p0, Lorg/telegram/ui/Cells/TextSelectionHelper;->multiselect:Z
 
-    .line 2047
+    .line 2046
     iput-boolean v0, p0, Lorg/telegram/ui/Cells/TextSelectionHelper;->showActionsAsPopupAlways:Z
 
     return-void
@@ -140,21 +140,21 @@
 .method private findClosestLayoutIndex(IILorg/telegram/ui/Cells/TextSelectionHelper$ArticleSelectableView;)I
     .registers 11
 
-    .line 2180
+    .line 2179
     instance-of v0, p3, Landroid/view/ViewGroup;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_45
 
-    .line 2181
+    .line 2180
     move-object v0, p3
 
     check-cast v0, Landroid/view/ViewGroup;
 
     const/4 v2, 0x0
 
-    .line 2182
+    .line 2181
     :goto_9
     invoke-virtual {v0}, Landroid/view/ViewGroup;->getChildCount()I
 
@@ -162,12 +162,12 @@
 
     if-ge v2, v3, :cond_45
 
-    .line 2183
+    .line 2182
     invoke-virtual {v0, v2}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v3
 
-    .line 2184
+    .line 2183
     instance-of v4, v3, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleSelectableView;
 
     if-eqz v4, :cond_42
@@ -200,7 +200,7 @@
 
     int-to-float p1, p1
 
-    .line 2185
+    .line 2184
     invoke-virtual {v3}, Landroid/view/View;->getX()F
 
     move-result p2
@@ -230,18 +230,18 @@
 
     goto :goto_9
 
-    .line 2189
+    .line 2188
     :cond_45
     iget-object v0, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->arrayList:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 2190
+    .line 2189
     iget-object v0, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->arrayList:Ljava/util/ArrayList;
 
     invoke-interface {p3, v0}, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleSelectableView;->fillTextLayoutBlocks(Ljava/util/ArrayList;)V
 
-    .line 2191
+    .line 2190
     iget-object p3, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->arrayList:Ljava/util/ArrayList;
 
     invoke-virtual {p3}, Ljava/util/ArrayList;->isEmpty()Z
@@ -254,7 +254,7 @@
 
     return v0
 
-    .line 2197
+    .line 2196
     :cond_59
     iget-object p3, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->arrayList:Ljava/util/ArrayList;
 
@@ -273,7 +273,7 @@
     :goto_68
     if-ltz p3, :cond_9b
 
-    .line 2198
+    .line 2197
     iget-object v5, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->arrayList:Ljava/util/ArrayList;
 
     invoke-virtual {v5, p3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -282,12 +282,12 @@
 
     check-cast v5, Lorg/telegram/ui/Cells/TextSelectionHelper$TextLayoutBlock;
 
-    .line 2199
+    .line 2198
     invoke-interface {v5}, Lorg/telegram/ui/Cells/TextSelectionHelper$TextLayoutBlock;->getY()I
 
     move-result v6
 
-    .line 2200
+    .line 2199
     invoke-interface {v5}, Lorg/telegram/ui/Cells/TextSelectionHelper$TextLayoutBlock;->getLayout()Landroid/text/StaticLayout;
 
     move-result-object v5
@@ -307,7 +307,7 @@
     :cond_84
     sub-int v6, p2, v6
 
-    .line 2206
+    .line 2205
     invoke-static {v6}, Ljava/lang/Math;->abs(I)I
 
     move-result v6
@@ -343,7 +343,7 @@
 
     return v0
 
-    .line 2216
+    .line 2215
     :cond_a0
     iget-object p2, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->arrayList:Ljava/util/ArrayList;
 
@@ -361,14 +361,14 @@
 
     const/high16 v0, 0x41c00000    # 24.0f
 
-    .line 2219
+    .line 2218
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v0
 
     if-ge v1, v0, :cond_fb
 
-    .line 2224
+    .line 2223
     iget-object v0, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->arrayList:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -380,7 +380,7 @@
     :goto_be
     if-ltz v0, :cond_fb
 
-    .line 2225
+    .line 2224
     iget-object v1, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->arrayList:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -389,19 +389,19 @@
 
     check-cast v1, Lorg/telegram/ui/Cells/TextSelectionHelper$TextLayoutBlock;
 
-    .line 2226
+    .line 2225
     invoke-interface {v1}, Lorg/telegram/ui/Cells/TextSelectionHelper$TextLayoutBlock;->getRow()I
 
     move-result v3
 
     if-ne v3, p2, :cond_f8
 
-    .line 2227
+    .line 2226
     invoke-interface {v1}, Lorg/telegram/ui/Cells/TextSelectionHelper$TextLayoutBlock;->getX()I
 
     move-result v3
 
-    .line 2228
+    .line 2227
     invoke-interface {v1}, Lorg/telegram/ui/Cells/TextSelectionHelper$TextLayoutBlock;->getX()I
 
     move-result v4
@@ -425,7 +425,7 @@
     :cond_e4
     sub-int v1, p1, v3
 
-    .line 2232
+    .line 2231
     invoke-static {v1}, Ljava/lang/Math;->abs(I)I
 
     move-result v1
@@ -458,15 +458,15 @@
 .method private getAdapterPosition(Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleSelectableView;)I
     .registers 5
 
-    .line 2290
+    .line 2289
     check-cast p1, Landroid/view/View;
 
-    .line 2291
+    .line 2290
     invoke-virtual {p1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     move-result-object v0
 
-    .line 2292
+    .line 2291
     :goto_6
     iget-object v1, p0, Lorg/telegram/ui/Cells/TextSelectionHelper;->parentView:Landroid/view/ViewGroup;
 
@@ -474,17 +474,17 @@
 
     if-eqz v0, :cond_19
 
-    .line 2293
+    .line 2292
     instance-of v2, v0, Landroid/view/View;
 
     if-eqz v2, :cond_18
 
-    .line 2294
+    .line 2293
     move-object p1, v0
 
     check-cast p1, Landroid/view/View;
 
-    .line 2295
+    .line 2294
     invoke-virtual {p1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     move-result-object v0
@@ -497,19 +497,19 @@
     :cond_19
     if-eqz v0, :cond_29
 
-    .line 2302
+    .line 2301
     iget-object v0, p0, Lorg/telegram/ui/Cells/TextSelectionHelper;->parentRecyclerView:Lorg/telegram/ui/Components/RecyclerListView;
 
     if-eqz v0, :cond_24
 
-    .line 2303
+    .line 2302
     invoke-virtual {v0, p1}, Landroidx/recyclerview/widget/RecyclerView;->getChildAdapterPosition(Landroid/view/View;)I
 
     move-result p1
 
     return p1
 
-    .line 2305
+    .line 2304
     :cond_24
     invoke-virtual {v1, p1}, Landroid/view/ViewGroup;->indexOfChild(Landroid/view/View;)I
 
@@ -528,7 +528,7 @@
 .method protected canSelect(I)Z
     .registers 4
 
-    .line 2709
+    .line 2708
     iget v0, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->startViewPosition:I
 
     iget v1, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->endViewPosition:I
@@ -541,7 +541,7 @@
 
     if-ne v0, v1, :cond_11
 
-    .line 2710
+    .line 2709
     invoke-super {p0, p1}, Lorg/telegram/ui/Cells/TextSelectionHelper;->canSelect(I)Z
 
     move-result p1
@@ -557,7 +557,7 @@
 .method protected canShowActions()Z
     .registers 6
 
-    .line 2730
+    .line 2729
     iget-object v0, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->layoutManager:Landroidx/recyclerview/widget/LinearLayoutManager;
 
     const/4 v1, 0x1
@@ -566,20 +566,20 @@
 
     return v1
 
-    .line 2733
+    .line 2732
     :cond_6
     invoke-virtual {v0}, Landroidx/recyclerview/widget/LinearLayoutManager;->findFirstVisibleItemPosition()I
 
     move-result v0
 
-    .line 2734
+    .line 2733
     iget-object v2, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->layoutManager:Landroidx/recyclerview/widget/LinearLayoutManager;
 
     invoke-virtual {v2}, Landroidx/recyclerview/widget/LinearLayoutManager;->findLastVisibleItemPosition()I
 
     move-result v2
 
-    .line 2735
+    .line 2734
     iget v3, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->startViewPosition:I
 
     if-lt v0, v3, :cond_18
@@ -601,7 +601,7 @@
     :cond_1f
     if-lt v3, v0, :cond_26
 
-    .line 2738
+    .line 2737
     iget v0, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->endViewPosition:I
 
     if-gt v0, v2, :cond_26
@@ -617,29 +617,29 @@
 .method public clear(Z)V
     .registers 2
 
-    .line 2556
+    .line 2555
     invoke-super {p0, p1}, Lorg/telegram/ui/Cells/TextSelectionHelper;->clear(Z)V
 
     const/4 p1, -0x1
 
-    .line 2557
+    .line 2556
     iput p1, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->startViewPosition:I
 
-    .line 2558
+    .line 2557
     iput p1, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->endViewPosition:I
 
-    .line 2559
+    .line 2558
     iput p1, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->startViewChildPosition:I
 
-    .line 2560
+    .line 2559
     iput p1, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->endViewChildPosition:I
 
-    .line 2561
+    .line 2560
     iget-object p1, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->textByPosition:Landroid/util/SparseArray;
 
     invoke-virtual {p1}, Landroid/util/SparseArray;->clear()V
 
-    .line 2562
+    .line 2561
     iget-object p1, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->childCountByPosition:Landroid/util/SparseIntArray;
 
     invoke-virtual {p1}, Landroid/util/SparseIntArray;->clear()V
@@ -650,7 +650,7 @@
 .method public draw(Landroid/graphics/Canvas;Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleSelectableView;I)V
     .registers 12
 
-    .line 2249
+    .line 2248
     iget-object v2, p0, Lorg/telegram/ui/Cells/TextSelectionHelper;->selectionPaint:Landroid/graphics/Paint;
 
     const-string v3, "chat_inTextSelectionHighlight"
@@ -661,7 +661,7 @@
 
     invoke-virtual {v2, v4}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 2250
+    .line 2249
     iget-object v2, p0, Lorg/telegram/ui/Cells/TextSelectionHelper;->selectionHandlePaint:Landroid/graphics/Paint;
 
     invoke-virtual {p0, v3}, Lorg/telegram/ui/Cells/TextSelectionHelper;->getThemedColor(Ljava/lang/String;)I
@@ -670,7 +670,7 @@
 
     invoke-virtual {v2, v3}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 2252
+    .line 2251
     invoke-direct {p0, p2}, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->getAdapterPosition(Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleSelectableView;)I
 
     move-result v2
@@ -679,18 +679,18 @@
 
     return-void
 
-    .line 2257
+    .line 2256
     :cond_1b
     iget-object v3, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->arrayList:Ljava/util/ArrayList;
 
     invoke-virtual {v3}, Ljava/util/ArrayList;->clear()V
 
-    .line 2258
+    .line 2257
     iget-object v3, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->arrayList:Ljava/util/ArrayList;
 
     invoke-interface {p2, v3}, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleSelectableView;->fillTextLayoutBlocks(Ljava/util/ArrayList;)V
 
-    .line 2260
+    .line 2259
     iget-object v0, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->arrayList:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
@@ -699,7 +699,7 @@
 
     if-nez v0, :cond_e7
 
-    .line 2261
+    .line 2260
     iget-object v0, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->arrayList:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -708,10 +708,10 @@
 
     check-cast v0, Lorg/telegram/ui/Cells/TextSelectionHelper$TextLayoutBlock;
 
-    .line 2263
+    .line 2262
     iget v3, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->endViewOffset:I
 
-    .line 2264
+    .line 2263
     invoke-interface {v0}, Lorg/telegram/ui/Cells/TextSelectionHelper$TextLayoutBlock;->getLayout()Landroid/text/StaticLayout;
 
     move-result-object v4
@@ -733,7 +733,7 @@
     :cond_47
     move v5, v3
 
-    .line 2269
+    .line 2268
     :goto_48
     iget v3, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->startViewPosition:I
 
@@ -743,7 +743,7 @@
 
     if-ne v2, v6, :cond_9f
 
-    .line 2270
+    .line 2269
     iget v2, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->startViewChildPosition:I
 
     iget v3, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->endViewChildPosition:I
@@ -752,7 +752,7 @@
 
     if-ne v2, p3, :cond_6a
 
-    .line 2271
+    .line 2270
     invoke-interface {v0}, Lorg/telegram/ui/Cells/TextSelectionHelper$TextLayoutBlock;->getLayout()Landroid/text/StaticLayout;
 
     move-result-object v2
@@ -780,7 +780,7 @@
     :cond_6a
     if-ne p3, v2, :cond_7b
 
-    .line 2273
+    .line 2272
     invoke-interface {v0}, Lorg/telegram/ui/Cells/TextSelectionHelper$TextLayoutBlock;->getLayout()Landroid/text/StaticLayout;
 
     move-result-object v2
@@ -802,7 +802,7 @@
     :cond_7b
     if-ne p3, v3, :cond_8e
 
-    .line 2275
+    .line 2274
     invoke-interface {v0}, Lorg/telegram/ui/Cells/TextSelectionHelper$TextLayoutBlock;->getLayout()Landroid/text/StaticLayout;
 
     move-result-object v2
@@ -832,7 +832,7 @@
 
     if-ge p3, v3, :cond_e7
 
-    .line 2277
+    .line 2276
     invoke-interface {v0}, Lorg/telegram/ui/Cells/TextSelectionHelper$TextLayoutBlock;->getLayout()Landroid/text/StaticLayout;
 
     move-result-object v2
@@ -854,12 +854,12 @@
     :cond_9f
     if-ne v2, v3, :cond_b3
 
-    .line 2279
+    .line 2278
     iget v6, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->startViewChildPosition:I
 
     if-ne v6, p3, :cond_b3
 
-    .line 2280
+    .line 2279
     invoke-interface {v0}, Lorg/telegram/ui/Cells/TextSelectionHelper$TextLayoutBlock;->getLayout()Landroid/text/StaticLayout;
 
     move-result-object v2
@@ -878,7 +878,7 @@
 
     goto :goto_e7
 
-    .line 2281
+    .line 2280
     :cond_b3
     iget v6, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->endViewPosition:I
 
@@ -888,7 +888,7 @@
 
     if-ne v7, p3, :cond_cb
 
-    .line 2282
+    .line 2281
     invoke-interface {v0}, Lorg/telegram/ui/Cells/TextSelectionHelper$TextLayoutBlock;->getLayout()Landroid/text/StaticLayout;
 
     move-result-object v2
@@ -921,7 +921,7 @@
     :cond_cf
     if-ne v2, v3, :cond_d5
 
-    .line 2283
+    .line 2282
     iget v3, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->startViewChildPosition:I
 
     if-gt p3, v3, :cond_db
@@ -933,7 +933,7 @@
 
     if-ge p3, v2, :cond_e7
 
-    .line 2284
+    .line 2283
     :cond_db
     invoke-interface {v0}, Lorg/telegram/ui/Cells/TextSelectionHelper$TextLayoutBlock;->getLayout()Landroid/text/StaticLayout;
 
@@ -959,14 +959,14 @@
 .method protected fillLayoutForOffset(ILorg/telegram/ui/Cells/TextSelectionHelper$LayoutBlock;Z)V
     .registers 6
 
-    .line 2117
+    .line 2116
     iget-object p1, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->arrayList:Ljava/util/ArrayList;
 
     invoke-virtual {p1}, Ljava/util/ArrayList;->clear()V
 
     if-eqz p3, :cond_a
 
-    .line 2118
+    .line 2117
     iget-object p1, p0, Lorg/telegram/ui/Cells/TextSelectionHelper;->maybeSelectedView:Lorg/telegram/ui/Cells/TextSelectionHelper$SelectableView;
 
     goto :goto_c
@@ -981,12 +981,12 @@
 
     if-nez p1, :cond_14
 
-    .line 2120
+    .line 2119
     iput-object v0, p2, Lorg/telegram/ui/Cells/TextSelectionHelper$LayoutBlock;->layout:Landroid/text/StaticLayout;
 
     return-void
 
-    .line 2123
+    .line 2122
     :cond_14
     iget-object v1, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->arrayList:Ljava/util/ArrayList;
 
@@ -994,7 +994,7 @@
 
     if-eqz p3, :cond_2c
 
-    .line 2125
+    .line 2124
     iget-object p1, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->arrayList:Ljava/util/ArrayList;
 
     iget p3, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->maybeTextIndex:I
@@ -1013,7 +1013,7 @@
 
     goto :goto_4e
 
-    .line 2127
+    .line 2126
     :cond_2c
     iget-boolean p1, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->startPeek:Z
 
@@ -1029,7 +1029,7 @@
     :goto_35
     if-ltz p1, :cond_54
 
-    .line 2128
+    .line 2127
     iget-object p3, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->arrayList:Ljava/util/ArrayList;
 
     invoke-virtual {p3}, Ljava/util/ArrayList;->size()I
@@ -1040,7 +1040,7 @@
 
     goto :goto_54
 
-    .line 2132
+    .line 2131
     :cond_40
     iget-object p3, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->arrayList:Ljava/util/ArrayList;
 
@@ -1059,14 +1059,14 @@
     :goto_4e
     const/4 p1, 0x0
 
-    .line 2134
+    .line 2133
     iput p1, p2, Lorg/telegram/ui/Cells/TextSelectionHelper$LayoutBlock;->yOffset:F
 
     iput p1, p2, Lorg/telegram/ui/Cells/TextSelectionHelper$LayoutBlock;->xOffset:F
 
     return-void
 
-    .line 2129
+    .line 2128
     :cond_54
     :goto_54
     iput-object v0, p2, Lorg/telegram/ui/Cells/TextSelectionHelper$LayoutBlock;->layout:Landroid/text/StaticLayout;
@@ -1088,24 +1088,24 @@
 
     sub-int/2addr p2, p4
 
-    .line 2079
+    .line 2078
     iget-object p3, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->arrayList:Ljava/util/ArrayList;
 
     invoke-virtual {p3}, Ljava/util/ArrayList;->clear()V
 
-    .line 2080
+    .line 2079
     iget-object p3, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->arrayList:Ljava/util/ArrayList;
 
     invoke-interface {p5, p3}, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleSelectableView;->fillTextLayoutBlocks(Ljava/util/ArrayList;)V
 
     if-eqz p6, :cond_15
 
-    .line 2084
+    .line 2083
     iget p3, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->maybeTextIndex:I
 
     goto :goto_1e
 
-    .line 2086
+    .line 2085
     :cond_15
     iget-boolean p3, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->startPeek:Z
 
@@ -1118,7 +1118,7 @@
     :cond_1c
     iget p3, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->endViewChildPosition:I
 
-    .line 2088
+    .line 2087
     :goto_1e
     iget-object p4, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->arrayList:Ljava/util/ArrayList;
 
@@ -1143,7 +1143,7 @@
 
     const/4 p2, 0x1
 
-    .line 2095
+    .line 2094
     :cond_31
     invoke-virtual {p3}, Landroid/text/StaticLayout;->getWidth()I
 
@@ -1151,12 +1151,12 @@
 
     if-le p1, p5, :cond_3b
 
-    .line 2096
+    .line 2095
     invoke-virtual {p3}, Landroid/text/StaticLayout;->getWidth()I
 
     move-result p1
 
-    .line 2098
+    .line 2097
     :cond_3b
     invoke-virtual {p3}, Landroid/text/StaticLayout;->getLineCount()I
 
@@ -1170,7 +1170,7 @@
 
     if-le p2, p5, :cond_50
 
-    .line 2099
+    .line 2098
     invoke-virtual {p3}, Landroid/text/StaticLayout;->getLineCount()I
 
     move-result p2
@@ -1186,7 +1186,7 @@
     :cond_50
     const/4 p4, 0x0
 
-    .line 2102
+    .line 2101
     :goto_51
     invoke-virtual {p3}, Landroid/text/StaticLayout;->getLineCount()I
 
@@ -1194,7 +1194,7 @@
 
     if-ge p4, p5, :cond_67
 
-    .line 2103
+    .line 2102
     invoke-virtual {p3, p4}, Landroid/text/StaticLayout;->getLineTop(I)I
 
     move-result p5
@@ -1222,7 +1222,7 @@
 
     int-to-float p1, p1
 
-    .line 2109
+    .line 2108
     invoke-virtual {p3, p4, p1}, Landroid/text/StaticLayout;->getOffsetForHorizontal(IF)I
 
     move-result p1
@@ -1236,7 +1236,7 @@
 .method protected bridge synthetic getCharOffsetFromCord(IIIILorg/telegram/ui/Cells/TextSelectionHelper$SelectableView;Z)I
     .registers 7
 
-    .line 2027
+    .line 2026
     check-cast p5, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleSelectableView;
 
     invoke-virtual/range {p0 .. p6}, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->getCharOffsetFromCord(IIIILorg/telegram/ui/Cells/TextSelectionHelper$ArticleSelectableView;Z)I
@@ -1249,7 +1249,7 @@
 .method protected getLineHeight()I
     .registers 6
 
-    .line 2139
+    .line 2138
     iget-object v0, p0, Lorg/telegram/ui/Cells/TextSelectionHelper;->selectedView:Lorg/telegram/ui/Cells/TextSelectionHelper$SelectableView;
 
     const/4 v1, 0x0
@@ -1258,13 +1258,13 @@
 
     return v1
 
-    .line 2142
+    .line 2141
     :cond_6
     iget-object v0, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->arrayList:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 2143
+    .line 2142
     iget-object v0, p0, Lorg/telegram/ui/Cells/TextSelectionHelper;->selectedView:Lorg/telegram/ui/Cells/TextSelectionHelper$SelectableView;
 
     check-cast v0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleSelectableView;
@@ -1273,7 +1273,7 @@
 
     invoke-interface {v0, v2}, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleSelectableView;->fillTextLayoutBlocks(Ljava/util/ArrayList;)V
 
-    .line 2144
+    .line 2143
     iget-boolean v0, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->startPeek:Z
 
     if-eqz v0, :cond_1b
@@ -1288,7 +1288,7 @@
     :goto_1d
     if-ltz v0, :cond_4d
 
-    .line 2145
+    .line 2144
     iget-object v2, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->arrayList:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
@@ -1299,7 +1299,7 @@
 
     goto :goto_4d
 
-    .line 2148
+    .line 2147
     :cond_28
     iget-object v2, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->arrayList:Ljava/util/ArrayList;
 
@@ -1315,7 +1315,7 @@
 
     const v2, 0x7fffffff
 
-    .line 2150
+    .line 2149
     :goto_37
     invoke-virtual {v0}, Landroid/text/StaticLayout;->getLineCount()I
 
@@ -1323,7 +1323,7 @@
 
     if-ge v1, v3, :cond_4c
 
-    .line 2151
+    .line 2150
     invoke-virtual {v0, v1}, Landroid/text/StaticLayout;->getLineBottom(I)I
 
     move-result v3
@@ -1354,12 +1354,12 @@
 .method protected getSelectedText()Ljava/lang/CharSequence;
     .registers 14
 
-    .line 2567
+    .line 2566
     new-instance v0, Landroid/text/SpannableStringBuilder;
 
     invoke-direct {v0}, Landroid/text/SpannableStringBuilder;-><init>()V
 
-    .line 2568
+    .line 2567
     iget v1, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->startViewPosition:I
 
     :goto_7
@@ -1369,7 +1369,7 @@
 
     if-gt v1, v2, :cond_188
 
-    .line 2569
+    .line 2568
     iget v4, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->startViewPosition:I
 
     const/16 v5, 0x20
@@ -1380,7 +1380,7 @@
 
     if-ne v4, v2, :cond_19
 
-    .line 2570
+    .line 2569
     iget v2, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->endViewChildPosition:I
 
     goto :goto_21
@@ -1394,14 +1394,14 @@
 
     add-int/lit8 v2, v2, -0x1
 
-    .line 2571
+    .line 2570
     :goto_21
     iget v4, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->startViewChildPosition:I
 
     :goto_23
     if-gt v4, v2, :cond_184
 
-    .line 2572
+    .line 2571
     iget-object v7, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->textByPosition:Landroid/util/SparseArray;
 
     shl-int/lit8 v8, v4, 0x10
@@ -1418,7 +1418,7 @@
 
     goto/16 :goto_c7
 
-    .line 2576
+    .line 2575
     :cond_34
     iget v9, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->startViewPosition:I
 
@@ -1434,10 +1434,10 @@
 
     if-ne v4, v11, :cond_67
 
-    .line 2577
+    .line 2576
     iget v8, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->endViewOffset:I
 
-    .line 2578
+    .line 2577
     iget v9, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->startViewOffset:I
 
     if-ge v8, v9, :cond_49
@@ -1451,7 +1451,7 @@
 
     move v8, v12
 
-    .line 2584
+    .line 2583
     :goto_4c
     invoke-interface {v7}, Ljava/lang/CharSequence;->length()I
 
@@ -1459,7 +1459,7 @@
 
     if-ge v8, v10, :cond_c7
 
-    .line 2585
+    .line 2584
     invoke-interface {v7}, Ljava/lang/CharSequence;->length()I
 
     move-result v10
@@ -1470,7 +1470,7 @@
 
     move-result v9
 
-    .line 2586
+    .line 2585
     :cond_5c
     invoke-interface {v7, v8, v9}, Ljava/lang/CharSequence;->subSequence(II)Ljava/lang/CharSequence;
 
@@ -1478,7 +1478,7 @@
 
     invoke-virtual {v0, v7}, Landroid/text/SpannableStringBuilder;->append(Ljava/lang/CharSequence;)Landroid/text/SpannableStringBuilder;
 
-    .line 2587
+    .line 2586
     invoke-virtual {v0, v6}, Landroid/text/SpannableStringBuilder;->append(C)Landroid/text/SpannableStringBuilder;
 
     goto :goto_c7
@@ -1486,12 +1486,12 @@
     :cond_67
     if-ne v9, v10, :cond_95
 
-    .line 2589
+    .line 2588
     iget v9, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->endViewChildPosition:I
 
     if-ne v4, v9, :cond_95
 
-    .line 2590
+    .line 2589
     iget-object v9, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->prefixTextByPosition:Landroid/util/SparseArray;
 
     invoke-virtual {v9, v8}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -1502,18 +1502,18 @@
 
     if-eqz v8, :cond_7e
 
-    .line 2592
+    .line 2591
     invoke-virtual {v0, v8}, Landroid/text/SpannableStringBuilder;->append(Ljava/lang/CharSequence;)Landroid/text/SpannableStringBuilder;
 
     move-result-object v8
 
     invoke-virtual {v8, v5}, Landroid/text/SpannableStringBuilder;->append(C)Landroid/text/SpannableStringBuilder;
 
-    .line 2594
+    .line 2593
     :cond_7e
     iget v8, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->endViewOffset:I
 
-    .line 2595
+    .line 2594
     invoke-interface {v7}, Ljava/lang/CharSequence;->length()I
 
     move-result v9
@@ -1524,7 +1524,7 @@
 
     move-result v8
 
-    .line 2596
+    .line 2595
     :cond_8a
     invoke-interface {v7, v3, v8}, Ljava/lang/CharSequence;->subSequence(II)Ljava/lang/CharSequence;
 
@@ -1532,28 +1532,28 @@
 
     invoke-virtual {v0, v7}, Landroid/text/SpannableStringBuilder;->append(Ljava/lang/CharSequence;)Landroid/text/SpannableStringBuilder;
 
-    .line 2597
+    .line 2596
     invoke-virtual {v0, v6}, Landroid/text/SpannableStringBuilder;->append(C)Landroid/text/SpannableStringBuilder;
 
     goto :goto_c7
 
-    .line 2598
+    .line 2597
     :cond_95
     iget v9, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->startViewChildPosition:I
 
     if-ne v4, v9, :cond_b0
 
-    .line 2599
+    .line 2598
     iget v8, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->startViewOffset:I
 
-    .line 2600
+    .line 2599
     invoke-interface {v7}, Ljava/lang/CharSequence;->length()I
 
     move-result v9
 
     if-ge v8, v9, :cond_c7
 
-    .line 2601
+    .line 2600
     invoke-interface {v7}, Ljava/lang/CharSequence;->length()I
 
     move-result v9
@@ -1564,12 +1564,12 @@
 
     invoke-virtual {v0, v7}, Landroid/text/SpannableStringBuilder;->append(Ljava/lang/CharSequence;)Landroid/text/SpannableStringBuilder;
 
-    .line 2602
+    .line 2601
     invoke-virtual {v0, v6}, Landroid/text/SpannableStringBuilder;->append(C)Landroid/text/SpannableStringBuilder;
 
     goto :goto_c7
 
-    .line 2605
+    .line 2604
     :cond_b0
     iget-object v9, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->prefixTextByPosition:Landroid/util/SparseArray;
 
@@ -1581,18 +1581,18 @@
 
     if-eqz v8, :cond_c1
 
-    .line 2607
+    .line 2606
     invoke-virtual {v0, v8}, Landroid/text/SpannableStringBuilder;->append(Ljava/lang/CharSequence;)Landroid/text/SpannableStringBuilder;
 
     move-result-object v8
 
     invoke-virtual {v8, v5}, Landroid/text/SpannableStringBuilder;->append(C)Landroid/text/SpannableStringBuilder;
 
-    .line 2609
+    .line 2608
     :cond_c1
     invoke-virtual {v0, v7}, Landroid/text/SpannableStringBuilder;->append(Ljava/lang/CharSequence;)Landroid/text/SpannableStringBuilder;
 
-    .line 2610
+    .line 2609
     invoke-virtual {v0, v6}, Landroid/text/SpannableStringBuilder;->append(C)Landroid/text/SpannableStringBuilder;
 
     :cond_c7
@@ -1606,13 +1606,13 @@
 
     const/4 v2, 0x0
 
-    .line 2614
+    .line 2613
     :goto_ce
     iget v4, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->endViewChildPosition:I
 
     if-gt v2, v4, :cond_184
 
-    .line 2615
+    .line 2614
     iget-object v4, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->textByPosition:Landroid/util/SparseArray;
 
     shl-int/lit8 v7, v2, 0x10
@@ -1629,7 +1629,7 @@
 
     goto/16 :goto_151
 
-    .line 2619
+    .line 2618
     :cond_e1
     iget v8, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->startViewPosition:I
 
@@ -1645,20 +1645,20 @@
 
     if-ne v2, v8, :cond_10e
 
-    .line 2620
+    .line 2619
     iget v7, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->endViewOffset:I
 
-    .line 2621
+    .line 2620
     iget v8, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->startViewOffset:I
 
-    .line 2622
+    .line 2621
     invoke-interface {v4}, Ljava/lang/CharSequence;->length()I
 
     move-result v9
 
     if-ge v8, v9, :cond_151
 
-    .line 2623
+    .line 2622
     invoke-interface {v4}, Ljava/lang/CharSequence;->length()I
 
     move-result v9
@@ -1669,7 +1669,7 @@
 
     move-result v7
 
-    .line 2624
+    .line 2623
     :cond_103
     invoke-interface {v4, v8, v7}, Ljava/lang/CharSequence;->subSequence(II)Ljava/lang/CharSequence;
 
@@ -1677,18 +1677,18 @@
 
     invoke-virtual {v0, v4}, Landroid/text/SpannableStringBuilder;->append(Ljava/lang/CharSequence;)Landroid/text/SpannableStringBuilder;
 
-    .line 2625
+    .line 2624
     invoke-virtual {v0, v6}, Landroid/text/SpannableStringBuilder;->append(C)Landroid/text/SpannableStringBuilder;
 
     goto :goto_151
 
-    .line 2627
+    .line 2626
     :cond_10e
     iget v8, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->endViewChildPosition:I
 
     if-ne v2, v8, :cond_13a
 
-    .line 2628
+    .line 2627
     iget-object v8, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->prefixTextByPosition:Landroid/util/SparseArray;
 
     invoke-virtual {v8, v7}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -1699,18 +1699,18 @@
 
     if-eqz v7, :cond_123
 
-    .line 2630
+    .line 2629
     invoke-virtual {v0, v7}, Landroid/text/SpannableStringBuilder;->append(Ljava/lang/CharSequence;)Landroid/text/SpannableStringBuilder;
 
     move-result-object v7
 
     invoke-virtual {v7, v5}, Landroid/text/SpannableStringBuilder;->append(C)Landroid/text/SpannableStringBuilder;
 
-    .line 2632
+    .line 2631
     :cond_123
     iget v7, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->endViewOffset:I
 
-    .line 2633
+    .line 2632
     invoke-interface {v4}, Ljava/lang/CharSequence;->length()I
 
     move-result v8
@@ -1721,7 +1721,7 @@
 
     move-result v7
 
-    .line 2634
+    .line 2633
     :cond_12f
     invoke-interface {v4, v3, v7}, Ljava/lang/CharSequence;->subSequence(II)Ljava/lang/CharSequence;
 
@@ -1729,12 +1729,12 @@
 
     invoke-virtual {v0, v4}, Landroid/text/SpannableStringBuilder;->append(Ljava/lang/CharSequence;)Landroid/text/SpannableStringBuilder;
 
-    .line 2635
+    .line 2634
     invoke-virtual {v0, v6}, Landroid/text/SpannableStringBuilder;->append(C)Landroid/text/SpannableStringBuilder;
 
     goto :goto_151
 
-    .line 2637
+    .line 2636
     :cond_13a
     iget-object v8, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->prefixTextByPosition:Landroid/util/SparseArray;
 
@@ -1746,18 +1746,18 @@
 
     if-eqz v7, :cond_14b
 
-    .line 2639
+    .line 2638
     invoke-virtual {v0, v7}, Landroid/text/SpannableStringBuilder;->append(Ljava/lang/CharSequence;)Landroid/text/SpannableStringBuilder;
 
     move-result-object v7
 
     invoke-virtual {v7, v5}, Landroid/text/SpannableStringBuilder;->append(C)Landroid/text/SpannableStringBuilder;
 
-    .line 2641
+    .line 2640
     :cond_14b
     invoke-virtual {v0, v4}, Landroid/text/SpannableStringBuilder;->append(Ljava/lang/CharSequence;)Landroid/text/SpannableStringBuilder;
 
-    .line 2642
+    .line 2641
     invoke-virtual {v0, v6}, Landroid/text/SpannableStringBuilder;->append(C)Landroid/text/SpannableStringBuilder;
 
     :cond_151
@@ -1766,7 +1766,7 @@
 
     goto/16 :goto_ce
 
-    .line 2646
+    .line 2645
     :cond_155
     iget-object v2, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->childCountByPosition:Landroid/util/SparseIntArray;
 
@@ -1774,13 +1774,13 @@
 
     move-result v2
 
-    .line 2647
+    .line 2646
     iget v3, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->startViewChildPosition:I
 
     :goto_15d
     if-ge v3, v2, :cond_184
 
-    .line 2648
+    .line 2647
     iget-object v4, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->prefixTextByPosition:Landroid/util/SparseArray;
 
     shl-int/lit8 v7, v3, 0x10
@@ -1795,14 +1795,14 @@
 
     if-eqz v4, :cond_173
 
-    .line 2650
+    .line 2649
     invoke-virtual {v0, v4}, Landroid/text/SpannableStringBuilder;->append(Ljava/lang/CharSequence;)Landroid/text/SpannableStringBuilder;
 
     move-result-object v4
 
     invoke-virtual {v4, v5}, Landroid/text/SpannableStringBuilder;->append(C)Landroid/text/SpannableStringBuilder;
 
-    .line 2652
+    .line 2651
     :cond_173
     iget-object v4, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->textByPosition:Landroid/util/SparseArray;
 
@@ -1814,7 +1814,7 @@
 
     invoke-virtual {v0, v4}, Landroid/text/SpannableStringBuilder;->append(Ljava/lang/CharSequence;)Landroid/text/SpannableStringBuilder;
 
-    .line 2653
+    .line 2652
     invoke-virtual {v0, v6}, Landroid/text/SpannableStringBuilder;->append(C)Landroid/text/SpannableStringBuilder;
 
     add-int/lit8 v3, v3, 0x1
@@ -1826,7 +1826,7 @@
 
     goto/16 :goto_7
 
-    .line 2658
+    .line 2657
     :cond_188
     invoke-virtual {v0}, Landroid/text/SpannableStringBuilder;->length()I
 
@@ -1834,7 +1834,7 @@
 
     if-lez v1, :cond_1bb
 
-    .line 2659
+    .line 2658
     invoke-virtual {v0}, Landroid/text/SpannableStringBuilder;->length()I
 
     move-result v1
@@ -1849,7 +1849,7 @@
 
     check-cast v1, [Lorg/telegram/ui/Cells/TextSelectionHelper$IgnoreCopySpannable;
 
-    .line 2660
+    .line 2659
     array-length v2, v1
 
     const/4 v4, 0x0
@@ -1859,24 +1859,24 @@
 
     aget-object v5, v1, v4
 
-    .line 2661
+    .line 2660
     invoke-virtual {v0, v5}, Landroid/text/SpannableStringBuilder;->getSpanEnd(Ljava/lang/Object;)I
 
     move-result v6
 
-    .line 2662
+    .line 2661
     invoke-virtual {v0, v5}, Landroid/text/SpannableStringBuilder;->getSpanStart(Ljava/lang/Object;)I
 
     move-result v5
 
-    .line 2663
+    .line 2662
     invoke-virtual {v0, v5, v6}, Landroid/text/SpannableStringBuilder;->delete(II)Landroid/text/SpannableStringBuilder;
 
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_19e
 
-    .line 2666
+    .line 2665
     :cond_1b0
     invoke-virtual {v0}, Landroid/text/SpannableStringBuilder;->length()I
 
@@ -1899,24 +1899,24 @@
 .method protected getText(Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleSelectableView;Z)Ljava/lang/CharSequence;
     .registers 4
 
-    .line 2054
+    .line 2053
     iget-object v0, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->arrayList:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 2055
+    .line 2054
     iget-object v0, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->arrayList:Ljava/util/ArrayList;
 
     invoke-interface {p1, v0}, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleSelectableView;->fillTextLayoutBlocks(Ljava/util/ArrayList;)V
 
     if-eqz p2, :cond_f
 
-    .line 2058
+    .line 2057
     iget p1, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->maybeTextIndex:I
 
     goto :goto_18
 
-    .line 2060
+    .line 2059
     :cond_f
     iget-boolean p1, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->startPeek:Z
 
@@ -1929,7 +1929,7 @@
     :cond_16
     iget p1, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->endViewChildPosition:I
 
-    .line 2062
+    .line 2061
     :goto_18
     iget-object p2, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->arrayList:Ljava/util/ArrayList;
 
@@ -1943,7 +1943,7 @@
 
     goto :goto_34
 
-    .line 2065
+    .line 2064
     :cond_23
     iget-object p2, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->arrayList:Ljava/util/ArrayList;
 
@@ -1973,7 +1973,7 @@
 .method protected bridge synthetic getText(Lorg/telegram/ui/Cells/TextSelectionHelper$SelectableView;Z)Ljava/lang/CharSequence;
     .registers 3
 
-    .line 2027
+    .line 2026
     check-cast p1, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleSelectableView;
 
     invoke-virtual {p0, p1, p2}, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->getText(Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleSelectableView;Z)Ljava/lang/CharSequence;
@@ -1986,12 +1986,12 @@
 .method public invalidate()V
     .registers 3
 
-    .line 2548
+    .line 2547
     invoke-super {p0}, Lorg/telegram/ui/Cells/TextSelectionHelper;->invalidate()V
 
     const/4 v0, 0x0
 
-    .line 2549
+    .line 2548
     :goto_4
     iget-object v1, p0, Lorg/telegram/ui/Cells/TextSelectionHelper;->parentView:Landroid/view/ViewGroup;
 
@@ -2001,7 +2001,7 @@
 
     if-ge v0, v1, :cond_18
 
-    .line 2550
+    .line 2549
     iget-object v1, p0, Lorg/telegram/ui/Cells/TextSelectionHelper;->parentView:Landroid/view/ViewGroup;
 
     invoke-virtual {v1, v0}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
@@ -2021,17 +2021,17 @@
 .method public isSelectable(Landroid/view/View;)Z
     .registers 4
 
-    .line 2312
+    .line 2311
     instance-of v0, p1, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleSelectableView;
 
     if-eqz v0, :cond_1f
 
-    .line 2313
+    .line 2312
     iget-object v0, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->arrayList:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 2314
+    .line 2313
     move-object v0, p1
 
     check-cast v0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleSelectableView;
@@ -2040,7 +2040,7 @@
 
     invoke-interface {v0, v1}, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleSelectableView;->fillTextLayoutBlocks(Ljava/util/ArrayList;)V
 
-    .line 2315
+    .line 2314
     instance-of p1, p1, Lorg/telegram/ui/ArticleViewer$BlockTableCell;
 
     const/4 v0, 0x1
@@ -2049,7 +2049,7 @@
 
     return v0
 
-    .line 2318
+    .line 2317
     :cond_17
     iget-object p1, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->arrayList:Ljava/util/ArrayList;
 
@@ -2072,7 +2072,7 @@
 
     if-eqz p3, :cond_14
 
-    .line 2717
+    .line 2716
     iget-object v0, p0, Lorg/telegram/ui/Cells/TextSelectionHelper;->selectedView:Lorg/telegram/ui/Cells/TextSelectionHelper$SelectableView;
 
     if-ne p6, v0, :cond_14
@@ -2081,23 +2081,23 @@
 
     if-nez v0, :cond_14
 
-    .line 2718
+    .line 2717
     iget-boolean p2, p0, Lorg/telegram/ui/Cells/TextSelectionHelper;->movingHandleStart:Z
 
     if-eqz p2, :cond_11
 
-    .line 2719
+    .line 2718
     iput p1, p0, Lorg/telegram/ui/Cells/TextSelectionHelper;->selectionStart:I
 
     goto :goto_17
 
-    .line 2721
+    .line 2720
     :cond_11
     iput p1, p0, Lorg/telegram/ui/Cells/TextSelectionHelper;->selectionEnd:I
 
     goto :goto_17
 
-    .line 2724
+    .line 2723
     :cond_14
     invoke-super/range {p0 .. p6}, Lorg/telegram/ui/Cells/TextSelectionHelper;->jumpToLine(IIZFFLorg/telegram/ui/Cells/TextSelectionHelper$SelectableView;)V
 
@@ -2108,7 +2108,7 @@
 .method protected bridge synthetic jumpToLine(IIZFFLorg/telegram/ui/Cells/TextSelectionHelper$SelectableView;)V
     .registers 7
 
-    .line 2027
+    .line 2026
     check-cast p6, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleSelectableView;
 
     invoke-virtual/range {p0 .. p6}, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->jumpToLine(IIZFFLorg/telegram/ui/Cells/TextSelectionHelper$ArticleSelectableView;)V
@@ -2119,14 +2119,14 @@
 .method protected onNewViewSelected(Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleSelectableView;Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleSelectableView;I)V
     .registers 9
 
-    .line 2346
+    .line 2345
     invoke-direct {p0, p2}, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->getAdapterPosition(Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleSelectableView;)I
 
     move-result v0
 
     if-eqz p1, :cond_b
 
-    .line 2349
+    .line 2348
     invoke-direct {p0, p1}, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->getAdapterPosition(Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleSelectableView;)I
 
     move-result p1
@@ -2136,11 +2136,11 @@
     :cond_b
     const/4 p1, -0x1
 
-    .line 2351
+    .line 2350
     :goto_c
     invoke-virtual {p0}, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->invalidate()V
 
-    .line 2353
+    .line 2352
     iget-boolean v1, p0, Lorg/telegram/ui/Cells/TextSelectionHelper;->movingDirectionSettling:Z
 
     const/4 v2, 0x1
@@ -2157,43 +2157,43 @@
 
     if-ne v0, v1, :cond_3c
 
-    .line 2355
+    .line 2354
     iget p1, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->startViewChildPosition:I
 
     if-ge p3, p1, :cond_31
 
-    .line 2356
+    .line 2355
     iput p3, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->startViewChildPosition:I
 
-    .line 2357
+    .line 2356
     invoke-virtual {p0}, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->pickStartView()V
 
-    .line 2358
+    .line 2357
     iput-boolean v2, p0, Lorg/telegram/ui/Cells/TextSelectionHelper;->movingHandleStart:Z
 
-    .line 2359
+    .line 2358
     iget p1, p0, Lorg/telegram/ui/Cells/TextSelectionHelper;->selectionEnd:I
 
     iput p1, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->startViewOffset:I
 
     sub-int/2addr p1, v2
 
-    .line 2360
+    .line 2359
     iput p1, p0, Lorg/telegram/ui/Cells/TextSelectionHelper;->selectionStart:I
 
     goto/16 :goto_fc
 
-    .line 2362
+    .line 2361
     :cond_31
     iput p3, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->endViewChildPosition:I
 
-    .line 2363
+    .line 2362
     invoke-virtual {p0}, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->pickEndView()V
 
-    .line 2364
+    .line 2363
     iput-boolean v3, p0, Lorg/telegram/ui/Cells/TextSelectionHelper;->movingHandleStart:Z
 
-    .line 2365
+    .line 2364
     iput v3, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->endViewOffset:I
 
     goto/16 :goto_fc
@@ -2201,49 +2201,49 @@
     :cond_3c
     if-ge v0, v1, :cond_50
 
-    .line 2368
+    .line 2367
     iput v0, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->startViewPosition:I
 
-    .line 2369
+    .line 2368
     iput p3, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->startViewChildPosition:I
 
-    .line 2370
+    .line 2369
     invoke-virtual {p0}, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->pickStartView()V
 
-    .line 2371
+    .line 2370
     iput-boolean v2, p0, Lorg/telegram/ui/Cells/TextSelectionHelper;->movingHandleStart:Z
 
-    .line 2372
+    .line 2371
     iget p1, p0, Lorg/telegram/ui/Cells/TextSelectionHelper;->selectionEnd:I
 
     iput p1, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->startViewOffset:I
 
     sub-int/2addr p1, v2
 
-    .line 2373
+    .line 2372
     iput p1, p0, Lorg/telegram/ui/Cells/TextSelectionHelper;->selectionStart:I
 
     goto/16 :goto_fc
 
-    .line 2375
+    .line 2374
     :cond_50
     iput v0, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->endViewPosition:I
 
-    .line 2376
+    .line 2375
     iput p3, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->endViewChildPosition:I
 
-    .line 2377
+    .line 2376
     invoke-virtual {p0}, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->pickEndView()V
 
-    .line 2378
+    .line 2377
     iput-boolean v3, p0, Lorg/telegram/ui/Cells/TextSelectionHelper;->movingHandleStart:Z
 
-    .line 2379
+    .line 2378
     iput v3, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->endViewOffset:I
 
     goto/16 :goto_fc
 
-    .line 2381
+    .line 2380
     :cond_5d
     iget-boolean v1, p0, Lorg/telegram/ui/Cells/TextSelectionHelper;->movingHandleStart:Z
 
@@ -2251,7 +2251,7 @@
 
     if-ne v0, p1, :cond_8c
 
-    .line 2383
+    .line 2382
     iget p1, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->endViewChildPosition:I
 
     if-le p3, p1, :cond_7f
@@ -2262,96 +2262,96 @@
 
     goto :goto_7f
 
-    .line 2389
+    .line 2388
     :cond_6c
     iput v0, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->endViewPosition:I
 
-    .line 2390
+    .line 2389
     iput p1, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->startViewChildPosition:I
 
-    .line 2391
+    .line 2390
     iput p3, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->endViewChildPosition:I
 
-    .line 2392
+    .line 2391
     iget p1, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->endViewOffset:I
 
     iput p1, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->startViewOffset:I
 
-    .line 2393
+    .line 2392
     invoke-virtual {p0}, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->pickEndView()V
 
-    .line 2394
+    .line 2393
     iput v3, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->endViewOffset:I
 
-    .line 2395
+    .line 2394
     iput-boolean v3, p0, Lorg/telegram/ui/Cells/TextSelectionHelper;->movingHandleStart:Z
 
     goto/16 :goto_fc
 
-    .line 2384
+    .line 2383
     :cond_7f
     :goto_7f
     iput v0, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->startViewPosition:I
 
-    .line 2385
+    .line 2384
     iput p3, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->startViewChildPosition:I
 
-    .line 2386
+    .line 2385
     invoke-virtual {p0}, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->pickStartView()V
 
-    .line 2387
+    .line 2386
     iget p1, p0, Lorg/telegram/ui/Cells/TextSelectionHelper;->selectionEnd:I
 
     iput p1, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->startViewOffset:I
 
     goto/16 :goto_fc
 
-    .line 2397
+    .line 2396
     :cond_8c
     iget p1, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->endViewPosition:I
 
     if-gt v0, p1, :cond_9c
 
-    .line 2398
+    .line 2397
     iput v0, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->startViewPosition:I
 
-    .line 2399
+    .line 2398
     iput p3, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->startViewChildPosition:I
 
-    .line 2400
+    .line 2399
     invoke-virtual {p0}, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->pickStartView()V
 
-    .line 2401
+    .line 2400
     iget p1, p0, Lorg/telegram/ui/Cells/TextSelectionHelper;->selectionEnd:I
 
     iput p1, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->startViewOffset:I
 
     goto :goto_fc
 
-    .line 2403
+    .line 2402
     :cond_9c
     iput v0, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->endViewPosition:I
 
-    .line 2404
+    .line 2403
     iget p1, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->endViewChildPosition:I
 
     iput p1, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->startViewChildPosition:I
 
-    .line 2405
+    .line 2404
     iput p3, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->endViewChildPosition:I
 
-    .line 2406
+    .line 2405
     iget p1, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->endViewOffset:I
 
     iput p1, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->startViewOffset:I
 
-    .line 2407
+    .line 2406
     invoke-virtual {p0}, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->pickEndView()V
 
-    .line 2408
+    .line 2407
     iput v3, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->endViewOffset:I
 
-    .line 2409
+    .line 2408
     iput-boolean v3, p0, Lorg/telegram/ui/Cells/TextSelectionHelper;->movingHandleStart:Z
 
     goto :goto_fc
@@ -2359,7 +2359,7 @@
     :cond_b0
     if-ne v0, p1, :cond_d9
 
-    .line 2413
+    .line 2412
     iget p1, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->startViewChildPosition:I
 
     if-ge p3, p1, :cond_cf
@@ -2370,117 +2370,117 @@
 
     goto :goto_cf
 
-    .line 2419
+    .line 2418
     :cond_bb
     iput v0, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->startViewPosition:I
 
-    .line 2420
+    .line 2419
     iput p1, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->endViewChildPosition:I
 
-    .line 2421
+    .line 2420
     iput p3, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->startViewChildPosition:I
 
-    .line 2422
+    .line 2421
     iget p1, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->startViewOffset:I
 
     iput p1, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->endViewOffset:I
 
-    .line 2423
+    .line 2422
     invoke-virtual {p0}, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->pickStartView()V
 
-    .line 2424
+    .line 2423
     iput-boolean v2, p0, Lorg/telegram/ui/Cells/TextSelectionHelper;->movingHandleStart:Z
 
-    .line 2425
+    .line 2424
     iget p1, p0, Lorg/telegram/ui/Cells/TextSelectionHelper;->selectionEnd:I
 
     iput p1, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->startViewOffset:I
 
     goto :goto_fc
 
-    .line 2414
+    .line 2413
     :cond_cf
     :goto_cf
     iput v0, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->endViewPosition:I
 
-    .line 2415
+    .line 2414
     iput p3, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->endViewChildPosition:I
 
-    .line 2416
+    .line 2415
     invoke-virtual {p0}, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->pickEndView()V
 
-    .line 2417
+    .line 2416
     iput v3, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->endViewOffset:I
 
     goto :goto_fc
 
-    .line 2427
+    .line 2426
     :cond_d9
     iget p1, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->startViewPosition:I
 
     if-lt v0, p1, :cond_e7
 
-    .line 2428
+    .line 2427
     iput v0, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->endViewPosition:I
 
-    .line 2429
+    .line 2428
     iput p3, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->endViewChildPosition:I
 
-    .line 2430
+    .line 2429
     invoke-virtual {p0}, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->pickEndView()V
 
-    .line 2431
+    .line 2430
     iput v3, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->endViewOffset:I
 
     goto :goto_fc
 
-    .line 2433
+    .line 2432
     :cond_e7
     iput v0, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->startViewPosition:I
 
-    .line 2434
+    .line 2433
     iget p1, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->startViewChildPosition:I
 
     iput p1, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->endViewChildPosition:I
 
-    .line 2435
+    .line 2434
     iput p3, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->startViewChildPosition:I
 
-    .line 2436
+    .line 2435
     iget p1, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->startViewOffset:I
 
     iput p1, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->endViewOffset:I
 
-    .line 2437
+    .line 2436
     invoke-virtual {p0}, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->pickStartView()V
 
-    .line 2438
+    .line 2437
     iput-boolean v2, p0, Lorg/telegram/ui/Cells/TextSelectionHelper;->movingHandleStart:Z
 
-    .line 2439
+    .line 2438
     iget p1, p0, Lorg/telegram/ui/Cells/TextSelectionHelper;->selectionEnd:I
 
     iput p1, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->startViewOffset:I
 
-    .line 2444
+    .line 2443
     :goto_fc
     iget-object p1, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->arrayList:Ljava/util/ArrayList;
 
     invoke-virtual {p1}, Ljava/util/ArrayList;->clear()V
 
-    .line 2445
+    .line 2444
     iget-object p1, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->arrayList:Ljava/util/ArrayList;
 
     invoke-interface {p2, p1}, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleSelectableView;->fillTextLayoutBlocks(Ljava/util/ArrayList;)V
 
-    .line 2446
+    .line 2445
     iget-object p1, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->arrayList:Ljava/util/ArrayList;
 
     invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
 
     move-result p1
 
-    .line 2447
+    .line 2446
     iget-object p2, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->childCountByPosition:Landroid/util/SparseIntArray;
 
     invoke-virtual {p2, v0, p1}, Landroid/util/SparseIntArray;->put(II)V
@@ -2488,7 +2488,7 @@
     :goto_111
     if-ge v3, p1, :cond_13f
 
-    .line 2449
+    .line 2448
     iget-object p2, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->textByPosition:Landroid/util/SparseArray;
 
     shl-int/lit8 p3, v3, 0x10
@@ -2513,7 +2513,7 @@
 
     invoke-virtual {p2, p3, v1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 2450
+    .line 2449
     iget-object p2, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->prefixTextByPosition:Landroid/util/SparseArray;
 
     iget-object v1, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->arrayList:Ljava/util/ArrayList;
@@ -2541,7 +2541,7 @@
 .method protected onOffsetChanged()V
     .registers 4
 
-    .line 2536
+    .line 2535
     iget-object v0, p0, Lorg/telegram/ui/Cells/TextSelectionHelper;->selectedView:Lorg/telegram/ui/Cells/TextSelectionHelper$SelectableView;
 
     check-cast v0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleSelectableView;
@@ -2550,7 +2550,7 @@
 
     move-result v0
 
-    .line 2537
+    .line 2536
     iget-boolean v1, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->startPeek:Z
 
     if-eqz v1, :cond_f
@@ -2562,7 +2562,7 @@
     :cond_f
     iget v1, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->endViewChildPosition:I
 
-    .line 2538
+    .line 2537
     :goto_11
     iget v2, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->startViewPosition:I
 
@@ -2572,12 +2572,12 @@
 
     if-ne v1, v2, :cond_1d
 
-    .line 2539
+    .line 2538
     iget v2, p0, Lorg/telegram/ui/Cells/TextSelectionHelper;->selectionStart:I
 
     iput v2, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->startViewOffset:I
 
-    .line 2542
+    .line 2541
     :cond_1d
     iget v2, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->endViewPosition:I
 
@@ -2587,7 +2587,7 @@
 
     if-ne v1, v0, :cond_29
 
-    .line 2543
+    .line 2542
     iget v0, p0, Lorg/telegram/ui/Cells/TextSelectionHelper;->selectionEnd:I
 
     iput v0, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->endViewOffset:I
@@ -2599,7 +2599,7 @@
 .method protected onTextSelected(Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleSelectableView;Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleSelectableView;)V
     .registers 7
 
-    .line 2326
+    .line 2325
     invoke-direct {p0, p1}, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->getAdapterPosition(Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleSelectableView;)I
 
     move-result p2
@@ -2608,37 +2608,37 @@
 
     return-void
 
-    .line 2331
+    .line 2330
     :cond_7
     iput p2, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->endViewPosition:I
 
     iput p2, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->startViewPosition:I
 
-    .line 2332
+    .line 2331
     iget v0, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->maybeTextIndex:I
 
     iput v0, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->endViewChildPosition:I
 
     iput v0, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->startViewChildPosition:I
 
-    .line 2335
+    .line 2334
     iget-object v0, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->arrayList:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 2336
+    .line 2335
     iget-object v0, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->arrayList:Ljava/util/ArrayList;
 
     invoke-interface {p1, v0}, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleSelectableView;->fillTextLayoutBlocks(Ljava/util/ArrayList;)V
 
-    .line 2337
+    .line 2336
     iget-object p1, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->arrayList:Ljava/util/ArrayList;
 
     invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
 
     move-result p1
 
-    .line 2338
+    .line 2337
     iget-object v0, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->childCountByPosition:Landroid/util/SparseIntArray;
 
     invoke-virtual {v0, p2, p1}, Landroid/util/SparseIntArray;->put(II)V
@@ -2648,7 +2648,7 @@
     :goto_27
     if-ge v0, p1, :cond_55
 
-    .line 2340
+    .line 2339
     iget-object v1, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->textByPosition:Landroid/util/SparseArray;
 
     shl-int/lit8 v2, v0, 0x10
@@ -2673,7 +2673,7 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 2341
+    .line 2340
     iget-object v1, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->prefixTextByPosition:Landroid/util/SparseArray;
 
     iget-object v3, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->arrayList:Ljava/util/ArrayList;
@@ -2701,7 +2701,7 @@
 .method protected bridge synthetic onTextSelected(Lorg/telegram/ui/Cells/TextSelectionHelper$SelectableView;Lorg/telegram/ui/Cells/TextSelectionHelper$SelectableView;)V
     .registers 3
 
-    .line 2027
+    .line 2026
     check-cast p1, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleSelectableView;
 
     check-cast p2, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleSelectableView;
@@ -2714,7 +2714,7 @@
 .method protected pickEndView()V
     .registers 5
 
-    .line 2457
+    .line 2456
     invoke-virtual {p0}, Lorg/telegram/ui/Cells/TextSelectionHelper;->isSelectionMode()Z
 
     move-result v0
@@ -2726,22 +2726,22 @@
     :cond_7
     const/4 v0, 0x0
 
-    .line 2460
+    .line 2459
     iput-boolean v0, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->startPeek:Z
 
-    .line 2461
+    .line 2460
     iget v1, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->endViewPosition:I
 
     if-ltz v1, :cond_99
 
-    .line 2463
+    .line 2462
     iget-object v2, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->layoutManager:Landroidx/recyclerview/widget/LinearLayoutManager;
 
     const/4 v3, 0x0
 
     if-eqz v2, :cond_1a
 
-    .line 2464
+    .line 2463
     invoke-virtual {v2, v1}, Landroidx/recyclerview/widget/LinearLayoutManager;->findViewByPosition(I)Landroid/view/View;
 
     move-result-object v1
@@ -2750,7 +2750,7 @@
 
     goto :goto_2e
 
-    .line 2465
+    .line 2464
     :cond_1a
     iget-object v2, p0, Lorg/telegram/ui/Cells/TextSelectionHelper;->parentView:Landroid/view/ViewGroup;
 
@@ -2760,7 +2760,7 @@
 
     if-ge v1, v2, :cond_2d
 
-    .line 2466
+    .line 2465
     iget-object v1, p0, Lorg/telegram/ui/Cells/TextSelectionHelper;->parentView:Landroid/view/ViewGroup;
 
     iget v2, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->endViewPosition:I
@@ -2779,28 +2779,28 @@
     :goto_2e
     if-nez v1, :cond_33
 
-    .line 2470
+    .line 2469
     iput-object v3, p0, Lorg/telegram/ui/Cells/TextSelectionHelper;->selectedView:Lorg/telegram/ui/Cells/TextSelectionHelper$SelectableView;
 
     return-void
 
-    .line 2473
+    .line 2472
     :cond_33
     iput-object v1, p0, Lorg/telegram/ui/Cells/TextSelectionHelper;->selectedView:Lorg/telegram/ui/Cells/TextSelectionHelper$SelectableView;
 
-    .line 2474
+    .line 2473
     iget v2, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->startViewPosition:I
 
     iget v3, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->endViewPosition:I
 
     if-eq v2, v3, :cond_3e
 
-    .line 2475
+    .line 2474
     iput v0, p0, Lorg/telegram/ui/Cells/TextSelectionHelper;->selectionStart:I
 
     goto :goto_4b
 
-    .line 2476
+    .line 2475
     :cond_3e
     iget v2, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->startViewChildPosition:I
 
@@ -2808,31 +2808,31 @@
 
     if-eq v2, v3, :cond_47
 
-    .line 2477
+    .line 2476
     iput v0, p0, Lorg/telegram/ui/Cells/TextSelectionHelper;->selectionStart:I
 
     goto :goto_4b
 
-    .line 2479
+    .line 2478
     :cond_47
     iget v2, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->startViewOffset:I
 
     iput v2, p0, Lorg/telegram/ui/Cells/TextSelectionHelper;->selectionStart:I
 
-    .line 2482
+    .line 2481
     :goto_4b
     iget v2, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->endViewOffset:I
 
     iput v2, p0, Lorg/telegram/ui/Cells/TextSelectionHelper;->selectionEnd:I
 
-    .line 2483
+    .line 2482
     check-cast v1, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleSelectableView;
 
     invoke-virtual {p0, v1, v0}, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->getText(Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleSelectableView;Z)Ljava/lang/CharSequence;
 
     move-result-object v0
 
-    .line 2484
+    .line 2483
     iget v1, p0, Lorg/telegram/ui/Cells/TextSelectionHelper;->selectionEnd:I
 
     invoke-interface {v0}, Ljava/lang/CharSequence;->length()I
@@ -2841,20 +2841,20 @@
 
     if-le v1, v2, :cond_63
 
-    .line 2485
+    .line 2484
     invoke-interface {v0}, Ljava/lang/CharSequence;->length()I
 
     move-result v0
 
     iput v0, p0, Lorg/telegram/ui/Cells/TextSelectionHelper;->selectionEnd:I
 
-    .line 2488
+    .line 2487
     :cond_63
     iget-object v0, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->arrayList:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 2489
+    .line 2488
     iget-object v0, p0, Lorg/telegram/ui/Cells/TextSelectionHelper;->selectedView:Lorg/telegram/ui/Cells/TextSelectionHelper$SelectableView;
 
     check-cast v0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleSelectableView;
@@ -2863,7 +2863,7 @@
 
     invoke-interface {v0, v1}, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleSelectableView;->fillTextLayoutBlocks(Ljava/util/ArrayList;)V
 
-    .line 2490
+    .line 2489
     iget-object v0, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->arrayList:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
@@ -2872,7 +2872,7 @@
 
     if-nez v0, :cond_99
 
-    .line 2491
+    .line 2490
     iget-object v0, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->arrayList:Ljava/util/ArrayList;
 
     iget v1, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->endViewChildPosition:I
@@ -2889,7 +2889,7 @@
 
     iput v0, p0, Lorg/telegram/ui/Cells/TextSelectionHelper;->textX:I
 
-    .line 2492
+    .line 2491
     iget-object v0, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->arrayList:Ljava/util/ArrayList;
 
     iget v1, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->endViewChildPosition:I
@@ -2913,7 +2913,7 @@
 .method protected pickStartView()V
     .registers 5
 
-    .line 2499
+    .line 2498
     invoke-virtual {p0}, Lorg/telegram/ui/Cells/TextSelectionHelper;->isSelectionMode()Z
 
     move-result v0
@@ -2925,22 +2925,22 @@
     :cond_7
     const/4 v0, 0x1
 
-    .line 2502
+    .line 2501
     iput-boolean v0, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->startPeek:Z
 
-    .line 2503
+    .line 2502
     iget v0, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->startViewPosition:I
 
     if-ltz v0, :cond_9c
 
-    .line 2505
+    .line 2504
     iget-object v1, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->layoutManager:Landroidx/recyclerview/widget/LinearLayoutManager;
 
     const/4 v2, 0x0
 
     if-eqz v1, :cond_1a
 
-    .line 2506
+    .line 2505
     invoke-virtual {v1, v0}, Landroidx/recyclerview/widget/LinearLayoutManager;->findViewByPosition(I)Landroid/view/View;
 
     move-result-object v0
@@ -2949,7 +2949,7 @@
 
     goto :goto_30
 
-    .line 2507
+    .line 2506
     :cond_1a
     iget v0, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->endViewPosition:I
 
@@ -2961,7 +2961,7 @@
 
     if-ge v0, v1, :cond_2f
 
-    .line 2508
+    .line 2507
     iget-object v0, p0, Lorg/telegram/ui/Cells/TextSelectionHelper;->parentView:Landroid/view/ViewGroup;
 
     iget v1, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->startViewPosition:I
@@ -2980,16 +2980,16 @@
     :goto_30
     if-nez v0, :cond_35
 
-    .line 2511
+    .line 2510
     iput-object v2, p0, Lorg/telegram/ui/Cells/TextSelectionHelper;->selectedView:Lorg/telegram/ui/Cells/TextSelectionHelper$SelectableView;
 
     return-void
 
-    .line 2514
+    .line 2513
     :cond_35
     iput-object v0, p0, Lorg/telegram/ui/Cells/TextSelectionHelper;->selectedView:Lorg/telegram/ui/Cells/TextSelectionHelper$SelectableView;
 
-    .line 2515
+    .line 2514
     iget v1, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->startViewPosition:I
 
     iget v2, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->endViewPosition:I
@@ -2998,7 +2998,7 @@
 
     if-eq v1, v2, :cond_4b
 
-    .line 2516
+    .line 2515
     check-cast v0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleSelectableView;
 
     invoke-virtual {p0, v0, v3}, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->getText(Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleSelectableView;Z)Ljava/lang/CharSequence;
@@ -3013,7 +3013,7 @@
 
     goto :goto_62
 
-    .line 2517
+    .line 2516
     :cond_4b
     iget v1, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->startViewChildPosition:I
 
@@ -3021,7 +3021,7 @@
 
     if-eq v1, v2, :cond_5e
 
-    .line 2518
+    .line 2517
     check-cast v0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleSelectableView;
 
     invoke-virtual {p0, v0, v3}, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->getText(Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleSelectableView;Z)Ljava/lang/CharSequence;
@@ -3036,24 +3036,24 @@
 
     goto :goto_62
 
-    .line 2520
+    .line 2519
     :cond_5e
     iget v0, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->endViewOffset:I
 
     iput v0, p0, Lorg/telegram/ui/Cells/TextSelectionHelper;->selectionEnd:I
 
-    .line 2523
+    .line 2522
     :goto_62
     iget v0, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->startViewOffset:I
 
     iput v0, p0, Lorg/telegram/ui/Cells/TextSelectionHelper;->selectionStart:I
 
-    .line 2526
+    .line 2525
     iget-object v0, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->arrayList:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 2527
+    .line 2526
     iget-object v0, p0, Lorg/telegram/ui/Cells/TextSelectionHelper;->selectedView:Lorg/telegram/ui/Cells/TextSelectionHelper$SelectableView;
 
     check-cast v0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleSelectableView;
@@ -3062,7 +3062,7 @@
 
     invoke-interface {v0, v1}, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleSelectableView;->fillTextLayoutBlocks(Ljava/util/ArrayList;)V
 
-    .line 2528
+    .line 2527
     iget-object v0, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->arrayList:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
@@ -3071,7 +3071,7 @@
 
     if-nez v0, :cond_9c
 
-    .line 2529
+    .line 2528
     iget-object v0, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->arrayList:Ljava/util/ArrayList;
 
     iget v1, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->startViewChildPosition:I
@@ -3088,7 +3088,7 @@
 
     iput v0, p0, Lorg/telegram/ui/Cells/TextSelectionHelper;->textX:I
 
-    .line 2530
+    .line 2529
     iget-object v0, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->arrayList:Ljava/util/ArrayList;
 
     iget v1, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->startViewChildPosition:I
@@ -3112,7 +3112,7 @@
 .method protected selectLayout(II)Z
     .registers 9
 
-    .line 2675
+    .line 2674
     iget-boolean v0, p0, Lorg/telegram/ui/Cells/TextSelectionHelper;->multiselect:Z
 
     const/4 v1, 0x0
@@ -3121,7 +3121,7 @@
 
     return v1
 
-    .line 2678
+    .line 2677
     :cond_6
     iget-object v0, p0, Lorg/telegram/ui/Cells/TextSelectionHelper;->selectedView:Lorg/telegram/ui/Cells/TextSelectionHelper$SelectableView;
 
@@ -3147,7 +3147,7 @@
 
     goto :goto_53
 
-    .line 2697
+    .line 2696
     :cond_1c
     iget-boolean v0, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->startPeek:Z
 
@@ -3163,7 +3163,7 @@
     :goto_25
     int-to-float p1, p1
 
-    .line 2698
+    .line 2697
     iget-object v3, p0, Lorg/telegram/ui/Cells/TextSelectionHelper;->selectedView:Lorg/telegram/ui/Cells/TextSelectionHelper$SelectableView;
 
     check-cast v3, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleSelectableView;
@@ -3202,7 +3202,7 @@
 
     if-ltz p1, :cond_52
 
-    .line 2700
+    .line 2699
     iget-object p2, p0, Lorg/telegram/ui/Cells/TextSelectionHelper;->selectedView:Lorg/telegram/ui/Cells/TextSelectionHelper$SelectableView;
 
     move-object v0, p2
@@ -3218,7 +3218,7 @@
     :cond_52
     return v1
 
-    .line 2679
+    .line 2678
     :cond_53
     :goto_53
     iget-object v0, p0, Lorg/telegram/ui/Cells/TextSelectionHelper;->parentView:Landroid/view/ViewGroup;
@@ -3232,7 +3232,7 @@
     :goto_5a
     if-ge v3, v0, :cond_9e
 
-    .line 2681
+    .line 2680
     iget-object v4, p0, Lorg/telegram/ui/Cells/TextSelectionHelper;->parentView:Landroid/view/ViewGroup;
 
     invoke-virtual {v4, v3}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
@@ -3245,7 +3245,7 @@
 
     if-eqz v4, :cond_9b
 
-    .line 2682
+    .line 2681
     iget-object v4, p0, Lorg/telegram/ui/Cells/TextSelectionHelper;->parentView:Landroid/view/ViewGroup;
 
     invoke-virtual {v4, v3}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
@@ -3254,7 +3254,7 @@
 
     check-cast v4, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleSelectableView;
 
-    .line 2683
+    .line 2682
     invoke-interface {v4}, Lorg/telegram/ui/Cells/TextSelectionHelper$SelectableView;->getTop()I
 
     move-result v5
@@ -3269,7 +3269,7 @@
 
     int-to-float p1, p1
 
-    .line 2684
+    .line 2683
     invoke-interface {v4}, Lorg/telegram/ui/Cells/TextSelectionHelper$SelectableView;->getX()F
 
     move-result v0
@@ -3294,14 +3294,14 @@
 
     if-ltz p1, :cond_9a
 
-    .line 2686
+    .line 2685
     iget-object p2, p0, Lorg/telegram/ui/Cells/TextSelectionHelper;->selectedView:Lorg/telegram/ui/Cells/TextSelectionHelper$SelectableView;
 
     check-cast p2, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleSelectableView;
 
     invoke-virtual {p0, p2, v4, p1}, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->onNewViewSelected(Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleSelectableView;Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleSelectableView;I)V
 
-    .line 2687
+    .line 2686
     iput-object v4, p0, Lorg/telegram/ui/Cells/TextSelectionHelper;->selectedView:Lorg/telegram/ui/Cells/TextSelectionHelper$SelectableView;
 
     return v2
@@ -3321,23 +3321,23 @@
 .method public setMaybeView(IILandroid/view/View;)V
     .registers 5
 
-    .line 2165
+    .line 2164
     instance-of v0, p3, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleSelectableView;
 
     if-eqz v0, :cond_38
 
-    .line 2166
+    .line 2165
     iput p1, p0, Lorg/telegram/ui/Cells/TextSelectionHelper;->capturedX:I
 
-    .line 2167
+    .line 2166
     iput p2, p0, Lorg/telegram/ui/Cells/TextSelectionHelper;->capturedY:I
 
-    .line 2168
+    .line 2167
     check-cast p3, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleSelectableView;
 
     iput-object p3, p0, Lorg/telegram/ui/Cells/TextSelectionHelper;->maybeSelectedView:Lorg/telegram/ui/Cells/TextSelectionHelper$SelectableView;
 
-    .line 2169
+    .line 2168
     check-cast p3, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleSelectableView;
 
     invoke-direct {p0, p1, p2, p3}, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->findClosestLayoutIndex(IILorg/telegram/ui/Cells/TextSelectionHelper$ArticleSelectableView;)I
@@ -3350,12 +3350,12 @@
 
     const/4 p1, 0x0
 
-    .line 2171
+    .line 2170
     iput-object p1, p0, Lorg/telegram/ui/Cells/TextSelectionHelper;->maybeSelectedView:Lorg/telegram/ui/Cells/TextSelectionHelper$SelectableView;
 
     goto :goto_38
 
-    .line 2173
+    .line 2172
     :cond_1a
     iget-object p2, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->arrayList:Ljava/util/ArrayList;
 
@@ -3371,7 +3371,7 @@
 
     iput p1, p0, Lorg/telegram/ui/Cells/TextSelectionHelper;->maybeTextX:I
 
-    .line 2174
+    .line 2173
     iget-object p1, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->arrayList:Ljava/util/ArrayList;
 
     iget p2, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleTextSelectionHelper;->maybeTextIndex:I
@@ -3396,12 +3396,12 @@
 .method public trySelect(Landroid/view/View;)V
     .registers 2
 
-    .line 2159
+    .line 2158
     iget-object p1, p0, Lorg/telegram/ui/Cells/TextSelectionHelper;->maybeSelectedView:Lorg/telegram/ui/Cells/TextSelectionHelper$SelectableView;
 
     if-eqz p1, :cond_9
 
-    .line 2160
+    .line 2159
     iget-object p1, p0, Lorg/telegram/ui/Cells/TextSelectionHelper;->startSelectionRunnable:Ljava/lang/Runnable;
 
     invoke-interface {p1}, Ljava/lang/Runnable;->run()V

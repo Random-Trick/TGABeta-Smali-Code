@@ -732,7 +732,7 @@
     .line 92
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
-    const v1, 0x7f070140
+    const v1, 0x7f070109
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/ActionBar;->setBackButtonImage(I)V
 
@@ -751,7 +751,7 @@
     .line 95
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
-    const v2, 0x7f0e01a3
+    const v2, 0x7f0e01d8
 
     const-string v3, "ArchivedStickers"
 
@@ -767,7 +767,7 @@
     :cond_21
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
-    const v2, 0x7f0e019e
+    const v2, 0x7f0e01d3
 
     const-string v3, "ArchivedMasks"
 
@@ -825,7 +825,7 @@
 
     if-nez v3, :cond_6a
 
-    const v3, 0x7f0e01a6
+    const v3, 0x7f0e01db
 
     const-string v4, "ArchivedStickersEmpty"
 
@@ -839,7 +839,7 @@
     goto :goto_76
 
     :cond_6a
-    const v3, 0x7f0e01a1
+    const v3, 0x7f0e01d6
 
     const-string v4, "ArchivedMasksEmpty"
 

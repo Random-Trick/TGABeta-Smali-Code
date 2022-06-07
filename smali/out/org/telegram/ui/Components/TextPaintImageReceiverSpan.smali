@@ -23,14 +23,14 @@
 .end method
 
 .method public constructor <init>(Landroid/view/View;Lorg/telegram/tgnet/TLRPC$Document;Ljava/lang/Object;IIZZ)V
-    .registers 23
+    .registers 24
 
-    move-object v0, p0
+    move-object/from16 v0, p0
 
     move-object/from16 v1, p2
 
     .line 32
-    invoke-direct {p0}, Landroid/text/style/ReplacementSpan;-><init>()V
+    invoke-direct/range {p0 .. p0}, Landroid/text/style/ReplacementSpan;-><init>()V
 
     .line 33
     sget-object v2, Ljava/util/Locale;->US:Ljava/util/Locale;
@@ -83,7 +83,7 @@
     .line 37
     invoke-virtual {v2, v5}, Lorg/telegram/messenger/ImageReceiver;->setInvalidateAll(Z)V
 
-    if-eqz p7, :cond_3c
+    if-eqz p7, :cond_3d
 
     .line 39
     iget-object v2, v0, Lorg/telegram/ui/Components/TextPaintImageReceiverSpan;->imageReceiver:Lorg/telegram/messenger/ImageReceiver;
@@ -93,7 +93,7 @@
     invoke-virtual {v2, v3}, Lorg/telegram/messenger/ImageReceiver;->setDelegate(Lorg/telegram/messenger/ImageReceiver$ImageReceiverDelegate;)V
 
     .line 52
-    :cond_3c
+    :cond_3d
     iget-object v2, v1, Lorg/telegram/tgnet/TLRPC$Document;->thumbs:Ljava/util/ArrayList;
 
     const/16 v3, 0x5a
@@ -113,17 +113,17 @@
 
     move-result-object v9
 
-    const/4 v11, -0x1
+    const-wide/16 v11, -0x1
 
-    const/4 v12, 0x0
+    const/4 v13, 0x0
 
-    const/4 v14, 0x1
+    const/4 v15, 0x1
 
     move-object v8, v10
 
-    move-object/from16 v13, p3
+    move-object/from16 v14, p3
 
-    invoke-virtual/range {v6 .. v14}, Lorg/telegram/messenger/ImageReceiver;->setImage(Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;ILjava/lang/String;Ljava/lang/Object;I)V
+    invoke-virtual/range {v6 .. v15}, Lorg/telegram/messenger/ImageReceiver;->setImage(Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;JLjava/lang/String;Ljava/lang/Object;I)V
 
     move/from16 v1, p6
 

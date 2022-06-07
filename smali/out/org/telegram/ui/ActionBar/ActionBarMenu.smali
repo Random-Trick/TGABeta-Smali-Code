@@ -45,19 +45,19 @@
 .method private synthetic lambda$addItem$0(Landroid/view/View;)V
     .registers 4
 
-    .line 114
+    .line 118
     move-object v0, p1
 
     check-cast v0, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
-    .line 115
+    .line 119
     invoke-virtual {v0}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->hasSubMenu()Z
 
     move-result v1
 
     if-eqz v1, :cond_17
 
-    .line 116
+    .line 120
     iget-object p1, p0, Lorg/telegram/ui/ActionBar/ActionBarMenu;->parentActionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     iget-object p1, p1, Lorg/telegram/ui/ActionBar/ActionBar;->actionBarMenuOnItemClick:Lorg/telegram/ui/ActionBar/ActionBar$ActionBarMenuOnItemClick;
@@ -68,12 +68,12 @@
 
     if-eqz p1, :cond_35
 
-    .line 117
+    .line 121
     invoke-virtual {v0}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->toggleSubMenu()V
 
     goto :goto_35
 
-    .line 119
+    .line 123
     :cond_17
     invoke-virtual {v0}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->isSearchField()Z
 
@@ -81,7 +81,7 @@
 
     if-eqz v1, :cond_28
 
-    .line 120
+    .line 124
     iget-object p1, p0, Lorg/telegram/ui/ActionBar/ActionBarMenu;->parentActionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     const/4 v1, 0x1
@@ -94,7 +94,7 @@
 
     goto :goto_35
 
-    .line 122
+    .line 126
     :cond_28
     invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
@@ -198,7 +198,7 @@
 
     move-object/from16 v7, p7
 
-    .line 90
+    .line 94
     invoke-virtual/range {v0 .. v8}, Lorg/telegram/ui/ActionBar/ActionBarMenu;->addItem(IILjava/lang/CharSequence;ILandroid/graphics/drawable/Drawable;ILjava/lang/CharSequence;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
     move-result-object v0
@@ -221,7 +221,7 @@
 
     move-object/from16 v12, p7
 
-    .line 94
+    .line 98
     new-instance v13, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
     invoke-virtual {p0}, Landroid/widget/LinearLayout;->getContext()Landroid/content/Context;
@@ -270,7 +270,7 @@
 
     invoke-direct/range {v0 .. v6}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;-><init>(Landroid/content/Context;Lorg/telegram/ui/ActionBar/ActionBarMenu;IIZLorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)V
 
-    .line 95
+    .line 99
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -281,12 +281,12 @@
 
     if-eqz v9, :cond_56
 
-    .line 97
+    .line 101
     iget-object v1, v13, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->textView:Landroid/widget/TextView;
 
     invoke-virtual {v1, v9}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 98
+    .line 102
     new-instance v1, Landroid/widget/LinearLayout$LayoutParams;
 
     if-eqz v11, :cond_43
@@ -303,7 +303,7 @@
 
     const/high16 v0, 0x41600000    # 14.0f
 
-    .line 99
+    .line 103
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v0
@@ -312,7 +312,7 @@
 
     iput v0, v1, Landroid/widget/LinearLayout$LayoutParams;->leftMargin:I
 
-    .line 100
+    .line 104
     invoke-virtual {p0, v13, v1}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
     goto :goto_7a
@@ -320,12 +320,12 @@
     :cond_56
     if-eqz v10, :cond_6b
 
-    .line 103
+    .line 107
     instance-of v1, v10, Lorg/telegram/ui/Components/RLottieDrawable;
 
     if-eqz v1, :cond_65
 
-    .line 104
+    .line 108
     iget-object v1, v13, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->iconView:Lorg/telegram/ui/Components/RLottieImageView;
 
     move-object v2, v10
@@ -336,7 +336,7 @@
 
     goto :goto_72
 
-    .line 106
+    .line 110
     :cond_65
     iget-object v1, v13, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->iconView:Lorg/telegram/ui/Components/RLottieImageView;
 
@@ -347,12 +347,12 @@
     :cond_6b
     if-eqz v8, :cond_72
 
-    .line 109
+    .line 113
     iget-object v1, v13, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->iconView:Lorg/telegram/ui/Components/RLottieImageView;
 
     invoke-virtual {v1, v8}, Lorg/telegram/ui/Components/RLottieImageView;->setImageResource(I)V
 
-    .line 111
+    .line 115
     :cond_72
     :goto_72
     new-instance v1, Landroid/widget/LinearLayout$LayoutParams;
@@ -361,7 +361,7 @@
 
     invoke-virtual {p0, v13, v1}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 113
+    .line 117
     :goto_7a
     new-instance v0, Lorg/telegram/ui/ActionBar/ActionBarMenu$$ExternalSyntheticLambda0;
 
@@ -371,7 +371,7 @@
 
     if-eqz v12, :cond_87
 
-    .line 126
+    .line 130
     invoke-virtual {v13, v12}, Landroid/widget/FrameLayout;->setContentDescription(Ljava/lang/CharSequence;)V
 
     :cond_87
@@ -541,7 +541,7 @@
 .method public addItemWithWidth(IIILjava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
     .registers 14
 
-    .line 86
+    .line 90
     iget-boolean v0, p0, Lorg/telegram/ui/ActionBar/ActionBarMenu;->isActionMode:Z
 
     if-eqz v0, :cond_9
@@ -581,10 +581,53 @@
     return-object p1
 .end method
 
+.method public addItemWithWidth(ILandroid/graphics/drawable/Drawable;ILjava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
+    .registers 14
+
+    .line 86
+    iget-boolean v0, p0, Lorg/telegram/ui/ActionBar/ActionBarMenu;->isActionMode:Z
+
+    if-eqz v0, :cond_9
+
+    iget-object v0, p0, Lorg/telegram/ui/ActionBar/ActionBarMenu;->parentActionBar:Lorg/telegram/ui/ActionBar/ActionBar;
+
+    iget v0, v0, Lorg/telegram/ui/ActionBar/ActionBar;->itemsActionModeBackgroundColor:I
+
+    goto :goto_d
+
+    :cond_9
+    iget-object v0, p0, Lorg/telegram/ui/ActionBar/ActionBarMenu;->parentActionBar:Lorg/telegram/ui/ActionBar/ActionBar;
+
+    iget v0, v0, Lorg/telegram/ui/ActionBar/ActionBar;->itemsBackgroundColor:I
+
+    :goto_d
+    move v5, v0
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x0
+
+    move-object v1, p0
+
+    move v2, p1
+
+    move-object v6, p2
+
+    move v7, p3
+
+    move-object v8, p4
+
+    invoke-virtual/range {v1 .. v8}, Lorg/telegram/ui/ActionBar/ActionBarMenu;->addItem(IILjava/lang/CharSequence;ILandroid/graphics/drawable/Drawable;ILjava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
 .method public clearItems()V
     .registers 1
 
-    .line 175
+    .line 179
     invoke-virtual {p0}, Landroid/widget/LinearLayout;->removeAllViews()V
 
     return-void
@@ -593,7 +636,7 @@
 .method public closeSearchField(Z)V
     .registers 7
 
-    .line 199
+    .line 203
     invoke-virtual {p0}, Landroid/widget/LinearLayout;->getChildCount()I
 
     move-result v0
@@ -605,20 +648,20 @@
     :goto_6
     if-ge v2, v0, :cond_34
 
-    .line 201
+    .line 205
     invoke-virtual {p0, v2}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v3
 
-    .line 202
+    .line 206
     instance-of v4, v3, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
     if-eqz v4, :cond_31
 
-    .line 203
+    .line 207
     check-cast v3, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
-    .line 204
+    .line 208
     invoke-virtual {v3}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->isSearchField()Z
 
     move-result v4
@@ -631,7 +674,7 @@
 
     if-eqz v4, :cond_31
 
-    .line 205
+    .line 209
     iget-object v0, v3, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->listener:Lorg/telegram/ui/ActionBar/ActionBarMenuItem$ActionBarMenuItemSearchListener;
 
     if-eqz v0, :cond_28
@@ -642,13 +685,13 @@
 
     if-eqz v0, :cond_34
 
-    .line 206
+    .line 210
     :cond_28
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/ActionBarMenu;->parentActionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/ActionBar;->onSearchFieldVisibilityChanged(Z)V
 
-    .line 207
+    .line 211
     invoke-virtual {v3, p1}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->toggleSearch(Z)Z
 
     goto :goto_34
@@ -666,7 +709,7 @@
 .method public getItem(I)Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
     .registers 3
 
-    .line 307
+    .line 311
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
@@ -675,12 +718,12 @@
 
     move-result-object p1
 
-    .line 308
+    .line 312
     instance-of v0, p1, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
     if-eqz v0, :cond_f
 
-    .line 309
+    .line 313
     check-cast p1, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
     return-object p1
@@ -694,7 +737,7 @@
 .method public getItemsMeasuredWidth()I
     .registers 6
 
-    .line 326
+    .line 330
     invoke-virtual {p0}, Landroid/widget/LinearLayout;->getChildCount()I
 
     move-result v0
@@ -706,17 +749,17 @@
     :goto_6
     if-ge v1, v0, :cond_18
 
-    .line 328
+    .line 332
     invoke-virtual {p0, v1}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v3
 
-    .line 329
+    .line 333
     instance-of v4, v3, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
     if-eqz v4, :cond_15
 
-    .line 330
+    .line 334
     invoke-virtual {v3}, Landroid/view/View;->getMeasuredWidth()I
 
     move-result v3
@@ -735,7 +778,7 @@
 .method public getVisibleItemsMeasuredWidth()I
     .registers 7
 
-    .line 338
+    .line 342
     invoke-virtual {p0}, Landroid/widget/LinearLayout;->getChildCount()I
 
     move-result v0
@@ -747,12 +790,12 @@
     :goto_6
     if-ge v1, v0, :cond_20
 
-    .line 339
+    .line 343
     invoke-virtual {p0, v1}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v3
 
-    .line 340
+    .line 344
     instance-of v4, v3, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
     if-eqz v4, :cond_1d
@@ -765,7 +808,7 @@
 
     if-eq v4, v5, :cond_1d
 
-    .line 341
+    .line 345
     invoke-virtual {v3}, Landroid/view/View;->getMeasuredWidth()I
 
     move-result v3
@@ -784,7 +827,7 @@
 .method public hideAllPopupMenus()V
     .registers 5
 
-    .line 132
+    .line 136
     invoke-virtual {p0}, Landroid/widget/LinearLayout;->getChildCount()I
 
     move-result v0
@@ -794,17 +837,17 @@
     :goto_5
     if-ge v1, v0, :cond_17
 
-    .line 134
+    .line 138
     invoke-virtual {p0, v1}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v2
 
-    .line 135
+    .line 139
     instance-of v3, v2, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
     if-eqz v3, :cond_14
 
-    .line 136
+    .line 140
     check-cast v2, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
     invoke-virtual {v2}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->closeSubMenu()V
@@ -821,14 +864,14 @@
 .method public onItemClick(I)V
     .registers 3
 
-    .line 169
+    .line 173
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/ActionBarMenu;->parentActionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     iget-object v0, v0, Lorg/telegram/ui/ActionBar/ActionBar;->actionBarMenuOnItemClick:Lorg/telegram/ui/ActionBar/ActionBar$ActionBarMenuOnItemClick;
 
     if-eqz v0, :cond_9
 
-    .line 170
+    .line 174
     invoke-virtual {v0, p1}, Lorg/telegram/ui/ActionBar/ActionBar$ActionBarMenuOnItemClick;->onItemClick(I)V
 
     :cond_9
@@ -838,7 +881,7 @@
 .method public onMenuButtonPressed()V
     .registers 5
 
-    .line 179
+    .line 183
     invoke-virtual {p0}, Landroid/widget/LinearLayout;->getChildCount()I
 
     move-result v0
@@ -848,20 +891,20 @@
     :goto_5
     if-ge v1, v0, :cond_37
 
-    .line 181
+    .line 185
     invoke-virtual {p0, v1}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v2
 
-    .line 182
+    .line 186
     instance-of v3, v2, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
     if-eqz v3, :cond_34
 
-    .line 183
+    .line 187
     check-cast v2, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
-    .line 184
+    .line 188
     invoke-virtual {v2}, Landroid/widget/FrameLayout;->getVisibility()I
 
     move-result v3
@@ -870,7 +913,7 @@
 
     goto :goto_34
 
-    .line 187
+    .line 191
     :cond_18
     invoke-virtual {v2}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->hasSubMenu()Z
 
@@ -878,18 +921,18 @@
 
     if-eqz v3, :cond_22
 
-    .line 188
+    .line 192
     invoke-virtual {v2}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->toggleSubMenu()V
 
     goto :goto_37
 
-    .line 190
+    .line 194
     :cond_22
     iget-boolean v3, v2, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->overrideMenuClick:Z
 
     if-eqz v3, :cond_34
 
-    .line 191
+    .line 195
     invoke-virtual {v2}, Landroid/widget/FrameLayout;->getTag()Ljava/lang/Object;
 
     move-result-object v0
@@ -918,7 +961,7 @@
 .method public onSearchPressed()V
     .registers 5
 
-    .line 262
+    .line 266
     invoke-virtual {p0}, Landroid/widget/LinearLayout;->getChildCount()I
 
     move-result v0
@@ -928,27 +971,27 @@
     :goto_5
     if-ge v1, v0, :cond_1d
 
-    .line 264
+    .line 268
     invoke-virtual {p0, v1}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v2
 
-    .line 265
+    .line 269
     instance-of v3, v2, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
     if-eqz v3, :cond_1a
 
-    .line 266
+    .line 270
     check-cast v2, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
-    .line 267
+    .line 271
     invoke-virtual {v2}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->isSearchField()Z
 
     move-result v3
 
     if-eqz v3, :cond_1a
 
-    .line 268
+    .line 272
     invoke-virtual {v2}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->onSearchPressed()V
 
     :cond_1a
@@ -963,7 +1006,7 @@
 .method public openSearchField(ZZLjava/lang/String;Z)V
     .registers 9
 
-    .line 275
+    .line 279
     invoke-virtual {p0}, Landroid/widget/LinearLayout;->getChildCount()I
 
     move-result v0
@@ -973,20 +1016,20 @@
     :goto_5
     if-ge v1, v0, :cond_34
 
-    .line 277
+    .line 281
     invoke-virtual {p0, v1}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v2
 
-    .line 278
+    .line 282
     instance-of v3, v2, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
     if-eqz v3, :cond_31
 
-    .line 279
+    .line 283
     check-cast v2, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
-    .line 280
+    .line 284
     invoke-virtual {v2}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->isSearchField()Z
 
     move-result v3
@@ -995,7 +1038,7 @@
 
     if-eqz p1, :cond_22
 
-    .line 282
+    .line 286
     iget-object p1, p0, Lorg/telegram/ui/ActionBar/ActionBarMenu;->parentActionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     invoke-virtual {v2, p2}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->toggleSearch(Z)Z
@@ -1004,11 +1047,11 @@
 
     invoke-virtual {p1, p2}, Lorg/telegram/ui/ActionBar/ActionBar;->onSearchFieldVisibilityChanged(Z)V
 
-    .line 284
+    .line 288
     :cond_22
     invoke-virtual {v2, p3, p4}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->setSearchFieldText(Ljava/lang/CharSequence;Z)V
 
-    .line 285
+    .line 289
     invoke-virtual {v2}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->getSearchField()Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     move-result-object p1
@@ -1034,7 +1077,7 @@
 .method protected redrawPopup(I)V
     .registers 6
 
-    .line 160
+    .line 164
     invoke-virtual {p0}, Landroid/widget/LinearLayout;->getChildCount()I
 
     move-result v0
@@ -1044,17 +1087,17 @@
     :goto_5
     if-ge v1, v0, :cond_17
 
-    .line 161
+    .line 165
     invoke-virtual {p0, v1}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v2
 
-    .line 162
+    .line 166
     instance-of v3, v2, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
     if-eqz v3, :cond_14
 
-    .line 163
+    .line 167
     check-cast v2, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
     invoke-virtual {v2, p1}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->redrawPopup(I)V
@@ -1071,7 +1114,7 @@
 .method public searchFieldVisible()Z
     .registers 6
 
-    .line 348
+    .line 352
     invoke-virtual {p0}, Landroid/widget/LinearLayout;->getChildCount()I
 
     move-result v0
@@ -1083,12 +1126,12 @@
     :goto_6
     if-ge v2, v0, :cond_27
 
-    .line 350
+    .line 354
     invoke-virtual {p0, v2}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v3
 
-    .line 351
+    .line 355
     instance-of v4, v3, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
     if-eqz v4, :cond_24
@@ -1127,10 +1170,10 @@
 .method public setEnabled(Z)V
     .registers 5
 
-    .line 316
+    .line 320
     invoke-super {p0, p1}, Landroid/widget/LinearLayout;->setEnabled(Z)V
 
-    .line 317
+    .line 321
     invoke-virtual {p0}, Landroid/widget/LinearLayout;->getChildCount()I
 
     move-result v0
@@ -1140,12 +1183,12 @@
     :goto_8
     if-ge v1, v0, :cond_14
 
-    .line 319
+    .line 323
     invoke-virtual {p0, v1}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v2
 
-    .line 320
+    .line 324
     invoke-virtual {v2, p1}, Landroid/view/View;->setEnabled(Z)V
 
     add-int/lit8 v1, v1, 0x1
@@ -1159,7 +1202,7 @@
 .method public setFilter(Lorg/telegram/ui/Adapters/FiltersView$MediaFilterData;)V
     .registers 6
 
-    .line 293
+    .line 297
     invoke-virtual {p0}, Landroid/widget/LinearLayout;->getChildCount()I
 
     move-result v0
@@ -1169,27 +1212,27 @@
     :goto_5
     if-ge v1, v0, :cond_1e
 
-    .line 295
+    .line 299
     invoke-virtual {p0, v1}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v2
 
-    .line 296
+    .line 300
     instance-of v3, v2, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
     if-eqz v3, :cond_1b
 
-    .line 297
+    .line 301
     check-cast v2, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
-    .line 298
+    .line 302
     invoke-virtual {v2}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->isSearchField()Z
 
     move-result v3
 
     if-eqz v3, :cond_1b
 
-    .line 299
+    .line 303
     invoke-virtual {v2, p1}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->addSearchFilter(Lorg/telegram/ui/Adapters/FiltersView$MediaFilterData;)V
 
     goto :goto_1e
@@ -1207,7 +1250,7 @@
 .method protected setPopupItemsColor(IZ)V
     .registers 7
 
-    .line 142
+    .line 146
     invoke-virtual {p0}, Landroid/widget/LinearLayout;->getChildCount()I
 
     move-result v0
@@ -1217,17 +1260,17 @@
     :goto_5
     if-ge v1, v0, :cond_17
 
-    .line 143
+    .line 147
     invoke-virtual {p0, v1}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v2
 
-    .line 144
+    .line 148
     instance-of v3, v2, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
     if-eqz v3, :cond_14
 
-    .line 145
+    .line 149
     check-cast v2, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
     invoke-virtual {v2, p1, p2}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->setPopupItemsColor(IZ)V
@@ -1244,7 +1287,7 @@
 .method protected setPopupItemsSelectorColor(I)V
     .registers 6
 
-    .line 151
+    .line 155
     invoke-virtual {p0}, Landroid/widget/LinearLayout;->getChildCount()I
 
     move-result v0
@@ -1254,17 +1297,17 @@
     :goto_5
     if-ge v1, v0, :cond_17
 
-    .line 152
+    .line 156
     invoke-virtual {p0, v1}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v2
 
-    .line 153
+    .line 157
     instance-of v3, v2, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
     if-eqz v3, :cond_14
 
-    .line 154
+    .line 158
     check-cast v2, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
     invoke-virtual {v2, p1}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->setPopupItemsSelectorColor(I)V
@@ -1281,7 +1324,7 @@
 .method public setSearchCursorColor(I)V
     .registers 6
 
-    .line 216
+    .line 220
     invoke-virtual {p0}, Landroid/widget/LinearLayout;->getChildCount()I
 
     move-result v0
@@ -1291,27 +1334,27 @@
     :goto_5
     if-ge v1, v0, :cond_22
 
-    .line 218
+    .line 222
     invoke-virtual {p0, v1}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v2
 
-    .line 219
+    .line 223
     instance-of v3, v2, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
     if-eqz v3, :cond_1f
 
-    .line 220
+    .line 224
     check-cast v2, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
-    .line 221
+    .line 225
     invoke-virtual {v2}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->isSearchField()Z
 
     move-result v3
 
     if-eqz v3, :cond_1f
 
-    .line 222
+    .line 226
     invoke-virtual {v2}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->getSearchField()Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     move-result-object v0
@@ -1333,7 +1376,7 @@
 .method public setSearchFieldText(Ljava/lang/String;)V
     .registers 7
 
-    .line 248
+    .line 252
     invoke-virtual {p0}, Landroid/widget/LinearLayout;->getChildCount()I
 
     move-result v0
@@ -1345,30 +1388,30 @@
     :goto_6
     if-ge v2, v0, :cond_29
 
-    .line 250
+    .line 254
     invoke-virtual {p0, v2}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v3
 
-    .line 251
+    .line 255
     instance-of v4, v3, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
     if-eqz v4, :cond_26
 
-    .line 252
+    .line 256
     check-cast v3, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
-    .line 253
+    .line 257
     invoke-virtual {v3}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->isSearchField()Z
 
     move-result v4
 
     if-eqz v4, :cond_26
 
-    .line 254
+    .line 258
     invoke-virtual {v3, p1, v1}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->setSearchFieldText(Ljava/lang/CharSequence;Z)V
 
-    .line 255
+    .line 259
     invoke-virtual {v3}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->getSearchField()Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     move-result-object v3
@@ -1391,7 +1434,7 @@
 .method public setSearchTextColor(IZ)V
     .registers 7
 
-    .line 230
+    .line 234
     invoke-virtual {p0}, Landroid/widget/LinearLayout;->getChildCount()I
 
     move-result v0
@@ -1401,20 +1444,20 @@
     :goto_5
     if-ge v1, v0, :cond_2c
 
-    .line 232
+    .line 236
     invoke-virtual {p0, v1}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v2
 
-    .line 233
+    .line 237
     instance-of v3, v2, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
     if-eqz v3, :cond_29
 
-    .line 234
+    .line 238
     check-cast v2, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
-    .line 235
+    .line 239
     invoke-virtual {v2}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->isSearchField()Z
 
     move-result v3
@@ -1423,7 +1466,7 @@
 
     if-eqz p2, :cond_21
 
-    .line 237
+    .line 241
     invoke-virtual {v2}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->getSearchField()Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     move-result-object p2
@@ -1432,7 +1475,7 @@
 
     goto :goto_2c
 
-    .line 239
+    .line 243
     :cond_21
     invoke-virtual {v2}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->getSearchField()Lorg/telegram/ui/Components/EditTextBoldCursor;
 
@@ -1452,10 +1495,10 @@
     return-void
 .end method
 
-.method public translateXItems(I)V
+.method public translateXItems(F)V
     .registers 6
 
-    .line 359
+    .line 363
     invoke-virtual {p0}, Landroid/widget/LinearLayout;->getChildCount()I
 
     move-result v0
@@ -1465,20 +1508,20 @@
     :goto_5
     if-ge v1, v0, :cond_17
 
-    .line 361
+    .line 365
     invoke-virtual {p0, v1}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v2
 
-    .line 362
+    .line 366
     instance-of v3, v2, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
     if-eqz v3, :cond_14
 
-    .line 363
+    .line 367
     check-cast v2, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
-    invoke-virtual {v2, p1}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->setTransitionOffset(I)V
+    invoke-virtual {v2, p1}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->setTransitionOffset(F)V
 
     :cond_14
     add-int/lit8 v1, v1, 0x1

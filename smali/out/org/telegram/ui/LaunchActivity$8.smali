@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lorg/telegram/ui/LaunchActivity;->lambda$onCreate$3(Landroidx/recyclerview/widget/ItemTouchHelper;Landroid/view/View;I)Z
+    value = Lorg/telegram/ui/LaunchActivity;->lambda$onCreate$4(Landroidx/recyclerview/widget/ItemTouchHelper;Landroid/view/View;I)Z
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,7 +24,7 @@
 .method constructor <init>(Lorg/telegram/ui/LaunchActivity;Landroid/os/Bundle;I)V
     .registers 4
 
-    .line 700
+    .line 726
     iput-object p1, p0, Lorg/telegram/ui/LaunchActivity$8;->this$0:Lorg/telegram/ui/LaunchActivity;
 
     iput p3, p0, Lorg/telegram/ui/LaunchActivity$8;->val$accountNumber:I
@@ -39,10 +39,10 @@
 .method protected onPreviewOpenAnimationEnd()V
     .registers 4
 
-    .line 711
+    .line 737
     invoke-super {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->onPreviewOpenAnimationEnd()V
 
-    .line 712
+    .line 738
     iget-object v0, p0, Lorg/telegram/ui/LaunchActivity$8;->this$0:Lorg/telegram/ui/LaunchActivity;
 
     iget-object v0, v0, Lorg/telegram/ui/LaunchActivity;->drawerLayoutContainer:Lorg/telegram/ui/ActionBar/DrawerLayoutContainer;
@@ -51,14 +51,14 @@
 
     invoke-virtual {v0, v1, v1}, Lorg/telegram/ui/ActionBar/DrawerLayoutContainer;->setAllowOpenDrawer(ZZ)V
 
-    .line 713
+    .line 739
     iget-object v0, p0, Lorg/telegram/ui/LaunchActivity$8;->this$0:Lorg/telegram/ui/LaunchActivity;
 
     iget-object v0, v0, Lorg/telegram/ui/LaunchActivity;->drawerLayoutContainer:Lorg/telegram/ui/ActionBar/DrawerLayoutContainer;
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/DrawerLayoutContainer;->setDrawCurrentPreviewFragmentAbove(Z)V
 
-    .line 714
+    .line 740
     iget-object v0, p0, Lorg/telegram/ui/LaunchActivity$8;->this$0:Lorg/telegram/ui/LaunchActivity;
 
     iget v1, p0, Lorg/telegram/ui/LaunchActivity$8;->val$accountNumber:I
@@ -73,14 +73,14 @@
 .method protected onTransitionAnimationEnd(ZZ)V
     .registers 3
 
-    .line 703
+    .line 729
     invoke-super {p0, p1, p2}, Lorg/telegram/ui/DialogsActivity;->onTransitionAnimationEnd(ZZ)V
 
     if-nez p1, :cond_f
 
     if-eqz p2, :cond_f
 
-    .line 705
+    .line 731
     iget-object p1, p0, Lorg/telegram/ui/LaunchActivity$8;->this$0:Lorg/telegram/ui/LaunchActivity;
 
     iget-object p1, p1, Lorg/telegram/ui/LaunchActivity;->drawerLayoutContainer:Lorg/telegram/ui/ActionBar/DrawerLayoutContainer;

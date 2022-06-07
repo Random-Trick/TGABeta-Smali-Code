@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/ShareAlert;Landroid/content/Context;)V
     .registers 3
 
-    .line 1312
+    .line 1323
     iput-object p1, p0, Lorg/telegram/ui/Components/ShareAlert$15;->this$0:Lorg/telegram/ui/Components/ShareAlert;
 
     invoke-direct {p0, p2}, Landroid/view/View;-><init>(Landroid/content/Context;)V
@@ -39,12 +39,10 @@
 
     new-array v1, v0, [Ljava/lang/Object;
 
-    .line 1315
+    .line 1326
     iget-object v2, p0, Lorg/telegram/ui/Components/ShareAlert$15;->this$0:Lorg/telegram/ui/Components/ShareAlert;
 
-    invoke-static {v2}, Lorg/telegram/ui/Components/ShareAlert;->access$9100(Lorg/telegram/ui/Components/ShareAlert;)Landroidx/collection/LongSparseArray;
-
-    move-result-object v2
+    iget-object v2, v2, Lorg/telegram/ui/Components/ShareAlert;->selectedDialogs:Landroidx/collection/LongSparseArray;
 
     invoke-virtual {v2}, Landroidx/collection/LongSparseArray;->size()I
 
@@ -68,10 +66,10 @@
 
     move-result-object v0
 
-    .line 1316
+    .line 1327
     iget-object v1, p0, Lorg/telegram/ui/Components/ShareAlert$15;->this$0:Lorg/telegram/ui/Components/ShareAlert;
 
-    invoke-static {v1}, Lorg/telegram/ui/Components/ShareAlert;->access$9200(Lorg/telegram/ui/Components/ShareAlert;)Landroid/text/TextPaint;
+    invoke-static {v1}, Lorg/telegram/ui/Components/ShareAlert;->access$9000(Lorg/telegram/ui/Components/ShareAlert;)Landroid/text/TextPaint;
 
     move-result-object v1
 
@@ -89,7 +87,7 @@
 
     const/high16 v2, 0x41800000    # 16.0f
 
-    .line 1317
+    .line 1328
     invoke-static {v2}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v2
@@ -106,24 +104,24 @@
 
     move-result v2
 
-    .line 1318
+    .line 1329
     invoke-virtual {p0}, Landroid/view/View;->getMeasuredWidth()I
 
     move-result v3
 
     div-int/lit8 v3, v3, 0x2
 
-    .line 1319
+    .line 1330
     invoke-virtual {p0}, Landroid/view/View;->getMeasuredHeight()I
 
     move-result v4
 
     div-int/lit8 v4, v4, 0x2
 
-    .line 1321
+    .line 1332
     iget-object v4, p0, Lorg/telegram/ui/Components/ShareAlert$15;->this$0:Lorg/telegram/ui/Components/ShareAlert;
 
-    invoke-static {v4}, Lorg/telegram/ui/Components/ShareAlert;->access$9200(Lorg/telegram/ui/Components/ShareAlert;)Landroid/text/TextPaint;
+    invoke-static {v4}, Lorg/telegram/ui/Components/ShareAlert;->access$9000(Lorg/telegram/ui/Components/ShareAlert;)Landroid/text/TextPaint;
 
     move-result-object v4
 
@@ -131,16 +129,16 @@
 
     const-string v6, "dialogRoundCheckBoxCheck"
 
-    invoke-static {v5, v6}, Lorg/telegram/ui/Components/ShareAlert;->access$9300(Lorg/telegram/ui/Components/ShareAlert;Ljava/lang/String;)I
+    invoke-static {v5, v6}, Lorg/telegram/ui/Components/ShareAlert;->access$9100(Lorg/telegram/ui/Components/ShareAlert;Ljava/lang/String;)I
 
     move-result v5
 
     invoke-virtual {v4, v5}, Landroid/text/TextPaint;->setColor(I)V
 
-    .line 1322
+    .line 1333
     iget-object v4, p0, Lorg/telegram/ui/Components/ShareAlert$15;->this$0:Lorg/telegram/ui/Components/ShareAlert;
 
-    invoke-static {v4}, Lorg/telegram/ui/Components/ShareAlert;->access$9500(Lorg/telegram/ui/Components/ShareAlert;)Landroid/graphics/Paint;
+    invoke-static {v4}, Lorg/telegram/ui/Components/ShareAlert;->access$9300(Lorg/telegram/ui/Components/ShareAlert;)Landroid/graphics/Paint;
 
     move-result-object v4
 
@@ -150,26 +148,26 @@
 
     move-result v6
 
-    if-eqz v6, :cond_6d
+    if-eqz v6, :cond_6b
 
     const-string v6, "voipgroup_inviteMembersBackground"
 
-    goto :goto_6f
+    goto :goto_6d
 
-    :cond_6d
+    :cond_6b
     const-string v6, "dialogBackground"
 
-    :goto_6f
-    invoke-static {v5, v6}, Lorg/telegram/ui/Components/ShareAlert;->access$9400(Lorg/telegram/ui/Components/ShareAlert;Ljava/lang/String;)I
+    :goto_6d
+    invoke-static {v5, v6}, Lorg/telegram/ui/Components/ShareAlert;->access$9200(Lorg/telegram/ui/Components/ShareAlert;Ljava/lang/String;)I
 
     move-result v5
 
     invoke-virtual {v4, v5}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 1323
+    .line 1334
     iget-object v4, p0, Lorg/telegram/ui/Components/ShareAlert$15;->this$0:Lorg/telegram/ui/Components/ShareAlert;
 
-    invoke-static {v4}, Lorg/telegram/ui/Components/ShareAlert;->access$9600(Lorg/telegram/ui/Components/ShareAlert;)Landroid/graphics/RectF;
+    invoke-static {v4}, Lorg/telegram/ui/Components/ShareAlert;->access$9400(Lorg/telegram/ui/Components/ShareAlert;)Landroid/graphics/RectF;
 
     move-result-object v4
 
@@ -193,10 +191,10 @@
 
     invoke-virtual {v4, v6, v7, v8, v9}, Landroid/graphics/RectF;->set(FFFF)V
 
-    .line 1324
+    .line 1335
     iget-object v4, p0, Lorg/telegram/ui/Components/ShareAlert$15;->this$0:Lorg/telegram/ui/Components/ShareAlert;
 
-    invoke-static {v4}, Lorg/telegram/ui/Components/ShareAlert;->access$9600(Lorg/telegram/ui/Components/ShareAlert;)Landroid/graphics/RectF;
+    invoke-static {v4}, Lorg/telegram/ui/Components/ShareAlert;->access$9400(Lorg/telegram/ui/Components/ShareAlert;)Landroid/graphics/RectF;
 
     move-result-object v4
 
@@ -216,16 +214,16 @@
 
     iget-object v8, p0, Lorg/telegram/ui/Components/ShareAlert$15;->this$0:Lorg/telegram/ui/Components/ShareAlert;
 
-    invoke-static {v8}, Lorg/telegram/ui/Components/ShareAlert;->access$9500(Lorg/telegram/ui/Components/ShareAlert;)Landroid/graphics/Paint;
+    invoke-static {v8}, Lorg/telegram/ui/Components/ShareAlert;->access$9300(Lorg/telegram/ui/Components/ShareAlert;)Landroid/graphics/Paint;
 
     move-result-object v8
 
     invoke-virtual {p1, v4, v7, v6, v8}, Landroid/graphics/Canvas;->drawRoundRect(Landroid/graphics/RectF;FFLandroid/graphics/Paint;)V
 
-    .line 1326
+    .line 1337
     iget-object v4, p0, Lorg/telegram/ui/Components/ShareAlert$15;->this$0:Lorg/telegram/ui/Components/ShareAlert;
 
-    invoke-static {v4}, Lorg/telegram/ui/Components/ShareAlert;->access$9500(Lorg/telegram/ui/Components/ShareAlert;)Landroid/graphics/Paint;
+    invoke-static {v4}, Lorg/telegram/ui/Components/ShareAlert;->access$9300(Lorg/telegram/ui/Components/ShareAlert;)Landroid/graphics/Paint;
 
     move-result-object v4
 
@@ -233,16 +231,16 @@
 
     const-string v7, "dialogRoundCheckBox"
 
-    invoke-static {v6, v7}, Lorg/telegram/ui/Components/ShareAlert;->access$9700(Lorg/telegram/ui/Components/ShareAlert;Ljava/lang/String;)I
+    invoke-static {v6, v7}, Lorg/telegram/ui/Components/ShareAlert;->access$9500(Lorg/telegram/ui/Components/ShareAlert;Ljava/lang/String;)I
 
     move-result v6
 
     invoke-virtual {v4, v6}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 1327
+    .line 1338
     iget-object v4, p0, Lorg/telegram/ui/Components/ShareAlert$15;->this$0:Lorg/telegram/ui/Components/ShareAlert;
 
-    invoke-static {v4}, Lorg/telegram/ui/Components/ShareAlert;->access$9600(Lorg/telegram/ui/Components/ShareAlert;)Landroid/graphics/RectF;
+    invoke-static {v4}, Lorg/telegram/ui/Components/ShareAlert;->access$9400(Lorg/telegram/ui/Components/ShareAlert;)Landroid/graphics/RectF;
 
     move-result-object v4
 
@@ -284,10 +282,10 @@
 
     invoke-virtual {v4, v5, v7, v2, v6}, Landroid/graphics/RectF;->set(FFFF)V
 
-    .line 1328
+    .line 1339
     iget-object v2, p0, Lorg/telegram/ui/Components/ShareAlert$15;->this$0:Lorg/telegram/ui/Components/ShareAlert;
 
-    invoke-static {v2}, Lorg/telegram/ui/Components/ShareAlert;->access$9600(Lorg/telegram/ui/Components/ShareAlert;)Landroid/graphics/RectF;
+    invoke-static {v2}, Lorg/telegram/ui/Components/ShareAlert;->access$9400(Lorg/telegram/ui/Components/ShareAlert;)Landroid/graphics/RectF;
 
     move-result-object v2
 
@@ -307,13 +305,13 @@
 
     iget-object v6, p0, Lorg/telegram/ui/Components/ShareAlert$15;->this$0:Lorg/telegram/ui/Components/ShareAlert;
 
-    invoke-static {v6}, Lorg/telegram/ui/Components/ShareAlert;->access$9500(Lorg/telegram/ui/Components/ShareAlert;)Landroid/graphics/Paint;
+    invoke-static {v6}, Lorg/telegram/ui/Components/ShareAlert;->access$9300(Lorg/telegram/ui/Components/ShareAlert;)Landroid/graphics/Paint;
 
     move-result-object v6
 
     invoke-virtual {p1, v2, v5, v4, v6}, Landroid/graphics/Canvas;->drawRoundRect(Landroid/graphics/RectF;FFLandroid/graphics/Paint;)V
 
-    .line 1330
+    .line 1341
     div-int/lit8 v1, v1, 0x2
 
     sub-int/2addr v3, v1
@@ -330,7 +328,7 @@
 
     iget-object v3, p0, Lorg/telegram/ui/Components/ShareAlert$15;->this$0:Lorg/telegram/ui/Components/ShareAlert;
 
-    invoke-static {v3}, Lorg/telegram/ui/Components/ShareAlert;->access$9200(Lorg/telegram/ui/Components/ShareAlert;)Landroid/text/TextPaint;
+    invoke-static {v3}, Lorg/telegram/ui/Components/ShareAlert;->access$9000(Lorg/telegram/ui/Components/ShareAlert;)Landroid/text/TextPaint;
 
     move-result-object v3
 

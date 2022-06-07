@@ -24,7 +24,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/BotWebViewSheet$2;Z)V
     .registers 3
 
-    .line 231
+    .line 322
     iput-object p1, p0, Lorg/telegram/ui/Components/BotWebViewSheet$2$2;->this$1:Lorg/telegram/ui/Components/BotWebViewSheet$2;
 
     iput-boolean p2, p0, Lorg/telegram/ui/Components/BotWebViewSheet$2$2;->val$isProgressVisible:Z
@@ -39,17 +39,17 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .registers 3
 
-    .line 234
+    .line 325
     iget-boolean p1, p0, Lorg/telegram/ui/Components/BotWebViewSheet$2$2;->val$isProgressVisible:Z
 
     if-nez p1, :cond_11
 
-    .line 235
+    .line 326
     iget-object p1, p0, Lorg/telegram/ui/Components/BotWebViewSheet$2$2;->this$1:Lorg/telegram/ui/Components/BotWebViewSheet$2;
 
     iget-object p1, p1, Lorg/telegram/ui/Components/BotWebViewSheet$2;->this$0:Lorg/telegram/ui/Components/BotWebViewSheet;
 
-    invoke-static {p1}, Lorg/telegram/ui/Components/BotWebViewSheet;->access$900(Lorg/telegram/ui/Components/BotWebViewSheet;)Lorg/telegram/ui/Components/RadialProgressView;
+    invoke-static {p1}, Lorg/telegram/ui/Components/BotWebViewSheet;->access$1600(Lorg/telegram/ui/Components/BotWebViewSheet;)Lorg/telegram/ui/Components/RadialProgressView;
 
     move-result-object p1
 

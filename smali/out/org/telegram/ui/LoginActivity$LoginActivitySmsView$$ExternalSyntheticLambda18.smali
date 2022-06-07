@@ -33,7 +33,7 @@
 
     iget v1, p0, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$$ExternalSyntheticLambda18;->f$1:I
 
-    invoke-static {v0, v1}, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView;->$r8$lambda$xGDSwnij7yRsILtg5AJHa7aP_cY(Lorg/telegram/ui/LoginActivity$LoginActivitySmsView;I)V
+    invoke-static {v0, v1}, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView;->$r8$lambda$UgeDWwcfKYY_I88OmkBjZCKTc7g(Lorg/telegram/ui/LoginActivity$LoginActivitySmsView;I)V
 
     return-void
 .end method

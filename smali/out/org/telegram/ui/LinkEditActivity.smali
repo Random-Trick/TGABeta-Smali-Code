@@ -472,13 +472,13 @@
     const/4 v8, 0x0
 
     :goto_5f
-    if-ge v8, v2, :cond_103
+    if-ge v8, v2, :cond_109
 
     add-int/lit8 v9, v2, -0x1
 
     if-ne v8, v9, :cond_72
 
-    const v9, 0x7f0e0abc
+    const v9, 0x7f0e0b43
 
     const-string v11, "NoLimit"
 
@@ -489,7 +489,7 @@
 
     aput-object v9, v6, v8
 
-    goto/16 :goto_ff
+    goto/16 :goto_105
 
     .line 723
     :cond_72
@@ -509,21 +509,23 @@
 
     aget v11, v11, v5
 
-    if-ne v9, v11, :cond_8e
+    if-ne v9, v11, :cond_90
 
-    const-string v9, "Hours"
+    new-array v9, v5, [Ljava/lang/Object;
+
+    const-string v11, "Hours"
 
     .line 724
-    invoke-static {v9, v10}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    invoke-static {v11, v10, v9}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v9
 
     aput-object v9, v6, v8
 
-    goto/16 :goto_ff
+    goto/16 :goto_105
 
     .line 725
-    :cond_8e
+    :cond_90
     iget-object v9, v0, Lorg/telegram/ui/LinkEditActivity;->dispalyedDates:Ljava/util/ArrayList;
 
     invoke-virtual {v9, v8}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -540,21 +542,23 @@
 
     aget v11, v11, v10
 
-    if-ne v9, v11, :cond_a9
+    if-ne v9, v11, :cond_ad
 
-    const-string v9, "Days"
+    new-array v9, v5, [Ljava/lang/Object;
+
+    const-string v11, "Days"
 
     .line 726
-    invoke-static {v9, v10}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    invoke-static {v11, v10, v9}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v9
 
     aput-object v9, v6, v8
 
-    goto :goto_ff
+    goto :goto_105
 
     .line 727
-    :cond_a9
+    :cond_ad
     iget-object v9, v0, Lorg/telegram/ui/LinkEditActivity;->dispalyedDates:Ljava/util/ArrayList;
 
     invoke-virtual {v9, v8}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -573,29 +577,31 @@
 
     aget v11, v11, v12
 
-    if-ne v9, v11, :cond_c5
+    if-ne v9, v11, :cond_cb
 
-    const-string v9, "Weeks"
+    new-array v9, v5, [Ljava/lang/Object;
+
+    const-string v11, "Weeks"
 
     .line 728
-    invoke-static {v9, v10}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    invoke-static {v11, v10, v9}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v9
 
     aput-object v9, v6, v8
 
-    goto :goto_ff
+    goto :goto_105
 
-    :cond_c5
+    :cond_cb
     int-to-long v11, v1
 
     const-wide/32 v13, 0x15180
 
     cmp-long v9, v11, v13
 
-    if-gez v9, :cond_d9
+    if-gez v9, :cond_df
 
-    const v9, 0x7f0e0a02
+    const v9, 0x7f0e0a89
 
     const-string v11, "MessageScheduleToday"
 
@@ -606,16 +612,16 @@
 
     aput-object v9, v6, v8
 
-    goto :goto_ff
+    goto :goto_105
 
-    :cond_d9
+    :cond_df
     const-wide/32 v13, 0x1dfe200
 
     const-wide/16 v15, 0x3e8
 
     cmp-long v9, v11, v13
 
-    if-gez v9, :cond_f1
+    if-gez v9, :cond_f7
 
     .line 733
     invoke-static {}, Lorg/telegram/messenger/LocaleController;->getInstance()Lorg/telegram/messenger/LocaleController;
@@ -632,10 +638,10 @@
 
     aput-object v9, v6, v8
 
-    goto :goto_ff
+    goto :goto_105
 
     .line 735
-    :cond_f1
+    :cond_f7
     invoke-static {}, Lorg/telegram/messenger/LocaleController;->getInstance()Lorg/telegram/messenger/LocaleController;
 
     move-result-object v9
@@ -650,13 +656,13 @@
 
     aput-object v9, v6, v8
 
-    :goto_ff
+    :goto_105
     add-int/lit8 v8, v8, 0x1
 
     goto/16 :goto_5f
 
     .line 740
-    :cond_103
+    :cond_109
     iget-object v1, v0, Lorg/telegram/ui/LinkEditActivity;->timeChooseView:Lorg/telegram/ui/Components/SlideChooseView;
 
     invoke-virtual {v1, v7, v6}, Lorg/telegram/ui/Components/SlideChooseView;->setOptions(I[Ljava/lang/String;)V
@@ -770,7 +776,7 @@
 
     if-ne v0, v2, :cond_5d
 
-    const v2, 0x7f0e0abc
+    const v2, 0x7f0e0b43
 
     const-string v4, "NoLimit"
 
@@ -1033,7 +1039,7 @@
 
     const-string v0, "RevokeAlert"
 
-    const v1, 0x7f0e0f4a
+    const v1, 0x7f0e0ffa
 
     .line 465
     invoke-static {v0, v1}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -1044,7 +1050,7 @@
 
     const-string v0, "RevokeLink"
 
-    const v1, 0x7f0e0f4d
+    const v1, 0x7f0e0ffd
 
     .line 466
     invoke-static {v0, v1}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -1055,7 +1061,7 @@
 
     const-string v0, "RevokeButton"
 
-    const v1, 0x7f0e0f4c
+    const v1, 0x7f0e0ffc
 
     .line 467
     invoke-static {v0, v1}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -1070,7 +1076,7 @@
 
     const-string v0, "Cancel"
 
-    const v1, 0x7f0e0331
+    const v1, 0x7f0e036d
 
     .line 471
     invoke-static {v0, v1}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -1107,7 +1113,7 @@
     .line 820
     iget-object v1, p0, Lorg/telegram/ui/LinkEditActivity;->dividerUses:Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
 
-    const v2, 0x7f07012d
+    const v2, 0x7f0700fc
 
     const-string v3, "windowBackgroundGrayShadow"
 
@@ -1120,7 +1126,7 @@
     .line 821
     iget-object v1, p0, Lorg/telegram/ui/LinkEditActivity;->divider:Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
 
-    const v4, 0x7f07012c
+    const v4, 0x7f0700fb
 
     invoke-static {v0, v4, v3}, Lorg/telegram/ui/ActionBar/Theme;->getThemedDrawable(Landroid/content/Context;ILjava/lang/String;)Landroid/graphics/drawable/Drawable;
 
@@ -2012,7 +2018,7 @@
 .end method
 
 .method private resetDates()V
-    .registers 5
+    .registers 6
 
     .line 744
     iget-object v0, p0, Lorg/telegram/ui/LinkEditActivity;->dispalyedDates:Ljava/util/ArrayList;
@@ -2051,36 +2057,42 @@
 
     new-array v1, v1, [Ljava/lang/String;
 
-    const-string v2, "Hours"
+    new-array v2, v0, [Ljava/lang/Object;
 
-    const/4 v3, 0x1
+    const-string v3, "Hours"
+
+    const/4 v4, 0x1
 
     .line 748
-    invoke-static {v2, v3}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    invoke-static {v3, v4, v2}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v2
 
     aput-object v2, v1, v0
 
-    const-string v0, "Days"
+    new-array v2, v0, [Ljava/lang/Object;
 
-    invoke-static {v0, v3}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    const-string v3, "Days"
+
+    invoke-static {v3, v4, v2}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v2
+
+    aput-object v2, v1, v4
+
+    const/4 v2, 0x2
+
+    new-array v0, v0, [Ljava/lang/Object;
+
+    const-string v3, "Weeks"
+
+    invoke-static {v3, v4, v0}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
-    aput-object v0, v1, v3
+    aput-object v0, v1, v2
 
-    const/4 v0, 0x2
-
-    const-string v2, "Weeks"
-
-    invoke-static {v2, v3}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
-
-    move-result-object v2
-
-    aput-object v2, v1, v0
-
-    const v0, 0x7f0e0abc
+    const v0, 0x7f0e0b43
 
     const-string v2, "NoLimit"
 
@@ -2156,7 +2168,7 @@
 
     aput-object v2, v1, v0
 
-    const v0, 0x7f0e0abc
+    const v0, 0x7f0e0b43
 
     const-string v2, "NoLimit"
 
@@ -2251,12 +2263,12 @@
 
     if-eqz p1, :cond_3a
 
-    const p1, 0x7f07012c
+    const p1, 0x7f0700fb
 
     goto :goto_3d
 
     :cond_3a
-    const p1, 0x7f07012d
+    const p1, 0x7f0700fc
 
     :goto_3d
     const-string v2, "windowBackgroundGrayShadow"
@@ -2282,7 +2294,7 @@
     .line 96
     iget-object v2, v0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
-    const v3, 0x7f070140
+    const v3, 0x7f070109
 
     invoke-virtual {v2, v3}, Lorg/telegram/ui/ActionBar/ActionBar;->setBackButtonImage(I)V
 
@@ -2301,7 +2313,7 @@
     .line 99
     iget-object v2, v0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
-    const v4, 0x7f0e0a8c
+    const v4, 0x7f0e0b13
 
     const-string v5, "NewLink"
 
@@ -2319,7 +2331,7 @@
     .line 101
     iget-object v2, v0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
-    const v4, 0x7f0e060f
+    const v4, 0x7f0e0661
 
     const-string v5, "EditLink"
 
@@ -2381,7 +2393,7 @@
     .line 119
     iget-object v2, v0, Lorg/telegram/ui/LinkEditActivity;->createTextView:Landroid/widget/TextView;
 
-    const v5, 0x7f0e04e3
+    const v5, 0x7f0e0532
 
     const-string v6, "CreateLinkHeader"
 
@@ -2399,7 +2411,7 @@
     .line 121
     iget-object v2, v0, Lorg/telegram/ui/LinkEditActivity;->createTextView:Landroid/widget/TextView;
 
-    const v5, 0x7f0e0f5b
+    const v5, 0x7f0e1015
 
     const-string v6, "SaveLinkHeader"
 
@@ -2607,7 +2619,7 @@
     .line 280
     iget-object v5, v0, Lorg/telegram/ui/LinkEditActivity;->buttonTextView:Landroid/widget/TextView;
 
-    const v9, 0x7f0e04e2
+    const v9, 0x7f0e0531
 
     const-string v10, "CreateLink"
 
@@ -2625,7 +2637,7 @@
     .line 282
     iget-object v5, v0, Lorg/telegram/ui/LinkEditActivity;->buttonTextView:Landroid/widget/TextView;
 
-    const v9, 0x7f0e0f5a
+    const v9, 0x7f0e1014
 
     const-string v10, "SaveLink"
 
@@ -2688,7 +2700,7 @@
     .line 299
     iget-object v5, v0, Lorg/telegram/ui/LinkEditActivity;->approveCell:Lorg/telegram/ui/Cells/TextCheckCell;
 
-    const v9, 0x7f0e018a
+    const v9, 0x7f0e01bf
 
     const-string v11, "ApproveNewMembers"
 
@@ -2732,7 +2744,7 @@
 
     invoke-direct {v5, v1}, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;-><init>(Landroid/content/Context;)V
 
-    const v9, 0x7f07012c
+    const v9, 0x7f0700fb
 
     const-string v10, "windowBackgroundGrayShadow"
 
@@ -2743,7 +2755,7 @@
 
     invoke-virtual {v5, v11}, Landroid/widget/FrameLayout;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    const v11, 0x7f0e018b
+    const v11, 0x7f0e01c0
 
     const-string v12, "ApproveNewMembersDescription"
 
@@ -2764,7 +2776,7 @@
 
     iput-object v5, v0, Lorg/telegram/ui/LinkEditActivity;->timeHeaderCell:Lorg/telegram/ui/Cells/HeaderCell;
 
-    const v11, 0x7f0e0929
+    const v11, 0x7f0e0995
 
     const-string v12, "LimitByPeriod"
 
@@ -2825,7 +2837,7 @@
     .line 325
     iget-object v5, v0, Lorg/telegram/ui/LinkEditActivity;->timeEditText:Landroid/widget/TextView;
 
-    const v13, 0x7f0e1198
+    const v13, 0x7f0e1264
 
     const-string v14, "TimeLimitHint"
 
@@ -2874,7 +2886,7 @@
 
     iput-object v5, v0, Lorg/telegram/ui/LinkEditActivity;->divider:Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
 
-    const v14, 0x7f0e1197
+    const v14, 0x7f0e1263
 
     const-string v15, "TimeLimitHelp"
 
@@ -2897,7 +2909,7 @@
 
     iput-object v5, v0, Lorg/telegram/ui/LinkEditActivity;->usesHeaderCell:Lorg/telegram/ui/Cells/HeaderCell;
 
-    const v14, 0x7f0e092a
+    const v14, 0x7f0e0997
 
     const-string v15, "LimitNumberOfUses"
 
@@ -2966,7 +2978,7 @@
     .line 372
     iget-object v5, v0, Lorg/telegram/ui/LinkEditActivity;->usesEditText:Landroid/widget/EditText;
 
-    const v14, 0x7f0e1271
+    const v14, 0x7f0e133e
 
     const-string v15, "UsesLimitHint"
 
@@ -3019,7 +3031,7 @@
 
     iput-object v5, v0, Lorg/telegram/ui/LinkEditActivity;->dividerUses:Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
 
-    const v14, 0x7f0e1270
+    const v14, 0x7f0e133d
 
     const-string v15, "UsesLimitHelp"
 
@@ -3077,7 +3089,7 @@
     .line 444
     iget-object v4, v0, Lorg/telegram/ui/LinkEditActivity;->nameEditText:Landroid/widget/EditText;
 
-    const v5, 0x7f0e0946
+    const v5, 0x7f0e09cd
 
     const-string v9, "LinkNameHint"
 
@@ -3153,7 +3165,7 @@
 
     iput-object v4, v0, Lorg/telegram/ui/LinkEditActivity;->dividerName:Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
 
-    const v11, 0x7f07012d
+    const v11, 0x7f0700fc
 
     .line 454
     invoke-static {v1, v11, v10}, Lorg/telegram/ui/ActionBar/Theme;->getThemedDrawable(Landroid/content/Context;ILjava/lang/String;)Landroid/graphics/drawable/Drawable;
@@ -3165,7 +3177,7 @@
     .line 455
     iget-object v4, v0, Lorg/telegram/ui/LinkEditActivity;->dividerName:Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
 
-    const v12, 0x7f0e0945
+    const v12, 0x7f0e09cc
 
     const-string v13, "LinkNameHelp"
 
@@ -3204,7 +3216,7 @@
     .line 461
     iget-object v3, v0, Lorg/telegram/ui/LinkEditActivity;->revokeLink:Lorg/telegram/ui/Cells/TextSettingsCell;
 
-    const v4, 0x7f0e0f4d
+    const v4, 0x7f0e0ffd
 
     const-string v13, "RevokeLink"
 
@@ -3378,7 +3390,7 @@
     .line 494
     iget-object v3, v0, Lorg/telegram/ui/LinkEditActivity;->divider:Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
 
-    const v4, 0x7f07012c
+    const v4, 0x7f0700fb
 
     invoke-static {v1, v4, v10}, Lorg/telegram/ui/ActionBar/Theme;->getThemedDrawable(Landroid/content/Context;ILjava/lang/String;)Landroid/graphics/drawable/Drawable;
 

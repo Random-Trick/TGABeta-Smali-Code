@@ -24,7 +24,7 @@
 .method constructor <init>(Lorg/telegram/ui/LaunchActivity;II)V
     .registers 4
 
-    .line 617
+    .line 643
     iput-object p1, p0, Lorg/telegram/ui/LaunchActivity$7;->this$0:Lorg/telegram/ui/LaunchActivity;
 
     invoke-direct {p0, p2, p3}, Landroidx/recyclerview/widget/ItemTouchHelper$SimpleCallback;-><init>(II)V
@@ -35,28 +35,28 @@
 .method private clearSelectedViewHolder()V
     .registers 5
 
-    .line 659
+    .line 685
     iget-object v0, p0, Lorg/telegram/ui/LaunchActivity$7;->selectedViewHolder:Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
 
     if-eqz v0, :cond_33
 
-    .line 660
+    .line 686
     iget-object v0, v0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     const/4 v1, 0x0
 
-    .line 661
+    .line 687
     iput-object v1, p0, Lorg/telegram/ui/LaunchActivity$7;->selectedViewHolder:Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
 
     const/4 v1, 0x0
 
-    .line 662
+    .line 688
     invoke-virtual {v0, v1}, Landroid/view/View;->setTranslationX(F)V
 
-    .line 663
+    .line 689
     invoke-virtual {v0, v1}, Landroid/view/View;->setTranslationY(F)V
 
-    .line 664
+    .line 690
     sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v3, 0x15
@@ -73,12 +73,12 @@
 
     const-string v1, "elevation"
 
-    .line 665
+    .line 691
     invoke-static {v0, v1, v2}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Ljava/lang/String;[F)Landroid/animation/ObjectAnimator;
 
     move-result-object v1
 
-    .line 666
+    .line 692
     new-instance v2, Lorg/telegram/ui/LaunchActivity$7$1;
 
     invoke-direct {v2, p0, v0}, Lorg/telegram/ui/LaunchActivity$7$1;-><init>(Lorg/telegram/ui/LaunchActivity$7;Landroid/view/View;)V
@@ -87,7 +87,7 @@
 
     const-wide/16 v2, 0x96
 
-    .line 672
+    .line 698
     invoke-virtual {v1, v2, v3}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
     move-result-object v0
@@ -103,7 +103,7 @@
 .method public clearView(Landroidx/recyclerview/widget/RecyclerView;Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
     .registers 3
 
-    .line 655
+    .line 681
     invoke-direct {p0}, Lorg/telegram/ui/LaunchActivity$7;->clearSelectedViewHolder()V
 
     return-void
@@ -120,10 +120,10 @@
 .method public onChildDraw(Landroid/graphics/Canvas;Landroidx/recyclerview/widget/RecyclerView;Landroidx/recyclerview/widget/RecyclerView$ViewHolder;FFIZ)V
     .registers 8
 
-    .line 679
+    .line 705
     iget-object p1, p3, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    .line 680
+    .line 706
     iget-object p3, p0, Lorg/telegram/ui/LaunchActivity$7;->this$0:Lorg/telegram/ui/LaunchActivity;
 
     invoke-static {p3}, Lorg/telegram/ui/LaunchActivity;->access$900(Lorg/telegram/ui/LaunchActivity;)Lorg/telegram/ui/Adapters/DrawerLayoutAdapter;
@@ -138,7 +138,7 @@
 
     if-eqz p3, :cond_5a
 
-    .line 681
+    .line 707
     iget-object p3, p0, Lorg/telegram/ui/LaunchActivity$7;->this$0:Lorg/telegram/ui/LaunchActivity;
 
     invoke-static {p3}, Lorg/telegram/ui/LaunchActivity;->access$900(Lorg/telegram/ui/LaunchActivity;)Lorg/telegram/ui/Adapters/DrawerLayoutAdapter;
@@ -155,7 +155,7 @@
 
     move-result-object p3
 
-    .line 682
+    .line 708
     iget-object p7, p0, Lorg/telegram/ui/LaunchActivity$7;->this$0:Lorg/telegram/ui/LaunchActivity;
 
     invoke-static {p7}, Lorg/telegram/ui/LaunchActivity;->access$900(Lorg/telegram/ui/LaunchActivity;)Lorg/telegram/ui/Adapters/DrawerLayoutAdapter;
@@ -174,7 +174,7 @@
 
     if-eqz p3, :cond_45
 
-    .line 683
+    .line 709
     iget-object p3, p3, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     if-eqz p3, :cond_45
@@ -201,7 +201,7 @@
     :cond_45
     if-eqz p2, :cond_5a
 
-    .line 685
+    .line 711
     iget-object p2, p2, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     if-eqz p2, :cond_5a
@@ -222,12 +222,12 @@
 
     goto :goto_43
 
-    .line 689
+    .line 715
     :cond_5a
     :goto_5a
     invoke-virtual {p1, p4}, Landroid/view/View;->setTranslationX(F)V
 
-    .line 690
+    .line 716
     invoke-virtual {p1, p5}, Landroid/view/View;->setTranslationY(F)V
 
     return-void
@@ -236,7 +236,7 @@
 .method public onMove(Landroidx/recyclerview/widget/RecyclerView;Landroidx/recyclerview/widget/RecyclerView$ViewHolder;Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)Z
     .registers 5
 
-    .line 623
+    .line 649
     invoke-virtual {p2}, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->getItemViewType()I
 
     move-result p1
@@ -251,7 +251,7 @@
 
     return p1
 
-    .line 626
+    .line 652
     :cond_c
     iget-object p1, p0, Lorg/telegram/ui/LaunchActivity$7;->this$0:Lorg/telegram/ui/LaunchActivity;
 
@@ -277,18 +277,18 @@
 .method public onSelectedChanged(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;I)V
     .registers 5
 
-    .line 641
+    .line 667
     invoke-direct {p0}, Lorg/telegram/ui/LaunchActivity$7;->clearSelectedViewHolder()V
 
     if-eqz p2, :cond_3d
 
-    .line 643
+    .line 669
     iput-object p1, p0, Lorg/telegram/ui/LaunchActivity$7;->selectedViewHolder:Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
 
-    .line 644
+    .line 670
     iget-object p1, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    .line 645
+    .line 671
     iget-object p2, p0, Lorg/telegram/ui/LaunchActivity$7;->this$0:Lorg/telegram/ui/LaunchActivity;
 
     invoke-static {p2}, Lorg/telegram/ui/LaunchActivity;->access$1000(Lorg/telegram/ui/LaunchActivity;)Lorg/telegram/ui/Components/RecyclerListView;
@@ -301,14 +301,14 @@
 
     const-string p2, "dialogBackground"
 
-    .line 646
+    .line 672
     invoke-static {p2}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
 
     move-result p2
 
     invoke-virtual {p1, p2}, Landroid/view/View;->setBackgroundColor(I)V
 
-    .line 647
+    .line 673
     sget p2, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x15
@@ -321,7 +321,7 @@
 
     const/high16 v1, 0x3f800000    # 1.0f
 
-    .line 648
+    .line 674
     invoke-static {v1}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v1

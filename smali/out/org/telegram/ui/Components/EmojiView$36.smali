@@ -30,7 +30,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/EmojiView;)V
     .registers 2
 
-    .line 3897
+    .line 3951
     iput-object p1, p0, Lorg/telegram/ui/Components/EmojiView$36;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -41,7 +41,7 @@
 .method private synthetic lambda$onAnimationEnd$0()V
     .registers 8
 
-    .line 3901
+    .line 3955
     iget-object v0, p0, Lorg/telegram/ui/Components/EmojiView$36;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/EmojiView;->access$12400(Lorg/telegram/ui/Components/EmojiView;)Landroid/widget/TextView;
@@ -52,7 +52,7 @@
 
     return-void
 
-    .line 3904
+    .line 3958
     :cond_9
     new-instance v0, Landroid/animation/AnimatorSet;
 
@@ -62,10 +62,10 @@
 
     new-array v2, v1, [Landroid/animation/Animator;
 
-    .line 3905
+    .line 3959
     iget-object v3, p0, Lorg/telegram/ui/Components/EmojiView$36;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
-    .line 3906
+    .line 3960
     invoke-static {v3}, Lorg/telegram/ui/Components/EmojiView;->access$12400(Lorg/telegram/ui/Components/EmojiView;)Landroid/widget/TextView;
 
     move-result-object v3
@@ -86,10 +86,10 @@
 
     aput-object v1, v2, v6
 
-    .line 3905
+    .line 3959
     invoke-virtual {v0, v2}, Landroid/animation/AnimatorSet;->playTogether([Landroid/animation/Animator;)V
 
-    .line 3908
+    .line 3962
     new-instance v1, Lorg/telegram/ui/Components/EmojiView$36$1;
 
     invoke-direct {v1, p0}, Lorg/telegram/ui/Components/EmojiView$36$1;-><init>(Lorg/telegram/ui/Components/EmojiView$36;)V
@@ -98,10 +98,10 @@
 
     const-wide/16 v1, 0x12c
 
-    .line 3916
+    .line 3970
     invoke-virtual {v0, v1, v2}, Landroid/animation/AnimatorSet;->setDuration(J)Landroid/animation/AnimatorSet;
 
-    .line 3917
+    .line 3971
     invoke-virtual {v0}, Landroid/animation/AnimatorSet;->start()V
 
     return-void
@@ -112,7 +112,7 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .registers 4
 
-    .line 3900
+    .line 3954
     new-instance p1, Lorg/telegram/ui/Components/EmojiView$36$$ExternalSyntheticLambda0;
 
     invoke-direct {p1, p0}, Lorg/telegram/ui/Components/EmojiView$36$$ExternalSyntheticLambda0;-><init>(Lorg/telegram/ui/Components/EmojiView$36;)V

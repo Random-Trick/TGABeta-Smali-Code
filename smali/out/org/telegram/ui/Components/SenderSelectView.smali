@@ -83,7 +83,7 @@
 .method static constructor <clinit>()V
     .registers 4
 
-    .line 28
+    .line 33
     new-instance v0, Lorg/telegram/ui/Components/SimpleFloatPropertyCompat;
 
     sget-object v1, Lorg/telegram/ui/Components/SenderSelectView$$ExternalSyntheticLambda3;->INSTANCE:Lorg/telegram/ui/Components/SenderSelectView$$ExternalSyntheticLambda3;
@@ -96,7 +96,7 @@
 
     const/high16 v1, 0x42c80000    # 100.0f
 
-    .line 31
+    .line 36
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/SimpleFloatPropertyCompat;->setMultiplier(F)Lorg/telegram/ui/Components/SimpleFloatPropertyCompat;
 
     move-result-object v0
@@ -107,26 +107,26 @@
 .end method
 
 .method public constructor <init>(Landroid/content/Context;)V
-    .registers 3
+    .registers 4
 
-    .line 46
+    .line 51
     invoke-direct {p0, p1}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
-    .line 33
+    .line 38
     new-instance p1, Lorg/telegram/messenger/ImageReceiver;
 
     invoke-direct {p1, p0}, Lorg/telegram/messenger/ImageReceiver;-><init>(Landroid/view/View;)V
 
     iput-object p1, p0, Lorg/telegram/ui/Components/SenderSelectView;->avatarImage:Lorg/telegram/messenger/ImageReceiver;
 
-    .line 34
+    .line 39
     new-instance p1, Lorg/telegram/ui/Components/AvatarDrawable;
 
     invoke-direct {p1}, Lorg/telegram/ui/Components/AvatarDrawable;-><init>()V
 
     iput-object p1, p0, Lorg/telegram/ui/Components/SenderSelectView;->avatarDrawable:Lorg/telegram/ui/Components/AvatarDrawable;
 
-    .line 36
+    .line 41
     new-instance p1, Landroid/graphics/Paint;
 
     const/4 v0, 0x1
@@ -135,53 +135,72 @@
 
     iput-object p1, p0, Lorg/telegram/ui/Components/SenderSelectView;->backgroundPaint:Landroid/graphics/Paint;
 
-    .line 37
+    .line 42
     new-instance p1, Landroid/graphics/Paint;
 
     invoke-direct {p1, v0}, Landroid/graphics/Paint;-><init>(I)V
 
     iput-object p1, p0, Lorg/telegram/ui/Components/SenderSelectView;->menuPaint:Landroid/graphics/Paint;
 
-    .line 47
+    .line 52
     iget-object p1, p0, Lorg/telegram/ui/Components/SenderSelectView;->avatarImage:Lorg/telegram/messenger/ImageReceiver;
 
-    const/high16 v0, 0x41e00000    # 28.0f
+    const/high16 v1, 0x41e00000    # 28.0f
 
-    invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
+    invoke-static {v1}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
-    move-result v0
+    move-result v1
 
-    invoke-virtual {p1, v0}, Lorg/telegram/messenger/ImageReceiver;->setRoundRadius(I)V
+    invoke-virtual {p1, v1}, Lorg/telegram/messenger/ImageReceiver;->setRoundRadius(I)V
 
-    .line 48
+    .line 53
     iget-object p1, p0, Lorg/telegram/ui/Components/SenderSelectView;->menuPaint:Landroid/graphics/Paint;
 
-    const/high16 v0, 0x40000000    # 2.0f
+    const/high16 v1, 0x40000000    # 2.0f
 
-    invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
+    invoke-static {v1}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
-    move-result v0
+    move-result v1
 
-    int-to-float v0, v0
+    int-to-float v1, v1
 
-    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setStrokeWidth(F)V
+    invoke-virtual {p1, v1}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
-    .line 49
+    .line 54
     iget-object p1, p0, Lorg/telegram/ui/Components/SenderSelectView;->menuPaint:Landroid/graphics/Paint;
 
-    sget-object v0, Landroid/graphics/Paint$Cap;->ROUND:Landroid/graphics/Paint$Cap;
+    sget-object v1, Landroid/graphics/Paint$Cap;->ROUND:Landroid/graphics/Paint$Cap;
 
-    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setStrokeCap(Landroid/graphics/Paint$Cap;)V
+    invoke-virtual {p1, v1}, Landroid/graphics/Paint;->setStrokeCap(Landroid/graphics/Paint$Cap;)V
 
-    .line 50
+    .line 55
     iget-object p1, p0, Lorg/telegram/ui/Components/SenderSelectView;->menuPaint:Landroid/graphics/Paint;
 
-    sget-object v0, Landroid/graphics/Paint$Style;->STROKE:Landroid/graphics/Paint$Style;
+    sget-object v1, Landroid/graphics/Paint$Style;->STROKE:Landroid/graphics/Paint$Style;
 
-    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
+    invoke-virtual {p1, v1}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
-    .line 51
+    .line 56
     invoke-direct {p0}, Lorg/telegram/ui/Components/SenderSelectView;->updateColors()V
+
+    new-array p1, v0, [Ljava/lang/Object;
+
+    const/4 v0, 0x0
+
+    const-string v1, ""
+
+    aput-object v1, p1, v0
+
+    const-string v0, "AccDescrSendAsPeer"
+
+    const v1, 0x7f0e007f
+
+    .line 57
+    invoke-static {v0, v1, p1}, Lorg/telegram/messenger/LocaleController;->formatString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {p0, p1}, Landroid/view/View;->setContentDescription(Ljava/lang/CharSequence;)V
 
     return-void
 .end method
@@ -189,7 +208,7 @@
 .method static synthetic access$000(Lorg/telegram/ui/Components/SenderSelectView;)Landroid/animation/ValueAnimator;
     .registers 1
 
-    .line 26
+    .line 31
     iget-object p0, p0, Lorg/telegram/ui/Components/SenderSelectView;->menuAnimator:Landroid/animation/ValueAnimator;
 
     return-object p0
@@ -198,7 +217,7 @@
 .method static synthetic access$002(Lorg/telegram/ui/Components/SenderSelectView;Landroid/animation/ValueAnimator;)Landroid/animation/ValueAnimator;
     .registers 2
 
-    .line 26
+    .line 31
     iput-object p1, p0, Lorg/telegram/ui/Components/SenderSelectView;->menuAnimator:Landroid/animation/ValueAnimator;
 
     return-object p1
@@ -217,7 +236,7 @@
 
     if-gtz p2, :cond_1d
 
-    .line 173
+    .line 188
     iget-boolean p2, p0, Lorg/telegram/ui/Components/SenderSelectView;->scaleIn:Z
 
     if-eqz p2, :cond_1d
@@ -238,10 +257,10 @@
     :goto_17
     xor-int/lit8 p2, p1, 0x1
 
-    .line 174
+    .line 189
     iput-boolean p2, p0, Lorg/telegram/ui/Components/SenderSelectView;->scaleIn:Z
 
-    .line 175
+    .line 190
     iput-boolean p1, p0, Lorg/telegram/ui/Components/SenderSelectView;->scaleOut:Z
 
     :cond_1d
@@ -253,18 +272,18 @@
 
     const/4 p3, 0x0
 
-    .line 179
+    .line 194
     iput-boolean p3, p0, Lorg/telegram/ui/Components/SenderSelectView;->scaleIn:Z
 
-    .line 180
+    .line 195
     iput-boolean p3, p0, Lorg/telegram/ui/Components/SenderSelectView;->scaleOut:Z
 
     if-nez p2, :cond_a
 
-    .line 183
+    .line 198
     invoke-virtual {p1}, Landroidx/dynamicanimation/animation/DynamicAnimation;->cancel()V
 
-    .line 185
+    .line 200
     :cond_a
     iget-object p2, p0, Lorg/telegram/ui/Components/SenderSelectView;->menuSpring:Landroidx/dynamicanimation/animation/SpringAnimation;
 
@@ -272,7 +291,7 @@
 
     const/4 p1, 0x0
 
-    .line 186
+    .line 201
     iput-object p1, p0, Lorg/telegram/ui/Components/SenderSelectView;->menuSpring:Landroidx/dynamicanimation/animation/SpringAnimation;
 
     :cond_11
@@ -282,7 +301,7 @@
 .method private synthetic lambda$setProgress$4(Landroid/animation/ValueAnimator;)V
     .registers 2
 
-    .line 194
+    .line 209
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
     move-result-object p1
@@ -295,7 +314,7 @@
 
     iput p1, p0, Lorg/telegram/ui/Components/SenderSelectView;->menuProgress:F
 
-    .line 195
+    .line 210
     invoke-virtual {p0}, Landroid/view/View;->invalidate()V
 
     return-void
@@ -304,7 +323,7 @@
 .method private static synthetic lambda$static$0(Lorg/telegram/ui/Components/SenderSelectView;)F
     .registers 1
 
-    .line 28
+    .line 33
     iget p0, p0, Lorg/telegram/ui/Components/SenderSelectView;->menuProgress:F
 
     return p0
@@ -313,10 +332,10 @@
 .method private static synthetic lambda$static$1(Lorg/telegram/ui/Components/SenderSelectView;F)V
     .registers 2
 
-    .line 29
+    .line 34
     iput p1, p0, Lorg/telegram/ui/Components/SenderSelectView;->menuProgress:F
 
-    .line 30
+    .line 35
     invoke-virtual {p0}, Landroid/view/View;->invalidate()V
 
     return-void
@@ -325,7 +344,7 @@
 .method private updateColors()V
     .registers 4
 
-    .line 55
+    .line 61
     iget-object v0, p0, Lorg/telegram/ui/Components/SenderSelectView;->backgroundPaint:Landroid/graphics/Paint;
 
     const-string v1, "chat_messagePanelVoiceBackground"
@@ -336,7 +355,7 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 56
+    .line 62
     iget-object v0, p0, Lorg/telegram/ui/Components/SenderSelectView;->menuPaint:Landroid/graphics/Paint;
 
     const-string v1, "chat_messagePanelVoicePressed"
@@ -349,7 +368,7 @@
 
     const/high16 v0, 0x41800000    # 16.0f
 
-    .line 57
+    .line 63
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v0
@@ -368,7 +387,7 @@
 
     iput-object v0, p0, Lorg/telegram/ui/Components/SenderSelectView;->selectorDrawable:Landroid/graphics/drawable/Drawable;
 
-    .line 58
+    .line 64
     invoke-virtual {v0, p0}, Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
 
     return-void
@@ -379,10 +398,10 @@
 .method protected drawableStateChanged()V
     .registers 3
 
-    .line 227
+    .line 242
     invoke-super {p0}, Landroid/view/View;->drawableStateChanged()V
 
-    .line 228
+    .line 243
     iget-object v0, p0, Lorg/telegram/ui/Components/SenderSelectView;->selectorDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {p0}, Landroid/view/View;->getDrawableState()[I
@@ -397,7 +416,7 @@
 .method public getProgress()F
     .registers 2
 
-    .line 217
+    .line 232
     iget v0, p0, Lorg/telegram/ui/Components/SenderSelectView;->menuProgress:F
 
     return v0
@@ -406,10 +425,10 @@
 .method public jumpDrawablesToCurrentState()V
     .registers 2
 
-    .line 233
+    .line 248
     invoke-super {p0}, Landroid/view/View;->jumpDrawablesToCurrentState()V
 
-    .line 234
+    .line 249
     iget-object v0, p0, Lorg/telegram/ui/Components/SenderSelectView;->selectorDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->jumpToCurrentState()V
@@ -420,10 +439,10 @@
 .method protected onAttachedToWindow()V
     .registers 2
 
-    .line 63
+    .line 69
     invoke-super {p0}, Landroid/view/View;->onAttachedToWindow()V
 
-    .line 65
+    .line 71
     iget-object v0, p0, Lorg/telegram/ui/Components/SenderSelectView;->avatarImage:Lorg/telegram/messenger/ImageReceiver;
 
     invoke-virtual {v0}, Lorg/telegram/messenger/ImageReceiver;->onAttachedToWindow()Z
@@ -434,10 +453,10 @@
 .method protected onDetachedFromWindow()V
     .registers 2
 
-    .line 70
+    .line 76
     invoke-super {p0}, Landroid/view/View;->onDetachedFromWindow()V
 
-    .line 72
+    .line 78
     iget-object v0, p0, Lorg/telegram/ui/Components/SenderSelectView;->avatarImage:Lorg/telegram/messenger/ImageReceiver;
 
     invoke-virtual {v0}, Lorg/telegram/messenger/ImageReceiver;->onDetachedFromWindow()V
@@ -448,33 +467,33 @@
 .method protected onDraw(Landroid/graphics/Canvas;)V
     .registers 10
 
-    .line 83
+    .line 89
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 85
+    .line 91
     iget-boolean v0, p0, Lorg/telegram/ui/Components/SenderSelectView;->scaleOut:Z
 
     const/high16 v1, 0x3f800000    # 1.0f
 
     if-eqz v0, :cond_d
 
-    .line 86
+    .line 92
     iget v0, p0, Lorg/telegram/ui/Components/SenderSelectView;->menuProgress:F
 
     sub-float/2addr v1, v0
 
     goto :goto_13
 
-    .line 87
+    .line 93
     :cond_d
     iget-boolean v0, p0, Lorg/telegram/ui/Components/SenderSelectView;->scaleIn:Z
 
     if-eqz v0, :cond_13
 
-    .line 88
+    .line 94
     iget v1, p0, Lorg/telegram/ui/Components/SenderSelectView;->menuProgress:F
 
-    .line 92
+    .line 98
     :cond_13
     :goto_13
     invoke-virtual {p0}, Landroid/view/View;->getWidth()I
@@ -497,15 +516,15 @@
 
     invoke-virtual {p1, v1, v1, v0, v3}, Landroid/graphics/Canvas;->scale(FFFF)V
 
-    .line 94
+    .line 100
     invoke-super {p0, p1}, Landroid/view/View;->onDraw(Landroid/graphics/Canvas;)V
 
-    .line 96
+    .line 102
     iget-object v0, p0, Lorg/telegram/ui/Components/SenderSelectView;->avatarImage:Lorg/telegram/messenger/ImageReceiver;
 
     invoke-virtual {v0, p1}, Lorg/telegram/messenger/ImageReceiver;->draw(Landroid/graphics/Canvas;)Z
 
-    .line 98
+    .line 104
     iget v0, p0, Lorg/telegram/ui/Components/SenderSelectView;->menuProgress:F
 
     const/high16 v1, 0x437f0000    # 255.0f
@@ -514,12 +533,12 @@
 
     float-to-int v0, v0
 
-    .line 99
+    .line 105
     iget-object v1, p0, Lorg/telegram/ui/Components/SenderSelectView;->backgroundPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v1, v0}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 100
+    .line 106
     invoke-virtual {p0}, Landroid/view/View;->getWidth()I
 
     move-result v1
@@ -556,17 +575,17 @@
 
     invoke-virtual {p1, v1, v3, v4, v2}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
 
-    .line 102
+    .line 108
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 103
+    .line 109
     iget-object v1, p0, Lorg/telegram/ui/Components/SenderSelectView;->menuPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v1, v0}, Landroid/graphics/Paint;->setAlpha(I)V
 
     const/high16 v0, 0x41100000    # 9.0f
 
-    .line 104
+    .line 110
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v0
@@ -581,7 +600,7 @@
 
     add-float/2addr v0, v1
 
-    .line 105
+    .line 111
     invoke-virtual {p0}, Landroid/view/View;->getWidth()I
 
     move-result v1
@@ -608,7 +627,7 @@
 
     invoke-virtual/range {v2 .. v7}, Landroid/graphics/Canvas;->drawLine(FFFFLandroid/graphics/Paint;)V
 
-    .line 106
+    .line 112
     invoke-virtual {p0}, Landroid/view/View;->getHeight()I
 
     move-result v1
@@ -631,10 +650,10 @@
 
     invoke-virtual/range {v2 .. v7}, Landroid/graphics/Canvas;->drawLine(FFFFLandroid/graphics/Paint;)V
 
-    .line 107
+    .line 113
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
-    .line 109
+    .line 115
     iget-object v0, p0, Lorg/telegram/ui/Components/SenderSelectView;->selectorDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {p0}, Landroid/view/View;->getWidth()I
@@ -649,12 +668,12 @@
 
     invoke-virtual {v0, v3, v3, v1, v2}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 110
+    .line 116
     iget-object v0, p0, Lorg/telegram/ui/Components/SenderSelectView;->selectorDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 112
+    .line 118
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
     return-void
@@ -663,7 +682,7 @@
 .method protected onMeasure(II)V
     .registers 5
 
-    .line 77
+    .line 83
     invoke-virtual {p0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object p1
@@ -688,7 +707,7 @@
 
     invoke-super {p0, p1, p2}, Landroid/view/View;->onMeasure(II)V
 
-    .line 78
+    .line 84
     iget-object p1, p0, Lorg/telegram/ui/Components/SenderSelectView;->avatarImage:Lorg/telegram/messenger/ImageReceiver;
 
     invoke-virtual {p0}, Landroid/view/View;->getMeasuredWidth()I
@@ -711,14 +730,83 @@
 .end method
 
 .method public setAvatar(Lorg/telegram/tgnet/TLObject;)V
-    .registers 4
+    .registers 6
 
-    .line 120
+    .line 127
+    instance-of v0, p1, Lorg/telegram/tgnet/TLRPC$User;
+
+    if-eqz v0, :cond_c
+
+    .line 128
+    move-object v0, p1
+
+    check-cast v0, Lorg/telegram/tgnet/TLRPC$User;
+
+    invoke-static {v0}, Lorg/telegram/messenger/UserObject;->getFirstName(Lorg/telegram/tgnet/TLRPC$User;)Ljava/lang/String;
+
+    move-result-object v0
+
+    goto :goto_22
+
+    .line 129
+    :cond_c
+    instance-of v0, p1, Lorg/telegram/tgnet/TLRPC$Chat;
+
+    if-eqz v0, :cond_16
+
+    .line 130
+    move-object v0, p1
+
+    check-cast v0, Lorg/telegram/tgnet/TLRPC$Chat;
+
+    iget-object v0, v0, Lorg/telegram/tgnet/TLRPC$Chat;->title:Ljava/lang/String;
+
+    goto :goto_22
+
+    .line 131
+    :cond_16
+    instance-of v0, p1, Lorg/telegram/tgnet/TLRPC$ChatInvite;
+
+    if-eqz v0, :cond_20
+
+    .line 132
+    move-object v0, p1
+
+    check-cast v0, Lorg/telegram/tgnet/TLRPC$ChatInvite;
+
+    iget-object v0, v0, Lorg/telegram/tgnet/TLRPC$ChatInvite;->title:Ljava/lang/String;
+
+    goto :goto_22
+
+    :cond_20
+    const-string v0, ""
+
+    :goto_22
+    const v1, 0x7f0e007f
+
+    const/4 v2, 0x1
+
+    new-array v2, v2, [Ljava/lang/Object;
+
+    const/4 v3, 0x0
+
+    aput-object v0, v2, v3
+
+    const-string v0, "AccDescrSendAsPeer"
+
+    .line 134
+    invoke-static {v0, v1, v2}, Lorg/telegram/messenger/LocaleController;->formatString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Landroid/view/View;->setContentDescription(Ljava/lang/CharSequence;)V
+
+    .line 135
     iget-object v0, p0, Lorg/telegram/ui/Components/SenderSelectView;->avatarDrawable:Lorg/telegram/ui/Components/AvatarDrawable;
 
     invoke-virtual {v0, p1}, Lorg/telegram/ui/Components/AvatarDrawable;->setInfo(Lorg/telegram/tgnet/TLObject;)V
 
-    .line 121
+    .line 136
     iget-object v0, p0, Lorg/telegram/ui/Components/SenderSelectView;->avatarImage:Lorg/telegram/messenger/ImageReceiver;
 
     iget-object v1, p0, Lorg/telegram/ui/Components/SenderSelectView;->avatarDrawable:Lorg/telegram/ui/Components/AvatarDrawable;
@@ -733,7 +821,7 @@
 
     const/4 v0, 0x1
 
-    .line 129
+    .line 144
     invoke-virtual {p0, p1, v0}, Lorg/telegram/ui/Components/SenderSelectView;->setProgress(FZ)V
 
     return-void
@@ -755,7 +843,7 @@
     :cond_7
     const/4 v0, 0x0
 
-    .line 138
+    .line 153
     :goto_8
     invoke-virtual {p0, p1, p2, v0}, Lorg/telegram/ui/Components/SenderSelectView;->setProgress(FZZ)V
 
@@ -767,44 +855,44 @@
 
     if-eqz p2, :cond_a2
 
-    .line 149
+    .line 164
     iget-object p2, p0, Lorg/telegram/ui/Components/SenderSelectView;->menuSpring:Landroidx/dynamicanimation/animation/SpringAnimation;
 
     if-eqz p2, :cond_9
 
-    .line 150
+    .line 165
     invoke-virtual {p2}, Landroidx/dynamicanimation/animation/DynamicAnimation;->cancel()V
 
-    .line 152
+    .line 167
     :cond_9
     iget-object p2, p0, Lorg/telegram/ui/Components/SenderSelectView;->menuAnimator:Landroid/animation/ValueAnimator;
 
     if-eqz p2, :cond_10
 
-    .line 153
+    .line 168
     invoke-virtual {p2}, Landroid/animation/ValueAnimator;->cancel()V
 
     :cond_10
     const/4 p2, 0x0
 
-    .line 155
+    .line 170
     iput-boolean p2, p0, Lorg/telegram/ui/Components/SenderSelectView;->scaleIn:Z
 
-    .line 156
+    .line 171
     iput-boolean p2, p0, Lorg/telegram/ui/Components/SenderSelectView;->scaleOut:Z
 
     const/4 v0, 0x1
 
     if-eqz p3, :cond_6e
 
-    .line 160
+    .line 175
     iget p3, p0, Lorg/telegram/ui/Components/SenderSelectView;->menuProgress:F
 
     const/high16 v1, 0x42c80000    # 100.0f
 
     mul-float p3, p3, v1
 
-    .line 161
+    .line 176
     new-instance v2, Landroidx/dynamicanimation/animation/SpringAnimation;
 
     sget-object v3, Lorg/telegram/ui/Components/SenderSelectView;->MENU_PROGRESS:Landroidx/dynamicanimation/animation/FloatPropertyCompat;
@@ -819,7 +907,7 @@
 
     iput-object v2, p0, Lorg/telegram/ui/Components/SenderSelectView;->menuSpring:Landroidx/dynamicanimation/animation/SpringAnimation;
 
-    .line 162
+    .line 177
     iget v3, p0, Lorg/telegram/ui/Components/SenderSelectView;->menuProgress:F
 
     cmpg-float v3, p1, v3
@@ -831,42 +919,42 @@
     :cond_34
     mul-float p1, p1, v1
 
-    .line 165
+    .line 180
     iput-boolean p2, p0, Lorg/telegram/ui/Components/SenderSelectView;->scaleIn:Z
 
     xor-int/lit8 v0, p2, 0x1
 
-    .line 166
+    .line 181
     iput-boolean v0, p0, Lorg/telegram/ui/Components/SenderSelectView;->scaleOut:Z
 
-    .line 168
+    .line 183
     new-instance v0, Landroidx/dynamicanimation/animation/SpringForce;
 
     invoke-direct {v0, p1}, Landroidx/dynamicanimation/animation/SpringForce;-><init>(F)V
 
-    .line 169
+    .line 184
     invoke-virtual {v0, p1}, Landroidx/dynamicanimation/animation/SpringForce;->setFinalPosition(F)Landroidx/dynamicanimation/animation/SpringForce;
 
     move-result-object v0
 
     const/high16 v1, 0x43e10000    # 450.0f
 
-    .line 170
+    .line 185
     invoke-virtual {v0, v1}, Landroidx/dynamicanimation/animation/SpringForce;->setStiffness(F)Landroidx/dynamicanimation/animation/SpringForce;
 
     move-result-object v0
 
     const/high16 v1, 0x3f800000    # 1.0f
 
-    .line 171
+    .line 186
     invoke-virtual {v0, v1}, Landroidx/dynamicanimation/animation/SpringForce;->setDampingRatio(F)Landroidx/dynamicanimation/animation/SpringForce;
 
     move-result-object v0
 
-    .line 168
+    .line 183
     invoke-virtual {v2, v0}, Landroidx/dynamicanimation/animation/SpringAnimation;->setSpring(Landroidx/dynamicanimation/animation/SpringForce;)Landroidx/dynamicanimation/animation/SpringAnimation;
 
-    .line 172
+    .line 187
     iget-object v0, p0, Lorg/telegram/ui/Components/SenderSelectView;->menuSpring:Landroidx/dynamicanimation/animation/SpringAnimation;
 
     new-instance v1, Lorg/telegram/ui/Components/SenderSelectView$$ExternalSyntheticLambda2;
@@ -875,7 +963,7 @@
 
     invoke-virtual {v0, v1}, Landroidx/dynamicanimation/animation/DynamicAnimation;->addUpdateListener(Landroidx/dynamicanimation/animation/DynamicAnimation$OnAnimationUpdateListener;)Landroidx/dynamicanimation/animation/DynamicAnimation;
 
-    .line 178
+    .line 193
     iget-object p1, p0, Lorg/telegram/ui/Components/SenderSelectView;->menuSpring:Landroidx/dynamicanimation/animation/SpringAnimation;
 
     new-instance p2, Lorg/telegram/ui/Components/SenderSelectView$$ExternalSyntheticLambda1;
@@ -884,7 +972,7 @@
 
     invoke-virtual {p1, p2}, Landroidx/dynamicanimation/animation/DynamicAnimation;->addEndListener(Landroidx/dynamicanimation/animation/DynamicAnimation$OnAnimationEndListener;)Landroidx/dynamicanimation/animation/DynamicAnimation;
 
-    .line 189
+    .line 204
     iget-object p1, p0, Lorg/telegram/ui/Components/SenderSelectView;->menuSpring:Landroidx/dynamicanimation/animation/SpringAnimation;
 
     invoke-virtual {p1}, Landroidx/dynamicanimation/animation/SpringAnimation;->start()V
@@ -896,7 +984,7 @@
 
     new-array p3, p3, [F
 
-    .line 191
+    .line 206
     iget v1, p0, Lorg/telegram/ui/Components/SenderSelectView;->menuProgress:F
 
     aput v1, p3, p2
@@ -915,12 +1003,12 @@
 
     iput-object p1, p0, Lorg/telegram/ui/Components/SenderSelectView;->menuAnimator:Landroid/animation/ValueAnimator;
 
-    .line 192
+    .line 207
     sget-object p2, Lorg/telegram/ui/Components/CubicBezierInterpolator;->DEFAULT:Lorg/telegram/ui/Components/CubicBezierInterpolator;
 
     invoke-virtual {p1, p2}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 193
+    .line 208
     iget-object p1, p0, Lorg/telegram/ui/Components/SenderSelectView;->menuAnimator:Landroid/animation/ValueAnimator;
 
     new-instance p2, Lorg/telegram/ui/Components/SenderSelectView$$ExternalSyntheticLambda0;
@@ -929,7 +1017,7 @@
 
     invoke-virtual {p1, p2}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    .line 197
+    .line 212
     iget-object p1, p0, Lorg/telegram/ui/Components/SenderSelectView;->menuAnimator:Landroid/animation/ValueAnimator;
 
     new-instance p2, Lorg/telegram/ui/Components/SenderSelectView$1;
@@ -938,18 +1026,18 @@
 
     invoke-virtual {p1, p2}, Landroid/animation/ValueAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 205
+    .line 220
     iget-object p1, p0, Lorg/telegram/ui/Components/SenderSelectView;->menuAnimator:Landroid/animation/ValueAnimator;
 
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->start()V
 
     goto :goto_a7
 
-    .line 208
+    .line 223
     :cond_a2
     iput p1, p0, Lorg/telegram/ui/Components/SenderSelectView;->menuProgress:F
 
-    .line 209
+    .line 224
     invoke-virtual {p0}, Landroid/view/View;->invalidate()V
 
     :goto_a7
@@ -959,7 +1047,7 @@
 .method protected verifyDrawable(Landroid/graphics/drawable/Drawable;)Z
     .registers 3
 
-    .line 222
+    .line 237
     invoke-super {p0, p1}, Landroid/view/View;->verifyDrawable(Landroid/graphics/drawable/Drawable;)Z
 
     move-result v0

@@ -26,16 +26,16 @@
 .method public constructor <init>(Landroid/content/Context;IZ)V
     .registers 4
 
-    .line 138
+    .line 150
     invoke-direct {p0}, Lorg/telegram/ui/Components/RecyclerListView$SelectionAdapter;-><init>()V
 
-    .line 139
+    .line 151
     iput-boolean p3, p0, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$CategoryAdapterRecycler;->drawChecked:Z
 
-    .line 140
+    .line 152
     iput-object p1, p0, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$CategoryAdapterRecycler;->mContext:Landroid/content/Context;
 
-    .line 141
+    .line 153
     iput p2, p0, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$CategoryAdapterRecycler;->currentAccount:I
 
     return-void
@@ -46,7 +46,7 @@
 .method public getItemCount()I
     .registers 2
 
-    .line 191
+    .line 203
     iget v0, p0, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$CategoryAdapterRecycler;->currentAccount:I
 
     invoke-static {v0}, Lorg/telegram/messenger/MediaDataController;->getInstance(I)Lorg/telegram/messenger/MediaDataController;
@@ -73,12 +73,12 @@
 .method public onBindViewHolder(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;I)V
     .registers 11
 
-    .line 162
+    .line 174
     iget-object p1, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     check-cast p1, Lorg/telegram/ui/Cells/HintDialogCell;
 
-    .line 164
+    .line 176
     iget v0, p0, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$CategoryAdapterRecycler;->currentAccount:I
 
     invoke-static {v0}, Lorg/telegram/messenger/MediaDataController;->getInstance(I)Lorg/telegram/messenger/MediaDataController;
@@ -93,12 +93,12 @@
 
     check-cast p2, Lorg/telegram/tgnet/TLRPC$TL_topPeer;
 
-    .line 165
+    .line 177
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_dialog;
 
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_dialog;-><init>()V
 
-    .line 169
+    .line 181
     iget-object v0, p2, Lorg/telegram/tgnet/TLRPC$TL_topPeer;->peer:Lorg/telegram/tgnet/TLRPC$Peer;
 
     iget-wide v1, v0, Lorg/telegram/tgnet/TLRPC$Peer;->user_id:J
@@ -111,7 +111,7 @@
 
     if-eqz v6, :cond_38
 
-    .line 171
+    .line 183
     iget v0, p0, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$CategoryAdapterRecycler;->currentAccount:I
 
     invoke-static {v0}, Lorg/telegram/messenger/MessagesController;->getInstance(I)Lorg/telegram/messenger/MessagesController;
@@ -138,7 +138,7 @@
 
     goto :goto_6e
 
-    .line 172
+    .line 184
     :cond_38
     iget-wide v1, v0, Lorg/telegram/tgnet/TLRPC$Peer;->channel_id:J
 
@@ -148,7 +148,7 @@
 
     neg-long v1, v1
 
-    .line 174
+    .line 186
     iget v0, p0, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$CategoryAdapterRecycler;->currentAccount:I
 
     invoke-static {v0}, Lorg/telegram/messenger/MessagesController;->getInstance(I)Lorg/telegram/messenger/MessagesController;
@@ -169,7 +169,7 @@
 
     goto :goto_6e
 
-    .line 175
+    .line 187
     :cond_52
     iget-wide v0, v0, Lorg/telegram/tgnet/TLRPC$Peer;->chat_id:J
 
@@ -179,7 +179,7 @@
 
     neg-long v1, v0
 
-    .line 177
+    .line 189
     iget v0, p0, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$CategoryAdapterRecycler;->currentAccount:I
 
     invoke-static {v0}, Lorg/telegram/messenger/MessagesController;->getInstance(I)Lorg/telegram/messenger/MessagesController;
@@ -205,7 +205,7 @@
 
     move-wide v1, v4
 
-    .line 179
+    .line 191
     :goto_6e
     invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
@@ -215,7 +215,7 @@
 
     if-eqz v3, :cond_7c
 
-    .line 182
+    .line 194
     invoke-static {v3}, Lorg/telegram/messenger/UserObject;->getFirstName(Lorg/telegram/tgnet/TLRPC$User;)Ljava/lang/String;
 
     move-result-object p2
@@ -225,7 +225,7 @@
     :cond_7c
     if-eqz p2, :cond_81
 
-    .line 184
+    .line 196
     iget-object p2, p2, Lorg/telegram/tgnet/TLRPC$Chat;->title:Ljava/lang/String;
 
     goto :goto_83
@@ -236,7 +236,7 @@
     :goto_83
     const/4 v0, 0x1
 
-    .line 186
+    .line 198
     invoke-virtual {p1, v1, v2, v0, p2}, Lorg/telegram/ui/Cells/HintDialogCell;->setDialog(JZLjava/lang/CharSequence;)V
 
     return-void
@@ -245,7 +245,7 @@
 .method public onCreateViewHolder(Landroid/view/ViewGroup;I)Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
     .registers 5
 
-    .line 150
+    .line 162
     new-instance p1, Lorg/telegram/ui/Cells/HintDialogCell;
 
     iget-object p2, p0, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$CategoryAdapterRecycler;->mContext:Landroid/content/Context;
@@ -254,7 +254,7 @@
 
     invoke-direct {p1, p2, v0}, Lorg/telegram/ui/Cells/HintDialogCell;-><init>(Landroid/content/Context;Z)V
 
-    .line 151
+    .line 163
     new-instance p2, Landroidx/recyclerview/widget/RecyclerView$LayoutParams;
 
     const/high16 v0, 0x42a00000    # 80.0f
@@ -273,7 +273,7 @@
 
     invoke-virtual {p1, p2}, Landroid/widget/FrameLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 152
+    .line 164
     new-instance p2, Lorg/telegram/ui/Components/RecyclerListView$Holder;
 
     invoke-direct {p2, p1}, Lorg/telegram/ui/Components/RecyclerListView$Holder;-><init>(Landroid/view/View;)V
@@ -284,7 +284,7 @@
 .method public setIndex(I)V
     .registers 2
 
-    .line 145
+    .line 157
     invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->notifyDataSetChanged()V
 
     return-void

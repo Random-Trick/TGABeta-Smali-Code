@@ -24,7 +24,7 @@
 .method constructor <init>(Lorg/telegram/ui/Cells/WallpaperCell$WallpaperView;Z)V
     .registers 3
 
-    .line 248
+    .line 250
     iput-object p1, p0, Lorg/telegram/ui/Cells/WallpaperCell$WallpaperView$2;->this$1:Lorg/telegram/ui/Cells/WallpaperCell$WallpaperView;
 
     iput-boolean p2, p0, Lorg/telegram/ui/Cells/WallpaperCell$WallpaperView$2;->val$checked:Z
@@ -39,7 +39,7 @@
 .method public onAnimationCancel(Landroid/animation/Animator;)V
     .registers 3
 
-    .line 261
+    .line 263
     iget-object v0, p0, Lorg/telegram/ui/Cells/WallpaperCell$WallpaperView$2;->this$1:Lorg/telegram/ui/Cells/WallpaperCell$WallpaperView;
 
     invoke-static {v0}, Lorg/telegram/ui/Cells/WallpaperCell$WallpaperView;->access$500(Lorg/telegram/ui/Cells/WallpaperCell$WallpaperView;)Landroid/animation/AnimatorSet;
@@ -60,7 +60,7 @@
 
     if-eqz p1, :cond_1a
 
-    .line 262
+    .line 264
     iget-object p1, p0, Lorg/telegram/ui/Cells/WallpaperCell$WallpaperView$2;->this$1:Lorg/telegram/ui/Cells/WallpaperCell$WallpaperView;
 
     const/4 v0, 0x0
@@ -74,7 +74,7 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .registers 3
 
-    .line 251
+    .line 253
     iget-object v0, p0, Lorg/telegram/ui/Cells/WallpaperCell$WallpaperView$2;->this$1:Lorg/telegram/ui/Cells/WallpaperCell$WallpaperView;
 
     invoke-static {v0}, Lorg/telegram/ui/Cells/WallpaperCell$WallpaperView;->access$500(Lorg/telegram/ui/Cells/WallpaperCell$WallpaperView;)Landroid/animation/AnimatorSet;
@@ -95,19 +95,19 @@
 
     if-eqz p1, :cond_24
 
-    .line 252
+    .line 254
     iget-object p1, p0, Lorg/telegram/ui/Cells/WallpaperCell$WallpaperView$2;->this$1:Lorg/telegram/ui/Cells/WallpaperCell$WallpaperView;
 
     const/4 v0, 0x0
 
     invoke-static {p1, v0}, Lorg/telegram/ui/Cells/WallpaperCell$WallpaperView;->access$502(Lorg/telegram/ui/Cells/WallpaperCell$WallpaperView;Landroid/animation/AnimatorSet;)Landroid/animation/AnimatorSet;
 
-    .line 253
+    .line 255
     iget-boolean p1, p0, Lorg/telegram/ui/Cells/WallpaperCell$WallpaperView$2;->val$checked:Z
 
     if-nez p1, :cond_24
 
-    .line 254
+    .line 256
     iget-object p1, p0, Lorg/telegram/ui/Cells/WallpaperCell$WallpaperView$2;->this$1:Lorg/telegram/ui/Cells/WallpaperCell$WallpaperView;
 
     const/4 v0, 0x0

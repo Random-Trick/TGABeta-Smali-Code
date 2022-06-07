@@ -21,7 +21,7 @@
 .method constructor <init>(Lorg/telegram/ui/PasscodeActivity;)V
     .registers 2
 
-    .line 582
+    .line 583
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

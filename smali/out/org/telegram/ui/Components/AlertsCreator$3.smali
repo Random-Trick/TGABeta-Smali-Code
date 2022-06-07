@@ -22,7 +22,7 @@
 .method constructor <init>(Landroid/content/Context;[Lorg/telegram/ui/Cells/CheckBoxCell;)V
     .registers 3
 
-    .line 1325
+    .line 1342
     iput-object p2, p0, Lorg/telegram/ui/Components/AlertsCreator$3;->val$cell:[Lorg/telegram/ui/Cells/CheckBoxCell;
 
     invoke-direct {p0, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
@@ -35,10 +35,10 @@
 .method protected onMeasure(II)V
     .registers 5
 
-    .line 1328
+    .line 1345
     invoke-super {p0, p1, p2}, Landroid/widget/FrameLayout;->onMeasure(II)V
 
-    .line 1329
+    .line 1346
     iget-object p1, p0, Lorg/telegram/ui/Components/AlertsCreator$3;->val$cell:[Lorg/telegram/ui/Cells/CheckBoxCell;
 
     const/4 p2, 0x0
@@ -47,7 +47,7 @@
 
     if-eqz p1, :cond_25
 
-    .line 1330
+    .line 1347
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getMeasuredWidth()I
 
     move-result p1

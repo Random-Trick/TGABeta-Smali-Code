@@ -3647,7 +3647,7 @@
 
     if-ne p2, v3, :cond_82
 
-    const v0, 0x7f0e0cb4
+    const v0, 0x7f0e0d3e
 
     const-string v1, "PassportSelfie"
 
@@ -3686,7 +3686,7 @@
     goto/16 :goto_12c
 
     :cond_82
-    const v3, 0x7f0e01fb
+    const v3, 0x7f0e0230
 
     const-string v8, "AttachPhoto"
 
@@ -3742,7 +3742,7 @@
     goto :goto_c1
 
     :cond_b7
-    const v0, 0x7f0e0c4b
+    const v0, 0x7f0e0cd5
 
     const-string v1, "PassportFrontSide"
 
@@ -3755,7 +3755,7 @@
 
     :cond_c1
     :goto_c1
-    const v0, 0x7f0e0c85
+    const v0, 0x7f0e0d0f
 
     const-string v1, "PassportMainPage"
 
@@ -3794,7 +3794,7 @@
     :cond_e5
     if-ne p2, v0, :cond_10c
 
-    const v0, 0x7f0e0cab
+    const v0, 0x7f0e0d35
 
     const-string v1, "PassportReverseSide"
 
@@ -4093,7 +4093,7 @@
 
     instance-of v5, v4, Lorg/telegram/tgnet/TLRPC$TL_secureValueTypePersonalDetails;
 
-    const v10, 0x7f0e0cbd
+    const v10, 0x7f0e0d47
 
     const-string v11, "PassportTwoDocuments"
 
@@ -4187,7 +4187,7 @@
     goto :goto_8b
 
     :cond_78
-    const v4, 0x7f0e0c4e
+    const v4, 0x7f0e0cd8
 
     const-string v5, "PassportIdentityDocument"
 
@@ -4200,7 +4200,7 @@
 
     :cond_82
     :goto_82
-    const v4, 0x7f0e0c98
+    const v4, 0x7f0e0d22
 
     const-string v5, "PassportPersonalDetails"
 
@@ -4307,7 +4307,7 @@
     goto :goto_f2
 
     :cond_df
-    const v4, 0x7f0e0caa
+    const v4, 0x7f0e0d34
 
     const-string v5, "PassportResidentialAddress"
 
@@ -4320,7 +4320,7 @@
 
     :cond_e9
     :goto_e9
-    const v4, 0x7f0e0c28
+    const v4, 0x7f0e0cb2
 
     const-string v5, "PassportAddress"
 
@@ -4343,7 +4343,7 @@
 
     if-eqz v5, :cond_10b
 
-    const v4, 0x7f0e0c9b
+    const v4, 0x7f0e0d25
 
     const-string v5, "PassportPhone"
 
@@ -4364,7 +4364,7 @@
 
     if-eqz v4, :cond_11d
 
-    const v4, 0x7f0e0c44
+    const v4, 0x7f0e0cce
 
     const-string v5, "PassportEmail"
 
@@ -4872,7 +4872,7 @@
 
     invoke-direct {v0, v1}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    const v1, 0x7f0e0c3f
+    const v1, 0x7f0e0cc9
 
     const-string v2, "PassportDiscard"
 
@@ -4887,7 +4887,7 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const v1, 0x7f0e0331
+    const v1, 0x7f0e036d
 
     const-string v2, "Cancel"
 
@@ -4900,7 +4900,7 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setNegativeButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const v1, 0x7f0e05b6
+    const v1, 0x7f0e0607
 
     const-string v2, "DiscardChanges"
 
@@ -4911,7 +4911,7 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const v1, 0x7f0e0c40
+    const v1, 0x7f0e0cca
 
     const-string v2, "PassportDiscardChanges"
 
@@ -5987,7 +5987,7 @@
 
     iget-boolean v2, v2, Lorg/telegram/tgnet/TLRPC$TL_secureRequiredType;->native_names:Z
 
-    const v3, 0x7f07012c
+    const v3, 0x7f0700fb
 
     const-string v4, "windowBackgroundGrayShadow"
 
@@ -6183,7 +6183,7 @@
     :cond_ca
     iget-object v2, p0, Lorg/telegram/ui/PassportActivity;->nativeInfoCell:Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
 
-    const v3, 0x7f0e0c91
+    const v3, 0x7f0e0d1b
 
     new-array v4, v7, [Ljava/lang/Object;
 
@@ -6229,7 +6229,7 @@
     .line 5329
     iget-object v2, p0, Lorg/telegram/ui/PassportActivity;->headerCell:Lorg/telegram/ui/Cells/HeaderCell;
 
-    const v3, 0x7f0e0c90
+    const v3, 0x7f0e0d1a
 
     new-array v4, v7, [Ljava/lang/Object;
 
@@ -6249,7 +6249,7 @@
     :cond_10a
     iget-object v2, p0, Lorg/telegram/ui/PassportActivity;->headerCell:Lorg/telegram/ui/Cells/HeaderCell;
 
-    const v3, 0x7f0e0c8f
+    const v3, 0x7f0e0d19
 
     const-string v4, "PassportNativeHeader"
 
@@ -6283,7 +6283,7 @@
 
     aget-object v3, v3, v2
 
-    const v4, 0x7f0e0cb9
+    const v4, 0x7f0e0d43
 
     const-string v8, "PassportSurname"
 
@@ -6301,7 +6301,7 @@
 
     aget-object v3, v3, v2
 
-    const v4, 0x7f0e0cba
+    const v4, 0x7f0e0d44
 
     new-array v8, v7, [Ljava/lang/Object;
 
@@ -6325,7 +6325,7 @@
 
     aget-object v3, v3, v2
 
-    const v4, 0x7f0e0c88
+    const v4, 0x7f0e0d12
 
     const-string v8, "PassportMidname"
 
@@ -6343,7 +6343,7 @@
 
     aget-object v3, v3, v2
 
-    const v4, 0x7f0e0c89
+    const v4, 0x7f0e0d13
 
     new-array v8, v7, [Ljava/lang/Object;
 
@@ -6367,7 +6367,7 @@
 
     aget-object v3, v3, v2
 
-    const v4, 0x7f0e0c8b
+    const v4, 0x7f0e0d15
 
     const-string v8, "PassportName"
 
@@ -6385,7 +6385,7 @@
 
     aget-object v3, v3, v2
 
-    const v4, 0x7f0e0c8d
+    const v4, 0x7f0e0d17
 
     new-array v8, v7, [Ljava/lang/Object;
 
@@ -6519,7 +6519,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f07012d
+    const v1, 0x7f0700fc
 
     invoke-static {v0, v1, v4}, Lorg/telegram/ui/ActionBar/Theme;->getThemedDrawable(Landroid/content/Context;ILjava/lang/String;)Landroid/graphics/drawable/Drawable;
 
@@ -6873,7 +6873,7 @@
 
     iput-object v0, v1, Lorg/telegram/ui/PassportActivity;->topErrorCell:Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
 
-    const v5, 0x7f07012e
+    const v5, 0x7f0700fd
 
     const-string v6, "windowBackgroundGrayShadow"
 
@@ -6920,7 +6920,7 @@
 
     const-wide/16 v10, 0x0
 
-    const v5, 0x7f07012c
+    const v5, 0x7f0700fb
 
     const-string v12, "windowBackgroundWhiteRedText3"
 
@@ -6938,7 +6938,7 @@
     .line 3147
     iget-object v0, v1, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
-    const v14, 0x7f0e00ab
+    const v14, 0x7f0e00d3
 
     const-string v15, "ActionBotDocumentRentalAgreement"
 
@@ -6959,7 +6959,7 @@
     .line 3149
     iget-object v0, v1, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
-    const v14, 0x7f0e00a2
+    const v14, 0x7f0e00ca
 
     const-string v15, "ActionBotDocumentBankStatement"
 
@@ -6980,7 +6980,7 @@
     .line 3151
     iget-object v0, v1, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
-    const v14, 0x7f0e00ad
+    const v14, 0x7f0e00d5
 
     const-string v15, "ActionBotDocumentUtilityBill"
 
@@ -7001,7 +7001,7 @@
     .line 3153
     iget-object v0, v1, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
-    const v14, 0x7f0e00a9
+    const v14, 0x7f0e00d1
 
     const-string v15, "ActionBotDocumentPassportRegistration"
 
@@ -7022,7 +7022,7 @@
     .line 3155
     iget-object v0, v1, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
-    const v14, 0x7f0e00ac
+    const v14, 0x7f0e00d4
 
     const-string v15, "ActionBotDocumentTemporaryRegistration"
 
@@ -7041,7 +7041,7 @@
 
     iput-object v0, v1, Lorg/telegram/ui/PassportActivity;->headerCell:Lorg/telegram/ui/Cells/HeaderCell;
 
-    const v14, 0x7f0e0c43
+    const v14, 0x7f0e0ccd
 
     const-string v15, "PassportDocuments"
 
@@ -7150,7 +7150,7 @@
 
     if-eqz v16, :cond_160
 
-    const v14, 0x7f0e0c0f
+    const v14, 0x7f0e0c99
 
     const-string v15, "PassportAddAddressUploadInfo"
 
@@ -7173,7 +7173,7 @@
 
     if-eqz v15, :cond_174
 
-    const v14, 0x7f0e0c11
+    const v14, 0x7f0e0c9b
 
     const-string v15, "PassportAddAgreementInfo"
 
@@ -7192,7 +7192,7 @@
 
     if-eqz v15, :cond_184
 
-    const v14, 0x7f0e0c15
+    const v14, 0x7f0e0c9f
 
     const-string v15, "PassportAddBillInfo"
 
@@ -7211,7 +7211,7 @@
 
     if-eqz v15, :cond_194
 
-    const v14, 0x7f0e0c1f
+    const v14, 0x7f0e0ca9
 
     const-string v15, "PassportAddPassportRegistrationInfo"
 
@@ -7230,7 +7230,7 @@
 
     if-eqz v15, :cond_1a4
 
-    const v14, 0x7f0e0c21
+    const v14, 0x7f0e0cab
 
     const-string v15, "PassportAddTemporaryRegistrationInfo"
 
@@ -7249,7 +7249,7 @@
 
     if-eqz v14, :cond_1b4
 
-    const v14, 0x7f0e0c13
+    const v14, 0x7f0e0c9d
 
     const-string v15, "PassportAddBankInfo"
 
@@ -7354,7 +7354,7 @@
 
     iput-object v4, v1, Lorg/telegram/ui/PassportActivity;->headerCell:Lorg/telegram/ui/Cells/HeaderCell;
 
-    const v5, 0x7f0e0cbc
+    const v5, 0x7f0e0d46
 
     const-string v11, "PassportTranslation"
 
@@ -7449,7 +7449,7 @@
 
     iput-object v4, v1, Lorg/telegram/ui/PassportActivity;->bottomCellTranslation:Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
 
-    const v5, 0x7f07012c
+    const v5, 0x7f0700fb
 
     .line 3230
     invoke-static {v2, v5, v6}, Lorg/telegram/ui/ActionBar/Theme;->getThemedDrawable(Landroid/content/Context;ILjava/lang/String;)Landroid/graphics/drawable/Drawable;
@@ -7467,7 +7467,7 @@
 
     if-eqz v11, :cond_287
 
-    const v4, 0x7f0e0c27
+    const v4, 0x7f0e0cb1
 
     const-string v5, "PassportAddTranslationUploadInfo"
 
@@ -7490,7 +7490,7 @@
 
     if-eqz v5, :cond_29b
 
-    const v4, 0x7f0e0c22
+    const v4, 0x7f0e0cac
 
     const-string v5, "PassportAddTranslationAgreementInfo"
 
@@ -7509,7 +7509,7 @@
 
     if-eqz v5, :cond_2ab
 
-    const v4, 0x7f0e0c24
+    const v4, 0x7f0e0cae
 
     const-string v5, "PassportAddTranslationBillInfo"
 
@@ -7528,7 +7528,7 @@
 
     if-eqz v5, :cond_2bb
 
-    const v4, 0x7f0e0c25
+    const v4, 0x7f0e0caf
 
     const-string v5, "PassportAddTranslationPassportRegistrationInfo"
 
@@ -7547,7 +7547,7 @@
 
     if-eqz v5, :cond_2cb
 
-    const v4, 0x7f0e0c26
+    const v4, 0x7f0e0cb0
 
     const-string v5, "PassportAddTranslationTemporaryRegistrationInfo"
 
@@ -7566,7 +7566,7 @@
 
     if-eqz v4, :cond_2db
 
-    const v4, 0x7f0e0c23
+    const v4, 0x7f0e0cad
 
     const-string v5, "PassportAddTranslationBankInfo"
 
@@ -7659,7 +7659,7 @@
     :cond_320
     iget-object v0, v1, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
-    const v3, 0x7f0e0c28
+    const v3, 0x7f0e0cb2
 
     const-string v4, "PassportAddress"
 
@@ -7678,7 +7678,7 @@
 
     iput-object v0, v1, Lorg/telegram/ui/PassportActivity;->headerCell:Lorg/telegram/ui/Cells/HeaderCell;
 
-    const v3, 0x7f0e0c29
+    const v3, 0x7f0e0cb3
 
     const-string v4, "PassportAddressHeader"
 
@@ -8029,7 +8029,7 @@
 
     aget-object v5, v5, v3
 
-    const v9, 0x7f0e0c31
+    const v9, 0x7f0e0cbb
 
     const-string v15, "PassportCountry"
 
@@ -8049,7 +8049,7 @@
 
     aget-object v5, v5, v3
 
-    const v9, 0x7f0e0cb6
+    const v9, 0x7f0e0d40
 
     const-string v15, "PassportState"
 
@@ -8069,7 +8069,7 @@
 
     aget-object v5, v5, v3
 
-    const v9, 0x7f0e0c2f
+    const v9, 0x7f0e0cb9
 
     const-string v15, "PassportCity"
 
@@ -8089,7 +8089,7 @@
 
     aget-object v5, v5, v3
 
-    const v9, 0x7f0e0ca3
+    const v9, 0x7f0e0d2d
 
     const-string v15, "PassportPostcode"
 
@@ -8109,7 +8109,7 @@
 
     aget-object v5, v5, v3
 
-    const v9, 0x7f0e0cb8
+    const v9, 0x7f0e0d42
 
     const-string v15, "PassportStreet2"
 
@@ -8129,7 +8129,7 @@
 
     aget-object v5, v5, v3
 
-    const v9, 0x7f0e0cb7
+    const v9, 0x7f0e0d41
 
     const-string v15, "PassportStreet1"
 
@@ -8327,7 +8327,7 @@
     :cond_596
     iget-wide v3, v1, Lorg/telegram/ui/PassportActivity;->currentBotId:J
 
-    const v0, 0x7f07012d
+    const v0, 0x7f0700fc
 
     const-wide/16 v9, 0x0
 
@@ -8375,7 +8375,7 @@
     :cond_5c1
     iget-object v3, v1, Lorg/telegram/ui/PassportActivity;->sectionCell:Lorg/telegram/ui/Cells/ShadowSectionCell;
 
-    const v4, 0x7f07012c
+    const v4, 0x7f0700fb
 
     invoke-static {v2, v4, v6}, Lorg/telegram/ui/ActionBar/Theme;->getThemedDrawable(Landroid/content/Context;ILjava/lang/String;)Landroid/graphics/drawable/Drawable;
 
@@ -8409,7 +8409,7 @@
 
     if-nez v4, :cond_5f2
 
-    const v4, 0x7f0e0c38
+    const v4, 0x7f0e0cc2
 
     const-string v5, "PassportDeleteInfo"
 
@@ -8423,7 +8423,7 @@
     goto :goto_5fe
 
     :cond_5f2
-    const v4, 0x7f0e0c33
+    const v4, 0x7f0e0cbd
 
     const-string v5, "PassportDeleteDocument"
 
@@ -8587,7 +8587,7 @@
 
     const-string v4, "OK"
 
-    const v5, 0x7f0e0bae
+    const v5, 0x7f0e0c38
 
     .line 3529
     invoke-static {v4, v5}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -8602,7 +8602,7 @@
 
     const-string v4, "Cancel"
 
-    const v5, 0x7f0e0331
+    const v5, 0x7f0e036d
 
     .line 3537
     invoke-static {v4, v5}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -8615,7 +8615,7 @@
 
     const-string v4, "AppName"
 
-    const v5, 0x7f0e017c
+    const v5, 0x7f0e01b1
 
     .line 3538
     invoke-static {v4, v5}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -8641,7 +8641,7 @@
 
     if-eqz v5, :cond_56
 
-    const v4, 0x7f0e0c32
+    const v4, 0x7f0e0cbc
 
     const-string v5, "PassportDeleteAddressAlert"
 
@@ -8670,7 +8670,7 @@
 
     if-eqz v4, :cond_71
 
-    const v4, 0x7f0e0c39
+    const v4, 0x7f0e0cc3
 
     const-string v5, "PassportDeletePersonalAlert"
 
@@ -8684,7 +8684,7 @@
     goto :goto_7d
 
     :cond_71
-    const v4, 0x7f0e0c35
+    const v4, 0x7f0e0cbf
 
     const-string v5, "PassportDeleteDocumentAlert"
 
@@ -8741,7 +8741,7 @@
 
     if-eqz v7, :cond_b5
 
-    const v6, 0x7f0e0c34
+    const v6, 0x7f0e0cbe
 
     const-string v7, "PassportDeleteDocumentAddress"
 
@@ -8760,7 +8760,7 @@
 
     if-eqz v6, :cond_c5
 
-    const v6, 0x7f0e0c36
+    const v6, 0x7f0e0cc0
 
     const-string v7, "PassportDeleteDocumentPersonal"
 
@@ -8858,7 +8858,7 @@
 
     const-string v3, "PassportEmail"
 
-    const v4, 0x7f0e0c44
+    const v4, 0x7f0e0cce
 
     invoke-static {v3, v4}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
@@ -8875,7 +8875,7 @@
 
     const-string v3, "windowBackgroundGrayShadow"
 
-    const v4, 0x7f07012d
+    const v4, 0x7f0700fc
 
     const/4 v5, -0x2
 
@@ -8908,7 +8908,7 @@
 
     invoke-virtual {v2, v9}, Landroid/widget/FrameLayout;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    const v9, 0x7f0e0c9f
+    const v9, 0x7f0e0d29
 
     new-array v10, v8, [Ljava/lang/Object;
 
@@ -8958,7 +8958,7 @@
     .line 2731
     iget-object v2, v0, Lorg/telegram/ui/PassportActivity;->bottomCell:Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
 
-    const v9, 0x7f0e0ca0
+    const v9, 0x7f0e0d2a
 
     const-string v10, "PassportPhoneUseSameEmailInfo"
 
@@ -9135,7 +9135,7 @@
 
     aget-object v10, v10, v2
 
-    const v11, 0x7f0e0cfe
+    const v11, 0x7f0e0d8a
 
     const-string v12, "PaymentShippingEmailPlaceholder"
 
@@ -9281,7 +9281,7 @@
     .line 2775
     iget-object v1, v0, Lorg/telegram/ui/PassportActivity;->bottomCell:Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
 
-    const v2, 0x7f0e0c47
+    const v2, 0x7f0e0cd1
 
     const-string v3, "PassportEmailUploadInfo"
 
@@ -9313,7 +9313,7 @@
 
     const-string v1, "PassportEmail"
 
-    const v2, 0x7f0e0c44
+    const v2, 0x7f0e0cce
 
     invoke-static {v1, v2}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
@@ -9482,7 +9482,7 @@
 
     aget-object v3, v3, v2
 
-    const v6, 0x7f0e0c45
+    const v6, 0x7f0e0ccf
 
     const-string v7, "PassportEmailCode"
 
@@ -9591,7 +9591,7 @@
 
     iput-object v2, p0, Lorg/telegram/ui/PassportActivity;->bottomCell:Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
 
-    const v4, 0x7f07012d
+    const v4, 0x7f0700fc
 
     const-string v5, "windowBackgroundGrayShadow"
 
@@ -9605,7 +9605,7 @@
     .line 1494
     iget-object p1, p0, Lorg/telegram/ui/PassportActivity;->bottomCell:Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
 
-    const v2, 0x7f0e0c48
+    const v2, 0x7f0e0cd2
 
     new-array v0, v0, [Ljava/lang/Object;
 
@@ -9733,7 +9733,7 @@
 
     iput-object v0, v1, Lorg/telegram/ui/PassportActivity;->topErrorCell:Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
 
-    const v5, 0x7f07012e
+    const v5, 0x7f0700fd
 
     const-string v6, "windowBackgroundGrayShadow"
 
@@ -9782,7 +9782,7 @@
 
     const-string v5, "windowBackgroundWhiteRedText3"
 
-    const v12, 0x7f07012c
+    const v12, 0x7f0700fb
 
     const-string v13, "windowBackgroundWhite"
 
@@ -9800,7 +9800,7 @@
 
     if-eqz v14, :cond_97
 
-    const v14, 0x7f0e0c43
+    const v14, 0x7f0e0ccd
 
     const-string v15, "PassportDocuments"
 
@@ -9814,7 +9814,7 @@
     goto :goto_a3
 
     :cond_97
-    const v14, 0x7f0e0ca8
+    const v14, 0x7f0e0d32
 
     const-string v15, "PassportRequiredDocuments"
 
@@ -9944,7 +9944,7 @@
     .line 3916
     iget-object v14, v1, Lorg/telegram/ui/PassportActivity;->uploadReverseCell:Lorg/telegram/ui/Cells/TextDetailSettingsCell;
 
-    const v15, 0x7f0e0cab
+    const v15, 0x7f0e0d35
 
     const-string v3, "PassportReverseSide"
 
@@ -9952,7 +9952,7 @@
 
     move-result-object v3
 
-    const v15, 0x7f0e0cac
+    const v15, 0x7f0e0d36
 
     const-string v7, "PassportReverseSideInfo"
 
@@ -10027,7 +10027,7 @@
     .line 3930
     iget-object v0, v1, Lorg/telegram/ui/PassportActivity;->uploadSelfieCell:Lorg/telegram/ui/Cells/TextDetailSettingsCell;
 
-    const v3, 0x7f0e0cb4
+    const v3, 0x7f0e0d3e
 
     const-string v7, "PassportSelfie"
 
@@ -10035,7 +10035,7 @@
 
     move-result-object v3
 
-    const v7, 0x7f0e0cb5
+    const v7, 0x7f0e0d3f
 
     const-string v14, "PassportSelfieInfo"
 
@@ -10087,7 +10087,7 @@
     .line 3940
     iget-object v0, v1, Lorg/telegram/ui/PassportActivity;->bottomCell:Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
 
-    const v3, 0x7f0e0c9a
+    const v3, 0x7f0e0d24
 
     const-string v7, "PassportPersonalUploadInfo"
 
@@ -10122,7 +10122,7 @@
 
     iput-object v0, v1, Lorg/telegram/ui/PassportActivity;->headerCell:Lorg/telegram/ui/Cells/HeaderCell;
 
-    const v3, 0x7f0e0cbc
+    const v3, 0x7f0e0d46
 
     const-string v7, "PassportTranslation"
 
@@ -10231,7 +10231,7 @@
 
     if-eqz v3, :cond_249
 
-    const v3, 0x7f0e0c27
+    const v3, 0x7f0e0cb1
 
     const-string v7, "PassportAddTranslationUploadInfo"
 
@@ -10254,7 +10254,7 @@
 
     if-eqz v7, :cond_25d
 
-    const v3, 0x7f0e0c1d
+    const v3, 0x7f0e0ca7
 
     const-string v7, "PassportAddPassportInfo"
 
@@ -10273,7 +10273,7 @@
 
     if-eqz v7, :cond_26d
 
-    const v3, 0x7f0e0c1a
+    const v3, 0x7f0e0ca4
 
     const-string v7, "PassportAddInternalPassportInfo"
 
@@ -10292,7 +10292,7 @@
 
     if-eqz v7, :cond_27d
 
-    const v3, 0x7f0e0c18
+    const v3, 0x7f0e0ca2
 
     const-string v7, "PassportAddIdentityCardInfo"
 
@@ -10311,7 +10311,7 @@
 
     if-eqz v3, :cond_28d
 
-    const v3, 0x7f0e0c17
+    const v3, 0x7f0e0ca1
 
     const-string v7, "PassportAddDriverLicenceInfo"
 
@@ -10431,7 +10431,7 @@
     .line 3998
     iget-object v0, v1, Lorg/telegram/ui/PassportActivity;->scanDocumentCell:Lorg/telegram/ui/Cells/TextSettingsCell;
 
-    const v3, 0x7f0e0cad
+    const v3, 0x7f0e0d37
 
     const-string v7, "PassportScanPassport"
 
@@ -10480,7 +10480,7 @@
     .line 4054
     iget-object v0, v1, Lorg/telegram/ui/PassportActivity;->bottomCell:Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
 
-    const v3, 0x7f0e0cae
+    const v3, 0x7f0e0d38
 
     const-string v7, "PassportScanPassportInfo"
 
@@ -10515,7 +10515,7 @@
 
     if-eqz v3, :cond_34e
 
-    const v3, 0x7f0e0c41
+    const v3, 0x7f0e0ccb
 
     const-string v7, "PassportDocument"
 
@@ -10529,7 +10529,7 @@
     goto :goto_35a
 
     :cond_34e
-    const v3, 0x7f0e0c97
+    const v3, 0x7f0e0d21
 
     const-string v7, "PassportPersonal"
 
@@ -10965,7 +10965,7 @@
 
     aget-object v4, v4, v7
 
-    const v8, 0x7f0e0c49
+    const v8, 0x7f0e0cd3
 
     const-string v9, "PassportExpired"
 
@@ -10988,7 +10988,7 @@
 
     aget-object v4, v4, v7
 
-    const v8, 0x7f0e0c42
+    const v8, 0x7f0e0ccc
 
     const-string v9, "PassportDocumentNumber"
 
@@ -11011,7 +11011,7 @@
 
     aget-object v4, v4, v7
 
-    const v8, 0x7f0e0ca9
+    const v8, 0x7f0e0d33
 
     const-string v9, "PassportResidence"
 
@@ -11034,7 +11034,7 @@
 
     aget-object v4, v4, v7
 
-    const v8, 0x7f0e0c2e
+    const v8, 0x7f0e0cb8
 
     const-string v9, "PassportCitizenship"
 
@@ -11057,7 +11057,7 @@
 
     aget-object v4, v4, v7
 
-    const v8, 0x7f0e0c4d
+    const v8, 0x7f0e0cd7
 
     const-string v9, "PassportGender"
 
@@ -11080,7 +11080,7 @@
 
     aget-object v4, v4, v7
 
-    const v8, 0x7f0e0c2d
+    const v8, 0x7f0e0cb7
 
     const-string v9, "PassportBirthdate"
 
@@ -11110,7 +11110,7 @@
 
     aget-object v4, v4, v7
 
-    const v8, 0x7f0e0cbb
+    const v8, 0x7f0e0d45
 
     const-string v9, "PassportSurnameLatin"
 
@@ -11128,7 +11128,7 @@
 
     aget-object v4, v4, v7
 
-    const v8, 0x7f0e0cb9
+    const v8, 0x7f0e0d43
 
     const-string v9, "PassportSurname"
 
@@ -11159,7 +11159,7 @@
 
     aget-object v4, v4, v7
 
-    const v8, 0x7f0e0c8a
+    const v8, 0x7f0e0d14
 
     const-string v9, "PassportMidnameLatin"
 
@@ -11177,7 +11177,7 @@
 
     aget-object v4, v4, v7
 
-    const v8, 0x7f0e0c88
+    const v8, 0x7f0e0d12
 
     const-string v9, "PassportMidname"
 
@@ -11208,7 +11208,7 @@
 
     aget-object v4, v4, v7
 
-    const v8, 0x7f0e0c8e
+    const v8, 0x7f0e0d18
 
     const-string v9, "PassportNameLatin"
 
@@ -11226,7 +11226,7 @@
 
     aget-object v4, v4, v7
 
-    const v8, 0x7f0e0c8b
+    const v8, 0x7f0e0d15
 
     const-string v9, "PassportName"
 
@@ -11378,7 +11378,7 @@
 
     const/4 v9, -0x2
 
-    const v12, 0x7f07012c
+    const v12, 0x7f0700fb
 
     goto/16 :goto_37b
 
@@ -11965,7 +11965,7 @@
 
     if-nez v3, :cond_875
 
-    const v3, 0x7f0e0c38
+    const v3, 0x7f0e0cc2
 
     const-string v4, "PassportDeleteInfo"
 
@@ -11983,7 +11983,7 @@
     :cond_875
     const/4 v4, 0x0
 
-    const v3, 0x7f0e0c33
+    const v3, 0x7f0e0cbd
 
     const-string v5, "PassportDeleteDocument"
 
@@ -12018,7 +12018,7 @@
     .line 4587
     iget-object v0, v1, Lorg/telegram/ui/PassportActivity;->nativeInfoCell:Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
 
-    const v3, 0x7f07012c
+    const v3, 0x7f0700fb
 
     invoke-static {v2, v3, v6}, Lorg/telegram/ui/ActionBar/Theme;->getThemedDrawable(Landroid/content/Context;ILjava/lang/String;)Landroid/graphics/drawable/Drawable;
 
@@ -12033,7 +12033,7 @@
 
     iput-object v0, v1, Lorg/telegram/ui/PassportActivity;->sectionCell:Lorg/telegram/ui/Cells/ShadowSectionCell;
 
-    const v3, 0x7f07012d
+    const v3, 0x7f0700fc
 
     .line 4590
     invoke-static {v2, v3, v6}, Lorg/telegram/ui/ActionBar/Theme;->getThemedDrawable(Landroid/content/Context;ILjava/lang/String;)Landroid/graphics/drawable/Drawable;
@@ -12063,7 +12063,7 @@
     :cond_8c0
     iget-object v0, v1, Lorg/telegram/ui/PassportActivity;->nativeInfoCell:Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
 
-    const v3, 0x7f07012d
+    const v3, 0x7f0700fc
 
     invoke-static {v2, v3, v6}, Lorg/telegram/ui/ActionBar/Theme;->getThemedDrawable(Landroid/content/Context;ILjava/lang/String;)Landroid/graphics/drawable/Drawable;
 
@@ -12113,7 +12113,7 @@
 
     const-string v1, "TelegramPassport"
 
-    const v2, 0x7f0e1146
+    const v2, 0x7f0e120a
 
     invoke-static {v1, v2}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
@@ -12130,7 +12130,7 @@
 
     const/4 v8, 0x1
 
-    const v1, 0x7f07037c
+    const v1, 0x7f070243
 
     invoke-virtual {v0, v8, v1}, Lorg/telegram/ui/ActionBar/ActionBarMenu;->addItem(II)Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
@@ -12143,7 +12143,7 @@
 
     const-string v1, "PassportProvidedInformation"
 
-    const v2, 0x7f0e0ca4
+    const v2, 0x7f0e0d2e
 
     .line 2425
     invoke-static {v1, v2}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -12185,7 +12185,7 @@
 
     iput-object v0, v6, Lorg/telegram/ui/PassportActivity;->sectionCell:Lorg/telegram/ui/Cells/ShadowSectionCell;
 
-    const v1, 0x7f07012c
+    const v1, 0x7f0700fb
 
     const-string v4, "windowBackgroundGrayShadow"
 
@@ -12226,7 +12226,7 @@
 
     const-string v1, "PassportNoDocumentsAdd"
 
-    const v5, 0x7f0e0c93
+    const v5, 0x7f0e0d1d
 
     invoke-static {v1, v5}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
@@ -12284,7 +12284,7 @@
 
     const-string v9, "TelegramPassportDelete"
 
-    const v10, 0x7f0e1149
+    const v10, 0x7f0e120d
 
     invoke-static {v9, v10}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
@@ -12321,7 +12321,7 @@
 
     iput-object v0, v6, Lorg/telegram/ui/PassportActivity;->addDocumentSectionCell:Lorg/telegram/ui/Cells/ShadowSectionCell;
 
-    const v9, 0x7f07012d
+    const v9, 0x7f0700fc
 
     .line 2479
     invoke-static {v7, v9, v4}, Lorg/telegram/ui/ActionBar/Theme;->getThemedDrawable(Landroid/content/Context;ILjava/lang/String;)Landroid/graphics/drawable/Drawable;
@@ -12429,7 +12429,7 @@
 
     iput-object v0, v6, Lorg/telegram/ui/PassportActivity;->emptyImageView:Landroid/widget/ImageView;
 
-    const v2, 0x7f070306
+    const v2, 0x7f07032e
 
     .line 2493
     invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setImageResource(I)V
@@ -12504,7 +12504,7 @@
     .line 2502
     iget-object v0, v6, Lorg/telegram/ui/PassportActivity;->emptyTextView1:Landroid/widget/TextView;
 
-    const v9, 0x7f0e0c92
+    const v9, 0x7f0e0d1c
 
     const-string v12, "PassportNoDocuments"
 
@@ -12583,7 +12583,7 @@
     .line 2510
     iget-object v0, v6, Lorg/telegram/ui/PassportActivity;->emptyTextView2:Landroid/widget/TextView;
 
-    const v2, 0x7f0e0c94
+    const v2, 0x7f0e0d1e
 
     const-string v9, "PassportNoDocumentsInfo"
 
@@ -12950,7 +12950,7 @@
     .line 1514
     iget-object v6, v0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
-    const v7, 0x7f0e1146
+    const v7, 0x7f0e120a
 
     const-string v8, "TelegramPassport"
 
@@ -13074,7 +13074,7 @@
     .line 1533
     iget-object v2, v0, Lorg/telegram/ui/PassportActivity;->passwordRequestTextView:Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
 
-    const v5, 0x7f0e0cb3
+    const v5, 0x7f0e0d3d
 
     const-string v7, "PassportSelfRequest"
 
@@ -13090,7 +13090,7 @@
     :cond_c1
     iget-object v2, v0, Lorg/telegram/ui/PassportActivity;->passwordRequestTextView:Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
 
-    const v7, 0x7f0e0ca5
+    const v7, 0x7f0e0d2f
 
     new-array v9, v6, [Ljava/lang/Object;
 
@@ -13176,7 +13176,7 @@
 
     iput-object v2, v0, Lorg/telegram/ui/PassportActivity;->noPasswordImageView:Landroid/widget/ImageView;
 
-    const v5, 0x7f070307
+    const v5, 0x7f07032f
 
     .line 1541
     invoke-virtual {v2, v5}, Landroid/widget/ImageView;->setImageResource(I)V
@@ -13281,7 +13281,7 @@
     .line 1550
     iget-object v2, v0, Lorg/telegram/ui/PassportActivity;->noPasswordTextView:Landroid/widget/TextView;
 
-    const v7, 0x7f0e1148
+    const v7, 0x7f0e120c
 
     const-string v9, "TelegramPassportCreatePasswordInfo"
 
@@ -13372,7 +13372,7 @@
     .line 1558
     iget-object v2, v0, Lorg/telegram/ui/PassportActivity;->noPasswordSetTextView:Landroid/widget/TextView;
 
-    const v9, 0x7f0e1147
+    const v9, 0x7f0e120b
 
     const-string v10, "TelegramPassportCreatePassword"
 
@@ -13727,7 +13727,7 @@
 
     iput-object v2, v0, Lorg/telegram/ui/PassportActivity;->passwordInfoRequestTextView:Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
 
-    const v3, 0x7f07012d
+    const v3, 0x7f0700fc
 
     const-string v7, "windowBackgroundGrayShadow"
 
@@ -13741,7 +13741,7 @@
     .line 1620
     iget-object v2, v0, Lorg/telegram/ui/PassportActivity;->passwordInfoRequestTextView:Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
 
-    const v3, 0x7f0e0ca6
+    const v3, 0x7f0e0d30
 
     new-array v7, v4, [Ljava/lang/Object;
 
@@ -13790,7 +13790,7 @@
     .line 1626
     iget-object v1, v0, Lorg/telegram/ui/PassportActivity;->passwordForgotButton:Landroid/widget/TextView;
 
-    const v2, 0x7f0e0775
+    const v2, 0x7f0e07cb
 
     const-string v3, "ForgotPassword"
 
@@ -13867,7 +13867,7 @@
 
     const-string v3, "PassportPhone"
 
-    const v4, 0x7f0e0c9b
+    const v4, 0x7f0e0d25
 
     invoke-static {v3, v4}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
@@ -13998,7 +13998,7 @@
     :goto_78
     iget-object v0, v1, Lorg/telegram/ui/PassportActivity;->countriesArray:Ljava/util/ArrayList;
 
-    sget-object v7, Lorg/telegram/ui/ChangePhoneActivity$PhoneView$$ExternalSyntheticLambda6;->INSTANCE:Lorg/telegram/ui/ChangePhoneActivity$PhoneView$$ExternalSyntheticLambda6;
+    sget-object v7, Lorg/telegram/ui/CountrySelectActivity$CountryAdapter$$ExternalSyntheticLambda0;->INSTANCE:Lorg/telegram/ui/CountrySelectActivity$CountryAdapter$$ExternalSyntheticLambda0;
 
     invoke-static {v0, v7}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
 
@@ -14036,7 +14036,7 @@
 
     invoke-virtual {v7, v8}, Landroid/widget/FrameLayout;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    const v8, 0x7f0e0c9f
+    const v8, 0x7f0e0d29
 
     new-array v9, v5, [Ljava/lang/Object;
 
@@ -14100,7 +14100,7 @@
 
     iput-object v0, v1, Lorg/telegram/ui/PassportActivity;->bottomCell:Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
 
-    const v7, 0x7f07012d
+    const v7, 0x7f0700fc
 
     const-string v10, "windowBackgroundGrayShadow"
 
@@ -14114,7 +14114,7 @@
     .line 2817
     iget-object v0, v1, Lorg/telegram/ui/PassportActivity;->bottomCell:Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
 
-    const v11, 0x7f0e0ca1
+    const v11, 0x7f0e0d2b
 
     const-string v13, "PassportPhoneUseSameInfo"
 
@@ -14142,7 +14142,7 @@
 
     iput-object v0, v1, Lorg/telegram/ui/PassportActivity;->headerCell:Lorg/telegram/ui/Cells/HeaderCell;
 
-    const v11, 0x7f0e0c9e
+    const v11, 0x7f0e0d28
 
     const-string v13, "PassportPhoneUseOther"
 
@@ -14386,7 +14386,7 @@
 
     aget-object v7, v7, v0
 
-    const v8, 0x7f0e0447
+    const v8, 0x7f0e0489
 
     const-string v13, "ChooseCountry"
 
@@ -14605,7 +14605,7 @@
 
     aget-object v7, v7, v0
 
-    const v8, 0x7f0e0d02
+    const v8, 0x7f0e0d8e
 
     const-string v9, "PaymentShippingPhoneNumber"
 
@@ -14768,7 +14768,7 @@
     :cond_36a
     add-int/lit8 v0, v0, 0x1
 
-    const v7, 0x7f07012d
+    const v7, 0x7f0700fc
 
     const/4 v8, -0x1
 
@@ -14865,7 +14865,7 @@
 
     iput-object v0, v1, Lorg/telegram/ui/PassportActivity;->bottomCell:Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
 
-    const v3, 0x7f07012d
+    const v3, 0x7f0700fc
 
     .line 3120
     invoke-static {v2, v3, v10}, Lorg/telegram/ui/ActionBar/Theme;->getThemedDrawable(Landroid/content/Context;ILjava/lang/String;)Landroid/graphics/drawable/Drawable;
@@ -14877,7 +14877,7 @@
     .line 3121
     iget-object v0, v1, Lorg/telegram/ui/PassportActivity;->bottomCell:Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
 
-    const v2, 0x7f0e0c9d
+    const v2, 0x7f0e0d27
 
     const-string v3, "PassportPhoneUploadInfo"
 
@@ -14913,7 +14913,7 @@
 
     const-string v1, "PassportPhone"
 
-    const v2, 0x7f0e0c9b
+    const v2, 0x7f0e0d25
 
     invoke-static {v1, v2}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
@@ -15124,7 +15124,7 @@
     .line 1990
     iget-object v0, v6, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
-    const v1, 0x7f0e1146
+    const v1, 0x7f0e120a
 
     const-string v2, "TelegramPassport"
 
@@ -15141,7 +15141,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f07037c
+    const v1, 0x7f070243
 
     const/4 v12, 0x1
 
@@ -15221,7 +15221,7 @@
 
     iput-object v0, v6, Lorg/telegram/ui/PassportActivity;->bottomCell:Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
 
-    const v1, 0x7f07012e
+    const v1, 0x7f0700fd
 
     .line 2006
     invoke-static {v7, v1, v13}, Lorg/telegram/ui/ActionBar/Theme;->getThemedDrawable(Landroid/content/Context;ILjava/lang/String;)Landroid/graphics/drawable/Drawable;
@@ -15233,7 +15233,7 @@
     .line 2007
     iget-object v0, v6, Lorg/telegram/ui/PassportActivity;->bottomCell:Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
 
-    const v1, 0x7f0e0ca5
+    const v1, 0x7f0e0d2f
 
     new-array v2, v12, [Ljava/lang/Object;
 
@@ -15298,7 +15298,7 @@
 
     iput-object v0, v6, Lorg/telegram/ui/PassportActivity;->headerCell:Lorg/telegram/ui/Cells/HeaderCell;
 
-    const v1, 0x7f0e0ca7
+    const v1, 0x7f0e0d31
 
     const-string v2, "PassportRequestedInformation"
 
@@ -16027,7 +16027,7 @@
 
     iput-object v0, v6, Lorg/telegram/ui/PassportActivity;->bottomCell:Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
 
-    const v1, 0x7f07012d
+    const v1, 0x7f0700fc
 
     .line 2155
     invoke-static {v7, v1, v13}, Lorg/telegram/ui/ActionBar/Theme;->getThemedDrawable(Landroid/content/Context;ILjava/lang/String;)Landroid/graphics/drawable/Drawable;
@@ -16056,7 +16056,7 @@
 
     if-nez v0, :cond_387
 
-    const v0, 0x7f0e0ca2
+    const v0, 0x7f0e0d2c
 
     new-array v2, v2, [Ljava/lang/Object;
 
@@ -16154,7 +16154,7 @@
     :cond_387
     iget-object v0, v6, Lorg/telegram/ui/PassportActivity;->bottomCell:Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
 
-    const v3, 0x7f0e0c96
+    const v3, 0x7f0e0d20
 
     new-array v2, v2, [Ljava/lang/Object;
 
@@ -16294,7 +16294,7 @@
     .line 2400
     iget-object v0, v6, Lorg/telegram/ui/PassportActivity;->acceptTextView:Landroid/widget/TextView;
 
-    const v1, 0x7f070068
+    const v1, 0x7f070052
 
     const/4 v2, 0x0
 
@@ -16314,7 +16314,7 @@
     .line 2402
     iget-object v0, v6, Lorg/telegram/ui/PassportActivity;->acceptTextView:Landroid/widget/TextView;
 
-    const v1, 0x7f0e0c2c
+    const v1, 0x7f0e0cb6
 
     const-string v2, "PassportAuthorize"
 
@@ -16398,7 +16398,7 @@
 
     invoke-direct {v0, v7}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
-    const v1, 0x7f07013e
+    const v1, 0x7f070107
 
     .line 2413
     invoke-virtual {v0, v1}, Landroid/view/View;->setBackgroundResource(I)V
@@ -18155,7 +18155,7 @@
 
     if-eqz v0, :cond_e
 
-    const p1, 0x7f0e00a8
+    const p1, 0x7f0e00d0
 
     const-string v0, "ActionBotDocumentPassport"
 
@@ -18172,7 +18172,7 @@
 
     if-eqz v0, :cond_1c
 
-    const p1, 0x7f0e00a3
+    const p1, 0x7f0e00cb
 
     const-string v0, "ActionBotDocumentDriverLicence"
 
@@ -18189,7 +18189,7 @@
 
     if-eqz v0, :cond_2a
 
-    const p1, 0x7f0e00a6
+    const p1, 0x7f0e00ce
 
     const-string v0, "ActionBotDocumentIdentityCard"
 
@@ -18206,7 +18206,7 @@
 
     if-eqz v0, :cond_38
 
-    const p1, 0x7f0e00ad
+    const p1, 0x7f0e00d5
 
     const-string v0, "ActionBotDocumentUtilityBill"
 
@@ -18223,7 +18223,7 @@
 
     if-eqz v0, :cond_46
 
-    const p1, 0x7f0e00a2
+    const p1, 0x7f0e00ca
 
     const-string v0, "ActionBotDocumentBankStatement"
 
@@ -18240,7 +18240,7 @@
 
     if-eqz v0, :cond_54
 
-    const p1, 0x7f0e00ab
+    const p1, 0x7f0e00d3
 
     const-string v0, "ActionBotDocumentRentalAgreement"
 
@@ -18257,7 +18257,7 @@
 
     if-eqz v0, :cond_62
 
-    const p1, 0x7f0e00a7
+    const p1, 0x7f0e00cf
 
     const-string v0, "ActionBotDocumentInternalPassport"
 
@@ -18274,7 +18274,7 @@
 
     if-eqz v0, :cond_70
 
-    const p1, 0x7f0e00a9
+    const p1, 0x7f0e00d1
 
     const-string v0, "ActionBotDocumentPassportRegistration"
 
@@ -18291,7 +18291,7 @@
 
     if-eqz v0, :cond_7e
 
-    const p1, 0x7f0e00ac
+    const p1, 0x7f0e00d4
 
     const-string v0, "ActionBotDocumentTemporaryRegistration"
 
@@ -18308,7 +18308,7 @@
 
     if-eqz v0, :cond_8c
 
-    const p1, 0x7f0e00aa
+    const p1, 0x7f0e00d2
 
     const-string v0, "ActionBotDocumentPhone"
 
@@ -18325,7 +18325,7 @@
 
     if-eqz p1, :cond_9a
 
-    const p1, 0x7f0e00a4
+    const p1, 0x7f0e00cc
 
     const-string v0, "ActionBotDocumentEmail"
 
@@ -19400,7 +19400,7 @@
 
     if-ne p1, v0, :cond_19
 
-    const v1, 0x7f0e0c3d
+    const v1, 0x7f0e0cc7
 
     const-string v2, "PassportDeleteSelfie"
 
@@ -19414,7 +19414,7 @@
     goto :goto_25
 
     :cond_19
-    const v1, 0x7f0e0c3b
+    const v1, 0x7f0e0cc5
 
     const-string v2, "PassportDeleteScan"
 
@@ -19426,7 +19426,7 @@
     invoke-virtual {p5, v1}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
     :goto_25
-    const v1, 0x7f0e0331
+    const v1, 0x7f0e036d
 
     const-string v2, "Cancel"
 
@@ -19439,7 +19439,7 @@
 
     invoke-virtual {p5, v1, v2}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setNegativeButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const v1, 0x7f0e017c
+    const v1, 0x7f0e01b1
 
     const-string v2, "AppName"
 
@@ -19450,7 +19450,7 @@
 
     invoke-virtual {p5, v1}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const v1, 0x7f0e0bae
+    const v1, 0x7f0e0c38
 
     const-string v2, "OK"
 
@@ -19597,7 +19597,7 @@
 
     instance-of v2, v1, Lorg/telegram/tgnet/TLRPC$TL_secureValueTypePersonalDetails;
 
-    const v4, 0x7f0e0331
+    const v4, 0x7f0e036d
 
     const-string v5, "Cancel"
 
@@ -19636,7 +19636,7 @@
 
     invoke-direct {p1, v0}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    const v0, 0x7f0e0bae
+    const v0, 0x7f0e0c38
 
     const-string v1, "OK"
 
@@ -19658,7 +19658,7 @@
 
     invoke-virtual {p1, p2, p4}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setNegativeButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const p2, 0x7f0e017c
+    const p2, 0x7f0e01b1
 
     const-string p3, "AppName"
 
@@ -19671,14 +19671,14 @@
 
     if-eqz v2, :cond_72
 
-    const p2, 0x7f0e0c3a
+    const p2, 0x7f0e0cc4
 
     const-string p3, "PassportDeletePhoneAlert"
 
     goto :goto_77
 
     :cond_72
-    const p2, 0x7f0e0c37
+    const p2, 0x7f0e0cc1
 
     const-string p3, "PassportDeleteEmailAlert"
 
@@ -19735,7 +19735,7 @@
 
     if-eqz v2, :cond_b3
 
-    const p4, 0x7f0e0c4e
+    const p4, 0x7f0e0cd8
 
     const-string v2, "PassportIdentityDocument"
 
@@ -19754,7 +19754,7 @@
 
     if-eqz p4, :cond_c3
 
-    const p4, 0x7f0e0c28
+    const p4, 0x7f0e0cb2
 
     const-string v2, "PassportAddress"
 
@@ -19796,7 +19796,7 @@
 
     if-eqz v5, :cond_e9
 
-    const v4, 0x7f0e0c1b
+    const v4, 0x7f0e0ca5
 
     const-string v5, "PassportAddLicence"
 
@@ -19815,7 +19815,7 @@
 
     if-eqz v5, :cond_fb
 
-    const v4, 0x7f0e0c1c
+    const v4, 0x7f0e0ca6
 
     const-string v5, "PassportAddPassport"
 
@@ -19834,7 +19834,7 @@
 
     if-eqz v5, :cond_10c
 
-    const v4, 0x7f0e0c19
+    const v4, 0x7f0e0ca3
 
     const-string v5, "PassportAddInternalPassport"
 
@@ -19853,7 +19853,7 @@
 
     if-eqz v5, :cond_11d
 
-    const v4, 0x7f0e0c16
+    const v4, 0x7f0e0ca0
 
     const-string v5, "PassportAddCard"
 
@@ -19872,7 +19872,7 @@
 
     if-eqz v5, :cond_12e
 
-    const v4, 0x7f0e0c14
+    const v4, 0x7f0e0c9e
 
     const-string v5, "PassportAddBill"
 
@@ -19891,7 +19891,7 @@
 
     if-eqz v5, :cond_13f
 
-    const v4, 0x7f0e0c12
+    const v4, 0x7f0e0c9c
 
     const-string v5, "PassportAddBank"
 
@@ -19910,7 +19910,7 @@
 
     if-eqz v5, :cond_150
 
-    const v4, 0x7f0e0c10
+    const v4, 0x7f0e0c9a
 
     const-string v5, "PassportAddAgreement"
 
@@ -19929,7 +19929,7 @@
 
     if-eqz v5, :cond_161
 
-    const v4, 0x7f0e0c20
+    const v4, 0x7f0e0caa
 
     const-string v5, "PassportAddTemporaryRegistration"
 
@@ -19948,7 +19948,7 @@
 
     if-eqz v4, :cond_171
 
-    const v4, 0x7f0e0c1e
+    const v4, 0x7f0e0ca8
 
     const-string v5, "PassportAddPassportRegistration"
 
@@ -20663,7 +20663,7 @@
 
     const-string p2, "PassportNoExpireDate"
 
-    const p3, 0x7f0e0c95
+    const p3, 0x7f0e0d1f
 
     .line 4216
     invoke-static {p2, p3}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -20742,7 +20742,7 @@
 
     const-string v7, "PassportSelectExpiredDate"
 
-    const v8, 0x7f0e0cb0
+    const v8, 0x7f0e0d3a
 
     .line 4186
     invoke-static {v7, v8}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -20764,7 +20764,7 @@
     :cond_44
     const-string v7, "PassportSelectBithdayDate"
 
-    const v8, 0x7f0e0caf
+    const v8, 0x7f0e0d39
 
     .line 4191
     invoke-static {v7, v8}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -20884,7 +20884,7 @@
 
     const-string v4, "PassportSelectNotExpire"
 
-    const v5, 0x7f0e0cb2
+    const v5, 0x7f0e0d3c
 
     .line 4214
     invoke-static {v4, v5}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -20937,7 +20937,7 @@
 
     aget-object p1, p2, p1
 
-    const p2, 0x7f0e0c87
+    const p2, 0x7f0e0d11
 
     const-string v0, "PassportMale"
 
@@ -20964,7 +20964,7 @@
 
     aget-object p1, p2, p1
 
-    const p2, 0x7f0e0c4a
+    const p2, 0x7f0e0cd4
 
     const-string v0, "PassportFemale"
 
@@ -21012,7 +21012,7 @@
 
     invoke-direct {p1, v1}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    const v1, 0x7f0e0cb1
+    const v1, 0x7f0e0d3b
 
     const-string v2, "PassportSelectGender"
 
@@ -21027,7 +21027,7 @@
 
     new-array v1, v1, [Ljava/lang/CharSequence;
 
-    const v2, 0x7f0e0c87
+    const v2, 0x7f0e0d11
 
     const-string v3, "PassportMale"
 
@@ -21038,7 +21038,7 @@
 
     aput-object v2, v1, v0
 
-    const v0, 0x7f0e0c4a
+    const v0, 0x7f0e0cd4
 
     const-string v2, "PassportFemale"
 
@@ -21056,7 +21056,7 @@
     .line 4236
     invoke-virtual {p1, v1, v0}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setItems([Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const v0, 0x7f0e0331
+    const v0, 0x7f0e036d
 
     const-string v1, "Cancel"
 
@@ -21428,7 +21428,7 @@
 
     const-string v0, "TelegramPassportDeleteTitle"
 
-    const v1, 0x7f0e114b
+    const v1, 0x7f0e120f
 
     .line 2446
     invoke-static {v0, v1}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -21439,7 +21439,7 @@
 
     const-string v0, "TelegramPassportDeleteAlert"
 
-    const v1, 0x7f0e114a
+    const v1, 0x7f0e120e
 
     .line 2447
     invoke-static {v0, v1}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -21450,7 +21450,7 @@
 
     const-string v0, "Delete"
 
-    const v1, 0x7f0e0540
+    const v1, 0x7f0e0591
 
     .line 2448
     invoke-static {v0, v1}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -21465,7 +21465,7 @@
 
     const-string v0, "Cancel"
 
-    const v1, 0x7f0e0331
+    const v1, 0x7f0e036d
 
     .line 2469
     invoke-static {v0, v1}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -21635,7 +21635,7 @@
 
     invoke-direct {p1, v0}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    const v0, 0x7f0e0bae
+    const v0, 0x7f0e0c38
 
     const-string v1, "OK"
 
@@ -21648,7 +21648,7 @@
 
     invoke-virtual {p1, v0, v1}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const v0, 0x7f0e0f37
+    const v0, 0x7f0e0fe7
 
     const-string v1, "RestorePasswordResetAccount"
 
@@ -21663,7 +21663,7 @@
 
     invoke-virtual {p1, v0, v1}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setNegativeButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const v0, 0x7f0e0f36
+    const v0, 0x7f0e0fe6
 
     const-string v1, "RestorePasswordNoEmailTitle"
 
@@ -21674,7 +21674,7 @@
 
     invoke-virtual {p1, v0}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const v0, 0x7f0e0f34
+    const v0, 0x7f0e0fe4
 
     const-string v1, "RestorePasswordNoEmailText"
 
@@ -21777,7 +21777,7 @@
 .end method
 
 .method private synthetic lambda$createPasswordInterface$9(Lorg/telegram/tgnet/TLRPC$TL_error;Lorg/telegram/tgnet/TLObject;)V
-    .registers 7
+    .registers 8
 
     .line 1634
     invoke-virtual {p0}, Lorg/telegram/ui/PassportActivity;->needHideProgress()V
@@ -21800,7 +21800,7 @@
 
     invoke-direct {p1, v2}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    const v2, 0x7f0e0f2d
+    const v2, 0x7f0e0fdd
 
     new-array v0, v0, [Ljava/lang/Object;
 
@@ -21817,7 +21817,7 @@
 
     invoke-virtual {p1, v0}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const v0, 0x7f0e0f2f
+    const v0, 0x7f0e0fdf
 
     const-string v2, "RestoreEmailSentTitle"
 
@@ -21828,7 +21828,7 @@
 
     invoke-virtual {p1, v0}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const v0, 0x7f0e0bae
+    const v0, 0x7f0e0c38
 
     const-string v2, "OK"
 
@@ -21852,7 +21852,7 @@
 
     move-result-object p1
 
-    if-eqz p1, :cond_9b
+    if-eqz p1, :cond_9f
 
     .line 1647
     invoke-virtual {p1, v1}, Landroid/app/Dialog;->setCanceledOnTouchOutside(Z)V
@@ -21860,7 +21860,7 @@
     .line 1648
     invoke-virtual {p1, v1}, Landroid/app/Dialog;->setCancelable(Z)V
 
-    goto :goto_9b
+    goto :goto_9f
 
     .line 1651
     :cond_52
@@ -21872,11 +21872,11 @@
 
     move-result p2
 
-    const v2, 0x7f0e017c
+    const v2, 0x7f0e01b1
 
     const-string v3, "AppName"
 
-    if-eqz p2, :cond_92
+    if-eqz p2, :cond_96
 
     .line 1652
     iget-object p1, p1, Lorg/telegram/tgnet/TLRPC$TL_error;->text:Ljava/lang/String;
@@ -21891,34 +21891,38 @@
 
     const/16 p2, 0x3c
 
-    if-ge p1, p2, :cond_76
+    if-ge p1, p2, :cond_78
 
-    const-string p2, "Seconds"
+    new-array p2, v1, [Ljava/lang/Object;
+
+    const-string v4, "Seconds"
 
     .line 1655
-    invoke-static {p2, p1}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    invoke-static {v4, p1, p2}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
 
-    goto :goto_7d
+    goto :goto_81
 
     .line 1657
-    :cond_76
+    :cond_78
     div-int/2addr p1, p2
 
-    const-string p2, "Minutes"
+    new-array p2, v1, [Ljava/lang/Object;
 
-    invoke-static {p2, p1}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    const-string v4, "Minutes"
+
+    invoke-static {v4, p1, p2}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
 
     .line 1659
-    :goto_7d
+    :goto_81
     invoke-static {v3, v2}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object p2
 
-    const v2, 0x7f0e0759
+    const v2, 0x7f0e07ad
 
     new-array v0, v0, [Ljava/lang/Object;
 
@@ -21932,10 +21936,10 @@
 
     invoke-direct {p0, p2, p1}, Lorg/telegram/ui/PassportActivity;->showAlertWithText(Ljava/lang/String;Ljava/lang/String;)V
 
-    goto :goto_9b
+    goto :goto_9f
 
     .line 1661
-    :cond_92
+    :cond_96
     invoke-static {v3, v2}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object p2
@@ -21944,8 +21948,8 @@
 
     invoke-direct {p0, p2, p1}, Lorg/telegram/ui/PassportActivity;->showAlertWithText(Ljava/lang/String;Ljava/lang/String;)V
 
-    :cond_9b
-    :goto_9b
+    :cond_9f
+    :goto_9f
     return-void
 .end method
 
@@ -22283,7 +22287,7 @@
 
     move-result-object p1
 
-    const v1, 0x7f0e11fc
+    const v1, 0x7f0e12c9
 
     const-string v2, "UpdateAppAlert"
 
@@ -22296,7 +22300,7 @@
     goto :goto_39
 
     :cond_2b
-    const v0, 0x7f0e017c
+    const v0, 0x7f0e01b1
 
     const-string v1, "AppName"
 
@@ -23340,7 +23344,7 @@
     invoke-interface {p2, v2, v5}, Lorg/telegram/ui/PassportActivity$ErrorRunnable;->onError(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_12
-    const v1, 0x7f0e017c
+    const v1, 0x7f0e01b1
 
     const-string v2, "AppName"
 
@@ -23715,7 +23719,7 @@
 
     move-result-object p1
 
-    const v0, 0x7f0e11fc
+    const v0, 0x7f0e12c9
 
     const-string v2, "UpdateAppAlert"
 
@@ -24733,7 +24737,7 @@
 
     aget-object v0, v0, v1
 
-    const v1, 0x7f0e0c4a
+    const v1, 0x7f0e0cd4
 
     const-string v6, "PassportFemale"
 
@@ -24756,7 +24760,7 @@
 
     aget-object v0, v0, v1
 
-    const v1, 0x7f0e0c87
+    const v1, 0x7f0e0d11
 
     const-string v6, "PassportMale"
 
@@ -24971,7 +24975,7 @@
 
     aget-object p1, p1, v6
 
-    const v0, 0x7f0e0c95
+    const v0, 0x7f0e0d1f
 
     const-string v1, "PassportNoExpireDate"
 
@@ -25561,7 +25565,7 @@
 
     move-object/from16 v16, v1
 
-    const v1, 0x7f0e00aa
+    const v1, 0x7f0e00d2
 
     move-object/from16 v17, v2
 
@@ -25592,7 +25596,7 @@
 
     if-eqz v1, :cond_59
 
-    const v1, 0x7f0e00a4
+    const v1, 0x7f0e00cc
 
     const-string v2, "ActionBotDocumentEmail"
 
@@ -25614,7 +25618,7 @@
 
     if-eqz v1, :cond_6e
 
-    const v1, 0x7f0e00a5
+    const v1, 0x7f0e00cd
 
     const-string v2, "ActionBotDocumentIdentity"
 
@@ -25636,7 +25640,7 @@
 
     if-eqz v1, :cond_83
 
-    const v1, 0x7f0e00a8
+    const v1, 0x7f0e00d0
 
     const-string v2, "ActionBotDocumentPassport"
 
@@ -25658,7 +25662,7 @@
 
     if-eqz v1, :cond_98
 
-    const v1, 0x7f0e00a7
+    const v1, 0x7f0e00cf
 
     const-string v2, "ActionBotDocumentInternalPassport"
 
@@ -25680,7 +25684,7 @@
 
     if-eqz v1, :cond_ad
 
-    const v1, 0x7f0e00a9
+    const v1, 0x7f0e00d1
 
     const-string v2, "ActionBotDocumentPassportRegistration"
 
@@ -25702,7 +25706,7 @@
 
     if-eqz v1, :cond_c2
 
-    const v1, 0x7f0e00ac
+    const v1, 0x7f0e00d4
 
     const-string v2, "ActionBotDocumentTemporaryRegistration"
 
@@ -25724,7 +25728,7 @@
 
     if-eqz v1, :cond_d7
 
-    const v1, 0x7f0e00a6
+    const v1, 0x7f0e00ce
 
     const-string v2, "ActionBotDocumentIdentityCard"
 
@@ -25746,7 +25750,7 @@
 
     if-eqz v1, :cond_ec
 
-    const v1, 0x7f0e00a3
+    const v1, 0x7f0e00cb
 
     const-string v2, "ActionBotDocumentDriverLicence"
 
@@ -25768,7 +25772,7 @@
 
     if-eqz v1, :cond_101
 
-    const v1, 0x7f0e00a1
+    const v1, 0x7f0e00c9
 
     const-string v2, "ActionBotDocumentAddress"
 
@@ -25790,7 +25794,7 @@
 
     if-eqz v1, :cond_116
 
-    const v1, 0x7f0e00ad
+    const v1, 0x7f0e00d5
 
     const-string v2, "ActionBotDocumentUtilityBill"
 
@@ -25814,7 +25818,7 @@
 
     if-eqz v2, :cond_12d
 
-    const v2, 0x7f0e00a2
+    const v2, 0x7f0e00ca
 
     const-string v3, "ActionBotDocumentBankStatement"
 
@@ -25838,7 +25842,7 @@
 
     if-eqz v2, :cond_144
 
-    const v2, 0x7f0e00ab
+    const v2, 0x7f0e00d3
 
     const-string v3, "ActionBotDocumentRentalAgreement"
 
@@ -25878,7 +25882,7 @@
 
     invoke-direct {v1, v2}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    const v2, 0x7f0e0c93
+    const v2, 0x7f0e0d1d
 
     const-string v3, "PassportNoDocumentsAdd"
 
@@ -25919,7 +25923,7 @@
 .end method
 
 .method private openAttachMenu()V
-    .registers 7
+    .registers 8
 
     .line 6805
     invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->getParentActivity()Landroid/app/Activity;
@@ -25934,11 +25938,11 @@
     :cond_7
     iget v0, p0, Lorg/telegram/ui/PassportActivity;->uploadingFileType:I
 
-    const/4 v1, 0x0
+    const/4 v1, 0x1
 
-    const/4 v2, 0x1
+    const/4 v2, 0x0
 
-    if-nez v0, :cond_37
+    if-nez v0, :cond_39
 
     iget-object v0, p0, Lorg/telegram/ui/PassportActivity;->documents:Ljava/util/ArrayList;
 
@@ -25948,9 +25952,9 @@
 
     const/16 v3, 0x14
 
-    if-lt v0, v3, :cond_37
+    if-lt v0, v3, :cond_39
 
-    const v0, 0x7f0e017c
+    const v0, 0x7f0e01b1
 
     const-string v4, "AppName"
 
@@ -25959,21 +25963,23 @@
 
     move-result-object v0
 
-    const v4, 0x7f0e0cc0
+    const v4, 0x7f0e0d4a
 
-    new-array v2, v2, [Ljava/lang/Object;
+    new-array v1, v1, [Ljava/lang/Object;
 
-    const-string v5, "Files"
+    new-array v5, v2, [Ljava/lang/Object;
 
-    invoke-static {v5, v3}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    const-string v6, "Files"
+
+    invoke-static {v6, v3, v5}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v3
 
-    aput-object v3, v2, v1
+    aput-object v3, v1, v2
 
-    const-string v1, "PassportUploadMaxReached"
+    const-string v2, "PassportUploadMaxReached"
 
-    invoke-static {v1, v4, v2}, Lorg/telegram/messenger/LocaleController;->formatString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {v2, v4, v1}, Lorg/telegram/messenger/LocaleController;->formatString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -25982,7 +25988,7 @@
     return-void
 
     .line 6812
-    :cond_37
+    :cond_39
     invoke-direct {p0}, Lorg/telegram/ui/PassportActivity;->createChatAttachView()V
 
     .line 6813
@@ -25990,24 +25996,24 @@
 
     iget v3, p0, Lorg/telegram/ui/PassportActivity;->uploadingFileType:I
 
-    if-ne v3, v2, :cond_41
+    if-ne v3, v1, :cond_43
 
-    goto :goto_42
+    goto :goto_44
 
-    :cond_41
-    const/4 v2, 0x0
+    :cond_43
+    const/4 v1, 0x0
 
-    :goto_42
-    invoke-virtual {v0, v2}, Lorg/telegram/ui/Components/ChatAttachAlert;->setOpenWithFrontFaceCamera(Z)V
+    :goto_44
+    invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/ChatAttachAlert;->setOpenWithFrontFaceCamera(Z)V
 
     .line 6814
     iget-object v0, p0, Lorg/telegram/ui/PassportActivity;->chatAttachAlert:Lorg/telegram/ui/Components/ChatAttachAlert;
 
     invoke-direct {p0}, Lorg/telegram/ui/PassportActivity;->getMaxSelectedDocuments()I
 
-    move-result v2
+    move-result v1
 
-    invoke-virtual {v0, v2, v1}, Lorg/telegram/ui/Components/ChatAttachAlert;->setMaxSelectedPhotos(IZ)V
+    invoke-virtual {v0, v1, v2}, Lorg/telegram/ui/Components/ChatAttachAlert;->setMaxSelectedPhotos(IZ)V
 
     .line 6815
     iget-object v0, p0, Lorg/telegram/ui/PassportActivity;->chatAttachAlert:Lorg/telegram/ui/Components/ChatAttachAlert;
@@ -26023,14 +26029,14 @@
 
     const/16 v1, 0x15
 
-    if-eq v0, v1, :cond_61
+    if-eq v0, v1, :cond_63
 
     const/16 v1, 0x16
 
-    if-ne v0, v1, :cond_6a
+    if-ne v0, v1, :cond_6c
 
     .line 6817
-    :cond_61
+    :cond_63
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/BaseFragment;->fragmentView:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->findFocus()Landroid/view/View;
@@ -26040,7 +26046,7 @@
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->hideKeyboard(Landroid/view/View;)V
 
     .line 6819
-    :cond_6a
+    :cond_6c
     iget-object v0, p0, Lorg/telegram/ui/PassportActivity;->chatAttachAlert:Lorg/telegram/ui/Components/ChatAttachAlert;
 
     invoke-virtual {v0}, Lorg/telegram/ui/Components/ChatAttachAlert;->init()V
@@ -26928,7 +26934,7 @@
 
     aput v5, p1, v5
 
-    const p1, 0x7f0e0c95
+    const p1, 0x7f0e0d1f
 
     const-string v0, "PassportNoExpireDate"
 
@@ -26954,7 +26960,7 @@
     .line 4748
     iput-object p1, p0, Lorg/telegram/ui/PassportActivity;->currentGender:Ljava/lang/String;
 
-    const p1, 0x7f0e0c87
+    const p1, 0x7f0e0d11
 
     const-string v0, "PassportMale"
 
@@ -26980,7 +26986,7 @@
     .line 4751
     iput-object p1, p0, Lorg/telegram/ui/PassportActivity;->currentGender:Ljava/lang/String;
 
-    const p1, 0x7f0e0c4a
+    const p1, 0x7f0e0cd4
 
     const-string v0, "PassportFemale"
 
@@ -27361,7 +27367,7 @@
     iput-object v3, v7, Lorg/telegram/ui/PassportActivity;->languageMap:Ljava/util/HashMap;
 
     :goto_cb
-    const v5, 0x7f0e0c43
+    const v5, 0x7f0e0ccd
 
     const-string v14, "PassportDocuments"
 
@@ -28158,7 +28164,7 @@
 
     const-string v2, "PassportMale"
 
-    const v4, 0x7f0e0c87
+    const v4, 0x7f0e0d11
 
     .line 5178
     invoke-static {v2, v4}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -28181,7 +28187,7 @@
 
     const-string v2, "PassportFemale"
 
-    const v4, 0x7f0e0c4a
+    const v4, 0x7f0e0cd4
 
     .line 5180
     invoke-static {v2, v4}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -28493,7 +28499,7 @@
 
     if-nez v11, :cond_46c
 
-    const v0, 0x7f0e0c99
+    const v0, 0x7f0e0d23
 
     const-string v1, "PassportPersonalDetailsInfo"
 
@@ -28519,7 +28525,7 @@
 
     move-object/from16 v2, v26
 
-    const v1, 0x7f0e0c43
+    const v1, 0x7f0e0ccd
 
     .line 5221
     invoke-static {v2, v1}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -28542,7 +28548,7 @@
 
     if-eqz v2, :cond_491
 
-    const v0, 0x7f0e0c53
+    const v0, 0x7f0e0cdd
 
     const-string v1, "PassportIdentityPassport"
 
@@ -28559,7 +28565,7 @@
 
     if-eqz v2, :cond_49f
 
-    const v0, 0x7f0e0c52
+    const v0, 0x7f0e0cdc
 
     const-string v1, "PassportIdentityInternalPassport"
 
@@ -28576,7 +28582,7 @@
 
     if-eqz v2, :cond_4ad
 
-    const v0, 0x7f0e0c50
+    const v0, 0x7f0e0cda
 
     const-string v1, "PassportIdentityDriverLicence"
 
@@ -28593,7 +28599,7 @@
 
     if-eqz v1, :cond_4c5
 
-    const v0, 0x7f0e0c51
+    const v0, 0x7f0e0cdb
 
     const-string v1, "PassportIdentityID"
 
@@ -28605,7 +28611,7 @@
     goto :goto_467
 
     :cond_4bb
-    const v0, 0x7f0e0c4f
+    const v0, 0x7f0e0cd9
 
     const-string v1, "PassportIdentityDocumentInfo"
 
@@ -28640,7 +28646,7 @@
 
     if-nez v11, :cond_4e2
 
-    const v0, 0x7f0e0c2b
+    const v0, 0x7f0e0cb5
 
     const-string v1, "PassportAddressNoUploadInfo"
 
@@ -28659,7 +28665,7 @@
 
     if-ne v1, v4, :cond_4f1
 
-    const v1, 0x7f0e0c43
+    const v1, 0x7f0e0ccd
 
     .line 5245
     invoke-static {v2, v1}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -28680,7 +28686,7 @@
 
     if-eqz v3, :cond_505
 
-    const v0, 0x7f0e0c11
+    const v0, 0x7f0e0c9b
 
     const-string v1, "PassportAddAgreementInfo"
 
@@ -28697,7 +28703,7 @@
 
     if-eqz v3, :cond_513
 
-    const v0, 0x7f0e0c15
+    const v0, 0x7f0e0c9f
 
     const-string v1, "PassportAddBillInfo"
 
@@ -28714,7 +28720,7 @@
 
     if-eqz v3, :cond_521
 
-    const v0, 0x7f0e0c1f
+    const v0, 0x7f0e0ca9
 
     const-string v1, "PassportAddPassportRegistrationInfo"
 
@@ -28731,7 +28737,7 @@
 
     if-eqz v3, :cond_52f
 
-    const v0, 0x7f0e0c21
+    const v0, 0x7f0e0cab
 
     const-string v1, "PassportAddTemporaryRegistrationInfo"
 
@@ -28748,7 +28754,7 @@
 
     if-eqz v1, :cond_56f
 
-    const v0, 0x7f0e0c13
+    const v0, 0x7f0e0c9d
 
     const-string v1, "PassportAddBankInfo"
 
@@ -28760,7 +28766,7 @@
     goto :goto_56f
 
     :cond_53d
-    const v0, 0x7f0e0c2a
+    const v0, 0x7f0e0cb4
 
     const-string v1, "PassportAddressInfo"
 
@@ -28786,7 +28792,7 @@
 
     if-eqz v1, :cond_56f
 
-    const v0, 0x7f0e0c9c
+    const v0, 0x7f0e0d26
 
     const-string v1, "PassportPhoneInfo"
 
@@ -28810,7 +28816,7 @@
 
     if-eqz v1, :cond_56f
 
-    const v0, 0x7f0e0c46
+    const v0, 0x7f0e0cd0
 
     const-string v1, "PassportEmailInfo"
 
@@ -28910,7 +28916,7 @@
 
     invoke-direct {v0, v1}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    const v1, 0x7f0e0bae
+    const v1, 0x7f0e0c38
 
     const-string v2, "OK"
 
@@ -28957,7 +28963,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0e11f7
+    const v1, 0x7f0e12c4
 
     const-string v2, "UnsupportedAttachment"
 
@@ -29680,7 +29686,7 @@
 
     invoke-direct {p1, v0}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    const v0, 0x7f0e017c
+    const v0, 0x7f0e01b1
 
     const-string v1, "AppName"
 
@@ -29691,7 +29697,7 @@
 
     invoke-virtual {p1, v0}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const v0, 0x7f0e0bae
+    const v0, 0x7f0e0c38
 
     const-string v1, "OK"
 
@@ -29704,7 +29710,7 @@
 
     invoke-virtual {p1, v0, v1}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const v0, 0x7f0e0156
+    const v0, 0x7f0e0183
 
     const-string v1, "AllowReadCall"
 
@@ -29953,7 +29959,7 @@
     :cond_10
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
-    const v1, 0x7f0e0c97
+    const v1, 0x7f0e0d21
 
     const-string v2, "PassportPersonal"
 
@@ -30305,7 +30311,7 @@
 
     aget-object v0, v0, v2
 
-    const v1, 0x7f0e0977
+    const v1, 0x7f0e09fe
 
     const-string v2, "LoginPassword"
 
@@ -30377,11 +30383,11 @@
 .method private updateUploadText(I)V
     .registers 10
 
-    const v0, 0x7f0e0cbe
+    const v0, 0x7f0e0d48
 
     const-string v1, "PassportUploadAdditinalDocument"
 
-    const v2, 0x7f0e0cbf
+    const v2, 0x7f0e0d49
 
     const-string v3, "PassportUploadDocument"
 
@@ -30554,7 +30560,7 @@
     goto :goto_a8
 
     :cond_92
-    const v0, 0x7f0e0c4b
+    const v0, 0x7f0e0cd5
 
     const-string v1, "PassportFrontSide"
 
@@ -30563,7 +30569,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0e0c4c
+    const v1, 0x7f0e0cd6
 
     const-string v2, "PassportFrontSideInfo"
 
@@ -30577,7 +30583,7 @@
 
     :cond_a8
     :goto_a8
-    const v0, 0x7f0e0c85
+    const v0, 0x7f0e0d0f
 
     const-string v1, "PassportMainPage"
 
@@ -30586,7 +30592,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0e0c86
+    const v1, 0x7f0e0d10
 
     const-string v2, "PassportMainPageInfo"
 
@@ -30684,7 +30690,7 @@
     .line 969
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
-    const v1, 0x7f070140
+    const v1, 0x7f070109
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/ActionBar;->setBackButtonImage(I)V
 
@@ -30860,7 +30866,7 @@
 
     move-result-object v0
 
-    const v8, 0x7f07015e
+    const v8, 0x7f07010a
 
     const/high16 v9, 0x42600000    # 56.0f
 
@@ -30869,7 +30875,7 @@
 
     move-result v9
 
-    const v10, 0x7f0e05dd
+    const v10, 0x7f0e062e
 
     const-string v11, "Done"
 
@@ -33734,7 +33740,7 @@
 
     invoke-direct {p1, p2}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    const p2, 0x7f0e017c
+    const p2, 0x7f0e01b1
 
     const-string p3, "AppName"
 
@@ -33745,7 +33751,7 @@
 
     invoke-virtual {p1, p2}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const p2, 0x7f0e0d36
+    const p2, 0x7f0e0dc4
 
     const-string p3, "PermissionNoAudioVideoWithHint"
 
@@ -33756,7 +33762,7 @@
 
     invoke-virtual {p1, p2}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const p2, 0x7f0e0d42
+    const p2, 0x7f0e0dd0
 
     const-string p3, "PermissionOpenSettings"
 
@@ -33771,7 +33777,7 @@
 
     invoke-virtual {p1, p2, p3}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setNegativeButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const p2, 0x7f0e0bae
+    const p2, 0x7f0e0c38
 
     const-string p3, "OK"
 

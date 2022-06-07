@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lorg/telegram/ui/PaymentFormActivity;->lambda$createGooglePayButton$30(Landroid/view/View;)V
+    value = Lorg/telegram/ui/PaymentFormActivity;->lambda$createGooglePayButton$32(Landroid/view/View;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -27,7 +27,7 @@
         }
     .end annotation
 
-    .line 2496
+    .line 2676
     iput-object p1, p0, Lorg/telegram/ui/PaymentFormActivity$23;->this$0:Lorg/telegram/ui/PaymentFormActivity;
 
     invoke-direct {p0}, Lorg/json/JSONObject;-><init>()V
@@ -36,11 +36,11 @@
 
     const-string v1, "PAYMENT_GATEWAY"
 
-    .line 2497
+    .line 2677
     invoke-virtual {p0, v0, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 2498
-    invoke-static {p1}, Lorg/telegram/ui/PaymentFormActivity;->access$4500(Lorg/telegram/ui/PaymentFormActivity;)Lorg/json/JSONObject;
+    .line 2678
+    invoke-static {p1}, Lorg/telegram/ui/PaymentFormActivity;->access$4600(Lorg/telegram/ui/PaymentFormActivity;)Lorg/json/JSONObject;
 
     move-result-object v0
 
@@ -48,8 +48,8 @@
 
     if-eqz v0, :cond_1c
 
-    .line 2499
-    invoke-static {p1}, Lorg/telegram/ui/PaymentFormActivity;->access$4500(Lorg/telegram/ui/PaymentFormActivity;)Lorg/json/JSONObject;
+    .line 2679
+    invoke-static {p1}, Lorg/telegram/ui/PaymentFormActivity;->access$4600(Lorg/telegram/ui/PaymentFormActivity;)Lorg/json/JSONObject;
 
     move-result-object p1
 
@@ -57,7 +57,7 @@
 
     goto :goto_24
 
-    .line 2501
+    .line 2681
     :cond_1c
     new-instance p1, Lorg/telegram/ui/PaymentFormActivity$23$1;
 

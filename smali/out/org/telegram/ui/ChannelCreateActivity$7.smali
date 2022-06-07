@@ -25,7 +25,7 @@
 .method constructor <init>(Lorg/telegram/ui/ChannelCreateActivity;)V
     .registers 2
 
-    .line 705
+    .line 760
     iput-object p1, p0, Lorg/telegram/ui/ChannelCreateActivity$7;->this$0:Lorg/telegram/ui/ChannelCreateActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -50,10 +50,10 @@
 .method public onTextChanged(Ljava/lang/CharSequence;III)V
     .registers 5
 
-    .line 713
+    .line 768
     iget-object p1, p0, Lorg/telegram/ui/ChannelCreateActivity$7;->this$0:Lorg/telegram/ui/ChannelCreateActivity;
 
-    invoke-static {p1}, Lorg/telegram/ui/ChannelCreateActivity;->access$600(Lorg/telegram/ui/ChannelCreateActivity;)Lorg/telegram/ui/Components/EditTextBoldCursor;
+    invoke-static {p1}, Lorg/telegram/ui/ChannelCreateActivity;->access$800(Lorg/telegram/ui/ChannelCreateActivity;)Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     move-result-object p2
 
@@ -65,7 +65,7 @@
 
     move-result-object p2
 
-    invoke-static {p1, p2}, Lorg/telegram/ui/ChannelCreateActivity;->access$1900(Lorg/telegram/ui/ChannelCreateActivity;Ljava/lang/String;)Z
+    invoke-static {p1, p2}, Lorg/telegram/ui/ChannelCreateActivity;->access$2000(Lorg/telegram/ui/ChannelCreateActivity;Ljava/lang/String;)Z
 
     return-void
 .end method

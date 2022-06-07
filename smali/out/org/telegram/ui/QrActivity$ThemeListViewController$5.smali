@@ -1,5 +1,5 @@
 .class Lorg/telegram/ui/QrActivity$ThemeListViewController$5;
-.super Landroid/animation/AnimatorListenerAdapter;
+.super Landroid/view/View;
 .source "QrActivity.java"
 
 
@@ -17,83 +17,162 @@
 # instance fields
 .field final synthetic this$1:Lorg/telegram/ui/QrActivity$ThemeListViewController;
 
+.field final synthetic val$bitmap:Landroid/graphics/Bitmap;
+
+.field final synthetic val$bitmapCanvas:Landroid/graphics/Canvas;
+
+.field final synthetic val$bitmapPaint:Landroid/graphics/Paint;
+
+.field final synthetic val$cx:F
+
+.field final synthetic val$cy:F
+
+.field final synthetic val$isDark:Z
+
+.field final synthetic val$r:F
+
+.field final synthetic val$x:F
+
+.field final synthetic val$xRefPaint:Landroid/graphics/Paint;
+
+.field final synthetic val$y:F
+
 
 # direct methods
-.method constructor <init>(Lorg/telegram/ui/QrActivity$ThemeListViewController;)V
-    .registers 2
+.method constructor <init>(Lorg/telegram/ui/QrActivity$ThemeListViewController;Landroid/content/Context;ZLandroid/graphics/Canvas;FFFLandroid/graphics/Paint;Landroid/graphics/Bitmap;Landroid/graphics/Paint;FF)V
+    .registers 13
 
-    .line 1239
+    .line 1214
     iput-object p1, p0, Lorg/telegram/ui/QrActivity$ThemeListViewController$5;->this$1:Lorg/telegram/ui/QrActivity$ThemeListViewController;
 
-    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
+    iput-boolean p3, p0, Lorg/telegram/ui/QrActivity$ThemeListViewController$5;->val$isDark:Z
+
+    iput-object p4, p0, Lorg/telegram/ui/QrActivity$ThemeListViewController$5;->val$bitmapCanvas:Landroid/graphics/Canvas;
+
+    iput p5, p0, Lorg/telegram/ui/QrActivity$ThemeListViewController$5;->val$cx:F
+
+    iput p6, p0, Lorg/telegram/ui/QrActivity$ThemeListViewController$5;->val$cy:F
+
+    iput p7, p0, Lorg/telegram/ui/QrActivity$ThemeListViewController$5;->val$r:F
+
+    iput-object p8, p0, Lorg/telegram/ui/QrActivity$ThemeListViewController$5;->val$xRefPaint:Landroid/graphics/Paint;
+
+    iput-object p9, p0, Lorg/telegram/ui/QrActivity$ThemeListViewController$5;->val$bitmap:Landroid/graphics/Bitmap;
+
+    iput-object p10, p0, Lorg/telegram/ui/QrActivity$ThemeListViewController$5;->val$bitmapPaint:Landroid/graphics/Paint;
+
+    iput p11, p0, Lorg/telegram/ui/QrActivity$ThemeListViewController$5;->val$x:F
+
+    iput p12, p0, Lorg/telegram/ui/QrActivity$ThemeListViewController$5;->val$y:F
+
+    invoke-direct {p0, p2}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onAnimationEnd(Landroid/animation/Animator;)V
-    .registers 5
+.method protected onDraw(Landroid/graphics/Canvas;)V
+    .registers 8
 
-    .line 1242
-    iget-object v0, p0, Lorg/telegram/ui/QrActivity$ThemeListViewController$5;->this$1:Lorg/telegram/ui/QrActivity$ThemeListViewController;
+    .line 1217
+    invoke-super {p0, p1}, Landroid/view/View;->onDraw(Landroid/graphics/Canvas;)V
 
-    invoke-static {v0}, Lorg/telegram/ui/QrActivity$ThemeListViewController;->access$3100(Lorg/telegram/ui/QrActivity$ThemeListViewController;)Landroid/view/View;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
+    .line 1218
+    iget-boolean v0, p0, Lorg/telegram/ui/QrActivity$ThemeListViewController$5;->val$isDark:Z
 
     if-eqz v0, :cond_2f
 
-    .line 1243
+    .line 1219
     iget-object v0, p0, Lorg/telegram/ui/QrActivity$ThemeListViewController$5;->this$1:Lorg/telegram/ui/QrActivity$ThemeListViewController;
 
-    invoke-static {v0}, Lorg/telegram/ui/QrActivity$ThemeListViewController;->access$3100(Lorg/telegram/ui/QrActivity$ThemeListViewController;)Landroid/view/View;
+    invoke-static {v0}, Lorg/telegram/ui/QrActivity$ThemeListViewController;->access$2900(Lorg/telegram/ui/QrActivity$ThemeListViewController;)F
 
-    move-result-object v0
+    move-result v0
 
-    invoke-virtual {v0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+    const/4 v1, 0x0
 
-    move-result-object v0
+    cmpl-float v0, v0, v1
 
-    if-eqz v0, :cond_2a
+    if-lez v0, :cond_27
 
-    .line 1244
-    iget-object v0, p0, Lorg/telegram/ui/QrActivity$ThemeListViewController$5;->this$1:Lorg/telegram/ui/QrActivity$ThemeListViewController;
+    .line 1220
+    iget-object v0, p0, Lorg/telegram/ui/QrActivity$ThemeListViewController$5;->val$bitmapCanvas:Landroid/graphics/Canvas;
 
-    invoke-static {v0}, Lorg/telegram/ui/QrActivity$ThemeListViewController;->access$3100(Lorg/telegram/ui/QrActivity$ThemeListViewController;)Landroid/view/View;
+    iget v2, p0, Lorg/telegram/ui/QrActivity$ThemeListViewController$5;->val$cx:F
 
-    move-result-object v0
+    iget v3, p0, Lorg/telegram/ui/QrActivity$ThemeListViewController$5;->val$cy:F
 
-    invoke-virtual {v0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+    iget v4, p0, Lorg/telegram/ui/QrActivity$ThemeListViewController$5;->val$r:F
 
-    move-result-object v0
+    iget-object v5, p0, Lorg/telegram/ui/QrActivity$ThemeListViewController$5;->this$1:Lorg/telegram/ui/QrActivity$ThemeListViewController;
 
-    check-cast v0, Landroid/view/ViewGroup;
+    invoke-static {v5}, Lorg/telegram/ui/QrActivity$ThemeListViewController;->access$2900(Lorg/telegram/ui/QrActivity$ThemeListViewController;)F
 
-    iget-object v2, p0, Lorg/telegram/ui/QrActivity$ThemeListViewController$5;->this$1:Lorg/telegram/ui/QrActivity$ThemeListViewController;
+    move-result v5
 
-    invoke-static {v2}, Lorg/telegram/ui/QrActivity$ThemeListViewController;->access$3100(Lorg/telegram/ui/QrActivity$ThemeListViewController;)Landroid/view/View;
+    mul-float v4, v4, v5
 
-    move-result-object v2
+    iget-object v5, p0, Lorg/telegram/ui/QrActivity$ThemeListViewController$5;->val$xRefPaint:Landroid/graphics/Paint;
 
-    invoke-virtual {v0, v2}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
+    invoke-virtual {v0, v2, v3, v4, v5}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
 
-    .line 1246
-    :cond_2a
-    iget-object v0, p0, Lorg/telegram/ui/QrActivity$ThemeListViewController$5;->this$1:Lorg/telegram/ui/QrActivity$ThemeListViewController;
+    .line 1222
+    :cond_27
+    iget-object v0, p0, Lorg/telegram/ui/QrActivity$ThemeListViewController$5;->val$bitmap:Landroid/graphics/Bitmap;
 
-    invoke-static {v0, v1}, Lorg/telegram/ui/QrActivity$ThemeListViewController;->access$3102(Lorg/telegram/ui/QrActivity$ThemeListViewController;Landroid/view/View;)Landroid/view/View;
+    iget-object v2, p0, Lorg/telegram/ui/QrActivity$ThemeListViewController$5;->val$bitmapPaint:Landroid/graphics/Paint;
 
-    .line 1248
+    invoke-virtual {p1, v0, v1, v1, v2}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
+
+    goto :goto_45
+
+    .line 1224
     :cond_2f
+    iget v0, p0, Lorg/telegram/ui/QrActivity$ThemeListViewController$5;->val$cx:F
+
+    iget v1, p0, Lorg/telegram/ui/QrActivity$ThemeListViewController$5;->val$cy:F
+
+    iget v2, p0, Lorg/telegram/ui/QrActivity$ThemeListViewController$5;->val$r:F
+
+    const/high16 v3, 0x3f800000    # 1.0f
+
+    iget-object v4, p0, Lorg/telegram/ui/QrActivity$ThemeListViewController$5;->this$1:Lorg/telegram/ui/QrActivity$ThemeListViewController;
+
+    invoke-static {v4}, Lorg/telegram/ui/QrActivity$ThemeListViewController;->access$2900(Lorg/telegram/ui/QrActivity$ThemeListViewController;)F
+
+    move-result v4
+
+    sub-float/2addr v3, v4
+
+    mul-float v2, v2, v3
+
+    iget-object v3, p0, Lorg/telegram/ui/QrActivity$ThemeListViewController$5;->val$bitmapPaint:Landroid/graphics/Paint;
+
+    invoke-virtual {p1, v0, v1, v2, v3}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
+
+    .line 1226
+    :goto_45
+    invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
+
+    .line 1227
+    iget v0, p0, Lorg/telegram/ui/QrActivity$ThemeListViewController$5;->val$x:F
+
+    iget v1, p0, Lorg/telegram/ui/QrActivity$ThemeListViewController$5;->val$y:F
+
+    invoke-virtual {p1, v0, v1}, Landroid/graphics/Canvas;->translate(FF)V
+
+    .line 1228
     iget-object v0, p0, Lorg/telegram/ui/QrActivity$ThemeListViewController$5;->this$1:Lorg/telegram/ui/QrActivity$ThemeListViewController;
 
-    invoke-static {v0, v1}, Lorg/telegram/ui/QrActivity$ThemeListViewController;->access$3202(Lorg/telegram/ui/QrActivity$ThemeListViewController;Landroid/animation/ValueAnimator;)Landroid/animation/ValueAnimator;
+    invoke-static {v0}, Lorg/telegram/ui/QrActivity$ThemeListViewController;->access$3000(Lorg/telegram/ui/QrActivity$ThemeListViewController;)Lorg/telegram/ui/Components/RLottieImageView;
 
-    .line 1249
-    invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationEnd(Landroid/animation/Animator;)V
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Landroid/widget/ImageView;->draw(Landroid/graphics/Canvas;)V
+
+    .line 1229
+    invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
     return-void
 .end method

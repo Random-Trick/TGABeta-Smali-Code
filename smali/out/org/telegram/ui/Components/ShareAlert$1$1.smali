@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/ShareAlert$1;Landroid/view/View;)V
     .registers 3
 
-    .line 511
+    .line 512
     iput-object p1, p0, Lorg/telegram/ui/Components/ShareAlert$1$1;->this$1:Lorg/telegram/ui/Components/ShareAlert$1;
 
     invoke-direct {p0, p2}, Lorg/telegram/ui/ActionBar/AdjustPanLayoutHelper;-><init>(Landroid/view/View;)V
@@ -35,7 +35,7 @@
 .method protected heightAnimationEnabled()Z
     .registers 2
 
-    .line 596
+    .line 597
     iget-object v0, p0, Lorg/telegram/ui/Components/ShareAlert$1$1;->this$1:Lorg/telegram/ui/Components/ShareAlert$1;
 
     iget-object v0, v0, Lorg/telegram/ui/Components/ShareAlert$1;->this$0:Lorg/telegram/ui/Components/ShareAlert;
@@ -50,7 +50,7 @@
 
     return v0
 
-    .line 599
+    .line 600
     :cond_c
     iget-object v0, p0, Lorg/telegram/ui/Components/ShareAlert$1$1;->this$1:Lorg/telegram/ui/Components/ShareAlert$1;
 
@@ -72,12 +72,12 @@
 .method protected onPanTranslationUpdate(FFZ)V
     .registers 8
 
-    .line 559
+    .line 560
     invoke-super {p0, p1, p2, p3}, Lorg/telegram/ui/ActionBar/AdjustPanLayoutHelper;->onPanTranslationUpdate(FFZ)V
 
     const/4 v0, 0x0
 
-    .line 560
+    .line 561
     :goto_4
     iget-object v1, p0, Lorg/telegram/ui/Components/ShareAlert$1$1;->this$1:Lorg/telegram/ui/Components/ShareAlert$1;
 
@@ -93,7 +93,7 @@
 
     if-ge v0, v1, :cond_ac
 
-    .line 561
+    .line 562
     iget-object v1, p0, Lorg/telegram/ui/Components/ShareAlert$1$1;->this$1:Lorg/telegram/ui/Components/ShareAlert$1;
 
     iget-object v1, v1, Lorg/telegram/ui/Components/ShareAlert$1;->this$0:Lorg/telegram/ui/Components/ShareAlert;
@@ -168,7 +168,7 @@
 
     iget-object v1, v1, Lorg/telegram/ui/Components/ShareAlert$1;->this$0:Lorg/telegram/ui/Components/ShareAlert;
 
-    .line 562
+    .line 563
     invoke-static {v1}, Lorg/telegram/ui/Components/ShareAlert;->access$4400(Lorg/telegram/ui/Components/ShareAlert;)Landroid/view/ViewGroup;
 
     move-result-object v1
@@ -231,7 +231,7 @@
 
     if-eq v1, v2, :cond_a8
 
-    .line 563
+    .line 564
     iget-object v1, p0, Lorg/telegram/ui/Components/ShareAlert$1$1;->this$1:Lorg/telegram/ui/Components/ShareAlert$1;
 
     iget-object v1, v1, Lorg/telegram/ui/Components/ShareAlert$1;->this$0:Lorg/telegram/ui/Components/ShareAlert;
@@ -251,7 +251,7 @@
 
     goto/16 :goto_4
 
-    .line 566
+    .line 567
     :cond_ac
     iget-object v0, p0, Lorg/telegram/ui/Components/ShareAlert$1$1;->this$1:Lorg/telegram/ui/Components/ShareAlert$1;
 
@@ -259,7 +259,7 @@
 
     invoke-static {v0, p1}, Lorg/telegram/ui/Components/ShareAlert;->access$3402(Lorg/telegram/ui/Components/ShareAlert;F)F
 
-    .line 567
+    .line 568
     iget-object p1, p0, Lorg/telegram/ui/Components/ShareAlert$1$1;->this$1:Lorg/telegram/ui/Components/ShareAlert$1;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/ShareAlert$1;->access$2700(Lorg/telegram/ui/Components/ShareAlert$1;)I
@@ -279,7 +279,7 @@
     :cond_c1
     sub-float p2, v1, p2
 
-    .line 569
+    .line 570
     :goto_c3
     iget-object p1, p0, Lorg/telegram/ui/Components/ShareAlert$1$1;->this$1:Lorg/telegram/ui/Components/ShareAlert$1;
 
@@ -311,7 +311,7 @@
 
     invoke-static {v0, p1}, Lorg/telegram/ui/Components/ShareAlert;->access$2602(Lorg/telegram/ui/Components/ShareAlert;I)I
 
-    .line 570
+    .line 571
     iget-object p1, p0, Lorg/telegram/ui/Components/ShareAlert$1$1;->this$1:Lorg/telegram/ui/Components/ShareAlert$1;
 
     iget-object p1, p1, Lorg/telegram/ui/Components/ShareAlert$1;->this$0:Lorg/telegram/ui/Components/ShareAlert;
@@ -340,7 +340,7 @@
 
     add-float/2addr p1, p2
 
-    .line 571
+    .line 572
     iget-object p2, p0, Lorg/telegram/ui/Components/ShareAlert$1$1;->this$1:Lorg/telegram/ui/Components/ShareAlert$1;
 
     iget-object p2, p2, Lorg/telegram/ui/Components/ShareAlert$1;->this$0:Lorg/telegram/ui/Components/ShareAlert;
@@ -353,7 +353,7 @@
 
     if-eqz p3, :cond_110
 
-    .line 573
+    .line 574
     iget-object p2, p0, Lorg/telegram/ui/Components/ShareAlert$1$1;->this$1:Lorg/telegram/ui/Components/ShareAlert$1;
 
     iget-object p2, p2, Lorg/telegram/ui/Components/ShareAlert$1;->this$0:Lorg/telegram/ui/Components/ShareAlert;
@@ -366,7 +366,7 @@
 
     goto/16 :goto_19b
 
-    .line 575
+    .line 576
     :cond_110
     iget-object p2, p0, Lorg/telegram/ui/Components/ShareAlert$1$1;->this$1:Lorg/telegram/ui/Components/ShareAlert$1;
 
@@ -396,7 +396,7 @@
 
     goto :goto_19b
 
-    .line 577
+    .line 578
     :cond_12a
     iget-object p1, p0, Lorg/telegram/ui/Components/ShareAlert$1$1;->this$1:Lorg/telegram/ui/Components/ShareAlert$1;
 
@@ -406,7 +406,7 @@
 
     if-eq p1, v0, :cond_19b
 
-    .line 578
+    .line 579
     iget-object p1, p0, Lorg/telegram/ui/Components/ShareAlert$1$1;->this$1:Lorg/telegram/ui/Components/ShareAlert$1;
 
     iget-object v0, p1, Lorg/telegram/ui/Components/ShareAlert$1;->this$0:Lorg/telegram/ui/Components/ShareAlert;
@@ -447,7 +447,7 @@
     :goto_150
     if-eqz p3, :cond_177
 
-    .line 581
+    .line 582
     iget-object p1, p0, Lorg/telegram/ui/Components/ShareAlert$1$1;->this$1:Lorg/telegram/ui/Components/ShareAlert$1;
 
     iget-object p1, p1, Lorg/telegram/ui/Components/ShareAlert$1;->this$0:Lorg/telegram/ui/Components/ShareAlert;
@@ -488,7 +488,7 @@
 
     goto :goto_19b
 
-    .line 583
+    .line 584
     :cond_177
     iget-object p1, p0, Lorg/telegram/ui/Components/ShareAlert$1$1;->this$1:Lorg/telegram/ui/Components/ShareAlert$1;
 
@@ -528,7 +528,7 @@
 
     invoke-virtual {p1, p2}, Lorg/telegram/ui/Components/RecyclerListView;->setTranslationY(F)V
 
-    .line 586
+    .line 587
     :cond_19b
     :goto_19b
     iget-object p1, p0, Lorg/telegram/ui/Components/ShareAlert$1$1;->this$1:Lorg/telegram/ui/Components/ShareAlert$1;
@@ -563,7 +563,7 @@
 
     invoke-virtual {p1, p2}, Landroidx/recyclerview/widget/RecyclerView;->setTopGlowOffset(I)V
 
-    .line 587
+    .line 588
     iget-object p1, p0, Lorg/telegram/ui/Components/ShareAlert$1$1;->this$1:Lorg/telegram/ui/Components/ShareAlert$1;
 
     iget-object p1, p1, Lorg/telegram/ui/Components/ShareAlert$1;->this$0:Lorg/telegram/ui/Components/ShareAlert;
@@ -594,7 +594,7 @@
 
     invoke-virtual {p1, p2}, Landroid/widget/FrameLayout;->setTranslationY(F)V
 
-    .line 588
+    .line 589
     iget-object p1, p0, Lorg/telegram/ui/Components/ShareAlert$1$1;->this$1:Lorg/telegram/ui/Components/ShareAlert$1;
 
     iget-object p1, p1, Lorg/telegram/ui/Components/ShareAlert$1;->this$0:Lorg/telegram/ui/Components/ShareAlert;
@@ -625,7 +625,7 @@
 
     invoke-virtual {p1, p2}, Landroid/widget/FrameLayout;->setTranslationY(F)V
 
-    .line 589
+    .line 590
     iget-object p1, p0, Lorg/telegram/ui/Components/ShareAlert$1$1;->this$1:Lorg/telegram/ui/Components/ShareAlert$1;
 
     iget-object p1, p1, Lorg/telegram/ui/Components/ShareAlert$1;->this$0:Lorg/telegram/ui/Components/ShareAlert;
@@ -636,7 +636,7 @@
 
     invoke-virtual {p1}, Landroid/widget/FrameLayout;->invalidate()V
 
-    .line 590
+    .line 591
     iget-object p1, p0, Lorg/telegram/ui/Components/ShareAlert$1$1;->this$1:Lorg/telegram/ui/Components/ShareAlert$1;
 
     iget-object p1, p1, Lorg/telegram/ui/Components/ShareAlert$1;->this$0:Lorg/telegram/ui/Components/ShareAlert;
@@ -647,7 +647,7 @@
 
     invoke-virtual {p1, p2}, Lorg/telegram/ui/ActionBar/BottomSheet;->setCurrentPanTranslationY(F)V
 
-    .line 591
+    .line 592
     iget-object p1, p0, Lorg/telegram/ui/Components/ShareAlert$1$1;->this$1:Lorg/telegram/ui/Components/ShareAlert$1;
 
     invoke-virtual {p1}, Landroid/widget/FrameLayout;->invalidate()V
@@ -658,10 +658,10 @@
 .method protected onTransitionEnd()V
     .registers 3
 
-    .line 547
+    .line 548
     invoke-super {p0}, Lorg/telegram/ui/ActionBar/AdjustPanLayoutHelper;->onTransitionEnd()V
 
-    .line 548
+    .line 549
     iget-object v0, p0, Lorg/telegram/ui/Components/ShareAlert$1$1;->this$1:Lorg/telegram/ui/Components/ShareAlert$1;
 
     iget-object v0, v0, Lorg/telegram/ui/Components/ShareAlert$1;->this$0:Lorg/telegram/ui/Components/ShareAlert;
@@ -670,7 +670,7 @@
 
     invoke-static {v0, v1}, Lorg/telegram/ui/Components/ShareAlert;->access$2902(Lorg/telegram/ui/Components/ShareAlert;Z)Z
 
-    .line 549
+    .line 550
     iget-object v0, p0, Lorg/telegram/ui/Components/ShareAlert$1$1;->this$1:Lorg/telegram/ui/Components/ShareAlert$1;
 
     iget-object v0, v0, Lorg/telegram/ui/Components/ShareAlert$1;->this$0:Lorg/telegram/ui/Components/ShareAlert;
@@ -681,7 +681,7 @@
 
     invoke-static {v0, v1}, Lorg/telegram/ui/Components/ShareAlert;->access$2502(Lorg/telegram/ui/Components/ShareAlert;I)I
 
-    .line 550
+    .line 551
     iget-object v0, p0, Lorg/telegram/ui/Components/ShareAlert$1$1;->this$1:Lorg/telegram/ui/Components/ShareAlert$1;
 
     iget-object v0, v0, Lorg/telegram/ui/Components/ShareAlert$1;->this$0:Lorg/telegram/ui/Components/ShareAlert;
@@ -700,7 +700,7 @@
 
     invoke-virtual {v0, v1}, Landroidx/recyclerview/widget/RecyclerView;->setTopGlowOffset(I)V
 
-    .line 551
+    .line 552
     iget-object v0, p0, Lorg/telegram/ui/Components/ShareAlert$1$1;->this$1:Lorg/telegram/ui/Components/ShareAlert$1;
 
     iget-object v0, v0, Lorg/telegram/ui/Components/ShareAlert$1;->this$0:Lorg/telegram/ui/Components/ShareAlert;
@@ -721,7 +721,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->setTranslationY(F)V
 
-    .line 552
+    .line 553
     iget-object v0, p0, Lorg/telegram/ui/Components/ShareAlert$1$1;->this$1:Lorg/telegram/ui/Components/ShareAlert$1;
 
     iget-object v0, v0, Lorg/telegram/ui/Components/ShareAlert$1;->this$0:Lorg/telegram/ui/Components/ShareAlert;
@@ -742,7 +742,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->setTranslationY(F)V
 
-    .line 553
+    .line 554
     iget-object v0, p0, Lorg/telegram/ui/Components/ShareAlert$1$1;->this$1:Lorg/telegram/ui/Components/ShareAlert$1;
 
     iget-object v0, v0, Lorg/telegram/ui/Components/ShareAlert$1;->this$0:Lorg/telegram/ui/Components/ShareAlert;
@@ -755,7 +755,7 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/RecyclerListView;->setTranslationY(F)V
 
-    .line 554
+    .line 555
     iget-object v0, p0, Lorg/telegram/ui/Components/ShareAlert$1$1;->this$1:Lorg/telegram/ui/Components/ShareAlert$1;
 
     iget-object v0, v0, Lorg/telegram/ui/Components/ShareAlert$1;->this$0:Lorg/telegram/ui/Components/ShareAlert;
@@ -772,10 +772,10 @@
 .method protected onTransitionStart(ZI)V
     .registers 6
 
-    .line 515
+    .line 516
     invoke-super {p0, p1, p2}, Lorg/telegram/ui/ActionBar/AdjustPanLayoutHelper;->onTransitionStart(ZI)V
 
-    .line 516
+    .line 517
     iget-object p2, p0, Lorg/telegram/ui/Components/ShareAlert$1$1;->this$1:Lorg/telegram/ui/Components/ShareAlert$1;
 
     iget-object p2, p2, Lorg/telegram/ui/Components/ShareAlert$1;->this$0:Lorg/telegram/ui/Components/ShareAlert;
@@ -798,7 +798,7 @@
 
     if-eq p2, v0, :cond_40
 
-    .line 517
+    .line 518
     iget-object p2, p0, Lorg/telegram/ui/Components/ShareAlert$1$1;->this$1:Lorg/telegram/ui/Components/ShareAlert$1;
 
     iget-object v0, p2, Lorg/telegram/ui/Components/ShareAlert$1;->this$0:Lorg/telegram/ui/Components/ShareAlert;
@@ -809,7 +809,7 @@
 
     invoke-static {p2, v0}, Lorg/telegram/ui/Components/ShareAlert$1;->access$2702(Lorg/telegram/ui/Components/ShareAlert$1;I)I
 
-    .line 518
+    .line 519
     iget-object p2, p0, Lorg/telegram/ui/Components/ShareAlert$1$1;->this$1:Lorg/telegram/ui/Components/ShareAlert$1;
 
     iget-object v0, p2, Lorg/telegram/ui/Components/ShareAlert$1;->this$0:Lorg/telegram/ui/Components/ShareAlert;
@@ -820,14 +820,14 @@
 
     invoke-static {p2, v0}, Lorg/telegram/ui/Components/ShareAlert$1;->access$2802(Lorg/telegram/ui/Components/ShareAlert$1;I)I
 
-    .line 519
+    .line 520
     iget-object p2, p0, Lorg/telegram/ui/Components/ShareAlert$1$1;->this$1:Lorg/telegram/ui/Components/ShareAlert$1;
 
     iget-object p2, p2, Lorg/telegram/ui/Components/ShareAlert$1;->this$0:Lorg/telegram/ui/Components/ShareAlert;
 
     invoke-static {p2, v1}, Lorg/telegram/ui/Components/ShareAlert;->access$2902(Lorg/telegram/ui/Components/ShareAlert;Z)Z
 
-    .line 520
+    .line 521
     iget-object p2, p0, Lorg/telegram/ui/Components/ShareAlert$1$1;->this$1:Lorg/telegram/ui/Components/ShareAlert$1;
 
     iget-object v0, p2, Lorg/telegram/ui/Components/ShareAlert$1;->this$0:Lorg/telegram/ui/Components/ShareAlert;
@@ -840,13 +840,13 @@
 
     goto :goto_45
 
-    .line 522
+    .line 523
     :cond_40
     iget-object p2, p0, Lorg/telegram/ui/Components/ShareAlert$1$1;->this$1:Lorg/telegram/ui/Components/ShareAlert$1;
 
     invoke-static {p2, v2}, Lorg/telegram/ui/Components/ShareAlert$1;->access$2702(Lorg/telegram/ui/Components/ShareAlert$1;I)I
 
-    .line 525
+    .line 526
     :goto_45
     iget-object p2, p0, Lorg/telegram/ui/Components/ShareAlert$1$1;->this$1:Lorg/telegram/ui/Components/ShareAlert$1;
 
@@ -862,19 +862,19 @@
 
     if-eq p2, v0, :cond_9b
 
-    .line 526
+    .line 527
     iget-object p2, p0, Lorg/telegram/ui/Components/ShareAlert$1$1;->this$1:Lorg/telegram/ui/Components/ShareAlert$1;
 
     const/4 v0, 0x0
 
     invoke-static {p2, v0}, Lorg/telegram/ui/Components/ShareAlert$1;->access$3202(Lorg/telegram/ui/Components/ShareAlert$1;I)I
 
-    .line 527
+    .line 528
     iget-object p2, p0, Lorg/telegram/ui/Components/ShareAlert$1$1;->this$1:Lorg/telegram/ui/Components/ShareAlert$1;
 
     invoke-static {p2, v0}, Lorg/telegram/ui/Components/ShareAlert$1;->access$3302(Lorg/telegram/ui/Components/ShareAlert$1;I)I
 
-    .line 528
+    .line 529
     iget-object p2, p0, Lorg/telegram/ui/Components/ShareAlert$1$1;->this$1:Lorg/telegram/ui/Components/ShareAlert$1;
 
     iget-object p2, p2, Lorg/telegram/ui/Components/ShareAlert$1;->this$0:Lorg/telegram/ui/Components/ShareAlert;
@@ -883,7 +883,7 @@
 
     if-nez p1, :cond_78
 
-    .line 531
+    .line 532
     iget-object p2, p0, Lorg/telegram/ui/Components/ShareAlert$1$1;->this$1:Lorg/telegram/ui/Components/ShareAlert$1;
 
     invoke-static {p2}, Lorg/telegram/ui/Components/ShareAlert$1;->access$3000(Lorg/telegram/ui/Components/ShareAlert$1;)I
@@ -902,7 +902,7 @@
 
     goto :goto_88
 
-    .line 533
+    .line 534
     :cond_78
     iget-object p2, p0, Lorg/telegram/ui/Components/ShareAlert$1$1;->this$1:Lorg/telegram/ui/Components/ShareAlert$1;
 
@@ -920,7 +920,7 @@
 
     invoke-static {p2, v0}, Lorg/telegram/ui/Components/ShareAlert$1;->access$3312(Lorg/telegram/ui/Components/ShareAlert$1;I)I
 
-    .line 535
+    .line 536
     :goto_88
     iget-object p2, p0, Lorg/telegram/ui/Components/ShareAlert$1$1;->this$1:Lorg/telegram/ui/Components/ShareAlert$1;
 
@@ -944,13 +944,13 @@
 
     goto :goto_a0
 
-    .line 537
+    .line 538
     :cond_9b
     iget-object p1, p0, Lorg/telegram/ui/Components/ShareAlert$1$1;->this$1:Lorg/telegram/ui/Components/ShareAlert$1;
 
     invoke-static {p1, v2}, Lorg/telegram/ui/Components/ShareAlert$1;->access$3202(Lorg/telegram/ui/Components/ShareAlert$1;I)I
 
-    .line 539
+    .line 540
     :goto_a0
     iget-object p1, p0, Lorg/telegram/ui/Components/ShareAlert$1$1;->this$1:Lorg/telegram/ui/Components/ShareAlert$1;
 
@@ -984,7 +984,7 @@
 
     invoke-virtual {p1, p2}, Landroidx/recyclerview/widget/RecyclerView;->setTopGlowOffset(I)V
 
-    .line 540
+    .line 541
     iget-object p1, p0, Lorg/telegram/ui/Components/ShareAlert$1$1;->this$1:Lorg/telegram/ui/Components/ShareAlert$1;
 
     iget-object p1, p1, Lorg/telegram/ui/Components/ShareAlert$1;->this$0:Lorg/telegram/ui/Components/ShareAlert;
@@ -1015,7 +1015,7 @@
 
     invoke-virtual {p1, p2}, Landroid/widget/FrameLayout;->setTranslationY(F)V
 
-    .line 541
+    .line 542
     iget-object p1, p0, Lorg/telegram/ui/Components/ShareAlert$1$1;->this$1:Lorg/telegram/ui/Components/ShareAlert$1;
 
     iget-object p1, p1, Lorg/telegram/ui/Components/ShareAlert$1;->this$0:Lorg/telegram/ui/Components/ShareAlert;
@@ -1046,7 +1046,7 @@
 
     invoke-virtual {p1, p2}, Landroid/widget/FrameLayout;->setTranslationY(F)V
 
-    .line 542
+    .line 543
     iget-object p1, p0, Lorg/telegram/ui/Components/ShareAlert$1$1;->this$1:Lorg/telegram/ui/Components/ShareAlert$1;
 
     invoke-virtual {p1}, Landroid/widget/FrameLayout;->invalidate()V

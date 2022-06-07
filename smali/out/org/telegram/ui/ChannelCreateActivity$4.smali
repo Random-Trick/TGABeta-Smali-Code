@@ -24,7 +24,7 @@
 .method constructor <init>(Lorg/telegram/ui/ChannelCreateActivity;Landroid/content/Context;Landroid/graphics/Paint;)V
     .registers 4
 
-    .line 479
+    .line 529
     iput-object p1, p0, Lorg/telegram/ui/ChannelCreateActivity$4;->this$0:Lorg/telegram/ui/ChannelCreateActivity;
 
     iput-object p3, p0, Lorg/telegram/ui/ChannelCreateActivity$4;->val$paint:Landroid/graphics/Paint;
@@ -39,10 +39,10 @@
 .method protected onDraw(Landroid/graphics/Canvas;)V
     .registers 6
 
-    .line 482
+    .line 532
     iget-object v0, p0, Lorg/telegram/ui/ChannelCreateActivity$4;->this$0:Lorg/telegram/ui/ChannelCreateActivity;
 
-    invoke-static {v0}, Lorg/telegram/ui/ChannelCreateActivity;->access$1800(Lorg/telegram/ui/ChannelCreateActivity;)Lorg/telegram/ui/Components/BackupImageView;
+    invoke-static {v0}, Lorg/telegram/ui/ChannelCreateActivity;->access$1900(Lorg/telegram/ui/ChannelCreateActivity;)Lorg/telegram/ui/Components/BackupImageView;
 
     move-result-object v0
 
@@ -50,7 +50,7 @@
 
     iget-object v0, p0, Lorg/telegram/ui/ChannelCreateActivity$4;->this$0:Lorg/telegram/ui/ChannelCreateActivity;
 
-    invoke-static {v0}, Lorg/telegram/ui/ChannelCreateActivity;->access$1800(Lorg/telegram/ui/ChannelCreateActivity;)Lorg/telegram/ui/Components/BackupImageView;
+    invoke-static {v0}, Lorg/telegram/ui/ChannelCreateActivity;->access$1900(Lorg/telegram/ui/ChannelCreateActivity;)Lorg/telegram/ui/Components/BackupImageView;
 
     move-result-object v0
 
@@ -64,14 +64,14 @@
 
     if-eqz v0, :cond_49
 
-    .line 483
+    .line 533
     iget-object v0, p0, Lorg/telegram/ui/ChannelCreateActivity$4;->val$paint:Landroid/graphics/Paint;
 
     const/high16 v1, 0x42aa0000    # 85.0f
 
     iget-object v2, p0, Lorg/telegram/ui/ChannelCreateActivity$4;->this$0:Lorg/telegram/ui/ChannelCreateActivity;
 
-    invoke-static {v2}, Lorg/telegram/ui/ChannelCreateActivity;->access$1800(Lorg/telegram/ui/ChannelCreateActivity;)Lorg/telegram/ui/Components/BackupImageView;
+    invoke-static {v2}, Lorg/telegram/ui/ChannelCreateActivity;->access$1900(Lorg/telegram/ui/ChannelCreateActivity;)Lorg/telegram/ui/Components/BackupImageView;
 
     move-result-object v2
 
@@ -89,7 +89,7 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 484
+    .line 534
     invoke-virtual {p0}, Landroid/view/View;->getMeasuredWidth()I
 
     move-result v0

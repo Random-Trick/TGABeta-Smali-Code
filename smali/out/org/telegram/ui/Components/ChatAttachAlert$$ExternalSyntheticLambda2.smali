@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/content/DialogInterface$OnClickListener;
+.implements Landroid/content/DialogInterface$OnCancelListener;
 
 
 # instance fields
@@ -22,12 +22,12 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/content/DialogInterface;I)V
-    .registers 4
+.method public final onCancel(Landroid/content/DialogInterface;)V
+    .registers 3
 
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlert$$ExternalSyntheticLambda2;->f$0:Lorg/telegram/ui/Components/ChatAttachAlert;
 
-    invoke-static {v0, p1, p2}, Lorg/telegram/ui/Components/ChatAttachAlert;->$r8$lambda$BkXy-Swi37X1N4W7GL8STryWyio(Lorg/telegram/ui/Components/ChatAttachAlert;Landroid/content/DialogInterface;I)V
+    invoke-static {v0, p1}, Lorg/telegram/ui/Components/ChatAttachAlert;->$r8$lambda$30d5MAg9b1tVSqXBG-5-H_63ECA(Lorg/telegram/ui/Components/ChatAttachAlert;Landroid/content/DialogInterface;)V
 
     return-void
 .end method

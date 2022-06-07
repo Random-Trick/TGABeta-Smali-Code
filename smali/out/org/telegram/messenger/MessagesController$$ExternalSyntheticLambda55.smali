@@ -18,12 +18,10 @@
 
 .field public final synthetic f$5:I
 
-.field public final synthetic f$6:Ljava/lang/Runnable;
-
 
 # direct methods
-.method public synthetic constructor <init>(Lorg/telegram/messenger/MessagesController;ILorg/telegram/tgnet/TLRPC$messages_Messages;ZZILjava/lang/Runnable;)V
-    .registers 8
+.method public synthetic constructor <init>(Lorg/telegram/messenger/MessagesController;ILorg/telegram/tgnet/TLRPC$messages_Messages;ZZI)V
+    .registers 7
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -39,15 +37,13 @@
 
     iput p6, p0, Lorg/telegram/messenger/MessagesController$$ExternalSyntheticLambda55;->f$5:I
 
-    iput-object p7, p0, Lorg/telegram/messenger/MessagesController$$ExternalSyntheticLambda55;->f$6:Ljava/lang/Runnable;
-
     return-void
 .end method
 
 
 # virtual methods
 .method public final run()V
-    .registers 8
+    .registers 7
 
     iget-object v0, p0, Lorg/telegram/messenger/MessagesController$$ExternalSyntheticLambda55;->f$0:Lorg/telegram/messenger/MessagesController;
 
@@ -61,9 +57,7 @@
 
     iget v5, p0, Lorg/telegram/messenger/MessagesController$$ExternalSyntheticLambda55;->f$5:I
 
-    iget-object v6, p0, Lorg/telegram/messenger/MessagesController$$ExternalSyntheticLambda55;->f$6:Ljava/lang/Runnable;
-
-    invoke-static/range {v0 .. v6}, Lorg/telegram/messenger/MessagesController;->$r8$lambda$wQfTIhFYxgTMYBzI2CpjYkQQHjc(Lorg/telegram/messenger/MessagesController;ILorg/telegram/tgnet/TLRPC$messages_Messages;ZZILjava/lang/Runnable;)V
+    invoke-static/range {v0 .. v5}, Lorg/telegram/messenger/MessagesController;->$r8$lambda$UNzcBeFAANxfLxIiCtl4AL2lXZU(Lorg/telegram/messenger/MessagesController;ILorg/telegram/tgnet/TLRPC$messages_Messages;ZZI)V
 
     return-void
 .end method

@@ -10,16 +10,10 @@
 
 .field public final synthetic f$1:Landroidx/collection/LongSparseArray;
 
-.field public final synthetic f$2:Landroidx/collection/LongSparseArray;
-
-.field public final synthetic f$3:Landroidx/collection/LongSparseArray;
-
-.field public final synthetic f$4:Z
-
 
 # direct methods
-.method public synthetic constructor <init>(Lorg/telegram/messenger/MessagesStorage;Landroidx/collection/LongSparseArray;Landroidx/collection/LongSparseArray;Landroidx/collection/LongSparseArray;Z)V
-    .registers 6
+.method public synthetic constructor <init>(Lorg/telegram/messenger/MessagesStorage;Landroidx/collection/LongSparseArray;)V
+    .registers 3
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -27,31 +21,19 @@
 
     iput-object p2, p0, Lorg/telegram/messenger/MessagesStorage$$ExternalSyntheticLambda118;->f$1:Landroidx/collection/LongSparseArray;
 
-    iput-object p3, p0, Lorg/telegram/messenger/MessagesStorage$$ExternalSyntheticLambda118;->f$2:Landroidx/collection/LongSparseArray;
-
-    iput-object p4, p0, Lorg/telegram/messenger/MessagesStorage$$ExternalSyntheticLambda118;->f$3:Landroidx/collection/LongSparseArray;
-
-    iput-boolean p5, p0, Lorg/telegram/messenger/MessagesStorage$$ExternalSyntheticLambda118;->f$4:Z
-
     return-void
 .end method
 
 
 # virtual methods
 .method public final run()V
-    .registers 6
+    .registers 3
 
     iget-object v0, p0, Lorg/telegram/messenger/MessagesStorage$$ExternalSyntheticLambda118;->f$0:Lorg/telegram/messenger/MessagesStorage;
 
     iget-object v1, p0, Lorg/telegram/messenger/MessagesStorage$$ExternalSyntheticLambda118;->f$1:Landroidx/collection/LongSparseArray;
 
-    iget-object v2, p0, Lorg/telegram/messenger/MessagesStorage$$ExternalSyntheticLambda118;->f$2:Landroidx/collection/LongSparseArray;
-
-    iget-object v3, p0, Lorg/telegram/messenger/MessagesStorage$$ExternalSyntheticLambda118;->f$3:Landroidx/collection/LongSparseArray;
-
-    iget-boolean v4, p0, Lorg/telegram/messenger/MessagesStorage$$ExternalSyntheticLambda118;->f$4:Z
-
-    invoke-static {v0, v1, v2, v3, v4}, Lorg/telegram/messenger/MessagesStorage;->$r8$lambda$cA2ZM2lXqbaF0jipdO7Z5I3opyg(Lorg/telegram/messenger/MessagesStorage;Landroidx/collection/LongSparseArray;Landroidx/collection/LongSparseArray;Landroidx/collection/LongSparseArray;Z)V
+    invoke-static {v0, v1}, Lorg/telegram/messenger/MessagesStorage;->$r8$lambda$pz2unVDD35N0jTFk8rLhiYNvIQo(Lorg/telegram/messenger/MessagesStorage;Landroidx/collection/LongSparseArray;)V
 
     return-void
 .end method

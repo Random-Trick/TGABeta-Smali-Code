@@ -30,13 +30,13 @@
     return-object p0
 
     :cond_4
-    instance-of v0, p0, Lj$/wrappers/R0;
+    instance-of v0, p0, Lj$/wrappers/P0;
 
     if-eqz v0, :cond_d
 
-    check-cast p0, Lj$/wrappers/R0;
+    check-cast p0, Lj$/wrappers/P0;
 
-    iget-object p0, p0, Lj$/wrappers/R0;->a:Lj$/util/stream/Stream;
+    iget-object p0, p0, Lj$/wrappers/P0;->a:Lj$/util/stream/Stream;
 
     return-object p0
 
@@ -146,7 +146,7 @@
     return p1
 .end method
 
-.method public synthetic X(Lj$/util/function/Function;)Lj$/util/stream/f1;
+.method public synthetic X(Lj$/util/function/Function;)Lj$/util/stream/e1;
     .registers 3
 
     iget-object v0, p0, Lj$/wrappers/$r8$wrapper$java$util$stream$Stream$-V-WRP;->a:Ljava/util/stream/Stream;
@@ -159,7 +159,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lj$/wrappers/P0;->n0(Ljava/util/stream/LongStream;)Lj$/util/stream/f1;
+    invoke-static {p1}, Lj$/wrappers/N0;->n0(Ljava/util/stream/LongStream;)Lj$/util/stream/e1;
 
     move-result-object p1
 
@@ -206,7 +206,7 @@
     return-object p1
 .end method
 
-.method public synthetic c(Lj$/util/function/Function;)Lj$/util/stream/M0;
+.method public synthetic c(Lj$/util/function/Function;)Lj$/util/stream/IntStream;
     .registers 3
 
     iget-object v0, p0, Lj$/wrappers/$r8$wrapper$java$util$stream$Stream$-V-WRP;->a:Ljava/util/stream/Stream;
@@ -219,7 +219,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lj$/wrappers/N0;->n0(Ljava/util/stream/IntStream;)Lj$/util/stream/M0;
+    invoke-static {p1}, Lj$/wrappers/$r8$wrapper$java$util$stream$IntStream$-V-WRP;->convert(Ljava/util/stream/IntStream;)Lj$/util/stream/IntStream;
 
     move-result-object p1
 
@@ -340,7 +340,7 @@
     return-void
 .end method
 
-.method public synthetic g0(Lj$/util/function/A;)Lj$/util/stream/f1;
+.method public synthetic g0(Lj$/util/function/A;)Lj$/util/stream/e1;
     .registers 3
 
     iget-object v0, p0, Lj$/wrappers/$r8$wrapper$java$util$stream$Stream$-V-WRP;->a:Ljava/util/stream/Stream;
@@ -353,7 +353,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lj$/wrappers/P0;->n0(Ljava/util/stream/LongStream;)Lj$/util/stream/f1;
+    invoke-static {p1}, Lj$/wrappers/N0;->n0(Ljava/util/stream/LongStream;)Lj$/util/stream/e1;
 
     move-result-object p1
 
@@ -460,7 +460,7 @@
     return-object p1
 .end method
 
-.method public synthetic m(Lj$/util/function/ToIntFunction;)Lj$/util/stream/M0;
+.method public synthetic m(Lj$/util/function/ToIntFunction;)Lj$/util/stream/IntStream;
     .registers 3
 
     iget-object v0, p0, Lj$/wrappers/$r8$wrapper$java$util$stream$Stream$-V-WRP;->a:Ljava/util/stream/Stream;
@@ -473,7 +473,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lj$/wrappers/N0;->n0(Ljava/util/stream/IntStream;)Lj$/util/stream/M0;
+    invoke-static {p1}, Lj$/wrappers/$r8$wrapper$java$util$stream$IntStream$-V-WRP;->convert(Ljava/util/stream/IntStream;)Lj$/util/stream/IntStream;
 
     move-result-object p1
 
@@ -664,7 +664,7 @@
     return-object p1
 .end method
 
-.method public synthetic spliterator()Lj$/util/y;
+.method public synthetic spliterator()Lj$/util/u;
     .registers 2
 
     iget-object v0, p0, Lj$/wrappers/$r8$wrapper$java$util$stream$Stream$-V-WRP;->a:Ljava/util/stream/Stream;
@@ -673,7 +673,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lj$/wrappers/g;->a(Ljava/util/Spliterator;)Lj$/util/y;
+    invoke-static {v0}, Lj$/wrappers/g;->a(Ljava/util/Spliterator;)Lj$/util/u;
 
     move-result-object v0
 

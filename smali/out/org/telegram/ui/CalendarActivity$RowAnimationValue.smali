@@ -26,13 +26,13 @@
 .method constructor <init>(FF)V
     .registers 3
 
-    .line 1387
+    .line 1386
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1388
+    .line 1387
     iput p1, p0, Lorg/telegram/ui/CalendarActivity$RowAnimationValue;->startX:F
 
-    .line 1389
+    .line 1388
     iput p2, p0, Lorg/telegram/ui/CalendarActivity$RowAnimationValue;->endX:F
 
     return-void

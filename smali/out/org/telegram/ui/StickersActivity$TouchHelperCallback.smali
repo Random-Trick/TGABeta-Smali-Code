@@ -22,7 +22,7 @@
 .method public constructor <init>(Lorg/telegram/ui/StickersActivity;)V
     .registers 2
 
-    .line 115
+    .line 132
     iput-object p1, p0, Lorg/telegram/ui/StickersActivity$TouchHelperCallback;->this$0:Lorg/telegram/ui/StickersActivity;
 
     invoke-direct {p0}, Landroidx/recyclerview/widget/ItemTouchHelper$Callback;-><init>()V
@@ -35,10 +35,10 @@
 .method public clearView(Landroidx/recyclerview/widget/RecyclerView;Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
     .registers 3
 
-    .line 162
+    .line 178
     invoke-super {p0, p1, p2}, Landroidx/recyclerview/widget/ItemTouchHelper$Callback;->clearView(Landroidx/recyclerview/widget/RecyclerView;Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
 
-    .line 163
+    .line 179
     iget-object p1, p2, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     const/4 p2, 0x0
@@ -51,7 +51,7 @@
 .method public getMovementFlags(Landroidx/recyclerview/widget/RecyclerView;Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)I
     .registers 3
 
-    .line 124
+    .line 141
     invoke-virtual {p2}, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->getItemViewType()I
 
     move-result p1
@@ -60,7 +60,7 @@
 
     if-eqz p1, :cond_c
 
-    .line 125
+    .line 142
     invoke-static {p2, p2}, Landroidx/recyclerview/widget/ItemTouchHelper$Callback;->makeMovementFlags(II)I
 
     move-result p1
@@ -70,7 +70,7 @@
     :cond_c
     const/4 p1, 0x3
 
-    .line 127
+    .line 144
     invoke-static {p1, p2}, Landroidx/recyclerview/widget/ItemTouchHelper$Callback;->makeMovementFlags(II)I
 
     move-result p1
@@ -81,7 +81,7 @@
 .method public isLongPressDragEnabled()Z
     .registers 2
 
-    .line 119
+    .line 136
     iget-object v0, p0, Lorg/telegram/ui/StickersActivity$TouchHelperCallback;->this$0:Lorg/telegram/ui/StickersActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/StickersActivity;->access$000(Lorg/telegram/ui/StickersActivity;)Lorg/telegram/ui/StickersActivity$ListAdapter;
@@ -98,7 +98,7 @@
 .method public onChildDraw(Landroid/graphics/Canvas;Landroidx/recyclerview/widget/RecyclerView;Landroidx/recyclerview/widget/RecyclerView$ViewHolder;FFIZ)V
     .registers 8
 
-    .line 141
+    .line 158
     invoke-super/range {p0 .. p7}, Landroidx/recyclerview/widget/ItemTouchHelper$Callback;->onChildDraw(Landroid/graphics/Canvas;Landroidx/recyclerview/widget/RecyclerView;Landroidx/recyclerview/widget/RecyclerView$ViewHolder;FFIZ)V
 
     return-void
@@ -107,7 +107,7 @@
 .method public onMove(Landroidx/recyclerview/widget/RecyclerView;Landroidx/recyclerview/widget/RecyclerView$ViewHolder;Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)Z
     .registers 5
 
-    .line 132
+    .line 149
     invoke-virtual {p2}, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->getItemViewType()I
 
     move-result p1
@@ -122,7 +122,7 @@
 
     return p1
 
-    .line 135
+    .line 152
     :cond_c
     iget-object p1, p0, Lorg/telegram/ui/StickersActivity$TouchHelperCallback;->this$0:Lorg/telegram/ui/StickersActivity;
 
@@ -150,14 +150,14 @@
 
     if-nez p2, :cond_8
 
-    .line 147
+    .line 164
     iget-object v0, p0, Lorg/telegram/ui/StickersActivity$TouchHelperCallback;->this$0:Lorg/telegram/ui/StickersActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/StickersActivity;->access$100(Lorg/telegram/ui/StickersActivity;)V
 
     goto :goto_18
 
-    .line 149
+    .line 166
     :cond_8
     iget-object v0, p0, Lorg/telegram/ui/StickersActivity$TouchHelperCallback;->this$0:Lorg/telegram/ui/StickersActivity;
 
@@ -169,14 +169,14 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/RecyclerListView;->cancelClickRunnables(Z)V
 
-    .line 150
+    .line 167
     iget-object v0, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setPressed(Z)V
 
-    .line 152
+    .line 169
     :goto_18
     invoke-super {p0, p1, p2}, Landroidx/recyclerview/widget/ItemTouchHelper$Callback;->onSelectedChanged(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;I)V
 

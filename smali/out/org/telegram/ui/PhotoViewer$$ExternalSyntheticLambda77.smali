@@ -2,32 +2,40 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lorg/telegram/ui/Components/VideoEditTextureView$VideoEditTextureViewDelegate;
+.implements Lorg/telegram/ui/Components/RecyclerListView$OnItemLongClickListener;
 
 
 # instance fields
-.field public final synthetic f$0:Lorg/telegram/messenger/MediaController$SavedFilterState;
+.field public final synthetic f$0:Lorg/telegram/ui/PhotoViewer;
+
+.field public final synthetic f$1:Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lorg/telegram/messenger/MediaController$SavedFilterState;)V
-    .registers 2
+.method public synthetic constructor <init>(Lorg/telegram/ui/PhotoViewer;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)V
+    .registers 3
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lorg/telegram/ui/PhotoViewer$$ExternalSyntheticLambda77;->f$0:Lorg/telegram/messenger/MediaController$SavedFilterState;
+    iput-object p1, p0, Lorg/telegram/ui/PhotoViewer$$ExternalSyntheticLambda77;->f$0:Lorg/telegram/ui/PhotoViewer;
+
+    iput-object p2, p0, Lorg/telegram/ui/PhotoViewer$$ExternalSyntheticLambda77;->f$1:Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onEGLThreadAvailable(Lorg/telegram/ui/Components/FilterGLThread;)V
-    .registers 3
+.method public final onItemClick(Landroid/view/View;I)Z
+    .registers 5
 
-    iget-object v0, p0, Lorg/telegram/ui/PhotoViewer$$ExternalSyntheticLambda77;->f$0:Lorg/telegram/messenger/MediaController$SavedFilterState;
+    iget-object v0, p0, Lorg/telegram/ui/PhotoViewer$$ExternalSyntheticLambda77;->f$0:Lorg/telegram/ui/PhotoViewer;
 
-    invoke-static {v0, p1}, Lorg/telegram/ui/PhotoViewer;->$r8$lambda$4Fs_0wlqpd5nxIEmlHvH8EcFNRs(Lorg/telegram/messenger/MediaController$SavedFilterState;Lorg/telegram/ui/Components/FilterGLThread;)V
+    iget-object v1, p0, Lorg/telegram/ui/PhotoViewer$$ExternalSyntheticLambda77;->f$1:Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;
 
-    return-void
+    invoke-static {v0, v1, p1, p2}, Lorg/telegram/ui/PhotoViewer;->$r8$lambda$FR4lJquiJvRKHgP_hA5BCBCFxcc(Lorg/telegram/ui/PhotoViewer;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;Landroid/view/View;I)Z
+
+    move-result p1
+
+    return p1
 .end method

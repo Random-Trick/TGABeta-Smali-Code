@@ -71,7 +71,7 @@
     .line 47
     iget-object p1, p0, Lorg/telegram/ui/Cells/PhotoAttachCameraCell;->imageView:Landroid/widget/ImageView;
 
-    const p2, 0x7f070194
+    const p2, 0x7f07016b
 
     invoke-virtual {p1, p2}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -297,7 +297,7 @@
     :cond_1d
     iget-object v0, p0, Lorg/telegram/ui/Cells/PhotoAttachCameraCell;->backgroundView:Landroid/widget/ImageView;
 
-    const v1, 0x7f07017d
+    const v1, 0x7f070154
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 

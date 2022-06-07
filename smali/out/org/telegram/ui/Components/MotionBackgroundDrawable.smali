@@ -24,6 +24,8 @@
 
 .field private currentBitmap:Landroid/graphics/Bitmap;
 
+.field private disableGradientShaderScaling:Z
+
 .field private fastAnimation:Z
 
 .field private gradientCanvas:Landroid/graphics/Canvas;
@@ -86,8 +88,6 @@
 
 .field private patternBitmap:Landroid/graphics/Bitmap;
 
-.field private patternBitmapScale:F
-
 .field private patternBounds:Landroid/graphics/Rect;
 
 .field private patternColorFilter:Landroid/graphics/ColorFilter;
@@ -105,8 +105,6 @@
 .field private rotationBack:Z
 
 .field private roundRadius:I
-
-.field private scaledPatternBitmap:Landroid/graphics/Bitmap;
 
 .field private translationY:I
 
@@ -173,7 +171,7 @@
 .method public constructor <init>()V
     .registers 11
 
-    .line 115
+    .line 114
     invoke-direct {p0}, Landroid/graphics/drawable/Drawable;-><init>()V
 
     const/4 v0, 0x4
@@ -249,39 +247,39 @@
     .line 70
     iput v1, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->intensity:I
 
-    .line 89
+    .line 88
     new-instance v1, Landroid/graphics/drawable/GradientDrawable;
 
     invoke-direct {v1}, Landroid/graphics/drawable/GradientDrawable;-><init>()V
 
     iput-object v1, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->gradientDrawable:Landroid/graphics/drawable/GradientDrawable;
 
-    .line 96
+    .line 95
     new-instance v1, Lorg/telegram/ui/Components/MotionBackgroundDrawable$$ExternalSyntheticLambda0;
 
     invoke-direct {v1, p0}, Lorg/telegram/ui/Components/MotionBackgroundDrawable$$ExternalSyntheticLambda0;-><init>(Lorg/telegram/ui/Components/MotionBackgroundDrawable;)V
 
     iput-object v1, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->updateAnimationRunnable:Ljava/lang/Runnable;
 
-    .line 100
+    .line 99
     new-instance v1, Landroid/graphics/Rect;
 
     invoke-direct {v1}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v1, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->patternBounds:Landroid/graphics/Rect;
 
-    .line 104
+    .line 103
     iput v0, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->patternAlpha:F
 
-    .line 105
+    .line 104
     iput v0, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->backgroundAlpha:F
 
     const/16 v0, 0xff
 
-    .line 106
+    .line 105
     iput v0, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->alpha:I
 
-    .line 116
+    .line 115
     invoke-direct {p0}, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->init()V
 
     return-void
@@ -302,7 +300,7 @@
 
     move-object/from16 v7, p0
 
-    .line 124
+    .line 123
     invoke-direct/range {p0 .. p0}, Landroid/graphics/drawable/Drawable;-><init>()V
 
     const/4 v0, 0x4
@@ -378,41 +376,41 @@
     .line 70
     iput v1, v7, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->intensity:I
 
-    .line 89
+    .line 88
     new-instance v1, Landroid/graphics/drawable/GradientDrawable;
 
     invoke-direct {v1}, Landroid/graphics/drawable/GradientDrawable;-><init>()V
 
     iput-object v1, v7, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->gradientDrawable:Landroid/graphics/drawable/GradientDrawable;
 
-    .line 96
+    .line 95
     new-instance v1, Lorg/telegram/ui/Components/MotionBackgroundDrawable$$ExternalSyntheticLambda0;
 
     invoke-direct {v1, v7}, Lorg/telegram/ui/Components/MotionBackgroundDrawable$$ExternalSyntheticLambda0;-><init>(Lorg/telegram/ui/Components/MotionBackgroundDrawable;)V
 
     iput-object v1, v7, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->updateAnimationRunnable:Ljava/lang/Runnable;
 
-    .line 100
+    .line 99
     new-instance v1, Landroid/graphics/Rect;
 
     invoke-direct {v1}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v1, v7, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->patternBounds:Landroid/graphics/Rect;
 
-    .line 104
+    .line 103
     iput v0, v7, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->patternAlpha:F
 
-    .line 105
+    .line 104
     iput v0, v7, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->backgroundAlpha:F
 
     const/16 v0, 0xff
 
-    .line 106
+    .line 105
     iput v0, v7, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->alpha:I
 
     move/from16 v0, p6
 
-    .line 125
+    .line 124
     iput-boolean v0, v7, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->isPreview:Z
 
     const/4 v6, 0x0
@@ -429,10 +427,10 @@
 
     move/from16 v5, p5
 
-    .line 126
+    .line 125
     invoke-virtual/range {v0 .. v6}, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->setColors(IIIIIZ)V
 
-    .line 127
+    .line 126
     invoke-direct/range {p0 .. p0}, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->init()V
 
     return-void
@@ -465,7 +463,7 @@
 
     move v6, p5
 
-    .line 120
+    .line 119
     invoke-direct/range {v0 .. v6}, Lorg/telegram/ui/Components/MotionBackgroundDrawable;-><init>(IIIIIZ)V
 
     return-void
@@ -474,7 +472,7 @@
 .method private createLegacyBitmap()V
     .registers 6
 
-    .line 466
+    .line 451
     sget-boolean v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->useLegacyBitmap:Z
 
     if-eqz v0, :cond_74
@@ -487,7 +485,7 @@
 
     if-nez v0, :cond_74
 
-    .line 467
+    .line 452
     iget-object v0, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->patternBounds:Landroid/graphics/Rect;
 
     invoke-virtual {v0}, Landroid/graphics/Rect;->width()I
@@ -502,7 +500,7 @@
 
     float-to-int v0, v0
 
-    .line 468
+    .line 453
     iget-object v1, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->patternBounds:Landroid/graphics/Rect;
 
     invoke-virtual {v1}, Landroid/graphics/Rect;->height()I
@@ -521,7 +519,7 @@
 
     if-lez v1, :cond_74
 
-    .line 469
+    .line 454
     iget-object v2, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->legacyBitmap:Landroid/graphics/Bitmap;
 
     if-eqz v2, :cond_3a
@@ -540,16 +538,16 @@
 
     if-eq v2, v1, :cond_74
 
-    .line 470
+    .line 455
     :cond_3a
     iget-object v2, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->legacyBitmap:Landroid/graphics/Bitmap;
 
     if-eqz v2, :cond_41
 
-    .line 471
+    .line 456
     invoke-virtual {v2}, Landroid/graphics/Bitmap;->recycle()V
 
-    .line 473
+    .line 458
     :cond_41
     iget-object v2, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->legacyBitmap2:Landroid/graphics/Bitmap;
 
@@ -557,16 +555,16 @@
 
     if-eqz v2, :cond_4b
 
-    .line 474
+    .line 459
     invoke-virtual {v2}, Landroid/graphics/Bitmap;->recycle()V
 
-    .line 475
+    .line 460
     iput-object v3, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->legacyBitmap2:Landroid/graphics/Bitmap;
 
     :cond_4b
     const/4 v2, 0x1
 
-    .line 478
+    .line 463
     :try_start_4c
     sget-object v4, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
 
@@ -576,7 +574,7 @@
 
     iput-object v0, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->legacyBitmap:Landroid/graphics/Bitmap;
 
-    .line 479
+    .line 464
     new-instance v0, Landroid/graphics/Canvas;
 
     iget-object v1, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->legacyBitmap:Landroid/graphics/Bitmap;
@@ -585,7 +583,7 @@
 
     iput-object v0, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->legacyCanvas:Landroid/graphics/Canvas;
 
-    .line 480
+    .line 465
     iput-boolean v2, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->invalidateLegacy:Z
     :try_end_5f
     .catch Ljava/lang/Exception; {:try_start_4c .. :try_end_5f} :catch_60
@@ -595,25 +593,25 @@
     :catch_60
     move-exception v0
 
-    .line 482
+    .line 467
     iget-object v1, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->legacyBitmap:Landroid/graphics/Bitmap;
 
     if-eqz v1, :cond_6a
 
-    .line 483
+    .line 468
     invoke-virtual {v1}, Landroid/graphics/Bitmap;->recycle()V
 
-    .line 484
+    .line 469
     iput-object v3, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->legacyBitmap:Landroid/graphics/Bitmap;
 
-    .line 486
+    .line 471
     :cond_6a
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
-    .line 487
+    .line 472
     sput-boolean v2, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->errorWhileGenerateLegacyBitmap:Z
 
-    .line 488
+    .line 473
     iget-object v0, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->paint2:Landroid/graphics/Paint;
 
     invoke-virtual {v0, v3}, Landroid/graphics/Paint;->setXfermode(Landroid/graphics/Xfermode;)Landroid/graphics/Xfermode;
@@ -626,7 +624,7 @@
 .method private generateNextGradient()V
     .registers 13
 
-    .line 259
+    .line 258
     sget-boolean v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->useLegacyBitmap:Z
 
     const/4 v1, 0x0
@@ -639,13 +637,13 @@
 
     const/4 v0, 0x0
 
-    .line 261
+    .line 260
     :try_start_a
     iget-object v2, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->legacyBitmap:Landroid/graphics/Bitmap;
 
     if-eqz v2, :cond_6d
 
-    .line 262
+    .line 261
     iget-object v2, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->legacyBitmap2:Landroid/graphics/Bitmap;
 
     if-eqz v2, :cond_33
@@ -678,7 +676,7 @@
 
     goto :goto_33
 
-    .line 269
+    .line 268
     :cond_2d
     iget-object v2, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->legacyBitmap2:Landroid/graphics/Bitmap;
 
@@ -686,17 +684,17 @@
 
     goto :goto_57
 
-    .line 263
+    .line 262
     :cond_33
     :goto_33
     iget-object v2, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->legacyBitmap2:Landroid/graphics/Bitmap;
 
     if-eqz v2, :cond_3a
 
-    .line 264
+    .line 263
     invoke-virtual {v2}, Landroid/graphics/Bitmap;->recycle()V
 
-    .line 266
+    .line 265
     :cond_3a
     iget-object v2, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->legacyBitmap:Landroid/graphics/Bitmap;
 
@@ -718,7 +716,7 @@
 
     iput-object v2, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->legacyBitmap2:Landroid/graphics/Bitmap;
 
-    .line 267
+    .line 266
     new-instance v2, Landroid/graphics/Canvas;
 
     iget-object v3, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->legacyBitmap2:Landroid/graphics/Bitmap;
@@ -727,7 +725,7 @@
 
     iput-object v2, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->legacyCanvas2:Landroid/graphics/Canvas;
 
-    .line 271
+    .line 270
     :goto_57
     iget-object v2, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->legacyCanvas2:Landroid/graphics/Canvas;
 
@@ -744,21 +742,21 @@
     :catch_60
     move-exception v2
 
-    .line 274
+    .line 273
     invoke-static {v2}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
-    .line 275
+    .line 274
     iget-object v2, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->legacyBitmap2:Landroid/graphics/Bitmap;
 
     if-eqz v2, :cond_6d
 
-    .line 276
+    .line 275
     invoke-virtual {v2}, Landroid/graphics/Bitmap;->recycle()V
 
-    .line 277
+    .line 276
     iput-object v0, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->legacyBitmap2:Landroid/graphics/Bitmap;
 
-    .line 281
+    .line 280
     :cond_6d
     :goto_6d
     iget-object v3, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->currentBitmap:Landroid/graphics/Bitmap;
@@ -791,7 +789,7 @@
 
     const/4 v0, 0x1
 
-    .line 282
+    .line 281
     iput-boolean v0, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->invalidateLegacy:Z
 
     :cond_8c
@@ -808,7 +806,7 @@
 
     div-float v7, v2, v3
 
-    .line 286
+    .line 285
     iget-object v2, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->gradientToBitmap:[Landroid/graphics/Bitmap;
 
     aget-object v4, v2, v1
@@ -850,14 +848,14 @@
 .method public static getPatternColor(IIII)I
     .registers 5
 
-    .line 190
+    .line 189
     invoke-static {p0, p1, p2, p3}, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->isDark(IIII)Z
 
     move-result v0
 
     if-eqz v0, :cond_10
 
-    .line 191
+    .line 190
     sget-boolean p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->useSoftLight:Z
 
     if-nez p0, :cond_e
@@ -872,13 +870,13 @@
     :goto_f
     return p0
 
-    .line 193
+    .line 192
     :cond_10
     sget-boolean v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->useSoftLight:Z
 
     if-nez v0, :cond_2f
 
-    .line 194
+    .line 193
     invoke-static {p0, p1}, Lorg/telegram/messenger/AndroidUtilities;->getAverageColor(II)I
 
     move-result p0
@@ -889,7 +887,7 @@
 
     if-eqz p3, :cond_22
 
-    .line 196
+    .line 195
     invoke-static {p3, p0}, Lorg/telegram/messenger/AndroidUtilities;->getAverageColor(II)I
 
     move-result p0
@@ -897,7 +895,7 @@
     :cond_22
     const/4 p1, 0x1
 
-    .line 198
+    .line 197
     invoke-static {p0, p1}, Lorg/telegram/messenger/AndroidUtilities;->getPatternColor(IZ)I
 
     move-result p0
@@ -926,7 +924,7 @@
         }
     .end annotation
 
-    .line 132
+    .line 131
     sget-object v0, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
 
     const/16 v1, 0x3c
@@ -946,7 +944,7 @@
 
     if-ge v0, v3, :cond_1d
 
-    .line 134
+    .line 133
     iget-object v3, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->gradientToBitmap:[Landroid/graphics/Bitmap;
 
     sget-object v4, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
@@ -961,7 +959,7 @@
 
     goto :goto_d
 
-    .line 136
+    .line 135
     :cond_1d
     new-instance v0, Landroid/graphics/Canvas;
 
@@ -971,7 +969,7 @@
 
     iput-object v0, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->gradientCanvas:Landroid/graphics/Canvas;
 
-    .line 138
+    .line 137
     sget-object v0, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
 
     invoke-static {v1, v2, v0}, Landroid/graphics/Bitmap;->createBitmap(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
@@ -980,7 +978,7 @@
 
     iput-object v0, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->gradientFromBitmap:Landroid/graphics/Bitmap;
 
-    .line 139
+    .line 138
     new-instance v0, Landroid/graphics/Canvas;
 
     iget-object v1, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->gradientFromBitmap:Landroid/graphics/Bitmap;
@@ -989,7 +987,7 @@
 
     iput-object v0, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->gradientFromCanvas:Landroid/graphics/Canvas;
 
-    .line 141
+    .line 140
     iget-object v2, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->currentBitmap:Landroid/graphics/Bitmap;
 
     const/4 v3, 0x1
@@ -1026,12 +1024,12 @@
 
     invoke-static/range {v2 .. v9}, Lorg/telegram/messenger/Utilities;->generateGradient(Landroid/graphics/Bitmap;ZIFIII[I)V
 
-    .line 142
+    .line 141
     sget-boolean v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->useSoftLight:Z
 
     if-eqz v0, :cond_66
 
-    .line 143
+    .line 142
     iget-object v0, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->paint2:Landroid/graphics/Paint;
 
     sget-object v1, Landroid/graphics/BlendMode;->SOFT_LIGHT:Landroid/graphics/BlendMode;
@@ -1045,10 +1043,10 @@
 .method private invalidateParent()V
     .registers 5
 
-    .line 345
+    .line 344
     invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
 
-    .line 346
+    .line 345
     iget-object v0, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->parentView:Ljava/lang/ref/WeakReference;
 
     if-eqz v0, :cond_18
@@ -1059,7 +1057,7 @@
 
     if-eqz v0, :cond_18
 
-    .line 347
+    .line 346
     iget-object v0, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->parentView:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -1070,13 +1068,13 @@
 
     invoke-virtual {v0}, Landroid/view/View;->invalidate()V
 
-    .line 349
+    .line 348
     :cond_18
     iget-boolean v0, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->postInvalidateParent:Z
 
     if-eqz v0, :cond_37
 
-    .line 350
+    .line 349
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getGlobalInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v0
@@ -1089,15 +1087,15 @@
 
     invoke-virtual {v0, v1, v3}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 351
+    .line 350
     invoke-virtual {p0, v2}, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->updateAnimation(Z)V
 
-    .line 352
+    .line 351
     iget-object v0, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->updateAnimationRunnable:Ljava/lang/Runnable;
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->cancelRunOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 353
+    .line 352
     iget-object v0, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->updateAnimationRunnable:Ljava/lang/Runnable;
 
     const-wide/16 v1, 0x10
@@ -1111,14 +1109,14 @@
 .method public static isDark(IIII)Z
     .registers 4
 
-    .line 168
+    .line 167
     invoke-static {p0, p1}, Lorg/telegram/messenger/AndroidUtilities;->getAverageColor(II)I
 
     move-result p0
 
     if-eqz p2, :cond_a
 
-    .line 170
+    .line 169
     invoke-static {p0, p2}, Lorg/telegram/messenger/AndroidUtilities;->getAverageColor(II)I
 
     move-result p0
@@ -1126,12 +1124,12 @@
     :cond_a
     if-eqz p3, :cond_10
 
-    .line 173
+    .line 172
     invoke-static {p0, p3}, Lorg/telegram/messenger/AndroidUtilities;->getAverageColor(II)I
 
     move-result p0
 
-    .line 175
+    .line 174
     :cond_10
     invoke-static {p0}, Landroid/graphics/Color;->red(I)I
 
@@ -1151,7 +1149,7 @@
 
     const/4 p1, 0x2
 
-    .line 176
+    .line 175
     aget p0, p0, p1
 
     const p1, 0x3e99999a    # 0.3f
@@ -1176,110 +1174,9 @@
 
     const/4 v0, 0x1
 
-    .line 97
+    .line 96
     invoke-virtual {p0, v0}, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->updateAnimation(Z)V
 
-    return-void
-.end method
-
-.method private scalePatternBitmap(F)V
-    .registers 7
-
-    .line 432
-    sget-boolean v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->useLegacyBitmap:Z
-
-    if-nez v0, :cond_55
-
-    iget v0, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->patternBitmapScale:F
-
-    sub-float/2addr v0, p1
-
-    invoke-static {v0}, Ljava/lang/Math;->abs(F)F
-
-    move-result v0
-
-    const v1, 0x3a83126f    # 0.001f
-
-    cmpl-float v0, v0, v1
-
-    if-lez v0, :cond_55
-
-    .line 433
-    iget-object v0, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->scaledPatternBitmap:Landroid/graphics/Bitmap;
-
-    if-eqz v0, :cond_1d
-
-    iget-object v1, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->patternBitmap:Landroid/graphics/Bitmap;
-
-    if-eq v0, v1, :cond_1d
-
-    .line 434
-    invoke-virtual {v0}, Landroid/graphics/Bitmap;->recycle()V
-
-    .line 436
-    :cond_1d
-    iget-object v0, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->patternBitmap:Landroid/graphics/Bitmap;
-
-    invoke-virtual {v0}, Landroid/graphics/Bitmap;->getWidth()I
-
-    move-result v1
-
-    int-to-float v1, v1
-
-    mul-float v1, v1, p1
-
-    float-to-int v1, v1
-
-    iget-object v2, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->patternBitmap:Landroid/graphics/Bitmap;
-
-    invoke-virtual {v2}, Landroid/graphics/Bitmap;->getHeight()I
-
-    move-result v2
-
-    int-to-float v2, v2
-
-    mul-float v2, v2, p1
-
-    float-to-int v2, v2
-
-    const/4 v3, 0x1
-
-    invoke-static {v0, v1, v2, v3}, Landroid/graphics/Bitmap;->createScaledBitmap(Landroid/graphics/Bitmap;IIZ)Landroid/graphics/Bitmap;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->scaledPatternBitmap:Landroid/graphics/Bitmap;
-
-    .line 437
-    new-instance v0, Landroid/graphics/BitmapShader;
-
-    iget-object v1, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->scaledPatternBitmap:Landroid/graphics/Bitmap;
-
-    sget-object v2, Landroid/graphics/Shader$TileMode;->REPEAT:Landroid/graphics/Shader$TileMode;
-
-    invoke-direct {v0, v1, v2, v2}, Landroid/graphics/BitmapShader;-><init>(Landroid/graphics/Bitmap;Landroid/graphics/Shader$TileMode;Landroid/graphics/Shader$TileMode;)V
-
-    iput-object v0, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->gradientShader:Landroid/graphics/BitmapShader;
-
-    .line 438
-    iget-object v0, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->paint2:Landroid/graphics/Paint;
-
-    new-instance v1, Landroid/graphics/ComposeShader;
-
-    iget-object v2, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->bitmapShader:Landroid/graphics/BitmapShader;
-
-    iget-object v3, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->gradientShader:Landroid/graphics/BitmapShader;
-
-    sget-object v4, Landroid/graphics/PorterDuff$Mode;->DST_IN:Landroid/graphics/PorterDuff$Mode;
-
-    invoke-direct {v1, v2, v3, v4}, Landroid/graphics/ComposeShader;-><init>(Landroid/graphics/Shader;Landroid/graphics/Shader;Landroid/graphics/PorterDuff$Mode;)V
-
-    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setShader(Landroid/graphics/Shader;)Landroid/graphics/Shader;
-
-    .line 439
-    iput p1, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->patternBitmapScale:F
-
-    :cond_55
     return-void
 .end method
 
@@ -1292,15 +1189,15 @@
 
     move-object/from16 v1, p1
 
-    .line 682
+    .line 669
     invoke-virtual/range {p0 .. p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
 
     move-result-object v2
 
-    .line 683
+    .line 670
     invoke-virtual/range {p1 .. p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 684
+    .line 671
     iget-object v3, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->patternBitmap:Landroid/graphics/Bitmap;
 
     if-eqz v3, :cond_12
@@ -1315,28 +1212,28 @@
     :goto_14
     int-to-float v3, v3
 
-    .line 685
+    .line 672
     iget-object v4, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->currentBitmap:Landroid/graphics/Bitmap;
 
     invoke-virtual {v4}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v4
 
-    .line 686
+    .line 673
     iget-object v5, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->currentBitmap:Landroid/graphics/Bitmap;
 
     invoke-virtual {v5}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result v5
 
-    .line 687
+    .line 674
     invoke-virtual {v2}, Landroid/graphics/Rect;->width()I
 
     move-result v6
 
     int-to-float v6, v6
 
-    .line 688
+    .line 675
     invoke-virtual {v2}, Landroid/graphics/Rect;->height()I
 
     move-result v7
@@ -1351,7 +1248,7 @@
 
     div-float v9, v7, v5
 
-    .line 689
+    .line 676
     invoke-static {v8, v9}, Ljava/lang/Math;->max(FF)F
 
     move-result v8
@@ -1370,33 +1267,33 @@
 
     div-float/2addr v10, v9
 
-    .line 694
+    .line 681
     iget-boolean v11, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->isPreview:Z
 
     if-eqz v11, :cond_54
 
-    .line 695
+    .line 682
     iget v11, v2, Landroid/graphics/Rect;->left:I
 
     int-to-float v12, v11
 
     add-float/2addr v8, v12
 
-    .line 696
+    .line 683
     iget v12, v2, Landroid/graphics/Rect;->top:I
 
     int-to-float v13, v12
 
     add-float/2addr v10, v13
 
-    .line 697
+    .line 684
     iget v13, v2, Landroid/graphics/Rect;->right:I
 
     iget v14, v2, Landroid/graphics/Rect;->bottom:I
 
     invoke-virtual {v1, v11, v12, v13, v14}, Landroid/graphics/Canvas;->clipRect(IIII)Z
 
-    .line 699
+    .line 686
     :cond_54
     iget v11, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->intensity:I
 
@@ -1408,11 +1305,11 @@
 
     const/4 v12, 0x0
 
-    if-gez v11, :cond_2a5
+    if-gez v11, :cond_2b9
 
     const/high16 v4, -0x1000000
 
-    .line 700
+    .line 687
     iget v5, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->alpha:I
 
     int-to-float v5, v5
@@ -1429,29 +1326,29 @@
 
     invoke-virtual {v1, v4}, Landroid/graphics/Canvas;->drawColor(I)V
 
-    .line 701
+    .line 688
     iget-object v4, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->patternBitmap:Landroid/graphics/Bitmap;
 
-    if-eqz v4, :cond_393
+    if-eqz v4, :cond_3a7
 
-    .line 702
+    .line 689
     sget-boolean v5, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->useLegacyBitmap:Z
 
     if-eqz v5, :cond_1f0
 
-    .line 703
+    .line 690
     sget-boolean v5, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->errorWhileGenerateLegacyBitmap:Z
 
     const/4 v8, 0x0
 
     if-eqz v5, :cond_fb
 
-    .line 704
+    .line 691
     invoke-virtual {v4}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v2
 
-    .line 705
+    .line 692
     iget-object v4, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->patternBitmap:Landroid/graphics/Bitmap;
 
     invoke-virtual {v4}, Landroid/graphics/Bitmap;->getHeight()I
@@ -1466,7 +1363,7 @@
 
     div-float v10, v7, v4
 
-    .line 706
+    .line 693
     invoke-static {v5, v10}, Ljava/lang/Math;->max(FF)F
 
     move-result v5
@@ -1483,7 +1380,7 @@
 
     div-float/2addr v7, v9
 
-    .line 711
+    .line 698
     iget-object v5, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->rect:Landroid/graphics/RectF;
 
     add-float/2addr v2, v6
@@ -1492,7 +1389,7 @@
 
     invoke-virtual {v5, v6, v7, v2, v4}, Landroid/graphics/RectF;->set(FFFF)V
 
-    .line 713
+    .line 700
     iget-object v2, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->colors:[I
 
     const/4 v4, 0x2
@@ -1511,7 +1408,7 @@
 
     move-result v2
 
-    .line 714
+    .line 701
     iget-object v4, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->colors:[I
 
     const/4 v5, 0x3
@@ -1520,14 +1417,14 @@
 
     if-eqz v6, :cond_bc
 
-    .line 715
+    .line 702
     aget v4, v4, v5
 
     invoke-static {v4, v2}, Lorg/telegram/messenger/AndroidUtilities;->getAverageColor(II)I
 
     move-result v2
 
-    .line 717
+    .line 704
     :cond_bc
     iget-object v4, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->legacyBitmapColorFilter:Landroid/graphics/ColorFilter;
 
@@ -1537,11 +1434,11 @@
 
     if-eq v2, v4, :cond_cf
 
-    .line 718
+    .line 705
     :cond_c4
     iput v2, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->legacyBitmapColor:I
 
-    .line 719
+    .line 706
     new-instance v4, Landroid/graphics/PorterDuffColorFilter;
 
     sget-object v5, Landroid/graphics/PorterDuff$Mode;->SRC_IN:Landroid/graphics/PorterDuff$Mode;
@@ -1550,7 +1447,7 @@
 
     iput-object v4, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->legacyBitmapColorFilter:Landroid/graphics/ColorFilter;
 
-    .line 721
+    .line 708
     :cond_cf
     iget-object v2, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->paint2:Landroid/graphics/Paint;
 
@@ -1558,7 +1455,7 @@
 
     invoke-virtual {v2, v4}, Landroid/graphics/Paint;->setColorFilter(Landroid/graphics/ColorFilter;)Landroid/graphics/ColorFilter;
 
-    .line 722
+    .line 709
     iget-object v2, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->paint2:Landroid/graphics/Paint;
 
     iget v4, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->intensity:I
@@ -1585,10 +1482,10 @@
 
     invoke-virtual {v2, v4}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 723
+    .line 710
     invoke-virtual {v1, v15, v3}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 724
+    .line 711
     iget-object v2, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->patternBitmap:Landroid/graphics/Bitmap;
 
     iget-object v3, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->rect:Landroid/graphics/RectF;
@@ -1597,20 +1494,20 @@
 
     invoke-virtual {v1, v2, v12, v3, v4}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Rect;Landroid/graphics/RectF;Landroid/graphics/Paint;)V
 
-    goto/16 :goto_393
+    goto/16 :goto_3a7
 
-    .line 725
+    .line 712
     :cond_fb
     iget-object v3, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->legacyBitmap:Landroid/graphics/Bitmap;
 
-    if-eqz v3, :cond_393
+    if-eqz v3, :cond_3a7
 
-    .line 726
+    .line 713
     iget-boolean v4, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->invalidateLegacy:Z
 
     if-eqz v4, :cond_18b
 
-    .line 727
+    .line 714
     iget-object v4, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->rect:Landroid/graphics/RectF;
 
     invoke-virtual {v3}, Landroid/graphics/Bitmap;->getWidth()I
@@ -1629,21 +1526,21 @@
 
     invoke-virtual {v4, v15, v15, v3, v5}, Landroid/graphics/RectF;->set(FFFF)V
 
-    .line 728
+    .line 715
     iget-object v3, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->paint:Landroid/graphics/Paint;
 
     invoke-virtual {v3}, Landroid/graphics/Paint;->getAlpha()I
 
     move-result v3
 
-    .line 729
+    .line 716
     iget-object v4, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->paint:Landroid/graphics/Paint;
 
     const/16 v5, 0xff
 
     invoke-virtual {v4, v5}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 730
+    .line 717
     iget-object v4, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->legacyCanvas:Landroid/graphics/Canvas;
 
     iget-object v5, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->currentBitmap:Landroid/graphics/Bitmap;
@@ -1654,19 +1551,19 @@
 
     invoke-virtual {v4, v5, v12, v10, v11}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Rect;Landroid/graphics/RectF;Landroid/graphics/Paint;)V
 
-    .line 731
+    .line 718
     iget-object v4, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->paint:Landroid/graphics/Paint;
 
     invoke-virtual {v4, v3}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 733
+    .line 720
     iget-object v3, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->patternBitmap:Landroid/graphics/Bitmap;
 
     invoke-virtual {v3}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v3
 
-    .line 734
+    .line 721
     iget-object v4, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->patternBitmap:Landroid/graphics/Bitmap;
 
     invoke-virtual {v4}, Landroid/graphics/Bitmap;->getHeight()I
@@ -1681,7 +1578,7 @@
 
     div-float v10, v7, v4
 
-    .line 735
+    .line 722
     invoke-static {v5, v10}, Ljava/lang/Math;->max(FF)F
 
     move-result v5
@@ -1698,7 +1595,7 @@
 
     div-float/2addr v7, v9
 
-    .line 740
+    .line 727
     iget-object v5, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->rect:Landroid/graphics/RectF;
 
     add-float/2addr v3, v6
@@ -1707,12 +1604,12 @@
 
     invoke-virtual {v5, v6, v7, v3, v4}, Landroid/graphics/RectF;->set(FFFF)V
 
-    .line 742
+    .line 729
     iget-object v3, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->paint2:Landroid/graphics/Paint;
 
     invoke-virtual {v3, v12}, Landroid/graphics/Paint;->setColorFilter(Landroid/graphics/ColorFilter;)Landroid/graphics/ColorFilter;
 
-    .line 743
+    .line 730
     iget-object v3, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->paint2:Landroid/graphics/Paint;
 
     iget v4, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->intensity:I
@@ -1733,19 +1630,19 @@
 
     invoke-virtual {v3, v4}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 744
+    .line 731
     iget-object v3, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->legacyCanvas:Landroid/graphics/Canvas;
 
     invoke-virtual {v3}, Landroid/graphics/Canvas;->save()I
 
-    .line 745
+    .line 732
     iget-object v3, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->legacyCanvas:Landroid/graphics/Canvas;
 
     sget v4, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->legacyBitmapScale:F
 
     invoke-virtual {v3, v4, v4}, Landroid/graphics/Canvas;->scale(FF)V
 
-    .line 746
+    .line 733
     iget-object v3, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->legacyCanvas:Landroid/graphics/Canvas;
 
     iget-object v4, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->patternBitmap:Landroid/graphics/Bitmap;
@@ -1756,15 +1653,15 @@
 
     invoke-virtual {v3, v4, v12, v5, v6}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Rect;Landroid/graphics/RectF;Landroid/graphics/Paint;)V
 
-    .line 747
+    .line 734
     iget-object v3, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->legacyCanvas:Landroid/graphics/Canvas;
 
     invoke-virtual {v3}, Landroid/graphics/Canvas;->restore()V
 
-    .line 748
+    .line 735
     iput-boolean v8, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->invalidateLegacy:Z
 
-    .line 751
+    .line 738
     :cond_18b
     iget-object v3, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->rect:Landroid/graphics/RectF;
 
@@ -1786,7 +1683,7 @@
 
     invoke-virtual {v3, v4, v5, v6, v2}, Landroid/graphics/RectF;->set(FFFF)V
 
-    .line 752
+    .line 739
     iget-object v2, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->legacyBitmap2:Landroid/graphics/Bitmap;
 
     if-eqz v2, :cond_1e5
@@ -1799,7 +1696,7 @@
 
     if-eqz v4, :cond_1e5
 
-    .line 753
+    .line 740
     iget-object v4, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->paint:Landroid/graphics/Paint;
 
     iget v5, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->alpha:I
@@ -1818,7 +1715,7 @@
 
     invoke-virtual {v4, v2}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 754
+    .line 741
     iget-object v2, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->legacyBitmap2:Landroid/graphics/Bitmap;
 
     iget-object v3, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->rect:Landroid/graphics/RectF;
@@ -1827,7 +1724,7 @@
 
     invoke-virtual {v1, v2, v12, v3, v4}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Rect;Landroid/graphics/RectF;Landroid/graphics/Paint;)V
 
-    .line 756
+    .line 743
     iget-object v2, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->paint:Landroid/graphics/Paint;
 
     iget v3, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->alpha:I
@@ -1846,7 +1743,7 @@
 
     invoke-virtual {v2, v3}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 757
+    .line 744
     iget-object v2, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->legacyBitmap:Landroid/graphics/Bitmap;
 
     iget-object v3, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->rect:Landroid/graphics/RectF;
@@ -1855,16 +1752,16 @@
 
     invoke-virtual {v1, v2, v12, v3, v4}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Rect;Landroid/graphics/RectF;Landroid/graphics/Paint;)V
 
-    .line 758
+    .line 745
     iget-object v2, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->paint:Landroid/graphics/Paint;
 
     iget v3, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->alpha:I
 
     invoke-virtual {v2, v3}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    goto/16 :goto_393
+    goto/16 :goto_3a7
 
-    .line 760
+    .line 747
     :cond_1e5
     iget-object v2, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->legacyBitmap:Landroid/graphics/Bitmap;
 
@@ -1874,35 +1771,35 @@
 
     invoke-virtual {v1, v2, v12, v3, v4}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Rect;Landroid/graphics/RectF;Landroid/graphics/Paint;)V
 
-    goto/16 :goto_393
+    goto/16 :goto_3a7
 
-    .line 764
+    .line 751
     :cond_1f0
     iget-object v4, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->matrix:Landroid/graphics/Matrix;
 
     if-nez v4, :cond_1fb
 
-    .line 765
+    .line 752
     new-instance v4, Landroid/graphics/Matrix;
 
     invoke-direct {v4}, Landroid/graphics/Matrix;-><init>()V
 
     iput-object v4, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->matrix:Landroid/graphics/Matrix;
 
-    .line 767
+    .line 754
     :cond_1fb
     iget-object v4, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->matrix:Landroid/graphics/Matrix;
 
     invoke-virtual {v4}, Landroid/graphics/Matrix;->reset()V
 
-    .line 768
+    .line 755
     iget-object v4, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->matrix:Landroid/graphics/Matrix;
 
     add-float/2addr v10, v3
 
     invoke-virtual {v4, v8, v10}, Landroid/graphics/Matrix;->setTranslate(FF)V
 
-    .line 769
+    .line 756
     iget-object v4, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->currentBitmap:Landroid/graphics/Bitmap;
 
     invoke-virtual {v4}, Landroid/graphics/Bitmap;->getWidth()I
@@ -1919,7 +1816,7 @@
 
     div-float/2addr v4, v5
 
-    .line 770
+    .line 757
     iget-object v5, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->currentBitmap:Landroid/graphics/Bitmap;
 
     invoke-virtual {v5}, Landroid/graphics/Bitmap;->getHeight()I
@@ -1936,7 +1833,7 @@
 
     div-float/2addr v5, v8
 
-    .line 771
+    .line 758
     invoke-static {v4, v5}, Ljava/lang/Math;->min(FF)F
 
     move-result v4
@@ -1945,31 +1842,31 @@
 
     div-float v15, v5, v4
 
-    .line 772
+    .line 759
     iget-object v4, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->matrix:Landroid/graphics/Matrix;
 
     invoke-virtual {v4, v15, v15}, Landroid/graphics/Matrix;->preScale(FF)Z
 
-    .line 773
+    .line 760
     iget-object v4, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->bitmapShader:Landroid/graphics/BitmapShader;
 
     iget-object v5, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->matrix:Landroid/graphics/Matrix;
 
     invoke-virtual {v4, v5}, Landroid/graphics/BitmapShader;->setLocalMatrix(Landroid/graphics/Matrix;)V
 
-    .line 775
+    .line 762
     iget-object v4, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->matrix:Landroid/graphics/Matrix;
 
     invoke-virtual {v4}, Landroid/graphics/Matrix;->reset()V
 
-    .line 776
+    .line 763
     iget-object v4, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->patternBitmap:Landroid/graphics/Bitmap;
 
     invoke-virtual {v4}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v4
 
-    .line 777
+    .line 764
     iget-object v5, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->patternBitmap:Landroid/graphics/Bitmap;
 
     invoke-virtual {v5}, Landroid/graphics/Bitmap;->getHeight()I
@@ -1984,7 +1881,7 @@
 
     div-float v10, v7, v5
 
-    .line 778
+    .line 765
     invoke-static {v8, v10}, Ljava/lang/Math;->max(FF)F
 
     move-result v8
@@ -2001,7 +1898,7 @@
 
     div-float/2addr v7, v9
 
-    .line 784
+    .line 770
     iget-object v4, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->matrix:Landroid/graphics/Matrix;
 
     float-to-int v5, v6
@@ -2016,22 +1913,43 @@
 
     invoke-virtual {v4, v5, v3}, Landroid/graphics/Matrix;->setTranslate(FF)V
 
-    .line 785
-    invoke-direct {v0, v8}, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->scalePatternBitmap(F)V
+    .line 771
+    iget-boolean v3, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->disableGradientShaderScaling:Z
 
-    .line 786
+    if-eqz v3, :cond_273
+
+    const v3, 0x3fb33333    # 1.4f
+
+    cmpl-float v3, v8, v3
+
+    if-gtz v3, :cond_273
+
+    const v3, 0x3f4ccccd    # 0.8f
+
+    cmpg-float v3, v8, v3
+
+    if-gez v3, :cond_278
+
+    .line 772
+    :cond_273
+    iget-object v3, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->matrix:Landroid/graphics/Matrix;
+
+    invoke-virtual {v3, v8, v8}, Landroid/graphics/Matrix;->preScale(FF)Z
+
+    .line 774
+    :cond_278
     iget-object v3, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->gradientShader:Landroid/graphics/BitmapShader;
 
     iget-object v4, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->matrix:Landroid/graphics/Matrix;
 
     invoke-virtual {v3, v4}, Landroid/graphics/BitmapShader;->setLocalMatrix(Landroid/graphics/Matrix;)V
 
-    .line 787
+    .line 775
     iget-object v3, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->paint2:Landroid/graphics/Paint;
 
     invoke-virtual {v3, v12}, Landroid/graphics/Paint;->setColorFilter(Landroid/graphics/ColorFilter;)Landroid/graphics/ColorFilter;
 
-    .line 788
+    .line 776
     iget-object v3, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->paint2:Landroid/graphics/Paint;
 
     iget v4, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->intensity:I
@@ -2058,7 +1976,7 @@
 
     invoke-virtual {v3, v4}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 789
+    .line 777
     iget-object v3, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->rect:Landroid/graphics/RectF;
 
     iget v4, v2, Landroid/graphics/Rect;->left:I
@@ -2079,7 +1997,7 @@
 
     invoke-virtual {v3, v4, v5, v6, v2}, Landroid/graphics/RectF;->set(FFFF)V
 
-    .line 790
+    .line 778
     iget-object v2, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->rect:Landroid/graphics/RectF;
 
     iget v3, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->roundRadius:I
@@ -2092,25 +2010,25 @@
 
     invoke-virtual {v1, v2, v4, v3, v5}, Landroid/graphics/Canvas;->drawRoundRect(Landroid/graphics/RectF;FFLandroid/graphics/Paint;)V
 
-    goto/16 :goto_393
+    goto/16 :goto_3a7
 
-    .line 794
-    :cond_2a5
+    .line 782
+    :cond_2b9
     iget v11, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->roundRadius:I
 
-    if-eqz v11, :cond_2fe
+    if-eqz v11, :cond_312
 
-    .line 795
+    .line 783
     iget-object v3, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->matrix:Landroid/graphics/Matrix;
 
     invoke-virtual {v3}, Landroid/graphics/Matrix;->reset()V
 
-    .line 796
+    .line 784
     iget-object v3, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->matrix:Landroid/graphics/Matrix;
 
     invoke-virtual {v3, v8, v10}, Landroid/graphics/Matrix;->setTranslate(FF)V
 
-    .line 797
+    .line 785
     iget-object v3, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->currentBitmap:Landroid/graphics/Bitmap;
 
     invoke-virtual {v3}, Landroid/graphics/Bitmap;->getWidth()I
@@ -2127,7 +2045,7 @@
 
     div-float/2addr v3, v4
 
-    .line 798
+    .line 786
     iget-object v4, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->currentBitmap:Landroid/graphics/Bitmap;
 
     invoke-virtual {v4}, Landroid/graphics/Bitmap;->getHeight()I
@@ -2144,7 +2062,7 @@
 
     div-float/2addr v4, v5
 
-    .line 799
+    .line 787
     invoke-static {v3, v4}, Ljava/lang/Math;->min(FF)F
 
     move-result v3
@@ -2153,19 +2071,19 @@
 
     div-float v15, v4, v3
 
-    .line 800
+    .line 788
     iget-object v3, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->matrix:Landroid/graphics/Matrix;
 
     invoke-virtual {v3, v15, v15}, Landroid/graphics/Matrix;->preScale(FF)Z
 
-    .line 801
+    .line 789
     iget-object v3, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->bitmapShader:Landroid/graphics/BitmapShader;
 
     iget-object v4, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->matrix:Landroid/graphics/Matrix;
 
     invoke-virtual {v3, v4}, Landroid/graphics/BitmapShader;->setLocalMatrix(Landroid/graphics/Matrix;)V
 
-    .line 803
+    .line 791
     iget-object v3, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->rect:Landroid/graphics/RectF;
 
     iget v4, v2, Landroid/graphics/Rect;->left:I
@@ -2186,7 +2104,7 @@
 
     invoke-virtual {v3, v4, v5, v8, v2}, Landroid/graphics/RectF;->set(FFFF)V
 
-    .line 804
+    .line 792
     iget-object v2, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->rect:Landroid/graphics/RectF;
 
     iget v3, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->roundRadius:I
@@ -2199,16 +2117,16 @@
 
     invoke-virtual {v1, v2, v4, v3, v5}, Landroid/graphics/Canvas;->drawRoundRect(Landroid/graphics/RectF;FFLandroid/graphics/Paint;)V
 
-    goto :goto_345
+    goto :goto_359
 
-    .line 806
-    :cond_2fe
+    .line 794
+    :cond_312
     invoke-virtual {v1, v15, v3}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 807
+    .line 795
     iget-object v2, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->gradientDrawable:Landroid/graphics/drawable/GradientDrawable;
 
-    if-eqz v2, :cond_320
+    if-eqz v2, :cond_334
 
     float-to-int v3, v8
 
@@ -2222,10 +2140,10 @@
 
     float-to-int v5, v10
 
-    .line 808
+    .line 796
     invoke-virtual {v2, v3, v11, v4, v5}, Landroid/graphics/drawable/GradientDrawable;->setBounds(IIII)V
 
-    .line 809
+    .line 797
     iget-object v2, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->gradientDrawable:Landroid/graphics/drawable/GradientDrawable;
 
     iget v3, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->backgroundAlpha:F
@@ -2238,15 +2156,15 @@
 
     invoke-virtual {v2, v3}, Landroid/graphics/drawable/GradientDrawable;->setAlpha(I)V
 
-    .line 810
+    .line 798
     iget-object v2, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->gradientDrawable:Landroid/graphics/drawable/GradientDrawable;
 
     invoke-virtual {v2, v1}, Landroid/graphics/drawable/GradientDrawable;->draw(Landroid/graphics/Canvas;)V
 
-    goto :goto_345
+    goto :goto_359
 
-    .line 812
-    :cond_320
+    .line 800
+    :cond_334
     iget-object v2, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->rect:Landroid/graphics/RectF;
 
     add-float/2addr v4, v8
@@ -2255,25 +2173,25 @@
 
     invoke-virtual {v2, v8, v10, v4, v5}, Landroid/graphics/RectF;->set(FFFF)V
 
-    .line 813
+    .line 801
     iget-object v2, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->overrideBitmapPaint:Landroid/graphics/Paint;
 
-    if-eqz v2, :cond_32c
+    if-eqz v2, :cond_340
 
-    goto :goto_32e
+    goto :goto_342
 
-    :cond_32c
+    :cond_340
     iget-object v2, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->paint:Landroid/graphics/Paint;
 
-    .line 814
-    :goto_32e
+    .line 802
+    :goto_342
     invoke-virtual {v2}, Landroid/graphics/Paint;->getAlpha()I
 
     move-result v3
 
     int-to-float v4, v3
 
-    .line 815
+    .line 803
     iget v5, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->backgroundAlpha:F
 
     mul-float v4, v4, v5
@@ -2282,28 +2200,28 @@
 
     invoke-virtual {v2, v4}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 816
+    .line 804
     iget-object v4, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->currentBitmap:Landroid/graphics/Bitmap;
 
     iget-object v5, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->rect:Landroid/graphics/RectF;
 
     invoke-virtual {v1, v4, v12, v5, v2}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Rect;Landroid/graphics/RectF;Landroid/graphics/Paint;)V
 
-    .line 817
+    .line 805
     invoke-virtual {v2, v3}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 821
-    :goto_345
+    .line 809
+    :goto_359
     iget-object v2, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->patternBitmap:Landroid/graphics/Bitmap;
 
-    if-eqz v2, :cond_393
+    if-eqz v2, :cond_3a7
 
-    .line 822
+    .line 810
     invoke-virtual {v2}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v2
 
-    .line 823
+    .line 811
     iget-object v3, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->patternBitmap:Landroid/graphics/Bitmap;
 
     invoke-virtual {v3}, Landroid/graphics/Bitmap;->getHeight()I
@@ -2318,7 +2236,7 @@
 
     div-float v5, v7, v3
 
-    .line 824
+    .line 812
     invoke-static {v4, v5}, Ljava/lang/Math;->max(FF)F
 
     move-result v4
@@ -2335,7 +2253,7 @@
 
     div-float/2addr v7, v9
 
-    .line 829
+    .line 817
     iget-object v4, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->rect:Landroid/graphics/RectF;
 
     add-float/2addr v2, v6
@@ -2344,14 +2262,14 @@
 
     invoke-virtual {v4, v6, v7, v2, v3}, Landroid/graphics/RectF;->set(FFFF)V
 
-    .line 831
+    .line 819
     iget-object v2, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->paint2:Landroid/graphics/Paint;
 
     iget-object v3, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->patternColorFilter:Landroid/graphics/ColorFilter;
 
     invoke-virtual {v2, v3}, Landroid/graphics/Paint;->setColorFilter(Landroid/graphics/ColorFilter;)Landroid/graphics/ColorFilter;
 
-    .line 832
+    .line 820
     iget-object v2, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->paint2:Landroid/graphics/Paint;
 
     iget v3, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->intensity:I
@@ -2378,7 +2296,7 @@
 
     invoke-virtual {v2, v3}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 833
+    .line 821
     iget-object v2, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->patternBitmap:Landroid/graphics/Bitmap;
 
     iget-object v3, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->rect:Landroid/graphics/RectF;
@@ -2387,12 +2305,12 @@
 
     invoke-virtual {v1, v2, v12, v3, v4}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Rect;Landroid/graphics/RectF;Landroid/graphics/Paint;)V
 
-    .line 836
-    :cond_393
-    :goto_393
+    .line 824
+    :cond_3a7
+    :goto_3a7
     invoke-virtual/range {p1 .. p1}, Landroid/graphics/Canvas;->restore()V
 
-    .line 838
+    .line 826
     invoke-virtual {v0, v13}, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->updateAnimation(Z)V
 
     return-void
@@ -2401,15 +2319,15 @@
 .method public drawBackground(Landroid/graphics/Canvas;)V
     .registers 12
 
-    .line 495
+    .line 480
     invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
 
     move-result-object v0
 
-    .line 496
+    .line 481
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 497
+    .line 482
     iget-object v1, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->patternBitmap:Landroid/graphics/Bitmap;
 
     if-eqz v1, :cond_e
@@ -2424,28 +2342,28 @@
     :goto_10
     int-to-float v1, v1
 
-    .line 498
+    .line 483
     iget-object v2, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->currentBitmap:Landroid/graphics/Bitmap;
 
     invoke-virtual {v2}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v2
 
-    .line 499
+    .line 484
     iget-object v3, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->currentBitmap:Landroid/graphics/Bitmap;
 
     invoke-virtual {v3}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result v3
 
-    .line 500
+    .line 485
     invoke-virtual {v0}, Landroid/graphics/Rect;->width()I
 
     move-result v4
 
     int-to-float v4, v4
 
-    .line 501
+    .line 486
     invoke-virtual {v0}, Landroid/graphics/Rect;->height()I
 
     move-result v5
@@ -2460,7 +2378,7 @@
 
     div-float v7, v5, v3
 
-    .line 502
+    .line 487
     invoke-static {v6, v7}, Ljava/lang/Math;->max(FF)F
 
     move-result v6
@@ -2479,33 +2397,33 @@
 
     div-float/2addr v5, v6
 
-    .line 507
+    .line 492
     iget-boolean v6, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->isPreview:Z
 
     if-eqz v6, :cond_4e
 
-    .line 508
+    .line 493
     iget v6, v0, Landroid/graphics/Rect;->left:I
 
     int-to-float v7, v6
 
     add-float/2addr v4, v7
 
-    .line 509
+    .line 494
     iget v7, v0, Landroid/graphics/Rect;->top:I
 
     int-to-float v8, v7
 
     add-float/2addr v5, v8
 
-    .line 510
+    .line 495
     iget v8, v0, Landroid/graphics/Rect;->right:I
 
     iget v9, v0, Landroid/graphics/Rect;->bottom:I
 
     invoke-virtual {p1, v6, v7, v8, v9}, Landroid/graphics/Canvas;->clipRect(IIII)Z
 
-    .line 512
+    .line 497
     :cond_4e
     iget v6, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->intensity:I
 
@@ -2513,7 +2431,7 @@
 
     const/high16 v0, -0x1000000
 
-    .line 513
+    .line 498
     iget v1, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->alpha:I
 
     int-to-float v1, v1
@@ -2532,23 +2450,23 @@
 
     goto/16 :goto_11c
 
-    .line 515
+    .line 500
     :cond_65
     iget v6, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->roundRadius:I
 
     if-eqz v6, :cond_d3
 
-    .line 516
+    .line 501
     iget-object v1, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->matrix:Landroid/graphics/Matrix;
 
     invoke-virtual {v1}, Landroid/graphics/Matrix;->reset()V
 
-    .line 517
+    .line 502
     iget-object v1, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->matrix:Landroid/graphics/Matrix;
 
     invoke-virtual {v1, v4, v5}, Landroid/graphics/Matrix;->setTranslate(FF)V
 
-    .line 518
+    .line 503
     iget-object v1, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->currentBitmap:Landroid/graphics/Bitmap;
 
     invoke-virtual {v1}, Landroid/graphics/Bitmap;->getWidth()I
@@ -2565,7 +2483,7 @@
 
     div-float/2addr v1, v2
 
-    .line 519
+    .line 504
     iget-object v2, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->currentBitmap:Landroid/graphics/Bitmap;
 
     invoke-virtual {v2}, Landroid/graphics/Bitmap;->getHeight()I
@@ -2584,26 +2502,26 @@
 
     const/high16 v3, 0x3f800000    # 1.0f
 
-    .line 520
+    .line 505
     invoke-static {v1, v2}, Ljava/lang/Math;->min(FF)F
 
     move-result v1
 
     div-float/2addr v3, v1
 
-    .line 521
+    .line 506
     iget-object v1, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->matrix:Landroid/graphics/Matrix;
 
     invoke-virtual {v1, v3, v3}, Landroid/graphics/Matrix;->preScale(FF)Z
 
-    .line 522
+    .line 507
     iget-object v1, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->bitmapShader:Landroid/graphics/BitmapShader;
 
     iget-object v2, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->matrix:Landroid/graphics/Matrix;
 
     invoke-virtual {v1, v2}, Landroid/graphics/BitmapShader;->setLocalMatrix(Landroid/graphics/Matrix;)V
 
-    .line 524
+    .line 509
     iget-object v1, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->rect:Landroid/graphics/RectF;
 
     iget v2, v0, Landroid/graphics/Rect;->left:I
@@ -2624,14 +2542,14 @@
 
     invoke-virtual {v1, v2, v3, v4, v0}, Landroid/graphics/RectF;->set(FFFF)V
 
-    .line 525
+    .line 510
     iget-object v0, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->paint:Landroid/graphics/Paint;
 
     invoke-virtual {v0}, Landroid/graphics/Paint;->getAlpha()I
 
     move-result v0
 
-    .line 526
+    .line 511
     iget-object v1, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->paint:Landroid/graphics/Paint;
 
     int-to-float v2, v0
@@ -2644,7 +2562,7 @@
 
     invoke-virtual {v1, v2}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 527
+    .line 512
     iget-object v1, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->rect:Landroid/graphics/RectF;
 
     iget v2, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->roundRadius:I
@@ -2657,7 +2575,7 @@
 
     invoke-virtual {p1, v1, v3, v2, v4}, Landroid/graphics/Canvas;->drawRoundRect(Landroid/graphics/RectF;FFLandroid/graphics/Paint;)V
 
-    .line 528
+    .line 513
     iget-object v1, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->paint:Landroid/graphics/Paint;
 
     invoke-virtual {v1, v0}, Landroid/graphics/Paint;->setAlpha(I)V
@@ -2667,10 +2585,10 @@
     :cond_d3
     const/4 v0, 0x0
 
-    .line 530
+    .line 515
     invoke-virtual {p1, v0, v1}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 531
+    .line 516
     iget-object v0, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->gradientDrawable:Landroid/graphics/drawable/GradientDrawable;
 
     if-eqz v0, :cond_f6
@@ -2687,10 +2605,10 @@
 
     float-to-int v3, v5
 
-    .line 532
+    .line 517
     invoke-virtual {v0, v1, v6, v2, v3}, Landroid/graphics/drawable/GradientDrawable;->setBounds(IIII)V
 
-    .line 533
+    .line 518
     iget-object v0, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->gradientDrawable:Landroid/graphics/drawable/GradientDrawable;
 
     const/high16 v1, 0x437f0000    # 255.0f
@@ -2703,14 +2621,14 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/drawable/GradientDrawable;->setAlpha(I)V
 
-    .line 534
+    .line 519
     iget-object v0, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->gradientDrawable:Landroid/graphics/drawable/GradientDrawable;
 
     invoke-virtual {v0, p1}, Landroid/graphics/drawable/GradientDrawable;->draw(Landroid/graphics/Canvas;)V
 
     goto :goto_11c
 
-    .line 536
+    .line 521
     :cond_f6
     iget-object v0, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->rect:Landroid/graphics/RectF;
 
@@ -2720,7 +2638,7 @@
 
     invoke-virtual {v0, v4, v5, v2, v3}, Landroid/graphics/RectF;->set(FFFF)V
 
-    .line 537
+    .line 522
     iget-object v0, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->overrideBitmapPaint:Landroid/graphics/Paint;
 
     if-eqz v0, :cond_102
@@ -2730,7 +2648,7 @@
     :cond_102
     iget-object v0, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->paint:Landroid/graphics/Paint;
 
-    .line 538
+    .line 523
     :goto_104
     invoke-virtual {v0}, Landroid/graphics/Paint;->getAlpha()I
 
@@ -2738,7 +2656,7 @@
 
     int-to-float v2, v1
 
-    .line 539
+    .line 524
     iget v3, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->backgroundAlpha:F
 
     mul-float v2, v2, v3
@@ -2747,7 +2665,7 @@
 
     invoke-virtual {v0, v2}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 540
+    .line 525
     iget-object v2, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->currentBitmap:Landroid/graphics/Bitmap;
 
     const/4 v3, 0x0
@@ -2756,16 +2674,16 @@
 
     invoke-virtual {p1, v2, v3, v4, v0}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Rect;Landroid/graphics/RectF;Landroid/graphics/Paint;)V
 
-    .line 541
+    .line 526
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 545
+    .line 530
     :goto_11c
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
     const/4 p1, 0x1
 
-    .line 547
+    .line 532
     invoke-virtual {p0, p1}, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->updateAnimation(Z)V
 
     return-void
@@ -2774,15 +2692,15 @@
 .method public drawPattern(Landroid/graphics/Canvas;)V
     .registers 16
 
-    .line 550
+    .line 535
     invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
 
     move-result-object v0
 
-    .line 551
+    .line 536
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 552
+    .line 537
     iget-object v1, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->patternBitmap:Landroid/graphics/Bitmap;
 
     if-eqz v1, :cond_e
@@ -2797,28 +2715,28 @@
     :goto_10
     int-to-float v1, v1
 
-    .line 553
+    .line 538
     iget-object v2, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->currentBitmap:Landroid/graphics/Bitmap;
 
     invoke-virtual {v2}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v2
 
-    .line 554
+    .line 539
     iget-object v3, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->currentBitmap:Landroid/graphics/Bitmap;
 
     invoke-virtual {v3}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result v3
 
-    .line 555
+    .line 540
     invoke-virtual {v0}, Landroid/graphics/Rect;->width()I
 
     move-result v4
 
     int-to-float v4, v4
 
-    .line 556
+    .line 541
     invoke-virtual {v0}, Landroid/graphics/Rect;->height()I
 
     move-result v5
@@ -2833,7 +2751,7 @@
 
     div-float v7, v5, v3
 
-    .line 557
+    .line 542
     invoke-static {v6, v7}, Ljava/lang/Math;->max(FF)F
 
     move-result v6
@@ -2852,33 +2770,33 @@
 
     div-float/2addr v3, v6
 
-    .line 562
+    .line 547
     iget-boolean v7, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->isPreview:Z
 
     if-eqz v7, :cond_50
 
-    .line 563
+    .line 548
     iget v7, v0, Landroid/graphics/Rect;->left:I
 
     int-to-float v8, v7
 
     add-float/2addr v2, v8
 
-    .line 564
+    .line 549
     iget v8, v0, Landroid/graphics/Rect;->top:I
 
     int-to-float v9, v8
 
     add-float/2addr v3, v9
 
-    .line 565
+    .line 550
     iget v9, v0, Landroid/graphics/Rect;->right:I
 
     iget v10, v0, Landroid/graphics/Rect;->bottom:I
 
     invoke-virtual {p1, v7, v8, v9, v10}, Landroid/graphics/Canvas;->clipRect(IIII)Z
 
-    .line 567
+    .line 552
     :cond_50
     iget v7, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->intensity:I
 
@@ -2888,21 +2806,21 @@
 
     const/4 v10, 0x0
 
-    if-gez v7, :cond_28b
+    if-gez v7, :cond_29f
 
-    .line 568
+    .line 553
     iget-object v7, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->patternBitmap:Landroid/graphics/Bitmap;
 
-    if-eqz v7, :cond_2d9
+    if-eqz v7, :cond_2ed
 
-    .line 569
+    .line 554
     sget-boolean v11, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->useLegacyBitmap:Z
 
     const/high16 v12, 0x3f800000    # 1.0f
 
     if-eqz v11, :cond_1da
 
-    .line 570
+    .line 555
     sget-boolean v2, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->errorWhileGenerateLegacyBitmap:Z
 
     const/4 v3, 0x0
@@ -2911,12 +2829,12 @@
 
     if-eqz v2, :cond_e8
 
-    .line 571
+    .line 556
     invoke-virtual {v7}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v0
 
-    .line 572
+    .line 557
     iget-object v2, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->patternBitmap:Landroid/graphics/Bitmap;
 
     invoke-virtual {v2}, Landroid/graphics/Bitmap;->getHeight()I
@@ -2931,7 +2849,7 @@
 
     div-float v12, v5, v2
 
-    .line 573
+    .line 558
     invoke-static {v7, v12}, Ljava/lang/Math;->max(FF)F
 
     move-result v7
@@ -2948,7 +2866,7 @@
 
     div-float/2addr v5, v6
 
-    .line 578
+    .line 563
     iget-object v6, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->rect:Landroid/graphics/RectF;
 
     add-float/2addr v0, v4
@@ -2957,7 +2875,7 @@
 
     invoke-virtual {v6, v4, v5, v0, v2}, Landroid/graphics/RectF;->set(FFFF)V
 
-    .line 580
+    .line 565
     iget-object v0, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->colors:[I
 
     const/4 v2, 0x2
@@ -2976,7 +2894,7 @@
 
     move-result v0
 
-    .line 581
+    .line 566
     iget-object v2, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->colors:[I
 
     const/4 v3, 0x3
@@ -2985,14 +2903,14 @@
 
     if-eqz v4, :cond_a9
 
-    .line 582
+    .line 567
     aget v2, v2, v3
 
     invoke-static {v2, v0}, Lorg/telegram/messenger/AndroidUtilities;->getAverageColor(II)I
 
     move-result v0
 
-    .line 584
+    .line 569
     :cond_a9
     iget-object v2, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->legacyBitmapColorFilter:Landroid/graphics/ColorFilter;
 
@@ -3002,11 +2920,11 @@
 
     if-eq v0, v2, :cond_bc
 
-    .line 585
+    .line 570
     :cond_b1
     iput v0, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->legacyBitmapColor:I
 
-    .line 586
+    .line 571
     new-instance v2, Landroid/graphics/PorterDuffColorFilter;
 
     sget-object v3, Landroid/graphics/PorterDuff$Mode;->SRC_IN:Landroid/graphics/PorterDuff$Mode;
@@ -3015,7 +2933,7 @@
 
     iput-object v2, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->legacyBitmapColorFilter:Landroid/graphics/ColorFilter;
 
-    .line 588
+    .line 573
     :cond_bc
     iget-object v0, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->paint2:Landroid/graphics/Paint;
 
@@ -3023,7 +2941,7 @@
 
     invoke-virtual {v0, v2}, Landroid/graphics/Paint;->setColorFilter(Landroid/graphics/ColorFilter;)Landroid/graphics/ColorFilter;
 
-    .line 589
+    .line 574
     iget-object v0, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->paint2:Landroid/graphics/Paint;
 
     iget v2, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->intensity:I
@@ -3050,10 +2968,10 @@
 
     invoke-virtual {v0, v2}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 590
+    .line 575
     invoke-virtual {p1, v11, v1}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 591
+    .line 576
     iget-object v0, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->patternBitmap:Landroid/graphics/Bitmap;
 
     iget-object v1, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->rect:Landroid/graphics/RectF;
@@ -3062,20 +2980,20 @@
 
     invoke-virtual {p1, v0, v10, v1, v2}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Rect;Landroid/graphics/RectF;Landroid/graphics/Paint;)V
 
-    goto/16 :goto_2d9
+    goto/16 :goto_2ed
 
-    .line 592
+    .line 577
     :cond_e8
     iget-object v1, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->legacyBitmap:Landroid/graphics/Bitmap;
 
-    if-eqz v1, :cond_2d9
+    if-eqz v1, :cond_2ed
 
-    .line 593
+    .line 578
     iget-boolean v2, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->invalidateLegacy:Z
 
     if-eqz v2, :cond_178
 
-    .line 594
+    .line 579
     iget-object v2, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->rect:Landroid/graphics/RectF;
 
     invoke-virtual {v1}, Landroid/graphics/Bitmap;->getWidth()I
@@ -3094,21 +3012,21 @@
 
     invoke-virtual {v2, v11, v11, v1, v7}, Landroid/graphics/RectF;->set(FFFF)V
 
-    .line 595
+    .line 580
     iget-object v1, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->paint:Landroid/graphics/Paint;
 
     invoke-virtual {v1}, Landroid/graphics/Paint;->getAlpha()I
 
     move-result v1
 
-    .line 596
+    .line 581
     iget-object v2, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->paint:Landroid/graphics/Paint;
 
     const/16 v7, 0xff
 
     invoke-virtual {v2, v7}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 597
+    .line 582
     iget-object v2, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->legacyCanvas:Landroid/graphics/Canvas;
 
     iget-object v7, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->currentBitmap:Landroid/graphics/Bitmap;
@@ -3119,19 +3037,19 @@
 
     invoke-virtual {v2, v7, v10, v11, v13}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Rect;Landroid/graphics/RectF;Landroid/graphics/Paint;)V
 
-    .line 598
+    .line 583
     iget-object v2, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->paint:Landroid/graphics/Paint;
 
     invoke-virtual {v2, v1}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 600
+    .line 585
     iget-object v1, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->patternBitmap:Landroid/graphics/Bitmap;
 
     invoke-virtual {v1}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v1
 
-    .line 601
+    .line 586
     iget-object v2, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->patternBitmap:Landroid/graphics/Bitmap;
 
     invoke-virtual {v2}, Landroid/graphics/Bitmap;->getHeight()I
@@ -3146,7 +3064,7 @@
 
     div-float v11, v5, v2
 
-    .line 602
+    .line 587
     invoke-static {v7, v11}, Ljava/lang/Math;->max(FF)F
 
     move-result v7
@@ -3163,7 +3081,7 @@
 
     div-float/2addr v5, v6
 
-    .line 607
+    .line 592
     iget-object v6, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->rect:Landroid/graphics/RectF;
 
     add-float/2addr v1, v4
@@ -3172,12 +3090,12 @@
 
     invoke-virtual {v6, v4, v5, v1, v2}, Landroid/graphics/RectF;->set(FFFF)V
 
-    .line 609
+    .line 594
     iget-object v1, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->paint2:Landroid/graphics/Paint;
 
     invoke-virtual {v1, v10}, Landroid/graphics/Paint;->setColorFilter(Landroid/graphics/ColorFilter;)Landroid/graphics/ColorFilter;
 
-    .line 610
+    .line 595
     iget-object v1, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->paint2:Landroid/graphics/Paint;
 
     iget v2, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->intensity:I
@@ -3198,19 +3116,19 @@
 
     invoke-virtual {v1, v2}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 611
+    .line 596
     iget-object v1, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->legacyCanvas:Landroid/graphics/Canvas;
 
     invoke-virtual {v1}, Landroid/graphics/Canvas;->save()I
 
-    .line 612
+    .line 597
     iget-object v1, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->legacyCanvas:Landroid/graphics/Canvas;
 
     sget v2, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->legacyBitmapScale:F
 
     invoke-virtual {v1, v2, v2}, Landroid/graphics/Canvas;->scale(FF)V
 
-    .line 613
+    .line 598
     iget-object v1, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->legacyCanvas:Landroid/graphics/Canvas;
 
     iget-object v2, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->patternBitmap:Landroid/graphics/Bitmap;
@@ -3221,15 +3139,15 @@
 
     invoke-virtual {v1, v2, v10, v4, v5}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Rect;Landroid/graphics/RectF;Landroid/graphics/Paint;)V
 
-    .line 614
+    .line 599
     iget-object v1, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->legacyCanvas:Landroid/graphics/Canvas;
 
     invoke-virtual {v1}, Landroid/graphics/Canvas;->restore()V
 
-    .line 615
+    .line 600
     iput-boolean v3, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->invalidateLegacy:Z
 
-    .line 618
+    .line 603
     :cond_178
     iget-object v1, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->rect:Landroid/graphics/RectF;
 
@@ -3251,7 +3169,7 @@
 
     invoke-virtual {v1, v2, v3, v4, v0}, Landroid/graphics/RectF;->set(FFFF)V
 
-    .line 619
+    .line 604
     iget-object v0, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->legacyBitmap2:Landroid/graphics/Bitmap;
 
     if-eqz v0, :cond_1cf
@@ -3262,7 +3180,7 @@
 
     if-eqz v1, :cond_1cf
 
-    .line 620
+    .line 605
     iget-object v1, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->paint:Landroid/graphics/Paint;
 
     iget v2, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->alpha:I
@@ -3281,7 +3199,7 @@
 
     invoke-virtual {v1, v0}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 621
+    .line 606
     iget-object v0, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->legacyBitmap2:Landroid/graphics/Bitmap;
 
     iget-object v1, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->rect:Landroid/graphics/RectF;
@@ -3290,7 +3208,7 @@
 
     invoke-virtual {p1, v0, v10, v1, v2}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Rect;Landroid/graphics/RectF;Landroid/graphics/Paint;)V
 
-    .line 623
+    .line 608
     iget-object v0, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->paint:Landroid/graphics/Paint;
 
     iget v1, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->alpha:I
@@ -3309,7 +3227,7 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 624
+    .line 609
     iget-object v0, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->legacyBitmap:Landroid/graphics/Bitmap;
 
     iget-object v1, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->rect:Landroid/graphics/RectF;
@@ -3318,16 +3236,16 @@
 
     invoke-virtual {p1, v0, v10, v1, v2}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Rect;Landroid/graphics/RectF;Landroid/graphics/Paint;)V
 
-    .line 625
+    .line 610
     iget-object v0, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->paint:Landroid/graphics/Paint;
 
     iget v1, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->alpha:I
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    goto/16 :goto_2d9
+    goto/16 :goto_2ed
 
-    .line 627
+    .line 612
     :cond_1cf
     iget-object v0, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->legacyBitmap:Landroid/graphics/Bitmap;
 
@@ -3337,35 +3255,35 @@
 
     invoke-virtual {p1, v0, v10, v1, v2}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Rect;Landroid/graphics/RectF;Landroid/graphics/Paint;)V
 
-    goto/16 :goto_2d9
+    goto/16 :goto_2ed
 
-    .line 631
+    .line 616
     :cond_1da
     iget-object v7, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->matrix:Landroid/graphics/Matrix;
 
     if-nez v7, :cond_1e5
 
-    .line 632
+    .line 617
     new-instance v7, Landroid/graphics/Matrix;
 
     invoke-direct {v7}, Landroid/graphics/Matrix;-><init>()V
 
     iput-object v7, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->matrix:Landroid/graphics/Matrix;
 
-    .line 634
+    .line 619
     :cond_1e5
     iget-object v7, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->matrix:Landroid/graphics/Matrix;
 
     invoke-virtual {v7}, Landroid/graphics/Matrix;->reset()V
 
-    .line 635
+    .line 620
     iget-object v7, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->matrix:Landroid/graphics/Matrix;
 
     add-float/2addr v3, v1
 
     invoke-virtual {v7, v2, v3}, Landroid/graphics/Matrix;->setTranslate(FF)V
 
-    .line 636
+    .line 621
     iget-object v2, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->currentBitmap:Landroid/graphics/Bitmap;
 
     invoke-virtual {v2}, Landroid/graphics/Bitmap;->getWidth()I
@@ -3382,7 +3300,7 @@
 
     div-float/2addr v2, v3
 
-    .line 637
+    .line 622
     iget-object v3, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->currentBitmap:Landroid/graphics/Bitmap;
 
     invoke-virtual {v3}, Landroid/graphics/Bitmap;->getHeight()I
@@ -3399,38 +3317,38 @@
 
     div-float/2addr v3, v7
 
-    .line 638
+    .line 623
     invoke-static {v2, v3}, Ljava/lang/Math;->min(FF)F
 
     move-result v2
 
     div-float/2addr v12, v2
 
-    .line 639
+    .line 624
     iget-object v2, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->matrix:Landroid/graphics/Matrix;
 
     invoke-virtual {v2, v12, v12}, Landroid/graphics/Matrix;->preScale(FF)Z
 
-    .line 640
+    .line 625
     iget-object v2, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->bitmapShader:Landroid/graphics/BitmapShader;
 
     iget-object v3, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->matrix:Landroid/graphics/Matrix;
 
     invoke-virtual {v2, v3}, Landroid/graphics/BitmapShader;->setLocalMatrix(Landroid/graphics/Matrix;)V
 
-    .line 642
+    .line 627
     iget-object v2, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->matrix:Landroid/graphics/Matrix;
 
     invoke-virtual {v2}, Landroid/graphics/Matrix;->reset()V
 
-    .line 643
+    .line 628
     iget-object v2, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->patternBitmap:Landroid/graphics/Bitmap;
 
     invoke-virtual {v2}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v2
 
-    .line 644
+    .line 629
     iget-object v3, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->patternBitmap:Landroid/graphics/Bitmap;
 
     invoke-virtual {v3}, Landroid/graphics/Bitmap;->getHeight()I
@@ -3445,7 +3363,7 @@
 
     div-float v11, v5, v3
 
-    .line 645
+    .line 630
     invoke-static {v7, v11}, Ljava/lang/Math;->max(FF)F
 
     move-result v7
@@ -3462,7 +3380,7 @@
 
     div-float/2addr v5, v6
 
-    .line 650
+    .line 635
     iget-object v2, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->matrix:Landroid/graphics/Matrix;
 
     float-to-int v3, v4
@@ -3477,22 +3395,43 @@
 
     invoke-virtual {v2, v3, v1}, Landroid/graphics/Matrix;->setTranslate(FF)V
 
-    .line 651
-    invoke-direct {p0, v7}, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->scalePatternBitmap(F)V
+    .line 636
+    iget-boolean v1, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->disableGradientShaderScaling:Z
 
-    .line 652
+    if-eqz v1, :cond_25a
+
+    const v1, 0x3fb33333    # 1.4f
+
+    cmpl-float v1, v7, v1
+
+    if-gtz v1, :cond_25a
+
+    const v1, 0x3f4ccccd    # 0.8f
+
+    cmpg-float v1, v7, v1
+
+    if-gez v1, :cond_25f
+
+    .line 637
+    :cond_25a
+    iget-object v1, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->matrix:Landroid/graphics/Matrix;
+
+    invoke-virtual {v1, v7, v7}, Landroid/graphics/Matrix;->preScale(FF)Z
+
+    .line 639
+    :cond_25f
     iget-object v1, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->gradientShader:Landroid/graphics/BitmapShader;
 
     iget-object v2, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->matrix:Landroid/graphics/Matrix;
 
     invoke-virtual {v1, v2}, Landroid/graphics/BitmapShader;->setLocalMatrix(Landroid/graphics/Matrix;)V
 
-    .line 653
+    .line 640
     iget-object v1, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->paint2:Landroid/graphics/Paint;
 
     invoke-virtual {v1, v10}, Landroid/graphics/Paint;->setColorFilter(Landroid/graphics/ColorFilter;)Landroid/graphics/ColorFilter;
 
-    .line 654
+    .line 641
     iget-object v1, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->paint2:Landroid/graphics/Paint;
 
     iget v2, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->intensity:I
@@ -3519,7 +3458,7 @@
 
     invoke-virtual {v1, v2}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 655
+    .line 642
     iget-object v1, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->rect:Landroid/graphics/RectF;
 
     iget v2, v0, Landroid/graphics/Rect;->left:I
@@ -3540,7 +3479,7 @@
 
     invoke-virtual {v1, v2, v3, v4, v0}, Landroid/graphics/RectF;->set(FFFF)V
 
-    .line 656
+    .line 643
     iget-object v0, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->rect:Landroid/graphics/RectF;
 
     iget v1, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->roundRadius:I
@@ -3553,20 +3492,20 @@
 
     invoke-virtual {p1, v0, v2, v1, v3}, Landroid/graphics/Canvas;->drawRoundRect(Landroid/graphics/RectF;FFLandroid/graphics/Paint;)V
 
-    goto :goto_2d9
+    goto :goto_2ed
 
-    .line 660
-    :cond_28b
+    .line 647
+    :cond_29f
     iget-object v0, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->patternBitmap:Landroid/graphics/Bitmap;
 
-    if-eqz v0, :cond_2d9
+    if-eqz v0, :cond_2ed
 
-    .line 661
+    .line 648
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v0
 
-    .line 662
+    .line 649
     iget-object v1, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->patternBitmap:Landroid/graphics/Bitmap;
 
     invoke-virtual {v1}, Landroid/graphics/Bitmap;->getHeight()I
@@ -3581,7 +3520,7 @@
 
     div-float v3, v5, v1
 
-    .line 663
+    .line 650
     invoke-static {v2, v3}, Ljava/lang/Math;->max(FF)F
 
     move-result v2
@@ -3598,7 +3537,7 @@
 
     div-float/2addr v5, v6
 
-    .line 668
+    .line 655
     iget-object v2, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->rect:Landroid/graphics/RectF;
 
     add-float/2addr v0, v4
@@ -3607,14 +3546,14 @@
 
     invoke-virtual {v2, v4, v5, v0, v1}, Landroid/graphics/RectF;->set(FFFF)V
 
-    .line 670
+    .line 657
     iget-object v0, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->paint2:Landroid/graphics/Paint;
 
     iget-object v1, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->patternColorFilter:Landroid/graphics/ColorFilter;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColorFilter(Landroid/graphics/ColorFilter;)Landroid/graphics/ColorFilter;
 
-    .line 671
+    .line 658
     iget-object v0, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->paint2:Landroid/graphics/Paint;
 
     iget v1, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->intensity:I
@@ -3641,7 +3580,7 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 672
+    .line 659
     iget-object v0, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->patternBitmap:Landroid/graphics/Bitmap;
 
     iget-object v1, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->rect:Landroid/graphics/RectF;
@@ -3650,12 +3589,12 @@
 
     invoke-virtual {p1, v0, v10, v1, v2}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Rect;Landroid/graphics/RectF;Landroid/graphics/Paint;)V
 
-    .line 675
-    :cond_2d9
-    :goto_2d9
+    .line 662
+    :cond_2ed
+    :goto_2ed
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
-    .line 677
+    .line 664
     invoke-virtual {p0, v8}, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->updateAnimation(Z)V
 
     return-void
@@ -3664,7 +3603,7 @@
 .method public getBitmap()Landroid/graphics/Bitmap;
     .registers 2
 
-    .line 160
+    .line 159
     iget-object v0, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->currentBitmap:Landroid/graphics/Bitmap;
 
     return-object v0
@@ -3673,7 +3612,7 @@
 .method public getBitmapShader()Landroid/graphics/BitmapShader;
     .registers 2
 
-    .line 156
+    .line 155
     iget-object v0, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->bitmapShader:Landroid/graphics/BitmapShader;
 
     return-object v0
@@ -3682,7 +3621,7 @@
 .method public getColors()[I
     .registers 2
 
-    .line 304
+    .line 303
     iget-object v0, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->colors:[I
 
     return-object v0
@@ -3691,7 +3630,7 @@
 .method public getIntensity()I
     .registers 2
 
-    .line 164
+    .line 163
     iget v0, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->intensity:I
 
     return v0
@@ -3700,19 +3639,19 @@
 .method public getIntrinsicHeight()I
     .registers 2
 
-    .line 371
+    .line 370
     iget-object v0, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->patternBitmap:Landroid/graphics/Bitmap;
 
     if-eqz v0, :cond_9
 
-    .line 372
+    .line 371
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result v0
 
     return v0
 
-    .line 374
+    .line 373
     :cond_9
     invoke-super {p0}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
 
@@ -3724,19 +3663,19 @@
 .method public getIntrinsicWidth()I
     .registers 2
 
-    .line 363
+    .line 362
     iget-object v0, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->patternBitmap:Landroid/graphics/Bitmap;
 
     if-eqz v0, :cond_9
 
-    .line 364
+    .line 363
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v0
 
     return v0
 
-    .line 366
+    .line 365
     :cond_9
     invoke-super {p0}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
@@ -3756,7 +3695,7 @@
 .method public getPatternColor()I
     .registers 6
 
-    .line 206
+    .line 205
     iget-object v0, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->colors:[I
 
     const/4 v1, 0x0
@@ -3785,7 +3724,7 @@
 .method public getPhase()I
     .registers 2
 
-    .line 210
+    .line 209
     iget v0, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->phase:I
 
     return v0
@@ -3794,7 +3733,7 @@
 .method public hasPattern()Z
     .registers 2
 
-    .line 358
+    .line 357
     iget-object v0, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->patternBitmap:Landroid/graphics/Bitmap;
 
     if-eqz v0, :cond_6
@@ -3813,7 +3752,7 @@
 .method public isOneColor()Z
     .registers 6
 
-    .line 986
+    .line 974
     iget-object v0, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->colors:[I
 
     const/4 v1, 0x0
@@ -3851,7 +3790,7 @@
 .method public rotatePreview(Z)V
     .registers 4
 
-    .line 218
+    .line 217
     iget v0, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->posAnimationProgress:F
 
     const/high16 v1, 0x3f800000    # 1.0f
@@ -3865,18 +3804,18 @@
     :cond_9
     const/4 v0, 0x1
 
-    .line 221
+    .line 220
     iput-boolean v0, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->rotatingPreview:Z
 
     const/4 v0, 0x0
 
-    .line 222
+    .line 221
     iput v0, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->posAnimationProgress:F
 
-    .line 223
+    .line 222
     iput-boolean p1, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->rotationBack:Z
 
-    .line 224
+    .line 223
     invoke-direct {p0}, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->invalidateParent()V
 
     return-void
@@ -3885,15 +3824,15 @@
 .method public setAlpha(I)V
     .registers 3
 
-    .line 970
+    .line 958
     iput p1, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->alpha:I
 
-    .line 971
+    .line 959
     iget-object v0, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->paint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 972
+    .line 960
     iget-object v0, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->paint2:Landroid/graphics/Paint;
 
     invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setAlpha(I)V
@@ -3904,10 +3843,10 @@
 .method public setBackgroundAlpha(F)V
     .registers 2
 
-    .line 454
+    .line 439
     iput p1, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->backgroundAlpha:F
 
-    .line 455
+    .line 440
     invoke-direct {p0}, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->invalidateParent()V
 
     return-void
@@ -3916,15 +3855,15 @@
 .method public setBounds(IIII)V
     .registers 6
 
-    .line 460
+    .line 445
     invoke-super {p0, p1, p2, p3, p4}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 461
+    .line 446
     iget-object v0, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->patternBounds:Landroid/graphics/Rect;
 
     invoke-virtual {v0, p1, p2, p3, p4}, Landroid/graphics/Rect;->set(IIII)V
 
-    .line 462
+    .line 447
     invoke-direct {p0}, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->createLegacyBitmap()V
 
     return-void
@@ -3933,10 +3872,10 @@
 .method public setBounds(Landroid/graphics/Rect;)V
     .registers 3
 
-    .line 181
+    .line 180
     invoke-super {p0, p1}, Landroid/graphics/drawable/Drawable;->setBounds(Landroid/graphics/Rect;)V
 
-    .line 182
+    .line 181
     iget-object v0, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->patternBounds:Landroid/graphics/Rect;
 
     invoke-virtual {v0, p1}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
@@ -3967,7 +3906,7 @@
 
     move v4, p4
 
-    .line 312
+    .line 311
     invoke-virtual/range {v0 .. v6}, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->setColors(IIIIIZ)V
 
     return-void
@@ -3986,7 +3925,7 @@
 
     move/from16 v4, p4
 
-    .line 324
+    .line 323
     iget-boolean v5, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->isPreview:Z
 
     const/4 v6, 0x2
@@ -4001,7 +3940,7 @@
 
     if-nez v4, :cond_27
 
-    .line 325
+    .line 324
     new-instance v5, Landroid/graphics/drawable/GradientDrawable;
 
     invoke-static/range {p5 .. p5}, Lorg/telegram/ui/Components/BackgroundGradientDrawable;->getGradientOrientation(I)Landroid/graphics/drawable/GradientDrawable$Orientation;
@@ -4023,10 +3962,10 @@
     :cond_27
     const/4 v5, 0x0
 
-    .line 327
+    .line 326
     iput-object v5, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->gradientDrawable:Landroid/graphics/drawable/GradientDrawable;
 
-    .line 329
+    .line 328
     :goto_2a
     iget-object v5, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->colors:[I
 
@@ -4050,27 +3989,27 @@
 
     return-void
 
-    .line 332
+    .line 331
     :cond_3e
     aput v1, v5, v8
 
-    .line 333
+    .line 332
     aput v2, v5, v7
 
-    .line 334
+    .line 333
     aput v3, v5, v6
 
-    .line 335
+    .line 334
     aput v4, v5, v10
 
-    .line 336
+    .line 335
     iget-object v11, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->currentBitmap:Landroid/graphics/Bitmap;
 
     if-eqz v11, :cond_73
 
     const/4 v12, 0x1
 
-    .line 337
+    .line 336
     iget v13, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->phase:I
 
     iget-object v1, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->interpolator:Lorg/telegram/ui/Components/CubicBezierInterpolator;
@@ -4107,7 +4046,7 @@
 
     if-eqz p6, :cond_73
 
-    .line 339
+    .line 338
     invoke-direct/range {p0 .. p0}, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->invalidateParent()V
 
     :cond_73
@@ -4117,7 +4056,7 @@
 .method public setColors(IIIILandroid/graphics/Bitmap;)V
     .registers 15
 
-    .line 316
+    .line 315
     iget-object v0, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->colors:[I
 
     const/4 v1, 0x0
@@ -4126,20 +4065,20 @@
 
     const/4 p1, 0x1
 
-    .line 317
+    .line 316
     aput p2, v0, p1
 
     const/4 p1, 0x2
 
-    .line 318
+    .line 317
     aput p3, v0, p1
 
     const/4 p1, 0x3
 
-    .line 319
+    .line 318
     aput p4, v0, p1
 
-    .line 320
+    .line 319
     iget v3, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->phase:I
 
     iget-object p1, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->interpolator:Lorg/telegram/ui/Components/CubicBezierInterpolator;
@@ -4182,7 +4121,7 @@
 .method public setIndeterminateAnimation(Z)V
     .registers 2
 
-    .line 990
+    .line 978
     iput-boolean p1, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->isIndeterminateAnimation:Z
 
     return-void
@@ -4191,7 +4130,7 @@
 .method public setParentView(Landroid/view/View;)V
     .registers 3
 
-    .line 308
+    .line 307
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
@@ -4204,50 +4143,63 @@
 .method public setPatternAlpha(F)V
     .registers 2
 
-    .line 449
+    .line 434
     iput p1, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->patternAlpha:F
 
-    .line 450
+    .line 435
     invoke-direct {p0}, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->invalidateParent()V
 
     return-void
 .end method
 
 .method public setPatternBitmap(I)V
-    .registers 3
+    .registers 4
 
-    .line 382
+    .line 381
     iget-object v0, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->patternBitmap:Landroid/graphics/Bitmap;
 
-    invoke-virtual {p0, p1, v0}, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->setPatternBitmap(ILandroid/graphics/Bitmap;)V
+    const/4 v1, 0x1
+
+    invoke-virtual {p0, p1, v0, v1}, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->setPatternBitmap(ILandroid/graphics/Bitmap;Z)V
 
     return-void
 .end method
 
 .method public setPatternBitmap(ILandroid/graphics/Bitmap;)V
-    .registers 6
+    .registers 4
+
+    const/4 v0, 0x1
+
+    .line 385
+    invoke-virtual {p0, p1, p2, v0}, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->setPatternBitmap(ILandroid/graphics/Bitmap;Z)V
+
+    return-void
+.end method
+
+.method public setPatternBitmap(ILandroid/graphics/Bitmap;Z)V
+    .registers 7
     .annotation build Landroid/annotation/SuppressLint;
         value = {
             "NewApi"
         }
     .end annotation
 
-    .line 388
+    .line 390
     iput p1, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->intensity:I
 
-    .line 389
+    .line 391
     iput-object p2, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->patternBitmap:Landroid/graphics/Bitmap;
 
     const/4 v0, 0x1
 
-    .line 390
+    .line 392
     iput-boolean v0, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->invalidateLegacy:Z
 
     if-nez p2, :cond_a
 
     return-void
 
-    .line 394
+    .line 396
     :cond_a
     sget-boolean p2, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->useSoftLight:Z
 
@@ -4257,7 +4209,7 @@
 
     if-ltz p1, :cond_19
 
-    .line 396
+    .line 398
     iget-object p2, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->paint2:Landroid/graphics/Paint;
 
     sget-object v2, Landroid/graphics/BlendMode;->SOFT_LIGHT:Landroid/graphics/BlendMode;
@@ -4266,7 +4218,7 @@
 
     goto :goto_1e
 
-    .line 398
+    .line 400
     :cond_19
     iget-object p2, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->paint2:Landroid/graphics/Paint;
 
@@ -4274,14 +4226,14 @@
 
     :cond_1e
     :goto_1e
-    if-gez p1, :cond_84
+    if-gez p1, :cond_73
 
-    .line 402
+    .line 404
     sget-boolean p1, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->useLegacyBitmap:Z
 
-    if-nez p1, :cond_6a
+    if-nez p1, :cond_59
 
-    .line 403
+    .line 405
     new-instance p1, Landroid/graphics/BitmapShader;
 
     iget-object p2, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->currentBitmap:Landroid/graphics/Bitmap;
@@ -4292,30 +4244,7 @@
 
     iput-object p1, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->bitmapShader:Landroid/graphics/BitmapShader;
 
-    const/high16 p1, 0x3f800000    # 1.0f
-
-    .line 404
-    iput p1, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->patternBitmapScale:F
-
-    .line 405
-    iget-object p1, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->scaledPatternBitmap:Landroid/graphics/Bitmap;
-
-    if-eqz p1, :cond_3e
-
-    iget-object p2, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->patternBitmap:Landroid/graphics/Bitmap;
-
-    if-eq p1, p2, :cond_3e
-
     .line 406
-    invoke-virtual {p1}, Landroid/graphics/Bitmap;->recycle()V
-
-    .line 408
-    :cond_3e
-    iget-object p1, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->patternBitmap:Landroid/graphics/Bitmap;
-
-    iput-object p1, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->scaledPatternBitmap:Landroid/graphics/Bitmap;
-
-    .line 409
     new-instance p1, Landroid/graphics/BitmapShader;
 
     iget-object p2, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->patternBitmap:Landroid/graphics/Bitmap;
@@ -4326,88 +4255,90 @@
 
     iput-object p1, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->gradientShader:Landroid/graphics/BitmapShader;
 
-    .line 410
-    new-instance p1, Landroid/graphics/ComposeShader;
+    .line 407
+    iput-boolean p3, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->disableGradientShaderScaling:Z
 
-    iget-object p2, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->bitmapShader:Landroid/graphics/BitmapShader;
+    .line 408
+    iget-object p1, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->paint2:Landroid/graphics/Paint;
+
+    new-instance p2, Landroid/graphics/ComposeShader;
+
+    iget-object p3, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->bitmapShader:Landroid/graphics/BitmapShader;
 
     iget-object v1, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->gradientShader:Landroid/graphics/BitmapShader;
 
     sget-object v2, Landroid/graphics/PorterDuff$Mode;->DST_IN:Landroid/graphics/PorterDuff$Mode;
 
-    invoke-direct {p1, p2, v1, v2}, Landroid/graphics/ComposeShader;-><init>(Landroid/graphics/Shader;Landroid/graphics/Shader;Landroid/graphics/PorterDuff$Mode;)V
+    invoke-direct {p2, p3, v1, v2}, Landroid/graphics/ComposeShader;-><init>(Landroid/graphics/Shader;Landroid/graphics/Shader;Landroid/graphics/PorterDuff$Mode;)V
 
-    .line 411
-    iget-object p2, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->paint2:Landroid/graphics/Paint;
+    invoke-virtual {p1, p2}, Landroid/graphics/Paint;->setShader(Landroid/graphics/Shader;)Landroid/graphics/Shader;
 
-    invoke-virtual {p2, p1}, Landroid/graphics/Paint;->setShader(Landroid/graphics/Shader;)Landroid/graphics/Shader;
-
-    .line 412
+    .line 409
     iget-object p1, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->paint2:Landroid/graphics/Paint;
 
     invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setFilterBitmap(Z)V
 
-    .line 413
+    .line 410
     new-instance p1, Landroid/graphics/Matrix;
 
     invoke-direct {p1}, Landroid/graphics/Matrix;-><init>()V
 
     iput-object p1, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->matrix:Landroid/graphics/Matrix;
 
-    goto :goto_8e
+    goto :goto_7d
 
-    .line 415
-    :cond_6a
+    .line 412
+    :cond_59
     invoke-direct {p0}, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->createLegacyBitmap()V
 
-    .line 416
+    .line 413
     sget-boolean p1, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->errorWhileGenerateLegacyBitmap:Z
 
-    if-nez p1, :cond_7e
+    if-nez p1, :cond_6d
 
-    .line 417
+    .line 414
     iget-object p1, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->paint2:Landroid/graphics/Paint;
 
     new-instance p2, Landroid/graphics/PorterDuffXfermode;
 
-    sget-object v0, Landroid/graphics/PorterDuff$Mode;->DST_IN:Landroid/graphics/PorterDuff$Mode;
+    sget-object p3, Landroid/graphics/PorterDuff$Mode;->DST_IN:Landroid/graphics/PorterDuff$Mode;
 
-    invoke-direct {p2, v0}, Landroid/graphics/PorterDuffXfermode;-><init>(Landroid/graphics/PorterDuff$Mode;)V
+    invoke-direct {p2, p3}, Landroid/graphics/PorterDuffXfermode;-><init>(Landroid/graphics/PorterDuff$Mode;)V
 
     invoke-virtual {p1, p2}, Landroid/graphics/Paint;->setXfermode(Landroid/graphics/Xfermode;)Landroid/graphics/Xfermode;
 
-    goto :goto_8e
+    goto :goto_7d
 
-    .line 419
-    :cond_7e
+    .line 416
+    :cond_6d
     iget-object p1, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->paint2:Landroid/graphics/Paint;
 
     invoke-virtual {p1, v1}, Landroid/graphics/Paint;->setXfermode(Landroid/graphics/Xfermode;)Landroid/graphics/Xfermode;
 
-    goto :goto_8e
+    goto :goto_7d
 
-    .line 423
-    :cond_84
+    .line 420
+    :cond_73
     sget-boolean p1, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->useLegacyBitmap:Z
 
-    if-nez p1, :cond_89
+    if-nez p1, :cond_78
 
-    goto :goto_8e
+    goto :goto_7d
 
-    .line 426
-    :cond_89
+    .line 423
+    :cond_78
     iget-object p1, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->paint2:Landroid/graphics/Paint;
 
     invoke-virtual {p1, v1}, Landroid/graphics/Paint;->setXfermode(Landroid/graphics/Xfermode;)Landroid/graphics/Xfermode;
 
-    :goto_8e
+    :goto_7d
     return-void
 .end method
 
 .method public setPatternColorFilter(I)V
     .registers 4
 
-    .line 444
+    .line 429
     new-instance v0, Landroid/graphics/PorterDuffColorFilter;
 
     sget-object v1, Landroid/graphics/PorterDuff$Mode;->SRC_IN:Landroid/graphics/PorterDuff$Mode;
@@ -4416,7 +4347,7 @@
 
     iput-object v0, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->patternColorFilter:Landroid/graphics/ColorFilter;
 
-    .line 445
+    .line 430
     invoke-direct {p0}, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->invalidateParent()V
 
     return-void
@@ -4425,14 +4356,14 @@
 .method public setPhase(I)V
     .registers 11
 
-    .line 228
+    .line 227
     iput p1, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->phase:I
 
     if-gez p1, :cond_8
 
     const/4 p1, 0x0
 
-    .line 230
+    .line 229
     iput p1, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->phase:I
 
     goto :goto_d
@@ -4442,10 +4373,10 @@
 
     if-le p1, v0, :cond_d
 
-    .line 232
+    .line 231
     iput v0, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->phase:I
 
-    .line 234
+    .line 233
     :cond_d
     :goto_d
     iget-object v1, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->currentBitmap:Landroid/graphics/Bitmap;
@@ -4490,7 +4421,7 @@
 .method public setPostInvalidateParent(Z)V
     .registers 2
 
-    .line 214
+    .line 213
     iput-boolean p1, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->postInvalidateParent:Z
 
     return-void
@@ -4499,17 +4430,17 @@
 .method public setRoundRadius(I)V
     .registers 4
 
-    .line 148
+    .line 147
     iput p1, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->roundRadius:I
 
-    .line 149
+    .line 148
     new-instance p1, Landroid/graphics/Matrix;
 
     invoke-direct {p1}, Landroid/graphics/Matrix;-><init>()V
 
     iput-object p1, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->matrix:Landroid/graphics/Matrix;
 
-    .line 150
+    .line 149
     new-instance p1, Landroid/graphics/BitmapShader;
 
     iget-object v0, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->currentBitmap:Landroid/graphics/Bitmap;
@@ -4520,12 +4451,12 @@
 
     iput-object p1, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->bitmapShader:Landroid/graphics/BitmapShader;
 
-    .line 151
+    .line 150
     iget-object v0, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->paint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setShader(Landroid/graphics/Shader;)Landroid/graphics/Shader;
 
-    .line 152
+    .line 151
     invoke-direct {p0}, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->invalidateParent()V
 
     return-void
@@ -4534,7 +4465,7 @@
 .method public setTranslationY(I)V
     .registers 2
 
-    .line 378
+    .line 377
     iput p1, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->translationY:I
 
     return-void
@@ -4545,7 +4476,7 @@
 
     const/4 v0, 0x0
 
-    .line 238
+    .line 237
     invoke-virtual {p0, v0}, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->switchToNextPosition(Z)V
 
     return-void
@@ -4554,7 +4485,7 @@
 .method public switchToNextPosition(Z)V
     .registers 5
 
-    .line 242
+    .line 241
     iget v0, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->posAnimationProgress:F
 
     const/high16 v1, 0x3f800000    # 1.0f
@@ -4568,21 +4499,21 @@
     :cond_9
     const/4 v0, 0x0
 
-    .line 245
+    .line 244
     iput-boolean v0, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->rotatingPreview:Z
 
-    .line 246
+    .line 245
     iput-boolean v0, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->rotationBack:Z
 
-    .line 247
+    .line 246
     iput-boolean p1, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->fastAnimation:Z
 
     const/4 p1, 0x0
 
-    .line 248
+    .line 247
     iput p1, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->posAnimationProgress:F
 
-    .line 249
+    .line 248
     iget v0, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->phase:I
 
     add-int/lit8 v0, v0, -0x1
@@ -4593,14 +4524,14 @@
 
     const/4 v0, 0x7
 
-    .line 251
+    .line 250
     iput v0, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->phase:I
 
-    .line 253
+    .line 252
     :cond_1e
     invoke-direct {p0}, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->invalidateParent()V
 
-    .line 254
+    .line 253
     iget-object v0, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->gradientFromCanvas:Landroid/graphics/Canvas;
 
     iget-object v1, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->currentBitmap:Landroid/graphics/Bitmap;
@@ -4609,7 +4540,7 @@
 
     invoke-virtual {v0, v1, p1, p1, v2}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
 
-    .line 255
+    .line 254
     invoke-direct {p0}, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->generateNextGradient()V
 
     return-void
@@ -4618,7 +4549,7 @@
 .method public switchToPrevPosition(Z)V
     .registers 10
 
-    .line 291
+    .line 290
     iget v0, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->posAnimationProgress:F
 
     const/high16 v1, 0x3f800000    # 1.0f
@@ -4632,26 +4563,26 @@
     :cond_9
     const/4 v0, 0x0
 
-    .line 294
+    .line 293
     iput-boolean v0, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->rotatingPreview:Z
 
-    .line 295
+    .line 294
     iput-boolean p1, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->fastAnimation:Z
 
     const/4 p1, 0x1
 
-    .line 296
+    .line 295
     iput-boolean p1, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->rotationBack:Z
 
     const/4 p1, 0x0
 
-    .line 297
+    .line 296
     iput p1, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->posAnimationProgress:F
 
-    .line 298
+    .line 297
     invoke-direct {p0}, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->invalidateParent()V
 
-    .line 299
+    .line 298
     iget-object v0, p0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->gradientFromBitmap:Landroid/graphics/Bitmap;
 
     const/4 v1, 0x1
@@ -4682,7 +4613,7 @@
 
     invoke-static/range {v0 .. v7}, Lorg/telegram/messenger/Utilities;->generateGradient(Landroid/graphics/Bitmap;ZIFIII[I)V
 
-    .line 300
+    .line 299
     invoke-direct {p0}, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->generateNextGradient()V
 
     return-void
@@ -4693,12 +4624,12 @@
 
     move-object/from16 v0, p0
 
-    .line 842
+    .line 830
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v1
 
-    .line 843
+    .line 831
     iget-wide v3, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->lastUpdateTime:J
 
     sub-long v3, v1, v3
@@ -4711,7 +4642,7 @@
 
     const-wide/16 v3, 0x11
 
-    .line 847
+    .line 835
     :cond_12
     iput-wide v1, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->lastUpdateTime:J
 
@@ -4723,7 +4654,7 @@
 
     return-void
 
-    .line 852
+    .line 840
     :cond_1b
     iget-boolean v1, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->isIndeterminateAnimation:Z
 
@@ -4739,10 +4670,10 @@
 
     if-nez v6, :cond_2a
 
-    .line 853
+    .line 841
     iput v2, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->posAnimationProgress:F
 
-    .line 855
+    .line 843
     :cond_2a
     iget v6, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->posAnimationProgress:F
 
@@ -4750,7 +4681,7 @@
 
     if-gez v7, :cond_1a6
 
-    .line 857
+    .line 845
     iget-boolean v7, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->postInvalidateParent:Z
 
     const/4 v8, 0x0
@@ -4787,20 +4718,20 @@
 
     add-float/2addr v6, v1
 
-    .line 859
+    .line 847
     iput v6, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->posAnimationProgress:F
 
     cmpl-float v1, v6, v5
 
     if-ltz v1, :cond_4f
 
-    .line 861
+    .line 849
     iput v2, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->posAnimationProgress:F
 
     :cond_4f
     const/high16 v1, 0x3e000000    # 0.125f
 
-    .line 864
+    .line 852
     iget v3, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->posAnimationProgress:F
 
     div-float v4, v3, v1
@@ -4825,7 +4756,7 @@
 
     goto/16 :goto_131
 
-    .line 868
+    .line 856
     :cond_63
     iget-boolean v1, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->rotatingPreview:Z
 
@@ -4833,7 +4764,7 @@
 
     if-eqz v1, :cond_fc
 
-    .line 870
+    .line 858
     iget-object v1, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->interpolator:Lorg/telegram/ui/Components/CubicBezierInterpolator;
 
     invoke-virtual {v1, v6}, Lorg/telegram/ui/Components/CubicBezierInterpolator;->getInterpolation(F)F
@@ -4875,7 +4806,7 @@
     :cond_86
     const/4 v1, 0x3
 
-    .line 880
+    .line 868
     :goto_87
     iget v14, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->posAnimationProgress:F
 
@@ -4903,10 +4834,10 @@
 
     if-lez v3, :cond_9d
 
-    .line 882
+    .line 870
     iput v5, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->posAnimationProgress:F
 
-    .line 884
+    .line 872
     :cond_9d
     iget-object v3, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->interpolator:Lorg/telegram/ui/Components/CubicBezierInterpolator;
 
@@ -4936,13 +4867,13 @@
 
     if-lez v1, :cond_ce
 
-    .line 888
+    .line 876
     :cond_b7
     iget-boolean v1, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->rotationBack:Z
 
     if-eqz v1, :cond_c5
 
-    .line 889
+    .line 877
     iget v1, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->phase:I
 
     add-int/2addr v1, v9
@@ -4951,12 +4882,12 @@
 
     if-le v1, v11, :cond_ce
 
-    .line 891
+    .line 879
     iput v8, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->phase:I
 
     goto :goto_ce
 
-    .line 894
+    .line 882
     :cond_c5
     iget v1, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->phase:I
 
@@ -4966,7 +4897,7 @@
 
     if-gez v1, :cond_ce
 
-    .line 896
+    .line 884
     iput v11, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->phase:I
 
     :cond_ce
@@ -5003,7 +4934,7 @@
 
     goto :goto_d2
 
-    .line 909
+    .line 897
     :goto_e2
     iget-boolean v1, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->rotationBack:Z
 
@@ -5011,14 +4942,14 @@
 
     sub-float v1, v5, v3
 
-    .line 912
+    .line 900
     iget v3, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->posAnimationProgress:F
 
     cmpl-float v3, v3, v5
 
     if-ltz v3, :cond_130
 
-    .line 913
+    .line 901
     iget v1, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->phase:I
 
     add-int/2addr v1, v9
@@ -5027,7 +4958,7 @@
 
     if-le v1, v11, :cond_f7
 
-    .line 915
+    .line 903
     iput v8, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->phase:I
 
     :cond_f7
@@ -5043,7 +4974,7 @@
     :cond_fc
     long-to-float v1, v3
 
-    .line 921
+    .line 909
     iget-boolean v3, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->fastAnimation:Z
 
     if-eqz v3, :cond_104
@@ -5066,10 +4997,10 @@
 
     if-lez v1, :cond_110
 
-    .line 923
+    .line 911
     iput v5, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->posAnimationProgress:F
 
-    .line 925
+    .line 913
     :cond_110
     iget-object v1, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->interpolator:Lorg/telegram/ui/Components/CubicBezierInterpolator;
 
@@ -5079,21 +5010,21 @@
 
     move-result v1
 
-    .line 926
+    .line 914
     iget-boolean v3, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->rotationBack:Z
 
     if-eqz v3, :cond_130
 
     sub-float v1, v5, v1
 
-    .line 928
+    .line 916
     iget v3, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->posAnimationProgress:F
 
     cmpl-float v3, v3, v5
 
     if-ltz v3, :cond_130
 
-    .line 929
+    .line 917
     iget v1, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->phase:I
 
     add-int/2addr v1, v9
@@ -5102,7 +5033,7 @@
 
     if-le v1, v11, :cond_12d
 
-    .line 931
+    .line 919
     iput v8, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->phase:I
 
     :cond_12d
@@ -5117,7 +5048,7 @@
     :goto_131
     if-eqz v7, :cond_152
 
-    .line 940
+    .line 928
     iget-object v12, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->currentBitmap:Landroid/graphics/Bitmap;
 
     const/4 v13, 0x1
@@ -5146,12 +5077,12 @@
 
     invoke-static/range {v12 .. v19}, Lorg/telegram/messenger/Utilities;->generateGradient(Landroid/graphics/Bitmap;ZIFIII[I)V
 
-    .line 941
+    .line 929
     iput-boolean v9, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->invalidateLegacy:Z
 
     goto :goto_1a1
 
-    .line 943
+    .line 931
     :cond_152
     sget-boolean v1, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->useLegacyBitmap:Z
 
@@ -5178,7 +5109,7 @@
 
     if-nez v3, :cond_170
 
-    .line 950
+    .line 938
     iget-object v5, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->gradientCanvas:Landroid/graphics/Canvas;
 
     iget-object v6, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->gradientFromBitmap:Landroid/graphics/Bitmap;
@@ -5187,7 +5118,7 @@
 
     goto :goto_17b
 
-    .line 952
+    .line 940
     :cond_170
     iget-object v5, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->gradientCanvas:Landroid/graphics/Canvas;
 
@@ -5208,7 +5139,7 @@
 
     div-float/2addr v15, v1
 
-    .line 955
+    .line 943
     iget-object v1, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->paint3:Landroid/graphics/Paint;
 
     const/high16 v4, 0x437f0000    # 255.0f
@@ -5219,7 +5150,7 @@
 
     invoke-virtual {v1, v4}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 956
+    .line 944
     iget-object v1, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->gradientCanvas:Landroid/graphics/Canvas;
 
     iget-object v4, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->gradientToBitmap:[Landroid/graphics/Bitmap;
@@ -5232,7 +5163,7 @@
 
     goto :goto_1a1
 
-    .line 958
+    .line 946
     :cond_196
     iget-object v1, v0, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->gradientCanvas:Landroid/graphics/Canvas;
 
@@ -5247,7 +5178,7 @@
     :goto_1a1
     if-eqz p1, :cond_1a6
 
-    .line 963
+    .line 951
     invoke-direct/range {p0 .. p0}, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->invalidateParent()V
 
     :cond_1a6

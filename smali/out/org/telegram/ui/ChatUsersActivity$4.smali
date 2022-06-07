@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/ChatUsersActivity;Landroid/content/Context;)V
     .registers 3
 
-    .line 780
+    .line 777
     iput-object p1, p0, Lorg/telegram/ui/ChatUsersActivity$4;->this$0:Lorg/telegram/ui/ChatUsersActivity;
 
     invoke-direct {p0, p2}, Lorg/telegram/ui/Components/RecyclerListView;-><init>(Landroid/content/Context;)V
@@ -35,10 +35,10 @@
 .method public invalidate()V
     .registers 2
 
-    .line 783
+    .line 780
     invoke-super {p0}, Landroid/view/ViewGroup;->invalidate()V
 
-    .line 784
+    .line 781
     iget-object v0, p0, Lorg/telegram/ui/ChatUsersActivity$4;->this$0:Lorg/telegram/ui/ChatUsersActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/ChatUsersActivity;->access$1700(Lorg/telegram/ui/ChatUsersActivity;)Landroid/view/View;
@@ -47,7 +47,7 @@
 
     if-eqz v0, :cond_14
 
-    .line 785
+    .line 782
     iget-object v0, p0, Lorg/telegram/ui/ChatUsersActivity$4;->this$0:Lorg/telegram/ui/ChatUsersActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/ChatUsersActivity;->access$1800(Lorg/telegram/ui/ChatUsersActivity;)Landroid/view/View;

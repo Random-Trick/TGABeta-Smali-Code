@@ -18,7 +18,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/EmojiView;)V
     .registers 2
 
-    .line 1144
+    .line 1150
     invoke-direct {p0}, Landroid/view/ViewOutlineProvider;-><init>()V
 
     return-void
@@ -32,7 +32,7 @@
         value = 0x15
     .end annotation
 
-    .line 1148
+    .line 1154
     invoke-virtual {p1}, Landroid/view/View;->getPaddingLeft()I
 
     move-result v1

@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lj$/util/function/BiConsumer;
+.implements Lj$/util/function/w;
 
 
 # static fields
@@ -32,27 +32,12 @@
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;Ljava/lang/Object;)V
-    .registers 3
+.method public final accept(Ljava/lang/Object;J)V
+    .registers 4
 
     check-cast p1, Lj$/util/i;
 
-    check-cast p2, Lj$/util/i;
-
-    invoke-virtual {p1, p2}, Lj$/util/i;->b(Lj$/util/i;)V
+    invoke-virtual {p1, p2, p3}, Lj$/util/i;->accept(J)V
 
     return-void
-.end method
-
-.method public b(Lj$/util/function/BiConsumer;)Lj$/util/function/BiConsumer;
-    .registers 3
-
-    .line 1
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v0, Lj$/util/concurrent/a;
-
-    invoke-direct {v0, p0, p1}, Lj$/util/concurrent/a;-><init>(Lj$/util/function/BiConsumer;Lj$/util/function/BiConsumer;)V
-
-    return-object v0
 .end method

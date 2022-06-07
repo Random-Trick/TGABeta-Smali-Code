@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lorg/telegram/ui/ActionBar/ThemeDescription$ThemeDescriptionDelegate;
+.implements Lorg/telegram/ui/ActionBar/ActionBarMenuItem$ActionBarMenuItemDelegate;
 
 
 # instance fields
@@ -22,20 +22,12 @@
 
 
 # virtual methods
-.method public final didSetColor()V
-    .registers 2
+.method public final onItemClick(I)V
+    .registers 3
 
     iget-object v0, p0, Lorg/telegram/ui/Components/StickersAlert$$ExternalSyntheticLambda33;->f$0:Lorg/telegram/ui/Components/StickersAlert;
 
-    invoke-virtual {v0}, Lorg/telegram/ui/Components/StickersAlert;->updateColors()V
-
-    return-void
-.end method
-
-.method public synthetic onAnimationProgress(F)V
-    .registers 2
-
-    invoke-static {p0, p1}, Lorg/telegram/ui/ActionBar/ThemeDescription$ThemeDescriptionDelegate$-CC;->$default$onAnimationProgress(Lorg/telegram/ui/ActionBar/ThemeDescription$ThemeDescriptionDelegate;F)V
+    invoke-static {v0, p1}, Lorg/telegram/ui/Components/StickersAlert;->$r8$lambda$rBh0bSV_yxodzvpLAUu_5SCiI98(Lorg/telegram/ui/Components/StickersAlert;I)V
 
     return-void
 .end method

@@ -3,10 +3,10 @@
 
 
 # direct methods
-.method constructor <init>(Lj$/util/y;IZ)V
+.method constructor <init>(Lj$/util/u;IZ)V
     .registers 4
 
-    invoke-direct {p0, p1, p2, p3}, Lj$/util/stream/L0;-><init>(Lj$/util/y;IZ)V
+    invoke-direct {p0, p1, p2, p3}, Lj$/util/stream/L0;-><init>(Lj$/util/u;IZ)V
 
     return-void
 .end method
@@ -23,7 +23,7 @@
     throw v0
 .end method
 
-.method final H0(ILj$/util/stream/n3;)Lj$/util/stream/n3;
+.method final H0(ILj$/util/stream/m3;)Lj$/util/stream/m3;
     .registers 3
 
     new-instance p1, Ljava/lang/UnsupportedOperationException;
@@ -42,15 +42,15 @@
 
     if-nez v0, :cond_12
 
-    invoke-virtual {p0}, Lj$/util/stream/c;->J0()Lj$/util/y;
+    invoke-virtual {p0}, Lj$/util/stream/c;->J0()Lj$/util/u;
 
     move-result-object v0
 
-    invoke-static {v0}, Lj$/util/stream/L0;->L0(Lj$/util/y;)Lj$/util/v;
+    invoke-static {v0}, Lj$/util/stream/L0;->L0(Lj$/util/u;)Lj$/util/u$a;
 
     move-result-object v0
 
-    invoke-interface {v0, p1}, Lj$/util/v;->c(Lj$/util/function/l;)V
+    invoke-interface {v0, p1}, Lj$/util/u$a;->c(Lj$/util/function/l;)V
 
     goto :goto_1e
 
@@ -65,7 +65,7 @@
     invoke-direct {v0, p1, v1}, Lj$/util/stream/l0;-><init>(Lj$/util/function/l;Z)V
 
     .line 2
-    invoke-virtual {p0, v0}, Lj$/util/stream/c;->x0(Lj$/util/stream/O4;)Ljava/lang/Object;
+    invoke-virtual {p0, v0}, Lj$/util/stream/c;->x0(Lj$/util/stream/N4;)Ljava/lang/Object;
 
     :goto_1e
     return-void
@@ -80,15 +80,15 @@
 
     if-nez v0, :cond_12
 
-    invoke-virtual {p0}, Lj$/util/stream/c;->J0()Lj$/util/y;
+    invoke-virtual {p0}, Lj$/util/stream/c;->J0()Lj$/util/u;
 
     move-result-object v0
 
-    invoke-static {v0}, Lj$/util/stream/L0;->L0(Lj$/util/y;)Lj$/util/v;
+    invoke-static {v0}, Lj$/util/stream/L0;->L0(Lj$/util/u;)Lj$/util/u$a;
 
     move-result-object v0
 
-    invoke-interface {v0, p1}, Lj$/util/v;->c(Lj$/util/function/l;)V
+    invoke-interface {v0, p1}, Lj$/util/u$a;->c(Lj$/util/function/l;)V
 
     goto :goto_15
 
@@ -99,26 +99,26 @@
     return-void
 .end method
 
-.method public bridge synthetic parallel()Lj$/util/stream/M0;
+.method public bridge synthetic parallel()Lj$/util/stream/IntStream;
     .registers 2
 
     invoke-virtual {p0}, Lj$/util/stream/c;->parallel()Lj$/util/stream/g;
 
     move-object v0, p0
 
-    check-cast v0, Lj$/util/stream/M0;
+    check-cast v0, Lj$/util/stream/IntStream;
 
     return-object v0
 .end method
 
-.method public bridge synthetic sequential()Lj$/util/stream/M0;
+.method public bridge synthetic sequential()Lj$/util/stream/IntStream;
     .registers 2
 
     invoke-virtual {p0}, Lj$/util/stream/c;->sequential()Lj$/util/stream/g;
 
     move-object v0, p0
 
-    check-cast v0, Lj$/util/stream/M0;
+    check-cast v0, Lj$/util/stream/IntStream;
 
     return-object v0
 .end method

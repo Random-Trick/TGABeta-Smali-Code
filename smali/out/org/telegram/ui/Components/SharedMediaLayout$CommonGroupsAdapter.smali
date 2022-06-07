@@ -56,55 +56,55 @@
 .method public constructor <init>(Lorg/telegram/ui/Components/SharedMediaLayout;Landroid/content/Context;)V
     .registers 3
 
-    .line 5959
+    .line 5968
     iput-object p1, p0, Lorg/telegram/ui/Components/SharedMediaLayout$CommonGroupsAdapter;->this$0:Lorg/telegram/ui/Components/SharedMediaLayout;
 
     invoke-direct {p0}, Lorg/telegram/ui/Components/RecyclerListView$SelectionAdapter;-><init>()V
 
-    .line 5954
+    .line 5963
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
     iput-object p1, p0, Lorg/telegram/ui/Components/SharedMediaLayout$CommonGroupsAdapter;->chats:Ljava/util/ArrayList;
 
-    .line 5960
+    .line 5969
     iput-object p2, p0, Lorg/telegram/ui/Components/SharedMediaLayout$CommonGroupsAdapter;->mContext:Landroid/content/Context;
 
     return-void
 .end method
 
-.method static synthetic access$5800(Lorg/telegram/ui/Components/SharedMediaLayout$CommonGroupsAdapter;)Z
+.method static synthetic access$5900(Lorg/telegram/ui/Components/SharedMediaLayout$CommonGroupsAdapter;)Z
     .registers 1
 
-    .line 5951
+    .line 5960
     iget-boolean p0, p0, Lorg/telegram/ui/Components/SharedMediaLayout$CommonGroupsAdapter;->endReached:Z
 
     return p0
 .end method
 
-.method static synthetic access$5900(Lorg/telegram/ui/Components/SharedMediaLayout$CommonGroupsAdapter;)Z
+.method static synthetic access$6000(Lorg/telegram/ui/Components/SharedMediaLayout$CommonGroupsAdapter;)Z
     .registers 1
 
-    .line 5951
+    .line 5960
     iget-boolean p0, p0, Lorg/telegram/ui/Components/SharedMediaLayout$CommonGroupsAdapter;->loading:Z
 
     return p0
 .end method
 
-.method static synthetic access$6000(Lorg/telegram/ui/Components/SharedMediaLayout$CommonGroupsAdapter;)Ljava/util/ArrayList;
+.method static synthetic access$6100(Lorg/telegram/ui/Components/SharedMediaLayout$CommonGroupsAdapter;)Ljava/util/ArrayList;
     .registers 1
 
-    .line 5951
+    .line 5960
     iget-object p0, p0, Lorg/telegram/ui/Components/SharedMediaLayout$CommonGroupsAdapter;->chats:Ljava/util/ArrayList;
 
     return-object p0
 .end method
 
-.method static synthetic access$6100(Lorg/telegram/ui/Components/SharedMediaLayout$CommonGroupsAdapter;JI)V
+.method static synthetic access$6200(Lorg/telegram/ui/Components/SharedMediaLayout$CommonGroupsAdapter;JI)V
     .registers 4
 
-    .line 5951
+    .line 5960
     invoke-direct {p0, p1, p2, p3}, Lorg/telegram/ui/Components/SharedMediaLayout$CommonGroupsAdapter;->getChats(JI)V
 
     return-void
@@ -113,20 +113,20 @@
 .method private getChats(JI)V
     .registers 8
 
-    .line 5964
+    .line 5973
     iget-boolean v0, p0, Lorg/telegram/ui/Components/SharedMediaLayout$CommonGroupsAdapter;->loading:Z
 
     if-eqz v0, :cond_5
 
     return-void
 
-    .line 5967
+    .line 5976
     :cond_5
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_messages_getCommonChats;
 
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_messages_getCommonChats;-><init>()V
 
-    .line 5969
+    .line 5978
     iget-object v1, p0, Lorg/telegram/ui/Components/SharedMediaLayout$CommonGroupsAdapter;->this$0:Lorg/telegram/ui/Components/SharedMediaLayout;
 
     invoke-static {v1}, Lorg/telegram/ui/Components/SharedMediaLayout;->access$2500(Lorg/telegram/ui/Components/SharedMediaLayout;)J
@@ -139,10 +139,10 @@
 
     if-eqz v1, :cond_35
 
-    .line 5970
+    .line 5979
     iget-object v1, p0, Lorg/telegram/ui/Components/SharedMediaLayout$CommonGroupsAdapter;->this$0:Lorg/telegram/ui/Components/SharedMediaLayout;
 
-    invoke-static {v1}, Lorg/telegram/ui/Components/SharedMediaLayout;->access$5200(Lorg/telegram/ui/Components/SharedMediaLayout;)Lorg/telegram/ui/ActionBar/BaseFragment;
+    invoke-static {v1}, Lorg/telegram/ui/Components/SharedMediaLayout;->access$5300(Lorg/telegram/ui/Components/SharedMediaLayout;)Lorg/telegram/ui/ActionBar/BaseFragment;
 
     move-result-object v1
 
@@ -168,12 +168,12 @@
 
     move-result-object v1
 
-    .line 5971
+    .line 5980
     iget-wide v1, v1, Lorg/telegram/tgnet/TLRPC$EncryptedChat;->user_id:J
 
     goto :goto_3b
 
-    .line 5973
+    .line 5982
     :cond_35
     iget-object v1, p0, Lorg/telegram/ui/Components/SharedMediaLayout$CommonGroupsAdapter;->this$0:Lorg/telegram/ui/Components/SharedMediaLayout;
 
@@ -181,11 +181,11 @@
 
     move-result-wide v1
 
-    .line 5975
+    .line 5984
     :goto_3b
     iget-object v3, p0, Lorg/telegram/ui/Components/SharedMediaLayout$CommonGroupsAdapter;->this$0:Lorg/telegram/ui/Components/SharedMediaLayout;
 
-    invoke-static {v3}, Lorg/telegram/ui/Components/SharedMediaLayout;->access$5200(Lorg/telegram/ui/Components/SharedMediaLayout;)Lorg/telegram/ui/ActionBar/BaseFragment;
+    invoke-static {v3}, Lorg/telegram/ui/Components/SharedMediaLayout;->access$5300(Lorg/telegram/ui/Components/SharedMediaLayout;)Lorg/telegram/ui/ActionBar/BaseFragment;
 
     move-result-object v3
 
@@ -199,32 +199,32 @@
 
     iput-object v1, v0, Lorg/telegram/tgnet/TLRPC$TL_messages_getCommonChats;->user_id:Lorg/telegram/tgnet/TLRPC$InputUser;
 
-    .line 5976
+    .line 5985
     instance-of v1, v1, Lorg/telegram/tgnet/TLRPC$TL_inputUserEmpty;
 
     if-eqz v1, :cond_50
 
     return-void
 
-    .line 5979
+    .line 5988
     :cond_50
     iput p3, v0, Lorg/telegram/tgnet/TLRPC$TL_messages_getCommonChats;->limit:I
 
-    .line 5980
+    .line 5989
     iput-wide p1, v0, Lorg/telegram/tgnet/TLRPC$TL_messages_getCommonChats;->max_id:J
 
     const/4 p1, 0x1
 
-    .line 5981
+    .line 5990
     iput-boolean p1, p0, Lorg/telegram/ui/Components/SharedMediaLayout$CommonGroupsAdapter;->loading:Z
 
-    .line 5982
+    .line 5991
     invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->notifyDataSetChanged()V
 
-    .line 5983
+    .line 5992
     iget-object p1, p0, Lorg/telegram/ui/Components/SharedMediaLayout$CommonGroupsAdapter;->this$0:Lorg/telegram/ui/Components/SharedMediaLayout;
 
-    invoke-static {p1}, Lorg/telegram/ui/Components/SharedMediaLayout;->access$5200(Lorg/telegram/ui/Components/SharedMediaLayout;)Lorg/telegram/ui/ActionBar/BaseFragment;
+    invoke-static {p1}, Lorg/telegram/ui/Components/SharedMediaLayout;->access$5300(Lorg/telegram/ui/Components/SharedMediaLayout;)Lorg/telegram/ui/ActionBar/BaseFragment;
 
     move-result-object p1
 
@@ -240,10 +240,10 @@
 
     move-result p1
 
-    .line 6008
+    .line 6017
     iget-object p2, p0, Lorg/telegram/ui/Components/SharedMediaLayout$CommonGroupsAdapter;->this$0:Lorg/telegram/ui/Components/SharedMediaLayout;
 
-    invoke-static {p2}, Lorg/telegram/ui/Components/SharedMediaLayout;->access$5200(Lorg/telegram/ui/Components/SharedMediaLayout;)Lorg/telegram/ui/ActionBar/BaseFragment;
+    invoke-static {p2}, Lorg/telegram/ui/Components/SharedMediaLayout;->access$5300(Lorg/telegram/ui/Components/SharedMediaLayout;)Lorg/telegram/ui/ActionBar/BaseFragment;
 
     move-result-object p2
 
@@ -253,7 +253,7 @@
 
     iget-object p3, p0, Lorg/telegram/ui/Components/SharedMediaLayout$CommonGroupsAdapter;->this$0:Lorg/telegram/ui/Components/SharedMediaLayout;
 
-    invoke-static {p3}, Lorg/telegram/ui/Components/SharedMediaLayout;->access$5200(Lorg/telegram/ui/Components/SharedMediaLayout;)Lorg/telegram/ui/ActionBar/BaseFragment;
+    invoke-static {p3}, Lorg/telegram/ui/Components/SharedMediaLayout;->access$5300(Lorg/telegram/ui/Components/SharedMediaLayout;)Lorg/telegram/ui/ActionBar/BaseFragment;
 
     move-result-object p3
 
@@ -269,7 +269,7 @@
 .method private synthetic lambda$getChats$0(Lorg/telegram/tgnet/TLRPC$TL_error;Lorg/telegram/tgnet/TLObject;I)V
     .registers 8
 
-    .line 5984
+    .line 5993
     invoke-virtual {p0}, Lorg/telegram/ui/Components/SharedMediaLayout$CommonGroupsAdapter;->getItemCount()I
 
     move-result v0
@@ -280,13 +280,13 @@
 
     if-nez p1, :cond_37
 
-    .line 5986
+    .line 5995
     check-cast p2, Lorg/telegram/tgnet/TLRPC$messages_Chats;
 
-    .line 5987
+    .line 5996
     iget-object p1, p0, Lorg/telegram/ui/Components/SharedMediaLayout$CommonGroupsAdapter;->this$0:Lorg/telegram/ui/Components/SharedMediaLayout;
 
-    invoke-static {p1}, Lorg/telegram/ui/Components/SharedMediaLayout;->access$5200(Lorg/telegram/ui/Components/SharedMediaLayout;)Lorg/telegram/ui/ActionBar/BaseFragment;
+    invoke-static {p1}, Lorg/telegram/ui/Components/SharedMediaLayout;->access$5300(Lorg/telegram/ui/Components/SharedMediaLayout;)Lorg/telegram/ui/ActionBar/BaseFragment;
 
     move-result-object p1
 
@@ -298,7 +298,7 @@
 
     invoke-virtual {p1, v3, v2}, Lorg/telegram/messenger/MessagesController;->putChats(Ljava/util/ArrayList;Z)V
 
-    .line 5988
+    .line 5997
     iget-object p1, p2, Lorg/telegram/tgnet/TLRPC$messages_Chats;->chats:Ljava/util/ArrayList;
 
     invoke-virtual {p1}, Ljava/util/ArrayList;->isEmpty()Z
@@ -329,7 +329,7 @@
     :goto_2d
     iput-boolean p1, p0, Lorg/telegram/ui/Components/SharedMediaLayout$CommonGroupsAdapter;->endReached:Z
 
-    .line 5989
+    .line 5998
     iget-object p1, p0, Lorg/telegram/ui/Components/SharedMediaLayout$CommonGroupsAdapter;->chats:Ljava/util/ArrayList;
 
     iget-object p2, p2, Lorg/telegram/tgnet/TLRPC$messages_Chats;->chats:Ljava/util/ArrayList;
@@ -338,14 +338,14 @@
 
     goto :goto_39
 
-    .line 5991
+    .line 6000
     :cond_37
     iput-boolean v1, p0, Lorg/telegram/ui/Components/SharedMediaLayout$CommonGroupsAdapter;->endReached:Z
 
     :goto_39
     const/4 p1, 0x0
 
-    .line 5994
+    .line 6003
     :goto_3a
     iget-object p2, p0, Lorg/telegram/ui/Components/SharedMediaLayout$CommonGroupsAdapter;->this$0:Lorg/telegram/ui/Components/SharedMediaLayout;
 
@@ -357,7 +357,7 @@
 
     if-ge p1, p2, :cond_7b
 
-    .line 5995
+    .line 6004
     iget-object p2, p0, Lorg/telegram/ui/Components/SharedMediaLayout$CommonGroupsAdapter;->this$0:Lorg/telegram/ui/Components/SharedMediaLayout;
 
     invoke-static {p2}, Lorg/telegram/ui/Components/SharedMediaLayout;->access$400(Lorg/telegram/ui/Components/SharedMediaLayout;)[Lorg/telegram/ui/Components/SharedMediaLayout$MediaPage;
@@ -374,7 +374,7 @@
 
     if-ne p2, p3, :cond_78
 
-    .line 5996
+    .line 6005
     iget-object p2, p0, Lorg/telegram/ui/Components/SharedMediaLayout$CommonGroupsAdapter;->this$0:Lorg/telegram/ui/Components/SharedMediaLayout;
 
     invoke-static {p2}, Lorg/telegram/ui/Components/SharedMediaLayout;->access$400(Lorg/telegram/ui/Components/SharedMediaLayout;)[Lorg/telegram/ui/Components/SharedMediaLayout$MediaPage;
@@ -389,7 +389,7 @@
 
     if-eqz p2, :cond_78
 
-    .line 5997
+    .line 6006
     iget-object p2, p0, Lorg/telegram/ui/Components/SharedMediaLayout$CommonGroupsAdapter;->this$0:Lorg/telegram/ui/Components/SharedMediaLayout;
 
     invoke-static {p2}, Lorg/telegram/ui/Components/SharedMediaLayout;->access$400(Lorg/telegram/ui/Components/SharedMediaLayout;)[Lorg/telegram/ui/Components/SharedMediaLayout$MediaPage;
@@ -402,34 +402,34 @@
 
     move-result-object p2
 
-    .line 5998
+    .line 6007
     iget-boolean p3, p0, Lorg/telegram/ui/Components/SharedMediaLayout$CommonGroupsAdapter;->firstLoaded:Z
 
     if-nez p3, :cond_72
 
     if-nez v0, :cond_78
 
-    .line 5999
+    .line 6008
     :cond_72
     iget-object p3, p0, Lorg/telegram/ui/Components/SharedMediaLayout$CommonGroupsAdapter;->this$0:Lorg/telegram/ui/Components/SharedMediaLayout;
 
     const/4 v3, 0x0
 
-    invoke-static {p3, p2, v2, v3}, Lorg/telegram/ui/Components/SharedMediaLayout;->access$8300(Lorg/telegram/ui/Components/SharedMediaLayout;Lorg/telegram/ui/Components/RecyclerListView;ILandroid/util/SparseBooleanArray;)V
+    invoke-static {p3, p2, v2, v3}, Lorg/telegram/ui/Components/SharedMediaLayout;->access$8500(Lorg/telegram/ui/Components/SharedMediaLayout;Lorg/telegram/ui/Components/RecyclerListView;ILandroid/util/SparseBooleanArray;)V
 
     :cond_78
     add-int/lit8 p1, p1, 0x1
 
     goto :goto_3a
 
-    .line 6004
+    .line 6013
     :cond_7b
     iput-boolean v2, p0, Lorg/telegram/ui/Components/SharedMediaLayout$CommonGroupsAdapter;->loading:Z
 
-    .line 6005
+    .line 6014
     iput-boolean v1, p0, Lorg/telegram/ui/Components/SharedMediaLayout$CommonGroupsAdapter;->firstLoaded:Z
 
-    .line 6006
+    .line 6015
     invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->notifyDataSetChanged()V
 
     return-void
@@ -438,7 +438,7 @@
 .method private synthetic lambda$getChats$1(ILorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/TLRPC$TL_error;)V
     .registers 5
 
-    .line 5983
+    .line 5992
     new-instance v0, Lorg/telegram/ui/Components/SharedMediaLayout$CommonGroupsAdapter$$ExternalSyntheticLambda0;
 
     invoke-direct {v0, p0, p3, p2, p1}, Lorg/telegram/ui/Components/SharedMediaLayout$CommonGroupsAdapter$$ExternalSyntheticLambda0;-><init>(Lorg/telegram/ui/Components/SharedMediaLayout$CommonGroupsAdapter;Lorg/telegram/tgnet/TLRPC$TL_error;Lorg/telegram/tgnet/TLObject;I)V
@@ -453,7 +453,7 @@
 .method public getItemCount()I
     .registers 3
 
-    .line 6018
+    .line 6027
     iget-object v0, p0, Lorg/telegram/ui/Components/SharedMediaLayout$CommonGroupsAdapter;->chats:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
@@ -470,7 +470,7 @@
 
     return v0
 
-    .line 6021
+    .line 6030
     :cond_e
     iget-object v0, p0, Lorg/telegram/ui/Components/SharedMediaLayout$CommonGroupsAdapter;->chats:Ljava/util/ArrayList;
 
@@ -478,7 +478,7 @@
 
     move-result v0
 
-    .line 6022
+    .line 6031
     iget-object v1, p0, Lorg/telegram/ui/Components/SharedMediaLayout$CommonGroupsAdapter;->chats:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->isEmpty()Z
@@ -487,7 +487,7 @@
 
     if-nez v1, :cond_22
 
-    .line 6023
+    .line 6032
     iget-boolean v1, p0, Lorg/telegram/ui/Components/SharedMediaLayout$CommonGroupsAdapter;->endReached:Z
 
     if-nez v1, :cond_22
@@ -501,7 +501,7 @@
 .method public getItemViewType(I)I
     .registers 3
 
-    .line 6066
+    .line 6075
     iget-object v0, p0, Lorg/telegram/ui/Components/SharedMediaLayout$CommonGroupsAdapter;->chats:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
@@ -518,7 +518,7 @@
 
     return p1
 
-    .line 6069
+    .line 6078
     :cond_e
     iget-object v0, p0, Lorg/telegram/ui/Components/SharedMediaLayout$CommonGroupsAdapter;->chats:Ljava/util/ArrayList;
 
@@ -541,7 +541,7 @@
 .method public isEnabled(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)Z
     .registers 3
 
-    .line 6013
+    .line 6022
     invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->getAdapterPosition()I
 
     move-result p1
@@ -568,19 +568,19 @@
 .method public onBindViewHolder(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;I)V
     .registers 10
 
-    .line 6056
+    .line 6065
     invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->getItemViewType()I
 
     move-result v0
 
     if-nez v0, :cond_2e
 
-    .line 6057
+    .line 6066
     iget-object p1, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     check-cast p1, Lorg/telegram/ui/Cells/ProfileSearchCell;
 
-    .line 6058
+    .line 6067
     iget-object v0, p0, Lorg/telegram/ui/Components/SharedMediaLayout$CommonGroupsAdapter;->chats:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -603,10 +603,10 @@
 
     move-object v0, p1
 
-    .line 6059
+    .line 6068
     invoke-virtual/range {v0 .. v6}, Lorg/telegram/ui/Cells/ProfileSearchCell;->setData(Lorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/TLRPC$EncryptedChat;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ZZ)V
 
-    .line 6060
+    .line 6069
     iget-object v0, p0, Lorg/telegram/ui/Components/SharedMediaLayout$CommonGroupsAdapter;->chats:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -637,40 +637,46 @@
 .end method
 
 .method public onCreateViewHolder(Landroid/view/ViewGroup;I)Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
-    .registers 6
+    .registers 7
 
     const/4 p1, -0x1
 
-    if-eqz p2, :cond_34
+    if-eqz p2, :cond_40
 
     const/4 v0, 0x2
 
-    if-eq p2, v0, :cond_19
+    if-eq p2, v0, :cond_1f
 
-    .line 6043
+    .line 6052
     new-instance p2, Lorg/telegram/ui/Components/FlickerLoadingView;
 
     iget-object v0, p0, Lorg/telegram/ui/Components/SharedMediaLayout$CommonGroupsAdapter;->mContext:Landroid/content/Context;
 
-    invoke-direct {p2, v0}, Lorg/telegram/ui/Components/FlickerLoadingView;-><init>(Landroid/content/Context;)V
+    iget-object v1, p0, Lorg/telegram/ui/Components/SharedMediaLayout$CommonGroupsAdapter;->this$0:Lorg/telegram/ui/Components/SharedMediaLayout;
+
+    invoke-static {v1}, Lorg/telegram/ui/Components/SharedMediaLayout;->access$7800(Lorg/telegram/ui/Components/SharedMediaLayout;)Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;
+
+    move-result-object v1
+
+    invoke-direct {p2, v0, v1}, Lorg/telegram/ui/Components/FlickerLoadingView;-><init>(Landroid/content/Context;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)V
 
     const/4 v0, 0x1
 
-    .line 6044
+    .line 6053
     invoke-virtual {p2, v0}, Lorg/telegram/ui/Components/FlickerLoadingView;->setIsSingleCell(Z)V
 
     const/4 v1, 0x0
 
-    .line 6045
+    .line 6054
     invoke-virtual {p2, v1}, Lorg/telegram/ui/Components/FlickerLoadingView;->showDate(Z)V
 
-    .line 6046
+    .line 6055
     invoke-virtual {p2, v0}, Lorg/telegram/ui/Components/FlickerLoadingView;->setViewType(I)V
 
-    goto :goto_3b
+    goto :goto_4d
 
-    .line 6038
-    :cond_19
+    .line 6047
+    :cond_1f
     iget-object p2, p0, Lorg/telegram/ui/Components/SharedMediaLayout$CommonGroupsAdapter;->mContext:Landroid/content/Context;
 
     const/4 v0, 0x6
@@ -681,34 +687,46 @@
 
     move-result-wide v1
 
-    invoke-static {p2, v0, v1, v2}, Lorg/telegram/ui/Components/SharedMediaLayout;->createEmptyStubView(Landroid/content/Context;IJ)Landroid/view/View;
+    iget-object v3, p0, Lorg/telegram/ui/Components/SharedMediaLayout$CommonGroupsAdapter;->this$0:Lorg/telegram/ui/Components/SharedMediaLayout;
+
+    invoke-static {v3}, Lorg/telegram/ui/Components/SharedMediaLayout;->access$7800(Lorg/telegram/ui/Components/SharedMediaLayout;)Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;
+
+    move-result-object v3
+
+    invoke-static {p2, v0, v1, v2, v3}, Lorg/telegram/ui/Components/SharedMediaLayout;->createEmptyStubView(Landroid/content/Context;IJLorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)Landroid/view/View;
 
     move-result-object p2
 
-    .line 6039
+    .line 6048
     new-instance v0, Landroidx/recyclerview/widget/RecyclerView$LayoutParams;
 
     invoke-direct {v0, p1, p1}, Landroidx/recyclerview/widget/RecyclerView$LayoutParams;-><init>(II)V
 
     invoke-virtual {p2, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 6040
+    .line 6049
     new-instance p1, Lorg/telegram/ui/Components/RecyclerListView$Holder;
 
     invoke-direct {p1, p2}, Lorg/telegram/ui/Components/RecyclerListView$Holder;-><init>(Landroid/view/View;)V
 
     return-object p1
 
-    .line 6035
-    :cond_34
+    .line 6044
+    :cond_40
     new-instance p2, Lorg/telegram/ui/Cells/ProfileSearchCell;
 
     iget-object v0, p0, Lorg/telegram/ui/Components/SharedMediaLayout$CommonGroupsAdapter;->mContext:Landroid/content/Context;
 
-    invoke-direct {p2, v0}, Lorg/telegram/ui/Cells/ProfileSearchCell;-><init>(Landroid/content/Context;)V
+    iget-object v1, p0, Lorg/telegram/ui/Components/SharedMediaLayout$CommonGroupsAdapter;->this$0:Lorg/telegram/ui/Components/SharedMediaLayout;
 
-    .line 6050
-    :goto_3b
+    invoke-static {v1}, Lorg/telegram/ui/Components/SharedMediaLayout;->access$7800(Lorg/telegram/ui/Components/SharedMediaLayout;)Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;
+
+    move-result-object v1
+
+    invoke-direct {p2, v0, v1}, Lorg/telegram/ui/Cells/ProfileSearchCell;-><init>(Landroid/content/Context;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)V
+
+    .line 6059
+    :goto_4d
     new-instance v0, Landroidx/recyclerview/widget/RecyclerView$LayoutParams;
 
     const/4 v1, -0x2
@@ -717,7 +735,7 @@
 
     invoke-virtual {p2, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 6051
+    .line 6060
     new-instance p1, Lorg/telegram/ui/Components/RecyclerListView$Holder;
 
     invoke-direct {p1, p2}, Lorg/telegram/ui/Components/RecyclerListView$Holder;-><init>(Landroid/view/View;)V

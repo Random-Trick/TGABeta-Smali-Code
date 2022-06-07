@@ -29,7 +29,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 41236
+    .line 41688
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -44,7 +44,7 @@
 
     goto :goto_28
 
-    .line 41265
+    .line 41717
     :sswitch_5
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_messageFwdHeader;
 
@@ -52,7 +52,7 @@
 
     goto :goto_28
 
-    .line 41268
+    .line 41720
     :sswitch_b
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_messageFwdHeader_layer96;
 
@@ -60,7 +60,7 @@
 
     goto :goto_28
 
-    .line 41256
+    .line 41708
     :sswitch_11
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_messageFwdHeader_layer118;
 
@@ -68,7 +68,7 @@
 
     goto :goto_28
 
-    .line 41262
+    .line 41714
     :sswitch_17
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_messageFwdHeader_layer72;
 
@@ -76,7 +76,7 @@
 
     goto :goto_28
 
-    .line 41259
+    .line 41711
     :sswitch_1d
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_messageFwdHeader_layer112;
 
@@ -84,7 +84,7 @@
 
     goto :goto_28
 
-    .line 41253
+    .line 41705
     :sswitch_23
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_messageFwdHeader_layer68;
 
@@ -97,7 +97,7 @@
 
     goto :goto_43
 
-    .line 41272
+    .line 41724
     :cond_2d
     new-instance p0, Ljava/lang/RuntimeException;
 
@@ -127,7 +127,7 @@
     :goto_43
     if-eqz v0, :cond_48
 
-    .line 41275
+    .line 41727
     invoke-virtual {v0, p0, p2}, Lorg/telegram/tgnet/TLObject;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
     :cond_48

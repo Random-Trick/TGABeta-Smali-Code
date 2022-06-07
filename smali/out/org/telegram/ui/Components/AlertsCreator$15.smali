@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lorg/telegram/ui/Components/AlertsCreator;->createAutoDeleteDatePickerDialog(Landroid/content/Context;Lorg/telegram/ui/Components/AlertsCreator$ScheduleDatePickerDelegate;)Lorg/telegram/ui/ActionBar/BottomSheet$Builder;
+    value = Lorg/telegram/ui/Components/AlertsCreator;->createAutoDeleteDatePickerDialog(Landroid/content/Context;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;Lorg/telegram/ui/Components/AlertsCreator$ScheduleDatePickerDelegate;)Lorg/telegram/ui/ActionBar/BottomSheet$Builder;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,13 +19,13 @@
 
 
 # direct methods
-.method constructor <init>(Landroid/content/Context;[I)V
-    .registers 3
+.method constructor <init>(Landroid/content/Context;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;[I)V
+    .registers 4
 
-    .line 2798
-    iput-object p2, p0, Lorg/telegram/ui/Components/AlertsCreator$15;->val$values:[I
+    .line 2823
+    iput-object p3, p0, Lorg/telegram/ui/Components/AlertsCreator$15;->val$values:[I
 
-    invoke-direct {p0, p1}, Lorg/telegram/ui/Components/NumberPicker;-><init>(Landroid/content/Context;)V
+    invoke-direct {p0, p1, p2}, Lorg/telegram/ui/Components/NumberPicker;-><init>(Landroid/content/Context;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)V
 
     return-void
 .end method
@@ -33,91 +33,99 @@
 
 # virtual methods
 .method protected getContentDescription(I)Ljava/lang/CharSequence;
-    .registers 6
+    .registers 7
 
-    .line 2801
+    .line 2826
     iget-object v0, p0, Lorg/telegram/ui/Components/AlertsCreator$15;->val$values:[I
 
     aget v1, v0, p1
 
     if-nez v1, :cond_10
 
-    const p1, 0x7f0e0231
+    const p1, 0x7f0e0266
 
     const-string v0, "AutoDeleteNever"
 
-    .line 2802
+    .line 2827
     invoke-static {v0, p1}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object p1
 
     return-object p1
 
-    .line 2803
+    .line 2828
     :cond_10
     aget v1, v0, p1
 
     const/16 v2, 0x2760
 
-    if-ge v1, v2, :cond_21
+    const/4 v3, 0x0
 
-    .line 2804
+    if-ge v1, v2, :cond_24
+
+    .line 2829
     aget p1, v0, p1
 
     div-int/lit16 p1, p1, 0x5a0
 
-    const-string v0, "Days"
+    new-array v0, v3, [Ljava/lang/Object;
 
-    invoke-static {v0, p1}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    const-string v1, "Days"
+
+    invoke-static {v1, p1, v0}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
 
     return-object p1
 
-    .line 2805
-    :cond_21
+    .line 2830
+    :cond_24
     aget v1, v0, p1
 
-    const v3, 0xae60
+    const v4, 0xae60
 
-    if-ge v1, v3, :cond_33
+    if-ge v1, v4, :cond_38
 
-    .line 2806
+    .line 2831
     aget p1, v0, p1
 
     div-int/lit16 p1, p1, 0x5a0
 
-    const-string v0, "Weeks"
+    new-array v0, v3, [Ljava/lang/Object;
 
-    invoke-static {v0, p1}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    const-string v1, "Weeks"
+
+    invoke-static {v1, p1, v0}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
 
     return-object p1
 
-    .line 2807
-    :cond_33
+    .line 2832
+    :cond_38
     aget v1, v0, p1
 
-    const v3, 0x80520
+    const v4, 0x80520
 
-    if-ge v1, v3, :cond_44
+    if-ge v1, v4, :cond_4b
 
-    .line 2808
+    .line 2833
     aget p1, v0, p1
 
     div-int/2addr p1, v2
 
-    const-string v0, "Months"
+    new-array v0, v3, [Ljava/lang/Object;
 
-    invoke-static {v0, p1}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    const-string v1, "Months"
+
+    invoke-static {v1, p1, v0}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
 
     return-object p1
 
-    .line 2810
-    :cond_44
+    .line 2835
+    :cond_4b
     aget p1, v0, p1
 
     mul-int/lit8 p1, p1, 0x5
@@ -128,9 +136,11 @@
 
     mul-int/lit8 p1, p1, 0x18
 
-    const-string v0, "Years"
+    new-array v0, v3, [Ljava/lang/Object;
 
-    invoke-static {v0, p1}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    const-string v1, "Years"
+
+    invoke-static {v1, p1, v0}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
 

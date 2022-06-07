@@ -177,7 +177,7 @@
 
     invoke-direct {p1, p2}, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;-><init>(Landroid/content/Context;)V
 
-    const p2, 0x7f0e05e0
+    const p2, 0x7f0e0631
 
     const-string v0, "DoubleTapPreviewRational"
 

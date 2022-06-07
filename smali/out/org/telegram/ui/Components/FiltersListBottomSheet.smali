@@ -380,7 +380,7 @@
 
     const-string p2, "FilterChoose"
 
-    const v0, 0x7f0e0716
+    const v0, 0x7f0e076b
 
     invoke-static {p2, v0}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
@@ -721,7 +721,7 @@
     const/4 v3, 0x0
 
     :goto_10
-    if-ge v3, v2, :cond_29
+    if-ge v3, v2, :cond_2f
 
     .line 311
     invoke-virtual {v1, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -741,17 +741,23 @@
 
     move-result v5
 
-    if-nez v5, :cond_26
+    if-nez v5, :cond_2c
+
+    invoke-virtual {v4}, Lorg/telegram/messenger/MessagesController$DialogFilter;->isDefault()Z
+
+    move-result v5
+
+    if-nez v5, :cond_2c
 
     .line 313
     invoke-virtual {v0, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    :cond_26
+    :cond_2c
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_10
 
-    :cond_29
+    :cond_2f
     return-object v0
 .end method
 

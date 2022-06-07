@@ -53,7 +53,7 @@
 
     const-string v1, "SearchBackgrounds"
 
-    const v2, 0x7f0e0f76
+    const v2, 0x7f0e1032
 
     invoke-static {v1, v2}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 

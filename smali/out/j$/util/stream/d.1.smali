@@ -9,10 +9,10 @@
 
 
 # direct methods
-.method protected constructor <init>(Lj$/util/stream/d;Lj$/util/y;)V
+.method protected constructor <init>(Lj$/util/stream/d;Lj$/util/u;)V
     .registers 3
 
-    invoke-direct {p0, p1, p2}, Lj$/util/stream/f;-><init>(Lj$/util/stream/f;Lj$/util/y;)V
+    invoke-direct {p0, p1, p2}, Lj$/util/stream/f;-><init>(Lj$/util/stream/f;Lj$/util/u;)V
 
     iget-object p1, p1, Lj$/util/stream/d;->h:Ljava/util/concurrent/atomic/AtomicReference;
 
@@ -21,10 +21,10 @@
     return-void
 .end method
 
-.method protected constructor <init>(Lj$/util/stream/z2;Lj$/util/y;)V
+.method protected constructor <init>(Lj$/util/stream/y2;Lj$/util/u;)V
     .registers 3
 
-    invoke-direct {p0, p1, p2}, Lj$/util/stream/f;-><init>(Lj$/util/stream/z2;Lj$/util/y;)V
+    invoke-direct {p0, p1, p2}, Lj$/util/stream/f;-><init>(Lj$/util/stream/y2;Lj$/util/u;)V
 
     new-instance p1, Ljava/util/concurrent/atomic/AtomicReference;
 
@@ -74,9 +74,9 @@
 .method public compute()V
     .registers 11
 
-    iget-object v0, p0, Lj$/util/stream/f;->b:Lj$/util/y;
+    iget-object v0, p0, Lj$/util/stream/f;->b:Lj$/util/u;
 
-    invoke-interface {v0}, Lj$/util/y;->estimateSize()J
+    invoke-interface {v0}, Lj$/util/u;->estimateSize()J
 
     move-result-wide v1
 
@@ -152,7 +152,7 @@
 
     if-lez v8, :cond_6b
 
-    invoke-interface {v0}, Lj$/util/y;->trySplit()Lj$/util/y;
+    invoke-interface {v0}, Lj$/util/u;->trySplit()Lj$/util/u;
 
     move-result-object v1
 
@@ -161,7 +161,7 @@
     goto :goto_6b
 
     :cond_46
-    invoke-virtual {v7, v1}, Lj$/util/stream/f;->f(Lj$/util/y;)Lj$/util/stream/f;
+    invoke-virtual {v7, v1}, Lj$/util/stream/f;->f(Lj$/util/u;)Lj$/util/stream/f;
 
     move-result-object v2
 
@@ -169,7 +169,7 @@
 
     iput-object v2, v7, Lj$/util/stream/f;->d:Lj$/util/stream/f;
 
-    invoke-virtual {v7, v0}, Lj$/util/stream/f;->f(Lj$/util/y;)Lj$/util/stream/f;
+    invoke-virtual {v7, v0}, Lj$/util/stream/f;->f(Lj$/util/u;)Lj$/util/stream/f;
 
     move-result-object v8
 
@@ -199,7 +199,7 @@
 
     invoke-virtual {v2}, Ljava/util/concurrent/CountedCompleter;->fork()Ljava/util/concurrent/ForkJoinTask;
 
-    invoke-interface {v0}, Lj$/util/y;->estimateSize()J
+    invoke-interface {v0}, Lj$/util/u;->estimateSize()J
 
     move-result-wide v1
 

@@ -2,40 +2,38 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lorg/telegram/ui/ActionBar/ThemeDescription$ThemeDescriptionDelegate;
+.implements Lorg/telegram/tgnet/RequestDelegate;
 
 
 # instance fields
 .field public final synthetic f$0:Lorg/telegram/ui/ChatActivity;
 
+.field public final synthetic f$1:Lorg/telegram/tgnet/TLRPC$User;
+
 
 # direct methods
-.method public synthetic constructor <init>(Lorg/telegram/ui/ChatActivity;)V
-    .registers 2
+.method public synthetic constructor <init>(Lorg/telegram/ui/ChatActivity;Lorg/telegram/tgnet/TLRPC$User;)V
+    .registers 3
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda225;->f$0:Lorg/telegram/ui/ChatActivity;
+
+    iput-object p2, p0, Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda225;->f$1:Lorg/telegram/tgnet/TLRPC$User;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final didSetColor()V
-    .registers 2
+.method public final run(Lorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/TLRPC$TL_error;)V
+    .registers 5
 
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda225;->f$0:Lorg/telegram/ui/ChatActivity;
 
-    invoke-static {v0}, Lorg/telegram/ui/ChatActivity;->$r8$lambda$6FgVQpO8-xCQN1F_qLhS1R7ulDc(Lorg/telegram/ui/ChatActivity;)V
+    iget-object v1, p0, Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda225;->f$1:Lorg/telegram/tgnet/TLRPC$User;
 
-    return-void
-.end method
-
-.method public synthetic onAnimationProgress(F)V
-    .registers 2
-
-    invoke-static {p0, p1}, Lorg/telegram/ui/ActionBar/ThemeDescription$ThemeDescriptionDelegate$-CC;->$default$onAnimationProgress(Lorg/telegram/ui/ActionBar/ThemeDescription$ThemeDescriptionDelegate;F)V
+    invoke-static {v0, v1, p1, p2}, Lorg/telegram/ui/ChatActivity;->$r8$lambda$p4fhOy0lf2g3cy1bo6XXWzwiS50(Lorg/telegram/ui/ChatActivity;Lorg/telegram/tgnet/TLRPC$User;Lorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/TLRPC$TL_error;)V
 
     return-void
 .end method

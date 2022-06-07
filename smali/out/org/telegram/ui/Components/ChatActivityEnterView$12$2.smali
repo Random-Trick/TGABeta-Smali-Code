@@ -28,7 +28,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/ChatActivityEnterView$12;Lorg/telegram/messenger/MediaController$PhotoEntry;Ljava/io/File;)V
     .registers 4
 
-    .line 2033
+    .line 2054
     iput-object p1, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$12$2;->this$1:Lorg/telegram/ui/Components/ChatActivityEnterView$12;
 
     iput-object p2, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$12$2;->val$photoEntry:Lorg/telegram/messenger/MediaController$PhotoEntry;
@@ -55,17 +55,17 @@
 
     move-object v0, p0
 
-    .line 2037
+    .line 2058
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 2038
+    .line 2059
     new-instance v1, Lorg/telegram/messenger/SendMessagesHelper$SendingMediaInfo;
 
     invoke-direct {v1}, Lorg/telegram/messenger/SendMessagesHelper$SendingMediaInfo;-><init>()V
 
-    .line 2039
+    .line 2060
     iget-object v3, v0, Lorg/telegram/ui/Components/ChatActivityEnterView$12$2;->val$photoEntry:Lorg/telegram/messenger/MediaController$PhotoEntry;
 
     iget-boolean v4, v3, Lorg/telegram/messenger/MediaController$PhotoEntry;->isVideo:Z
@@ -76,31 +76,31 @@
 
     if-eqz v5, :cond_18
 
-    .line 2040
+    .line 2061
     iput-object v5, v1, Lorg/telegram/messenger/SendMessagesHelper$SendingMediaInfo;->path:Ljava/lang/String;
 
     goto :goto_1e
 
-    .line 2041
+    .line 2062
     :cond_18
     iget-object v5, v3, Lorg/telegram/messenger/MediaController$PhotoEntry;->path:Ljava/lang/String;
 
     if-eqz v5, :cond_1e
 
-    .line 2042
+    .line 2063
     iput-object v5, v1, Lorg/telegram/messenger/SendMessagesHelper$SendingMediaInfo;->path:Ljava/lang/String;
 
-    .line 2044
+    .line 2065
     :cond_1e
     :goto_1e
     iget-object v5, v3, Lorg/telegram/messenger/MediaController$MediaEditState;->thumbPath:Ljava/lang/String;
 
     iput-object v5, v1, Lorg/telegram/messenger/SendMessagesHelper$SendingMediaInfo;->thumbPath:Ljava/lang/String;
 
-    .line 2045
+    .line 2066
     iput-boolean v4, v1, Lorg/telegram/messenger/SendMessagesHelper$SendingMediaInfo;->isVideo:Z
 
-    .line 2046
+    .line 2067
     iget-object v3, v3, Lorg/telegram/messenger/MediaController$MediaEditState;->caption:Ljava/lang/CharSequence;
 
     const/4 v13, 0x0
@@ -119,45 +119,45 @@
     :goto_2f
     iput-object v3, v1, Lorg/telegram/messenger/SendMessagesHelper$SendingMediaInfo;->caption:Ljava/lang/String;
 
-    .line 2047
+    .line 2068
     iget-object v3, v0, Lorg/telegram/ui/Components/ChatActivityEnterView$12$2;->val$photoEntry:Lorg/telegram/messenger/MediaController$PhotoEntry;
 
     iget-object v4, v3, Lorg/telegram/messenger/MediaController$MediaEditState;->entities:Ljava/util/ArrayList;
 
     iput-object v4, v1, Lorg/telegram/messenger/SendMessagesHelper$SendingMediaInfo;->entities:Ljava/util/ArrayList;
 
-    .line 2048
+    .line 2069
     iget-object v4, v3, Lorg/telegram/messenger/MediaController$MediaEditState;->stickers:Ljava/util/ArrayList;
 
     iput-object v4, v1, Lorg/telegram/messenger/SendMessagesHelper$SendingMediaInfo;->masks:Ljava/util/ArrayList;
 
-    .line 2049
+    .line 2070
     iget v3, v3, Lorg/telegram/messenger/MediaController$MediaEditState;->ttl:I
 
     iput v3, v1, Lorg/telegram/messenger/SendMessagesHelper$SendingMediaInfo;->ttl:I
 
     move-object/from16 v3, p2
 
-    .line 2050
+    .line 2071
     iput-object v3, v1, Lorg/telegram/messenger/SendMessagesHelper$SendingMediaInfo;->videoEditedInfo:Lorg/telegram/messenger/VideoEditedInfo;
 
     const/4 v14, 0x1
 
-    .line 2051
+    .line 2072
     iput-boolean v14, v1, Lorg/telegram/messenger/SendMessagesHelper$SendingMediaInfo;->canDeleteAfter:Z
 
-    .line 2052
+    .line 2073
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 2053
+    .line 2074
     iget-object v1, v0, Lorg/telegram/ui/Components/ChatActivityEnterView$12$2;->val$photoEntry:Lorg/telegram/messenger/MediaController$PhotoEntry;
 
     invoke-virtual {v1}, Lorg/telegram/messenger/MediaController$PhotoEntry;->reset()V
 
-    .line 2054
+    .line 2075
     iput-boolean v14, v0, Lorg/telegram/ui/Components/ChatActivityEnterView$12$2;->sending:Z
 
-    .line 2055
+    .line 2076
     iget-object v1, v0, Lorg/telegram/ui/Components/ChatActivityEnterView$12$2;->this$1:Lorg/telegram/ui/Components/ChatActivityEnterView$12;
 
     iget-object v1, v1, Lorg/telegram/ui/Components/ChatActivityEnterView$12;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
@@ -210,7 +210,7 @@
 
     invoke-static/range {v1 .. v12}, Lorg/telegram/messenger/SendMessagesHelper;->prepareSendingMedia(Lorg/telegram/messenger/AccountInstance;Ljava/util/ArrayList;JLorg/telegram/messenger/MessageObject;Lorg/telegram/messenger/MessageObject;Landroidx/core/view/inputmethod/InputContentInfoCompat;ZZLorg/telegram/messenger/MessageObject;ZI)V
 
-    .line 2056
+    .line 2077
     iget-object v1, v0, Lorg/telegram/ui/Components/ChatActivityEnterView$12$2;->this$1:Lorg/telegram/ui/Components/ChatActivityEnterView$12;
 
     iget-object v1, v1, Lorg/telegram/ui/Components/ChatActivityEnterView$12;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
@@ -221,7 +221,7 @@
 
     if-eqz v1, :cond_99
 
-    .line 2057
+    .line 2078
     iget-object v1, v0, Lorg/telegram/ui/Components/ChatActivityEnterView$12$2;->this$1:Lorg/telegram/ui/Components/ChatActivityEnterView$12;
 
     iget-object v1, v1, Lorg/telegram/ui/Components/ChatActivityEnterView$12;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
@@ -241,12 +241,12 @@
 .method public willHidePhotoViewer()V
     .registers 2
 
-    .line 2063
+    .line 2084
     iget-boolean v0, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$12$2;->sending:Z
 
     if-nez v0, :cond_9
 
-    .line 2065
+    .line 2086
     :try_start_4
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$12$2;->val$sourceFile:Ljava/io/File;
 

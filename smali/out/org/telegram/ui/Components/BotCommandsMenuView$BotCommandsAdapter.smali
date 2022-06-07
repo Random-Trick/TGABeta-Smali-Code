@@ -40,17 +40,17 @@
 .method public constructor <init>()V
     .registers 2
 
-    .line 239
+    .line 240
     invoke-direct {p0}, Lorg/telegram/ui/Components/RecyclerListView$SelectionAdapter;-><init>()V
 
-    .line 236
+    .line 237
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/ui/Components/BotCommandsMenuView$BotCommandsAdapter;->newResult:Ljava/util/ArrayList;
 
-    .line 237
+    .line 238
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -65,7 +65,7 @@
 .method public getItemCount()I
     .registers 2
 
-    .line 270
+    .line 271
     iget-object v0, p0, Lorg/telegram/ui/Components/BotCommandsMenuView$BotCommandsAdapter;->newResult:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -86,12 +86,12 @@
 .method public onBindViewHolder(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;I)V
     .registers 5
 
-    .line 262
+    .line 263
     iget-object p1, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     check-cast p1, Lorg/telegram/ui/Components/BotCommandsMenuView$BotCommandView;
 
-    .line 263
+    .line 264
     iget-object v0, p1, Lorg/telegram/ui/Components/BotCommandsMenuView$BotCommandView;->command:Landroid/widget/TextView;
 
     iget-object v1, p0, Lorg/telegram/ui/Components/BotCommandsMenuView$BotCommandsAdapter;->newResult:Ljava/util/ArrayList;
@@ -104,7 +104,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 264
+    .line 265
     iget-object v0, p1, Lorg/telegram/ui/Components/BotCommandsMenuView$BotCommandView;->description:Landroid/widget/TextView;
 
     iget-object v1, p0, Lorg/telegram/ui/Components/BotCommandsMenuView$BotCommandsAdapter;->newResultHelp:Ljava/util/ArrayList;
@@ -117,7 +117,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 265
+    .line 266
     iget-object v0, p0, Lorg/telegram/ui/Components/BotCommandsMenuView$BotCommandsAdapter;->newResult:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -134,7 +134,7 @@
 .method public onCreateViewHolder(Landroid/view/ViewGroup;I)Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
     .registers 5
 
-    .line 255
+    .line 256
     new-instance p2, Lorg/telegram/ui/Components/BotCommandsMenuView$BotCommandView;
 
     invoke-virtual {p1}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
@@ -143,7 +143,7 @@
 
     invoke-direct {p2, p1}, Lorg/telegram/ui/Components/BotCommandsMenuView$BotCommandView;-><init>(Landroid/content/Context;)V
 
-    .line 256
+    .line 257
     new-instance p1, Landroidx/recyclerview/widget/RecyclerView$LayoutParams;
 
     const/4 v0, -0x1
@@ -154,7 +154,7 @@
 
     invoke-virtual {p2, p1}, Landroid/widget/LinearLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 257
+    .line 258
     new-instance p1, Lorg/telegram/ui/Components/RecyclerListView$Holder;
 
     invoke-direct {p1, p2}, Lorg/telegram/ui/Components/RecyclerListView$Holder;-><init>(Landroid/view/View;)V
@@ -173,12 +173,12 @@
         }
     .end annotation
 
-    .line 274
+    .line 275
     iget-object v0, p0, Lorg/telegram/ui/Components/BotCommandsMenuView$BotCommandsAdapter;->newResult:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 275
+    .line 276
     iget-object v0, p0, Lorg/telegram/ui/Components/BotCommandsMenuView$BotCommandsAdapter;->newResultHelp:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
@@ -187,7 +187,7 @@
 
     const/4 v1, 0x0
 
-    .line 276
+    .line 277
     :goto_c
     invoke-virtual {p1}, Landroidx/collection/LongSparseArray;->size()I
 
@@ -195,7 +195,7 @@
 
     if-ge v1, v2, :cond_88
 
-    .line 277
+    .line 278
     invoke-virtual {p1, v1}, Landroidx/collection/LongSparseArray;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v2
@@ -204,7 +204,7 @@
 
     const/4 v3, 0x0
 
-    .line 278
+    .line 279
     :goto_19
     iget-object v4, v2, Lorg/telegram/tgnet/TLRPC$BotInfo;->commands:Ljava/util/ArrayList;
 
@@ -214,7 +214,7 @@
 
     if-ge v3, v4, :cond_85
 
-    .line 279
+    .line 280
     iget-object v4, v2, Lorg/telegram/tgnet/TLRPC$BotInfo;->commands:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -225,12 +225,12 @@
 
     if-eqz v4, :cond_82
 
-    .line 280
+    .line 281
     iget-object v5, v4, Lorg/telegram/tgnet/TLRPC$TL_botCommand;->command:Ljava/lang/String;
 
     if-eqz v5, :cond_82
 
-    .line 281
+    .line 282
     iget-object v5, p0, Lorg/telegram/ui/Components/BotCommandsMenuView$BotCommandsAdapter;->newResult:Ljava/util/ArrayList;
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -251,7 +251,7 @@
 
     invoke-virtual {v5, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 282
+    .line 283
     iget-object v5, v4, Lorg/telegram/tgnet/TLRPC$TL_botCommand;->description:Ljava/lang/String;
 
     if-eqz v5, :cond_7b
@@ -264,7 +264,7 @@
 
     if-le v5, v6, :cond_7b
 
-    .line 283
+    .line 284
     iget-object v5, p0, Lorg/telegram/ui/Components/BotCommandsMenuView$BotCommandsAdapter;->newResultHelp:Ljava/util/ArrayList;
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -303,7 +303,7 @@
 
     goto :goto_82
 
-    .line 285
+    .line 286
     :cond_7b
     iget-object v5, p0, Lorg/telegram/ui/Components/BotCommandsMenuView$BotCommandsAdapter;->newResultHelp:Ljava/util/ArrayList;
 
@@ -322,7 +322,7 @@
 
     goto :goto_c
 
-    .line 290
+    .line 291
     :cond_88
     invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->notifyDataSetChanged()V
 

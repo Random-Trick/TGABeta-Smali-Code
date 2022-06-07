@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/ShareAlert;Landroid/content/Context;)V
     .registers 3
 
-    .line 895
+    .line 906
     iput-object p1, p0, Lorg/telegram/ui/Components/ShareAlert$2;->this$0:Lorg/telegram/ui/Components/ShareAlert;
 
     invoke-direct {p0, p1, p2}, Lorg/telegram/ui/Components/ShareAlert$SwitchView;-><init>(Lorg/telegram/ui/Components/ShareAlert;Landroid/content/Context;)V
@@ -35,7 +35,7 @@
 .method protected onTabSwitch(I)V
     .registers 4
 
-    .line 898
+    .line 909
     iget-object v0, p0, Lorg/telegram/ui/Components/ShareAlert$2;->this$0:Lorg/telegram/ui/Components/ShareAlert;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/ShareAlert;->access$3900(Lorg/telegram/ui/Components/ShareAlert;)Landroid/widget/TextView;
@@ -49,14 +49,14 @@
     :cond_9
     if-nez p1, :cond_22
 
-    .line 902
+    .line 913
     iget-object p1, p0, Lorg/telegram/ui/Components/ShareAlert$2;->this$0:Lorg/telegram/ui/Components/ShareAlert;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/ShareAlert;->access$3900(Lorg/telegram/ui/Components/ShareAlert;)Landroid/widget/TextView;
 
     move-result-object p1
 
-    const v0, 0x7f0e131a
+    const v0, 0x7f0e13e8
 
     const-string v1, "VoipGroupCopySpeakerLink"
 
@@ -72,7 +72,7 @@
 
     goto :goto_38
 
-    .line 904
+    .line 915
     :cond_22
     iget-object p1, p0, Lorg/telegram/ui/Components/ShareAlert$2;->this$0:Lorg/telegram/ui/Components/ShareAlert;
 
@@ -80,7 +80,7 @@
 
     move-result-object p1
 
-    const v0, 0x7f0e1319
+    const v0, 0x7f0e13e7
 
     const-string v1, "VoipGroupCopyListenLink"
 

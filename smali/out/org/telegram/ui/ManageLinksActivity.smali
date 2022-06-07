@@ -1297,7 +1297,7 @@
 
     invoke-direct {p1, p3}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    const p3, 0x7f0e054d
+    const p3, 0x7f0e059e
 
     const-string v0, "DeleteAllRevokedLinks"
 
@@ -1308,7 +1308,7 @@
 
     invoke-virtual {p1, p3}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const p3, 0x7f0e054c
+    const p3, 0x7f0e059d
 
     const-string v0, "DeleteAllRevokedLinkHelp"
 
@@ -1319,7 +1319,7 @@
 
     invoke-virtual {p1, p3}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const p3, 0x7f0e0540
+    const p3, 0x7f0e0591
 
     const-string v0, "Delete"
 
@@ -1334,7 +1334,7 @@
 
     invoke-virtual {p1, p3, v0}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const p3, 0x7f0e0331
+    const p3, 0x7f0e036d
 
     const-string v0, "Cancel"
 
@@ -2510,7 +2510,7 @@
 
     const p2, 0x7f0d004d
 
-    const p3, 0x7f0e08b9
+    const p3, 0x7f0e0916
 
     const-string v0, "InviteRevokedHint"
 
@@ -2597,7 +2597,7 @@
 
     const p2, 0x7f0d004d
 
-    const p3, 0x7f0e08b9
+    const p3, 0x7f0e0916
 
     const-string v0, "InviteRevokedHint"
 
@@ -3701,7 +3701,7 @@
     .line 520
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
-    const v1, 0x7f070140
+    const v1, 0x7f070109
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/ActionBar;->setBackButtonImage(I)V
 
@@ -3717,7 +3717,7 @@
 
     const-string v2, "InviteLinks"
 
-    const v3, 0x7f0e08b8
+    const v3, 0x7f0e0915
 
     invoke-static {v2, v3}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
@@ -3872,7 +3872,7 @@
 
     invoke-virtual {v0, v2}, Lorg/telegram/ui/Components/RecyclerListView;->setOnItemLongClickListener(Lorg/telegram/ui/Components/RecyclerListView$OnItemLongClickListener;)V
 
-    const v0, 0x7f070278
+    const v0, 0x7f070258
 
     .line 651
     invoke-static {p1, v0}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
@@ -3881,7 +3881,7 @@
 
     iput-object v0, p0, Lorg/telegram/ui/ManageLinksActivity;->linkIcon:Landroid/graphics/drawable/Drawable;
 
-    const v0, 0x7f070279
+    const v0, 0x7f070259
 
     .line 652
     invoke-static {p1, v0}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;

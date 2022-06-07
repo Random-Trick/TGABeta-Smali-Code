@@ -24,12 +24,12 @@
 .method public constructor <init>(Lorg/telegram/ui/LogoutActivity;Landroid/content/Context;)V
     .registers 3
 
-    .line 177
+    .line 180
     iput-object p1, p0, Lorg/telegram/ui/LogoutActivity$ListAdapter;->this$0:Lorg/telegram/ui/LogoutActivity;
 
     invoke-direct {p0}, Lorg/telegram/ui/Components/RecyclerListView$SelectionAdapter;-><init>()V
 
-    .line 178
+    .line 181
     iput-object p2, p0, Lorg/telegram/ui/LogoutActivity$ListAdapter;->mContext:Landroid/content/Context;
 
     return-void
@@ -40,7 +40,7 @@
 .method public getItemCount()I
     .registers 2
 
-    .line 183
+    .line 186
     iget-object v0, p0, Lorg/telegram/ui/LogoutActivity$ListAdapter;->this$0:Lorg/telegram/ui/LogoutActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/LogoutActivity;->access$000(Lorg/telegram/ui/LogoutActivity;)I
@@ -53,7 +53,7 @@
 .method public getItemViewType(I)I
     .registers 3
 
-    .line 273
+    .line 276
     iget-object v0, p0, Lorg/telegram/ui/LogoutActivity$ListAdapter;->this$0:Lorg/telegram/ui/LogoutActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/LogoutActivity;->access$100(Lorg/telegram/ui/LogoutActivity;)I
@@ -66,7 +66,7 @@
 
     return p1
 
-    .line 275
+    .line 278
     :cond_a
     iget-object v0, p0, Lorg/telegram/ui/LogoutActivity$ListAdapter;->this$0:Lorg/telegram/ui/LogoutActivity;
 
@@ -110,7 +110,7 @@
 
     goto :goto_49
 
-    .line 277
+    .line 280
     :cond_33
     iget-object v0, p0, Lorg/telegram/ui/LogoutActivity$ListAdapter;->this$0:Lorg/telegram/ui/LogoutActivity;
 
@@ -124,7 +124,7 @@
 
     return p1
 
-    .line 279
+    .line 282
     :cond_3d
     iget-object v0, p0, Lorg/telegram/ui/LogoutActivity$ListAdapter;->this$0:Lorg/telegram/ui/LogoutActivity;
 
@@ -153,12 +153,12 @@
 .method public isEnabled(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)Z
     .registers 3
 
-    .line 231
+    .line 234
     invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->getAdapterPosition()I
 
     move-result p1
 
-    .line 232
+    .line 235
     iget-object v0, p0, Lorg/telegram/ui/LogoutActivity$ListAdapter;->this$0:Lorg/telegram/ui/LogoutActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/LogoutActivity;->access$200(Lorg/telegram/ui/LogoutActivity;)I
@@ -225,7 +225,7 @@
 .method public onBindViewHolder(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;I)V
     .registers 6
 
-    .line 188
+    .line 191
     invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->getItemViewType()I
 
     move-result v0
@@ -248,13 +248,13 @@
 
     goto/16 :goto_112
 
-    .line 220
+    .line 223
     :cond_12
     iget-object p1, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     check-cast p1, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
 
-    .line 221
+    .line 224
     iget-object v0, p0, Lorg/telegram/ui/LogoutActivity$ListAdapter;->this$0:Lorg/telegram/ui/LogoutActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/LogoutActivity;->access$800(Lorg/telegram/ui/LogoutActivity;)I
@@ -263,11 +263,11 @@
 
     if-ne p2, v0, :cond_112
 
-    const p2, 0x7f0e0972
+    const p2, 0x7f0e09f9
 
     const-string v0, "LogOutInfo"
 
-    .line 222
+    .line 225
     invoke-static {v0, p2}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object p2
@@ -276,13 +276,13 @@
 
     goto/16 :goto_112
 
-    .line 212
+    .line 215
     :cond_2c
     iget-object p1, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     check-cast p1, Lorg/telegram/ui/Cells/TextSettingsCell;
 
-    .line 213
+    .line 216
     iget-object v0, p0, Lorg/telegram/ui/LogoutActivity$ListAdapter;->this$0:Lorg/telegram/ui/LogoutActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/LogoutActivity;->access$700(Lorg/telegram/ui/LogoutActivity;)I
@@ -293,18 +293,18 @@
 
     const-string p2, "windowBackgroundWhiteRedText5"
 
-    .line 214
+    .line 217
     invoke-static {p2}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
 
     move-result p2
 
     invoke-virtual {p1, p2}, Lorg/telegram/ui/Cells/TextSettingsCell;->setTextColor(I)V
 
-    const p2, 0x7f0e0973
+    const p2, 0x7f0e09fa
 
     const-string v0, "LogOutTitle"
 
-    .line 215
+    .line 218
     invoke-static {v0, p2}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object p2
@@ -313,13 +313,13 @@
 
     goto/16 :goto_112
 
-    .line 197
+    .line 200
     :cond_4f
     iget-object p1, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     check-cast p1, Lorg/telegram/ui/Cells/TextDetailSettingsCell;
 
-    .line 198
+    .line 201
     iget-object v0, p0, Lorg/telegram/ui/LogoutActivity$ListAdapter;->this$0:Lorg/telegram/ui/LogoutActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/LogoutActivity;->access$200(Lorg/telegram/ui/LogoutActivity;)I
@@ -328,16 +328,16 @@
 
     if-ne p2, v0, :cond_75
 
-    const p2, 0x7f0e010d
+    const p2, 0x7f0e0135
 
     const-string v0, "AddAnotherAccount"
 
-    .line 199
+    .line 202
     invoke-static {v0, p2}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object p2
 
-    const v0, 0x7f0e010e
+    const v0, 0x7f0e0136
 
     const-string v1, "AddAnotherAccountInfo"
 
@@ -345,13 +345,13 @@
 
     move-result-object v0
 
-    const v1, 0x7f07004a
+    const v1, 0x7f0701fa
 
     invoke-virtual {p1, p2, v0, v1, v2}, Lorg/telegram/ui/Cells/TextDetailSettingsCell;->setTextAndValueAndIcon(Ljava/lang/String;Ljava/lang/CharSequence;IZ)V
 
     goto/16 :goto_112
 
-    .line 200
+    .line 203
     :cond_75
     iget-object v0, p0, Lorg/telegram/ui/LogoutActivity$ListAdapter;->this$0:Lorg/telegram/ui/LogoutActivity;
 
@@ -361,16 +361,16 @@
 
     if-ne p2, v0, :cond_97
 
-    const p2, 0x7f0e100a
+    const p2, 0x7f0e10c8
 
     const-string v0, "SetPasscode"
 
-    .line 201
+    .line 204
     invoke-static {v0, p2}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object p2
 
-    const v0, 0x7f0e100b
+    const v0, 0x7f0e10c9
 
     const-string v1, "SetPasscodeInfo"
 
@@ -378,13 +378,13 @@
 
     move-result-object v0
 
-    const v1, 0x7f070211
+    const v1, 0x7f070290
 
     invoke-virtual {p1, p2, v0, v1, v2}, Lorg/telegram/ui/Cells/TextDetailSettingsCell;->setTextAndValueAndIcon(Ljava/lang/String;Ljava/lang/CharSequence;IZ)V
 
     goto/16 :goto_112
 
-    .line 202
+    .line 205
     :cond_97
     iget-object v0, p0, Lorg/telegram/ui/LogoutActivity$ListAdapter;->this$0:Lorg/telegram/ui/LogoutActivity;
 
@@ -394,16 +394,16 @@
 
     if-ne p2, v0, :cond_b8
 
-    const p2, 0x7f0e0461
+    const p2, 0x7f0e04a6
 
     const-string v0, "ClearCache"
 
-    .line 203
+    .line 206
     invoke-static {v0, p2}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object p2
 
-    const v0, 0x7f0e0463
+    const v0, 0x7f0e04a8
 
     const-string v1, "ClearCacheInfo"
 
@@ -411,13 +411,13 @@
 
     move-result-object v0
 
-    const v1, 0x7f0701f0
+    const v1, 0x7f0701f5
 
     invoke-virtual {p1, p2, v0, v1, v2}, Lorg/telegram/ui/Cells/TextDetailSettingsCell;->setTextAndValueAndIcon(Ljava/lang/String;Ljava/lang/CharSequence;IZ)V
 
     goto :goto_112
 
-    .line 204
+    .line 207
     :cond_b8
     iget-object v0, p0, Lorg/telegram/ui/LogoutActivity$ListAdapter;->this$0:Lorg/telegram/ui/LogoutActivity;
 
@@ -427,16 +427,16 @@
 
     if-ne p2, v0, :cond_d9
 
-    const p2, 0x7f0e0357
+    const p2, 0x7f0e0395
 
     const-string v0, "ChangePhoneNumber"
 
-    .line 205
+    .line 208
     invoke-static {v0, p2}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object p2
 
-    const v0, 0x7f0e0358
+    const v0, 0x7f0e0396
 
     const-string v1, "ChangePhoneNumberInfo"
 
@@ -444,13 +444,13 @@
 
     move-result-object v0
 
-    const v1, 0x7f07020d
+    const v1, 0x7f070281
 
     invoke-virtual {p1, p2, v0, v1, v2}, Lorg/telegram/ui/Cells/TextDetailSettingsCell;->setTextAndValueAndIcon(Ljava/lang/String;Ljava/lang/CharSequence;IZ)V
 
     goto :goto_112
 
-    .line 206
+    .line 209
     :cond_d9
     iget-object v0, p0, Lorg/telegram/ui/LogoutActivity$ListAdapter;->this$0:Lorg/telegram/ui/LogoutActivity;
 
@@ -460,16 +460,16 @@
 
     if-ne p2, v0, :cond_112
 
-    const p2, 0x7f0e04c2
+    const p2, 0x7f0e0511
 
     const-string v0, "ContactSupport"
 
-    .line 207
+    .line 210
     invoke-static {v0, p2}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object p2
 
-    const v0, 0x7f0e04c3
+    const v0, 0x7f0e0512
 
     const-string v2, "ContactSupportInfo"
 
@@ -477,19 +477,19 @@
 
     move-result-object v0
 
-    const v2, 0x7f070224
+    const v2, 0x7f07023d
 
     invoke-virtual {p1, p2, v0, v2, v1}, Lorg/telegram/ui/Cells/TextDetailSettingsCell;->setTextAndValueAndIcon(Ljava/lang/String;Ljava/lang/CharSequence;IZ)V
 
     goto :goto_112
 
-    .line 190
+    .line 193
     :cond_fa
     iget-object p1, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     check-cast p1, Lorg/telegram/ui/Cells/HeaderCell;
 
-    .line 191
+    .line 194
     iget-object v0, p0, Lorg/telegram/ui/LogoutActivity$ListAdapter;->this$0:Lorg/telegram/ui/LogoutActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/LogoutActivity;->access$100(Lorg/telegram/ui/LogoutActivity;)I
@@ -498,11 +498,11 @@
 
     if-ne p2, v0, :cond_112
 
-    const p2, 0x7f0e0159
+    const p2, 0x7f0e0186
 
     const-string v0, "AlternativeOptions"
 
-    .line 192
+    .line 195
     invoke-static {v0, p2}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object p2
@@ -533,17 +533,17 @@
 
     if-eq p2, v0, :cond_23
 
-    .line 262
+    .line 265
     new-instance p1, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
 
     iget-object p2, p0, Lorg/telegram/ui/LogoutActivity$ListAdapter;->mContext:Landroid/content/Context;
 
     invoke-direct {p1, p2}, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;-><init>(Landroid/content/Context;)V
 
-    .line 263
+    .line 266
     iget-object p2, p0, Lorg/telegram/ui/LogoutActivity$ListAdapter;->mContext:Landroid/content/Context;
 
-    const v0, 0x7f07012c
+    const v0, 0x7f0700fb
 
     const-string v1, "windowBackgroundGrayShadow"
 
@@ -555,7 +555,7 @@
 
     goto :goto_5b
 
-    .line 256
+    .line 259
     :cond_23
     new-instance p2, Lorg/telegram/ui/Cells/TextSettingsCell;
 
@@ -563,7 +563,7 @@
 
     invoke-direct {p2, v0}, Lorg/telegram/ui/Cells/TextSettingsCell;-><init>(Landroid/content/Context;)V
 
-    .line 257
+    .line 260
     invoke-static {p1}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
 
     move-result p1
@@ -572,7 +572,7 @@
 
     goto :goto_5a
 
-    .line 252
+    .line 255
     :cond_32
     new-instance p1, Lorg/telegram/ui/Cells/ShadowSectionCell;
 
@@ -582,7 +582,7 @@
 
     goto :goto_5b
 
-    .line 245
+    .line 248
     :cond_3a
     new-instance p2, Lorg/telegram/ui/Cells/TextDetailSettingsCell;
 
@@ -590,10 +590,10 @@
 
     invoke-direct {p2, v1}, Lorg/telegram/ui/Cells/TextDetailSettingsCell;-><init>(Landroid/content/Context;)V
 
-    .line 246
+    .line 249
     invoke-virtual {p2, v0}, Lorg/telegram/ui/Cells/TextDetailSettingsCell;->setMultilineDetail(Z)V
 
-    .line 247
+    .line 250
     invoke-static {p1}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
 
     move-result p1
@@ -602,7 +602,7 @@
 
     goto :goto_5a
 
-    .line 240
+    .line 243
     :cond_4c
     new-instance p2, Lorg/telegram/ui/Cells/HeaderCell;
 
@@ -610,7 +610,7 @@
 
     invoke-direct {p2, v0}, Lorg/telegram/ui/Cells/HeaderCell;-><init>(Landroid/content/Context;)V
 
-    .line 241
+    .line 244
     invoke-static {p1}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
 
     move-result p1
@@ -620,7 +620,7 @@
     :goto_5a
     move-object p1, p2
 
-    .line 267
+    .line 270
     :goto_5b
     new-instance p2, Landroidx/recyclerview/widget/RecyclerView$LayoutParams;
 
@@ -632,7 +632,7 @@
 
     invoke-virtual {p1, p2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 268
+    .line 271
     new-instance p2, Lorg/telegram/ui/Components/RecyclerListView$Holder;
 
     invoke-direct {p2, p1}, Lorg/telegram/ui/Components/RecyclerListView$Holder;-><init>(Landroid/view/View;)V

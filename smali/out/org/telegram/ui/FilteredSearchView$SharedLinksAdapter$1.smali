@@ -166,7 +166,7 @@
 
     const/4 v1, 0x0
 
-    const v2, 0x7f0e0bbd
+    const v2, 0x7f0e0c47
 
     const-string v3, "Open"
 
@@ -179,7 +179,7 @@
 
     const/4 v1, 0x1
 
-    const v2, 0x7f0e04d2
+    const v2, 0x7f0e0521
 
     const-string v3, "Copy"
 

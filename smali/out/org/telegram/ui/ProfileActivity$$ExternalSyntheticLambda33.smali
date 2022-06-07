@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lorg/telegram/ui/ActionBar/ThemeDescription$ThemeDescriptionDelegate;
+.implements Lorg/telegram/tgnet/RequestDelegate;
 
 
 # instance fields
@@ -22,20 +22,12 @@
 
 
 # virtual methods
-.method public final didSetColor()V
-    .registers 2
+.method public final run(Lorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/TLRPC$TL_error;)V
+    .registers 4
 
     iget-object v0, p0, Lorg/telegram/ui/ProfileActivity$$ExternalSyntheticLambda33;->f$0:Lorg/telegram/ui/ProfileActivity;
 
-    invoke-static {v0}, Lorg/telegram/ui/ProfileActivity;->$r8$lambda$QMg4v_yrsiO9sGpnNuB2r5OUd-I(Lorg/telegram/ui/ProfileActivity;)V
-
-    return-void
-.end method
-
-.method public synthetic onAnimationProgress(F)V
-    .registers 2
-
-    invoke-static {p0, p1}, Lorg/telegram/ui/ActionBar/ThemeDescription$ThemeDescriptionDelegate$-CC;->$default$onAnimationProgress(Lorg/telegram/ui/ActionBar/ThemeDescription$ThemeDescriptionDelegate;F)V
+    invoke-static {v0, p1, p2}, Lorg/telegram/ui/ProfileActivity;->$r8$lambda$_FVDtG454c8NKFyfGjeNvPi0OSU(Lorg/telegram/ui/ProfileActivity;Lorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/TLRPC$TL_error;)V
 
     return-void
 .end method

@@ -18,7 +18,7 @@
 .method constructor <init>(Lorg/telegram/ui/MessageSeenView;Landroid/content/Context;)V
     .registers 3
 
-    .line 67
+    .line 68
     invoke-direct {p0, p2}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
     return-void
@@ -29,7 +29,7 @@
 .method public setText(Ljava/lang/CharSequence;Landroid/widget/TextView$BufferType;)V
     .registers 3
 
-    .line 70
+    .line 71
     invoke-super {p0, p1, p2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;Landroid/widget/TextView$BufferType;)V
 
     return-void

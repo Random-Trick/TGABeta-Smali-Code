@@ -30,10 +30,10 @@
 .method public constructor <init>(Landroid/view/View;)V
     .registers 4
 
-    .line 473
+    .line 475
     invoke-direct {p0}, Landroid/graphics/drawable/Drawable;-><init>()V
 
-    .line 464
+    .line 466
     new-instance v0, Landroid/graphics/Paint;
 
     const/4 v1, 0x1
@@ -44,10 +44,10 @@
 
     const/high16 v0, 0x3f800000    # 1.0f
 
-    .line 467
+    .line 469
     iput v0, p0, Lorg/telegram/ui/GroupCallActivity$SmallRecordCallDrawable;->alpha:F
 
-    .line 474
+    .line 476
     iput-object p1, p0, Lorg/telegram/ui/GroupCallActivity$SmallRecordCallDrawable;->parentView:Landroid/view/View;
 
     return-void
@@ -58,7 +58,7 @@
 .method public draw(Landroid/graphics/Canvas;)V
     .registers 10
 
-    .line 489
+    .line 491
     invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
 
     move-result-object v0
@@ -67,7 +67,7 @@
 
     move-result v0
 
-    .line 490
+    .line 492
     invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
 
     move-result-object v1
@@ -76,7 +76,7 @@
 
     move-result v1
 
-    .line 491
+    .line 493
     iget-object v2, p0, Lorg/telegram/ui/GroupCallActivity$SmallRecordCallDrawable;->parentView:Landroid/view/View;
 
     instance-of v2, v2, Lorg/telegram/ui/ActionBar/SimpleTextView;
@@ -85,7 +85,7 @@
 
     if-eqz v2, :cond_25
 
-    .line 492
+    .line 494
     invoke-static {v3}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v2
@@ -94,7 +94,7 @@
 
     const/high16 v2, 0x40400000    # 3.0f
 
-    .line 493
+    .line 495
     invoke-static {v2}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v2
@@ -106,14 +106,14 @@
     :cond_25
     const/high16 v2, 0x40000000    # 2.0f
 
-    .line 495
+    .line 497
     invoke-static {v2}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v2
 
     add-int/2addr v1, v2
 
-    .line 498
+    .line 500
     :goto_2c
     iget-object v2, p0, Lorg/telegram/ui/GroupCallActivity$SmallRecordCallDrawable;->paint2:Landroid/graphics/Paint;
 
@@ -121,7 +121,7 @@
 
     invoke-virtual {v2, v4}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 499
+    .line 501
     iget-object v2, p0, Lorg/telegram/ui/GroupCallActivity$SmallRecordCallDrawable;->paint2:Landroid/graphics/Paint;
 
     const/high16 v4, 0x437f0000    # 255.0f
@@ -140,7 +140,7 @@
 
     const/high16 v2, 0x40800000    # 4.0f
 
-    .line 500
+    .line 502
     invoke-static {v2}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v2
@@ -151,12 +151,12 @@
 
     invoke-virtual {p1, v0, v1, v2, v4}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
 
-    .line 502
+    .line 504
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
 
-    .line 503
+    .line 505
     iget-wide v4, p0, Lorg/telegram/ui/GroupCallActivity$SmallRecordCallDrawable;->lastUpdateTime:J
 
     sub-long v4, v0, v4
@@ -169,11 +169,11 @@
 
     move-wide v4, v6
 
-    .line 507
+    .line 509
     :cond_5d
     iput-wide v0, p0, Lorg/telegram/ui/GroupCallActivity$SmallRecordCallDrawable;->lastUpdateTime:J
 
-    .line 508
+    .line 510
     iget p1, p0, Lorg/telegram/ui/GroupCallActivity$SmallRecordCallDrawable;->state:I
 
     const/high16 v0, 0x44fa0000    # 2000.0f
@@ -182,7 +182,7 @@
 
     if-nez p1, :cond_76
 
-    .line 509
+    .line 511
     iget p1, p0, Lorg/telegram/ui/GroupCallActivity$SmallRecordCallDrawable;->alpha:F
 
     long-to-float v2, v4
@@ -197,10 +197,10 @@
 
     if-ltz p1, :cond_8a
 
-    .line 511
+    .line 513
     iput v3, p0, Lorg/telegram/ui/GroupCallActivity$SmallRecordCallDrawable;->alpha:F
 
-    .line 512
+    .line 514
     iput v1, p0, Lorg/telegram/ui/GroupCallActivity$SmallRecordCallDrawable;->state:I
 
     goto :goto_8a
@@ -208,7 +208,7 @@
     :cond_76
     if-ne p1, v1, :cond_8a
 
-    .line 515
+    .line 517
     iget p1, p0, Lorg/telegram/ui/GroupCallActivity$SmallRecordCallDrawable;->alpha:F
 
     long-to-float v1, v4
@@ -225,15 +225,15 @@
 
     if-gez p1, :cond_8a
 
-    .line 517
+    .line 519
     iput v0, p0, Lorg/telegram/ui/GroupCallActivity$SmallRecordCallDrawable;->alpha:F
 
     const/4 p1, 0x0
 
-    .line 518
+    .line 520
     iput p1, p0, Lorg/telegram/ui/GroupCallActivity$SmallRecordCallDrawable;->state:I
 
-    .line 521
+    .line 523
     :cond_8a
     :goto_8a
     iget-object p1, p0, Lorg/telegram/ui/GroupCallActivity$SmallRecordCallDrawable;->parentView:Landroid/view/View;
@@ -248,7 +248,7 @@
 
     const/high16 v0, 0x41c00000    # 24.0f
 
-    .line 484
+    .line 486
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v0
@@ -261,7 +261,7 @@
 
     const/high16 v0, 0x41c00000    # 24.0f
 
-    .line 479
+    .line 481
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v0

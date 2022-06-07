@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/ChatActivity$13;Landroid/view/View;)V
     .registers 3
 
-    .line 3012
+    .line 3041
     iput-object p1, p0, Lorg/telegram/ui/ChatActivity$13$1;->this$1:Lorg/telegram/ui/ChatActivity$13;
 
     invoke-direct {p0, p2}, Lorg/telegram/ui/ActionBar/AdjustPanLayoutHelper;-><init>(Landroid/view/View;)V
@@ -35,7 +35,7 @@
 .method protected heightAnimationEnabled()Z
     .registers 8
 
-    .line 3068
+    .line 3097
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$13$1;->this$1:Lorg/telegram/ui/ChatActivity$13;
 
     iget-object v0, v0, Lorg/telegram/ui/ChatActivity$13;->this$0:Lorg/telegram/ui/ChatActivity;
@@ -44,7 +44,7 @@
 
     move-result-object v0
 
-    .line 3069
+    .line 3098
     iget-object v1, p0, Lorg/telegram/ui/ChatActivity$13$1;->this$1:Lorg/telegram/ui/ChatActivity$13;
 
     iget-object v1, v1, Lorg/telegram/ui/ChatActivity$13;->this$0:Lorg/telegram/ui/ChatActivity;
@@ -85,7 +85,7 @@
 
     goto/16 :goto_a1
 
-    .line 3072
+    .line 3101
     :cond_2f
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -109,7 +109,7 @@
 
     return v2
 
-    .line 3075
+    .line 3104
     :cond_43
     iget-object v1, p0, Lorg/telegram/ui/ChatActivity$13$1;->this$1:Lorg/telegram/ui/ChatActivity$13;
 
@@ -174,7 +174,7 @@
 
     goto :goto_a1
 
-    .line 3078
+    .line 3107
     :cond_80
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$13$1;->this$1:Lorg/telegram/ui/ChatActivity$13;
 
@@ -221,7 +221,7 @@
 .method protected onPanTranslationUpdate(FFZ)V
     .registers 6
 
-    .line 3037
+    .line 3066
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$13$1;->this$1:Lorg/telegram/ui/ChatActivity$13;
 
     iget-object v0, v0, Lorg/telegram/ui/ChatActivity$13;->this$0:Lorg/telegram/ui/ChatActivity;
@@ -248,7 +248,7 @@
 
     return-void
 
-    .line 3040
+    .line 3069
     :cond_19
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$13$1;->this$1:Lorg/telegram/ui/ChatActivity$13;
 
@@ -256,7 +256,7 @@
 
     invoke-static {v0, p1}, Lorg/telegram/ui/ChatActivity;->access$8502(Lorg/telegram/ui/ChatActivity;F)F
 
-    .line 3041
+    .line 3070
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$13$1;->this$1:Lorg/telegram/ui/ChatActivity$13;
 
     iget-object v0, v0, Lorg/telegram/ui/ChatActivity$13;->this$0:Lorg/telegram/ui/ChatActivity;
@@ -281,14 +281,14 @@
 
     if-eqz v0, :cond_3e
 
-    .line 3042
+    .line 3071
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$13$1;->this$1:Lorg/telegram/ui/ChatActivity$13;
 
     invoke-static {v0, p1}, Lorg/telegram/ui/ChatActivity$13;->access$8600(Lorg/telegram/ui/ChatActivity$13;F)V
 
     goto :goto_a4
 
-    .line 3044
+    .line 3073
     :cond_3e
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$13$1;->this$1:Lorg/telegram/ui/ChatActivity$13;
 
@@ -300,7 +300,7 @@
 
     invoke-virtual {v0, p1}, Lorg/telegram/ui/ActionBar/ActionBar;->setTranslationY(F)V
 
-    .line 3045
+    .line 3074
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$13$1;->this$1:Lorg/telegram/ui/ChatActivity$13;
 
     iget-object v0, v0, Lorg/telegram/ui/ChatActivity$13;->this$0:Lorg/telegram/ui/ChatActivity;
@@ -315,7 +315,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->setTranslationY(F)V
 
-    .line 3046
+    .line 3075
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$13$1;->this$1:Lorg/telegram/ui/ChatActivity$13;
 
     iget-object v0, v0, Lorg/telegram/ui/ChatActivity$13;->this$0:Lorg/telegram/ui/ChatActivity;
@@ -326,7 +326,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->setTranslationY(F)V
 
-    .line 3047
+    .line 3076
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$13$1;->this$1:Lorg/telegram/ui/ChatActivity$13;
 
     iget-object v0, v0, Lorg/telegram/ui/ChatActivity$13;->this$0:Lorg/telegram/ui/ChatActivity;
@@ -337,7 +337,7 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/SizeNotifierFrameLayout;->setBackgroundTranslation(I)V
 
-    .line 3048
+    .line 3077
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$13$1;->this$1:Lorg/telegram/ui/ChatActivity$13;
 
     iget-object v0, v0, Lorg/telegram/ui/ChatActivity$13;->this$0:Lorg/telegram/ui/ChatActivity;
@@ -348,7 +348,7 @@
 
     invoke-virtual {v0, p1}, Lorg/telegram/ui/Components/InstantCameraView;->onPanTranslationUpdate(F)V
 
-    .line 3049
+    .line 3078
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$13$1;->this$1:Lorg/telegram/ui/ChatActivity$13;
 
     iget-object v0, v0, Lorg/telegram/ui/ChatActivity$13;->this$0:Lorg/telegram/ui/ChatActivity;
@@ -359,7 +359,7 @@
 
     if-eqz v0, :cond_8f
 
-    .line 3050
+    .line 3079
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$13$1;->this$1:Lorg/telegram/ui/ChatActivity$13;
 
     iget-object v0, v0, Lorg/telegram/ui/ChatActivity$13;->this$0:Lorg/telegram/ui/ChatActivity;
@@ -372,7 +372,7 @@
 
     invoke-virtual {v0, p1}, Lorg/telegram/ui/Components/BlurBehindDrawable;->onPanTranslationUpdate(F)V
 
-    .line 3052
+    .line 3081
     :cond_8f
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$13$1;->this$1:Lorg/telegram/ui/ChatActivity$13;
 
@@ -380,40 +380,40 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/BaseFragment;->setFragmentPanTranslationOffset(I)V
 
-    .line 3053
+    .line 3082
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$13$1;->this$1:Lorg/telegram/ui/ChatActivity$13;
 
     iget-object v0, v0, Lorg/telegram/ui/ChatActivity$13;->this$0:Lorg/telegram/ui/ChatActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/ChatActivity;->access$9200(Lorg/telegram/ui/ChatActivity;)V
 
-    .line 3054
+    .line 3083
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$13$1;->this$1:Lorg/telegram/ui/ChatActivity$13;
 
     iget-object v0, v0, Lorg/telegram/ui/ChatActivity$13;->this$0:Lorg/telegram/ui/ChatActivity;
 
     invoke-virtual {v0}, Lorg/telegram/ui/ChatActivity;->invalidateMessagesVisiblePart()V
 
-    .line 3056
+    .line 3085
     :goto_a4
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$13$1;->this$1:Lorg/telegram/ui/ChatActivity$13;
 
     iget-object v0, v0, Lorg/telegram/ui/ChatActivity$13;->this$0:Lorg/telegram/ui/ChatActivity;
 
-    invoke-static {v0}, Lorg/telegram/ui/ChatActivity;->access$2200(Lorg/telegram/ui/ChatActivity;)Lorg/telegram/ui/Components/RecyclerListView;
+    invoke-static {v0}, Lorg/telegram/ui/ChatActivity;->access$2300(Lorg/telegram/ui/ChatActivity;)Lorg/telegram/ui/Components/RecyclerListView;
 
     move-result-object v0
 
     invoke-virtual {v0}, Landroid/view/ViewGroup;->invalidate()V
 
-    .line 3057
+    .line 3086
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$13$1;->this$1:Lorg/telegram/ui/ChatActivity$13;
 
     iget-object v0, v0, Lorg/telegram/ui/ChatActivity$13;->this$0:Lorg/telegram/ui/ChatActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/ChatActivity;->access$9300(Lorg/telegram/ui/ChatActivity;)V
 
-    .line 3058
+    .line 3087
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$13$1;->this$1:Lorg/telegram/ui/ChatActivity$13;
 
     iget-object v0, v0, Lorg/telegram/ui/ChatActivity$13;->this$0:Lorg/telegram/ui/ChatActivity;
@@ -422,10 +422,10 @@
 
     if-eqz v0, :cond_c1
 
-    .line 3059
+    .line 3088
     invoke-virtual {v0, p1, p2, p3}, Lorg/telegram/ui/Components/ChatActivityEnterView;->onAdjustPanTransitionUpdate(FFZ)V
 
-    .line 3061
+    .line 3090
     :cond_c1
     iget-object p2, p0, Lorg/telegram/ui/ChatActivity$13$1;->this$1:Lorg/telegram/ui/ChatActivity$13;
 
@@ -435,7 +435,7 @@
 
     if-eqz p2, :cond_cc
 
-    .line 3062
+    .line 3091
     invoke-virtual {p2, p1}, Lorg/telegram/ui/Components/MentionsContainerView;->onPanTransitionUpdate(F)V
 
     :cond_cc
@@ -445,7 +445,7 @@
 .method protected onTransitionEnd()V
     .registers 2
 
-    .line 3027
+    .line 3056
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$13$1;->this$1:Lorg/telegram/ui/ChatActivity$13;
 
     iget-object v0, v0, Lorg/telegram/ui/ChatActivity$13;->this$0:Lorg/telegram/ui/ChatActivity;
@@ -454,10 +454,10 @@
 
     if-eqz v0, :cond_b
 
-    .line 3028
+    .line 3057
     invoke-virtual {v0}, Lorg/telegram/ui/Components/ChatActivityEnterView;->onAdjustPanTransitionEnd()V
 
-    .line 3030
+    .line 3059
     :cond_b
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$13$1;->this$1:Lorg/telegram/ui/ChatActivity$13;
 
@@ -467,7 +467,7 @@
 
     if-eqz v0, :cond_16
 
-    .line 3031
+    .line 3060
     invoke-virtual {v0}, Lorg/telegram/ui/Components/MentionsContainerView;->onPanTransitionEnd()V
 
     :cond_16
@@ -477,16 +477,16 @@
 .method protected onTransitionStart(ZI)V
     .registers 5
 
-    .line 3016
+    .line 3045
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$13$1;->this$1:Lorg/telegram/ui/ChatActivity$13;
 
     iget-object v0, v0, Lorg/telegram/ui/ChatActivity$13;->this$0:Lorg/telegram/ui/ChatActivity;
 
     const/4 v1, 0x1
 
-    invoke-static {v0, v1}, Lorg/telegram/ui/ChatActivity;->access$1302(Lorg/telegram/ui/ChatActivity;Z)Z
+    invoke-static {v0, v1}, Lorg/telegram/ui/ChatActivity;->access$1402(Lorg/telegram/ui/ChatActivity;Z)Z
 
-    .line 3017
+    .line 3046
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$13$1;->this$1:Lorg/telegram/ui/ChatActivity$13;
 
     iget-object v0, v0, Lorg/telegram/ui/ChatActivity$13;->this$0:Lorg/telegram/ui/ChatActivity;
@@ -495,10 +495,10 @@
 
     if-eqz v0, :cond_13
 
-    .line 3018
+    .line 3047
     invoke-virtual {v0, p1, p2}, Lorg/telegram/ui/Components/ChatActivityEnterView;->onAdjustPanTransitionStart(ZI)V
 
-    .line 3020
+    .line 3049
     :cond_13
     iget-object p1, p0, Lorg/telegram/ui/ChatActivity$13$1;->this$1:Lorg/telegram/ui/ChatActivity$13;
 
@@ -508,7 +508,7 @@
 
     if-eqz p1, :cond_1e
 
-    .line 3021
+    .line 3050
     invoke-virtual {p1}, Lorg/telegram/ui/Components/MentionsContainerView;->onPanTransitionStart()V
 
     :cond_1e
@@ -518,7 +518,7 @@
 .method protected startOffset()I
     .registers 3
 
-    .line 3086
+    .line 3115
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$13$1;->this$1:Lorg/telegram/ui/ChatActivity$13;
 
     invoke-virtual {v0}, Lorg/telegram/ui/Components/SizeNotifierFrameLayout;->getKeyboardHeight()I
@@ -527,7 +527,7 @@
 
     const/high16 v1, 0x41a00000    # 20.0f
 
-    .line 3087
+    .line 3116
     invoke-static {v1}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v1
@@ -546,7 +546,7 @@
 
     if-eqz v0, :cond_25
 
-    .line 3088
+    .line 3117
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$13$1;->this$1:Lorg/telegram/ui/ChatActivity$13;
 
     iget-object v0, v0, Lorg/telegram/ui/ChatActivity$13;->this$0:Lorg/telegram/ui/ChatActivity;

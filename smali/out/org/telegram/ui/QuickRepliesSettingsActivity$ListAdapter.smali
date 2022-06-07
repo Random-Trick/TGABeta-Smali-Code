@@ -222,7 +222,7 @@
 
     if-ne p2, v0, :cond_30
 
-    const v0, 0x7f0e0e70
+    const v0, 0x7f0e0f1b
 
     const-string v2, "QuickReplyDefault1"
 
@@ -252,7 +252,7 @@
 
     if-ne p2, v0, :cond_44
 
-    const v0, 0x7f0e0e71
+    const v0, 0x7f0e0f1c
 
     const-string v2, "QuickReplyDefault2"
 
@@ -275,7 +275,7 @@
 
     if-ne p2, v0, :cond_58
 
-    const v0, 0x7f0e0e72
+    const v0, 0x7f0e0f1d
 
     const-string v2, "QuickReplyDefault3"
 
@@ -298,7 +298,7 @@
 
     if-ne p2, v0, :cond_6c
 
-    const v0, 0x7f0e0e73
+    const v0, 0x7f0e0f1e
 
     const-string v2, "QuickReplyDefault4"
 
@@ -356,7 +356,7 @@
 
     check-cast p1, Lorg/telegram/ui/Cells/TextCheckCell;
 
-    const p2, 0x7f0e0154
+    const p2, 0x7f0e0181
 
     const-string v0, "AllowCustomQuickReply"
 
@@ -402,7 +402,7 @@
     .line 142
     iget-object p2, p0, Lorg/telegram/ui/QuickRepliesSettingsActivity$ListAdapter;->mContext:Landroid/content/Context;
 
-    const v0, 0x7f07012d
+    const v0, 0x7f0700fc
 
     const-string v1, "windowBackgroundGrayShadow"
 
@@ -412,7 +412,7 @@
 
     invoke-virtual {p1, p2}, Landroid/widget/FrameLayout;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    const p2, 0x7f0e139e
+    const p2, 0x7f0e146c
 
     const-string v0, "VoipQuickRepliesExplain"
 

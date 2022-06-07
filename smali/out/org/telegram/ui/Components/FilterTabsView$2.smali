@@ -30,7 +30,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/FilterTabsView;Ljava/lang/String;)V
     .registers 3
 
-    .line 693
+    .line 780
     iput-object p1, p0, Lorg/telegram/ui/Components/FilterTabsView$2;->this$0:Lorg/telegram/ui/Components/FilterTabsView;
 
     invoke-direct {p0, p2}, Lorg/telegram/ui/Components/AnimationProperties$FloatProperty;-><init>(Ljava/lang/String;)V
@@ -43,7 +43,7 @@
 .method public get(Lorg/telegram/ui/Components/FilterTabsView;)Ljava/lang/Float;
     .registers 2
 
-    .line 709
+    .line 796
     iget-object p1, p0, Lorg/telegram/ui/Components/FilterTabsView$2;->this$0:Lorg/telegram/ui/Components/FilterTabsView;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/FilterTabsView;->access$1500(Lorg/telegram/ui/Components/FilterTabsView;)F
@@ -60,7 +60,7 @@
 .method public bridge synthetic get(Ljava/lang/Object;)Ljava/lang/Object;
     .registers 2
 
-    .line 693
+    .line 780
     check-cast p1, Lorg/telegram/ui/Components/FilterTabsView;
 
     invoke-virtual {p0, p1}, Lorg/telegram/ui/Components/FilterTabsView$2;->get(Lorg/telegram/ui/Components/FilterTabsView;)Ljava/lang/Float;
@@ -73,7 +73,7 @@
 .method public bridge synthetic setValue(Ljava/lang/Object;F)V
     .registers 3
 
-    .line 693
+    .line 780
     check-cast p1, Lorg/telegram/ui/Components/FilterTabsView;
 
     invoke-virtual {p0, p1, p2}, Lorg/telegram/ui/Components/FilterTabsView$2;->setValue(Lorg/telegram/ui/Components/FilterTabsView;F)V
@@ -84,15 +84,15 @@
 .method public setValue(Lorg/telegram/ui/Components/FilterTabsView;F)V
     .registers 6
 
-    .line 696
+    .line 783
     iget-object v0, p0, Lorg/telegram/ui/Components/FilterTabsView$2;->this$0:Lorg/telegram/ui/Components/FilterTabsView;
 
     invoke-static {v0, p2}, Lorg/telegram/ui/Components/FilterTabsView;->access$1502(Lorg/telegram/ui/Components/FilterTabsView;F)F
 
-    .line 698
+    .line 785
     iget-object v0, p0, Lorg/telegram/ui/Components/FilterTabsView$2;->this$0:Lorg/telegram/ui/Components/FilterTabsView;
 
-    invoke-static {v0}, Lorg/telegram/ui/Components/FilterTabsView;->access$2600(Lorg/telegram/ui/Components/FilterTabsView;)Ljava/lang/String;
+    invoke-static {v0}, Lorg/telegram/ui/Components/FilterTabsView;->access$2900(Lorg/telegram/ui/Components/FilterTabsView;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -100,10 +100,10 @@
 
     move-result v0
 
-    .line 699
+    .line 786
     iget-object v1, p0, Lorg/telegram/ui/Components/FilterTabsView$2;->this$0:Lorg/telegram/ui/Components/FilterTabsView;
 
-    invoke-static {v1}, Lorg/telegram/ui/Components/FilterTabsView;->access$2700(Lorg/telegram/ui/Components/FilterTabsView;)Ljava/lang/String;
+    invoke-static {v1}, Lorg/telegram/ui/Components/FilterTabsView;->access$3000(Lorg/telegram/ui/Components/FilterTabsView;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -111,10 +111,10 @@
 
     move-result v1
 
-    .line 700
+    .line 787
     iget-object v2, p0, Lorg/telegram/ui/Components/FilterTabsView$2;->this$0:Lorg/telegram/ui/Components/FilterTabsView;
 
-    invoke-static {v2}, Lorg/telegram/ui/Components/FilterTabsView;->access$2800(Lorg/telegram/ui/Components/FilterTabsView;)Landroid/graphics/drawable/GradientDrawable;
+    invoke-static {v2}, Lorg/telegram/ui/Components/FilterTabsView;->access$3100(Lorg/telegram/ui/Components/FilterTabsView;)Landroid/graphics/drawable/GradientDrawable;
 
     move-result-object v2
 
@@ -124,25 +124,25 @@
 
     invoke-virtual {v2, p2}, Landroid/graphics/drawable/GradientDrawable;->setColor(I)V
 
-    .line 702
+    .line 789
     iget-object p2, p0, Lorg/telegram/ui/Components/FilterTabsView$2;->this$0:Lorg/telegram/ui/Components/FilterTabsView;
 
-    invoke-static {p2}, Lorg/telegram/ui/Components/FilterTabsView;->access$2900(Lorg/telegram/ui/Components/FilterTabsView;)Lorg/telegram/ui/Components/RecyclerListView;
+    invoke-static {p2}, Lorg/telegram/ui/Components/FilterTabsView;->access$3200(Lorg/telegram/ui/Components/FilterTabsView;)Lorg/telegram/ui/Components/RecyclerListView;
 
     move-result-object p2
 
     invoke-virtual {p2}, Lorg/telegram/ui/Components/RecyclerListView;->invalidateViews()V
 
-    .line 703
+    .line 790
     iget-object p2, p0, Lorg/telegram/ui/Components/FilterTabsView$2;->this$0:Lorg/telegram/ui/Components/FilterTabsView;
 
-    invoke-static {p2}, Lorg/telegram/ui/Components/FilterTabsView;->access$2900(Lorg/telegram/ui/Components/FilterTabsView;)Lorg/telegram/ui/Components/RecyclerListView;
+    invoke-static {p2}, Lorg/telegram/ui/Components/FilterTabsView;->access$3200(Lorg/telegram/ui/Components/FilterTabsView;)Lorg/telegram/ui/Components/RecyclerListView;
 
     move-result-object p2
 
     invoke-virtual {p2}, Landroid/view/ViewGroup;->invalidate()V
 
-    .line 704
+    .line 791
     invoke-virtual {p1}, Landroid/widget/FrameLayout;->invalidate()V
 
     return-void

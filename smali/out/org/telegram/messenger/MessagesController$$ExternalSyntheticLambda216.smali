@@ -6,16 +6,20 @@
 
 
 # instance fields
-.field public final synthetic f$0:Lorg/telegram/tgnet/TLObject;
+.field public final synthetic f$0:Lorg/telegram/messenger/MessagesStorage$LongCallback;
+
+.field public final synthetic f$1:Lorg/telegram/tgnet/TLRPC$Updates;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lorg/telegram/tgnet/TLObject;)V
-    .registers 2
+.method public synthetic constructor <init>(Lorg/telegram/messenger/MessagesStorage$LongCallback;Lorg/telegram/tgnet/TLRPC$Updates;)V
+    .registers 3
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lorg/telegram/messenger/MessagesController$$ExternalSyntheticLambda216;->f$0:Lorg/telegram/tgnet/TLObject;
+    iput-object p1, p0, Lorg/telegram/messenger/MessagesController$$ExternalSyntheticLambda216;->f$0:Lorg/telegram/messenger/MessagesStorage$LongCallback;
+
+    iput-object p2, p0, Lorg/telegram/messenger/MessagesController$$ExternalSyntheticLambda216;->f$1:Lorg/telegram/tgnet/TLRPC$Updates;
 
     return-void
 .end method
@@ -23,11 +27,13 @@
 
 # virtual methods
 .method public final run()V
-    .registers 2
+    .registers 3
 
-    iget-object v0, p0, Lorg/telegram/messenger/MessagesController$$ExternalSyntheticLambda216;->f$0:Lorg/telegram/tgnet/TLObject;
+    iget-object v0, p0, Lorg/telegram/messenger/MessagesController$$ExternalSyntheticLambda216;->f$0:Lorg/telegram/messenger/MessagesStorage$LongCallback;
 
-    invoke-static {v0}, Lorg/telegram/messenger/MessagesController;->$r8$lambda$D9PpqmuW1YgAQXWhczYAeSsbNQw(Lorg/telegram/tgnet/TLObject;)V
+    iget-object v1, p0, Lorg/telegram/messenger/MessagesController$$ExternalSyntheticLambda216;->f$1:Lorg/telegram/tgnet/TLRPC$Updates;
+
+    invoke-static {v0, v1}, Lorg/telegram/messenger/MessagesController;->$r8$lambda$G7nMTXg8FGHT1G4VRxMQit6bGII(Lorg/telegram/messenger/MessagesStorage$LongCallback;Lorg/telegram/tgnet/TLRPC$Updates;)V
 
     return-void
 .end method

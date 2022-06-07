@@ -25,7 +25,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/GroupCallRecordAlert;)V
     .registers 2
 
-    .line 122
+    .line 124
     iput-object p1, p0, Lorg/telegram/ui/Components/GroupCallRecordAlert$2;->this$0:Lorg/telegram/ui/Components/GroupCallRecordAlert;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,17 +44,17 @@
 .method public onPageScrolled(IFI)V
     .registers 4
 
-    .line 126
+    .line 128
     iget-object p3, p0, Lorg/telegram/ui/Components/GroupCallRecordAlert$2;->this$0:Lorg/telegram/ui/Components/GroupCallRecordAlert;
 
     invoke-static {p3, p1}, Lorg/telegram/ui/Components/GroupCallRecordAlert;->access$502(Lorg/telegram/ui/Components/GroupCallRecordAlert;I)I
 
-    .line 127
+    .line 129
     iget-object p1, p0, Lorg/telegram/ui/Components/GroupCallRecordAlert$2;->this$0:Lorg/telegram/ui/Components/GroupCallRecordAlert;
 
     invoke-static {p1, p2}, Lorg/telegram/ui/Components/GroupCallRecordAlert;->access$602(Lorg/telegram/ui/Components/GroupCallRecordAlert;F)F
 
-    .line 128
+    .line 130
     iget-object p1, p0, Lorg/telegram/ui/Components/GroupCallRecordAlert$2;->this$0:Lorg/telegram/ui/Components/GroupCallRecordAlert;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/GroupCallRecordAlert;->access$300(Lorg/telegram/ui/Components/GroupCallRecordAlert;)V

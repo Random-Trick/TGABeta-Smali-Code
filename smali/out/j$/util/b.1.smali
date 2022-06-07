@@ -12,7 +12,7 @@
 .method public abstract k(Lj$/util/function/Predicate;)Z
 .end method
 
-.method public abstract spliterator()Lj$/util/y;
+.method public abstract spliterator()Lj$/util/u;
 .end method
 
 .method public abstract stream()Lj$/util/stream/Stream;

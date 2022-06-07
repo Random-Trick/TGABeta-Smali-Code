@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/CalendarActivity;)V
     .registers 2
 
-    .line 1300
+    .line 1299
     iput-object p1, p0, Lorg/telegram/ui/CalendarActivity$9;->this$0:Lorg/telegram/ui/CalendarActivity;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -37,7 +37,7 @@
 
     const/4 p1, 0x0
 
-    .line 1303
+    .line 1302
     :goto_1
     iget-object v0, p0, Lorg/telegram/ui/CalendarActivity$9;->this$0:Lorg/telegram/ui/CalendarActivity;
 
@@ -49,7 +49,7 @@
 
     if-ge p1, v0, :cond_27
 
-    .line 1304
+    .line 1303
     iget-object v0, p0, Lorg/telegram/ui/CalendarActivity$9;->this$0:Lorg/telegram/ui/CalendarActivity;
 
     iget-object v0, v0, Lorg/telegram/ui/CalendarActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
@@ -60,7 +60,7 @@
 
     check-cast v0, Lorg/telegram/ui/CalendarActivity$MonthView;
 
-    .line 1305
+    .line 1304
     iget-object v1, p0, Lorg/telegram/ui/CalendarActivity$9;->this$0:Lorg/telegram/ui/CalendarActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/CalendarActivity;->access$300(Lorg/telegram/ui/CalendarActivity;)I

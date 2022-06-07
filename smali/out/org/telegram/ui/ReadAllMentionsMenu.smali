@@ -57,14 +57,14 @@
 
     if-nez p0, :cond_23
 
-    const p0, 0x7f0e0e97
+    const p0, 0x7f0e0f43
 
     const-string p1, "ReadAllReactions"
 
     goto :goto_28
 
     :cond_23
-    const p0, 0x7f0e0e96
+    const p0, 0x7f0e0f42
 
     const-string p1, "ReadAllMentions"
 
@@ -74,7 +74,7 @@
 
     move-result-object p0
 
-    const p1, 0x7f0702c9
+    const p1, 0x7f0702e6
 
     invoke-virtual {v2, p0, p1}, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;->setTextAndIcon(Ljava/lang/CharSequence;I)V
 

@@ -30,7 +30,7 @@
 .method constructor <init>(Lorg/telegram/messenger/ImageLoader;I)V
     .registers 3
 
-    .line 1854
+    .line 1861
     iput-object p1, p0, Lorg/telegram/messenger/ImageLoader$3;->this$0:Lorg/telegram/messenger/ImageLoader;
 
     invoke-direct {p0, p2}, Lorg/telegram/messenger/LruCache;-><init>(I)V
@@ -43,7 +43,7 @@
 .method protected sizeOf(Ljava/lang/String;Landroid/graphics/drawable/BitmapDrawable;)I
     .registers 3
 
-    .line 1857
+    .line 1864
     invoke-virtual {p2}, Landroid/graphics/drawable/BitmapDrawable;->getBitmap()Landroid/graphics/Bitmap;
 
     move-result-object p1
@@ -58,7 +58,7 @@
 .method protected bridge synthetic sizeOf(Ljava/lang/String;Ljava/lang/Object;)I
     .registers 3
 
-    .line 1854
+    .line 1861
     check-cast p2, Landroid/graphics/drawable/BitmapDrawable;
 
     invoke-virtual {p0, p1, p2}, Lorg/telegram/messenger/ImageLoader$3;->sizeOf(Ljava/lang/String;Landroid/graphics/drawable/BitmapDrawable;)I

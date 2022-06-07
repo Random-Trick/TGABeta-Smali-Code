@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lorg/telegram/ui/FilteredSearchView$Delegate;
+.implements Lorg/telegram/ui/ActionBar/ActionBarPopupWindow$OnDispatchKeyEventListener;
 
 
 # instance fields
@@ -22,12 +22,12 @@
 
 
 # virtual methods
-.method public final updateFiltersView(ZLjava/util/ArrayList;Ljava/util/ArrayList;Z)V
-    .registers 6
+.method public final onDispatchKeyEvent(Landroid/view/KeyEvent;)V
+    .registers 3
 
     iget-object v0, p0, Lorg/telegram/ui/DialogsActivity$$ExternalSyntheticLambda52;->f$0:Lorg/telegram/ui/DialogsActivity;
 
-    invoke-static {v0, p1, p2, p3, p4}, Lorg/telegram/ui/DialogsActivity;->$r8$lambda$ZAeuMoLMXUZg-P82Kogy30TpZz0(Lorg/telegram/ui/DialogsActivity;ZLjava/util/ArrayList;Ljava/util/ArrayList;Z)V
+    invoke-static {v0, p1}, Lorg/telegram/ui/DialogsActivity;->$r8$lambda$spm7sFINSQa24ingH6NLv2PNCfM(Lorg/telegram/ui/DialogsActivity;Landroid/view/KeyEvent;)V
 
     return-void
 .end method

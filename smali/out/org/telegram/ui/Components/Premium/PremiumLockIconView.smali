@@ -3,12 +3,18 @@
 .source "PremiumLockIconView.java"
 
 
+# static fields
+.field public static TYPE_REACTIONS:I = 0x0
+
+.field public static TYPE_STICKERS:I = 0x1
+
+
 # instance fields
 .field color1:I
 
 .field color2:I
 
-.field colorFloat:[F
+.field private colorFloat:[F
 
 .field currentColor:I
 
@@ -24,43 +30,51 @@
 
 .field shaderCrossfadeProgress:F
 
+.field private final type:I
+
 .field waitingImage:Z
 
 .field wasDrawn:Z
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .registers 3
+.method static constructor <clinit>()V
+    .registers 0
 
-    .line 22
-    invoke-direct {p0, p1}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
+    return-void
+.end method
 
-    const/4 p1, -0x1
-
-    .line 26
-    iput p1, p0, Lorg/telegram/ui/Components/Premium/PremiumLockIconView;->currentColor:I
-
-    const/4 p1, 0x0
+.method public constructor <init>(Landroid/content/Context;I)V
+    .registers 4
 
     .line 28
-    iput-object p1, p0, Lorg/telegram/ui/Components/Premium/PremiumLockIconView;->shader:Landroid/graphics/Shader;
+    invoke-direct {p0, p1}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
 
     const/4 p1, 0x3
 
     new-array p1, p1, [F
 
-    .line 30
+    .line 25
     iput-object p1, p0, Lorg/telegram/ui/Components/Premium/PremiumLockIconView;->colorFloat:[F
 
-    .line 31
+    const/4 p1, -0x1
+
+    .line 33
+    iput p1, p0, Lorg/telegram/ui/Components/Premium/PremiumLockIconView;->currentColor:I
+
+    const/4 p1, 0x0
+
+    .line 35
+    iput-object p1, p0, Lorg/telegram/ui/Components/Premium/PremiumLockIconView;->shader:Landroid/graphics/Shader;
+
+    .line 37
     new-instance p1, Landroid/graphics/Path;
 
     invoke-direct {p1}, Landroid/graphics/Path;-><init>()V
 
     iput-object p1, p0, Lorg/telegram/ui/Components/Premium/PremiumLockIconView;->path:Landroid/graphics/Path;
 
-    .line 32
+    .line 38
     new-instance p1, Landroid/graphics/Paint;
 
     const/4 v0, 0x1
@@ -71,12 +85,25 @@
 
     const/high16 p1, 0x3f800000    # 1.0f
 
-    .line 35
+    .line 41
     iput p1, p0, Lorg/telegram/ui/Components/Premium/PremiumLockIconView;->shaderCrossfadeProgress:F
 
-    const p1, 0x7f0702a7
+    .line 29
+    iput p2, p0, Lorg/telegram/ui/Components/Premium/PremiumLockIconView;->type:I
 
-    .line 23
+    .line 30
+    sget p1, Lorg/telegram/ui/Components/Premium/PremiumLockIconView;->TYPE_REACTIONS:I
+
+    if-ne p2, p1, :cond_2b
+
+    const p1, 0x7f0702b1
+
+    goto :goto_2e
+
+    :cond_2b
+    const p1, 0x7f07026d
+
+    :goto_2e
     invoke-virtual {p0, p1}, Landroid/widget/ImageView;->setImageResource(I)V
 
     return-void
@@ -215,28 +242,28 @@
 .method private updateGradient()V
     .registers 14
 
-    .line 60
+    .line 148
     invoke-virtual {p0}, Landroid/widget/ImageView;->getMeasuredHeight()I
 
     move-result v0
 
-    if-eqz v0, :cond_82
+    if-eqz v0, :cond_8e
 
     invoke-virtual {p0}, Landroid/widget/ImageView;->getMeasuredWidth()I
 
     move-result v0
 
-    if-eqz v0, :cond_82
+    if-eqz v0, :cond_8e
 
-    .line 61
+    .line 149
     iget v0, p0, Lorg/telegram/ui/Components/Premium/PremiumLockIconView;->currentColor:I
 
-    .line 63
+    .line 151
     iget-object v1, p0, Lorg/telegram/ui/Components/Premium/PremiumLockIconView;->colorFloat:[F
 
     invoke-static {v0, v1}, Landroid/graphics/Color;->colorToHSV(I[F)V
 
-    .line 64
+    .line 152
     iget-object v0, p0, Lorg/telegram/ui/Components/Premium/PremiumLockIconView;->colorFloat:[F
 
     const/4 v1, 0x1
@@ -251,7 +278,7 @@
 
     const/4 v2, 0x2
 
-    .line 65
+    .line 153
     aget v3, v0, v2
 
     const v4, 0x3f333333    # 0.7f
@@ -260,68 +287,83 @@
 
     if-lez v3, :cond_2a
 
-    .line 66
+    .line 154
     aput v4, v0, v2
 
-    .line 68
+    .line 156
     :cond_2a
     invoke-static {v0}, Landroid/graphics/Color;->HSVToColor([F)I
 
     move-result v0
 
-    const/4 v3, -0x1
+    const-string v3, "windowBackgroundWhite"
 
-    const/high16 v4, 0x3f000000    # 0.5f
+    .line 158
+    invoke-static {v3}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
 
-    .line 69
-    invoke-static {v0, v3, v4}, Landroidx/core/graphics/ColorUtils;->blendARGB(IIF)I
+    move-result v4
+
+    const/high16 v5, 0x3f000000    # 0.5f
+
+    invoke-static {v0, v4, v5}, Landroidx/core/graphics/ColorUtils;->blendARGB(IIF)I
+
+    move-result v4
+
+    .line 159
+    invoke-static {v3}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
 
     move-result v3
 
-    .line 71
-    iget-object v4, p0, Lorg/telegram/ui/Components/Premium/PremiumLockIconView;->shader:Landroid/graphics/Shader;
+    const v5, 0x3ecccccd    # 0.4f
 
-    if-eqz v4, :cond_41
+    invoke-static {v0, v3, v5}, Landroidx/core/graphics/ColorUtils;->blendARGB(IIF)I
 
-    iget v4, p0, Lorg/telegram/ui/Components/Premium/PremiumLockIconView;->color1:I
+    move-result v0
 
-    if-ne v4, v0, :cond_41
+    .line 161
+    iget-object v3, p0, Lorg/telegram/ui/Components/Premium/PremiumLockIconView;->shader:Landroid/graphics/Shader;
 
-    iget v4, p0, Lorg/telegram/ui/Components/Premium/PremiumLockIconView;->color2:I
+    if-eqz v3, :cond_51
 
-    if-eq v4, v3, :cond_82
+    iget v3, p0, Lorg/telegram/ui/Components/Premium/PremiumLockIconView;->color1:I
 
-    .line 72
-    :cond_41
-    iget-boolean v4, p0, Lorg/telegram/ui/Components/Premium/PremiumLockIconView;->wasDrawn:Z
+    if-ne v3, v0, :cond_51
 
-    if-eqz v4, :cond_51
+    iget v3, p0, Lorg/telegram/ui/Components/Premium/PremiumLockIconView;->color2:I
 
-    .line 73
-    iget-object v4, p0, Lorg/telegram/ui/Components/Premium/PremiumLockIconView;->paint:Landroid/graphics/Paint;
+    if-eq v3, v4, :cond_8e
 
-    iput-object v4, p0, Lorg/telegram/ui/Components/Premium/PremiumLockIconView;->oldShaderPaint:Landroid/graphics/Paint;
+    .line 162
+    :cond_51
+    iget-boolean v3, p0, Lorg/telegram/ui/Components/Premium/PremiumLockIconView;->wasDrawn:Z
+
+    if-eqz v3, :cond_61
+
+    .line 163
+    iget-object v3, p0, Lorg/telegram/ui/Components/Premium/PremiumLockIconView;->paint:Landroid/graphics/Paint;
+
+    iput-object v3, p0, Lorg/telegram/ui/Components/Premium/PremiumLockIconView;->oldShaderPaint:Landroid/graphics/Paint;
 
     const/16 v5, 0xff
 
-    .line 74
-    invoke-virtual {v4, v5}, Landroid/graphics/Paint;->setAlpha(I)V
+    .line 164
+    invoke-virtual {v3, v5}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    const/4 v4, 0x0
+    const/4 v3, 0x0
 
-    .line 75
-    iput v4, p0, Lorg/telegram/ui/Components/Premium/PremiumLockIconView;->shaderCrossfadeProgress:F
+    .line 165
+    iput v3, p0, Lorg/telegram/ui/Components/Premium/PremiumLockIconView;->shaderCrossfadeProgress:F
 
-    .line 77
-    :cond_51
-    new-instance v4, Landroid/graphics/Paint;
+    .line 167
+    :cond_61
+    new-instance v3, Landroid/graphics/Paint;
 
-    invoke-direct {v4, v1}, Landroid/graphics/Paint;-><init>(I)V
+    invoke-direct {v3, v1}, Landroid/graphics/Paint;-><init>(I)V
 
-    iput-object v4, p0, Lorg/telegram/ui/Components/Premium/PremiumLockIconView;->paint:Landroid/graphics/Paint;
+    iput-object v3, p0, Lorg/telegram/ui/Components/Premium/PremiumLockIconView;->paint:Landroid/graphics/Paint;
 
-    .line 78
-    new-instance v4, Landroid/graphics/LinearGradient;
+    .line 168
+    new-instance v3, Landroid/graphics/LinearGradient;
 
     const/4 v6, 0x0
 
@@ -331,11 +373,7 @@
 
     int-to-float v7, v5
 
-    invoke-virtual {p0}, Landroid/widget/ImageView;->getMeasuredWidth()I
-
-    move-result v5
-
-    int-to-float v8, v5
+    const/4 v8, 0x0
 
     const/4 v9, 0x0
 
@@ -347,43 +385,43 @@
 
     aput v0, v10, v2
 
-    iput v3, p0, Lorg/telegram/ui/Components/Premium/PremiumLockIconView;->color2:I
+    iput v4, p0, Lorg/telegram/ui/Components/Premium/PremiumLockIconView;->color2:I
 
-    aput v3, v10, v1
+    aput v4, v10, v1
 
     const/4 v11, 0x0
 
     sget-object v12, Landroid/graphics/Shader$TileMode;->CLAMP:Landroid/graphics/Shader$TileMode;
 
-    move-object v5, v4
+    move-object v5, v3
 
     invoke-direct/range {v5 .. v12}, Landroid/graphics/LinearGradient;-><init>(FFFF[I[FLandroid/graphics/Shader$TileMode;)V
 
-    iput-object v4, p0, Lorg/telegram/ui/Components/Premium/PremiumLockIconView;->shader:Landroid/graphics/Shader;
+    iput-object v3, p0, Lorg/telegram/ui/Components/Premium/PremiumLockIconView;->shader:Landroid/graphics/Shader;
 
-    .line 79
+    .line 169
     iget-object v0, p0, Lorg/telegram/ui/Components/Premium/PremiumLockIconView;->paint:Landroid/graphics/Paint;
 
-    invoke-virtual {v0, v4}, Landroid/graphics/Paint;->setShader(Landroid/graphics/Shader;)Landroid/graphics/Shader;
+    invoke-virtual {v0, v3}, Landroid/graphics/Paint;->setShader(Landroid/graphics/Shader;)Landroid/graphics/Shader;
 
-    .line 80
+    .line 170
     invoke-virtual {p0}, Landroid/widget/ImageView;->invalidate()V
 
-    :cond_82
+    :cond_8e
     return-void
 .end method
 
 
 # virtual methods
 .method protected onDraw(Landroid/graphics/Canvas;)V
-    .registers 6
+    .registers 11
 
-    .line 87
+    .line 75
     iget-boolean v0, p0, Lorg/telegram/ui/Components/Premium/PremiumLockIconView;->waitingImage:Z
 
     if-eqz v0, :cond_20
 
-    .line 88
+    .line 76
     iget-object v0, p0, Lorg/telegram/ui/Components/Premium/PremiumLockIconView;->imageReceiver:Lorg/telegram/messenger/ImageReceiver;
 
     invoke-virtual {v0}, Lorg/telegram/messenger/ImageReceiver;->getBitmap()Landroid/graphics/Bitmap;
@@ -394,10 +432,10 @@
 
     const/4 v0, 0x0
 
-    .line 89
+    .line 77
     iput-boolean v0, p0, Lorg/telegram/ui/Components/Premium/PremiumLockIconView;->waitingImage:Z
 
-    .line 90
+    .line 78
     iget-object v0, p0, Lorg/telegram/ui/Components/Premium/PremiumLockIconView;->imageReceiver:Lorg/telegram/messenger/ImageReceiver;
 
     invoke-virtual {v0}, Lorg/telegram/messenger/ImageReceiver;->getBitmap()Landroid/graphics/Bitmap;
@@ -412,104 +450,187 @@
 
     goto :goto_20
 
-    .line 92
+    .line 80
     :cond_1d
     invoke-virtual {p0}, Landroid/widget/ImageView;->invalidate()V
 
-    .line 95
+    .line 83
     :cond_20
     :goto_20
-    iget-object v0, p0, Lorg/telegram/ui/Components/Premium/PremiumLockIconView;->oldShaderPaint:Landroid/graphics/Paint;
+    iget v0, p0, Lorg/telegram/ui/Components/Premium/PremiumLockIconView;->type:I
 
-    const/high16 v1, 0x3f800000    # 1.0f
+    sget v1, Lorg/telegram/ui/Components/Premium/PremiumLockIconView;->TYPE_REACTIONS:I
 
-    if-nez v0, :cond_28
+    if-ne v0, v1, :cond_5b
 
-    .line 96
-    iput v1, p0, Lorg/telegram/ui/Components/Premium/PremiumLockIconView;->shaderCrossfadeProgress:F
+    .line 84
+    iget v0, p0, Lorg/telegram/ui/Components/Premium/PremiumLockIconView;->currentColor:I
 
-    .line 98
-    :cond_28
-    iget v0, p0, Lorg/telegram/ui/Components/Premium/PremiumLockIconView;->shaderCrossfadeProgress:F
+    if-eqz v0, :cond_33
 
-    cmpl-float v2, v0, v1
-
-    if-eqz v2, :cond_62
-
-    .line 99
-    iget-object v2, p0, Lorg/telegram/ui/Components/Premium/PremiumLockIconView;->paint:Landroid/graphics/Paint;
-
-    const/high16 v3, 0x437f0000    # 255.0f
-
-    mul-float v0, v0, v3
-
-    float-to-int v0, v0
-
-    invoke-virtual {v2, v0}, Landroid/graphics/Paint;->setAlpha(I)V
-
-    .line 100
-    iget-object v0, p0, Lorg/telegram/ui/Components/Premium/PremiumLockIconView;->path:Landroid/graphics/Path;
-
-    iget-object v2, p0, Lorg/telegram/ui/Components/Premium/PremiumLockIconView;->oldShaderPaint:Landroid/graphics/Paint;
-
-    invoke-virtual {p1, v0, v2}, Landroid/graphics/Canvas;->drawPath(Landroid/graphics/Path;Landroid/graphics/Paint;)V
-
-    .line 101
-    iget-object v0, p0, Lorg/telegram/ui/Components/Premium/PremiumLockIconView;->path:Landroid/graphics/Path;
-
-    iget-object v2, p0, Lorg/telegram/ui/Components/Premium/PremiumLockIconView;->paint:Landroid/graphics/Paint;
-
-    invoke-virtual {p1, v0, v2}, Landroid/graphics/Canvas;->drawPath(Landroid/graphics/Path;Landroid/graphics/Paint;)V
-
-    .line 102
-    iget v0, p0, Lorg/telegram/ui/Components/Premium/PremiumLockIconView;->shaderCrossfadeProgress:F
-
-    const v2, 0x3dda740e
-
-    add-float/2addr v0, v2
-
-    iput v0, p0, Lorg/telegram/ui/Components/Premium/PremiumLockIconView;->shaderCrossfadeProgress:F
-
-    cmpl-float v0, v0, v1
-
-    if-lez v0, :cond_57
-
-    .line 104
-    iput v1, p0, Lorg/telegram/ui/Components/Premium/PremiumLockIconView;->shaderCrossfadeProgress:F
-
-    const/4 v0, 0x0
-
-    .line 105
-    iput-object v0, p0, Lorg/telegram/ui/Components/Premium/PremiumLockIconView;->oldShaderPaint:Landroid/graphics/Paint;
-
-    .line 107
-    :cond_57
-    invoke-virtual {p0}, Landroid/widget/ImageView;->invalidate()V
-
-    .line 108
-    iget-object v0, p0, Lorg/telegram/ui/Components/Premium/PremiumLockIconView;->paint:Landroid/graphics/Paint;
-
-    const/16 v1, 0xff
-
-    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setAlpha(I)V
-
-    goto :goto_69
-
-    .line 110
-    :cond_62
+    .line 85
     iget-object v0, p0, Lorg/telegram/ui/Components/Premium/PremiumLockIconView;->path:Landroid/graphics/Path;
 
     iget-object v1, p0, Lorg/telegram/ui/Components/Premium/PremiumLockIconView;->paint:Landroid/graphics/Paint;
 
     invoke-virtual {p1, v0, v1}, Landroid/graphics/Canvas;->drawPath(Landroid/graphics/Path;Landroid/graphics/Paint;)V
 
-    .line 112
-    :goto_69
+    goto/16 :goto_ac
+
+    .line 87
+    :cond_33
+    invoke-static {}, Lorg/telegram/ui/Components/Premium/PremiumGradient;->getInstance()Lorg/telegram/ui/Components/Premium/PremiumGradient;
+
+    move-result-object v2
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x0
+
+    invoke-virtual {p0}, Landroid/widget/ImageView;->getMeasuredWidth()I
+
+    move-result v5
+
+    invoke-virtual {p0}, Landroid/widget/ImageView;->getMeasuredHeight()I
+
+    move-result v6
+
+    const/high16 v0, 0x41c00000    # 24.0f
+
+    invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
+
+    move-result v0
+
+    neg-int v0, v0
+
+    int-to-float v7, v0
+
+    const/4 v8, 0x0
+
+    invoke-virtual/range {v2 .. v8}, Lorg/telegram/ui/Components/Premium/PremiumGradient;->updateMainGradientMatrix(IIIIFF)V
+
+    .line 88
+    iget-object v0, p0, Lorg/telegram/ui/Components/Premium/PremiumLockIconView;->path:Landroid/graphics/Path;
+
+    invoke-static {}, Lorg/telegram/ui/Components/Premium/PremiumGradient;->getInstance()Lorg/telegram/ui/Components/Premium/PremiumGradient;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lorg/telegram/ui/Components/Premium/PremiumGradient;->getMainGradientPaint()Landroid/graphics/Paint;
+
+    move-result-object v1
+
+    invoke-virtual {p1, v0, v1}, Landroid/graphics/Canvas;->drawPath(Landroid/graphics/Path;Landroid/graphics/Paint;)V
+
+    goto :goto_ac
+
+    .line 91
+    :cond_5b
+    invoke-virtual {p0}, Landroid/widget/ImageView;->getMeasuredWidth()I
+
+    move-result v0
+
+    int-to-float v0, v0
+
+    const/high16 v1, 0x40000000    # 2.0f
+
+    div-float/2addr v0, v1
+
+    .line 92
+    invoke-virtual {p0}, Landroid/widget/ImageView;->getMeasuredHeight()I
+
+    move-result v2
+
+    int-to-float v2, v2
+
+    div-float/2addr v2, v1
+
+    .line 93
+    iget-object v1, p0, Lorg/telegram/ui/Components/Premium/PremiumLockIconView;->oldShaderPaint:Landroid/graphics/Paint;
+
+    const/high16 v3, 0x3f800000    # 1.0f
+
+    if-nez v1, :cond_71
+
+    .line 94
+    iput v3, p0, Lorg/telegram/ui/Components/Premium/PremiumLockIconView;->shaderCrossfadeProgress:F
+
+    .line 96
+    :cond_71
+    iget v1, p0, Lorg/telegram/ui/Components/Premium/PremiumLockIconView;->shaderCrossfadeProgress:F
+
+    cmpl-float v4, v1, v3
+
+    if-eqz v4, :cond_a7
+
+    .line 97
+    iget-object v4, p0, Lorg/telegram/ui/Components/Premium/PremiumLockIconView;->paint:Landroid/graphics/Paint;
+
+    const/high16 v5, 0x437f0000    # 255.0f
+
+    mul-float v1, v1, v5
+
+    float-to-int v1, v1
+
+    invoke-virtual {v4, v1}, Landroid/graphics/Paint;->setAlpha(I)V
+
+    .line 98
+    iget-object v1, p0, Lorg/telegram/ui/Components/Premium/PremiumLockIconView;->oldShaderPaint:Landroid/graphics/Paint;
+
+    invoke-virtual {p1, v0, v2, v0, v1}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
+
+    .line 99
+    iget-object v1, p0, Lorg/telegram/ui/Components/Premium/PremiumLockIconView;->paint:Landroid/graphics/Paint;
+
+    invoke-virtual {p1, v0, v2, v0, v1}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
+
+    .line 100
+    iget v0, p0, Lorg/telegram/ui/Components/Premium/PremiumLockIconView;->shaderCrossfadeProgress:F
+
+    const v1, 0x3dda740e
+
+    add-float/2addr v0, v1
+
+    iput v0, p0, Lorg/telegram/ui/Components/Premium/PremiumLockIconView;->shaderCrossfadeProgress:F
+
+    cmpl-float v0, v0, v3
+
+    if-lez v0, :cond_9c
+
+    .line 102
+    iput v3, p0, Lorg/telegram/ui/Components/Premium/PremiumLockIconView;->shaderCrossfadeProgress:F
+
+    const/4 v0, 0x0
+
+    .line 103
+    iput-object v0, p0, Lorg/telegram/ui/Components/Premium/PremiumLockIconView;->oldShaderPaint:Landroid/graphics/Paint;
+
+    .line 105
+    :cond_9c
+    invoke-virtual {p0}, Landroid/widget/ImageView;->invalidate()V
+
+    .line 106
+    iget-object v0, p0, Lorg/telegram/ui/Components/Premium/PremiumLockIconView;->paint:Landroid/graphics/Paint;
+
+    const/16 v1, 0xff
+
+    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setAlpha(I)V
+
+    goto :goto_ac
+
+    .line 108
+    :cond_a7
+    iget-object v1, p0, Lorg/telegram/ui/Components/Premium/PremiumLockIconView;->paint:Landroid/graphics/Paint;
+
+    invoke-virtual {p1, v0, v2, v0, v1}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
+
+    .line 111
+    :goto_ac
     invoke-super {p0, p1}, Landroid/widget/ImageView;->onDraw(Landroid/graphics/Canvas;)V
 
     const/4 p1, 0x1
 
-    .line 113
+    .line 112
     iput-boolean p1, p0, Lorg/telegram/ui/Components/Premium/PremiumLockIconView;->wasDrawn:Z
 
     return-void
@@ -518,15 +639,22 @@
 .method protected onMeasure(II)V
     .registers 8
 
-    .line 41
+    .line 47
     invoke-super {p0, p1, p2}, Landroid/widget/ImageView;->onMeasure(II)V
 
-    .line 42
+    .line 48
+    iget p1, p0, Lorg/telegram/ui/Components/Premium/PremiumLockIconView;->type:I
+
+    sget p2, Lorg/telegram/ui/Components/Premium/PremiumLockIconView;->TYPE_REACTIONS:I
+
+    if-ne p1, p2, :cond_7d
+
+    .line 49
     iget-object p1, p0, Lorg/telegram/ui/Components/Premium/PremiumLockIconView;->path:Landroid/graphics/Path;
 
     invoke-virtual {p1}, Landroid/graphics/Path;->rewind()V
 
-    .line 43
+    .line 50
     sget-object p1, Lorg/telegram/messenger/AndroidUtilities;->rectTmp:Landroid/graphics/RectF;
 
     invoke-virtual {p0}, Landroid/widget/ImageView;->getMeasuredWidth()I
@@ -545,7 +673,7 @@
 
     invoke-virtual {p1, v1, v1, p2, v0}, Landroid/graphics/RectF;->set(FFFF)V
 
-    .line 44
+    .line 51
     iget-object p2, p0, Lorg/telegram/ui/Components/Premium/PremiumLockIconView;->path:Landroid/graphics/Path;
 
     invoke-virtual {p1}, Landroid/graphics/RectF;->width()F
@@ -570,7 +698,7 @@
 
     invoke-virtual {p2, v0, v2, v3, v4}, Landroid/graphics/Path;->addCircle(FFFLandroid/graphics/Path$Direction;)V
 
-    .line 45
+    .line 52
     invoke-virtual {p0}, Landroid/widget/ImageView;->getMeasuredWidth()I
 
     move-result p2
@@ -579,7 +707,7 @@
 
     div-float/2addr p2, v1
 
-    const/high16 v0, 0x3fc00000    # 1.5f
+    const/high16 v0, 0x40200000    # 2.5f
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
@@ -597,7 +725,7 @@
 
     div-float/2addr v0, v1
 
-    const v2, 0x40966666    # 4.7f
+    const v2, 0x40b66666    # 5.7f
 
     invoke-static {v2}, Lorg/telegram/messenger/AndroidUtilities;->dpf2(F)F
 
@@ -627,7 +755,7 @@
 
     invoke-virtual {p1, p2, v0, v2, v3}, Landroid/graphics/RectF;->set(FFFF)V
 
-    .line 46
+    .line 53
     iget-object p2, p0, Lorg/telegram/ui/Components/Premium/PremiumLockIconView;->path:Landroid/graphics/Path;
 
     invoke-static {v1}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -646,43 +774,68 @@
 
     invoke-virtual {p2, p1, v0, v1, v2}, Landroid/graphics/Path;->addRoundRect(Landroid/graphics/RectF;FFLandroid/graphics/Path$Direction;)V
 
-    .line 47
+    .line 54
     iget-object p1, p0, Lorg/telegram/ui/Components/Premium/PremiumLockIconView;->path:Landroid/graphics/Path;
 
     invoke-virtual {p1}, Landroid/graphics/Path;->close()V
 
-    .line 48
+    goto :goto_80
+
+    .line 56
+    :cond_7d
     invoke-direct {p0}, Lorg/telegram/ui/Components/Premium/PremiumLockIconView;->updateGradient()V
 
+    :goto_80
     return-void
 .end method
 
 .method public setColor(I)V
-    .registers 3
+    .registers 4
 
-    .line 52
+    .line 61
     iget v0, p0, Lorg/telegram/ui/Components/Premium/PremiumLockIconView;->currentColor:I
 
-    if-eq v0, p1, :cond_c
+    if-eq v0, p1, :cond_18
 
-    .line 53
+    .line 62
     iput p1, p0, Lorg/telegram/ui/Components/Premium/PremiumLockIconView;->currentColor:I
 
-    .line 54
+    .line 63
+    iget v0, p0, Lorg/telegram/ui/Components/Premium/PremiumLockIconView;->type:I
+
+    sget v1, Lorg/telegram/ui/Components/Premium/PremiumLockIconView;->TYPE_REACTIONS:I
+
+    if-ne v0, v1, :cond_12
+
+    .line 64
+    iget-object v0, p0, Lorg/telegram/ui/Components/Premium/PremiumLockIconView;->paint:Landroid/graphics/Paint;
+
+    invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColor(I)V
+
+    goto :goto_15
+
+    .line 66
+    :cond_12
     invoke-direct {p0}, Lorg/telegram/ui/Components/Premium/PremiumLockIconView;->updateGradient()V
 
-    .line 55
+    .line 68
+    :goto_15
     invoke-virtual {p0}, Landroid/widget/ImageView;->invalidate()V
 
-    :cond_c
+    :cond_18
     return-void
 .end method
 
 .method public setImageReceiver(Lorg/telegram/messenger/ImageReceiver;)V
     .registers 2
 
-    .line 117
+    .line 116
     iput-object p1, p0, Lorg/telegram/ui/Components/Premium/PremiumLockIconView;->imageReceiver:Lorg/telegram/messenger/ImageReceiver;
+
+    const/4 p1, 0x1
+
+    .line 117
+    iput-boolean p1, p0, Lorg/telegram/ui/Components/Premium/PremiumLockIconView;->waitingImage:Z
 
     return-void
 .end method
@@ -692,15 +845,15 @@
 
     const/4 v0, 0x1
 
-    .line 148
+    .line 176
     iput-boolean v0, p0, Lorg/telegram/ui/Components/Premium/PremiumLockIconView;->waitingImage:Z
 
     const/4 v0, 0x0
 
-    .line 149
+    .line 177
     iput-boolean v0, p0, Lorg/telegram/ui/Components/Premium/PremiumLockIconView;->wasDrawn:Z
 
-    .line 150
+    .line 178
     invoke-virtual {p0}, Landroid/widget/ImageView;->invalidate()V
 
     return-void

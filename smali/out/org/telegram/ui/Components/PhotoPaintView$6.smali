@@ -24,7 +24,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/PhotoPaintView;Z)V
     .registers 3
 
-    .line 695
+    .line 700
     iput-object p1, p0, Lorg/telegram/ui/Components/PhotoPaintView$6;->this$0:Lorg/telegram/ui/Components/PhotoPaintView;
 
     iput-boolean p2, p0, Lorg/telegram/ui/Components/PhotoPaintView$6;->val$visible:Z
@@ -39,12 +39,12 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .registers 3
 
-    .line 698
+    .line 703
     iget-boolean p1, p0, Lorg/telegram/ui/Components/PhotoPaintView$6;->val$visible:Z
 
     if-nez p1, :cond_30
 
-    .line 699
+    .line 704
     iget-object p1, p0, Lorg/telegram/ui/Components/PhotoPaintView$6;->this$0:Lorg/telegram/ui/Components/PhotoPaintView;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/PhotoPaintView;->access$400(Lorg/telegram/ui/Components/PhotoPaintView;)Landroid/widget/FrameLayout;
@@ -55,7 +55,7 @@
 
     invoke-virtual {p1, v0}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
-    .line 700
+    .line 705
     iget-object p1, p0, Lorg/telegram/ui/Components/PhotoPaintView$6;->this$0:Lorg/telegram/ui/Components/PhotoPaintView;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/PhotoPaintView;->access$400(Lorg/telegram/ui/Components/PhotoPaintView;)Landroid/widget/FrameLayout;
@@ -68,7 +68,7 @@
 
     if-eqz p1, :cond_30
 
-    .line 701
+    .line 706
     iget-object p1, p0, Lorg/telegram/ui/Components/PhotoPaintView$6;->this$0:Lorg/telegram/ui/Components/PhotoPaintView;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/PhotoPaintView;->access$400(Lorg/telegram/ui/Components/PhotoPaintView;)Landroid/widget/FrameLayout;

@@ -116,23 +116,23 @@
 
     move-object/from16 v2, p5
 
-    .line 5915
+    .line 6054
     invoke-direct/range {p0 .. p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
     move-object/from16 v3, p2
 
-    .line 5917
+    .line 6056
     iput-object v3, v0, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->fragmentView:Landroid/view/ViewGroup;
 
     move-object/from16 v3, p3
 
-    .line 5918
+    .line 6057
     iput-object v3, v0, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->fabContainer:Landroid/view/View;
 
-    .line 5919
+    .line 6058
     iput-object v2, v0, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->callback:Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView$IConfirmDialogCallback;
 
-    .line 5921
+    .line 6060
     new-instance v3, Landroid/view/View;
 
     invoke-virtual/range {p0 .. p0}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
@@ -143,14 +143,14 @@
 
     iput-object v3, v0, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->blurredView:Landroid/view/View;
 
-    .line 5922
+    .line 6061
     new-instance v4, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView$$ExternalSyntheticLambda3;
 
     invoke-direct {v4, v0}, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView$$ExternalSyntheticLambda3;-><init>(Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;)V
 
     invoke-virtual {v3, v4}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 5923
+    .line 6062
     iget-object v3, v0, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->blurredView:Landroid/view/View;
 
     const/4 v4, -0x1
@@ -163,7 +163,7 @@
 
     invoke-virtual {v0, v3, v6}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 5925
+    .line 6064
     new-instance v3, Landroid/view/View;
 
     invoke-virtual/range {p0 .. p0}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
@@ -176,17 +176,17 @@
 
     const/high16 v6, 0x40000000    # 2.0f
 
-    .line 5926
+    .line 6065
     invoke-virtual {v3, v6}, Landroid/view/View;->setBackgroundColor(I)V
 
-    .line 5927
+    .line 6066
     iget-object v3, v0, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->dimmView:Landroid/view/View;
 
     const/4 v6, 0x0
 
     invoke-virtual {v3, v6}, Landroid/view/View;->setAlpha(F)V
 
-    .line 5928
+    .line 6067
     iget-object v3, v0, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->dimmView:Landroid/view/View;
 
     invoke-static {v4, v5}, Lorg/telegram/ui/Components/LayoutHelper;->createFrame(IF)Landroid/widget/FrameLayout$LayoutParams;
@@ -195,7 +195,7 @@
 
     invoke-virtual {v0, v3, v7}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 5930
+    .line 6069
     new-instance v3, Lorg/telegram/ui/Components/TransformableLoginButtonView;
 
     invoke-virtual/range {p0 .. p0}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
@@ -208,24 +208,24 @@
 
     const/4 v7, 0x1
 
-    .line 5931
+    .line 6070
     invoke-virtual {v3, v7}, Lorg/telegram/ui/Components/TransformableLoginButtonView;->setTransformType(I)V
 
-    .line 5932
+    .line 6071
     iget-object v3, v0, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->fabTransform:Lorg/telegram/ui/Components/TransformableLoginButtonView;
 
     const/4 v8, 0x0
 
     invoke-virtual {v3, v8}, Lorg/telegram/ui/Components/TransformableLoginButtonView;->setDrawBackground(Z)V
 
-    .line 5934
+    .line 6073
     new-instance v3, Landroid/widget/FrameLayout;
 
     invoke-direct {v3, v1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
     iput-object v3, v0, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->popupFabContainer:Landroid/widget/FrameLayout;
 
-    .line 5935
+    .line 6074
     iget-object v8, v0, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->fabTransform:Lorg/telegram/ui/Components/TransformableLoginButtonView;
 
     invoke-static {v4, v5}, Lorg/telegram/ui/Components/LayoutHelper;->createFrame(IF)Landroid/widget/FrameLayout$LayoutParams;
@@ -234,7 +234,7 @@
 
     invoke-virtual {v3, v8, v9}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 5936
+    .line 6075
     iget-object v3, v0, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->popupFabContainer:Landroid/widget/FrameLayout;
 
     new-instance v8, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView$$ExternalSyntheticLambda6;
@@ -243,7 +243,7 @@
 
     invoke-virtual {v3, v8}, Landroid/widget/FrameLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 5938
+    .line 6077
     new-instance v3, Lorg/telegram/ui/Components/RadialProgressView;
 
     invoke-direct {v3, v1}, Lorg/telegram/ui/Components/RadialProgressView;-><init>(Landroid/content/Context;)V
@@ -252,31 +252,31 @@
 
     const/high16 v8, 0x41b00000    # 22.0f
 
-    .line 5939
+    .line 6078
     invoke-static {v8}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v8
 
     invoke-virtual {v3, v8}, Lorg/telegram/ui/Components/RadialProgressView;->setSize(I)V
 
-    .line 5940
+    .line 6079
     iget-object v3, v0, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->floatingProgressView:Lorg/telegram/ui/Components/RadialProgressView;
 
     invoke-virtual {v3, v6}, Lorg/telegram/ui/Components/RadialProgressView;->setAlpha(F)V
 
-    .line 5941
+    .line 6080
     iget-object v3, v0, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->floatingProgressView:Lorg/telegram/ui/Components/RadialProgressView;
 
     const v6, 0x3dcccccd    # 0.1f
 
     invoke-virtual {v3, v6}, Landroid/view/View;->setScaleX(F)V
 
-    .line 5942
+    .line 6081
     iget-object v3, v0, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->floatingProgressView:Lorg/telegram/ui/Components/RadialProgressView;
 
     invoke-virtual {v3, v6}, Landroid/view/View;->setScaleY(F)V
 
-    .line 5943
+    .line 6082
     iget-object v3, v0, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->popupFabContainer:Landroid/widget/FrameLayout;
 
     iget-object v6, v0, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->floatingProgressView:Lorg/telegram/ui/Components/RadialProgressView;
@@ -287,10 +287,10 @@
 
     invoke-virtual {v3, v6, v4}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 5945
+    .line 6084
     iget-object v3, v0, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->popupFabContainer:Landroid/widget/FrameLayout;
 
-    const v4, 0x7f0e05dd
+    const v4, 0x7f0e062e
 
     invoke-static {v4}, Lorg/telegram/messenger/LocaleController;->getString(I)Ljava/lang/String;
 
@@ -298,7 +298,7 @@
 
     invoke-virtual {v3, v4}, Landroid/widget/FrameLayout;->setContentDescription(Ljava/lang/CharSequence;)V
 
-    .line 5946
+    .line 6085
     iget-object v3, v0, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->popupFabContainer:Landroid/widget/FrameLayout;
 
     sget v4, Landroid/os/Build$VERSION;->SDK_INT:I
@@ -331,7 +331,7 @@
 
     invoke-virtual {v0, v3, v4}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 5948
+    .line 6087
     new-instance v3, Landroid/widget/FrameLayout;
 
     invoke-direct {v3, v1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
@@ -352,42 +352,42 @@
 
     const/4 v14, 0x0
 
-    .line 5950
+    .line 6089
     invoke-static/range {v8 .. v14}, Lorg/telegram/ui/Components/LayoutHelper;->createFrame(IFIFFFF)Landroid/widget/FrameLayout$LayoutParams;
 
     move-result-object v4
 
     invoke-virtual {v0, v3, v4}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 5952
+    .line 6091
     new-instance v3, Landroid/widget/TextView;
 
     invoke-direct {v3, v1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
     iput-object v3, v0, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->confirmMessageView:Landroid/widget/TextView;
 
-    const v4, 0x7f0e04af
+    const v4, 0x7f0e04fc
 
-    .line 5953
+    .line 6092
     invoke-static {v4}, Lorg/telegram/messenger/LocaleController;->getString(I)Ljava/lang/String;
 
     move-result-object v4
 
     invoke-virtual {v3, v4}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 5954
+    .line 6093
     iget-object v3, v0, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->confirmMessageView:Landroid/widget/TextView;
 
     const/high16 v4, 0x41600000    # 14.0f
 
     invoke-virtual {v3, v7, v4}, Landroid/widget/TextView;->setTextSize(IF)V
 
-    .line 5955
+    .line 6094
     iget-object v3, v0, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->confirmMessageView:Landroid/widget/TextView;
 
     invoke-virtual {v3}, Landroid/widget/TextView;->setSingleLine()V
 
-    .line 5956
+    .line 6095
     iget-object v3, v0, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->popupLayout:Landroid/widget/FrameLayout;
 
     iget-object v4, v0, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->confirmMessageView:Landroid/widget/TextView;
@@ -424,7 +424,7 @@
 
     invoke-virtual {v3, v4, v5}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 5958
+    .line 6097
     new-instance v3, Landroid/widget/TextView;
 
     invoke-direct {v3, v1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
@@ -433,17 +433,17 @@
 
     move-object/from16 v4, p4
 
-    .line 5959
+    .line 6098
     invoke-virtual {v3, v4}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 5960
+    .line 6099
     iget-object v3, v0, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->numberView:Landroid/widget/TextView;
 
     const/high16 v4, 0x41900000    # 18.0f
 
     invoke-virtual {v3, v7, v4}, Landroid/widget/TextView;->setTextSize(IF)V
 
-    .line 5961
+    .line 6100
     iget-object v3, v0, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->numberView:Landroid/widget/TextView;
 
     const-string v4, "fonts/rmedium.ttf"
@@ -454,12 +454,12 @@
 
     invoke-virtual {v3, v4}, Landroid/widget/TextView;->setTypeface(Landroid/graphics/Typeface;)V
 
-    .line 5962
+    .line 6101
     iget-object v3, v0, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->numberView:Landroid/widget/TextView;
 
     invoke-virtual {v3}, Landroid/widget/TextView;->setSingleLine()V
 
-    .line 5963
+    .line 6102
     iget-object v3, v0, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->popupLayout:Landroid/widget/FrameLayout;
 
     iget-object v4, v0, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->numberView:Landroid/widget/TextView;
@@ -496,40 +496,40 @@
 
     const/high16 v3, 0x41800000    # 16.0f
 
-    .line 5965
+    .line 6104
     invoke-static {v3}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v4
 
     const/16 v5, 0x8
 
-    .line 5968
+    .line 6107
     new-instance v8, Landroid/widget/TextView;
 
     invoke-direct {v8, v1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
     iput-object v8, v0, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->editTextView:Landroid/widget/TextView;
 
-    const v9, 0x7f0e05e8
+    const v9, 0x7f0e063a
 
-    .line 5969
+    .line 6108
     invoke-static {v9}, Lorg/telegram/messenger/LocaleController;->getString(I)Ljava/lang/String;
 
     move-result-object v9
 
     invoke-virtual {v8, v9}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 5970
+    .line 6109
     iget-object v8, v0, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->editTextView:Landroid/widget/TextView;
 
     invoke-virtual {v8}, Landroid/widget/TextView;->setSingleLine()V
 
-    .line 5971
+    .line 6110
     iget-object v8, v0, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->editTextView:Landroid/widget/TextView;
 
     invoke-virtual {v8, v7, v3}, Landroid/widget/TextView;->setTextSize(IF)V
 
-    .line 5972
+    .line 6111
     iget-object v8, v0, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->editTextView:Landroid/widget/TextView;
 
     const/high16 v9, 0x40c00000    # 6.0f
@@ -550,7 +550,7 @@
 
     invoke-virtual {v8, v10}, Landroid/widget/TextView;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    .line 5973
+    .line 6112
     iget-object v8, v0, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->editTextView:Landroid/widget/TextView;
 
     new-instance v10, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView$$ExternalSyntheticLambda4;
@@ -559,21 +559,21 @@
 
     invoke-virtual {v8, v10}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 5974
+    .line 6113
     iget-object v8, v0, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->editTextView:Landroid/widget/TextView;
 
     sget-object v10, Landroid/graphics/Typeface;->DEFAULT_BOLD:Landroid/graphics/Typeface;
 
     invoke-virtual {v8, v10}, Landroid/widget/TextView;->setTypeface(Landroid/graphics/Typeface;)V
 
-    .line 5975
+    .line 6114
     iget-object v8, v0, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->editTextView:Landroid/widget/TextView;
 
     div-int/lit8 v10, v4, 0x2
 
     invoke-virtual {v8, v4, v10, v4, v10}, Landroid/widget/TextView;->setPadding(IIII)V
 
-    .line 5976
+    .line 6115
     iget-object v8, v0, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->popupLayout:Landroid/widget/FrameLayout;
 
     iget-object v12, v0, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->editTextView:Landroid/widget/TextView;
@@ -612,33 +612,33 @@
 
     invoke-virtual {v8, v12, v13}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 5978
+    .line 6117
     new-instance v8, Landroid/widget/TextView;
 
     invoke-direct {v8, v1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
     iput-object v8, v0, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->confirmTextView:Landroid/widget/TextView;
 
-    const v1, 0x7f0e0445
+    const v1, 0x7f0e0487
 
-    .line 5979
+    .line 6118
     invoke-static {v1}, Lorg/telegram/messenger/LocaleController;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v8, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 5980
+    .line 6119
     iget-object v1, v0, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->confirmTextView:Landroid/widget/TextView;
 
     invoke-virtual {v1}, Landroid/widget/TextView;->setSingleLine()V
 
-    .line 5981
+    .line 6120
     iget-object v1, v0, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->confirmTextView:Landroid/widget/TextView;
 
     invoke-virtual {v1, v7, v3}, Landroid/widget/TextView;->setTextSize(IF)V
 
-    .line 5982
+    .line 6121
     iget-object v1, v0, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->confirmTextView:Landroid/widget/TextView;
 
     invoke-static {v9}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -655,7 +655,7 @@
 
     invoke-virtual {v1, v3}, Landroid/widget/TextView;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    .line 5983
+    .line 6122
     iget-object v1, v0, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->confirmTextView:Landroid/widget/TextView;
 
     new-instance v3, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView$$ExternalSyntheticLambda5;
@@ -664,19 +664,19 @@
 
     invoke-virtual {v1, v3}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 5984
+    .line 6123
     iget-object v1, v0, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->confirmTextView:Landroid/widget/TextView;
 
     sget-object v2, Landroid/graphics/Typeface;->DEFAULT_BOLD:Landroid/graphics/Typeface;
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setTypeface(Landroid/graphics/Typeface;)V
 
-    .line 5985
+    .line 6124
     iget-object v1, v0, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->confirmTextView:Landroid/widget/TextView;
 
     invoke-virtual {v1, v4, v10, v4, v10}, Landroid/widget/TextView;->setPadding(IIII)V
 
-    .line 5986
+    .line 6125
     iget-object v1, v0, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->popupLayout:Landroid/widget/FrameLayout;
 
     iget-object v2, v0, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->confirmTextView:Landroid/widget/TextView;
@@ -708,10 +708,10 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 5988
+    .line 6127
     invoke-direct/range {p0 .. p0}, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->updateFabPosition()V
 
-    .line 5989
+    .line 6128
     invoke-direct/range {p0 .. p0}, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->updateColors()V
 
     return-void
@@ -720,7 +720,7 @@
 .method synthetic constructor <init>(Landroid/content/Context;Landroid/view/ViewGroup;Landroid/view/View;Ljava/lang/String;Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView$IConfirmDialogCallback;Lorg/telegram/ui/LoginActivity$1;)V
     .registers 7
 
-    .line 5894
+    .line 6033
     invoke-direct/range {p0 .. p5}, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;-><init>(Landroid/content/Context;Landroid/view/ViewGroup;Landroid/view/View;Ljava/lang/String;Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView$IConfirmDialogCallback;)V
 
     return-void
@@ -729,88 +729,88 @@
 .method static synthetic access$1100(Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;)V
     .registers 1
 
-    .line 5894
+    .line 6033
     invoke-direct {p0}, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->dismiss()V
 
     return-void
 .end method
 
-.method static synthetic access$13200(Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;)V
+.method static synthetic access$13900(Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;)V
     .registers 1
 
-    .line 5894
+    .line 6033
     invoke-direct {p0}, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->updateColors()V
 
     return-void
 .end method
 
-.method static synthetic access$13300(Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;)Landroid/view/View;
+.method static synthetic access$14000(Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;)Landroid/view/View;
     .registers 1
 
-    .line 5894
+    .line 6033
     iget-object p0, p0, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->fabContainer:Landroid/view/View;
 
     return-object p0
 .end method
 
-.method static synthetic access$13400(Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;)Landroid/view/ViewGroup;
+.method static synthetic access$14100(Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;)Landroid/view/ViewGroup;
     .registers 1
 
-    .line 5894
+    .line 6033
     iget-object p0, p0, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->fragmentView:Landroid/view/ViewGroup;
 
     return-object p0
 .end method
 
-.method static synthetic access$13500(Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;)Landroid/view/View;
+.method static synthetic access$14200(Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;)Landroid/view/View;
     .registers 1
 
-    .line 5894
+    .line 6033
     iget-object p0, p0, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->blurredView:Landroid/view/View;
 
     return-object p0
 .end method
 
-.method static synthetic access$13600(Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;)V
+.method static synthetic access$14300(Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;)V
     .registers 1
 
-    .line 5894
+    .line 6033
     invoke-direct {p0}, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->updateFabPosition()V
 
     return-void
 .end method
 
-.method static synthetic access$5100(Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;Ljava/lang/Runnable;)V
+.method static synthetic access$5200(Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;Ljava/lang/Runnable;)V
     .registers 2
 
-    .line 5894
+    .line 6033
     invoke-direct {p0, p1}, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->animateProgress(Ljava/lang/Runnable;)V
 
     return-void
 .end method
 
-.method static synthetic access$5200(Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;)Lorg/telegram/ui/Components/RadialProgressView;
+.method static synthetic access$5300(Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;)Lorg/telegram/ui/Components/RadialProgressView;
     .registers 1
 
-    .line 5894
+    .line 6033
     iget-object p0, p0, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->floatingProgressView:Lorg/telegram/ui/Components/RadialProgressView;
 
     return-object p0
 .end method
 
-.method static synthetic access$5400(Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;)V
+.method static synthetic access$5500(Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;)V
     .registers 1
 
-    .line 5894
+    .line 6033
     invoke-direct {p0}, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->show()V
 
     return-void
 .end method
 
-.method static synthetic access$7100(Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;)Landroid/widget/FrameLayout;
+.method static synthetic access$7200(Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;)Landroid/widget/FrameLayout;
     .registers 1
 
-    .line 5894
+    .line 6033
     iget-object p0, p0, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->popupFabContainer:Landroid/widget/FrameLayout;
 
     return-object p0
@@ -823,21 +823,21 @@
 
     new-array v0, v0, [F
 
-    .line 6070
+    .line 6213
     fill-array-data v0, :array_24
 
     invoke-static {v0}, Landroid/animation/ValueAnimator;->ofFloat([F)Landroid/animation/ValueAnimator;
 
     move-result-object v0
 
-    .line 6071
+    .line 6214
     new-instance v1, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView$2;
 
     invoke-direct {v1, p0, p1}, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView$2;-><init>(Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;Ljava/lang/Runnable;)V
 
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 6077
+    .line 6220
     new-instance p1, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView$$ExternalSyntheticLambda2;
 
     invoke-direct {p1, p0}, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView$$ExternalSyntheticLambda2;-><init>(Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;)V
@@ -846,10 +846,10 @@
 
     const-wide/16 v1, 0x96
 
-    .line 6090
+    .line 6233
     invoke-virtual {v0, v1, v2}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
-    .line 6091
+    .line 6234
     invoke-virtual {v0}, Landroid/animation/ValueAnimator;->start()V
 
     return-void
@@ -866,7 +866,7 @@
 .method private dismiss()V
     .registers 4
 
-    .line 6095
+    .line 6238
     iget-boolean v0, p0, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->dismissed:Z
 
     if-eqz v0, :cond_5
@@ -876,10 +876,10 @@
     :cond_5
     const/4 v0, 0x1
 
-    .line 6096
+    .line 6239
     iput-boolean v0, p0, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->dismissed:Z
 
-    .line 6098
+    .line 6241
     iget-object v0, p0, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->callback:Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView$IConfirmDialogCallback;
 
     invoke-interface {v0, p0}, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView$IConfirmDialogCallback;->onDismiss(Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;)V
@@ -888,7 +888,7 @@
 
     new-array v0, v0, [F
 
-    .line 6100
+    .line 6243
     fill-array-data v0, :array_36
 
     invoke-static {v0}, Landroid/animation/ValueAnimator;->ofFloat([F)Landroid/animation/ValueAnimator;
@@ -901,26 +901,26 @@
 
     move-result-object v0
 
-    .line 6101
+    .line 6244
     new-instance v1, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView$3;
 
     invoke-direct {v1, p0}, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView$3;-><init>(Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;)V
 
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 6110
+    .line 6257
     new-instance v1, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView$$ExternalSyntheticLambda0;
 
     invoke-direct {v1, p0}, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView$$ExternalSyntheticLambda0;-><init>(Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;)V
 
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    .line 6121
+    .line 6268
     sget-object v1, Lorg/telegram/ui/Components/CubicBezierInterpolator;->DEFAULT:Lorg/telegram/ui/Components/CubicBezierInterpolator;
 
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 6122
+    .line 6269
     invoke-virtual {v0}, Landroid/animation/ValueAnimator;->start()V
 
     return-void
@@ -935,7 +935,7 @@
 .method private synthetic lambda$animateProgress$5(Landroid/animation/ValueAnimator;)V
     .registers 7
 
-    .line 6078
+    .line 6221
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
     move-result-object p1
@@ -958,17 +958,17 @@
 
     add-float/2addr v2, v3
 
-    .line 6081
+    .line 6224
     iget-object v4, p0, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->fabTransform:Lorg/telegram/ui/Components/TransformableLoginButtonView;
 
     invoke-virtual {v4, v2}, Landroid/view/View;->setScaleX(F)V
 
-    .line 6082
+    .line 6225
     iget-object v4, p0, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->fabTransform:Lorg/telegram/ui/Components/TransformableLoginButtonView;
 
     invoke-virtual {v4, v2}, Landroid/view/View;->setScaleY(F)V
 
-    .line 6083
+    .line 6226
     iget-object v2, p0, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->fabTransform:Lorg/telegram/ui/Components/TransformableLoginButtonView;
 
     invoke-virtual {v2, v0}, Landroid/view/View;->setAlpha(F)V
@@ -977,17 +977,17 @@
 
     add-float/2addr v1, v3
 
-    .line 6086
+    .line 6229
     iget-object v0, p0, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->floatingProgressView:Lorg/telegram/ui/Components/RadialProgressView;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setScaleX(F)V
 
-    .line 6087
+    .line 6230
     iget-object v0, p0, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->floatingProgressView:Lorg/telegram/ui/Components/RadialProgressView;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setScaleY(F)V
 
-    .line 6088
+    .line 6231
     iget-object v0, p0, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->floatingProgressView:Lorg/telegram/ui/Components/RadialProgressView;
 
     invoke-virtual {v0, p1}, Lorg/telegram/ui/Components/RadialProgressView;->setAlpha(F)V
@@ -998,7 +998,7 @@
 .method private synthetic lambda$dismiss$6(Landroid/animation/ValueAnimator;)V
     .registers 3
 
-    .line 6111
+    .line 6258
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
     move-result-object p1
@@ -1009,22 +1009,22 @@
 
     move-result p1
 
-    .line 6112
+    .line 6259
     iget-object v0, p0, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->blurredView:Landroid/view/View;
 
     invoke-virtual {v0, p1}, Landroid/view/View;->setAlpha(F)V
 
-    .line 6113
+    .line 6260
     iget-object v0, p0, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->dimmView:Landroid/view/View;
 
     invoke-virtual {v0, p1}, Landroid/view/View;->setAlpha(F)V
 
-    .line 6114
+    .line 6261
     iget-object v0, p0, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->fabTransform:Lorg/telegram/ui/Components/TransformableLoginButtonView;
 
     invoke-virtual {v0, p1}, Lorg/telegram/ui/Components/TransformableLoginButtonView;->setProgress(F)V
 
-    .line 6115
+    .line 6262
     iget-object v0, p0, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->popupLayout:Landroid/widget/FrameLayout;
 
     invoke-virtual {v0, p1}, Landroid/widget/FrameLayout;->setAlpha(F)V
@@ -1035,12 +1035,12 @@
 
     add-float/2addr p1, v0
 
-    .line 6118
+    .line 6265
     iget-object v0, p0, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->popupLayout:Landroid/widget/FrameLayout;
 
     invoke-virtual {v0, p1}, Landroid/widget/FrameLayout;->setScaleX(F)V
 
-    .line 6119
+    .line 6266
     iget-object v0, p0, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->popupLayout:Landroid/widget/FrameLayout;
 
     invoke-virtual {v0, p1}, Landroid/widget/FrameLayout;->setScaleY(F)V
@@ -1051,7 +1051,7 @@
 .method private synthetic lambda$new$0(Landroid/view/View;)V
     .registers 2
 
-    .line 5922
+    .line 6061
     invoke-direct {p0}, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->dismiss()V
 
     return-void
@@ -1060,7 +1060,7 @@
 .method private synthetic lambda$new$1(Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView$IConfirmDialogCallback;Landroid/view/View;)V
     .registers 3
 
-    .line 5936
+    .line 6075
     iget-object p2, p0, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->fabTransform:Lorg/telegram/ui/Components/TransformableLoginButtonView;
 
     invoke-interface {p1, p0, p2}, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView$IConfirmDialogCallback;->onFabPressed(Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;Lorg/telegram/ui/Components/TransformableLoginButtonView;)V
@@ -1071,7 +1071,7 @@
 .method private synthetic lambda$new$2(Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView$IConfirmDialogCallback;Landroid/view/View;)V
     .registers 3
 
-    .line 5973
+    .line 6112
     iget-object p2, p0, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->editTextView:Landroid/widget/TextView;
 
     invoke-interface {p1, p0, p2}, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView$IConfirmDialogCallback;->onEditPressed(Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;Landroid/widget/TextView;)V
@@ -1082,7 +1082,7 @@
 .method private synthetic lambda$new$3(Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView$IConfirmDialogCallback;Landroid/view/View;)V
     .registers 3
 
-    .line 5983
+    .line 6122
     iget-object p2, p0, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->confirmTextView:Landroid/widget/TextView;
 
     invoke-interface {p1, p0, p2}, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView$IConfirmDialogCallback;->onConfirmPressed(Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;Landroid/widget/TextView;)V
@@ -1093,7 +1093,7 @@
 .method private synthetic lambda$show$4(Landroid/animation/ValueAnimator;)V
     .registers 3
 
-    .line 6055
+    .line 6198
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
     move-result-object p1
@@ -1104,22 +1104,22 @@
 
     move-result p1
 
-    .line 6056
+    .line 6199
     iget-object v0, p0, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->fabTransform:Lorg/telegram/ui/Components/TransformableLoginButtonView;
 
     invoke-virtual {v0, p1}, Lorg/telegram/ui/Components/TransformableLoginButtonView;->setProgress(F)V
 
-    .line 6057
+    .line 6200
     iget-object v0, p0, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->blurredView:Landroid/view/View;
 
     invoke-virtual {v0, p1}, Landroid/view/View;->setAlpha(F)V
 
-    .line 6058
+    .line 6201
     iget-object v0, p0, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->dimmView:Landroid/view/View;
 
     invoke-virtual {v0, p1}, Landroid/view/View;->setAlpha(F)V
 
-    .line 6060
+    .line 6203
     iget-object v0, p0, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->popupLayout:Landroid/widget/FrameLayout;
 
     invoke-virtual {v0, p1}, Landroid/widget/FrameLayout;->setAlpha(F)V
@@ -1130,12 +1130,12 @@
 
     add-float/2addr p1, v0
 
-    .line 6062
+    .line 6205
     iget-object v0, p0, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->popupLayout:Landroid/widget/FrameLayout;
 
     invoke-virtual {v0, p1}, Landroid/widget/FrameLayout;->setScaleX(F)V
 
-    .line 6063
+    .line 6206
     iget-object v0, p0, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->popupLayout:Landroid/widget/FrameLayout;
 
     invoke-virtual {v0, p1}, Landroid/widget/FrameLayout;->setScaleY(F)V
@@ -1144,14 +1144,55 @@
 .end method
 
 .method private show()V
-    .registers 4
+    .registers 7
 
-    const/4 v0, 0x2
+    .line 6164
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    new-array v0, v0, [F
+    const/4 v1, 0x2
 
-    .line 6025
-    fill-array-data v0, :array_2a
+    const/16 v2, 0x15
+
+    if-lt v0, v2, :cond_25
+
+    .line 6165
+    iget-object v0, p0, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->fabContainer:Landroid/view/View;
+
+    sget-object v2, Landroid/view/View;->TRANSLATION_Z:Landroid/util/Property;
+
+    new-array v3, v1, [F
+
+    const/4 v4, 0x0
+
+    invoke-virtual {v0}, Landroid/view/View;->getTranslationZ()F
+
+    move-result v5
+
+    aput v5, v3, v4
+
+    const/4 v4, 0x1
+
+    const/4 v5, 0x0
+
+    aput v5, v3, v4
+
+    invoke-static {v0, v2, v3}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
+
+    move-result-object v0
+
+    const-wide/16 v2, 0x96
+
+    invoke-virtual {v0, v2, v3}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->start()V
+
+    :cond_25
+    new-array v0, v1, [F
+
+    .line 6168
+    fill-array-data v0, :array_4e
 
     invoke-static {v0}, Landroid/animation/ValueAnimator;->ofFloat([F)Landroid/animation/ValueAnimator;
 
@@ -1163,33 +1204,33 @@
 
     move-result-object v0
 
-    .line 6026
+    .line 6169
     new-instance v1, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView$1;
 
     invoke-direct {v1, p0}, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView$1;-><init>(Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;)V
 
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 6054
+    .line 6197
     new-instance v1, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView$$ExternalSyntheticLambda1;
 
     invoke-direct {v1, p0}, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView$$ExternalSyntheticLambda1;-><init>(Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;)V
 
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    .line 6065
+    .line 6208
     sget-object v1, Lorg/telegram/ui/Components/CubicBezierInterpolator;->DEFAULT:Lorg/telegram/ui/Components/CubicBezierInterpolator;
 
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 6066
+    .line 6209
     invoke-virtual {v0}, Landroid/animation/ValueAnimator;->start()V
 
     return-void
 
     nop
 
-    :array_2a
+    :array_4e
     .array-data 4
         0x0
         0x3f800000    # 1.0f
@@ -1199,7 +1240,7 @@
 .method private updateColors()V
     .registers 6
 
-    .line 6004
+    .line 6143
     iget-object v0, p0, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->fabTransform:Lorg/telegram/ui/Components/TransformableLoginButtonView;
 
     const-string v1, "chats_actionIcon"
@@ -1210,7 +1251,7 @@
 
     invoke-virtual {v0, v2}, Lorg/telegram/ui/Components/TransformableLoginButtonView;->setColor(I)V
 
-    .line 6005
+    .line 6144
     iget-object v0, p0, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->fabTransform:Lorg/telegram/ui/Components/TransformableLoginButtonView;
 
     const-string v2, "chats_actionBackground"
@@ -1221,7 +1262,7 @@
 
     invoke-virtual {v0, v3}, Lorg/telegram/ui/Components/TransformableLoginButtonView;->setBackgroundColor(I)V
 
-    .line 6006
+    .line 6145
     iget-object v0, p0, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->popupLayout:Landroid/widget/FrameLayout;
 
     const/high16 v3, 0x41400000    # 12.0f
@@ -1242,7 +1283,7 @@
 
     invoke-virtual {v0, v3}, Landroid/widget/FrameLayout;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    .line 6007
+    .line 6146
     iget-object v0, p0, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->confirmMessageView:Landroid/widget/TextView;
 
     const-string v3, "dialogTextGray2"
@@ -1253,7 +1294,7 @@
 
     invoke-virtual {v0, v3}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 6008
+    .line 6147
     iget-object v0, p0, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->numberView:Landroid/widget/TextView;
 
     const-string v3, "dialogTextBlack"
@@ -1264,7 +1305,7 @@
 
     invoke-virtual {v0, v3}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 6009
+    .line 6148
     iget-object v0, p0, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->editTextView:Landroid/widget/TextView;
 
     const-string v3, "changephoneinfo_image2"
@@ -1275,7 +1316,7 @@
 
     invoke-virtual {v0, v4}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 6010
+    .line 6149
     iget-object v0, p0, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->confirmTextView:Landroid/widget/TextView;
 
     invoke-static {v3}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
@@ -1284,7 +1325,7 @@
 
     invoke-virtual {v0, v3}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 6011
+    .line 6150
     iget-object v0, p0, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->popupFabContainer:Landroid/widget/FrameLayout;
 
     const/high16 v3, 0x42600000    # 56.0f
@@ -1309,7 +1350,7 @@
 
     invoke-virtual {v0, v2}, Landroid/widget/FrameLayout;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    .line 6012
+    .line 6151
     iget-object v0, p0, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->floatingProgressView:Lorg/telegram/ui/Components/RadialProgressView;
 
     invoke-static {v1}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
@@ -1328,26 +1369,26 @@
 
     new-array v0, v0, [I
 
-    .line 5994
+    .line 6133
     iget-object v1, p0, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->fragmentView:Landroid/view/ViewGroup;
 
     invoke-virtual {v1, v0}, Landroid/view/ViewGroup;->getLocationInWindow([I)V
 
     const/4 v1, 0x0
 
-    .line 5995
+    .line 6134
     aget v2, v0, v1
 
     const/4 v3, 0x1
 
     aget v4, v0, v3
 
-    .line 5997
+    .line 6136
     iget-object v5, p0, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->fabContainer:Landroid/view/View;
 
     invoke-virtual {v5, v0}, Landroid/view/View;->getLocationInWindow([I)V
 
-    .line 5998
+    .line 6137
     iget-object v5, p0, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->popupFabContainer:Landroid/widget/FrameLayout;
 
     aget v1, v0, v1
@@ -1358,7 +1399,7 @@
 
     invoke-virtual {v5, v1}, Landroid/widget/FrameLayout;->setTranslationX(F)V
 
-    .line 5999
+    .line 6138
     iget-object v1, p0, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->popupFabContainer:Landroid/widget/FrameLayout;
 
     aget v0, v0, v3
@@ -1369,7 +1410,7 @@
 
     invoke-virtual {v1, v0}, Landroid/widget/FrameLayout;->setTranslationY(F)V
 
-    .line 6000
+    .line 6139
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->requestLayout()V
 
     return-void
@@ -1380,17 +1421,17 @@
 .method protected onLayout(ZIIII)V
     .registers 6
 
-    .line 6017
+    .line 6156
     invoke-super/range {p0 .. p5}, Landroid/widget/FrameLayout;->onLayout(ZIIII)V
 
-    .line 6019
+    .line 6158
     iget-object p1, p0, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->popupLayout:Landroid/widget/FrameLayout;
 
     invoke-virtual {p1}, Landroid/widget/FrameLayout;->getMeasuredHeight()I
 
     move-result p1
 
-    .line 6020
+    .line 6159
     iget-object p2, p0, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->popupFabContainer:Landroid/widget/FrameLayout;
 
     invoke-virtual {p2}, Landroid/widget/FrameLayout;->getTranslationY()F
@@ -1409,7 +1450,7 @@
 
     float-to-int p2, p2
 
-    .line 6021
+    .line 6160
     iget-object p3, p0, Lorg/telegram/ui/LoginActivity$PhoneNumberConfirmView;->popupLayout:Landroid/widget/FrameLayout;
 
     invoke-virtual {p3}, Landroid/widget/FrameLayout;->getLeft()I

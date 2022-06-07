@@ -600,7 +600,7 @@
 
     if-eqz p2, :cond_13
 
-    const p1, 0x7f0e0660
+    const p1, 0x7f0e06b2
 
     const-string p2, "ErrorOccurred"
 
@@ -625,7 +625,7 @@
 
     invoke-virtual {p2, v0, v1}, Lorg/telegram/messenger/MessagesController;->blockPeer(J)V
 
-    const p1, 0x7f0e122c
+    const p1, 0x7f0e12f9
 
     const-string p2, "UserBlocked"
 
@@ -745,7 +745,7 @@
 
     invoke-direct {v0, v1}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    const v1, 0x7f0e02aa
+    const v1, 0x7f0e02e1
 
     const-string v2, "BlockUser"
 
@@ -756,7 +756,7 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const v1, 0x7f0e01ab
+    const v1, 0x7f0e01e0
 
     const/4 v2, 0x1
 
@@ -787,7 +787,7 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const v1, 0x7f0e02a9
+    const v1, 0x7f0e02e0
 
     const-string v2, "BlockContact"
 
@@ -802,7 +802,7 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const p1, 0x7f0e0331
+    const p1, 0x7f0e036d
 
     const-string v1, "Cancel"
 
@@ -992,7 +992,7 @@
     return-void
 
     :cond_5
-    const v1, 0x7f0e02ac
+    const v1, 0x7f0e02e3
 
     const-string v2, "BlockUserChatsTitle"
 
@@ -1010,7 +1010,7 @@
 
     const/4 v1, 0x1
 
-    const v3, 0x7f0e02ad
+    const v3, 0x7f0e02e4
 
     const-string v4, "BlockUserContactsTitle"
 
@@ -1069,7 +1069,7 @@
     .line 120
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
-    const v1, 0x7f070140
+    const v1, 0x7f070109
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/ActionBar;->setBackButtonImage(I)V
 
@@ -1078,7 +1078,7 @@
 
     const-string v1, "BlockUserMultiTitle"
 
-    const v2, 0x7f0e02af
+    const v2, 0x7f0e02e6
 
     invoke-static {v1, v2}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
@@ -1148,7 +1148,7 @@
 
     move-result-object v0
 
-    const v3, 0x7f07014a
+    const v3, 0x7f070110
 
     .line 140
     invoke-virtual {v0, v1, v3}, Lorg/telegram/ui/ActionBar/ActionBarMenu;->addItem(II)Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
@@ -1169,7 +1169,7 @@
 
     iput-object v0, p0, Lorg/telegram/ui/DialogOrContactPickerActivity;->searchItem:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
-    const v3, 0x7f0e0f74
+    const v3, 0x7f0e1030
 
     const-string v4, "Search"
 

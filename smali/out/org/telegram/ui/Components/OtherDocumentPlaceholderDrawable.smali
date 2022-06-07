@@ -368,7 +368,7 @@
 
     move-result-object p2
 
-    if-eqz p2, :cond_11f
+    if-eqz p2, :cond_11e
 
     .line 102
     invoke-virtual {p3}, Lorg/telegram/messenger/MessageObject;->getDocument()Lorg/telegram/tgnet/TLRPC$Document;
@@ -505,9 +505,7 @@
     iput-object p1, p0, Lorg/telegram/ui/Components/OtherDocumentPlaceholderDrawable;->thumbDrawable:Landroid/graphics/drawable/Drawable;
 
     .line 113
-    iget p1, p2, Lorg/telegram/tgnet/TLRPC$Document;->size:I
-
-    int-to-long p1, p1
+    iget-wide p1, p2, Lorg/telegram/tgnet/TLRPC$Document;->size:J
 
     invoke-static {p1, p2}, Lorg/telegram/messenger/AndroidUtilities;->formatFileSize(J)Ljava/lang/String;
 
@@ -539,7 +537,7 @@
 
     move-result p3
 
-    if-le p1, p3, :cond_11f
+    if-le p1, p3, :cond_11e
 
     .line 116
     iget-object p1, p0, Lorg/telegram/ui/Components/OtherDocumentPlaceholderDrawable;->fileName:Ljava/lang/String;
@@ -565,7 +563,7 @@
     iput-object p1, p0, Lorg/telegram/ui/Components/OtherDocumentPlaceholderDrawable;->fileName:Ljava/lang/String;
 
     .line 119
-    :cond_11f
+    :cond_11e
     invoke-virtual {p0}, Lorg/telegram/ui/Components/OtherDocumentPlaceholderDrawable;->checkFileExist()V
 
     return-void
@@ -1136,7 +1134,7 @@
 
     if-eqz v3, :cond_c0
 
-    const v3, 0x7f0e0bc3
+    const v3, 0x7f0e0c4d
 
     const-string v4, "OpenFile"
 
@@ -1158,7 +1156,7 @@
 
     if-eqz v3, :cond_d2
 
-    const v3, 0x7f0e0331
+    const v3, 0x7f0e036d
 
     const-string v4, "Cancel"
 
@@ -1174,7 +1172,7 @@
     goto :goto_db
 
     :cond_d2
-    const v3, 0x7f0e1133
+    const v3, 0x7f0e11f7
 
     const-string v4, "TapToDownload"
 

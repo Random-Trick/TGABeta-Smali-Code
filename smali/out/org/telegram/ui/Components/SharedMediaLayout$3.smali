@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lorg/telegram/ui/Components/SharedMediaLayout;-><init>(Landroid/content/Context;JLorg/telegram/ui/Components/SharedMediaLayout$SharedMediaPreloader;ILjava/util/ArrayList;Lorg/telegram/tgnet/TLRPC$ChatFull;ZLorg/telegram/ui/ActionBar/BaseFragment;Lorg/telegram/ui/Components/SharedMediaLayout$Delegate;I)V
+    value = Lorg/telegram/ui/Components/SharedMediaLayout;-><init>(Landroid/content/Context;JLorg/telegram/ui/Components/SharedMediaLayout$SharedMediaPreloader;ILjava/util/ArrayList;Lorg/telegram/tgnet/TLRPC$ChatFull;ZLorg/telegram/ui/ActionBar/BaseFragment;Lorg/telegram/ui/Components/SharedMediaLayout$Delegate;ILorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -25,7 +25,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/SharedMediaLayout;)V
     .registers 2
 
-    .line 1231
+    .line 1234
     iput-object p1, p0, Lorg/telegram/ui/Components/SharedMediaLayout$3;->this$0:Lorg/telegram/ui/Components/SharedMediaLayout;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public onLayoutChange(Landroid/view/View;IIIIIIII)V
     .registers 10
 
-    .line 1234
+    .line 1237
     iget-object p1, p0, Lorg/telegram/ui/Components/SharedMediaLayout$3;->this$0:Lorg/telegram/ui/Components/SharedMediaLayout;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/SharedMediaLayout;->access$1100(Lorg/telegram/ui/Components/SharedMediaLayout;)Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
@@ -49,7 +49,7 @@
 
     return-void
 
-    .line 1237
+    .line 1240
     :cond_9
     iget-object p1, p0, Lorg/telegram/ui/Components/SharedMediaLayout$3;->this$0:Lorg/telegram/ui/Components/SharedMediaLayout;
 
@@ -63,7 +63,7 @@
 
     check-cast p1, Landroid/view/View;
 
-    .line 1238
+    .line 1241
     iget-object p2, p0, Lorg/telegram/ui/Components/SharedMediaLayout$3;->this$0:Lorg/telegram/ui/Components/SharedMediaLayout;
 
     invoke-static {p2}, Lorg/telegram/ui/Components/SharedMediaLayout;->access$1100(Lorg/telegram/ui/Components/SharedMediaLayout;)Lorg/telegram/ui/ActionBar/ActionBarMenuItem;

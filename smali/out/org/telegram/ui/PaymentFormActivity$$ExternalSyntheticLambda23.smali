@@ -5,27 +5,17 @@
 .implements Landroid/view/View$OnTouchListener;
 
 
-# static fields
-.field public static final synthetic INSTANCE:Lorg/telegram/ui/PaymentFormActivity$$ExternalSyntheticLambda23;
+# instance fields
+.field public final synthetic f$0:Lorg/telegram/ui/PaymentFormActivity;
 
 
 # direct methods
-.method static synthetic constructor <clinit>()V
-    .registers 1
-
-    new-instance v0, Lorg/telegram/ui/PaymentFormActivity$$ExternalSyntheticLambda23;
-
-    invoke-direct {v0}, Lorg/telegram/ui/PaymentFormActivity$$ExternalSyntheticLambda23;-><init>()V
-
-    sput-object v0, Lorg/telegram/ui/PaymentFormActivity$$ExternalSyntheticLambda23;->INSTANCE:Lorg/telegram/ui/PaymentFormActivity$$ExternalSyntheticLambda23;
-
-    return-void
-.end method
-
-.method private synthetic constructor <init>()V
-    .registers 1
+.method public synthetic constructor <init>(Lorg/telegram/ui/PaymentFormActivity;)V
+    .registers 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lorg/telegram/ui/PaymentFormActivity$$ExternalSyntheticLambda23;->f$0:Lorg/telegram/ui/PaymentFormActivity;
 
     return-void
 .end method
@@ -33,9 +23,11 @@
 
 # virtual methods
 .method public final onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
-    .registers 3
+    .registers 4
 
-    invoke-static {p1, p2}, Lorg/telegram/ui/PaymentFormActivity;->$r8$lambda$YMeFnG1zi0SfhsCCk86PBQIPZKI(Landroid/view/View;Landroid/view/MotionEvent;)Z
+    iget-object v0, p0, Lorg/telegram/ui/PaymentFormActivity$$ExternalSyntheticLambda23;->f$0:Lorg/telegram/ui/PaymentFormActivity;
+
+    invoke-static {v0, p1, p2}, Lorg/telegram/ui/PaymentFormActivity;->$r8$lambda$ufBXhrNbvJlVLqcHkReQdB857HQ(Lorg/telegram/ui/PaymentFormActivity;Landroid/view/View;Landroid/view/MotionEvent;)Z
 
     move-result p1
 

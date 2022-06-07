@@ -83,10 +83,10 @@
 .method public constructor <init>()V
     .registers 2
 
-    .line 20255
+    .line 20436
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
-    .line 20286
+    .line 20467
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -105,7 +105,7 @@
 
     goto/16 :goto_73
 
-    .line 20312
+    .line 20493
     :sswitch_6
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_userSelf_old;
 
@@ -113,7 +113,7 @@
 
     goto/16 :goto_73
 
-    .line 20345
+    .line 20526
     :sswitch_d
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_userSelf_old2;
 
@@ -121,7 +121,7 @@
 
     goto/16 :goto_73
 
-    .line 20327
+    .line 20508
     :sswitch_14
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_userForeign_old;
 
@@ -129,7 +129,7 @@
 
     goto :goto_73
 
-    .line 20303
+    .line 20484
     :sswitch_1a
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_user;
 
@@ -137,7 +137,7 @@
 
     goto :goto_73
 
-    .line 20309
+    .line 20490
     :sswitch_20
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_user_layer104;
 
@@ -145,7 +145,7 @@
 
     goto :goto_73
 
-    .line 20324
+    .line 20505
     :sswitch_26
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_userRequest_old;
 
@@ -153,7 +153,7 @@
 
     goto :goto_73
 
-    .line 20342
+    .line 20523
     :sswitch_2c
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_user_old;
 
@@ -161,7 +161,7 @@
 
     goto :goto_73
 
-    .line 20321
+    .line 20502
     :sswitch_32
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_userEmpty_layer131;
 
@@ -169,7 +169,7 @@
 
     goto :goto_73
 
-    .line 20315
+    .line 20496
     :sswitch_38
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_userSelf_old3;
 
@@ -177,7 +177,7 @@
 
     goto :goto_73
 
-    .line 20330
+    .line 20511
     :sswitch_3e
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_userForeign_old2;
 
@@ -185,7 +185,7 @@
 
     goto :goto_73
 
-    .line 20297
+    .line 20478
     :sswitch_44
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_userContact_old;
 
@@ -193,7 +193,7 @@
 
     goto :goto_73
 
-    .line 20333
+    .line 20514
     :sswitch_4a
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_userRequest_old2;
 
@@ -201,7 +201,7 @@
 
     goto :goto_73
 
-    .line 20318
+    .line 20499
     :sswitch_50
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_userDeleted_old2;
 
@@ -209,7 +209,7 @@
 
     goto :goto_73
 
-    .line 20300
+    .line 20481
     :sswitch_56
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_userEmpty;
 
@@ -217,7 +217,7 @@
 
     goto :goto_73
 
-    .line 20339
+    .line 20520
     :sswitch_5c
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_user_layer65;
 
@@ -225,7 +225,7 @@
 
     goto :goto_73
 
-    .line 20294
+    .line 20475
     :sswitch_62
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_userContact_old2;
 
@@ -233,7 +233,7 @@
 
     goto :goto_73
 
-    .line 20336
+    .line 20517
     :sswitch_68
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_userDeleted_old;
 
@@ -241,7 +241,7 @@
 
     goto :goto_73
 
-    .line 20306
+    .line 20487
     :sswitch_6e
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_user_layer131;
 
@@ -254,7 +254,7 @@
 
     goto :goto_8e
 
-    .line 20349
+    .line 20530
     :cond_78
     new-instance p0, Ljava/lang/RuntimeException;
 
@@ -284,7 +284,7 @@
     :goto_8e
     if-eqz v0, :cond_93
 
-    .line 20352
+    .line 20533
     invoke-virtual {v0, p0, p2}, Lorg/telegram/tgnet/TLObject;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
     :cond_93

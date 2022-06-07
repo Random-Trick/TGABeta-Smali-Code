@@ -27,7 +27,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 17865
+    .line 18028
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -36,7 +36,7 @@
 .method public static TLdeserialize(Lorg/telegram/tgnet/AbstractSerializedData;IZ)Lorg/telegram/tgnet/TLRPC$TL_messages_searchCounter;
     .registers 4
 
-    .line 17874
+    .line 18037
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_messages_searchCounter;->constructor:I
 
     if-eq v0, p1, :cond_1e
@@ -47,7 +47,7 @@
 
     return-object p0
 
-    .line 17876
+    .line 18039
     :cond_8
     new-instance p0, Ljava/lang/RuntimeException;
 
@@ -73,13 +73,13 @@
 
     throw p0
 
-    .line 17881
+    .line 18044
     :cond_1e
     new-instance p1, Lorg/telegram/tgnet/TLRPC$TL_messages_searchCounter;
 
     invoke-direct {p1}, Lorg/telegram/tgnet/TLRPC$TL_messages_searchCounter;-><init>()V
 
-    .line 17882
+    .line 18045
     invoke-virtual {p1, p0, p2}, Lorg/telegram/tgnet/TLRPC$TL_messages_searchCounter;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
     return-object p1
@@ -90,7 +90,7 @@
 .method public readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
     .registers 4
 
-    .line 17887
+    .line 18050
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
@@ -108,11 +108,11 @@
     :cond_c
     const/4 v0, 0x0
 
-    .line 17888
+    .line 18051
     :goto_d
     iput-boolean v0, p0, Lorg/telegram/tgnet/TLRPC$TL_messages_searchCounter;->inexact:Z
 
-    .line 17889
+    .line 18052
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
@@ -123,7 +123,7 @@
 
     iput-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_messages_searchCounter;->filter:Lorg/telegram/tgnet/TLRPC$MessagesFilter;
 
-    .line 17890
+    .line 18053
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result p1
@@ -136,12 +136,12 @@
 .method public serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
     .registers 3
 
-    .line 17894
+    .line 18057
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_messages_searchCounter;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 17895
+    .line 18058
     iget-boolean v0, p0, Lorg/telegram/tgnet/TLRPC$TL_messages_searchCounter;->inexact:Z
 
     if-eqz v0, :cond_e
@@ -160,15 +160,15 @@
     :goto_12
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$TL_messages_searchCounter;->flags:I
 
-    .line 17896
+    .line 18059
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 17897
+    .line 18060
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_messages_searchCounter;->filter:Lorg/telegram/tgnet/TLRPC$MessagesFilter;
 
     invoke-virtual {v0, p1}, Lorg/telegram/tgnet/TLObject;->serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
 
-    .line 17898
+    .line 18061
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_messages_searchCounter;->count:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V

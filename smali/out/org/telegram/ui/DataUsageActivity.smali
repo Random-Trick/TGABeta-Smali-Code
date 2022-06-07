@@ -517,7 +517,7 @@
 
     invoke-direct {p2, p3}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    const p3, 0x7f0e0f2b
+    const p3, 0x7f0e0fdb
 
     const-string v0, "ResetStatisticsAlertTitle"
 
@@ -528,7 +528,7 @@
 
     invoke-virtual {p2, p3}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const p3, 0x7f0e0f2a
+    const p3, 0x7f0e0fda
 
     const-string v0, "ResetStatisticsAlert"
 
@@ -539,7 +539,7 @@
 
     invoke-virtual {p2, p3}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const p3, 0x7f0e0f11
+    const p3, 0x7f0e0fbe
 
     const-string v0, "Reset"
 
@@ -554,7 +554,7 @@
 
     invoke-virtual {p2, p3, v0}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const p1, 0x7f0e0331
+    const p1, 0x7f0e036d
 
     const-string p3, "Cancel"
 
@@ -871,7 +871,7 @@
     return-void
 
     :cond_5
-    const v1, 0x7f0e0a7b
+    const v1, 0x7f0e0b02
 
     const-string v2, "NetworkUsageMobileTab"
 
@@ -889,7 +889,7 @@
 
     const/4 v1, 0x1
 
-    const v3, 0x7f0e0a7e
+    const v3, 0x7f0e0b05
 
     const-string v4, "NetworkUsageWiFiTab"
 
@@ -904,7 +904,7 @@
 
     const/4 v1, 0x2
 
-    const v3, 0x7f0e0a7c
+    const v3, 0x7f0e0b03
 
     const-string v4, "NetworkUsageRoamingTab"
 
@@ -963,7 +963,7 @@
     .line 90
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
-    const v1, 0x7f070140
+    const v1, 0x7f070109
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/ActionBar;->setBackButtonImage(I)V
 
@@ -972,7 +972,7 @@
 
     const-string v1, "NetworkUsage"
 
-    const v2, 0x7f0e0a7a
+    const v2, 0x7f0e0b01
 
     invoke-static {v1, v2}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 

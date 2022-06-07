@@ -240,7 +240,7 @@
 .end method
 
 .method public onBindViewHolder(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;I)V
-    .registers 11
+    .registers 12
 
     .line 754
     invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->getItemViewType()I
@@ -249,13 +249,13 @@
 
     const/4 v1, 0x2
 
-    const/4 v2, 0x0
+    const/4 v2, 0x1
 
-    const/4 v3, 0x1
+    const/4 v3, 0x0
 
-    if-eqz v0, :cond_76
+    if-eqz v0, :cond_78
 
-    if-eq v0, v3, :cond_64
+    if-eq v0, v2, :cond_66
 
     if-eq v0, v1, :cond_37
 
@@ -267,7 +267,7 @@
 
     if-eq v0, p2, :cond_15
 
-    goto/16 :goto_ee
+    goto/16 :goto_f7
 
     .line 796
     :cond_15
@@ -278,7 +278,7 @@
     .line 797
     invoke-virtual {p1}, Lorg/telegram/ui/MessageStatisticActivity$OverviewCell;->setData()V
 
-    goto/16 :goto_ee
+    goto/16 :goto_f7
 
     .line 791
     :cond_1e
@@ -293,7 +293,7 @@
 
     move-result-object p2
 
-    invoke-virtual {p1, p2, v2}, Lorg/telegram/ui/StatisticActivity$BaseChartCell;->updateData(Lorg/telegram/ui/StatisticActivity$ChartViewData;Z)V
+    invoke-virtual {p1, p2, v3}, Lorg/telegram/ui/StatisticActivity$BaseChartCell;->updateData(Lorg/telegram/ui/StatisticActivity$ChartViewData;Z)V
 
     .line 793
     new-instance p2, Landroidx/recyclerview/widget/RecyclerView$LayoutParams;
@@ -306,7 +306,7 @@
 
     invoke-virtual {p1, p2}, Landroid/widget/FrameLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    goto/16 :goto_ee
+    goto/16 :goto_f7
 
     .line 783
     :cond_37
@@ -323,9 +323,9 @@
 
     if-ne p2, v0, :cond_53
 
-    const p2, 0x7f0e10c7
+    const p2, 0x7f0e1186
 
-    new-array v0, v2, [Ljava/lang/Object;
+    new-array v0, v3, [Ljava/lang/Object;
 
     const-string v1, "StatisticOverview"
 
@@ -336,7 +336,7 @@
 
     invoke-virtual {p1, p2}, Lorg/telegram/ui/Cells/HeaderCell;->setText(Ljava/lang/CharSequence;)V
 
-    goto/16 :goto_ee
+    goto/16 :goto_f7
 
     .line 787
     :cond_53
@@ -346,23 +346,25 @@
 
     move-result p2
 
-    const-string v0, "PublicSharesCount"
+    new-array v0, v3, [Ljava/lang/Object;
 
-    invoke-static {v0, p2}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    const-string v1, "PublicSharesCount"
+
+    invoke-static {v1, p2, v0}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p2
 
     invoke-virtual {p1, p2}, Lorg/telegram/ui/Cells/HeaderCell;->setText(Ljava/lang/CharSequence;)V
 
-    goto/16 :goto_ee
+    goto/16 :goto_f7
 
     .line 780
-    :cond_64
+    :cond_66
     iget-object p1, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     iget-object p2, p0, Lorg/telegram/ui/MessageStatisticActivity$ListAdapter;->mContext:Landroid/content/Context;
 
-    const v0, 0x7f07012d
+    const v0, 0x7f0700fc
 
     const-string v1, "windowBackgroundGrayShadow"
 
@@ -372,10 +374,10 @@
 
     invoke-virtual {p1, p2}, Landroid/view/View;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    goto/16 :goto_ee
+    goto/16 :goto_f7
 
     .line 756
-    :cond_76
+    :cond_78
     iget-object p1, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     check-cast p1, Lorg/telegram/ui/Cells/ManageChatUserCell;
@@ -397,7 +399,7 @@
 
     const/4 v7, 0x0
 
-    if-eqz v6, :cond_98
+    if-eqz v6, :cond_9a
 
     .line 762
     iget-object v0, p0, Lorg/telegram/ui/MessageStatisticActivity$ListAdapter;->this$0:Lorg/telegram/ui/MessageStatisticActivity;
@@ -414,10 +416,10 @@
 
     move-result-object v0
 
-    goto :goto_de
+    goto :goto_e6
 
     .line 764
-    :cond_98
+    :cond_9a
     iget-object v6, p0, Lorg/telegram/ui/MessageStatisticActivity$ListAdapter;->this$0:Lorg/telegram/ui/MessageStatisticActivity;
 
     invoke-virtual {v6}, Lorg/telegram/ui/ActionBar/BaseFragment;->getMessagesController()Lorg/telegram/messenger/MessagesController;
@@ -437,55 +439,61 @@
     .line 766
     iget v5, v4, Lorg/telegram/tgnet/TLRPC$Chat;->participants_count:I
 
-    if-eqz v5, :cond_dd
+    if-eqz v5, :cond_e5
 
     .line 767
     invoke-static {v4}, Lorg/telegram/messenger/ChatObject;->isChannel(Lorg/telegram/tgnet/TLRPC$Chat;)Z
 
     move-result v5
 
-    if-eqz v5, :cond_be
+    if-eqz v5, :cond_c2
 
     iget-boolean v5, v4, Lorg/telegram/tgnet/TLRPC$Chat;->megagroup:Z
 
-    if-nez v5, :cond_be
+    if-nez v5, :cond_c2
 
     .line 768
     iget v5, v4, Lorg/telegram/tgnet/TLRPC$Chat;->participants_count:I
 
-    const-string v6, "Subscribers"
+    new-array v6, v3, [Ljava/lang/Object;
 
-    invoke-static {v6, v5}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    const-string v8, "Subscribers"
+
+    invoke-static {v8, v5, v6}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v5
 
-    goto :goto_c6
+    goto :goto_cc
 
     .line 770
-    :cond_be
+    :cond_c2
     iget v5, v4, Lorg/telegram/tgnet/TLRPC$Chat;->participants_count:I
 
-    const-string v6, "Members"
+    new-array v6, v3, [Ljava/lang/Object;
 
-    invoke-static {v6, v5}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    const-string v8, "Members"
+
+    invoke-static {v8, v5, v6}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v5
 
-    :goto_c6
+    :goto_cc
     new-array v1, v1, [Ljava/lang/Object;
 
-    aput-object v5, v1, v2
+    aput-object v5, v1, v3
 
     .line 772
     iget v0, v0, Lorg/telegram/tgnet/TLRPC$Message;->views:I
 
-    const-string v5, "Views"
+    new-array v5, v3, [Ljava/lang/Object;
 
-    invoke-static {v5, v0}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    const-string v6, "Views"
+
+    invoke-static {v6, v0, v5}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
-    aput-object v0, v1, v3
+    aput-object v0, v1, v2
 
     const-string v0, "%1$s, %2$s"
 
@@ -497,16 +505,16 @@
 
     move-object v0, v4
 
-    goto :goto_df
+    goto :goto_e7
 
-    :cond_dd
+    :cond_e5
     move-object v0, v4
 
-    :goto_de
+    :goto_e6
     move-object v1, v7
 
-    :goto_df
-    if-eqz v0, :cond_ee
+    :goto_e7
+    if-eqz v0, :cond_f7
 
     .line 776
     iget-object v4, p0, Lorg/telegram/ui/MessageStatisticActivity$ListAdapter;->this$0:Lorg/telegram/ui/MessageStatisticActivity;
@@ -515,17 +523,20 @@
 
     move-result v4
 
-    sub-int/2addr v4, v3
+    sub-int/2addr v4, v2
 
-    if-eq p2, v4, :cond_eb
+    if-eq p2, v4, :cond_f3
 
-    const/4 v2, 0x1
+    goto :goto_f4
 
-    :cond_eb
+    :cond_f3
+    const/4 v2, 0x0
+
+    :goto_f4
     invoke-virtual {p1, v0, v7, v1, v2}, Lorg/telegram/ui/Cells/ManageChatUserCell;->setData(Ljava/lang/Object;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)V
 
-    :cond_ee
-    :goto_ee
+    :cond_f7
+    :goto_f7
     return-void
 .end method
 

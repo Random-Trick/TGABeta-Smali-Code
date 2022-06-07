@@ -46,7 +46,7 @@
 .method constructor <init>(Lorg/telegram/ui/NewContactActivity;)V
     .registers 2
 
-    .line 107
+    .line 106
     iput-object p1, p0, Lorg/telegram/ui/NewContactActivity$1;->this$0:Lorg/telegram/ui/NewContactActivity;
 
     invoke-direct {p0}, Lorg/telegram/ui/ActionBar/ActionBar$ActionBarMenuOnItemClick;-><init>()V
@@ -57,7 +57,7 @@
 .method private synthetic lambda$onItemClick$0(Lorg/telegram/tgnet/TLRPC$TL_inputPhoneContact;Landroid/content/DialogInterface;I)V
     .registers 6
 
-    .line 167
+    .line 166
     :try_start_0
     new-instance p2, Landroid/content/Intent;
 
@@ -77,7 +77,7 @@
 
     const-string p1, "sms_body"
 
-    .line 168
+    .line 167
     iget-object p3, p0, Lorg/telegram/ui/NewContactActivity$1;->this$0:Lorg/telegram/ui/NewContactActivity;
 
     invoke-static {p3}, Lorg/telegram/ui/NewContactActivity;->access$1100(Lorg/telegram/ui/NewContactActivity;)I
@@ -96,7 +96,7 @@
 
     invoke-virtual {p2, p1, p3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 169
+    .line 168
     iget-object p1, p0, Lorg/telegram/ui/NewContactActivity$1;->this$0:Lorg/telegram/ui/NewContactActivity;
 
     invoke-virtual {p1}, Lorg/telegram/ui/ActionBar/BaseFragment;->getParentActivity()Landroid/app/Activity;
@@ -114,7 +114,7 @@
     :catch_30
     move-exception p1
 
-    .line 171
+    .line 170
     invoke-static {p1}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     :goto_34
@@ -124,7 +124,7 @@
 .method private synthetic lambda$onItemClick$1(Lorg/telegram/tgnet/TLRPC$TL_contacts_importedContacts;Lorg/telegram/tgnet/TLRPC$TL_inputPhoneContact;Lorg/telegram/tgnet/TLRPC$TL_error;Lorg/telegram/tgnet/TLRPC$TL_contacts_importContacts;)V
     .registers 9
 
-    .line 151
+    .line 150
     iget-object v0, p0, Lorg/telegram/ui/NewContactActivity$1;->this$0:Lorg/telegram/ui/NewContactActivity;
 
     const/4 v1, 0x0
@@ -135,7 +135,7 @@
 
     if-eqz p1, :cond_93
 
-    .line 153
+    .line 152
     iget-object p3, p1, Lorg/telegram/tgnet/TLRPC$TL_contacts_importedContacts;->users:Ljava/util/ArrayList;
 
     invoke-virtual {p3}, Ljava/util/ArrayList;->isEmpty()Z
@@ -146,7 +146,7 @@
 
     if-nez p3, :cond_2f
 
-    .line 154
+    .line 153
     iget-object p2, p0, Lorg/telegram/ui/NewContactActivity$1;->this$0:Lorg/telegram/ui/NewContactActivity;
 
     invoke-static {p2}, Lorg/telegram/ui/NewContactActivity;->access$900(Lorg/telegram/ui/NewContactActivity;)I
@@ -161,7 +161,7 @@
 
     invoke-virtual {p2, p3, v1}, Lorg/telegram/messenger/MessagesController;->putUsers(Ljava/util/ArrayList;Z)V
 
-    .line 155
+    .line 154
     iget-object p1, p1, Lorg/telegram/tgnet/TLRPC$TL_contacts_importedContacts;->users:Ljava/util/ArrayList;
 
     invoke-virtual {p1, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -176,7 +176,7 @@
 
     goto :goto_a5
 
-    .line 157
+    .line 156
     :cond_2f
     iget-object p1, p0, Lorg/telegram/ui/NewContactActivity$1;->this$0:Lorg/telegram/ui/NewContactActivity;
 
@@ -188,13 +188,13 @@
 
     return-void
 
-    .line 160
+    .line 159
     :cond_38
     iget-object p1, p0, Lorg/telegram/ui/NewContactActivity$1;->this$0:Lorg/telegram/ui/NewContactActivity;
 
     invoke-static {p1, v1, v0}, Lorg/telegram/ui/NewContactActivity;->access$400(Lorg/telegram/ui/NewContactActivity;ZZ)V
 
-    .line 161
+    .line 160
     new-instance p1, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
     iget-object p3, p0, Lorg/telegram/ui/NewContactActivity$1;->this$0:Lorg/telegram/ui/NewContactActivity;
@@ -205,22 +205,22 @@
 
     invoke-direct {p1, p3}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    const p3, 0x7f0e04bd
+    const p3, 0x7f0e050c
 
     const-string v2, "ContactNotRegisteredTitle"
 
-    .line 162
+    .line 161
     invoke-static {v2, p3}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object p3
 
     invoke-virtual {p1, p3}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const p3, 0x7f0e04bc
+    const p3, 0x7f0e050b
 
     new-array v0, v0, [Ljava/lang/Object;
 
-    .line 163
+    .line 162
     iget-object v2, p2, Lorg/telegram/tgnet/TLRPC$TL_inputPhoneContact;->first_name:Ljava/lang/String;
 
     iget-object v3, p2, Lorg/telegram/tgnet/TLRPC$TL_inputPhoneContact;->last_name:Ljava/lang/String;
@@ -239,22 +239,22 @@
 
     invoke-virtual {p1, p3}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const p3, 0x7f0e0331
+    const p3, 0x7f0e036d
 
     const-string v0, "Cancel"
 
-    .line 164
+    .line 163
     invoke-static {v0, p3}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object p3
 
     invoke-virtual {p1, p3, p4}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setNegativeButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const p3, 0x7f0e08ac
+    const p3, 0x7f0e0909
 
     const-string p4, "Invite"
 
-    .line 165
+    .line 164
     invoke-static {p4, p3}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object p3
@@ -265,7 +265,7 @@
 
     invoke-virtual {p1, p3, p4}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 174
+    .line 173
     iget-object p2, p0, Lorg/telegram/ui/NewContactActivity$1;->this$0:Lorg/telegram/ui/NewContactActivity;
 
     invoke-virtual {p1}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->create()Lorg/telegram/ui/ActionBar/AlertDialog;
@@ -276,13 +276,13 @@
 
     goto :goto_a5
 
-    .line 177
+    .line 176
     :cond_93
     iget-object p1, p0, Lorg/telegram/ui/NewContactActivity$1;->this$0:Lorg/telegram/ui/NewContactActivity;
 
     invoke-static {p1, v1, v0}, Lorg/telegram/ui/NewContactActivity;->access$400(Lorg/telegram/ui/NewContactActivity;ZZ)V
 
-    .line 178
+    .line 177
     iget-object p1, p0, Lorg/telegram/ui/NewContactActivity$1;->this$0:Lorg/telegram/ui/NewContactActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/NewContactActivity;->access$1000(Lorg/telegram/ui/NewContactActivity;)I
@@ -302,12 +302,12 @@
 .method private synthetic lambda$onItemClick$2(Lorg/telegram/tgnet/TLRPC$TL_inputPhoneContact;Lorg/telegram/tgnet/TLRPC$TL_contacts_importContacts;Lorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/TLRPC$TL_error;)V
     .registers 11
 
-    .line 149
+    .line 148
     move-object v2, p3
 
     check-cast v2, Lorg/telegram/tgnet/TLRPC$TL_contacts_importedContacts;
 
-    .line 150
+    .line 149
     new-instance p3, Lorg/telegram/ui/NewContactActivity$1$$ExternalSyntheticLambda1;
 
     move-object v0, p3
@@ -336,7 +336,7 @@
 
     if-ne p1, v0, :cond_a
 
-    .line 111
+    .line 110
     iget-object p1, p0, Lorg/telegram/ui/NewContactActivity$1;->this$0:Lorg/telegram/ui/NewContactActivity;
 
     invoke-virtual {p1}, Lorg/telegram/ui/ActionBar/BaseFragment;->finishFragment()V
@@ -348,7 +348,7 @@
 
     if-ne p1, v0, :cond_124
 
-    .line 113
+    .line 112
     iget-object p1, p0, Lorg/telegram/ui/NewContactActivity$1;->this$0:Lorg/telegram/ui/NewContactActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/NewContactActivity;->access$000(Lorg/telegram/ui/NewContactActivity;)Z
@@ -359,7 +359,7 @@
 
     return-void
 
-    .line 116
+    .line 115
     :cond_16
     iget-object p1, p0, Lorg/telegram/ui/NewContactActivity$1;->this$0:Lorg/telegram/ui/NewContactActivity;
 
@@ -381,7 +381,7 @@
 
     if-nez p1, :cond_44
 
-    .line 117
+    .line 116
     iget-object p1, p0, Lorg/telegram/ui/NewContactActivity$1;->this$0:Lorg/telegram/ui/NewContactActivity;
 
     invoke-virtual {p1}, Lorg/telegram/ui/ActionBar/BaseFragment;->getParentActivity()Landroid/app/Activity;
@@ -396,10 +396,10 @@
 
     if-eqz p1, :cond_3a
 
-    .line 119
+    .line 118
     invoke-virtual {p1, v1, v2}, Landroid/os/Vibrator;->vibrate(J)V
 
-    .line 121
+    .line 120
     :cond_3a
     iget-object p1, p0, Lorg/telegram/ui/NewContactActivity$1;->this$0:Lorg/telegram/ui/NewContactActivity;
 
@@ -411,7 +411,7 @@
 
     return-void
 
-    .line 124
+    .line 123
     :cond_44
     iget-object p1, p0, Lorg/telegram/ui/NewContactActivity$1;->this$0:Lorg/telegram/ui/NewContactActivity;
 
@@ -425,7 +425,7 @@
 
     if-nez p1, :cond_6b
 
-    .line 125
+    .line 124
     iget-object p1, p0, Lorg/telegram/ui/NewContactActivity$1;->this$0:Lorg/telegram/ui/NewContactActivity;
 
     invoke-virtual {p1}, Lorg/telegram/ui/ActionBar/BaseFragment;->getParentActivity()Landroid/app/Activity;
@@ -440,10 +440,10 @@
 
     if-eqz p1, :cond_61
 
-    .line 127
+    .line 126
     invoke-virtual {p1, v1, v2}, Landroid/os/Vibrator;->vibrate(J)V
 
-    .line 129
+    .line 128
     :cond_61
     iget-object p1, p0, Lorg/telegram/ui/NewContactActivity$1;->this$0:Lorg/telegram/ui/NewContactActivity;
 
@@ -455,7 +455,7 @@
 
     return-void
 
-    .line 132
+    .line 131
     :cond_6b
     iget-object p1, p0, Lorg/telegram/ui/NewContactActivity$1;->this$0:Lorg/telegram/ui/NewContactActivity;
 
@@ -469,7 +469,7 @@
 
     if-nez p1, :cond_92
 
-    .line 133
+    .line 132
     iget-object p1, p0, Lorg/telegram/ui/NewContactActivity$1;->this$0:Lorg/telegram/ui/NewContactActivity;
 
     invoke-virtual {p1}, Lorg/telegram/ui/ActionBar/BaseFragment;->getParentActivity()Landroid/app/Activity;
@@ -484,10 +484,10 @@
 
     if-eqz p1, :cond_88
 
-    .line 135
+    .line 134
     invoke-virtual {p1, v1, v2}, Landroid/os/Vibrator;->vibrate(J)V
 
-    .line 137
+    .line 136
     :cond_88
     iget-object p1, p0, Lorg/telegram/ui/NewContactActivity$1;->this$0:Lorg/telegram/ui/NewContactActivity;
 
@@ -499,28 +499,28 @@
 
     return-void
 
-    .line 140
+    .line 139
     :cond_92
     iget-object p1, p0, Lorg/telegram/ui/NewContactActivity$1;->this$0:Lorg/telegram/ui/NewContactActivity;
 
     invoke-static {p1, v0}, Lorg/telegram/ui/NewContactActivity;->access$002(Lorg/telegram/ui/NewContactActivity;Z)Z
 
-    .line 141
+    .line 140
     iget-object p1, p0, Lorg/telegram/ui/NewContactActivity$1;->this$0:Lorg/telegram/ui/NewContactActivity;
 
     invoke-static {p1, v0, v0}, Lorg/telegram/ui/NewContactActivity;->access$400(Lorg/telegram/ui/NewContactActivity;ZZ)V
 
-    .line 142
+    .line 141
     new-instance p1, Lorg/telegram/tgnet/TLRPC$TL_contacts_importContacts;
 
     invoke-direct {p1}, Lorg/telegram/tgnet/TLRPC$TL_contacts_importContacts;-><init>()V
 
-    .line 143
+    .line 142
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_inputPhoneContact;
 
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_inputPhoneContact;-><init>()V
 
-    .line 144
+    .line 143
     iget-object v1, p0, Lorg/telegram/ui/NewContactActivity$1;->this$0:Lorg/telegram/ui/NewContactActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/NewContactActivity;->access$100(Lorg/telegram/ui/NewContactActivity;)Lorg/telegram/ui/Components/EditTextBoldCursor;
@@ -537,7 +537,7 @@
 
     iput-object v1, v0, Lorg/telegram/tgnet/TLRPC$TL_inputPhoneContact;->first_name:Ljava/lang/String;
 
-    .line 145
+    .line 144
     iget-object v1, p0, Lorg/telegram/ui/NewContactActivity$1;->this$0:Lorg/telegram/ui/NewContactActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/NewContactActivity;->access$500(Lorg/telegram/ui/NewContactActivity;)Lorg/telegram/ui/Components/EditTextBoldCursor;
@@ -554,7 +554,7 @@
 
     iput-object v1, v0, Lorg/telegram/tgnet/TLRPC$TL_inputPhoneContact;->last_name:Ljava/lang/String;
 
-    .line 146
+    .line 145
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -601,12 +601,12 @@
 
     iput-object v1, v0, Lorg/telegram/tgnet/TLRPC$TL_inputPhoneContact;->phone:Ljava/lang/String;
 
-    .line 147
+    .line 146
     iget-object v1, p1, Lorg/telegram/tgnet/TLRPC$TL_contacts_importContacts;->contacts:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 148
+    .line 147
     iget-object v1, p0, Lorg/telegram/ui/NewContactActivity$1;->this$0:Lorg/telegram/ui/NewContactActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/NewContactActivity;->access$600(Lorg/telegram/ui/NewContactActivity;)I
@@ -627,7 +627,7 @@
 
     move-result p1
 
-    .line 182
+    .line 181
     iget-object v0, p0, Lorg/telegram/ui/NewContactActivity$1;->this$0:Lorg/telegram/ui/NewContactActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/NewContactActivity;->access$800(Lorg/telegram/ui/NewContactActivity;)I

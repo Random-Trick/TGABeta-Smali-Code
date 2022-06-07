@@ -3,7 +3,7 @@
 .source "ChatEditTypeActivity.java"
 
 # interfaces
-.implements Lorg/telegram/ui/Components/LinkActionView$Delegate;
+.implements Landroid/text/TextWatcher;
 
 
 # annotations
@@ -20,17 +20,13 @@
 # instance fields
 .field final synthetic this$0:Lorg/telegram/ui/ChatEditTypeActivity;
 
-.field final synthetic val$context:Landroid/content/Context;
-
 
 # direct methods
-.method constructor <init>(Lorg/telegram/ui/ChatEditTypeActivity;Landroid/content/Context;)V
-    .registers 3
+.method constructor <init>(Lorg/telegram/ui/ChatEditTypeActivity;)V
+    .registers 2
 
-    .line 373
+    .line 359
     iput-object p1, p0, Lorg/telegram/ui/ChatEditTypeActivity$4;->this$0:Lorg/telegram/ui/ChatEditTypeActivity;
-
-    iput-object p2, p0, Lorg/telegram/ui/ChatEditTypeActivity$4;->val$context:Landroid/content/Context;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -39,91 +35,54 @@
 
 
 # virtual methods
-.method public synthetic editLink()V
-    .registers 1
+.method public afterTextChanged(Landroid/text/Editable;)V
+    .registers 2
 
-    invoke-static {p0}, Lorg/telegram/ui/Components/LinkActionView$Delegate$-CC;->$default$editLink(Lorg/telegram/ui/Components/LinkActionView$Delegate;)V
+    .line 375
+    iget-object p1, p0, Lorg/telegram/ui/ChatEditTypeActivity$4;->this$0:Lorg/telegram/ui/ChatEditTypeActivity;
 
-    return-void
-.end method
-
-.method public synthetic removeLink()V
-    .registers 1
-
-    invoke-static {p0}, Lorg/telegram/ui/Components/LinkActionView$Delegate$-CC;->$default$removeLink(Lorg/telegram/ui/Components/LinkActionView$Delegate;)V
+    invoke-static {p1}, Lorg/telegram/ui/ChatEditTypeActivity;->access$500(Lorg/telegram/ui/ChatEditTypeActivity;)V
 
     return-void
 .end method
 
-.method public revokeLink()V
-    .registers 3
-
-    .line 376
-    iget-object v0, p0, Lorg/telegram/ui/ChatEditTypeActivity$4;->this$0:Lorg/telegram/ui/ChatEditTypeActivity;
-
-    const/4 v1, 0x1
-
-    invoke-static {v0, v1}, Lorg/telegram/ui/ChatEditTypeActivity;->access$500(Lorg/telegram/ui/ChatEditTypeActivity;Z)V
+.method public beforeTextChanged(Ljava/lang/CharSequence;III)V
+    .registers 5
 
     return-void
 .end method
 
-.method public showUsersForPermanentLink()V
-    .registers 13
+.method public onTextChanged(Ljava/lang/CharSequence;III)V
+    .registers 5
 
-    .line 381
-    iget-object v0, p0, Lorg/telegram/ui/ChatEditTypeActivity$4;->this$0:Lorg/telegram/ui/ChatEditTypeActivity;
+    .line 367
+    iget-object p1, p0, Lorg/telegram/ui/ChatEditTypeActivity$4;->this$0:Lorg/telegram/ui/ChatEditTypeActivity;
 
-    new-instance v11, Lorg/telegram/ui/Components/InviteLinkBottomSheet;
+    invoke-static {p1}, Lorg/telegram/ui/ChatEditTypeActivity;->access$200(Lorg/telegram/ui/ChatEditTypeActivity;)Z
 
-    iget-object v2, p0, Lorg/telegram/ui/ChatEditTypeActivity$4;->val$context:Landroid/content/Context;
+    move-result p1
 
-    iget-object v1, p0, Lorg/telegram/ui/ChatEditTypeActivity$4;->this$0:Lorg/telegram/ui/ChatEditTypeActivity;
+    if-eqz p1, :cond_9
 
-    invoke-static {v1}, Lorg/telegram/ui/ChatEditTypeActivity;->access$700(Lorg/telegram/ui/ChatEditTypeActivity;)Lorg/telegram/tgnet/TLRPC$TL_chatInviteExported;
+    return-void
 
-    move-result-object v3
+    .line 370
+    :cond_9
+    iget-object p1, p0, Lorg/telegram/ui/ChatEditTypeActivity$4;->this$0:Lorg/telegram/ui/ChatEditTypeActivity;
 
-    iget-object v1, p0, Lorg/telegram/ui/ChatEditTypeActivity$4;->this$0:Lorg/telegram/ui/ChatEditTypeActivity;
+    invoke-static {p1}, Lorg/telegram/ui/ChatEditTypeActivity;->access$300(Lorg/telegram/ui/ChatEditTypeActivity;)Lorg/telegram/ui/Components/EditTextBoldCursor;
 
-    invoke-static {v1}, Lorg/telegram/ui/ChatEditTypeActivity;->access$800(Lorg/telegram/ui/ChatEditTypeActivity;)Lorg/telegram/tgnet/TLRPC$ChatFull;
+    move-result-object p2
 
-    move-result-object v4
+    invoke-virtual {p2}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
 
-    iget-object v6, p0, Lorg/telegram/ui/ChatEditTypeActivity$4;->this$0:Lorg/telegram/ui/ChatEditTypeActivity;
+    move-result-object p2
 
-    iget-object v5, v6, Lorg/telegram/ui/ChatEditTypeActivity;->usersMap:Ljava/util/HashMap;
+    invoke-virtual {p2}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    invoke-static {v6}, Lorg/telegram/ui/ChatEditTypeActivity;->access$900(Lorg/telegram/ui/ChatEditTypeActivity;)J
+    move-result-object p2
 
-    move-result-wide v7
-
-    iget-object v1, p0, Lorg/telegram/ui/ChatEditTypeActivity$4;->this$0:Lorg/telegram/ui/ChatEditTypeActivity;
-
-    invoke-static {v1}, Lorg/telegram/ui/ChatEditTypeActivity;->access$1000(Lorg/telegram/ui/ChatEditTypeActivity;)Lorg/telegram/tgnet/TLRPC$Chat;
-
-    move-result-object v1
-
-    invoke-static {v1}, Lorg/telegram/messenger/ChatObject;->isChannel(Lorg/telegram/tgnet/TLRPC$Chat;)Z
-
-    move-result v10
-
-    const/4 v9, 0x1
-
-    move-object v1, v11
-
-    invoke-direct/range {v1 .. v10}, Lorg/telegram/ui/Components/InviteLinkBottomSheet;-><init>(Landroid/content/Context;Lorg/telegram/tgnet/TLRPC$TL_chatInviteExported;Lorg/telegram/tgnet/TLRPC$ChatFull;Ljava/util/HashMap;Lorg/telegram/ui/ActionBar/BaseFragment;JZZ)V
-
-    invoke-static {v0, v11}, Lorg/telegram/ui/ChatEditTypeActivity;->access$602(Lorg/telegram/ui/ChatEditTypeActivity;Lorg/telegram/ui/Components/InviteLinkBottomSheet;)Lorg/telegram/ui/Components/InviteLinkBottomSheet;
-
-    .line 382
-    iget-object v0, p0, Lorg/telegram/ui/ChatEditTypeActivity$4;->this$0:Lorg/telegram/ui/ChatEditTypeActivity;
-
-    invoke-static {v0}, Lorg/telegram/ui/ChatEditTypeActivity;->access$600(Lorg/telegram/ui/ChatEditTypeActivity;)Lorg/telegram/ui/Components/InviteLinkBottomSheet;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lorg/telegram/ui/Components/InviteLinkBottomSheet;->show()V
+    invoke-static {p1, p2}, Lorg/telegram/ui/ChatEditTypeActivity;->access$400(Lorg/telegram/ui/ChatEditTypeActivity;Ljava/lang/String;)Z
 
     return-void
 .end method

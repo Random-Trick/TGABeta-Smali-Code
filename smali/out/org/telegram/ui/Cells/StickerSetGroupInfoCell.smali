@@ -42,7 +42,7 @@
 
     const-string v3, "GroupStickersInfo"
 
-    const v4, 0x7f0e0818
+    const v4, 0x7f0e0870
 
     .line 36
     invoke-static {v3, v4}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -150,7 +150,7 @@
 
     const-string v0, "ChooseStickerSet"
 
-    const v1, 0x7f0e0451
+    const v1, 0x7f0e0495
 
     invoke-static {v0, v1}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 

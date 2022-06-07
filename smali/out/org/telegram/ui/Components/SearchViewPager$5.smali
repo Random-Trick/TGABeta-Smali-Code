@@ -1,11 +1,11 @@
 .class Lorg/telegram/ui/Components/SearchViewPager$5;
-.super Landroid/animation/AnimatorListenerAdapter;
+.super Landroidx/recyclerview/widget/RecyclerView$OnScrollListener;
 .source "SearchViewPager.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lorg/telegram/ui/Components/SearchViewPager;->search(Landroid/view/View;ILjava/lang/String;Z)V
+    value = Lorg/telegram/ui/Components/SearchViewPager;-><init>(Landroid/content/Context;Lorg/telegram/ui/DialogsActivity;IIILorg/telegram/ui/Components/SearchViewPager$ChatPreviewDelegate;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,29 +22,28 @@
 .method constructor <init>(Lorg/telegram/ui/Components/SearchViewPager;)V
     .registers 2
 
-    .line 241
+    .line 218
     iput-object p1, p0, Lorg/telegram/ui/Components/SearchViewPager$5;->this$0:Lorg/telegram/ui/Components/SearchViewPager;
 
-    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
+    invoke-direct {p0}, Landroidx/recyclerview/widget/RecyclerView$OnScrollListener;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onAnimationEnd(Landroid/animation/Animator;)V
-    .registers 3
+.method public onScrolled(Landroidx/recyclerview/widget/RecyclerView;II)V
+    .registers 4
 
-    .line 244
+    .line 221
+    invoke-super {p0, p1, p2, p3}, Landroidx/recyclerview/widget/RecyclerView$OnScrollListener;->onScrolled(Landroidx/recyclerview/widget/RecyclerView;II)V
+
+    .line 222
     iget-object p1, p0, Lorg/telegram/ui/Components/SearchViewPager$5;->this$0:Lorg/telegram/ui/Components/SearchViewPager;
 
-    invoke-static {p1}, Lorg/telegram/ui/Components/SearchViewPager;->access$200(Lorg/telegram/ui/Components/SearchViewPager;)Lorg/telegram/ui/FilteredSearchView;
+    iget-object p1, p1, Lorg/telegram/ui/Components/SearchViewPager;->fragmentView:Lorg/telegram/ui/Components/SizeNotifierFrameLayout;
 
-    move-result-object p1
-
-    const/16 v0, 0x8
-
-    invoke-virtual {p1, v0}, Landroid/widget/FrameLayout;->setVisibility(I)V
+    invoke-virtual {p1}, Lorg/telegram/ui/Components/SizeNotifierFrameLayout;->invalidateBlur()V
 
     return-void
 .end method

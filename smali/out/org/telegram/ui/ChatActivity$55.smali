@@ -1,5 +1,5 @@
 .class Lorg/telegram/ui/ChatActivity$55;
-.super Landroid/animation/AnimatorListenerAdapter;
+.super Lorg/telegram/ui/Components/BluredView;
 .source "ChatActivity.java"
 
 
@@ -19,38 +19,47 @@
 
 
 # direct methods
-.method constructor <init>(Lorg/telegram/ui/ChatActivity;)V
-    .registers 2
+.method constructor <init>(Lorg/telegram/ui/ChatActivity;Landroid/content/Context;Landroid/view/View;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)V
+    .registers 5
 
-    .line 8853
+    .line 8981
     iput-object p1, p0, Lorg/telegram/ui/ChatActivity$55;->this$0:Lorg/telegram/ui/ChatActivity;
 
-    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
+    invoke-direct {p0, p2, p3, p4}, Lorg/telegram/ui/Components/BluredView;-><init>(Landroid/content/Context;Landroid/view/View;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onAnimationEnd(Landroid/animation/Animator;)V
+.method public setAlpha(F)V
     .registers 2
 
-    .line 8856
-    invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationEnd(Landroid/animation/Animator;)V
+    .line 8984
+    invoke-super {p0, p1}, Landroid/view/View;->setAlpha(F)V
 
-    .line 8857
+    .line 8985
     iget-object p1, p0, Lorg/telegram/ui/ChatActivity$55;->this$0:Lorg/telegram/ui/ChatActivity;
 
-    invoke-static {p1}, Lorg/telegram/ui/ChatActivity;->access$2200(Lorg/telegram/ui/ChatActivity;)Lorg/telegram/ui/Components/RecyclerListView;
+    invoke-static {p1}, Lorg/telegram/ui/ChatActivity;->access$32300(Lorg/telegram/ui/ChatActivity;)Landroid/view/View;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Landroid/view/ViewGroup;->invalidate()V
+    invoke-virtual {p1}, Landroid/view/View;->invalidate()V
 
-    .line 8858
+    return-void
+.end method
+
+.method public setVisibility(I)V
+    .registers 2
+
+    .line 8990
+    invoke-super {p0, p1}, Landroid/view/View;->setVisibility(I)V
+
+    .line 8991
     iget-object p1, p0, Lorg/telegram/ui/ChatActivity$55;->this$0:Lorg/telegram/ui/ChatActivity;
 
-    invoke-static {p1}, Lorg/telegram/ui/ChatActivity;->access$32000(Lorg/telegram/ui/ChatActivity;)Landroid/view/View;
+    invoke-static {p1}, Lorg/telegram/ui/ChatActivity;->access$32400(Lorg/telegram/ui/ChatActivity;)Landroid/view/View;
 
     move-result-object p1
 

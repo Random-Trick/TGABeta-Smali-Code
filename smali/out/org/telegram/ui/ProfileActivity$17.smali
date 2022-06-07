@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/ProfileActivity;Landroid/content/Context;)V
     .registers 3
 
-    .line 3194
+    .line 3205
     iput-object p1, p0, Lorg/telegram/ui/ProfileActivity$17;->this$0:Lorg/telegram/ui/ProfileActivity;
 
     invoke-direct {p0, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
@@ -35,25 +35,25 @@
 .method protected dispatchDraw(Landroid/graphics/Canvas;)V
     .registers 11
 
-    .line 3197
+    .line 3208
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->dispatchDraw(Landroid/graphics/Canvas;)V
 
-    .line 3198
+    .line 3209
     iget-object v0, p0, Lorg/telegram/ui/ProfileActivity$17;->this$0:Lorg/telegram/ui/ProfileActivity;
 
-    invoke-static {v0}, Lorg/telegram/ui/ProfileActivity;->access$12900(Lorg/telegram/ui/ProfileActivity;)Landroid/view/View;
+    invoke-static {v0}, Lorg/telegram/ui/ProfileActivity;->access$13000(Lorg/telegram/ui/ProfileActivity;)Landroid/view/View;
 
     move-result-object v0
 
     if-eqz v0, :cond_68
 
-    .line 3199
+    .line 3210
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 3200
+    .line 3211
     iget-object v0, p0, Lorg/telegram/ui/ProfileActivity$17;->this$0:Lorg/telegram/ui/ProfileActivity;
 
-    invoke-static {v0}, Lorg/telegram/ui/ProfileActivity;->access$8100(Lorg/telegram/ui/ProfileActivity;)[Lorg/telegram/ui/ActionBar/SimpleTextView;
+    invoke-static {v0}, Lorg/telegram/ui/ProfileActivity;->access$8200(Lorg/telegram/ui/ProfileActivity;)[Lorg/telegram/ui/ActionBar/SimpleTextView;
 
     move-result-object v0
 
@@ -67,7 +67,7 @@
 
     iget-object v2, p0, Lorg/telegram/ui/ProfileActivity$17;->this$0:Lorg/telegram/ui/ProfileActivity;
 
-    invoke-static {v2}, Lorg/telegram/ui/ProfileActivity;->access$8100(Lorg/telegram/ui/ProfileActivity;)[Lorg/telegram/ui/ActionBar/SimpleTextView;
+    invoke-static {v2}, Lorg/telegram/ui/ProfileActivity;->access$8200(Lorg/telegram/ui/ProfileActivity;)[Lorg/telegram/ui/ActionBar/SimpleTextView;
 
     move-result-object v2
 
@@ -83,10 +83,10 @@
 
     const/4 v4, 0x0
 
-    .line 3201
+    .line 3212
     iget-object v0, p0, Lorg/telegram/ui/ProfileActivity$17;->this$0:Lorg/telegram/ui/ProfileActivity;
 
-    invoke-static {v0}, Lorg/telegram/ui/ProfileActivity;->access$12900(Lorg/telegram/ui/ProfileActivity;)Landroid/view/View;
+    invoke-static {v0}, Lorg/telegram/ui/ProfileActivity;->access$13000(Lorg/telegram/ui/ProfileActivity;)Landroid/view/View;
 
     move-result-object v0
 
@@ -98,7 +98,7 @@
 
     iget-object v0, p0, Lorg/telegram/ui/ProfileActivity$17;->this$0:Lorg/telegram/ui/ProfileActivity;
 
-    invoke-static {v0}, Lorg/telegram/ui/ProfileActivity;->access$12900(Lorg/telegram/ui/ProfileActivity;)Landroid/view/View;
+    invoke-static {v0}, Lorg/telegram/ui/ProfileActivity;->access$13000(Lorg/telegram/ui/ProfileActivity;)Landroid/view/View;
 
     move-result-object v0
 
@@ -114,7 +114,7 @@
 
     iget-object v2, p0, Lorg/telegram/ui/ProfileActivity$17;->this$0:Lorg/telegram/ui/ProfileActivity;
 
-    invoke-static {v2}, Lorg/telegram/ui/ProfileActivity;->access$13000(Lorg/telegram/ui/ProfileActivity;)F
+    invoke-static {v2}, Lorg/telegram/ui/ProfileActivity;->access$13100(Lorg/telegram/ui/ProfileActivity;)F
 
     move-result v2
 
@@ -130,22 +130,22 @@
 
     invoke-virtual/range {v2 .. v8}, Landroid/graphics/Canvas;->saveLayerAlpha(FFFFII)I
 
-    .line 3202
+    .line 3213
     iget-object v0, p0, Lorg/telegram/ui/ProfileActivity$17;->this$0:Lorg/telegram/ui/ProfileActivity;
 
-    invoke-static {v0}, Lorg/telegram/ui/ProfileActivity;->access$12900(Lorg/telegram/ui/ProfileActivity;)Landroid/view/View;
+    invoke-static {v0}, Lorg/telegram/ui/ProfileActivity;->access$13000(Lorg/telegram/ui/ProfileActivity;)Landroid/view/View;
 
     move-result-object v0
 
     invoke-virtual {v0, p1}, Landroid/view/View;->draw(Landroid/graphics/Canvas;)V
 
-    .line 3203
+    .line 3214
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
-    .line 3204
+    .line 3215
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
-    .line 3205
+    .line 3216
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->invalidate()V
 
     :cond_68

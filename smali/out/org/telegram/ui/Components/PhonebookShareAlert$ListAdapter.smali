@@ -111,11 +111,11 @@
 .end method
 
 .method public onBindViewHolder(Landroid/view/View;II)V
-    .registers 7
+    .registers 8
 
     const/4 v0, 0x1
 
-    if-ne p3, v0, :cond_8b
+    if-ne p3, v0, :cond_87
 
     .line 1054
     check-cast p1, Lorg/telegram/ui/Components/PhonebookShareAlert$TextCheckBoxCell;
@@ -127,7 +127,9 @@
 
     move-result p3
 
-    if-lt p2, p3, :cond_2d
+    const v1, 0x7f070243
+
+    if-lt p2, p3, :cond_30
 
     iget-object p3, p0, Lorg/telegram/ui/Components/PhonebookShareAlert$ListAdapter;->this$0:Lorg/telegram/ui/Components/PhonebookShareAlert;
 
@@ -135,7 +137,7 @@
 
     move-result p3
 
-    if-ge p2, p3, :cond_2d
+    if-ge p2, p3, :cond_30
 
     .line 1058
     iget-object p3, p0, Lorg/telegram/ui/Components/PhonebookShareAlert$ListAdapter;->this$0:Lorg/telegram/ui/Components/PhonebookShareAlert;
@@ -158,81 +160,79 @@
 
     check-cast p3, Lorg/telegram/messenger/AndroidUtilities$VcardItem;
 
-    const v1, 0x7f0701e5
+    const v1, 0x7f0701e0
 
-    goto :goto_7f
+    goto :goto_7b
 
     .line 1061
-    :cond_2d
+    :cond_30
     iget-object p3, p0, Lorg/telegram/ui/Components/PhonebookShareAlert$ListAdapter;->this$0:Lorg/telegram/ui/Components/PhonebookShareAlert;
 
     invoke-static {p3}, Lorg/telegram/ui/Components/PhonebookShareAlert;->access$100(Lorg/telegram/ui/Components/PhonebookShareAlert;)Ljava/util/ArrayList;
 
     move-result-object p3
 
-    iget-object v1, p0, Lorg/telegram/ui/Components/PhonebookShareAlert$ListAdapter;->this$0:Lorg/telegram/ui/Components/PhonebookShareAlert;
+    iget-object v2, p0, Lorg/telegram/ui/Components/PhonebookShareAlert$ListAdapter;->this$0:Lorg/telegram/ui/Components/PhonebookShareAlert;
 
-    invoke-static {v1}, Lorg/telegram/ui/Components/PhonebookShareAlert;->access$4300(Lorg/telegram/ui/Components/PhonebookShareAlert;)I
+    invoke-static {v2}, Lorg/telegram/ui/Components/PhonebookShareAlert;->access$4300(Lorg/telegram/ui/Components/PhonebookShareAlert;)I
 
-    move-result v1
+    move-result v2
 
-    sub-int v1, p2, v1
+    sub-int v2, p2, v2
 
-    invoke-virtual {p3, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    invoke-virtual {p3, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object p3
 
     check-cast p3, Lorg/telegram/messenger/AndroidUtilities$VcardItem;
 
     .line 1062
-    iget v1, p3, Lorg/telegram/messenger/AndroidUtilities$VcardItem;->type:I
+    iget v2, p3, Lorg/telegram/messenger/AndroidUtilities$VcardItem;->type:I
 
-    if-ne v1, v0, :cond_49
+    if-ne v2, v0, :cond_4c
 
-    const v1, 0x7f070209
+    const v1, 0x7f070267
 
-    goto :goto_7f
+    goto :goto_7b
 
-    :cond_49
-    const/4 v2, 0x2
+    :cond_4c
+    const/4 v3, 0x2
 
-    if-ne v1, v2, :cond_50
+    if-ne v2, v3, :cond_53
 
-    const v1, 0x7f070208
+    const v1, 0x7f07025c
 
-    goto :goto_7f
+    goto :goto_7b
 
-    :cond_50
-    const/4 v2, 0x3
+    :cond_53
+    const/4 v3, 0x3
 
-    if-ne v1, v2, :cond_57
+    if-ne v2, v3, :cond_5a
 
-    const v1, 0x7f070277
+    const v1, 0x7f070256
 
-    goto :goto_7f
+    goto :goto_7b
 
-    :cond_57
-    const/4 v2, 0x4
+    :cond_5a
+    const/4 v3, 0x4
 
-    if-ne v1, v2, :cond_5e
+    if-ne v2, v3, :cond_5e
 
-    const v1, 0x7f07037c
-
-    goto :goto_7f
+    goto :goto_7b
 
     :cond_5e
-    const/4 v2, 0x5
+    const/4 v3, 0x5
 
-    if-ne v1, v2, :cond_65
+    if-ne v2, v3, :cond_65
 
-    const v1, 0x7f0701f7
+    const v1, 0x7f0701de
 
-    goto :goto_7f
+    goto :goto_7b
 
     :cond_65
-    const/4 v2, 0x6
+    const/4 v3, 0x6
 
-    if-ne v1, v2, :cond_7c
+    if-ne v2, v3, :cond_7b
 
     .line 1073
     invoke-virtual {p3, v0}, Lorg/telegram/messenger/AndroidUtilities$VcardItem;->getRawType(Z)Ljava/lang/String;
@@ -247,36 +247,32 @@
 
     if-eqz v1, :cond_78
 
-    const v1, 0x7f07022a
+    const v1, 0x7f070324
 
-    goto :goto_7f
+    goto :goto_7b
 
     :cond_78
-    const v1, 0x7f070206
-
-    goto :goto_7f
-
-    :cond_7c
-    const v1, 0x7f070202
+    const v1, 0x7f07024c
 
     .line 1084
-    :goto_7f
+    :cond_7b
+    :goto_7b
     invoke-virtual {p0}, Lorg/telegram/ui/Components/PhonebookShareAlert$ListAdapter;->getItemCount()I
 
     move-result v2
 
     sub-int/2addr v2, v0
 
-    if-eq p2, v2, :cond_87
+    if-eq p2, v2, :cond_83
 
-    goto :goto_88
+    goto :goto_84
 
-    :cond_87
+    :cond_83
     const/4 v0, 0x0
 
-    :goto_88
+    :goto_84
     invoke-virtual {p1, p3, v1, v0}, Lorg/telegram/ui/Components/PhonebookShareAlert$TextCheckBoxCell;->setVCardItem(Lorg/telegram/messenger/AndroidUtilities$VcardItem;IZ)V
 
-    :cond_8b
+    :cond_87
     return-void
 .end method

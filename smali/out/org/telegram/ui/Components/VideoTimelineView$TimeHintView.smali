@@ -64,7 +64,7 @@
 
     invoke-virtual {v0, v1}, Landroid/text/TextPaint;->setTextSize(F)V
 
-    const v0, 0x7f0703ff
+    const v0, 0x7f0703e7
 
     .line 505
     invoke-static {p1, v0}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;

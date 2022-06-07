@@ -5,27 +5,17 @@
 .implements Landroid/widget/TextView$OnEditorActionListener;
 
 
-# static fields
-.field public static final synthetic INSTANCE:Lorg/telegram/ui/PaymentFormActivity$$ExternalSyntheticLambda29;
+# instance fields
+.field public final synthetic f$0:Lorg/telegram/ui/PaymentFormActivity;
 
 
 # direct methods
-.method static synthetic constructor <clinit>()V
-    .registers 1
-
-    new-instance v0, Lorg/telegram/ui/PaymentFormActivity$$ExternalSyntheticLambda29;
-
-    invoke-direct {v0}, Lorg/telegram/ui/PaymentFormActivity$$ExternalSyntheticLambda29;-><init>()V
-
-    sput-object v0, Lorg/telegram/ui/PaymentFormActivity$$ExternalSyntheticLambda29;->INSTANCE:Lorg/telegram/ui/PaymentFormActivity$$ExternalSyntheticLambda29;
-
-    return-void
-.end method
-
-.method private synthetic constructor <init>()V
-    .registers 1
+.method public synthetic constructor <init>(Lorg/telegram/ui/PaymentFormActivity;)V
+    .registers 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lorg/telegram/ui/PaymentFormActivity$$ExternalSyntheticLambda29;->f$0:Lorg/telegram/ui/PaymentFormActivity;
 
     return-void
 .end method
@@ -33,9 +23,11 @@
 
 # virtual methods
 .method public final onEditorAction(Landroid/widget/TextView;ILandroid/view/KeyEvent;)Z
-    .registers 4
+    .registers 5
 
-    invoke-static {p1, p2, p3}, Lorg/telegram/ui/PaymentFormActivity;->$r8$lambda$nZ4_szZB3J8cd3WhiD7iwhnvYsk(Landroid/widget/TextView;ILandroid/view/KeyEvent;)Z
+    iget-object v0, p0, Lorg/telegram/ui/PaymentFormActivity$$ExternalSyntheticLambda29;->f$0:Lorg/telegram/ui/PaymentFormActivity;
+
+    invoke-static {v0, p1, p2, p3}, Lorg/telegram/ui/PaymentFormActivity;->$r8$lambda$xR8Gbm-NkgnmgJUOUHnvYiFZMuY(Lorg/telegram/ui/PaymentFormActivity;Landroid/widget/TextView;ILandroid/view/KeyEvent;)Z
 
     move-result p1
 

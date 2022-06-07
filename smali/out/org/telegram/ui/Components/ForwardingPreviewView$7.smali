@@ -40,7 +40,7 @@
 
 # virtual methods
 .method public onItemClick(Landroid/view/View;I)V
-    .registers 6
+    .registers 7
 
     .line 414
     iget-object v0, p0, Lorg/telegram/ui/Components/ForwardingPreviewView$7;->this$0:Lorg/telegram/ui/Components/ForwardingPreviewView;
@@ -89,17 +89,17 @@
     xor-int/2addr v0, v1
 
     .line 419
-    iget-object v2, p0, Lorg/telegram/ui/Components/ForwardingPreviewView$7;->this$0:Lorg/telegram/ui/Components/ForwardingPreviewView;
+    iget-object v3, p0, Lorg/telegram/ui/Components/ForwardingPreviewView$7;->this$0:Lorg/telegram/ui/Components/ForwardingPreviewView;
 
-    iget-object v2, v2, Lorg/telegram/ui/Components/ForwardingPreviewView;->forwardingMessagesParams:Lorg/telegram/messenger/ForwardingMessagesParams;
+    iget-object v3, v3, Lorg/telegram/ui/Components/ForwardingPreviewView;->forwardingMessagesParams:Lorg/telegram/messenger/ForwardingMessagesParams;
 
-    iget-object v2, v2, Lorg/telegram/messenger/ForwardingMessagesParams;->selectedIds:Landroid/util/SparseBooleanArray;
+    iget-object v3, v3, Lorg/telegram/messenger/ForwardingMessagesParams;->selectedIds:Landroid/util/SparseBooleanArray;
 
-    invoke-virtual {v2}, Landroid/util/SparseBooleanArray;->size()I
+    invoke-virtual {v3}, Landroid/util/SparseBooleanArray;->size()I
 
-    move-result v2
+    move-result v3
 
-    if-ne v2, v1, :cond_35
+    if-ne v3, v1, :cond_35
 
     if-nez v0, :cond_35
 
@@ -109,21 +109,21 @@
     if-nez v0, :cond_3f
 
     .line 423
-    iget-object v2, p0, Lorg/telegram/ui/Components/ForwardingPreviewView$7;->val$params:Lorg/telegram/messenger/ForwardingMessagesParams;
+    iget-object v3, p0, Lorg/telegram/ui/Components/ForwardingPreviewView$7;->val$params:Lorg/telegram/messenger/ForwardingMessagesParams;
 
-    iget-object v2, v2, Lorg/telegram/messenger/ForwardingMessagesParams;->selectedIds:Landroid/util/SparseBooleanArray;
+    iget-object v3, v3, Lorg/telegram/messenger/ForwardingMessagesParams;->selectedIds:Landroid/util/SparseBooleanArray;
 
-    invoke-virtual {v2, p2}, Landroid/util/SparseBooleanArray;->delete(I)V
+    invoke-virtual {v3, p2}, Landroid/util/SparseBooleanArray;->delete(I)V
 
     goto :goto_46
 
     .line 425
     :cond_3f
-    iget-object v2, p0, Lorg/telegram/ui/Components/ForwardingPreviewView$7;->val$params:Lorg/telegram/messenger/ForwardingMessagesParams;
+    iget-object v3, p0, Lorg/telegram/ui/Components/ForwardingPreviewView$7;->val$params:Lorg/telegram/messenger/ForwardingMessagesParams;
 
-    iget-object v2, v2, Lorg/telegram/messenger/ForwardingMessagesParams;->selectedIds:Landroid/util/SparseBooleanArray;
+    iget-object v3, v3, Lorg/telegram/messenger/ForwardingMessagesParams;->selectedIds:Landroid/util/SparseBooleanArray;
 
-    invoke-virtual {v2, p2, v0}, Landroid/util/SparseBooleanArray;->put(IZ)V
+    invoke-virtual {v3, p2, v0}, Landroid/util/SparseBooleanArray;->put(IZ)V
 
     .line 427
     :goto_46
@@ -145,9 +145,11 @@
 
     move-result p2
 
-    const-string v0, "PreviewForwardMessagesCount"
+    new-array v0, v2, [Ljava/lang/Object;
 
-    invoke-static {v0, p2}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    const-string v1, "PreviewForwardMessagesCount"
+
+    invoke-static {v1, p2, v0}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p2
 

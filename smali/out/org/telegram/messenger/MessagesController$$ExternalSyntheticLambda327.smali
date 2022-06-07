@@ -8,22 +8,30 @@
 # instance fields
 .field public final synthetic f$0:Lorg/telegram/messenger/MessagesController;
 
-.field public final synthetic f$1:Lorg/telegram/tgnet/TLRPC$User;
+.field public final synthetic f$1:Lorg/telegram/tgnet/TLRPC$TL_theme;
 
-.field public final synthetic f$2:I
+.field public final synthetic f$2:Lorg/telegram/ui/ActionBar/Theme$ThemeInfo;
+
+.field public final synthetic f$3:Lorg/telegram/tgnet/TLRPC$TL_inputThemeSettings;
+
+.field public final synthetic f$4:Lorg/telegram/ui/ActionBar/Theme$ThemeAccent;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lorg/telegram/messenger/MessagesController;Lorg/telegram/tgnet/TLRPC$User;I)V
-    .registers 4
+.method public synthetic constructor <init>(Lorg/telegram/messenger/MessagesController;Lorg/telegram/tgnet/TLRPC$TL_theme;Lorg/telegram/ui/ActionBar/Theme$ThemeInfo;Lorg/telegram/tgnet/TLRPC$TL_inputThemeSettings;Lorg/telegram/ui/ActionBar/Theme$ThemeAccent;)V
+    .registers 6
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lorg/telegram/messenger/MessagesController$$ExternalSyntheticLambda327;->f$0:Lorg/telegram/messenger/MessagesController;
 
-    iput-object p2, p0, Lorg/telegram/messenger/MessagesController$$ExternalSyntheticLambda327;->f$1:Lorg/telegram/tgnet/TLRPC$User;
+    iput-object p2, p0, Lorg/telegram/messenger/MessagesController$$ExternalSyntheticLambda327;->f$1:Lorg/telegram/tgnet/TLRPC$TL_theme;
 
-    iput p3, p0, Lorg/telegram/messenger/MessagesController$$ExternalSyntheticLambda327;->f$2:I
+    iput-object p3, p0, Lorg/telegram/messenger/MessagesController$$ExternalSyntheticLambda327;->f$2:Lorg/telegram/ui/ActionBar/Theme$ThemeInfo;
+
+    iput-object p4, p0, Lorg/telegram/messenger/MessagesController$$ExternalSyntheticLambda327;->f$3:Lorg/telegram/tgnet/TLRPC$TL_inputThemeSettings;
+
+    iput-object p5, p0, Lorg/telegram/messenger/MessagesController$$ExternalSyntheticLambda327;->f$4:Lorg/telegram/ui/ActionBar/Theme$ThemeAccent;
 
     return-void
 .end method
@@ -31,15 +39,23 @@
 
 # virtual methods
 .method public final run(Lorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/TLRPC$TL_error;)V
-    .registers 6
+    .registers 10
 
     iget-object v0, p0, Lorg/telegram/messenger/MessagesController$$ExternalSyntheticLambda327;->f$0:Lorg/telegram/messenger/MessagesController;
 
-    iget-object v1, p0, Lorg/telegram/messenger/MessagesController$$ExternalSyntheticLambda327;->f$1:Lorg/telegram/tgnet/TLRPC$User;
+    iget-object v1, p0, Lorg/telegram/messenger/MessagesController$$ExternalSyntheticLambda327;->f$1:Lorg/telegram/tgnet/TLRPC$TL_theme;
 
-    iget v2, p0, Lorg/telegram/messenger/MessagesController$$ExternalSyntheticLambda327;->f$2:I
+    iget-object v2, p0, Lorg/telegram/messenger/MessagesController$$ExternalSyntheticLambda327;->f$2:Lorg/telegram/ui/ActionBar/Theme$ThemeInfo;
 
-    invoke-static {v0, v1, v2, p1, p2}, Lorg/telegram/messenger/MessagesController;->$r8$lambda$3ZHGMtvtsRermrT5rb1JJKCc8YU(Lorg/telegram/messenger/MessagesController;Lorg/telegram/tgnet/TLRPC$User;ILorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/TLRPC$TL_error;)V
+    iget-object v3, p0, Lorg/telegram/messenger/MessagesController$$ExternalSyntheticLambda327;->f$3:Lorg/telegram/tgnet/TLRPC$TL_inputThemeSettings;
+
+    iget-object v4, p0, Lorg/telegram/messenger/MessagesController$$ExternalSyntheticLambda327;->f$4:Lorg/telegram/ui/ActionBar/Theme$ThemeAccent;
+
+    move-object v5, p1
+
+    move-object v6, p2
+
+    invoke-static/range {v0 .. v6}, Lorg/telegram/messenger/MessagesController;->$r8$lambda$QdH5f0dcCN928MPEe8cR4LT9HE4(Lorg/telegram/messenger/MessagesController;Lorg/telegram/tgnet/TLRPC$TL_theme;Lorg/telegram/ui/ActionBar/Theme$ThemeInfo;Lorg/telegram/tgnet/TLRPC$TL_inputThemeSettings;Lorg/telegram/ui/ActionBar/Theme$ThemeAccent;Lorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/TLRPC$TL_error;)V
 
     return-void
 .end method

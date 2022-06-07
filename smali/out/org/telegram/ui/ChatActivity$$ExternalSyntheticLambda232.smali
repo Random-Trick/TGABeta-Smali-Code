@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lorg/telegram/ui/Components/ChatGreetingsView$Listener;
+.implements Lorg/telegram/ui/Adapters/StickersAdapter$StickersAdapterDelegate;
 
 
 # instance fields
@@ -22,12 +22,12 @@
 
 
 # virtual methods
-.method public final onGreetings(Lorg/telegram/tgnet/TLRPC$Document;)V
+.method public final needChangePanelVisibility(Z)V
     .registers 3
 
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda232;->f$0:Lorg/telegram/ui/ChatActivity;
 
-    invoke-static {v0, p1}, Lorg/telegram/ui/ChatActivity;->$r8$lambda$4l9xHAFsgs5g2diz9PMsx5vhN94(Lorg/telegram/ui/ChatActivity;Lorg/telegram/tgnet/TLRPC$Document;)V
+    invoke-static {v0, p1}, Lorg/telegram/ui/ChatActivity;->$r8$lambda$b0EPs3U06EPIkLCzsxsC_ZpbOtY(Lorg/telegram/ui/ChatActivity;Z)V
 
     return-void
 .end method

@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lorg/telegram/ui/Components/SharedMediaLayout;-><init>(Landroid/content/Context;JLorg/telegram/ui/Components/SharedMediaLayout$SharedMediaPreloader;ILjava/util/ArrayList;Lorg/telegram/tgnet/TLRPC$ChatFull;ZLorg/telegram/ui/ActionBar/BaseFragment;Lorg/telegram/ui/Components/SharedMediaLayout$Delegate;I)V
+    value = Lorg/telegram/ui/Components/SharedMediaLayout;-><init>(Landroid/content/Context;JLorg/telegram/ui/Components/SharedMediaLayout$SharedMediaPreloader;ILjava/util/ArrayList;Lorg/telegram/tgnet/TLRPC$ChatFull;ZLorg/telegram/ui/ActionBar/BaseFragment;Lorg/telegram/ui/Components/SharedMediaLayout$Delegate;ILorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/SharedMediaLayout;Landroid/content/Context;)V
     .registers 3
 
-    .line 1192
+    .line 1195
     iput-object p1, p0, Lorg/telegram/ui/Components/SharedMediaLayout$2;->this$0:Lorg/telegram/ui/Components/SharedMediaLayout;
 
     invoke-direct {p0, p2}, Lorg/telegram/ui/Cells/SharedAudioCell;-><init>(Landroid/content/Context;)V
@@ -35,7 +35,7 @@
 .method public needPlayMessage(Lorg/telegram/messenger/MessageObject;)Z
     .registers 6
 
-    .line 1195
+    .line 1198
     invoke-virtual {p1}, Lorg/telegram/messenger/MessageObject;->isVoice()Z
 
     move-result v0
@@ -54,7 +54,7 @@
 
     goto :goto_2f
 
-    .line 1199
+    .line 1202
     :cond_f
     invoke-virtual {p1}, Lorg/telegram/messenger/MessageObject;->isMusic()Z
 
@@ -62,7 +62,7 @@
 
     if-eqz v0, :cond_2e
 
-    .line 1200
+    .line 1203
     invoke-static {}, Lorg/telegram/messenger/MediaController;->getInstance()Lorg/telegram/messenger/MediaController;
 
     move-result-object v0
@@ -92,7 +92,7 @@
     :cond_2e
     return v1
 
-    .line 1196
+    .line 1199
     :cond_2f
     :goto_2f
     invoke-static {}, Lorg/telegram/messenger/MediaController;->getInstance()Lorg/telegram/messenger/MediaController;
@@ -103,7 +103,7 @@
 
     move-result p1
 
-    .line 1197
+    .line 1200
     invoke-static {}, Lorg/telegram/messenger/MediaController;->getInstance()Lorg/telegram/messenger/MediaController;
 
     move-result-object v0

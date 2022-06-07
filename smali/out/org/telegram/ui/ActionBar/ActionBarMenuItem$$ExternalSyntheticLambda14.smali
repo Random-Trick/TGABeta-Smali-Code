@@ -2,38 +2,32 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lorg/telegram/ui/ActionBar/ActionBarPopupWindow$OnDispatchKeyEventListener;
 
 
 # instance fields
 .field public final synthetic f$0:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
-.field public final synthetic f$1:I
-
 
 # direct methods
-.method public synthetic constructor <init>(Lorg/telegram/ui/ActionBar/ActionBarMenuItem;I)V
-    .registers 3
+.method public synthetic constructor <init>(Lorg/telegram/ui/ActionBar/ActionBarMenuItem;)V
+    .registers 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuItem$$ExternalSyntheticLambda14;->f$0:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
-
-    iput p2, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuItem$$ExternalSyntheticLambda14;->f$1:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
+.method public final onDispatchKeyEvent(Landroid/view/KeyEvent;)V
     .registers 3
 
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuItem$$ExternalSyntheticLambda14;->f$0:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
-    iget v1, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuItem$$ExternalSyntheticLambda14;->f$1:I
-
-    invoke-static {v0, v1}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->$r8$lambda$2uVoNZS1FFsm1ZK7U2R_OY_2B3A(Lorg/telegram/ui/ActionBar/ActionBarMenuItem;I)V
+    invoke-static {v0, p1}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->$r8$lambda$8X-IeV3S7MOinJQY6-T53PHfIyw(Lorg/telegram/ui/ActionBar/ActionBarMenuItem;Landroid/view/KeyEvent;)V
 
     return-void
 .end method

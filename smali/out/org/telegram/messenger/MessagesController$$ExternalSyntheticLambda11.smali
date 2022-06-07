@@ -6,20 +6,16 @@
 
 
 # instance fields
-.field public final synthetic f$0:Lorg/telegram/messenger/MessagesController$ErrorDelegate;
-
-.field public final synthetic f$1:Lorg/telegram/tgnet/TLRPC$TL_error;
+.field public final synthetic f$0:Lorg/telegram/messenger/MessagesController;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lorg/telegram/messenger/MessagesController$ErrorDelegate;Lorg/telegram/tgnet/TLRPC$TL_error;)V
-    .registers 3
+.method public synthetic constructor <init>(Lorg/telegram/messenger/MessagesController;)V
+    .registers 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lorg/telegram/messenger/MessagesController$$ExternalSyntheticLambda11;->f$0:Lorg/telegram/messenger/MessagesController$ErrorDelegate;
-
-    iput-object p2, p0, Lorg/telegram/messenger/MessagesController$$ExternalSyntheticLambda11;->f$1:Lorg/telegram/tgnet/TLRPC$TL_error;
+    iput-object p1, p0, Lorg/telegram/messenger/MessagesController$$ExternalSyntheticLambda11;->f$0:Lorg/telegram/messenger/MessagesController;
 
     return-void
 .end method
@@ -27,13 +23,11 @@
 
 # virtual methods
 .method public final run()V
-    .registers 3
+    .registers 2
 
-    iget-object v0, p0, Lorg/telegram/messenger/MessagesController$$ExternalSyntheticLambda11;->f$0:Lorg/telegram/messenger/MessagesController$ErrorDelegate;
+    iget-object v0, p0, Lorg/telegram/messenger/MessagesController$$ExternalSyntheticLambda11;->f$0:Lorg/telegram/messenger/MessagesController;
 
-    iget-object v1, p0, Lorg/telegram/messenger/MessagesController$$ExternalSyntheticLambda11;->f$1:Lorg/telegram/tgnet/TLRPC$TL_error;
-
-    invoke-static {v0, v1}, Lorg/telegram/messenger/MessagesController;->$r8$lambda$WGWxtK1ljnadpjdGZPuRifL6f_I(Lorg/telegram/messenger/MessagesController$ErrorDelegate;Lorg/telegram/tgnet/TLRPC$TL_error;)V
+    invoke-static {v0}, Lorg/telegram/messenger/MessagesController;->$r8$lambda$1gZR2GYdBDNTJUnWLfTN5YyDaRU(Lorg/telegram/messenger/MessagesController;)V
 
     return-void
 .end method

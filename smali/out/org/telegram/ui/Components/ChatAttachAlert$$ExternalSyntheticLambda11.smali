@@ -8,18 +8,18 @@
 # instance fields
 .field public final synthetic f$0:Lorg/telegram/ui/Components/ChatAttachAlert;
 
-.field public final synthetic f$1:Z
+.field public final synthetic f$1:Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lorg/telegram/ui/Components/ChatAttachAlert;Z)V
+.method public synthetic constructor <init>(Lorg/telegram/ui/Components/ChatAttachAlert;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)V
     .registers 3
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lorg/telegram/ui/Components/ChatAttachAlert$$ExternalSyntheticLambda11;->f$0:Lorg/telegram/ui/Components/ChatAttachAlert;
 
-    iput-boolean p2, p0, Lorg/telegram/ui/Components/ChatAttachAlert$$ExternalSyntheticLambda11;->f$1:Z
+    iput-object p2, p0, Lorg/telegram/ui/Components/ChatAttachAlert$$ExternalSyntheticLambda11;->f$1:Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;
 
     return-void
 .end method
@@ -31,9 +31,9 @@
 
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlert$$ExternalSyntheticLambda11;->f$0:Lorg/telegram/ui/Components/ChatAttachAlert;
 
-    iget-boolean v1, p0, Lorg/telegram/ui/Components/ChatAttachAlert$$ExternalSyntheticLambda11;->f$1:Z
+    iget-object v1, p0, Lorg/telegram/ui/Components/ChatAttachAlert$$ExternalSyntheticLambda11;->f$1:Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;
 
-    invoke-static {v0, v1, p1}, Lorg/telegram/ui/Components/ChatAttachAlert;->$r8$lambda$i2t34Q7mt2SEEFA2Cgy_I62LFAw(Lorg/telegram/ui/Components/ChatAttachAlert;ZLandroid/view/View;)V
+    invoke-static {v0, v1, p1}, Lorg/telegram/ui/Components/ChatAttachAlert;->$r8$lambda$ocT19fnK7vt0fBMi-unZzH07o48(Lorg/telegram/ui/Components/ChatAttachAlert;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;Landroid/view/View;)V
 
     return-void
 .end method

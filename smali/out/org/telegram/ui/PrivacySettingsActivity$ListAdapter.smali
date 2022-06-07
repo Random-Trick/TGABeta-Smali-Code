@@ -669,7 +669,7 @@
 
     if-eq v0, v1, :cond_12
 
-    goto/16 :goto_4f9
+    goto/16 :goto_4ff
 
     .line 921
     :cond_12
@@ -686,7 +686,7 @@
 
     if-ne p2, v0, :cond_38
 
-    const p2, 0x7f0e0fb2
+    const p2, 0x7f0e106f
 
     const-string v0, "SecretWebPage"
 
@@ -713,7 +713,7 @@
     :goto_33
     invoke-virtual {p1, p2, v3, v2}, Lorg/telegram/ui/Cells/TextCheckCell;->setTextAndCheck(Ljava/lang/String;ZZ)V
 
-    goto/16 :goto_4f9
+    goto/16 :goto_4ff
 
     .line 924
     :cond_38
@@ -725,7 +725,7 @@
 
     if-ne p2, v0, :cond_54
 
-    const p2, 0x7f0e111d
+    const p2, 0x7f0e11e1
 
     const-string v0, "SyncContacts"
 
@@ -742,7 +742,7 @@
 
     invoke-virtual {p1, p2, v0, v3}, Lorg/telegram/ui/Cells/TextCheckCell;->setTextAndCheck(Ljava/lang/String;ZZ)V
 
-    goto/16 :goto_4f9
+    goto/16 :goto_4ff
 
     .line 926
     :cond_54
@@ -754,7 +754,7 @@
 
     if-ne p2, v0, :cond_70
 
-    const p2, 0x7f0e1102
+    const p2, 0x7f0e11c6
 
     const-string v0, "SuggestContacts"
 
@@ -771,7 +771,7 @@
 
     invoke-virtual {p1, p2, v0, v2}, Lorg/telegram/ui/Cells/TextCheckCell;->setTextAndCheck(Ljava/lang/String;ZZ)V
 
-    goto/16 :goto_4f9
+    goto/16 :goto_4ff
 
     .line 928
     :cond_70
@@ -781,9 +781,9 @@
 
     move-result v0
 
-    if-ne p2, v0, :cond_4f9
+    if-ne p2, v0, :cond_4ff
 
-    const p2, 0x7f0e018e
+    const p2, 0x7f0e01c3
 
     const-string v0, "ArchiveAndMute"
 
@@ -800,7 +800,7 @@
 
     invoke-virtual {p1, p2, v0, v2}, Lorg/telegram/ui/Cells/TextCheckCell;->setTextAndCheck(Ljava/lang/String;ZZ)V
 
-    goto/16 :goto_4f9
+    goto/16 :goto_4ff
 
     .line 903
     :cond_8c
@@ -817,7 +817,7 @@
 
     if-ne p2, v0, :cond_a6
 
-    const p2, 0x7f0e0e22
+    const p2, 0x7f0e0ecb
 
     const-string v0, "PrivacyTitle"
 
@@ -828,7 +828,7 @@
 
     invoke-virtual {p1, p2}, Lorg/telegram/ui/Cells/HeaderCell;->setText(Ljava/lang/CharSequence;)V
 
-    goto/16 :goto_4f9
+    goto/16 :goto_4ff
 
     .line 906
     :cond_a6
@@ -840,7 +840,7 @@
 
     if-ne p2, v0, :cond_bc
 
-    const p2, 0x7f0e0fb4
+    const p2, 0x7f0e1071
 
     const-string v0, "SecurityTitle"
 
@@ -851,7 +851,7 @@
 
     invoke-virtual {p1, p2}, Lorg/telegram/ui/Cells/HeaderCell;->setText(Ljava/lang/CharSequence;)V
 
-    goto/16 :goto_4f9
+    goto/16 :goto_4ff
 
     .line 908
     :cond_bc
@@ -863,7 +863,7 @@
 
     if-ne p2, v0, :cond_d2
 
-    const p2, 0x7f0e057a
+    const p2, 0x7f0e05cb
 
     const-string v0, "DeleteMyAccount"
 
@@ -874,7 +874,7 @@
 
     invoke-virtual {p1, p2}, Lorg/telegram/ui/Cells/HeaderCell;->setText(Ljava/lang/CharSequence;)V
 
-    goto/16 :goto_4f9
+    goto/16 :goto_4ff
 
     .line 910
     :cond_d2
@@ -886,7 +886,7 @@
 
     if-ne p2, v0, :cond_e8
 
-    const p2, 0x7f0e0fa8
+    const p2, 0x7f0e1064
 
     const-string v0, "SecretChat"
 
@@ -897,7 +897,7 @@
 
     invoke-virtual {p1, p2}, Lorg/telegram/ui/Cells/HeaderCell;->setText(Ljava/lang/CharSequence;)V
 
-    goto/16 :goto_4f9
+    goto/16 :goto_4ff
 
     .line 912
     :cond_e8
@@ -909,7 +909,7 @@
 
     if-ne p2, v0, :cond_fe
 
-    const p2, 0x7f0e0df7
+    const p2, 0x7f0e0ea0
 
     const-string v0, "PrivacyBots"
 
@@ -920,7 +920,7 @@
 
     invoke-virtual {p1, p2}, Lorg/telegram/ui/Cells/HeaderCell;->setText(Ljava/lang/CharSequence;)V
 
-    goto/16 :goto_4f9
+    goto/16 :goto_4ff
 
     .line 914
     :cond_fe
@@ -932,7 +932,7 @@
 
     if-ne p2, v0, :cond_114
 
-    const p2, 0x7f0e04c4
+    const p2, 0x7f0e0513
 
     const-string v0, "Contacts"
 
@@ -943,7 +943,7 @@
 
     invoke-virtual {p1, p2}, Lorg/telegram/ui/Cells/HeaderCell;->setText(Ljava/lang/CharSequence;)V
 
-    goto/16 :goto_4f9
+    goto/16 :goto_4ff
 
     .line 916
     :cond_114
@@ -953,9 +953,9 @@
 
     move-result v0
 
-    if-ne p2, v0, :cond_4f9
+    if-ne p2, v0, :cond_4ff
 
-    const p2, 0x7f0e0a84
+    const p2, 0x7f0e0b0b
 
     const-string v0, "NewChatsFromNonContacts"
 
@@ -966,7 +966,7 @@
 
     invoke-virtual {p1, p2}, Lorg/telegram/ui/Cells/HeaderCell;->setText(Ljava/lang/CharSequence;)V
 
-    goto/16 :goto_4f9
+    goto/16 :goto_4ff
 
     .line 873
     :cond_12a
@@ -983,11 +983,11 @@
 
     const-string v1, "windowBackgroundGrayShadow"
 
-    const v2, 0x7f07012c
+    const v2, 0x7f0700fb
 
     if-ne p2, v0, :cond_152
 
-    const p2, 0x7f0e0541
+    const p2, 0x7f0e0592
 
     const-string v0, "DeleteAccountHelp"
 
@@ -1007,7 +1007,7 @@
 
     invoke-virtual {p1, p2}, Landroid/widget/FrameLayout;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    goto/16 :goto_4f9
+    goto/16 :goto_4ff
 
     .line 877
     :cond_152
@@ -1019,7 +1019,7 @@
 
     if-ne p2, v0, :cond_171
 
-    const p2, 0x7f0e0821
+    const p2, 0x7f0e0879
 
     const-string v0, "GroupsAndChannelsHelp"
 
@@ -1039,7 +1039,7 @@
 
     invoke-virtual {p1, p2}, Landroid/widget/FrameLayout;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    goto/16 :goto_4f9
+    goto/16 :goto_4ff
 
     .line 880
     :cond_171
@@ -1051,7 +1051,7 @@
 
     if-ne p2, v0, :cond_190
 
-    const p2, 0x7f0e0ffd
+    const p2, 0x7f0e10ba
 
     const-string v0, "SessionsInfo"
 
@@ -1071,7 +1071,7 @@
 
     invoke-virtual {p1, p2}, Landroid/widget/FrameLayout;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    goto/16 :goto_4f9
+    goto/16 :goto_4ff
 
     .line 883
     :cond_190
@@ -1083,7 +1083,7 @@
 
     if-ne p2, v0, :cond_1af
 
-    const p2, 0x7f0e0fb3
+    const p2, 0x7f0e1070
 
     const-string v0, "SecretWebPageInfo"
 
@@ -1103,7 +1103,7 @@
 
     invoke-virtual {p1, p2}, Landroid/widget/FrameLayout;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    goto/16 :goto_4f9
+    goto/16 :goto_4ff
 
     .line 886
     :cond_1af
@@ -1115,7 +1115,7 @@
 
     if-ne p2, v0, :cond_1ce
 
-    const p2, 0x7f0e0df8
+    const p2, 0x7f0e0ea1
 
     const-string v0, "PrivacyBotsInfo"
 
@@ -1135,7 +1135,7 @@
 
     invoke-virtual {p1, p2}, Landroid/widget/FrameLayout;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    goto/16 :goto_4f9
+    goto/16 :goto_4ff
 
     .line 889
     :cond_1ce
@@ -1147,7 +1147,7 @@
 
     if-ne p2, v0, :cond_1ed
 
-    const p2, 0x7f0e1104
+    const p2, 0x7f0e11c8
 
     const-string v0, "SuggestContactsInfo"
 
@@ -1167,7 +1167,7 @@
 
     invoke-virtual {p1, p2}, Landroid/widget/FrameLayout;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    goto/16 :goto_4f9
+    goto/16 :goto_4ff
 
     .line 897
     :cond_1ed
@@ -1177,9 +1177,9 @@
 
     move-result v0
 
-    if-ne p2, v0, :cond_4f9
+    if-ne p2, v0, :cond_4ff
 
-    const p2, 0x7f0e018f
+    const p2, 0x7f0e01c4
 
     const-string v0, "ArchiveAndMuteInfo"
 
@@ -1199,7 +1199,7 @@
 
     invoke-virtual {p1, p2}, Landroid/widget/FrameLayout;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    goto/16 :goto_4f9
+    goto/16 :goto_4ff
 
     :cond_20c
     const/4 v0, 0x0
@@ -1269,7 +1269,7 @@
 
     iget p2, p2, Lorg/telegram/messenger/MessagesController;->totalBlockedCount:I
 
-    const v0, 0x7f0e02b5
+    const v0, 0x7f0e02ec
 
     const-string v1, "BlockedUsers"
 
@@ -1280,7 +1280,7 @@
 
     move-result-object p2
 
-    const v0, 0x7f0e02b4
+    const v0, 0x7f0e02eb
 
     const-string v1, "BlockedEmpty"
 
@@ -1290,7 +1290,7 @@
 
     invoke-virtual {p1, p2, v0, v3}, Lorg/telegram/ui/Cells/TextSettingsCell;->setTextAndValue(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)V
 
-    goto/16 :goto_4f6
+    goto/16 :goto_4fc
 
     :cond_25e
     if-lez p2, :cond_277
@@ -1316,7 +1316,7 @@
 
     invoke-virtual {p1, v0, p2, v3}, Lorg/telegram/ui/Cells/TextSettingsCell;->setTextAndValue(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)V
 
-    goto/16 :goto_4f6
+    goto/16 :goto_4fc
 
     .line 767
     :cond_277
@@ -1328,7 +1328,7 @@
 
     const/4 v2, 0x1
 
-    goto/16 :goto_4f6
+    goto/16 :goto_4fc
 
     .line 769
     :cond_281
@@ -1340,7 +1340,7 @@
 
     if-ne p2, v6, :cond_297
 
-    const p2, 0x7f0e1000
+    const p2, 0x7f0e10bd
 
     const-string v0, "SessionsTitle"
 
@@ -1351,7 +1351,7 @@
 
     invoke-virtual {p1, p2, v2}, Lorg/telegram/ui/Cells/TextSettingsCell;->setText(Ljava/lang/CharSequence;Z)V
 
-    goto/16 :goto_4f6
+    goto/16 :goto_4fc
 
     .line 771
     :cond_297
@@ -1363,7 +1363,7 @@
 
     if-ne p2, v6, :cond_2ad
 
-    const p2, 0x7f0e13ce
+    const p2, 0x7f0e149c
 
     const-string v0, "WebSessionsTitle"
 
@@ -1374,7 +1374,7 @@
 
     invoke-virtual {p1, p2, v2}, Lorg/telegram/ui/Cells/TextSettingsCell;->setText(Ljava/lang/CharSequence;Z)V
 
-    goto/16 :goto_4f6
+    goto/16 :goto_4fc
 
     .line 773
     :cond_2ad
@@ -1411,7 +1411,7 @@
 
     if-eqz p2, :cond_2d3
 
-    const p2, 0x7f0e0ccd
+    const p2, 0x7f0e0d57
 
     const-string v0, "PasswordOn"
 
@@ -1423,7 +1423,7 @@
     goto :goto_2dc
 
     :cond_2d3
-    const p2, 0x7f0e0ccc
+    const p2, 0x7f0e0d56
 
     const-string v0, "PasswordOff"
 
@@ -1433,7 +1433,7 @@
     move-result-object v0
 
     :goto_2dc
-    const p2, 0x7f0e11c4
+    const p2, 0x7f0e1291
 
     const-string v1, "TwoStepVerification"
 
@@ -1444,7 +1444,7 @@
 
     invoke-virtual {p1, p2, v0, v3}, Lorg/telegram/ui/Cells/TextSettingsCell;->setTextAndValue(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)V
 
-    goto/16 :goto_4f6
+    goto/16 :goto_4fc
 
     .line 782
     :cond_2ea
@@ -1456,7 +1456,7 @@
 
     if-ne p2, v6, :cond_300
 
-    const p2, 0x7f0e0c05
+    const p2, 0x7f0e0c8f
 
     const-string v0, "Passcode"
 
@@ -1467,7 +1467,7 @@
 
     invoke-virtual {p1, p2, v3}, Lorg/telegram/ui/Cells/TextSettingsCell;->setText(Ljava/lang/CharSequence;Z)V
 
-    goto/16 :goto_4f6
+    goto/16 :goto_4fc
 
     .line 784
     :cond_300
@@ -1515,7 +1515,7 @@
     move-result-object v0
 
     :goto_325
-    const p2, 0x7f0e0e12
+    const p2, 0x7f0e0ebb
 
     const-string v1, "PrivacyPhone"
 
@@ -1526,7 +1526,7 @@
 
     invoke-virtual {p1, p2, v0, v3}, Lorg/telegram/ui/Cells/TextSettingsCell;->setTextAndValue(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)V
 
-    goto/16 :goto_4f6
+    goto/16 :goto_4fc
 
     .line 792
     :cond_333
@@ -1570,7 +1570,7 @@
     move-result-object v0
 
     :goto_355
-    const p2, 0x7f0e0e07
+    const p2, 0x7f0e0eb0
 
     const-string v1, "PrivacyLastSeen"
 
@@ -1581,7 +1581,7 @@
 
     invoke-virtual {p1, p2, v0, v3}, Lorg/telegram/ui/Cells/TextSettingsCell;->setTextAndValue(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)V
 
-    goto/16 :goto_4f6
+    goto/16 :goto_4fc
 
     .line 800
     :cond_363
@@ -1625,7 +1625,7 @@
     const/4 v3, 0x0
 
     :goto_385
-    const p2, 0x7f0e0820
+    const p2, 0x7f0e0878
 
     const-string v1, "GroupsAndChannels"
 
@@ -1639,7 +1639,7 @@
     :goto_391
     move v2, v3
 
-    goto/16 :goto_4f6
+    goto/16 :goto_4fc
 
     .line 808
     :cond_394
@@ -1683,7 +1683,7 @@
     move-result-object v0
 
     :goto_3b6
-    const p2, 0x7f0e0327
+    const p2, 0x7f0e0363
 
     const-string v1, "Calls"
 
@@ -1694,7 +1694,7 @@
 
     invoke-virtual {p1, p2, v0, v3}, Lorg/telegram/ui/Cells/TextSettingsCell;->setTextAndValue(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)V
 
-    goto/16 :goto_4f6
+    goto/16 :goto_4fc
 
     .line 816
     :cond_3c4
@@ -1740,7 +1740,7 @@
     move-result-object v0
 
     :goto_3e7
-    const p2, 0x7f0e0e1c
+    const p2, 0x7f0e0ec5
 
     const-string v1, "PrivacyProfilePhoto"
 
@@ -1751,7 +1751,7 @@
 
     invoke-virtual {p1, p2, v0, v3}, Lorg/telegram/ui/Cells/TextSettingsCell;->setTextAndValue(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)V
 
-    goto/16 :goto_4f6
+    goto/16 :goto_4fc
 
     .line 824
     :cond_3f5
@@ -1797,7 +1797,7 @@
     move-result-object v0
 
     :goto_418
-    const p2, 0x7f0e0dff
+    const p2, 0x7f0e0ea8
 
     const-string v1, "PrivacyForwards"
 
@@ -1808,7 +1808,7 @@
 
     invoke-virtual {p1, p2, v0, v3}, Lorg/telegram/ui/Cells/TextSettingsCell;->setTextAndValue(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)V
 
-    goto/16 :goto_4f6
+    goto/16 :goto_4fc
 
     .line 832
     :cond_426
@@ -1820,7 +1820,7 @@
 
     if-ne p2, v6, :cond_43c
 
-    const p2, 0x7f0e1146
+    const p2, 0x7f0e120a
 
     const-string v0, "TelegramPassport"
 
@@ -1831,7 +1831,7 @@
 
     invoke-virtual {p1, p2, v3}, Lorg/telegram/ui/Cells/TextSettingsCell;->setText(Ljava/lang/CharSequence;Z)V
 
-    goto/16 :goto_4f6
+    goto/16 :goto_4fc
 
     .line 834
     :cond_43c
@@ -1841,7 +1841,7 @@
 
     move-result v6
 
-    if-ne p2, v6, :cond_489
+    if-ne p2, v6, :cond_48f
 
     .line 835
     iget-object p2, p0, Lorg/telegram/ui/PrivacySettingsActivity$ListAdapter;->this$0:Lorg/telegram/ui/PrivacySettingsActivity;
@@ -1856,7 +1856,7 @@
 
     if-eqz p2, :cond_451
 
-    goto :goto_47b
+    goto :goto_481
 
     .line 838
     :cond_451
@@ -1872,50 +1872,56 @@
 
     const/16 v0, 0xb6
 
-    if-gt p2, v0, :cond_468
+    if-gt p2, v0, :cond_46a
 
     .line 840
     div-int/2addr p2, v7
 
-    const-string v0, "Months"
+    new-array v0, v2, [Ljava/lang/Object;
 
-    invoke-static {v0, p2}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    const-string v1, "Months"
+
+    invoke-static {v1, p2, v0}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
-    :goto_466
+    :goto_468
     const/4 v3, 0x0
 
-    goto :goto_47b
+    goto :goto_481
 
-    :cond_468
+    :cond_46a
     const/16 v0, 0x16d
 
-    if-ne p2, v0, :cond_474
+    if-ne p2, v0, :cond_478
 
     .line 842
     div-int/2addr p2, v0
 
-    const-string v0, "Years"
+    new-array v0, v2, [Ljava/lang/Object;
 
-    invoke-static {v0, p2}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    const-string v1, "Years"
+
+    invoke-static {v1, p2, v0}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
-    goto :goto_466
+    goto :goto_468
 
-    :cond_474
-    const-string v0, "Days"
+    :cond_478
+    new-array v0, v2, [Ljava/lang/Object;
+
+    const-string v1, "Days"
 
     .line 844
-    invoke-static {v0, p2}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    invoke-static {v1, p2, v0}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
-    goto :goto_466
+    goto :goto_468
 
-    :goto_47b
-    const p2, 0x7f0e0543
+    :goto_481
+    const p2, 0x7f0e0594
 
     const-string v1, "DeleteAccountIfAwayFor3"
 
@@ -1929,16 +1935,16 @@
     goto/16 :goto_391
 
     .line 848
-    :cond_489
+    :cond_48f
     iget-object v0, p0, Lorg/telegram/ui/PrivacySettingsActivity$ListAdapter;->this$0:Lorg/telegram/ui/PrivacySettingsActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/PrivacySettingsActivity;->access$2200(Lorg/telegram/ui/PrivacySettingsActivity;)I
 
     move-result v0
 
-    if-ne p2, v0, :cond_49e
+    if-ne p2, v0, :cond_4a4
 
-    const p2, 0x7f0e0e0b
+    const p2, 0x7f0e0eb4
 
     const-string v0, "PrivacyPaymentsClear"
 
@@ -1949,28 +1955,28 @@
 
     invoke-virtual {p1, p2, v3}, Lorg/telegram/ui/Cells/TextSettingsCell;->setText(Ljava/lang/CharSequence;Z)V
 
-    goto :goto_4f6
+    goto :goto_4fc
 
     .line 850
-    :cond_49e
+    :cond_4a4
     iget-object v0, p0, Lorg/telegram/ui/PrivacySettingsActivity$ListAdapter;->this$0:Lorg/telegram/ui/PrivacySettingsActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/PrivacySettingsActivity;->access$2300(Lorg/telegram/ui/PrivacySettingsActivity;)I
 
     move-result v0
 
-    if-ne p2, v0, :cond_4e2
+    if-ne p2, v0, :cond_4e8
 
     .line 851
     sget p2, Lorg/telegram/messenger/SharedConfig;->mapPreviewType:I
 
-    if-eqz p2, :cond_4cc
+    if-eqz p2, :cond_4d2
 
-    if-eq p2, v3, :cond_4c2
+    if-eq p2, v3, :cond_4c8
 
-    if-eq p2, v1, :cond_4b8
+    if-eq p2, v1, :cond_4be
 
-    const p2, 0x7f0e099a
+    const p2, 0x7f0e0a21
 
     const-string v0, "MapPreviewProviderYandex"
 
@@ -1979,10 +1985,10 @@
 
     move-result-object p2
 
-    goto :goto_4d5
+    goto :goto_4db
 
-    :cond_4b8
-    const p2, 0x7f0e0997
+    :cond_4be
+    const p2, 0x7f0e0a1e
 
     const-string v0, "MapPreviewProviderNobody"
 
@@ -1991,10 +1997,10 @@
 
     move-result-object p2
 
-    goto :goto_4d5
+    goto :goto_4db
 
-    :cond_4c2
-    const p2, 0x7f0e0996
+    :cond_4c8
+    const p2, 0x7f0e0a1d
 
     const-string v0, "MapPreviewProviderGoogle"
 
@@ -2003,10 +2009,10 @@
 
     move-result-object p2
 
-    goto :goto_4d5
+    goto :goto_4db
 
-    :cond_4cc
-    const p2, 0x7f0e0998
+    :cond_4d2
+    const p2, 0x7f0e0a1f
 
     const-string v0, "MapPreviewProviderTelegram"
 
@@ -2015,8 +2021,8 @@
 
     move-result-object p2
 
-    :goto_4d5
-    const v0, 0x7f0e0995
+    :goto_4db
+    const v0, 0x7f0e0a1c
 
     const-string v1, "MapPreviewProvider"
 
@@ -2027,19 +2033,19 @@
 
     invoke-virtual {p1, v0, p2, v3}, Lorg/telegram/ui/Cells/TextSettingsCell;->setTextAndValue(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)V
 
-    goto :goto_4f6
+    goto :goto_4fc
 
     .line 867
-    :cond_4e2
+    :cond_4e8
     iget-object v0, p0, Lorg/telegram/ui/PrivacySettingsActivity$ListAdapter;->this$0:Lorg/telegram/ui/PrivacySettingsActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/PrivacySettingsActivity;->access$2600(Lorg/telegram/ui/PrivacySettingsActivity;)I
 
     move-result v0
 
-    if-ne p2, v0, :cond_4f6
+    if-ne p2, v0, :cond_4fc
 
-    const p2, 0x7f0e111f
+    const p2, 0x7f0e11e3
 
     const-string v0, "SyncContactsDelete"
 
@@ -2051,12 +2057,12 @@
     invoke-virtual {p1, p2, v3}, Lorg/telegram/ui/Cells/TextSettingsCell;->setText(Ljava/lang/CharSequence;Z)V
 
     .line 870
-    :cond_4f6
-    :goto_4f6
+    :cond_4fc
+    :goto_4fc
     invoke-virtual {p1, v2, v4, v5}, Lorg/telegram/ui/Cells/TextSettingsCell;->setDrawLoading(ZIZ)V
 
-    :cond_4f9
-    :goto_4f9
+    :cond_4ff
+    :goto_4ff
     return-void
 .end method
 

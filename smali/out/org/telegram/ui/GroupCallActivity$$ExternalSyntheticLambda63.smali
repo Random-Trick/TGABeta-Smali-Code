@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lorg/telegram/ui/Components/RecyclerListView$OnItemLongClickListener;
+.implements Lorg/telegram/ui/Components/RecyclerListView$OnItemClickListenerExtended;
 
 
 # instance fields
@@ -22,14 +22,30 @@
 
 
 # virtual methods
-.method public final onItemClick(Landroid/view/View;I)Z
-    .registers 4
+.method public synthetic hasDoubleTap(Landroid/view/View;I)Z
+    .registers 3
 
-    iget-object v0, p0, Lorg/telegram/ui/GroupCallActivity$$ExternalSyntheticLambda63;->f$0:Lorg/telegram/ui/GroupCallActivity;
-
-    invoke-static {v0, p1, p2}, Lorg/telegram/ui/GroupCallActivity;->$r8$lambda$JQ049pjxLQWN4BcttKHl0Koa_Ds(Lorg/telegram/ui/GroupCallActivity;Landroid/view/View;I)Z
+    invoke-static {p0, p1, p2}, Lorg/telegram/ui/Components/RecyclerListView$OnItemClickListenerExtended$-CC;->$default$hasDoubleTap(Lorg/telegram/ui/Components/RecyclerListView$OnItemClickListenerExtended;Landroid/view/View;I)Z
 
     move-result p1
 
     return p1
+.end method
+
+.method public synthetic onDoubleTap(Landroid/view/View;IFF)V
+    .registers 5
+
+    invoke-static {p0, p1, p2, p3, p4}, Lorg/telegram/ui/Components/RecyclerListView$OnItemClickListenerExtended$-CC;->$default$onDoubleTap(Lorg/telegram/ui/Components/RecyclerListView$OnItemClickListenerExtended;Landroid/view/View;IFF)V
+
+    return-void
+.end method
+
+.method public final onItemClick(Landroid/view/View;IFF)V
+    .registers 6
+
+    iget-object v0, p0, Lorg/telegram/ui/GroupCallActivity$$ExternalSyntheticLambda63;->f$0:Lorg/telegram/ui/GroupCallActivity;
+
+    invoke-static {v0, p1, p2, p3, p4}, Lorg/telegram/ui/GroupCallActivity;->$r8$lambda$ZokxvRSLQ4l6C7Xg_p-yCAOmdMQ(Lorg/telegram/ui/GroupCallActivity;Landroid/view/View;IFF)V
+
+    return-void
 .end method

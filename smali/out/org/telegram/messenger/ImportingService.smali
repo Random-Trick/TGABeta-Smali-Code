@@ -20,7 +20,7 @@
     const/4 v0, 0x0
 
     :goto_4
-    const/4 v1, 0x3
+    const/4 v1, 0x4
 
     if-ge v0, v1, :cond_1c
 
@@ -58,7 +58,7 @@
     const/4 v1, 0x0
 
     :goto_2
-    const/4 v2, 0x3
+    const/4 v2, 0x4
 
     if-ge v1, v2, :cond_14
 
@@ -94,7 +94,7 @@
     const/4 v1, 0x0
 
     :goto_2
-    const/4 v2, 0x3
+    const/4 v2, 0x4
 
     if-ge v1, v2, :cond_14
 
@@ -194,7 +194,7 @@
     const/4 v0, 0x0
 
     :goto_12
-    const/4 v1, 0x3
+    const/4 v1, 0x4
 
     if-ge v0, v1, :cond_2a
 
@@ -311,7 +311,7 @@
     .line 92
     iget-object p1, p0, Lorg/telegram/messenger/ImportingService;->builder:Landroidx/core/app/NotificationCompat$Builder;
 
-    const p3, 0x7f0e017c
+    const p3, 0x7f0e01b1
 
     const-string v0, "AppName"
 
@@ -333,7 +333,7 @@
 
     const-string p3, "ImporImportingService"
 
-    const v0, 0x7f0e0859
+    const v0, 0x7f0e08b4
 
     invoke-static {p3, v0}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
@@ -358,7 +358,7 @@
 
     const-string p3, "ImporImportingStickersService"
 
-    const v0, 0x7f0e085a
+    const v0, 0x7f0e08b5
 
     invoke-static {p3, v0}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 

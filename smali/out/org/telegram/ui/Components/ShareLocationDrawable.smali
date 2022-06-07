@@ -41,9 +41,9 @@
     .line 30
     iput p2, p0, Lorg/telegram/ui/Components/ShareLocationDrawable;->currentType:I
 
-    const v1, 0x7f0703be
+    const v1, 0x7f0703c1
 
-    const v2, 0x7f0703bd
+    const v2, 0x7f0703c0
 
     const/4 v3, 0x4
 
@@ -54,7 +54,7 @@
 
     move-result-object p2
 
-    const v0, 0x7f07034d
+    const v0, 0x7f070365
 
     invoke-virtual {p2, v0}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -89,9 +89,9 @@
     :cond_3d
     const/4 v3, 0x3
 
-    const v4, 0x7f07005b
+    const v4, 0x7f070049
 
-    const v5, 0x7f07005a
+    const v5, 0x7f070048
 
     if-ne p2, v3, :cond_68
 
@@ -100,7 +100,7 @@
 
     move-result-object p2
 
-    const v0, 0x7f070301
+    const v0, 0x7f07032a
 
     invoke-virtual {p2, v0}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -140,7 +140,7 @@
 
     move-result-object p2
 
-    const v0, 0x7f070302
+    const v0, 0x7f07032b
 
     invoke-virtual {p2, v0}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -182,7 +182,7 @@
 
     move-result-object p2
 
-    const v0, 0x7f0703bc
+    const v0, 0x7f0703bf
 
     invoke-virtual {p2, v0}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -220,7 +220,7 @@
 
     move-result-object p2
 
-    const v0, 0x7f070059
+    const v0, 0x7f070047
 
     invoke-virtual {p2, v0}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 

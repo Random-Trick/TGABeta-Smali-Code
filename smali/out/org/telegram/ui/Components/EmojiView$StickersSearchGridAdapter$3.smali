@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;Landroid/content/Context;)V
     .registers 3
 
-    .line 5810
+    .line 5896
     iput-object p1, p0, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter$3;->this$1:Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;
 
     invoke-direct {p0, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
@@ -35,7 +35,7 @@
 .method protected onMeasure(II)V
     .registers 4
 
-    .line 5813
+    .line 5899
     iget-object p2, p0, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter$3;->this$1:Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;
 
     iget-object p2, p2, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;->this$0:Lorg/telegram/ui/Components/EmojiView;
@@ -48,7 +48,7 @@
 
     move-result p2
 
-    .line 5814
+    .line 5900
     iget-object v0, p0, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter$3;->this$1:Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;
 
     iget-object v0, v0, Lorg/telegram/ui/Components/EmojiView$StickersSearchGridAdapter;->this$0:Lorg/telegram/ui/Components/EmojiView;

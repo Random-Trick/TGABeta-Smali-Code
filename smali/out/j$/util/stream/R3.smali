@@ -3,112 +3,114 @@
 
 
 # instance fields
-.field private c:[J
+.field private d:[Ljava/lang/Object;
 
-.field private d:I
+.field private e:I
 
 
 # direct methods
-.method constructor <init>(Lj$/util/stream/n3;)V
-    .registers 2
+.method constructor <init>(Lj$/util/stream/m3;Ljava/util/Comparator;)V
+    .registers 3
 
-    invoke-direct {p0, p1}, Lj$/util/stream/F3;-><init>(Lj$/util/stream/n3;)V
+    invoke-direct {p0, p1, p2}, Lj$/util/stream/F3;-><init>(Lj$/util/stream/m3;Ljava/util/Comparator;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public accept(J)V
-    .registers 6
+.method public accept(Ljava/lang/Object;)V
+    .registers 5
 
-    iget-object v0, p0, Lj$/util/stream/R3;->c:[J
+    iget-object v0, p0, Lj$/util/stream/R3;->d:[Ljava/lang/Object;
 
-    iget v1, p0, Lj$/util/stream/R3;->d:I
+    iget v1, p0, Lj$/util/stream/R3;->e:I
 
     add-int/lit8 v2, v1, 0x1
 
-    iput v2, p0, Lj$/util/stream/R3;->d:I
+    iput v2, p0, Lj$/util/stream/R3;->e:I
 
-    aput-wide p1, v0, v1
+    aput-object p1, v0, v1
 
     return-void
 .end method
 
 .method public m()V
-    .registers 6
+    .registers 5
 
-    iget-object v0, p0, Lj$/util/stream/R3;->c:[J
+    iget-object v0, p0, Lj$/util/stream/R3;->d:[Ljava/lang/Object;
 
-    iget v1, p0, Lj$/util/stream/R3;->d:I
+    iget v1, p0, Lj$/util/stream/R3;->e:I
 
-    const/4 v2, 0x0
+    iget-object v2, p0, Lj$/util/stream/F3;->b:Ljava/util/Comparator;
 
-    invoke-static {v0, v2, v1}, Ljava/util/Arrays;->sort([JII)V
+    const/4 v3, 0x0
 
-    iget-object v0, p0, Lj$/util/stream/i3;->a:Lj$/util/stream/n3;
+    invoke-static {v0, v3, v1, v2}, Ljava/util/Arrays;->sort([Ljava/lang/Object;IILjava/util/Comparator;)V
 
-    iget v1, p0, Lj$/util/stream/R3;->d:I
+    iget-object v0, p0, Lj$/util/stream/i3;->a:Lj$/util/stream/m3;
 
-    int-to-long v3, v1
+    iget v1, p0, Lj$/util/stream/R3;->e:I
 
-    invoke-interface {v0, v3, v4}, Lj$/util/stream/n3;->n(J)V
+    int-to-long v1, v1
 
-    iget-boolean v0, p0, Lj$/util/stream/F3;->b:Z
+    invoke-interface {v0, v1, v2}, Lj$/util/stream/m3;->n(J)V
 
-    if-nez v0, :cond_24
+    iget-boolean v0, p0, Lj$/util/stream/F3;->c:Z
 
-    :goto_14
-    iget v0, p0, Lj$/util/stream/R3;->d:I
+    if-nez v0, :cond_26
 
-    if-ge v2, v0, :cond_3c
+    :goto_16
+    iget v0, p0, Lj$/util/stream/R3;->e:I
 
-    iget-object v0, p0, Lj$/util/stream/i3;->a:Lj$/util/stream/n3;
+    if-ge v3, v0, :cond_3e
 
-    iget-object v1, p0, Lj$/util/stream/R3;->c:[J
+    iget-object v0, p0, Lj$/util/stream/i3;->a:Lj$/util/stream/m3;
 
-    aget-wide v3, v1, v2
+    iget-object v1, p0, Lj$/util/stream/R3;->d:[Ljava/lang/Object;
 
-    invoke-interface {v0, v3, v4}, Lj$/util/stream/n3;->accept(J)V
+    aget-object v1, v1, v3
 
-    add-int/lit8 v2, v2, 0x1
+    invoke-interface {v0, v1}, Lj$/util/function/Consumer;->accept(Ljava/lang/Object;)V
 
-    goto :goto_14
+    add-int/lit8 v3, v3, 0x1
 
-    :cond_24
-    :goto_24
-    iget v0, p0, Lj$/util/stream/R3;->d:I
+    goto :goto_16
 
-    if-ge v2, v0, :cond_3c
+    :cond_26
+    :goto_26
+    iget v0, p0, Lj$/util/stream/R3;->e:I
 
-    iget-object v0, p0, Lj$/util/stream/i3;->a:Lj$/util/stream/n3;
+    if-ge v3, v0, :cond_3e
 
-    invoke-interface {v0}, Lj$/util/stream/n3;->o()Z
+    iget-object v0, p0, Lj$/util/stream/i3;->a:Lj$/util/stream/m3;
+
+    invoke-interface {v0}, Lj$/util/stream/m3;->o()Z
 
     move-result v0
 
-    if-nez v0, :cond_3c
+    if-nez v0, :cond_3e
 
-    iget-object v0, p0, Lj$/util/stream/i3;->a:Lj$/util/stream/n3;
+    iget-object v0, p0, Lj$/util/stream/i3;->a:Lj$/util/stream/m3;
 
-    iget-object v1, p0, Lj$/util/stream/R3;->c:[J
+    iget-object v1, p0, Lj$/util/stream/R3;->d:[Ljava/lang/Object;
 
-    aget-wide v3, v1, v2
+    aget-object v1, v1, v3
 
-    invoke-interface {v0, v3, v4}, Lj$/util/stream/n3;->accept(J)V
+    invoke-interface {v0, v1}, Lj$/util/function/Consumer;->accept(Ljava/lang/Object;)V
 
-    add-int/lit8 v2, v2, 0x1
+    add-int/lit8 v3, v3, 0x1
 
-    goto :goto_24
+    goto :goto_26
 
-    :cond_3c
-    iget-object v0, p0, Lj$/util/stream/i3;->a:Lj$/util/stream/n3;
+    :cond_3e
+    iget-object v0, p0, Lj$/util/stream/i3;->a:Lj$/util/stream/m3;
 
-    invoke-interface {v0}, Lj$/util/stream/n3;->m()V
+    invoke-interface {v0}, Lj$/util/stream/m3;->m()V
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lj$/util/stream/R3;->c:[J
+    iput-object v0, p0, Lj$/util/stream/R3;->d:[Ljava/lang/Object;
 
     return-void
 .end method
@@ -124,9 +126,9 @@
 
     long-to-int p2, p1
 
-    new-array p1, p2, [J
+    new-array p1, p2, [Ljava/lang/Object;
 
-    iput-object p1, p0, Lj$/util/stream/R3;->c:[J
+    iput-object p1, p0, Lj$/util/stream/R3;->d:[Ljava/lang/Object;
 
     return-void
 

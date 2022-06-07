@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout;)V
     .registers 2
 
-    .line 107
+    .line 127
     iput-object p1, p0, Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout$1;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout;
 
     invoke-direct {p0}, Lorg/telegram/ui/ActionBar/ActionBar$ActionBarMenuOnItemClick;-><init>()V
@@ -37,28 +37,37 @@
 
     const/4 v0, -0x1
 
-    if-ne p1, v0, :cond_c
+    if-ne p1, v0, :cond_14
 
-    .line 111
+    .line 131
+    iget-object p1, p0, Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout$1;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout;
+
+    invoke-virtual {p1}, Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout;->onBackPressed()Z
+
+    move-result p1
+
+    if-nez p1, :cond_139
+
+    .line 132
     iget-object p1, p0, Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout$1;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout;
 
     iget-object p1, p1, Lorg/telegram/ui/Components/ChatAttachAlert$AttachAlertLayout;->parentAlert:Lorg/telegram/ui/Components/ChatAttachAlert;
 
     invoke-virtual {p1}, Lorg/telegram/ui/Components/ChatAttachAlert;->dismiss()V
 
-    goto/16 :goto_11c
+    goto/16 :goto_139
 
-    :cond_c
+    :cond_14
     const v0, 0x7f08008b
 
-    if-ne p1, v0, :cond_38
+    if-ne p1, v0, :cond_40
 
-    .line 113
+    .line 135
     new-instance p1, Landroid/os/Bundle;
 
     invoke-direct {p1}, Landroid/os/Bundle;-><init>()V
 
-    .line 114
+    .line 136
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout$1;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout;->access$000(Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout;)J
@@ -69,7 +78,7 @@
 
     invoke-virtual {p1, v2, v0, v1}, Landroid/os/Bundle;->putLong(Ljava/lang/String;J)V
 
-    .line 115
+    .line 137
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout$1;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout;
 
     iget-object v0, v0, Lorg/telegram/ui/Components/ChatAttachAlert$AttachAlertLayout;->parentAlert:Lorg/telegram/ui/Components/ChatAttachAlert;
@@ -82,21 +91,21 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/BaseFragment;->presentFragment(Lorg/telegram/ui/ActionBar/BaseFragment;)Z
 
-    .line 116
+    .line 138
     iget-object p1, p0, Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout$1;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout;
 
     iget-object p1, p1, Lorg/telegram/ui/Components/ChatAttachAlert$AttachAlertLayout;->parentAlert:Lorg/telegram/ui/Components/ChatAttachAlert;
 
     invoke-virtual {p1}, Lorg/telegram/ui/Components/ChatAttachAlert;->dismiss()V
 
-    goto/16 :goto_11c
+    goto/16 :goto_139
 
-    :cond_38
+    :cond_40
     const v0, 0x7f08008d
 
-    if-ne p1, v0, :cond_ce
+    if-ne p1, v0, :cond_dc
 
-    .line 118
+    .line 140
     iget-object p1, p0, Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout$1;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout;->access$100(Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout;)Lorg/telegram/ui/Components/BotWebViewContainer;
@@ -109,9 +118,9 @@
 
     const/4 v0, 0x0
 
-    if-eqz p1, :cond_70
+    if-eqz p1, :cond_78
 
-    .line 119
+    .line 141
     iget-object p1, p0, Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout$1;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout;->access$100(Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout;)Lorg/telegram/ui/Components/BotWebViewContainer;
@@ -128,7 +137,7 @@
 
     invoke-virtual {p1}, Landroid/view/ViewPropertyAnimator;->cancel()V
 
-    .line 120
+    .line 142
     iget-object p1, p0, Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout$1;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout;->access$100(Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout;)Lorg/telegram/ui/Components/BotWebViewContainer;
@@ -149,8 +158,8 @@
 
     invoke-virtual {p1}, Landroid/view/ViewPropertyAnimator;->start()V
 
-    .line 123
-    :cond_70
+    .line 145
+    :cond_78
     iget-object p1, p0, Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout$1;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout;->access$200(Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout;)Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout$WebProgressView;
@@ -159,7 +168,7 @@
 
     invoke-virtual {p1, v0}, Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout$WebProgressView;->setLoadProgress(F)V
 
-    .line 124
+    .line 146
     iget-object p1, p0, Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout$1;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout;->access$200(Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout;)Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout$WebProgressView;
@@ -170,7 +179,7 @@
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setAlpha(F)V
 
-    .line 125
+    .line 147
     iget-object p1, p0, Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout$1;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout;->access$200(Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout;)Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout$WebProgressView;
@@ -181,7 +190,7 @@
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
 
-    .line 127
+    .line 149
     iget-object p1, p0, Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout$1;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout;->access$100(Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout;)Lorg/telegram/ui/Components/BotWebViewContainer;
@@ -214,7 +223,7 @@
 
     invoke-virtual {p1, v0}, Lorg/telegram/ui/Components/BotWebViewContainer;->setBotUser(Lorg/telegram/tgnet/TLRPC$User;)V
 
-    .line 128
+    .line 150
     iget-object p1, p0, Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout$1;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout;->access$100(Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout;)Lorg/telegram/ui/Components/BotWebViewContainer;
@@ -233,9 +242,15 @@
 
     move-result-wide v1
 
-    invoke-virtual {p1, v0, v1, v2}, Lorg/telegram/ui/Components/BotWebViewContainer;->loadFlicker(IJ)V
+    iget-object v3, p0, Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout$1;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout;
 
-    .line 129
+    invoke-static {v3}, Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout;->access$400(Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout;)Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;
+
+    move-result-object v3
+
+    invoke-virtual {p1, v0, v1, v2, v3}, Lorg/telegram/ui/Components/BotWebViewContainer;->loadFlickerAndSettingsItem(IJLorg/telegram/ui/ActionBar/ActionBarMenuSubItem;)V
+
+    .line 151
     iget-object p1, p0, Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout$1;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout;->access$100(Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout;)Lorg/telegram/ui/Components/BotWebViewContainer;
@@ -244,14 +259,14 @@
 
     invoke-virtual {p1}, Lorg/telegram/ui/Components/BotWebViewContainer;->reload()V
 
-    goto :goto_11c
+    goto :goto_139
 
-    :cond_ce
+    :cond_dc
     const v0, 0x7f080086
 
-    if-ne p1, v0, :cond_11c
+    if-ne p1, v0, :cond_12b
 
-    .line 131
+    .line 153
     iget-object p1, p0, Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout$1;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout;->access$300(Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout;)I
@@ -272,12 +287,12 @@
 
     move-result-object p1
 
-    :cond_e7
+    :cond_f5
     invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
 
-    if-eqz v0, :cond_11c
+    if-eqz v0, :cond_139
 
     invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -285,7 +300,7 @@
 
     check-cast v0, Lorg/telegram/tgnet/TLRPC$TL_attachMenuBot;
 
-    .line 132
+    .line 154
     iget-wide v1, v0, Lorg/telegram/tgnet/TLRPC$TL_attachMenuBot;->bot_id:J
 
     iget-object v3, p0, Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout$1;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout;
@@ -296,9 +311,9 @@
 
     cmp-long v5, v1, v3
 
-    if-nez v5, :cond_e7
+    if-nez v5, :cond_f5
 
-    .line 133
+    .line 155
     iget-object p1, p0, Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout$1;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout;
 
     iget-object v1, p1, Lorg/telegram/ui/Components/ChatAttachAlert$AttachAlertLayout;->parentAlert:Lorg/telegram/ui/Components/ChatAttachAlert;
@@ -327,7 +342,23 @@
 
     invoke-virtual {v1, v0, p1}, Lorg/telegram/ui/Components/ChatAttachAlert;->onLongClickBotButton(Lorg/telegram/tgnet/TLRPC$TL_attachMenuBot;Lorg/telegram/tgnet/TLRPC$User;)V
 
-    :cond_11c
-    :goto_11c
+    goto :goto_139
+
+    :cond_12b
+    const v0, 0x7f08008e
+
+    if-ne p1, v0, :cond_139
+
+    .line 160
+    iget-object p1, p0, Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout$1;->this$0:Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout;
+
+    invoke-static {p1}, Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout;->access$100(Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout;)Lorg/telegram/ui/Components/BotWebViewContainer;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lorg/telegram/ui/Components/BotWebViewContainer;->onSettingsButtonPressed()V
+
+    :cond_139
+    :goto_139
     return-void
 .end method

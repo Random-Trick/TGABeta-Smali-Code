@@ -16,7 +16,11 @@
 
 .field private color:Ljava/lang/Integer;
 
+.field private containerBottom:F
+
 .field private containerPadding:F
+
+.field private containerTop:F
 
 .field private gridLayoutManager:Lorg/telegram/ui/Components/ExtendedGridLayoutManager;
 
@@ -93,71 +97,71 @@
 
     move-object/from16 v14, p6
 
-    .line 49
+    .line 52
     invoke-direct {v6, v8, v0}, Lorg/telegram/ui/Components/BlurredFrameLayout;-><init>(Landroid/content/Context;Lorg/telegram/ui/Components/SizeNotifierFrameLayout;)V
 
     const/4 v15, 0x0
 
-    .line 226
+    .line 229
     iput-boolean v15, v6, Lorg/telegram/ui/Components/MentionsContainerView;->shouldLiftMentions:Z
 
-    .line 267
+    .line 270
     new-instance v1, Landroid/graphics/Rect;
 
     invoke-direct {v1}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v1, v6, Lorg/telegram/ui/Components/MentionsContainerView;->rect:Landroid/graphics/Rect;
 
-    .line 340
+    .line 358
     iput-boolean v15, v6, Lorg/telegram/ui/Components/MentionsContainerView;->ignoreLayout:Z
 
-    .line 354
+    .line 372
     iput-boolean v15, v6, Lorg/telegram/ui/Components/MentionsContainerView;->scrollToFirst:Z
 
-    .line 355
+    .line 373
     iput-boolean v15, v6, Lorg/telegram/ui/Components/MentionsContainerView;->shown:Z
 
-    .line 356
+    .line 374
     new-instance v1, Lorg/telegram/ui/Components/MentionsContainerView$$ExternalSyntheticLambda2;
 
     invoke-direct {v1, v6}, Lorg/telegram/ui/Components/MentionsContainerView$$ExternalSyntheticLambda2;-><init>(Lorg/telegram/ui/Components/MentionsContainerView;)V
 
     iput-object v1, v6, Lorg/telegram/ui/Components/MentionsContainerView;->updateVisibilityRunnable:Ljava/lang/Runnable;
 
-    .line 392
+    .line 410
     iput-boolean v15, v6, Lorg/telegram/ui/Components/MentionsContainerView;->listViewHiding:Z
 
     const/4 v1, 0x0
 
-    .line 393
+    .line 411
     iput v1, v6, Lorg/telegram/ui/Components/MentionsContainerView;->hideT:F
 
-    .line 394
+    .line 412
     iput-boolean v15, v6, Lorg/telegram/ui/Components/MentionsContainerView;->switchLayoutManagerOnEnd:Z
 
-    .line 50
+    .line 53
     iput-object v0, v6, Lorg/telegram/ui/Components/MentionsContainerView;->sizeNotifierFrameLayout:Lorg/telegram/ui/Components/SizeNotifierFrameLayout;
 
-    .line 51
+    .line 54
     iput-object v14, v6, Lorg/telegram/ui/Components/MentionsContainerView;->resourcesProvider:Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;
 
-    .line 52
+    .line 55
     iput-boolean v15, v6, Lorg/telegram/ui/Components/BlurredFrameLayout;->drawBlur:Z
 
-    .line 53
+    .line 56
     iput-boolean v15, v6, Lorg/telegram/ui/Components/BlurredFrameLayout;->isTopView:Z
 
     const/16 v0, 0x8
 
-    .line 54
+    .line 57
     invoke-virtual {v6, v0}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
-    .line 55
+    .line 58
     invoke-virtual {v6, v15}, Landroid/widget/FrameLayout;->setWillNotDraw(Z)V
 
-    const/high16 v0, 0x43220000    # 162.0f
+    const/high16 v0, 0x42fc0000    # 126.0f
 
-    .line 57
+    .line 60
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v0
@@ -184,7 +188,7 @@
 
     iput v0, v6, Lorg/telegram/ui/Components/MentionsContainerView;->listViewPadding:F
 
-    .line 59
+    .line 62
     new-instance v0, Lorg/telegram/ui/Components/MentionsContainerView$MentionsListView;
 
     invoke-direct {v0, v6, v8, v14}, Lorg/telegram/ui/Components/MentionsContainerView$MentionsListView;-><init>(Lorg/telegram/ui/Components/MentionsContainerView;Landroid/content/Context;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)V
@@ -193,7 +197,7 @@
 
     const/high16 v1, 0x40c00000    # 6.0f
 
-    .line 60
+    .line 63
     invoke-static {v1}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v1
@@ -202,7 +206,7 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/MentionsContainerView$MentionsListView;->setTranslationY(F)V
 
-    .line 61
+    .line 64
     new-instance v0, Lorg/telegram/ui/Components/MentionsContainerView$1;
 
     invoke-direct {v0, v6, v8}, Lorg/telegram/ui/Components/MentionsContainerView$1;-><init>(Lorg/telegram/ui/Components/MentionsContainerView;Landroid/content/Context;)V
@@ -211,17 +215,17 @@
 
     const/4 v1, 0x1
 
-    .line 73
+    .line 76
     invoke-virtual {v0, v1}, Landroidx/recyclerview/widget/LinearLayoutManager;->setOrientation(I)V
 
-    .line 74
+    .line 77
     new-instance v7, Lorg/telegram/ui/Components/MentionsContainerView$2;
 
     const/16 v3, 0x64
 
     const/4 v4, 0x0
 
-    const/4 v5, 0x1
+    const/4 v5, 0x0
 
     move-object v0, v7
 
@@ -233,55 +237,58 @@
 
     iput-object v7, v6, Lorg/telegram/ui/Components/MentionsContainerView;->gridLayoutManager:Lorg/telegram/ui/Components/ExtendedGridLayoutManager;
 
-    .line 144
+    .line 146
     new-instance v0, Lorg/telegram/ui/Components/MentionsContainerView$3;
 
     invoke-direct {v0, v6}, Lorg/telegram/ui/Components/MentionsContainerView$3;-><init>(Lorg/telegram/ui/Components/MentionsContainerView;)V
 
     invoke-virtual {v7, v0}, Landroidx/recyclerview/widget/GridLayoutManager;->setSpanSizeLookup(Landroidx/recyclerview/widget/GridLayoutManager$SpanSizeLookup;)V
 
-    .line 165
+    .line 167
     new-instance v0, Landroidx/recyclerview/widget/DefaultItemAnimator;
 
     invoke-direct {v0}, Landroidx/recyclerview/widget/DefaultItemAnimator;-><init>()V
 
-    const-wide/16 v1, 0x4b
-
-    .line 166
-    invoke-virtual {v0, v1, v2}, Landroidx/recyclerview/widget/RecyclerView$ItemAnimator;->setAddDuration(J)V
-
-    const-wide/16 v3, 0x0
-
-    .line 167
-    invoke-virtual {v0, v3, v4}, Landroidx/recyclerview/widget/RecyclerView$ItemAnimator;->setMoveDuration(J)V
+    const-wide/16 v1, 0x96
 
     .line 168
-    invoke-virtual {v0, v1, v2}, Landroidx/recyclerview/widget/RecyclerView$ItemAnimator;->setChangeDuration(J)V
+    invoke-virtual {v0, v1, v2}, Landroidx/recyclerview/widget/RecyclerView$ItemAnimator;->setAddDuration(J)V
 
     .line 169
-    invoke-virtual {v0, v1, v2}, Landroidx/recyclerview/widget/RecyclerView$ItemAnimator;->setRemoveDuration(J)V
+    invoke-virtual {v0, v1, v2}, Landroidx/recyclerview/widget/RecyclerView$ItemAnimator;->setMoveDuration(J)V
 
     .line 170
-    invoke-virtual {v0, v15}, Landroidx/recyclerview/widget/DefaultItemAnimator;->setDelayAnimations(Z)V
+    invoke-virtual {v0, v1, v2}, Landroidx/recyclerview/widget/RecyclerView$ItemAnimator;->setChangeDuration(J)V
 
     .line 171
+    invoke-virtual {v0, v1, v2}, Landroidx/recyclerview/widget/RecyclerView$ItemAnimator;->setRemoveDuration(J)V
+
+    .line 172
+    sget-object v1, Lorg/telegram/ui/Components/CubicBezierInterpolator;->DEFAULT:Lorg/telegram/ui/Components/CubicBezierInterpolator;
+
+    invoke-virtual {v0, v1}, Landroidx/recyclerview/widget/DefaultItemAnimator;->setTranslationInterpolator(Landroid/view/animation/Interpolator;)V
+
+    .line 173
+    invoke-virtual {v0, v15}, Landroidx/recyclerview/widget/DefaultItemAnimator;->setDelayAnimations(Z)V
+
+    .line 174
     iget-object v1, v6, Lorg/telegram/ui/Components/MentionsContainerView;->listView:Lorg/telegram/ui/Components/MentionsContainerView$MentionsListView;
 
     invoke-virtual {v1, v0}, Landroidx/recyclerview/widget/RecyclerView;->setItemAnimator(Landroidx/recyclerview/widget/RecyclerView$ItemAnimator;)V
 
-    .line 172
+    .line 175
     iget-object v0, v6, Lorg/telegram/ui/Components/MentionsContainerView;->listView:Lorg/telegram/ui/Components/MentionsContainerView$MentionsListView;
 
     invoke-virtual {v0, v15}, Landroidx/recyclerview/widget/RecyclerView;->setClipToPadding(Z)V
 
-    .line 173
+    .line 176
     iget-object v0, v6, Lorg/telegram/ui/Components/MentionsContainerView;->listView:Lorg/telegram/ui/Components/MentionsContainerView$MentionsListView;
 
     iget-object v1, v6, Lorg/telegram/ui/Components/MentionsContainerView;->linearLayoutManager:Landroidx/recyclerview/widget/LinearLayoutManager;
 
     invoke-virtual {v0, v1}, Landroidx/recyclerview/widget/RecyclerView;->setLayoutManager(Landroidx/recyclerview/widget/RecyclerView$LayoutManager;)V
 
-    .line 175
+    .line 178
     new-instance v0, Lorg/telegram/ui/Adapters/MentionsAdapter;
 
     new-instance v13, Lorg/telegram/ui/Components/MentionsContainerView$4;
@@ -300,19 +307,19 @@
 
     iput-object v0, v6, Lorg/telegram/ui/Components/MentionsContainerView;->adapter:Lorg/telegram/ui/Adapters/MentionsAdapter;
 
-    .line 211
+    .line 214
     new-instance v1, Lorg/telegram/ui/Adapters/PaddedListAdapter;
 
     invoke-direct {v1, v0}, Lorg/telegram/ui/Adapters/PaddedListAdapter;-><init>(Lorg/telegram/ui/Components/RecyclerListView$SelectionAdapter;)V
 
     iput-object v1, v6, Lorg/telegram/ui/Components/MentionsContainerView;->paddedAdapter:Lorg/telegram/ui/Adapters/PaddedListAdapter;
 
-    .line 212
+    .line 215
     iget-object v0, v6, Lorg/telegram/ui/Components/MentionsContainerView;->listView:Lorg/telegram/ui/Components/MentionsContainerView$MentionsListView;
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/RecyclerListView;->setAdapter(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
-    .line 214
+    .line 217
     iget-object v0, v6, Lorg/telegram/ui/Components/MentionsContainerView;->listView:Lorg/telegram/ui/Components/MentionsContainerView$MentionsListView;
 
     const/4 v1, -0x1
@@ -325,7 +332,7 @@
 
     invoke-virtual {v6, v0, v1}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 215
+    .line 218
     invoke-virtual {v6, v15}, Lorg/telegram/ui/Components/MentionsContainerView;->setReversed(Z)V
 
     return-void
@@ -334,7 +341,7 @@
 .method static synthetic access$000(Lorg/telegram/ui/Components/MentionsContainerView;)Lorg/telegram/ui/Components/MentionsContainerView$MentionsListView;
     .registers 1
 
-    .line 34
+    .line 37
     iget-object p0, p0, Lorg/telegram/ui/Components/MentionsContainerView;->listView:Lorg/telegram/ui/Components/MentionsContainerView$MentionsListView;
 
     return-object p0
@@ -343,7 +350,7 @@
 .method static synthetic access$100(Lorg/telegram/ui/Components/MentionsContainerView;)Lorg/telegram/ui/Adapters/PaddedListAdapter;
     .registers 1
 
-    .line 34
+    .line 37
     iget-object p0, p0, Lorg/telegram/ui/Components/MentionsContainerView;->paddedAdapter:Lorg/telegram/ui/Adapters/PaddedListAdapter;
 
     return-object p0
@@ -352,7 +359,7 @@
 .method static synthetic access$1000(Lorg/telegram/ui/Components/MentionsContainerView;)Z
     .registers 1
 
-    .line 34
+    .line 37
     iget-boolean p0, p0, Lorg/telegram/ui/Components/MentionsContainerView;->ignoreLayout:Z
 
     return p0
@@ -361,7 +368,7 @@
 .method static synthetic access$1002(Lorg/telegram/ui/Components/MentionsContainerView;Z)Z
     .registers 2
 
-    .line 34
+    .line 37
     iput-boolean p1, p0, Lorg/telegram/ui/Components/MentionsContainerView;->ignoreLayout:Z
 
     return p1
@@ -370,7 +377,7 @@
 .method static synthetic access$1100(Lorg/telegram/ui/Components/MentionsContainerView;)Z
     .registers 1
 
-    .line 34
+    .line 37
     iget-boolean p0, p0, Lorg/telegram/ui/Components/MentionsContainerView;->scrollToFirst:Z
 
     return p0
@@ -379,7 +386,7 @@
 .method static synthetic access$1102(Lorg/telegram/ui/Components/MentionsContainerView;Z)Z
     .registers 2
 
-    .line 34
+    .line 37
     iput-boolean p1, p0, Lorg/telegram/ui/Components/MentionsContainerView;->scrollToFirst:Z
 
     return p1
@@ -388,7 +395,7 @@
 .method static synthetic access$1200(Lorg/telegram/ui/Components/MentionsContainerView;)F
     .registers 1
 
-    .line 34
+    .line 37
     iget p0, p0, Lorg/telegram/ui/Components/MentionsContainerView;->listViewPadding:F
 
     return p0
@@ -397,7 +404,7 @@
 .method static synthetic access$1202(Lorg/telegram/ui/Components/MentionsContainerView;F)F
     .registers 2
 
-    .line 34
+    .line 37
     iput p1, p0, Lorg/telegram/ui/Components/MentionsContainerView;->listViewPadding:F
 
     return p1
@@ -406,7 +413,7 @@
 .method static synthetic access$200(Lorg/telegram/ui/Components/MentionsContainerView;)Lorg/telegram/ui/Adapters/MentionsAdapter;
     .registers 1
 
-    .line 34
+    .line 37
     iget-object p0, p0, Lorg/telegram/ui/Components/MentionsContainerView;->adapter:Lorg/telegram/ui/Adapters/MentionsAdapter;
 
     return-object p0
@@ -415,7 +422,7 @@
 .method static synthetic access$300(Lorg/telegram/ui/Components/MentionsContainerView;)Lorg/telegram/ui/Components/ExtendedGridLayoutManager;
     .registers 1
 
-    .line 34
+    .line 37
     iget-object p0, p0, Lorg/telegram/ui/Components/MentionsContainerView;->gridLayoutManager:Lorg/telegram/ui/Components/ExtendedGridLayoutManager;
 
     return-object p0
@@ -424,7 +431,7 @@
 .method static synthetic access$400(Lorg/telegram/ui/Components/MentionsContainerView;)Z
     .registers 1
 
-    .line 34
+    .line 37
     iget-boolean p0, p0, Lorg/telegram/ui/Components/MentionsContainerView;->shown:Z
 
     return p0
@@ -433,7 +440,7 @@
 .method static synthetic access$500(Lorg/telegram/ui/Components/MentionsContainerView;)Ljava/lang/Runnable;
     .registers 1
 
-    .line 34
+    .line 37
     iget-object p0, p0, Lorg/telegram/ui/Components/MentionsContainerView;->updateVisibilityRunnable:Ljava/lang/Runnable;
 
     return-object p0
@@ -442,7 +449,7 @@
 .method static synthetic access$602(Lorg/telegram/ui/Components/MentionsContainerView;Z)Z
     .registers 2
 
-    .line 34
+    .line 37
     iput-boolean p1, p0, Lorg/telegram/ui/Components/MentionsContainerView;->switchLayoutManagerOnEnd:Z
 
     return p1
@@ -451,7 +458,7 @@
 .method static synthetic access$900(Lorg/telegram/ui/Components/MentionsContainerView;)Landroidx/recyclerview/widget/LinearLayoutManager;
     .registers 1
 
-    .line 34
+    .line 37
     iget-object p0, p0, Lorg/telegram/ui/Components/MentionsContainerView;->linearLayoutManager:Landroidx/recyclerview/widget/LinearLayoutManager;
 
     return-object p0
@@ -460,7 +467,7 @@
 .method private getThemedColor(Ljava/lang/String;)I
     .registers 3
 
-    .line 625
+    .line 654
     iget-object v0, p0, Lorg/telegram/ui/Components/MentionsContainerView;->resourcesProvider:Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;
 
     if-eqz v0, :cond_9
@@ -477,7 +484,7 @@
     :goto_a
     if-eqz v0, :cond_11
 
-    .line 626
+    .line 655
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
     move-result p1
@@ -496,7 +503,7 @@
 .method private synthetic lambda$new$0()V
     .registers 3
 
-    .line 357
+    .line 375
     iget-boolean v0, p0, Lorg/telegram/ui/Components/MentionsContainerView;->shown:Z
 
     const/4 v1, 0x1
@@ -511,13 +518,18 @@
 .method private synthetic lambda$updateListViewTranslation$1(FFFFLandroidx/dynamicanimation/animation/DynamicAnimation;FF)V
     .registers 8
 
+    .line 462
+    iget-object p5, p0, Lorg/telegram/ui/Components/MentionsContainerView;->listView:Lorg/telegram/ui/Components/MentionsContainerView$MentionsListView;
+
+    invoke-virtual {p5, p6}, Lorg/telegram/ui/Components/MentionsContainerView$MentionsListView;->setTranslationY(F)V
+
     sub-float/2addr p6, p3
 
     sub-float/2addr p4, p3
 
     div-float/2addr p6, p4
 
-    .line 438
+    .line 463
     invoke-static {p1, p2, p6}, Lorg/telegram/messenger/AndroidUtilities;->lerp(FFF)F
 
     move-result p1
@@ -534,7 +546,7 @@
 
     const/4 p2, 0x0
 
-    .line 443
+    .line 468
     iput-object p2, p0, Lorg/telegram/ui/Components/MentionsContainerView;->listViewTranslationAnimator:Landroidx/dynamicanimation/animation/SpringAnimation;
 
     const/4 p2, 0x0
@@ -548,21 +560,21 @@
     :cond_b
     const/4 p3, 0x0
 
-    .line 444
+    .line 469
     :goto_c
     invoke-virtual {p0, p3}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
-    .line 445
+    .line 470
     iget-boolean p3, p0, Lorg/telegram/ui/Components/MentionsContainerView;->switchLayoutManagerOnEnd:Z
 
     if-eqz p3, :cond_26
 
     if-eqz p1, :cond_26
 
-    .line 446
+    .line 471
     iput-boolean p2, p0, Lorg/telegram/ui/Components/MentionsContainerView;->switchLayoutManagerOnEnd:Z
 
-    .line 447
+    .line 472
     iget-object p1, p0, Lorg/telegram/ui/Components/MentionsContainerView;->listView:Lorg/telegram/ui/Components/MentionsContainerView$MentionsListView;
 
     invoke-virtual {p0}, Lorg/telegram/ui/Components/MentionsContainerView;->getNeededLayoutManager()Landroidx/recyclerview/widget/LinearLayoutManager;
@@ -573,7 +585,7 @@
 
     const/4 p1, 0x1
 
-    .line 448
+    .line 473
     iput-boolean p1, p0, Lorg/telegram/ui/Components/MentionsContainerView;->shown:Z
 
     invoke-virtual {p0, p1}, Lorg/telegram/ui/Components/MentionsContainerView;->updateVisibility(Z)V
@@ -585,18 +597,18 @@
 .method private updateListViewTranslation(ZZ)V
     .registers 12
 
-    .line 397
+    .line 415
     iget-object v0, p0, Lorg/telegram/ui/Components/MentionsContainerView;->listView:Lorg/telegram/ui/Components/MentionsContainerView$MentionsListView;
 
-    if-eqz v0, :cond_fc
+    if-eqz v0, :cond_f1
 
     iget-object v0, p0, Lorg/telegram/ui/Components/MentionsContainerView;->paddedAdapter:Lorg/telegram/ui/Adapters/PaddedListAdapter;
 
     if-nez v0, :cond_a
 
-    goto/16 :goto_fc
+    goto/16 :goto_f1
 
-    .line 400
+    .line 418
     :cond_a
     iget-boolean v0, p0, Lorg/telegram/ui/Components/MentionsContainerView;->listViewHiding:Z
 
@@ -616,7 +628,7 @@
 
     return-void
 
-    .line 403
+    .line 421
     :cond_1b
     invoke-virtual {p0}, Lorg/telegram/ui/Components/MentionsContainerView;->isReversed()Z
 
@@ -624,7 +636,7 @@
 
     if-eqz p1, :cond_2d
 
-    .line 406
+    .line 424
     iget v1, p0, Lorg/telegram/ui/Components/MentionsContainerView;->containerPadding:F
 
     neg-float v1, v1
@@ -641,7 +653,7 @@
 
     goto :goto_3e
 
-    .line 408
+    .line 426
     :cond_2d
     iget-object v1, p0, Lorg/telegram/ui/Components/MentionsContainerView;->listView:Lorg/telegram/ui/Components/MentionsContainerView$MentionsListView;
 
@@ -666,7 +678,7 @@
     :goto_3e
     const/4 v2, 0x0
 
-    .line 410
+    .line 428
     iget v3, p0, Lorg/telegram/ui/Components/MentionsContainerView;->listViewPadding:F
 
     if-eqz v0, :cond_4a
@@ -697,7 +709,7 @@
 
     if-nez v0, :cond_5d
 
-    .line 412
+    .line 430
     iget-object v0, p0, Lorg/telegram/ui/Components/MentionsContainerView;->listView:Lorg/telegram/ui/Components/MentionsContainerView$MentionsListView;
 
     invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView;->computeVerticalScrollOffset()I
@@ -713,15 +725,15 @@
 
     const/4 v0, 0x0
 
-    .line 414
+    .line 432
     invoke-virtual {p0, v0}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
-    .line 415
+    .line 433
     iget-object v1, p0, Lorg/telegram/ui/Components/MentionsContainerView;->listViewTranslationAnimator:Landroidx/dynamicanimation/animation/SpringAnimation;
 
     if-eqz v1, :cond_69
 
-    .line 416
+    .line 434
     invoke-virtual {v1}, Landroidx/dynamicanimation/animation/DynamicAnimation;->cancel()V
 
     :cond_69
@@ -729,19 +741,19 @@
 
     const/high16 v3, 0x3f800000    # 1.0f
 
-    if-eqz p2, :cond_ec
+    if-eqz p2, :cond_e1
 
-    .line 419
+    .line 437
     iput-boolean p1, p0, Lorg/telegram/ui/Components/MentionsContainerView;->listViewHiding:Z
 
-    .line 420
+    .line 438
     iget-object p2, p0, Lorg/telegram/ui/Components/MentionsContainerView;->listView:Lorg/telegram/ui/Components/MentionsContainerView$MentionsListView;
 
     invoke-virtual {p2}, Landroid/view/ViewGroup;->getTranslationY()F
 
     move-result v7
 
-    .line 422
+    .line 440
     iget v5, p0, Lorg/telegram/ui/Components/MentionsContainerView;->hideT:F
 
     if-eqz p1, :cond_7e
@@ -760,7 +772,7 @@
 
     const/4 p2, 0x0
 
-    .line 425
+    .line 443
     iput-object p2, p0, Lorg/telegram/ui/Components/MentionsContainerView;->listViewTranslationAnimator:Landroidx/dynamicanimation/animation/SpringAnimation;
 
     if-eqz p1, :cond_89
@@ -770,21 +782,21 @@
     :cond_89
     const/4 v1, 0x0
 
-    .line 426
+    .line 444
     :goto_8a
     invoke-virtual {p0, v1}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
-    .line 427
+    .line 445
     iget-boolean p2, p0, Lorg/telegram/ui/Components/MentionsContainerView;->switchLayoutManagerOnEnd:Z
 
-    if-eqz p2, :cond_fc
+    if-eqz p2, :cond_f1
 
-    if-eqz p1, :cond_fc
+    if-eqz p1, :cond_f1
 
-    .line 428
+    .line 446
     iput-boolean v0, p0, Lorg/telegram/ui/Components/MentionsContainerView;->switchLayoutManagerOnEnd:Z
 
-    .line 429
+    .line 447
     iget-object p1, p0, Lorg/telegram/ui/Components/MentionsContainerView;->listView:Lorg/telegram/ui/Components/MentionsContainerView$MentionsListView;
 
     invoke-virtual {p0}, Lorg/telegram/ui/Components/MentionsContainerView;->getNeededLayoutManager()Landroidx/recyclerview/widget/LinearLayoutManager;
@@ -795,59 +807,47 @@
 
     const/4 p1, 0x1
 
-    .line 430
+    .line 448
     iput-boolean p1, p0, Lorg/telegram/ui/Components/MentionsContainerView;->shown:Z
 
     invoke-virtual {p0, p1}, Lorg/telegram/ui/Components/MentionsContainerView;->updateVisibility(Z)V
 
-    goto :goto_fc
+    goto :goto_f1
 
-    .line 433
+    .line 451
     :cond_a5
     new-instance p2, Landroidx/dynamicanimation/animation/SpringAnimation;
 
-    iget-object v0, p0, Lorg/telegram/ui/Components/MentionsContainerView;->listView:Lorg/telegram/ui/Components/MentionsContainerView$MentionsListView;
+    new-instance v0, Landroidx/dynamicanimation/animation/FloatValueHolder;
 
-    sget-object v1, Landroidx/dynamicanimation/animation/DynamicAnimation;->TRANSLATION_Y:Landroidx/dynamicanimation/animation/DynamicAnimation$ViewProperty;
+    invoke-direct {v0, v7}, Landroidx/dynamicanimation/animation/FloatValueHolder;-><init>(F)V
 
-    invoke-direct {p2, v0, v1, v8}, Landroidx/dynamicanimation/animation/SpringAnimation;-><init>(Ljava/lang/Object;Landroidx/dynamicanimation/animation/FloatPropertyCompat;F)V
+    invoke-direct {p2, v0}, Landroidx/dynamicanimation/animation/SpringAnimation;-><init>(Landroidx/dynamicanimation/animation/FloatValueHolder;)V
+
+    new-instance v0, Landroidx/dynamicanimation/animation/SpringForce;
+
+    invoke-direct {v0, v8}, Landroidx/dynamicanimation/animation/SpringForce;-><init>(F)V
+
+    .line 455
+    invoke-virtual {v0, v3}, Landroidx/dynamicanimation/animation/SpringForce;->setDampingRatio(F)Landroidx/dynamicanimation/animation/SpringForce;
+
+    move-result-object v0
+
+    const v1, 0x44098000    # 550.0f
+
+    .line 456
+    invoke-virtual {v0, v1}, Landroidx/dynamicanimation/animation/SpringForce;->setStiffness(F)Landroidx/dynamicanimation/animation/SpringForce;
+
+    move-result-object v0
+
+    .line 453
+    invoke-virtual {p2, v0}, Landroidx/dynamicanimation/animation/SpringAnimation;->setSpring(Landroidx/dynamicanimation/animation/SpringForce;)Landroidx/dynamicanimation/animation/SpringAnimation;
+
+    move-result-object p2
 
     iput-object p2, p0, Lorg/telegram/ui/Components/MentionsContainerView;->listViewTranslationAnimator:Landroidx/dynamicanimation/animation/SpringAnimation;
 
-    .line 434
-    sget v0, Lorg/telegram/messenger/AndroidUtilities;->density:F
-
-    const/high16 v1, 0x41c80000    # 25.0f
-
-    mul-float v0, v0, v1
-
-    .line 435
-    invoke-virtual {p2}, Landroidx/dynamicanimation/animation/SpringAnimation;->getSpring()Landroidx/dynamicanimation/animation/SpringForce;
-
-    move-result-object p2
-
-    const/high16 v1, 0x44480000    # 800.0f
-
-    invoke-virtual {p2, v1}, Landroidx/dynamicanimation/animation/SpringForce;->setStiffness(F)Landroidx/dynamicanimation/animation/SpringForce;
-
-    .line 436
-    iget-object p2, p0, Lorg/telegram/ui/Components/MentionsContainerView;->listViewTranslationAnimator:Landroidx/dynamicanimation/animation/SpringAnimation;
-
-    invoke-virtual {p2}, Landroidx/dynamicanimation/animation/SpringAnimation;->getSpring()Landroidx/dynamicanimation/animation/SpringForce;
-
-    move-result-object p2
-
-    const/high16 v2, 0x43fa0000    # 500.0f
-
-    invoke-static {v1, v2, v0}, Lorg/telegram/messenger/AndroidUtilities;->computeDampingRatio(FFF)F
-
-    move-result v0
-
-    invoke-virtual {p2, v0}, Landroidx/dynamicanimation/animation/SpringForce;->setDampingRatio(F)Landroidx/dynamicanimation/animation/SpringForce;
-
-    .line 437
-    iget-object p2, p0, Lorg/telegram/ui/Components/MentionsContainerView;->listViewTranslationAnimator:Landroidx/dynamicanimation/animation/SpringAnimation;
-
+    .line 461
     new-instance v0, Lorg/telegram/ui/Components/MentionsContainerView$$ExternalSyntheticLambda1;
 
     move-object v3, v0
@@ -858,9 +858,9 @@
 
     invoke-virtual {p2, v0}, Landroidx/dynamicanimation/animation/DynamicAnimation;->addUpdateListener(Landroidx/dynamicanimation/animation/DynamicAnimation$OnAnimationUpdateListener;)Landroidx/dynamicanimation/animation/DynamicAnimation;
 
-    if-eqz p1, :cond_e6
+    if-eqz p1, :cond_db
 
-    .line 441
+    .line 466
     iget-object p2, p0, Lorg/telegram/ui/Components/MentionsContainerView;->listViewTranslationAnimator:Landroidx/dynamicanimation/animation/SpringAnimation;
 
     new-instance v0, Lorg/telegram/ui/Components/MentionsContainerView$$ExternalSyntheticLambda0;
@@ -869,35 +869,35 @@
 
     invoke-virtual {p2, v0}, Landroidx/dynamicanimation/animation/DynamicAnimation;->addEndListener(Landroidx/dynamicanimation/animation/DynamicAnimation$OnAnimationEndListener;)Landroidx/dynamicanimation/animation/DynamicAnimation;
 
-    .line 453
-    :cond_e6
+    .line 478
+    :cond_db
     iget-object p1, p0, Lorg/telegram/ui/Components/MentionsContainerView;->listViewTranslationAnimator:Landroidx/dynamicanimation/animation/SpringAnimation;
 
     invoke-virtual {p1}, Landroidx/dynamicanimation/animation/SpringAnimation;->start()V
 
-    goto :goto_fc
+    goto :goto_f1
 
-    :cond_ec
-    if-eqz p1, :cond_f0
+    :cond_e1
+    if-eqz p1, :cond_e5
 
     const/high16 v2, 0x3f800000    # 1.0f
 
-    .line 456
-    :cond_f0
+    .line 481
+    :cond_e5
     iput v2, p0, Lorg/telegram/ui/Components/MentionsContainerView;->hideT:F
 
-    .line 457
+    .line 482
     iget-object p2, p0, Lorg/telegram/ui/Components/MentionsContainerView;->listView:Lorg/telegram/ui/Components/MentionsContainerView$MentionsListView;
 
     invoke-virtual {p2, v8}, Lorg/telegram/ui/Components/MentionsContainerView$MentionsListView;->setTranslationY(F)V
 
-    if-eqz p1, :cond_fc
+    if-eqz p1, :cond_f1
 
-    .line 459
+    .line 484
     invoke-virtual {p0, v1}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
-    :cond_fc
-    :goto_fc
+    :cond_f1
+    :goto_f1
     return-void
 .end method
 
@@ -911,15 +911,82 @@
     return v0
 .end method
 
+.method public clipBottom()F
+    .registers 3
+
+    .line 275
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getVisibility()I
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_8
+
+    return v1
+
+    .line 278
+    :cond_8
+    invoke-virtual {p0}, Lorg/telegram/ui/Components/MentionsContainerView;->isReversed()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_f
+
+    goto :goto_18
+
+    :cond_f
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getMeasuredHeight()I
+
+    move-result v0
+
+    int-to-float v0, v0
+
+    iget v1, p0, Lorg/telegram/ui/Components/MentionsContainerView;->containerTop:F
+
+    sub-float v1, v0, v1
+
+    :goto_18
+    return v1
+.end method
+
+.method public clipTop()F
+    .registers 3
+
+    .line 282
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getVisibility()I
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_8
+
+    return v1
+
+    .line 285
+    :cond_8
+    invoke-virtual {p0}, Lorg/telegram/ui/Components/MentionsContainerView;->isReversed()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_10
+
+    iget v1, p0, Lorg/telegram/ui/Components/MentionsContainerView;->containerBottom:F
+
+    :cond_10
+    return v1
+.end method
+
 .method public dispatchDraw(Landroid/graphics/Canvas;)V
     .registers 12
 
-    .line 273
+    .line 290
     invoke-virtual {p0}, Lorg/telegram/ui/Components/MentionsContainerView;->isReversed()Z
 
     move-result v5
 
-    .line 274
+    .line 291
     iget-object v0, p0, Lorg/telegram/ui/Components/MentionsContainerView;->adapter:Lorg/telegram/ui/Adapters/MentionsAdapter;
 
     invoke-virtual {v0}, Lorg/telegram/ui/Adapters/MentionsAdapter;->isStickers()Z
@@ -981,7 +1048,7 @@
 
     int-to-float v0, v0
 
-    .line 275
+    .line 292
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v0
@@ -992,25 +1059,23 @@
 
     const/high16 v0, 0x40800000    # 4.0f
 
-    .line 277
+    .line 294
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
-    move-result v0
+    move-result v3
 
-    int-to-float v0, v0
-
-    const/high16 v3, 0x40000000    # 2.0f
+    int-to-float v3, v3
 
     const/4 v6, 0x0
 
-    if-eqz v5, :cond_8b
+    if-eqz v5, :cond_9e
 
-    .line 280
+    .line 296
     iget-object v4, p0, Lorg/telegram/ui/Components/MentionsContainerView;->paddedAdapter:Lorg/telegram/ui/Adapters/PaddedListAdapter;
 
     iget-boolean v7, v4, Lorg/telegram/ui/Adapters/PaddedListAdapter;->paddingViewAttached:Z
 
-    if-eqz v7, :cond_51
+    if-eqz v7, :cond_4f
 
     iget-object v4, v4, Lorg/telegram/ui/Adapters/PaddedListAdapter;->paddingView:Landroid/view/View;
 
@@ -1018,17 +1083,17 @@
 
     move-result v4
 
-    goto :goto_55
+    goto :goto_53
 
-    :cond_51
+    :cond_4f
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getHeight()I
 
     move-result v4
 
-    :goto_55
+    :goto_53
     int-to-float v4, v4
 
-    .line 281
+    .line 297
     iget-object v7, p0, Lorg/telegram/ui/Components/MentionsContainerView;->listView:Lorg/telegram/ui/Components/MentionsContainerView$MentionsListView;
 
     invoke-virtual {v7}, Landroid/view/ViewGroup;->getTranslationY()F
@@ -1047,7 +1112,7 @@
 
     const/high16 v7, 0x3f800000    # 1.0f
 
-    .line 282
+    .line 298
     iget v8, p0, Lorg/telegram/ui/Components/MentionsContainerView;->hideT:F
 
     sub-float/2addr v7, v8
@@ -1064,36 +1129,61 @@
 
     move-result v4
 
-    .line 283
+    .line 299
     iget-object v7, p0, Lorg/telegram/ui/Components/MentionsContainerView;->rect:Landroid/graphics/Rect;
+
+    iput v6, p0, Lorg/telegram/ui/Components/MentionsContainerView;->containerTop:F
+
+    float-to-int v8, v6
 
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getMeasuredWidth()I
 
-    move-result v8
+    move-result v9
+
+    iput v4, p0, Lorg/telegram/ui/Components/MentionsContainerView;->containerBottom:F
 
     float-to-int v4, v4
 
-    invoke-virtual {v7, v2, v2, v8, v4}, Landroid/graphics/Rect;->set(IIII)V
+    invoke-virtual {v7, v2, v8, v9, v4}, Landroid/graphics/Rect;->set(IIII)V
 
-    cmpl-float v2, v0, v6
+    .line 300
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getMeasuredHeight()I
 
-    if-lez v2, :cond_e9
+    move-result v2
 
-    .line 285
-    iget-object v2, p0, Lorg/telegram/ui/Components/MentionsContainerView;->rect:Landroid/graphics/Rect;
+    int-to-float v2, v2
 
-    iget v4, v2, Landroid/graphics/Rect;->top:I
+    iget v4, p0, Lorg/telegram/ui/Components/MentionsContainerView;->containerBottom:F
 
-    float-to-int v7, v0
+    sub-float/2addr v2, v4
+
+    invoke-static {v2}, Ljava/lang/Math;->abs(F)F
+
+    move-result v2
+
+    invoke-static {v3, v2}, Ljava/lang/Math;->min(FF)F
+
+    move-result v2
+
+    cmpl-float v3, v2, v6
+
+    if-lez v3, :cond_110
+
+    .line 302
+    iget-object v3, p0, Lorg/telegram/ui/Components/MentionsContainerView;->rect:Landroid/graphics/Rect;
+
+    iget v4, v3, Landroid/graphics/Rect;->top:I
+
+    float-to-int v7, v2
 
     sub-int/2addr v4, v7
 
-    iput v4, v2, Landroid/graphics/Rect;->top:I
+    iput v4, v3, Landroid/graphics/Rect;->top:I
 
-    goto :goto_e9
+    goto :goto_110
 
-    .line 288
-    :cond_8b
+    .line 305
+    :cond_9e
     iget-object v4, p0, Lorg/telegram/ui/Components/MentionsContainerView;->listView:Lorg/telegram/ui/Components/MentionsContainerView$MentionsListView;
 
     invoke-virtual {v4}, Landroidx/recyclerview/widget/RecyclerView;->getLayoutManager()Landroidx/recyclerview/widget/RecyclerView$LayoutManager;
@@ -1102,37 +1192,39 @@
 
     iget-object v7, p0, Lorg/telegram/ui/Components/MentionsContainerView;->gridLayoutManager:Lorg/telegram/ui/Components/ExtendedGridLayoutManager;
 
-    if-ne v4, v7, :cond_a5
+    if-ne v4, v7, :cond_ba
 
-    .line 289
+    .line 306
     iget v4, p0, Lorg/telegram/ui/Components/MentionsContainerView;->containerPadding:F
 
-    invoke-static {v3}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
+    const/high16 v7, 0x40000000    # 2.0f
 
-    move-result v7
+    invoke-static {v7}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
-    int-to-float v7, v7
+    move-result v8
 
-    add-float/2addr v4, v7
+    int-to-float v8, v8
+
+    add-float/2addr v4, v8
 
     iput v4, p0, Lorg/telegram/ui/Components/MentionsContainerView;->containerPadding:F
 
-    .line 290
-    invoke-static {v3}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
+    .line 307
+    invoke-static {v7}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v4
 
     int-to-float v4, v4
 
-    add-float/2addr v0, v4
+    add-float/2addr v3, v4
 
-    .line 292
-    :cond_a5
+    .line 309
+    :cond_ba
     iget-object v4, p0, Lorg/telegram/ui/Components/MentionsContainerView;->paddedAdapter:Lorg/telegram/ui/Adapters/PaddedListAdapter;
 
     iget-boolean v7, v4, Lorg/telegram/ui/Adapters/PaddedListAdapter;->paddingViewAttached:Z
 
-    if-eqz v7, :cond_b2
+    if-eqz v7, :cond_c7
 
     iget-object v4, v4, Lorg/telegram/ui/Adapters/PaddedListAdapter;->paddingView:Landroid/view/View;
 
@@ -1140,15 +1232,15 @@
 
     move-result v4
 
-    goto :goto_b3
+    goto :goto_c8
 
-    :cond_b2
+    :cond_c7
     const/4 v4, 0x0
 
-    :goto_b3
+    :goto_c8
     int-to-float v4, v4
 
-    .line 293
+    .line 310
     iget-object v7, p0, Lorg/telegram/ui/Components/MentionsContainerView;->listView:Lorg/telegram/ui/Components/MentionsContainerView$MentionsListView;
 
     invoke-virtual {v7}, Landroid/view/ViewGroup;->getTranslationY()F
@@ -1165,7 +1257,9 @@
 
     sub-float/2addr v4, v7
 
-    .line 294
+    iput v4, p0, Lorg/telegram/ui/Components/MentionsContainerView;->containerTop:F
+
+    .line 311
     iget v7, p0, Lorg/telegram/ui/Components/MentionsContainerView;->hideT:F
 
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getHeight()I
@@ -1180,8 +1274,10 @@
 
     move-result v4
 
-    .line 295
+    .line 312
     iget-object v7, p0, Lorg/telegram/ui/Components/MentionsContainerView;->rect:Landroid/graphics/Rect;
+
+    iput v4, p0, Lorg/telegram/ui/Components/MentionsContainerView;->containerTop:F
 
     float-to-int v4, v4
 
@@ -1193,132 +1289,149 @@
 
     move-result v9
 
+    int-to-float v9, v9
+
+    iput v9, p0, Lorg/telegram/ui/Components/MentionsContainerView;->containerBottom:F
+
+    float-to-int v9, v9
+
     invoke-virtual {v7, v2, v4, v8, v9}, Landroid/graphics/Rect;->set(IIII)V
 
-    cmpl-float v2, v0, v6
+    .line 313
+    iget v2, p0, Lorg/telegram/ui/Components/MentionsContainerView;->containerTop:F
 
-    if-lez v2, :cond_e9
+    invoke-static {v2}, Ljava/lang/Math;->abs(F)F
 
-    .line 297
-    iget-object v2, p0, Lorg/telegram/ui/Components/MentionsContainerView;->rect:Landroid/graphics/Rect;
+    move-result v2
 
-    iget v4, v2, Landroid/graphics/Rect;->bottom:I
+    invoke-static {v3, v2}, Ljava/lang/Math;->min(FF)F
 
-    float-to-int v7, v0
+    move-result v2
+
+    cmpl-float v3, v2, v6
+
+    if-lez v3, :cond_110
+
+    .line 315
+    iget-object v3, p0, Lorg/telegram/ui/Components/MentionsContainerView;->rect:Landroid/graphics/Rect;
+
+    iget v4, v3, Landroid/graphics/Rect;->bottom:I
+
+    float-to-int v7, v2
 
     add-int/2addr v4, v7
 
-    iput v4, v2, Landroid/graphics/Rect;->bottom:I
+    iput v4, v3, Landroid/graphics/Rect;->bottom:I
 
-    :cond_e9
-    :goto_e9
-    move v7, v0
+    :cond_110
+    :goto_110
+    move v7, v2
 
-    .line 301
-    iget-object v0, p0, Lorg/telegram/ui/Components/MentionsContainerView;->paint:Landroid/graphics/Paint;
+    .line 319
+    iget-object v2, p0, Lorg/telegram/ui/Components/MentionsContainerView;->paint:Landroid/graphics/Paint;
 
-    if-nez v0, :cond_ff
+    if-nez v2, :cond_126
 
-    .line 302
-    new-instance v0, Landroid/graphics/Paint;
+    .line 320
+    new-instance v2, Landroid/graphics/Paint;
 
-    invoke-direct {v0, v1}, Landroid/graphics/Paint;-><init>(I)V
+    invoke-direct {v2, v1}, Landroid/graphics/Paint;-><init>(I)V
 
-    iput-object v0, p0, Lorg/telegram/ui/Components/MentionsContainerView;->paint:Landroid/graphics/Paint;
+    iput-object v2, p0, Lorg/telegram/ui/Components/MentionsContainerView;->paint:Landroid/graphics/Paint;
 
-    .line 303
-    invoke-static {v3}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
+    .line 321
+    invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
-    move-result v1
+    move-result v0
 
-    int-to-float v1, v1
+    int-to-float v0, v0
 
-    const/high16 v2, 0x1e000000
+    const/high16 v1, 0x1e000000
 
-    invoke-virtual {v0, v1, v6, v6, v2}, Landroid/graphics/Paint;->setShadowLayer(FFFI)V
+    invoke-virtual {v2, v0, v6, v6, v1}, Landroid/graphics/Paint;->setShadowLayer(FFFI)V
 
-    .line 305
-    :cond_ff
+    .line 323
+    :cond_126
     iget-object v0, p0, Lorg/telegram/ui/Components/MentionsContainerView;->paint:Landroid/graphics/Paint;
 
     iget-object v1, p0, Lorg/telegram/ui/Components/MentionsContainerView;->color:Ljava/lang/Integer;
 
-    if-eqz v1, :cond_10a
+    if-eqz v1, :cond_131
 
     invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
 
     move-result v1
 
-    goto :goto_110
+    goto :goto_137
 
-    :cond_10a
+    :cond_131
     const-string v1, "chat_messagePanelBackground"
 
     invoke-direct {p0, v1}, Lorg/telegram/ui/Components/MentionsContainerView;->getThemedColor(Ljava/lang/String;)I
 
     move-result v1
 
-    :goto_110
+    :goto_137
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 307
+    .line 325
     invoke-static {}, Lorg/telegram/messenger/SharedConfig;->chatBlurEnabled()Z
 
     move-result v0
 
-    if-eqz v0, :cond_15c
+    if-eqz v0, :cond_183
 
     iget-object v0, p0, Lorg/telegram/ui/Components/MentionsContainerView;->sizeNotifierFrameLayout:Lorg/telegram/ui/Components/SizeNotifierFrameLayout;
 
-    if-eqz v0, :cond_15c
+    if-eqz v0, :cond_183
 
     cmpl-float v0, v7, v6
 
-    if-lez v0, :cond_146
+    if-lez v0, :cond_16d
 
-    .line 309
+    .line 327
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 310
+    .line 328
     iget-object v0, p0, Lorg/telegram/ui/Components/MentionsContainerView;->path:Landroid/graphics/Path;
 
-    if-nez v0, :cond_130
+    if-nez v0, :cond_157
 
-    .line 311
+    .line 329
     new-instance v0, Landroid/graphics/Path;
 
     invoke-direct {v0}, Landroid/graphics/Path;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/ui/Components/MentionsContainerView;->path:Landroid/graphics/Path;
 
-    goto :goto_133
+    goto :goto_15a
 
-    .line 313
-    :cond_130
+    .line 331
+    :cond_157
     invoke-virtual {v0}, Landroid/graphics/Path;->reset()V
 
-    .line 315
-    :goto_133
+    .line 333
+    :goto_15a
     sget-object v0, Lorg/telegram/messenger/AndroidUtilities;->rectTmp:Landroid/graphics/RectF;
 
     iget-object v1, p0, Lorg/telegram/ui/Components/MentionsContainerView;->rect:Landroid/graphics/Rect;
 
     invoke-virtual {v0, v1}, Landroid/graphics/RectF;->set(Landroid/graphics/Rect;)V
 
-    .line 316
+    .line 334
     iget-object v1, p0, Lorg/telegram/ui/Components/MentionsContainerView;->path:Landroid/graphics/Path;
 
     sget-object v2, Landroid/graphics/Path$Direction;->CW:Landroid/graphics/Path$Direction;
 
     invoke-virtual {v1, v0, v7, v7, v2}, Landroid/graphics/Path;->addRoundRect(Landroid/graphics/RectF;FFLandroid/graphics/Path$Direction;)V
 
-    .line 317
+    .line 335
     iget-object v0, p0, Lorg/telegram/ui/Components/MentionsContainerView;->path:Landroid/graphics/Path;
 
     invoke-virtual {p1, v0}, Landroid/graphics/Canvas;->clipPath(Landroid/graphics/Path;)Z
 
-    .line 319
-    :cond_146
+    .line 337
+    :cond_16d
     iget-object v0, p0, Lorg/telegram/ui/Components/MentionsContainerView;->sizeNotifierFrameLayout:Lorg/telegram/ui/Components/SizeNotifierFrameLayout;
 
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getY()F
@@ -1335,40 +1448,40 @@
 
     cmpl-float v0, v7, v6
 
-    if-lez v0, :cond_168
+    if-lez v0, :cond_18f
 
-    .line 321
+    .line 339
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
-    goto :goto_168
+    goto :goto_18f
 
-    .line 324
-    :cond_15c
+    .line 342
+    :cond_183
     sget-object v0, Lorg/telegram/messenger/AndroidUtilities;->rectTmp:Landroid/graphics/RectF;
 
     iget-object v1, p0, Lorg/telegram/ui/Components/MentionsContainerView;->rect:Landroid/graphics/Rect;
 
     invoke-virtual {v0, v1}, Landroid/graphics/RectF;->set(Landroid/graphics/Rect;)V
 
-    .line 325
+    .line 343
     iget-object v1, p0, Lorg/telegram/ui/Components/MentionsContainerView;->paint:Landroid/graphics/Paint;
 
     invoke-virtual {p1, v0, v7, v7, v1}, Landroid/graphics/Canvas;->drawRoundRect(Landroid/graphics/RectF;FFLandroid/graphics/Paint;)V
 
-    .line 327
-    :cond_168
-    :goto_168
+    .line 345
+    :cond_18f
+    :goto_18f
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 328
+    .line 346
     iget-object v0, p0, Lorg/telegram/ui/Components/MentionsContainerView;->rect:Landroid/graphics/Rect;
 
     invoke-virtual {p1, v0}, Landroid/graphics/Canvas;->clipRect(Landroid/graphics/Rect;)Z
 
-    .line 329
+    .line 347
     invoke-super {p0, p1}, Lorg/telegram/ui/Components/BlurredFrameLayout;->dispatchDraw(Landroid/graphics/Canvas;)V
 
-    .line 330
+    .line 348
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
     return-void
@@ -1377,7 +1490,7 @@
 .method public getAdapter()Lorg/telegram/ui/Adapters/MentionsAdapter;
     .registers 2
 
-    .line 246
+    .line 249
     iget-object v0, p0, Lorg/telegram/ui/Components/MentionsContainerView;->adapter:Lorg/telegram/ui/Adapters/MentionsAdapter;
 
     return-object v0
@@ -1386,7 +1499,7 @@
 .method public getCurrentLayoutManager()Landroidx/recyclerview/widget/LinearLayoutManager;
     .registers 3
 
-    .line 260
+    .line 263
     iget-object v0, p0, Lorg/telegram/ui/Components/MentionsContainerView;->listView:Lorg/telegram/ui/Components/MentionsContainerView$MentionsListView;
 
     invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView;->getLayoutManager()Landroidx/recyclerview/widget/RecyclerView$LayoutManager;
@@ -1409,7 +1522,7 @@
 .method public getListView()Lorg/telegram/ui/Components/MentionsContainerView$MentionsListView;
     .registers 2
 
-    .line 242
+    .line 245
     iget-object v0, p0, Lorg/telegram/ui/Components/MentionsContainerView;->listView:Lorg/telegram/ui/Components/MentionsContainerView$MentionsListView;
 
     return-object v0
@@ -1418,7 +1531,7 @@
 .method public getNeededLayoutManager()Landroidx/recyclerview/widget/LinearLayoutManager;
     .registers 2
 
-    .line 264
+    .line 267
     iget-object v0, p0, Lorg/telegram/ui/Components/MentionsContainerView;->adapter:Lorg/telegram/ui/Adapters/MentionsAdapter;
 
     invoke-virtual {v0}, Lorg/telegram/ui/Adapters/MentionsAdapter;->isStickers()Z
@@ -1458,7 +1571,7 @@
 .method public isReversed()Z
     .registers 3
 
-    .line 256
+    .line 259
     iget-object v0, p0, Lorg/telegram/ui/Components/MentionsContainerView;->listView:Lorg/telegram/ui/Components/MentionsContainerView$MentionsListView;
 
     invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView;->getLayoutManager()Landroidx/recyclerview/widget/RecyclerView$LayoutManager;
@@ -1519,7 +1632,7 @@
 .method public onPanTransitionStart()V
     .registers 2
 
-    .line 229
+    .line 232
     invoke-virtual {p0}, Lorg/telegram/ui/Components/MentionsContainerView;->isReversed()Z
 
     move-result v0
@@ -1532,12 +1645,12 @@
 .method public onPanTransitionUpdate(F)V
     .registers 3
 
-    .line 233
+    .line 236
     iget-boolean v0, p0, Lorg/telegram/ui/Components/MentionsContainerView;->shouldLiftMentions:Z
 
     if-eqz v0, :cond_7
 
-    .line 234
+    .line 237
     invoke-virtual {p0, p1}, Landroid/widget/FrameLayout;->setTranslationY(F)V
 
     :cond_7
@@ -1547,14 +1660,14 @@
 .method public requestLayout()V
     .registers 2
 
-    .line 348
+    .line 366
     iget-boolean v0, p0, Lorg/telegram/ui/Components/MentionsContainerView;->ignoreLayout:Z
 
     if-eqz v0, :cond_5
 
     return-void
 
-    .line 351
+    .line 369
     :cond_5
     invoke-super {p0}, Landroid/widget/FrameLayout;->requestLayout()V
 
@@ -1564,7 +1677,7 @@
 .method public setIgnoreLayout(Z)V
     .registers 2
 
-    .line 343
+    .line 361
     iput-boolean p1, p0, Lorg/telegram/ui/Components/MentionsContainerView;->ignoreLayout:Z
 
     return-void
@@ -1573,14 +1686,14 @@
 .method public setOverrideColor(I)V
     .registers 2
 
-    .line 335
+    .line 353
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
 
     iput-object p1, p0, Lorg/telegram/ui/Components/MentionsContainerView;->color:Ljava/lang/Integer;
 
-    .line 336
+    .line 354
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->invalidate()V
 
     return-void
@@ -1591,15 +1704,15 @@
 
     const/4 v0, 0x1
 
-    .line 250
+    .line 253
     iput-boolean v0, p0, Lorg/telegram/ui/Components/MentionsContainerView;->scrollToFirst:Z
 
-    .line 251
+    .line 254
     iget-object v0, p0, Lorg/telegram/ui/Components/MentionsContainerView;->linearLayoutManager:Landroidx/recyclerview/widget/LinearLayoutManager;
 
     invoke-virtual {v0, p1}, Landroidx/recyclerview/widget/LinearLayoutManager;->setReverseLayout(Z)V
 
-    .line 252
+    .line 255
     iget-object v0, p0, Lorg/telegram/ui/Components/MentionsContainerView;->adapter:Lorg/telegram/ui/Adapters/MentionsAdapter;
 
     invoke-virtual {v0, p1}, Lorg/telegram/ui/Adapters/MentionsAdapter;->setIsReversed(Z)V
@@ -1614,22 +1727,22 @@
 
     if-eqz p1, :cond_4f
 
-    .line 362
+    .line 380
     invoke-virtual {p0}, Lorg/telegram/ui/Components/MentionsContainerView;->isReversed()Z
 
     move-result v1
 
-    .line 363
+    .line 381
     iget-boolean v2, p0, Lorg/telegram/ui/Components/MentionsContainerView;->shown:Z
 
     if-nez v2, :cond_4b
 
     const/4 v2, 0x1
 
-    .line 364
+    .line 382
     iput-boolean v2, p0, Lorg/telegram/ui/Components/MentionsContainerView;->scrollToFirst:Z
 
-    .line 365
+    .line 383
     iget-object v2, p0, Lorg/telegram/ui/Components/MentionsContainerView;->listView:Lorg/telegram/ui/Components/MentionsContainerView$MentionsListView;
 
     invoke-virtual {v2}, Landroidx/recyclerview/widget/RecyclerView;->getLayoutManager()Landroidx/recyclerview/widget/RecyclerView$LayoutManager;
@@ -1649,11 +1762,11 @@
     :cond_1e
     const v2, 0x186a0
 
-    .line 366
+    .line 384
     :goto_21
     invoke-virtual {v3, v0, v2}, Landroidx/recyclerview/widget/LinearLayoutManager;->scrollToPositionWithOffset(II)V
 
-    .line 368
+    .line 386
     :cond_24
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getVisibility()I
 
@@ -1665,10 +1778,10 @@
 
     const/high16 v2, 0x3f800000    # 1.0f
 
-    .line 369
+    .line 387
     iput v2, p0, Lorg/telegram/ui/Components/MentionsContainerView;->hideT:F
 
-    .line 370
+    .line 388
     iget-object v2, p0, Lorg/telegram/ui/Components/MentionsContainerView;->listView:Lorg/telegram/ui/Components/MentionsContainerView$MentionsListView;
 
     if-eqz v1, :cond_40
@@ -1703,53 +1816,53 @@
     :goto_48
     invoke-virtual {v2, v1}, Lorg/telegram/ui/Components/MentionsContainerView$MentionsListView;->setTranslationY(F)V
 
-    .line 373
+    .line 391
     :cond_4b
     invoke-virtual {p0, v0}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
     goto :goto_51
 
-    .line 375
+    .line 393
     :cond_4f
     iput-boolean v0, p0, Lorg/telegram/ui/Components/MentionsContainerView;->scrollToFirst:Z
 
-    .line 377
+    .line 395
     :goto_51
     iput-boolean p1, p0, Lorg/telegram/ui/Components/MentionsContainerView;->shown:Z
 
-    .line 378
+    .line 396
     iget-object v0, p0, Lorg/telegram/ui/Components/MentionsContainerView;->updateVisibilityRunnable:Ljava/lang/Runnable;
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->cancelRunOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 379
+    .line 397
     iget-object v0, p0, Lorg/telegram/ui/Components/MentionsContainerView;->listViewTranslationAnimator:Landroidx/dynamicanimation/animation/SpringAnimation;
 
     if-eqz v0, :cond_5f
 
-    .line 380
+    .line 398
     invoke-virtual {v0}, Landroidx/dynamicanimation/animation/DynamicAnimation;->cancel()V
 
     :cond_5f
     if-eqz p1, :cond_6a
 
-    .line 383
+    .line 401
     iget-object p1, p0, Lorg/telegram/ui/Components/MentionsContainerView;->updateVisibilityRunnable:Ljava/lang/Runnable;
 
     invoke-static {p1}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 384
+    .line 402
     invoke-virtual {p0}, Lorg/telegram/ui/Components/MentionsContainerView;->onOpen()V
 
     goto :goto_72
 
-    .line 386
+    .line 404
     :cond_6a
     iget-object p1, p0, Lorg/telegram/ui/Components/MentionsContainerView;->updateVisibilityRunnable:Ljava/lang/Runnable;
 
     invoke-static {p1}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 387
+    .line 405
     invoke-virtual {p0}, Lorg/telegram/ui/Components/MentionsContainerView;->onClose()V
 
     :goto_72

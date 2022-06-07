@@ -17,7 +17,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 6926
+    .line 6991
     invoke-direct {p0}, Lorg/telegram/tgnet/TLRPC$PrivacyRule;-><init>()V
 
     return-void
@@ -28,7 +28,7 @@
 .method public serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
     .registers 3
 
-    .line 6931
+    .line 6996
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_privacyValueDisallowContacts;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V

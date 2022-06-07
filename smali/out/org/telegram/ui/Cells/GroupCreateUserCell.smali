@@ -434,7 +434,7 @@
 
     const/4 v4, 0x1
 
-    if-ne v2, v4, :cond_15b
+    if-ne v2, v4, :cond_15f
 
     .line 102
     new-instance v2, Lorg/telegram/ui/Components/CheckBox2;
@@ -487,28 +487,36 @@
 
     const/4 v12, 0x0
 
-    goto :goto_148
+    goto :goto_14a
 
     :cond_144
-    const/high16 v4, 0x42200000    # 40.0f
+    iget v4, v0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->padding:I
 
-    const/high16 v12, 0x42200000    # 40.0f
+    add-int/lit8 v4, v4, 0x28
 
-    :goto_148
+    int-to-float v4, v4
+
+    move v12, v4
+
+    :goto_14a
     const/high16 v13, 0x42040000    # 33.0f
 
-    if-eqz v2, :cond_151
+    if-eqz v2, :cond_155
 
-    const/high16 v8, 0x421c0000    # 39.0f
+    iget v2, v0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->padding:I
 
-    const/high16 v14, 0x421c0000    # 39.0f
+    add-int/lit8 v2, v2, 0x27
 
-    goto :goto_152
+    int-to-float v8, v2
 
-    :cond_151
+    move v14, v8
+
+    goto :goto_156
+
+    :cond_155
     const/4 v14, 0x0
 
-    :goto_152
+    :goto_156
     const/4 v15, 0x0
 
     invoke-static/range {v9 .. v15}, Lorg/telegram/ui/Components/LayoutHelper;->createFrame(IFIFFFF)Landroid/widget/FrameLayout$LayoutParams;
@@ -517,12 +525,12 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    goto :goto_176
+    goto :goto_17a
 
-    :cond_15b
+    :cond_15f
     const/4 v1, 0x2
 
-    if-ne v2, v1, :cond_176
+    if-ne v2, v1, :cond_17a
 
     .line 108
     new-instance v1, Landroid/graphics/Paint;
@@ -550,8 +558,8 @@
     invoke-virtual {v1, v2}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
     .line 113
-    :cond_176
-    :goto_176
+    :cond_17a
+    :goto_17a
     invoke-virtual {v0, v3}, Landroid/widget/FrameLayout;->setWillNotDraw(Z)V
 
     return-void
@@ -898,6 +906,31 @@
 
     :cond_b2
     :goto_b2
+    return-void
+.end method
+
+.method public onInitializeAccessibilityNodeInfo(Landroid/view/accessibility/AccessibilityNodeInfo;)V
+    .registers 3
+
+    .line 432
+    invoke-super {p0, p1}, Landroid/widget/FrameLayout;->onInitializeAccessibilityNodeInfo(Landroid/view/accessibility/AccessibilityNodeInfo;)V
+
+    .line 433
+    invoke-virtual {p0}, Lorg/telegram/ui/Cells/GroupCreateUserCell;->isChecked()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_10
+
+    const/4 v0, 0x1
+
+    .line 434
+    invoke-virtual {p1, v0}, Landroid/view/accessibility/AccessibilityNodeInfo;->setCheckable(Z)V
+
+    .line 435
+    invoke-virtual {p1, v0}, Landroid/view/accessibility/AccessibilityNodeInfo;->setChecked(Z)V
+
+    :cond_10
     return-void
 .end method
 
@@ -1331,7 +1364,7 @@
 
     const/4 v11, 0x4
 
-    sparse-switch v7, :sswitch_data_460
+    sparse-switch v7, :sswitch_data_46e
 
     :goto_82
     const/4 v3, -0x1
@@ -1463,7 +1496,7 @@
 
     :cond_da
     :goto_da
-    packed-switch v3, :pswitch_data_482
+    packed-switch v3, :pswitch_data_490
 
     goto :goto_115
 
@@ -1560,7 +1593,7 @@
 
     invoke-virtual {p1, v5, v1, v0}, Lorg/telegram/ui/Components/BackupImageView;->setImage(Ljava/lang/String;Ljava/lang/String;Landroid/graphics/drawable/Drawable;)V
 
-    goto/16 :goto_441
+    goto/16 :goto_450
 
     .line 250
     :cond_12c
@@ -1638,7 +1671,7 @@
     .line 256
     iget-object v0, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->checkBox:Lorg/telegram/ui/Components/CheckBox2;
 
-    if-eqz v0, :cond_1a4
+    if-eqz v0, :cond_1ad
 
     .line 257
     invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
@@ -1653,12 +1686,16 @@
 
     move-result v8
 
+    iget v9, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->padding:I
+
+    add-int/2addr v8, v9
+
     iput v8, v0, Landroid/widget/FrameLayout$LayoutParams;->topMargin:I
 
     .line 258
     sget-boolean v0, Lorg/telegram/messenger/LocaleController;->isRTL:Z
 
-    if-eqz v0, :cond_194
+    if-eqz v0, :cond_19a
 
     .line 259
     iget-object v0, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->checkBox:Lorg/telegram/ui/Components/CheckBox2;
@@ -1675,12 +1712,16 @@
 
     move-result v8
 
+    iget v9, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->padding:I
+
+    add-int/2addr v8, v9
+
     iput v8, v0, Landroid/widget/FrameLayout$LayoutParams;->rightMargin:I
 
-    goto :goto_1a4
+    goto :goto_1ad
 
     .line 261
-    :cond_194
+    :cond_19a
     iget-object v0, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->checkBox:Lorg/telegram/ui/Components/CheckBox2;
 
     invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
@@ -1695,16 +1736,20 @@
 
     move-result v8
 
+    iget v9, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->padding:I
+
+    add-int/2addr v8, v9
+
     iput v8, v0, Landroid/widget/FrameLayout$LayoutParams;->leftMargin:I
 
     .line 265
-    :cond_1a4
-    :goto_1a4
+    :cond_1ad
+    :goto_1ad
     iget-object v0, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->currentObject:Ljava/lang/Object;
 
     instance-of v8, v0, Lorg/telegram/tgnet/TLRPC$User;
 
-    if-eqz v8, :cond_324
+    if-eqz v8, :cond_32d
 
     .line 266
     check-cast v0, Lorg/telegram/tgnet/TLRPC$User;
@@ -1712,18 +1757,18 @@
     .line 267
     iget-boolean v8, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->showSelfAsSaved:Z
 
-    if-eqz v8, :cond_1e4
+    if-eqz v8, :cond_1ed
 
     invoke-static {v0}, Lorg/telegram/messenger/UserObject;->isUserSelf(Lorg/telegram/tgnet/TLRPC$User;)Z
 
     move-result v8
 
-    if-eqz v8, :cond_1e4
+    if-eqz v8, :cond_1ed
 
     .line 268
     iget-object p1, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->nameTextView:Lorg/telegram/ui/ActionBar/SimpleTextView;
 
-    const v2, 0x7f0e0f65
+    const v2, 0x7f0e1021
 
     const-string v3, "SavedMessages"
 
@@ -1768,45 +1813,45 @@
     return-void
 
     .line 275
-    :cond_1e4
+    :cond_1ed
     iget-object v1, v0, Lorg/telegram/tgnet/TLRPC$User;->photo:Lorg/telegram/tgnet/TLRPC$UserProfilePhoto;
 
-    if-eqz v1, :cond_1eb
+    if-eqz v1, :cond_1f4
 
     .line 276
     iget-object v1, v1, Lorg/telegram/tgnet/TLRPC$UserProfilePhoto;->photo_small:Lorg/telegram/tgnet/TLRPC$FileLocation;
 
-    goto :goto_1ec
+    goto :goto_1f5
 
-    :cond_1eb
+    :cond_1f4
     move-object v1, v5
 
-    :goto_1ec
-    if-eqz p1, :cond_24b
+    :goto_1f5
+    if-eqz p1, :cond_254
 
     .line 280
     sget v7, Lorg/telegram/messenger/MessagesController;->UPDATE_MASK_AVATAR:I
 
     and-int/2addr v7, p1
 
-    if-eqz v7, :cond_211
+    if-eqz v7, :cond_21a
 
     .line 281
     iget-object v7, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->lastAvatar:Lorg/telegram/tgnet/TLRPC$FileLocation;
 
-    if-eqz v7, :cond_1f9
+    if-eqz v7, :cond_202
 
-    if-eqz v1, :cond_20f
+    if-eqz v1, :cond_218
 
-    :cond_1f9
-    if-nez v7, :cond_1fd
+    :cond_202
+    if-nez v7, :cond_206
 
-    if-nez v1, :cond_20f
+    if-nez v1, :cond_218
 
-    :cond_1fd
-    if-eqz v7, :cond_211
+    :cond_206
+    if-eqz v7, :cond_21a
 
-    if-eqz v1, :cond_211
+    if-eqz v1, :cond_21a
 
     iget-wide v8, v7, Lorg/telegram/tgnet/TLRPC$FileLocation;->volume_id:J
 
@@ -1814,74 +1859,74 @@
 
     cmp-long v12, v8, v10
 
-    if-nez v12, :cond_20f
+    if-nez v12, :cond_218
 
     iget v7, v7, Lorg/telegram/tgnet/TLRPC$FileLocation;->local_id:I
 
     iget v1, v1, Lorg/telegram/tgnet/TLRPC$FileLocation;->local_id:I
 
-    if-eq v7, v1, :cond_211
+    if-eq v7, v1, :cond_21a
 
-    :cond_20f
+    :cond_218
     const/4 v1, 0x1
 
-    goto :goto_212
+    goto :goto_21b
 
-    :cond_211
+    :cond_21a
     const/4 v1, 0x0
 
     .line 285
-    :goto_212
+    :goto_21b
     iget-object v7, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->currentStatus:Ljava/lang/CharSequence;
 
-    if-nez v7, :cond_22a
+    if-nez v7, :cond_233
 
-    if-nez v1, :cond_22a
+    if-nez v1, :cond_233
 
     sget v7, Lorg/telegram/messenger/MessagesController;->UPDATE_MASK_STATUS:I
 
     and-int/2addr v7, p1
 
-    if-eqz v7, :cond_22a
+    if-eqz v7, :cond_233
 
     .line 287
     iget-object v7, v0, Lorg/telegram/tgnet/TLRPC$User;->status:Lorg/telegram/tgnet/TLRPC$UserStatus;
 
-    if-eqz v7, :cond_224
+    if-eqz v7, :cond_22d
 
     .line 288
     iget v7, v7, Lorg/telegram/tgnet/TLRPC$UserStatus;->expires:I
 
-    goto :goto_225
+    goto :goto_22e
 
-    :cond_224
+    :cond_22d
     const/4 v7, 0x0
 
     .line 290
-    :goto_225
+    :goto_22e
     iget v8, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->lastStatus:I
 
-    if-eq v7, v8, :cond_22a
+    if-eq v7, v8, :cond_233
 
     const/4 v1, 0x1
 
-    :cond_22a
-    if-nez v1, :cond_247
+    :cond_233
+    if-nez v1, :cond_250
 
     .line 294
     iget-object v7, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->currentName:Ljava/lang/CharSequence;
 
-    if-nez v7, :cond_247
+    if-nez v7, :cond_250
 
     iget-object v7, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->lastName:Ljava/lang/String;
 
-    if-eqz v7, :cond_247
+    if-eqz v7, :cond_250
 
     sget v7, Lorg/telegram/messenger/MessagesController;->UPDATE_MASK_NAME:I
 
     and-int/2addr p1, v7
 
-    if-eqz p1, :cond_247
+    if-eqz p1, :cond_250
 
     .line 295
     invoke-static {v0}, Lorg/telegram/messenger/UserObject;->getUserName(Lorg/telegram/tgnet/TLRPC$User;)Ljava/lang/String;
@@ -1895,26 +1940,26 @@
 
     move-result v7
 
-    if-nez v7, :cond_248
+    if-nez v7, :cond_251
 
     const/4 v1, 0x1
 
-    goto :goto_248
+    goto :goto_251
 
-    :cond_247
+    :cond_250
     move-object p1, v5
 
-    :cond_248
-    :goto_248
-    if-nez v1, :cond_24c
+    :cond_251
+    :goto_251
+    if-nez v1, :cond_255
 
     return-void
 
-    :cond_24b
+    :cond_254
     move-object p1, v5
 
     .line 304
-    :cond_24c
+    :cond_255
     iget-object v1, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->avatarDrawable:Lorg/telegram/ui/Components/AvatarDrawable;
 
     invoke-virtual {v1, v0}, Lorg/telegram/ui/Components/AvatarDrawable;->setInfo(Lorg/telegram/tgnet/TLRPC$User;)V
@@ -1922,17 +1967,17 @@
     .line 305
     iget-object v1, v0, Lorg/telegram/tgnet/TLRPC$User;->status:Lorg/telegram/tgnet/TLRPC$UserStatus;
 
-    if-eqz v1, :cond_257
+    if-eqz v1, :cond_260
 
     iget v3, v1, Lorg/telegram/tgnet/TLRPC$UserStatus;->expires:I
 
-    :cond_257
+    :cond_260
     iput v3, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->lastStatus:I
 
     .line 307
     iget-object v1, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->currentName:Ljava/lang/CharSequence;
 
-    if-eqz v1, :cond_265
+    if-eqz v1, :cond_26e
 
     .line 308
     iput-object v5, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->lastName:Ljava/lang/String;
@@ -1942,17 +1987,17 @@
 
     invoke-virtual {p1, v1, v6}, Lorg/telegram/ui/ActionBar/SimpleTextView;->setText(Ljava/lang/CharSequence;Z)Z
 
-    goto :goto_272
+    goto :goto_27b
 
-    :cond_265
-    if-nez p1, :cond_26b
+    :cond_26e
+    if-nez p1, :cond_274
 
     .line 311
     invoke-static {v0}, Lorg/telegram/messenger/UserObject;->getUserName(Lorg/telegram/tgnet/TLRPC$User;)Ljava/lang/String;
 
     move-result-object p1
 
-    :cond_26b
+    :cond_274
     iput-object p1, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->lastName:Ljava/lang/String;
 
     .line 312
@@ -1961,15 +2006,15 @@
     invoke-virtual {v1, p1}, Lorg/telegram/ui/ActionBar/SimpleTextView;->setText(Ljava/lang/CharSequence;)Z
 
     .line 315
-    :goto_272
+    :goto_27b
     iget-object p1, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->currentStatus:Ljava/lang/CharSequence;
 
-    if-nez p1, :cond_31b
+    if-nez p1, :cond_324
 
     .line 316
     iget-boolean p1, v0, Lorg/telegram/tgnet/TLRPC$User;->bot:Z
 
-    if-eqz p1, :cond_29f
+    if-eqz p1, :cond_2a8
 
     .line 317
     iget-object p1, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->statusTextView:Lorg/telegram/ui/ActionBar/SimpleTextView;
@@ -1981,16 +2026,16 @@
 
     iget-boolean v1, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->forceDarkTheme:Z
 
-    if-eqz v1, :cond_287
+    if-eqz v1, :cond_290
 
     move-object v1, v2
 
-    goto :goto_288
+    goto :goto_291
 
-    :cond_287
+    :cond_290
     move-object v1, v4
 
-    :goto_288
+    :goto_291
     invoke-static {v1}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
 
     move-result v1
@@ -2000,7 +2045,7 @@
     .line 319
     iget-object p1, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->statusTextView:Lorg/telegram/ui/ActionBar/SimpleTextView;
 
-    const v1, 0x7f0e02c3
+    const v1, 0x7f0e02fa
 
     const-string v3, "Bot"
 
@@ -2010,10 +2055,10 @@
 
     invoke-virtual {p1, v1}, Lorg/telegram/ui/ActionBar/SimpleTextView;->setText(Ljava/lang/CharSequence;)Z
 
-    goto/16 :goto_31b
+    goto/16 :goto_324
 
     .line 321
-    :cond_29f
+    :cond_2a8
     iget-wide v7, v0, Lorg/telegram/tgnet/TLRPC$User;->id:J
 
     iget p1, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->currentAccount:I
@@ -2028,11 +2073,11 @@
 
     cmp-long p1, v7, v9
 
-    if-eqz p1, :cond_2f7
+    if-eqz p1, :cond_300
 
     iget-object p1, v0, Lorg/telegram/tgnet/TLRPC$User;->status:Lorg/telegram/tgnet/TLRPC$UserStatus;
 
-    if-eqz p1, :cond_2c1
+    if-eqz p1, :cond_2ca
 
     iget p1, p1, Lorg/telegram/tgnet/TLRPC$UserStatus;->expires:I
 
@@ -2046,9 +2091,9 @@
 
     move-result v1
 
-    if-gt p1, v1, :cond_2f7
+    if-gt p1, v1, :cond_300
 
-    :cond_2c1
+    :cond_2ca
     iget p1, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->currentAccount:I
 
     invoke-static {p1}, Lorg/telegram/messenger/MessagesController;->getInstance(I)Lorg/telegram/messenger/MessagesController;
@@ -2067,12 +2112,12 @@
 
     move-result p1
 
-    if-eqz p1, :cond_2d6
+    if-eqz p1, :cond_2df
 
-    goto :goto_2f7
+    goto :goto_300
 
     .line 326
-    :cond_2d6
+    :cond_2df
     iget-object p1, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->statusTextView:Lorg/telegram/ui/ActionBar/SimpleTextView;
 
     invoke-virtual {p1, v4}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
@@ -2082,16 +2127,16 @@
 
     iget-boolean v1, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->forceDarkTheme:Z
 
-    if-eqz v1, :cond_2e3
+    if-eqz v1, :cond_2ec
 
     move-object v1, v2
 
-    goto :goto_2e4
+    goto :goto_2ed
 
-    :cond_2e3
+    :cond_2ec
     move-object v1, v4
 
-    :goto_2e4
+    :goto_2ed
     invoke-static {v1}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
 
     move-result v1
@@ -2109,11 +2154,11 @@
 
     invoke-virtual {p1, v1}, Lorg/telegram/ui/ActionBar/SimpleTextView;->setText(Ljava/lang/CharSequence;)Z
 
-    goto :goto_31b
+    goto :goto_324
 
     .line 322
-    :cond_2f7
-    :goto_2f7
+    :cond_300
+    :goto_300
     iget-object p1, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->statusTextView:Lorg/telegram/ui/ActionBar/SimpleTextView;
 
     const-string v1, "windowBackgroundWhiteBlueText"
@@ -2125,11 +2170,11 @@
 
     iget-boolean v3, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->forceDarkTheme:Z
 
-    if-eqz v3, :cond_306
+    if-eqz v3, :cond_30f
 
     const-string v1, "voipgroup_listeningText"
 
-    :cond_306
+    :cond_30f
     invoke-static {v1}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
 
     move-result v1
@@ -2139,7 +2184,7 @@
     .line 324
     iget-object p1, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->statusTextView:Lorg/telegram/ui/ActionBar/SimpleTextView;
 
-    const v1, 0x7f0e0bb3
+    const v1, 0x7f0e0c3d
 
     const-string v3, "Online"
 
@@ -2150,59 +2195,59 @@
     invoke-virtual {p1, v1}, Lorg/telegram/ui/ActionBar/SimpleTextView;->setText(Ljava/lang/CharSequence;)Z
 
     .line 333
-    :cond_31b
-    :goto_31b
+    :cond_324
+    :goto_324
     iget-object p1, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->avatarImageView:Lorg/telegram/ui/Components/BackupImageView;
 
     iget-object v1, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->avatarDrawable:Lorg/telegram/ui/Components/AvatarDrawable;
 
     invoke-virtual {p1, v0, v1}, Lorg/telegram/ui/Components/BackupImageView;->setForUserOrChat(Lorg/telegram/tgnet/TLObject;Lorg/telegram/ui/Components/AvatarDrawable;)V
 
-    goto/16 :goto_441
+    goto/16 :goto_450
 
     .line 335
-    :cond_324
+    :cond_32d
     check-cast v0, Lorg/telegram/tgnet/TLRPC$Chat;
 
     .line 336
     iget-object v1, v0, Lorg/telegram/tgnet/TLRPC$Chat;->photo:Lorg/telegram/tgnet/TLRPC$ChatPhoto;
 
-    if-eqz v1, :cond_32d
+    if-eqz v1, :cond_336
 
     .line 337
     iget-object v1, v1, Lorg/telegram/tgnet/TLRPC$ChatPhoto;->photo_small:Lorg/telegram/tgnet/TLRPC$FileLocation;
 
-    goto :goto_32e
+    goto :goto_337
 
-    :cond_32d
+    :cond_336
     move-object v1, v5
 
-    :goto_32e
-    if-eqz p1, :cond_36f
+    :goto_337
+    if-eqz p1, :cond_37a
 
     .line 341
     sget v7, Lorg/telegram/messenger/MessagesController;->UPDATE_MASK_AVATAR:I
 
     and-int/2addr v7, p1
 
-    if-eqz v7, :cond_352
+    if-eqz v7, :cond_35c
 
     .line 342
     iget-object v7, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->lastAvatar:Lorg/telegram/tgnet/TLRPC$FileLocation;
 
-    if-eqz v7, :cond_33b
+    if-eqz v7, :cond_344
 
-    if-eqz v1, :cond_351
+    if-eqz v1, :cond_35a
 
-    :cond_33b
-    if-nez v7, :cond_33f
+    :cond_344
+    if-nez v7, :cond_348
 
-    if-nez v1, :cond_351
+    if-nez v1, :cond_35a
 
-    :cond_33f
-    if-eqz v7, :cond_352
+    :cond_348
+    if-eqz v7, :cond_35c
 
-    if-eqz v1, :cond_352
+    if-eqz v1, :cond_35c
 
     iget-wide v8, v7, Lorg/telegram/tgnet/TLRPC$FileLocation;->volume_id:J
 
@@ -2210,63 +2255,68 @@
 
     cmp-long v12, v8, v10
 
-    if-nez v12, :cond_351
+    if-nez v12, :cond_35a
 
     iget v7, v7, Lorg/telegram/tgnet/TLRPC$FileLocation;->local_id:I
 
     iget v1, v1, Lorg/telegram/tgnet/TLRPC$FileLocation;->local_id:I
 
-    if-eq v7, v1, :cond_352
+    if-eq v7, v1, :cond_35c
 
-    :cond_351
-    const/4 v3, 0x1
+    :cond_35a
+    const/4 v1, 0x1
 
-    :cond_352
-    if-nez v3, :cond_36b
+    goto :goto_35d
+
+    :cond_35c
+    const/4 v1, 0x0
+
+    :goto_35d
+    if-nez v1, :cond_376
 
     .line 346
-    iget-object v1, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->currentName:Ljava/lang/CharSequence;
+    iget-object v7, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->currentName:Ljava/lang/CharSequence;
 
-    if-nez v1, :cond_36b
+    if-nez v7, :cond_376
 
-    iget-object v1, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->lastName:Ljava/lang/String;
+    iget-object v7, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->lastName:Ljava/lang/String;
 
-    if-eqz v1, :cond_36b
+    if-eqz v7, :cond_376
 
-    sget v7, Lorg/telegram/messenger/MessagesController;->UPDATE_MASK_NAME:I
+    sget v8, Lorg/telegram/messenger/MessagesController;->UPDATE_MASK_NAME:I
 
-    and-int/2addr p1, v7
+    and-int/2addr p1, v8
 
-    if-eqz p1, :cond_36b
+    if-eqz p1, :cond_376
 
     .line 347
     iget-object p1, v0, Lorg/telegram/tgnet/TLRPC$Chat;->title:Ljava/lang/String;
 
     .line 348
-    invoke-virtual {p1, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p1, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v1
+    move-result v7
 
-    if-nez v1, :cond_36c
+    if-nez v7, :cond_377
 
-    const/4 v3, 0x1
+    const/4 v1, 0x1
 
-    goto :goto_36c
+    goto :goto_377
 
-    :cond_36b
+    :cond_376
     move-object p1, v5
 
-    :cond_36c
-    :goto_36c
-    if-nez v3, :cond_370
+    :cond_377
+    :goto_377
+    if-nez v1, :cond_37b
 
     return-void
 
-    :cond_36f
+    :cond_37a
     move-object p1, v5
 
     .line 357
-    :cond_370
+    :cond_37b
     iget-object v1, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->avatarDrawable:Lorg/telegram/ui/Components/AvatarDrawable;
 
     invoke-virtual {v1, v0}, Lorg/telegram/ui/Components/AvatarDrawable;->setInfo(Lorg/telegram/tgnet/TLRPC$Chat;)V
@@ -2274,7 +2324,7 @@
     .line 359
     iget-object v1, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->currentName:Ljava/lang/CharSequence;
 
-    if-eqz v1, :cond_381
+    if-eqz v1, :cond_38c
 
     .line 360
     iput-object v5, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->lastName:Ljava/lang/String;
@@ -2284,15 +2334,15 @@
 
     invoke-virtual {p1, v1, v6}, Lorg/telegram/ui/ActionBar/SimpleTextView;->setText(Ljava/lang/CharSequence;Z)Z
 
-    goto :goto_38c
+    goto :goto_397
 
-    :cond_381
-    if-nez p1, :cond_385
+    :cond_38c
+    if-nez p1, :cond_390
 
     .line 363
     iget-object p1, v0, Lorg/telegram/tgnet/TLRPC$Chat;->title:Ljava/lang/String;
 
-    :cond_385
+    :cond_390
     iput-object p1, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->lastName:Ljava/lang/String;
 
     .line 364
@@ -2301,10 +2351,10 @@
     invoke-virtual {v1, p1}, Lorg/telegram/ui/ActionBar/SimpleTextView;->setText(Ljava/lang/CharSequence;)Z
 
     .line 367
-    :goto_38c
+    :goto_397
     iget-object p1, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->currentStatus:Ljava/lang/CharSequence;
 
-    if-nez p1, :cond_43a
+    if-nez p1, :cond_449
 
     .line 368
     iget-object p1, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->statusTextView:Lorg/telegram/ui/ActionBar/SimpleTextView;
@@ -2316,16 +2366,16 @@
 
     iget-boolean v1, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->forceDarkTheme:Z
 
-    if-eqz v1, :cond_39d
+    if-eqz v1, :cond_3a8
 
     move-object v1, v2
 
-    goto :goto_39e
+    goto :goto_3a9
 
-    :cond_39d
+    :cond_3a8
     move-object v1, v4
 
-    :goto_39e
+    :goto_3a9
     invoke-static {v1}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
 
     move-result v1
@@ -2335,60 +2385,64 @@
     .line 370
     iget p1, v0, Lorg/telegram/tgnet/TLRPC$Chat;->participants_count:I
 
-    if-eqz p1, :cond_3d0
+    if-eqz p1, :cond_3df
 
     .line 371
     invoke-static {v0}, Lorg/telegram/messenger/ChatObject;->isChannel(Lorg/telegram/tgnet/TLRPC$Chat;)Z
 
     move-result p1
 
-    if-eqz p1, :cond_3c2
+    if-eqz p1, :cond_3cf
 
     iget-boolean p1, v0, Lorg/telegram/tgnet/TLRPC$Chat;->megagroup:Z
 
-    if-nez p1, :cond_3c2
+    if-nez p1, :cond_3cf
 
     .line 372
     iget-object p1, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->statusTextView:Lorg/telegram/ui/ActionBar/SimpleTextView;
 
     iget v1, v0, Lorg/telegram/tgnet/TLRPC$Chat;->participants_count:I
 
-    const-string v3, "Subscribers"
+    new-array v3, v3, [Ljava/lang/Object;
 
-    invoke-static {v3, v1}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    const-string v5, "Subscribers"
+
+    invoke-static {v5, v1, v3}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {p1, v1}, Lorg/telegram/ui/ActionBar/SimpleTextView;->setText(Ljava/lang/CharSequence;)Z
 
-    goto/16 :goto_43a
+    goto/16 :goto_449
 
     .line 374
-    :cond_3c2
+    :cond_3cf
     iget-object p1, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->statusTextView:Lorg/telegram/ui/ActionBar/SimpleTextView;
 
     iget v1, v0, Lorg/telegram/tgnet/TLRPC$Chat;->participants_count:I
 
-    const-string v3, "Members"
+    new-array v3, v3, [Ljava/lang/Object;
 
-    invoke-static {v3, v1}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    const-string v5, "Members"
+
+    invoke-static {v5, v1, v3}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {p1, v1}, Lorg/telegram/ui/ActionBar/SimpleTextView;->setText(Ljava/lang/CharSequence;)Z
 
-    goto :goto_43a
+    goto :goto_449
 
     .line 376
-    :cond_3d0
+    :cond_3df
     iget-boolean p1, v0, Lorg/telegram/tgnet/TLRPC$Chat;->has_geo:Z
 
-    if-eqz p1, :cond_3e3
+    if-eqz p1, :cond_3f2
 
     .line 377
     iget-object p1, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->statusTextView:Lorg/telegram/ui/ActionBar/SimpleTextView;
 
-    const v1, 0x7f0e09c8
+    const v1, 0x7f0e0a4f
 
     const-string v3, "MegaLocation"
 
@@ -2398,33 +2452,33 @@
 
     invoke-virtual {p1, v1}, Lorg/telegram/ui/ActionBar/SimpleTextView;->setText(Ljava/lang/CharSequence;)Z
 
-    goto :goto_43a
+    goto :goto_449
 
     .line 378
-    :cond_3e3
+    :cond_3f2
     iget-object p1, v0, Lorg/telegram/tgnet/TLRPC$Chat;->username:Ljava/lang/String;
 
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result p1
 
-    if-eqz p1, :cond_413
+    if-eqz p1, :cond_422
 
     .line 379
     invoke-static {v0}, Lorg/telegram/messenger/ChatObject;->isChannel(Lorg/telegram/tgnet/TLRPC$Chat;)Z
 
     move-result p1
 
-    if-eqz p1, :cond_404
+    if-eqz p1, :cond_413
 
     iget-boolean p1, v0, Lorg/telegram/tgnet/TLRPC$Chat;->megagroup:Z
 
-    if-nez p1, :cond_404
+    if-nez p1, :cond_413
 
     .line 380
     iget-object p1, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->statusTextView:Lorg/telegram/ui/ActionBar/SimpleTextView;
 
-    const v1, 0x7f0e03ac
+    const v1, 0x7f0e03eb
 
     const-string v3, "ChannelPrivate"
 
@@ -2434,13 +2488,13 @@
 
     invoke-virtual {p1, v1}, Lorg/telegram/ui/ActionBar/SimpleTextView;->setText(Ljava/lang/CharSequence;)Z
 
-    goto :goto_43a
+    goto :goto_449
 
     .line 382
-    :cond_404
+    :cond_413
     iget-object p1, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->statusTextView:Lorg/telegram/ui/ActionBar/SimpleTextView;
 
-    const v1, 0x7f0e09c9
+    const v1, 0x7f0e0a50
 
     const-string v3, "MegaPrivate"
 
@@ -2450,24 +2504,24 @@
 
     invoke-virtual {p1, v1}, Lorg/telegram/ui/ActionBar/SimpleTextView;->setText(Ljava/lang/CharSequence;)Z
 
-    goto :goto_43a
+    goto :goto_449
 
     .line 385
-    :cond_413
+    :cond_422
     invoke-static {v0}, Lorg/telegram/messenger/ChatObject;->isChannel(Lorg/telegram/tgnet/TLRPC$Chat;)Z
 
     move-result p1
 
-    if-eqz p1, :cond_42c
+    if-eqz p1, :cond_43b
 
     iget-boolean p1, v0, Lorg/telegram/tgnet/TLRPC$Chat;->megagroup:Z
 
-    if-nez p1, :cond_42c
+    if-nez p1, :cond_43b
 
     .line 386
     iget-object p1, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->statusTextView:Lorg/telegram/ui/ActionBar/SimpleTextView;
 
-    const v1, 0x7f0e03af
+    const v1, 0x7f0e03ee
 
     const-string v3, "ChannelPublic"
 
@@ -2477,13 +2531,13 @@
 
     invoke-virtual {p1, v1}, Lorg/telegram/ui/ActionBar/SimpleTextView;->setText(Ljava/lang/CharSequence;)Z
 
-    goto :goto_43a
+    goto :goto_449
 
     .line 388
-    :cond_42c
+    :cond_43b
     iget-object p1, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->statusTextView:Lorg/telegram/ui/ActionBar/SimpleTextView;
 
-    const v1, 0x7f0e09cc
+    const v1, 0x7f0e0a53
 
     const-string v3, "MegaPublic"
 
@@ -2494,8 +2548,8 @@
     invoke-virtual {p1, v1}, Lorg/telegram/ui/ActionBar/SimpleTextView;->setText(Ljava/lang/CharSequence;)Z
 
     .line 393
-    :cond_43a
-    :goto_43a
+    :cond_449
+    :goto_449
     iget-object p1, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->avatarImageView:Lorg/telegram/ui/Components/BackupImageView;
 
     iget-object v1, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->avatarDrawable:Lorg/telegram/ui/Components/AvatarDrawable;
@@ -2503,10 +2557,10 @@
     invoke-virtual {p1, v0, v1}, Lorg/telegram/ui/Components/BackupImageView;->setForUserOrChat(Lorg/telegram/tgnet/TLObject;Lorg/telegram/ui/Components/AvatarDrawable;)V
 
     .line 397
-    :goto_441
+    :goto_450
     iget-object p1, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->currentStatus:Ljava/lang/CharSequence;
 
-    if-eqz p1, :cond_45e
+    if-eqz p1, :cond_46d
 
     .line 398
     iget-object v0, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->statusTextView:Lorg/telegram/ui/ActionBar/SimpleTextView;
@@ -2523,26 +2577,24 @@
 
     iget-boolean v0, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->forceDarkTheme:Z
 
-    if-eqz v0, :cond_456
+    if-eqz v0, :cond_465
 
-    goto :goto_457
+    goto :goto_466
 
-    :cond_456
+    :cond_465
     move-object v2, v4
 
-    :goto_457
+    :goto_466
     invoke-static {v2}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
 
     move-result v0
 
     invoke-virtual {p1, v0}, Lorg/telegram/ui/ActionBar/SimpleTextView;->setTextColor(I)V
 
-    :cond_45e
+    :cond_46d
     return-void
 
-    nop
-
-    :sswitch_data_460
+    :sswitch_data_46e
     .sparse-switch
         -0x664cc81e -> :sswitch_d1
         -0x49c2262c -> :sswitch_c6
@@ -2554,7 +2606,7 @@
         0x556423d0 -> :sswitch_84
     .end sparse-switch
 
-    :pswitch_data_482
+    :pswitch_data_490
     .packed-switch 0x0
         :pswitch_10e
         :pswitch_108

@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/EmojiView;)V
     .registers 2
 
-    .line 1281
+    .line 1287
     iput-object p1, p0, Lorg/telegram/ui/Components/EmojiView$5;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-direct {p0}, Landroidx/recyclerview/widget/GridLayoutManager$SpanSizeLookup;-><init>()V
@@ -35,7 +35,7 @@
 .method public getSpanSize(I)I
     .registers 5
 
-    .line 1284
+    .line 1290
     iget-object v0, p0, Lorg/telegram/ui/Components/EmojiView$5;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/EmojiView;->access$1000(Lorg/telegram/ui/Components/EmojiView;)Lorg/telegram/ui/Components/RecyclerListView;
@@ -60,7 +60,7 @@
 
     if-ne p1, v2, :cond_63
 
-    .line 1285
+    .line 1291
     iget-object p1, p0, Lorg/telegram/ui/Components/EmojiView$5;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/EmojiView;->access$1100(Lorg/telegram/ui/Components/EmojiView;)Lorg/telegram/ui/Components/EmojiView$EmojiSearchAdapter;
@@ -89,7 +89,7 @@
 
     if-eqz p1, :cond_63
 
-    .line 1286
+    .line 1292
     :cond_33
     iget-object p1, p0, Lorg/telegram/ui/Components/EmojiView$5;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
@@ -103,7 +103,7 @@
 
     return p1
 
-    .line 1289
+    .line 1295
     :cond_3e
     iget-object v0, p0, Lorg/telegram/ui/Components/EmojiView$5;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
@@ -132,7 +132,7 @@
 
     if-ltz p1, :cond_63
 
-    .line 1290
+    .line 1296
     :cond_58
     iget-object p1, p0, Lorg/telegram/ui/Components/EmojiView$5;->this$0:Lorg/telegram/ui/Components/EmojiView;
 

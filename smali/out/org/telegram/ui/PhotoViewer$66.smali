@@ -30,7 +30,7 @@
 .method constructor <init>(Lorg/telegram/ui/PhotoViewer;)V
     .registers 2
 
-    .line 11587
+    .line 11770
     iput-object p1, p0, Lorg/telegram/ui/PhotoViewer$66;->this$0:Lorg/telegram/ui/PhotoViewer;
 
     invoke-direct {p0}, Landroid/transition/Transition;-><init>()V
@@ -41,7 +41,7 @@
 .method private synthetic lambda$createAnimator$0(Landroid/animation/ValueAnimator;)V
     .registers 4
 
-    .line 11618
+    .line 11801
     iget-object v0, p0, Lorg/telegram/ui/PhotoViewer$66;->this$0:Lorg/telegram/ui/PhotoViewer;
 
     invoke-static {v0}, Lorg/telegram/ui/PhotoViewer;->access$400(Lorg/telegram/ui/PhotoViewer;)Lorg/telegram/ui/PhotoViewer$CaptionScrollView;
@@ -70,18 +70,18 @@
 .method public captureEndValues(Landroid/transition/TransitionValues;)V
     .registers 4
 
-    .line 11597
+    .line 11780
     iget-object v0, p1, Landroid/transition/TransitionValues;->view:Landroid/view/View;
 
     iget-object v1, p0, Lorg/telegram/ui/PhotoViewer$66;->this$0:Lorg/telegram/ui/PhotoViewer;
 
-    invoke-static {v1}, Lorg/telegram/ui/PhotoViewer;->access$8700(Lorg/telegram/ui/PhotoViewer;)Lorg/telegram/ui/PhotoViewer$CaptionTextViewSwitcher;
+    invoke-static {v1}, Lorg/telegram/ui/PhotoViewer;->access$8600(Lorg/telegram/ui/PhotoViewer;)Lorg/telegram/ui/PhotoViewer$CaptionTextViewSwitcher;
 
     move-result-object v1
 
     if-ne v0, v1, :cond_1f
 
-    .line 11598
+    .line 11781
     iget-object p1, p1, Landroid/transition/TransitionValues;->values:Ljava/util/Map;
 
     iget-object v0, p0, Lorg/telegram/ui/PhotoViewer$66;->this$0:Lorg/telegram/ui/PhotoViewer;
@@ -109,7 +109,7 @@
 .method public captureStartValues(Landroid/transition/TransitionValues;)V
     .registers 4
 
-    .line 11590
+    .line 11773
     iget-object v0, p1, Landroid/transition/TransitionValues;->view:Landroid/view/View;
 
     iget-object v1, p0, Lorg/telegram/ui/PhotoViewer$66;->this$0:Lorg/telegram/ui/PhotoViewer;
@@ -120,7 +120,7 @@
 
     if-ne v0, v1, :cond_1f
 
-    .line 11591
+    .line 11774
     iget-object p1, p1, Landroid/transition/TransitionValues;->values:Ljava/util/Map;
 
     iget-object v0, p0, Lorg/telegram/ui/PhotoViewer$66;->this$0:Lorg/telegram/ui/PhotoViewer;
@@ -148,7 +148,7 @@
 .method public createAnimator(Landroid/view/ViewGroup;Landroid/transition/TransitionValues;Landroid/transition/TransitionValues;)Landroid/animation/Animator;
     .registers 8
 
-    .line 11604
+    .line 11787
     iget-object p1, p2, Landroid/transition/TransitionValues;->view:Landroid/view/View;
 
     iget-object v0, p0, Lorg/telegram/ui/PhotoViewer$66;->this$0:Lorg/telegram/ui/PhotoViewer;
@@ -167,7 +167,7 @@
 
     new-array p1, v2, [I
 
-    .line 11605
+    .line 11788
     iget-object p2, p2, Landroid/transition/TransitionValues;->values:Ljava/util/Map;
 
     const-string p3, "scrollY"
@@ -190,14 +190,14 @@
 
     move-result-object p1
 
-    .line 11606
+    .line 11789
     new-instance p2, Lorg/telegram/ui/PhotoViewer$66$1;
 
     invoke-direct {p2, p0}, Lorg/telegram/ui/PhotoViewer$66$1;-><init>(Lorg/telegram/ui/PhotoViewer$66;)V
 
     invoke-virtual {p1, p2}, Landroid/animation/ValueAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 11618
+    .line 11801
     new-instance p2, Lorg/telegram/ui/PhotoViewer$66$$ExternalSyntheticLambda0;
 
     invoke-direct {p2, p0}, Lorg/telegram/ui/PhotoViewer$66$$ExternalSyntheticLambda0;-><init>(Lorg/telegram/ui/PhotoViewer$66;)V
@@ -206,19 +206,19 @@
 
     return-object p1
 
-    .line 11620
+    .line 11803
     :cond_36
     iget-object p1, p3, Landroid/transition/TransitionValues;->view:Landroid/view/View;
 
     iget-object p2, p0, Lorg/telegram/ui/PhotoViewer$66;->this$0:Lorg/telegram/ui/PhotoViewer;
 
-    invoke-static {p2}, Lorg/telegram/ui/PhotoViewer;->access$8700(Lorg/telegram/ui/PhotoViewer;)Lorg/telegram/ui/PhotoViewer$CaptionTextViewSwitcher;
+    invoke-static {p2}, Lorg/telegram/ui/PhotoViewer;->access$8600(Lorg/telegram/ui/PhotoViewer;)Lorg/telegram/ui/PhotoViewer$CaptionTextViewSwitcher;
 
     move-result-object p2
 
     if-ne p1, p2, :cond_6d
 
-    .line 11621
+    .line 11804
     iget-object p1, p3, Landroid/transition/TransitionValues;->values:Ljava/util/Map;
 
     const-string p2, "translationY"
@@ -235,10 +235,10 @@
 
     if-eqz p1, :cond_6d
 
-    .line 11623
+    .line 11806
     iget-object p2, p0, Lorg/telegram/ui/PhotoViewer$66;->this$0:Lorg/telegram/ui/PhotoViewer;
 
-    invoke-static {p2}, Lorg/telegram/ui/PhotoViewer;->access$8700(Lorg/telegram/ui/PhotoViewer;)Lorg/telegram/ui/PhotoViewer$CaptionTextViewSwitcher;
+    invoke-static {p2}, Lorg/telegram/ui/PhotoViewer;->access$8600(Lorg/telegram/ui/PhotoViewer;)Lorg/telegram/ui/PhotoViewer$CaptionTextViewSwitcher;
 
     move-result-object p2
 
@@ -258,7 +258,7 @@
 
     move-result-object p1
 
-    .line 11624
+    .line 11807
     new-instance p2, Lorg/telegram/ui/PhotoViewer$66$2;
 
     invoke-direct {p2, p0}, Lorg/telegram/ui/PhotoViewer$66$2;-><init>(Lorg/telegram/ui/PhotoViewer$66;)V

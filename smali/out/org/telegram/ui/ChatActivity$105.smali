@@ -1,9 +1,6 @@
 .class Lorg/telegram/ui/ChatActivity$105;
-.super Ljava/lang/Object;
+.super Landroid/widget/LinearLayout;
 .source "ChatActivity.java"
-
-# interfaces
-.implements Landroid/view/View$OnTouchListener;
 
 
 # annotations
@@ -18,150 +15,90 @@
 
 
 # instance fields
-.field private pos:[I
-
-.field final synthetic this$0:Lorg/telegram/ui/ChatActivity;
-
-.field final synthetic val$rect:Landroid/graphics/Rect;
+.field private path:Landroid/graphics/Path;
 
 
 # direct methods
-.method constructor <init>(Lorg/telegram/ui/ChatActivity;Landroid/graphics/Rect;)V
+.method constructor <init>(Lorg/telegram/ui/ChatActivity;Landroid/content/Context;)V
     .registers 3
 
-    .line 21748
-    iput-object p1, p0, Lorg/telegram/ui/ChatActivity$105;->this$0:Lorg/telegram/ui/ChatActivity;
-
-    iput-object p2, p0, Lorg/telegram/ui/ChatActivity$105;->val$rect:Landroid/graphics/Rect;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const/4 p1, 0x2
-
-    new-array p1, p1, [I
-
-    .line 21750
-    iput-object p1, p0, Lorg/telegram/ui/ChatActivity$105;->pos:[I
+    .line 21888
+    invoke-direct {p0, p2}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
-    .registers 10
+.method protected dispatchDraw(Landroid/graphics/Canvas;)V
+    .registers 7
 
-    .line 21754
-    invoke-virtual {p2}, Landroid/view/MotionEvent;->getActionMasked()I
+    .line 21892
+    iget-object v0, p0, Lorg/telegram/ui/ChatActivity$105;->path:Landroid/graphics/Path;
 
-    move-result p1
+    if-nez v0, :cond_2e
 
-    const/4 v0, 0x0
+    .line 21893
+    new-instance v0, Landroid/graphics/Path;
 
-    if-nez p1, :cond_54
+    invoke-direct {v0}, Landroid/graphics/Path;-><init>()V
 
-    .line 21755
-    iget-object p1, p0, Lorg/telegram/ui/ChatActivity$105;->this$0:Lorg/telegram/ui/ChatActivity;
+    iput-object v0, p0, Lorg/telegram/ui/ChatActivity$105;->path:Landroid/graphics/Path;
 
-    iget-object p1, p1, Lorg/telegram/ui/ChatActivity;->scrimPopupWindow:Lorg/telegram/ui/ActionBar/ActionBarPopupWindow;
+    .line 21894
+    sget-object v0, Lorg/telegram/messenger/AndroidUtilities;->rectTmp:Landroid/graphics/RectF;
 
-    if-eqz p1, :cond_60
-
-    invoke-virtual {p1}, Landroid/widget/PopupWindow;->isShowing()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_60
-
-    .line 21756
-    iget-object p1, p0, Lorg/telegram/ui/ChatActivity$105;->this$0:Lorg/telegram/ui/ChatActivity;
-
-    iget-object p1, p1, Lorg/telegram/ui/ChatActivity;->scrimPopupWindow:Lorg/telegram/ui/ActionBar/ActionBarPopupWindow;
-
-    invoke-virtual {p1}, Landroid/widget/PopupWindow;->getContentView()Landroid/view/View;
-
-    move-result-object p1
-
-    .line 21757
-    iget-object v1, p0, Lorg/telegram/ui/ChatActivity$105;->pos:[I
-
-    invoke-virtual {p1, v1}, Landroid/view/View;->getLocationInWindow([I)V
-
-    .line 21758
-    iget-object v1, p0, Lorg/telegram/ui/ChatActivity$105;->val$rect:Landroid/graphics/Rect;
-
-    iget-object v2, p0, Lorg/telegram/ui/ChatActivity$105;->pos:[I
-
-    aget v3, v2, v0
-
-    const/4 v4, 0x1
-
-    aget v5, v2, v4
-
-    aget v2, v2, v0
-
-    invoke-virtual {p1}, Landroid/view/View;->getMeasuredWidth()I
-
-    move-result v6
-
-    add-int/2addr v2, v6
-
-    iget-object v6, p0, Lorg/telegram/ui/ChatActivity$105;->pos:[I
-
-    aget v4, v6, v4
-
-    invoke-virtual {p1}, Landroid/view/View;->getMeasuredHeight()I
-
-    move-result p1
-
-    add-int/2addr v4, p1
-
-    invoke-virtual {v1, v3, v5, v2, v4}, Landroid/graphics/Rect;->set(IIII)V
-
-    .line 21759
-    iget-object p1, p0, Lorg/telegram/ui/ChatActivity$105;->val$rect:Landroid/graphics/Rect;
-
-    invoke-virtual {p2}, Landroid/view/MotionEvent;->getX()F
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getWidth()I
 
     move-result v1
 
-    float-to-int v1, v1
+    int-to-float v1, v1
 
-    invoke-virtual {p2}, Landroid/view/MotionEvent;->getY()F
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getHeight()I
 
-    move-result p2
+    move-result v2
 
-    float-to-int p2, p2
+    int-to-float v2, v2
 
-    invoke-virtual {p1, v1, p2}, Landroid/graphics/Rect;->contains(II)Z
+    const/4 v3, 0x0
 
-    move-result p1
+    invoke-virtual {v0, v3, v3, v1, v2}, Landroid/graphics/RectF;->set(FFFF)V
 
-    if-nez p1, :cond_60
+    .line 21895
+    iget-object v1, p0, Lorg/telegram/ui/ChatActivity$105;->path:Landroid/graphics/Path;
 
-    .line 21760
-    iget-object p1, p0, Lorg/telegram/ui/ChatActivity$105;->this$0:Lorg/telegram/ui/ChatActivity;
+    const/high16 v2, 0x40c00000    # 6.0f
 
-    invoke-static {p1}, Lorg/telegram/ui/ChatActivity;->access$36900(Lorg/telegram/ui/ChatActivity;)V
+    invoke-static {v2}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
-    goto :goto_60
+    move-result v3
 
-    .line 21763
-    :cond_54
-    invoke-virtual {p2}, Landroid/view/MotionEvent;->getActionMasked()I
+    int-to-float v3, v3
 
-    move-result p1
+    invoke-static {v2}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
-    const/4 p2, 0x4
+    move-result v2
 
-    if-ne p1, p2, :cond_60
+    int-to-float v2, v2
 
-    .line 21764
-    iget-object p1, p0, Lorg/telegram/ui/ChatActivity$105;->this$0:Lorg/telegram/ui/ChatActivity;
+    sget-object v4, Landroid/graphics/Path$Direction;->CW:Landroid/graphics/Path$Direction;
 
-    invoke-static {p1}, Lorg/telegram/ui/ChatActivity;->access$36900(Lorg/telegram/ui/ChatActivity;)V
+    invoke-virtual {v1, v0, v3, v2, v4}, Landroid/graphics/Path;->addRoundRect(Landroid/graphics/RectF;FFLandroid/graphics/Path$Direction;)V
 
-    :cond_60
-    :goto_60
-    return v0
+    .line 21897
+    :cond_2e
+    invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
+
+    .line 21898
+    iget-object v0, p0, Lorg/telegram/ui/ChatActivity$105;->path:Landroid/graphics/Path;
+
+    invoke-virtual {p1, v0}, Landroid/graphics/Canvas;->clipPath(Landroid/graphics/Path;)Z
+
+    .line 21899
+    invoke-super {p0, p1}, Landroid/widget/LinearLayout;->dispatchDraw(Landroid/graphics/Canvas;)V
+
+    .line 21900
+    invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
+
+    return-void
 .end method

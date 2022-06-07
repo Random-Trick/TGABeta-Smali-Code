@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/AudioPlayerAlert;Landroid/content/Context;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)V
     .registers 4
 
-    .line 615
+    .line 616
     iput-object p1, p0, Lorg/telegram/ui/Components/AudioPlayerAlert$10;->this$0:Lorg/telegram/ui/Components/AudioPlayerAlert;
 
     invoke-direct {p0, p2, p3}, Lorg/telegram/ui/Components/SeekBarView;-><init>(Landroid/content/Context;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)V
@@ -35,7 +35,7 @@
 .method onTouch(Landroid/view/MotionEvent;)Z
     .registers 3
 
-    .line 618
+    .line 619
     iget-object v0, p0, Lorg/telegram/ui/Components/AudioPlayerAlert$10;->this$0:Lorg/telegram/ui/Components/AudioPlayerAlert;
 
     iget v0, v0, Lorg/telegram/ui/Components/AudioPlayerAlert;->rewindingState:I
@@ -46,7 +46,7 @@
 
     return p1
 
-    .line 621
+    .line 622
     :cond_8
     invoke-super {p0, p1}, Lorg/telegram/ui/Components/SeekBarView;->onTouch(Landroid/view/MotionEvent;)Z
 

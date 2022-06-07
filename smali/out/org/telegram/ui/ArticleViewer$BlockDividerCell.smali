@@ -22,10 +22,10 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .registers 2
 
-    .line 9514
+    .line 9515
     invoke-direct {p0, p1}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
-    .line 9511
+    .line 9512
     new-instance p1, Landroid/graphics/RectF;
 
     invoke-direct {p1}, Landroid/graphics/RectF;-><init>()V
@@ -40,14 +40,14 @@
 .method protected onDraw(Landroid/graphics/Canvas;)V
     .registers 7
 
-    .line 9524
+    .line 9525
     invoke-virtual {p0}, Landroid/view/View;->getMeasuredWidth()I
 
     move-result v0
 
     div-int/lit8 v0, v0, 0x3
 
-    .line 9525
+    .line 9526
     iget-object v1, p0, Lorg/telegram/ui/ArticleViewer$BlockDividerCell;->rect:Landroid/graphics/RectF;
 
     int-to-float v2, v0
@@ -74,7 +74,7 @@
 
     invoke-virtual {v1, v2, v3, v0, v4}, Landroid/graphics/RectF;->set(FFFF)V
 
-    .line 9526
+    .line 9527
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockDividerCell;->rect:Landroid/graphics/RectF;
 
     const/high16 v1, 0x3f800000    # 1.0f
@@ -103,7 +103,7 @@
 .method protected onMeasure(II)V
     .registers 3
 
-    .line 9519
+    .line 9520
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result p1

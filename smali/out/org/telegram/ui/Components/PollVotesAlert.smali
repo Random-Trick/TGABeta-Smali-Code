@@ -533,7 +533,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0703b4
+    const v1, 0x7f0703b9
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -794,7 +794,7 @@
     .line 842
     iget-object v0, v7, Lorg/telegram/ui/Components/PollVotesAlert;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
-    const v1, 0x7f070140
+    const v1, 0x7f070109
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/ActionBar;->setBackButtonImage(I)V
 
@@ -855,7 +855,7 @@
     .line 849
     iget-object v0, v7, Lorg/telegram/ui/Components/PollVotesAlert;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
-    const v2, 0x7f0e0da6
+    const v2, 0x7f0e0e36
 
     const-string v3, "PollResults"
 
@@ -870,7 +870,7 @@
 
     iget-boolean v0, v0, Lorg/telegram/tgnet/TLRPC$Poll;->quiz:Z
 
-    if-eqz v0, :cond_28b
+    if-eqz v0, :cond_28e
 
     .line 851
     iget-object v0, v7, Lorg/telegram/ui/Components/PollVotesAlert;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
@@ -879,34 +879,42 @@
 
     iget v2, v2, Lorg/telegram/tgnet/TLRPC$PollResults;->total_voters:I
 
-    const-string v3, "Answer"
+    const/4 v3, 0x0
 
-    invoke-static {v3, v2}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    new-array v3, v3, [Ljava/lang/Object;
+
+    const-string v5, "Answer"
+
+    invoke-static {v5, v2, v3}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v2
 
     invoke-virtual {v0, v2}, Lorg/telegram/ui/ActionBar/ActionBar;->setSubtitle(Ljava/lang/CharSequence;)V
 
-    goto :goto_29a
+    goto :goto_2a0
+
+    :cond_28e
+    const/4 v3, 0x0
 
     .line 853
-    :cond_28b
     iget-object v0, v7, Lorg/telegram/ui/Components/PollVotesAlert;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     iget-object v2, v10, Lorg/telegram/tgnet/TLRPC$TL_messageMediaPoll;->results:Lorg/telegram/tgnet/TLRPC$PollResults;
 
     iget v2, v2, Lorg/telegram/tgnet/TLRPC$PollResults;->total_voters:I
 
-    const-string v3, "Vote"
+    new-array v3, v3, [Ljava/lang/Object;
 
-    invoke-static {v3, v2}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    const-string v5, "Vote"
+
+    invoke-static {v5, v2, v3}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v2
 
     invoke-virtual {v0, v2}, Lorg/telegram/ui/ActionBar/ActionBar;->setSubtitle(Ljava/lang/CharSequence;)V
 
     .line 855
-    :goto_29a
+    :goto_2a0
     iget-object v0, v7, Lorg/telegram/ui/ActionBar/BottomSheet;->containerView:Landroid/view/ViewGroup;
 
     iget-object v2, v7, Lorg/telegram/ui/Components/PollVotesAlert;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;

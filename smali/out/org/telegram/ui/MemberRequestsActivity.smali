@@ -80,7 +80,7 @@
     .line 46
     iget-object p1, p0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
-    const v1, 0x7f070140
+    const v1, 0x7f070109
 
     invoke-virtual {p1, v1}, Lorg/telegram/ui/ActionBar/ActionBar;->setBackButtonImage(I)V
 
@@ -93,14 +93,14 @@
 
     if-eqz v1, :cond_26
 
-    const v1, 0x7f0e10f9
+    const v1, 0x7f0e11b8
 
     const-string v2, "SubscribeRequests"
 
     goto :goto_2b
 
     :cond_26
-    const v1, 0x7f0e09cf
+    const v1, 0x7f0e0a56
 
     const-string v2, "MemberRequests"
 
@@ -120,7 +120,7 @@
 
     const/4 v1, 0x0
 
-    const v2, 0x7f07014a
+    const v2, 0x7f070110
 
     .line 50
     invoke-virtual {p1, v1, v2}, Lorg/telegram/ui/ActionBar/ActionBarMenu;->addItem(II)Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
@@ -141,7 +141,7 @@
 
     move-result-object p1
 
-    const v0, 0x7f0e0f74
+    const v0, 0x7f0e1030
 
     const-string v1, "Search"
 

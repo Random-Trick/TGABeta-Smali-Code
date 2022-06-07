@@ -24,7 +24,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/TranslateAlert;Landroid/text/style/URLSpan;)V
     .registers 3
 
-    .line 987
+    .line 989
     iput-object p1, p0, Lorg/telegram/ui/Components/TranslateAlert$9;->this$0:Lorg/telegram/ui/Components/TranslateAlert;
 
     iput-object p2, p0, Lorg/telegram/ui/Components/TranslateAlert$9;->val$urlSpan:Landroid/text/style/URLSpan;
@@ -39,7 +39,7 @@
 .method public onClick(Landroid/view/View;)V
     .registers 4
 
-    .line 990
+    .line 992
     iget-object p1, p0, Lorg/telegram/ui/Components/TranslateAlert$9;->this$0:Lorg/telegram/ui/Components/TranslateAlert;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/TranslateAlert;->access$2400(Lorg/telegram/ui/Components/TranslateAlert;)Lorg/telegram/ui/ActionBar/BaseFragment;
@@ -62,7 +62,7 @@
 .method public updateDrawState(Landroid/text/TextPaint;)V
     .registers 4
 
-    .line 995
+    .line 997
     invoke-virtual {p1}, Landroid/text/TextPaint;->getAlpha()I
 
     move-result v0
@@ -79,7 +79,7 @@
 
     move-result v0
 
-    .line 996
+    .line 998
     iget-object v1, p0, Lorg/telegram/ui/Components/TranslateAlert$9;->val$urlSpan:Landroid/text/style/URLSpan;
 
     instance-of v1, v1, Lorg/telegram/ui/Components/URLSpanNoUnderline;
@@ -88,20 +88,20 @@
 
     const/4 v1, 0x1
 
-    .line 997
+    .line 999
     invoke-virtual {p1, v1}, Landroid/text/TextPaint;->setUnderlineText(Z)V
 
     :cond_1a
     const-string v1, "dialogTextLink"
 
-    .line 998
+    .line 1000
     invoke-static {v1}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
 
     move-result v1
 
     invoke-virtual {p1, v1}, Landroid/text/TextPaint;->setColor(I)V
 
-    .line 999
+    .line 1001
     invoke-virtual {p1, v0}, Landroid/text/TextPaint;->setAlpha(I)V
 
     return-void

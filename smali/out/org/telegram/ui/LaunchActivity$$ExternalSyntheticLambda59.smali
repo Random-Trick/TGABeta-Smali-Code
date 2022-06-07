@@ -5,27 +5,25 @@
 .implements Ljava/lang/Runnable;
 
 
-# static fields
-.field public static final synthetic INSTANCE:Lorg/telegram/ui/LaunchActivity$$ExternalSyntheticLambda59;
+# instance fields
+.field public final synthetic f$0:Lorg/telegram/ui/LaunchActivity;
+
+.field public final synthetic f$1:Lorg/telegram/ui/ActionBar/BaseFragment;
+
+.field public final synthetic f$2:Z
 
 
 # direct methods
-.method static synthetic constructor <clinit>()V
-    .registers 1
-
-    new-instance v0, Lorg/telegram/ui/LaunchActivity$$ExternalSyntheticLambda59;
-
-    invoke-direct {v0}, Lorg/telegram/ui/LaunchActivity$$ExternalSyntheticLambda59;-><init>()V
-
-    sput-object v0, Lorg/telegram/ui/LaunchActivity$$ExternalSyntheticLambda59;->INSTANCE:Lorg/telegram/ui/LaunchActivity$$ExternalSyntheticLambda59;
-
-    return-void
-.end method
-
-.method private synthetic constructor <init>()V
-    .registers 1
+.method public synthetic constructor <init>(Lorg/telegram/ui/LaunchActivity;Lorg/telegram/ui/ActionBar/BaseFragment;Z)V
+    .registers 4
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lorg/telegram/ui/LaunchActivity$$ExternalSyntheticLambda59;->f$0:Lorg/telegram/ui/LaunchActivity;
+
+    iput-object p2, p0, Lorg/telegram/ui/LaunchActivity$$ExternalSyntheticLambda59;->f$1:Lorg/telegram/ui/ActionBar/BaseFragment;
+
+    iput-boolean p3, p0, Lorg/telegram/ui/LaunchActivity$$ExternalSyntheticLambda59;->f$2:Z
 
     return-void
 .end method
@@ -33,9 +31,15 @@
 
 # virtual methods
 .method public final run()V
-    .registers 1
+    .registers 4
 
-    invoke-static {}, Lorg/telegram/ui/LaunchActivity;->$r8$lambda$G1jTNC5jesFP-70KP-pFeQFn6uY()V
+    iget-object v0, p0, Lorg/telegram/ui/LaunchActivity$$ExternalSyntheticLambda59;->f$0:Lorg/telegram/ui/LaunchActivity;
+
+    iget-object v1, p0, Lorg/telegram/ui/LaunchActivity$$ExternalSyntheticLambda59;->f$1:Lorg/telegram/ui/ActionBar/BaseFragment;
+
+    iget-boolean v2, p0, Lorg/telegram/ui/LaunchActivity$$ExternalSyntheticLambda59;->f$2:Z
+
+    invoke-static {v0, v1, v2}, Lorg/telegram/ui/LaunchActivity;->$r8$lambda$xHJ-KE4BTlav9qG2GBhlI94S-RU(Lorg/telegram/ui/LaunchActivity;Lorg/telegram/ui/ActionBar/BaseFragment;Z)V
 
     return-void
 .end method

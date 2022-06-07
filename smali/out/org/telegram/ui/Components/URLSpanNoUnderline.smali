@@ -6,6 +6,8 @@
 # instance fields
 .field private forceNoUnderline:Z
 
+.field public label:Ljava/lang/String;
+
 .field private object:Lorg/telegram/tgnet/TLObject;
 
 .field private style:Lorg/telegram/ui/Components/TextStyleSpan$TextStyleRun;
@@ -17,7 +19,7 @@
 
     const/4 v0, 0x0
 
-    .line 26
+    .line 29
     invoke-direct {p0, p1, v0}, Lorg/telegram/ui/Components/URLSpanNoUnderline;-><init>(Ljava/lang/String;Lorg/telegram/ui/Components/TextStyleSpan$TextStyleRun;)V
 
     return-void
@@ -32,7 +34,7 @@
 
     const/16 v1, 0x20
 
-    .line 35
+    .line 38
     invoke-virtual {p1, v0, v1}, Ljava/lang/String;->replace(CC)Ljava/lang/String;
 
     move-result-object p1
@@ -45,7 +47,7 @@
     .line 21
     iput-boolean p1, p0, Lorg/telegram/ui/Components/URLSpanNoUnderline;->forceNoUnderline:Z
 
-    .line 36
+    .line 39
     iput-object p2, p0, Lorg/telegram/ui/Components/URLSpanNoUnderline;->style:Lorg/telegram/ui/Components/TextStyleSpan$TextStyleRun;
 
     return-void
@@ -56,10 +58,10 @@
 
     const/4 v0, 0x0
 
-    .line 30
+    .line 33
     invoke-direct {p0, p1, v0}, Lorg/telegram/ui/Components/URLSpanNoUnderline;-><init>(Ljava/lang/String;Lorg/telegram/ui/Components/TextStyleSpan$TextStyleRun;)V
 
-    .line 31
+    .line 34
     iput-boolean p2, p0, Lorg/telegram/ui/Components/URLSpanNoUnderline;->forceNoUnderline:Z
 
     return-void
@@ -70,7 +72,7 @@
 .method public getObject()Lorg/telegram/tgnet/TLObject;
     .registers 2
 
-    .line 66
+    .line 69
     iget-object v0, p0, Lorg/telegram/ui/Components/URLSpanNoUnderline;->object:Lorg/telegram/tgnet/TLObject;
 
     return-object v0
@@ -79,21 +81,21 @@
 .method public onClick(Landroid/view/View;)V
     .registers 5
 
-    .line 41
+    .line 44
     invoke-virtual {p0}, Landroid/text/style/URLSpan;->getURL()Ljava/lang/String;
 
     move-result-object v0
 
     const-string v1, "@"
 
-    .line 42
+    .line 45
     invoke-virtual {v0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v1
 
     if-eqz v1, :cond_2e
 
-    .line 43
+    .line 46
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -118,7 +120,7 @@
 
     move-result-object v0
 
-    .line 44
+    .line 47
     invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object p1
@@ -127,7 +129,7 @@
 
     goto :goto_35
 
-    .line 46
+    .line 49
     :cond_2e
     invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -142,7 +144,7 @@
 .method public setObject(Lorg/telegram/tgnet/TLObject;)V
     .registers 2
 
-    .line 62
+    .line 65
     iput-object p1, p0, Lorg/telegram/ui/Components/URLSpanNoUnderline;->object:Lorg/telegram/tgnet/TLObject;
 
     return-void
@@ -151,29 +153,29 @@
 .method public updateDrawState(Landroid/text/TextPaint;)V
     .registers 5
 
-    .line 52
+    .line 55
     iget v0, p1, Landroid/text/TextPaint;->linkColor:I
 
-    .line 53
+    .line 56
     invoke-virtual {p1}, Landroid/text/TextPaint;->getColor()I
 
     move-result v1
 
-    .line 54
+    .line 57
     invoke-super {p0, p1}, Landroid/text/style/URLSpan;->updateDrawState(Landroid/text/TextPaint;)V
 
-    .line 55
+    .line 58
     iget-object v2, p0, Lorg/telegram/ui/Components/URLSpanNoUnderline;->style:Lorg/telegram/ui/Components/TextStyleSpan$TextStyleRun;
 
     if-eqz v2, :cond_10
 
-    .line 56
+    .line 59
     invoke-virtual {v2, p1}, Lorg/telegram/ui/Components/TextStyleSpan$TextStyleRun;->applyStyle(Landroid/text/TextPaint;)V
 
     :cond_10
     if-ne v0, v1, :cond_18
 
-    .line 58
+    .line 61
     iget-boolean v0, p0, Lorg/telegram/ui/Components/URLSpanNoUnderline;->forceNoUnderline:Z
 
     if-nez v0, :cond_18

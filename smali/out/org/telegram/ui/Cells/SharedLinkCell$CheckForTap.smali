@@ -25,7 +25,7 @@
 .method private constructor <init>(Lorg/telegram/ui/Cells/SharedLinkCell;)V
     .registers 2
 
-    .line 75
+    .line 76
     iput-object p1, p0, Lorg/telegram/ui/Cells/SharedLinkCell$CheckForTap;->this$0:Lorg/telegram/ui/Cells/SharedLinkCell;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,7 +36,7 @@
 .method synthetic constructor <init>(Lorg/telegram/ui/Cells/SharedLinkCell;Lorg/telegram/ui/Cells/SharedLinkCell$1;)V
     .registers 3
 
-    .line 75
+    .line 76
     invoke-direct {p0, p1}, Lorg/telegram/ui/Cells/SharedLinkCell$CheckForTap;-><init>(Lorg/telegram/ui/Cells/SharedLinkCell;)V
 
     return-void
@@ -47,7 +47,7 @@
 .method public run()V
     .registers 5
 
-    .line 77
+    .line 78
     iget-object v0, p0, Lorg/telegram/ui/Cells/SharedLinkCell$CheckForTap;->this$0:Lorg/telegram/ui/Cells/SharedLinkCell;
 
     invoke-static {v0}, Lorg/telegram/ui/Cells/SharedLinkCell;->access$000(Lorg/telegram/ui/Cells/SharedLinkCell;)Lorg/telegram/ui/Cells/SharedLinkCell$CheckForLongPress;
@@ -56,7 +56,7 @@
 
     if-nez v0, :cond_12
 
-    .line 78
+    .line 79
     iget-object v0, p0, Lorg/telegram/ui/Cells/SharedLinkCell$CheckForTap;->this$0:Lorg/telegram/ui/Cells/SharedLinkCell;
 
     new-instance v1, Lorg/telegram/ui/Cells/SharedLinkCell$CheckForLongPress;
@@ -65,7 +65,7 @@
 
     invoke-static {v0, v1}, Lorg/telegram/ui/Cells/SharedLinkCell;->access$002(Lorg/telegram/ui/Cells/SharedLinkCell;Lorg/telegram/ui/Cells/SharedLinkCell$CheckForLongPress;)Lorg/telegram/ui/Cells/SharedLinkCell$CheckForLongPress;
 
-    .line 80
+    .line 81
     :cond_12
     iget-object v0, p0, Lorg/telegram/ui/Cells/SharedLinkCell$CheckForTap;->this$0:Lorg/telegram/ui/Cells/SharedLinkCell;
 
@@ -81,7 +81,7 @@
 
     iput v1, v0, Lorg/telegram/ui/Cells/SharedLinkCell$CheckForLongPress;->currentPressCount:I
 
-    .line 81
+    .line 82
     iget-object v0, p0, Lorg/telegram/ui/Cells/SharedLinkCell$CheckForTap;->this$0:Lorg/telegram/ui/Cells/SharedLinkCell;
 
     invoke-static {v0}, Lorg/telegram/ui/Cells/SharedLinkCell;->access$000(Lorg/telegram/ui/Cells/SharedLinkCell;)Lorg/telegram/ui/Cells/SharedLinkCell$CheckForLongPress;

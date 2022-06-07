@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/ShareAlert$SwitchView;)V
     .registers 2
 
-    .line 267
+    .line 268
     iput-object p1, p0, Lorg/telegram/ui/Components/ShareAlert$SwitchView$2;->this$1:Lorg/telegram/ui/Components/ShareAlert$SwitchView;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -35,7 +35,7 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .registers 3
 
-    .line 270
+    .line 271
     iget-object p1, p0, Lorg/telegram/ui/Components/ShareAlert$SwitchView$2;->this$1:Lorg/telegram/ui/Components/ShareAlert$SwitchView;
 
     const/4 v0, 0x0

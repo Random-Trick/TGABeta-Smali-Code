@@ -27,7 +27,7 @@
 .method constructor <init>(Lorg/telegram/ui/SessionBottomSheet;Lorg/telegram/tgnet/TLRPC$TL_authorization;)V
     .registers 3
 
-    .line 160
+    .line 161
     iput-object p1, p0, Lorg/telegram/ui/SessionBottomSheet$4;->this$0:Lorg/telegram/ui/SessionBottomSheet;
 
     iput-object p2, p0, Lorg/telegram/ui/SessionBottomSheet$4;->val$session:Lorg/telegram/tgnet/TLRPC$TL_authorization;
@@ -42,7 +42,7 @@
 .method public onClick(Landroid/view/View;)V
     .registers 3
 
-    .line 163
+    .line 164
     iget-object p1, p0, Lorg/telegram/ui/SessionBottomSheet$4;->this$0:Lorg/telegram/ui/SessionBottomSheet;
 
     iget-object v0, p0, Lorg/telegram/ui/SessionBottomSheet$4;->val$session:Lorg/telegram/tgnet/TLRPC$TL_authorization;

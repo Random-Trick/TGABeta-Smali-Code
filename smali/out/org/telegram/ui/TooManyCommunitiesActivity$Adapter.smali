@@ -49,7 +49,7 @@
 .method public getItemCount()I
     .registers 2
 
-    .line 523
+    .line 522
     iget v0, p0, Lorg/telegram/ui/TooManyCommunitiesActivity$Adapter;->rowCount:I
 
     return v0
@@ -58,7 +58,7 @@
 .method public getItemViewType(I)I
     .registers 3
 
-    .line 509
+    .line 508
     iget v0, p0, Lorg/telegram/ui/TooManyCommunitiesActivity$Adapter;->hintPosition:I
 
     if-ne p1, v0, :cond_6
@@ -67,7 +67,7 @@
 
     return p1
 
-    .line 511
+    .line 510
     :cond_6
     iget v0, p0, Lorg/telegram/ui/TooManyCommunitiesActivity$Adapter;->shadowPosition:I
 
@@ -77,7 +77,7 @@
 
     return p1
 
-    .line 513
+    .line 512
     :cond_c
     iget v0, p0, Lorg/telegram/ui/TooManyCommunitiesActivity$Adapter;->headerPosition:I
 
@@ -87,7 +87,7 @@
 
     return p1
 
-    .line 515
+    .line 514
     :cond_12
     iget v0, p0, Lorg/telegram/ui/TooManyCommunitiesActivity$Adapter;->endPaddingPosition:I
 
@@ -106,7 +106,7 @@
 .method public isEnabled(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)Z
     .registers 4
 
-    .line 528
+    .line 527
     invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->getAdapterPosition()I
 
     move-result v0
@@ -136,10 +136,10 @@
 .method public notifyDataSetChanged()V
     .registers 1
 
-    .line 417
+    .line 416
     invoke-virtual {p0}, Lorg/telegram/ui/TooManyCommunitiesActivity$Adapter;->updateRows()V
 
-    .line 418
+    .line 417
     invoke-super {p0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->notifyDataSetChanged()V
 
     return-void
@@ -148,14 +148,14 @@
 .method public onBindViewHolder(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;I)V
     .registers 9
 
-    .line 493
+    .line 492
     iget v0, p0, Lorg/telegram/ui/TooManyCommunitiesActivity$Adapter;->headerPosition:I
 
     if-lt p2, v0, :cond_12
 
     if-lez v0, :cond_12
 
-    .line 494
+    .line 493
     iget-object v0, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     iget-object v1, p0, Lorg/telegram/ui/TooManyCommunitiesActivity$Adapter;->this$0:Lorg/telegram/ui/TooManyCommunitiesActivity;
@@ -168,7 +168,7 @@
 
     goto :goto_19
 
-    .line 496
+    .line 495
     :cond_12
     iget-object v0, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
@@ -176,7 +176,7 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setAlpha(F)V
 
-    .line 498
+    .line 497
     :goto_19
     invoke-virtual {p0, p2}, Lorg/telegram/ui/TooManyCommunitiesActivity$Adapter;->getItemViewType(I)I
 
@@ -186,12 +186,12 @@
 
     if-ne v0, v1, :cond_65
 
-    .line 499
+    .line 498
     iget-object p1, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     check-cast p1, Lorg/telegram/ui/Cells/GroupCreateUserCell;
 
-    .line 500
+    .line 499
     iget-object v0, p0, Lorg/telegram/ui/TooManyCommunitiesActivity$Adapter;->this$0:Lorg/telegram/ui/TooManyCommunitiesActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/TooManyCommunitiesActivity;->access$700(Lorg/telegram/ui/TooManyCommunitiesActivity;)Ljava/util/ArrayList;
@@ -208,7 +208,7 @@
 
     check-cast v0, Lorg/telegram/tgnet/TLRPC$Chat;
 
-    .line 501
+    .line 500
     iget-object v1, p0, Lorg/telegram/ui/TooManyCommunitiesActivity$Adapter;->this$0:Lorg/telegram/ui/TooManyCommunitiesActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/TooManyCommunitiesActivity;->access$1000(Lorg/telegram/ui/TooManyCommunitiesActivity;)Ljava/util/ArrayList;
@@ -225,7 +225,7 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 502
+    .line 501
     iget-object v2, v0, Lorg/telegram/tgnet/TLRPC$Chat;->title:Ljava/lang/String;
 
     iget v3, p0, Lorg/telegram/ui/TooManyCommunitiesActivity$Adapter;->inactiveChatsEndRow:I
@@ -246,7 +246,7 @@
     :goto_4f
     invoke-virtual {p1, v0, v2, v1, v4}, Lorg/telegram/ui/Cells/GroupCreateUserCell;->setObject(Lorg/telegram/tgnet/TLObject;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)V
 
-    .line 503
+    .line 502
     iget-object p2, p0, Lorg/telegram/ui/TooManyCommunitiesActivity$Adapter;->this$0:Lorg/telegram/ui/TooManyCommunitiesActivity;
 
     invoke-static {p2}, Lorg/telegram/ui/TooManyCommunitiesActivity;->access$1100(Lorg/telegram/ui/TooManyCommunitiesActivity;)Ljava/util/Set;
@@ -288,7 +288,7 @@
 
     if-eq p2, v1, :cond_18
 
-    .line 484
+    .line 483
     new-instance p2, Lorg/telegram/ui/Cells/GroupCreateUserCell;
 
     invoke-virtual {p1}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
@@ -301,7 +301,7 @@
 
     goto/16 :goto_dc
 
-    .line 480
+    .line 479
     :cond_18
     new-instance p2, Lorg/telegram/ui/Cells/EmptyCell;
 
@@ -319,7 +319,7 @@
 
     goto/16 :goto_dc
 
-    .line 474
+    .line 473
     :cond_29
     new-instance p2, Lorg/telegram/ui/Cells/HeaderCell;
 
@@ -341,14 +341,14 @@
 
     const/16 p1, 0x36
 
-    .line 476
+    .line 475
     invoke-virtual {p2, p1}, Lorg/telegram/ui/Cells/HeaderCell;->setHeight(I)V
 
-    const p1, 0x7f0e0890
+    const p1, 0x7f0e08eb
 
     const-string v0, "InactiveChats"
 
-    .line 477
+    .line 476
     invoke-static {v0, p1}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object p1
@@ -357,7 +357,7 @@
 
     goto/16 :goto_dc
 
-    .line 467
+    .line 466
     :cond_4d
     new-instance p2, Lorg/telegram/ui/Cells/ShadowSectionCell;
 
@@ -367,12 +367,12 @@
 
     invoke-direct {p2, v1}, Lorg/telegram/ui/Cells/ShadowSectionCell;-><init>(Landroid/content/Context;)V
 
-    .line 468
+    .line 467
     invoke-virtual {p1}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
     move-result-object p1
 
-    const v1, 0x7f07012c
+    const v1, 0x7f0700fb
 
     const-string v2, "windowBackgroundGrayShadow"
 
@@ -380,7 +380,7 @@
 
     move-result-object p1
 
-    .line 469
+    .line 468
     new-instance v1, Lorg/telegram/ui/Components/CombinedDrawable;
 
     new-instance v2, Landroid/graphics/drawable/ColorDrawable;
@@ -395,15 +395,15 @@
 
     invoke-direct {v1, v2, p1}, Lorg/telegram/ui/Components/CombinedDrawable;-><init>(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
 
-    .line 470
+    .line 469
     invoke-virtual {v1, v0}, Lorg/telegram/ui/Components/CombinedDrawable;->setFullsize(Z)V
 
-    .line 471
+    .line 470
     invoke-virtual {p2, v1}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
     goto :goto_dc
 
-    .line 449
+    .line 448
     :cond_7a
     iget-object p2, p0, Lorg/telegram/ui/TooManyCommunitiesActivity$Adapter;->this$0:Lorg/telegram/ui/TooManyCommunitiesActivity;
 
@@ -417,25 +417,25 @@
 
     invoke-static {p2, v1}, Lorg/telegram/ui/TooManyCommunitiesActivity;->access$802(Lorg/telegram/ui/TooManyCommunitiesActivity;Lorg/telegram/ui/Cells/TooManyCommunitiesHintCell;)Lorg/telegram/ui/Cells/TooManyCommunitiesHintCell;
 
-    .line 450
+    .line 449
     iget-object p1, p0, Lorg/telegram/ui/TooManyCommunitiesActivity$Adapter;->this$0:Lorg/telegram/ui/TooManyCommunitiesActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/TooManyCommunitiesActivity;->access$800(Lorg/telegram/ui/TooManyCommunitiesActivity;)Lorg/telegram/ui/Cells/TooManyCommunitiesHintCell;
 
     move-result-object p2
 
-    .line 452
+    .line 451
     iget-object p1, p0, Lorg/telegram/ui/TooManyCommunitiesActivity$Adapter;->this$0:Lorg/telegram/ui/TooManyCommunitiesActivity;
 
     iget p1, p1, Lorg/telegram/ui/TooManyCommunitiesActivity;->type:I
 
     if-nez p1, :cond_9e
 
-    const p1, 0x7f0e11ab
+    const p1, 0x7f0e1277
 
     const-string v0, "TooManyCommunitiesHintJoin"
 
-    .line 453
+    .line 452
     invoke-static {v0, p1}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object p1
@@ -445,11 +445,11 @@
     :cond_9e
     if-ne p1, v0, :cond_aa
 
-    const p1, 0x7f0e11aa
+    const p1, 0x7f0e1276
 
     const-string v0, "TooManyCommunitiesHintEdit"
 
-    .line 455
+    .line 454
     invoke-static {v0, p1}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object p1
@@ -457,16 +457,16 @@
     goto :goto_b3
 
     :cond_aa
-    const p1, 0x7f0e11a9
+    const p1, 0x7f0e1275
 
     const-string v0, "TooManyCommunitiesHintCreate"
 
-    .line 457
+    .line 456
     invoke-static {v0, p1}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 459
+    .line 458
     :goto_b3
     iget-object v0, p0, Lorg/telegram/ui/TooManyCommunitiesActivity$Adapter;->this$0:Lorg/telegram/ui/TooManyCommunitiesActivity;
 
@@ -476,7 +476,7 @@
 
     invoke-virtual {v0, p1}, Lorg/telegram/ui/Cells/TooManyCommunitiesHintCell;->setMessageText(Ljava/lang/String;)V
 
-    .line 460
+    .line 459
     new-instance p1, Landroidx/recyclerview/widget/RecyclerView$LayoutParams;
 
     const/4 v0, -0x1
@@ -487,7 +487,7 @@
 
     const/high16 v0, 0x41800000    # 16.0f
 
-    .line 461
+    .line 460
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v0
@@ -496,14 +496,14 @@
 
     const/high16 v0, 0x41b80000    # 23.0f
 
-    .line 462
+    .line 461
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v0
 
     iput v0, p1, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
 
-    .line 464
+    .line 463
     iget-object v0, p0, Lorg/telegram/ui/TooManyCommunitiesActivity$Adapter;->this$0:Lorg/telegram/ui/TooManyCommunitiesActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/TooManyCommunitiesActivity;->access$800(Lorg/telegram/ui/TooManyCommunitiesActivity;)Lorg/telegram/ui/Cells/TooManyCommunitiesHintCell;
@@ -512,7 +512,7 @@
 
     invoke-virtual {v0, p1}, Landroid/widget/FrameLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 488
+    .line 487
     :goto_dc
     new-instance p1, Lorg/telegram/ui/Components/RecyclerListView$Holder;
 
@@ -526,46 +526,46 @@
 
     const/4 v0, -0x1
 
-    .line 422
+    .line 421
     iput v0, p0, Lorg/telegram/ui/TooManyCommunitiesActivity$Adapter;->hintPosition:I
 
-    .line 423
+    .line 422
     iput v0, p0, Lorg/telegram/ui/TooManyCommunitiesActivity$Adapter;->shadowPosition:I
 
-    .line 424
+    .line 423
     iput v0, p0, Lorg/telegram/ui/TooManyCommunitiesActivity$Adapter;->headerPosition:I
 
-    .line 425
+    .line 424
     iput v0, p0, Lorg/telegram/ui/TooManyCommunitiesActivity$Adapter;->inactiveChatsStartRow:I
 
-    .line 426
+    .line 425
     iput v0, p0, Lorg/telegram/ui/TooManyCommunitiesActivity$Adapter;->inactiveChatsEndRow:I
 
-    .line 427
+    .line 426
     iput v0, p0, Lorg/telegram/ui/TooManyCommunitiesActivity$Adapter;->endPaddingPosition:I
 
     const/4 v0, 0x0
 
-    .line 429
+    .line 428
     iput v0, p0, Lorg/telegram/ui/TooManyCommunitiesActivity$Adapter;->rowCount:I
 
     const/4 v1, 0x0
 
     add-int/lit8 v1, v1, 0x1
 
-    .line 430
+    .line 429
     iput v1, p0, Lorg/telegram/ui/TooManyCommunitiesActivity$Adapter;->rowCount:I
 
     iput v0, p0, Lorg/telegram/ui/TooManyCommunitiesActivity$Adapter;->hintPosition:I
 
     add-int/lit8 v0, v1, 0x1
 
-    .line 431
+    .line 430
     iput v0, p0, Lorg/telegram/ui/TooManyCommunitiesActivity$Adapter;->rowCount:I
 
     iput v1, p0, Lorg/telegram/ui/TooManyCommunitiesActivity$Adapter;->shadowPosition:I
 
-    .line 433
+    .line 432
     iget-object v0, p0, Lorg/telegram/ui/TooManyCommunitiesActivity$Adapter;->this$0:Lorg/telegram/ui/TooManyCommunitiesActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/TooManyCommunitiesActivity;->access$700(Lorg/telegram/ui/TooManyCommunitiesActivity;)Ljava/util/ArrayList;
@@ -578,7 +578,7 @@
 
     if-nez v0, :cond_4e
 
-    .line 434
+    .line 433
     iget v0, p0, Lorg/telegram/ui/TooManyCommunitiesActivity$Adapter;->rowCount:I
 
     add-int/lit8 v1, v0, 0x1
@@ -589,12 +589,12 @@
 
     add-int/lit8 v0, v1, 0x1
 
-    .line 435
+    .line 434
     iput v0, p0, Lorg/telegram/ui/TooManyCommunitiesActivity$Adapter;->rowCount:I
 
     iput v1, p0, Lorg/telegram/ui/TooManyCommunitiesActivity$Adapter;->inactiveChatsStartRow:I
 
-    .line 436
+    .line 435
     iget-object v1, p0, Lorg/telegram/ui/TooManyCommunitiesActivity$Adapter;->this$0:Lorg/telegram/ui/TooManyCommunitiesActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/TooManyCommunitiesActivity;->access$700(Lorg/telegram/ui/TooManyCommunitiesActivity;)Ljava/util/ArrayList;
@@ -611,12 +611,12 @@
 
     iput v0, p0, Lorg/telegram/ui/TooManyCommunitiesActivity$Adapter;->rowCount:I
 
-    .line 437
+    .line 436
     iput v0, p0, Lorg/telegram/ui/TooManyCommunitiesActivity$Adapter;->inactiveChatsEndRow:I
 
     add-int/lit8 v1, v0, 0x1
 
-    .line 438
+    .line 437
     iput v1, p0, Lorg/telegram/ui/TooManyCommunitiesActivity$Adapter;->rowCount:I
 
     iput v0, p0, Lorg/telegram/ui/TooManyCommunitiesActivity$Adapter;->endPaddingPosition:I

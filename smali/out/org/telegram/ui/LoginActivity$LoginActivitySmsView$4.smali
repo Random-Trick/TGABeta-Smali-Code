@@ -25,7 +25,7 @@
 .method constructor <init>(Lorg/telegram/ui/LoginActivity$LoginActivitySmsView;)V
     .registers 2
 
-    .line 3193
+    .line 3249
     iput-object p1, p0, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$4;->this$1:Lorg/telegram/ui/LoginActivity$LoginActivitySmsView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,28 +44,28 @@
 .method public beforeTextChanged(Ljava/lang/CharSequence;III)V
     .registers 5
 
-    .line 3196
+    .line 3252
     iget-object p1, p0, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$4;->this$1:Lorg/telegram/ui/LoginActivity$LoginActivitySmsView;
 
-    invoke-static {p1}, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView;->access$7500(Lorg/telegram/ui/LoginActivity$LoginActivitySmsView;)Z
+    invoke-static {p1}, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView;->access$7600(Lorg/telegram/ui/LoginActivity$LoginActivitySmsView;)Z
 
     move-result p1
 
     if-eqz p1, :cond_1a
 
-    .line 3197
+    .line 3253
     iget-object p1, p0, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$4;->this$1:Lorg/telegram/ui/LoginActivity$LoginActivitySmsView;
 
-    invoke-static {p1}, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView;->access$7600(Lorg/telegram/ui/LoginActivity$LoginActivitySmsView;)Ljava/lang/Runnable;
+    invoke-static {p1}, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView;->access$7700(Lorg/telegram/ui/LoginActivity$LoginActivitySmsView;)Ljava/lang/Runnable;
 
     move-result-object p2
 
     invoke-virtual {p1, p2}, Landroid/widget/LinearLayout;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    .line 3198
+    .line 3254
     iget-object p1, p0, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$4;->this$1:Lorg/telegram/ui/LoginActivity$LoginActivitySmsView;
 
-    invoke-static {p1}, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView;->access$7600(Lorg/telegram/ui/LoginActivity$LoginActivitySmsView;)Ljava/lang/Runnable;
+    invoke-static {p1}, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView;->access$7700(Lorg/telegram/ui/LoginActivity$LoginActivitySmsView;)Ljava/lang/Runnable;
 
     move-result-object p1
 

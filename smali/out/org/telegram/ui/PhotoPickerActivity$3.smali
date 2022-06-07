@@ -25,7 +25,7 @@
 .method constructor <init>(Lorg/telegram/ui/PhotoPickerActivity;)V
     .registers 2
 
-    .line 515
+    .line 518
     iput-object p1, p0, Lorg/telegram/ui/PhotoPickerActivity$3;->this$0:Lorg/telegram/ui/PhotoPickerActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,7 +44,7 @@
 .method public onShowSubMenu()V
     .registers 4
 
-    .line 518
+    .line 521
     iget-object v0, p0, Lorg/telegram/ui/PhotoPickerActivity$3;->this$0:Lorg/telegram/ui/PhotoPickerActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/PhotoPickerActivity;->access$1500(Lorg/telegram/ui/PhotoPickerActivity;)Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;
@@ -59,14 +59,14 @@
 
     if-eqz v1, :cond_14
 
-    const v1, 0x7f0e1064
+    const v1, 0x7f0e1122
 
     const-string v2, "ShowAsGrid"
 
     goto :goto_19
 
     :cond_14
-    const v1, 0x7f0e1065
+    const v1, 0x7f0e1123
 
     const-string v2, "ShowAsList"
 
@@ -77,7 +77,7 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;->setText(Ljava/lang/String;)V
 
-    .line 519
+    .line 522
     iget-object v0, p0, Lorg/telegram/ui/PhotoPickerActivity$3;->this$0:Lorg/telegram/ui/PhotoPickerActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/PhotoPickerActivity;->access$1500(Lorg/telegram/ui/PhotoPickerActivity;)Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;
@@ -92,12 +92,12 @@
 
     if-eqz v1, :cond_32
 
-    const v1, 0x7f070283
+    const v1, 0x7f070266
 
     goto :goto_35
 
     :cond_32
-    const v1, 0x7f07027a
+    const v1, 0x7f07025a
 
     :goto_35
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;->setIcon(I)V

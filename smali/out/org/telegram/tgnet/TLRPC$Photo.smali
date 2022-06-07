@@ -49,17 +49,17 @@
 .method public constructor <init>()V
     .registers 2
 
-    .line 31732
+    .line 32181
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
-    .line 31740
+    .line 32189
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/tgnet/TLRPC$Photo;->sizes:Ljava/util/ArrayList;
 
-    .line 31741
+    .line 32190
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -78,7 +78,7 @@
 
     goto :goto_34
 
-    .line 31760
+    .line 32209
     :sswitch_5
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_photoEmpty;
 
@@ -86,7 +86,7 @@
 
     goto :goto_34
 
-    .line 31763
+    .line 32212
     :sswitch_b
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_photo_old;
 
@@ -94,7 +94,7 @@
 
     goto :goto_34
 
-    .line 31769
+    .line 32218
     :sswitch_11
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_photo;
 
@@ -102,7 +102,7 @@
 
     goto :goto_34
 
-    .line 31766
+    .line 32215
     :sswitch_17
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_photo_layer115;
 
@@ -110,7 +110,7 @@
 
     goto :goto_34
 
-    .line 31754
+    .line 32203
     :sswitch_1d
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_photo_layer55;
 
@@ -118,7 +118,7 @@
 
     goto :goto_34
 
-    .line 31757
+    .line 32206
     :sswitch_23
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_photo_old2;
 
@@ -126,7 +126,7 @@
 
     goto :goto_34
 
-    .line 31751
+    .line 32200
     :sswitch_29
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_photo_layer97;
 
@@ -134,7 +134,7 @@
 
     goto :goto_34
 
-    .line 31772
+    .line 32221
     :sswitch_2f
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_photo_layer82;
 
@@ -147,7 +147,7 @@
 
     goto :goto_4f
 
-    .line 31776
+    .line 32225
     :cond_39
     new-instance p0, Ljava/lang/RuntimeException;
 
@@ -177,7 +177,7 @@
     :goto_4f
     if-eqz v0, :cond_54
 
-    .line 31779
+    .line 32228
     invoke-virtual {v0, p0, p2}, Lorg/telegram/tgnet/TLObject;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
     :cond_54

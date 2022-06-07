@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lorg/telegram/ui/Components/AlertsCreator$ScheduleDatePickerDelegate;
+.implements Lorg/telegram/ui/ActionBar/ActionBarPopupWindow$OnDispatchKeyEventListener;
 
 
 # instance fields
@@ -22,12 +22,12 @@
 
 
 # virtual methods
-.method public final didSelectDate(ZI)V
-    .registers 4
+.method public final onDispatchKeyEvent(Landroid/view/KeyEvent;)V
+    .registers 3
 
     iget-object v0, p0, Lorg/telegram/ui/PhotoViewer$$ExternalSyntheticLambda72;->f$0:Lorg/telegram/ui/PhotoViewer;
 
-    invoke-static {v0, p1, p2}, Lorg/telegram/ui/PhotoViewer;->$r8$lambda$tDcL99jQbAj5gTwxZm9NtBynzEU(Lorg/telegram/ui/PhotoViewer;ZI)V
+    invoke-static {v0, p1}, Lorg/telegram/ui/PhotoViewer;->$r8$lambda$292voFRYSPqIgKVPiu1U1LvyuSY(Lorg/telegram/ui/PhotoViewer;Landroid/view/KeyEvent;)V
 
     return-void
 .end method

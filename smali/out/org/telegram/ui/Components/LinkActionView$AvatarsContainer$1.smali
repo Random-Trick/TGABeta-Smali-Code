@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/LinkActionView$AvatarsContainer;Landroid/content/Context;ZLorg/telegram/ui/Components/LinkActionView;)V
     .registers 5
 
-    .line 434
+    .line 437
     iput-object p1, p0, Lorg/telegram/ui/Components/LinkActionView$AvatarsContainer$1;->this$1:Lorg/telegram/ui/Components/LinkActionView$AvatarsContainer;
 
     invoke-direct {p0, p2, p3}, Lorg/telegram/ui/Components/AvatarsImageView;-><init>(Landroid/content/Context;Z)V
@@ -35,7 +35,7 @@
 .method protected onMeasure(II)V
     .registers 4
 
-    .line 437
+    .line 440
     iget-object p1, p0, Lorg/telegram/ui/Components/LinkActionView$AvatarsContainer$1;->this$1:Lorg/telegram/ui/Components/LinkActionView$AvatarsContainer;
 
     iget-object p1, p1, Lorg/telegram/ui/Components/LinkActionView$AvatarsContainer;->this$0:Lorg/telegram/ui/Components/LinkActionView;
@@ -68,7 +68,7 @@
     :goto_19
     int-to-float p1, p1
 
-    .line 439
+    .line 442
     invoke-static {p1}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result p1

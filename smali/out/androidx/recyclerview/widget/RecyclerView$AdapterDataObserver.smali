@@ -18,7 +18,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 11648
+    .line 11649
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -41,7 +41,7 @@
 .method public onItemRangeChanged(IILjava/lang/Object;)V
     .registers 4
 
-    .line 11660
+    .line 11661
     invoke-virtual {p0, p1, p2}, Landroidx/recyclerview/widget/RecyclerView$AdapterDataObserver;->onItemRangeChanged(II)V
 
     return-void

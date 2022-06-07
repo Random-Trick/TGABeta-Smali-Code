@@ -29,7 +29,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 2337
+    .line 2341
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -40,7 +40,7 @@
 .method public onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
     .registers 8
 
-    .line 2344
+    .line 2348
     invoke-virtual {p1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     move-result-object v0
@@ -51,7 +51,7 @@
 
     return v1
 
-    .line 2348
+    .line 2352
     :cond_8
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
 
@@ -61,27 +61,27 @@
 
     if-nez v2, :cond_20
 
-    .line 2349
+    .line 2353
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getX()F
 
     move-result v2
 
     iput v2, p0, Lorg/telegram/ui/Components/RecyclerListView$FoucsableOnTouchListener;->x:F
 
-    .line 2350
+    .line 2354
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getY()F
 
     move-result v2
 
     iput v2, p0, Lorg/telegram/ui/Components/RecyclerListView$FoucsableOnTouchListener;->y:F
 
-    .line 2351
+    .line 2355
     iput-boolean v3, p0, Lorg/telegram/ui/Components/RecyclerListView$FoucsableOnTouchListener;->onFocus:Z
 
-    .line 2352
+    .line 2356
     invoke-interface {v0, v3}, Landroid/view/ViewParent;->requestDisallowInterceptTouchEvent(Z)V
 
-    .line 2354
+    .line 2358
     :cond_20
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
 
@@ -91,7 +91,7 @@
 
     if-ne v2, v4, :cond_5b
 
-    .line 2355
+    .line 2359
     iget v2, p0, Lorg/telegram/ui/Components/RecyclerListView$FoucsableOnTouchListener;->x:F
 
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getX()F
@@ -100,7 +100,7 @@
 
     sub-float/2addr v2, v3
 
-    .line 2356
+    .line 2360
     iget v3, p0, Lorg/telegram/ui/Components/RecyclerListView$FoucsableOnTouchListener;->y:F
 
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getY()F
@@ -109,7 +109,7 @@
 
     sub-float/2addr v3, p2
 
-    .line 2357
+    .line 2361
     invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object p1
@@ -124,7 +124,7 @@
 
     int-to-float p1, p1
 
-    .line 2358
+    .line 2362
     iget-boolean p2, p0, Lorg/telegram/ui/Components/RecyclerListView$FoucsableOnTouchListener;->onFocus:Z
 
     if-eqz p2, :cond_6d
@@ -147,15 +147,15 @@
 
     if-lez v4, :cond_6d
 
-    .line 2359
+    .line 2363
     iput-boolean v1, p0, Lorg/telegram/ui/Components/RecyclerListView$FoucsableOnTouchListener;->onFocus:Z
 
-    .line 2360
+    .line 2364
     invoke-interface {v0, v1}, Landroid/view/ViewParent;->requestDisallowInterceptTouchEvent(Z)V
 
     goto :goto_6d
 
-    .line 2362
+    .line 2366
     :cond_5b
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
 
@@ -171,11 +171,11 @@
 
     if-ne p1, p2, :cond_6d
 
-    .line 2363
+    .line 2367
     :cond_68
     iput-boolean v1, p0, Lorg/telegram/ui/Components/RecyclerListView$FoucsableOnTouchListener;->onFocus:Z
 
-    .line 2364
+    .line 2368
     invoke-interface {v0, v1}, Landroid/view/ViewParent;->requestDisallowInterceptTouchEvent(Z)V
 
     :cond_6d

@@ -17,7 +17,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 10027
+    .line 10190
     invoke-direct {p0}, Lorg/telegram/tgnet/TLRPC$TL_replyKeyboardForceReply;-><init>()V
 
     return-void
@@ -28,7 +28,7 @@
 .method public readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
     .registers 5
 
-    .line 10032
+    .line 10195
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result p1
@@ -50,7 +50,7 @@
     :cond_e
     const/4 p2, 0x0
 
-    .line 10033
+    .line 10196
     :goto_f
     iput-boolean p2, p0, Lorg/telegram/tgnet/TLRPC$ReplyMarkup;->single_use:Z
 
@@ -63,7 +63,7 @@
     :cond_16
     const/4 v0, 0x0
 
-    .line 10034
+    .line 10197
     :goto_17
     iput-boolean v0, p0, Lorg/telegram/tgnet/TLRPC$ReplyMarkup;->selective:Z
 
@@ -73,12 +73,12 @@
 .method public serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
     .registers 4
 
-    .line 10038
+    .line 10201
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_replyKeyboardForceReply_layer129;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 10039
+    .line 10202
     iget-boolean v0, p0, Lorg/telegram/tgnet/TLRPC$ReplyMarkup;->single_use:Z
 
     if-eqz v0, :cond_e
@@ -97,7 +97,7 @@
     :goto_12
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$ReplyMarkup;->flags:I
 
-    .line 10040
+    .line 10203
     iget-boolean v1, p0, Lorg/telegram/tgnet/TLRPC$ReplyMarkup;->selective:Z
 
     if-eqz v1, :cond_1b
@@ -112,7 +112,7 @@
     :goto_1d
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$ReplyMarkup;->flags:I
 
-    .line 10041
+    .line 10204
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
     return-void

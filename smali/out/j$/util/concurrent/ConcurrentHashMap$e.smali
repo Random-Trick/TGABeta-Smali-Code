@@ -337,7 +337,7 @@
     move-result-object v0
 
     .line 2
-    invoke-static {v0}, Lj$/wrappers/R0;->n0(Lj$/util/stream/Stream;)Ljava/util/stream/Stream;
+    invoke-static {v0}, Lj$/wrappers/P0;->n0(Lj$/util/stream/Stream;)Ljava/util/stream/Stream;
 
     move-result-object v0
 
@@ -399,7 +399,7 @@
     return p1
 .end method
 
-.method public spliterator()Lj$/util/y;
+.method public spliterator()Lj$/util/u;
     .registers 11
 
     iget-object v7, p0, Lj$/util/concurrent/ConcurrentHashMap$b;->a:Lj$/util/concurrent/ConcurrentHashMap;
@@ -454,11 +454,11 @@
 .method public synthetic spliterator()Ljava/util/Spliterator;
     .registers 2
 
-    invoke-virtual {p0}, Lj$/util/concurrent/ConcurrentHashMap$e;->spliterator()Lj$/util/y;
+    invoke-virtual {p0}, Lj$/util/concurrent/ConcurrentHashMap$e;->spliterator()Lj$/util/u;
 
     move-result-object v0
 
-    invoke-static {v0}, Lj$/wrappers/h;->a(Lj$/util/y;)Ljava/util/Spliterator;
+    invoke-static {v0}, Lj$/wrappers/h;->a(Lj$/util/u;)Ljava/util/Spliterator;
 
     move-result-object v0
 
@@ -484,7 +484,7 @@
     move-result-object v0
 
     .line 2
-    invoke-static {v0}, Lj$/wrappers/R0;->n0(Lj$/util/stream/Stream;)Ljava/util/stream/Stream;
+    invoke-static {v0}, Lj$/wrappers/P0;->n0(Lj$/util/stream/Stream;)Ljava/util/stream/Stream;
 
     move-result-object v0
 

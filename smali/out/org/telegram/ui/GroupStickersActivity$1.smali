@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/GroupStickersActivity;)V
     .registers 2
 
-    .line 140
+    .line 122
     iput-object p1, p0, Lorg/telegram/ui/GroupStickersActivity$1;->this$0:Lorg/telegram/ui/GroupStickersActivity;
 
     invoke-direct {p0}, Lorg/telegram/ui/ActionBar/ActionBar$ActionBarMenuOnItemClick;-><init>()V
@@ -37,60 +37,13 @@
 
     const/4 v0, -0x1
 
-    if-ne p1, v0, :cond_9
+    if-ne p1, v0, :cond_8
 
-    .line 144
+    .line 126
     iget-object p1, p0, Lorg/telegram/ui/GroupStickersActivity$1;->this$0:Lorg/telegram/ui/GroupStickersActivity;
 
     invoke-virtual {p1}, Lorg/telegram/ui/ActionBar/BaseFragment;->finishFragment()V
 
-    goto :goto_2d
-
-    :cond_9
-    const/4 v0, 0x1
-
-    if-ne p1, v0, :cond_2d
-
-    .line 146
-    iget-object p1, p0, Lorg/telegram/ui/GroupStickersActivity$1;->this$0:Lorg/telegram/ui/GroupStickersActivity;
-
-    invoke-static {p1}, Lorg/telegram/ui/GroupStickersActivity;->access$000(Lorg/telegram/ui/GroupStickersActivity;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_15
-
-    return-void
-
-    .line 149
-    :cond_15
-    iget-object p1, p0, Lorg/telegram/ui/GroupStickersActivity$1;->this$0:Lorg/telegram/ui/GroupStickersActivity;
-
-    invoke-static {p1, v0}, Lorg/telegram/ui/GroupStickersActivity;->access$002(Lorg/telegram/ui/GroupStickersActivity;Z)Z
-
-    .line 150
-    iget-object p1, p0, Lorg/telegram/ui/GroupStickersActivity$1;->this$0:Lorg/telegram/ui/GroupStickersActivity;
-
-    invoke-static {p1}, Lorg/telegram/ui/GroupStickersActivity;->access$100(Lorg/telegram/ui/GroupStickersActivity;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_28
-
-    .line 151
-    iget-object p1, p0, Lorg/telegram/ui/GroupStickersActivity$1;->this$0:Lorg/telegram/ui/GroupStickersActivity;
-
-    invoke-static {p1, v0}, Lorg/telegram/ui/GroupStickersActivity;->access$200(Lorg/telegram/ui/GroupStickersActivity;Z)V
-
-    return-void
-
-    .line 154
-    :cond_28
-    iget-object p1, p0, Lorg/telegram/ui/GroupStickersActivity$1;->this$0:Lorg/telegram/ui/GroupStickersActivity;
-
-    invoke-static {p1}, Lorg/telegram/ui/GroupStickersActivity;->access$300(Lorg/telegram/ui/GroupStickersActivity;)V
-
-    :cond_2d
-    :goto_2d
+    :cond_8
     return-void
 .end method

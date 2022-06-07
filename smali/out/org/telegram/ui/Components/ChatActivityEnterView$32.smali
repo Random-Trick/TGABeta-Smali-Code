@@ -27,12 +27,12 @@
 .method constructor <init>(Lorg/telegram/ui/Components/ChatActivityEnterView;)V
     .registers 2
 
-    .line 3614
+    .line 3646
     iput-object p1, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$32;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3616
+    .line 3648
     new-instance p1, Landroid/graphics/Rect;
 
     invoke-direct {p1}, Landroid/graphics/Rect;-><init>()V
@@ -47,14 +47,14 @@
 .method public onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
     .registers 4
 
-    .line 3620
+    .line 3652
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getActionMasked()I
 
     move-result v0
 
     if-nez v0, :cond_3a
 
-    .line 3621
+    .line 3653
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$32;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$9500(Lorg/telegram/ui/Components/ChatActivityEnterView;)Lorg/telegram/ui/ActionBar/ActionBarPopupWindow;
@@ -75,12 +75,12 @@
 
     if-eqz v0, :cond_3a
 
-    .line 3622
+    .line 3654
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$32;->popupRect:Landroid/graphics/Rect;
 
     invoke-virtual {p1, v0}, Landroid/view/View;->getHitRect(Landroid/graphics/Rect;)V
 
-    .line 3623
+    .line 3655
     iget-object p1, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$32;->popupRect:Landroid/graphics/Rect;
 
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getX()F
@@ -101,7 +101,7 @@
 
     if-nez p1, :cond_3a
 
-    .line 3624
+    .line 3656
     iget-object p1, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$32;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$9500(Lorg/telegram/ui/Components/ChatActivityEnterView;)Lorg/telegram/ui/ActionBar/ActionBarPopupWindow;

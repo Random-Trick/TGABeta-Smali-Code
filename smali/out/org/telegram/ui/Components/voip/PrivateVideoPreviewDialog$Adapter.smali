@@ -129,7 +129,7 @@
 
     invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setScaleType(Landroid/widget/ImageView$ScaleType;)V
 
-    const v2, 0x7f070395
+    const v2, 0x7f0703a3
 
     .line 518
     invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setImageResource(I)V
@@ -166,7 +166,7 @@
 
     invoke-direct {v0, v2}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
-    const v2, 0x7f0e13bc
+    const v2, 0x7f0e148a
 
     const-string v3, "VoipVideoPrivateScreenSharing"
 
@@ -328,7 +328,7 @@
     goto :goto_f7
 
     :cond_f1
-    const p2, 0x7f07017d
+    const p2, 0x7f070154
 
     .line 543
     invoke-virtual {v0, p2}, Landroid/widget/ImageView;->setImageResource(I)V

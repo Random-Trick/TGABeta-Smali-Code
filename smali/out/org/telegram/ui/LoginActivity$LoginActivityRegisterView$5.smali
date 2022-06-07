@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/LoginActivity$LoginActivityRegisterView;Landroid/content/Context;Lorg/telegram/ui/LoginActivity;)V
     .registers 4
 
-    .line 5280
+    .line 5419
     iput-object p1, p0, Lorg/telegram/ui/LoginActivity$LoginActivityRegisterView$5;->this$1:Lorg/telegram/ui/LoginActivity$LoginActivityRegisterView;
 
     invoke-direct {p0, p2}, Lorg/telegram/ui/Components/RadialProgressView;-><init>(Landroid/content/Context;)V
@@ -35,13 +35,13 @@
 .method public setAlpha(F)V
     .registers 2
 
-    .line 5283
+    .line 5422
     invoke-super {p0, p1}, Lorg/telegram/ui/Components/RadialProgressView;->setAlpha(F)V
 
-    .line 5284
+    .line 5423
     iget-object p1, p0, Lorg/telegram/ui/LoginActivity$LoginActivityRegisterView$5;->this$1:Lorg/telegram/ui/LoginActivity$LoginActivityRegisterView;
 
-    invoke-static {p1}, Lorg/telegram/ui/LoginActivity$LoginActivityRegisterView;->access$11300(Lorg/telegram/ui/LoginActivity$LoginActivityRegisterView;)Landroid/view/View;
+    invoke-static {p1}, Lorg/telegram/ui/LoginActivity$LoginActivityRegisterView;->access$12000(Lorg/telegram/ui/LoginActivity$LoginActivityRegisterView;)Landroid/view/View;
 
     move-result-object p1
 

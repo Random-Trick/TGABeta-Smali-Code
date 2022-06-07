@@ -200,37 +200,37 @@
 
     move-result-object v0
 
-    const v1, 0x7f0e0ac8
+    const v5, 0x7f0e0b4f
 
-    const-string v5, "NoOneJoinedYet"
+    const-string v6, "NoOneJoinedYet"
 
-    if-eqz v0, :cond_d9
+    if-eqz v0, :cond_db
 
     .line 100
-    iget-object v6, v0, Lorg/telegram/messenger/ChatObject$Call;->call:Lorg/telegram/tgnet/TLRPC$GroupCall;
+    iget-object v7, v0, Lorg/telegram/messenger/ChatObject$Call;->call:Lorg/telegram/tgnet/TLRPC$GroupCall;
 
-    iget-object v6, v6, Lorg/telegram/tgnet/TLRPC$GroupCall;->title:Ljava/lang/String;
+    iget-object v7, v7, Lorg/telegram/tgnet/TLRPC$GroupCall;->title:Ljava/lang/String;
 
-    invoke-static {v6}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    invoke-static {v7}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
-    move-result v6
+    move-result v7
 
-    if-eqz v6, :cond_ba
+    if-eqz v7, :cond_ba
 
     .line 101
-    iget-object v6, p2, Lorg/telegram/tgnet/TLRPC$Chat;->title:Ljava/lang/String;
+    iget-object v7, p2, Lorg/telegram/tgnet/TLRPC$Chat;->title:Ljava/lang/String;
 
-    invoke-virtual {v3, v6}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    invoke-virtual {v3, v7}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     goto :goto_c1
 
     .line 103
     :cond_ba
-    iget-object v6, v0, Lorg/telegram/messenger/ChatObject$Call;->call:Lorg/telegram/tgnet/TLRPC$GroupCall;
+    iget-object v7, v0, Lorg/telegram/messenger/ChatObject$Call;->call:Lorg/telegram/tgnet/TLRPC$GroupCall;
 
-    iget-object v6, v6, Lorg/telegram/tgnet/TLRPC$GroupCall;->title:Ljava/lang/String;
+    iget-object v7, v7, Lorg/telegram/tgnet/TLRPC$GroupCall;->title:Ljava/lang/String;
 
-    invoke-virtual {v3, v6}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    invoke-virtual {v3, v7}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 105
     :goto_c1
@@ -241,41 +241,43 @@
     if-nez v0, :cond_cf
 
     .line 106
-    invoke-static {v5, v1}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
+    invoke-static {v6, v5}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v0
 
     invoke-virtual {v4, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    goto :goto_e5
+    goto :goto_e7
 
     :cond_cf
-    const-string v1, "Participants"
+    new-array v1, v1, [Ljava/lang/Object;
+
+    const-string v3, "Participants"
 
     .line 108
-    invoke-static {v1, v0}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    invoke-static {v3, v0, v1}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
     invoke-virtual {v4, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    goto :goto_e5
+    goto :goto_e7
 
     .line 111
-    :cond_d9
+    :cond_db
     iget-object v0, p2, Lorg/telegram/tgnet/TLRPC$Chat;->title:Ljava/lang/String;
 
     invoke-virtual {v3, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 112
-    invoke-static {v5, v1}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
+    invoke-static {v6, v5}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v0
 
     invoke-virtual {v4, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 115
-    :goto_e5
+    :goto_e7
     new-instance v0, Lorg/telegram/ui/Components/JoinCallByUrlAlert$BottomSheetCell;
 
     invoke-direct {v0, p1}, Lorg/telegram/ui/Components/JoinCallByUrlAlert$BottomSheetCell;-><init>(Landroid/content/Context;)V
@@ -290,9 +292,9 @@
 
     move-result p1
 
-    if-eqz p1, :cond_101
+    if-eqz p1, :cond_103
 
-    const p1, 0x7f0e12d5
+    const p1, 0x7f0e13a3
 
     const-string p2, "VoipChannelJoinVoiceChatUrl"
 
@@ -303,10 +305,10 @@
 
     invoke-virtual {v0, p1}, Lorg/telegram/ui/Components/JoinCallByUrlAlert$BottomSheetCell;->setText(Ljava/lang/CharSequence;)V
 
-    goto :goto_10d
+    goto :goto_10f
 
-    :cond_101
-    const p1, 0x7f0e1331
+    :cond_103
+    const p1, 0x7f0e13ff
 
     const-string p2, "VoipGroupJoinVoiceChatUrl"
 
@@ -318,7 +320,7 @@
     invoke-virtual {v0, p1}, Lorg/telegram/ui/Components/JoinCallByUrlAlert$BottomSheetCell;->setText(Ljava/lang/CharSequence;)V
 
     .line 122
-    :goto_10d
+    :goto_10f
     invoke-static {v0}, Lorg/telegram/ui/Components/JoinCallByUrlAlert$BottomSheetCell;->access$000(Lorg/telegram/ui/Components/JoinCallByUrlAlert$BottomSheetCell;)Landroid/view/View;
 
     move-result-object p1

@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lorg/telegram/ui/GroupCreateActivity$ContactsAddActivityDelegate;
+.implements Lorg/telegram/ui/Components/RecyclerListView$OnItemClickListener;
 
 
 # instance fields
@@ -22,20 +22,12 @@
 
 
 # virtual methods
-.method public final didSelectUsers(Ljava/util/ArrayList;I)V
+.method public final onItemClick(Landroid/view/View;I)V
     .registers 4
 
     iget-object v0, p0, Lorg/telegram/ui/ProfileActivity$$ExternalSyntheticLambda37;->f$0:Lorg/telegram/ui/ProfileActivity;
 
-    invoke-static {v0, p1, p2}, Lorg/telegram/ui/ProfileActivity;->$r8$lambda$iqZCFAu9Bx68bC8OwobSv6dbxVQ(Lorg/telegram/ui/ProfileActivity;Ljava/util/ArrayList;I)V
-
-    return-void
-.end method
-
-.method public synthetic needAddBot(Lorg/telegram/tgnet/TLRPC$User;)V
-    .registers 2
-
-    invoke-static {p0, p1}, Lorg/telegram/ui/GroupCreateActivity$ContactsAddActivityDelegate$-CC;->$default$needAddBot(Lorg/telegram/ui/GroupCreateActivity$ContactsAddActivityDelegate;Lorg/telegram/tgnet/TLRPC$User;)V
+    invoke-static {v0, p1, p2}, Lorg/telegram/ui/ProfileActivity;->$r8$lambda$nidRf4vfAd1QEvzG2zhC7_c7KJk(Lorg/telegram/ui/ProfileActivity;Landroid/view/View;I)V
 
     return-void
 .end method

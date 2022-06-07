@@ -37,10 +37,10 @@
 .method public constructor <init>()V
     .registers 2
 
-    .line 26207
+    .line 26575
     invoke-direct {p0}, Lorg/telegram/tgnet/TLRPC$PageBlock;-><init>()V
 
-    .line 26214
+    .line 26582
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -55,7 +55,7 @@
 .method public readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
     .registers 7
 
-    .line 26217
+    .line 26585
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
@@ -77,7 +77,7 @@
     :cond_e
     const/4 v1, 0x0
 
-    .line 26218
+    .line 26586
     :goto_f
     iput-boolean v1, p0, Lorg/telegram/tgnet/TLRPC$TL_pageBlockTable;->bordered:Z
 
@@ -92,11 +92,11 @@
     :cond_17
     const/4 v0, 0x0
 
-    .line 26219
+    .line 26587
     :goto_18
     iput-boolean v0, p0, Lorg/telegram/tgnet/TLRPC$TL_pageBlockTable;->striped:Z
 
-    .line 26220
+    .line 26588
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
@@ -107,7 +107,7 @@
 
     iput-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_pageBlockTable;->title:Lorg/telegram/tgnet/TLRPC$RichText;
 
-    .line 26221
+    .line 26589
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
@@ -120,7 +120,7 @@
 
     return-void
 
-    .line 26224
+    .line 26592
     :cond_30
     new-instance p1, Ljava/lang/RuntimeException;
 
@@ -142,7 +142,7 @@
 
     throw p1
 
-    .line 26228
+    .line 26596
     :cond_44
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
@@ -151,7 +151,7 @@
     :goto_48
     if-ge v2, v0, :cond_5d
 
-    .line 26230
+    .line 26598
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v1
@@ -164,7 +164,7 @@
 
     return-void
 
-    .line 26234
+    .line 26602
     :cond_55
     iget-object v3, p0, Lorg/telegram/tgnet/TLRPC$TL_pageBlockTable;->rows:Ljava/util/ArrayList;
 
@@ -181,12 +181,12 @@
 .method public serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
     .registers 5
 
-    .line 26239
+    .line 26607
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_pageBlockTable;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 26240
+    .line 26608
     iget-boolean v0, p0, Lorg/telegram/tgnet/TLRPC$TL_pageBlockTable;->bordered:Z
 
     if-eqz v0, :cond_e
@@ -205,7 +205,7 @@
     :goto_12
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$TL_pageBlockTable;->flags:I
 
-    .line 26241
+    .line 26609
     iget-boolean v1, p0, Lorg/telegram/tgnet/TLRPC$TL_pageBlockTable;->striped:Z
 
     if-eqz v1, :cond_1b
@@ -220,27 +220,27 @@
     :goto_1d
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$TL_pageBlockTable;->flags:I
 
-    .line 26242
+    .line 26610
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 26243
+    .line 26611
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_pageBlockTable;->title:Lorg/telegram/tgnet/TLRPC$RichText;
 
     invoke-virtual {v0, p1}, Lorg/telegram/tgnet/TLObject;->serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
 
     const v0, 0x1cb5c415
 
-    .line 26244
+    .line 26612
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 26245
+    .line 26613
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_pageBlockTable;->rows:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
-    .line 26246
+    .line 26614
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
     const/4 v1, 0x0
@@ -248,7 +248,7 @@
     :goto_37
     if-ge v1, v0, :cond_47
 
-    .line 26248
+    .line 26616
     iget-object v2, p0, Lorg/telegram/tgnet/TLRPC$TL_pageBlockTable;->rows:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;

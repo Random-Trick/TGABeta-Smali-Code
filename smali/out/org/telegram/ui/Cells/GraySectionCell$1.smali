@@ -1,5 +1,5 @@
 .class Lorg/telegram/ui/Cells/GraySectionCell$1;
-.super Landroid/widget/TextView;
+.super Lorg/telegram/ui/Components/AnimatedTextView;
 .source "GraySectionCell.java"
 
 
@@ -15,11 +15,11 @@
 
 
 # direct methods
-.method constructor <init>(Lorg/telegram/ui/Cells/GraySectionCell;Landroid/content/Context;)V
-    .registers 3
+.method constructor <init>(Lorg/telegram/ui/Cells/GraySectionCell;Landroid/content/Context;ZZZ)V
+    .registers 6
 
-    .line 52
-    invoke-direct {p0, p2}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
+    .line 54
+    invoke-direct {p0, p2, p3, p4, p5}, Lorg/telegram/ui/Components/AnimatedTextView;-><init>(Landroid/content/Context;ZZZ)V
 
     return-void
 .end method
@@ -29,7 +29,7 @@
 .method public getAccessibilityClassName()Ljava/lang/CharSequence;
     .registers 2
 
-    .line 55
+    .line 57
     const-class v0, Landroid/widget/Button;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;

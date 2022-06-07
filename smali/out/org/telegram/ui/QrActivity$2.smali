@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/QrActivity;Landroid/content/Context;)V
     .registers 3
 
-    .line 242
+    .line 243
     iput-object p1, p0, Lorg/telegram/ui/QrActivity$2;->this$0:Lorg/telegram/ui/QrActivity;
 
     invoke-direct {p0, p2}, Landroid/view/View;-><init>(Landroid/content/Context;)V
@@ -35,7 +35,7 @@
 .method protected onDraw(Landroid/graphics/Canvas;)V
     .registers 6
 
-    .line 245
+    .line 246
     iget-object v0, p0, Lorg/telegram/ui/QrActivity$2;->this$0:Lorg/telegram/ui/QrActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/QrActivity;->access$800(Lorg/telegram/ui/QrActivity;)Lorg/telegram/ui/Components/MotionBackgroundDrawable;
@@ -46,7 +46,7 @@
 
     if-eqz v0, :cond_1a
 
-    .line 246
+    .line 247
     iget-object v0, p0, Lorg/telegram/ui/QrActivity$2;->this$0:Lorg/telegram/ui/QrActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/QrActivity;->access$800(Lorg/telegram/ui/QrActivity;)Lorg/telegram/ui/Components/MotionBackgroundDrawable;
@@ -63,7 +63,7 @@
 
     invoke-virtual {v0, v1, v1, v2, v3}, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->setBounds(IIII)V
 
-    .line 248
+    .line 249
     :cond_1a
     iget-object v0, p0, Lorg/telegram/ui/QrActivity$2;->this$0:Lorg/telegram/ui/QrActivity;
 
@@ -81,7 +81,7 @@
 
     invoke-virtual {v0, v1, v1, v2, v3}, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->setBounds(IIII)V
 
-    .line 250
+    .line 251
     iget-object v0, p0, Lorg/telegram/ui/QrActivity$2;->this$0:Lorg/telegram/ui/QrActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/QrActivity;->access$800(Lorg/telegram/ui/QrActivity;)Lorg/telegram/ui/Components/MotionBackgroundDrawable;
@@ -90,7 +90,7 @@
 
     if-eqz v0, :cond_3c
 
-    .line 251
+    .line 252
     iget-object v0, p0, Lorg/telegram/ui/QrActivity$2;->this$0:Lorg/telegram/ui/QrActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/QrActivity;->access$800(Lorg/telegram/ui/QrActivity;)Lorg/telegram/ui/Components/MotionBackgroundDrawable;
@@ -99,7 +99,7 @@
 
     invoke-virtual {v0, p1}, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->drawBackground(Landroid/graphics/Canvas;)V
 
-    .line 252
+    .line 253
     :cond_3c
     iget-object v0, p0, Lorg/telegram/ui/QrActivity$2;->this$0:Lorg/telegram/ui/QrActivity;
 
@@ -109,7 +109,7 @@
 
     invoke-virtual {v0, p1}, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->drawBackground(Landroid/graphics/Canvas;)V
 
-    .line 253
+    .line 254
     iget-object v0, p0, Lorg/telegram/ui/QrActivity$2;->this$0:Lorg/telegram/ui/QrActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/QrActivity;->access$800(Lorg/telegram/ui/QrActivity;)Lorg/telegram/ui/Components/MotionBackgroundDrawable;
@@ -118,7 +118,7 @@
 
     if-eqz v0, :cond_56
 
-    .line 254
+    .line 255
     iget-object v0, p0, Lorg/telegram/ui/QrActivity$2;->this$0:Lorg/telegram/ui/QrActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/QrActivity;->access$800(Lorg/telegram/ui/QrActivity;)Lorg/telegram/ui/Components/MotionBackgroundDrawable;
@@ -127,7 +127,7 @@
 
     invoke-virtual {v0, p1}, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->drawPattern(Landroid/graphics/Canvas;)V
 
-    .line 255
+    .line 256
     :cond_56
     iget-object v0, p0, Lorg/telegram/ui/QrActivity$2;->this$0:Lorg/telegram/ui/QrActivity;
 
@@ -137,7 +137,7 @@
 
     invoke-virtual {v0, p1}, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->drawPattern(Landroid/graphics/Canvas;)V
 
-    .line 256
+    .line 257
     invoke-super {p0, p1}, Landroid/view/View;->onDraw(Landroid/graphics/Canvas;)V
 
     return-void

@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lorg/telegram/ui/Components/ReactionsContainerLayout;-><init>(Landroid/content/Context;ILorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)V
+    value = Lorg/telegram/ui/Components/ReactionsContainerLayout;-><init>(Lorg/telegram/ui/ActionBar/BaseFragment;Landroid/content/Context;ILorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/ReactionsContainerLayout;Landroid/content/Context;)V
     .registers 3
 
-    .line 130
+    .line 136
     iput-object p1, p0, Lorg/telegram/ui/Components/ReactionsContainerLayout$2;->this$0:Lorg/telegram/ui/Components/ReactionsContainerLayout;
 
     invoke-direct {p0, p2}, Lorg/telegram/ui/Components/RecyclerListView;-><init>(Landroid/content/Context;)V
@@ -35,7 +35,7 @@
 .method public drawChild(Landroid/graphics/Canvas;Landroid/view/View;J)Z
     .registers 7
 
-    .line 133
+    .line 139
     iget-object v0, p0, Lorg/telegram/ui/Components/ReactionsContainerLayout$2;->this$0:Lorg/telegram/ui/Components/ReactionsContainerLayout;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/ReactionsContainerLayout;->access$100(Lorg/telegram/ui/Components/ReactionsContainerLayout;)Ljava/lang/String;
@@ -72,7 +72,7 @@
 
     return p1
 
-    .line 136
+    .line 142
     :cond_21
     invoke-super {p0, p1, p2, p3, p4}, Landroidx/recyclerview/widget/RecyclerView;->drawChild(Landroid/graphics/Canvas;Landroid/view/View;J)Z
 

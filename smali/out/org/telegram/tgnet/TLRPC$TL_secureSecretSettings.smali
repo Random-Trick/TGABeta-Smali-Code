@@ -25,7 +25,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 33881
+    .line 34333
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -34,7 +34,7 @@
 .method public static TLdeserialize(Lorg/telegram/tgnet/AbstractSerializedData;IZ)Lorg/telegram/tgnet/TLRPC$TL_secureSecretSettings;
     .registers 4
 
-    .line 33889
+    .line 34341
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_secureSecretSettings;->constructor:I
 
     if-eq v0, p1, :cond_1e
@@ -45,7 +45,7 @@
 
     return-object p0
 
-    .line 33891
+    .line 34343
     :cond_8
     new-instance p0, Ljava/lang/RuntimeException;
 
@@ -71,13 +71,13 @@
 
     throw p0
 
-    .line 33896
+    .line 34348
     :cond_1e
     new-instance p1, Lorg/telegram/tgnet/TLRPC$TL_secureSecretSettings;
 
     invoke-direct {p1}, Lorg/telegram/tgnet/TLRPC$TL_secureSecretSettings;-><init>()V
 
-    .line 33897
+    .line 34349
     invoke-virtual {p1, p0, p2}, Lorg/telegram/tgnet/TLRPC$TL_secureSecretSettings;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
     return-object p1
@@ -88,7 +88,7 @@
 .method public readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
     .registers 4
 
-    .line 33902
+    .line 34354
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
@@ -99,14 +99,14 @@
 
     iput-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_secureSecretSettings;->secure_algo:Lorg/telegram/tgnet/TLRPC$SecurePasswordKdfAlgo;
 
-    .line 33903
+    .line 34355
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readByteArray(Z)[B
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_secureSecretSettings;->secure_secret:[B
 
-    .line 33904
+    .line 34356
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt64(Z)J
 
     move-result-wide p1
@@ -119,22 +119,22 @@
 .method public serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
     .registers 4
 
-    .line 33908
+    .line 34360
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_secureSecretSettings;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 33909
+    .line 34361
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_secureSecretSettings;->secure_algo:Lorg/telegram/tgnet/TLRPC$SecurePasswordKdfAlgo;
 
     invoke-virtual {v0, p1}, Lorg/telegram/tgnet/TLObject;->serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
 
-    .line 33910
+    .line 34362
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_secureSecretSettings;->secure_secret:[B
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeByteArray([B)V
 
-    .line 33911
+    .line 34363
     iget-wide v0, p0, Lorg/telegram/tgnet/TLRPC$TL_secureSecretSettings;->secure_secret_id:J
 
     invoke-virtual {p1, v0, v1}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt64(J)V

@@ -35,15 +35,15 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .registers 14
 
-    .line 43
+    .line 42
     invoke-direct {p0, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
     const/4 v0, 0x1
 
-    .line 33
+    .line 32
     iput-boolean v0, p0, Lorg/telegram/ui/Charts/view_data/ChartHeaderView;->showDate:Z
 
-    .line 38
+    .line 37
     new-instance v1, Ljava/text/SimpleDateFormat;
 
     const-string v2, "d MMM yyyy"
@@ -52,19 +52,19 @@
 
     iput-object v1, p0, Lorg/telegram/ui/Charts/view_data/ChartHeaderView;->formatter:Ljava/text/SimpleDateFormat;
 
-    .line 44
+    .line 43
     new-instance v1, Landroid/text/TextPaint;
 
     invoke-direct {v1}, Landroid/text/TextPaint;-><init>()V
 
     const/high16 v2, 0x41600000    # 14.0f
 
-    .line 45
+    .line 44
     invoke-virtual {v1, v2}, Landroid/text/TextPaint;->setTextSize(F)V
 
     const-string v2, "fonts/rmedium.ttf"
 
-    .line 46
+    .line 45
     invoke-static {v2}, Lorg/telegram/messenger/AndroidUtilities;->getTypeface(Ljava/lang/String;)Landroid/graphics/Typeface;
 
     move-result-object v3
@@ -73,7 +73,7 @@
 
     const-string v3, "00 MMM 0000 - 00 MMM 000"
 
-    .line 47
+    .line 46
     invoke-virtual {v1, v3}, Landroid/text/TextPaint;->measureText(Ljava/lang/String;)F
 
     move-result v1
@@ -82,7 +82,7 @@
 
     iput v1, p0, Lorg/telegram/ui/Charts/view_data/ChartHeaderView;->textMargin:I
 
-    .line 49
+    .line 48
     new-instance v1, Landroid/widget/TextView;
 
     invoke-direct {v1, p1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
@@ -91,10 +91,10 @@
 
     const/high16 v3, 0x41700000    # 15.0f
 
-    .line 50
+    .line 49
     invoke-virtual {v1, v0, v3}, Landroid/widget/TextView;->setTextSize(IF)V
 
-    .line 51
+    .line 50
     iget-object v1, p0, Lorg/telegram/ui/Charts/view_data/ChartHeaderView;->title:Landroid/widget/TextView;
 
     invoke-static {v2}, Lorg/telegram/messenger/AndroidUtilities;->getTypeface(Ljava/lang/String;)Landroid/graphics/Typeface;
@@ -103,7 +103,7 @@
 
     invoke-virtual {v1, v4}, Landroid/widget/TextView;->setTypeface(Landroid/graphics/Typeface;)V
 
-    .line 52
+    .line 51
     iget-object v1, p0, Lorg/telegram/ui/Charts/view_data/ChartHeaderView;->title:Landroid/widget/TextView;
 
     iget v4, p0, Lorg/telegram/ui/Charts/view_data/ChartHeaderView;->textMargin:I
@@ -128,31 +128,31 @@
 
     invoke-virtual {p0, v1, v4}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 54
+    .line 53
     new-instance v1, Landroid/widget/TextView;
 
     invoke-direct {v1, p1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
     iput-object v1, p0, Lorg/telegram/ui/Charts/view_data/ChartHeaderView;->back:Landroid/widget/TextView;
 
-    .line 55
+    .line 54
     invoke-virtual {v1, v0, v3}, Landroid/widget/TextView;->setTextSize(IF)V
 
-    .line 56
+    .line 55
     iget-object v1, p0, Lorg/telegram/ui/Charts/view_data/ChartHeaderView;->back:Landroid/widget/TextView;
 
     sget-object v3, Landroid/graphics/Typeface;->DEFAULT_BOLD:Landroid/graphics/Typeface;
 
     invoke-virtual {v1, v3}, Landroid/widget/TextView;->setTypeface(Landroid/graphics/Typeface;)V
 
-    .line 57
+    .line 56
     iget-object v1, p0, Lorg/telegram/ui/Charts/view_data/ChartHeaderView;->back:Landroid/widget/TextView;
 
     const v3, 0x800013
 
     invoke-virtual {v1, v3}, Landroid/widget/TextView;->setGravity(I)V
 
-    .line 58
+    .line 57
     iget-object v1, p0, Lorg/telegram/ui/Charts/view_data/ChartHeaderView;->back:Landroid/widget/TextView;
 
     const/4 v3, -0x2
@@ -173,7 +173,7 @@
 
     invoke-virtual {p0, v1, v3}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 60
+    .line 59
     new-instance v1, Landroid/widget/TextView;
 
     invoke-direct {v1, p1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
@@ -182,10 +182,10 @@
 
     const/high16 v3, 0x41500000    # 13.0f
 
-    .line 61
+    .line 60
     invoke-virtual {v1, v0, v3}, Landroid/widget/TextView;->setTextSize(IF)V
 
-    .line 62
+    .line 61
     iget-object v1, p0, Lorg/telegram/ui/Charts/view_data/ChartHeaderView;->dates:Landroid/widget/TextView;
 
     invoke-static {v2}, Lorg/telegram/messenger/AndroidUtilities;->getTypeface(Ljava/lang/String;)Landroid/graphics/Typeface;
@@ -194,14 +194,14 @@
 
     invoke-virtual {v1, v4}, Landroid/widget/TextView;->setTypeface(Landroid/graphics/Typeface;)V
 
-    .line 63
+    .line 62
     iget-object v1, p0, Lorg/telegram/ui/Charts/view_data/ChartHeaderView;->dates:Landroid/widget/TextView;
 
     const v4, 0x800015
 
     invoke-virtual {v1, v4}, Landroid/widget/TextView;->setGravity(I)V
 
-    .line 64
+    .line 63
     iget-object v1, p0, Lorg/telegram/ui/Charts/view_data/ChartHeaderView;->dates:Landroid/widget/TextView;
 
     const/4 v5, -0x2
@@ -220,17 +220,17 @@
 
     invoke-virtual {p0, v1, v5}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 66
+    .line 65
     new-instance v1, Landroid/widget/TextView;
 
     invoke-direct {v1, p1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
     iput-object v1, p0, Lorg/telegram/ui/Charts/view_data/ChartHeaderView;->datesTmp:Landroid/widget/TextView;
 
-    .line 67
+    .line 66
     invoke-virtual {v1, v0, v3}, Landroid/widget/TextView;->setTextSize(IF)V
 
-    .line 68
+    .line 67
     iget-object p1, p0, Lorg/telegram/ui/Charts/view_data/ChartHeaderView;->datesTmp:Landroid/widget/TextView;
 
     invoke-static {v2}, Lorg/telegram/messenger/AndroidUtilities;->getTypeface(Ljava/lang/String;)Landroid/graphics/Typeface;
@@ -239,12 +239,12 @@
 
     invoke-virtual {p1, v0}, Landroid/widget/TextView;->setTypeface(Landroid/graphics/Typeface;)V
 
-    .line 69
+    .line 68
     iget-object p1, p0, Lorg/telegram/ui/Charts/view_data/ChartHeaderView;->datesTmp:Landroid/widget/TextView;
 
     invoke-virtual {p1, v4}, Landroid/widget/TextView;->setGravity(I)V
 
-    .line 70
+    .line 69
     iget-object p1, p0, Lorg/telegram/ui/Charts/view_data/ChartHeaderView;->datesTmp:Landroid/widget/TextView;
 
     const/4 v0, -0x2
@@ -267,24 +267,24 @@
 
     invoke-virtual {p0, p1, v0}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 71
+    .line 70
     iget-object p1, p0, Lorg/telegram/ui/Charts/view_data/ChartHeaderView;->datesTmp:Landroid/widget/TextView;
 
     const/16 v0, 0x8
 
     invoke-virtual {p1, v0}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 74
+    .line 73
     iget-object p1, p0, Lorg/telegram/ui/Charts/view_data/ChartHeaderView;->back:Landroid/widget/TextView;
 
     invoke-virtual {p1, v0}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 75
+    .line 74
     iget-object p1, p0, Lorg/telegram/ui/Charts/view_data/ChartHeaderView;->back:Landroid/widget/TextView;
 
     const-string v0, "ZoomOut"
 
-    const v1, 0x7f0e141c
+    const v1, 0x7f0e14eb
 
     invoke-static {v0, v1}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
@@ -292,12 +292,12 @@
 
     invoke-virtual {p1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 76
+    .line 75
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
 
     move-result-object p1
 
-    const v0, 0x7f0703d7
+    const v0, 0x7f070327
 
     invoke-static {p1, v0}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
@@ -305,14 +305,14 @@
 
     iput-object p1, p0, Lorg/telegram/ui/Charts/view_data/ChartHeaderView;->zoomIcon:Landroid/graphics/drawable/Drawable;
 
-    .line 77
+    .line 76
     iget-object v0, p0, Lorg/telegram/ui/Charts/view_data/ChartHeaderView;->back:Landroid/widget/TextView;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, p1, v1, v1, v1}, Landroid/widget/TextView;->setCompoundDrawablesWithIntrinsicBounds(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
 
-    .line 78
+    .line 77
     iget-object p1, p0, Lorg/telegram/ui/Charts/view_data/ChartHeaderView;->back:Landroid/widget/TextView;
 
     const/high16 v0, 0x40800000    # 4.0f
@@ -323,7 +323,7 @@
 
     invoke-virtual {p1, v1}, Landroid/widget/TextView;->setCompoundDrawablePadding(I)V
 
-    .line 79
+    .line 78
     iget-object p1, p0, Lorg/telegram/ui/Charts/view_data/ChartHeaderView;->back:Landroid/widget/TextView;
 
     const/high16 v1, 0x41000000    # 8.0f
@@ -346,7 +346,7 @@
 
     invoke-virtual {p1, v2, v3, v1, v0}, Landroid/widget/TextView;->setPadding(IIII)V
 
-    .line 80
+    .line 79
     iget-object p1, p0, Lorg/telegram/ui/Charts/view_data/ChartHeaderView;->back:Landroid/widget/TextView;
 
     const-string v0, "featuredStickers_removeButtonText"
@@ -361,7 +361,7 @@
 
     invoke-virtual {p1, v0}, Landroid/widget/TextView;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    .line 82
+    .line 81
     iget-object p1, p0, Lorg/telegram/ui/Charts/view_data/ChartHeaderView;->datesTmp:Landroid/widget/TextView;
 
     new-instance v0, Lorg/telegram/ui/Charts/view_data/ChartHeaderView$$ExternalSyntheticLambda0;
@@ -370,7 +370,7 @@
 
     invoke-virtual {p1, v0}, Landroid/widget/TextView;->addOnLayoutChangeListener(Landroid/view/View$OnLayoutChangeListener;)V
 
-    .line 86
+    .line 85
     invoke-virtual {p0}, Lorg/telegram/ui/Charts/view_data/ChartHeaderView;->recolor()V
 
     return-void
@@ -379,7 +379,7 @@
 .method private synthetic lambda$new$0(Landroid/view/View;IIIIIIII)V
     .registers 10
 
-    .line 83
+    .line 82
     iget-object p1, p0, Lorg/telegram/ui/Charts/view_data/ChartHeaderView;->datesTmp:Landroid/widget/TextView;
 
     invoke-virtual {p1}, Landroid/widget/TextView;->getMeasuredWidth()I
@@ -394,7 +394,7 @@
 
     invoke-virtual {p1, p2}, Landroid/widget/TextView;->setPivotX(F)V
 
-    .line 84
+    .line 83
     iget-object p1, p0, Lorg/telegram/ui/Charts/view_data/ChartHeaderView;->dates:Landroid/widget/TextView;
 
     invoke-virtual {p1}, Landroid/widget/TextView;->getMeasuredWidth()I
@@ -415,7 +415,7 @@
 .method public recolor()V
     .registers 4
 
-    .line 91
+    .line 90
     iget-object v0, p0, Lorg/telegram/ui/Charts/view_data/ChartHeaderView;->title:Landroid/widget/TextView;
 
     const-string v1, "dialogTextBlack"
@@ -426,7 +426,7 @@
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 92
+    .line 91
     iget-object v0, p0, Lorg/telegram/ui/Charts/view_data/ChartHeaderView;->dates:Landroid/widget/TextView;
 
     invoke-static {v1}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
@@ -435,7 +435,7 @@
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 93
+    .line 92
     iget-object v0, p0, Lorg/telegram/ui/Charts/view_data/ChartHeaderView;->datesTmp:Landroid/widget/TextView;
 
     invoke-static {v1}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
@@ -444,7 +444,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 94
+    .line 93
     iget-object v0, p0, Lorg/telegram/ui/Charts/view_data/ChartHeaderView;->back:Landroid/widget/TextView;
 
     const-string v1, "statisticChartBackZoomColor"
@@ -455,7 +455,7 @@
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 95
+    .line 94
     iget-object v0, p0, Lorg/telegram/ui/Charts/view_data/ChartHeaderView;->zoomIcon:Landroid/graphics/drawable/Drawable;
 
     invoke-static {v1}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
@@ -472,26 +472,26 @@
 .method public setDates(JJ)V
     .registers 10
 
-    .line 99
+    .line 98
     iget-boolean v0, p0, Lorg/telegram/ui/Charts/view_data/ChartHeaderView;->showDate:Z
 
     if-nez v0, :cond_11
 
-    .line 100
+    .line 99
     iget-object p1, p0, Lorg/telegram/ui/Charts/view_data/ChartHeaderView;->dates:Landroid/widget/TextView;
 
     const/16 p2, 0x8
 
     invoke-virtual {p1, p2}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 101
+    .line 100
     iget-object p1, p0, Lorg/telegram/ui/Charts/view_data/ChartHeaderView;->datesTmp:Landroid/widget/TextView;
 
     invoke-virtual {p1, p2}, Landroid/widget/TextView;->setVisibility(I)V
 
     return-void
 
-    .line 104
+    .line 103
     :cond_11
     iget-boolean v0, p0, Lorg/telegram/ui/Charts/view_data/ChartHeaderView;->useWeekInterval:Z
 
@@ -510,7 +510,7 @@
 
     if-ltz v4, :cond_4d
 
-    .line 109
+    .line 108
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -549,7 +549,7 @@
 
     goto :goto_58
 
-    .line 111
+    .line 110
     :cond_4d
     iget-object p3, p0, Lorg/telegram/ui/Charts/view_data/ChartHeaderView;->formatter:Ljava/text/SimpleDateFormat;
 
@@ -561,13 +561,13 @@
 
     move-result-object p1
 
-    .line 114
+    .line 113
     :goto_58
     iget-object p2, p0, Lorg/telegram/ui/Charts/view_data/ChartHeaderView;->dates:Landroid/widget/TextView;
 
     invoke-virtual {p2, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 115
+    .line 114
     iget-object p1, p0, Lorg/telegram/ui/Charts/view_data/ChartHeaderView;->dates:Landroid/widget/TextView;
 
     const/4 p2, 0x0
@@ -580,7 +580,7 @@
 .method public setTitle(Ljava/lang/String;)V
     .registers 3
 
-    .line 119
+    .line 118
     iget-object v0, p0, Lorg/telegram/ui/Charts/view_data/ChartHeaderView;->title:Landroid/widget/TextView;
 
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
@@ -591,7 +591,7 @@
 .method public setUseWeekInterval(Z)V
     .registers 2
 
-    .line 196
+    .line 195
     iput-boolean p1, p0, Lorg/telegram/ui/Charts/view_data/ChartHeaderView;->useWeekInterval:Z
 
     return-void
@@ -600,24 +600,24 @@
 .method public showDate(Z)V
     .registers 9
 
-    .line 200
+    .line 199
     iput-boolean p1, p0, Lorg/telegram/ui/Charts/view_data/ChartHeaderView;->showDate:Z
 
     if-nez p1, :cond_2b
 
-    .line 202
+    .line 201
     iget-object p1, p0, Lorg/telegram/ui/Charts/view_data/ChartHeaderView;->datesTmp:Landroid/widget/TextView;
 
     const/16 v0, 0x8
 
     invoke-virtual {p1, v0}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 203
+    .line 202
     iget-object p1, p0, Lorg/telegram/ui/Charts/view_data/ChartHeaderView;->dates:Landroid/widget/TextView;
 
     invoke-virtual {p1, v0}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 204
+    .line 203
     iget-object p1, p0, Lorg/telegram/ui/Charts/view_data/ChartHeaderView;->title:Landroid/widget/TextView;
 
     const/4 v0, -0x2
@@ -640,14 +640,14 @@
 
     invoke-virtual {p1, v0}, Landroid/widget/TextView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 205
+    .line 204
     iget-object p1, p0, Lorg/telegram/ui/Charts/view_data/ChartHeaderView;->title:Landroid/widget/TextView;
 
     invoke-virtual {p1}, Landroid/widget/TextView;->requestLayout()V
 
     goto :goto_41
 
-    .line 207
+    .line 206
     :cond_2b
     iget-object p1, p0, Lorg/telegram/ui/Charts/view_data/ChartHeaderView;->title:Landroid/widget/TextView;
 
@@ -680,7 +680,7 @@
 .method public zoomOut(Lorg/telegram/ui/Charts/BaseChartView;Z)V
     .registers 7
 
-    .line 162
+    .line 161
     invoke-virtual {p1}, Lorg/telegram/ui/Charts/BaseChartView;->getStartDate()J
 
     move-result-wide v0
@@ -697,34 +697,34 @@
 
     if-eqz p2, :cond_86
 
-    .line 164
+    .line 163
     iget-object p2, p0, Lorg/telegram/ui/Charts/view_data/ChartHeaderView;->title:Landroid/widget/TextView;
 
     invoke-virtual {p2, p1}, Landroid/widget/TextView;->setAlpha(F)V
 
-    .line 165
+    .line 164
     iget-object p2, p0, Lorg/telegram/ui/Charts/view_data/ChartHeaderView;->title:Landroid/widget/TextView;
 
     const v1, 0x3e99999a    # 0.3f
 
     invoke-virtual {p2, v1}, Landroid/widget/TextView;->setScaleX(F)V
 
-    .line 166
+    .line 165
     iget-object p2, p0, Lorg/telegram/ui/Charts/view_data/ChartHeaderView;->title:Landroid/widget/TextView;
 
     invoke-virtual {p2, v1}, Landroid/widget/TextView;->setScaleY(F)V
 
-    .line 167
+    .line 166
     iget-object p2, p0, Lorg/telegram/ui/Charts/view_data/ChartHeaderView;->title:Landroid/widget/TextView;
 
     invoke-virtual {p2, p1}, Landroid/widget/TextView;->setPivotX(F)V
 
-    .line 168
+    .line 167
     iget-object p2, p0, Lorg/telegram/ui/Charts/view_data/ChartHeaderView;->title:Landroid/widget/TextView;
 
     invoke-virtual {p2, p1}, Landroid/widget/TextView;->setPivotY(F)V
 
-    .line 169
+    .line 168
     iget-object p2, p0, Lorg/telegram/ui/Charts/view_data/ChartHeaderView;->title:Landroid/widget/TextView;
 
     invoke-virtual {p2}, Landroid/widget/TextView;->animate()Landroid/view/ViewPropertyAnimator;
@@ -735,52 +735,52 @@
 
     move-result-object p2
 
-    .line 170
+    .line 169
     invoke-virtual {p2, v0}, Landroid/view/ViewPropertyAnimator;->scaleY(F)Landroid/view/ViewPropertyAnimator;
 
     move-result-object p2
 
-    .line 171
+    .line 170
     invoke-virtual {p2, v0}, Landroid/view/ViewPropertyAnimator;->scaleX(F)Landroid/view/ViewPropertyAnimator;
 
     move-result-object p2
 
     const-wide/16 v2, 0xc8
 
-    .line 172
+    .line 171
     invoke-virtual {p2, v2, v3}, Landroid/view/ViewPropertyAnimator;->setDuration(J)Landroid/view/ViewPropertyAnimator;
 
     move-result-object p2
 
-    .line 173
+    .line 172
     invoke-virtual {p2}, Landroid/view/ViewPropertyAnimator;->start()V
 
-    .line 175
+    .line 174
     iget-object p2, p0, Lorg/telegram/ui/Charts/view_data/ChartHeaderView;->back:Landroid/widget/TextView;
 
     invoke-virtual {p2, v0}, Landroid/widget/TextView;->setAlpha(F)V
 
-    .line 176
+    .line 175
     iget-object p2, p0, Lorg/telegram/ui/Charts/view_data/ChartHeaderView;->back:Landroid/widget/TextView;
 
     invoke-virtual {p2, p1}, Landroid/widget/TextView;->setTranslationX(F)V
 
-    .line 177
+    .line 176
     iget-object p2, p0, Lorg/telegram/ui/Charts/view_data/ChartHeaderView;->back:Landroid/widget/TextView;
 
     invoke-virtual {p2, p1}, Landroid/widget/TextView;->setTranslationY(F)V
 
-    .line 178
+    .line 177
     iget-object p2, p0, Lorg/telegram/ui/Charts/view_data/ChartHeaderView;->back:Landroid/widget/TextView;
 
     invoke-virtual {p2, v0}, Landroid/widget/TextView;->setScaleX(F)V
 
-    .line 179
+    .line 178
     iget-object p2, p0, Lorg/telegram/ui/Charts/view_data/ChartHeaderView;->back:Landroid/widget/TextView;
 
     invoke-virtual {p2, v0}, Landroid/widget/TextView;->setScaleY(F)V
 
-    .line 180
+    .line 179
     iget-object p2, p0, Lorg/telegram/ui/Charts/view_data/ChartHeaderView;->back:Landroid/widget/TextView;
 
     const/high16 v0, 0x42200000    # 40.0f
@@ -793,55 +793,55 @@
 
     invoke-virtual {p2, v0}, Landroid/widget/TextView;->setPivotY(F)V
 
-    .line 181
+    .line 180
     iget-object p2, p0, Lorg/telegram/ui/Charts/view_data/ChartHeaderView;->back:Landroid/widget/TextView;
 
     invoke-virtual {p2}, Landroid/widget/TextView;->animate()Landroid/view/ViewPropertyAnimator;
 
     move-result-object p2
 
-    .line 182
+    .line 181
     invoke-virtual {p2, p1}, Landroid/view/ViewPropertyAnimator;->alpha(F)Landroid/view/ViewPropertyAnimator;
 
     move-result-object p1
 
-    .line 183
+    .line 182
     invoke-virtual {p1, v1}, Landroid/view/ViewPropertyAnimator;->scaleY(F)Landroid/view/ViewPropertyAnimator;
 
     move-result-object p1
 
-    .line 184
+    .line 183
     invoke-virtual {p1, v1}, Landroid/view/ViewPropertyAnimator;->scaleX(F)Landroid/view/ViewPropertyAnimator;
 
     move-result-object p1
 
-    .line 185
+    .line 184
     invoke-virtual {p1, v2, v3}, Landroid/view/ViewPropertyAnimator;->setDuration(J)Landroid/view/ViewPropertyAnimator;
 
     move-result-object p1
 
-    .line 186
+    .line 185
     invoke-virtual {p1}, Landroid/view/ViewPropertyAnimator;->start()V
 
     goto :goto_9a
 
-    .line 188
+    .line 187
     :cond_86
     iget-object p2, p0, Lorg/telegram/ui/Charts/view_data/ChartHeaderView;->title:Landroid/widget/TextView;
 
     invoke-virtual {p2, v0}, Landroid/widget/TextView;->setAlpha(F)V
 
-    .line 189
+    .line 188
     iget-object p2, p0, Lorg/telegram/ui/Charts/view_data/ChartHeaderView;->title:Landroid/widget/TextView;
 
     invoke-virtual {p2, v0}, Landroid/widget/TextView;->setScaleX(F)V
 
-    .line 190
+    .line 189
     iget-object p2, p0, Lorg/telegram/ui/Charts/view_data/ChartHeaderView;->title:Landroid/widget/TextView;
 
     invoke-virtual {p2, v0}, Landroid/widget/TextView;->setScaleY(F)V
 
-    .line 191
+    .line 190
     iget-object p2, p0, Lorg/telegram/ui/Charts/view_data/ChartHeaderView;->back:Landroid/widget/TextView;
 
     invoke-virtual {p2, p1}, Landroid/widget/TextView;->setAlpha(F)V
@@ -853,10 +853,10 @@
 .method public zoomTo(Lorg/telegram/ui/Charts/BaseChartView;JZ)V
     .registers 7
 
-    .line 123
+    .line 122
     invoke-virtual {p0, p2, p3, p2, p3}, Lorg/telegram/ui/Charts/view_data/ChartHeaderView;->setDates(JJ)V
 
-    .line 124
+    .line 123
     iget-object p1, p0, Lorg/telegram/ui/Charts/view_data/ChartHeaderView;->back:Landroid/widget/TextView;
 
     const/4 p2, 0x0
@@ -869,29 +869,29 @@
 
     if-eqz p4, :cond_89
 
-    .line 127
+    .line 126
     iget-object p3, p0, Lorg/telegram/ui/Charts/view_data/ChartHeaderView;->back:Landroid/widget/TextView;
 
     invoke-virtual {p3, p2}, Landroid/widget/TextView;->setAlpha(F)V
 
-    .line 128
+    .line 127
     iget-object p3, p0, Lorg/telegram/ui/Charts/view_data/ChartHeaderView;->back:Landroid/widget/TextView;
 
     const p4, 0x3e99999a    # 0.3f
 
     invoke-virtual {p3, p4}, Landroid/widget/TextView;->setScaleX(F)V
 
-    .line 129
+    .line 128
     iget-object p3, p0, Lorg/telegram/ui/Charts/view_data/ChartHeaderView;->back:Landroid/widget/TextView;
 
     invoke-virtual {p3, p4}, Landroid/widget/TextView;->setScaleY(F)V
 
-    .line 130
+    .line 129
     iget-object p3, p0, Lorg/telegram/ui/Charts/view_data/ChartHeaderView;->back:Landroid/widget/TextView;
 
     invoke-virtual {p3, p2}, Landroid/widget/TextView;->setPivotX(F)V
 
-    .line 131
+    .line 130
     iget-object p3, p0, Lorg/telegram/ui/Charts/view_data/ChartHeaderView;->back:Landroid/widget/TextView;
 
     const/high16 v0, 0x42200000    # 40.0f
@@ -904,7 +904,7 @@
 
     invoke-virtual {p3, v0}, Landroid/widget/TextView;->setPivotY(F)V
 
-    .line 132
+    .line 131
     iget-object p3, p0, Lorg/telegram/ui/Charts/view_data/ChartHeaderView;->back:Landroid/widget/TextView;
 
     invoke-virtual {p3}, Landroid/widget/TextView;->animate()Landroid/view/ViewPropertyAnimator;
@@ -915,120 +915,120 @@
 
     move-result-object p3
 
-    .line 133
+    .line 132
     invoke-virtual {p3, p1}, Landroid/view/ViewPropertyAnimator;->scaleY(F)Landroid/view/ViewPropertyAnimator;
 
     move-result-object p3
 
-    .line 134
+    .line 133
     invoke-virtual {p3, p1}, Landroid/view/ViewPropertyAnimator;->scaleX(F)Landroid/view/ViewPropertyAnimator;
 
     move-result-object p3
 
     const-wide/16 v0, 0xc8
 
-    .line 135
+    .line 134
     invoke-virtual {p3, v0, v1}, Landroid/view/ViewPropertyAnimator;->setDuration(J)Landroid/view/ViewPropertyAnimator;
 
     move-result-object p3
 
-    .line 136
+    .line 135
     invoke-virtual {p3}, Landroid/view/ViewPropertyAnimator;->start()V
 
-    .line 138
+    .line 137
     iget-object p3, p0, Lorg/telegram/ui/Charts/view_data/ChartHeaderView;->title:Landroid/widget/TextView;
 
     invoke-virtual {p3, p1}, Landroid/widget/TextView;->setAlpha(F)V
 
-    .line 139
+    .line 138
     iget-object p3, p0, Lorg/telegram/ui/Charts/view_data/ChartHeaderView;->title:Landroid/widget/TextView;
 
     invoke-virtual {p3, p2}, Landroid/widget/TextView;->setTranslationX(F)V
 
-    .line 140
+    .line 139
     iget-object p3, p0, Lorg/telegram/ui/Charts/view_data/ChartHeaderView;->title:Landroid/widget/TextView;
 
     invoke-virtual {p3, p2}, Landroid/widget/TextView;->setTranslationY(F)V
 
-    .line 141
+    .line 140
     iget-object p3, p0, Lorg/telegram/ui/Charts/view_data/ChartHeaderView;->title:Landroid/widget/TextView;
 
     invoke-virtual {p3, p1}, Landroid/widget/TextView;->setScaleX(F)V
 
-    .line 142
+    .line 141
     iget-object p3, p0, Lorg/telegram/ui/Charts/view_data/ChartHeaderView;->title:Landroid/widget/TextView;
 
     invoke-virtual {p3, p1}, Landroid/widget/TextView;->setScaleY(F)V
 
-    .line 143
+    .line 142
     iget-object p1, p0, Lorg/telegram/ui/Charts/view_data/ChartHeaderView;->title:Landroid/widget/TextView;
 
     invoke-virtual {p1, p2}, Landroid/widget/TextView;->setPivotX(F)V
 
-    .line 144
+    .line 143
     iget-object p1, p0, Lorg/telegram/ui/Charts/view_data/ChartHeaderView;->title:Landroid/widget/TextView;
 
     invoke-virtual {p1, p2}, Landroid/widget/TextView;->setPivotY(F)V
 
-    .line 145
+    .line 144
     iget-object p1, p0, Lorg/telegram/ui/Charts/view_data/ChartHeaderView;->title:Landroid/widget/TextView;
 
     invoke-virtual {p1}, Landroid/widget/TextView;->animate()Landroid/view/ViewPropertyAnimator;
 
     move-result-object p1
 
-    .line 146
+    .line 145
     invoke-virtual {p1, p2}, Landroid/view/ViewPropertyAnimator;->alpha(F)Landroid/view/ViewPropertyAnimator;
 
     move-result-object p1
 
-    .line 147
+    .line 146
     invoke-virtual {p1, p4}, Landroid/view/ViewPropertyAnimator;->scaleY(F)Landroid/view/ViewPropertyAnimator;
 
     move-result-object p1
 
-    .line 148
+    .line 147
     invoke-virtual {p1, p4}, Landroid/view/ViewPropertyAnimator;->scaleX(F)Landroid/view/ViewPropertyAnimator;
 
     move-result-object p1
 
-    .line 149
+    .line 148
     invoke-virtual {p1, v0, v1}, Landroid/view/ViewPropertyAnimator;->setDuration(J)Landroid/view/ViewPropertyAnimator;
 
     move-result-object p1
 
-    .line 150
+    .line 149
     invoke-virtual {p1}, Landroid/view/ViewPropertyAnimator;->start()V
 
     goto :goto_a7
 
-    .line 152
+    .line 151
     :cond_89
     iget-object p3, p0, Lorg/telegram/ui/Charts/view_data/ChartHeaderView;->back:Landroid/widget/TextView;
 
     invoke-virtual {p3, p1}, Landroid/widget/TextView;->setAlpha(F)V
 
-    .line 153
+    .line 152
     iget-object p3, p0, Lorg/telegram/ui/Charts/view_data/ChartHeaderView;->back:Landroid/widget/TextView;
 
     invoke-virtual {p3, p2}, Landroid/widget/TextView;->setTranslationX(F)V
 
-    .line 154
+    .line 153
     iget-object p3, p0, Lorg/telegram/ui/Charts/view_data/ChartHeaderView;->back:Landroid/widget/TextView;
 
     invoke-virtual {p3, p2}, Landroid/widget/TextView;->setTranslationY(F)V
 
-    .line 155
+    .line 154
     iget-object p3, p0, Lorg/telegram/ui/Charts/view_data/ChartHeaderView;->back:Landroid/widget/TextView;
 
     invoke-virtual {p3, p1}, Landroid/widget/TextView;->setScaleX(F)V
 
-    .line 156
+    .line 155
     iget-object p3, p0, Lorg/telegram/ui/Charts/view_data/ChartHeaderView;->back:Landroid/widget/TextView;
 
     invoke-virtual {p3, p1}, Landroid/widget/TextView;->setScaleY(F)V
 
-    .line 157
+    .line 156
     iget-object p1, p0, Lorg/telegram/ui/Charts/view_data/ChartHeaderView;->title:Landroid/widget/TextView;
 
     invoke-virtual {p1, p2}, Landroid/widget/TextView;->setAlpha(F)V

@@ -25,7 +25,7 @@
 .method private constructor <init>(Lorg/telegram/ui/ThemeActivity;)V
     .registers 2
 
-    .line 209
+    .line 207
     iput-object p1, p0, Lorg/telegram/ui/ThemeActivity$GpsLocationListener;->this$0:Lorg/telegram/ui/ThemeActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,7 +36,7 @@
 .method synthetic constructor <init>(Lorg/telegram/ui/ThemeActivity;Lorg/telegram/ui/ThemeActivity$1;)V
     .registers 3
 
-    .line 209
+    .line 207
     invoke-direct {p0, p1}, Lorg/telegram/ui/ThemeActivity$GpsLocationListener;-><init>(Lorg/telegram/ui/ThemeActivity;)V
 
     return-void
@@ -51,13 +51,13 @@
 
     return-void
 
-    .line 216
+    .line 214
     :cond_3
     iget-object v0, p0, Lorg/telegram/ui/ThemeActivity$GpsLocationListener;->this$0:Lorg/telegram/ui/ThemeActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/ThemeActivity;->access$100(Lorg/telegram/ui/ThemeActivity;)V
 
-    .line 217
+    .line 215
     iget-object v0, p0, Lorg/telegram/ui/ThemeActivity$GpsLocationListener;->this$0:Lorg/telegram/ui/ThemeActivity;
 
     const/4 v1, 0x0

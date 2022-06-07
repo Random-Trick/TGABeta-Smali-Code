@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/GroupCallActivity;)V
     .registers 2
 
-    .line 6614
+    .line 6619
     iput-object p1, p0, Lorg/telegram/ui/GroupCallActivity$50;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -35,7 +35,7 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .registers 3
 
-    .line 6617
+    .line 6622
     iget-object p1, p0, Lorg/telegram/ui/GroupCallActivity$50;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     const/4 v0, 0x0

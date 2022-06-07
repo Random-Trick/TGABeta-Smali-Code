@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/SlideChooseView;)V
     .registers 2
 
-    .line 63
+    .line 79
     iput-object p1, p0, Lorg/telegram/ui/Components/SlideChooseView$1;->this$0:Lorg/telegram/ui/Components/SlideChooseView;
 
     invoke-direct {p0}, Lorg/telegram/ui/Components/IntSeekBarAccessibilityDelegate;-><init>()V
@@ -35,7 +35,7 @@
 .method protected getContentDescription(Landroid/view/View;)Ljava/lang/CharSequence;
     .registers 3
 
-    .line 81
+    .line 97
     iget-object p1, p0, Lorg/telegram/ui/Components/SlideChooseView$1;->this$0:Lorg/telegram/ui/Components/SlideChooseView;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/SlideChooseView;->access$000(Lorg/telegram/ui/Components/SlideChooseView;)I
@@ -78,7 +78,7 @@
 .method protected getMaxValue()I
     .registers 2
 
-    .line 76
+    .line 92
     iget-object v0, p0, Lorg/telegram/ui/Components/SlideChooseView$1;->this$0:Lorg/telegram/ui/Components/SlideChooseView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/SlideChooseView;->access$200(Lorg/telegram/ui/Components/SlideChooseView;)[Ljava/lang/String;
@@ -95,7 +95,7 @@
 .method protected getProgress()I
     .registers 2
 
-    .line 66
+    .line 82
     iget-object v0, p0, Lorg/telegram/ui/Components/SlideChooseView$1;->this$0:Lorg/telegram/ui/Components/SlideChooseView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/SlideChooseView;->access$000(Lorg/telegram/ui/Components/SlideChooseView;)I
@@ -108,7 +108,7 @@
 .method protected setProgress(I)V
     .registers 3
 
-    .line 71
+    .line 87
     iget-object v0, p0, Lorg/telegram/ui/Components/SlideChooseView$1;->this$0:Lorg/telegram/ui/Components/SlideChooseView;
 
     invoke-static {v0, p1}, Lorg/telegram/ui/Components/SlideChooseView;->access$100(Lorg/telegram/ui/Components/SlideChooseView;I)V

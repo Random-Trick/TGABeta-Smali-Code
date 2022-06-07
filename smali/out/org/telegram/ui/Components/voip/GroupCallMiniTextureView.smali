@@ -347,7 +347,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f0700a6
+    const v4, 0x7f070089
 
     const/4 v9, 0x0
 
@@ -409,7 +409,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f070395
+    const v3, 0x7f0703a3
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -483,7 +483,7 @@
 
     const-string v10, "VoipVideoOnPause"
 
-    const v14, 0x7f0e13bb
+    const v14, 0x7f0e1489    # 1.88857E38f
 
     .line 190
     invoke-static {v10, v14}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -499,7 +499,7 @@
 
     const-string v3, "VoipVideoScreenSharingTwoLines"
 
-    const v12, 0x7f0e13be
+    const v12, 0x7f0e148c
 
     invoke-static {v3, v12}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
@@ -549,9 +549,13 @@
 
     iget v0, v0, Lorg/telegram/messenger/MessagesController;->groupCallVideoMaxParticipants:I
 
+    const/4 v3, 0x0
+
+    new-array v12, v3, [Ljava/lang/Object;
+
     const-string v3, "Participants"
 
-    invoke-static {v3, v0}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    invoke-static {v3, v0, v12}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -572,7 +576,7 @@
 
     const-string v0, "VoipVideoNotAvailable"
 
-    const v5, 0x7f0e13b9
+    const v5, 0x7f0e1487
 
     invoke-static {v0, v5, v4}, Lorg/telegram/messenger/LocaleController;->formatString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
@@ -592,7 +596,7 @@
 
     const-string v0, "VoipVideoScreenSharing"
 
-    const v3, 0x7f0e13bd
+    const v3, 0x7f0e148b
 
     .line 195
     invoke-static {v0, v3}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -628,11 +632,13 @@
 
     const/16 v19, 0x0
 
-    move-object/from16 v20, p3
+    const/16 v20, 0x0
+
+    move-object/from16 v21, p3
 
     move-object/from16 v29, v4
 
-    move/from16 v4, v19
+    move/from16 v4, v20
 
     const/16 v19, 0x1
 
@@ -922,7 +928,7 @@
 
     move-result-object v7
 
-    const v8, 0x7f070427
+    const v8, 0x7f070408
 
     invoke-static {v7, v8}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
@@ -969,7 +975,7 @@
 
     const-string v8, "VoipVideoScreenStopSharing"
 
-    const v9, 0x7f0e13bf
+    const v9, 0x7f0e148d
 
     .line 546
     invoke-static {v8, v9}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -1104,16 +1110,16 @@
     invoke-virtual {v1, v4}, Landroid/widget/TextView;->setAlpha(F)V
 
     .line 568
-    invoke-static/range {v20 .. v20}, Lorg/telegram/messenger/ChatObject;->canManageCalls(Lorg/telegram/tgnet/TLRPC$Chat;)Z
+    invoke-static/range {v21 .. v21}, Lorg/telegram/messenger/ChatObject;->canManageCalls(Lorg/telegram/tgnet/TLRPC$Chat;)Z
 
     move-result v1
 
-    if-eqz v1, :cond_341
+    if-eqz v1, :cond_346
 
     .line 569
     iget-object v1, v0, Lorg/telegram/ui/Components/voip/GroupCallMiniTextureView;->noRtmpStreamTextView:Landroid/widget/TextView;
 
-    const v2, 0x7f0e0ad9
+    const v2, 0x7f0e0b62
 
     invoke-static {v2}, Lorg/telegram/messenger/LocaleController;->getString(I)Ljava/lang/String;
 
@@ -1125,17 +1131,17 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    goto :goto_35b
+    goto :goto_360
 
     .line 571
-    :cond_341
+    :cond_346
     iget-object v1, v0, Lorg/telegram/ui/Components/voip/GroupCallMiniTextureView;->noRtmpStreamTextView:Landroid/widget/TextView;
 
-    const v3, 0x7f0e0ada
+    const v3, 0x7f0e0b63
 
     new-array v4, v5, [Ljava/lang/Object;
 
-    move-object/from16 v5, v20
+    move-object/from16 v5, v21
 
     iget-object v5, v5, Lorg/telegram/tgnet/TLRPC$Chat;->title:Ljava/lang/String;
 
@@ -1154,7 +1160,7 @@
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 573
-    :goto_35b
+    :goto_360
     iget-object v1, v0, Lorg/telegram/ui/Components/voip/GroupCallMiniTextureView;->noRtmpStreamTextView:Landroid/widget/TextView;
 
     invoke-static {v10, v10, v12}, Lorg/telegram/ui/Components/LayoutHelper;->createFrame(III)Landroid/widget/FrameLayout$LayoutParams;

@@ -30,7 +30,7 @@
 .method constructor <init>(Lorg/telegram/ui/DialogsActivity;Ljava/lang/String;)V
     .registers 3
 
-    .line 440
+    .line 449
     iput-object p1, p0, Lorg/telegram/ui/DialogsActivity$1;->this$0:Lorg/telegram/ui/DialogsActivity;
 
     invoke-direct {p0, p2}, Lorg/telegram/ui/Components/AnimationProperties$FloatProperty;-><init>(Ljava/lang/String;)V
@@ -43,7 +43,7 @@
 .method public get(Lorg/telegram/ui/DialogsActivity;)Ljava/lang/Float;
     .registers 2
 
-    .line 448
+    .line 457
     iget-object p1, p0, Lorg/telegram/ui/DialogsActivity$1;->this$0:Lorg/telegram/ui/DialogsActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/DialogsActivity;->access$100(Lorg/telegram/ui/DialogsActivity;)Lorg/telegram/ui/ActionBar/ActionBar;
@@ -64,7 +64,7 @@
 .method public bridge synthetic get(Ljava/lang/Object;)Ljava/lang/Object;
     .registers 2
 
-    .line 440
+    .line 449
     check-cast p1, Lorg/telegram/ui/DialogsActivity;
 
     invoke-virtual {p0, p1}, Lorg/telegram/ui/DialogsActivity$1;->get(Lorg/telegram/ui/DialogsActivity;)Ljava/lang/Float;
@@ -77,7 +77,7 @@
 .method public bridge synthetic setValue(Ljava/lang/Object;F)V
     .registers 3
 
-    .line 440
+    .line 449
     check-cast p1, Lorg/telegram/ui/DialogsActivity;
 
     invoke-virtual {p0, p1, p2}, Lorg/telegram/ui/DialogsActivity$1;->setValue(Lorg/telegram/ui/DialogsActivity;F)V
@@ -88,7 +88,7 @@
 .method public setValue(Lorg/telegram/ui/DialogsActivity;F)V
     .registers 3
 
-    .line 443
+    .line 452
     invoke-static {p1, p2}, Lorg/telegram/ui/DialogsActivity;->access$000(Lorg/telegram/ui/DialogsActivity;F)V
 
     return-void

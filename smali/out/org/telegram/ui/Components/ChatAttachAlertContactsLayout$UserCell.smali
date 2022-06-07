@@ -752,7 +752,7 @@
     .line 157
     iget-object p1, p0, Lorg/telegram/ui/Components/ChatAttachAlertContactsLayout$UserCell;->statusTextView:Lorg/telegram/ui/ActionBar/SimpleTextView;
 
-    const v0, 0x7f0e0bad
+    const v0, 0x7f0e0c37
 
     const-string v1, "NumberUnknown"
 

@@ -24,7 +24,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/PhotoPaintView;Z)V
     .registers 3
 
-    .line 664
+    .line 669
     iput-object p1, p0, Lorg/telegram/ui/Components/PhotoPaintView$5;->this$0:Lorg/telegram/ui/Components/PhotoPaintView;
 
     iput-boolean p2, p0, Lorg/telegram/ui/Components/PhotoPaintView$5;->val$visible:Z
@@ -39,12 +39,12 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .registers 3
 
-    .line 667
+    .line 672
     iget-boolean p1, p0, Lorg/telegram/ui/Components/PhotoPaintView$5;->val$visible:Z
 
     if-nez p1, :cond_f
 
-    .line 668
+    .line 673
     iget-object p1, p0, Lorg/telegram/ui/Components/PhotoPaintView$5;->this$0:Lorg/telegram/ui/Components/PhotoPaintView;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/PhotoPaintView;->access$1000(Lorg/telegram/ui/Components/PhotoPaintView;)Landroid/widget/FrameLayout;

@@ -18,7 +18,7 @@
 .method constructor <init>(Lorg/telegram/ui/PhotoViewer;Landroid/content/Context;)V
     .registers 3
 
-    .line 5519
+    .line 5650
     invoke-direct {p0, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
     return-void
@@ -29,7 +29,7 @@
 .method protected onLayout(ZIIII)V
     .registers 10
 
-    .line 5522
+    .line 5653
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getChildCount()I
 
     move-result p1
@@ -41,12 +41,12 @@
     :goto_6
     if-ge p2, p1, :cond_82
 
-    .line 5525
+    .line 5656
     invoke-virtual {p0, p2}, Landroid/widget/FrameLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object p3
 
-    .line 5526
+    .line 5657
     invoke-virtual {p3}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object p5
@@ -61,7 +61,7 @@
 
     if-ne p5, v0, :cond_3b
 
-    .line 5527
+    .line 5658
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getPaddingRight()I
 
     move-result p5
@@ -98,7 +98,7 @@
 
     goto :goto_7f
 
-    .line 5528
+    .line 5659
     :cond_3b
     invoke-virtual {p3}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
@@ -114,12 +114,12 @@
 
     if-ne p5, v0, :cond_62
 
-    .line 5529
+    .line 5660
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getPaddingLeft()I
 
     move-result p5
 
-    .line 5530
+    .line 5661
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getPaddingTop()I
 
     move-result v0
@@ -144,7 +144,7 @@
 
     goto :goto_7f
 
-    .line 5532
+    .line 5663
     :cond_62
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getPaddingLeft()I
 

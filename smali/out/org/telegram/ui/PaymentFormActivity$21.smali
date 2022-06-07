@@ -18,7 +18,7 @@
 .method constructor <init>(Lorg/telegram/ui/PaymentFormActivity;Landroid/content/Context;)V
     .registers 3
 
-    .line 2347
+    .line 2527
     invoke-direct {p0, p2}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
     return-void
@@ -29,7 +29,7 @@
 .method protected onDraw(Landroid/graphics/Canvas;)V
     .registers 10
 
-    .line 2350
+    .line 2530
     sget-boolean v0, Lorg/telegram/messenger/LocaleController;->isRTL:Z
 
     const/high16 v1, 0x41a00000    # 20.0f

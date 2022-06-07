@@ -2,6 +2,9 @@
 .super Landroid/widget/FrameLayout;
 .source "DrawerProfileCell.java"
 
+# interfaces
+.implements Lorg/telegram/messenger/NotificationCenter$NotificationCenterDelegate;
+
 
 # static fields
 .field public static switchingTheme:Z
@@ -63,31 +66,31 @@
 .method public constructor <init>(Landroid/content/Context;Lorg/telegram/ui/ActionBar/DrawerLayoutContainer;)V
     .registers 13
 
-    .line 79
+    .line 78
     invoke-direct {p0, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    .line 67
+    .line 66
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/ui/Cells/DrawerProfileCell;->srcRect:Landroid/graphics/Rect;
 
-    .line 68
+    .line 67
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/ui/Cells/DrawerProfileCell;->destRect:Landroid/graphics/Rect;
 
-    .line 69
+    .line 68
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/ui/Cells/DrawerProfileCell;->paint:Landroid/graphics/Paint;
 
-    .line 70
+    .line 69
     new-instance v0, Landroid/graphics/Paint;
 
     const/4 v1, 0x1
@@ -96,7 +99,7 @@
 
     iput-object v0, p0, Lorg/telegram/ui/Cells/DrawerProfileCell;->backPaint:Landroid/graphics/Paint;
 
-    .line 81
+    .line 80
     new-instance v0, Landroid/widget/ImageView;
 
     invoke-direct {v0, p1}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
@@ -105,24 +108,24 @@
 
     const/4 v2, 0x4
 
-    .line 82
+    .line 81
     invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 83
+    .line 82
     iget-object v0, p0, Lorg/telegram/ui/Cells/DrawerProfileCell;->shadowView:Landroid/widget/ImageView;
 
     sget-object v2, Landroid/widget/ImageView$ScaleType;->FIT_XY:Landroid/widget/ImageView$ScaleType;
 
     invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setScaleType(Landroid/widget/ImageView$ScaleType;)V
 
-    .line 84
+    .line 83
     iget-object v0, p0, Lorg/telegram/ui/Cells/DrawerProfileCell;->shadowView:Landroid/widget/ImageView;
 
-    const v2, 0x7f070083
+    const v2, 0x7f07006a
 
     invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 85
+    .line 84
     iget-object v0, p0, Lorg/telegram/ui/Cells/DrawerProfileCell;->shadowView:Landroid/widget/ImageView;
 
     const/4 v2, -0x1
@@ -137,14 +140,14 @@
 
     invoke-virtual {p0, v0, v2}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 87
+    .line 86
     new-instance v0, Lorg/telegram/ui/Components/BackupImageView;
 
     invoke-direct {v0, p1}, Lorg/telegram/ui/Components/BackupImageView;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lorg/telegram/ui/Cells/DrawerProfileCell;->avatarImageView:Lorg/telegram/ui/Components/BackupImageView;
 
-    .line 88
+    .line 87
     invoke-virtual {v0}, Lorg/telegram/ui/Components/BackupImageView;->getImageReceiver()Lorg/telegram/messenger/ImageReceiver;
 
     move-result-object v0
@@ -157,7 +160,7 @@
 
     invoke-virtual {v0, v2}, Lorg/telegram/messenger/ImageReceiver;->setRoundRadius(I)V
 
-    .line 89
+    .line 88
     iget-object v0, p0, Lorg/telegram/ui/Cells/DrawerProfileCell;->avatarImageView:Lorg/telegram/ui/Components/BackupImageView;
 
     const/16 v2, 0x40
@@ -178,7 +181,7 @@
 
     invoke-virtual {p0, v0, v2}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 91
+    .line 90
     new-instance v0, Landroid/widget/TextView;
 
     invoke-direct {v0, p1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
@@ -187,10 +190,10 @@
 
     const/high16 v2, 0x41700000    # 15.0f
 
-    .line 92
+    .line 91
     invoke-virtual {v0, v1, v2}, Landroid/widget/TextView;->setTextSize(IF)V
 
-    .line 93
+    .line 92
     iget-object v0, p0, Lorg/telegram/ui/Cells/DrawerProfileCell;->nameTextView:Landroid/widget/TextView;
 
     const-string v2, "fonts/rmedium.ttf"
@@ -201,36 +204,36 @@
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setTypeface(Landroid/graphics/Typeface;)V
 
-    .line 94
+    .line 93
     iget-object v0, p0, Lorg/telegram/ui/Cells/DrawerProfileCell;->nameTextView:Landroid/widget/TextView;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setLines(I)V
 
-    .line 95
+    .line 94
     iget-object v0, p0, Lorg/telegram/ui/Cells/DrawerProfileCell;->nameTextView:Landroid/widget/TextView;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setMaxLines(I)V
 
-    .line 96
+    .line 95
     iget-object v0, p0, Lorg/telegram/ui/Cells/DrawerProfileCell;->nameTextView:Landroid/widget/TextView;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setSingleLine(Z)V
 
-    .line 97
+    .line 96
     iget-object v0, p0, Lorg/telegram/ui/Cells/DrawerProfileCell;->nameTextView:Landroid/widget/TextView;
 
     const/4 v2, 0x3
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setGravity(I)V
 
-    .line 98
+    .line 97
     iget-object v0, p0, Lorg/telegram/ui/Cells/DrawerProfileCell;->nameTextView:Landroid/widget/TextView;
 
     sget-object v3, Landroid/text/TextUtils$TruncateAt;->END:Landroid/text/TextUtils$TruncateAt;
 
     invoke-virtual {v0, v3}, Landroid/widget/TextView;->setEllipsize(Landroid/text/TextUtils$TruncateAt;)V
 
-    .line 99
+    .line 98
     iget-object v0, p0, Lorg/telegram/ui/Cells/DrawerProfileCell;->nameTextView:Landroid/widget/TextView;
 
     const/4 v3, -0x1
@@ -251,7 +254,7 @@
 
     invoke-virtual {p0, v0, v3}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 101
+    .line 100
     new-instance v0, Landroid/widget/TextView;
 
     invoke-direct {v0, p1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
@@ -260,30 +263,30 @@
 
     const/high16 v3, 0x41500000    # 13.0f
 
-    .line 102
+    .line 101
     invoke-virtual {v0, v1, v3}, Landroid/widget/TextView;->setTextSize(IF)V
 
-    .line 103
+    .line 102
     iget-object v0, p0, Lorg/telegram/ui/Cells/DrawerProfileCell;->phoneTextView:Landroid/widget/TextView;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setLines(I)V
 
-    .line 104
+    .line 103
     iget-object v0, p0, Lorg/telegram/ui/Cells/DrawerProfileCell;->phoneTextView:Landroid/widget/TextView;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setMaxLines(I)V
 
-    .line 105
+    .line 104
     iget-object v0, p0, Lorg/telegram/ui/Cells/DrawerProfileCell;->phoneTextView:Landroid/widget/TextView;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setSingleLine(Z)V
 
-    .line 106
+    .line 105
     iget-object v0, p0, Lorg/telegram/ui/Cells/DrawerProfileCell;->phoneTextView:Landroid/widget/TextView;
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setGravity(I)V
 
-    .line 107
+    .line 106
     iget-object v0, p0, Lorg/telegram/ui/Cells/DrawerProfileCell;->phoneTextView:Landroid/widget/TextView;
 
     const/4 v2, -0x1
@@ -306,26 +309,26 @@
 
     invoke-virtual {p0, v0, v2}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 109
+    .line 108
     new-instance v0, Landroid/widget/ImageView;
 
     invoke-direct {v0, p1}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lorg/telegram/ui/Cells/DrawerProfileCell;->arrowView:Landroid/widget/ImageView;
 
-    .line 110
+    .line 109
     sget-object v2, Landroid/widget/ImageView$ScaleType;->CENTER:Landroid/widget/ImageView$ScaleType;
 
     invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setScaleType(Landroid/widget/ImageView$ScaleType;)V
 
-    .line 111
+    .line 110
     iget-object v0, p0, Lorg/telegram/ui/Cells/DrawerProfileCell;->arrowView:Landroid/widget/ImageView;
 
-    const v2, 0x7f0701f9
+    const v2, 0x7f07021f
 
     invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 112
+    .line 111
     iget-object v0, p0, Lorg/telegram/ui/Cells/DrawerProfileCell;->arrowView:Landroid/widget/ImageView;
 
     const/16 v2, 0x3b
@@ -340,10 +343,10 @@
 
     const/4 v0, 0x0
 
-    .line 113
+    .line 112
     invoke-direct {p0, v0}, Lorg/telegram/ui/Cells/DrawerProfileCell;->setArrowState(Z)V
 
-    .line 115
+    .line 114
     new-instance v9, Lorg/telegram/ui/Components/RLottieDrawable;
 
     const/high16 v2, 0x41e00000    # 28.0f
@@ -370,7 +373,7 @@
 
     iput-object v9, p0, Lorg/telegram/ui/Cells/DrawerProfileCell;->sunDrawable:Lorg/telegram/ui/Components/RLottieDrawable;
 
-    .line 116
+    .line 115
     invoke-static {}, Lorg/telegram/ui/ActionBar/Theme;->isCurrentThemeDay()Z
 
     move-result v2
@@ -379,49 +382,54 @@
 
     if-eqz v2, :cond_137
 
-    .line 117
+    .line 116
     iget-object v2, p0, Lorg/telegram/ui/Cells/DrawerProfileCell;->sunDrawable:Lorg/telegram/ui/Components/RLottieDrawable;
 
     invoke-virtual {v2, v3}, Lorg/telegram/ui/Components/RLottieDrawable;->setCustomEndFrame(I)Z
 
     goto :goto_141
 
-    .line 119
+    .line 118
     :cond_137
     iget-object v2, p0, Lorg/telegram/ui/Cells/DrawerProfileCell;->sunDrawable:Lorg/telegram/ui/Components/RLottieDrawable;
 
     invoke-virtual {v2, v0}, Lorg/telegram/ui/Components/RLottieDrawable;->setCustomEndFrame(I)Z
 
-    .line 120
+    .line 119
     iget-object v2, p0, Lorg/telegram/ui/Cells/DrawerProfileCell;->sunDrawable:Lorg/telegram/ui/Components/RLottieDrawable;
 
     invoke-virtual {v2, v3}, Lorg/telegram/ui/Components/RLottieDrawable;->setCurrentFrame(I)V
 
-    .line 122
+    .line 121
     :goto_141
     iget-object v2, p0, Lorg/telegram/ui/Cells/DrawerProfileCell;->sunDrawable:Lorg/telegram/ui/Components/RLottieDrawable;
 
     invoke-virtual {v2, v1}, Lorg/telegram/ui/Components/RLottieDrawable;->setPlayInDirectionOfCustomEndFrame(Z)V
 
-    .line 123
+    .line 122
     new-instance v2, Lorg/telegram/ui/Cells/DrawerProfileCell$1;
 
     invoke-direct {v2, p0, p1}, Lorg/telegram/ui/Cells/DrawerProfileCell$1;-><init>(Lorg/telegram/ui/Cells/DrawerProfileCell;Landroid/content/Context;)V
 
     iput-object v2, p0, Lorg/telegram/ui/Cells/DrawerProfileCell;->darkThemeView:Lorg/telegram/ui/Components/RLottieImageView;
 
-    const-string p1, "dialogButtonSelector"
+    .line 133
+    invoke-virtual {v2, v1}, Landroid/widget/ImageView;->setFocusable(Z)V
 
     .line 134
-    invoke-static {p1}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
+    iget-object p1, p0, Lorg/telegram/ui/Cells/DrawerProfileCell;->darkThemeView:Lorg/telegram/ui/Components/RLottieImageView;
 
-    move-result p1
+    const-string v2, "dialogButtonSelector"
 
-    invoke-static {p1, v0, v0}, Lorg/telegram/ui/ActionBar/Theme;->createCircleSelectorDrawable(III)Landroid/graphics/drawable/Drawable;
+    invoke-static {v2}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
 
-    move-result-object p1
+    move-result v2
 
-    invoke-virtual {v2, p1}, Landroid/widget/ImageView;->setBackground(Landroid/graphics/drawable/Drawable;)V
+    invoke-static {v2, v0, v0}, Lorg/telegram/ui/ActionBar/Theme;->createCircleSelectorDrawable(III)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v2
+
+    invoke-virtual {p1, v2}, Landroid/widget/ImageView;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
     .line 135
     iget-object p1, p0, Lorg/telegram/ui/Cells/DrawerProfileCell;->sunDrawable:Lorg/telegram/ui/Components/RLottieDrawable;
@@ -487,7 +495,7 @@
 
     const/16 v3, 0x15
 
-    if-lt v2, v3, :cond_1bc
+    if-lt v2, v3, :cond_1c1
 
     .line 145
     iget-object v2, p0, Lorg/telegram/ui/Cells/DrawerProfileCell;->darkThemeView:Lorg/telegram/ui/Components/RLottieImageView;
@@ -524,7 +532,7 @@
     invoke-static {v1}, Lorg/telegram/ui/ActionBar/Theme;->setRippleDrawableForceSoftware(Landroid/graphics/drawable/RippleDrawable;)V
 
     .line 148
-    :cond_1bc
+    :cond_1c1
     iget-object v1, p0, Lorg/telegram/ui/Cells/DrawerProfileCell;->darkThemeView:Lorg/telegram/ui/Components/RLottieImageView;
 
     new-instance v2, Lorg/telegram/ui/Cells/DrawerProfileCell$$ExternalSyntheticLambda0;
@@ -570,7 +578,7 @@
 
     move-result p2
 
-    if-nez p2, :cond_1f5
+    if-nez p2, :cond_1fa
 
     .line 198
     new-instance p2, Lorg/telegram/ui/Components/SnowflakesEffect;
@@ -582,17 +590,8 @@
     .line 199
     invoke-virtual {p2, p1}, Lorg/telegram/ui/Components/SnowflakesEffect;->setColorKey(Ljava/lang/String;)V
 
-    :cond_1f5
+    :cond_1fa
     return-void
-.end method
-
-.method static synthetic access$000(Lorg/telegram/ui/Cells/DrawerProfileCell;)Lorg/telegram/ui/Components/RLottieDrawable;
-    .registers 1
-
-    .line 57
-    iget-object p0, p0, Lorg/telegram/ui/Cells/DrawerProfileCell;->sunDrawable:Lorg/telegram/ui/Components/RLottieDrawable;
-
-    return-object p0
 .end method
 
 .method private synthetic lambda$new$0(Landroid/view/View;)V
@@ -779,7 +778,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f0e0267
+    const v3, 0x7f0e029c
 
     const-string v4, "AutoNightModeOff"
 
@@ -834,7 +833,7 @@
 .method private setArrowState(Z)V
     .registers 4
 
-    .line 370
+    .line 382
     iget-boolean v0, p0, Lorg/telegram/ui/Cells/DrawerProfileCell;->accountsShown:Z
 
     if-eqz v0, :cond_7
@@ -849,7 +848,7 @@
     :goto_8
     if-eqz p1, :cond_24
 
-    .line 372
+    .line 384
     iget-object p1, p0, Lorg/telegram/ui/Cells/DrawerProfileCell;->arrowView:Landroid/widget/ImageView;
 
     invoke-virtual {p1}, Landroid/widget/ImageView;->animate()Landroid/view/ViewPropertyAnimator;
@@ -876,7 +875,7 @@
 
     goto :goto_32
 
-    .line 374
+    .line 386
     :cond_24
     iget-object p1, p0, Lorg/telegram/ui/Cells/DrawerProfileCell;->arrowView:Landroid/widget/ImageView;
 
@@ -886,12 +885,12 @@
 
     invoke-virtual {p1}, Landroid/view/ViewPropertyAnimator;->cancel()V
 
-    .line 375
+    .line 387
     iget-object p1, p0, Lorg/telegram/ui/Cells/DrawerProfileCell;->arrowView:Landroid/widget/ImageView;
 
     invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setRotation(F)V
 
-    .line 377
+    .line 389
     :goto_32
     iget-object p1, p0, Lorg/telegram/ui/Cells/DrawerProfileCell;->arrowView:Landroid/widget/ImageView;
 
@@ -899,14 +898,14 @@
 
     if-eqz v0, :cond_3e
 
-    const v0, 0x7f0e002c
+    const v0, 0x7f0e0031
 
     const-string v1, "AccDescrHideAccounts"
 
     goto :goto_43
 
     :cond_3e
-    const v0, 0x7f0e0073
+    const v0, 0x7f0e0095
 
     const-string v1, "AccDescrShowAccounts"
 
@@ -1019,7 +1018,7 @@
 .method public applyBackground(Z)Ljava/lang/String;
     .registers 5
 
-    .line 354
+    .line 366
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getTag()Ljava/lang/Object;
 
     move-result-object v0
@@ -1028,7 +1027,7 @@
 
     const-string v1, "chats_menuTopBackground"
 
-    .line 355
+    .line 367
     invoke-static {v1}, Lorg/telegram/ui/ActionBar/Theme;->hasThemeKey(Ljava/lang/String;)Z
 
     move-result v2
@@ -1049,14 +1048,14 @@
     :goto_17
     if-nez p1, :cond_1f
 
-    .line 356
+    .line 368
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
     if-nez p1, :cond_29
 
-    .line 357
+    .line 369
     :cond_1f
     invoke-static {v1}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
 
@@ -1064,17 +1063,34 @@
 
     invoke-virtual {p0, p1}, Landroid/widget/FrameLayout;->setBackgroundColor(I)V
 
-    .line 358
+    .line 370
     invoke-virtual {p0, v1}, Landroid/widget/FrameLayout;->setTag(Ljava/lang/Object;)V
 
     :cond_29
     return-object v1
 .end method
 
+.method public varargs didReceivedNotification(II[Ljava/lang/Object;)V
+    .registers 4
+
+    .line 394
+    sget p2, Lorg/telegram/messenger/NotificationCenter;->emojiLoaded:I
+
+    if-ne p1, p2, :cond_9
+
+    .line 395
+    iget-object p1, p0, Lorg/telegram/ui/Cells/DrawerProfileCell;->nameTextView:Landroid/widget/TextView;
+
+    invoke-virtual {p1}, Landroid/widget/TextView;->invalidate()V
+
+    :cond_9
+    return-void
+.end method
+
 .method public hasAvatar()Z
     .registers 2
 
-    .line 323
+    .line 331
     iget-object v0, p0, Lorg/telegram/ui/Cells/DrawerProfileCell;->avatarImageView:Lorg/telegram/ui/Components/BackupImageView;
 
     invoke-virtual {v0}, Lorg/telegram/ui/Components/BackupImageView;->getImageReceiver()Lorg/telegram/messenger/ImageReceiver;
@@ -1091,7 +1107,7 @@
 .method public isInAvatar(FF)Z
     .registers 4
 
-    .line 319
+    .line 327
     iget-object v0, p0, Lorg/telegram/ui/Cells/DrawerProfileCell;->avatarImageView:Lorg/telegram/ui/Components/BackupImageView;
 
     invoke-virtual {v0}, Landroid/view/View;->getLeft()I
@@ -1152,7 +1168,7 @@
 .end method
 
 .method protected onAttachedToWindow()V
-    .registers 1
+    .registers 3
 
     .line 213
     invoke-super {p0}, Landroid/widget/FrameLayout;->onAttachedToWindow()V
@@ -1160,27 +1176,54 @@
     .line 214
     invoke-virtual {p0}, Lorg/telegram/ui/Cells/DrawerProfileCell;->updateColors()V
 
+    .line 215
+    invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getGlobalInstance()Lorg/telegram/messenger/NotificationCenter;
+
+    move-result-object v0
+
+    sget v1, Lorg/telegram/messenger/NotificationCenter;->emojiLoaded:I
+
+    invoke-virtual {v0, p0, v1}, Lorg/telegram/messenger/NotificationCenter;->addObserver(Lorg/telegram/messenger/NotificationCenter$NotificationCenterDelegate;I)V
+
+    return-void
+.end method
+
+.method protected onDetachedFromWindow()V
+    .registers 3
+
+    .line 220
+    invoke-super {p0}, Landroid/widget/FrameLayout;->onDetachedFromWindow()V
+
+    .line 221
+    invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getGlobalInstance()Lorg/telegram/messenger/NotificationCenter;
+
+    move-result-object v0
+
+    sget v1, Lorg/telegram/messenger/NotificationCenter;->emojiLoaded:I
+
+    invoke-virtual {v0, p0, v1}, Lorg/telegram/messenger/NotificationCenter;->removeObserver(Lorg/telegram/messenger/NotificationCenter$NotificationCenterDelegate;I)V
+
     return-void
 .end method
 
 .method protected onDraw(Landroid/graphics/Canvas;)V
     .registers 12
 
-    .line 233
+    .line 241
     invoke-static {}, Lorg/telegram/ui/ActionBar/Theme;->getCachedWallpaper()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
     const/4 v1, 0x0
 
-    .line 234
+    .line 242
     invoke-virtual {p0, v1}, Lorg/telegram/ui/Cells/DrawerProfileCell;->applyBackground(Z)Ljava/lang/String;
 
     move-result-object v2
 
     const-string v3, "chats_menuTopBackground"
 
-    .line 235
+    .line 243
     invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
@@ -1223,14 +1266,14 @@
 
     const-string v4, "chats_menuTopShadowCats"
 
-    .line 239
+    .line 247
     invoke-static {v4}, Lorg/telegram/ui/ActionBar/Theme;->hasThemeKey(Ljava/lang/String;)Z
 
     move-result v5
 
     if-eqz v5, :cond_3b
 
-    .line 240
+    .line 248
     invoke-static {v4}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
 
     move-result v4
@@ -1242,21 +1285,21 @@
     :cond_3b
     const-string v4, "chats_menuTopShadow"
 
-    .line 243
+    .line 251
     invoke-static {v4}, Lorg/telegram/ui/ActionBar/Theme;->hasThemeKey(Ljava/lang/String;)Z
 
     move-result v5
 
     if-eqz v5, :cond_48
 
-    .line 244
+    .line 252
     invoke-static {v4}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
 
     move-result v4
 
     goto :goto_4f
 
-    .line 246
+    .line 254
     :cond_48
     invoke-static {}, Lorg/telegram/ui/ActionBar/Theme;->getServiceMessageColor()I
 
@@ -1269,7 +1312,7 @@
     :goto_4f
     const/4 v5, 0x0
 
-    .line 249
+    .line 257
     :goto_50
     iget-object v6, p0, Lorg/telegram/ui/Cells/DrawerProfileCell;->currentColor:Ljava/lang/Integer;
 
@@ -1281,7 +1324,7 @@
 
     if-eq v6, v4, :cond_70
 
-    .line 250
+    .line 258
     :cond_5a
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -1289,7 +1332,7 @@
 
     iput-object v6, p0, Lorg/telegram/ui/Cells/DrawerProfileCell;->currentColor:Ljava/lang/Integer;
 
-    .line 251
+    .line 259
     iget-object v6, p0, Lorg/telegram/ui/Cells/DrawerProfileCell;->shadowView:Landroid/widget/ImageView;
 
     invoke-virtual {v6}, Landroid/widget/ImageView;->getDrawable()Landroid/graphics/drawable/Drawable;
@@ -1307,12 +1350,12 @@
     :cond_70
     const-string v4, "chats_menuName"
 
-    .line 253
+    .line 261
     invoke-static {v4}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
 
     move-result v6
 
-    .line 254
+    .line 262
     iget-object v7, p0, Lorg/telegram/ui/Cells/DrawerProfileCell;->currentMoonColor:Ljava/lang/Integer;
 
     if-eqz v7, :cond_80
@@ -1323,7 +1366,7 @@
 
     if-eq v7, v6, :cond_c4
 
-    .line 255
+    .line 263
     :cond_80
     invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -1331,12 +1374,12 @@
 
     iput-object v6, p0, Lorg/telegram/ui/Cells/DrawerProfileCell;->currentMoonColor:Ljava/lang/Integer;
 
-    .line 256
+    .line 264
     iget-object v6, p0, Lorg/telegram/ui/Cells/DrawerProfileCell;->sunDrawable:Lorg/telegram/ui/Components/RLottieDrawable;
 
     invoke-virtual {v6}, Lorg/telegram/ui/Components/RLottieDrawable;->beginApplyLayerColors()V
 
-    .line 257
+    .line 265
     iget-object v6, p0, Lorg/telegram/ui/Cells/DrawerProfileCell;->sunDrawable:Lorg/telegram/ui/Components/RLottieDrawable;
 
     iget-object v7, p0, Lorg/telegram/ui/Cells/DrawerProfileCell;->currentMoonColor:Ljava/lang/Integer;
@@ -1349,7 +1392,7 @@
 
     invoke-virtual {v6, v8, v7}, Lorg/telegram/ui/Components/RLottieDrawable;->setLayerColor(Ljava/lang/String;I)V
 
-    .line 258
+    .line 266
     iget-object v6, p0, Lorg/telegram/ui/Cells/DrawerProfileCell;->sunDrawable:Lorg/telegram/ui/Components/RLottieDrawable;
 
     iget-object v7, p0, Lorg/telegram/ui/Cells/DrawerProfileCell;->currentMoonColor:Ljava/lang/Integer;
@@ -1362,7 +1405,7 @@
 
     invoke-virtual {v6, v8, v7}, Lorg/telegram/ui/Components/RLottieDrawable;->setLayerColor(Ljava/lang/String;I)V
 
-    .line 259
+    .line 267
     iget-object v6, p0, Lorg/telegram/ui/Cells/DrawerProfileCell;->sunDrawable:Lorg/telegram/ui/Components/RLottieDrawable;
 
     iget-object v7, p0, Lorg/telegram/ui/Cells/DrawerProfileCell;->currentMoonColor:Ljava/lang/Integer;
@@ -1375,7 +1418,7 @@
 
     invoke-virtual {v6, v8, v7}, Lorg/telegram/ui/Components/RLottieDrawable;->setLayerColor(Ljava/lang/String;I)V
 
-    .line 260
+    .line 268
     iget-object v6, p0, Lorg/telegram/ui/Cells/DrawerProfileCell;->sunDrawable:Lorg/telegram/ui/Components/RLottieDrawable;
 
     iget-object v7, p0, Lorg/telegram/ui/Cells/DrawerProfileCell;->currentMoonColor:Ljava/lang/Integer;
@@ -1388,12 +1431,12 @@
 
     invoke-virtual {v6, v8, v7}, Lorg/telegram/ui/Components/RLottieDrawable;->setLayerColor(Ljava/lang/String;I)V
 
-    .line 261
+    .line 269
     iget-object v6, p0, Lorg/telegram/ui/Cells/DrawerProfileCell;->sunDrawable:Lorg/telegram/ui/Components/RLottieDrawable;
 
     invoke-virtual {v6}, Lorg/telegram/ui/Components/RLottieDrawable;->commitApplyLayerColors()V
 
-    .line 263
+    .line 271
     :cond_c4
     iget-object v6, p0, Lorg/telegram/ui/Cells/DrawerProfileCell;->nameTextView:Landroid/widget/TextView;
 
@@ -1407,7 +1450,7 @@
 
     if-eqz v2, :cond_174
 
-    .line 265
+    .line 273
     iget-object v5, p0, Lorg/telegram/ui/Cells/DrawerProfileCell;->phoneTextView:Landroid/widget/TextView;
 
     const-string v6, "chats_menuPhone"
@@ -1418,7 +1461,7 @@
 
     invoke-virtual {v5, v6}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 266
+    .line 274
     iget-object v5, p0, Lorg/telegram/ui/Cells/DrawerProfileCell;->shadowView:Landroid/widget/ImageView;
 
     invoke-virtual {v5}, Landroid/widget/ImageView;->getVisibility()I
@@ -1427,12 +1470,12 @@
 
     if-eqz v5, :cond_e9
 
-    .line 267
+    .line 275
     iget-object v5, p0, Lorg/telegram/ui/Cells/DrawerProfileCell;->shadowView:Landroid/widget/ImageView;
 
     invoke-virtual {v5, v1}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 269
+    .line 277
     :cond_e9
     instance-of v5, v0, Landroid/graphics/drawable/ColorDrawable;
 
@@ -1444,13 +1487,13 @@
 
     goto :goto_161
 
-    .line 273
+    .line 281
     :cond_f2
     instance-of v4, v0, Landroid/graphics/drawable/BitmapDrawable;
 
     if-eqz v4, :cond_197
 
-    .line 274
+    .line 282
     move-object v4, v0
 
     check-cast v4, Landroid/graphics/drawable/BitmapDrawable;
@@ -1459,7 +1502,7 @@
 
     move-result-object v4
 
-    .line 275
+    .line 283
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getMeasuredWidth()I
 
     move-result v5
@@ -1474,7 +1517,7 @@
 
     div-float/2addr v5, v6
 
-    .line 276
+    .line 284
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getMeasuredHeight()I
 
     move-result v6
@@ -1489,12 +1532,12 @@
 
     div-float/2addr v6, v7
 
-    .line 277
+    .line 285
     invoke-static {v5, v6}, Ljava/lang/Math;->max(FF)F
 
     move-result v5
 
-    .line 278
+    .line 286
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getMeasuredWidth()I
 
     move-result v6
@@ -1505,7 +1548,7 @@
 
     float-to-int v6, v6
 
-    .line 279
+    .line 287
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getMeasuredHeight()I
 
     move-result v7
@@ -1516,7 +1559,7 @@
 
     float-to-int v5, v7
 
-    .line 280
+    .line 288
     invoke-virtual {v4}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v7
@@ -1525,7 +1568,7 @@
 
     div-int/lit8 v7, v7, 0x2
 
-    .line 281
+    .line 289
     invoke-virtual {v4}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result v8
@@ -1534,7 +1577,7 @@
 
     div-int/lit8 v8, v8, 0x2
 
-    .line 282
+    .line 290
     iget-object v9, p0, Lorg/telegram/ui/Cells/DrawerProfileCell;->srcRect:Landroid/graphics/Rect;
 
     add-int/2addr v6, v7
@@ -1543,7 +1586,7 @@
 
     invoke-virtual {v9, v7, v8, v6, v5}, Landroid/graphics/Rect;->set(IIII)V
 
-    .line 283
+    .line 291
     iget-object v5, p0, Lorg/telegram/ui/Cells/DrawerProfileCell;->destRect:Landroid/graphics/Rect;
 
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getMeasuredWidth()I
@@ -1556,7 +1599,7 @@
 
     invoke-virtual {v5, v1, v1, v6, v7}, Landroid/graphics/Rect;->set(IIII)V
 
-    .line 285
+    .line 293
     :try_start_147
     iget-object v1, p0, Lorg/telegram/ui/Cells/DrawerProfileCell;->srcRect:Landroid/graphics/Rect;
 
@@ -1573,10 +1616,10 @@
     :catchall_151
     move-exception v1
 
-    .line 287
+    .line 295
     invoke-static {v1}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
-    .line 289
+    .line 297
     :goto_155
     invoke-static {}, Lorg/telegram/ui/ActionBar/Theme;->getServiceMessageColor()I
 
@@ -1592,7 +1635,7 @@
 
     goto :goto_197
 
-    .line 270
+    .line 278
     :cond_161
     :goto_161
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getMeasuredWidth()I
@@ -1605,10 +1648,10 @@
 
     invoke-virtual {v0, v1, v1, v5, v6}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 271
+    .line 279
     invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 272
+    .line 280
     invoke-static {v4}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
 
     move-result v1
@@ -1623,7 +1666,7 @@
     :cond_177
     const/4 v1, 0x4
 
-    .line 293
+    .line 301
     :goto_178
     iget-object v5, p0, Lorg/telegram/ui/Cells/DrawerProfileCell;->shadowView:Landroid/widget/ImageView;
 
@@ -1633,12 +1676,12 @@
 
     if-eq v5, v1, :cond_185
 
-    .line 294
+    .line 302
     iget-object v5, p0, Lorg/telegram/ui/Cells/DrawerProfileCell;->shadowView:Landroid/widget/ImageView;
 
     invoke-virtual {v5, v1}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 296
+    .line 304
     :cond_185
     iget-object v1, p0, Lorg/telegram/ui/Cells/DrawerProfileCell;->phoneTextView:Landroid/widget/TextView;
 
@@ -1650,10 +1693,10 @@
 
     invoke-virtual {v1, v5}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 297
+    .line 305
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->onDraw(Landroid/graphics/Canvas;)V
 
-    .line 298
+    .line 306
     invoke-static {v4}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
 
     move-result v1
@@ -1662,26 +1705,26 @@
     :goto_197
     if-eqz v1, :cond_1e7
 
-    .line 302
+    .line 310
     iget v4, p0, Lorg/telegram/ui/Cells/DrawerProfileCell;->darkThemeBackgroundColor:I
 
     if-eq v1, v4, :cond_1b5
 
-    .line 303
+    .line 311
     iget-object v4, p0, Lorg/telegram/ui/Cells/DrawerProfileCell;->backPaint:Landroid/graphics/Paint;
 
     iput v1, p0, Lorg/telegram/ui/Cells/DrawerProfileCell;->darkThemeBackgroundColor:I
 
     invoke-virtual {v4, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 304
+    .line 312
     sget v4, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v5, 0x15
 
     if-lt v4, v5, :cond_1b5
 
-    .line 305
+    .line 313
     iget-object v4, p0, Lorg/telegram/ui/Cells/DrawerProfileCell;->darkThemeView:Lorg/telegram/ui/Components/RLottieImageView;
 
     invoke-virtual {v4}, Landroid/widget/ImageView;->getBackground()Landroid/graphics/drawable/Drawable;
@@ -1695,12 +1738,12 @@
     :cond_1b5
     if-eqz v2, :cond_1e7
 
-    .line 308
+    .line 316
     instance-of v0, v0, Landroid/graphics/drawable/BitmapDrawable;
 
     if-eqz v0, :cond_1e7
 
-    .line 309
+    .line 317
     iget-object v0, p0, Lorg/telegram/ui/Cells/DrawerProfileCell;->darkThemeView:Lorg/telegram/ui/Components/RLottieImageView;
 
     invoke-virtual {v0}, Landroid/widget/ImageView;->getX()F
@@ -1749,13 +1792,13 @@
 
     invoke-virtual {p1, v0, v1, v2, v3}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
 
-    .line 313
+    .line 321
     :cond_1e7
     iget-object v0, p0, Lorg/telegram/ui/Cells/DrawerProfileCell;->snowflakesEffect:Lorg/telegram/ui/Components/SnowflakesEffect;
 
     if-eqz v0, :cond_1ee
 
-    .line 314
+    .line 322
     invoke-virtual {v0, p0, p1}, Lorg/telegram/ui/Components/SnowflakesEffect;->onDraw(Landroid/view/View;Landroid/graphics/Canvas;)V
 
     :cond_1ee
@@ -1765,7 +1808,7 @@
 .method protected onMeasure(II)V
     .registers 6
 
-    .line 219
+    .line 226
     sget p2, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/high16 v0, 0x43140000    # 148.0f
@@ -1776,7 +1819,7 @@
 
     if-lt p2, v2, :cond_21
 
-    .line 220
+    .line 227
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result p1
@@ -1801,7 +1844,7 @@
 
     goto :goto_44
 
-    .line 223
+    .line 230
     :cond_21
     :try_start_21
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
@@ -1829,7 +1872,7 @@
     :catch_35
     move-exception p2
 
-    .line 225
+    .line 232
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result p1
@@ -1840,7 +1883,7 @@
 
     invoke-virtual {p0, p1, v0}, Landroid/widget/FrameLayout;->setMeasuredDimension(II)V
 
-    .line 226
+    .line 233
     invoke-static {p2}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     :goto_44
@@ -1850,18 +1893,18 @@
 .method public setAccountsShown(ZZ)V
     .registers 4
 
-    .line 331
+    .line 339
     iget-boolean v0, p0, Lorg/telegram/ui/Cells/DrawerProfileCell;->accountsShown:Z
 
     if-ne v0, p1, :cond_5
 
     return-void
 
-    .line 334
+    .line 342
     :cond_5
     iput-boolean p1, p0, Lorg/telegram/ui/Cells/DrawerProfileCell;->accountsShown:Z
 
-    .line 335
+    .line 343
     invoke-direct {p0, p2}, Lorg/telegram/ui/Cells/DrawerProfileCell;->setArrowState(Z)V
 
     return-void
@@ -1874,25 +1917,51 @@
 
     return-void
 
-    .line 342
+    .line 350
     :cond_3
     iput-boolean p2, p0, Lorg/telegram/ui/Cells/DrawerProfileCell;->accountsShown:Z
 
     const/4 p2, 0x0
 
-    .line 343
+    .line 351
     invoke-direct {p0, p2}, Lorg/telegram/ui/Cells/DrawerProfileCell;->setArrowState(Z)V
 
-    .line 344
-    iget-object p2, p0, Lorg/telegram/ui/Cells/DrawerProfileCell;->nameTextView:Landroid/widget/TextView;
-
+    .line 352
     invoke-static {p1}, Lorg/telegram/messenger/UserObject;->getUserName(Lorg/telegram/tgnet/TLRPC$User;)Ljava/lang/String;
 
     move-result-object v0
 
+    .line 354
+    :try_start_d
+    iget-object v1, p0, Lorg/telegram/ui/Cells/DrawerProfileCell;->nameTextView:Landroid/widget/TextView;
+
+    invoke-virtual {v1}, Landroid/widget/TextView;->getPaint()Landroid/text/TextPaint;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/text/TextPaint;->getFontMetricsInt()Landroid/graphics/Paint$FontMetricsInt;
+
+    move-result-object v1
+
+    const/high16 v2, 0x41b00000    # 22.0f
+
+    invoke-static {v2}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
+
+    move-result v2
+
+    invoke-static {v0, v1, v2, p2}, Lorg/telegram/messenger/Emoji;->replaceEmoji(Ljava/lang/CharSequence;Landroid/graphics/Paint$FontMetricsInt;IZ)Ljava/lang/CharSequence;
+
+    move-result-object v0
+    :try_end_21
+    .catch Ljava/lang/Exception; {:try_start_d .. :try_end_21} :catch_21
+
+    .line 356
+    :catch_21
+    iget-object p2, p0, Lorg/telegram/ui/Cells/DrawerProfileCell;->nameTextView:Landroid/widget/TextView;
+
     invoke-virtual {p2, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 345
+    .line 357
     iget-object p2, p0, Lorg/telegram/ui/Cells/DrawerProfileCell;->phoneTextView:Landroid/widget/TextView;
 
     invoke-static {}, Lorg/telegram/PhoneFormat/PhoneFormat;->getInstance()Lorg/telegram/PhoneFormat/PhoneFormat;
@@ -1921,28 +1990,28 @@
 
     invoke-virtual {p2, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 346
+    .line 358
     new-instance p2, Lorg/telegram/ui/Components/AvatarDrawable;
 
     invoke-direct {p2, p1}, Lorg/telegram/ui/Components/AvatarDrawable;-><init>(Lorg/telegram/tgnet/TLRPC$User;)V
 
     const-string v0, "avatar_backgroundInProfileBlue"
 
-    .line 347
+    .line 359
     invoke-static {v0}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
 
     move-result v0
 
     invoke-virtual {p2, v0}, Lorg/telegram/ui/Components/AvatarDrawable;->setColor(I)V
 
-    .line 348
+    .line 360
     iget-object v0, p0, Lorg/telegram/ui/Cells/DrawerProfileCell;->avatarImageView:Lorg/telegram/ui/Components/BackupImageView;
 
     invoke-virtual {v0, p1, p2}, Lorg/telegram/ui/Components/BackupImageView;->setForUserOrChat(Lorg/telegram/tgnet/TLObject;Lorg/telegram/ui/Components/AvatarDrawable;)V
 
     const/4 p1, 0x1
 
-    .line 350
+    .line 362
     invoke-virtual {p0, p1}, Lorg/telegram/ui/Cells/DrawerProfileCell;->applyBackground(Z)Ljava/lang/String;
 
     return-void
@@ -1951,12 +2020,12 @@
 .method public updateColors()V
     .registers 2
 
-    .line 364
+    .line 376
     iget-object v0, p0, Lorg/telegram/ui/Cells/DrawerProfileCell;->snowflakesEffect:Lorg/telegram/ui/Components/SnowflakesEffect;
 
     if-eqz v0, :cond_7
 
-    .line 365
+    .line 377
     invoke-virtual {v0}, Lorg/telegram/ui/Components/SnowflakesEffect;->updateColors()V
 
     :cond_7

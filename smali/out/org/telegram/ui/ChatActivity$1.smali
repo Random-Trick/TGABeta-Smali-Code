@@ -25,7 +25,7 @@
 .method constructor <init>(Lorg/telegram/ui/ChatActivity;)V
     .registers 2
 
-    .line 704
+    .line 711
     iput-object p1, p0, Lorg/telegram/ui/ChatActivity$1;->this$0:Lorg/telegram/ui/ChatActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,14 +38,14 @@
 .method public run()V
     .registers 6
 
-    .line 707
+    .line 714
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$1;->this$0:Lorg/telegram/ui/ChatActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/ChatActivity;->access$000(Lorg/telegram/ui/ChatActivity;)Lorg/telegram/messenger/MessageObject;
 
     move-result-object v0
 
-    if-eqz v0, :cond_71
+    if-eqz v0, :cond_73
 
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$1;->this$0:Lorg/telegram/ui/ChatActivity;
 
@@ -55,9 +55,9 @@
 
     if-nez v0, :cond_11
 
-    goto :goto_71
+    goto :goto_73
 
-    .line 710
+    .line 717
     :cond_11
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$1;->this$0:Lorg/telegram/ui/ChatActivity;
 
@@ -103,12 +103,12 @@
 
     if-ge v0, v2, :cond_40
 
-    .line 713
+    .line 720
     invoke-static {v0, v1}, Lorg/telegram/messenger/AndroidUtilities;->formatDuration(IZ)Ljava/lang/String;
 
     move-result-object v0
 
-    goto :goto_4f
+    goto :goto_51
 
     :cond_40
     int-to-float v0, v0
@@ -117,26 +117,28 @@
 
     div-float/2addr v0, v2
 
-    .line 715
+    .line 722
     invoke-static {v0}, Ljava/lang/Math;->round(F)I
 
     move-result v0
 
-    const-string v2, "Days"
+    new-array v2, v1, [Ljava/lang/Object;
 
-    invoke-static {v2, v0}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    const-string v3, "Days"
+
+    invoke-static {v3, v0, v2}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 717
-    :goto_4f
+    .line 724
+    :goto_51
     iget-object v2, p0, Lorg/telegram/ui/ChatActivity$1;->this$0:Lorg/telegram/ui/ChatActivity;
 
     invoke-static {v2}, Lorg/telegram/ui/ChatActivity;->access$100(Lorg/telegram/ui/ChatActivity;)Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;
 
     move-result-object v2
 
-    const v3, 0x7f0e022f
+    const v3, 0x7f0e0264
 
     const/4 v4, 0x1
 
@@ -152,7 +154,7 @@
 
     invoke-virtual {v2, v0}, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;->setSubtext(Ljava/lang/String;)V
 
-    .line 718
+    .line 725
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$1;->this$0:Lorg/telegram/ui/ChatActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/ChatActivity;->access$200(Lorg/telegram/ui/ChatActivity;)Ljava/lang/Runnable;
@@ -163,7 +165,7 @@
 
     invoke-static {v0, v1, v2}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;J)V
 
-    :cond_71
-    :goto_71
+    :cond_73
+    :goto_73
     return-void
 .end method

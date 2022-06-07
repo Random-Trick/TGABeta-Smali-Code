@@ -25,7 +25,7 @@
 .method constructor <init>(Lorg/telegram/ui/ActionBar/AdjustPanLayoutHelper;)V
     .registers 2
 
-    .line 53
+    .line 49
     iput-object p1, p0, Lorg/telegram/ui/ActionBar/AdjustPanLayoutHelper$1;->this$0:Lorg/telegram/ui/ActionBar/AdjustPanLayoutHelper;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public run()V
     .registers 2
 
-    .line 56
+    .line 52
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/AdjustPanLayoutHelper$1;->this$0:Lorg/telegram/ui/ActionBar/AdjustPanLayoutHelper;
 
     iget-object v0, v0, Lorg/telegram/ui/ActionBar/AdjustPanLayoutHelper;->animator:Landroid/animation/ValueAnimator;
@@ -51,7 +51,7 @@
 
     if-nez v0, :cond_13
 
-    .line 57
+    .line 53
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/AdjustPanLayoutHelper$1;->this$0:Lorg/telegram/ui/ActionBar/AdjustPanLayoutHelper;
 
     iget-object v0, v0, Lorg/telegram/ui/ActionBar/AdjustPanLayoutHelper;->animator:Landroid/animation/ValueAnimator;

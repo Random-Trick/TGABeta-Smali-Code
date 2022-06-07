@@ -32,20 +32,20 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .registers 9
 
-    .line 3843
+    .line 3833
     invoke-direct {p0}, Lorg/telegram/ui/Components/RecyclerListView$SelectionAdapter;-><init>()V
 
-    .line 3844
+    .line 3834
     iput-object p1, p0, Lorg/telegram/ui/ThemePreviewActivity$DialogsAdapter;->mContext:Landroid/content/Context;
 
-    .line 3845
+    .line 3835
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
     iput-object p1, p0, Lorg/telegram/ui/ThemePreviewActivity$DialogsAdapter;->dialogs:Ljava/util/ArrayList;
 
-    .line 3847
+    .line 3837
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
@@ -56,16 +56,16 @@
 
     long-to-int p1, v0
 
-    .line 3848
+    .line 3838
     new-instance v0, Lorg/telegram/ui/Cells/DialogCell$CustomDialog;
 
     invoke-direct {v0}, Lorg/telegram/ui/Cells/DialogCell$CustomDialog;-><init>()V
 
     const-string v1, "ThemePreviewDialog1"
 
-    const v2, 0x7f0e1178
+    const v2, 0x7f0e1242
 
-    .line 3849
+    .line 3839
     invoke-static {v1, v2}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v1
@@ -74,9 +74,9 @@
 
     const-string v1, "ThemePreviewDialogMessage1"
 
-    const v2, 0x7f0e1180
+    const v2, 0x7f0e124a
 
-    .line 3850
+    .line 3840
     invoke-static {v1, v2}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v1
@@ -85,50 +85,50 @@
 
     const/4 v1, 0x0
 
-    .line 3851
+    .line 3841
     iput v1, v0, Lorg/telegram/ui/Cells/DialogCell$CustomDialog;->id:I
 
-    .line 3852
+    .line 3842
     iput v1, v0, Lorg/telegram/ui/Cells/DialogCell$CustomDialog;->unread_count:I
 
     const/4 v2, 0x1
 
-    .line 3853
+    .line 3843
     iput-boolean v2, v0, Lorg/telegram/ui/Cells/DialogCell$CustomDialog;->pinned:Z
 
-    .line 3854
+    .line 3844
     iput-boolean v1, v0, Lorg/telegram/ui/Cells/DialogCell$CustomDialog;->muted:Z
 
-    .line 3855
+    .line 3845
     iput v1, v0, Lorg/telegram/ui/Cells/DialogCell$CustomDialog;->type:I
 
-    .line 3856
+    .line 3846
     iput p1, v0, Lorg/telegram/ui/Cells/DialogCell$CustomDialog;->date:I
 
-    .line 3857
+    .line 3847
     iput-boolean v1, v0, Lorg/telegram/ui/Cells/DialogCell$CustomDialog;->verified:Z
 
-    .line 3858
+    .line 3848
     iput-boolean v1, v0, Lorg/telegram/ui/Cells/DialogCell$CustomDialog;->isMedia:Z
 
-    .line 3859
+    .line 3849
     iput-boolean v2, v0, Lorg/telegram/ui/Cells/DialogCell$CustomDialog;->sent:Z
 
-    .line 3860
+    .line 3850
     iget-object v3, p0, Lorg/telegram/ui/ThemePreviewActivity$DialogsAdapter;->dialogs:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 3862
+    .line 3852
     new-instance v0, Lorg/telegram/ui/Cells/DialogCell$CustomDialog;
 
     invoke-direct {v0}, Lorg/telegram/ui/Cells/DialogCell$CustomDialog;-><init>()V
 
     const-string v3, "ThemePreviewDialog2"
 
-    const v4, 0x7f0e1179
+    const v4, 0x7f0e1243
 
-    .line 3863
+    .line 3853
     invoke-static {v3, v4}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v3
@@ -137,61 +137,61 @@
 
     const-string v3, "ThemePreviewDialogMessage2"
 
-    const v4, 0x7f0e1181
+    const v4, 0x7f0e124b
 
-    .line 3864
+    .line 3854
     invoke-static {v3, v4}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v3
 
     iput-object v3, v0, Lorg/telegram/ui/Cells/DialogCell$CustomDialog;->message:Ljava/lang/String;
 
-    .line 3865
+    .line 3855
     iput v2, v0, Lorg/telegram/ui/Cells/DialogCell$CustomDialog;->id:I
 
     const/4 v3, 0x2
 
-    .line 3866
+    .line 3856
     iput v3, v0, Lorg/telegram/ui/Cells/DialogCell$CustomDialog;->unread_count:I
 
-    .line 3867
+    .line 3857
     iput-boolean v1, v0, Lorg/telegram/ui/Cells/DialogCell$CustomDialog;->pinned:Z
 
-    .line 3868
+    .line 3858
     iput-boolean v1, v0, Lorg/telegram/ui/Cells/DialogCell$CustomDialog;->muted:Z
 
-    .line 3869
+    .line 3859
     iput v1, v0, Lorg/telegram/ui/Cells/DialogCell$CustomDialog;->type:I
 
     add-int/lit16 v4, p1, -0xe10
 
-    .line 3870
+    .line 3860
     iput v4, v0, Lorg/telegram/ui/Cells/DialogCell$CustomDialog;->date:I
 
-    .line 3871
+    .line 3861
     iput-boolean v1, v0, Lorg/telegram/ui/Cells/DialogCell$CustomDialog;->verified:Z
 
-    .line 3872
+    .line 3862
     iput-boolean v1, v0, Lorg/telegram/ui/Cells/DialogCell$CustomDialog;->isMedia:Z
 
-    .line 3873
+    .line 3863
     iput-boolean v1, v0, Lorg/telegram/ui/Cells/DialogCell$CustomDialog;->sent:Z
 
-    .line 3874
+    .line 3864
     iget-object v4, p0, Lorg/telegram/ui/ThemePreviewActivity$DialogsAdapter;->dialogs:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 3876
+    .line 3866
     new-instance v0, Lorg/telegram/ui/Cells/DialogCell$CustomDialog;
 
     invoke-direct {v0}, Lorg/telegram/ui/Cells/DialogCell$CustomDialog;-><init>()V
 
     const-string v4, "ThemePreviewDialog3"
 
-    const v5, 0x7f0e117a
+    const v5, 0x7f0e1244
 
-    .line 3877
+    .line 3867
     invoke-static {v4, v5}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v4
@@ -200,61 +200,61 @@
 
     const-string v4, "ThemePreviewDialogMessage3"
 
-    const v5, 0x7f0e1182
+    const v5, 0x7f0e124c
 
-    .line 3878
+    .line 3868
     invoke-static {v4, v5}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v4
 
     iput-object v4, v0, Lorg/telegram/ui/Cells/DialogCell$CustomDialog;->message:Ljava/lang/String;
 
-    .line 3879
+    .line 3869
     iput v3, v0, Lorg/telegram/ui/Cells/DialogCell$CustomDialog;->id:I
 
     const/4 v4, 0x3
 
-    .line 3880
+    .line 3870
     iput v4, v0, Lorg/telegram/ui/Cells/DialogCell$CustomDialog;->unread_count:I
 
-    .line 3881
+    .line 3871
     iput-boolean v1, v0, Lorg/telegram/ui/Cells/DialogCell$CustomDialog;->pinned:Z
 
-    .line 3882
+    .line 3872
     iput-boolean v2, v0, Lorg/telegram/ui/Cells/DialogCell$CustomDialog;->muted:Z
 
-    .line 3883
+    .line 3873
     iput v1, v0, Lorg/telegram/ui/Cells/DialogCell$CustomDialog;->type:I
 
     add-int/lit16 v5, p1, -0x1c20
 
-    .line 3884
+    .line 3874
     iput v5, v0, Lorg/telegram/ui/Cells/DialogCell$CustomDialog;->date:I
 
-    .line 3885
+    .line 3875
     iput-boolean v1, v0, Lorg/telegram/ui/Cells/DialogCell$CustomDialog;->verified:Z
 
-    .line 3886
+    .line 3876
     iput-boolean v2, v0, Lorg/telegram/ui/Cells/DialogCell$CustomDialog;->isMedia:Z
 
-    .line 3887
+    .line 3877
     iput-boolean v1, v0, Lorg/telegram/ui/Cells/DialogCell$CustomDialog;->sent:Z
 
-    .line 3888
+    .line 3878
     iget-object v5, p0, Lorg/telegram/ui/ThemePreviewActivity$DialogsAdapter;->dialogs:Ljava/util/ArrayList;
 
     invoke-virtual {v5, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 3890
+    .line 3880
     new-instance v0, Lorg/telegram/ui/Cells/DialogCell$CustomDialog;
 
     invoke-direct {v0}, Lorg/telegram/ui/Cells/DialogCell$CustomDialog;-><init>()V
 
     const-string v5, "ThemePreviewDialog4"
 
-    const v6, 0x7f0e117b
+    const v6, 0x7f0e1245
 
-    .line 3891
+    .line 3881
     invoke-static {v5, v6}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v5
@@ -263,59 +263,59 @@
 
     const-string v5, "ThemePreviewDialogMessage4"
 
-    const v6, 0x7f0e1183
+    const v6, 0x7f0e124d
 
-    .line 3892
+    .line 3882
     invoke-static {v5, v6}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v5
 
     iput-object v5, v0, Lorg/telegram/ui/Cells/DialogCell$CustomDialog;->message:Ljava/lang/String;
 
-    .line 3893
+    .line 3883
     iput v4, v0, Lorg/telegram/ui/Cells/DialogCell$CustomDialog;->id:I
 
-    .line 3894
+    .line 3884
     iput v1, v0, Lorg/telegram/ui/Cells/DialogCell$CustomDialog;->unread_count:I
 
-    .line 3895
+    .line 3885
     iput-boolean v1, v0, Lorg/telegram/ui/Cells/DialogCell$CustomDialog;->pinned:Z
 
-    .line 3896
+    .line 3886
     iput-boolean v1, v0, Lorg/telegram/ui/Cells/DialogCell$CustomDialog;->muted:Z
 
-    .line 3897
+    .line 3887
     iput v3, v0, Lorg/telegram/ui/Cells/DialogCell$CustomDialog;->type:I
 
     add-int/lit16 v3, p1, -0x2a30
 
-    .line 3898
+    .line 3888
     iput v3, v0, Lorg/telegram/ui/Cells/DialogCell$CustomDialog;->date:I
 
-    .line 3899
+    .line 3889
     iput-boolean v1, v0, Lorg/telegram/ui/Cells/DialogCell$CustomDialog;->verified:Z
 
-    .line 3900
+    .line 3890
     iput-boolean v1, v0, Lorg/telegram/ui/Cells/DialogCell$CustomDialog;->isMedia:Z
 
-    .line 3901
+    .line 3891
     iput-boolean v1, v0, Lorg/telegram/ui/Cells/DialogCell$CustomDialog;->sent:Z
 
-    .line 3902
+    .line 3892
     iget-object v3, p0, Lorg/telegram/ui/ThemePreviewActivity$DialogsAdapter;->dialogs:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 3904
+    .line 3894
     new-instance v0, Lorg/telegram/ui/Cells/DialogCell$CustomDialog;
 
     invoke-direct {v0}, Lorg/telegram/ui/Cells/DialogCell$CustomDialog;-><init>()V
 
     const-string v3, "ThemePreviewDialog5"
 
-    const v4, 0x7f0e117c
+    const v4, 0x7f0e1246
 
-    .line 3905
+    .line 3895
     invoke-static {v3, v4}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v3
@@ -324,9 +324,9 @@
 
     const-string v3, "ThemePreviewDialogMessage5"
 
-    const v4, 0x7f0e1184
+    const v4, 0x7f0e124e
 
-    .line 3906
+    .line 3896
     invoke-static {v3, v4}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v3
@@ -335,50 +335,50 @@
 
     const/4 v3, 0x4
 
-    .line 3907
+    .line 3897
     iput v3, v0, Lorg/telegram/ui/Cells/DialogCell$CustomDialog;->id:I
 
-    .line 3908
+    .line 3898
     iput v1, v0, Lorg/telegram/ui/Cells/DialogCell$CustomDialog;->unread_count:I
 
-    .line 3909
+    .line 3899
     iput-boolean v1, v0, Lorg/telegram/ui/Cells/DialogCell$CustomDialog;->pinned:Z
 
-    .line 3910
+    .line 3900
     iput-boolean v1, v0, Lorg/telegram/ui/Cells/DialogCell$CustomDialog;->muted:Z
 
-    .line 3911
+    .line 3901
     iput v2, v0, Lorg/telegram/ui/Cells/DialogCell$CustomDialog;->type:I
 
     add-int/lit16 v3, p1, -0x3840
 
-    .line 3912
+    .line 3902
     iput v3, v0, Lorg/telegram/ui/Cells/DialogCell$CustomDialog;->date:I
 
-    .line 3913
+    .line 3903
     iput-boolean v1, v0, Lorg/telegram/ui/Cells/DialogCell$CustomDialog;->verified:Z
 
-    .line 3914
+    .line 3904
     iput-boolean v1, v0, Lorg/telegram/ui/Cells/DialogCell$CustomDialog;->isMedia:Z
 
-    .line 3915
+    .line 3905
     iput-boolean v2, v0, Lorg/telegram/ui/Cells/DialogCell$CustomDialog;->sent:Z
 
-    .line 3916
+    .line 3906
     iget-object v3, p0, Lorg/telegram/ui/ThemePreviewActivity$DialogsAdapter;->dialogs:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 3918
+    .line 3908
     new-instance v0, Lorg/telegram/ui/Cells/DialogCell$CustomDialog;
 
     invoke-direct {v0}, Lorg/telegram/ui/Cells/DialogCell$CustomDialog;-><init>()V
 
     const-string v3, "ThemePreviewDialog6"
 
-    const v4, 0x7f0e117d
+    const v4, 0x7f0e1247
 
-    .line 3919
+    .line 3909
     invoke-static {v3, v4}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v3
@@ -387,9 +387,9 @@
 
     const-string v3, "ThemePreviewDialogMessage6"
 
-    const v4, 0x7f0e1185
+    const v4, 0x7f0e124f
 
-    .line 3920
+    .line 3910
     invoke-static {v3, v4}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v3
@@ -398,50 +398,50 @@
 
     const/4 v3, 0x5
 
-    .line 3921
+    .line 3911
     iput v3, v0, Lorg/telegram/ui/Cells/DialogCell$CustomDialog;->id:I
 
-    .line 3922
+    .line 3912
     iput v1, v0, Lorg/telegram/ui/Cells/DialogCell$CustomDialog;->unread_count:I
 
-    .line 3923
+    .line 3913
     iput-boolean v1, v0, Lorg/telegram/ui/Cells/DialogCell$CustomDialog;->pinned:Z
 
-    .line 3924
+    .line 3914
     iput-boolean v1, v0, Lorg/telegram/ui/Cells/DialogCell$CustomDialog;->muted:Z
 
-    .line 3925
+    .line 3915
     iput v1, v0, Lorg/telegram/ui/Cells/DialogCell$CustomDialog;->type:I
 
     add-int/lit16 v3, p1, -0x4650
 
-    .line 3926
+    .line 3916
     iput v3, v0, Lorg/telegram/ui/Cells/DialogCell$CustomDialog;->date:I
 
-    .line 3927
+    .line 3917
     iput-boolean v1, v0, Lorg/telegram/ui/Cells/DialogCell$CustomDialog;->verified:Z
 
-    .line 3928
+    .line 3918
     iput-boolean v1, v0, Lorg/telegram/ui/Cells/DialogCell$CustomDialog;->isMedia:Z
 
-    .line 3929
+    .line 3919
     iput-boolean v1, v0, Lorg/telegram/ui/Cells/DialogCell$CustomDialog;->sent:Z
 
-    .line 3930
+    .line 3920
     iget-object v3, p0, Lorg/telegram/ui/ThemePreviewActivity$DialogsAdapter;->dialogs:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 3932
+    .line 3922
     new-instance v0, Lorg/telegram/ui/Cells/DialogCell$CustomDialog;
 
     invoke-direct {v0}, Lorg/telegram/ui/Cells/DialogCell$CustomDialog;-><init>()V
 
     const-string v3, "ThemePreviewDialog7"
 
-    const v4, 0x7f0e117e    # 1.888412E38f
+    const v4, 0x7f0e1248
 
-    .line 3933
+    .line 3923
     invoke-static {v3, v4}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v3
@@ -450,9 +450,9 @@
 
     const-string v3, "ThemePreviewDialogMessage7"
 
-    const v4, 0x7f0e1186
+    const v4, 0x7f0e1250
 
-    .line 3934
+    .line 3924
     invoke-static {v3, v4}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v3
@@ -461,50 +461,50 @@
 
     const/4 v3, 0x6
 
-    .line 3935
+    .line 3925
     iput v3, v0, Lorg/telegram/ui/Cells/DialogCell$CustomDialog;->id:I
 
-    .line 3936
+    .line 3926
     iput v1, v0, Lorg/telegram/ui/Cells/DialogCell$CustomDialog;->unread_count:I
 
-    .line 3937
+    .line 3927
     iput-boolean v1, v0, Lorg/telegram/ui/Cells/DialogCell$CustomDialog;->pinned:Z
 
-    .line 3938
+    .line 3928
     iput-boolean v1, v0, Lorg/telegram/ui/Cells/DialogCell$CustomDialog;->muted:Z
 
-    .line 3939
+    .line 3929
     iput v1, v0, Lorg/telegram/ui/Cells/DialogCell$CustomDialog;->type:I
 
     add-int/lit16 v3, p1, -0x5460
 
-    .line 3940
+    .line 3930
     iput v3, v0, Lorg/telegram/ui/Cells/DialogCell$CustomDialog;->date:I
 
-    .line 3941
+    .line 3931
     iput-boolean v2, v0, Lorg/telegram/ui/Cells/DialogCell$CustomDialog;->verified:Z
 
-    .line 3942
+    .line 3932
     iput-boolean v1, v0, Lorg/telegram/ui/Cells/DialogCell$CustomDialog;->isMedia:Z
 
-    .line 3943
+    .line 3933
     iput-boolean v1, v0, Lorg/telegram/ui/Cells/DialogCell$CustomDialog;->sent:Z
 
-    .line 3944
+    .line 3934
     iget-object v3, p0, Lorg/telegram/ui/ThemePreviewActivity$DialogsAdapter;->dialogs:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 3946
+    .line 3936
     new-instance v0, Lorg/telegram/ui/Cells/DialogCell$CustomDialog;
 
     invoke-direct {v0}, Lorg/telegram/ui/Cells/DialogCell$CustomDialog;-><init>()V
 
     const-string v3, "ThemePreviewDialog8"
 
-    const v4, 0x7f0e117f
+    const v4, 0x7f0e1249
 
-    .line 3947
+    .line 3937
     invoke-static {v3, v4}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v3
@@ -513,45 +513,45 @@
 
     const-string v3, "ThemePreviewDialogMessage8"
 
-    const v4, 0x7f0e1187
+    const v4, 0x7f0e1251
 
-    .line 3948
+    .line 3938
     invoke-static {v3, v4}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v3
 
     iput-object v3, v0, Lorg/telegram/ui/Cells/DialogCell$CustomDialog;->message:Ljava/lang/String;
 
-    .line 3949
+    .line 3939
     iput v1, v0, Lorg/telegram/ui/Cells/DialogCell$CustomDialog;->id:I
 
-    .line 3950
+    .line 3940
     iput v1, v0, Lorg/telegram/ui/Cells/DialogCell$CustomDialog;->unread_count:I
 
-    .line 3951
+    .line 3941
     iput-boolean v1, v0, Lorg/telegram/ui/Cells/DialogCell$CustomDialog;->pinned:Z
 
-    .line 3952
+    .line 3942
     iput-boolean v1, v0, Lorg/telegram/ui/Cells/DialogCell$CustomDialog;->muted:Z
 
-    .line 3953
+    .line 3943
     iput v1, v0, Lorg/telegram/ui/Cells/DialogCell$CustomDialog;->type:I
 
     add-int/lit16 p1, p1, -0x6270
 
-    .line 3954
+    .line 3944
     iput p1, v0, Lorg/telegram/ui/Cells/DialogCell$CustomDialog;->date:I
 
-    .line 3955
+    .line 3945
     iput-boolean v2, v0, Lorg/telegram/ui/Cells/DialogCell$CustomDialog;->verified:Z
 
-    .line 3956
+    .line 3946
     iput-boolean v1, v0, Lorg/telegram/ui/Cells/DialogCell$CustomDialog;->isMedia:Z
 
-    .line 3957
+    .line 3947
     iput-boolean v1, v0, Lorg/telegram/ui/Cells/DialogCell$CustomDialog;->sent:Z
 
-    .line 3958
+    .line 3948
     iget-object p1, p0, Lorg/telegram/ui/ThemePreviewActivity$DialogsAdapter;->dialogs:Ljava/util/ArrayList;
 
     invoke-virtual {p1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -564,7 +564,7 @@
 .method public getItemCount()I
     .registers 2
 
-    .line 3963
+    .line 3953
     iget-object v0, p0, Lorg/telegram/ui/ThemePreviewActivity$DialogsAdapter;->dialogs:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -577,7 +577,7 @@
 .method public getItemViewType(I)I
     .registers 3
 
-    .line 3994
+    .line 3984
     iget-object v0, p0, Lorg/telegram/ui/ThemePreviewActivity$DialogsAdapter;->dialogs:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -599,7 +599,7 @@
 .method public isEnabled(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)Z
     .registers 3
 
-    .line 3968
+    .line 3958
     invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->getItemViewType()I
 
     move-result p1
@@ -620,19 +620,19 @@
 .method public onBindViewHolder(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;I)V
     .registers 5
 
-    .line 3985
+    .line 3975
     invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->getItemViewType()I
 
     move-result v0
 
     if-nez v0, :cond_21
 
-    .line 3986
+    .line 3976
     iget-object p1, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     check-cast p1, Lorg/telegram/ui/Cells/DialogCell;
 
-    .line 3987
+    .line 3977
     invoke-virtual {p0}, Lorg/telegram/ui/ThemePreviewActivity$DialogsAdapter;->getItemCount()I
 
     move-result v0
@@ -651,7 +651,7 @@
     :goto_14
     iput-boolean v1, p1, Lorg/telegram/ui/Cells/DialogCell;->useSeparator:Z
 
-    .line 3988
+    .line 3978
     iget-object v0, p0, Lorg/telegram/ui/ThemePreviewActivity$DialogsAdapter;->dialogs:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -671,7 +671,7 @@
 
     if-nez p2, :cond_c
 
-    .line 3975
+    .line 3965
     new-instance p1, Lorg/telegram/ui/Cells/DialogCell;
 
     const/4 p2, 0x0
@@ -684,7 +684,7 @@
 
     goto :goto_13
 
-    .line 3977
+    .line 3967
     :cond_c
     new-instance p1, Lorg/telegram/ui/Cells/LoadingCell;
 
@@ -692,7 +692,7 @@
 
     invoke-direct {p1, p2}, Lorg/telegram/ui/Cells/LoadingCell;-><init>(Landroid/content/Context;)V
 
-    .line 3979
+    .line 3969
     :goto_13
     new-instance p2, Landroidx/recyclerview/widget/RecyclerView$LayoutParams;
 
@@ -704,7 +704,7 @@
 
     invoke-virtual {p1, p2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 3980
+    .line 3970
     new-instance p2, Lorg/telegram/ui/Components/RecyclerListView$Holder;
 
     invoke-direct {p2, p1}, Lorg/telegram/ui/Components/RecyclerListView$Holder;-><init>(Landroid/view/View;)V

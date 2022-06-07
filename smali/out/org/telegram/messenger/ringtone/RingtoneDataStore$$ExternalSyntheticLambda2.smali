@@ -8,18 +8,18 @@
 # instance fields
 .field public final synthetic f$0:Lorg/telegram/messenger/ringtone/RingtoneDataStore;
 
-.field public final synthetic f$1:Lorg/telegram/tgnet/TLObject;
+.field public final synthetic f$1:Ljava/util/ArrayList;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lorg/telegram/messenger/ringtone/RingtoneDataStore;Lorg/telegram/tgnet/TLObject;)V
+.method public synthetic constructor <init>(Lorg/telegram/messenger/ringtone/RingtoneDataStore;Ljava/util/ArrayList;)V
     .registers 3
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lorg/telegram/messenger/ringtone/RingtoneDataStore$$ExternalSyntheticLambda2;->f$0:Lorg/telegram/messenger/ringtone/RingtoneDataStore;
 
-    iput-object p2, p0, Lorg/telegram/messenger/ringtone/RingtoneDataStore$$ExternalSyntheticLambda2;->f$1:Lorg/telegram/tgnet/TLObject;
+    iput-object p2, p0, Lorg/telegram/messenger/ringtone/RingtoneDataStore$$ExternalSyntheticLambda2;->f$1:Ljava/util/ArrayList;
 
     return-void
 .end method
@@ -31,9 +31,9 @@
 
     iget-object v0, p0, Lorg/telegram/messenger/ringtone/RingtoneDataStore$$ExternalSyntheticLambda2;->f$0:Lorg/telegram/messenger/ringtone/RingtoneDataStore;
 
-    iget-object v1, p0, Lorg/telegram/messenger/ringtone/RingtoneDataStore$$ExternalSyntheticLambda2;->f$1:Lorg/telegram/tgnet/TLObject;
+    iget-object v1, p0, Lorg/telegram/messenger/ringtone/RingtoneDataStore$$ExternalSyntheticLambda2;->f$1:Ljava/util/ArrayList;
 
-    invoke-static {v0, v1}, Lorg/telegram/messenger/ringtone/RingtoneDataStore;->$r8$lambda$mSDAAeHGVfyue83mcmN3Q1gEvmM(Lorg/telegram/messenger/ringtone/RingtoneDataStore;Lorg/telegram/tgnet/TLObject;)V
+    invoke-static {v0, v1}, Lorg/telegram/messenger/ringtone/RingtoneDataStore;->$r8$lambda$HhM3cui_7B90uf7k6Un5ZILktjA(Lorg/telegram/messenger/ringtone/RingtoneDataStore;Ljava/util/ArrayList;)V
 
     return-void
 .end method

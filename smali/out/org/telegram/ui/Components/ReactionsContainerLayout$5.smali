@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lorg/telegram/ui/Components/ReactionsContainerLayout;-><init>(Landroid/content/Context;ILorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)V
+    value = Lorg/telegram/ui/Components/ReactionsContainerLayout;-><init>(Lorg/telegram/ui/ActionBar/BaseFragment;Landroid/content/Context;ILorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/ReactionsContainerLayout;)V
     .registers 2
 
-    .line 211
+    .line 223
     iput-object p1, p0, Lorg/telegram/ui/Components/ReactionsContainerLayout$5;->this$0:Lorg/telegram/ui/Components/ReactionsContainerLayout;
 
     invoke-direct {p0}, Landroidx/recyclerview/widget/RecyclerView$OnScrollListener;-><init>()V
@@ -35,7 +35,7 @@
 .method public onScrolled(Landroidx/recyclerview/widget/RecyclerView;II)V
     .registers 12
 
-    .line 214
+    .line 226
     invoke-virtual {p1}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result p2
@@ -50,7 +50,7 @@
 
     const p2, 0x3ecccccc    # 0.39999998f
 
-    .line 217
+    .line 229
     iget-object v1, p0, Lorg/telegram/ui/Components/ReactionsContainerLayout$5;->this$0:Lorg/telegram/ui/Components/ReactionsContainerLayout;
 
     invoke-static {v1}, Lorg/telegram/ui/Components/ReactionsContainerLayout;->access$800(Lorg/telegram/ui/Components/ReactionsContainerLayout;)[I
@@ -59,7 +59,7 @@
 
     invoke-virtual {p1, v1}, Landroid/view/ViewGroup;->getLocationInWindow([I)V
 
-    .line 218
+    .line 230
     iget-object v1, p0, Lorg/telegram/ui/Components/ReactionsContainerLayout$5;->this$0:Lorg/telegram/ui/Components/ReactionsContainerLayout;
 
     invoke-static {v1}, Lorg/telegram/ui/Components/ReactionsContainerLayout;->access$800(Lorg/telegram/ui/Components/ReactionsContainerLayout;)[I
@@ -70,12 +70,12 @@
 
     aget v1, v1, v2
 
-    .line 220
+    .line 232
     invoke-virtual {p1, v2}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v3
 
-    .line 221
+    .line 233
     iget-object v4, p0, Lorg/telegram/ui/Components/ReactionsContainerLayout$5;->this$0:Lorg/telegram/ui/Components/ReactionsContainerLayout;
 
     invoke-static {v4}, Lorg/telegram/ui/Components/ReactionsContainerLayout;->access$800(Lorg/telegram/ui/Components/ReactionsContainerLayout;)[I
@@ -84,7 +84,7 @@
 
     invoke-virtual {v3, v4}, Landroid/view/View;->getLocationInWindow([I)V
 
-    .line 222
+    .line 234
     iget-object v4, p0, Lorg/telegram/ui/Components/ReactionsContainerLayout$5;->this$0:Lorg/telegram/ui/Components/ReactionsContainerLayout;
 
     invoke-static {v4}, Lorg/telegram/ui/Components/ReactionsContainerLayout;->access$800(Lorg/telegram/ui/Components/ReactionsContainerLayout;)[I
@@ -99,7 +99,7 @@
 
     const/4 v5, 0x0
 
-    .line 225
+    .line 237
     invoke-static {v4, v5}, Ljava/lang/Math;->min(FF)F
 
     move-result v4
@@ -126,7 +126,7 @@
 
     add-float/2addr v4, v6
 
-    .line 226
+    .line 238
     invoke-static {v4}, Ljava/lang/Float;->isNaN(F)Z
 
     move-result v7
@@ -135,13 +135,13 @@
 
     const/high16 v4, 0x3f800000    # 1.0f
 
-    .line 227
+    .line 239
     :cond_56
     iget-object v7, p0, Lorg/telegram/ui/Components/ReactionsContainerLayout$5;->this$0:Lorg/telegram/ui/Components/ReactionsContainerLayout;
 
     invoke-static {v7, v3, v4}, Lorg/telegram/ui/Components/ReactionsContainerLayout;->access$900(Lorg/telegram/ui/Components/ReactionsContainerLayout;Landroid/view/View;F)V
 
-    .line 229
+    .line 241
     invoke-virtual {p1}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result v3
@@ -152,7 +152,7 @@
 
     move-result-object v3
 
-    .line 230
+    .line 242
     iget-object v4, p0, Lorg/telegram/ui/Components/ReactionsContainerLayout$5;->this$0:Lorg/telegram/ui/Components/ReactionsContainerLayout;
 
     invoke-static {v4}, Lorg/telegram/ui/Components/ReactionsContainerLayout;->access$800(Lorg/telegram/ui/Components/ReactionsContainerLayout;)[I
@@ -161,7 +161,7 @@
 
     invoke-virtual {v3, v4}, Landroid/view/View;->getLocationInWindow([I)V
 
-    .line 231
+    .line 243
     iget-object v4, p0, Lorg/telegram/ui/Components/ReactionsContainerLayout$5;->this$0:Lorg/telegram/ui/Components/ReactionsContainerLayout;
 
     invoke-static {v4}, Lorg/telegram/ui/Components/ReactionsContainerLayout;->access$800(Lorg/telegram/ui/Components/ReactionsContainerLayout;)[I
@@ -170,7 +170,7 @@
 
     aget v2, v4, v2
 
-    .line 233
+    .line 245
     invoke-virtual {p1}, Landroid/view/ViewGroup;->getWidth()I
 
     move-result p1
@@ -187,7 +187,7 @@
 
     int-to-float p1, v1
 
-    .line 234
+    .line 246
     invoke-static {p1, v5}, Ljava/lang/Math;->min(FF)F
 
     move-result p1
@@ -212,7 +212,7 @@
 
     add-float/2addr p1, v6
 
-    .line 235
+    .line 247
     invoke-static {p1}, Ljava/lang/Float;->isNaN(F)Z
 
     move-result p2
@@ -221,7 +221,7 @@
 
     const/high16 p1, 0x3f800000    # 1.0f
 
-    .line 236
+    .line 248
     :cond_9d
     iget-object p2, p0, Lorg/telegram/ui/Components/ReactionsContainerLayout$5;->this$0:Lorg/telegram/ui/Components/ReactionsContainerLayout;
 
@@ -230,7 +230,7 @@
     :cond_a2
     const/4 p1, 0x1
 
-    .line 238
+    .line 250
     :goto_a3
     iget-object p2, p0, Lorg/telegram/ui/Components/ReactionsContainerLayout$5;->this$0:Lorg/telegram/ui/Components/ReactionsContainerLayout;
 
@@ -244,7 +244,7 @@
 
     if-ge p1, p2, :cond_be
 
-    .line 239
+    .line 251
     iget-object p2, p0, Lorg/telegram/ui/Components/ReactionsContainerLayout$5;->this$0:Lorg/telegram/ui/Components/ReactionsContainerLayout;
 
     iget-object p2, p2, Lorg/telegram/ui/Components/ReactionsContainerLayout;->recyclerListView:Lorg/telegram/ui/Components/RecyclerListView;
@@ -253,7 +253,7 @@
 
     move-result-object p2
 
-    .line 240
+    .line 252
     iget-object v1, p0, Lorg/telegram/ui/Components/ReactionsContainerLayout$5;->this$0:Lorg/telegram/ui/Components/ReactionsContainerLayout;
 
     invoke-static {v1, p2, v0}, Lorg/telegram/ui/Components/ReactionsContainerLayout;->access$900(Lorg/telegram/ui/Components/ReactionsContainerLayout;Landroid/view/View;F)V
@@ -262,7 +262,7 @@
 
     goto :goto_a3
 
-    .line 242
+    .line 254
     :cond_be
     iget-object p1, p0, Lorg/telegram/ui/Components/ReactionsContainerLayout$5;->this$0:Lorg/telegram/ui/Components/ReactionsContainerLayout;
 

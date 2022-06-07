@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/LoginActivity;)V
     .registers 2
 
-    .line 389
+    .line 413
     iput-object p1, p0, Lorg/telegram/ui/LoginActivity$1;->this$0:Lorg/telegram/ui/LoginActivity;
 
     invoke-direct {p0}, Lorg/telegram/ui/ActionBar/ActionBar$ActionBarMenuOnItemClick;-><init>()V
@@ -39,7 +39,7 @@
 
     if-ne p1, v0, :cond_9
 
-    .line 393
+    .line 417
     iget-object p1, p0, Lorg/telegram/ui/LoginActivity$1;->this$0:Lorg/telegram/ui/LoginActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/LoginActivity;->access$000(Lorg/telegram/ui/LoginActivity;)V
@@ -51,7 +51,7 @@
 
     if-ne p1, v0, :cond_19
 
-    .line 395
+    .line 419
     iget-object p1, p0, Lorg/telegram/ui/LoginActivity$1;->this$0:Lorg/telegram/ui/LoginActivity;
 
     invoke-virtual {p1}, Lorg/telegram/ui/LoginActivity;->onBackPressed()Z
@@ -60,7 +60,7 @@
 
     if-eqz p1, :cond_19
 
-    .line 396
+    .line 420
     iget-object p1, p0, Lorg/telegram/ui/LoginActivity$1;->this$0:Lorg/telegram/ui/LoginActivity;
 
     invoke-virtual {p1}, Lorg/telegram/ui/ActionBar/BaseFragment;->finishFragment()V

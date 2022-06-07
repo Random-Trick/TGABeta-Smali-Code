@@ -26,7 +26,7 @@
 .method constructor <init>(Lorg/telegram/ui/LoginActivity;ZLorg/telegram/ui/Components/SlideView;)V
     .registers 4
 
-    .line 1377
+    .line 1401
     iput-object p1, p0, Lorg/telegram/ui/LoginActivity$11;->this$0:Lorg/telegram/ui/LoginActivity;
 
     iput-boolean p2, p0, Lorg/telegram/ui/LoginActivity$11;->val$needFloatingButton:Z
@@ -43,7 +43,7 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .registers 3
 
-    .line 1380
+    .line 1404
     iget-object p1, p0, Lorg/telegram/ui/LoginActivity$11;->this$0:Lorg/telegram/ui/LoginActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/LoginActivity;->access$2200(Lorg/telegram/ui/LoginActivity;)I
@@ -56,14 +56,14 @@
 
     if-eqz p1, :cond_12
 
-    .line 1381
+    .line 1405
     iget-object p1, p0, Lorg/telegram/ui/LoginActivity$11;->this$0:Lorg/telegram/ui/LoginActivity;
 
     const/4 v0, 0x1
 
     invoke-static {p1, v0, v0}, Lorg/telegram/ui/LoginActivity;->access$2300(Lorg/telegram/ui/LoginActivity;ZZ)V
 
-    .line 1383
+    .line 1407
     :cond_12
     iget-object p1, p0, Lorg/telegram/ui/LoginActivity$11;->val$outView:Lorg/telegram/ui/Components/SlideView;
 
@@ -71,7 +71,7 @@
 
     invoke-virtual {p1, v0}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
-    .line 1384
+    .line 1408
     iget-object p1, p0, Lorg/telegram/ui/LoginActivity$11;->val$outView:Lorg/telegram/ui/Components/SlideView;
 
     const/4 v0, 0x0

@@ -7,7 +7,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 59185
+    .line 59669
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -32,7 +32,7 @@
 
     goto :goto_22
 
-    .line 59194
+    .line 59678
     :cond_11
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_botMenuButtonDefault;
 
@@ -40,7 +40,7 @@
 
     goto :goto_22
 
-    .line 59197
+    .line 59681
     :cond_17
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_botMenuButtonCommands;
 
@@ -48,7 +48,7 @@
 
     goto :goto_22
 
-    .line 59191
+    .line 59675
     :cond_1d
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_botMenuButton;
 
@@ -61,7 +61,7 @@
 
     goto :goto_3d
 
-    .line 59201
+    .line 59685
     :cond_27
     new-instance p0, Ljava/lang/RuntimeException;
 
@@ -91,7 +91,7 @@
     :goto_3d
     if-eqz v0, :cond_42
 
-    .line 59204
+    .line 59688
     invoke-virtual {v0, p0, p2}, Lorg/telegram/tgnet/TLObject;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
     :cond_42

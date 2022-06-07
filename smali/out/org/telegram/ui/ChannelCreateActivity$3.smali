@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/ChannelCreateActivity;Landroid/content/Context;)V
     .registers 3
 
-    .line 454
+    .line 504
     iput-object p1, p0, Lorg/telegram/ui/ChannelCreateActivity$3;->this$0:Lorg/telegram/ui/ChannelCreateActivity;
 
     invoke-direct {p0, p2}, Lorg/telegram/ui/Components/BackupImageView;-><init>(Landroid/content/Context;)V
@@ -35,25 +35,25 @@
 .method public invalidate()V
     .registers 2
 
-    .line 457
+    .line 507
     iget-object v0, p0, Lorg/telegram/ui/ChannelCreateActivity$3;->this$0:Lorg/telegram/ui/ChannelCreateActivity;
 
-    invoke-static {v0}, Lorg/telegram/ui/ChannelCreateActivity;->access$1700(Lorg/telegram/ui/ChannelCreateActivity;)Landroid/view/View;
+    invoke-static {v0}, Lorg/telegram/ui/ChannelCreateActivity;->access$1800(Lorg/telegram/ui/ChannelCreateActivity;)Landroid/view/View;
 
     move-result-object v0
 
     if-eqz v0, :cond_11
 
-    .line 458
+    .line 508
     iget-object v0, p0, Lorg/telegram/ui/ChannelCreateActivity$3;->this$0:Lorg/telegram/ui/ChannelCreateActivity;
 
-    invoke-static {v0}, Lorg/telegram/ui/ChannelCreateActivity;->access$1700(Lorg/telegram/ui/ChannelCreateActivity;)Landroid/view/View;
+    invoke-static {v0}, Lorg/telegram/ui/ChannelCreateActivity;->access$1800(Lorg/telegram/ui/ChannelCreateActivity;)Landroid/view/View;
 
     move-result-object v0
 
     invoke-virtual {v0}, Landroid/view/View;->invalidate()V
 
-    .line 460
+    .line 510
     :cond_11
     invoke-super {p0}, Landroid/view/View;->invalidate()V
 
@@ -63,25 +63,25 @@
 .method public invalidate(IIII)V
     .registers 6
 
-    .line 465
+    .line 515
     iget-object v0, p0, Lorg/telegram/ui/ChannelCreateActivity$3;->this$0:Lorg/telegram/ui/ChannelCreateActivity;
 
-    invoke-static {v0}, Lorg/telegram/ui/ChannelCreateActivity;->access$1700(Lorg/telegram/ui/ChannelCreateActivity;)Landroid/view/View;
+    invoke-static {v0}, Lorg/telegram/ui/ChannelCreateActivity;->access$1800(Lorg/telegram/ui/ChannelCreateActivity;)Landroid/view/View;
 
     move-result-object v0
 
     if-eqz v0, :cond_11
 
-    .line 466
+    .line 516
     iget-object v0, p0, Lorg/telegram/ui/ChannelCreateActivity$3;->this$0:Lorg/telegram/ui/ChannelCreateActivity;
 
-    invoke-static {v0}, Lorg/telegram/ui/ChannelCreateActivity;->access$1700(Lorg/telegram/ui/ChannelCreateActivity;)Landroid/view/View;
+    invoke-static {v0}, Lorg/telegram/ui/ChannelCreateActivity;->access$1800(Lorg/telegram/ui/ChannelCreateActivity;)Landroid/view/View;
 
     move-result-object v0
 
     invoke-virtual {v0}, Landroid/view/View;->invalidate()V
 
-    .line 468
+    .line 518
     :cond_11
     invoke-super {p0, p1, p2, p3, p4}, Landroid/view/View;->invalidate(IIII)V
 

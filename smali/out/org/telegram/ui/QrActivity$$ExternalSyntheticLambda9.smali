@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lorg/telegram/ui/QrActivity$QrView$QrCenterChangedListener;
+.implements Lorg/telegram/ui/ActionBar/ThemeDescription$ThemeDescriptionDelegate;
 
 
 # instance fields
@@ -22,12 +22,20 @@
 
 
 # virtual methods
-.method public final onCenterChanged(IIII)V
-    .registers 6
+.method public final didSetColor()V
+    .registers 2
 
     iget-object v0, p0, Lorg/telegram/ui/QrActivity$$ExternalSyntheticLambda9;->f$0:Lorg/telegram/ui/QrActivity;
 
-    invoke-static {v0, p1, p2, p3, p4}, Lorg/telegram/ui/QrActivity;->$r8$lambda$GSN6dk99qwzy7n8rh-KmhVs9rfY(Lorg/telegram/ui/QrActivity;IIII)V
+    invoke-static {v0}, Lorg/telegram/ui/QrActivity;->$r8$lambda$yez7o-vNqJ9zJKGpIoQxuFugEXc(Lorg/telegram/ui/QrActivity;)V
+
+    return-void
+.end method
+
+.method public synthetic onAnimationProgress(F)V
+    .registers 2
+
+    invoke-static {p0, p1}, Lorg/telegram/ui/ActionBar/ThemeDescription$ThemeDescriptionDelegate$-CC;->$default$onAnimationProgress(Lorg/telegram/ui/ActionBar/ThemeDescription$ThemeDescriptionDelegate;F)V
 
     return-void
 .end method

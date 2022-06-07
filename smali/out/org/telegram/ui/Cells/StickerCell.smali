@@ -398,7 +398,7 @@
     goto :goto_b
 
     :cond_34
-    const v0, 0x7f0e01fe
+    const v0, 0x7f0e0233
 
     const-string v1, "AttachSticker"
 

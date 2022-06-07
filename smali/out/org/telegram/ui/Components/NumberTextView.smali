@@ -55,24 +55,24 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .registers 3
 
-    .line 46
+    .line 47
     invoke-direct {p0, p1}, Landroid/view/View;-><init>(Landroid/content/Context;)V
-
-    .line 32
-    new-instance p1, Ljava/util/ArrayList;
-
-    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object p1, p0, Lorg/telegram/ui/Components/NumberTextView;->letters:Ljava/util/ArrayList;
 
     .line 33
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object p1, p0, Lorg/telegram/ui/Components/NumberTextView;->oldLetters:Ljava/util/ArrayList;
+    iput-object p1, p0, Lorg/telegram/ui/Components/NumberTextView;->letters:Ljava/util/ArrayList;
 
     .line 34
+    new-instance p1, Ljava/util/ArrayList;
+
+    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object p1, p0, Lorg/telegram/ui/Components/NumberTextView;->oldLetters:Ljava/util/ArrayList;
+
+    .line 35
     new-instance p1, Landroid/text/TextPaint;
 
     const/4 v0, 0x1
@@ -83,10 +83,10 @@
 
     const/4 p1, 0x0
 
-    .line 36
+    .line 37
     iput p1, p0, Lorg/telegram/ui/Components/NumberTextView;->progress:F
 
-    .line 37
+    .line 38
     iput v0, p0, Lorg/telegram/ui/Components/NumberTextView;->currentNumber:I
 
     return-void
@@ -95,7 +95,7 @@
 .method static synthetic access$002(Lorg/telegram/ui/Components/NumberTextView;Landroid/animation/ObjectAnimator;)Landroid/animation/ObjectAnimator;
     .registers 2
 
-    .line 30
+    .line 31
     iput-object p1, p0, Lorg/telegram/ui/Components/NumberTextView;->animator:Landroid/animation/ObjectAnimator;
 
     return-object p1
@@ -104,7 +104,7 @@
 .method static synthetic access$100(Lorg/telegram/ui/Components/NumberTextView;)Ljava/util/ArrayList;
     .registers 1
 
-    .line 30
+    .line 31
     iget-object p0, p0, Lorg/telegram/ui/Components/NumberTextView;->oldLetters:Ljava/util/ArrayList;
 
     return-object p0
@@ -115,7 +115,7 @@
 .method public getOldTextWidth()F
     .registers 2
 
-    .line 229
+    .line 230
     iget v0, p0, Lorg/telegram/ui/Components/NumberTextView;->oldTextWidth:F
 
     return v0
@@ -126,7 +126,7 @@
     .annotation build Landroidx/annotation/Keep;
     .end annotation
 
-    .line 67
+    .line 68
     iget v0, p0, Lorg/telegram/ui/Components/NumberTextView;->progress:F
 
     return v0
@@ -135,7 +135,7 @@
 .method public getTextWidth()F
     .registers 2
 
-    .line 233
+    .line 234
     iget v0, p0, Lorg/telegram/ui/Components/NumberTextView;->textWidth:F
 
     return v0
@@ -144,7 +144,7 @@
 .method protected onDraw(Landroid/graphics/Canvas;)V
     .registers 15
 
-    .line 164
+    .line 165
     iget-object v0, p0, Lorg/telegram/ui/Components/NumberTextView;->letters:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
@@ -155,7 +155,7 @@
 
     return-void
 
-    .line 167
+    .line 168
     :cond_9
     iget-object v0, p0, Lorg/telegram/ui/Components/NumberTextView;->letters:Ljava/util/ArrayList;
 
@@ -173,7 +173,7 @@
 
     int-to-float v0, v0
 
-    .line 168
+    .line 169
     iget-boolean v2, p0, Lorg/telegram/ui/Components/NumberTextView;->addNumber:Z
 
     if-eqz v2, :cond_23
@@ -191,7 +191,7 @@
     :cond_23
     move v2, v0
 
-    .line 172
+    .line 173
     :goto_24
     iget-boolean v3, p0, Lorg/telegram/ui/Components/NumberTextView;->center:Z
 
@@ -201,7 +201,7 @@
 
     if-eqz v3, :cond_3f
 
-    .line 173
+    .line 174
     invoke-virtual {p0}, Landroid/view/View;->getMeasuredWidth()I
 
     move-result v3
@@ -214,7 +214,7 @@
 
     div-float/2addr v3, v4
 
-    .line 174
+    .line 175
     invoke-virtual {p0}, Landroid/view/View;->getMeasuredWidth()I
 
     move-result v6
@@ -236,11 +236,11 @@
 
     const/4 v6, 0x0
 
-    .line 176
+    .line 177
     :goto_41
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 177
+    .line 178
     invoke-virtual {p0}, Landroid/view/View;->getPaddingLeft()I
 
     move-result v7
@@ -261,7 +261,7 @@
 
     invoke-virtual {p1, v7, v3}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 178
+    .line 179
     iget-object v0, p0, Lorg/telegram/ui/Components/NumberTextView;->letters:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -283,10 +283,10 @@
     :goto_65
     if-ge v3, v0, :cond_147
 
-    .line 180
+    .line 181
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 181
+    .line 182
     iget-object v4, p0, Lorg/telegram/ui/Components/NumberTextView;->oldLetters:Ljava/util/ArrayList;
 
     invoke-virtual {v4}, Ljava/util/ArrayList;->size()I
@@ -310,7 +310,7 @@
     :cond_7c
     move-object v4, v7
 
-    .line 182
+    .line 183
     :goto_7d
     iget-object v8, p0, Lorg/telegram/ui/Components/NumberTextView;->letters:Ljava/util/ArrayList;
 
@@ -328,7 +328,7 @@
 
     check-cast v7, Landroid/text/StaticLayout;
 
-    .line 183
+    .line 184
     :cond_8d
     iget v8, p0, Lorg/telegram/ui/Components/NumberTextView;->progress:F
 
@@ -344,7 +344,7 @@
 
     if-eqz v4, :cond_ca
 
-    .line 185
+    .line 186
     iget-object v9, p0, Lorg/telegram/ui/Components/NumberTextView;->textPaint:Landroid/text/TextPaint;
 
     mul-float v8, v8, v10
@@ -353,10 +353,10 @@
 
     invoke-virtual {v9, v8}, Landroid/text/TextPaint;->setAlpha(I)V
 
-    .line 186
+    .line 187
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 187
+    .line 188
     iget v8, p0, Lorg/telegram/ui/Components/NumberTextView;->progress:F
 
     sub-float/2addr v8, v11
@@ -365,15 +365,15 @@
 
     invoke-virtual {p1, v6, v8}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 188
+    .line 189
     invoke-virtual {v4, p1}, Landroid/text/StaticLayout;->draw(Landroid/graphics/Canvas;)V
 
-    .line 189
+    .line 190
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
     if-eqz v7, :cond_119
 
-    .line 191
+    .line 192
     iget-object v8, p0, Lorg/telegram/ui/Components/NumberTextView;->textPaint:Landroid/text/TextPaint;
 
     iget v9, p0, Lorg/telegram/ui/Components/NumberTextView;->progress:F
@@ -386,7 +386,7 @@
 
     invoke-virtual {v8, v9}, Landroid/text/TextPaint;->setAlpha(I)V
 
-    .line 192
+    .line 193
     iget v8, p0, Lorg/telegram/ui/Components/NumberTextView;->progress:F
 
     mul-float v8, v8, v2
@@ -395,7 +395,7 @@
 
     goto :goto_119
 
-    .line 195
+    .line 196
     :cond_ca
     iget-object v8, p0, Lorg/telegram/ui/Components/NumberTextView;->textPaint:Landroid/text/TextPaint;
 
@@ -410,7 +410,7 @@
 
     if-eqz v4, :cond_f0
 
-    .line 199
+    .line 200
     iget-object v12, p0, Lorg/telegram/ui/Components/NumberTextView;->textPaint:Landroid/text/TextPaint;
 
     neg-float v8, v8
@@ -421,10 +421,10 @@
 
     invoke-virtual {v12, v8}, Landroid/text/TextPaint;->setAlpha(I)V
 
-    .line 200
+    .line 201
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 201
+    .line 202
     iget v8, p0, Lorg/telegram/ui/Components/NumberTextView;->progress:F
 
     add-float/2addr v8, v11
@@ -433,10 +433,10 @@
 
     invoke-virtual {p1, v6, v8}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 202
+    .line 203
     invoke-virtual {v4, p1}, Landroid/text/StaticLayout;->draw(Landroid/graphics/Canvas;)V
 
-    .line 203
+    .line 204
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
     :cond_f0
@@ -450,7 +450,7 @@
 
     goto :goto_ff
 
-    .line 210
+    .line 211
     :cond_f9
     iget-object v8, p0, Lorg/telegram/ui/Components/NumberTextView;->textPaint:Landroid/text/TextPaint;
 
@@ -458,7 +458,7 @@
 
     goto :goto_119
 
-    .line 207
+    .line 208
     :cond_ff
     :goto_ff
     iget-object v8, p0, Lorg/telegram/ui/Components/NumberTextView;->textPaint:Landroid/text/TextPaint;
@@ -473,7 +473,7 @@
 
     invoke-virtual {v8, v9}, Landroid/text/TextPaint;->setAlpha(I)V
 
-    .line 208
+    .line 209
     iget v8, p0, Lorg/telegram/ui/Components/NumberTextView;->progress:F
 
     mul-float v8, v8, v2
@@ -485,7 +485,7 @@
     :cond_112
     if-eqz v7, :cond_119
 
-    .line 214
+    .line 215
     iget-object v8, p0, Lorg/telegram/ui/Components/NumberTextView;->textPaint:Landroid/text/TextPaint;
 
     invoke-virtual {v8, v9}, Landroid/text/TextPaint;->setAlpha(I)V
@@ -494,16 +494,16 @@
     :goto_119
     if-eqz v7, :cond_11e
 
-    .line 217
+    .line 218
     invoke-virtual {v7, p1}, Landroid/text/StaticLayout;->draw(Landroid/graphics/Canvas;)V
 
-    .line 219
+    .line 220
     :cond_11e
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
     if-eqz v7, :cond_128
 
-    .line 220
+    .line 221
     invoke-virtual {v7, v1}, Landroid/text/StaticLayout;->getLineWidth(I)F
 
     move-result v8
@@ -530,7 +530,7 @@
 
     if-eqz v4, :cond_143
 
-    .line 222
+    .line 223
     invoke-virtual {v4, v1}, Landroid/text/StaticLayout;->getLineWidth(I)F
 
     move-result v4
@@ -548,7 +548,7 @@
 
     goto/16 :goto_65
 
-    .line 225
+    .line 226
     :cond_147
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
@@ -560,7 +560,7 @@
 
     const/4 v0, 0x1
 
-    .line 71
+    .line 72
     iput-boolean v0, p0, Lorg/telegram/ui/Components/NumberTextView;->addNumber:Z
 
     return-void
@@ -569,7 +569,7 @@
 .method public setCenterAlign(Z)V
     .registers 2
 
-    .line 159
+    .line 160
     iput-boolean p1, p0, Lorg/telegram/ui/Components/NumberTextView;->center:Z
 
     return-void
@@ -582,7 +582,7 @@
 
     move/from16 v1, p1
 
-    .line 75
+    .line 76
     iget v2, v0, Lorg/telegram/ui/Components/NumberTextView;->currentNumber:I
 
     if-ne v2, v1, :cond_b
@@ -591,7 +591,7 @@
 
     return-void
 
-    .line 78
+    .line 79
     :cond_b
     iget-object v2, v0, Lorg/telegram/ui/Components/NumberTextView;->animator:Landroid/animation/ObjectAnimator;
 
@@ -599,31 +599,31 @@
 
     if-eqz v2, :cond_15
 
-    .line 79
+    .line 80
     invoke-virtual {v2}, Landroid/animation/ObjectAnimator;->cancel()V
 
-    .line 80
+    .line 81
     iput-object v3, v0, Lorg/telegram/ui/Components/NumberTextView;->animator:Landroid/animation/ObjectAnimator;
 
-    .line 82
+    .line 83
     :cond_15
     iget-object v2, v0, Lorg/telegram/ui/Components/NumberTextView;->oldLetters:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->clear()V
 
-    .line 83
+    .line 84
     iget-object v2, v0, Lorg/telegram/ui/Components/NumberTextView;->oldLetters:Ljava/util/ArrayList;
 
     iget-object v4, v0, Lorg/telegram/ui/Components/NumberTextView;->letters:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v4}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
-    .line 84
+    .line 85
     iget-object v2, v0, Lorg/telegram/ui/Components/NumberTextView;->letters:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->clear()V
 
-    .line 88
+    .line 89
     iget-boolean v2, v0, Lorg/telegram/ui/Components/NumberTextView;->addNumber:Z
 
     const/4 v4, 0x0
@@ -632,7 +632,7 @@
 
     if-eqz v2, :cond_52
 
-    .line 89
+    .line 90
     sget-object v2, Ljava/util/Locale;->US:Ljava/util/Locale;
 
     new-array v6, v5, [Ljava/lang/Object;
@@ -653,7 +653,7 @@
 
     new-array v8, v5, [Ljava/lang/Object;
 
-    .line 90
+    .line 91
     invoke-static/range {p1 .. p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v9
@@ -664,7 +664,7 @@
 
     move-result-object v2
 
-    .line 91
+    .line 92
     iget v7, v0, Lorg/telegram/ui/Components/NumberTextView;->currentNumber:I
 
     if-ge v1, v7, :cond_50
@@ -679,7 +679,7 @@
 
     goto :goto_75
 
-    .line 93
+    .line 94
     :cond_52
     sget-object v2, Ljava/util/Locale;->US:Ljava/util/Locale;
 
@@ -701,7 +701,7 @@
 
     new-array v8, v5, [Ljava/lang/Object;
 
-    .line 94
+    .line 95
     invoke-static/range {p1 .. p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v9
@@ -712,14 +712,14 @@
 
     move-result-object v2
 
-    .line 95
+    .line 96
     iget v7, v0, Lorg/telegram/ui/Components/NumberTextView;->currentNumber:I
 
     if-le v1, v7, :cond_50
 
     goto :goto_4e
 
-    .line 98
+    .line 99
     :goto_75
     iget-object v8, v0, Lorg/telegram/ui/Components/NumberTextView;->textPaint:Landroid/text/TextPaint;
 
@@ -729,7 +729,7 @@
 
     iput v8, v0, Lorg/telegram/ui/Components/NumberTextView;->textWidth:F
 
-    .line 99
+    .line 100
     iget-object v8, v0, Lorg/telegram/ui/Components/NumberTextView;->textPaint:Landroid/text/TextPaint;
 
     invoke-virtual {v8, v6}, Landroid/text/TextPaint;->measureText(Ljava/lang/String;)F
@@ -738,12 +738,12 @@
 
     iput v8, v0, Lorg/telegram/ui/Components/NumberTextView;->oldTextWidth:F
 
-    .line 100
+    .line 101
     iget-boolean v9, v0, Lorg/telegram/ui/Components/NumberTextView;->center:Z
 
     if-eqz v9, :cond_91
 
-    .line 101
+    .line 102
     iget v9, v0, Lorg/telegram/ui/Components/NumberTextView;->textWidth:F
 
     cmpl-float v8, v9, v8
@@ -757,18 +757,18 @@
     :cond_91
     const/4 v8, 0x0
 
-    .line 106
+    .line 107
     :goto_92
     iput v1, v0, Lorg/telegram/ui/Components/NumberTextView;->currentNumber:I
 
     const/4 v1, 0x0
 
-    .line 107
+    .line 108
     iput v1, v0, Lorg/telegram/ui/Components/NumberTextView;->progress:F
 
     const/4 v9, 0x0
 
-    .line 108
+    .line 109
     :goto_98
     invoke-virtual {v2}, Ljava/lang/String;->length()I
 
@@ -778,12 +778,12 @@
 
     add-int/lit8 v10, v9, 0x1
 
-    .line 109
+    .line 110
     invoke-virtual {v2, v9, v10}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v12
 
-    .line 110
+    .line 111
     iget-object v11, v0, Lorg/telegram/ui/Components/NumberTextView;->oldLetters:Ljava/util/ArrayList;
 
     invoke-virtual {v11}, Ljava/util/ArrayList;->isEmpty()Z
@@ -812,14 +812,14 @@
 
     if-eqz v11, :cond_d5
 
-    .line 111
+    .line 112
     invoke-virtual {v11, v12}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v13
 
     if-eqz v13, :cond_d5
 
-    .line 112
+    .line 113
     iget-object v11, v0, Lorg/telegram/ui/Components/NumberTextView;->letters:Ljava/util/ArrayList;
 
     iget-object v12, v0, Lorg/telegram/ui/Components/NumberTextView;->oldLetters:Ljava/util/ArrayList;
@@ -832,7 +832,7 @@
 
     invoke-virtual {v11, v12}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 113
+    .line 114
     iget-object v11, v0, Lorg/telegram/ui/Components/NumberTextView;->oldLetters:Ljava/util/ArrayList;
 
     invoke-virtual {v11, v9, v3}, Ljava/util/ArrayList;->set(ILjava/lang/Object;)Ljava/lang/Object;
@@ -844,7 +844,7 @@
 
     if-nez v11, :cond_f2
 
-    .line 116
+    .line 117
     iget-object v9, v0, Lorg/telegram/ui/Components/NumberTextView;->oldLetters:Ljava/util/ArrayList;
 
     new-instance v11, Landroid/text/StaticLayout;
@@ -869,7 +869,7 @@
 
     invoke-virtual {v9, v11}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 118
+    .line 119
     :cond_f2
     new-instance v9, Landroid/text/StaticLayout;
 
@@ -899,7 +899,7 @@
 
     invoke-direct/range {v11 .. v18}, Landroid/text/StaticLayout;-><init>(Ljava/lang/CharSequence;Landroid/text/TextPaint;ILandroid/text/Layout$Alignment;FFZ)V
 
-    .line 119
+    .line 120
     iget-object v11, v0, Lorg/telegram/ui/Components/NumberTextView;->letters:Ljava/util/ArrayList;
 
     invoke-virtual {v11, v9}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -912,7 +912,7 @@
     :cond_113
     if-eqz p2, :cond_14f
 
-    .line 122
+    .line 123
     iget-object v2, v0, Lorg/telegram/ui/Components/NumberTextView;->oldLetters:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->isEmpty()Z
@@ -941,14 +941,14 @@
 
     const-string v1, "progress"
 
-    .line 123
+    .line 124
     invoke-static {v0, v1, v2}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Ljava/lang/String;[F)Landroid/animation/ObjectAnimator;
 
     move-result-object v1
 
     iput-object v1, v0, Lorg/telegram/ui/Components/NumberTextView;->animator:Landroid/animation/ObjectAnimator;
 
-    .line 124
+    .line 125
     iget-boolean v2, v0, Lorg/telegram/ui/Components/NumberTextView;->addNumber:Z
 
     if-eqz v2, :cond_13a
@@ -963,7 +963,7 @@
     :goto_13c
     invoke-virtual {v1, v2, v3}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
-    .line 125
+    .line 126
     iget-object v1, v0, Lorg/telegram/ui/Components/NumberTextView;->animator:Landroid/animation/ObjectAnimator;
 
     new-instance v2, Lorg/telegram/ui/Components/NumberTextView$1;
@@ -972,20 +972,20 @@
 
     invoke-virtual {v1, v2}, Landroid/animation/ObjectAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 132
+    .line 133
     iget-object v1, v0, Lorg/telegram/ui/Components/NumberTextView;->animator:Landroid/animation/ObjectAnimator;
 
     invoke-virtual {v1}, Landroid/animation/ObjectAnimator;->start()V
 
     goto :goto_15c
 
-    .line 133
+    .line 134
     :cond_14f
     iget-object v1, v0, Lorg/telegram/ui/Components/NumberTextView;->onTextWidthProgressChangedListener:Lorg/telegram/ui/Components/NumberTextView$OnTextWidthProgressChangedListener;
 
     if-eqz v1, :cond_15c
 
-    .line 134
+    .line 135
     iget v2, v0, Lorg/telegram/ui/Components/NumberTextView;->oldTextWidth:F
 
     iget v3, v0, Lorg/telegram/ui/Components/NumberTextView;->textWidth:F
@@ -994,7 +994,7 @@
 
     invoke-interface {v1, v2, v3, v4}, Lorg/telegram/ui/Components/NumberTextView$OnTextWidthProgressChangedListener;->onTextWidthProgress(FFF)V
 
-    .line 136
+    .line 137
     :cond_15c
     :goto_15c
     invoke-virtual/range {p0 .. p0}, Landroid/view/View;->invalidate()V
@@ -1005,7 +1005,7 @@
 .method public setOnTextWidthProgressChangedListener(Lorg/telegram/ui/Components/NumberTextView$OnTextWidthProgressChangedListener;)V
     .registers 2
 
-    .line 50
+    .line 51
     iput-object p1, p0, Lorg/telegram/ui/Components/NumberTextView;->onTextWidthProgressChangedListener:Lorg/telegram/ui/Components/NumberTextView$OnTextWidthProgressChangedListener;
 
     return-void
@@ -1016,7 +1016,7 @@
     .annotation build Landroidx/annotation/Keep;
     .end annotation
 
-    .line 55
+    .line 56
     iget v0, p0, Lorg/telegram/ui/Components/NumberTextView;->progress:F
 
     cmpl-float v0, v0, p1
@@ -1025,23 +1025,23 @@
 
     return-void
 
-    .line 58
+    .line 59
     :cond_7
     iput p1, p0, Lorg/telegram/ui/Components/NumberTextView;->progress:F
 
-    .line 59
+    .line 60
     iget-object v0, p0, Lorg/telegram/ui/Components/NumberTextView;->onTextWidthProgressChangedListener:Lorg/telegram/ui/Components/NumberTextView$OnTextWidthProgressChangedListener;
 
     if-eqz v0, :cond_14
 
-    .line 60
+    .line 61
     iget v1, p0, Lorg/telegram/ui/Components/NumberTextView;->oldTextWidth:F
 
     iget v2, p0, Lorg/telegram/ui/Components/NumberTextView;->textWidth:F
 
     invoke-interface {v0, v1, v2, p1}, Lorg/telegram/ui/Components/NumberTextView$OnTextWidthProgressChangedListener;->onTextWidthProgress(FFF)V
 
-    .line 62
+    .line 63
     :cond_14
     invoke-virtual {p0}, Landroid/view/View;->invalidate()V
 
@@ -1051,12 +1051,12 @@
 .method public setTextColor(I)V
     .registers 3
 
-    .line 147
+    .line 148
     iget-object v0, p0, Lorg/telegram/ui/Components/NumberTextView;->textPaint:Landroid/text/TextPaint;
 
     invoke-virtual {v0, p1}, Landroid/text/TextPaint;->setColor(I)V
 
-    .line 148
+    .line 149
     invoke-virtual {p0}, Landroid/view/View;->invalidate()V
 
     return-void
@@ -1065,7 +1065,7 @@
 .method public setTextSize(I)V
     .registers 3
 
-    .line 140
+    .line 141
     iget-object v0, p0, Lorg/telegram/ui/Components/NumberTextView;->textPaint:Landroid/text/TextPaint;
 
     int-to-float p1, p1
@@ -1078,17 +1078,17 @@
 
     invoke-virtual {v0, p1}, Landroid/text/TextPaint;->setTextSize(F)V
 
-    .line 141
+    .line 142
     iget-object p1, p0, Lorg/telegram/ui/Components/NumberTextView;->oldLetters:Ljava/util/ArrayList;
 
     invoke-virtual {p1}, Ljava/util/ArrayList;->clear()V
 
-    .line 142
+    .line 143
     iget-object p1, p0, Lorg/telegram/ui/Components/NumberTextView;->letters:Ljava/util/ArrayList;
 
     invoke-virtual {p1}, Ljava/util/ArrayList;->clear()V
 
-    .line 143
+    .line 144
     iget p1, p0, Lorg/telegram/ui/Components/NumberTextView;->currentNumber:I
 
     const/4 v0, 0x0
@@ -1101,22 +1101,22 @@
 .method public setTypeface(Landroid/graphics/Typeface;)V
     .registers 3
 
-    .line 152
+    .line 153
     iget-object v0, p0, Lorg/telegram/ui/Components/NumberTextView;->textPaint:Landroid/text/TextPaint;
 
     invoke-virtual {v0, p1}, Landroid/text/TextPaint;->setTypeface(Landroid/graphics/Typeface;)Landroid/graphics/Typeface;
 
-    .line 153
+    .line 154
     iget-object p1, p0, Lorg/telegram/ui/Components/NumberTextView;->oldLetters:Ljava/util/ArrayList;
 
     invoke-virtual {p1}, Ljava/util/ArrayList;->clear()V
 
-    .line 154
+    .line 155
     iget-object p1, p0, Lorg/telegram/ui/Components/NumberTextView;->letters:Ljava/util/ArrayList;
 
     invoke-virtual {p1}, Ljava/util/ArrayList;->clear()V
 
-    .line 155
+    .line 156
     iget p1, p0, Lorg/telegram/ui/Components/NumberTextView;->currentNumber:I
 
     const/4 v0, 0x0

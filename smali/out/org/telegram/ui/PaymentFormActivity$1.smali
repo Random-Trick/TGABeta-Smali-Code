@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/PaymentFormActivity;)V
     .registers 2
 
-    .line 483
+    .line 547
     iput-object p1, p0, Lorg/telegram/ui/PaymentFormActivity$1;->this$0:Lorg/telegram/ui/PaymentFormActivity;
 
     invoke-direct {p0}, Lorg/telegram/ui/ActionBar/ActionBar$ActionBarMenuOnItemClick;-><init>()V
@@ -39,7 +39,7 @@
 
     if-ne p1, v0, :cond_13
 
-    .line 487
+    .line 551
     iget-object p1, p0, Lorg/telegram/ui/PaymentFormActivity$1;->this$0:Lorg/telegram/ui/PaymentFormActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/PaymentFormActivity;->access$400(Lorg/telegram/ui/PaymentFormActivity;)Z
@@ -50,20 +50,20 @@
 
     return-void
 
-    .line 490
+    .line 554
     :cond_c
     iget-object p1, p0, Lorg/telegram/ui/PaymentFormActivity$1;->this$0:Lorg/telegram/ui/PaymentFormActivity;
 
     invoke-virtual {p1}, Lorg/telegram/ui/ActionBar/BaseFragment;->finishFragment()V
 
-    goto/16 :goto_ae
+    goto/16 :goto_97
 
     :cond_13
     const/4 v0, 0x1
 
-    if-ne p1, v0, :cond_ae
+    if-ne p1, v0, :cond_97
 
-    .line 492
+    .line 556
     iget-object p1, p0, Lorg/telegram/ui/PaymentFormActivity$1;->this$0:Lorg/telegram/ui/PaymentFormActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/PaymentFormActivity;->access$400(Lorg/telegram/ui/PaymentFormActivity;)Z
@@ -74,7 +74,7 @@
 
     return-void
 
-    .line 495
+    .line 559
     :cond_1f
     iget-object p1, p0, Lorg/telegram/ui/PaymentFormActivity$1;->this$0:Lorg/telegram/ui/PaymentFormActivity;
 
@@ -86,7 +86,7 @@
 
     if-eq p1, v1, :cond_35
 
-    .line 496
+    .line 560
     iget-object p1, p0, Lorg/telegram/ui/PaymentFormActivity$1;->this$0:Lorg/telegram/ui/PaymentFormActivity;
 
     invoke-virtual {p1}, Lorg/telegram/ui/ActionBar/BaseFragment;->getParentActivity()Landroid/app/Activity;
@@ -99,7 +99,7 @@
 
     invoke-static {p1}, Lorg/telegram/messenger/AndroidUtilities;->hideKeyboard(Landroid/view/View;)V
 
-    .line 498
+    .line 562
     :cond_35
     iget-object p1, p0, Lorg/telegram/ui/PaymentFormActivity$1;->this$0:Lorg/telegram/ui/PaymentFormActivity;
 
@@ -107,34 +107,51 @@
 
     move-result p1
 
-    if-nez p1, :cond_48
-
-    .line 499
-    iget-object p1, p0, Lorg/telegram/ui/PaymentFormActivity$1;->this$0:Lorg/telegram/ui/PaymentFormActivity;
-
-    invoke-static {p1, v0}, Lorg/telegram/ui/PaymentFormActivity;->access$600(Lorg/telegram/ui/PaymentFormActivity;Z)V
-
-    .line 500
-    iget-object p1, p0, Lorg/telegram/ui/PaymentFormActivity$1;->this$0:Lorg/telegram/ui/PaymentFormActivity;
-
-    invoke-static {p1}, Lorg/telegram/ui/PaymentFormActivity;->access$700(Lorg/telegram/ui/PaymentFormActivity;)V
-
-    goto :goto_ae
-
-    .line 501
-    :cond_48
-    iget-object p1, p0, Lorg/telegram/ui/PaymentFormActivity$1;->this$0:Lorg/telegram/ui/PaymentFormActivity;
-
-    invoke-static {p1}, Lorg/telegram/ui/PaymentFormActivity;->access$500(Lorg/telegram/ui/PaymentFormActivity;)I
-
-    move-result p1
+    if-eqz p1, :cond_8d
 
     const/4 v2, 0x0
 
-    if-ne p1, v0, :cond_83
+    if-eq p1, v0, :cond_5b
 
-    .line 502
-    :goto_51
+    const/4 v0, 0x2
+
+    if-eq p1, v0, :cond_55
+
+    if-eq p1, v1, :cond_4f
+
+    const/4 v0, 0x6
+
+    if-eq p1, v0, :cond_49
+
+    goto :goto_97
+
+    .line 583
+    :cond_49
+    iget-object p1, p0, Lorg/telegram/ui/PaymentFormActivity$1;->this$0:Lorg/telegram/ui/PaymentFormActivity;
+
+    invoke-static {p1, v2}, Lorg/telegram/ui/PaymentFormActivity;->access$1300(Lorg/telegram/ui/PaymentFormActivity;Z)V
+
+    goto :goto_97
+
+    .line 580
+    :cond_4f
+    iget-object p1, p0, Lorg/telegram/ui/PaymentFormActivity$1;->this$0:Lorg/telegram/ui/PaymentFormActivity;
+
+    invoke-static {p1}, Lorg/telegram/ui/PaymentFormActivity;->access$1200(Lorg/telegram/ui/PaymentFormActivity;)V
+
+    goto :goto_97
+
+    .line 577
+    :cond_55
+    iget-object p1, p0, Lorg/telegram/ui/PaymentFormActivity$1;->this$0:Lorg/telegram/ui/PaymentFormActivity;
+
+    invoke-static {p1}, Lorg/telegram/ui/PaymentFormActivity;->access$1100(Lorg/telegram/ui/PaymentFormActivity;)Z
+
+    goto :goto_97
+
+    .line 568
+    :cond_5b
+    :goto_5b
     iget-object p1, p0, Lorg/telegram/ui/PaymentFormActivity$1;->this$0:Lorg/telegram/ui/PaymentFormActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/PaymentFormActivity;->access$800(Lorg/telegram/ui/PaymentFormActivity;)[Lorg/telegram/ui/Cells/RadioCell;
@@ -143,9 +160,9 @@
 
     array-length p1, p1
 
-    if-ge v2, p1, :cond_7d
+    if-ge v2, p1, :cond_87
 
-    .line 503
+    .line 569
     iget-object p1, p0, Lorg/telegram/ui/PaymentFormActivity$1;->this$0:Lorg/telegram/ui/PaymentFormActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/PaymentFormActivity;->access$800(Lorg/telegram/ui/PaymentFormActivity;)[Lorg/telegram/ui/Cells/RadioCell;
@@ -158,9 +175,9 @@
 
     move-result p1
 
-    if-eqz p1, :cond_7a
+    if-eqz p1, :cond_84
 
-    .line 504
+    .line 570
     iget-object p1, p0, Lorg/telegram/ui/PaymentFormActivity$1;->this$0:Lorg/telegram/ui/PaymentFormActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/PaymentFormActivity;->access$1000(Lorg/telegram/ui/PaymentFormActivity;)Lorg/telegram/tgnet/TLRPC$TL_payments_validatedRequestedInfo;
@@ -177,76 +194,34 @@
 
     invoke-static {p1, v0}, Lorg/telegram/ui/PaymentFormActivity;->access$902(Lorg/telegram/ui/PaymentFormActivity;Lorg/telegram/tgnet/TLRPC$TL_shippingOption;)Lorg/telegram/tgnet/TLRPC$TL_shippingOption;
 
-    goto :goto_7d
+    goto :goto_87
 
-    :cond_7a
+    :cond_84
     add-int/lit8 v2, v2, 0x1
 
-    goto :goto_51
+    goto :goto_5b
 
-    .line 508
-    :cond_7d
-    :goto_7d
+    .line 574
+    :cond_87
+    :goto_87
     iget-object p1, p0, Lorg/telegram/ui/PaymentFormActivity$1;->this$0:Lorg/telegram/ui/PaymentFormActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/PaymentFormActivity;->access$200(Lorg/telegram/ui/PaymentFormActivity;)V
 
-    goto :goto_ae
+    goto :goto_97
 
-    .line 509
-    :cond_83
+    .line 564
+    :cond_8d
     iget-object p1, p0, Lorg/telegram/ui/PaymentFormActivity$1;->this$0:Lorg/telegram/ui/PaymentFormActivity;
 
-    invoke-static {p1}, Lorg/telegram/ui/PaymentFormActivity;->access$500(Lorg/telegram/ui/PaymentFormActivity;)I
+    invoke-static {p1, v0}, Lorg/telegram/ui/PaymentFormActivity;->access$600(Lorg/telegram/ui/PaymentFormActivity;Z)V
 
-    move-result p1
-
-    const/4 v0, 0x2
-
-    if-ne p1, v0, :cond_92
-
-    .line 510
+    .line 565
     iget-object p1, p0, Lorg/telegram/ui/PaymentFormActivity$1;->this$0:Lorg/telegram/ui/PaymentFormActivity;
 
-    invoke-static {p1}, Lorg/telegram/ui/PaymentFormActivity;->access$1100(Lorg/telegram/ui/PaymentFormActivity;)Z
+    invoke-static {p1}, Lorg/telegram/ui/PaymentFormActivity;->access$700(Lorg/telegram/ui/PaymentFormActivity;)V
 
-    goto :goto_ae
-
-    .line 511
-    :cond_92
-    iget-object p1, p0, Lorg/telegram/ui/PaymentFormActivity$1;->this$0:Lorg/telegram/ui/PaymentFormActivity;
-
-    invoke-static {p1}, Lorg/telegram/ui/PaymentFormActivity;->access$500(Lorg/telegram/ui/PaymentFormActivity;)I
-
-    move-result p1
-
-    if-ne p1, v1, :cond_a0
-
-    .line 512
-    iget-object p1, p0, Lorg/telegram/ui/PaymentFormActivity$1;->this$0:Lorg/telegram/ui/PaymentFormActivity;
-
-    invoke-static {p1}, Lorg/telegram/ui/PaymentFormActivity;->access$1200(Lorg/telegram/ui/PaymentFormActivity;)V
-
-    goto :goto_ae
-
-    .line 513
-    :cond_a0
-    iget-object p1, p0, Lorg/telegram/ui/PaymentFormActivity$1;->this$0:Lorg/telegram/ui/PaymentFormActivity;
-
-    invoke-static {p1}, Lorg/telegram/ui/PaymentFormActivity;->access$500(Lorg/telegram/ui/PaymentFormActivity;)I
-
-    move-result p1
-
-    const/4 v0, 0x6
-
-    if-ne p1, v0, :cond_ae
-
-    .line 514
-    iget-object p1, p0, Lorg/telegram/ui/PaymentFormActivity$1;->this$0:Lorg/telegram/ui/PaymentFormActivity;
-
-    invoke-static {p1, v2}, Lorg/telegram/ui/PaymentFormActivity;->access$1300(Lorg/telegram/ui/PaymentFormActivity;Z)V
-
-    :cond_ae
-    :goto_ae
+    :cond_97
+    :goto_97
     return-void
 .end method

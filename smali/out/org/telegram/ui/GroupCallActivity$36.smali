@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/GroupCallActivity;Landroid/view/ViewGroup;Landroid/view/ViewGroup;)V
     .registers 4
 
-    .line 5157
+    .line 5162
     iput-object p1, p0, Lorg/telegram/ui/GroupCallActivity$36;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-direct {p0, p2, p3}, Lorg/telegram/ui/PinchToZoomHelper;-><init>(Landroid/view/ViewGroup;Landroid/view/ViewGroup;)V
@@ -41,7 +41,7 @@
 
     if-lez p3, :cond_65
 
-    .line 5169
+    .line 5174
     iget-object p3, p0, Lorg/telegram/ui/GroupCallActivity$36;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-static {p3}, Lorg/telegram/ui/GroupCallActivity;->access$7800(Lorg/telegram/ui/GroupCallActivity;)Landroid/widget/FrameLayout;
@@ -64,7 +64,7 @@
 
     add-float/2addr p3, p4
 
-    .line 5170
+    .line 5175
     iget-object p4, p0, Lorg/telegram/ui/GroupCallActivity$36;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-static {p4}, Lorg/telegram/ui/GroupCallActivity;->access$7800(Lorg/telegram/ui/GroupCallActivity;)Landroid/widget/FrameLayout;
@@ -87,7 +87,7 @@
 
     add-float/2addr p4, p5
 
-    .line 5171
+    .line 5176
     sget-object p5, Lorg/telegram/messenger/AndroidUtilities;->rectTmp:Landroid/graphics/RectF;
 
     iget-object p6, p0, Lorg/telegram/ui/GroupCallActivity$36;->this$0:Lorg/telegram/ui/GroupCallActivity;
@@ -128,13 +128,13 @@
 
     const/16 p6, 0x1f
 
-    .line 5172
+    .line 5177
     invoke-virtual {p1, p5, p2, p6}, Landroid/graphics/Canvas;->saveLayerAlpha(Landroid/graphics/RectF;II)I
 
-    .line 5174
+    .line 5179
     invoke-virtual {p1, p3, p4}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 5175
+    .line 5180
     iget-object p2, p0, Lorg/telegram/ui/GroupCallActivity$36;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-static {p2}, Lorg/telegram/ui/GroupCallActivity;->access$7800(Lorg/telegram/ui/GroupCallActivity;)Landroid/widget/FrameLayout;
@@ -143,7 +143,7 @@
 
     invoke-virtual {p2, p1}, Landroid/widget/FrameLayout;->draw(Landroid/graphics/Canvas;)V
 
-    .line 5177
+    .line 5182
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
     :cond_65
@@ -153,12 +153,12 @@
 .method protected invalidateViews()V
     .registers 3
 
-    .line 5160
+    .line 5165
     invoke-super {p0}, Lorg/telegram/ui/PinchToZoomHelper;->invalidateViews()V
 
     const/4 v0, 0x0
 
-    .line 5161
+    .line 5166
     :goto_4
     iget-object v1, p0, Lorg/telegram/ui/GroupCallActivity$36;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
@@ -172,7 +172,7 @@
 
     if-ge v0, v1, :cond_20
 
-    .line 5162
+    .line 5167
     iget-object v1, p0, Lorg/telegram/ui/GroupCallActivity$36;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/GroupCallActivity;->access$17100(Lorg/telegram/ui/GroupCallActivity;)Lorg/telegram/ui/Components/ProfileGalleryView;

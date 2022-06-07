@@ -1,19 +1,19 @@
 .class final Lj$/util/stream/q2;
-.super Lj$/util/stream/t2;
+.super Lj$/util/stream/s2;
 
 # interfaces
 .implements Lj$/util/stream/l3;
 
 
 # instance fields
-.field private final h:[I
+.field private final h:[J
 
 
 # direct methods
-.method constructor <init>(Lj$/util/stream/q2;Lj$/util/y;JJ)V
+.method constructor <init>(Lj$/util/stream/q2;Lj$/util/u;JJ)V
     .registers 16
 
-    iget-object v0, p1, Lj$/util/stream/q2;->h:[I
+    iget-object v0, p1, Lj$/util/stream/q2;->h:[J
 
     array-length v8, v0
 
@@ -27,58 +27,58 @@
 
     move-wide v6, p5
 
-    invoke-direct/range {v1 .. v8}, Lj$/util/stream/t2;-><init>(Lj$/util/stream/t2;Lj$/util/y;JJI)V
+    invoke-direct/range {v1 .. v8}, Lj$/util/stream/s2;-><init>(Lj$/util/stream/s2;Lj$/util/u;JJI)V
 
-    iget-object p1, p1, Lj$/util/stream/q2;->h:[I
+    iget-object p1, p1, Lj$/util/stream/q2;->h:[J
 
-    iput-object p1, p0, Lj$/util/stream/q2;->h:[I
+    iput-object p1, p0, Lj$/util/stream/q2;->h:[J
 
     return-void
 .end method
 
-.method constructor <init>(Lj$/util/y;Lj$/util/stream/z2;[I)V
+.method constructor <init>(Lj$/util/u;Lj$/util/stream/y2;[J)V
     .registers 5
 
     array-length v0, p3
 
-    invoke-direct {p0, p1, p2, v0}, Lj$/util/stream/t2;-><init>(Lj$/util/y;Lj$/util/stream/z2;I)V
+    invoke-direct {p0, p1, p2, v0}, Lj$/util/stream/s2;-><init>(Lj$/util/u;Lj$/util/stream/y2;I)V
 
-    iput-object p3, p0, Lj$/util/stream/q2;->h:[I
+    iput-object p3, p0, Lj$/util/stream/q2;->h:[J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public accept(I)V
-    .registers 5
+.method public accept(J)V
+    .registers 6
 
-    iget v0, p0, Lj$/util/stream/t2;->f:I
+    iget v0, p0, Lj$/util/stream/s2;->f:I
 
-    iget v1, p0, Lj$/util/stream/t2;->g:I
+    iget v1, p0, Lj$/util/stream/s2;->g:I
 
     if-ge v0, v1, :cond_f
 
-    iget-object v1, p0, Lj$/util/stream/q2;->h:[I
+    iget-object v1, p0, Lj$/util/stream/q2;->h:[J
 
     add-int/lit8 v2, v0, 0x1
 
-    iput v2, p0, Lj$/util/stream/t2;->f:I
+    iput v2, p0, Lj$/util/stream/s2;->f:I
 
-    aput p1, v1, v0
+    aput-wide p1, v1, v0
 
     return-void
 
     :cond_f
     new-instance p1, Ljava/lang/IndexOutOfBoundsException;
 
-    iget v0, p0, Lj$/util/stream/t2;->f:I
+    iget p2, p0, Lj$/util/stream/s2;->f:I
 
-    invoke-static {v0}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
+    invoke-static {p2}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p2
 
-    invoke-direct {p1, v0}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
 
     throw p1
 .end method
@@ -87,14 +87,14 @@
     .registers 2
 
     .line 1
-    check-cast p1, Ljava/lang/Integer;
+    check-cast p1, Ljava/lang/Long;
 
-    invoke-virtual {p0, p1}, Lj$/util/stream/q2;->c(Ljava/lang/Integer;)V
+    invoke-virtual {p0, p1}, Lj$/util/stream/q2;->c(Ljava/lang/Long;)V
 
     return-void
 .end method
 
-.method b(Lj$/util/y;JJ)Lj$/util/stream/t2;
+.method b(Lj$/util/u;JJ)Lj$/util/stream/s2;
     .registers 14
 
     .line 1
@@ -110,28 +110,28 @@
 
     move-wide v5, p4
 
-    invoke-direct/range {v0 .. v6}, Lj$/util/stream/q2;-><init>(Lj$/util/stream/q2;Lj$/util/y;JJ)V
+    invoke-direct/range {v0 .. v6}, Lj$/util/stream/q2;-><init>(Lj$/util/stream/q2;Lj$/util/u;JJ)V
 
     return-object v7
 .end method
 
-.method public synthetic c(Ljava/lang/Integer;)V
+.method public synthetic c(Ljava/lang/Long;)V
     .registers 2
 
-    invoke-static {p0, p1}, Lj$/util/stream/p1;->b(Lj$/util/stream/l3;Ljava/lang/Integer;)V
+    invoke-static {p0, p1}, Lj$/util/stream/o1;->c(Lj$/util/stream/l3;Ljava/lang/Long;)V
 
     return-void
 .end method
 
-.method public l(Lj$/util/function/l;)Lj$/util/function/l;
+.method public f(Lj$/util/function/q;)Lj$/util/function/q;
     .registers 3
 
     .line 1
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    new-instance v0, Lj$/util/function/k;
+    new-instance v0, Lj$/util/function/p;
 
-    invoke-direct {v0, p0, p1}, Lj$/util/function/k;-><init>(Lj$/util/function/l;Lj$/util/function/l;)V
+    invoke-direct {v0, p0, p1}, Lj$/util/function/p;-><init>(Lj$/util/function/q;Lj$/util/function/q;)V
 
     return-object v0
 .end method

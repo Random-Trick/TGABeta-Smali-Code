@@ -24,7 +24,7 @@
 .method constructor <init>(Lorg/telegram/ui/PhotoViewer;F)V
     .registers 3
 
-    .line 6688
+    .line 6823
     iput-object p1, p0, Lorg/telegram/ui/PhotoViewer$43;->this$0:Lorg/telegram/ui/PhotoViewer;
 
     iput p2, p0, Lorg/telegram/ui/PhotoViewer$43;->val$scale:F
@@ -39,7 +39,7 @@
 .method public getOutline(Landroid/view/View;Landroid/graphics/Outline;)V
     .registers 9
 
-    .line 6691
+    .line 6826
     invoke-virtual {p1}, Landroid/view/View;->getMeasuredWidth()I
 
     move-result v3
@@ -50,7 +50,7 @@
 
     iget-object p1, p0, Lorg/telegram/ui/PhotoViewer$43;->this$0:Lorg/telegram/ui/PhotoViewer;
 
-    invoke-static {p1}, Lorg/telegram/ui/PhotoViewer;->access$20800(Lorg/telegram/ui/PhotoViewer;)F
+    invoke-static {p1}, Lorg/telegram/ui/PhotoViewer;->access$20900(Lorg/telegram/ui/PhotoViewer;)F
 
     move-result p1
 

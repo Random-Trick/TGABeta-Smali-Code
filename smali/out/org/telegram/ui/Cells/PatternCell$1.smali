@@ -18,7 +18,7 @@
 .method constructor <init>(Lorg/telegram/ui/Cells/PatternCell;)V
     .registers 2
 
-    .line 84
+    .line 86
     invoke-direct {p0}, Landroid/view/ViewOutlineProvider;-><init>()V
 
     return-void
@@ -31,7 +31,7 @@
 
     const/high16 v0, 0x3f800000    # 1.0f
 
-    .line 87
+    .line 89
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v2

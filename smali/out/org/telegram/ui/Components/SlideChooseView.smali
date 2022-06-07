@@ -30,6 +30,8 @@
 
 .field private moving:Z
 
+.field private movingAnimatedHolder:Lorg/telegram/ui/Components/AnimatedFloat;
+
 .field private optionsSizes:[I
 
 .field private optionsStr:[Ljava/lang/String;
@@ -40,13 +42,15 @@
 
 .field private selectedIndex:I
 
+.field private selectedIndexAnimatedHolder:Lorg/telegram/ui/Components/AnimatedFloat;
+
+.field private selectedIndexTouch:F
+
 .field private sideSide:I
 
 .field private startMoving:Z
 
 .field private startMovingPreset:I
-
-.field private startX:F
 
 .field private textPaint:Landroid/text/TextPaint;
 
@@ -61,27 +65,47 @@
 
     const/4 v0, 0x0
 
-    .line 49
+    .line 65
     invoke-direct {p0, p1, v0}, Lorg/telegram/ui/Components/SlideChooseView;-><init>(Landroid/content/Context;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)V
 
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)V
-    .registers 3
+    .registers 6
 
-    .line 53
+    .line 69
     invoke-direct {p0, p1}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
     const/4 p1, -0x1
 
-    .line 30
+    .line 42
     iput p1, p0, Lorg/telegram/ui/Components/SlideChooseView;->dashedFrom:I
 
-    .line 54
+    .line 56
+    new-instance p1, Lorg/telegram/ui/Components/AnimatedFloat;
+
+    sget-object v0, Lorg/telegram/ui/Components/CubicBezierInterpolator;->DEFAULT:Lorg/telegram/ui/Components/CubicBezierInterpolator;
+
+    const-wide/16 v1, 0x78
+
+    invoke-direct {p1, p0, v1, v2, v0}, Lorg/telegram/ui/Components/AnimatedFloat;-><init>(Landroid/view/View;JLandroid/animation/TimeInterpolator;)V
+
+    iput-object p1, p0, Lorg/telegram/ui/Components/SlideChooseView;->selectedIndexAnimatedHolder:Lorg/telegram/ui/Components/AnimatedFloat;
+
+    .line 57
+    new-instance p1, Lorg/telegram/ui/Components/AnimatedFloat;
+
+    const-wide/16 v1, 0x96
+
+    invoke-direct {p1, p0, v1, v2, v0}, Lorg/telegram/ui/Components/AnimatedFloat;-><init>(Landroid/view/View;JLandroid/animation/TimeInterpolator;)V
+
+    iput-object p1, p0, Lorg/telegram/ui/Components/SlideChooseView;->movingAnimatedHolder:Lorg/telegram/ui/Components/AnimatedFloat;
+
+    .line 70
     iput-object p2, p0, Lorg/telegram/ui/Components/SlideChooseView;->resourcesProvider:Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;
 
-    .line 56
+    .line 72
     new-instance p1, Landroid/graphics/Paint;
 
     const/4 p2, 0x1
@@ -90,14 +114,14 @@
 
     iput-object p1, p0, Lorg/telegram/ui/Components/SlideChooseView;->paint:Landroid/graphics/Paint;
 
-    .line 57
+    .line 73
     new-instance p1, Landroid/text/TextPaint;
 
     invoke-direct {p1, p2}, Landroid/text/TextPaint;-><init>(I)V
 
     iput-object p1, p0, Lorg/telegram/ui/Components/SlideChooseView;->textPaint:Landroid/text/TextPaint;
 
-    .line 58
+    .line 74
     new-instance p1, Landroid/graphics/Paint;
 
     invoke-direct {p1, p2}, Landroid/graphics/Paint;-><init>(I)V
@@ -106,7 +130,7 @@
 
     const/high16 p2, 0x40000000    # 2.0f
 
-    .line 59
+    .line 75
     invoke-static {p2}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result p2
@@ -115,14 +139,14 @@
 
     invoke-virtual {p1, p2}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
-    .line 60
+    .line 76
     iget-object p1, p0, Lorg/telegram/ui/Components/SlideChooseView;->linePaint:Landroid/graphics/Paint;
 
     sget-object p2, Landroid/graphics/Paint$Cap;->ROUND:Landroid/graphics/Paint$Cap;
 
     invoke-virtual {p1, p2}, Landroid/graphics/Paint;->setStrokeCap(Landroid/graphics/Paint$Cap;)V
 
-    .line 61
+    .line 77
     iget-object p1, p0, Lorg/telegram/ui/Components/SlideChooseView;->textPaint:Landroid/text/TextPaint;
 
     const/high16 p2, 0x41500000    # 13.0f
@@ -135,7 +159,7 @@
 
     invoke-virtual {p1, p2}, Landroid/text/TextPaint;->setTextSize(F)V
 
-    .line 63
+    .line 79
     new-instance p1, Lorg/telegram/ui/Components/SlideChooseView$1;
 
     invoke-direct {p1, p0}, Lorg/telegram/ui/Components/SlideChooseView$1;-><init>(Lorg/telegram/ui/Components/SlideChooseView;)V
@@ -148,7 +172,7 @@
 .method static synthetic access$000(Lorg/telegram/ui/Components/SlideChooseView;)I
     .registers 1
 
-    .line 16
+    .line 28
     iget p0, p0, Lorg/telegram/ui/Components/SlideChooseView;->selectedIndex:I
 
     return p0
@@ -157,7 +181,7 @@
 .method static synthetic access$100(Lorg/telegram/ui/Components/SlideChooseView;I)V
     .registers 2
 
-    .line 16
+    .line 28
     invoke-direct {p0, p1}, Lorg/telegram/ui/Components/SlideChooseView;->setOption(I)V
 
     return-void
@@ -166,7 +190,7 @@
 .method static synthetic access$200(Lorg/telegram/ui/Components/SlideChooseView;)[Ljava/lang/String;
     .registers 1
 
-    .line 16
+    .line 28
     iget-object p0, p0, Lorg/telegram/ui/Components/SlideChooseView;->optionsStr:[Ljava/lang/String;
 
     return-object p0
@@ -175,7 +199,7 @@
 .method private getThemedColor(Ljava/lang/String;)I
     .registers 3
 
-    .line 249
+    .line 270
     iget-object v0, p0, Lorg/telegram/ui/Components/SlideChooseView;->resourcesProvider:Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;
 
     if-eqz v0, :cond_9
@@ -192,7 +216,7 @@
     :goto_a
     if-eqz v0, :cond_11
 
-    .line 250
+    .line 271
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
     move-result p1
@@ -209,21 +233,43 @@
 .end method
 
 .method private setOption(I)V
-    .registers 3
+    .registers 4
 
-    .line 170
+    .line 179
+    iget v0, p0, Lorg/telegram/ui/Components/SlideChooseView;->selectedIndex:I
+
+    if-eq v0, p1, :cond_c
+
+    const/16 v0, 0x9
+
+    const/4 v1, 0x1
+
+    .line 181
+    :try_start_7
+    invoke-virtual {p0, v0, v1}, Landroid/view/View;->performHapticFeedback(II)Z
+    :try_end_a
+    .catch Ljava/lang/Exception; {:try_start_7 .. :try_end_a} :catch_b
+
+    goto :goto_c
+
+    :catch_b
+    nop
+
+    .line 184
+    :cond_c
+    :goto_c
     iput p1, p0, Lorg/telegram/ui/Components/SlideChooseView;->selectedIndex:I
 
-    .line 171
+    .line 185
     iget-object v0, p0, Lorg/telegram/ui/Components/SlideChooseView;->callback:Lorg/telegram/ui/Components/SlideChooseView$Callback;
 
-    if-eqz v0, :cond_9
+    if-eqz v0, :cond_15
 
-    .line 172
+    .line 186
     invoke-interface {v0, p1}, Lorg/telegram/ui/Components/SlideChooseView$Callback;->onOptionSelected(I)V
 
-    .line 174
-    :cond_9
+    .line 188
+    :cond_15
     invoke-virtual {p0}, Landroid/view/View;->invalidate()V
 
     return-void
@@ -234,38 +280,61 @@
 .method public getSelectedIndex()I
     .registers 2
 
-    .line 245
+    .line 266
     iget v0, p0, Lorg/telegram/ui/Components/SlideChooseView;->selectedIndex:I
 
     return v0
 .end method
 
 .method protected onDraw(Landroid/graphics/Canvas;)V
-    .registers 18
+    .registers 24
 
     move-object/from16 v0, p0
 
     move-object/from16 v7, p1
 
-    .line 188
-    iget-object v1, v0, Lorg/telegram/ui/Components/SlideChooseView;->textPaint:Landroid/text/TextPaint;
+    .line 202
+    iget-object v1, v0, Lorg/telegram/ui/Components/SlideChooseView;->selectedIndexAnimatedHolder:Lorg/telegram/ui/Components/AnimatedFloat;
 
-    const-string v2, "windowBackgroundWhiteGrayText"
+    iget v2, v0, Lorg/telegram/ui/Components/SlideChooseView;->selectedIndex:I
 
-    invoke-direct {v0, v2}, Lorg/telegram/ui/Components/SlideChooseView;->getThemedColor(Ljava/lang/String;)I
+    int-to-float v2, v2
 
-    move-result v2
+    invoke-virtual {v1, v2}, Lorg/telegram/ui/Components/AnimatedFloat;->set(F)F
 
-    invoke-virtual {v1, v2}, Landroid/text/TextPaint;->setColor(I)V
+    move-result v8
 
-    .line 189
+    .line 203
+    iget-object v1, v0, Lorg/telegram/ui/Components/SlideChooseView;->movingAnimatedHolder:Lorg/telegram/ui/Components/AnimatedFloat;
+
+    iget-boolean v2, v0, Lorg/telegram/ui/Components/SlideChooseView;->moving:Z
+
+    const/4 v9, 0x0
+
+    const/high16 v10, 0x3f800000    # 1.0f
+
+    if-eqz v2, :cond_19
+
+    const/high16 v2, 0x3f800000    # 1.0f
+
+    goto :goto_1a
+
+    :cond_19
+    const/4 v2, 0x0
+
+    :goto_1a
+    invoke-virtual {v1, v2}, Lorg/telegram/ui/Components/AnimatedFloat;->set(F)F
+
+    move-result v11
+
+    .line 204
     invoke-virtual/range {p0 .. p0}, Landroid/view/View;->getMeasuredHeight()I
 
     move-result v1
 
-    const/4 v8, 0x2
+    const/4 v12, 0x2
 
-    div-int/2addr v1, v8
+    div-int/2addr v1, v12
 
     const/high16 v2, 0x41300000    # 11.0f
 
@@ -273,209 +342,242 @@
 
     move-result v2
 
-    add-int v9, v1, v2
+    add-int v13, v1, v2
 
-    const/4 v10, 0x0
+    const/4 v15, 0x0
 
-    const/4 v11, 0x0
-
-    .line 191
-    :goto_1f
+    .line 206
+    :goto_2d
     iget-object v1, v0, Lorg/telegram/ui/Components/SlideChooseView;->optionsStr:[Ljava/lang/String;
 
     array-length v1, v1
 
-    if-ge v11, v1, :cond_155
+    const/high16 v2, 0x40c00000    # 6.0f
 
-    .line 192
+    const-string v3, "switchTrackChecked"
+
+    if-ge v15, v1, :cond_1d4
+
+    .line 207
     iget v1, v0, Lorg/telegram/ui/Components/SlideChooseView;->sideSide:I
 
-    iget v2, v0, Lorg/telegram/ui/Components/SlideChooseView;->lineSize:I
+    iget v4, v0, Lorg/telegram/ui/Components/SlideChooseView;->lineSize:I
 
-    iget v3, v0, Lorg/telegram/ui/Components/SlideChooseView;->gapSize:I
+    iget v5, v0, Lorg/telegram/ui/Components/SlideChooseView;->gapSize:I
 
-    mul-int/lit8 v3, v3, 0x2
+    mul-int/lit8 v5, v5, 0x2
 
-    add-int/2addr v2, v3
+    add-int/2addr v4, v5
 
-    iget v3, v0, Lorg/telegram/ui/Components/SlideChooseView;->circleSize:I
+    iget v5, v0, Lorg/telegram/ui/Components/SlideChooseView;->circleSize:I
 
-    add-int/2addr v2, v3
+    add-int/2addr v4, v5
 
-    mul-int v2, v2, v11
-
-    add-int/2addr v1, v2
-
-    div-int/2addr v3, v8
-
-    add-int v12, v1, v3
-
-    .line 193
-    iget v1, v0, Lorg/telegram/ui/Components/SlideChooseView;->selectedIndex:I
-
-    if-gt v11, v1, :cond_3d
-
-    const-string v1, "switchTrackChecked"
-
-    goto :goto_3f
-
-    :cond_3d
-    const-string v1, "switchTrack"
-
-    :goto_3f
-    invoke-direct {v0, v1}, Lorg/telegram/ui/Components/SlideChooseView;->getThemedColor(Ljava/lang/String;)I
-
-    move-result v1
-
-    .line 194
-    iget-object v2, v0, Lorg/telegram/ui/Components/SlideChooseView;->paint:Landroid/graphics/Paint;
-
-    invoke-virtual {v2, v1}, Landroid/graphics/Paint;->setColor(I)V
-
-    .line 195
-    iget-object v2, v0, Lorg/telegram/ui/Components/SlideChooseView;->linePaint:Landroid/graphics/Paint;
-
-    invoke-virtual {v2, v1}, Landroid/graphics/Paint;->setColor(I)V
-
-    int-to-float v1, v12
-
-    int-to-float v5, v9
-
-    .line 196
-    iget v2, v0, Lorg/telegram/ui/Components/SlideChooseView;->selectedIndex:I
-
-    const/high16 v3, 0x40c00000    # 6.0f
-
-    if-ne v11, v2, :cond_5a
-
-    invoke-static {v3}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
-
-    move-result v2
-
-    goto :goto_5d
-
-    :cond_5a
-    iget v2, v0, Lorg/telegram/ui/Components/SlideChooseView;->circleSize:I
-
-    div-int/2addr v2, v8
-
-    :goto_5d
-    int-to-float v2, v2
-
-    iget-object v4, v0, Lorg/telegram/ui/Components/SlideChooseView;->paint:Landroid/graphics/Paint;
-
-    invoke-virtual {v7, v1, v5, v2, v4}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
-
-    if-eqz v11, :cond_10a
-
-    .line 198
-    iget v1, v0, Lorg/telegram/ui/Components/SlideChooseView;->circleSize:I
-
-    div-int/2addr v1, v8
-
-    sub-int v1, v12, v1
-
-    iget v2, v0, Lorg/telegram/ui/Components/SlideChooseView;->gapSize:I
-
-    sub-int/2addr v1, v2
-
-    iget v2, v0, Lorg/telegram/ui/Components/SlideChooseView;->lineSize:I
-
-    sub-int/2addr v1, v2
-
-    .line 200
-    iget v4, v0, Lorg/telegram/ui/Components/SlideChooseView;->dashedFrom:I
-
-    const/4 v6, -0x1
-
-    const/high16 v15, 0x40400000    # 3.0f
-
-    if-eq v4, v6, :cond_d4
-
-    add-int/lit8 v6, v11, -0x1
-
-    if-lt v6, v4, :cond_d4
-
-    .line 201
-    invoke-static {v15}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
-
-    move-result v4
+    mul-int v4, v4, v15
 
     add-int/2addr v1, v4
 
-    .line 202
-    invoke-static {v15}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
+    div-int/2addr v5, v12
 
-    move-result v4
+    add-int v6, v1, v5
 
-    sub-int/2addr v2, v4
+    int-to-float v1, v15
 
-    const/high16 v4, 0x41500000    # 13.0f
+    sub-float v4, v1, v8
 
-    .line 203
-    invoke-static {v4}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
+    .line 208
+    invoke-static {v4}, Ljava/lang/Math;->abs(F)F
 
-    move-result v4
+    move-result v5
 
-    div-int v4, v2, v4
+    sub-float v5, v10, v5
 
-    .line 204
-    iget v6, v0, Lorg/telegram/ui/Components/SlideChooseView;->lastDash:I
+    invoke-static {v9, v5}, Ljava/lang/Math;->max(FF)F
 
-    if-eq v6, v4, :cond_b9
+    move-result v5
 
-    const/high16 v6, 0x41000000    # 8.0f
+    sub-float v1, v8, v1
 
-    .line 205
-    invoke-static {v6}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
+    add-float/2addr v1, v10
 
-    move-result v6
+    .line 209
+    invoke-static {v1, v9, v10}, Landroidx/core/math/MathUtils;->clamp(FFF)F
 
-    mul-int v6, v6, v4
+    move-result v1
 
-    sub-int v6, v2, v6
+    const-string v10, "switchTrack"
 
-    int-to-float v6, v6
+    .line 210
+    invoke-direct {v0, v10}, Lorg/telegram/ui/Components/SlideChooseView;->getThemedColor(Ljava/lang/String;)I
 
-    add-int/lit8 v15, v4, -0x1
+    move-result v10
 
-    int-to-float v15, v15
+    invoke-direct {v0, v3}, Lorg/telegram/ui/Components/SlideChooseView;->getThemedColor(Ljava/lang/String;)I
 
-    div-float/2addr v6, v15
+    move-result v3
 
-    .line 206
-    iget-object v15, v0, Lorg/telegram/ui/Components/SlideChooseView;->linePaint:Landroid/graphics/Paint;
+    invoke-static {v10, v3, v1}, Landroidx/core/graphics/ColorUtils;->blendARGB(IIF)I
 
-    new-instance v14, Landroid/graphics/DashPathEffect;
+    move-result v1
 
-    new-array v13, v8, [F
+    .line 211
+    iget-object v3, v0, Lorg/telegram/ui/Components/SlideChooseView;->paint:Landroid/graphics/Paint;
 
-    invoke-static {v3}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
+    invoke-virtual {v3, v1}, Landroid/graphics/Paint;->setColor(I)V
+
+    .line 212
+    iget-object v3, v0, Lorg/telegram/ui/Components/SlideChooseView;->linePaint:Landroid/graphics/Paint;
+
+    invoke-virtual {v3, v1}, Landroid/graphics/Paint;->setColor(I)V
+
+    int-to-float v1, v6
+
+    int-to-float v10, v13
+
+    .line 213
+    iget v3, v0, Lorg/telegram/ui/Components/SlideChooseView;->circleSize:I
+
+    div-int/2addr v3, v12
+
+    invoke-static {v2}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
+
+    move-result v9
+
+    invoke-static {v3, v9, v5}, Lorg/telegram/messenger/AndroidUtilities;->lerp(IIF)I
 
     move-result v3
 
     int-to-float v3, v3
 
-    aput v3, v13, v10
+    iget-object v9, v0, Lorg/telegram/ui/Components/SlideChooseView;->paint:Landroid/graphics/Paint;
 
-    const/4 v3, 0x1
+    invoke-virtual {v7, v1, v10, v3, v9}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
 
-    aput v6, v13, v3
+    if-eqz v15, :cond_167
 
-    const/4 v3, 0x0
+    .line 215
+    iget v1, v0, Lorg/telegram/ui/Components/SlideChooseView;->circleSize:I
 
-    invoke-direct {v14, v13, v3}, Landroid/graphics/DashPathEffect;-><init>([FF)V
+    div-int/2addr v1, v12
 
-    invoke-virtual {v15, v14}, Landroid/graphics/Paint;->setPathEffect(Landroid/graphics/PathEffect;)Landroid/graphics/PathEffect;
+    sub-int v1, v6, v1
 
-    .line 207
+    iget v3, v0, Lorg/telegram/ui/Components/SlideChooseView;->gapSize:I
+
+    sub-int/2addr v1, v3
+
+    iget v3, v0, Lorg/telegram/ui/Components/SlideChooseView;->lineSize:I
+
+    sub-int/2addr v1, v3
+
+    .line 217
+    iget v9, v0, Lorg/telegram/ui/Components/SlideChooseView;->dashedFrom:I
+
+    const/4 v14, -0x1
+
+    const/high16 v19, 0x40400000    # 3.0f
+
+    if-eq v9, v14, :cond_10c
+
+    add-int/lit8 v14, v15, -0x1
+
+    if-lt v14, v9, :cond_10c
+
+    .line 218
+    invoke-static/range {v19 .. v19}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
+
+    move-result v4
+
+    add-int/2addr v1, v4
+
+    .line 219
+    invoke-static/range {v19 .. v19}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
+
+    move-result v4
+
+    sub-int/2addr v3, v4
+
+    const/high16 v4, 0x41500000    # 13.0f
+
+    .line 220
+    invoke-static {v4}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
+
+    move-result v4
+
+    div-int v4, v3, v4
+
+    .line 221
+    iget v9, v0, Lorg/telegram/ui/Components/SlideChooseView;->lastDash:I
+
+    if-eq v9, v4, :cond_e4
+
+    const/high16 v9, 0x41000000    # 8.0f
+
+    .line 222
+    invoke-static {v9}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
+
+    move-result v9
+
+    mul-int v9, v9, v4
+
+    sub-int v9, v3, v9
+
+    int-to-float v9, v9
+
+    add-int/lit8 v14, v4, -0x1
+
+    int-to-float v14, v14
+
+    div-float/2addr v9, v14
+
+    .line 223
+    iget-object v14, v0, Lorg/telegram/ui/Components/SlideChooseView;->linePaint:Landroid/graphics/Paint;
+
+    move/from16 v20, v5
+
+    new-instance v5, Landroid/graphics/DashPathEffect;
+
+    move/from16 v21, v6
+
+    new-array v6, v12, [F
+
+    invoke-static {v2}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
+
+    move-result v2
+
+    int-to-float v2, v2
+
+    const/16 v18, 0x0
+
+    aput v2, v6, v18
+
+    const/4 v2, 0x1
+
+    aput v9, v6, v2
+
+    const/4 v2, 0x0
+
+    invoke-direct {v5, v6, v2}, Landroid/graphics/DashPathEffect;-><init>([FF)V
+
+    invoke-virtual {v14, v5}, Landroid/graphics/Paint;->setPathEffect(Landroid/graphics/PathEffect;)Landroid/graphics/PathEffect;
+
+    .line 224
     iput v4, v0, Lorg/telegram/ui/Components/SlideChooseView;->lastDash:I
 
-    :cond_b9
-    const/high16 v3, 0x3f800000    # 1.0f
+    goto :goto_ea
 
-    .line 209
-    invoke-static {v3}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
+    :cond_e4
+    move/from16 v20, v5
+
+    move/from16 v21, v6
+
+    const/16 v18, 0x0
+
+    :goto_ea
+    const/high16 v2, 0x3f800000    # 1.0f
+
+    .line 226
+    invoke-static {v2}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v4
 
@@ -483,217 +585,384 @@
 
     int-to-float v4, v4
 
-    add-int/2addr v1, v2
+    add-int/2addr v1, v3
 
-    invoke-static {v3}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
+    invoke-static {v2}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
-    move-result v2
+    move-result v3
 
-    sub-int/2addr v1, v2
+    sub-int/2addr v1, v3
 
-    int-to-float v6, v1
+    int-to-float v5, v1
 
-    iget-object v13, v0, Lorg/telegram/ui/Components/SlideChooseView;->linePaint:Landroid/graphics/Paint;
+    iget-object v6, v0, Lorg/telegram/ui/Components/SlideChooseView;->linePaint:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
     move v2, v4
 
-    move v3, v5
+    move v3, v10
 
-    move v4, v6
+    move v4, v5
 
-    move-object v6, v13
+    move/from16 v9, v20
+
+    move v5, v10
+
+    move/from16 v10, v21
 
     invoke-virtual/range {v1 .. v6}, Landroid/graphics/Canvas;->drawLine(FFFFLandroid/graphics/Paint;)V
 
-    goto :goto_10a
+    const/4 v14, 0x0
 
-    .line 211
-    :cond_d4
-    iget v3, v0, Lorg/telegram/ui/Components/SlideChooseView;->selectedIndex:I
+    const/high16 v16, 0x3f800000    # 1.0f
 
-    if-eq v11, v3, :cond_dc
+    goto :goto_16e
 
-    add-int/lit8 v3, v3, 0x1
+    :cond_10c
+    move v9, v5
 
-    if-ne v11, v3, :cond_e1
+    move v10, v6
 
-    .line 212
-    :cond_dc
-    invoke-static {v15}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
+    const/16 v18, 0x0
 
-    move-result v3
+    const/high16 v2, 0x3f800000    # 1.0f
 
-    sub-int/2addr v2, v3
+    sub-float v5, v4, v2
 
-    .line 214
-    :cond_e1
-    iget v3, v0, Lorg/telegram/ui/Components/SlideChooseView;->selectedIndex:I
+    .line 228
+    invoke-static {v5}, Ljava/lang/Math;->abs(F)F
 
-    const/4 v4, 0x1
+    move-result v6
 
-    add-int/2addr v3, v4
+    sub-float v6, v2, v6
 
-    if-ne v11, v3, :cond_ec
+    const/4 v14, 0x0
 
-    .line 215
-    invoke-static {v15}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
+    invoke-static {v6, v14, v2}, Landroidx/core/math/MathUtils;->clamp(FFF)F
 
-    move-result v3
+    move-result v6
 
-    add-int/2addr v1, v3
+    .line 229
+    invoke-static {v4}, Ljava/lang/Math;->abs(F)F
 
-    :cond_ec
-    int-to-float v3, v1
+    move-result v4
 
-    const/high16 v4, 0x3f800000    # 1.0f
-
-    .line 217
-    invoke-static {v4}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
+    invoke-static {v5}, Ljava/lang/Math;->abs(F)F
 
     move-result v5
 
-    sub-int v5, v9, v5
+    invoke-static {v4, v5}, Ljava/lang/Math;->min(FF)F
 
-    int-to-float v5, v5
+    move-result v4
+
+    sub-float v4, v2, v4
+
+    invoke-static {v4, v14, v2}, Landroidx/core/math/MathUtils;->clamp(FFF)F
+
+    move-result v4
+
+    int-to-float v2, v3
+
+    .line 230
+    invoke-static/range {v19 .. v19}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
+
+    move-result v3
+
+    int-to-float v3, v3
+
+    mul-float v3, v3, v4
+
+    sub-float/2addr v2, v3
+
+    float-to-int v2, v2
+
+    int-to-float v1, v1
+
+    .line 231
+    invoke-static/range {v19 .. v19}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
+
+    move-result v3
+
+    int-to-float v3, v3
+
+    mul-float v3, v3, v6
+
+    add-float/2addr v1, v3
+
+    float-to-int v1, v1
+
+    int-to-float v3, v1
+
+    const/high16 v16, 0x3f800000    # 1.0f
+
+    .line 232
+    invoke-static/range {v16 .. v16}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
+
+    move-result v4
+
+    sub-int v4, v13, v4
+
+    int-to-float v4, v4
 
     add-int/2addr v1, v2
 
-    int-to-float v6, v1
+    int-to-float v5, v1
 
-    invoke-static {v4}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
+    invoke-static/range {v16 .. v16}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v1
 
-    add-int/2addr v1, v9
+    add-int/2addr v1, v13
 
-    int-to-float v13, v1
+    int-to-float v6, v1
 
-    iget-object v14, v0, Lorg/telegram/ui/Components/SlideChooseView;->paint:Landroid/graphics/Paint;
+    iget-object v2, v0, Lorg/telegram/ui/Components/SlideChooseView;->paint:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
+    move-object/from16 v17, v2
+
     move v2, v3
 
-    move v3, v5
+    move v3, v4
 
-    move v4, v6
+    move v4, v5
 
-    move v5, v13
+    move v5, v6
 
-    move-object v6, v14
+    move-object/from16 v6, v17
 
     invoke-virtual/range {v1 .. v6}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    .line 220
-    :cond_10a
-    :goto_10a
+    goto :goto_16e
+
+    :cond_167
+    move v9, v5
+
+    move v10, v6
+
+    const/4 v14, 0x0
+
+    const/high16 v16, 0x3f800000    # 1.0f
+
+    const/16 v18, 0x0
+
+    .line 235
+    :goto_16e
     iget-object v1, v0, Lorg/telegram/ui/Components/SlideChooseView;->optionsSizes:[I
 
-    aget v1, v1, v11
+    aget v1, v1, v15
 
-    .line 221
+    .line 236
     iget-object v2, v0, Lorg/telegram/ui/Components/SlideChooseView;->optionsStr:[Ljava/lang/String;
 
-    aget-object v3, v2, v11
+    aget-object v2, v2, v15
 
-    const/high16 v4, 0x41b00000    # 22.0f
+    .line 237
+    iget-object v3, v0, Lorg/telegram/ui/Components/SlideChooseView;->textPaint:Landroid/text/TextPaint;
 
-    const/high16 v5, 0x41e00000    # 28.0f
+    const-string v4, "windowBackgroundWhiteGrayText"
 
-    if-nez v11, :cond_128
+    invoke-direct {v0, v4}, Lorg/telegram/ui/Components/SlideChooseView;->getThemedColor(Ljava/lang/String;)I
 
-    .line 224
-    invoke-static {v4}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
+    move-result v4
+
+    const-string v5, "windowBackgroundWhiteBlueText"
+
+    invoke-direct {v0, v5}, Lorg/telegram/ui/Components/SlideChooseView;->getThemedColor(Ljava/lang/String;)I
+
+    move-result v5
+
+    invoke-static {v4, v5, v9}, Landroidx/core/graphics/ColorUtils;->blendARGB(IIF)I
+
+    move-result v4
+
+    invoke-virtual {v3, v4}, Landroid/text/TextPaint;->setColor(I)V
+
+    const/high16 v3, 0x41b00000    # 22.0f
+
+    const/high16 v4, 0x41e00000    # 28.0f
+
+    if-nez v15, :cond_1a1
+
+    .line 239
+    invoke-static {v3}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v1
 
     int-to-float v1, v1
 
-    invoke-static {v5}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
+    invoke-static {v4}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
-    move-result v2
+    move-result v3
 
-    int-to-float v2, v2
+    int-to-float v3, v3
 
     iget-object v4, v0, Lorg/telegram/ui/Components/SlideChooseView;->textPaint:Landroid/text/TextPaint;
 
-    invoke-virtual {v7, v3, v1, v2, v4}, Landroid/graphics/Canvas;->drawText(Ljava/lang/String;FFLandroid/graphics/Paint;)V
+    invoke-virtual {v7, v2, v1, v3, v4}, Landroid/graphics/Canvas;->drawText(Ljava/lang/String;FFLandroid/graphics/Paint;)V
 
-    goto :goto_151
+    goto :goto_1cd
 
-    .line 225
-    :cond_128
-    array-length v2, v2
+    .line 240
+    :cond_1a1
+    iget-object v5, v0, Lorg/telegram/ui/Components/SlideChooseView;->optionsStr:[Ljava/lang/String;
+
+    array-length v5, v5
 
     const/4 v6, 0x1
 
-    sub-int/2addr v2, v6
+    sub-int/2addr v5, v6
 
-    if-ne v11, v2, :cond_143
+    if-ne v15, v5, :cond_1be
 
-    .line 226
+    .line 241
     invoke-virtual/range {p0 .. p0}, Landroid/view/View;->getMeasuredWidth()I
 
-    move-result v2
+    move-result v5
 
-    sub-int/2addr v2, v1
+    sub-int/2addr v5, v1
 
-    invoke-static {v4}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
+    invoke-static {v3}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v1
 
-    sub-int/2addr v2, v1
+    sub-int/2addr v5, v1
 
-    int-to-float v1, v2
+    int-to-float v1, v5
 
-    invoke-static {v5}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
+    invoke-static {v4}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
-    move-result v2
+    move-result v3
 
-    int-to-float v2, v2
+    int-to-float v3, v3
 
     iget-object v4, v0, Lorg/telegram/ui/Components/SlideChooseView;->textPaint:Landroid/text/TextPaint;
 
-    invoke-virtual {v7, v3, v1, v2, v4}, Landroid/graphics/Canvas;->drawText(Ljava/lang/String;FFLandroid/graphics/Paint;)V
+    invoke-virtual {v7, v2, v1, v3, v4}, Landroid/graphics/Canvas;->drawText(Ljava/lang/String;FFLandroid/graphics/Paint;)V
 
-    goto :goto_151
+    goto :goto_1cd
 
-    .line 228
-    :cond_143
+    .line 243
+    :cond_1be
     div-int/lit8 v1, v1, 0x2
 
-    sub-int/2addr v12, v1
+    sub-int v6, v10, v1
 
-    int-to-float v1, v12
+    int-to-float v1, v6
 
-    invoke-static {v5}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
+    invoke-static {v4}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
+
+    move-result v3
+
+    int-to-float v3, v3
+
+    iget-object v4, v0, Lorg/telegram/ui/Components/SlideChooseView;->textPaint:Landroid/text/TextPaint;
+
+    invoke-virtual {v7, v2, v1, v3, v4}, Landroid/graphics/Canvas;->drawText(Ljava/lang/String;FFLandroid/graphics/Paint;)V
+
+    :goto_1cd
+    add-int/lit8 v15, v15, 0x1
+
+    const/4 v9, 0x0
+
+    const/high16 v10, 0x3f800000    # 1.0f
+
+    goto/16 :goto_2d
+
+    .line 247
+    :cond_1d4
+    iget v1, v0, Lorg/telegram/ui/Components/SlideChooseView;->sideSide:I
+
+    int-to-float v1, v1
+
+    iget v4, v0, Lorg/telegram/ui/Components/SlideChooseView;->lineSize:I
+
+    iget v5, v0, Lorg/telegram/ui/Components/SlideChooseView;->gapSize:I
+
+    mul-int/lit8 v5, v5, 0x2
+
+    add-int/2addr v4, v5
+
+    iget v5, v0, Lorg/telegram/ui/Components/SlideChooseView;->circleSize:I
+
+    add-int/2addr v4, v5
+
+    int-to-float v4, v4
+
+    mul-float v4, v4, v8
+
+    add-float/2addr v1, v4
+
+    div-int/2addr v5, v12
+
+    int-to-float v4, v5
+
+    add-float/2addr v1, v4
+
+    .line 248
+    iget-object v4, v0, Lorg/telegram/ui/Components/SlideChooseView;->paint:Landroid/graphics/Paint;
+
+    invoke-direct {v0, v3}, Lorg/telegram/ui/Components/SlideChooseView;->getThemedColor(Ljava/lang/String;)I
+
+    move-result v5
+
+    const/16 v6, 0x50
+
+    invoke-static {v5, v6}, Landroidx/core/graphics/ColorUtils;->setAlphaComponent(II)I
+
+    move-result v5
+
+    invoke-virtual {v4, v5}, Landroid/graphics/Paint;->setColor(I)V
+
+    int-to-float v4, v13
+
+    const/high16 v5, 0x41400000    # 12.0f
+
+    mul-float v11, v11, v5
+
+    .line 249
+    invoke-static {v11}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
+
+    move-result v5
+
+    int-to-float v5, v5
+
+    iget-object v6, v0, Lorg/telegram/ui/Components/SlideChooseView;->paint:Landroid/graphics/Paint;
+
+    invoke-virtual {v7, v1, v4, v5, v6}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
+
+    .line 250
+    iget-object v5, v0, Lorg/telegram/ui/Components/SlideChooseView;->paint:Landroid/graphics/Paint;
+
+    invoke-direct {v0, v3}, Lorg/telegram/ui/Components/SlideChooseView;->getThemedColor(Ljava/lang/String;)I
+
+    move-result v3
+
+    invoke-virtual {v5, v3}, Landroid/graphics/Paint;->setColor(I)V
+
+    .line 251
+    invoke-static {v2}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v2
 
     int-to-float v2, v2
 
-    iget-object v4, v0, Lorg/telegram/ui/Components/SlideChooseView;->textPaint:Landroid/text/TextPaint;
+    iget-object v3, v0, Lorg/telegram/ui/Components/SlideChooseView;->paint:Landroid/graphics/Paint;
 
-    invoke-virtual {v7, v3, v1, v2, v4}, Landroid/graphics/Canvas;->drawText(Ljava/lang/String;FFLandroid/graphics/Paint;)V
+    invoke-virtual {v7, v1, v4, v2, v3}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
 
-    :goto_151
-    add-int/lit8 v11, v11, 0x1
-
-    goto/16 :goto_1f
-
-    :cond_155
     return-void
 .end method
 
 .method public onInitializeAccessibilityNodeInfo(Landroid/view/accessibility/AccessibilityNodeInfo;)V
     .registers 3
 
-    .line 235
+    .line 256
     invoke-super {p0, p1}, Landroid/view/View;->onInitializeAccessibilityNodeInfo(Landroid/view/accessibility/AccessibilityNodeInfo;)V
 
-    .line 236
+    .line 257
     iget-object v0, p0, Lorg/telegram/ui/Components/SlideChooseView;->accessibilityDelegate:Lorg/telegram/ui/Components/SeekBarAccessibilityDelegate;
 
     invoke-virtual {v0, p0, p1}, Lorg/telegram/ui/Components/SeekBarAccessibilityDelegate;->onInitializeAccessibilityNodeInfoInternal(Landroid/view/View;Landroid/view/accessibility/AccessibilityNodeInfo;)V
@@ -706,7 +975,7 @@
 
     const/high16 p2, 0x42940000    # 74.0f
 
-    .line 179
+    .line 193
     invoke-static {p2}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result p2
@@ -721,7 +990,7 @@
 
     const/high16 p1, 0x40c00000    # 6.0f
 
-    .line 180
+    .line 194
     invoke-static {p1}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result p1
@@ -730,7 +999,7 @@
 
     const/high16 p1, 0x40000000    # 2.0f
 
-    .line 181
+    .line 195
     invoke-static {p1}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result p1
@@ -739,14 +1008,14 @@
 
     const/high16 p1, 0x41b00000    # 22.0f
 
-    .line 182
+    .line 196
     invoke-static {p1}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result p1
 
     iput p1, p0, Lorg/telegram/ui/Components/SlideChooseView;->sideSide:I
 
-    .line 183
+    .line 197
     invoke-virtual {p0}, Landroid/view/View;->getMeasuredWidth()I
 
     move-result p1
@@ -791,134 +1060,149 @@
 .end method
 
 .method public onTouchEvent(Landroid/view/MotionEvent;)Z
-    .registers 10
+    .registers 11
 
-    .line 106
+    .line 122
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
     move-result v0
 
-    .line 107
+    .line 123
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
 
     move-result v1
 
-    .line 108
-    invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
-
-    move-result v2
-
-    const/high16 v3, 0x41700000    # 15.0f
-
-    const/4 v4, 0x0
-
-    const/4 v5, 0x1
-
-    const/4 v6, 0x2
-
-    if-nez v2, :cond_53
-
-    .line 109
-    iput v0, p0, Lorg/telegram/ui/Components/SlideChooseView;->xTouchDown:F
-
-    .line 110
-    iput v1, p0, Lorg/telegram/ui/Components/SlideChooseView;->yTouchDown:F
-
-    const/4 p1, 0x0
-
-    .line 111
-    :goto_18
-    iget-object v1, p0, Lorg/telegram/ui/Components/SlideChooseView;->optionsStr:[Ljava/lang/String;
-
-    array-length v1, v1
-
-    if-ge p1, v1, :cond_129
-
-    .line 112
-    iget v1, p0, Lorg/telegram/ui/Components/SlideChooseView;->sideSide:I
-
-    iget v2, p0, Lorg/telegram/ui/Components/SlideChooseView;->lineSize:I
-
-    iget v7, p0, Lorg/telegram/ui/Components/SlideChooseView;->gapSize:I
-
-    mul-int/lit8 v7, v7, 0x2
-
-    add-int/2addr v2, v7
-
-    iget v7, p0, Lorg/telegram/ui/Components/SlideChooseView;->circleSize:I
-
-    add-int/2addr v2, v7
-
-    mul-int v2, v2, p1
-
-    add-int/2addr v1, v2
-
-    div-int/2addr v7, v6
-
-    add-int/2addr v1, v7
-
-    .line 113
-    invoke-static {v3}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
-
-    move-result v2
-
-    sub-int v2, v1, v2
+    .line 124
+    iget v2, p0, Lorg/telegram/ui/Components/SlideChooseView;->sideSide:I
 
     int-to-float v2, v2
 
-    cmpl-float v2, v0, v2
+    sub-float v2, v0, v2
 
-    if-lez v2, :cond_50
+    iget v3, p0, Lorg/telegram/ui/Components/SlideChooseView;->circleSize:I
 
-    invoke-static {v3}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
+    int-to-float v4, v3
 
-    move-result v2
+    const/high16 v5, 0x40000000    # 2.0f
 
-    add-int/2addr v1, v2
+    div-float/2addr v4, v5
 
-    int-to-float v1, v1
+    add-float/2addr v2, v4
 
-    cmpg-float v1, v0, v1
+    iget v4, p0, Lorg/telegram/ui/Components/SlideChooseView;->lineSize:I
 
-    if-gez v1, :cond_50
+    iget v6, p0, Lorg/telegram/ui/Components/SlideChooseView;->gapSize:I
 
-    .line 114
-    iget v1, p0, Lorg/telegram/ui/Components/SlideChooseView;->selectedIndex:I
+    const/4 v7, 0x2
 
-    if-ne p1, v1, :cond_48
+    mul-int/lit8 v6, v6, 0x2
+
+    add-int/2addr v4, v6
+
+    add-int/2addr v4, v3
+
+    int-to-float v3, v4
+
+    div-float/2addr v2, v3
+
+    iget-object v3, p0, Lorg/telegram/ui/Components/SlideChooseView;->optionsStr:[Ljava/lang/String;
+
+    array-length v3, v3
 
     const/4 v4, 0x1
 
-    :cond_48
-    iput-boolean v4, p0, Lorg/telegram/ui/Components/SlideChooseView;->startMoving:Z
+    sub-int/2addr v3, v4
 
-    .line 115
-    iput v0, p0, Lorg/telegram/ui/Components/SlideChooseView;->startX:F
+    int-to-float v3, v3
 
-    .line 116
-    iput v1, p0, Lorg/telegram/ui/Components/SlideChooseView;->startMovingPreset:I
+    const/4 v6, 0x0
 
-    goto/16 :goto_129
-
-    :cond_50
-    add-int/lit8 p1, p1, 0x1
-
-    goto :goto_18
-
-    .line 120
-    :cond_53
-    invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
+    invoke-static {v2, v6, v3}, Landroidx/core/math/MathUtils;->clamp(FFF)F
 
     move-result v2
 
-    if-ne v2, v6, :cond_c8
+    .line 125
+    invoke-static {v2}, Ljava/lang/Math;->round(F)I
 
-    .line 121
+    move-result v3
+
+    int-to-float v3, v3
+
+    sub-float v3, v2, v3
+
+    invoke-static {v3}, Ljava/lang/Math;->abs(F)F
+
+    move-result v3
+
+    const/4 v6, 0x0
+
+    const v8, 0x3eb33333    # 0.35f
+
+    cmpg-float v3, v3, v8
+
+    if-gez v3, :cond_3f
+
+    const/4 v3, 0x1
+
+    goto :goto_40
+
+    :cond_3f
+    const/4 v3, 0x0
+
+    :goto_40
+    if-eqz v3, :cond_47
+
+    .line 127
+    invoke-static {v2}, Ljava/lang/Math;->round(F)I
+
+    move-result v2
+
+    int-to-float v2, v2
+
+    .line 129
+    :cond_47
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
+
+    move-result v8
+
+    if-nez v8, :cond_5e
+
+    .line 130
+    iput v0, p0, Lorg/telegram/ui/Components/SlideChooseView;->xTouchDown:F
+
+    .line 131
+    iput v1, p0, Lorg/telegram/ui/Components/SlideChooseView;->yTouchDown:F
+
+    .line 132
+    iput v2, p0, Lorg/telegram/ui/Components/SlideChooseView;->selectedIndexTouch:F
+
+    .line 133
+    iget p1, p0, Lorg/telegram/ui/Components/SlideChooseView;->selectedIndex:I
+
+    iput p1, p0, Lorg/telegram/ui/Components/SlideChooseView;->startMovingPreset:I
+
+    .line 134
+    iput-boolean v4, p0, Lorg/telegram/ui/Components/SlideChooseView;->startMoving:Z
+
+    .line 135
+    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
+
+    goto/16 :goto_fe
+
+    .line 136
+    :cond_5e
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
+
+    move-result v8
+
+    if-ne v8, v7, :cond_bb
+
+    .line 137
     iget-boolean p1, p0, Lorg/telegram/ui/Components/SlideChooseView;->moving:Z
 
-    if-nez p1, :cond_76
+    if-nez p1, :cond_81
 
-    .line 122
+    .line 138
     iget p1, p0, Lorg/telegram/ui/Components/SlideChooseView;->xTouchDown:F
 
     sub-float/2addr p1, v0
@@ -927,33 +1211,33 @@
 
     move-result p1
 
-    iget v2, p0, Lorg/telegram/ui/Components/SlideChooseView;->yTouchDown:F
+    iget v7, p0, Lorg/telegram/ui/Components/SlideChooseView;->yTouchDown:F
 
-    sub-float/2addr v2, v1
+    sub-float/2addr v7, v1
 
-    invoke-static {v2}, Ljava/lang/Math;->abs(F)F
+    invoke-static {v7}, Ljava/lang/Math;->abs(F)F
 
     move-result v1
 
     cmpl-float p1, p1, v1
 
-    if-lez p1, :cond_76
+    if-lez p1, :cond_81
 
-    .line 123
+    .line 139
     invoke-virtual {p0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     move-result-object p1
 
-    invoke-interface {p1, v5}, Landroid/view/ViewParent;->requestDisallowInterceptTouchEvent(Z)V
+    invoke-interface {p1, v4}, Landroid/view/ViewParent;->requestDisallowInterceptTouchEvent(Z)V
 
-    .line 126
-    :cond_76
+    .line 142
+    :cond_81
     iget-boolean p1, p0, Lorg/telegram/ui/Components/SlideChooseView;->startMoving:Z
 
-    if-eqz p1, :cond_91
+    if-eqz p1, :cond_99
 
-    .line 127
-    iget p1, p0, Lorg/telegram/ui/Components/SlideChooseView;->startX:F
+    .line 143
+    iget p1, p0, Lorg/telegram/ui/Components/SlideChooseView;->xTouchDown:F
 
     sub-float/2addr p1, v0
 
@@ -961,237 +1245,154 @@
 
     move-result p1
 
-    const/high16 v0, 0x3f000000    # 0.5f
-
-    invoke-static {v0, v5}, Lorg/telegram/messenger/AndroidUtilities;->getPixelsInCM(FZ)F
+    invoke-static {v5}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v0
 
+    int-to-float v0, v0
+
     cmpl-float p1, p1, v0
 
-    if-ltz p1, :cond_129
+    if-ltz p1, :cond_99
 
-    .line 128
-    iput-boolean v5, p0, Lorg/telegram/ui/Components/SlideChooseView;->moving:Z
+    .line 144
+    iput-boolean v4, p0, Lorg/telegram/ui/Components/SlideChooseView;->moving:Z
 
-    .line 129
-    iput-boolean v4, p0, Lorg/telegram/ui/Components/SlideChooseView;->startMoving:Z
+    .line 145
+    iput-boolean v6, p0, Lorg/telegram/ui/Components/SlideChooseView;->startMoving:Z
 
-    goto/16 :goto_129
-
-    .line 131
-    :cond_91
+    .line 148
+    :cond_99
     iget-boolean p1, p0, Lorg/telegram/ui/Components/SlideChooseView;->moving:Z
 
-    if-eqz p1, :cond_129
+    if-eqz p1, :cond_b7
 
-    .line 132
-    :goto_95
-    iget-object p1, p0, Lorg/telegram/ui/Components/SlideChooseView;->optionsStr:[Ljava/lang/String;
+    .line 149
+    iput v2, p0, Lorg/telegram/ui/Components/SlideChooseView;->selectedIndexTouch:F
 
-    array-length p1, p1
+    .line 150
+    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
 
-    if-ge v4, p1, :cond_129
+    .line 151
+    iget p1, p0, Lorg/telegram/ui/Components/SlideChooseView;->selectedIndexTouch:F
 
-    .line 133
-    iget p1, p0, Lorg/telegram/ui/Components/SlideChooseView;->sideSide:I
+    invoke-static {p1}, Ljava/lang/Math;->round(F)I
 
-    iget v1, p0, Lorg/telegram/ui/Components/SlideChooseView;->lineSize:I
+    move-result p1
 
-    iget v2, p0, Lorg/telegram/ui/Components/SlideChooseView;->gapSize:I
+    iget v0, p0, Lorg/telegram/ui/Components/SlideChooseView;->selectedIndex:I
 
-    mul-int/lit8 v3, v2, 0x2
+    if-eq p1, v0, :cond_b7
 
-    add-int/2addr v3, v1
+    if-eqz v3, :cond_b7
 
-    iget v7, p0, Lorg/telegram/ui/Components/SlideChooseView;->circleSize:I
+    .line 152
+    iget p1, p0, Lorg/telegram/ui/Components/SlideChooseView;->selectedIndexTouch:F
 
-    add-int/2addr v3, v7
+    invoke-static {p1}, Ljava/lang/Math;->round(F)I
 
-    mul-int v3, v3, v4
+    move-result p1
 
-    add-int/2addr p1, v3
+    invoke-direct {p0, p1}, Lorg/telegram/ui/Components/SlideChooseView;->setOption(I)V
 
-    div-int/lit8 v3, v7, 0x2
+    .line 155
+    :cond_b7
+    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
 
-    add-int/2addr p1, v3
+    goto :goto_fe
 
-    .line 134
-    div-int/2addr v1, v6
-
-    div-int/2addr v7, v6
-
-    add-int/2addr v1, v7
-
-    add-int/2addr v1, v2
-
-    sub-int v2, p1, v1
-
-    int-to-float v2, v2
-
-    cmpl-float v2, v0, v2
-
-    if-lez v2, :cond_c5
-
-    add-int/2addr p1, v1
-
-    int-to-float p1, p1
-
-    cmpg-float p1, v0, p1
-
-    if-gez p1, :cond_c5
-
-    .line 136
-    iget p1, p0, Lorg/telegram/ui/Components/SlideChooseView;->selectedIndex:I
-
-    if-eq p1, v4, :cond_129
-
-    .line 137
-    invoke-direct {p0, v4}, Lorg/telegram/ui/Components/SlideChooseView;->setOption(I)V
-
-    goto :goto_129
-
-    :cond_c5
-    add-int/lit8 v4, v4, 0x1
-
-    goto :goto_95
-
-    .line 143
-    :cond_c8
+    .line 156
+    :cond_bb
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
-    move-result v1
+    move-result v0
 
-    if-eq v1, v5, :cond_d5
+    if-eq v0, v4, :cond_c8
 
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result p1
 
-    const/4 v1, 0x3
+    const/4 v0, 0x3
 
-    if-ne p1, v1, :cond_129
+    if-ne p1, v0, :cond_fe
 
-    .line 144
-    :cond_d5
+    .line 157
+    :cond_c8
     iget-boolean p1, p0, Lorg/telegram/ui/Components/SlideChooseView;->moving:Z
 
-    if-nez p1, :cond_10e
+    if-nez p1, :cond_e0
 
-    const/4 p1, 0x0
+    .line 158
+    iput v2, p0, Lorg/telegram/ui/Components/SlideChooseView;->selectedIndexTouch:F
 
-    :goto_da
-    const/4 v1, 0x5
+    .line 159
+    invoke-static {v2}, Ljava/lang/Math;->round(F)I
 
-    if-ge p1, v1, :cond_117
+    move-result p1
 
-    .line 146
-    iget v1, p0, Lorg/telegram/ui/Components/SlideChooseView;->sideSide:I
-
-    iget v2, p0, Lorg/telegram/ui/Components/SlideChooseView;->lineSize:I
-
-    iget v7, p0, Lorg/telegram/ui/Components/SlideChooseView;->gapSize:I
-
-    mul-int/lit8 v7, v7, 0x2
-
-    add-int/2addr v2, v7
-
-    iget v7, p0, Lorg/telegram/ui/Components/SlideChooseView;->circleSize:I
-
-    add-int/2addr v2, v7
-
-    mul-int v2, v2, p1
-
-    add-int/2addr v1, v2
-
-    div-int/2addr v7, v6
-
-    add-int/2addr v1, v7
-
-    .line 147
-    invoke-static {v3}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
-
-    move-result v2
-
-    sub-int v2, v1, v2
-
-    int-to-float v2, v2
-
-    cmpl-float v2, v0, v2
-
-    if-lez v2, :cond_10b
-
-    invoke-static {v3}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
-
-    move-result v2
-
-    add-int/2addr v1, v2
-
-    int-to-float v1, v1
-
-    cmpg-float v1, v0, v1
-
-    if-gez v1, :cond_10b
-
-    .line 148
     iget v0, p0, Lorg/telegram/ui/Components/SlideChooseView;->selectedIndex:I
 
-    if-eq v0, p1, :cond_117
+    if-eq p1, v0, :cond_e9
 
-    .line 149
+    .line 160
+    iget p1, p0, Lorg/telegram/ui/Components/SlideChooseView;->selectedIndexTouch:F
+
+    invoke-static {p1}, Ljava/lang/Math;->round(F)I
+
+    move-result p1
+
     invoke-direct {p0, p1}, Lorg/telegram/ui/Components/SlideChooseView;->setOption(I)V
 
-    goto :goto_117
+    goto :goto_e9
 
-    :cond_10b
-    add-int/lit8 p1, p1, 0x1
-
-    goto :goto_da
-
-    .line 155
-    :cond_10e
+    .line 163
+    :cond_e0
     iget p1, p0, Lorg/telegram/ui/Components/SlideChooseView;->selectedIndex:I
 
     iget v0, p0, Lorg/telegram/ui/Components/SlideChooseView;->startMovingPreset:I
 
-    if-eq p1, v0, :cond_117
-
-    .line 156
-    invoke-direct {p0, p1}, Lorg/telegram/ui/Components/SlideChooseView;->setOption(I)V
-
-    .line 159
-    :cond_117
-    :goto_117
-    iget-object p1, p0, Lorg/telegram/ui/Components/SlideChooseView;->callback:Lorg/telegram/ui/Components/SlideChooseView$Callback;
-
-    if-eqz p1, :cond_11e
-
-    .line 160
-    invoke-interface {p1}, Lorg/telegram/ui/Components/SlideChooseView$Callback;->onTouchEnd()V
-
-    .line 162
-    :cond_11e
-    iput-boolean v4, p0, Lorg/telegram/ui/Components/SlideChooseView;->startMoving:Z
-
-    .line 163
-    iput-boolean v4, p0, Lorg/telegram/ui/Components/SlideChooseView;->moving:Z
+    if-eq p1, v0, :cond_e9
 
     .line 164
+    invoke-direct {p0, p1}, Lorg/telegram/ui/Components/SlideChooseView;->setOption(I)V
+
+    .line 167
+    :cond_e9
+    :goto_e9
+    iget-object p1, p0, Lorg/telegram/ui/Components/SlideChooseView;->callback:Lorg/telegram/ui/Components/SlideChooseView$Callback;
+
+    if-eqz p1, :cond_f0
+
+    .line 168
+    invoke-interface {p1}, Lorg/telegram/ui/Components/SlideChooseView$Callback;->onTouchEnd()V
+
+    .line 170
+    :cond_f0
+    iput-boolean v6, p0, Lorg/telegram/ui/Components/SlideChooseView;->startMoving:Z
+
+    .line 171
+    iput-boolean v6, p0, Lorg/telegram/ui/Components/SlideChooseView;->moving:Z
+
+    .line 172
+    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
+
+    .line 173
     invoke-virtual {p0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     move-result-object p1
 
-    invoke-interface {p1, v4}, Landroid/view/ViewParent;->requestDisallowInterceptTouchEvent(Z)V
+    invoke-interface {p1, v6}, Landroid/view/ViewParent;->requestDisallowInterceptTouchEvent(Z)V
 
-    :cond_129
-    :goto_129
-    return v5
+    :cond_fe
+    :goto_fe
+    return v4
 .end method
 
 .method public performAccessibilityAction(ILandroid/os/Bundle;)Z
     .registers 4
 
-    .line 241
+    .line 262
     invoke-super {p0, p1, p2}, Landroid/view/View;->performAccessibilityAction(ILandroid/os/Bundle;)Z
 
     move-result v0
@@ -1224,7 +1425,7 @@
 .method public setCallback(Lorg/telegram/ui/Components/SlideChooseView$Callback;)V
     .registers 2
 
-    .line 87
+    .line 103
     iput-object p1, p0, Lorg/telegram/ui/Components/SlideChooseView;->callback:Lorg/telegram/ui/Components/SlideChooseView$Callback;
 
     return-void
@@ -1233,7 +1434,7 @@
 .method public setDashedFrom(I)V
     .registers 2
 
-    .line 101
+    .line 117
     iput p1, p0, Lorg/telegram/ui/Components/SlideChooseView;->dashedFrom:I
 
     return-void
@@ -1242,13 +1443,13 @@
 .method public varargs setOptions(I[Ljava/lang/String;)V
     .registers 6
 
-    .line 91
+    .line 107
     iput-object p2, p0, Lorg/telegram/ui/Components/SlideChooseView;->optionsStr:[Ljava/lang/String;
 
-    .line 92
+    .line 108
     iput p1, p0, Lorg/telegram/ui/Components/SlideChooseView;->selectedIndex:I
 
-    .line 93
+    .line 109
     array-length p1, p2
 
     new-array p1, p1, [I
@@ -1257,7 +1458,7 @@
 
     const/4 p1, 0x0
 
-    .line 94
+    .line 110
     :goto_a
     iget-object p2, p0, Lorg/telegram/ui/Components/SlideChooseView;->optionsStr:[Ljava/lang/String;
 
@@ -1265,7 +1466,7 @@
 
     if-ge p1, v0, :cond_24
 
-    .line 95
+    .line 111
     iget-object v0, p0, Lorg/telegram/ui/Components/SlideChooseView;->optionsSizes:[I
 
     iget-object v1, p0, Lorg/telegram/ui/Components/SlideChooseView;->textPaint:Landroid/text/TextPaint;
@@ -1290,7 +1491,7 @@
 
     goto :goto_a
 
-    .line 97
+    .line 113
     :cond_24
     invoke-virtual {p0}, Landroid/view/View;->requestLayout()V
 

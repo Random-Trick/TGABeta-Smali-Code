@@ -270,21 +270,21 @@
     .line 63
     iget-object p1, p0, Lorg/telegram/ui/Cells/PhotoAttachPermissionCell;->imageView:Landroid/widget/ImageView;
 
-    const v0, 0x7f070332
+    const v0, 0x7f070351
 
     invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setImageResource(I)V
 
     .line 64
     iget-object p1, p0, Lorg/telegram/ui/Cells/PhotoAttachPermissionCell;->imageView2:Landroid/widget/ImageView;
 
-    const v0, 0x7f070333
+    const v0, 0x7f070352
 
     invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setImageResource(I)V
 
     .line 65
     iget-object p1, p0, Lorg/telegram/ui/Cells/PhotoAttachPermissionCell;->textView:Landroid/widget/TextView;
 
-    const v0, 0x7f0e032a
+    const v0, 0x7f0e0366
 
     const-string v1, "CameraPermissionText"
 
@@ -334,21 +334,21 @@
     :cond_41
     iget-object p1, p0, Lorg/telegram/ui/Cells/PhotoAttachPermissionCell;->imageView:Landroid/widget/ImageView;
 
-    const v0, 0x7f070335
+    const v0, 0x7f070354
 
     invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setImageResource(I)V
 
     .line 71
     iget-object p1, p0, Lorg/telegram/ui/Cells/PhotoAttachPermissionCell;->imageView2:Landroid/widget/ImageView;
 
-    const v0, 0x7f070336
+    const v0, 0x7f070355
 
     invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setImageResource(I)V
 
     .line 72
     iget-object p1, p0, Lorg/telegram/ui/Cells/PhotoAttachPermissionCell;->textView:Landroid/widget/TextView;
 
-    const v0, 0x7f0e07e4
+    const v0, 0x7f0e083c
 
     const-string v1, "GalleryPermissionText"
 

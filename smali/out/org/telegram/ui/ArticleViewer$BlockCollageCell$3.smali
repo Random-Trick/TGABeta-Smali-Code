@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/ArticleViewer$BlockCollageCell;Landroid/content/Context;IIZLorg/telegram/ui/ArticleViewer;)V
     .registers 7
 
-    .line 8148
+    .line 8149
     iput-object p1, p0, Lorg/telegram/ui/ArticleViewer$BlockCollageCell$3;->this$1:Lorg/telegram/ui/ArticleViewer$BlockCollageCell;
 
     invoke-direct {p0, p2, p3, p4, p5}, Landroidx/recyclerview/widget/GridLayoutManagerFixed;-><init>(Landroid/content/Context;IIZ)V
@@ -35,7 +35,7 @@
 .method protected hasSiblingChild(I)Z
     .registers 9
 
-    .line 8161
+    .line 8162
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockCollageCell$3;->this$1:Lorg/telegram/ui/ArticleViewer$BlockCollageCell;
 
     invoke-static {v0}, Lorg/telegram/ui/ArticleViewer$BlockCollageCell;->access$16700(Lorg/telegram/ui/ArticleViewer$BlockCollageCell;)Lorg/telegram/tgnet/TLRPC$TL_pageBlockCollage;
@@ -68,7 +68,7 @@
 
     check-cast v0, Lorg/telegram/tgnet/TLObject;
 
-    .line 8162
+    .line 8163
     iget-object v1, p0, Lorg/telegram/ui/ArticleViewer$BlockCollageCell$3;->this$1:Lorg/telegram/ui/ArticleViewer$BlockCollageCell;
 
     invoke-static {v1}, Lorg/telegram/ui/ArticleViewer$BlockCollageCell;->access$17100(Lorg/telegram/ui/ArticleViewer$BlockCollageCell;)Lorg/telegram/ui/ArticleViewer$BlockCollageCell$GroupedMessages;
@@ -83,7 +83,7 @@
 
     check-cast v0, Lorg/telegram/messenger/MessageObject$GroupedMessagePosition;
 
-    .line 8163
+    .line 8164
     iget-byte v1, v0, Lorg/telegram/messenger/MessageObject$GroupedMessagePosition;->minX:B
 
     iget-byte v2, v0, Lorg/telegram/messenger/MessageObject$GroupedMessagePosition;->maxX:B
@@ -102,7 +102,7 @@
 
     goto :goto_69
 
-    .line 8166
+    .line 8167
     :cond_3b
     iget-object v1, p0, Lorg/telegram/ui/ArticleViewer$BlockCollageCell$3;->this$1:Lorg/telegram/ui/ArticleViewer$BlockCollageCell;
 
@@ -121,7 +121,7 @@
     :goto_48
     if-ge v2, v1, :cond_69
 
-    .line 8168
+    .line 8169
     iget-object v4, p0, Lorg/telegram/ui/ArticleViewer$BlockCollageCell$3;->this$1:Lorg/telegram/ui/ArticleViewer$BlockCollageCell;
 
     invoke-static {v4}, Lorg/telegram/ui/ArticleViewer$BlockCollageCell;->access$17100(Lorg/telegram/ui/ArticleViewer$BlockCollageCell;)Lorg/telegram/ui/ArticleViewer$BlockCollageCell$GroupedMessages;
@@ -140,7 +140,7 @@
 
     goto :goto_66
 
-    .line 8172
+    .line 8173
     :cond_5b
     iget-byte v5, v4, Lorg/telegram/messenger/MessageObject$GroupedMessagePosition;->minY:B
 

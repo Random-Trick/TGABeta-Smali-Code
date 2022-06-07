@@ -43,7 +43,7 @@
 
     if-eqz v0, :cond_46
 
-    const v0, 0x7f0e004f
+    const v0, 0x7f0e006e
 
     const-string v1, "AccDescrProfilePicture"
 
@@ -66,7 +66,7 @@
 
     const/16 v1, 0x10
 
-    const v2, 0x7f0e0bbd
+    const v2, 0x7f0e0c47
 
     const-string v3, "Open"
 
@@ -83,7 +83,7 @@
 
     const/16 v1, 0x20
 
-    const v2, 0x7f0e0042
+    const v2, 0x7f0e005d
 
     const-string v3, "AccDescrOpenInPhotoViewer"
 

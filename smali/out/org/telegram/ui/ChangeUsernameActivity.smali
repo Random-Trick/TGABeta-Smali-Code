@@ -286,7 +286,7 @@
 
     move-result v4
 
-    const v5, 0x7f0e1259
+    const v5, 0x7f0e1326
 
     const-string v6, "UsernameInvalid"
 
@@ -326,7 +326,7 @@
 
     if-gt v4, v7, :cond_9c
 
-    const p1, 0x7f0e125c
+    const p1, 0x7f0e1329
 
     const-string v0, "UsernameInvalidStartNumber"
 
@@ -490,7 +490,7 @@
 
     if-le v3, v4, :cond_12b
 
-    const p1, 0x7f0e125a
+    const p1, 0x7f0e1327
 
     const-string v0, "UsernameInvalidLong"
 
@@ -563,7 +563,7 @@
     .line 324
     iget-object p2, p0, Lorg/telegram/ui/ChangeUsernameActivity;->checkTextView:Landroid/widget/TextView;
 
-    const v1, 0x7f0e1252    # 1.888455E38f
+    const v1, 0x7f0e131f
 
     new-array v3, v0, [Ljava/lang/Object;
 
@@ -599,7 +599,7 @@
     :cond_166
     iget-object p2, p0, Lorg/telegram/ui/ChangeUsernameActivity;->checkTextView:Landroid/widget/TextView;
 
-    const v1, 0x7f0e1253
+    const v1, 0x7f0e1320
 
     const-string v2, "UsernameChecking"
 
@@ -645,7 +645,7 @@
 
     :cond_193
     :goto_193
-    const p1, 0x7f0e125b
+    const p1, 0x7f0e1328
 
     const-string v0, "UsernameInvalidShort"
 
@@ -717,7 +717,7 @@
     .line 342
     iget-object p2, p0, Lorg/telegram/ui/ChangeUsernameActivity;->checkTextView:Landroid/widget/TextView;
 
-    const p3, 0x7f0e1252    # 1.888455E38f
+    const p3, 0x7f0e131f
 
     const/4 v1, 0x1
 
@@ -755,7 +755,7 @@
     :cond_37
     iget-object p1, p0, Lorg/telegram/ui/ChangeUsernameActivity;->checkTextView:Landroid/widget/TextView;
 
-    const p2, 0x7f0e1258
+    const p2, 0x7f0e1325
 
     const-string p3, "UsernameInUse"
 
@@ -1188,7 +1188,7 @@
     .line 119
     iget-object v2, v0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
-    const v3, 0x7f070140
+    const v3, 0x7f070109
 
     invoke-virtual {v2, v3}, Lorg/telegram/ui/ActionBar/ActionBar;->setBackButtonImage(I)V
 
@@ -1204,7 +1204,7 @@
 
     const-string v4, "Username"
 
-    const v5, 0x7f0e1251
+    const v5, 0x7f0e131e
 
     invoke-static {v4, v5}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
@@ -1237,13 +1237,13 @@
 
     const-string v5, "Done"
 
-    const v6, 0x7f0e05dd
+    const v6, 0x7f0e062e
 
     invoke-static {v5, v6}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v5
 
-    const v6, 0x7f07015e
+    const v6, 0x7f07010a
 
     invoke-virtual {v2, v3, v6, v4, v5}, Lorg/telegram/ui/ActionBar/ActionBarMenu;->addItemWithWidth(IIILjava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
@@ -1434,7 +1434,7 @@
     .line 159
     iget-object v5, v0, Lorg/telegram/ui/ChangeUsernameActivity;->firstNameField:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
-    const v9, 0x7f0e125d
+    const v9, 0x7f0e132a
 
     const-string v12, "UsernamePlaceholder"
 
@@ -1613,7 +1613,7 @@
     .line 216
     iget-object v1, v0, Lorg/telegram/ui/ChangeUsernameActivity;->helpTextView:Landroid/widget/TextView;
 
-    const v5, 0x7f0e1256
+    const v5, 0x7f0e1323
 
     const-string v6, "UsernameHelp"
 

@@ -17,7 +17,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 25825
+    .line 26193
     invoke-direct {p0}, Lorg/telegram/tgnet/TLRPC$PageBlock;-><init>()V
 
     return-void
@@ -28,7 +28,7 @@
 .method public serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
     .registers 3
 
-    .line 25830
+    .line 26198
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_pageBlockDivider;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V

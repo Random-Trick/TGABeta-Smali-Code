@@ -18,7 +18,7 @@
 .method constructor <init>(Lorg/telegram/ui/ActionBar/ActionBarMenuItem;)V
     .registers 2
 
-    .line 900
+    .line 894
     invoke-direct {p0}, Landroid/transition/Visibility;-><init>()V
 
     return-void
@@ -29,14 +29,14 @@
 .method public onAppear(Landroid/view/ViewGroup;Landroid/view/View;Landroid/transition/TransitionValues;Landroid/transition/TransitionValues;)Landroid/animation/Animator;
     .registers 8
 
-    .line 903
+    .line 897
     instance-of p1, p2, Lorg/telegram/ui/ActionBar/ActionBarMenuItem$SearchFilterView;
 
     const/4 p3, 0x2
 
     if-eqz p1, :cond_3f
 
-    .line 904
+    .line 898
     new-instance p1, Landroid/animation/AnimatorSet;
 
     invoke-direct {p1}, Landroid/animation/AnimatorSet;-><init>()V
@@ -47,14 +47,14 @@
 
     const/4 v0, 0x0
 
-    .line 905
+    .line 899
     sget-object v1, Landroid/view/View;->ALPHA:Landroid/util/Property;
 
     new-array v2, p3, [F
 
     fill-array-data v2, :array_4c
 
-    .line 906
+    .line 900
     invoke-static {p2, v1, v2}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
 
     move-result-object v1
@@ -69,7 +69,7 @@
 
     fill-array-data v2, :array_54
 
-    .line 907
+    .line 901
     invoke-static {p2, v1, v2}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
 
     move-result-object v1
@@ -82,24 +82,24 @@
 
     fill-array-data v1, :array_5c
 
-    .line 908
+    .line 902
     invoke-static {p2, v0, v1}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
 
     move-result-object p2
 
     aput-object p2, p4, p3
 
-    .line 905
+    .line 899
     invoke-virtual {p1, p4}, Landroid/animation/AnimatorSet;->playTogether([Landroid/animation/Animator;)V
 
-    .line 910
+    .line 904
     sget-object p2, Lorg/telegram/ui/Components/CubicBezierInterpolator;->DEFAULT:Lorg/telegram/ui/Components/CubicBezierInterpolator;
 
     invoke-virtual {p1, p2}, Landroid/animation/AnimatorSet;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
     return-object p1
 
-    .line 913
+    .line 907
     :cond_3f
     sget-object p1, Landroid/view/View;->ALPHA:Landroid/util/Property;
 
@@ -143,14 +143,14 @@
 .method public onDisappear(Landroid/view/ViewGroup;Landroid/view/View;Landroid/transition/TransitionValues;Landroid/transition/TransitionValues;)Landroid/animation/Animator;
     .registers 11
 
-    .line 917
+    .line 911
     instance-of p1, p2, Lorg/telegram/ui/ActionBar/ActionBarMenuItem$SearchFilterView;
 
     const/4 p3, 0x2
 
     if-eqz p1, :cond_51
 
-    .line 918
+    .line 912
     new-instance p1, Landroid/animation/AnimatorSet;
 
     invoke-direct {p1}, Landroid/animation/AnimatorSet;-><init>()V
@@ -159,12 +159,12 @@
 
     new-array p4, p4, [Landroid/animation/Animator;
 
-    .line 919
+    .line 913
     sget-object v0, Landroid/view/View;->ALPHA:Landroid/util/Property;
 
     new-array v1, p3, [F
 
-    .line 920
+    .line 914
     invoke-virtual {p2}, Landroid/view/View;->getAlpha()F
 
     move-result v2
@@ -189,7 +189,7 @@
 
     new-array v1, p3, [F
 
-    .line 921
+    .line 915
     invoke-virtual {p2}, Landroid/view/View;->getScaleX()F
 
     move-result v2
@@ -210,7 +210,7 @@
 
     new-array v1, p3, [F
 
-    .line 922
+    .line 916
     invoke-virtual {p2}, Landroid/view/View;->getScaleX()F
 
     move-result v5
@@ -225,17 +225,17 @@
 
     aput-object p2, p4, p3
 
-    .line 919
+    .line 913
     invoke-virtual {p1, p4}, Landroid/animation/AnimatorSet;->playTogether([Landroid/animation/Animator;)V
 
-    .line 924
+    .line 918
     sget-object p2, Lorg/telegram/ui/Components/CubicBezierInterpolator;->DEFAULT:Lorg/telegram/ui/Components/CubicBezierInterpolator;
 
     invoke-virtual {p1, p2}, Landroid/animation/AnimatorSet;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
     return-object p1
 
-    .line 927
+    .line 921
     :cond_51
     sget-object p1, Landroid/view/View;->ALPHA:Landroid/util/Property;
 

@@ -6,24 +6,16 @@
 
 
 # instance fields
-.field public final synthetic f$0:Lorg/telegram/ui/Components/StickersAlert;
-
-.field public final synthetic f$1:Ljava/lang/String;
-
-.field public final synthetic f$2:Landroid/widget/TextView;
+.field public final synthetic f$0:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lorg/telegram/ui/Components/StickersAlert;Ljava/lang/String;Landroid/widget/TextView;)V
-    .registers 4
+.method public synthetic constructor <init>(Lorg/telegram/ui/Components/EditTextBoldCursor;)V
+    .registers 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lorg/telegram/ui/Components/StickersAlert$$ExternalSyntheticLambda16;->f$0:Lorg/telegram/ui/Components/StickersAlert;
-
-    iput-object p2, p0, Lorg/telegram/ui/Components/StickersAlert$$ExternalSyntheticLambda16;->f$1:Ljava/lang/String;
-
-    iput-object p3, p0, Lorg/telegram/ui/Components/StickersAlert$$ExternalSyntheticLambda16;->f$2:Landroid/widget/TextView;
+    iput-object p1, p0, Lorg/telegram/ui/Components/StickersAlert$$ExternalSyntheticLambda16;->f$0:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
     return-void
 .end method
@@ -31,15 +23,11 @@
 
 # virtual methods
 .method public final run()V
-    .registers 4
+    .registers 2
 
-    iget-object v0, p0, Lorg/telegram/ui/Components/StickersAlert$$ExternalSyntheticLambda16;->f$0:Lorg/telegram/ui/Components/StickersAlert;
+    iget-object v0, p0, Lorg/telegram/ui/Components/StickersAlert$$ExternalSyntheticLambda16;->f$0:Lorg/telegram/ui/Components/EditTextBoldCursor;
 
-    iget-object v1, p0, Lorg/telegram/ui/Components/StickersAlert$$ExternalSyntheticLambda16;->f$1:Ljava/lang/String;
-
-    iget-object v2, p0, Lorg/telegram/ui/Components/StickersAlert$$ExternalSyntheticLambda16;->f$2:Landroid/widget/TextView;
-
-    invoke-static {v0, v1, v2}, Lorg/telegram/ui/Components/StickersAlert;->$r8$lambda$m3CJ98f8mkf092z2oVEW0Xquakw(Lorg/telegram/ui/Components/StickersAlert;Ljava/lang/String;Landroid/widget/TextView;)V
+    invoke-static {v0}, Lorg/telegram/ui/Components/StickersAlert;->$r8$lambda$Hf2cSvLfh7nG-QCAHYm84B3AK-c(Lorg/telegram/ui/Components/EditTextBoldCursor;)V
 
     return-void
 .end method

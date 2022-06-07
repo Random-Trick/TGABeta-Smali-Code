@@ -903,7 +903,7 @@
 
     const p1, 0x7f0d002b
 
-    const v2, 0x7f0e0707
+    const v2, 0x7f0e075c
 
     const-string v3, "FilterAddingChatsInfo"
 
@@ -915,7 +915,7 @@
     .line 153
     iget-object v3, p0, Lorg/telegram/ui/Cells/DialogsEmptyCell;->titleView:Landroid/widget/TextView;
 
-    const v4, 0x7f0e0706
+    const v4, 0x7f0e075b
 
     const-string v5, "FilterAddingChats"
 
@@ -935,7 +935,7 @@
 
     const p1, 0x7f0d002c
 
-    const v2, 0x7f0e0734
+    const v2, 0x7f0e0789
 
     const-string v3, "FilterNoChatsToDisplayInfo"
 
@@ -947,7 +947,7 @@
     .line 146
     iget-object v3, p0, Lorg/telegram/ui/Cells/DialogsEmptyCell;->titleView:Landroid/widget/TextView;
 
-    const v4, 0x7f0e0733
+    const v4, 0x7f0e0788
 
     const-string v5, "FilterNoChatsToDisplay"
 
@@ -960,9 +960,9 @@
     goto :goto_6a
 
     :cond_50
-    const p1, 0x7f0d0098
+    const p1, 0x7f0d009a
 
-    const v2, 0x7f0e0aac
+    const v2, 0x7f0e0b33
 
     const-string v3, "NoChatsHelp"
 
@@ -974,7 +974,7 @@
     .line 140
     iget-object v3, p0, Lorg/telegram/ui/Cells/DialogsEmptyCell;->titleView:Landroid/widget/TextView;
 
-    const v4, 0x7f0e0aaa
+    const v4, 0x7f0e0b31
 
     const-string v5, "NoChats"
 
@@ -1013,7 +1013,7 @@
     .line 160
     iput v5, p0, Lorg/telegram/ui/Cells/DialogsEmptyCell;->utyanCollapseProgress:F
 
-    const v5, 0x7f0e0aab
+    const v5, 0x7f0e0b32
 
     const-string v6, "NoChatsContactsHelp"
 
@@ -1135,7 +1135,7 @@
 
     if-eqz p1, :cond_2e
 
-    const p1, 0x7f0e0aab
+    const p1, 0x7f0e0b32
 
     const-string v1, "NoChatsContactsHelp"
 

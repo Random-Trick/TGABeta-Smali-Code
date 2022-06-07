@@ -93,33 +93,33 @@
 .method public constructor <init>(Lorg/telegram/messenger/SendMessagesHelper;)V
     .registers 2
 
-    .line 312
+    .line 317
     iput-object p1, p0, Lorg/telegram/messenger/SendMessagesHelper$ImportingStickers;->this$0:Lorg/telegram/messenger/SendMessagesHelper;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 314
+    .line 319
     new-instance p1, Ljava/util/HashMap;
 
     invoke-direct {p1}, Ljava/util/HashMap;-><init>()V
 
     iput-object p1, p0, Lorg/telegram/messenger/SendMessagesHelper$ImportingStickers;->uploadSet:Ljava/util/HashMap;
 
-    .line 315
+    .line 320
     new-instance p1, Ljava/util/HashMap;
 
     invoke-direct {p1}, Ljava/util/HashMap;-><init>()V
 
     iput-object p1, p0, Lorg/telegram/messenger/SendMessagesHelper$ImportingStickers;->uploadProgresses:Ljava/util/HashMap;
 
-    .line 316
+    .line 321
     new-instance p1, Ljava/util/HashMap;
 
     invoke-direct {p1}, Ljava/util/HashMap;-><init>()V
 
     iput-object p1, p0, Lorg/telegram/messenger/SendMessagesHelper$ImportingStickers;->uploadSize:Ljava/util/HashMap;
 
-    .line 317
+    .line 322
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
@@ -128,7 +128,7 @@
 
     const p1, 0x7fffffff
 
-    .line 330
+    .line 335
     iput p1, p0, Lorg/telegram/messenger/SendMessagesHelper$ImportingStickers;->timeUntilFinish:I
 
     return-void
@@ -137,7 +137,7 @@
 .method static synthetic access$1400(Lorg/telegram/messenger/SendMessagesHelper$ImportingStickers;Ljava/lang/String;JF)V
     .registers 5
 
-    .line 312
+    .line 317
     invoke-direct {p0, p1, p2, p3, p4}, Lorg/telegram/messenger/SendMessagesHelper$ImportingStickers;->addUploadProgress(Ljava/lang/String;JF)V
 
     return-void
@@ -146,7 +146,7 @@
 .method static synthetic access$1700(Lorg/telegram/messenger/SendMessagesHelper$ImportingStickers;Ljava/lang/String;JLorg/telegram/tgnet/TLRPC$InputFile;)V
     .registers 5
 
-    .line 312
+    .line 317
     invoke-direct {p0, p1, p2, p3, p4}, Lorg/telegram/messenger/SendMessagesHelper$ImportingStickers;->onMediaImport(Ljava/lang/String;JLorg/telegram/tgnet/TLRPC$InputFile;)V
 
     return-void
@@ -155,7 +155,7 @@
 .method static synthetic access$1900(Lorg/telegram/messenger/SendMessagesHelper$ImportingStickers;Ljava/lang/String;)V
     .registers 2
 
-    .line 312
+    .line 317
     invoke-direct {p0, p1}, Lorg/telegram/messenger/SendMessagesHelper$ImportingStickers;->onFileFailedToUpload(Ljava/lang/String;)V
 
     return-void
@@ -164,7 +164,7 @@
 .method static synthetic access$2100(Lorg/telegram/messenger/SendMessagesHelper$ImportingStickers;)V
     .registers 1
 
-    .line 312
+    .line 317
     invoke-direct {p0}, Lorg/telegram/messenger/SendMessagesHelper$ImportingStickers;->startImport()V
 
     return-void
@@ -173,7 +173,7 @@
 .method static synthetic access$2200(Lorg/telegram/messenger/SendMessagesHelper$ImportingStickers;)V
     .registers 1
 
-    .line 312
+    .line 317
     invoke-direct {p0}, Lorg/telegram/messenger/SendMessagesHelper$ImportingStickers;->initImport()V
 
     return-void
@@ -182,7 +182,7 @@
 .method private addUploadProgress(Ljava/lang/String;JF)V
     .registers 12
 
-    .line 356
+    .line 361
     iget-object v0, p0, Lorg/telegram/messenger/SendMessagesHelper$ImportingStickers;->uploadProgresses:Ljava/util/HashMap;
 
     invoke-static {p4}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
@@ -191,7 +191,7 @@
 
     invoke-virtual {v0, p1, p4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 357
+    .line 362
     iget-object p4, p0, Lorg/telegram/messenger/SendMessagesHelper$ImportingStickers;->uploadSize:Ljava/util/HashMap;
 
     invoke-static {p2, p3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -202,10 +202,10 @@
 
     const-wide/16 p1, 0x0
 
-    .line 358
+    .line 363
     iput-wide p1, p0, Lorg/telegram/messenger/SendMessagesHelper$ImportingStickers;->uploadedSize:J
 
-    .line 359
+    .line 364
     iget-object p1, p0, Lorg/telegram/messenger/SendMessagesHelper$ImportingStickers;->uploadSize:Ljava/util/HashMap;
 
     invoke-virtual {p1}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
@@ -229,7 +229,7 @@
 
     check-cast p2, Ljava/util/Map$Entry;
 
-    .line 360
+    .line 365
     iget-wide p3, p0, Lorg/telegram/messenger/SendMessagesHelper$ImportingStickers;->uploadedSize:J
 
     invoke-interface {p2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
@@ -248,13 +248,13 @@
 
     goto :goto_20
 
-    .line 362
+    .line 367
     :cond_3c
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide p1
 
-    .line 363
+    .line 368
     iget-wide p3, p0, Lorg/telegram/messenger/SendMessagesHelper$ImportingStickers;->uploadedSize:J
 
     iget-wide v0, p0, Lorg/telegram/messenger/SendMessagesHelper$ImportingStickers;->lastUploadSize:J
@@ -275,7 +275,7 @@
 
     const-wide v4, 0x408f400000000000L    # 1000.0
 
-    .line 364
+    .line 369
     invoke-static {v2, v3}, Ljava/lang/Double;->isNaN(D)Z
 
     div-double/2addr v2, v4
@@ -284,12 +284,12 @@
 
     long-to-double v0, v0
 
-    .line 365
+    .line 370
     invoke-static {v0, v1}, Ljava/lang/Double;->isNaN(D)Z
 
     div-double/2addr v0, v2
 
-    .line 366
+    .line 371
     iget-wide v2, p0, Lorg/telegram/messenger/SendMessagesHelper$ImportingStickers;->estimatedUploadSpeed:D
 
     const-wide/16 v4, 0x0
@@ -298,7 +298,7 @@
 
     if-nez v6, :cond_6c
 
-    .line 367
+    .line 372
     iput-wide v0, p0, Lorg/telegram/messenger/SendMessagesHelper$ImportingStickers;->estimatedUploadSpeed:D
 
     goto :goto_7d
@@ -314,10 +314,10 @@
 
     add-double/2addr v0, v4
 
-    .line 370
+    .line 375
     iput-wide v0, p0, Lorg/telegram/messenger/SendMessagesHelper$ImportingStickers;->estimatedUploadSpeed:D
 
-    .line 372
+    .line 377
     :goto_7d
     iget-wide v0, p0, Lorg/telegram/messenger/SendMessagesHelper$ImportingStickers;->totalSize:J
 
@@ -339,13 +339,13 @@
 
     iput v0, p0, Lorg/telegram/messenger/SendMessagesHelper$ImportingStickers;->timeUntilFinish:I
 
-    .line 373
+    .line 378
     iput-wide p3, p0, Lorg/telegram/messenger/SendMessagesHelper$ImportingStickers;->lastUploadSize:J
 
-    .line 374
+    .line 379
     iput-wide p1, p0, Lorg/telegram/messenger/SendMessagesHelper$ImportingStickers;->lastUploadTime:J
 
-    .line 376
+    .line 381
     :cond_92
     invoke-virtual {p0}, Lorg/telegram/messenger/SendMessagesHelper$ImportingStickers;->getUploadedCount()J
 
@@ -367,15 +367,15 @@
 
     float-to-int p1, p1
 
-    .line 378
+    .line 383
     iget p2, p0, Lorg/telegram/messenger/SendMessagesHelper$ImportingStickers;->uploadProgress:I
 
     if-eq p2, p1, :cond_bb
 
-    .line 379
+    .line 384
     iput p1, p0, Lorg/telegram/messenger/SendMessagesHelper$ImportingStickers;->uploadProgress:I
 
-    .line 380
+    .line 385
     iget-object p1, p0, Lorg/telegram/messenger/SendMessagesHelper$ImportingStickers;->this$0:Lorg/telegram/messenger/SendMessagesHelper;
 
     invoke-virtual {p1}, Lorg/telegram/messenger/BaseController;->getNotificationCenter()Lorg/telegram/messenger/NotificationCenter;
@@ -403,7 +403,7 @@
 .method private initImport()V
     .registers 8
 
-    .line 333
+    .line 338
     iget-object v0, p0, Lorg/telegram/messenger/SendMessagesHelper$ImportingStickers;->this$0:Lorg/telegram/messenger/SendMessagesHelper;
 
     invoke-virtual {v0}, Lorg/telegram/messenger/BaseController;->getNotificationCenter()Lorg/telegram/messenger/NotificationCenter;
@@ -424,14 +424,14 @@
 
     invoke-virtual {v0, v1, v3}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 334
+    .line 339
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lorg/telegram/messenger/SendMessagesHelper$ImportingStickers;->lastUploadTime:J
 
-    .line 335
+    .line 340
     iget-object v0, p0, Lorg/telegram/messenger/SendMessagesHelper$ImportingStickers;->uploadMedia:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -443,7 +443,7 @@
     :goto_20
     if-ge v1, v0, :cond_3a
 
-    .line 336
+    .line 341
     iget-object v3, p0, Lorg/telegram/messenger/SendMessagesHelper$ImportingStickers;->this$0:Lorg/telegram/messenger/SendMessagesHelper;
 
     invoke-virtual {v3}, Lorg/telegram/messenger/BaseController;->getFileLoader()Lorg/telegram/messenger/FileLoader;
@@ -475,12 +475,12 @@
 .method private synthetic lambda$onMediaImport$0(Ljava/lang/String;)V
     .registers 6
 
-    .line 392
+    .line 397
     iget-object v0, p0, Lorg/telegram/messenger/SendMessagesHelper$ImportingStickers;->uploadSet:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 393
+    .line 398
     iget-object p1, p0, Lorg/telegram/messenger/SendMessagesHelper$ImportingStickers;->this$0:Lorg/telegram/messenger/SendMessagesHelper;
 
     invoke-virtual {p1}, Lorg/telegram/messenger/BaseController;->getNotificationCenter()Lorg/telegram/messenger/NotificationCenter;
@@ -501,7 +501,7 @@
 
     invoke-virtual {p1, v0, v1}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 394
+    .line 399
     iget-object p1, p0, Lorg/telegram/messenger/SendMessagesHelper$ImportingStickers;->uploadSet:Ljava/util/HashMap;
 
     invoke-virtual {p1}, Ljava/util/HashMap;->isEmpty()Z
@@ -510,7 +510,7 @@
 
     if-eqz p1, :cond_23
 
-    .line 395
+    .line 400
     invoke-direct {p0}, Lorg/telegram/messenger/SendMessagesHelper$ImportingStickers;->startImport()V
 
     :cond_23
@@ -520,7 +520,7 @@
 .method private onFileFailedToUpload(Ljava/lang/String;)V
     .registers 3
 
-    .line 349
+    .line 354
     iget-object v0, p0, Lorg/telegram/messenger/SendMessagesHelper$ImportingStickers;->uploadSet:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
@@ -531,7 +531,7 @@
 
     if-eqz p1, :cond_f
 
-    .line 351
+    .line 356
     iget-object v0, p0, Lorg/telegram/messenger/SendMessagesHelper$ImportingStickers;->uploadMedia:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
@@ -545,10 +545,10 @@
 
     const/high16 v0, 0x3f800000    # 1.0f
 
-    .line 385
+    .line 390
     invoke-direct {p0, p1, p2, p3, v0}, Lorg/telegram/messenger/SendMessagesHelper$ImportingStickers;->addUploadProgress(Ljava/lang/String;JF)V
 
-    .line 387
+    .line 392
     iget-object p2, p0, Lorg/telegram/messenger/SendMessagesHelper$ImportingStickers;->uploadSet:Ljava/util/HashMap;
 
     invoke-virtual {p2, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -561,7 +561,7 @@
 
     return-void
 
-    .line 391
+    .line 396
     :cond_10
     iget-object p3, p0, Lorg/telegram/messenger/SendMessagesHelper$ImportingStickers;->this$0:Lorg/telegram/messenger/SendMessagesHelper;
 
@@ -579,29 +579,29 @@
 .method private startImport()V
     .registers 6
 
-    .line 401
+    .line 406
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_stickers_createStickerSet;
 
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_stickers_createStickerSet;-><init>()V
 
-    .line 402
+    .line 407
     new-instance v1, Lorg/telegram/tgnet/TLRPC$TL_inputUserSelf;
 
     invoke-direct {v1}, Lorg/telegram/tgnet/TLRPC$TL_inputUserSelf;-><init>()V
 
     iput-object v1, v0, Lorg/telegram/tgnet/TLRPC$TL_stickers_createStickerSet;->user_id:Lorg/telegram/tgnet/TLRPC$InputUser;
 
-    .line 403
+    .line 408
     iget-object v1, p0, Lorg/telegram/messenger/SendMessagesHelper$ImportingStickers;->title:Ljava/lang/String;
 
     iput-object v1, v0, Lorg/telegram/tgnet/TLRPC$TL_stickers_createStickerSet;->title:Ljava/lang/String;
 
-    .line 404
+    .line 409
     iget-object v1, p0, Lorg/telegram/messenger/SendMessagesHelper$ImportingStickers;->shortName:Ljava/lang/String;
 
     iput-object v1, v0, Lorg/telegram/tgnet/TLRPC$TL_stickers_createStickerSet;->short_name:Ljava/lang/String;
 
-    .line 405
+    .line 410
     iget-object v1, p0, Lorg/telegram/messenger/SendMessagesHelper$ImportingStickers;->uploadMedia:Ljava/util/ArrayList;
 
     const/4 v2, 0x0
@@ -616,22 +616,22 @@
 
     iput-boolean v1, v0, Lorg/telegram/tgnet/TLRPC$TL_stickers_createStickerSet;->animated:Z
 
-    .line 406
+    .line 411
     iget-object v1, p0, Lorg/telegram/messenger/SendMessagesHelper$ImportingStickers;->software:Ljava/lang/String;
 
     if-eqz v1, :cond_2d
 
-    .line 407
+    .line 412
     iput-object v1, v0, Lorg/telegram/tgnet/TLRPC$TL_stickers_createStickerSet;->software:Ljava/lang/String;
 
-    .line 408
+    .line 413
     iget v1, v0, Lorg/telegram/tgnet/TLRPC$TL_stickers_createStickerSet;->flags:I
 
     or-int/lit8 v1, v1, 0x8
 
     iput v1, v0, Lorg/telegram/tgnet/TLRPC$TL_stickers_createStickerSet;->flags:I
 
-    .line 410
+    .line 415
     :cond_2d
     iget-object v1, p0, Lorg/telegram/messenger/SendMessagesHelper$ImportingStickers;->uploadMedia:Ljava/util/ArrayList;
 
@@ -642,7 +642,7 @@
     :goto_33
     if-ge v2, v1, :cond_4a
 
-    .line 411
+    .line 416
     iget-object v3, p0, Lorg/telegram/messenger/SendMessagesHelper$ImportingStickers;->uploadMedia:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -651,14 +651,14 @@
 
     check-cast v3, Lorg/telegram/messenger/SendMessagesHelper$ImportingSticker;
 
-    .line 412
+    .line 417
     iget-object v3, v3, Lorg/telegram/messenger/SendMessagesHelper$ImportingSticker;->item:Lorg/telegram/tgnet/TLRPC$TL_inputStickerSetItem;
 
     if-nez v3, :cond_42
 
     goto :goto_47
 
-    .line 415
+    .line 420
     :cond_42
     iget-object v4, v0, Lorg/telegram/tgnet/TLRPC$TL_stickers_createStickerSet;->stickers:Ljava/util/ArrayList;
 
@@ -669,7 +669,7 @@
 
     goto :goto_33
 
-    .line 417
+    .line 422
     :cond_4a
     iget-object v1, p0, Lorg/telegram/messenger/SendMessagesHelper$ImportingStickers;->this$0:Lorg/telegram/messenger/SendMessagesHelper;
 
@@ -691,7 +691,7 @@
 .method public getTotalCount()J
     .registers 3
 
-    .line 345
+    .line 350
     iget-wide v0, p0, Lorg/telegram/messenger/SendMessagesHelper$ImportingStickers;->totalSize:J
 
     return-wide v0
@@ -700,7 +700,7 @@
 .method public getUploadedCount()J
     .registers 3
 
-    .line 341
+    .line 346
     iget-wide v0, p0, Lorg/telegram/messenger/SendMessagesHelper$ImportingStickers;->uploadedSize:J
 
     return-wide v0
@@ -713,7 +713,7 @@
 
     if-ne p1, v0, :cond_f
 
-    .line 441
+    .line 446
     iget-object p1, p0, Lorg/telegram/messenger/SendMessagesHelper$ImportingStickers;->this$0:Lorg/telegram/messenger/SendMessagesHelper;
 
     invoke-static {p1}, Lorg/telegram/messenger/SendMessagesHelper;->access$300(Lorg/telegram/messenger/SendMessagesHelper;)Ljava/util/HashMap;
@@ -724,7 +724,7 @@
 
     invoke-virtual {p1, v0}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 443
+    .line 448
     :cond_f
     iget-object p1, p0, Lorg/telegram/messenger/SendMessagesHelper$ImportingStickers;->this$0:Lorg/telegram/messenger/SendMessagesHelper;
 

@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lorg/telegram/ui/Components/ReactionsContainerLayout;-><init>(Landroid/content/Context;ILorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)V
+    value = Lorg/telegram/ui/Components/ReactionsContainerLayout;-><init>(Lorg/telegram/ui/ActionBar/BaseFragment;Landroid/content/Context;ILorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/ReactionsContainerLayout;)V
     .registers 2
 
-    .line 245
+    .line 257
     iput-object p1, p0, Lorg/telegram/ui/Components/ReactionsContainerLayout$6;->this$0:Lorg/telegram/ui/Components/ReactionsContainerLayout;
 
     invoke-direct {p0}, Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;-><init>()V
@@ -35,7 +35,7 @@
 .method public getItemOffsets(Landroid/graphics/Rect;Landroid/view/View;Landroidx/recyclerview/widget/RecyclerView;Landroidx/recyclerview/widget/RecyclerView$State;)V
     .registers 5
 
-    .line 248
+    .line 260
     invoke-virtual {p3, p2}, Landroidx/recyclerview/widget/RecyclerView;->getChildAdapterPosition(Landroid/view/View;)I
 
     move-result p2
@@ -44,14 +44,14 @@
 
     if-nez p2, :cond_e
 
-    .line 250
+    .line 262
     invoke-static {p3}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result p4
 
     iput p4, p1, Landroid/graphics/Rect;->left:I
 
-    .line 251
+    .line 263
     :cond_e
     iget-object p4, p0, Lorg/telegram/ui/Components/ReactionsContainerLayout$6;->this$0:Lorg/telegram/ui/Components/ReactionsContainerLayout;
 
@@ -67,7 +67,7 @@
 
     if-ne p2, p4, :cond_22
 
-    .line 252
+    .line 264
     invoke-static {p3}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result p2

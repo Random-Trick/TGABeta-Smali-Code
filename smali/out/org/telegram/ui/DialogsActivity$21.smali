@@ -25,7 +25,7 @@
 .method constructor <init>(Lorg/telegram/ui/DialogsActivity;)V
     .registers 2
 
-    .line 3367
+    .line 3439
     iput-object p1, p0, Lorg/telegram/ui/DialogsActivity$21;->this$0:Lorg/telegram/ui/DialogsActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -154,10 +154,10 @@
 .method public onMessageSend(Ljava/lang/CharSequence;ZI)V
     .registers 6
 
-    .line 3370
+    .line 3442
     iget-object p2, p0, Lorg/telegram/ui/DialogsActivity$21;->this$0:Lorg/telegram/ui/DialogsActivity;
 
-    invoke-static {p2}, Lorg/telegram/ui/DialogsActivity;->access$25000(Lorg/telegram/ui/DialogsActivity;)Lorg/telegram/ui/DialogsActivity$DialogsActivityDelegate;
+    invoke-static {p2}, Lorg/telegram/ui/DialogsActivity;->access$25500(Lorg/telegram/ui/DialogsActivity;)Lorg/telegram/ui/DialogsActivity$DialogsActivityDelegate;
 
     move-result-object p2
 
@@ -165,7 +165,7 @@
 
     iget-object p2, p0, Lorg/telegram/ui/DialogsActivity$21;->this$0:Lorg/telegram/ui/DialogsActivity;
 
-    invoke-static {p2}, Lorg/telegram/ui/DialogsActivity;->access$23800(Lorg/telegram/ui/DialogsActivity;)Ljava/util/ArrayList;
+    invoke-static {p2}, Lorg/telegram/ui/DialogsActivity;->access$24300(Lorg/telegram/ui/DialogsActivity;)Ljava/util/ArrayList;
 
     move-result-object p2
 
@@ -177,17 +177,17 @@
 
     goto :goto_25
 
-    .line 3373
+    .line 3445
     :cond_15
     iget-object p2, p0, Lorg/telegram/ui/DialogsActivity$21;->this$0:Lorg/telegram/ui/DialogsActivity;
 
-    invoke-static {p2}, Lorg/telegram/ui/DialogsActivity;->access$25000(Lorg/telegram/ui/DialogsActivity;)Lorg/telegram/ui/DialogsActivity$DialogsActivityDelegate;
+    invoke-static {p2}, Lorg/telegram/ui/DialogsActivity;->access$25500(Lorg/telegram/ui/DialogsActivity;)Lorg/telegram/ui/DialogsActivity$DialogsActivityDelegate;
 
     move-result-object p2
 
     iget-object p3, p0, Lorg/telegram/ui/DialogsActivity$21;->this$0:Lorg/telegram/ui/DialogsActivity;
 
-    invoke-static {p3}, Lorg/telegram/ui/DialogsActivity;->access$23800(Lorg/telegram/ui/DialogsActivity;)Ljava/util/ArrayList;
+    invoke-static {p3}, Lorg/telegram/ui/DialogsActivity;->access$24300(Lorg/telegram/ui/DialogsActivity;)Ljava/util/ArrayList;
 
     move-result-object v0
 

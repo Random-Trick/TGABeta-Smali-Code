@@ -21,5 +21,5 @@
 .method public abstract move(F)V
 .end method
 
-.method public abstract startChatPreview(Lorg/telegram/ui/Cells/DialogCell;)V
+.method public abstract startChatPreview(Lorg/telegram/ui/Components/RecyclerListView;Lorg/telegram/ui/Cells/DialogCell;)V
 .end method

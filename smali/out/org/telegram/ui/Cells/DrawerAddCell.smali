@@ -75,7 +75,7 @@
     .line 41
     iget-object p1, p0, Lorg/telegram/ui/Cells/DrawerAddCell;->textView:Landroid/widget/TextView;
 
-    const/high16 v0, 0x42080000    # 34.0f
+    const/high16 v0, 0x41e80000    # 29.0f
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
@@ -92,7 +92,7 @@
 
     const/16 v2, 0x33
 
-    const/high16 v3, 0x41b80000    # 23.0f
+    const/high16 v3, 0x41980000    # 19.0f
 
     const/4 v4, 0x0
 
@@ -133,7 +133,7 @@
 
     const-string v1, "AddAccount"
 
-    const v2, 0x7f0e0105
+    const v2, 0x7f0e012d
 
     invoke-static {v1, v2}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
@@ -146,7 +146,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f070045
+    const v1, 0x7f0701b9
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 

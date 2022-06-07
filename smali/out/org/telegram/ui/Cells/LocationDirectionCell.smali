@@ -135,7 +135,7 @@
 
     const-string p2, "Directions"
 
-    const v0, 0x7f0e05ae
+    const v0, 0x7f0e05ff
 
     invoke-static {p2, v0}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
@@ -146,7 +146,7 @@
     .line 36
     iget-object p1, p0, Lorg/telegram/ui/Cells/LocationDirectionCell;->buttonTextView:Lorg/telegram/ui/ActionBar/SimpleTextView;
 
-    const p2, 0x7f070300
+    const p2, 0x7f070329
 
     invoke-virtual {p1, p2}, Lorg/telegram/ui/ActionBar/SimpleTextView;->setLeftDrawable(I)V
 

@@ -25,7 +25,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/ShareAlert$SearchField;Lorg/telegram/ui/Components/ShareAlert;)V
     .registers 3
 
-    .line 355
+    .line 356
     iput-object p1, p0, Lorg/telegram/ui/Components/ShareAlert$SearchField$2;->this$1:Lorg/telegram/ui/Components/ShareAlert$SearchField;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public afterTextChanged(Landroid/text/Editable;)V
     .registers 9
 
-    .line 368
+    .line 369
     iget-object p1, p0, Lorg/telegram/ui/Components/ShareAlert$SearchField$2;->this$1:Lorg/telegram/ui/Components/ShareAlert$SearchField;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/ShareAlert$SearchField;->access$1500(Lorg/telegram/ui/Components/ShareAlert$SearchField;)Lorg/telegram/ui/Components/EditTextBoldCursor;
@@ -62,7 +62,7 @@
     :cond_10
     const/4 p1, 0x0
 
-    .line 369
+    .line 370
     :goto_11
     iget-object v2, p0, Lorg/telegram/ui/Components/ShareAlert$SearchField$2;->this$1:Lorg/telegram/ui/Components/ShareAlert$SearchField;
 
@@ -90,7 +90,7 @@
     :goto_23
     if-eq p1, v2, :cond_5b
 
-    .line 371
+    .line 372
     iget-object v2, p0, Lorg/telegram/ui/Components/ShareAlert$SearchField$2;->this$1:Lorg/telegram/ui/Components/ShareAlert$SearchField;
 
     invoke-static {v2}, Lorg/telegram/ui/Components/ShareAlert$SearchField;->access$1600(Lorg/telegram/ui/Components/ShareAlert$SearchField;)Landroid/widget/ImageView;
@@ -107,7 +107,7 @@
 
     const/high16 v3, 0x3f800000    # 1.0f
 
-    .line 372
+    .line 373
     :cond_35
     invoke-virtual {v2, v3}, Landroid/view/ViewPropertyAnimator;->alpha(F)Landroid/view/ViewPropertyAnimator;
 
@@ -115,7 +115,7 @@
 
     const-wide/16 v5, 0x96
 
-    .line 373
+    .line 374
     invoke-virtual {v2, v5, v6}, Landroid/view/ViewPropertyAnimator;->setDuration(J)Landroid/view/ViewPropertyAnimator;
 
     move-result-object v2
@@ -131,7 +131,7 @@
     :cond_47
     const v5, 0x3dcccccd    # 0.1f
 
-    .line 374
+    .line 375
     :goto_4a
     invoke-virtual {v2, v5}, Landroid/view/ViewPropertyAnimator;->scaleX(F)Landroid/view/ViewPropertyAnimator;
 
@@ -144,16 +144,16 @@
     :cond_51
     const v4, 0x3dcccccd    # 0.1f
 
-    .line 375
+    .line 376
     :goto_54
     invoke-virtual {v2, v4}, Landroid/view/ViewPropertyAnimator;->scaleY(F)Landroid/view/ViewPropertyAnimator;
 
     move-result-object p1
 
-    .line 376
+    .line 377
     invoke-virtual {p1}, Landroid/view/ViewPropertyAnimator;->start()V
 
-    .line 378
+    .line 379
     :cond_5b
     iget-object p1, p0, Lorg/telegram/ui/Components/ShareAlert$SearchField$2;->this$1:Lorg/telegram/ui/Components/ShareAlert$SearchField;
 
@@ -171,14 +171,14 @@
 
     if-nez p1, :cond_72
 
-    .line 379
+    .line 380
     iget-object p1, p0, Lorg/telegram/ui/Components/ShareAlert$SearchField$2;->this$1:Lorg/telegram/ui/Components/ShareAlert$SearchField;
 
     iget-object p1, p1, Lorg/telegram/ui/Components/ShareAlert$SearchField;->this$0:Lorg/telegram/ui/Components/ShareAlert;
 
     invoke-static {p1, v1}, Lorg/telegram/ui/Components/ShareAlert;->access$1700(Lorg/telegram/ui/Components/ShareAlert;Z)V
 
-    .line 382
+    .line 383
     :cond_72
     iget-object p1, p0, Lorg/telegram/ui/Components/ShareAlert$SearchField$2;->this$1:Lorg/telegram/ui/Components/ShareAlert$SearchField;
 
@@ -192,7 +192,7 @@
 
     return-void
 
-    .line 385
+    .line 386
     :cond_7d
     iget-object p1, p0, Lorg/telegram/ui/Components/ShareAlert$SearchField$2;->this$1:Lorg/telegram/ui/Components/ShareAlert$SearchField;
 
@@ -208,18 +208,18 @@
 
     move-result-object p1
 
-    .line 386
+    .line 387
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v2
 
-    const v3, 0x7f0e0ad8
+    const v3, 0x7f0e0b60
 
     const-string v4, "NoResult"
 
     if-eqz v2, :cond_b2
 
-    .line 387
+    .line 388
     iget-object v0, p0, Lorg/telegram/ui/Components/ShareAlert$SearchField$2;->this$1:Lorg/telegram/ui/Components/ShareAlert$SearchField;
 
     iget-object v0, v0, Lorg/telegram/ui/Components/ShareAlert$SearchField;->this$0:Lorg/telegram/ui/Components/ShareAlert;
@@ -230,7 +230,7 @@
 
     if-eqz v0, :cond_10c
 
-    .line 388
+    .line 389
     iget-object v0, p0, Lorg/telegram/ui/Components/ShareAlert$SearchField$2;->this$1:Lorg/telegram/ui/Components/ShareAlert$SearchField;
 
     iget-object v0, v0, Lorg/telegram/ui/Components/ShareAlert$SearchField;->this$0:Lorg/telegram/ui/Components/ShareAlert;
@@ -249,7 +249,7 @@
 
     goto :goto_10c
 
-    .line 391
+    .line 392
     :cond_b2
     iget-object v2, p0, Lorg/telegram/ui/Components/ShareAlert$SearchField$2;->this$1:Lorg/telegram/ui/Components/ShareAlert$SearchField;
 
@@ -273,7 +273,7 @@
 
     if-eq v2, v5, :cond_10c
 
-    .line 392
+    .line 393
     iget-object v2, p0, Lorg/telegram/ui/Components/ShareAlert$SearchField$2;->this$1:Lorg/telegram/ui/Components/ShareAlert$SearchField;
 
     iget-object v2, v2, Lorg/telegram/ui/Components/ShareAlert$SearchField;->this$0:Lorg/telegram/ui/Components/ShareAlert;
@@ -282,7 +282,7 @@
 
     move-result v2
 
-    .line 393
+    .line 394
     iget-object v5, p0, Lorg/telegram/ui/Components/ShareAlert$SearchField$2;->this$1:Lorg/telegram/ui/Components/ShareAlert$SearchField;
 
     iget-object v5, v5, Lorg/telegram/ui/Components/ShareAlert$SearchField;->this$0:Lorg/telegram/ui/Components/ShareAlert;
@@ -299,7 +299,7 @@
 
     invoke-virtual {v5, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 394
+    .line 395
     iget-object v3, p0, Lorg/telegram/ui/Components/ShareAlert$SearchField$2;->this$1:Lorg/telegram/ui/Components/ShareAlert$SearchField;
 
     iget-object v3, v3, Lorg/telegram/ui/Components/ShareAlert$SearchField;->this$0:Lorg/telegram/ui/Components/ShareAlert;
@@ -310,14 +310,14 @@
 
     invoke-virtual {v3, v1, v0}, Lorg/telegram/ui/Components/StickerEmptyView;->showProgress(ZZ)V
 
-    .line 395
+    .line 396
     iget-object v0, p0, Lorg/telegram/ui/Components/ShareAlert$SearchField$2;->this$1:Lorg/telegram/ui/Components/ShareAlert$SearchField;
 
     iget-object v0, v0, Lorg/telegram/ui/Components/ShareAlert$SearchField;->this$0:Lorg/telegram/ui/Components/ShareAlert;
 
     invoke-static {v0, v1}, Lorg/telegram/ui/Components/ShareAlert;->access$1700(Lorg/telegram/ui/Components/ShareAlert;Z)V
 
-    .line 396
+    .line 397
     iget-object v0, p0, Lorg/telegram/ui/Components/ShareAlert$SearchField$2;->this$1:Lorg/telegram/ui/Components/ShareAlert$SearchField;
 
     iget-object v0, v0, Lorg/telegram/ui/Components/ShareAlert$SearchField;->this$0:Lorg/telegram/ui/Components/ShareAlert;
@@ -330,7 +330,7 @@
 
     if-lez v2, :cond_10c
 
-    .line 398
+    .line 399
     iget-object v0, p0, Lorg/telegram/ui/Components/ShareAlert$SearchField$2;->this$1:Lorg/telegram/ui/Components/ShareAlert$SearchField;
 
     iget-object v0, v0, Lorg/telegram/ui/Components/ShareAlert$SearchField;->this$0:Lorg/telegram/ui/Components/ShareAlert;
@@ -343,7 +343,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroidx/recyclerview/widget/LinearLayoutManager;->scrollToPositionWithOffset(II)V
 
-    .line 402
+    .line 403
     :cond_10c
     :goto_10c
     iget-object v0, p0, Lorg/telegram/ui/Components/ShareAlert$SearchField$2;->this$1:Lorg/telegram/ui/Components/ShareAlert$SearchField;
@@ -356,7 +356,7 @@
 
     if-eqz v0, :cond_121
 
-    .line 403
+    .line 404
     iget-object v0, p0, Lorg/telegram/ui/Components/ShareAlert$SearchField$2;->this$1:Lorg/telegram/ui/Components/ShareAlert$SearchField;
 
     iget-object v0, v0, Lorg/telegram/ui/Components/ShareAlert$SearchField;->this$0:Lorg/telegram/ui/Components/ShareAlert;

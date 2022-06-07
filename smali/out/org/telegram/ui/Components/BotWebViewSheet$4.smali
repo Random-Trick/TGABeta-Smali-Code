@@ -1,5 +1,5 @@
 .class Lorg/telegram/ui/Components/BotWebViewSheet$4;
-.super Lorg/telegram/ui/ActionBar/ActionBar$ActionBarMenuOnItemClick;
+.super Landroid/widget/TextView;
 .source "BotWebViewSheet.java"
 
 
@@ -14,36 +14,66 @@
 .end annotation
 
 
-# instance fields
-.field final synthetic this$0:Lorg/telegram/ui/Components/BotWebViewSheet;
-
-
 # direct methods
-.method constructor <init>(Lorg/telegram/ui/Components/BotWebViewSheet;)V
-    .registers 2
+.method constructor <init>(Lorg/telegram/ui/Components/BotWebViewSheet;Landroid/content/Context;)V
+    .registers 3
 
-    .line 331
-    iput-object p1, p0, Lorg/telegram/ui/Components/BotWebViewSheet$4;->this$0:Lorg/telegram/ui/Components/BotWebViewSheet;
-
-    invoke-direct {p0}, Lorg/telegram/ui/ActionBar/ActionBar$ActionBarMenuOnItemClick;-><init>()V
+    .line 404
+    invoke-direct {p0, p2}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onItemClick(I)V
-    .registers 3
+.method protected onMeasure(II)V
+    .registers 4
 
-    const/4 v0, -0x1
+    .line 407
+    invoke-static {}, Lorg/telegram/messenger/AndroidUtilities;->isTablet()Z
 
-    if-ne p1, v0, :cond_8
+    move-result v0
 
-    .line 335
-    iget-object p1, p0, Lorg/telegram/ui/Components/BotWebViewSheet$4;->this$0:Lorg/telegram/ui/Components/BotWebViewSheet;
+    if-eqz v0, :cond_27
 
-    invoke-virtual {p1}, Lorg/telegram/ui/Components/BotWebViewSheet;->dismiss()V
+    sget-boolean v0, Lorg/telegram/messenger/AndroidUtilities;->isInMultiwindow:Z
 
-    :cond_8
+    if-nez v0, :cond_27
+
+    invoke-static {}, Lorg/telegram/messenger/AndroidUtilities;->isSmallTablet()Z
+
+    move-result v0
+
+    if-nez v0, :cond_27
+
+    .line 408
+    sget-object p1, Lorg/telegram/messenger/AndroidUtilities;->displaySize:Landroid/graphics/Point;
+
+    iget v0, p1, Landroid/graphics/Point;->x:I
+
+    iget p1, p1, Landroid/graphics/Point;->y:I
+
+    invoke-static {v0, p1}, Ljava/lang/Math;->min(II)I
+
+    move-result p1
+
+    int-to-float p1, p1
+
+    const v0, 0x3f4ccccd    # 0.8f
+
+    mul-float p1, p1, v0
+
+    float-to-int p1, p1
+
+    const/high16 v0, 0x40000000    # 2.0f
+
+    invoke-static {p1, v0}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
+
+    move-result p1
+
+    .line 410
+    :cond_27
+    invoke-super {p0, p1, p2}, Landroid/widget/TextView;->onMeasure(II)V
+
     return-void
 .end method

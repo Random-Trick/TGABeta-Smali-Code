@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lj$/util/function/r;
+.implements Lj$/util/function/t;
 
 
 # static fields
@@ -32,12 +32,40 @@
 
 
 # virtual methods
-.method public final apply(J)Ljava/lang/Object;
+.method public a(Lj$/util/function/t;)Lj$/util/function/t;
+    .registers 4
+
+    .line 1
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v0, Lj$/util/function/s;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p0, p1, v1}, Lj$/util/function/s;-><init>(Lj$/util/function/t;Lj$/util/function/t;I)V
+
+    return-object v0
+.end method
+
+.method public final applyAsLong(J)J
     .registers 3
 
-    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    const-wide/16 p1, 0x1
 
-    move-result-object p1
+    return-wide p1
+.end method
 
-    return-object p1
+.method public b(Lj$/util/function/t;)Lj$/util/function/t;
+    .registers 4
+
+    .line 1
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v0, Lj$/util/function/s;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, p0, p1, v1}, Lj$/util/function/s;-><init>(Lj$/util/function/t;Lj$/util/function/t;I)V
+
+    return-object v0
 .end method

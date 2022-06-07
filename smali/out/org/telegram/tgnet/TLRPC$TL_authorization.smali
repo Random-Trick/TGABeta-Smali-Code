@@ -55,7 +55,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 4458
+    .line 4523
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -64,7 +64,7 @@
 .method public static TLdeserialize(Lorg/telegram/tgnet/AbstractSerializedData;IZ)Lorg/telegram/tgnet/TLRPC$TL_authorization;
     .registers 4
 
-    .line 4481
+    .line 4546
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_authorization;->constructor:I
 
     if-eq v0, p1, :cond_1e
@@ -75,7 +75,7 @@
 
     return-object p0
 
-    .line 4483
+    .line 4548
     :cond_8
     new-instance p0, Ljava/lang/RuntimeException;
 
@@ -101,13 +101,13 @@
 
     throw p0
 
-    .line 4488
+    .line 4553
     :cond_1e
     new-instance p1, Lorg/telegram/tgnet/TLRPC$TL_authorization;
 
     invoke-direct {p1}, Lorg/telegram/tgnet/TLRPC$TL_authorization;-><init>()V
 
-    .line 4489
+    .line 4554
     invoke-virtual {p1, p0, p2}, Lorg/telegram/tgnet/TLRPC$TL_authorization;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
     return-object p1
@@ -118,7 +118,7 @@
 .method public readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
     .registers 7
 
-    .line 4494
+    .line 4559
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
@@ -140,7 +140,7 @@
     :cond_e
     const/4 v1, 0x0
 
-    .line 4495
+    .line 4560
     :goto_f
     iput-boolean v1, p0, Lorg/telegram/tgnet/TLRPC$TL_authorization;->current:Z
 
@@ -155,7 +155,7 @@
     :cond_17
     const/4 v1, 0x0
 
-    .line 4496
+    .line 4561
     :goto_18
     iput-boolean v1, p0, Lorg/telegram/tgnet/TLRPC$TL_authorization;->official_app:Z
 
@@ -170,7 +170,7 @@
     :cond_20
     const/4 v1, 0x0
 
-    .line 4497
+    .line 4562
     :goto_21
     iput-boolean v1, p0, Lorg/telegram/tgnet/TLRPC$TL_authorization;->password_pending:Z
 
@@ -185,7 +185,7 @@
     :cond_29
     const/4 v1, 0x0
 
-    .line 4498
+    .line 4563
     :goto_2a
     iput-boolean v1, p0, Lorg/telegram/tgnet/TLRPC$TL_authorization;->encrypted_requests_disabled:Z
 
@@ -195,88 +195,88 @@
 
     const/4 v2, 0x1
 
-    .line 4499
+    .line 4564
     :cond_31
     iput-boolean v2, p0, Lorg/telegram/tgnet/TLRPC$TL_authorization;->call_requests_disabled:Z
 
-    .line 4500
+    .line 4565
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt64(Z)J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lorg/telegram/tgnet/TLRPC$TL_authorization;->hash:J
 
-    .line 4501
+    .line 4566
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readString(Z)Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_authorization;->device_model:Ljava/lang/String;
 
-    .line 4502
+    .line 4567
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readString(Z)Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_authorization;->platform:Ljava/lang/String;
 
-    .line 4503
+    .line 4568
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readString(Z)Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_authorization;->system_version:Ljava/lang/String;
 
-    .line 4504
+    .line 4569
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
 
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$TL_authorization;->api_id:I
 
-    .line 4505
+    .line 4570
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readString(Z)Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_authorization;->app_name:Ljava/lang/String;
 
-    .line 4506
+    .line 4571
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readString(Z)Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_authorization;->app_version:Ljava/lang/String;
 
-    .line 4507
+    .line 4572
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
 
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$TL_authorization;->date_created:I
 
-    .line 4508
+    .line 4573
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
 
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$TL_authorization;->date_active:I
 
-    .line 4509
+    .line 4574
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readString(Z)Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_authorization;->ip:Ljava/lang/String;
 
-    .line 4510
+    .line 4575
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readString(Z)Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_authorization;->country:Ljava/lang/String;
 
-    .line 4511
+    .line 4576
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readString(Z)Ljava/lang/String;
 
     move-result-object p1
@@ -289,12 +289,12 @@
 .method public serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
     .registers 4
 
-    .line 4515
+    .line 4580
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_authorization;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 4516
+    .line 4581
     iget-boolean v0, p0, Lorg/telegram/tgnet/TLRPC$TL_authorization;->current:Z
 
     if-eqz v0, :cond_e
@@ -313,7 +313,7 @@
     :goto_12
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$TL_authorization;->flags:I
 
-    .line 4517
+    .line 4582
     iget-boolean v1, p0, Lorg/telegram/tgnet/TLRPC$TL_authorization;->official_app:Z
 
     if-eqz v1, :cond_1b
@@ -328,7 +328,7 @@
     :goto_1d
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$TL_authorization;->flags:I
 
-    .line 4518
+    .line 4583
     iget-boolean v1, p0, Lorg/telegram/tgnet/TLRPC$TL_authorization;->password_pending:Z
 
     if-eqz v1, :cond_26
@@ -343,7 +343,7 @@
     :goto_28
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$TL_authorization;->flags:I
 
-    .line 4519
+    .line 4584
     iget-boolean v1, p0, Lorg/telegram/tgnet/TLRPC$TL_authorization;->encrypted_requests_disabled:Z
 
     if-eqz v1, :cond_31
@@ -358,7 +358,7 @@
     :goto_33
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$TL_authorization;->flags:I
 
-    .line 4520
+    .line 4585
     iget-boolean v1, p0, Lorg/telegram/tgnet/TLRPC$TL_authorization;->call_requests_disabled:Z
 
     if-eqz v1, :cond_3c
@@ -373,65 +373,65 @@
     :goto_3e
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$TL_authorization;->flags:I
 
-    .line 4521
+    .line 4586
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 4522
+    .line 4587
     iget-wide v0, p0, Lorg/telegram/tgnet/TLRPC$TL_authorization;->hash:J
 
     invoke-virtual {p1, v0, v1}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt64(J)V
 
-    .line 4523
+    .line 4588
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_authorization;->device_model:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeString(Ljava/lang/String;)V
 
-    .line 4524
+    .line 4589
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_authorization;->platform:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeString(Ljava/lang/String;)V
 
-    .line 4525
+    .line 4590
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_authorization;->system_version:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeString(Ljava/lang/String;)V
 
-    .line 4526
+    .line 4591
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_authorization;->api_id:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 4527
+    .line 4592
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_authorization;->app_name:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeString(Ljava/lang/String;)V
 
-    .line 4528
+    .line 4593
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_authorization;->app_version:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeString(Ljava/lang/String;)V
 
-    .line 4529
+    .line 4594
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_authorization;->date_created:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 4530
+    .line 4595
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_authorization;->date_active:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 4531
+    .line 4596
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_authorization;->ip:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeString(Ljava/lang/String;)V
 
-    .line 4532
+    .line 4597
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_authorization;->country:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeString(Ljava/lang/String;)V
 
-    .line 4533
+    .line 4598
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_authorization;->region:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeString(Ljava/lang/String;)V

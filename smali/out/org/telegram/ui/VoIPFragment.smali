@@ -2841,7 +2841,7 @@
 
     if-eqz p1, :cond_1e
 
-    const p1, 0x7f0e0086
+    const p1, 0x7f0e00ae
 
     const-string v1, "AccDescrVoipCamSwitchedToBack"
 
@@ -2853,7 +2853,7 @@
     goto :goto_27
 
     :cond_1e
-    const p1, 0x7f0e0087
+    const p1, 0x7f0e00af
 
     const-string v1, "AccDescrVoipCamSwitchedToFront"
 
@@ -2904,7 +2904,7 @@
 
     if-eqz v1, :cond_20
 
-    const v3, 0x7f0e0088
+    const v3, 0x7f0e00b0
 
     const-string v4, "AccDescrVoipMicOff"
 
@@ -2916,7 +2916,7 @@
     goto :goto_29
 
     :cond_20
-    const v3, 0x7f0e0089
+    const v3, 0x7f0e00b1
 
     const-string v4, "AccDescrVoipMicOn"
 
@@ -3056,7 +3056,7 @@
 
     invoke-direct {p2, v0}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    const v0, 0x7f0e13b2
+    const v0, 0x7f0e1480
 
     const-string v1, "VoipSwitchToVideoCall"
 
@@ -3067,7 +3067,7 @@
 
     invoke-virtual {p2, v0}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const v0, 0x7f0e13b1
+    const v0, 0x7f0e147f
 
     const-string v1, "VoipSwitch"
 
@@ -3082,7 +3082,7 @@
 
     invoke-virtual {p2, v0, v1}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const p1, 0x7f0e0331
+    const p1, 0x7f0e036d
 
     const-string v0, "Cancel"
 
@@ -3981,7 +3981,7 @@
 
     const/16 v1, 0x1e
 
-    const v2, 0x7f0e1306
+    const v2, 0x7f0e13d4
 
     const-string v3, "VoipFlip"
 
@@ -3989,7 +3989,7 @@
 
     if-nez v0, :cond_31
 
-    const v5, 0x7f070099
+    const v5, 0x7f07007c
 
     const/16 v0, 0x7f
 
@@ -4049,7 +4049,7 @@
 
     if-nez v0, :cond_50
 
-    const v1, 0x7f070099
+    const v1, 0x7f07007c
 
     const/high16 v4, -0x1000000
 
@@ -4079,7 +4079,7 @@
     goto :goto_67
 
     :cond_50
-    const v5, 0x7f070099
+    const v5, 0x7f07007c
 
     const/4 v6, -0x1
 
@@ -4420,13 +4420,13 @@
 
     if-eqz v1, :cond_1f
 
-    const v3, 0x7f0700a5
+    const v3, 0x7f070088
 
     const/high16 v4, -0x1000000
 
     const/4 v5, -0x1
 
-    const v1, 0x7f0e13b5
+    const v1, 0x7f0e1483
 
     const-string v2, "VoipUnmute"
 
@@ -4446,7 +4446,7 @@
     goto :goto_3b
 
     :cond_1f
-    const v9, 0x7f0700a5
+    const v9, 0x7f070088
 
     const/4 v10, -0x1
 
@@ -4459,7 +4459,7 @@
 
     move-result v11
 
-    const v1, 0x7f0e137b
+    const v1, 0x7f0e1449
 
     const-string v2, "VoipMute"
 
@@ -4521,7 +4521,7 @@
 
     if-eqz v0, :cond_2f
 
-    const v3, 0x7f070095
+    const v3, 0x7f070078
 
     const/4 v4, -0x1
 
@@ -4530,7 +4530,7 @@
 
     move-result v5
 
-    const v0, 0x7f0e12c1
+    const v0, 0x7f0e138f
 
     const-string v1, "VoipAudioRoutingBluetooth"
 
@@ -4567,13 +4567,13 @@
 
     move-result v0
 
-    const v3, 0x7f0e13ae
+    const v3, 0x7f0e147c
 
     const-string v4, "VoipSpeaker"
 
     if-eqz v0, :cond_51
 
-    const v1, 0x7f0700a3
+    const v1, 0x7f070086
 
     const/high16 v2, -0x1000000
 
@@ -4602,7 +4602,7 @@
     goto :goto_6b
 
     :cond_51
-    const v5, 0x7f0700a3
+    const v5, 0x7f070086
 
     const/4 v6, -0x1
 
@@ -4700,16 +4700,16 @@
 
     if-eqz v0, :cond_26
 
-    const v0, 0x7f0700a2
+    const v0, 0x7f070085
 
-    const v3, 0x7f0700a2
+    const v3, 0x7f070085
 
     goto :goto_2c
 
     :cond_26
-    const v0, 0x7f0700a6
+    const v0, 0x7f070089
 
-    const v3, 0x7f0700a6
+    const v3, 0x7f070089
 
     :goto_2c
     const/4 v4, -0x1
@@ -4718,7 +4718,7 @@
 
     move-result v5
 
-    const v0, 0x7f0e13b0
+    const v0, 0x7f0e147e
 
     const-string v1, "VoipStopVideo"
 
@@ -4747,13 +4747,13 @@
     goto :goto_5b
 
     :cond_46
-    const v1, 0x7f0700a6
+    const v1, 0x7f070089
 
     const/high16 v2, -0x1000000
 
     const/4 v3, -0x1
 
-    const v0, 0x7f0e13af
+    const v0, 0x7f0e147d
 
     const-string v4, "VoipStartVideo"
 
@@ -4795,7 +4795,7 @@
     goto :goto_93
 
     :cond_71
-    const v3, 0x7f0700a6
+    const v3, 0x7f070089
 
     const/16 v0, 0x7f
 
@@ -5516,7 +5516,7 @@
 
     invoke-direct {v0, v1}, Lorg/telegram/ui/ActionBar/DarkAlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    const v1, 0x7f0e1304
+    const v1, 0x7f0e13d2
 
     const-string v2, "VoipFailed"
 
@@ -5534,7 +5534,7 @@
 
     move-result-object p1
 
-    const v0, 0x7f0e0bae
+    const v0, 0x7f0e0c38
 
     const-string v1, "OK"
 
@@ -6687,7 +6687,7 @@
 
     if-nez v1, :cond_1c
 
-    const v1, 0x7f0e0085
+    const v1, 0x7f0e00ad
 
     const-string v2, "AccDescrVoipCamOn"
 
@@ -6699,7 +6699,7 @@
     goto :goto_25
 
     :cond_1c
-    const v1, 0x7f0e0084
+    const v1, 0x7f0e00ac
 
     const-string v2, "AccDescrVoipCamOff"
 
@@ -7063,13 +7063,13 @@
 
     aget-object v0, v0, v7
 
-    const v1, 0x7f070098
+    const v1, 0x7f07007b
 
     const/4 v2, -0x1
 
     const v3, -0xfe2d4
 
-    const v4, 0x7f0e1301
+    const v4, 0x7f0e13cf
 
     const-string v5, "VoipEndCall"
 
@@ -7330,7 +7330,9 @@
     :cond_2d
     array-length v0, v1
 
-    invoke-static {v1, v2, v0}, Lorg/telegram/messenger/Utilities;->computeSHA256([BII)[B
+    int-to-long v3, v0
+
+    invoke-static {v1, v2, v3, v4}, Lorg/telegram/messenger/Utilities;->computeSHA256([BIJ)[B
 
     move-result-object v0
 
@@ -7341,10 +7343,10 @@
 
     const/4 v1, 0x0
 
-    :goto_37
+    :goto_38
     const/4 v3, 0x4
 
-    if-ge v1, v3, :cond_77
+    if-ge v1, v3, :cond_78
 
     .line 1897
     aget-object v3, v0, v1
@@ -7358,7 +7360,7 @@
 
     move-result-object v3
 
-    if-eqz v3, :cond_70
+    if-eqz v3, :cond_71
 
     const/high16 v4, 0x41b00000    # 22.0f
 
@@ -7402,17 +7404,17 @@
     invoke-virtual {v4, v5}, Landroid/widget/ImageView;->setVisibility(I)V
 
     .line 1906
-    :cond_70
+    :cond_71
     iget-object v4, p0, Lorg/telegram/ui/VoIPFragment;->emojiDrawables:[Lorg/telegram/messenger/Emoji$EmojiDrawable;
 
     aput-object v3, v4, v1
 
     add-int/lit8 v1, v1, 0x1
 
-    goto :goto_37
+    goto :goto_38
 
     .line 1908
-    :cond_77
+    :cond_78
     invoke-direct {p0, p1}, Lorg/telegram/ui/VoIPFragment;->checkEmojiLoaded(Z)V
 
     return-void
@@ -7441,7 +7443,7 @@
     .line 2120
     iget-object v0, p0, Lorg/telegram/ui/VoIPFragment;->speakerPhoneIcon:Landroid/widget/ImageView;
 
-    const v1, 0x7f070095
+    const v1, 0x7f070078
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -7458,7 +7460,7 @@
     .line 2122
     iget-object v0, p0, Lorg/telegram/ui/VoIPFragment;->speakerPhoneIcon:Landroid/widget/ImageView;
 
-    const v1, 0x7f0700a3
+    const v1, 0x7f070086
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -7475,7 +7477,7 @@
     .line 2125
     iget-object v0, p0, Lorg/telegram/ui/VoIPFragment;->speakerPhoneIcon:Landroid/widget/ImageView;
 
-    const v1, 0x7f07009c
+    const v1, 0x7f07007f
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -7485,7 +7487,7 @@
     :cond_34
     iget-object v0, p0, Lorg/telegram/ui/VoIPFragment;->speakerPhoneIcon:Landroid/widget/ImageView;
 
-    const v1, 0x7f07009d
+    const v1, 0x7f070080
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -7633,7 +7635,7 @@
     :pswitch_32
     iget-object v5, v0, Lorg/telegram/ui/VoIPFragment;->statusTextView:Lorg/telegram/ui/Components/voip/VoIPStatusTextView;
 
-    const v10, 0x7f0e12c7
+    const v10, 0x7f0e1395
 
     const-string v11, "VoipBusy"
 
@@ -7668,7 +7670,7 @@
     :pswitch_4e
     iget-object v5, v0, Lorg/telegram/ui/VoIPFragment;->statusTextView:Lorg/telegram/ui/Components/voip/VoIPStatusTextView;
 
-    const v10, 0x7f0e13a8
+    const v10, 0x7f0e1476
 
     const-string v11, "VoipRinging"
 
@@ -7727,7 +7729,7 @@
     :goto_80
     iget-object v11, v0, Lorg/telegram/ui/VoIPFragment;->statusTextView:Lorg/telegram/ui/Components/voip/VoIPStatusTextView;
 
-    const v12, 0x7f0e1377
+    const v12, 0x7f0e1445
 
     const-string v13, "VoipInVideoCallBranding"
 
@@ -7758,7 +7760,7 @@
     :cond_9c
     iget-object v10, v0, Lorg/telegram/ui/VoIPFragment;->statusTextView:Lorg/telegram/ui/Components/voip/VoIPStatusTextView;
 
-    const v11, 0x7f0e1375
+    const v11, 0x7f0e1443
 
     const-string v12, "VoipInCallBranding"
 
@@ -7779,7 +7781,7 @@
     :pswitch_b0
     iget-object v5, v0, Lorg/telegram/ui/VoIPFragment;->statusTextView:Lorg/telegram/ui/Components/voip/VoIPStatusTextView;
 
-    const v10, 0x7f0e13a7
+    const v10, 0x7f0e1475
 
     const-string v11, "VoipRequesting"
 
@@ -7795,7 +7797,7 @@
     :pswitch_c0
     iget-object v5, v0, Lorg/telegram/ui/VoIPFragment;->statusTextView:Lorg/telegram/ui/Components/voip/VoIPStatusTextView;
 
-    const v10, 0x7f0e13c2
+    const v10, 0x7f0e1490
 
     const-string v11, "VoipWaiting"
 
@@ -7811,7 +7813,7 @@
     :pswitch_d0
     iget-object v5, v0, Lorg/telegram/ui/VoIPFragment;->statusTextView:Lorg/telegram/ui/Components/voip/VoIPStatusTextView;
 
-    const v10, 0x7f0e1303
+    const v10, 0x7f0e13d1
 
     const-string v11, "VoipExchangingKeys"
 
@@ -7846,7 +7848,7 @@
 
     const-string v10, "VoipFailed"
 
-    const v11, 0x7f0e1304
+    const v11, 0x7f0e13d2
 
     invoke-static {v10, v11}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
@@ -7903,7 +7905,7 @@
 
     move-result-object v5
 
-    const v10, 0x7f0e1398
+    const v10, 0x7f0e1466
 
     new-array v11, v4, [Ljava/lang/Object;
 
@@ -7947,7 +7949,7 @@
 
     move-result-object v5
 
-    const v12, 0x7f0e139a
+    const v12, 0x7f0e1468
 
     new-array v13, v4, [Ljava/lang/Object;
 
@@ -7987,7 +7989,7 @@
 
     move-result-object v5
 
-    const v10, 0x7f0e0331
+    const v10, 0x7f0e036d
 
     const-string v11, "Cancel"
 
@@ -8004,7 +8006,7 @@
 
     move-result-object v5
 
-    const v10, 0x7f0e139b
+    const v10, 0x7f0e1469
 
     const-string v11, "VoipPeerVideoOutdatedMakeVoice"
 
@@ -8046,7 +8048,7 @@
 
     move-result-object v5
 
-    const v10, 0x7f0e1399
+    const v10, 0x7f0e1467
 
     new-array v11, v4, [Ljava/lang/Object;
 
@@ -8089,7 +8091,7 @@
 
     move-result-object v5
 
-    const v10, 0x7f0e031c
+    const v10, 0x7f0e0358
 
     new-array v11, v4, [Ljava/lang/Object;
 
@@ -8155,7 +8157,7 @@
 
     if-eqz v5, :cond_21e
 
-    const v5, 0x7f0e1302
+    const v5, 0x7f0e13d0
 
     const-string v10, "VoipErrorUnknown"
 
@@ -8224,7 +8226,7 @@
     :cond_242
     iget-object v5, v0, Lorg/telegram/ui/VoIPFragment;->statusTextView:Lorg/telegram/ui/Components/voip/VoIPStatusTextView;
 
-    const v10, 0x7f0e12fa
+    const v10, 0x7f0e13c8
 
     const-string v11, "VoipConnecting"
 
@@ -9056,7 +9058,7 @@
 
     const-string v12, "VoipUserMicrophoneIsOff"
 
-    const v13, 0x7f0700a0
+    const v13, 0x7f070083
 
     const-string v14, "video"
 
@@ -9104,7 +9106,7 @@
 
     new-array v4, v11, [Ljava/lang/Object;
 
-    const v5, 0x7f0e13b8
+    const v5, 0x7f0e1486
 
     iget-object v11, v0, Lorg/telegram/ui/VoIPFragment;->callingUser:Lorg/telegram/tgnet/TLRPC$User;
 
@@ -9139,9 +9141,9 @@
     .line 1629
     iget-object v4, v0, Lorg/telegram/ui/VoIPFragment;->notificationsLayout:Lorg/telegram/ui/Components/voip/VoIPNotificationsLayout;
 
-    const v5, 0x7f070097
+    const v5, 0x7f07007a
 
-    const v10, 0x7f0e13b7
+    const v10, 0x7f0e1485
 
     const/4 v11, 0x1
 
@@ -9184,7 +9186,7 @@
     .line 1635
     iget-object v4, v0, Lorg/telegram/ui/VoIPFragment;->notificationsLayout:Lorg/telegram/ui/Components/voip/VoIPNotificationsLayout;
 
-    const v5, 0x7f0e13b8
+    const v5, 0x7f0e1486
 
     const/4 v10, 0x1
 
@@ -10729,7 +10731,7 @@
 
     const-string v3, "CallEmojiKeyTooltip"
 
-    const v4, 0x7f0e030f
+    const v4, 0x7f0e034b
 
     invoke-static {v3, v4, v2}, Lorg/telegram/messenger/LocaleController;->formatString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
@@ -11199,7 +11201,7 @@
     .line 924
     iget-object v1, v0, Lorg/telegram/ui/VoIPFragment;->backIcon:Landroid/widget/ImageView;
 
-    const v4, 0x7f070140
+    const v4, 0x7f070109
 
     invoke-virtual {v1, v4}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -11227,7 +11229,7 @@
     .line 926
     iget-object v1, v0, Lorg/telegram/ui/VoIPFragment;->backIcon:Landroid/widget/ImageView;
 
-    const v2, 0x7f0e0281
+    const v2, 0x7f0e02b6
 
     const-string v4, "Back"
 
@@ -11257,7 +11259,7 @@
 
     iput-object v1, v0, Lorg/telegram/ui/VoIPFragment;->speakerPhoneIcon:Landroid/widget/ImageView;
 
-    const v2, 0x7f0e13ae
+    const v2, 0x7f0e147c
 
     const-string v10, "VoipSpeaker"
 
@@ -11399,7 +11401,7 @@
 
     iput-object v1, v0, Lorg/telegram/ui/VoIPFragment;->tapToVideoTooltip:Lorg/telegram/ui/Components/HintView;
 
-    const v2, 0x7f0e1137
+    const v2, 0x7f0e11fb
 
     const-string v3, "TapToTurnCamera"
 

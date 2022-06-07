@@ -1,11 +1,14 @@
 .class Lorg/telegram/ui/ProfileActivity$25;
-.super Lorg/telegram/ui/ChatRightsEditActivity;
+.super Ljava/lang/Object;
 .source "ProfileActivity.java"
+
+# interfaces
+.implements Lorg/telegram/ui/PinchToZoomHelper$Callback;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lorg/telegram/ui/ProfileActivity;->openRightsEdit(ILorg/telegram/tgnet/TLRPC$User;Lorg/telegram/tgnet/TLRPC$ChatParticipant;Lorg/telegram/tgnet/TLRPC$TL_chatAdminRights;Lorg/telegram/tgnet/TLRPC$TL_chatBannedRights;Ljava/lang/String;Z)V
+    value = Lorg/telegram/ui/ProfileActivity;->createView(Landroid/content/Context;)Landroid/view/View;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -17,96 +20,146 @@
 # instance fields
 .field final synthetic this$0:Lorg/telegram/ui/ProfileActivity;
 
-.field final synthetic val$needShowBulletin:[Z
-
-.field final synthetic val$user:Lorg/telegram/tgnet/TLRPC$User;
-
 
 # direct methods
-.method constructor <init>(Lorg/telegram/ui/ProfileActivity;JJLorg/telegram/tgnet/TLRPC$TL_chatAdminRights;Lorg/telegram/tgnet/TLRPC$TL_chatBannedRights;Lorg/telegram/tgnet/TLRPC$TL_chatBannedRights;Ljava/lang/String;IZZLjava/lang/String;[ZLorg/telegram/tgnet/TLRPC$User;)V
-    .registers 30
+.method constructor <init>(Lorg/telegram/ui/ProfileActivity;)V
+    .registers 2
 
-    move-object v13, p0
+    .line 3652
+    iput-object p1, p0, Lorg/telegram/ui/ProfileActivity$25;->this$0:Lorg/telegram/ui/ProfileActivity;
 
-    move-object v0, p1
-
-    .line 3916
-    iput-object v0, v13, Lorg/telegram/ui/ProfileActivity$25;->this$0:Lorg/telegram/ui/ProfileActivity;
-
-    move-object/from16 v0, p14
-
-    iput-object v0, v13, Lorg/telegram/ui/ProfileActivity$25;->val$needShowBulletin:[Z
-
-    move-object/from16 v0, p15
-
-    iput-object v0, v13, Lorg/telegram/ui/ProfileActivity$25;->val$user:Lorg/telegram/tgnet/TLRPC$User;
-
-    move-object v0, p0
-
-    move-wide/from16 v1, p2
-
-    move-wide/from16 v3, p4
-
-    move-object/from16 v5, p6
-
-    move-object/from16 v6, p7
-
-    move-object/from16 v7, p8
-
-    move-object/from16 v8, p9
-
-    move/from16 v9, p10
-
-    move/from16 v10, p11
-
-    move/from16 v11, p12
-
-    move-object/from16 v12, p13
-
-    invoke-direct/range {v0 .. v12}, Lorg/telegram/ui/ChatRightsEditActivity;-><init>(JJLorg/telegram/tgnet/TLRPC$TL_chatAdminRights;Lorg/telegram/tgnet/TLRPC$TL_chatBannedRights;Lorg/telegram/tgnet/TLRPC$TL_chatBannedRights;Ljava/lang/String;IZZLjava/lang/String;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected onTransitionAnimationEnd(ZZ)V
-    .registers 3
+.method public synthetic getCurrentTextureView()Landroid/view/TextureView;
+    .registers 2
 
-    if-nez p1, :cond_20
+    invoke-static {p0}, Lorg/telegram/ui/PinchToZoomHelper$Callback$-CC;->$default$getCurrentTextureView(Lorg/telegram/ui/PinchToZoomHelper$Callback;)Landroid/view/TextureView;
 
-    if-eqz p2, :cond_20
+    move-result-object v0
 
-    .line 3919
-    iget-object p1, p0, Lorg/telegram/ui/ProfileActivity$25;->val$needShowBulletin:[Z
+    return-object v0
+.end method
 
-    const/4 p2, 0x0
+.method public synthetic onZoomFinished(Lorg/telegram/messenger/MessageObject;)V
+    .registers 2
 
-    aget-boolean p1, p1, p2
+    invoke-static {p0, p1}, Lorg/telegram/ui/PinchToZoomHelper$Callback$-CC;->$default$onZoomFinished(Lorg/telegram/ui/PinchToZoomHelper$Callback;Lorg/telegram/messenger/MessageObject;)V
 
-    if-eqz p1, :cond_20
+    return-void
+.end method
 
+.method public onZoomStarted(Lorg/telegram/messenger/MessageObject;)V
+    .registers 5
+
+    .line 3655
     iget-object p1, p0, Lorg/telegram/ui/ProfileActivity$25;->this$0:Lorg/telegram/ui/ProfileActivity;
 
-    invoke-static {p1}, Lorg/telegram/ui/Components/BulletinFactory;->canShowBulletin(Lorg/telegram/ui/ActionBar/BaseFragment;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_20
-
-    .line 3920
-    iget-object p1, p0, Lorg/telegram/ui/ProfileActivity$25;->this$0:Lorg/telegram/ui/ProfileActivity;
-
-    iget-object p2, p0, Lorg/telegram/ui/ProfileActivity$25;->val$user:Lorg/telegram/tgnet/TLRPC$User;
-
-    iget-object p2, p2, Lorg/telegram/tgnet/TLRPC$User;->first_name:Ljava/lang/String;
-
-    invoke-static {p1, p2}, Lorg/telegram/ui/Components/BulletinFactory;->createPromoteToAdminBulletin(Lorg/telegram/ui/ActionBar/BaseFragment;Ljava/lang/String;)Lorg/telegram/ui/Components/Bulletin;
+    invoke-static {p1}, Lorg/telegram/ui/ProfileActivity;->access$2100(Lorg/telegram/ui/ProfileActivity;)Lorg/telegram/ui/Components/RecyclerListView;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lorg/telegram/ui/Components/Bulletin;->show()Lorg/telegram/ui/Components/Bulletin;
+    const/4 v0, 0x1
 
-    :cond_20
+    invoke-virtual {p1, v0}, Lorg/telegram/ui/Components/RecyclerListView;->cancelClickRunnables(Z)V
+
+    .line 3656
+    iget-object p1, p0, Lorg/telegram/ui/ProfileActivity$25;->this$0:Lorg/telegram/ui/ProfileActivity;
+
+    invoke-static {p1}, Lorg/telegram/ui/ProfileActivity;->access$2300(Lorg/telegram/ui/ProfileActivity;)Lorg/telegram/ui/Components/SharedMediaLayout;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_2b
+
+    iget-object p1, p0, Lorg/telegram/ui/ProfileActivity$25;->this$0:Lorg/telegram/ui/ProfileActivity;
+
+    invoke-static {p1}, Lorg/telegram/ui/ProfileActivity;->access$2300(Lorg/telegram/ui/ProfileActivity;)Lorg/telegram/ui/Components/SharedMediaLayout;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lorg/telegram/ui/Components/SharedMediaLayout;->getCurrentListView()Lorg/telegram/ui/Components/RecyclerListView;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_2b
+
+    .line 3657
+    iget-object p1, p0, Lorg/telegram/ui/ProfileActivity$25;->this$0:Lorg/telegram/ui/ProfileActivity;
+
+    invoke-static {p1}, Lorg/telegram/ui/ProfileActivity;->access$2300(Lorg/telegram/ui/ProfileActivity;)Lorg/telegram/ui/Components/SharedMediaLayout;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lorg/telegram/ui/Components/SharedMediaLayout;->getCurrentListView()Lorg/telegram/ui/Components/RecyclerListView;
+
+    move-result-object p1
+
+    invoke-virtual {p1, v0}, Lorg/telegram/ui/Components/RecyclerListView;->cancelClickRunnables(Z)V
+
+    .line 3659
+    :cond_2b
+    iget-object p1, p0, Lorg/telegram/ui/ProfileActivity$25;->this$0:Lorg/telegram/ui/ProfileActivity;
+
+    iget-object p1, p1, Lorg/telegram/ui/ProfileActivity;->pinchToZoomHelper:Lorg/telegram/ui/PinchToZoomHelper;
+
+    invoke-virtual {p1}, Lorg/telegram/ui/PinchToZoomHelper;->getPhotoImage()Lorg/telegram/messenger/ImageReceiver;
+
+    move-result-object p1
+
+    if-nez p1, :cond_37
+
+    const/4 p1, 0x0
+
+    goto :goto_43
+
+    :cond_37
+    iget-object p1, p0, Lorg/telegram/ui/ProfileActivity$25;->this$0:Lorg/telegram/ui/ProfileActivity;
+
+    iget-object p1, p1, Lorg/telegram/ui/ProfileActivity;->pinchToZoomHelper:Lorg/telegram/ui/PinchToZoomHelper;
+
+    invoke-virtual {p1}, Lorg/telegram/ui/PinchToZoomHelper;->getPhotoImage()Lorg/telegram/messenger/ImageReceiver;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lorg/telegram/messenger/ImageReceiver;->getBitmap()Landroid/graphics/Bitmap;
+
+    move-result-object p1
+
+    :goto_43
+    if-eqz p1, :cond_61
+
+    .line 3661
+    iget-object v0, p0, Lorg/telegram/ui/ProfileActivity$25;->this$0:Lorg/telegram/ui/ProfileActivity;
+
+    invoke-static {v0}, Lorg/telegram/ui/ProfileActivity;->access$100(Lorg/telegram/ui/ProfileActivity;)Lorg/telegram/ui/ProfileActivity$TopView;
+
+    move-result-object v0
+
+    invoke-static {p1}, Lorg/telegram/messenger/AndroidUtilities;->calcBitmapColor(Landroid/graphics/Bitmap;)I
+
+    move-result p1
+
+    iget-object v1, p0, Lorg/telegram/ui/ProfileActivity$25;->this$0:Lorg/telegram/ui/ProfileActivity;
+
+    const-string v2, "windowBackgroundWhite"
+
+    invoke-virtual {v1, v2}, Lorg/telegram/ui/ProfileActivity;->getThemedColor(Ljava/lang/String;)I
+
+    move-result v1
+
+    const v2, 0x3dcccccd    # 0.1f
+
+    invoke-static {p1, v1, v2}, Landroidx/core/graphics/ColorUtils;->blendARGB(IIF)I
+
+    move-result p1
+
+    invoke-virtual {v0, p1}, Lorg/telegram/ui/ProfileActivity$TopView;->setBackgroundColor(I)V
+
+    :cond_61
     return-void
 .end method

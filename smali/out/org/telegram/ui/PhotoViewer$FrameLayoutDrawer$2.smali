@@ -25,7 +25,7 @@
 .method constructor <init>(Lorg/telegram/ui/PhotoViewer$FrameLayoutDrawer;)V
     .registers 2
 
-    .line 2428
+    .line 2441
     iput-object p1, p0, Lorg/telegram/ui/PhotoViewer$FrameLayoutDrawer$2;->this$1:Lorg/telegram/ui/PhotoViewer$FrameLayoutDrawer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,12 +38,12 @@
 .method public getBottomOffset(I)I
     .registers 4
 
-    .line 2432
+    .line 2445
     iget-object p1, p0, Lorg/telegram/ui/PhotoViewer$FrameLayoutDrawer$2;->this$1:Lorg/telegram/ui/PhotoViewer$FrameLayoutDrawer;
 
     iget-object p1, p1, Lorg/telegram/ui/PhotoViewer$FrameLayoutDrawer;->this$0:Lorg/telegram/ui/PhotoViewer;
 
-    invoke-static {p1}, Lorg/telegram/ui/PhotoViewer;->access$8800(Lorg/telegram/ui/PhotoViewer;)Landroid/widget/FrameLayout;
+    invoke-static {p1}, Lorg/telegram/ui/PhotoViewer;->access$8700(Lorg/telegram/ui/PhotoViewer;)Landroid/widget/FrameLayout;
 
     move-result-object p1
 
@@ -55,7 +55,7 @@
 
     iget-object p1, p1, Lorg/telegram/ui/PhotoViewer$FrameLayoutDrawer;->this$0:Lorg/telegram/ui/PhotoViewer;
 
-    invoke-static {p1}, Lorg/telegram/ui/PhotoViewer;->access$8800(Lorg/telegram/ui/PhotoViewer;)Landroid/widget/FrameLayout;
+    invoke-static {p1}, Lorg/telegram/ui/PhotoViewer;->access$8700(Lorg/telegram/ui/PhotoViewer;)Landroid/widget/FrameLayout;
 
     move-result-object p1
 
@@ -65,12 +65,12 @@
 
     if-nez p1, :cond_26
 
-    .line 2433
+    .line 2446
     iget-object p1, p0, Lorg/telegram/ui/PhotoViewer$FrameLayoutDrawer$2;->this$1:Lorg/telegram/ui/PhotoViewer$FrameLayoutDrawer;
 
     iget-object p1, p1, Lorg/telegram/ui/PhotoViewer$FrameLayoutDrawer;->this$0:Lorg/telegram/ui/PhotoViewer;
 
-    invoke-static {p1}, Lorg/telegram/ui/PhotoViewer;->access$8800(Lorg/telegram/ui/PhotoViewer;)Landroid/widget/FrameLayout;
+    invoke-static {p1}, Lorg/telegram/ui/PhotoViewer;->access$8700(Lorg/telegram/ui/PhotoViewer;)Landroid/widget/FrameLayout;
 
     move-result-object p1
 
@@ -80,13 +80,13 @@
 
     add-int/2addr v0, p1
 
-    .line 2435
+    .line 2448
     :cond_26
     iget-object p1, p0, Lorg/telegram/ui/PhotoViewer$FrameLayoutDrawer$2;->this$1:Lorg/telegram/ui/PhotoViewer$FrameLayoutDrawer;
 
     iget-object p1, p1, Lorg/telegram/ui/PhotoViewer$FrameLayoutDrawer;->this$0:Lorg/telegram/ui/PhotoViewer;
 
-    invoke-static {p1}, Lorg/telegram/ui/PhotoViewer;->access$8900(Lorg/telegram/ui/PhotoViewer;)Lorg/telegram/ui/Components/GroupedPhotosListView;
+    invoke-static {p1}, Lorg/telegram/ui/PhotoViewer;->access$8800(Lorg/telegram/ui/PhotoViewer;)Lorg/telegram/ui/Components/GroupedPhotosListView;
 
     move-result-object p1
 
@@ -96,7 +96,7 @@
 
     iget-object p1, p1, Lorg/telegram/ui/PhotoViewer$FrameLayoutDrawer;->this$0:Lorg/telegram/ui/PhotoViewer;
 
-    invoke-static {p1}, Lorg/telegram/ui/PhotoViewer;->access$8900(Lorg/telegram/ui/PhotoViewer;)Lorg/telegram/ui/Components/GroupedPhotosListView;
+    invoke-static {p1}, Lorg/telegram/ui/PhotoViewer;->access$8800(Lorg/telegram/ui/PhotoViewer;)Lorg/telegram/ui/Components/GroupedPhotosListView;
 
     move-result-object p1
 
@@ -138,13 +138,13 @@
 
     if-le p1, v1, :cond_6b
 
-    .line 2436
+    .line 2449
     :cond_5e
     iget-object p1, p0, Lorg/telegram/ui/PhotoViewer$FrameLayoutDrawer$2;->this$1:Lorg/telegram/ui/PhotoViewer$FrameLayoutDrawer;
 
     iget-object p1, p1, Lorg/telegram/ui/PhotoViewer$FrameLayoutDrawer;->this$0:Lorg/telegram/ui/PhotoViewer;
 
-    invoke-static {p1}, Lorg/telegram/ui/PhotoViewer;->access$8900(Lorg/telegram/ui/PhotoViewer;)Lorg/telegram/ui/Components/GroupedPhotosListView;
+    invoke-static {p1}, Lorg/telegram/ui/PhotoViewer;->access$8800(Lorg/telegram/ui/PhotoViewer;)Lorg/telegram/ui/Components/GroupedPhotosListView;
 
     move-result-object p1
 

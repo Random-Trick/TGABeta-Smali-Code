@@ -23,7 +23,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 33679
+    .line 34131
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -32,7 +32,7 @@
 .method public static TLdeserialize(Lorg/telegram/tgnet/AbstractSerializedData;IZ)Lorg/telegram/tgnet/TLRPC$TL_inputFolderPeer;
     .registers 4
 
-    .line 33686
+    .line 34138
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_inputFolderPeer;->constructor:I
 
     if-eq v0, p1, :cond_1e
@@ -43,7 +43,7 @@
 
     return-object p0
 
-    .line 33688
+    .line 34140
     :cond_8
     new-instance p0, Ljava/lang/RuntimeException;
 
@@ -69,13 +69,13 @@
 
     throw p0
 
-    .line 33693
+    .line 34145
     :cond_1e
     new-instance p1, Lorg/telegram/tgnet/TLRPC$TL_inputFolderPeer;
 
     invoke-direct {p1}, Lorg/telegram/tgnet/TLRPC$TL_inputFolderPeer;-><init>()V
 
-    .line 33694
+    .line 34146
     invoke-virtual {p1, p0, p2}, Lorg/telegram/tgnet/TLRPC$TL_inputFolderPeer;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
     return-object p1
@@ -86,7 +86,7 @@
 .method public readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
     .registers 4
 
-    .line 33699
+    .line 34151
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
@@ -97,7 +97,7 @@
 
     iput-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_inputFolderPeer;->peer:Lorg/telegram/tgnet/TLRPC$InputPeer;
 
-    .line 33700
+    .line 34152
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result p1
@@ -110,17 +110,17 @@
 .method public serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
     .registers 3
 
-    .line 33704
+    .line 34156
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_inputFolderPeer;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 33705
+    .line 34157
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_inputFolderPeer;->peer:Lorg/telegram/tgnet/TLRPC$InputPeer;
 
     invoke-virtual {v0, p1}, Lorg/telegram/tgnet/TLObject;->serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
 
-    .line 33706
+    .line 34158
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_inputFolderPeer;->folder_id:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V

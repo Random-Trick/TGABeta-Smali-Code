@@ -181,7 +181,7 @@
     .line 62
     iget-object v3, v0, Lorg/telegram/ui/Components/ContactsEmptyView;->titleTextView:Landroid/widget/TextView;
 
-    const v5, 0x7f0e0aaf
+    const v5, 0x7f0e0b36
 
     const-string v6, "NoContactsYet"
 
@@ -321,7 +321,7 @@
 
     invoke-virtual {v10, v11}, Landroid/widget/ImageView;->setColorFilter(Landroid/graphics/ColorFilter;)V
 
-    const v11, 0x7f0701b1
+    const v11, 0x7f070185
 
     .line 78
     invoke-virtual {v10, v11}, Landroid/widget/ImageView;->setImageResource(I)V
@@ -383,7 +383,7 @@
     goto :goto_162
 
     :cond_13c
-    const v8, 0x7f0e0ab2
+    const v8, 0x7f0e0b39
 
     const-string v12, "NoContactsYetLine3"
 
@@ -397,7 +397,7 @@
     goto :goto_162
 
     :cond_149
-    const v8, 0x7f0e0ab1
+    const v8, 0x7f0e0b38
 
     const-string v12, "NoContactsYetLine2"
 
@@ -411,7 +411,7 @@
     goto :goto_162
 
     :cond_156
-    const v8, 0x7f0e0ab0
+    const v8, 0x7f0e0b37
 
     const-string v12, "NoContactsYetLine1"
 

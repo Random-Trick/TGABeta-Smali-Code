@@ -525,7 +525,7 @@
 
     move-result-object v5
 
-    const v9, 0x7f070422
+    const v9, 0x7f070403
 
     invoke-virtual {v5, v9}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -697,7 +697,7 @@
 
     aget-object v9, v9, v5
 
-    const v11, 0x7f0e0953
+    const v11, 0x7f0e09da
 
     const-string v12, "Listening"
 
@@ -728,7 +728,7 @@
 
     aget-object v9, v9, v5
 
-    const v11, 0x7f0e109f
+    const v11, 0x7f0e115e
 
     const-string v12, "Speaking"
 
@@ -774,7 +774,7 @@
 
     aget-object v9, v9, v5
 
-    const v11, 0x7f0e133b
+    const v11, 0x7f0e1409
 
     const-string v12, "VoipGroupMutedForMe"
 
@@ -805,7 +805,7 @@
 
     aget-object v9, v9, v5
 
-    const v11, 0x7f0e13cb
+    const v11, 0x7f0e1499
 
     const-string v12, "WantsToSpeak"
 
@@ -945,7 +945,7 @@
     .line 372
     new-instance v3, Lorg/telegram/ui/Components/RLottieDrawable;
 
-    const v16, 0x7f0d009f
+    const v16, 0x7f0d00a2
 
     const/high16 v5, 0x42080000    # 34.0f
 
@@ -963,7 +963,7 @@
 
     const/16 v21, 0x0
 
-    const-string v17, "2131558559"
+    const-string v17, "2131558562"
 
     move-object v15, v3
 
@@ -1732,7 +1732,7 @@
 
     aget-object v5, v5, v15
 
-    const v10, 0x7f0e112f
+    const v10, 0x7f0e11f3
 
     const-string v11, "TapToAddPhotoOrBio"
 
@@ -1750,7 +1750,7 @@
 
     aget-object v5, v5, v15
 
-    const v10, 0x7f0e1130
+    const v10, 0x7f0e11f4
 
     const-string v11, "TapToAddPhotoOrDescription"
 
@@ -1789,7 +1789,7 @@
 
     aget-object v5, v5, v15
 
-    const v10, 0x7f0e112c
+    const v10, 0x7f0e11f0
 
     const-string v11, "TapToAddBio"
 
@@ -1807,7 +1807,7 @@
 
     aget-object v5, v5, v15
 
-    const v10, 0x7f0e112d
+    const v10, 0x7f0e11f1
 
     const-string v11, "TapToAddDescription"
 
@@ -1844,7 +1844,7 @@
 
     aget-object v5, v5, v15
 
-    const v10, 0x7f0e112e
+    const v10, 0x7f0e11f2
 
     const-string v11, "TapToAddPhoto"
 
@@ -1875,7 +1875,7 @@
 
     aget-object v5, v5, v15
 
-    const v10, 0x7f0e1196
+    const v10, 0x7f0e1260
 
     const-string v11, "ThisIsYou"
 
@@ -2139,7 +2139,7 @@
 
     aget-object v13, v13, v7
 
-    const v14, 0x7f0e10a0
+    const v14, 0x7f0e115f
 
     new-array v15, v7, [Ljava/lang/Object;
 
@@ -2177,7 +2177,7 @@
 
     aget-object v2, v2, v7
 
-    const v11, 0x7f0e109f
+    const v11, 0x7f0e115e
 
     const-string v12, "Speaking"
 
@@ -3618,14 +3618,14 @@
 
     if-nez v2, :cond_23
 
-    const v2, 0x7f0e13b5
+    const v2, 0x7f0e1483
 
     const-string v3, "VoipUnmute"
 
     goto :goto_28
 
     :cond_23
-    const v2, 0x7f0e137b
+    const v2, 0x7f0e1449
 
     const-string v3, "VoipMute"
 

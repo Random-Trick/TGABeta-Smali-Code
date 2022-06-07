@@ -33,7 +33,7 @@
 .method public abstract W(Lj$/util/function/Predicate;)Z
 .end method
 
-.method public abstract X(Lj$/util/function/Function;)Lj$/util/stream/f1;
+.method public abstract X(Lj$/util/function/Function;)Lj$/util/stream/e1;
 .end method
 
 .method public abstract a(Lj$/util/function/Predicate;)Z
@@ -42,7 +42,7 @@
 .method public abstract b0(Lj$/wrappers/J0;)Ljava/lang/Object;
 .end method
 
-.method public abstract c(Lj$/util/function/Function;)Lj$/util/stream/M0;
+.method public abstract c(Lj$/util/function/Function;)Lj$/util/stream/IntStream;
 .end method
 
 .method public abstract synthetic close()V
@@ -76,7 +76,7 @@
     .end annotation
 .end method
 
-.method public abstract g0(Lj$/util/function/A;)Lj$/util/stream/f1;
+.method public abstract g0(Lj$/util/function/A;)Lj$/util/stream/e1;
 .end method
 
 .method public abstract i(Lj$/util/function/y;Lj$/util/function/BiConsumer;Lj$/util/function/BiConsumer;)Ljava/lang/Object;
@@ -91,7 +91,7 @@
 .method public abstract limit(J)Lj$/util/stream/Stream;
 .end method
 
-.method public abstract m(Lj$/util/function/ToIntFunction;)Lj$/util/stream/M0;
+.method public abstract m(Lj$/util/function/ToIntFunction;)Lj$/util/stream/IntStream;
 .end method
 
 .method public abstract m0(Ljava/lang/Object;Lj$/util/function/b;)Ljava/lang/Object;

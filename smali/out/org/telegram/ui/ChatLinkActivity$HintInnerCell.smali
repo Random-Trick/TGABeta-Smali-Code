@@ -139,7 +139,7 @@
     .line 656
     iget-object p2, p0, Lorg/telegram/ui/ChatLinkActivity$HintInnerCell;->messageTextView:Landroid/widget/TextView;
 
-    const v2, 0x7f0e05c1
+    const v2, 0x7f0e0612
 
     new-array v0, v0, [Ljava/lang/Object;
 
@@ -165,7 +165,7 @@
     :cond_80
     iget-object p1, p0, Lorg/telegram/ui/ChatLinkActivity$HintInnerCell;->messageTextView:Landroid/widget/TextView;
 
-    const p2, 0x7f0e05c3
+    const p2, 0x7f0e0614
 
     const-string v0, "DiscussionChannelHelp3"
 
@@ -202,7 +202,7 @@
     .line 664
     iget-object p2, p0, Lorg/telegram/ui/ChatLinkActivity$HintInnerCell;->messageTextView:Landroid/widget/TextView;
 
-    const v2, 0x7f0e05c5
+    const v2, 0x7f0e0616
 
     new-array v0, v0, [Ljava/lang/Object;
 

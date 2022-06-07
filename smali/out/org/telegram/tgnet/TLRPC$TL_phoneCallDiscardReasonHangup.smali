@@ -17,7 +17,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 19146
+    .line 19309
     invoke-direct {p0}, Lorg/telegram/tgnet/TLRPC$PhoneCallDiscardReason;-><init>()V
 
     return-void
@@ -28,7 +28,7 @@
 .method public serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
     .registers 3
 
-    .line 19151
+    .line 19314
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_phoneCallDiscardReasonHangup;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V

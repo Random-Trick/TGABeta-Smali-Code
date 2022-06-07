@@ -546,7 +546,7 @@
 
     move-result-object v0
 
-    const v14, 0x7f07036d
+    const v14, 0x7f070384
 
     invoke-virtual {v0, v14}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -628,14 +628,14 @@
 
     if-eqz v1, :cond_1ae
 
-    const v1, 0x7f0e106d
+    const v1, 0x7f0e112c
 
     const-string v2, "ShowSenderNames"
 
     goto :goto_1b3
 
     :cond_1ae
-    const v1, 0x7f0e106e
+    const v1, 0x7f0e112d
 
     const-string v2, "ShowSendersName"
 
@@ -692,14 +692,14 @@
 
     if-eqz v1, :cond_1ea
 
-    const v1, 0x7f0e0838
+    const v1, 0x7f0e0893
 
     const-string v2, "HideSenderNames"
 
     goto :goto_1ef
 
     :cond_1ea
-    const v1, 0x7f0e0839
+    const v1, 0x7f0e0894
 
     const-string v2, "HideSendersName"
 
@@ -776,7 +776,7 @@
     .line 570
     iget-object v0, v7, Lorg/telegram/ui/Components/ForwardingPreviewView;->showCaptionView:Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;
 
-    const v1, 0x7f0e1066
+    const v1, 0x7f0e1124
 
     const-string v2, "ShowCaption"
 
@@ -820,7 +820,7 @@
     .line 575
     iget-object v0, v7, Lorg/telegram/ui/Components/ForwardingPreviewView;->hideCaptionView:Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;
 
-    const v1, 0x7f0e0833
+    const v1, 0x7f0e088e
 
     const-string v2, "HideCaption"
 
@@ -857,7 +857,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f07036d
+    const v1, 0x7f070384
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -947,7 +947,7 @@
     .line 588
     iget-object v0, v7, Lorg/telegram/ui/Components/ForwardingPreviewView;->changeRecipientView:Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;
 
-    const v1, 0x7f0e035b
+    const v1, 0x7f0e0399
 
     const-string v2, "ChangeRecipient"
 
@@ -955,7 +955,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f070267
+    const v2, 0x7f07022f
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;->setTextAndIcon(Ljava/lang/CharSequence;I)V
 
@@ -980,7 +980,7 @@
     .line 592
     iget-object v0, v7, Lorg/telegram/ui/Components/ForwardingPreviewView;->sendMessagesView:Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;
 
-    const v1, 0x7f0e077e
+    const v1, 0x7f0e07d6
 
     const-string v2, "ForwardSendMessages"
 
@@ -988,7 +988,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f070268
+    const v2, 0x7f0702e8
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;->setTextAndIcon(Ljava/lang/CharSequence;I)V
 
@@ -1175,9 +1175,11 @@
 
     move-result v1
 
-    const-string v2, "PreviewForwardMessagesCount"
+    new-array v2, v12, [Ljava/lang/Object;
 
-    invoke-static {v2, v1}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    const-string v4, "PreviewForwardMessagesCount"
+
+    invoke-static {v4, v1, v2}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -2449,23 +2451,23 @@
 
     iget-boolean v1, v0, Lorg/telegram/messenger/ForwardingMessagesParams;->hasSenders:Z
 
-    const v2, 0x7f0e077c
+    const v2, 0x7f0e07d4
 
     const-string v3, "ForwardPreviewSendersNameVisibleChannel"
 
-    const v4, 0x7f0e0779
+    const v4, 0x7f0e07d1
 
     const-string v5, "ForwardPreviewSendersNameHiddenChannel"
 
-    const v6, 0x7f0e077d
+    const v6, 0x7f0e07d5
 
     const-string v7, "ForwardPreviewSendersNameVisibleGroup"
 
-    const v8, 0x7f0e077a
+    const v8, 0x7f0e07d2
 
     const-string v9, "ForwardPreviewSendersNameHiddenGroup"
 
-    const v10, 0x7f0e077b
+    const v10, 0x7f0e07d3
 
     const-string v11, "ForwardPreviewSendersNameVisible"
 
@@ -2697,7 +2699,7 @@
     .line 743
     iget-object v1, p0, Lorg/telegram/ui/Components/ForwardingPreviewView;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
-    const v2, 0x7f0e0778
+    const v2, 0x7f0e07d0
 
     new-array v3, v13, [Ljava/lang/Object;
 

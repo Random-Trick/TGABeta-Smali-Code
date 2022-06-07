@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/ChatActivity;Landroid/content/Context;Lorg/telegram/ui/Components/SizeNotifierFrameLayout;)V
     .registers 4
 
-    .line 7660
+    .line 7809
     iput-object p1, p0, Lorg/telegram/ui/ChatActivity$40;->this$0:Lorg/telegram/ui/ChatActivity;
 
     invoke-direct {p0, p2, p3}, Lorg/telegram/ui/Components/BlurredFrameLayout;-><init>(Landroid/content/Context;Lorg/telegram/ui/Components/SizeNotifierFrameLayout;)V
@@ -35,10 +35,10 @@
 .method protected measureChildWithMargins(Landroid/view/View;IIII)V
     .registers 9
 
-    .line 7674
+    .line 7823
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$40;->this$0:Lorg/telegram/ui/ChatActivity;
 
-    invoke-static {v0}, Lorg/telegram/ui/ChatActivity;->access$29500(Lorg/telegram/ui/ChatActivity;)Lorg/telegram/ui/Components/SearchCounterView;
+    invoke-static {v0}, Lorg/telegram/ui/ChatActivity;->access$30000(Lorg/telegram/ui/ChatActivity;)Lorg/telegram/ui/Components/SearchCounterView;
 
     move-result-object v0
 
@@ -46,7 +46,7 @@
 
     const/16 v0, 0xe
 
-    .line 7676
+    .line 7825
     iget-object v1, p0, Lorg/telegram/ui/ChatActivity$40;->this$0:Lorg/telegram/ui/ChatActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/ChatActivity;->access$5800(Lorg/telegram/ui/ChatActivity;)Landroid/widget/ImageView;
@@ -71,7 +71,7 @@
 
     const/16 v0, 0x3e
 
-    .line 7679
+    .line 7828
     :cond_22
     iget-object v1, p0, Lorg/telegram/ui/ChatActivity$40;->this$0:Lorg/telegram/ui/ChatActivity;
 
@@ -95,7 +95,7 @@
 
     add-int/lit8 v0, v0, 0x30
 
-    .line 7682
+    .line 7831
     :cond_38
     invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
@@ -111,7 +111,7 @@
 
     iput v0, v1, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
 
-    .line 7684
+    .line 7833
     :cond_45
     invoke-super/range {p0 .. p5}, Landroid/widget/FrameLayout;->measureChildWithMargins(Landroid/view/View;IIII)V
 
@@ -121,14 +121,14 @@
 .method public onDraw(Landroid/graphics/Canvas;)V
     .registers 11
 
-    .line 7663
+    .line 7812
     sget-object v0, Lorg/telegram/ui/ActionBar/Theme;->chat_composeShadowDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
 
     move-result v0
 
-    .line 7664
+    .line 7813
     iget-object v1, p0, Lorg/telegram/ui/ChatActivity$40;->this$0:Lorg/telegram/ui/ChatActivity;
 
     iget-object v1, v1, Lorg/telegram/ui/ChatActivity;->chatActivityEnterView:Lorg/telegram/ui/Components/ChatActivityEnterView;
@@ -141,7 +141,7 @@
 
     if-eqz v1, :cond_1f
 
-    .line 7665
+    .line 7814
     sget-object v1, Lorg/telegram/ui/ActionBar/Theme;->chat_composeShadowDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getMeasuredWidth()I
@@ -150,12 +150,12 @@
 
     invoke-virtual {v1, v2, v2, v3, v0}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 7666
+    .line 7815
     sget-object v1, Lorg/telegram/ui/ActionBar/Theme;->chat_composeShadowDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v1, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 7668
+    .line 7817
     :cond_1f
     sget-object v6, Lorg/telegram/messenger/AndroidUtilities;->rectTmp2:Landroid/graphics/Rect;
 
@@ -169,7 +169,7 @@
 
     invoke-virtual {v6, v2, v0, v1, v3}, Landroid/graphics/Rect;->set(IIII)V
 
-    .line 7669
+    .line 7818
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$40;->this$0:Lorg/telegram/ui/ChatActivity;
 
     iget-object v3, v0, Lorg/telegram/ui/ChatActivity;->contentView:Lorg/telegram/ui/Components/SizeNotifierFrameLayout;
@@ -182,7 +182,7 @@
 
     const-string v1, "paintChatComposeBackground"
 
-    invoke-static {v0, v1}, Lorg/telegram/ui/ChatActivity;->access$24900(Lorg/telegram/ui/ChatActivity;Ljava/lang/String;)Landroid/graphics/Paint;
+    invoke-static {v0, v1}, Lorg/telegram/ui/ChatActivity;->access$25000(Lorg/telegram/ui/ChatActivity;Ljava/lang/String;)Landroid/graphics/Paint;
 
     move-result-object v7
 

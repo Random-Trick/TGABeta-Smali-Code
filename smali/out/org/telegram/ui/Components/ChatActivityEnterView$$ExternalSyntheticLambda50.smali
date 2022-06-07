@@ -35,7 +35,7 @@
 .method public final run()V
     .registers 1
 
-    invoke-static {}, Lorg/telegram/ui/Components/ChatActivityEnterView;->$r8$lambda$hLOhQ1Vbvyc-4naFK_lGOa41o5E()V
+    invoke-static {}, Lorg/telegram/ui/Components/ChatActivityEnterView;->$r8$lambda$gu1kUmHtm9tKuZYsPXXXMQ8APTg()V
 
     return-void
 .end method

@@ -87,7 +87,7 @@
 .end method
 
 .method public onBindViewHolder(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;I)V
-    .registers 7
+    .registers 8
 
     .line 310
     invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->getItemViewType()I
@@ -96,11 +96,11 @@
 
     const/4 v1, 0x1
 
-    if-eqz v0, :cond_34
+    if-eqz v0, :cond_36
 
     if-eq v0, v1, :cond_a
 
-    goto :goto_42
+    goto :goto_44
 
     .line 317
     :cond_a
@@ -110,7 +110,7 @@
 
     move-result-object p1
 
-    if-eqz p1, :cond_42
+    if-eqz p1, :cond_44
 
     .line 318
     iget-object p1, p0, Lorg/telegram/ui/Components/SharingLocationsAlert$ListAdapter;->this$0:Lorg/telegram/ui/Components/SharingLocationsAlert;
@@ -119,23 +119,25 @@
 
     move-result-object p1
 
-    const p2, 0x7f0e105a
+    const p2, 0x7f0e1118
 
     new-array v0, v1, [Ljava/lang/Object;
 
-    const/4 v1, 0x0
-
     invoke-static {}, Lorg/telegram/messenger/LocationController;->getLocationsCount()I
 
-    move-result v2
+    move-result v1
 
-    const-string v3, "Chats"
+    const/4 v2, 0x0
 
-    invoke-static {v3, v2}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    new-array v3, v2, [Ljava/lang/Object;
 
-    move-result-object v2
+    const-string v4, "Chats"
 
-    aput-object v2, v0, v1
+    invoke-static {v4, v1, v3}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v1
+
+    aput-object v1, v0, v2
 
     const-string v1, "SharingLiveLocationTitle"
 
@@ -145,10 +147,10 @@
 
     invoke-virtual {p1, p2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    goto :goto_42
+    goto :goto_44
 
     .line 312
-    :cond_34
+    :cond_36
     iget-object p1, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     check-cast p1, Lorg/telegram/ui/Cells/SharingLiveLocationCell;
@@ -164,8 +166,8 @@
 
     invoke-virtual {p1, p2}, Lorg/telegram/ui/Cells/SharingLiveLocationCell;->setDialog(Lorg/telegram/messenger/LocationController$SharingLocationInfo;)V
 
-    :cond_42
-    :goto_42
+    :cond_44
+    :goto_44
     return-void
 .end method
 

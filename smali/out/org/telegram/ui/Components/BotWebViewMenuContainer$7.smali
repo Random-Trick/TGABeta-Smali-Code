@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lorg/telegram/ui/Components/BotWebViewMenuContainer;->lambda$onDismiss$17(Ljava/lang/Float;)V
+    value = Lorg/telegram/ui/Components/BotWebViewMenuContainer;->lambda$onDismiss$18(Ljava/lang/Float;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/BotWebViewMenuContainer;)V
     .registers 2
 
-    .line 613
+    .line 742
     iput-object p1, p0, Lorg/telegram/ui/Components/BotWebViewMenuContainer$7;->this$0:Lorg/telegram/ui/Components/BotWebViewMenuContainer;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -35,10 +35,10 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .registers 3
 
-    .line 616
+    .line 745
     iget-object p1, p0, Lorg/telegram/ui/Components/BotWebViewMenuContainer$7;->this$0:Lorg/telegram/ui/Components/BotWebViewMenuContainer;
 
-    invoke-static {p1}, Lorg/telegram/ui/Components/BotWebViewMenuContainer;->access$600(Lorg/telegram/ui/Components/BotWebViewMenuContainer;)Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout$WebProgressView;
+    invoke-static {p1}, Lorg/telegram/ui/Components/BotWebViewMenuContainer;->access$1500(Lorg/telegram/ui/Components/BotWebViewMenuContainer;)Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout$WebProgressView;
 
     move-result-object p1
 

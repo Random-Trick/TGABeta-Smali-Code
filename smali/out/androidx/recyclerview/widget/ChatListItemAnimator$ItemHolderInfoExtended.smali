@@ -28,7 +28,7 @@
 .method constructor <init>(Landroidx/recyclerview/widget/ChatListItemAnimator;)V
     .registers 2
 
-    .line 1519
+    .line 1529
     invoke-direct {p0}, Landroidx/recyclerview/widget/RecyclerView$ItemAnimator$ItemHolderInfo;-><init>()V
 
     return-void

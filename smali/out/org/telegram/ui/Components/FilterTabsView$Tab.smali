@@ -1,4 +1,4 @@
-.class Lorg/telegram/ui/Components/FilterTabsView$Tab;
+.class public Lorg/telegram/ui/Components/FilterTabsView$Tab;
 .super Ljava/lang/Object;
 .source "FilterTabsView.java"
 
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x2
+    accessFlags = 0x1
     name = "Tab"
 .end annotation
 
@@ -18,6 +18,10 @@
 .field public counter:I
 
 .field public id:I
+
+.field public isDefault:Z
+
+.field public isLocked:Z
 
 .field final synthetic this$0:Lorg/telegram/ui/Components/FilterTabsView;
 
@@ -30,15 +34,15 @@
 .method public constructor <init>(Lorg/telegram/ui/Components/FilterTabsView;ILjava/lang/String;)V
     .registers 4
 
-    .line 78
+    .line 93
     iput-object p1, p0, Lorg/telegram/ui/Components/FilterTabsView$Tab;->this$0:Lorg/telegram/ui/Components/FilterTabsView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 79
+    .line 94
     iput p2, p0, Lorg/telegram/ui/Components/FilterTabsView$Tab;->id:I
 
-    .line 80
+    .line 95
     iput-object p3, p0, Lorg/telegram/ui/Components/FilterTabsView$Tab;->title:Ljava/lang/String;
 
     return-void
@@ -49,7 +53,7 @@
 .method public getWidth(Z)I
     .registers 6
 
-    .line 84
+    .line 99
     iget-object v0, p0, Lorg/telegram/ui/Components/FilterTabsView$Tab;->this$0:Lorg/telegram/ui/Components/FilterTabsView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/FilterTabsView;->access$000(Lorg/telegram/ui/Components/FilterTabsView;)Landroid/text/TextPaint;
@@ -76,7 +80,7 @@
 
     if-eqz p1, :cond_2b
 
-    .line 87
+    .line 102
     iget-object v2, p0, Lorg/telegram/ui/Components/FilterTabsView$Tab;->this$0:Lorg/telegram/ui/Components/FilterTabsView;
 
     invoke-static {v2}, Lorg/telegram/ui/Components/FilterTabsView;->access$100(Lorg/telegram/ui/Components/FilterTabsView;)Lorg/telegram/ui/Components/FilterTabsView$FilterTabsViewDelegate;
@@ -96,12 +100,12 @@
     :cond_26
     if-eqz p1, :cond_2d
 
-    .line 92
+    .line 107
     iput v2, p0, Lorg/telegram/ui/Components/FilterTabsView$Tab;->counter:I
 
     goto :goto_2d
 
-    .line 95
+    .line 110
     :cond_2b
     iget v2, p0, Lorg/telegram/ui/Components/FilterTabsView$Tab;->counter:I
 
@@ -113,7 +117,7 @@
 
     new-array p1, p1, [Ljava/lang/Object;
 
-    .line 98
+    .line 113
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
@@ -126,7 +130,7 @@
 
     move-result-object p1
 
-    .line 99
+    .line 114
     iget-object v1, p0, Lorg/telegram/ui/Components/FilterTabsView$Tab;->this$0:Lorg/telegram/ui/Components/FilterTabsView;
 
     invoke-static {v1}, Lorg/telegram/ui/Components/FilterTabsView;->access$200(Lorg/telegram/ui/Components/FilterTabsView;)Landroid/text/TextPaint;
@@ -147,7 +151,7 @@
 
     const/high16 v1, 0x41200000    # 10.0f
 
-    .line 100
+    .line 115
     invoke-static {v1}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v2
@@ -164,7 +168,7 @@
 
     const/high16 v1, 0x40c00000    # 6.0f
 
-    .line 101
+    .line 116
     invoke-static {v1}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v1
@@ -176,7 +180,7 @@
     :cond_65
     const/high16 p1, 0x42200000    # 40.0f
 
-    .line 103
+    .line 118
     invoke-static {p1}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result p1
@@ -191,7 +195,7 @@
 .method public setTitle(Ljava/lang/String;)Z
     .registers 3
 
-    .line 107
+    .line 122
     iget-object v0, p0, Lorg/telegram/ui/Components/FilterTabsView$Tab;->title:Ljava/lang/String;
 
     invoke-static {v0, p1}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
@@ -204,7 +208,7 @@
 
     return p1
 
-    .line 110
+    .line 125
     :cond_a
     iput-object p1, p0, Lorg/telegram/ui/Components/FilterTabsView$Tab;->title:Ljava/lang/String;
 

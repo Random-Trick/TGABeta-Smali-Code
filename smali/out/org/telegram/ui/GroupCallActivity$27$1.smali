@@ -24,7 +24,7 @@
 .method constructor <init>(Lorg/telegram/ui/GroupCallActivity$27;Z)V
     .registers 3
 
-    .line 4757
+    .line 4762
     iput-object p1, p0, Lorg/telegram/ui/GroupCallActivity$27$1;->this$1:Lorg/telegram/ui/GroupCallActivity$27;
 
     iput-boolean p2, p0, Lorg/telegram/ui/GroupCallActivity$27$1;->val$uiVisible:Z
@@ -39,14 +39,14 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .registers 3
 
-    .line 4765
+    .line 4770
     iget-object p1, p0, Lorg/telegram/ui/GroupCallActivity$27$1;->this$1:Lorg/telegram/ui/GroupCallActivity$27;
 
     const/4 v0, 0x0
 
     iput-object v0, p1, Lorg/telegram/ui/GroupCallActivity$27;->uiVisibilityAnimator:Landroid/animation/ValueAnimator;
 
-    .line 4766
+    .line 4771
     iget-object p1, p1, Lorg/telegram/ui/GroupCallActivity$27;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     iget-boolean v0, p0, Lorg/telegram/ui/GroupCallActivity$27$1;->val$uiVisible:Z
@@ -63,7 +63,7 @@
     :goto_f
     iput v0, p1, Lorg/telegram/ui/GroupCallActivity;->progressToHideUi:F
 
-    .line 4767
+    .line 4772
     invoke-static {p1}, Lorg/telegram/ui/GroupCallActivity;->access$5000(Lorg/telegram/ui/GroupCallActivity;)Lorg/telegram/ui/Components/voip/GroupCallRenderersContainer;
 
     move-result-object p1
@@ -76,7 +76,7 @@
 
     invoke-virtual {p1, v0}, Lorg/telegram/ui/Components/voip/GroupCallRenderersContainer;->setProgressToHideUi(F)V
 
-    .line 4768
+    .line 4773
     iget-object p1, p0, Lorg/telegram/ui/GroupCallActivity$27$1;->this$1:Lorg/telegram/ui/GroupCallActivity$27;
 
     iget-object p1, p1, Lorg/telegram/ui/GroupCallActivity$27;->this$0:Lorg/telegram/ui/GroupCallActivity;
@@ -85,7 +85,7 @@
 
     invoke-virtual {p1}, Landroid/view/ViewGroup;->invalidate()V
 
-    .line 4769
+    .line 4774
     iget-object p1, p0, Lorg/telegram/ui/GroupCallActivity$27$1;->this$1:Lorg/telegram/ui/GroupCallActivity$27;
 
     iget-object p1, p1, Lorg/telegram/ui/GroupCallActivity$27;->this$0:Lorg/telegram/ui/GroupCallActivity;
@@ -96,7 +96,7 @@
 
     invoke-virtual {p1}, Landroid/view/ViewGroup;->invalidate()V
 
-    .line 4770
+    .line 4775
     iget-object p1, p0, Lorg/telegram/ui/GroupCallActivity$27$1;->this$1:Lorg/telegram/ui/GroupCallActivity$27;
 
     iget-object p1, p1, Lorg/telegram/ui/GroupCallActivity$27;->this$0:Lorg/telegram/ui/GroupCallActivity;
@@ -113,7 +113,7 @@
 .method public onAnimationStart(Landroid/animation/Animator;)V
     .registers 2
 
-    .line 4760
+    .line 4765
     iget-object p1, p0, Lorg/telegram/ui/GroupCallActivity$27$1;->this$1:Lorg/telegram/ui/GroupCallActivity$27;
 
     iget-object p1, p1, Lorg/telegram/ui/GroupCallActivity$27;->this$0:Lorg/telegram/ui/GroupCallActivity;

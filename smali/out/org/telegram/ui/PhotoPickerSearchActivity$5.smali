@@ -41,7 +41,7 @@
     .line 590
     iget-object p1, p0, Lorg/telegram/ui/PhotoPickerSearchActivity$5;->this$0:Lorg/telegram/ui/PhotoPickerSearchActivity;
 
-    invoke-static {p1}, Lorg/telegram/ui/PhotoPickerSearchActivity;->access$1900(Lorg/telegram/ui/PhotoPickerSearchActivity;)Z
+    invoke-static {p1}, Lorg/telegram/ui/PhotoPickerSearchActivity;->access$1700(Lorg/telegram/ui/PhotoPickerSearchActivity;)Z
 
     move-result p1
 

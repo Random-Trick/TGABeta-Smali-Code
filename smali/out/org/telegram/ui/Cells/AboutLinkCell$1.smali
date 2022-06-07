@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lorg/telegram/ui/Cells/AboutLinkCell;-><init>(Landroid/content/Context;Lorg/telegram/ui/ActionBar/BaseFragment;)V
+    value = Lorg/telegram/ui/Cells/AboutLinkCell;-><init>(Landroid/content/Context;Lorg/telegram/ui/ActionBar/BaseFragment;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/Cells/AboutLinkCell;Landroid/content/Context;)V
     .registers 3
 
-    .line 92
+    .line 98
     iput-object p1, p0, Lorg/telegram/ui/Cells/AboutLinkCell$1;->this$0:Lorg/telegram/ui/Cells/AboutLinkCell;
 
     invoke-direct {p0, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
@@ -35,21 +35,21 @@
 .method public onTouchEvent(Landroid/view/MotionEvent;)Z
     .registers 13
 
-    .line 95
+    .line 101
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
     move-result v0
 
     float-to-int v0, v0
 
-    .line 96
+    .line 102
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
 
     move-result v1
 
     float-to-int v7, v1
 
-    .line 99
+    .line 105
     iget-object v1, p0, Lorg/telegram/ui/Cells/AboutLinkCell$1;->this$0:Lorg/telegram/ui/Cells/AboutLinkCell;
 
     invoke-static {v1}, Lorg/telegram/ui/Cells/AboutLinkCell;->access$000(Lorg/telegram/ui/Cells/AboutLinkCell;)Landroid/text/StaticLayout;
@@ -70,7 +70,7 @@
 
     if-eqz v1, :cond_14b
 
-    .line 100
+    .line 106
     :cond_1c
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
@@ -94,7 +94,7 @@
 
     goto :goto_3f
 
-    .line 135
+    .line 141
     :cond_31
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
@@ -104,14 +104,14 @@
 
     if-ne v0, v1, :cond_14b
 
-    .line 136
+    .line 142
     iget-object v0, p0, Lorg/telegram/ui/Cells/AboutLinkCell$1;->this$0:Lorg/telegram/ui/Cells/AboutLinkCell;
 
     invoke-static {v0}, Lorg/telegram/ui/Cells/AboutLinkCell;->access$1100(Lorg/telegram/ui/Cells/AboutLinkCell;)V
 
     goto/16 :goto_14b
 
-    .line 101
+    .line 107
     :cond_3f
     :goto_3f
     iget-object v1, p0, Lorg/telegram/ui/Cells/AboutLinkCell$1;->this$0:Lorg/telegram/ui/Cells/AboutLinkCell;
@@ -140,7 +140,7 @@
 
     iget-object v1, p0, Lorg/telegram/ui/Cells/AboutLinkCell$1;->this$0:Lorg/telegram/ui/Cells/AboutLinkCell;
 
-    .line 102
+    .line 108
     invoke-static {v1}, Lorg/telegram/ui/Cells/AboutLinkCell;->access$300(Lorg/telegram/ui/Cells/AboutLinkCell;)Landroid/widget/TextView;
 
     move-result-object v1
@@ -163,14 +163,14 @@
 
     if-gt v7, v1, :cond_74
 
-    .line 103
+    .line 109
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
     move-result p1
 
     return p1
 
-    .line 105
+    .line 111
     :cond_74
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getMeasuredWidth()I
 
@@ -192,14 +192,14 @@
 
     if-le v0, v1, :cond_8c
 
-    .line 106
+    .line 112
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
     move-result p1
 
     return p1
 
-    .line 108
+    .line 114
     :cond_8c
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
@@ -207,7 +207,7 @@
 
     if-nez v1, :cond_128
 
-    .line 109
+    .line 115
     iget-object v1, p0, Lorg/telegram/ui/Cells/AboutLinkCell$1;->this$0:Lorg/telegram/ui/Cells/AboutLinkCell;
 
     invoke-static {v1}, Lorg/telegram/ui/Cells/AboutLinkCell;->access$400(Lorg/telegram/ui/Cells/AboutLinkCell;)Landroid/text/StaticLayout;
@@ -236,7 +236,7 @@
 
     if-eqz v1, :cond_103
 
-    .line 110
+    .line 116
     iget-object v1, p0, Lorg/telegram/ui/Cells/AboutLinkCell$1;->this$0:Lorg/telegram/ui/Cells/AboutLinkCell;
 
     invoke-static {v1}, Lorg/telegram/ui/Cells/AboutLinkCell;->access$400(Lorg/telegram/ui/Cells/AboutLinkCell;)Landroid/text/StaticLayout;
@@ -267,7 +267,7 @@
 
     goto :goto_11d
 
-    .line 112
+    .line 118
     :cond_c9
     iget-object v1, p0, Lorg/telegram/ui/Cells/AboutLinkCell$1;->this$0:Lorg/telegram/ui/Cells/AboutLinkCell;
 
@@ -279,7 +279,7 @@
 
     const/4 v10, 0x0
 
-    .line 113
+    .line 119
     :goto_d2
     iget-object v1, p0, Lorg/telegram/ui/Cells/AboutLinkCell$1;->this$0:Lorg/telegram/ui/Cells/AboutLinkCell;
 
@@ -291,7 +291,7 @@
 
     if-ge v10, v1, :cond_11f
 
-    .line 114
+    .line 120
     iget-object v1, p0, Lorg/telegram/ui/Cells/AboutLinkCell$1;->this$0:Lorg/telegram/ui/Cells/AboutLinkCell;
 
     invoke-static {v1}, Lorg/telegram/ui/Cells/AboutLinkCell;->access$100(Lorg/telegram/ui/Cells/AboutLinkCell;)[Landroid/text/StaticLayout;
@@ -337,7 +337,7 @@
 
     goto :goto_d2
 
-    .line 120
+    .line 126
     :cond_103
     iget-object v1, p0, Lorg/telegram/ui/Cells/AboutLinkCell$1;->this$0:Lorg/telegram/ui/Cells/AboutLinkCell;
 
@@ -378,14 +378,14 @@
     :goto_120
     if-nez v0, :cond_14c
 
-    .line 124
+    .line 130
     iget-object v1, p0, Lorg/telegram/ui/Cells/AboutLinkCell$1;->this$0:Lorg/telegram/ui/Cells/AboutLinkCell;
 
     invoke-static {v1}, Lorg/telegram/ui/Cells/AboutLinkCell;->access$1100(Lorg/telegram/ui/Cells/AboutLinkCell;)V
 
     goto :goto_14c
 
-    .line 126
+    .line 132
     :cond_128
     iget-object v0, p0, Lorg/telegram/ui/Cells/AboutLinkCell$1;->this$0:Lorg/telegram/ui/Cells/AboutLinkCell;
 
@@ -395,7 +395,7 @@
 
     if-eqz v0, :cond_14b
 
-    .line 128
+    .line 134
     :try_start_130
     iget-object v0, p0, Lorg/telegram/ui/Cells/AboutLinkCell$1;->this$0:Lorg/telegram/ui/Cells/AboutLinkCell;
 
@@ -418,10 +418,10 @@
     :catch_140
     move-exception v0
 
-    .line 130
+    .line 136
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
-    .line 132
+    .line 138
     :goto_144
     iget-object v0, p0, Lorg/telegram/ui/Cells/AboutLinkCell$1;->this$0:Lorg/telegram/ui/Cells/AboutLinkCell;
 
@@ -439,7 +439,7 @@
     :goto_14c
     if-nez v0, :cond_154
 
-    .line 139
+    .line 145
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
     move-result p1

@@ -134,7 +134,7 @@
     .line 47
     iget-object p2, p0, Lorg/telegram/ui/Components/PickerBottomLayoutViewer;->cancelButton:Landroid/widget/TextView;
 
-    const v9, 0x7f0e0331
+    const v9, 0x7f0e036d
 
     const-string v10, "Cancel"
 
@@ -234,7 +234,7 @@
     .line 57
     iget-object p2, p0, Lorg/telegram/ui/Components/PickerBottomLayoutViewer;->doneButton:Landroid/widget/TextView;
 
-    const v2, 0x7f0e0fc6
+    const v2, 0x7f0e1083
 
     const-string v4, "Send"
 
@@ -306,12 +306,12 @@
 
     if-eqz p2, :cond_10b
 
-    const p2, 0x7f070346
+    const p2, 0x7f07035e
 
     goto :goto_10e
 
     :cond_10b
-    const p2, 0x7f070072
+    const p2, 0x7f07005c
 
     :goto_10e
     invoke-virtual {p1, p2}, Landroid/widget/TextView;->setBackgroundResource(I)V

@@ -385,7 +385,7 @@
     .line 107
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
-    const v1, 0x7f070140
+    const v1, 0x7f070109
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/ActionBar;->setBackButtonImage(I)V
 
@@ -401,7 +401,7 @@
 
     const-string v2, "ChooseCountry"
 
-    const v3, 0x7f0e0447
+    const v3, 0x7f0e0489
 
     invoke-static {v2, v3}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
@@ -467,7 +467,7 @@
 
     move-result-object v0
 
-    const v3, 0x7f07014a
+    const v3, 0x7f070110
 
     .line 126
     invoke-virtual {v0, v1, v3}, Lorg/telegram/ui/ActionBar/ActionBarMenu;->addItem(II)Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
@@ -490,7 +490,7 @@
 
     const-string v4, "Search"
 
-    const v5, 0x7f0e0f74
+    const v5, 0x7f0e1030
 
     .line 158
     invoke-static {v4, v5}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -584,7 +584,7 @@
 
     const-string v4, "NoResult"
 
-    const v5, 0x7f0e0ad8
+    const v5, 0x7f0e0b60
 
     invoke-static {v4, v5}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 

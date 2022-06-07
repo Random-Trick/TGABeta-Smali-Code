@@ -18,7 +18,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 3028
+    .line 3031
     invoke-direct {p0}, Lorg/telegram/messenger/LocaleController$PluralRules;-><init>()V
 
     return-void

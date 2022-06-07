@@ -2,34 +2,42 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroidx/core/util/Consumer;
+.implements Landroid/view/View$OnTouchListener;
 
 
-# instance fields
-.field public final synthetic f$0:Lorg/telegram/ui/ChatActivity;
+# static fields
+.field public static final synthetic INSTANCE:Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda106;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lorg/telegram/ui/ChatActivity;)V
-    .registers 2
+.method static synthetic constructor <clinit>()V
+    .registers 1
+
+    new-instance v0, Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda106;
+
+    invoke-direct {v0}, Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda106;-><init>()V
+
+    sput-object v0, Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda106;->INSTANCE:Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda106;
+
+    return-void
+.end method
+
+.method private synthetic constructor <init>()V
+    .registers 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda106;->f$0:Lorg/telegram/ui/ChatActivity;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
+.method public final onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
     .registers 3
 
-    iget-object v0, p0, Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda106;->f$0:Lorg/telegram/ui/ChatActivity;
+    invoke-static {p1, p2}, Lorg/telegram/ui/ChatActivity;->$r8$lambda$aebS_XLfjrMP_JibJrwJ0umrpOw(Landroid/view/View;Landroid/view/MotionEvent;)Z
 
-    check-cast p1, Ljava/lang/Integer;
+    move-result p1
 
-    invoke-static {v0, p1}, Lorg/telegram/ui/ChatActivity;->$r8$lambda$DEnho84T0JiX74mVM1yUDPG5d2o(Lorg/telegram/ui/ChatActivity;Ljava/lang/Integer;)V
-
-    return-void
+    return p1
 .end method

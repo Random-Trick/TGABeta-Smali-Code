@@ -63,7 +63,7 @@
 
     iget-object v7, p0, Lorg/telegram/ui/ProfileActivity$$ExternalSyntheticLambda22;->f$6:Lorg/telegram/tgnet/TLRPC$PhotoSize;
 
-    invoke-static/range {v0 .. v7}, Lorg/telegram/ui/ProfileActivity;->$r8$lambda$KFWy1PdGsr5kjyIAAobr62Wp-oA(Lorg/telegram/ui/ProfileActivity;Lorg/telegram/tgnet/TLRPC$InputFile;Lorg/telegram/tgnet/TLRPC$InputFile;DLjava/lang/String;Lorg/telegram/tgnet/TLRPC$PhotoSize;Lorg/telegram/tgnet/TLRPC$PhotoSize;)V
+    invoke-static/range {v0 .. v7}, Lorg/telegram/ui/ProfileActivity;->$r8$lambda$AXCd5Gh43tkQE6KiccLQHNQjq9U(Lorg/telegram/ui/ProfileActivity;Lorg/telegram/tgnet/TLRPC$InputFile;Lorg/telegram/tgnet/TLRPC$InputFile;DLjava/lang/String;Lorg/telegram/tgnet/TLRPC$PhotoSize;Lorg/telegram/tgnet/TLRPC$PhotoSize;)V
 
     return-void
 .end method

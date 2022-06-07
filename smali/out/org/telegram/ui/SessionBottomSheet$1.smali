@@ -25,7 +25,7 @@
 .method constructor <init>(Lorg/telegram/ui/SessionBottomSheet;)V
     .registers 2
 
-    .line 56
+    .line 57
     iput-object p1, p0, Lorg/telegram/ui/SessionBottomSheet$1;->this$0:Lorg/telegram/ui/SessionBottomSheet;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public onClick(Landroid/view/View;)V
     .registers 3
 
-    .line 59
+    .line 60
     iget-object p1, p0, Lorg/telegram/ui/SessionBottomSheet$1;->this$0:Lorg/telegram/ui/SessionBottomSheet;
 
     iget-object p1, p1, Lorg/telegram/ui/SessionBottomSheet;->imageView:Lorg/telegram/ui/Components/RLottieImageView;
@@ -59,7 +59,7 @@
 
     if-eqz p1, :cond_28
 
-    .line 60
+    .line 61
     iget-object p1, p0, Lorg/telegram/ui/SessionBottomSheet$1;->this$0:Lorg/telegram/ui/SessionBottomSheet;
 
     iget-object p1, p1, Lorg/telegram/ui/SessionBottomSheet;->imageView:Lorg/telegram/ui/Components/RLottieImageView;
@@ -72,7 +72,7 @@
 
     invoke-virtual {p1, v0}, Lorg/telegram/ui/Components/RLottieDrawable;->setCurrentFrame(I)V
 
-    .line 61
+    .line 62
     iget-object p1, p0, Lorg/telegram/ui/SessionBottomSheet$1;->this$0:Lorg/telegram/ui/SessionBottomSheet;
 
     iget-object p1, p1, Lorg/telegram/ui/SessionBottomSheet;->imageView:Lorg/telegram/ui/Components/RLottieImageView;

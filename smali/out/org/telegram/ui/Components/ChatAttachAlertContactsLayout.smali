@@ -106,7 +106,7 @@
 
     const-string v1, "SearchFriends"
 
-    const v2, 0x7f0e0f85
+    const v2, 0x7f0e1041
 
     .line 321
     invoke-static {v1, v2}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -147,7 +147,7 @@
 
     const-string v1, "NoContacts"
 
-    const v4, 0x7f0e0aae
+    const v4, 0x7f0e0b35
 
     invoke-static {v1, v4}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 

@@ -23,7 +23,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 45256
+    .line 45708
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -32,7 +32,7 @@
 .method public static TLdeserialize(Lorg/telegram/tgnet/AbstractSerializedData;IZ)Lorg/telegram/tgnet/TLRPC$TL_topPeer;
     .registers 4
 
-    .line 45263
+    .line 45715
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_topPeer;->constructor:I
 
     if-eq v0, p1, :cond_1e
@@ -43,7 +43,7 @@
 
     return-object p0
 
-    .line 45265
+    .line 45717
     :cond_8
     new-instance p0, Ljava/lang/RuntimeException;
 
@@ -69,13 +69,13 @@
 
     throw p0
 
-    .line 45270
+    .line 45722
     :cond_1e
     new-instance p1, Lorg/telegram/tgnet/TLRPC$TL_topPeer;
 
     invoke-direct {p1}, Lorg/telegram/tgnet/TLRPC$TL_topPeer;-><init>()V
 
-    .line 45271
+    .line 45723
     invoke-virtual {p1, p0, p2}, Lorg/telegram/tgnet/TLRPC$TL_topPeer;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
     return-object p1
@@ -86,7 +86,7 @@
 .method public readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
     .registers 4
 
-    .line 45276
+    .line 45728
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
@@ -97,7 +97,7 @@
 
     iput-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_topPeer;->peer:Lorg/telegram/tgnet/TLRPC$Peer;
 
-    .line 45277
+    .line 45729
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readDouble(Z)D
 
     move-result-wide p1
@@ -110,17 +110,17 @@
 .method public serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
     .registers 4
 
-    .line 45281
+    .line 45733
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_topPeer;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 45282
+    .line 45734
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_topPeer;->peer:Lorg/telegram/tgnet/TLRPC$Peer;
 
     invoke-virtual {v0, p1}, Lorg/telegram/tgnet/TLObject;->serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
 
-    .line 45283
+    .line 45735
     iget-wide v0, p0, Lorg/telegram/tgnet/TLRPC$TL_topPeer;->rating:D
 
     invoke-virtual {p1, v0, v1}, Lorg/telegram/tgnet/AbstractSerializedData;->writeDouble(D)V

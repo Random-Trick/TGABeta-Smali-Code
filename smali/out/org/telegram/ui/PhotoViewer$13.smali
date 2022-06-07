@@ -25,7 +25,7 @@
 .method constructor <init>(Lorg/telegram/ui/PhotoViewer;)V
     .registers 2
 
-    .line 4442
+    .line 4562
     iput-object p1, p0, Lorg/telegram/ui/PhotoViewer$13;->this$0:Lorg/telegram/ui/PhotoViewer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public onSpeedSelected(F)V
     .registers 7
 
-    .line 4446
+    .line 4566
     iget-object v0, p0, Lorg/telegram/ui/PhotoViewer$13;->this$0:Lorg/telegram/ui/PhotoViewer;
 
     invoke-static {v0}, Lorg/telegram/ui/PhotoViewer;->access$300(Lorg/telegram/ui/PhotoViewer;)Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
@@ -47,7 +47,7 @@
 
     invoke-virtual {v0}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->toggleSubMenu()V
 
-    .line 4447
+    .line 4567
     iget-object v0, p0, Lorg/telegram/ui/PhotoViewer$13;->this$0:Lorg/telegram/ui/PhotoViewer;
 
     invoke-static {v0}, Lorg/telegram/ui/PhotoViewer;->access$16400(Lorg/telegram/ui/PhotoViewer;)F
@@ -58,12 +58,12 @@
 
     if-eqz v0, :cond_e3
 
-    .line 4448
+    .line 4568
     iget-object v0, p0, Lorg/telegram/ui/PhotoViewer$13;->this$0:Lorg/telegram/ui/PhotoViewer;
 
     invoke-static {v0, p1}, Lorg/telegram/ui/PhotoViewer;->access$16402(Lorg/telegram/ui/PhotoViewer;F)F
 
-    .line 4449
+    .line 4569
     iget-object p1, p0, Lorg/telegram/ui/PhotoViewer$13;->this$0:Lorg/telegram/ui/PhotoViewer;
 
     invoke-static {p1}, Lorg/telegram/ui/PhotoViewer;->access$000(Lorg/telegram/ui/PhotoViewer;)Lorg/telegram/messenger/MessageObject;
@@ -72,7 +72,7 @@
 
     if-eqz p1, :cond_b0
 
-    .line 4450
+    .line 4570
     sget-object p1, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     const/4 v0, 0x0
@@ -83,7 +83,7 @@
 
     move-result-object p1
 
-    .line 4451
+    .line 4571
     iget-object v0, p0, Lorg/telegram/ui/PhotoViewer$13;->this$0:Lorg/telegram/ui/PhotoViewer;
 
     invoke-static {v0}, Lorg/telegram/ui/PhotoViewer;->access$16400(Lorg/telegram/ui/PhotoViewer;)F
@@ -108,7 +108,7 @@
 
     if-gez v0, :cond_76
 
-    .line 4452
+    .line 4572
     invoke-interface {p1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object p1
@@ -157,7 +157,7 @@
 
     goto :goto_b0
 
-    .line 4454
+    .line 4574
     :cond_76
     invoke-interface {p1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
@@ -211,7 +211,7 @@
 
     invoke-interface {p1}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 4457
+    .line 4577
     :cond_b0
     :goto_b0
     iget-object p1, p0, Lorg/telegram/ui/PhotoViewer$13;->this$0:Lorg/telegram/ui/PhotoViewer;
@@ -222,7 +222,7 @@
 
     if-eqz p1, :cond_c7
 
-    .line 4458
+    .line 4578
     iget-object p1, p0, Lorg/telegram/ui/PhotoViewer$13;->this$0:Lorg/telegram/ui/PhotoViewer;
 
     invoke-static {p1}, Lorg/telegram/ui/PhotoViewer;->access$1400(Lorg/telegram/ui/PhotoViewer;)Lorg/telegram/ui/Components/VideoPlayer;
@@ -237,7 +237,7 @@
 
     invoke-virtual {p1, v0}, Lorg/telegram/ui/Components/VideoPlayer;->setPlaybackSpeed(F)V
 
-    .line 4460
+    .line 4580
     :cond_c7
     iget-object p1, p0, Lorg/telegram/ui/PhotoViewer$13;->this$0:Lorg/telegram/ui/PhotoViewer;
 
@@ -247,7 +247,7 @@
 
     if-eqz p1, :cond_de
 
-    .line 4461
+    .line 4581
     iget-object p1, p0, Lorg/telegram/ui/PhotoViewer$13;->this$0:Lorg/telegram/ui/PhotoViewer;
 
     invoke-static {p1}, Lorg/telegram/ui/PhotoViewer;->access$14700(Lorg/telegram/ui/PhotoViewer;)Lorg/telegram/ui/Components/PhotoViewerWebView;
@@ -262,7 +262,7 @@
 
     invoke-virtual {p1, v0}, Lorg/telegram/ui/Components/PhotoViewerWebView;->setPlaybackSpeed(F)V
 
-    .line 4463
+    .line 4583
     :cond_de
     iget-object p1, p0, Lorg/telegram/ui/PhotoViewer$13;->this$0:Lorg/telegram/ui/PhotoViewer;
 

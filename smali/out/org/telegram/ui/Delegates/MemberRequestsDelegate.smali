@@ -577,7 +577,7 @@
 
     if-eqz p3, :cond_8b
 
-    const p3, 0x7f0e082b
+    const p3, 0x7f0e0885
 
     new-array p4, p6, [Ljava/lang/Object;
 
@@ -593,7 +593,7 @@
     goto :goto_98
 
     :cond_8b
-    const p3, 0x7f0e082c
+    const p3, 0x7f0e0886
 
     new-array p4, p6, [Ljava/lang/Object;
 
@@ -1499,14 +1499,14 @@
 
     if-eqz v1, :cond_25
 
-    const v1, 0x7f0e0ae8
+    const v1, 0x7f0e0b71
 
     const-string v2, "NoSubscribeRequests"
 
     goto :goto_2a
 
     :cond_25
-    const v1, 0x7f0e0ac2
+    const v1, 0x7f0e0b49
 
     const-string v2, "NoMemberRequests"
 
@@ -1526,14 +1526,14 @@
 
     if-eqz v1, :cond_3f
 
-    const v1, 0x7f0e0ae9
+    const v1, 0x7f0e0b72
 
     const-string v2, "NoSubscribeRequestsDescription"
 
     goto :goto_44
 
     :cond_3f
-    const v1, 0x7f0e0ac3
+    const v1, 0x7f0e0b4a
 
     const-string v2, "NoMemberRequestsDescription"
 
@@ -1861,7 +1861,7 @@
 
     iget-object v0, v0, Lorg/telegram/ui/Components/StickerEmptyView;->title:Landroid/widget/TextView;
 
-    const v1, 0x7f0e0ad8
+    const v1, 0x7f0e0b60
 
     const-string v2, "NoResult"
 
@@ -1876,7 +1876,7 @@
 
     iget-object v0, v0, Lorg/telegram/ui/Components/StickerEmptyView;->subtitle:Landroid/widget/TextView;
 
-    const v1, 0x7f0e0f7a
+    const v1, 0x7f0e1036
 
     const-string v2, "SearchEmptyViewFilteredSubtitle2"
 

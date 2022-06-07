@@ -25,7 +25,7 @@
 .method constructor <init>(Lorg/telegram/ui/Cells/ChatMessageCell;)V
     .registers 2
 
-    .line 936
+    .line 951
     iput-object p1, p0, Lorg/telegram/ui/Cells/ChatMessageCell$2;->this$0:Lorg/telegram/ui/Cells/ChatMessageCell;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,12 +38,12 @@
 .method public run()V
     .registers 6
 
-    .line 939
+    .line 954
     iget-object v0, p0, Lorg/telegram/ui/Cells/ChatMessageCell$2;->this$0:Lorg/telegram/ui/Cells/ChatMessageCell;
 
     invoke-static {v0}, Lorg/telegram/ui/Cells/ChatMessageCell;->access$100(Lorg/telegram/ui/Cells/ChatMessageCell;)V
 
-    .line 940
+    .line 955
     iget-object v0, p0, Lorg/telegram/ui/Cells/ChatMessageCell$2;->this$0:Lorg/telegram/ui/Cells/ChatMessageCell;
 
     invoke-static {v0}, Lorg/telegram/ui/Cells/ChatMessageCell;->access$200(Lorg/telegram/ui/Cells/ChatMessageCell;)Z
@@ -52,12 +52,12 @@
 
     if-eqz v0, :cond_19
 
-    .line 941
+    .line 956
     iget-object v0, p0, Lorg/telegram/ui/Cells/ChatMessageCell$2;->this$0:Lorg/telegram/ui/Cells/ChatMessageCell;
 
     invoke-virtual {v0}, Lorg/telegram/ui/Cells/ChatMessageCell;->invalidate()V
 
-    .line 942
+    .line 957
     iget-object v0, p0, Lorg/telegram/ui/Cells/ChatMessageCell$2;->this$0:Lorg/telegram/ui/Cells/ChatMessageCell;
 
     const/4 v1, 0x0
@@ -66,7 +66,7 @@
 
     goto :goto_5b
 
-    .line 944
+    .line 959
     :cond_19
     iget-object v0, p0, Lorg/telegram/ui/Cells/ChatMessageCell$2;->this$0:Lorg/telegram/ui/Cells/ChatMessageCell;
 
@@ -118,7 +118,7 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Lorg/telegram/ui/Cells/ChatMessageCell;->invalidate(IIII)V
 
-    .line 945
+    .line 960
     iget-object v0, p0, Lorg/telegram/ui/Cells/ChatMessageCell$2;->this$0:Lorg/telegram/ui/Cells/ChatMessageCell;
 
     invoke-static {v0}, Lorg/telegram/ui/Cells/ChatMessageCell;->access$300(Lorg/telegram/ui/Cells/ChatMessageCell;)Z
@@ -127,7 +127,7 @@
 
     if-eqz v0, :cond_5b
 
-    .line 946
+    .line 961
     iget-object v0, p0, Lorg/telegram/ui/Cells/ChatMessageCell$2;->this$0:Lorg/telegram/ui/Cells/ChatMessageCell;
 
     invoke-static {v0}, Lorg/telegram/ui/Cells/ChatMessageCell;->access$500(Lorg/telegram/ui/Cells/ChatMessageCell;)Ljava/lang/Runnable;

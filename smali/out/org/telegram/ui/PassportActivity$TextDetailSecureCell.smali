@@ -322,7 +322,7 @@
     .line 472
     iget-object p1, p0, Lorg/telegram/ui/PassportActivity$TextDetailSecureCell;->checkImageView:Landroid/widget/ImageView;
 
-    const p2, 0x7f0703d8
+    const p2, 0x7f0703cf
 
     invoke-virtual {p1, p2}, Landroid/widget/ImageView;->setImageResource(I)V
 

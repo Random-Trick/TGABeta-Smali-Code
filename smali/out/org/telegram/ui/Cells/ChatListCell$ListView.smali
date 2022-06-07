@@ -28,17 +28,17 @@
 .method public constructor <init>(Lorg/telegram/ui/Cells/ChatListCell;Landroid/content/Context;Z)V
     .registers 13
 
-    .line 32
+    .line 33
     invoke-direct {p0, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    .line 28
+    .line 29
     new-instance v0, Landroid/graphics/RectF;
 
     invoke-direct {v0}, Landroid/graphics/RectF;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/ui/Cells/ChatListCell$ListView;->rect:Landroid/graphics/RectF;
 
-    .line 29
+    .line 30
     new-instance v0, Landroid/text/TextPaint;
 
     const/4 v1, 0x1
@@ -49,26 +49,26 @@
 
     const/4 v0, 0x0
 
-    .line 33
+    .line 34
     invoke-virtual {p0, v0}, Landroid/widget/FrameLayout;->setWillNotDraw(Z)V
 
-    .line 35
+    .line 36
     iput-boolean p3, p0, Lorg/telegram/ui/Cells/ChatListCell$ListView;->isThreeLines:Z
 
     if-eqz p3, :cond_20
 
-    const p3, 0x7f0e03f6
+    const p3, 0x7f0e0435
 
     const-string v2, "ChatListExpanded"
 
     goto :goto_25
 
     :cond_20
-    const p3, 0x7f0e03f5
+    const p3, 0x7f0e0434
 
     const-string v2, "ChatListDefault"
 
-    .line 36
+    .line 37
     :goto_25
     invoke-static {v2, p3}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
@@ -76,7 +76,7 @@
 
     invoke-virtual {p0, p3}, Landroid/widget/FrameLayout;->setContentDescription(Ljava/lang/CharSequence;)V
 
-    .line 38
+    .line 39
     iget-object p3, p0, Lorg/telegram/ui/Cells/ChatListCell$ListView;->textPaint:Landroid/text/TextPaint;
 
     const/high16 v2, 0x41500000    # 13.0f
@@ -89,7 +89,7 @@
 
     invoke-virtual {p3, v2}, Landroid/text/TextPaint;->setTextSize(F)V
 
-    .line 40
+    .line 41
     new-instance p3, Lorg/telegram/ui/Cells/ChatListCell$ListView$1;
 
     invoke-direct {p3, p0, p2, p1}, Lorg/telegram/ui/Cells/ChatListCell$ListView$1;-><init>(Lorg/telegram/ui/Cells/ChatListCell$ListView;Landroid/content/Context;Lorg/telegram/ui/Cells/ChatListCell;)V
@@ -98,14 +98,14 @@
 
     const/high16 p1, 0x41a00000    # 20.0f
 
-    .line 47
+    .line 48
     invoke-static {p1}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result p1
 
     invoke-virtual {p3, p1}, Lorg/telegram/ui/Components/RadioButton;->setSize(I)V
 
-    .line 48
+    .line 49
     iget-object p1, p0, Lorg/telegram/ui/Cells/ChatListCell$ListView;->button:Lorg/telegram/ui/Components/RadioButton;
 
     const/16 v2, 0x16
@@ -128,7 +128,7 @@
 
     invoke-virtual {p0, p1, p2}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 49
+    .line 50
     iget-object p1, p0, Lorg/telegram/ui/Cells/ChatListCell$ListView;->button:Lorg/telegram/ui/Components/RadioButton;
 
     iget-boolean p2, p0, Lorg/telegram/ui/Cells/ChatListCell$ListView;->isThreeLines:Z
@@ -161,7 +161,7 @@
 .method static synthetic access$000(Lorg/telegram/ui/Cells/ChatListCell$ListView;)Lorg/telegram/ui/Components/RadioButton;
     .registers 1
 
-    .line 24
+    .line 25
     iget-object p0, p0, Lorg/telegram/ui/Cells/ChatListCell$ListView;->button:Lorg/telegram/ui/Components/RadioButton;
 
     return-object p0
@@ -178,27 +178,27 @@
 
     const-string v2, "switchTrack"
 
-    .line 54
+    .line 55
     invoke-static {v2}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
 
     move-result v2
 
-    .line 55
+    .line 56
     invoke-static {v2}, Landroid/graphics/Color;->red(I)I
 
     move-result v3
 
-    .line 56
+    .line 57
     invoke-static {v2}, Landroid/graphics/Color;->green(I)I
 
     move-result v4
 
-    .line 57
+    .line 58
     invoke-static {v2}, Landroid/graphics/Color;->blue(I)I
 
     move-result v2
 
-    .line 59
+    .line 60
     iget-object v5, v0, Lorg/telegram/ui/Cells/ChatListCell$ListView;->button:Lorg/telegram/ui/Components/RadioButton;
 
     const-string v6, "radioBackground"
@@ -215,7 +215,7 @@
 
     invoke-virtual {v5, v6, v7}, Lorg/telegram/ui/Components/RadioButton;->setColor(II)V
 
-    .line 61
+    .line 62
     iget-object v5, v0, Lorg/telegram/ui/Cells/ChatListCell$ListView;->rect:Landroid/graphics/RectF;
 
     const/high16 v6, 0x3f800000    # 1.0f
@@ -254,7 +254,7 @@
 
     invoke-virtual {v5, v7, v8, v9, v10}, Landroid/graphics/RectF;->set(FFFF)V
 
-    .line 62
+    .line 63
     sget-object v5, Lorg/telegram/ui/ActionBar/Theme;->chat_instantViewRectPaint:Landroid/graphics/Paint;
 
     iget-object v7, v0, Lorg/telegram/ui/Cells/ChatListCell$ListView;->button:Lorg/telegram/ui/Components/RadioButton;
@@ -275,7 +275,7 @@
 
     invoke-virtual {v5, v7}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 63
+    .line 64
     iget-object v5, v0, Lorg/telegram/ui/Cells/ChatListCell$ListView;->rect:Landroid/graphics/RectF;
 
     const/high16 v7, 0x40c00000    # 6.0f
@@ -296,7 +296,7 @@
 
     invoke-virtual {v1, v5, v8, v9, v10}, Landroid/graphics/Canvas;->drawRoundRect(Landroid/graphics/RectF;FFLandroid/graphics/Paint;)V
 
-    .line 65
+    .line 66
     iget-object v5, v0, Lorg/telegram/ui/Cells/ChatListCell$ListView;->rect:Landroid/graphics/RectF;
 
     invoke-virtual/range {p0 .. p0}, Landroid/widget/FrameLayout;->getMeasuredWidth()I
@@ -317,7 +317,7 @@
 
     invoke-virtual {v5, v10, v10, v8, v9}, Landroid/graphics/RectF;->set(FFFF)V
 
-    .line 66
+    .line 67
     sget-object v5, Lorg/telegram/ui/ActionBar/Theme;->dialogs_onlineCirclePaint:Landroid/graphics/Paint;
 
     iget-object v8, v0, Lorg/telegram/ui/Cells/ChatListCell$ListView;->button:Lorg/telegram/ui/Components/RadioButton;
@@ -340,7 +340,7 @@
 
     invoke-virtual {v5, v6}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 67
+    .line 68
     iget-object v5, v0, Lorg/telegram/ui/Cells/ChatListCell$ListView;->rect:Landroid/graphics/RectF;
 
     invoke-static {v7}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -359,19 +359,19 @@
 
     invoke-virtual {v1, v5, v6, v7, v8}, Landroid/graphics/Canvas;->drawRoundRect(Landroid/graphics/RectF;FFLandroid/graphics/Paint;)V
 
-    .line 69
+    .line 70
     iget-boolean v5, v0, Lorg/telegram/ui/Cells/ChatListCell$ListView;->isThreeLines:Z
 
     if-eqz v5, :cond_b2
 
-    const v5, 0x7f0e03f6
+    const v5, 0x7f0e0435
 
     const-string v6, "ChatListExpanded"
 
     goto :goto_b7
 
     :cond_b2
-    const v5, 0x7f0e03f5
+    const v5, 0x7f0e0434
 
     const-string v6, "ChatListDefault"
 
@@ -380,7 +380,7 @@
 
     move-result-object v5
 
-    .line 70
+    .line 71
     iget-object v6, v0, Lorg/telegram/ui/Cells/ChatListCell$ListView;->textPaint:Landroid/text/TextPaint;
 
     invoke-virtual {v6, v5}, Landroid/text/TextPaint;->measureText(Ljava/lang/String;)F
@@ -395,7 +395,7 @@
 
     double-to-int v6, v6
 
-    .line 72
+    .line 73
     iget-object v7, v0, Lorg/telegram/ui/Cells/ChatListCell$ListView;->textPaint:Landroid/text/TextPaint;
 
     const-string v8, "windowBackgroundWhiteBlackText"
@@ -406,7 +406,7 @@
 
     invoke-virtual {v7, v8}, Landroid/text/TextPaint;->setColor(I)V
 
-    .line 73
+    .line 74
     invoke-virtual/range {p0 .. p0}, Landroid/widget/FrameLayout;->getMeasuredWidth()I
 
     move-result v7
@@ -445,13 +445,13 @@
     :cond_ee
     const/high16 v8, 0x42540000    # 53.0f
 
-    .line 76
+    .line 77
     :goto_f0
     invoke-static {v8}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v8
 
-    .line 77
+    .line 78
     sget-object v9, Lorg/telegram/ui/ActionBar/Theme;->dialogs_onlineCirclePaint:Landroid/graphics/Paint;
 
     const/16 v10, 0xcc
@@ -476,7 +476,7 @@
 
     const/high16 v9, 0x41b00000    # 22.0f
 
-    .line 78
+    .line 79
     invoke-static {v9}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v9
@@ -499,7 +499,7 @@
 
     const/4 v9, 0x0
 
-    .line 80
+    .line 81
     :goto_11d
     iget-boolean v12, v0, Lorg/telegram/ui/Cells/ChatListCell$ListView;->isThreeLines:Z
 
@@ -515,7 +515,7 @@
     :goto_124
     if-ge v9, v12, :cond_1ce
 
-    .line 81
+    .line 82
     sget-object v12, Lorg/telegram/ui/ActionBar/Theme;->dialogs_onlineCirclePaint:Landroid/graphics/Paint;
 
     if-nez v9, :cond_12d
@@ -534,7 +534,7 @@
 
     invoke-virtual {v12, v13}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 82
+    .line 83
     iget-boolean v12, v0, Lorg/telegram/ui/Cells/ChatListCell$ListView;->isThreeLines:Z
 
     const/high16 v13, 0x42900000    # 72.0f
@@ -545,7 +545,7 @@
 
     if-eqz v12, :cond_186
 
-    .line 83
+    .line 84
     iget-object v12, v0, Lorg/telegram/ui/Cells/ChatListCell$ListView;->rect:Landroid/graphics/RectF;
 
     invoke-static {v15}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -604,7 +604,7 @@
 
     invoke-virtual {v12, v15, v6, v13, v5}, Landroid/graphics/RectF;->set(FFFF)V
 
-    .line 84
+    .line 85
     iget-object v5, v0, Lorg/telegram/ui/Cells/ChatListCell$ListView;->rect:Landroid/graphics/RectF;
 
     const/high16 v6, 0x3fc00000    # 1.5f
@@ -623,7 +623,7 @@
 
     goto :goto_1c9
 
-    .line 86
+    .line 87
     :cond_186
     iget-object v5, v0, Lorg/telegram/ui/Cells/ChatListCell$ListView;->rect:Landroid/graphics/RectF;
 
@@ -681,7 +681,7 @@
 
     invoke-virtual {v5, v6, v15, v13, v12}, Landroid/graphics/RectF;->set(FFFF)V
 
-    .line 87
+    .line 88
     iget-object v5, v0, Lorg/telegram/ui/Cells/ChatListCell$ListView;->rect:Landroid/graphics/RectF;
 
     const/high16 v6, 0x40000000    # 2.0f
@@ -721,12 +721,12 @@
 .end method
 
 .method public onInitializeAccessibilityNodeInfo(Landroid/view/accessibility/AccessibilityNodeInfo;)V
-    .registers 3
-
-    .line 95
-    invoke-super {p0, p1}, Landroid/widget/FrameLayout;->onInitializeAccessibilityNodeInfo(Landroid/view/accessibility/AccessibilityNodeInfo;)V
+    .registers 4
 
     .line 96
+    invoke-super {p0, p1}, Landroid/widget/FrameLayout;->onInitializeAccessibilityNodeInfo(Landroid/view/accessibility/AccessibilityNodeInfo;)V
+
+    .line 97
     const-class v0, Lorg/telegram/ui/Components/RadioButton;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -735,7 +735,7 @@
 
     invoke-virtual {p1, v0}, Landroid/view/accessibility/AccessibilityNodeInfo;->setClassName(Ljava/lang/CharSequence;)V
 
-    .line 97
+    .line 98
     iget-object v0, p0, Lorg/telegram/ui/Cells/ChatListCell$ListView;->button:Lorg/telegram/ui/Components/RadioButton;
 
     invoke-virtual {v0}, Lorg/telegram/ui/Components/RadioButton;->isChecked()Z
@@ -746,8 +746,31 @@
 
     const/4 v0, 0x1
 
-    .line 98
+    .line 99
     invoke-virtual {p1, v0}, Landroid/view/accessibility/AccessibilityNodeInfo;->setCheckable(Z)V
+
+    .line 100
+    iget-boolean v0, p0, Lorg/telegram/ui/Cells/ChatListCell$ListView;->isThreeLines:Z
+
+    if-eqz v0, :cond_23
+
+    const v0, 0x7f0e0435
+
+    const-string v1, "ChatListExpanded"
+
+    goto :goto_28
+
+    :cond_23
+    const v0, 0x7f0e0434
+
+    const-string v1, "ChatListDefault"
+
+    :goto_28
+    invoke-static {v1, v0}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Landroid/view/accessibility/AccessibilityNodeInfo;->setContentDescription(Ljava/lang/CharSequence;)V
 
     return-void
 .end method

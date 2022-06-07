@@ -1,5 +1,5 @@
 .class Lorg/telegram/ui/Components/SearchViewPager$3;
-.super Lorg/telegram/ui/Components/StickerEmptyView;
+.super Landroidx/recyclerview/widget/RecyclerView$OnScrollListener;
 .source "SearchViewPager.java"
 
 
@@ -17,47 +17,132 @@
 # instance fields
 .field final synthetic this$0:Lorg/telegram/ui/Components/SearchViewPager;
 
+.field final synthetic val$fragment:Lorg/telegram/ui/DialogsActivity;
+
 
 # direct methods
-.method constructor <init>(Lorg/telegram/ui/Components/SearchViewPager;Landroid/content/Context;Landroid/view/View;I)V
-    .registers 5
+.method constructor <init>(Lorg/telegram/ui/Components/SearchViewPager;Lorg/telegram/ui/DialogsActivity;)V
+    .registers 3
 
-    .line 155
+    .line 169
     iput-object p1, p0, Lorg/telegram/ui/Components/SearchViewPager$3;->this$0:Lorg/telegram/ui/Components/SearchViewPager;
 
-    invoke-direct {p0, p2, p3, p4}, Lorg/telegram/ui/Components/StickerEmptyView;-><init>(Landroid/content/Context;Landroid/view/View;I)V
+    iput-object p2, p0, Lorg/telegram/ui/Components/SearchViewPager$3;->val$fragment:Lorg/telegram/ui/DialogsActivity;
+
+    invoke-direct {p0}, Landroidx/recyclerview/widget/RecyclerView$OnScrollListener;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public setVisibility(I)V
+.method public onScrollStateChanged(Landroidx/recyclerview/widget/RecyclerView;I)V
     .registers 3
 
-    .line 158
-    iget-object v0, p0, Lorg/telegram/ui/Components/SearchViewPager$3;->this$0:Lorg/telegram/ui/Components/SearchViewPager;
+    const/4 p1, 0x1
 
-    invoke-static {v0}, Lorg/telegram/ui/Components/SearchViewPager;->access$200(Lorg/telegram/ui/Components/SearchViewPager;)Lorg/telegram/ui/FilteredSearchView;
+    if-ne p2, p1, :cond_10
 
-    move-result-object v0
+    .line 173
+    iget-object p1, p0, Lorg/telegram/ui/Components/SearchViewPager$3;->val$fragment:Lorg/telegram/ui/DialogsActivity;
 
-    invoke-virtual {v0}, Landroid/widget/FrameLayout;->getTag()Ljava/lang/Object;
+    invoke-virtual {p1}, Lorg/telegram/ui/ActionBar/BaseFragment;->getParentActivity()Landroid/app/Activity;
 
-    move-result-object v0
+    move-result-object p1
 
-    if-eqz v0, :cond_12
+    invoke-virtual {p1}, Landroid/app/Activity;->getCurrentFocus()Landroid/view/View;
 
-    const/16 p1, 0x8
+    move-result-object p1
 
-    .line 159
-    invoke-super {p0, p1}, Lorg/telegram/ui/Components/StickerEmptyView;->setVisibility(I)V
+    invoke-static {p1}, Lorg/telegram/messenger/AndroidUtilities;->hideKeyboard(Landroid/view/View;)V
 
+    :cond_10
     return-void
+.end method
 
-    .line 162
-    :cond_12
-    invoke-super {p0, p1}, Lorg/telegram/ui/Components/StickerEmptyView;->setVisibility(I)V
+.method public onScrolled(Landroidx/recyclerview/widget/RecyclerView;II)V
+    .registers 4
+
+    .line 179
+    iget-object p2, p0, Lorg/telegram/ui/Components/SearchViewPager$3;->this$0:Lorg/telegram/ui/Components/SearchViewPager;
+
+    invoke-static {p2}, Lorg/telegram/ui/Components/SearchViewPager;->access$200(Lorg/telegram/ui/Components/SearchViewPager;)Landroidx/recyclerview/widget/LinearLayoutManager;
+
+    move-result-object p2
+
+    invoke-virtual {p2}, Landroidx/recyclerview/widget/LinearLayoutManager;->findFirstVisibleItemPosition()I
+
+    move-result p2
+
+    .line 180
+    iget-object p3, p0, Lorg/telegram/ui/Components/SearchViewPager$3;->this$0:Lorg/telegram/ui/Components/SearchViewPager;
+
+    invoke-static {p3}, Lorg/telegram/ui/Components/SearchViewPager;->access$200(Lorg/telegram/ui/Components/SearchViewPager;)Landroidx/recyclerview/widget/LinearLayoutManager;
+
+    move-result-object p3
+
+    invoke-virtual {p3}, Landroidx/recyclerview/widget/LinearLayoutManager;->findLastVisibleItemPosition()I
+
+    move-result p3
+
+    sub-int/2addr p3, p2
+
+    invoke-static {p3}, Ljava/lang/Math;->abs(I)I
+
+    move-result p2
+
+    add-int/lit8 p2, p2, 0x1
+
+    .line 181
+    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Landroidx/recyclerview/widget/RecyclerView$Adapter;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->getItemCount()I
+
+    move-result p1
+
+    if-lez p2, :cond_44
+
+    .line 182
+    iget-object p2, p0, Lorg/telegram/ui/Components/SearchViewPager$3;->this$0:Lorg/telegram/ui/Components/SearchViewPager;
+
+    invoke-static {p2}, Lorg/telegram/ui/Components/SearchViewPager;->access$200(Lorg/telegram/ui/Components/SearchViewPager;)Landroidx/recyclerview/widget/LinearLayoutManager;
+
+    move-result-object p2
+
+    invoke-virtual {p2}, Landroidx/recyclerview/widget/LinearLayoutManager;->findLastVisibleItemPosition()I
+
+    move-result p2
+
+    add-int/lit8 p1, p1, -0x1
+
+    if-ne p2, p1, :cond_44
+
+    iget-object p1, p0, Lorg/telegram/ui/Components/SearchViewPager$3;->this$0:Lorg/telegram/ui/Components/SearchViewPager;
+
+    iget-object p1, p1, Lorg/telegram/ui/Components/SearchViewPager;->dialogsSearchAdapter:Lorg/telegram/ui/Adapters/DialogsSearchAdapter;
+
+    invoke-virtual {p1}, Lorg/telegram/ui/Adapters/DialogsSearchAdapter;->isMessagesSearchEndReached()Z
+
+    move-result p1
+
+    if-nez p1, :cond_44
+
+    .line 183
+    iget-object p1, p0, Lorg/telegram/ui/Components/SearchViewPager$3;->this$0:Lorg/telegram/ui/Components/SearchViewPager;
+
+    iget-object p1, p1, Lorg/telegram/ui/Components/SearchViewPager;->dialogsSearchAdapter:Lorg/telegram/ui/Adapters/DialogsSearchAdapter;
+
+    invoke-virtual {p1}, Lorg/telegram/ui/Adapters/DialogsSearchAdapter;->loadMoreSearchMessages()V
+
+    .line 185
+    :cond_44
+    iget-object p1, p0, Lorg/telegram/ui/Components/SearchViewPager$3;->this$0:Lorg/telegram/ui/Components/SearchViewPager;
+
+    iget-object p1, p1, Lorg/telegram/ui/Components/SearchViewPager;->fragmentView:Lorg/telegram/ui/Components/SizeNotifierFrameLayout;
+
+    invoke-virtual {p1}, Lorg/telegram/ui/Components/SizeNotifierFrameLayout;->invalidateBlur()V
 
     return-void
 .end method

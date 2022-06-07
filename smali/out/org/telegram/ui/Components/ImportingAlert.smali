@@ -381,7 +381,7 @@
 
     const-string v6, "ImportDone"
 
-    const v12, 0x7f0e085e
+    const v12, 0x7f0e08b9
 
     invoke-static {v6, v12}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
@@ -592,7 +592,7 @@
 
     aget-object v6, v6, v3
 
-    const v12, 0x7f0e086d
+    const v12, 0x7f0e08c8
 
     const-string v13, "ImportImportingInfo"
 
@@ -658,7 +658,7 @@
     :cond_242
     iget-object v1, v0, Lorg/telegram/ui/Components/ImportingAlert;->parentFragment:Lorg/telegram/ui/ChatActivity;
 
-    const v3, 0x7f0e085d
+    const v3, 0x7f0e08b8
 
     const-string v6, "ImportCount"
 
@@ -668,7 +668,7 @@
 
     if-eqz v1, :cond_2d5
 
-    const v1, 0x7f0e086e
+    const v1, 0x7f0e08c9
 
     const-string v2, "ImportImportingTitle"
 
@@ -764,7 +764,7 @@
 
     aget-object v1, v1, v10
 
-    const v2, 0x7f0e085f
+    const v2, 0x7f0e08ba
 
     const-string v3, "ImportDoneInfo"
 
@@ -779,7 +779,7 @@
 
     aget-object v1, v1, v10
 
-    const v2, 0x7f0e0860
+    const v2, 0x7f0e08bb
 
     const-string v3, "ImportDoneTitle"
 
@@ -803,7 +803,7 @@
     goto/16 :goto_353
 
     :cond_2d5
-    const v1, 0x7f0e0878
+    const v1, 0x7f0e08d3
 
     const-string v11, "ImportStickersImportingTitle"
 
@@ -893,7 +893,7 @@
 
     aget-object v1, v1, v10
 
-    const v2, 0x7f0e0873
+    const v2, 0x7f0e08ce
 
     const-string v3, "ImportStickersDoneInfo"
 
@@ -908,7 +908,7 @@
 
     aget-object v1, v1, v10
 
-    const v2, 0x7f0e0874
+    const v2, 0x7f0e08cf
 
     const-string v3, "ImportStickersDoneTitle"
 
@@ -993,7 +993,7 @@
 
     const/4 v5, 0x2
 
-    const v6, 0x7f0e085d
+    const v6, 0x7f0e08b8
 
     const-string v7, "ImportCount"
 

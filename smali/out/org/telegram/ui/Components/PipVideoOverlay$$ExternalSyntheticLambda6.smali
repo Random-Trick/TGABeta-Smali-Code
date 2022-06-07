@@ -27,7 +27,7 @@
 
     iget-object v0, p0, Lorg/telegram/ui/Components/PipVideoOverlay$$ExternalSyntheticLambda6;->f$0:Lorg/telegram/ui/Components/PipVideoOverlay;
 
-    invoke-static {v0}, Lorg/telegram/ui/Components/PipVideoOverlay;->$r8$lambda$PePdSKADEdeTct48oqI5W4DT93o(Lorg/telegram/ui/Components/PipVideoOverlay;)V
+    invoke-virtual {v0}, Lorg/telegram/ui/Components/PipVideoOverlay;->onLongClick()V
 
     return-void
 .end method

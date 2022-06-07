@@ -26,7 +26,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/TranslateAlert;FZ)V
     .registers 4
 
-    .line 840
+    .line 842
     iput-object p1, p0, Lorg/telegram/ui/Components/TranslateAlert$7;->this$0:Lorg/telegram/ui/Components/TranslateAlert;
 
     iput p2, p0, Lorg/telegram/ui/Components/TranslateAlert$7;->val$T:F
@@ -43,7 +43,7 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .registers 4
 
-    .line 843
+    .line 845
     iget p1, p0, Lorg/telegram/ui/Components/TranslateAlert$7;->val$T:F
 
     const/4 v0, 0x0
@@ -52,20 +52,20 @@
 
     if-gtz p1, :cond_d
 
-    .line 844
+    .line 846
     iget-object p1, p0, Lorg/telegram/ui/Components/TranslateAlert$7;->this$0:Lorg/telegram/ui/Components/TranslateAlert;
 
     invoke-virtual {p1}, Lorg/telegram/ui/Components/TranslateAlert;->dismissInternal()V
 
     goto :goto_3e
 
-    .line 845
+    .line 847
     :cond_d
     iget-boolean p1, p0, Lorg/telegram/ui/Components/TranslateAlert$7;->val$setAfter:Z
 
     if-eqz p1, :cond_3e
 
-    .line 846
+    .line 848
     iget-object p1, p0, Lorg/telegram/ui/Components/TranslateAlert$7;->this$0:Lorg/telegram/ui/Components/TranslateAlert;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/TranslateAlert;->access$1800(Lorg/telegram/ui/Components/TranslateAlert;)Landroid/widget/TextView;
@@ -82,7 +82,7 @@
 
     invoke-virtual {p1, v0}, Landroid/widget/TextView;->setTextIsSelectable(Z)V
 
-    .line 847
+    .line 849
     iget-object p1, p0, Lorg/telegram/ui/Components/TranslateAlert$7;->this$0:Lorg/telegram/ui/Components/TranslateAlert;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/TranslateAlert;->access$1800(Lorg/telegram/ui/Components/TranslateAlert;)Landroid/widget/TextView;
@@ -91,7 +91,7 @@
 
     invoke-virtual {p1}, Landroid/widget/TextView;->invalidate()V
 
-    .line 848
+    .line 850
     iget-object p1, p0, Lorg/telegram/ui/Components/TranslateAlert$7;->this$0:Lorg/telegram/ui/Components/TranslateAlert;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/TranslateAlert;->access$1900(Lorg/telegram/ui/Components/TranslateAlert;)Landroidx/core/widget/NestedScrollView;
@@ -100,7 +100,7 @@
 
     invoke-virtual {p1}, Landroidx/core/widget/NestedScrollView;->stopNestedScroll()V
 
-    .line 849
+    .line 851
     iget-object p1, p0, Lorg/telegram/ui/Components/TranslateAlert$7;->this$0:Lorg/telegram/ui/Components/TranslateAlert;
 
     iget v0, p0, Lorg/telegram/ui/Components/TranslateAlert$7;->val$T:F
@@ -111,7 +111,7 @@
 
     invoke-static {p1, v0}, Lorg/telegram/ui/Components/TranslateAlert;->access$2000(Lorg/telegram/ui/Components/TranslateAlert;F)V
 
-    .line 851
+    .line 853
     :cond_3e
     :goto_3e
     iget-object p1, p0, Lorg/telegram/ui/Components/TranslateAlert$7;->this$0:Lorg/telegram/ui/Components/TranslateAlert;

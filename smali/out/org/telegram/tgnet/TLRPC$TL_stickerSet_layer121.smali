@@ -17,7 +17,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 40427
+    .line 40879
     invoke-direct {p0}, Lorg/telegram/tgnet/TLRPC$TL_stickerSet;-><init>()V
 
     return-void
@@ -28,7 +28,7 @@
 .method public readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
     .registers 13
 
-    .line 40432
+    .line 40884
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
@@ -50,7 +50,7 @@
     :cond_e
     const/4 v1, 0x0
 
-    .line 40433
+    .line 40885
     :goto_f
     iput-boolean v1, p0, Lorg/telegram/tgnet/TLRPC$StickerSet;->archived:Z
 
@@ -65,7 +65,7 @@
     :cond_17
     const/4 v1, 0x0
 
-    .line 40434
+    .line 40886
     :goto_18
     iput-boolean v1, p0, Lorg/telegram/tgnet/TLRPC$StickerSet;->official:Z
 
@@ -80,7 +80,7 @@
     :cond_20
     const/4 v1, 0x0
 
-    .line 40435
+    .line 40887
     :goto_21
     iput-boolean v1, p0, Lorg/telegram/tgnet/TLRPC$StickerSet;->masks:Z
 
@@ -90,7 +90,7 @@
 
     const/4 v2, 0x1
 
-    .line 40436
+    .line 40888
     :cond_28
     iput-boolean v2, p0, Lorg/telegram/tgnet/TLRPC$StickerSet;->animated:Z
 
@@ -98,14 +98,14 @@
 
     if-eqz v0, :cond_33
 
-    .line 40438
+    .line 40890
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
 
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$StickerSet;->installed_date:I
 
-    .line 40440
+    .line 40892
     :cond_33
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt64(Z)J
 
@@ -113,28 +113,28 @@
 
     iput-wide v0, p0, Lorg/telegram/tgnet/TLRPC$StickerSet;->id:J
 
-    .line 40441
+    .line 40893
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt64(Z)J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lorg/telegram/tgnet/TLRPC$StickerSet;->access_hash:J
 
-    .line 40442
+    .line 40894
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readString(Z)Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/telegram/tgnet/TLRPC$StickerSet;->title:Ljava/lang/String;
 
-    .line 40443
+    .line 40895
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readString(Z)Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/telegram/tgnet/TLRPC$StickerSet;->short_name:Ljava/lang/String;
 
-    .line 40444
+    .line 40896
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$StickerSet;->flags:I
 
     and-int/lit8 v0, v0, 0x10
@@ -147,7 +147,7 @@
 
     const-wide/16 v5, 0x0
 
-    .line 40445
+    .line 40897
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v8
@@ -162,12 +162,12 @@
 
     if-eqz v0, :cond_68
 
-    .line 40447
+    .line 40899
     iget-object v1, p0, Lorg/telegram/tgnet/TLRPC$StickerSet;->thumbs:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 40450
+    .line 40902
     :cond_68
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$StickerSet;->flags:I
 
@@ -175,14 +175,14 @@
 
     if-eqz v0, :cond_74
 
-    .line 40451
+    .line 40903
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
 
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$StickerSet;->thumb_dc_id:I
 
-    .line 40453
+    .line 40905
     :cond_74
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
@@ -190,7 +190,7 @@
 
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$StickerSet;->count:I
 
-    .line 40454
+    .line 40906
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result p1
@@ -203,12 +203,12 @@
 .method public serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
     .registers 4
 
-    .line 40458
+    .line 40910
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_stickerSet_layer121;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 40459
+    .line 40911
     iget-boolean v0, p0, Lorg/telegram/tgnet/TLRPC$StickerSet;->archived:Z
 
     if-eqz v0, :cond_e
@@ -227,7 +227,7 @@
     :goto_12
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$StickerSet;->flags:I
 
-    .line 40460
+    .line 40912
     iget-boolean v1, p0, Lorg/telegram/tgnet/TLRPC$StickerSet;->official:Z
 
     if-eqz v1, :cond_1b
@@ -242,7 +242,7 @@
     :goto_1d
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$StickerSet;->flags:I
 
-    .line 40461
+    .line 40913
     iget-boolean v1, p0, Lorg/telegram/tgnet/TLRPC$StickerSet;->masks:Z
 
     if-eqz v1, :cond_26
@@ -257,7 +257,7 @@
     :goto_28
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$StickerSet;->flags:I
 
-    .line 40462
+    .line 40914
     iget-boolean v1, p0, Lorg/telegram/tgnet/TLRPC$StickerSet;->animated:Z
 
     if-eqz v1, :cond_31
@@ -272,50 +272,50 @@
     :goto_33
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$StickerSet;->flags:I
 
-    .line 40463
+    .line 40915
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 40464
+    .line 40916
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$StickerSet;->flags:I
 
     and-int/lit8 v0, v0, 0x1
 
     if-eqz v0, :cond_43
 
-    .line 40465
+    .line 40917
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$StickerSet;->installed_date:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 40467
+    .line 40919
     :cond_43
     iget-wide v0, p0, Lorg/telegram/tgnet/TLRPC$StickerSet;->id:J
 
     invoke-virtual {p1, v0, v1}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt64(J)V
 
-    .line 40468
+    .line 40920
     iget-wide v0, p0, Lorg/telegram/tgnet/TLRPC$StickerSet;->access_hash:J
 
     invoke-virtual {p1, v0, v1}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt64(J)V
 
-    .line 40469
+    .line 40921
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$StickerSet;->title:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeString(Ljava/lang/String;)V
 
-    .line 40470
+    .line 40922
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$StickerSet;->short_name:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeString(Ljava/lang/String;)V
 
-    .line 40471
+    .line 40923
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$StickerSet;->flags:I
 
     and-int/lit8 v0, v0, 0x10
 
     if-eqz v0, :cond_69
 
-    .line 40472
+    .line 40924
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$StickerSet;->thumbs:Ljava/util/ArrayList;
 
     const/4 v1, 0x0
@@ -328,7 +328,7 @@
 
     invoke-virtual {v0, p1}, Lorg/telegram/tgnet/TLObject;->serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
 
-    .line 40474
+    .line 40926
     :cond_69
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$StickerSet;->flags:I
 
@@ -336,18 +336,18 @@
 
     if-eqz v0, :cond_74
 
-    .line 40475
+    .line 40927
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$StickerSet;->thumb_dc_id:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 40477
+    .line 40929
     :cond_74
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$StickerSet;->count:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 40478
+    .line 40930
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$StickerSet;->hash:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V

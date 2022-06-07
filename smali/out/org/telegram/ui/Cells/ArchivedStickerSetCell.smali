@@ -79,7 +79,7 @@
 
     iput-object p2, p0, Lorg/telegram/ui/Cells/ArchivedStickerSetCell;->currentButton:Landroid/widget/Button;
 
-    const v2, 0x7f0e0104
+    const v2, 0x7f0e012c
 
     const-string v3, "Add"
 
@@ -183,7 +183,7 @@
 
     invoke-virtual {v3, v5}, Landroid/widget/Button;->setTextColor(I)V
 
-    const v5, 0x7f0e10d8
+    const v5, 0x7f0e1197
 
     const-string v6, "StickersRemove"
 
@@ -1002,9 +1002,13 @@
 
     iget v2, v2, Lorg/telegram/tgnet/TLRPC$StickerSet;->count:I
 
-    const-string v3, "Stickers"
+    const/4 v3, 0x0
 
-    invoke-static {v3, v2}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    new-array v4, v3, [Ljava/lang/Object;
+
+    const-string v5, "Stickers"
+
+    invoke-static {v5, v2, v4}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -1013,38 +1017,36 @@
     .line 160
     iget-object v0, p1, Lorg/telegram/tgnet/TLRPC$StickerSetCovered;->cover:Lorg/telegram/tgnet/TLRPC$Document;
 
-    if-eqz v0, :cond_29
+    if-eqz v0, :cond_2c
 
-    goto :goto_3c
+    goto :goto_3e
 
     .line 162
-    :cond_29
+    :cond_2c
     iget-object v0, p1, Lorg/telegram/tgnet/TLRPC$StickerSetCovered;->covers:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
 
     move-result v0
 
-    if-nez v0, :cond_3b
+    if-nez v0, :cond_3d
 
     .line 163
     iget-object v0, p1, Lorg/telegram/tgnet/TLRPC$StickerSetCovered;->covers:Ljava/util/ArrayList;
 
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    invoke-virtual {v0, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lorg/telegram/tgnet/TLRPC$Document;
 
-    goto :goto_3c
+    goto :goto_3e
 
-    :cond_3b
+    :cond_3d
     const/4 v0, 0x0
 
-    :goto_3c
-    if-eqz v0, :cond_c0
+    :goto_3e
+    if-eqz v0, :cond_c2
 
     .line 168
     iget-object v2, p1, Lorg/telegram/tgnet/TLRPC$StickerSetCovered;->set:Lorg/telegram/tgnet/TLRPC$StickerSet;
@@ -1057,12 +1059,12 @@
 
     move-result-object v2
 
-    if-nez v2, :cond_4b
+    if-nez v2, :cond_4d
 
     move-object v2, v0
 
     .line 172
-    :cond_4b
+    :cond_4d
     iget-object v4, p1, Lorg/telegram/tgnet/TLRPC$StickerSetCovered;->set:Lorg/telegram/tgnet/TLRPC$StickerSet;
 
     iget-object v4, v4, Lorg/telegram/tgnet/TLRPC$StickerSet;->thumbs:Ljava/util/ArrayList;
@@ -1078,7 +1080,7 @@
     .line 175
     instance-of v5, v2, Lorg/telegram/tgnet/TLRPC$Document;
 
-    if-eqz v5, :cond_66
+    if-eqz v5, :cond_68
 
     .line 176
     iget-object v2, v0, Lorg/telegram/tgnet/TLRPC$Document;->thumbs:Ljava/util/ArrayList;
@@ -1092,10 +1094,10 @@
 
     move-result-object v2
 
-    goto :goto_70
+    goto :goto_72
 
     .line 179
-    :cond_66
+    :cond_68
     check-cast v2, Lorg/telegram/tgnet/TLRPC$PhotoSize;
 
     .line 180
@@ -1107,19 +1109,19 @@
 
     move-result-object v2
 
-    :goto_70
+    :goto_72
     move-object v3, v2
 
-    if-eqz v5, :cond_a0
+    if-eqz v5, :cond_a2
 
     .line 183
     invoke-static {v0, v1}, Lorg/telegram/messenger/MessageObject;->isAnimatedStickerDocument(Lorg/telegram/tgnet/TLRPC$Document;Z)Z
 
     move-result v2
 
-    if-eqz v2, :cond_a0
+    if-eqz v2, :cond_a2
 
-    if-eqz v4, :cond_8e
+    if-eqz v4, :cond_90
 
     .line 185
     iget-object v1, p0, Lorg/telegram/ui/Cells/ArchivedStickerSetCell;->imageView:Lorg/telegram/ui/Components/BackupImageView;
@@ -1146,10 +1148,10 @@
 
     invoke-virtual/range {v0 .. v5}, Lorg/telegram/ui/Components/BackupImageView;->setImage(Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Landroid/graphics/drawable/Drawable;ILjava/lang/Object;)V
 
-    goto :goto_cb
+    goto :goto_cd
 
     .line 187
-    :cond_8e
+    :cond_90
     iget-object v1, p0, Lorg/telegram/ui/Cells/ArchivedStickerSetCell;->imageView:Lorg/telegram/ui/Components/BackupImageView;
 
     invoke-static {v0}, Lorg/telegram/messenger/ImageLocation;->getForDocument(Lorg/telegram/tgnet/TLRPC$Document;)Lorg/telegram/messenger/ImageLocation;
@@ -1172,15 +1174,15 @@
 
     invoke-virtual/range {v0 .. v6}, Lorg/telegram/ui/Components/BackupImageView;->setImage(Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;ILjava/lang/Object;)V
 
-    goto :goto_cb
+    goto :goto_cd
 
-    :cond_a0
-    if-eqz v3, :cond_b3
+    :cond_a2
+    if-eqz v3, :cond_b5
 
     .line 189
     iget v0, v3, Lorg/telegram/messenger/ImageLocation;->imageType:I
 
-    if-ne v0, v1, :cond_b3
+    if-ne v0, v1, :cond_b5
 
     .line 190
     iget-object v0, p0, Lorg/telegram/ui/Cells/ArchivedStickerSetCell;->imageView:Lorg/telegram/ui/Components/BackupImageView;
@@ -1197,10 +1199,10 @@
 
     invoke-virtual/range {v0 .. v5}, Lorg/telegram/ui/Components/BackupImageView;->setImage(Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Ljava/lang/String;Landroid/graphics/drawable/Drawable;Ljava/lang/Object;)V
 
-    goto :goto_cb
+    goto :goto_cd
 
     .line 192
-    :cond_b3
+    :cond_b5
     iget-object v0, p0, Lorg/telegram/ui/Cells/ArchivedStickerSetCell;->imageView:Lorg/telegram/ui/Components/BackupImageView;
 
     const-string v2, "50_50"
@@ -1215,10 +1217,10 @@
 
     invoke-virtual/range {v0 .. v5}, Lorg/telegram/ui/Components/BackupImageView;->setImage(Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Ljava/lang/String;Landroid/graphics/drawable/Drawable;Ljava/lang/Object;)V
 
-    goto :goto_cb
+    goto :goto_cd
 
     .line 195
-    :cond_c0
+    :cond_c2
     iget-object v0, p0, Lorg/telegram/ui/Cells/ArchivedStickerSetCell;->imageView:Lorg/telegram/ui/Components/BackupImageView;
 
     const/4 v1, 0x0
@@ -1233,7 +1235,7 @@
 
     invoke-virtual/range {v0 .. v5}, Lorg/telegram/ui/Components/BackupImageView;->setImage(Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Ljava/lang/String;Landroid/graphics/drawable/Drawable;Ljava/lang/Object;)V
 
-    :goto_cb
+    :goto_cd
     return-void
 .end method
 

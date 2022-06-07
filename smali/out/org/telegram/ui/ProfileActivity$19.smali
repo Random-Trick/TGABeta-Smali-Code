@@ -24,12 +24,12 @@
 .method constructor <init>(Lorg/telegram/ui/ProfileActivity;Landroid/content/Context;)V
     .registers 3
 
-    .line 3269
+    .line 3280
     iput-object p1, p0, Lorg/telegram/ui/ProfileActivity$19;->this$0:Lorg/telegram/ui/ProfileActivity;
 
     invoke-direct {p0, p2}, Lorg/telegram/ui/Components/RadialProgressView;-><init>(Landroid/content/Context;)V
 
-    .line 3270
+    .line 3281
     new-instance p1, Landroid/graphics/Paint;
 
     const/4 p2, 0x1
@@ -40,7 +40,7 @@
 
     const/high16 p2, 0x55000000
 
-    .line 3272
+    .line 3283
     invoke-virtual {p1, p2}, Landroid/graphics/Paint;->setColor(I)V
 
     return-void
@@ -51,7 +51,7 @@
 .method protected onDraw(Landroid/graphics/Canvas;)V
     .registers 6
 
-    .line 3277
+    .line 3288
     iget-object v0, p0, Lorg/telegram/ui/ProfileActivity$19;->this$0:Lorg/telegram/ui/ProfileActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/ProfileActivity;->access$400(Lorg/telegram/ui/ProfileActivity;)Lorg/telegram/ui/ProfileActivity$AvatarImageView;
@@ -76,7 +76,7 @@
 
     if-eqz v0, :cond_49
 
-    .line 3278
+    .line 3289
     iget-object v0, p0, Lorg/telegram/ui/ProfileActivity$19;->paint:Landroid/graphics/Paint;
 
     const/high16 v1, 0x42aa0000    # 85.0f
@@ -101,7 +101,7 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 3279
+    .line 3290
     invoke-virtual {p0}, Landroid/view/View;->getMeasuredWidth()I
 
     move-result v0
@@ -132,7 +132,7 @@
 
     invoke-virtual {p1, v0, v2, v3, v1}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
 
-    .line 3281
+    .line 3292
     :cond_49
     invoke-super {p0, p1}, Lorg/telegram/ui/Components/RadialProgressView;->onDraw(Landroid/graphics/Canvas;)V
 

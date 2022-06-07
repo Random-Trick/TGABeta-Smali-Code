@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/Cells/ChatListCell$ListView;Landroid/content/Context;Lorg/telegram/ui/Cells/ChatListCell;)V
     .registers 4
 
-    .line 40
+    .line 41
     iput-object p1, p0, Lorg/telegram/ui/Cells/ChatListCell$ListView$1;->this$1:Lorg/telegram/ui/Cells/ChatListCell$ListView;
 
     invoke-direct {p0, p2}, Lorg/telegram/ui/Components/RadioButton;-><init>(Landroid/content/Context;)V
@@ -35,10 +35,10 @@
 .method public invalidate()V
     .registers 2
 
-    .line 43
+    .line 44
     invoke-super {p0}, Landroid/view/View;->invalidate()V
 
-    .line 44
+    .line 45
     iget-object v0, p0, Lorg/telegram/ui/Cells/ChatListCell$ListView$1;->this$1:Lorg/telegram/ui/Cells/ChatListCell$ListView;
 
     invoke-virtual {v0}, Landroid/widget/FrameLayout;->invalidate()V

@@ -7,7 +7,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 5424
+    .line 5489
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -28,7 +28,7 @@
 
     goto :goto_17
 
-    .line 5430
+    .line 5495
     :cond_c
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_help_appUpdate;
 
@@ -36,7 +36,7 @@
 
     goto :goto_17
 
-    .line 5433
+    .line 5498
     :cond_12
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_help_noAppUpdate;
 
@@ -49,7 +49,7 @@
 
     goto :goto_32
 
-    .line 5437
+    .line 5502
     :cond_1c
     new-instance p0, Ljava/lang/RuntimeException;
 
@@ -79,7 +79,7 @@
     :goto_32
     if-eqz v0, :cond_37
 
-    .line 5440
+    .line 5505
     invoke-virtual {v0, p0, p2}, Lorg/telegram/tgnet/TLObject;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
     :cond_37

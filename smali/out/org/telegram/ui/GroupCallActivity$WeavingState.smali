@@ -38,25 +38,25 @@
 .method public constructor <init>(I)V
     .registers 3
 
-    .line 928
+    .line 930
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/high16 v0, -0x40800000    # -1.0f
 
-    .line 918
+    .line 920
     iput v0, p0, Lorg/telegram/ui/GroupCallActivity$WeavingState;->targetX:F
 
-    .line 919
+    .line 921
     iput v0, p0, Lorg/telegram/ui/GroupCallActivity$WeavingState;->targetY:F
 
-    .line 925
+    .line 927
     new-instance v0, Landroid/graphics/Matrix;
 
     invoke-direct {v0}, Landroid/graphics/Matrix;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/ui/GroupCallActivity$WeavingState;->matrix:Landroid/graphics/Matrix;
 
-    .line 929
+    .line 931
     iput p1, p0, Lorg/telegram/ui/GroupCallActivity$WeavingState;->currentState:I
 
     return-void
@@ -65,7 +65,7 @@
 .method private setTarget()V
     .registers 6
 
-    .line 969
+    .line 971
     iget v0, p0, Lorg/telegram/ui/GroupCallActivity$WeavingState;->currentState:I
 
     invoke-static {v0}, Lorg/telegram/ui/GroupCallActivity;->isGradientState(I)Z
@@ -82,7 +82,7 @@
 
     const v0, 0x3f59999a    # 0.85f
 
-    .line 970
+    .line 972
     sget-object v4, Lorg/telegram/messenger/Utilities;->random:Ljava/security/SecureRandom;
 
     invoke-virtual {v4, v3}, Ljava/security/SecureRandom;->nextInt(I)I
@@ -101,12 +101,12 @@
 
     const/high16 v0, 0x3f800000    # 1.0f
 
-    .line 971
+    .line 973
     iput v0, p0, Lorg/telegram/ui/GroupCallActivity$WeavingState;->targetY:F
 
     goto :goto_64
 
-    .line 972
+    .line 974
     :cond_24
     iget v0, p0, Lorg/telegram/ui/GroupCallActivity$WeavingState;->currentState:I
 
@@ -114,7 +114,7 @@
 
     if-ne v0, v4, :cond_4a
 
-    .line 973
+    .line 975
     sget-object v0, Lorg/telegram/messenger/Utilities;->random:Ljava/security/SecureRandom;
 
     invoke-virtual {v0, v3}, Ljava/security/SecureRandom;->nextInt(I)I
@@ -135,7 +135,7 @@
 
     const v0, 0x3f333333    # 0.7f
 
-    .line 974
+    .line 976
     sget-object v1, Lorg/telegram/messenger/Utilities;->random:Ljava/security/SecureRandom;
 
     invoke-virtual {v1, v3}, Ljava/security/SecureRandom;->nextInt(I)I
@@ -157,7 +157,7 @@
     :cond_4a
     const v0, 0x3f4ccccd    # 0.8f
 
-    .line 976
+    .line 978
     sget-object v4, Lorg/telegram/messenger/Utilities;->random:Ljava/security/SecureRandom;
 
     invoke-virtual {v4, v3}, Ljava/security/SecureRandom;->nextInt(I)I
@@ -174,7 +174,7 @@
 
     iput v4, p0, Lorg/telegram/ui/GroupCallActivity$WeavingState;->targetX:F
 
-    .line 977
+    .line 979
     sget-object v0, Lorg/telegram/messenger/Utilities;->random:Ljava/security/SecureRandom;
 
     invoke-virtual {v0, v3}, Ljava/security/SecureRandom;->nextInt(I)I
@@ -196,14 +196,14 @@
 .method public update(IIIJF)V
     .registers 10
 
-    .line 933
+    .line 935
     iget-object v0, p0, Lorg/telegram/ui/GroupCallActivity$WeavingState;->shader:Landroid/graphics/Shader;
 
     if-nez v0, :cond_5
 
     return-void
 
-    .line 936
+    .line 938
     :cond_5
     iget v0, p0, Lorg/telegram/ui/GroupCallActivity$WeavingState;->duration:F
 
@@ -219,7 +219,7 @@
 
     if-ltz v0, :cond_37
 
-    .line 937
+    .line 939
     :cond_12
     sget-object v0, Lorg/telegram/messenger/Utilities;->random:Ljava/security/SecureRandom;
 
@@ -235,10 +235,10 @@
 
     iput v0, p0, Lorg/telegram/ui/GroupCallActivity$WeavingState;->duration:F
 
-    .line 938
+    .line 940
     iput v1, p0, Lorg/telegram/ui/GroupCallActivity$WeavingState;->time:F
 
-    .line 939
+    .line 941
     iget v0, p0, Lorg/telegram/ui/GroupCallActivity$WeavingState;->targetX:F
 
     const/high16 v1, -0x40800000    # -1.0f
@@ -247,24 +247,24 @@
 
     if-nez v0, :cond_2c
 
-    .line 940
+    .line 942
     invoke-direct {p0}, Lorg/telegram/ui/GroupCallActivity$WeavingState;->setTarget()V
 
-    .line 942
+    .line 944
     :cond_2c
     iget v0, p0, Lorg/telegram/ui/GroupCallActivity$WeavingState;->targetX:F
 
     iput v0, p0, Lorg/telegram/ui/GroupCallActivity$WeavingState;->startX:F
 
-    .line 943
+    .line 945
     iget v0, p0, Lorg/telegram/ui/GroupCallActivity$WeavingState;->targetY:F
 
     iput v0, p0, Lorg/telegram/ui/GroupCallActivity$WeavingState;->startY:F
 
-    .line 944
+    .line 946
     invoke-direct {p0}, Lorg/telegram/ui/GroupCallActivity$WeavingState;->setTarget()V
 
-    .line 946
+    .line 948
     :cond_37
     iget v0, p0, Lorg/telegram/ui/GroupCallActivity$WeavingState;->time:F
 
@@ -294,17 +294,17 @@
 
     iput v0, p0, Lorg/telegram/ui/GroupCallActivity$WeavingState;->time:F
 
-    .line 947
+    .line 949
     iget p4, p0, Lorg/telegram/ui/GroupCallActivity$WeavingState;->duration:F
 
     cmpl-float p5, v0, p4
 
     if-lez p5, :cond_57
 
-    .line 948
+    .line 950
     iput p4, p0, Lorg/telegram/ui/GroupCallActivity$WeavingState;->time:F
 
-    .line 950
+    .line 952
     :cond_57
     sget-object p5, Lorg/telegram/ui/Components/CubicBezierInterpolator;->EASE_OUT:Lorg/telegram/ui/Components/CubicBezierInterpolator;
 
@@ -320,7 +320,7 @@
 
     int-to-float p3, p3
 
-    .line 951
+    .line 953
     iget p5, p0, Lorg/telegram/ui/GroupCallActivity$WeavingState;->startX:F
 
     iget p6, p0, Lorg/telegram/ui/GroupCallActivity$WeavingState;->targetX:F
@@ -341,7 +341,7 @@
 
     int-to-float p1, p1
 
-    .line 952
+    .line 954
     iget p6, p0, Lorg/telegram/ui/GroupCallActivity$WeavingState;->startY:F
 
     iget v0, p0, Lorg/telegram/ui/GroupCallActivity$WeavingState;->targetY:F
@@ -358,7 +358,7 @@
 
     sub-float/2addr p1, p5
 
-    .line 955
+    .line 957
     iget p3, p0, Lorg/telegram/ui/GroupCallActivity$WeavingState;->currentState:I
 
     invoke-static {p3}, Lorg/telegram/ui/GroupCallActivity;->isGradientState(I)Z
@@ -371,7 +371,7 @@
 
     goto :goto_92
 
-    .line 958
+    .line 960
     :cond_88
     iget p3, p0, Lorg/telegram/ui/GroupCallActivity$WeavingState;->currentState:I
 
@@ -389,7 +389,7 @@
     :goto_92
     const/high16 p4, 0x42f40000    # 122.0f
 
-    .line 960
+    .line 962
     invoke-static {p4}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result p4
@@ -402,17 +402,17 @@
 
     mul-float p4, p4, p3
 
-    .line 961
+    .line 963
     iget-object p3, p0, Lorg/telegram/ui/GroupCallActivity$WeavingState;->matrix:Landroid/graphics/Matrix;
 
     invoke-virtual {p3}, Landroid/graphics/Matrix;->reset()V
 
-    .line 962
+    .line 964
     iget-object p3, p0, Lorg/telegram/ui/GroupCallActivity$WeavingState;->matrix:Landroid/graphics/Matrix;
 
     invoke-virtual {p3, p2, p1}, Landroid/graphics/Matrix;->postTranslate(FF)Z
 
-    .line 963
+    .line 965
     iget-object p3, p0, Lorg/telegram/ui/GroupCallActivity$WeavingState;->matrix:Landroid/graphics/Matrix;
 
     add-float/2addr p2, p5
@@ -421,7 +421,7 @@
 
     invoke-virtual {p3, p4, p4, p2, p1}, Landroid/graphics/Matrix;->postScale(FFFF)Z
 
-    .line 965
+    .line 967
     iget-object p1, p0, Lorg/telegram/ui/GroupCallActivity$WeavingState;->shader:Landroid/graphics/Shader;
 
     iget-object p2, p0, Lorg/telegram/ui/GroupCallActivity$WeavingState;->matrix:Landroid/graphics/Matrix;

@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/ProfileActivity$OverlaysView;Lorg/telegram/ui/ProfileActivity;)V
     .registers 3
 
-    .line 768
+    .line 783
     iput-object p1, p0, Lorg/telegram/ui/ProfileActivity$OverlaysView$1;->this$1:Lorg/telegram/ui/ProfileActivity$OverlaysView;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -35,7 +35,7 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .registers 3
 
-    .line 771
+    .line 786
     iget-object p1, p0, Lorg/telegram/ui/ProfileActivity$OverlaysView$1;->this$1:Lorg/telegram/ui/ProfileActivity$OverlaysView;
 
     invoke-static {p1}, Lorg/telegram/ui/ProfileActivity$OverlaysView;->access$1600(Lorg/telegram/ui/ProfileActivity$OverlaysView;)Z
@@ -44,7 +44,7 @@
 
     if-nez p1, :cond_f
 
-    .line 772
+    .line 787
     iget-object p1, p0, Lorg/telegram/ui/ProfileActivity$OverlaysView$1;->this$1:Lorg/telegram/ui/ProfileActivity$OverlaysView;
 
     const/16 v0, 0x8
@@ -58,7 +58,7 @@
 .method public onAnimationStart(Landroid/animation/Animator;)V
     .registers 3
 
-    .line 778
+    .line 793
     iget-object p1, p0, Lorg/telegram/ui/ProfileActivity$OverlaysView$1;->this$1:Lorg/telegram/ui/ProfileActivity$OverlaysView;
 
     const/4 v0, 0x0

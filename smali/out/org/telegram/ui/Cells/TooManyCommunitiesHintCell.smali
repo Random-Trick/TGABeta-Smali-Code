@@ -251,7 +251,7 @@
 
     const-string v0, "TooManyCommunities"
 
-    const v1, 0x7f0e11a8
+    const v1, 0x7f0e1274
 
     invoke-static {v0, v1}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
@@ -262,7 +262,7 @@
     .line 80
     iget-object p1, p0, Lorg/telegram/ui/Cells/TooManyCommunitiesHintCell;->imageView:Landroid/widget/ImageView;
 
-    const v0, 0x7f070139
+    const v0, 0x7f070102
 
     invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setImageResource(I)V
 

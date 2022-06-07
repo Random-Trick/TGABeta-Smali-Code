@@ -57,9 +57,9 @@
 
     const-string v3, "OpenProfile"
 
-    const v4, 0x7f0e0bca
+    const v4, 0x7f0e0c54
 
-    const v5, 0x7f070299
+    const v5, 0x7f070287
 
     move-object v0, v6
 
@@ -76,9 +76,9 @@
 
     const-string v10, "OpenChannel2"
 
-    const v11, 0x7f0e0bc1
+    const v11, 0x7f0e0c4b
 
-    const v12, 0x7f07024e
+    const v12, 0x7f0701e9
 
     move-object v7, v0
 
@@ -95,9 +95,9 @@
 
     const-string v16, "OpenGroup2"
 
-    const v17, 0x7f0e0bc5
+    const v17, 0x7f0e0c4f
 
-    const v18, 0x7f07025c
+    const v18, 0x7f07020c
 
     move-object v13, v1
 
@@ -114,9 +114,9 @@
 
     const-string v10, "SendMessage"
 
-    const v11, 0x7f0e0fdc
+    const v11, 0x7f0e1099
 
-    const v12, 0x7f07025c
+    const v12, 0x7f07020c
 
     move-object v7, v2
 
@@ -133,9 +133,9 @@
 
     const-string v16, "Mention"
 
-    const v17, 0x7f0e09ec
+    const v17, 0x7f0e0a73
 
-    const v18, 0x7f070284
+    const v18, 0x7f070267
 
     move-object v13, v3
 

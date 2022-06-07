@@ -773,7 +773,7 @@
 
     const-string v1, "ChoosePhoto"
 
-    const v2, 0x7f0e044e
+    const v2, 0x7f0e0490
 
     .line 62
     invoke-static {v1, v2}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -784,11 +784,11 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/ui/ActionBar/BottomSheet$Builder;->setTitle(Ljava/lang/CharSequence;Z)Lorg/telegram/ui/ActionBar/BottomSheet$Builder;
 
-    const v1, 0x7f0e0fbf
+    const v1, 0x7f0e107c
 
     const-string v3, "SelectFromGallery"
 
-    const v4, 0x7f0e0456
+    const v4, 0x7f0e049b
 
     const-string v5, "ChooseTakePhoto"
 
@@ -815,7 +815,7 @@
 
     aput-object v1, v8, v2
 
-    const v1, 0x7f0e0fb8
+    const v1, 0x7f0e1075
 
     const-string v2, "SelectColor"
 
@@ -827,7 +827,7 @@
 
     const/4 v1, 0x3
 
-    const v2, 0x7f0e053e
+    const v2, 0x7f0e058f
 
     const-string v3, "Default"
 
@@ -879,7 +879,7 @@
 
     :array_6a
     .array-data 4
-        0x7f0701e9
-        0x7f070380
+        0x7f0701e7
+        0x7f0702a1
     .end array-data
 .end method

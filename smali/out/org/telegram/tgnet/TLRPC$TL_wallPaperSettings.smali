@@ -17,7 +17,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 36262
+    .line 36714
     invoke-direct {p0}, Lorg/telegram/tgnet/TLRPC$WallPaperSettings;-><init>()V
 
     return-void
@@ -28,7 +28,7 @@
 .method public readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
     .registers 7
 
-    .line 36267
+    .line 36719
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
@@ -50,7 +50,7 @@
     :cond_e
     const/4 v1, 0x0
 
-    .line 36268
+    .line 36720
     :goto_f
     iput-boolean v1, p0, Lorg/telegram/tgnet/TLRPC$WallPaperSettings;->blur:Z
 
@@ -60,7 +60,7 @@
 
     const/4 v2, 0x1
 
-    .line 36269
+    .line 36721
     :cond_16
     iput-boolean v2, p0, Lorg/telegram/tgnet/TLRPC$WallPaperSettings;->motion:Z
 
@@ -68,14 +68,14 @@
 
     if-eqz v0, :cond_21
 
-    .line 36271
+    .line 36723
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
 
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$WallPaperSettings;->background_color:I
 
-    .line 36273
+    .line 36725
     :cond_21
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$WallPaperSettings;->flags:I
 
@@ -83,14 +83,14 @@
 
     if-eqz v0, :cond_2d
 
-    .line 36274
+    .line 36726
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
 
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$WallPaperSettings;->second_background_color:I
 
-    .line 36276
+    .line 36728
     :cond_2d
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$WallPaperSettings;->flags:I
 
@@ -98,14 +98,14 @@
 
     if-eqz v0, :cond_39
 
-    .line 36277
+    .line 36729
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
 
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$WallPaperSettings;->third_background_color:I
 
-    .line 36279
+    .line 36731
     :cond_39
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$WallPaperSettings;->flags:I
 
@@ -113,14 +113,14 @@
 
     if-eqz v0, :cond_45
 
-    .line 36280
+    .line 36732
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
 
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$WallPaperSettings;->fourth_background_color:I
 
-    .line 36282
+    .line 36734
     :cond_45
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$WallPaperSettings;->flags:I
 
@@ -128,14 +128,14 @@
 
     if-eqz v0, :cond_51
 
-    .line 36283
+    .line 36735
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
 
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$WallPaperSettings;->intensity:I
 
-    .line 36285
+    .line 36737
     :cond_51
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$WallPaperSettings;->flags:I
 
@@ -143,7 +143,7 @@
 
     if-eqz v0, :cond_5d
 
-    .line 36286
+    .line 36738
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result p1
@@ -157,12 +157,12 @@
 .method public serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
     .registers 4
 
-    .line 36291
+    .line 36743
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_wallPaperSettings;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 36292
+    .line 36744
     iget-boolean v0, p0, Lorg/telegram/tgnet/TLRPC$WallPaperSettings;->blur:Z
 
     if-eqz v0, :cond_e
@@ -181,7 +181,7 @@
     :goto_12
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$WallPaperSettings;->flags:I
 
-    .line 36293
+    .line 36745
     iget-boolean v1, p0, Lorg/telegram/tgnet/TLRPC$WallPaperSettings;->motion:Z
 
     if-eqz v1, :cond_1b
@@ -196,22 +196,22 @@
     :goto_1d
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$WallPaperSettings;->flags:I
 
-    .line 36294
+    .line 36746
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 36295
+    .line 36747
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$WallPaperSettings;->flags:I
 
     and-int/lit8 v0, v0, 0x1
 
     if-eqz v0, :cond_2d
 
-    .line 36296
+    .line 36748
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$WallPaperSettings;->background_color:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 36298
+    .line 36750
     :cond_2d
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$WallPaperSettings;->flags:I
 
@@ -219,12 +219,12 @@
 
     if-eqz v0, :cond_38
 
-    .line 36299
+    .line 36751
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$WallPaperSettings;->second_background_color:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 36301
+    .line 36753
     :cond_38
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$WallPaperSettings;->flags:I
 
@@ -232,12 +232,12 @@
 
     if-eqz v0, :cond_43
 
-    .line 36302
+    .line 36754
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$WallPaperSettings;->third_background_color:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 36304
+    .line 36756
     :cond_43
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$WallPaperSettings;->flags:I
 
@@ -245,12 +245,12 @@
 
     if-eqz v0, :cond_4e
 
-    .line 36305
+    .line 36757
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$WallPaperSettings;->fourth_background_color:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 36307
+    .line 36759
     :cond_4e
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$WallPaperSettings;->flags:I
 
@@ -258,12 +258,12 @@
 
     if-eqz v0, :cond_59
 
-    .line 36308
+    .line 36760
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$WallPaperSettings;->intensity:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 36310
+    .line 36762
     :cond_59
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$WallPaperSettings;->flags:I
 
@@ -271,7 +271,7 @@
 
     if-eqz v0, :cond_64
 
-    .line 36311
+    .line 36763
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$WallPaperSettings;->rotation:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V

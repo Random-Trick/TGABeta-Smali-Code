@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/PhotoViewer;Landroid/content/Context;)V
     .registers 3
 
-    .line 4809
+    .line 4929
     iput-object p1, p0, Lorg/telegram/ui/PhotoViewer$22;->this$0:Lorg/telegram/ui/PhotoViewer;
 
     invoke-direct {p0, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
@@ -35,10 +35,10 @@
 .method public dispatchTouchEvent(Landroid/view/MotionEvent;)Z
     .registers 3
 
-    .line 4812
+    .line 4932
     iget-object v0, p0, Lorg/telegram/ui/PhotoViewer$22;->this$0:Lorg/telegram/ui/PhotoViewer;
 
-    invoke-static {v0}, Lorg/telegram/ui/PhotoViewer;->access$10300(Lorg/telegram/ui/PhotoViewer;)Z
+    invoke-static {v0}, Lorg/telegram/ui/PhotoViewer;->access$10200(Lorg/telegram/ui/PhotoViewer;)Z
 
     move-result v0
 
@@ -64,10 +64,10 @@
 .method public onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
     .registers 3
 
-    .line 4817
+    .line 4937
     iget-object v0, p0, Lorg/telegram/ui/PhotoViewer$22;->this$0:Lorg/telegram/ui/PhotoViewer;
 
-    invoke-static {v0}, Lorg/telegram/ui/PhotoViewer;->access$10300(Lorg/telegram/ui/PhotoViewer;)Z
+    invoke-static {v0}, Lorg/telegram/ui/PhotoViewer;->access$10200(Lorg/telegram/ui/PhotoViewer;)Z
 
     move-result v0
 
@@ -93,13 +93,13 @@
 .method protected onLayout(ZIIII)V
     .registers 7
 
-    .line 4855
+    .line 4975
     invoke-super/range {p0 .. p5}, Landroid/widget/FrameLayout;->onLayout(ZIIII)V
 
-    .line 4856
+    .line 4976
     iget-object p1, p0, Lorg/telegram/ui/PhotoViewer$22;->this$0:Lorg/telegram/ui/PhotoViewer;
 
-    invoke-static {p1}, Lorg/telegram/ui/PhotoViewer;->access$17500(Lorg/telegram/ui/PhotoViewer;)Landroid/widget/LinearLayout;
+    invoke-static {p1}, Lorg/telegram/ui/PhotoViewer;->access$17600(Lorg/telegram/ui/PhotoViewer;)Landroid/widget/LinearLayout;
 
     move-result-object p1
 
@@ -115,7 +115,7 @@
 
     const/high16 p1, 0x428c0000    # 70.0f
 
-    .line 4857
+    .line 4977
     invoke-static {p1}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result p1
@@ -124,7 +124,7 @@
 
     iget-object p1, p0, Lorg/telegram/ui/PhotoViewer$22;->this$0:Lorg/telegram/ui/PhotoViewer;
 
-    invoke-static {p1}, Lorg/telegram/ui/PhotoViewer;->access$17500(Lorg/telegram/ui/PhotoViewer;)Landroid/widget/LinearLayout;
+    invoke-static {p1}, Lorg/telegram/ui/PhotoViewer;->access$17600(Lorg/telegram/ui/PhotoViewer;)Landroid/widget/LinearLayout;
 
     move-result-object p1
 
@@ -136,16 +136,16 @@
 
     div-int/lit8 p4, p4, 0x2
 
-    .line 4858
+    .line 4978
     iget-object p1, p0, Lorg/telegram/ui/PhotoViewer$22;->this$0:Lorg/telegram/ui/PhotoViewer;
 
-    invoke-static {p1}, Lorg/telegram/ui/PhotoViewer;->access$17500(Lorg/telegram/ui/PhotoViewer;)Landroid/widget/LinearLayout;
+    invoke-static {p1}, Lorg/telegram/ui/PhotoViewer;->access$17600(Lorg/telegram/ui/PhotoViewer;)Landroid/widget/LinearLayout;
 
     move-result-object p1
 
     iget-object p2, p0, Lorg/telegram/ui/PhotoViewer$22;->this$0:Lorg/telegram/ui/PhotoViewer;
 
-    invoke-static {p2}, Lorg/telegram/ui/PhotoViewer;->access$17500(Lorg/telegram/ui/PhotoViewer;)Landroid/widget/LinearLayout;
+    invoke-static {p2}, Lorg/telegram/ui/PhotoViewer;->access$17600(Lorg/telegram/ui/PhotoViewer;)Landroid/widget/LinearLayout;
 
     move-result-object p2
 
@@ -155,7 +155,7 @@
 
     iget-object p3, p0, Lorg/telegram/ui/PhotoViewer$22;->this$0:Lorg/telegram/ui/PhotoViewer;
 
-    invoke-static {p3}, Lorg/telegram/ui/PhotoViewer;->access$17500(Lorg/telegram/ui/PhotoViewer;)Landroid/widget/LinearLayout;
+    invoke-static {p3}, Lorg/telegram/ui/PhotoViewer;->access$17600(Lorg/telegram/ui/PhotoViewer;)Landroid/widget/LinearLayout;
 
     move-result-object p3
 
@@ -167,7 +167,7 @@
 
     iget-object p5, p0, Lorg/telegram/ui/PhotoViewer$22;->this$0:Lorg/telegram/ui/PhotoViewer;
 
-    invoke-static {p5}, Lorg/telegram/ui/PhotoViewer;->access$17500(Lorg/telegram/ui/PhotoViewer;)Landroid/widget/LinearLayout;
+    invoke-static {p5}, Lorg/telegram/ui/PhotoViewer;->access$17600(Lorg/telegram/ui/PhotoViewer;)Landroid/widget/LinearLayout;
 
     move-result-object p5
 
@@ -177,7 +177,7 @@
 
     iget-object v0, p0, Lorg/telegram/ui/PhotoViewer$22;->this$0:Lorg/telegram/ui/PhotoViewer;
 
-    invoke-static {v0}, Lorg/telegram/ui/PhotoViewer;->access$17500(Lorg/telegram/ui/PhotoViewer;)Landroid/widget/LinearLayout;
+    invoke-static {v0}, Lorg/telegram/ui/PhotoViewer;->access$17600(Lorg/telegram/ui/PhotoViewer;)Landroid/widget/LinearLayout;
 
     move-result-object v0
 
@@ -196,10 +196,10 @@
 .method public onTouchEvent(Landroid/view/MotionEvent;)Z
     .registers 3
 
-    .line 4822
+    .line 4942
     iget-object v0, p0, Lorg/telegram/ui/PhotoViewer$22;->this$0:Lorg/telegram/ui/PhotoViewer;
 
-    invoke-static {v0}, Lorg/telegram/ui/PhotoViewer;->access$10300(Lorg/telegram/ui/PhotoViewer;)Z
+    invoke-static {v0}, Lorg/telegram/ui/PhotoViewer;->access$10200(Lorg/telegram/ui/PhotoViewer;)Z
 
     move-result v0
 
@@ -225,10 +225,10 @@
 .method public setAlpha(F)V
     .registers 4
 
-    .line 4839
+    .line 4959
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->setAlpha(F)V
 
-    .line 4840
+    .line 4960
     iget-object v0, p0, Lorg/telegram/ui/PhotoViewer$22;->this$0:Lorg/telegram/ui/PhotoViewer;
 
     invoke-static {v0}, Lorg/telegram/ui/PhotoViewer;->access$1600(Lorg/telegram/ui/PhotoViewer;)Lorg/telegram/ui/Components/VideoTimelinePlayView;
@@ -251,7 +251,7 @@
 
     if-eq v0, v1, :cond_22
 
-    .line 4841
+    .line 4961
     iget-object v0, p0, Lorg/telegram/ui/PhotoViewer$22;->this$0:Lorg/telegram/ui/PhotoViewer;
 
     invoke-static {v0}, Lorg/telegram/ui/PhotoViewer;->access$1600(Lorg/telegram/ui/PhotoViewer;)Lorg/telegram/ui/Components/VideoTimelinePlayView;
@@ -267,10 +267,10 @@
 .method public setTranslationY(F)V
     .registers 4
 
-    .line 4827
+    .line 4947
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->setTranslationY(F)V
 
-    .line 4828
+    .line 4948
     iget-object v0, p0, Lorg/telegram/ui/PhotoViewer$22;->this$0:Lorg/telegram/ui/PhotoViewer;
 
     invoke-static {v0}, Lorg/telegram/ui/PhotoViewer;->access$1600(Lorg/telegram/ui/PhotoViewer;)Lorg/telegram/ui/Components/VideoTimelinePlayView;
@@ -293,7 +293,7 @@
 
     if-eq v0, v1, :cond_2b
 
-    .line 4829
+    .line 4949
     iget-object v0, p0, Lorg/telegram/ui/PhotoViewer$22;->this$0:Lorg/telegram/ui/PhotoViewer;
 
     invoke-static {v0}, Lorg/telegram/ui/PhotoViewer;->access$1600(Lorg/telegram/ui/PhotoViewer;)Lorg/telegram/ui/Components/VideoTimelinePlayView;
@@ -302,20 +302,20 @@
 
     invoke-virtual {v0, p1}, Landroid/view/View;->setTranslationY(F)V
 
-    .line 4830
+    .line 4950
     iget-object v0, p0, Lorg/telegram/ui/PhotoViewer$22;->this$0:Lorg/telegram/ui/PhotoViewer;
 
-    invoke-static {v0}, Lorg/telegram/ui/PhotoViewer;->access$9900(Lorg/telegram/ui/PhotoViewer;)Landroid/widget/TextView;
+    invoke-static {v0}, Lorg/telegram/ui/PhotoViewer;->access$9800(Lorg/telegram/ui/PhotoViewer;)Landroid/widget/TextView;
 
     move-result-object v0
 
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->setTranslationY(F)V
 
-    .line 4832
+    .line 4952
     :cond_2b
     iget-object v0, p0, Lorg/telegram/ui/PhotoViewer$22;->this$0:Lorg/telegram/ui/PhotoViewer;
 
-    invoke-static {v0}, Lorg/telegram/ui/PhotoViewer;->access$9900(Lorg/telegram/ui/PhotoViewer;)Landroid/widget/TextView;
+    invoke-static {v0}, Lorg/telegram/ui/PhotoViewer;->access$9800(Lorg/telegram/ui/PhotoViewer;)Landroid/widget/TextView;
 
     move-result-object v0
 
@@ -323,7 +323,7 @@
 
     iget-object v0, p0, Lorg/telegram/ui/PhotoViewer$22;->this$0:Lorg/telegram/ui/PhotoViewer;
 
-    invoke-static {v0}, Lorg/telegram/ui/PhotoViewer;->access$9900(Lorg/telegram/ui/PhotoViewer;)Landroid/widget/TextView;
+    invoke-static {v0}, Lorg/telegram/ui/PhotoViewer;->access$9800(Lorg/telegram/ui/PhotoViewer;)Landroid/widget/TextView;
 
     move-result-object v0
 
@@ -333,10 +333,10 @@
 
     if-eq v0, v1, :cond_48
 
-    .line 4833
+    .line 4953
     iget-object v0, p0, Lorg/telegram/ui/PhotoViewer$22;->this$0:Lorg/telegram/ui/PhotoViewer;
 
-    invoke-static {v0}, Lorg/telegram/ui/PhotoViewer;->access$9900(Lorg/telegram/ui/PhotoViewer;)Landroid/widget/TextView;
+    invoke-static {v0}, Lorg/telegram/ui/PhotoViewer;->access$9800(Lorg/telegram/ui/PhotoViewer;)Landroid/widget/TextView;
 
     move-result-object v0
 
@@ -349,10 +349,10 @@
 .method public setVisibility(I)V
     .registers 4
 
-    .line 4847
+    .line 4967
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
-    .line 4848
+    .line 4968
     iget-object v0, p0, Lorg/telegram/ui/PhotoViewer$22;->this$0:Lorg/telegram/ui/PhotoViewer;
 
     invoke-static {v0}, Lorg/telegram/ui/PhotoViewer;->access$1600(Lorg/telegram/ui/PhotoViewer;)Lorg/telegram/ui/Components/VideoTimelinePlayView;
@@ -375,7 +375,7 @@
 
     if-eq v0, v1, :cond_27
 
-    .line 4849
+    .line 4969
     iget-object v0, p0, Lorg/telegram/ui/PhotoViewer$22;->this$0:Lorg/telegram/ui/PhotoViewer;
 
     invoke-static {v0}, Lorg/telegram/ui/PhotoViewer;->access$1600(Lorg/telegram/ui/PhotoViewer;)Lorg/telegram/ui/Components/VideoTimelinePlayView;

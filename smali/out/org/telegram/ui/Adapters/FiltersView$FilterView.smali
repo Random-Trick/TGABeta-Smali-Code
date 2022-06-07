@@ -278,7 +278,7 @@
 
     move-result v0
 
-    const v4, 0x7f0700b0
+    const v4, 0x7f070093
 
     invoke-static {v0, v4}, Lorg/telegram/ui/ActionBar/Theme;->createCircleDrawableWithIcon(II)Lorg/telegram/ui/Components/CombinedDrawable;
 
@@ -406,7 +406,7 @@
 
     move-result v0
 
-    const v4, 0x7f0700bb
+    const v4, 0x7f07009c
 
     invoke-static {v0, v4}, Lorg/telegram/ui/ActionBar/Theme;->createCircleDrawableWithIcon(II)Lorg/telegram/ui/Components/CombinedDrawable;
 

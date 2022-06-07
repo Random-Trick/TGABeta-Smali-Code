@@ -24,12 +24,12 @@
 .method constructor <init>(Lorg/telegram/ui/Components/EmojiView;Landroid/content/Context;)V
     .registers 3
 
-    .line 1852
+    .line 1858
     iput-object p1, p0, Lorg/telegram/ui/Components/EmojiView$19;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-direct {p0, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    .line 1854
+    .line 1860
     new-instance p1, Landroid/graphics/Paint;
 
     invoke-direct {p1}, Landroid/graphics/Paint;-><init>()V
@@ -44,7 +44,7 @@
 .method protected dispatchDraw(Landroid/graphics/Canvas;)V
     .registers 10
 
-    .line 1857
+    .line 1863
     iget-object v0, p0, Lorg/telegram/ui/Components/EmojiView$19;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/EmojiView;->access$400(Lorg/telegram/ui/Components/EmojiView;)Lorg/telegram/ui/Components/EmojiView$EmojiViewDelegate;
@@ -55,7 +55,7 @@
 
     const/high16 v0, 0x42480000    # 50.0f
 
-    .line 1858
+    .line 1864
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v0
@@ -74,7 +74,7 @@
 
     mul-float v0, v0, v1
 
-    .line 1859
+    .line 1865
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getMeasuredHeight()I
 
     move-result v1
@@ -87,7 +87,7 @@
 
     return-void
 
-    .line 1862
+    .line 1868
     :cond_26
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
@@ -97,7 +97,7 @@
 
     if-eqz v2, :cond_3b
 
-    .line 1864
+    .line 1870
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getMeasuredWidth()I
 
     move-result v2
@@ -112,7 +112,7 @@
 
     invoke-virtual {p1, v1, v0, v2, v3}, Landroid/graphics/Canvas;->clipRect(FFFF)Z
 
-    .line 1866
+    .line 1872
     :cond_3b
     iget-object v0, p0, Lorg/telegram/ui/Components/EmojiView$19;->paint:Landroid/graphics/Paint;
 
@@ -130,7 +130,7 @@
 
     const/4 v4, 0x0
 
-    .line 1867
+    .line 1873
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getMeasuredWidth()I
 
     move-result v0
@@ -163,10 +163,10 @@
 
     invoke-virtual/range {v2 .. v7}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    .line 1868
+    .line 1874
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->dispatchDraw(Landroid/graphics/Canvas;)V
 
-    .line 1869
+    .line 1875
     iget-object v0, p0, Lorg/telegram/ui/Components/EmojiView$19;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/EmojiView;->access$100(Lorg/telegram/ui/Components/EmojiView;)Lorg/telegram/ui/Components/ScrollSlidingTabStrip;
@@ -175,7 +175,7 @@
 
     invoke-virtual {v0, p1}, Lorg/telegram/ui/Components/ScrollSlidingTabStrip;->drawOverlays(Landroid/graphics/Canvas;)V
 
-    .line 1870
+    .line 1876
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
     return-void
@@ -184,10 +184,10 @@
 .method protected onLayout(ZIIII)V
     .registers 6
 
-    .line 1875
+    .line 1881
     invoke-super/range {p0 .. p5}, Landroid/widget/FrameLayout;->onLayout(ZIIII)V
 
-    .line 1876
+    .line 1882
     iget-object p1, p0, Lorg/telegram/ui/Components/EmojiView$19;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/EmojiView;->access$300(Lorg/telegram/ui/Components/EmojiView;)V

@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/GroupCallActivity;)V
     .registers 2
 
-    .line 3301
+    .line 3306
     iput-object p1, p0, Lorg/telegram/ui/GroupCallActivity$12;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-direct {p0}, Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;-><init>()V
@@ -35,17 +35,17 @@
 .method public getItemOffsets(Landroid/graphics/Rect;Landroid/view/View;Landroidx/recyclerview/widget/RecyclerView;Landroidx/recyclerview/widget/RecyclerView$State;)V
     .registers 5
 
-    .line 3304
+    .line 3309
     invoke-virtual {p3, p2}, Landroidx/recyclerview/widget/RecyclerView;->getChildAdapterPosition(Landroid/view/View;)I
 
     move-result p2
 
     if-ltz p2, :cond_52
 
-    .line 3306
+    .line 3311
     invoke-virtual {p1}, Landroid/graphics/Rect;->setEmpty()V
 
-    .line 3307
+    .line 3312
     iget-object p3, p0, Lorg/telegram/ui/GroupCallActivity$12;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-static {p3}, Lorg/telegram/ui/GroupCallActivity;->access$6000(Lorg/telegram/ui/GroupCallActivity;)Lorg/telegram/ui/GroupCallActivity$ListAdapter;
@@ -70,7 +70,7 @@
 
     if-ge p2, p3, :cond_52
 
-    .line 3308
+    .line 3313
     iget-object p3, p0, Lorg/telegram/ui/GroupCallActivity$12;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-static {p3}, Lorg/telegram/ui/GroupCallActivity;->access$6000(Lorg/telegram/ui/GroupCallActivity;)Lorg/telegram/ui/GroupCallActivity$ListAdapter;
@@ -83,7 +83,7 @@
 
     sub-int/2addr p2, p3
 
-    .line 3309
+    .line 3314
     sget-boolean p3, Lorg/telegram/ui/GroupCallActivity;->isLandscapeMode:Z
 
     if-eqz p3, :cond_32
@@ -95,7 +95,7 @@
     :cond_32
     const/4 p3, 0x2
 
-    .line 3310
+    .line 3315
     :goto_33
     rem-int/2addr p2, p3
 
@@ -103,7 +103,7 @@
 
     if-nez p2, :cond_3f
 
-    .line 3312
+    .line 3317
     invoke-static {p4}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result p2
@@ -117,7 +117,7 @@
 
     if-ne p2, p3, :cond_4a
 
-    .line 3314
+    .line 3319
     invoke-static {p4}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result p2
@@ -129,7 +129,7 @@
     :cond_4a
     const/high16 p2, 0x3f800000    # 1.0f
 
-    .line 3317
+    .line 3322
     invoke-static {p2}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result p2

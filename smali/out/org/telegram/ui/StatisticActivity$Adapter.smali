@@ -934,7 +934,7 @@
 
     invoke-virtual {p1, p2, v1}, Lorg/telegram/ui/StatisticActivity$BaseChartCell;->updateData(Lorg/telegram/ui/StatisticActivity$ChartViewData;Z)V
 
-    goto/16 :goto_1ee
+    goto/16 :goto_1f0
 
     :cond_b8
     const/16 v2, 0x9
@@ -980,7 +980,7 @@
 
     invoke-virtual {p1, p2}, Lorg/telegram/ui/Cells/StatisticPostInfoCell;->setData(Lorg/telegram/ui/StatisticActivity$MemberData;)V
 
-    goto/16 :goto_1ee
+    goto/16 :goto_1f0
 
     .line 843
     :cond_e2
@@ -1013,17 +1013,17 @@
 
     invoke-virtual {p1, p2}, Lorg/telegram/ui/Cells/StatisticPostInfoCell;->setData(Lorg/telegram/ui/StatisticActivity$MemberData;)V
 
-    goto/16 :goto_1ee
+    goto/16 :goto_1f0
 
     .line 846
     :cond_100
     iget v0, p0, Lorg/telegram/ui/StatisticActivity$Adapter;->topInviterStartRow:I
 
-    if-lt p2, v0, :cond_1ee
+    if-lt p2, v0, :cond_1f0
 
     iget v1, p0, Lorg/telegram/ui/StatisticActivity$Adapter;->topInviterEndRow:I
 
-    if-gt p2, v1, :cond_1ee
+    if-gt p2, v1, :cond_1f0
 
     sub-int/2addr p2, v0
 
@@ -1046,7 +1046,7 @@
 
     invoke-virtual {p1, p2}, Lorg/telegram/ui/Cells/StatisticPostInfoCell;->setData(Lorg/telegram/ui/StatisticActivity$MemberData;)V
 
-    goto/16 :goto_1ee
+    goto/16 :goto_1f0
 
     .line 851
     :cond_11e
@@ -1073,7 +1073,7 @@
 
     invoke-virtual {p1, p2}, Lorg/telegram/ui/Cells/StatisticPostInfoCell;->setData(Lorg/telegram/ui/StatisticActivity$RecentPostInfo;)V
 
-    goto/16 :goto_1ee
+    goto/16 :goto_1f0
 
     :cond_136
     const/16 v2, 0xd
@@ -1105,7 +1105,7 @@
 
     if-ne p2, v0, :cond_15f
 
-    const p2, 0x7f0e10c7
+    const p2, 0x7f0e1186
 
     const-string v0, "StatisticOverview"
 
@@ -1116,7 +1116,7 @@
 
     invoke-virtual {p1, p2}, Lorg/telegram/ui/Charts/view_data/ChartHeaderView;->setTitle(Ljava/lang/String;)V
 
-    goto/16 :goto_1ee
+    goto/16 :goto_1f0
 
     .line 859
     :cond_15f
@@ -1124,7 +1124,7 @@
 
     if-ne p2, v0, :cond_171
 
-    const p2, 0x7f0e11ad
+    const p2, 0x7f0e1279
 
     const-string v0, "TopAdmins"
 
@@ -1135,7 +1135,7 @@
 
     invoke-virtual {p1, p2}, Lorg/telegram/ui/Charts/view_data/ChartHeaderView;->setTitle(Ljava/lang/String;)V
 
-    goto/16 :goto_1ee
+    goto/16 :goto_1f0
 
     .line 861
     :cond_171
@@ -1143,7 +1143,7 @@
 
     if-ne p2, v0, :cond_182
 
-    const p2, 0x7f0e11b0
+    const p2, 0x7f0e127c
 
     const-string v0, "TopInviters"
 
@@ -1154,7 +1154,7 @@
 
     invoke-virtual {p1, p2}, Lorg/telegram/ui/Charts/view_data/ChartHeaderView;->setTitle(Ljava/lang/String;)V
 
-    goto :goto_1ee
+    goto :goto_1f0
 
     .line 863
     :cond_182
@@ -1162,7 +1162,7 @@
 
     if-ne p2, v0, :cond_193
 
-    const p2, 0x7f0e11b1
+    const p2, 0x7f0e127d
 
     const-string v0, "TopMembers"
 
@@ -1173,10 +1173,10 @@
 
     invoke-virtual {p1, p2}, Lorg/telegram/ui/Charts/view_data/ChartHeaderView;->setTitle(Ljava/lang/String;)V
 
-    goto :goto_1ee
+    goto :goto_1f0
 
     :cond_193
-    const p2, 0x7f0e0e9b
+    const p2, 0x7f0e0f47
 
     const-string v0, "RecentPosts"
 
@@ -1187,7 +1187,7 @@
 
     invoke-virtual {p1, p2}, Lorg/telegram/ui/Charts/view_data/ChartHeaderView;->setTitle(Ljava/lang/String;)V
 
-    goto :goto_1ee
+    goto :goto_1f0
 
     :cond_1a0
     const/16 p2, 0xe
@@ -1217,7 +1217,7 @@
 
     invoke-virtual {p1, p2}, Lorg/telegram/ui/StatisticActivity$OverviewCell;->setData(Lorg/telegram/ui/StatisticActivity$OverviewChatData;)V
 
-    goto :goto_1ee
+    goto :goto_1f0
 
     .line 873
     :cond_1ba
@@ -1229,12 +1229,12 @@
 
     invoke-virtual {p1, p2}, Lorg/telegram/ui/StatisticActivity$OverviewCell;->setData(Lorg/telegram/ui/StatisticActivity$OverviewChannelData;)V
 
-    goto :goto_1ee
+    goto :goto_1f0
 
     :cond_1c4
     const/16 p2, 0xf
 
-    if-ne v0, p2, :cond_1ee
+    if-ne v0, p2, :cond_1f0
 
     .line 876
     iget-object p1, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
@@ -1264,20 +1264,22 @@
 
     sub-int/2addr p2, v0
 
-    const-string v0, "ShowVotes"
+    new-array v0, v1, [Ljava/lang/Object;
 
-    invoke-static {v0, p2}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    const-string v2, "ShowVotes"
+
+    invoke-static {v2, p2, v0}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p2
 
     const/4 v0, 0x0
 
-    const v2, 0x7f07005d
+    const v2, 0x7f07004b
 
     invoke-virtual {p1, p2, v0, v2, v1}, Lorg/telegram/ui/Cells/ManageChatTextCell;->setText(Ljava/lang/String;Ljava/lang/String;IZ)V
 
-    :cond_1ee
-    :goto_1ee
+    :cond_1f0
+    :goto_1f0
     return-void
 .end method
 

@@ -1,381 +1,124 @@
 .class Lj$/util/stream/a1;
-.super Lj$/util/stream/i3;
-
-
-# instance fields
-.field public final synthetic b:I
-
-.field final synthetic c:Ljava/lang/Object;
+.super Lj$/util/stream/d1;
 
 
 # direct methods
-.method public constructor <init>(Lj$/util/stream/K;Lj$/util/stream/n3;)V
+.method constructor <init>(Lj$/util/u;IZ)V
     .registers 4
 
-    const/4 v0, 0x4
-
-    iput v0, p0, Lj$/util/stream/a1;->b:I
-
-    .line 1
-    iput-object p1, p0, Lj$/util/stream/a1;->c:Ljava/lang/Object;
-
-    invoke-direct {p0, p2}, Lj$/util/stream/i3;-><init>(Lj$/util/stream/n3;)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Lj$/util/stream/L;Lj$/util/stream/n3;)V
-    .registers 4
-
-    const/4 v0, 0x2
-
-    iput v0, p0, Lj$/util/stream/a1;->b:I
-
-    .line 2
-    iput-object p1, p0, Lj$/util/stream/a1;->c:Ljava/lang/Object;
-
-    invoke-direct {p0, p2}, Lj$/util/stream/i3;-><init>(Lj$/util/stream/n3;)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Lj$/util/stream/M;Lj$/util/stream/n3;)V
-    .registers 4
-
-    const/4 v0, 0x3
-
-    iput v0, p0, Lj$/util/stream/a1;->b:I
-
-    .line 3
-    iput-object p1, p0, Lj$/util/stream/a1;->c:Ljava/lang/Object;
-
-    invoke-direct {p0, p2}, Lj$/util/stream/i3;-><init>(Lj$/util/stream/n3;)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Lj$/util/stream/N;Lj$/util/stream/n3;)V
-    .registers 4
-
-    const/4 v0, 0x1
-
-    iput v0, p0, Lj$/util/stream/a1;->b:I
-
-    .line 4
-    iput-object p1, p0, Lj$/util/stream/a1;->c:Ljava/lang/Object;
-
-    invoke-direct {p0, p2}, Lj$/util/stream/i3;-><init>(Lj$/util/stream/n3;)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Lj$/util/stream/N;Lj$/util/stream/n3;Lj$/lang/a;)V
-    .registers 4
-
-    const/4 p3, 0x5
-
-    iput p3, p0, Lj$/util/stream/a1;->b:I
-
-    .line 5
-    iput-object p1, p0, Lj$/util/stream/a1;->c:Ljava/lang/Object;
-
-    invoke-direct {p0, p2}, Lj$/util/stream/i3;-><init>(Lj$/util/stream/n3;)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Lj$/util/stream/N;Lj$/util/stream/n3;Lj$/lang/b;)V
-    .registers 4
-
-    const/4 p3, 0x6
-
-    iput p3, p0, Lj$/util/stream/a1;->b:I
-
-    .line 6
-    iput-object p1, p0, Lj$/util/stream/a1;->c:Ljava/lang/Object;
-
-    invoke-direct {p0, p2}, Lj$/util/stream/i3;-><init>(Lj$/util/stream/n3;)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Lj$/util/stream/N;Lj$/util/stream/n3;Lj$/lang/c;)V
-    .registers 4
-
-    const/4 p3, 0x7
-
-    iput p3, p0, Lj$/util/stream/a1;->b:I
-
-    .line 7
-    iput-object p1, p0, Lj$/util/stream/a1;->c:Ljava/lang/Object;
-
-    invoke-direct {p0, p2}, Lj$/util/stream/i3;-><init>(Lj$/util/stream/n3;)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Lj$/util/stream/O;Lj$/util/stream/n3;)V
-    .registers 4
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Lj$/util/stream/a1;->b:I
-
-    .line 8
-    iput-object p1, p0, Lj$/util/stream/a1;->c:Ljava/lang/Object;
-
-    invoke-direct {p0, p2}, Lj$/util/stream/i3;-><init>(Lj$/util/stream/n3;)V
+    invoke-direct {p0, p1, p2, p3}, Lj$/util/stream/d1;-><init>(Lj$/util/u;IZ)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public accept(J)V
-    .registers 5
+.method final G0()Z
+    .registers 2
 
-    iget v0, p0, Lj$/util/stream/a1;->b:I
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
 
-    packed-switch v0, :pswitch_data_a4
+    invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
 
-    goto/16 :goto_92
+    throw v0
+.end method
 
-    .line 1
-    :pswitch_7
-    iget-object v0, p0, Lj$/util/stream/a1;->c:Ljava/lang/Object;
+.method final H0(ILj$/util/stream/m3;)Lj$/util/stream/m3;
+    .registers 3
 
-    check-cast v0, Lj$/util/stream/N;
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
 
-    iget-object v0, v0, Lj$/util/stream/N;->m:Ljava/lang/Object;
+    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
 
-    check-cast v0, Lj$/wrappers/j0;
+    throw p1
+.end method
 
-    invoke-virtual {v0, p1, p2}, Lj$/wrappers/j0;->b(J)Z
+.method public Z(Lj$/util/function/q;)V
+    .registers 4
+
+    invoke-virtual {p0}, Lj$/util/stream/c;->isParallel()Z
 
     move-result v0
 
-    if-eqz v0, :cond_1a
+    if-nez v0, :cond_12
 
-    iget-object v0, p0, Lj$/util/stream/i3;->a:Lj$/util/stream/n3;
+    invoke-virtual {p0}, Lj$/util/stream/c;->J0()Lj$/util/u;
 
-    invoke-interface {v0, p1, p2}, Lj$/util/stream/n3;->accept(J)V
+    move-result-object v0
 
-    :cond_1a
-    return-void
+    invoke-static {v0}, Lj$/util/stream/d1;->L0(Lj$/util/u;)Lj$/util/v;
 
-    .line 2
-    :pswitch_1b
-    iget-object v0, p0, Lj$/util/stream/a1;->c:Ljava/lang/Object;
+    move-result-object v0
 
-    check-cast v0, Lj$/util/stream/N;
+    invoke-interface {v0, p1}, Lj$/util/v;->d(Lj$/util/function/q;)V
 
-    iget-object v0, v0, Lj$/util/stream/N;->m:Ljava/lang/Object;
-
-    check-cast v0, Lj$/util/function/r;
-
-    invoke-interface {v0, p1, p2}, Lj$/util/function/r;->apply(J)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lj$/util/stream/f1;
-
-    if-eqz p1, :cond_3d
-
-    :try_start_2b
-    invoke-interface {p1}, Lj$/util/stream/f1;->sequential()Lj$/util/stream/f1;
-
-    move-result-object p2
-
-    new-instance v0, Lj$/util/stream/X0;
-
-    invoke-direct {v0, p0}, Lj$/util/stream/X0;-><init>(Lj$/util/stream/a1;)V
-
-    invoke-interface {p2, v0}, Lj$/util/stream/f1;->d(Lj$/util/function/q;)V
-    :try_end_37
-    .catchall {:try_start_2b .. :try_end_37} :catchall_38
-
-    goto :goto_3d
-
-    :catchall_38
-    move-exception p2
-
-    :try_start_39
-    invoke-interface {p1}, Lj$/util/stream/g;->close()V
-    :try_end_3c
-    .catchall {:try_start_39 .. :try_end_3c} :catchall_3c
-
-    :catchall_3c
-    throw p2
-
-    :cond_3d
-    :goto_3d
-    if-eqz p1, :cond_42
-
-    invoke-interface {p1}, Lj$/util/stream/g;->close()V
-
-    :cond_42
-    return-void
-
-    .line 3
-    :pswitch_43
-    iget-object v0, p0, Lj$/util/stream/i3;->a:Lj$/util/stream/n3;
-
-    iget-object v1, p0, Lj$/util/stream/a1;->c:Ljava/lang/Object;
-
-    check-cast v1, Lj$/util/stream/K;
-
-    iget-object v1, v1, Lj$/util/stream/K;->m:Ljava/lang/Object;
-
-    check-cast v1, Lj$/wrappers/l0;
-
-    invoke-virtual {v1, p1, p2}, Lj$/wrappers/l0;->a(J)D
-
-    move-result-wide p1
-
-    invoke-interface {v0, p1, p2}, Lj$/util/stream/n3;->accept(D)V
-
-    return-void
-
-    .line 4
-    :pswitch_55
-    iget-object v0, p0, Lj$/util/stream/i3;->a:Lj$/util/stream/n3;
-
-    iget-object v1, p0, Lj$/util/stream/a1;->c:Ljava/lang/Object;
-
-    check-cast v1, Lj$/util/stream/M;
-
-    iget-object v1, v1, Lj$/util/stream/M;->m:Ljava/lang/Object;
-
-    check-cast v1, Lj$/wrappers/n0;
-
-    invoke-virtual {v1, p1, p2}, Lj$/wrappers/n0;->a(J)I
-
-    move-result p1
-
-    invoke-interface {v0, p1}, Lj$/util/stream/n3;->accept(I)V
-
-    return-void
-
-    .line 5
-    :pswitch_67
-    iget-object v0, p0, Lj$/util/stream/i3;->a:Lj$/util/stream/n3;
-
-    iget-object v1, p0, Lj$/util/stream/a1;->c:Ljava/lang/Object;
-
-    check-cast v1, Lj$/util/stream/L;
-
-    iget-object v1, v1, Lj$/util/stream/L;->m:Ljava/lang/Object;
-
-    check-cast v1, Lj$/util/function/r;
-
-    invoke-interface {v1, p1, p2}, Lj$/util/function/r;->apply(J)Ljava/lang/Object;
-
-    move-result-object p1
-
-    invoke-interface {v0, p1}, Lj$/util/function/Consumer;->accept(Ljava/lang/Object;)V
-
-    return-void
-
-    .line 6
-    :pswitch_79
-    iget-object v0, p0, Lj$/util/stream/i3;->a:Lj$/util/stream/n3;
-
-    iget-object v1, p0, Lj$/util/stream/a1;->c:Ljava/lang/Object;
-
-    check-cast v1, Lj$/util/stream/N;
-
-    iget-object v1, v1, Lj$/util/stream/N;->m:Ljava/lang/Object;
-
-    check-cast v1, Lj$/util/function/t;
-
-    invoke-interface {v1, p1, p2}, Lj$/util/function/t;->applyAsLong(J)J
-
-    move-result-wide p1
-
-    invoke-interface {v0, p1, p2}, Lj$/util/stream/n3;->accept(J)V
-
-    return-void
-
-    .line 7
-    :pswitch_8b
-    iget-object v0, p0, Lj$/util/stream/i3;->a:Lj$/util/stream/n3;
-
-    long-to-double p1, p1
-
-    invoke-interface {v0, p1, p2}, Lj$/util/stream/n3;->accept(D)V
-
-    return-void
-
-    .line 8
-    :goto_92
-    iget-object v0, p0, Lj$/util/stream/a1;->c:Ljava/lang/Object;
-
-    check-cast v0, Lj$/util/stream/N;
-
-    iget-object v0, v0, Lj$/util/stream/N;->m:Ljava/lang/Object;
-
-    check-cast v0, Lj$/util/function/q;
-
-    invoke-interface {v0, p1, p2}, Lj$/util/function/q;->accept(J)V
-
-    iget-object v0, p0, Lj$/util/stream/i3;->a:Lj$/util/stream/n3;
-
-    invoke-interface {v0, p1, p2}, Lj$/util/stream/n3;->accept(J)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_a4
-    .packed-switch 0x0
-        :pswitch_8b
-        :pswitch_79
-        :pswitch_67
-        :pswitch_55
-        :pswitch_43
-        :pswitch_1b
-        :pswitch_7
-    .end packed-switch
-.end method
-
-.method public n(J)V
-    .registers 6
-
-    iget v0, p0, Lj$/util/stream/a1;->b:I
-
-    const-wide/16 v1, -0x1
-
-    packed-switch v0, :pswitch_data_1a
-
-    goto :goto_14
+    goto :goto_1e
 
     .line 1
-    :pswitch_8
-    iget-object p1, p0, Lj$/util/stream/i3;->a:Lj$/util/stream/n3;
+    :cond_12
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-interface {p1, v1, v2}, Lj$/util/stream/n3;->n(J)V
+    new-instance v0, Lj$/util/stream/m0;
 
-    return-void
+    const/4 v1, 0x1
+
+    invoke-direct {v0, p1, v1}, Lj$/util/stream/m0;-><init>(Lj$/util/function/q;Z)V
 
     .line 2
-    :pswitch_e
-    iget-object p1, p0, Lj$/util/stream/i3;->a:Lj$/util/stream/n3;
+    invoke-virtual {p0, v0}, Lj$/util/stream/c;->x0(Lj$/util/stream/N4;)Ljava/lang/Object;
 
-    invoke-interface {p1, v1, v2}, Lj$/util/stream/n3;->n(J)V
-
+    :goto_1e
     return-void
+.end method
 
-    .line 3
-    :goto_14
-    iget-object v0, p0, Lj$/util/stream/i3;->a:Lj$/util/stream/n3;
+.method public d(Lj$/util/function/q;)V
+    .registers 3
 
-    invoke-interface {v0, p1, p2}, Lj$/util/stream/n3;->n(J)V
+    invoke-virtual {p0}, Lj$/util/stream/c;->isParallel()Z
 
+    move-result v0
+
+    if-nez v0, :cond_12
+
+    invoke-virtual {p0}, Lj$/util/stream/c;->J0()Lj$/util/u;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lj$/util/stream/d1;->L0(Lj$/util/u;)Lj$/util/v;
+
+    move-result-object v0
+
+    invoke-interface {v0, p1}, Lj$/util/v;->d(Lj$/util/function/q;)V
+
+    goto :goto_15
+
+    :cond_12
+    invoke-super {p0, p1}, Lj$/util/stream/d1;->d(Lj$/util/function/q;)V
+
+    :goto_15
     return-void
+.end method
 
-    :pswitch_data_1a
-    .packed-switch 0x5
-        :pswitch_e
-        :pswitch_8
-    .end packed-switch
+.method public bridge synthetic parallel()Lj$/util/stream/e1;
+    .registers 2
+
+    invoke-virtual {p0}, Lj$/util/stream/c;->parallel()Lj$/util/stream/g;
+
+    move-object v0, p0
+
+    check-cast v0, Lj$/util/stream/e1;
+
+    return-object v0
+.end method
+
+.method public bridge synthetic sequential()Lj$/util/stream/e1;
+    .registers 2
+
+    invoke-virtual {p0}, Lj$/util/stream/c;->sequential()Lj$/util/stream/g;
+
+    move-object v0, p0
+
+    check-cast v0, Lj$/util/stream/e1;
+
+    return-object v0
 .end method

@@ -37,7 +37,7 @@
 
     check-cast p1, Lorg/telegram/ui/Components/PipVideoOverlay;
 
-    invoke-static {p1, p2}, Lorg/telegram/ui/Components/PipVideoOverlay;->$r8$lambda$1ftW6ce2s9I4OGmsWh3VmsbHyZk(Lorg/telegram/ui/Components/PipVideoOverlay;F)V
+    invoke-static {p1, p2}, Lorg/telegram/ui/Components/PipVideoOverlay;->$r8$lambda$0ZnvMtlDd1h9myxIWfDOqBw5YXM(Lorg/telegram/ui/Components/PipVideoOverlay;F)V
 
     return-void
 .end method

@@ -23,7 +23,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 27687
+    .line 28055
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -32,7 +32,7 @@
 .method public static TLdeserialize(Lorg/telegram/tgnet/AbstractSerializedData;IZ)Lorg/telegram/tgnet/TLRPC$TL_messages_messageEditData;
     .registers 4
 
-    .line 27694
+    .line 28062
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_messages_messageEditData;->constructor:I
 
     if-eq v0, p1, :cond_1e
@@ -43,7 +43,7 @@
 
     return-object p0
 
-    .line 27696
+    .line 28064
     :cond_8
     new-instance p0, Ljava/lang/RuntimeException;
 
@@ -69,13 +69,13 @@
 
     throw p0
 
-    .line 27701
+    .line 28069
     :cond_1e
     new-instance p1, Lorg/telegram/tgnet/TLRPC$TL_messages_messageEditData;
 
     invoke-direct {p1}, Lorg/telegram/tgnet/TLRPC$TL_messages_messageEditData;-><init>()V
 
-    .line 27702
+    .line 28070
     invoke-virtual {p1, p0, p2}, Lorg/telegram/tgnet/TLRPC$TL_messages_messageEditData;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
     return-object p1
@@ -86,7 +86,7 @@
 .method public readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
     .registers 3
 
-    .line 27707
+    .line 28075
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result p1
@@ -104,7 +104,7 @@
     :cond_b
     const/4 p2, 0x0
 
-    .line 27708
+    .line 28076
     :goto_c
     iput-boolean p2, p0, Lorg/telegram/tgnet/TLRPC$TL_messages_messageEditData;->caption:Z
 
@@ -114,12 +114,12 @@
 .method public serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
     .registers 3
 
-    .line 27712
+    .line 28080
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_messages_messageEditData;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 27713
+    .line 28081
     iget-boolean v0, p0, Lorg/telegram/tgnet/TLRPC$TL_messages_messageEditData;->caption:Z
 
     if-eqz v0, :cond_e
@@ -138,7 +138,7 @@
     :goto_12
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$TL_messages_messageEditData;->flags:I
 
-    .line 27714
+    .line 28082
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
     return-void

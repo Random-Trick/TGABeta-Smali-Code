@@ -2,38 +2,58 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lorg/telegram/ui/Components/AlertsCreator$BlockDialogCallback;
+.implements Lorg/telegram/messenger/MessagesStorage$BooleanCallback;
 
 
 # instance fields
 .field public final synthetic f$0:Lorg/telegram/ui/DialogsActivity;
 
-.field public final synthetic f$1:Ljava/util/ArrayList;
+.field public final synthetic f$1:I
+
+.field public final synthetic f$2:Lorg/telegram/tgnet/TLRPC$Chat;
+
+.field public final synthetic f$3:J
+
+.field public final synthetic f$4:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(Lorg/telegram/ui/DialogsActivity;Ljava/util/ArrayList;)V
-    .registers 3
+.method public synthetic constructor <init>(Lorg/telegram/ui/DialogsActivity;ILorg/telegram/tgnet/TLRPC$Chat;JZ)V
+    .registers 7
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lorg/telegram/ui/DialogsActivity$$ExternalSyntheticLambda48;->f$0:Lorg/telegram/ui/DialogsActivity;
 
-    iput-object p2, p0, Lorg/telegram/ui/DialogsActivity$$ExternalSyntheticLambda48;->f$1:Ljava/util/ArrayList;
+    iput p2, p0, Lorg/telegram/ui/DialogsActivity$$ExternalSyntheticLambda48;->f$1:I
+
+    iput-object p3, p0, Lorg/telegram/ui/DialogsActivity$$ExternalSyntheticLambda48;->f$2:Lorg/telegram/tgnet/TLRPC$Chat;
+
+    iput-wide p4, p0, Lorg/telegram/ui/DialogsActivity$$ExternalSyntheticLambda48;->f$3:J
+
+    iput-boolean p6, p0, Lorg/telegram/ui/DialogsActivity$$ExternalSyntheticLambda48;->f$4:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run(ZZ)V
-    .registers 5
+.method public final run(Z)V
+    .registers 9
 
     iget-object v0, p0, Lorg/telegram/ui/DialogsActivity$$ExternalSyntheticLambda48;->f$0:Lorg/telegram/ui/DialogsActivity;
 
-    iget-object v1, p0, Lorg/telegram/ui/DialogsActivity$$ExternalSyntheticLambda48;->f$1:Ljava/util/ArrayList;
+    iget v1, p0, Lorg/telegram/ui/DialogsActivity$$ExternalSyntheticLambda48;->f$1:I
 
-    invoke-static {v0, v1, p1, p2}, Lorg/telegram/ui/DialogsActivity;->$r8$lambda$uiu7pRaZip-yLXuQVHxOM60Za6I(Lorg/telegram/ui/DialogsActivity;Ljava/util/ArrayList;ZZ)V
+    iget-object v2, p0, Lorg/telegram/ui/DialogsActivity$$ExternalSyntheticLambda48;->f$2:Lorg/telegram/tgnet/TLRPC$Chat;
+
+    iget-wide v3, p0, Lorg/telegram/ui/DialogsActivity$$ExternalSyntheticLambda48;->f$3:J
+
+    iget-boolean v5, p0, Lorg/telegram/ui/DialogsActivity$$ExternalSyntheticLambda48;->f$4:Z
+
+    move v6, p1
+
+    invoke-static/range {v0 .. v6}, Lorg/telegram/ui/DialogsActivity;->$r8$lambda$1li2B0pGzOhn76tcUcnqYI21Xcg(Lorg/telegram/ui/DialogsActivity;ILorg/telegram/tgnet/TLRPC$Chat;JZZ)V
 
     return-void
 .end method

@@ -188,7 +188,7 @@
 
     invoke-direct {v2, p1}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
 
-    const v3, 0x7f070358
+    const v3, 0x7f07036f
 
     .line 108
     invoke-virtual {v2, v3}, Landroid/widget/ImageView;->setImageResource(I)V
@@ -712,7 +712,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const v2, 0x7f0e0201
+    const v2, 0x7f0e0236
 
     const-string v3, "AttachVideo"
 
@@ -745,7 +745,7 @@
     goto :goto_44
 
     :cond_38
-    const v1, 0x7f0e01fb
+    const v1, 0x7f0e0230
 
     const-string v2, "AttachPhoto"
 
@@ -782,7 +782,7 @@
 
     const v1, 0x7f080001
 
-    const v2, 0x7f0e0bbd
+    const v2, 0x7f0e0c47
 
     const-string v3, "Open"
 
@@ -1697,119 +1697,125 @@
 .end method
 
 .method public setPhotoEntry(Lorg/telegram/messenger/MediaController$SearchImage;ZZ)V
-    .registers 16
+    .registers 18
 
-    const/4 v0, 0x0
+    move-object v0, p0
+
+    move-object v11, p1
+
+    const/4 v12, 0x0
 
     .line 222
-    iput-boolean v0, p0, Lorg/telegram/ui/Cells/PhotoAttachPhotoCell;->pressed:Z
+    iput-boolean v12, v0, Lorg/telegram/ui/Cells/PhotoAttachPhotoCell;->pressed:Z
 
     .line 223
-    iput-object p1, p0, Lorg/telegram/ui/Cells/PhotoAttachPhotoCell;->searchEntry:Lorg/telegram/messenger/MediaController$SearchImage;
+    iput-object v11, v0, Lorg/telegram/ui/Cells/PhotoAttachPhotoCell;->searchEntry:Lorg/telegram/messenger/MediaController$SearchImage;
+
+    move/from16 v1, p3
 
     .line 224
-    iput-boolean p3, p0, Lorg/telegram/ui/Cells/PhotoAttachPhotoCell;->isLast:Z
+    iput-boolean v1, v0, Lorg/telegram/ui/Cells/PhotoAttachPhotoCell;->isLast:Z
 
     .line 226
-    iget-boolean p3, p0, Lorg/telegram/ui/Cells/PhotoAttachPhotoCell;->zoomOnSelect:Z
+    iget-boolean v1, v0, Lorg/telegram/ui/Cells/PhotoAttachPhotoCell;->zoomOnSelect:Z
 
-    if-eqz p3, :cond_e
+    if-eqz v1, :cond_12
 
-    sget-object p3, Lorg/telegram/ui/ActionBar/Theme;->chat_attachEmptyDrawable:Landroid/graphics/drawable/Drawable;
+    sget-object v1, Lorg/telegram/ui/ActionBar/Theme;->chat_attachEmptyDrawable:Landroid/graphics/drawable/Drawable;
 
-    goto :goto_19
+    goto :goto_1d
 
-    :cond_e
+    :cond_12
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
 
-    move-result-object p3
+    move-result-object v1
 
-    const v1, 0x7f07030a
+    const v2, 0x7f070332
 
-    invoke-virtual {p3, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
-    move-result-object p3
+    move-result-object v1
 
     .line 227
-    :goto_19
-    iget-object v1, p1, Lorg/telegram/messenger/MediaController$SearchImage;->thumbPhotoSize:Lorg/telegram/tgnet/TLRPC$PhotoSize;
+    :goto_1d
+    iget-object v2, v11, Lorg/telegram/messenger/MediaController$SearchImage;->thumbPhotoSize:Lorg/telegram/tgnet/TLRPC$PhotoSize;
 
-    const/4 v2, 0x1
+    const/4 v13, 0x1
 
     const/4 v3, 0x0
 
-    if-eqz v1, :cond_2c
+    if-eqz v2, :cond_30
 
     .line 228
-    iget-object v4, p0, Lorg/telegram/ui/Cells/PhotoAttachPhotoCell;->imageView:Lorg/telegram/ui/Components/BackupImageView;
+    iget-object v4, v0, Lorg/telegram/ui/Cells/PhotoAttachPhotoCell;->imageView:Lorg/telegram/ui/Components/BackupImageView;
 
-    iget-object v5, p1, Lorg/telegram/messenger/MediaController$SearchImage;->photo:Lorg/telegram/tgnet/TLRPC$Photo;
+    iget-object v5, v11, Lorg/telegram/messenger/MediaController$SearchImage;->photo:Lorg/telegram/tgnet/TLRPC$Photo;
 
-    invoke-static {v1, v5}, Lorg/telegram/messenger/ImageLocation;->getForPhoto(Lorg/telegram/tgnet/TLRPC$PhotoSize;Lorg/telegram/tgnet/TLRPC$Photo;)Lorg/telegram/messenger/ImageLocation;
+    invoke-static {v2, v5}, Lorg/telegram/messenger/ImageLocation;->getForPhoto(Lorg/telegram/tgnet/TLRPC$PhotoSize;Lorg/telegram/tgnet/TLRPC$Photo;)Lorg/telegram/messenger/ImageLocation;
 
-    move-result-object v1
+    move-result-object v2
 
-    invoke-virtual {v4, v1, v3, p3, p1}, Lorg/telegram/ui/Components/BackupImageView;->setImage(Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Landroid/graphics/drawable/Drawable;Ljava/lang/Object;)V
+    invoke-virtual {v4, v2, v3, v1, p1}, Lorg/telegram/ui/Components/BackupImageView;->setImage(Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Landroid/graphics/drawable/Drawable;Ljava/lang/Object;)V
 
-    goto/16 :goto_bc
+    goto/16 :goto_c5
 
     .line 229
-    :cond_2c
-    iget-object v1, p1, Lorg/telegram/messenger/MediaController$SearchImage;->photoSize:Lorg/telegram/tgnet/TLRPC$PhotoSize;
+    :cond_30
+    iget-object v2, v11, Lorg/telegram/messenger/MediaController$SearchImage;->photoSize:Lorg/telegram/tgnet/TLRPC$PhotoSize;
 
-    if-eqz v1, :cond_3f
+    if-eqz v2, :cond_43
 
     .line 230
-    iget-object v3, p0, Lorg/telegram/ui/Cells/PhotoAttachPhotoCell;->imageView:Lorg/telegram/ui/Components/BackupImageView;
+    iget-object v3, v0, Lorg/telegram/ui/Cells/PhotoAttachPhotoCell;->imageView:Lorg/telegram/ui/Components/BackupImageView;
 
-    iget-object v4, p1, Lorg/telegram/messenger/MediaController$SearchImage;->photo:Lorg/telegram/tgnet/TLRPC$Photo;
+    iget-object v4, v11, Lorg/telegram/messenger/MediaController$SearchImage;->photo:Lorg/telegram/tgnet/TLRPC$Photo;
 
-    invoke-static {v1, v4}, Lorg/telegram/messenger/ImageLocation;->getForPhoto(Lorg/telegram/tgnet/TLRPC$PhotoSize;Lorg/telegram/tgnet/TLRPC$Photo;)Lorg/telegram/messenger/ImageLocation;
+    invoke-static {v2, v4}, Lorg/telegram/messenger/ImageLocation;->getForPhoto(Lorg/telegram/tgnet/TLRPC$PhotoSize;Lorg/telegram/tgnet/TLRPC$Photo;)Lorg/telegram/messenger/ImageLocation;
 
-    move-result-object v1
+    move-result-object v2
 
     const-string v4, "80_80"
 
-    invoke-virtual {v3, v1, v4, p3, p1}, Lorg/telegram/ui/Components/BackupImageView;->setImage(Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Landroid/graphics/drawable/Drawable;Ljava/lang/Object;)V
+    invoke-virtual {v3, v2, v4, v1, p1}, Lorg/telegram/ui/Components/BackupImageView;->setImage(Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Landroid/graphics/drawable/Drawable;Ljava/lang/Object;)V
 
-    goto/16 :goto_bc
+    goto/16 :goto_c5
 
     .line 231
-    :cond_3f
-    iget-object v1, p1, Lorg/telegram/messenger/MediaController$MediaEditState;->thumbPath:Ljava/lang/String;
+    :cond_43
+    iget-object v2, v11, Lorg/telegram/messenger/MediaController$MediaEditState;->thumbPath:Ljava/lang/String;
 
-    if-eqz v1, :cond_4a
+    if-eqz v2, :cond_4e
 
     .line 232
-    iget-object v4, p0, Lorg/telegram/ui/Cells/PhotoAttachPhotoCell;->imageView:Lorg/telegram/ui/Components/BackupImageView;
+    iget-object v4, v0, Lorg/telegram/ui/Cells/PhotoAttachPhotoCell;->imageView:Lorg/telegram/ui/Components/BackupImageView;
 
-    invoke-virtual {v4, v1, v3, p3}, Lorg/telegram/ui/Components/BackupImageView;->setImage(Ljava/lang/String;Ljava/lang/String;Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {v4, v2, v3, v1}, Lorg/telegram/ui/Components/BackupImageView;->setImage(Ljava/lang/String;Ljava/lang/String;Landroid/graphics/drawable/Drawable;)V
 
-    goto/16 :goto_bc
+    goto/16 :goto_c5
 
     .line 233
-    :cond_4a
-    iget-object v1, p1, Lorg/telegram/messenger/MediaController$SearchImage;->thumbUrl:Ljava/lang/String;
+    :cond_4e
+    iget-object v2, v11, Lorg/telegram/messenger/MediaController$SearchImage;->thumbUrl:Ljava/lang/String;
 
-    invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
-    move-result v1
+    move-result v2
 
-    if-nez v1, :cond_6f
+    if-nez v2, :cond_73
 
     .line 234
-    iget-object v1, p1, Lorg/telegram/messenger/MediaController$SearchImage;->thumbUrl:Ljava/lang/String;
+    iget-object v2, v11, Lorg/telegram/messenger/MediaController$SearchImage;->thumbUrl:Ljava/lang/String;
 
-    invoke-static {v1}, Lorg/telegram/messenger/ImageLocation;->getForPath(Ljava/lang/String;)Lorg/telegram/messenger/ImageLocation;
+    invoke-static {v2}, Lorg/telegram/messenger/ImageLocation;->getForPath(Ljava/lang/String;)Lorg/telegram/messenger/ImageLocation;
 
-    move-result-object v1
+    move-result-object v2
 
     .line 235
-    iget v4, p1, Lorg/telegram/messenger/MediaController$SearchImage;->type:I
+    iget v4, v11, Lorg/telegram/messenger/MediaController$SearchImage;->type:I
 
-    if-ne v4, v2, :cond_69
+    if-ne v4, v13, :cond_6d
 
-    iget-object v4, p1, Lorg/telegram/messenger/MediaController$SearchImage;->thumbUrl:Ljava/lang/String;
+    iget-object v4, v11, Lorg/telegram/messenger/MediaController$SearchImage;->thumbUrl:Ljava/lang/String;
 
     const-string v5, "mp4"
 
@@ -1817,171 +1823,179 @@
 
     move-result v4
 
-    if-eqz v4, :cond_69
+    if-eqz v4, :cond_6d
 
     const/4 v4, 0x2
 
     .line 236
-    iput v4, v1, Lorg/telegram/messenger/ImageLocation;->imageType:I
+    iput v4, v2, Lorg/telegram/messenger/ImageLocation;->imageType:I
 
     .line 238
-    :cond_69
-    iget-object v4, p0, Lorg/telegram/ui/Cells/PhotoAttachPhotoCell;->imageView:Lorg/telegram/ui/Components/BackupImageView;
+    :cond_6d
+    iget-object v4, v0, Lorg/telegram/ui/Cells/PhotoAttachPhotoCell;->imageView:Lorg/telegram/ui/Components/BackupImageView;
 
-    invoke-virtual {v4, v1, v3, p3, p1}, Lorg/telegram/ui/Components/BackupImageView;->setImage(Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Landroid/graphics/drawable/Drawable;Ljava/lang/Object;)V
+    invoke-virtual {v4, v2, v3, v1, p1}, Lorg/telegram/ui/Components/BackupImageView;->setImage(Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Landroid/graphics/drawable/Drawable;Ljava/lang/Object;)V
 
-    goto :goto_bc
+    goto :goto_c5
 
     .line 239
-    :cond_6f
-    iget-object v1, p1, Lorg/telegram/messenger/MediaController$SearchImage;->document:Lorg/telegram/tgnet/TLRPC$Document;
+    :cond_73
+    iget-object v2, v11, Lorg/telegram/messenger/MediaController$SearchImage;->document:Lorg/telegram/tgnet/TLRPC$Document;
 
-    if-eqz v1, :cond_b7
+    if-eqz v2, :cond_c0
 
     .line 240
-    invoke-static {v1}, Lorg/telegram/messenger/MessageObject;->getDocumentVideoThumb(Lorg/telegram/tgnet/TLRPC$Document;)Lorg/telegram/tgnet/TLRPC$VideoSize;
+    invoke-static {v2}, Lorg/telegram/messenger/MessageObject;->getDocumentVideoThumb(Lorg/telegram/tgnet/TLRPC$Document;)Lorg/telegram/tgnet/TLRPC$VideoSize;
 
     .line 241
-    iget-object v1, p1, Lorg/telegram/messenger/MediaController$SearchImage;->document:Lorg/telegram/tgnet/TLRPC$Document;
+    iget-object v2, v11, Lorg/telegram/messenger/MediaController$SearchImage;->document:Lorg/telegram/tgnet/TLRPC$Document;
 
-    invoke-static {v1}, Lorg/telegram/messenger/MessageObject;->getDocumentVideoThumb(Lorg/telegram/tgnet/TLRPC$Document;)Lorg/telegram/tgnet/TLRPC$VideoSize;
+    invoke-static {v2}, Lorg/telegram/messenger/MessageObject;->getDocumentVideoThumb(Lorg/telegram/tgnet/TLRPC$Document;)Lorg/telegram/tgnet/TLRPC$VideoSize;
 
-    move-result-object v1
+    move-result-object v2
 
-    if-eqz v1, :cond_a1
+    if-eqz v2, :cond_aa
 
     .line 243
-    iget-object p3, p1, Lorg/telegram/messenger/MediaController$SearchImage;->document:Lorg/telegram/tgnet/TLRPC$Document;
-
-    iget-object p3, p3, Lorg/telegram/tgnet/TLRPC$Document;->thumbs:Ljava/util/ArrayList;
-
-    const/16 v3, 0x5a
-
-    invoke-static {p3, v3}, Lorg/telegram/messenger/FileLoader;->getClosestPhotoSizeWithSize(Ljava/util/ArrayList;I)Lorg/telegram/tgnet/TLRPC$PhotoSize;
-
-    move-result-object p3
-
-    .line 244
-    iget-object v3, p0, Lorg/telegram/ui/Cells/PhotoAttachPhotoCell;->imageView:Lorg/telegram/ui/Components/BackupImageView;
-
-    iget-object v4, p1, Lorg/telegram/messenger/MediaController$SearchImage;->document:Lorg/telegram/tgnet/TLRPC$Document;
-
-    invoke-static {v1, v4}, Lorg/telegram/messenger/ImageLocation;->getForDocument(Lorg/telegram/tgnet/TLRPC$VideoSize;Lorg/telegram/tgnet/TLRPC$Document;)Lorg/telegram/messenger/ImageLocation;
-
-    move-result-object v4
-
-    const/4 v5, 0x0
-
-    iget-object v1, p1, Lorg/telegram/messenger/MediaController$SearchImage;->document:Lorg/telegram/tgnet/TLRPC$Document;
-
-    invoke-static {p3, v1}, Lorg/telegram/messenger/ImageLocation;->getForDocument(Lorg/telegram/tgnet/TLRPC$PhotoSize;Lorg/telegram/tgnet/TLRPC$Document;)Lorg/telegram/messenger/ImageLocation;
-
-    move-result-object v6
-
-    const/4 v8, 0x0
-
-    const/4 v9, -0x1
-
-    const/4 v10, 0x1
-
-    const-string v7, "52_52"
-
-    move-object v11, p1
-
-    invoke-virtual/range {v3 .. v11}, Lorg/telegram/ui/Components/BackupImageView;->setImage(Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Ljava/lang/String;IILjava/lang/Object;)V
-
-    goto :goto_bc
-
-    .line 246
-    :cond_a1
-    iget-object v1, p1, Lorg/telegram/messenger/MediaController$SearchImage;->document:Lorg/telegram/tgnet/TLRPC$Document;
+    iget-object v1, v11, Lorg/telegram/messenger/MediaController$SearchImage;->document:Lorg/telegram/tgnet/TLRPC$Document;
 
     iget-object v1, v1, Lorg/telegram/tgnet/TLRPC$Document;->thumbs:Ljava/util/ArrayList;
 
-    const/16 v4, 0x140
+    const/16 v3, 0x5a
 
-    invoke-static {v1, v4}, Lorg/telegram/messenger/FileLoader;->getClosestPhotoSizeWithSize(Ljava/util/ArrayList;I)Lorg/telegram/tgnet/TLRPC$PhotoSize;
+    invoke-static {v1, v3}, Lorg/telegram/messenger/FileLoader;->getClosestPhotoSizeWithSize(Ljava/util/ArrayList;I)Lorg/telegram/tgnet/TLRPC$PhotoSize;
 
     move-result-object v1
 
-    .line 247
-    iget-object v4, p0, Lorg/telegram/ui/Cells/PhotoAttachPhotoCell;->imageView:Lorg/telegram/ui/Components/BackupImageView;
+    .line 244
+    iget-object v3, v0, Lorg/telegram/ui/Cells/PhotoAttachPhotoCell;->imageView:Lorg/telegram/ui/Components/BackupImageView;
 
-    iget-object v5, p1, Lorg/telegram/messenger/MediaController$SearchImage;->document:Lorg/telegram/tgnet/TLRPC$Document;
+    iget-object v4, v11, Lorg/telegram/messenger/MediaController$SearchImage;->document:Lorg/telegram/tgnet/TLRPC$Document;
+
+    invoke-static {v2, v4}, Lorg/telegram/messenger/ImageLocation;->getForDocument(Lorg/telegram/tgnet/TLRPC$VideoSize;Lorg/telegram/tgnet/TLRPC$Document;)Lorg/telegram/messenger/ImageLocation;
+
+    move-result-object v2
+
+    const/4 v4, 0x0
+
+    iget-object v5, v11, Lorg/telegram/messenger/MediaController$SearchImage;->document:Lorg/telegram/tgnet/TLRPC$Document;
 
     invoke-static {v1, v5}, Lorg/telegram/messenger/ImageLocation;->getForDocument(Lorg/telegram/tgnet/TLRPC$PhotoSize;Lorg/telegram/tgnet/TLRPC$Document;)Lorg/telegram/messenger/ImageLocation;
 
-    move-result-object v1
+    move-result-object v5
 
-    invoke-virtual {v4, v1, v3, p3, p1}, Lorg/telegram/ui/Components/BackupImageView;->setImage(Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Landroid/graphics/drawable/Drawable;Ljava/lang/Object;)V
+    const/4 v6, 0x0
 
-    goto :goto_bc
+    const-wide/16 v7, -0x1
+
+    const/4 v9, 0x1
+
+    const-string v10, "52_52"
+
+    move-object v1, v3
+
+    move-object v3, v4
+
+    move-object v4, v5
+
+    move-object v5, v10
+
+    move-object v10, p1
+
+    invoke-virtual/range {v1 .. v10}, Lorg/telegram/ui/Components/BackupImageView;->setImage(Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Ljava/lang/String;JILjava/lang/Object;)V
+
+    goto :goto_c5
+
+    .line 246
+    :cond_aa
+    iget-object v2, v11, Lorg/telegram/messenger/MediaController$SearchImage;->document:Lorg/telegram/tgnet/TLRPC$Document;
+
+    iget-object v2, v2, Lorg/telegram/tgnet/TLRPC$Document;->thumbs:Ljava/util/ArrayList;
+
+    const/16 v4, 0x140
+
+    invoke-static {v2, v4}, Lorg/telegram/messenger/FileLoader;->getClosestPhotoSizeWithSize(Ljava/util/ArrayList;I)Lorg/telegram/tgnet/TLRPC$PhotoSize;
+
+    move-result-object v2
+
+    .line 247
+    iget-object v4, v0, Lorg/telegram/ui/Cells/PhotoAttachPhotoCell;->imageView:Lorg/telegram/ui/Components/BackupImageView;
+
+    iget-object v5, v11, Lorg/telegram/messenger/MediaController$SearchImage;->document:Lorg/telegram/tgnet/TLRPC$Document;
+
+    invoke-static {v2, v5}, Lorg/telegram/messenger/ImageLocation;->getForDocument(Lorg/telegram/tgnet/TLRPC$PhotoSize;Lorg/telegram/tgnet/TLRPC$Document;)Lorg/telegram/messenger/ImageLocation;
+
+    move-result-object v2
+
+    invoke-virtual {v4, v2, v3, v1, p1}, Lorg/telegram/ui/Components/BackupImageView;->setImage(Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Landroid/graphics/drawable/Drawable;Ljava/lang/Object;)V
+
+    goto :goto_c5
 
     .line 250
-    :cond_b7
-    iget-object v1, p0, Lorg/telegram/ui/Cells/PhotoAttachPhotoCell;->imageView:Lorg/telegram/ui/Components/BackupImageView;
+    :cond_c0
+    iget-object v2, v0, Lorg/telegram/ui/Cells/PhotoAttachPhotoCell;->imageView:Lorg/telegram/ui/Components/BackupImageView;
 
-    invoke-virtual {v1, p3}, Lorg/telegram/ui/Components/BackupImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {v2, v1}, Lorg/telegram/ui/Components/BackupImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    :goto_bc
-    if-eqz p2, :cond_c9
+    :goto_c5
+    if-eqz p2, :cond_d2
 
     .line 252
     invoke-virtual {p1}, Lorg/telegram/messenger/MediaController$SearchImage;->getPathToAttach()Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object v1
 
-    invoke-static {p1}, Lorg/telegram/ui/PhotoViewer;->isShowingImage(Ljava/lang/String;)Z
+    invoke-static {v1}, Lorg/telegram/ui/PhotoViewer;->isShowingImage(Ljava/lang/String;)Z
 
-    move-result p1
+    move-result v1
 
-    if-eqz p1, :cond_c9
+    if-eqz v1, :cond_d2
 
-    const/4 v0, 0x1
+    const/4 v12, 0x1
 
     .line 253
-    :cond_c9
-    iget-object p1, p0, Lorg/telegram/ui/Cells/PhotoAttachPhotoCell;->imageView:Lorg/telegram/ui/Components/BackupImageView;
+    :cond_d2
+    iget-object v1, v0, Lorg/telegram/ui/Cells/PhotoAttachPhotoCell;->imageView:Lorg/telegram/ui/Components/BackupImageView;
 
-    invoke-virtual {p1}, Lorg/telegram/ui/Components/BackupImageView;->getImageReceiver()Lorg/telegram/messenger/ImageReceiver;
+    invoke-virtual {v1}, Lorg/telegram/ui/Components/BackupImageView;->getImageReceiver()Lorg/telegram/messenger/ImageReceiver;
 
-    move-result-object p1
+    move-result-object v1
 
-    xor-int/lit8 p2, v0, 0x1
+    xor-int/lit8 v2, v12, 0x1
 
-    invoke-virtual {p1, p2, v2}, Lorg/telegram/messenger/ImageReceiver;->setVisible(ZZ)V
+    invoke-virtual {v1, v2, v13}, Lorg/telegram/messenger/ImageReceiver;->setVisible(ZZ)V
 
     .line 254
-    iget-object p1, p0, Lorg/telegram/ui/Cells/PhotoAttachPhotoCell;->checkBox:Lorg/telegram/ui/Components/CheckBox2;
+    iget-object v1, v0, Lorg/telegram/ui/Cells/PhotoAttachPhotoCell;->checkBox:Lorg/telegram/ui/Components/CheckBox2;
 
-    const/4 p2, 0x0
+    const/4 v2, 0x0
 
-    const/high16 p3, 0x3f800000    # 1.0f
+    const/high16 v3, 0x3f800000    # 1.0f
 
-    if-eqz v0, :cond_dd
+    if-eqz v12, :cond_e6
 
-    const/4 v1, 0x0
+    const/4 v4, 0x0
 
-    goto :goto_df
+    goto :goto_e8
 
-    :cond_dd
-    const/high16 v1, 0x3f800000    # 1.0f
+    :cond_e6
+    const/high16 v4, 0x3f800000    # 1.0f
 
-    :goto_df
-    invoke-virtual {p1, v1}, Landroid/view/View;->setAlpha(F)V
+    :goto_e8
+    invoke-virtual {v1, v4}, Landroid/view/View;->setAlpha(F)V
 
     .line 255
-    iget-object p1, p0, Lorg/telegram/ui/Cells/PhotoAttachPhotoCell;->videoInfoContainer:Landroid/widget/FrameLayout;
+    iget-object v1, v0, Lorg/telegram/ui/Cells/PhotoAttachPhotoCell;->videoInfoContainer:Landroid/widget/FrameLayout;
 
-    if-eqz v0, :cond_e7
+    if-eqz v12, :cond_f0
 
-    goto :goto_e9
+    goto :goto_f2
 
-    :cond_e7
-    const/high16 p2, 0x3f800000    # 1.0f
+    :cond_f0
+    const/high16 v2, 0x3f800000    # 1.0f
 
-    :goto_e9
-    invoke-virtual {p1, p2}, Landroid/widget/FrameLayout;->setAlpha(F)V
+    :goto_f2
+    invoke-virtual {v1, v2}, Landroid/widget/FrameLayout;->setAlpha(F)V
 
     .line 256
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->requestLayout()V

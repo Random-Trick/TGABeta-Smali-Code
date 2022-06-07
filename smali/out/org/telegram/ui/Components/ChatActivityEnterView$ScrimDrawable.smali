@@ -24,12 +24,12 @@
 .method public constructor <init>(Lorg/telegram/ui/Components/ChatActivityEnterView;)V
     .registers 3
 
-    .line 8684
+    .line 8740
     iput-object p1, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$ScrimDrawable;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-direct {p0}, Landroid/graphics/drawable/Drawable;-><init>()V
 
-    .line 8685
+    .line 8741
     new-instance p1, Landroid/graphics/Paint;
 
     invoke-direct {p1}, Landroid/graphics/Paint;-><init>()V
@@ -38,7 +38,7 @@
 
     const/4 v0, 0x0
 
-    .line 8686
+    .line 8742
     invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setColor(I)V
 
     return-void
@@ -49,7 +49,7 @@
 .method public draw(Landroid/graphics/Canvas;)V
     .registers 10
 
-    .line 8691
+    .line 8747
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$ScrimDrawable;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$700(Lorg/telegram/ui/Components/ChatActivityEnterView;)Lorg/telegram/ui/Components/EmojiView;
@@ -60,7 +60,7 @@
 
     return-void
 
-    .line 8694
+    .line 8750
     :cond_9
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$ScrimDrawable;->paint:Landroid/graphics/Paint;
 
@@ -84,7 +84,7 @@
 
     const/4 v4, 0x0
 
-    .line 8695
+    .line 8751
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$ScrimDrawable;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-virtual {v0}, Landroid/widget/FrameLayout;->getWidth()I

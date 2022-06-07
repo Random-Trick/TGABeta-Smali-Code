@@ -83,7 +83,7 @@
     .line 520
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/SeekBarView;->setReportChanges(Z)V
 
-    .line 521
+    .line 522
     iget-object p2, p0, Lorg/telegram/ui/ArticleViewer$TextSizeCell;->sizeBar:Lorg/telegram/ui/Components/SeekBarView;
 
     new-instance v0, Lorg/telegram/ui/ArticleViewer$TextSizeCell$1;
@@ -92,7 +92,7 @@
 
     invoke-virtual {p2, v0}, Lorg/telegram/ui/Components/SeekBarView;->setDelegate(Lorg/telegram/ui/Components/SeekBarView$SeekBarViewDelegate;)V
 
-    .line 551
+    .line 552
     iget-object p1, p0, Lorg/telegram/ui/ArticleViewer$TextSizeCell;->sizeBar:Lorg/telegram/ui/Components/SeekBarView;
 
     const/4 v0, -0x1
@@ -150,10 +150,10 @@
 .method public invalidate()V
     .registers 2
 
-    .line 572
+    .line 573
     invoke-super {p0}, Landroid/widget/FrameLayout;->invalidate()V
 
-    .line 573
+    .line 574
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$TextSizeCell;->sizeBar:Lorg/telegram/ui/Components/SeekBarView;
 
     invoke-virtual {v0}, Landroid/widget/FrameLayout;->invalidate()V
@@ -164,7 +164,7 @@
 .method protected onDraw(Landroid/graphics/Canvas;)V
     .registers 6
 
-    .line 556
+    .line 557
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$TextSizeCell;->textPaint:Landroid/text/TextPaint;
 
     const-string v1, "windowBackgroundWhiteValueText"
@@ -175,7 +175,7 @@
 
     invoke-virtual {v0, v1}, Landroid/text/TextPaint;->setColor(I)V
 
-    .line 557
+    .line 558
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -224,20 +224,20 @@
 .method protected onMeasure(II)V
     .registers 6
 
-    .line 562
+    .line 563
     invoke-super {p0, p1, p2}, Landroid/widget/FrameLayout;->onMeasure(II)V
 
-    .line 563
+    .line 564
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result p1
 
-    .line 564
+    .line 565
     iget p2, p0, Lorg/telegram/ui/ArticleViewer$TextSizeCell;->lastWidth:I
 
     if-eq p2, p1, :cond_1d
 
-    .line 565
+    .line 566
     iget-object p2, p0, Lorg/telegram/ui/ArticleViewer$TextSizeCell;->sizeBar:Lorg/telegram/ui/Components/SeekBarView;
 
     sget v0, Lorg/telegram/messenger/SharedConfig;->ivFontSize:I
@@ -258,7 +258,7 @@
 
     invoke-virtual {p2, v0}, Lorg/telegram/ui/Components/SeekBarView;->setProgress(F)V
 
-    .line 566
+    .line 567
     iput p1, p0, Lorg/telegram/ui/ArticleViewer$TextSizeCell;->lastWidth:I
 
     :cond_1d

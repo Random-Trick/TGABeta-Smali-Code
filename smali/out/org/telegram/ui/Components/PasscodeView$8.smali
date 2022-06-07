@@ -115,7 +115,7 @@
 
     const-string v1, "FingerprintNotRecognized"
 
-    const v2, 0x7f0e0755
+    const v2, 0x7f0e07a9
 
     invoke-static {v1, v2}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 

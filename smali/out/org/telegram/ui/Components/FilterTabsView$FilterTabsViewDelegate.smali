@@ -36,7 +36,7 @@
 .method public abstract onPageScrolled(F)V
 .end method
 
-.method public abstract onPageSelected(IZ)V
+.method public abstract onPageSelected(Lorg/telegram/ui/Components/FilterTabsView$Tab;Z)V
 .end method
 
 .method public abstract onSamePageSelected()V

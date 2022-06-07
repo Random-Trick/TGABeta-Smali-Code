@@ -182,7 +182,7 @@
 
     move-result-object p3
 
-    const p4, 0x7f0703b4
+    const p4, 0x7f0703b9
 
     invoke-virtual {p3, p4}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -317,7 +317,7 @@
 
     const-string v0, "NoResult"
 
-    const v3, 0x7f0e0ad8
+    const v3, 0x7f0e0b60
 
     invoke-static {v0, v3}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
@@ -332,7 +332,7 @@
 
     const-string v0, "SearchEmptyViewFilteredSubtitle2"
 
-    const v3, 0x7f0e0f7a
+    const v3, 0x7f0e1036
 
     invoke-static {v0, v3}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 

@@ -35,7 +35,7 @@
 .method public final onApplyWindowInsets(Landroid/view/View;Landroid/view/WindowInsets;)Landroid/view/WindowInsets;
     .registers 3
 
-    invoke-static {p1, p2}, Lorg/telegram/ui/Components/BotWebViewSheet;->$r8$lambda$ZbT0vvemkvYyK0gXTjTMfRG2dGU(Landroid/view/View;Landroid/view/WindowInsets;)Landroid/view/WindowInsets;
+    invoke-static {p1, p2}, Lorg/telegram/ui/Components/BotWebViewSheet;->$r8$lambda$-E38SqSFZwX5hrCa4JMphjXj214(Landroid/view/View;Landroid/view/WindowInsets;)Landroid/view/WindowInsets;
 
     move-result-object p1
 

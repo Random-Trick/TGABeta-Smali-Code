@@ -1,12 +1,12 @@
 .class abstract Lj$/util/stream/d3;
-.super Lj$/util/stream/f3;
+.super Lj$/util/stream/e3;
 
 
 # direct methods
-.method constructor <init>(Lj$/util/stream/c;Lj$/util/stream/f4;I)V
+.method constructor <init>(Lj$/util/stream/c;Lj$/util/stream/e4;I)V
     .registers 4
 
-    invoke-direct {p0, p1, p3}, Lj$/util/stream/f3;-><init>(Lj$/util/stream/c;I)V
+    invoke-direct {p0, p1, p3}, Lj$/util/stream/e3;-><init>(Lj$/util/stream/c;I)V
 
     return-void
 .end method
@@ -16,7 +16,7 @@
 .method final G0()Z
     .registers 2
 
-    const/4 v0, 0x1
+    const/4 v0, 0x0
 
     return v0
 .end method

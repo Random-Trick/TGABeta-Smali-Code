@@ -2,42 +2,32 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/view/View$OnTouchListener;
+.implements Landroid/view/View$OnClickListener;
 
 
-# static fields
-.field public static final synthetic INSTANCE:Lorg/telegram/ui/ChannelCreateActivity$$ExternalSyntheticLambda6;
+# instance fields
+.field public final synthetic f$0:Lorg/telegram/ui/ChannelCreateActivity;
 
 
 # direct methods
-.method static synthetic constructor <clinit>()V
-    .registers 1
-
-    new-instance v0, Lorg/telegram/ui/ChannelCreateActivity$$ExternalSyntheticLambda6;
-
-    invoke-direct {v0}, Lorg/telegram/ui/ChannelCreateActivity$$ExternalSyntheticLambda6;-><init>()V
-
-    sput-object v0, Lorg/telegram/ui/ChannelCreateActivity$$ExternalSyntheticLambda6;->INSTANCE:Lorg/telegram/ui/ChannelCreateActivity$$ExternalSyntheticLambda6;
-
-    return-void
-.end method
-
-.method private synthetic constructor <init>()V
-    .registers 1
+.method public synthetic constructor <init>(Lorg/telegram/ui/ChannelCreateActivity;)V
+    .registers 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lorg/telegram/ui/ChannelCreateActivity$$ExternalSyntheticLambda6;->f$0:Lorg/telegram/ui/ChannelCreateActivity;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
+.method public final onClick(Landroid/view/View;)V
     .registers 3
 
-    invoke-static {p1, p2}, Lorg/telegram/ui/ChannelCreateActivity;->$r8$lambda$VLyc6f8PPzmYLC-vcLefQkXWZMU(Landroid/view/View;Landroid/view/MotionEvent;)Z
+    iget-object v0, p0, Lorg/telegram/ui/ChannelCreateActivity$$ExternalSyntheticLambda6;->f$0:Lorg/telegram/ui/ChannelCreateActivity;
 
-    move-result p1
+    invoke-static {v0, p1}, Lorg/telegram/ui/ChannelCreateActivity;->$r8$lambda$P3XblFx-pznsWD9TJehkic7XUjM(Lorg/telegram/ui/ChannelCreateActivity;Landroid/view/View;)V
 
-    return p1
+    return-void
 .end method

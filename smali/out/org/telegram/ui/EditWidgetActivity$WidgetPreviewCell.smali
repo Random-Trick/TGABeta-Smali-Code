@@ -117,7 +117,7 @@
 
     const-string v10, "WidgetPreview"
 
-    const v11, 0x7f0e13e4
+    const v11, 0x7f0e14b2
 
     .line 205
     invoke-static {v10, v11}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -155,7 +155,7 @@
     .line 209
     invoke-virtual {v9, v4}, Landroid/widget/LinearLayout;->setOrientation(I)V
 
-    const v10, 0x7f07043a
+    const v10, 0x7f070414
 
     .line 210
     invoke-virtual {v9, v10}, Landroid/widget/LinearLayout;->setBackgroundResource(I)V
@@ -251,7 +251,7 @@
 
     move-result-object v1
 
-    const v3, 0x7f0700bf
+    const v3, 0x7f0700a0
 
     invoke-virtual {v1, v3}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -321,7 +321,7 @@
 
     move-result-object v1
 
-    const v3, 0x7f0700db
+    const v3, 0x7f0700ba
 
     invoke-virtual {v1, v3}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -330,7 +330,7 @@
     :goto_10e
     invoke-virtual/range {p0 .. p0}, Lorg/telegram/ui/EditWidgetActivity$WidgetPreviewCell;->updateDialogs()V
 
-    const v1, 0x7f07012d
+    const v1, 0x7f0700fc
 
     const-string v3, "windowBackgroundGrayShadow"
 
@@ -870,7 +870,7 @@
 
     const/high16 v2, 0x42400000    # 48.0f
 
-    const v3, 0x7f0e0f65
+    const v3, 0x7f0e1021
 
     const-string v4, "SavedMessages"
 
@@ -1094,7 +1094,7 @@
 
     if-eqz v10, :cond_d7
 
-    const v10, 0x7f0e0ed5
+    const v10, 0x7f0e0f82
 
     const-string v11, "RepliesTitle"
 
@@ -1113,7 +1113,7 @@
 
     if-eqz v10, :cond_e7
 
-    const v10, 0x7f0e0830
+    const v10, 0x7f0e088a
 
     const-string v11, "HiddenName"
 
@@ -1279,7 +1279,7 @@
 
     aget-object v4, v4, v13
 
-    const v11, 0x7f0800c2
+    const v11, 0x7f0800c3
 
     invoke-virtual {v4, v11}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -1499,7 +1499,7 @@
 
     aget-object v0, v0, v13
 
-    const v2, 0x7f0800be
+    const v2, 0x7f0800bf
 
     invoke-virtual {v0, v2}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -1690,7 +1690,7 @@
 
     if-eqz v0, :cond_2c4
 
-    const v0, 0x7f0e07d3
+    const v0, 0x7f0e082b
 
     const-string v3, "FromYou"
 
@@ -2245,7 +2245,7 @@
 
     if-eqz v3, :cond_484
 
-    const v0, 0x7f0e01fc
+    const v0, 0x7f0e0231
 
     const-string v3, "AttachPhotoExpired"
 
@@ -2272,7 +2272,7 @@
 
     if-eqz v3, :cond_49d
 
-    const v0, 0x7f0e0202
+    const v0, 0x7f0e0237
 
     const-string v3, "AttachVideoExpired"
 
@@ -2505,7 +2505,7 @@
 
     aget-object v0, v0, v13
 
-    const v3, 0x7f0800c3
+    const v3, 0x7f0800c4
 
     invoke-virtual {v0, v3}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -2530,7 +2530,7 @@
 
     aget-object v0, v0, v13
 
-    const v2, 0x7f0800c1
+    const v2, 0x7f0800c2
 
     invoke-virtual {v0, v2}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -2570,7 +2570,7 @@
 
     aget-object v0, v0, v13
 
-    const v2, 0x7f0800c3
+    const v2, 0x7f0800c4
 
     invoke-virtual {v0, v2}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -2591,7 +2591,7 @@
     goto :goto_5bd
 
     :cond_5ad
-    const v2, 0x7f0800c3
+    const v2, 0x7f0800c4
 
     .line 478
     iget-object v0, v1, Lorg/telegram/ui/EditWidgetActivity$WidgetPreviewCell;->cells:[Landroid/view/ViewGroup;
@@ -2612,7 +2612,7 @@
 
     aget-object v0, v0, v13
 
-    const v2, 0x7f0800c1
+    const v2, 0x7f0800c2
 
     invoke-virtual {v0, v2}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -2626,7 +2626,7 @@
     :goto_5cd
     iget v0, v14, Lorg/telegram/tgnet/TLRPC$Dialog;->unread_count:I
 
-    const v2, 0x7f0800bf
+    const v2, 0x7f0800c0
 
     if-lez v0, :cond_629
 
@@ -2696,7 +2696,7 @@
 
     move-result-object v0
 
-    const v2, 0x7f07043e
+    const v2, 0x7f070418
 
     invoke-virtual {v0, v2}, Landroid/view/View;->setBackgroundResource(I)V
 
@@ -2712,7 +2712,7 @@
 
     move-result-object v0
 
-    const v2, 0x7f07043d
+    const v2, 0x7f070417
 
     invoke-virtual {v0, v2}, Landroid/view/View;->setBackgroundResource(I)V
 
@@ -2739,7 +2739,7 @@
 
     const/high16 v2, 0x42400000    # 48.0f
 
-    const v3, 0x7f0e0f65
+    const v3, 0x7f0e1021
 
     const/4 v5, 0x0
 
@@ -2755,7 +2755,7 @@
 
     aget-object v0, v0, v12
 
-    const v2, 0x7f0800c0
+    const v2, 0x7f0800c1
 
     invoke-virtual {v0, v2}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -3106,7 +3106,7 @@
 
     move-object/from16 v10, v17
 
-    const v8, 0x7f0e0f65
+    const v8, 0x7f0e1021
 
     .line 543
     invoke-static {v10, v8}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -3118,7 +3118,7 @@
     :cond_786
     move-object/from16 v10, v17
 
-    const v8, 0x7f0e0f65
+    const v8, 0x7f0e1021
 
     .line 544
     invoke-static {v0}, Lorg/telegram/messenger/UserObject;->isReplyUser(Lorg/telegram/tgnet/TLRPC$User;)Z
@@ -3127,7 +3127,7 @@
 
     if-eqz v11, :cond_79b
 
-    const v11, 0x7f0e0ed5
+    const v11, 0x7f0e0f82
 
     const-string v13, "RepliesTitle"
 
@@ -3146,7 +3146,7 @@
 
     if-eqz v11, :cond_7ab
 
-    const v11, 0x7f0e0830
+    const v11, 0x7f0e088a
 
     const-string v13, "HiddenName"
 

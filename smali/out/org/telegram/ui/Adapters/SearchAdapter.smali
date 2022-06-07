@@ -449,7 +449,7 @@
 
     if-eqz v14, :cond_d1
 
-    const v14, 0x7f0e0ed5
+    const v14, 0x7f0e0f82
 
     const-string v4, "RepliesTitle"
 
@@ -472,7 +472,7 @@
 
     if-eqz v4, :cond_e4
 
-    const v4, 0x7f0e0f65
+    const v4, 0x7f0e1021
 
     const-string v14, "SavedMessages"
 
@@ -1167,7 +1167,7 @@
     .line 399
     invoke-virtual {p1, v1, v0}, Lorg/telegram/ui/Cells/TextCell;->setColors(Ljava/lang/String;Ljava/lang/String;)V
 
-    const v0, 0x7f0e011b
+    const v0, 0x7f0e0143
 
     new-array v1, v3, [Ljava/lang/Object;
 
@@ -1219,7 +1219,7 @@
 
     if-nez p2, :cond_62
 
-    const p2, 0x7f0e07fe
+    const p2, 0x7f0e0856
 
     const-string v0, "GlobalSearch"
 
@@ -1233,7 +1233,7 @@
     goto/16 :goto_169
 
     :cond_62
-    const p2, 0x7f0e0d53
+    const p2, 0x7f0e0de1
 
     const-string v0, "PhoneNumberSearch"
 
@@ -1521,7 +1521,7 @@
 
     if-eqz v10, :cond_14f
 
-    const v0, 0x7f0e0f65
+    const v0, 0x7f0e1021
 
     const-string v1, "SavedMessages"
 

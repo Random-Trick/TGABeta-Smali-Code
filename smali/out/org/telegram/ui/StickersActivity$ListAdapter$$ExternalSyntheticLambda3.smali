@@ -2,40 +2,32 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/view/View$OnTouchListener;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
 .field public final synthetic f$0:Lorg/telegram/ui/StickersActivity$ListAdapter;
 
-.field public final synthetic f$1:Lorg/telegram/ui/Cells/StickerSetCell;
-
 
 # direct methods
-.method public synthetic constructor <init>(Lorg/telegram/ui/StickersActivity$ListAdapter;Lorg/telegram/ui/Cells/StickerSetCell;)V
-    .registers 3
+.method public synthetic constructor <init>(Lorg/telegram/ui/StickersActivity$ListAdapter;)V
+    .registers 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lorg/telegram/ui/StickersActivity$ListAdapter$$ExternalSyntheticLambda3;->f$0:Lorg/telegram/ui/StickersActivity$ListAdapter;
-
-    iput-object p2, p0, Lorg/telegram/ui/StickersActivity$ListAdapter$$ExternalSyntheticLambda3;->f$1:Lorg/telegram/ui/Cells/StickerSetCell;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
-    .registers 5
+.method public final onClick(Landroid/view/View;)V
+    .registers 3
 
     iget-object v0, p0, Lorg/telegram/ui/StickersActivity$ListAdapter$$ExternalSyntheticLambda3;->f$0:Lorg/telegram/ui/StickersActivity$ListAdapter;
 
-    iget-object v1, p0, Lorg/telegram/ui/StickersActivity$ListAdapter$$ExternalSyntheticLambda3;->f$1:Lorg/telegram/ui/Cells/StickerSetCell;
+    invoke-static {v0, p1}, Lorg/telegram/ui/StickersActivity$ListAdapter;->$r8$lambda$kllcn9wKpRvPBXZ_lCo1gBrs5ss(Lorg/telegram/ui/StickersActivity$ListAdapter;Landroid/view/View;)V
 
-    invoke-static {v0, v1, p1, p2}, Lorg/telegram/ui/StickersActivity$ListAdapter;->$r8$lambda$te2Ed6Pt8DHhaxGkctz7Xz2EdSE(Lorg/telegram/ui/StickersActivity$ListAdapter;Lorg/telegram/ui/Cells/StickerSetCell;Landroid/view/View;Landroid/view/MotionEvent;)Z
-
-    move-result p1
-
-    return p1
+    return-void
 .end method

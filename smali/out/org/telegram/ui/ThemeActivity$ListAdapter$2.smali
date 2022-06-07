@@ -18,7 +18,7 @@
 .method constructor <init>(Lorg/telegram/ui/ThemeActivity$ListAdapter;Landroid/content/Context;)V
     .registers 3
 
-    .line 1804
+    .line 1817
     invoke-direct {p0, p2}, Lorg/telegram/ui/Cells/ChatListCell;-><init>(Landroid/content/Context;)V
 
     return-void
@@ -29,7 +29,7 @@
 .method protected didSelectChatType(Z)V
     .registers 2
 
-    .line 1807
+    .line 1820
     invoke-static {p1}, Lorg/telegram/messenger/SharedConfig;->setUseThreeLinesLayout(Z)V
 
     return-void

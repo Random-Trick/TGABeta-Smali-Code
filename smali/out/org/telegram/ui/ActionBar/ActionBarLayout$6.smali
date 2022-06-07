@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lorg/telegram/ui/ActionBar/ActionBarLayout;->presentFragment(Lorg/telegram/ui/ActionBar/BaseFragment;ZZZZLandroid/view/View;)Z
+    value = Lorg/telegram/ui/ActionBar/ActionBarLayout;->presentFragment(Lorg/telegram/ui/ActionBar/BaseFragment;ZZZZLorg/telegram/ui/ActionBar/ActionBarPopupWindow$ActionBarPopupWindowLayout;)Z
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -31,7 +31,7 @@
 .method constructor <init>(Lorg/telegram/ui/ActionBar/ActionBarLayout;Lorg/telegram/ui/ActionBar/BaseFragment;Lorg/telegram/ui/ActionBar/BaseFragment;Z)V
     .registers 5
 
-    .line 1308
+    .line 1426
     iput-object p1, p0, Lorg/telegram/ui/ActionBar/ActionBarLayout$6;->this$0:Lorg/telegram/ui/ActionBar/ActionBarLayout;
 
     iput-object p2, p0, Lorg/telegram/ui/ActionBar/ActionBarLayout$6;->val$currentFragment:Lorg/telegram/ui/ActionBar/BaseFragment;
@@ -50,10 +50,10 @@
 .method public run()V
     .registers 4
 
-    .line 1311
+    .line 1429
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/ActionBarLayout$6;->this$0:Lorg/telegram/ui/ActionBar/ActionBarLayout;
 
-    invoke-static {v0}, Lorg/telegram/ui/ActionBar/ActionBarLayout;->access$1900(Lorg/telegram/ui/ActionBar/ActionBarLayout;)Ljava/lang/Runnable;
+    invoke-static {v0}, Lorg/telegram/ui/ActionBar/ActionBarLayout;->access$2100(Lorg/telegram/ui/ActionBar/ActionBarLayout;)Ljava/lang/Runnable;
 
     move-result-object v0
 
@@ -61,25 +61,25 @@
 
     return-void
 
-    .line 1314
+    .line 1432
     :cond_9
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/ActionBarLayout$6;->this$0:Lorg/telegram/ui/ActionBar/ActionBarLayout;
 
     const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Lorg/telegram/ui/ActionBar/ActionBarLayout;->access$1902(Lorg/telegram/ui/ActionBar/ActionBarLayout;Ljava/lang/Runnable;)Ljava/lang/Runnable;
+    invoke-static {v0, v1}, Lorg/telegram/ui/ActionBar/ActionBarLayout;->access$2102(Lorg/telegram/ui/ActionBar/ActionBarLayout;Ljava/lang/Runnable;)Ljava/lang/Runnable;
 
-    .line 1315
+    .line 1433
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/ActionBarLayout$6;->val$currentFragment:Lorg/telegram/ui/ActionBar/BaseFragment;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_17
 
-    .line 1316
+    .line 1434
     invoke-virtual {v0, v1, v1}, Lorg/telegram/ui/ActionBar/BaseFragment;->onTransitionAnimationStart(ZZ)V
 
-    .line 1318
+    .line 1436
     :cond_17
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/ActionBarLayout$6;->val$fragment:Lorg/telegram/ui/ActionBar/BaseFragment;
 
@@ -87,12 +87,12 @@
 
     invoke-virtual {v0, v2, v1}, Lorg/telegram/ui/ActionBar/BaseFragment;->onTransitionAnimationStart(ZZ)V
 
-    .line 1319
+    .line 1437
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/ActionBarLayout$6;->this$0:Lorg/telegram/ui/ActionBar/ActionBarLayout;
 
     iget-boolean v1, p0, Lorg/telegram/ui/ActionBar/ActionBarLayout$6;->val$preview:Z
 
-    invoke-static {v0, v2, v2, v1}, Lorg/telegram/ui/ActionBar/ActionBarLayout;->access$1600(Lorg/telegram/ui/ActionBar/ActionBarLayout;ZZZ)V
+    invoke-static {v0, v2, v2, v1}, Lorg/telegram/ui/ActionBar/ActionBarLayout;->access$1800(Lorg/telegram/ui/ActionBar/ActionBarLayout;ZZZ)V
 
     return-void
 .end method

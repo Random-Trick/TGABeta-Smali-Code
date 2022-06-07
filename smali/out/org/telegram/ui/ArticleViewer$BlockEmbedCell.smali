@@ -62,21 +62,21 @@
         }
     .end annotation
 
-    .line 7090
+    .line 7091
     iput-object p1, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->this$0:Lorg/telegram/ui/ArticleViewer;
 
-    .line 7091
+    .line 7092
     invoke-direct {p0, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    .line 7092
+    .line 7093
     iput-object p3, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->parentAdapter:Lorg/telegram/ui/ArticleViewer$WebpageAdapter;
 
     const/4 p3, 0x0
 
-    .line 7093
+    .line 7094
     invoke-virtual {p0, p3}, Landroid/widget/FrameLayout;->setWillNotDraw(Z)V
 
-    .line 7095
+    .line 7096
     new-instance v0, Lorg/telegram/ui/Components/WebPlayerView;
 
     new-instance v1, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell$1;
@@ -87,24 +87,24 @@
 
     iput-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->videoView:Lorg/telegram/ui/Components/WebPlayerView;
 
-    .line 7186
+    .line 7187
     invoke-virtual {p0, v0}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;)V
 
-    .line 7187
+    .line 7188
     invoke-static {p1}, Lorg/telegram/ui/ArticleViewer;->access$15600(Lorg/telegram/ui/ArticleViewer;)Ljava/util/ArrayList;
 
     move-result-object v0
 
     invoke-virtual {v0, p0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 7189
+    .line 7190
     new-instance v0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell$TouchyWebView;
 
     invoke-direct {v0, p0, p2}, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell$TouchyWebView;-><init>(Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;Landroid/content/Context;)V
 
     iput-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->webView:Lorg/telegram/ui/ArticleViewer$BlockEmbedCell$TouchyWebView;
 
-    .line 7190
+    .line 7191
     invoke-virtual {v0}, Landroid/webkit/WebView;->getSettings()Landroid/webkit/WebSettings;
 
     move-result-object p2
@@ -113,7 +113,7 @@
 
     invoke-virtual {p2, v0}, Landroid/webkit/WebSettings;->setJavaScriptEnabled(Z)V
 
-    .line 7191
+    .line 7192
     iget-object p2, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->webView:Lorg/telegram/ui/ArticleViewer$BlockEmbedCell$TouchyWebView;
 
     invoke-virtual {p2}, Landroid/webkit/WebView;->getSettings()Landroid/webkit/WebSettings;
@@ -122,7 +122,7 @@
 
     invoke-virtual {p2, v0}, Landroid/webkit/WebSettings;->setDomStorageEnabled(Z)V
 
-    .line 7193
+    .line 7194
     iget-object p2, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->webView:Lorg/telegram/ui/ArticleViewer$BlockEmbedCell$TouchyWebView;
 
     invoke-virtual {p2}, Landroid/webkit/WebView;->getSettings()Landroid/webkit/WebSettings;
@@ -131,14 +131,14 @@
 
     invoke-virtual {p2, v0}, Landroid/webkit/WebSettings;->setAllowContentAccess(Z)V
 
-    .line 7194
+    .line 7195
     sget p2, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x11
 
     if-lt p2, v1, :cond_5e
 
-    .line 7195
+    .line 7196
     iget-object v1, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->webView:Lorg/telegram/ui/ArticleViewer$BlockEmbedCell$TouchyWebView;
 
     invoke-virtual {v1}, Landroid/webkit/WebView;->getSettings()Landroid/webkit/WebSettings;
@@ -147,7 +147,7 @@
 
     invoke-virtual {v1, p3}, Landroid/webkit/WebSettings;->setMediaPlaybackRequiresUserGesture(Z)V
 
-    .line 7196
+    .line 7197
     iget-object v1, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->webView:Lorg/telegram/ui/ArticleViewer$BlockEmbedCell$TouchyWebView;
 
     new-instance v2, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell$TelegramWebviewProxy;
@@ -165,7 +165,7 @@
 
     if-lt p2, v1, :cond_74
 
-    .line 7200
+    .line 7201
     iget-object p2, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->webView:Lorg/telegram/ui/ArticleViewer$BlockEmbedCell$TouchyWebView;
 
     invoke-virtual {p2}, Landroid/webkit/WebView;->getSettings()Landroid/webkit/WebSettings;
@@ -174,17 +174,17 @@
 
     invoke-virtual {p2, p3}, Landroid/webkit/WebSettings;->setMixedContentMode(I)V
 
-    .line 7201
+    .line 7202
     invoke-static {}, Landroid/webkit/CookieManager;->getInstance()Landroid/webkit/CookieManager;
 
     move-result-object p2
 
-    .line 7202
+    .line 7203
     iget-object p3, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->webView:Lorg/telegram/ui/ArticleViewer$BlockEmbedCell$TouchyWebView;
 
     invoke-virtual {p2, p3, v0}, Landroid/webkit/CookieManager;->setAcceptThirdPartyCookies(Landroid/webkit/WebView;Z)V
 
-    .line 7205
+    .line 7206
     :cond_74
     iget-object p2, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->webView:Lorg/telegram/ui/ArticleViewer$BlockEmbedCell$TouchyWebView;
 
@@ -194,7 +194,7 @@
 
     invoke-virtual {p2, p3}, Landroid/webkit/WebView;->setWebChromeClient(Landroid/webkit/WebChromeClient;)V
 
-    .line 7243
+    .line 7244
     iget-object p2, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->webView:Lorg/telegram/ui/ArticleViewer$BlockEmbedCell$TouchyWebView;
 
     new-instance p3, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell$3;
@@ -203,7 +203,7 @@
 
     invoke-virtual {p2, p3}, Landroid/webkit/WebView;->setWebViewClient(Landroid/webkit/WebViewClient;)V
 
-    .line 7264
+    .line 7265
     iget-object p1, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->webView:Lorg/telegram/ui/ArticleViewer$BlockEmbedCell$TouchyWebView;
 
     invoke-virtual {p0, p1}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;)V
@@ -214,7 +214,7 @@
 .method static synthetic access$14702(Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;I)I
     .registers 2
 
-    .line 7034
+    .line 7035
     iput p1, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->exactWebViewHeight:I
 
     return p1
@@ -223,7 +223,7 @@
 .method static synthetic access$14800(Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;)Z
     .registers 1
 
-    .line 7034
+    .line 7035
     iget-boolean p0, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->wasUserInteraction:Z
 
     return p0
@@ -232,7 +232,7 @@
 .method static synthetic access$14802(Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;Z)Z
     .registers 2
 
-    .line 7034
+    .line 7035
     iput-boolean p1, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->wasUserInteraction:Z
 
     return p1
@@ -241,7 +241,7 @@
 .method static synthetic access$14900(Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;)Lorg/telegram/tgnet/TLRPC$TL_pageBlockEmbed;
     .registers 1
 
-    .line 7034
+    .line 7035
     iget-object p0, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->currentBlock:Lorg/telegram/tgnet/TLRPC$TL_pageBlockEmbed;
 
     return-object p0
@@ -250,7 +250,7 @@
 .method static synthetic access$15000(Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;)Lorg/telegram/ui/ArticleViewer$BlockEmbedCell$TouchyWebView;
     .registers 1
 
-    .line 7034
+    .line 7035
     iget-object p0, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->webView:Lorg/telegram/ui/ArticleViewer$BlockEmbedCell$TouchyWebView;
 
     return-object p0
@@ -259,7 +259,7 @@
 .method static synthetic access$15100(Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;)Lorg/telegram/ui/Components/WebPlayerView;
     .registers 1
 
-    .line 7034
+    .line 7035
     iget-object p0, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->videoView:Lorg/telegram/ui/Components/WebPlayerView;
 
     return-object p0
@@ -270,13 +270,13 @@
 .method public destroyWebView(Z)V
     .registers 4
 
-    .line 7269
+    .line 7270
     :try_start_0
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->webView:Lorg/telegram/ui/ArticleViewer$BlockEmbedCell$TouchyWebView;
 
     invoke-virtual {v0}, Landroid/webkit/WebView;->stopLoading()V
 
-    .line 7270
+    .line 7271
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->webView:Lorg/telegram/ui/ArticleViewer$BlockEmbedCell$TouchyWebView;
 
     const-string v1, "about:blank"
@@ -285,7 +285,7 @@
 
     if-eqz p1, :cond_13
 
-    .line 7272
+    .line 7273
     iget-object p1, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->webView:Lorg/telegram/ui/ArticleViewer$BlockEmbedCell$TouchyWebView;
 
     invoke-virtual {p1}, Landroid/webkit/WebView;->destroy()V
@@ -293,7 +293,7 @@
     :cond_13
     const/4 p1, 0x0
 
-    .line 7274
+    .line 7275
     iput-object p1, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->currentBlock:Lorg/telegram/tgnet/TLRPC$TL_pageBlockEmbed;
     :try_end_16
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_16} :catch_17
@@ -303,10 +303,10 @@
     :catch_17
     move-exception p1
 
-    .line 7276
+    .line 7277
     invoke-static {p1}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
-    .line 7278
+    .line 7279
     :goto_1b
     iget-object p1, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->videoView:Lorg/telegram/ui/Components/WebPlayerView;
 
@@ -326,21 +326,21 @@
         }
     .end annotation
 
-    .line 7458
+    .line 7459
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->captionLayout:Lorg/telegram/ui/ArticleViewer$DrawingText;
 
     if-eqz v0, :cond_7
 
-    .line 7459
+    .line 7460
     invoke-virtual {p1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 7462
+    .line 7463
     :cond_7
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->creditLayout:Lorg/telegram/ui/ArticleViewer$DrawingText;
 
     if-eqz v0, :cond_e
 
-    .line 7463
+    .line 7464
     invoke-virtual {p1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     :cond_e
@@ -350,7 +350,7 @@
 .method protected onAttachedToWindow()V
     .registers 1
 
-    .line 7341
+    .line 7342
     invoke-super {p0}, Landroid/widget/FrameLayout;->onAttachedToWindow()V
 
     return-void
@@ -359,10 +359,10 @@
 .method protected onDetachedFromWindow()V
     .registers 2
 
-    .line 7333
+    .line 7334
     invoke-super {p0}, Landroid/widget/FrameLayout;->onDetachedFromWindow()V
 
-    .line 7334
+    .line 7335
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     invoke-static {v0}, Lorg/telegram/ui/ArticleViewer;->access$3700(Lorg/telegram/ui/ArticleViewer;)Z
@@ -373,7 +373,7 @@
 
     const/4 v0, 0x0
 
-    .line 7335
+    .line 7336
     iput-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->currentBlock:Lorg/telegram/tgnet/TLRPC$TL_pageBlockEmbed;
 
     :cond_e
@@ -383,14 +383,14 @@
 .method protected onDraw(Landroid/graphics/Canvas;)V
     .registers 10
 
-    .line 7433
+    .line 7434
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->currentBlock:Lorg/telegram/tgnet/TLRPC$TL_pageBlockEmbed;
 
     if-nez v0, :cond_5
 
     return-void
 
-    .line 7437
+    .line 7438
     :cond_5
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->captionLayout:Lorg/telegram/ui/ArticleViewer$DrawingText;
 
@@ -398,10 +398,10 @@
 
     if-eqz v0, :cond_25
 
-    .line 7438
+    .line 7439
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 7439
+    .line 7440
     iget v0, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->textX:I
 
     int-to-float v0, v0
@@ -412,19 +412,19 @@
 
     invoke-virtual {p1, v0, v2}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 7440
+    .line 7441
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     const/4 v2, 0x1
 
     invoke-static {v0, p1, p0, v1}, Lorg/telegram/ui/ArticleViewer;->access$13800(Lorg/telegram/ui/ArticleViewer;Landroid/graphics/Canvas;Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleSelectableView;I)V
 
-    .line 7441
+    .line 7442
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->captionLayout:Lorg/telegram/ui/ArticleViewer$DrawingText;
 
     invoke-virtual {v0, p1, p0}, Lorg/telegram/ui/ArticleViewer$DrawingText;->draw(Landroid/graphics/Canvas;Landroid/view/View;)V
 
-    .line 7442
+    .line 7443
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
     goto :goto_26
@@ -432,16 +432,16 @@
     :cond_25
     const/4 v2, 0x0
 
-    .line 7444
+    .line 7445
     :goto_26
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->creditLayout:Lorg/telegram/ui/ArticleViewer$DrawingText;
 
     if-eqz v0, :cond_46
 
-    .line 7445
+    .line 7446
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 7446
+    .line 7447
     iget v0, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->textX:I
 
     int-to-float v0, v0
@@ -456,20 +456,20 @@
 
     invoke-virtual {p1, v0, v3}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 7447
+    .line 7448
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     invoke-static {v0, p1, p0, v2}, Lorg/telegram/ui/ArticleViewer;->access$13800(Lorg/telegram/ui/ArticleViewer;Landroid/graphics/Canvas;Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleSelectableView;I)V
 
-    .line 7448
+    .line 7449
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->creditLayout:Lorg/telegram/ui/ArticleViewer$DrawingText;
 
     invoke-virtual {v0, p1, p0}, Lorg/telegram/ui/ArticleViewer$DrawingText;->draw(Landroid/graphics/Canvas;Landroid/view/View;)V
 
-    .line 7449
+    .line 7450
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
-    .line 7451
+    .line 7452
     :cond_46
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->currentBlock:Lorg/telegram/tgnet/TLRPC$TL_pageBlockEmbed;
 
@@ -479,7 +479,7 @@
 
     const/high16 v0, 0x41900000    # 18.0f
 
-    .line 7452
+    .line 7453
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v0
@@ -532,7 +532,7 @@
 .method protected onLayout(ZIIII)V
     .registers 6
 
-    .line 7425
+    .line 7426
     iget-object p1, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->webView:Lorg/telegram/ui/ArticleViewer$BlockEmbedCell$TouchyWebView;
 
     iget p2, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->listX:I
@@ -553,7 +553,7 @@
 
     invoke-virtual {p1, p2, p5, p3, p4}, Landroid/webkit/WebView;->layout(IIII)V
 
-    .line 7426
+    .line 7427
     iget-object p1, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->videoView:Lorg/telegram/ui/Components/WebPlayerView;
 
     invoke-virtual {p1}, Landroid/view/ViewGroup;->getParent()Landroid/view/ViewParent;
@@ -562,7 +562,7 @@
 
     if-ne p1, p0, :cond_2d
 
-    .line 7427
+    .line 7428
     iget-object p1, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->videoView:Lorg/telegram/ui/Components/WebPlayerView;
 
     iget p2, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->listX:I
@@ -593,17 +593,17 @@
         }
     .end annotation
 
-    .line 7352
+    .line 7353
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result p1
 
-    .line 7355
+    .line 7356
     iget-object p2, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->currentBlock:Lorg/telegram/tgnet/TLRPC$TL_pageBlockEmbed;
 
     if-eqz p2, :cond_14d
 
-    .line 7358
+    .line 7359
     iget p2, p2, Lorg/telegram/tgnet/TLRPC$PageBlock;->level:I
 
     const/4 v0, 0x0
@@ -616,7 +616,7 @@
 
     int-to-float p2, p2
 
-    .line 7359
+    .line 7360
     invoke-static {p2}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result p2
@@ -631,7 +631,7 @@
 
     iput p2, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->textX:I
 
-    .line 7360
+    .line 7361
     invoke-static {v1}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v1
@@ -644,11 +644,11 @@
 
     goto :goto_50
 
-    .line 7363
+    .line 7364
     :cond_28
     iput v0, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->listX:I
 
-    .line 7364
+    .line 7365
     invoke-static {v1}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result p2
@@ -657,28 +657,28 @@
 
     const/high16 p2, 0x42100000    # 36.0f
 
-    .line 7365
+    .line 7366
     invoke-static {p2}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v2
 
     sub-int v2, p1, v2
 
-    .line 7366
+    .line 7367
     iget-object v3, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->currentBlock:Lorg/telegram/tgnet/TLRPC$TL_pageBlockEmbed;
 
     iget-boolean v3, v3, Lorg/telegram/tgnet/TLRPC$TL_pageBlockEmbed;->full_width:Z
 
     if-nez v3, :cond_4e
 
-    .line 7367
+    .line 7368
     invoke-static {p2}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result p2
 
     sub-int p2, p1, p2
 
-    .line 7368
+    .line 7369
     iget v3, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->listX:I
 
     invoke-static {v1}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -697,7 +697,7 @@
     :goto_4f
     move v9, v2
 
-    .line 7372
+    .line 7373
     :goto_50
     iget-object v1, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->currentBlock:Lorg/telegram/tgnet/TLRPC$TL_pageBlockEmbed;
 
@@ -716,7 +716,7 @@
 
     div-float/2addr v3, v4
 
-    .line 7377
+    .line 7378
     :goto_5c
     iget v4, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->exactWebViewHeight:I
 
@@ -724,14 +724,14 @@
 
     int-to-float v1, v4
 
-    .line 7378
+    .line 7379
     invoke-static {v1}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v1
 
     goto :goto_73
 
-    .line 7380
+    .line 7381
     :cond_66
     iget v1, v1, Lorg/telegram/tgnet/TLRPC$TL_pageBlockEmbed;->h:I
 
@@ -755,7 +755,7 @@
 
     if-nez v1, :cond_7b
 
-    .line 7383
+    .line 7384
     invoke-static {v2}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v1
@@ -763,7 +763,7 @@
     :cond_7b
     move v10, v1
 
-    .line 7385
+    .line 7386
     iget-object v1, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->webView:Lorg/telegram/ui/ArticleViewer$BlockEmbedCell$TouchyWebView;
 
     const/high16 v3, 0x40000000    # 2.0f
@@ -778,7 +778,7 @@
 
     invoke-virtual {v1, v4, v5}, Landroid/webkit/WebView;->measure(II)V
 
-    .line 7386
+    .line 7387
     iget-object v1, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->videoView:Lorg/telegram/ui/Components/WebPlayerView;
 
     invoke-virtual {v1}, Landroid/view/ViewGroup;->getParent()Landroid/view/ViewParent;
@@ -787,7 +787,7 @@
 
     if-ne v1, p0, :cond_a5
 
-    .line 7387
+    .line 7388
     iget-object v1, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->videoView:Lorg/telegram/ui/Components/WebPlayerView;
 
     invoke-static {p2, v3}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
@@ -809,7 +809,7 @@
     :cond_a5
     const/high16 p2, 0x41000000    # 8.0f
 
-    .line 7390
+    .line 7391
     invoke-static {p2}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v1
@@ -818,7 +818,7 @@
 
     iput v6, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->textY:I
 
-    .line 7391
+    .line 7392
     iget-object v1, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     const/4 v3, 0x0
@@ -845,7 +845,7 @@
 
     if-eqz v1, :cond_da
 
-    .line 7393
+    .line 7394
     invoke-static {v11}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v0
@@ -860,7 +860,7 @@
 
     iput v0, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->creditOffset:I
 
-    .line 7394
+    .line 7395
     invoke-static {v11}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v1
@@ -871,11 +871,11 @@
 
     goto :goto_dc
 
-    .line 7396
+    .line 7397
     :cond_da
     iput v0, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->creditOffset:I
 
-    .line 7398
+    .line 7399
     :goto_dc
     iget-object v1, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->this$0:Lorg/telegram/ui/ArticleViewer;
 
@@ -929,7 +929,7 @@
 
     if-eqz v0, :cond_11e
 
-    .line 7400
+    .line 7401
     invoke-static {v11}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v0
@@ -944,14 +944,14 @@
 
     add-int/2addr v10, v0
 
-    .line 7401
+    .line 7402
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->creditLayout:Lorg/telegram/ui/ArticleViewer$DrawingText;
 
     iget v1, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->textX:I
 
     iput v1, v0, Lorg/telegram/ui/ArticleViewer$DrawingText;->x:I
 
-    .line 7402
+    .line 7403
     iget v1, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->creditOffset:I
 
     iput v1, v0, Lorg/telegram/ui/ArticleViewer$DrawingText;->y:I
@@ -959,14 +959,14 @@
     :cond_11e
     const/high16 v0, 0x40a00000    # 5.0f
 
-    .line 7405
+    .line 7406
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v0
 
     add-int/2addr v10, v0
 
-    .line 7407
+    .line 7408
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->currentBlock:Lorg/telegram/tgnet/TLRPC$TL_pageBlockEmbed;
 
     iget v1, v0, Lorg/telegram/tgnet/TLRPC$PageBlock;->level:I
@@ -977,7 +977,7 @@
 
     if-nez v0, :cond_135
 
-    .line 7408
+    .line 7409
     invoke-static {p2}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result p2
@@ -990,31 +990,31 @@
     :cond_135
     if-nez v1, :cond_140
 
-    .line 7409
+    .line 7410
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->captionLayout:Lorg/telegram/ui/ArticleViewer$DrawingText;
 
     if-eqz v0, :cond_140
 
-    .line 7410
+    .line 7411
     invoke-static {p2}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result p2
 
     goto :goto_133
 
-    .line 7412
+    .line 7413
     :cond_140
     :goto_140
     iget-object p2, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->captionLayout:Lorg/telegram/ui/ArticleViewer$DrawingText;
 
     if-eqz p2, :cond_14e
 
-    .line 7413
+    .line 7414
     iget v0, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->textX:I
 
     iput v0, p2, Lorg/telegram/ui/ArticleViewer$DrawingText;->x:I
 
-    .line 7414
+    .line 7415
     iget v0, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->textY:I
 
     iput v0, p2, Lorg/telegram/ui/ArticleViewer$DrawingText;->y:I
@@ -1024,7 +1024,7 @@
     :cond_14d
     const/4 v10, 0x1
 
-    .line 7420
+    .line 7421
     :cond_14e
     :goto_14e
     invoke-virtual {p0, p1, v10}, Landroid/widget/FrameLayout;->setMeasuredDimension(II)V
@@ -1035,7 +1035,7 @@
 .method public onTouchEvent(Landroid/view/MotionEvent;)Z
     .registers 10
 
-    .line 7346
+    .line 7347
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     iget-object v1, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->parentAdapter:Lorg/telegram/ui/ArticleViewer$WebpageAdapter;
@@ -1106,13 +1106,13 @@
 
     const-string v0, "about:blank"
 
-    .line 7282
+    .line 7283
     iget-object v1, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->currentBlock:Lorg/telegram/tgnet/TLRPC$TL_pageBlockEmbed;
 
-    .line 7283
+    .line 7284
     iput-object p1, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->currentBlock:Lorg/telegram/tgnet/TLRPC$TL_pageBlockEmbed;
 
-    .line 7284
+    .line 7285
     iget-object v2, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->webView:Lorg/telegram/ui/ArticleViewer$BlockEmbedCell$TouchyWebView;
 
     const-string v3, "windowBackgroundWhite"
@@ -1123,51 +1123,51 @@
 
     invoke-virtual {v2, v3}, Landroid/webkit/WebView;->setBackgroundColor(I)V
 
-    .line 7285
+    .line 7286
     iget-object v2, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->currentBlock:Lorg/telegram/tgnet/TLRPC$TL_pageBlockEmbed;
 
     if-eq v1, v2, :cond_d0
 
     const/4 v1, 0x0
 
-    .line 7286
+    .line 7287
     iput-boolean v1, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->wasUserInteraction:Z
 
-    .line 7287
+    .line 7288
     iget-boolean v2, v2, Lorg/telegram/tgnet/TLRPC$TL_pageBlockEmbed;->allow_scrolling:Z
 
     if-eqz v2, :cond_28
 
-    .line 7288
+    .line 7289
     iget-object v2, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->webView:Lorg/telegram/ui/ArticleViewer$BlockEmbedCell$TouchyWebView;
 
     const/4 v3, 0x1
 
     invoke-virtual {v2, v3}, Landroid/webkit/WebView;->setVerticalScrollBarEnabled(Z)V
 
-    .line 7289
+    .line 7290
     iget-object v2, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->webView:Lorg/telegram/ui/ArticleViewer$BlockEmbedCell$TouchyWebView;
 
     invoke-virtual {v2, v3}, Landroid/webkit/WebView;->setHorizontalScrollBarEnabled(Z)V
 
     goto :goto_32
 
-    .line 7291
+    .line 7292
     :cond_28
     iget-object v2, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->webView:Lorg/telegram/ui/ArticleViewer$BlockEmbedCell$TouchyWebView;
 
     invoke-virtual {v2, v1}, Landroid/webkit/WebView;->setVerticalScrollBarEnabled(Z)V
 
-    .line 7292
+    .line 7293
     iget-object v2, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->webView:Lorg/telegram/ui/ArticleViewer$BlockEmbedCell$TouchyWebView;
 
     invoke-virtual {v2, v1}, Landroid/webkit/WebView;->setHorizontalScrollBarEnabled(Z)V
 
-    .line 7294
+    .line 7295
     :goto_32
     iput v1, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->exactWebViewHeight:I
 
-    .line 7296
+    .line 7297
     :try_start_34
     iget-object v2, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->webView:Lorg/telegram/ui/ArticleViewer$BlockEmbedCell$TouchyWebView;
 
@@ -1180,10 +1180,10 @@
     :catch_3a
     move-exception v2
 
-    .line 7298
+    .line 7299
     invoke-static {v2}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
-    .line 7302
+    .line 7303
     :goto_3e
     :try_start_3e
     iget-object v2, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->currentBlock:Lorg/telegram/tgnet/TLRPC$TL_pageBlockEmbed;
@@ -1194,7 +1194,7 @@
 
     if-eqz v5, :cond_66
 
-    .line 7303
+    .line 7304
     iget-object v3, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->webView:Lorg/telegram/ui/ArticleViewer$BlockEmbedCell$TouchyWebView;
 
     const-string v4, "https://telegram.org/embed"
@@ -1207,12 +1207,12 @@
 
     invoke-virtual/range {v3 .. v8}, Landroid/webkit/WebView;->loadDataWithBaseURL(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 7304
+    .line 7305
     iget-object p1, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->videoView:Lorg/telegram/ui/Components/WebPlayerView;
 
     invoke-virtual {p1, v9}, Landroid/view/ViewGroup;->setVisibility(I)V
 
-    .line 7305
+    .line 7306
     iget-object v2, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->videoView:Lorg/telegram/ui/Components/WebPlayerView;
 
     const/4 v3, 0x0
@@ -1227,14 +1227,14 @@
 
     invoke-virtual/range {v2 .. v7}, Lorg/telegram/ui/Components/WebPlayerView;->loadVideo(Ljava/lang/String;Lorg/telegram/tgnet/TLRPC$Photo;Ljava/lang/Object;Ljava/lang/String;Z)Z
 
-    .line 7306
+    .line 7307
     iget-object p1, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->webView:Lorg/telegram/ui/ArticleViewer$BlockEmbedCell$TouchyWebView;
 
     invoke-virtual {p1, v1}, Landroid/webkit/WebView;->setVisibility(I)V
 
     goto :goto_d0
 
-    .line 7308
+    .line 7309
     :cond_66
     iget-wide v2, v2, Lorg/telegram/tgnet/TLRPC$TL_pageBlockEmbed;->poster_photo_id:J
 
@@ -1258,7 +1258,7 @@
     :goto_76
     move-object v5, v2
 
-    .line 7309
+    .line 7310
     iget-object v3, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->videoView:Lorg/telegram/ui/Components/WebPlayerView;
 
     iget-object v4, p1, Lorg/telegram/tgnet/TLRPC$TL_pageBlockEmbed;->url:Ljava/lang/String;
@@ -1279,40 +1279,40 @@
 
     if-eqz p1, :cond_9e
 
-    .line 7311
+    .line 7312
     iget-object p1, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->webView:Lorg/telegram/ui/ArticleViewer$BlockEmbedCell$TouchyWebView;
 
     invoke-virtual {p1, v9}, Landroid/webkit/WebView;->setVisibility(I)V
 
-    .line 7312
+    .line 7313
     iget-object p1, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->videoView:Lorg/telegram/ui/Components/WebPlayerView;
 
     invoke-virtual {p1, v1}, Landroid/view/ViewGroup;->setVisibility(I)V
 
-    .line 7313
+    .line 7314
     iget-object p1, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->webView:Lorg/telegram/ui/ArticleViewer$BlockEmbedCell$TouchyWebView;
 
     invoke-virtual {p1}, Landroid/webkit/WebView;->stopLoading()V
 
-    .line 7314
+    .line 7315
     iget-object p1, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->webView:Lorg/telegram/ui/ArticleViewer$BlockEmbedCell$TouchyWebView;
 
     invoke-virtual {p1, v0}, Landroid/webkit/WebView;->loadUrl(Ljava/lang/String;)V
 
     goto :goto_d0
 
-    .line 7316
+    .line 7317
     :cond_9e
     iget-object p1, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->webView:Lorg/telegram/ui/ArticleViewer$BlockEmbedCell$TouchyWebView;
 
     invoke-virtual {p1, v1}, Landroid/webkit/WebView;->setVisibility(I)V
 
-    .line 7317
+    .line 7318
     iget-object p1, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->videoView:Lorg/telegram/ui/Components/WebPlayerView;
 
     invoke-virtual {p1, v9}, Landroid/view/ViewGroup;->setVisibility(I)V
 
-    .line 7318
+    .line 7319
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->videoView:Lorg/telegram/ui/Components/WebPlayerView;
 
     const/4 v1, 0x0
@@ -1327,14 +1327,14 @@
 
     invoke-virtual/range {v0 .. v5}, Lorg/telegram/ui/Components/WebPlayerView;->loadVideo(Ljava/lang/String;Lorg/telegram/tgnet/TLRPC$Photo;Ljava/lang/Object;Ljava/lang/String;Z)Z
 
-    .line 7319
+    .line 7320
     new-instance p1, Ljava/util/HashMap;
 
     invoke-direct {p1}, Ljava/util/HashMap;-><init>()V
 
     const-string v0, "Referer"
 
-    .line 7320
+    .line 7321
     sget-object v1, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
@@ -1343,7 +1343,7 @@
 
     invoke-virtual {p1, v0, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 7321
+    .line 7322
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->webView:Lorg/telegram/ui/ArticleViewer$BlockEmbedCell$TouchyWebView;
 
     iget-object v1, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->currentBlock:Lorg/telegram/tgnet/TLRPC$TL_pageBlockEmbed;
@@ -1359,10 +1359,10 @@
     :catch_cc
     move-exception p1
 
-    .line 7325
+    .line 7326
     invoke-static {p1}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
-    .line 7328
+    .line 7329
     :cond_d0
     :goto_d0
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->requestLayout()V

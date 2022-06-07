@@ -137,11 +137,11 @@
 
     iget-object v0, p0, Lj$/wrappers/I0;->a:Lj$/util/stream/g;
 
-    invoke-interface {v0}, Lj$/util/stream/g;->spliterator()Lj$/util/y;
+    invoke-interface {v0}, Lj$/util/stream/g;->spliterator()Lj$/util/u;
 
     move-result-object v0
 
-    invoke-static {v0}, Lj$/wrappers/h;->a(Lj$/util/y;)Ljava/util/Spliterator;
+    invoke-static {v0}, Lj$/wrappers/h;->a(Lj$/util/u;)Ljava/util/Spliterator;
 
     move-result-object v0
 

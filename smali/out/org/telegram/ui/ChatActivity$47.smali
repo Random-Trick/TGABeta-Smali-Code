@@ -25,7 +25,7 @@
 .method constructor <init>(Lorg/telegram/ui/ChatActivity;)V
     .registers 2
 
-    .line 8153
+    .line 8302
     iput-object p1, p0, Lorg/telegram/ui/ChatActivity$47;->this$0:Lorg/telegram/ui/ChatActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,10 +38,10 @@
 .method public getCurrentTextureView()Landroid/view/TextureView;
     .registers 2
 
-    .line 8157
+    .line 8306
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$47;->this$0:Lorg/telegram/ui/ChatActivity;
 
-    invoke-static {v0}, Lorg/telegram/ui/ChatActivity;->access$30200(Lorg/telegram/ui/ChatActivity;)Landroid/view/TextureView;
+    invoke-static {v0}, Lorg/telegram/ui/ChatActivity;->access$30700(Lorg/telegram/ui/ChatActivity;)Landroid/view/TextureView;
 
     move-result-object v0
 
@@ -55,7 +55,7 @@
 
     return-void
 
-    .line 8186
+    .line 8335
     :cond_3
     invoke-static {}, Lorg/telegram/messenger/MediaController;->getInstance()Lorg/telegram/messenger/MediaController;
 
@@ -69,11 +69,11 @@
 
     const/4 v0, 0x0
 
-    .line 8187
+    .line 8336
     :goto_e
     iget-object v1, p0, Lorg/telegram/ui/ChatActivity$47;->this$0:Lorg/telegram/ui/ChatActivity;
 
-    invoke-static {v1}, Lorg/telegram/ui/ChatActivity;->access$2200(Lorg/telegram/ui/ChatActivity;)Lorg/telegram/ui/Components/RecyclerListView;
+    invoke-static {v1}, Lorg/telegram/ui/ChatActivity;->access$2300(Lorg/telegram/ui/ChatActivity;)Lorg/telegram/ui/Components/RecyclerListView;
 
     move-result-object v1
 
@@ -83,10 +83,10 @@
 
     if-ge v0, v1, :cond_80
 
-    .line 8188
+    .line 8337
     iget-object v1, p0, Lorg/telegram/ui/ChatActivity$47;->this$0:Lorg/telegram/ui/ChatActivity;
 
-    invoke-static {v1}, Lorg/telegram/ui/ChatActivity;->access$2200(Lorg/telegram/ui/ChatActivity;)Lorg/telegram/ui/Components/RecyclerListView;
+    invoke-static {v1}, Lorg/telegram/ui/ChatActivity;->access$2300(Lorg/telegram/ui/ChatActivity;)Lorg/telegram/ui/Components/RecyclerListView;
 
     move-result-object v1
 
@@ -98,10 +98,10 @@
 
     if-eqz v1, :cond_7d
 
-    .line 8189
+    .line 8338
     iget-object v1, p0, Lorg/telegram/ui/ChatActivity$47;->this$0:Lorg/telegram/ui/ChatActivity;
 
-    invoke-static {v1}, Lorg/telegram/ui/ChatActivity;->access$2200(Lorg/telegram/ui/ChatActivity;)Lorg/telegram/ui/Components/RecyclerListView;
+    invoke-static {v1}, Lorg/telegram/ui/ChatActivity;->access$2300(Lorg/telegram/ui/ChatActivity;)Lorg/telegram/ui/Components/RecyclerListView;
 
     move-result-object v1
 
@@ -111,7 +111,7 @@
 
     check-cast v1, Lorg/telegram/ui/Cells/ChatMessageCell;
 
-    .line 8190
+    .line 8339
     invoke-virtual {v1}, Lorg/telegram/ui/Cells/ChatMessageCell;->getMessageObject()Lorg/telegram/messenger/MessageObject;
 
     move-result-object v2
@@ -126,7 +126,7 @@
 
     if-ne v2, v3, :cond_7d
 
-    .line 8191
+    .line 8340
     invoke-virtual {v1}, Lorg/telegram/ui/Cells/ChatMessageCell;->getPhotoImage()Lorg/telegram/messenger/ImageReceiver;
 
     move-result-object v1
@@ -135,17 +135,17 @@
 
     move-result-object v1
 
-    .line 8192
+    .line 8341
     invoke-virtual {v1}, Lorg/telegram/ui/Components/AnimatedFileDrawable;->isRunning()Z
 
     move-result v2
 
     if-eqz v2, :cond_53
 
-    .line 8193
+    .line 8342
     invoke-virtual {v1}, Lorg/telegram/ui/Components/AnimatedFileDrawable;->stop()V
 
-    .line 8196
+    .line 8345
     :cond_53
     invoke-virtual {v1}, Lorg/telegram/ui/Components/AnimatedFileDrawable;->getAnimatedBitmap()Landroid/graphics/Bitmap;
 
@@ -153,7 +153,7 @@
 
     if-eqz v1, :cond_7d
 
-    .line 8199
+    .line 8348
     :try_start_59
     iget-object v2, p0, Lorg/telegram/ui/ChatActivity$47;->this$0:Lorg/telegram/ui/ChatActivity;
 
@@ -173,7 +173,7 @@
 
     move-result-object v2
 
-    .line 8200
+    .line 8349
     new-instance v3, Landroid/graphics/Canvas;
 
     invoke-direct {v3, v1}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
@@ -182,10 +182,10 @@
 
     const/4 v4, 0x0
 
-    .line 8201
+    .line 8350
     invoke-virtual {v3, v2, v4, v4, v1}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
 
-    .line 8202
+    .line 8351
     invoke-virtual {v2}, Landroid/graphics/Bitmap;->recycle()V
     :try_end_78
     .catchall {:try_start_59 .. :try_end_78} :catchall_79
@@ -195,7 +195,7 @@
     :catchall_79
     move-exception v1
 
-    .line 8204
+    .line 8353
     invoke-static {v1}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     :cond_7d
@@ -204,7 +204,7 @@
 
     goto :goto_e
 
-    .line 8211
+    .line 8360
     :cond_80
     iget-object p1, p0, Lorg/telegram/ui/ChatActivity$47;->this$0:Lorg/telegram/ui/ChatActivity;
 
@@ -212,14 +212,14 @@
 
     invoke-static {p1, v0}, Lorg/telegram/ui/ChatActivity;->access$9900(Lorg/telegram/ui/ChatActivity;Z)Landroid/view/TextureView;
 
-    .line 8212
+    .line 8361
     invoke-static {}, Lorg/telegram/messenger/MediaController;->getInstance()Lorg/telegram/messenger/MediaController;
 
     move-result-object p1
 
     iget-object v1, p0, Lorg/telegram/ui/ChatActivity$47;->this$0:Lorg/telegram/ui/ChatActivity;
 
-    invoke-static {v1}, Lorg/telegram/ui/ChatActivity;->access$30200(Lorg/telegram/ui/ChatActivity;)Landroid/view/TextureView;
+    invoke-static {v1}, Lorg/telegram/ui/ChatActivity;->access$30700(Lorg/telegram/ui/ChatActivity;)Landroid/view/TextureView;
 
     move-result-object v1
 
@@ -237,11 +237,11 @@
 
     invoke-virtual {p1, v1, v2, v3, v0}, Lorg/telegram/messenger/MediaController;->setTextureView(Landroid/view/TextureView;Lcom/google/android/exoplayer2/ui/AspectRatioFrameLayout;Landroid/widget/FrameLayout;Z)V
 
-    .line 8214
+    .line 8363
     :cond_9f
     iget-object p1, p0, Lorg/telegram/ui/ChatActivity$47;->this$0:Lorg/telegram/ui/ChatActivity;
 
-    invoke-static {p1}, Lorg/telegram/ui/ChatActivity;->access$2200(Lorg/telegram/ui/ChatActivity;)Lorg/telegram/ui/Components/RecyclerListView;
+    invoke-static {p1}, Lorg/telegram/ui/ChatActivity;->access$2300(Lorg/telegram/ui/ChatActivity;)Lorg/telegram/ui/Components/RecyclerListView;
 
     move-result-object p1
 
@@ -253,10 +253,10 @@
 .method public onZoomStarted(Lorg/telegram/messenger/MessageObject;)V
     .registers 8
 
-    .line 8162
+    .line 8311
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$47;->this$0:Lorg/telegram/ui/ChatActivity;
 
-    invoke-static {v0}, Lorg/telegram/ui/ChatActivity;->access$2200(Lorg/telegram/ui/ChatActivity;)Lorg/telegram/ui/Components/RecyclerListView;
+    invoke-static {v0}, Lorg/telegram/ui/ChatActivity;->access$2300(Lorg/telegram/ui/ChatActivity;)Lorg/telegram/ui/Components/RecyclerListView;
 
     move-result-object v0
 
@@ -264,16 +264,16 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/RecyclerListView;->cancelClickRunnables(Z)V
 
-    .line 8163
+    .line 8312
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$47;->this$0:Lorg/telegram/ui/ChatActivity;
 
-    invoke-static {v0}, Lorg/telegram/ui/ChatActivity;->access$2200(Lorg/telegram/ui/ChatActivity;)Lorg/telegram/ui/Components/RecyclerListView;
+    invoke-static {v0}, Lorg/telegram/ui/ChatActivity;->access$2300(Lorg/telegram/ui/ChatActivity;)Lorg/telegram/ui/Components/RecyclerListView;
 
     move-result-object v0
 
     invoke-virtual {v0}, Lorg/telegram/ui/Components/RecyclerListView;->stopScroll()V
 
-    .line 8164
+    .line 8313
     invoke-static {}, Lorg/telegram/messenger/MediaController;->getInstance()Lorg/telegram/messenger/MediaController;
 
     move-result-object v0
@@ -284,7 +284,7 @@
 
     if-eqz v0, :cond_38
 
-    .line 8165
+    .line 8314
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$47;->this$0:Lorg/telegram/ui/ChatActivity;
 
     iget-object v2, v0, Lorg/telegram/ui/ChatActivity;->contentView:Lorg/telegram/ui/Components/SizeNotifierFrameLayout;
@@ -295,19 +295,19 @@
 
     invoke-virtual {v2, v0}, Landroid/widget/FrameLayout;->removeView(Landroid/view/View;)V
 
-    .line 8166
+    .line 8315
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$47;->this$0:Lorg/telegram/ui/ChatActivity;
 
     const/4 v2, 0x0
 
     invoke-static {v0, v2}, Lorg/telegram/ui/ChatActivity;->access$10102(Lorg/telegram/ui/ChatActivity;Landroid/widget/FrameLayout;)Landroid/widget/FrameLayout;
 
-    .line 8167
+    .line 8316
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$47;->this$0:Lorg/telegram/ui/ChatActivity;
 
-    invoke-static {v0, v2}, Lorg/telegram/ui/ChatActivity;->access$30202(Lorg/telegram/ui/ChatActivity;Landroid/view/TextureView;)Landroid/view/TextureView;
+    invoke-static {v0, v2}, Lorg/telegram/ui/ChatActivity;->access$30702(Lorg/telegram/ui/ChatActivity;Landroid/view/TextureView;)Landroid/view/TextureView;
 
-    .line 8168
+    .line 8317
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$47;->this$0:Lorg/telegram/ui/ChatActivity;
 
     invoke-static {v0, v2}, Lorg/telegram/ui/ChatActivity;->access$10002(Lorg/telegram/ui/ChatActivity;Lcom/google/android/exoplayer2/ui/AspectRatioFrameLayout;)Lcom/google/android/exoplayer2/ui/AspectRatioFrameLayout;
@@ -317,11 +317,11 @@
 
     const/4 v2, 0x0
 
-    .line 8171
+    .line 8320
     :goto_3a
     iget-object v3, p0, Lorg/telegram/ui/ChatActivity$47;->this$0:Lorg/telegram/ui/ChatActivity;
 
-    invoke-static {v3}, Lorg/telegram/ui/ChatActivity;->access$2200(Lorg/telegram/ui/ChatActivity;)Lorg/telegram/ui/Components/RecyclerListView;
+    invoke-static {v3}, Lorg/telegram/ui/ChatActivity;->access$2300(Lorg/telegram/ui/ChatActivity;)Lorg/telegram/ui/Components/RecyclerListView;
 
     move-result-object v3
 
@@ -331,10 +331,10 @@
 
     if-ge v2, v3, :cond_78
 
-    .line 8172
+    .line 8321
     iget-object v3, p0, Lorg/telegram/ui/ChatActivity$47;->this$0:Lorg/telegram/ui/ChatActivity;
 
-    invoke-static {v3}, Lorg/telegram/ui/ChatActivity;->access$2200(Lorg/telegram/ui/ChatActivity;)Lorg/telegram/ui/Components/RecyclerListView;
+    invoke-static {v3}, Lorg/telegram/ui/ChatActivity;->access$2300(Lorg/telegram/ui/ChatActivity;)Lorg/telegram/ui/Components/RecyclerListView;
 
     move-result-object v3
 
@@ -346,10 +346,10 @@
 
     if-eqz v3, :cond_75
 
-    .line 8173
+    .line 8322
     iget-object v3, p0, Lorg/telegram/ui/ChatActivity$47;->this$0:Lorg/telegram/ui/ChatActivity;
 
-    invoke-static {v3}, Lorg/telegram/ui/ChatActivity;->access$2200(Lorg/telegram/ui/ChatActivity;)Lorg/telegram/ui/Components/RecyclerListView;
+    invoke-static {v3}, Lorg/telegram/ui/ChatActivity;->access$2300(Lorg/telegram/ui/ChatActivity;)Lorg/telegram/ui/Components/RecyclerListView;
 
     move-result-object v3
 
@@ -359,7 +359,7 @@
 
     check-cast v3, Lorg/telegram/ui/Cells/ChatMessageCell;
 
-    .line 8174
+    .line 8323
     invoke-virtual {v3}, Lorg/telegram/ui/Cells/ChatMessageCell;->getMessageObject()Lorg/telegram/messenger/MessageObject;
 
     move-result-object v4
@@ -374,7 +374,7 @@
 
     if-ne v4, v5, :cond_75
 
-    .line 8175
+    .line 8324
     invoke-virtual {v3}, Lorg/telegram/ui/Cells/ChatMessageCell;->getPhotoImage()Lorg/telegram/messenger/ImageReceiver;
 
     move-result-object v3

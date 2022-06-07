@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lorg/telegram/ui/Components/RecyclerListView$OnItemLongClickListener;
+.implements Lorg/telegram/ui/Components/ChatAttachAlertPollLayout$PollCreateActivityDelegate;
 
 
 # instance fields
@@ -22,14 +22,12 @@
 
 
 # virtual methods
-.method public final onItemClick(Landroid/view/View;I)Z
-    .registers 4
+.method public final sendPoll(Lorg/telegram/tgnet/TLRPC$TL_messageMediaPoll;Ljava/util/HashMap;ZI)V
+    .registers 6
 
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlert$$ExternalSyntheticLambda34;->f$0:Lorg/telegram/ui/Components/ChatAttachAlert;
 
-    invoke-static {v0, p1, p2}, Lorg/telegram/ui/Components/ChatAttachAlert;->$r8$lambda$b1J9IwRLthbYmKORJN9LrQPwIBc(Lorg/telegram/ui/Components/ChatAttachAlert;Landroid/view/View;I)Z
+    invoke-static {v0, p1, p2, p3, p4}, Lorg/telegram/ui/Components/ChatAttachAlert;->$r8$lambda$U2YFAA4L5rMODb4LcyP_IlqgJaM(Lorg/telegram/ui/Components/ChatAttachAlert;Lorg/telegram/tgnet/TLRPC$TL_messageMediaPoll;Ljava/util/HashMap;ZI)V
 
-    move-result p1
-
-    return p1
+    return-void
 .end method

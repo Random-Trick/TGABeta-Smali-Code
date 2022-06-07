@@ -26,7 +26,7 @@
 .method constructor <init>(Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$5;Ljava/lang/String;)V
     .registers 3
 
-    .line 25564
+    .line 26003
     invoke-direct {p0, p2}, Lorg/telegram/ui/Components/AnimationProperties$FloatProperty;-><init>(Ljava/lang/String;)V
 
     return-void
@@ -37,7 +37,7 @@
 .method public get(Lorg/telegram/messenger/MessageObject$SendAnimationData;)Ljava/lang/Float;
     .registers 2
 
-    .line 25572
+    .line 26011
     iget p1, p1, Lorg/telegram/messenger/MessageObject$SendAnimationData;->currentScale:F
 
     invoke-static {p1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
@@ -50,7 +50,7 @@
 .method public bridge synthetic get(Ljava/lang/Object;)Ljava/lang/Object;
     .registers 2
 
-    .line 25564
+    .line 26003
     check-cast p1, Lorg/telegram/messenger/MessageObject$SendAnimationData;
 
     invoke-virtual {p0, p1}, Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$5$1;->get(Lorg/telegram/messenger/MessageObject$SendAnimationData;)Ljava/lang/Float;
@@ -63,7 +63,7 @@
 .method public bridge synthetic setValue(Ljava/lang/Object;F)V
     .registers 3
 
-    .line 25564
+    .line 26003
     check-cast p1, Lorg/telegram/messenger/MessageObject$SendAnimationData;
 
     invoke-virtual {p0, p1, p2}, Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$5$1;->setValue(Lorg/telegram/messenger/MessageObject$SendAnimationData;F)V
@@ -74,7 +74,7 @@
 .method public setValue(Lorg/telegram/messenger/MessageObject$SendAnimationData;F)V
     .registers 3
 
-    .line 25567
+    .line 26006
     iput p2, p1, Lorg/telegram/messenger/MessageObject$SendAnimationData;->currentScale:F
 
     return-void

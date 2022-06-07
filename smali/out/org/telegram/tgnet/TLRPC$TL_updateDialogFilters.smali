@@ -17,7 +17,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 29947
+    .line 30375
     invoke-direct {p0}, Lorg/telegram/tgnet/TLRPC$Update;-><init>()V
 
     return-void
@@ -28,7 +28,7 @@
 .method public serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
     .registers 3
 
-    .line 29952
+    .line 30380
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_updateDialogFilters;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V

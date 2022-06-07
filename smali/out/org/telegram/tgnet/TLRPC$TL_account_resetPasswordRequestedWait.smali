@@ -21,7 +21,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 45327
+    .line 45779
     invoke-direct {p0}, Lorg/telegram/tgnet/TLRPC$account_ResetPasswordResult;-><init>()V
 
     return-void
@@ -32,7 +32,7 @@
 .method public readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
     .registers 3
 
-    .line 45333
+    .line 45785
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result p1
@@ -45,12 +45,12 @@
 .method public serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
     .registers 3
 
-    .line 45337
+    .line 45789
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_account_resetPasswordRequestedWait;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 45338
+    .line 45790
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_account_resetPasswordRequestedWait;->until_date:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V

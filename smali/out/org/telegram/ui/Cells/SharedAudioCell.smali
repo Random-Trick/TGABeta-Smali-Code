@@ -75,7 +75,7 @@
 
     const/4 v1, 0x0
 
-    .line 85
+    .line 91
     invoke-direct {p0, p1, v0, v1}, Lorg/telegram/ui/Cells/SharedAudioCell;-><init>(Landroid/content/Context;ILorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)V
 
     return-void
@@ -84,12 +84,12 @@
 .method public constructor <init>(Landroid/content/Context;ILorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)V
     .registers 14
 
-    .line 93
+    .line 99
     invoke-direct {p0, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
     const/high16 v0, 0x41100000    # 9.0f
 
-    .line 54
+    .line 60
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v0
@@ -98,42 +98,42 @@
 
     const/high16 v0, 0x41e80000    # 29.0f
 
-    .line 57
+    .line 63
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v1
 
     iput v1, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->descriptionY:I
 
-    .line 60
+    .line 66
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v0
 
     iput v0, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->captionY:I
 
-    .line 67
+    .line 73
     sget v0, Lorg/telegram/messenger/UserConfig;->selectedAccount:I
 
     iput v0, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->currentAccount:I
 
     const/high16 v0, 0x3f800000    # 1.0f
 
-    .line 547
+    .line 590
     iput v0, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->enterAlpha:F
 
-    .line 94
+    .line 100
     iput-object p3, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->resourcesProvider:Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;
 
-    .line 95
+    .line 101
     iput p2, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->viewType:I
 
     const/4 v0, 0x1
 
-    .line 96
+    .line 102
     invoke-virtual {p0, v0}, Landroid/widget/FrameLayout;->setFocusable(Z)V
 
-    .line 98
+    .line 104
     new-instance v1, Lorg/telegram/ui/Components/RadialProgress2;
 
     invoke-direct {v1, p0, p3}, Lorg/telegram/ui/Components/RadialProgress2;-><init>(Landroid/view/View;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)V
@@ -148,10 +148,10 @@
 
     const-string v5, "chat_inMediaIconSelected"
 
-    .line 99
+    .line 105
     invoke-virtual {v1, v2, v3, v4, v5}, Lorg/telegram/ui/Components/RadialProgress2;->setColors(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 101
+    .line 107
     iget v1, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->currentAccount:I
 
     invoke-static {v1}, Lorg/telegram/messenger/DownloadController;->getInstance(I)Lorg/telegram/messenger/DownloadController;
@@ -166,10 +166,10 @@
 
     const/4 v1, 0x0
 
-    .line 102
+    .line 108
     invoke-virtual {p0, v1}, Landroid/widget/FrameLayout;->setWillNotDraw(Z)V
 
-    .line 104
+    .line 110
     new-instance v2, Lorg/telegram/ui/Components/CheckBox2;
 
     const/16 v3, 0x16
@@ -180,10 +180,10 @@
 
     const/4 p1, 0x4
 
-    .line 105
+    .line 111
     invoke-virtual {v2, p1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 106
+    .line 112
     iget-object p1, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->checkBox:Lorg/telegram/ui/Components/CheckBox2;
 
     const/4 p3, 0x0
@@ -194,19 +194,19 @@
 
     invoke-virtual {p1, p3, v2, v3}, Lorg/telegram/ui/Components/CheckBox2;->setColor(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 107
+    .line 113
     iget-object p1, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->checkBox:Lorg/telegram/ui/Components/CheckBox2;
 
     invoke-virtual {p1, v1}, Lorg/telegram/ui/Components/CheckBox2;->setDrawUnchecked(Z)V
 
-    .line 108
+    .line 114
     iget-object p1, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->checkBox:Lorg/telegram/ui/Components/CheckBox2;
 
     const/4 p3, 0x3
 
     invoke-virtual {p1, p3}, Lorg/telegram/ui/Components/CheckBox2;->setDrawBackgroundAsArc(I)V
 
-    .line 109
+    .line 115
     iget-object p1, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->checkBox:Lorg/telegram/ui/Components/CheckBox2;
 
     sget-boolean v2, Lorg/telegram/messenger/LocaleController;->isRTL:Z
@@ -262,14 +262,14 @@
 
     if-ne p2, v0, :cond_bc
 
-    .line 112
+    .line 118
     new-instance p2, Landroid/text/TextPaint;
 
     invoke-direct {p2, v0}, Landroid/text/TextPaint;-><init>(I)V
 
     iput-object p2, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->description2TextPaint:Landroid/text/TextPaint;
 
-    .line 113
+    .line 119
     invoke-static {p1}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result p3
@@ -278,7 +278,7 @@
 
     invoke-virtual {p2, p3}, Landroid/text/TextPaint;->setTextSize(F)V
 
-    .line 115
+    .line 121
     new-instance p2, Landroid/text/SpannableStringBuilder;
 
     const-string p3, "."
@@ -287,14 +287,14 @@
 
     iput-object p2, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->dotSpan:Landroid/text/SpannableStringBuilder;
 
-    .line 116
+    .line 122
     new-instance p3, Lorg/telegram/ui/Components/DotDividerSpan;
 
     invoke-direct {p3}, Lorg/telegram/ui/Components/DotDividerSpan;-><init>()V
 
     invoke-virtual {p2, p3, v1, v0, v1}, Landroid/text/SpannableStringBuilder;->setSpan(Ljava/lang/Object;III)V
 
-    .line 119
+    .line 125
     :cond_bc
     new-instance p2, Landroid/text/TextPaint;
 
@@ -302,7 +302,7 @@
 
     iput-object p2, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->captionTextPaint:Landroid/text/TextPaint;
 
-    .line 120
+    .line 126
     invoke-static {p1}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result p1
@@ -319,23 +319,41 @@
 
     const/4 v0, 0x0
 
-    .line 89
+    .line 95
     invoke-direct {p0, p1, v0, p2}, Lorg/telegram/ui/Cells/SharedAudioCell;-><init>(Landroid/content/Context;ILorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)V
 
     return-void
 .end method
 
+.method static synthetic access$000(Lorg/telegram/ui/Cells/SharedAudioCell;)I
+    .registers 1
+
+    .line 47
+    iget p0, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->buttonX:I
+
+    return p0
+.end method
+
+.method static synthetic access$100(Lorg/telegram/ui/Cells/SharedAudioCell;)I
+    .registers 1
+
+    .line 47
+    iget p0, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->buttonY:I
+
+    return p0
+.end method
+
 .method private checkAudioMotionEvent(Landroid/view/MotionEvent;)Z
     .registers 10
 
-    .line 267
+    .line 273
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
     move-result v0
 
     float-to-int v0, v0
 
-    .line 268
+    .line 274
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
 
     move-result v1
@@ -344,12 +362,12 @@
 
     const/high16 v2, 0x42100000    # 36.0f
 
-    .line 270
+    .line 276
     invoke-static {v2}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v2
 
-    .line 272
+    .line 278
     iget v3, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->miniButtonState:I
 
     const/4 v4, 0x1
@@ -360,12 +378,12 @@
 
     const/high16 v3, 0x41d80000    # 27.0f
 
-    .line 273
+    .line 279
     invoke-static {v3}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v3
 
-    .line 274
+    .line 280
     iget v6, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->buttonX:I
 
     add-int v7, v6, v3
@@ -397,7 +415,7 @@
     :cond_32
     const/4 v2, 0x0
 
-    .line 276
+    .line 282
     :goto_33
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
@@ -407,15 +425,15 @@
 
     if-eqz v2, :cond_47
 
-    .line 278
+    .line 284
     iput-boolean v4, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->miniButtonPressed:Z
 
-    .line 279
+    .line 285
     iget-object p1, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->radialProgress:Lorg/telegram/ui/Components/RadialProgress2;
 
     invoke-virtual {p1, v4, v4}, Lorg/telegram/ui/Components/RadialProgress2;->setPressed(ZZ)V
 
-    .line 280
+    .line 286
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->invalidate()V
 
     :goto_45
@@ -423,7 +441,7 @@
 
     goto :goto_ab
 
-    .line 282
+    .line 288
     :cond_47
     iget-boolean p1, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->checkForButtonPress:Z
 
@@ -445,20 +463,20 @@
 
     if-eqz p1, :cond_ab
 
-    .line 283
+    .line 289
     iput-boolean v4, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->buttonPressed:Z
 
-    .line 284
+    .line 290
     iget-object p1, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->radialProgress:Lorg/telegram/ui/Components/RadialProgress2;
 
     invoke-virtual {p1, v4, v5}, Lorg/telegram/ui/Components/RadialProgress2;->setPressed(ZZ)V
 
-    .line 285
+    .line 291
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->invalidate()V
 
     goto :goto_45
 
-    .line 288
+    .line 294
     :cond_64
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
@@ -466,46 +484,46 @@
 
     if-ne v0, v4, :cond_8a
 
-    .line 289
+    .line 295
     iget-boolean p1, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->miniButtonPressed:Z
 
     if-eqz p1, :cond_7a
 
-    .line 290
+    .line 296
     iput-boolean v5, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->miniButtonPressed:Z
 
-    .line 291
-    invoke-virtual {p0, v5}, Landroid/widget/FrameLayout;->playSoundEffect(I)V
-
-    .line 292
-    invoke-direct {p0, v4}, Lorg/telegram/ui/Cells/SharedAudioCell;->didPressedMiniButton(Z)V
-
-    .line 293
-    invoke-virtual {p0}, Landroid/widget/FrameLayout;->invalidate()V
-
-    goto :goto_ab
-
-    .line 294
-    :cond_7a
-    iget-boolean p1, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->buttonPressed:Z
-
-    if-eqz p1, :cond_ab
-
-    .line 295
-    iput-boolean v5, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->buttonPressed:Z
-
-    .line 296
-    invoke-virtual {p0, v5}, Landroid/widget/FrameLayout;->playSoundEffect(I)V
-
     .line 297
-    invoke-virtual {p0}, Lorg/telegram/ui/Cells/SharedAudioCell;->didPressedButton()V
+    invoke-virtual {p0, v5}, Landroid/widget/FrameLayout;->playSoundEffect(I)V
 
     .line 298
+    invoke-direct {p0, v4}, Lorg/telegram/ui/Cells/SharedAudioCell;->didPressedMiniButton(Z)V
+
+    .line 299
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->invalidate()V
 
     goto :goto_ab
 
     .line 300
+    :cond_7a
+    iget-boolean p1, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->buttonPressed:Z
+
+    if-eqz p1, :cond_ab
+
+    .line 301
+    iput-boolean v5, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->buttonPressed:Z
+
+    .line 302
+    invoke-virtual {p0, v5}, Landroid/widget/FrameLayout;->playSoundEffect(I)V
+
+    .line 303
+    invoke-virtual {p0}, Lorg/telegram/ui/Cells/SharedAudioCell;->didPressedButton()V
+
+    .line 304
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->invalidate()V
+
+    goto :goto_ab
+
+    .line 306
     :cond_8a
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
@@ -515,18 +533,18 @@
 
     if-ne v0, v1, :cond_99
 
-    .line 301
+    .line 307
     iput-boolean v5, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->miniButtonPressed:Z
 
-    .line 302
+    .line 308
     iput-boolean v5, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->buttonPressed:Z
 
-    .line 303
+    .line 309
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->invalidate()V
 
     goto :goto_ab
 
-    .line 304
+    .line 310
     :cond_99
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
@@ -538,18 +556,18 @@
 
     if-nez v2, :cond_ab
 
-    .line 305
+    .line 311
     iget-boolean p1, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->miniButtonPressed:Z
 
     if-eqz p1, :cond_ab
 
-    .line 306
+    .line 312
     iput-boolean v5, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->miniButtonPressed:Z
 
-    .line 307
+    .line 313
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->invalidate()V
 
-    .line 310
+    .line 316
     :cond_ab
     :goto_ab
     iget-object p1, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->radialProgress:Lorg/telegram/ui/Components/RadialProgress2;
@@ -564,7 +582,7 @@
 .method private didPressedMiniButton(Z)V
     .registers 6
 
-    .line 332
+    .line 338
     iget p1, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->miniButtonState:I
 
     const/4 v0, 0x0
@@ -573,17 +591,17 @@
 
     if-nez p1, :cond_2c
 
-    .line 333
+    .line 339
     iput v1, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->miniButtonState:I
 
-    .line 334
+    .line 340
     iget-object p1, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->radialProgress:Lorg/telegram/ui/Components/RadialProgress2;
 
     const/4 v2, 0x0
 
     invoke-virtual {p1, v2, v0}, Lorg/telegram/ui/Components/RadialProgress2;->setProgress(FZ)V
 
-    .line 335
+    .line 341
     iget p1, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->currentAccount:I
 
     invoke-static {p1}, Lorg/telegram/messenger/FileLoader;->getInstance(I)Lorg/telegram/messenger/FileLoader;
@@ -600,7 +618,7 @@
 
     invoke-virtual {p1, v2, v3, v1, v0}, Lorg/telegram/messenger/FileLoader;->loadFile(Lorg/telegram/tgnet/TLRPC$Document;Ljava/lang/Object;II)V
 
-    .line 336
+    .line 342
     iget-object p1, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->radialProgress:Lorg/telegram/ui/Components/RadialProgress2;
 
     invoke-direct {p0}, Lorg/telegram/ui/Cells/SharedAudioCell;->getMiniIconForCurrentState()I
@@ -609,7 +627,7 @@
 
     invoke-virtual {p1, v2, v0, v1}, Lorg/telegram/ui/Components/RadialProgress2;->setMiniIcon(IZZ)V
 
-    .line 337
+    .line 343
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->invalidate()V
 
     goto :goto_5e
@@ -617,7 +635,7 @@
     :cond_2c
     if-ne p1, v1, :cond_5e
 
-    .line 339
+    .line 345
     invoke-static {}, Lorg/telegram/messenger/MediaController;->getInstance()Lorg/telegram/messenger/MediaController;
 
     move-result-object p1
@@ -630,18 +648,18 @@
 
     if-eqz p1, :cond_41
 
-    .line 340
+    .line 346
     invoke-static {}, Lorg/telegram/messenger/MediaController;->getInstance()Lorg/telegram/messenger/MediaController;
 
     move-result-object p1
 
     invoke-virtual {p1, v1, v1}, Lorg/telegram/messenger/MediaController;->cleanupPlayer(ZZ)V
 
-    .line 342
+    .line 348
     :cond_41
     iput v0, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->miniButtonState:I
 
-    .line 343
+    .line 349
     iget p1, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->currentAccount:I
 
     invoke-static {p1}, Lorg/telegram/messenger/FileLoader;->getInstance(I)Lorg/telegram/messenger/FileLoader;
@@ -656,7 +674,7 @@
 
     invoke-virtual {p1, v2}, Lorg/telegram/messenger/FileLoader;->cancelLoadFile(Lorg/telegram/tgnet/TLRPC$Document;)V
 
-    .line 344
+    .line 350
     iget-object p1, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->radialProgress:Lorg/telegram/ui/Components/RadialProgress2;
 
     invoke-direct {p0}, Lorg/telegram/ui/Cells/SharedAudioCell;->getMiniIconForCurrentState()I
@@ -665,7 +683,7 @@
 
     invoke-virtual {p1, v2, v0, v1}, Lorg/telegram/ui/Components/RadialProgress2;->setMiniIcon(IZZ)V
 
-    .line 345
+    .line 351
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->invalidate()V
 
     :cond_5e
@@ -676,14 +694,14 @@
 .method private drawInternal(Landroid/graphics/Canvas;)V
     .registers 10
 
-    .line 573
+    .line 616
     iget v0, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->viewType:I
 
     const/4 v1, 0x1
 
     if-ne v0, v1, :cond_10
 
-    .line 574
+    .line 617
     iget-object v0, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->description2TextPaint:Landroid/text/TextPaint;
 
     const-string v2, "windowBackgroundWhiteGrayText3"
@@ -694,7 +712,7 @@
 
     invoke-virtual {v0, v2}, Landroid/text/TextPaint;->setColor(I)V
 
-    .line 576
+    .line 619
     :cond_10
     iget-object v0, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->dateLayout:Landroid/text/StaticLayout;
 
@@ -704,10 +722,10 @@
 
     if-eqz v0, :cond_40
 
-    .line 577
+    .line 620
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 578
+    .line 621
     sget-boolean v0, Lorg/telegram/messenger/LocaleController;->isRTL:Z
 
     if-eqz v0, :cond_21
@@ -748,24 +766,24 @@
 
     invoke-virtual {p1, v0, v4}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 579
+    .line 622
     iget-object v0, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->dateLayout:Landroid/text/StaticLayout;
 
     invoke-virtual {v0, p1}, Landroid/text/StaticLayout;->draw(Landroid/graphics/Canvas;)V
 
-    .line 580
+    .line 623
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
-    .line 583
+    .line 626
     :cond_40
     iget-object v0, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->titleLayout:Landroid/text/StaticLayout;
 
     if-eqz v0, :cond_78
 
-    .line 584
+    .line 627
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 585
+    .line 628
     sget-boolean v0, Lorg/telegram/messenger/LocaleController;->isRTL:Z
 
     if-eqz v0, :cond_4e
@@ -815,21 +833,21 @@
 
     invoke-virtual {p1, v0, v2}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 586
+    .line 629
     iget-object v0, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->titleLayout:Landroid/text/StaticLayout;
 
     invoke-virtual {v0, p1}, Landroid/text/StaticLayout;->draw(Landroid/graphics/Canvas;)V
 
-    .line 587
+    .line 630
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
-    .line 590
+    .line 633
     :cond_78
     iget-object v0, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->captionLayout:Landroid/text/StaticLayout;
 
     if-eqz v0, :cond_a7
 
-    .line 591
+    .line 634
     iget-object v0, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->captionTextPaint:Landroid/text/TextPaint;
 
     const-string v2, "windowBackgroundWhiteBlackText"
@@ -840,10 +858,10 @@
 
     invoke-virtual {v0, v2}, Landroid/text/TextPaint;->setColor(I)V
 
-    .line 592
+    .line 635
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 593
+    .line 636
     sget-boolean v0, Lorg/telegram/messenger/LocaleController;->isRTL:Z
 
     if-eqz v0, :cond_91
@@ -870,21 +888,21 @@
 
     invoke-virtual {p1, v0, v2}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 594
+    .line 637
     iget-object v0, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->captionLayout:Landroid/text/StaticLayout;
 
     invoke-virtual {v0, p1}, Landroid/text/StaticLayout;->draw(Landroid/graphics/Canvas;)V
 
-    .line 595
+    .line 638
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
-    .line 598
+    .line 641
     :cond_a7
     iget-object v0, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->descriptionLayout:Landroid/text/StaticLayout;
 
     if-eqz v0, :cond_d4
 
-    .line 599
+    .line 642
     sget-object v0, Lorg/telegram/ui/ActionBar/Theme;->chat_contextResult_descriptionTextPaint:Landroid/text/TextPaint;
 
     const-string v2, "windowBackgroundWhiteGrayText2"
@@ -895,10 +913,10 @@
 
     invoke-virtual {v0, v2}, Landroid/text/TextPaint;->setColor(I)V
 
-    .line 600
+    .line 643
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 601
+    .line 644
     sget-boolean v0, Lorg/telegram/messenger/LocaleController;->isRTL:Z
 
     if-eqz v0, :cond_be
@@ -923,15 +941,15 @@
 
     invoke-virtual {p1, v0, v2}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 602
+    .line 645
     iget-object v0, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->descriptionLayout:Landroid/text/StaticLayout;
 
     invoke-virtual {v0, p1}, Landroid/text/StaticLayout;->draw(Landroid/graphics/Canvas;)V
 
-    .line 603
+    .line 646
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
-    .line 606
+    .line 649
     :cond_d4
     iget-object v0, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->radialProgress:Lorg/telegram/ui/Components/RadialProgress2;
 
@@ -953,19 +971,19 @@
 
     invoke-virtual {v0, v2}, Lorg/telegram/ui/Components/RadialProgress2;->setProgressColor(I)V
 
-    .line 607
+    .line 650
     iget-object v0, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->radialProgress:Lorg/telegram/ui/Components/RadialProgress2;
 
     invoke-virtual {v0, p1}, Lorg/telegram/ui/Components/RadialProgress2;->draw(Landroid/graphics/Canvas;)V
 
-    .line 609
+    .line 652
     iget-boolean v0, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->needDivider:Z
 
     if-eqz v0, :cond_112
 
     const/high16 v0, 0x42900000    # 72.0f
 
-    .line 610
+    .line 653
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v0
@@ -1013,7 +1031,7 @@
 .method private getIconForCurrentState()I
     .registers 3
 
-    .line 400
+    .line 406
     iget v0, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->buttonState:I
 
     const/4 v1, 0x1
@@ -1047,7 +1065,7 @@
 .method private getMiniIconForCurrentState()I
     .registers 2
 
-    .line 389
+    .line 395
     iget v0, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->miniButtonState:I
 
     if-gez v0, :cond_6
@@ -1072,7 +1090,7 @@
 .method private getThemedColor(Ljava/lang/String;)I
     .registers 3
 
-    .line 543
+    .line 586
     iget-object v0, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->resourcesProvider:Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;
 
     if-eqz v0, :cond_9
@@ -1089,7 +1107,7 @@
     :goto_a
     if-eqz v0, :cond_11
 
-    .line 544
+    .line 587
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
     move-result p1
@@ -1110,7 +1128,7 @@
 .method public didPressedButton()V
     .registers 8
 
-    .line 350
+    .line 356
     iget v0, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->buttonState:I
 
     const/4 v1, 0x0
@@ -1123,17 +1141,17 @@
 
     if-nez v0, :cond_50
 
-    .line 351
+    .line 357
     iget v0, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->miniButtonState:I
 
     if-nez v0, :cond_21
 
-    .line 352
+    .line 358
     iget-object v0, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->currentMessageObject:Lorg/telegram/messenger/MessageObject;
 
     iput-boolean v4, v0, Lorg/telegram/messenger/MessageObject;->putInDownloadsStore:Z
 
-    .line 353
+    .line 359
     iget v0, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->currentAccount:I
 
     invoke-static {v0}, Lorg/telegram/messenger/FileLoader;->getInstance(I)Lorg/telegram/messenger/FileLoader;
@@ -1150,7 +1168,7 @@
 
     invoke-virtual {v0, v5, v6, v4, v3}, Lorg/telegram/messenger/FileLoader;->loadFile(Lorg/telegram/tgnet/TLRPC$Document;Ljava/lang/Object;II)V
 
-    .line 355
+    .line 361
     :cond_21
     iget-object v0, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->currentMessageObject:Lorg/telegram/messenger/MessageObject;
 
@@ -1160,7 +1178,7 @@
 
     if-eqz v0, :cond_b8
 
-    .line 356
+    .line 362
     iget v0, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->hasMiniProgress:I
 
     if-ne v0, v2, :cond_41
@@ -1169,15 +1187,15 @@
 
     if-eq v0, v4, :cond_41
 
-    .line 357
+    .line 363
     iput v4, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->miniButtonState:I
 
-    .line 358
+    .line 364
     iget-object v0, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->radialProgress:Lorg/telegram/ui/Components/RadialProgress2;
 
     invoke-virtual {v0, v1, v3}, Lorg/telegram/ui/Components/RadialProgress2;->setProgress(FZ)V
 
-    .line 359
+    .line 365
     iget-object v0, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->radialProgress:Lorg/telegram/ui/Components/RadialProgress2;
 
     invoke-direct {p0}, Lorg/telegram/ui/Cells/SharedAudioCell;->getMiniIconForCurrentState()I
@@ -1186,11 +1204,11 @@
 
     invoke-virtual {v0, v1, v3, v4}, Lorg/telegram/ui/Components/RadialProgress2;->setMiniIcon(IZZ)V
 
-    .line 361
+    .line 367
     :cond_41
     iput v4, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->buttonState:I
 
-    .line 362
+    .line 368
     iget-object v0, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->radialProgress:Lorg/telegram/ui/Components/RadialProgress2;
 
     invoke-direct {p0}, Lorg/telegram/ui/Cells/SharedAudioCell;->getIconForCurrentState()I
@@ -1199,7 +1217,7 @@
 
     invoke-virtual {v0, v1, v3, v4}, Lorg/telegram/ui/Components/RadialProgress2;->setIcon(IZZ)V
 
-    .line 363
+    .line 369
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->invalidate()V
 
     goto :goto_b8
@@ -1207,7 +1225,7 @@
     :cond_50
     if-ne v0, v4, :cond_6d
 
-    .line 366
+    .line 372
     invoke-static {}, Lorg/telegram/messenger/MediaController;->getInstance()Lorg/telegram/messenger/MediaController;
 
     move-result-object v0
@@ -1220,10 +1238,10 @@
 
     if-eqz v0, :cond_b8
 
-    .line 368
+    .line 374
     iput v3, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->buttonState:I
 
-    .line 369
+    .line 375
     iget-object v0, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->radialProgress:Lorg/telegram/ui/Components/RadialProgress2;
 
     invoke-direct {p0}, Lorg/telegram/ui/Cells/SharedAudioCell;->getIconForCurrentState()I
@@ -1232,7 +1250,7 @@
 
     invoke-virtual {v0, v1, v3, v4}, Lorg/telegram/ui/Components/RadialProgress2;->setIcon(IZZ)V
 
-    .line 370
+    .line 376
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->invalidate()V
 
     goto :goto_b8
@@ -1242,17 +1260,17 @@
 
     if-ne v0, v2, :cond_99
 
-    .line 373
+    .line 379
     iget-object v0, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->radialProgress:Lorg/telegram/ui/Components/RadialProgress2;
 
     invoke-virtual {v0, v1, v3}, Lorg/telegram/ui/Components/RadialProgress2;->setProgress(FZ)V
 
-    .line 374
+    .line 380
     iget-object v0, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->currentMessageObject:Lorg/telegram/messenger/MessageObject;
 
     iput-boolean v4, v0, Lorg/telegram/messenger/MessageObject;->putInDownloadsStore:Z
 
-    .line 375
+    .line 381
     iget v0, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->currentAccount:I
 
     invoke-static {v0}, Lorg/telegram/messenger/FileLoader;->getInstance(I)Lorg/telegram/messenger/FileLoader;
@@ -1269,10 +1287,10 @@
 
     invoke-virtual {v0, v1, v2, v4, v3}, Lorg/telegram/messenger/FileLoader;->loadFile(Lorg/telegram/tgnet/TLRPC$Document;Ljava/lang/Object;II)V
 
-    .line 376
+    .line 382
     iput v5, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->buttonState:I
 
-    .line 377
+    .line 383
     iget-object v0, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->radialProgress:Lorg/telegram/ui/Components/RadialProgress2;
 
     invoke-direct {p0}, Lorg/telegram/ui/Cells/SharedAudioCell;->getIconForCurrentState()I
@@ -1281,7 +1299,7 @@
 
     invoke-virtual {v0, v1, v3, v4}, Lorg/telegram/ui/Components/RadialProgress2;->setIcon(IZZ)V
 
-    .line 378
+    .line 384
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->invalidate()V
 
     goto :goto_b8
@@ -1289,7 +1307,7 @@
     :cond_99
     if-ne v0, v5, :cond_b8
 
-    .line 380
+    .line 386
     iget v0, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->currentAccount:I
 
     invoke-static {v0}, Lorg/telegram/messenger/FileLoader;->getInstance(I)Lorg/telegram/messenger/FileLoader;
@@ -1304,10 +1322,10 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/messenger/FileLoader;->cancelLoadFile(Lorg/telegram/tgnet/TLRPC$Document;)V
 
-    .line 381
+    .line 387
     iput v2, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->buttonState:I
 
-    .line 382
+    .line 388
     iget-object v0, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->radialProgress:Lorg/telegram/ui/Components/RadialProgress2;
 
     invoke-direct {p0}, Lorg/telegram/ui/Cells/SharedAudioCell;->getIconForCurrentState()I
@@ -1316,7 +1334,7 @@
 
     invoke-virtual {v0, v1, v3, v4}, Lorg/telegram/ui/Components/RadialProgress2;->setIcon(IZZ)V
 
-    .line 383
+    .line 389
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->invalidate()V
 
     :cond_b8
@@ -1331,7 +1349,7 @@
 
     const/4 p2, 0x1
 
-    .line 539
+    .line 582
     invoke-virtual {p0, p1, p2}, Lorg/telegram/ui/Cells/SharedAudioCell;->updateButtonState(ZZ)V
 
     return-void
@@ -1340,7 +1358,7 @@
 .method protected dispatchDraw(Landroid/graphics/Canvas;)V
     .registers 11
 
-    .line 555
+    .line 598
     iget v0, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->enterAlpha:F
 
     const/high16 v1, 0x3f800000    # 1.0f
@@ -1357,7 +1375,7 @@
 
     const/4 v4, 0x0
 
-    .line 556
+    .line 599
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getMeasuredWidth()I
 
     move-result v0
@@ -1386,32 +1404,32 @@
 
     invoke-virtual/range {v2 .. v8}, Landroid/graphics/Canvas;->saveLayerAlpha(FFFFII)I
 
-    .line 557
+    .line 600
     iget-object v1, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->globalGradientView:Lorg/telegram/ui/Components/FlickerLoadingView;
 
     const/4 v2, 0x4
 
     invoke-virtual {v1, v2}, Lorg/telegram/ui/Components/FlickerLoadingView;->setViewType(I)V
 
-    .line 558
+    .line 601
     iget-object v1, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->globalGradientView:Lorg/telegram/ui/Components/FlickerLoadingView;
 
     invoke-virtual {v1}, Lorg/telegram/ui/Components/FlickerLoadingView;->updateColors()V
 
-    .line 559
+    .line 602
     iget-object v1, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->globalGradientView:Lorg/telegram/ui/Components/FlickerLoadingView;
 
     invoke-virtual {v1}, Lorg/telegram/ui/Components/FlickerLoadingView;->updateGradient()V
 
-    .line 560
+    .line 603
     iget-object v1, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->globalGradientView:Lorg/telegram/ui/Components/FlickerLoadingView;
 
     invoke-virtual {v1, p1}, Landroid/view/View;->draw(Landroid/graphics/Canvas;)V
 
-    .line 561
+    .line 604
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
-    .line 562
+    .line 605
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getMeasuredWidth()I
 
     move-result v1
@@ -1434,32 +1452,43 @@
 
     invoke-virtual/range {v2 .. v8}, Landroid/graphics/Canvas;->saveLayerAlpha(FFFFII)I
 
-    .line 563
+    .line 606
     invoke-direct {p0, p1}, Lorg/telegram/ui/Cells/SharedAudioCell;->drawInternal(Landroid/graphics/Canvas;)V
 
-    .line 564
+    .line 607
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->dispatchDraw(Landroid/graphics/Canvas;)V
 
-    .line 565
+    .line 608
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
     goto :goto_61
 
-    .line 567
+    .line 610
     :cond_5b
     invoke-direct {p0, p1}, Lorg/telegram/ui/Cells/SharedAudioCell;->drawInternal(Landroid/graphics/Canvas;)V
 
-    .line 568
+    .line 611
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->dispatchDraw(Landroid/graphics/Canvas;)V
 
     :goto_61
     return-void
 .end method
 
+.method public getAccessibilityNodeProvider()Landroid/view/accessibility/AccessibilityNodeProvider;
+    .registers 2
+
+    .line 546
+    new-instance v0, Lorg/telegram/ui/Cells/SharedAudioCell$1;
+
+    invoke-direct {v0, p0}, Lorg/telegram/ui/Cells/SharedAudioCell$1;-><init>(Lorg/telegram/ui/Cells/SharedAudioCell;)V
+
+    return-object v0
+.end method
+
 .method public getMessage()Lorg/telegram/messenger/MessageObject;
     .registers 2
 
-    .line 259
+    .line 265
     iget-object v0, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->currentMessageObject:Lorg/telegram/messenger/MessageObject;
 
     return-object v0
@@ -1468,7 +1497,7 @@
 .method public getObserverTag()I
     .registers 2
 
-    .line 516
+    .line 522
     iget v0, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->TAG:I
 
     return v0
@@ -1477,7 +1506,7 @@
 .method public initStreamingIcons()V
     .registers 2
 
-    .line 263
+    .line 269
     iget-object v0, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->radialProgress:Lorg/telegram/ui/Components/RadialProgress2;
 
     invoke-virtual {v0}, Lorg/telegram/ui/Components/RadialProgress2;->initMiniIcons()V
@@ -1496,20 +1525,20 @@
 .method protected onAttachedToWindow()V
     .registers 3
 
-    .line 240
+    .line 246
     invoke-super {p0}, Landroid/widget/FrameLayout;->onAttachedToWindow()V
 
-    .line 241
+    .line 247
     iget-object v0, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->radialProgress:Lorg/telegram/ui/Components/RadialProgress2;
 
     invoke-virtual {v0}, Lorg/telegram/ui/Components/RadialProgress2;->onAttachedToWindow()V
 
     const/4 v0, 0x0
 
-    .line 242
+    .line 248
     invoke-virtual {p0, v0, v0}, Lorg/telegram/ui/Cells/SharedAudioCell;->updateButtonState(ZZ)V
 
-    .line 243
+    .line 249
     iget v0, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->currentAccount:I
 
     invoke-static {v0}, Lorg/telegram/messenger/NotificationCenter;->getInstance(I)Lorg/telegram/messenger/NotificationCenter;
@@ -1520,7 +1549,7 @@
 
     invoke-virtual {v0, p0, v1}, Lorg/telegram/messenger/NotificationCenter;->addObserver(Lorg/telegram/messenger/NotificationCenter$NotificationCenterDelegate;I)V
 
-    .line 244
+    .line 250
     iget v0, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->currentAccount:I
 
     invoke-static {v0}, Lorg/telegram/messenger/NotificationCenter;->getInstance(I)Lorg/telegram/messenger/NotificationCenter;
@@ -1531,7 +1560,7 @@
 
     invoke-virtual {v0, p0, v1}, Lorg/telegram/messenger/NotificationCenter;->addObserver(Lorg/telegram/messenger/NotificationCenter$NotificationCenterDelegate;I)V
 
-    .line 245
+    .line 251
     iget v0, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->currentAccount:I
 
     invoke-static {v0}, Lorg/telegram/messenger/NotificationCenter;->getInstance(I)Lorg/telegram/messenger/NotificationCenter;
@@ -1548,10 +1577,10 @@
 .method protected onDetachedFromWindow()V
     .registers 3
 
-    .line 250
+    .line 256
     invoke-super {p0}, Landroid/widget/FrameLayout;->onDetachedFromWindow()V
 
-    .line 251
+    .line 257
     iget v0, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->currentAccount:I
 
     invoke-static {v0}, Lorg/telegram/messenger/DownloadController;->getInstance(I)Lorg/telegram/messenger/DownloadController;
@@ -1560,12 +1589,12 @@
 
     invoke-virtual {v0, p0}, Lorg/telegram/messenger/DownloadController;->removeLoadingFileObserver(Lorg/telegram/messenger/DownloadController$FileDownloadProgressListener;)V
 
-    .line 252
+    .line 258
     iget-object v0, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->radialProgress:Lorg/telegram/ui/Components/RadialProgress2;
 
     invoke-virtual {v0}, Lorg/telegram/ui/Components/RadialProgress2;->onDetachedFromWindow()V
 
-    .line 253
+    .line 259
     iget v0, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->currentAccount:I
 
     invoke-static {v0}, Lorg/telegram/messenger/NotificationCenter;->getInstance(I)Lorg/telegram/messenger/NotificationCenter;
@@ -1576,7 +1605,7 @@
 
     invoke-virtual {v0, p0, v1}, Lorg/telegram/messenger/NotificationCenter;->removeObserver(Lorg/telegram/messenger/NotificationCenter$NotificationCenterDelegate;I)V
 
-    .line 254
+    .line 260
     iget v0, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->currentAccount:I
 
     invoke-static {v0}, Lorg/telegram/messenger/NotificationCenter;->getInstance(I)Lorg/telegram/messenger/NotificationCenter;
@@ -1587,7 +1616,7 @@
 
     invoke-virtual {v0, p0, v1}, Lorg/telegram/messenger/NotificationCenter;->removeObserver(Lorg/telegram/messenger/NotificationCenter$NotificationCenterDelegate;I)V
 
-    .line 255
+    .line 261
     iget v0, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->currentAccount:I
 
     invoke-static {v0}, Lorg/telegram/messenger/NotificationCenter;->getInstance(I)Lorg/telegram/messenger/NotificationCenter;
@@ -1606,7 +1635,7 @@
 
     const/4 p1, 0x1
 
-    .line 485
+    .line 491
     invoke-virtual {p0, p1, p2}, Lorg/telegram/ui/Cells/SharedAudioCell;->updateButtonState(ZZ)V
 
     return-void
@@ -1615,21 +1644,24 @@
 .method public onInitializeAccessibilityNodeInfo(Landroid/view/accessibility/AccessibilityNodeInfo;)V
     .registers 7
 
-    .line 525
+    .line 531
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->onInitializeAccessibilityNodeInfo(Landroid/view/accessibility/AccessibilityNodeInfo;)V
 
-    .line 526
-    iget-object v0, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->currentMessageObject:Lorg/telegram/messenger/MessageObject;
+    const/4 v0, 0x1
 
-    invoke-virtual {v0}, Lorg/telegram/messenger/MessageObject;->isMusic()Z
+    .line 532
+    invoke-virtual {p1, v0}, Landroid/view/accessibility/AccessibilityNodeInfo;->setEnabled(Z)V
 
-    move-result v0
+    .line 533
+    iget-object v1, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->currentMessageObject:Lorg/telegram/messenger/MessageObject;
 
-    const/4 v1, 0x1
+    invoke-virtual {v1}, Lorg/telegram/messenger/MessageObject;->isMusic()Z
 
-    if-eqz v0, :cond_2d
+    move-result v1
 
-    const v0, 0x7f0e0039
+    if-eqz v1, :cond_30
+
+    const v1, 0x7f0e0045
 
     const/4 v2, 0x2
 
@@ -1637,7 +1669,7 @@
 
     const/4 v3, 0x0
 
-    .line 527
+    .line 534
     iget-object v4, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->currentMessageObject:Lorg/telegram/messenger/MessageObject;
 
     invoke-virtual {v4}, Lorg/telegram/messenger/MessageObject;->getMusicAuthor()Ljava/lang/String;
@@ -1652,32 +1684,32 @@
 
     move-result-object v3
 
-    aput-object v3, v2, v1
+    aput-object v3, v2, v0
 
     const-string v3, "AccDescrMusicInfo"
 
-    invoke-static {v3, v0, v2}, Lorg/telegram/messenger/LocaleController;->formatString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {v3, v1, v2}, Lorg/telegram/messenger/LocaleController;->formatString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v1
 
-    invoke-virtual {p1, v0}, Landroid/view/accessibility/AccessibilityNodeInfo;->setText(Ljava/lang/CharSequence;)V
+    invoke-virtual {p1, v1}, Landroid/view/accessibility/AccessibilityNodeInfo;->setText(Ljava/lang/CharSequence;)V
 
-    goto :goto_58
+    goto :goto_5b
 
-    .line 528
-    :cond_2d
-    iget-object v0, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->titleLayout:Landroid/text/StaticLayout;
+    .line 535
+    :cond_30
+    iget-object v1, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->titleLayout:Landroid/text/StaticLayout;
 
-    if-eqz v0, :cond_58
+    if-eqz v1, :cond_5b
 
-    iget-object v0, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->descriptionLayout:Landroid/text/StaticLayout;
+    iget-object v1, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->descriptionLayout:Landroid/text/StaticLayout;
 
-    if-eqz v0, :cond_58
+    if-eqz v1, :cond_5b
 
-    .line 529
-    new-instance v0, Ljava/lang/StringBuilder;
+    .line 536
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
     iget-object v2, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->titleLayout:Landroid/text/StaticLayout;
 
@@ -1685,11 +1717,11 @@
 
     move-result-object v2
 
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     const-string v2, ", "
 
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget-object v2, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->descriptionLayout:Landroid/text/StaticLayout;
 
@@ -1697,32 +1729,32 @@
 
     move-result-object v2
 
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v1
 
-    invoke-virtual {p1, v0}, Landroid/view/accessibility/AccessibilityNodeInfo;->setText(Ljava/lang/CharSequence;)V
+    invoke-virtual {p1, v1}, Landroid/view/accessibility/AccessibilityNodeInfo;->setText(Ljava/lang/CharSequence;)V
 
-    .line 531
-    :cond_58
-    :goto_58
-    iget-object v0, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->checkBox:Lorg/telegram/ui/Components/CheckBox2;
+    .line 538
+    :cond_5b
+    :goto_5b
+    iget-object v1, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->checkBox:Lorg/telegram/ui/Components/CheckBox2;
 
-    invoke-virtual {v0}, Lorg/telegram/ui/Components/CheckBox2;->isChecked()Z
+    invoke-virtual {v1}, Lorg/telegram/ui/Components/CheckBox2;->isChecked()Z
 
-    move-result v0
+    move-result v1
 
-    if-eqz v0, :cond_66
+    if-eqz v1, :cond_69
 
-    .line 532
-    invoke-virtual {p1, v1}, Landroid/view/accessibility/AccessibilityNodeInfo;->setCheckable(Z)V
+    .line 539
+    invoke-virtual {p1, v0}, Landroid/view/accessibility/AccessibilityNodeInfo;->setCheckable(Z)V
 
-    .line 533
-    invoke-virtual {p1, v1}, Landroid/view/accessibility/AccessibilityNodeInfo;->setChecked(Z)V
+    .line 540
+    invoke-virtual {p1, v0}, Landroid/view/accessibility/AccessibilityNodeInfo;->setChecked(Z)V
 
-    :cond_66
+    :cond_69
     return-void
 .end method
 
@@ -1738,21 +1770,21 @@
 
     const/4 v0, 0x0
 
-    .line 126
+    .line 132
     iput-object v0, v7, Lorg/telegram/ui/Cells/SharedAudioCell;->descriptionLayout:Landroid/text/StaticLayout;
 
-    .line 127
+    .line 133
     iput-object v0, v7, Lorg/telegram/ui/Cells/SharedAudioCell;->titleLayout:Landroid/text/StaticLayout;
 
-    .line 128
+    .line 134
     iput-object v0, v7, Lorg/telegram/ui/Cells/SharedAudioCell;->captionLayout:Landroid/text/StaticLayout;
 
-    .line 130
+    .line 136
     invoke-static/range {p1 .. p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result v0
 
-    .line 131
+    .line 137
     sget v1, Lorg/telegram/messenger/AndroidUtilities;->leftBaseline:I
 
     int-to-float v1, v1
@@ -1771,7 +1803,7 @@
 
     sub-int v1, v0, v1
 
-    .line 135
+    .line 141
     iget v0, v7, Lorg/telegram/ui/Cells/SharedAudioCell;->viewType:I
 
     const/high16 v2, 0x41a00000    # 20.0f
@@ -1784,7 +1816,7 @@
 
     if-ne v0, v5, :cond_60
 
-    .line 136
+    .line 142
     iget-object v0, v7, Lorg/telegram/ui/Cells/SharedAudioCell;->currentMessageObject:Lorg/telegram/messenger/MessageObject;
 
     iget-object v0, v0, Lorg/telegram/messenger/MessageObject;->messageOwner:Lorg/telegram/tgnet/TLRPC$Message;
@@ -1797,7 +1829,7 @@
 
     move-result-object v10
 
-    .line 137
+    .line 143
     iget-object v0, v7, Lorg/telegram/ui/Cells/SharedAudioCell;->description2TextPaint:Landroid/text/TextPaint;
 
     invoke-virtual {v0, v10}, Landroid/text/TextPaint;->measureText(Ljava/lang/String;)F
@@ -1812,7 +1844,7 @@
 
     double-to-int v0, v8
 
-    .line 138
+    .line 144
     iget-object v11, v7, Lorg/telegram/ui/Cells/SharedAudioCell;->description2TextPaint:Landroid/text/TextPaint;
 
     const/4 v14, 0x0
@@ -1831,7 +1863,7 @@
 
     sub-int v6, v1, v0
 
-    .line 139
+    .line 145
     invoke-static {v3}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v8
@@ -1848,7 +1880,7 @@
 
     const/high16 v6, 0x41400000    # 12.0f
 
-    .line 140
+    .line 146
     invoke-static {v6}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v6
@@ -1867,7 +1899,7 @@
 
     const/high16 v9, 0x40800000    # 4.0f
 
-    .line 145
+    .line 151
     :try_start_67
     iget v10, v7, Lorg/telegram/ui/Cells/SharedAudioCell;->viewType:I
 
@@ -1889,7 +1921,7 @@
 
     if-eqz v10, :cond_82
 
-    .line 146
+    .line 152
     :cond_7b
     iget-object v10, v7, Lorg/telegram/ui/Cells/SharedAudioCell;->currentMessageObject:Lorg/telegram/messenger/MessageObject;
 
@@ -1899,7 +1931,7 @@
 
     goto :goto_8c
 
-    .line 148
+    .line 154
     :cond_82
     iget-object v10, v7, Lorg/telegram/ui/Cells/SharedAudioCell;->currentMessageObject:Lorg/telegram/messenger/MessageObject;
 
@@ -1911,7 +1943,7 @@
 
     move-result-object v10
 
-    .line 150
+    .line 156
     :goto_8c
     iget-object v11, v7, Lorg/telegram/ui/Cells/SharedAudioCell;->currentMessageObject:Lorg/telegram/messenger/MessageObject;
 
@@ -1927,7 +1959,7 @@
 
     move-object v10, v11
 
-    .line 154
+    .line 160
     :cond_99
     sget-object v11, Lorg/telegram/ui/ActionBar/Theme;->chat_contextResult_titleTextPaint:Landroid/text/TextPaint;
 
@@ -1941,7 +1973,7 @@
 
     move-result-object v15
 
-    .line 155
+    .line 161
     new-instance v10, Landroid/text/StaticLayout;
 
     sget-object v16, Lorg/telegram/ui/ActionBar/Theme;->chat_contextResult_titleTextPaint:Landroid/text/TextPaint;
@@ -1975,10 +2007,10 @@
     :catch_be
     move-exception v0
 
-    .line 157
+    .line 163
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
-    .line 160
+    .line 166
     :goto_c2
     iget-object v0, v7, Lorg/telegram/ui/Cells/SharedAudioCell;->currentMessageObject:Lorg/telegram/messenger/MessageObject;
 
@@ -1988,7 +2020,7 @@
 
     if-eqz v0, :cond_12f
 
-    .line 161
+    .line 167
     iget-object v0, v7, Lorg/telegram/ui/Cells/SharedAudioCell;->currentMessageObject:Lorg/telegram/messenger/MessageObject;
 
     iget-object v0, v0, Lorg/telegram/messenger/MessageObject;->messageOwner:Lorg/telegram/tgnet/TLRPC$Message;
@@ -2027,7 +2059,7 @@
 
     move-result-object v0
 
-    .line 162
+    .line 168
     iget-object v2, v7, Lorg/telegram/ui/Cells/SharedAudioCell;->currentMessageObject:Lorg/telegram/messenger/MessageObject;
 
     iget-object v2, v2, Lorg/telegram/messenger/MessageObject;->highlightedWords:Ljava/util/ArrayList;
@@ -2040,7 +2072,7 @@
 
     if-eqz v0, :cond_12f
 
-    .line 164
+    .line 170
     iget-object v2, v7, Lorg/telegram/ui/Cells/SharedAudioCell;->currentMessageObject:Lorg/telegram/messenger/MessageObject;
 
     iget-object v2, v2, Lorg/telegram/messenger/MessageObject;->highlightedWords:Ljava/util/ArrayList;
@@ -2069,7 +2101,7 @@
 
     move-result-object v13
 
-    .line 165
+    .line 171
     new-instance v0, Landroid/text/StaticLayout;
 
     iget-object v14, v7, Lorg/telegram/ui/Cells/SharedAudioCell;->captionTextPaint:Landroid/text/TextPaint;
@@ -2094,7 +2126,7 @@
 
     iput-object v0, v7, Lorg/telegram/ui/Cells/SharedAudioCell;->captionLayout:Landroid/text/StaticLayout;
 
-    .line 169
+    .line 175
     :cond_12f
     :try_start_12f
     iget v0, v7, Lorg/telegram/ui/Cells/SharedAudioCell;->viewType:I
@@ -2117,7 +2149,7 @@
 
     if-eqz v0, :cond_175
 
-    .line 170
+    .line 176
     :cond_143
     iget-object v0, v7, Lorg/telegram/ui/Cells/SharedAudioCell;->currentMessageObject:Lorg/telegram/messenger/MessageObject;
 
@@ -2129,7 +2161,7 @@
 
     move-result-object v0
 
-    .line 171
+    .line 177
     iget v2, v7, Lorg/telegram/ui/Cells/SharedAudioCell;->viewType:I
 
     if-ne v2, v5, :cond_154
@@ -2146,14 +2178,14 @@
 
     int-to-float v2, v1
 
-    .line 172
+    .line 178
     sget-object v5, Landroid/text/TextUtils$TruncateAt;->END:Landroid/text/TextUtils$TruncateAt;
 
     invoke-static {v0, v12, v2, v5}, Landroid/text/TextUtils;->ellipsize(Ljava/lang/CharSequence;Landroid/text/TextPaint;FLandroid/text/TextUtils$TruncateAt;)Ljava/lang/CharSequence;
 
     move-result-object v11
 
-    .line 173
+    .line 179
     new-instance v0, Landroid/text/StaticLayout;
 
     invoke-static {v9}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -2178,7 +2210,7 @@
 
     goto :goto_1d9
 
-    .line 175
+    .line 181
     :cond_175
     iget-object v0, v7, Lorg/telegram/ui/Cells/SharedAudioCell;->currentMessageObject:Lorg/telegram/messenger/MessageObject;
 
@@ -2190,7 +2222,7 @@
 
     move-result-object v0
 
-    .line 176
+    .line 182
     iget-object v2, v7, Lorg/telegram/ui/Cells/SharedAudioCell;->currentMessageObject:Lorg/telegram/messenger/MessageObject;
 
     iget-object v2, v2, Lorg/telegram/messenger/MessageObject;->highlightedWords:Ljava/util/ArrayList;
@@ -2205,13 +2237,13 @@
 
     move-object v0, v2
 
-    .line 180
+    .line 186
     :cond_18c
     iget v2, v7, Lorg/telegram/ui/Cells/SharedAudioCell;->viewType:I
 
     if-ne v2, v5, :cond_1ad
 
-    .line 181
+    .line 187
     new-instance v2, Landroid/text/SpannableStringBuilder;
 
     invoke-direct {v2, v0}, Landroid/text/SpannableStringBuilder;-><init>(Ljava/lang/CharSequence;)V
@@ -2240,7 +2272,7 @@
 
     move-result-object v0
 
-    .line 183
+    .line 189
     :cond_1ad
     iget v2, v7, Lorg/telegram/ui/Cells/SharedAudioCell;->viewType:I
 
@@ -2258,14 +2290,14 @@
 
     int-to-float v2, v1
 
-    .line 184
+    .line 190
     sget-object v5, Landroid/text/TextUtils$TruncateAt;->END:Landroid/text/TextUtils$TruncateAt;
 
     invoke-static {v0, v12, v2, v5}, Landroid/text/TextUtils;->ellipsize(Ljava/lang/CharSequence;Landroid/text/TextPaint;FLandroid/text/TextUtils$TruncateAt;)Ljava/lang/CharSequence;
 
     move-result-object v11
 
-    .line 185
+    .line 191
     new-instance v0, Landroid/text/StaticLayout;
 
     invoke-static {v9}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -2295,10 +2327,10 @@
     :catch_1d5
     move-exception v0
 
-    .line 188
+    .line 194
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
-    .line 191
+    .line 197
     :goto_1d9
     invoke-static/range {p1 .. p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
@@ -2334,12 +2366,12 @@
 
     const/high16 v0, 0x42500000    # 52.0f
 
-    .line 193
+    .line 199
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v0
 
-    .line 194
+    .line 200
     sget-boolean v1, Lorg/telegram/messenger/LocaleController;->isRTL:Z
 
     if-eqz v1, :cond_20a
@@ -2363,7 +2395,7 @@
 
     move-result v1
 
-    .line 195
+    .line 201
     :goto_20e
     iget-object v0, v7, Lorg/telegram/ui/Cells/SharedAudioCell;->radialProgress:Lorg/telegram/ui/Components/RadialProgress2;
 
@@ -2399,7 +2431,7 @@
 
     invoke-virtual {v0, v2, v3, v1, v4}, Lorg/telegram/ui/Components/RadialProgress2;->setProgressRect(IIII)V
 
-    .line 197
+    .line 203
     iget-object v2, v7, Lorg/telegram/ui/Cells/SharedAudioCell;->checkBox:Lorg/telegram/ui/Components/CheckBox2;
 
     const/4 v4, 0x0
@@ -2414,21 +2446,21 @@
 
     invoke-virtual/range {v1 .. v6}, Landroid/widget/FrameLayout;->measureChildWithMargins(Landroid/view/View;IIII)V
 
-    .line 199
+    .line 205
     iget-object v0, v7, Lorg/telegram/ui/Cells/SharedAudioCell;->captionLayout:Landroid/text/StaticLayout;
 
     const/high16 v1, 0x41e80000    # 29.0f
 
     if-eqz v0, :cond_254
 
-    .line 200
+    .line 206
     invoke-static {v1}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v0
 
     iput v0, v7, Lorg/telegram/ui/Cells/SharedAudioCell;->captionY:I
 
-    .line 201
+    .line 207
     invoke-static {v1}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v0
@@ -2443,7 +2475,7 @@
 
     goto :goto_25a
 
-    .line 203
+    .line 209
     :cond_254
     invoke-static {v1}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
@@ -2466,36 +2498,36 @@
 
     const/high16 p2, 0x3f800000    # 1.0f
 
-    .line 496
+    .line 502
     invoke-static {p2, p1}, Ljava/lang/Math;->min(FF)F
 
     move-result p1
 
-    .line 497
+    .line 503
     iget-object p2, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->radialProgress:Lorg/telegram/ui/Components/RadialProgress2;
 
     const/4 p3, 0x1
 
     invoke-virtual {p2, p1, p3}, Lorg/telegram/ui/Components/RadialProgress2;->setProgress(FZ)V
 
-    .line 498
+    .line 504
     iget p1, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->hasMiniProgress:I
 
     const/4 p2, 0x0
 
     if-eqz p1, :cond_1c
 
-    .line 499
+    .line 505
     iget p1, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->miniButtonState:I
 
     if-eq p1, p3, :cond_24
 
-    .line 500
+    .line 506
     invoke-virtual {p0, p2, p3}, Lorg/telegram/ui/Cells/SharedAudioCell;->updateButtonState(ZZ)V
 
     goto :goto_24
 
-    .line 503
+    .line 509
     :cond_1c
     iget p1, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->buttonState:I
 
@@ -2503,7 +2535,7 @@
 
     if-eq p1, p4, :cond_24
 
-    .line 504
+    .line 510
     invoke-virtual {p0, p2, p3}, Lorg/telegram/ui/Cells/SharedAudioCell;->updateButtonState(ZZ)V
 
     :cond_24
@@ -2520,7 +2552,7 @@
 .method public onSuccessDownload(Ljava/lang/String;)V
     .registers 4
 
-    .line 490
+    .line 496
     iget-object p1, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->radialProgress:Lorg/telegram/ui/Components/RadialProgress2;
 
     const/high16 v0, 0x3f800000    # 1.0f
@@ -2531,7 +2563,7 @@
 
     const/4 p1, 0x0
 
-    .line 491
+    .line 497
     invoke-virtual {p0, p1, v1}, Lorg/telegram/ui/Cells/SharedAudioCell;->updateButtonState(ZZ)V
 
     return-void
@@ -2540,25 +2572,25 @@
 .method public onTouchEvent(Landroid/view/MotionEvent;)Z
     .registers 5
 
-    .line 316
+    .line 322
     iget-object v0, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->currentMessageObject:Lorg/telegram/messenger/MessageObject;
 
     if-nez v0, :cond_9
 
-    .line 317
+    .line 323
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
     move-result p1
 
     return p1
 
-    .line 319
+    .line 325
     :cond_9
     invoke-direct {p0, p1}, Lorg/telegram/ui/Cells/SharedAudioCell;->checkAudioMotionEvent(Landroid/view/MotionEvent;)Z
 
     move-result v0
 
-    .line 320
+    .line 326
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result p1
@@ -2569,18 +2601,18 @@
 
     if-ne p1, v1, :cond_27
 
-    .line 321
+    .line 327
     iput-boolean v2, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->miniButtonPressed:Z
 
-    .line 322
+    .line 328
     iput-boolean v2, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->buttonPressed:Z
 
-    .line 324
+    .line 330
     iget-object p1, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->radialProgress:Lorg/telegram/ui/Components/RadialProgress2;
 
     invoke-virtual {p1, v2, v2}, Lorg/telegram/ui/Components/RadialProgress2;->setPressed(ZZ)V
 
-    .line 325
+    .line 331
     iget-object p1, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->radialProgress:Lorg/telegram/ui/Components/RadialProgress2;
 
     iget-boolean v0, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->miniButtonPressed:Z
@@ -2598,7 +2630,7 @@
 .method public setCheckForButtonPress(Z)V
     .registers 2
 
-    .line 235
+    .line 241
     iput-boolean p1, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->checkForButtonPress:Z
 
     return-void
@@ -2607,7 +2639,7 @@
 .method public setChecked(ZZ)V
     .registers 5
 
-    .line 228
+    .line 234
     iget-object v0, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->checkBox:Lorg/telegram/ui/Components/CheckBox2;
 
     invoke-virtual {v0}, Landroid/view/View;->getVisibility()I
@@ -2616,14 +2648,14 @@
 
     if-eqz v0, :cond_e
 
-    .line 229
+    .line 235
     iget-object v0, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->checkBox:Lorg/telegram/ui/Components/CheckBox2;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 231
+    .line 237
     :cond_e
     iget-object v0, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->checkBox:Lorg/telegram/ui/Components/CheckBox2;
 
@@ -2635,17 +2667,17 @@
 .method public setEnterAnimationAlpha(F)V
     .registers 3
 
-    .line 615
+    .line 658
     iget v0, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->enterAlpha:F
 
     cmpl-float v0, v0, p1
 
     if-eqz v0, :cond_b
 
-    .line 616
+    .line 659
     iput p1, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->enterAlpha:F
 
-    .line 617
+    .line 660
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->invalidate()V
 
     :cond_b
@@ -2655,7 +2687,7 @@
 .method public setGlobalGradientView(Lorg/telegram/ui/Components/FlickerLoadingView;)V
     .registers 2
 
-    .line 550
+    .line 593
     iput-object p1, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->globalGradientView:Lorg/telegram/ui/Components/FlickerLoadingView;
 
     return-void
@@ -2664,13 +2696,13 @@
 .method public setMessageObject(Lorg/telegram/messenger/MessageObject;Z)V
     .registers 6
 
-    .line 208
+    .line 214
     iput-boolean p2, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->needDivider:Z
 
-    .line 209
+    .line 215
     iput-object p1, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->currentMessageObject:Lorg/telegram/messenger/MessageObject;
 
-    .line 210
+    .line 216
     invoke-virtual {p1}, Lorg/telegram/messenger/MessageObject;->getDocument()Lorg/telegram/tgnet/TLRPC$Document;
 
     move-result-object p2
@@ -2679,7 +2711,7 @@
 
     if-eqz p2, :cond_14
 
-    .line 212
+    .line 218
     iget-object v1, p2, Lorg/telegram/tgnet/TLRPC$Document;->thumbs:Ljava/util/ArrayList;
 
     const/16 v2, 0x168
@@ -2693,7 +2725,7 @@
     :cond_14
     move-object v1, v0
 
-    .line 213
+    .line 219
     :goto_15
     instance-of v2, v1, Lorg/telegram/tgnet/TLRPC$TL_photoSize;
 
@@ -2708,26 +2740,26 @@
     :cond_1e
     const/4 p2, 0x1
 
-    .line 216
+    .line 222
     invoke-virtual {p1, p2}, Lorg/telegram/messenger/MessageObject;->getArtworkUrl(Z)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 217
+    .line 223
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result p2
 
     if-nez p2, :cond_2f
 
-    .line 218
+    .line 224
     iget-object p2, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->radialProgress:Lorg/telegram/ui/Components/RadialProgress2;
 
     invoke-virtual {p2, p1}, Lorg/telegram/ui/Components/RadialProgress2;->setImageOverlay(Ljava/lang/String;)V
 
     goto :goto_3a
 
-    .line 220
+    .line 226
     :cond_2f
     iget-object p1, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->radialProgress:Lorg/telegram/ui/Components/RadialProgress2;
 
@@ -2735,7 +2767,7 @@
 
     goto :goto_3a
 
-    .line 214
+    .line 220
     :cond_35
     :goto_35
     iget-object v0, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->radialProgress:Lorg/telegram/ui/Components/RadialProgress2;
@@ -2745,10 +2777,10 @@
     :goto_3a
     const/4 p1, 0x0
 
-    .line 223
+    .line 229
     invoke-virtual {p0, p1, p1}, Lorg/telegram/ui/Cells/SharedAudioCell;->updateButtonState(ZZ)V
 
-    .line 224
+    .line 230
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->requestLayout()V
 
     return-void
@@ -2757,14 +2789,14 @@
 .method public updateButtonState(ZZ)V
     .registers 13
 
-    .line 411
+    .line 417
     iget-object v0, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->currentMessageObject:Lorg/telegram/messenger/MessageObject;
 
     invoke-virtual {v0}, Lorg/telegram/messenger/MessageObject;->getFileName()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 412
+    .line 418
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
@@ -2773,7 +2805,7 @@
 
     return-void
 
-    .line 415
+    .line 421
     :cond_d
     iget-object v1, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->currentMessageObject:Lorg/telegram/messenger/MessageObject;
 
@@ -2800,7 +2832,7 @@
     :goto_1c
     const/4 v2, 0x1
 
-    .line 416
+    .line 422
     :goto_1d
     sget-boolean v5, Lorg/telegram/messenger/SharedConfig;->streamMedia:Z
 
@@ -2835,7 +2867,7 @@
     :cond_36
     const/4 v1, 0x2
 
-    .line 417
+    .line 423
     :goto_37
     iput v1, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->hasMiniProgress:I
 
@@ -2843,14 +2875,14 @@
 
     goto :goto_3f
 
-    .line 420
+    .line 426
     :cond_3b
     iput v3, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->hasMiniProgress:I
 
-    .line 421
+    .line 427
     iput v7, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->miniButtonState:I
 
-    .line 423
+    .line 429
     :goto_3f
     iget v1, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->hasMiniProgress:I
 
@@ -2858,7 +2890,7 @@
 
     if-eqz v1, :cond_e6
 
-    .line 424
+    .line 430
     iget-object v1, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->radialProgress:Lorg/telegram/ui/Components/RadialProgress2;
 
     iget-object v2, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->currentMessageObject:Lorg/telegram/messenger/MessageObject;
@@ -2883,7 +2915,7 @@
 
     invoke-virtual {v1, v2}, Lorg/telegram/ui/Components/RadialProgress2;->setMiniProgressBackgroundColor(I)V
 
-    .line 425
+    .line 431
     invoke-static {}, Lorg/telegram/messenger/MediaController;->getInstance()Lorg/telegram/messenger/MediaController;
 
     move-result-object v1
@@ -2898,7 +2930,7 @@
 
     if-eqz v1, :cond_73
 
-    .line 426
+    .line 432
     invoke-static {}, Lorg/telegram/messenger/MediaController;->getInstance()Lorg/telegram/messenger/MediaController;
 
     move-result-object v1
@@ -2911,18 +2943,18 @@
 
     goto :goto_76
 
-    .line 429
+    .line 435
     :cond_73
     iput v4, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->buttonState:I
 
     goto :goto_78
 
-    .line 427
+    .line 433
     :cond_76
     :goto_76
     iput v3, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->buttonState:I
 
-    .line 431
+    .line 437
     :goto_78
     iget-object v1, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->radialProgress:Lorg/telegram/ui/Components/RadialProgress2;
 
@@ -2932,12 +2964,12 @@
 
     invoke-virtual {v1, v2, p1, p2}, Lorg/telegram/ui/Components/RadialProgress2;->setIcon(IZZ)V
 
-    .line 432
+    .line 438
     iget v1, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->hasMiniProgress:I
 
     if-ne v1, v4, :cond_9b
 
-    .line 433
+    .line 439
     iget v0, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->currentAccount:I
 
     invoke-static {v0}, Lorg/telegram/messenger/DownloadController;->getInstance(I)Lorg/telegram/messenger/DownloadController;
@@ -2946,10 +2978,10 @@
 
     invoke-virtual {v0, p0}, Lorg/telegram/messenger/DownloadController;->removeLoadingFileObserver(Lorg/telegram/messenger/DownloadController$FileDownloadProgressListener;)V
 
-    .line 434
+    .line 440
     iput v7, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->miniButtonState:I
 
-    .line 435
+    .line 441
     iget-object v0, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->radialProgress:Lorg/telegram/ui/Components/RadialProgress2;
 
     invoke-direct {p0}, Lorg/telegram/ui/Cells/SharedAudioCell;->getMiniIconForCurrentState()I
@@ -2960,7 +2992,7 @@
 
     goto/16 :goto_16a
 
-    .line 437
+    .line 443
     :cond_9b
     iget v1, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->currentAccount:I
 
@@ -2972,7 +3004,7 @@
 
     invoke-virtual {v1, v0, v2, p0}, Lorg/telegram/messenger/DownloadController;->addLoadingFileObserver(Ljava/lang/String;Lorg/telegram/messenger/MessageObject;Lorg/telegram/messenger/DownloadController$FileDownloadProgressListener;)V
 
-    .line 438
+    .line 444
     iget v1, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->currentAccount:I
 
     invoke-static {v1}, Lorg/telegram/messenger/FileLoader;->getInstance(I)Lorg/telegram/messenger/FileLoader;
@@ -2985,10 +3017,10 @@
 
     if-nez v1, :cond_bf
 
-    .line 439
+    .line 445
     iput v3, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->miniButtonState:I
 
-    .line 440
+    .line 446
     iget-object v0, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->radialProgress:Lorg/telegram/ui/Components/RadialProgress2;
 
     invoke-direct {p0}, Lorg/telegram/ui/Cells/SharedAudioCell;->getMiniIconForCurrentState()I
@@ -2999,11 +3031,11 @@
 
     goto/16 :goto_16a
 
-    .line 442
+    .line 448
     :cond_bf
     iput v4, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->miniButtonState:I
 
-    .line 443
+    .line 449
     iget-object v1, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->radialProgress:Lorg/telegram/ui/Components/RadialProgress2;
 
     invoke-direct {p0}, Lorg/telegram/ui/Cells/SharedAudioCell;->getMiniIconForCurrentState()I
@@ -3012,7 +3044,7 @@
 
     invoke-virtual {v1, v2, p1, p2}, Lorg/telegram/ui/Components/RadialProgress2;->setMiniIcon(IZZ)V
 
-    .line 444
+    .line 450
     invoke-static {}, Lorg/telegram/messenger/ImageLoader;->getInstance()Lorg/telegram/messenger/ImageLoader;
 
     move-result-object p1
@@ -3023,7 +3055,7 @@
 
     if-eqz p1, :cond_df
 
-    .line 446
+    .line 452
     iget-object v0, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->radialProgress:Lorg/telegram/ui/Components/RadialProgress2;
 
     invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
@@ -3034,7 +3066,7 @@
 
     goto/16 :goto_16a
 
-    .line 448
+    .line 454
     :cond_df
     iget-object p1, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->radialProgress:Lorg/telegram/ui/Components/RadialProgress2;
 
@@ -3045,7 +3077,7 @@
     :cond_e6
     if-eqz v2, :cond_123
 
-    .line 453
+    .line 459
     iget v0, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->currentAccount:I
 
     invoke-static {v0}, Lorg/telegram/messenger/DownloadController;->getInstance(I)Lorg/telegram/messenger/DownloadController;
@@ -3054,7 +3086,7 @@
 
     invoke-virtual {v0, p0}, Lorg/telegram/messenger/DownloadController;->removeLoadingFileObserver(Lorg/telegram/messenger/DownloadController$FileDownloadProgressListener;)V
 
-    .line 454
+    .line 460
     invoke-static {}, Lorg/telegram/messenger/MediaController;->getInstance()Lorg/telegram/messenger/MediaController;
 
     move-result-object v0
@@ -3069,7 +3101,7 @@
 
     if-eqz v0, :cond_10a
 
-    .line 455
+    .line 461
     invoke-static {}, Lorg/telegram/messenger/MediaController;->getInstance()Lorg/telegram/messenger/MediaController;
 
     move-result-object v0
@@ -3082,18 +3114,18 @@
 
     goto :goto_10d
 
-    .line 458
+    .line 464
     :cond_10a
     iput v4, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->buttonState:I
 
     goto :goto_10f
 
-    .line 456
+    .line 462
     :cond_10d
     :goto_10d
     iput v3, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->buttonState:I
 
-    .line 460
+    .line 466
     :goto_10f
     iget-object v0, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->radialProgress:Lorg/telegram/ui/Components/RadialProgress2;
 
@@ -3101,7 +3133,7 @@
 
     invoke-virtual {v0, v1, p2}, Lorg/telegram/ui/Components/RadialProgress2;->setProgress(FZ)V
 
-    .line 461
+    .line 467
     iget-object v0, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->radialProgress:Lorg/telegram/ui/Components/RadialProgress2;
 
     invoke-direct {p0}, Lorg/telegram/ui/Cells/SharedAudioCell;->getIconForCurrentState()I
@@ -3110,12 +3142,12 @@
 
     invoke-virtual {v0, v1, p1, p2}, Lorg/telegram/ui/Components/RadialProgress2;->setIcon(IZZ)V
 
-    .line 462
+    .line 468
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->invalidate()V
 
     goto :goto_16a
 
-    .line 464
+    .line 470
     :cond_123
     iget v1, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->currentAccount:I
 
@@ -3127,7 +3159,7 @@
 
     invoke-virtual {v1, v0, v2, p0}, Lorg/telegram/messenger/DownloadController;->addLoadingFileObserver(Ljava/lang/String;Lorg/telegram/messenger/MessageObject;Lorg/telegram/messenger/DownloadController$FileDownloadProgressListener;)V
 
-    .line 465
+    .line 471
     iget v1, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->currentAccount:I
 
     invoke-static {v1}, Lorg/telegram/messenger/FileLoader;->getInstance(I)Lorg/telegram/messenger/FileLoader;
@@ -3140,10 +3172,10 @@
 
     if-nez v1, :cond_142
 
-    .line 467
+    .line 473
     iput v6, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->buttonState:I
 
-    .line 468
+    .line 474
     iget-object v0, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->radialProgress:Lorg/telegram/ui/Components/RadialProgress2;
 
     invoke-virtual {v0, v5, p2}, Lorg/telegram/ui/Components/RadialProgress2;->setProgress(FZ)V
@@ -3153,10 +3185,10 @@
     :cond_142
     const/4 v1, 0x4
 
-    .line 470
+    .line 476
     iput v1, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->buttonState:I
 
-    .line 471
+    .line 477
     invoke-static {}, Lorg/telegram/messenger/ImageLoader;->getInstance()Lorg/telegram/messenger/ImageLoader;
 
     move-result-object v1
@@ -3167,7 +3199,7 @@
 
     if-eqz v0, :cond_159
 
-    .line 473
+    .line 479
     iget-object v1, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->radialProgress:Lorg/telegram/ui/Components/RadialProgress2;
 
     invoke-virtual {v0}, Ljava/lang/Float;->floatValue()F
@@ -3178,13 +3210,13 @@
 
     goto :goto_15e
 
-    .line 475
+    .line 481
     :cond_159
     iget-object v0, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->radialProgress:Lorg/telegram/ui/Components/RadialProgress2;
 
     invoke-virtual {v0, v5, p2}, Lorg/telegram/ui/Components/RadialProgress2;->setProgress(FZ)V
 
-    .line 478
+    .line 484
     :goto_15e
     iget-object v0, p0, Lorg/telegram/ui/Cells/SharedAudioCell;->radialProgress:Lorg/telegram/ui/Components/RadialProgress2;
 
@@ -3194,7 +3226,7 @@
 
     invoke-virtual {v0, v1, p1, p2}, Lorg/telegram/ui/Components/RadialProgress2;->setIcon(IZZ)V
 
-    .line 479
+    .line 485
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->invalidate()V
 
     :goto_16a

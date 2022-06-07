@@ -68,13 +68,13 @@
 .method public constructor <init>(Lorg/telegram/ui/ChatActivity;Landroid/content/Context;)V
     .registers 4
 
-    .line 999
+    .line 1012
     iput-object p1, p0, Lorg/telegram/ui/ChatActivity$UnreadCounterTextView;->this$0:Lorg/telegram/ui/ChatActivity;
 
-    .line 1000
+    .line 1013
     invoke-direct {p0, p2}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
-    .line 978
+    .line 991
     new-instance p1, Landroid/text/TextPaint;
 
     const/4 p2, 0x1
@@ -83,21 +83,21 @@
 
     iput-object p1, p0, Lorg/telegram/ui/ChatActivity$UnreadCounterTextView;->textPaint:Landroid/text/TextPaint;
 
-    .line 979
+    .line 992
     new-instance p1, Landroid/graphics/Paint;
 
     invoke-direct {p1, p2}, Landroid/graphics/Paint;-><init>(I)V
 
     iput-object p1, p0, Lorg/telegram/ui/ChatActivity$UnreadCounterTextView;->paint:Landroid/graphics/Paint;
 
-    .line 980
+    .line 993
     new-instance p1, Landroid/graphics/RectF;
 
     invoke-direct {p1}, Landroid/graphics/RectF;-><init>()V
 
     iput-object p1, p0, Lorg/telegram/ui/ChatActivity$UnreadCounterTextView;->rect:Landroid/graphics/RectF;
 
-    .line 987
+    .line 1000
     new-instance p1, Landroid/text/TextPaint;
 
     invoke-direct {p1, p2}, Landroid/text/TextPaint;-><init>(I)V
@@ -106,10 +106,10 @@
 
     const/high16 p1, 0x3f800000    # 1.0f
 
-    .line 992
+    .line 1005
     iput p1, p0, Lorg/telegram/ui/ChatActivity$UnreadCounterTextView;->replaceProgress:F
 
-    .line 1001
+    .line 1014
     iget-object p1, p0, Lorg/telegram/ui/ChatActivity$UnreadCounterTextView;->textPaint:Landroid/text/TextPaint;
 
     const/high16 p2, 0x41500000    # 13.0f
@@ -122,7 +122,7 @@
 
     invoke-virtual {p1, p2}, Landroid/text/TextPaint;->setTextSize(F)V
 
-    .line 1002
+    .line 1015
     iget-object p1, p0, Lorg/telegram/ui/ChatActivity$UnreadCounterTextView;->textPaint:Landroid/text/TextPaint;
 
     const-string p2, "fonts/rmedium.ttf"
@@ -133,7 +133,7 @@
 
     invoke-virtual {p1, v0}, Landroid/text/TextPaint;->setTypeface(Landroid/graphics/Typeface;)Landroid/graphics/Typeface;
 
-    .line 1004
+    .line 1017
     iget-object p1, p0, Lorg/telegram/ui/ChatActivity$UnreadCounterTextView;->layoutPaint:Landroid/text/TextPaint;
 
     const/high16 v0, 0x41700000    # 15.0f
@@ -146,7 +146,7 @@
 
     invoke-virtual {p1, v0}, Landroid/text/TextPaint;->setTextSize(F)V
 
-    .line 1005
+    .line 1018
     iget-object p1, p0, Lorg/telegram/ui/ChatActivity$UnreadCounterTextView;->layoutPaint:Landroid/text/TextPaint;
 
     invoke-static {p2}, Lorg/telegram/messenger/AndroidUtilities;->getTypeface(Ljava/lang/String;)Landroid/graphics/Typeface;
@@ -161,7 +161,7 @@
 .method private synthetic lambda$setText$0(Landroid/animation/ValueAnimator;)V
     .registers 2
 
-    .line 1027
+    .line 1040
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
     move-result-object p1
@@ -174,7 +174,7 @@
 
     iput p1, p0, Lorg/telegram/ui/ChatActivity$UnreadCounterTextView;->replaceProgress:F
 
-    .line 1028
+    .line 1041
     invoke-virtual {p0}, Landroid/view/View;->invalidate()V
 
     return-void
@@ -185,15 +185,15 @@
 .method protected drawableStateChanged()V
     .registers 3
 
-    .line 1044
+    .line 1057
     invoke-super {p0}, Landroid/view/View;->drawableStateChanged()V
 
-    .line 1045
+    .line 1058
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$UnreadCounterTextView;->selectableBackground:Landroid/graphics/drawable/Drawable;
 
     if-eqz v0, :cond_e
 
-    .line 1046
+    .line 1059
     invoke-virtual {p0}, Landroid/view/View;->getDrawableState()[I
 
     move-result-object v1
@@ -207,15 +207,15 @@
 .method public jumpDrawablesToCurrentState()V
     .registers 2
 
-    .line 1060
+    .line 1073
     invoke-super {p0}, Landroid/view/View;->jumpDrawablesToCurrentState()V
 
-    .line 1061
+    .line 1074
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$UnreadCounterTextView;->selectableBackground:Landroid/graphics/drawable/Drawable;
 
     if-eqz v0, :cond_a
 
-    .line 1062
+    .line 1075
     invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->jumpToCurrentState()V
 
     :cond_a
@@ -225,10 +225,10 @@
 .method protected onDraw(Landroid/graphics/Canvas;)V
     .registers 13
 
-    .line 1127
+    .line 1140
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$UnreadCounterTextView;->textLayout:Landroid/text/StaticLayout;
 
-    .line 1128
+    .line 1141
     iget-object v1, p0, Lorg/telegram/ui/ChatActivity$UnreadCounterTextView;->this$0:Lorg/telegram/ui/ChatActivity;
 
     invoke-virtual {p0}, Landroid/view/View;->isEnabled()Z
@@ -251,19 +251,19 @@
 
     move-result v1
 
-    .line 1129
+    .line 1142
     iget v2, p0, Lorg/telegram/ui/ChatActivity$UnreadCounterTextView;->textColor:I
 
     if-eq v2, v1, :cond_1f
 
-    .line 1130
+    .line 1143
     iget-object v2, p0, Lorg/telegram/ui/ChatActivity$UnreadCounterTextView;->layoutPaint:Landroid/text/TextPaint;
 
     iput v1, p0, Lorg/telegram/ui/ChatActivity$UnreadCounterTextView;->textColor:I
 
     invoke-virtual {v2, v1}, Landroid/text/TextPaint;->setColor(I)V
 
-    .line 1132
+    .line 1145
     :cond_1f
     iget-object v1, p0, Lorg/telegram/ui/ChatActivity$UnreadCounterTextView;->this$0:Lorg/telegram/ui/ChatActivity;
 
@@ -273,19 +273,19 @@
 
     move-result v1
 
-    .line 1133
+    .line 1146
     iget v2, p0, Lorg/telegram/ui/ChatActivity$UnreadCounterTextView;->panelBackgroundColor:I
 
     if-eq v2, v1, :cond_32
 
-    .line 1134
+    .line 1147
     iget-object v2, p0, Lorg/telegram/ui/ChatActivity$UnreadCounterTextView;->textPaint:Landroid/text/TextPaint;
 
     iput v1, p0, Lorg/telegram/ui/ChatActivity$UnreadCounterTextView;->panelBackgroundColor:I
 
     invoke-virtual {v2, v1}, Landroid/text/TextPaint;->setColor(I)V
 
-    .line 1136
+    .line 1149
     :cond_32
     iget-object v1, p0, Lorg/telegram/ui/ChatActivity$UnreadCounterTextView;->this$0:Lorg/telegram/ui/ChatActivity;
 
@@ -295,19 +295,19 @@
 
     move-result v1
 
-    .line 1137
+    .line 1150
     iget v2, p0, Lorg/telegram/ui/ChatActivity$UnreadCounterTextView;->counterColor:I
 
     if-eq v2, v1, :cond_45
 
-    .line 1138
+    .line 1151
     iget-object v2, p0, Lorg/telegram/ui/ChatActivity$UnreadCounterTextView;->paint:Landroid/graphics/Paint;
 
     iput v1, p0, Lorg/telegram/ui/ChatActivity$UnreadCounterTextView;->counterColor:I
 
     invoke-virtual {v2, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 1141
+    .line 1154
     :cond_45
     invoke-virtual {p0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
@@ -317,12 +317,12 @@
 
     if-eqz v1, :cond_bf
 
-    .line 1142
+    .line 1155
     invoke-virtual {p0}, Landroid/view/View;->getMeasuredWidth()I
 
     move-result v1
 
-    .line 1143
+    .line 1156
     invoke-virtual {p0}, Landroid/view/View;->getMeasuredWidth()I
 
     move-result v4
@@ -331,7 +331,7 @@
 
     div-int/lit8 v4, v4, 0x2
 
-    .line 1144
+    .line 1157
     iget v5, p0, Lorg/telegram/ui/ChatActivity$UnreadCounterTextView;->rippleColor:I
 
     iget-object v6, p0, Lorg/telegram/ui/ChatActivity$UnreadCounterTextView;->this$0:Lorg/telegram/ui/ChatActivity;
@@ -349,7 +349,7 @@
     :cond_65
     const/high16 v5, 0x42700000    # 60.0f
 
-    .line 1145
+    .line 1158
     invoke-static {v5}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v5
@@ -374,10 +374,10 @@
 
     iput-object v3, p0, Lorg/telegram/ui/ChatActivity$UnreadCounterTextView;->selectableBackground:Landroid/graphics/drawable/Drawable;
 
-    .line 1146
+    .line 1159
     invoke-virtual {v3, p0}, Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
 
-    .line 1148
+    .line 1161
     :cond_82
     invoke-virtual {p0}, Landroid/view/View;->getLeft()I
 
@@ -403,7 +403,7 @@
     :goto_93
     add-int/2addr v4, v1
 
-    .line 1149
+    .line 1162
     invoke-virtual {p0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     move-result-object v6
@@ -422,11 +422,11 @@
 
     add-int/2addr v4, v5
 
-    .line 1150
+    .line 1163
     :cond_a5
     iget-object v5, p0, Lorg/telegram/ui/ChatActivity$UnreadCounterTextView;->selectableBackground:Landroid/graphics/drawable/Drawable;
 
-    .line 1151
+    .line 1164
     invoke-virtual {p0}, Landroid/view/View;->getMeasuredHeight()I
 
     move-result v6
@@ -437,7 +437,7 @@
 
     sub-int/2addr v6, v1
 
-    .line 1152
+    .line 1165
     invoke-virtual {p0}, Landroid/view/View;->getMeasuredHeight()I
 
     move-result v7
@@ -446,24 +446,24 @@
 
     add-int/2addr v7, v1
 
-    .line 1150
+    .line 1163
     invoke-virtual {v5, v3, v6, v4, v7}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 1154
+    .line 1167
     iget-object v1, p0, Lorg/telegram/ui/ChatActivity$UnreadCounterTextView;->selectableBackground:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v1, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 1156
+    .line 1169
     :cond_bf
     iget-object v1, p0, Lorg/telegram/ui/ChatActivity$UnreadCounterTextView;->textLayout:Landroid/text/StaticLayout;
 
     if-eqz v1, :cond_1a8
 
-    .line 1157
+    .line 1170
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 1158
+    .line 1171
     iget v1, p0, Lorg/telegram/ui/ChatActivity$UnreadCounterTextView;->replaceProgress:F
 
     const/high16 v3, 0x3f800000    # 1.0f
@@ -476,17 +476,17 @@
 
     if-eqz v1, :cond_180
 
-    .line 1159
+    .line 1172
     iget-object v1, p0, Lorg/telegram/ui/ChatActivity$UnreadCounterTextView;->layoutPaint:Landroid/text/TextPaint;
 
     invoke-virtual {v1}, Landroid/text/TextPaint;->getAlpha()I
 
     move-result v1
 
-    .line 1161
+    .line 1174
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 1162
+    .line 1175
     invoke-virtual {p0}, Landroid/view/View;->getMeasuredWidth()I
 
     move-result v4
@@ -527,7 +527,7 @@
 
     invoke-virtual {p1, v4, v5}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 1163
+    .line 1176
     iget-boolean v4, p0, Lorg/telegram/ui/ChatActivity$UnreadCounterTextView;->animatedFromBottom:Z
 
     const/high16 v5, -0x40800000    # -1.0f
@@ -560,7 +560,7 @@
 
     invoke-virtual {p1, v7, v4}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 1164
+    .line 1177
     iget-object v4, p0, Lorg/telegram/ui/ChatActivity$UnreadCounterTextView;->layoutPaint:Landroid/text/TextPaint;
 
     int-to-float v8, v1
@@ -575,18 +575,18 @@
 
     invoke-virtual {v4, v9}, Landroid/text/TextPaint;->setAlpha(I)V
 
-    .line 1165
+    .line 1178
     iget-object v4, p0, Lorg/telegram/ui/ChatActivity$UnreadCounterTextView;->textLayoutOut:Landroid/text/StaticLayout;
 
     invoke-virtual {v4, p1}, Landroid/text/StaticLayout;->draw(Landroid/graphics/Canvas;)V
 
-    .line 1166
+    .line 1179
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
-    .line 1168
+    .line 1181
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 1169
+    .line 1182
     invoke-virtual {p0}, Landroid/view/View;->getMeasuredWidth()I
 
     move-result v4
@@ -623,7 +623,7 @@
 
     invoke-virtual {p1, v4, v9}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 1170
+    .line 1183
     iget-boolean v4, p0, Lorg/telegram/ui/ChatActivity$UnreadCounterTextView;->animatedFromBottom:Z
 
     if-eqz v4, :cond_159
@@ -647,7 +647,7 @@
 
     invoke-virtual {p1, v7, v5}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 1171
+    .line 1184
     iget-object v3, p0, Lorg/telegram/ui/ChatActivity$UnreadCounterTextView;->layoutPaint:Landroid/text/TextPaint;
 
     iget v4, p0, Lorg/telegram/ui/ChatActivity$UnreadCounterTextView;->replaceProgress:F
@@ -658,22 +658,22 @@
 
     invoke-virtual {v3, v4}, Landroid/text/TextPaint;->setAlpha(I)V
 
-    .line 1172
+    .line 1185
     iget-object v3, p0, Lorg/telegram/ui/ChatActivity$UnreadCounterTextView;->textLayout:Landroid/text/StaticLayout;
 
     invoke-virtual {v3, p1}, Landroid/text/StaticLayout;->draw(Landroid/graphics/Canvas;)V
 
-    .line 1173
+    .line 1186
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
-    .line 1175
+    .line 1188
     iget-object v3, p0, Lorg/telegram/ui/ChatActivity$UnreadCounterTextView;->layoutPaint:Landroid/text/TextPaint;
 
     invoke-virtual {v3, v1}, Landroid/text/TextPaint;->setAlpha(I)V
 
     goto :goto_1a5
 
-    .line 1177
+    .line 1190
     :cond_180
     invoke-virtual {p0}, Landroid/view/View;->getMeasuredWidth()I
 
@@ -711,16 +711,16 @@
 
     invoke-virtual {p1, v1, v3}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 1178
+    .line 1191
     iget-object v1, p0, Lorg/telegram/ui/ChatActivity$UnreadCounterTextView;->textLayout:Landroid/text/StaticLayout;
 
     invoke-virtual {v1, p1}, Landroid/text/StaticLayout;->draw(Landroid/graphics/Canvas;)V
 
-    .line 1181
+    .line 1194
     :goto_1a5
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
-    .line 1184
+    .line 1197
     :cond_1a8
     iget-object v1, p0, Lorg/telegram/ui/ChatActivity$UnreadCounterTextView;->currentCounterString:Ljava/lang/String;
 
@@ -728,7 +728,7 @@
 
     if-eqz v0, :cond_221
 
-    .line 1186
+    .line 1199
     invoke-virtual {v0, v2}, Landroid/text/Layout;->getLineWidth(I)F
 
     move-result v0
@@ -741,7 +741,7 @@
 
     double-to-int v0, v0
 
-    .line 1187
+    .line 1200
     invoke-virtual {p0}, Landroid/view/View;->getMeasuredWidth()I
 
     move-result v1
@@ -766,7 +766,7 @@
 
     add-int/2addr v1, v0
 
-    .line 1188
+    .line 1201
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$UnreadCounterTextView;->rect:Landroid/graphics/RectF;
 
     int-to-float v2, v1
@@ -809,7 +809,7 @@
 
     invoke-virtual {v0, v2, v3, v1, v5}, Landroid/graphics/RectF;->set(FFFF)V
 
-    .line 1189
+    .line 1202
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$UnreadCounterTextView;->rect:Landroid/graphics/RectF;
 
     invoke-static {v4}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -828,7 +828,7 @@
 
     invoke-virtual {p1, v0, v1, v2, v3}, Landroid/graphics/Canvas;->drawRoundRect(Landroid/graphics/RectF;FFLandroid/graphics/Paint;)V
 
-    .line 1190
+    .line 1203
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$UnreadCounterTextView;->currentCounterString:Ljava/lang/String;
 
     iget-object v1, p0, Lorg/telegram/ui/ChatActivity$UnreadCounterTextView;->rect:Landroid/graphics/RectF;
@@ -872,21 +872,21 @@
 .method public onTouchEvent(Landroid/view/MotionEvent;)Z
     .registers 10
 
-    .line 1068
+    .line 1081
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v0
 
     if-nez v0, :cond_88
 
-    .line 1069
+    .line 1082
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$UnreadCounterTextView;->textLayout:Landroid/text/StaticLayout;
 
     if-eqz v0, :cond_88
 
     const/4 v1, 0x0
 
-    .line 1070
+    .line 1083
     invoke-virtual {v0, v1}, Landroid/text/StaticLayout;->getLineWidth(I)F
 
     move-result v0
@@ -899,7 +899,7 @@
 
     double-to-int v0, v2
 
-    .line 1072
+    .line 1085
     invoke-virtual {p0}, Landroid/view/View;->getMeasuredWidth()I
 
     move-result v2
@@ -916,7 +916,7 @@
 
     if-ne v2, v3, :cond_31
 
-    .line 1073
+    .line 1086
     invoke-virtual {p0}, Landroid/view/View;->getMeasuredWidth()I
 
     move-result v0
@@ -931,7 +931,7 @@
 
     goto :goto_53
 
-    .line 1075
+    .line 1088
     :cond_31
     iget-object v2, p0, Lorg/telegram/ui/ChatActivity$UnreadCounterTextView;->this$0:Lorg/telegram/ui/ChatActivity;
 
@@ -941,14 +941,14 @@
 
     if-eqz v2, :cond_3e
 
-    .line 1076
+    .line 1089
     invoke-virtual {p0}, Landroid/view/View;->getMeasuredWidth()I
 
     move-result v0
 
     goto :goto_53
 
-    .line 1078
+    .line 1091
     :cond_3e
     iget v2, p0, Lorg/telegram/ui/ChatActivity$UnreadCounterTextView;->circleWidth:I
 
@@ -972,14 +972,14 @@
 
     const/high16 v2, 0x42400000    # 48.0f
 
-    .line 1079
+    .line 1092
     invoke-static {v2}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v2
 
     add-int/2addr v0, v2
 
-    .line 1082
+    .line 1095
     :goto_53
     invoke-virtual {p0}, Landroid/view/View;->getMeasuredWidth()I
 
@@ -989,12 +989,12 @@
 
     div-int/lit8 v2, v2, 0x2
 
-    .line 1083
+    .line 1096
     iget-object v3, p0, Lorg/telegram/ui/ChatActivity$UnreadCounterTextView;->rect:Landroid/graphics/RectF;
 
     int-to-float v4, v2
 
-    .line 1084
+    .line 1097
     invoke-virtual {p0}, Landroid/view/View;->getMeasuredHeight()I
 
     move-result v5
@@ -1015,7 +1015,7 @@
 
     int-to-float v0, v2
 
-    .line 1085
+    .line 1098
     invoke-virtual {p0}, Landroid/view/View;->getMeasuredHeight()I
 
     move-result v2
@@ -1026,10 +1026,10 @@
 
     add-float/2addr v2, v7
 
-    .line 1083
+    .line 1096
     invoke-virtual {v3, v4, v5, v0, v2}, Landroid/graphics/RectF;->set(FFFF)V
 
-    .line 1087
+    .line 1100
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$UnreadCounterTextView;->rect:Landroid/graphics/RectF;
 
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
@@ -1046,12 +1046,12 @@
 
     if-nez v0, :cond_88
 
-    .line 1088
+    .line 1101
     invoke-virtual {p0, v1}, Landroid/view/View;->setPressed(Z)V
 
     return v1
 
-    .line 1093
+    .line 1106
     :cond_88
     invoke-super {p0, p1}, Landroid/view/View;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
@@ -1063,7 +1063,7 @@
 .method public setText(Ljava/lang/CharSequence;)V
     .registers 11
 
-    .line 1036
+    .line 1049
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$UnreadCounterTextView;->layoutPaint:Landroid/text/TextPaint;
 
     invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
@@ -1086,7 +1086,7 @@
 
     iput v0, p0, Lorg/telegram/ui/ChatActivity$UnreadCounterTextView;->layoutTextWidth:I
 
-    .line 1037
+    .line 1050
     new-instance v0, Landroid/text/StaticLayout;
 
     iget-object v3, p0, Lorg/telegram/ui/ChatActivity$UnreadCounterTextView;->layoutPaint:Landroid/text/TextPaint;
@@ -1109,10 +1109,10 @@
 
     iput-object v0, p0, Lorg/telegram/ui/ChatActivity$UnreadCounterTextView;->textLayout:Landroid/text/StaticLayout;
 
-    .line 1038
+    .line 1051
     invoke-virtual {p0, p1}, Landroid/view/View;->setContentDescription(Ljava/lang/CharSequence;)V
 
-    .line 1039
+    .line 1052
     invoke-virtual {p0}, Landroid/view/View;->invalidate()V
 
     return-void
@@ -1121,26 +1121,26 @@
 .method public setText(Ljava/lang/CharSequence;Z)V
     .registers 11
 
-    .line 1009
+    .line 1022
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$UnreadCounterTextView;->lastText:Ljava/lang/CharSequence;
 
     if-ne v0, p1, :cond_5
 
     return-void
 
-    .line 1012
+    .line 1025
     :cond_5
     iput-object p1, p0, Lorg/telegram/ui/ChatActivity$UnreadCounterTextView;->lastText:Ljava/lang/CharSequence;
 
-    .line 1013
+    .line 1026
     iput-boolean p2, p0, Lorg/telegram/ui/ChatActivity$UnreadCounterTextView;->animatedFromBottom:Z
 
-    .line 1014
+    .line 1027
     iget-object p2, p0, Lorg/telegram/ui/ChatActivity$UnreadCounterTextView;->textLayout:Landroid/text/StaticLayout;
 
     iput-object p2, p0, Lorg/telegram/ui/ChatActivity$UnreadCounterTextView;->textLayoutOut:Landroid/text/StaticLayout;
 
-    .line 1015
+    .line 1028
     iget-object p2, p0, Lorg/telegram/ui/ChatActivity$UnreadCounterTextView;->layoutPaint:Landroid/text/TextPaint;
 
     const/4 v0, 0x0
@@ -1163,7 +1163,7 @@
 
     iput p2, p0, Lorg/telegram/ui/ChatActivity$UnreadCounterTextView;->layoutTextWidth:I
 
-    .line 1016
+    .line 1029
     new-instance p2, Landroid/text/StaticLayout;
 
     iget-object v2, p0, Lorg/telegram/ui/ChatActivity$UnreadCounterTextView;->layoutPaint:Landroid/text/TextPaint;
@@ -1186,36 +1186,36 @@
 
     iput-object p2, p0, Lorg/telegram/ui/ChatActivity$UnreadCounterTextView;->textLayout:Landroid/text/StaticLayout;
 
-    .line 1017
+    .line 1030
     invoke-virtual {p0, p1}, Landroid/view/View;->setContentDescription(Ljava/lang/CharSequence;)V
 
-    .line 1018
+    .line 1031
     invoke-virtual {p0}, Landroid/view/View;->invalidate()V
 
-    .line 1020
+    .line 1033
     iget-object p1, p0, Lorg/telegram/ui/ChatActivity$UnreadCounterTextView;->textLayoutOut:Landroid/text/StaticLayout;
 
     if-eqz p1, :cond_67
 
-    .line 1021
+    .line 1034
     iget-object p1, p0, Lorg/telegram/ui/ChatActivity$UnreadCounterTextView;->replaceAnimator:Landroid/animation/ValueAnimator;
 
     if-eqz p1, :cond_44
 
-    .line 1022
+    .line 1035
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->cancel()V
 
     :cond_44
     const/4 p1, 0x0
 
-    .line 1024
+    .line 1037
     iput p1, p0, Lorg/telegram/ui/ChatActivity$UnreadCounterTextView;->replaceProgress:F
 
     const/4 p1, 0x2
 
     new-array p1, p1, [F
 
-    .line 1025
+    .line 1038
     fill-array-data p1, :array_68
 
     invoke-static {p1}, Landroid/animation/ValueAnimator;->ofFloat([F)Landroid/animation/ValueAnimator;
@@ -1224,21 +1224,21 @@
 
     iput-object p1, p0, Lorg/telegram/ui/ChatActivity$UnreadCounterTextView;->replaceAnimator:Landroid/animation/ValueAnimator;
 
-    .line 1026
+    .line 1039
     new-instance p2, Lorg/telegram/ui/ChatActivity$UnreadCounterTextView$$ExternalSyntheticLambda0;
 
     invoke-direct {p2, p0}, Lorg/telegram/ui/ChatActivity$UnreadCounterTextView$$ExternalSyntheticLambda0;-><init>(Lorg/telegram/ui/ChatActivity$UnreadCounterTextView;)V
 
     invoke-virtual {p1, p2}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    .line 1030
+    .line 1043
     iget-object p1, p0, Lorg/telegram/ui/ChatActivity$UnreadCounterTextView;->replaceAnimator:Landroid/animation/ValueAnimator;
 
     const-wide/16 v0, 0x96
 
     invoke-virtual {p1, v0, v1}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
-    .line 1031
+    .line 1044
     iget-object p1, p0, Lorg/telegram/ui/ChatActivity$UnreadCounterTextView;->replaceAnimator:Landroid/animation/ValueAnimator;
 
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->start()V
@@ -1256,14 +1256,14 @@
 .method public verifyDrawable(Landroid/graphics/drawable/Drawable;)Z
     .registers 3
 
-    .line 1052
+    .line 1065
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$UnreadCounterTextView;->selectableBackground:Landroid/graphics/drawable/Drawable;
 
     if-eqz v0, :cond_11
 
     if-eq v0, p1, :cond_f
 
-    .line 1053
+    .line 1066
     invoke-super {p0, p1}, Landroid/view/View;->verifyDrawable(Landroid/graphics/drawable/Drawable;)Z
 
     move-result p1
@@ -1284,7 +1284,7 @@
     :goto_10
     return p1
 
-    .line 1055
+    .line 1068
     :cond_11
     invoke-super {p0, p1}, Landroid/view/View;->verifyDrawable(Landroid/graphics/drawable/Drawable;)Z
 

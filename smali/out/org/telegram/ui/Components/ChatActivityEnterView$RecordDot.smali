@@ -36,13 +36,13 @@
 .method public constructor <init>(Lorg/telegram/ui/Components/ChatActivityEnterView;Landroid/content/Context;)V
     .registers 10
 
-    .line 712
+    .line 714
     iput-object p1, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$RecordDot;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
-    .line 713
+    .line 715
     invoke-direct {p0, p2}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
-    .line 715
+    .line 717
     new-instance p1, Lorg/telegram/ui/Components/RLottieDrawable;
 
     new-instance p2, Ljava/lang/StringBuilder;
@@ -83,17 +83,17 @@
 
     iput-object p1, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$RecordDot;->drawable:Lorg/telegram/ui/Components/RLottieDrawable;
 
-    .line 716
+    .line 718
     invoke-virtual {p1, p0}, Lorg/telegram/ui/Components/RLottieDrawable;->setCurrentParentView(Landroid/view/View;)V
 
-    .line 717
+    .line 719
     iget-object p1, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$RecordDot;->drawable:Lorg/telegram/ui/Components/RLottieDrawable;
 
     const/4 p2, 0x1
 
     invoke-virtual {p1, p2}, Lorg/telegram/ui/Components/RLottieDrawable;->setInvalidateOnProgressSet(Z)V
 
-    .line 718
+    .line 720
     invoke-virtual {p0}, Lorg/telegram/ui/Components/ChatActivityEnterView$RecordDot;->updateColors()V
 
     return-void
@@ -102,7 +102,7 @@
 .method static synthetic access$3402(Lorg/telegram/ui/Components/ChatActivityEnterView$RecordDot;Z)Z
     .registers 2
 
-    .line 684
+    .line 686
     iput-boolean p1, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$RecordDot;->enterAnimation:Z
 
     return p1
@@ -113,25 +113,25 @@
 .method protected onAttachedToWindow()V
     .registers 2
 
-    .line 696
+    .line 698
     invoke-super {p0}, Landroid/view/View;->onAttachedToWindow()V
 
     const/4 v0, 0x1
 
-    .line 697
+    .line 699
     iput-boolean v0, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$RecordDot;->attachedToWindow:Z
 
-    .line 698
+    .line 700
     iget-boolean v0, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$RecordDot;->playing:Z
 
     if-eqz v0, :cond_f
 
-    .line 699
+    .line 701
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$RecordDot;->drawable:Lorg/telegram/ui/Components/RLottieDrawable;
 
     invoke-virtual {v0}, Lorg/telegram/ui/Components/RLottieDrawable;->start()V
 
-    .line 701
+    .line 703
     :cond_f
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$RecordDot;->drawable:Lorg/telegram/ui/Components/RLottieDrawable;
 
@@ -143,20 +143,20 @@
 .method protected onDetachedFromWindow()V
     .registers 2
 
-    .line 706
+    .line 708
     invoke-super {p0}, Landroid/view/View;->onDetachedFromWindow()V
 
     const/4 v0, 0x0
 
-    .line 707
+    .line 709
     iput-boolean v0, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$RecordDot;->attachedToWindow:Z
 
-    .line 708
+    .line 710
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$RecordDot;->drawable:Lorg/telegram/ui/Components/RLottieDrawable;
 
     invoke-virtual {v0}, Lorg/telegram/ui/Components/RLottieDrawable;->stop()V
 
-    .line 709
+    .line 711
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$RecordDot;->drawable:Lorg/telegram/ui/Components/RLottieDrawable;
 
     invoke-virtual {v0, p0}, Lorg/telegram/ui/Components/RLottieDrawable;->removeParentView(Landroid/view/View;)V
@@ -167,14 +167,14 @@
 .method protected onDraw(Landroid/graphics/Canvas;)V
     .registers 8
 
-    .line 754
+    .line 756
     iget-boolean v0, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$RecordDot;->playing:Z
 
     const/high16 v1, 0x437f0000    # 255.0f
 
     if-eqz v0, :cond_10
 
-    .line 755
+    .line 757
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$RecordDot;->drawable:Lorg/telegram/ui/Components/RLottieDrawable;
 
     iget v2, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$RecordDot;->alpha:F
@@ -185,7 +185,7 @@
 
     invoke-virtual {v0, v2}, Landroid/graphics/drawable/BitmapDrawable;->setAlpha(I)V
 
-    .line 757
+    .line 759
     :cond_10
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$RecordDot;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
@@ -201,7 +201,7 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 759
+    .line 761
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
@@ -210,7 +210,7 @@
 
     sub-long/2addr v0, v2
 
-    .line 760
+    .line 762
     iget-boolean v2, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$RecordDot;->enterAnimation:Z
 
     const/4 v3, 0x1
@@ -219,12 +219,12 @@
 
     if-eqz v2, :cond_2f
 
-    .line 761
+    .line 763
     iput v4, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$RecordDot;->alpha:F
 
     goto :goto_5a
 
-    .line 763
+    .line 765
     :cond_2f
     iget-boolean v2, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$RecordDot;->isIncr:Z
 
@@ -236,7 +236,7 @@
 
     if-nez v2, :cond_4a
 
-    .line 764
+    .line 766
     iget v2, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$RecordDot;->alpha:F
 
     long-to-float v0, v0
@@ -253,15 +253,15 @@
 
     if-gtz v1, :cond_5a
 
-    .line 766
+    .line 768
     iput v0, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$RecordDot;->alpha:F
 
-    .line 767
+    .line 769
     iput-boolean v3, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$RecordDot;->isIncr:Z
 
     goto :goto_5a
 
-    .line 770
+    .line 772
     :cond_4a
     iget v2, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$RecordDot;->alpha:F
 
@@ -277,15 +277,15 @@
 
     if-ltz v0, :cond_5a
 
-    .line 772
+    .line 774
     iput v4, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$RecordDot;->alpha:F
 
     const/4 v0, 0x0
 
-    .line 773
+    .line 775
     iput-boolean v0, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$RecordDot;->isIncr:Z
 
-    .line 777
+    .line 779
     :cond_5a
     :goto_5a
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -294,17 +294,17 @@
 
     iput-wide v0, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$RecordDot;->lastUpdateTime:J
 
-    .line 778
+    .line 780
     iget-boolean v0, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$RecordDot;->playing:Z
 
     if-eqz v0, :cond_69
 
-    .line 779
+    .line 781
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$RecordDot;->drawable:Lorg/telegram/ui/Components/RLottieDrawable;
 
     invoke-virtual {v0, p1}, Lorg/telegram/ui/Components/RLottieDrawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 781
+    .line 783
     :cond_69
     iget-boolean v0, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$RecordDot;->playing:Z
 
@@ -318,7 +318,7 @@
 
     if-nez v0, :cond_91
 
-    .line 782
+    .line 784
     :cond_75
     invoke-virtual {p0}, Landroid/view/View;->getMeasuredWidth()I
 
@@ -352,7 +352,7 @@
 
     invoke-virtual {p1, v0, v1, v2, v3}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
 
-    .line 784
+    .line 786
     :cond_91
     invoke-virtual {p0}, Landroid/view/View;->invalidate()V
 
@@ -362,10 +362,10 @@
 .method protected onMeasure(II)V
     .registers 5
 
-    .line 748
+    .line 750
     invoke-super {p0, p1, p2}, Landroid/view/View;->onMeasure(II)V
 
-    .line 749
+    .line 751
     iget-object p1, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$RecordDot;->drawable:Lorg/telegram/ui/Components/RLottieDrawable;
 
     invoke-virtual {p0}, Landroid/view/View;->getMeasuredWidth()I
@@ -388,22 +388,22 @@
 
     const/4 v0, 0x1
 
-    .line 788
+    .line 790
     iput-boolean v0, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$RecordDot;->playing:Z
 
-    .line 789
+    .line 791
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$RecordDot;->drawable:Lorg/telegram/ui/Components/RLottieDrawable;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/RLottieDrawable;->setProgress(F)V
 
-    .line 790
+    .line 792
     iget-boolean v0, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$RecordDot;->attachedToWindow:Z
 
     if-eqz v0, :cond_12
 
-    .line 791
+    .line 793
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$RecordDot;->drawable:Lorg/telegram/ui/Components/RLottieDrawable;
 
     invoke-virtual {v0}, Lorg/telegram/ui/Components/RLottieDrawable;->start()V
@@ -417,10 +417,10 @@
 
     const/high16 v0, 0x3f800000    # 1.0f
 
-    .line 738
+    .line 740
     iput v0, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$RecordDot;->alpha:F
 
-    .line 739
+    .line 741
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
@@ -429,18 +429,18 @@
 
     const/4 v0, 0x0
 
-    .line 740
+    .line 742
     iput-boolean v0, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$RecordDot;->isIncr:Z
 
-    .line 741
+    .line 743
     iput-boolean v0, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$RecordDot;->playing:Z
 
-    .line 742
+    .line 744
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$RecordDot;->drawable:Lorg/telegram/ui/Components/RLottieDrawable;
 
     invoke-virtual {v0}, Lorg/telegram/ui/Components/RLottieDrawable;->stop()V
 
-    .line 743
+    .line 745
     invoke-virtual {p0}, Landroid/view/View;->invalidate()V
 
     return-void
@@ -449,7 +449,7 @@
 .method public updateColors()V
     .registers 5
 
-    .line 722
+    .line 724
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$RecordDot;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     const-string v1, "chat_recordedVoiceDot"
@@ -458,7 +458,7 @@
 
     move-result v0
 
-    .line 723
+    .line 725
     iget-object v1, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$RecordDot;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     const-string v2, "chat_messagePanelBackground"
@@ -467,7 +467,7 @@
 
     move-result v1
 
-    .line 724
+    .line 726
     iget-object v2, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$RecordDot;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {v2}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$3600(Lorg/telegram/ui/Components/ChatActivityEnterView;)Landroid/graphics/Paint;
@@ -476,52 +476,52 @@
 
     invoke-virtual {v2, v0}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 725
+    .line 727
     iget-object v2, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$RecordDot;->drawable:Lorg/telegram/ui/Components/RLottieDrawable;
 
     invoke-virtual {v2}, Lorg/telegram/ui/Components/RLottieDrawable;->beginApplyLayerColors()V
 
-    .line 726
+    .line 728
     iget-object v2, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$RecordDot;->drawable:Lorg/telegram/ui/Components/RLottieDrawable;
 
     const-string v3, "Cup Red.**"
 
     invoke-virtual {v2, v3, v0}, Lorg/telegram/ui/Components/RLottieDrawable;->setLayerColor(Ljava/lang/String;I)V
 
-    .line 727
+    .line 729
     iget-object v2, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$RecordDot;->drawable:Lorg/telegram/ui/Components/RLottieDrawable;
 
     const-string v3, "Box.**"
 
     invoke-virtual {v2, v3, v0}, Lorg/telegram/ui/Components/RLottieDrawable;->setLayerColor(Ljava/lang/String;I)V
 
-    .line 728
+    .line 730
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$RecordDot;->drawable:Lorg/telegram/ui/Components/RLottieDrawable;
 
     const-string v2, "Line 1.**"
 
     invoke-virtual {v0, v2, v1}, Lorg/telegram/ui/Components/RLottieDrawable;->setLayerColor(Ljava/lang/String;I)V
 
-    .line 729
+    .line 731
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$RecordDot;->drawable:Lorg/telegram/ui/Components/RLottieDrawable;
 
     const-string v2, "Line 2.**"
 
     invoke-virtual {v0, v2, v1}, Lorg/telegram/ui/Components/RLottieDrawable;->setLayerColor(Ljava/lang/String;I)V
 
-    .line 730
+    .line 732
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$RecordDot;->drawable:Lorg/telegram/ui/Components/RLottieDrawable;
 
     const-string v2, "Line 3.**"
 
     invoke-virtual {v0, v2, v1}, Lorg/telegram/ui/Components/RLottieDrawable;->setLayerColor(Ljava/lang/String;I)V
 
-    .line 731
+    .line 733
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$RecordDot;->drawable:Lorg/telegram/ui/Components/RLottieDrawable;
 
     invoke-virtual {v0}, Lorg/telegram/ui/Components/RLottieDrawable;->commitApplyLayerColors()V
 
-    .line 732
+    .line 734
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$RecordDot;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$3700(Lorg/telegram/ui/Components/ChatActivityEnterView;)Lorg/telegram/ui/Components/MediaActionDrawable;
@@ -530,7 +530,7 @@
 
     if-eqz v0, :cond_5f
 
-    .line 733
+    .line 735
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$RecordDot;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$3700(Lorg/telegram/ui/Components/ChatActivityEnterView;)Lorg/telegram/ui/Components/MediaActionDrawable;

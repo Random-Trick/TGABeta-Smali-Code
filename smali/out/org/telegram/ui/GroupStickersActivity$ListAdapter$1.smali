@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/GroupStickersActivity$ListAdapter;Ljava/lang/String;)V
     .registers 3
 
-    .line 653
+    .line 644
     iput-object p1, p0, Lorg/telegram/ui/GroupStickersActivity$ListAdapter$1;->this$1:Lorg/telegram/ui/GroupStickersActivity$ListAdapter;
 
     invoke-direct {p0, p2}, Lorg/telegram/ui/Components/URLSpanNoUnderline;-><init>(Ljava/lang/String;)V
@@ -35,12 +35,12 @@
 .method public onClick(Landroid/view/View;)V
     .registers 5
 
-    .line 656
+    .line 647
     iget-object p1, p0, Lorg/telegram/ui/GroupStickersActivity$ListAdapter$1;->this$1:Lorg/telegram/ui/GroupStickersActivity$ListAdapter;
 
     iget-object p1, p1, Lorg/telegram/ui/GroupStickersActivity$ListAdapter;->this$0:Lorg/telegram/ui/GroupStickersActivity;
 
-    invoke-static {p1}, Lorg/telegram/ui/GroupStickersActivity;->access$1700(Lorg/telegram/ui/GroupStickersActivity;)I
+    invoke-static {p1}, Lorg/telegram/ui/GroupStickersActivity;->access$1900(Lorg/telegram/ui/GroupStickersActivity;)I
 
     move-result p1
 

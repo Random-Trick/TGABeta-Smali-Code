@@ -181,7 +181,7 @@
 
     move/from16 v19, v11
 
-    const v11, 0x7f070371
+    const v11, 0x7f070388
 
     invoke-virtual {v14, v11}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -203,7 +203,7 @@
 
     move-object/from16 v21, v11
 
-    const v11, 0x7f070373
+    const v11, 0x7f07038a
 
     invoke-virtual {v14, v11}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -223,7 +223,7 @@
 
     move-result-object v8
 
-    const v14, 0x7f070376
+    const v14, 0x7f07038c
 
     invoke-virtual {v8, v14}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -245,7 +245,7 @@
 
     move-object/from16 v22, v14
 
-    const v14, 0x7f070374
+    const v14, 0x7f07038b
 
     invoke-virtual {v8, v14}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -334,7 +334,7 @@
 
     const/16 v2, 0x78
 
-    if-eqz v15, :cond_2a7
+    if-eqz v15, :cond_2a8
 
     if-nez v6, :cond_131
 
@@ -489,9 +489,9 @@
     const/4 v11, 0x0
 
     :goto_19a
-    if-eqz v0, :cond_290
+    if-eqz v0, :cond_291
 
-    .line 119
+    .line 120
     iget-object v3, v1, Lorg/telegram/tgnet/TLRPC$Document;->mime_type:Ljava/lang/String;
 
     const-string v6, "application/x-tgwallpattern"
@@ -506,7 +506,7 @@
 
     const/16 v6, 0x230
 
-    .line 120
+    .line 121
     invoke-static {v0, v6, v3, v11}, Lorg/telegram/messenger/SvgHelper;->getBitmap(Ljava/io/File;IIZ)Landroid/graphics/Bitmap;
 
     move-result-object v0
@@ -516,7 +516,7 @@
 
     goto :goto_20f
 
-    .line 122
+    .line 123
     :cond_1b0
     new-instance v3, Landroid/graphics/BitmapFactory$Options;
 
@@ -524,25 +524,25 @@
 
     const/4 v6, 0x1
 
-    .line 123
+    .line 124
     iput v6, v3, Landroid/graphics/BitmapFactory$Options;->inSampleSize:I
 
-    .line 124
+    .line 125
     iput-boolean v6, v3, Landroid/graphics/BitmapFactory$Options;->inJustDecodeBounds:Z
 
-    .line 125
+    .line 126
     invoke-virtual/range {p0 .. p0}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v6
 
     invoke-static {v6, v3}, Landroid/graphics/BitmapFactory;->decodeFile(Ljava/lang/String;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
-    .line 126
+    .line 127
     iget v6, v3, Landroid/graphics/BitmapFactory$Options;->outWidth:I
 
     int-to-float v6, v6
 
-    .line 127
+    .line 128
     iget v7, v3, Landroid/graphics/BitmapFactory$Options;->outHeight:I
 
     int-to-float v7, v7
@@ -559,7 +559,7 @@
 
     div-float v12, v7, v13
 
-    .line 134
+    .line 135
     invoke-static {v11, v12}, Ljava/lang/Math;->min(FF)F
 
     move-result v11
@@ -577,7 +577,7 @@
     :cond_1e0
     const/4 v12, 0x0
 
-    .line 139
+    .line 140
     iput-boolean v12, v3, Landroid/graphics/BitmapFactory$Options;->inJustDecodeBounds:Z
 
     cmpl-float v12, v11, v13
@@ -616,7 +616,7 @@
 
     if-ltz v7, :cond_1f6
 
-    .line 145
+    .line 146
     iput v6, v3, Landroid/graphics/BitmapFactory$Options;->inSampleSize:I
 
     goto :goto_206
@@ -624,10 +624,10 @@
     :cond_203
     float-to-int v6, v11
 
-    .line 147
+    .line 148
     iput v6, v3, Landroid/graphics/BitmapFactory$Options;->inSampleSize:I
 
-    .line 149
+    .line 150
     :goto_206
     invoke-virtual/range {p0 .. p0}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
@@ -640,11 +640,11 @@
     goto :goto_1ae
 
     :goto_20f
-    if-eqz v6, :cond_291
+    if-eqz v6, :cond_292
 
     if-eqz v4, :cond_230
 
-    .line 153
+    .line 154
     iget-object v0, v1, Lorg/telegram/messenger/DocumentObject$ThemeDocument;->accent:Lorg/telegram/ui/ActionBar/Theme$ThemeAccent;
 
     iget v0, v0, Lorg/telegram/ui/ActionBar/Theme$ThemeAccent;->patternIntensity:F
@@ -657,7 +657,7 @@
 
     invoke-virtual {v4, v0, v6}, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->setPatternBitmap(ILandroid/graphics/Bitmap;)V
 
-    .line 154
+    .line 155
     invoke-virtual {v9}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v0
@@ -672,12 +672,12 @@
 
     invoke-virtual {v4, v3, v2, v0, v1}, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->setBounds(IIII)V
 
-    .line 155
+    .line 156
     invoke-virtual {v4, v10}, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->draw(Landroid/graphics/Canvas;)V
 
-    goto :goto_291
+    goto :goto_292
 
-    .line 157
+    .line 158
     :cond_230
     new-instance v0, Landroid/graphics/Paint;
 
@@ -685,7 +685,7 @@
 
     invoke-direct {v0, v3}, Landroid/graphics/Paint;-><init>(I)V
 
-    .line 158
+    .line 159
     iget-object v1, v1, Lorg/telegram/messenger/DocumentObject$ThemeDocument;->accent:Lorg/telegram/ui/ActionBar/Theme$ThemeAccent;
 
     iget v1, v1, Lorg/telegram/ui/ActionBar/Theme$ThemeAccent;->patternIntensity:F
@@ -696,7 +696,7 @@
 
     if-ltz v1, :cond_249
 
-    .line 159
+    .line 160
     new-instance v1, Landroid/graphics/PorterDuffColorFilter;
 
     sget-object v7, Landroid/graphics/PorterDuff$Mode;->SRC_IN:Landroid/graphics/PorterDuff$Mode;
@@ -708,35 +708,39 @@
     :cond_249
     const/16 v1, 0xff
 
-    .line 161
+    .line 162
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    const/high16 v1, 0x440c0000    # 560.0f
+    const/16 v1, 0x230
 
-    .line 162
+    int-to-float v5, v1
+
+    .line 163
     invoke-virtual {v6}, Landroid/graphics/Bitmap;->getWidth()I
-
-    move-result v5
-
-    int-to-float v5, v5
-
-    div-float/2addr v1, v5
-
-    const v5, 0x44298000    # 678.0f
-
-    invoke-virtual {v6}, Landroid/graphics/Bitmap;->getHeight()I
-
-    move-result v7
-
-    int-to-float v7, v7
-
-    div-float/2addr v5, v7
-
-    invoke-static {v1, v5}, Ljava/lang/Math;->max(FF)F
 
     move-result v1
 
-    .line 163
+    int-to-float v1, v1
+
+    div-float/2addr v5, v1
+
+    const/16 v1, 0x2a6
+
+    int-to-float v7, v1
+
+    invoke-virtual {v6}, Landroid/graphics/Bitmap;->getHeight()I
+
+    move-result v1
+
+    int-to-float v1, v1
+
+    div-float/2addr v7, v1
+
+    invoke-static {v5, v7}, Ljava/lang/Math;->max(FF)F
+
+    move-result v1
+
+    .line 164
     invoke-virtual {v6}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v5
@@ -747,7 +751,7 @@
 
     float-to-int v5, v5
 
-    .line 164
+    .line 165
     invoke-virtual {v6}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result v7
@@ -764,47 +768,47 @@
 
     const/4 v11, 0x2
 
-    .line 165
+    .line 166
     div-int/2addr v5, v11
 
     const/16 v12, 0x2a6
 
     rsub-int v7, v7, 0x2a6
 
-    .line 166
+    .line 167
     div-int/2addr v7, v11
 
-    .line 167
+    .line 168
     invoke-virtual {v10}, Landroid/graphics/Canvas;->save()I
 
     int-to-float v5, v5
 
     int-to-float v7, v7
 
-    .line 168
+    .line 169
     invoke-virtual {v10, v5, v7}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 169
+    .line 170
     invoke-virtual {v10, v1, v1}, Landroid/graphics/Canvas;->scale(FF)V
 
-    .line 170
+    .line 171
     invoke-virtual {v10, v6, v3, v3, v0}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
 
-    .line 171
+    .line 172
     invoke-virtual {v10}, Landroid/graphics/Canvas;->restore()V
 
-    goto :goto_291
-
-    :cond_290
-    const/4 v6, 0x0
+    goto :goto_292
 
     :cond_291
-    :goto_291
-    if-nez v6, :cond_2a5
+    const/4 v6, 0x0
 
-    if-eqz v4, :cond_2a5
+    :cond_292
+    :goto_292
+    if-nez v6, :cond_2a6
 
-    .line 177
+    if-eqz v4, :cond_2a6
+
+    .line 178
     invoke-virtual {v9}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v0
@@ -819,21 +823,21 @@
 
     invoke-virtual {v4, v3, v2, v0, v1}, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->setBounds(IIII)V
 
-    .line 178
+    .line 179
     invoke-virtual {v4, v10}, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->draw(Landroid/graphics/Canvas;)V
 
-    :cond_2a5
+    :cond_2a6
     const/4 v0, 0x1
 
-    goto :goto_2a8
+    goto :goto_2a9
 
-    :cond_2a7
+    :cond_2a8
     const/4 v0, 0x0
 
-    :goto_2a8
-    if-nez v0, :cond_2c7
+    :goto_2a9
+    if-nez v0, :cond_2c8
 
-    .line 184
+    .line 185
     invoke-virtual {v9}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v0
@@ -848,7 +852,7 @@
 
     move-result-object v0
 
-    .line 185
+    .line 186
     invoke-virtual {v9}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v1
@@ -863,22 +867,22 @@
 
     invoke-virtual {v0, v4, v2, v1, v3}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 186
+    .line 187
     invoke-virtual {v0, v10}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    :cond_2c7
+    :cond_2c8
     move-object/from16 v0, v25
 
     move/from16 v1, v26
 
-    .line 189
+    .line 190
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
     const/4 v4, 0x0
 
     const/4 v5, 0x0
 
-    .line 190
+    .line 191
     invoke-virtual {v9}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v1
@@ -895,11 +899,11 @@
 
     invoke-virtual/range {v3 .. v8}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    if-eqz v21, :cond_2fb
+    if-eqz v21, :cond_2fc
 
     const/16 v3, 0xd
 
-    .line 194
+    .line 195
     invoke-virtual/range {v21 .. v21}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
 
     move-result v4
@@ -910,7 +914,7 @@
 
     div-int/2addr v4, v5
 
-    .line 195
+    .line 196
     invoke-virtual/range {v21 .. v21}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
     move-result v5
@@ -927,13 +931,13 @@
 
     invoke-virtual {v7, v3, v4, v5, v6}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 196
+    .line 197
     invoke-virtual {v7, v10}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    :cond_2fb
-    if-eqz v24, :cond_322
+    :cond_2fc
+    if-eqz v24, :cond_323
 
-    .line 199
+    .line 200
     invoke-virtual {v9}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v3
@@ -946,7 +950,7 @@
 
     add-int/lit8 v3, v3, -0xa
 
-    .line 200
+    .line 201
     invoke-virtual/range {v24 .. v24}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
 
     move-result v4
@@ -957,7 +961,7 @@
 
     div-int/2addr v4, v5
 
-    .line 201
+    .line 202
     invoke-virtual/range {v24 .. v24}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
     move-result v5
@@ -974,13 +978,13 @@
 
     invoke-virtual {v7, v3, v4, v5, v6}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 202
+    .line 203
     invoke-virtual {v7, v10}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    :cond_322
+    :cond_323
     const/4 v3, 0x1
 
-    .line 205
+    .line 206
     aget-object v4, v1, v3
 
     const/16 v5, 0xd8
@@ -999,7 +1003,7 @@
 
     invoke-virtual {v4, v11, v5, v6, v8}, Lorg/telegram/ui/ActionBar/Theme$MessageDrawable;->setBounds(IIII)V
 
-    .line 206
+    .line 207
     aget-object v12, v1, v3
 
     const/4 v13, 0x0
@@ -1016,12 +1020,12 @@
 
     const/4 v3, 0x1
 
-    .line 207
+    .line 208
     aget-object v4, v1, v3
 
     invoke-virtual {v4, v10}, Lorg/telegram/ui/ActionBar/Theme$MessageDrawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 209
+    .line 210
     aget-object v4, v1, v3
 
     const/16 v5, 0x1ae
@@ -1036,7 +1040,7 @@
 
     invoke-virtual {v4, v11, v5, v6, v8}, Lorg/telegram/ui/ActionBar/Theme$MessageDrawable;->setBounds(IIII)V
 
-    .line 210
+    .line 211
     aget-object v12, v1, v3
 
     const/16 v13, 0x1ae
@@ -1045,14 +1049,14 @@
 
     const/4 v3, 0x1
 
-    .line 211
+    .line 212
     aget-object v3, v1, v3
 
     invoke-virtual {v3, v10}, Lorg/telegram/ui/ActionBar/Theme$MessageDrawable;->draw(Landroid/graphics/Canvas;)V
 
     const/4 v3, 0x0
 
-    .line 213
+    .line 214
     aget-object v4, v1, v3
 
     const/16 v5, 0x143
@@ -1063,7 +1067,7 @@
 
     invoke-virtual {v4, v7, v5, v6, v8}, Lorg/telegram/ui/ActionBar/Theme$MessageDrawable;->setBounds(IIII)V
 
-    .line 214
+    .line 215
     aget-object v11, v1, v3
 
     const/16 v12, 0x143
@@ -1078,19 +1082,19 @@
 
     const/4 v3, 0x0
 
-    .line 215
+    .line 216
     aget-object v1, v1, v3
 
     invoke-virtual {v1, v10}, Lorg/telegram/ui/ActionBar/Theme$MessageDrawable;->draw(Landroid/graphics/Canvas;)V
 
     move/from16 v1, v19
 
-    .line 217
+    .line 218
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
     const/4 v4, 0x0
 
-    .line 218
+    .line 219
     invoke-virtual {v9}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result v1
@@ -1119,9 +1123,9 @@
 
     const/16 v0, 0x16
 
-    if-eqz v22, :cond_3c1
+    if-eqz v22, :cond_3c2
 
-    .line 221
+    .line 222
     invoke-virtual {v9}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result v1
@@ -1140,7 +1144,7 @@
 
     add-int/2addr v1, v3
 
-    .line 222
+    .line 223
     invoke-virtual/range {v22 .. v22}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
     move-result v3
@@ -1157,13 +1161,13 @@
 
     invoke-virtual {v5, v0, v1, v3, v4}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 223
+    .line 224
     invoke-virtual {v5, v10}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    :cond_3c1
-    if-eqz v23, :cond_3ec
+    :cond_3c2
+    if-eqz v23, :cond_3ed
 
-    .line 226
+    .line 227
     invoke-virtual {v9}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v1
@@ -1176,7 +1180,7 @@
 
     sub-int/2addr v1, v0
 
-    .line 227
+    .line 228
     invoke-virtual {v9}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result v0
@@ -1195,7 +1199,7 @@
 
     add-int/2addr v0, v2
 
-    .line 228
+    .line 229
     invoke-virtual/range {v23 .. v23}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
     move-result v2
@@ -1212,9 +1216,9 @@
 
     invoke-virtual {v4, v1, v0, v2, v3}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 229
+    .line 230
     invoke-virtual {v4, v10}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    :cond_3ec
+    :cond_3ed
     return-object v9
 .end method

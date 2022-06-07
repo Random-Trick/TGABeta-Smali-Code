@@ -281,6 +281,14 @@
     return-void
 .end method
 
+.method public synthetic didLongPressBotButton(Lorg/telegram/ui/Cells/ChatMessageCell;Lorg/telegram/tgnet/TLRPC$KeyboardButton;)V
+    .registers 3
+
+    invoke-static {p0, p1, p2}, Lorg/telegram/ui/Cells/ChatMessageCell$ChatMessageCellDelegate$-CC;->$default$didLongPressBotButton(Lorg/telegram/ui/Cells/ChatMessageCell$ChatMessageCellDelegate;Lorg/telegram/ui/Cells/ChatMessageCell;Lorg/telegram/tgnet/TLRPC$KeyboardButton;)V
+
+    return-void
+.end method
+
 .method public synthetic didLongPressChannelAvatar(Lorg/telegram/ui/Cells/ChatMessageCell;Lorg/telegram/tgnet/TLRPC$Chat;IFF)Z
     .registers 6
 
@@ -1370,7 +1378,7 @@
 
     move-result-object p1
 
-    const p2, 0x7f0e115d
+    const p2, 0x7f0e1227
 
     const-string p3, "TextCopied"
 
@@ -1590,7 +1598,7 @@
 
     new-array p2, p2, [Ljava/lang/CharSequence;
 
-    const p3, 0x7f0e0bbd
+    const p3, 0x7f0e0c47
 
     const-string v2, "Open"
 
@@ -1601,7 +1609,7 @@
 
     aput-object p3, p2, v1
 
-    const p3, 0x7f0e04d2
+    const p3, 0x7f0e0521
 
     const-string v1, "Copy"
 
@@ -2014,6 +2022,14 @@
     .registers 1
 
     invoke-static {p0}, Lorg/telegram/ui/Cells/ChatMessageCell$ChatMessageCellDelegate$-CC;->$default$needReloadPolls(Lorg/telegram/ui/Cells/ChatMessageCell$ChatMessageCellDelegate;)V
+
+    return-void
+.end method
+
+.method public synthetic needShowPremiumFeatures()V
+    .registers 1
+
+    invoke-static {p0}, Lorg/telegram/ui/Cells/ChatMessageCell$ChatMessageCellDelegate$-CC;->$default$needShowPremiumFeatures(Lorg/telegram/ui/Cells/ChatMessageCell$ChatMessageCellDelegate;)V
 
     return-void
 .end method

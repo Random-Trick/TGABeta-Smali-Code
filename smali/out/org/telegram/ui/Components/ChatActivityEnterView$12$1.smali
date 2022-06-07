@@ -29,7 +29,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/ChatActivityEnterView$12;Ljava/util/ArrayList;Ljava/io/File;)V
     .registers 4
 
-    .line 2023
+    .line 2044
     iput-object p1, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$12$1;->this$1:Lorg/telegram/ui/Components/ChatActivityEnterView$12;
 
     iput-object p2, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$12$1;->val$entries:Ljava/util/ArrayList;
@@ -46,7 +46,7 @@
 .method public run()V
     .registers 4
 
-    .line 2026
+    .line 2047
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$12$1;->this$1:Lorg/telegram/ui/Components/ChatActivityEnterView$12;
 
     iget-object v1, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$12$1;->val$entries:Ljava/util/ArrayList;

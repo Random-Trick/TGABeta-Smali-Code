@@ -38,14 +38,6 @@
 
 
 # direct methods
-.method public static synthetic $r8$lambda$0kqd8KMjz_fJmoIQpLPifLrlp7I(Lorg/telegram/ui/Components/ChatNotificationsPopupWrapper;Landroid/content/Context;ILorg/telegram/ui/Components/ChatNotificationsPopupWrapper$Callback;Landroid/view/View;)V
-    .registers 5
-
-    invoke-direct {p0, p1, p2, p3, p4}, Lorg/telegram/ui/Components/ChatNotificationsPopupWrapper;->lambda$new$6(Landroid/content/Context;ILorg/telegram/ui/Components/ChatNotificationsPopupWrapper$Callback;Landroid/view/View;)V
-
-    return-void
-.end method
-
 .method public static synthetic $r8$lambda$5_jUh7K9tAxOr9c1l3ixz2LK9K4(Lorg/telegram/ui/Components/ChatNotificationsPopupWrapper;Lorg/telegram/ui/Components/ChatNotificationsPopupWrapper$Callback;Landroid/view/View;)V
     .registers 3
 
@@ -126,8 +118,16 @@
     return-void
 .end method
 
+.method public static synthetic $r8$lambda$qoA8XdZQlQeSensu1LmcGaY-ER8(Lorg/telegram/ui/Components/ChatNotificationsPopupWrapper;Landroid/content/Context;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;ILorg/telegram/ui/Components/ChatNotificationsPopupWrapper$Callback;Landroid/view/View;)V
+    .registers 6
+
+    invoke-direct/range {p0 .. p5}, Lorg/telegram/ui/Components/ChatNotificationsPopupWrapper;->lambda$new$6(Landroid/content/Context;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;ILorg/telegram/ui/Components/ChatNotificationsPopupWrapper$Callback;Landroid/view/View;)V
+
+    return-void
+.end method
+
 .method public constructor <init>(Landroid/content/Context;ILorg/telegram/ui/Components/PopupSwipeBackLayout;ZZLorg/telegram/ui/Components/ChatNotificationsPopupWrapper$Callback;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)V
-    .registers 11
+    .registers 15
 
     .line 36
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -145,7 +145,7 @@
 
     if-eqz p4, :cond_10
 
-    const p4, 0x7f07036d
+    const p4, 0x7f070384
 
     goto :goto_11
 
@@ -167,9 +167,9 @@
     .line 44
     iget-object p4, p0, Lorg/telegram/ui/Components/ChatNotificationsPopupWrapper;->windowLayout:Lorg/telegram/ui/ActionBar/ActionBarPopupWindow$ActionBarPopupWindowLayout;
 
-    const p5, 0x7f07023b
+    const p5, 0x7f0701c7
 
-    const v1, 0x7f0e0281
+    const v1, 0x7f0e02b6
 
     const-string v2, "Back"
 
@@ -194,9 +194,9 @@
     :cond_38
     iget-object p3, p0, Lorg/telegram/ui/Components/ChatNotificationsPopupWrapper;->windowLayout:Lorg/telegram/ui/ActionBar/ActionBarPopupWindow$ActionBarPopupWindowLayout;
 
-    const p4, 0x7f0702e5
+    const p4, 0x7f070309
 
-    const p5, 0x7f0e109d
+    const p5, 0x7f0e115c
 
     const-string v1, "SoundOn"
 
@@ -222,13 +222,13 @@
 
     const-string p4, "MuteFor1h"
 
-    const p5, 0x7f0e0a6b
+    const p5, 0x7f0e0af2
 
     invoke-static {p4, p5}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v1
 
-    const v2, 0x7f070293
+    const v2, 0x7f070278
 
     invoke-static {p3, v2, v1, v0, p7}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->addItem(Lorg/telegram/ui/ActionBar/ActionBarPopupWindow$ActionBarPopupWindowLayout;ILjava/lang/CharSequence;ZLorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;
 
@@ -266,9 +266,9 @@
     .line 69
     iget-object p3, p0, Lorg/telegram/ui/Components/ChatNotificationsPopupWrapper;->windowLayout:Lorg/telegram/ui/ActionBar/ActionBarPopupWindow$ActionBarPopupWindowLayout;
 
-    const p4, 0x7f070295
+    const p4, 0x7f07027a
 
-    const p5, 0x7f0e0a6e
+    const p5, 0x7f0e0af5
 
     const-string v1, "MuteForPopup"
 
@@ -283,16 +283,28 @@
     .line 70
     new-instance p4, Lorg/telegram/ui/Components/ChatNotificationsPopupWrapper$$ExternalSyntheticLambda0;
 
-    invoke-direct {p4, p0, p1, p2, p6}, Lorg/telegram/ui/Components/ChatNotificationsPopupWrapper$$ExternalSyntheticLambda0;-><init>(Lorg/telegram/ui/Components/ChatNotificationsPopupWrapper;Landroid/content/Context;ILorg/telegram/ui/Components/ChatNotificationsPopupWrapper$Callback;)V
+    move-object v1, p4
+
+    move-object v2, p0
+
+    move-object v3, p1
+
+    move-object v4, p7
+
+    move v5, p2
+
+    move-object v6, p6
+
+    invoke-direct/range {v1 .. v6}, Lorg/telegram/ui/Components/ChatNotificationsPopupWrapper$$ExternalSyntheticLambda0;-><init>(Lorg/telegram/ui/Components/ChatNotificationsPopupWrapper;Landroid/content/Context;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;ILorg/telegram/ui/Components/ChatNotificationsPopupWrapper$Callback;)V
 
     invoke-virtual {p3, p4}, Landroid/widget/FrameLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 90
     iget-object p1, p0, Lorg/telegram/ui/Components/ChatNotificationsPopupWrapper;->windowLayout:Lorg/telegram/ui/ActionBar/ActionBarPopupWindow$ActionBarPopupWindowLayout;
 
-    const p2, 0x7f070257
+    const p2, 0x7f070204
 
-    const p3, 0x7f0e0b7a
+    const p3, 0x7f0e0c04
 
     const-string p4, "NotificationsCustomize"
 
@@ -389,7 +401,7 @@
     .line 182
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    const v1, 0x7f0e0fab
+    const v1, 0x7f0e1067
 
     const-string v2, "SecretChatTimerDays"
 
@@ -418,7 +430,7 @@
     :cond_2d
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    const p1, 0x7f0e0fac
+    const p1, 0x7f0e1068
 
     const-string v1, "SecretChatTimerHours"
 
@@ -429,7 +441,7 @@
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     :cond_3c
-    const p1, 0x7f0e0a6d
+    const p1, 0x7f0e0af4
 
     const/4 v1, 0x1
 
@@ -563,18 +575,18 @@
     return-void
 .end method
 
-.method private synthetic lambda$new$6(Landroid/content/Context;ILorg/telegram/ui/Components/ChatNotificationsPopupWrapper$Callback;Landroid/view/View;)V
-    .registers 5
+.method private synthetic lambda$new$6(Landroid/content/Context;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;ILorg/telegram/ui/Components/ChatNotificationsPopupWrapper$Callback;Landroid/view/View;)V
+    .registers 6
 
     .line 71
     invoke-direct {p0}, Lorg/telegram/ui/Components/ChatNotificationsPopupWrapper;->dismiss()V
 
     .line 72
-    new-instance p4, Lorg/telegram/ui/Components/ChatNotificationsPopupWrapper$$ExternalSyntheticLambda10;
+    new-instance p5, Lorg/telegram/ui/Components/ChatNotificationsPopupWrapper$$ExternalSyntheticLambda10;
 
-    invoke-direct {p4, p2, p3}, Lorg/telegram/ui/Components/ChatNotificationsPopupWrapper$$ExternalSyntheticLambda10;-><init>(ILorg/telegram/ui/Components/ChatNotificationsPopupWrapper$Callback;)V
+    invoke-direct {p5, p3, p4}, Lorg/telegram/ui/Components/ChatNotificationsPopupWrapper$$ExternalSyntheticLambda10;-><init>(ILorg/telegram/ui/Components/ChatNotificationsPopupWrapper$Callback;)V
 
-    invoke-static {p1, p4}, Lorg/telegram/ui/Components/AlertsCreator;->createMuteForPickerDialog(Landroid/content/Context;Lorg/telegram/ui/Components/AlertsCreator$ScheduleDatePickerDelegate;)Lorg/telegram/ui/ActionBar/BottomSheet$Builder;
+    invoke-static {p1, p2, p5}, Lorg/telegram/ui/Components/AlertsCreator;->createMuteForPickerDialog(Landroid/content/Context;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;Lorg/telegram/ui/Components/AlertsCreator$ScheduleDatePickerDelegate;)Lorg/telegram/ui/ActionBar/BottomSheet$Builder;
 
     return-void
 .end method
@@ -861,7 +873,7 @@
     .line 127
     iget-object p1, p0, Lorg/telegram/ui/Components/ChatNotificationsPopupWrapper;->muteUnmuteButton:Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;
 
-    const p2, 0x7f0e11e9
+    const p2, 0x7f0e12b6
 
     const-string v3, "UnmuteNotifications"
 
@@ -869,7 +881,7 @@
 
     move-result-object p2
 
-    const v3, 0x7f0702e9
+    const v3, 0x7f07030e
 
     invoke-virtual {p1, p2, v3}, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;->setTextAndIcon(Ljava/lang/CharSequence;I)V
 
@@ -891,7 +903,7 @@
     :cond_42
     iget-object v3, p0, Lorg/telegram/ui/Components/ChatNotificationsPopupWrapper;->muteUnmuteButton:Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;
 
-    const v4, 0x7f0e0a70
+    const v4, 0x7f0e0af7
 
     const-string v5, "MuteNotifications"
 
@@ -899,7 +911,7 @@
 
     move-result-object v4
 
-    const v5, 0x7f070292
+    const v5, 0x7f070277
 
     invoke-virtual {v3, v4, v5}, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;->setTextAndIcon(Ljava/lang/CharSequence;I)V
 
@@ -931,7 +943,7 @@
     .line 136
     iget-object p1, p0, Lorg/telegram/ui/Components/ChatNotificationsPopupWrapper;->soundToggle:Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;
 
-    const p2, 0x7f0e109b
+    const p2, 0x7f0e115a
 
     const-string v4, "SoundOff"
 
@@ -939,7 +951,7 @@
 
     move-result-object p2
 
-    const v4, 0x7f0702e4
+    const v4, 0x7f070308
 
     invoke-virtual {p1, p2, v4}, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;->setTextAndIcon(Ljava/lang/CharSequence;I)V
 
@@ -949,7 +961,7 @@
     :cond_7c
     iget-object p1, p0, Lorg/telegram/ui/Components/ChatNotificationsPopupWrapper;->soundToggle:Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;
 
-    const p2, 0x7f0e109d
+    const p2, 0x7f0e115c
 
     const-string v4, "SoundOn"
 
@@ -957,7 +969,7 @@
 
     move-result-object p2
 
-    const v4, 0x7f0702e5
+    const v4, 0x7f070309
 
     invoke-virtual {p1, p2, v4}, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;->setTextAndIcon(Ljava/lang/CharSequence;I)V
 

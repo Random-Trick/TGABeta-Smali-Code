@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/ThemeActivity$ListAdapter;Landroid/content/Context;ILjava/util/ArrayList;Ljava/util/ArrayList;)V
     .registers 6
 
-    .line 1818
+    .line 1831
     iput-object p1, p0, Lorg/telegram/ui/ThemeActivity$ListAdapter$3;->this$1:Lorg/telegram/ui/ThemeActivity$ListAdapter;
 
     invoke-direct {p0, p2, p3, p4, p5}, Lorg/telegram/ui/Cells/ThemesHorizontalListCell;-><init>(Landroid/content/Context;ILjava/util/ArrayList;Ljava/util/ArrayList;)V
@@ -35,7 +35,7 @@
 .method protected presentFragment(Lorg/telegram/ui/ActionBar/BaseFragment;)V
     .registers 3
 
-    .line 1826
+    .line 1839
     iget-object v0, p0, Lorg/telegram/ui/ThemeActivity$ListAdapter$3;->this$1:Lorg/telegram/ui/ThemeActivity$ListAdapter;
 
     iget-object v0, v0, Lorg/telegram/ui/ThemeActivity$ListAdapter;->this$0:Lorg/telegram/ui/ThemeActivity;
@@ -48,7 +48,7 @@
 .method protected showOptionsForTheme(Lorg/telegram/ui/ActionBar/Theme$ThemeInfo;)V
     .registers 3
 
-    .line 1821
+    .line 1834
     iget-object v0, p0, Lorg/telegram/ui/ThemeActivity$ListAdapter$3;->this$1:Lorg/telegram/ui/ThemeActivity$ListAdapter;
 
     iget-object v0, v0, Lorg/telegram/ui/ThemeActivity$ListAdapter;->this$0:Lorg/telegram/ui/ThemeActivity;
@@ -65,7 +65,7 @@
 .method protected updateRows()V
     .registers 3
 
-    .line 1831
+    .line 1844
     iget-object v0, p0, Lorg/telegram/ui/ThemeActivity$ListAdapter$3;->this$1:Lorg/telegram/ui/ThemeActivity$ListAdapter;
 
     iget-object v0, v0, Lorg/telegram/ui/ThemeActivity$ListAdapter;->this$0:Lorg/telegram/ui/ThemeActivity;

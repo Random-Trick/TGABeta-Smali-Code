@@ -5279,7 +5279,7 @@
 
     aput-object v5, v3, v7
 
-    const v5, 0x7f0e04f4
+    const v5, 0x7f0e0543
 
     const-string v6, "CropOriginal"
 
@@ -5290,7 +5290,7 @@
 
     aput-object v5, v1, v8
 
-    const v5, 0x7f0e04f6
+    const v5, 0x7f0e0545
 
     const-string v6, "CropSquare"
 

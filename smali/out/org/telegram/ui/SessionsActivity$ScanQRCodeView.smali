@@ -37,13 +37,13 @@
 .method public constructor <init>(Lorg/telegram/ui/SessionsActivity;Landroid/content/Context;)V
     .registers 14
 
-    .line 880
+    .line 911
     iput-object p1, p0, Lorg/telegram/ui/SessionsActivity$ScanQRCodeView;->this$0:Lorg/telegram/ui/SessionsActivity;
 
-    .line 881
+    .line 912
     invoke-direct {p0, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    .line 882
+    .line 913
     new-instance v0, Lorg/telegram/ui/Components/BackupImageView;
 
     invoke-direct {v0, p2}, Lorg/telegram/ui/Components/BackupImageView;-><init>(Landroid/content/Context;)V
@@ -64,14 +64,14 @@
 
     const/4 v7, 0x0
 
-    .line 883
+    .line 914
     invoke-static/range {v1 .. v7}, Lorg/telegram/ui/Components/LayoutHelper;->createFrame(IFIFFFF)Landroid/widget/FrameLayout$LayoutParams;
 
     move-result-object v1
 
     invoke-virtual {p0, v0, v1}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 885
+    .line 916
     iget-object v0, p0, Lorg/telegram/ui/SessionsActivity$ScanQRCodeView;->imageView:Lorg/telegram/ui/Components/BackupImageView;
 
     new-instance v1, Lorg/telegram/ui/SessionsActivity$ScanQRCodeView$1;
@@ -82,26 +82,26 @@
 
     const-string p1, "windowBackgroundWhiteBlackText"
 
-    .line 896
+    .line 927
     invoke-static {p1}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
 
     const-string v0, "windowBackgroundWhite"
 
-    .line 899
+    .line 930
     invoke-static {v0}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
 
     const-string v1, "featuredStickers_addButton"
 
-    .line 902
+    .line 933
     invoke-static {v1}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
 
-    .line 905
+    .line 936
     invoke-static {v0}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
 
-    .line 907
-    new-instance v2, Landroid/widget/TextView;
+    .line 938
+    new-instance v2, Lorg/telegram/ui/Components/LinkSpanDrawable$LinksTextView;
 
-    invoke-direct {v2, p2}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
+    invoke-direct {v2, p2}, Lorg/telegram/ui/Components/LinkSpanDrawable$LinksTextView;-><init>(Landroid/content/Context;)V
 
     iput-object v2, p0, Lorg/telegram/ui/SessionsActivity$ScanQRCodeView;->textView:Landroid/widget/TextView;
 
@@ -119,21 +119,21 @@
 
     const/4 v9, 0x0
 
-    .line 908
+    .line 939
     invoke-static/range {v3 .. v9}, Lorg/telegram/ui/Components/LayoutHelper;->createFrame(IFIFFFF)Landroid/widget/FrameLayout$LayoutParams;
 
     move-result-object v3
 
     invoke-virtual {p0, v2, v3}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 909
+    .line 940
     iget-object v2, p0, Lorg/telegram/ui/SessionsActivity$ScanQRCodeView;->textView:Landroid/widget/TextView;
 
     const/4 v3, 0x1
 
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setGravity(I)V
 
-    .line 910
+    .line 941
     iget-object v2, p0, Lorg/telegram/ui/SessionsActivity$ScanQRCodeView;->textView:Landroid/widget/TextView;
 
     invoke-static {p1}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
@@ -142,14 +142,14 @@
 
     invoke-virtual {v2, p1}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 911
+    .line 942
     iget-object p1, p0, Lorg/telegram/ui/SessionsActivity$ScanQRCodeView;->textView:Landroid/widget/TextView;
 
     const/high16 v2, 0x41700000    # 15.0f
 
     invoke-virtual {p1, v3, v2}, Landroid/widget/TextView;->setTextSize(IF)V
 
-    .line 912
+    .line 943
     iget-object p1, p0, Lorg/telegram/ui/SessionsActivity$ScanQRCodeView;->textView:Landroid/widget/TextView;
 
     const-string v2, "windowBackgroundWhiteLinkText"
@@ -160,7 +160,7 @@
 
     invoke-virtual {p1, v2}, Landroid/widget/TextView;->setLinkTextColor(I)V
 
-    .line 913
+    .line 944
     iget-object p1, p0, Lorg/telegram/ui/SessionsActivity$ScanQRCodeView;->textView:Landroid/widget/TextView;
 
     const-string v2, "windowBackgroundWhiteLinkSelection"
@@ -171,7 +171,7 @@
 
     invoke-virtual {p1, v2}, Landroid/widget/TextView;->setHighlightColor(I)V
 
-    .line 914
+    .line 945
     invoke-static {v0}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
 
     move-result p1
@@ -180,28 +180,28 @@
 
     const-string p1, "AuthAnotherClientInfo4"
 
-    const v0, 0x7f0e0216
+    const v0, 0x7f0e024b
 
-    .line 916
+    .line 947
     invoke-static {p1, v0}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 917
+    .line 948
     new-instance v0, Landroid/text/SpannableStringBuilder;
 
     invoke-direct {v0, p1}, Landroid/text/SpannableStringBuilder;-><init>(Ljava/lang/CharSequence;)V
 
     const/16 v2, 0x2a
 
-    .line 918
+    .line 949
     invoke-virtual {p1, v2}, Ljava/lang/String;->indexOf(I)I
 
     move-result v4
 
     add-int/lit8 v5, v4, 0x1
 
-    .line 919
+    .line 950
     invoke-virtual {p1, v2, v5}, Ljava/lang/String;->indexOf(II)I
 
     move-result p1
@@ -218,7 +218,7 @@
 
     if-eq v4, p1, :cond_ce
 
-    .line 922
+    .line 953
     iget-object v9, p0, Lorg/telegram/ui/SessionsActivity$ScanQRCodeView;->textView:Landroid/widget/TextView;
 
     new-instance v10, Lorg/telegram/messenger/AndroidUtilities$LinkMovementMethodMy;
@@ -229,16 +229,16 @@
 
     add-int/lit8 v9, p1, 0x1
 
-    .line 923
+    .line 954
     invoke-virtual {v0, p1, v9, v7}, Landroid/text/SpannableStringBuilder;->replace(IILjava/lang/CharSequence;)Landroid/text/SpannableStringBuilder;
 
-    .line 924
+    .line 955
     invoke-virtual {v0, v4, v5, v7}, Landroid/text/SpannableStringBuilder;->replace(IILjava/lang/CharSequence;)Landroid/text/SpannableStringBuilder;
 
-    .line 925
+    .line 956
     new-instance v5, Lorg/telegram/ui/Components/URLSpanNoUnderline;
 
-    const v9, 0x7f0e0212
+    const v9, 0x7f0e0247
 
     const-string v10, "AuthAnotherClientDownloadClientUrl"
 
@@ -252,20 +252,20 @@
 
     invoke-virtual {v0, v5, v4, p1, v6}, Landroid/text/SpannableStringBuilder;->setSpan(Ljava/lang/Object;III)V
 
-    .line 928
+    .line 959
     :cond_ce
     invoke-virtual {v0}, Landroid/text/SpannableStringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
-    .line 929
+    .line 960
     invoke-virtual {p1, v2}, Ljava/lang/String;->indexOf(I)I
 
     move-result v4
 
     add-int/lit8 v5, v4, 0x1
 
-    .line 930
+    .line 961
     invoke-virtual {p1, v2, v5}, Ljava/lang/String;->indexOf(II)I
 
     move-result p1
@@ -276,7 +276,7 @@
 
     if-eq v4, p1, :cond_106
 
-    .line 933
+    .line 964
     iget-object v2, p0, Lorg/telegram/ui/SessionsActivity$ScanQRCodeView;->textView:Landroid/widget/TextView;
 
     new-instance v8, Lorg/telegram/messenger/AndroidUtilities$LinkMovementMethodMy;
@@ -287,16 +287,16 @@
 
     add-int/lit8 v2, p1, 0x1
 
-    .line 934
+    .line 965
     invoke-virtual {v0, p1, v2, v7}, Landroid/text/SpannableStringBuilder;->replace(IILjava/lang/CharSequence;)Landroid/text/SpannableStringBuilder;
 
-    .line 935
+    .line 966
     invoke-virtual {v0, v4, v5, v7}, Landroid/text/SpannableStringBuilder;->replace(IILjava/lang/CharSequence;)Landroid/text/SpannableStringBuilder;
 
-    .line 936
+    .line 967
     new-instance v2, Lorg/telegram/ui/Components/URLSpanNoUnderline;
 
-    const v5, 0x7f0e021d
+    const v5, 0x7f0e0252
 
     const-string v7, "AuthAnotherWebClientUrl"
 
@@ -310,20 +310,20 @@
 
     invoke-virtual {v0, v2, v4, p1, v6}, Landroid/text/SpannableStringBuilder;->setSpan(Ljava/lang/Object;III)V
 
-    .line 939
+    .line 970
     :cond_106
     iget-object p1, p0, Lorg/telegram/ui/SessionsActivity$ScanQRCodeView;->textView:Landroid/widget/TextView;
 
     invoke-virtual {p1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 941
+    .line 972
     new-instance p1, Landroid/widget/TextView;
 
     invoke-direct {p1, p2}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
     const/high16 p2, 0x42080000    # 34.0f
 
-    .line 942
+    .line 973
     invoke-static {p2}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v0
@@ -338,36 +338,36 @@
 
     const/16 p2, 0x11
 
-    .line 943
+    .line 974
     invoke-virtual {p1, p2}, Landroid/widget/TextView;->setGravity(I)V
 
     const/high16 p2, 0x41600000    # 14.0f
 
-    .line 944
+    .line 975
     invoke-virtual {p1, v3, p2}, Landroid/widget/TextView;->setTextSize(IF)V
 
     const-string p2, "fonts/rmedium.ttf"
 
-    .line 945
+    .line 976
     invoke-static {p2}, Lorg/telegram/messenger/AndroidUtilities;->getTypeface(Ljava/lang/String;)Landroid/graphics/Typeface;
 
     move-result-object p2
 
     invoke-virtual {p1, p2}, Landroid/widget/TextView;->setTypeface(Landroid/graphics/Typeface;)V
 
-    .line 947
+    .line 978
     new-instance p2, Landroid/text/SpannableStringBuilder;
 
     invoke-direct {p2}, Landroid/text/SpannableStringBuilder;-><init>()V
 
     const-string v0, ".  "
 
-    .line 948
+    .line 979
     invoke-virtual {p2, v0}, Landroid/text/SpannableStringBuilder;->append(Ljava/lang/CharSequence;)Landroid/text/SpannableStringBuilder;
 
     move-result-object v0
 
-    const v4, 0x7f0e0934
+    const v4, 0x7f0e09bb
 
     const-string v5, "LinkDesktopDevice"
 
@@ -377,14 +377,14 @@
 
     invoke-virtual {v0, v4}, Landroid/text/SpannableStringBuilder;->append(Ljava/lang/CharSequence;)Landroid/text/SpannableStringBuilder;
 
-    .line 949
+    .line 980
     new-instance v0, Lorg/telegram/ui/Components/ColoredImageSpan;
 
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
 
     move-result-object v4
 
-    const v5, 0x7f070289
+    const v5, 0x7f07026e
 
     invoke-static {v4, v5}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
@@ -394,12 +394,12 @@
 
     invoke-virtual {p2, v0, v2, v3, v2}, Landroid/text/SpannableStringBuilder;->setSpan(Ljava/lang/Object;III)V
 
-    .line 950
+    .line 981
     invoke-virtual {p1, p2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     const-string p2, "featuredStickers_buttonText"
 
-    .line 952
+    .line 983
     invoke-static {p2}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
 
     move-result p2
@@ -408,7 +408,7 @@
 
     const/high16 p2, 0x40c00000    # 6.0f
 
-    .line 953
+    .line 984
     invoke-static {p2}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result p2
@@ -429,7 +429,7 @@
 
     invoke-virtual {p1, p2}, Landroid/widget/TextView;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 955
+    .line 986
     new-instance p2, Lorg/telegram/ui/SessionsActivity$ScanQRCodeView$$ExternalSyntheticLambda0;
 
     invoke-direct {p2, p0}, Lorg/telegram/ui/SessionsActivity$ScanQRCodeView$$ExternalSyntheticLambda0;-><init>(Lorg/telegram/ui/SessionsActivity$ScanQRCodeView;)V
@@ -450,14 +450,14 @@
 
     const/high16 v6, 0x41800000    # 16.0f
 
-    .line 965
+    .line 996
     invoke-static/range {v0 .. v6}, Lorg/telegram/ui/Components/LayoutHelper;->createFrame(IFIFFFF)Landroid/widget/FrameLayout$LayoutParams;
 
     move-result-object p2
 
     invoke-virtual {p0, p1, p2}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 967
+    .line 998
     invoke-direct {p0}, Lorg/telegram/ui/SessionsActivity$ScanQRCodeView;->setSticker()V
 
     return-void
@@ -466,7 +466,7 @@
 .method private synthetic lambda$new$0(Landroid/view/View;)V
     .registers 5
 
-    .line 956
+    .line 987
     iget-object p1, p0, Lorg/telegram/ui/SessionsActivity$ScanQRCodeView;->this$0:Lorg/telegram/ui/SessionsActivity;
 
     invoke-virtual {p1}, Lorg/telegram/ui/ActionBar/BaseFragment;->getParentActivity()Landroid/app/Activity;
@@ -477,7 +477,7 @@
 
     return-void
 
-    .line 959
+    .line 990
     :cond_9
     sget p1, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -499,7 +499,7 @@
 
     if-eqz p1, :cond_2f
 
-    .line 960
+    .line 991
     iget-object p1, p0, Lorg/telegram/ui/SessionsActivity$ScanQRCodeView;->this$0:Lorg/telegram/ui/SessionsActivity;
 
     invoke-virtual {p1}, Lorg/telegram/ui/ActionBar/BaseFragment;->getParentActivity()Landroid/app/Activity;
@@ -520,11 +520,11 @@
 
     return-void
 
-    .line 963
+    .line 994
     :cond_2f
     iget-object p1, p0, Lorg/telegram/ui/SessionsActivity$ScanQRCodeView;->this$0:Lorg/telegram/ui/SessionsActivity;
 
-    invoke-static {p1}, Lorg/telegram/ui/SessionsActivity;->access$3700(Lorg/telegram/ui/SessionsActivity;)V
+    invoke-static {p1}, Lorg/telegram/ui/SessionsActivity;->access$3500(Lorg/telegram/ui/SessionsActivity;)V
 
     return-void
 .end method
@@ -532,10 +532,10 @@
 .method private setSticker()V
     .registers 9
 
-    .line 1003
+    .line 1034
     iget-object v0, p0, Lorg/telegram/ui/SessionsActivity$ScanQRCodeView;->this$0:Lorg/telegram/ui/SessionsActivity;
 
-    invoke-static {v0}, Lorg/telegram/ui/SessionsActivity;->access$3400(Lorg/telegram/ui/SessionsActivity;)I
+    invoke-static {v0}, Lorg/telegram/ui/SessionsActivity;->access$3200(Lorg/telegram/ui/SessionsActivity;)I
 
     move-result v0
 
@@ -551,10 +551,10 @@
 
     if-nez v0, :cond_20
 
-    .line 1005
+    .line 1036
     iget-object v0, p0, Lorg/telegram/ui/SessionsActivity$ScanQRCodeView;->this$0:Lorg/telegram/ui/SessionsActivity;
 
-    invoke-static {v0}, Lorg/telegram/ui/SessionsActivity;->access$3500(Lorg/telegram/ui/SessionsActivity;)I
+    invoke-static {v0}, Lorg/telegram/ui/SessionsActivity;->access$3300(Lorg/telegram/ui/SessionsActivity;)I
 
     move-result v0
 
@@ -573,7 +573,7 @@
 
     if-eqz v7, :cond_36
 
-    .line 1007
+    .line 1038
     iget-object v2, v7, Lorg/telegram/tgnet/TLRPC$messages_StickerSet;->documents:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
@@ -584,7 +584,7 @@
 
     if-le v2, v3, :cond_36
 
-    .line 1008
+    .line 1039
     iget-object v2, v7, Lorg/telegram/tgnet/TLRPC$messages_StickerSet;->documents:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -601,7 +601,7 @@
     :goto_37
     if-eqz v2, :cond_44
 
-    .line 1014
+    .line 1045
     iget-object v0, v2, Lorg/telegram/tgnet/TLRPC$Document;->thumbs:Ljava/util/ArrayList;
 
     const v3, 0x3e4ccccd    # 0.2f
@@ -619,18 +619,18 @@
 
     const/16 v0, 0x200
 
-    .line 1017
+    .line 1048
     invoke-virtual {v6, v0, v0}, Lorg/telegram/messenger/SvgHelper$SvgDrawable;->overrideWidthAndHeight(II)V
 
     :cond_4c
     if-eqz v2, :cond_66
 
-    .line 1021
+    .line 1052
     invoke-static {v2}, Lorg/telegram/messenger/ImageLocation;->getForDocument(Lorg/telegram/tgnet/TLRPC$Document;)Lorg/telegram/messenger/ImageLocation;
 
     move-result-object v3
 
-    .line 1022
+    .line 1053
     iget-object v2, p0, Lorg/telegram/ui/SessionsActivity$ScanQRCodeView;->imageView:Lorg/telegram/ui/Components/BackupImageView;
 
     const-string v4, "130_130"
@@ -639,7 +639,7 @@
 
     invoke-virtual/range {v2 .. v7}, Lorg/telegram/ui/Components/BackupImageView;->setImage(Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Ljava/lang/String;Landroid/graphics/drawable/Drawable;Ljava/lang/Object;)V
 
-    .line 1023
+    .line 1054
     iget-object v0, p0, Lorg/telegram/ui/SessionsActivity$ScanQRCodeView;->imageView:Lorg/telegram/ui/Components/BackupImageView;
 
     invoke-virtual {v0}, Lorg/telegram/ui/Components/BackupImageView;->getImageReceiver()Lorg/telegram/messenger/ImageReceiver;
@@ -652,11 +652,11 @@
 
     goto :goto_79
 
-    .line 1025
+    .line 1056
     :cond_66
     iget-object v0, p0, Lorg/telegram/ui/SessionsActivity$ScanQRCodeView;->this$0:Lorg/telegram/ui/SessionsActivity;
 
-    invoke-static {v0}, Lorg/telegram/ui/SessionsActivity;->access$3600(Lorg/telegram/ui/SessionsActivity;)I
+    invoke-static {v0}, Lorg/telegram/ui/SessionsActivity;->access$3400(Lorg/telegram/ui/SessionsActivity;)I
 
     move-result v0
 
@@ -687,28 +687,28 @@
 .method public varargs didReceivedNotification(II[Ljava/lang/Object;)V
     .registers 4
 
-    .line 990
+    .line 1021
     sget p2, Lorg/telegram/messenger/NotificationCenter;->diceStickersDidLoad:I
 
     if-ne p1, p2, :cond_14
 
     const/4 p1, 0x0
 
-    .line 991
+    .line 1022
     aget-object p1, p3, p1
 
     check-cast p1, Ljava/lang/String;
 
     const-string p2, "tg_placeholders_android"
 
-    .line 992
+    .line 1023
     invoke-virtual {p2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
     if-eqz p1, :cond_14
 
-    .line 993
+    .line 1024
     invoke-direct {p0}, Lorg/telegram/ui/SessionsActivity$ScanQRCodeView;->setSticker()V
 
     :cond_14
@@ -718,16 +718,16 @@
 .method protected onAttachedToWindow()V
     .registers 3
 
-    .line 977
+    .line 1008
     invoke-super {p0}, Landroid/widget/FrameLayout;->onAttachedToWindow()V
 
-    .line 978
+    .line 1009
     invoke-direct {p0}, Lorg/telegram/ui/SessionsActivity$ScanQRCodeView;->setSticker()V
 
-    .line 979
+    .line 1010
     iget-object v0, p0, Lorg/telegram/ui/SessionsActivity$ScanQRCodeView;->this$0:Lorg/telegram/ui/SessionsActivity;
 
-    invoke-static {v0}, Lorg/telegram/ui/SessionsActivity;->access$3200(Lorg/telegram/ui/SessionsActivity;)I
+    invoke-static {v0}, Lorg/telegram/ui/SessionsActivity;->access$3000(Lorg/telegram/ui/SessionsActivity;)I
 
     move-result v0
 
@@ -745,13 +745,13 @@
 .method protected onDetachedFromWindow()V
     .registers 3
 
-    .line 984
+    .line 1015
     invoke-super {p0}, Landroid/widget/FrameLayout;->onDetachedFromWindow()V
 
-    .line 985
+    .line 1016
     iget-object v0, p0, Lorg/telegram/ui/SessionsActivity$ScanQRCodeView;->this$0:Lorg/telegram/ui/SessionsActivity;
 
-    invoke-static {v0}, Lorg/telegram/ui/SessionsActivity;->access$3300(Lorg/telegram/ui/SessionsActivity;)I
+    invoke-static {v0}, Lorg/telegram/ui/SessionsActivity;->access$3100(Lorg/telegram/ui/SessionsActivity;)I
 
     move-result v0
 
@@ -769,7 +769,7 @@
 .method protected onMeasure(II)V
     .registers 4
 
-    .line 972
+    .line 1003
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result p1

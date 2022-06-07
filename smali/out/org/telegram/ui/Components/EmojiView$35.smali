@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/EmojiView;Landroid/content/Context;I)V
     .registers 4
 
-    .line 2940
+    .line 2956
     iput p3, p0, Lorg/telegram/ui/Components/EmojiView$35;->val$tabsMinusDy:I
 
     invoke-direct {p0, p2}, Landroidx/recyclerview/widget/LinearSmoothScroller;-><init>(Landroid/content/Context;)V
@@ -35,7 +35,7 @@
 .method public calculateDtToFit(IIIII)I
     .registers 6
 
-    .line 2953
+    .line 2969
     invoke-super/range {p0 .. p5}, Landroidx/recyclerview/widget/LinearSmoothScroller;->calculateDtToFit(IIIII)I
 
     move-result p1
@@ -50,7 +50,7 @@
 .method protected calculateTimeForDeceleration(I)I
     .registers 2
 
-    .line 2948
+    .line 2964
     invoke-super {p0, p1}, Landroidx/recyclerview/widget/LinearSmoothScroller;->calculateTimeForDeceleration(I)I
 
     move-result p1

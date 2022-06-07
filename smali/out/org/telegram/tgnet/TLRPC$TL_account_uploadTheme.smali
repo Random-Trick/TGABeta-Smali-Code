@@ -29,7 +29,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 48666
+    .line 49131
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -40,7 +40,7 @@
 .method public deserializeResponse(Lorg/telegram/tgnet/AbstractSerializedData;IZ)Lorg/telegram/tgnet/TLObject;
     .registers 4
 
-    .line 48676
+    .line 49141
     invoke-static {p1, p2, p3}, Lorg/telegram/tgnet/TLRPC$Document;->TLdeserialize(Lorg/telegram/tgnet/AbstractSerializedData;IZ)Lorg/telegram/tgnet/TLRPC$Document;
 
     move-result-object p1
@@ -51,40 +51,40 @@
 .method public serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
     .registers 3
 
-    .line 48680
+    .line 49145
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_account_uploadTheme;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 48681
+    .line 49146
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_account_uploadTheme;->flags:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 48682
+    .line 49147
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_account_uploadTheme;->file:Lorg/telegram/tgnet/TLRPC$InputFile;
 
     invoke-virtual {v0, p1}, Lorg/telegram/tgnet/TLObject;->serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
 
-    .line 48683
+    .line 49148
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_account_uploadTheme;->flags:I
 
     and-int/lit8 v0, v0, 0x1
 
     if-eqz v0, :cond_1a
 
-    .line 48684
+    .line 49149
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_account_uploadTheme;->thumb:Lorg/telegram/tgnet/TLRPC$InputFile;
 
     invoke-virtual {v0, p1}, Lorg/telegram/tgnet/TLObject;->serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
 
-    .line 48686
+    .line 49151
     :cond_1a
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_account_uploadTheme;->file_name:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeString(Ljava/lang/String;)V
 
-    .line 48687
+    .line 49152
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_account_uploadTheme;->mime_type:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeString(Ljava/lang/String;)V

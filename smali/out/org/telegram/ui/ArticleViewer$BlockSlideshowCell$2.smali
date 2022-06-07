@@ -25,7 +25,7 @@
 .method constructor <init>(Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;Lorg/telegram/ui/ArticleViewer;)V
     .registers 3
 
-    .line 8399
+    .line 8400
     iput-object p1, p0, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell$2;->this$1:Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,7 +44,7 @@
 .method public onPageScrolled(IFI)V
     .registers 5
 
-    .line 8402
+    .line 8403
     iget-object p2, p0, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell$2;->this$1:Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;
 
     invoke-static {p2}, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;->access$17600(Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;)Landroidx/viewpager/widget/ViewPager;
@@ -65,7 +65,7 @@
 
     return-void
 
-    .line 8406
+    .line 8407
     :cond_11
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell$2;->this$1:Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;
 
@@ -91,7 +91,7 @@
 
     invoke-static {v0, p1}, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;->access$17702(Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;F)F
 
-    .line 8407
+    .line 8408
     iget-object p1, p0, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell$2;->this$1:Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;
 
     invoke-static {p1}, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;->access$17900(Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;)Landroid/view/View;
@@ -106,12 +106,12 @@
 .method public onPageSelected(I)V
     .registers 3
 
-    .line 8412
+    .line 8413
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell$2;->this$1:Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;
 
     invoke-static {v0, p1}, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;->access$17802(Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;I)I
 
-    .line 8413
+    .line 8414
     iget-object p1, p0, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell$2;->this$1:Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;
 
     invoke-static {p1}, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;->access$17900(Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;)Landroid/view/View;

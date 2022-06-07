@@ -23,7 +23,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 46824
+    .line 47289
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -34,7 +34,7 @@
 .method public deserializeResponse(Lorg/telegram/tgnet/AbstractSerializedData;IZ)Lorg/telegram/tgnet/TLObject;
     .registers 4
 
-    .line 46831
+    .line 47296
     invoke-static {p1, p2, p3}, Lorg/telegram/tgnet/TLRPC$Updates;->TLdeserialize(Lorg/telegram/tgnet/AbstractSerializedData;IZ)Lorg/telegram/tgnet/TLRPC$Updates;
 
     move-result-object p1
@@ -45,17 +45,17 @@
 .method public serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
     .registers 3
 
-    .line 46835
+    .line 47300
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_channels_togglePreHistoryHidden;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 46836
+    .line 47301
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_channels_togglePreHistoryHidden;->channel:Lorg/telegram/tgnet/TLRPC$InputChannel;
 
     invoke-virtual {v0, p1}, Lorg/telegram/tgnet/TLObject;->serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
 
-    .line 46837
+    .line 47302
     iget-boolean v0, p0, Lorg/telegram/tgnet/TLRPC$TL_channels_togglePreHistoryHidden;->enabled:Z
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeBool(Z)V

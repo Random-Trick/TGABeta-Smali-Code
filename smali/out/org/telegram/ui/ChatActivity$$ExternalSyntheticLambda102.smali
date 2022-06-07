@@ -5,27 +5,21 @@
 .implements Landroid/view/View$OnTouchListener;
 
 
-# static fields
-.field public static final synthetic INSTANCE:Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda102;
+# instance fields
+.field public final synthetic f$0:Lorg/telegram/ui/ChatActivity;
+
+.field public final synthetic f$1:Lorg/telegram/ui/ContentPreviewViewer$ContentPreviewViewerDelegate;
 
 
 # direct methods
-.method static synthetic constructor <clinit>()V
-    .registers 1
-
-    new-instance v0, Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda102;
-
-    invoke-direct {v0}, Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda102;-><init>()V
-
-    sput-object v0, Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda102;->INSTANCE:Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda102;
-
-    return-void
-.end method
-
-.method private synthetic constructor <init>()V
-    .registers 1
+.method public synthetic constructor <init>(Lorg/telegram/ui/ChatActivity;Lorg/telegram/ui/ContentPreviewViewer$ContentPreviewViewerDelegate;)V
+    .registers 3
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda102;->f$0:Lorg/telegram/ui/ChatActivity;
+
+    iput-object p2, p0, Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda102;->f$1:Lorg/telegram/ui/ContentPreviewViewer$ContentPreviewViewerDelegate;
 
     return-void
 .end method
@@ -33,9 +27,13 @@
 
 # virtual methods
 .method public final onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
-    .registers 3
+    .registers 5
 
-    invoke-static {p1, p2}, Lorg/telegram/ui/ChatActivity;->$r8$lambda$aebS_XLfjrMP_JibJrwJ0umrpOw(Landroid/view/View;Landroid/view/MotionEvent;)Z
+    iget-object v0, p0, Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda102;->f$0:Lorg/telegram/ui/ChatActivity;
+
+    iget-object v1, p0, Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda102;->f$1:Lorg/telegram/ui/ContentPreviewViewer$ContentPreviewViewerDelegate;
+
+    invoke-static {v0, v1, p1, p2}, Lorg/telegram/ui/ChatActivity;->$r8$lambda$7tAxj2ZS4LLwIqIhhrwJVs5-xW8(Lorg/telegram/ui/ChatActivity;Lorg/telegram/ui/ContentPreviewViewer$ContentPreviewViewerDelegate;Landroid/view/View;Landroid/view/MotionEvent;)Z
 
     move-result p1
 

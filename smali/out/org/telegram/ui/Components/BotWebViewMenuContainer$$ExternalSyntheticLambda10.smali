@@ -27,7 +27,7 @@
 
     iget-object v0, p0, Lorg/telegram/ui/Components/BotWebViewMenuContainer$$ExternalSyntheticLambda10;->f$0:Lorg/telegram/ui/Components/BotWebViewMenuContainer;
 
-    invoke-static {v0}, Lorg/telegram/ui/Components/BotWebViewMenuContainer;->$r8$lambda$hAMiNIzMJ-JtpcQ-fl5Yxu9MpyY(Lorg/telegram/ui/Components/BotWebViewMenuContainer;)V
+    invoke-static {v0}, Lorg/telegram/ui/Components/BotWebViewMenuContainer;->$r8$lambda$X0cFhDoBOVd4dzwUuk7lgJk0olI(Lorg/telegram/ui/Components/BotWebViewMenuContainer;)V
 
     return-void
 .end method

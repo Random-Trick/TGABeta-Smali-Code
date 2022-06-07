@@ -43,7 +43,7 @@
 .method constructor <init>(Lorg/telegram/ui/Adapters/DialogsAdapter$DialogsPreloader;J)V
     .registers 4
 
-    .line 928
+    .line 926
     iput-object p1, p0, Lorg/telegram/ui/Adapters/DialogsAdapter$DialogsPreloader$1;->this$0:Lorg/telegram/ui/Adapters/DialogsAdapter$DialogsPreloader;
 
     iput-wide p2, p0, Lorg/telegram/ui/Adapters/DialogsAdapter$DialogsPreloader$1;->val$dialog_id:J
@@ -56,7 +56,7 @@
 .method private synthetic lambda$onError$1(J)V
     .registers 5
 
-    .line 951
+    .line 949
     iget-object v0, p0, Lorg/telegram/ui/Adapters/DialogsAdapter$DialogsPreloader$1;->this$0:Lorg/telegram/ui/Adapters/DialogsAdapter$DialogsPreloader;
 
     iget-object v0, v0, Lorg/telegram/ui/Adapters/DialogsAdapter$DialogsPreloader;->loadingDialogs:Ljava/util/HashSet;
@@ -71,7 +71,7 @@
 
     if-eqz v0, :cond_24
 
-    .line 952
+    .line 950
     iget-object v0, p0, Lorg/telegram/ui/Adapters/DialogsAdapter$DialogsPreloader$1;->this$0:Lorg/telegram/ui/Adapters/DialogsAdapter$DialogsPreloader;
 
     iget-object v0, v0, Lorg/telegram/ui/Adapters/DialogsAdapter$DialogsPreloader;->preloadedErrorMap:Ljava/util/HashSet;
@@ -82,7 +82,7 @@
 
     invoke-virtual {v0, p1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 953
+    .line 951
     iget-object p1, p0, Lorg/telegram/ui/Adapters/DialogsAdapter$DialogsPreloader$1;->this$0:Lorg/telegram/ui/Adapters/DialogsAdapter$DialogsPreloader;
 
     iget p2, p1, Lorg/telegram/ui/Adapters/DialogsAdapter$DialogsPreloader;->currentRequestCount:I
@@ -91,7 +91,7 @@
 
     iput p2, p1, Lorg/telegram/ui/Adapters/DialogsAdapter$DialogsPreloader;->currentRequestCount:I
 
-    .line 954
+    .line 952
     invoke-static {p1}, Lorg/telegram/ui/Adapters/DialogsAdapter$DialogsPreloader;->access$200(Lorg/telegram/ui/Adapters/DialogsAdapter$DialogsPreloader;)V
 
     :cond_24
@@ -103,7 +103,7 @@
 
     if-nez p1, :cond_1c
 
-    .line 933
+    .line 931
     iget-object p1, p0, Lorg/telegram/ui/Adapters/DialogsAdapter$DialogsPreloader$1;->this$0:Lorg/telegram/ui/Adapters/DialogsAdapter$DialogsPreloader;
 
     iget v0, p1, Lorg/telegram/ui/Adapters/DialogsAdapter$DialogsPreloader;->networkRequestCount:I
@@ -116,12 +116,12 @@
 
     if-lt v0, v1, :cond_1c
 
-    .line 935
+    .line 933
     iget-object p1, p1, Lorg/telegram/ui/Adapters/DialogsAdapter$DialogsPreloader;->clearNetworkRequestCount:Ljava/lang/Runnable;
 
     invoke-static {p1}, Lorg/telegram/messenger/AndroidUtilities;->cancelRunOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 936
+    .line 934
     iget-object p1, p0, Lorg/telegram/ui/Adapters/DialogsAdapter$DialogsPreloader$1;->this$0:Lorg/telegram/ui/Adapters/DialogsAdapter$DialogsPreloader;
 
     iget-object p1, p1, Lorg/telegram/ui/Adapters/DialogsAdapter$DialogsPreloader;->clearNetworkRequestCount:Ljava/lang/Runnable;
@@ -130,7 +130,7 @@
 
     invoke-static {p1, v0, v1}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;J)V
 
-    .line 939
+    .line 937
     :cond_1c
     iget-object p1, p0, Lorg/telegram/ui/Adapters/DialogsAdapter$DialogsPreloader$1;->this$0:Lorg/telegram/ui/Adapters/DialogsAdapter$DialogsPreloader;
 
@@ -146,7 +146,7 @@
 
     if-eqz p1, :cond_45
 
-    .line 940
+    .line 938
     iget-object p1, p0, Lorg/telegram/ui/Adapters/DialogsAdapter$DialogsPreloader$1;->this$0:Lorg/telegram/ui/Adapters/DialogsAdapter$DialogsPreloader;
 
     iget-object p1, p1, Lorg/telegram/ui/Adapters/DialogsAdapter$DialogsPreloader;->dialogsReadyMap:Ljava/util/HashSet;
@@ -157,12 +157,12 @@
 
     invoke-virtual {p1, p2}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 941
+    .line 939
     iget-object p1, p0, Lorg/telegram/ui/Adapters/DialogsAdapter$DialogsPreloader$1;->this$0:Lorg/telegram/ui/Adapters/DialogsAdapter$DialogsPreloader;
 
     invoke-virtual {p1}, Lorg/telegram/ui/Adapters/DialogsAdapter$DialogsPreloader;->updateList()V
 
-    .line 942
+    .line 940
     iget-object p1, p0, Lorg/telegram/ui/Adapters/DialogsAdapter$DialogsPreloader$1;->this$0:Lorg/telegram/ui/Adapters/DialogsAdapter$DialogsPreloader;
 
     iget p2, p1, Lorg/telegram/ui/Adapters/DialogsAdapter$DialogsPreloader;->currentRequestCount:I
@@ -171,7 +171,7 @@
 
     iput p2, p1, Lorg/telegram/ui/Adapters/DialogsAdapter$DialogsPreloader;->currentRequestCount:I
 
-    .line 943
+    .line 941
     invoke-static {p1}, Lorg/telegram/ui/Adapters/DialogsAdapter$DialogsPreloader;->access$200(Lorg/telegram/ui/Adapters/DialogsAdapter$DialogsPreloader;)V
 
     :cond_45
@@ -183,7 +183,7 @@
 .method public onError()V
     .registers 4
 
-    .line 950
+    .line 948
     iget-wide v0, p0, Lorg/telegram/ui/Adapters/DialogsAdapter$DialogsPreloader$1;->val$dialog_id:J
 
     new-instance v2, Lorg/telegram/ui/Adapters/DialogsAdapter$DialogsPreloader$1$$ExternalSyntheticLambda0;
@@ -198,7 +198,7 @@
 .method public onMessagesLoaded(Z)V
     .registers 5
 
-    .line 931
+    .line 929
     iget-wide v0, p0, Lorg/telegram/ui/Adapters/DialogsAdapter$DialogsPreloader$1;->val$dialog_id:J
 
     new-instance v2, Lorg/telegram/ui/Adapters/DialogsAdapter$DialogsPreloader$1$$ExternalSyntheticLambda1;

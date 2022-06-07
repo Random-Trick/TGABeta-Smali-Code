@@ -2,42 +2,117 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lj$/util/function/o;
+.implements Lj$/util/function/q;
 
 
-# static fields
-.field public static final synthetic a:Lj$/util/stream/W0;
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Ljava/lang/Object;
 
 
 # direct methods
-.method static synthetic constructor <clinit>()V
-    .registers 1
+.method public synthetic constructor <init>(Lj$/util/stream/Z0;)V
+    .registers 3
 
-    new-instance v0, Lj$/util/stream/W0;
+    const/4 v0, 0x1
 
-    invoke-direct {v0}, Lj$/util/stream/W0;-><init>()V
+    iput v0, p0, Lj$/util/stream/W0;->a:I
 
-    sput-object v0, Lj$/util/stream/W0;->a:Lj$/util/stream/W0;
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lj$/util/stream/W0;->b:Ljava/lang/Object;
 
     return-void
 .end method
 
-.method private synthetic constructor <init>()V
-    .registers 1
+.method public synthetic constructor <init>(Lj$/util/stream/m3;)V
+    .registers 3
 
+    const/4 v0, 0x0
+
+    iput v0, p0, Lj$/util/stream/W0;->a:I
+
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lj$/util/stream/W0;->b:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final applyAsLong(JJ)J
-    .registers 5
+.method public final accept(J)V
+    .registers 4
 
-    invoke-static {p1, p2, p3, p4}, Ljava/lang/Math;->min(JJ)J
+    iget v0, p0, Lj$/util/stream/W0;->a:I
 
-    move-result-wide p1
+    packed-switch v0, :pswitch_data_18
 
-    return-wide p1
+    goto :goto_e
+
+    .line 1
+    :pswitch_6
+    iget-object v0, p0, Lj$/util/stream/W0;->b:Ljava/lang/Object;
+
+    check-cast v0, Lj$/util/stream/m3;
+
+    invoke-interface {v0, p1, p2}, Lj$/util/stream/m3;->accept(J)V
+
+    return-void
+
+    .line 2
+    :goto_e
+    iget-object v0, p0, Lj$/util/stream/W0;->b:Ljava/lang/Object;
+
+    check-cast v0, Lj$/util/stream/Z0;
+
+    .line 3
+    iget-object v0, v0, Lj$/util/stream/h3;->a:Lj$/util/stream/m3;
+
+    invoke-interface {v0, p1, p2}, Lj$/util/stream/m3;->accept(J)V
+
+    return-void
+
+    :pswitch_data_18
+    .packed-switch 0x0
+        :pswitch_6
+    .end packed-switch
+.end method
+
+.method public f(Lj$/util/function/q;)Lj$/util/function/q;
+    .registers 3
+
+    iget v0, p0, Lj$/util/stream/W0;->a:I
+
+    packed-switch v0, :pswitch_data_18
+
+    goto :goto_f
+
+    .line 1
+    :pswitch_6
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v0, Lj$/util/function/p;
+
+    invoke-direct {v0, p0, p1}, Lj$/util/function/p;-><init>(Lj$/util/function/q;Lj$/util/function/q;)V
+
+    return-object v0
+
+    .line 2
+    :goto_f
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v0, Lj$/util/function/p;
+
+    invoke-direct {v0, p0, p1}, Lj$/util/function/p;-><init>(Lj$/util/function/q;Lj$/util/function/q;)V
+
+    return-object v0
+
+    :pswitch_data_18
+    .packed-switch 0x0
+        :pswitch_6
+    .end packed-switch
 .end method

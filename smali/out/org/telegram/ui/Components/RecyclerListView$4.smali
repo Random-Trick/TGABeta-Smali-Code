@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/RecyclerListView;)V
     .registers 2
 
-    .line 1847
+    .line 1851
     iput-object p1, p0, Lorg/telegram/ui/Components/RecyclerListView$4;->this$0:Lorg/telegram/ui/Components/RecyclerListView;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -35,7 +35,7 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .registers 3
 
-    .line 1850
+    .line 1854
     iget-object p1, p0, Lorg/telegram/ui/Components/RecyclerListView$4;->this$0:Lorg/telegram/ui/Components/RecyclerListView;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/RecyclerListView;->access$2900(Lorg/telegram/ui/Components/RecyclerListView;)Landroid/view/View;
@@ -44,7 +44,7 @@
 
     if-eqz p1, :cond_13
 
-    .line 1851
+    .line 1855
     iget-object p1, p0, Lorg/telegram/ui/Components/RecyclerListView$4;->this$0:Lorg/telegram/ui/Components/RecyclerListView;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/RecyclerListView;->access$2900(Lorg/telegram/ui/Components/RecyclerListView;)Landroid/view/View;

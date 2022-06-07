@@ -7,9 +7,9 @@
 
 
 # instance fields
-.field protected final a:Lj$/util/stream/z2;
+.field protected final a:Lj$/util/stream/y2;
 
-.field protected b:Lj$/util/y;
+.field protected b:Lj$/util/u;
 
 .field protected c:J
 
@@ -35,16 +35,16 @@
     return-void
 .end method
 
-.method protected constructor <init>(Lj$/util/stream/f;Lj$/util/y;)V
+.method protected constructor <init>(Lj$/util/stream/f;Lj$/util/u;)V
     .registers 3
 
     invoke-direct {p0, p1}, Ljava/util/concurrent/CountedCompleter;-><init>(Ljava/util/concurrent/CountedCompleter;)V
 
-    iput-object p2, p0, Lj$/util/stream/f;->b:Lj$/util/y;
+    iput-object p2, p0, Lj$/util/stream/f;->b:Lj$/util/u;
 
-    iget-object p2, p1, Lj$/util/stream/f;->a:Lj$/util/stream/z2;
+    iget-object p2, p1, Lj$/util/stream/f;->a:Lj$/util/stream/y2;
 
-    iput-object p2, p0, Lj$/util/stream/f;->a:Lj$/util/stream/z2;
+    iput-object p2, p0, Lj$/util/stream/f;->a:Lj$/util/stream/y2;
 
     iget-wide p1, p1, Lj$/util/stream/f;->c:J
 
@@ -53,16 +53,16 @@
     return-void
 .end method
 
-.method protected constructor <init>(Lj$/util/stream/z2;Lj$/util/y;)V
+.method protected constructor <init>(Lj$/util/stream/y2;Lj$/util/u;)V
     .registers 4
 
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Ljava/util/concurrent/CountedCompleter;-><init>(Ljava/util/concurrent/CountedCompleter;)V
 
-    iput-object p1, p0, Lj$/util/stream/f;->a:Lj$/util/stream/z2;
+    iput-object p1, p0, Lj$/util/stream/f;->a:Lj$/util/stream/y2;
 
-    iput-object p2, p0, Lj$/util/stream/f;->b:Lj$/util/y;
+    iput-object p2, p0, Lj$/util/stream/f;->b:Lj$/util/u;
 
     const-wide/16 p1, 0x0
 
@@ -123,9 +123,9 @@
 .method public compute()V
     .registers 10
 
-    iget-object v0, p0, Lj$/util/stream/f;->b:Lj$/util/y;
+    iget-object v0, p0, Lj$/util/stream/f;->b:Lj$/util/u;
 
-    invoke-interface {v0}, Lj$/util/y;->estimateSize()J
+    invoke-interface {v0}, Lj$/util/u;->estimateSize()J
 
     move-result-wide v1
 
@@ -158,19 +158,19 @@
     if-lez v7, :cond_42
 
     .line 2
-    invoke-interface {v0}, Lj$/util/y;->trySplit()Lj$/util/y;
+    invoke-interface {v0}, Lj$/util/u;->trySplit()Lj$/util/u;
 
     move-result-object v1
 
     if-eqz v1, :cond_42
 
-    invoke-virtual {v6, v1}, Lj$/util/stream/f;->f(Lj$/util/y;)Lj$/util/stream/f;
+    invoke-virtual {v6, v1}, Lj$/util/stream/f;->f(Lj$/util/u;)Lj$/util/stream/f;
 
     move-result-object v2
 
     iput-object v2, v6, Lj$/util/stream/f;->d:Lj$/util/stream/f;
 
-    invoke-virtual {v6, v0}, Lj$/util/stream/f;->f(Lj$/util/y;)Lj$/util/stream/f;
+    invoke-virtual {v6, v0}, Lj$/util/stream/f;->f(Lj$/util/u;)Lj$/util/stream/f;
 
     move-result-object v7
 
@@ -198,7 +198,7 @@
 
     invoke-virtual {v2}, Ljava/util/concurrent/CountedCompleter;->fork()Ljava/util/concurrent/ForkJoinTask;
 
-    invoke-interface {v0}, Lj$/util/y;->estimateSize()J
+    invoke-interface {v0}, Lj$/util/u;->estimateSize()J
 
     move-result-wide v1
 
@@ -254,7 +254,7 @@
     return v0
 .end method
 
-.method protected abstract f(Lj$/util/y;)Lj$/util/stream/f;
+.method protected abstract f(Lj$/util/u;)Lj$/util/stream/f;
 .end method
 
 .method protected g(Ljava/lang/Object;)V
@@ -278,7 +278,7 @@
 
     const/4 p1, 0x0
 
-    iput-object p1, p0, Lj$/util/stream/f;->b:Lj$/util/y;
+    iput-object p1, p0, Lj$/util/stream/f;->b:Lj$/util/u;
 
     iput-object p1, p0, Lj$/util/stream/f;->e:Lj$/util/stream/f;
 

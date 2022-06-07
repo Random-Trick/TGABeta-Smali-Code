@@ -27,11 +27,11 @@
 
     iget-object v0, p0, Lorg/telegram/messenger/MessagesController$$ExternalSyntheticLambda222;->f$0:Lorg/telegram/messenger/MessagesController;
 
-    check-cast p1, Lorg/telegram/tgnet/TLRPC$Updates;
+    check-cast p1, Lorg/telegram/tgnet/TLRPC$Update;
 
-    check-cast p2, Lorg/telegram/tgnet/TLRPC$Updates;
+    check-cast p2, Lorg/telegram/tgnet/TLRPC$Update;
 
-    invoke-static {v0, p1, p2}, Lorg/telegram/messenger/MessagesController;->$r8$lambda$cFvHIRIFC2Yy4ByTypjEUBA3xxo(Lorg/telegram/messenger/MessagesController;Lorg/telegram/tgnet/TLRPC$Updates;Lorg/telegram/tgnet/TLRPC$Updates;)I
+    invoke-static {v0, p1, p2}, Lorg/telegram/messenger/MessagesController;->$r8$lambda$BOXJGpLw-dOuv7syBkwb7Pc68ps(Lorg/telegram/messenger/MessagesController;Lorg/telegram/tgnet/TLRPC$Update;Lorg/telegram/tgnet/TLRPC$Update;)I
 
     move-result p1
 

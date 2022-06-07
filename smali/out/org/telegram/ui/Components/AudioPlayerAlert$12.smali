@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/AudioPlayerAlert;Landroid/content/Context;)V
     .registers 3
 
-    .line 714
+    .line 715
     iput-object p1, p0, Lorg/telegram/ui/Components/AudioPlayerAlert$12;->this$0:Lorg/telegram/ui/Components/AudioPlayerAlert;
 
     invoke-direct {p0, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
@@ -39,7 +39,7 @@
 
     const/high16 p1, 0x43780000    # 248.0f
 
-    .line 717
+    .line 718
     invoke-static {p1}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result p1
@@ -61,7 +61,7 @@
 
     int-to-float p2, p2
 
-    .line 719
+    .line 720
     invoke-static {p2}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result p2
@@ -72,12 +72,12 @@
 
     const/high16 p3, 0x41100000    # 9.0f
 
-    .line 720
+    .line 721
     invoke-static {p3}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result p3
 
-    .line 721
+    .line 722
     iget-object p5, p0, Lorg/telegram/ui/Components/AudioPlayerAlert$12;->this$0:Lorg/telegram/ui/Components/AudioPlayerAlert;
 
     invoke-static {p5}, Lorg/telegram/ui/Components/AudioPlayerAlert;->access$5900(Lorg/telegram/ui/Components/AudioPlayerAlert;)[Landroid/view/View;

@@ -45,7 +45,7 @@
 
     iget-object v0, p0, Lorg/telegram/ui/LogoutActivity$$ExternalSyntheticLambda1;->f$0:Lorg/telegram/ui/LogoutActivity;
 
-    invoke-static {v0, p1, p2, p3, p4}, Lorg/telegram/ui/LogoutActivity;->$r8$lambda$RglczdBryxuPOkJuC7K4sqhhdR0(Lorg/telegram/ui/LogoutActivity;Landroid/view/View;IFF)V
+    invoke-static {v0, p1, p2, p3, p4}, Lorg/telegram/ui/LogoutActivity;->$r8$lambda$i9MM3NuuhEJaWT-uN5rHEgDDcxQ(Lorg/telegram/ui/LogoutActivity;Landroid/view/View;IFF)V
 
     return-void
 .end method

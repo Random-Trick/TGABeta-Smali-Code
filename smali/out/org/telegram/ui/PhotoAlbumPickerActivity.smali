@@ -780,7 +780,7 @@
     .line 467
     iget-object v2, p0, Lorg/telegram/ui/PhotoAlbumPickerActivity;->sendPopupLayout:Lorg/telegram/ui/ActionBar/ActionBarPopupWindow$ActionBarPopupWindowLayout;
 
-    invoke-virtual {v2, v1}, Lorg/telegram/ui/ActionBar/ActionBarPopupWindow$ActionBarPopupWindowLayout;->setShownFromBotton(Z)V
+    invoke-virtual {v2, v1}, Lorg/telegram/ui/ActionBar/ActionBarPopupWindow$ActionBarPopupWindowLayout;->setShownFromBottom(Z)V
 
     new-array v2, v4, [Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;
 
@@ -855,7 +855,7 @@
 
     move-result v5
 
-    const v6, 0x7f0702c5
+    const v6, 0x7f0701de
 
     if-eqz v5, :cond_8f
 
@@ -864,7 +864,7 @@
 
     aget-object v5, v5, v2
 
-    const v7, 0x7f0e100e
+    const v7, 0x7f0e10cc
 
     const-string v8, "SetReminder"
 
@@ -882,7 +882,7 @@
 
     aget-object v5, v5, v2
 
-    const v7, 0x7f0e0f6a
+    const v7, 0x7f0e1026
 
     const-string v8, "ScheduleMessage"
 
@@ -900,7 +900,7 @@
 
     aget-object v5, v5, v2
 
-    const v6, 0x7f0e0feb
+    const v6, 0x7f0e10a8
 
     const-string v7, "SendWithoutSound"
 
@@ -908,7 +908,7 @@
 
     move-result-object v6
 
-    const v7, 0x7f07018c
+    const v7, 0x7f070163
 
     invoke-virtual {v5, v6, v7}, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;->setTextAndIcon(Ljava/lang/CharSequence;I)V
 
@@ -1883,7 +1883,7 @@
     .line 168
     iget-object v2, v0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
-    const v4, 0x7f070140
+    const v4, 0x7f070109
 
     invoke-virtual {v2, v4}, Lorg/telegram/ui/ActionBar/ActionBar;->setBackButtonImage(I)V
 
@@ -1910,14 +1910,14 @@
 
     if-eqz v4, :cond_5f
 
-    const v4, 0x7f07014a
+    const v4, 0x7f070110
 
     .line 187
     invoke-virtual {v2, v6, v4}, Lorg/telegram/ui/ActionBar/ActionBarMenu;->addItem(II)Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
     move-result-object v4
 
-    const v7, 0x7f0e0f74
+    const v7, 0x7f0e1030
 
     const-string v8, "Search"
 
@@ -1928,14 +1928,14 @@
     invoke-virtual {v4, v7}, Landroid/widget/FrameLayout;->setContentDescription(Ljava/lang/CharSequence;)V
 
     :cond_5f
-    const v4, 0x7f070147
+    const v4, 0x7f07010d
 
     .line 189
     invoke-virtual {v2, v5, v4}, Lorg/telegram/ui/ActionBar/ActionBarMenu;->addItem(II)Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
     move-result-object v2
 
-    const v4, 0x7f0e0033
+    const v4, 0x7f0e003e
 
     const-string v7, "AccDescrMoreOptions"
 
@@ -1946,9 +1946,9 @@
 
     invoke-virtual {v2, v4}, Landroid/widget/FrameLayout;->setContentDescription(Ljava/lang/CharSequence;)V
 
-    const v4, 0x7f070298
+    const v4, 0x7f070286
 
-    const v7, 0x7f0e0bc8
+    const v7, 0x7f0e0c52
 
     const-string v8, "OpenInExternalApp"
 
@@ -1983,7 +1983,7 @@
     .line 324
     iget-object v2, v0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
-    const v4, 0x7f0e07e2
+    const v4, 0x7f0e083a
 
     const-string v7, "Gallery"
 
@@ -2125,7 +2125,7 @@
     .line 342
     iget-object v2, v0, Lorg/telegram/ui/PhotoAlbumPickerActivity;->emptyView:Landroid/widget/TextView;
 
-    const v10, 0x7f0e0acd
+    const v10, 0x7f0e0b55
 
     const-string v11, "NoPhotos"
 
@@ -2218,7 +2218,7 @@
 
     iput-object v2, v0, Lorg/telegram/ui/PhotoAlbumPickerActivity;->shadow:Landroid/view/View;
 
-    const v4, 0x7f07013e
+    const v4, 0x7f070107
 
     .line 355
     invoke-virtual {v2, v4}, Landroid/view/View;->setBackgroundResource(I)V
@@ -2352,7 +2352,7 @@
     .line 373
     iget-object v2, v0, Lorg/telegram/ui/PhotoAlbumPickerActivity;->commentTextView:Lorg/telegram/ui/Components/EditTextEmoji;
 
-    const v4, 0x7f0e0119
+    const v4, 0x7f0e0141
 
     const-string v10, "AddCaption"
 
@@ -2521,7 +2521,7 @@
 
     move-result-object v8
 
-    const v10, 0x7f07010d
+    const v10, 0x7f0700e7
 
     invoke-virtual {v8, v10}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -2574,7 +2574,7 @@
     .line 410
     iget-object v8, v0, Lorg/telegram/ui/PhotoAlbumPickerActivity;->writeButton:Landroid/widget/ImageView;
 
-    const v10, 0x7f070062
+    const v10, 0x7f070050
 
     invoke-virtual {v8, v10}, Landroid/widget/ImageView;->setImageResource(I)V
 

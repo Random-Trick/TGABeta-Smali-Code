@@ -159,7 +159,7 @@
 
     move-result-object v4
 
-    const v5, 0x7f0703b4
+    const v5, 0x7f0703b9
 
     invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -361,7 +361,7 @@
 
     const-string v4, "NoResult"
 
-    const v9, 0x7f0e0ad8
+    const v9, 0x7f0e0b60
 
     invoke-static {v4, v9}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
@@ -612,7 +612,7 @@
 
     const-string v9, "CloseEditor"
 
-    const v15, 0x7f0e047c
+    const v15, 0x7f0e04c9
 
     .line 848
     invoke-static {v9, v15}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -686,7 +686,7 @@
 
     const-string v4, "SaveTheme"
 
-    const v15, 0x7f0e0f5c
+    const v15, 0x7f0e1016
 
     .line 859
     invoke-static {v4, v15}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -790,7 +790,7 @@
 
     const-string v4, "Cancel"
 
-    const v8, 0x7f0e0331
+    const v8, 0x7f0e036d
 
     .line 880
     invoke-static {v4, v8}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -881,7 +881,7 @@
 
     const-string v8, "Default"
 
-    const v15, 0x7f0e053e
+    const v15, 0x7f0e058f
 
     .line 900
     invoke-static {v8, v15}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -951,7 +951,7 @@
 
     const-string v2, "Save"
 
-    const v3, 0x7f0e0f56
+    const v3, 0x7f0e100e
 
     .line 916
     invoke-static {v2, v3}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;

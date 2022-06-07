@@ -8,18 +8,18 @@
 # instance fields
 .field public final synthetic f$0:Lorg/telegram/messenger/MessagesController;
 
-.field public final synthetic f$1:Lorg/telegram/tgnet/TLRPC$TL_config;
+.field public final synthetic f$1:Lorg/telegram/tgnet/TLRPC$TL_channels_sendAsPeers;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lorg/telegram/messenger/MessagesController;Lorg/telegram/tgnet/TLRPC$TL_config;)V
+.method public synthetic constructor <init>(Lorg/telegram/messenger/MessagesController;Lorg/telegram/tgnet/TLRPC$TL_channels_sendAsPeers;)V
     .registers 3
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lorg/telegram/messenger/MessagesController$$ExternalSyntheticLambda159;->f$0:Lorg/telegram/messenger/MessagesController;
 
-    iput-object p2, p0, Lorg/telegram/messenger/MessagesController$$ExternalSyntheticLambda159;->f$1:Lorg/telegram/tgnet/TLRPC$TL_config;
+    iput-object p2, p0, Lorg/telegram/messenger/MessagesController$$ExternalSyntheticLambda159;->f$1:Lorg/telegram/tgnet/TLRPC$TL_channels_sendAsPeers;
 
     return-void
 .end method
@@ -31,9 +31,9 @@
 
     iget-object v0, p0, Lorg/telegram/messenger/MessagesController$$ExternalSyntheticLambda159;->f$0:Lorg/telegram/messenger/MessagesController;
 
-    iget-object v1, p0, Lorg/telegram/messenger/MessagesController$$ExternalSyntheticLambda159;->f$1:Lorg/telegram/tgnet/TLRPC$TL_config;
+    iget-object v1, p0, Lorg/telegram/messenger/MessagesController$$ExternalSyntheticLambda159;->f$1:Lorg/telegram/tgnet/TLRPC$TL_channels_sendAsPeers;
 
-    invoke-static {v0, v1}, Lorg/telegram/messenger/MessagesController;->$r8$lambda$y4ZB1WG8Umgt_ZDf_IL1YUaoy5c(Lorg/telegram/messenger/MessagesController;Lorg/telegram/tgnet/TLRPC$TL_config;)V
+    invoke-static {v0, v1}, Lorg/telegram/messenger/MessagesController;->$r8$lambda$AAD4xXbOjiTAbT3uRIjkkDE2U9A(Lorg/telegram/messenger/MessagesController;Lorg/telegram/tgnet/TLRPC$TL_channels_sendAsPeers;)V
 
     return-void
 .end method

@@ -27,7 +27,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 36155
+    .line 36607
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -52,7 +52,7 @@
 
     goto :goto_22
 
-    .line 36177
+    .line 36629
     :cond_11
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_wallPaperSettings;
 
@@ -60,7 +60,7 @@
 
     goto :goto_22
 
-    .line 36174
+    .line 36626
     :cond_17
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_wallPaperSettings_layer128;
 
@@ -68,7 +68,7 @@
 
     goto :goto_22
 
-    .line 36171
+    .line 36623
     :cond_1d
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_wallPaperSettings_layer106;
 
@@ -81,7 +81,7 @@
 
     goto :goto_3d
 
-    .line 36181
+    .line 36633
     :cond_27
     new-instance p0, Ljava/lang/RuntimeException;
 
@@ -111,7 +111,7 @@
     :goto_3d
     if-eqz v0, :cond_42
 
-    .line 36184
+    .line 36636
     invoke-virtual {v0, p0, p2}, Lorg/telegram/tgnet/TLObject;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
     :cond_42

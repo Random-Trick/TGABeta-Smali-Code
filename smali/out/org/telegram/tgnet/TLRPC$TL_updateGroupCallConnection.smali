@@ -25,7 +25,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 28832
+    .line 29206
     invoke-direct {p0}, Lorg/telegram/tgnet/TLRPC$Update;-><init>()V
 
     return-void
@@ -36,7 +36,7 @@
 .method public readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
     .registers 5
 
-    .line 28840
+    .line 29214
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
@@ -54,11 +54,11 @@
     :cond_b
     const/4 v1, 0x0
 
-    .line 28841
+    .line 29215
     :goto_c
     iput-boolean v1, p0, Lorg/telegram/tgnet/TLRPC$TL_updateGroupCallConnection;->presentation:Z
 
-    .line 28842
+    .line 29216
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
@@ -75,12 +75,12 @@
 .method public serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
     .registers 3
 
-    .line 28846
+    .line 29220
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_updateGroupCallConnection;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 28847
+    .line 29221
     iget-boolean v0, p0, Lorg/telegram/tgnet/TLRPC$TL_updateGroupCallConnection;->presentation:Z
 
     if-eqz v0, :cond_e
@@ -99,10 +99,10 @@
     :goto_12
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$TL_updateGroupCallConnection;->flags:I
 
-    .line 28848
+    .line 29222
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 28849
+    .line 29223
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_updateGroupCallConnection;->params:Lorg/telegram/tgnet/TLRPC$TL_dataJSON;
 
     invoke-virtual {v0, p1}, Lorg/telegram/tgnet/TLRPC$TL_dataJSON;->serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V

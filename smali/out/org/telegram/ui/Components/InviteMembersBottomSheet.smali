@@ -278,7 +278,7 @@
 
     const-string v2, "SearchForChats"
 
-    const v3, 0x7f0e0f82
+    const v3, 0x7f0e103e
 
     invoke-static {v2, v3}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
@@ -498,7 +498,7 @@
 
     move-result-object v5
 
-    const v6, 0x7f07010c
+    const v6, 0x7f0700e6
 
     invoke-virtual {v5, v6}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -556,7 +556,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setColorFilter(Landroid/graphics/ColorFilter;)V
 
-    const v1, 0x7f070109
+    const v1, 0x7f0700e4
 
     .line 265
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
@@ -684,7 +684,7 @@
     .line 337
     invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setAlpha(F)V
 
-    const v2, 0x7f0e0aa0
+    const v2, 0x7f0e0b27
 
     const-string v4, "Next"
 
@@ -1804,7 +1804,7 @@
     .line 296
     invoke-virtual {p0}, Lorg/telegram/ui/Components/InviteMembersBottomSheet;->dismiss()V
 
-    goto/16 :goto_163
+    goto/16 :goto_167
 
     .line 298
     :cond_40
@@ -1825,7 +1825,7 @@
 
     if-ne p1, v2, :cond_5d
 
-    const p1, 0x7f0e012a
+    const p1, 0x7f0e0152
 
     const-string v3, "AddOneMemberAlertTitle"
 
@@ -1836,10 +1836,10 @@
 
     invoke-virtual {p4, p1}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    goto :goto_77
+    goto :goto_79
 
     :cond_5d
-    const p1, 0x7f0e0127
+    const p1, 0x7f0e014f
 
     new-array v3, v2, [Ljava/lang/Object;
 
@@ -1850,7 +1850,9 @@
 
     move-result v4
 
-    invoke-static {v1, v4}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    new-array v5, v0, [Ljava/lang/Object;
+
+    invoke-static {v1, v4, v5}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v4
 
@@ -1865,7 +1867,7 @@
     invoke-virtual {p4, p1}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
     .line 304
-    :goto_77
+    :goto_79
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1873,14 +1875,14 @@
     const/4 v3, 0x0
 
     .line 305
-    :goto_7d
+    :goto_7f
     iget-object v4, p0, Lorg/telegram/ui/Components/InviteMembersBottomSheet;->selectedContacts:Landroidx/collection/LongSparseArray;
 
     invoke-virtual {v4}, Landroidx/collection/LongSparseArray;->size()I
 
     move-result v4
 
-    if-ge v3, v4, :cond_bd
+    if-ge v3, v4, :cond_bf
 
     .line 306
     iget-object v4, p0, Lorg/telegram/ui/Components/InviteMembersBottomSheet;->selectedContacts:Landroidx/collection/LongSparseArray;
@@ -1904,24 +1906,24 @@
 
     move-result-object v4
 
-    if-nez v4, :cond_9c
+    if-nez v4, :cond_9e
 
-    goto :goto_ba
+    goto :goto_bc
 
     .line 311
-    :cond_9c
+    :cond_9e
     invoke-virtual {p1}, Ljava/lang/StringBuilder;->length()I
 
     move-result v5
 
-    if-lez v5, :cond_a7
+    if-lez v5, :cond_a9
 
     const-string v5, ", "
 
     .line 312
     invoke-virtual {p1, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :cond_a7
+    :cond_a9
     const-string v5, "**"
 
     .line 314
@@ -1939,13 +1941,13 @@
 
     invoke-virtual {p1, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :goto_ba
+    :goto_bc
     add-int/lit8 v3, v3, 0x1
 
-    goto :goto_7d
+    goto :goto_7f
 
     .line 316
-    :cond_bd
+    :cond_bf
     iget v3, p0, Lorg/telegram/ui/ActionBar/BottomSheet;->currentAccount:I
 
     invoke-static {v3}, Lorg/telegram/messenger/MessagesController;->getInstance(I)Lorg/telegram/messenger/MessagesController;
@@ -1971,11 +1973,11 @@
 
     const/4 v4, 0x2
 
-    const v5, 0x7f0e0126
+    const v5, 0x7f0e014e
 
     const-string v6, "AddMembersAlertNamesText"
 
-    if-le p3, v3, :cond_12c
+    if-le p3, v3, :cond_130
 
     .line 318
     new-instance p1, Landroid/text/SpannableStringBuilder;
@@ -1988,7 +1990,9 @@
 
     move-result v3
 
-    invoke-static {v1, v3}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    new-array v4, v0, [Ljava/lang/Object;
+
+    invoke-static {v1, v3, v4}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -2034,7 +2038,7 @@
 
     move-result p3
 
-    if-ltz p3, :cond_128
+    if-ltz p3, :cond_12c
 
     .line 322
     new-instance v0, Lorg/telegram/ui/Components/TypefaceSpan;
@@ -2058,12 +2062,12 @@
     invoke-virtual {p1, v0, p3, p2, v1}, Landroid/text/SpannableStringBuilder;->setSpan(Ljava/lang/Object;III)V
 
     .line 324
-    :cond_128
+    :cond_12c
     invoke-virtual {p4, p1}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    goto :goto_13f
+    goto :goto_143
 
-    :cond_12c
+    :cond_130
     new-array p3, v4, [Ljava/lang/Object;
 
     aput-object p1, p3, v0
@@ -2083,8 +2087,8 @@
 
     invoke-virtual {p4, p1}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    :goto_13f
-    const p1, 0x7f0e0104
+    :goto_143
+    const p1, 0x7f0e012c
 
     const-string p2, "Add"
 
@@ -2099,7 +2103,7 @@
 
     invoke-virtual {p4, p1, p2}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const p1, 0x7f0e0331
+    const p1, 0x7f0e036d
 
     const-string p2, "Cancel"
 
@@ -2118,7 +2122,7 @@
     .line 331
     invoke-virtual {p4}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->show()Lorg/telegram/ui/ActionBar/AlertDialog;
 
-    :goto_163
+    :goto_167
     return-void
 .end method
 

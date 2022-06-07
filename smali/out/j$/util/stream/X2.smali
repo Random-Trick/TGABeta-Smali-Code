@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lj$/util/function/m;
+.implements Lj$/util/function/A;
 
 
 # static fields
@@ -32,11 +32,10 @@
 
 
 # virtual methods
-.method public final apply(I)Ljava/lang/Object;
-    .registers 2
+.method public final applyAsLong(Ljava/lang/Object;)J
+    .registers 4
 
-    .line 1
-    new-array p1, p1, [Ljava/lang/Object;
+    const-wide/16 v0, 0x1
 
-    return-object p1
+    return-wide v0
 .end method

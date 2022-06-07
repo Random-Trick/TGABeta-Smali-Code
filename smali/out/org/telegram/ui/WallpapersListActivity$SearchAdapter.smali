@@ -202,7 +202,7 @@
 
     const-string p1, "BackgroundSearchColor"
 
-    const v0, 0x7f0e0294
+    const v0, 0x7f0e02c9
 
     .line 1687
     invoke-static {p1, v0}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -1380,7 +1380,7 @@
 
     check-cast p1, Lorg/telegram/ui/Cells/GraySectionCell;
 
-    const p2, 0x7f0e0f77
+    const p2, 0x7f0e1033
 
     const-string v0, "SearchByColor"
 

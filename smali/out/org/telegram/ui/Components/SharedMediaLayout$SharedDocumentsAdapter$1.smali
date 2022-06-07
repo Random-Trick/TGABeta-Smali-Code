@@ -19,13 +19,13 @@
 
 
 # direct methods
-.method constructor <init>(Lorg/telegram/ui/Components/SharedMediaLayout$SharedDocumentsAdapter;Landroid/content/Context;)V
-    .registers 3
+.method constructor <init>(Lorg/telegram/ui/Components/SharedMediaLayout$SharedDocumentsAdapter;Landroid/content/Context;ILorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)V
+    .registers 5
 
-    .line 5037
+    .line 5050
     iput-object p1, p0, Lorg/telegram/ui/Components/SharedMediaLayout$SharedDocumentsAdapter$1;->this$1:Lorg/telegram/ui/Components/SharedMediaLayout$SharedDocumentsAdapter;
 
-    invoke-direct {p0, p2}, Lorg/telegram/ui/Cells/SharedAudioCell;-><init>(Landroid/content/Context;)V
+    invoke-direct {p0, p2, p3, p4}, Lorg/telegram/ui/Cells/SharedAudioCell;-><init>(Landroid/content/Context;ILorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)V
 
     return-void
 .end method
@@ -35,7 +35,7 @@
 .method public needPlayMessage(Lorg/telegram/messenger/MessageObject;)Z
     .registers 6
 
-    .line 5040
+    .line 5053
     invoke-virtual {p1}, Lorg/telegram/messenger/MessageObject;->isVoice()Z
 
     move-result v0
@@ -52,7 +52,7 @@
 
     goto :goto_38
 
-    .line 5044
+    .line 5057
     :cond_e
     invoke-virtual {p1}, Lorg/telegram/messenger/MessageObject;->isMusic()Z
 
@@ -60,7 +60,7 @@
 
     if-eqz v0, :cond_37
 
-    .line 5045
+    .line 5058
     invoke-static {}, Lorg/telegram/messenger/MediaController;->getInstance()Lorg/telegram/messenger/MediaController;
 
     move-result-object v0
@@ -75,7 +75,7 @@
 
     iget-object v2, p0, Lorg/telegram/ui/Components/SharedMediaLayout$SharedDocumentsAdapter$1;->this$1:Lorg/telegram/ui/Components/SharedMediaLayout$SharedDocumentsAdapter;
 
-    invoke-static {v2}, Lorg/telegram/ui/Components/SharedMediaLayout$SharedDocumentsAdapter;->access$7900(Lorg/telegram/ui/Components/SharedMediaLayout$SharedDocumentsAdapter;)I
+    invoke-static {v2}, Lorg/telegram/ui/Components/SharedMediaLayout$SharedDocumentsAdapter;->access$8100(Lorg/telegram/ui/Components/SharedMediaLayout$SharedDocumentsAdapter;)I
 
     move-result v2
 
@@ -100,7 +100,7 @@
     :cond_37
     return v1
 
-    .line 5041
+    .line 5054
     :cond_38
     :goto_38
     invoke-static {}, Lorg/telegram/messenger/MediaController;->getInstance()Lorg/telegram/messenger/MediaController;
@@ -111,7 +111,7 @@
 
     move-result p1
 
-    .line 5042
+    .line 5055
     invoke-static {}, Lorg/telegram/messenger/MediaController;->getInstance()Lorg/telegram/messenger/MediaController;
 
     move-result-object v0
@@ -128,7 +128,7 @@
 
     iget-object v3, p0, Lorg/telegram/ui/Components/SharedMediaLayout$SharedDocumentsAdapter$1;->this$1:Lorg/telegram/ui/Components/SharedMediaLayout$SharedDocumentsAdapter;
 
-    invoke-static {v3}, Lorg/telegram/ui/Components/SharedMediaLayout$SharedDocumentsAdapter;->access$7900(Lorg/telegram/ui/Components/SharedMediaLayout$SharedDocumentsAdapter;)I
+    invoke-static {v3}, Lorg/telegram/ui/Components/SharedMediaLayout$SharedDocumentsAdapter;->access$8100(Lorg/telegram/ui/Components/SharedMediaLayout$SharedDocumentsAdapter;)I
 
     move-result v3
 

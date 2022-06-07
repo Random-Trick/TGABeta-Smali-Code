@@ -31,28 +31,28 @@
 
 
 # direct methods
-.method public constructor <init>(IILjava/lang/String;Lorg/telegram/tgnet/TLRPC$MessagesFilter;I)V
+.method public constructor <init>(ILjava/lang/String;Lorg/telegram/tgnet/TLRPC$MessagesFilter;I)V
     .registers 6
 
-    .line 799
+    .line 798
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x1
+    const/4 v0, 0x1
 
-    .line 797
-    iput-boolean p1, p0, Lorg/telegram/ui/Adapters/FiltersView$MediaFilterData;->removable:Z
+    .line 796
+    iput-boolean v0, p0, Lorg/telegram/ui/Adapters/FiltersView$MediaFilterData;->removable:Z
+
+    .line 799
+    iput p1, p0, Lorg/telegram/ui/Adapters/FiltersView$MediaFilterData;->iconResFilled:I
+
+    .line 800
+    iput-object p2, p0, Lorg/telegram/ui/Adapters/FiltersView$MediaFilterData;->title:Ljava/lang/String;
 
     .line 801
-    iput p2, p0, Lorg/telegram/ui/Adapters/FiltersView$MediaFilterData;->iconResFilled:I
+    iput-object p3, p0, Lorg/telegram/ui/Adapters/FiltersView$MediaFilterData;->filter:Lorg/telegram/tgnet/TLRPC$MessagesFilter;
 
     .line 802
-    iput-object p3, p0, Lorg/telegram/ui/Adapters/FiltersView$MediaFilterData;->title:Ljava/lang/String;
-
-    .line 803
-    iput-object p4, p0, Lorg/telegram/ui/Adapters/FiltersView$MediaFilterData;->filter:Lorg/telegram/tgnet/TLRPC$MessagesFilter;
-
-    .line 804
-    iput p5, p0, Lorg/telegram/ui/Adapters/FiltersView$MediaFilterData;->filterType:I
+    iput p4, p0, Lorg/telegram/ui/Adapters/FiltersView$MediaFilterData;->filterType:I
 
     return-void
 .end method
@@ -62,7 +62,7 @@
 .method public isMedia()Z
     .registers 4
 
-    .line 822
+    .line 820
     iget v0, p0, Lorg/telegram/ui/Adapters/FiltersView$MediaFilterData;->filterType:I
 
     const/4 v1, 0x1
@@ -96,7 +96,7 @@
 .method public isSameType(Lorg/telegram/ui/Adapters/FiltersView$MediaFilterData;)Z
     .registers 5
 
-    .line 812
+    .line 810
     iget v0, p0, Lorg/telegram/ui/Adapters/FiltersView$MediaFilterData;->filterType:I
 
     iget v1, p1, Lorg/telegram/ui/Adapters/FiltersView$MediaFilterData;->filterType:I
@@ -107,7 +107,7 @@
 
     return v2
 
-    .line 815
+    .line 813
     :cond_8
     invoke-virtual {p0}, Lorg/telegram/ui/Adapters/FiltersView$MediaFilterData;->isMedia()Z
 
@@ -132,7 +132,7 @@
 .method public setDate(Lorg/telegram/ui/Adapters/FiltersView$DateData;)V
     .registers 2
 
-    .line 826
+    .line 824
     iput-object p1, p0, Lorg/telegram/ui/Adapters/FiltersView$MediaFilterData;->dateData:Lorg/telegram/ui/Adapters/FiltersView$DateData;
 
     return-void
@@ -141,7 +141,7 @@
 .method public setUser(Lorg/telegram/tgnet/TLObject;)V
     .registers 2
 
-    .line 808
+    .line 806
     iput-object p1, p0, Lorg/telegram/ui/Adapters/FiltersView$MediaFilterData;->chat:Lorg/telegram/tgnet/TLObject;
 
     return-void

@@ -32,7 +32,7 @@
 .method constructor <init>(Landroidx/recyclerview/widget/ChatListItemAnimator;Lorg/telegram/ui/Cells/ChatMessageCell;FFFF)V
     .registers 7
 
-    .line 1319
+    .line 1329
     iput-object p1, p0, Landroidx/recyclerview/widget/ChatListItemAnimator$9;->this$0:Landroidx/recyclerview/widget/ChatListItemAnimator;
 
     iput-object p2, p0, Landroidx/recyclerview/widget/ChatListItemAnimator$9;->val$messageCell:Lorg/telegram/ui/Cells/ChatMessageCell;
@@ -55,7 +55,7 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .registers 6
 
-    .line 1322
+    .line 1332
     iget-object p1, p0, Landroidx/recyclerview/widget/ChatListItemAnimator$9;->val$messageCell:Lorg/telegram/ui/Cells/ChatMessageCell;
 
     invoke-virtual {p1}, Lorg/telegram/ui/Cells/ChatMessageCell;->getTransitionParams()Lorg/telegram/ui/Cells/ChatMessageCell$TransitionParams;
@@ -64,7 +64,7 @@
 
     invoke-virtual {p1}, Lorg/telegram/ui/Cells/ChatMessageCell$TransitionParams;->resetAnimation()V
 
-    .line 1323
+    .line 1333
     iget-object p1, p0, Landroidx/recyclerview/widget/ChatListItemAnimator$9;->val$messageCell:Lorg/telegram/ui/Cells/ChatMessageCell;
 
     invoke-virtual {p1}, Lorg/telegram/ui/Cells/ChatMessageCell;->getPhotoImage()Lorg/telegram/messenger/ImageReceiver;
@@ -81,7 +81,7 @@
 
     invoke-virtual {p1, v0, v1, v2, v3}, Lorg/telegram/messenger/ImageReceiver;->setImageCoords(FFFF)V
 
-    .line 1324
+    .line 1334
     iget-object p1, p0, Landroidx/recyclerview/widget/ChatListItemAnimator$9;->this$0:Landroidx/recyclerview/widget/ChatListItemAnimator;
 
     invoke-static {p1}, Landroidx/recyclerview/widget/ChatListItemAnimator;->access$300(Landroidx/recyclerview/widget/ChatListItemAnimator;)Lorg/telegram/ui/Components/ChatGreetingsView;
@@ -90,7 +90,7 @@
 
     if-eqz p1, :cond_2f
 
-    .line 1325
+    .line 1335
     iget-object p1, p0, Landroidx/recyclerview/widget/ChatListItemAnimator$9;->this$0:Landroidx/recyclerview/widget/ChatListItemAnimator;
 
     invoke-static {p1}, Landroidx/recyclerview/widget/ChatListItemAnimator;->access$300(Landroidx/recyclerview/widget/ChatListItemAnimator;)Lorg/telegram/ui/Components/ChatGreetingsView;
@@ -103,7 +103,7 @@
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setAlpha(F)V
 
-    .line 1327
+    .line 1337
     :cond_2f
     iget-object p1, p0, Landroidx/recyclerview/widget/ChatListItemAnimator$9;->val$messageCell:Lorg/telegram/ui/Cells/ChatMessageCell;
 

@@ -56,7 +56,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/Bulletin$ParentLayout;Lorg/telegram/ui/Components/Bulletin$Layout;)V
     .registers 3
 
-    .line 352
+    .line 355
     iput-object p1, p0, Lorg/telegram/ui/Components/Bulletin$ParentLayout$1;->this$0:Lorg/telegram/ui/Components/Bulletin$ParentLayout;
 
     iput-object p2, p0, Lorg/telegram/ui/Components/Bulletin$ParentLayout$1;->val$layout:Lorg/telegram/ui/Components/Bulletin$Layout;
@@ -69,7 +69,7 @@
 .method private synthetic lambda$onFling$0(Landroidx/dynamicanimation/animation/DynamicAnimation;ZFF)V
     .registers 5
 
-    .line 380
+    .line 383
     iget-object p1, p0, Lorg/telegram/ui/Components/Bulletin$ParentLayout$1;->this$0:Lorg/telegram/ui/Components/Bulletin$ParentLayout;
 
     invoke-virtual {p1}, Lorg/telegram/ui/Components/Bulletin$ParentLayout;->onHide()V
@@ -80,7 +80,7 @@
 .method private static synthetic lambda$onFling$1(Lorg/telegram/ui/Components/Bulletin$Layout;Landroidx/dynamicanimation/animation/DynamicAnimation;FF)V
     .registers 4
 
-    .line 382
+    .line 385
     invoke-static {p2}, Ljava/lang/Math;->abs(F)F
 
     move-result p2
@@ -95,7 +95,7 @@
 
     if-lez p0, :cond_10
 
-    .line 383
+    .line 386
     invoke-virtual {p1}, Landroidx/dynamicanimation/animation/DynamicAnimation;->cancel()V
 
     :cond_10
@@ -105,7 +105,7 @@
 .method private synthetic lambda$onFling$2(Landroidx/dynamicanimation/animation/DynamicAnimation;ZFF)V
     .registers 5
 
-    .line 394
+    .line 397
     iget-object p1, p0, Lorg/telegram/ui/Components/Bulletin$ParentLayout$1;->this$0:Lorg/telegram/ui/Components/Bulletin$ParentLayout;
 
     invoke-virtual {p1}, Lorg/telegram/ui/Components/Bulletin$ParentLayout;->onHide()V
@@ -122,7 +122,7 @@
 
     if-gtz p1, :cond_8
 
-    .line 397
+    .line 400
     invoke-virtual {p0}, Landroidx/dynamicanimation/animation/DynamicAnimation;->cancel()V
 
     :cond_8
@@ -134,7 +134,7 @@
 .method public onDown(Landroid/view/MotionEvent;)Z
     .registers 5
 
-    .line 356
+    .line 359
     iget-object p1, p0, Lorg/telegram/ui/Components/Bulletin$ParentLayout$1;->this$0:Lorg/telegram/ui/Components/Bulletin$ParentLayout;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/Bulletin$ParentLayout;->access$1000(Lorg/telegram/ui/Components/Bulletin$ParentLayout;)Z
@@ -145,7 +145,7 @@
 
     if-nez p1, :cond_21
 
-    .line 357
+    .line 360
     iget-object p1, p0, Lorg/telegram/ui/Components/Bulletin$ParentLayout$1;->this$0:Lorg/telegram/ui/Components/Bulletin$ParentLayout;
 
     iget-object v1, p0, Lorg/telegram/ui/Components/Bulletin$ParentLayout$1;->val$layout:Lorg/telegram/ui/Components/Bulletin$Layout;
@@ -158,7 +158,7 @@
 
     invoke-static {p1, v1}, Lorg/telegram/ui/Components/Bulletin$ParentLayout;->access$1102(Lorg/telegram/ui/Components/Bulletin$ParentLayout;Z)Z
 
-    .line 358
+    .line 361
     iget-object p1, p0, Lorg/telegram/ui/Components/Bulletin$ParentLayout$1;->this$0:Lorg/telegram/ui/Components/Bulletin$ParentLayout;
 
     iget-object v1, p0, Lorg/telegram/ui/Components/Bulletin$ParentLayout$1;->val$layout:Lorg/telegram/ui/Components/Bulletin$Layout;
@@ -178,7 +178,7 @@
 .method public onFling(Landroid/view/MotionEvent;Landroid/view/MotionEvent;FF)Z
     .registers 10
 
-    .line 375
+    .line 378
     invoke-static {p3}, Ljava/lang/Math;->abs(F)F
 
     move-result p1
@@ -199,7 +199,7 @@
 
     if-gez v0, :cond_19
 
-    .line 376
+    .line 379
     iget-object v0, p0, Lorg/telegram/ui/Components/Bulletin$ParentLayout$1;->this$0:Lorg/telegram/ui/Components/Bulletin$ParentLayout;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/Bulletin$ParentLayout;->access$1100(Lorg/telegram/ui/Components/Bulletin$ParentLayout;)Z
@@ -224,7 +224,7 @@
     :cond_25
     const/4 p2, 0x1
 
-    .line 378
+    .line 381
     :cond_26
     new-instance v0, Landroidx/dynamicanimation/animation/SpringAnimation;
 
@@ -254,14 +254,14 @@
 
     if-nez p2, :cond_54
 
-    .line 380
+    .line 383
     new-instance v1, Lorg/telegram/ui/Components/Bulletin$ParentLayout$1$$ExternalSyntheticLambda0;
 
     invoke-direct {v1, p0}, Lorg/telegram/ui/Components/Bulletin$ParentLayout$1$$ExternalSyntheticLambda0;-><init>(Lorg/telegram/ui/Components/Bulletin$ParentLayout$1;)V
 
     invoke-virtual {v0, v1}, Landroidx/dynamicanimation/animation/DynamicAnimation;->addEndListener(Landroidx/dynamicanimation/animation/DynamicAnimation$OnAnimationEndListener;)Landroidx/dynamicanimation/animation/DynamicAnimation;
 
-    .line 381
+    .line 384
     iget-object v1, p0, Lorg/telegram/ui/Components/Bulletin$ParentLayout$1;->val$layout:Lorg/telegram/ui/Components/Bulletin$Layout;
 
     new-instance v2, Lorg/telegram/ui/Components/Bulletin$ParentLayout$1$$ExternalSyntheticLambda2;
@@ -270,7 +270,7 @@
 
     invoke-virtual {v0, v2}, Landroidx/dynamicanimation/animation/DynamicAnimation;->addUpdateListener(Landroidx/dynamicanimation/animation/DynamicAnimation$OnAnimationUpdateListener;)Landroidx/dynamicanimation/animation/DynamicAnimation;
 
-    .line 387
+    .line 390
     :cond_54
     invoke-virtual {v0}, Landroidx/dynamicanimation/animation/SpringAnimation;->getSpring()Landroidx/dynamicanimation/animation/SpringForce;
 
@@ -280,7 +280,7 @@
 
     invoke-virtual {v1, v2}, Landroidx/dynamicanimation/animation/SpringForce;->setDampingRatio(F)Landroidx/dynamicanimation/animation/SpringForce;
 
-    .line 388
+    .line 391
     invoke-virtual {v0}, Landroidx/dynamicanimation/animation/SpringAnimation;->getSpring()Landroidx/dynamicanimation/animation/SpringForce;
 
     move-result-object v1
@@ -289,15 +289,15 @@
 
     invoke-virtual {v1, v3}, Landroidx/dynamicanimation/animation/SpringForce;->setStiffness(F)Landroidx/dynamicanimation/animation/SpringForce;
 
-    .line 389
+    .line 392
     invoke-virtual {v0, p3}, Landroidx/dynamicanimation/animation/DynamicAnimation;->setStartVelocity(F)Landroidx/dynamicanimation/animation/DynamicAnimation;
 
-    .line 390
+    .line 393
     invoke-virtual {v0}, Landroidx/dynamicanimation/animation/SpringAnimation;->start()V
 
     if-eqz p2, :cond_9a
 
-    .line 393
+    .line 396
     new-instance p2, Landroidx/dynamicanimation/animation/SpringAnimation;
 
     iget-object v1, p0, Lorg/telegram/ui/Components/Bulletin$ParentLayout$1;->val$layout:Lorg/telegram/ui/Components/Bulletin$Layout;
@@ -306,26 +306,26 @@
 
     invoke-direct {p2, v1, v3, p4}, Landroidx/dynamicanimation/animation/SpringAnimation;-><init>(Ljava/lang/Object;Landroidx/dynamicanimation/animation/FloatPropertyCompat;F)V
 
-    .line 394
+    .line 397
     new-instance p4, Lorg/telegram/ui/Components/Bulletin$ParentLayout$1$$ExternalSyntheticLambda1;
 
     invoke-direct {p4, p0}, Lorg/telegram/ui/Components/Bulletin$ParentLayout$1$$ExternalSyntheticLambda1;-><init>(Lorg/telegram/ui/Components/Bulletin$ParentLayout$1;)V
 
     invoke-virtual {p2, p4}, Landroidx/dynamicanimation/animation/DynamicAnimation;->addEndListener(Landroidx/dynamicanimation/animation/DynamicAnimation$OnAnimationEndListener;)Landroidx/dynamicanimation/animation/DynamicAnimation;
 
-    .line 395
+    .line 398
     sget-object p4, Lorg/telegram/ui/Components/Bulletin$ParentLayout$1$$ExternalSyntheticLambda3;->INSTANCE:Lorg/telegram/ui/Components/Bulletin$ParentLayout$1$$ExternalSyntheticLambda3;
 
     invoke-virtual {p2, p4}, Landroidx/dynamicanimation/animation/DynamicAnimation;->addUpdateListener(Landroidx/dynamicanimation/animation/DynamicAnimation$OnAnimationUpdateListener;)Landroidx/dynamicanimation/animation/DynamicAnimation;
 
-    .line 400
+    .line 403
     invoke-virtual {v0}, Landroidx/dynamicanimation/animation/SpringAnimation;->getSpring()Landroidx/dynamicanimation/animation/SpringForce;
 
     move-result-object p4
 
     invoke-virtual {p4, v2}, Landroidx/dynamicanimation/animation/SpringForce;->setDampingRatio(F)Landroidx/dynamicanimation/animation/SpringForce;
 
-    .line 401
+    .line 404
     invoke-virtual {v0}, Landroidx/dynamicanimation/animation/SpringAnimation;->getSpring()Landroidx/dynamicanimation/animation/SpringForce;
 
     move-result-object p4
@@ -334,13 +334,13 @@
 
     invoke-virtual {p4, v1}, Landroidx/dynamicanimation/animation/SpringForce;->setStiffness(F)Landroidx/dynamicanimation/animation/SpringForce;
 
-    .line 402
+    .line 405
     invoke-virtual {v0, p3}, Landroidx/dynamicanimation/animation/DynamicAnimation;->setStartVelocity(F)Landroidx/dynamicanimation/animation/DynamicAnimation;
 
-    .line 403
+    .line 406
     invoke-virtual {p2}, Landroidx/dynamicanimation/animation/SpringAnimation;->start()V
 
-    .line 406
+    .line 409
     :cond_9a
     iget-object p2, p0, Lorg/telegram/ui/Components/Bulletin$ParentLayout$1;->this$0:Lorg/telegram/ui/Components/Bulletin$ParentLayout;
 
@@ -355,7 +355,7 @@
 .method public onScroll(Landroid/view/MotionEvent;Landroid/view/MotionEvent;FF)Z
     .registers 5
 
-    .line 366
+    .line 369
     iget-object p1, p0, Lorg/telegram/ui/Components/Bulletin$ParentLayout$1;->val$layout:Lorg/telegram/ui/Components/Bulletin$Layout;
 
     iget-object p2, p0, Lorg/telegram/ui/Components/Bulletin$ParentLayout$1;->this$0:Lorg/telegram/ui/Components/Bulletin$ParentLayout;
@@ -366,7 +366,7 @@
 
     invoke-virtual {p1, p2}, Landroid/widget/FrameLayout;->setTranslationX(F)V
 
-    .line 367
+    .line 370
     iget-object p1, p0, Lorg/telegram/ui/Components/Bulletin$ParentLayout$1;->this$0:Lorg/telegram/ui/Components/Bulletin$ParentLayout;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/Bulletin$ParentLayout;->access$1400(Lorg/telegram/ui/Components/Bulletin$ParentLayout;)F
@@ -416,7 +416,7 @@
 
     if-eqz p1, :cond_54
 
-    .line 368
+    .line 371
     :cond_3a
     iget-object p1, p0, Lorg/telegram/ui/Components/Bulletin$ParentLayout$1;->val$layout:Lorg/telegram/ui/Components/Bulletin$Layout;
 

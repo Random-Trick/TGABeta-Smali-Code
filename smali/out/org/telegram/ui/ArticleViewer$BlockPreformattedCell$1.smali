@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/ArticleViewer$BlockPreformattedCell;Landroid/content/Context;Lorg/telegram/ui/ArticleViewer;)V
     .registers 4
 
-    .line 10967
+    .line 10968
     iput-object p1, p0, Lorg/telegram/ui/ArticleViewer$BlockPreformattedCell$1;->this$1:Lorg/telegram/ui/ArticleViewer$BlockPreformattedCell;
 
     invoke-direct {p0, p2}, Landroid/widget/HorizontalScrollView;-><init>(Landroid/content/Context;)V
@@ -35,7 +35,7 @@
 .method public onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
     .registers 4
 
-    .line 10970
+    .line 10971
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockPreformattedCell$1;->this$1:Lorg/telegram/ui/ArticleViewer$BlockPreformattedCell;
 
     invoke-static {v0}, Lorg/telegram/ui/ArticleViewer$BlockPreformattedCell;->access$20500(Lorg/telegram/ui/ArticleViewer$BlockPreformattedCell;)Landroid/view/View;
@@ -52,7 +52,7 @@
 
     if-le v0, v1, :cond_1c
 
-    .line 10971
+    .line 10972
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockPreformattedCell$1;->this$1:Lorg/telegram/ui/ArticleViewer$BlockPreformattedCell;
 
     iget-object v0, v0, Lorg/telegram/ui/ArticleViewer$BlockPreformattedCell;->this$0:Lorg/telegram/ui/ArticleViewer;
@@ -65,7 +65,7 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ArticleViewer$WindowView;->requestDisallowInterceptTouchEvent(Z)V
 
-    .line 10973
+    .line 10974
     :cond_1c
     invoke-super {p0, p1}, Landroid/widget/HorizontalScrollView;->onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
 
@@ -77,10 +77,10 @@
 .method protected onScrollChanged(IIII)V
     .registers 5
 
-    .line 10978
+    .line 10979
     invoke-super {p0, p1, p2, p3, p4}, Landroid/widget/HorizontalScrollView;->onScrollChanged(IIII)V
 
-    .line 10979
+    .line 10980
     iget-object p1, p0, Lorg/telegram/ui/ArticleViewer$BlockPreformattedCell$1;->this$1:Lorg/telegram/ui/ArticleViewer$BlockPreformattedCell;
 
     iget-object p1, p1, Lorg/telegram/ui/ArticleViewer$BlockPreformattedCell;->this$0:Lorg/telegram/ui/ArticleViewer;
@@ -91,7 +91,7 @@
 
     if-eqz p1, :cond_1c
 
-    .line 10980
+    .line 10981
     iget-object p1, p0, Lorg/telegram/ui/ArticleViewer$BlockPreformattedCell$1;->this$1:Lorg/telegram/ui/ArticleViewer$BlockPreformattedCell;
 
     iget-object p1, p1, Lorg/telegram/ui/ArticleViewer$BlockPreformattedCell;->this$0:Lorg/telegram/ui/ArticleViewer;
@@ -100,7 +100,7 @@
 
     invoke-static {p1, p2}, Lorg/telegram/ui/ArticleViewer;->access$1002(Lorg/telegram/ui/ArticleViewer;Lorg/telegram/ui/ArticleViewer$DrawingText;)Lorg/telegram/ui/ArticleViewer$DrawingText;
 
-    .line 10981
+    .line 10982
     iget-object p1, p0, Lorg/telegram/ui/ArticleViewer$BlockPreformattedCell$1;->this$1:Lorg/telegram/ui/ArticleViewer$BlockPreformattedCell;
 
     iget-object p1, p1, Lorg/telegram/ui/ArticleViewer$BlockPreformattedCell;->this$0:Lorg/telegram/ui/ArticleViewer;

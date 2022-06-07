@@ -7,7 +7,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 3193
+    .line 3209
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -32,7 +32,7 @@
 
     goto :goto_22
 
-    .line 3205
+    .line 3221
     :cond_11
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_contactLinkUnknown;
 
@@ -40,7 +40,7 @@
 
     goto :goto_22
 
-    .line 3199
+    .line 3215
     :cond_17
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_contactLinkNone;
 
@@ -48,7 +48,7 @@
 
     goto :goto_22
 
-    .line 3202
+    .line 3218
     :cond_1d
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_contactLinkContact;
 
@@ -61,7 +61,7 @@
 
     goto :goto_3d
 
-    .line 3209
+    .line 3225
     :cond_27
     new-instance p0, Ljava/lang/RuntimeException;
 
@@ -91,7 +91,7 @@
     :goto_3d
     if-eqz v0, :cond_42
 
-    .line 3212
+    .line 3228
     invoke-virtual {v0, p0, p2}, Lorg/telegram/tgnet/TLObject;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
     :cond_42

@@ -17,7 +17,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 31926
+    .line 32375
     invoke-direct {p0}, Lorg/telegram/tgnet/TLRPC$TL_photo;-><init>()V
 
     return-void
@@ -28,21 +28,21 @@
 .method public readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
     .registers 14
 
-    .line 31931
+    .line 32380
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt64(Z)J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lorg/telegram/tgnet/TLRPC$Photo;->id:J
 
-    .line 31932
+    .line 32381
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt64(Z)J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lorg/telegram/tgnet/TLRPC$Photo;->access_hash:J
 
-    .line 31933
+    .line 32382
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
@@ -51,21 +51,21 @@
 
     iput-wide v0, p0, Lorg/telegram/tgnet/TLRPC$Photo;->user_id:J
 
-    .line 31934
+    .line 32383
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
 
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$Photo;->date:I
 
-    .line 31935
+    .line 32384
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readString(Z)Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/telegram/tgnet/TLRPC$Photo;->caption:Ljava/lang/String;
 
-    .line 31936
+    .line 32385
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
@@ -76,7 +76,7 @@
 
     iput-object v0, p0, Lorg/telegram/tgnet/TLRPC$Photo;->geo:Lorg/telegram/tgnet/TLRPC$GeoPoint;
 
-    .line 31937
+    .line 32386
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
@@ -91,7 +91,7 @@
 
     return-void
 
-    .line 31940
+    .line 32389
     :cond_36
     new-instance p1, Ljava/lang/RuntimeException;
 
@@ -115,7 +115,7 @@
 
     throw p1
 
-    .line 31944
+    .line 32393
     :cond_4b
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
@@ -130,7 +130,7 @@
 
     const-wide/16 v6, 0x0
 
-    .line 31946
+    .line 32395
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v9
@@ -147,7 +147,7 @@
 
     return-void
 
-    .line 31950
+    .line 32399
     :cond_64
     iget-object v3, p0, Lorg/telegram/tgnet/TLRPC$Photo;->sizes:Ljava/util/ArrayList;
 
@@ -164,56 +164,56 @@
 .method public serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
     .registers 5
 
-    .line 31955
+    .line 32404
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_photo_old;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 31956
+    .line 32405
     iget-wide v0, p0, Lorg/telegram/tgnet/TLRPC$Photo;->id:J
 
     invoke-virtual {p1, v0, v1}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt64(J)V
 
-    .line 31957
+    .line 32406
     iget-wide v0, p0, Lorg/telegram/tgnet/TLRPC$Photo;->access_hash:J
 
     invoke-virtual {p1, v0, v1}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt64(J)V
 
-    .line 31958
+    .line 32407
     iget-wide v0, p0, Lorg/telegram/tgnet/TLRPC$Photo;->user_id:J
 
     long-to-int v1, v0
 
     invoke-virtual {p1, v1}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 31959
+    .line 32408
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$Photo;->date:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 31960
+    .line 32409
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$Photo;->caption:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeString(Ljava/lang/String;)V
 
-    .line 31961
+    .line 32410
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$Photo;->geo:Lorg/telegram/tgnet/TLRPC$GeoPoint;
 
     invoke-virtual {v0, p1}, Lorg/telegram/tgnet/TLObject;->serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
 
     const v0, 0x1cb5c415
 
-    .line 31962
+    .line 32411
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 31963
+    .line 32412
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$Photo;->sizes:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
-    .line 31964
+    .line 32413
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
     const/4 v1, 0x0
@@ -221,7 +221,7 @@
     :goto_34
     if-ge v1, v0, :cond_44
 
-    .line 31966
+    .line 32415
     iget-object v2, p0, Lorg/telegram/tgnet/TLRPC$Photo;->sizes:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;

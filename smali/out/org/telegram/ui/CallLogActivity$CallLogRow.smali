@@ -36,7 +36,7 @@
 .method private constructor <init>()V
     .registers 1
 
-    .line 1132
+    .line 1110
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +45,7 @@
 .method synthetic constructor <init>(Lorg/telegram/ui/CallLogActivity$1;)V
     .registers 2
 
-    .line 1132
+    .line 1110
     invoke-direct {p0}, Lorg/telegram/ui/CallLogActivity$CallLogRow;-><init>()V
 
     return-void

@@ -4,7 +4,7 @@
 
 
 # static fields
-.field public static constructor:I = 0x1e87342b
+.field public static constructor:I = -0x702b3b28
 
 
 # direct methods
@@ -17,7 +17,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 25020
+    .line 25290
     invoke-direct {p0}, Lorg/telegram/tgnet/TLRPC$Document;-><init>()V
 
     return-void
@@ -32,56 +32,56 @@
 
     move/from16 v10, p2
 
-    .line 25025
+    .line 25294
     invoke-virtual/range {p1 .. p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v1
 
     iput v1, v0, Lorg/telegram/tgnet/TLRPC$Document;->flags:I
 
-    .line 25026
+    .line 25295
     invoke-virtual/range {p1 .. p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt64(Z)J
 
     move-result-wide v1
 
     iput-wide v1, v0, Lorg/telegram/tgnet/TLRPC$Document;->id:J
 
-    .line 25027
+    .line 25296
     invoke-virtual/range {p1 .. p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt64(Z)J
 
     move-result-wide v1
 
     iput-wide v1, v0, Lorg/telegram/tgnet/TLRPC$Document;->access_hash:J
 
-    .line 25028
+    .line 25297
     invoke-virtual/range {p1 .. p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readByteArray(Z)[B
 
     move-result-object v1
 
     iput-object v1, v0, Lorg/telegram/tgnet/TLRPC$Document;->file_reference:[B
 
-    .line 25029
+    .line 25298
     invoke-virtual/range {p1 .. p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v1
 
     iput v1, v0, Lorg/telegram/tgnet/TLRPC$Document;->date:I
 
-    .line 25030
+    .line 25299
     invoke-virtual/range {p1 .. p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readString(Z)Ljava/lang/String;
 
     move-result-object v1
 
     iput-object v1, v0, Lorg/telegram/tgnet/TLRPC$Document;->mime_type:Ljava/lang/String;
 
-    .line 25031
-    invoke-virtual/range {p1 .. p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
+    .line 25300
+    invoke-virtual/range {p1 .. p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt64(Z)J
 
-    move-result v1
+    move-result-wide v1
 
-    iput v1, v0, Lorg/telegram/tgnet/TLRPC$Document;->size:I
+    iput-wide v1, v0, Lorg/telegram/tgnet/TLRPC$Document;->size:J
 
-    .line 25032
+    .line 25301
     iget v1, v0, Lorg/telegram/tgnet/TLRPC$Document;->flags:I
 
     const/4 v11, 0x1
@@ -96,7 +96,7 @@
 
     if-eqz v1, :cond_7b
 
-    .line 25033
+    .line 25302
     invoke-virtual/range {p1 .. p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v1
@@ -107,7 +107,7 @@
 
     return-void
 
-    .line 25036
+    .line 25305
     :cond_43
     new-instance v2, Ljava/lang/RuntimeException;
 
@@ -127,7 +127,7 @@
 
     throw v2
 
-    .line 25040
+    .line 25309
     :cond_55
     invoke-virtual/range {p1 .. p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
@@ -140,7 +140,7 @@
 
     const-wide/16 v1, 0x0
 
-    .line 25042
+    .line 25311
     iget-wide v3, v0, Lorg/telegram/tgnet/TLRPC$Document;->id:J
 
     const-wide/16 v5, 0x0
@@ -163,7 +163,7 @@
 
     return-void
 
-    .line 25046
+    .line 25315
     :cond_73
     iget-object v2, v0, Lorg/telegram/tgnet/TLRPC$Document;->thumbs:Ljava/util/ArrayList;
 
@@ -173,7 +173,7 @@
 
     goto :goto_5a
 
-    .line 25049
+    .line 25318
     :cond_7b
     iget v1, v0, Lorg/telegram/tgnet/TLRPC$Document;->flags:I
 
@@ -181,7 +181,7 @@
 
     if-eqz v1, :cond_be
 
-    .line 25050
+    .line 25319
     invoke-virtual/range {p1 .. p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v1
@@ -192,7 +192,7 @@
 
     return-void
 
-    .line 25053
+    .line 25322
     :cond_8a
     new-instance v2, Ljava/lang/RuntimeException;
 
@@ -212,7 +212,7 @@
 
     throw v2
 
-    .line 25057
+    .line 25326
     :cond_9c
     invoke-virtual/range {p1 .. p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
@@ -225,7 +225,7 @@
 
     const-wide/16 v1, 0x0
 
-    .line 25059
+    .line 25328
     iget-wide v3, v0, Lorg/telegram/tgnet/TLRPC$Document;->id:J
 
     invoke-virtual/range {p1 .. p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
@@ -244,7 +244,7 @@
 
     return-void
 
-    .line 25063
+    .line 25332
     :cond_b6
     iget-object v2, v0, Lorg/telegram/tgnet/TLRPC$Document;->video_thumbs:Ljava/util/ArrayList;
 
@@ -254,7 +254,7 @@
 
     goto :goto_a1
 
-    .line 25066
+    .line 25335
     :cond_be
     invoke-virtual/range {p1 .. p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
@@ -262,7 +262,7 @@
 
     iput v1, v0, Lorg/telegram/tgnet/TLRPC$Document;->dc_id:I
 
-    .line 25067
+    .line 25336
     invoke-virtual/range {p1 .. p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v1
@@ -273,7 +273,7 @@
 
     return-void
 
-    .line 25070
+    .line 25339
     :cond_cd
     new-instance v2, Ljava/lang/RuntimeException;
 
@@ -293,7 +293,7 @@
 
     throw v2
 
-    .line 25074
+    .line 25343
     :cond_df
     invoke-virtual/range {p1 .. p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
@@ -302,7 +302,7 @@
     :goto_e3
     if-ge v14, v1, :cond_fa
 
-    .line 25076
+    .line 25345
     invoke-virtual/range {p1 .. p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v2
@@ -317,7 +317,7 @@
 
     return-void
 
-    .line 25080
+    .line 25349
     :cond_f2
     iget-object v4, v0, Lorg/telegram/tgnet/TLRPC$Document;->attributes:Ljava/util/ArrayList;
 
@@ -334,47 +334,47 @@
 .method public serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
     .registers 7
 
-    .line 25085
+    .line 25354
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_document;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 25086
+    .line 25355
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$Document;->flags:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 25087
+    .line 25356
     iget-wide v0, p0, Lorg/telegram/tgnet/TLRPC$Document;->id:J
 
     invoke-virtual {p1, v0, v1}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt64(J)V
 
-    .line 25088
+    .line 25357
     iget-wide v0, p0, Lorg/telegram/tgnet/TLRPC$Document;->access_hash:J
 
     invoke-virtual {p1, v0, v1}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt64(J)V
 
-    .line 25089
+    .line 25358
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$Document;->file_reference:[B
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeByteArray([B)V
 
-    .line 25090
+    .line 25359
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$Document;->date:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 25091
+    .line 25360
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$Document;->mime_type:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeString(Ljava/lang/String;)V
 
-    .line 25092
-    iget v0, p0, Lorg/telegram/tgnet/TLRPC$Document;->size:I
+    .line 25361
+    iget-wide v0, p0, Lorg/telegram/tgnet/TLRPC$Document;->size:J
 
-    invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
+    invoke-virtual {p1, v0, v1}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt64(J)V
 
-    .line 25093
+    .line 25362
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$Document;->flags:I
 
     and-int/lit8 v0, v0, 0x1
@@ -385,17 +385,17 @@
 
     if-eqz v0, :cond_4f
 
-    .line 25094
+    .line 25363
     invoke-virtual {p1, v2}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 25095
+    .line 25364
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$Document;->thumbs:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
-    .line 25096
+    .line 25365
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
     const/4 v3, 0x0
@@ -403,7 +403,7 @@
     :goto_3f
     if-ge v3, v0, :cond_4f
 
-    .line 25098
+    .line 25367
     iget-object v4, p0, Lorg/telegram/tgnet/TLRPC$Document;->thumbs:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -418,7 +418,7 @@
 
     goto :goto_3f
 
-    .line 25101
+    .line 25370
     :cond_4f
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$Document;->flags:I
 
@@ -426,17 +426,17 @@
 
     if-eqz v0, :cond_72
 
-    .line 25102
+    .line 25371
     invoke-virtual {p1, v2}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 25103
+    .line 25372
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$Document;->video_thumbs:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
-    .line 25104
+    .line 25373
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
     const/4 v3, 0x0
@@ -444,7 +444,7 @@
     :goto_62
     if-ge v3, v0, :cond_72
 
-    .line 25106
+    .line 25375
     iget-object v4, p0, Lorg/telegram/tgnet/TLRPC$Document;->video_thumbs:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -459,29 +459,29 @@
 
     goto :goto_62
 
-    .line 25109
+    .line 25378
     :cond_72
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$Document;->dc_id:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 25110
+    .line 25379
     invoke-virtual {p1, v2}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 25111
+    .line 25380
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$Document;->attributes:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
-    .line 25112
+    .line 25381
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
     :goto_83
     if-ge v1, v0, :cond_93
 
-    .line 25114
+    .line 25383
     iget-object v2, p0, Lorg/telegram/tgnet/TLRPC$Document;->attributes:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;

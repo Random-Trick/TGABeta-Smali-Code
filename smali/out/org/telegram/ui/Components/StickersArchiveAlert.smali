@@ -81,7 +81,7 @@
     .line 49
     iput v3, p0, Lorg/telegram/ui/Components/StickersArchiveAlert;->currentType:I
 
-    const v2, 0x7f0e01a0
+    const v2, 0x7f0e01d5
 
     const-string v4, "ArchivedMasksAlertTitle"
 
@@ -98,7 +98,7 @@
     :cond_20
     iput v0, p0, Lorg/telegram/ui/Components/StickersArchiveAlert;->currentType:I
 
-    const v2, 0x7f0e01a5
+    const v2, 0x7f0e01da
 
     const-string v4, "ArchivedStickersAlertTitle"
 
@@ -183,7 +183,7 @@
 
     if-eqz v1, :cond_82
 
-    const v1, 0x7f0e019f
+    const v1, 0x7f0e01d4
 
     const-string v2, "ArchivedMasksAlertInfo"
 
@@ -197,7 +197,7 @@
     goto :goto_8e
 
     :cond_82
-    const v1, 0x7f0e01a4
+    const v1, 0x7f0e01d9
 
     const-string v2, "ArchivedStickersAlertInfo"
 
@@ -279,7 +279,7 @@
 
     invoke-virtual {p2, p3, p1}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    const p1, 0x7f0e047b
+    const p1, 0x7f0e04c8
 
     const-string p2, "Close"
 
@@ -297,7 +297,7 @@
 
     if-eqz p1, :cond_f4
 
-    const p1, 0x7f0e1019
+    const p1, 0x7f0e10d7
 
     const-string p2, "Settings"
 

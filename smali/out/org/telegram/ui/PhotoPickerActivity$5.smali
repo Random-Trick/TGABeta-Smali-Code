@@ -36,7 +36,7 @@
 .method constructor <init>(Lorg/telegram/ui/PhotoPickerActivity;Landroid/content/Context;)V
     .registers 3
 
-    .line 580
+    .line 589
     iput-object p1, p0, Lorg/telegram/ui/PhotoPickerActivity$5;->this$0:Lorg/telegram/ui/PhotoPickerActivity;
 
     invoke-direct {p0, p2}, Lorg/telegram/ui/Components/SizeNotifierFrameLayout;-><init>(Landroid/content/Context;)V
@@ -47,7 +47,7 @@
 .method private synthetic lambda$onMeasure$0()V
     .registers 2
 
-    .line 604
+    .line 613
     iget-object v0, p0, Lorg/telegram/ui/PhotoPickerActivity$5;->this$0:Lorg/telegram/ui/PhotoPickerActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/PhotoPickerActivity;->access$1400(Lorg/telegram/ui/PhotoPickerActivity;)Lorg/telegram/ui/PhotoPickerActivity$ListAdapter;
@@ -62,25 +62,25 @@
 .method private onMeasureInternal(II)V
     .registers 15
 
-    .line 617
+    .line 626
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result v6
 
-    .line 618
+    .line 627
     invoke-static {p2}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result v0
 
-    .line 620
+    .line 629
     invoke-virtual {p0, v6, v0}, Landroid/widget/FrameLayout;->setMeasuredDimension(II)V
 
-    .line 622
+    .line 631
     invoke-virtual {p0}, Lorg/telegram/ui/Components/SizeNotifierFrameLayout;->measureKeyboardHeight()I
 
     move-result v1
 
-    .line 623
+    .line 632
     sget-boolean v2, Lorg/telegram/messenger/SharedConfig;->smoothKeyboard:Z
 
     const/4 v3, 0x0
@@ -97,7 +97,7 @@
     :goto_17
     const/high16 v4, 0x41a00000    # 20.0f
 
-    .line 624
+    .line 633
     invoke-static {v4}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v5
@@ -106,7 +106,7 @@
 
     if-gt v2, v5, :cond_43
 
-    .line 625
+    .line 634
     sget-boolean v2, Lorg/telegram/messenger/AndroidUtilities;->isInMultiwindow:Z
 
     if-nez v2, :cond_43
@@ -125,7 +125,7 @@
 
     if-ne v2, p0, :cond_43
 
-    .line 626
+    .line 635
     iget-object v2, p0, Lorg/telegram/ui/PhotoPickerActivity$5;->this$0:Lorg/telegram/ui/PhotoPickerActivity;
 
     iget-object v2, v2, Lorg/telegram/ui/PhotoPickerActivity;->commentTextView:Lorg/telegram/ui/Components/EditTextEmoji;
@@ -136,7 +136,7 @@
 
     sub-int/2addr v0, v2
 
-    .line 627
+    .line 636
     invoke-static {v0, v7}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
 
     move-result v2
@@ -152,7 +152,7 @@
 
     move v9, v0
 
-    .line 630
+    .line 639
     :goto_45
     invoke-static {v4}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
@@ -168,16 +168,16 @@
 
     const/4 v1, 0x1
 
-    .line 631
+    .line 640
     iput-boolean v1, p0, Lorg/telegram/ui/PhotoPickerActivity$5;->ignoreLayout:Z
 
-    .line 632
+    .line 641
     invoke-virtual {v0}, Lorg/telegram/ui/Components/EditTextEmoji;->hideEmojiView()V
 
-    .line 633
+    .line 642
     iput-boolean v3, p0, Lorg/telegram/ui/PhotoPickerActivity$5;->ignoreLayout:Z
 
-    .line 636
+    .line 645
     :cond_59
     sget-boolean v0, Lorg/telegram/messenger/SharedConfig;->smoothKeyboard:Z
 
@@ -195,10 +195,10 @@
 
     if-eqz v0, :cond_85
 
-    .line 637
+    .line 646
     iget-object v0, p0, Lorg/telegram/ui/PhotoPickerActivity$5;->this$0:Lorg/telegram/ui/PhotoPickerActivity;
 
-    invoke-static {v0}, Lorg/telegram/ui/PhotoPickerActivity;->access$2700(Lorg/telegram/ui/PhotoPickerActivity;)Landroid/view/View;
+    invoke-static {v0}, Lorg/telegram/ui/PhotoPickerActivity;->access$2800(Lorg/telegram/ui/PhotoPickerActivity;)Landroid/view/View;
 
     move-result-object v0
 
@@ -206,7 +206,7 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setTranslationY(F)V
 
-    .line 638
+    .line 647
     iget-object v0, p0, Lorg/telegram/ui/PhotoPickerActivity$5;->this$0:Lorg/telegram/ui/PhotoPickerActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/PhotoPickerActivity;->access$100(Lorg/telegram/ui/PhotoPickerActivity;)Lorg/telegram/ui/Components/RecyclerListView;
@@ -215,16 +215,16 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/RecyclerListView;->setTranslationY(F)V
 
-    .line 639
+    .line 648
     iget-object v0, p0, Lorg/telegram/ui/PhotoPickerActivity$5;->this$0:Lorg/telegram/ui/PhotoPickerActivity;
 
-    invoke-static {v0}, Lorg/telegram/ui/PhotoPickerActivity;->access$2200(Lorg/telegram/ui/PhotoPickerActivity;)Lorg/telegram/ui/Components/EmptyTextProgressView;
+    invoke-static {v0}, Lorg/telegram/ui/PhotoPickerActivity;->access$2200(Lorg/telegram/ui/PhotoPickerActivity;)Lorg/telegram/ui/Components/StickerEmptyView;
 
     move-result-object v0
 
     invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->setTranslationY(F)V
 
-    .line 642
+    .line 651
     :cond_85
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getChildCount()I
 
@@ -235,14 +235,14 @@
     :goto_8a
     if-ge v11, v10, :cond_114
 
-    .line 644
+    .line 653
     invoke-virtual {p0, v11}, Landroid/widget/FrameLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v1
 
     if-eqz v1, :cond_110
 
-    .line 645
+    .line 654
     invoke-virtual {v1}, Landroid/view/View;->getVisibility()I
 
     move-result v0
@@ -253,7 +253,7 @@
 
     goto/16 :goto_110
 
-    .line 648
+    .line 657
     :cond_9c
     iget-object v0, p0, Lorg/telegram/ui/PhotoPickerActivity$5;->this$0:Lorg/telegram/ui/PhotoPickerActivity;
 
@@ -267,7 +267,7 @@
 
     if-eqz v0, :cond_108
 
-    .line 649
+    .line 658
     sget-boolean v0, Lorg/telegram/messenger/AndroidUtilities;->isInMultiwindow:Z
 
     if-nez v0, :cond_c5
@@ -280,7 +280,7 @@
 
     goto :goto_c5
 
-    .line 656
+    .line 665
     :cond_b3
     invoke-static {v6, v7}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
 
@@ -300,7 +300,7 @@
 
     goto :goto_110
 
-    .line 650
+    .line 659
     :cond_c5
     :goto_c5
     invoke-static {}, Lorg/telegram/messenger/AndroidUtilities;->isTablet()Z
@@ -309,7 +309,7 @@
 
     if-eqz v0, :cond_f3
 
-    .line 651
+    .line 660
     invoke-static {v6, v7}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
 
     move-result v0
@@ -354,7 +354,7 @@
 
     goto :goto_110
 
-    .line 653
+    .line 662
     :cond_f3
     invoke-static {v6, v7}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
 
@@ -389,7 +389,7 @@
 
     move v4, v8
 
-    .line 659
+    .line 668
     invoke-virtual/range {v0 .. v5}, Landroid/widget/FrameLayout;->measureChildWithMargins(Landroid/view/View;IIII)V
 
     :cond_110
@@ -407,17 +407,17 @@
 .method protected onLayout(ZIIII)V
     .registers 15
 
-    .line 666
+    .line 675
     iget p1, p0, Lorg/telegram/ui/PhotoPickerActivity$5;->lastNotifyWidth:I
 
     sub-int/2addr p4, p2
 
     if-eq p1, p4, :cond_35
 
-    .line 667
+    .line 676
     iput p4, p0, Lorg/telegram/ui/PhotoPickerActivity$5;->lastNotifyWidth:I
 
-    .line 668
+    .line 677
     iget-object p1, p0, Lorg/telegram/ui/PhotoPickerActivity$5;->this$0:Lorg/telegram/ui/PhotoPickerActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/PhotoPickerActivity;->access$1400(Lorg/telegram/ui/PhotoPickerActivity;)Lorg/telegram/ui/PhotoPickerActivity$ListAdapter;
@@ -426,7 +426,7 @@
 
     if-eqz p1, :cond_18
 
-    .line 669
+    .line 678
     iget-object p1, p0, Lorg/telegram/ui/PhotoPickerActivity$5;->this$0:Lorg/telegram/ui/PhotoPickerActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/PhotoPickerActivity;->access$1400(Lorg/telegram/ui/PhotoPickerActivity;)Lorg/telegram/ui/PhotoPickerActivity$ListAdapter;
@@ -435,11 +435,11 @@
 
     invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->notifyDataSetChanged()V
 
-    .line 671
+    .line 680
     :cond_18
     iget-object p1, p0, Lorg/telegram/ui/PhotoPickerActivity$5;->this$0:Lorg/telegram/ui/PhotoPickerActivity;
 
-    invoke-static {p1}, Lorg/telegram/ui/PhotoPickerActivity;->access$2800(Lorg/telegram/ui/PhotoPickerActivity;)Lorg/telegram/ui/ActionBar/ActionBarPopupWindow;
+    invoke-static {p1}, Lorg/telegram/ui/PhotoPickerActivity;->access$2900(Lorg/telegram/ui/PhotoPickerActivity;)Lorg/telegram/ui/ActionBar/ActionBarPopupWindow;
 
     move-result-object p1
 
@@ -447,7 +447,7 @@
 
     iget-object p1, p0, Lorg/telegram/ui/PhotoPickerActivity$5;->this$0:Lorg/telegram/ui/PhotoPickerActivity;
 
-    invoke-static {p1}, Lorg/telegram/ui/PhotoPickerActivity;->access$2800(Lorg/telegram/ui/PhotoPickerActivity;)Lorg/telegram/ui/ActionBar/ActionBarPopupWindow;
+    invoke-static {p1}, Lorg/telegram/ui/PhotoPickerActivity;->access$2900(Lorg/telegram/ui/PhotoPickerActivity;)Lorg/telegram/ui/ActionBar/ActionBarPopupWindow;
 
     move-result-object p1
 
@@ -457,22 +457,22 @@
 
     if-eqz p1, :cond_35
 
-    .line 672
+    .line 681
     iget-object p1, p0, Lorg/telegram/ui/PhotoPickerActivity$5;->this$0:Lorg/telegram/ui/PhotoPickerActivity;
 
-    invoke-static {p1}, Lorg/telegram/ui/PhotoPickerActivity;->access$2800(Lorg/telegram/ui/PhotoPickerActivity;)Lorg/telegram/ui/ActionBar/ActionBarPopupWindow;
+    invoke-static {p1}, Lorg/telegram/ui/PhotoPickerActivity;->access$2900(Lorg/telegram/ui/PhotoPickerActivity;)Lorg/telegram/ui/ActionBar/ActionBarPopupWindow;
 
     move-result-object p1
 
     invoke-virtual {p1}, Lorg/telegram/ui/ActionBar/ActionBarPopupWindow;->dismiss()V
 
-    .line 675
+    .line 684
     :cond_35
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getChildCount()I
 
     move-result p1
 
-    .line 677
+    .line 686
     sget-boolean p2, Lorg/telegram/messenger/SharedConfig;->smoothKeyboard:Z
 
     const/4 v0, 0x0
@@ -488,7 +488,7 @@
 
     move-result p2
 
-    .line 678
+    .line 687
     :goto_44
     iget-object v1, p0, Lorg/telegram/ui/PhotoPickerActivity$5;->this$0:Lorg/telegram/ui/PhotoPickerActivity;
 
@@ -535,19 +535,19 @@
     :cond_6d
     const/4 v1, 0x0
 
-    .line 679
+    .line 688
     :goto_6e
     invoke-virtual {p0, v1}, Lorg/telegram/ui/Components/SizeNotifierFrameLayout;->setBottomClip(I)V
 
     :goto_71
     if-ge v0, p1, :cond_117
 
-    .line 682
+    .line 691
     invoke-virtual {p0, v0}, Landroid/widget/FrameLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v2
 
-    .line 683
+    .line 692
     invoke-virtual {v2}, Landroid/view/View;->getVisibility()I
 
     move-result v3
@@ -558,7 +558,7 @@
 
     goto/16 :goto_113
 
-    .line 686
+    .line 695
     :cond_81
     invoke-virtual {v2}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
@@ -566,17 +566,17 @@
 
     check-cast v3, Landroid/widget/FrameLayout$LayoutParams;
 
-    .line 688
+    .line 697
     invoke-virtual {v2}, Landroid/view/View;->getMeasuredWidth()I
 
     move-result v4
 
-    .line 689
+    .line 698
     invoke-virtual {v2}, Landroid/view/View;->getMeasuredHeight()I
 
     move-result v5
 
-    .line 694
+    .line 703
     iget v6, v3, Landroid/widget/FrameLayout$LayoutParams;->gravity:I
 
     const/4 v7, -0x1
@@ -600,7 +600,7 @@
 
     if-eq v7, v8, :cond_aa
 
-    .line 711
+    .line 720
     iget v7, v3, Landroid/widget/FrameLayout$LayoutParams;->leftMargin:I
 
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getPaddingLeft()I
@@ -614,7 +614,7 @@
     :cond_aa
     sub-int v7, p4, v4
 
-    .line 707
+    .line 716
     iget v8, v3, Landroid/widget/FrameLayout$LayoutParams;->rightMargin:I
 
     sub-int/2addr v7, v8
@@ -628,7 +628,7 @@
     :cond_b4
     sub-int v7, p4, v4
 
-    .line 704
+    .line 713
     div-int/lit8 v7, v7, 0x2
 
     iget v8, v3, Landroid/widget/FrameLayout$LayoutParams;->leftMargin:I
@@ -653,7 +653,7 @@
 
     if-eq v6, v8, :cond_cd
 
-    .line 725
+    .line 734
     iget v3, v3, Landroid/widget/FrameLayout$LayoutParams;->topMargin:I
 
     goto :goto_e9
@@ -665,12 +665,12 @@
 
     sub-int/2addr v6, v5
 
-    .line 722
+    .line 731
     iget v3, v3, Landroid/widget/FrameLayout$LayoutParams;->bottomMargin:I
 
     goto :goto_e7
 
-    .line 716
+    .line 725
     :cond_d4
     iget v3, v3, Landroid/widget/FrameLayout$LayoutParams;->topMargin:I
 
@@ -689,7 +689,7 @@
 
     sub-int/2addr v6, v5
 
-    .line 719
+    .line 728
     div-int/lit8 v6, v6, 0x2
 
     iget v8, v3, Landroid/widget/FrameLayout$LayoutParams;->topMargin:I
@@ -701,7 +701,7 @@
     :goto_e7
     sub-int v3, v6, v3
 
-    .line 728
+    .line 737
     :goto_e9
     iget-object v6, p0, Lorg/telegram/ui/PhotoPickerActivity$5;->this$0:Lorg/telegram/ui/PhotoPickerActivity;
 
@@ -715,14 +715,14 @@
 
     if-eqz v6, :cond_10e
 
-    .line 729
+    .line 738
     invoke-static {}, Lorg/telegram/messenger/AndroidUtilities;->isTablet()Z
 
     move-result v3
 
     if-eqz v3, :cond_104
 
-    .line 730
+    .line 739
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getMeasuredHeight()I
 
     move-result v3
@@ -733,7 +733,7 @@
 
     goto :goto_10d
 
-    .line 732
+    .line 741
     :cond_104
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getMeasuredHeight()I
 
@@ -753,7 +753,7 @@
 
     add-int/2addr v5, v3
 
-    .line 735
+    .line 744
     invoke-virtual {v2, v7, v3, v4, v5}, Landroid/view/View;->layout(IIII)V
 
     :goto_113
@@ -761,7 +761,7 @@
 
     goto/16 :goto_71
 
-    .line 738
+    .line 747
     :cond_117
     invoke-virtual {p0}, Lorg/telegram/ui/Components/SizeNotifierFrameLayout;->notifyHeightChanged()V
 
@@ -771,17 +771,17 @@
 .method protected onMeasure(II)V
     .registers 8
 
-    .line 588
+    .line 597
     invoke-static {p2}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result p2
 
-    .line 590
+    .line 599
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result v0
 
-    .line 591
+    .line 600
     invoke-static {}, Lorg/telegram/messenger/AndroidUtilities;->isTablet()Z
 
     move-result v1
@@ -790,14 +790,14 @@
 
     if-eqz v1, :cond_15
 
-    .line 592
+    .line 601
     iget-object v1, p0, Lorg/telegram/ui/PhotoPickerActivity$5;->this$0:Lorg/telegram/ui/PhotoPickerActivity;
 
-    invoke-static {v1, v2}, Lorg/telegram/ui/PhotoPickerActivity;->access$2502(Lorg/telegram/ui/PhotoPickerActivity;I)I
+    invoke-static {v1, v2}, Lorg/telegram/ui/PhotoPickerActivity;->access$2602(Lorg/telegram/ui/PhotoPickerActivity;I)I
 
     goto :goto_29
 
-    .line 593
+    .line 602
     :cond_15
     sget-object v1, Lorg/telegram/messenger/AndroidUtilities;->displaySize:Landroid/graphics/Point;
 
@@ -807,28 +807,28 @@
 
     if-le v3, v1, :cond_23
 
-    .line 594
+    .line 603
     iget-object v1, p0, Lorg/telegram/ui/PhotoPickerActivity$5;->this$0:Lorg/telegram/ui/PhotoPickerActivity;
 
-    invoke-static {v1, v2}, Lorg/telegram/ui/PhotoPickerActivity;->access$2502(Lorg/telegram/ui/PhotoPickerActivity;I)I
+    invoke-static {v1, v2}, Lorg/telegram/ui/PhotoPickerActivity;->access$2602(Lorg/telegram/ui/PhotoPickerActivity;I)I
 
     goto :goto_29
 
-    .line 596
+    .line 605
     :cond_23
     iget-object v1, p0, Lorg/telegram/ui/PhotoPickerActivity$5;->this$0:Lorg/telegram/ui/PhotoPickerActivity;
 
     const/4 v2, 0x3
 
-    invoke-static {v1, v2}, Lorg/telegram/ui/PhotoPickerActivity;->access$2502(Lorg/telegram/ui/PhotoPickerActivity;I)I
+    invoke-static {v1, v2}, Lorg/telegram/ui/PhotoPickerActivity;->access$2602(Lorg/telegram/ui/PhotoPickerActivity;I)I
 
     :goto_29
     const/4 v1, 0x1
 
-    .line 599
+    .line 608
     iput-boolean v1, p0, Lorg/telegram/ui/PhotoPickerActivity$5;->ignoreLayout:Z
 
-    .line 600
+    .line 609
     iget-object v2, p0, Lorg/telegram/ui/PhotoPickerActivity$5;->this$0:Lorg/telegram/ui/PhotoPickerActivity;
 
     const/high16 v3, 0x41400000    # 12.0f
@@ -849,42 +849,42 @@
 
     iget-object v3, p0, Lorg/telegram/ui/PhotoPickerActivity$5;->this$0:Lorg/telegram/ui/PhotoPickerActivity;
 
-    invoke-static {v3}, Lorg/telegram/ui/PhotoPickerActivity;->access$2500(Lorg/telegram/ui/PhotoPickerActivity;)I
+    invoke-static {v3}, Lorg/telegram/ui/PhotoPickerActivity;->access$2600(Lorg/telegram/ui/PhotoPickerActivity;)I
 
     move-result v3
 
     div-int/2addr v0, v3
 
-    invoke-static {v2, v0}, Lorg/telegram/ui/PhotoPickerActivity;->access$2602(Lorg/telegram/ui/PhotoPickerActivity;I)I
+    invoke-static {v2, v0}, Lorg/telegram/ui/PhotoPickerActivity;->access$2702(Lorg/telegram/ui/PhotoPickerActivity;I)I
 
-    .line 602
+    .line 611
     iget v0, p0, Lorg/telegram/ui/PhotoPickerActivity$5;->lastItemSize:I
 
     iget-object v2, p0, Lorg/telegram/ui/PhotoPickerActivity$5;->this$0:Lorg/telegram/ui/PhotoPickerActivity;
 
-    invoke-static {v2}, Lorg/telegram/ui/PhotoPickerActivity;->access$2600(Lorg/telegram/ui/PhotoPickerActivity;)I
+    invoke-static {v2}, Lorg/telegram/ui/PhotoPickerActivity;->access$2700(Lorg/telegram/ui/PhotoPickerActivity;)I
 
     move-result v2
 
     if-eq v0, v2, :cond_60
 
-    .line 603
+    .line 612
     iget-object v0, p0, Lorg/telegram/ui/PhotoPickerActivity$5;->this$0:Lorg/telegram/ui/PhotoPickerActivity;
 
-    invoke-static {v0}, Lorg/telegram/ui/PhotoPickerActivity;->access$2600(Lorg/telegram/ui/PhotoPickerActivity;)I
+    invoke-static {v0}, Lorg/telegram/ui/PhotoPickerActivity;->access$2700(Lorg/telegram/ui/PhotoPickerActivity;)I
 
     move-result v0
 
     iput v0, p0, Lorg/telegram/ui/PhotoPickerActivity$5;->lastItemSize:I
 
-    .line 604
+    .line 613
     new-instance v0, Lorg/telegram/ui/PhotoPickerActivity$5$$ExternalSyntheticLambda0;
 
     invoke-direct {v0, p0}, Lorg/telegram/ui/PhotoPickerActivity$5$$ExternalSyntheticLambda0;-><init>(Lorg/telegram/ui/PhotoPickerActivity$5;)V
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 606
+    .line 615
     :cond_60
     iget-object v0, p0, Lorg/telegram/ui/PhotoPickerActivity$5;->this$0:Lorg/telegram/ui/PhotoPickerActivity;
 
@@ -894,7 +894,7 @@
 
     if-eqz v0, :cond_72
 
-    .line 607
+    .line 616
     iget-object v0, p0, Lorg/telegram/ui/PhotoPickerActivity$5;->this$0:Lorg/telegram/ui/PhotoPickerActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/PhotoPickerActivity;->access$1300(Lorg/telegram/ui/PhotoPickerActivity;)Landroidx/recyclerview/widget/GridLayoutManager;
@@ -905,7 +905,7 @@
 
     goto :goto_99
 
-    .line 609
+    .line 618
     :cond_72
     iget-object v0, p0, Lorg/telegram/ui/PhotoPickerActivity$5;->this$0:Lorg/telegram/ui/PhotoPickerActivity;
 
@@ -915,13 +915,13 @@
 
     iget-object v2, p0, Lorg/telegram/ui/PhotoPickerActivity$5;->this$0:Lorg/telegram/ui/PhotoPickerActivity;
 
-    invoke-static {v2}, Lorg/telegram/ui/PhotoPickerActivity;->access$2600(Lorg/telegram/ui/PhotoPickerActivity;)I
+    invoke-static {v2}, Lorg/telegram/ui/PhotoPickerActivity;->access$2700(Lorg/telegram/ui/PhotoPickerActivity;)I
 
     move-result v2
 
     iget-object v3, p0, Lorg/telegram/ui/PhotoPickerActivity$5;->this$0:Lorg/telegram/ui/PhotoPickerActivity;
 
-    invoke-static {v3}, Lorg/telegram/ui/PhotoPickerActivity;->access$2500(Lorg/telegram/ui/PhotoPickerActivity;)I
+    invoke-static {v3}, Lorg/telegram/ui/PhotoPickerActivity;->access$2600(Lorg/telegram/ui/PhotoPickerActivity;)I
 
     move-result v3
 
@@ -935,7 +935,7 @@
 
     iget-object v4, p0, Lorg/telegram/ui/PhotoPickerActivity$5;->this$0:Lorg/telegram/ui/PhotoPickerActivity;
 
-    invoke-static {v4}, Lorg/telegram/ui/PhotoPickerActivity;->access$2500(Lorg/telegram/ui/PhotoPickerActivity;)I
+    invoke-static {v4}, Lorg/telegram/ui/PhotoPickerActivity;->access$2600(Lorg/telegram/ui/PhotoPickerActivity;)I
 
     move-result v4
 
@@ -950,12 +950,12 @@
     :goto_99
     const/4 v0, 0x0
 
-    .line 612
+    .line 621
     iput-boolean v0, p0, Lorg/telegram/ui/PhotoPickerActivity$5;->ignoreLayout:Z
 
     const/high16 v0, 0x40000000    # 2.0f
 
-    .line 613
+    .line 622
     invoke-static {p2, v0}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
 
     move-result p2
@@ -968,14 +968,14 @@
 .method public requestLayout()V
     .registers 2
 
-    .line 743
+    .line 752
     iget-boolean v0, p0, Lorg/telegram/ui/PhotoPickerActivity$5;->ignoreLayout:Z
 
     if-eqz v0, :cond_5
 
     return-void
 
-    .line 746
+    .line 755
     :cond_5
     invoke-super {p0}, Landroid/widget/FrameLayout;->requestLayout()V
 

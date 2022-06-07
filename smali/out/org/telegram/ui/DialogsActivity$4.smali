@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/DialogsActivity;)V
     .registers 2
 
-    .line 2223
+    .line 2265
     iput-object p1, p0, Lorg/telegram/ui/DialogsActivity$4;->this$0:Lorg/telegram/ui/DialogsActivity;
 
     invoke-direct {p0}, Landroid/graphics/Paint;-><init>()V
@@ -35,22 +35,22 @@
 .method public setAlpha(I)V
     .registers 2
 
-    .line 2226
+    .line 2268
     invoke-super {p0, p1}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 2227
+    .line 2269
     iget-object p1, p0, Lorg/telegram/ui/DialogsActivity$4;->this$0:Lorg/telegram/ui/DialogsActivity;
 
-    invoke-static {p1}, Lorg/telegram/ui/DialogsActivity;->access$19700(Lorg/telegram/ui/DialogsActivity;)Landroid/view/View;
+    invoke-static {p1}, Lorg/telegram/ui/DialogsActivity;->access$20100(Lorg/telegram/ui/DialogsActivity;)Landroid/view/View;
 
     move-result-object p1
 
     if-eqz p1, :cond_14
 
-    .line 2228
+    .line 2270
     iget-object p1, p0, Lorg/telegram/ui/DialogsActivity$4;->this$0:Lorg/telegram/ui/DialogsActivity;
 
-    invoke-static {p1}, Lorg/telegram/ui/DialogsActivity;->access$19800(Lorg/telegram/ui/DialogsActivity;)Landroid/view/View;
+    invoke-static {p1}, Lorg/telegram/ui/DialogsActivity;->access$20200(Lorg/telegram/ui/DialogsActivity;)Landroid/view/View;
 
     move-result-object p1
 

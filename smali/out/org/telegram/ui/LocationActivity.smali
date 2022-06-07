@@ -1337,7 +1337,7 @@
     .line 1637
     iget-object p1, v1, Lorg/telegram/ui/LocationActivity$LiveLocation;->directionMarker:Lcom/google/android/gms/maps/model/Marker;
 
-    const v0, 0x7f0701cf
+    const v0, 0x7f07019e
 
     invoke-static {v0}, Lcom/google/android/gms/maps/model/BitmapDescriptorFactory;->fromResource(I)Lcom/google/android/gms/maps/model/BitmapDescriptor;
 
@@ -1359,7 +1359,7 @@
     .line 1641
     iget-object p1, v1, Lorg/telegram/ui/LocationActivity$LiveLocation;->directionMarker:Lcom/google/android/gms/maps/model/Marker;
 
-    const v0, 0x7f0701ce
+    const v0, 0x7f07019d
 
     invoke-static {v0}, Lcom/google/android/gms/maps/model/BitmapDescriptorFactory;->fromResource(I)Lcom/google/android/gms/maps/model/BitmapDescriptor;
 
@@ -1620,7 +1620,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0701ce
+    const v1, 0x7f07019d
 
     .line 1687
     invoke-static {v1}, Lcom/google/android/gms/maps/model/BitmapDescriptorFactory;->fromResource(I)Lcom/google/android/gms/maps/model/BitmapDescriptor;
@@ -1741,7 +1741,7 @@
 
     const-string v2, "GpsDisabledAlertText"
 
-    const v3, 0x7f0e0802
+    const v3, 0x7f0e085a
 
     .line 1819
     invoke-static {v2, v3}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -1752,7 +1752,7 @@
 
     const-string v2, "ConnectingToProxyEnable"
 
-    const v3, 0x7f0e04b6
+    const v3, 0x7f0e0505
 
     .line 1820
     invoke-static {v2, v3}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -1767,7 +1767,7 @@
 
     const-string v2, "Cancel"
 
-    const v3, 0x7f0e0331
+    const v3, 0x7f0e036d
 
     .line 1830
     invoke-static {v2, v3}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -2126,7 +2126,7 @@
 
     move-result-object v7
 
-    const v8, 0x7f0701d0
+    const v8, 0x7f07019f
 
     invoke-virtual {v7, v8}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -4476,7 +4476,7 @@
     .line 896
     iget-object v0, p0, Lorg/telegram/ui/LocationActivity;->proximityButton:Landroid/widget/ImageView;
 
-    const v1, 0x7f07027d
+    const v1, 0x7f07025e
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -4587,7 +4587,7 @@
     .line 885
     iget-object v0, p0, Lorg/telegram/ui/LocationActivity;->proximityButton:Landroid/widget/ImageView;
 
-    const v3, 0x7f07027c
+    const v3, 0x7f07025d
 
     invoke-virtual {v0, v3}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -5458,7 +5458,7 @@
 
     invoke-direct {p2, v0}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    const v0, 0x7f0e102d
+    const v0, 0x7f0e10eb
 
     const-string v1, "ShareLocationAlertTitle"
 
@@ -5469,7 +5469,7 @@
 
     invoke-virtual {p2, v0}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const v0, 0x7f0e102c
+    const v0, 0x7f0e10ea
 
     const-string v1, "ShareLocationAlertText"
 
@@ -5480,7 +5480,7 @@
 
     invoke-virtual {p2, v0}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const v0, 0x7f0e102b
+    const v0, 0x7f0e10e9
 
     const-string v1, "ShareLocationAlertButton"
 
@@ -5495,7 +5495,7 @@
 
     invoke-virtual {p2, v0, v1}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const p1, 0x7f0e0331
+    const p1, 0x7f0e036d
 
     const-string p3, "Cancel"
 
@@ -5528,7 +5528,7 @@
     .line 1481
     iget-object p2, p0, Lorg/telegram/ui/LocationActivity;->proximityButton:Landroid/widget/ImageView;
 
-    const v0, 0x7f07027d
+    const v0, 0x7f07025e
 
     invoke-virtual {p2, v0}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -5814,7 +5814,7 @@
     .line 1940
     iget-object v1, p0, Lorg/telegram/ui/LocationActivity;->hintView:Lorg/telegram/ui/Components/HintView;
 
-    const v3, 0x7f0e0e2d
+    const v3, 0x7f0e0ed6
 
     new-array v5, v4, [Ljava/lang/Object;
 
@@ -5838,7 +5838,7 @@
     :cond_57
     iget-object v0, p0, Lorg/telegram/ui/LocationActivity;->hintView:Lorg/telegram/ui/Components/HintView;
 
-    const v1, 0x7f0e0e2c
+    const v1, 0x7f0e0ed5
 
     const-string v2, "ProximityTooltioGroup"
 
@@ -6399,7 +6399,7 @@
 
     move-result-object v4
 
-    const v5, 0x7f0701cc
+    const v5, 0x7f07019b
 
     invoke-static {v5}, Lcom/google/android/gms/maps/model/BitmapDescriptorFactory;->fromResource(I)Lcom/google/android/gms/maps/model/BitmapDescriptor;
 
@@ -7361,7 +7361,7 @@
     .line 1544
     iget-object p2, p0, Lorg/telegram/ui/LocationActivity;->proximityButton:Landroid/widget/ImageView;
 
-    const v0, 0x7f07027d
+    const v0, 0x7f07025e
 
     invoke-virtual {p2, v0}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -7444,7 +7444,7 @@
 
     if-eqz p1, :cond_2e
 
-    const p1, 0x7f0e0d3e
+    const p1, 0x7f0e0dcc
 
     const-string v1, "PermissionNoLocationNavigation"
 
@@ -7458,7 +7458,7 @@
     goto :goto_3a
 
     :cond_2e
-    const p1, 0x7f0e0d3d
+    const p1, 0x7f0e0dcb
 
     const-string v1, "PermissionNoLocationFriends"
 
@@ -7470,7 +7470,7 @@
     invoke-virtual {v0, p1}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
     :goto_3a
-    const p1, 0x7f0e0d42
+    const p1, 0x7f0e0dd0
 
     const-string v1, "PermissionOpenSettings"
 
@@ -7485,7 +7485,7 @@
 
     invoke-virtual {v0, p1, v1}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setNegativeButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const p1, 0x7f0e0bae
+    const p1, 0x7f0e0c38
 
     const-string v1, "OK"
 
@@ -8533,7 +8533,7 @@
     .line 535
     iget-object v1, v8, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
-    const v4, 0x7f070140
+    const v4, 0x7f070109
 
     invoke-virtual {v1, v4}, Lorg/telegram/ui/ActionBar/ActionBar;->setBackButtonImage(I)V
 
@@ -8586,7 +8586,7 @@
     .line 563
     iget-object v1, v8, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
-    const v3, 0x7f0e03f8
+    const v3, 0x7f0e0437
 
     const-string v4, "ChatLocation"
 
@@ -8614,7 +8614,7 @@
     .line 566
     iget-object v1, v8, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
-    const v3, 0x7f0e01ed
+    const v3, 0x7f0e0222
 
     const-string v4, "AttachLiveLocation"
 
@@ -8647,7 +8647,7 @@
     .line 569
     iget-object v3, v8, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
-    const v4, 0x7f0e104a
+    const v4, 0x7f0e1108
 
     const-string v5, "SharedPlace"
 
@@ -8663,7 +8663,7 @@
     :cond_127
     iget-object v3, v8, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
-    const v4, 0x7f0e03f8
+    const v4, 0x7f0e0437
 
     const-string v5, "ChatLocation"
 
@@ -8674,7 +8674,7 @@
     invoke-virtual {v3, v4}, Lorg/telegram/ui/ActionBar/ActionBar;->setTitle(Ljava/lang/CharSequence;)V
 
     :goto_135
-    const v3, 0x7f070147
+    const v3, 0x7f07010d
 
     .line 573
     invoke-virtual {v1, v10, v3}, Lorg/telegram/ui/ActionBar/ActionBarMenu;->addItem(II)Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
@@ -8683,9 +8683,9 @@
 
     iput-object v1, v8, Lorg/telegram/ui/LocationActivity;->otherItem:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
-    const v3, 0x7f070298
+    const v3, 0x7f070286
 
-    const v4, 0x7f0e0bc8
+    const v4, 0x7f0e0c52
 
     const-string v5, "OpenInExternalApp"
 
@@ -8714,9 +8714,9 @@
 
     const/4 v3, 0x5
 
-    const v4, 0x7f070208
+    const v4, 0x7f07025c
 
-    const v5, 0x7f0e0fda
+    const v5, 0x7f0e1097
 
     const-string v6, "SendLiveLocationMenu"
 
@@ -8730,7 +8730,7 @@
     :cond_16b
     iget-object v1, v8, Lorg/telegram/ui/LocationActivity;->otherItem:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
-    const v3, 0x7f0e0033
+    const v3, 0x7f0e003e
 
     const-string v4, "AccDescrMoreOptions"
 
@@ -8746,7 +8746,7 @@
     :cond_17a
     iget-object v4, v8, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
-    const v5, 0x7f0e102a
+    const v5, 0x7f0e10e8
 
     const-string v6, "ShareLocation"
 
@@ -8768,7 +8768,7 @@
 
     iput-object v4, v8, Lorg/telegram/ui/LocationActivity;->overlayView:Lorg/telegram/ui/LocationActivity$MapOverlayView;
 
-    const v4, 0x7f07014a
+    const v4, 0x7f070110
 
     .line 586
     invoke-virtual {v1, v10, v4}, Lorg/telegram/ui/ActionBar/ActionBarMenu;->addItem(II)Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
@@ -8789,7 +8789,7 @@
 
     iput-object v1, v8, Lorg/telegram/ui/LocationActivity;->searchItem:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
-    const v4, 0x7f0e0f74
+    const v4, 0x7f0e1030
 
     const-string v5, "Search"
 
@@ -8803,7 +8803,7 @@
     .line 634
     iget-object v1, v8, Lorg/telegram/ui/LocationActivity;->searchItem:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
-    const v4, 0x7f0e0f74
+    const v4, 0x7f0e1030
 
     const-string v5, "Search"
 
@@ -8869,7 +8869,7 @@
 
     move-result-object v1
 
-    const v3, 0x7f0703b4
+    const v3, 0x7f0703b9
 
     invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -9048,7 +9048,7 @@
 
     move-result-object v2
 
-    const v13, 0x7f070356
+    const v13, 0x7f07036d
 
     invoke-virtual {v2, v13}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -9225,7 +9225,7 @@
     .line 720
     iget-object v1, v8, Lorg/telegram/ui/LocationActivity;->searchAreaButton:Lorg/telegram/ui/LocationActivity$SearchButton;
 
-    const v2, 0x7f0e0d8b
+    const v2, 0x7f0e0e1b
 
     const-string v3, "PlacesInThisArea"
 
@@ -9356,9 +9356,9 @@
     .line 737
     iget-object v1, v8, Lorg/telegram/ui/LocationActivity;->mapTypeButton:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
-    const v2, 0x7f07027e
+    const v2, 0x7f070260
 
-    const v3, 0x7f0e0994
+    const v3, 0x7f0e0a1b
 
     const-string v4, "Map"
 
@@ -9375,9 +9375,9 @@
 
     const/4 v2, 0x3
 
-    const v3, 0x7f0702c4
+    const v3, 0x7f0702d9
 
-    const v4, 0x7f0e0f54
+    const v4, 0x7f0e100c
 
     const-string v13, "Satellite"
 
@@ -9390,9 +9390,9 @@
     .line 739
     iget-object v1, v8, Lorg/telegram/ui/LocationActivity;->mapTypeButton:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
-    const v2, 0x7f070271
+    const v2, 0x7f070242
 
-    const v3, 0x7f0e0854
+    const v3, 0x7f0e08af
 
     const-string v4, "Hybrid"
 
@@ -9407,7 +9407,7 @@
     .line 740
     iget-object v1, v8, Lorg/telegram/ui/LocationActivity;->mapTypeButton:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
-    const v2, 0x7f0e0033
+    const v2, 0x7f0e003e
 
     const-string v3, "AccDescrMoreOptions"
 
@@ -9436,7 +9436,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f07010d
+    const v2, 0x7f0700e7
 
     const/16 v3, 0x15
 
@@ -9611,7 +9611,7 @@
     .line 762
     iget-object v1, v8, Lorg/telegram/ui/LocationActivity;->mapTypeButton:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
-    const v2, 0x7f0701c2
+    const v2, 0x7f070261
 
     invoke-virtual {v1, v2}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->setIcon(I)V
 
@@ -9711,7 +9711,7 @@
 
     move-result-object v2
 
-    const v10, 0x7f07010d
+    const v10, 0x7f0700e7
 
     invoke-virtual {v2, v10}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -9881,7 +9881,7 @@
     .line 800
     iget-object v1, v8, Lorg/telegram/ui/LocationActivity;->locationButton:Landroid/widget/ImageView;
 
-    const v2, 0x7f0701bf
+    const v2, 0x7f070203
 
     invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -9919,7 +9919,7 @@
     .line 804
     iget-object v1, v8, Lorg/telegram/ui/LocationActivity;->locationButton:Landroid/widget/ImageView;
 
-    const v2, 0x7f0e003b
+    const v2, 0x7f0e0047
 
     const-string v3, "AccDescrMyLocation"
 
@@ -10030,7 +10030,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f07010d
+    const v3, 0x7f0700e7
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -10212,7 +10212,7 @@
     .line 869
     iget-object v1, v8, Lorg/telegram/ui/LocationActivity;->proximityButton:Landroid/widget/ImageView;
 
-    const v2, 0x7f0e0030
+    const v2, 0x7f0e0035
 
     const-string v3, "AccDescrLocationNotify"
 
@@ -10366,7 +10366,7 @@
     .line 914
     iget-object v0, v8, Lorg/telegram/ui/LocationActivity;->proximityButton:Landroid/widget/ImageView;
 
-    const v1, 0x7f07027d
+    const v1, 0x7f07025e
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -10430,7 +10430,7 @@
     :cond_7ae
     iget-object v0, v8, Lorg/telegram/ui/LocationActivity;->proximityButton:Landroid/widget/ImageView;
 
-    const v1, 0x7f07027c
+    const v1, 0x7f07025d
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -10448,7 +10448,7 @@
     .line 910
     iget-object v0, v8, Lorg/telegram/ui/LocationActivity;->proximityButton:Landroid/widget/ImageView;
 
-    const v1, 0x7f07027c
+    const v1, 0x7f07025d
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -10567,7 +10567,7 @@
 
     iput-object v0, v8, Lorg/telegram/ui/LocationActivity;->emptyImageView:Landroid/widget/ImageView;
 
-    const v1, 0x7f0701c0
+    const v1, 0x7f070192
 
     .line 940
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
@@ -10650,7 +10650,7 @@
     .line 949
     iget-object v0, v8, Lorg/telegram/ui/LocationActivity;->emptyTitleTextView:Landroid/widget/TextView;
 
-    const v1, 0x7f0e0ace
+    const v1, 0x7f0e0b56
 
     const-string v2, "NoPlacesFound"
 
@@ -10940,7 +10940,7 @@
 
     invoke-direct {v0, v9}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    const v2, 0x7f0701bb
+    const v2, 0x7f07018e
 
     .line 1209
     invoke-virtual {v0, v2}, Landroid/widget/FrameLayout;->setBackgroundResource(I)V
@@ -11025,7 +11025,7 @@
 
     invoke-direct {v0, v9}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
 
-    const v2, 0x7f0701cc
+    const v2, 0x7f07019b
 
     .line 1223
     invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setImageResource(I)V
@@ -11555,7 +11555,7 @@
     .line 2424
     iget-object p3, p0, Lorg/telegram/ui/LocationActivity;->proximityButton:Landroid/widget/ImageView;
 
-    const v2, 0x7f07027c
+    const v2, 0x7f07025d
 
     invoke-virtual {p3, v2}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -11760,7 +11760,7 @@
     .line 2460
     iget-object v3, v5, Lorg/telegram/ui/LocationActivity$LiveLocation;->directionMarker:Lcom/google/android/gms/maps/model/Marker;
 
-    const v4, 0x7f0701cf
+    const v4, 0x7f07019e
 
     invoke-static {v4}, Lcom/google/android/gms/maps/model/BitmapDescriptorFactory;->fromResource(I)Lcom/google/android/gms/maps/model/BitmapDescriptor;
 
@@ -11789,7 +11789,7 @@
     .line 2466
     iget-object v3, v5, Lorg/telegram/ui/LocationActivity$LiveLocation;->directionMarker:Lcom/google/android/gms/maps/model/Marker;
 
-    const v4, 0x7f0701ce
+    const v4, 0x7f07019d
 
     invoke-static {v4}, Lcom/google/android/gms/maps/model/BitmapDescriptorFactory;->fromResource(I)Lcom/google/android/gms/maps/model/BitmapDescriptor;
 

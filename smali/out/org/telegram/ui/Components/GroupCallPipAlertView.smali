@@ -435,13 +435,13 @@
 
     const-string v2, "VoipGroupLeave"
 
-    const v3, 0x7f0e1332
+    const v3, 0x7f0e1400
 
     invoke-static {v2, v3}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v16
 
-    const v11, 0x7f070098
+    const v11, 0x7f07007b
 
     const/4 v12, -0x1
 
@@ -830,7 +830,7 @@
     .line 351
     iget-object v5, v0, Lorg/telegram/ui/Components/GroupCallPipAlertView;->soundButton:Lorg/telegram/ui/Components/voip/VoIPToggleButton;
 
-    const v6, 0x7f070095
+    const v6, 0x7f070078
 
     const/4 v7, -0x1
 
@@ -840,7 +840,7 @@
 
     const/4 v10, 0x1
 
-    const v2, 0x7f0e12c1
+    const v2, 0x7f0e138f
 
     const-string v3, "VoipAudioRoutingBluetooth"
 
@@ -857,7 +857,7 @@
     goto :goto_98
 
     :cond_45
-    const v2, 0x7f0e13ae
+    const v2, 0x7f0e147c
 
     const-string v4, "VoipSpeaker"
 
@@ -866,7 +866,7 @@
     .line 353
     iget-object v5, v0, Lorg/telegram/ui/Components/GroupCallPipAlertView;->soundButton:Lorg/telegram/ui/Components/voip/VoIPToggleButton;
 
-    const v6, 0x7f0700a3
+    const v6, 0x7f070086
 
     const/4 v7, -0x1
 
@@ -899,7 +899,7 @@
     .line 356
     iget-object v5, v0, Lorg/telegram/ui/Components/GroupCallPipAlertView;->soundButton:Lorg/telegram/ui/Components/voip/VoIPToggleButton;
 
-    const v6, 0x7f07009a
+    const v6, 0x7f07007d
 
     const/4 v7, -0x1
 
@@ -909,7 +909,7 @@
 
     const/4 v10, 0x1
 
-    const v2, 0x7f0e12c3
+    const v2, 0x7f0e1391    # 1.8885197E38f
 
     const-string v3, "VoipAudioRoutingHeadset"
 
@@ -929,7 +929,7 @@
     :cond_83
     iget-object v5, v0, Lorg/telegram/ui/Components/GroupCallPipAlertView;->soundButton:Lorg/telegram/ui/Components/voip/VoIPToggleButton;
 
-    const v6, 0x7f0700a3
+    const v6, 0x7f070086
 
     const/4 v7, -0x1
 
@@ -962,7 +962,7 @@
     .line 363
     iget-object v5, v0, Lorg/telegram/ui/Components/GroupCallPipAlertView;->muteButton:Lorg/telegram/ui/Components/voip/VoIPToggleButton;
 
-    const v6, 0x7f0700a5
+    const v6, 0x7f070088
 
     const/4 v7, -0x1
 
@@ -976,7 +976,7 @@
 
     const/4 v10, 0x1
 
-    const v1, 0x7f0e137e
+    const v1, 0x7f0e144c
 
     const-string v2, "VoipMutedByAdminShort"
 
@@ -996,7 +996,7 @@
     :cond_bf
     iget-object v5, v0, Lorg/telegram/ui/Components/GroupCallPipAlertView;->muteButton:Lorg/telegram/ui/Components/voip/VoIPToggleButton;
 
-    const v6, 0x7f0700a5
+    const v6, 0x7f070088
 
     const/4 v7, -0x1
 
@@ -1034,14 +1034,14 @@
 
     if-eqz v2, :cond_eb
 
-    const v2, 0x7f0e13b5
+    const v2, 0x7f0e1483
 
     const-string v3, "VoipUnmute"
 
     goto :goto_f0
 
     :cond_eb
-    const v2, 0x7f0e137b
+    const v2, 0x7f0e1449
 
     const-string v3, "VoipMute"
 
@@ -1070,19 +1070,19 @@
 .end method
 
 .method private updateMembersCount()V
-    .registers 4
+    .registers 5
 
     .line 326
     invoke-static {}, Lorg/telegram/messenger/voip/VoIPService;->getSharedInstance()Lorg/telegram/messenger/voip/VoIPService;
 
     move-result-object v0
 
-    if-eqz v0, :cond_47
+    if-eqz v0, :cond_4a
 
     .line 327
     iget-object v1, v0, Lorg/telegram/messenger/voip/VoIPService;->groupCall:Lorg/telegram/messenger/ChatObject$Call;
 
-    if-eqz v1, :cond_47
+    if-eqz v1, :cond_4a
 
     .line 328
     invoke-virtual {v0}, Lorg/telegram/messenger/voip/VoIPService;->getCallState()I
@@ -1116,7 +1116,7 @@
     :cond_20
     iget-object v0, p0, Lorg/telegram/ui/Components/GroupCallPipAlertView;->subtitleView:Landroid/widget/TextView;
 
-    const v1, 0x7f0e1315
+    const v1, 0x7f0e13e3
 
     const-string v2, "VoipGroupConnecting"
 
@@ -1126,7 +1126,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    goto :goto_47
+    goto :goto_4a
 
     .line 332
     :cond_2f
@@ -1150,14 +1150,18 @@
     :goto_3e
     iget v0, v0, Lorg/telegram/tgnet/TLRPC$GroupCall;->participants_count:I
 
-    invoke-static {v2, v0}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    const/4 v3, 0x0
+
+    new-array v3, v3, [Ljava/lang/Object;
+
+    invoke-static {v2, v0, v3}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
     invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    :cond_47
-    :goto_47
+    :cond_4a
+    :goto_4a
     return-void
 .end method
 

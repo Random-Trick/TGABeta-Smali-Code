@@ -25,7 +25,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/AudioPlayerAlert$2;)V
     .registers 2
 
-    .line 411
+    .line 412
     iput-object p1, p0, Lorg/telegram/ui/Components/AudioPlayerAlert$2$1;->this$1:Lorg/telegram/ui/Components/AudioPlayerAlert$2;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public getBottomOffset(I)I
     .registers 2
 
-    .line 414
+    .line 415
     iget-object p1, p0, Lorg/telegram/ui/Components/AudioPlayerAlert$2$1;->this$1:Lorg/telegram/ui/Components/AudioPlayerAlert$2;
 
     iget-object p1, p1, Lorg/telegram/ui/Components/AudioPlayerAlert$2;->this$0:Lorg/telegram/ui/Components/AudioPlayerAlert;

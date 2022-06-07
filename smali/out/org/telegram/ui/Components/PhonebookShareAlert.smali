@@ -746,7 +746,7 @@
     .line 585
     iget-object v4, v0, Lorg/telegram/ui/Components/PhonebookShareAlert;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
-    const v7, 0x7f070140
+    const v7, 0x7f070109
 
     invoke-virtual {v4, v7}, Lorg/telegram/ui/ActionBar/ActionBar;->setBackButtonImage(I)V
 
@@ -796,11 +796,11 @@
     .line 591
     iget-boolean v4, v0, Lorg/telegram/ui/Components/PhonebookShareAlert;->isImport:Z
 
-    const v8, 0x7f0e011e
+    const v8, 0x7f0e0146
 
     const-string v10, "AddContactPhonebookTitle"
 
-    const v11, 0x7f0e1027
+    const v11, 0x7f0e10e5
 
     const-string v12, "ShareContactTitle"
 
@@ -1582,7 +1582,7 @@
 
     const-string p2, "TextCopied"
 
-    const p3, 0x7f0e115d
+    const p3, 0x7f0e1227
 
     invoke-static {p2, p3}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
@@ -1830,7 +1830,7 @@
 
     new-array p2, v1, [Ljava/lang/CharSequence;
 
-    const v0, 0x7f0e04d2
+    const v0, 0x7f0e0521
 
     const-string v1, "Copy"
 
@@ -2078,7 +2078,7 @@
     .line 558
     iget-object p1, p4, Lorg/telegram/ui/Components/Bulletin$SimpleLayout;->textView:Landroid/widget/TextView;
 
-    const p2, 0x7f0e0d47
+    const p2, 0x7f0e0dd5
 
     const-string p3, "PhoneCopied"
 
@@ -2091,7 +2091,7 @@
     .line 559
     iget-object p1, p4, Lorg/telegram/ui/Components/Bulletin$SimpleLayout;->imageView:Landroid/widget/ImageView;
 
-    const p2, 0x7f0701e5
+    const p2, 0x7f0701e0
 
     invoke-virtual {p1, p2}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -2103,7 +2103,7 @@
     .line 561
     iget-object p1, p4, Lorg/telegram/ui/Components/Bulletin$SimpleLayout;->textView:Landroid/widget/TextView;
 
-    const p2, 0x7f0e0624
+    const p2, 0x7f0e0676
 
     const-string p3, "EmailCopied"
 
@@ -2116,7 +2116,7 @@
     .line 562
     iget-object p1, p4, Lorg/telegram/ui/Components/Bulletin$SimpleLayout;->imageView:Landroid/widget/ImageView;
 
-    const p2, 0x7f070209
+    const p2, 0x7f070267
 
     invoke-virtual {p1, p2}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -2126,7 +2126,7 @@
     :cond_97
     iget-object p1, p4, Lorg/telegram/ui/Components/Bulletin$SimpleLayout;->textView:Landroid/widget/TextView;
 
-    const p2, 0x7f0e115d
+    const p2, 0x7f0e1227
 
     const-string p3, "TextCopied"
 
@@ -2139,7 +2139,7 @@
     .line 565
     iget-object p1, p4, Lorg/telegram/ui/Components/Bulletin$SimpleLayout;->imageView:Landroid/widget/ImageView;
 
-    const p2, 0x7f070202
+    const p2, 0x7f070243
 
     invoke-virtual {p1, p2}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -2208,7 +2208,7 @@
 
     invoke-direct {p1, p2}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    const p2, 0x7f0e011f
+    const p2, 0x7f0e0147
 
     const-string v3, "AddContactTitle"
 
@@ -2219,7 +2219,7 @@
 
     invoke-virtual {p1, p2}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const p2, 0x7f0e0331
+    const p2, 0x7f0e036d
 
     const-string v3, "Cancel"
 
@@ -2234,7 +2234,7 @@
 
     new-array p2, p2, [Ljava/lang/CharSequence;
 
-    const v0, 0x7f0e04e4
+    const v0, 0x7f0e0533
 
     const-string v3, "CreateNewContact"
 
@@ -2245,7 +2245,7 @@
 
     aput-object v0, p2, v1
 
-    const v0, 0x7f0e013a
+    const v0, 0x7f0e0162
 
     const-string v1, "AddToExistingContact"
 

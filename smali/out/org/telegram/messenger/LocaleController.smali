@@ -387,7 +387,7 @@
 
     new-array v1, v0, [C
 
-    .line 1151
+    .line 1154
     fill-array-data v1, :array_b2
 
     sput-object v1, Lorg/telegram/messenger/LocaleController;->defaultNumbers:[C
@@ -398,7 +398,7 @@
 
     new-array v2, v0, [C
 
-    .line 1152
+    .line 1155
     fill-array-data v2, :array_c0
 
     const/4 v3, 0x0
@@ -2409,7 +2409,7 @@
 
     const/16 v1, 0xa0
 
-    .line 3108
+    .line 3111
     invoke-virtual {p0, v0, v1}, Ljava/lang/String;->replace(CC)Ljava/lang/String;
 
     move-result-object p0
@@ -2448,7 +2448,7 @@
 
     if-eqz p1, :cond_b8
 
-    .line 2213
+    .line 2216
     invoke-virtual {p1}, Lorg/telegram/messenger/LocaleController$LocaleInfo;->isRemote()Z
 
     move-result v0
@@ -2463,7 +2463,7 @@
 
     goto/16 :goto_b8
 
-    .line 2216
+    .line 2219
     :cond_10
     invoke-virtual {p1}, Lorg/telegram/messenger/LocaleController$LocaleInfo;->hasBaseLang()Z
 
@@ -2485,7 +2485,7 @@
 
     if-eqz v0, :cond_65
 
-    .line 2217
+    .line 2220
     :cond_24
     iget v0, p1, Lorg/telegram/messenger/LocaleController$LocaleInfo;->baseVersion:I
 
@@ -2493,34 +2493,34 @@
 
     if-nez p3, :cond_4e
 
-    .line 2218
+    .line 2221
     invoke-virtual {p1}, Lorg/telegram/messenger/LocaleController$LocaleInfo;->hasBaseLang()Z
 
     move-result v0
 
     if-eqz v0, :cond_65
 
-    .line 2219
+    .line 2222
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_langpack_getDifference;
 
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_langpack_getDifference;-><init>()V
 
-    .line 2220
+    .line 2223
     iget v3, p1, Lorg/telegram/messenger/LocaleController$LocaleInfo;->baseVersion:I
 
     iput v3, v0, Lorg/telegram/tgnet/TLRPC$TL_langpack_getDifference;->from_version:I
 
-    .line 2221
+    .line 2224
     invoke-virtual {p1}, Lorg/telegram/messenger/LocaleController$LocaleInfo;->getBaseLangCode()Ljava/lang/String;
 
     move-result-object v3
 
     iput-object v3, v0, Lorg/telegram/tgnet/TLRPC$TL_langpack_getDifference;->lang_code:Ljava/lang/String;
 
-    .line 2222
+    .line 2225
     iput-object v1, v0, Lorg/telegram/tgnet/TLRPC$TL_langpack_getDifference;->lang_pack:Ljava/lang/String;
 
-    .line 2223
+    .line 2226
     invoke-static {p4}, Lorg/telegram/tgnet/ConnectionsManager;->getInstance(I)Lorg/telegram/tgnet/ConnectionsManager;
 
     move-result-object v3
@@ -2533,20 +2533,20 @@
 
     goto :goto_65
 
-    .line 2230
+    .line 2233
     :cond_4e
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_langpack_getLangPack;
 
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_langpack_getLangPack;-><init>()V
 
-    .line 2231
+    .line 2234
     invoke-virtual {p1}, Lorg/telegram/messenger/LocaleController$LocaleInfo;->getBaseLangCode()Ljava/lang/String;
 
     move-result-object v3
 
     iput-object v3, v0, Lorg/telegram/tgnet/TLRPC$TL_langpack_getLangPack;->lang_code:Ljava/lang/String;
 
-    .line 2232
+    .line 2235
     invoke-static {p4}, Lorg/telegram/tgnet/ConnectionsManager;->getInstance(I)Lorg/telegram/tgnet/ConnectionsManager;
 
     move-result-object v3
@@ -2561,7 +2561,7 @@
     :goto_65
     if-eqz p2, :cond_6f
 
-    .line 2239
+    .line 2242
     iget-object v0, p1, Lorg/telegram/messenger/LocaleController$LocaleInfo;->shortName:Ljava/lang/String;
 
     invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -2570,7 +2570,7 @@
 
     if-eqz p2, :cond_b8
 
-    .line 2240
+    .line 2243
     :cond_6f
     iget p2, p1, Lorg/telegram/messenger/LocaleController$LocaleInfo;->version:I
 
@@ -2578,27 +2578,27 @@
 
     if-nez p3, :cond_93
 
-    .line 2241
+    .line 2244
     new-instance p2, Lorg/telegram/tgnet/TLRPC$TL_langpack_getDifference;
 
     invoke-direct {p2}, Lorg/telegram/tgnet/TLRPC$TL_langpack_getDifference;-><init>()V
 
-    .line 2242
+    .line 2245
     iget p3, p1, Lorg/telegram/messenger/LocaleController$LocaleInfo;->version:I
 
     iput p3, p2, Lorg/telegram/tgnet/TLRPC$TL_langpack_getDifference;->from_version:I
 
-    .line 2243
+    .line 2246
     invoke-virtual {p1}, Lorg/telegram/messenger/LocaleController$LocaleInfo;->getLangCode()Ljava/lang/String;
 
     move-result-object p3
 
     iput-object p3, p2, Lorg/telegram/tgnet/TLRPC$TL_langpack_getDifference;->lang_code:Ljava/lang/String;
 
-    .line 2244
+    .line 2247
     iput-object v1, p2, Lorg/telegram/tgnet/TLRPC$TL_langpack_getDifference;->lang_pack:Ljava/lang/String;
 
-    .line 2245
+    .line 2248
     invoke-static {p4}, Lorg/telegram/tgnet/ConnectionsManager;->getInstance(I)Lorg/telegram/tgnet/ConnectionsManager;
 
     move-result-object p3
@@ -2615,11 +2615,11 @@
     const/4 p2, 0x0
 
     :goto_94
-    const/4 p3, 0x3
+    const/4 p3, 0x4
 
     if-ge p2, p3, :cond_a1
 
-    .line 2252
+    .line 2255
     invoke-virtual {p1}, Lorg/telegram/messenger/LocaleController$LocaleInfo;->getLangCode()Ljava/lang/String;
 
     move-result-object p3
@@ -2630,20 +2630,20 @@
 
     goto :goto_94
 
-    .line 2254
+    .line 2257
     :cond_a1
     new-instance p2, Lorg/telegram/tgnet/TLRPC$TL_langpack_getLangPack;
 
     invoke-direct {p2}, Lorg/telegram/tgnet/TLRPC$TL_langpack_getLangPack;-><init>()V
 
-    .line 2255
+    .line 2258
     invoke-virtual {p1}, Lorg/telegram/messenger/LocaleController$LocaleInfo;->getLangCode()Ljava/lang/String;
 
     move-result-object p3
 
     iput-object p3, p2, Lorg/telegram/tgnet/TLRPC$TL_langpack_getLangPack;->lang_code:Ljava/lang/String;
 
-    .line 2256
+    .line 2259
     invoke-static {p4}, Lorg/telegram/tgnet/ConnectionsManager;->getInstance(I)Lorg/telegram/tgnet/ConnectionsManager;
 
     move-result-object p3
@@ -2664,7 +2664,7 @@
 
     if-eqz p2, :cond_8
 
-    .line 1709
+    .line 1712
     invoke-virtual {p2}, Ljava/lang/String;->length()I
 
     move-result v0
@@ -2674,7 +2674,7 @@
     :cond_8
     move-object p2, p3
 
-    .line 1714
+    .line 1717
     :cond_9
     :try_start_9
     invoke-static {p2, p1}, Lorg/telegram/messenger/time/FastDateFormat;->getInstance(Ljava/lang/String;Ljava/util/Locale;)Lorg/telegram/messenger/time/FastDateFormat;
@@ -2685,7 +2685,7 @@
 
     goto :goto_12
 
-    .line 1717
+    .line 1720
     :catch_e
     invoke-static {p3, p1}, Lorg/telegram/messenger/time/FastDateFormat;->getInstance(Ljava/lang/String;Ljava/util/Locale;)Lorg/telegram/messenger/time/FastDateFormat;
 
@@ -2698,14 +2698,14 @@
 .method public static ensureImperialSystemInit()V
     .registers 4
 
-    .line 3123
+    .line 3126
     sget-object v0, Lorg/telegram/messenger/LocaleController;->useImperialSystemType:Ljava/lang/Boolean;
 
     if-eqz v0, :cond_5
 
     return-void
 
-    .line 3126
+    .line 3129
     :cond_5
     sget v0, Lorg/telegram/messenger/SharedConfig;->distanceSystemType:I
 
@@ -2715,7 +2715,7 @@
 
     if-nez v0, :cond_51
 
-    .line 3128
+    .line 3131
     :try_start_b
     sget-object v0, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
@@ -2729,7 +2729,7 @@
 
     if-eqz v0, :cond_5c
 
-    .line 3130
+    .line 3133
     invoke-virtual {v0}, Landroid/telephony/TelephonyManager;->getSimCountryIso()Ljava/lang/String;
 
     move-result-object v0
@@ -2740,7 +2740,7 @@
 
     const-string v3, "US"
 
-    .line 3131
+    .line 3134
     invoke-virtual {v3, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v3
@@ -2791,12 +2791,12 @@
     :catch_48
     move-exception v0
 
-    .line 3134
+    .line 3137
     sget-object v1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
     sput-object v1, Lorg/telegram/messenger/LocaleController;->useImperialSystemType:Ljava/lang/Boolean;
 
-    .line 3135
+    .line 3138
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     goto :goto_5c
@@ -2811,7 +2811,7 @@
     :cond_55
     const/4 v1, 0x0
 
-    .line 3138
+    .line 3141
     :goto_56
     invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
@@ -2829,7 +2829,7 @@
 
     const-string v0, "[CDATA"
 
-    .line 2001
+    .line 2004
     invoke-virtual {p1, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -2843,7 +2843,7 @@
 
     const-string v1, "&lt;"
 
-    .line 2004
+    .line 2007
     invoke-virtual {p1, v0, v1}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
 
     move-result-object p1
@@ -2870,12 +2870,12 @@
 .method public static fixNumbers(Ljava/lang/CharSequence;)Ljava/lang/String;
     .registers 9
 
-    .line 1174
+    .line 1177
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0, p0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/CharSequence;)V
 
-    .line 1175
+    .line 1178
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->length()I
 
     move-result p0
@@ -2887,7 +2887,7 @@
     :goto_b
     if-ge v2, p0, :cond_4a
 
-    .line 1176
+    .line 1179
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->charAt(I)C
 
     move-result v3
@@ -2914,7 +2914,7 @@
     :cond_22
     const/4 v4, 0x0
 
-    .line 1180
+    .line 1183
     :goto_23
     sget-object v5, Lorg/telegram/messenger/LocaleController;->otherNumbers:[[C
 
@@ -2924,7 +2924,7 @@
 
     const/4 v5, 0x0
 
-    .line 1181
+    .line 1184
     :goto_29
     sget-object v6, Lorg/telegram/messenger/LocaleController;->otherNumbers:[[C
 
@@ -2934,21 +2934,21 @@
 
     if-ge v5, v7, :cond_44
 
-    .line 1182
+    .line 1185
     aget-object v6, v6, v4
 
     aget-char v6, v6, v5
 
     if-ne v3, v6, :cond_41
 
-    .line 1183
+    .line 1186
     sget-object v4, Lorg/telegram/messenger/LocaleController;->defaultNumbers:[C
 
     aget-char v4, v4, v5
 
     invoke-virtual {v0, v2, v4}, Ljava/lang/StringBuilder;->setCharAt(IC)V
 
-    .line 1184
+    .line 1187
     sget-object v4, Lorg/telegram/messenger/LocaleController;->otherNumbers:[[C
 
     array-length v4, v4
@@ -2972,7 +2972,7 @@
 
     goto :goto_b
 
-    .line 1190
+    .line 1193
     :cond_4a
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -2982,7 +2982,7 @@
 .end method
 
 .method public static formatCallDuration(I)Ljava/lang/String;
-    .registers 6
+    .registers 8
 
     const-string v0, "Minutes"
 
@@ -2990,36 +2990,42 @@
 
     const/16 v2, 0xe10
 
-    if-le p0, v2, :cond_2d
+    const/4 v3, 0x0
 
-    .line 1438
-    div-int/lit16 v3, p0, 0xe10
+    if-le p0, v2, :cond_32
 
-    const-string v4, "Hours"
+    .line 1441
+    div-int/lit16 v4, p0, 0xe10
 
-    invoke-static {v4, v3}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    new-array v5, v3, [Ljava/lang/Object;
 
-    move-result-object v3
+    const-string v6, "Hours"
 
-    .line 1439
+    invoke-static {v6, v4, v5}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v4
+
+    .line 1442
     rem-int/2addr p0, v2
 
     div-int/2addr p0, v1
 
-    if-lez p0, :cond_2c
+    if-lez p0, :cond_31
 
-    .line 1441
+    .line 1444
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string v2, ", "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {v0, p0}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    new-array v2, v3, [Ljava/lang/Object;
+
+    invoke-static {v0, p0, v2}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -3027,28 +3033,32 @@
 
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v4
 
-    :cond_2c
-    return-object v3
+    :cond_31
+    return-object v4
 
-    :cond_2d
-    if-le p0, v1, :cond_35
+    :cond_32
+    if-le p0, v1, :cond_3c
 
-    .line 1445
+    .line 1448
     div-int/2addr p0, v1
 
-    invoke-static {v0, p0}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    new-array v1, v3, [Ljava/lang/Object;
+
+    invoke-static {v0, p0, v1}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
 
     return-object p0
 
-    :cond_35
-    const-string v0, "Seconds"
+    :cond_3c
+    new-array v0, v3, [Ljava/lang/Object;
 
-    .line 1447
-    invoke-static {v0, p0}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    const-string v1, "Seconds"
+
+    .line 1450
+    invoke-static {v1, p0, v0}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -3062,7 +3072,7 @@
 
     mul-long p0, p0, v0
 
-    .line 1513
+    .line 1516
     :try_start_4
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
@@ -3070,27 +3080,27 @@
 
     const/4 v1, 0x6
 
-    .line 1514
+    .line 1517
     invoke-virtual {v0, v1}, Ljava/util/Calendar;->get(I)I
 
     move-result v2
 
     const/4 v3, 0x1
 
-    .line 1515
+    .line 1518
     invoke-virtual {v0, v3}, Ljava/util/Calendar;->get(I)I
 
     move-result v4
 
-    .line 1516
+    .line 1519
     invoke-virtual {v0, p0, p1}, Ljava/util/Calendar;->setTimeInMillis(J)V
 
-    .line 1517
+    .line 1520
     invoke-virtual {v0, v1}, Ljava/util/Calendar;->get(I)I
 
     move-result v1
 
-    .line 1518
+    .line 1521
     invoke-virtual {v0, v3}, Ljava/util/Calendar;->get(I)I
 
     move-result v0
@@ -3099,7 +3109,7 @@
 
     if-ne v4, v0, :cond_31
 
-    .line 1521
+    .line 1524
     invoke-static {}, Lorg/telegram/messenger/LocaleController;->getInstance()Lorg/telegram/messenger/LocaleController;
 
     move-result-object v0
@@ -3125,16 +3135,16 @@
 
     const-string p0, "Yesterday"
 
-    const p1, 0x7f0e13f5
+    const p1, 0x7f0e14c3
 
-    .line 1523
+    .line 1526
     invoke-static {p0, p1}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object p0
 
     return-object p0
 
-    .line 1524
+    .line 1527
     :cond_40
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -3152,7 +3162,7 @@
 
     if-gez v4, :cond_62
 
-    .line 1525
+    .line 1528
     invoke-static {}, Lorg/telegram/messenger/LocaleController;->getInstance()Lorg/telegram/messenger/LocaleController;
 
     move-result-object v0
@@ -3169,7 +3179,7 @@
 
     return-object p0
 
-    .line 1527
+    .line 1530
     :cond_62
     invoke-static {}, Lorg/telegram/messenger/LocaleController;->getInstance()Lorg/telegram/messenger/LocaleController;
 
@@ -3192,7 +3202,7 @@
     :catch_72
     move-exception p0
 
-    .line 1530
+    .line 1533
     invoke-static {p0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     const-string p0, "LOC_ERR: formatDate"
@@ -3207,7 +3217,7 @@
 
     mul-long p0, p0, v0
 
-    .line 1538
+    .line 1541
     :try_start_4
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
@@ -3215,27 +3225,27 @@
 
     const/4 v1, 0x6
 
-    .line 1539
+    .line 1542
     invoke-virtual {v0, v1}, Ljava/util/Calendar;->get(I)I
 
     move-result v2
 
     const/4 v3, 0x1
 
-    .line 1540
+    .line 1543
     invoke-virtual {v0, v3}, Ljava/util/Calendar;->get(I)I
 
     move-result v4
 
-    .line 1541
+    .line 1544
     invoke-virtual {v0, p0, p1}, Ljava/util/Calendar;->setTimeInMillis(J)V
 
-    .line 1542
+    .line 1545
     invoke-virtual {v0, v1}, Ljava/util/Calendar;->get(I)I
 
     move-result v1
 
-    .line 1543
+    .line 1546
     invoke-virtual {v0, v3}, Ljava/util/Calendar;->get(I)I
 
     move-result v0
@@ -3250,11 +3260,11 @@
 
     const-string p2, "TodayAtFormatted"
 
-    const v0, 0x7f0e11a4
+    const v0, 0x7f0e1270
 
     new-array v1, v3, [Ljava/lang/Object;
 
-    .line 1547
+    .line 1550
     invoke-static {}, Lorg/telegram/messenger/LocaleController;->getInstance()Lorg/telegram/messenger/LocaleController;
 
     move-result-object v2
@@ -3280,11 +3290,11 @@
     :cond_41
     const-string p2, "TodayAtFormattedWithToday"
 
-    const v0, 0x7f0e11a5
+    const v0, 0x7f0e1271
 
     new-array v1, v3, [Ljava/lang/Object;
 
-    .line 1549
+    .line 1552
     invoke-static {}, Lorg/telegram/messenger/LocaleController;->getInstance()Lorg/telegram/messenger/LocaleController;
 
     move-result-object v2
@@ -3316,11 +3326,11 @@
 
     const-string p2, "YesterdayAtFormatted"
 
-    const v0, 0x7f0e13f7
+    const v0, 0x7f0e14c5
 
     new-array v1, v3, [Ljava/lang/Object;
 
-    .line 1552
+    .line 1555
     invoke-static {}, Lorg/telegram/messenger/LocaleController;->getInstance()Lorg/telegram/messenger/LocaleController;
 
     move-result-object v2
@@ -3343,7 +3353,7 @@
 
     return-object p0
 
-    .line 1553
+    .line 1556
     :cond_80
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -3361,7 +3371,7 @@
 
     const/4 p2, 0x2
 
-    const v2, 0x7f0e1449
+    const v2, 0x7f0e1518
 
     const-string v4, "formatDateAtTime"
 
@@ -3372,7 +3382,7 @@
     :try_start_98
     new-array p2, p2, [Ljava/lang/Object;
 
-    .line 1554
+    .line 1557
     invoke-static {}, Lorg/telegram/messenger/LocaleController;->getInstance()Lorg/telegram/messenger/LocaleController;
 
     move-result-object v0
@@ -3414,7 +3424,7 @@
     :cond_c1
     new-array p2, p2, [Ljava/lang/Object;
 
-    .line 1556
+    .line 1559
     invoke-static {}, Lorg/telegram/messenger/LocaleController;->getInstance()Lorg/telegram/messenger/LocaleController;
 
     move-result-object v0
@@ -3458,7 +3468,7 @@
     :catch_ea
     move-exception p0
 
-    .line 1559
+    .line 1562
     invoke-static {p0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     const-string p0, "LOC_ERR"
@@ -3473,7 +3483,7 @@
 
     mul-long p0, p0, v0
 
-    .line 1567
+    .line 1570
     :try_start_4
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
@@ -3481,27 +3491,27 @@
 
     const/4 v1, 0x6
 
-    .line 1568
+    .line 1571
     invoke-virtual {v0, v1}, Ljava/util/Calendar;->get(I)I
 
     move-result v2
 
     const/4 v3, 0x1
 
-    .line 1569
+    .line 1572
     invoke-virtual {v0, v3}, Ljava/util/Calendar;->get(I)I
 
     move-result v4
 
-    .line 1570
+    .line 1573
     invoke-virtual {v0, p0, p1}, Ljava/util/Calendar;->setTimeInMillis(J)V
 
-    .line 1571
+    .line 1574
     invoke-virtual {v0, v1}, Ljava/util/Calendar;->get(I)I
 
     move-result v1
 
-    .line 1572
+    .line 1575
     invoke-virtual {v0, v3}, Ljava/util/Calendar;->get(I)I
 
     move-result v0
@@ -3510,7 +3520,7 @@
 
     if-ne v4, v0, :cond_31
 
-    .line 1575
+    .line 1578
     invoke-static {}, Lorg/telegram/messenger/LocaleController;->getInstance()Lorg/telegram/messenger/LocaleController;
 
     move-result-object v0
@@ -3538,11 +3548,11 @@
 
     const-string v0, "YesterdayAtFormatted"
 
-    const v1, 0x7f0e13f7
+    const v1, 0x7f0e14c5
 
     new-array v2, v3, [Ljava/lang/Object;
 
-    .line 1577
+    .line 1580
     invoke-static {}, Lorg/telegram/messenger/LocaleController;->getInstance()Lorg/telegram/messenger/LocaleController;
 
     move-result-object v3
@@ -3565,7 +3575,7 @@
 
     return-object p0
 
-    .line 1578
+    .line 1581
     :cond_54
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -3583,7 +3593,7 @@
 
     const/4 v2, 0x2
 
-    const v4, 0x7f0e1449
+    const v4, 0x7f0e1518
 
     const-string v8, "formatDateAtTime"
 
@@ -3594,7 +3604,7 @@
     :try_start_6c
     new-array v0, v2, [Ljava/lang/Object;
 
-    .line 1579
+    .line 1582
     invoke-static {}, Lorg/telegram/messenger/LocaleController;->getInstance()Lorg/telegram/messenger/LocaleController;
 
     move-result-object v1
@@ -3636,7 +3646,7 @@
     :cond_95
     new-array v0, v2, [Ljava/lang/Object;
 
-    .line 1581
+    .line 1584
     invoke-static {}, Lorg/telegram/messenger/LocaleController;->getInstance()Lorg/telegram/messenger/LocaleController;
 
     move-result-object v1
@@ -3680,7 +3690,7 @@
     :catch_be
     move-exception p0
 
-    .line 1584
+    .line 1587
     invoke-static {p0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     const-string p0, "LOC_ERR"
@@ -3693,7 +3703,7 @@
 
     const/4 v0, 0x0
 
-    .line 1489
+    .line 1492
     invoke-static {p0, p1, v0}, Lorg/telegram/messenger/LocaleController;->formatDateChat(JZ)Ljava/lang/String;
 
     move-result-object p0
@@ -3704,13 +3714,13 @@
 .method public static formatDateChat(JZ)Ljava/lang/String;
     .registers 8
 
-    .line 1494
+    .line 1497
     :try_start_0
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
     move-result-object v0
 
-    .line 1495
+    .line 1498
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v1
@@ -3719,7 +3729,7 @@
 
     const/4 v1, 0x1
 
-    .line 1496
+    .line 1499
     invoke-virtual {v0, v1}, Ljava/util/Calendar;->get(I)I
 
     move-result v2
@@ -3728,12 +3738,12 @@
 
     mul-long p0, p0, v3
 
-    .line 1499
+    .line 1502
     invoke-virtual {v0, p0, p1}, Ljava/util/Calendar;->setTimeInMillis(J)V
 
     if-eqz p2, :cond_1f
 
-    .line 1500
+    .line 1503
     invoke-virtual {v0, v1}, Ljava/util/Calendar;->get(I)I
 
     move-result v0
@@ -3759,7 +3769,7 @@
 
     if-gez p2, :cond_3e
 
-    .line 1501
+    .line 1504
     :cond_33
     invoke-static {}, Lorg/telegram/messenger/LocaleController;->getInstance()Lorg/telegram/messenger/LocaleController;
 
@@ -3773,7 +3783,7 @@
 
     return-object p0
 
-    .line 1503
+    .line 1506
     :cond_3e
     invoke-static {}, Lorg/telegram/messenger/LocaleController;->getInstance()Lorg/telegram/messenger/LocaleController;
 
@@ -3792,7 +3802,7 @@
     :catch_49
     move-exception p0
 
-    .line 1505
+    .line 1508
     invoke-static {p0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     const-string p0, "LOC_ERR: formatDateChat"
@@ -3807,7 +3817,7 @@
 
     mul-long p0, p0, v0
 
-    .line 1850
+    .line 1853
     :try_start_4
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
@@ -3815,22 +3825,22 @@
 
     const/4 v1, 0x1
 
-    .line 1851
+    .line 1854
     invoke-virtual {v0, v1}, Ljava/util/Calendar;->get(I)I
 
     move-result v2
 
-    .line 1852
+    .line 1855
     invoke-virtual {v0, p0, p1}, Ljava/util/Calendar;->setTimeInMillis(J)V
 
-    .line 1853
+    .line 1856
     invoke-virtual {v0, v1}, Ljava/util/Calendar;->get(I)I
 
     move-result v0
 
     if-ne v2, v0, :cond_26
 
-    .line 1856
+    .line 1859
     invoke-static {}, Lorg/telegram/messenger/LocaleController;->getInstance()Lorg/telegram/messenger/LocaleController;
 
     move-result-object v0
@@ -3847,7 +3857,7 @@
 
     return-object p0
 
-    .line 1858
+    .line 1861
     :cond_26
     invoke-static {}, Lorg/telegram/messenger/LocaleController;->getInstance()Lorg/telegram/messenger/LocaleController;
 
@@ -3870,7 +3880,7 @@
     :catch_36
     move-exception p0
 
-    .line 1861
+    .line 1864
     invoke-static {p0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     const-string p0, "LOC_ERR"
@@ -3885,7 +3895,7 @@
 
     mul-long p0, p0, v0
 
-    .line 1666
+    .line 1669
     :try_start_4
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
@@ -3893,46 +3903,46 @@
 
     const/4 v1, 0x6
 
-    .line 1667
+    .line 1670
     invoke-virtual {v0, v1}, Ljava/util/Calendar;->get(I)I
 
     move-result v2
 
     const/4 v3, 0x1
 
-    .line 1668
+    .line 1671
     invoke-virtual {v0, v3}, Ljava/util/Calendar;->get(I)I
 
     move-result v4
 
     const/16 v5, 0xb
 
-    .line 1669
+    .line 1672
     invoke-virtual {v0, v5}, Ljava/util/Calendar;->get(I)I
 
     move-result v6
 
-    .line 1670
+    .line 1673
     invoke-virtual {v0, p0, p1}, Ljava/util/Calendar;->setTimeInMillis(J)V
 
-    .line 1671
+    .line 1674
     invoke-virtual {v0, v1}, Ljava/util/Calendar;->get(I)I
 
     move-result v7
 
-    .line 1672
+    .line 1675
     invoke-virtual {v0, v3}, Ljava/util/Calendar;->get(I)I
 
     move-result v8
 
-    .line 1673
+    .line 1676
     invoke-virtual {v0, v5}, Ljava/util/Calendar;->get(I)I
 
     move-result v0
     :try_end_27
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_27} :catch_13d
 
-    const v5, 0x7f0e091c
+    const v5, 0x7f0e0982
 
     const-string v9, "LastSeenFormatted"
 
@@ -3947,11 +3957,11 @@
 
     const-string v0, "TodayAtFormatted"
 
-    const v1, 0x7f0e11a4
+    const v1, 0x7f0e1270
 
     new-array v2, v3, [Ljava/lang/Object;
 
-    .line 1676
+    .line 1679
     invoke-static {}, Lorg/telegram/messenger/LocaleController;->getInstance()Lorg/telegram/messenger/LocaleController;
 
     move-result-object v3
@@ -3989,13 +3999,13 @@
 
     if-ne v4, v8, :cond_be
 
-    const v2, 0x7f0e13f7
+    const v2, 0x7f0e14c5
 
     const-string v4, "YesterdayAtFormatted"
 
     if-eqz p2, :cond_9e
 
-    .line 1687
+    .line 1690
     :try_start_62
     aput-boolean v3, p2, v10
 
@@ -4005,14 +4015,14 @@
 
     if-le v0, p2, :cond_86
 
-    .line 1688
+    .line 1691
     sget-boolean p2, Lorg/telegram/messenger/LocaleController;->is24HourFormat:Z
 
     if-eqz p2, :cond_86
 
     new-array p2, v3, [Ljava/lang/Object;
 
-    .line 1689
+    .line 1692
     invoke-static {}, Lorg/telegram/messenger/LocaleController;->getInstance()Lorg/telegram/messenger/LocaleController;
 
     move-result-object v0
@@ -4038,7 +4048,7 @@
     :cond_86
     new-array p2, v3, [Ljava/lang/Object;
 
-    .line 1691
+    .line 1694
     invoke-static {}, Lorg/telegram/messenger/LocaleController;->getInstance()Lorg/telegram/messenger/LocaleController;
 
     move-result-object v0
@@ -4066,7 +4076,7 @@
 
     new-array v0, v3, [Ljava/lang/Object;
 
-    .line 1693
+    .line 1696
     invoke-static {}, Lorg/telegram/messenger/LocaleController;->getInstance()Lorg/telegram/messenger/LocaleController;
 
     move-result-object v1
@@ -4095,7 +4105,7 @@
 
     return-object p0
 
-    .line 1695
+    .line 1698
     :cond_be
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -4111,13 +4121,13 @@
 
     const-wide v4, 0x757b12c00L
 
-    const p2, 0x7f0e0919
+    const p2, 0x7f0e097f
 
     const-string v2, "LastSeenDateFormatted"
 
     const/4 v6, 0x2
 
-    const v7, 0x7f0e1449
+    const v7, 0x7f0e1518
 
     const-string v8, "formatDateAtTime"
 
@@ -4128,7 +4138,7 @@
     :try_start_db
     new-array v0, v6, [Ljava/lang/Object;
 
-    .line 1696
+    .line 1699
     invoke-static {}, Lorg/telegram/messenger/LocaleController;->getInstance()Lorg/telegram/messenger/LocaleController;
 
     move-result-object v1
@@ -4169,7 +4179,7 @@
 
     aput-object p0, p1, v10
 
-    .line 1697
+    .line 1700
     invoke-static {v2, p2, p1}, Lorg/telegram/messenger/LocaleController;->formatString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
@@ -4179,7 +4189,7 @@
     :cond_10c
     new-array v0, v6, [Ljava/lang/Object;
 
-    .line 1699
+    .line 1702
     invoke-static {}, Lorg/telegram/messenger/LocaleController;->getInstance()Lorg/telegram/messenger/LocaleController;
 
     move-result-object v1
@@ -4220,7 +4230,7 @@
 
     aput-object p0, p1, v10
 
-    .line 1700
+    .line 1703
     invoke-static {v2, p2, p1}, Lorg/telegram/messenger/LocaleController;->formatString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
@@ -4232,7 +4242,7 @@
     :catch_13d
     move-exception p0
 
-    .line 1703
+    .line 1706
     invoke-static {p0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     const-string p0, "LOC_ERR"
@@ -4247,7 +4257,7 @@
 
     mul-long p0, p0, v0
 
-    .line 1592
+    .line 1595
     :try_start_4
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
@@ -4255,27 +4265,27 @@
 
     const/4 v1, 0x6
 
-    .line 1593
+    .line 1596
     invoke-virtual {v0, v1}, Ljava/util/Calendar;->get(I)I
 
     move-result v2
 
     const/4 v3, 0x1
 
-    .line 1594
+    .line 1597
     invoke-virtual {v0, v3}, Ljava/util/Calendar;->get(I)I
 
     move-result v4
 
-    .line 1595
+    .line 1598
     invoke-virtual {v0, p0, p1}, Ljava/util/Calendar;->setTimeInMillis(J)V
 
-    .line 1596
+    .line 1599
     invoke-virtual {v0, v1}, Ljava/util/Calendar;->get(I)I
 
     move-result v1
 
-    .line 1597
+    .line 1600
     invoke-virtual {v0, v3}, Ljava/util/Calendar;->get(I)I
 
     move-result v0
@@ -4288,11 +4298,11 @@
 
     const-string v0, "TodayAtFormattedWithToday"
 
-    const v1, 0x7f0e11a5
+    const v1, 0x7f0e1271
 
     new-array v2, v3, [Ljava/lang/Object;
 
-    .line 1600
+    .line 1603
     invoke-static {}, Lorg/telegram/messenger/LocaleController;->getInstance()Lorg/telegram/messenger/LocaleController;
 
     move-result-object v3
@@ -4324,11 +4334,11 @@
 
     const-string v0, "YesterdayAtFormatted"
 
-    const v1, 0x7f0e13f7
+    const v1, 0x7f0e14c5
 
     new-array v2, v3, [Ljava/lang/Object;
 
-    .line 1602
+    .line 1605
     invoke-static {}, Lorg/telegram/messenger/LocaleController;->getInstance()Lorg/telegram/messenger/LocaleController;
 
     move-result-object v3
@@ -4351,7 +4361,7 @@
 
     return-object p0
 
-    .line 1603
+    .line 1606
     :cond_61
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -4369,7 +4379,7 @@
 
     const/4 v2, 0x2
 
-    const v4, 0x7f0e1449
+    const v4, 0x7f0e1518
 
     const-string v8, "formatDateAtTime"
 
@@ -4380,7 +4390,7 @@
     :try_start_79
     new-array v0, v2, [Ljava/lang/Object;
 
-    .line 1604
+    .line 1607
     invoke-static {}, Lorg/telegram/messenger/LocaleController;->getInstance()Lorg/telegram/messenger/LocaleController;
 
     move-result-object v1
@@ -4422,7 +4432,7 @@
     :cond_a2
     new-array v0, v2, [Ljava/lang/Object;
 
-    .line 1606
+    .line 1609
     invoke-static {}, Lorg/telegram/messenger/LocaleController;->getInstance()Lorg/telegram/messenger/LocaleController;
 
     move-result-object v1
@@ -4466,7 +4476,7 @@
     :catch_cb
     move-exception p0
 
-    .line 1609
+    .line 1612
     invoke-static {p0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     const-string p0, "LOC_ERR"
@@ -4479,7 +4489,7 @@
 
     const/4 v0, 0x0
 
-    .line 3143
+    .line 3146
     invoke-static {p0, p1, v0}, Lorg/telegram/messenger/LocaleController;->formatDistance(FILjava/lang/Boolean;)Ljava/lang/String;
 
     move-result-object p0
@@ -4490,7 +4500,7 @@
 .method public static formatDistance(FILjava/lang/Boolean;)Ljava/lang/String;
     .registers 10
 
-    .line 3147
+    .line 3150
     invoke-static {}, Lorg/telegram/messenger/LocaleController;->ensureImperialSystemInit()V
 
     const/4 v0, 0x0
@@ -4499,7 +4509,7 @@
 
     if-eqz p2, :cond_d
 
-    .line 3148
+    .line 3151
     invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result v2
@@ -4550,13 +4560,13 @@
 
     if-eq p1, v1, :cond_51
 
-    const p1, 0x7f0e0764
+    const p1, 0x7f0e07ba
 
     new-array p2, v1, [Ljava/lang/Object;
 
     new-array v1, v1, [Ljava/lang/Object;
 
-    .line 3159
+    .line 3162
     invoke-static {v5, p0}, Ljava/lang/Math;->max(FF)F
 
     move-result p0
@@ -4584,13 +4594,13 @@
     return-object p0
 
     :cond_51
-    const p1, 0x7f0e0763
+    const p1, 0x7f0e07b9
 
     new-array p2, v1, [Ljava/lang/Object;
 
     new-array v1, v1, [Ljava/lang/Object;
 
-    .line 3156
+    .line 3159
     invoke-static {v5, p0}, Ljava/lang/Math;->max(FF)F
 
     move-result p0
@@ -4618,13 +4628,13 @@
     return-object p0
 
     :cond_70
-    const p1, 0x7f0e0762
+    const p1, 0x7f0e07b8
 
     new-array p2, v1, [Ljava/lang/Object;
 
     new-array v1, v1, [Ljava/lang/Object;
 
-    .line 3154
+    .line 3157
     invoke-static {v5, p0}, Ljava/lang/Math;->max(FF)F
 
     move-result p0
@@ -4666,7 +4676,7 @@
 
     float-to-int p0, p0
 
-    .line 3164
+    .line 3167
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -4684,7 +4694,7 @@
 
     div-float/2addr p0, p2
 
-    .line 3166
+    .line 3169
     invoke-static {p0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object p0
@@ -4700,13 +4710,29 @@
 
     if-eq p1, v1, :cond_c5
 
-    const p1, 0x7f0e0a40
+    const p1, 0x7f0e0ac7
 
     new-array p2, v1, [Ljava/lang/Object;
 
     aput-object p0, p2, v0
 
     const-string p0, "MilesShort"
+
+    .line 3178
+    invoke-static {p0, p1, p2}, Lorg/telegram/messenger/LocaleController;->formatString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_c5
+    const p1, 0x7f0e0ac6
+
+    new-array p2, v1, [Ljava/lang/Object;
+
+    aput-object p0, p2, v0
+
+    const-string p0, "MilesFromYou"
 
     .line 3175
     invoke-static {p0, p1, p2}, Lorg/telegram/messenger/LocaleController;->formatString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
@@ -4715,24 +4741,8 @@
 
     return-object p0
 
-    :cond_c5
-    const p1, 0x7f0e0a3f
-
-    new-array p2, v1, [Ljava/lang/Object;
-
-    aput-object p0, p2, v0
-
-    const-string p0, "MilesFromYou"
-
-    .line 3172
-    invoke-static {p0, p1, p2}, Lorg/telegram/messenger/LocaleController;->formatString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-
     :cond_d3
-    const p1, 0x7f0e0a3e
+    const p1, 0x7f0e0ac5
 
     new-array p2, v1, [Ljava/lang/Object;
 
@@ -4740,7 +4750,7 @@
 
     const-string p0, "MilesAway"
 
-    .line 3170
+    .line 3173
     invoke-static {p0, p1, p2}, Lorg/telegram/messenger/LocaleController;->formatString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
@@ -4756,13 +4766,13 @@
 
     if-eq p1, v1, :cond_108
 
-    const p1, 0x7f0e0a30
+    const p1, 0x7f0e0ab7
 
     new-array p2, v1, [Ljava/lang/Object;
 
     new-array v1, v1, [Ljava/lang/Object;
 
-    .line 3188
+    .line 3191
     invoke-static {v5, p0}, Ljava/lang/Math;->max(FF)F
 
     move-result p0
@@ -4790,13 +4800,13 @@
     return-object p0
 
     :cond_108
-    const p1, 0x7f0e0a2f
+    const p1, 0x7f0e0ab6
 
     new-array p2, v1, [Ljava/lang/Object;
 
     new-array v1, v1, [Ljava/lang/Object;
 
-    .line 3185
+    .line 3188
     invoke-static {v5, p0}, Ljava/lang/Math;->max(FF)F
 
     move-result p0
@@ -4824,13 +4834,13 @@
     return-object p0
 
     :cond_127
-    const p1, 0x7f0e0a2e
+    const p1, 0x7f0e0ab5
 
     new-array p2, v1, [Ljava/lang/Object;
 
     new-array v1, v1, [Ljava/lang/Object;
 
-    .line 3183
+    .line 3186
     invoke-static {v5, p0}, Ljava/lang/Math;->max(FF)F
 
     move-result p0
@@ -4870,7 +4880,7 @@
 
     float-to-int p0, p0
 
-    .line 3193
+    .line 3196
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -4888,7 +4898,7 @@
 
     div-float/2addr p0, v4
 
-    .line 3195
+    .line 3198
     invoke-static {p0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object p0
@@ -4904,13 +4914,29 @@
 
     if-eq p1, v1, :cond_17a
 
-    const p1, 0x7f0e08f5
+    const p1, 0x7f0e095a
 
     new-array p2, v1, [Ljava/lang/Object;
 
     aput-object p0, p2, v0
 
     const-string p0, "KMetersShort"
+
+    .line 3207
+    invoke-static {p0, p1, p2}, Lorg/telegram/messenger/LocaleController;->formatString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_17a
+    const p1, 0x7f0e0959
+
+    new-array p2, v1, [Ljava/lang/Object;
+
+    aput-object p0, p2, v0
+
+    const-string p0, "KMetersFromYou2"
 
     .line 3204
     invoke-static {p0, p1, p2}, Lorg/telegram/messenger/LocaleController;->formatString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
@@ -4919,24 +4945,8 @@
 
     return-object p0
 
-    :cond_17a
-    const p1, 0x7f0e08f4
-
-    new-array p2, v1, [Ljava/lang/Object;
-
-    aput-object p0, p2, v0
-
-    const-string p0, "KMetersFromYou2"
-
-    .line 3201
-    invoke-static {p0, p1, p2}, Lorg/telegram/messenger/LocaleController;->formatString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-
     :cond_188
-    const p1, 0x7f0e08f3
+    const p1, 0x7f0e0958
 
     new-array p2, v1, [Ljava/lang/Object;
 
@@ -4944,7 +4954,7 @@
 
     const-string p0, "KMetersAway2"
 
-    .line 3199
+    .line 3202
     invoke-static {p0, p1, p2}, Lorg/telegram/messenger/LocaleController;->formatString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
@@ -4953,98 +4963,106 @@
 .end method
 
 .method public static formatDuration(I)Ljava/lang/String;
-    .registers 6
+    .registers 8
 
     const-string v0, "Seconds"
 
-    if-gtz p0, :cond_a
+    const/4 v1, 0x0
 
-    const/4 p0, 0x0
+    if-gtz p0, :cond_c
 
-    .line 1412
-    invoke-static {v0, p0}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    new-array p0, v1, [Ljava/lang/Object;
+
+    .line 1415
+    invoke-static {v0, v1, p0}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
 
     return-object p0
 
-    .line 1414
-    :cond_a
-    div-int/lit16 v1, p0, 0xe10
-
-    .line 1415
-    div-int/lit8 v2, p0, 0x3c
-
-    rem-int/lit8 v2, v2, 0x3c
-
-    .line 1416
-    rem-int/lit8 p0, p0, 0x3c
-
     .line 1417
-    new-instance v3, Ljava/lang/StringBuilder;
+    :cond_c
+    div-int/lit16 v2, p0, 0xe10
 
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+    .line 1418
+    div-int/lit8 v3, p0, 0x3c
 
-    if-lez v1, :cond_22
-
-    const-string v4, "Hours"
+    rem-int/lit8 v3, v3, 0x3c
 
     .line 1419
-    invoke-static {v4, v1}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    rem-int/lit8 p0, p0, 0x3c
 
-    move-result-object v1
+    .line 1420
+    new-instance v4, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    :cond_22
-    const/16 v1, 0x20
+    if-lez v2, :cond_26
 
-    if-lez v2, :cond_38
+    new-array v5, v1, [Ljava/lang/Object;
+
+    const-string v6, "Hours"
 
     .line 1422
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->length()I
-
-    move-result v4
-
-    if-lez v4, :cond_2f
-
-    .line 1423
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    :cond_2f
-    const-string v4, "Minutes"
-
-    .line 1425
-    invoke-static {v4, v2}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    invoke-static {v6, v2, v5}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :cond_38
-    if-lez p0, :cond_4a
+    :cond_26
+    const/16 v2, 0x20
+
+    if-lez v3, :cond_3e
+
+    .line 1425
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->length()I
+
+    move-result v5
+
+    if-lez v5, :cond_33
+
+    .line 1426
+    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    :cond_33
+    new-array v5, v1, [Ljava/lang/Object;
+
+    const-string v6, "Minutes"
 
     .line 1428
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->length()I
+    invoke-static {v6, v3, v5}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
-    move-result v2
+    move-result-object v3
 
-    if-lez v2, :cond_43
+    invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1429
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    :cond_3e
+    if-lez p0, :cond_52
 
     .line 1431
-    :cond_43
-    invoke-static {v0, p0}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->length()I
+
+    move-result v3
+
+    if-lez v3, :cond_49
+
+    .line 1432
+    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    :cond_49
+    new-array v1, v1, [Ljava/lang/Object;
+
+    .line 1434
+    invoke-static {v0, p0, v1}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
 
-    invoke-virtual {v3, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1433
-    :cond_4a
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    .line 1436
+    :cond_52
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
 
@@ -5058,7 +5076,7 @@
 
     mul-long p0, p0, v0
 
-    .line 1945
+    .line 1948
     :try_start_4
     new-instance v0, Ljava/util/Date;
 
@@ -5072,7 +5090,7 @@
 
     const/4 v1, 0x0
 
-    .line 1946
+    .line 1949
     invoke-static {}, Lorg/telegram/messenger/LocaleController;->getInstance()Lorg/telegram/messenger/LocaleController;
 
     move-result-object v2
@@ -5110,7 +5128,7 @@
     :catch_2d
     move-exception p0
 
-    .line 1948
+    .line 1951
     invoke-static {p0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     const-string p0, "LOC_ERR"
@@ -5125,7 +5143,7 @@
 
     mul-long p0, p0, v0
 
-    .line 1930
+    .line 1933
     :try_start_4
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -5143,7 +5161,7 @@
 
     const/4 v4, 0x2
 
-    const v5, 0x7f0e1449
+    const v5, 0x7f0e1518
 
     const-string v6, "formatDateAtTime"
 
@@ -5158,7 +5176,7 @@
     :try_start_1e
     new-array v0, v4, [Ljava/lang/Object;
 
-    .line 1931
+    .line 1934
     invoke-static {}, Lorg/telegram/messenger/LocaleController;->getInstance()Lorg/telegram/messenger/LocaleController;
 
     move-result-object v1
@@ -5200,7 +5218,7 @@
     :cond_47
     new-array v0, v4, [Ljava/lang/Object;
 
-    .line 1933
+    .line 1936
     invoke-static {}, Lorg/telegram/messenger/LocaleController;->getInstance()Lorg/telegram/messenger/LocaleController;
 
     move-result-object v1
@@ -5240,13 +5258,13 @@
     :goto_6f
     const-string p1, "ChannelOtherSubscriberJoined"
 
-    const v0, 0x7f0e03a6
+    const v0, 0x7f0e03e5
 
     new-array v1, v7, [Ljava/lang/Object;
 
     aput-object p0, v1, v8
 
-    .line 1935
+    .line 1938
     invoke-static {p1, v0, v1}, Lorg/telegram/messenger/LocaleController;->formatString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
@@ -5258,7 +5276,7 @@
     :catch_7d
     move-exception p0
 
-    .line 1937
+    .line 1940
     invoke-static {p0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     const-string p0, "LOC_ERR"
@@ -5269,7 +5287,7 @@
 .method public static formatLocationLeftTime(I)Ljava/lang/String;
     .registers 7
 
-    .line 1649
+    .line 1652
     div-int/lit8 v0, p0, 0x3c
 
     div-int/lit8 v0, v0, 0x3c
@@ -5280,7 +5298,7 @@
 
     sub-int/2addr p0, v1
 
-    .line 1651
+    .line 1654
     div-int/lit8 v1, p0, 0x3c
 
     mul-int/lit8 v2, v1, 0x3c
@@ -5307,7 +5325,7 @@
     :goto_1a
     add-int/2addr v0, v4
 
-    .line 1654
+    .line 1657
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -5339,7 +5357,7 @@
     :goto_32
     add-int/2addr v1, v4
 
-    .line 1656
+    .line 1659
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -5355,7 +5373,7 @@
     :cond_3e
     new-array v1, v4, [Ljava/lang/Object;
 
-    .line 1658
+    .line 1661
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -5377,7 +5395,7 @@
 
     mul-long p0, p0, v0
 
-    .line 1617
+    .line 1620
     :try_start_4
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
@@ -5385,44 +5403,44 @@
 
     const/4 v3, 0x6
 
-    .line 1618
+    .line 1621
     invoke-virtual {v2, v3}, Ljava/util/Calendar;->get(I)I
 
     move-result v4
 
     const/4 v5, 0x1
 
-    .line 1619
+    .line 1622
     invoke-virtual {v2, v5}, Ljava/util/Calendar;->get(I)I
 
     move-result v6
 
-    .line 1620
+    .line 1623
     invoke-virtual {v2, p0, p1}, Ljava/util/Calendar;->setTimeInMillis(J)V
 
-    .line 1621
+    .line 1624
     invoke-virtual {v2, v3}, Ljava/util/Calendar;->get(I)I
 
     move-result v3
 
-    .line 1622
+    .line 1625
     invoke-virtual {v2, v5}, Ljava/util/Calendar;->get(I)I
 
     move-result v2
     :try_end_1d
-    .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_1d} :catch_117
+    .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_1d} :catch_119
 
-    const v7, 0x7f0e096f
+    const v7, 0x7f0e09f6
 
     const-string v8, "LocationUpdatedFormatted"
 
     const/4 v9, 0x0
 
-    if-ne v3, v4, :cond_73
+    if-ne v3, v4, :cond_75
 
-    if-ne v6, v2, :cond_73
+    if-ne v6, v2, :cond_75
 
-    .line 1625
+    .line 1628
     :try_start_27
     sget v2, Lorg/telegram/messenger/UserConfig;->selectedAccount:I
 
@@ -5450,9 +5468,9 @@
 
     const-string p0, "LocationUpdatedJustNow"
 
-    const p1, 0x7f0e0970
+    const p1, 0x7f0e09f7
 
-    .line 1627
+    .line 1630
     invoke-static {p0, p1}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object p0
@@ -5460,27 +5478,29 @@
     return-object p0
 
     :cond_45
-    if-ge v0, v1, :cond_4e
+    if-ge v0, v1, :cond_50
 
     const-string p0, "UpdatedMinutes"
 
-    .line 1629
-    invoke-static {p0, v0}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    new-array p1, v9, [Ljava/lang/Object;
+
+    .line 1632
+    invoke-static {p0, v0, p1}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
 
     return-object p0
 
-    :cond_4e
+    :cond_50
     new-array v0, v5, [Ljava/lang/Object;
 
     const-string v1, "TodayAtFormatted"
 
-    const v2, 0x7f0e11a4
+    const v2, 0x7f0e1270
 
     new-array v3, v5, [Ljava/lang/Object;
 
-    .line 1631
+    .line 1634
     invoke-static {}, Lorg/telegram/messenger/LocaleController;->getInstance()Lorg/telegram/messenger/LocaleController;
 
     move-result-object v4
@@ -5509,22 +5529,22 @@
 
     return-object p0
 
-    :cond_73
+    :cond_75
     add-int/2addr v3, v5
 
-    if-ne v3, v4, :cond_9d
+    if-ne v3, v4, :cond_9f
 
-    if-ne v6, v2, :cond_9d
+    if-ne v6, v2, :cond_9f
 
     new-array v0, v5, [Ljava/lang/Object;
 
     const-string v1, "YesterdayAtFormatted"
 
-    const v2, 0x7f0e13f7
+    const v2, 0x7f0e14c5
 
     new-array v3, v5, [Ljava/lang/Object;
 
-    .line 1633
+    .line 1636
     invoke-static {}, Lorg/telegram/messenger/LocaleController;->getInstance()Lorg/telegram/messenger/LocaleController;
 
     move-result-object v4
@@ -5553,8 +5573,8 @@
 
     return-object p0
 
-    .line 1634
-    :cond_9d
+    .line 1637
+    :cond_9f
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
@@ -5564,25 +5584,25 @@
     invoke-static {v0, v1}, Ljava/lang/Math;->abs(J)J
 
     move-result-wide v0
-    :try_end_a6
-    .catch Ljava/lang/Exception; {:try_start_27 .. :try_end_a6} :catch_117
+    :try_end_a8
+    .catch Ljava/lang/Exception; {:try_start_27 .. :try_end_a8} :catch_119
 
     const-wide v2, 0x757b12c00L
 
     const/4 v4, 0x2
 
-    const v6, 0x7f0e1449
+    const v6, 0x7f0e1518
 
     const-string v10, "formatDateAtTime"
 
     cmp-long v11, v0, v2
 
-    if-gez v11, :cond_e6
+    if-gez v11, :cond_e8
 
-    :try_start_b5
+    :try_start_b7
     new-array v0, v4, [Ljava/lang/Object;
 
-    .line 1635
+    .line 1638
     invoke-static {}, Lorg/telegram/messenger/LocaleController;->getInstance()Lorg/telegram/messenger/LocaleController;
 
     move-result-object v1
@@ -5623,17 +5643,17 @@
 
     aput-object p0, p1, v9
 
-    .line 1636
+    .line 1639
     invoke-static {v8, v7, p1}, Lorg/telegram/messenger/LocaleController;->formatString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
 
     return-object p0
 
-    :cond_e6
+    :cond_e8
     new-array v0, v4, [Ljava/lang/Object;
 
-    .line 1638
+    .line 1641
     invoke-static {}, Lorg/telegram/messenger/LocaleController;->getInstance()Lorg/telegram/messenger/LocaleController;
 
     move-result-object v1
@@ -5674,19 +5694,19 @@
 
     aput-object p0, p1, v9
 
-    .line 1639
+    .line 1642
     invoke-static {v8, v7, p1}, Lorg/telegram/messenger/LocaleController;->formatString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
-    :try_end_116
-    .catch Ljava/lang/Exception; {:try_start_b5 .. :try_end_116} :catch_117
+    :try_end_118
+    .catch Ljava/lang/Exception; {:try_start_b7 .. :try_end_118} :catch_119
 
     return-object p0
 
-    :catch_117
+    :catch_119
     move-exception p0
 
-    .line 1642
+    .line 1645
     invoke-static {p0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     const-string p0, "LOC_ERR"
@@ -5694,17 +5714,17 @@
     return-object p0
 .end method
 
-.method public static formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
-    .registers 6
+.method public static varargs formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
+    .registers 8
 
-    if-eqz p0, :cond_69
+    if-eqz p0, :cond_6f
 
     .line 1053
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v0
 
-    if-eqz v0, :cond_69
+    if-eqz v0, :cond_6f
 
     invoke-static {}, Lorg/telegram/messenger/LocaleController;->getInstance()Lorg/telegram/messenger/LocaleController;
 
@@ -5714,7 +5734,7 @@
 
     if-nez v0, :cond_11
 
-    goto :goto_69
+    goto :goto_6f
 
     .line 1056
     :cond_11
@@ -5773,31 +5793,42 @@
     move-result v1
 
     .line 1059
-    new-instance v2, Ljava/lang/StringBuilder;
+    array-length v2, p2
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+    const/4 v3, 0x1
 
-    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p0, "_other"
-
-    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    const/4 v2, 0x1
+    add-int/2addr v2, v3
 
     new-array v2, v2, [Ljava/lang/Object;
 
-    const/4 v3, 0x0
-
+    .line 1060
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
 
-    aput-object p1, v2, v3
+    const/4 v4, 0x0
+
+    aput-object p1, v2, v4
+
+    .line 1061
+    array-length p1, p2
+
+    invoke-static {p2, v4, v2, v3, p1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    .line 1062
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p0, "_other"
+
+    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
 
     invoke-static {v0, p0, v1, v2}, Lorg/telegram/messenger/LocaleController;->formatString(Ljava/lang/String;Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
@@ -5806,15 +5837,15 @@
     return-object p0
 
     .line 1054
-    :cond_69
-    :goto_69
+    :cond_6f
+    :goto_6f
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v0, "LOC_ERR:"
+    const-string p2, "LOC_ERR:"
 
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -5830,7 +5861,7 @@
 
     if-eqz p0, :cond_d9
 
-    .line 1064
+    .line 1067
     :try_start_2
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
@@ -5848,7 +5879,7 @@
 
     goto/16 :goto_d9
 
-    .line 1067
+    .line 1070
     :cond_12
     invoke-static {}, Lorg/telegram/messenger/LocaleController;->getInstance()Lorg/telegram/messenger/LocaleController;
 
@@ -5868,7 +5899,7 @@
 
     move-result-object v0
 
-    .line 1068
+    .line 1071
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -5885,7 +5916,7 @@
 
     move-result-object v0
 
-    .line 1069
+    .line 1072
     new-instance v1, Ljava/lang/StringBuilder;
 
     sget-object v2, Ljava/util/Locale;->US:Ljava/util/Locale;
@@ -5910,7 +5941,7 @@
 
     invoke-direct {v1, p1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 1070
+    .line 1073
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->length()I
 
     move-result p1
@@ -5922,14 +5953,14 @@
 
     const/16 v2, 0x2c
 
-    .line 1071
+    .line 1074
     invoke-virtual {v1, p1, v2}, Ljava/lang/StringBuilder;->insert(IC)Ljava/lang/StringBuilder;
 
     add-int/lit8 p1, p1, -0x3
 
     goto :goto_55
 
-    .line 1074
+    .line 1077
     :cond_5f
     sget-boolean p1, Lorg/telegram/messenger/BuildVars;->USE_CLOUD_STRINGS:Z
 
@@ -5957,7 +5988,7 @@
     :goto_72
     if-nez p1, :cond_97
 
-    .line 1076
+    .line 1079
     sget-boolean p1, Lorg/telegram/messenger/BuildVars;->USE_CLOUD_STRINGS:Z
 
     if-eqz p1, :cond_96
@@ -5996,7 +6027,7 @@
     :cond_97
     if-nez p1, :cond_b1
 
-    .line 1079
+    .line 1082
     sget-object p1, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -6015,7 +6046,7 @@
 
     move-result p1
 
-    .line 1080
+    .line 1083
     sget-object v0, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     invoke-virtual {v0, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -6027,12 +6058,12 @@
 
     const-string v2, "%1$s"
 
-    .line 1082
+    .line 1085
     invoke-virtual {p1, v0, v2}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 1084
+    .line 1087
     invoke-static {}, Lorg/telegram/messenger/LocaleController;->getInstance()Lorg/telegram/messenger/LocaleController;
 
     move-result-object v0
@@ -6041,7 +6072,7 @@
 
     if-eqz v0, :cond_d0
 
-    .line 1085
+    .line 1088
     invoke-static {}, Lorg/telegram/messenger/LocaleController;->getInstance()Lorg/telegram/messenger/LocaleController;
 
     move-result-object v0
@@ -6063,14 +6094,14 @@
 
     aput-object v1, v0, v6
 
-    .line 1087
+    .line 1090
     invoke-static {p1, v0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
 
     return-object p0
 
-    .line 1065
+    .line 1068
     :cond_d9
     :goto_d9
     new-instance p1, Ljava/lang/StringBuilder;
@@ -6094,10 +6125,10 @@
     :catch_eb
     move-exception p1
 
-    .line 1090
+    .line 1093
     invoke-static {p1}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
-    .line 1091
+    .line 1094
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -6120,7 +6151,7 @@
 
     const/4 v0, 0x0
 
-    .line 1809
+    .line 1812
     invoke-static {p0, p1, v0}, Lorg/telegram/messenger/LocaleController;->formatYearMont(JZ)Ljava/lang/String;
 
     move-result-object p0
@@ -6131,7 +6162,7 @@
 .method public static formatShortNumber(I[I)Ljava/lang/String;
     .registers 11
 
-    .line 1893
+    .line 1896
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -6140,7 +6171,7 @@
 
     const/4 v2, 0x0
 
-    .line 1896
+    .line 1899
     :goto_7
     div-int/lit16 v3, p0, 0x3e8
 
@@ -6148,10 +6179,10 @@
 
     const-string v2, "K"
 
-    .line 1897
+    .line 1900
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1898
+    .line 1901
     rem-int/lit16 p0, p0, 0x3e8
 
     div-int/lit8 v2, p0, 0x64
@@ -6169,7 +6200,7 @@
 
     const-wide/high16 v7, 0x4024000000000000L    # 10.0
 
-    .line 1902
+    .line 1905
     invoke-static {v5, v6}, Ljava/lang/Double;->isNaN(D)Z
 
     div-double/2addr v5, v7
@@ -6180,7 +6211,7 @@
 
     const/4 v5, 0x0
 
-    .line 1903
+    .line 1906
     :goto_25
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->length()I
 
@@ -6199,7 +6230,7 @@
     :cond_35
     double-to-int v3, v3
 
-    .line 1906
+    .line 1909
     aput v3, p1, v1
 
     :cond_38
@@ -6209,21 +6240,21 @@
 
     if-eqz v2, :cond_7d
 
-    .line 1908
+    .line 1911
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->length()I
 
     move-result v4
 
     if-lez v4, :cond_7d
 
-    .line 1909
+    .line 1912
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->length()I
 
     move-result v4
 
     if-ne v4, v3, :cond_5f
 
-    .line 1910
+    .line 1913
     sget-object v0, Ljava/util/Locale;->US:Ljava/util/Locale;
 
     new-array v3, v3, [Ljava/lang/Object;
@@ -6248,7 +6279,7 @@
 
     return-object p0
 
-    .line 1912
+    .line 1915
     :cond_5f
     sget-object v4, Ljava/util/Locale;->US:Ljava/util/Locale;
 
@@ -6282,7 +6313,7 @@
 
     return-object p0
 
-    .line 1915
+    .line 1918
     :cond_7d
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->length()I
 
@@ -6290,7 +6321,7 @@
 
     if-ne v2, v3, :cond_94
 
-    .line 1916
+    .line 1919
     sget-object v0, Ljava/util/Locale;->US:Ljava/util/Locale;
 
     new-array p1, p1, [Ljava/lang/Object;
@@ -6309,7 +6340,7 @@
 
     return-object p0
 
-    .line 1918
+    .line 1921
     :cond_94
     sget-object v2, Ljava/util/Locale;->US:Ljava/util/Locale;
 
@@ -6341,7 +6372,7 @@
 
     const/4 v0, 0x1
 
-    .line 1773
+    .line 1776
     invoke-static {p0, p1, p2, v0}, Lorg/telegram/messenger/LocaleController;->formatStartsTime(JIZ)Ljava/lang/String;
 
     move-result-object p0
@@ -6352,12 +6383,12 @@
 .method public static formatStartsTime(JIZ)Ljava/lang/String;
     .registers 11
 
-    .line 1777
+    .line 1780
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
     move-result-object v0
 
-    .line 1778
+    .line 1781
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v1
@@ -6366,14 +6397,14 @@
 
     const/4 v1, 0x1
 
-    .line 1779
+    .line 1782
     invoke-virtual {v0, v1}, Ljava/util/Calendar;->get(I)I
 
     move-result v2
 
     const/4 v3, 0x6
 
-    .line 1780
+    .line 1783
     invoke-virtual {v0, v3}, Ljava/util/Calendar;->get(I)I
 
     move-result v4
@@ -6382,15 +6413,15 @@
 
     mul-long p0, p0, v5
 
-    .line 1782
+    .line 1785
     invoke-virtual {v0, p0, p1}, Ljava/util/Calendar;->setTimeInMillis(J)V
 
-    .line 1783
+    .line 1786
     invoke-virtual {v0, v1}, Ljava/util/Calendar;->get(I)I
 
     move-result p0
 
-    .line 1784
+    .line 1787
     invoke-virtual {v0, v3}, Ljava/util/Calendar;->get(I)I
 
     move-result p1
@@ -6445,7 +6476,7 @@
 
     add-int/lit8 p0, p0, 0xc
 
-    .line 1805
+    .line 1808
     :cond_45
     :goto_45
     invoke-static {}, Lorg/telegram/messenger/LocaleController;->getInstance()Lorg/telegram/messenger/LocaleController;
@@ -6470,7 +6501,7 @@
 .method public static varargs formatString(I[Ljava/lang/Object;)Ljava/lang/String;
     .registers 5
 
-    .line 1096
+    .line 1099
     sget-object v0, Lorg/telegram/messenger/LocaleController;->resourcesCacheMap:Ljava/util/HashMap;
 
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -6485,7 +6516,7 @@
 
     if-nez v0, :cond_22
 
-    .line 1098
+    .line 1101
     sget-object v0, Lorg/telegram/messenger/LocaleController;->resourcesCacheMap:Ljava/util/HashMap;
 
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -6506,7 +6537,7 @@
 
     move-object v0, v2
 
-    .line 1100
+    .line 1103
     :cond_22
     invoke-static {v0, p0, p1}, Lorg/telegram/messenger/LocaleController;->formatString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
@@ -6520,7 +6551,7 @@
 
     const/4 v0, 0x0
 
-    .line 1104
+    .line 1107
     invoke-static {p0, v0, p1, p2}, Lorg/telegram/messenger/LocaleController;->formatString(Ljava/lang/String;Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
@@ -6531,7 +6562,7 @@
 .method public static varargs formatString(Ljava/lang/String;Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
     .registers 6
 
-    .line 1109
+    .line 1112
     :try_start_0
     sget-boolean v0, Lorg/telegram/messenger/BuildVars;->USE_CLOUD_STRINGS:Z
 
@@ -6557,14 +6588,14 @@
     :goto_12
     if-nez v0, :cond_2f
 
-    .line 1111
+    .line 1114
     sget-boolean v1, Lorg/telegram/messenger/BuildVars;->USE_CLOUD_STRINGS:Z
 
     if-eqz v1, :cond_27
 
     if-eqz p1, :cond_27
 
-    .line 1112
+    .line 1115
     invoke-static {}, Lorg/telegram/messenger/LocaleController;->getInstance()Lorg/telegram/messenger/LocaleController;
 
     move-result-object v0
@@ -6582,14 +6613,14 @@
     :cond_27
     if-nez v0, :cond_2f
 
-    .line 1115
+    .line 1118
     sget-object p1, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     invoke-virtual {p1, p2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1119
+    .line 1122
     :cond_2f
     invoke-static {}, Lorg/telegram/messenger/LocaleController;->getInstance()Lorg/telegram/messenger/LocaleController;
 
@@ -6599,7 +6630,7 @@
 
     if-eqz p1, :cond_42
 
-    .line 1120
+    .line 1123
     invoke-static {}, Lorg/telegram/messenger/LocaleController;->getInstance()Lorg/telegram/messenger/LocaleController;
 
     move-result-object p1
@@ -6612,7 +6643,7 @@
 
     return-object p0
 
-    .line 1122
+    .line 1125
     :cond_42
     invoke-static {v0, p3}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
@@ -6625,10 +6656,10 @@
     :catch_47
     move-exception p1
 
-    .line 1125
+    .line 1128
     invoke-static {p1}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
-    .line 1126
+    .line 1129
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -6649,7 +6680,7 @@
 .method public static varargs formatStringSimple(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
     .registers 3
 
-    .line 1399
+    .line 1402
     :try_start_0
     invoke-static {}, Lorg/telegram/messenger/LocaleController;->getInstance()Lorg/telegram/messenger/LocaleController;
 
@@ -6659,7 +6690,7 @@
 
     if-eqz v0, :cond_13
 
-    .line 1400
+    .line 1403
     invoke-static {}, Lorg/telegram/messenger/LocaleController;->getInstance()Lorg/telegram/messenger/LocaleController;
 
     move-result-object v0
@@ -6672,7 +6703,7 @@
 
     return-object p0
 
-    .line 1402
+    .line 1405
     :cond_13
     invoke-static {p0, p1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
@@ -6685,10 +6716,10 @@
     :catch_18
     move-exception p1
 
-    .line 1405
+    .line 1408
     invoke-static {p1}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
-    .line 1406
+    .line 1409
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -6707,128 +6738,142 @@
 .end method
 
 .method public static formatTTLString(I)Ljava/lang/String;
-    .registers 6
+    .registers 7
 
-    const/16 v0, 0x3c
+    const/4 v0, 0x0
 
-    if-ge p0, v0, :cond_b
+    const/16 v1, 0x3c
 
-    const-string v0, "Seconds"
+    if-ge p0, v1, :cond_e
 
-    .line 1132
-    invoke-static {v0, p0}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    new-array v0, v0, [Ljava/lang/Object;
 
-    move-result-object p0
+    const-string v1, "Seconds"
 
-    return-object p0
-
-    :cond_b
-    const/16 v1, 0xe10
-
-    if-ge p0, v1, :cond_17
-
-    .line 1134
-    div-int/2addr p0, v0
-
-    const-string v0, "Minutes"
-
-    invoke-static {v0, p0}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    .line 1135
+    invoke-static {v1, p0, v0}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
 
     return-object p0
 
-    :cond_17
-    const v1, 0x15180
+    :cond_e
+    const/16 v2, 0xe10
 
-    if-ge p0, v1, :cond_25
+    if-ge p0, v2, :cond_1c
 
-    .line 1136
-    div-int/2addr p0, v0
+    .line 1137
+    div-int/2addr p0, v1
 
-    div-int/2addr p0, v0
+    new-array v0, v0, [Ljava/lang/Object;
 
-    const-string v0, "Hours"
+    const-string v1, "Minutes"
 
-    invoke-static {v0, p0}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    invoke-static {v1, p0, v0}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
 
     return-object p0
 
-    :cond_25
-    const v1, 0x93a80
+    :cond_1c
+    const v2, 0x15180
 
-    const-string v2, "Days"
+    if-ge p0, v2, :cond_2c
 
-    if-ge p0, v1, :cond_35
+    .line 1139
+    div-int/2addr p0, v1
 
-    .line 1138
-    div-int/2addr p0, v0
+    div-int/2addr p0, v1
 
-    div-int/2addr p0, v0
+    new-array v0, v0, [Ljava/lang/Object;
+
+    const-string v1, "Hours"
+
+    invoke-static {v1, p0, v0}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_2c
+    const v2, 0x93a80
+
+    const-string v3, "Days"
+
+    if-ge p0, v2, :cond_3e
+
+    .line 1141
+    div-int/2addr p0, v1
+
+    div-int/2addr p0, v1
 
     div-int/lit8 p0, p0, 0x18
 
-    invoke-static {v2, p0}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    new-array v0, v0, [Ljava/lang/Object;
+
+    invoke-static {v3, p0, v0}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
 
     return-object p0
 
-    :cond_35
-    const v1, 0x28de80
+    :cond_3e
+    const v2, 0x28de80
 
-    if-ge p0, v1, :cond_68
+    if-ge p0, v2, :cond_76
 
-    .line 1140
-    div-int/lit8 v1, p0, 0x3c
+    .line 1143
+    div-int/lit8 v2, p0, 0x3c
 
-    div-int/2addr v1, v0
+    div-int/2addr v2, v1
 
-    div-int/lit8 v1, v1, 0x18
+    div-int/lit8 v2, v2, 0x18
 
-    .line 1141
+    .line 1144
     rem-int/lit8 p0, p0, 0x7
 
-    const-string v0, "Weeks"
+    const-string v1, "Weeks"
 
-    if-nez p0, :cond_4c
+    if-nez p0, :cond_57
 
-    .line 1142
-    div-int/lit8 v1, v1, 0x7
+    .line 1145
+    div-int/lit8 v2, v2, 0x7
 
-    invoke-static {v0, v1}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    new-array p0, v0, [Ljava/lang/Object;
+
+    invoke-static {v1, v2, p0}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
 
     return-object p0
 
-    :cond_4c
+    :cond_57
     const/4 p0, 0x2
 
     new-array p0, p0, [Ljava/lang/Object;
 
-    const/4 v3, 0x0
+    .line 1147
+    div-int/lit8 v4, v2, 0x7
 
-    .line 1144
-    div-int/lit8 v4, v1, 0x7
+    new-array v5, v0, [Ljava/lang/Object;
 
-    invoke-static {v0, v4}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
-
-    move-result-object v0
-
-    aput-object v0, p0, v3
-
-    const/4 v0, 0x1
-
-    rem-int/lit8 v1, v1, 0x7
-
-    invoke-static {v2, v1}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    invoke-static {v1, v4, v5}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
     aput-object v1, p0, v0
+
+    const/4 v1, 0x1
+
+    rem-int/lit8 v2, v2, 0x7
+
+    new-array v0, v0, [Ljava/lang/Object;
+
+    invoke-static {v3, v2, v0}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    aput-object v0, p0, v1
 
     const-string v0, "%s %s"
 
@@ -6838,19 +6883,21 @@
 
     return-object p0
 
-    .line 1147
-    :cond_68
-    div-int/2addr p0, v0
+    .line 1150
+    :cond_76
+    div-int/2addr p0, v1
 
-    div-int/2addr p0, v0
+    div-int/2addr p0, v1
 
     div-int/lit8 p0, p0, 0x18
 
     div-int/lit8 p0, p0, 0x1e
 
-    const-string v0, "Months"
+    new-array v0, v0, [Ljava/lang/Object;
 
-    invoke-static {v0, p0}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    const-string v1, "Months"
+
+    invoke-static {v1, p0, v0}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -6862,7 +6909,7 @@
 
     const/4 v0, 0x0
 
-    .line 1923
+    .line 1926
     invoke-static {p0, p1, v0}, Lorg/telegram/messenger/LocaleController;->formatUserStatus(ILorg/telegram/tgnet/TLRPC$User;[Z)Ljava/lang/String;
 
     move-result-object p0
@@ -6875,7 +6922,7 @@
 
     const/4 v0, 0x0
 
-    .line 1954
+    .line 1957
     invoke-static {p0, p1, p2, v0}, Lorg/telegram/messenger/LocaleController;->formatUserStatus(ILorg/telegram/tgnet/TLRPC$User;[Z[Z)Ljava/lang/String;
 
     move-result-object p0
@@ -6894,7 +6941,7 @@
 
     if-eqz p1, :cond_24
 
-    .line 1958
+    .line 1961
     iget-object v3, p1, Lorg/telegram/tgnet/TLRPC$User;->status:Lorg/telegram/tgnet/TLRPC$UserStatus;
 
     if-eqz v3, :cond_24
@@ -6903,34 +6950,34 @@
 
     if-nez v4, :cond_24
 
-    .line 1959
+    .line 1962
     instance-of v4, v3, Lorg/telegram/tgnet/TLRPC$TL_userStatusRecently;
 
     if-eqz v4, :cond_17
 
-    .line 1960
+    .line 1963
     iput v2, v3, Lorg/telegram/tgnet/TLRPC$UserStatus;->expires:I
 
     goto :goto_24
 
-    .line 1961
+    .line 1964
     :cond_17
     instance-of v4, v3, Lorg/telegram/tgnet/TLRPC$TL_userStatusLastWeek;
 
     if-eqz v4, :cond_1e
 
-    .line 1962
+    .line 1965
     iput v1, v3, Lorg/telegram/tgnet/TLRPC$UserStatus;->expires:I
 
     goto :goto_24
 
-    .line 1963
+    .line 1966
     :cond_1e
     instance-of v4, v3, Lorg/telegram/tgnet/TLRPC$TL_userStatusLastMonth;
 
     if-eqz v4, :cond_24
 
-    .line 1964
+    .line 1967
     iput v0, v3, Lorg/telegram/tgnet/TLRPC$UserStatus;->expires:I
 
     :cond_24
@@ -6939,13 +6986,13 @@
 
     const/4 v4, 0x0
 
-    const v5, 0x7f0e0bb3
+    const v5, 0x7f0e0c3d
 
     const-string v6, "Online"
 
     if-eqz p1, :cond_50
 
-    .line 1967
+    .line 1970
     iget-object v7, p1, Lorg/telegram/tgnet/TLRPC$User;->status:Lorg/telegram/tgnet/TLRPC$UserStatus;
 
     if-eqz v7, :cond_50
@@ -6954,7 +7001,7 @@
 
     if-gtz v7, :cond_50
 
-    .line 1968
+    .line 1971
     invoke-static {p0}, Lorg/telegram/messenger/MessagesController;->getInstance(I)Lorg/telegram/messenger/MessagesController;
 
     move-result-object v7
@@ -6975,10 +7022,10 @@
 
     if-eqz p2, :cond_4b
 
-    .line 1970
+    .line 1973
     aput-boolean v3, p2, v4
 
-    .line 1972
+    .line 1975
     :cond_4b
     invoke-static {v6, v5}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
@@ -6989,7 +7036,7 @@
     :cond_50
     if-eqz p1, :cond_b3
 
-    .line 1975
+    .line 1978
     iget-object v7, p1, Lorg/telegram/tgnet/TLRPC$User;->status:Lorg/telegram/tgnet/TLRPC$UserStatus;
 
     if-eqz v7, :cond_b3
@@ -7010,7 +7057,7 @@
 
     goto :goto_b3
 
-    .line 1978
+    .line 1981
     :cond_65
     invoke-static {p0}, Lorg/telegram/tgnet/ConnectionsManager;->getInstance(I)Lorg/telegram/tgnet/ConnectionsManager;
 
@@ -7020,7 +7067,7 @@
 
     move-result p0
 
-    .line 1979
+    .line 1982
     iget-object p1, p1, Lorg/telegram/tgnet/TLRPC$User;->status:Lorg/telegram/tgnet/TLRPC$UserStatus;
 
     iget p1, p1, Lorg/telegram/tgnet/TLRPC$UserStatus;->expires:I
@@ -7029,10 +7076,10 @@
 
     if-eqz p2, :cond_77
 
-    .line 1981
+    .line 1984
     aput-boolean v3, p2, v4
 
-    .line 1983
+    .line 1986
     :cond_77
     invoke-static {v6, v5}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
@@ -7045,11 +7092,11 @@
 
     if-ne p1, p0, :cond_89
 
-    const p0, 0x7f0e08a5
+    const p0, 0x7f0e0902
 
     const-string p1, "Invisible"
 
-    .line 1986
+    .line 1989
     invoke-static {p1, p0}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object p0
@@ -7059,11 +7106,11 @@
     :cond_89
     if-ne p1, v2, :cond_95
 
-    const p0, 0x7f0e0920
+    const p0, 0x7f0e0986
 
     const-string p1, "Lately"
 
-    .line 1988
+    .line 1991
     invoke-static {p1, p0}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object p0
@@ -7073,11 +7120,11 @@
     :cond_95
     if-ne p1, v1, :cond_a1
 
-    const p0, 0x7f0e13e8
+    const p0, 0x7f0e14b6
 
     const-string p1, "WithinAWeek"
 
-    .line 1990
+    .line 1993
     invoke-static {p1, p0}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object p0
@@ -7087,11 +7134,11 @@
     :cond_a1
     if-ne p1, v0, :cond_ad
 
-    const p0, 0x7f0e13e7
+    const p0, 0x7f0e14b5
 
     const-string p1, "WithinAMonth"
 
-    .line 1992
+    .line 1995
     invoke-static {p1, p0}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object p0
@@ -7101,7 +7148,7 @@
     :cond_ad
     int-to-long p0, p1
 
-    .line 1994
+    .line 1997
     invoke-static {p0, p1, p3}, Lorg/telegram/messenger/LocaleController;->formatDateOnline(J[Z)Ljava/lang/String;
 
     move-result-object p0
@@ -7114,7 +7161,7 @@
 
     const-string p1, "ALongTimeAgo"
 
-    .line 1976
+    .line 1979
     invoke-static {p1, p0}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object p0
@@ -7129,7 +7176,7 @@
 
     mul-long p0, p0, v0
 
-    .line 1816
+    .line 1819
     :try_start_4
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
@@ -7137,22 +7184,22 @@
 
     const/4 v1, 0x1
 
-    .line 1817
+    .line 1820
     invoke-virtual {v0, v1}, Ljava/util/Calendar;->get(I)I
 
     move-result v2
 
-    .line 1818
+    .line 1821
     invoke-virtual {v0, p0, p1}, Ljava/util/Calendar;->setTimeInMillis(J)V
 
-    .line 1819
+    .line 1822
     invoke-virtual {v0, v1}, Ljava/util/Calendar;->get(I)I
 
     move-result p0
 
     const/4 p1, 0x2
 
-    .line 1820
+    .line 1823
     invoke-virtual {v0, p1}, Ljava/util/Calendar;->get(I)I
 
     move-result v0
@@ -7165,9 +7212,9 @@
 
     const-string v5, "January"
 
-    const v6, 0x7f0e08d9
+    const v6, 0x7f0e093e
 
-    .line 1823
+    .line 1826
     invoke-static {v5, v6}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v5
@@ -7176,9 +7223,9 @@
 
     const-string v4, "February"
 
-    const v5, 0x7f0e06f1
+    const v5, 0x7f0e0745
 
-    .line 1824
+    .line 1827
     invoke-static {v4, v5}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v4
@@ -7187,9 +7234,9 @@
 
     const-string v1, "March"
 
-    const v4, 0x7f0e099b
+    const v4, 0x7f0e0a22
 
-    .line 1825
+    .line 1828
     invoke-static {v1, v4}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v1
@@ -7200,9 +7247,9 @@
 
     const-string v1, "April"
 
-    const v4, 0x7f0e018c
+    const v4, 0x7f0e01c1
 
-    .line 1826
+    .line 1829
     invoke-static {v1, v4}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v1
@@ -7213,9 +7260,9 @@
 
     const-string v1, "May"
 
-    const v4, 0x7f0e09ab
+    const v4, 0x7f0e0a32
 
-    .line 1827
+    .line 1830
     invoke-static {v1, v4}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v1
@@ -7226,9 +7273,9 @@
 
     const-string v1, "June"
 
-    const v4, 0x7f0e08f2
+    const v4, 0x7f0e0957
 
-    .line 1828
+    .line 1831
     invoke-static {v1, v4}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v1
@@ -7239,9 +7286,9 @@
 
     const-string v1, "July"
 
-    const v4, 0x7f0e08f0
+    const v4, 0x7f0e0955
 
-    .line 1829
+    .line 1832
     invoke-static {v1, v4}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v1
@@ -7252,9 +7299,9 @@
 
     const-string v1, "August"
 
-    const v4, 0x7f0e0210
+    const v4, 0x7f0e0245
 
-    .line 1830
+    .line 1833
     invoke-static {v1, v4}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v1
@@ -7265,9 +7312,9 @@
 
     const-string v1, "September"
 
-    const v4, 0x7f0e0ffb
+    const v4, 0x7f0e10b8
 
-    .line 1831
+    .line 1834
     invoke-static {v1, v4}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v1
@@ -7278,9 +7325,9 @@
 
     const-string v1, "October"
 
-    const v4, 0x7f0e0baf
+    const v4, 0x7f0e0c39
 
-    .line 1832
+    .line 1835
     invoke-static {v1, v4}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v1
@@ -7291,9 +7338,9 @@
 
     const-string v1, "November"
 
-    const v4, 0x7f0e0bab
+    const v4, 0x7f0e0c35
 
-    .line 1833
+    .line 1836
     invoke-static {v1, v4}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v1
@@ -7304,9 +7351,9 @@
 
     const-string v1, "December"
 
-    const v4, 0x7f0e053a
+    const v4, 0x7f0e058b
 
-    .line 1834
+    .line 1837
     invoke-static {v1, v4}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v1
@@ -7317,12 +7364,12 @@
 
     if-nez p2, :cond_b6
 
-    .line 1837
+    .line 1840
     aget-object p0, v3, v0
 
     return-object p0
 
-    .line 1839
+    .line 1842
     :cond_b6
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -7349,7 +7396,7 @@
     :catch_cd
     move-exception p0
 
-    .line 1842
+    .line 1845
     invoke-static {p0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     const-string p0, "LOC_ERR"
@@ -7360,7 +7407,7 @@
 .method public static getCurrencyExpDivider(Ljava/lang/String;)I
     .registers 5
 
-    .line 1290
+    .line 1293
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
 
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
@@ -7961,7 +8008,7 @@
 
     :cond_14
     :goto_14
-    const v0, 0x7f0e0901
+    const v0, 0x7f0e0966
 
     const-string v1, "LanguageName"
 
@@ -9549,10 +9596,10 @@
 .method public static getUseImperialSystemType()Z
     .registers 1
 
-    .line 3118
+    .line 3121
     invoke-static {}, Lorg/telegram/messenger/LocaleController;->ensureImperialSystemInit()V
 
-    .line 3119
+    .line 3122
     sget-object v0, Lorg/telegram/messenger/LocaleController;->useImperialSystemType:Ljava/lang/Boolean;
 
     invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
@@ -9565,7 +9612,7 @@
 .method public static isRTLCharacter(C)Z
     .registers 4
 
-    .line 1769
+    .line 1772
     invoke-static {p0}, Ljava/lang/Character;->getDirectionality(C)B
 
     move-result v0
@@ -9654,7 +9701,7 @@
 .method private synthetic lambda$applyRemoteLanguage$10(Lorg/telegram/messenger/LocaleController$LocaleInfo;Lorg/telegram/tgnet/TLObject;I)V
     .registers 4
 
-    .line 2234
+    .line 2237
     check-cast p2, Lorg/telegram/tgnet/TLRPC$TL_langPackDifference;
 
     invoke-virtual {p0, p1, p2, p3}, Lorg/telegram/messenger/LocaleController;->saveRemoteLocaleStrings(Lorg/telegram/messenger/LocaleController$LocaleInfo;Lorg/telegram/tgnet/TLRPC$TL_langPackDifference;I)V
@@ -9667,7 +9714,7 @@
 
     if-eqz p3, :cond_a
 
-    .line 2234
+    .line 2237
     new-instance p4, Lorg/telegram/messenger/LocaleController$$ExternalSyntheticLambda7;
 
     invoke-direct {p4, p0, p1, p3, p2}, Lorg/telegram/messenger/LocaleController$$ExternalSyntheticLambda7;-><init>(Lorg/telegram/messenger/LocaleController;Lorg/telegram/messenger/LocaleController$LocaleInfo;Lorg/telegram/tgnet/TLObject;I)V
@@ -9681,7 +9728,7 @@
 .method private synthetic lambda$applyRemoteLanguage$12(Lorg/telegram/messenger/LocaleController$LocaleInfo;Lorg/telegram/tgnet/TLObject;I)V
     .registers 4
 
-    .line 2247
+    .line 2250
     check-cast p2, Lorg/telegram/tgnet/TLRPC$TL_langPackDifference;
 
     invoke-virtual {p0, p1, p2, p3}, Lorg/telegram/messenger/LocaleController;->saveRemoteLocaleStrings(Lorg/telegram/messenger/LocaleController$LocaleInfo;Lorg/telegram/tgnet/TLRPC$TL_langPackDifference;I)V
@@ -9694,7 +9741,7 @@
 
     if-eqz p3, :cond_a
 
-    .line 2247
+    .line 2250
     new-instance p4, Lorg/telegram/messenger/LocaleController$$ExternalSyntheticLambda8;
 
     invoke-direct {p4, p0, p1, p3, p2}, Lorg/telegram/messenger/LocaleController$$ExternalSyntheticLambda8;-><init>(Lorg/telegram/messenger/LocaleController;Lorg/telegram/messenger/LocaleController$LocaleInfo;Lorg/telegram/tgnet/TLObject;I)V
@@ -9708,7 +9755,7 @@
 .method private synthetic lambda$applyRemoteLanguage$14(Lorg/telegram/messenger/LocaleController$LocaleInfo;Lorg/telegram/tgnet/TLObject;I)V
     .registers 4
 
-    .line 2258
+    .line 2261
     check-cast p2, Lorg/telegram/tgnet/TLRPC$TL_langPackDifference;
 
     invoke-virtual {p0, p1, p2, p3}, Lorg/telegram/messenger/LocaleController;->saveRemoteLocaleStrings(Lorg/telegram/messenger/LocaleController$LocaleInfo;Lorg/telegram/tgnet/TLRPC$TL_langPackDifference;I)V
@@ -9721,7 +9768,7 @@
 
     if-eqz p3, :cond_a
 
-    .line 2258
+    .line 2261
     new-instance p4, Lorg/telegram/messenger/LocaleController$$ExternalSyntheticLambda6;
 
     invoke-direct {p4, p0, p1, p3, p2}, Lorg/telegram/messenger/LocaleController$$ExternalSyntheticLambda6;-><init>(Lorg/telegram/messenger/LocaleController;Lorg/telegram/messenger/LocaleController$LocaleInfo;Lorg/telegram/tgnet/TLObject;I)V
@@ -9735,7 +9782,7 @@
 .method private synthetic lambda$applyRemoteLanguage$8(Lorg/telegram/messenger/LocaleController$LocaleInfo;Lorg/telegram/tgnet/TLObject;I)V
     .registers 4
 
-    .line 2225
+    .line 2228
     check-cast p2, Lorg/telegram/tgnet/TLRPC$TL_langPackDifference;
 
     invoke-virtual {p0, p1, p2, p3}, Lorg/telegram/messenger/LocaleController;->saveRemoteLocaleStrings(Lorg/telegram/messenger/LocaleController$LocaleInfo;Lorg/telegram/tgnet/TLRPC$TL_langPackDifference;I)V
@@ -9748,7 +9795,7 @@
 
     if-eqz p3, :cond_a
 
-    .line 2225
+    .line 2228
     new-instance p4, Lorg/telegram/messenger/LocaleController$$ExternalSyntheticLambda5;
 
     invoke-direct {p4, p0, p1, p3, p2}, Lorg/telegram/messenger/LocaleController$$ExternalSyntheticLambda5;-><init>(Lorg/telegram/messenger/LocaleController;Lorg/telegram/messenger/LocaleController$LocaleInfo;Lorg/telegram/tgnet/TLObject;I)V
@@ -9764,13 +9811,13 @@
 
     const/4 v0, 0x0
 
-    .line 2148
+    .line 2151
     iput-boolean v0, p0, Lorg/telegram/messenger/LocaleController;->loadingRemoteLanguages:Z
 
-    .line 2149
+    .line 2152
     check-cast p1, Lorg/telegram/tgnet/TLRPC$Vector;
 
-    .line 2150
+    .line 2153
     iget-object v1, p0, Lorg/telegram/messenger/LocaleController;->remoteLanguages:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
@@ -9784,7 +9831,7 @@
 
     if-ge v2, v1, :cond_1e
 
-    .line 2151
+    .line 2154
     iget-object v4, p0, Lorg/telegram/messenger/LocaleController;->remoteLanguages:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -9799,7 +9846,7 @@
 
     goto :goto_c
 
-    .line 2153
+    .line 2156
     :cond_1e
     iget-object v1, p1, Lorg/telegram/tgnet/TLRPC$Vector;->objects:Ljava/util/ArrayList;
 
@@ -9812,7 +9859,7 @@
     :goto_25
     if-ge v2, v1, :cond_df
 
-    .line 2154
+    .line 2157
     iget-object v4, p1, Lorg/telegram/tgnet/TLRPC$Vector;->objects:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -9821,12 +9868,12 @@
 
     check-cast v4, Lorg/telegram/tgnet/TLRPC$TL_langPackLanguage;
 
-    .line 2155
+    .line 2158
     sget-boolean v5, Lorg/telegram/messenger/BuildVars;->LOGS_ENABLED:Z
 
     if-eqz v5, :cond_49
 
-    .line 2156
+    .line 2159
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -9845,23 +9892,23 @@
 
     invoke-static {v5}, Lorg/telegram/messenger/FileLog;->d(Ljava/lang/String;)V
 
-    .line 2158
+    .line 2161
     :cond_49
     new-instance v5, Lorg/telegram/messenger/LocaleController$LocaleInfo;
 
     invoke-direct {v5}, Lorg/telegram/messenger/LocaleController$LocaleInfo;-><init>()V
 
-    .line 2159
+    .line 2162
     iget-object v6, v4, Lorg/telegram/tgnet/TLRPC$TL_langPackLanguage;->name:Ljava/lang/String;
 
     iput-object v6, v5, Lorg/telegram/messenger/LocaleController$LocaleInfo;->nameEnglish:Ljava/lang/String;
 
-    .line 2160
+    .line 2163
     iget-object v6, v4, Lorg/telegram/tgnet/TLRPC$TL_langPackLanguage;->native_name:Ljava/lang/String;
 
     iput-object v6, v5, Lorg/telegram/messenger/LocaleController$LocaleInfo;->name:Ljava/lang/String;
 
-    .line 2161
+    .line 2164
     iget-object v6, v4, Lorg/telegram/tgnet/TLRPC$TL_langPackLanguage;->lang_code:Ljava/lang/String;
 
     const/16 v7, 0x2d
@@ -9878,12 +9925,12 @@
 
     iput-object v6, v5, Lorg/telegram/messenger/LocaleController$LocaleInfo;->shortName:Ljava/lang/String;
 
-    .line 2162
+    .line 2165
     iget-object v6, v4, Lorg/telegram/tgnet/TLRPC$TL_langPackLanguage;->base_lang_code:Ljava/lang/String;
 
     if-eqz v6, :cond_75
 
-    .line 2163
+    .line 2166
     invoke-virtual {v6, v7, v8}, Ljava/lang/String;->replace(CC)Ljava/lang/String;
 
     move-result-object v6
@@ -9899,10 +9946,10 @@
     :cond_75
     const-string v6, ""
 
-    .line 2165
+    .line 2168
     iput-object v6, v5, Lorg/telegram/messenger/LocaleController$LocaleInfo;->baseLangCode:Ljava/lang/String;
 
-    .line 2167
+    .line 2170
     :goto_79
     iget-object v6, v4, Lorg/telegram/tgnet/TLRPC$TL_langPackLanguage;->plural_code:Ljava/lang/String;
 
@@ -9916,20 +9963,20 @@
 
     iput-object v6, v5, Lorg/telegram/messenger/LocaleController$LocaleInfo;->pluralLangCode:Ljava/lang/String;
 
-    .line 2168
+    .line 2171
     iget-boolean v4, v4, Lorg/telegram/tgnet/TLRPC$TL_langPackLanguage;->rtl:Z
 
     iput-boolean v4, v5, Lorg/telegram/messenger/LocaleController$LocaleInfo;->isRtl:Z
 
     const-string v4, "remote"
 
-    .line 2169
+    .line 2172
     iput-object v4, v5, Lorg/telegram/messenger/LocaleController$LocaleInfo;->pathToFile:Ljava/lang/String;
 
-    .line 2170
+    .line 2173
     iput v2, v5, Lorg/telegram/messenger/LocaleController$LocaleInfo;->serverIndex:I
 
-    .line 2172
+    .line 2175
     invoke-virtual {v5}, Lorg/telegram/messenger/LocaleController$LocaleInfo;->getKey()Ljava/lang/String;
 
     move-result-object v4
@@ -9940,12 +9987,12 @@
 
     if-nez v4, :cond_a8
 
-    .line 2174
+    .line 2177
     iget-object v4, p0, Lorg/telegram/messenger/LocaleController;->languages:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 2175
+    .line 2178
     iget-object v4, p0, Lorg/telegram/messenger/LocaleController;->languagesDict:Ljava/util/HashMap;
 
     invoke-virtual {v5}, Lorg/telegram/messenger/LocaleController$LocaleInfo;->getKey()Ljava/lang/String;
@@ -9956,40 +10003,40 @@
 
     goto :goto_c1
 
-    .line 2177
+    .line 2180
     :cond_a8
     iget-object v6, v5, Lorg/telegram/messenger/LocaleController$LocaleInfo;->nameEnglish:Ljava/lang/String;
 
     iput-object v6, v4, Lorg/telegram/messenger/LocaleController$LocaleInfo;->nameEnglish:Ljava/lang/String;
 
-    .line 2178
+    .line 2181
     iget-object v6, v5, Lorg/telegram/messenger/LocaleController$LocaleInfo;->name:Ljava/lang/String;
 
     iput-object v6, v4, Lorg/telegram/messenger/LocaleController$LocaleInfo;->name:Ljava/lang/String;
 
-    .line 2179
+    .line 2182
     iget-object v6, v5, Lorg/telegram/messenger/LocaleController$LocaleInfo;->baseLangCode:Ljava/lang/String;
 
     iput-object v6, v4, Lorg/telegram/messenger/LocaleController$LocaleInfo;->baseLangCode:Ljava/lang/String;
 
-    .line 2180
+    .line 2183
     iget-object v6, v5, Lorg/telegram/messenger/LocaleController$LocaleInfo;->pluralLangCode:Ljava/lang/String;
 
     iput-object v6, v4, Lorg/telegram/messenger/LocaleController$LocaleInfo;->pluralLangCode:Ljava/lang/String;
 
-    .line 2181
+    .line 2184
     iget-object v6, v5, Lorg/telegram/messenger/LocaleController$LocaleInfo;->pathToFile:Ljava/lang/String;
 
     iput-object v6, v4, Lorg/telegram/messenger/LocaleController$LocaleInfo;->pathToFile:Ljava/lang/String;
 
-    .line 2182
+    .line 2185
     iget v5, v5, Lorg/telegram/messenger/LocaleController$LocaleInfo;->serverIndex:I
 
     iput v5, v4, Lorg/telegram/messenger/LocaleController$LocaleInfo;->serverIndex:I
 
     move-object v5, v4
 
-    .line 2185
+    .line 2188
     :goto_c1
     iget-object v4, p0, Lorg/telegram/messenger/LocaleController;->remoteLanguagesDict:Ljava/util/HashMap;
 
@@ -10003,12 +10050,12 @@
 
     if-nez v4, :cond_db
 
-    .line 2186
+    .line 2189
     iget-object v4, p0, Lorg/telegram/messenger/LocaleController;->remoteLanguages:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 2187
+    .line 2190
     iget-object v4, p0, Lorg/telegram/messenger/LocaleController;->remoteLanguagesDict:Ljava/util/HashMap;
 
     invoke-virtual {v5}, Lorg/telegram/messenger/LocaleController$LocaleInfo;->getKey()Ljava/lang/String;
@@ -10025,7 +10072,7 @@
     :cond_df
     const/4 p1, 0x0
 
-    .line 2190
+    .line 2193
     :goto_e0
     iget-object v1, p0, Lorg/telegram/messenger/LocaleController;->remoteLanguages:Ljava/util/ArrayList;
 
@@ -10037,7 +10084,7 @@
 
     if-ge p1, v1, :cond_136
 
-    .line 2191
+    .line 2194
     iget-object v1, p0, Lorg/telegram/messenger/LocaleController;->remoteLanguages:Ljava/util/ArrayList;
 
     invoke-virtual {v1, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -10046,7 +10093,7 @@
 
     check-cast v1, Lorg/telegram/messenger/LocaleController$LocaleInfo;
 
-    .line 2192
+    .line 2195
     iget v4, v1, Lorg/telegram/messenger/LocaleController$LocaleInfo;->serverIndex:I
 
     if-ne v4, v3, :cond_134
@@ -10057,13 +10104,13 @@
 
     goto :goto_134
 
-    .line 2195
+    .line 2198
     :cond_fa
     sget-boolean v4, Lorg/telegram/messenger/BuildVars;->LOGS_ENABLED:Z
 
     if-eqz v4, :cond_116
 
-    .line 2196
+    .line 2199
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -10084,13 +10131,13 @@
 
     invoke-static {v4}, Lorg/telegram/messenger/FileLog;->d(Ljava/lang/String;)V
 
-    .line 2198
+    .line 2201
     :cond_116
     iget-object v4, p0, Lorg/telegram/messenger/LocaleController;->remoteLanguages:Ljava/util/ArrayList;
 
     invoke-virtual {v4, p1}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
-    .line 2199
+    .line 2202
     iget-object v4, p0, Lorg/telegram/messenger/LocaleController;->remoteLanguagesDict:Ljava/util/HashMap;
 
     invoke-virtual {v1}, Lorg/telegram/messenger/LocaleController$LocaleInfo;->getKey()Ljava/lang/String;
@@ -10099,12 +10146,12 @@
 
     invoke-virtual {v4, v5}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2200
+    .line 2203
     iget-object v4, p0, Lorg/telegram/messenger/LocaleController;->languages:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 2201
+    .line 2204
     iget-object v4, p0, Lorg/telegram/messenger/LocaleController;->languagesDict:Ljava/util/HashMap;
 
     invoke-virtual {v1}, Lorg/telegram/messenger/LocaleController$LocaleInfo;->getKey()Ljava/lang/String;
@@ -10121,11 +10168,11 @@
 
     goto :goto_e0
 
-    .line 2204
+    .line 2207
     :cond_136
     invoke-direct {p0}, Lorg/telegram/messenger/LocaleController;->saveOtherLanguages()V
 
-    .line 2205
+    .line 2208
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getGlobalInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object p1
@@ -10136,7 +10183,7 @@
 
     invoke-virtual {p1, v1, v3}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 2206
+    .line 2209
     iget-object p1, p0, Lorg/telegram/messenger/LocaleController;->currentLocaleInfo:Lorg/telegram/messenger/LocaleController$LocaleInfo;
 
     invoke-virtual {p0, p1, v2, v0, p2}, Lorg/telegram/messenger/LocaleController;->applyLanguage(Lorg/telegram/messenger/LocaleController$LocaleInfo;ZZI)V
@@ -10149,7 +10196,7 @@
 
     if-eqz p2, :cond_a
 
-    .line 2147
+    .line 2150
     new-instance p3, Lorg/telegram/messenger/LocaleController$$ExternalSyntheticLambda9;
 
     invoke-direct {p3, p0, p2, p1}, Lorg/telegram/messenger/LocaleController$$ExternalSyntheticLambda9;-><init>(Lorg/telegram/messenger/LocaleController;Lorg/telegram/tgnet/TLObject;I)V
@@ -10189,32 +10236,32 @@
 
     if-nez p1, :cond_7
 
-    .line 2080
+    .line 2083
     iget p1, p3, Lorg/telegram/tgnet/TLRPC$TL_langPackDifference;->version:I
 
     iput p1, p2, Lorg/telegram/messenger/LocaleController$LocaleInfo;->version:I
 
     goto :goto_b
 
-    .line 2082
+    .line 2085
     :cond_7
     iget p1, p3, Lorg/telegram/tgnet/TLRPC$TL_langPackDifference;->version:I
 
     iput p1, p2, Lorg/telegram/messenger/LocaleController$LocaleInfo;->baseVersion:I
 
-    .line 2084
+    .line 2087
     :goto_b
     invoke-direct {p0}, Lorg/telegram/messenger/LocaleController;->saveOtherLanguages()V
 
     const/4 p1, 0x0
 
-    .line 2086
+    .line 2089
     :try_start_f
     iget-object p3, p0, Lorg/telegram/messenger/LocaleController;->currentLocaleInfo:Lorg/telegram/messenger/LocaleController$LocaleInfo;
 
     if-ne p3, p2, :cond_d0
 
-    .line 2089
+    .line 2092
     iget-object p3, p2, Lorg/telegram/messenger/LocaleController$LocaleInfo;->pluralLangCode:Ljava/lang/String;
 
     invoke-static {p3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -10227,7 +10274,7 @@
 
     if-nez p3, :cond_24
 
-    .line 2090
+    .line 2093
     :try_start_1d
     iget-object p3, p2, Lorg/telegram/messenger/LocaleController$LocaleInfo;->pluralLangCode:Ljava/lang/String;
 
@@ -10237,7 +10284,7 @@
 
     goto :goto_39
 
-    .line 2091
+    .line 2094
     :cond_24
     iget-object p3, p2, Lorg/telegram/messenger/LocaleController$LocaleInfo;->baseLangCode:Ljava/lang/String;
 
@@ -10247,7 +10294,7 @@
 
     if-nez p3, :cond_33
 
-    .line 2092
+    .line 2095
     iget-object p3, p2, Lorg/telegram/messenger/LocaleController$LocaleInfo;->baseLangCode:Ljava/lang/String;
 
     invoke-virtual {p3, v0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
@@ -10256,7 +10303,7 @@
 
     goto :goto_39
 
-    .line 2094
+    .line 2097
     :cond_33
     iget-object p3, p2, Lorg/telegram/messenger/LocaleController$LocaleInfo;->shortName:Ljava/lang/String;
 
@@ -10264,7 +10311,7 @@
 
     move-result-object p3
 
-    .line 2096
+    .line 2099
     :goto_39
     array-length v0, p3
 
@@ -10272,7 +10319,7 @@
 
     if-ne v0, v1, :cond_45
 
-    .line 2097
+    .line 2100
     new-instance v0, Ljava/util/Locale;
 
     aget-object p3, p3, p1
@@ -10281,7 +10328,7 @@
 
     goto :goto_4e
 
-    .line 2099
+    .line 2102
     :cond_45
     new-instance v0, Ljava/util/Locale;
 
@@ -10291,44 +10338,44 @@
 
     invoke-direct {v0, v2, p3}, Ljava/util/Locale;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2101
+    .line 2104
     :goto_4e
     iget-object p3, p2, Lorg/telegram/messenger/LocaleController$LocaleInfo;->shortName:Ljava/lang/String;
 
     iput-object p3, p0, Lorg/telegram/messenger/LocaleController;->languageOverride:Ljava/lang/String;
 
-    .line 2103
+    .line 2106
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getGlobalMainSettings()Landroid/content/SharedPreferences;
 
     move-result-object p3
 
-    .line 2104
+    .line 2107
     invoke-interface {p3}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object p3
 
     const-string v2, "language"
 
-    .line 2105
+    .line 2108
     invoke-virtual {p2}, Lorg/telegram/messenger/LocaleController$LocaleInfo;->getKey()Ljava/lang/String;
 
     move-result-object v3
 
     invoke-interface {p3, v2, v3}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
-    .line 2106
+    .line 2109
     invoke-interface {p3}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 2108
+    .line 2111
     iput-object p4, p0, Lorg/telegram/messenger/LocaleController;->localeValues:Ljava/util/HashMap;
 
-    .line 2109
+    .line 2112
     iput-object v0, p0, Lorg/telegram/messenger/LocaleController;->currentLocale:Ljava/util/Locale;
 
-    .line 2110
+    .line 2113
     iput-object p2, p0, Lorg/telegram/messenger/LocaleController;->currentLocaleInfo:Lorg/telegram/messenger/LocaleController$LocaleInfo;
 
-    .line 2111
+    .line 2114
     iget-object p2, p2, Lorg/telegram/messenger/LocaleController$LocaleInfo;->pluralLangCode:Ljava/lang/String;
 
     invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -10337,7 +10384,7 @@
 
     if-nez p2, :cond_82
 
-    .line 2112
+    .line 2115
     iget-object p2, p0, Lorg/telegram/messenger/LocaleController;->allRules:Ljava/util/HashMap;
 
     iget-object p3, p0, Lorg/telegram/messenger/LocaleController;->currentLocaleInfo:Lorg/telegram/messenger/LocaleController$LocaleInfo;
@@ -10352,13 +10399,13 @@
 
     iput-object p2, p0, Lorg/telegram/messenger/LocaleController;->currentPluralRules:Lorg/telegram/messenger/LocaleController$PluralRules;
 
-    .line 2114
+    .line 2117
     :cond_82
     iget-object p2, p0, Lorg/telegram/messenger/LocaleController;->currentPluralRules:Lorg/telegram/messenger/LocaleController$PluralRules;
 
     if-nez p2, :cond_a4
 
-    .line 2115
+    .line 2118
     iget-object p2, p0, Lorg/telegram/messenger/LocaleController;->allRules:Ljava/util/HashMap;
 
     iget-object p3, p0, Lorg/telegram/messenger/LocaleController;->currentLocale:Ljava/util/Locale;
@@ -10377,7 +10424,7 @@
 
     if-nez p2, :cond_a4
 
-    .line 2117
+    .line 2120
     iget-object p2, p0, Lorg/telegram/messenger/LocaleController;->allRules:Ljava/util/HashMap;
 
     const-string p3, "en"
@@ -10390,26 +10437,26 @@
 
     iput-object p2, p0, Lorg/telegram/messenger/LocaleController;->currentPluralRules:Lorg/telegram/messenger/LocaleController$PluralRules;
 
-    .line 2120
+    .line 2123
     :cond_a4
     iput-boolean v1, p0, Lorg/telegram/messenger/LocaleController;->changingConfiguration:Z
 
-    .line 2121
+    .line 2124
     iget-object p2, p0, Lorg/telegram/messenger/LocaleController;->currentLocale:Ljava/util/Locale;
 
     invoke-static {p2}, Ljava/util/Locale;->setDefault(Ljava/util/Locale;)V
 
-    .line 2122
+    .line 2125
     new-instance p2, Landroid/content/res/Configuration;
 
     invoke-direct {p2}, Landroid/content/res/Configuration;-><init>()V
 
-    .line 2123
+    .line 2126
     iget-object p3, p0, Lorg/telegram/messenger/LocaleController;->currentLocale:Ljava/util/Locale;
 
     iput-object p3, p2, Landroid/content/res/Configuration;->locale:Ljava/util/Locale;
 
-    .line 2124
+    .line 2127
     sget-object p3, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     invoke-virtual {p3}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -10428,7 +10475,7 @@
 
     invoke-virtual {p3, p2, p4}, Landroid/content/res/Resources;->updateConfiguration(Landroid/content/res/Configuration;Landroid/util/DisplayMetrics;)V
 
-    .line 2125
+    .line 2128
     iput-boolean p1, p0, Lorg/telegram/messenger/LocaleController;->changingConfiguration:Z
     :try_end_c9
     .catch Ljava/lang/Exception; {:try_start_1d .. :try_end_c9} :catch_ca
@@ -10438,18 +10485,18 @@
     :catch_ca
     move-exception p2
 
-    .line 2128
+    .line 2131
     invoke-static {p2}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
-    .line 2129
+    .line 2132
     iput-boolean p1, p0, Lorg/telegram/messenger/LocaleController;->changingConfiguration:Z
 
-    .line 2131
+    .line 2134
     :cond_d0
     :goto_d0
     invoke-virtual {p0}, Lorg/telegram/messenger/LocaleController;->recreateFormatters()V
 
-    .line 2132
+    .line 2135
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getGlobalInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object p2
@@ -10676,7 +10723,7 @@
 
     const/4 v0, 0x0
 
-    .line 3114
+    .line 3117
     sput-object v0, Lorg/telegram/messenger/LocaleController;->useImperialSystemType:Ljava/lang/Boolean;
 
     return-void
@@ -10896,7 +10943,7 @@
 
     mul-long p0, p0, v0
 
-    .line 1869
+    .line 1872
     :try_start_4
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
@@ -10904,20 +10951,20 @@
 
     const/4 v1, 0x6
 
-    .line 1870
+    .line 1873
     invoke-virtual {v0, v1}, Ljava/util/Calendar;->get(I)I
 
     move-result v2
 
-    .line 1871
+    .line 1874
     invoke-virtual {v0, p0, p1}, Ljava/util/Calendar;->setTimeInMillis(J)V
 
-    .line 1872
+    .line 1875
     invoke-virtual {v0, v1}, Ljava/util/Calendar;->get(I)I
 
     move-result v0
 
-    .line 1874
+    .line 1877
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v3
@@ -10934,7 +10981,7 @@
 
     if-ltz v1, :cond_36
 
-    .line 1875
+    .line 1878
     invoke-static {}, Lorg/telegram/messenger/LocaleController;->getInstance()Lorg/telegram/messenger/LocaleController;
 
     move-result-object v0
@@ -10960,7 +11007,7 @@
 
     if-ne v0, v1, :cond_49
 
-    .line 1878
+    .line 1881
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v2
@@ -10982,7 +11029,7 @@
 
     if-gt v0, v1, :cond_5e
 
-    .line 1881
+    .line 1884
     invoke-static {}, Lorg/telegram/messenger/LocaleController;->getInstance()Lorg/telegram/messenger/LocaleController;
 
     move-result-object v0
@@ -10999,7 +11046,7 @@
 
     return-object p0
 
-    .line 1883
+    .line 1886
     :cond_5e
     invoke-static {}, Lorg/telegram/messenger/LocaleController;->getInstance()Lorg/telegram/messenger/LocaleController;
 
@@ -11017,7 +11064,7 @@
 
     return-object p0
 
-    .line 1879
+    .line 1882
     :cond_6e
     :goto_6e
     invoke-static {}, Lorg/telegram/messenger/LocaleController;->getInstance()Lorg/telegram/messenger/LocaleController;
@@ -11041,7 +11088,7 @@
     :catch_7e
     move-exception p0
 
-    .line 1887
+    .line 1890
     invoke-static {p0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     const-string p0, "LOC_ERR"
@@ -12184,17 +12231,17 @@
 .method public formatCurrencyDecimalString(JLjava/lang/String;Z)Ljava/lang/String;
     .registers 14
 
-    .line 1330
+    .line 1333
     invoke-virtual {p3}, Ljava/lang/String;->toUpperCase()Ljava/lang/String;
 
     move-result-object p3
 
-    .line 1333
+    .line 1336
     invoke-static {p1, p2}, Ljava/lang/Math;->abs(J)J
 
     move-result-wide p1
 
-    .line 1334
+    .line 1337
     invoke-virtual {p3}, Ljava/lang/String;->hashCode()I
 
     invoke-virtual {p3}, Ljava/lang/String;->hashCode()I
@@ -12700,7 +12747,7 @@
 
     const-wide/high16 v3, 0x4059000000000000L    # 100.0
 
-    .line 1391
+    .line 1394
     invoke-static {p1, p2}, Ljava/lang/Double;->isNaN(D)Z
 
     div-double/2addr p1, v3
@@ -12712,7 +12759,7 @@
 
     const-wide/high16 v3, 0x4024000000000000L    # 10.0
 
-    .line 1386
+    .line 1389
     invoke-static {p1, p2}, Ljava/lang/Double;->isNaN(D)Z
 
     div-double/2addr p1, v3
@@ -12732,7 +12779,7 @@
 
     const-wide/16 v7, 0x64
 
-    .line 1342
+    .line 1345
     rem-long/2addr p1, v7
 
     const-wide/16 v7, 0x0
@@ -12753,7 +12800,7 @@
 
     const-wide v3, 0x40c3880000000000L    # 10000.0
 
-    .line 1337
+    .line 1340
     invoke-static {p1, p2}, Ljava/lang/Double;->isNaN(D)Z
 
     div-double/2addr p1, v3
@@ -12774,14 +12821,14 @@
 
     const-wide v3, 0x408f400000000000L    # 1000.0
 
-    .line 1357
+    .line 1360
     invoke-static {p1, p2}, Ljava/lang/Double;->isNaN(D)Z
 
     div-double/2addr p1, v3
 
     const-string v0, " %.3f"
 
-    .line 1394
+    .line 1397
     :goto_1e8
     sget-object v3, Ljava/util/Locale;->US:Ljava/util/Locale;
 
@@ -12909,7 +12956,7 @@
 
     move-object v6, p3
 
-    .line 1194
+    .line 1197
     invoke-virtual/range {v0 .. v6}, Lorg/telegram/messenger/LocaleController;->formatCurrencyString(JZZZLjava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
@@ -12922,7 +12969,7 @@
 
     move-object/from16 v0, p0
 
-    .line 1198
+    .line 1201
     invoke-virtual/range {p6 .. p6}, Ljava/lang/String;->toUpperCase()Ljava/lang/String;
 
     move-result-object v1
@@ -12944,18 +12991,18 @@
     :cond_10
     const/4 v6, 0x0
 
-    .line 1202
+    .line 1205
     :goto_11
     invoke-static/range {p1 .. p2}, Ljava/lang/Math;->abs(J)J
 
     move-result-wide v7
 
-    .line 1203
+    .line 1206
     invoke-static {v1}, Ljava/util/Currency;->getInstance(Ljava/lang/String;)Ljava/util/Currency;
 
     move-result-object v9
 
-    .line 1204
+    .line 1207
     invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
 
     const/4 v10, -0x1
@@ -13457,7 +13504,7 @@
 
     const-wide/high16 v7, 0x4059000000000000L    # 100.0
 
-    .line 1261
+    .line 1264
     invoke-static {v2, v3}, Ljava/lang/Double;->isNaN(D)Z
 
     div-double/2addr v2, v7
@@ -13469,7 +13516,7 @@
 
     const-wide/high16 v7, 0x4024000000000000L    # 10.0
 
-    .line 1256
+    .line 1259
     invoke-static {v2, v3}, Ljava/lang/Double;->isNaN(D)Z
 
     div-double/2addr v2, v7
@@ -13491,7 +13538,7 @@
 
     const-wide/16 v16, 0x64
 
-    .line 1212
+    .line 1215
     rem-long v7, v7, v16
 
     cmp-long v10, v7, v2
@@ -13510,7 +13557,7 @@
 
     const-wide v7, 0x40c3880000000000L    # 10000.0
 
-    .line 1207
+    .line 1210
     invoke-static {v2, v3}, Ljava/lang/Double;->isNaN(D)Z
 
     div-double/2addr v2, v7
@@ -13531,7 +13578,7 @@
 
     const-wide v7, 0x408f400000000000L    # 1000.0
 
-    .line 1227
+    .line 1230
     invoke-static {v2, v3}, Ljava/lang/Double;->isNaN(D)Z
 
     div-double/2addr v2, v7
@@ -13553,7 +13600,7 @@
 
     if-eqz v9, :cond_26f
 
-    .line 1268
+    .line 1271
     iget-object v4, v0, Lorg/telegram/messenger/LocaleController;->currentLocale:Ljava/util/Locale;
 
     if-eqz v4, :cond_207
@@ -13568,12 +13615,12 @@
 
     move-result-object v4
 
-    .line 1269
+    .line 1272
     invoke-virtual {v4, v9}, Ljava/text/NumberFormat;->setCurrency(Ljava/util/Currency;)V
 
     if-eqz p5, :cond_215
 
-    .line 1271
+    .line 1274
     invoke-virtual {v4, v5}, Ljava/text/NumberFormat;->setGroupingUsed(Z)V
 
     :cond_215
@@ -13581,18 +13628,18 @@
 
     if-eqz p3, :cond_222
 
-    .line 1273
+    .line 1276
     invoke-virtual {v1, v12}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v9
 
     if-eqz v9, :cond_222
 
-    .line 1274
+    .line 1277
     :cond_21f
     invoke-virtual {v4, v5}, Ljava/text/NumberFormat;->setMaximumFractionDigits(I)V
 
-    .line 1276
+    .line 1279
     :cond_222
     new-instance v9, Ljava/lang/StringBuilder;
 
@@ -13618,21 +13665,21 @@
 
     move-result-object v2
 
-    .line 1277
+    .line 1280
     invoke-virtual {v2, v1}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
 
     move-result v3
 
     if-ltz v3, :cond_26e
 
-    .line 1279
+    .line 1282
     invoke-virtual {v1}, Ljava/lang/String;->length()I
 
     move-result v1
 
     add-int/2addr v3, v1
 
-    .line 1280
+    .line 1283
     invoke-virtual {v2}, Ljava/lang/String;->length()I
 
     move-result v1
@@ -13647,7 +13694,7 @@
 
     if-eq v1, v4, :cond_26e
 
-    .line 1281
+    .line 1284
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -13675,7 +13722,7 @@
     :cond_26e
     return-object v2
 
-    .line 1286
+    .line 1289
     :cond_26f
     new-instance v9, Ljava/lang/StringBuilder;
 
@@ -13921,7 +13968,7 @@
 
     const/4 v1, 0x0
 
-    .line 2266
+    .line 2269
     invoke-virtual {p0, p1, v0, v1}, Lorg/telegram/messenger/LocaleController;->getTranslitString(Ljava/lang/String;ZZ)Ljava/lang/String;
 
     move-result-object p1
@@ -13934,7 +13981,7 @@
 
     const/4 v0, 0x1
 
-    .line 2270
+    .line 2273
     invoke-virtual {p0, p1, v0, p2}, Lorg/telegram/messenger/LocaleController;->getTranslitString(Ljava/lang/String;ZZ)Ljava/lang/String;
 
     move-result-object p1
@@ -13955,7 +14002,7 @@
 
     return-object v1
 
-    .line 2278
+    .line 2281
     :cond_8
     iget-object v2, v0, Lorg/telegram/messenger/LocaleController;->ruTranslitChars:Ljava/util/HashMap;
 
@@ -14009,7 +14056,7 @@
 
     if-nez v2, :cond_15b
 
-    .line 2279
+    .line 2282
     new-instance v2, Ljava/util/HashMap;
 
     move-object/from16 v21, v4
@@ -14022,45 +14069,45 @@
 
     const-string v4, "\u0430"
 
-    .line 2280
+    .line 2283
     invoke-virtual {v2, v4, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2281
+    .line 2284
     iget-object v2, v0, Lorg/telegram/messenger/LocaleController;->ruTranslitChars:Ljava/util/HashMap;
 
     const-string v4, "\u0431"
 
     invoke-virtual {v2, v4, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2282
+    .line 2285
     iget-object v2, v0, Lorg/telegram/messenger/LocaleController;->ruTranslitChars:Ljava/util/HashMap;
 
     const-string v4, "\u0432"
 
     invoke-virtual {v2, v4, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2283
+    .line 2286
     iget-object v2, v0, Lorg/telegram/messenger/LocaleController;->ruTranslitChars:Ljava/util/HashMap;
 
     const-string v4, "\u0433"
 
     invoke-virtual {v2, v4, v10}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2284
+    .line 2287
     iget-object v2, v0, Lorg/telegram/messenger/LocaleController;->ruTranslitChars:Ljava/util/HashMap;
 
     const-string v4, "\u0434"
 
     invoke-virtual {v2, v4, v11}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2285
+    .line 2288
     iget-object v2, v0, Lorg/telegram/messenger/LocaleController;->ruTranslitChars:Ljava/util/HashMap;
 
     const-string v4, "\u0435"
 
     invoke-virtual {v2, v4, v14}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2286
+    .line 2289
     iget-object v2, v0, Lorg/telegram/messenger/LocaleController;->ruTranslitChars:Ljava/util/HashMap;
 
     const-string v4, "\u0451"
@@ -14071,7 +14118,7 @@
 
     invoke-virtual {v2, v4, v10}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2287
+    .line 2290
     iget-object v2, v0, Lorg/telegram/messenger/LocaleController;->ruTranslitChars:Ljava/util/HashMap;
 
     const-string v4, "\u0436"
@@ -14080,63 +14127,63 @@
 
     invoke-virtual {v2, v4, v10}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2288
+    .line 2291
     iget-object v2, v0, Lorg/telegram/messenger/LocaleController;->ruTranslitChars:Ljava/util/HashMap;
 
     const-string v4, "\u0437"
 
     invoke-virtual {v2, v4, v9}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2289
+    .line 2292
     iget-object v2, v0, Lorg/telegram/messenger/LocaleController;->ruTranslitChars:Ljava/util/HashMap;
 
     const-string v4, "\u0438"
 
     invoke-virtual {v2, v4, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2290
+    .line 2293
     iget-object v2, v0, Lorg/telegram/messenger/LocaleController;->ruTranslitChars:Ljava/util/HashMap;
 
     const-string v4, "\u0439"
 
     invoke-virtual {v2, v4, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2291
+    .line 2294
     iget-object v2, v0, Lorg/telegram/messenger/LocaleController;->ruTranslitChars:Ljava/util/HashMap;
 
     const-string v4, "\u043a"
 
     invoke-virtual {v2, v4, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2292
+    .line 2295
     iget-object v2, v0, Lorg/telegram/messenger/LocaleController;->ruTranslitChars:Ljava/util/HashMap;
 
     const-string v4, "\u043b"
 
     invoke-virtual {v2, v4, v15}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2293
+    .line 2296
     iget-object v2, v0, Lorg/telegram/messenger/LocaleController;->ruTranslitChars:Ljava/util/HashMap;
 
     const-string v4, "\u043c"
 
     invoke-virtual {v2, v4, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2294
+    .line 2297
     iget-object v2, v0, Lorg/telegram/messenger/LocaleController;->ruTranslitChars:Ljava/util/HashMap;
 
     const-string v4, "\u043d"
 
     invoke-virtual {v2, v4, v12}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2295
+    .line 2298
     iget-object v2, v0, Lorg/telegram/messenger/LocaleController;->ruTranslitChars:Ljava/util/HashMap;
 
     const-string v4, "\u043e"
 
     invoke-virtual {v2, v4, v8}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2296
+    .line 2299
     iget-object v2, v0, Lorg/telegram/messenger/LocaleController;->ruTranslitChars:Ljava/util/HashMap;
 
     const-string v4, "\u043f"
@@ -14145,7 +14192,7 @@
 
     invoke-virtual {v2, v4, v10}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2297
+    .line 2300
     iget-object v2, v0, Lorg/telegram/messenger/LocaleController;->ruTranslitChars:Ljava/util/HashMap;
 
     const-string v4, "\u0440"
@@ -14156,7 +14203,7 @@
 
     invoke-virtual {v2, v4, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2298
+    .line 2301
     iget-object v2, v0, Lorg/telegram/messenger/LocaleController;->ruTranslitChars:Ljava/util/HashMap;
 
     const-string v4, "\u0441"
@@ -14167,7 +14214,7 @@
 
     invoke-virtual {v2, v4, v9}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2299
+    .line 2302
     iget-object v2, v0, Lorg/telegram/messenger/LocaleController;->ruTranslitChars:Ljava/util/HashMap;
 
     const-string v4, "\u0442"
@@ -14178,7 +14225,7 @@
 
     invoke-virtual {v2, v4, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2300
+    .line 2303
     iget-object v2, v0, Lorg/telegram/messenger/LocaleController;->ruTranslitChars:Ljava/util/HashMap;
 
     const-string v4, "\u0443"
@@ -14187,7 +14234,7 @@
 
     invoke-virtual {v2, v4, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2301
+    .line 2304
     iget-object v2, v0, Lorg/telegram/messenger/LocaleController;->ruTranslitChars:Ljava/util/HashMap;
 
     const-string v4, "\u0444"
@@ -14198,7 +14245,7 @@
 
     invoke-virtual {v2, v4, v9}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2302
+    .line 2305
     iget-object v2, v0, Lorg/telegram/messenger/LocaleController;->ruTranslitChars:Ljava/util/HashMap;
 
     const-string v4, "\u0445"
@@ -14207,7 +14254,7 @@
 
     invoke-virtual {v2, v4, v9}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2303
+    .line 2306
     iget-object v2, v0, Lorg/telegram/messenger/LocaleController;->ruTranslitChars:Ljava/util/HashMap;
 
     const-string v4, "\u0446"
@@ -14218,7 +14265,7 @@
 
     invoke-virtual {v2, v4, v10}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2304
+    .line 2307
     iget-object v2, v0, Lorg/telegram/messenger/LocaleController;->ruTranslitChars:Ljava/util/HashMap;
 
     const-string v4, "\u0447"
@@ -14227,7 +14274,7 @@
 
     invoke-virtual {v2, v4, v10}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2305
+    .line 2308
     iget-object v2, v0, Lorg/telegram/messenger/LocaleController;->ruTranslitChars:Ljava/util/HashMap;
 
     const-string v4, "\u0448"
@@ -14236,7 +14283,7 @@
 
     invoke-virtual {v2, v4, v10}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2306
+    .line 2309
     iget-object v2, v0, Lorg/telegram/messenger/LocaleController;->ruTranslitChars:Ljava/util/HashMap;
 
     const-string v4, "\u0449"
@@ -14245,14 +14292,14 @@
 
     invoke-virtual {v2, v4, v10}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2307
+    .line 2310
     iget-object v2, v0, Lorg/telegram/messenger/LocaleController;->ruTranslitChars:Ljava/util/HashMap;
 
     const-string v4, "\u044b"
 
     invoke-virtual {v2, v4, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2308
+    .line 2311
     iget-object v2, v0, Lorg/telegram/messenger/LocaleController;->ruTranslitChars:Ljava/util/HashMap;
 
     const-string v4, "\u044c"
@@ -14261,7 +14308,7 @@
 
     invoke-virtual {v2, v4, v10}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2309
+    .line 2312
     iget-object v2, v0, Lorg/telegram/messenger/LocaleController;->ruTranslitChars:Ljava/util/HashMap;
 
     const-string v4, "\u044a"
@@ -14270,14 +14317,14 @@
 
     invoke-virtual {v2, v4, v10}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2310
+    .line 2313
     iget-object v2, v0, Lorg/telegram/messenger/LocaleController;->ruTranslitChars:Ljava/util/HashMap;
 
     const-string v4, "\u044d"
 
     invoke-virtual {v2, v4, v14}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2311
+    .line 2314
     iget-object v2, v0, Lorg/telegram/messenger/LocaleController;->ruTranslitChars:Ljava/util/HashMap;
 
     const-string v4, "\u044e"
@@ -14286,7 +14333,7 @@
 
     invoke-virtual {v2, v4, v10}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2312
+    .line 2315
     iget-object v2, v0, Lorg/telegram/messenger/LocaleController;->ruTranslitChars:Ljava/util/HashMap;
 
     const-string v4, "\u044f"
@@ -14318,13 +14365,13 @@
 
     move-object/from16 v18, v26
 
-    .line 2315
+    .line 2318
     :goto_16f
     iget-object v2, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     if-nez v2, :cond_101c
 
-    .line 2316
+    .line 2319
     new-instance v2, Ljava/util/HashMap;
 
     const/16 v4, 0x1e7
@@ -14337,24 +14384,24 @@
 
     const-string v10, "c"
 
-    .line 2317
+    .line 2320
     invoke-virtual {v2, v4, v10}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2318
+    .line 2321
     iget-object v2, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v4, "\u1d87"
 
     invoke-virtual {v2, v4, v12}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2319
+    .line 2322
     iget-object v2, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v4, "\u0256"
 
     invoke-virtual {v2, v4, v11}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2320
+    .line 2323
     iget-object v2, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v4, "\u1eff"
@@ -14365,56 +14412,56 @@
 
     invoke-virtual {v2, v4, v12}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2321
+    .line 2324
     iget-object v2, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v4, "\u1d13"
 
     invoke-virtual {v2, v4, v8}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2322
+    .line 2325
     iget-object v2, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v4, "\u00f8"
 
     invoke-virtual {v2, v4, v8}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2323
+    .line 2326
     iget-object v2, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v4, "\u1e01"
 
     invoke-virtual {v2, v4, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2324
+    .line 2327
     iget-object v2, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v4, "\u02af"
 
     invoke-virtual {v2, v4, v9}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2325
+    .line 2328
     iget-object v2, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v4, "\u0177"
 
     invoke-virtual {v2, v4, v12}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2326
+    .line 2329
     iget-object v2, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v4, "\u029e"
 
     invoke-virtual {v2, v4, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2327
+    .line 2330
     iget-object v2, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v4, "\u1eeb"
 
     invoke-virtual {v2, v4, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2328
+    .line 2331
     iget-object v2, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v4, "\ua733"
@@ -14425,7 +14472,7 @@
 
     invoke-virtual {v2, v4, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2329
+    .line 2332
     iget-object v2, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v4, "\u0133"
@@ -14434,42 +14481,42 @@
 
     invoke-virtual {v2, v4, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2330
+    .line 2333
     iget-object v2, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v4, "\u1e3d"
 
     invoke-virtual {v2, v4, v15}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2331
+    .line 2334
     iget-object v2, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v4, "\u026a"
 
     invoke-virtual {v2, v4, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2332
+    .line 2335
     iget-object v2, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v4, "\u1e07"
 
     invoke-virtual {v2, v4, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2333
+    .line 2336
     iget-object v2, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v4, "\u0280"
 
     invoke-virtual {v2, v4, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2334
+    .line 2337
     iget-object v2, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v4, "\u011b"
 
     invoke-virtual {v2, v4, v14}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2335
+    .line 2338
     iget-object v2, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v4, "\ufb03"
@@ -14478,35 +14525,35 @@
 
     invoke-virtual {v2, v4, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2336
+    .line 2339
     iget-object v2, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v4, "\u01a1"
 
     invoke-virtual {v2, v4, v8}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2337
+    .line 2340
     iget-object v2, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v4, "\u2c79"
 
     invoke-virtual {v2, v4, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2338
+    .line 2341
     iget-object v2, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v4, "\u1ed3"
 
     invoke-virtual {v2, v4, v8}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2339
+    .line 2342
     iget-object v2, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v4, "\u01d0"
 
     invoke-virtual {v2, v4, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2340
+    .line 2343
     iget-object v2, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v4, "\ua755"
@@ -14515,70 +14562,70 @@
 
     invoke-virtual {v2, v4, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2341
+    .line 2344
     iget-object v2, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v4, "\u00fd"
 
     invoke-virtual {v2, v4, v12}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2342
+    .line 2345
     iget-object v2, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v4, "\u1e1d"
 
     invoke-virtual {v2, v4, v14}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2343
+    .line 2346
     iget-object v2, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v4, "\u2092"
 
     invoke-virtual {v2, v4, v8}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2344
+    .line 2347
     iget-object v2, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v4, "\u2c65"
 
     invoke-virtual {v2, v4, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2345
+    .line 2348
     iget-object v2, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v4, "\u0299"
 
     invoke-virtual {v2, v4, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2346
+    .line 2349
     iget-object v2, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v4, "\u1e1b"
 
     invoke-virtual {v2, v4, v14}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2347
+    .line 2350
     iget-object v2, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v4, "\u0188"
 
     invoke-virtual {v2, v4, v10}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2348
+    .line 2351
     iget-object v2, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v4, "\u0266"
 
     invoke-virtual {v2, v4, v9}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2349
+    .line 2352
     iget-object v2, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v4, "\u1d6c"
 
     invoke-virtual {v2, v4, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2350
+    .line 2353
     iget-object v2, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v4, "\u1e63"
@@ -14589,21 +14636,21 @@
 
     invoke-virtual {v2, v4, v9}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2351
+    .line 2354
     iget-object v2, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v4, "\u0111"
 
     invoke-virtual {v2, v4, v11}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2352
+    .line 2355
     iget-object v2, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v4, "\u1ed7"
 
     invoke-virtual {v2, v4, v8}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2353
+    .line 2356
     iget-object v2, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v4, "\u025f"
@@ -14614,21 +14661,21 @@
 
     invoke-virtual {v2, v4, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2354
+    .line 2357
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1e9a"
 
     invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2355
+    .line 2358
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u024f"
 
     invoke-virtual {v1, v2, v12}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2356
+    .line 2359
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u028c"
@@ -14637,14 +14684,14 @@
 
     invoke-virtual {v1, v2, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2357
+    .line 2360
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\ua753"
 
     invoke-virtual {v1, v2, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2358
+    .line 2361
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\ufb01"
@@ -14653,56 +14700,56 @@
 
     invoke-virtual {v1, v2, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2359
+    .line 2362
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1d84"
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2360
+    .line 2363
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1e0f"
 
     invoke-virtual {v1, v2, v11}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2361
+    .line 2364
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1d0c"
 
     invoke-virtual {v1, v2, v15}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2362
+    .line 2365
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u0117"
 
     invoke-virtual {v1, v2, v14}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2363
+    .line 2366
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1d0b"
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2364
+    .line 2367
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u010b"
 
     invoke-virtual {v1, v2, v10}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2365
+    .line 2368
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u0281"
 
     invoke-virtual {v1, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2366
+    .line 2369
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u0195"
@@ -14711,21 +14758,21 @@
 
     invoke-virtual {v1, v2, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2367
+    .line 2370
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u0180"
 
     invoke-virtual {v1, v2, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2368
+    .line 2371
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1e4d"
 
     invoke-virtual {v1, v2, v8}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2369
+    .line 2372
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u0223"
@@ -14734,7 +14781,7 @@
 
     invoke-virtual {v1, v2, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2370
+    .line 2373
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u01f0"
@@ -14743,7 +14790,7 @@
 
     invoke-virtual {v1, v2, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2371
+    .line 2374
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1d83"
@@ -14752,7 +14799,7 @@
 
     invoke-virtual {v1, v2, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2372
+    .line 2375
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1e4b"
@@ -14763,7 +14810,7 @@
 
     invoke-virtual {v1, v2, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2373
+    .line 2376
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u0249"
@@ -14774,14 +14821,14 @@
 
     invoke-virtual {v1, v2, v11}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2374
+    .line 2377
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u01e7"
 
     invoke-virtual {v1, v2, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2375
+    .line 2378
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u01f3"
@@ -14790,7 +14837,7 @@
 
     invoke-virtual {v1, v2, v11}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2376
+    .line 2379
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u017a"
@@ -14799,7 +14846,7 @@
 
     invoke-virtual {v1, v2, v11}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2377
+    .line 2380
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\ua737"
@@ -14810,7 +14857,7 @@
 
     invoke-virtual {v1, v2, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2378
+    .line 2381
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u01d6"
@@ -14819,77 +14866,77 @@
 
     invoke-virtual {v1, v2, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2379
+    .line 2382
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1d79"
 
     invoke-virtual {v1, v2, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2380
+    .line 2383
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u022f"
 
     invoke-virtual {v1, v2, v8}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2381
+    .line 2384
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u0250"
 
     invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2382
+    .line 2385
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u0105"
 
     invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2383
+    .line 2386
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u00f5"
 
     invoke-virtual {v1, v2, v8}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2384
+    .line 2387
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u027b"
 
     invoke-virtual {v1, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2385
+    .line 2388
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\ua74d"
 
     invoke-virtual {v1, v2, v8}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2386
+    .line 2389
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u01df"
 
     invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2387
+    .line 2390
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u0234"
 
     invoke-virtual {v1, v2, v15}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2388
+    .line 2391
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u0282"
 
     invoke-virtual {v1, v2, v9}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2389
+    .line 2392
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\ufb02"
@@ -14900,7 +14947,7 @@
 
     invoke-virtual {v1, v2, v8}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2390
+    .line 2393
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u0209"
@@ -14909,42 +14956,42 @@
 
     invoke-virtual {v1, v2, v8}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2391
+    .line 2394
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u2c7b"
 
     invoke-virtual {v1, v2, v14}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2392
+    .line 2395
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1e49"
 
     invoke-virtual {v1, v2, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2393
+    .line 2396
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u00ef"
 
     invoke-virtual {v1, v2, v8}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2394
+    .line 2397
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u00f1"
 
     invoke-virtual {v1, v2, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2395
+    .line 2398
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1d09"
 
     invoke-virtual {v1, v2, v8}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2396
+    .line 2399
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u0287"
@@ -14955,63 +15002,63 @@
 
     invoke-virtual {v1, v2, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2397
+    .line 2400
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1e93"
 
     invoke-virtual {v1, v2, v11}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2398
+    .line 2401
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1ef7"
 
     invoke-virtual {v1, v2, v12}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2399
+    .line 2402
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u0233"
 
     invoke-virtual {v1, v2, v12}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2400
+    .line 2403
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1e69"
 
     invoke-virtual {v1, v2, v9}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2401
+    .line 2404
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u027d"
 
     invoke-virtual {v1, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2402
+    .line 2405
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u011d"
 
     invoke-virtual {v1, v2, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2403
+    .line 2406
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1d1d"
 
     invoke-virtual {v1, v2, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2404
+    .line 2407
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1e33"
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2405
+    .line 2408
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\ua76b"
@@ -15022,35 +15069,35 @@
 
     invoke-virtual {v1, v2, v12}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2406
+    .line 2409
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u012b"
 
     invoke-virtual {v1, v2, v8}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2407
+    .line 2410
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u0165"
 
     invoke-virtual {v1, v2, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2408
+    .line 2411
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\ua73f"
 
     invoke-virtual {v1, v2, v10}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2409
+    .line 2412
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u029f"
 
     invoke-virtual {v1, v2, v15}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2410
+    .line 2413
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\ua739"
@@ -15059,14 +15106,14 @@
 
     invoke-virtual {v1, v2, v12}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2411
+    .line 2414
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u00fb"
 
     invoke-virtual {v1, v2, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2412
+    .line 2415
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u00e6"
@@ -15075,42 +15122,42 @@
 
     invoke-virtual {v1, v2, v12}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2413
+    .line 2416
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u0103"
 
     invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2414
+    .line 2417
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u01d8"
 
     invoke-virtual {v1, v2, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2415
+    .line 2418
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\ua785"
 
     invoke-virtual {v1, v2, v9}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2416
+    .line 2419
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1d63"
 
     invoke-virtual {v1, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2417
+    .line 2420
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1d00"
 
     invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2418
+    .line 2421
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u0183"
@@ -15119,7 +15166,7 @@
 
     invoke-virtual {v1, v2, v12}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2419
+    .line 2422
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1e29"
@@ -15130,28 +15177,28 @@
 
     invoke-virtual {v1, v2, v15}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2420
+    .line 2423
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1e67"
 
     invoke-virtual {v1, v2, v9}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2421
+    .line 2424
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u2091"
 
     invoke-virtual {v1, v2, v14}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2422
+    .line 2425
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u029c"
 
     invoke-virtual {v1, v2, v15}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2423
+    .line 2426
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1e8b"
@@ -15162,14 +15209,14 @@
 
     invoke-virtual {v1, v2, v9}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2424
+    .line 2427
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\ua745"
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2425
+    .line 2428
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1e0b"
@@ -15178,7 +15225,7 @@
 
     invoke-virtual {v1, v2, v9}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2426
+    .line 2429
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u01a3"
@@ -15189,7 +15236,7 @@
 
     invoke-virtual {v1, v2, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2427
+    .line 2430
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\ua751"
@@ -15198,14 +15245,14 @@
 
     invoke-virtual {v1, v2, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2428
+    .line 2431
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u0127"
 
     invoke-virtual {v1, v2, v15}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2429
+    .line 2432
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u2c74"
@@ -15216,7 +15263,7 @@
 
     invoke-virtual {v1, v2, v15}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2430
+    .line 2433
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1e87"
@@ -15227,7 +15274,7 @@
 
     invoke-virtual {v1, v2, v8}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2431
+    .line 2434
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u01f9"
@@ -15238,7 +15285,7 @@
 
     invoke-virtual {v1, v2, v8}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2432
+    .line 2435
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u026f"
@@ -15249,70 +15296,70 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2433
+    .line 2436
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u0261"
 
     invoke-virtual {v1, v2, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2434
+    .line 2437
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u0274"
 
     invoke-virtual {v1, v2, v8}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2435
+    .line 2438
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1d18"
 
     invoke-virtual {v1, v2, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2436
+    .line 2439
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1d65"
 
     invoke-virtual {v1, v2, v15}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2437
+    .line 2440
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u016b"
 
     invoke-virtual {v1, v2, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2438
+    .line 2441
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1e03"
 
     invoke-virtual {v1, v2, v12}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2439
+    .line 2442
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1e57"
 
     invoke-virtual {v1, v2, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2440
+    .line 2443
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u00e5"
 
     invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2441
+    .line 2444
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u0255"
 
     invoke-virtual {v1, v2, v10}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2442
+    .line 2445
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1ecd"
@@ -15323,14 +15370,14 @@
 
     invoke-virtual {v1, v2, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2443
+    .line 2446
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1eaf"
 
     invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2444
+    .line 2447
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u0192"
@@ -15341,7 +15388,7 @@
 
     invoke-virtual {v1, v2, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2445
+    .line 2448
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u01e3"
@@ -15350,7 +15397,7 @@
 
     invoke-virtual {v1, v2, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2446
+    .line 2449
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\ua761"
@@ -15359,7 +15406,7 @@
 
     invoke-virtual {v1, v2, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2447
+    .line 2450
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\ufb00"
@@ -15368,42 +15415,42 @@
 
     invoke-virtual {v1, v2, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2448
+    .line 2451
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1d89"
 
     invoke-virtual {v1, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2449
+    .line 2452
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u00f4"
 
     invoke-virtual {v1, v2, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2450
+    .line 2453
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u01ff"
 
     invoke-virtual {v1, v2, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2451
+    .line 2454
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1e73"
 
     invoke-virtual {v1, v2, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2452
+    .line 2455
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u0225"
 
     invoke-virtual {v1, v2, v11}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2453
+    .line 2456
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1e1f"
@@ -15412,35 +15459,35 @@
 
     invoke-virtual {v1, v2, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2454
+    .line 2457
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1e13"
 
     invoke-virtual {v1, v2, v9}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2455
+    .line 2458
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u0207"
 
     invoke-virtual {v1, v2, v14}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2456
+    .line 2459
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u0215"
 
     invoke-virtual {v1, v2, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2457
+    .line 2460
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u0235"
 
     invoke-virtual {v1, v2, v8}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2458
+    .line 2461
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u02a0"
@@ -15449,14 +15496,14 @@
 
     invoke-virtual {v1, v2, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2459
+    .line 2462
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1ea5"
 
     invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2460
+    .line 2463
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u01e9"
@@ -15465,7 +15512,7 @@
 
     invoke-virtual {v1, v2, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2461
+    .line 2464
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u0129"
@@ -15476,14 +15523,14 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2462
+    .line 2465
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1e75"
 
     invoke-virtual {v1, v2, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2463
+    .line 2466
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u0167"
@@ -15492,28 +15539,28 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2464
+    .line 2467
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u027e"
 
     invoke-virtual {v1, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2465
+    .line 2468
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u0199"
 
     invoke-virtual {v1, v2, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2466
+    .line 2469
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1e6b"
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2467
+    .line 2470
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\ua757"
@@ -15524,14 +15571,14 @@
 
     invoke-virtual {v1, v2, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2468
+    .line 2471
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1ead"
 
     invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2469
+    .line 2472
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u0284"
@@ -15540,7 +15587,7 @@
 
     invoke-virtual {v1, v2, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2470
+    .line 2473
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u019a"
@@ -15549,7 +15596,7 @@
 
     invoke-virtual {v1, v2, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2471
+    .line 2474
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1d82"
@@ -15558,7 +15605,7 @@
 
     invoke-virtual {v1, v2, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2472
+    .line 2475
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1d74"
@@ -15567,63 +15614,63 @@
 
     invoke-virtual {v1, v2, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2473
+    .line 2476
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\ua783"
 
     invoke-virtual {v1, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2474
+    .line 2477
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1d8c"
 
     invoke-virtual {v1, v2, v15}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2475
+    .line 2478
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u0275"
 
     invoke-virtual {v1, v2, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2476
+    .line 2479
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1e09"
 
     invoke-virtual {v1, v2, v10}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2477
+    .line 2480
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1d64"
 
     invoke-virtual {v1, v2, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2478
+    .line 2481
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1e91"
 
     invoke-virtual {v1, v2, v11}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2479
+    .line 2482
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1e79"
 
     invoke-virtual {v1, v2, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2480
+    .line 2483
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u0148"
 
     invoke-virtual {v1, v2, v8}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2481
+    .line 2484
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u028d"
@@ -15634,14 +15681,14 @@
 
     invoke-virtual {v1, v2, v10}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2482
+    .line 2485
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1ea7"
 
     invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2483
+    .line 2486
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u01c9"
@@ -15652,42 +15699,42 @@
 
     invoke-virtual {v1, v2, v15}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2484
+    .line 2487
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u0253"
 
     invoke-virtual {v1, v2, v12}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2485
+    .line 2488
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u027c"
 
     invoke-virtual {v1, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2486
+    .line 2489
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u00f2"
 
     invoke-virtual {v1, v2, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2487
+    .line 2490
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1e98"
 
     invoke-virtual {v1, v2, v10}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2488
+    .line 2491
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u0257"
 
     invoke-virtual {v1, v2, v9}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2489
+    .line 2492
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\ua73d"
@@ -15696,42 +15743,42 @@
 
     invoke-virtual {v1, v2, v15}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2490
+    .line 2493
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u01b0"
 
     invoke-virtual {v1, v2, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2491
+    .line 2494
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1d80"
 
     invoke-virtual {v1, v2, v12}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2492
+    .line 2495
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u01dc"
 
     invoke-virtual {v1, v2, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2493
+    .line 2496
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1eb9"
 
     invoke-virtual {v1, v2, v14}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2494
+    .line 2497
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u01e1"
 
     invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2495
+    .line 2498
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u0265"
@@ -15740,21 +15787,21 @@
 
     invoke-virtual {v1, v2, v15}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2496
+    .line 2499
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1e4f"
 
     invoke-virtual {v1, v2, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2497
+    .line 2500
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u01d4"
 
     invoke-virtual {v1, v2, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2498
+    .line 2501
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u028e"
@@ -15765,28 +15812,28 @@
 
     invoke-virtual {v1, v2, v12}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2499
+    .line 2502
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u0231"
 
     invoke-virtual {v1, v2, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2500
+    .line 2503
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1ec7"
 
     invoke-virtual {v1, v2, v14}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2501
+    .line 2504
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1ebf"
 
     invoke-virtual {v1, v2, v14}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2502
+    .line 2505
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u012d"
@@ -15797,49 +15844,49 @@
 
     invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2503
+    .line 2506
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u2c78"
 
     invoke-virtual {v1, v2, v14}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2504
+    .line 2507
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1e6f"
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2505
+    .line 2508
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1d91"
 
     invoke-virtual {v1, v2, v9}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2506
+    .line 2509
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1e27"
 
     invoke-virtual {v1, v2, v15}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2507
+    .line 2510
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1e65"
 
     invoke-virtual {v1, v2, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2508
+    .line 2511
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u00eb"
 
     invoke-virtual {v1, v2, v14}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2509
+    .line 2512
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1d0d"
@@ -15850,77 +15897,77 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2510
+    .line 2513
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u00f6"
 
     invoke-virtual {v1, v2, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2511
+    .line 2514
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u00e9"
 
     invoke-virtual {v1, v2, v14}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2512
+    .line 2515
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u0131"
 
     invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2513
+    .line 2516
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u010f"
 
     invoke-virtual {v1, v2, v9}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2514
+    .line 2517
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1d6f"
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2515
+    .line 2518
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1ef5"
 
     invoke-virtual {v1, v2, v12}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2516
+    .line 2519
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u0175"
 
     invoke-virtual {v1, v2, v10}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2517
+    .line 2520
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1ec1"
 
     invoke-virtual {v1, v2, v14}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2518
+    .line 2521
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1ee9"
 
     invoke-virtual {v1, v2, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2519
+    .line 2522
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u01b6"
 
     invoke-virtual {v1, v2, v11}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2520
+    .line 2523
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u0135"
@@ -15931,21 +15978,21 @@
 
     invoke-virtual {v1, v2, v10}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2521
+    .line 2524
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1e0d"
 
     invoke-virtual {v1, v2, v9}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2522
+    .line 2525
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u016d"
 
     invoke-virtual {v1, v2, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2523
+    .line 2526
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u029d"
@@ -15954,21 +16001,21 @@
 
     invoke-virtual {v1, v2, v10}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2524
+    .line 2527
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u00ea"
 
     invoke-virtual {v1, v2, v14}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2525
+    .line 2528
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u01da"
 
     invoke-virtual {v1, v2, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2526
+    .line 2529
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u0121"
@@ -15977,42 +16024,42 @@
 
     invoke-virtual {v1, v2, v10}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2527
+    .line 2530
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1e59"
 
     invoke-virtual {v1, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2528
+    .line 2531
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u019e"
 
     invoke-virtual {v1, v2, v8}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2529
+    .line 2532
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1e17"
 
     invoke-virtual {v1, v2, v14}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2530
+    .line 2533
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1e9d"
 
     invoke-virtual {v1, v2, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2531
+    .line 2534
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1d81"
 
     invoke-virtual {v1, v2, v9}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2532
+    .line 2535
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u0137"
@@ -16021,7 +16068,7 @@
 
     invoke-virtual {v1, v2, v10}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2533
+    .line 2536
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1d02"
@@ -16032,28 +16079,28 @@
 
     invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2534
+    .line 2537
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u0258"
 
     invoke-virtual {v1, v2, v14}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2535
+    .line 2538
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1ee3"
 
     invoke-virtual {v1, v2, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2536
+    .line 2539
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1e3f"
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2537
+    .line 2540
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\ua730"
@@ -16062,7 +16109,7 @@
 
     invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2538
+    .line 2541
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1eb5"
@@ -16071,7 +16118,7 @@
 
     invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2539
+    .line 2542
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\ua74f"
@@ -16082,14 +16129,14 @@
 
     invoke-virtual {v1, v2, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2540
+    .line 2543
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1d86"
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2541
+    .line 2544
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1d7d"
@@ -16098,28 +16145,28 @@
 
     invoke-virtual {v1, v2, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2542
+    .line 2545
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1eef"
 
     invoke-virtual {v1, v2, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2543
+    .line 2546
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u2c6a"
 
     invoke-virtual {v1, v2, v10}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2544
+    .line 2547
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1e25"
 
     invoke-virtual {v1, v2, v15}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2545
+    .line 2548
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u0163"
@@ -16130,35 +16177,35 @@
 
     invoke-virtual {v1, v2, v10}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2546
+    .line 2549
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1d71"
 
     invoke-virtual {v1, v2, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2547
+    .line 2550
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1e41"
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2548
+    .line 2551
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u00e1"
 
     invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2549
+    .line 2552
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1d0e"
 
     invoke-virtual {v1, v2, v8}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2550
+    .line 2553
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\ua75f"
@@ -16169,35 +16216,35 @@
 
     invoke-virtual {v1, v2, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2551
+    .line 2554
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u00e8"
 
     invoke-virtual {v1, v2, v14}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2552
+    .line 2555
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1d8e"
 
     invoke-virtual {v1, v2, v11}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2553
+    .line 2556
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\ua77a"
 
     invoke-virtual {v1, v2, v9}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2554
+    .line 2557
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1d88"
 
     invoke-virtual {v1, v2, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2555
+    .line 2558
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u026b"
@@ -16208,42 +16255,42 @@
 
     invoke-virtual {v1, v2, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2556
+    .line 2559
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1d22"
 
     invoke-virtual {v1, v2, v11}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2557
+    .line 2560
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u0271"
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2558
+    .line 2561
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1e5d"
 
     invoke-virtual {v1, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2559
+    .line 2562
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1e7d"
 
     invoke-virtual {v1, v2, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2560
+    .line 2563
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u0169"
 
     invoke-virtual {v1, v2, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2561
+    .line 2564
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u00df"
@@ -16254,63 +16301,63 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2562
+    .line 2565
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u0125"
 
     invoke-virtual {v1, v2, v15}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2563
+    .line 2566
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1d75"
 
     invoke-virtual {v1, v2, v10}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2564
+    .line 2567
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u0290"
 
     invoke-virtual {v1, v2, v11}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2565
+    .line 2568
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1e5f"
 
     invoke-virtual {v1, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2566
+    .line 2569
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u0272"
 
     invoke-virtual {v1, v2, v8}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2567
+    .line 2570
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u00e0"
 
     invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2568
+    .line 2571
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1e99"
 
     invoke-virtual {v1, v2, v12}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2569
+    .line 2572
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1ef3"
 
     invoke-virtual {v1, v2, v12}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2570
+    .line 2573
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1d14"
@@ -16319,7 +16366,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2571
+    .line 2574
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u2093"
@@ -16328,14 +16375,14 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2572
+    .line 2575
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u0217"
 
     invoke-virtual {v1, v2, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2573
+    .line 2576
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u2c7c"
@@ -16344,21 +16391,21 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2574
+    .line 2577
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1eab"
 
     invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2575
+    .line 2578
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u0291"
 
     invoke-virtual {v1, v2, v11}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2576
+    .line 2579
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1e9b"
@@ -16367,7 +16414,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2577
+    .line 2580
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1e2d"
@@ -16378,7 +16425,7 @@
 
     invoke-virtual {v1, v2, v8}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2578
+    .line 2581
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\ua735"
@@ -16389,28 +16436,28 @@
 
     invoke-virtual {v1, v2, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2579
+    .line 2582
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u0240"
 
     invoke-virtual {v1, v2, v11}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2580
+    .line 2583
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u00ff"
 
     invoke-virtual {v1, v2, v12}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2581
+    .line 2584
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u01dd"
 
     invoke-virtual {v1, v2, v14}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2582
+    .line 2585
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u01ed"
@@ -16419,35 +16466,35 @@
 
     invoke-virtual {v1, v2, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2583
+    .line 2586
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1d05"
 
     invoke-virtual {v1, v2, v9}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2584
+    .line 2587
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1d85"
 
     invoke-virtual {v1, v2, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2585
+    .line 2588
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u00f9"
 
     invoke-virtual {v1, v2, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2586
+    .line 2589
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1ea1"
 
     invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2587
+    .line 2590
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1e05"
@@ -16458,49 +16505,49 @@
 
     invoke-virtual {v1, v2, v9}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2588
+    .line 2591
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1ee5"
 
     invoke-virtual {v1, v2, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2589
+    .line 2592
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1eb1"
 
     invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2590
+    .line 2593
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1d1b"
 
     invoke-virtual {v1, v2, v10}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2591
+    .line 2594
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u01b4"
 
     invoke-virtual {v1, v2, v12}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2592
+    .line 2595
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u2c66"
 
     invoke-virtual {v1, v2, v10}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2593
+    .line 2596
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u2c61"
 
     invoke-virtual {v1, v2, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2594
+    .line 2597
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u0237"
@@ -16509,21 +16556,21 @@
 
     invoke-virtual {v1, v2, v9}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2595
+    .line 2598
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1d76"
 
     invoke-virtual {v1, v2, v11}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2596
+    .line 2599
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1e2b"
 
     invoke-virtual {v1, v2, v15}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2597
+    .line 2600
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u2c73"
@@ -16532,7 +16579,7 @@
 
     invoke-virtual {v1, v2, v9}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2598
+    .line 2601
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1e35"
@@ -16543,21 +16590,21 @@
 
     invoke-virtual {v1, v2, v15}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2599
+    .line 2602
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1edd"
 
     invoke-virtual {v1, v2, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2600
+    .line 2603
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u00ee"
 
     invoke-virtual {v1, v2, v8}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2601
+    .line 2604
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u0123"
@@ -16566,28 +16613,28 @@
 
     invoke-virtual {v1, v2, v15}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2602
+    .line 2605
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u0205"
 
     invoke-virtual {v1, v2, v14}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2603
+    .line 2606
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u0227"
 
     invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2604
+    .line 2607
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1eb3"
 
     invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2605
+    .line 2608
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u024b"
@@ -16596,14 +16643,14 @@
 
     invoke-virtual {v1, v2, v15}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2606
+    .line 2609
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1e6d"
 
     invoke-virtual {v1, v2, v10}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2607
+    .line 2610
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\ua778"
@@ -16612,7 +16659,7 @@
 
     invoke-virtual {v1, v2, v15}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2608
+    .line 2611
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1d04"
@@ -16621,7 +16668,7 @@
 
     invoke-virtual {v1, v2, v15}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2609
+    .line 2612
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1e8d"
@@ -16630,56 +16677,56 @@
 
     invoke-virtual {v1, v2, v15}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2610
+    .line 2613
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1ee7"
 
     invoke-virtual {v1, v2, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2611
+    .line 2614
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1ec9"
 
     invoke-virtual {v1, v2, v8}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2612
+    .line 2615
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1d1a"
 
     invoke-virtual {v1, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2613
+    .line 2616
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u015b"
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2614
+    .line 2617
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\ua74b"
 
     invoke-virtual {v1, v2, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2615
+    .line 2618
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1ef9"
 
     invoke-virtual {v1, v2, v12}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2616
+    .line 2619
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1e61"
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2617
+    .line 2620
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u01cc"
@@ -16688,35 +16735,35 @@
 
     invoke-virtual {v1, v2, v15}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2618
+    .line 2621
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u0201"
 
     invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2619
+    .line 2622
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1e97"
 
     invoke-virtual {v1, v2, v10}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2620
+    .line 2623
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u013a"
 
     invoke-virtual {v1, v2, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2621
+    .line 2624
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u017e"
 
     invoke-virtual {v1, v2, v11}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2622
+    .line 2625
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1d7a"
@@ -16725,7 +16772,7 @@
 
     invoke-virtual {v1, v2, v15}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2623
+    .line 2626
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u018c"
@@ -16734,70 +16781,70 @@
 
     invoke-virtual {v1, v2, v15}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2624
+    .line 2627
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u0219"
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2625
+    .line 2628
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u0161"
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2626
+    .line 2629
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1d99"
 
     invoke-virtual {v1, v2, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2627
+    .line 2630
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1ebd"
 
     invoke-virtual {v1, v2, v14}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2628
+    .line 2631
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1e9c"
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2629
+    .line 2632
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u0247"
 
     invoke-virtual {v1, v2, v14}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2630
+    .line 2633
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1e77"
 
     invoke-virtual {v1, v2, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2631
+    .line 2634
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1ed1"
 
     invoke-virtual {v1, v2, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2632
+    .line 2635
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u023f"
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2633
+    .line 2636
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1d20"
@@ -16808,7 +16855,7 @@
 
     invoke-virtual {v1, v2, v12}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2634
+    .line 2637
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\ua76d"
@@ -16819,28 +16866,28 @@
 
     invoke-virtual {v1, v2, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2635
+    .line 2638
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1d0f"
 
     invoke-virtual {v1, v2, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2636
+    .line 2639
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u025b"
 
     invoke-virtual {v1, v2, v14}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2637
+    .line 2640
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u01fb"
 
     invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2638
+    .line 2641
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\ufb04"
@@ -16849,21 +16896,21 @@
 
     invoke-virtual {v1, v2, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2639
+    .line 2642
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u2c7a"
 
     invoke-virtual {v1, v2, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2640
+    .line 2643
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u020b"
 
     invoke-virtual {v1, v2, v8}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2641
+    .line 2644
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1d6b"
@@ -16872,42 +16919,42 @@
 
     invoke-virtual {v1, v2, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2642
+    .line 2645
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u0221"
 
     invoke-virtual {v1, v2, v15}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2643
+    .line 2646
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u2c6c"
 
     invoke-virtual {v1, v2, v11}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2644
+    .line 2647
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1e81"
 
     invoke-virtual {v1, v2, v9}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2645
+    .line 2648
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1d8f"
 
     invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2646
+    .line 2649
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\ua787"
 
     invoke-virtual {v1, v2, v10}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2647
+    .line 2650
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u011f"
@@ -16916,7 +16963,7 @@
 
     invoke-virtual {v1, v2, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2648
+    .line 2651
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u0273"
@@ -16927,91 +16974,91 @@
 
     invoke-virtual {v1, v2, v9}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2649
+    .line 2652
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u029b"
 
     invoke-virtual {v1, v2, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2650
+    .line 2653
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1d1c"
 
     invoke-virtual {v1, v2, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2651
+    .line 2654
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1ea9"
 
     invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2652
+    .line 2655
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1e45"
 
     invoke-virtual {v1, v2, v9}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2653
+    .line 2656
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u0268"
 
     invoke-virtual {v1, v2, v8}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2654
+    .line 2657
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1d19"
 
     invoke-virtual {v1, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2655
+    .line 2658
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u01ce"
 
     invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2656
+    .line 2659
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u017f"
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2657
+    .line 2660
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u022b"
 
     invoke-virtual {v1, v2, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2658
+    .line 2661
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u027f"
 
     invoke-virtual {v1, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2659
+    .line 2662
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u01ad"
 
     invoke-virtual {v1, v2, v10}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2660
+    .line 2663
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1e2f"
 
     invoke-virtual {v1, v2, v8}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2661
+    .line 2664
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u01fd"
@@ -17020,14 +17067,14 @@
 
     invoke-virtual {v1, v2, v9}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2662
+    .line 2665
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u2c71"
 
     invoke-virtual {v1, v2, v12}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2663
+    .line 2666
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u0276"
@@ -17036,7 +17083,7 @@
 
     invoke-virtual {v1, v2, v9}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2664
+    .line 2667
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1e43"
@@ -17045,21 +17092,21 @@
 
     invoke-virtual {v1, v2, v9}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2665
+    .line 2668
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u017c"
 
     invoke-virtual {v1, v2, v11}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2666
+    .line 2669
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u0115"
 
     invoke-virtual {v1, v2, v14}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2667
+    .line 2670
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\ua73b"
@@ -17068,21 +17115,21 @@
 
     invoke-virtual {v1, v2, v9}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2668
+    .line 2671
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1edf"
 
     invoke-virtual {v1, v2, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2669
+    .line 2672
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1ec5"
 
     invoke-virtual {v1, v2, v14}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2670
+    .line 2673
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u026c"
@@ -17091,21 +17138,21 @@
 
     invoke-virtual {v1, v2, v9}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2671
+    .line 2674
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1ecb"
 
     invoke-virtual {v1, v2, v8}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2672
+    .line 2675
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1d6d"
 
     invoke-virtual {v1, v2, v15}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2673
+    .line 2676
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\ufb06"
@@ -17116,21 +17163,21 @@
 
     invoke-virtual {v1, v2, v12}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2674
+    .line 2677
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1e37"
 
     invoke-virtual {v1, v2, v9}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2675
+    .line 2678
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u0155"
 
     invoke-virtual {v1, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2676
+    .line 2679
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1d15"
@@ -17139,35 +17186,35 @@
 
     invoke-virtual {v1, v2, v12}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2677
+    .line 2680
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u0288"
 
     invoke-virtual {v1, v2, v10}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2678
+    .line 2681
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u0101"
 
     invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2679
+    .line 2682
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1e19"
 
     invoke-virtual {v1, v2, v14}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2680
+    .line 2683
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1d11"
 
     invoke-virtual {v1, v2, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2681
+    .line 2684
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u00e7"
@@ -17176,42 +17223,42 @@
 
     invoke-virtual {v1, v2, v12}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2682
+    .line 2685
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1d8a"
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2683
+    .line 2686
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1eb7"
 
     invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2684
+    .line 2687
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u0173"
 
     invoke-virtual {v1, v2, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2685
+    .line 2688
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1ea3"
 
     invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2686
+    .line 2689
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u01e5"
 
     invoke-virtual {v1, v2, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2687
+    .line 2690
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\ua741"
@@ -17222,42 +17269,42 @@
 
     invoke-virtual {v1, v2, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2688
+    .line 2691
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1e95"
 
     invoke-virtual {v1, v2, v11}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2689
+    .line 2692
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u015d"
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2690
+    .line 2693
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1e15"
 
     invoke-virtual {v1, v2, v14}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2691
+    .line 2694
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u0260"
 
     invoke-virtual {v1, v2, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2692
+    .line 2695
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\ua749"
 
     invoke-virtual {v1, v2, v9}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2693
+    .line 2696
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\ua77c"
@@ -17266,7 +17313,7 @@
 
     invoke-virtual {v1, v2, v11}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2694
+    .line 2697
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1d8d"
@@ -17275,49 +17322,49 @@
 
     invoke-virtual {v1, v2, v11}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2695
+    .line 2698
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u01d2"
 
     invoke-virtual {v1, v2, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2696
+    .line 2699
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u0119"
 
     invoke-virtual {v1, v2, v14}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2697
+    .line 2700
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1ed5"
 
     invoke-virtual {v1, v2, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2698
+    .line 2701
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u01ab"
 
     invoke-virtual {v1, v2, v10}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2699
+    .line 2702
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u01eb"
 
     invoke-virtual {v1, v2, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2700
+    .line 2703
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "i\u0307"
 
     invoke-virtual {v1, v2, v8}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2701
+    .line 2704
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1e47"
@@ -17326,21 +17373,21 @@
 
     invoke-virtual {v1, v2, v11}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2702
+    .line 2705
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u0107"
 
     invoke-virtual {v1, v2, v12}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2703
+    .line 2706
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1d77"
 
     invoke-virtual {v1, v2, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2704
+    .line 2707
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1e85"
@@ -17351,21 +17398,21 @@
 
     invoke-virtual {v1, v2, v12}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2705
+    .line 2708
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1e11"
 
     invoke-virtual {v1, v2, v15}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2706
+    .line 2709
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1e39"
 
     invoke-virtual {v1, v2, v9}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2707
+    .line 2710
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u0153"
@@ -17374,42 +17421,42 @@
 
     invoke-virtual {v1, v2, v15}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2708
+    .line 2711
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1d73"
 
     invoke-virtual {v1, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2709
+    .line 2712
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u013c"
 
     invoke-virtual {v1, v2, v9}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2710
+    .line 2713
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u0211"
 
     invoke-virtual {v1, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2711
+    .line 2714
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u022d"
 
     invoke-virtual {v1, v2, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2712
+    .line 2715
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1d70"
 
     invoke-virtual {v1, v2, v11}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2713
+    .line 2716
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1d01"
@@ -17418,21 +17465,21 @@
 
     invoke-virtual {v1, v2, v15}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2714
+    .line 2717
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u0140"
 
     invoke-virtual {v1, v2, v9}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2715
+    .line 2718
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u00e4"
 
     invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2716
+    .line 2719
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u01a5"
@@ -17441,28 +17488,28 @@
 
     invoke-virtual {v1, v2, v15}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2717
+    .line 2720
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1ecf"
 
     invoke-virtual {v1, v2, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2718
+    .line 2721
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u012f"
 
     invoke-virtual {v1, v2, v8}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2719
+    .line 2722
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u0213"
 
     invoke-virtual {v1, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2720
+    .line 2723
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u01c6"
@@ -17473,14 +17520,14 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2721
+    .line 2724
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1e21"
 
     invoke-virtual {v1, v2, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2722
+    .line 2725
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1e7b"
@@ -17489,84 +17536,84 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2723
+    .line 2726
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u014d"
 
     invoke-virtual {v1, v2, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2724
+    .line 2727
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u013e"
 
     invoke-virtual {v1, v2, v9}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2725
+    .line 2728
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1e83"
 
     invoke-virtual {v1, v2, v12}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2726
+    .line 2729
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u021b"
 
     invoke-virtual {v1, v2, v10}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2727
+    .line 2730
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u0144"
 
     invoke-virtual {v1, v2, v11}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2728
+    .line 2731
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u024d"
 
     invoke-virtual {v1, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2729
+    .line 2732
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u0203"
 
     invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2730
+    .line 2733
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u00fc"
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2731
+    .line 2734
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\ua781"
 
     invoke-virtual {v1, v2, v9}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2732
+    .line 2735
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1d10"
 
     invoke-virtual {v1, v2, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2733
+    .line 2736
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1edb"
 
     invoke-virtual {v1, v2, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2734
+    .line 2737
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1d03"
@@ -17577,21 +17624,21 @@
 
     invoke-virtual {v1, v2, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2735
+    .line 2738
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u0279"
 
     invoke-virtual {v1, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2736
+    .line 2739
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1d72"
 
     invoke-virtual {v1, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2737
+    .line 2740
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u028f"
@@ -17600,7 +17647,7 @@
 
     invoke-virtual {v1, v2, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2738
+    .line 2741
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1d6e"
@@ -17609,7 +17656,7 @@
 
     invoke-virtual {v1, v2, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2739
+    .line 2742
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u2c68"
@@ -17618,252 +17665,252 @@
 
     invoke-virtual {v1, v2, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2740
+    .line 2743
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u014f"
 
     invoke-virtual {v1, v2, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2741
+    .line 2744
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u00fa"
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2742
+    .line 2745
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1e5b"
 
     invoke-virtual {v1, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2743
+    .line 2746
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u02ae"
 
     invoke-virtual {v1, v2, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2744
+    .line 2747
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u00f3"
 
     invoke-virtual {v1, v2, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2745
+    .line 2748
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u016f"
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2746
+    .line 2749
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1ee1"
 
     invoke-virtual {v1, v2, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2747
+    .line 2750
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1e55"
 
     invoke-virtual {v1, v2, v15}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2748
+    .line 2751
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1d96"
 
     invoke-virtual {v1, v2, v8}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2749
+    .line 2752
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1ef1"
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2750
+    .line 2753
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u00e3"
 
     invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2751
+    .line 2754
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1d62"
 
     invoke-virtual {v1, v2, v8}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2752
+    .line 2755
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1e71"
 
     invoke-virtual {v1, v2, v10}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2753
+    .line 2756
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1ec3"
 
     invoke-virtual {v1, v2, v14}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2754
+    .line 2757
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1eed"
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2755
+    .line 2758
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u00ed"
 
     invoke-virtual {v1, v2, v8}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2756
+    .line 2759
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u0254"
 
     invoke-virtual {v1, v2, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2757
+    .line 2760
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u027a"
 
     invoke-virtual {v1, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2758
+    .line 2761
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u0262"
 
     invoke-virtual {v1, v2, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2759
+    .line 2762
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u0159"
 
     invoke-virtual {v1, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2760
+    .line 2763
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1e96"
 
     invoke-virtual {v1, v2, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2761
+    .line 2764
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u0171"
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2762
+    .line 2765
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u020d"
 
     invoke-virtual {v1, v2, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2763
+    .line 2766
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1e3b"
 
     invoke-virtual {v1, v2, v9}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2764
+    .line 2767
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1e23"
 
     invoke-virtual {v1, v2, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2765
+    .line 2768
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u0236"
 
     invoke-virtual {v1, v2, v10}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2766
+    .line 2769
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u0146"
 
     invoke-virtual {v1, v2, v11}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2767
+    .line 2770
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1d92"
 
     invoke-virtual {v1, v2, v14}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2768
+    .line 2771
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u00ec"
 
     invoke-virtual {v1, v2, v8}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2769
+    .line 2772
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1e89"
 
     invoke-virtual {v1, v2, v12}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2770
+    .line 2773
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u0113"
 
     invoke-virtual {v1, v2, v14}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2771
+    .line 2774
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1d07"
 
     invoke-virtual {v1, v2, v14}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2772
+    .line 2775
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u0142"
 
     invoke-virtual {v1, v2, v9}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2773
+    .line 2776
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1ed9"
 
     invoke-virtual {v1, v2, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2774
+    .line 2777
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u026d"
 
     invoke-virtual {v1, v2, v9}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2775
+    .line 2778
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1e8f"
@@ -17872,7 +17919,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2776
+    .line 2779
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1d0a"
@@ -17881,7 +17928,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2777
+    .line 2780
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1e31"
@@ -17890,7 +17937,7 @@
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2778
+    .line 2781
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1e7f"
@@ -17899,21 +17946,21 @@
 
     invoke-virtual {v1, v2, v8}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2779
+    .line 2782
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u0229"
 
     invoke-virtual {v1, v2, v14}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2780
+    .line 2783
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u00e2"
 
     invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2781
+    .line 2784
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u015f"
@@ -17922,28 +17969,28 @@
 
     invoke-virtual {v1, v2, v9}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2782
+    .line 2785
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u0157"
 
     invoke-virtual {v1, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2783
+    .line 2786
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u028b"
 
     invoke-virtual {v1, v2, v8}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2784
+    .line 2787
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u2090"
 
     invoke-virtual {v1, v2, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2785
+    .line 2788
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u2184"
@@ -17952,14 +17999,14 @@
 
     invoke-virtual {v1, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2786
+    .line 2789
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1d93"
 
     invoke-virtual {v1, v2, v14}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2787
+    .line 2790
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u0270"
@@ -17968,56 +18015,56 @@
 
     invoke-virtual {v1, v2, v8}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2788
+    .line 2791
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1d21"
 
     invoke-virtual {v1, v2, v12}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2789
+    .line 2792
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u020f"
 
     invoke-virtual {v1, v2, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2790
+    .line 2793
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u010d"
 
     invoke-virtual {v1, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2791
+    .line 2794
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u01f5"
 
     invoke-virtual {v1, v2, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2792
+    .line 2795
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u0109"
 
     invoke-virtual {v1, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2793
+    .line 2796
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1d97"
 
     invoke-virtual {v1, v2, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2794
+    .line 2797
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\ua743"
 
     invoke-virtual {v1, v2, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2795
+    .line 2798
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\ua759"
@@ -18026,42 +18073,42 @@
 
     invoke-virtual {v1, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2796
+    .line 2799
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1e51"
 
     invoke-virtual {v1, v2, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2797
+    .line 2800
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\ua731"
 
     invoke-virtual {v1, v2, v9}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2798
+    .line 2801
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1e53"
 
     invoke-virtual {v1, v2, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2799
+    .line 2802
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u021f"
 
     invoke-virtual {v1, v2, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2800
+    .line 2803
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u0151"
 
     invoke-virtual {v1, v2, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2801
+    .line 2804
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\ua729"
@@ -18070,14 +18117,14 @@
 
     invoke-virtual {v1, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2802
+    .line 2805
     iget-object v1, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
     const-string v2, "\u1ebb"
 
     invoke-virtual {v1, v2, v14}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2804
+    .line 2807
     :cond_101c
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -18087,7 +18134,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    .line 2805
+    .line 2808
     invoke-virtual/range {p1 .. p1}, Ljava/lang/String;->length()I
 
     move-result v2
@@ -18103,19 +18150,19 @@
 
     move-object/from16 v6, p1
 
-    .line 2808
+    .line 2811
     invoke-virtual {v6, v4, v5}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v4
 
     if-eqz p3, :cond_1046
 
-    .line 2810
+    .line 2813
     invoke-virtual {v4}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 2811
+    .line 2814
     invoke-virtual {v4, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v4
@@ -18128,7 +18175,7 @@
 
     move/from16 v3, v26
 
-    .line 2814
+    .line 2817
     :cond_1046
     iget-object v7, v0, Lorg/telegram/messenger/LocaleController;->translitChars:Ljava/util/HashMap;
 
@@ -18142,7 +18189,7 @@
 
     if-eqz p2, :cond_105a
 
-    .line 2816
+    .line 2819
     iget-object v7, v0, Lorg/telegram/messenger/LocaleController;->ruTranslitChars:Ljava/util/HashMap;
 
     invoke-virtual {v7, v4}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -18158,7 +18205,7 @@
 
     if-eqz v3, :cond_108a
 
-    .line 2820
+    .line 2823
     invoke-virtual {v7}, Ljava/lang/String;->length()I
 
     move-result v4
@@ -18167,7 +18214,7 @@
 
     if-le v4, v8, :cond_1086
 
-    .line 2821
+    .line 2824
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -18200,13 +18247,13 @@
 
     goto :goto_108a
 
-    .line 2823
+    .line 2826
     :cond_1086
     invoke-virtual {v7}, Ljava/lang/String;->toUpperCase()Ljava/lang/String;
 
     move-result-object v7
 
-    .line 2826
+    .line 2829
     :cond_108a
     :goto_108a
     invoke-virtual {v1, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -18218,7 +18265,7 @@
 
     const/4 v7, 0x0
 
-    .line 2829
+    .line 2832
     invoke-virtual {v4, v7}, Ljava/lang/String;->charAt(I)C
 
     move-result v7
@@ -18275,12 +18322,12 @@
     :cond_10c3
     if-eqz v3, :cond_10c9
 
-    .line 2834
+    .line 2837
     invoke-virtual {v4}, Ljava/lang/String;->toUpperCase()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 2837
+    .line 2840
     :cond_10c9
     invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -18289,7 +18336,7 @@
 
     goto/16 :goto_102b
 
-    .line 2840
+    .line 2843
     :cond_10cf
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -18314,7 +18361,7 @@
 .method public loadRemoteLanguages(I)V
     .registers 5
 
-    .line 2140
+    .line 2143
     iget-boolean v0, p0, Lorg/telegram/messenger/LocaleController;->loadingRemoteLanguages:Z
 
     if-eqz v0, :cond_5
@@ -18324,15 +18371,15 @@
     :cond_5
     const/4 v0, 0x1
 
-    .line 2143
+    .line 2146
     iput-boolean v0, p0, Lorg/telegram/messenger/LocaleController;->loadingRemoteLanguages:Z
 
-    .line 2144
+    .line 2147
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_langpack_getLanguages;
 
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_langpack_getLanguages;-><init>()V
 
-    .line 2145
+    .line 2148
     invoke-static {p1}, Lorg/telegram/tgnet/ConnectionsManager;->getInstance(I)Lorg/telegram/tgnet/ConnectionsManager;
 
     move-result-object v1
@@ -18351,14 +18398,14 @@
 .method public onDeviceConfigurationChange(Landroid/content/res/Configuration;)V
     .registers 4
 
-    .line 1452
+    .line 1455
     iget-boolean v0, p0, Lorg/telegram/messenger/LocaleController;->changingConfiguration:Z
 
     if-eqz v0, :cond_5
 
     return-void
 
-    .line 1455
+    .line 1458
     :cond_5
     sget-object v0, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
@@ -18368,25 +18415,25 @@
 
     sput-boolean v0, Lorg/telegram/messenger/LocaleController;->is24HourFormat:Z
 
-    .line 1456
+    .line 1459
     iget-object p1, p1, Landroid/content/res/Configuration;->locale:Ljava/util/Locale;
 
     iput-object p1, p0, Lorg/telegram/messenger/LocaleController;->systemDefaultLocale:Ljava/util/Locale;
 
-    .line 1457
+    .line 1460
     iget-object v0, p0, Lorg/telegram/messenger/LocaleController;->languageOverride:Ljava/lang/String;
 
     if-eqz v0, :cond_21
 
-    .line 1458
+    .line 1461
     iget-object p1, p0, Lorg/telegram/messenger/LocaleController;->currentLocaleInfo:Lorg/telegram/messenger/LocaleController$LocaleInfo;
 
     const/4 v0, 0x0
 
-    .line 1459
+    .line 1462
     iput-object v0, p0, Lorg/telegram/messenger/LocaleController;->currentLocaleInfo:Lorg/telegram/messenger/LocaleController$LocaleInfo;
 
-    .line 1460
+    .line 1463
     sget v0, Lorg/telegram/messenger/UserConfig;->selectedAccount:I
 
     const/4 v1, 0x0
@@ -18398,12 +18445,12 @@
     :cond_21
     if-eqz p1, :cond_78
 
-    .line 1464
+    .line 1467
     invoke-virtual {p1}, Ljava/util/Locale;->getDisplayName()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1465
+    .line 1468
     iget-object v1, p0, Lorg/telegram/messenger/LocaleController;->currentLocale:Ljava/util/Locale;
 
     invoke-virtual {v1}, Ljava/util/Locale;->getDisplayName()Ljava/lang/String;
@@ -18414,21 +18461,21 @@
 
     if-eqz v1, :cond_3a
 
-    .line 1466
+    .line 1469
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-nez v0, :cond_3a
 
-    .line 1467
+    .line 1470
     invoke-virtual {p0}, Lorg/telegram/messenger/LocaleController;->recreateFormatters()V
 
-    .line 1469
+    .line 1472
     :cond_3a
     iput-object p1, p0, Lorg/telegram/messenger/LocaleController;->currentLocale:Ljava/util/Locale;
 
-    .line 1470
+    .line 1473
     iget-object p1, p0, Lorg/telegram/messenger/LocaleController;->currentLocaleInfo:Lorg/telegram/messenger/LocaleController$LocaleInfo;
 
     if-eqz p1, :cond_56
@@ -18441,7 +18488,7 @@
 
     if-nez p1, :cond_56
 
-    .line 1471
+    .line 1474
     iget-object p1, p0, Lorg/telegram/messenger/LocaleController;->allRules:Ljava/util/HashMap;
 
     iget-object v0, p0, Lorg/telegram/messenger/LocaleController;->currentLocaleInfo:Lorg/telegram/messenger/LocaleController$LocaleInfo;
@@ -18456,13 +18503,13 @@
 
     iput-object p1, p0, Lorg/telegram/messenger/LocaleController;->currentPluralRules:Lorg/telegram/messenger/LocaleController$PluralRules;
 
-    .line 1473
+    .line 1476
     :cond_56
     iget-object p1, p0, Lorg/telegram/messenger/LocaleController;->currentPluralRules:Lorg/telegram/messenger/LocaleController$PluralRules;
 
     if-nez p1, :cond_78
 
-    .line 1474
+    .line 1477
     iget-object p1, p0, Lorg/telegram/messenger/LocaleController;->allRules:Ljava/util/HashMap;
 
     iget-object v0, p0, Lorg/telegram/messenger/LocaleController;->currentLocale:Ljava/util/Locale;
@@ -18481,7 +18528,7 @@
 
     if-nez p1, :cond_78
 
-    .line 1476
+    .line 1479
     iget-object p1, p0, Lorg/telegram/messenger/LocaleController;->allRules:Ljava/util/HashMap;
 
     const-string v0, "en"
@@ -18494,14 +18541,14 @@
 
     iput-object p1, p0, Lorg/telegram/messenger/LocaleController;->currentPluralRules:Lorg/telegram/messenger/LocaleController$PluralRules;
 
-    .line 1481
+    .line 1484
     :cond_78
     :goto_78
     invoke-static {}, Lorg/telegram/messenger/LocaleController;->getSystemLocaleStringIso639()Ljava/lang/String;
 
     move-result-object p1
 
-    .line 1482
+    .line 1485
     iget-object v0, p0, Lorg/telegram/messenger/LocaleController;->currentSystemLocale:Ljava/lang/String;
 
     if-eqz v0, :cond_8b
@@ -18512,10 +18559,10 @@
 
     if-nez v0, :cond_8b
 
-    .line 1483
+    .line 1486
     iput-object p1, p0, Lorg/telegram/messenger/LocaleController;->currentSystemLocale:Ljava/lang/String;
 
-    .line 1484
+    .line 1487
     invoke-static {p1}, Lorg/telegram/tgnet/ConnectionsManager;->setSystemLangCode(Ljava/lang/String;)V
 
     :cond_8b
@@ -18525,17 +18572,17 @@
 .method public recreateFormatters()V
     .registers 10
 
-    .line 1723
+    .line 1726
     iget-object v0, p0, Lorg/telegram/messenger/LocaleController;->currentLocale:Ljava/util/Locale;
 
     if-nez v0, :cond_8
 
-    .line 1725
+    .line 1728
     invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
 
     move-result-object v0
 
-    .line 1727
+    .line 1730
     :cond_8
     invoke-virtual {v0}, Ljava/util/Locale;->getLanguage()Ljava/lang/String;
 
@@ -18545,13 +18592,13 @@
 
     const-string v1, "en"
 
-    .line 1731
+    .line 1734
     :cond_10
     invoke-virtual {v1}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 1732
+    .line 1735
     invoke-virtual {v1}, Ljava/lang/String;->length()I
 
     move-result v2
@@ -18599,7 +18646,7 @@
     :cond_3d
     const-string v2, "ar_"
 
-    .line 1733
+    .line 1736
     invoke-virtual {v1, v2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v2
@@ -18654,7 +18701,7 @@
 
     const-string v2, "ko"
 
-    .line 1735
+    .line 1738
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v7
@@ -18671,11 +18718,11 @@
     :goto_76
     sput v7, Lorg/telegram/messenger/LocaleController;->nameDisplayOrder:I
 
-    const v7, 0x7f0e1454
+    const v7, 0x7f0e1523
 
     const-string v8, "formatterMonthYear"
 
-    .line 1737
+    .line 1740
     invoke-direct {p0, v8, v7}, Lorg/telegram/messenger/LocaleController;->getStringInternal(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v7
@@ -18688,11 +18735,11 @@
 
     iput-object v7, p0, Lorg/telegram/messenger/LocaleController;->formatterMonthYear:Lorg/telegram/messenger/time/FastDateFormat;
 
-    const v7, 0x7f0e1452
+    const v7, 0x7f0e1521
 
     const-string v8, "formatterMonth"
 
-    .line 1738
+    .line 1741
     invoke-direct {p0, v8, v7}, Lorg/telegram/messenger/LocaleController;->getStringInternal(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v7
@@ -18705,11 +18752,11 @@
 
     iput-object v7, p0, Lorg/telegram/messenger/LocaleController;->formatterDayMonth:Lorg/telegram/messenger/time/FastDateFormat;
 
-    const v7, 0x7f0e145a
+    const v7, 0x7f0e1529
 
     const-string v8, "formatterYear"
 
-    .line 1739
+    .line 1742
     invoke-direct {p0, v8, v7}, Lorg/telegram/messenger/LocaleController;->getStringInternal(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v7
@@ -18722,11 +18769,11 @@
 
     iput-object v7, p0, Lorg/telegram/messenger/LocaleController;->formatterYear:Lorg/telegram/messenger/time/FastDateFormat;
 
-    const v7, 0x7f0e145b
+    const v7, 0x7f0e152a
 
     const-string v8, "formatterYearMax"
 
-    .line 1740
+    .line 1743
     invoke-direct {p0, v8, v7}, Lorg/telegram/messenger/LocaleController;->getStringInternal(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v7
@@ -18739,11 +18786,11 @@
 
     iput-object v7, p0, Lorg/telegram/messenger/LocaleController;->formatterYearMax:Lorg/telegram/messenger/time/FastDateFormat;
 
-    const v7, 0x7f0e1432
+    const v7, 0x7f0e1501
 
     const-string v8, "chatDate"
 
-    .line 1741
+    .line 1744
     invoke-direct {p0, v8, v7}, Lorg/telegram/messenger/LocaleController;->getStringInternal(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v7
@@ -18756,11 +18803,11 @@
 
     iput-object v7, p0, Lorg/telegram/messenger/LocaleController;->chatDate:Lorg/telegram/messenger/time/FastDateFormat;
 
-    const v7, 0x7f0e1433
+    const v7, 0x7f0e1502
 
     const-string v8, "chatFullDate"
 
-    .line 1742
+    .line 1745
     invoke-direct {p0, v8, v7}, Lorg/telegram/messenger/LocaleController;->getStringInternal(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v7
@@ -18773,11 +18820,11 @@
 
     iput-object v7, p0, Lorg/telegram/messenger/LocaleController;->chatFullDate:Lorg/telegram/messenger/time/FastDateFormat;
 
-    const v7, 0x7f0e1458
+    const v7, 0x7f0e1527
 
     const-string v8, "formatterWeek"
 
-    .line 1743
+    .line 1746
     invoke-direct {p0, v8, v7}, Lorg/telegram/messenger/LocaleController;->getStringInternal(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v7
@@ -18790,11 +18837,11 @@
 
     iput-object v7, p0, Lorg/telegram/messenger/LocaleController;->formatterWeek:Lorg/telegram/messenger/time/FastDateFormat;
 
-    const v7, 0x7f0e1459
+    const v7, 0x7f0e1528
 
     const-string v8, "formatterWeekLong"
 
-    .line 1744
+    .line 1747
     invoke-direct {p0, v8, v7}, Lorg/telegram/messenger/LocaleController;->getStringInternal(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v7
@@ -18807,11 +18854,11 @@
 
     iput-object v7, p0, Lorg/telegram/messenger/LocaleController;->formatterWeekLong:Lorg/telegram/messenger/time/FastDateFormat;
 
-    const v7, 0x7f0e144a
+    const v7, 0x7f0e1519
 
     const-string v8, "formatDateSchedule"
 
-    .line 1745
+    .line 1748
     invoke-direct {p0, v8, v7}, Lorg/telegram/messenger/LocaleController;->getStringInternal(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v7
@@ -18824,11 +18871,11 @@
 
     iput-object v7, p0, Lorg/telegram/messenger/LocaleController;->formatterScheduleDay:Lorg/telegram/messenger/time/FastDateFormat;
 
-    const v7, 0x7f0e144b
+    const v7, 0x7f0e151a
 
     const-string v8, "formatDateScheduleYear"
 
-    .line 1746
+    .line 1749
     invoke-direct {p0, v8, v7}, Lorg/telegram/messenger/LocaleController;->getStringInternal(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v7
@@ -18841,7 +18888,7 @@
 
     iput-object v7, p0, Lorg/telegram/messenger/LocaleController;->formatterScheduleYear:Lorg/telegram/messenger/time/FastDateFormat;
 
-    .line 1747
+    .line 1750
     invoke-virtual {v1}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
 
     move-result-object v7
@@ -18878,14 +18925,14 @@
 
     if-eqz v2, :cond_145
 
-    const v2, 0x7f0e1451
+    const v2, 0x7f0e1520
 
     const-string v4, "formatterDay24H"
 
     goto :goto_14a
 
     :cond_145
-    const v2, 0x7f0e1450
+    const v2, 0x7f0e151f
 
     const-string v4, "formatterDay12H"
 
@@ -18912,19 +18959,19 @@
 
     iput-object v1, p0, Lorg/telegram/messenger/LocaleController;->formatterDay:Lorg/telegram/messenger/time/FastDateFormat;
 
-    .line 1748
+    .line 1751
     sget-boolean v1, Lorg/telegram/messenger/LocaleController;->is24HourFormat:Z
 
     if-eqz v1, :cond_167
 
-    const v1, 0x7f0e1457
+    const v1, 0x7f0e1526
 
     const-string v2, "formatterStats24H"
 
     goto :goto_16c
 
     :cond_167
-    const v1, 0x7f0e1456
+    const v1, 0x7f0e1525
 
     const-string v2, "formatterStats12H"
 
@@ -18955,19 +19002,19 @@
 
     iput-object v1, p0, Lorg/telegram/messenger/LocaleController;->formatterStats:Lorg/telegram/messenger/time/FastDateFormat;
 
-    .line 1749
+    .line 1752
     sget-boolean v1, Lorg/telegram/messenger/LocaleController;->is24HourFormat:Z
 
     if-eqz v1, :cond_18b
 
-    const v1, 0x7f0e144d
+    const v1, 0x7f0e151c
 
     const-string v2, "formatterBannedUntil24H"
 
     goto :goto_190
 
     :cond_18b
-    const v1, 0x7f0e144c
+    const v1, 0x7f0e151b
 
     const-string v2, "formatterBannedUntil12H"
 
@@ -18992,19 +19039,19 @@
 
     iput-object v1, p0, Lorg/telegram/messenger/LocaleController;->formatterBannedUntil:Lorg/telegram/messenger/time/FastDateFormat;
 
-    .line 1750
+    .line 1753
     sget-boolean v1, Lorg/telegram/messenger/LocaleController;->is24HourFormat:Z
 
     if-eqz v1, :cond_1aa
 
-    const v1, 0x7f0e144f
+    const v1, 0x7f0e151e
 
     const-string v2, "formatterBannedUntilThisYear24H"
 
     goto :goto_1af
 
     :cond_1aa
-    const v1, 0x7f0e144e
+    const v1, 0x7f0e151d    # 1.8886E38f
 
     const-string v2, "formatterBannedUntilThisYear12H"
 
@@ -19031,10 +19078,10 @@
 
     iput-object v1, p0, Lorg/telegram/messenger/LocaleController;->formatterBannedUntilThisYear:Lorg/telegram/messenger/time/FastDateFormat;
 
-    .line 1751
+    .line 1754
     iget-object v1, p0, Lorg/telegram/messenger/LocaleController;->formatterScheduleSend:[Lorg/telegram/messenger/time/FastDateFormat;
 
-    const v2, 0x7f0e0fe8
+    const v2, 0x7f0e10a5
 
     const-string v4, "SendTodayAt"
 
@@ -19050,10 +19097,10 @@
 
     aput-object v2, v1, v3
 
-    .line 1752
+    .line 1755
     iget-object v1, p0, Lorg/telegram/messenger/LocaleController;->formatterScheduleSend:[Lorg/telegram/messenger/time/FastDateFormat;
 
-    const v2, 0x7f0e0fce
+    const v2, 0x7f0e108b
 
     const-string v3, "SendDayAt"
 
@@ -19069,10 +19116,10 @@
 
     aput-object v2, v1, v5
 
-    .line 1753
+    .line 1756
     iget-object v1, p0, Lorg/telegram/messenger/LocaleController;->formatterScheduleSend:[Lorg/telegram/messenger/time/FastDateFormat;
 
-    const v2, 0x7f0e0fcf
+    const v2, 0x7f0e108c
 
     const-string v3, "SendDayYearAt"
 
@@ -19088,12 +19135,12 @@
 
     aput-object v2, v1, v6
 
-    .line 1754
+    .line 1757
     iget-object v1, p0, Lorg/telegram/messenger/LocaleController;->formatterScheduleSend:[Lorg/telegram/messenger/time/FastDateFormat;
 
     const/4 v2, 0x3
 
-    const v3, 0x7f0e0eb5
+    const v3, 0x7f0e0f61
 
     const-string v4, "RemindTodayAt"
 
@@ -19109,12 +19156,12 @@
 
     aput-object v3, v1, v2
 
-    .line 1755
+    .line 1758
     iget-object v1, p0, Lorg/telegram/messenger/LocaleController;->formatterScheduleSend:[Lorg/telegram/messenger/time/FastDateFormat;
 
     const/4 v2, 0x4
 
-    const v3, 0x7f0e0eb3
+    const v3, 0x7f0e0f5f
 
     const-string v4, "RemindDayAt"
 
@@ -19130,12 +19177,12 @@
 
     aput-object v3, v1, v2
 
-    .line 1756
+    .line 1759
     iget-object v1, p0, Lorg/telegram/messenger/LocaleController;->formatterScheduleSend:[Lorg/telegram/messenger/time/FastDateFormat;
 
     const/4 v2, 0x5
 
-    const v3, 0x7f0e0eb4
+    const v3, 0x7f0e0f60
 
     const-string v4, "RemindDayYearAt"
 
@@ -19151,12 +19198,12 @@
 
     aput-object v3, v1, v2
 
-    .line 1757
+    .line 1760
     iget-object v1, p0, Lorg/telegram/messenger/LocaleController;->formatterScheduleSend:[Lorg/telegram/messenger/time/FastDateFormat;
 
     const/4 v2, 0x6
 
-    const v3, 0x7f0e10bb
+    const v3, 0x7f0e117a
 
     const-string v4, "StartTodayAt"
 
@@ -19172,12 +19219,12 @@
 
     aput-object v3, v1, v2
 
-    .line 1758
+    .line 1761
     iget-object v1, p0, Lorg/telegram/messenger/LocaleController;->formatterScheduleSend:[Lorg/telegram/messenger/time/FastDateFormat;
 
     const/4 v2, 0x7
 
-    const v3, 0x7f0e10b3
+    const v3, 0x7f0e1172
 
     const-string v4, "StartDayAt"
 
@@ -19193,12 +19240,12 @@
 
     aput-object v3, v1, v2
 
-    .line 1759
+    .line 1762
     iget-object v1, p0, Lorg/telegram/messenger/LocaleController;->formatterScheduleSend:[Lorg/telegram/messenger/time/FastDateFormat;
 
     const/16 v2, 0x8
 
-    const v3, 0x7f0e10b4
+    const v3, 0x7f0e1173
 
     const-string v4, "StartDayYearAt"
 
@@ -19214,12 +19261,12 @@
 
     aput-object v3, v1, v2
 
-    .line 1760
+    .line 1763
     iget-object v1, p0, Lorg/telegram/messenger/LocaleController;->formatterScheduleSend:[Lorg/telegram/messenger/time/FastDateFormat;
 
     const/16 v2, 0x9
 
-    const v3, 0x7f0e10b9
+    const v3, 0x7f0e1178
 
     const-string v4, "StartShortTodayAt"
 
@@ -19235,12 +19282,12 @@
 
     aput-object v3, v1, v2
 
-    .line 1761
+    .line 1764
     iget-object v1, p0, Lorg/telegram/messenger/LocaleController;->formatterScheduleSend:[Lorg/telegram/messenger/time/FastDateFormat;
 
     const/16 v2, 0xa
 
-    const v3, 0x7f0e10b7
+    const v3, 0x7f0e1176
 
     const-string v4, "StartShortDayAt"
 
@@ -19256,12 +19303,12 @@
 
     aput-object v3, v1, v2
 
-    .line 1762
+    .line 1765
     iget-object v1, p0, Lorg/telegram/messenger/LocaleController;->formatterScheduleSend:[Lorg/telegram/messenger/time/FastDateFormat;
 
     const/16 v2, 0xb
 
-    const v3, 0x7f0e10b8
+    const v3, 0x7f0e1177
 
     const-string v4, "StartShortDayYearAt"
 
@@ -19277,12 +19324,12 @@
 
     aput-object v3, v1, v2
 
-    .line 1763
+    .line 1766
     iget-object v1, p0, Lorg/telegram/messenger/LocaleController;->formatterScheduleSend:[Lorg/telegram/messenger/time/FastDateFormat;
 
     const/16 v2, 0xc
 
-    const v3, 0x7f0e10c5
+    const v3, 0x7f0e1184
 
     const-string v4, "StartsTodayAt"
 
@@ -19298,12 +19345,12 @@
 
     aput-object v3, v1, v2
 
-    .line 1764
+    .line 1767
     iget-object v1, p0, Lorg/telegram/messenger/LocaleController;->formatterScheduleSend:[Lorg/telegram/messenger/time/FastDateFormat;
 
     const/16 v2, 0xd
 
-    const v3, 0x7f0e10c3
+    const v3, 0x7f0e1182
 
     const-string v4, "StartsDayAt"
 
@@ -19319,12 +19366,12 @@
 
     aput-object v3, v1, v2
 
-    .line 1765
+    .line 1768
     iget-object v1, p0, Lorg/telegram/messenger/LocaleController;->formatterScheduleSend:[Lorg/telegram/messenger/time/FastDateFormat;
 
     const/16 v2, 0xe
 
-    const v3, 0x7f0e10c4
+    const v3, 0x7f0e1183
 
     const-string v4, "StartsDayYearAt"
 
@@ -19398,7 +19445,7 @@
 
     if-eqz p2, :cond_1d7
 
-    .line 2019
+    .line 2022
     iget-object p3, p2, Lorg/telegram/tgnet/TLRPC$TL_langPackDifference;->strings:Ljava/util/ArrayList;
 
     invoke-virtual {p3}, Ljava/util/ArrayList;->isEmpty()Z
@@ -19417,7 +19464,7 @@
 
     goto/16 :goto_1d7
 
-    .line 2022
+    .line 2025
     :cond_14
     iget-object p3, p2, Lorg/telegram/tgnet/TLRPC$TL_langPackDifference;->lang_code:Ljava/lang/String;
 
@@ -19433,7 +19480,7 @@
 
     move-result-object p3
 
-    .line 2024
+    .line 2027
     iget-object v0, p1, Lorg/telegram/messenger/LocaleController$LocaleInfo;->shortName:Ljava/lang/String;
 
     invoke-virtual {p3, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -19452,7 +19499,7 @@
 
     goto :goto_3a
 
-    .line 2026
+    .line 2029
     :cond_2f
     iget-object v0, p1, Lorg/telegram/messenger/LocaleController$LocaleInfo;->baseLangCode:Ljava/lang/String;
 
@@ -19477,34 +19524,34 @@
     :cond_3d
     if-nez v6, :cond_44
 
-    .line 2036
+    .line 2039
     invoke-virtual {p1}, Lorg/telegram/messenger/LocaleController$LocaleInfo;->getPathToFile()Ljava/io/File;
 
     move-result-object p3
 
     goto :goto_48
 
-    .line 2038
+    .line 2041
     :cond_44
     invoke-virtual {p1}, Lorg/telegram/messenger/LocaleController$LocaleInfo;->getPathToBaseFile()Ljava/io/File;
 
     move-result-object p3
 
-    .line 2042
+    .line 2045
     :goto_48
     :try_start_48
     iget v0, p2, Lorg/telegram/tgnet/TLRPC$TL_langPackDifference;->from_version:I
 
     if-nez v0, :cond_52
 
-    .line 2043
+    .line 2046
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     goto :goto_56
 
-    .line 2045
+    .line 2048
     :cond_52
     invoke-direct {p0, p3, v3}, Lorg/telegram/messenger/LocaleController;->getLocaleFileStrings(Ljava/io/File;Z)Ljava/util/HashMap;
 
@@ -19513,7 +19560,7 @@
     :goto_56
     const/4 v1, 0x0
 
-    .line 2047
+    .line 2050
     :goto_57
     iget-object v4, p2, Lorg/telegram/tgnet/TLRPC$TL_langPackDifference;->strings:Ljava/util/ArrayList;
 
@@ -19523,7 +19570,7 @@
 
     if-ge v1, v4, :cond_14a
 
-    .line 2048
+    .line 2051
     iget-object v4, p2, Lorg/telegram/tgnet/TLRPC$TL_langPackDifference;->strings:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -19532,12 +19579,12 @@
 
     check-cast v4, Lorg/telegram/tgnet/TLRPC$LangPackString;
 
-    .line 2049
+    .line 2052
     instance-of v5, v4, Lorg/telegram/tgnet/TLRPC$TL_langPackString;
 
     if-eqz v5, :cond_78
 
-    .line 2050
+    .line 2053
     iget-object v5, v4, Lorg/telegram/tgnet/TLRPC$LangPackString;->key:Ljava/lang/String;
 
     iget-object v4, v4, Lorg/telegram/tgnet/TLRPC$LangPackString;->value:Ljava/lang/String;
@@ -19550,13 +19597,13 @@
 
     goto/16 :goto_146
 
-    .line 2051
+    .line 2054
     :cond_78
     instance-of v5, v4, Lorg/telegram/tgnet/TLRPC$TL_langPackStringPluralized;
 
     if-eqz v5, :cond_13d
 
-    .line 2052
+    .line 2055
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -19594,7 +19641,7 @@
     :goto_9b
     invoke-virtual {v0, v5, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2053
+    .line 2056
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -19627,7 +19674,7 @@
     :goto_bb
     invoke-virtual {v0, v5, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2054
+    .line 2057
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -19660,7 +19707,7 @@
     :goto_db
     invoke-virtual {v0, v5, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2055
+    .line 2058
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -19693,7 +19740,7 @@
     :goto_fb
     invoke-virtual {v0, v5, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2056
+    .line 2059
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -19726,7 +19773,7 @@
     :goto_11b
     invoke-virtual {v0, v5, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2057
+    .line 2060
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -19756,13 +19803,13 @@
 
     goto :goto_146
 
-    .line 2058
+    .line 2061
     :cond_13d
     instance-of v5, v4, Lorg/telegram/tgnet/TLRPC$TL_langPackStringDeleted;
 
     if-eqz v5, :cond_146
 
-    .line 2059
+    .line 2062
     iget-object v4, v4, Lorg/telegram/tgnet/TLRPC$LangPackString;->key:Ljava/lang/String;
 
     invoke-virtual {v0, v4}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
@@ -19773,13 +19820,13 @@
 
     goto/16 :goto_57
 
-    .line 2062
+    .line 2065
     :cond_14a
     sget-boolean v1, Lorg/telegram/messenger/BuildVars;->LOGS_ENABLED:Z
 
     if-eqz v1, :cond_162
 
-    .line 2063
+    .line 2066
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -19796,7 +19843,7 @@
 
     invoke-static {v1}, Lorg/telegram/messenger/FileLog;->d(Ljava/lang/String;)V
 
-    .line 2065
+    .line 2068
     :cond_162
     new-instance v1, Ljava/io/BufferedWriter;
 
@@ -19808,15 +19855,15 @@
 
     const-string p3, "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n"
 
-    .line 2066
+    .line 2069
     invoke-virtual {v1, p3}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
 
     const-string p3, "<resources>\n"
 
-    .line 2067
+    .line 2070
     invoke-virtual {v1, p3}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
 
-    .line 2068
+    .line 2071
     invoke-virtual {v0}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
 
     move-result-object p3
@@ -19844,7 +19891,7 @@
 
     new-array v5, v5, [Ljava/lang/Object;
 
-    .line 2069
+    .line 2072
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v7
@@ -19868,20 +19915,20 @@
     :cond_1a3
     const-string p3, "</resources>"
 
-    .line 2071
+    .line 2074
     invoke-virtual {v1, p3}, Ljava/io/BufferedWriter;->write(Ljava/lang/String;)V
 
-    .line 2072
+    .line 2075
     invoke-virtual {v1}, Ljava/io/BufferedWriter;->close()V
 
-    .line 2073
+    .line 2076
     invoke-virtual {p1}, Lorg/telegram/messenger/LocaleController$LocaleInfo;->hasBaseLang()Z
 
     move-result p3
 
     if-eqz p3, :cond_1b6
 
-    .line 2074
+    .line 2077
     invoke-virtual {p1}, Lorg/telegram/messenger/LocaleController$LocaleInfo;->getPathToBaseFile()Ljava/io/File;
 
     move-result-object v0
@@ -19900,7 +19947,7 @@
 
     if-eqz p3, :cond_1cb
 
-    .line 2076
+    .line 2079
     invoke-virtual {p1}, Lorg/telegram/messenger/LocaleController$LocaleInfo;->getPathToFile()Ljava/io/File;
 
     move-result-object p3
@@ -19911,7 +19958,7 @@
 
     invoke-virtual {v9, p3}, Ljava/util/HashMap;->putAll(Ljava/util/Map;)V
 
-    .line 2078
+    .line 2081
     :cond_1cb
     new-instance p3, Lorg/telegram/messenger/LocaleController$$ExternalSyntheticLambda2;
 
@@ -19938,14 +19985,14 @@
 .method public saveRemoteLocaleStringsForCurrentLocale(Lorg/telegram/tgnet/TLRPC$TL_langPackDifference;I)V
     .registers 6
 
-    .line 2008
+    .line 2011
     iget-object v0, p0, Lorg/telegram/messenger/LocaleController;->currentLocaleInfo:Lorg/telegram/messenger/LocaleController$LocaleInfo;
 
     if-nez v0, :cond_5
 
     return-void
 
-    .line 2011
+    .line 2014
     :cond_5
     iget-object v0, p1, Lorg/telegram/tgnet/TLRPC$TL_langPackDifference;->lang_code:Ljava/lang/String;
 
@@ -19961,7 +20008,7 @@
 
     move-result-object v0
 
-    .line 2012
+    .line 2015
     iget-object v1, p0, Lorg/telegram/messenger/LocaleController;->currentLocaleInfo:Lorg/telegram/messenger/LocaleController$LocaleInfo;
 
     iget-object v1, v1, Lorg/telegram/messenger/LocaleController$LocaleInfo;->shortName:Ljava/lang/String;
@@ -19984,7 +20031,7 @@
 
     return-void
 
-    .line 2015
+    .line 2018
     :cond_28
     iget-object v0, p0, Lorg/telegram/messenger/LocaleController;->currentLocaleInfo:Lorg/telegram/messenger/LocaleController$LocaleInfo;
 

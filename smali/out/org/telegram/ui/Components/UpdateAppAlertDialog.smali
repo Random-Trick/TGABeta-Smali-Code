@@ -93,7 +93,7 @@
 
     move-result-object v5
 
-    const v6, 0x7f0703b4
+    const v6, 0x7f0703b9
 
     invoke-virtual {v5, v6}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -365,7 +365,7 @@
 
     invoke-virtual {v6, v10}, Landroid/widget/TextView;->setEllipsize(Landroid/text/TextUtils$TruncateAt;)V
 
-    const v10, 0x7f0e017e
+    const v10, 0x7f0e01b3
 
     const-string v12, "AppUpdate"
 
@@ -438,7 +438,7 @@
 
     invoke-virtual {v6, v13}, Landroid/widget/TextView;->setLinkTextColor(I)V
 
-    const v13, 0x7f0e0184
+    const v13, 0x7f0e01b9
 
     new-array v4, v4, [Ljava/lang/Object;
 
@@ -451,9 +451,7 @@
 
     iget-object v14, v14, Lorg/telegram/tgnet/TLRPC$TL_help_appUpdate;->document:Lorg/telegram/tgnet/TLRPC$Document;
 
-    iget v14, v14, Lorg/telegram/tgnet/TLRPC$Document;->size:I
-
-    int-to-long v14, v14
+    iget-wide v14, v14, Lorg/telegram/tgnet/TLRPC$Document;->size:J
 
     invoke-static {v14, v15}, Lorg/telegram/messenger/AndroidUtilities;->formatFileSize(J)Ljava/lang/String;
 
@@ -539,9 +537,9 @@
 
     move-result v6
 
-    if-eqz v6, :cond_1e0
+    if-eqz v6, :cond_1df
 
-    const v2, 0x7f0e017f
+    const v2, 0x7f0e01b4
 
     const-string v6, "AppUpdateChangelogEmpty"
 
@@ -556,10 +554,10 @@
 
     invoke-virtual {v4, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    goto :goto_1f8
+    goto :goto_1f7
 
     .line 275
-    :cond_1e0
+    :cond_1df
     new-instance v6, Landroid/text/SpannableStringBuilder;
 
     iget-object v8, v0, Lorg/telegram/ui/Components/UpdateAppAlertDialog;->appUpdate:Lorg/telegram/tgnet/TLRPC$TL_help_appUpdate;
@@ -587,7 +585,7 @@
     invoke-virtual {v4, v6}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 279
-    :goto_1f8
+    :goto_1f7
     invoke-virtual {v4, v11}, Landroid/widget/TextView;->setGravity(I)V
 
     .line 280
@@ -675,7 +673,7 @@
 
     invoke-direct {v2, v0, v1, v3}, Lorg/telegram/ui/Components/UpdateAppAlertDialog$BottomSheetCell;-><init>(Lorg/telegram/ui/Components/UpdateAppAlertDialog;Landroid/content/Context;Z)V
 
-    const v4, 0x7f0e0180
+    const v4, 0x7f0e01b5
 
     new-array v6, v3, [Ljava/lang/Object;
 
@@ -725,7 +723,7 @@
 
     invoke-direct {v2, v0, v1, v7}, Lorg/telegram/ui/Components/UpdateAppAlertDialog$BottomSheetCell;-><init>(Lorg/telegram/ui/Components/UpdateAppAlertDialog;Landroid/content/Context;Z)V
 
-    const v1, 0x7f0e0183
+    const v1, 0x7f0e01b8
 
     const-string v4, "AppUpdateRemindMeLater"
 

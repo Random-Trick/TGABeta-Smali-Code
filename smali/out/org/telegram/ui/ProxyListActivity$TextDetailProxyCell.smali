@@ -303,7 +303,7 @@
 
     iput-object p1, p0, Lorg/telegram/ui/ProxyListActivity$TextDetailProxyCell;->checkImageView:Landroid/widget/ImageView;
 
-    const p2, 0x7f07037c
+    const p2, 0x7f070243
 
     .line 115
     invoke-virtual {p1, p2}, Landroid/widget/ImageView;->setImageResource(I)V
@@ -335,7 +335,7 @@
     .line 118
     iget-object p1, p0, Lorg/telegram/ui/ProxyListActivity$TextDetailProxyCell;->checkImageView:Landroid/widget/ImageView;
 
-    const p2, 0x7f0e05e8
+    const p2, 0x7f0e063a
 
     const-string v1, "Edit"
 
@@ -551,7 +551,7 @@
 
     move-result-object p1
 
-    const v1, 0x7f070383
+    const v1, 0x7f070391
 
     invoke-virtual {p1, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -672,7 +672,7 @@
 
     const/4 v3, 0x1
 
-    const v4, 0x7f0e0d78
+    const v4, 0x7f0e0e08
 
     const-string v5, "Ping"
 
@@ -719,7 +719,7 @@
     :cond_2e
     iget-object v0, p0, Lorg/telegram/ui/ProxyListActivity$TextDetailProxyCell;->valueTextView:Landroid/widget/TextView;
 
-    const v1, 0x7f0e04b3
+    const v1, 0x7f0e0502
 
     const-string v2, "Connecting"
 
@@ -738,7 +738,7 @@
 
     iget-wide v0, v0, Lorg/telegram/messenger/SharedConfig$ProxyInfo;->ping:J
 
-    const v7, 0x7f0e04b2
+    const v7, 0x7f0e04ff
 
     const-string v10, "Connected"
 
@@ -828,7 +828,7 @@
     .line 154
     iget-object v0, p0, Lorg/telegram/ui/ProxyListActivity$TextDetailProxyCell;->valueTextView:Landroid/widget/TextView;
 
-    const v1, 0x7f0e0446
+    const v1, 0x7f0e0488
 
     const-string v2, "Checking"
 
@@ -849,7 +849,7 @@
     .line 157
     iget-wide v0, v0, Lorg/telegram/messenger/SharedConfig$ProxyInfo;->ping:J
 
-    const v7, 0x7f0e027d
+    const v7, 0x7f0e02b2
 
     const-string v10, "Available"
 
@@ -917,7 +917,7 @@
     :cond_eb
     iget-object v0, p0, Lorg/telegram/ui/ProxyListActivity$TextDetailProxyCell;->valueTextView:Landroid/widget/TextView;
 
-    const v1, 0x7f0e11d9
+    const v1, 0x7f0e12a6
 
     const-string v2, "Unavailable"
 

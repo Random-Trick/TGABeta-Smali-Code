@@ -266,7 +266,7 @@
 
     const-string v3, "SearchTrendingStickersHint"
 
-    const v4, 0x7f0e0f95
+    const v4, 0x7f0e1051
 
     .line 197
     invoke-static {v3, v4}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;

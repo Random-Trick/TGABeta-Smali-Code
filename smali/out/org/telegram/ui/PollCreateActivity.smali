@@ -651,7 +651,7 @@
 
     invoke-direct {v1, v2}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    const v2, 0x7f0e0343
+    const v2, 0x7f0e037f
 
     const-string v3, "CancelPollAlertTitle"
 
@@ -662,7 +662,7 @@
 
     invoke-virtual {v1, v2}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const v2, 0x7f0e0342
+    const v2, 0x7f0e037e
 
     const-string v3, "CancelPollAlertText"
 
@@ -673,7 +673,7 @@
 
     invoke-virtual {v1, v2}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const v2, 0x7f0e0c3f
+    const v2, 0x7f0e0cc9
 
     const-string v3, "PassportDiscard"
 
@@ -688,7 +688,7 @@
 
     invoke-virtual {v1, v2, v3}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const v2, 0x7f0e0331
+    const v2, 0x7f0e036d
 
     const-string v3, "Cancel"
 
@@ -1771,7 +1771,7 @@
     .line 172
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
-    const v1, 0x7f070140
+    const v1, 0x7f070109
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/ActionBar;->setBackButtonImage(I)V
 
@@ -1785,7 +1785,7 @@
     .line 174
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
-    const v2, 0x7f0e0a97
+    const v2, 0x7f0e0b1e
 
     const-string v3, "NewQuiz"
 
@@ -1801,7 +1801,7 @@
     :cond_1c
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
-    const v2, 0x7f0e0a96
+    const v2, 0x7f0e0b1d
 
     const-string v3, "NewPoll"
 
@@ -1848,7 +1848,7 @@
 
     move-result-object v0
 
-    const v3, 0x7f0e04de
+    const v3, 0x7f0e052d
 
     const-string v4, "Create"
 
@@ -1986,7 +1986,7 @@
 
     iput-object v1, p0, Lorg/telegram/ui/PollCreateActivity;->hintView:Lorg/telegram/ui/Components/HintView;
 
-    const p1, 0x7f0e0da9
+    const p1, 0x7f0e0e39
 
     const-string v3, "PollTapToSelect"
 

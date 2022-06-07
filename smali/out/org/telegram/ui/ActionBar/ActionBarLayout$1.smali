@@ -24,7 +24,7 @@
 .method constructor <init>(Lorg/telegram/ui/ActionBar/ActionBarLayout;Z)V
     .registers 3
 
-    .line 820
+    .line 905
     iput-object p1, p0, Lorg/telegram/ui/ActionBar/ActionBarLayout$1;->this$0:Lorg/telegram/ui/ActionBar/ActionBarLayout;
 
     iput-boolean p2, p0, Lorg/telegram/ui/ActionBar/ActionBarLayout$1;->val$backAnimation:Z
@@ -39,12 +39,12 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .registers 3
 
-    .line 823
+    .line 908
     iget-object p1, p0, Lorg/telegram/ui/ActionBar/ActionBarLayout$1;->this$0:Lorg/telegram/ui/ActionBar/ActionBarLayout;
 
     iget-boolean v0, p0, Lorg/telegram/ui/ActionBar/ActionBarLayout$1;->val$backAnimation:Z
 
-    invoke-static {p1, v0}, Lorg/telegram/ui/ActionBar/ActionBarLayout;->access$700(Lorg/telegram/ui/ActionBar/ActionBarLayout;Z)V
+    invoke-static {p1, v0}, Lorg/telegram/ui/ActionBar/ActionBarLayout;->access$800(Lorg/telegram/ui/ActionBar/ActionBarLayout;Z)V
 
     return-void
 .end method

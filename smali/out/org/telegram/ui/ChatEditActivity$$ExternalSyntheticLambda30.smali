@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lorg/telegram/ui/LocationActivity$LocationActivityDelegate;
+.implements Lorg/telegram/ui/ActionBar/ThemeDescription$ThemeDescriptionDelegate;
 
 
 # instance fields
@@ -22,12 +22,20 @@
 
 
 # virtual methods
-.method public final didSelectLocation(Lorg/telegram/tgnet/TLRPC$MessageMedia;IZI)V
-    .registers 6
+.method public final didSetColor()V
+    .registers 2
 
     iget-object v0, p0, Lorg/telegram/ui/ChatEditActivity$$ExternalSyntheticLambda30;->f$0:Lorg/telegram/ui/ChatEditActivity;
 
-    invoke-static {v0, p1, p2, p3, p4}, Lorg/telegram/ui/ChatEditActivity;->$r8$lambda$pNOVLXViyF1HlICe74sZ7n7B0AY(Lorg/telegram/ui/ChatEditActivity;Lorg/telegram/tgnet/TLRPC$MessageMedia;IZI)V
+    invoke-static {v0}, Lorg/telegram/ui/ChatEditActivity;->$r8$lambda$L8sQw-CU96tMc98ys-FP7N27saU(Lorg/telegram/ui/ChatEditActivity;)V
+
+    return-void
+.end method
+
+.method public synthetic onAnimationProgress(F)V
+    .registers 2
+
+    invoke-static {p0, p1}, Lorg/telegram/ui/ActionBar/ThemeDescription$ThemeDescriptionDelegate$-CC;->$default$onAnimationProgress(Lorg/telegram/ui/ActionBar/ThemeDescription$ThemeDescriptionDelegate;F)V
 
     return-void
 .end method

@@ -24,12 +24,12 @@
 .method constructor <init>(Lorg/telegram/ui/PhotoViewer;Landroid/content/Context;Landroid/view/View;)V
     .registers 4
 
-    .line 13052
+    .line 13241
     iput-object p1, p0, Lorg/telegram/ui/PhotoViewer$70;->this$0:Lorg/telegram/ui/PhotoViewer;
 
     invoke-direct {p0, p2, p3}, Lorg/telegram/ui/Components/PhotoViewerWebView;-><init>(Landroid/content/Context;Landroid/view/View;)V
 
-    .line 13054
+    .line 13243
     new-instance p1, Landroid/graphics/Rect;
 
     invoke-direct {p1}, Landroid/graphics/Rect;-><init>()V
@@ -44,10 +44,10 @@
 .method protected drawBlackBackground(Landroid/graphics/Canvas;II)V
     .registers 8
 
-    .line 13058
+    .line 13247
     iget-object v0, p0, Lorg/telegram/ui/PhotoViewer$70;->this$0:Lorg/telegram/ui/PhotoViewer;
 
-    invoke-static {v0}, Lorg/telegram/ui/PhotoViewer;->access$9400(Lorg/telegram/ui/PhotoViewer;)Lorg/telegram/messenger/ImageReceiver;
+    invoke-static {v0}, Lorg/telegram/ui/PhotoViewer;->access$9300(Lorg/telegram/ui/PhotoViewer;)Lorg/telegram/messenger/ImageReceiver;
 
     move-result-object v0
 
@@ -59,7 +59,7 @@
 
     int-to-float v1, p2
 
-    .line 13060
+    .line 13249
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v2
@@ -82,7 +82,7 @@
 
     move-result v1
 
-    .line 13061
+    .line 13250
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v2
@@ -93,7 +93,7 @@
 
     float-to-int v2, v2
 
-    .line 13062
+    .line 13251
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result v3
@@ -106,15 +106,15 @@
 
     sub-int/2addr p3, v1
 
-    .line 13063
+    .line 13252
     div-int/lit8 p3, p3, 0x2
 
     sub-int/2addr p2, v2
 
-    .line 13064
+    .line 13253
     div-int/lit8 p2, p2, 0x2
 
-    .line 13065
+    .line 13254
     iget-object v3, p0, Lorg/telegram/ui/PhotoViewer$70;->rect:Landroid/graphics/Rect;
 
     add-int/2addr v2, p2
@@ -123,7 +123,7 @@
 
     invoke-virtual {v3, p2, p3, v2, v1}, Landroid/graphics/Rect;->set(IIII)V
 
-    .line 13066
+    .line 13255
     iget-object p2, p0, Lorg/telegram/ui/PhotoViewer$70;->rect:Landroid/graphics/Rect;
 
     const/4 p3, 0x0
@@ -137,10 +137,10 @@
 .method protected processTouch(Landroid/view/MotionEvent;)V
     .registers 3
 
-    .line 13072
+    .line 13261
     iget-object v0, p0, Lorg/telegram/ui/PhotoViewer$70;->this$0:Lorg/telegram/ui/PhotoViewer;
 
-    invoke-static {v0}, Lorg/telegram/ui/PhotoViewer;->access$27500(Lorg/telegram/ui/PhotoViewer;)Lorg/telegram/ui/Components/GestureDetector2;
+    invoke-static {v0}, Lorg/telegram/ui/PhotoViewer;->access$28000(Lorg/telegram/ui/PhotoViewer;)Lorg/telegram/ui/Components/GestureDetector2;
 
     move-result-object v0
 

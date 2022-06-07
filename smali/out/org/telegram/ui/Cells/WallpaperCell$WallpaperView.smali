@@ -72,7 +72,7 @@
 
     iput-object v1, p0, Lorg/telegram/ui/Cells/WallpaperCell$WallpaperView;->imageView2:Landroid/widget/ImageView;
 
-    const v3, 0x7f070161
+    const v3, 0x7f070124
 
     .line 87
     invoke-virtual {v1, v3}, Landroid/widget/ImageView;->setImageResource(I)V
@@ -121,7 +121,7 @@
     .line 95
     new-instance p1, Lorg/telegram/ui/Components/CheckBox;
 
-    const v0, 0x7f070392
+    const v0, 0x7f0703a0
 
     invoke-direct {p1, p2, v0}, Lorg/telegram/ui/Components/CheckBox;-><init>(Landroid/content/Context;I)V
 
@@ -216,20 +216,20 @@
 .method public clearAnimation()V
     .registers 2
 
-    .line 282
+    .line 284
     invoke-super {p0}, Landroid/widget/FrameLayout;->clearAnimation()V
 
-    .line 283
+    .line 285
     iget-object v0, p0, Lorg/telegram/ui/Cells/WallpaperCell$WallpaperView;->animator:Landroid/animation/AnimatorSet;
 
     if-eqz v0, :cond_d
 
-    .line 284
+    .line 286
     invoke-virtual {v0}, Landroid/animation/AnimatorSet;->cancel()V
 
     const/4 v0, 0x0
 
-    .line 285
+    .line 287
     iput-object v0, p0, Lorg/telegram/ui/Cells/WallpaperCell$WallpaperView;->animator:Landroid/animation/AnimatorSet;
 
     :cond_d
@@ -239,10 +239,10 @@
 .method public invalidate()V
     .registers 2
 
-    .line 276
+    .line 278
     invoke-super {p0}, Landroid/widget/FrameLayout;->invalidate()V
 
-    .line 277
+    .line 279
     iget-object v0, p0, Lorg/telegram/ui/Cells/WallpaperCell$WallpaperView;->imageView:Lorg/telegram/ui/Components/BackupImageView;
 
     invoke-virtual {v0}, Landroid/view/View;->invalidate()V
@@ -253,7 +253,7 @@
 .method protected onDraw(Landroid/graphics/Canvas;)V
     .registers 9
 
-    .line 291
+    .line 293
     iget-object v0, p0, Lorg/telegram/ui/Cells/WallpaperCell$WallpaperView;->checkBox:Lorg/telegram/ui/Components/CheckBox;
 
     invoke-virtual {v0}, Lorg/telegram/ui/Components/CheckBox;->isChecked()Z
@@ -295,7 +295,7 @@
 
     const/4 v3, 0x0
 
-    .line 292
+    .line 294
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getMeasuredWidth()I
 
     move-result v0
@@ -357,7 +357,7 @@
 .method public setChecked(ZZ)V
     .registers 11
 
-    .line 235
+    .line 237
     iget-object v0, p0, Lorg/telegram/ui/Cells/WallpaperCell$WallpaperView;->checkBox:Lorg/telegram/ui/Components/CheckBox;
 
     invoke-virtual {v0}, Landroid/view/View;->getVisibility()I
@@ -368,28 +368,28 @@
 
     if-eqz v0, :cond_e
 
-    .line 236
+    .line 238
     iget-object v0, p0, Lorg/telegram/ui/Cells/WallpaperCell$WallpaperView;->checkBox:Lorg/telegram/ui/Components/CheckBox;
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/CheckBox;->setVisibility(I)V
 
-    .line 238
+    .line 240
     :cond_e
     iget-object v0, p0, Lorg/telegram/ui/Cells/WallpaperCell$WallpaperView;->checkBox:Lorg/telegram/ui/Components/CheckBox;
 
     invoke-virtual {v0, p1, p2}, Lorg/telegram/ui/Components/CheckBox;->setChecked(ZZ)V
 
-    .line 239
+    .line 241
     iget-object v0, p0, Lorg/telegram/ui/Cells/WallpaperCell$WallpaperView;->animator:Landroid/animation/AnimatorSet;
 
     if-eqz v0, :cond_1d
 
-    .line 240
+    .line 242
     invoke-virtual {v0}, Landroid/animation/AnimatorSet;->cancel()V
 
     const/4 v0, 0x0
 
-    .line 241
+    .line 243
     iput-object v0, p0, Lorg/telegram/ui/Cells/WallpaperCell$WallpaperView;->animator:Landroid/animation/AnimatorSet;
 
     :cond_1d
@@ -399,7 +399,7 @@
 
     if-eqz p2, :cond_72
 
-    .line 244
+    .line 246
     new-instance p2, Landroid/animation/AnimatorSet;
 
     invoke-direct {p2}, Landroid/animation/AnimatorSet;-><init>()V
@@ -410,7 +410,7 @@
 
     new-array v3, v3, [Landroid/animation/Animator;
 
-    .line 245
+    .line 247
     iget-object v4, p0, Lorg/telegram/ui/Cells/WallpaperCell$WallpaperView;->imageView:Lorg/telegram/ui/Components/BackupImageView;
 
     const/4 v5, 0x1
@@ -453,24 +453,24 @@
 
     const-string v0, "scaleY"
 
-    .line 246
+    .line 248
     invoke-static {v4, v0, v6}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Ljava/lang/String;[F)Landroid/animation/ObjectAnimator;
 
     move-result-object v0
 
     aput-object v0, v3, v5
 
-    .line 245
+    .line 247
     invoke-virtual {p2, v3}, Landroid/animation/AnimatorSet;->playTogether([Landroid/animation/Animator;)V
 
-    .line 247
+    .line 249
     iget-object p2, p0, Lorg/telegram/ui/Cells/WallpaperCell$WallpaperView;->animator:Landroid/animation/AnimatorSet;
 
     const-wide/16 v0, 0xc8
 
     invoke-virtual {p2, v0, v1}, Landroid/animation/AnimatorSet;->setDuration(J)Landroid/animation/AnimatorSet;
 
-    .line 248
+    .line 250
     iget-object p2, p0, Lorg/telegram/ui/Cells/WallpaperCell$WallpaperView;->animator:Landroid/animation/AnimatorSet;
 
     new-instance v0, Lorg/telegram/ui/Cells/WallpaperCell$WallpaperView$2;
@@ -479,14 +479,14 @@
 
     invoke-virtual {p2, v0}, Landroid/animation/AnimatorSet;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 266
+    .line 268
     iget-object p1, p0, Lorg/telegram/ui/Cells/WallpaperCell$WallpaperView;->animator:Landroid/animation/AnimatorSet;
 
     invoke-virtual {p1}, Landroid/animation/AnimatorSet;->start()V
 
     goto :goto_89
 
-    .line 268
+    .line 270
     :cond_72
     iget-object p2, p0, Lorg/telegram/ui/Cells/WallpaperCell$WallpaperView;->imageView:Lorg/telegram/ui/Components/BackupImageView;
 
@@ -502,7 +502,7 @@
     :goto_7c
     invoke-virtual {p2, v1}, Landroid/view/View;->setScaleX(F)V
 
-    .line 269
+    .line 271
     iget-object p2, p0, Lorg/telegram/ui/Cells/WallpaperCell$WallpaperView;->imageView:Lorg/telegram/ui/Components/BackupImageView;
 
     if-eqz p1, :cond_84
@@ -515,7 +515,7 @@
     :goto_86
     invoke-virtual {p2, v0}, Landroid/view/View;->setScaleY(F)V
 
-    .line 271
+    .line 273
     :goto_89
     invoke-virtual {p0}, Lorg/telegram/ui/Cells/WallpaperCell$WallpaperView;->invalidate()V
 
@@ -523,7 +523,7 @@
 .end method
 
 .method public setWallpaper(Ljava/lang/Object;Ljava/lang/Object;Landroid/graphics/drawable/Drawable;Z)V
-    .registers 24
+    .registers 27
 
     move-object/from16 v0, p0
 
@@ -608,98 +608,155 @@
     :goto_46
     iput-boolean v5, v0, Lorg/telegram/ui/Cells/WallpaperCell$WallpaperView;->isSelected:Z
 
-    .line 119
-    instance-of v5, v1, Lorg/telegram/tgnet/TLRPC$TL_wallPaper;
+    .line 120
+    new-instance v5, Ljava/lang/StringBuilder;
 
-    const/16 v6, 0x140
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    const/16 v7, 0x1d
+    const/16 v6, 0xb4
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v7, "_"
+
+    invoke-virtual {v5, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v10
+
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
     const/16 v8, 0x64
 
-    if-eqz v5, :cond_185
+    invoke-virtual {v5, v8}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 120
-    check-cast v1, Lorg/telegram/tgnet/TLRPC$TL_wallPaper;
+    invoke-virtual {v5, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5, v8}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v7, "_b"
+
+    invoke-virtual {v5, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v12
 
     .line 121
+    instance-of v5, v1, Lorg/telegram/tgnet/TLRPC$TL_wallPaper;
+
+    const/16 v7, 0x1d
+
+    if-eqz v5, :cond_1b9
+
+    .line 122
+    check-cast v1, Lorg/telegram/tgnet/TLRPC$TL_wallPaper;
+
+    .line 123
     iget-object v2, v1, Lorg/telegram/tgnet/TLRPC$WallPaper;->document:Lorg/telegram/tgnet/TLRPC$Document;
 
     iget-object v2, v2, Lorg/telegram/tgnet/TLRPC$Document;->thumbs:Ljava/util/ArrayList;
 
-    invoke-static {v2, v8}, Lorg/telegram/messenger/FileLoader;->getClosestPhotoSizeWithSize(Ljava/util/ArrayList;I)Lorg/telegram/tgnet/TLRPC$PhotoSize;
+    int-to-float v3, v8
+
+    invoke-static {v3}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
+
+    move-result v3
+
+    invoke-static {v2, v3}, Lorg/telegram/messenger/FileLoader;->getClosestPhotoSizeWithSize(Ljava/util/ArrayList;I)Lorg/telegram/tgnet/TLRPC$PhotoSize;
 
     move-result-object v2
 
-    .line 122
+    .line 124
     iget-object v3, v1, Lorg/telegram/tgnet/TLRPC$WallPaper;->document:Lorg/telegram/tgnet/TLRPC$Document;
 
     iget-object v3, v3, Lorg/telegram/tgnet/TLRPC$Document;->thumbs:Ljava/util/ArrayList;
 
-    invoke-static {v3, v6}, Lorg/telegram/messenger/FileLoader;->getClosestPhotoSizeWithSize(Ljava/util/ArrayList;I)Lorg/telegram/tgnet/TLRPC$PhotoSize;
+    int-to-float v5, v6
+
+    invoke-static {v5}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
+
+    move-result v5
+
+    invoke-static {v3, v5}, Lorg/telegram/messenger/FileLoader;->getClosestPhotoSizeWithSize(Ljava/util/ArrayList;I)Lorg/telegram/tgnet/TLRPC$PhotoSize;
 
     move-result-object v3
 
-    if-ne v3, v2, :cond_67
+    if-ne v3, v2, :cond_9c
 
-    goto :goto_68
+    goto :goto_9d
 
-    :cond_67
+    :cond_9c
     move-object v4, v3
 
-    :goto_68
-    if-eqz v4, :cond_6d
+    :goto_9d
+    if-eqz v4, :cond_a3
 
-    .line 126
+    .line 128
     iget v3, v4, Lorg/telegram/tgnet/TLRPC$PhotoSize;->size:I
 
-    goto :goto_71
+    int-to-long v5, v3
 
-    :cond_6d
+    goto :goto_a7
+
+    :cond_a3
     iget-object v3, v1, Lorg/telegram/tgnet/TLRPC$WallPaper;->document:Lorg/telegram/tgnet/TLRPC$Document;
 
-    iget v3, v3, Lorg/telegram/tgnet/TLRPC$Document;->size:I
+    iget-wide v5, v3, Lorg/telegram/tgnet/TLRPC$Document;->size:J
 
-    :goto_71
-    move v15, v3
-
-    .line 127
-    iget-boolean v3, v1, Lorg/telegram/tgnet/TLRPC$WallPaper;->pattern:Z
-
-    if-eqz v3, :cond_149
+    :goto_a7
+    move-wide v14, v5
 
     .line 129
+    iget-boolean v3, v1, Lorg/telegram/tgnet/TLRPC$WallPaper;->pattern:Z
+
+    if-eqz v3, :cond_185
+
+    .line 131
     iget-object v3, v1, Lorg/telegram/tgnet/TLRPC$WallPaper;->settings:Lorg/telegram/tgnet/TLRPC$WallPaperSettings;
 
     iget v5, v3, Lorg/telegram/tgnet/TLRPC$WallPaperSettings;->third_background_color:I
 
-    if-eqz v5, :cond_cf
+    if-eqz v5, :cond_10f
 
-    .line 130
+    .line 132
     new-instance v3, Lorg/telegram/ui/Components/MotionBackgroundDrawable;
 
     iget-object v5, v1, Lorg/telegram/tgnet/TLRPC$WallPaper;->settings:Lorg/telegram/tgnet/TLRPC$WallPaperSettings;
 
-    iget v9, v5, Lorg/telegram/tgnet/TLRPC$WallPaperSettings;->background_color:I
+    iget v6, v5, Lorg/telegram/tgnet/TLRPC$WallPaperSettings;->background_color:I
 
-    iget v10, v5, Lorg/telegram/tgnet/TLRPC$WallPaperSettings;->second_background_color:I
+    iget v8, v5, Lorg/telegram/tgnet/TLRPC$WallPaperSettings;->second_background_color:I
 
-    iget v11, v5, Lorg/telegram/tgnet/TLRPC$WallPaperSettings;->third_background_color:I
+    iget v9, v5, Lorg/telegram/tgnet/TLRPC$WallPaperSettings;->third_background_color:I
 
-    iget v12, v5, Lorg/telegram/tgnet/TLRPC$WallPaperSettings;->fourth_background_color:I
+    iget v5, v5, Lorg/telegram/tgnet/TLRPC$WallPaperSettings;->fourth_background_color:I
 
-    const/4 v13, 0x1
+    const/16 v21, 0x1
 
-    move-object v8, v3
+    move-object/from16 v16, v3
 
-    invoke-direct/range {v8 .. v13}, Lorg/telegram/ui/Components/MotionBackgroundDrawable;-><init>(IIIIZ)V
+    move/from16 v17, v6
 
-    .line 131
+    move/from16 v18, v8
+
+    move/from16 v19, v9
+
+    move/from16 v20, v5
+
+    invoke-direct/range {v16 .. v21}, Lorg/telegram/ui/Components/MotionBackgroundDrawable;-><init>(IIIIZ)V
+
+    .line 133
     iget-object v5, v1, Lorg/telegram/tgnet/TLRPC$WallPaper;->settings:Lorg/telegram/tgnet/TLRPC$WallPaperSettings;
 
     iget v5, v5, Lorg/telegram/tgnet/TLRPC$WallPaperSettings;->intensity:I
 
-    if-gez v5, :cond_ac
+    if-gez v5, :cond_ec
 
     invoke-static {}, Lorg/telegram/ui/ActionBar/Theme;->getActiveTheme()Lorg/telegram/ui/ActionBar/Theme$ThemeInfo;
 
@@ -709,12 +766,12 @@
 
     move-result v5
 
-    if-nez v5, :cond_9e
+    if-nez v5, :cond_de
 
-    goto :goto_ac
+    goto :goto_ec
 
-    .line 137
-    :cond_9e
+    .line 139
+    :cond_de
     iget-object v5, v0, Lorg/telegram/ui/Cells/WallpaperCell$WallpaperView;->imageView:Lorg/telegram/ui/Components/BackupImageView;
 
     invoke-virtual {v5}, Lorg/telegram/ui/Components/BackupImageView;->getImageReceiver()Lorg/telegram/messenger/ImageReceiver;
@@ -727,21 +784,21 @@
 
     invoke-virtual {v5, v3}, Lorg/telegram/messenger/ImageReceiver;->setGradientBitmap(Landroid/graphics/Bitmap;)V
 
-    goto :goto_c0
+    goto :goto_100
 
-    .line 132
-    :cond_ac
-    :goto_ac
+    .line 134
+    :cond_ec
+    :goto_ec
     iget-object v5, v0, Lorg/telegram/ui/Cells/WallpaperCell$WallpaperView;->imageView:Lorg/telegram/ui/Components/BackupImageView;
 
     invoke-virtual {v5, v3}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    .line 133
+    .line 135
     sget v3, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    if-lt v3, v7, :cond_c0
+    if-lt v3, v7, :cond_100
 
-    .line 134
+    .line 136
     iget-object v3, v0, Lorg/telegram/ui/Cells/WallpaperCell$WallpaperView;->imageView:Lorg/telegram/ui/Components/BackupImageView;
 
     invoke-virtual {v3}, Lorg/telegram/ui/Components/BackupImageView;->getImageReceiver()Lorg/telegram/messenger/ImageReceiver;
@@ -752,9 +809,9 @@
 
     invoke-virtual {v3, v5}, Lorg/telegram/messenger/ImageReceiver;->setBlendMode(Ljava/lang/Object;)V
 
-    .line 139
-    :cond_c0
-    :goto_c0
+    .line 141
+    :cond_100
+    :goto_100
     iget-object v3, v1, Lorg/telegram/tgnet/TLRPC$WallPaper;->settings:Lorg/telegram/tgnet/TLRPC$WallPaperSettings;
 
     iget v5, v3, Lorg/telegram/tgnet/TLRPC$WallPaperSettings;->background_color:I
@@ -769,10 +826,10 @@
 
     move-result v3
 
-    goto :goto_e2
+    goto :goto_122
 
-    .line 141
-    :cond_cf
+    .line 143
+    :cond_10f
     iget-object v5, v0, Lorg/telegram/ui/Cells/WallpaperCell$WallpaperView;->imageView:Lorg/telegram/ui/Components/BackupImageView;
 
     iget v3, v3, Lorg/telegram/tgnet/TLRPC$WallPaperSettings;->background_color:I
@@ -783,7 +840,7 @@
 
     invoke-virtual {v5, v3}, Landroid/view/View;->setBackgroundColor(I)V
 
-    .line 142
+    .line 144
     iget-object v3, v1, Lorg/telegram/tgnet/TLRPC$WallPaper;->settings:Lorg/telegram/tgnet/TLRPC$WallPaperSettings;
 
     iget v3, v3, Lorg/telegram/tgnet/TLRPC$WallPaperSettings;->background_color:I
@@ -792,20 +849,20 @@
 
     move-result v3
 
-    .line 144
-    :goto_e2
+    .line 146
+    :goto_122
     sget v5, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    if-lt v5, v7, :cond_ec
+    if-lt v5, v7, :cond_12c
 
     iget-object v5, v1, Lorg/telegram/tgnet/TLRPC$WallPaper;->settings:Lorg/telegram/tgnet/TLRPC$WallPaperSettings;
 
     iget v5, v5, Lorg/telegram/tgnet/TLRPC$WallPaperSettings;->third_background_color:I
 
-    if-nez v5, :cond_100
+    if-nez v5, :cond_140
 
-    .line 145
-    :cond_ec
+    .line 147
+    :cond_12c
     iget-object v5, v0, Lorg/telegram/ui/Cells/WallpaperCell$WallpaperView;->imageView:Lorg/telegram/ui/Components/BackupImageView;
 
     invoke-virtual {v5}, Lorg/telegram/ui/Components/BackupImageView;->getImageReceiver()Lorg/telegram/messenger/ImageReceiver;
@@ -824,64 +881,60 @@
 
     invoke-virtual {v5, v6}, Lorg/telegram/messenger/ImageReceiver;->setColorFilter(Landroid/graphics/ColorFilter;)V
 
-    :cond_100
-    if-eqz v4, :cond_11d
+    :cond_140
+    if-eqz v4, :cond_15b
 
-    .line 148
-    iget-object v9, v0, Lorg/telegram/ui/Cells/WallpaperCell$WallpaperView;->imageView:Lorg/telegram/ui/Components/BackupImageView;
+    .line 150
+    iget-object v8, v0, Lorg/telegram/ui/Cells/WallpaperCell$WallpaperView;->imageView:Lorg/telegram/ui/Components/BackupImageView;
 
     iget-object v3, v1, Lorg/telegram/tgnet/TLRPC$WallPaper;->document:Lorg/telegram/tgnet/TLRPC$Document;
 
     invoke-static {v4, v3}, Lorg/telegram/messenger/ImageLocation;->getForDocument(Lorg/telegram/tgnet/TLRPC$PhotoSize;Lorg/telegram/tgnet/TLRPC$Document;)Lorg/telegram/messenger/ImageLocation;
 
-    move-result-object v10
+    move-result-object v9
 
     iget-object v3, v1, Lorg/telegram/tgnet/TLRPC$WallPaper;->document:Lorg/telegram/tgnet/TLRPC$Document;
 
     invoke-static {v2, v3}, Lorg/telegram/messenger/ImageLocation;->getForDocument(Lorg/telegram/tgnet/TLRPC$PhotoSize;Lorg/telegram/tgnet/TLRPC$Document;)Lorg/telegram/messenger/ImageLocation;
 
-    move-result-object v12
-
-    const/4 v13, 0x0
-
-    const/16 v16, 0x1
-
-    const-string v11, "100_100"
-
-    const-string v14, "jpg"
-
-    move-object/from16 v17, v1
-
-    invoke-virtual/range {v9 .. v17}, Lorg/telegram/ui/Components/BackupImageView;->setImage(Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Ljava/lang/String;IILjava/lang/Object;)V
-
-    goto :goto_132
-
-    .line 150
-    :cond_11d
-    iget-object v9, v0, Lorg/telegram/ui/Cells/WallpaperCell$WallpaperView;->imageView:Lorg/telegram/ui/Components/BackupImageView;
-
-    iget-object v3, v1, Lorg/telegram/tgnet/TLRPC$WallPaper;->document:Lorg/telegram/tgnet/TLRPC$Document;
-
-    invoke-static {v2, v3}, Lorg/telegram/messenger/ImageLocation;->getForDocument(Lorg/telegram/tgnet/TLRPC$PhotoSize;Lorg/telegram/tgnet/TLRPC$Document;)Lorg/telegram/messenger/ImageLocation;
-
-    move-result-object v10
+    move-result-object v11
 
     const/4 v12, 0x0
 
-    const/4 v13, 0x0
-
     const/16 v16, 0x1
 
-    const-string v11, "100_100"
-
-    const-string v14, "jpg"
+    const-string v13, "jpg"
 
     move-object/from16 v17, v1
 
-    invoke-virtual/range {v9 .. v17}, Lorg/telegram/ui/Components/BackupImageView;->setImage(Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Ljava/lang/String;IILjava/lang/Object;)V
+    invoke-virtual/range {v8 .. v17}, Lorg/telegram/ui/Components/BackupImageView;->setImage(Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Ljava/lang/String;JILjava/lang/Object;)V
+
+    goto :goto_16e
 
     .line 152
-    :goto_132
+    :cond_15b
+    iget-object v8, v0, Lorg/telegram/ui/Cells/WallpaperCell$WallpaperView;->imageView:Lorg/telegram/ui/Components/BackupImageView;
+
+    iget-object v3, v1, Lorg/telegram/tgnet/TLRPC$WallPaper;->document:Lorg/telegram/tgnet/TLRPC$Document;
+
+    invoke-static {v2, v3}, Lorg/telegram/messenger/ImageLocation;->getForDocument(Lorg/telegram/tgnet/TLRPC$PhotoSize;Lorg/telegram/tgnet/TLRPC$Document;)Lorg/telegram/messenger/ImageLocation;
+
+    move-result-object v9
+
+    const/4 v11, 0x0
+
+    const/4 v12, 0x0
+
+    const/16 v16, 0x1
+
+    const-string v13, "jpg"
+
+    move-object/from16 v17, v1
+
+    invoke-virtual/range {v8 .. v17}, Lorg/telegram/ui/Components/BackupImageView;->setImage(Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Ljava/lang/String;JILjava/lang/Object;)V
+
+    .line 154
+    :goto_16e
     iget-object v2, v0, Lorg/telegram/ui/Cells/WallpaperCell$WallpaperView;->imageView:Lorg/telegram/ui/Components/BackupImageView;
 
     invoke-virtual {v2}, Lorg/telegram/ui/Components/BackupImageView;->getImageReceiver()Lorg/telegram/messenger/ImageReceiver;
@@ -904,116 +957,106 @@
 
     invoke-virtual {v2, v1}, Lorg/telegram/messenger/ImageReceiver;->setAlpha(F)V
 
-    goto/16 :goto_36d
+    goto/16 :goto_3a3
 
-    :cond_149
-    if-eqz v4, :cond_168
+    :cond_185
+    if-eqz v4, :cond_1a0
 
-    .line 155
-    iget-object v9, v0, Lorg/telegram/ui/Cells/WallpaperCell$WallpaperView;->imageView:Lorg/telegram/ui/Components/BackupImageView;
+    .line 157
+    iget-object v8, v0, Lorg/telegram/ui/Cells/WallpaperCell$WallpaperView;->imageView:Lorg/telegram/ui/Components/BackupImageView;
 
     iget-object v3, v1, Lorg/telegram/tgnet/TLRPC$WallPaper;->document:Lorg/telegram/tgnet/TLRPC$Document;
 
     invoke-static {v4, v3}, Lorg/telegram/messenger/ImageLocation;->getForDocument(Lorg/telegram/tgnet/TLRPC$PhotoSize;Lorg/telegram/tgnet/TLRPC$Document;)Lorg/telegram/messenger/ImageLocation;
 
-    move-result-object v10
+    move-result-object v9
 
     iget-object v3, v1, Lorg/telegram/tgnet/TLRPC$WallPaper;->document:Lorg/telegram/tgnet/TLRPC$Document;
 
     invoke-static {v2, v3}, Lorg/telegram/messenger/ImageLocation;->getForDocument(Lorg/telegram/tgnet/TLRPC$PhotoSize;Lorg/telegram/tgnet/TLRPC$Document;)Lorg/telegram/messenger/ImageLocation;
 
-    move-result-object v12
+    move-result-object v11
 
     const/16 v16, 0x1
 
-    const-string v11, "100_100"
-
-    const-string v13, "100_100_b"
-
-    const-string v14, "jpg"
+    const-string v13, "jpg"
 
     move-object/from16 v17, v1
 
-    invoke-virtual/range {v9 .. v17}, Lorg/telegram/ui/Components/BackupImageView;->setImage(Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Ljava/lang/String;IILjava/lang/Object;)V
+    invoke-virtual/range {v8 .. v17}, Lorg/telegram/ui/Components/BackupImageView;->setImage(Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Ljava/lang/String;JILjava/lang/Object;)V
 
-    goto/16 :goto_36d
+    goto/16 :goto_3a3
 
-    .line 157
-    :cond_168
-    iget-object v9, v0, Lorg/telegram/ui/Cells/WallpaperCell$WallpaperView;->imageView:Lorg/telegram/ui/Components/BackupImageView;
+    .line 159
+    :cond_1a0
+    iget-object v8, v0, Lorg/telegram/ui/Cells/WallpaperCell$WallpaperView;->imageView:Lorg/telegram/ui/Components/BackupImageView;
 
     iget-object v3, v1, Lorg/telegram/tgnet/TLRPC$WallPaper;->document:Lorg/telegram/tgnet/TLRPC$Document;
 
     invoke-static {v3}, Lorg/telegram/messenger/ImageLocation;->getForDocument(Lorg/telegram/tgnet/TLRPC$Document;)Lorg/telegram/messenger/ImageLocation;
 
-    move-result-object v10
+    move-result-object v9
 
     iget-object v3, v1, Lorg/telegram/tgnet/TLRPC$WallPaper;->document:Lorg/telegram/tgnet/TLRPC$Document;
 
     invoke-static {v2, v3}, Lorg/telegram/messenger/ImageLocation;->getForDocument(Lorg/telegram/tgnet/TLRPC$PhotoSize;Lorg/telegram/tgnet/TLRPC$Document;)Lorg/telegram/messenger/ImageLocation;
 
-    move-result-object v12
+    move-result-object v11
 
     const/16 v16, 0x1
 
-    const-string v11, "100_100"
-
-    const-string v13, "100_100_b"
-
-    const-string v14, "jpg"
+    const-string v13, "jpg"
 
     move-object/from16 v17, v1
 
-    invoke-virtual/range {v9 .. v17}, Lorg/telegram/ui/Components/BackupImageView;->setImage(Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Ljava/lang/String;IILjava/lang/Object;)V
+    invoke-virtual/range {v8 .. v17}, Lorg/telegram/ui/Components/BackupImageView;->setImage(Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Ljava/lang/String;JILjava/lang/Object;)V
 
-    goto/16 :goto_36d
-
-    .line 160
-    :cond_185
-    instance-of v5, v1, Lorg/telegram/ui/WallpapersListActivity$ColorWallpaper;
-
-    const-string v9, "100_100"
-
-    if-eqz v5, :cond_2e3
-
-    .line 161
-    check-cast v1, Lorg/telegram/ui/WallpapersListActivity$ColorWallpaper;
+    goto/16 :goto_3a3
 
     .line 162
+    :cond_1b9
+    instance-of v5, v1, Lorg/telegram/ui/WallpapersListActivity$ColorWallpaper;
+
+    if-eqz v5, :cond_317
+
+    .line 163
+    check-cast v1, Lorg/telegram/ui/WallpapersListActivity$ColorWallpaper;
+
+    .line 164
     iget-object v5, v1, Lorg/telegram/ui/WallpapersListActivity$ColorWallpaper;->path:Ljava/io/File;
 
-    const-string v6, "d"
+    const-string v9, "d"
 
-    const/high16 v10, -0x1000000
+    const/high16 v11, -0x1000000
 
-    if-nez v5, :cond_1ea
+    if-nez v5, :cond_21c
 
     iget-object v5, v1, Lorg/telegram/ui/WallpapersListActivity$ColorWallpaper;->pattern:Lorg/telegram/tgnet/TLRPC$TL_wallPaper;
 
-    if-nez v5, :cond_1ea
+    if-nez v5, :cond_21c
 
     iget-object v5, v1, Lorg/telegram/ui/WallpapersListActivity$ColorWallpaper;->slug:Ljava/lang/String;
 
-    invoke-virtual {v6, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v9, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v5
 
-    if-eqz v5, :cond_1a2
+    if-eqz v5, :cond_1d4
 
-    goto :goto_1ea
+    goto :goto_21c
 
-    .line 196
-    :cond_1a2
+    .line 198
+    :cond_1d4
     iget-object v5, v0, Lorg/telegram/ui/Cells/WallpaperCell$WallpaperView;->imageView:Lorg/telegram/ui/Components/BackupImageView;
 
     invoke-virtual {v5, v4}, Lorg/telegram/ui/Components/BackupImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
 
-    .line 197
+    .line 199
     iget-boolean v4, v1, Lorg/telegram/ui/WallpapersListActivity$ColorWallpaper;->isGradient:Z
 
-    if-eqz v4, :cond_1c1
+    if-eqz v4, :cond_1f3
 
-    .line 198
+    .line 200
     iget-object v2, v0, Lorg/telegram/ui/Cells/WallpaperCell$WallpaperView;->imageView:Lorg/telegram/ui/Components/BackupImageView;
 
     new-instance v9, Lorg/telegram/ui/Components/MotionBackgroundDrawable;
@@ -1034,15 +1077,15 @@
 
     invoke-virtual {v2, v9}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    goto/16 :goto_36d
+    goto/16 :goto_3a3
 
-    .line 199
-    :cond_1c1
+    .line 201
+    :cond_1f3
     iget v4, v1, Lorg/telegram/ui/WallpapersListActivity$ColorWallpaper;->gradientColor1:I
 
-    if-eqz v4, :cond_1e0
+    if-eqz v4, :cond_212
 
-    .line 200
+    .line 202
     iget-object v4, v0, Lorg/telegram/ui/Cells/WallpaperCell$WallpaperView;->imageView:Lorg/telegram/ui/Components/BackupImageView;
 
     new-instance v5, Landroid/graphics/drawable/GradientDrawable;
@@ -1055,13 +1098,13 @@
 
     iget v8, v1, Lorg/telegram/ui/WallpapersListActivity$ColorWallpaper;->color:I
 
-    or-int/2addr v8, v10
+    or-int/2addr v8, v11
 
     aput v8, v7, v3
 
     iget v1, v1, Lorg/telegram/ui/WallpapersListActivity$ColorWallpaper;->gradientColor1:I
 
-    or-int/2addr v1, v10
+    or-int/2addr v1, v11
 
     aput v1, v7, v2
 
@@ -1069,80 +1112,84 @@
 
     invoke-virtual {v4, v5}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    goto/16 :goto_36d
+    goto/16 :goto_3a3
 
-    .line 202
-    :cond_1e0
+    .line 204
+    :cond_212
     iget-object v2, v0, Lorg/telegram/ui/Cells/WallpaperCell$WallpaperView;->imageView:Lorg/telegram/ui/Components/BackupImageView;
 
     iget v1, v1, Lorg/telegram/ui/WallpapersListActivity$ColorWallpaper;->color:I
 
-    or-int/2addr v1, v10
+    or-int/2addr v1, v11
 
     invoke-virtual {v2, v1}, Landroid/view/View;->setBackgroundColor(I)V
 
-    goto/16 :goto_36d
-
-    .line 164
-    :cond_1ea
-    :goto_1ea
-    iget v2, v1, Lorg/telegram/ui/WallpapersListActivity$ColorWallpaper;->gradientColor2:I
-
-    if-eqz v2, :cond_244
-
-    .line 165
-    new-instance v2, Lorg/telegram/ui/Components/MotionBackgroundDrawable;
-
-    iget v12, v1, Lorg/telegram/ui/WallpapersListActivity$ColorWallpaper;->color:I
-
-    iget v13, v1, Lorg/telegram/ui/WallpapersListActivity$ColorWallpaper;->gradientColor1:I
-
-    iget v14, v1, Lorg/telegram/ui/WallpapersListActivity$ColorWallpaper;->gradientColor2:I
-
-    iget v15, v1, Lorg/telegram/ui/WallpapersListActivity$ColorWallpaper;->gradientColor3:I
-
-    const/16 v16, 0x1
-
-    move-object v11, v2
-
-    invoke-direct/range {v11 .. v16}, Lorg/telegram/ui/Components/MotionBackgroundDrawable;-><init>(IIIIZ)V
+    goto/16 :goto_3a3
 
     .line 166
+    :cond_21c
+    :goto_21c
+    iget v2, v1, Lorg/telegram/ui/WallpapersListActivity$ColorWallpaper;->gradientColor2:I
+
+    if-eqz v2, :cond_27a
+
+    .line 167
+    new-instance v2, Lorg/telegram/ui/Components/MotionBackgroundDrawable;
+
+    iget v13, v1, Lorg/telegram/ui/WallpapersListActivity$ColorWallpaper;->color:I
+
+    iget v14, v1, Lorg/telegram/ui/WallpapersListActivity$ColorWallpaper;->gradientColor1:I
+
+    iget v15, v1, Lorg/telegram/ui/WallpapersListActivity$ColorWallpaper;->gradientColor2:I
+
+    iget v3, v1, Lorg/telegram/ui/WallpapersListActivity$ColorWallpaper;->gradientColor3:I
+
+    const/16 v17, 0x1
+
+    move-object v12, v2
+
+    move/from16 v16, v3
+
+    invoke-direct/range {v12 .. v17}, Lorg/telegram/ui/Components/MotionBackgroundDrawable;-><init>(IIIIZ)V
+
+    .line 168
     iget v3, v1, Lorg/telegram/ui/WallpapersListActivity$ColorWallpaper;->intensity:F
 
     const/4 v5, 0x0
 
     cmpl-float v3, v3, v5
 
-    if-ltz v3, :cond_22a
+    if-ltz v3, :cond_260
 
-    .line 167
+    .line 169
     iget-object v2, v0, Lorg/telegram/ui/Cells/WallpaperCell$WallpaperView;->imageView:Lorg/telegram/ui/Components/BackupImageView;
 
     new-instance v3, Lorg/telegram/ui/Components/MotionBackgroundDrawable;
 
-    iget v12, v1, Lorg/telegram/ui/WallpapersListActivity$ColorWallpaper;->color:I
+    iget v13, v1, Lorg/telegram/ui/WallpapersListActivity$ColorWallpaper;->color:I
 
-    iget v13, v1, Lorg/telegram/ui/WallpapersListActivity$ColorWallpaper;->gradientColor1:I
+    iget v14, v1, Lorg/telegram/ui/WallpapersListActivity$ColorWallpaper;->gradientColor1:I
 
-    iget v14, v1, Lorg/telegram/ui/WallpapersListActivity$ColorWallpaper;->gradientColor2:I
+    iget v15, v1, Lorg/telegram/ui/WallpapersListActivity$ColorWallpaper;->gradientColor2:I
 
-    iget v15, v1, Lorg/telegram/ui/WallpapersListActivity$ColorWallpaper;->gradientColor3:I
+    iget v5, v1, Lorg/telegram/ui/WallpapersListActivity$ColorWallpaper;->gradientColor3:I
 
-    const/16 v16, 0x1
+    const/16 v17, 0x1
 
-    move-object v11, v3
+    move-object v12, v3
 
-    invoke-direct/range {v11 .. v16}, Lorg/telegram/ui/Components/MotionBackgroundDrawable;-><init>(IIIIZ)V
+    move/from16 v16, v5
+
+    invoke-direct/range {v12 .. v17}, Lorg/telegram/ui/Components/MotionBackgroundDrawable;-><init>(IIIIZ)V
 
     invoke-virtual {v2, v3}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    .line 168
+    .line 170
     sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    if-lt v2, v7, :cond_237
+    if-lt v2, v7, :cond_26d
 
-    .line 169
+    .line 171
     iget-object v2, v0, Lorg/telegram/ui/Cells/WallpaperCell$WallpaperView;->imageView:Lorg/telegram/ui/Components/BackupImageView;
 
     invoke-virtual {v2}, Lorg/telegram/ui/Components/BackupImageView;->getImageReceiver()Lorg/telegram/messenger/ImageReceiver;
@@ -1153,10 +1200,10 @@
 
     invoke-virtual {v2, v3}, Lorg/telegram/messenger/ImageReceiver;->setBlendMode(Ljava/lang/Object;)V
 
-    goto :goto_237
+    goto :goto_26d
 
-    .line 172
-    :cond_22a
+    .line 174
+    :cond_260
     iget-object v3, v0, Lorg/telegram/ui/Cells/WallpaperCell$WallpaperView;->imageView:Lorg/telegram/ui/Components/BackupImageView;
 
     invoke-virtual {v3}, Lorg/telegram/ui/Components/BackupImageView;->getImageReceiver()Lorg/telegram/messenger/ImageReceiver;
@@ -1169,66 +1216,64 @@
 
     invoke-virtual {v3, v2}, Lorg/telegram/messenger/ImageReceiver;->setGradientBitmap(Landroid/graphics/Bitmap;)V
 
-    .line 174
-    :cond_237
-    :goto_237
+    .line 176
+    :cond_26d
+    :goto_26d
     iget v2, v1, Lorg/telegram/ui/WallpapersListActivity$ColorWallpaper;->color:I
 
     iget v3, v1, Lorg/telegram/ui/WallpapersListActivity$ColorWallpaper;->gradientColor1:I
 
     iget v5, v1, Lorg/telegram/ui/WallpapersListActivity$ColorWallpaper;->gradientColor2:I
 
-    iget v11, v1, Lorg/telegram/ui/WallpapersListActivity$ColorWallpaper;->gradientColor3:I
+    iget v12, v1, Lorg/telegram/ui/WallpapersListActivity$ColorWallpaper;->gradientColor3:I
 
-    invoke-static {v2, v3, v5, v11}, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->getPatternColor(IIII)I
+    invoke-static {v2, v3, v5, v12}, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->getPatternColor(IIII)I
 
     move-result v2
 
-    goto :goto_24a
+    goto :goto_280
 
-    .line 176
-    :cond_244
+    .line 178
+    :cond_27a
     iget v2, v1, Lorg/telegram/ui/WallpapersListActivity$ColorWallpaper;->color:I
 
     invoke-static {v2}, Lorg/telegram/messenger/AndroidUtilities;->getPatternColor(I)I
 
     move-result v2
 
-    .line 178
-    :goto_24a
+    .line 180
+    :goto_280
     iget-object v3, v1, Lorg/telegram/ui/WallpapersListActivity$ColorWallpaper;->slug:Ljava/lang/String;
 
-    invoke-virtual {v6, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v9, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v3
 
-    if-eqz v3, :cond_279
+    if-eqz v3, :cond_2ad
 
-    .line 179
+    .line 181
     iget-object v2, v1, Lorg/telegram/ui/WallpapersListActivity$ColorWallpaper;->defaultCache:Landroid/graphics/Bitmap;
 
-    if-nez v2, :cond_261
+    if-nez v2, :cond_295
 
     const v2, 0x7f0d0023
 
-    const/16 v3, 0xb4
-
-    .line 180
-    invoke-static {v2, v8, v3, v10}, Lorg/telegram/messenger/SvgHelper;->getBitmap(IIII)Landroid/graphics/Bitmap;
+    .line 182
+    invoke-static {v2, v8, v6, v11}, Lorg/telegram/messenger/SvgHelper;->getBitmap(IIII)Landroid/graphics/Bitmap;
 
     move-result-object v2
 
     iput-object v2, v1, Lorg/telegram/ui/WallpapersListActivity$ColorWallpaper;->defaultCache:Landroid/graphics/Bitmap;
 
-    .line 182
-    :cond_261
+    .line 184
+    :cond_295
     iget-object v2, v0, Lorg/telegram/ui/Cells/WallpaperCell$WallpaperView;->imageView:Lorg/telegram/ui/Components/BackupImageView;
 
     iget-object v3, v1, Lorg/telegram/ui/WallpapersListActivity$ColorWallpaper;->defaultCache:Landroid/graphics/Bitmap;
 
     invoke-virtual {v2, v3}, Lorg/telegram/ui/Components/BackupImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
 
-    .line 183
+    .line 185
     iget-object v2, v0, Lorg/telegram/ui/Cells/WallpaperCell$WallpaperView;->imageView:Lorg/telegram/ui/Components/BackupImageView;
 
     invoke-virtual {v2}, Lorg/telegram/ui/Components/BackupImageView;->getImageReceiver()Lorg/telegram/messenger/ImageReceiver;
@@ -1243,27 +1288,27 @@
 
     invoke-virtual {v2, v1}, Lorg/telegram/messenger/ImageReceiver;->setAlpha(F)V
 
-    goto/16 :goto_36d
+    goto/16 :goto_3a3
 
-    .line 184
-    :cond_279
+    .line 186
+    :cond_2ad
     iget-object v3, v1, Lorg/telegram/ui/WallpapersListActivity$ColorWallpaper;->path:Ljava/io/File;
 
-    if-eqz v3, :cond_288
+    if-eqz v3, :cond_2bc
 
-    .line 185
+    .line 187
     iget-object v1, v0, Lorg/telegram/ui/Cells/WallpaperCell$WallpaperView;->imageView:Lorg/telegram/ui/Components/BackupImageView;
 
     invoke-virtual {v3}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {v1, v2, v9, v4}, Lorg/telegram/ui/Components/BackupImageView;->setImage(Ljava/lang/String;Ljava/lang/String;Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {v1, v2, v10, v4}, Lorg/telegram/ui/Components/BackupImageView;->setImage(Ljava/lang/String;Ljava/lang/String;Landroid/graphics/drawable/Drawable;)V
 
-    goto/16 :goto_36d
+    goto/16 :goto_3a3
 
-    .line 187
-    :cond_288
+    .line 189
+    :cond_2bc
     iget-object v3, v1, Lorg/telegram/ui/WallpapersListActivity$ColorWallpaper;->pattern:Lorg/telegram/tgnet/TLRPC$TL_wallPaper;
 
     iget-object v3, v3, Lorg/telegram/tgnet/TLRPC$WallPaper;->document:Lorg/telegram/tgnet/TLRPC$Document;
@@ -1274,24 +1319,26 @@
 
     move-result-object v3
 
-    if-eqz v3, :cond_297
+    if-eqz v3, :cond_2cc
 
-    .line 188
+    .line 190
     iget v4, v3, Lorg/telegram/tgnet/TLRPC$PhotoSize;->size:I
 
-    goto :goto_29d
+    int-to-long v4, v4
 
-    :cond_297
+    goto :goto_2d2
+
+    :cond_2cc
     iget-object v4, v1, Lorg/telegram/ui/WallpapersListActivity$ColorWallpaper;->pattern:Lorg/telegram/tgnet/TLRPC$TL_wallPaper;
 
     iget-object v4, v4, Lorg/telegram/tgnet/TLRPC$WallPaper;->document:Lorg/telegram/tgnet/TLRPC$Document;
 
-    iget v4, v4, Lorg/telegram/tgnet/TLRPC$Document;->size:I
+    iget-wide v4, v4, Lorg/telegram/tgnet/TLRPC$Document;->size:J
 
-    :goto_29d
-    move v14, v4
+    :goto_2d2
+    move-wide v14, v4
 
-    .line 189
+    .line 191
     iget-object v8, v0, Lorg/telegram/ui/Cells/WallpaperCell$WallpaperView;->imageView:Lorg/telegram/ui/Components/BackupImageView;
 
     iget-object v4, v1, Lorg/telegram/ui/WallpapersListActivity$ColorWallpaper;->pattern:Lorg/telegram/tgnet/TLRPC$TL_wallPaper;
@@ -1306,19 +1353,17 @@
 
     const/4 v12, 0x0
 
-    const/4 v15, 0x1
+    const/16 v16, 0x1
 
     iget-object v3, v1, Lorg/telegram/ui/WallpapersListActivity$ColorWallpaper;->pattern:Lorg/telegram/tgnet/TLRPC$TL_wallPaper;
 
-    const-string v10, "100_100"
-
     const-string v13, "jpg"
 
-    move-object/from16 v16, v3
+    move-object/from16 v17, v3
 
-    invoke-virtual/range {v8 .. v16}, Lorg/telegram/ui/Components/BackupImageView;->setImage(Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Ljava/lang/String;IILjava/lang/Object;)V
+    invoke-virtual/range {v8 .. v17}, Lorg/telegram/ui/Components/BackupImageView;->setImage(Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Ljava/lang/String;JILjava/lang/Object;)V
 
-    .line 190
+    .line 192
     iget-object v3, v0, Lorg/telegram/ui/Cells/WallpaperCell$WallpaperView;->imageView:Lorg/telegram/ui/Components/BackupImageView;
 
     invoke-virtual {v3}, Lorg/telegram/ui/Components/BackupImageView;->getImageReceiver()Lorg/telegram/messenger/ImageReceiver;
@@ -1333,17 +1378,17 @@
 
     invoke-virtual {v3, v4}, Lorg/telegram/messenger/ImageReceiver;->setAlpha(F)V
 
-    .line 191
+    .line 193
     sget v3, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    if-lt v3, v7, :cond_2cd
+    if-lt v3, v7, :cond_301
 
     iget v1, v1, Lorg/telegram/ui/WallpapersListActivity$ColorWallpaper;->gradientColor2:I
 
-    if-nez v1, :cond_36d
+    if-nez v1, :cond_3a3
 
-    .line 192
-    :cond_2cd
+    .line 194
+    :cond_301
     iget-object v1, v0, Lorg/telegram/ui/Cells/WallpaperCell$WallpaperView;->imageView:Lorg/telegram/ui/Components/BackupImageView;
 
     invoke-virtual {v1}, Lorg/telegram/ui/Components/BackupImageView;->getImageReceiver()Lorg/telegram/messenger/ImageReceiver;
@@ -1362,38 +1407,21 @@
 
     invoke-virtual {v1, v3}, Lorg/telegram/messenger/ImageReceiver;->setColorFilter(Landroid/graphics/ColorFilter;)V
 
-    goto/16 :goto_36d
-
-    .line 205
-    :cond_2e3
-    instance-of v5, v1, Lorg/telegram/ui/WallpapersListActivity$FileWallpaper;
-
-    if-eqz v5, :cond_322
-
-    .line 206
-    check-cast v1, Lorg/telegram/ui/WallpapersListActivity$FileWallpaper;
+    goto/16 :goto_3a3
 
     .line 207
-    iget-object v3, v1, Lorg/telegram/ui/WallpapersListActivity$FileWallpaper;->originalPath:Ljava/io/File;
+    :cond_317
+    instance-of v5, v1, Lorg/telegram/ui/WallpapersListActivity$FileWallpaper;
 
-    if-eqz v3, :cond_2f8
+    if-eqz v5, :cond_356
 
     .line 208
-    iget-object v1, v0, Lorg/telegram/ui/Cells/WallpaperCell$WallpaperView;->imageView:Lorg/telegram/ui/Components/BackupImageView;
-
-    invoke-virtual {v3}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2, v9, v4}, Lorg/telegram/ui/Components/BackupImageView;->setImage(Ljava/lang/String;Ljava/lang/String;Landroid/graphics/drawable/Drawable;)V
-
-    goto/16 :goto_36d
+    check-cast v1, Lorg/telegram/ui/WallpapersListActivity$FileWallpaper;
 
     .line 209
-    :cond_2f8
-    iget-object v3, v1, Lorg/telegram/ui/WallpapersListActivity$FileWallpaper;->path:Ljava/io/File;
+    iget-object v3, v1, Lorg/telegram/ui/WallpapersListActivity$FileWallpaper;->originalPath:Ljava/io/File;
 
-    if-eqz v3, :cond_306
+    if-eqz v3, :cond_32c
 
     .line 210
     iget-object v1, v0, Lorg/telegram/ui/Cells/WallpaperCell$WallpaperView;->imageView:Lorg/telegram/ui/Components/BackupImageView;
@@ -1402,12 +1430,29 @@
 
     move-result-object v2
 
-    invoke-virtual {v1, v2, v9, v4}, Lorg/telegram/ui/Components/BackupImageView;->setImage(Ljava/lang/String;Ljava/lang/String;Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {v1, v2, v10, v4}, Lorg/telegram/ui/Components/BackupImageView;->setImage(Ljava/lang/String;Ljava/lang/String;Landroid/graphics/drawable/Drawable;)V
 
-    goto :goto_36d
+    goto/16 :goto_3a3
 
     .line 211
-    :cond_306
+    :cond_32c
+    iget-object v3, v1, Lorg/telegram/ui/WallpapersListActivity$FileWallpaper;->path:Ljava/io/File;
+
+    if-eqz v3, :cond_33a
+
+    .line 212
+    iget-object v1, v0, Lorg/telegram/ui/Cells/WallpaperCell$WallpaperView;->imageView:Lorg/telegram/ui/Components/BackupImageView;
+
+    invoke-virtual {v3}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2, v10, v4}, Lorg/telegram/ui/Components/BackupImageView;->setImage(Ljava/lang/String;Ljava/lang/String;Landroid/graphics/drawable/Drawable;)V
+
+    goto :goto_3a3
+
+    .line 213
+    :cond_33a
     iget-object v3, v1, Lorg/telegram/ui/WallpapersListActivity$FileWallpaper;->slug:Ljava/lang/String;
 
     const-string v4, "t"
@@ -1416,9 +1461,9 @@
 
     move-result v3
 
-    if-eqz v3, :cond_31a
+    if-eqz v3, :cond_34e
 
-    .line 212
+    .line 214
     iget-object v1, v0, Lorg/telegram/ui/Cells/WallpaperCell$WallpaperView;->imageView:Lorg/telegram/ui/Components/BackupImageView;
 
     invoke-static {v2, v1}, Lorg/telegram/ui/ActionBar/Theme;->getThemedWallpaper(ZLandroid/view/View;)Landroid/graphics/drawable/Drawable;
@@ -1427,113 +1472,116 @@
 
     invoke-virtual {v1, v2}, Lorg/telegram/ui/Components/BackupImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    goto :goto_36d
+    goto :goto_3a3
 
-    .line 214
-    :cond_31a
+    .line 216
+    :cond_34e
     iget-object v2, v0, Lorg/telegram/ui/Cells/WallpaperCell$WallpaperView;->imageView:Lorg/telegram/ui/Components/BackupImageView;
 
     iget v1, v1, Lorg/telegram/ui/WallpapersListActivity$FileWallpaper;->thumbResId:I
 
     invoke-virtual {v2, v1}, Lorg/telegram/ui/Components/BackupImageView;->setImageResource(I)V
 
-    goto :goto_36d
-
-    .line 216
-    :cond_322
-    instance-of v2, v1, Lorg/telegram/messenger/MediaController$SearchImage;
-
-    if-eqz v2, :cond_36b
-
-    .line 217
-    check-cast v1, Lorg/telegram/messenger/MediaController$SearchImage;
+    goto :goto_3a3
 
     .line 218
-    iget-object v2, v1, Lorg/telegram/messenger/MediaController$SearchImage;->photo:Lorg/telegram/tgnet/TLRPC$Photo;
+    :cond_356
+    instance-of v2, v1, Lorg/telegram/messenger/MediaController$SearchImage;
 
-    if-eqz v2, :cond_363
+    if-eqz v2, :cond_3a1
 
     .line 219
+    check-cast v1, Lorg/telegram/messenger/MediaController$SearchImage;
+
+    .line 220
+    iget-object v2, v1, Lorg/telegram/messenger/MediaController$SearchImage;->photo:Lorg/telegram/tgnet/TLRPC$Photo;
+
+    if-eqz v2, :cond_399
+
+    .line 221
     iget-object v2, v2, Lorg/telegram/tgnet/TLRPC$Photo;->sizes:Ljava/util/ArrayList;
 
-    invoke-static {v2, v8}, Lorg/telegram/messenger/FileLoader;->getClosestPhotoSizeWithSize(Ljava/util/ArrayList;I)Lorg/telegram/tgnet/TLRPC$PhotoSize;
+    int-to-float v5, v8
+
+    invoke-static {v5}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
+
+    move-result v5
+
+    invoke-static {v2, v5}, Lorg/telegram/messenger/FileLoader;->getClosestPhotoSizeWithSize(Ljava/util/ArrayList;I)Lorg/telegram/tgnet/TLRPC$PhotoSize;
 
     move-result-object v2
 
-    .line 220
+    .line 222
     iget-object v5, v1, Lorg/telegram/messenger/MediaController$SearchImage;->photo:Lorg/telegram/tgnet/TLRPC$Photo;
 
     iget-object v5, v5, Lorg/telegram/tgnet/TLRPC$Photo;->sizes:Ljava/util/ArrayList;
+
+    int-to-float v6, v6
+
+    invoke-static {v6}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
+
+    move-result v6
 
     invoke-static {v5, v6}, Lorg/telegram/messenger/FileLoader;->getClosestPhotoSizeWithSize(Ljava/util/ArrayList;I)Lorg/telegram/tgnet/TLRPC$PhotoSize;
 
     move-result-object v5
 
-    if-ne v5, v2, :cond_33d
+    if-ne v5, v2, :cond_37b
 
-    goto :goto_33e
+    goto :goto_37c
 
-    :cond_33d
+    :cond_37b
     move-object v4, v5
 
-    :goto_33e
-    if-eqz v4, :cond_345
+    :goto_37c
+    if-eqz v4, :cond_380
 
-    .line 224
+    .line 226
     iget v3, v4, Lorg/telegram/tgnet/TLRPC$PhotoSize;->size:I
 
-    move/from16 v16, v3
+    .line 227
+    :cond_380
+    iget-object v8, v0, Lorg/telegram/ui/Cells/WallpaperCell$WallpaperView;->imageView:Lorg/telegram/ui/Components/BackupImageView;
 
-    goto :goto_347
+    iget-object v5, v1, Lorg/telegram/messenger/MediaController$SearchImage;->photo:Lorg/telegram/tgnet/TLRPC$Photo;
 
-    :cond_345
-    const/16 v16, 0x0
+    invoke-static {v4, v5}, Lorg/telegram/messenger/ImageLocation;->getForPhoto(Lorg/telegram/tgnet/TLRPC$PhotoSize;Lorg/telegram/tgnet/TLRPC$Photo;)Lorg/telegram/messenger/ImageLocation;
 
-    .line 225
-    :goto_347
-    iget-object v10, v0, Lorg/telegram/ui/Cells/WallpaperCell$WallpaperView;->imageView:Lorg/telegram/ui/Components/BackupImageView;
+    move-result-object v9
 
-    iget-object v3, v1, Lorg/telegram/messenger/MediaController$SearchImage;->photo:Lorg/telegram/tgnet/TLRPC$Photo;
+    iget-object v4, v1, Lorg/telegram/messenger/MediaController$SearchImage;->photo:Lorg/telegram/tgnet/TLRPC$Photo;
 
-    invoke-static {v4, v3}, Lorg/telegram/messenger/ImageLocation;->getForPhoto(Lorg/telegram/tgnet/TLRPC$PhotoSize;Lorg/telegram/tgnet/TLRPC$Photo;)Lorg/telegram/messenger/ImageLocation;
+    invoke-static {v2, v4}, Lorg/telegram/messenger/ImageLocation;->getForPhoto(Lorg/telegram/tgnet/TLRPC$PhotoSize;Lorg/telegram/tgnet/TLRPC$Photo;)Lorg/telegram/messenger/ImageLocation;
 
     move-result-object v11
 
-    iget-object v3, v1, Lorg/telegram/messenger/MediaController$SearchImage;->photo:Lorg/telegram/tgnet/TLRPC$Photo;
+    int-to-long v14, v3
 
-    invoke-static {v2, v3}, Lorg/telegram/messenger/ImageLocation;->getForPhoto(Lorg/telegram/tgnet/TLRPC$PhotoSize;Lorg/telegram/tgnet/TLRPC$Photo;)Lorg/telegram/messenger/ImageLocation;
+    const/16 v16, 0x1
 
-    move-result-object v13
+    const-string v13, "jpg"
 
-    const/16 v17, 0x1
+    move-object/from16 v17, v1
 
-    const-string v12, "100_100"
+    invoke-virtual/range {v8 .. v17}, Lorg/telegram/ui/Components/BackupImageView;->setImage(Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Ljava/lang/String;JILjava/lang/Object;)V
 
-    const-string v14, "100_100_b"
+    goto :goto_3a3
 
-    const-string v15, "jpg"
-
-    move-object/from16 v18, v1
-
-    invoke-virtual/range {v10 .. v18}, Lorg/telegram/ui/Components/BackupImageView;->setImage(Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Ljava/lang/String;IILjava/lang/Object;)V
-
-    goto :goto_36d
-
-    .line 227
-    :cond_363
+    .line 229
+    :cond_399
     iget-object v2, v0, Lorg/telegram/ui/Cells/WallpaperCell$WallpaperView;->imageView:Lorg/telegram/ui/Components/BackupImageView;
 
     iget-object v1, v1, Lorg/telegram/messenger/MediaController$SearchImage;->thumbUrl:Ljava/lang/String;
 
-    invoke-virtual {v2, v1, v9, v4}, Lorg/telegram/ui/Components/BackupImageView;->setImage(Ljava/lang/String;Ljava/lang/String;Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {v2, v1, v10, v4}, Lorg/telegram/ui/Components/BackupImageView;->setImage(Ljava/lang/String;Ljava/lang/String;Landroid/graphics/drawable/Drawable;)V
 
-    goto :goto_36d
+    goto :goto_3a3
 
-    .line 230
-    :cond_36b
+    .line 232
+    :cond_3a1
     iput-boolean v3, v0, Lorg/telegram/ui/Cells/WallpaperCell$WallpaperView;->isSelected:Z
 
-    :cond_36d
-    :goto_36d
+    :cond_3a3
+    :goto_3a3
     return-void
 .end method

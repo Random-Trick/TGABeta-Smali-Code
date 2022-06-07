@@ -27,7 +27,7 @@
 .method constructor <init>(Lorg/telegram/ui/PasscodeActivity;Ljava/util/concurrent/atomic/AtomicBoolean;)V
     .registers 3
 
-    .line 520
+    .line 521
     iput-object p1, p0, Lorg/telegram/ui/PasscodeActivity$5;->this$0:Lorg/telegram/ui/PasscodeActivity;
 
     iput-object p2, p0, Lorg/telegram/ui/PasscodeActivity$5;->val$isPasswordShown:Ljava/util/concurrent/atomic/AtomicBoolean;
@@ -42,7 +42,7 @@
 .method public afterTextChanged(Landroid/text/Editable;)V
     .registers 6
 
-    .line 529
+    .line 530
     iget-object v0, p0, Lorg/telegram/ui/PasscodeActivity$5;->this$0:Lorg/telegram/ui/PasscodeActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/PasscodeActivity;->access$900(Lorg/telegram/ui/PasscodeActivity;)I
@@ -61,7 +61,7 @@
 
     if-nez v0, :cond_5f
 
-    .line 530
+    .line 531
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -84,7 +84,7 @@
 
     if-eq v0, v3, :cond_44
 
-    .line 531
+    .line 532
     iget-object p1, p0, Lorg/telegram/ui/PasscodeActivity$5;->val$isPasswordShown:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
@@ -93,7 +93,7 @@
 
     if-eqz p1, :cond_39
 
-    .line 532
+    .line 533
     iget-object p1, p0, Lorg/telegram/ui/PasscodeActivity$5;->this$0:Lorg/telegram/ui/PasscodeActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/PasscodeActivity;->access$800(Lorg/telegram/ui/PasscodeActivity;)Landroid/widget/ImageView;
@@ -102,7 +102,7 @@
 
     invoke-virtual {p1}, Landroid/widget/ImageView;->callOnClick()Z
 
-    .line 534
+    .line 535
     :cond_39
     iget-object p1, p0, Lorg/telegram/ui/PasscodeActivity$5;->this$0:Lorg/telegram/ui/PasscodeActivity;
 
@@ -116,7 +116,7 @@
 
     goto :goto_5f
 
-    .line 535
+    .line 536
     :cond_44
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -136,7 +136,7 @@
 
     if-eqz p1, :cond_5f
 
-    .line 536
+    .line 537
     iget-object p1, p0, Lorg/telegram/ui/PasscodeActivity$5;->this$0:Lorg/telegram/ui/PasscodeActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/PasscodeActivity;->access$800(Lorg/telegram/ui/PasscodeActivity;)Landroid/widget/ImageView;

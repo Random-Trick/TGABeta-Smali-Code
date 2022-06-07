@@ -214,7 +214,7 @@
 
     const-string v0, "ColorPickerMainColor"
 
-    const v1, 0x7f0e0486
+    const v1, 0x7f0e04d3
 
     .line 195
     invoke-static {v0, v1}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;

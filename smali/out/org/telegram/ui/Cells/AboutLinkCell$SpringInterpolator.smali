@@ -28,20 +28,20 @@
 .method public constructor <init>(Lorg/telegram/ui/Cells/AboutLinkCell;FF)V
     .registers 4
 
-    .line 472
+    .line 480
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 p1, 0x0
 
-    .line 478
+    .line 486
     iput p1, p0, Lorg/telegram/ui/Cells/AboutLinkCell$SpringInterpolator;->position:F
 
     iput p1, p0, Lorg/telegram/ui/Cells/AboutLinkCell$SpringInterpolator;->velocity:F
 
-    .line 473
+    .line 481
     iput p2, p0, Lorg/telegram/ui/Cells/AboutLinkCell$SpringInterpolator;->tension:F
 
-    .line 474
+    .line 482
     iput p3, p0, Lorg/telegram/ui/Cells/AboutLinkCell$SpringInterpolator;->friction:F
 
     return-void
@@ -50,7 +50,7 @@
 .method private step(F)V
     .registers 7
 
-    .line 491
+    .line 499
     iget v0, p0, Lorg/telegram/ui/Cells/AboutLinkCell$SpringInterpolator;->tension:F
 
     neg-float v0, v0
@@ -87,14 +87,14 @@
 
     add-float/2addr v4, v0
 
-    .line 496
+    .line 504
     iput v4, p0, Lorg/telegram/ui/Cells/AboutLinkCell$SpringInterpolator;->velocity:F
 
     mul-float v4, v4, p1
 
     add-float/2addr v1, v4
 
-    .line 497
+    .line 505
     iput v1, p0, Lorg/telegram/ui/Cells/AboutLinkCell$SpringInterpolator;->position:F
 
     return-void
@@ -107,7 +107,7 @@
 
     const/high16 v0, 0x437a0000    # 250.0f
 
-    .line 480
+    .line 488
     invoke-static {p1, v0}, Ljava/lang/Math;->min(FF)F
 
     move-result p1
@@ -121,19 +121,19 @@
 
     const/high16 v0, 0x41900000    # 18.0f
 
-    .line 483
+    .line 491
     invoke-static {p1, v0}, Ljava/lang/Math;->min(FF)F
 
     move-result v0
 
-    .line 484
+    .line 492
     invoke-direct {p0, v0}, Lorg/telegram/ui/Cells/AboutLinkCell$SpringInterpolator;->step(F)V
 
     sub-float/2addr p1, v0
 
     goto :goto_6
 
-    .line 487
+    .line 495
     :cond_16
     iget p1, p0, Lorg/telegram/ui/Cells/AboutLinkCell$SpringInterpolator;->position:F
 

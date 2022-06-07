@@ -27,7 +27,7 @@
 
     iget-object v0, p0, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$$ExternalSyntheticLambda6;->f$0:Lorg/telegram/ui/Adapters/DialogsSearchAdapter;
 
-    invoke-static {v0}, Lorg/telegram/ui/Adapters/DialogsSearchAdapter;->$r8$lambda$Lj-Ol5T9Qiaq37sGEeHl8I_1B-M(Lorg/telegram/ui/Adapters/DialogsSearchAdapter;)V
+    invoke-static {v0}, Lorg/telegram/ui/Adapters/DialogsSearchAdapter;->$r8$lambda$FBXlnmG6MQaS5g0vJTnvSVcz5Pg(Lorg/telegram/ui/Adapters/DialogsSearchAdapter;)V
 
     return-void
 .end method

@@ -1,556 +1,409 @@
-.class final Lj$/util/stream/B3;
-.super Lj$/util/stream/d;
-
-
-# instance fields
-.field private final j:Lj$/util/stream/c;
-
-.field private final k:Lj$/util/function/m;
-
-.field private final l:J
-
-.field private final m:J
-
-.field private n:J
-
-.field private volatile o:Z
+.class abstract Lj$/util/stream/B3;
+.super Ljava/lang/Object;
 
 
 # direct methods
-.method constructor <init>(Lj$/util/stream/B3;Lj$/util/y;)V
-    .registers 5
+.method static synthetic a(JJ)J
+    .registers 4
 
-    invoke-direct {p0, p1, p2}, Lj$/util/stream/d;-><init>(Lj$/util/stream/d;Lj$/util/y;)V
+    invoke-static {p0, p1, p2, p3}, Lj$/util/stream/B3;->d(JJ)J
 
-    iget-object p2, p1, Lj$/util/stream/B3;->j:Lj$/util/stream/c;
+    move-result-wide p0
 
-    iput-object p2, p0, Lj$/util/stream/B3;->j:Lj$/util/stream/c;
-
-    iget-object p2, p1, Lj$/util/stream/B3;->k:Lj$/util/function/m;
-
-    iput-object p2, p0, Lj$/util/stream/B3;->k:Lj$/util/function/m;
-
-    iget-wide v0, p1, Lj$/util/stream/B3;->l:J
-
-    iput-wide v0, p0, Lj$/util/stream/B3;->l:J
-
-    iget-wide p1, p1, Lj$/util/stream/B3;->m:J
-
-    iput-wide p1, p0, Lj$/util/stream/B3;->m:J
-
-    return-void
+    return-wide p0
 .end method
 
-.method constructor <init>(Lj$/util/stream/c;Lj$/util/stream/z2;Lj$/util/y;Lj$/util/function/m;JJ)V
-    .registers 9
-
-    invoke-direct {p0, p2, p3}, Lj$/util/stream/d;-><init>(Lj$/util/stream/z2;Lj$/util/y;)V
-
-    iput-object p1, p0, Lj$/util/stream/B3;->j:Lj$/util/stream/c;
-
-    iput-object p4, p0, Lj$/util/stream/B3;->k:Lj$/util/function/m;
-
-    iput-wide p5, p0, Lj$/util/stream/B3;->l:J
-
-    iput-wide p7, p0, Lj$/util/stream/B3;->m:J
-
-    return-void
-.end method
-
-.method private m(J)J
-    .registers 7
-
-    iget-boolean v0, p0, Lj$/util/stream/B3;->o:Z
-
-    if-eqz v0, :cond_7
-
-    iget-wide p1, p0, Lj$/util/stream/B3;->n:J
-
-    return-wide p1
-
-    :cond_7
-    iget-object v0, p0, Lj$/util/stream/f;->d:Lj$/util/stream/f;
-
-    check-cast v0, Lj$/util/stream/B3;
-
-    iget-object v1, p0, Lj$/util/stream/f;->e:Lj$/util/stream/f;
-
-    check-cast v1, Lj$/util/stream/B3;
-
-    if-eqz v0, :cond_23
-
-    if-nez v1, :cond_14
-
-    goto :goto_23
-
-    :cond_14
-    invoke-direct {v0, p1, p2}, Lj$/util/stream/B3;->m(J)J
-
-    move-result-wide v2
-
-    cmp-long v0, v2, p1
-
-    if-ltz v0, :cond_1d
-
-    goto :goto_22
-
-    :cond_1d
-    invoke-direct {v1, p1, p2}, Lj$/util/stream/B3;->m(J)J
-
-    move-result-wide p1
-
-    add-long/2addr v2, p1
-
-    :goto_22
-    return-wide v2
-
-    :cond_23
-    :goto_23
-    iget-wide p1, p0, Lj$/util/stream/B3;->n:J
-
-    return-wide p1
-.end method
-
-
-# virtual methods
-.method protected a()Ljava/lang/Object;
-    .registers 5
+.method static b(Lj$/util/stream/e4;Lj$/util/u;JJ)Lj$/util/u;
+    .registers 12
 
     .line 1
-    invoke-virtual {p0}, Lj$/util/stream/f;->e()Z
+    invoke-static {p2, p3, p4, p5}, Lj$/util/stream/B3;->d(JJ)J
 
-    move-result v0
+    move-result-wide v4
+
+    sget-object p4, Lj$/util/stream/z3;->a:[I
+
+    invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
+
+    move-result p5
+
+    aget p4, p4, p5
+
+    const/4 p5, 0x1
+
+    if-eq p4, p5, :cond_50
+
+    const/4 p5, 0x2
+
+    if-eq p4, p5, :cond_45
+
+    const/4 p5, 0x3
+
+    if-eq p4, p5, :cond_3a
+
+    const/4 p5, 0x4
+
+    if-ne p4, p5, :cond_23
+
+    new-instance p0, Lj$/util/stream/u4;
+
+    move-object v1, p1
+
+    check-cast v1, Lj$/util/t;
+
+    move-object v0, p0
+
+    move-wide v2, p2
+
+    invoke-direct/range {v0 .. v5}, Lj$/util/stream/u4;-><init>(Lj$/util/t;JJ)V
+
+    goto :goto_58
+
+    :cond_23
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    new-instance p2, Ljava/lang/StringBuilder;
+
+    invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string p3, "Unknown shape "
+
+    invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {p1, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_3a
+    new-instance p0, Lj$/util/stream/y4;
+
+    move-object v1, p1
+
+    check-cast v1, Lj$/util/v;
+
+    move-object v0, p0
+
+    move-wide v2, p2
+
+    invoke-direct/range {v0 .. v5}, Lj$/util/stream/y4;-><init>(Lj$/util/v;JJ)V
+
+    goto :goto_58
+
+    :cond_45
+    new-instance p0, Lj$/util/stream/w4;
+
+    move-object v1, p1
+
+    check-cast v1, Lj$/util/u$a;
+
+    move-object v0, p0
+
+    move-wide v2, p2
+
+    invoke-direct/range {v0 .. v5}, Lj$/util/stream/w4;-><init>(Lj$/util/u$a;JJ)V
+
+    goto :goto_58
+
+    :cond_50
+    new-instance p0, Lj$/util/stream/C4;
+
+    move-object v0, p0
+
+    move-object v1, p1
+
+    move-wide v2, p2
+
+    invoke-direct/range {v0 .. v5}, Lj$/util/stream/C4;-><init>(Lj$/util/u;JJ)V
+
+    :goto_58
+    return-object p0
+.end method
+
+.method static c(JJJ)J
+    .registers 11
+
+    const-wide/16 v0, -0x1
+
+    const-wide/16 v2, 0x0
+
+    cmp-long v4, p0, v2
+
+    if-ltz v4, :cond_11
+
+    sub-long/2addr p0, p2
+
+    .line 1
+    invoke-static {p0, p1, p4, p5}, Ljava/lang/Math;->min(JJ)J
+
+    move-result-wide p0
+
+    invoke-static {v0, v1, p0, p1}, Ljava/lang/Math;->max(JJ)J
+
+    move-result-wide v0
+
+    :cond_11
+    return-wide v0
+.end method
+
+.method private static d(JJ)J
+    .registers 9
+
+    const-wide v0, 0x7fffffffffffffffL
+
+    const-wide/16 v2, 0x0
+
+    cmp-long v4, p2, v2
+
+    if-ltz v4, :cond_d
+
+    add-long/2addr p0, p2
+
+    goto :goto_e
+
+    :cond_d
+    move-wide p0, v0
+
+    :goto_e
+    cmp-long p2, p0, v2
+
+    if-ltz p2, :cond_13
+
+    move-wide v0, p0
+
+    :cond_13
+    return-wide v0
+.end method
+
+.method private static e(J)I
+    .registers 6
+
+    sget v0, Lj$/util/stream/d4;->t:I
 
     const-wide/16 v1, -0x1
 
-    if-eqz v0, :cond_40
+    cmp-long v3, p0, v1
 
-    sget-object v0, Lj$/util/stream/e4;->SIZED:Lj$/util/stream/e4;
+    if-eqz v3, :cond_b
 
-    iget-object v3, p0, Lj$/util/stream/B3;->j:Lj$/util/stream/c;
+    sget p0, Lj$/util/stream/d4;->u:I
 
-    iget v3, v3, Lj$/util/stream/c;->c:I
+    goto :goto_c
 
-    invoke-virtual {v0, v3}, Lj$/util/stream/e4;->e(I)Z
+    :cond_b
+    const/4 p0, 0x0
 
-    move-result v0
+    :goto_c
+    or-int/2addr p0, v0
 
-    if-eqz v0, :cond_1c
-
-    iget-object v0, p0, Lj$/util/stream/B3;->j:Lj$/util/stream/c;
-
-    iget-object v1, p0, Lj$/util/stream/f;->b:Lj$/util/y;
-
-    invoke-virtual {v0, v1}, Lj$/util/stream/c;->q0(Lj$/util/y;)J
-
-    move-result-wide v1
-
-    :cond_1c
-    iget-object v0, p0, Lj$/util/stream/B3;->j:Lj$/util/stream/c;
-
-    iget-object v3, p0, Lj$/util/stream/B3;->k:Lj$/util/function/m;
-
-    invoke-virtual {v0, v1, v2, v3}, Lj$/util/stream/z2;->t0(JLj$/util/function/m;)Lj$/util/stream/t1;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lj$/util/stream/B3;->j:Lj$/util/stream/c;
-
-    iget-object v2, p0, Lj$/util/stream/f;->a:Lj$/util/stream/z2;
-
-    invoke-virtual {v2}, Lj$/util/stream/z2;->s0()I
-
-    move-result v2
-
-    invoke-virtual {v1, v2, v0}, Lj$/util/stream/c;->H0(ILj$/util/stream/n3;)Lj$/util/stream/n3;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lj$/util/stream/f;->a:Lj$/util/stream/z2;
-
-    invoke-virtual {v2, v1}, Lj$/util/stream/z2;->v0(Lj$/util/stream/n3;)Lj$/util/stream/n3;
-
-    move-result-object v1
-
-    iget-object v3, p0, Lj$/util/stream/f;->b:Lj$/util/y;
-
-    invoke-virtual {v2, v1, v3}, Lj$/util/stream/z2;->o0(Lj$/util/stream/n3;Lj$/util/y;)V
-
-    invoke-interface {v0}, Lj$/util/stream/t1;->a()Lj$/util/stream/B1;
-
-    move-result-object v0
-
-    goto :goto_5d
-
-    :cond_40
-    iget-object v0, p0, Lj$/util/stream/f;->a:Lj$/util/stream/z2;
-
-    iget-object v3, p0, Lj$/util/stream/B3;->k:Lj$/util/function/m;
-
-    invoke-virtual {v0, v1, v2, v3}, Lj$/util/stream/z2;->t0(JLj$/util/function/m;)Lj$/util/stream/t1;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lj$/util/stream/f;->b:Lj$/util/y;
-
-    invoke-virtual {v0, v1, v2}, Lj$/util/stream/z2;->u0(Lj$/util/stream/n3;Lj$/util/y;)Lj$/util/stream/n3;
-
-    invoke-interface {v1}, Lj$/util/stream/t1;->a()Lj$/util/stream/B1;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Lj$/util/stream/B1;->count()J
-
-    move-result-wide v1
-
-    iput-wide v1, p0, Lj$/util/stream/B3;->n:J
-
-    const/4 v1, 0x1
-
-    iput-boolean v1, p0, Lj$/util/stream/B3;->o:Z
-
-    const/4 v1, 0x0
-
-    iput-object v1, p0, Lj$/util/stream/f;->b:Lj$/util/y;
-
-    :goto_5d
-    return-object v0
+    return p0
 .end method
 
-.method protected f(Lj$/util/y;)Lj$/util/stream/f;
-    .registers 3
+.method public static f(Lj$/util/stream/c;JJ)Lj$/util/stream/U;
+    .registers 16
 
-    .line 1
-    new-instance v0, Lj$/util/stream/B3;
+    const-wide/16 v0, 0x0
 
-    invoke-direct {v0, p0, p1}, Lj$/util/stream/B3;-><init>(Lj$/util/stream/B3;Lj$/util/y;)V
+    cmp-long v2, p1, v0
+
+    if-ltz v2, :cond_16
+
+    new-instance v0, Lj$/util/stream/y3;
+
+    sget-object v5, Lj$/util/stream/e4;->DOUBLE_VALUE:Lj$/util/stream/e4;
+
+    invoke-static {p3, p4}, Lj$/util/stream/B3;->e(J)I
+
+    move-result v6
+
+    move-object v3, v0
+
+    move-object v4, p0
+
+    move-wide v7, p1
+
+    move-wide v9, p3
+
+    invoke-direct/range {v3 .. v10}, Lj$/util/stream/y3;-><init>(Lj$/util/stream/c;Lj$/util/stream/e4;IJJ)V
 
     return-object v0
+
+    :cond_16
+    new-instance p0, Ljava/lang/IllegalArgumentException;
+
+    new-instance p3, Ljava/lang/StringBuilder;
+
+    invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string p4, "Skip must be non-negative: "
+
+    invoke-virtual {p3, p4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p3, p1, p2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p0
 .end method
 
-.method protected i()V
-    .registers 2
+.method public static g(Lj$/util/stream/c;JJ)Lj$/util/stream/IntStream;
+    .registers 16
 
-    const/4 v0, 0x1
+    const-wide/16 v0, 0x0
 
-    .line 1
-    iput-boolean v0, p0, Lj$/util/stream/d;->i:Z
+    cmp-long v2, p1, v0
 
-    .line 2
-    iget-boolean v0, p0, Lj$/util/stream/B3;->o:Z
+    if-ltz v2, :cond_16
 
-    if-eqz v0, :cond_e
+    new-instance v0, Lj$/util/stream/s3;
 
-    invoke-virtual {p0}, Lj$/util/stream/B3;->n()Lj$/util/stream/B1;
+    sget-object v5, Lj$/util/stream/e4;->INT_VALUE:Lj$/util/stream/e4;
 
-    move-result-object v0
+    invoke-static {p3, p4}, Lj$/util/stream/B3;->e(J)I
 
-    invoke-virtual {p0, v0}, Lj$/util/stream/d;->g(Ljava/lang/Object;)V
+    move-result v6
 
-    :cond_e
-    return-void
-.end method
+    move-object v3, v0
 
-.method protected bridge synthetic k()Ljava/lang/Object;
-    .registers 2
+    move-object v4, p0
 
-    invoke-virtual {p0}, Lj$/util/stream/B3;->n()Lj$/util/stream/B1;
+    move-wide v7, p1
 
-    move-result-object v0
+    move-wide v9, p3
+
+    invoke-direct/range {v3 .. v10}, Lj$/util/stream/s3;-><init>(Lj$/util/stream/c;Lj$/util/stream/e4;IJJ)V
 
     return-object v0
+
+    :cond_16
+    new-instance p0, Ljava/lang/IllegalArgumentException;
+
+    new-instance p3, Ljava/lang/StringBuilder;
+
+    invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string p4, "Skip must be non-negative: "
+
+    invoke-virtual {p3, p4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p3, p1, p2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p0
 .end method
 
-.method protected final n()Lj$/util/stream/B1;
-    .registers 2
+.method public static h(Lj$/util/stream/c;JJ)Lj$/util/stream/e1;
+    .registers 16
 
-    iget-object v0, p0, Lj$/util/stream/B3;->j:Lj$/util/stream/c;
+    const-wide/16 v0, 0x0
 
-    invoke-virtual {v0}, Lj$/util/stream/c;->B0()Lj$/util/stream/f4;
+    cmp-long v2, p1, v0
 
-    move-result-object v0
+    if-ltz v2, :cond_16
 
-    invoke-static {v0}, Lj$/util/stream/y2;->k(Lj$/util/stream/f4;)Lj$/util/stream/B1;
+    new-instance v0, Lj$/util/stream/v3;
 
-    move-result-object v0
+    sget-object v5, Lj$/util/stream/e4;->LONG_VALUE:Lj$/util/stream/e4;
+
+    invoke-static {p3, p4}, Lj$/util/stream/B3;->e(J)I
+
+    move-result v6
+
+    move-object v3, v0
+
+    move-object v4, p0
+
+    move-wide v7, p1
+
+    move-wide v9, p3
+
+    invoke-direct/range {v3 .. v10}, Lj$/util/stream/v3;-><init>(Lj$/util/stream/c;Lj$/util/stream/e4;IJJ)V
 
     return-object v0
+
+    :cond_16
+    new-instance p0, Ljava/lang/IllegalArgumentException;
+
+    new-instance p3, Ljava/lang/StringBuilder;
+
+    invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string p4, "Skip must be non-negative: "
+
+    invoke-virtual {p3, p4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p3, p1, p2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p0
 .end method
 
-.method public final onCompletion(Ljava/util/concurrent/CountedCompleter;)V
-    .registers 13
+.method public static i(Lj$/util/stream/c;JJ)Lj$/util/stream/Stream;
+    .registers 16
 
-    invoke-virtual {p0}, Lj$/util/stream/f;->d()Z
+    const-wide/16 v0, 0x0
 
-    move-result p1
+    cmp-long v2, p1, v0
 
-    const/4 v0, 0x1
+    if-ltz v2, :cond_16
 
-    const-wide/16 v1, 0x0
+    new-instance v0, Lj$/util/stream/p3;
 
-    if-nez p1, :cond_89
+    sget-object v5, Lj$/util/stream/e4;->REFERENCE:Lj$/util/stream/e4;
 
-    iget-object p1, p0, Lj$/util/stream/f;->d:Lj$/util/stream/f;
+    invoke-static {p3, p4}, Lj$/util/stream/B3;->e(J)I
 
-    check-cast p1, Lj$/util/stream/B3;
+    move-result v6
 
-    iget-wide v3, p1, Lj$/util/stream/B3;->n:J
+    move-object v3, v0
 
-    iget-object p1, p0, Lj$/util/stream/f;->e:Lj$/util/stream/f;
+    move-object v4, p0
 
-    check-cast p1, Lj$/util/stream/B3;
+    move-wide v7, p1
 
-    iget-wide v5, p1, Lj$/util/stream/B3;->n:J
+    move-wide v9, p3
 
-    add-long/2addr v3, v5
+    invoke-direct/range {v3 .. v10}, Lj$/util/stream/p3;-><init>(Lj$/util/stream/c;Lj$/util/stream/e4;IJJ)V
 
-    iput-wide v3, p0, Lj$/util/stream/B3;->n:J
+    return-object v0
 
-    iget-boolean p1, p0, Lj$/util/stream/d;->i:Z
+    :cond_16
+    new-instance p0, Ljava/lang/IllegalArgumentException;
 
-    if-eqz p1, :cond_24
+    new-instance p3, Ljava/lang/StringBuilder;
 
-    iput-wide v1, p0, Lj$/util/stream/B3;->n:J
+    invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
 
-    :goto_1e
-    invoke-virtual {p0}, Lj$/util/stream/B3;->n()Lj$/util/stream/B1;
+    const-string p4, "Skip must be non-negative: "
 
-    move-result-object p1
+    invoke-virtual {p3, p4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :goto_22
-    move-object v3, p1
+    invoke-virtual {p3, p1, p2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    goto :goto_5f
-
-    :cond_24
-    iget-wide v3, p0, Lj$/util/stream/B3;->n:J
-
-    cmp-long p1, v3, v1
-
-    if-nez p1, :cond_2b
-
-    goto :goto_1e
-
-    :cond_2b
-    iget-object p1, p0, Lj$/util/stream/f;->d:Lj$/util/stream/f;
-
-    check-cast p1, Lj$/util/stream/B3;
-
-    iget-wide v3, p1, Lj$/util/stream/B3;->n:J
-
-    cmp-long p1, v3, v1
-
-    if-nez p1, :cond_40
-
-    iget-object p1, p0, Lj$/util/stream/f;->e:Lj$/util/stream/f;
-
-    check-cast p1, Lj$/util/stream/B3;
-
-    invoke-virtual {p1}, Lj$/util/stream/d;->b()Ljava/lang/Object;
+    invoke-virtual {p3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
-    check-cast p1, Lj$/util/stream/B1;
+    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    goto :goto_22
-
-    :cond_40
-    iget-object p1, p0, Lj$/util/stream/B3;->j:Lj$/util/stream/c;
-
-    invoke-virtual {p1}, Lj$/util/stream/c;->B0()Lj$/util/stream/f4;
-
-    move-result-object p1
-
-    iget-object v3, p0, Lj$/util/stream/f;->d:Lj$/util/stream/f;
-
-    check-cast v3, Lj$/util/stream/B3;
-
-    invoke-virtual {v3}, Lj$/util/stream/d;->b()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lj$/util/stream/B1;
-
-    iget-object v4, p0, Lj$/util/stream/f;->e:Lj$/util/stream/f;
-
-    check-cast v4, Lj$/util/stream/B3;
-
-    invoke-virtual {v4}, Lj$/util/stream/d;->b()Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Lj$/util/stream/B1;
-
-    invoke-static {p1, v3, v4}, Lj$/util/stream/y2;->i(Lj$/util/stream/f4;Lj$/util/stream/B1;Lj$/util/stream/B1;)Lj$/util/stream/B1;
-
-    move-result-object p1
-
-    goto :goto_22
-
-    :goto_5f
-    invoke-virtual {p0}, Lj$/util/stream/f;->e()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_84
-
-    .line 1
-    iget-wide v4, p0, Lj$/util/stream/B3;->m:J
-
-    cmp-long p1, v4, v1
-
-    if-ltz p1, :cond_79
-
-    invoke-interface {v3}, Lj$/util/stream/B1;->count()J
-
-    move-result-wide v4
-
-    iget-wide v6, p0, Lj$/util/stream/B3;->l:J
-
-    iget-wide v8, p0, Lj$/util/stream/B3;->m:J
-
-    add-long/2addr v6, v8
-
-    invoke-static {v4, v5, v6, v7}, Ljava/lang/Math;->min(JJ)J
-
-    move-result-wide v4
-
-    goto :goto_7b
-
-    :cond_79
-    iget-wide v4, p0, Lj$/util/stream/B3;->n:J
-
-    :goto_7b
-    move-wide v6, v4
-
-    iget-wide v4, p0, Lj$/util/stream/B3;->l:J
-
-    iget-object v8, p0, Lj$/util/stream/B3;->k:Lj$/util/function/m;
-
-    invoke-interface/range {v3 .. v8}, Lj$/util/stream/B1;->r(JJLj$/util/function/m;)Lj$/util/stream/B1;
-
-    move-result-object v3
-
-    .line 2
-    :cond_84
-    invoke-virtual {p0, v3}, Lj$/util/stream/d;->g(Ljava/lang/Object;)V
-
-    iput-boolean v0, p0, Lj$/util/stream/B3;->o:Z
-
-    :cond_89
-    iget-wide v3, p0, Lj$/util/stream/B3;->m:J
-
-    cmp-long p1, v3, v1
-
-    if-ltz p1, :cond_dc
-
-    invoke-virtual {p0}, Lj$/util/stream/f;->e()Z
-
-    move-result p1
-
-    if-nez p1, :cond_dc
-
-    iget-wide v1, p0, Lj$/util/stream/B3;->l:J
-
-    iget-wide v3, p0, Lj$/util/stream/B3;->m:J
-
-    add-long/2addr v1, v3
-
-    .line 3
-    iget-boolean p1, p0, Lj$/util/stream/B3;->o:Z
-
-    if-eqz p1, :cond_a1
-
-    iget-wide v3, p0, Lj$/util/stream/B3;->n:J
-
-    goto :goto_a5
-
-    :cond_a1
-    invoke-direct {p0, v1, v2}, Lj$/util/stream/B3;->m(J)J
-
-    move-result-wide v3
-
-    :goto_a5
-    cmp-long p1, v3, v1
-
-    if-ltz p1, :cond_aa
-
-    goto :goto_d7
-
-    :cond_aa
-    invoke-virtual {p0}, Lj$/util/stream/f;->c()Lj$/util/stream/f;
-
-    move-result-object p1
-
-    check-cast p1, Lj$/util/stream/B3;
-
-    move-object v5, p0
-
-    :goto_b1
-    if-eqz p1, :cond_d1
-
-    iget-object v6, p1, Lj$/util/stream/f;->e:Lj$/util/stream/f;
-
-    if-ne v5, v6, :cond_c7
-
-    iget-object v5, p1, Lj$/util/stream/f;->d:Lj$/util/stream/f;
-
-    check-cast v5, Lj$/util/stream/B3;
-
-    if-eqz v5, :cond_c7
-
-    invoke-direct {v5, v1, v2}, Lj$/util/stream/B3;->m(J)J
-
-    move-result-wide v5
-
-    add-long/2addr v3, v5
-
-    cmp-long v5, v3, v1
-
-    if-ltz v5, :cond_c7
-
-    goto :goto_d7
-
-    :cond_c7
-    invoke-virtual {p1}, Lj$/util/stream/f;->c()Lj$/util/stream/f;
-
-    move-result-object v5
-
-    check-cast v5, Lj$/util/stream/B3;
-
-    move-object v10, v5
-
-    move-object v5, p1
-
-    move-object p1, v10
-
-    goto :goto_b1
-
-    :cond_d1
-    cmp-long p1, v3, v1
-
-    if-ltz p1, :cond_d6
-
-    goto :goto_d7
-
-    :cond_d6
-    const/4 v0, 0x0
-
-    :goto_d7
-    if-eqz v0, :cond_dc
-
-    .line 4
-    invoke-virtual {p0}, Lj$/util/stream/d;->j()V
-
-    :cond_dc
-    const/4 p1, 0x0
-
-    .line 5
-    iput-object p1, p0, Lj$/util/stream/f;->b:Lj$/util/y;
-
-    iput-object p1, p0, Lj$/util/stream/f;->e:Lj$/util/stream/f;
-
-    iput-object p1, p0, Lj$/util/stream/f;->d:Lj$/util/stream/f;
-
-    return-void
+    throw p0
 .end method

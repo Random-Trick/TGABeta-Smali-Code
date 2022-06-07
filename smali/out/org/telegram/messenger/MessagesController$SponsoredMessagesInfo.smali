@@ -36,7 +36,7 @@
 .method private constructor <init>(Lorg/telegram/messenger/MessagesController;)V
     .registers 2
 
-    .line 384
+    .line 531
     iput-object p1, p0, Lorg/telegram/messenger/MessagesController$SponsoredMessagesInfo;->this$0:Lorg/telegram/messenger/MessagesController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -47,7 +47,7 @@
 .method synthetic constructor <init>(Lorg/telegram/messenger/MessagesController;Lorg/telegram/messenger/MessagesController$1;)V
     .registers 3
 
-    .line 384
+    .line 531
     invoke-direct {p0, p1}, Lorg/telegram/messenger/MessagesController$SponsoredMessagesInfo;-><init>(Lorg/telegram/messenger/MessagesController;)V
 
     return-void
@@ -56,7 +56,7 @@
 .method static synthetic access$300(Lorg/telegram/messenger/MessagesController$SponsoredMessagesInfo;)Z
     .registers 1
 
-    .line 384
+    .line 531
     iget-boolean p0, p0, Lorg/telegram/messenger/MessagesController$SponsoredMessagesInfo;->loading:Z
 
     return p0
@@ -65,7 +65,7 @@
 .method static synthetic access$302(Lorg/telegram/messenger/MessagesController$SponsoredMessagesInfo;Z)Z
     .registers 2
 
-    .line 384
+    .line 531
     iput-boolean p1, p0, Lorg/telegram/messenger/MessagesController$SponsoredMessagesInfo;->loading:Z
 
     return p1
@@ -74,7 +74,7 @@
 .method static synthetic access$400(Lorg/telegram/messenger/MessagesController$SponsoredMessagesInfo;)J
     .registers 3
 
-    .line 384
+    .line 531
     iget-wide v0, p0, Lorg/telegram/messenger/MessagesController$SponsoredMessagesInfo;->loadTime:J
 
     return-wide v0
@@ -83,7 +83,7 @@
 .method static synthetic access$402(Lorg/telegram/messenger/MessagesController$SponsoredMessagesInfo;J)J
     .registers 3
 
-    .line 384
+    .line 531
     iput-wide p1, p0, Lorg/telegram/messenger/MessagesController$SponsoredMessagesInfo;->loadTime:J
 
     return-wide p1
@@ -92,7 +92,7 @@
 .method static synthetic access$500(Lorg/telegram/messenger/MessagesController$SponsoredMessagesInfo;)Ljava/util/ArrayList;
     .registers 1
 
-    .line 384
+    .line 531
     iget-object p0, p0, Lorg/telegram/messenger/MessagesController$SponsoredMessagesInfo;->messages:Ljava/util/ArrayList;
 
     return-object p0
@@ -101,7 +101,7 @@
 .method static synthetic access$502(Lorg/telegram/messenger/MessagesController$SponsoredMessagesInfo;Ljava/util/ArrayList;)Ljava/util/ArrayList;
     .registers 2
 
-    .line 384
+    .line 531
     iput-object p1, p0, Lorg/telegram/messenger/MessagesController$SponsoredMessagesInfo;->messages:Ljava/util/ArrayList;
 
     return-object p1

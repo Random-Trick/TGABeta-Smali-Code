@@ -86,10 +86,10 @@
         }
     .end annotation
 
-    .line 959
+    .line 960
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 912
+    .line 913
     sget v0, Lorg/telegram/messenger/UserConfig;->selectedAccount:I
 
     iput v0, p0, Lorg/telegram/ui/ActionBar/Theme$PatternsLoader;->account:I
@@ -98,7 +98,7 @@
 
     return-void
 
-    .line 963
+    .line 964
     :cond_a
     sget-object v0, Lorg/telegram/messenger/Utilities;->globalQueue:Lorg/telegram/messenger/DispatchQueue;
 
@@ -122,7 +122,7 @@
         }
     .end annotation
 
-    .line 1044
+    .line 1045
     new-instance v0, Lorg/telegram/ui/ActionBar/Theme$PatternsLoader$$ExternalSyntheticLambda1;
 
     invoke-direct {v0, p0, p1, p2}, Lorg/telegram/ui/ActionBar/Theme$PatternsLoader$$ExternalSyntheticLambda1;-><init>(Lorg/telegram/ui/ActionBar/Theme$PatternsLoader;Ljava/util/ArrayList;Z)V
@@ -145,7 +145,7 @@
 
     if-eqz p1, :cond_28
 
-    .line 1048
+    .line 1049
     invoke-static {}, Lorg/telegram/ui/ActionBar/Theme;->access$300()Lorg/telegram/ui/ActionBar/Theme$ThemeInfo;
 
     move-result-object v0
@@ -166,7 +166,7 @@
 
     if-nez v0, :cond_28
 
-    .line 1049
+    .line 1050
     invoke-static {}, Lorg/telegram/ui/ActionBar/Theme;->access$300()Lorg/telegram/ui/ActionBar/Theme$ThemeInfo;
 
     move-result-object v0
@@ -183,18 +183,18 @@
 
     if-eqz p1, :cond_28
 
-    .line 1050
+    .line 1051
     invoke-static {}, Lorg/telegram/ui/ActionBar/Theme;->reloadWallpaper()V
 
     :cond_28
     if-eqz p2, :cond_77
 
-    .line 1054
+    .line 1055
     iget-object p1, p0, Lorg/telegram/ui/ActionBar/Theme$PatternsLoader;->watingForLoad:Ljava/util/HashMap;
 
     if-eqz p1, :cond_97
 
-    .line 1055
+    .line 1056
     iget p1, p0, Lorg/telegram/ui/ActionBar/Theme$PatternsLoader;->account:I
 
     invoke-static {p1}, Lorg/telegram/messenger/NotificationCenter;->getInstance(I)Lorg/telegram/messenger/NotificationCenter;
@@ -205,7 +205,7 @@
 
     invoke-virtual {p1, p0, p2}, Lorg/telegram/messenger/NotificationCenter;->addObserver(Lorg/telegram/messenger/NotificationCenter$NotificationCenterDelegate;I)V
 
-    .line 1056
+    .line 1057
     iget p1, p0, Lorg/telegram/ui/ActionBar/Theme$PatternsLoader;->account:I
 
     invoke-static {p1}, Lorg/telegram/messenger/NotificationCenter;->getInstance(I)Lorg/telegram/messenger/NotificationCenter;
@@ -216,7 +216,7 @@
 
     invoke-virtual {p1, p0, p2}, Lorg/telegram/messenger/NotificationCenter;->addObserver(Lorg/telegram/messenger/NotificationCenter$NotificationCenterDelegate;I)V
 
-    .line 1057
+    .line 1058
     iget-object p1, p0, Lorg/telegram/ui/ActionBar/Theme$PatternsLoader;->watingForLoad:Ljava/util/HashMap;
 
     invoke-virtual {p1}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
@@ -240,14 +240,14 @@
 
     check-cast p2, Ljava/util/Map$Entry;
 
-    .line 1058
+    .line 1059
     invoke-interface {p2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object p2
 
     check-cast p2, Lorg/telegram/ui/ActionBar/Theme$PatternsLoader$LoadingPattern;
 
-    .line 1059
+    .line 1060
     iget v0, p0, Lorg/telegram/ui/ActionBar/Theme$PatternsLoader;->account:I
 
     invoke-static {v0}, Lorg/telegram/messenger/FileLoader;->getInstance(I)Lorg/telegram/messenger/FileLoader;
@@ -274,7 +274,7 @@
 
     goto :goto_4e
 
-    .line 1063
+    .line 1064
     :cond_77
     iget-object p1, p0, Lorg/telegram/ui/ActionBar/Theme$PatternsLoader;->watingForLoad:Ljava/util/HashMap;
 
@@ -286,7 +286,7 @@
 
     if-eqz p1, :cond_97
 
-    .line 1064
+    .line 1065
     :cond_81
     iget p1, p0, Lorg/telegram/ui/ActionBar/Theme$PatternsLoader;->account:I
 
@@ -298,7 +298,7 @@
 
     invoke-virtual {p1, p0, p2}, Lorg/telegram/messenger/NotificationCenter;->removeObserver(Lorg/telegram/messenger/NotificationCenter$NotificationCenterDelegate;I)V
 
-    .line 1065
+    .line 1066
     iget p1, p0, Lorg/telegram/ui/ActionBar/Theme$PatternsLoader;->account:I
 
     invoke-static {p1}, Lorg/telegram/messenger/NotificationCenter;->getInstance(I)Lorg/telegram/messenger/NotificationCenter;
@@ -316,7 +316,7 @@
 .method public static createLoader(Z)V
     .registers 9
 
-    .line 917
+    .line 918
     sget-object v0, Lorg/telegram/ui/ActionBar/Theme$PatternsLoader;->loader:Lorg/telegram/ui/ActionBar/Theme$PatternsLoader;
 
     if-eqz v0, :cond_7
@@ -373,7 +373,7 @@
     :cond_24
     const-string v2, "Blue"
 
-    .line 941
+    .line 942
     :goto_26
     invoke-static {}, Lorg/telegram/ui/ActionBar/Theme;->access$200()Ljava/util/HashMap;
 
@@ -387,7 +387,7 @@
 
     if-eqz v2, :cond_6a
 
-    .line 942
+    .line 943
     iget-object v3, v2, Lorg/telegram/ui/ActionBar/Theme$ThemeInfo;->themeAccents:Ljava/util/ArrayList;
 
     if-eqz v3, :cond_6a
@@ -400,7 +400,7 @@
 
     goto :goto_6a
 
-    .line 945
+    .line 946
     :cond_3d
     iget-object v3, v2, Lorg/telegram/ui/ActionBar/Theme$ThemeInfo;->themeAccents:Ljava/util/ArrayList;
 
@@ -413,7 +413,7 @@
     :goto_44
     if-ge v4, v3, :cond_6a
 
-    .line 946
+    .line 947
     iget-object v5, v2, Lorg/telegram/ui/ActionBar/Theme$ThemeInfo;->themeAccents:Ljava/util/ArrayList;
 
     invoke-virtual {v5, v4}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -422,7 +422,7 @@
 
     check-cast v5, Lorg/telegram/ui/ActionBar/Theme$ThemeAccent;
 
-    .line 947
+    .line 948
     iget v6, v5, Lorg/telegram/ui/ActionBar/Theme$ThemeAccent;->id:I
 
     sget v7, Lorg/telegram/ui/ActionBar/Theme;->DEFALT_THEME_ACCENT_ID:I
@@ -442,12 +442,12 @@
     :cond_5d
     if-nez p0, :cond_64
 
-    .line 951
+    .line 952
     new-instance p0, Ljava/util/ArrayList;
 
     invoke-direct {p0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 953
+    .line 954
     :cond_64
     invoke-virtual {p0, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -463,7 +463,7 @@
 
     goto :goto_a
 
-    .line 956
+    .line 957
     :cond_6d
     new-instance v0, Lorg/telegram/ui/ActionBar/Theme$PatternsLoader;
 
@@ -481,7 +481,7 @@
 
     move-object/from16 v1, p4
 
-    .line 1072
+    .line 1073
     :try_start_4
     invoke-virtual/range {p4 .. p4}, Lorg/telegram/ui/ActionBar/Theme$ThemeAccent;->getPathToWallpaper()Ljava/io/File;
 
@@ -493,29 +493,29 @@
 
     return-object v3
 
-    .line 1076
+    .line 1077
     :cond_c
     iget-object v4, v1, Lorg/telegram/ui/ActionBar/Theme$ThemeAccent;->parentTheme:Lorg/telegram/ui/ActionBar/Theme$ThemeInfo;
 
-    .line 1077
+    .line 1078
     iget-object v5, v4, Lorg/telegram/ui/ActionBar/Theme$ThemeInfo;->assetName:Ljava/lang/String;
 
     invoke-static {v3, v5, v3}, Lorg/telegram/ui/ActionBar/Theme;->getThemeFileValues(Ljava/io/File;Ljava/lang/String;[Ljava/lang/String;)Ljava/util/HashMap;
 
     move-result-object v5
 
-    .line 1078
+    .line 1079
     invoke-static {v5, v4}, Lorg/telegram/ui/ActionBar/Theme;->access$400(Ljava/util/HashMap;Lorg/telegram/ui/ActionBar/Theme$ThemeInfo;)V
 
-    .line 1079
+    .line 1080
     iget v6, v1, Lorg/telegram/ui/ActionBar/Theme$ThemeAccent;->accentColor:I
 
-    .line 1081
+    .line 1082
     iget-wide v7, v1, Lorg/telegram/ui/ActionBar/Theme$ThemeAccent;->backgroundOverrideColor:J
 
     long-to-int v8, v7
 
-    .line 1083
+    .line 1084
     iget-wide v9, v1, Lorg/telegram/ui/ActionBar/Theme$ThemeAccent;->backgroundGradientOverrideColor1:J
 
     long-to-int v7, v9
@@ -537,7 +537,7 @@
     :cond_2b
     const-string v9, "chat_wallpaper_gradient_to"
 
-    .line 1088
+    .line 1089
     invoke-virtual {v5, v9}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v9
@@ -546,7 +546,7 @@
 
     if-eqz v9, :cond_3f
 
-    .line 1090
+    .line 1091
     invoke-virtual {v9}, Ljava/lang/Integer;->intValue()I
 
     move-result v7
@@ -560,7 +560,7 @@
     :cond_3e
     const/4 v6, 0x0
 
-    .line 1096
+    .line 1097
     :cond_3f
     :goto_3f
     iget-wide v9, v1, Lorg/telegram/ui/ActionBar/Theme$ThemeAccent;->backgroundGradientOverrideColor2:J
@@ -575,7 +575,7 @@
 
     const-string v9, "key_chat_wallpaper_gradient_to2"
 
-    .line 1098
+    .line 1099
     invoke-virtual {v5, v9}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v9
@@ -584,7 +584,7 @@
 
     if-eqz v9, :cond_5a
 
-    .line 1100
+    .line 1101
     invoke-virtual {v9}, Ljava/lang/Integer;->intValue()I
 
     move-result v9
@@ -593,7 +593,7 @@
 
     move-result v14
 
-    .line 1104
+    .line 1105
     :cond_5a
     iget-wide v9, v1, Lorg/telegram/ui/ActionBar/Theme$ThemeAccent;->backgroundGradientOverrideColor3:J
 
@@ -607,7 +607,7 @@
 
     const-string v9, "key_chat_wallpaper_gradient_to3"
 
-    .line 1106
+    .line 1107
     invoke-virtual {v5, v9}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v9
@@ -616,7 +616,7 @@
 
     if-eqz v9, :cond_75
 
-    .line 1108
+    .line 1109
     invoke-virtual {v9}, Ljava/lang/Integer;->intValue()I
 
     move-result v9
@@ -630,7 +630,7 @@
 
     const-string v9, "chat_wallpaper"
 
-    .line 1113
+    .line 1114
     invoke-virtual {v5, v9}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v5
@@ -639,7 +639,7 @@
 
     if-eqz v5, :cond_89
 
-    .line 1115
+    .line 1116
     invoke-virtual {v5}, Ljava/lang/Integer;->intValue()I
 
     move-result v5
@@ -653,7 +653,7 @@
 
     if-eqz v14, :cond_91
 
-    .line 1123
+    .line 1124
     invoke-static {v8, v7, v14, v15}, Lorg/telegram/ui/Components/MotionBackgroundDrawable;->getPatternColor(IIII)I
 
     move-result v5
@@ -663,14 +663,14 @@
     :cond_91
     if-eqz v7, :cond_b3
 
-    .line 1125
+    .line 1126
     iget v3, v1, Lorg/telegram/ui/ActionBar/Theme$ThemeAccent;->backgroundRotation:I
 
     invoke-static {v3}, Lorg/telegram/ui/Components/BackgroundGradientDrawable;->getGradientOrientation(I)Landroid/graphics/drawable/GradientDrawable$Orientation;
 
     move-result-object v3
 
-    .line 1126
+    .line 1127
     new-instance v5, Lorg/telegram/ui/Components/BackgroundGradientDrawable;
 
     new-array v6, v4, [I
@@ -683,7 +683,7 @@
 
     invoke-direct {v5, v3, v6}, Lorg/telegram/ui/Components/BackgroundGradientDrawable;-><init>(Landroid/graphics/drawable/GradientDrawable$Orientation;[I)V
 
-    .line 1127
+    .line 1128
     invoke-static {v8, v7}, Lorg/telegram/messenger/AndroidUtilities;->getAverageColor(II)I
 
     move-result v3
@@ -700,43 +700,56 @@
 
     goto :goto_bc
 
-    .line 1129
+    .line 1130
     :cond_b3
     new-instance v3, Landroid/graphics/drawable/ColorDrawable;
 
     invoke-direct {v3, v8}, Landroid/graphics/drawable/ColorDrawable;-><init>(I)V
 
-    .line 1130
+    .line 1131
     invoke-static {v8}, Lorg/telegram/messenger/AndroidUtilities;->getPatternColor(I)I
 
     move-result v5
 
     :goto_bc
-    if-nez p1, :cond_dc
-
-    if-eqz p2, :cond_d1
-
-    const/high16 v6, 0x43b40000    # 360.0f
+    if-nez p1, :cond_e4
 
     .line 1135
-    invoke-static {v6}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
+    sget-object v6, Lorg/telegram/messenger/AndroidUtilities;->displaySize:Landroid/graphics/Point;
+
+    iget v7, v6, Landroid/graphics/Point;->x:I
+
+    iget v6, v6, Landroid/graphics/Point;->y:I
+
+    invoke-static {v7, v6}, Ljava/lang/Math;->min(II)I
 
     move-result v6
 
-    const/high16 v7, 0x44200000    # 640.0f
+    .line 1136
+    sget-object v7, Lorg/telegram/messenger/AndroidUtilities;->displaySize:Landroid/graphics/Point;
 
-    invoke-static {v7}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
+    iget v8, v7, Landroid/graphics/Point;->x:I
+
+    iget v7, v7, Landroid/graphics/Point;->y:I
+
+    invoke-static {v8, v7}, Ljava/lang/Math;->max(II)I
 
     move-result v7
 
+    if-eqz p2, :cond_da
+
+    .line 1138
     invoke-static {v0, v6, v7, v13}, Lorg/telegram/messenger/SvgHelper;->getBitmap(Ljava/io/File;IIZ)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    goto :goto_da
+    :goto_d8
+    move-object v6, v0
 
-    .line 1137
-    :cond_d1
+    goto :goto_e6
+
+    .line 1140
+    :cond_da
     new-instance v6, Ljava/io/FileInputStream;
 
     invoke-direct {v6, v0}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
@@ -744,24 +757,21 @@
     invoke-static {v6, v13}, Lorg/telegram/ui/ActionBar/Theme;->access$500(Ljava/io/FileInputStream;I)Landroid/graphics/Bitmap;
 
     move-result-object v0
-    :try_end_da
-    .catchall {:try_start_4 .. :try_end_da} :catchall_13f
+    :try_end_e3
+    .catchall {:try_start_4 .. :try_end_e3} :catchall_147
 
-    :goto_da
-    move-object v6, v0
+    goto :goto_d8
 
-    goto :goto_de
-
-    :cond_dc
+    :cond_e4
     move-object/from16 v6, p1
 
-    :goto_de
+    :goto_e6
     const/16 v0, 0x57
 
-    if-eqz v3, :cond_12f
+    if-eqz v3, :cond_137
 
-    .line 1142
-    :try_start_e2
+    .line 1145
+    :try_start_ea
     invoke-virtual {v6}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v7
@@ -776,12 +786,12 @@
 
     move-result-object v7
 
-    .line 1143
+    .line 1146
     new-instance v8, Landroid/graphics/Canvas;
 
     invoke-direct {v8, v7}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
 
-    .line 1145
+    .line 1148
     invoke-virtual {v6}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v9
@@ -792,15 +802,15 @@
 
     invoke-virtual {v3, v13, v13, v9, v10}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 1146
+    .line 1149
     invoke-virtual {v3, v8}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 1149
+    .line 1152
     new-instance v3, Landroid/graphics/Paint;
 
     invoke-direct {v3, v4}, Landroid/graphics/Paint;-><init>(I)V
 
-    .line 1150
+    .line 1153
     new-instance v4, Landroid/graphics/PorterDuffColorFilter;
 
     sget-object v9, Landroid/graphics/PorterDuff$Mode;->SRC_IN:Landroid/graphics/PorterDuff$Mode;
@@ -811,7 +821,7 @@
 
     const/high16 v4, 0x437f0000    # 255.0f
 
-    .line 1151
+    .line 1154
     iget v1, v1, Lorg/telegram/ui/ActionBar/Theme$ThemeAccent;->patternIntensity:F
 
     invoke-static {v1}, Ljava/lang/Math;->abs(F)F
@@ -826,61 +836,61 @@
 
     const/4 v1, 0x0
 
-    .line 1152
+    .line 1155
     invoke-virtual {v8, v6, v1, v1, v3}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
 
-    .line 1154
-    new-instance v1, Ljava/io/FileOutputStream;
-
-    invoke-direct {v1, v2}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
-
-    .line 1155
-    sget-object v2, Landroid/graphics/Bitmap$CompressFormat;->JPEG:Landroid/graphics/Bitmap$CompressFormat;
-
-    invoke-virtual {v7, v2, v0, v1}, Landroid/graphics/Bitmap;->compress(Landroid/graphics/Bitmap$CompressFormat;ILjava/io/OutputStream;)Z
-
-    goto :goto_145
-
     .line 1157
-    :cond_12f
     new-instance v1, Ljava/io/FileOutputStream;
 
     invoke-direct {v1, v2}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
 
     .line 1158
+    sget-object v2, Landroid/graphics/Bitmap$CompressFormat;->JPEG:Landroid/graphics/Bitmap$CompressFormat;
+
+    invoke-virtual {v7, v2, v0, v1}, Landroid/graphics/Bitmap;->compress(Landroid/graphics/Bitmap$CompressFormat;ILjava/io/OutputStream;)Z
+
+    goto :goto_14d
+
+    .line 1160
+    :cond_137
+    new-instance v1, Ljava/io/FileOutputStream;
+
+    invoke-direct {v1, v2}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
+
+    .line 1161
     sget-object v2, Landroid/graphics/Bitmap$CompressFormat;->PNG:Landroid/graphics/Bitmap$CompressFormat;
 
     invoke-virtual {v6, v2, v0, v1}, Landroid/graphics/Bitmap;->compress(Landroid/graphics/Bitmap$CompressFormat;ILjava/io/OutputStream;)Z
 
-    .line 1159
+    .line 1162
     invoke-virtual {v1}, Ljava/io/FileOutputStream;->close()V
-    :try_end_13c
-    .catchall {:try_start_e2 .. :try_end_13c} :catchall_13d
+    :try_end_144
+    .catchall {:try_start_ea .. :try_end_144} :catchall_145
 
-    goto :goto_145
+    goto :goto_14d
 
-    :catchall_13d
+    :catchall_145
     move-exception v0
 
-    goto :goto_142
+    goto :goto_14a
 
-    :catchall_13f
+    :catchall_147
     move-exception v0
 
     move-object/from16 v6, p1
 
-    .line 1162
-    :goto_142
+    .line 1165
+    :goto_14a
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
-    :goto_145
+    :goto_14d
     return-object v6
 .end method
 
 .method private synthetic lambda$checkCurrentWallpaper$2(Ljava/util/ArrayList;Z)V
     .registers 3
 
-    .line 1044
+    .line 1045
     invoke-direct {p0, p1, p2}, Lorg/telegram/ui/ActionBar/Theme$PatternsLoader;->checkCurrentWallpaperInternal(Ljava/util/ArrayList;Z)V
 
     return-void
@@ -889,10 +899,10 @@
 .method private synthetic lambda$didReceivedNotification$3(Lorg/telegram/ui/ActionBar/Theme$PatternsLoader$LoadingPattern;)V
     .registers 12
 
-    .line 1178
+    .line 1181
     iget-object v0, p1, Lorg/telegram/ui/ActionBar/Theme$PatternsLoader$LoadingPattern;->pattern:Lorg/telegram/tgnet/TLRPC$TL_wallPaper;
 
-    .line 1179
+    .line 1182
     sget v1, Lorg/telegram/messenger/UserConfig;->selectedAccount:I
 
     invoke-static {v1}, Lorg/telegram/messenger/FileLoader;->getInstance(I)Lorg/telegram/messenger/FileLoader;
@@ -907,7 +917,7 @@
 
     move-result-object v1
 
-    .line 1181
+    .line 1184
     iget-object v2, p1, Lorg/telegram/ui/ActionBar/Theme$PatternsLoader$LoadingPattern;->accents:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
@@ -925,7 +935,7 @@
     :goto_19
     if-ge v6, v2, :cond_48
 
-    .line 1182
+    .line 1185
     iget-object v7, p1, Lorg/telegram/ui/ActionBar/Theme$PatternsLoader$LoadingPattern;->accents:Ljava/util/ArrayList;
 
     invoke-virtual {v7, v6}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -934,7 +944,7 @@
 
     check-cast v7, Lorg/telegram/ui/ActionBar/Theme$ThemeAccent;
 
-    .line 1183
+    .line 1186
     iget-object v8, v7, Lorg/telegram/ui/ActionBar/Theme$ThemeAccent;->patternSlug:Ljava/lang/String;
 
     iget-object v9, v0, Lorg/telegram/tgnet/TLRPC$WallPaper;->slug:Ljava/lang/String;
@@ -945,7 +955,7 @@
 
     if-eqz v8, :cond_45
 
-    .line 1184
+    .line 1187
     iget-object v8, v0, Lorg/telegram/tgnet/TLRPC$WallPaper;->document:Lorg/telegram/tgnet/TLRPC$Document;
 
     iget-object v8, v8, Lorg/telegram/tgnet/TLRPC$Document;->mime_type:Ljava/lang/String;
@@ -962,12 +972,12 @@
 
     if-nez v5, :cond_45
 
-    .line 1186
+    .line 1189
     new-instance v5, Ljava/util/ArrayList;
 
     invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1187
+    .line 1190
     invoke-virtual {v5, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     :cond_45
@@ -978,10 +988,10 @@
     :cond_48
     if-eqz v4, :cond_4d
 
-    .line 1192
+    .line 1195
     invoke-virtual {v4}, Landroid/graphics/Bitmap;->recycle()V
 
-    .line 1194
+    .line 1197
     :cond_4d
     invoke-direct {p0, v5, v3}, Lorg/telegram/ui/ActionBar/Theme$PatternsLoader;->checkCurrentWallpaper(Ljava/util/ArrayList;Z)V
 
@@ -995,15 +1005,15 @@
 
     move-object/from16 v1, p2
 
-    .line 992
+    .line 993
     instance-of v2, v1, Lorg/telegram/tgnet/TLRPC$Vector;
 
     if-eqz v2, :cond_c1
 
-    .line 993
+    .line 994
     check-cast v1, Lorg/telegram/tgnet/TLRPC$Vector;
 
-    .line 995
+    .line 996
     iget-object v2, v1, Lorg/telegram/tgnet/TLRPC$Vector;->objects:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
@@ -1021,7 +1031,7 @@
 
     if-ge v5, v2, :cond_be
 
-    .line 996
+    .line 997
     iget-object v8, v1, Lorg/telegram/tgnet/TLRPC$Vector;->objects:Ljava/util/ArrayList;
 
     invoke-virtual {v8, v5}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1030,23 +1040,23 @@
 
     check-cast v8, Lorg/telegram/tgnet/TLRPC$WallPaper;
 
-    .line 997
+    .line 998
     instance-of v9, v8, Lorg/telegram/tgnet/TLRPC$TL_wallPaper;
 
     if-nez v9, :cond_24
 
     goto/16 :goto_b7
 
-    .line 1000
+    .line 1001
     :cond_24
     check-cast v8, Lorg/telegram/tgnet/TLRPC$TL_wallPaper;
 
-    .line 1001
+    .line 1002
     iget-boolean v9, v8, Lorg/telegram/tgnet/TLRPC$WallPaper;->pattern:Z
 
     if-eqz v9, :cond_b7
 
-    .line 1002
+    .line 1003
     sget v9, Lorg/telegram/messenger/UserConfig;->selectedAccount:I
 
     invoke-static {v9}, Lorg/telegram/messenger/FileLoader;->getInstance(I)Lorg/telegram/messenger/FileLoader;
@@ -1059,7 +1069,7 @@
 
     move-result-object v7
 
-    .line 1005
+    .line 1006
     invoke-virtual/range {p1 .. p1}, Ljava/util/ArrayList;->size()I
 
     move-result v9
@@ -1075,14 +1085,14 @@
 
     move-object/from16 v13, p1
 
-    .line 1006
+    .line 1007
     invoke-virtual {v13, v10}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v14
 
     check-cast v14, Lorg/telegram/ui/ActionBar/Theme$ThemeAccent;
 
-    .line 1007
+    .line 1008
     iget-object v15, v14, Lorg/telegram/ui/ActionBar/Theme$ThemeAccent;->patternSlug:Ljava/lang/String;
 
     iget-object v3, v8, Lorg/telegram/tgnet/TLRPC$WallPaper;->slug:Ljava/lang/String;
@@ -1095,7 +1105,7 @@
 
     if-nez v12, :cond_5c
 
-    .line 1009
+    .line 1010
     invoke-virtual {v7}, Ljava/io/File;->exists()Z
 
     move-result v3
@@ -1109,7 +1119,7 @@
     :cond_5c
     if-nez v11, :cond_92
 
-    .line 1011
+    .line 1012
     invoke-virtual {v12}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result v3
@@ -1118,7 +1128,7 @@
 
     goto :goto_92
 
-    .line 1018
+    .line 1019
     :cond_65
     iget-object v3, v8, Lorg/telegram/tgnet/TLRPC$WallPaper;->document:Lorg/telegram/tgnet/TLRPC$Document;
 
@@ -1126,19 +1136,19 @@
 
     move-result-object v3
 
-    .line 1019
+    .line 1020
     iget-object v15, v0, Lorg/telegram/ui/ActionBar/Theme$PatternsLoader;->watingForLoad:Ljava/util/HashMap;
 
     if-nez v15, :cond_76
 
-    .line 1020
+    .line 1021
     new-instance v15, Ljava/util/HashMap;
 
     invoke-direct {v15}, Ljava/util/HashMap;-><init>()V
 
     iput-object v15, v0, Lorg/telegram/ui/ActionBar/Theme$PatternsLoader;->watingForLoad:Ljava/util/HashMap;
 
-    .line 1022
+    .line 1023
     :cond_76
     iget-object v15, v0, Lorg/telegram/ui/ActionBar/Theme$PatternsLoader;->watingForLoad:Ljava/util/HashMap;
 
@@ -1150,20 +1160,20 @@
 
     if-nez v15, :cond_8c
 
-    .line 1024
+    .line 1025
     new-instance v15, Lorg/telegram/ui/ActionBar/Theme$PatternsLoader$LoadingPattern;
 
     invoke-direct {v15, v4}, Lorg/telegram/ui/ActionBar/Theme$PatternsLoader$LoadingPattern;-><init>(Lorg/telegram/ui/ActionBar/Theme$1;)V
 
-    .line 1025
+    .line 1026
     iput-object v8, v15, Lorg/telegram/ui/ActionBar/Theme$PatternsLoader$LoadingPattern;->pattern:Lorg/telegram/tgnet/TLRPC$TL_wallPaper;
 
-    .line 1026
+    .line 1027
     iget-object v4, v0, Lorg/telegram/ui/ActionBar/Theme$PatternsLoader;->watingForLoad:Ljava/util/HashMap;
 
     invoke-virtual {v4, v3, v15}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1028
+    .line 1029
     :cond_8c
     iget-object v3, v15, Lorg/telegram/ui/ActionBar/Theme$PatternsLoader$LoadingPattern;->accents:Ljava/util/ArrayList;
 
@@ -1171,7 +1181,7 @@
 
     goto :goto_ab
 
-    .line 1012
+    .line 1013
     :cond_92
     :goto_92
     iget-object v3, v8, Lorg/telegram/tgnet/TLRPC$WallPaper;->document:Lorg/telegram/tgnet/TLRPC$Document;
@@ -1190,14 +1200,14 @@
 
     if-nez v6, :cond_a8
 
-    .line 1014
+    .line 1015
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
     move-object v6, v3
 
-    .line 1016
+    .line 1017
     :cond_a8
     invoke-virtual {v6, v14}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -1214,7 +1224,7 @@
 
     if-eqz v11, :cond_b9
 
-    .line 1033
+    .line 1034
     invoke-virtual {v11}, Landroid/graphics/Bitmap;->recycle()V
 
     goto :goto_b9
@@ -1231,7 +1241,7 @@
 
     goto/16 :goto_13
 
-    .line 1037
+    .line 1038
     :cond_be
     invoke-direct {v0, v6, v7}, Lorg/telegram/ui/ActionBar/Theme$PatternsLoader;->checkCurrentWallpaper(Ljava/util/ArrayList;Z)V
 
@@ -1242,7 +1252,7 @@
 .method private synthetic lambda$new$1(Ljava/util/ArrayList;)V
     .registers 8
 
-    .line 965
+    .line 966
     invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
 
     move-result v0
@@ -1256,28 +1266,28 @@
     :goto_7
     if-ge v3, v0, :cond_3b
 
-    .line 966
+    .line 967
     invoke-virtual {p1, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v4
 
     check-cast v4, Lorg/telegram/ui/ActionBar/Theme$ThemeAccent;
 
-    .line 967
+    .line 968
     invoke-virtual {v4}, Lorg/telegram/ui/ActionBar/Theme$ThemeAccent;->getPathToWallpaper()Ljava/io/File;
 
     move-result-object v5
 
     if-eqz v5, :cond_23
 
-    .line 968
+    .line 969
     invoke-virtual {v5}, Ljava/io/File;->exists()Z
 
     move-result v5
 
     if-eqz v5, :cond_23
 
-    .line 969
+    .line 970
     invoke-virtual {p1, v3}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
     add-int/lit8 v3, v3, -0x1
@@ -1289,12 +1299,12 @@
     :cond_23
     if-nez v2, :cond_2a
 
-    .line 975
+    .line 976
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 977
+    .line 978
     :cond_2a
     iget-object v5, v4, Lorg/telegram/ui/ActionBar/Theme$ThemeAccent;->patternSlug:Ljava/lang/String;
 
@@ -1306,7 +1316,7 @@
 
     goto :goto_38
 
-    .line 980
+    .line 981
     :cond_33
     iget-object v4, v4, Lorg/telegram/ui/ActionBar/Theme$ThemeAccent;->patternSlug:Ljava/lang/String;
 
@@ -1322,13 +1332,13 @@
 
     return-void
 
-    .line 985
+    .line 986
     :cond_3e
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_account_getMultiWallPapers;
 
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_account_getMultiWallPapers;-><init>()V
 
-    .line 986
+    .line 987
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
 
     move-result v3
@@ -1336,12 +1346,12 @@
     :goto_47
     if-ge v1, v3, :cond_5e
 
-    .line 987
+    .line 988
     new-instance v4, Lorg/telegram/tgnet/TLRPC$TL_inputWallPaperSlug;
 
     invoke-direct {v4}, Lorg/telegram/tgnet/TLRPC$TL_inputWallPaperSlug;-><init>()V
 
-    .line 988
+    .line 989
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v5
@@ -1350,7 +1360,7 @@
 
     iput-object v5, v4, Lorg/telegram/tgnet/TLRPC$TL_inputWallPaperSlug;->slug:Ljava/lang/String;
 
-    .line 989
+    .line 990
     iget-object v5, v0, Lorg/telegram/tgnet/TLRPC$TL_account_getMultiWallPapers;->wallpapers:Ljava/util/ArrayList;
 
     invoke-virtual {v5, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -1359,7 +1369,7 @@
 
     goto :goto_47
 
-    .line 991
+    .line 992
     :cond_5e
     iget v1, p0, Lorg/telegram/ui/ActionBar/Theme$PatternsLoader;->account:I
 
@@ -1381,14 +1391,14 @@
 .method public varargs didReceivedNotification(II[Ljava/lang/Object;)V
     .registers 6
 
-    .line 1169
+    .line 1172
     iget-object p2, p0, Lorg/telegram/ui/ActionBar/Theme$PatternsLoader;->watingForLoad:Ljava/util/HashMap;
 
     if-nez p2, :cond_5
 
     return-void
 
-    .line 1172
+    .line 1175
     :cond_5
     sget v0, Lorg/telegram/messenger/NotificationCenter;->fileLoaded:I
 
@@ -1396,12 +1406,12 @@
 
     if-ne p1, v0, :cond_21
 
-    .line 1173
+    .line 1176
     aget-object p1, p3, v1
 
     check-cast p1, Ljava/lang/String;
 
-    .line 1174
+    .line 1177
     invoke-virtual {p2, p1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -1410,7 +1420,7 @@
 
     if-eqz p1, :cond_33
 
-    .line 1176
+    .line 1179
     sget-object p2, Lorg/telegram/messenger/Utilities;->globalQueue:Lorg/telegram/messenger/DispatchQueue;
 
     new-instance p3, Lorg/telegram/ui/ActionBar/Theme$PatternsLoader$$ExternalSyntheticLambda2;
@@ -1421,18 +1431,18 @@
 
     goto :goto_33
 
-    .line 1197
+    .line 1200
     :cond_21
     sget v0, Lorg/telegram/messenger/NotificationCenter;->fileLoadFailed:I
 
     if-ne p1, v0, :cond_33
 
-    .line 1198
+    .line 1201
     aget-object p1, p3, v1
 
     check-cast p1, Ljava/lang/String;
 
-    .line 1199
+    .line 1202
     invoke-virtual {p2, p1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -1441,7 +1451,7 @@
 
     const/4 p1, 0x0
 
-    .line 1200
+    .line 1203
     invoke-direct {p0, p1, v1}, Lorg/telegram/ui/ActionBar/Theme$PatternsLoader;->checkCurrentWallpaper(Ljava/util/ArrayList;Z)V
 
     :cond_33

@@ -2,40 +2,38 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/view/View$OnLongClickListener;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
 .field public final synthetic f$0:Lorg/telegram/ui/Components/ChatAttachAlert;
 
-.field public final synthetic f$1:Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;
+.field public final synthetic f$1:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(Lorg/telegram/ui/Components/ChatAttachAlert;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)V
+.method public synthetic constructor <init>(Lorg/telegram/ui/Components/ChatAttachAlert;Z)V
     .registers 3
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lorg/telegram/ui/Components/ChatAttachAlert$$ExternalSyntheticLambda12;->f$0:Lorg/telegram/ui/Components/ChatAttachAlert;
 
-    iput-object p2, p0, Lorg/telegram/ui/Components/ChatAttachAlert$$ExternalSyntheticLambda12;->f$1:Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;
+    iput-boolean p2, p0, Lorg/telegram/ui/Components/ChatAttachAlert$$ExternalSyntheticLambda12;->f$1:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onLongClick(Landroid/view/View;)Z
+.method public final onClick(Landroid/view/View;)V
     .registers 4
 
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlert$$ExternalSyntheticLambda12;->f$0:Lorg/telegram/ui/Components/ChatAttachAlert;
 
-    iget-object v1, p0, Lorg/telegram/ui/Components/ChatAttachAlert$$ExternalSyntheticLambda12;->f$1:Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;
+    iget-boolean v1, p0, Lorg/telegram/ui/Components/ChatAttachAlert$$ExternalSyntheticLambda12;->f$1:Z
 
-    invoke-static {v0, v1, p1}, Lorg/telegram/ui/Components/ChatAttachAlert;->$r8$lambda$8gb4s0ttGM7PHHgq-plRPnpA63k(Lorg/telegram/ui/Components/ChatAttachAlert;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;Landroid/view/View;)Z
+    invoke-static {v0, v1, p1}, Lorg/telegram/ui/Components/ChatAttachAlert;->$r8$lambda$i2t34Q7mt2SEEFA2Cgy_I62LFAw(Lorg/telegram/ui/Components/ChatAttachAlert;ZLandroid/view/View;)V
 
-    move-result p1
-
-    return p1
+    return-void
 .end method

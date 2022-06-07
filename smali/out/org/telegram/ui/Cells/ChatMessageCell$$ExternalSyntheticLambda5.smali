@@ -2,46 +2,38 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Ljava/util/Comparator;
+.implements Ljava/lang/Runnable;
 
 
-# static fields
-.field public static final synthetic INSTANCE:Lorg/telegram/ui/Cells/ChatMessageCell$$ExternalSyntheticLambda5;
+# instance fields
+.field public final synthetic f$0:Lorg/telegram/ui/Cells/ChatMessageCell;
+
+.field public final synthetic f$1:Lorg/telegram/ui/Cells/ChatMessageCell;
 
 
 # direct methods
-.method static synthetic constructor <clinit>()V
-    .registers 1
-
-    new-instance v0, Lorg/telegram/ui/Cells/ChatMessageCell$$ExternalSyntheticLambda5;
-
-    invoke-direct {v0}, Lorg/telegram/ui/Cells/ChatMessageCell$$ExternalSyntheticLambda5;-><init>()V
-
-    sput-object v0, Lorg/telegram/ui/Cells/ChatMessageCell$$ExternalSyntheticLambda5;->INSTANCE:Lorg/telegram/ui/Cells/ChatMessageCell$$ExternalSyntheticLambda5;
-
-    return-void
-.end method
-
-.method private synthetic constructor <init>()V
-    .registers 1
+.method public synthetic constructor <init>(Lorg/telegram/ui/Cells/ChatMessageCell;Lorg/telegram/ui/Cells/ChatMessageCell;)V
+    .registers 3
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lorg/telegram/ui/Cells/ChatMessageCell$$ExternalSyntheticLambda5;->f$0:Lorg/telegram/ui/Cells/ChatMessageCell;
+
+    iput-object p2, p0, Lorg/telegram/ui/Cells/ChatMessageCell$$ExternalSyntheticLambda5;->f$1:Lorg/telegram/ui/Cells/ChatMessageCell;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final compare(Ljava/lang/Object;Ljava/lang/Object;)I
+.method public final run()V
     .registers 3
 
-    check-cast p1, Lorg/telegram/ui/Cells/ChatMessageCell$PollButton;
+    iget-object v0, p0, Lorg/telegram/ui/Cells/ChatMessageCell$$ExternalSyntheticLambda5;->f$0:Lorg/telegram/ui/Cells/ChatMessageCell;
 
-    check-cast p2, Lorg/telegram/ui/Cells/ChatMessageCell$PollButton;
+    iget-object v1, p0, Lorg/telegram/ui/Cells/ChatMessageCell$$ExternalSyntheticLambda5;->f$1:Lorg/telegram/ui/Cells/ChatMessageCell;
 
-    invoke-static {p1, p2}, Lorg/telegram/ui/Cells/ChatMessageCell;->$r8$lambda$RVLgYwfka7QO1tsZfi5bzIPkKGI(Lorg/telegram/ui/Cells/ChatMessageCell$PollButton;Lorg/telegram/ui/Cells/ChatMessageCell$PollButton;)I
+    invoke-static {v0, v1}, Lorg/telegram/ui/Cells/ChatMessageCell;->$r8$lambda$Ac50zHz1hKHRtoHUBOHISeDRRCo(Lorg/telegram/ui/Cells/ChatMessageCell;Lorg/telegram/ui/Cells/ChatMessageCell;)V
 
-    move-result p1
-
-    return p1
+    return-void
 .end method

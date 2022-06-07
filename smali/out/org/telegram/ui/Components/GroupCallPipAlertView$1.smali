@@ -62,7 +62,7 @@
     .line 81
     new-instance v0, Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;
 
-    const v2, 0x7f0e12d9
+    const v2, 0x7f0e13a7
 
     const-string v3, "VoipChannelOpenVoiceChat"
 
@@ -80,7 +80,7 @@
     :cond_2d
     new-instance v0, Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;
 
-    const v2, 0x7f0e1343
+    const v2, 0x7f0e1411
 
     const-string v3, "VoipGroupOpenVoiceChat"
 

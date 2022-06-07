@@ -296,7 +296,7 @@
     .line 66
     iget-object v0, p0, Lorg/telegram/ui/Cells/GroupCallInvitedCell;->statusTextView:Lorg/telegram/ui/ActionBar/SimpleTextView;
 
-    const v4, 0x7f0e08c6
+    const v4, 0x7f0e092b
 
     const-string v5, "Invited"
 
@@ -375,7 +375,7 @@
     .line 71
     iget-object p1, p0, Lorg/telegram/ui/Cells/GroupCallInvitedCell;->muteButton:Landroid/widget/ImageView;
 
-    const v0, 0x7f070274
+    const v0, 0x7f07024b
 
     invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setImageResource(I)V
 

@@ -33,10 +33,10 @@
 .method public constructor <init>()V
     .registers 2
 
-    .line 57917
+    .line 58398
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
-    .line 57925
+    .line 58406
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -61,7 +61,7 @@
 
     goto :goto_17
 
-    .line 57931
+    .line 58412
     :cond_c
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_upload_file;
 
@@ -69,7 +69,7 @@
 
     goto :goto_17
 
-    .line 57934
+    .line 58415
     :cond_12
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_upload_fileCdnRedirect;
 
@@ -82,7 +82,7 @@
 
     goto :goto_32
 
-    .line 57938
+    .line 58419
     :cond_1c
     new-instance p0, Ljava/lang/RuntimeException;
 
@@ -112,7 +112,7 @@
     :goto_32
     if-eqz v0, :cond_37
 
-    .line 57941
+    .line 58422
     invoke-virtual {v0, p0, p2}, Lorg/telegram/tgnet/TLObject;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
     :cond_37

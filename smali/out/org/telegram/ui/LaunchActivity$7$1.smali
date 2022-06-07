@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/LaunchActivity$7;Landroid/view/View;)V
     .registers 3
 
-    .line 666
+    .line 692
     iput-object p2, p0, Lorg/telegram/ui/LaunchActivity$7$1;->val$view:Landroid/view/View;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -35,7 +35,7 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .registers 3
 
-    .line 669
+    .line 695
     iget-object p1, p0, Lorg/telegram/ui/LaunchActivity$7$1;->val$view:Landroid/view/View;
 
     const/4 v0, 0x0

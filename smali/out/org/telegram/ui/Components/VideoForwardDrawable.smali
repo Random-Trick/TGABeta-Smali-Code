@@ -40,6 +40,8 @@
 
 .field private path1:Landroid/graphics/Path;
 
+.field private playScaleFactor:F
+
 .field private showing:Z
 
 .field private textPaint:Landroid/text/TextPaint;
@@ -80,7 +82,7 @@
 .method public constructor <init>(Z)V
     .registers 7
 
-    .line 52
+    .line 53
     invoke-direct {p0}, Landroid/graphics/drawable/Drawable;-><init>()V
 
     .line 16
@@ -106,22 +108,27 @@
 
     iput-object v0, p0, Lorg/telegram/ui/Components/VideoForwardDrawable;->path1:Landroid/graphics/Path;
 
-    .line 53
-    iput-boolean p1, p0, Lorg/telegram/ui/Components/VideoForwardDrawable;->isRound:Z
+    const/high16 v0, 0x3f800000    # 1.0f
+
+    .line 37
+    iput v0, p0, Lorg/telegram/ui/Components/VideoForwardDrawable;->playScaleFactor:F
 
     .line 54
+    iput-boolean p1, p0, Lorg/telegram/ui/Components/VideoForwardDrawable;->isRound:Z
+
+    .line 55
     iget-object p1, p0, Lorg/telegram/ui/Components/VideoForwardDrawable;->paint:Landroid/graphics/Paint;
 
     const/4 v0, -0x1
 
     invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 55
+    .line 56
     iget-object p1, p0, Lorg/telegram/ui/Components/VideoForwardDrawable;->textPaint:Landroid/text/TextPaint;
 
     invoke-virtual {p1, v0}, Landroid/text/TextPaint;->setColor(I)V
 
-    .line 56
+    .line 57
     iget-object p1, p0, Lorg/telegram/ui/Components/VideoForwardDrawable;->textPaint:Landroid/text/TextPaint;
 
     const/high16 v0, 0x41400000    # 12.0f
@@ -134,33 +141,33 @@
 
     invoke-virtual {p1, v0}, Landroid/text/TextPaint;->setTextSize(F)V
 
-    .line 57
+    .line 58
     iget-object p1, p0, Lorg/telegram/ui/Components/VideoForwardDrawable;->textPaint:Landroid/text/TextPaint;
 
     sget-object v0, Landroid/graphics/Paint$Align;->CENTER:Landroid/graphics/Paint$Align;
 
     invoke-virtual {p1, v0}, Landroid/text/TextPaint;->setTextAlign(Landroid/graphics/Paint$Align;)V
 
-    .line 59
+    .line 60
     iget-object p1, p0, Lorg/telegram/ui/Components/VideoForwardDrawable;->path1:Landroid/graphics/Path;
 
     invoke-virtual {p1}, Landroid/graphics/Path;->reset()V
 
     const/4 p1, 0x0
 
-    .line 60
-    :goto_3f
+    .line 61
+    :goto_43
     sget-object v0, Lorg/telegram/ui/Components/VideoForwardDrawable;->playPath:[I
 
     array-length v2, v0
 
     div-int/lit8 v2, v2, 0x2
 
-    if-ge p1, v2, :cond_7c
+    if-ge p1, v2, :cond_80
 
-    if-nez p1, :cond_61
+    if-nez p1, :cond_65
 
-    .line 62
+    .line 63
     iget-object v2, p0, Lorg/telegram/ui/Components/VideoForwardDrawable;->path1:Landroid/graphics/Path;
 
     mul-int/lit8 v3, p1, 0x2
@@ -189,10 +196,10 @@
 
     invoke-virtual {v2, v4, v0}, Landroid/graphics/Path;->moveTo(FF)V
 
-    goto :goto_79
+    goto :goto_7d
 
-    .line 64
-    :cond_61
+    .line 65
+    :cond_65
     iget-object v2, p0, Lorg/telegram/ui/Components/VideoForwardDrawable;->path1:Landroid/graphics/Path;
 
     mul-int/lit8 v3, p1, 0x2
@@ -221,13 +228,13 @@
 
     invoke-virtual {v2, v4, v0}, Landroid/graphics/Path;->lineTo(FF)V
 
-    :goto_79
+    :goto_7d
     add-int/lit8 p1, p1, 0x1
 
-    goto :goto_3f
+    goto :goto_43
 
-    .line 67
-    :cond_7c
+    .line 68
+    :cond_80
     iget-object p1, p0, Lorg/telegram/ui/Components/VideoForwardDrawable;->path1:Landroid/graphics/Path;
 
     invoke-virtual {p1}, Landroid/graphics/Path;->close()V
@@ -238,17 +245,17 @@
 .method private invalidate()V
     .registers 2
 
-    .line 275
+    .line 282
     iget-object v0, p0, Lorg/telegram/ui/Components/VideoForwardDrawable;->delegate:Lorg/telegram/ui/Components/VideoForwardDrawable$VideoForwardDrawableDelegate;
 
     if-eqz v0, :cond_8
 
-    .line 276
+    .line 283
     invoke-interface {v0}, Lorg/telegram/ui/Components/VideoForwardDrawable$VideoForwardDrawableDelegate;->invalidate()V
 
     goto :goto_b
 
-    .line 278
+    .line 285
     :cond_8
     invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
 
@@ -261,7 +268,7 @@
 .method public addTime(J)V
     .registers 5
 
-    .line 303
+    .line 310
     iget-wide v0, p0, Lorg/telegram/ui/Components/VideoForwardDrawable;->time:J
 
     add-long/2addr v0, p1
@@ -270,14 +277,18 @@
 
     const-wide/16 p1, 0x3e8
 
-    .line 304
+    .line 311
     div-long/2addr v0, p1
 
     long-to-int p1, v0
 
-    const-string p2, "Seconds"
+    const/4 p2, 0x0
 
-    invoke-static {p2, p1}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    new-array p2, p2, [Ljava/lang/Object;
+
+    const-string v0, "Seconds"
+
+    invoke-static {v0, p1, p2}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -289,12 +300,12 @@
 .method public draw(Landroid/graphics/Canvas;)V
     .registers 13
 
-    .line 127
+    .line 133
     invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
 
     move-result-object v0
 
-    .line 129
+    .line 135
     iget v1, v0, Landroid/graphics/Rect;->left:I
 
     invoke-virtual {v0}, Landroid/graphics/Rect;->width()I
@@ -311,7 +322,7 @@
 
     add-int/2addr v1, v2
 
-    .line 130
+    .line 136
     iget v2, v0, Landroid/graphics/Rect;->top:I
 
     invoke-virtual {v0}, Landroid/graphics/Rect;->height()I
@@ -328,14 +339,14 @@
 
     add-int/2addr v2, v3
 
-    .line 131
+    .line 137
     iget-boolean v3, p0, Lorg/telegram/ui/Components/VideoForwardDrawable;->leftSide:Z
 
     const/high16 v4, 0x41800000    # 16.0f
 
     if-eqz v3, :cond_33
 
-    .line 132
+    .line 138
     invoke-virtual {v0}, Landroid/graphics/Rect;->width()I
 
     move-result v3
@@ -352,7 +363,7 @@
 
     goto :goto_3f
 
-    .line 134
+    .line 140
     :cond_33
     invoke-virtual {v0}, Landroid/graphics/Rect;->width()I
 
@@ -368,28 +379,28 @@
 
     add-int/2addr v1, v3
 
-    .line 137
+    .line 143
     :goto_3f
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 138
+    .line 144
     iget-boolean v3, p0, Lorg/telegram/ui/Components/VideoForwardDrawable;->isRound:Z
 
     if-eqz v3, :cond_7f
 
-    .line 139
+    .line 145
     iget-object v3, p0, Lorg/telegram/ui/Components/VideoForwardDrawable;->clippingPath:Landroid/graphics/Path;
 
     if-nez v3, :cond_51
 
-    .line 140
+    .line 146
     new-instance v3, Landroid/graphics/Path;
 
     invoke-direct {v3}, Landroid/graphics/Path;-><init>()V
 
     iput-object v3, p0, Lorg/telegram/ui/Components/VideoForwardDrawable;->clippingPath:Landroid/graphics/Path;
 
-    .line 142
+    .line 148
     :cond_51
     iget v3, v0, Landroid/graphics/Rect;->left:I
 
@@ -411,32 +422,32 @@
 
     add-int/2addr v3, v5
 
-    .line 143
+    .line 149
     iget v5, p0, Lorg/telegram/ui/Components/VideoForwardDrawable;->lastClippingPath:I
 
     if-eq v5, v3, :cond_79
 
-    .line 144
+    .line 150
     iget-object v5, p0, Lorg/telegram/ui/Components/VideoForwardDrawable;->clippingPath:Landroid/graphics/Path;
 
     invoke-virtual {v5}, Landroid/graphics/Path;->reset()V
 
-    .line 145
+    .line 151
     sget-object v5, Lorg/telegram/messenger/AndroidUtilities;->rectTmp:Landroid/graphics/RectF;
 
     invoke-virtual {v5, v0}, Landroid/graphics/RectF;->set(Landroid/graphics/Rect;)V
 
-    .line 146
+    .line 152
     iget-object v6, p0, Lorg/telegram/ui/Components/VideoForwardDrawable;->clippingPath:Landroid/graphics/Path;
 
     sget-object v7, Landroid/graphics/Path$Direction;->CCW:Landroid/graphics/Path$Direction;
 
     invoke-virtual {v6, v5, v7}, Landroid/graphics/Path;->addOval(Landroid/graphics/RectF;Landroid/graphics/Path$Direction;)V
 
-    .line 147
+    .line 153
     iput v3, p0, Lorg/telegram/ui/Components/VideoForwardDrawable;->lastClippingPath:I
 
-    .line 149
+    .line 155
     :cond_79
     iget-object v3, p0, Lorg/telegram/ui/Components/VideoForwardDrawable;->clippingPath:Landroid/graphics/Path;
 
@@ -444,7 +455,7 @@
 
     goto :goto_8a
 
-    .line 151
+    .line 157
     :cond_7f
     iget v3, v0, Landroid/graphics/Rect;->left:I
 
@@ -456,7 +467,7 @@
 
     invoke-virtual {p1, v3, v5, v6, v7}, Landroid/graphics/Canvas;->clipRect(IIII)Z
 
-    .line 153
+    .line 159
     :goto_8a
     iget-boolean v3, p0, Lorg/telegram/ui/Components/VideoForwardDrawable;->isOneShootAnimation:Z
 
@@ -468,7 +479,7 @@
 
     if-nez v3, :cond_a9
 
-    .line 154
+    .line 160
     iget-object v3, p0, Lorg/telegram/ui/Components/VideoForwardDrawable;->paint:Landroid/graphics/Paint;
 
     iget v8, p0, Lorg/telegram/ui/Components/VideoForwardDrawable;->enterAnimationProgress:F
@@ -479,7 +490,7 @@
 
     invoke-virtual {v3, v5}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 155
+    .line 161
     iget-object v3, p0, Lorg/telegram/ui/Components/VideoForwardDrawable;->textPaint:Landroid/text/TextPaint;
 
     iget v5, p0, Lorg/telegram/ui/Components/VideoForwardDrawable;->enterAnimationProgress:F
@@ -492,7 +503,7 @@
 
     goto :goto_ec
 
-    .line 157
+    .line 163
     :cond_a9
     iget v3, p0, Lorg/telegram/ui/Components/VideoForwardDrawable;->animationProgress:F
 
@@ -504,7 +515,7 @@
 
     if-gtz v10, :cond_d2
 
-    .line 158
+    .line 164
     iget-object v8, p0, Lorg/telegram/ui/Components/VideoForwardDrawable;->paint:Landroid/graphics/Paint;
 
     div-float/2addr v3, v9
@@ -519,7 +530,7 @@
 
     invoke-virtual {v8, v3}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 159
+    .line 165
     iget-object v3, p0, Lorg/telegram/ui/Components/VideoForwardDrawable;->textPaint:Landroid/text/TextPaint;
 
     iget v5, p0, Lorg/telegram/ui/Components/VideoForwardDrawable;->animationProgress:F
@@ -538,7 +549,7 @@
 
     goto :goto_ec
 
-    .line 161
+    .line 167
     :cond_d2
     iget-object v10, p0, Lorg/telegram/ui/Components/VideoForwardDrawable;->paint:Landroid/graphics/Paint;
 
@@ -554,7 +565,7 @@
 
     invoke-virtual {v10, v3}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 162
+    .line 168
     iget-object v3, p0, Lorg/telegram/ui/Components/VideoForwardDrawable;->textPaint:Landroid/text/TextPaint;
 
     iget v5, p0, Lorg/telegram/ui/Components/VideoForwardDrawable;->animationProgress:F
@@ -571,7 +582,7 @@
 
     invoke-virtual {v3, v5}, Landroid/text/TextPaint;->setAlpha(I)V
 
-    .line 165
+    .line 171
     :goto_ec
     invoke-virtual {v0}, Landroid/graphics/Rect;->width()I
 
@@ -637,15 +648,15 @@
 
     invoke-virtual {p1, v3, v4, v0, v5}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
 
-    .line 166
+    .line 172
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
-    .line 168
+    .line 174
     iget-object v0, p0, Lorg/telegram/ui/Components/VideoForwardDrawable;->timeStr:Ljava/lang/String;
 
     if-eqz v0, :cond_148
 
-    .line 169
+    .line 175
     invoke-virtual {p0}, Lorg/telegram/ui/Components/VideoForwardDrawable;->getIntrinsicWidth()I
 
     move-result v3
@@ -686,41 +697,56 @@
 
     invoke-virtual {p1, v0, v3, v4, v5}, Landroid/graphics/Canvas;->drawText(Ljava/lang/String;FFLandroid/graphics/Paint;)V
 
-    .line 172
+    .line 178
     :cond_148
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 173
+    .line 179
+    iget v0, p0, Lorg/telegram/ui/Components/VideoForwardDrawable;->playScaleFactor:F
+
+    int-to-float v1, v1
+
+    int-to-float v3, v2
+
+    invoke-virtual {p0}, Lorg/telegram/ui/Components/VideoForwardDrawable;->getIntrinsicHeight()I
+
+    move-result v4
+
+    int-to-float v4, v4
+
+    const/high16 v5, 0x40000000    # 2.0f
+
+    div-float/2addr v4, v5
+
+    add-float/2addr v4, v3
+
+    invoke-virtual {p1, v0, v0, v1, v4}, Landroid/graphics/Canvas;->scale(FFFF)V
+
+    .line 180
     iget-boolean v0, p0, Lorg/telegram/ui/Components/VideoForwardDrawable;->leftSide:Z
 
-    if-eqz v0, :cond_15d
+    if-eqz v0, :cond_16c
 
     const/high16 v0, 0x43340000    # 180.0f
 
-    int-to-float v3, v1
-
-    .line 174
+    .line 181
     invoke-virtual {p0}, Lorg/telegram/ui/Components/VideoForwardDrawable;->getIntrinsicHeight()I
 
     move-result v4
 
     div-int/lit8 v4, v4, 0x2
 
-    add-int/2addr v4, v2
+    add-int/2addr v2, v4
 
-    int-to-float v4, v4
+    int-to-float v2, v2
 
-    invoke-virtual {p1, v0, v3, v4}, Landroid/graphics/Canvas;->rotate(FFF)V
+    invoke-virtual {p1, v0, v1, v2}, Landroid/graphics/Canvas;->rotate(FFF)V
 
-    :cond_15d
-    int-to-float v0, v1
+    .line 183
+    :cond_16c
+    invoke-virtual {p1, v1, v3}, Landroid/graphics/Canvas;->translate(FF)V
 
-    int-to-float v1, v2
-
-    .line 176
-    invoke-virtual {p1, v0, v1}, Landroid/graphics/Canvas;->translate(FF)V
-
-    .line 177
+    .line 184
     iget v0, p0, Lorg/telegram/ui/Components/VideoForwardDrawable;->animationProgress:F
 
     const v1, 0x3f19999a    # 0.6f
@@ -733,11 +759,11 @@
 
     cmpg-float v1, v0, v1
 
-    if-gtz v1, :cond_19d
+    if-gtz v1, :cond_1aa
 
     cmpg-float v1, v0, v3
 
-    if-gez v1, :cond_180
+    if-gez v1, :cond_18d
 
     mul-float v0, v0, v6
 
@@ -745,14 +771,14 @@
 
     float-to-int v0, v0
 
-    .line 180
+    .line 187
     invoke-static {v2, v0}, Ljava/lang/Math;->min(II)I
 
     move-result v0
 
-    goto :goto_187
+    goto :goto_194
 
-    :cond_180
+    :cond_18d
     sub-float/2addr v0, v3
 
     div-float/2addr v0, v4
@@ -763,38 +789,38 @@
 
     float-to-int v0, v0
 
-    .line 184
-    :goto_187
+    .line 191
+    :goto_194
     iget-boolean v1, p0, Lorg/telegram/ui/Components/VideoForwardDrawable;->isOneShootAnimation:Z
 
-    if-nez v1, :cond_191
+    if-nez v1, :cond_19e
 
     int-to-float v0, v0
 
-    .line 185
+    .line 192
     iget v1, p0, Lorg/telegram/ui/Components/VideoForwardDrawable;->enterAnimationProgress:F
 
     mul-float v0, v0, v1
 
     float-to-int v0, v0
 
-    .line 187
-    :cond_191
+    .line 194
+    :cond_19e
     iget-object v1, p0, Lorg/telegram/ui/Components/VideoForwardDrawable;->paint:Landroid/graphics/Paint;
 
     invoke-virtual {v1, v0}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 188
+    .line 195
     iget-object v0, p0, Lorg/telegram/ui/Components/VideoForwardDrawable;->path1:Landroid/graphics/Path;
 
     iget-object v1, p0, Lorg/telegram/ui/Components/VideoForwardDrawable;->paint:Landroid/graphics/Paint;
 
     invoke-virtual {p1, v0, v1}, Landroid/graphics/Canvas;->drawPath(Landroid/graphics/Path;Landroid/graphics/Paint;)V
 
-    :cond_19d
+    :cond_1aa
     const/high16 v0, 0x41900000    # 18.0f
 
-    .line 190
+    .line 197
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v1
@@ -805,24 +831,24 @@
 
     invoke-virtual {p1, v1, v5}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 191
+    .line 198
     iget v1, p0, Lorg/telegram/ui/Components/VideoForwardDrawable;->animationProgress:F
 
     cmpl-float v8, v1, v4
 
-    if-ltz v8, :cond_1e0
+    if-ltz v8, :cond_1ed
 
     const v8, 0x3f4ccccd    # 0.8f
 
     cmpg-float v8, v1, v8
 
-    if-gtz v8, :cond_1e0
+    if-gtz v8, :cond_1ed
 
     sub-float/2addr v1, v4
 
     cmpg-float v8, v1, v3
 
-    if-gez v8, :cond_1c3
+    if-gez v8, :cond_1d0
 
     mul-float v1, v1, v6
 
@@ -830,14 +856,14 @@
 
     float-to-int v1, v1
 
-    .line 195
+    .line 202
     invoke-static {v2, v1}, Ljava/lang/Math;->min(II)I
 
     move-result v1
 
-    goto :goto_1ca
+    goto :goto_1d7
 
-    :cond_1c3
+    :cond_1d0
     sub-float/2addr v1, v3
 
     div-float/2addr v1, v4
@@ -848,36 +874,36 @@
 
     float-to-int v1, v1
 
-    .line 199
-    :goto_1ca
+    .line 206
+    :goto_1d7
     iget-boolean v8, p0, Lorg/telegram/ui/Components/VideoForwardDrawable;->isOneShootAnimation:Z
 
-    if-nez v8, :cond_1d4
+    if-nez v8, :cond_1e1
 
     int-to-float v1, v1
 
-    .line 200
+    .line 207
     iget v8, p0, Lorg/telegram/ui/Components/VideoForwardDrawable;->enterAnimationProgress:F
 
     mul-float v1, v1, v8
 
     float-to-int v1, v1
 
-    .line 202
-    :cond_1d4
+    .line 209
+    :cond_1e1
     iget-object v8, p0, Lorg/telegram/ui/Components/VideoForwardDrawable;->paint:Landroid/graphics/Paint;
 
     invoke-virtual {v8, v1}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 203
+    .line 210
     iget-object v1, p0, Lorg/telegram/ui/Components/VideoForwardDrawable;->path1:Landroid/graphics/Path;
 
     iget-object v8, p0, Lorg/telegram/ui/Components/VideoForwardDrawable;->paint:Landroid/graphics/Paint;
 
     invoke-virtual {p1, v1, v8}, Landroid/graphics/Canvas;->drawPath(Landroid/graphics/Path;Landroid/graphics/Paint;)V
 
-    .line 205
-    :cond_1e0
+    .line 212
+    :cond_1ed
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v0
@@ -886,22 +912,22 @@
 
     invoke-virtual {p1, v0, v5}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 206
+    .line 213
     iget v0, p0, Lorg/telegram/ui/Components/VideoForwardDrawable;->animationProgress:F
 
     cmpl-float v1, v0, v3
 
-    if-ltz v1, :cond_21d
+    if-ltz v1, :cond_22a
 
     cmpg-float v1, v0, v7
 
-    if-gtz v1, :cond_21d
+    if-gtz v1, :cond_22a
 
     sub-float/2addr v0, v3
 
     cmpg-float v1, v0, v3
 
-    if-gez v1, :cond_200
+    if-gez v1, :cond_20d
 
     mul-float v0, v0, v6
 
@@ -909,14 +935,14 @@
 
     float-to-int v0, v0
 
-    .line 210
+    .line 217
     invoke-static {v2, v0}, Ljava/lang/Math;->min(II)I
 
     move-result v0
 
-    goto :goto_207
+    goto :goto_214
 
-    :cond_200
+    :cond_20d
     sub-float/2addr v0, v3
 
     div-float/2addr v0, v4
@@ -927,49 +953,49 @@
 
     float-to-int v0, v0
 
-    .line 214
-    :goto_207
+    .line 221
+    :goto_214
     iget-boolean v1, p0, Lorg/telegram/ui/Components/VideoForwardDrawable;->isOneShootAnimation:Z
 
-    if-nez v1, :cond_211
+    if-nez v1, :cond_21e
 
     int-to-float v0, v0
 
-    .line 215
+    .line 222
     iget v1, p0, Lorg/telegram/ui/Components/VideoForwardDrawable;->enterAnimationProgress:F
 
     mul-float v0, v0, v1
 
     float-to-int v0, v0
 
-    .line 217
-    :cond_211
+    .line 224
+    :cond_21e
     iget-object v1, p0, Lorg/telegram/ui/Components/VideoForwardDrawable;->paint:Landroid/graphics/Paint;
 
     invoke-virtual {v1, v0}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 218
+    .line 225
     iget-object v0, p0, Lorg/telegram/ui/Components/VideoForwardDrawable;->path1:Landroid/graphics/Path;
 
     iget-object v1, p0, Lorg/telegram/ui/Components/VideoForwardDrawable;->paint:Landroid/graphics/Paint;
 
     invoke-virtual {p1, v0, v1}, Landroid/graphics/Canvas;->drawPath(Landroid/graphics/Path;Landroid/graphics/Paint;)V
 
-    .line 220
-    :cond_21d
+    .line 227
+    :cond_22a
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
-    .line 222
+    .line 229
     iget-boolean p1, p0, Lorg/telegram/ui/Components/VideoForwardDrawable;->animating:Z
 
-    if-eqz p1, :cond_2a3
+    if-eqz p1, :cond_2b0
 
-    .line 223
+    .line 230
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
-    .line 224
+    .line 231
     iget-wide v2, p0, Lorg/telegram/ui/Components/VideoForwardDrawable;->lastAnimationTime:J
 
     sub-long v2, v0, v2
@@ -978,20 +1004,20 @@
 
     cmp-long p1, v2, v8
 
-    if-lez p1, :cond_233
+    if-lez p1, :cond_240
 
     move-wide v2, v8
 
-    .line 228
-    :cond_233
+    .line 235
+    :cond_240
     iput-wide v0, p0, Lorg/telegram/ui/Components/VideoForwardDrawable;->lastAnimationTime:J
 
-    .line 229
+    .line 236
     iget p1, p0, Lorg/telegram/ui/Components/VideoForwardDrawable;->animationProgress:F
 
     cmpg-float v0, p1, v7
 
-    if-gez v0, :cond_26e
+    if-gez v0, :cond_27b
 
     long-to-float v0, v2
 
@@ -1001,141 +1027,141 @@
 
     add-float/2addr p1, v0
 
-    .line 230
+    .line 237
     iput p1, p0, Lorg/telegram/ui/Components/VideoForwardDrawable;->animationProgress:F
 
-    .line 231
+    .line 238
     iget-boolean v0, p0, Lorg/telegram/ui/Components/VideoForwardDrawable;->isOneShootAnimation:Z
 
-    if-nez v0, :cond_254
+    if-nez v0, :cond_261
 
     cmpl-float p1, p1, v7
 
-    if-ltz p1, :cond_26b
+    if-ltz p1, :cond_278
 
-    .line 233
+    .line 240
     iget-boolean p1, p0, Lorg/telegram/ui/Components/VideoForwardDrawable;->showing:Z
 
-    if-eqz p1, :cond_251
-
-    .line 234
-    iput v5, p0, Lorg/telegram/ui/Components/VideoForwardDrawable;->animationProgress:F
-
-    goto :goto_26b
-
-    .line 236
-    :cond_251
-    iput v7, p0, Lorg/telegram/ui/Components/VideoForwardDrawable;->animationProgress:F
-
-    goto :goto_26b
-
-    :cond_254
-    cmpl-float p1, p1, v7
-
-    if-ltz p1, :cond_26b
+    if-eqz p1, :cond_25e
 
     .line 241
     iput v5, p0, Lorg/telegram/ui/Components/VideoForwardDrawable;->animationProgress:F
 
+    goto :goto_278
+
+    .line 243
+    :cond_25e
+    iput v7, p0, Lorg/telegram/ui/Components/VideoForwardDrawable;->animationProgress:F
+
+    goto :goto_278
+
+    :cond_261
+    cmpl-float p1, p1, v7
+
+    if-ltz p1, :cond_278
+
+    .line 248
+    iput v5, p0, Lorg/telegram/ui/Components/VideoForwardDrawable;->animationProgress:F
+
     const/4 p1, 0x0
 
-    .line 242
+    .line 249
     iput-boolean p1, p0, Lorg/telegram/ui/Components/VideoForwardDrawable;->animating:Z
 
     const-wide/16 v0, 0x0
 
-    .line 243
+    .line 250
     iput-wide v0, p0, Lorg/telegram/ui/Components/VideoForwardDrawable;->time:J
 
     const/4 p1, 0x0
 
-    .line 244
+    .line 251
     iput-object p1, p0, Lorg/telegram/ui/Components/VideoForwardDrawable;->timeStr:Ljava/lang/String;
 
-    .line 245
+    .line 252
     iget-object p1, p0, Lorg/telegram/ui/Components/VideoForwardDrawable;->delegate:Lorg/telegram/ui/Components/VideoForwardDrawable$VideoForwardDrawableDelegate;
 
-    if-eqz p1, :cond_26b
-
-    .line 246
-    invoke-interface {p1}, Lorg/telegram/ui/Components/VideoForwardDrawable$VideoForwardDrawableDelegate;->onAnimationEnd()V
-
-    .line 250
-    :cond_26b
-    :goto_26b
-    invoke-direct {p0}, Lorg/telegram/ui/Components/VideoForwardDrawable;->invalidate()V
-
-    .line 252
-    :cond_26e
-    iget-boolean p1, p0, Lorg/telegram/ui/Components/VideoForwardDrawable;->isOneShootAnimation:Z
-
-    if-nez p1, :cond_2a3
+    if-eqz p1, :cond_278
 
     .line 253
+    invoke-interface {p1}, Lorg/telegram/ui/Components/VideoForwardDrawable$VideoForwardDrawableDelegate;->onAnimationEnd()V
+
+    .line 257
+    :cond_278
+    :goto_278
+    invoke-direct {p0}, Lorg/telegram/ui/Components/VideoForwardDrawable;->invalidate()V
+
+    .line 259
+    :cond_27b
+    iget-boolean p1, p0, Lorg/telegram/ui/Components/VideoForwardDrawable;->isOneShootAnimation:Z
+
+    if-nez p1, :cond_2b0
+
+    .line 260
     iget-boolean p1, p0, Lorg/telegram/ui/Components/VideoForwardDrawable;->showing:Z
 
     const v0, 0x3dda740e
 
-    if-eqz p1, :cond_286
+    if-eqz p1, :cond_293
 
     iget v1, p0, Lorg/telegram/ui/Components/VideoForwardDrawable;->enterAnimationProgress:F
 
     cmpl-float v2, v1, v7
 
-    if-eqz v2, :cond_286
+    if-eqz v2, :cond_293
 
     add-float/2addr v1, v0
 
-    .line 254
+    .line 261
     iput v1, p0, Lorg/telegram/ui/Components/VideoForwardDrawable;->enterAnimationProgress:F
 
-    .line 255
+    .line 262
     invoke-direct {p0}, Lorg/telegram/ui/Components/VideoForwardDrawable;->invalidate()V
 
-    goto :goto_294
+    goto :goto_2a1
 
-    :cond_286
-    if-nez p1, :cond_294
+    :cond_293
+    if-nez p1, :cond_2a1
 
-    .line 256
+    .line 263
     iget p1, p0, Lorg/telegram/ui/Components/VideoForwardDrawable;->enterAnimationProgress:F
 
     cmpl-float v1, p1, v5
 
-    if-eqz v1, :cond_294
+    if-eqz v1, :cond_2a1
 
     sub-float/2addr p1, v0
 
-    .line 257
+    .line 264
     iput p1, p0, Lorg/telegram/ui/Components/VideoForwardDrawable;->enterAnimationProgress:F
 
-    .line 258
+    .line 265
     invoke-direct {p0}, Lorg/telegram/ui/Components/VideoForwardDrawable;->invalidate()V
 
-    .line 260
-    :cond_294
-    :goto_294
+    .line 267
+    :cond_2a1
+    :goto_2a1
     iget p1, p0, Lorg/telegram/ui/Components/VideoForwardDrawable;->enterAnimationProgress:F
 
     cmpg-float v0, p1, v5
 
-    if-gez v0, :cond_29d
+    if-gez v0, :cond_2aa
 
-    .line 261
+    .line 268
     iput v5, p0, Lorg/telegram/ui/Components/VideoForwardDrawable;->enterAnimationProgress:F
 
-    goto :goto_2a3
+    goto :goto_2b0
 
-    :cond_29d
+    :cond_2aa
     cmpl-float p1, p1, v7
 
-    if-lez p1, :cond_2a3
+    if-lez p1, :cond_2b0
 
-    .line 263
+    .line 270
     iput v7, p0, Lorg/telegram/ui/Components/VideoForwardDrawable;->enterAnimationProgress:F
 
-    :cond_2a3
-    :goto_2a3
+    :cond_2b0
+    :goto_2b0
     return-void
 .end method
 
@@ -1144,7 +1170,7 @@
 
     const/high16 v0, 0x42000000    # 32.0f
 
-    .line 289
+    .line 296
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v0
@@ -1157,7 +1183,7 @@
 
     const/high16 v0, 0x42000000    # 32.0f
 
-    .line 284
+    .line 291
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v0
@@ -1170,7 +1196,7 @@
 
     const/high16 v0, 0x42000000    # 32.0f
 
-    .line 299
+    .line 306
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v0
@@ -1183,7 +1209,7 @@
 
     const/high16 v0, 0x42000000    # 32.0f
 
-    .line 294
+    .line 301
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v0
@@ -1202,7 +1228,7 @@
 .method public isAnimating()Z
     .registers 2
 
-    .line 71
+    .line 77
     iget-boolean v0, p0, Lorg/telegram/ui/Components/VideoForwardDrawable;->animating:Z
 
     return v0
@@ -1211,12 +1237,12 @@
 .method public setAlpha(I)V
     .registers 3
 
-    .line 107
+    .line 113
     iget-object v0, p0, Lorg/telegram/ui/Components/VideoForwardDrawable;->paint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 108
+    .line 114
     iget-object v0, p0, Lorg/telegram/ui/Components/VideoForwardDrawable;->textPaint:Landroid/text/TextPaint;
 
     invoke-virtual {v0, p1}, Landroid/text/TextPaint;->setAlpha(I)V
@@ -1227,7 +1253,7 @@
 .method public setColorFilter(Landroid/graphics/ColorFilter;)V
     .registers 3
 
-    .line 113
+    .line 119
     iget-object v0, p0, Lorg/telegram/ui/Components/VideoForwardDrawable;->paint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColorFilter(Landroid/graphics/ColorFilter;)Landroid/graphics/ColorFilter;
@@ -1238,7 +1264,7 @@
 .method public setDelegate(Lorg/telegram/ui/Components/VideoForwardDrawable$VideoForwardDrawableDelegate;)V
     .registers 2
 
-    .line 102
+    .line 108
     iput-object p1, p0, Lorg/telegram/ui/Components/VideoForwardDrawable;->delegate:Lorg/telegram/ui/Components/VideoForwardDrawable$VideoForwardDrawableDelegate;
 
     return-void
@@ -1247,7 +1273,7 @@
 .method public setLeftSide(Z)V
     .registers 5
 
-    .line 90
+    .line 96
     iget-boolean v0, p0, Lorg/telegram/ui/Components/VideoForwardDrawable;->leftSide:Z
 
     if-ne v0, p1, :cond_11
@@ -1271,19 +1297,19 @@
 
     const-wide/16 v0, 0x0
 
-    .line 94
+    .line 100
     iput-wide v0, p0, Lorg/telegram/ui/Components/VideoForwardDrawable;->time:J
 
     const/4 v0, 0x0
 
-    .line 95
+    .line 101
     iput-object v0, p0, Lorg/telegram/ui/Components/VideoForwardDrawable;->timeStr:Ljava/lang/String;
 
-    .line 97
+    .line 103
     :cond_1a
     iput-boolean p1, p0, Lorg/telegram/ui/Components/VideoForwardDrawable;->leftSide:Z
 
-    .line 98
+    .line 104
     invoke-virtual {p0}, Lorg/telegram/ui/Components/VideoForwardDrawable;->startAnimation()V
 
     return-void
@@ -1292,40 +1318,52 @@
 .method public setOneShootAnimation(Z)V
     .registers 4
 
-    .line 81
+    .line 87
     iget-boolean v0, p0, Lorg/telegram/ui/Components/VideoForwardDrawable;->isOneShootAnimation:Z
 
     if-eq v0, p1, :cond_10
 
-    .line 82
+    .line 88
     iput-boolean p1, p0, Lorg/telegram/ui/Components/VideoForwardDrawable;->isOneShootAnimation:Z
 
     const/4 p1, 0x0
 
-    .line 83
+    .line 89
     iput-object p1, p0, Lorg/telegram/ui/Components/VideoForwardDrawable;->timeStr:Ljava/lang/String;
 
     const-wide/16 v0, 0x0
 
-    .line 84
+    .line 90
     iput-wide v0, p0, Lorg/telegram/ui/Components/VideoForwardDrawable;->time:J
 
     const/4 p1, 0x0
 
-    .line 85
+    .line 91
     iput p1, p0, Lorg/telegram/ui/Components/VideoForwardDrawable;->animationProgress:F
 
     :cond_10
     return-void
 .end method
 
+.method public setPlayScaleFactor(F)V
+    .registers 2
+
+    .line 72
+    iput p1, p0, Lorg/telegram/ui/Components/VideoForwardDrawable;->playScaleFactor:F
+
+    .line 73
+    invoke-direct {p0}, Lorg/telegram/ui/Components/VideoForwardDrawable;->invalidate()V
+
+    return-void
+.end method
+
 .method public setShowing(Z)V
     .registers 2
 
-    .line 270
+    .line 277
     iput-boolean p1, p0, Lorg/telegram/ui/Components/VideoForwardDrawable;->showing:Z
 
-    .line 271
+    .line 278
     invoke-direct {p0}, Lorg/telegram/ui/Components/VideoForwardDrawable;->invalidate()V
 
     return-void
@@ -1334,37 +1372,41 @@
 .method public setTime(J)V
     .registers 6
 
-    .line 39
+    .line 40
     iput-wide p1, p0, Lorg/telegram/ui/Components/VideoForwardDrawable;->time:J
 
     const-wide/16 v0, 0x3e8
 
     cmp-long v2, p1, v0
 
-    if-ltz v2, :cond_13
+    if-ltz v2, :cond_16
 
-    .line 41
+    .line 42
     div-long/2addr p1, v0
 
     long-to-int p2, p1
 
-    const-string p1, "Seconds"
+    const/4 p1, 0x0
 
-    invoke-static {p1, p2}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    new-array p1, p1, [Ljava/lang/Object;
+
+    const-string v0, "Seconds"
+
+    invoke-static {v0, p2, p1}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
 
     iput-object p1, p0, Lorg/telegram/ui/Components/VideoForwardDrawable;->timeStr:Ljava/lang/String;
 
-    goto :goto_16
+    goto :goto_19
 
-    :cond_13
+    :cond_16
     const/4 p1, 0x0
 
-    .line 43
+    .line 44
     iput-object p1, p0, Lorg/telegram/ui/Components/VideoForwardDrawable;->timeStr:Ljava/lang/String;
 
-    :goto_16
+    :goto_19
     return-void
 .end method
 
@@ -1373,15 +1415,15 @@
 
     const/4 v0, 0x1
 
-    .line 75
+    .line 81
     iput-boolean v0, p0, Lorg/telegram/ui/Components/VideoForwardDrawable;->animating:Z
 
     const/4 v0, 0x0
 
-    .line 76
+    .line 82
     iput v0, p0, Lorg/telegram/ui/Components/VideoForwardDrawable;->animationProgress:F
 
-    .line 77
+    .line 83
     invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
 
     return-void

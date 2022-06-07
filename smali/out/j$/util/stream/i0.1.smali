@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lj$/util/stream/P4;
+.implements Lj$/util/stream/O4;
 
 
 # instance fields
@@ -25,7 +25,7 @@
 .method public synthetic accept(D)V
     .registers 3
 
-    invoke-static {p0}, Lj$/util/stream/p1;->f(Lj$/util/stream/n3;)V
+    invoke-static {p0}, Lj$/util/stream/o1;->f(Lj$/util/stream/m3;)V
 
     const/4 p1, 0x0
 
@@ -35,7 +35,7 @@
 .method public synthetic accept(I)V
     .registers 2
 
-    invoke-static {p0}, Lj$/util/stream/p1;->d(Lj$/util/stream/n3;)V
+    invoke-static {p0}, Lj$/util/stream/o1;->d(Lj$/util/stream/m3;)V
 
     const/4 p1, 0x0
 
@@ -45,7 +45,7 @@
 .method public synthetic accept(J)V
     .registers 3
 
-    invoke-static {p0}, Lj$/util/stream/p1;->e(Lj$/util/stream/n3;)V
+    invoke-static {p0}, Lj$/util/stream/o1;->e(Lj$/util/stream/m3;)V
 
     const/4 p1, 0x0
 

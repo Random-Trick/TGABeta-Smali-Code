@@ -65,7 +65,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 54281
+    .line 54756
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -80,7 +80,7 @@
 
     goto :goto_4c
 
-    .line 54342
+    .line 54817
     :sswitch_5
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_encryptedChatWaiting;
 
@@ -88,7 +88,7 @@
 
     goto :goto_4c
 
-    .line 54327
+    .line 54802
     :sswitch_b
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_encryptedChat_old;
 
@@ -96,7 +96,7 @@
 
     goto :goto_4c
 
-    .line 54324
+    .line 54799
     :sswitch_11
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_encryptedChatRequested_layer131;
 
@@ -104,7 +104,7 @@
 
     goto :goto_4c
 
-    .line 54348
+    .line 54823
     :sswitch_17
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_encryptedChat;
 
@@ -112,7 +112,7 @@
 
     goto :goto_4c
 
-    .line 54345
+    .line 54820
     :sswitch_1d
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_encryptedChatRequested;
 
@@ -120,7 +120,7 @@
 
     goto :goto_4c
 
-    .line 54333
+    .line 54808
     :sswitch_23
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_encryptedChatWaiting_layer131;
 
@@ -128,7 +128,7 @@
 
     goto :goto_4c
 
-    .line 54339
+    .line 54814
     :sswitch_29
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_encryptedChatDiscarded;
 
@@ -136,7 +136,7 @@
 
     goto :goto_4c
 
-    .line 54336
+    .line 54811
     :sswitch_2f
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_encryptedChatDiscarded_layer122;
 
@@ -144,7 +144,7 @@
 
     goto :goto_4c
 
-    .line 54315
+    .line 54790
     :sswitch_35
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_encryptedChatRequested_old;
 
@@ -152,7 +152,7 @@
 
     goto :goto_4c
 
-    .line 54321
+    .line 54796
     :sswitch_3b
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_encryptedChat_layer131;
 
@@ -160,7 +160,7 @@
 
     goto :goto_4c
 
-    .line 54318
+    .line 54793
     :sswitch_41
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_encryptedChatRequested_layer115;
 
@@ -168,7 +168,7 @@
 
     goto :goto_4c
 
-    .line 54330
+    .line 54805
     :sswitch_47
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_encryptedChatEmpty;
 
@@ -181,7 +181,7 @@
 
     goto :goto_67
 
-    .line 54352
+    .line 54827
     :cond_51
     new-instance p0, Ljava/lang/RuntimeException;
 
@@ -211,7 +211,7 @@
     :goto_67
     if-eqz v0, :cond_6c
 
-    .line 54355
+    .line 54830
     invoke-virtual {v0, p0, p2}, Lorg/telegram/tgnet/TLObject;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
     :cond_6c

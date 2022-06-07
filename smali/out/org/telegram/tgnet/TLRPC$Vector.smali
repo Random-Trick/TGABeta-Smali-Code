@@ -25,10 +25,10 @@
 .method public constructor <init>()V
     .registers 2
 
-    .line 59480
+    .line 60183
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
-    .line 59482
+    .line 60185
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V

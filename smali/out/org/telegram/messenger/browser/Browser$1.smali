@@ -21,7 +21,7 @@
 .method constructor <init>()V
     .registers 1
 
-    .line 96
+    .line 95
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -32,22 +32,22 @@
 .method public onServiceConnected(Lorg/telegram/messenger/support/customtabs/CustomTabsClient;)V
     .registers 4
 
-    .line 99
+    .line 98
     invoke-static {p1}, Lorg/telegram/messenger/browser/Browser;->access$102(Lorg/telegram/messenger/support/customtabs/CustomTabsClient;)Lorg/telegram/messenger/support/customtabs/CustomTabsClient;
 
-    .line 100
+    .line 99
     sget-boolean p1, Lorg/telegram/messenger/SharedConfig;->customTabs:Z
 
     if-eqz p1, :cond_1b
 
-    .line 101
+    .line 100
     invoke-static {}, Lorg/telegram/messenger/browser/Browser;->access$100()Lorg/telegram/messenger/support/customtabs/CustomTabsClient;
 
     move-result-object p1
 
     if-eqz p1, :cond_1b
 
-    .line 103
+    .line 102
     :try_start_d
     invoke-static {}, Lorg/telegram/messenger/browser/Browser;->access$100()Lorg/telegram/messenger/support/customtabs/CustomTabsClient;
 
@@ -64,7 +64,7 @@
     :catch_17
     move-exception p1
 
-    .line 105
+    .line 104
     invoke-static {p1}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     :cond_1b
@@ -77,7 +77,7 @@
 
     const/4 v0, 0x0
 
-    .line 113
+    .line 112
     invoke-static {v0}, Lorg/telegram/messenger/browser/Browser;->access$102(Lorg/telegram/messenger/support/customtabs/CustomTabsClient;)Lorg/telegram/messenger/support/customtabs/CustomTabsClient;
 
     return-void

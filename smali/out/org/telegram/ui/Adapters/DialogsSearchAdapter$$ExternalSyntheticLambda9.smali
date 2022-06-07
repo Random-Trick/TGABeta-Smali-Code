@@ -10,22 +10,14 @@
 
 .field public final synthetic f$1:I
 
-.field public final synthetic f$2:I
+.field public final synthetic f$2:Ljava/lang/String;
 
-.field public final synthetic f$3:Lorg/telegram/tgnet/TLRPC$TL_error;
-
-.field public final synthetic f$4:Ljava/lang/String;
-
-.field public final synthetic f$5:Lorg/telegram/tgnet/TLObject;
-
-.field public final synthetic f$6:Lorg/telegram/tgnet/TLRPC$TL_messages_searchGlobal;
-
-.field public final synthetic f$7:Ljava/util/ArrayList;
+.field public final synthetic f$3:Ljava/lang/String;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lorg/telegram/ui/Adapters/DialogsSearchAdapter;IILorg/telegram/tgnet/TLRPC$TL_error;Ljava/lang/String;Lorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/TLRPC$TL_messages_searchGlobal;Ljava/util/ArrayList;)V
-    .registers 9
+.method public synthetic constructor <init>(Lorg/telegram/ui/Adapters/DialogsSearchAdapter;ILjava/lang/String;Ljava/lang/String;)V
+    .registers 5
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -33,17 +25,9 @@
 
     iput p2, p0, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$$ExternalSyntheticLambda9;->f$1:I
 
-    iput p3, p0, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$$ExternalSyntheticLambda9;->f$2:I
+    iput-object p3, p0, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$$ExternalSyntheticLambda9;->f$2:Ljava/lang/String;
 
-    iput-object p4, p0, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$$ExternalSyntheticLambda9;->f$3:Lorg/telegram/tgnet/TLRPC$TL_error;
-
-    iput-object p5, p0, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$$ExternalSyntheticLambda9;->f$4:Ljava/lang/String;
-
-    iput-object p6, p0, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$$ExternalSyntheticLambda9;->f$5:Lorg/telegram/tgnet/TLObject;
-
-    iput-object p7, p0, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$$ExternalSyntheticLambda9;->f$6:Lorg/telegram/tgnet/TLRPC$TL_messages_searchGlobal;
-
-    iput-object p8, p0, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$$ExternalSyntheticLambda9;->f$7:Ljava/util/ArrayList;
+    iput-object p4, p0, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$$ExternalSyntheticLambda9;->f$3:Ljava/lang/String;
 
     return-void
 .end method
@@ -51,25 +35,17 @@
 
 # virtual methods
 .method public final run()V
-    .registers 9
+    .registers 5
 
     iget-object v0, p0, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$$ExternalSyntheticLambda9;->f$0:Lorg/telegram/ui/Adapters/DialogsSearchAdapter;
 
     iget v1, p0, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$$ExternalSyntheticLambda9;->f$1:I
 
-    iget v2, p0, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$$ExternalSyntheticLambda9;->f$2:I
+    iget-object v2, p0, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$$ExternalSyntheticLambda9;->f$2:Ljava/lang/String;
 
-    iget-object v3, p0, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$$ExternalSyntheticLambda9;->f$3:Lorg/telegram/tgnet/TLRPC$TL_error;
+    iget-object v3, p0, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$$ExternalSyntheticLambda9;->f$3:Ljava/lang/String;
 
-    iget-object v4, p0, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$$ExternalSyntheticLambda9;->f$4:Ljava/lang/String;
-
-    iget-object v5, p0, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$$ExternalSyntheticLambda9;->f$5:Lorg/telegram/tgnet/TLObject;
-
-    iget-object v6, p0, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$$ExternalSyntheticLambda9;->f$6:Lorg/telegram/tgnet/TLRPC$TL_messages_searchGlobal;
-
-    iget-object v7, p0, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$$ExternalSyntheticLambda9;->f$7:Ljava/util/ArrayList;
-
-    invoke-static/range {v0 .. v7}, Lorg/telegram/ui/Adapters/DialogsSearchAdapter;->$r8$lambda$Zv13Mk3okbLoFOkgzWWlPgg1m5c(Lorg/telegram/ui/Adapters/DialogsSearchAdapter;IILorg/telegram/tgnet/TLRPC$TL_error;Ljava/lang/String;Lorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/TLRPC$TL_messages_searchGlobal;Ljava/util/ArrayList;)V
+    invoke-static {v0, v1, v2, v3}, Lorg/telegram/ui/Adapters/DialogsSearchAdapter;->$r8$lambda$N09owK2WFPHl2T1mjhEqUNzEdhs(Lorg/telegram/ui/Adapters/DialogsSearchAdapter;ILjava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method

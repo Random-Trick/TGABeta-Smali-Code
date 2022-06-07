@@ -37,7 +37,7 @@
 
     const/4 v0, 0x0
 
-    .line 40
+    .line 45
     invoke-direct {p0, p1, v0, p2, p3}, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;-><init>(Landroid/content/Context;ZZZ)V
 
     return-void
@@ -58,7 +58,7 @@
 
     move-object v5, p4
 
-    .line 48
+    .line 53
     invoke-direct/range {v0 .. v5}, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;-><init>(Landroid/content/Context;ZZZLorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)V
 
     return-void
@@ -79,7 +79,7 @@
 
     move v4, p4
 
-    .line 44
+    .line 49
     invoke-direct/range {v0 .. v5}, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;-><init>(Landroid/content/Context;ZZZLorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)V
 
     return-void
@@ -88,26 +88,26 @@
 .method public constructor <init>(Landroid/content/Context;ZZZLorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)V
     .registers 11
 
-    .line 52
+    .line 57
     invoke-direct {p0, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
     const/16 v0, 0x30
 
-    .line 35
+    .line 40
     iput v0, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;->itemHeight:I
 
-    .line 53
+    .line 58
     iput-object p5, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;->resourcesProvider:Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;
 
-    .line 55
+    .line 60
     iput-boolean p3, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;->top:Z
 
-    .line 56
+    .line 61
     iput-boolean p4, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;->bottom:Z
 
     const-string p3, "actionBarDefaultSubmenuItem"
 
-    .line 58
+    .line 63
     invoke-direct {p0, p3}, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;->getThemedColor(Ljava/lang/String;)I
 
     move-result p3
@@ -116,7 +116,7 @@
 
     const-string p3, "actionBarDefaultSubmenuItemIcon"
 
-    .line 59
+    .line 64
     invoke-direct {p0, p3}, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;->getThemedColor(Ljava/lang/String;)I
 
     move-result p3
@@ -125,19 +125,19 @@
 
     const-string p3, "dialogButtonSelector"
 
-    .line 60
+    .line 65
     invoke-direct {p0, p3}, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;->getThemedColor(Ljava/lang/String;)I
 
     move-result p3
 
     iput p3, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;->selectorColor:I
 
-    .line 62
+    .line 67
     invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;->updateBackground()V
 
     const/high16 p3, 0x41900000    # 18.0f
 
-    .line 63
+    .line 68
     invoke-static {p3}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result p4
@@ -150,19 +150,19 @@
 
     invoke-virtual {p0, p4, v0, p3, v0}, Landroid/widget/FrameLayout;->setPadding(IIII)V
 
-    .line 65
+    .line 70
     new-instance p3, Landroid/widget/ImageView;
 
     invoke-direct {p3, p1}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
 
     iput-object p3, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;->imageView:Landroid/widget/ImageView;
 
-    .line 66
+    .line 71
     sget-object p4, Landroid/widget/ImageView$ScaleType;->CENTER:Landroid/widget/ImageView$ScaleType;
 
     invoke-virtual {p3, p4}, Landroid/widget/ImageView;->setScaleType(Landroid/widget/ImageView$ScaleType;)V
 
-    .line 67
+    .line 72
     iget-object p3, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;->imageView:Landroid/widget/ImageView;
 
     new-instance p4, Landroid/graphics/PorterDuffColorFilter;
@@ -175,7 +175,7 @@
 
     invoke-virtual {p3, p4}, Landroid/widget/ImageView;->setColorFilter(Landroid/graphics/ColorFilter;)V
 
-    .line 68
+    .line 73
     iget-object p3, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;->imageView:Landroid/widget/ImageView;
 
     sget-boolean p4, Lorg/telegram/messenger/LocaleController;->isRTL:Z
@@ -206,7 +206,7 @@
 
     invoke-virtual {p0, p3, p4}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 70
+    .line 75
     new-instance p3, Landroid/widget/TextView;
 
     invoke-direct {p3, p1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
@@ -215,41 +215,41 @@
 
     const/4 p4, 0x1
 
-    .line 71
+    .line 76
     invoke-virtual {p3, p4}, Landroid/widget/TextView;->setLines(I)V
 
-    .line 72
+    .line 77
     iget-object p3, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;->textView:Landroid/widget/TextView;
 
     invoke-virtual {p3, p4}, Landroid/widget/TextView;->setSingleLine(Z)V
 
-    .line 73
+    .line 78
     iget-object p3, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;->textView:Landroid/widget/TextView;
 
     invoke-virtual {p3, v2}, Landroid/widget/TextView;->setGravity(I)V
 
-    .line 74
+    .line 79
     iget-object p3, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;->textView:Landroid/widget/TextView;
 
     sget-object v4, Landroid/text/TextUtils$TruncateAt;->END:Landroid/text/TextUtils$TruncateAt;
 
     invoke-virtual {p3, v4}, Landroid/widget/TextView;->setEllipsize(Landroid/text/TextUtils$TruncateAt;)V
 
-    .line 75
+    .line 80
     iget-object p3, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;->textView:Landroid/widget/TextView;
 
     iget v4, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;->textColor:I
 
     invoke-virtual {p3, v4}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 76
+    .line 81
     iget-object p3, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;->textView:Landroid/widget/TextView;
 
     const/high16 v4, 0x41800000    # 16.0f
 
     invoke-virtual {p3, p4, v4}, Landroid/widget/TextView;->setTextSize(IF)V
 
-    .line 77
+    .line 82
     iget-object p3, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;->textView:Landroid/widget/TextView;
 
     sget-boolean p4, Lorg/telegram/messenger/LocaleController;->isRTL:Z
@@ -274,7 +274,7 @@
 
     if-eqz p2, :cond_d0
 
-    .line 80
+    .line 85
     new-instance p2, Lorg/telegram/ui/Components/CheckBox2;
 
     const/16 p3, 0x1a
@@ -283,10 +283,10 @@
 
     iput-object p2, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;->checkView:Lorg/telegram/ui/Components/CheckBox2;
 
-    .line 81
+    .line 86
     invoke-virtual {p2, v0}, Lorg/telegram/ui/Components/CheckBox2;->setDrawUnchecked(Z)V
 
-    .line 82
+    .line 87
     iget-object p1, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;->checkView:Lorg/telegram/ui/Components/CheckBox2;
 
     const/4 p2, 0x0
@@ -295,14 +295,14 @@
 
     invoke-virtual {p1, p2, p2, p4}, Lorg/telegram/ui/Components/CheckBox2;->setColor(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 83
+    .line 88
     iget-object p1, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;->checkView:Lorg/telegram/ui/Components/CheckBox2;
 
     const/4 p2, -0x1
 
     invoke-virtual {p1, p2}, Lorg/telegram/ui/Components/CheckBox2;->setDrawBackgroundAsArc(I)V
 
-    .line 84
+    .line 89
     iget-object p1, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;->checkView:Lorg/telegram/ui/Components/CheckBox2;
 
     sget-boolean p4, Lorg/telegram/messenger/LocaleController;->isRTL:Z
@@ -330,7 +330,7 @@
 .method private getThemedColor(Ljava/lang/String;)I
     .registers 3
 
-    .line 234
+    .line 250
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;->resourcesProvider:Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;
 
     if-eqz v0, :cond_9
@@ -347,7 +347,7 @@
     :goto_a
     if-eqz v0, :cond_11
 
-    .line 235
+    .line 251
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
     move-result p1
@@ -368,7 +368,7 @@
 .method public getCheckView()Lorg/telegram/ui/Components/CheckBox2;
     .registers 2
 
-    .line 239
+    .line 255
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;->checkView:Lorg/telegram/ui/Components/CheckBox2;
 
     return-object v0
@@ -377,7 +377,7 @@
 .method public getImageView()Landroid/widget/ImageView;
     .registers 2
 
-    .line 208
+    .line 224
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;->imageView:Landroid/widget/ImageView;
 
     return-object v0
@@ -386,7 +386,7 @@
 .method public getRightIcon()Landroid/widget/ImageView;
     .registers 2
 
-    .line 249
+    .line 265
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;->rightIcon:Landroid/widget/ImageView;
 
     return-object v0
@@ -395,16 +395,63 @@
 .method public getTextView()Landroid/widget/TextView;
     .registers 2
 
-    .line 204
+    .line 220
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;->textView:Landroid/widget/TextView;
 
     return-object v0
 .end method
 
+.method public onInitializeAccessibilityNodeInfo(Landroid/view/accessibility/AccessibilityNodeInfo;)V
+    .registers 3
+
+    .line 111
+    invoke-super {p0, p1}, Landroid/widget/FrameLayout;->onInitializeAccessibilityNodeInfo(Landroid/view/accessibility/AccessibilityNodeInfo;)V
+
+    .line 112
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->isEnabled()Z
+
+    move-result v0
+
+    invoke-virtual {p1, v0}, Landroid/view/accessibility/AccessibilityNodeInfo;->setEnabled(Z)V
+
+    .line 113
+    iget-object v0, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;->checkView:Lorg/telegram/ui/Components/CheckBox2;
+
+    if-eqz v0, :cond_26
+
+    invoke-virtual {v0}, Lorg/telegram/ui/Components/CheckBox2;->isChecked()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_26
+
+    const/4 v0, 0x1
+
+    .line 114
+    invoke-virtual {p1, v0}, Landroid/view/accessibility/AccessibilityNodeInfo;->setCheckable(Z)V
+
+    .line 115
+    iget-object v0, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;->checkView:Lorg/telegram/ui/Components/CheckBox2;
+
+    invoke-virtual {v0}, Lorg/telegram/ui/Components/CheckBox2;->isChecked()Z
+
+    move-result v0
+
+    invoke-virtual {p1, v0}, Landroid/view/accessibility/AccessibilityNodeInfo;->setChecked(Z)V
+
+    const-string v0, "android.widget.CheckBox"
+
+    .line 116
+    invoke-virtual {p1, v0}, Landroid/view/accessibility/AccessibilityNodeInfo;->setClassName(Ljava/lang/CharSequence;)V
+
+    :cond_26
+    return-void
+.end method
+
 .method protected onMeasure(II)V
     .registers 4
 
-    .line 90
+    .line 95
     iget p2, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;->itemHeight:I
 
     int-to-float p2, p2
@@ -427,12 +474,12 @@
 .method public openSwipeBack()V
     .registers 2
 
-    .line 243
+    .line 259
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;->openSwipeBackLayout:Ljava/lang/Runnable;
 
     if-eqz v0, :cond_7
 
-    .line 244
+    .line 260
     invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 
     :cond_7
@@ -442,7 +489,7 @@
 .method public setCheckColor(Ljava/lang/String;)V
     .registers 4
 
-    .line 105
+    .line 121
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;->checkView:Lorg/telegram/ui/Components/CheckBox2;
 
     const/4 v1, 0x0
@@ -455,7 +502,7 @@
 .method public setChecked(Z)V
     .registers 4
 
-    .line 98
+    .line 103
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;->checkView:Lorg/telegram/ui/Components/CheckBox2;
 
     if-nez v0, :cond_5
@@ -465,7 +512,7 @@
     :cond_5
     const/4 v1, 0x1
 
-    .line 101
+    .line 106
     invoke-virtual {v0, p1, v1}, Lorg/telegram/ui/Components/CheckBox2;->setChecked(ZZ)V
 
     return-void
@@ -474,10 +521,10 @@
 .method public setColors(II)Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;
     .registers 3
 
-    .line 150
+    .line 166
     invoke-virtual {p0, p1}, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;->setTextColor(I)V
 
-    .line 151
+    .line 167
     invoke-virtual {p0, p2}, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;->setIconColor(I)V
 
     return-object p0
@@ -486,7 +533,7 @@
 .method public setIcon(I)V
     .registers 3
 
-    .line 168
+    .line 184
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;->imageView:Landroid/widget/ImageView;
 
     invoke-virtual {v0, p1}, Landroid/widget/ImageView;->setImageResource(I)V
@@ -497,12 +544,12 @@
 .method public setIconColor(I)V
     .registers 5
 
-    .line 162
+    .line 178
     iget v0, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;->iconColor:I
 
     if-eq v0, p1, :cond_12
 
-    .line 163
+    .line 179
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;->imageView:Landroid/widget/ImageView;
 
     new-instance v1, Landroid/graphics/PorterDuffColorFilter;
@@ -522,7 +569,7 @@
 .method public setItemHeight(I)V
     .registers 2
 
-    .line 94
+    .line 99
     iput p1, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;->itemHeight:I
 
     return-void
@@ -531,14 +578,14 @@
 .method public setMultiline()V
     .registers 4
 
-    .line 127
+    .line 143
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;->textView:Landroid/widget/TextView;
 
     const/4 v1, 0x2
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setLines(I)V
 
-    .line 128
+    .line 144
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;->textView:Landroid/widget/TextView;
 
     const/4 v1, 0x1
@@ -547,14 +594,14 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/widget/TextView;->setTextSize(IF)V
 
-    .line 129
+    .line 145
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;->textView:Landroid/widget/TextView;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setSingleLine(Z)V
 
-    .line 130
+    .line 146
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;->textView:Landroid/widget/TextView;
 
     const/16 v1, 0x10
@@ -567,12 +614,12 @@
 .method public setRightIcon(I)V
     .registers 6
 
-    .line 109
+    .line 125
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;->rightIcon:Landroid/widget/ImageView;
 
     if-nez v0, :cond_3d
 
-    .line 110
+    .line 126
     new-instance v0, Landroid/widget/ImageView;
 
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
@@ -583,12 +630,12 @@
 
     iput-object v0, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;->rightIcon:Landroid/widget/ImageView;
 
-    .line 111
+    .line 127
     sget-object v1, Landroid/widget/ImageView$ScaleType;->CENTER:Landroid/widget/ImageView$ScaleType;
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setScaleType(Landroid/widget/ImageView$ScaleType;)V
 
-    .line 112
+    .line 128
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;->rightIcon:Landroid/widget/ImageView;
 
     iget v1, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;->iconColor:I
@@ -597,19 +644,19 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/widget/ImageView;->setColorFilter(ILandroid/graphics/PorterDuff$Mode;)V
 
-    .line 113
+    .line 129
     sget-boolean v0, Lorg/telegram/messenger/LocaleController;->isRTL:Z
 
     if-eqz v0, :cond_28
 
-    .line 114
+    .line 130
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;->rightIcon:Landroid/widget/ImageView;
 
     const/high16 v1, -0x40800000    # -1.0f
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setScaleX(F)V
 
-    .line 116
+    .line 132
     :cond_28
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;->rightIcon:Landroid/widget/ImageView;
 
@@ -637,7 +684,7 @@
 
     invoke-virtual {p0, v0, v1}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 118
+    .line 134
     :cond_3d
     sget-boolean v0, Lorg/telegram/messenger/LocaleController;->isRTL:Z
 
@@ -674,7 +721,7 @@
 
     invoke-virtual {p0, v0, v2, v1, v2}, Landroid/widget/FrameLayout;->setPadding(IIII)V
 
-    .line 119
+    .line 135
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;->rightIcon:Landroid/widget/ImageView;
 
     invoke-virtual {v0, p1}, Landroid/widget/ImageView;->setImageResource(I)V
@@ -685,15 +732,15 @@
 .method public setSelectorColor(I)V
     .registers 3
 
-    .line 212
+    .line 228
     iget v0, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;->selectorColor:I
 
     if-eq v0, p1, :cond_9
 
-    .line 213
+    .line 229
     iput p1, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;->selectorColor:I
 
-    .line 214
+    .line 230
     invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;->updateBackground()V
 
     :cond_9
@@ -703,7 +750,7 @@
 .method public setSubtext(Ljava/lang/String;)V
     .registers 14
 
-    .line 180
+    .line 196
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;->subtextView:Landroid/widget/TextView;
 
     const/16 v1, 0x8
@@ -714,7 +761,7 @@
 
     if-nez v0, :cond_6f
 
-    .line 181
+    .line 197
     new-instance v0, Landroid/widget/TextView;
 
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
@@ -725,48 +772,48 @@
 
     iput-object v0, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;->subtextView:Landroid/widget/TextView;
 
-    .line 182
+    .line 198
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setLines(I)V
 
-    .line 183
+    .line 199
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;->subtextView:Landroid/widget/TextView;
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setSingleLine(Z)V
 
-    .line 184
+    .line 200
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;->subtextView:Landroid/widget/TextView;
 
     const/4 v4, 0x3
 
     invoke-virtual {v0, v4}, Landroid/widget/TextView;->setGravity(I)V
 
-    .line 185
+    .line 201
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;->subtextView:Landroid/widget/TextView;
 
     sget-object v5, Landroid/text/TextUtils$TruncateAt;->END:Landroid/text/TextUtils$TruncateAt;
 
     invoke-virtual {v0, v5}, Landroid/widget/TextView;->setEllipsize(Landroid/text/TextUtils$TruncateAt;)V
 
-    .line 186
+    .line 202
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;->subtextView:Landroid/widget/TextView;
 
     const v5, -0x837d7a
 
     invoke-virtual {v0, v5}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 187
+    .line 203
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;->subtextView:Landroid/widget/TextView;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 188
+    .line 204
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;->subtextView:Landroid/widget/TextView;
 
     const/high16 v5, 0x41500000    # 13.0f
 
     invoke-virtual {v0, v2, v5}, Landroid/widget/TextView;->setTextSize(IF)V
 
-    .line 189
+    .line 205
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;->subtextView:Landroid/widget/TextView;
 
     sget-boolean v5, Lorg/telegram/messenger/LocaleController;->isRTL:Z
@@ -801,7 +848,7 @@
     :goto_54
     invoke-virtual {v0, v5, v3, v6, v3}, Landroid/widget/TextView;->setPadding(IIII)V
 
-    .line 190
+    .line 206
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;->subtextView:Landroid/widget/TextView;
 
     const/4 v5, -0x2
@@ -831,7 +878,7 @@
 
     invoke-virtual {p0, v0, v4}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 192
+    .line 208
     :cond_6f
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -839,7 +886,7 @@
 
     xor-int/2addr v0, v2
 
-    .line 193
+    .line 209
     iget-object v4, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;->subtextView:Landroid/widget/TextView;
 
     invoke-virtual {v4}, Landroid/widget/TextView;->getVisibility()I
@@ -856,7 +903,7 @@
     :goto_7e
     if-eq v0, v2, :cond_9f
 
-    .line 195
+    .line 211
     iget-object v2, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;->subtextView:Landroid/widget/TextView;
 
     if-eqz v0, :cond_85
@@ -866,7 +913,7 @@
     :cond_85
     invoke-virtual {v2, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 196
+    .line 212
     iget-object v1, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;->textView:Landroid/widget/TextView;
 
     invoke-virtual {v1}, Landroid/widget/TextView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
@@ -879,7 +926,7 @@
 
     const/high16 v0, 0x41200000    # 10.0f
 
-    .line 197
+    .line 213
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v3
@@ -887,12 +934,12 @@
     :cond_98
     iput v3, v1, Landroid/widget/FrameLayout$LayoutParams;->bottomMargin:I
 
-    .line 198
+    .line 214
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;->textView:Landroid/widget/TextView;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 200
+    .line 216
     :cond_9f
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;->subtextView:Landroid/widget/TextView;
 
@@ -904,7 +951,7 @@
 .method public setSubtextColor(I)V
     .registers 3
 
-    .line 176
+    .line 192
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;->subtextView:Landroid/widget/TextView;
 
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->setTextColor(I)V
@@ -915,7 +962,7 @@
 .method public setText(Ljava/lang/String;)V
     .registers 3
 
-    .line 172
+    .line 188
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;->textView:Landroid/widget/TextView;
 
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
@@ -928,7 +975,7 @@
 
     const/4 v0, 0x0
 
-    .line 123
+    .line 139
     invoke-virtual {p0, p1, p2, v0}, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;->setTextAndIcon(Ljava/lang/CharSequence;ILandroid/graphics/drawable/Drawable;)V
 
     return-void
@@ -937,7 +984,7 @@
 .method public setTextAndIcon(Ljava/lang/CharSequence;ILandroid/graphics/drawable/Drawable;)V
     .registers 6
 
-    .line 134
+    .line 150
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;->textView:Landroid/widget/TextView;
 
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
@@ -948,14 +995,14 @@
 
     if-nez p3, :cond_1b
 
-    .line 135
+    .line 151
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;->checkView:Lorg/telegram/ui/Components/CheckBox2;
 
     if-eqz v0, :cond_f
 
     goto :goto_1b
 
-    .line 144
+    .line 160
     :cond_f
     iget-object p2, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;->imageView:Landroid/widget/ImageView;
 
@@ -963,7 +1010,7 @@
 
     invoke-virtual {p2, p3}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 145
+    .line 161
     iget-object p2, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;->textView:Landroid/widget/TextView;
 
     invoke-virtual {p2, p1, p1, p1, p1}, Landroid/widget/TextView;->setPadding(IIII)V
@@ -974,26 +1021,26 @@
     :goto_1b
     if-eqz p3, :cond_23
 
-    .line 137
+    .line 153
     iget-object p2, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;->imageView:Landroid/widget/ImageView;
 
     invoke-virtual {p2, p3}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
     goto :goto_28
 
-    .line 139
+    .line 155
     :cond_23
     iget-object p3, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;->imageView:Landroid/widget/ImageView;
 
     invoke-virtual {p3, p2}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 141
+    .line 157
     :goto_28
     iget-object p2, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;->imageView:Landroid/widget/ImageView;
 
     invoke-virtual {p2, p1}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 142
+    .line 158
     iget-object p2, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;->textView:Landroid/widget/TextView;
 
     sget-boolean p3, Lorg/telegram/messenger/LocaleController;->isRTL:Z
@@ -1035,12 +1082,12 @@
 .method public setTextColor(I)V
     .registers 3
 
-    .line 156
+    .line 172
     iget v0, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;->textColor:I
 
     if-eq v0, p1, :cond_b
 
-    .line 157
+    .line 173
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;->textView:Landroid/widget/TextView;
 
     iput p1, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;->textColor:I
@@ -1054,7 +1101,7 @@
 .method updateBackground()V
     .registers 5
 
-    .line 228
+    .line 244
     iget-boolean v0, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;->top:Z
 
     const/4 v1, 0x6
@@ -1070,7 +1117,7 @@
     :cond_8
     const/4 v0, 0x0
 
-    .line 229
+    .line 245
     :goto_9
     iget-boolean v3, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;->bottom:Z
 
@@ -1081,7 +1128,7 @@
     :cond_e
     const/4 v1, 0x0
 
-    .line 230
+    .line 246
     :goto_f
     iget v2, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;->selectorColor:I
 
@@ -1097,7 +1144,7 @@
 .method public updateSelectorBackground(ZZ)V
     .registers 4
 
-    .line 219
+    .line 235
     iget-boolean v0, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;->top:Z
 
     if-ne v0, p1, :cond_9
@@ -1108,14 +1155,14 @@
 
     return-void
 
-    .line 222
+    .line 238
     :cond_9
     iput-boolean p1, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;->top:Z
 
-    .line 223
+    .line 239
     iput-boolean p2, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;->bottom:Z
 
-    .line 224
+    .line 240
     invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;->updateBackground()V
 
     return-void

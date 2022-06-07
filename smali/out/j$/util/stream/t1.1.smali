@@ -1,10 +1,52 @@
-.class public interface abstract Lj$/util/stream/t1;
+.class public final synthetic Lj$/util/stream/t1;
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lj$/util/stream/n3;
+.implements Lj$/util/function/f;
+
+
+# static fields
+.field public static final synthetic a:Lj$/util/stream/t1;
+
+
+# direct methods
+.method static synthetic constructor <clinit>()V
+    .registers 1
+
+    new-instance v0, Lj$/util/stream/t1;
+
+    invoke-direct {v0}, Lj$/util/stream/t1;-><init>()V
+
+    sput-object v0, Lj$/util/stream/t1;->a:Lj$/util/stream/t1;
+
+    return-void
+.end method
+
+.method private synthetic constructor <init>()V
+    .registers 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public abstract a()Lj$/util/stream/B1;
+.method public final accept(D)V
+    .registers 3
+
+    return-void
+.end method
+
+.method public j(Lj$/util/function/f;)Lj$/util/function/f;
+    .registers 3
+
+    .line 1
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v0, Lj$/util/function/e;
+
+    invoke-direct {v0, p0, p1}, Lj$/util/function/e;-><init>(Lj$/util/function/f;Lj$/util/function/f;)V
+
+    return-object v0
 .end method

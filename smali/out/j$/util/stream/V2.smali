@@ -1,80 +1,108 @@
-.class abstract Lj$/util/stream/V2;
-.super Ljava/lang/Object;
-
-# interfaces
-.implements Lj$/util/stream/O4;
+.class final Lj$/util/stream/V2;
+.super Lj$/util/stream/f;
 
 
 # instance fields
-.field private final a:Lj$/util/stream/f4;
+.field private final h:Lj$/util/stream/U2;
 
 
 # direct methods
-.method constructor <init>(Lj$/util/stream/f4;)V
-    .registers 2
+.method constructor <init>(Lj$/util/stream/U2;Lj$/util/stream/y2;Lj$/util/u;)V
+    .registers 4
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2, p3}, Lj$/util/stream/f;-><init>(Lj$/util/stream/y2;Lj$/util/u;)V
 
-    iput-object p1, p0, Lj$/util/stream/V2;->a:Lj$/util/stream/f4;
+    iput-object p1, p0, Lj$/util/stream/V2;->h:Lj$/util/stream/U2;
+
+    return-void
+.end method
+
+.method constructor <init>(Lj$/util/stream/V2;Lj$/util/u;)V
+    .registers 3
+
+    invoke-direct {p0, p1, p2}, Lj$/util/stream/f;-><init>(Lj$/util/stream/f;Lj$/util/u;)V
+
+    iget-object p1, p1, Lj$/util/stream/V2;->h:Lj$/util/stream/U2;
+
+    iput-object p1, p0, Lj$/util/stream/V2;->h:Lj$/util/stream/U2;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public abstract a()Lj$/util/stream/T2;
-.end method
-
-.method public synthetic b()I
-    .registers 2
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public c(Lj$/util/stream/z2;Lj$/util/y;)Ljava/lang/Object;
+.method protected a()Ljava/lang/Object;
     .registers 4
 
-    new-instance v0, Lj$/util/stream/W2;
-
-    invoke-direct {v0, p0, p1, p2}, Lj$/util/stream/W2;-><init>(Lj$/util/stream/V2;Lj$/util/stream/z2;Lj$/util/y;)V
-
-    invoke-virtual {v0}, Ljava/util/concurrent/CountedCompleter;->invoke()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lj$/util/stream/T2;
-
-    invoke-interface {p1}, Lj$/util/function/y;->get()Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public d(Lj$/util/stream/z2;Lj$/util/y;)Ljava/lang/Object;
-    .registers 5
-
-    invoke-virtual {p0}, Lj$/util/stream/V2;->a()Lj$/util/stream/T2;
-
-    move-result-object v0
-
-    check-cast p1, Lj$/util/stream/c;
-
     .line 1
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget-object v0, p0, Lj$/util/stream/f;->a:Lj$/util/stream/y2;
 
-    invoke-virtual {p1, v0}, Lj$/util/stream/c;->v0(Lj$/util/stream/n3;)Lj$/util/stream/n3;
+    iget-object v1, p0, Lj$/util/stream/V2;->h:Lj$/util/stream/U2;
+
+    invoke-virtual {v1}, Lj$/util/stream/U2;->a()Lj$/util/stream/S2;
 
     move-result-object v1
 
-    invoke-virtual {p1, v1, p2}, Lj$/util/stream/c;->n0(Lj$/util/stream/n3;Lj$/util/y;)V
+    iget-object v2, p0, Lj$/util/stream/f;->b:Lj$/util/u;
 
-    .line 2
-    invoke-interface {v0}, Lj$/util/function/y;->get()Ljava/lang/Object;
+    invoke-virtual {v0, v1, v2}, Lj$/util/stream/y2;->u0(Lj$/util/stream/m3;Lj$/util/u;)Lj$/util/stream/m3;
+
+    return-object v1
+.end method
+
+.method protected f(Lj$/util/u;)Lj$/util/stream/f;
+    .registers 3
+
+    .line 1
+    new-instance v0, Lj$/util/stream/V2;
+
+    invoke-direct {v0, p0, p1}, Lj$/util/stream/V2;-><init>(Lj$/util/stream/V2;Lj$/util/u;)V
+
+    return-object v0
+.end method
+
+.method public onCompletion(Ljava/util/concurrent/CountedCompleter;)V
+    .registers 3
+
+    invoke-virtual {p0}, Lj$/util/stream/f;->d()Z
+
+    move-result p1
+
+    if-nez p1, :cond_20
+
+    iget-object p1, p0, Lj$/util/stream/f;->d:Lj$/util/stream/f;
+
+    check-cast p1, Lj$/util/stream/V2;
+
+    invoke-virtual {p1}, Lj$/util/stream/f;->b()Ljava/lang/Object;
 
     move-result-object p1
 
-    return-object p1
+    check-cast p1, Lj$/util/stream/S2;
+
+    iget-object v0, p0, Lj$/util/stream/f;->e:Lj$/util/stream/f;
+
+    check-cast v0, Lj$/util/stream/V2;
+
+    invoke-virtual {v0}, Lj$/util/stream/f;->b()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lj$/util/stream/S2;
+
+    invoke-interface {p1, v0}, Lj$/util/stream/S2;->h(Lj$/util/stream/S2;)V
+
+    invoke-virtual {p0, p1}, Lj$/util/stream/f;->g(Ljava/lang/Object;)V
+
+    :cond_20
+    const/4 p1, 0x0
+
+    .line 1
+    iput-object p1, p0, Lj$/util/stream/f;->b:Lj$/util/u;
+
+    iput-object p1, p0, Lj$/util/stream/f;->e:Lj$/util/stream/f;
+
+    iput-object p1, p0, Lj$/util/stream/f;->d:Lj$/util/stream/f;
+
+    return-void
 .end method

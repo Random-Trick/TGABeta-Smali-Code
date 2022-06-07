@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lorg/telegram/ui/Components/RecyclerListView$OnItemClickListener;
+.implements Lorg/telegram/messenger/MessagesStorage$IntCallback;
 
 
 # instance fields
@@ -22,12 +22,12 @@
 
 
 # virtual methods
-.method public final onItemClick(Landroid/view/View;I)V
-    .registers 4
+.method public final run(I)V
+    .registers 3
 
     iget-object v0, p0, Lorg/telegram/ui/DialogsActivity$$ExternalSyntheticLambda49;->f$0:Lorg/telegram/ui/DialogsActivity;
 
-    invoke-static {v0, p1, p2}, Lorg/telegram/ui/DialogsActivity;->$r8$lambda$B2xAWVfXo2uz6spH_OwnJQeh_1k(Lorg/telegram/ui/DialogsActivity;Landroid/view/View;I)V
+    invoke-static {v0, p1}, Lorg/telegram/ui/DialogsActivity;->$r8$lambda$9ejpF0hJCAIJ3jqZPPoic0KSr-0(Lorg/telegram/ui/DialogsActivity;I)V
 
     return-void
 .end method

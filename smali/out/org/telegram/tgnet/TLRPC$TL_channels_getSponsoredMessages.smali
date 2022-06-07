@@ -21,7 +21,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 52318
+    .line 52783
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -32,7 +32,7 @@
 .method public deserializeResponse(Lorg/telegram/tgnet/AbstractSerializedData;IZ)Lorg/telegram/tgnet/TLObject;
     .registers 4
 
-    .line 52324
+    .line 52789
     invoke-static {p1, p2, p3}, Lorg/telegram/tgnet/TLRPC$TL_messages_sponsoredMessages;->TLdeserialize(Lorg/telegram/tgnet/AbstractSerializedData;IZ)Lorg/telegram/tgnet/TLRPC$TL_messages_sponsoredMessages;
 
     move-result-object p1
@@ -43,12 +43,12 @@
 .method public serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
     .registers 3
 
-    .line 52328
+    .line 52793
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_channels_getSponsoredMessages;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 52329
+    .line 52794
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_channels_getSponsoredMessages;->channel:Lorg/telegram/tgnet/TLRPC$InputChannel;
 
     invoke-virtual {v0, p1}, Lorg/telegram/tgnet/TLObject;->serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V

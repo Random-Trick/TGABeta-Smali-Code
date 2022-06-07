@@ -74,12 +74,14 @@
     return-void
 .end method
 
-.method public static synthetic $r8$lambda$f9IN680Ck9HbhfopLwRs1YDaK84(Lorg/telegram/ui/Components/JoinGroupAlert;ZLorg/telegram/tgnet/TLRPC$TL_error;)V
+.method public static synthetic $r8$lambda$hkN7_LCXluMTV-Y2BZgcR_uLDOc(Lorg/telegram/ui/Components/JoinGroupAlert;ZLorg/telegram/tgnet/TLRPC$TL_error;)Z
     .registers 3
 
-    invoke-direct {p0, p1, p2}, Lorg/telegram/ui/Components/JoinGroupAlert;->lambda$new$3(ZLorg/telegram/tgnet/TLRPC$TL_error;)V
+    invoke-direct {p0, p1, p2}, Lorg/telegram/ui/Components/JoinGroupAlert;->lambda$new$3(ZLorg/telegram/tgnet/TLRPC$TL_error;)Z
 
-    return-void
+    move-result p0
+
+    return p0
 .end method
 
 .method public static synthetic $r8$lambda$iKKKhJaUXuBoJOv3nMlCWKdmjT8(Lorg/telegram/ui/Components/JoinGroupAlert;ZLorg/telegram/tgnet/TLRPC$TL_messages_importChatInvite;Lorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/TLRPC$TL_error;)V
@@ -239,7 +241,7 @@
 
     invoke-virtual {v6, v7}, Landroid/widget/ImageView;->setColorFilter(I)V
 
-    const v7, 0x7f070165
+    const v7, 0x7f070128
 
     .line 81
     invoke-virtual {v6, v7}, Landroid/widget/ImageView;->setImageResource(I)V
@@ -614,7 +616,7 @@
 
     const/high16 v14, 0x41600000    # 14.0f
 
-    if-lez v11, :cond_1f2
+    if-lez v11, :cond_1f6
 
     .line 131
     new-instance v15, Landroid/widget/TextView;
@@ -639,30 +641,34 @@
 
     invoke-virtual {v15, v8}, Landroid/widget/TextView;->setEllipsize(Landroid/text/TextUtils$TruncateAt;)V
 
-    if-eqz v6, :cond_1cf
+    if-eqz v6, :cond_1d1
 
-    const-string v8, "Subscribers"
+    new-array v8, v3, [Ljava/lang/Object;
+
+    const-string v14, "Subscribers"
 
     .line 137
-    invoke-static {v8, v11}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    invoke-static {v14, v11, v8}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v8
 
     invoke-virtual {v15, v8}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    goto :goto_1d8
+    goto :goto_1dc
 
-    :cond_1cf
-    const-string v8, "Members"
+    :cond_1d1
+    new-array v8, v3, [Ljava/lang/Object;
+
+    const-string v14, "Members"
 
     .line 139
-    invoke-static {v8, v11}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    invoke-static {v14, v11, v8}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v8
 
     invoke-virtual {v15, v8}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    :goto_1d8
+    :goto_1dc
     const/16 v16, -0x2
 
     const/16 v17, -0x2
@@ -675,29 +681,29 @@
 
     const/16 v21, 0xa
 
-    if-eqz v12, :cond_1e9
+    if-eqz v12, :cond_1ed
 
     const/16 v22, 0x0
 
-    goto :goto_1eb
+    goto :goto_1ef
 
-    :cond_1e9
+    :cond_1ed
     const/16 v22, 0x14
 
     .line 141
-    :goto_1eb
+    :goto_1ef
     invoke-static/range {v16 .. v22}, Lorg/telegram/ui/Components/LayoutHelper;->createLinear(IIIIIII)Landroid/widget/LinearLayout$LayoutParams;
 
     move-result-object v8
 
     invoke-virtual {v2, v15, v8}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    :cond_1f2
+    :cond_1f6
     const/high16 v8, 0x41700000    # 15.0f
 
     const/16 v11, 0x11
 
-    if-eqz v12, :cond_221
+    if-eqz v12, :cond_224
 
     .line 145
     new-instance v12, Landroid/widget/TextView;
@@ -720,74 +726,74 @@
     .line 149
     invoke-virtual {v12, v4, v8}, Landroid/widget/TextView;->setTextSize(IF)V
 
-    const/4 v15, -0x1
+    const/4 v14, -0x1
 
-    const/16 v16, -0x2
+    const/4 v15, -0x2
 
-    const/16 v17, 0x30
+    const/16 v16, 0x30
 
-    const/16 v18, 0x18
+    const/16 v17, 0x18
 
-    const/16 v19, 0xa
+    const/16 v18, 0xa
 
-    const/16 v20, 0x18
+    const/16 v19, 0x18
 
-    const/16 v21, 0x14
+    const/16 v20, 0x14
 
     .line 150
-    invoke-static/range {v15 .. v21}, Lorg/telegram/ui/Components/LayoutHelper;->createLinear(IIIIIII)Landroid/widget/LinearLayout$LayoutParams;
+    invoke-static/range {v14 .. v20}, Lorg/telegram/ui/Components/LayoutHelper;->createLinear(IIIIIII)Landroid/widget/LinearLayout$LayoutParams;
 
     move-result-object v5
 
     invoke-virtual {v2, v12, v5}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 153
-    :cond_221
+    :cond_224
     iget-object v5, v0, Lorg/telegram/ui/Components/JoinGroupAlert;->chatInvite:Lorg/telegram/tgnet/TLRPC$ChatInvite;
 
     const/16 v10, 0x30
 
     const/4 v12, -0x1
 
-    if-eqz v5, :cond_348
+    if-eqz v5, :cond_34b
 
-    iget-boolean v15, v5, Lorg/telegram/tgnet/TLRPC$ChatInvite;->request_needed:Z
+    iget-boolean v14, v5, Lorg/telegram/tgnet/TLRPC$ChatInvite;->request_needed:Z
 
-    if-eqz v15, :cond_22e
+    if-eqz v14, :cond_231
 
-    goto/16 :goto_348
+    goto/16 :goto_34b
 
-    :cond_22e
-    if-eqz v5, :cond_449
+    :cond_231
+    if-eqz v5, :cond_44e
 
-    .line 224
+    .line 225
     iget-object v4, v5, Lorg/telegram/tgnet/TLRPC$ChatInvite;->participants:Ljava/util/ArrayList;
 
     invoke-virtual {v4}, Ljava/util/ArrayList;->isEmpty()Z
 
     move-result v4
 
-    if-nez v4, :cond_281
+    if-nez v4, :cond_284
 
-    .line 225
+    .line 226
     new-instance v4, Lorg/telegram/ui/Components/RecyclerListView;
 
     invoke-direct {v4, v1}, Lorg/telegram/ui/Components/RecyclerListView;-><init>(Landroid/content/Context;)V
 
-    .line 226
+    .line 227
     invoke-static {v7}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v5
 
     invoke-virtual {v4, v3, v3, v3, v5}, Landroid/view/ViewGroup;->setPadding(IIII)V
 
-    .line 227
+    .line 228
     invoke-virtual {v4, v3}, Landroidx/recyclerview/widget/RecyclerView;->setNestedScrollingEnabled(Z)V
 
-    .line 228
+    .line 229
     invoke-virtual {v4, v3}, Landroidx/recyclerview/widget/RecyclerView;->setClipToPadding(Z)V
 
-    .line 229
+    .line 230
     new-instance v5, Landroidx/recyclerview/widget/LinearLayoutManager;
 
     invoke-virtual/range {p0 .. p0}, Landroid/app/Dialog;->getContext()Landroid/content/Context;
@@ -798,13 +804,13 @@
 
     invoke-virtual {v4, v5}, Landroidx/recyclerview/widget/RecyclerView;->setLayoutManager(Landroidx/recyclerview/widget/RecyclerView$LayoutManager;)V
 
-    .line 230
+    .line 231
     invoke-virtual {v4, v3}, Landroid/view/ViewGroup;->setHorizontalScrollBarEnabled(Z)V
 
-    .line 231
+    .line 232
     invoke-virtual {v4, v3}, Lorg/telegram/ui/Components/RecyclerListView;->setVerticalScrollBarEnabled(Z)V
 
-    .line 232
+    .line 233
     new-instance v5, Lorg/telegram/ui/Components/JoinGroupAlert$UsersAdapter;
 
     invoke-direct {v5, v0, v1}, Lorg/telegram/ui/Components/JoinGroupAlert$UsersAdapter;-><init>(Lorg/telegram/ui/Components/JoinGroupAlert;Landroid/content/Context;)V
@@ -813,7 +819,7 @@
 
     const-string v5, "dialogScrollGlow"
 
-    .line 233
+    .line 234
     invoke-static {v5}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
 
     move-result v5
@@ -834,29 +840,29 @@
 
     const/16 v19, 0x7
 
-    .line 234
+    .line 235
     invoke-static/range {v13 .. v19}, Lorg/telegram/ui/Components/LayoutHelper;->createLinear(IIIIIII)Landroid/widget/LinearLayout$LayoutParams;
 
     move-result-object v5
 
     invoke-virtual {v2, v4, v5}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 237
-    :cond_281
+    .line 238
+    :cond_284
     new-instance v4, Landroid/view/View;
 
     invoke-direct {v4, v1}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
     const-string v5, "dialogShadowLine"
 
-    .line 238
+    .line 239
     invoke-static {v5}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
 
     move-result v5
 
     invoke-virtual {v4, v5}, Landroid/view/View;->setBackgroundColor(I)V
 
-    .line 239
+    .line 240
     new-instance v5, Landroid/widget/LinearLayout$LayoutParams;
 
     invoke-static {}, Lorg/telegram/messenger/AndroidUtilities;->getShadowHeight()I
@@ -867,21 +873,21 @@
 
     invoke-virtual {v2, v4, v5}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 241
+    .line 242
     new-instance v4, Lorg/telegram/ui/Components/PickerBottomLayout;
 
     invoke-direct {v4, v1, v3}, Lorg/telegram/ui/Components/PickerBottomLayout;-><init>(Landroid/content/Context;Z)V
 
     const/16 v1, 0x53
 
-    .line 242
+    .line 243
     invoke-static {v12, v10, v1}, Lorg/telegram/ui/Components/LayoutHelper;->createFrame(III)Landroid/widget/FrameLayout$LayoutParams;
 
     move-result-object v1
 
     invoke-virtual {v2, v4, v1}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 243
+    .line 244
     iget-object v1, v4, Lorg/telegram/ui/Components/PickerBottomLayout;->cancelButton:Landroid/widget/TextView;
 
     const/high16 v2, 0x41900000    # 18.0f
@@ -896,7 +902,7 @@
 
     invoke-virtual {v1, v5, v3, v6, v3}, Landroid/widget/TextView;->setPadding(IIII)V
 
-    .line 244
+    .line 245
     iget-object v1, v4, Lorg/telegram/ui/Components/PickerBottomLayout;->cancelButton:Landroid/widget/TextView;
 
     const-string v5, "dialogTextBlue2"
@@ -907,10 +913,10 @@
 
     invoke-virtual {v1, v6}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 245
+    .line 246
     iget-object v1, v4, Lorg/telegram/ui/Components/PickerBottomLayout;->cancelButton:Landroid/widget/TextView;
 
-    const v6, 0x7f0e0331
+    const v6, 0x7f0e036d
 
     const-string v7, "Cancel"
 
@@ -924,7 +930,7 @@
 
     invoke-virtual {v1, v6}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 246
+    .line 247
     iget-object v1, v4, Lorg/telegram/ui/Components/PickerBottomLayout;->cancelButton:Landroid/widget/TextView;
 
     new-instance v6, Lorg/telegram/ui/Components/JoinGroupAlert$$ExternalSyntheticLambda3;
@@ -933,7 +939,7 @@
 
     invoke-virtual {v1, v6}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 247
+    .line 248
     iget-object v1, v4, Lorg/telegram/ui/Components/PickerBottomLayout;->doneButton:Landroid/widget/LinearLayout;
 
     invoke-static {v2}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -946,19 +952,19 @@
 
     invoke-virtual {v1, v6, v3, v2, v3}, Landroid/widget/LinearLayout;->setPadding(IIII)V
 
-    .line 248
+    .line 249
     iget-object v1, v4, Lorg/telegram/ui/Components/PickerBottomLayout;->doneButton:Landroid/widget/LinearLayout;
 
     invoke-virtual {v1, v3}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
-    .line 249
+    .line 250
     iget-object v1, v4, Lorg/telegram/ui/Components/PickerBottomLayout;->doneButtonBadgeTextView:Landroid/widget/TextView;
 
     const/16 v2, 0x8
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 250
+    .line 251
     iget-object v1, v4, Lorg/telegram/ui/Components/PickerBottomLayout;->doneButtonTextView:Landroid/widget/TextView;
 
     invoke-static {v5}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
@@ -967,25 +973,25 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 251
+    .line 252
     iget-object v1, v0, Lorg/telegram/ui/Components/JoinGroupAlert;->chatInvite:Lorg/telegram/tgnet/TLRPC$ChatInvite;
 
     iget-boolean v2, v1, Lorg/telegram/tgnet/TLRPC$ChatInvite;->channel:Z
 
-    if-eqz v2, :cond_30b
+    if-eqz v2, :cond_30e
 
     iget-boolean v2, v1, Lorg/telegram/tgnet/TLRPC$ChatInvite;->megagroup:Z
 
-    if-eqz v2, :cond_31b
+    if-eqz v2, :cond_31e
 
-    :cond_30b
+    :cond_30e
     iget-object v1, v1, Lorg/telegram/tgnet/TLRPC$ChatInvite;->chat:Lorg/telegram/tgnet/TLRPC$Chat;
 
     invoke-static {v1}, Lorg/telegram/messenger/ChatObject;->isChannel(Lorg/telegram/tgnet/TLRPC$Chat;)Z
 
     move-result v1
 
-    if-eqz v1, :cond_32e
+    if-eqz v1, :cond_331
 
     iget-object v1, v0, Lorg/telegram/ui/Components/JoinGroupAlert;->chatInvite:Lorg/telegram/tgnet/TLRPC$ChatInvite;
 
@@ -993,13 +999,13 @@
 
     iget-boolean v1, v1, Lorg/telegram/tgnet/TLRPC$Chat;->megagroup:Z
 
-    if-nez v1, :cond_32e
+    if-nez v1, :cond_331
 
-    .line 252
-    :cond_31b
+    .line 253
+    :cond_31e
     iget-object v1, v4, Lorg/telegram/ui/Components/PickerBottomLayout;->doneButtonTextView:Landroid/widget/TextView;
 
-    const v2, 0x7f0e0e24
+    const v2, 0x7f0e0ecd
 
     const-string v3, "ProfileJoinChannel"
 
@@ -1013,13 +1019,13 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    goto :goto_33c
+    goto :goto_33f
 
-    .line 254
-    :cond_32e
+    .line 255
+    :cond_331
     iget-object v1, v4, Lorg/telegram/ui/Components/PickerBottomLayout;->doneButtonTextView:Landroid/widget/TextView;
 
-    const v2, 0x7f0e08df
+    const v2, 0x7f0e0944
 
     const-string v3, "JoinGroup"
 
@@ -1029,8 +1035,8 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 256
-    :goto_33c
+    .line 257
+    :goto_33f
     iget-object v1, v4, Lorg/telegram/ui/Components/PickerBottomLayout;->doneButton:Landroid/widget/LinearLayout;
 
     new-instance v2, Lorg/telegram/ui/Components/JoinGroupAlert$$ExternalSyntheticLambda4;
@@ -1039,11 +1045,11 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/LinearLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    goto/16 :goto_449
+    goto/16 :goto_44e
 
     .line 154
-    :cond_348
-    :goto_348
+    :cond_34b
+    :goto_34b
     new-instance v1, Landroid/widget/FrameLayout;
 
     invoke-virtual/range {p0 .. p0}, Landroid/app/Dialog;->getContext()Landroid/content/Context;
@@ -1164,20 +1170,20 @@
     .line 168
     iget-object v3, v0, Lorg/telegram/ui/Components/JoinGroupAlert;->requestTextView:Landroid/widget/TextView;
 
-    if-eqz v6, :cond_3c6
+    if-eqz v6, :cond_3c9
 
-    const v5, 0x7f0e0f05
+    const v5, 0x7f0e0fb2
 
     const-string v7, "RequestToJoinChannel"
 
-    goto :goto_3cb
+    goto :goto_3ce
 
-    :cond_3c6
-    const v5, 0x7f0e0f09
+    :cond_3c9
+    const v5, 0x7f0e0fb6
 
     const-string v7, "RequestToJoinGroup"
 
-    :goto_3cb
+    :goto_3ce
     invoke-static {v7, v5}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v5
@@ -1218,30 +1224,30 @@
 
     invoke-virtual {v3, v5}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 215
+    .line 216
     iget-object v3, v0, Lorg/telegram/ui/Components/JoinGroupAlert;->requestTextView:Landroid/widget/TextView;
 
-    const/4 v15, -0x1
+    const/4 v14, -0x1
 
-    const/16 v16, 0x30
+    const/16 v15, 0x30
 
-    const v17, 0x800003
+    const v16, 0x800003
 
-    const/16 v18, 0x10
+    const/16 v17, 0x10
 
-    const/16 v19, 0x0
+    const/16 v18, 0x0
 
-    const/16 v20, 0x10
+    const/16 v19, 0x10
 
-    const/16 v21, 0x0
+    const/16 v20, 0x0
 
-    invoke-static/range {v15 .. v21}, Lorg/telegram/ui/Components/LayoutHelper;->createLinear(IIIIIII)Landroid/widget/LinearLayout$LayoutParams;
+    invoke-static/range {v14 .. v20}, Lorg/telegram/ui/Components/LayoutHelper;->createLinear(IIIIIII)Landroid/widget/LinearLayout$LayoutParams;
 
     move-result-object v5
 
     invoke-virtual {v1, v3, v5}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 217
+    .line 218
     new-instance v1, Landroid/widget/TextView;
 
     invoke-virtual/range {p0 .. p0}, Landroid/app/Dialog;->getContext()Landroid/content/Context;
@@ -1250,34 +1256,36 @@
 
     invoke-direct {v1, v3}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
-    .line 218
+    .line 219
     invoke-virtual {v1, v11}, Landroid/widget/TextView;->setGravity(I)V
 
-    .line 219
-    invoke-virtual {v1, v4, v14}, Landroid/widget/TextView;->setTextSize(IF)V
+    const/high16 v3, 0x41600000    # 14.0f
 
-    if-eqz v6, :cond_423
+    .line 220
+    invoke-virtual {v1, v4, v3}, Landroid/widget/TextView;->setTextSize(IF)V
 
-    const v3, 0x7f0e0f07
+    if-eqz v6, :cond_428
+
+    const v3, 0x7f0e0fb4
 
     const-string v4, "RequestToJoinChannelDescription"
 
-    goto :goto_428
+    goto :goto_42d
 
-    :cond_423
-    const v3, 0x7f0e0f0b
+    :cond_428
+    const v3, 0x7f0e0fb8
 
     const-string v4, "RequestToJoinGroupDescription"
 
-    .line 220
-    :goto_428
+    .line 221
+    :goto_42d
     invoke-static {v4, v3}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v3
 
     invoke-virtual {v1, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 221
+    .line 222
     invoke-static {v13}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
 
     move-result v3
@@ -1298,15 +1306,15 @@
 
     const/16 v10, 0xf
 
-    .line 222
+    .line 223
     invoke-static/range {v4 .. v10}, Lorg/telegram/ui/Components/LayoutHelper;->createLinear(IIIIIII)Landroid/widget/LinearLayout$LayoutParams;
 
     move-result-object v3
 
     invoke-virtual {v2, v1, v3}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    :cond_449
-    :goto_449
+    :cond_44e
+    :goto_44e
     return-void
 .end method
 
@@ -1361,12 +1369,12 @@
 
     if-nez p3, :cond_f
 
-    .line 262
+    .line 263
     move-object v0, p2
 
     check-cast v0, Lorg/telegram/tgnet/TLRPC$Updates;
 
-    .line 263
+    .line 264
     iget v1, p0, Lorg/telegram/ui/ActionBar/BottomSheet;->currentAccount:I
 
     invoke-static {v1}, Lorg/telegram/messenger/MessagesController;->getInstance(I)Lorg/telegram/messenger/MessagesController;
@@ -1377,7 +1385,7 @@
 
     invoke-virtual {v1, v0, v2}, Lorg/telegram/messenger/MessagesController;->processUpdates(Lorg/telegram/tgnet/TLRPC$Updates;Z)V
 
-    .line 265
+    .line 266
     :cond_f
     new-instance v0, Lorg/telegram/ui/Components/JoinGroupAlert$$ExternalSyntheticLambda8;
 
@@ -1391,20 +1399,20 @@
 .method private synthetic lambda$new$11(Landroid/view/View;)V
     .registers 5
 
-    .line 257
+    .line 258
     invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BottomSheet;->dismiss()V
 
-    .line 258
+    .line 259
     new-instance p1, Lorg/telegram/tgnet/TLRPC$TL_messages_importChatInvite;
 
     invoke-direct {p1}, Lorg/telegram/tgnet/TLRPC$TL_messages_importChatInvite;-><init>()V
 
-    .line 259
+    .line 260
     iget-object v0, p0, Lorg/telegram/ui/Components/JoinGroupAlert;->hash:Ljava/lang/String;
 
     iput-object v0, p1, Lorg/telegram/tgnet/TLRPC$TL_messages_importChatInvite;->hash:Ljava/lang/String;
 
-    .line 260
+    .line 261
     iget v0, p0, Lorg/telegram/ui/ActionBar/BottomSheet;->currentAccount:I
 
     invoke-static {v0}, Lorg/telegram/tgnet/ConnectionsManager;->getInstance(I)Lorg/telegram/tgnet/ConnectionsManager;
@@ -1437,7 +1445,7 @@
     return-void
 .end method
 
-.method private synthetic lambda$new$3(ZLorg/telegram/tgnet/TLRPC$TL_error;)V
+.method private synthetic lambda$new$3(ZLorg/telegram/tgnet/TLRPC$TL_error;)Z
     .registers 4
 
     if-eqz p2, :cond_14
@@ -1464,13 +1472,15 @@
     :cond_14
     invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BottomSheet;->dismiss()V
 
-    return-void
+    const/4 p1, 0x0
+
+    return p1
 .end method
 
 .method private synthetic lambda$new$4(ZLandroid/content/DialogInterface;)V
     .registers 4
 
-    .line 205
+    .line 206
     invoke-virtual {p0}, Landroid/app/Dialog;->getContext()Landroid/content/Context;
 
     move-result-object p2
@@ -1485,7 +1495,7 @@
 .method private synthetic lambda$new$5(Lorg/telegram/tgnet/TLRPC$TL_error;ZLorg/telegram/tgnet/TLRPC$TL_messages_importChatInvite;)V
     .registers 6
 
-    .line 200
+    .line 201
     iget-object v0, p0, Lorg/telegram/ui/Components/JoinGroupAlert;->fragment:Lorg/telegram/ui/ActionBar/BaseFragment;
 
     if-eqz v0, :cond_2d
@@ -1501,7 +1511,7 @@
     :cond_b
     if-eqz p1, :cond_2a
 
-    .line 204
+    .line 205
     iget-object v0, p1, Lorg/telegram/tgnet/TLRPC$TL_error;->text:Ljava/lang/String;
 
     const-string v1, "INVITE_REQUEST_SENT"
@@ -1512,7 +1522,7 @@
 
     if-eqz v0, :cond_20
 
-    .line 205
+    .line 206
     new-instance p1, Lorg/telegram/ui/Components/JoinGroupAlert$$ExternalSyntheticLambda0;
 
     invoke-direct {p1, p0, p2}, Lorg/telegram/ui/Components/JoinGroupAlert$$ExternalSyntheticLambda0;-><init>(Lorg/telegram/ui/Components/JoinGroupAlert;Z)V
@@ -1521,7 +1531,7 @@
 
     goto :goto_2a
 
-    .line 207
+    .line 208
     :cond_20
     iget p2, p0, Lorg/telegram/ui/ActionBar/BottomSheet;->currentAccount:I
 
@@ -1533,7 +1543,7 @@
 
     invoke-static {p2, p1, v0, p3, v1}, Lorg/telegram/ui/Components/AlertsCreator;->processError(ILorg/telegram/tgnet/TLRPC$TL_error;Lorg/telegram/ui/ActionBar/BaseFragment;Lorg/telegram/tgnet/TLObject;[Ljava/lang/Object;)Landroid/app/Dialog;
 
-    .line 210
+    .line 211
     :cond_2a
     :goto_2a
     invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BottomSheet;->dismiss()V
@@ -1546,7 +1556,7 @@
 .method private synthetic lambda$new$6(ZLorg/telegram/tgnet/TLRPC$TL_messages_importChatInvite;Lorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/TLRPC$TL_error;)V
     .registers 5
 
-    .line 199
+    .line 200
     new-instance p3, Lorg/telegram/ui/Components/JoinGroupAlert$$ExternalSyntheticLambda9;
 
     invoke-direct {p3, p0, p4, p1, p2}, Lorg/telegram/ui/Components/JoinGroupAlert$$ExternalSyntheticLambda9;-><init>(Lorg/telegram/ui/Components/JoinGroupAlert;Lorg/telegram/tgnet/TLRPC$TL_error;ZLorg/telegram/tgnet/TLRPC$TL_messages_importChatInvite;)V
@@ -1620,18 +1630,18 @@
 
     goto :goto_50
 
-    .line 196
+    .line 197
     :cond_38
     new-instance p2, Lorg/telegram/tgnet/TLRPC$TL_messages_importChatInvite;
 
     invoke-direct {p2}, Lorg/telegram/tgnet/TLRPC$TL_messages_importChatInvite;-><init>()V
 
-    .line 197
+    .line 198
     iget-object v0, p0, Lorg/telegram/ui/Components/JoinGroupAlert;->hash:Ljava/lang/String;
 
     iput-object v0, p2, Lorg/telegram/tgnet/TLRPC$TL_messages_importChatInvite;->hash:Ljava/lang/String;
 
-    .line 198
+    .line 199
     iget v0, p0, Lorg/telegram/ui/ActionBar/BottomSheet;->currentAccount:I
 
     invoke-static {v0}, Lorg/telegram/tgnet/ConnectionsManager;->getInstance(I)Lorg/telegram/tgnet/ConnectionsManager;
@@ -1653,7 +1663,7 @@
 .method private synthetic lambda$new$8(Landroid/view/View;)V
     .registers 2
 
-    .line 246
+    .line 247
     invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BottomSheet;->dismiss()V
 
     return-void
@@ -1662,7 +1672,7 @@
 .method private synthetic lambda$new$9(Lorg/telegram/tgnet/TLRPC$TL_error;Lorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/TLRPC$TL_messages_importChatInvite;)V
     .registers 6
 
-    .line 266
+    .line 267
     iget-object v0, p0, Lorg/telegram/ui/Components/JoinGroupAlert;->fragment:Lorg/telegram/ui/ActionBar/BaseFragment;
 
     if-eqz v0, :cond_6a
@@ -1680,10 +1690,10 @@
 
     if-nez p1, :cond_61
 
-    .line 270
+    .line 271
     check-cast p2, Lorg/telegram/tgnet/TLRPC$Updates;
 
-    .line 271
+    .line 272
     iget-object p1, p2, Lorg/telegram/tgnet/TLRPC$Updates;->chats:Ljava/util/ArrayList;
 
     invoke-virtual {p1}, Ljava/util/ArrayList;->isEmpty()Z
@@ -1692,7 +1702,7 @@
 
     if-nez p1, :cond_6a
 
-    .line 272
+    .line 273
     iget-object p1, p2, Lorg/telegram/tgnet/TLRPC$Updates;->chats:Ljava/util/ArrayList;
 
     invoke-virtual {p1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1701,13 +1711,13 @@
 
     check-cast p1, Lorg/telegram/tgnet/TLRPC$Chat;
 
-    .line 273
+    .line 274
     iput-boolean v0, p1, Lorg/telegram/tgnet/TLRPC$Chat;->left:Z
 
-    .line 274
+    .line 275
     iput-boolean v0, p1, Lorg/telegram/tgnet/TLRPC$Chat;->kicked:Z
 
-    .line 275
+    .line 276
     iget p3, p0, Lorg/telegram/ui/ActionBar/BottomSheet;->currentAccount:I
 
     invoke-static {p3}, Lorg/telegram/messenger/MessagesController;->getInstance(I)Lorg/telegram/messenger/MessagesController;
@@ -1718,7 +1728,7 @@
 
     invoke-virtual {p3, v1, v0}, Lorg/telegram/messenger/MessagesController;->putUsers(Ljava/util/ArrayList;Z)V
 
-    .line 276
+    .line 277
     iget p3, p0, Lorg/telegram/ui/ActionBar/BottomSheet;->currentAccount:I
 
     invoke-static {p3}, Lorg/telegram/messenger/MessagesController;->getInstance(I)Lorg/telegram/messenger/MessagesController;
@@ -1729,19 +1739,19 @@
 
     invoke-virtual {p3, p2, v0}, Lorg/telegram/messenger/MessagesController;->putChats(Ljava/util/ArrayList;Z)V
 
-    .line 277
+    .line 278
     new-instance p2, Landroid/os/Bundle;
 
     invoke-direct {p2}, Landroid/os/Bundle;-><init>()V
 
-    .line 278
+    .line 279
     iget-wide v0, p1, Lorg/telegram/tgnet/TLRPC$Chat;->id:J
 
     const-string p1, "chat_id"
 
     invoke-virtual {p2, p1, v0, v1}, Landroid/os/Bundle;->putLong(Ljava/lang/String;J)V
 
-    .line 279
+    .line 280
     iget p1, p0, Lorg/telegram/ui/ActionBar/BottomSheet;->currentAccount:I
 
     invoke-static {p1}, Lorg/telegram/messenger/MessagesController;->getInstance(I)Lorg/telegram/messenger/MessagesController;
@@ -1756,12 +1766,12 @@
 
     if-eqz p1, :cond_6a
 
-    .line 280
+    .line 281
     new-instance p1, Lorg/telegram/ui/ChatActivity;
 
     invoke-direct {p1, p2}, Lorg/telegram/ui/ChatActivity;-><init>(Landroid/os/Bundle;)V
 
-    .line 281
+    .line 282
     iget-object p2, p0, Lorg/telegram/ui/Components/JoinGroupAlert;->fragment:Lorg/telegram/ui/ActionBar/BaseFragment;
 
     instance-of p3, p2, Lorg/telegram/ui/ChatActivity;
@@ -1770,7 +1780,7 @@
 
     goto :goto_6a
 
-    .line 285
+    .line 286
     :cond_61
     iget p2, p0, Lorg/telegram/ui/ActionBar/BottomSheet;->currentAccount:I
 
@@ -1788,7 +1798,7 @@
 .method public static showBulletin(Landroid/content/Context;Lorg/telegram/ui/ActionBar/BaseFragment;Z)V
     .registers 6
 
-    .line 294
+    .line 295
     new-instance v0, Lorg/telegram/ui/Components/Bulletin$TwoLineLottieLayout;
 
     invoke-virtual {p1}, Lorg/telegram/ui/ActionBar/BaseFragment;->getResourceProvider()Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;
@@ -1797,7 +1807,7 @@
 
     invoke-direct {v0, p0, v1}, Lorg/telegram/ui/Components/Bulletin$TwoLineLottieLayout;-><init>(Landroid/content/Context;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)V
 
-    .line 295
+    .line 296
     iget-object p0, v0, Lorg/telegram/ui/Components/Bulletin$TwoLineLottieLayout;->imageView:Lorg/telegram/ui/Components/RLottieImageView;
 
     const v1, 0x7f0d0088
@@ -1806,12 +1816,12 @@
 
     invoke-virtual {p0, v1, v2, v2}, Lorg/telegram/ui/Components/RLottieImageView;->setAnimation(III)V
 
-    .line 296
+    .line 297
     iget-object p0, v0, Lorg/telegram/ui/Components/Bulletin$TwoLineLottieLayout;->titleTextView:Landroid/widget/TextView;
 
     const-string v1, "RequestToJoinSent"
 
-    const v2, 0x7f0e0f0d
+    const v2, 0x7f0e0fba
 
     invoke-static {v1, v2}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
@@ -1821,11 +1831,11 @@
 
     if-eqz p2, :cond_2d
 
-    const p0, 0x7f0e0f08
+    const p0, 0x7f0e0fb5
 
     const-string p2, "RequestToJoinChannelSentDescription"
 
-    .line 298
+    .line 299
     invoke-static {p2, p0}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object p0
@@ -1833,16 +1843,16 @@
     goto :goto_36
 
     :cond_2d
-    const p0, 0x7f0e0f0c
+    const p0, 0x7f0e0fb9
 
     const-string p2, "RequestToJoinGroupSentDescription"
 
-    .line 299
+    .line 300
     invoke-static {p2, p0}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object p0
 
-    .line 300
+    .line 301
     :goto_36
     iget-object p2, v0, Lorg/telegram/ui/Components/Bulletin$TwoLineLottieLayout;->subtitleTextView:Landroid/widget/TextView;
 
@@ -1850,7 +1860,7 @@
 
     const/16 p0, 0xabe
 
-    .line 301
+    .line 302
     invoke-static {p1, v0, p0}, Lorg/telegram/ui/Components/Bulletin;->make(Lorg/telegram/ui/ActionBar/BaseFragment;Lorg/telegram/ui/Components/Bulletin$Layout;I)Lorg/telegram/ui/Components/Bulletin;
 
     move-result-object p0

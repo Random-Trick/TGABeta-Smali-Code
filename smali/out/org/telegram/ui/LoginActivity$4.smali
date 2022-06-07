@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/LoginActivity;Landroid/content/Context;)V
     .registers 3
 
-    .line 461
+    .line 485
     iput-object p1, p0, Lorg/telegram/ui/LoginActivity$4;->this$0:Lorg/telegram/ui/LoginActivity;
 
     invoke-direct {p0, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
@@ -35,10 +35,10 @@
 .method protected onLayout(ZIIII)V
     .registers 10
 
-    .line 464
+    .line 488
     invoke-super/range {p0 .. p5}, Landroid/widget/FrameLayout;->onLayout(ZIIII)V
 
-    .line 465
+    .line 489
     iget-object p1, p0, Lorg/telegram/ui/LoginActivity$4;->this$0:Lorg/telegram/ui/LoginActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/LoginActivity;->access$600(Lorg/telegram/ui/LoginActivity;)[Lorg/telegram/ui/Components/SlideView;
@@ -54,14 +54,14 @@
 
     aget-object p4, p1, p3
 
-    .line 466
+    .line 490
     invoke-virtual {p4}, Landroid/widget/LinearLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object p5
 
     check-cast p5, Landroid/view/ViewGroup$MarginLayoutParams;
 
-    .line 467
+    .line 491
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getHeight()I
 
     move-result v0
@@ -74,7 +74,7 @@
 
     add-int/2addr v0, v1
 
-    .line 468
+    .line 492
     invoke-virtual {p4}, Lorg/telegram/ui/Components/SlideView;->hasCustomKeyboard()Z
 
     move-result v1
@@ -95,14 +95,14 @@
 
     const/high16 v1, 0x43660000    # 230.0f
 
-    .line 469
+    .line 493
     invoke-static {v1}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v1
 
     add-int/2addr v0, v1
 
-    .line 471
+    .line 495
     :cond_39
     iget v1, p5, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
 
@@ -129,10 +129,10 @@
 .method protected onMeasure(II)V
     .registers 10
 
-    .line 477
+    .line 501
     invoke-super {p0, p1, p2}, Landroid/widget/FrameLayout;->onMeasure(II)V
 
-    .line 478
+    .line 502
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getMeasuredWidth()I
 
     move-result p1
@@ -141,7 +141,7 @@
 
     move-result p2
 
-    .line 480
+    .line 504
     iget-object v0, p0, Lorg/telegram/ui/LoginActivity$4;->this$0:Lorg/telegram/ui/LoginActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/LoginActivity;->access$600(Lorg/telegram/ui/LoginActivity;)[Lorg/telegram/ui/Components/SlideView;
@@ -157,14 +157,14 @@
 
     aget-object v3, v0, v2
 
-    .line 481
+    .line 505
     invoke-virtual {v3}, Landroid/widget/LinearLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v4
 
     check-cast v4, Landroid/view/ViewGroup$MarginLayoutParams;
 
-    .line 482
+    .line 506
     iget v5, v4, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
 
     sub-int v5, p2, v5
@@ -177,7 +177,7 @@
 
     add-int/2addr v5, v6
 
-    .line 483
+    .line 507
     invoke-virtual {v3}, Lorg/telegram/ui/Components/SlideView;->hasCustomKeyboard()Z
 
     move-result v6
@@ -198,14 +198,14 @@
 
     const/high16 v6, 0x43660000    # 230.0f
 
-    .line 484
+    .line 508
     invoke-static {v6}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v6
 
     add-int/2addr v5, v6
 
-    .line 486
+    .line 510
     :cond_41
     iget v6, v4, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
 

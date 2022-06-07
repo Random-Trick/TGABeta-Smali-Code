@@ -49,32 +49,32 @@
 .method public constructor <init>(Lorg/telegram/ui/ArticleViewer;Landroid/content/Context;Lorg/telegram/ui/ArticleViewer$WebpageAdapter;)V
     .registers 5
 
-    .line 8377
+    .line 8378
     iput-object p1, p0, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;->this$0:Lorg/telegram/ui/ArticleViewer;
 
-    .line 8378
+    .line 8379
     invoke-direct {p0, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
     const/high16 v0, 0x41900000    # 18.0f
 
-    .line 8368
+    .line 8369
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v0
 
     iput v0, p0, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;->textX:I
 
-    .line 8379
+    .line 8380
     iput-object p3, p0, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;->parentAdapter:Lorg/telegram/ui/ArticleViewer$WebpageAdapter;
 
-    .line 8381
+    .line 8382
     invoke-static {}, Lorg/telegram/ui/ArticleViewer;->access$17500()Landroid/graphics/Paint;
 
     move-result-object p3
 
     if-nez p3, :cond_26
 
-    .line 8382
+    .line 8383
     new-instance p3, Landroid/graphics/Paint;
 
     const/4 v0, 0x1
@@ -83,7 +83,7 @@
 
     invoke-static {p3}, Lorg/telegram/ui/ArticleViewer;->access$17502(Landroid/graphics/Paint;)Landroid/graphics/Paint;
 
-    .line 8383
+    .line 8384
     invoke-static {}, Lorg/telegram/ui/ArticleViewer;->access$17500()Landroid/graphics/Paint;
 
     move-result-object p3
@@ -92,7 +92,7 @@
 
     invoke-virtual {p3, v0}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 8386
+    .line 8387
     :cond_26
     new-instance p3, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell$1;
 
@@ -100,14 +100,14 @@
 
     iput-object p3, p0, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;->innerListView:Landroidx/viewpager/widget/ViewPager;
 
-    .line 8399
+    .line 8400
     new-instance v0, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell$2;
 
     invoke-direct {v0, p0, p1}, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell$2;-><init>(Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;Lorg/telegram/ui/ArticleViewer;)V
 
     invoke-virtual {p3, v0}, Landroidx/viewpager/widget/ViewPager;->addOnPageChangeListener(Landroidx/viewpager/widget/ViewPager$OnPageChangeListener;)V
 
-    .line 8421
+    .line 8422
     iget-object p3, p0, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;->innerListView:Landroidx/viewpager/widget/ViewPager;
 
     new-instance v0, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell$3;
@@ -118,7 +118,7 @@
 
     invoke-virtual {p3, v0}, Landroidx/viewpager/widget/ViewPager;->setAdapter(Landroidx/viewpager/widget/PagerAdapter;)V
 
-    .line 8480
+    .line 8481
     iget-object p3, p0, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;->innerListView:Landroidx/viewpager/widget/ViewPager;
 
     const-string v0, "windowBackgroundWhite"
@@ -129,24 +129,24 @@
 
     invoke-static {p3, v0}, Lorg/telegram/messenger/AndroidUtilities;->setViewPagerEdgeEffectColor(Landroidx/viewpager/widget/ViewPager;I)V
 
-    .line 8481
+    .line 8482
     iget-object p3, p0, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;->innerListView:Landroidx/viewpager/widget/ViewPager;
 
     invoke-virtual {p0, p3}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;)V
 
-    .line 8483
+    .line 8484
     new-instance p3, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell$4;
 
     invoke-direct {p3, p0, p2, p1}, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell$4;-><init>(Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;Landroid/content/Context;Lorg/telegram/ui/ArticleViewer;)V
 
     iput-object p3, p0, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;->dotsContainer:Landroid/view/View;
 
-    .line 8517
+    .line 8518
     invoke-virtual {p0, p3}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;)V
 
     const/4 p1, 0x0
 
-    .line 8519
+    .line 8520
     invoke-virtual {p0, p1}, Landroid/widget/FrameLayout;->setWillNotDraw(Z)V
 
     return-void
@@ -155,7 +155,7 @@
 .method static synthetic access$17600(Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;)Landroidx/viewpager/widget/ViewPager;
     .registers 1
 
-    .line 8359
+    .line 8360
     iget-object p0, p0, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;->innerListView:Landroidx/viewpager/widget/ViewPager;
 
     return-object p0
@@ -164,7 +164,7 @@
 .method static synthetic access$17700(Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;)F
     .registers 1
 
-    .line 8359
+    .line 8360
     iget p0, p0, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;->pageOffset:F
 
     return p0
@@ -173,7 +173,7 @@
 .method static synthetic access$17702(Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;F)F
     .registers 2
 
-    .line 8359
+    .line 8360
     iput p1, p0, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;->pageOffset:F
 
     return p1
@@ -182,7 +182,7 @@
 .method static synthetic access$17800(Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;)I
     .registers 1
 
-    .line 8359
+    .line 8360
     iget p0, p0, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;->currentPage:I
 
     return p0
@@ -191,7 +191,7 @@
 .method static synthetic access$17802(Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;I)I
     .registers 2
 
-    .line 8359
+    .line 8360
     iput p1, p0, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;->currentPage:I
 
     return p1
@@ -200,7 +200,7 @@
 .method static synthetic access$17900(Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;)Landroid/view/View;
     .registers 1
 
-    .line 8359
+    .line 8360
     iget-object p0, p0, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;->dotsContainer:Landroid/view/View;
 
     return-object p0
@@ -209,7 +209,7 @@
 .method static synthetic access$18000(Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;)Lorg/telegram/tgnet/TLRPC$TL_pageBlockSlideshow;
     .registers 1
 
-    .line 8359
+    .line 8360
     iget-object p0, p0, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;->currentBlock:Lorg/telegram/tgnet/TLRPC$TL_pageBlockSlideshow;
 
     return-object p0
@@ -218,7 +218,7 @@
 .method static synthetic access$18300(Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;)Lorg/telegram/ui/ArticleViewer$WebpageAdapter;
     .registers 1
 
-    .line 8359
+    .line 8360
     iget-object p0, p0, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;->parentAdapter:Lorg/telegram/ui/ArticleViewer$WebpageAdapter;
 
     return-object p0
@@ -227,7 +227,7 @@
 .method static synthetic access$18400(Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;)Landroidx/viewpager/widget/PagerAdapter;
     .registers 1
 
-    .line 8359
+    .line 8360
     iget-object p0, p0, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;->innerAdapter:Landroidx/viewpager/widget/PagerAdapter;
 
     return-object p0
@@ -246,21 +246,21 @@
         }
     .end annotation
 
-    .line 8604
+    .line 8605
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;->captionLayout:Lorg/telegram/ui/ArticleViewer$DrawingText;
 
     if-eqz v0, :cond_7
 
-    .line 8605
+    .line 8606
     invoke-virtual {p1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 8607
+    .line 8608
     :cond_7
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;->creditLayout:Lorg/telegram/ui/ArticleViewer$DrawingText;
 
     if-eqz v0, :cond_e
 
-    .line 8608
+    .line 8609
     invoke-virtual {p1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     :cond_e
@@ -270,7 +270,7 @@
 .method protected onDraw(Landroid/graphics/Canvas;)V
     .registers 6
 
-    .line 8582
+    .line 8583
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;->currentBlock:Lorg/telegram/tgnet/TLRPC$TL_pageBlockSlideshow;
 
     if-nez v0, :cond_5
@@ -280,15 +280,15 @@
     :cond_5
     const/4 v0, 0x0
 
-    .line 8586
+    .line 8587
     iget-object v1, p0, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;->captionLayout:Lorg/telegram/ui/ArticleViewer$DrawingText;
 
     if-eqz v1, :cond_25
 
-    .line 8587
+    .line 8588
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 8588
+    .line 8589
     iget v1, p0, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;->textX:I
 
     int-to-float v1, v1
@@ -299,33 +299,33 @@
 
     invoke-virtual {p1, v1, v2}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 8589
+    .line 8590
     iget-object v1, p0, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     const/4 v2, 0x1
 
     invoke-static {v1, p1, p0, v0}, Lorg/telegram/ui/ArticleViewer;->access$13800(Lorg/telegram/ui/ArticleViewer;Landroid/graphics/Canvas;Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleSelectableView;I)V
 
-    .line 8590
+    .line 8591
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;->captionLayout:Lorg/telegram/ui/ArticleViewer$DrawingText;
 
     invoke-virtual {v0, p1, p0}, Lorg/telegram/ui/ArticleViewer$DrawingText;->draw(Landroid/graphics/Canvas;Landroid/view/View;)V
 
-    .line 8591
+    .line 8592
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
     const/4 v0, 0x1
 
-    .line 8593
+    .line 8594
     :cond_25
     iget-object v1, p0, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;->creditLayout:Lorg/telegram/ui/ArticleViewer$DrawingText;
 
     if-eqz v1, :cond_45
 
-    .line 8594
+    .line 8595
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 8595
+    .line 8596
     iget v1, p0, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;->textX:I
 
     int-to-float v1, v1
@@ -340,17 +340,17 @@
 
     invoke-virtual {p1, v1, v2}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 8596
+    .line 8597
     iget-object v1, p0, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     invoke-static {v1, p1, p0, v0}, Lorg/telegram/ui/ArticleViewer;->access$13800(Lorg/telegram/ui/ArticleViewer;Landroid/graphics/Canvas;Lorg/telegram/ui/Cells/TextSelectionHelper$ArticleSelectableView;I)V
 
-    .line 8597
+    .line 8598
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;->creditLayout:Lorg/telegram/ui/ArticleViewer$DrawingText;
 
     invoke-virtual {v0, p1, p0}, Lorg/telegram/ui/ArticleViewer$DrawingText;->draw(Landroid/graphics/Canvas;Landroid/view/View;)V
 
-    .line 8598
+    .line 8599
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
     :cond_45
@@ -360,7 +360,7 @@
 .method protected onLayout(ZIIII)V
     .registers 6
 
-    .line 8575
+    .line 8576
     iget-object p1, p0, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;->innerListView:Landroidx/viewpager/widget/ViewPager;
 
     const/high16 p2, 0x41000000    # 8.0f
@@ -391,7 +391,7 @@
 
     invoke-virtual {p1, p5, p3, p4, p2}, Landroid/view/ViewGroup;->layout(IIII)V
 
-    .line 8576
+    .line 8577
     iget-object p1, p0, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;->innerListView:Landroidx/viewpager/widget/ViewPager;
 
     invoke-virtual {p1}, Landroid/view/ViewGroup;->getBottom()I
@@ -406,7 +406,7 @@
 
     sub-int/2addr p1, p2
 
-    .line 8577
+    .line 8578
     iget-object p2, p0, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;->dotsContainer:Landroid/view/View;
 
     invoke-virtual {p2}, Landroid/view/View;->getMeasuredWidth()I
@@ -434,24 +434,24 @@
         }
     .end annotation
 
-    .line 8538
+    .line 8539
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result p1
 
-    .line 8541
+    .line 8542
     iget-object p2, p0, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;->currentBlock:Lorg/telegram/tgnet/TLRPC$TL_pageBlockSlideshow;
 
     if-eqz p2, :cond_cb
 
     const/high16 p2, 0x439b0000    # 310.0f
 
-    .line 8542
+    .line 8543
     invoke-static {p2}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result p2
 
-    .line 8543
+    .line 8544
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;->innerListView:Landroidx/viewpager/widget/ViewPager;
 
     const/high16 v1, 0x40000000    # 2.0f
@@ -466,14 +466,14 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/view/ViewGroup;->measure(II)V
 
-    .line 8544
+    .line 8545
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;->currentBlock:Lorg/telegram/tgnet/TLRPC$TL_pageBlockSlideshow;
 
     iget-object v0, v0, Lorg/telegram/tgnet/TLRPC$TL_pageBlockSlideshow;->items:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
-    .line 8545
+    .line 8546
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;->dotsContainer:Landroid/view/View;
 
     invoke-static {p1, v1}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
@@ -494,7 +494,7 @@
 
     const/high16 v0, 0x42100000    # 36.0f
 
-    .line 8547
+    .line 8548
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v0
@@ -503,7 +503,7 @@
 
     const/high16 v10, 0x41800000    # 16.0f
 
-    .line 8548
+    .line 8549
     invoke-static {v10}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v1
@@ -512,7 +512,7 @@
 
     iput v6, p0, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;->textY:I
 
-    .line 8549
+    .line 8550
     iget-object v1, p0, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     const/4 v3, 0x0
@@ -539,7 +539,7 @@
 
     if-eqz v1, :cond_7e
 
-    .line 8551
+    .line 8552
     invoke-static {v11}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v1
@@ -554,7 +554,7 @@
 
     iput v1, p0, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;->creditOffset:I
 
-    .line 8552
+    .line 8553
     invoke-static {v11}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v2
@@ -563,14 +563,14 @@
 
     add-int/2addr p2, v1
 
-    .line 8553
+    .line 8554
     iget-object v1, p0, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;->captionLayout:Lorg/telegram/ui/ArticleViewer$DrawingText;
 
     iget v2, p0, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;->textX:I
 
     iput v2, v1, Lorg/telegram/ui/ArticleViewer$DrawingText;->x:I
 
-    .line 8554
+    .line 8555
     iget v2, p0, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;->textY:I
 
     iput v2, v1, Lorg/telegram/ui/ArticleViewer$DrawingText;->y:I
@@ -580,10 +580,10 @@
     :cond_7e
     const/4 v1, 0x0
 
-    .line 8556
+    .line 8557
     iput v1, p0, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;->creditOffset:I
 
-    .line 8558
+    .line 8559
     :goto_81
     iget-object v1, p0, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;->this$0:Lorg/telegram/ui/ArticleViewer;
 
@@ -635,7 +635,7 @@
 
     if-eqz v0, :cond_c5
 
-    .line 8560
+    .line 8561
     invoke-static {v11}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v0
@@ -650,14 +650,14 @@
 
     add-int/2addr p2, v0
 
-    .line 8561
+    .line 8562
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;->creditLayout:Lorg/telegram/ui/ArticleViewer$DrawingText;
 
     iget v1, p0, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;->textX:I
 
     iput v1, v0, Lorg/telegram/ui/ArticleViewer$DrawingText;->x:I
 
-    .line 8562
+    .line 8563
     iget v1, p0, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;->textY:I
 
     iget v2, p0, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;->creditOffset:I
@@ -666,7 +666,7 @@
 
     iput v1, v0, Lorg/telegram/ui/ArticleViewer$DrawingText;->y:I
 
-    .line 8565
+    .line 8566
     :cond_c5
     invoke-static {v10}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
@@ -679,7 +679,7 @@
     :cond_cb
     const/4 p2, 0x1
 
-    .line 8570
+    .line 8571
     :goto_cc
     invoke-virtual {p0, p1, p2}, Landroid/widget/FrameLayout;->setMeasuredDimension(II)V
 
@@ -689,7 +689,7 @@
 .method public onTouchEvent(Landroid/view/MotionEvent;)Z
     .registers 10
 
-    .line 8532
+    .line 8533
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     iget-object v1, p0, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;->parentAdapter:Lorg/telegram/ui/ArticleViewer$WebpageAdapter;
@@ -758,27 +758,27 @@
 .method public setBlock(Lorg/telegram/tgnet/TLRPC$TL_pageBlockSlideshow;)V
     .registers 3
 
-    .line 8523
+    .line 8524
     iput-object p1, p0, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;->currentBlock:Lorg/telegram/tgnet/TLRPC$TL_pageBlockSlideshow;
 
-    .line 8524
+    .line 8525
     iget-object p1, p0, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;->innerAdapter:Landroidx/viewpager/widget/PagerAdapter;
 
     invoke-virtual {p1}, Landroidx/viewpager/widget/PagerAdapter;->notifyDataSetChanged()V
 
-    .line 8525
+    .line 8526
     iget-object p1, p0, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;->innerListView:Landroidx/viewpager/widget/ViewPager;
 
     const/4 v0, 0x0
 
     invoke-virtual {p1, v0, v0}, Landroidx/viewpager/widget/ViewPager;->setCurrentItem(IZ)V
 
-    .line 8526
+    .line 8527
     iget-object p1, p0, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;->innerListView:Landroidx/viewpager/widget/ViewPager;
 
     invoke-virtual {p1}, Landroid/view/ViewGroup;->forceLayout()V
 
-    .line 8527
+    .line 8528
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->requestLayout()V
 
     return-void

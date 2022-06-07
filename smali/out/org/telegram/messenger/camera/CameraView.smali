@@ -1115,7 +1115,7 @@
 .end method
 
 .method private updateCameraInfoSize()V
-    .registers 9
+    .registers 10
 
     .line 393
     invoke-static {}, Lorg/telegram/messenger/camera/CameraController;->getInstance()Lorg/telegram/messenger/camera/CameraController;
@@ -1219,32 +1219,30 @@
 
     const/16 v3, 0x780
 
-    const/16 v4, 0x9
+    const/16 v4, 0x2d0
 
-    const/16 v5, 0x10
+    const/16 v5, 0x9
 
-    const/16 v6, 0x3c0
+    const/16 v6, 0x10
 
-    const/16 v7, 0x500
+    const/16 v7, 0x3c0
 
-    if-eqz v2, :cond_67
+    const/16 v8, 0x500
+
+    if-eqz v2, :cond_65
 
     .line 417
     new-instance v0, Lorg/telegram/messenger/camera/Size;
 
-    invoke-direct {v0, v5, v4}, Lorg/telegram/messenger/camera/Size;-><init>(II)V
+    invoke-direct {v0, v6, v5}, Lorg/telegram/messenger/camera/Size;-><init>(II)V
 
-    const/16 v3, 0x1e0
+    const/16 v3, 0x500
 
-    const/16 v6, 0x10e
+    const/16 v7, 0x2d0
 
-    const/16 v1, 0x10e
+    goto :goto_9c
 
-    const/16 v7, 0x1e0
-
-    goto :goto_a0
-
-    :cond_67
+    :cond_65
     sub-float/2addr v1, v0
 
     .line 421
@@ -1256,7 +1254,7 @@
 
     cmpg-float v0, v0, v1
 
-    if-gez v0, :cond_88
+    if-gez v0, :cond_8a
 
     .line 422
     new-instance v0, Lorg/telegram/messenger/camera/Size;
@@ -1272,70 +1270,67 @@
 
     move-result v1
 
-    if-nez v1, :cond_85
-
-    const/16 v1, 0x3c0
+    if-nez v1, :cond_83
 
     const/16 v3, 0x500
 
-    goto :goto_a0
+    const/16 v4, 0x3c0
 
-    :cond_85
-    const/16 v1, 0x5a0
+    goto :goto_9c
 
-    goto :goto_a0
+    :cond_83
+    const/16 v4, 0x5a0
+
+    const/16 v4, 0x3c0
+
+    const/16 v7, 0x5a0
+
+    goto :goto_9c
 
     .line 434
-    :cond_88
+    :cond_8a
     new-instance v0, Lorg/telegram/messenger/camera/Size;
 
-    invoke-direct {v0, v5, v4}, Lorg/telegram/messenger/camera/Size;-><init>(II)V
-
-    const/16 v1, 0x2d0
+    invoke-direct {v0, v6, v5}, Lorg/telegram/messenger/camera/Size;-><init>(II)V
 
     .line 438
     invoke-static {}, Lorg/telegram/messenger/SharedConfig;->getDevicePerformanceClass()I
 
-    move-result v2
+    move-result v1
 
-    if-nez v2, :cond_9a
-
-    const/16 v1, 0x3c0
+    if-nez v1, :cond_98
 
     const/16 v3, 0x500
 
-    goto :goto_9e
+    goto :goto_9c
 
-    :cond_9a
-    const/16 v6, 0x438
-
+    :cond_98
     const/16 v1, 0x438
 
-    :goto_9e
-    const/16 v6, 0x2d0
+    const/16 v7, 0x438
 
     .line 448
-    :goto_a0
-    iget-object v2, p0, Lorg/telegram/messenger/camera/CameraView;->info:Lorg/telegram/messenger/camera/CameraInfo;
+    :goto_9c
+    iget-object v1, p0, Lorg/telegram/messenger/camera/CameraView;->info:Lorg/telegram/messenger/camera/CameraInfo;
 
-    invoke-virtual {v2}, Lorg/telegram/messenger/camera/CameraInfo;->getPreviewSizes()Ljava/util/ArrayList;
+    invoke-virtual {v1}, Lorg/telegram/messenger/camera/CameraInfo;->getPreviewSizes()Ljava/util/ArrayList;
 
-    move-result-object v2
+    move-result-object v1
 
-    invoke-static {v2, v7, v6, v0}, Lorg/telegram/messenger/camera/CameraController;->chooseOptimalSize(Ljava/util/List;IILorg/telegram/messenger/camera/Size;)Lorg/telegram/messenger/camera/Size;
+    invoke-static {v1, v8, v4, v0}, Lorg/telegram/messenger/camera/CameraController;->chooseOptimalSize(Ljava/util/List;IILorg/telegram/messenger/camera/Size;)Lorg/telegram/messenger/camera/Size;
 
-    move-result-object v2
+    move-result-object v1
 
-    iput-object v2, p0, Lorg/telegram/messenger/camera/CameraView;->previewSize:Lorg/telegram/messenger/camera/Size;
+    iput-object v1, p0, Lorg/telegram/messenger/camera/CameraView;->previewSize:Lorg/telegram/messenger/camera/Size;
 
     .line 449
-    iget-object v2, p0, Lorg/telegram/messenger/camera/CameraView;->info:Lorg/telegram/messenger/camera/CameraInfo;
+    iget-object v1, p0, Lorg/telegram/messenger/camera/CameraView;->info:Lorg/telegram/messenger/camera/CameraInfo;
 
-    invoke-virtual {v2}, Lorg/telegram/messenger/camera/CameraInfo;->getPictureSizes()Ljava/util/ArrayList;
+    invoke-virtual {v1}, Lorg/telegram/messenger/camera/CameraInfo;->getPictureSizes()Ljava/util/ArrayList;
 
-    move-result-object v2
+    move-result-object v1
 
-    invoke-static {v2, v3, v1, v0}, Lorg/telegram/messenger/camera/CameraController;->chooseOptimalSize(Ljava/util/List;IILorg/telegram/messenger/camera/Size;)Lorg/telegram/messenger/camera/Size;
+    invoke-static {v1, v3, v7, v0}, Lorg/telegram/messenger/camera/CameraController;->chooseOptimalSize(Ljava/util/List;IILorg/telegram/messenger/camera/Size;)Lorg/telegram/messenger/camera/Size;
 
     move-result-object v0
 

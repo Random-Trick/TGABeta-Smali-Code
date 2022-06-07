@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/Switch;)V
     .registers 2
 
-    .line 159
+    .line 173
     iput-object p1, p0, Lorg/telegram/ui/Components/Switch$1;->this$0:Lorg/telegram/ui/Components/Switch;
 
     invoke-direct {p0}, Landroid/graphics/drawable/Drawable;-><init>()V
@@ -35,12 +35,12 @@
 .method public draw(Landroid/graphics/Canvas;)V
     .registers 6
 
-    .line 162
+    .line 176
     invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
 
     move-result-object v0
 
-    .line 163
+    .line 177
     invoke-virtual {v0}, Landroid/graphics/Rect;->centerX()I
 
     move-result v1

@@ -30,7 +30,7 @@
 .method constructor <init>(Lorg/telegram/ui/PasscodeActivity;Landroid/content/Context;)V
     .registers 3
 
-    .line 599
+    .line 600
     iput-object p1, p0, Lorg/telegram/ui/PasscodeActivity$8;->this$0:Lorg/telegram/ui/PasscodeActivity;
 
     invoke-direct {p0, p2}, Lorg/telegram/ui/CodeFieldContainer;-><init>(Landroid/content/Context;)V
@@ -41,7 +41,7 @@
 .method private synthetic lambda$processNextPressed$0()V
     .registers 2
 
-    .line 603
+    .line 604
     iget-object v0, p0, Lorg/telegram/ui/PasscodeActivity$8;->this$0:Lorg/telegram/ui/PasscodeActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/PasscodeActivity;->access$1400(Lorg/telegram/ui/PasscodeActivity;)V
@@ -54,7 +54,7 @@
 .method protected processNextPressed()V
     .registers 4
 
-    .line 602
+    .line 603
     iget-object v0, p0, Lorg/telegram/ui/PasscodeActivity$8;->this$0:Lorg/telegram/ui/PasscodeActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/PasscodeActivity;->access$1000(Lorg/telegram/ui/PasscodeActivity;)I
@@ -63,7 +63,7 @@
 
     if-nez v0, :cond_13
 
-    .line 603
+    .line 604
     new-instance v0, Lorg/telegram/ui/PasscodeActivity$8$$ExternalSyntheticLambda0;
 
     invoke-direct {v0, p0}, Lorg/telegram/ui/PasscodeActivity$8$$ExternalSyntheticLambda0;-><init>(Lorg/telegram/ui/PasscodeActivity$8;)V
@@ -74,7 +74,7 @@
 
     goto :goto_18
 
-    .line 605
+    .line 606
     :cond_13
     iget-object v0, p0, Lorg/telegram/ui/PasscodeActivity$8;->this$0:Lorg/telegram/ui/PasscodeActivity;
 

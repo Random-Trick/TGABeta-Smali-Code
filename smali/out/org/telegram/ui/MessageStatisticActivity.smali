@@ -1195,7 +1195,7 @@
     .line 542
     iget-object p1, p2, Lorg/telegram/tgnet/TLRPC$TL_stats_messageStats;->views_graph:Lorg/telegram/tgnet/TLRPC$StatsGraph;
 
-    const p2, 0x7f0e0899
+    const p2, 0x7f0e08f6
 
     const-string v1, "InteractionsChartTitle"
 
@@ -1691,7 +1691,7 @@
     .line 973
     sget-object v0, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
-    const v3, 0x7f07012c
+    const v3, 0x7f0700fb
 
     const-string v4, "windowBackgroundGrayShadow"
 
@@ -1802,7 +1802,7 @@
 
     const/4 v1, 0x0
 
-    const v2, 0x7f070147
+    const v2, 0x7f07010d
 
     .line 470
     invoke-virtual {v0, v1, v2}, Lorg/telegram/ui/ActionBar/ActionBarMenu;->addItem(II)Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
@@ -1811,9 +1811,9 @@
 
     const/4 v1, 0x1
 
-    const v2, 0x7f0702d8
+    const v2, 0x7f0702fa
 
-    const v3, 0x7f0e1295
+    const v3, 0x7f0e1363
 
     const-string v4, "ViewChannelStats"
 
@@ -2076,7 +2076,7 @@
 
 # virtual methods
 .method public createView(Landroid/content/Context;)Landroid/view/View;
-    .registers 22
+    .registers 23
 
     move-object/from16 v0, p0
 
@@ -2085,7 +2085,7 @@
     .line 239
     iget-object v2, v0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
-    const v3, 0x7f070140
+    const v3, 0x7f070109
 
     invoke-virtual {v2, v3}, Lorg/telegram/ui/ActionBar/ActionBar;->setBackButtonImage(I)V
 
@@ -2119,7 +2119,7 @@
 
     const-string v4, "NoResult"
 
-    const v5, 0x7f0e0ad8
+    const v5, 0x7f0e0b60
 
     .line 246
     invoke-static {v4, v5}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -2204,7 +2204,7 @@
 
     const-string v7, "LoadingStats"
 
-    const v8, 0x7f0e095a
+    const v8, 0x7f0e09e1
 
     .line 262
     invoke-static {v7, v8}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -2240,7 +2240,7 @@
 
     const-string v9, "LoadingStatsDescription"
 
-    const v10, 0x7f0e095b
+    const v10, 0x7f0e09e2
 
     .line 269
     invoke-static {v9, v10}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -2583,7 +2583,7 @@
 
     move-result v1
 
-    if-nez v1, :cond_2c8
+    if-nez v1, :cond_2c6
 
     iget-object v1, v0, Lorg/telegram/ui/MessageStatisticActivity;->messageObject:Lorg/telegram/messenger/MessageObject;
 
@@ -2607,7 +2607,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_2c8
+    if-eqz v1, :cond_2c6
 
     .line 375
     :cond_1fd
@@ -2642,7 +2642,7 @@
 
     move-result v2
 
-    if-nez v2, :cond_2c8
+    if-nez v2, :cond_2c6
 
     const-string v2, "profile"
 
@@ -2650,7 +2650,7 @@
 
     move-result v2
 
-    if-nez v2, :cond_2c8
+    if-nez v2, :cond_2c6
 
     const-string v2, "article"
 
@@ -2658,7 +2658,7 @@
 
     move-result v2
 
-    if-nez v2, :cond_2c8
+    if-nez v2, :cond_2c6
 
     if-eqz v1, :cond_233
 
@@ -2668,7 +2668,7 @@
 
     move-result v1
 
-    if-nez v1, :cond_2c8
+    if-nez v1, :cond_2c6
 
     .line 377
     :cond_233
@@ -2703,7 +2703,7 @@
     move-object v3, v2
 
     :goto_24d
-    if-eqz v1, :cond_2c8
+    if-eqz v1, :cond_2c6
 
     .line 384
     iget-object v2, v0, Lorg/telegram/ui/MessageStatisticActivity;->messageObject:Lorg/telegram/messenger/MessageObject;
@@ -2782,7 +2782,7 @@
 
     invoke-virtual/range {v11 .. v18}, Lorg/telegram/messenger/ImageReceiver;->setImage(Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Landroid/graphics/drawable/Drawable;Ljava/lang/Object;I)V
 
-    goto :goto_2c6
+    goto :goto_2c4
 
     .line 388
     :cond_296
@@ -2791,7 +2791,7 @@
 
     iget v4, v2, Lorg/telegram/messenger/MessageObject;->type:I
 
-    if-ne v4, v5, :cond_2a5
+    if-ne v4, v5, :cond_2a1
 
     if-eqz v3, :cond_2a1
 
@@ -2803,16 +2803,8 @@
     :cond_2a1
     const/4 v4, 0x0
 
-    :goto_2a2
-    move/from16 v16, v4
-
-    goto :goto_2a7
-
-    :cond_2a5
-    const/16 v16, 0x0
-
     .line 393
-    :goto_2a7
+    :goto_2a2
     iget-object v11, v0, Lorg/telegram/ui/MessageStatisticActivity;->thumbImage:Lorg/telegram/messenger/ImageReceiver;
 
     iget-object v2, v2, Lorg/telegram/messenger/MessageObject;->photoThumbsObject:Lorg/telegram/tgnet/TLObject;
@@ -2829,30 +2821,34 @@
 
     move-result-object v14
 
-    const/16 v17, 0x0
+    int-to-long v1, v4
 
-    iget-object v1, v0, Lorg/telegram/ui/MessageStatisticActivity;->messageObject:Lorg/telegram/messenger/MessageObject;
+    const/16 v18, 0x0
 
-    const/16 v19, 0x0
+    iget-object v3, v0, Lorg/telegram/ui/MessageStatisticActivity;->messageObject:Lorg/telegram/messenger/MessageObject;
+
+    const/16 v20, 0x0
 
     const-string v13, "20_20"
 
     const-string v15, "20_20"
 
-    move-object/from16 v18, v1
+    move-wide/from16 v16, v1
 
-    invoke-virtual/range {v11 .. v19}, Lorg/telegram/messenger/ImageReceiver;->setImage(Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;ILjava/lang/String;Ljava/lang/Object;I)V
+    move-object/from16 v19, v3
 
-    :goto_2c6
+    invoke-virtual/range {v11 .. v20}, Lorg/telegram/messenger/ImageReceiver;->setImage(Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;JLjava/lang/String;Ljava/lang/Object;I)V
+
+    :goto_2c4
     const/4 v1, 0x1
 
-    goto :goto_2c9
+    goto :goto_2c7
 
-    :cond_2c8
+    :cond_2c6
     const/4 v1, 0x0
 
     .line 402
-    :goto_2c9
+    :goto_2c7
     iget-object v2, v0, Lorg/telegram/ui/MessageStatisticActivity;->messageObject:Lorg/telegram/messenger/MessageObject;
 
     iget-object v2, v2, Lorg/telegram/messenger/MessageObject;->caption:Ljava/lang/CharSequence;
@@ -2861,17 +2857,17 @@
 
     move-result v2
 
-    if-nez v2, :cond_2d8
+    if-nez v2, :cond_2d6
 
     .line 403
     iget-object v2, v0, Lorg/telegram/ui/MessageStatisticActivity;->messageObject:Lorg/telegram/messenger/MessageObject;
 
     iget-object v2, v2, Lorg/telegram/messenger/MessageObject;->caption:Ljava/lang/CharSequence;
 
-    goto :goto_311
+    goto :goto_30f
 
     .line 404
-    :cond_2d8
+    :cond_2d6
     iget-object v2, v0, Lorg/telegram/ui/MessageStatisticActivity;->messageObject:Lorg/telegram/messenger/MessageObject;
 
     iget-object v2, v2, Lorg/telegram/messenger/MessageObject;->messageOwner:Lorg/telegram/tgnet/TLRPC$Message;
@@ -2882,7 +2878,7 @@
 
     move-result v2
 
-    if-nez v2, :cond_30d
+    if-nez v2, :cond_30b
 
     .line 405
     iget-object v2, v0, Lorg/telegram/ui/MessageStatisticActivity;->messageObject:Lorg/telegram/messenger/MessageObject;
@@ -2896,7 +2892,7 @@
 
     const/16 v4, 0x96
 
-    if-le v3, v4, :cond_2f4
+    if-le v3, v4, :cond_2f2
 
     .line 407
     invoke-interface {v2, v10, v4}, Ljava/lang/CharSequence;->subSequence(II)Ljava/lang/CharSequence;
@@ -2904,7 +2900,7 @@
     move-result-object v2
 
     .line 409
-    :cond_2f4
+    :cond_2f2
     iget-object v3, v0, Lorg/telegram/ui/MessageStatisticActivity;->avatarContainer:Lorg/telegram/ui/Components/ChatAvatarContainer;
 
     invoke-virtual {v3}, Lorg/telegram/ui/Components/ChatAvatarContainer;->getSubtitleTextView()Lorg/telegram/ui/ActionBar/SimpleTextView;
@@ -2929,16 +2925,16 @@
 
     move-result-object v2
 
-    goto :goto_311
+    goto :goto_30f
 
     .line 411
-    :cond_30d
+    :cond_30b
     iget-object v2, v0, Lorg/telegram/ui/MessageStatisticActivity;->messageObject:Lorg/telegram/messenger/MessageObject;
 
     iget-object v2, v2, Lorg/telegram/messenger/MessageObject;->messageText:Ljava/lang/CharSequence;
 
-    :goto_311
-    if-eqz v1, :cond_333
+    :goto_30f
+    if-eqz v1, :cond_331
 
     .line 415
     new-instance v1, Landroid/text/SpannableStringBuilder;
@@ -2970,10 +2966,10 @@
 
     invoke-virtual {v2, v1}, Lorg/telegram/ui/Components/ChatAvatarContainer;->setSubtitle(Ljava/lang/CharSequence;)V
 
-    goto :goto_33c
+    goto :goto_33a
 
     .line 420
-    :cond_333
+    :cond_331
     iget-object v1, v0, Lorg/telegram/ui/MessageStatisticActivity;->avatarContainer:Lorg/telegram/ui/Components/ChatAvatarContainer;
 
     iget-object v2, v0, Lorg/telegram/ui/MessageStatisticActivity;->messageObject:Lorg/telegram/messenger/MessageObject;
@@ -2983,7 +2979,7 @@
     invoke-virtual {v1, v2}, Lorg/telegram/ui/Components/ChatAvatarContainer;->setSubtitle(Ljava/lang/CharSequence;)V
 
     .line 422
-    :goto_33c
+    :goto_33a
     iget-object v1, v0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     new-instance v2, Lorg/telegram/ui/ActionBar/BackDrawable;

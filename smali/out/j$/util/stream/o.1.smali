@@ -32,7 +32,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lj$/util/stream/l1;Lj$/util/function/Predicate;)V
+.method public synthetic constructor <init>(Lj$/util/stream/k1;Lj$/util/function/Predicate;)V
     .registers 4
 
     const/4 v0, 0x4
@@ -49,7 +49,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lj$/util/stream/l1;Lj$/wrappers/E;)V
+.method public synthetic constructor <init>(Lj$/util/stream/k1;Lj$/wrappers/E;)V
     .registers 4
 
     const/4 v0, 0x1
@@ -66,7 +66,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lj$/util/stream/l1;Lj$/wrappers/V;)V
+.method public synthetic constructor <init>(Lj$/util/stream/k1;Lj$/wrappers/V;)V
     .registers 4
 
     const/4 v0, 0x2
@@ -83,7 +83,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lj$/util/stream/l1;Lj$/wrappers/j0;)V
+.method public synthetic constructor <init>(Lj$/util/stream/k1;Lj$/wrappers/j0;)V
     .registers 4
 
     const/4 v0, 0x3
@@ -100,7 +100,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lj$/util/stream/n4;Lj$/util/function/Consumer;)V
+.method public synthetic constructor <init>(Lj$/util/stream/m4;Lj$/util/function/Consumer;)V
     .registers 4
 
     const/4 v0, 0x6
@@ -189,13 +189,13 @@
     :goto_25
     iget-object v0, p0, Lj$/util/stream/o;->b:Ljava/lang/Object;
 
-    check-cast v0, Lj$/util/stream/n4;
+    check-cast v0, Lj$/util/stream/m4;
 
     iget-object v1, p0, Lj$/util/stream/o;->c:Ljava/lang/Object;
 
     check-cast v1, Lj$/util/function/Consumer;
 
-    invoke-virtual {v0, v1, p1}, Lj$/util/stream/n4;->f(Lj$/util/function/Consumer;Ljava/lang/Object;)V
+    invoke-virtual {v0, v1, p1}, Lj$/util/stream/m4;->f(Lj$/util/function/Consumer;Ljava/lang/Object;)V
 
     return-void
 
@@ -263,16 +263,16 @@
     :pswitch_6
     iget-object v0, p0, Lj$/util/stream/o;->b:Ljava/lang/Object;
 
-    check-cast v0, Lj$/util/stream/l1;
+    check-cast v0, Lj$/util/stream/k1;
 
     iget-object v1, p0, Lj$/util/stream/o;->c:Ljava/lang/Object;
 
     check-cast v1, Lj$/wrappers/j0;
 
     .line 2
-    new-instance v2, Lj$/util/stream/i1;
+    new-instance v2, Lj$/util/stream/h1;
 
-    invoke-direct {v2, v0, v1}, Lj$/util/stream/i1;-><init>(Lj$/util/stream/l1;Lj$/wrappers/j0;)V
+    invoke-direct {v2, v0, v1}, Lj$/util/stream/h1;-><init>(Lj$/util/stream/k1;Lj$/wrappers/j0;)V
 
     return-object v2
 
@@ -280,16 +280,16 @@
     :pswitch_14
     iget-object v0, p0, Lj$/util/stream/o;->b:Ljava/lang/Object;
 
-    check-cast v0, Lj$/util/stream/l1;
+    check-cast v0, Lj$/util/stream/k1;
 
     iget-object v1, p0, Lj$/util/stream/o;->c:Ljava/lang/Object;
 
     check-cast v1, Lj$/wrappers/V;
 
     .line 4
-    new-instance v2, Lj$/util/stream/h1;
+    new-instance v2, Lj$/util/stream/g1;
 
-    invoke-direct {v2, v0, v1}, Lj$/util/stream/h1;-><init>(Lj$/util/stream/l1;Lj$/wrappers/V;)V
+    invoke-direct {v2, v0, v1}, Lj$/util/stream/g1;-><init>(Lj$/util/stream/k1;Lj$/wrappers/V;)V
 
     return-object v2
 
@@ -297,16 +297,16 @@
     :pswitch_22
     iget-object v0, p0, Lj$/util/stream/o;->b:Ljava/lang/Object;
 
-    check-cast v0, Lj$/util/stream/l1;
+    check-cast v0, Lj$/util/stream/k1;
 
     iget-object v1, p0, Lj$/util/stream/o;->c:Ljava/lang/Object;
 
     check-cast v1, Lj$/wrappers/E;
 
     .line 6
-    new-instance v2, Lj$/util/stream/j1;
+    new-instance v2, Lj$/util/stream/i1;
 
-    invoke-direct {v2, v0, v1}, Lj$/util/stream/j1;-><init>(Lj$/util/stream/l1;Lj$/wrappers/E;)V
+    invoke-direct {v2, v0, v1}, Lj$/util/stream/i1;-><init>(Lj$/util/stream/k1;Lj$/wrappers/E;)V
 
     return-object v2
 
@@ -314,16 +314,16 @@
     :goto_30
     iget-object v0, p0, Lj$/util/stream/o;->b:Ljava/lang/Object;
 
-    check-cast v0, Lj$/util/stream/l1;
+    check-cast v0, Lj$/util/stream/k1;
 
     iget-object v1, p0, Lj$/util/stream/o;->c:Ljava/lang/Object;
 
     check-cast v1, Lj$/util/function/Predicate;
 
     .line 8
-    new-instance v2, Lj$/util/stream/g1;
+    new-instance v2, Lj$/util/stream/f1;
 
-    invoke-direct {v2, v0, v1}, Lj$/util/stream/g1;-><init>(Lj$/util/stream/l1;Lj$/util/function/Predicate;)V
+    invoke-direct {v2, v0, v1}, Lj$/util/stream/f1;-><init>(Lj$/util/stream/k1;Lj$/util/function/Predicate;)V
 
     return-object v2
 

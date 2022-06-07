@@ -139,7 +139,7 @@
 
     const-string v9, "MigrateOldFolderTitle"
 
-    const v10, 0x7f0e0a3b
+    const v10, 0x7f0e0ac2
 
     .line 256
     invoke-static {v9, v10}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -189,7 +189,7 @@
 
     const-string v6, "MigrateOldFolderDescription"
 
-    const v7, 0x7f0e0a3a
+    const v7, 0x7f0e0ac1
 
     .line 263
     invoke-static {v6, v7}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -260,7 +260,7 @@
 
     const-string v6, "MigrateOldFolderButton"
 
-    const v7, 0x7f0e0a39
+    const v7, 0x7f0e0ac0
 
     .line 272
     invoke-static {v6, v7}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;

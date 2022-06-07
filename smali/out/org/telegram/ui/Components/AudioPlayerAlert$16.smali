@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/AudioPlayerAlert;)V
     .registers 2
 
-    .line 1143
+    .line 1144
     iput-object p1, p0, Lorg/telegram/ui/Components/AudioPlayerAlert$16;->this$0:Lorg/telegram/ui/Components/AudioPlayerAlert;
 
     invoke-direct {p0}, Landroidx/recyclerview/widget/RecyclerView$OnScrollListener;-><init>()V
@@ -41,12 +41,12 @@
 
     const/high16 p2, 0x41500000    # 13.0f
 
-    .line 1147
+    .line 1148
     invoke-static {p2}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result p2
 
-    .line 1148
+    .line 1149
     iget-object v0, p0, Lorg/telegram/ui/Components/AudioPlayerAlert$16;->this$0:Lorg/telegram/ui/Components/AudioPlayerAlert;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/AudioPlayerAlert;->access$2100(Lorg/telegram/ui/Components/AudioPlayerAlert;)I
@@ -63,7 +63,7 @@
 
     sub-int/2addr v0, p2
 
-    .line 1149
+    .line 1150
     iget-object p2, p0, Lorg/telegram/ui/Components/AudioPlayerAlert$16;->this$0:Lorg/telegram/ui/Components/AudioPlayerAlert;
 
     invoke-static {p2}, Lorg/telegram/ui/Components/AudioPlayerAlert;->access$6800(Lorg/telegram/ui/Components/AudioPlayerAlert;)I
@@ -90,7 +90,7 @@
 
     if-eqz p1, :cond_76
 
-    .line 1150
+    .line 1151
     iget-object p1, p0, Lorg/telegram/ui/Components/AudioPlayerAlert$16;->this$0:Lorg/telegram/ui/Components/AudioPlayerAlert;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/AudioPlayerAlert;->access$1100(Lorg/telegram/ui/Components/AudioPlayerAlert;)Lorg/telegram/ui/Components/RecyclerListView;
@@ -101,7 +101,7 @@
 
     invoke-virtual {p1, p2}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
-    .line 1151
+    .line 1152
     iget-object p1, p0, Lorg/telegram/ui/Components/AudioPlayerAlert$16;->this$0:Lorg/telegram/ui/Components/AudioPlayerAlert;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/AudioPlayerAlert;->access$1100(Lorg/telegram/ui/Components/AudioPlayerAlert;)Lorg/telegram/ui/Components/RecyclerListView;
@@ -116,7 +116,7 @@
 
     if-eqz p1, :cond_76
 
-    .line 1152
+    .line 1153
     iget-object v0, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->getTop()I
@@ -131,7 +131,7 @@
 
     if-le v0, v2, :cond_76
 
-    .line 1153
+    .line 1154
     iget-object v0, p0, Lorg/telegram/ui/Components/AudioPlayerAlert$16;->this$0:Lorg/telegram/ui/Components/AudioPlayerAlert;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/AudioPlayerAlert;->access$1100(Lorg/telegram/ui/Components/AudioPlayerAlert;)Lorg/telegram/ui/Components/RecyclerListView;
@@ -157,7 +157,7 @@
     :cond_6b
     if-ne p2, p1, :cond_76
 
-    .line 1157
+    .line 1158
     iget-object p1, p0, Lorg/telegram/ui/Components/AudioPlayerAlert$16;->this$0:Lorg/telegram/ui/Components/AudioPlayerAlert;
 
     invoke-virtual {p1}, Landroid/app/Dialog;->getCurrentFocus()Landroid/view/View;
@@ -174,17 +174,17 @@
 .method public onScrolled(Landroidx/recyclerview/widget/RecyclerView;II)V
     .registers 6
 
-    .line 1163
+    .line 1164
     iget-object p2, p0, Lorg/telegram/ui/Components/AudioPlayerAlert$16;->this$0:Lorg/telegram/ui/Components/AudioPlayerAlert;
 
     invoke-static {p2}, Lorg/telegram/ui/Components/AudioPlayerAlert;->access$1900(Lorg/telegram/ui/Components/AudioPlayerAlert;)V
 
-    .line 1164
+    .line 1165
     iget-object p2, p0, Lorg/telegram/ui/Components/AudioPlayerAlert$16;->this$0:Lorg/telegram/ui/Components/AudioPlayerAlert;
 
     invoke-static {p2}, Lorg/telegram/ui/Components/AudioPlayerAlert;->access$2000(Lorg/telegram/ui/Components/AudioPlayerAlert;)V
 
-    .line 1166
+    .line 1167
     iget-object p2, p0, Lorg/telegram/ui/Components/AudioPlayerAlert$16;->this$0:Lorg/telegram/ui/Components/AudioPlayerAlert;
 
     invoke-static {p2}, Lorg/telegram/ui/Components/AudioPlayerAlert;->access$700(Lorg/telegram/ui/Components/AudioPlayerAlert;)Z
@@ -193,7 +193,7 @@
 
     if-nez p2, :cond_5c
 
-    .line 1167
+    .line 1168
     iget-object p2, p0, Lorg/telegram/ui/Components/AudioPlayerAlert$16;->this$0:Lorg/telegram/ui/Components/AudioPlayerAlert;
 
     invoke-static {p2}, Lorg/telegram/ui/Components/AudioPlayerAlert;->access$4500(Lorg/telegram/ui/Components/AudioPlayerAlert;)Landroidx/recyclerview/widget/LinearLayoutManager;
@@ -212,7 +212,7 @@
 
     goto :goto_32
 
-    .line 1168
+    .line 1169
     :cond_21
     iget-object p3, p0, Lorg/telegram/ui/Components/AudioPlayerAlert$16;->this$0:Lorg/telegram/ui/Components/AudioPlayerAlert;
 
@@ -232,7 +232,7 @@
 
     add-int/lit8 p3, p3, 0x1
 
-    .line 1169
+    .line 1170
     :goto_32
     invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Landroidx/recyclerview/widget/RecyclerView$Adapter;
 
@@ -242,14 +242,14 @@
 
     move-result p1
 
-    .line 1171
+    .line 1172
     invoke-static {}, Lorg/telegram/messenger/MediaController;->getInstance()Lorg/telegram/messenger/MediaController;
 
     move-result-object v0
 
     invoke-virtual {v0}, Lorg/telegram/messenger/MediaController;->getPlayingMessageObject()Lorg/telegram/messenger/MessageObject;
 
-    .line 1172
+    .line 1173
     sget-boolean v0, Lorg/telegram/messenger/SharedConfig;->playOrderReversed:Z
 
     const/16 v1, 0xa
@@ -258,7 +258,7 @@
 
     if-ge p2, v1, :cond_5c
 
-    .line 1174
+    .line 1175
     invoke-static {}, Lorg/telegram/messenger/MediaController;->getInstance()Lorg/telegram/messenger/MediaController;
 
     move-result-object p1
@@ -274,7 +274,7 @@
 
     if-le p2, p1, :cond_5c
 
-    .line 1178
+    .line 1179
     invoke-static {}, Lorg/telegram/messenger/MediaController;->getInstance()Lorg/telegram/messenger/MediaController;
 
     move-result-object p1

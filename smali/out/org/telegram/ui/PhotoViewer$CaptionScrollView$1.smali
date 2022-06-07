@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/PhotoViewer$CaptionScrollView;)V
     .registers 2
 
-    .line 3017
+    .line 3030
     iput-object p1, p0, Lorg/telegram/ui/PhotoViewer$CaptionScrollView$1;->this$1:Lorg/telegram/ui/PhotoViewer$CaptionScrollView;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -35,7 +35,7 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .registers 3
 
-    .line 3020
+    .line 3033
     iget-object p1, p0, Lorg/telegram/ui/PhotoViewer$CaptionScrollView$1;->this$1:Lorg/telegram/ui/PhotoViewer$CaptionScrollView;
 
     iget-object p1, p1, Lorg/telegram/ui/PhotoViewer$CaptionScrollView;->this$0:Lorg/telegram/ui/PhotoViewer;

@@ -24,7 +24,7 @@
 .method constructor <init>(Lorg/telegram/ui/ChannelCreateActivity;Z)V
     .registers 3
 
-    .line 908
+    .line 964
     iput-object p1, p0, Lorg/telegram/ui/ChannelCreateActivity$8;->this$0:Lorg/telegram/ui/ChannelCreateActivity;
 
     iput-boolean p2, p0, Lorg/telegram/ui/ChannelCreateActivity$8;->val$show:Z
@@ -39,12 +39,12 @@
 .method public onAnimationCancel(Landroid/animation/Animator;)V
     .registers 3
 
-    .line 924
+    .line 980
     iget-object p1, p0, Lorg/telegram/ui/ChannelCreateActivity$8;->this$0:Lorg/telegram/ui/ChannelCreateActivity;
 
     const/4 v0, 0x0
 
-    invoke-static {p1, v0}, Lorg/telegram/ui/ChannelCreateActivity;->access$2002(Lorg/telegram/ui/ChannelCreateActivity;Landroid/animation/AnimatorSet;)Landroid/animation/AnimatorSet;
+    invoke-static {p1, v0}, Lorg/telegram/ui/ChannelCreateActivity;->access$2102(Lorg/telegram/ui/ChannelCreateActivity;Landroid/animation/AnimatorSet;)Landroid/animation/AnimatorSet;
 
     return-void
 .end method
@@ -52,10 +52,10 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .registers 3
 
-    .line 911
+    .line 967
     iget-object p1, p0, Lorg/telegram/ui/ChannelCreateActivity$8;->this$0:Lorg/telegram/ui/ChannelCreateActivity;
 
-    invoke-static {p1}, Lorg/telegram/ui/ChannelCreateActivity;->access$2000(Lorg/telegram/ui/ChannelCreateActivity;)Landroid/animation/AnimatorSet;
+    invoke-static {p1}, Lorg/telegram/ui/ChannelCreateActivity;->access$2100(Lorg/telegram/ui/ChannelCreateActivity;)Landroid/animation/AnimatorSet;
 
     move-result-object p1
 
@@ -63,7 +63,7 @@
 
     iget-object p1, p0, Lorg/telegram/ui/ChannelCreateActivity$8;->this$0:Lorg/telegram/ui/ChannelCreateActivity;
 
-    invoke-static {p1}, Lorg/telegram/ui/ChannelCreateActivity;->access$2100(Lorg/telegram/ui/ChannelCreateActivity;)Lorg/telegram/ui/Components/RLottieImageView;
+    invoke-static {p1}, Lorg/telegram/ui/ChannelCreateActivity;->access$2200(Lorg/telegram/ui/ChannelCreateActivity;)Lorg/telegram/ui/Components/RLottieImageView;
 
     move-result-object p1
 
@@ -71,7 +71,7 @@
 
     goto :goto_2f
 
-    .line 914
+    .line 970
     :cond_11
     iget-boolean p1, p0, Lorg/telegram/ui/ChannelCreateActivity$8;->val$show:Z
 
@@ -79,10 +79,10 @@
 
     if-eqz p1, :cond_20
 
-    .line 915
+    .line 971
     iget-object p1, p0, Lorg/telegram/ui/ChannelCreateActivity$8;->this$0:Lorg/telegram/ui/ChannelCreateActivity;
 
-    invoke-static {p1}, Lorg/telegram/ui/ChannelCreateActivity;->access$2100(Lorg/telegram/ui/ChannelCreateActivity;)Lorg/telegram/ui/Components/RLottieImageView;
+    invoke-static {p1}, Lorg/telegram/ui/ChannelCreateActivity;->access$2200(Lorg/telegram/ui/ChannelCreateActivity;)Lorg/telegram/ui/Components/RLottieImageView;
 
     move-result-object p1
 
@@ -90,23 +90,23 @@
 
     goto :goto_29
 
-    .line 917
+    .line 973
     :cond_20
     iget-object p1, p0, Lorg/telegram/ui/ChannelCreateActivity$8;->this$0:Lorg/telegram/ui/ChannelCreateActivity;
 
-    invoke-static {p1}, Lorg/telegram/ui/ChannelCreateActivity;->access$2200(Lorg/telegram/ui/ChannelCreateActivity;)Lorg/telegram/ui/Components/RadialProgressView;
+    invoke-static {p1}, Lorg/telegram/ui/ChannelCreateActivity;->access$2300(Lorg/telegram/ui/ChannelCreateActivity;)Lorg/telegram/ui/Components/RadialProgressView;
 
     move-result-object p1
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
 
-    .line 919
+    .line 975
     :goto_29
     iget-object p1, p0, Lorg/telegram/ui/ChannelCreateActivity$8;->this$0:Lorg/telegram/ui/ChannelCreateActivity;
 
     const/4 v0, 0x0
 
-    invoke-static {p1, v0}, Lorg/telegram/ui/ChannelCreateActivity;->access$2002(Lorg/telegram/ui/ChannelCreateActivity;Landroid/animation/AnimatorSet;)Landroid/animation/AnimatorSet;
+    invoke-static {p1, v0}, Lorg/telegram/ui/ChannelCreateActivity;->access$2102(Lorg/telegram/ui/ChannelCreateActivity;Landroid/animation/AnimatorSet;)Landroid/animation/AnimatorSet;
 
     :cond_2f
     :goto_2f

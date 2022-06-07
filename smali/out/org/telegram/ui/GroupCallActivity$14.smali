@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/GroupCallActivity;)V
     .registers 2
 
-    .line 3407
+    .line 3412
     iput-object p1, p0, Lorg/telegram/ui/GroupCallActivity$14;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-direct {p0}, Landroidx/recyclerview/widget/GridLayoutManager$SpanSizeLookup;-><init>()V
@@ -35,7 +35,7 @@
 .method public getSpanSize(I)I
     .registers 3
 
-    .line 3410
+    .line 3415
     iget-object v0, p0, Lorg/telegram/ui/GroupCallActivity$14;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     iget-object v0, v0, Lorg/telegram/ui/GroupCallActivity;->tabletGridAdapter:Lorg/telegram/ui/GroupCallTabletGridAdapter;

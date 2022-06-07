@@ -162,7 +162,7 @@
 
     check-cast p1, Lorg/telegram/ui/Cells/HeaderCell;
 
-    const p2, 0x7f0e027e
+    const p2, 0x7f0e02b3
 
     const-string v0, "AvailableReactions"
 
@@ -212,7 +212,7 @@
 
     if-eqz p2, :cond_6b
 
-    const p2, 0x7f0e063d
+    const p2, 0x7f0e068f
 
     const-string v0, "EnableReactionsChannelInfo"
 
@@ -223,7 +223,7 @@
     goto :goto_74
 
     :cond_6b
-    const p2, 0x7f0e063e
+    const p2, 0x7f0e0690
 
     const-string v0, "EnableReactionsGroupInfo"
 

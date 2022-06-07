@@ -58,19 +58,19 @@
 .method private constructor <init>(Lorg/telegram/ui/GroupCallActivity;)V
     .registers 2
 
-    .line 8512
+    .line 8517
     iput-object p1, p0, Lorg/telegram/ui/GroupCallActivity$GroupCallItemAnimator;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-direct {p0}, Landroidx/recyclerview/widget/DefaultItemAnimator;-><init>()V
 
-    .line 8517
+    .line 8522
     new-instance p1, Ljava/util/HashSet;
 
     invoke-direct {p1}, Ljava/util/HashSet;-><init>()V
 
     iput-object p1, p0, Lorg/telegram/ui/GroupCallActivity$GroupCallItemAnimator;->addingHolders:Ljava/util/HashSet;
 
-    .line 8518
+    .line 8523
     new-instance p1, Ljava/util/HashSet;
 
     invoke-direct {p1}, Ljava/util/HashSet;-><init>()V
@@ -83,7 +83,7 @@
 .method synthetic constructor <init>(Lorg/telegram/ui/GroupCallActivity;Lorg/telegram/ui/GroupCallActivity$1;)V
     .registers 3
 
-    .line 8512
+    .line 8517
     invoke-direct {p0, p1}, Lorg/telegram/ui/GroupCallActivity$GroupCallItemAnimator;-><init>(Lorg/telegram/ui/GroupCallActivity;)V
 
     return-void
@@ -92,7 +92,7 @@
 .method private synthetic lambda$runPendingAnimations$0(Landroid/animation/ValueAnimator;)V
     .registers 3
 
-    .line 8576
+    .line 8581
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
     move-result-object p1
@@ -105,7 +105,7 @@
 
     iput p1, p0, Lorg/telegram/ui/GroupCallActivity$GroupCallItemAnimator;->animationProgress:F
 
-    .line 8577
+    .line 8582
     iget-object p1, p0, Lorg/telegram/ui/GroupCallActivity$GroupCallItemAnimator;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/GroupCallActivity;->access$5700(Lorg/telegram/ui/GroupCallActivity;)Lorg/telegram/ui/Components/RecyclerListView;
@@ -114,7 +114,7 @@
 
     invoke-virtual {p1}, Landroid/view/ViewGroup;->invalidate()V
 
-    .line 8578
+    .line 8583
     iget-object p1, p0, Lorg/telegram/ui/GroupCallActivity$GroupCallItemAnimator;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/GroupCallActivity;->access$5000(Lorg/telegram/ui/GroupCallActivity;)Lorg/telegram/ui/Components/voip/GroupCallRenderersContainer;
@@ -123,7 +123,7 @@
 
     invoke-virtual {p1}, Landroid/widget/FrameLayout;->invalidate()V
 
-    .line 8579
+    .line 8584
     iget-object p1, p0, Lorg/telegram/ui/GroupCallActivity$GroupCallItemAnimator;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-static {p1}, Lorg/telegram/ui/GroupCallActivity;->access$21900(Lorg/telegram/ui/GroupCallActivity;)Landroid/view/ViewGroup;
@@ -132,7 +132,7 @@
 
     invoke-virtual {p1}, Landroid/view/ViewGroup;->invalidate()V
 
-    .line 8580
+    .line 8585
     iget-object p1, p0, Lorg/telegram/ui/GroupCallActivity$GroupCallItemAnimator;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     const/4 v0, 0x1
@@ -147,25 +147,25 @@
 .method public endAnimations()V
     .registers 2
 
-    .line 8525
+    .line 8530
     invoke-super {p0}, Landroidx/recyclerview/widget/DefaultItemAnimator;->endAnimations()V
 
-    .line 8526
+    .line 8531
     iget-object v0, p0, Lorg/telegram/ui/GroupCallActivity$GroupCallItemAnimator;->removingHolders:Ljava/util/HashSet;
 
     invoke-virtual {v0}, Ljava/util/HashSet;->clear()V
 
-    .line 8527
+    .line 8532
     iget-object v0, p0, Lorg/telegram/ui/GroupCallActivity$GroupCallItemAnimator;->addingHolders:Ljava/util/HashSet;
 
     invoke-virtual {v0}, Ljava/util/HashSet;->clear()V
 
     const v0, 0x7f7fffff    # Float.MAX_VALUE
 
-    .line 8528
+    .line 8533
     iput v0, p0, Lorg/telegram/ui/GroupCallActivity$GroupCallItemAnimator;->outMinTop:F
 
-    .line 8529
+    .line 8534
     iget-object v0, p0, Lorg/telegram/ui/GroupCallActivity$GroupCallItemAnimator;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/GroupCallActivity;->access$5700(Lorg/telegram/ui/GroupCallActivity;)Lorg/telegram/ui/Components/RecyclerListView;
@@ -180,7 +180,7 @@
 .method public runPendingAnimations()V
     .registers 5
 
-    .line 8565
+    .line 8570
     iget-object v0, p0, Landroidx/recyclerview/widget/DefaultItemAnimator;->mPendingRemovals:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
@@ -189,7 +189,7 @@
 
     xor-int/lit8 v0, v0, 0x1
 
-    .line 8566
+    .line 8571
     iget-object v1, p0, Landroidx/recyclerview/widget/DefaultItemAnimator;->mPendingMoves:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->isEmpty()Z
@@ -198,7 +198,7 @@
 
     xor-int/lit8 v1, v1, 0x1
 
-    .line 8567
+    .line 8572
     iget-object v2, p0, Landroidx/recyclerview/widget/DefaultItemAnimator;->mPendingAdditions:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->isEmpty()Z
@@ -207,17 +207,17 @@
 
     xor-int/lit8 v2, v2, 0x1
 
-    .line 8568
+    .line 8573
     iget-object v3, p0, Lorg/telegram/ui/GroupCallActivity$GroupCallItemAnimator;->animator:Landroid/animation/ValueAnimator;
 
     if-eqz v3, :cond_22
 
-    .line 8569
+    .line 8574
     invoke-virtual {v3}, Landroid/animation/ValueAnimator;->cancel()V
 
     const/4 v3, 0x0
 
-    .line 8570
+    .line 8575
     iput-object v3, p0, Lorg/telegram/ui/GroupCallActivity$GroupCallItemAnimator;->animator:Landroid/animation/ValueAnimator;
 
     :cond_22
@@ -230,14 +230,14 @@
     :cond_28
     const/4 v0, 0x0
 
-    .line 8573
+    .line 8578
     iput v0, p0, Lorg/telegram/ui/GroupCallActivity$GroupCallItemAnimator;->animationProgress:F
 
     const/4 v0, 0x2
 
     new-array v0, v0, [F
 
-    .line 8574
+    .line 8579
     fill-array-data v0, :array_72
 
     invoke-static {v0}, Landroid/animation/ValueAnimator;->ofFloat([F)Landroid/animation/ValueAnimator;
@@ -246,14 +246,14 @@
 
     iput-object v0, p0, Lorg/telegram/ui/GroupCallActivity$GroupCallItemAnimator;->animator:Landroid/animation/ValueAnimator;
 
-    .line 8575
+    .line 8580
     new-instance v1, Lorg/telegram/ui/GroupCallActivity$GroupCallItemAnimator$$ExternalSyntheticLambda0;
 
     invoke-direct {v1, p0}, Lorg/telegram/ui/GroupCallActivity$GroupCallItemAnimator$$ExternalSyntheticLambda0;-><init>(Lorg/telegram/ui/GroupCallActivity$GroupCallItemAnimator;)V
 
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    .line 8582
+    .line 8587
     iget-object v0, p0, Lorg/telegram/ui/GroupCallActivity$GroupCallItemAnimator;->animator:Landroid/animation/ValueAnimator;
 
     new-instance v1, Lorg/telegram/ui/GroupCallActivity$GroupCallItemAnimator$1;
@@ -262,26 +262,26 @@
 
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 8596
+    .line 8601
     iget-object v0, p0, Lorg/telegram/ui/GroupCallActivity$GroupCallItemAnimator;->animator:Landroid/animation/ValueAnimator;
 
     const-wide/16 v1, 0x15e
 
     invoke-virtual {v0, v1, v2}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
-    .line 8597
+    .line 8602
     iget-object v0, p0, Lorg/telegram/ui/GroupCallActivity$GroupCallItemAnimator;->animator:Landroid/animation/ValueAnimator;
 
     sget-object v1, Lorg/telegram/ui/Components/CubicBezierInterpolator;->DEFAULT:Lorg/telegram/ui/Components/CubicBezierInterpolator;
 
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 8598
+    .line 8603
     iget-object v0, p0, Lorg/telegram/ui/GroupCallActivity$GroupCallItemAnimator;->animator:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ValueAnimator;->start()V
 
-    .line 8600
+    .line 8605
     iget-object v0, p0, Lorg/telegram/ui/GroupCallActivity$GroupCallItemAnimator;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/GroupCallActivity;->access$5700(Lorg/telegram/ui/GroupCallActivity;)Lorg/telegram/ui/Components/RecyclerListView;
@@ -290,7 +290,7 @@
 
     invoke-virtual {v0}, Landroid/view/ViewGroup;->invalidate()V
 
-    .line 8601
+    .line 8606
     iget-object v0, p0, Lorg/telegram/ui/GroupCallActivity$GroupCallItemAnimator;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/GroupCallActivity;->access$5000(Lorg/telegram/ui/GroupCallActivity;)Lorg/telegram/ui/Components/voip/GroupCallRenderersContainer;
@@ -299,7 +299,7 @@
 
     invoke-virtual {v0}, Landroid/widget/FrameLayout;->invalidate()V
 
-    .line 8603
+    .line 8608
     :cond_6e
     invoke-super {p0}, Landroidx/recyclerview/widget/DefaultItemAnimator;->runPendingAnimations()V
 
@@ -315,32 +315,32 @@
 .method public updateBackgroundBeforeAnimation()V
     .registers 8
 
-    .line 8533
+    .line 8538
     iget-object v0, p0, Lorg/telegram/ui/GroupCallActivity$GroupCallItemAnimator;->animator:Landroid/animation/ValueAnimator;
 
     if-eqz v0, :cond_5
 
     return-void
 
-    .line 8536
+    .line 8541
     :cond_5
     iget-object v0, p0, Lorg/telegram/ui/GroupCallActivity$GroupCallItemAnimator;->addingHolders:Ljava/util/HashSet;
 
     invoke-virtual {v0}, Ljava/util/HashSet;->clear()V
 
-    .line 8537
+    .line 8542
     iget-object v0, p0, Lorg/telegram/ui/GroupCallActivity$GroupCallItemAnimator;->addingHolders:Ljava/util/HashSet;
 
     iget-object v1, p0, Landroidx/recyclerview/widget/DefaultItemAnimator;->mPendingAdditions:Ljava/util/ArrayList;
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->addAll(Ljava/util/Collection;)Z
 
-    .line 8539
+    .line 8544
     iget-object v0, p0, Lorg/telegram/ui/GroupCallActivity$GroupCallItemAnimator;->removingHolders:Ljava/util/HashSet;
 
     invoke-virtual {v0}, Ljava/util/HashSet;->clear()V
 
-    .line 8540
+    .line 8545
     iget-object v0, p0, Lorg/telegram/ui/GroupCallActivity$GroupCallItemAnimator;->removingHolders:Ljava/util/HashSet;
 
     iget-object v1, p0, Landroidx/recyclerview/widget/DefaultItemAnimator;->mPendingRemovals:Ljava/util/ArrayList;
@@ -349,15 +349,15 @@
 
     const/4 v0, 0x0
 
-    .line 8542
+    .line 8547
     iput v0, p0, Lorg/telegram/ui/GroupCallActivity$GroupCallItemAnimator;->outMaxBottom:F
 
     const v1, 0x7f7fffff    # Float.MAX_VALUE
 
-    .line 8543
+    .line 8548
     iput v1, p0, Lorg/telegram/ui/GroupCallActivity$GroupCallItemAnimator;->outMinTop:F
 
-    .line 8545
+    .line 8550
     iget-object v1, p0, Lorg/telegram/ui/GroupCallActivity$GroupCallItemAnimator;->addingHolders:Ljava/util/HashSet;
 
     invoke-virtual {v1}, Ljava/util/HashSet;->isEmpty()Z
@@ -377,7 +377,7 @@
     :cond_35
     const/4 v1, 0x0
 
-    .line 8546
+    .line 8551
     iget-object v2, p0, Lorg/telegram/ui/GroupCallActivity$GroupCallItemAnimator;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-static {v2}, Lorg/telegram/ui/GroupCallActivity;->access$5700(Lorg/telegram/ui/GroupCallActivity;)Lorg/telegram/ui/Components/RecyclerListView;
@@ -391,7 +391,7 @@
     :goto_40
     if-ge v1, v2, :cond_9b
 
-    .line 8547
+    .line 8552
     iget-object v3, p0, Lorg/telegram/ui/GroupCallActivity$GroupCallItemAnimator;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-static {v3}, Lorg/telegram/ui/GroupCallActivity;->access$5700(Lorg/telegram/ui/GroupCallActivity;)Lorg/telegram/ui/Components/RecyclerListView;
@@ -402,7 +402,7 @@
 
     move-result-object v3
 
-    .line 8548
+    .line 8553
     iget-object v4, p0, Lorg/telegram/ui/GroupCallActivity$GroupCallItemAnimator;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-static {v4}, Lorg/telegram/ui/GroupCallActivity;->access$5700(Lorg/telegram/ui/GroupCallActivity;)Lorg/telegram/ui/Components/RecyclerListView;
@@ -415,7 +415,7 @@
 
     if-eqz v4, :cond_98
 
-    .line 8549
+    .line 8554
     invoke-virtual {v4}, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->getItemViewType()I
 
     move-result v5
@@ -442,7 +442,7 @@
 
     goto :goto_98
 
-    .line 8552
+    .line 8557
     :cond_6e
     iget-object v5, p0, Lorg/telegram/ui/GroupCallActivity$GroupCallItemAnimator;->addingHolders:Ljava/util/HashSet;
 
@@ -452,7 +452,7 @@
 
     if-nez v4, :cond_98
 
-    .line 8553
+    .line 8558
     iget v4, p0, Lorg/telegram/ui/GroupCallActivity$GroupCallItemAnimator;->outMaxBottom:F
 
     invoke-virtual {v3}, Landroid/view/View;->getY()F
@@ -473,7 +473,7 @@
 
     iput v4, p0, Lorg/telegram/ui/GroupCallActivity$GroupCallItemAnimator;->outMaxBottom:F
 
-    .line 8554
+    .line 8559
     iget v4, p0, Lorg/telegram/ui/GroupCallActivity$GroupCallItemAnimator;->outMinTop:F
 
     invoke-virtual {v3}, Landroid/view/View;->getY()F
@@ -496,11 +496,11 @@
 
     goto :goto_40
 
-    .line 8557
+    .line 8562
     :cond_9b
     iput v0, p0, Lorg/telegram/ui/GroupCallActivity$GroupCallItemAnimator;->animationProgress:F
 
-    .line 8558
+    .line 8563
     iget-object v0, p0, Lorg/telegram/ui/GroupCallActivity$GroupCallItemAnimator;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/GroupCallActivity;->access$5700(Lorg/telegram/ui/GroupCallActivity;)Lorg/telegram/ui/Components/RecyclerListView;

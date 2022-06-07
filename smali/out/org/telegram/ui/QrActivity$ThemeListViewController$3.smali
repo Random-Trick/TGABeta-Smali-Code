@@ -1,5 +1,5 @@
 .class Lorg/telegram/ui/QrActivity$ThemeListViewController$3;
-.super Landroidx/recyclerview/widget/RecyclerView$OnScrollListener;
+.super Lorg/telegram/ui/Components/RLottieImageView;
 .source "QrActivity.java"
 
 
@@ -17,67 +17,63 @@
 # instance fields
 .field final synthetic this$1:Lorg/telegram/ui/QrActivity$ThemeListViewController;
 
-.field private yScroll:I
-
 
 # direct methods
-.method constructor <init>(Lorg/telegram/ui/QrActivity$ThemeListViewController;Lorg/telegram/ui/QrActivity;)V
-    .registers 3
+.method constructor <init>(Lorg/telegram/ui/QrActivity$ThemeListViewController;Landroid/content/Context;Lorg/telegram/ui/QrActivity;)V
+    .registers 4
 
-    .line 1075
+    .line 1037
     iput-object p1, p0, Lorg/telegram/ui/QrActivity$ThemeListViewController$3;->this$1:Lorg/telegram/ui/QrActivity$ThemeListViewController;
 
-    invoke-direct {p0}, Landroidx/recyclerview/widget/RecyclerView$OnScrollListener;-><init>()V
-
-    const/4 p1, 0x0
-
-    .line 1076
-    iput p1, p0, Lorg/telegram/ui/QrActivity$ThemeListViewController$3;->yScroll:I
+    invoke-direct {p0, p2}, Lorg/telegram/ui/Components/RLottieImageView;-><init>(Landroid/content/Context;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onScrolled(Landroidx/recyclerview/widget/RecyclerView;II)V
+.method public onInitializeAccessibilityNodeInfo(Landroid/view/accessibility/AccessibilityNodeInfo;)V
     .registers 4
 
-    .line 1079
-    invoke-super {p0, p1, p2, p3}, Landroidx/recyclerview/widget/RecyclerView$OnScrollListener;->onScrolled(Landroidx/recyclerview/widget/RecyclerView;II)V
+    .line 1040
+    invoke-super {p0, p1}, Landroid/widget/ImageView;->onInitializeAccessibilityNodeInfo(Landroid/view/accessibility/AccessibilityNodeInfo;)V
 
-    .line 1080
-    iget p1, p0, Lorg/telegram/ui/QrActivity$ThemeListViewController$3;->yScroll:I
+    .line 1041
+    iget-object v0, p0, Lorg/telegram/ui/QrActivity$ThemeListViewController$3;->this$1:Lorg/telegram/ui/QrActivity$ThemeListViewController;
 
-    add-int/2addr p1, p3
+    iget-object v0, v0, Lorg/telegram/ui/QrActivity$ThemeListViewController;->this$0:Lorg/telegram/ui/QrActivity;
 
-    iput p1, p0, Lorg/telegram/ui/QrActivity$ThemeListViewController$3;->yScroll:I
+    invoke-static {v0}, Lorg/telegram/ui/QrActivity;->access$1000(Lorg/telegram/ui/QrActivity;)Z
 
-    .line 1081
-    iget-object p1, p0, Lorg/telegram/ui/QrActivity$ThemeListViewController$3;->this$1:Lorg/telegram/ui/QrActivity$ThemeListViewController;
+    move-result v0
 
-    invoke-static {p1}, Lorg/telegram/ui/QrActivity$ThemeListViewController;->access$2300(Lorg/telegram/ui/QrActivity$ThemeListViewController;)Landroid/view/View;
+    if-eqz v0, :cond_1a
 
-    move-result-object p1
+    const v0, 0x7f0e009c
 
-    iget p2, p0, Lorg/telegram/ui/QrActivity$ThemeListViewController$3;->yScroll:I
+    const-string v1, "AccDescrSwitchToDayTheme"
 
-    int-to-float p2, p2
+    .line 1042
+    invoke-static {v1, v0}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
-    const/high16 p3, 0x3f800000    # 1.0f
+    move-result-object v0
 
-    mul-float p2, p2, p3
+    invoke-virtual {p1, v0}, Landroid/view/accessibility/AccessibilityNodeInfo;->setText(Ljava/lang/CharSequence;)V
 
-    const/high16 p3, 0x40c00000    # 6.0f
+    goto :goto_26
 
-    invoke-static {p3}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
+    :cond_1a
+    const v0, 0x7f0e009d
 
-    move-result p3
+    const-string v1, "AccDescrSwitchToNightTheme"
 
-    int-to-float p3, p3
+    .line 1044
+    invoke-static {v1, v0}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
-    div-float/2addr p2, p3
+    move-result-object v0
 
-    invoke-virtual {p1, p2}, Landroid/view/View;->setAlpha(F)V
+    invoke-virtual {p1, v0}, Landroid/view/accessibility/AccessibilityNodeInfo;->setText(Ljava/lang/CharSequence;)V
 
+    :goto_26
     return-void
 .end method

@@ -47,6 +47,8 @@
 
 .field private bufferProgress:F
 
+.field private canLongClick:Z
+
 .field private consumingChild:Landroid/view/View;
 
 .field private contentFrameLayout:Landroid/widget/FrameLayout;
@@ -59,7 +61,7 @@
 
 .field private dismissControlsCallback:Ljava/lang/Runnable;
 
-.field private gestureDetector:Landroidx/core/view/GestureDetectorCompat;
+.field private gestureDetector:Lorg/telegram/ui/Components/GestureDetectorFixDoubleTap;
 
 .field private innerView:Landroid/view/View;
 
@@ -74,6 +76,10 @@
 .field private isVideoCompleted:Z
 
 .field private isVisible:Z
+
+.field private longClickCallback:Ljava/lang/Runnable;
+
+.field private longClickStartPoint:[F
 
 .field private mVideoHeight:I
 
@@ -112,6 +118,8 @@
 .field private scaleFactor:F
 
 .field private scaleGestureDetector:Landroid/view/ScaleGestureDetector;
+
+.field private videoForwardDrawable:Lorg/telegram/ui/Components/VideoForwardDrawable;
 
 .field private videoProgress:F
 
@@ -237,9 +245,9 @@
     .line 60
     new-instance v0, Lorg/telegram/ui/Components/SimpleFloatPropertyCompat;
 
-    sget-object v1, Lorg/telegram/ui/Components/PipVideoOverlay$$ExternalSyntheticLambda10;->INSTANCE:Lorg/telegram/ui/Components/PipVideoOverlay$$ExternalSyntheticLambda10;
+    sget-object v1, Lorg/telegram/ui/Components/PipVideoOverlay$$ExternalSyntheticLambda11;->INSTANCE:Lorg/telegram/ui/Components/PipVideoOverlay$$ExternalSyntheticLambda11;
 
-    sget-object v2, Lorg/telegram/ui/Components/PipVideoOverlay$$ExternalSyntheticLambda12;->INSTANCE:Lorg/telegram/ui/Components/PipVideoOverlay$$ExternalSyntheticLambda12;
+    sget-object v2, Lorg/telegram/ui/Components/PipVideoOverlay$$ExternalSyntheticLambda13;->INSTANCE:Lorg/telegram/ui/Components/PipVideoOverlay$$ExternalSyntheticLambda13;
 
     const-string v3, "pipX"
 
@@ -250,9 +258,9 @@
     .line 67
     new-instance v0, Lorg/telegram/ui/Components/SimpleFloatPropertyCompat;
 
-    sget-object v1, Lorg/telegram/ui/Components/PipVideoOverlay$$ExternalSyntheticLambda9;->INSTANCE:Lorg/telegram/ui/Components/PipVideoOverlay$$ExternalSyntheticLambda9;
+    sget-object v1, Lorg/telegram/ui/Components/PipVideoOverlay$$ExternalSyntheticLambda10;->INSTANCE:Lorg/telegram/ui/Components/PipVideoOverlay$$ExternalSyntheticLambda10;
 
-    sget-object v2, Lorg/telegram/ui/Components/PipVideoOverlay$$ExternalSyntheticLambda11;->INSTANCE:Lorg/telegram/ui/Components/PipVideoOverlay$$ExternalSyntheticLambda11;
+    sget-object v2, Lorg/telegram/ui/Components/PipVideoOverlay$$ExternalSyntheticLambda12;->INSTANCE:Lorg/telegram/ui/Components/PipVideoOverlay$$ExternalSyntheticLambda12;
 
     const-string v3, "pipY"
 
@@ -271,7 +279,7 @@
 .end method
 
 .method public constructor <init>()V
-    .registers 2
+    .registers 3
 
     .line 55
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -290,19 +298,42 @@
     .line 99
     iput v0, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->scaleFactor:F
 
-    .line 107
-    new-instance v0, Lorg/telegram/ui/Components/PipVideoOverlay$$ExternalSyntheticLambda7;
+    .line 106
+    new-instance v0, Lorg/telegram/ui/Components/VideoForwardDrawable;
 
-    invoke-direct {v0, p0}, Lorg/telegram/ui/Components/PipVideoOverlay$$ExternalSyntheticLambda7;-><init>(Lorg/telegram/ui/Components/PipVideoOverlay;)V
+    const/4 v1, 0x0
 
-    iput-object v0, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->dismissControlsCallback:Ljava/lang/Runnable;
+    invoke-direct {v0, v1}, Lorg/telegram/ui/Components/VideoForwardDrawable;-><init>(Z)V
 
-    .line 121
+    iput-object v0, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->videoForwardDrawable:Lorg/telegram/ui/Components/VideoForwardDrawable;
+
+    .line 116
     new-instance v0, Lorg/telegram/ui/Components/PipVideoOverlay$$ExternalSyntheticLambda8;
 
     invoke-direct {v0, p0}, Lorg/telegram/ui/Components/PipVideoOverlay$$ExternalSyntheticLambda8;-><init>(Lorg/telegram/ui/Components/PipVideoOverlay;)V
 
     iput-object v0, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->progressRunnable:Ljava/lang/Runnable;
+
+    const/4 v0, 0x2
+
+    new-array v0, v0, [F
+
+    .line 133
+    iput-object v0, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->longClickStartPoint:[F
+
+    .line 134
+    new-instance v0, Lorg/telegram/ui/Components/PipVideoOverlay$$ExternalSyntheticLambda6;
+
+    invoke-direct {v0, p0}, Lorg/telegram/ui/Components/PipVideoOverlay$$ExternalSyntheticLambda6;-><init>(Lorg/telegram/ui/Components/PipVideoOverlay;)V
+
+    iput-object v0, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->longClickCallback:Ljava/lang/Runnable;
+
+    .line 137
+    new-instance v0, Lorg/telegram/ui/Components/PipVideoOverlay$$ExternalSyntheticLambda9;
+
+    invoke-direct {v0, p0}, Lorg/telegram/ui/Components/PipVideoOverlay$$ExternalSyntheticLambda9;-><init>(Lorg/telegram/ui/Components/PipVideoOverlay;)V
+
+    iput-object v0, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->dismissControlsCallback:Ljava/lang/Runnable;
 
     return-void
 .end method
@@ -441,7 +472,7 @@
     .registers 1
 
     .line 55
-    iget-boolean p0, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->isScrollDisallowed:Z
+    iget-boolean p0, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->canLongClick:Z
 
     return p0
 .end method
@@ -450,18 +481,18 @@
     .registers 2
 
     .line 55
-    iput-boolean p1, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->isScrollDisallowed:Z
+    iput-boolean p1, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->canLongClick:Z
 
     return p1
 .end method
 
-.method static synthetic access$1900(Lorg/telegram/ui/Components/PipVideoOverlay;)Landroid/view/WindowManager$LayoutParams;
+.method static synthetic access$1900(Lorg/telegram/ui/Components/PipVideoOverlay;)V
     .registers 1
 
     .line 55
-    iget-object p0, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->windowLayoutParams:Landroid/view/WindowManager$LayoutParams;
+    invoke-direct {p0}, Lorg/telegram/ui/Components/PipVideoOverlay;->cancelRewind()V
 
-    return-object p0
+    return-void
 .end method
 
 .method static synthetic access$200(Lorg/telegram/ui/Components/PipVideoOverlay;)V
@@ -473,7 +504,43 @@
     return-void
 .end method
 
-.method static synthetic access$2000(Lorg/telegram/ui/Components/PipVideoOverlay;)Landroid/view/ViewGroup;
+.method static synthetic access$2000(Lorg/telegram/ui/Components/PipVideoOverlay;)Ljava/lang/Runnable;
+    .registers 1
+
+    .line 55
+    iget-object p0, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->longClickCallback:Ljava/lang/Runnable;
+
+    return-object p0
+.end method
+
+.method static synthetic access$2100(Lorg/telegram/ui/Components/PipVideoOverlay;)Z
+    .registers 1
+
+    .line 55
+    iget-boolean p0, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->isScrollDisallowed:Z
+
+    return p0
+.end method
+
+.method static synthetic access$2102(Lorg/telegram/ui/Components/PipVideoOverlay;Z)Z
+    .registers 2
+
+    .line 55
+    iput-boolean p1, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->isScrollDisallowed:Z
+
+    return p1
+.end method
+
+.method static synthetic access$2200(Lorg/telegram/ui/Components/PipVideoOverlay;)Landroid/view/WindowManager$LayoutParams;
+    .registers 1
+
+    .line 55
+    iget-object p0, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->windowLayoutParams:Landroid/view/WindowManager$LayoutParams;
+
+    return-object p0
+.end method
+
+.method static synthetic access$2300(Lorg/telegram/ui/Components/PipVideoOverlay;)Landroid/view/ViewGroup;
     .registers 1
 
     .line 55
@@ -482,7 +549,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$2100(Lorg/telegram/ui/Components/PipVideoOverlay;)Landroid/view/WindowManager;
+.method static synthetic access$2400(Lorg/telegram/ui/Components/PipVideoOverlay;)Landroid/view/WindowManager;
     .registers 1
 
     .line 55
@@ -491,7 +558,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$2300(Lorg/telegram/ui/Components/PipVideoOverlay;)Landroid/widget/FrameLayout;
+.method static synthetic access$2600(Lorg/telegram/ui/Components/PipVideoOverlay;)Landroid/widget/FrameLayout;
     .registers 1
 
     .line 55
@@ -500,7 +567,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$2400(Lorg/telegram/ui/Components/PipVideoOverlay;)Z
+.method static synthetic access$2700(Lorg/telegram/ui/Components/PipVideoOverlay;)Z
     .registers 1
 
     .line 55
@@ -509,7 +576,7 @@
     return p0
 .end method
 
-.method static synthetic access$2402(Lorg/telegram/ui/Components/PipVideoOverlay;Z)Z
+.method static synthetic access$2702(Lorg/telegram/ui/Components/PipVideoOverlay;Z)Z
     .registers 2
 
     .line 55
@@ -518,7 +585,7 @@
     return p1
 .end method
 
-.method static synthetic access$2500(Lorg/telegram/ui/Components/PipVideoOverlay;)Landroid/view/View;
+.method static synthetic access$2800(Lorg/telegram/ui/Components/PipVideoOverlay;)Landroid/view/View;
     .registers 1
 
     .line 55
@@ -527,7 +594,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$2502(Lorg/telegram/ui/Components/PipVideoOverlay;Landroid/view/View;)Landroid/view/View;
+.method static synthetic access$2802(Lorg/telegram/ui/Components/PipVideoOverlay;Landroid/view/View;)Landroid/view/View;
     .registers 2
 
     .line 55
@@ -536,7 +603,7 @@
     return-object p1
 .end method
 
-.method static synthetic access$2600(Lorg/telegram/ui/Components/PipVideoOverlay;)Z
+.method static synthetic access$2900(Lorg/telegram/ui/Components/PipVideoOverlay;)Z
     .registers 1
 
     .line 55
@@ -545,7 +612,7 @@
     return p0
 .end method
 
-.method static synthetic access$2602(Lorg/telegram/ui/Components/PipVideoOverlay;Z)Z
+.method static synthetic access$2902(Lorg/telegram/ui/Components/PipVideoOverlay;Z)Z
     .registers 2
 
     .line 55
@@ -554,7 +621,7 @@
     return p1
 .end method
 
-.method static synthetic access$2700(Lorg/telegram/ui/Components/PipVideoOverlay;)Ljava/lang/Runnable;
+.method static synthetic access$3000(Lorg/telegram/ui/Components/PipVideoOverlay;)Ljava/lang/Runnable;
     .registers 1
 
     .line 55
@@ -563,7 +630,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$2800(Lorg/telegram/ui/Components/PipVideoOverlay;Z)V
+.method static synthetic access$3100(Lorg/telegram/ui/Components/PipVideoOverlay;Z)V
     .registers 2
 
     .line 55
@@ -572,7 +639,61 @@
     return-void
 .end method
 
-.method static synthetic access$2900(Lorg/telegram/ui/Components/PipVideoOverlay;)Z
+.method static synthetic access$3200(Lorg/telegram/ui/Components/PipVideoOverlay;)Lorg/telegram/ui/PhotoViewer;
+    .registers 1
+
+    .line 55
+    iget-object p0, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->photoViewer:Lorg/telegram/ui/PhotoViewer;
+
+    return-object p0
+.end method
+
+.method static synthetic access$3300(Lorg/telegram/ui/Components/PipVideoOverlay;)Z
+    .registers 1
+
+    .line 55
+    iget-boolean p0, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->isDismissing:Z
+
+    return p0
+.end method
+
+.method static synthetic access$3400(Lorg/telegram/ui/Components/PipVideoOverlay;)Z
+    .registers 1
+
+    .line 55
+    iget-boolean p0, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->isVideoCompleted:Z
+
+    return p0
+.end method
+
+.method static synthetic access$3500(Lorg/telegram/ui/Components/PipVideoOverlay;)Landroid/view/ScaleGestureDetector;
+    .registers 1
+
+    .line 55
+    iget-object p0, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->scaleGestureDetector:Landroid/view/ScaleGestureDetector;
+
+    return-object p0
+.end method
+
+.method static synthetic access$3600(Lorg/telegram/ui/Components/PipVideoOverlay;)Lorg/telegram/ui/Components/VideoForwardDrawable;
+    .registers 1
+
+    .line 55
+    iget-object p0, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->videoForwardDrawable:Lorg/telegram/ui/Components/VideoForwardDrawable;
+
+    return-object p0
+.end method
+
+.method static synthetic access$3700(Lorg/telegram/ui/Components/PipVideoOverlay;JFZ)V
+    .registers 5
+
+    .line 55
+    invoke-direct {p0, p1, p2, p3, p4}, Lorg/telegram/ui/Components/PipVideoOverlay;->onUpdateRewindProgressUiInternal(JFZ)V
+
+    return-void
+.end method
+
+.method static synthetic access$3800(Lorg/telegram/ui/Components/PipVideoOverlay;)Z
     .registers 1
 
     .line 55
@@ -581,7 +702,7 @@
     return p0
 .end method
 
-.method static synthetic access$2902(Lorg/telegram/ui/Components/PipVideoOverlay;Z)Z
+.method static synthetic access$3802(Lorg/telegram/ui/Components/PipVideoOverlay;Z)Z
     .registers 2
 
     .line 55
@@ -590,7 +711,7 @@
     return p1
 .end method
 
-.method static synthetic access$3000(Lorg/telegram/ui/Components/PipVideoOverlay;)Lorg/telegram/ui/Components/PipVideoOverlay$PipConfig;
+.method static synthetic access$3900(Lorg/telegram/ui/Components/PipVideoOverlay;)Lorg/telegram/ui/Components/PipVideoOverlay$PipConfig;
     .registers 1
 
     .line 55
@@ -601,25 +722,25 @@
     return-object p0
 .end method
 
-.method static synthetic access$3300(Lorg/telegram/ui/Components/PipVideoOverlay;)Landroid/view/ScaleGestureDetector;
+.method static synthetic access$4202(Lorg/telegram/ui/Components/PipVideoOverlay;[F)[F
+    .registers 2
+
+    .line 55
+    iput-object p1, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->longClickStartPoint:[F
+
+    return-object p1
+.end method
+
+.method static synthetic access$4300(Lorg/telegram/ui/Components/PipVideoOverlay;)Lorg/telegram/ui/Components/GestureDetectorFixDoubleTap;
     .registers 1
 
     .line 55
-    iget-object p0, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->scaleGestureDetector:Landroid/view/ScaleGestureDetector;
+    iget-object p0, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->gestureDetector:Lorg/telegram/ui/Components/GestureDetectorFixDoubleTap;
 
     return-object p0
 .end method
 
-.method static synthetic access$3400(Lorg/telegram/ui/Components/PipVideoOverlay;)Landroidx/core/view/GestureDetectorCompat;
-    .registers 1
-
-    .line 55
-    iget-object p0, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->gestureDetector:Landroidx/core/view/GestureDetectorCompat;
-
-    return-object p0
-.end method
-
-.method static synthetic access$3502(Lorg/telegram/ui/Components/PipVideoOverlay;Lorg/telegram/ui/Components/PipVideoOverlay$PipConfig;)Lorg/telegram/ui/Components/PipVideoOverlay$PipConfig;
+.method static synthetic access$4402(Lorg/telegram/ui/Components/PipVideoOverlay;Lorg/telegram/ui/Components/PipVideoOverlay$PipConfig;)Lorg/telegram/ui/Components/PipVideoOverlay$PipConfig;
     .registers 2
 
     .line 55
@@ -628,7 +749,16 @@
     return-object p1
 .end method
 
-.method static synthetic access$3600(Lorg/telegram/ui/Components/PipVideoOverlay;)F
+.method static synthetic access$4500(Lorg/telegram/ui/Components/PipVideoOverlay;)Landroid/widget/FrameLayout;
+    .registers 1
+
+    .line 55
+    iget-object p0, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->controlsView:Landroid/widget/FrameLayout;
+
+    return-object p0
+.end method
+
+.method static synthetic access$4600(Lorg/telegram/ui/Components/PipVideoOverlay;)F
     .registers 1
 
     .line 55
@@ -637,7 +767,7 @@
     return p0
 .end method
 
-.method static synthetic access$3700(Lorg/telegram/ui/Components/PipVideoOverlay;)F
+.method static synthetic access$4700(Lorg/telegram/ui/Components/PipVideoOverlay;)F
     .registers 1
 
     .line 55
@@ -700,6 +830,39 @@
     return p1
 .end method
 
+.method private cancelRewind()V
+    .registers 2
+
+    .line 350
+    iget-object v0, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->photoViewer:Lorg/telegram/ui/PhotoViewer;
+
+    if-nez v0, :cond_5
+
+    return-void
+
+    .line 354
+    :cond_5
+    invoke-virtual {v0}, Lorg/telegram/ui/PhotoViewer;->getVideoPlayerRewinder()Lorg/telegram/messenger/video/VideoPlayerRewinder;
+
+    move-result-object v0
+
+    iget v0, v0, Lorg/telegram/messenger/video/VideoPlayerRewinder;->rewindCount:I
+
+    if-lez v0, :cond_16
+
+    .line 355
+    iget-object v0, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->photoViewer:Lorg/telegram/ui/PhotoViewer;
+
+    invoke-virtual {v0}, Lorg/telegram/ui/PhotoViewer;->getVideoPlayerRewinder()Lorg/telegram/messenger/video/VideoPlayerRewinder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lorg/telegram/messenger/video/VideoPlayerRewinder;->cancelRewind()V
+
+    :cond_16
+    return-void
+.end method
+
 .method private createWindowLayoutParams(Z)Landroid/view/WindowManager$LayoutParams;
     .registers 4
     .annotation build Landroid/annotation/SuppressLint;
@@ -708,24 +871,24 @@
         }
     .end annotation
 
-    .line 856
+    .line 1061
     new-instance v0, Landroid/view/WindowManager$LayoutParams;
 
     invoke-direct {v0}, Landroid/view/WindowManager$LayoutParams;-><init>()V
 
     const/16 v1, 0x33
 
-    .line 857
+    .line 1062
     iput v1, v0, Landroid/view/WindowManager$LayoutParams;->gravity:I
 
     const/4 v1, -0x3
 
-    .line 858
+    .line 1063
     iput v1, v0, Landroid/view/WindowManager$LayoutParams;->format:I
 
     if-nez p1, :cond_26
 
-    .line 860
+    .line 1065
     sget-object p1, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     invoke-static {p1}, Lorg/telegram/messenger/AndroidUtilities;->checkInlinePermissions(Landroid/content/Context;)Z
@@ -734,7 +897,7 @@
 
     if-eqz p1, :cond_26
 
-    .line 861
+    .line 1066
     sget p1, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x1a
@@ -743,7 +906,7 @@
 
     const/16 p1, 0x7f6
 
-    .line 862
+    .line 1067
     iput p1, v0, Landroid/view/WindowManager$LayoutParams;->type:I
 
     goto :goto_2a
@@ -751,7 +914,7 @@
     :cond_21
     const/16 p1, 0x7d3
 
-    .line 864
+    .line 1069
     iput p1, v0, Landroid/view/WindowManager$LayoutParams;->type:I
 
     goto :goto_2a
@@ -759,13 +922,13 @@
     :cond_26
     const/16 p1, 0x63
 
-    .line 867
+    .line 1072
     iput p1, v0, Landroid/view/WindowManager$LayoutParams;->type:I
 
     :goto_2a
     const/16 p1, 0x208
 
-    .line 870
+    .line 1075
     iput p1, v0, Landroid/view/WindowManager$LayoutParams;->flags:I
 
     return-object v0
@@ -774,28 +937,28 @@
 .method public static dimissAndDestroy()V
     .registers 2
 
-    .line 194
+    .line 270
     sget-object v0, Lorg/telegram/ui/Components/PipVideoOverlay;->instance:Lorg/telegram/ui/Components/PipVideoOverlay;
 
     iget-object v1, v0, Lorg/telegram/ui/Components/PipVideoOverlay;->parentSheet:Lorg/telegram/ui/Components/EmbedBottomSheet;
 
     if-eqz v1, :cond_a
 
-    .line 195
+    .line 271
     invoke-virtual {v1}, Lorg/telegram/ui/Components/EmbedBottomSheet;->destroy()V
 
     goto :goto_11
 
-    .line 196
+    .line 272
     :cond_a
     iget-object v0, v0, Lorg/telegram/ui/Components/PipVideoOverlay;->photoViewer:Lorg/telegram/ui/PhotoViewer;
 
     if-eqz v0, :cond_11
 
-    .line 197
+    .line 273
     invoke-virtual {v0}, Lorg/telegram/ui/PhotoViewer;->destroyPhotoViewer()V
 
-    .line 199
+    .line 275
     :cond_11
     :goto_11
     invoke-static {}, Lorg/telegram/ui/Components/PipVideoOverlay;->dismiss()V
@@ -808,7 +971,7 @@
 
     const/4 v0, 0x0
 
-    .line 203
+    .line 279
     invoke-static {v0}, Lorg/telegram/ui/Components/PipVideoOverlay;->dismiss(Z)V
 
     return-void
@@ -817,7 +980,7 @@
 .method public static dismiss(Z)V
     .registers 2
 
-    .line 207
+    .line 283
     sget-object v0, Lorg/telegram/ui/Components/PipVideoOverlay;->instance:Lorg/telegram/ui/Components/PipVideoOverlay;
 
     invoke-direct {v0, p0}, Lorg/telegram/ui/Components/PipVideoOverlay;->dismissInternal(Z)V
@@ -828,7 +991,7 @@
 .method private dismissInternal(Z)V
     .registers 9
 
-    .line 211
+    .line 287
     iget-boolean v0, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->isDismissing:Z
 
     if-eqz v0, :cond_5
@@ -838,18 +1001,18 @@
     :cond_5
     const/4 v0, 0x1
 
-    .line 214
+    .line 290
     iput-boolean v0, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->isDismissing:Z
 
-    .line 216
+    .line 292
     iget-object v1, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->controlsAnimator:Landroid/animation/ValueAnimator;
 
     if-eqz v1, :cond_f
 
-    .line 217
+    .line 293
     invoke-virtual {v1}, Landroid/animation/ValueAnimator;->cancel()V
 
-    .line 220
+    .line 296
     :cond_f
     iget-boolean v1, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->postedDismissControls:Z
 
@@ -857,24 +1020,24 @@
 
     if-eqz v1, :cond_1b
 
-    .line 221
+    .line 297
     iget-object v1, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->dismissControlsCallback:Ljava/lang/Runnable;
 
     invoke-static {v1}, Lorg/telegram/messenger/AndroidUtilities;->cancelRunOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 222
+    .line 298
     iput-boolean v2, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->postedDismissControls:Z
 
-    .line 225
+    .line 301
     :cond_1b
     iget-object v1, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->pipXSpring:Landroidx/dynamicanimation/animation/SpringAnimation;
 
     if-eqz v1, :cond_27
 
-    .line 226
+    .line 302
     invoke-virtual {v1}, Landroidx/dynamicanimation/animation/DynamicAnimation;->cancel()V
 
-    .line 227
+    .line 303
     iget-object v1, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->pipYSpring:Landroidx/dynamicanimation/animation/SpringAnimation;
 
     invoke-virtual {v1}, Landroidx/dynamicanimation/animation/DynamicAnimation;->cancel()V
@@ -882,10 +1045,10 @@
     :cond_27
     if-eqz p1, :cond_34
 
-    .line 232
-    new-instance p1, Lorg/telegram/ui/Components/PipVideoOverlay$$ExternalSyntheticLambda6;
+    .line 308
+    new-instance p1, Lorg/telegram/ui/Components/PipVideoOverlay$$ExternalSyntheticLambda7;
 
-    invoke-direct {p1, p0}, Lorg/telegram/ui/Components/PipVideoOverlay$$ExternalSyntheticLambda6;-><init>(Lorg/telegram/ui/Components/PipVideoOverlay;)V
+    invoke-direct {p1, p0}, Lorg/telegram/ui/Components/PipVideoOverlay$$ExternalSyntheticLambda7;-><init>(Lorg/telegram/ui/Components/PipVideoOverlay;)V
 
     const-wide/16 v0, 0x64
 
@@ -893,7 +1056,7 @@
 
     goto :goto_83
 
-    .line 234
+    .line 310
     :cond_34
     new-instance p1, Landroid/animation/AnimatorSet;
 
@@ -901,10 +1064,10 @@
 
     const-wide/16 v3, 0xfa
 
-    .line 235
+    .line 311
     invoke-virtual {p1, v3, v4}, Landroid/animation/AnimatorSet;->setDuration(J)Landroid/animation/AnimatorSet;
 
-    .line 236
+    .line 312
     sget-object v1, Lorg/telegram/ui/Components/CubicBezierInterpolator;->DEFAULT:Lorg/telegram/ui/Components/CubicBezierInterpolator;
 
     invoke-virtual {p1, v1}, Landroid/animation/AnimatorSet;->setInterpolator(Landroid/animation/TimeInterpolator;)V
@@ -913,7 +1076,7 @@
 
     new-array v1, v1, [Landroid/animation/Animator;
 
-    .line 237
+    .line 313
     iget-object v3, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->contentView:Landroid/view/ViewGroup;
 
     sget-object v4, Landroid/view/View;->ALPHA:Landroid/util/Property;
@@ -924,7 +1087,7 @@
 
     aput v6, v5, v2
 
-    .line 238
+    .line 314
     invoke-static {v3, v4, v5}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
 
     move-result-object v3
@@ -941,7 +1104,7 @@
 
     aput v6, v5, v2
 
-    .line 239
+    .line 315
     invoke-static {v3, v4, v5}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
 
     move-result-object v3
@@ -958,24 +1121,24 @@
 
     aput v6, v0, v2
 
-    .line 240
+    .line 316
     invoke-static {v4, v5, v0}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
 
     move-result-object v0
 
     aput-object v0, v1, v3
 
-    .line 237
+    .line 313
     invoke-virtual {p1, v1}, Landroid/animation/AnimatorSet;->playTogether([Landroid/animation/Animator;)V
 
-    .line 242
+    .line 318
     new-instance v0, Lorg/telegram/ui/Components/PipVideoOverlay$2;
 
     invoke-direct {v0, p0}, Lorg/telegram/ui/Components/PipVideoOverlay$2;-><init>(Lorg/telegram/ui/Components/PipVideoOverlay;)V
 
     invoke-virtual {p1, v0}, Landroid/animation/AnimatorSet;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 248
+    .line 324
     invoke-virtual {p1}, Landroid/animation/AnimatorSet;->start()V
 
     :goto_83
@@ -985,12 +1148,12 @@
 .method private getPipConfig()Lorg/telegram/ui/Components/PipVideoOverlay$PipConfig;
     .registers 5
 
-    .line 139
+    .line 214
     iget-object v0, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->pipConfig:Lorg/telegram/ui/Components/PipVideoOverlay$PipConfig;
 
     if-nez v0, :cond_12
 
-    .line 140
+    .line 215
     new-instance v0, Lorg/telegram/ui/Components/PipVideoOverlay$PipConfig;
 
     sget-object v1, Lorg/telegram/messenger/AndroidUtilities;->displaySize:Landroid/graphics/Point;
@@ -1005,7 +1168,7 @@
 
     iput-object v0, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->pipConfig:Lorg/telegram/ui/Components/PipVideoOverlay$PipConfig;
 
-    .line 142
+    .line 217
     :cond_12
     iget-object v0, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->pipConfig:Lorg/telegram/ui/Components/PipVideoOverlay$PipConfig;
 
@@ -1015,7 +1178,7 @@
 .method public static getPipRect(ZF)Lorg/telegram/ui/Components/Rect;
     .registers 9
 
-    .line 334
+    .line 424
     new-instance v0, Lorg/telegram/ui/Components/Rect;
 
     invoke-direct {v0}, Lorg/telegram/ui/Components/Rect;-><init>()V
@@ -1024,7 +1187,7 @@
 
     div-float/2addr v1, p1
 
-    .line 336
+    .line 426
     sget-object p1, Lorg/telegram/ui/Components/PipVideoOverlay;->instance:Lorg/telegram/ui/Components/PipVideoOverlay;
 
     iget-boolean v2, p1, Lorg/telegram/ui/Components/PipVideoOverlay;->isVisible:Z
@@ -1035,13 +1198,13 @@
 
     goto :goto_2a
 
-    .line 355
+    .line 445
     :cond_11
     iget p0, p1, Lorg/telegram/ui/Components/PipVideoOverlay;->pipX:F
 
     iput p0, v0, Lorg/telegram/ui/Components/Rect;->x:F
 
-    .line 356
+    .line 446
     iget p0, p1, Lorg/telegram/ui/Components/PipVideoOverlay;->pipY:F
 
     sget p1, Lorg/telegram/messenger/AndroidUtilities;->statusBarHeight:I
@@ -1052,7 +1215,7 @@
 
     iput p0, v0, Lorg/telegram/ui/Components/Rect;->y:F
 
-    .line 357
+    .line 447
     sget-object p0, Lorg/telegram/ui/Components/PipVideoOverlay;->instance:Lorg/telegram/ui/Components/PipVideoOverlay;
 
     iget p1, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->pipWidth:I
@@ -1061,7 +1224,7 @@
 
     iput p1, v0, Lorg/telegram/ui/Components/Rect;->width:F
 
-    .line 358
+    .line 448
     iget p0, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->pipHeight:I
 
     int-to-float p0, p0
@@ -1070,7 +1233,7 @@
 
     return-object v0
 
-    .line 337
+    .line 427
     :cond_2a
     :goto_2a
     invoke-direct {p1}, Lorg/telegram/ui/Components/PipVideoOverlay;->getPipConfig()Lorg/telegram/ui/Components/PipVideoOverlay$PipConfig;
@@ -1091,7 +1254,7 @@
 
     move-result p1
 
-    .line 338
+    .line 428
     sget-object v2, Lorg/telegram/ui/Components/PipVideoOverlay;->instance:Lorg/telegram/ui/Components/PipVideoOverlay;
 
     invoke-direct {v2}, Lorg/telegram/ui/Components/PipVideoOverlay;->getPipConfig()Lorg/telegram/ui/Components/PipVideoOverlay$PipConfig;
@@ -1102,7 +1265,7 @@
 
     move-result v2
 
-    .line 340
+    .line 430
     invoke-static {v1}, Lorg/telegram/ui/Components/PipVideoOverlay;->getSuggestedWidth(F)I
 
     move-result v3
@@ -1113,7 +1276,7 @@
 
     iput v3, v0, Lorg/telegram/ui/Components/Rect;->width:F
 
-    .line 341
+    .line 431
     invoke-static {v1}, Lorg/telegram/ui/Components/PipVideoOverlay;->getSuggestedHeight(F)I
 
     move-result v1
@@ -1132,7 +1295,7 @@
 
     if-eqz v3, :cond_82
 
-    .line 343
+    .line 433
     iget v3, v0, Lorg/telegram/ui/Components/Rect;->width:F
 
     const/high16 v4, 0x40000000    # 2.0f
@@ -1179,7 +1342,7 @@
 
     goto :goto_92
 
-    .line 345
+    .line 435
     :cond_82
     sget-object p0, Lorg/telegram/messenger/AndroidUtilities;->displaySize:Landroid/graphics/Point;
 
@@ -1206,7 +1369,7 @@
 
     if-eqz p0, :cond_b3
 
-    .line 348
+    .line 438
     invoke-static {v2}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result p0
@@ -1243,7 +1406,7 @@
 
     goto :goto_bd
 
-    .line 350
+    .line 440
     :cond_b3
     invoke-static {v2}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
@@ -1262,14 +1425,14 @@
 .end method
 
 .method private getRatio()F
-    .registers 3
+    .registers 4
 
-    .line 169
+    .line 244
     iget-object v0, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->aspectRatio:Ljava/lang/Float;
 
-    if-nez v0, :cond_2b
+    if-nez v0, :cond_43
 
-    .line 170
+    .line 245
     iget v0, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->mVideoHeight:I
 
     int-to-float v0, v0
@@ -1286,7 +1449,7 @@
 
     iput-object v0, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->aspectRatio:Ljava/lang/Float;
 
-    .line 172
+    .line 247
     sget-object v0, Lorg/telegram/messenger/AndroidUtilities;->displaySize:Landroid/graphics/Point;
 
     iget v1, v0, Landroid/graphics/Point;->x:I
@@ -1317,8 +1480,33 @@
 
     iput v0, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->maxScaleFactor:F
 
-    .line 174
-    :cond_2b
+    .line 248
+    iget-object v0, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->videoForwardDrawable:Lorg/telegram/ui/Components/VideoForwardDrawable;
+
+    iget-object v1, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->aspectRatio:Ljava/lang/Float;
+
+    invoke-virtual {v1}, Ljava/lang/Float;->floatValue()F
+
+    move-result v1
+
+    const/high16 v2, 0x3f800000    # 1.0f
+
+    cmpg-float v1, v1, v2
+
+    if-gez v1, :cond_3d
+
+    const v1, 0x3f19999a    # 0.6f
+
+    goto :goto_40
+
+    :cond_3d
+    const v1, 0x3ee66666    # 0.45f
+
+    :goto_40
+    invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/VideoForwardDrawable;->setPlayScaleFactor(F)V
+
+    .line 250
+    :cond_43
     iget-object v0, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->aspectRatio:Ljava/lang/Float;
 
     invoke-virtual {v0}, Ljava/lang/Float;->floatValue()F
@@ -1331,7 +1519,7 @@
 .method private getSuggestedHeight()I
     .registers 2
 
-    .line 161
+    .line 236
     invoke-direct {p0}, Lorg/telegram/ui/Components/PipVideoOverlay;->getRatio()F
 
     move-result v0
@@ -1346,7 +1534,7 @@
 .method private static getSuggestedHeight(F)I
     .registers 2
 
-    .line 165
+    .line 240
     invoke-static {p0}, Lorg/telegram/ui/Components/PipVideoOverlay;->getSuggestedWidth(F)I
 
     move-result v0
@@ -1363,7 +1551,7 @@
 .method private getSuggestedWidth()I
     .registers 2
 
-    .line 150
+    .line 225
     invoke-direct {p0}, Lorg/telegram/ui/Components/PipVideoOverlay;->getRatio()F
 
     move-result v0
@@ -1384,7 +1572,7 @@
 
     if-ltz p0, :cond_18
 
-    .line 155
+    .line 230
     sget-object p0, Lorg/telegram/messenger/AndroidUtilities;->displaySize:Landroid/graphics/Point;
 
     iget v0, p0, Landroid/graphics/Point;->x:I
@@ -1406,7 +1594,7 @@
 
     return p0
 
-    .line 157
+    .line 232
     :cond_18
     sget-object p0, Lorg/telegram/messenger/AndroidUtilities;->displaySize:Landroid/graphics/Point;
 
@@ -1428,7 +1616,7 @@
 .method public static isVisible()Z
     .registers 1
 
-    .line 146
+    .line 221
     sget-object v0, Lorg/telegram/ui/Components/PipVideoOverlay;->instance:Lorg/telegram/ui/Components/PipVideoOverlay;
 
     iget-boolean v0, v0, Lorg/telegram/ui/Components/PipVideoOverlay;->isVisible:Z
@@ -1437,32 +1625,16 @@
 .end method
 
 .method private synthetic lambda$new$4()V
-    .registers 2
-
-    const/4 v0, 0x0
-
-    .line 108
-    iput-boolean v0, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->isShowingControls:Z
-
-    invoke-direct {p0, v0}, Lorg/telegram/ui/Components/PipVideoOverlay;->toggleControls(Z)V
-
-    .line 109
-    iput-boolean v0, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->postedDismissControls:Z
-
-    return-void
-.end method
-
-.method private synthetic lambda$new$5()V
     .registers 5
 
-    .line 122
+    .line 117
     iget-object v0, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->photoViewer:Lorg/telegram/ui/PhotoViewer;
 
     if-nez v0, :cond_5
 
     return-void
 
-    .line 125
+    .line 120
     :cond_5
     invoke-virtual {v0}, Lorg/telegram/ui/PhotoViewer;->getVideoPlayer()Lorg/telegram/ui/Components/VideoPlayer;
 
@@ -1472,7 +1644,7 @@
 
     return-void
 
-    .line 129
+    .line 124
     :cond_c
     invoke-virtual {v0}, Lorg/telegram/ui/Components/VideoPlayer;->getCurrentPosition()J
 
@@ -1490,12 +1662,12 @@
 
     iput v1, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->videoProgress:F
 
-    .line 130
+    .line 125
     iget-object v1, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->photoViewer:Lorg/telegram/ui/PhotoViewer;
 
     if-nez v1, :cond_2a
 
-    .line 131
+    .line 126
     invoke-virtual {v0}, Lorg/telegram/ui/Components/VideoPlayer;->getBufferedPosition()J
 
     move-result-wide v1
@@ -1512,13 +1684,13 @@
 
     iput v1, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->bufferProgress:F
 
-    .line 133
+    .line 128
     :cond_2a
     iget-object v0, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->videoProgressView:Lorg/telegram/ui/Components/PipVideoOverlay$VideoProgressView;
 
     invoke-virtual {v0}, Landroid/view/View;->invalidate()V
 
-    .line 135
+    .line 130
     iget-object v0, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->progressRunnable:Ljava/lang/Runnable;
 
     const-wide/16 v1, 0x1f4
@@ -1528,10 +1700,49 @@
     return-void
 .end method
 
+.method private synthetic lambda$new$5()V
+    .registers 4
+
+    .line 138
+    iget-object v0, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->photoViewer:Lorg/telegram/ui/PhotoViewer;
+
+    if-eqz v0, :cond_14
+
+    invoke-virtual {v0}, Lorg/telegram/ui/PhotoViewer;->getVideoPlayerRewinder()Lorg/telegram/messenger/video/VideoPlayerRewinder;
+
+    move-result-object v0
+
+    iget v0, v0, Lorg/telegram/messenger/video/VideoPlayerRewinder;->rewindCount:I
+
+    if-lez v0, :cond_14
+
+    .line 139
+    iget-object v0, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->dismissControlsCallback:Ljava/lang/Runnable;
+
+    const-wide/16 v1, 0x5dc
+
+    invoke-static {v0, v1, v2}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;J)V
+
+    return-void
+
+    :cond_14
+    const/4 v0, 0x0
+
+    .line 142
+    iput-boolean v0, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->isShowingControls:Z
+
+    invoke-direct {p0, v0}, Lorg/telegram/ui/Components/PipVideoOverlay;->toggleControls(Z)V
+
+    .line 143
+    iput-boolean v0, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->postedDismissControls:Z
+
+    return-void
+.end method
+
 .method private synthetic lambda$showInternal$10(ZLandroid/view/View;)V
     .registers 7
 
-    .line 763
+    .line 968
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/4 v1, 0x1
@@ -1540,7 +1751,7 @@
 
     if-lt v0, v2, :cond_2c
 
-    .line 764
+    .line 969
     invoke-virtual {p2}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -1553,12 +1764,12 @@
 
     check-cast v0, Landroid/app/ActivityManager;
 
-    .line 765
+    .line 970
     invoke-virtual {v0}, Landroid/app/ActivityManager;->getRunningAppProcesses()Ljava/util/List;
 
     move-result-object v0
 
-    .line 766
+    .line 971
     invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
 
     move-result v2
@@ -1567,7 +1778,7 @@
 
     const/4 v2, 0x0
 
-    .line 767
+    .line 972
     invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
@@ -1591,12 +1802,12 @@
 
     if-eqz v1, :cond_34
 
-    .line 771
+    .line 976
     sget-boolean p1, Lorg/telegram/ui/LaunchActivity;->isResumed:Z
 
     if-nez p1, :cond_50
 
-    .line 772
+    .line 977
     :cond_34
     invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -1606,10 +1817,10 @@
 
     sput-object p1, Lorg/telegram/ui/LaunchActivity;->onResumeStaticCallback:Ljava/lang/Runnable;
 
-    .line 774
+    .line 979
     sget-object p1, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
-    .line 775
+    .line 980
     new-instance p2, Landroid/content/Intent;
 
     const-class v0, Lorg/telegram/ui/LaunchActivity;
@@ -1618,32 +1829,32 @@
 
     const/high16 v0, 0x10000000
 
-    .line 776
+    .line 981
     invoke-virtual {p2, v0}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 777
+    .line 982
     invoke-virtual {p1, p2}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
 
     goto :goto_5f
 
-    .line 779
+    .line 984
     :cond_50
     iget-object p1, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->parentSheet:Lorg/telegram/ui/Components/EmbedBottomSheet;
 
     if-eqz p1, :cond_58
 
-    .line 780
+    .line 985
     invoke-virtual {p1}, Lorg/telegram/ui/Components/EmbedBottomSheet;->exitFromPip()V
 
     goto :goto_5f
 
-    .line 781
+    .line 986
     :cond_58
     iget-object p1, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->photoViewer:Lorg/telegram/ui/PhotoViewer;
 
     if-eqz p1, :cond_5f
 
-    .line 782
+    .line 987
     invoke-virtual {p1}, Lorg/telegram/ui/PhotoViewer;->exitFromPip()V
 
     :cond_5f
@@ -1654,14 +1865,14 @@
 .method private synthetic lambda$showInternal$11(Landroid/view/View;)V
     .registers 3
 
-    .line 792
+    .line 997
     iget-object p1, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->photoViewer:Lorg/telegram/ui/PhotoViewer;
 
     if-nez p1, :cond_5
 
     return-void
 
-    .line 795
+    .line 1000
     :cond_5
     invoke-virtual {p1}, Lorg/telegram/ui/PhotoViewer;->getVideoPlayer()Lorg/telegram/ui/Components/VideoPlayer;
 
@@ -1671,7 +1882,7 @@
 
     return-void
 
-    .line 799
+    .line 1004
     :cond_c
     invoke-virtual {p1}, Lorg/telegram/ui/Components/VideoPlayer;->isPlaying()Z
 
@@ -1679,16 +1890,16 @@
 
     if-eqz v0, :cond_16
 
-    .line 800
+    .line 1005
     invoke-virtual {p1}, Lorg/telegram/ui/Components/VideoPlayer;->pause()V
 
     goto :goto_19
 
-    .line 802
+    .line 1007
     :cond_16
     invoke-virtual {p1}, Lorg/telegram/ui/Components/VideoPlayer;->play()V
 
-    .line 804
+    .line 1009
     :goto_19
     invoke-static {}, Lorg/telegram/ui/Components/PipVideoOverlay;->updatePlayButton()V
 
@@ -1698,12 +1909,12 @@
 .method private synthetic lambda$showInternal$7(Landroidx/dynamicanimation/animation/DynamicAnimation;ZFF)V
     .registers 5
 
-    .line 392
+    .line 482
     invoke-direct {p0}, Lorg/telegram/ui/Components/PipVideoOverlay;->getPipConfig()Lorg/telegram/ui/Components/PipVideoOverlay$PipConfig;
 
     move-result-object p1
 
-    invoke-static {p1, p3}, Lorg/telegram/ui/Components/PipVideoOverlay$PipConfig;->access$3100(Lorg/telegram/ui/Components/PipVideoOverlay$PipConfig;F)V
+    invoke-static {p1, p3}, Lorg/telegram/ui/Components/PipVideoOverlay$PipConfig;->access$4000(Lorg/telegram/ui/Components/PipVideoOverlay$PipConfig;F)V
 
     return-void
 .end method
@@ -1711,12 +1922,12 @@
 .method private synthetic lambda$showInternal$8(Landroidx/dynamicanimation/animation/DynamicAnimation;ZFF)V
     .registers 5
 
-    .line 397
+    .line 487
     invoke-direct {p0}, Lorg/telegram/ui/Components/PipVideoOverlay;->getPipConfig()Lorg/telegram/ui/Components/PipVideoOverlay$PipConfig;
 
     move-result-object p1
 
-    invoke-static {p1, p3}, Lorg/telegram/ui/Components/PipVideoOverlay$PipConfig;->access$3200(Lorg/telegram/ui/Components/PipVideoOverlay$PipConfig;F)V
+    invoke-static {p1, p3}, Lorg/telegram/ui/Components/PipVideoOverlay$PipConfig;->access$4100(Lorg/telegram/ui/Components/PipVideoOverlay$PipConfig;F)V
 
     return-void
 .end method
@@ -1724,7 +1935,7 @@
 .method private static synthetic lambda$showInternal$9(Landroid/view/View;)V
     .registers 1
 
-    .line 752
+    .line 957
     invoke-static {}, Lorg/telegram/ui/Components/PipVideoOverlay;->dimissAndDestroy()V
 
     return-void
@@ -1819,7 +2030,7 @@
 .method private synthetic lambda$toggleControls$6(Landroid/animation/ValueAnimator;)V
     .registers 3
 
-    .line 181
+    .line 257
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
     move-result-object p1
@@ -1830,7 +2041,7 @@
 
     move-result p1
 
-    .line 182
+    .line 258
     iget-object v0, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->controlsView:Landroid/widget/FrameLayout;
 
     invoke-virtual {v0, p1}, Landroid/widget/FrameLayout;->setAlpha(F)V
@@ -1841,7 +2052,7 @@
 .method private onDismissedInternal()V
     .registers 3
 
-    .line 254
+    .line 330
     :try_start_0
     iget-object v0, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->controlsView:Landroid/widget/FrameLayout;
 
@@ -1851,7 +2062,7 @@
 
     if-eqz v0, :cond_f
 
-    .line 255
+    .line 331
     iget-object v0, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->windowManager:Landroid/view/WindowManager;
 
     iget-object v1, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->contentView:Landroid/view/ViewGroup;
@@ -1864,39 +2075,177 @@
     :cond_f
     const/4 v0, 0x0
 
-    .line 259
+    .line 335
     iput-object v0, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->videoProgressView:Lorg/telegram/ui/Components/PipVideoOverlay$VideoProgressView;
 
-    .line 260
+    .line 336
     iput-object v0, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->innerView:Landroid/view/View;
 
-    .line 261
+    .line 337
     iput-object v0, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->photoViewer:Lorg/telegram/ui/PhotoViewer;
 
-    .line 262
+    .line 338
     iput-object v0, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->parentSheet:Lorg/telegram/ui/Components/EmbedBottomSheet;
 
-    .line 263
+    .line 339
     iput-object v0, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->consumingChild:Landroid/view/View;
 
     const/4 v0, 0x0
 
-    .line 264
+    .line 340
     iput-boolean v0, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->isScrolling:Z
 
-    .line 265
+    .line 341
     iput-boolean v0, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->isVisible:Z
 
-    .line 266
+    .line 342
     iput-boolean v0, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->isDismissing:Z
 
+    .line 343
+    iput-boolean v0, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->canLongClick:Z
+
+    .line 345
+    invoke-direct {p0}, Lorg/telegram/ui/Components/PipVideoOverlay;->cancelRewind()V
+
+    .line 346
+    iget-object v0, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->longClickCallback:Ljava/lang/Runnable;
+
+    invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->cancelRunOnUIThread(Ljava/lang/Runnable;)V
+
+    return-void
+.end method
+
+.method public static onRewindCanceled()V
+    .registers 1
+
+    .line 147
+    sget-object v0, Lorg/telegram/ui/Components/PipVideoOverlay;->instance:Lorg/telegram/ui/Components/PipVideoOverlay;
+
+    invoke-direct {v0}, Lorg/telegram/ui/Components/PipVideoOverlay;->onRewindCanceledInternal()V
+
+    return-void
+.end method
+
+.method private onRewindCanceledInternal()V
+    .registers 3
+
+    .line 151
+    iget-object v0, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->videoForwardDrawable:Lorg/telegram/ui/Components/VideoForwardDrawable;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/VideoForwardDrawable;->setShowing(Z)V
+
+    return-void
+.end method
+
+.method public static onRewindStart(Z)V
+    .registers 2
+
+    .line 173
+    sget-object v0, Lorg/telegram/ui/Components/PipVideoOverlay;->instance:Lorg/telegram/ui/Components/PipVideoOverlay;
+
+    invoke-direct {v0, p0}, Lorg/telegram/ui/Components/PipVideoOverlay;->onRewindStartInternal(Z)V
+
+    return-void
+.end method
+
+.method private onRewindStartInternal(Z)V
+    .registers 4
+
+    .line 177
+    iget-object v0, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->videoForwardDrawable:Lorg/telegram/ui/Components/VideoForwardDrawable;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/VideoForwardDrawable;->setOneShootAnimation(Z)V
+
+    .line 178
+    iget-object v0, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->videoForwardDrawable:Lorg/telegram/ui/Components/VideoForwardDrawable;
+
+    const/4 v1, 0x1
+
+    xor-int/2addr p1, v1
+
+    invoke-virtual {v0, p1}, Lorg/telegram/ui/Components/VideoForwardDrawable;->setLeftSide(Z)V
+
+    .line 179
+    iget-object p1, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->videoForwardDrawable:Lorg/telegram/ui/Components/VideoForwardDrawable;
+
+    invoke-virtual {p1, v1}, Lorg/telegram/ui/Components/VideoForwardDrawable;->setShowing(Z)V
+
+    .line 180
+    iget-object p1, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->videoProgressView:Lorg/telegram/ui/Components/PipVideoOverlay$VideoProgressView;
+
+    if-eqz p1, :cond_19
+
+    .line 181
+    invoke-virtual {p1}, Landroid/view/View;->invalidate()V
+
+    .line 183
+    :cond_19
+    iget-object p1, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->controlsView:Landroid/widget/FrameLayout;
+
+    if-eqz p1, :cond_20
+
+    .line 184
+    invoke-virtual {p1}, Landroid/widget/FrameLayout;->invalidate()V
+
+    :cond_20
+    return-void
+.end method
+
+.method public static onUpdateRewindProgressUi(JFZ)V
+    .registers 5
+
+    .line 155
+    sget-object v0, Lorg/telegram/ui/Components/PipVideoOverlay;->instance:Lorg/telegram/ui/Components/PipVideoOverlay;
+
+    invoke-direct {v0, p0, p1, p2, p3}, Lorg/telegram/ui/Components/PipVideoOverlay;->onUpdateRewindProgressUiInternal(JFZ)V
+
+    return-void
+.end method
+
+.method private onUpdateRewindProgressUiInternal(JFZ)V
+    .registers 7
+
+    .line 159
+    iget-object p1, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->videoForwardDrawable:Lorg/telegram/ui/Components/VideoForwardDrawable;
+
+    const-wide/16 v0, 0x0
+
+    invoke-virtual {p1, v0, v1}, Lorg/telegram/ui/Components/VideoForwardDrawable;->setTime(J)V
+
+    if-eqz p4, :cond_19
+
+    .line 161
+    iput p3, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->videoProgress:F
+
+    .line 163
+    iget-object p1, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->videoProgressView:Lorg/telegram/ui/Components/PipVideoOverlay$VideoProgressView;
+
+    if-eqz p1, :cond_12
+
+    .line 164
+    invoke-virtual {p1}, Landroid/view/View;->invalidate()V
+
+    .line 166
+    :cond_12
+    iget-object p1, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->controlsView:Landroid/widget/FrameLayout;
+
+    if-eqz p1, :cond_19
+
+    .line 167
+    invoke-virtual {p1}, Landroid/widget/FrameLayout;->invalidate()V
+
+    :cond_19
     return-void
 .end method
 
 .method public static onVideoCompleted()V
     .registers 1
 
-    .line 295
+    .line 385
     sget-object v0, Lorg/telegram/ui/Components/PipVideoOverlay;->instance:Lorg/telegram/ui/Components/PipVideoOverlay;
 
     invoke-direct {v0}, Lorg/telegram/ui/Components/PipVideoOverlay;->onVideoCompletedInternal()V
@@ -1907,7 +2256,7 @@
 .method private onVideoCompletedInternal()V
     .registers 4
 
-    .line 299
+    .line 389
     iget-boolean v0, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->isVisible:Z
 
     if-eqz v0, :cond_2a
@@ -1921,40 +2270,40 @@
     :cond_9
     const/4 v1, 0x1
 
-    .line 302
+    .line 392
     iput-boolean v1, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->isVideoCompleted:Z
 
     const/4 v2, 0x0
 
-    .line 303
+    .line 393
     iput v2, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->videoProgress:F
 
-    .line 304
+    .line 394
     iput v2, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->bufferProgress:F
 
     if-eqz v0, :cond_16
 
-    .line 306
+    .line 396
     invoke-virtual {v0}, Landroid/view/View;->invalidate()V
 
-    .line 309
+    .line 399
     :cond_16
     invoke-direct {p0}, Lorg/telegram/ui/Components/PipVideoOverlay;->updatePlayButtonInternal()V
 
-    .line 310
+    .line 400
     iget-object v0, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->progressRunnable:Ljava/lang/Runnable;
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->cancelRunOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 311
+    .line 401
     iget-boolean v0, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->isShowingControls:Z
 
     if-nez v0, :cond_2a
 
-    .line 312
+    .line 402
     invoke-direct {p0, v1}, Lorg/telegram/ui/Components/PipVideoOverlay;->toggleControls(Z)V
 
-    .line 313
+    .line 403
     iget-object v0, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->dismissControlsCallback:Ljava/lang/Runnable;
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->cancelRunOnUIThread(Ljava/lang/Runnable;)V
@@ -1967,17 +2316,17 @@
 .method public static setBufferedProgress(F)V
     .registers 2
 
-    .line 318
+    .line 408
     sget-object v0, Lorg/telegram/ui/Components/PipVideoOverlay;->instance:Lorg/telegram/ui/Components/PipVideoOverlay;
 
     iput p0, v0, Lorg/telegram/ui/Components/PipVideoOverlay;->bufferProgress:F
 
-    .line 319
+    .line 409
     iget-object p0, v0, Lorg/telegram/ui/Components/PipVideoOverlay;->videoProgressView:Lorg/telegram/ui/Components/PipVideoOverlay$VideoProgressView;
 
     if-eqz p0, :cond_b
 
-    .line 320
+    .line 410
     invoke-virtual {p0}, Landroid/view/View;->invalidate()V
 
     :cond_b
@@ -1987,7 +2336,7 @@
 .method public static setParentSheet(Lorg/telegram/ui/Components/EmbedBottomSheet;)V
     .registers 2
 
-    .line 325
+    .line 415
     sget-object v0, Lorg/telegram/ui/Components/PipVideoOverlay;->instance:Lorg/telegram/ui/Components/PipVideoOverlay;
 
     iput-object p0, v0, Lorg/telegram/ui/Components/PipVideoOverlay;->parentSheet:Lorg/telegram/ui/Components/EmbedBottomSheet;
@@ -1998,12 +2347,12 @@
 .method public static setPhotoViewer(Lorg/telegram/ui/PhotoViewer;)V
     .registers 2
 
-    .line 329
+    .line 419
     sget-object v0, Lorg/telegram/ui/Components/PipVideoOverlay;->instance:Lorg/telegram/ui/Components/PipVideoOverlay;
 
     iput-object p0, v0, Lorg/telegram/ui/Components/PipVideoOverlay;->photoViewer:Lorg/telegram/ui/PhotoViewer;
 
-    .line 330
+    .line 420
     invoke-direct {v0}, Lorg/telegram/ui/Components/PipVideoOverlay;->updatePlayButtonInternal()V
 
     return-void
@@ -2024,7 +2373,7 @@
 
     move v4, p4
 
-    .line 363
+    .line 453
     invoke-static/range {v0 .. v5}, Lorg/telegram/ui/Components/PipVideoOverlay;->show(ZLandroid/app/Activity;Landroid/view/View;IIZ)Z
 
     move-result p0
@@ -2035,7 +2384,7 @@
 .method public static show(ZLandroid/app/Activity;Landroid/view/View;IIZ)Z
     .registers 13
 
-    .line 367
+    .line 457
     sget-object v0, Lorg/telegram/ui/Components/PipVideoOverlay;->instance:Lorg/telegram/ui/Components/PipVideoOverlay;
 
     move v1, p0
@@ -2064,7 +2413,7 @@
 
     move/from16 v1, p1
 
-    .line 371
+    .line 461
     iget-boolean v2, v0, Lorg/telegram/ui/Components/PipVideoOverlay;->isVisible:Z
 
     const/4 v3, 0x0
@@ -2076,25 +2425,25 @@
     :cond_a
     const/4 v2, 0x1
 
-    .line 374
+    .line 464
     iput-boolean v2, v0, Lorg/telegram/ui/Components/PipVideoOverlay;->isVisible:Z
 
     move/from16 v4, p4
 
-    .line 376
+    .line 466
     iput v4, v0, Lorg/telegram/ui/Components/PipVideoOverlay;->mVideoWidth:I
 
     move/from16 v4, p5
 
-    .line 377
+    .line 467
     iput v4, v0, Lorg/telegram/ui/Components/PipVideoOverlay;->mVideoHeight:I
 
     const/4 v4, 0x0
 
-    .line 378
+    .line 468
     iput-object v4, v0, Lorg/telegram/ui/Components/PipVideoOverlay;->aspectRatio:Ljava/lang/Float;
 
-    .line 380
+    .line 470
     invoke-direct/range {p0 .. p0}, Lorg/telegram/ui/Components/PipVideoOverlay;->getPipConfig()Lorg/telegram/ui/Components/PipVideoOverlay$PipConfig;
 
     move-result-object v4
@@ -2111,7 +2460,7 @@
 
     move-result v5
 
-    .line 381
+    .line 471
     invoke-direct/range {p0 .. p0}, Lorg/telegram/ui/Components/PipVideoOverlay;->getPipConfig()Lorg/telegram/ui/Components/PipVideoOverlay$PipConfig;
 
     move-result-object v6
@@ -2122,7 +2471,7 @@
 
     iput v6, v0, Lorg/telegram/ui/Components/PipVideoOverlay;->scaleFactor:F
 
-    .line 383
+    .line 473
     invoke-direct/range {p0 .. p0}, Lorg/telegram/ui/Components/PipVideoOverlay;->getSuggestedWidth()I
 
     move-result v6
@@ -2137,7 +2486,7 @@
 
     iput v6, v0, Lorg/telegram/ui/Components/PipVideoOverlay;->pipWidth:I
 
-    .line 384
+    .line 474
     invoke-direct/range {p0 .. p0}, Lorg/telegram/ui/Components/PipVideoOverlay;->getSuggestedHeight()I
 
     move-result v6
@@ -2152,12 +2501,12 @@
 
     iput v6, v0, Lorg/telegram/ui/Components/PipVideoOverlay;->pipHeight:I
 
-    .line 385
+    .line 475
     iput-boolean v3, v0, Lorg/telegram/ui/Components/PipVideoOverlay;->isShowingControls:Z
 
     const v6, 0x44228000    # 650.0f
 
-    .line 388
+    .line 478
     new-instance v7, Landroidx/dynamicanimation/animation/SpringAnimation;
 
     sget-object v8, Lorg/telegram/ui/Components/PipVideoOverlay;->PIP_X_PROPERTY:Landroidx/dynamicanimation/animation/FloatPropertyCompat;
@@ -2170,17 +2519,17 @@
 
     const/high16 v9, 0x3f400000    # 0.75f
 
-    .line 390
+    .line 480
     invoke-virtual {v8, v9}, Landroidx/dynamicanimation/animation/SpringForce;->setDampingRatio(F)Landroidx/dynamicanimation/animation/SpringForce;
 
     move-result-object v8
 
-    .line 391
+    .line 481
     invoke-virtual {v8, v6}, Landroidx/dynamicanimation/animation/SpringForce;->setStiffness(F)Landroidx/dynamicanimation/animation/SpringForce;
 
     move-result-object v8
 
-    .line 389
+    .line 479
     invoke-virtual {v7, v8}, Landroidx/dynamicanimation/animation/SpringAnimation;->setSpring(Landroidx/dynamicanimation/animation/SpringForce;)Landroidx/dynamicanimation/animation/SpringAnimation;
 
     move-result-object v7
@@ -2189,7 +2538,7 @@
 
     invoke-direct {v8, v0}, Lorg/telegram/ui/Components/PipVideoOverlay$$ExternalSyntheticLambda4;-><init>(Lorg/telegram/ui/Components/PipVideoOverlay;)V
 
-    .line 392
+    .line 482
     invoke-virtual {v7, v8}, Landroidx/dynamicanimation/animation/DynamicAnimation;->addEndListener(Landroidx/dynamicanimation/animation/DynamicAnimation$OnAnimationEndListener;)Landroidx/dynamicanimation/animation/DynamicAnimation;
 
     move-result-object v7
@@ -2198,7 +2547,7 @@
 
     iput-object v7, v0, Lorg/telegram/ui/Components/PipVideoOverlay;->pipXSpring:Landroidx/dynamicanimation/animation/SpringAnimation;
 
-    .line 393
+    .line 483
     new-instance v7, Landroidx/dynamicanimation/animation/SpringAnimation;
 
     sget-object v8, Lorg/telegram/ui/Components/PipVideoOverlay;->PIP_Y_PROPERTY:Landroidx/dynamicanimation/animation/FloatPropertyCompat;
@@ -2209,17 +2558,17 @@
 
     invoke-direct {v8}, Landroidx/dynamicanimation/animation/SpringForce;-><init>()V
 
-    .line 395
+    .line 485
     invoke-virtual {v8, v9}, Landroidx/dynamicanimation/animation/SpringForce;->setDampingRatio(F)Landroidx/dynamicanimation/animation/SpringForce;
 
     move-result-object v8
 
-    .line 396
+    .line 486
     invoke-virtual {v8, v6}, Landroidx/dynamicanimation/animation/SpringForce;->setStiffness(F)Landroidx/dynamicanimation/animation/SpringForce;
 
     move-result-object v6
 
-    .line 394
+    .line 484
     invoke-virtual {v7, v6}, Landroidx/dynamicanimation/animation/SpringAnimation;->setSpring(Landroidx/dynamicanimation/animation/SpringForce;)Landroidx/dynamicanimation/animation/SpringAnimation;
 
     move-result-object v6
@@ -2228,7 +2577,7 @@
 
     invoke-direct {v7, v0}, Lorg/telegram/ui/Components/PipVideoOverlay$$ExternalSyntheticLambda5;-><init>(Lorg/telegram/ui/Components/PipVideoOverlay;)V
 
-    .line 397
+    .line 487
     invoke-virtual {v6, v7}, Landroidx/dynamicanimation/animation/DynamicAnimation;->addEndListener(Landroidx/dynamicanimation/animation/DynamicAnimation$OnAnimationEndListener;)Landroidx/dynamicanimation/animation/DynamicAnimation;
 
     move-result-object v6
@@ -2237,10 +2586,10 @@
 
     iput-object v6, v0, Lorg/telegram/ui/Components/PipVideoOverlay;->pipYSpring:Landroidx/dynamicanimation/animation/SpringAnimation;
 
-    .line 399
+    .line 489
     sget-object v6, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
-    .line 400
+    .line 490
     invoke-static {v6}, Landroid/view/ViewConfiguration;->get(Landroid/content/Context;)Landroid/view/ViewConfiguration;
 
     move-result-object v7
@@ -2249,7 +2598,7 @@
 
     move-result v7
 
-    .line 401
+    .line 491
     new-instance v8, Landroid/view/ScaleGestureDetector;
 
     new-instance v9, Lorg/telegram/ui/Components/PipVideoOverlay$3;
@@ -2260,14 +2609,14 @@
 
     iput-object v8, v0, Lorg/telegram/ui/Components/PipVideoOverlay;->scaleGestureDetector:Landroid/view/ScaleGestureDetector;
 
-    .line 486
+    .line 579
     sget v9, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v10, 0x13
 
     if-lt v9, v10, :cond_ba
 
-    .line 487
+    .line 580
     invoke-virtual {v8, v3}, Landroid/view/ScaleGestureDetector;->setQuickScaleEnabled(Z)V
 
     :cond_ba
@@ -2275,38 +2624,38 @@
 
     if-lt v9, v8, :cond_c3
 
-    .line 490
+    .line 583
     iget-object v8, v0, Lorg/telegram/ui/Components/PipVideoOverlay;->scaleGestureDetector:Landroid/view/ScaleGestureDetector;
 
     invoke-virtual {v8, v3}, Landroid/view/ScaleGestureDetector;->setStylusScaleEnabled(Z)V
 
-    .line 492
+    .line 585
     :cond_c3
-    new-instance v8, Landroidx/core/view/GestureDetectorCompat;
+    new-instance v8, Lorg/telegram/ui/Components/GestureDetectorFixDoubleTap;
 
     new-instance v10, Lorg/telegram/ui/Components/PipVideoOverlay$4;
 
     invoke-direct {v10, v0, v7}, Lorg/telegram/ui/Components/PipVideoOverlay$4;-><init>(Lorg/telegram/ui/Components/PipVideoOverlay;I)V
 
-    invoke-direct {v8, v6, v10}, Landroidx/core/view/GestureDetectorCompat;-><init>(Landroid/content/Context;Landroid/view/GestureDetector$OnGestureListener;)V
+    invoke-direct {v8, v6, v10}, Lorg/telegram/ui/Components/GestureDetectorFixDoubleTap;-><init>(Landroid/content/Context;Lorg/telegram/ui/Components/GestureDetectorFixDoubleTap$OnGestureListener;)V
 
-    iput-object v8, v0, Lorg/telegram/ui/Components/PipVideoOverlay;->gestureDetector:Landroidx/core/view/GestureDetectorCompat;
+    iput-object v8, v0, Lorg/telegram/ui/Components/PipVideoOverlay;->gestureDetector:Lorg/telegram/ui/Components/GestureDetectorFixDoubleTap;
 
-    .line 604
+    .line 773
     new-instance v7, Lorg/telegram/ui/Components/PipVideoOverlay$5;
 
     invoke-direct {v7, v0, v6}, Lorg/telegram/ui/Components/PipVideoOverlay$5;-><init>(Lorg/telegram/ui/Components/PipVideoOverlay;Landroid/content/Context;)V
 
     iput-object v7, v0, Lorg/telegram/ui/Components/PipVideoOverlay;->contentFrameLayout:Landroid/widget/FrameLayout;
 
-    .line 699
+    .line 886
     new-instance v7, Lorg/telegram/ui/Components/PipVideoOverlay$6;
 
     invoke-direct {v7, v0, v6}, Lorg/telegram/ui/Components/PipVideoOverlay$6;-><init>(Lorg/telegram/ui/Components/PipVideoOverlay;Landroid/content/Context;)V
 
     iput-object v7, v0, Lorg/telegram/ui/Components/PipVideoOverlay;->contentView:Landroid/view/ViewGroup;
 
-    .line 719
+    .line 906
     iget-object v8, v0, Lorg/telegram/ui/Components/PipVideoOverlay;->contentFrameLayout:Landroid/widget/FrameLayout;
 
     const/4 v10, -0x1
@@ -2323,7 +2672,7 @@
 
     if-lt v9, v7, :cond_fc
 
-    .line 721
+    .line 908
     iget-object v7, v0, Lorg/telegram/ui/Components/PipVideoOverlay;->contentFrameLayout:Landroid/widget/FrameLayout;
 
     new-instance v8, Lorg/telegram/ui/Components/PipVideoOverlay$7;
@@ -2332,12 +2681,12 @@
 
     invoke-virtual {v7, v8}, Landroid/widget/FrameLayout;->setOutlineProvider(Landroid/view/ViewOutlineProvider;)V
 
-    .line 727
+    .line 914
     iget-object v7, v0, Lorg/telegram/ui/Components/PipVideoOverlay;->contentFrameLayout:Landroid/widget/FrameLayout;
 
     invoke-virtual {v7, v2}, Landroid/widget/FrameLayout;->setClipToOutline(Z)V
 
-    .line 729
+    .line 916
     :cond_fc
     iget-object v7, v0, Lorg/telegram/ui/Components/PipVideoOverlay;->contentFrameLayout:Landroid/widget/FrameLayout;
 
@@ -2351,17 +2700,17 @@
 
     move-object/from16 v7, p3
 
-    .line 731
+    .line 918
     iput-object v7, v0, Lorg/telegram/ui/Components/PipVideoOverlay;->innerView:Landroid/view/View;
 
-    .line 732
+    .line 919
     invoke-virtual/range {p3 .. p3}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     move-result-object v7
 
     if-eqz v7, :cond_11e
 
-    .line 733
+    .line 920
     iget-object v7, v0, Lorg/telegram/ui/Components/PipVideoOverlay;->innerView:Landroid/view/View;
 
     invoke-virtual {v7}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
@@ -2374,7 +2723,7 @@
 
     invoke-virtual {v7, v8}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
 
-    .line 735
+    .line 922
     :cond_11e
     iget-object v7, v0, Lorg/telegram/ui/Components/PipVideoOverlay;->contentFrameLayout:Landroid/widget/FrameLayout;
 
@@ -2386,29 +2735,43 @@
 
     invoke-virtual {v7, v8, v9}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 737
-    new-instance v7, Landroid/widget/FrameLayout;
+    .line 924
+    iget-object v7, v0, Lorg/telegram/ui/Components/PipVideoOverlay;->videoForwardDrawable:Lorg/telegram/ui/Components/VideoForwardDrawable;
 
-    invoke-direct {v7, v6}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
+    new-instance v8, Lorg/telegram/ui/Components/PipVideoOverlay$8;
+
+    invoke-direct {v8, v0}, Lorg/telegram/ui/Components/PipVideoOverlay$8;-><init>(Lorg/telegram/ui/Components/PipVideoOverlay;)V
+
+    invoke-virtual {v7, v8}, Lorg/telegram/ui/Components/VideoForwardDrawable;->setDelegate(Lorg/telegram/ui/Components/VideoForwardDrawable$VideoForwardDrawableDelegate;)V
+
+    .line 933
+    new-instance v7, Lorg/telegram/ui/Components/PipVideoOverlay$9;
+
+    invoke-direct {v7, v0, v6}, Lorg/telegram/ui/Components/PipVideoOverlay$9;-><init>(Lorg/telegram/ui/Components/PipVideoOverlay;Landroid/content/Context;)V
 
     iput-object v7, v0, Lorg/telegram/ui/Components/PipVideoOverlay;->controlsView:Landroid/widget/FrameLayout;
 
+    .line 942
+    invoke-virtual {v7, v3}, Landroid/widget/FrameLayout;->setWillNotDraw(Z)V
+
+    .line 943
+    iget-object v7, v0, Lorg/telegram/ui/Components/PipVideoOverlay;->controlsView:Landroid/widget/FrameLayout;
+
     const/4 v8, 0x0
 
-    .line 738
     invoke-virtual {v7, v8}, Landroid/widget/FrameLayout;->setAlpha(F)V
 
-    .line 739
+    .line 944
     new-instance v7, Landroid/view/View;
 
     invoke-direct {v7, v6}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
     const/high16 v9, 0x4c000000    # 3.3554432E7f
 
-    .line 740
+    .line 945
     invoke-virtual {v7, v9}, Landroid/view/View;->setBackgroundColor(I)V
 
-    .line 741
+    .line 946
     iget-object v9, v0, Lorg/telegram/ui/Components/PipVideoOverlay;->controlsView:Landroid/widget/FrameLayout;
 
     invoke-static {v10, v11}, Lorg/telegram/ui/Components/LayoutHelper;->createFrame(IF)Landroid/widget/FrameLayout$LayoutParams;
@@ -2419,7 +2782,7 @@
 
     const/high16 v7, 0x41000000    # 8.0f
 
-    .line 743
+    .line 948
     invoke-static {v7}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v7
@@ -2428,19 +2791,19 @@
 
     const/16 v12, 0x26
 
-    .line 747
+    .line 952
     new-instance v13, Landroid/widget/ImageView;
 
     invoke-direct {v13, v6}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
 
-    const v14, 0x7f070353
+    const v14, 0x7f07036b
 
-    .line 748
+    .line 953
     invoke-virtual {v13, v14}, Landroid/widget/ImageView;->setImageResource(I)V
 
     const-string v14, "voipgroup_actionBarItems"
 
-    .line 749
+    .line 954
     invoke-static {v14}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
 
     move-result v15
@@ -2451,7 +2814,7 @@
 
     const-string v3, "listSelectorSDK21"
 
-    .line 750
+    .line 955
     invoke-static {v3}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
 
     move-result v15
@@ -2462,15 +2825,15 @@
 
     invoke-virtual {v13, v15}, Landroid/widget/ImageView;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    .line 751
+    .line 956
     invoke-virtual {v13, v7, v7, v7, v7}, Landroid/widget/ImageView;->setPadding(IIII)V
 
-    .line 752
+    .line 957
     sget-object v15, Lorg/telegram/ui/Components/PipVideoOverlay$$ExternalSyntheticLambda3;->INSTANCE:Lorg/telegram/ui/Components/PipVideoOverlay$$ExternalSyntheticLambda3;
 
     invoke-virtual {v13, v15}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 753
+    .line 958
     iget-object v15, v0, Lorg/telegram/ui/Components/PipVideoOverlay;->controlsView:Landroid/widget/FrameLayout;
 
     int-to-float v2, v12
@@ -2497,17 +2860,17 @@
 
     invoke-virtual {v15, v13, v8}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 755
+    .line 960
     new-instance v8, Landroid/widget/ImageView;
 
     invoke-direct {v8, v6}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
 
-    const v13, 0x7f070354
+    const v13, 0x7f07036c
 
-    .line 756
+    .line 961
     invoke-virtual {v8, v13}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 757
+    .line 962
     invoke-static {v14}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
 
     move-result v13
@@ -2516,7 +2879,7 @@
 
     invoke-virtual {v8, v13, v15}, Landroid/widget/ImageView;->setColorFilter(ILandroid/graphics/PorterDuff$Mode;)V
 
-    .line 758
+    .line 963
     invoke-static {v3}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
 
     move-result v13
@@ -2527,17 +2890,17 @@
 
     invoke-virtual {v8, v13}, Landroid/widget/ImageView;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    .line 759
+    .line 964
     invoke-virtual {v8, v7, v7, v7, v7}, Landroid/widget/ImageView;->setPadding(IIII)V
 
-    .line 760
+    .line 965
     new-instance v7, Lorg/telegram/ui/Components/PipVideoOverlay$$ExternalSyntheticLambda2;
 
     invoke-direct {v7, v0, v1}, Lorg/telegram/ui/Components/PipVideoOverlay$$ExternalSyntheticLambda2;-><init>(Lorg/telegram/ui/Components/PipVideoOverlay;Z)V
 
     invoke-virtual {v8, v7}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 786
+    .line 991
     iget-object v7, v0, Lorg/telegram/ui/Components/PipVideoOverlay;->controlsView:Landroid/widget/FrameLayout;
 
     const/16 v13, 0x30
@@ -2552,14 +2915,14 @@
 
     invoke-virtual {v7, v8, v2}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 788
+    .line 993
     new-instance v2, Landroid/widget/ImageView;
 
     invoke-direct {v2, v6}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
 
     iput-object v2, v0, Lorg/telegram/ui/Components/PipVideoOverlay;->playPauseButton:Landroid/widget/ImageView;
 
-    .line 789
+    .line 994
     invoke-static {v14}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
 
     move-result v7
@@ -2568,7 +2931,7 @@
 
     invoke-virtual {v2, v7, v8}, Landroid/widget/ImageView;->setColorFilter(ILandroid/graphics/PorterDuff$Mode;)V
 
-    .line 790
+    .line 995
     iget-object v2, v0, Lorg/telegram/ui/Components/PipVideoOverlay;->playPauseButton:Landroid/widget/ImageView;
 
     invoke-static {v3}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
@@ -2581,7 +2944,7 @@
 
     invoke-virtual {v2, v3}, Landroid/widget/ImageView;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    .line 791
+    .line 996
     iget-object v2, v0, Lorg/telegram/ui/Components/PipVideoOverlay;->playPauseButton:Landroid/widget/ImageView;
 
     new-instance v3, Lorg/telegram/ui/Components/PipVideoOverlay$$ExternalSyntheticLambda1;
@@ -2590,26 +2953,26 @@
 
     invoke-virtual {v2, v3}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 806
+    .line 1011
     iget-object v2, v0, Lorg/telegram/ui/Components/PipVideoOverlay;->playPauseButton:Landroid/widget/ImageView;
 
     iget-object v3, v0, Lorg/telegram/ui/Components/PipVideoOverlay;->innerView:Landroid/view/View;
 
     instance-of v3, v3, Landroid/webkit/WebView;
 
-    if-eqz v3, :cond_1fe
+    if-eqz v3, :cond_20d
 
     const/16 v3, 0x8
 
-    goto :goto_1ff
+    goto :goto_20e
 
-    :cond_1fe
+    :cond_20d
     const/4 v3, 0x0
 
-    :goto_1ff
+    :goto_20e
     invoke-virtual {v2, v3}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 807
+    .line 1012
     iget-object v2, v0, Lorg/telegram/ui/Components/PipVideoOverlay;->controlsView:Landroid/widget/FrameLayout;
 
     iget-object v3, v0, Lorg/telegram/ui/Components/PipVideoOverlay;->playPauseButton:Landroid/widget/ImageView;
@@ -2622,14 +2985,14 @@
 
     invoke-virtual {v2, v3, v7}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 809
+    .line 1014
     new-instance v2, Lorg/telegram/ui/Components/PipVideoOverlay$VideoProgressView;
 
     invoke-direct {v2, v0, v6}, Lorg/telegram/ui/Components/PipVideoOverlay$VideoProgressView;-><init>(Lorg/telegram/ui/Components/PipVideoOverlay;Landroid/content/Context;)V
 
     iput-object v2, v0, Lorg/telegram/ui/Components/PipVideoOverlay;->videoProgressView:Lorg/telegram/ui/Components/PipVideoOverlay$VideoProgressView;
 
-    .line 810
+    .line 1015
     iget-object v3, v0, Lorg/telegram/ui/Components/PipVideoOverlay;->controlsView:Landroid/widget/FrameLayout;
 
     invoke-static {v10, v11}, Lorg/telegram/ui/Components/LayoutHelper;->createFrame(IF)Landroid/widget/FrameLayout$LayoutParams;
@@ -2638,7 +3001,7 @@
 
     invoke-virtual {v3, v2, v6}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 812
+    .line 1017
     iget-object v2, v0, Lorg/telegram/ui/Components/PipVideoOverlay;->contentFrameLayout:Landroid/widget/FrameLayout;
 
     iget-object v3, v0, Lorg/telegram/ui/Components/PipVideoOverlay;->controlsView:Landroid/widget/FrameLayout;
@@ -2649,17 +3012,17 @@
 
     invoke-virtual {v2, v3, v6}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    if-eqz v1, :cond_22f
+    if-eqz v1, :cond_23e
 
     move-object/from16 v2, p2
 
-    goto :goto_231
+    goto :goto_240
 
-    .line 814
-    :cond_22f
+    .line 1019
+    :cond_23e
     sget-object v2, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
-    :goto_231
+    :goto_240
     const-string v3, "window"
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -2670,19 +3033,19 @@
 
     iput-object v2, v0, Lorg/telegram/ui/Components/PipVideoOverlay;->windowManager:Landroid/view/WindowManager;
 
-    .line 816
+    .line 1021
     invoke-direct/range {p0 .. p1}, Lorg/telegram/ui/Components/PipVideoOverlay;->createWindowLayoutParams(Z)Landroid/view/WindowManager$LayoutParams;
 
     move-result-object v1
 
     iput-object v1, v0, Lorg/telegram/ui/Components/PipVideoOverlay;->windowLayoutParams:Landroid/view/WindowManager$LayoutParams;
 
-    .line 817
+    .line 1022
     iget v2, v0, Lorg/telegram/ui/Components/PipVideoOverlay;->pipWidth:I
 
     iput v2, v1, Landroid/view/WindowManager$LayoutParams;->width:I
 
-    .line 818
+    .line 1023
     iget v3, v0, Lorg/telegram/ui/Components/PipVideoOverlay;->pipHeight:I
 
     iput v3, v1, Landroid/view/WindowManager$LayoutParams;->height:I
@@ -2691,7 +3054,7 @@
 
     cmpl-float v6, v4, v11
 
-    if-eqz v6, :cond_271
+    if-eqz v6, :cond_280
 
     int-to-float v6, v2
 
@@ -2701,7 +3064,7 @@
 
     add-float/2addr v4, v6
 
-    .line 820
+    .line 1025
     sget-object v6, Lorg/telegram/messenger/AndroidUtilities;->displaySize:Landroid/graphics/Point;
 
     iget v6, v6, Landroid/graphics/Point;->x:I
@@ -2712,7 +3075,7 @@
 
     cmpl-float v4, v4, v8
 
-    if-ltz v4, :cond_266
+    if-ltz v4, :cond_275
 
     sub-int/2addr v6, v2
 
@@ -2724,26 +3087,26 @@
 
     int-to-float v2, v6
 
-    goto :goto_26b
+    goto :goto_27a
 
-    :cond_266
+    :cond_275
     invoke-static {v3}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v2
 
     int-to-float v2, v2
 
-    :goto_26b
+    :goto_27a
     iput v2, v0, Lorg/telegram/ui/Components/PipVideoOverlay;->pipX:F
 
     float-to-int v2, v2
 
     iput v2, v1, Landroid/view/WindowManager$LayoutParams;->x:I
 
-    goto :goto_281
+    goto :goto_290
 
-    .line 822
-    :cond_271
+    .line 1027
+    :cond_280
     sget-object v4, Lorg/telegram/messenger/AndroidUtilities;->displaySize:Landroid/graphics/Point;
 
     iget v4, v4, Landroid/graphics/Point;->x:I
@@ -2764,12 +3127,12 @@
 
     iput v2, v1, Landroid/view/WindowManager$LayoutParams;->x:I
 
-    :goto_281
+    :goto_290
     cmpl-float v1, v5, v11
 
-    if-eqz v1, :cond_2a3
+    if-eqz v1, :cond_2b2
 
-    .line 825
+    .line 1030
     iget-object v1, v0, Lorg/telegram/ui/Components/PipVideoOverlay;->windowLayoutParams:Landroid/view/WindowManager$LayoutParams;
 
     invoke-static {v3}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -2804,10 +3167,10 @@
 
     iput v2, v1, Landroid/view/WindowManager$LayoutParams;->y:I
 
-    goto :goto_2af
+    goto :goto_2be
 
-    .line 827
-    :cond_2a3
+    .line 1032
+    :cond_2b2
     iget-object v1, v0, Lorg/telegram/ui/Components/PipVideoOverlay;->windowLayoutParams:Landroid/view/WindowManager$LayoutParams;
 
     invoke-static {v3}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -2822,8 +3185,8 @@
 
     iput v2, v1, Landroid/view/WindowManager$LayoutParams;->y:I
 
-    .line 829
-    :goto_2af
+    .line 1034
+    :goto_2be
     iget-object v1, v0, Lorg/telegram/ui/Components/PipVideoOverlay;->windowLayoutParams:Landroid/view/WindowManager$LayoutParams;
 
     const/4 v2, 0x0
@@ -2832,12 +3195,12 @@
 
     const/16 v3, 0x208
 
-    .line 830
+    .line 1035
     iput v3, v1, Landroid/view/WindowManager$LayoutParams;->flags:I
 
-    if-eqz p6, :cond_2c3
+    if-eqz p6, :cond_2d2
 
-    .line 834
+    .line 1039
     iget-object v2, v0, Lorg/telegram/ui/Components/PipVideoOverlay;->windowManager:Landroid/view/WindowManager;
 
     iget-object v3, v0, Lorg/telegram/ui/Components/PipVideoOverlay;->contentView:Landroid/view/ViewGroup;
@@ -2846,27 +3209,27 @@
 
     const/4 v5, 0x1
 
-    goto :goto_325
+    goto :goto_334
 
-    .line 836
-    :cond_2c3
+    .line 1041
+    :cond_2d2
     iget-object v1, v0, Lorg/telegram/ui/Components/PipVideoOverlay;->contentView:Landroid/view/ViewGroup;
 
     invoke-virtual {v1, v2}, Landroid/view/ViewGroup;->setAlpha(F)V
 
-    .line 837
+    .line 1042
     iget-object v1, v0, Lorg/telegram/ui/Components/PipVideoOverlay;->contentView:Landroid/view/ViewGroup;
 
     const v2, 0x3dcccccd    # 0.1f
 
     invoke-virtual {v1, v2}, Landroid/view/ViewGroup;->setScaleX(F)V
 
-    .line 838
+    .line 1043
     iget-object v1, v0, Lorg/telegram/ui/Components/PipVideoOverlay;->contentView:Landroid/view/ViewGroup;
 
     invoke-virtual {v1, v2}, Landroid/view/ViewGroup;->setScaleY(F)V
 
-    .line 839
+    .line 1044
     iget-object v1, v0, Lorg/telegram/ui/Components/PipVideoOverlay;->windowManager:Landroid/view/WindowManager;
 
     iget-object v2, v0, Lorg/telegram/ui/Components/PipVideoOverlay;->contentView:Landroid/view/ViewGroup;
@@ -2875,17 +3238,17 @@
 
     invoke-interface {v1, v2, v3}, Landroid/view/WindowManager;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 841
+    .line 1046
     new-instance v1, Landroid/animation/AnimatorSet;
 
     invoke-direct {v1}, Landroid/animation/AnimatorSet;-><init>()V
 
     const-wide/16 v2, 0xfa
 
-    .line 842
+    .line 1047
     invoke-virtual {v1, v2, v3}, Landroid/animation/AnimatorSet;->setDuration(J)Landroid/animation/AnimatorSet;
 
-    .line 843
+    .line 1048
     sget-object v2, Lorg/telegram/ui/Components/CubicBezierInterpolator;->DEFAULT:Lorg/telegram/ui/Components/CubicBezierInterpolator;
 
     invoke-virtual {v1, v2}, Landroid/animation/AnimatorSet;->setInterpolator(Landroid/animation/TimeInterpolator;)V
@@ -2894,7 +3257,7 @@
 
     new-array v2, v2, [Landroid/animation/Animator;
 
-    .line 844
+    .line 1049
     iget-object v3, v0, Lorg/telegram/ui/Components/PipVideoOverlay;->contentView:Landroid/view/ViewGroup;
 
     sget-object v4, Landroid/view/View;->ALPHA:Landroid/util/Property;
@@ -2909,7 +3272,7 @@
 
     aput v7, v6, v8
 
-    .line 845
+    .line 1050
     invoke-static {v3, v4, v6}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
 
     move-result-object v3
@@ -2924,7 +3287,7 @@
 
     aput v7, v6, v8
 
-    .line 846
+    .line 1051
     invoke-static {v3, v4, v6}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
 
     move-result-object v3
@@ -2941,20 +3304,20 @@
 
     aput v7, v9, v8
 
-    .line 847
+    .line 1052
     invoke-static {v4, v6, v9}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
 
     move-result-object v4
 
     aput-object v4, v2, v3
 
-    .line 844
+    .line 1049
     invoke-virtual {v1, v2}, Landroid/animation/AnimatorSet;->playTogether([Landroid/animation/Animator;)V
 
-    .line 849
+    .line 1054
     invoke-virtual {v1}, Landroid/animation/AnimatorSet;->start()V
 
-    :goto_325
+    :goto_334
     return v5
 .end method
 
@@ -2992,7 +3355,7 @@
     :cond_14
     aput v1, v0, v3
 
-    .line 178
+    .line 254
     invoke-static {v0}, Landroid/animation/ValueAnimator;->ofFloat([F)Landroid/animation/ValueAnimator;
 
     move-result-object p1
@@ -3005,12 +3368,12 @@
 
     iput-object p1, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->controlsAnimator:Landroid/animation/ValueAnimator;
 
-    .line 179
+    .line 255
     sget-object v0, Lorg/telegram/ui/Components/CubicBezierInterpolator;->DEFAULT:Lorg/telegram/ui/Components/CubicBezierInterpolator;
 
     invoke-virtual {p1, v0}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 180
+    .line 256
     iget-object p1, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->controlsAnimator:Landroid/animation/ValueAnimator;
 
     new-instance v0, Lorg/telegram/ui/Components/PipVideoOverlay$$ExternalSyntheticLambda0;
@@ -3019,7 +3382,7 @@
 
     invoke-virtual {p1, v0}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    .line 184
+    .line 260
     iget-object p1, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->controlsAnimator:Landroid/animation/ValueAnimator;
 
     new-instance v0, Lorg/telegram/ui/Components/PipVideoOverlay$1;
@@ -3028,7 +3391,7 @@
 
     invoke-virtual {p1, v0}, Landroid/animation/ValueAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 190
+    .line 266
     iget-object p1, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->controlsAnimator:Landroid/animation/ValueAnimator;
 
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->start()V
@@ -3039,7 +3402,7 @@
 .method public static updatePlayButton()V
     .registers 1
 
-    .line 270
+    .line 360
     sget-object v0, Lorg/telegram/ui/Components/PipVideoOverlay;->instance:Lorg/telegram/ui/Components/PipVideoOverlay;
 
     invoke-direct {v0}, Lorg/telegram/ui/Components/PipVideoOverlay;->updatePlayButtonInternal()V
@@ -3050,14 +3413,14 @@
 .method private updatePlayButtonInternal()V
     .registers 4
 
-    .line 274
+    .line 364
     iget-object v0, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->photoViewer:Lorg/telegram/ui/PhotoViewer;
 
     if-nez v0, :cond_5
 
     return-void
 
-    .line 277
+    .line 367
     :cond_5
     invoke-virtual {v0}, Lorg/telegram/ui/PhotoViewer;->getVideoPlayer()Lorg/telegram/ui/Components/VideoPlayer;
 
@@ -3065,59 +3428,59 @@
 
     if-eqz v0, :cond_40
 
-    .line 278
+    .line 368
     iget-object v1, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->playPauseButton:Landroid/widget/ImageView;
 
     if-nez v1, :cond_10
 
     goto :goto_40
 
-    .line 281
+    .line 371
     :cond_10
     iget-object v1, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->progressRunnable:Ljava/lang/Runnable;
 
     invoke-static {v1}, Lorg/telegram/messenger/AndroidUtilities;->cancelRunOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 282
+    .line 372
     invoke-virtual {v0}, Lorg/telegram/ui/Components/VideoPlayer;->isPlaying()Z
 
     move-result v0
 
     if-nez v0, :cond_31
 
-    .line 283
+    .line 373
     iget-boolean v0, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->isVideoCompleted:Z
 
     if-eqz v0, :cond_28
 
-    .line 284
+    .line 374
     iget-object v0, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->playPauseButton:Landroid/widget/ImageView;
 
-    const v1, 0x7f070352
+    const v1, 0x7f07036a
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
     goto :goto_40
 
-    .line 286
+    .line 376
     :cond_28
     iget-object v0, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->playPauseButton:Landroid/widget/ImageView;
 
-    const v1, 0x7f070351
+    const v1, 0x7f070369
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
     goto :goto_40
 
-    .line 289
+    .line 379
     :cond_31
     iget-object v0, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->playPauseButton:Landroid/widget/ImageView;
 
-    const v1, 0x7f070350
+    const v1, 0x7f070368
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 290
+    .line 380
     iget-object v0, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->progressRunnable:Ljava/lang/Runnable;
 
     const-wide/16 v1, 0x1f4
@@ -3126,5 +3489,155 @@
 
     :cond_40
     :goto_40
+    return-void
+.end method
+
+
+# virtual methods
+.method protected onLongClick()V
+    .registers 12
+
+    .line 189
+    iget-object v0, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->photoViewer:Lorg/telegram/ui/PhotoViewer;
+
+    if-eqz v0, :cond_7e
+
+    invoke-virtual {v0}, Lorg/telegram/ui/PhotoViewer;->getVideoPlayer()Lorg/telegram/ui/Components/VideoPlayer;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_7e
+
+    iget-boolean v0, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->isDismissing:Z
+
+    if-nez v0, :cond_7e
+
+    iget-boolean v0, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->isVideoCompleted:Z
+
+    if-nez v0, :cond_7e
+
+    iget-boolean v0, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->isScrolling:Z
+
+    if-nez v0, :cond_7e
+
+    iget-object v0, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->scaleGestureDetector:Landroid/view/ScaleGestureDetector;
+
+    invoke-virtual {v0}, Landroid/view/ScaleGestureDetector;->isInProgress()Z
+
+    move-result v0
+
+    if-nez v0, :cond_7e
+
+    iget-boolean v0, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->canLongClick:Z
+
+    if-nez v0, :cond_23
+
+    goto :goto_7e
+
+    .line 193
+    :cond_23
+    iget-object v0, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->photoViewer:Lorg/telegram/ui/PhotoViewer;
+
+    invoke-virtual {v0}, Lorg/telegram/ui/PhotoViewer;->getVideoPlayer()Lorg/telegram/ui/Components/VideoPlayer;
+
+    move-result-object v0
+
+    .line 194
+    iget-object v1, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->longClickStartPoint:[F
+
+    const/4 v2, 0x0
+
+    aget v1, v1, v2
+
+    invoke-direct {p0}, Lorg/telegram/ui/Components/PipVideoOverlay;->getSuggestedWidth()I
+
+    move-result v3
+
+    int-to-float v3, v3
+
+    iget v4, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->scaleFactor:F
+
+    mul-float v3, v3, v4
+
+    const/high16 v4, 0x3f000000    # 0.5f
+
+    mul-float v3, v3, v4
+
+    const/4 v4, 0x1
+
+    cmpl-float v1, v1, v3
+
+    if-ltz v1, :cond_41
+
+    const/4 v2, 0x1
+
+    .line 196
+    :cond_41
+    invoke-virtual {v0}, Lorg/telegram/ui/Components/VideoPlayer;->getCurrentPosition()J
+
+    move-result-wide v5
+
+    .line 197
+    invoke-virtual {v0}, Lorg/telegram/ui/Components/VideoPlayer;->getDuration()J
+
+    move-result-wide v7
+
+    const-wide v9, -0x7fffffffffffffffL    # -4.9E-324
+
+    cmp-long v1, v5, v9
+
+    if-eqz v1, :cond_7e
+
+    const-wide/16 v5, 0x3a98
+
+    cmp-long v1, v7, v5
+
+    if-gez v1, :cond_59
+
+    goto :goto_7e
+
+    .line 202
+    :cond_59
+    iget-object v1, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->photoViewer:Lorg/telegram/ui/PhotoViewer;
+
+    invoke-virtual {v1}, Lorg/telegram/ui/PhotoViewer;->getVideoPlayerRewinder()Lorg/telegram/messenger/video/VideoPlayerRewinder;
+
+    move-result-object v1
+
+    iget-object v3, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->photoViewer:Lorg/telegram/ui/PhotoViewer;
+
+    invoke-virtual {v3}, Lorg/telegram/ui/PhotoViewer;->getCurrentVideoSpeed()F
+
+    move-result v3
+
+    invoke-virtual {v1, v0, v2, v3}, Lorg/telegram/messenger/video/VideoPlayerRewinder;->startRewind(Lorg/telegram/ui/Components/VideoPlayer;ZF)V
+
+    .line 204
+    iget-boolean v0, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->isShowingControls:Z
+
+    if-nez v0, :cond_7e
+
+    .line 205
+    iput-boolean v4, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->isShowingControls:Z
+
+    invoke-direct {p0, v4}, Lorg/telegram/ui/Components/PipVideoOverlay;->toggleControls(Z)V
+
+    .line 206
+    iget-boolean v0, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->postedDismissControls:Z
+
+    if-nez v0, :cond_7e
+
+    .line 207
+    iget-object v0, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->dismissControlsCallback:Ljava/lang/Runnable;
+
+    const-wide/16 v1, 0x5dc
+
+    invoke-static {v0, v1, v2}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;J)V
+
+    .line 208
+    iput-boolean v4, p0, Lorg/telegram/ui/Components/PipVideoOverlay;->postedDismissControls:Z
+
+    :cond_7e
+    :goto_7e
     return-void
 .end method

@@ -302,7 +302,7 @@
 .end method
 
 .method private fillImages(ZI)V
-    .registers 23
+    .registers 24
 
     move-object/from16 v0, p0
 
@@ -356,7 +356,7 @@
 
     move-result v2
 
-    if-eqz v2, :cond_1aa
+    if-eqz v2, :cond_1ab
 
     iget-object v2, v0, Lorg/telegram/ui/Components/GroupedPhotosListView;->currentPhotos:Ljava/util/ArrayList;
 
@@ -366,7 +366,7 @@
 
     if-eqz v2, :cond_37
 
-    goto/16 :goto_1aa
+    goto/16 :goto_1ab
 
     .line 398
     :cond_37
@@ -572,7 +572,7 @@
     move-result-object v7
 
     :goto_e1
-    move-object/from16 v18, v7
+    move-object/from16 v19, v7
 
     goto :goto_10b
 
@@ -624,18 +624,18 @@
 
     const/4 v13, 0x0
 
-    const/16 v16, 0x0
+    const-wide/16 v16, 0x0
 
-    const/16 v17, 0x0
+    const/16 v18, 0x0
 
-    const/16 v19, 0x1
+    const/16 v20, 0x1
 
     const-string v15, "80_80"
 
     move-object v11, v10
 
     .line 441
-    invoke-virtual/range {v11 .. v19}, Lorg/telegram/messenger/ImageReceiver;->setImage(Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;ILjava/lang/String;Ljava/lang/Object;I)V
+    invoke-virtual/range {v11 .. v20}, Lorg/telegram/messenger/ImageReceiver;->setImage(Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;JLjava/lang/String;Ljava/lang/Object;I)V
 
     .line 442
     invoke-virtual {v10, v8}, Lorg/telegram/messenger/ImageReceiver;->setParam(I)V
@@ -645,10 +645,10 @@
     goto :goto_a5
 
     :cond_11f
-    if-eq v9, v4, :cond_19b
+    if-eq v9, v4, :cond_19c
 
     :goto_121
-    if-ltz v9, :cond_19b
+    if-ltz v9, :cond_19c
 
     .line 450
     iget v2, v0, Lorg/telegram/ui/Components/GroupedPhotosListView;->currentImage:I
@@ -669,7 +669,7 @@
 
     add-int/2addr v2, v4
 
-    if-lez v2, :cond_19b
+    if-lez v2, :cond_19c
 
     .line 452
     iget-object v4, v0, Lorg/telegram/ui/Components/GroupedPhotosListView;->currentPhotos:Ljava/util/ArrayList;
@@ -723,7 +723,7 @@
     move-result-object v2
 
     :goto_15e
-    move-object/from16 v17, v2
+    move-object/from16 v18, v2
 
     goto :goto_188
 
@@ -775,18 +775,18 @@
 
     const/4 v12, 0x0
 
-    const/4 v15, 0x0
+    const-wide/16 v15, 0x0
 
-    const/16 v16, 0x0
+    const/16 v17, 0x0
 
-    const/16 v18, 0x1
+    const/16 v19, 0x1
 
     const-string v14, "80_80"
 
     move-object v10, v4
 
     .line 463
-    invoke-virtual/range {v10 .. v18}, Lorg/telegram/messenger/ImageReceiver;->setImage(Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;ILjava/lang/String;Ljava/lang/Object;I)V
+    invoke-virtual/range {v10 .. v19}, Lorg/telegram/messenger/ImageReceiver;->setImage(Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;JLjava/lang/String;Ljava/lang/Object;I)V
 
     .line 464
     invoke-virtual {v4, v9}, Lorg/telegram/messenger/ImageReceiver;->setParam(I)V
@@ -796,24 +796,24 @@
     goto :goto_121
 
     .line 470
-    :cond_19b
+    :cond_19c
     iget-object v1, v0, Lorg/telegram/ui/Components/GroupedPhotosListView;->showAnimator:Landroid/animation/ValueAnimator;
 
-    if-eqz v1, :cond_1aa
+    if-eqz v1, :cond_1ab
 
     invoke-virtual {v1}, Landroid/animation/ValueAnimator;->isStarted()Z
 
     move-result v1
 
-    if-nez v1, :cond_1aa
+    if-nez v1, :cond_1ab
 
     .line 471
     iget-object v1, v0, Lorg/telegram/ui/Components/GroupedPhotosListView;->showAnimator:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v1}, Landroid/animation/ValueAnimator;->start()V
 
-    :cond_1aa
-    :goto_1aa
+    :cond_1ab
+    :goto_1ab
     return-void
 .end method
 

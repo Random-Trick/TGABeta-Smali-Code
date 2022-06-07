@@ -38,9 +38,20 @@
 .end method
 
 .method public constructor <init>()V
-    .registers 3
+    .registers 2
+
+    const/4 v0, 0x0
 
     .line 39
+    invoke-direct {p0, v0}, Lorg/telegram/ui/Components/LetterDrawable;-><init>(Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)V
+    .registers 4
+
+    .line 43
     invoke-direct {p0}, Landroid/graphics/drawable/Drawable;-><init>()V
 
     .line 30
@@ -59,12 +70,12 @@
 
     iput-object v0, p0, Lorg/telegram/ui/Components/LetterDrawable;->stringBuilder:Ljava/lang/StringBuilder;
 
-    .line 41
+    .line 45
     sget-object v0, Lorg/telegram/ui/Components/LetterDrawable;->namePaint:Landroid/text/TextPaint;
 
     if-nez v0, :cond_1e
 
-    .line 42
+    .line 46
     new-instance v0, Landroid/text/TextPaint;
 
     const/4 v1, 0x1
@@ -73,7 +84,7 @@
 
     sput-object v0, Lorg/telegram/ui/Components/LetterDrawable;->namePaint:Landroid/text/TextPaint;
 
-    .line 44
+    .line 48
     :cond_1e
     sget-object v0, Lorg/telegram/ui/Components/LetterDrawable;->namePaint:Landroid/text/TextPaint;
 
@@ -87,27 +98,27 @@
 
     invoke-virtual {v0, v1}, Landroid/text/TextPaint;->setTextSize(F)V
 
-    .line 45
+    .line 49
     sget-object v0, Lorg/telegram/ui/Components/LetterDrawable;->paint:Landroid/graphics/Paint;
 
     const-string v1, "sharedMedia_linkPlaceholder"
 
-    invoke-static {v1}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
+    invoke-static {v1, p1}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)I
 
     move-result v1
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 46
+    .line 50
     sget-object v0, Lorg/telegram/ui/Components/LetterDrawable;->namePaint:Landroid/text/TextPaint;
 
     const-string v1, "sharedMedia_linkPlaceholderText"
 
-    invoke-static {v1}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
+    invoke-static {v1, p1}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)I
 
-    move-result v1
+    move-result p1
 
-    invoke-virtual {v0, v1}, Landroid/text/TextPaint;->setColor(I)V
+    invoke-virtual {v0, p1}, Landroid/text/TextPaint;->setColor(I)V
 
     return-void
 .end method
@@ -117,7 +128,7 @@
 .method public draw(Landroid/graphics/Canvas;)V
     .registers 8
 
-    .line 82
+    .line 86
     invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
 
     move-result-object v0
@@ -126,7 +137,7 @@
 
     return-void
 
-    .line 86
+    .line 90
     :cond_7
     iget-object v1, p0, Lorg/telegram/ui/Components/LetterDrawable;->rect:Landroid/graphics/RectF;
 
@@ -148,7 +159,7 @@
 
     invoke-virtual {v1, v2, v3, v4, v5}, Landroid/graphics/RectF;->set(FFFF)V
 
-    .line 87
+    .line 91
     iget-object v1, p0, Lorg/telegram/ui/Components/LetterDrawable;->rect:Landroid/graphics/RectF;
 
     const/high16 v2, 0x40800000    # 4.0f
@@ -169,20 +180,20 @@
 
     invoke-virtual {p1, v1, v3, v2, v4}, Landroid/graphics/Canvas;->drawRoundRect(Landroid/graphics/RectF;FFLandroid/graphics/Paint;)V
 
-    .line 88
+    .line 92
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 89
+    .line 93
     iget-object v1, p0, Lorg/telegram/ui/Components/LetterDrawable;->textLayout:Landroid/text/StaticLayout;
 
     if-eqz v1, :cond_55
 
-    .line 90
+    .line 94
     invoke-virtual {v0}, Landroid/graphics/Rect;->width()I
 
     move-result v1
 
-    .line 91
+    .line 95
     iget v2, v0, Landroid/graphics/Rect;->left:I
 
     int-to-float v2, v2
@@ -217,12 +228,12 @@
 
     invoke-virtual {p1, v2, v0}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 92
+    .line 96
     iget-object v0, p0, Lorg/telegram/ui/Components/LetterDrawable;->textLayout:Landroid/text/StaticLayout;
 
     invoke-virtual {v0, p1}, Landroid/text/StaticLayout;->draw(Landroid/graphics/Canvas;)V
 
-    .line 94
+    .line 98
     :cond_55
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
@@ -256,12 +267,12 @@
 .method public setAlpha(I)V
     .registers 3
 
-    .line 99
+    .line 103
     sget-object v0, Lorg/telegram/ui/Components/LetterDrawable;->namePaint:Landroid/text/TextPaint;
 
     invoke-virtual {v0, p1}, Landroid/text/TextPaint;->setAlpha(I)V
 
-    .line 100
+    .line 104
     sget-object v0, Lorg/telegram/ui/Components/LetterDrawable;->paint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setAlpha(I)V
@@ -272,7 +283,7 @@
 .method public setBackgroundColor(I)V
     .registers 3
 
-    .line 50
+    .line 54
     sget-object v0, Lorg/telegram/ui/Components/LetterDrawable;->paint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColor(I)V
@@ -283,7 +294,7 @@
 .method public setColor(I)V
     .registers 3
 
-    .line 54
+    .line 58
     sget-object v0, Lorg/telegram/ui/Components/LetterDrawable;->namePaint:Landroid/text/TextPaint;
 
     invoke-virtual {v0, p1}, Landroid/text/TextPaint;->setColor(I)V
@@ -300,7 +311,7 @@
 .method public setTitle(Ljava/lang/String;)V
     .registers 12
 
-    .line 58
+    .line 62
     iget-object v0, p0, Lorg/telegram/ui/Components/LetterDrawable;->stringBuilder:Ljava/lang/StringBuilder;
 
     const/4 v1, 0x0
@@ -309,14 +320,14 @@
 
     if-eqz p1, :cond_18
 
-    .line 59
+    .line 63
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v0
 
     if-lez v0, :cond_18
 
-    .line 60
+    .line 64
     iget-object v0, p0, Lorg/telegram/ui/Components/LetterDrawable;->stringBuilder:Ljava/lang/StringBuilder;
 
     const/4 v2, 0x1
@@ -327,7 +338,7 @@
 
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 63
+    .line 67
     :cond_18
     iget-object p1, p0, Lorg/telegram/ui/Components/LetterDrawable;->stringBuilder:Ljava/lang/StringBuilder;
 
@@ -337,7 +348,7 @@
 
     if-lez p1, :cond_65
 
-    .line 64
+    .line 68
     iget-object p1, p0, Lorg/telegram/ui/Components/LetterDrawable;->stringBuilder:Ljava/lang/StringBuilder;
 
     invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -348,7 +359,7 @@
 
     move-result-object v3
 
-    .line 66
+    .line 70
     :try_start_2a
     new-instance p1, Landroid/text/StaticLayout;
 
@@ -374,14 +385,14 @@
 
     iput-object p1, p0, Lorg/telegram/ui/Components/LetterDrawable;->textLayout:Landroid/text/StaticLayout;
 
-    .line 67
+    .line 71
     invoke-virtual {p1}, Landroid/text/StaticLayout;->getLineCount()I
 
     move-result p1
 
     if-lez p1, :cond_68
 
-    .line 68
+    .line 72
     iget-object p1, p0, Lorg/telegram/ui/Components/LetterDrawable;->textLayout:Landroid/text/StaticLayout;
 
     invoke-virtual {p1, v1}, Landroid/text/StaticLayout;->getLineLeft(I)F
@@ -390,7 +401,7 @@
 
     iput p1, p0, Lorg/telegram/ui/Components/LetterDrawable;->textLeft:F
 
-    .line 69
+    .line 73
     iget-object p1, p0, Lorg/telegram/ui/Components/LetterDrawable;->textLayout:Landroid/text/StaticLayout;
 
     invoke-virtual {p1, v1}, Landroid/text/StaticLayout;->getLineWidth(I)F
@@ -399,7 +410,7 @@
 
     iput p1, p0, Lorg/telegram/ui/Components/LetterDrawable;->textWidth:F
 
-    .line 70
+    .line 74
     iget-object p1, p0, Lorg/telegram/ui/Components/LetterDrawable;->textLayout:Landroid/text/StaticLayout;
 
     invoke-virtual {p1, v1}, Landroid/text/StaticLayout;->getLineBottom(I)I
@@ -417,7 +428,7 @@
     :catch_60
     move-exception p1
 
-    .line 73
+    .line 77
     invoke-static {p1}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     goto :goto_68
@@ -425,7 +436,7 @@
     :cond_65
     const/4 p1, 0x0
 
-    .line 76
+    .line 80
     iput-object p1, p0, Lorg/telegram/ui/Components/LetterDrawable;->textLayout:Landroid/text/StaticLayout;
 
     :cond_68

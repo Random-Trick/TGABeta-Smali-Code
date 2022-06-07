@@ -37,7 +37,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 7082
+    .line 7147
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -46,7 +46,7 @@
 .method public static TLdeserialize(Lorg/telegram/tgnet/AbstractSerializedData;IZ)Lorg/telegram/tgnet/TLRPC$TL_pageTableCell;
     .registers 4
 
-    .line 7096
+    .line 7161
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_pageTableCell;->constructor:I
 
     if-eq v0, p1, :cond_1e
@@ -57,7 +57,7 @@
 
     return-object p0
 
-    .line 7098
+    .line 7163
     :cond_8
     new-instance p0, Ljava/lang/RuntimeException;
 
@@ -83,13 +83,13 @@
 
     throw p0
 
-    .line 7103
+    .line 7168
     :cond_1e
     new-instance p1, Lorg/telegram/tgnet/TLRPC$TL_pageTableCell;
 
     invoke-direct {p1}, Lorg/telegram/tgnet/TLRPC$TL_pageTableCell;-><init>()V
 
-    .line 7104
+    .line 7169
     invoke-virtual {p1, p0, p2}, Lorg/telegram/tgnet/TLRPC$TL_pageTableCell;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
     return-object p1
@@ -100,7 +100,7 @@
 .method public readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
     .registers 7
 
-    .line 7109
+    .line 7174
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
@@ -122,7 +122,7 @@
     :cond_e
     const/4 v1, 0x0
 
-    .line 7110
+    .line 7175
     :goto_f
     iput-boolean v1, p0, Lorg/telegram/tgnet/TLRPC$TL_pageTableCell;->header:Z
 
@@ -137,7 +137,7 @@
     :cond_17
     const/4 v1, 0x0
 
-    .line 7111
+    .line 7176
     :goto_18
     iput-boolean v1, p0, Lorg/telegram/tgnet/TLRPC$TL_pageTableCell;->align_center:Z
 
@@ -152,7 +152,7 @@
     :cond_20
     const/4 v1, 0x0
 
-    .line 7112
+    .line 7177
     :goto_21
     iput-boolean v1, p0, Lorg/telegram/tgnet/TLRPC$TL_pageTableCell;->align_right:Z
 
@@ -167,7 +167,7 @@
     :cond_29
     const/4 v1, 0x0
 
-    .line 7113
+    .line 7178
     :goto_2a
     iput-boolean v1, p0, Lorg/telegram/tgnet/TLRPC$TL_pageTableCell;->valign_middle:Z
 
@@ -177,7 +177,7 @@
 
     const/4 v2, 0x1
 
-    .line 7114
+    .line 7179
     :cond_31
     iput-boolean v2, p0, Lorg/telegram/tgnet/TLRPC$TL_pageTableCell;->valign_bottom:Z
 
@@ -185,7 +185,7 @@
 
     if-eqz v0, :cond_41
 
-    .line 7116
+    .line 7181
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
@@ -196,7 +196,7 @@
 
     iput-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_pageTableCell;->text:Lorg/telegram/tgnet/TLRPC$RichText;
 
-    .line 7118
+    .line 7183
     :cond_41
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_pageTableCell;->flags:I
 
@@ -204,14 +204,14 @@
 
     if-eqz v0, :cond_4d
 
-    .line 7119
+    .line 7184
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
 
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$TL_pageTableCell;->colspan:I
 
-    .line 7121
+    .line 7186
     :cond_4d
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_pageTableCell;->flags:I
 
@@ -219,7 +219,7 @@
 
     if-eqz v0, :cond_59
 
-    .line 7122
+    .line 7187
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result p1
@@ -233,12 +233,12 @@
 .method public serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
     .registers 4
 
-    .line 7127
+    .line 7192
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_pageTableCell;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 7128
+    .line 7193
     iget-boolean v0, p0, Lorg/telegram/tgnet/TLRPC$TL_pageTableCell;->header:Z
 
     if-eqz v0, :cond_e
@@ -257,7 +257,7 @@
     :goto_12
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$TL_pageTableCell;->flags:I
 
-    .line 7129
+    .line 7194
     iget-boolean v1, p0, Lorg/telegram/tgnet/TLRPC$TL_pageTableCell;->align_center:Z
 
     if-eqz v1, :cond_1b
@@ -272,7 +272,7 @@
     :goto_1d
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$TL_pageTableCell;->flags:I
 
-    .line 7130
+    .line 7195
     iget-boolean v1, p0, Lorg/telegram/tgnet/TLRPC$TL_pageTableCell;->align_right:Z
 
     if-eqz v1, :cond_26
@@ -287,7 +287,7 @@
     :goto_28
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$TL_pageTableCell;->flags:I
 
-    .line 7131
+    .line 7196
     iget-boolean v1, p0, Lorg/telegram/tgnet/TLRPC$TL_pageTableCell;->valign_middle:Z
 
     if-eqz v1, :cond_31
@@ -302,7 +302,7 @@
     :goto_33
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$TL_pageTableCell;->flags:I
 
-    .line 7132
+    .line 7197
     iget-boolean v1, p0, Lorg/telegram/tgnet/TLRPC$TL_pageTableCell;->valign_bottom:Z
 
     if-eqz v1, :cond_3c
@@ -317,22 +317,22 @@
     :goto_3e
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$TL_pageTableCell;->flags:I
 
-    .line 7133
+    .line 7198
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 7134
+    .line 7199
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_pageTableCell;->flags:I
 
     and-int/lit16 v0, v0, 0x80
 
     if-eqz v0, :cond_4e
 
-    .line 7135
+    .line 7200
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_pageTableCell;->text:Lorg/telegram/tgnet/TLRPC$RichText;
 
     invoke-virtual {v0, p1}, Lorg/telegram/tgnet/TLObject;->serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
 
-    .line 7137
+    .line 7202
     :cond_4e
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_pageTableCell;->flags:I
 
@@ -340,12 +340,12 @@
 
     if-eqz v0, :cond_59
 
-    .line 7138
+    .line 7203
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_pageTableCell;->colspan:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 7140
+    .line 7205
     :cond_59
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_pageTableCell;->flags:I
 
@@ -353,7 +353,7 @@
 
     if-eqz v0, :cond_64
 
-    .line 7141
+    .line 7206
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_pageTableCell;->rowspan:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V

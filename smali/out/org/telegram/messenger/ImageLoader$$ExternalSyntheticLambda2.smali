@@ -26,7 +26,7 @@
 
 .field public final synthetic f$17:I
 
-.field public final synthetic f$18:I
+.field public final synthetic f$18:J
 
 .field public final synthetic f$2:Ljava/lang/String;
 
@@ -46,8 +46,8 @@
 
 
 # direct methods
-.method public synthetic constructor <init>(Lorg/telegram/messenger/ImageLoader;ILjava/lang/String;Ljava/lang/String;ILorg/telegram/messenger/ImageReceiver;ILjava/lang/String;ILorg/telegram/messenger/ImageLocation;ZLjava/lang/Object;ILorg/telegram/tgnet/TLRPC$Document;ZZLjava/lang/String;II)V
-    .registers 22
+.method public synthetic constructor <init>(Lorg/telegram/messenger/ImageLoader;ILjava/lang/String;Ljava/lang/String;ILorg/telegram/messenger/ImageReceiver;ILjava/lang/String;ILorg/telegram/messenger/ImageLocation;ZLjava/lang/Object;ILorg/telegram/tgnet/TLRPC$Document;ZZLjava/lang/String;IJ)V
+    .registers 24
 
     move-object v0, p0
 
@@ -101,7 +101,7 @@
 
     iput-object v1, v0, Lorg/telegram/messenger/ImageLoader$$ExternalSyntheticLambda2;->f$11:Ljava/lang/Object;
 
-    move v1, p13
+    move/from16 v1, p13
 
     iput v1, v0, Lorg/telegram/messenger/ImageLoader$$ExternalSyntheticLambda2;->f$12:I
 
@@ -125,9 +125,9 @@
 
     iput v1, v0, Lorg/telegram/messenger/ImageLoader$$ExternalSyntheticLambda2;->f$17:I
 
-    move/from16 v1, p19
+    move-wide/from16 v1, p19
 
-    iput v1, v0, Lorg/telegram/messenger/ImageLoader$$ExternalSyntheticLambda2;->f$18:I
+    iput-wide v1, v0, Lorg/telegram/messenger/ImageLoader$$ExternalSyntheticLambda2;->f$18:J
 
     return-void
 .end method
@@ -135,7 +135,7 @@
 
 # virtual methods
 .method public final run()V
-    .registers 22
+    .registers 24
 
     move-object/from16 v0, p0
 
@@ -169,7 +169,7 @@
 
     iget-boolean v15, v0, Lorg/telegram/messenger/ImageLoader$$ExternalSyntheticLambda2;->f$14:Z
 
-    move-object/from16 v20, v1
+    move-object/from16 v21, v1
 
     iget-boolean v1, v0, Lorg/telegram/messenger/ImageLoader$$ExternalSyntheticLambda2;->f$15:Z
 
@@ -183,13 +183,17 @@
 
     move/from16 v18, v1
 
-    iget v1, v0, Lorg/telegram/messenger/ImageLoader$$ExternalSyntheticLambda2;->f$18:I
+    move/from16 v22, v2
 
-    move/from16 v19, v1
+    iget-wide v1, v0, Lorg/telegram/messenger/ImageLoader$$ExternalSyntheticLambda2;->f$18:J
 
-    move-object/from16 v1, v20
+    move-wide/from16 v19, v1
 
-    invoke-static/range {v1 .. v19}, Lorg/telegram/messenger/ImageLoader;->$r8$lambda$1Vgi1jU4bQm1_dU3LzkaU9o_PNo(Lorg/telegram/messenger/ImageLoader;ILjava/lang/String;Ljava/lang/String;ILorg/telegram/messenger/ImageReceiver;ILjava/lang/String;ILorg/telegram/messenger/ImageLocation;ZLjava/lang/Object;ILorg/telegram/tgnet/TLRPC$Document;ZZLjava/lang/String;II)V
+    move-object/from16 v1, v21
+
+    move/from16 v2, v22
+
+    invoke-static/range {v1 .. v20}, Lorg/telegram/messenger/ImageLoader;->$r8$lambda$kw0idaPrv_iWOQCAmgKlf_T-ZbE(Lorg/telegram/messenger/ImageLoader;ILjava/lang/String;Ljava/lang/String;ILorg/telegram/messenger/ImageReceiver;ILjava/lang/String;ILorg/telegram/messenger/ImageLocation;ZLjava/lang/Object;ILorg/telegram/tgnet/TLRPC$Document;ZZLjava/lang/String;IJ)V
 
     return-void
 .end method

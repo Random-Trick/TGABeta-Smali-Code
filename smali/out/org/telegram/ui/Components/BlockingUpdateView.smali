@@ -353,7 +353,7 @@
 
     invoke-virtual {v4, v11}, Landroid/widget/TextView;->setTypeface(Landroid/graphics/Typeface;)V
 
-    const v11, 0x7f0e1200
+    const v11, 0x7f0e12cd
 
     const-string v12, "UpdateTelegram"
 
@@ -1640,11 +1640,11 @@
 
     instance-of p1, p1, Lorg/telegram/tgnet/TLRPC$TL_document;
 
-    const v1, 0x7f0e11fa
+    const v1, 0x7f0e12c7
 
     const-string v2, "Update"
 
-    if-eqz p1, :cond_6c
+    if-eqz p1, :cond_6b
 
     .line 329
     iget-object p1, p0, Lorg/telegram/ui/Components/BlockingUpdateView;->acceptTextView:Landroid/widget/TextView;
@@ -1667,9 +1667,7 @@
 
     iget-object p2, p2, Lorg/telegram/tgnet/TLRPC$TL_help_appUpdate;->document:Lorg/telegram/tgnet/TLRPC$Document;
 
-    iget p2, p2, Lorg/telegram/tgnet/TLRPC$Document;->size:I
-
-    int-to-long v4, p2
+    iget-wide v4, p2, Lorg/telegram/tgnet/TLRPC$Document;->size:J
 
     invoke-static {v4, v5}, Lorg/telegram/messenger/AndroidUtilities;->formatFileSize(J)Ljava/lang/String;
 
@@ -1691,10 +1689,10 @@
 
     invoke-virtual {p1, p2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    goto :goto_75
+    goto :goto_74
 
     .line 331
-    :cond_6c
+    :cond_6b
     iget-object p1, p0, Lorg/telegram/ui/Components/BlockingUpdateView;->acceptTextView:Landroid/widget/TextView;
 
     invoke-static {v2, v1}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -1704,7 +1702,7 @@
     invoke-virtual {p1, p2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 333
-    :goto_75
+    :goto_74
     iget p1, p0, Lorg/telegram/ui/Components/BlockingUpdateView;->accountNum:I
 
     invoke-static {p1}, Lorg/telegram/messenger/NotificationCenter;->getInstance(I)Lorg/telegram/messenger/NotificationCenter;
@@ -1737,7 +1735,7 @@
 
     invoke-virtual {p1, p0, p2}, Lorg/telegram/messenger/NotificationCenter;->addObserver(Lorg/telegram/messenger/NotificationCenter$NotificationCenterDelegate;I)V
 
-    if-eqz p3, :cond_c7
+    if-eqz p3, :cond_c6
 
     .line 337
     new-instance p1, Lorg/telegram/tgnet/TLRPC$TL_help_getAppUpdate;
@@ -1745,7 +1743,7 @@
     invoke-direct {p1}, Lorg/telegram/tgnet/TLRPC$TL_help_getAppUpdate;-><init>()V
 
     .line 339
-    :try_start_9d
+    :try_start_9c
     sget-object p2, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     invoke-virtual {p2}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -1763,19 +1761,19 @@
     move-result-object p2
 
     iput-object p2, p1, Lorg/telegram/tgnet/TLRPC$TL_help_getAppUpdate;->source:Ljava/lang/String;
-    :try_end_af
-    .catch Ljava/lang/Exception; {:try_start_9d .. :try_end_af} :catch_b0
+    :try_end_ae
+    .catch Ljava/lang/Exception; {:try_start_9c .. :try_end_ae} :catch_af
 
-    goto :goto_b1
+    goto :goto_b0
 
-    :catch_b0
+    :catch_af
     nop
 
     .line 343
-    :goto_b1
+    :goto_b0
     iget-object p2, p1, Lorg/telegram/tgnet/TLRPC$TL_help_getAppUpdate;->source:Ljava/lang/String;
 
-    if-nez p2, :cond_b9
+    if-nez p2, :cond_b8
 
     const-string p2, ""
 
@@ -1783,7 +1781,7 @@
     iput-object p2, p1, Lorg/telegram/tgnet/TLRPC$TL_help_getAppUpdate;->source:Ljava/lang/String;
 
     .line 346
-    :cond_b9
+    :cond_b8
     iget p2, p0, Lorg/telegram/ui/Components/BlockingUpdateView;->accountNum:I
 
     invoke-static {p2}, Lorg/telegram/tgnet/ConnectionsManager;->getInstance(I)Lorg/telegram/tgnet/ConnectionsManager;
@@ -1796,6 +1794,6 @@
 
     invoke-virtual {p2, p1, p3}, Lorg/telegram/tgnet/ConnectionsManager;->sendRequest(Lorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/RequestDelegate;)I
 
-    :cond_c7
+    :cond_c6
     return-void
 .end method

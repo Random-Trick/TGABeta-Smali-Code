@@ -2,46 +2,32 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Ljava/util/Comparator;
+.implements Ljava/lang/Runnable;
 
 
-# static fields
-.field public static final synthetic INSTANCE:Lorg/telegram/messenger/MediaDataController$$ExternalSyntheticLambda120;
+# instance fields
+.field public final synthetic f$0:Lorg/telegram/tgnet/TLRPC$Document;
 
 
 # direct methods
-.method static synthetic constructor <clinit>()V
-    .registers 1
-
-    new-instance v0, Lorg/telegram/messenger/MediaDataController$$ExternalSyntheticLambda120;
-
-    invoke-direct {v0}, Lorg/telegram/messenger/MediaDataController$$ExternalSyntheticLambda120;-><init>()V
-
-    sput-object v0, Lorg/telegram/messenger/MediaDataController$$ExternalSyntheticLambda120;->INSTANCE:Lorg/telegram/messenger/MediaDataController$$ExternalSyntheticLambda120;
-
-    return-void
-.end method
-
-.method private synthetic constructor <init>()V
-    .registers 1
+.method public synthetic constructor <init>(Lorg/telegram/tgnet/TLRPC$Document;)V
+    .registers 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lorg/telegram/messenger/MediaDataController$$ExternalSyntheticLambda120;->f$0:Lorg/telegram/tgnet/TLRPC$Document;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final compare(Ljava/lang/Object;Ljava/lang/Object;)I
-    .registers 3
+.method public final run()V
+    .registers 2
 
-    check-cast p1, Lorg/telegram/tgnet/TLRPC$TL_topPeer;
+    iget-object v0, p0, Lorg/telegram/messenger/MediaDataController$$ExternalSyntheticLambda120;->f$0:Lorg/telegram/tgnet/TLRPC$Document;
 
-    check-cast p2, Lorg/telegram/tgnet/TLRPC$TL_topPeer;
+    invoke-static {v0}, Lorg/telegram/messenger/MediaDataController;->$r8$lambda$8dNLAFQJNXVzQd-7gSFQa-Qm0ec(Lorg/telegram/tgnet/TLRPC$Document;)V
 
-    invoke-static {p1, p2}, Lorg/telegram/messenger/MediaDataController;->$r8$lambda$FRF7bpxVwL6aWXqJ1Ti3ko6yhgU(Lorg/telegram/tgnet/TLRPC$TL_topPeer;Lorg/telegram/tgnet/TLRPC$TL_topPeer;)I
-
-    move-result p1
-
-    return p1
+    return-void
 .end method

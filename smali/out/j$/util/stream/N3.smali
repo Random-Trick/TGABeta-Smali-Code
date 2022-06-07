@@ -1,158 +1,156 @@
 .class final Lj$/util/stream/N3;
-.super Lj$/util/stream/d3;
+.super Lj$/util/stream/F3;
 
 
 # instance fields
-.field private final l:Z
-
-.field private final m:Ljava/util/Comparator;
+.field private d:Ljava/util/ArrayList;
 
 
 # direct methods
-.method constructor <init>(Lj$/util/stream/c;)V
-    .registers 5
+.method constructor <init>(Lj$/util/stream/m3;Ljava/util/Comparator;)V
+    .registers 3
 
-    sget-object v0, Lj$/util/stream/f4;->REFERENCE:Lj$/util/stream/f4;
-
-    sget v1, Lj$/util/stream/e4;->q:I
-
-    sget v2, Lj$/util/stream/e4;->o:I
-
-    or-int/2addr v1, v2
-
-    invoke-direct {p0, p1, v0, v1}, Lj$/util/stream/d3;-><init>(Lj$/util/stream/c;Lj$/util/stream/f4;I)V
-
-    const/4 p1, 0x1
-
-    iput-boolean p1, p0, Lj$/util/stream/N3;->l:Z
-
-    invoke-static {}, Lj$/util/Comparator$-CC;->a()Ljava/util/Comparator;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lj$/util/stream/N3;->m:Ljava/util/Comparator;
-
-    return-void
-.end method
-
-.method constructor <init>(Lj$/util/stream/c;Ljava/util/Comparator;)V
-    .registers 6
-
-    sget-object v0, Lj$/util/stream/f4;->REFERENCE:Lj$/util/stream/f4;
-
-    sget v1, Lj$/util/stream/e4;->q:I
-
-    sget v2, Lj$/util/stream/e4;->p:I
-
-    or-int/2addr v1, v2
-
-    invoke-direct {p0, p1, v0, v1}, Lj$/util/stream/d3;-><init>(Lj$/util/stream/c;Lj$/util/stream/f4;I)V
-
-    const/4 p1, 0x0
-
-    iput-boolean p1, p0, Lj$/util/stream/N3;->l:Z
-
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iput-object p2, p0, Lj$/util/stream/N3;->m:Ljava/util/Comparator;
+    invoke-direct {p0, p1, p2}, Lj$/util/stream/F3;-><init>(Lj$/util/stream/m3;Ljava/util/Comparator;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public E0(Lj$/util/stream/z2;Lj$/util/y;Lj$/util/function/m;)Lj$/util/stream/B1;
-    .registers 6
+.method public accept(Ljava/lang/Object;)V
+    .registers 3
 
-    sget-object v0, Lj$/util/stream/e4;->SORTED:Lj$/util/stream/e4;
+    iget-object v0, p0, Lj$/util/stream/N3;->d:Ljava/util/ArrayList;
 
-    invoke-virtual {p1}, Lj$/util/stream/z2;->s0()I
+    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    return-void
+.end method
+
+.method public m()V
+    .registers 4
+
+    iget-object v0, p0, Lj$/util/stream/N3;->d:Ljava/util/ArrayList;
+
+    iget-object v1, p0, Lj$/util/stream/F3;->b:Ljava/util/Comparator;
+
+    invoke-static {v0, v1}, Lj$/util/a;->G(Ljava/util/List;Ljava/util/Comparator;)V
+
+    iget-object v0, p0, Lj$/util/stream/i3;->a:Lj$/util/stream/m3;
+
+    iget-object v1, p0, Lj$/util/stream/N3;->d:Ljava/util/ArrayList;
+
+    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Lj$/util/stream/e4;->d(I)Z
+    int-to-long v1, v1
 
-    move-result v0
+    invoke-interface {v0, v1, v2}, Lj$/util/stream/m3;->n(J)V
 
-    if-eqz v0, :cond_16
+    iget-boolean v0, p0, Lj$/util/stream/F3;->c:Z
 
-    iget-boolean v0, p0, Lj$/util/stream/N3;->l:Z
+    if-nez v0, :cond_27
 
-    if-eqz v0, :cond_16
+    iget-object v0, p0, Lj$/util/stream/N3;->d:Ljava/util/ArrayList;
+
+    iget-object v1, p0, Lj$/util/stream/i3;->a:Lj$/util/stream/m3;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v2, Lj$/util/stream/b;
+
+    invoke-direct {v2, v1}, Lj$/util/stream/b;-><init>(Lj$/util/stream/m3;)V
+
+    invoke-static {v0, v2}, Lj$/util/Collection$-EL;->a(Ljava/util/Collection;Lj$/util/function/Consumer;)V
+
+    goto :goto_46
+
+    :cond_27
+    iget-object v0, p0, Lj$/util/stream/N3;->d:Ljava/util/ArrayList;
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_2d
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_46
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lj$/util/stream/i3;->a:Lj$/util/stream/m3;
+
+    invoke-interface {v2}, Lj$/util/stream/m3;->o()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_40
+
+    goto :goto_46
+
+    :cond_40
+    iget-object v2, p0, Lj$/util/stream/i3;->a:Lj$/util/stream/m3;
+
+    invoke-interface {v2, v1}, Lj$/util/function/Consumer;->accept(Ljava/lang/Object;)V
+
+    goto :goto_2d
+
+    :cond_46
+    :goto_46
+    iget-object v0, p0, Lj$/util/stream/i3;->a:Lj$/util/stream/m3;
+
+    invoke-interface {v0}, Lj$/util/stream/m3;->m()V
 
     const/4 v0, 0x0
 
-    invoke-virtual {p1, p2, v0, p3}, Lj$/util/stream/z2;->p0(Lj$/util/y;ZLj$/util/function/m;)Lj$/util/stream/B1;
+    iput-object v0, p0, Lj$/util/stream/N3;->d:Ljava/util/ArrayList;
 
-    move-result-object p1
-
-    return-object p1
-
-    :cond_16
-    const/4 v0, 0x1
-
-    invoke-virtual {p1, p2, v0, p3}, Lj$/util/stream/z2;->p0(Lj$/util/y;ZLj$/util/function/m;)Lj$/util/stream/B1;
-
-    move-result-object p1
-
-    invoke-interface {p1, p3}, Lj$/util/stream/B1;->q(Lj$/util/function/m;)[Ljava/lang/Object;
-
-    move-result-object p1
-
-    iget-object p2, p0, Lj$/util/stream/N3;->m:Ljava/util/Comparator;
-
-    invoke-static {p1, p2}, Ljava/util/Arrays;->sort([Ljava/lang/Object;Ljava/util/Comparator;)V
-
-    .line 1
-    new-instance p2, Lj$/util/stream/E1;
-
-    invoke-direct {p2, p1}, Lj$/util/stream/E1;-><init>([Ljava/lang/Object;)V
-
-    return-object p2
+    return-void
 .end method
 
-.method public H0(ILj$/util/stream/n3;)Lj$/util/stream/n3;
-    .registers 4
+.method public n(J)V
+    .registers 6
 
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    const-wide/32 v0, 0x7ffffff7
 
-    sget-object v0, Lj$/util/stream/e4;->SORTED:Lj$/util/stream/e4;
+    cmp-long v2, p1, v0
 
-    invoke-virtual {v0, p1}, Lj$/util/stream/e4;->d(I)Z
+    if-gez v2, :cond_1a
 
-    move-result v0
+    const-wide/16 v0, 0x0
 
-    if-eqz v0, :cond_10
+    cmp-long v2, p1, v0
 
-    iget-boolean v0, p0, Lj$/util/stream/N3;->l:Z
+    new-instance v0, Ljava/util/ArrayList;
 
-    if-eqz v0, :cond_10
+    if-ltz v2, :cond_14
 
-    return-object p2
+    long-to-int p2, p1
 
-    :cond_10
-    sget-object v0, Lj$/util/stream/e4;->SIZED:Lj$/util/stream/e4;
+    invoke-direct {v0, p2}, Ljava/util/ArrayList;-><init>(I)V
 
-    invoke-virtual {v0, p1}, Lj$/util/stream/e4;->d(I)Z
+    goto :goto_17
 
-    move-result p1
+    :cond_14
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    if-eqz p1, :cond_20
+    :goto_17
+    iput-object v0, p0, Lj$/util/stream/N3;->d:Ljava/util/ArrayList;
 
-    new-instance p1, Lj$/util/stream/S3;
+    return-void
 
-    iget-object v0, p0, Lj$/util/stream/N3;->m:Ljava/util/Comparator;
+    :cond_1a
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    invoke-direct {p1, p2, v0}, Lj$/util/stream/S3;-><init>(Lj$/util/stream/n3;Ljava/util/Comparator;)V
+    const-string p2, "Stream size exceeds max array size"
 
-    return-object p1
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    :cond_20
-    new-instance p1, Lj$/util/stream/O3;
-
-    iget-object v0, p0, Lj$/util/stream/N3;->m:Ljava/util/Comparator;
-
-    invoke-direct {p1, p2, v0}, Lj$/util/stream/O3;-><init>(Lj$/util/stream/n3;Ljava/util/Comparator;)V
-
-    return-object p1
+    throw p1
 .end method

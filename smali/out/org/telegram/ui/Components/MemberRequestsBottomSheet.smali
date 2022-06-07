@@ -119,7 +119,7 @@
 
     const-string p2, "SearchMemberRequests"
 
-    const p3, 0x7f0e0f8d
+    const p3, 0x7f0e1049
 
     invoke-static {p2, p3}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 

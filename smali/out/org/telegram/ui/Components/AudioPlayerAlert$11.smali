@@ -25,7 +25,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/AudioPlayerAlert;)V
     .registers 2
 
-    .line 624
+    .line 625
     iput-object p1, p0, Lorg/telegram/ui/Components/AudioPlayerAlert$11;->this$0:Lorg/telegram/ui/Components/AudioPlayerAlert;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,9 +36,9 @@
 
 # virtual methods
 .method public getContentDescription()Ljava/lang/CharSequence;
-    .registers 7
+    .registers 9
 
-    .line 643
+    .line 644
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -51,9 +51,13 @@
 
     div-int/lit8 v1, v1, 0x3c
 
-    const-string v2, "Minutes"
+    const/4 v2, 0x0
 
-    invoke-static {v2, v1}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    new-array v3, v2, [Ljava/lang/Object;
+
+    const-string v4, "Minutes"
+
+    invoke-static {v4, v1, v3}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -71,9 +75,11 @@
 
     rem-int/lit8 v3, v3, 0x3c
 
-    const-string v4, "Seconds"
+    new-array v5, v2, [Ljava/lang/Object;
 
-    invoke-static {v4, v3}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    const-string v6, "Seconds"
+
+    invoke-static {v6, v3, v5}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v3
 
@@ -83,7 +89,7 @@
 
     move-result-object v0
 
-    .line 644
+    .line 645
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -96,11 +102,13 @@
 
     div-int/lit8 v5, v5, 0x3c
 
-    invoke-static {v2, v5}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    new-array v7, v2, [Ljava/lang/Object;
 
-    move-result-object v2
+    invoke-static {v4, v5, v7}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
@@ -112,7 +120,9 @@
 
     rem-int/lit8 v1, v1, 0x3c
 
-    invoke-static {v4, v1}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    new-array v4, v2, [Ljava/lang/Object;
+
+    invoke-static {v6, v1, v4}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -122,24 +132,22 @@
 
     move-result-object v1
 
-    const/4 v2, 0x2
+    const/4 v3, 0x2
 
-    new-array v2, v2, [Ljava/lang/Object;
+    new-array v3, v3, [Ljava/lang/Object;
 
-    const/4 v3, 0x0
-
-    aput-object v0, v2, v3
+    aput-object v0, v3, v2
 
     const/4 v0, 0x1
 
-    aput-object v1, v2, v0
+    aput-object v1, v3, v0
 
     const-string v0, "AccDescrPlayerDuration"
 
-    const v1, 0x7f0e004c
+    const v1, 0x7f0e006a
 
-    .line 645
-    invoke-static {v0, v1, v2}, Lorg/telegram/messenger/LocaleController;->formatString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
+    .line 646
+    invoke-static {v0, v1, v3}, Lorg/telegram/messenger/LocaleController;->formatString(Ljava/lang/String;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -161,7 +169,7 @@
 
     if-eqz p1, :cond_11
 
-    .line 628
+    .line 629
     invoke-static {}, Lorg/telegram/messenger/MediaController;->getInstance()Lorg/telegram/messenger/MediaController;
 
     move-result-object p1
@@ -176,7 +184,7 @@
 
     invoke-virtual {p1, v0, p2}, Lorg/telegram/messenger/MediaController;->seekToProgress(Lorg/telegram/messenger/MessageObject;F)Z
 
-    .line 630
+    .line 631
     :cond_11
     invoke-static {}, Lorg/telegram/messenger/MediaController;->getInstance()Lorg/telegram/messenger/MediaController;
 
@@ -188,14 +196,14 @@
 
     if-eqz p1, :cond_26
 
-    .line 631
+    .line 632
     invoke-virtual {p1}, Lorg/telegram/messenger/MessageObject;->isMusic()Z
 
     move-result p2
 
     if-eqz p2, :cond_26
 
-    .line 632
+    .line 633
     iget-object p2, p0, Lorg/telegram/ui/Components/AudioPlayerAlert$11;->this$0:Lorg/telegram/ui/Components/AudioPlayerAlert;
 
     invoke-static {p2, p1}, Lorg/telegram/ui/Components/AudioPlayerAlert;->access$000(Lorg/telegram/ui/Components/AudioPlayerAlert;Lorg/telegram/messenger/MessageObject;)V
@@ -207,7 +215,7 @@
 .method public onSeekBarPressed(Z)V
     .registers 3
 
-    .line 638
+    .line 639
     iget-object v0, p0, Lorg/telegram/ui/Components/AudioPlayerAlert$11;->this$0:Lorg/telegram/ui/Components/AudioPlayerAlert;
 
     invoke-static {v0, p1}, Lorg/telegram/ui/Components/AudioPlayerAlert;->access$5602(Lorg/telegram/ui/Components/AudioPlayerAlert;Z)Z

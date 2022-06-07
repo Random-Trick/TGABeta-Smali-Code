@@ -2,25 +2,23 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lj$/util/stream/T2;
-.implements Lj$/util/stream/l3;
+.implements Lj$/util/stream/S2;
+.implements Lj$/util/stream/k3;
 
 
 # instance fields
-.field private a:I
+.field private a:Z
 
-.field final synthetic b:I
+.field private b:I
 
 .field final synthetic c:Lj$/util/function/j;
 
 
 # direct methods
-.method constructor <init>(ILj$/util/function/j;)V
-    .registers 3
+.method constructor <init>(Lj$/util/function/j;)V
+    .registers 2
 
-    iput p1, p0, Lj$/util/stream/N2;->b:I
-
-    iput-object p2, p0, Lj$/util/stream/N2;->c:Lj$/util/function/j;
+    iput-object p1, p0, Lj$/util/stream/N2;->c:Lj$/util/function/j;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -32,7 +30,7 @@
 .method public synthetic accept(D)V
     .registers 3
 
-    invoke-static {p0}, Lj$/util/stream/p1;->f(Lj$/util/stream/n3;)V
+    invoke-static {p0}, Lj$/util/stream/o1;->f(Lj$/util/stream/m3;)V
 
     const/4 p1, 0x0
 
@@ -42,15 +40,27 @@
 .method public accept(I)V
     .registers 4
 
+    iget-boolean v0, p0, Lj$/util/stream/N2;->a:Z
+
+    if-eqz v0, :cond_8
+
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lj$/util/stream/N2;->a:Z
+
+    goto :goto_10
+
+    :cond_8
     iget-object v0, p0, Lj$/util/stream/N2;->c:Lj$/util/function/j;
 
-    iget v1, p0, Lj$/util/stream/N2;->a:I
+    iget v1, p0, Lj$/util/stream/N2;->b:I
 
     invoke-interface {v0, v1, p1}, Lj$/util/function/j;->applyAsInt(II)I
 
     move-result p1
 
-    iput p1, p0, Lj$/util/stream/N2;->a:I
+    :goto_10
+    iput p1, p0, Lj$/util/stream/N2;->b:I
 
     return-void
 .end method
@@ -58,7 +68,7 @@
 .method public synthetic accept(J)V
     .registers 3
 
-    invoke-static {p0}, Lj$/util/stream/p1;->e(Lj$/util/stream/n3;)V
+    invoke-static {p0}, Lj$/util/stream/o1;->e(Lj$/util/stream/m3;)V
 
     const/4 p1, 0x0
 
@@ -89,7 +99,7 @@
 .method public synthetic b(Ljava/lang/Integer;)V
     .registers 2
 
-    invoke-static {p0, p1}, Lj$/util/stream/p1;->b(Lj$/util/stream/l3;Ljava/lang/Integer;)V
+    invoke-static {p0, p1}, Lj$/util/stream/o1;->b(Lj$/util/stream/k3;Ljava/lang/Integer;)V
 
     return-void
 .end method
@@ -98,25 +108,42 @@
     .registers 2
 
     .line 1
-    iget v0, p0, Lj$/util/stream/N2;->a:I
+    iget-boolean v0, p0, Lj$/util/stream/N2;->a:Z
 
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    if-eqz v0, :cond_9
+
+    invoke-static {}, Lj$/util/k;->a()Lj$/util/k;
 
     move-result-object v0
 
+    goto :goto_f
+
+    :cond_9
+    iget v0, p0, Lj$/util/stream/N2;->b:I
+
+    invoke-static {v0}, Lj$/util/k;->d(I)Lj$/util/k;
+
+    move-result-object v0
+
+    :goto_f
     return-object v0
 .end method
 
-.method public h(Lj$/util/stream/T2;)V
-    .registers 2
+.method public h(Lj$/util/stream/S2;)V
+    .registers 3
 
     check-cast p1, Lj$/util/stream/N2;
 
     .line 1
-    iget p1, p1, Lj$/util/stream/N2;->a:I
+    iget-boolean v0, p1, Lj$/util/stream/N2;->a:Z
+
+    if-nez v0, :cond_b
+
+    iget p1, p1, Lj$/util/stream/N2;->b:I
 
     invoke-virtual {p0, p1}, Lj$/util/stream/N2;->accept(I)V
 
+    :cond_b
     return-void
 .end method
 
@@ -142,9 +169,13 @@
 .method public n(J)V
     .registers 3
 
-    iget p1, p0, Lj$/util/stream/N2;->b:I
+    const/4 p1, 0x1
 
-    iput p1, p0, Lj$/util/stream/N2;->a:I
+    iput-boolean p1, p0, Lj$/util/stream/N2;->a:Z
+
+    const/4 p1, 0x0
+
+    iput p1, p0, Lj$/util/stream/N2;->b:I
 
     return-void
 .end method

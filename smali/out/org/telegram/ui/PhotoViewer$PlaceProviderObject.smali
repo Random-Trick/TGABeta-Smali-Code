@@ -39,7 +39,7 @@
 
 .field public scale:F
 
-.field public size:I
+.field public size:J
 
 .field public starOffset:I
 
@@ -54,17 +54,17 @@
 .method public constructor <init>()V
     .registers 2
 
-    .line 1724
+    .line 1735
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/high16 v0, 0x3f800000    # 1.0f
 
-    .line 1737
+    .line 1748
     iput v0, p0, Lorg/telegram/ui/PhotoViewer$PlaceProviderObject;->scale:F
 
     const/4 v0, 0x1
 
-    .line 1741
+    .line 1752
     iput-boolean v0, p0, Lorg/telegram/ui/PhotoViewer$PlaceProviderObject;->allowTakeAnimation:Z
 
     return-void

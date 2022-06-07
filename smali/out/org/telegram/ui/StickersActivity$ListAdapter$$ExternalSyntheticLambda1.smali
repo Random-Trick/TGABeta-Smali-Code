@@ -39,7 +39,7 @@
 
     iget-object v2, p0, Lorg/telegram/ui/StickersActivity$ListAdapter$$ExternalSyntheticLambda1;->f$2:Lorg/telegram/tgnet/TLRPC$TL_messages_stickerSet;
 
-    invoke-static {v0, v1, v2, p1, p2}, Lorg/telegram/ui/StickersActivity$ListAdapter;->$r8$lambda$nFmWuskjumwYo_oykLNH2hrjVGI(Lorg/telegram/ui/StickersActivity$ListAdapter;[ILorg/telegram/tgnet/TLRPC$TL_messages_stickerSet;Landroid/content/DialogInterface;I)V
+    invoke-static {v0, v1, v2, p1, p2}, Lorg/telegram/ui/StickersActivity$ListAdapter;->$r8$lambda$M-tm84UjchjM5GxUIVBc0vE_uKU(Lorg/telegram/ui/StickersActivity$ListAdapter;[ILorg/telegram/tgnet/TLRPC$TL_messages_stickerSet;Landroid/content/DialogInterface;I)V
 
     return-void
 .end method

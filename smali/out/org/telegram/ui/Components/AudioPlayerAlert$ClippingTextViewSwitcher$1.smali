@@ -24,7 +24,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/AudioPlayerAlert$ClippingTextViewSwitcher;I)V
     .registers 3
 
-    .line 2490
+    .line 2521
     iput-object p1, p0, Lorg/telegram/ui/Components/AudioPlayerAlert$ClippingTextViewSwitcher$1;->this$0:Lorg/telegram/ui/Components/AudioPlayerAlert$ClippingTextViewSwitcher;
 
     iput p2, p0, Lorg/telegram/ui/Components/AudioPlayerAlert$ClippingTextViewSwitcher$1;->val$prevIndex:I
@@ -39,7 +39,7 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .registers 3
 
-    .line 2493
+    .line 2524
     iget-object p1, p0, Lorg/telegram/ui/Components/AudioPlayerAlert$ClippingTextViewSwitcher$1;->this$0:Lorg/telegram/ui/Components/AudioPlayerAlert$ClippingTextViewSwitcher;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/AudioPlayerAlert$ClippingTextViewSwitcher;->access$7500(Lorg/telegram/ui/Components/AudioPlayerAlert$ClippingTextViewSwitcher;)[Landroid/widget/TextView;

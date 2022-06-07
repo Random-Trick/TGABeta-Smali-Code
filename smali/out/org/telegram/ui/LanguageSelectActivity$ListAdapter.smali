@@ -26,15 +26,15 @@
 .method public constructor <init>(Lorg/telegram/ui/LanguageSelectActivity;Landroid/content/Context;Z)V
     .registers 4
 
-    .line 596
+    .line 618
     iput-object p1, p0, Lorg/telegram/ui/LanguageSelectActivity$ListAdapter;->this$0:Lorg/telegram/ui/LanguageSelectActivity;
 
     invoke-direct {p0}, Lorg/telegram/ui/Components/RecyclerListView$SelectionAdapter;-><init>()V
 
-    .line 597
+    .line 619
     iput-object p2, p0, Lorg/telegram/ui/LanguageSelectActivity$ListAdapter;->mContext:Landroid/content/Context;
 
-    .line 598
+    .line 620
     iput-boolean p3, p0, Lorg/telegram/ui/LanguageSelectActivity$ListAdapter;->search:Z
 
     return-void
@@ -45,15 +45,15 @@
 .method public getItemCount()I
     .registers 3
 
-    .line 608
+    .line 630
     iget-boolean v0, p0, Lorg/telegram/ui/LanguageSelectActivity$ListAdapter;->search:Z
 
     if-eqz v0, :cond_19
 
-    .line 609
+    .line 631
     iget-object v0, p0, Lorg/telegram/ui/LanguageSelectActivity$ListAdapter;->this$0:Lorg/telegram/ui/LanguageSelectActivity;
 
-    invoke-static {v0}, Lorg/telegram/ui/LanguageSelectActivity;->access$700(Lorg/telegram/ui/LanguageSelectActivity;)Ljava/util/ArrayList;
+    invoke-static {v0}, Lorg/telegram/ui/LanguageSelectActivity;->access$900(Lorg/telegram/ui/LanguageSelectActivity;)Ljava/util/ArrayList;
 
     move-result-object v0
 
@@ -63,11 +63,11 @@
 
     return v0
 
-    .line 612
+    .line 634
     :cond_e
     iget-object v0, p0, Lorg/telegram/ui/LanguageSelectActivity$ListAdapter;->this$0:Lorg/telegram/ui/LanguageSelectActivity;
 
-    invoke-static {v0}, Lorg/telegram/ui/LanguageSelectActivity;->access$700(Lorg/telegram/ui/LanguageSelectActivity;)Ljava/util/ArrayList;
+    invoke-static {v0}, Lorg/telegram/ui/LanguageSelectActivity;->access$900(Lorg/telegram/ui/LanguageSelectActivity;)Ljava/util/ArrayList;
 
     move-result-object v0
 
@@ -77,11 +77,11 @@
 
     return v0
 
-    .line 614
+    .line 636
     :cond_19
     iget-object v0, p0, Lorg/telegram/ui/LanguageSelectActivity$ListAdapter;->this$0:Lorg/telegram/ui/LanguageSelectActivity;
 
-    invoke-static {v0}, Lorg/telegram/ui/LanguageSelectActivity;->access$800(Lorg/telegram/ui/LanguageSelectActivity;)Ljava/util/ArrayList;
+    invoke-static {v0}, Lorg/telegram/ui/LanguageSelectActivity;->access$1000(Lorg/telegram/ui/LanguageSelectActivity;)Ljava/util/ArrayList;
 
     move-result-object v0
 
@@ -93,11 +93,11 @@
 
     add-int/lit8 v0, v0, 0x1
 
-    .line 618
+    .line 640
     :cond_27
     iget-object v1, p0, Lorg/telegram/ui/LanguageSelectActivity$ListAdapter;->this$0:Lorg/telegram/ui/LanguageSelectActivity;
 
-    invoke-static {v1}, Lorg/telegram/ui/LanguageSelectActivity;->access$900(Lorg/telegram/ui/LanguageSelectActivity;)Ljava/util/ArrayList;
+    invoke-static {v1}, Lorg/telegram/ui/LanguageSelectActivity;->access$1100(Lorg/telegram/ui/LanguageSelectActivity;)Ljava/util/ArrayList;
 
     move-result-object v1
 
@@ -107,10 +107,10 @@
 
     if-nez v1, :cond_40
 
-    .line 619
+    .line 641
     iget-object v1, p0, Lorg/telegram/ui/LanguageSelectActivity$ListAdapter;->this$0:Lorg/telegram/ui/LanguageSelectActivity;
 
-    invoke-static {v1}, Lorg/telegram/ui/LanguageSelectActivity;->access$900(Lorg/telegram/ui/LanguageSelectActivity;)Ljava/util/ArrayList;
+    invoke-static {v1}, Lorg/telegram/ui/LanguageSelectActivity;->access$1100(Lorg/telegram/ui/LanguageSelectActivity;)Ljava/util/ArrayList;
 
     move-result-object v1
 
@@ -131,7 +131,7 @@
 .method public getItemViewType(I)I
     .registers 6
 
-    .line 706
+    .line 728
     iget-boolean v0, p0, Lorg/telegram/ui/LanguageSelectActivity$ListAdapter;->search:Z
 
     if-nez v0, :cond_6
@@ -163,11 +163,11 @@
 
     return v1
 
-    .line 715
+    .line 737
     :cond_14
     iget-object v0, p0, Lorg/telegram/ui/LanguageSelectActivity$ListAdapter;->this$0:Lorg/telegram/ui/LanguageSelectActivity;
 
-    invoke-static {v0}, Lorg/telegram/ui/LanguageSelectActivity;->access$900(Lorg/telegram/ui/LanguageSelectActivity;)Ljava/util/ArrayList;
+    invoke-static {v0}, Lorg/telegram/ui/LanguageSelectActivity;->access$1100(Lorg/telegram/ui/LanguageSelectActivity;)Ljava/util/ArrayList;
 
     move-result-object v0
 
@@ -181,7 +181,7 @@
 
     iget-object v0, p0, Lorg/telegram/ui/LanguageSelectActivity$ListAdapter;->this$0:Lorg/telegram/ui/LanguageSelectActivity;
 
-    invoke-static {v0}, Lorg/telegram/ui/LanguageSelectActivity;->access$900(Lorg/telegram/ui/LanguageSelectActivity;)Ljava/util/ArrayList;
+    invoke-static {v0}, Lorg/telegram/ui/LanguageSelectActivity;->access$1100(Lorg/telegram/ui/LanguageSelectActivity;)Ljava/util/ArrayList;
 
     move-result-object v0
 
@@ -193,7 +193,7 @@
 
     iget-object v0, p0, Lorg/telegram/ui/LanguageSelectActivity$ListAdapter;->this$0:Lorg/telegram/ui/LanguageSelectActivity;
 
-    invoke-static {v0}, Lorg/telegram/ui/LanguageSelectActivity;->access$900(Lorg/telegram/ui/LanguageSelectActivity;)Ljava/util/ArrayList;
+    invoke-static {v0}, Lorg/telegram/ui/LanguageSelectActivity;->access$1100(Lorg/telegram/ui/LanguageSelectActivity;)Ljava/util/ArrayList;
 
     move-result-object v0
 
@@ -203,7 +203,7 @@
 
     iget-object v3, p0, Lorg/telegram/ui/LanguageSelectActivity$ListAdapter;->this$0:Lorg/telegram/ui/LanguageSelectActivity;
 
-    invoke-static {v3}, Lorg/telegram/ui/LanguageSelectActivity;->access$800(Lorg/telegram/ui/LanguageSelectActivity;)Ljava/util/ArrayList;
+    invoke-static {v3}, Lorg/telegram/ui/LanguageSelectActivity;->access$1000(Lorg/telegram/ui/LanguageSelectActivity;)Ljava/util/ArrayList;
 
     move-result-object v3
 
@@ -220,7 +220,7 @@
     :cond_45
     iget-object v0, p0, Lorg/telegram/ui/LanguageSelectActivity$ListAdapter;->this$0:Lorg/telegram/ui/LanguageSelectActivity;
 
-    invoke-static {v0}, Lorg/telegram/ui/LanguageSelectActivity;->access$900(Lorg/telegram/ui/LanguageSelectActivity;)Ljava/util/ArrayList;
+    invoke-static {v0}, Lorg/telegram/ui/LanguageSelectActivity;->access$1100(Lorg/telegram/ui/LanguageSelectActivity;)Ljava/util/ArrayList;
 
     move-result-object v0
 
@@ -232,7 +232,7 @@
 
     iget-object v0, p0, Lorg/telegram/ui/LanguageSelectActivity$ListAdapter;->this$0:Lorg/telegram/ui/LanguageSelectActivity;
 
-    invoke-static {v0}, Lorg/telegram/ui/LanguageSelectActivity;->access$800(Lorg/telegram/ui/LanguageSelectActivity;)Ljava/util/ArrayList;
+    invoke-static {v0}, Lorg/telegram/ui/LanguageSelectActivity;->access$1000(Lorg/telegram/ui/LanguageSelectActivity;)Ljava/util/ArrayList;
 
     move-result-object v0
 
@@ -252,7 +252,7 @@
 .method public isEnabled(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)Z
     .registers 2
 
-    .line 603
+    .line 625
     invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->getItemViewType()I
 
     move-result p1
@@ -273,7 +273,7 @@
 .method public onBindViewHolder(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;I)V
     .registers 13
 
-    .line 656
+    .line 678
     invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->getItemViewType()I
 
     move-result v0
@@ -292,13 +292,13 @@
 
     goto/16 :goto_136
 
-    .line 697
+    .line 719
     :cond_f
     iget-object p1, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     check-cast p1, Lorg/telegram/ui/LanguageSelectActivity$TranslateSettings;
 
-    .line 698
+    .line 720
     iget-object p2, p0, Lorg/telegram/ui/LanguageSelectActivity$ListAdapter;->this$0:Lorg/telegram/ui/LanguageSelectActivity;
 
     invoke-static {p2}, Lorg/telegram/ui/LanguageSelectActivity;->access$000(Lorg/telegram/ui/LanguageSelectActivity;)Z
@@ -312,12 +312,12 @@
     :cond_1d
     invoke-virtual {p1, v2}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
-    .line 699
+    .line 721
     invoke-virtual {p1}, Lorg/telegram/ui/LanguageSelectActivity$TranslateSettings;->updateHeight()V
 
     goto/16 :goto_136
 
-    .line 686
+    .line 708
     :cond_25
     iget-boolean v0, p0, Lorg/telegram/ui/LanguageSelectActivity$ListAdapter;->search:Z
 
@@ -325,16 +325,16 @@
 
     add-int/lit8 p2, p2, -0x1
 
-    .line 688
+    .line 710
     :cond_2b
     iget-object p1, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     check-cast p1, Lorg/telegram/ui/Cells/ShadowSectionCell;
 
-    .line 689
+    .line 711
     iget-object v0, p0, Lorg/telegram/ui/LanguageSelectActivity$ListAdapter;->this$0:Lorg/telegram/ui/LanguageSelectActivity;
 
-    invoke-static {v0}, Lorg/telegram/ui/LanguageSelectActivity;->access$900(Lorg/telegram/ui/LanguageSelectActivity;)Ljava/util/ArrayList;
+    invoke-static {v0}, Lorg/telegram/ui/LanguageSelectActivity;->access$1100(Lorg/telegram/ui/LanguageSelectActivity;)Ljava/util/ArrayList;
 
     move-result-object v0
 
@@ -348,7 +348,7 @@
 
     iget-object v0, p0, Lorg/telegram/ui/LanguageSelectActivity$ListAdapter;->this$0:Lorg/telegram/ui/LanguageSelectActivity;
 
-    invoke-static {v0}, Lorg/telegram/ui/LanguageSelectActivity;->access$900(Lorg/telegram/ui/LanguageSelectActivity;)Ljava/util/ArrayList;
+    invoke-static {v0}, Lorg/telegram/ui/LanguageSelectActivity;->access$1100(Lorg/telegram/ui/LanguageSelectActivity;)Ljava/util/ArrayList;
 
     move-result-object v0
 
@@ -358,10 +358,10 @@
 
     if-ne p2, v0, :cond_57
 
-    .line 690
+    .line 712
     iget-object p2, p0, Lorg/telegram/ui/LanguageSelectActivity$ListAdapter;->mContext:Landroid/content/Context;
 
-    const v0, 0x7f07012c
+    const v0, 0x7f0700fb
 
     invoke-static {p2, v0, v1}, Lorg/telegram/ui/ActionBar/Theme;->getThemedDrawable(Landroid/content/Context;ILjava/lang/String;)Landroid/graphics/drawable/Drawable;
 
@@ -371,11 +371,11 @@
 
     goto/16 :goto_136
 
-    .line 692
+    .line 714
     :cond_57
     iget-object p2, p0, Lorg/telegram/ui/LanguageSelectActivity$ListAdapter;->mContext:Landroid/content/Context;
 
-    const v0, 0x7f07012d
+    const v0, 0x7f0700fc
 
     invoke-static {p2, v0, v1}, Lorg/telegram/ui/ActionBar/Theme;->getThemedDrawable(Landroid/content/Context;ILjava/lang/String;)Landroid/graphics/drawable/Drawable;
 
@@ -385,7 +385,7 @@
 
     goto/16 :goto_136
 
-    .line 658
+    .line 680
     :cond_65
     iget-boolean v0, p0, Lorg/telegram/ui/LanguageSelectActivity$ListAdapter;->search:Z
 
@@ -393,7 +393,7 @@
 
     add-int/lit8 p2, p2, -0x2
 
-    .line 661
+    .line 683
     :cond_6b
     iget-object p1, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
@@ -401,10 +401,10 @@
 
     if-eqz v0, :cond_8e
 
-    .line 665
+    .line 687
     iget-object v0, p0, Lorg/telegram/ui/LanguageSelectActivity$ListAdapter;->this$0:Lorg/telegram/ui/LanguageSelectActivity;
 
-    invoke-static {v0}, Lorg/telegram/ui/LanguageSelectActivity;->access$700(Lorg/telegram/ui/LanguageSelectActivity;)Ljava/util/ArrayList;
+    invoke-static {v0}, Lorg/telegram/ui/LanguageSelectActivity;->access$900(Lorg/telegram/ui/LanguageSelectActivity;)Ljava/util/ArrayList;
 
     move-result-object v0
 
@@ -414,10 +414,10 @@
 
     check-cast v0, Lorg/telegram/messenger/LocaleController$LocaleInfo;
 
-    .line 666
+    .line 688
     iget-object v4, p0, Lorg/telegram/ui/LanguageSelectActivity$ListAdapter;->this$0:Lorg/telegram/ui/LanguageSelectActivity;
 
-    invoke-static {v4}, Lorg/telegram/ui/LanguageSelectActivity;->access$700(Lorg/telegram/ui/LanguageSelectActivity;)Ljava/util/ArrayList;
+    invoke-static {v4}, Lorg/telegram/ui/LanguageSelectActivity;->access$900(Lorg/telegram/ui/LanguageSelectActivity;)Ljava/util/ArrayList;
 
     move-result-object v4
 
@@ -439,11 +439,11 @@
 
     goto :goto_f4
 
-    .line 667
+    .line 689
     :cond_8e
     iget-object v0, p0, Lorg/telegram/ui/LanguageSelectActivity$ListAdapter;->this$0:Lorg/telegram/ui/LanguageSelectActivity;
 
-    invoke-static {v0}, Lorg/telegram/ui/LanguageSelectActivity;->access$900(Lorg/telegram/ui/LanguageSelectActivity;)Ljava/util/ArrayList;
+    invoke-static {v0}, Lorg/telegram/ui/LanguageSelectActivity;->access$1100(Lorg/telegram/ui/LanguageSelectActivity;)Ljava/util/ArrayList;
 
     move-result-object v0
 
@@ -457,7 +457,7 @@
 
     iget-object v0, p0, Lorg/telegram/ui/LanguageSelectActivity$ListAdapter;->this$0:Lorg/telegram/ui/LanguageSelectActivity;
 
-    invoke-static {v0}, Lorg/telegram/ui/LanguageSelectActivity;->access$900(Lorg/telegram/ui/LanguageSelectActivity;)Ljava/util/ArrayList;
+    invoke-static {v0}, Lorg/telegram/ui/LanguageSelectActivity;->access$1100(Lorg/telegram/ui/LanguageSelectActivity;)Ljava/util/ArrayList;
 
     move-result-object v0
 
@@ -467,10 +467,10 @@
 
     if-ge p2, v0, :cond_c2
 
-    .line 668
+    .line 690
     iget-object v0, p0, Lorg/telegram/ui/LanguageSelectActivity$ListAdapter;->this$0:Lorg/telegram/ui/LanguageSelectActivity;
 
-    invoke-static {v0}, Lorg/telegram/ui/LanguageSelectActivity;->access$900(Lorg/telegram/ui/LanguageSelectActivity;)Ljava/util/ArrayList;
+    invoke-static {v0}, Lorg/telegram/ui/LanguageSelectActivity;->access$1100(Lorg/telegram/ui/LanguageSelectActivity;)Ljava/util/ArrayList;
 
     move-result-object v0
 
@@ -480,10 +480,10 @@
 
     check-cast v0, Lorg/telegram/messenger/LocaleController$LocaleInfo;
 
-    .line 669
+    .line 691
     iget-object v4, p0, Lorg/telegram/ui/LanguageSelectActivity$ListAdapter;->this$0:Lorg/telegram/ui/LanguageSelectActivity;
 
-    invoke-static {v4}, Lorg/telegram/ui/LanguageSelectActivity;->access$900(Lorg/telegram/ui/LanguageSelectActivity;)Ljava/util/ArrayList;
+    invoke-static {v4}, Lorg/telegram/ui/LanguageSelectActivity;->access$1100(Lorg/telegram/ui/LanguageSelectActivity;)Ljava/util/ArrayList;
 
     move-result-object v4
 
@@ -497,11 +497,11 @@
 
     goto :goto_8a
 
-    .line 671
+    .line 693
     :cond_c2
     iget-object v0, p0, Lorg/telegram/ui/LanguageSelectActivity$ListAdapter;->this$0:Lorg/telegram/ui/LanguageSelectActivity;
 
-    invoke-static {v0}, Lorg/telegram/ui/LanguageSelectActivity;->access$900(Lorg/telegram/ui/LanguageSelectActivity;)Ljava/util/ArrayList;
+    invoke-static {v0}, Lorg/telegram/ui/LanguageSelectActivity;->access$1100(Lorg/telegram/ui/LanguageSelectActivity;)Ljava/util/ArrayList;
 
     move-result-object v0
 
@@ -511,10 +511,10 @@
 
     if-nez v0, :cond_da
 
-    .line 672
+    .line 694
     iget-object v0, p0, Lorg/telegram/ui/LanguageSelectActivity$ListAdapter;->this$0:Lorg/telegram/ui/LanguageSelectActivity;
 
-    invoke-static {v0}, Lorg/telegram/ui/LanguageSelectActivity;->access$900(Lorg/telegram/ui/LanguageSelectActivity;)Ljava/util/ArrayList;
+    invoke-static {v0}, Lorg/telegram/ui/LanguageSelectActivity;->access$1100(Lorg/telegram/ui/LanguageSelectActivity;)Ljava/util/ArrayList;
 
     move-result-object v0
 
@@ -526,11 +526,11 @@
 
     sub-int/2addr p2, v0
 
-    .line 674
+    .line 696
     :cond_da
     iget-object v0, p0, Lorg/telegram/ui/LanguageSelectActivity$ListAdapter;->this$0:Lorg/telegram/ui/LanguageSelectActivity;
 
-    invoke-static {v0}, Lorg/telegram/ui/LanguageSelectActivity;->access$800(Lorg/telegram/ui/LanguageSelectActivity;)Ljava/util/ArrayList;
+    invoke-static {v0}, Lorg/telegram/ui/LanguageSelectActivity;->access$1000(Lorg/telegram/ui/LanguageSelectActivity;)Ljava/util/ArrayList;
 
     move-result-object v0
 
@@ -540,10 +540,10 @@
 
     check-cast v0, Lorg/telegram/messenger/LocaleController$LocaleInfo;
 
-    .line 675
+    .line 697
     iget-object v4, p0, Lorg/telegram/ui/LanguageSelectActivity$ListAdapter;->this$0:Lorg/telegram/ui/LanguageSelectActivity;
 
-    invoke-static {v4}, Lorg/telegram/ui/LanguageSelectActivity;->access$800(Lorg/telegram/ui/LanguageSelectActivity;)Ljava/util/ArrayList;
+    invoke-static {v4}, Lorg/telegram/ui/LanguageSelectActivity;->access$1000(Lorg/telegram/ui/LanguageSelectActivity;)Ljava/util/ArrayList;
 
     move-result-object v4
 
@@ -557,7 +557,7 @@
 
     goto :goto_8a
 
-    .line 677
+    .line 699
     :goto_f4
     invoke-virtual {v0}, Lorg/telegram/messenger/LocaleController$LocaleInfo;->isLocal()Z
 
@@ -567,12 +567,12 @@
 
     new-array v1, v1, [Ljava/lang/Object;
 
-    .line 678
+    .line 700
     iget-object v4, v0, Lorg/telegram/messenger/LocaleController$LocaleInfo;->name:Ljava/lang/String;
 
     aput-object v4, v1, v2
 
-    const v4, 0x7f0e08ff
+    const v4, 0x7f0e0964
 
     const-string v5, "LanguageCustom"
 
@@ -602,7 +602,7 @@
 
     goto :goto_128
 
-    .line 680
+    .line 702
     :cond_11c
     iget-object v5, v0, Lorg/telegram/messenger/LocaleController$LocaleInfo;->name:Ljava/lang/String;
 
@@ -618,7 +618,7 @@
 
     invoke-virtual/range {v4 .. v9}, Lorg/telegram/ui/Cells/TextRadioCell;->setTextAndValueAndCheck(Ljava/lang/String;Ljava/lang/String;ZZZ)V
 
-    .line 682
+    .line 704
     :goto_128
     invoke-static {}, Lorg/telegram/messenger/LocaleController;->getInstance()Lorg/telegram/messenger/LocaleController;
 
@@ -654,7 +654,7 @@
 
     if-eq p2, v0, :cond_12
 
-    .line 647
+    .line 669
     new-instance p1, Lorg/telegram/ui/Cells/ShadowSectionCell;
 
     iget-object p2, p0, Lorg/telegram/ui/LanguageSelectActivity$ListAdapter;->mContext:Landroid/content/Context;
@@ -663,7 +663,7 @@
 
     goto :goto_46
 
-    .line 640
+    .line 662
     :cond_12
     new-instance p2, Lorg/telegram/ui/Cells/HeaderCell;
 
@@ -671,18 +671,18 @@
 
     invoke-direct {p2, v0}, Lorg/telegram/ui/Cells/HeaderCell;-><init>(Landroid/content/Context;)V
 
-    .line 641
+    .line 663
     invoke-static {p1}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
 
     move-result p1
 
     invoke-virtual {p2, p1}, Landroid/widget/FrameLayout;->setBackgroundColor(I)V
 
-    const p1, 0x7f0e08fc
+    const p1, 0x7f0e0961
 
     const-string v0, "Language"
 
-    .line 642
+    .line 664
     invoke-static {v0, p1}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object p1
@@ -691,7 +691,7 @@
 
     goto :goto_45
 
-    .line 636
+    .line 658
     :cond_2d
     new-instance p1, Lorg/telegram/ui/LanguageSelectActivity$TranslateSettings;
 
@@ -703,7 +703,7 @@
 
     goto :goto_46
 
-    .line 631
+    .line 653
     :cond_37
     new-instance p2, Lorg/telegram/ui/Cells/TextRadioCell;
 
@@ -711,7 +711,7 @@
 
     invoke-direct {p2, v0}, Lorg/telegram/ui/Cells/TextRadioCell;-><init>(Landroid/content/Context;)V
 
-    .line 632
+    .line 654
     invoke-static {p1}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
 
     move-result p1
@@ -721,7 +721,7 @@
     :goto_45
     move-object p1, p2
 
-    .line 651
+    .line 673
     :goto_46
     new-instance p2, Lorg/telegram/ui/Components/RecyclerListView$Holder;
 

@@ -18,7 +18,7 @@
 .method constructor <init>(Lorg/telegram/ui/ProfileNotificationsActivity;Landroid/content/Context;)V
     .registers 3
 
-    .line 306
+    .line 337
     invoke-direct {p0, p2}, Landroidx/recyclerview/widget/LinearLayoutManager;-><init>(Landroid/content/Context;)V
 
     return-void

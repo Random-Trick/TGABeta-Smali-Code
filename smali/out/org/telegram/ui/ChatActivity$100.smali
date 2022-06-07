@@ -1,9 +1,6 @@
 .class Lorg/telegram/ui/ChatActivity$100;
-.super Ljava/lang/Object;
+.super Landroidx/viewpager/widget/PagerAdapter;
 .source "ChatActivity.java"
-
-# interfaces
-.implements Landroidx/viewpager/widget/ViewPager$OnPageChangeListener;
 
 
 # annotations
@@ -18,288 +15,325 @@
 
 
 # instance fields
+.field final synthetic this$0:Lorg/telegram/ui/ChatActivity;
+
 .field final synthetic val$cachedHeights:Landroid/util/SparseIntArray;
+
+.field final synthetic val$cachedViews:Landroid/util/SparseArray;
+
+.field final synthetic val$counters:Ljava/util/List;
+
+.field final synthetic val$finalCount:I
 
 .field final synthetic val$foregroundIndex:[I
 
+.field final synthetic val$head:I
+
+.field final synthetic val$message:Lorg/telegram/messenger/MessageObject;
+
+.field final synthetic val$pager:Landroidx/viewpager/widget/ViewPager;
+
 .field final synthetic val$popupLayout:Lorg/telegram/ui/ActionBar/ActionBarPopupWindow$ActionBarPopupWindowLayout;
+
+.field final synthetic val$reactedView:Lorg/telegram/ui/Components/ReactedHeaderView;
+
+.field final synthetic val$showAllReactionsTab:Z
 
 .field final synthetic val$size:I
 
-.field final synthetic val$suppressTabsScroll:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-.field final synthetic val$tabsScrollView:Landroid/widget/HorizontalScrollView;
-
-.field final synthetic val$tabsView:Landroid/widget/LinearLayout;
-
 
 # direct methods
-.method constructor <init>(Lorg/telegram/ui/ChatActivity;Ljava/util/concurrent/atomic/AtomicBoolean;Landroid/widget/LinearLayout;ILandroid/widget/HorizontalScrollView;Landroid/util/SparseIntArray;Lorg/telegram/ui/ActionBar/ActionBarPopupWindow$ActionBarPopupWindowLayout;[I)V
-    .registers 9
+.method public static synthetic $r8$lambda$JNiRHo5UubB1WR13kKpuQoO1mes(Landroid/util/SparseIntArray;IILandroidx/viewpager/widget/ViewPager;Lorg/telegram/ui/ActionBar/ActionBarPopupWindow$ActionBarPopupWindowLayout;[ILorg/telegram/ui/Components/ReactedUsersListView;I)V
+    .registers 8
 
-    .line 21423
-    iput-object p2, p0, Lorg/telegram/ui/ChatActivity$100;->val$suppressTabsScroll:Ljava/util/concurrent/atomic/AtomicBoolean;
+    invoke-static/range {p0 .. p7}, Lorg/telegram/ui/ChatActivity$100;->lambda$instantiateItem$1(Landroid/util/SparseIntArray;IILandroidx/viewpager/widget/ViewPager;Lorg/telegram/ui/ActionBar/ActionBarPopupWindow$ActionBarPopupWindowLayout;[ILorg/telegram/ui/Components/ReactedUsersListView;I)V
 
-    iput-object p3, p0, Lorg/telegram/ui/ChatActivity$100;->val$tabsView:Landroid/widget/LinearLayout;
+    return-void
+.end method
 
-    iput p4, p0, Lorg/telegram/ui/ChatActivity$100;->val$size:I
+.method public static synthetic $r8$lambda$crKznm91TI7HaXIgFKD3-6isCMI(Lorg/telegram/ui/ChatActivity$100;Lorg/telegram/ui/Components/ReactedUsersListView;J)V
+    .registers 4
 
-    iput-object p5, p0, Lorg/telegram/ui/ChatActivity$100;->val$tabsScrollView:Landroid/widget/HorizontalScrollView;
+    invoke-direct {p0, p1, p2, p3}, Lorg/telegram/ui/ChatActivity$100;->lambda$instantiateItem$0(Lorg/telegram/ui/Components/ReactedUsersListView;J)V
 
-    iput-object p6, p0, Lorg/telegram/ui/ChatActivity$100;->val$cachedHeights:Landroid/util/SparseIntArray;
+    return-void
+.end method
 
-    iput-object p7, p0, Lorg/telegram/ui/ChatActivity$100;->val$popupLayout:Lorg/telegram/ui/ActionBar/ActionBarPopupWindow$ActionBarPopupWindowLayout;
+.method constructor <init>(Lorg/telegram/ui/ChatActivity;ILandroid/util/SparseArray;ZLjava/util/List;Lorg/telegram/messenger/MessageObject;Lorg/telegram/ui/Components/ReactedHeaderView;Landroid/util/SparseIntArray;ILandroidx/viewpager/widget/ViewPager;Lorg/telegram/ui/ActionBar/ActionBarPopupWindow$ActionBarPopupWindowLayout;[II)V
+    .registers 14
 
-    iput-object p8, p0, Lorg/telegram/ui/ChatActivity$100;->val$foregroundIndex:[I
+    .line 21641
+    iput-object p1, p0, Lorg/telegram/ui/ChatActivity$100;->this$0:Lorg/telegram/ui/ChatActivity;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p2, p0, Lorg/telegram/ui/ChatActivity$100;->val$size:I
 
+    iput-object p3, p0, Lorg/telegram/ui/ChatActivity$100;->val$cachedViews:Landroid/util/SparseArray;
+
+    iput-boolean p4, p0, Lorg/telegram/ui/ChatActivity$100;->val$showAllReactionsTab:Z
+
+    iput-object p5, p0, Lorg/telegram/ui/ChatActivity$100;->val$counters:Ljava/util/List;
+
+    iput-object p6, p0, Lorg/telegram/ui/ChatActivity$100;->val$message:Lorg/telegram/messenger/MessageObject;
+
+    iput-object p7, p0, Lorg/telegram/ui/ChatActivity$100;->val$reactedView:Lorg/telegram/ui/Components/ReactedHeaderView;
+
+    iput-object p8, p0, Lorg/telegram/ui/ChatActivity$100;->val$cachedHeights:Landroid/util/SparseIntArray;
+
+    iput p9, p0, Lorg/telegram/ui/ChatActivity$100;->val$head:I
+
+    iput-object p10, p0, Lorg/telegram/ui/ChatActivity$100;->val$pager:Landroidx/viewpager/widget/ViewPager;
+
+    iput-object p11, p0, Lorg/telegram/ui/ChatActivity$100;->val$popupLayout:Lorg/telegram/ui/ActionBar/ActionBarPopupWindow$ActionBarPopupWindowLayout;
+
+    iput-object p12, p0, Lorg/telegram/ui/ChatActivity$100;->val$foregroundIndex:[I
+
+    iput p13, p0, Lorg/telegram/ui/ChatActivity$100;->val$finalCount:I
+
+    invoke-direct {p0}, Landroidx/viewpager/widget/PagerAdapter;-><init>()V
+
+    return-void
+.end method
+
+.method private synthetic lambda$instantiateItem$0(Lorg/telegram/ui/Components/ReactedUsersListView;J)V
+    .registers 5
+
+    .line 21670
+    new-instance p1, Landroid/os/Bundle;
+
+    invoke-direct {p1}, Landroid/os/Bundle;-><init>()V
+
+    const-string v0, "user_id"
+
+    .line 21671
+    invoke-virtual {p1, v0, p2, p3}, Landroid/os/Bundle;->putLong(Ljava/lang/String;J)V
+
+    .line 21672
+    new-instance p2, Lorg/telegram/ui/ProfileActivity;
+
+    invoke-direct {p2, p1}, Lorg/telegram/ui/ProfileActivity;-><init>(Landroid/os/Bundle;)V
+
+    .line 21673
+    iget-object p1, p0, Lorg/telegram/ui/ChatActivity$100;->this$0:Lorg/telegram/ui/ChatActivity;
+
+    invoke-virtual {p1, p2}, Lorg/telegram/ui/ActionBar/BaseFragment;->presentFragment(Lorg/telegram/ui/ActionBar/BaseFragment;)Z
+
+    .line 21674
+    iget-object p1, p0, Lorg/telegram/ui/ChatActivity$100;->this$0:Lorg/telegram/ui/ChatActivity;
+
+    invoke-virtual {p1}, Lorg/telegram/ui/ChatActivity;->closeMenu()V
+
+    return-void
+.end method
+
+.method private static synthetic lambda$instantiateItem$1(Landroid/util/SparseIntArray;IILandroidx/viewpager/widget/ViewPager;Lorg/telegram/ui/ActionBar/ActionBarPopupWindow$ActionBarPopupWindowLayout;[ILorg/telegram/ui/Components/ReactedUsersListView;I)V
+    .registers 8
+
+    add-int/2addr p2, p7
+
+    .line 21676
+    invoke-virtual {p0, p1, p2}, Landroid/util/SparseIntArray;->put(II)V
+
+    .line 21677
+    invoke-virtual {p3}, Landroidx/viewpager/widget/ViewPager;->getCurrentItem()I
+
+    move-result p0
+
+    if-ne p0, p1, :cond_15
+
+    .line 21678
+    invoke-virtual {p4}, Lorg/telegram/ui/ActionBar/ActionBarPopupWindow$ActionBarPopupWindowLayout;->getSwipeBack()Lorg/telegram/ui/Components/PopupSwipeBackLayout;
+
+    move-result-object p0
+
+    const/4 p1, 0x0
+
+    aget p1, p5, p1
+
+    const/4 p3, 0x1
+
+    invoke-virtual {p0, p1, p2, p3}, Lorg/telegram/ui/Components/PopupSwipeBackLayout;->setNewForegroundHeight(IIZ)V
+
+    :cond_15
     return-void
 .end method
 
 
 # virtual methods
-.method public onPageScrollStateChanged(I)V
-    .registers 3
+.method public destroyItem(Landroid/view/ViewGroup;ILjava/lang/Object;)V
+    .registers 4
 
-    if-nez p1, :cond_8
+    .line 21692
+    check-cast p3, Landroid/view/View;
 
-    .line 21457
-    iget-object p1, p0, Lorg/telegram/ui/ChatActivity$100;->val$suppressTabsScroll:Ljava/util/concurrent/atomic/AtomicBoolean;
+    invoke-virtual {p1, p3}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
 
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
-
-    :cond_8
     return-void
 .end method
 
-.method public onPageScrolled(IFI)V
-    .registers 12
+.method public getCount()I
+    .registers 2
 
-    .line 21426
-    iget-object p3, p0, Lorg/telegram/ui/ChatActivity$100;->val$suppressTabsScroll:Ljava/util/concurrent/atomic/AtomicBoolean;
+    .line 21644
+    iget v0, p0, Lorg/telegram/ui/ChatActivity$100;->val$size:I
 
-    invoke-virtual {p3}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
-
-    move-result p3
-
-    if-nez p3, :cond_98
-
-    const/high16 p3, -0x40800000    # -1.0f
-
-    const/4 v0, 0x0
-
-    const/4 v1, 0x0
-
-    const/high16 v2, -0x40800000    # -1.0f
-
-    const/high16 v3, -0x40800000    # -1.0f
-
-    .line 21428
-    :goto_10
-    iget-object v4, p0, Lorg/telegram/ui/ChatActivity$100;->val$tabsView:Landroid/widget/LinearLayout;
-
-    invoke-virtual {v4}, Landroid/widget/LinearLayout;->getChildCount()I
-
-    move-result v4
-
-    const/high16 v5, 0x3f800000    # 1.0f
-
-    if-ge v1, v4, :cond_62
-
-    .line 21429
-    iget-object v4, p0, Lorg/telegram/ui/ChatActivity$100;->val$tabsView:Landroid/widget/LinearLayout;
-
-    invoke-virtual {v4, v1}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
-
-    move-result-object v4
-
-    check-cast v4, Lorg/telegram/ui/Components/ReactionTabHolderView;
-
-    if-ne v1, p1, :cond_26
-
-    sub-float/2addr v5, p2
-
-    goto :goto_30
-
-    :cond_26
-    add-int/lit8 v5, p1, 0x1
-
-    .line 21430
-    iget v6, p0, Lorg/telegram/ui/ChatActivity$100;->val$size:I
-
-    rem-int/2addr v5, v6
-
-    if-ne v1, v5, :cond_2f
-
-    move v5, p2
-
-    goto :goto_30
-
-    :cond_2f
-    const/4 v5, 0x0
-
-    :goto_30
-    invoke-virtual {v4, v5}, Lorg/telegram/ui/Components/ReactionTabHolderView;->setOutlineProgress(F)V
-
-    const/high16 v5, 0x40000000    # 2.0f
-
-    if-ne v1, p1, :cond_49
-
-    .line 21432
-    invoke-virtual {v4}, Landroid/widget/FrameLayout;->getX()F
-
-    move-result v2
-
-    iget-object v6, p0, Lorg/telegram/ui/ChatActivity$100;->val$tabsScrollView:Landroid/widget/HorizontalScrollView;
-
-    invoke-virtual {v6}, Landroid/widget/HorizontalScrollView;->getWidth()I
-
-    move-result v6
-
-    invoke-virtual {v4}, Landroid/widget/FrameLayout;->getWidth()I
-
-    move-result v7
-
-    sub-int/2addr v6, v7
-
-    int-to-float v6, v6
-
-    div-float/2addr v6, v5
-
-    sub-float/2addr v2, v6
-
-    :cond_49
-    add-int/lit8 v6, p1, 0x1
-
-    if-ne v1, v6, :cond_5f
-
-    .line 21435
-    invoke-virtual {v4}, Landroid/widget/FrameLayout;->getX()F
-
-    move-result v3
-
-    iget-object v6, p0, Lorg/telegram/ui/ChatActivity$100;->val$tabsScrollView:Landroid/widget/HorizontalScrollView;
-
-    invoke-virtual {v6}, Landroid/widget/HorizontalScrollView;->getWidth()I
-
-    move-result v6
-
-    invoke-virtual {v4}, Landroid/widget/FrameLayout;->getWidth()I
-
-    move-result v4
-
-    sub-int/2addr v6, v4
-
-    int-to-float v4, v6
-
-    div-float/2addr v4, v5
-
-    sub-float/2addr v3, v4
-
-    :cond_5f
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_10
-
-    :cond_62
-    cmpl-float v1, v2, p3
-
-    if-eqz v1, :cond_74
-
-    cmpl-float p3, v3, p3
-
-    if-eqz p3, :cond_74
-
-    .line 21440
-    iget-object p3, p0, Lorg/telegram/ui/ChatActivity$100;->val$tabsScrollView:Landroid/widget/HorizontalScrollView;
-
-    sub-float/2addr v3, v2
-
-    mul-float v3, v3, p2
-
-    add-float/2addr v2, v3
-
-    float-to-int v1, v2
-
-    invoke-virtual {p3, v1}, Landroid/widget/HorizontalScrollView;->setScrollX(I)V
-
-    .line 21442
-    :cond_74
-    iget-object p3, p0, Lorg/telegram/ui/ChatActivity$100;->val$cachedHeights:Landroid/util/SparseIntArray;
-
-    invoke-virtual {p3, p1, v0}, Landroid/util/SparseIntArray;->get(II)I
-
-    move-result p3
-
-    .line 21443
-    iget-object v1, p0, Lorg/telegram/ui/ChatActivity$100;->val$cachedHeights:Landroid/util/SparseIntArray;
-
-    add-int/lit8 p1, p1, 0x1
-
-    invoke-virtual {v1, p1, v0}, Landroid/util/SparseIntArray;->get(II)I
-
-    move-result p1
-
-    .line 21444
-    iget-object v1, p0, Lorg/telegram/ui/ChatActivity$100;->val$popupLayout:Lorg/telegram/ui/ActionBar/ActionBarPopupWindow$ActionBarPopupWindowLayout;
-
-    invoke-virtual {v1}, Lorg/telegram/ui/ActionBar/ActionBarPopupWindow$ActionBarPopupWindowLayout;->getSwipeBack()Lorg/telegram/ui/Components/PopupSwipeBackLayout;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lorg/telegram/ui/ChatActivity$100;->val$foregroundIndex:[I
-
-    aget v2, v2, v0
-
-    int-to-float p3, p3
-
-    sub-float/2addr v5, p2
-
-    mul-float p3, p3, v5
-
-    int-to-float p1, p1
-
-    mul-float p1, p1, p2
-
-    add-float/2addr p3, p1
-
-    float-to-int p1, p3
-
-    invoke-virtual {v1, v2, p1, v0}, Lorg/telegram/ui/Components/PopupSwipeBackLayout;->setNewForegroundHeight(IIZ)V
-
-    :cond_98
-    return-void
+    return v0
 .end method
 
-.method public onPageSelected(I)V
-    .registers 5
+.method public instantiateItem(Landroid/view/ViewGroup;I)Ljava/lang/Object;
+    .registers 13
 
-    .line 21450
-    iget-object v0, p0, Lorg/telegram/ui/ChatActivity$100;->val$cachedHeights:Landroid/util/SparseIntArray;
+    .line 21654
+    iget-object v0, p0, Lorg/telegram/ui/ChatActivity$100;->val$cachedViews:Landroid/util/SparseArray;
 
-    invoke-virtual {v0, p1}, Landroid/util/SparseIntArray;->get(I)I
-
-    move-result p1
-
-    .line 21451
-    iget-object v0, p0, Lorg/telegram/ui/ChatActivity$100;->val$popupLayout:Lorg/telegram/ui/ActionBar/ActionBarPopupWindow$ActionBarPopupWindowLayout;
-
-    invoke-virtual {v0}, Lorg/telegram/ui/ActionBar/ActionBarPopupWindow$ActionBarPopupWindowLayout;->getSwipeBack()Lorg/telegram/ui/Components/PopupSwipeBackLayout;
+    invoke-virtual {v0, p2}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    iget-object v1, p0, Lorg/telegram/ui/ChatActivity$100;->val$foregroundIndex:[I
+    check-cast v0, Landroid/view/View;
 
-    const/4 v2, 0x0
+    if-eqz v0, :cond_e
 
-    aget v1, v1, v2
+    .line 21656
+    invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    const/4 v2, 0x1
+    return-object v0
 
-    invoke-virtual {v0, v1, p1, v2}, Lorg/telegram/ui/Components/PopupSwipeBackLayout;->setNewForegroundHeight(IIZ)V
+    .line 21660
+    :cond_e
+    iget-boolean v0, p0, Lorg/telegram/ui/ChatActivity$100;->val$showAllReactionsTab:Z
 
-    return-void
+    if-eqz v0, :cond_15
+
+    add-int/lit8 v0, p2, -0x1
+
+    goto :goto_16
+
+    :cond_15
+    move v0, p2
+
+    :goto_16
+    const/4 v1, 0x0
+
+    if-ltz v0, :cond_21
+
+    .line 21665
+    iget-object v1, p0, Lorg/telegram/ui/ChatActivity$100;->val$counters:Ljava/util/List;
+
+    invoke-interface {v1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lorg/telegram/tgnet/TLRPC$TL_reactionCount;
+
+    :cond_21
+    move-object v7, v1
+
+    .line 21667
+    new-instance v1, Lorg/telegram/ui/Components/ReactedUsersListView;
+
+    invoke-virtual {p1}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
+
+    move-result-object v3
+
+    iget-object v2, p0, Lorg/telegram/ui/ChatActivity$100;->this$0:Lorg/telegram/ui/ChatActivity;
+
+    iget-object v4, v2, Lorg/telegram/ui/ChatActivity;->themeDelegate:Lorg/telegram/ui/ChatActivity$ThemeDelegate;
+
+    invoke-static {v2}, Lorg/telegram/ui/ChatActivity;->access$37300(Lorg/telegram/ui/ChatActivity;)I
+
+    move-result v5
+
+    iget-object v6, p0, Lorg/telegram/ui/ChatActivity$100;->val$message:Lorg/telegram/messenger/MessageObject;
+
+    const/4 v8, 0x1
+
+    move-object v2, v1
+
+    invoke-direct/range {v2 .. v8}, Lorg/telegram/ui/Components/ReactedUsersListView;-><init>(Landroid/content/Context;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;ILorg/telegram/messenger/MessageObject;Lorg/telegram/tgnet/TLRPC$TL_reactionCount;Z)V
+
+    iget-object v2, p0, Lorg/telegram/ui/ChatActivity$100;->val$reactedView:Lorg/telegram/ui/Components/ReactedHeaderView;
+
+    .line 21668
+    invoke-virtual {v2}, Lorg/telegram/ui/Components/ReactedHeaderView;->getSeenUsers()Ljava/util/List;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Lorg/telegram/ui/Components/ReactedUsersListView;->setSeenUsers(Ljava/util/List;)Lorg/telegram/ui/Components/ReactedUsersListView;
+
+    move-result-object v1
+
+    new-instance v2, Lorg/telegram/ui/ChatActivity$100$$ExternalSyntheticLambda1;
+
+    invoke-direct {v2, p0}, Lorg/telegram/ui/ChatActivity$100$$ExternalSyntheticLambda1;-><init>(Lorg/telegram/ui/ChatActivity$100;)V
+
+    .line 21669
+    invoke-virtual {v1, v2}, Lorg/telegram/ui/Components/ReactedUsersListView;->setOnProfileSelectedListener(Lorg/telegram/ui/Components/ReactedUsersListView$OnProfileSelectedListener;)Lorg/telegram/ui/Components/ReactedUsersListView;
+
+    move-result-object v1
+
+    iget-object v3, p0, Lorg/telegram/ui/ChatActivity$100;->val$cachedHeights:Landroid/util/SparseIntArray;
+
+    iget v5, p0, Lorg/telegram/ui/ChatActivity$100;->val$head:I
+
+    iget-object v6, p0, Lorg/telegram/ui/ChatActivity$100;->val$pager:Landroidx/viewpager/widget/ViewPager;
+
+    iget-object v7, p0, Lorg/telegram/ui/ChatActivity$100;->val$popupLayout:Lorg/telegram/ui/ActionBar/ActionBarPopupWindow$ActionBarPopupWindowLayout;
+
+    iget-object v8, p0, Lorg/telegram/ui/ChatActivity$100;->val$foregroundIndex:[I
+
+    new-instance v9, Lorg/telegram/ui/ChatActivity$100$$ExternalSyntheticLambda0;
+
+    move-object v2, v9
+
+    move v4, p2
+
+    invoke-direct/range {v2 .. v8}, Lorg/telegram/ui/ChatActivity$100$$ExternalSyntheticLambda0;-><init>(Landroid/util/SparseIntArray;IILandroidx/viewpager/widget/ViewPager;Lorg/telegram/ui/ActionBar/ActionBarPopupWindow$ActionBarPopupWindowLayout;[I)V
+
+    .line 21675
+    invoke-virtual {v1, v9}, Lorg/telegram/ui/Components/ReactedUsersListView;->setOnHeightChangedListener(Lorg/telegram/ui/Components/ReactedUsersListView$OnHeightChangedListener;)Lorg/telegram/ui/Components/ReactedUsersListView;
+
+    move-result-object v1
+
+    if-gez v0, :cond_70
+
+    .line 21681
+    iget v0, p0, Lorg/telegram/ui/ChatActivity$100;->val$finalCount:I
+
+    invoke-virtual {v1, v0}, Lorg/telegram/ui/Components/ReactedUsersListView;->setPredictiveCount(I)V
+
+    .line 21682
+    iget-object v0, p0, Lorg/telegram/ui/ChatActivity$100;->val$reactedView:Lorg/telegram/ui/Components/ReactedHeaderView;
+
+    new-instance v2, Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda111;
+
+    invoke-direct {v2, v1}, Lorg/telegram/ui/ChatActivity$$ExternalSyntheticLambda111;-><init>(Lorg/telegram/ui/Components/ReactedUsersListView;)V
+
+    invoke-virtual {v0, v2}, Lorg/telegram/ui/Components/ReactedHeaderView;->setSeenCallback(Landroidx/core/util/Consumer;)V
+
+    .line 21685
+    :cond_70
+    invoke-virtual {p1, v1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+
+    .line 21686
+    iget-object p1, p0, Lorg/telegram/ui/ChatActivity$100;->val$cachedViews:Landroid/util/SparseArray;
+
+    invoke-virtual {p1, p2, v1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    return-object v1
+.end method
+
+.method public isViewFromObject(Landroid/view/View;Ljava/lang/Object;)Z
+    .registers 3
+
+    if-ne p1, p2, :cond_4
+
+    const/4 p1, 0x1
+
+    goto :goto_5
+
+    :cond_4
+    const/4 p1, 0x0
+
+    :goto_5
+    return p1
 .end method

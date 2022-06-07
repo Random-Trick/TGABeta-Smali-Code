@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lj$/util/function/y;
+.implements Lj$/util/function/A;
 
 
 # static fields
@@ -32,12 +32,15 @@
 
 
 # virtual methods
-.method public final get()Ljava/lang/Object;
-    .registers 2
+.method public final applyAsLong(Ljava/lang/Object;)J
+    .registers 4
 
-    const/4 v0, 0x2
+    check-cast p1, Ljava/lang/Long;
 
-    new-array v0, v0, [J
+    .line 1
+    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
 
-    return-object v0
+    move-result-wide v0
+
+    return-wide v0
 .end method

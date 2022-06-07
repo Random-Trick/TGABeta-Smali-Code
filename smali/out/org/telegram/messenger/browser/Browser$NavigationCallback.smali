@@ -18,7 +18,7 @@
 .method private constructor <init>()V
     .registers 1
 
-    .line 141
+    .line 140
     invoke-direct {p0}, Lorg/telegram/messenger/support/customtabs/CustomTabsCallback;-><init>()V
 
     return-void
@@ -27,7 +27,7 @@
 .method synthetic constructor <init>(Lorg/telegram/messenger/browser/Browser$1;)V
     .registers 2
 
-    .line 141
+    .line 140
     invoke-direct {p0}, Lorg/telegram/messenger/browser/Browser$NavigationCallback;-><init>()V
 
     return-void

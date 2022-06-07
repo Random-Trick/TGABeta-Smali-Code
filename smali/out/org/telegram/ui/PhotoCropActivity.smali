@@ -150,7 +150,7 @@
     .line 421
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
-    const v3, 0x7f070140
+    const v3, 0x7f070109
 
     invoke-virtual {v0, v3}, Lorg/telegram/ui/ActionBar/ActionBar;->setBackButtonImage(I)V
 
@@ -166,7 +166,7 @@
 
     const-string v4, "CropImage"
 
-    const v5, 0x7f0e04f3
+    const v5, 0x7f0e0542
 
     invoke-static {v4, v5}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
@@ -199,13 +199,13 @@
 
     const-string v5, "Done"
 
-    const v6, 0x7f0e05dd
+    const v6, 0x7f0e062e
 
     invoke-static {v5, v6}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v5
 
-    const v6, 0x7f07015e
+    const v6, 0x7f07010a
 
     invoke-virtual {v0, v3, v6, v4, v5}, Lorg/telegram/ui/ActionBar/ActionBarMenu;->addItemWithWidth(IIILjava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 

@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/ChatRightsEditActivity;Landroid/content/Context;)V
     .registers 3
 
-    .line 407
+    .line 404
     iput-object p1, p0, Lorg/telegram/ui/ChatRightsEditActivity$3;->this$0:Lorg/telegram/ui/ChatRightsEditActivity;
 
     invoke-direct {p0, p2}, Lorg/telegram/ui/Components/RecyclerListView;-><init>(Landroid/content/Context;)V
@@ -35,7 +35,7 @@
 .method public onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
     .registers 3
 
-    .line 418
+    .line 415
     iget-object v0, p0, Lorg/telegram/ui/ChatRightsEditActivity$3;->this$0:Lorg/telegram/ui/ChatRightsEditActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/ChatRightsEditActivity;->access$400(Lorg/telegram/ui/ChatRightsEditActivity;)Z
@@ -48,7 +48,7 @@
 
     return p1
 
-    .line 421
+    .line 418
     :cond_a
     invoke-super {p0, p1}, Lorg/telegram/ui/Components/RecyclerListView;->onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
 
@@ -60,7 +60,7 @@
 .method public onTouchEvent(Landroid/view/MotionEvent;)Z
     .registers 3
 
-    .line 410
+    .line 407
     iget-object v0, p0, Lorg/telegram/ui/ChatRightsEditActivity$3;->this$0:Lorg/telegram/ui/ChatRightsEditActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/ChatRightsEditActivity;->access$400(Lorg/telegram/ui/ChatRightsEditActivity;)Z
@@ -73,7 +73,7 @@
 
     return p1
 
-    .line 413
+    .line 410
     :cond_a
     invoke-super {p0, p1}, Lorg/telegram/ui/Components/RecyclerListView;->onTouchEvent(Landroid/view/MotionEvent;)Z
 

@@ -36,10 +36,10 @@
 .method private constructor <init>(Lorg/telegram/ui/ActionBar/ActionBarLayout;)V
     .registers 4
 
-    .line 2167
+    .line 2292
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2169
+    .line 2294
     new-instance p1, Ljava/util/HashMap;
 
     invoke-direct {p1}, Ljava/util/HashMap;-><init>()V
@@ -86,7 +86,7 @@
 
     aput-object v1, p1, v0
 
-    .line 2171
+    .line 2296
     iput-object p1, p0, Lorg/telegram/ui/ActionBar/ActionBarLayout$StartColorsProvider;->keysToSave:[Ljava/lang/String;
 
     return-void
@@ -95,7 +95,7 @@
 .method synthetic constructor <init>(Lorg/telegram/ui/ActionBar/ActionBarLayout;Lorg/telegram/ui/ActionBar/ActionBarLayout$1;)V
     .registers 3
 
-    .line 2167
+    .line 2292
     invoke-direct {p0, p1}, Lorg/telegram/ui/ActionBar/ActionBarLayout$StartColorsProvider;-><init>(Lorg/telegram/ui/ActionBar/ActionBarLayout;)V
 
     return-void
@@ -114,7 +114,7 @@
 .method public getColor(Ljava/lang/String;)Ljava/lang/Integer;
     .registers 3
 
-    .line 2182
+    .line 2307
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/ActionBarLayout$StartColorsProvider;->colors:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -139,7 +139,7 @@
 .method public getCurrentColor(Ljava/lang/String;)Ljava/lang/Integer;
     .registers 3
 
-    .line 2187
+    .line 2312
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/ActionBarLayout$StartColorsProvider;->colors:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -184,12 +184,12 @@
 .method public saveColors(Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)V
     .registers 8
 
-    .line 2191
+    .line 2316
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/ActionBarLayout$StartColorsProvider;->colors:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->clear()V
 
-    .line 2192
+    .line 2317
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/ActionBarLayout$StartColorsProvider;->keysToSave:[Ljava/lang/String;
 
     array-length v1, v0
@@ -201,7 +201,7 @@
 
     aget-object v3, v0, v2
 
-    .line 2193
+    .line 2318
     iget-object v4, p0, Lorg/telegram/ui/ActionBar/ActionBarLayout$StartColorsProvider;->colors:Ljava/util/HashMap;
 
     invoke-interface {p1, v3}, Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;->getCurrentColor(Ljava/lang/String;)Ljava/lang/Integer;

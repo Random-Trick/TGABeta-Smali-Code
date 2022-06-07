@@ -17,7 +17,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 31485
+    .line 31916
     invoke-direct {p0}, Lorg/telegram/tgnet/TLRPC$TL_messageEntityMentionName;-><init>()V
 
     return-void
@@ -28,21 +28,21 @@
 .method public readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
     .registers 4
 
-    .line 31490
+    .line 31921
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
 
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$MessageEntity;->offset:I
 
-    .line 31491
+    .line 31922
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
 
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$MessageEntity;->length:I
 
-    .line 31492
+    .line 31923
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result p1
@@ -57,22 +57,22 @@
 .method public serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
     .registers 4
 
-    .line 31496
+    .line 31927
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_messageEntityMentionName_layer131;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 31497
+    .line 31928
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$MessageEntity;->offset:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 31498
+    .line 31929
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$MessageEntity;->length:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 31499
+    .line 31930
     iget-wide v0, p0, Lorg/telegram/tgnet/TLRPC$TL_messageEntityMentionName;->user_id:J
 
     long-to-int v1, v0

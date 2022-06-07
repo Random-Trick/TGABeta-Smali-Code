@@ -17,7 +17,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 35955
+    .line 36407
     invoke-direct {p0}, Lorg/telegram/tgnet/TLRPC$TL_channelParticipantAdmin;-><init>()V
 
     return-void
@@ -28,7 +28,7 @@
 .method public readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
     .registers 7
 
-    .line 35960
+    .line 36412
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
@@ -50,7 +50,7 @@
     :cond_e
     const/4 v1, 0x0
 
-    .line 35961
+    .line 36413
     :goto_f
     iput-boolean v1, p0, Lorg/telegram/tgnet/TLRPC$ChannelParticipant;->can_edit:Z
 
@@ -60,18 +60,18 @@
 
     const/4 v2, 0x1
 
-    .line 35962
+    .line 36414
     :cond_16
     iput-boolean v2, p0, Lorg/telegram/tgnet/TLRPC$ChannelParticipant;->self:Z
 
-    .line 35963
+    .line 36415
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_peerUser;
 
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_peerUser;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/tgnet/TLRPC$ChannelParticipant;->peer:Lorg/telegram/tgnet/TLRPC$Peer;
 
-    .line 35964
+    .line 36416
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v1
@@ -80,14 +80,14 @@
 
     iput-wide v1, v0, Lorg/telegram/tgnet/TLRPC$Peer;->user_id:J
 
-    .line 35965
+    .line 36417
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$ChannelParticipant;->flags:I
 
     and-int/lit8 v0, v0, 0x2
 
     if-eqz v0, :cond_33
 
-    .line 35966
+    .line 36418
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
@@ -96,7 +96,7 @@
 
     iput-wide v0, p0, Lorg/telegram/tgnet/TLRPC$ChannelParticipant;->inviter_id:J
 
-    .line 35968
+    .line 36420
     :cond_33
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
@@ -106,14 +106,14 @@
 
     iput-wide v0, p0, Lorg/telegram/tgnet/TLRPC$ChannelParticipant;->promoted_by:J
 
-    .line 35969
+    .line 36421
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
 
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$ChannelParticipant;->date:I
 
-    .line 35970
+    .line 36422
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
@@ -130,12 +130,12 @@
 .method public serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
     .registers 4
 
-    .line 35974
+    .line 36426
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_channelParticipantAdmin_layer103;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 35975
+    .line 36427
     iget-boolean v0, p0, Lorg/telegram/tgnet/TLRPC$ChannelParticipant;->can_edit:Z
 
     if-eqz v0, :cond_e
@@ -154,7 +154,7 @@
     :goto_12
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$ChannelParticipant;->flags:I
 
-    .line 35976
+    .line 36428
     iget-boolean v1, p0, Lorg/telegram/tgnet/TLRPC$ChannelParticipant;->self:Z
 
     if-eqz v1, :cond_1b
@@ -169,10 +169,10 @@
     :goto_1d
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$ChannelParticipant;->flags:I
 
-    .line 35977
+    .line 36429
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 35978
+    .line 36430
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$ChannelParticipant;->peer:Lorg/telegram/tgnet/TLRPC$Peer;
 
     iget-wide v0, v0, Lorg/telegram/tgnet/TLRPC$Peer;->user_id:J
@@ -181,21 +181,21 @@
 
     invoke-virtual {p1, v1}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 35979
+    .line 36431
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$ChannelParticipant;->flags:I
 
     and-int/lit8 v0, v0, 0x2
 
     if-eqz v0, :cond_36
 
-    .line 35980
+    .line 36432
     iget-wide v0, p0, Lorg/telegram/tgnet/TLRPC$ChannelParticipant;->inviter_id:J
 
     long-to-int v1, v0
 
     invoke-virtual {p1, v1}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 35982
+    .line 36434
     :cond_36
     iget-wide v0, p0, Lorg/telegram/tgnet/TLRPC$ChannelParticipant;->promoted_by:J
 
@@ -203,12 +203,12 @@
 
     invoke-virtual {p1, v1}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 35983
+    .line 36435
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$ChannelParticipant;->date:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 35984
+    .line 36436
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$ChannelParticipant;->admin_rights:Lorg/telegram/tgnet/TLRPC$TL_chatAdminRights;
 
     invoke-virtual {v0, p1}, Lorg/telegram/tgnet/TLRPC$TL_chatAdminRights;->serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V

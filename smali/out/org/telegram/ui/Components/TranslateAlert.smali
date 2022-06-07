@@ -276,7 +276,7 @@
 .method static constructor <clinit>()V
     .registers 3
 
-    .line 82
+    .line 83
     new-instance v0, Lorg/telegram/messenger/DispatchQueue;
 
     const-string v1, "translateQueue"
@@ -291,7 +291,7 @@
 
     const/high16 v1, -0x80000000
 
-    .line 1187
+    .line 1195
     invoke-static {v0, v1}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
 
     move-result v0
@@ -318,105 +318,105 @@
 
     const v2, 0x7f0f0025
 
-    .line 242
+    .line 243
     invoke-direct {v6, v7, v2}, Landroid/app/Dialog;-><init>(Landroid/content/Context;I)V
 
     const/4 v10, 0x0
 
-    .line 108
+    .line 109
     iput v10, v6, Lorg/telegram/ui/Components/TranslateAlert;->blockIndex:I
 
     const/4 v11, 0x0
 
-    .line 111
+    .line 112
     iput v11, v6, Lorg/telegram/ui/Components/TranslateAlert;->containerOpenAnimationT:F
 
-    .line 155
+    .line 156
     iput-boolean v10, v6, Lorg/telegram/ui/Components/TranslateAlert;->openAnimationToAnimatorPriority:Z
 
     const/4 v2, 0x0
 
-    .line 156
+    .line 157
     iput-object v2, v6, Lorg/telegram/ui/Components/TranslateAlert;->openAnimationToAnimator:Landroid/animation/ValueAnimator;
 
     const/4 v12, -0x1
 
-    .line 191
+    .line 192
     iput v12, v6, Lorg/telegram/ui/Components/TranslateAlert;->firstMinHeight:I
 
     const/4 v13, 0x1
 
-    .line 231
+    .line 232
     iput-boolean v13, v6, Lorg/telegram/ui/Components/TranslateAlert;->allowScroll:Z
 
-    .line 583
+    .line 585
     iput v11, v6, Lorg/telegram/ui/Components/TranslateAlert;->fromScrollY:F
-
-    .line 592
-    new-instance v3, Landroid/graphics/Rect;
-
-    invoke-direct {v3}, Landroid/graphics/Rect;-><init>()V
-
-    iput-object v3, v6, Lorg/telegram/ui/Components/TranslateAlert;->containerRect:Landroid/graphics/Rect;
-
-    .line 593
-    new-instance v3, Landroid/graphics/Rect;
-
-    invoke-direct {v3}, Landroid/graphics/Rect;-><init>()V
-
-    iput-object v3, v6, Lorg/telegram/ui/Components/TranslateAlert;->textRect:Landroid/graphics/Rect;
 
     .line 594
     new-instance v3, Landroid/graphics/Rect;
 
     invoke-direct {v3}, Landroid/graphics/Rect;-><init>()V
 
+    iput-object v3, v6, Lorg/telegram/ui/Components/TranslateAlert;->containerRect:Landroid/graphics/Rect;
+
     .line 595
     new-instance v3, Landroid/graphics/Rect;
 
     invoke-direct {v3}, Landroid/graphics/Rect;-><init>()V
 
-    iput-object v3, v6, Lorg/telegram/ui/Components/TranslateAlert;->buttonRect:Landroid/graphics/Rect;
+    iput-object v3, v6, Lorg/telegram/ui/Components/TranslateAlert;->textRect:Landroid/graphics/Rect;
 
     .line 596
     new-instance v3, Landroid/graphics/Rect;
 
     invoke-direct {v3}, Landroid/graphics/Rect;-><init>()V
 
+    .line 597
+    new-instance v3, Landroid/graphics/Rect;
+
+    invoke-direct {v3}, Landroid/graphics/Rect;-><init>()V
+
+    iput-object v3, v6, Lorg/telegram/ui/Components/TranslateAlert;->buttonRect:Landroid/graphics/Rect;
+
+    .line 598
+    new-instance v3, Landroid/graphics/Rect;
+
+    invoke-direct {v3}, Landroid/graphics/Rect;-><init>()V
+
     iput-object v3, v6, Lorg/telegram/ui/Components/TranslateAlert;->backRect:Landroid/graphics/Rect;
 
-    .line 597
+    .line 599
     new-instance v3, Landroid/graphics/Rect;
 
     invoke-direct {v3}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v3, v6, Lorg/telegram/ui/Components/TranslateAlert;->scrollRect:Landroid/graphics/Rect;
 
-    .line 598
+    .line 600
     iput v11, v6, Lorg/telegram/ui/Components/TranslateAlert;->fromY:F
 
-    .line 599
+    .line 601
     iput-boolean v10, v6, Lorg/telegram/ui/Components/TranslateAlert;->pressedOutside:Z
 
-    .line 600
+    .line 602
     iput-boolean v10, v6, Lorg/telegram/ui/Components/TranslateAlert;->maybeScrolling:Z
 
-    .line 601
+    .line 603
     iput-boolean v10, v6, Lorg/telegram/ui/Components/TranslateAlert;->scrolling:Z
 
-    .line 602
+    .line 604
     iput-boolean v10, v6, Lorg/telegram/ui/Components/TranslateAlert;->fromScrollRect:Z
 
-    .line 604
+    .line 606
     iput v11, v6, Lorg/telegram/ui/Components/TranslateAlert;->fromScrollViewY:F
 
-    .line 605
+    .line 607
     iput-object v2, v6, Lorg/telegram/ui/Components/TranslateAlert;->allTexts:Landroid/text/Spannable;
 
-    .line 748
+    .line 750
     iput v11, v6, Lorg/telegram/ui/Components/TranslateAlert;->openingT:F
 
-    .line 784
+    .line 786
     new-instance v3, Lorg/telegram/ui/Components/TranslateAlert$6;
 
     const/high16 v4, -0x1000000
@@ -425,24 +425,24 @@
 
     iput-object v3, v6, Lorg/telegram/ui/Components/TranslateAlert;->backDrawable:Landroid/graphics/drawable/ColorDrawable;
 
-    .line 799
+    .line 801
     iput-boolean v10, v6, Lorg/telegram/ui/Components/TranslateAlert;->dismissed:Z
 
     const v3, 0x3f59999a    # 0.85f
 
-    .line 814
+    .line 816
     iput v3, v6, Lorg/telegram/ui/Components/TranslateAlert;->heightMaxPercent:F
 
-    .line 816
+    .line 818
     iput-boolean v10, v6, Lorg/telegram/ui/Components/TranslateAlert;->fastHide:Z
 
-    .line 817
+    .line 819
     iput-boolean v10, v6, Lorg/telegram/ui/Components/TranslateAlert;->openingAnimatorPriority:Z
 
-    .line 918
+    .line 920
     iput-boolean v10, v6, Lorg/telegram/ui/Components/TranslateAlert;->loading:Z
 
-    .line 919
+    .line 921
     iput-boolean v10, v6, Lorg/telegram/ui/Components/TranslateAlert;->loaded:Z
 
     const-string v3, "und"
@@ -451,7 +451,7 @@
 
     if-eqz v1, :cond_86
 
-    .line 245
+    .line 246
     invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v4
@@ -477,20 +477,20 @@
     :cond_8e
     move-object/from16 v0, p10
 
-    .line 248
+    .line 249
     iput-object v0, v6, Lorg/telegram/ui/Components/TranslateAlert;->onLinkPress:Lorg/telegram/ui/Components/TranslateAlert$OnLinkPress;
 
-    .line 249
+    .line 250
     iput-boolean v9, v6, Lorg/telegram/ui/Components/TranslateAlert;->noforwards:Z
 
     move-object/from16 v0, p1
 
-    .line 250
+    .line 251
     iput-object v0, v6, Lorg/telegram/ui/Components/TranslateAlert;->fragment:Lorg/telegram/ui/ActionBar/BaseFragment;
 
     if-eqz v1, :cond_a3
 
-    .line 251
+    .line 252
     invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -507,14 +507,14 @@
     :goto_a4
     iput-object v0, v6, Lorg/telegram/ui/Components/TranslateAlert;->fromLanguage:Ljava/lang/String;
 
-    .line 252
+    .line 253
     iput-object v8, v6, Lorg/telegram/ui/Components/TranslateAlert;->toLanguage:Ljava/lang/String;
 
     const/16 v0, 0x400
 
     move-object/from16 v2, p8
 
-    .line 254
+    .line 255
     invoke-direct {v6, v2, v0}, Lorg/telegram/ui/Components/TranslateAlert;->cutInBlocks(Ljava/lang/CharSequence;I)Ljava/util/ArrayList;
 
     move-result-object v0
@@ -523,10 +523,10 @@
 
     move-object/from16 v0, p11
 
-    .line 255
+    .line 256
     iput-object v0, v6, Lorg/telegram/ui/Components/TranslateAlert;->onDismiss:Ljava/lang/Runnable;
 
-    .line 257
+    .line 258
     sget v14, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v0, 0x15
@@ -535,7 +535,7 @@
 
     if-lt v14, v2, :cond_c9
 
-    .line 258
+    .line 259
     invoke-virtual/range {p0 .. p0}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
 
     move-result-object v3
@@ -549,7 +549,7 @@
     :cond_c9
     if-lt v14, v0, :cond_d5
 
-    .line 260
+    .line 261
     invoke-virtual/range {p0 .. p0}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
 
     move-result-object v3
@@ -562,7 +562,7 @@
     :goto_d5
     if-eqz v9, :cond_e0
 
-    .line 264
+    .line 265
     invoke-virtual/range {p0 .. p0}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
 
     move-result-object v3
@@ -571,7 +571,7 @@
 
     invoke-virtual {v3, v4}, Landroid/view/Window;->addFlags(I)V
 
-    .line 267
+    .line 268
     :cond_e0
     new-instance v3, Landroid/widget/FrameLayout;
 
@@ -579,31 +579,31 @@
 
     iput-object v3, v6, Lorg/telegram/ui/Components/TranslateAlert;->contentView:Landroid/widget/FrameLayout;
 
-    .line 268
+    .line 269
     iget-object v4, v6, Lorg/telegram/ui/Components/TranslateAlert;->backDrawable:Landroid/graphics/drawable/ColorDrawable;
 
     invoke-virtual {v3, v4}, Landroid/widget/FrameLayout;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    .line 269
+    .line 270
     iget-object v3, v6, Lorg/telegram/ui/Components/TranslateAlert;->contentView:Landroid/widget/FrameLayout;
 
     invoke-virtual {v3, v10}, Landroid/widget/FrameLayout;->setClipChildren(Z)V
 
-    .line 270
+    .line 271
     iget-object v3, v6, Lorg/telegram/ui/Components/TranslateAlert;->contentView:Landroid/widget/FrameLayout;
 
     invoke-virtual {v3, v10}, Landroid/widget/FrameLayout;->setClipToPadding(Z)V
 
     if-lt v14, v0, :cond_10e
 
-    .line 272
+    .line 273
     iget-object v0, v6, Lorg/telegram/ui/Components/TranslateAlert;->contentView:Landroid/widget/FrameLayout;
 
     invoke-virtual {v0, v13}, Landroid/widget/FrameLayout;->setFitsSystemWindows(Z)V
 
     if-lt v14, v2, :cond_107
 
-    .line 274
+    .line 275
     iget-object v0, v6, Lorg/telegram/ui/Components/TranslateAlert;->contentView:Landroid/widget/FrameLayout;
 
     const/16 v2, 0x700
@@ -612,7 +612,7 @@
 
     goto :goto_10e
 
-    .line 276
+    .line 277
     :cond_107
     iget-object v0, v6, Lorg/telegram/ui/Components/TranslateAlert;->contentView:Landroid/widget/FrameLayout;
 
@@ -620,7 +620,7 @@
 
     invoke-virtual {v0, v2}, Landroid/widget/FrameLayout;->setSystemUiVisibility(I)V
 
-    .line 280
+    .line 281
     :cond_10e
     :goto_10e
     new-instance v0, Landroid/graphics/Paint;
@@ -629,7 +629,7 @@
 
     const-string v2, "dialogBackground"
 
-    .line 281
+    .line 282
     invoke-static {v2}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
 
     move-result v2
@@ -638,7 +638,7 @@
 
     const/high16 v2, 0x40000000    # 2.0f
 
-    .line 282
+    .line 283
     invoke-static {v2}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v2
@@ -657,31 +657,31 @@
 
     invoke-virtual {v0, v2, v11, v3, v4}, Landroid/graphics/Paint;->setShadowLayer(FFFI)V
 
-    .line 283
+    .line 284
     new-instance v2, Lorg/telegram/ui/Components/TranslateAlert$2;
 
     invoke-direct {v2, v6, v7, v0}, Lorg/telegram/ui/Components/TranslateAlert$2;-><init>(Lorg/telegram/ui/Components/TranslateAlert;Landroid/content/Context;Landroid/graphics/Paint;)V
 
     iput-object v2, v6, Lorg/telegram/ui/Components/TranslateAlert;->container:Landroid/widget/FrameLayout;
 
-    .line 332
+    .line 333
     invoke-virtual {v2, v10}, Landroid/widget/FrameLayout;->setWillNotDraw(Z)V
 
-    .line 334
+    .line 335
     new-instance v0, Landroid/widget/FrameLayout;
 
     invoke-direct {v0, v7}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
     iput-object v0, v6, Lorg/telegram/ui/Components/TranslateAlert;->header:Landroid/widget/FrameLayout;
 
-    .line 336
+    .line 337
     new-instance v0, Landroid/widget/TextView;
 
     invoke-direct {v0, v7}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
     iput-object v0, v6, Lorg/telegram/ui/Components/TranslateAlert;->titleView:Landroid/widget/TextView;
 
-    .line 337
+    .line 338
     sget-boolean v2, Lorg/telegram/messenger/LocaleController;->isRTL:Z
 
     if-eqz v2, :cond_152
@@ -700,20 +700,20 @@
     :goto_153
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setPivotX(F)V
 
-    .line 338
+    .line 339
     iget-object v0, v6, Lorg/telegram/ui/Components/TranslateAlert;->titleView:Landroid/widget/TextView;
 
     invoke-virtual {v0, v11}, Landroid/widget/TextView;->setPivotY(F)V
 
-    .line 339
+    .line 340
     iget-object v0, v6, Lorg/telegram/ui/Components/TranslateAlert;->titleView:Landroid/widget/TextView;
 
     invoke-virtual {v0, v13}, Landroid/widget/TextView;->setLines(I)V
 
-    .line 340
+    .line 341
     iget-object v0, v6, Lorg/telegram/ui/Components/TranslateAlert;->titleView:Landroid/widget/TextView;
 
-    const v2, 0x7f0e0278
+    const v2, 0x7f0e02ad
 
     const-string v3, "AutomaticTranslation"
 
@@ -723,7 +723,7 @@
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 341
+    .line 342
     iget-object v0, v6, Lorg/telegram/ui/Components/TranslateAlert;->titleView:Landroid/widget/TextView;
 
     sget-boolean v2, Lorg/telegram/messenger/LocaleController;->isRTL:Z
@@ -742,7 +742,7 @@
     :goto_178
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setGravity(I)V
 
-    .line 342
+    .line 343
     iget-object v0, v6, Lorg/telegram/ui/Components/TranslateAlert;->titleView:Landroid/widget/TextView;
 
     const-string v16, "fonts/rmedium.ttf"
@@ -753,7 +753,7 @@
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setTypeface(Landroid/graphics/Typeface;)V
 
-    .line 343
+    .line 344
     iget-object v0, v6, Lorg/telegram/ui/Components/TranslateAlert;->titleView:Landroid/widget/TextView;
 
     const-string v17, "dialogTextBlack"
@@ -764,7 +764,7 @@
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 344
+    .line 345
     iget-object v0, v6, Lorg/telegram/ui/Components/TranslateAlert;->titleView:Landroid/widget/TextView;
 
     const/high16 v2, 0x41980000    # 19.0f
@@ -777,7 +777,7 @@
 
     invoke-virtual {v0, v10, v2}, Landroid/widget/TextView;->setTextSize(IF)V
 
-    .line 345
+    .line 346
     iget-object v0, v6, Lorg/telegram/ui/Components/TranslateAlert;->header:Landroid/widget/FrameLayout;
 
     iget-object v2, v6, Lorg/telegram/ui/Components/TranslateAlert;->titleView:Landroid/widget/TextView;
@@ -804,7 +804,7 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 351
+    .line 352
     iget-object v0, v6, Lorg/telegram/ui/Components/TranslateAlert;->titleView:Landroid/widget/TextView;
 
     new-instance v2, Lorg/telegram/ui/Components/TranslateAlert$$ExternalSyntheticLambda8;
@@ -813,28 +813,28 @@
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->post(Ljava/lang/Runnable;)Z
 
-    .line 355
+    .line 356
     new-instance v0, Landroid/widget/LinearLayout;
 
     invoke-direct {v0, v7}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
 
     iput-object v0, v6, Lorg/telegram/ui/Components/TranslateAlert;->subtitleView:Landroid/widget/LinearLayout;
 
-    .line 356
+    .line 357
     invoke-virtual {v0, v10}, Landroid/widget/LinearLayout;->setOrientation(I)V
 
     const/16 v4, 0x11
 
     if-lt v14, v4, :cond_1d7
 
-    .line 358
+    .line 359
     iget-object v0, v6, Lorg/telegram/ui/Components/TranslateAlert;->subtitleView:Landroid/widget/LinearLayout;
 
     sget-boolean v2, Lorg/telegram/messenger/LocaleController;->isRTL:Z
 
     invoke-virtual {v0, v2}, Landroid/widget/LinearLayout;->setLayoutDirection(I)V
 
-    .line 360
+    .line 361
     :cond_1d7
     iget-object v0, v6, Lorg/telegram/ui/Components/TranslateAlert;->subtitleView:Landroid/widget/LinearLayout;
 
@@ -852,12 +852,12 @@
     :goto_1e0
     invoke-virtual {v0, v2}, Landroid/widget/LinearLayout;->setGravity(I)V
 
-    .line 362
+    .line 363
     invoke-virtual {v6, v1}, Lorg/telegram/ui/Components/TranslateAlert;->languageName(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 363
+    .line 364
     new-instance v2, Lorg/telegram/ui/Components/TranslateAlert$3;
 
     if-nez v3, :cond_1f2
@@ -908,22 +908,22 @@
 
     iput-object v15, v6, Lorg/telegram/ui/Components/TranslateAlert;->subtitleFromView:Lorg/telegram/ui/Components/TranslateAlert$InlineLoadingTextView;
 
-    .line 377
+    .line 378
     iput-boolean v10, v15, Lorg/telegram/ui/Components/TranslateAlert$InlineLoadingTextView;->showLoadingText:Z
 
-    .line 378
+    .line 379
     new-instance v0, Landroid/widget/ImageView;
 
     invoke-direct {v0, v7}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
 
     iput-object v0, v6, Lorg/telegram/ui/Components/TranslateAlert;->subtitleArrowView:Landroid/widget/ImageView;
 
-    const v1, 0x7f070399
-
-    .line 379
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
+    const v1, 0x7f0703a7
 
     .line 380
+    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
+
+    .line 381
     iget-object v0, v6, Lorg/telegram/ui/Components/TranslateAlert;->subtitleArrowView:Landroid/widget/ImageView;
 
     new-instance v1, Landroid/graphics/PorterDuffColorFilter;
@@ -938,19 +938,19 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setColorFilter(Landroid/graphics/ColorFilter;)V
 
-    .line 381
+    .line 382
     sget-boolean v0, Lorg/telegram/messenger/LocaleController;->isRTL:Z
 
     if-eqz v0, :cond_23e
 
-    .line 382
+    .line 383
     iget-object v0, v6, Lorg/telegram/ui/Components/TranslateAlert;->subtitleArrowView:Landroid/widget/ImageView;
 
     const/high16 v1, -0x40800000    # -1.0f
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setScaleX(F)V
 
-    .line 385
+    .line 386
     :cond_23e
     new-instance v0, Landroid/widget/TextView;
 
@@ -958,10 +958,10 @@
 
     iput-object v0, v6, Lorg/telegram/ui/Components/TranslateAlert;->subtitleToView:Landroid/widget/TextView;
 
-    .line 386
+    .line 387
     invoke-virtual {v0, v13}, Landroid/widget/TextView;->setLines(I)V
 
-    .line 387
+    .line 388
     iget-object v0, v6, Lorg/telegram/ui/Components/TranslateAlert;->subtitleToView:Landroid/widget/TextView;
 
     invoke-static/range {v20 .. v20}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
@@ -970,7 +970,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 388
+    .line 389
     iget-object v0, v6, Lorg/telegram/ui/Components/TranslateAlert;->subtitleToView:Landroid/widget/TextView;
 
     invoke-static/range {p1 .. p1}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -981,7 +981,7 @@
 
     invoke-virtual {v0, v10, v1}, Landroid/widget/TextView;->setTextSize(IF)V
 
-    .line 389
+    .line 390
     iget-object v0, v6, Lorg/telegram/ui/Components/TranslateAlert;->subtitleToView:Landroid/widget/TextView;
 
     invoke-virtual {v6, v8}, Lorg/telegram/ui/Components/TranslateAlert;->languageName(Ljava/lang/String;)Ljava/lang/String;
@@ -990,7 +990,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 391
+    .line 392
     sget-boolean v0, Lorg/telegram/messenger/LocaleController;->isRTL:Z
 
     const/16 v1, 0x10
@@ -999,14 +999,14 @@
 
     if-eqz v0, :cond_2a6
 
-    .line 392
+    .line 393
     iget-object v0, v6, Lorg/telegram/ui/Components/TranslateAlert;->subtitleView:Landroid/widget/LinearLayout;
 
     sget v3, Lorg/telegram/ui/Components/TranslateAlert$InlineLoadingTextView;->paddingHorizontal:I
 
     invoke-virtual {v0, v3, v10, v10, v10}, Landroid/widget/LinearLayout;->setPadding(IIII)V
 
-    .line 393
+    .line 394
     iget-object v0, v6, Lorg/telegram/ui/Components/TranslateAlert;->subtitleView:Landroid/widget/LinearLayout;
 
     iget-object v3, v6, Lorg/telegram/ui/Components/TranslateAlert;->subtitleToView:Landroid/widget/TextView;
@@ -1017,7 +1017,7 @@
 
     invoke-virtual {v0, v3, v1}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 394
+    .line 395
     iget-object v0, v6, Lorg/telegram/ui/Components/TranslateAlert;->subtitleView:Landroid/widget/LinearLayout;
 
     iget-object v1, v6, Lorg/telegram/ui/Components/TranslateAlert;->subtitleArrowView:Landroid/widget/ImageView;
@@ -1042,7 +1042,7 @@
 
     invoke-virtual {v0, v1, v3}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 395
+    .line 396
     iget-object v0, v6, Lorg/telegram/ui/Components/TranslateAlert;->subtitleView:Landroid/widget/LinearLayout;
 
     iget-object v1, v6, Lorg/telegram/ui/Components/TranslateAlert;->subtitleFromView:Lorg/telegram/ui/Components/TranslateAlert$InlineLoadingTextView;
@@ -1059,7 +1059,7 @@
 
     goto :goto_2e0
 
-    .line 397
+    .line 398
     :cond_2a6
     iget-object v0, v6, Lorg/telegram/ui/Components/TranslateAlert;->subtitleView:Landroid/widget/LinearLayout;
 
@@ -1067,7 +1067,7 @@
 
     invoke-virtual {v0, v10, v10, v3, v10}, Landroid/widget/LinearLayout;->setPadding(IIII)V
 
-    .line 398
+    .line 399
     iget-object v0, v6, Lorg/telegram/ui/Components/TranslateAlert;->subtitleView:Landroid/widget/LinearLayout;
 
     iget-object v3, v6, Lorg/telegram/ui/Components/TranslateAlert;->subtitleFromView:Lorg/telegram/ui/Components/TranslateAlert$InlineLoadingTextView;
@@ -1092,7 +1092,7 @@
 
     invoke-virtual {v0, v3, v4}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 399
+    .line 400
     iget-object v0, v6, Lorg/telegram/ui/Components/TranslateAlert;->subtitleView:Landroid/widget/LinearLayout;
 
     iget-object v3, v6, Lorg/telegram/ui/Components/TranslateAlert;->subtitleArrowView:Landroid/widget/ImageView;
@@ -1107,7 +1107,7 @@
 
     invoke-virtual {v0, v3, v4}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 400
+    .line 401
     iget-object v0, v6, Lorg/telegram/ui/Components/TranslateAlert;->subtitleView:Landroid/widget/LinearLayout;
 
     iget-object v3, v6, Lorg/telegram/ui/Components/TranslateAlert;->subtitleToView:Landroid/widget/TextView;
@@ -1121,12 +1121,12 @@
     :goto_2e0
     if-eqz v12, :cond_2e7
 
-    .line 403
+    .line 404
     iget-object v0, v6, Lorg/telegram/ui/Components/TranslateAlert;->subtitleFromView:Lorg/telegram/ui/Components/TranslateAlert$InlineLoadingTextView;
 
     invoke-virtual {v0, v12}, Lorg/telegram/ui/Components/TranslateAlert$InlineLoadingTextView;->set(Ljava/lang/CharSequence;)V
 
-    .line 406
+    .line 407
     :cond_2e7
     iget-object v0, v6, Lorg/telegram/ui/Components/TranslateAlert;->header:Landroid/widget/FrameLayout;
 
@@ -1136,7 +1136,7 @@
 
     const/high16 v26, -0x40000000    # -2.0f
 
-    .line 409
+    .line 410
     sget-boolean v3, Lorg/telegram/messenger/LocaleController;->isRTL:Z
 
     if-eqz v3, :cond_2f5
@@ -1183,7 +1183,7 @@
 
     const/16 v31, 0x0
 
-    .line 406
+    .line 407
     invoke-static/range {v25 .. v31}, Lorg/telegram/ui/Components/LayoutHelper;->createFrame(IFIFFFF)Landroid/widget/FrameLayout$LayoutParams;
 
     move-result-object v3
@@ -1192,19 +1192,19 @@
 
     invoke-virtual {v0, v1, v3}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 416
+    .line 417
     new-instance v0, Landroid/widget/ImageView;
 
     invoke-direct {v0, v7}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
 
     iput-object v0, v6, Lorg/telegram/ui/Components/TranslateAlert;->backButton:Landroid/widget/ImageView;
 
-    const v1, 0x7f070140
-
-    .line 417
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
+    const v1, 0x7f070109
 
     .line 418
+    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
+
+    .line 419
     iget-object v0, v6, Lorg/telegram/ui/Components/TranslateAlert;->backButton:Landroid/widget/ImageView;
 
     new-instance v1, Landroid/graphics/PorterDuffColorFilter;
@@ -1219,14 +1219,14 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setColorFilter(Landroid/graphics/ColorFilter;)V
 
-    .line 419
+    .line 420
     iget-object v0, v6, Lorg/telegram/ui/Components/TranslateAlert;->backButton:Landroid/widget/ImageView;
 
     sget-object v1, Landroid/widget/ImageView$ScaleType;->FIT_CENTER:Landroid/widget/ImageView$ScaleType;
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setScaleType(Landroid/widget/ImageView$ScaleType;)V
 
-    .line 420
+    .line 421
     iget-object v0, v6, Lorg/telegram/ui/Components/TranslateAlert;->backButton:Landroid/widget/ImageView;
 
     const/high16 v1, 0x41800000    # 16.0f
@@ -1241,7 +1241,7 @@
 
     invoke-virtual {v0, v3, v10, v4, v10}, Landroid/widget/ImageView;->setPadding(IIII)V
 
-    .line 421
+    .line 422
     iget-object v0, v6, Lorg/telegram/ui/Components/TranslateAlert;->backButton:Landroid/widget/ImageView;
 
     const-string v3, "dialogButtonSelector"
@@ -1256,17 +1256,17 @@
 
     invoke-virtual {v0, v3}, Landroid/widget/ImageView;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    .line 422
+    .line 423
     iget-object v0, v6, Lorg/telegram/ui/Components/TranslateAlert;->backButton:Landroid/widget/ImageView;
 
     invoke-virtual {v0, v10}, Landroid/widget/ImageView;->setClickable(Z)V
 
-    .line 423
+    .line 424
     iget-object v0, v6, Lorg/telegram/ui/Components/TranslateAlert;->backButton:Landroid/widget/ImageView;
 
     invoke-virtual {v0, v11}, Landroid/widget/ImageView;->setAlpha(F)V
 
-    .line 424
+    .line 425
     iget-object v0, v6, Lorg/telegram/ui/Components/TranslateAlert;->backButton:Landroid/widget/ImageView;
 
     new-instance v3, Lorg/telegram/ui/Components/TranslateAlert$$ExternalSyntheticLambda2;
@@ -1275,7 +1275,7 @@
 
     invoke-virtual {v0, v3}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 425
+    .line 426
     iget-object v0, v6, Lorg/telegram/ui/Components/TranslateAlert;->header:Landroid/widget/FrameLayout;
 
     iget-object v3, v6, Lorg/telegram/ui/Components/TranslateAlert;->backButton:Landroid/widget/ImageView;
@@ -1290,7 +1290,7 @@
 
     invoke-virtual {v0, v3, v4}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 427
+    .line 428
     new-instance v0, Landroid/widget/FrameLayout;
 
     invoke-direct {v0, v7}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
@@ -1299,19 +1299,19 @@
 
     const-string v3, "dialogShadowLine"
 
-    .line 428
+    .line 429
     invoke-static {v3}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
 
     move-result v4
 
     invoke-virtual {v0, v4}, Landroid/widget/FrameLayout;->setBackgroundColor(I)V
 
-    .line 429
+    .line 430
     iget-object v0, v6, Lorg/telegram/ui/Components/TranslateAlert;->headerShadowView:Landroid/widget/FrameLayout;
 
     invoke-virtual {v0, v11}, Landroid/widget/FrameLayout;->setAlpha(F)V
 
-    .line 430
+    .line 431
     iget-object v0, v6, Lorg/telegram/ui/Components/TranslateAlert;->header:Landroid/widget/FrameLayout;
 
     iget-object v4, v6, Lorg/telegram/ui/Components/TranslateAlert;->headerShadowView:Landroid/widget/FrameLayout;
@@ -1326,12 +1326,12 @@
 
     invoke-virtual {v0, v4, v8}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 432
+    .line 433
     iget-object v0, v6, Lorg/telegram/ui/Components/TranslateAlert;->header:Landroid/widget/FrameLayout;
 
     invoke-virtual {v0, v10}, Landroid/widget/FrameLayout;->setClipChildren(Z)V
 
-    .line 433
+    .line 434
     iget-object v0, v6, Lorg/telegram/ui/Components/TranslateAlert;->container:Landroid/widget/FrameLayout;
 
     iget-object v4, v6, Lorg/telegram/ui/Components/TranslateAlert;->header:Landroid/widget/FrameLayout;
@@ -1348,48 +1348,48 @@
 
     invoke-virtual {v0, v4, v8}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 435
+    .line 436
     new-instance v0, Lorg/telegram/ui/Components/TranslateAlert$4;
 
     invoke-direct {v0, v6, v7}, Lorg/telegram/ui/Components/TranslateAlert$4;-><init>(Lorg/telegram/ui/Components/TranslateAlert;Landroid/content/Context;)V
 
     iput-object v0, v6, Lorg/telegram/ui/Components/TranslateAlert;->scrollView:Landroidx/core/widget/NestedScrollView;
 
-    .line 454
+    .line 455
     invoke-virtual {v0, v13}, Landroid/widget/FrameLayout;->setClipChildren(Z)V
 
-    .line 456
+    .line 457
     new-instance v0, Lorg/telegram/ui/Components/TranslateAlert$5;
 
     invoke-direct {v0, v6, v7}, Lorg/telegram/ui/Components/TranslateAlert$5;-><init>(Lorg/telegram/ui/Components/TranslateAlert;Landroid/content/Context;)V
 
     iput-object v0, v6, Lorg/telegram/ui/Components/TranslateAlert;->allTextsView:Landroid/widget/TextView;
 
-    .line 489
+    .line 490
     new-instance v4, Lorg/telegram/ui/Components/LinkSpanDrawable$LinkCollector;
 
     invoke-direct {v4, v0}, Lorg/telegram/ui/Components/LinkSpanDrawable$LinkCollector;-><init>(Landroid/view/View;)V
 
     iput-object v4, v6, Lorg/telegram/ui/Components/TranslateAlert;->links:Lorg/telegram/ui/Components/LinkSpanDrawable$LinkCollector;
 
-    .line 490
+    .line 491
     iget-object v0, v6, Lorg/telegram/ui/Components/TranslateAlert;->allTextsView:Landroid/widget/TextView;
 
     invoke-virtual {v0, v10}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 491
+    .line 492
     iget-object v0, v6, Lorg/telegram/ui/Components/TranslateAlert;->allTextsView:Landroid/widget/TextView;
 
     invoke-virtual {v0, v13, v1}, Landroid/widget/TextView;->setTextSize(IF)V
 
-    .line 492
+    .line 493
     iget-object v0, v6, Lorg/telegram/ui/Components/TranslateAlert;->allTextsView:Landroid/widget/TextView;
 
     xor-int/lit8 v4, v9, 0x1
 
     invoke-virtual {v0, v4}, Landroid/widget/TextView;->setTextIsSelectable(Z)V
 
-    .line 493
+    .line 494
     iget-object v0, v6, Lorg/telegram/ui/Components/TranslateAlert;->allTextsView:Landroid/widget/TextView;
 
     const-string v4, "chat_inTextSelectionHighlight"
@@ -1402,55 +1402,67 @@
 
     const-string v0, "chat_TextSelectionCursor"
 
-    .line 494
+    .line 495
     invoke-static {v0}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
 
     move-result v0
 
     const/16 v4, 0x1d
 
-    if-lt v14, v4, :cond_416
+    if-lt v14, v4, :cond_41c
 
     .line 497
     :try_start_3f6
+    invoke-static {}, Lorg/telegram/messenger/XiaomiUtilities;->isMIUI()Z
+
+    move-result v4
+
+    if-nez v4, :cond_41c
+
+    .line 498
     iget-object v4, v6, Lorg/telegram/ui/Components/TranslateAlert;->allTextsView:Landroid/widget/TextView;
 
     invoke-virtual {v4}, Landroid/widget/TextView;->getTextSelectHandleLeft()Landroid/graphics/drawable/Drawable;
 
     move-result-object v4
 
-    .line 498
+    .line 499
     sget-object v8, Landroid/graphics/PorterDuff$Mode;->SRC_IN:Landroid/graphics/PorterDuff$Mode;
 
     invoke-virtual {v4, v0, v8}, Landroid/graphics/drawable/Drawable;->setColorFilter(ILandroid/graphics/PorterDuff$Mode;)V
 
-    .line 499
+    .line 500
     iget-object v8, v6, Lorg/telegram/ui/Components/TranslateAlert;->allTextsView:Landroid/widget/TextView;
 
     invoke-virtual {v8, v4}, Landroid/widget/TextView;->setTextSelectHandleLeft(Landroid/graphics/drawable/Drawable;)V
 
-    .line 501
+    .line 502
     iget-object v4, v6, Lorg/telegram/ui/Components/TranslateAlert;->allTextsView:Landroid/widget/TextView;
 
     invoke-virtual {v4}, Landroid/widget/TextView;->getTextSelectHandleRight()Landroid/graphics/drawable/Drawable;
 
     move-result-object v4
 
-    .line 502
+    .line 503
     sget-object v8, Landroid/graphics/PorterDuff$Mode;->SRC_IN:Landroid/graphics/PorterDuff$Mode;
 
     invoke-virtual {v4, v0, v8}, Landroid/graphics/drawable/Drawable;->setColorFilter(ILandroid/graphics/PorterDuff$Mode;)V
 
-    .line 503
+    .line 504
     iget-object v0, v6, Lorg/telegram/ui/Components/TranslateAlert;->allTextsView:Landroid/widget/TextView;
 
     invoke-virtual {v0, v4}, Landroid/widget/TextView;->setTextSelectHandleRight(Landroid/graphics/drawable/Drawable;)V
-    :try_end_416
-    .catch Ljava/lang/Exception; {:try_start_3f6 .. :try_end_416} :catch_416
+    :try_end_41c
+    .catch Ljava/lang/Exception; {:try_start_3f6 .. :try_end_41c} :catch_41c
 
-    .line 506
-    :catch_416
-    :cond_416
+    .line 507
+    :catch_41c
+    :cond_41c
+    iget-object v0, v6, Lorg/telegram/ui/Components/TranslateAlert;->allTextsView:Landroid/widget/TextView;
+
+    invoke-virtual {v0, v13}, Landroid/widget/TextView;->setFocusable(Z)V
+
+    .line 508
     iget-object v0, v6, Lorg/telegram/ui/Components/TranslateAlert;->allTextsView:Landroid/widget/TextView;
 
     new-instance v4, Landroid/text/method/LinkMovementMethod;
@@ -1459,7 +1471,7 @@
 
     invoke-virtual {v0, v4}, Landroid/widget/TextView;->setMovementMethod(Landroid/text/method/MovementMethod;)V
 
-    .line 508
+    .line 510
     new-instance v0, Lorg/telegram/ui/Components/TranslateAlert$TextBlocksLayout;
 
     invoke-static {v1}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -1476,7 +1488,7 @@
 
     iput-object v0, v6, Lorg/telegram/ui/Components/TranslateAlert;->textsView:Lorg/telegram/ui/Components/TranslateAlert$TextBlocksLayout;
 
-    .line 510
+    .line 512
     invoke-static {v5}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v1
@@ -1487,7 +1499,7 @@
 
     const/high16 v8, 0x41400000    # 12.0f
 
-    .line 511
+    .line 513
     invoke-static {v8}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v9
@@ -1496,36 +1508,36 @@
 
     sub-int/2addr v9, v11
 
-    .line 512
+    .line 514
     invoke-static {v5}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v5
 
     sub-int/2addr v5, v4
 
-    .line 513
+    .line 515
     invoke-static {v8}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v4
 
     sub-int/2addr v4, v11
 
-    .line 509
+    .line 511
     invoke-virtual {v0, v1, v9, v5, v4}, Landroid/view/ViewGroup;->setPadding(IIII)V
 
-    .line 515
+    .line 517
     iget-object v0, v6, Lorg/telegram/ui/Components/TranslateAlert;->textBlocks:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
-    :goto_454
+    :goto_45f
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v1
 
-    if-eqz v1, :cond_466
+    if-eqz v1, :cond_471
 
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -1533,22 +1545,22 @@
 
     check-cast v1, Ljava/lang/CharSequence;
 
-    .line 516
+    .line 518
     iget-object v4, v6, Lorg/telegram/ui/Components/TranslateAlert;->textsView:Lorg/telegram/ui/Components/TranslateAlert$TextBlocksLayout;
 
     invoke-virtual {v4, v1}, Lorg/telegram/ui/Components/TranslateAlert$TextBlocksLayout;->addBlock(Ljava/lang/CharSequence;)Lorg/telegram/ui/Components/TranslateAlert$LoadingTextView2;
 
-    goto :goto_454
+    goto :goto_45f
 
-    .line 518
-    :cond_466
+    .line 520
+    :cond_471
     new-instance v0, Landroid/widget/FrameLayout;
 
     invoke-direct {v0, v7}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
     iput-object v0, v6, Lorg/telegram/ui/Components/TranslateAlert;->textsContainerView:Landroid/widget/FrameLayout;
 
-    .line 519
+    .line 521
     iget-object v1, v6, Lorg/telegram/ui/Components/TranslateAlert;->textsView:Lorg/telegram/ui/Components/TranslateAlert$TextBlocksLayout;
 
     const/high16 v4, -0x40000000    # -2.0f
@@ -1561,7 +1573,7 @@
 
     invoke-virtual {v0, v1, v4}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 521
+    .line 523
     iget-object v0, v6, Lorg/telegram/ui/Components/TranslateAlert;->scrollView:Landroidx/core/widget/NestedScrollView;
 
     iget-object v1, v6, Lorg/telegram/ui/Components/TranslateAlert;->textsContainerView:Landroid/widget/FrameLayout;
@@ -1574,7 +1586,7 @@
 
     invoke-virtual {v0, v1, v4}, Landroidx/core/widget/NestedScrollView;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 523
+    .line 525
     iget-object v0, v6, Lorg/telegram/ui/Components/TranslateAlert;->container:Landroid/widget/FrameLayout;
 
     iget-object v1, v6, Lorg/telegram/ui/Components/TranslateAlert;->scrollView:Landroidx/core/widget/NestedScrollView;
@@ -1615,24 +1627,24 @@
 
     invoke-virtual {v0, v1, v4}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 525
+    .line 527
     invoke-direct/range {p0 .. p0}, Lorg/telegram/ui/Components/TranslateAlert;->fetchNext()Z
 
-    .line 527
+    .line 529
     new-instance v0, Landroid/widget/FrameLayout;
 
     invoke-direct {v0, v7}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
     iput-object v0, v6, Lorg/telegram/ui/Components/TranslateAlert;->buttonShadowView:Landroid/widget/FrameLayout;
 
-    .line 528
+    .line 530
     invoke-static {v3}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
 
     move-result v1
 
     invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->setBackgroundColor(I)V
 
-    .line 529
+    .line 531
     iget-object v0, v6, Lorg/telegram/ui/Components/TranslateAlert;->container:Landroid/widget/FrameLayout;
 
     iget-object v1, v6, Lorg/telegram/ui/Components/TranslateAlert;->buttonShadowView:Landroid/widget/FrameLayout;
@@ -1669,41 +1681,41 @@
 
     invoke-virtual {v0, v1, v3}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 531
+    .line 533
     new-instance v0, Landroid/widget/TextView;
 
     invoke-direct {v0, v7}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
     iput-object v0, v6, Lorg/telegram/ui/Components/TranslateAlert;->buttonTextView:Landroid/widget/TextView;
 
-    .line 532
+    .line 534
     invoke-virtual {v0, v13}, Landroid/widget/TextView;->setLines(I)V
 
-    .line 533
+    .line 535
     iget-object v0, v6, Lorg/telegram/ui/Components/TranslateAlert;->buttonTextView:Landroid/widget/TextView;
 
     invoke-virtual {v0, v13}, Landroid/widget/TextView;->setSingleLine(Z)V
 
-    .line 534
+    .line 536
     iget-object v0, v6, Lorg/telegram/ui/Components/TranslateAlert;->buttonTextView:Landroid/widget/TextView;
 
     invoke-virtual {v0, v13}, Landroid/widget/TextView;->setGravity(I)V
 
-    .line 535
+    .line 537
     iget-object v0, v6, Lorg/telegram/ui/Components/TranslateAlert;->buttonTextView:Landroid/widget/TextView;
 
     sget-object v1, Landroid/text/TextUtils$TruncateAt;->END:Landroid/text/TextUtils$TruncateAt;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setEllipsize(Landroid/text/TextUtils$TruncateAt;)V
 
-    .line 536
+    .line 538
     iget-object v0, v6, Lorg/telegram/ui/Components/TranslateAlert;->buttonTextView:Landroid/widget/TextView;
 
     const/16 v1, 0x11
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setGravity(I)V
 
-    .line 537
+    .line 539
     iget-object v0, v6, Lorg/telegram/ui/Components/TranslateAlert;->buttonTextView:Landroid/widget/TextView;
 
     const-string v1, "featuredStickers_buttonText"
@@ -1714,7 +1726,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 538
+    .line 540
     iget-object v0, v6, Lorg/telegram/ui/Components/TranslateAlert;->buttonTextView:Landroid/widget/TextView;
 
     invoke-static/range {v16 .. v16}, Lorg/telegram/messenger/AndroidUtilities;->getTypeface(Ljava/lang/String;)Landroid/graphics/Typeface;
@@ -1723,17 +1735,17 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTypeface(Landroid/graphics/Typeface;)V
 
-    .line 539
+    .line 541
     iget-object v0, v6, Lorg/telegram/ui/Components/TranslateAlert;->buttonTextView:Landroid/widget/TextView;
 
     const/high16 v1, 0x41600000    # 14.0f
 
     invoke-virtual {v0, v13, v1}, Landroid/widget/TextView;->setTextSize(IF)V
 
-    .line 540
+    .line 542
     iget-object v0, v6, Lorg/telegram/ui/Components/TranslateAlert;->buttonTextView:Landroid/widget/TextView;
 
-    const v1, 0x7f0e047d
+    const v1, 0x7f0e04ca
 
     const-string v3, "CloseTranslation"
 
@@ -1743,7 +1755,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 542
+    .line 544
     new-instance v0, Landroid/widget/FrameLayout;
 
     invoke-direct {v0, v7}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
@@ -1752,7 +1764,7 @@
 
     const-string v1, "featuredStickers_addButton"
 
-    .line 544
+    .line 546
     invoke-static {v1}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
 
     move-result v1
@@ -1769,14 +1781,14 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    .line 545
+    .line 547
     iget-object v0, v6, Lorg/telegram/ui/Components/TranslateAlert;->buttonView:Landroid/widget/FrameLayout;
 
     iget-object v1, v6, Lorg/telegram/ui/Components/TranslateAlert;->buttonTextView:Landroid/widget/TextView;
 
     invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;)V
 
-    .line 546
+    .line 548
     iget-object v0, v6, Lorg/telegram/ui/Components/TranslateAlert;->buttonView:Landroid/widget/FrameLayout;
 
     new-instance v1, Lorg/telegram/ui/Components/TranslateAlert$$ExternalSyntheticLambda3;
@@ -1785,7 +1797,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 548
+    .line 550
     iget-object v0, v6, Lorg/telegram/ui/Components/TranslateAlert;->container:Landroid/widget/FrameLayout;
 
     iget-object v1, v6, Lorg/telegram/ui/Components/TranslateAlert;->buttonView:Landroid/widget/FrameLayout;
@@ -1824,7 +1836,7 @@
 
     invoke-virtual {v0, v1, v3}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 549
+    .line 551
     iget-object v0, v6, Lorg/telegram/ui/Components/TranslateAlert;->contentView:Landroid/widget/FrameLayout;
 
     iget-object v1, v6, Lorg/telegram/ui/Components/TranslateAlert;->container:Landroid/widget/FrameLayout;
@@ -1839,14 +1851,14 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 551
+    .line 553
     new-instance v0, Landroid/widget/FrameLayout;
 
     invoke-direct {v0, v7}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
     iput-object v0, v6, Lorg/telegram/ui/Components/TranslateAlert;->bulletinContainer:Landroid/widget/FrameLayout;
 
-    .line 552
+    .line 554
     iget-object v1, v6, Lorg/telegram/ui/Components/TranslateAlert;->contentView:Landroid/widget/FrameLayout;
 
     const/4 v2, -0x1
@@ -1913,7 +1925,7 @@
 
     move-object/from16 v11, p8
 
-    .line 239
+    .line 240
     invoke-direct/range {v0 .. v11}, Lorg/telegram/ui/Components/TranslateAlert;-><init>(Lorg/telegram/ui/ActionBar/BaseFragment;Landroid/content/Context;ILorg/telegram/tgnet/TLRPC$InputPeer;ILjava/lang/String;Ljava/lang/String;Ljava/lang/CharSequence;ZLorg/telegram/ui/Components/TranslateAlert$OnLinkPress;Ljava/lang/Runnable;)V
 
     return-void
@@ -1922,7 +1934,7 @@
 .method static synthetic access$002(Lorg/telegram/ui/Components/TranslateAlert;Z)Z
     .registers 2
 
-    .line 80
+    .line 81
     iput-boolean p1, p0, Lorg/telegram/ui/Components/TranslateAlert;->openAnimationToAnimatorPriority:Z
 
     return p1
@@ -1931,7 +1943,7 @@
 .method static synthetic access$100(Lorg/telegram/ui/Components/TranslateAlert;)F
     .registers 1
 
-    .line 80
+    .line 81
     iget p0, p0, Lorg/telegram/ui/Components/TranslateAlert;->heightMaxPercent:F
 
     return p0
@@ -1940,7 +1952,7 @@
 .method static synthetic access$1000(Lorg/telegram/ui/Components/TranslateAlert;)Z
     .registers 1
 
-    .line 80
+    .line 81
     invoke-direct {p0}, Lorg/telegram/ui/Components/TranslateAlert;->canExpand()Z
 
     move-result p0
@@ -1951,7 +1963,7 @@
 .method static synthetic access$1100(Lorg/telegram/ui/Components/TranslateAlert;)Z
     .registers 1
 
-    .line 80
+    .line 81
     invoke-direct {p0}, Lorg/telegram/ui/Components/TranslateAlert;->checkForNextLoading()Z
 
     move-result p0
@@ -1962,7 +1974,7 @@
 .method static synthetic access$1200(Lorg/telegram/ui/Components/TranslateAlert;FZ)V
     .registers 3
 
-    .line 80
+    .line 81
     invoke-direct {p0, p1, p2}, Lorg/telegram/ui/Components/TranslateAlert;->openAnimationTo(FZ)V
 
     return-void
@@ -1971,7 +1983,7 @@
 .method static synthetic access$1300()I
     .registers 1
 
-    .line 80
+    .line 81
     sget v0, Lorg/telegram/ui/Components/TranslateAlert;->MOST_SPEC:I
 
     return v0
@@ -1980,7 +1992,7 @@
 .method static synthetic access$1400(Lorg/telegram/ui/Components/TranslateAlert;)Lorg/telegram/ui/Components/LinkSpanDrawable$LinkCollector;
     .registers 1
 
-    .line 80
+    .line 81
     iget-object p0, p0, Lorg/telegram/ui/Components/TranslateAlert;->links:Lorg/telegram/ui/Components/LinkSpanDrawable$LinkCollector;
 
     return-object p0
@@ -1989,7 +2001,7 @@
 .method static synthetic access$1500(Lorg/telegram/ui/Components/TranslateAlert;)Landroid/widget/FrameLayout;
     .registers 1
 
-    .line 80
+    .line 81
     iget-object p0, p0, Lorg/telegram/ui/Components/TranslateAlert;->bulletinContainer:Landroid/widget/FrameLayout;
 
     return-object p0
@@ -1998,7 +2010,7 @@
 .method static synthetic access$1600(Lorg/telegram/ui/Components/TranslateAlert;)Landroid/widget/FrameLayout;
     .registers 1
 
-    .line 80
+    .line 81
     iget-object p0, p0, Lorg/telegram/ui/Components/TranslateAlert;->container:Landroid/widget/FrameLayout;
 
     return-object p0
@@ -2007,7 +2019,7 @@
 .method static synthetic access$1700(Lorg/telegram/ui/Components/TranslateAlert;)Z
     .registers 1
 
-    .line 80
+    .line 81
     iget-boolean p0, p0, Lorg/telegram/ui/Components/TranslateAlert;->noforwards:Z
 
     return p0
@@ -2016,7 +2028,7 @@
 .method static synthetic access$1800(Lorg/telegram/ui/Components/TranslateAlert;)Landroid/widget/TextView;
     .registers 1
 
-    .line 80
+    .line 81
     iget-object p0, p0, Lorg/telegram/ui/Components/TranslateAlert;->allTextsView:Landroid/widget/TextView;
 
     return-object p0
@@ -2025,7 +2037,7 @@
 .method static synthetic access$1900(Lorg/telegram/ui/Components/TranslateAlert;)Landroidx/core/widget/NestedScrollView;
     .registers 1
 
-    .line 80
+    .line 81
     iget-object p0, p0, Lorg/telegram/ui/Components/TranslateAlert;->scrollView:Landroidx/core/widget/NestedScrollView;
 
     return-object p0
@@ -2034,7 +2046,7 @@
 .method static synthetic access$200(Lorg/telegram/ui/Components/TranslateAlert;)Lorg/telegram/ui/Components/TranslateAlert$TextBlocksLayout;
     .registers 1
 
-    .line 80
+    .line 81
     iget-object p0, p0, Lorg/telegram/ui/Components/TranslateAlert;->textsView:Lorg/telegram/ui/Components/TranslateAlert$TextBlocksLayout;
 
     return-object p0
@@ -2043,7 +2055,7 @@
 .method static synthetic access$2000(Lorg/telegram/ui/Components/TranslateAlert;F)V
     .registers 2
 
-    .line 80
+    .line 81
     invoke-direct {p0, p1}, Lorg/telegram/ui/Components/TranslateAlert;->openAnimation(F)V
 
     return-void
@@ -2052,7 +2064,7 @@
 .method static synthetic access$2102(Lorg/telegram/ui/Components/TranslateAlert;Z)Z
     .registers 2
 
-    .line 80
+    .line 81
     iput-boolean p1, p0, Lorg/telegram/ui/Components/TranslateAlert;->openingAnimatorPriority:Z
 
     return p1
@@ -2061,7 +2073,7 @@
 .method static synthetic access$2200(Lorg/telegram/ui/Components/TranslateAlert;)Lorg/telegram/ui/Components/TranslateAlert$OnLinkPress;
     .registers 1
 
-    .line 80
+    .line 81
     iget-object p0, p0, Lorg/telegram/ui/Components/TranslateAlert;->onLinkPress:Lorg/telegram/ui/Components/TranslateAlert$OnLinkPress;
 
     return-object p0
@@ -2070,7 +2082,7 @@
 .method static synthetic access$2302(Lorg/telegram/ui/Components/TranslateAlert;Z)Z
     .registers 2
 
-    .line 80
+    .line 81
     iput-boolean p1, p0, Lorg/telegram/ui/Components/TranslateAlert;->fastHide:Z
 
     return p1
@@ -2079,7 +2091,7 @@
 .method static synthetic access$2400(Lorg/telegram/ui/Components/TranslateAlert;)Lorg/telegram/ui/ActionBar/BaseFragment;
     .registers 1
 
-    .line 80
+    .line 81
     iget-object p0, p0, Lorg/telegram/ui/Components/TranslateAlert;->fragment:Lorg/telegram/ui/ActionBar/BaseFragment;
 
     return-object p0
@@ -2088,7 +2100,7 @@
 .method static synthetic access$300(Lorg/telegram/ui/Components/TranslateAlert;)Landroid/widget/FrameLayout;
     .registers 1
 
-    .line 80
+    .line 81
     iget-object p0, p0, Lorg/telegram/ui/Components/TranslateAlert;->textsContainerView:Landroid/widget/FrameLayout;
 
     return-object p0
@@ -2097,7 +2109,7 @@
 .method static synthetic access$400(Lorg/telegram/ui/Components/TranslateAlert;)I
     .registers 1
 
-    .line 80
+    .line 81
     invoke-direct {p0}, Lorg/telegram/ui/Components/TranslateAlert;->minHeight()I
 
     move-result p0
@@ -2108,7 +2120,7 @@
 .method static synthetic access$500(Lorg/telegram/ui/Components/TranslateAlert;)F
     .registers 1
 
-    .line 80
+    .line 81
     iget p0, p0, Lorg/telegram/ui/Components/TranslateAlert;->containerOpenAnimationT:F
 
     return p0
@@ -2117,7 +2129,7 @@
 .method static synthetic access$600(Lorg/telegram/ui/Components/TranslateAlert;)V
     .registers 1
 
-    .line 80
+    .line 81
     invoke-direct {p0}, Lorg/telegram/ui/Components/TranslateAlert;->updateCanExpand()V
 
     return-void
@@ -2126,7 +2138,7 @@
 .method static synthetic access$700(Lorg/telegram/ui/Components/TranslateAlert;)F
     .registers 1
 
-    .line 80
+    .line 81
     iget p0, p0, Lorg/telegram/ui/Components/TranslateAlert;->openingT:F
 
     return p0
@@ -2135,7 +2147,7 @@
 .method static synthetic access$800(Lorg/telegram/ui/Components/TranslateAlert;)Lorg/telegram/ui/Components/TranslateAlert$InlineLoadingTextView;
     .registers 1
 
-    .line 80
+    .line 81
     iget-object p0, p0, Lorg/telegram/ui/Components/TranslateAlert;->subtitleFromView:Lorg/telegram/ui/Components/TranslateAlert$InlineLoadingTextView;
 
     return-object p0
@@ -2144,7 +2156,7 @@
 .method static synthetic access$900(Lorg/telegram/ui/Components/TranslateAlert;)Z
     .registers 1
 
-    .line 80
+    .line 81
     iget-boolean p0, p0, Lorg/telegram/ui/Components/TranslateAlert;->allowScroll:Z
 
     return p0
@@ -2153,10 +2165,10 @@
 .method private canExpand()Z
     .registers 5
 
-    .line 213
+    .line 214
     iget-object v0, p0, Lorg/telegram/ui/Components/TranslateAlert;->textsView:Lorg/telegram/ui/Components/TranslateAlert$TextBlocksLayout;
 
-    .line 214
+    .line 215
     invoke-virtual {v0}, Lorg/telegram/ui/Components/TranslateAlert$TextBlocksLayout;->getBlocksCount()I
 
     move-result v0
@@ -2171,7 +2183,7 @@
 
     if-lt v0, v1, :cond_23
 
-    .line 215
+    .line 216
     invoke-direct {p0, v2}, Lorg/telegram/ui/Components/TranslateAlert;->minHeight(Z)I
 
     move-result v0
@@ -2205,14 +2217,14 @@
 .method private checkForNextLoading()Z
     .registers 2
 
-    .line 1049
+    .line 1057
     invoke-direct {p0}, Lorg/telegram/ui/Components/TranslateAlert;->scrollAtBottom()Z
 
     move-result v0
 
     if-eqz v0, :cond_b
 
-    .line 1050
+    .line 1058
     invoke-direct {p0}, Lorg/telegram/ui/Components/TranslateAlert;->fetchNext()Z
 
     const/4 v0, 0x1
@@ -2238,7 +2250,7 @@
         }
     .end annotation
 
-    .line 898
+    .line 900
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -2247,7 +2259,7 @@
 
     return-object v0
 
-    .line 902
+    .line 904
     :cond_8
     :goto_8
     invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
@@ -2258,7 +2270,7 @@
 
     const/4 v1, 0x0
 
-    .line 903
+    .line 905
     invoke-interface {p1, v1, p2}, Ljava/lang/CharSequence;->subSequence(II)Ljava/lang/CharSequence;
 
     move-result-object v2
@@ -2269,7 +2281,7 @@
 
     const-string v3, "\n\n"
 
-    .line 905
+    .line 907
     invoke-virtual {v2, v3}, Ljava/lang/String;->lastIndexOf(Ljava/lang/String;)I
 
     move-result v3
@@ -2280,7 +2292,7 @@
 
     const-string v3, "\n"
 
-    .line 906
+    .line 908
     invoke-virtual {v2, v3}, Ljava/lang/String;->lastIndexOf(Ljava/lang/String;)I
 
     move-result v3
@@ -2290,7 +2302,7 @@
 
     const-string v3, ". "
 
-    .line 907
+    .line 909
     invoke-virtual {v2, v3}, Ljava/lang/String;->lastIndexOf(Ljava/lang/String;)I
 
     move-result v3
@@ -2298,7 +2310,7 @@
     :cond_2e
     if-ne v3, v4, :cond_38
 
-    .line 908
+    .line 910
     invoke-virtual {v2}, Ljava/lang/String;->length()I
 
     move-result v2
@@ -2310,14 +2322,14 @@
     :cond_38
     add-int/lit8 v3, v3, 0x1
 
-    .line 909
+    .line 911
     invoke-interface {p1, v1, v3}, Ljava/lang/CharSequence;->subSequence(II)Ljava/lang/CharSequence;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 910
+    .line 912
     invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
 
     move-result v1
@@ -2328,7 +2340,7 @@
 
     goto :goto_8
 
-    .line 912
+    .line 914
     :cond_4a
     invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
 
@@ -2336,7 +2348,7 @@
 
     if-lez p2, :cond_53
 
-    .line 913
+    .line 915
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     :cond_53
@@ -2346,7 +2358,7 @@
 .method private fetchNext()Z
     .registers 9
 
-    .line 921
+    .line 923
     iget-boolean v0, p0, Lorg/telegram/ui/Components/TranslateAlert;->loading:Z
 
     const/4 v1, 0x0
@@ -2358,10 +2370,10 @@
     :cond_6
     const/4 v0, 0x1
 
-    .line 924
+    .line 926
     iput-boolean v0, p0, Lorg/telegram/ui/Components/TranslateAlert;->loading:Z
 
-    .line 926
+    .line 928
     iget v2, p0, Lorg/telegram/ui/Components/TranslateAlert;->blockIndex:I
 
     iget-object v3, p0, Lorg/telegram/ui/Components/TranslateAlert;->textBlocks:Ljava/util/ArrayList;
@@ -2374,13 +2386,13 @@
 
     return v1
 
-    .line 930
+    .line 932
     :cond_14
     iget-object v1, p0, Lorg/telegram/ui/Components/TranslateAlert;->textBlocks:Ljava/util/ArrayList;
 
     iget v2, p0, Lorg/telegram/ui/Components/TranslateAlert;->blockIndex:I
 
-    .line 931
+    .line 933
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v1
@@ -2397,7 +2409,7 @@
 
     const/16 v2, 0xdac
 
-    .line 932
+    .line 934
     invoke-static {v1, v2}, Ljava/lang/Math;->min(II)I
 
     move-result v1
@@ -2414,7 +2426,7 @@
 
     move-object v2, p0
 
-    .line 930
+    .line 932
     invoke-direct/range {v2 .. v7}, Lorg/telegram/ui/Components/TranslateAlert;->fetchTranslation(Ljava/lang/CharSequence;JLorg/telegram/ui/Components/TranslateAlert$OnTranslationSuccess;Lorg/telegram/ui/Components/TranslateAlert$OnTranslationFail;)V
 
     return v0
@@ -2423,7 +2435,7 @@
 .method private fetchTranslation(Ljava/lang/CharSequence;JLorg/telegram/ui/Components/TranslateAlert$OnTranslationSuccess;Lorg/telegram/ui/Components/TranslateAlert$OnTranslationFail;)V
     .registers 15
 
-    .line 1063
+    .line 1071
     sget-object v0, Lorg/telegram/ui/Components/TranslateAlert;->translateQueue:Lorg/telegram/messenger/DispatchQueue;
 
     invoke-virtual {v0}, Ljava/lang/Thread;->isAlive()Z
@@ -2432,12 +2444,12 @@
 
     if-nez v0, :cond_d
 
-    .line 1064
+    .line 1072
     sget-object v0, Lorg/telegram/ui/Components/TranslateAlert;->translateQueue:Lorg/telegram/messenger/DispatchQueue;
 
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
-    .line 1066
+    .line 1074
     :cond_d
     sget-object v0, Lorg/telegram/ui/Components/TranslateAlert;->translateQueue:Lorg/telegram/messenger/DispatchQueue;
 
@@ -2465,7 +2477,7 @@
 .method private getScrollY()F
     .registers 4
 
-    .line 585
+    .line 587
     iget v0, p0, Lorg/telegram/ui/Components/TranslateAlert;->containerOpenAnimationT:F
 
     iget v1, p0, Lorg/telegram/ui/Components/TranslateAlert;->openingT:F
@@ -2492,7 +2504,7 @@
 .method private hasSelection()Z
     .registers 2
 
-    .line 589
+    .line 591
     iget-object v0, p0, Lorg/telegram/ui/Components/TranslateAlert;->allTextsView:Landroid/widget/TextView;
 
     invoke-virtual {v0}, Landroid/widget/TextView;->hasSelection()Z
@@ -2505,7 +2517,7 @@
 .method private synthetic lambda$dispatchTouchEvent$4()V
     .registers 3
 
-    .line 726
+    .line 728
     iget-object v0, p0, Lorg/telegram/ui/Components/TranslateAlert;->contentView:Landroid/widget/FrameLayout;
 
     new-instance v1, Lorg/telegram/ui/Components/TranslateAlert$$ExternalSyntheticLambda10;
@@ -2520,7 +2532,7 @@
 .method private synthetic lambda$fetchNext$6()V
     .registers 3
 
-    .line 1022
+    .line 1024
     iget-object v0, p0, Lorg/telegram/ui/Components/TranslateAlert;->contentView:Landroid/widget/FrameLayout;
 
     new-instance v1, Lorg/telegram/ui/Components/TranslateAlert$$ExternalSyntheticLambda10;
@@ -2537,10 +2549,10 @@
 
     const/4 v0, 0x1
 
-    .line 934
+    .line 936
     iput-boolean v0, p0, Lorg/telegram/ui/Components/TranslateAlert;->loaded:Z
 
-    .line 935
+    .line 937
     new-instance v7, Landroid/text/SpannableStringBuilder;
 
     invoke-direct {v7, p1}, Landroid/text/SpannableStringBuilder;-><init>(Ljava/lang/CharSequence;)V
@@ -2559,11 +2571,11 @@
 
     move-object v2, v7
 
-    .line 937
+    .line 939
     :try_start_f
     invoke-static/range {v1 .. v6}, Lorg/telegram/messenger/MessageObject;->addUrlsByPattern(ZLjava/lang/CharSequence;ZIIZ)V
 
-    .line 938
+    .line 940
     invoke-interface {v7}, Landroid/text/Spannable;->length()I
 
     move-result v1
@@ -2578,7 +2590,7 @@
 
     const/4 v2, 0x0
 
-    .line 939
+    .line 941
     :goto_1f
     array-length v3, v1
 
@@ -2588,15 +2600,15 @@
 
     if-ge v2, v3, :cond_42
 
-    .line 940
+    .line 942
     aget-object v3, v1, v2
 
-    .line 941
+    .line 943
     invoke-interface {v7, v3}, Landroid/text/Spannable;->getSpanStart(Ljava/lang/Object;)I
 
     move-result v6
 
-    .line 942
+    .line 944
     invoke-interface {v7, v3}, Landroid/text/Spannable;->getSpanEnd(Ljava/lang/Object;)I
 
     move-result v8
@@ -2607,11 +2619,11 @@
 
     goto :goto_3f
 
-    .line 946
+    .line 948
     :cond_34
     invoke-interface {v7, v3}, Landroid/text/Spannable;->removeSpan(Ljava/lang/Object;)V
 
-    .line 947
+    .line 949
     new-instance v5, Lorg/telegram/ui/Components/TranslateAlert$8;
 
     invoke-direct {v5, p0, v3}, Lorg/telegram/ui/Components/TranslateAlert$8;-><init>(Lorg/telegram/ui/Components/TranslateAlert;Landroid/text/style/URLSpan;)V
@@ -2624,11 +2636,11 @@
 
     goto :goto_1f
 
-    .line 976
+    .line 978
     :cond_42
     invoke-static {v7, v0}, Lorg/telegram/messenger/AndroidUtilities;->addLinks(Landroid/text/Spannable;I)Z
 
-    .line 977
+    .line 979
     invoke-interface {v7}, Landroid/text/Spannable;->length()I
 
     move-result v1
@@ -2643,21 +2655,21 @@
 
     const/4 v2, 0x0
 
-    .line 978
+    .line 980
     :goto_52
     array-length v3, v1
 
     if-ge v2, v3, :cond_72
 
-    .line 979
+    .line 981
     aget-object v3, v1, v2
 
-    .line 980
+    .line 982
     invoke-interface {v7, v3}, Landroid/text/Spannable;->getSpanStart(Ljava/lang/Object;)I
 
     move-result v6
 
-    .line 981
+    .line 983
     invoke-interface {v7, v3}, Landroid/text/Spannable;->getSpanEnd(Ljava/lang/Object;)I
 
     move-result v8
@@ -2668,11 +2680,11 @@
 
     goto :goto_6f
 
-    .line 985
+    .line 987
     :cond_64
     invoke-interface {v7, v3}, Landroid/text/Spannable;->removeSpan(Ljava/lang/Object;)V
 
-    .line 986
+    .line 988
     new-instance v9, Lorg/telegram/ui/Components/TranslateAlert$9;
 
     invoke-direct {v9, p0, v3}, Lorg/telegram/ui/Components/TranslateAlert$9;-><init>(Lorg/telegram/ui/Components/TranslateAlert;Landroid/text/style/URLSpan;)V
@@ -2685,7 +2697,7 @@
 
     goto :goto_52
 
-    .line 1007
+    .line 1009
     :cond_72
     iget-object v1, p0, Lorg/telegram/ui/Components/TranslateAlert;->allTextsView:Landroid/widget/TextView;
 
@@ -2718,10 +2730,10 @@
     :catch_8a
     move-exception v1
 
-    .line 1009
+    .line 1011
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 1012
+    .line 1014
     :goto_8e
     new-instance v1, Landroid/text/SpannableStringBuilder;
 
@@ -2734,29 +2746,29 @@
     :cond_96
     invoke-direct {v1, v2}, Landroid/text/SpannableStringBuilder;-><init>(Ljava/lang/CharSequence;)V
 
-    .line 1013
+    .line 1015
     iget v2, p0, Lorg/telegram/ui/Components/TranslateAlert;->blockIndex:I
 
     if-eqz v2, :cond_a2
 
     const-string v2, "\n"
 
-    .line 1014
+    .line 1016
     invoke-virtual {v1, v2}, Landroid/text/SpannableStringBuilder;->append(Ljava/lang/CharSequence;)Landroid/text/SpannableStringBuilder;
 
-    .line 1016
+    .line 1018
     :cond_a2
     invoke-virtual {v1, v7}, Landroid/text/SpannableStringBuilder;->append(Ljava/lang/CharSequence;)Landroid/text/SpannableStringBuilder;
 
-    .line 1017
+    .line 1019
     iput-object v1, p0, Lorg/telegram/ui/Components/TranslateAlert;->allTexts:Landroid/text/Spannable;
 
-    .line 1018
+    .line 1020
     iget-object v2, p0, Lorg/telegram/ui/Components/TranslateAlert;->textsView:Lorg/telegram/ui/Components/TranslateAlert$TextBlocksLayout;
 
     invoke-virtual {v2, v1}, Lorg/telegram/ui/Components/TranslateAlert$TextBlocksLayout;->setWholeText(Ljava/lang/CharSequence;)V
 
-    .line 1020
+    .line 1022
     iget-object v1, p0, Lorg/telegram/ui/Components/TranslateAlert;->textsView:Lorg/telegram/ui/Components/TranslateAlert$TextBlocksLayout;
 
     iget v2, p0, Lorg/telegram/ui/Components/TranslateAlert;->blockIndex:I
@@ -2767,7 +2779,7 @@
 
     if-eqz v1, :cond_be
 
-    .line 1022
+    .line 1024
     new-instance v2, Lorg/telegram/ui/Components/TranslateAlert$$ExternalSyntheticLambda9;
 
     invoke-direct {v2, p0}, Lorg/telegram/ui/Components/TranslateAlert$$ExternalSyntheticLambda9;-><init>(Lorg/telegram/ui/Components/TranslateAlert;)V
@@ -2777,21 +2789,41 @@
     :cond_be
     if-eqz p2, :cond_c5
 
-    .line 1026
+    .line 1028
     iput-object p2, p0, Lorg/telegram/ui/Components/TranslateAlert;->fromLanguage:Ljava/lang/String;
 
-    .line 1027
+    .line 1029
     invoke-virtual {p0}, Lorg/telegram/ui/Components/TranslateAlert;->updateSourceLanguage()V
 
-    .line 1030
+    .line 1032
     :cond_c5
+    iget p2, p0, Lorg/telegram/ui/Components/TranslateAlert;->blockIndex:I
+
+    if-nez p2, :cond_d6
+
+    invoke-static {}, Lorg/telegram/messenger/AndroidUtilities;->isAccessibilityScreenReaderEnabled()Z
+
+    move-result p2
+
+    if-eqz p2, :cond_d6
+
+    .line 1033
+    iget-object p2, p0, Lorg/telegram/ui/Components/TranslateAlert;->allTextsView:Landroid/widget/TextView;
+
+    if-eqz p2, :cond_d6
+
+    .line 1034
+    invoke-virtual {p2}, Landroid/widget/TextView;->requestFocus()Z
+
+    .line 1038
+    :cond_d6
     iget p2, p0, Lorg/telegram/ui/Components/TranslateAlert;->blockIndex:I
 
     add-int/2addr p2, v0
 
     iput p2, p0, Lorg/telegram/ui/Components/TranslateAlert;->blockIndex:I
 
-    .line 1031
+    .line 1039
     iput-boolean p1, p0, Lorg/telegram/ui/Components/TranslateAlert;->loading:Z
 
     return-void
@@ -2804,12 +2836,12 @@
 
     if-eqz p1, :cond_18
 
-    .line 1035
+    .line 1043
     invoke-virtual {p0}, Landroid/app/Dialog;->getContext()Landroid/content/Context;
 
     move-result-object p1
 
-    const v1, 0x7f0e11be
+    const v1, 0x7f0e128b
 
     const-string v2, "TranslationFailedAlert1"
 
@@ -2825,13 +2857,13 @@
 
     goto :goto_2c
 
-    .line 1037
+    .line 1045
     :cond_18
     invoke-virtual {p0}, Landroid/app/Dialog;->getContext()Landroid/content/Context;
 
     move-result-object p1
 
-    const v1, 0x7f0e11bf
+    const v1, 0x7f0e128c
 
     const-string v2, "TranslationFailedAlert2"
 
@@ -2845,13 +2877,13 @@
 
     invoke-virtual {p1}, Landroid/widget/Toast;->show()V
 
-    .line 1040
+    .line 1048
     :goto_2c
     iget p1, p0, Lorg/telegram/ui/Components/TranslateAlert;->blockIndex:I
 
     if-nez p1, :cond_33
 
-    .line 1041
+    .line 1049
     invoke-virtual {p0}, Lorg/telegram/ui/Components/TranslateAlert;->dismiss()V
 
     :cond_33
@@ -2861,7 +2893,7 @@
 .method private static synthetic lambda$fetchTranslation$10(Lorg/telegram/ui/Components/TranslateAlert$OnTranslationFail;Z)V
     .registers 2
 
-    .line 1132
+    .line 1140
     invoke-interface {p0, p1}, Lorg/telegram/ui/Components/TranslateAlert$OnTranslationFail;->run(Z)V
 
     return-void
@@ -2872,7 +2904,7 @@
 
     const/4 v0, 0x0
 
-    .line 1136
+    .line 1144
     invoke-interface {p0, v0}, Lorg/telegram/ui/Components/TranslateAlert$OnTranslationFail;->run(Z)V
 
     return-void
@@ -2887,7 +2919,7 @@
 
     const-string v0, "-"
 
-    .line 1069
+    .line 1077
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v3
@@ -2899,7 +2931,7 @@
     :try_start_b
     const-string v7, "https://translate.googleapis.com/translate_a/single?client=gtx&sl="
 
-    .line 1072
+    .line 1080
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
@@ -2918,7 +2950,7 @@
 
     move-result-object v7
 
-    .line 1073
+    .line 1081
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
@@ -2933,7 +2965,7 @@
 
     move-result-object v7
 
-    .line 1074
+    .line 1082
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
@@ -2952,7 +2984,7 @@
 
     move-result-object v7
 
-    .line 1075
+    .line 1083
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
@@ -2967,7 +2999,7 @@
 
     move-result-object v7
 
-    .line 1076
+    .line 1084
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
@@ -2988,7 +3020,7 @@
 
     move-result-object v7
 
-    .line 1077
+    .line 1085
     new-instance v8, Ljava/net/URI;
 
     invoke-direct {v8, v7}, Ljava/net/URI;-><init>(Ljava/lang/String;)V
@@ -3008,29 +3040,29 @@
     :try_start_7f
     const-string v8, "GET"
 
-    .line 1078
+    .line 1086
     invoke-virtual {v7, v8}, Ljava/net/HttpURLConnection;->setRequestMethod(Ljava/lang/String;)V
 
     const-string v8, "User-Agent"
 
     const-string v9, "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36"
 
-    .line 1079
+    .line 1087
     invoke-virtual {v7, v8, v9}, Ljava/net/HttpURLConnection;->setRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v8, "Content-Type"
 
     const-string v9, "application/json"
 
-    .line 1080
+    .line 1088
     invoke-virtual {v7, v8, v9}, Ljava/net/HttpURLConnection;->setRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1082
+    .line 1090
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 1083
+    .line 1091
     new-instance v9, Ljava/io/BufferedReader;
 
     new-instance v10, Ljava/io/InputStreamReader;
@@ -3051,7 +3083,7 @@
     :try_end_ab
     .catch Ljava/lang/Exception; {:try_start_7f .. :try_end_ab} :catch_13b
 
-    .line 1085
+    .line 1093
     :goto_ab
     :try_start_ab
     invoke-virtual {v9}, Ljava/io/Reader;->read()I
@@ -3064,34 +3096,34 @@
 
     int-to-char v10, v10
 
-    .line 1086
+    .line 1094
     invoke-virtual {v8, v10}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
     :try_end_b6
     .catchall {:try_start_ab .. :try_end_b6} :catchall_136
 
     goto :goto_ab
 
-    .line 1088
+    .line 1096
     :cond_b7
     :try_start_b7
     invoke-virtual {v9}, Ljava/io/Reader;->close()V
 
-    .line 1089
+    .line 1097
     invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v8
 
-    .line 1091
+    .line 1099
     new-instance v9, Lorg/json/JSONTokener;
 
     invoke-direct {v9, v8}, Lorg/json/JSONTokener;-><init>(Ljava/lang/String;)V
 
-    .line 1092
+    .line 1100
     new-instance v8, Lorg/json/JSONArray;
 
     invoke-direct {v8, v9}, Lorg/json/JSONArray;-><init>(Lorg/json/JSONTokener;)V
 
-    .line 1093
+    .line 1101
     invoke-virtual {v8, v6}, Lorg/json/JSONArray;->getJSONArray(I)Lorg/json/JSONArray;
 
     move-result-object v9
@@ -3100,7 +3132,7 @@
 
     const/4 v10, 0x2
 
-    .line 1096
+    .line 1104
     :try_start_cd
     invoke-virtual {v8, v10}, Lorg/json/JSONArray;->getString(I)Ljava/lang/String;
 
@@ -3116,7 +3148,7 @@
     :goto_d3
     if-eqz v8, :cond_e3
 
-    .line 1098
+    .line 1106
     :try_start_d5
     invoke-virtual {v8, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
@@ -3124,7 +3156,7 @@
 
     if-eqz v10, :cond_e3
 
-    .line 1099
+    .line 1107
     invoke-virtual {v8, v0}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
 
     move-result v0
@@ -3133,7 +3165,7 @@
 
     move-result-object v8
 
-    .line 1101
+    .line 1109
     :cond_e3
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -3141,7 +3173,7 @@
 
     const/4 v10, 0x0
 
-    .line 1102
+    .line 1110
     :goto_e9
     invoke-virtual {v9}, Lorg/json/JSONArray;->length()I
 
@@ -3149,7 +3181,7 @@
 
     if-ge v10, v11, :cond_107
 
-    .line 1103
+    .line 1111
     invoke-virtual {v9, v10}, Lorg/json/JSONArray;->getJSONArray(I)Lorg/json/JSONArray;
 
     move-result-object v11
@@ -3162,14 +3194,14 @@
 
     const-string v12, "null"
 
-    .line 1104
+    .line 1112
     invoke-virtual {v11, v12}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v12
 
     if-nez v12, :cond_104
 
-    .line 1105
+    .line 1113
     invoke-virtual {v0, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     :cond_104
@@ -3177,7 +3209,7 @@
 
     goto :goto_e9
 
-    .line 1108
+    .line 1116
     :cond_107
     invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
 
@@ -3197,23 +3229,23 @@
 
     const-string v9, "\n"
 
-    .line 1109
+    .line 1117
     invoke-virtual {v0, v6, v9}, Ljava/lang/StringBuilder;->insert(ILjava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1111
+    .line 1119
     :cond_11b
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1114
+    .line 1122
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v9
 
     sub-long/2addr v9, v3
 
-    .line 1115
+    .line 1123
     new-instance v3, Lorg/telegram/ui/Components/TranslateAlert$$ExternalSyntheticLambda6;
 
     move-object v4, p2
@@ -3224,12 +3256,12 @@
 
     sub-long v9, p3, v9
 
-    .line 1119
+    .line 1127
     invoke-static {v11, v12, v9, v10}, Ljava/lang/Math;->max(JJ)J
 
     move-result-wide v8
 
-    .line 1115
+    .line 1123
     invoke-static {v3, v8, v9}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;J)V
     :try_end_135
     .catch Ljava/lang/Exception; {:try_start_d5 .. :try_end_135} :catch_13b
@@ -3239,7 +3271,7 @@
     :catchall_136
     move-exception v0
 
-    .line 1083
+    .line 1091
     :try_start_137
     invoke-virtual {v9}, Ljava/io/Reader;->close()V
     :try_end_13a
@@ -3269,7 +3301,7 @@
     :try_start_141
     const-string v0, "translate"
 
-    .line 1122
+    .line 1130
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -3322,23 +3354,23 @@
     :catch_172
     move-exception v0
 
-    .line 1124
+    .line 1132
     invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
 
-    .line 1126
+    .line 1134
     :goto_176
     invoke-virtual {v3}, Ljava/lang/Exception;->printStackTrace()V
 
     if-eqz v2, :cond_19b
 
-    .line 1128
+    .line 1136
     iget-boolean v0, v1, Lorg/telegram/ui/Components/TranslateAlert;->dismissed:Z
 
     if-nez v0, :cond_19b
 
     if-eqz v7, :cond_18a
 
-    .line 1130
+    .line 1138
     :try_start_181
     invoke-virtual {v7}, Ljava/net/HttpURLConnection;->getResponseCode()I
 
@@ -3350,7 +3382,7 @@
 
     const/4 v6, 0x1
 
-    .line 1131
+    .line 1139
     :cond_18a
     new-instance v0, Lorg/telegram/ui/Components/TranslateAlert$$ExternalSyntheticLambda5;
 
@@ -3362,7 +3394,7 @@
 
     goto :goto_19b
 
-    .line 1135
+    .line 1143
     :catch_193
     new-instance v0, Lorg/telegram/ui/Components/TranslateAlert$$ExternalSyntheticLambda4;
 
@@ -3380,7 +3412,7 @@
 
     if-eqz p0, :cond_5
 
-    .line 1117
+    .line 1125
     invoke-interface {p0, p1, p2}, Lorg/telegram/ui/Components/TranslateAlert$OnTranslationSuccess;->run(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_5
@@ -3390,7 +3422,7 @@
 .method private synthetic lambda$new$1()V
     .registers 3
 
-    .line 352
+    .line 353
     iget-object v0, p0, Lorg/telegram/ui/Components/TranslateAlert;->titleView:Landroid/widget/TextView;
 
     sget-boolean v1, Lorg/telegram/messenger/LocaleController;->isRTL:Z
@@ -3417,7 +3449,7 @@
 .method private synthetic lambda$new$2(Landroid/view/View;)V
     .registers 2
 
-    .line 424
+    .line 425
     invoke-virtual {p0}, Lorg/telegram/ui/Components/TranslateAlert;->dismiss()V
 
     return-void
@@ -3426,7 +3458,7 @@
 .method private synthetic lambda$new$3(Landroid/view/View;)V
     .registers 2
 
-    .line 546
+    .line 548
     invoke-virtual {p0}, Lorg/telegram/ui/Components/TranslateAlert;->dismiss()V
 
     return-void
@@ -3435,7 +3467,7 @@
 .method private synthetic lambda$openAnimationTo$0(Landroid/animation/ValueAnimator;)V
     .registers 2
 
-    .line 170
+    .line 171
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
     move-result-object p1
@@ -3454,7 +3486,7 @@
 .method private synthetic lambda$openTo$5(Landroid/animation/ValueAnimator;)V
     .registers 6
 
-    .line 830
+    .line 832
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
     move-result-object p1
@@ -3467,12 +3499,12 @@
 
     iput p1, p0, Lorg/telegram/ui/Components/TranslateAlert;->openingT:F
 
-    .line 831
+    .line 833
     iget-object p1, p0, Lorg/telegram/ui/Components/TranslateAlert;->container:Landroid/widget/FrameLayout;
 
     invoke-virtual {p1}, Landroid/widget/FrameLayout;->invalidate()V
 
-    .line 832
+    .line 834
     iget-object p1, p0, Lorg/telegram/ui/Components/TranslateAlert;->backDrawable:Landroid/graphics/drawable/ColorDrawable;
 
     iget v0, p0, Lorg/telegram/ui/Components/TranslateAlert;->openingT:F
@@ -3485,7 +3517,7 @@
 
     invoke-virtual {p1, v0}, Landroid/graphics/drawable/ColorDrawable;->setAlpha(I)V
 
-    .line 833
+    .line 835
     iget-object p1, p0, Lorg/telegram/ui/Components/TranslateAlert;->bulletinContainer:Landroid/widget/FrameLayout;
 
     iget v0, p0, Lorg/telegram/ui/Components/TranslateAlert;->openingT:F
@@ -3532,7 +3564,7 @@
 
     const/4 v0, 0x0
 
-    .line 193
+    .line 194
     invoke-direct {p0, v0}, Lorg/telegram/ui/Components/TranslateAlert;->minHeight(Z)I
 
     move-result v0
@@ -3543,7 +3575,7 @@
 .method private minHeight(Z)I
     .registers 5
 
-    .line 196
+    .line 197
     iget-object v0, p0, Lorg/telegram/ui/Components/TranslateAlert;->textsView:Lorg/telegram/ui/Components/TranslateAlert$TextBlocksLayout;
 
     if-nez v0, :cond_6
@@ -3560,24 +3592,24 @@
     :goto_a
     const/high16 v1, 0x43130000    # 147.0f
 
-    .line 199
+    .line 200
     invoke-static {v1}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v1
 
     add-int/2addr v1, v0
 
-    .line 206
+    .line 207
     iget v2, p0, Lorg/telegram/ui/Components/TranslateAlert;->firstMinHeight:I
 
     if-gez v2, :cond_19
 
     if-lez v0, :cond_19
 
-    .line 207
+    .line 208
     iput v1, p0, Lorg/telegram/ui/Components/TranslateAlert;->firstMinHeight:I
 
-    .line 208
+    .line 209
     :cond_19
     iget v0, p0, Lorg/telegram/ui/Components/TranslateAlert;->firstMinHeight:I
 
@@ -3595,7 +3627,7 @@
 
     if-nez p1, :cond_2b
 
-    .line 209
+    .line 210
     iget p1, p0, Lorg/telegram/ui/Components/TranslateAlert;->firstMinHeight:I
 
     return p1
@@ -3609,7 +3641,7 @@
 
     const/4 v0, 0x0
 
-    .line 113
+    .line 114
     invoke-static {p1, v0}, Ljava/lang/Math;->max(FF)F
 
     move-result p1
@@ -3620,7 +3652,7 @@
 
     move-result p1
 
-    .line 114
+    .line 115
     iget v1, p0, Lorg/telegram/ui/Components/TranslateAlert;->containerOpenAnimationT:F
 
     cmpl-float v1, v1, p1
@@ -3629,11 +3661,11 @@
 
     return-void
 
-    .line 117
+    .line 118
     :cond_12
     iput p1, p0, Lorg/telegram/ui/Components/TranslateAlert;->containerOpenAnimationT:F
 
-    .line 119
+    .line 120
     iget-object v1, p0, Lorg/telegram/ui/Components/TranslateAlert;->titleView:Landroid/widget/TextView;
 
     const v2, 0x3f728241    # 0.9473f
@@ -3644,7 +3676,7 @@
 
     invoke-virtual {v1, v3}, Landroid/widget/TextView;->setScaleX(F)V
 
-    .line 120
+    .line 121
     iget-object v1, p0, Lorg/telegram/ui/Components/TranslateAlert;->titleView:Landroid/widget/TextView;
 
     invoke-static {v0, v2, p1}, Lorg/telegram/messenger/AndroidUtilities;->lerp(FFF)F
@@ -3653,14 +3685,14 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setScaleY(F)V
 
-    .line 121
+    .line 122
     iget-object v1, p0, Lorg/telegram/ui/Components/TranslateAlert;->titleLayout:Landroid/widget/FrameLayout$LayoutParams;
 
     const/16 v2, 0x16
 
     const/16 v3, 0x48
 
-    .line 122
+    .line 123
     invoke-static {v2, v3, p1}, Lorg/telegram/messenger/AndroidUtilities;->lerp(IIF)I
 
     move-result v4
@@ -3673,7 +3705,7 @@
 
     const/16 v5, 0x8
 
-    .line 123
+    .line 124
     invoke-static {v2, v5, p1}, Lorg/telegram/messenger/AndroidUtilities;->lerp(IIF)I
 
     move-result v5
@@ -3690,20 +3722,20 @@
 
     iget v6, v6, Landroid/widget/FrameLayout$LayoutParams;->bottomMargin:I
 
-    .line 121
+    .line 122
     invoke-virtual {v1, v4, v5, v7, v6}, Landroid/widget/FrameLayout$LayoutParams;->setMargins(IIII)V
 
-    .line 127
+    .line 128
     iget-object v1, p0, Lorg/telegram/ui/Components/TranslateAlert;->titleView:Landroid/widget/TextView;
 
     iget-object v4, p0, Lorg/telegram/ui/Components/TranslateAlert;->titleLayout:Landroid/widget/FrameLayout$LayoutParams;
 
     invoke-virtual {v1, v4}, Landroid/widget/TextView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 128
+    .line 129
     iget-object v1, p0, Lorg/telegram/ui/Components/TranslateAlert;->subtitleLayout:Landroid/widget/FrameLayout$LayoutParams;
 
-    .line 129
+    .line 130
     invoke-static {v2, v3, p1}, Lorg/telegram/messenger/AndroidUtilities;->lerp(IIF)I
 
     move-result v2
@@ -3722,7 +3754,7 @@
 
     const/16 v4, 0x1e
 
-    .line 130
+    .line 131
     invoke-static {v3, v4, p1}, Lorg/telegram/messenger/AndroidUtilities;->lerp(IIF)I
 
     move-result v3
@@ -3743,22 +3775,22 @@
 
     iget v4, v4, Landroid/widget/FrameLayout$LayoutParams;->bottomMargin:I
 
-    .line 128
+    .line 129
     invoke-virtual {v1, v2, v3, v5, v4}, Landroid/widget/FrameLayout$LayoutParams;->setMargins(IIII)V
 
-    .line 134
+    .line 135
     iget-object v1, p0, Lorg/telegram/ui/Components/TranslateAlert;->subtitleView:Landroid/widget/LinearLayout;
 
     iget-object v2, p0, Lorg/telegram/ui/Components/TranslateAlert;->subtitleLayout:Landroid/widget/FrameLayout$LayoutParams;
 
     invoke-virtual {v1, v2}, Landroid/widget/LinearLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 136
+    .line 137
     iget-object v1, p0, Lorg/telegram/ui/Components/TranslateAlert;->backButton:Landroid/widget/ImageView;
 
     invoke-virtual {v1, p1}, Landroid/widget/ImageView;->setAlpha(F)V
 
-    .line 137
+    .line 138
     iget-object v1, p0, Lorg/telegram/ui/Components/TranslateAlert;->backButton:Landroid/widget/ImageView;
 
     const/high16 v2, 0x3f400000    # 0.75f
@@ -3771,12 +3803,12 @@
 
     invoke-virtual {v1, v3}, Landroid/widget/ImageView;->setScaleX(F)V
 
-    .line 138
+    .line 139
     iget-object v1, p0, Lorg/telegram/ui/Components/TranslateAlert;->backButton:Landroid/widget/ImageView;
 
     invoke-virtual {v1, v3}, Landroid/widget/ImageView;->setScaleY(F)V
 
-    .line 139
+    .line 140
     iget-object v1, p0, Lorg/telegram/ui/Components/TranslateAlert;->backButton:Landroid/widget/ImageView;
 
     const/high16 v2, 0x3f000000    # 0.5f
@@ -3795,7 +3827,7 @@
     :goto_a2
     invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setClickable(Z)V
 
-    .line 140
+    .line 141
     iget-object v1, p0, Lorg/telegram/ui/Components/TranslateAlert;->headerShadowView:Landroid/widget/FrameLayout;
 
     iget-object v2, p0, Lorg/telegram/ui/Components/TranslateAlert;->scrollView:Landroidx/core/widget/NestedScrollView;
@@ -3814,7 +3846,7 @@
     :goto_b1
     invoke-virtual {v1, v0}, Landroid/widget/FrameLayout;->setAlpha(F)V
 
-    .line 142
+    .line 143
     iget-object v0, p0, Lorg/telegram/ui/Components/TranslateAlert;->headerLayout:Landroid/widget/FrameLayout$LayoutParams;
 
     const/high16 v1, 0x428c0000    # 70.0f
@@ -3835,19 +3867,19 @@
 
     iput v2, v0, Landroid/widget/FrameLayout$LayoutParams;->height:I
 
-    .line 143
+    .line 144
     iget-object v0, p0, Lorg/telegram/ui/Components/TranslateAlert;->header:Landroid/widget/FrameLayout;
 
     iget-object v2, p0, Lorg/telegram/ui/Components/TranslateAlert;->headerLayout:Landroid/widget/FrameLayout$LayoutParams;
 
     invoke-virtual {v0, v2}, Landroid/widget/FrameLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 145
+    .line 146
     iget-object v0, p0, Lorg/telegram/ui/Components/TranslateAlert;->scrollViewLayout:Landroid/widget/FrameLayout$LayoutParams;
 
     iget v2, v0, Landroid/widget/FrameLayout$LayoutParams;->leftMargin:I
 
-    .line 147
+    .line 148
     invoke-static {v1}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v1
@@ -3866,10 +3898,10 @@
 
     iget v1, v1, Landroid/widget/FrameLayout$LayoutParams;->bottomMargin:I
 
-    .line 145
+    .line 146
     invoke-virtual {v0, v2, p1, v3, v1}, Landroid/widget/FrameLayout$LayoutParams;->setMargins(IIII)V
 
-    .line 151
+    .line 152
     iget-object p1, p0, Lorg/telegram/ui/Components/TranslateAlert;->scrollView:Landroidx/core/widget/NestedScrollView;
 
     iget-object v0, p0, Lorg/telegram/ui/Components/TranslateAlert;->scrollViewLayout:Landroid/widget/FrameLayout$LayoutParams;
@@ -3884,7 +3916,7 @@
 
     const/4 v0, 0x0
 
-    .line 158
+    .line 159
     invoke-direct {p0, p1, p2, v0}, Lorg/telegram/ui/Components/TranslateAlert;->openAnimationTo(FZLjava/lang/Runnable;)V
 
     return-void
@@ -3893,7 +3925,7 @@
 .method private openAnimationTo(FZLjava/lang/Runnable;)V
     .registers 7
 
-    .line 161
+    .line 162
     iget-boolean v0, p0, Lorg/telegram/ui/Components/TranslateAlert;->openAnimationToAnimatorPriority:Z
 
     if-eqz v0, :cond_7
@@ -3902,13 +3934,13 @@
 
     return-void
 
-    .line 164
+    .line 165
     :cond_7
     iput-boolean p2, p0, Lorg/telegram/ui/Components/TranslateAlert;->openAnimationToAnimatorPriority:Z
 
     const/4 p2, 0x0
 
-    .line 165
+    .line 166
     invoke-static {p1, p2}, Ljava/lang/Math;->max(FF)F
 
     move-result p1
@@ -3919,12 +3951,12 @@
 
     move-result p1
 
-    .line 166
+    .line 167
     iget-object p2, p0, Lorg/telegram/ui/Components/TranslateAlert;->openAnimationToAnimator:Landroid/animation/ValueAnimator;
 
     if-eqz p2, :cond_1b
 
-    .line 167
+    .line 168
     invoke-virtual {p2}, Landroid/animation/ValueAnimator;->cancel()V
 
     :cond_1b
@@ -3934,7 +3966,7 @@
 
     const/4 v0, 0x0
 
-    .line 169
+    .line 170
     iget v1, p0, Lorg/telegram/ui/Components/TranslateAlert;->containerOpenAnimationT:F
 
     aput v1, p2, v0
@@ -3949,14 +3981,14 @@
 
     iput-object p2, p0, Lorg/telegram/ui/Components/TranslateAlert;->openAnimationToAnimator:Landroid/animation/ValueAnimator;
 
-    .line 170
+    .line 171
     new-instance v1, Lorg/telegram/ui/Components/TranslateAlert$$ExternalSyntheticLambda0;
 
     invoke-direct {v1, p0}, Lorg/telegram/ui/Components/TranslateAlert$$ExternalSyntheticLambda0;-><init>(Lorg/telegram/ui/Components/TranslateAlert;)V
 
     invoke-virtual {p2, v1}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    .line 171
+    .line 172
     iget-object p2, p0, Lorg/telegram/ui/Components/TranslateAlert;->openAnimationToAnimator:Landroid/animation/ValueAnimator;
 
     new-instance v1, Lorg/telegram/ui/Components/TranslateAlert$1;
@@ -3965,21 +3997,21 @@
 
     invoke-virtual {p2, v1}, Landroid/animation/ValueAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 183
+    .line 184
     iget-object p2, p0, Lorg/telegram/ui/Components/TranslateAlert;->openAnimationToAnimator:Landroid/animation/ValueAnimator;
 
     sget-object p3, Lorg/telegram/ui/Components/CubicBezierInterpolator;->EASE_OUT:Lorg/telegram/ui/Components/CubicBezierInterpolator;
 
     invoke-virtual {p2, p3}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 184
+    .line 185
     iget-object p2, p0, Lorg/telegram/ui/Components/TranslateAlert;->openAnimationToAnimator:Landroid/animation/ValueAnimator;
 
     const-wide/16 v1, 0xdc
 
     invoke-virtual {p2, v1, v2}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
-    .line 185
+    .line 186
     iget-object p2, p0, Lorg/telegram/ui/Components/TranslateAlert;->openAnimationToAnimator:Landroid/animation/ValueAnimator;
 
     invoke-virtual {p2}, Landroid/animation/ValueAnimator;->start()V
@@ -3992,12 +4024,12 @@
 
     if-ltz p3, :cond_5f
 
-    .line 186
+    .line 187
     iget p1, p0, Lorg/telegram/ui/Components/TranslateAlert;->blockIndex:I
 
     if-gt p1, v0, :cond_5f
 
-    .line 187
+    .line 188
     invoke-direct {p0}, Lorg/telegram/ui/Components/TranslateAlert;->fetchNext()Z
 
     :cond_5f
@@ -4009,7 +4041,7 @@
 
     const/4 v0, 0x0
 
-    .line 809
+    .line 811
     invoke-direct {p0, p1, p2, v0}, Lorg/telegram/ui/Components/TranslateAlert;->openTo(FZZ)V
 
     return-void
@@ -4020,7 +4052,7 @@
 
     const/4 v0, 0x0
 
-    .line 819
+    .line 821
     invoke-static {p1, v0}, Ljava/lang/Math;->max(FF)F
 
     move-result p1
@@ -4031,7 +4063,7 @@
 
     move-result p1
 
-    .line 820
+    .line 822
     iget-boolean v1, p0, Lorg/telegram/ui/Components/TranslateAlert;->openingAnimatorPriority:Z
 
     if-eqz v1, :cond_12
@@ -4040,16 +4072,16 @@
 
     return-void
 
-    .line 823
+    .line 825
     :cond_12
     iput-boolean p2, p0, Lorg/telegram/ui/Components/TranslateAlert;->openingAnimatorPriority:Z
 
-    .line 824
+    .line 826
     iget-object p2, p0, Lorg/telegram/ui/Components/TranslateAlert;->openingAnimator:Landroid/animation/ValueAnimator;
 
     if-eqz p2, :cond_1b
 
-    .line 825
+    .line 827
     invoke-virtual {p2}, Landroid/animation/ValueAnimator;->cancel()V
 
     :cond_1b
@@ -4059,7 +4091,7 @@
 
     const/4 v1, 0x0
 
-    .line 827
+    .line 829
     iget v2, p0, Lorg/telegram/ui/Components/TranslateAlert;->openingT:F
 
     aput v2, p2, v1
@@ -4074,7 +4106,7 @@
 
     iput-object p2, p0, Lorg/telegram/ui/Components/TranslateAlert;->openingAnimator:Landroid/animation/ValueAnimator;
 
-    .line 828
+    .line 830
     iget-object p2, p0, Lorg/telegram/ui/Components/TranslateAlert;->backDrawable:Landroid/graphics/drawable/ColorDrawable;
 
     iget v1, p0, Lorg/telegram/ui/Components/TranslateAlert;->openingT:F
@@ -4087,7 +4119,7 @@
 
     invoke-virtual {p2, v1}, Landroid/graphics/drawable/ColorDrawable;->setAlpha(I)V
 
-    .line 829
+    .line 831
     iget-object p2, p0, Lorg/telegram/ui/Components/TranslateAlert;->openingAnimator:Landroid/animation/ValueAnimator;
 
     new-instance v1, Lorg/telegram/ui/Components/TranslateAlert$$ExternalSyntheticLambda1;
@@ -4100,15 +4132,15 @@
 
     if-gtz p2, :cond_4d
 
-    .line 836
+    .line 838
     iget-object p2, p0, Lorg/telegram/ui/Components/TranslateAlert;->onDismiss:Ljava/lang/Runnable;
 
     if-eqz p2, :cond_4d
 
-    .line 837
+    .line 839
     invoke-interface {p2}, Ljava/lang/Runnable;->run()V
 
-    .line 840
+    .line 842
     :cond_4d
     iget-object p2, p0, Lorg/telegram/ui/Components/TranslateAlert;->openingAnimator:Landroid/animation/ValueAnimator;
 
@@ -4118,14 +4150,14 @@
 
     invoke-virtual {p2, v0}, Landroid/animation/ValueAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 854
+    .line 856
     iget-object p2, p0, Lorg/telegram/ui/Components/TranslateAlert;->openingAnimator:Landroid/animation/ValueAnimator;
 
     sget-object v0, Lorg/telegram/ui/Components/CubicBezierInterpolator;->EASE_OUT_QUINT:Lorg/telegram/ui/Components/CubicBezierInterpolator;
 
     invoke-virtual {p2, v0}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 855
+    .line 857
     iget-object p2, p0, Lorg/telegram/ui/Components/TranslateAlert;->openingAnimator:Landroid/animation/ValueAnimator;
 
     iget v0, p0, Lorg/telegram/ui/Components/TranslateAlert;->openingT:F
@@ -4156,7 +4188,7 @@
 
     invoke-virtual {p2, v0, v1}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
-    .line 856
+    .line 858
     iget-object p1, p0, Lorg/telegram/ui/Components/TranslateAlert;->openingAnimator:Landroid/animation/ValueAnimator;
 
     if-eqz p3, :cond_7e
@@ -4171,7 +4203,7 @@
     :goto_80
     invoke-virtual {p1, p2, p3}, Landroid/animation/ValueAnimator;->setStartDelay(J)V
 
-    .line 857
+    .line 859
     iget-object p1, p0, Lorg/telegram/ui/Components/TranslateAlert;->openingAnimator:Landroid/animation/ValueAnimator;
 
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->start()V
@@ -4182,7 +4214,7 @@
 .method private scrollAtBottom()Z
     .registers 5
 
-    .line 559
+    .line 561
     iget-object v0, p0, Lorg/telegram/ui/Components/TranslateAlert;->scrollView:Landroidx/core/widget/NestedScrollView;
 
     invoke-virtual {v0}, Landroid/widget/FrameLayout;->getChildCount()I
@@ -4197,12 +4229,12 @@
 
     move-result-object v0
 
-    .line 560
+    .line 562
     invoke-virtual {v0}, Landroid/view/View;->getBottom()I
 
     move-result v0
 
-    .line 561
+    .line 563
     iget-object v1, p0, Lorg/telegram/ui/Components/TranslateAlert;->textsView:Lorg/telegram/ui/Components/TranslateAlert$TextBlocksLayout;
 
     invoke-virtual {v1}, Lorg/telegram/ui/Components/TranslateAlert$TextBlocksLayout;->getFirstUnloadedBlock()Lorg/telegram/ui/Components/TranslateAlert$LoadingTextView2;
@@ -4211,12 +4243,12 @@
 
     if-eqz v1, :cond_1c
 
-    .line 563
+    .line 565
     invoke-virtual {v1}, Landroid/view/ViewGroup;->getTop()I
 
     move-result v0
 
-    .line 565
+    .line 567
     :cond_1c
     iget-object v1, p0, Lorg/telegram/ui/Components/TranslateAlert;->scrollView:Landroidx/core/widget/NestedScrollView;
 
@@ -4234,7 +4266,7 @@
 
     sub-int/2addr v0, v1
 
-    .line 566
+    .line 568
     iget-object v1, p0, Lorg/telegram/ui/Components/TranslateAlert;->textsContainerView:Landroid/widget/FrameLayout;
 
     invoke-virtual {v1}, Landroid/widget/FrameLayout;->getPaddingBottom()I
@@ -4257,7 +4289,7 @@
 
     const/4 v0, 0x0
 
-    .line 577
+    .line 579
     invoke-direct {p0, p1, v0}, Lorg/telegram/ui/Components/TranslateAlert;->scrollYTo(FLjava/lang/Runnable;)V
 
     return-void
@@ -4268,14 +4300,14 @@
 
     const/4 v0, 0x0
 
-    .line 580
+    .line 582
     invoke-direct {p0, p1, v0, p2}, Lorg/telegram/ui/Components/TranslateAlert;->openAnimationTo(FZLjava/lang/Runnable;)V
 
     const/high16 p2, 0x3f800000    # 1.0f
 
     add-float/2addr p1, p2
 
-    .line 581
+    .line 583
     invoke-direct {p0, p1, v0}, Lorg/telegram/ui/Components/TranslateAlert;->openTo(FZ)V
 
     return-void
@@ -4284,14 +4316,14 @@
 .method private setScrollY(F)V
     .registers 6
 
-    .line 570
+    .line 572
     invoke-direct {p0, p1}, Lorg/telegram/ui/Components/TranslateAlert;->openAnimation(F)V
 
     const/high16 v0, 0x3f800000    # 1.0f
 
     add-float/2addr p1, v0
 
-    .line 571
+    .line 573
     invoke-static {p1, v0}, Ljava/lang/Math;->min(FF)F
 
     move-result p1
@@ -4304,7 +4336,7 @@
 
     iput p1, p0, Lorg/telegram/ui/Components/TranslateAlert;->openingT:F
 
-    .line 572
+    .line 574
     iget-object v1, p0, Lorg/telegram/ui/Components/TranslateAlert;->backDrawable:Landroid/graphics/drawable/ColorDrawable;
 
     const/high16 v2, 0x424c0000    # 51.0f
@@ -4315,12 +4347,12 @@
 
     invoke-virtual {v1, p1}, Landroid/graphics/drawable/ColorDrawable;->setAlpha(I)V
 
-    .line 573
+    .line 575
     iget-object p1, p0, Lorg/telegram/ui/Components/TranslateAlert;->container:Landroid/widget/FrameLayout;
 
     invoke-virtual {p1}, Landroid/widget/FrameLayout;->invalidate()V
 
-    .line 574
+    .line 576
     iget-object p1, p0, Lorg/telegram/ui/Components/TranslateAlert;->bulletinContainer:Landroid/widget/FrameLayout;
 
     iget v1, p0, Lorg/telegram/ui/Components/TranslateAlert;->openingT:F
@@ -4359,7 +4391,7 @@
 
     move-object v12, p1
 
-    .line 1165
+    .line 1173
     new-instance v13, Lorg/telegram/ui/Components/TranslateAlert;
 
     move-object v0, v13
@@ -4390,19 +4422,19 @@
 
     if-eqz v12, :cond_27
 
-    .line 1167
+    .line 1175
     invoke-virtual {p1}, Lorg/telegram/ui/ActionBar/BaseFragment;->getParentActivity()Landroid/app/Activity;
 
     move-result-object v0
 
     if-eqz v0, :cond_2a
 
-    .line 1168
+    .line 1176
     invoke-virtual {p1, v13}, Lorg/telegram/ui/ActionBar/BaseFragment;->showDialog(Landroid/app/Dialog;)Landroid/app/Dialog;
 
     goto :goto_2a
 
-    .line 1171
+    .line 1179
     :cond_27
     invoke-virtual {v13}, Lorg/telegram/ui/Components/TranslateAlert;->show()V
 
@@ -4416,7 +4448,7 @@
 
     move-object v9, p1
 
-    .line 1176
+    .line 1184
     new-instance v10, Lorg/telegram/ui/Components/TranslateAlert;
 
     move-object v0, v10
@@ -4441,19 +4473,19 @@
 
     if-eqz v9, :cond_1e
 
-    .line 1178
+    .line 1186
     invoke-virtual {p1}, Lorg/telegram/ui/ActionBar/BaseFragment;->getParentActivity()Landroid/app/Activity;
 
     move-result-object v0
 
     if-eqz v0, :cond_21
 
-    .line 1179
+    .line 1187
     invoke-virtual {p1, v10}, Lorg/telegram/ui/ActionBar/BaseFragment;->showDialog(Landroid/app/Dialog;)Landroid/app/Dialog;
 
     goto :goto_21
 
-    .line 1182
+    .line 1190
     :cond_1e
     invoke-virtual {v10}, Lorg/telegram/ui/Components/TranslateAlert;->show()V
 
@@ -4465,18 +4497,18 @@
 .method private static translateText(ILorg/telegram/tgnet/TLRPC$InputPeer;ILjava/lang/String;Ljava/lang/String;)V
     .registers 6
 
-    .line 1144
+    .line 1152
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_messages_translateText;
 
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_messages_translateText;-><init>()V
 
-    .line 1146
+    .line 1154
     iput-object p1, v0, Lorg/telegram/tgnet/TLRPC$TL_messages_translateText;->peer:Lorg/telegram/tgnet/TLRPC$InputPeer;
 
-    .line 1147
+    .line 1155
     iput p2, v0, Lorg/telegram/tgnet/TLRPC$TL_messages_translateText;->msg_id:I
 
-    .line 1148
+    .line 1156
     iget p1, v0, Lorg/telegram/tgnet/TLRPC$TL_messages_translateText;->flags:I
 
     or-int/lit8 p1, p1, 0x1
@@ -4485,19 +4517,19 @@
 
     if-eqz p3, :cond_17
 
-    .line 1151
+    .line 1159
     iput-object p3, v0, Lorg/telegram/tgnet/TLRPC$TL_messages_translateText;->from_lang:Ljava/lang/String;
 
     or-int/lit8 p1, p1, 0x4
 
-    .line 1152
+    .line 1160
     iput p1, v0, Lorg/telegram/tgnet/TLRPC$TL_messages_translateText;->flags:I
 
-    .line 1155
+    .line 1163
     :cond_17
     iput-object p4, v0, Lorg/telegram/tgnet/TLRPC$TL_messages_translateText;->to_lang:Ljava/lang/String;
 
-    .line 1158
+    .line 1166
     :try_start_19
     invoke-static {p0}, Lorg/telegram/tgnet/ConnectionsManager;->getInstance(I)Lorg/telegram/tgnet/ConnectionsManager;
 
@@ -4514,7 +4546,7 @@
     :catch_23
     move-exception p0
 
-    .line 1160
+    .line 1168
     invoke-static {p0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     :goto_27
@@ -4524,12 +4556,12 @@
 .method private updateCanExpand()V
     .registers 6
 
-    .line 219
+    .line 220
     invoke-direct {p0}, Lorg/telegram/ui/Components/TranslateAlert;->canExpand()Z
 
     move-result v0
 
-    .line 220
+    .line 221
     iget v1, p0, Lorg/telegram/ui/Components/TranslateAlert;->containerOpenAnimationT:F
 
     const/4 v2, 0x0
@@ -4542,10 +4574,10 @@
 
     const/4 v1, 0x0
 
-    .line 221
+    .line 222
     invoke-direct {p0, v2, v1}, Lorg/telegram/ui/Components/TranslateAlert;->openAnimationTo(FZ)V
 
-    .line 224
+    .line 225
     :cond_11
     iget-object v1, p0, Lorg/telegram/ui/Components/TranslateAlert;->buttonShadowView:Landroid/widget/FrameLayout;
 
@@ -4606,7 +4638,7 @@
 .method public dismiss()V
     .registers 3
 
-    .line 802
+    .line 804
     iget-boolean v0, p0, Lorg/telegram/ui/Components/TranslateAlert;->dismissed:Z
 
     if-eqz v0, :cond_5
@@ -4616,12 +4648,12 @@
     :cond_5
     const/4 v0, 0x1
 
-    .line 804
+    .line 806
     iput-boolean v0, p0, Lorg/telegram/ui/Components/TranslateAlert;->dismissed:Z
 
     const/4 v1, 0x0
 
-    .line 806
+    .line 808
     invoke-direct {p0, v1, v0}, Lorg/telegram/ui/Components/TranslateAlert;->openTo(FZ)V
 
     return-void
@@ -4630,7 +4662,7 @@
 .method public dismissInternal()V
     .registers 2
 
-    .line 861
+    .line 863
     :try_start_0
     invoke-super {p0}, Landroid/app/Dialog;->dismiss()V
     :try_end_3
@@ -4641,7 +4673,7 @@
     :catch_4
     move-exception v0
 
-    .line 863
+    .line 865
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     :goto_8
@@ -4653,25 +4685,25 @@
 
     move-object/from16 v1, p0
 
-    .line 612
+    .line 614
     :try_start_2
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getX()F
 
     move-result v0
 
-    .line 613
+    .line 615
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getY()F
 
     move-result v2
 
-    .line 615
+    .line 617
     iget-object v3, v1, Lorg/telegram/ui/Components/TranslateAlert;->container:Landroid/widget/FrameLayout;
 
     iget-object v4, v1, Lorg/telegram/ui/Components/TranslateAlert;->containerRect:Landroid/graphics/Rect;
 
     invoke-virtual {v3, v4}, Landroid/widget/FrameLayout;->getGlobalVisibleRect(Landroid/graphics/Rect;)Z
 
-    .line 616
+    .line 618
     iget-object v3, v1, Lorg/telegram/ui/Components/TranslateAlert;->containerRect:Landroid/graphics/Rect;
 
     float-to-int v4, v0
@@ -4688,19 +4720,19 @@
 
     if-nez v3, :cond_36
 
-    .line 617
+    .line 619
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v3
 
     if-nez v3, :cond_26
 
-    .line 618
+    .line 620
     iput-boolean v7, v1, Lorg/telegram/ui/Components/TranslateAlert;->pressedOutside:Z
 
     return v7
 
-    .line 620
+    .line 622
     :cond_26
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getAction()I
 
@@ -4708,15 +4740,15 @@
 
     if-ne v3, v7, :cond_36
 
-    .line 621
+    .line 623
     iget-boolean v3, v1, Lorg/telegram/ui/Components/TranslateAlert;->pressedOutside:Z
 
     if-eqz v3, :cond_36
 
-    .line 622
+    .line 624
     iput-boolean v6, v1, Lorg/telegram/ui/Components/TranslateAlert;->pressedOutside:Z
 
-    .line 623
+    .line 625
     invoke-virtual/range {p0 .. p0}, Lorg/telegram/ui/Components/TranslateAlert;->dismiss()V
     :try_end_35
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_35} :catch_2f1
@@ -4726,7 +4758,7 @@
     :cond_36
     const/4 v3, 0x0
 
-    .line 630
+    .line 632
     :try_start_37
     iget-object v8, v1, Lorg/telegram/ui/Components/TranslateAlert;->allTextsView:Landroid/widget/TextView;
 
@@ -4734,7 +4766,7 @@
 
     invoke-virtual {v8, v9}, Landroid/widget/TextView;->getGlobalVisibleRect(Landroid/graphics/Rect;)Z
 
-    .line 631
+    .line 633
     iget-object v8, v1, Lorg/telegram/ui/Components/TranslateAlert;->textRect:Landroid/graphics/Rect;
 
     invoke-virtual {v8, v4, v5}, Landroid/graphics/Rect;->contains(II)Z
@@ -4749,14 +4781,14 @@
 
     if-nez v8, :cond_134
 
-    .line 632
+    .line 634
     iget-object v8, v1, Lorg/telegram/ui/Components/TranslateAlert;->allTextsView:Landroid/widget/TextView;
 
     invoke-virtual {v8}, Landroid/widget/TextView;->getLayout()Landroid/text/Layout;
 
     move-result-object v8
 
-    .line 633
+    .line 635
     iget-object v10, v1, Lorg/telegram/ui/Components/TranslateAlert;->allTextsView:Landroid/widget/TextView;
 
     invoke-virtual {v10}, Landroid/widget/TextView;->getLeft()I
@@ -4779,7 +4811,7 @@
 
     float-to-int v0, v0
 
-    .line 634
+    .line 636
     iget-object v10, v1, Lorg/telegram/ui/Components/TranslateAlert;->allTextsView:Landroid/widget/TextView;
 
     invoke-virtual {v10}, Landroid/widget/TextView;->getTop()I
@@ -4822,24 +4854,24 @@
 
     float-to-int v10, v10
 
-    .line 635
+    .line 637
     invoke-virtual {v8, v10}, Landroid/text/Layout;->getLineForVertical(I)I
 
     move-result v11
 
     int-to-float v15, v0
 
-    .line 636
+    .line 638
     invoke-virtual {v8, v11, v15}, Landroid/text/Layout;->getOffsetForHorizontal(IF)I
 
     move-result v0
 
-    .line 638
+    .line 640
     invoke-virtual {v8, v11}, Landroid/text/Layout;->getLineLeft(I)F
 
     move-result v12
 
-    .line 639
+    .line 641
     iget-object v13, v1, Lorg/telegram/ui/Components/TranslateAlert;->allTexts:Landroid/text/Spannable;
 
     instance-of v13, v13, Landroid/text/Spannable;
@@ -4860,7 +4892,7 @@
 
     if-ltz v11, :cond_134
 
-    .line 640
+    .line 642
     iget-object v11, v1, Lorg/telegram/ui/Components/TranslateAlert;->allTexts:Landroid/text/Spannable;
 
     const-class v12, Landroid/text/style/ClickableSpan;
@@ -4873,12 +4905,12 @@
 
     if-eqz v0, :cond_134
 
-    .line 641
+    .line 643
     array-length v11, v0
 
     if-lt v11, v7, :cond_134
 
-    .line 642
+    .line 644
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v11
@@ -4895,7 +4927,7 @@
 
     if-ne v11, v12, :cond_e8
 
-    .line 643
+    .line 645
     iget-object v0, v1, Lorg/telegram/ui/Components/TranslateAlert;->pressedLink:Lorg/telegram/ui/Components/LinkSpanDrawable;
 
     invoke-virtual {v0}, Lorg/telegram/ui/Components/LinkSpanDrawable;->getSpan()Landroid/text/style/CharacterStyle;
@@ -4908,21 +4940,21 @@
 
     invoke-virtual {v0, v8}, Landroid/text/style/ClickableSpan;->onClick(Landroid/view/View;)V
 
-    .line 644
+    .line 646
     iget-object v0, v1, Lorg/telegram/ui/Components/TranslateAlert;->links:Lorg/telegram/ui/Components/LinkSpanDrawable$LinkCollector;
 
     if-eqz v0, :cond_d9
 
-    .line 645
+    .line 647
     iget-object v8, v1, Lorg/telegram/ui/Components/TranslateAlert;->pressedLink:Lorg/telegram/ui/Components/LinkSpanDrawable;
 
     invoke-virtual {v0, v8}, Lorg/telegram/ui/Components/LinkSpanDrawable$LinkCollector;->removeLink(Lorg/telegram/ui/Components/LinkSpanDrawable;)V
 
-    .line 647
+    .line 649
     :cond_d9
     iput-object v9, v1, Lorg/telegram/ui/Components/TranslateAlert;->pressedLink:Lorg/telegram/ui/Components/LinkSpanDrawable;
 
-    .line 648
+    .line 650
     iget-object v0, v1, Lorg/telegram/ui/Components/TranslateAlert;->allTextsView:Landroid/widget/TextView;
 
     iget-boolean v8, v1, Lorg/telegram/ui/Components/TranslateAlert;->noforwards:Z
@@ -4941,7 +4973,7 @@
 
     goto :goto_12e
 
-    .line 649
+    .line 651
     :cond_e8
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getAction()I
 
@@ -4949,7 +4981,7 @@
 
     if-nez v9, :cond_12e
 
-    .line 650
+    .line 652
     new-instance v9, Lorg/telegram/ui/Components/LinkSpanDrawable;
 
     aget-object v13, v0, v6
@@ -4972,15 +5004,15 @@
 
     iput-object v9, v1, Lorg/telegram/ui/Components/TranslateAlert;->pressedLink:Lorg/telegram/ui/Components/LinkSpanDrawable;
 
-    .line 651
+    .line 653
     iget-object v0, v1, Lorg/telegram/ui/Components/TranslateAlert;->links:Lorg/telegram/ui/Components/LinkSpanDrawable$LinkCollector;
 
     if-eqz v0, :cond_10a
 
-    .line 652
+    .line 654
     invoke-virtual {v0, v9}, Lorg/telegram/ui/Components/LinkSpanDrawable$LinkCollector;->addLink(Lorg/telegram/ui/Components/LinkSpanDrawable;)V
 
-    .line 654
+    .line 656
     :cond_10a
     iget-object v0, v1, Lorg/telegram/ui/Components/TranslateAlert;->pressedLink:Lorg/telegram/ui/Components/LinkSpanDrawable;
 
@@ -4988,7 +5020,7 @@
 
     move-result-object v0
 
-    .line 655
+    .line 657
     iget-object v9, v1, Lorg/telegram/ui/Components/TranslateAlert;->allTexts:Landroid/text/Spannable;
 
     iget-object v10, v1, Lorg/telegram/ui/Components/TranslateAlert;->pressedLink:Lorg/telegram/ui/Components/LinkSpanDrawable;
@@ -5001,7 +5033,7 @@
 
     move-result v9
 
-    .line 656
+    .line 658
     iget-object v10, v1, Lorg/telegram/ui/Components/TranslateAlert;->allTexts:Landroid/text/Spannable;
 
     iget-object v11, v1, Lorg/telegram/ui/Components/TranslateAlert;->pressedLink:Lorg/telegram/ui/Components/LinkSpanDrawable;
@@ -5014,13 +5046,13 @@
 
     move-result v10
 
-    .line 657
+    .line 659
     invoke-virtual {v0, v8, v9, v3}, Lorg/telegram/ui/Components/LinkPath;->setCurrentLayout(Landroid/text/Layout;IF)V
 
-    .line 658
+    .line 660
     invoke-virtual {v8, v9, v10, v0}, Landroid/text/Layout;->getSelectionPath(IILandroid/graphics/Path;)V
 
-    .line 660
+    .line 662
     :cond_12e
     :goto_12e
     iget-object v0, v1, Lorg/telegram/ui/Components/TranslateAlert;->allTextsView:Landroid/widget/TextView;
@@ -5029,21 +5061,21 @@
 
     return v7
 
-    .line 665
+    .line 667
     :cond_134
     iget-object v0, v1, Lorg/telegram/ui/Components/TranslateAlert;->pressedLink:Lorg/telegram/ui/Components/LinkSpanDrawable;
 
     if-eqz v0, :cond_146
 
-    .line 666
+    .line 668
     iget-object v0, v1, Lorg/telegram/ui/Components/TranslateAlert;->links:Lorg/telegram/ui/Components/LinkSpanDrawable$LinkCollector;
 
     if-eqz v0, :cond_13f
 
-    .line 667
+    .line 669
     invoke-virtual {v0}, Lorg/telegram/ui/Components/LinkSpanDrawable$LinkCollector;->clear()V
 
-    .line 669
+    .line 671
     :cond_13f
     iput-object v9, v1, Lorg/telegram/ui/Components/TranslateAlert;->pressedLink:Lorg/telegram/ui/Components/LinkSpanDrawable;
     :try_end_141
@@ -5054,11 +5086,11 @@
     :catch_142
     move-exception v0
 
-    .line 672
+    .line 674
     :try_start_143
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 675
+    .line 677
     :cond_146
     :goto_146
     iget-object v0, v1, Lorg/telegram/ui/Components/TranslateAlert;->scrollView:Landroidx/core/widget/NestedScrollView;
@@ -5067,21 +5099,21 @@
 
     invoke-virtual {v0, v8}, Landroid/widget/FrameLayout;->getGlobalVisibleRect(Landroid/graphics/Rect;)Z
 
-    .line 676
+    .line 678
     iget-object v0, v1, Lorg/telegram/ui/Components/TranslateAlert;->backButton:Landroid/widget/ImageView;
 
     iget-object v8, v1, Lorg/telegram/ui/Components/TranslateAlert;->backRect:Landroid/graphics/Rect;
 
     invoke-virtual {v0, v8}, Landroid/widget/ImageView;->getGlobalVisibleRect(Landroid/graphics/Rect;)Z
 
-    .line 677
+    .line 679
     iget-object v0, v1, Lorg/telegram/ui/Components/TranslateAlert;->buttonView:Landroid/widget/FrameLayout;
 
     iget-object v8, v1, Lorg/telegram/ui/Components/TranslateAlert;->buttonRect:Landroid/graphics/Rect;
 
     invoke-virtual {v0, v8}, Landroid/widget/FrameLayout;->getGlobalVisibleRect(Landroid/graphics/Rect;)Z
 
-    .line 678
+    .line 680
     iget-object v0, v1, Lorg/telegram/ui/Components/TranslateAlert;->pressedLink:Lorg/telegram/ui/Components/LinkSpanDrawable;
 
     if-nez v0, :cond_2c6
@@ -5092,10 +5124,10 @@
 
     if-nez v0, :cond_2c6
 
-    .line 679
+    .line 681
     iget-object v0, v1, Lorg/telegram/ui/Components/TranslateAlert;->backRect:Landroid/graphics/Rect;
 
-    .line 680
+    .line 682
     invoke-virtual {v0, v4, v5}, Landroid/graphics/Rect;->contains(II)Z
 
     move-result v0
@@ -5104,21 +5136,21 @@
 
     iget-object v0, v1, Lorg/telegram/ui/Components/TranslateAlert;->buttonRect:Landroid/graphics/Rect;
 
-    .line 681
+    .line 683
     invoke-virtual {v0, v4, v5}, Landroid/graphics/Rect;->contains(II)Z
 
     move-result v0
 
     if-nez v0, :cond_1c8
 
-    .line 682
+    .line 684
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v0
 
     if-nez v0, :cond_1c8
 
-    .line 684
+    .line 686
     iget-object v0, v1, Lorg/telegram/ui/Components/TranslateAlert;->scrollRect:Landroid/graphics/Rect;
 
     invoke-virtual {v0, v4, v5}, Landroid/graphics/Rect;->contains(II)Z
@@ -5150,10 +5182,10 @@
     :goto_192
     iput-boolean v0, v1, Lorg/telegram/ui/Components/TranslateAlert;->fromScrollRect:Z
 
-    .line 685
+    .line 687
     iput-boolean v7, v1, Lorg/telegram/ui/Components/TranslateAlert;->maybeScrolling:Z
 
-    .line 686
+    .line 688
     iget-object v0, v1, Lorg/telegram/ui/Components/TranslateAlert;->scrollRect:Landroid/graphics/Rect;
 
     invoke-virtual {v0, v4, v5}, Landroid/graphics/Rect;->contains(II)Z
@@ -5185,17 +5217,17 @@
     :cond_1b1
     iput-boolean v6, v1, Lorg/telegram/ui/Components/TranslateAlert;->scrolling:Z
 
-    .line 687
+    .line 689
     iput v2, v1, Lorg/telegram/ui/Components/TranslateAlert;->fromY:F
 
-    .line 688
+    .line 690
     invoke-direct/range {p0 .. p0}, Lorg/telegram/ui/Components/TranslateAlert;->getScrollY()F
 
     move-result v0
 
     iput v0, v1, Lorg/telegram/ui/Components/TranslateAlert;->fromScrollY:F
 
-    .line 689
+    .line 691
     iget-object v0, v1, Lorg/telegram/ui/Components/TranslateAlert;->scrollView:Landroidx/core/widget/NestedScrollView;
 
     invoke-virtual {v0}, Landroid/widget/FrameLayout;->getScrollY()I
@@ -5206,12 +5238,12 @@
 
     iput v0, v1, Lorg/telegram/ui/Components/TranslateAlert;->fromScrollViewY:F
 
-    .line 690
+    .line 692
     invoke-super/range {p0 .. p1}, Landroid/app/Dialog;->dispatchTouchEvent(Landroid/view/MotionEvent;)Z
 
     return v7
 
-    .line 691
+    .line 693
     :cond_1c8
     iget-boolean v0, v1, Lorg/telegram/ui/Components/TranslateAlert;->maybeScrolling:Z
 
@@ -5231,18 +5263,18 @@
 
     if-ne v0, v7, :cond_2c6
 
-    .line 692
+    .line 694
     :cond_1d9
     iget v0, v1, Lorg/telegram/ui/Components/TranslateAlert;->fromY:F
 
     sub-float/2addr v0, v2
 
-    .line 693
+    .line 695
     iget-boolean v2, v1, Lorg/telegram/ui/Components/TranslateAlert;->fromScrollRect:Z
 
     if-eqz v2, :cond_1fd
 
-    .line 694
+    .line 696
     iget v2, v1, Lorg/telegram/ui/Components/TranslateAlert;->fromScrollViewY:F
 
     const/high16 v4, 0x42400000    # 48.0f
@@ -5269,17 +5301,17 @@
 
     if-gez v2, :cond_21e
 
-    .line 696
+    .line 698
     iput-boolean v7, v1, Lorg/telegram/ui/Components/TranslateAlert;->scrolling:Z
 
-    .line 697
+    .line 699
     iget-object v2, v1, Lorg/telegram/ui/Components/TranslateAlert;->allTextsView:Landroid/widget/TextView;
 
     invoke-virtual {v2, v6}, Landroid/widget/TextView;->setTextIsSelectable(Z)V
 
     goto :goto_21e
 
-    .line 699
+    .line 701
     :cond_1fd
     invoke-static {v0}, Ljava/lang/Math;->abs(F)F
 
@@ -5301,23 +5333,23 @@
 
     if-nez v2, :cond_21e
 
-    .line 700
+    .line 702
     iput-boolean v7, v1, Lorg/telegram/ui/Components/TranslateAlert;->scrolling:Z
 
-    .line 701
+    .line 703
     iget-object v2, v1, Lorg/telegram/ui/Components/TranslateAlert;->allTextsView:Landroid/widget/TextView;
 
     invoke-virtual {v2, v6}, Landroid/widget/TextView;->setTextIsSelectable(Z)V
 
-    .line 702
+    .line 704
     iget-object v2, v1, Lorg/telegram/ui/Components/TranslateAlert;->scrollView:Landroidx/core/widget/NestedScrollView;
 
     invoke-virtual {v2}, Landroidx/core/widget/NestedScrollView;->stopNestedScroll()V
 
-    .line 703
+    .line 705
     iput-boolean v6, v1, Lorg/telegram/ui/Components/TranslateAlert;->allowScroll:Z
 
-    .line 705
+    .line 707
     :cond_21e
     :goto_21e
     sget-object v2, Lorg/telegram/messenger/AndroidUtilities;->displayMetrics:Landroid/util/DisplayMetrics;
@@ -5326,7 +5358,7 @@
 
     int-to-float v2, v2
 
-    .line 706
+    .line 708
     invoke-direct/range {p0 .. p0}, Lorg/telegram/ui/Components/TranslateAlert;->minHeight()I
 
     move-result v4
@@ -5341,7 +5373,7 @@
 
     move-result v4
 
-    .line 707
+    .line 709
     iget v5, v1, Lorg/telegram/ui/Components/TranslateAlert;->fromScrollY:F
 
     const/high16 v8, -0x40800000    # -1.0f
@@ -5397,7 +5429,7 @@
 
     neg-float v5, v2
 
-    .line 709
+    .line 711
     :goto_25d
     invoke-direct/range {p0 .. p0}, Lorg/telegram/ui/Components/TranslateAlert;->canExpand()Z
 
@@ -5405,34 +5437,34 @@
 
     if-nez v2, :cond_267
 
-    .line 710
+    .line 712
     invoke-static {v5, v3}, Ljava/lang/Math;->min(FF)F
 
     move-result v5
 
-    .line 712
+    .line 714
     :cond_267
     invoke-direct/range {p0 .. p0}, Lorg/telegram/ui/Components/TranslateAlert;->updateCanExpand()V
 
-    .line 714
+    .line 716
     iget-boolean v2, v1, Lorg/telegram/ui/Components/TranslateAlert;->scrolling:Z
 
     if-eqz v2, :cond_2c6
 
-    .line 715
+    .line 717
     invoke-direct {v1, v5}, Lorg/telegram/ui/Components/TranslateAlert;->setScrollY(F)V
 
-    .line 716
+    .line 718
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v2
 
     if-ne v2, v7, :cond_2c5
 
-    .line 717
+    .line 719
     iput-boolean v6, v1, Lorg/telegram/ui/Components/TranslateAlert;->scrolling:Z
 
-    .line 718
+    .line 720
     iget-object v2, v1, Lorg/telegram/ui/Components/TranslateAlert;->allTextsView:Landroid/widget/TextView;
 
     iget-boolean v3, v1, Lorg/telegram/ui/Components/TranslateAlert;->noforwards:Z
@@ -5449,13 +5481,13 @@
     :goto_282
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setTextIsSelectable(Z)V
 
-    .line 719
+    .line 721
     iput-boolean v6, v1, Lorg/telegram/ui/Components/TranslateAlert;->maybeScrolling:Z
 
-    .line 720
+    .line 722
     iput-boolean v7, v1, Lorg/telegram/ui/Components/TranslateAlert;->allowScroll:Z
 
-    .line 722
+    .line 724
     invoke-static {v0}, Ljava/lang/Math;->abs(F)F
 
     move-result v0
@@ -5472,7 +5504,7 @@
 
     if-lez v0, :cond_2b6
 
-    .line 723
+    .line 725
     iget v0, v1, Lorg/telegram/ui/Components/TranslateAlert;->fromScrollY:F
 
     invoke-static {v0}, Ljava/lang/Math;->round(F)I
@@ -5510,7 +5542,7 @@
 
     goto :goto_2bd
 
-    .line 724
+    .line 726
     :cond_2b6
     iget v0, v1, Lorg/telegram/ui/Components/TranslateAlert;->fromScrollY:F
 
@@ -5525,13 +5557,13 @@
 
     invoke-direct {v2, v1}, Lorg/telegram/ui/Components/TranslateAlert$$ExternalSyntheticLambda7;-><init>(Lorg/telegram/ui/Components/TranslateAlert;)V
 
-    .line 721
+    .line 723
     invoke-direct {v1, v0, v2}, Lorg/telegram/ui/Components/TranslateAlert;->scrollYTo(FLjava/lang/Runnable;)V
 
     :cond_2c5
     return v7
 
-    .line 734
+    .line 736
     :cond_2c6
     invoke-direct/range {p0 .. p0}, Lorg/telegram/ui/Components/TranslateAlert;->hasSelection()Z
 
@@ -5543,10 +5575,10 @@
 
     if-eqz v0, :cond_2ec
 
-    .line 735
+    .line 737
     iput-boolean v6, v1, Lorg/telegram/ui/Components/TranslateAlert;->scrolling:Z
 
-    .line 736
+    .line 738
     iget-object v0, v1, Lorg/telegram/ui/Components/TranslateAlert;->allTextsView:Landroid/widget/TextView;
 
     iget-boolean v2, v1, Lorg/telegram/ui/Components/TranslateAlert;->noforwards:Z
@@ -5563,13 +5595,13 @@
     :goto_2db
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setTextIsSelectable(Z)V
 
-    .line 737
+    .line 739
     iput-boolean v6, v1, Lorg/telegram/ui/Components/TranslateAlert;->maybeScrolling:Z
 
-    .line 738
+    .line 740
     iput-boolean v7, v1, Lorg/telegram/ui/Components/TranslateAlert;->allowScroll:Z
 
-    .line 739
+    .line 741
     iget v0, v1, Lorg/telegram/ui/Components/TranslateAlert;->fromScrollY:F
 
     invoke-static {v0}, Ljava/lang/Math;->round(F)I
@@ -5580,7 +5612,7 @@
 
     invoke-direct {v1, v0}, Lorg/telegram/ui/Components/TranslateAlert;->scrollYTo(F)V
 
-    .line 741
+    .line 743
     :cond_2ec
     invoke-super/range {p0 .. p1}, Landroid/app/Dialog;->dispatchTouchEvent(Landroid/view/MotionEvent;)Z
 
@@ -5593,10 +5625,10 @@
     :catch_2f1
     move-exception v0
 
-    .line 743
+    .line 745
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 744
+    .line 746
     invoke-super/range {p0 .. p1}, Landroid/app/Dialog;->dispatchTouchEvent(Landroid/view/MotionEvent;)Z
 
     move-result v0
@@ -5613,7 +5645,7 @@
 
     const-string v1, "und"
 
-    .line 869
+    .line 871
     invoke-virtual {p1, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -5630,7 +5662,7 @@
 
     goto :goto_3e
 
-    .line 872
+    .line 874
     :cond_14
     invoke-static {}, Lorg/telegram/messenger/LocaleController;->getInstance()Lorg/telegram/messenger/LocaleController;
 
@@ -5640,7 +5672,7 @@
 
     move-result-object p1
 
-    .line 873
+    .line 875
     invoke-static {}, Lorg/telegram/messenger/LocaleController;->getInstance()Lorg/telegram/messenger/LocaleController;
 
     move-result-object v1
@@ -5656,7 +5688,7 @@
     :cond_27
     if-eqz v1, :cond_35
 
-    .line 877
+    .line 879
     iget-object v0, v1, Lorg/telegram/messenger/LocaleController$LocaleInfo;->pluralLangCode:Ljava/lang/String;
 
     const-string v1, "en"
@@ -5677,12 +5709,12 @@
     :goto_36
     if-eqz v0, :cond_3b
 
-    .line 880
+    .line 882
     iget-object p1, p1, Lorg/telegram/messenger/LocaleController$LocaleInfo;->nameEnglish:Ljava/lang/String;
 
     return-object p1
 
-    .line 882
+    .line 884
     :cond_3b
     iget-object p1, p1, Lorg/telegram/messenger/LocaleController$LocaleInfo;->name:Ljava/lang/String;
 
@@ -5696,17 +5728,17 @@
 .method protected onCreate(Landroid/os/Bundle;)V
     .registers 8
 
-    .line 753
+    .line 755
     invoke-super {p0, p1}, Landroid/app/Dialog;->onCreate(Landroid/os/Bundle;)V
 
-    .line 755
+    .line 757
     iget-object p1, p0, Lorg/telegram/ui/Components/TranslateAlert;->contentView:Landroid/widget/FrameLayout;
 
     const/4 v0, 0x0
 
     invoke-virtual {p1, v0, v0, v0, v0}, Landroid/widget/FrameLayout;->setPadding(IIII)V
 
-    .line 756
+    .line 758
     iget-object p1, p0, Lorg/telegram/ui/Components/TranslateAlert;->contentView:Landroid/widget/FrameLayout;
 
     new-instance v1, Landroid/view/ViewGroup$LayoutParams;
@@ -5717,35 +5749,35 @@
 
     invoke-virtual {p0, p1, v1}, Landroid/app/Dialog;->setContentView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 758
+    .line 760
     invoke-virtual {p0}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
 
     move-result-object p1
 
     const v1, 0x7f0f0005
 
-    .line 760
+    .line 762
     invoke-virtual {p1, v1}, Landroid/view/Window;->setWindowAnimations(I)V
 
-    .line 761
+    .line 763
     invoke-virtual {p1}, Landroid/view/Window;->getAttributes()Landroid/view/WindowManager$LayoutParams;
 
     move-result-object v1
 
-    .line 762
+    .line 764
     iput v2, v1, Landroid/view/WindowManager$LayoutParams;->width:I
 
     const/16 v3, 0x33
 
-    .line 763
+    .line 765
     iput v3, v1, Landroid/view/WindowManager$LayoutParams;->gravity:I
 
     const/4 v3, 0x0
 
-    .line 764
+    .line 766
     iput v3, v1, Landroid/view/WindowManager$LayoutParams;->dimAmount:F
 
-    .line 765
+    .line 767
     iget v3, v1, Landroid/view/WindowManager$LayoutParams;->flags:I
 
     and-int/lit8 v3, v3, -0x3
@@ -5756,10 +5788,10 @@
 
     or-int/2addr v3, v4
 
-    .line 766
+    .line 768
     iput v3, v1, Landroid/view/WindowManager$LayoutParams;->flags:I
 
-    .line 767
+    .line 769
     sget v4, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v5, 0x15
@@ -5770,10 +5802,10 @@
 
     or-int/2addr v3, v4
 
-    .line 768
+    .line 770
     iput v3, v1, Landroid/view/WindowManager$LayoutParams;->flags:I
 
-    .line 773
+    .line 775
     :cond_42
     iget v3, v1, Landroid/view/WindowManager$LayoutParams;->flags:I
 
@@ -5781,23 +5813,23 @@
 
     iput v3, v1, Landroid/view/WindowManager$LayoutParams;->flags:I
 
-    .line 774
+    .line 776
     iput v2, v1, Landroid/view/WindowManager$LayoutParams;->height:I
 
-    .line 775
+    .line 777
     invoke-virtual {p1, v1}, Landroid/view/Window;->setAttributes(Landroid/view/WindowManager$LayoutParams;)V
 
     const-string v1, "windowBackgroundWhite"
 
-    .line 777
+    .line 779
     invoke-static {v1}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
 
     move-result v1
 
-    .line 778
+    .line 780
     invoke-static {p1, v1}, Lorg/telegram/messenger/AndroidUtilities;->setNavigationBarColor(Landroid/view/Window;I)V
 
-    .line 779
+    .line 781
     invoke-static {v1}, Lorg/telegram/messenger/AndroidUtilities;->computePerceivedBrightness(I)F
 
     move-result v1
@@ -5815,7 +5847,7 @@
     :cond_65
     invoke-static {p1, v0}, Lorg/telegram/messenger/AndroidUtilities;->setLightNavigationBar(Landroid/view/Window;Z)V
 
-    .line 781
+    .line 783
     iget-object p1, p0, Lorg/telegram/ui/Components/TranslateAlert;->container:Landroid/widget/FrameLayout;
 
     invoke-virtual {p1}, Landroid/widget/FrameLayout;->forceLayout()V
@@ -5826,19 +5858,19 @@
 .method public show()V
     .registers 3
 
-    .line 793
+    .line 795
     invoke-super {p0}, Landroid/app/Dialog;->show()V
 
     const/4 v0, 0x0
 
-    .line 795
+    .line 797
     invoke-direct {p0, v0}, Lorg/telegram/ui/Components/TranslateAlert;->openAnimation(F)V
 
     const/high16 v0, 0x3f800000    # 1.0f
 
     const/4 v1, 0x1
 
-    .line 796
+    .line 798
     invoke-direct {p0, v0, v1, v1}, Lorg/telegram/ui/Components/TranslateAlert;->openTo(FZZ)V
 
     return-void
@@ -5847,7 +5879,7 @@
 .method public showDim(Z)V
     .registers 3
 
-    .line 555
+    .line 557
     iget-object v0, p0, Lorg/telegram/ui/Components/TranslateAlert;->contentView:Landroid/widget/FrameLayout;
 
     if-eqz p1, :cond_7
@@ -5868,7 +5900,7 @@
 .method public updateSourceLanguage()V
     .registers 4
 
-    .line 887
+    .line 889
     iget-object v0, p0, Lorg/telegram/ui/Components/TranslateAlert;->fromLanguage:Ljava/lang/String;
 
     invoke-virtual {p0, v0}, Lorg/telegram/ui/Components/TranslateAlert;->languageName(Ljava/lang/String;)Ljava/lang/String;
@@ -5877,21 +5909,21 @@
 
     if-eqz v0, :cond_1f
 
-    .line 888
+    .line 890
     iget-object v0, p0, Lorg/telegram/ui/Components/TranslateAlert;->subtitleView:Landroid/widget/LinearLayout;
 
     const/high16 v1, 0x3f800000    # 1.0f
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setAlpha(F)V
 
-    .line 889
+    .line 891
     iget-object v0, p0, Lorg/telegram/ui/Components/TranslateAlert;->subtitleFromView:Lorg/telegram/ui/Components/TranslateAlert$InlineLoadingTextView;
 
     iget-boolean v1, v0, Lorg/telegram/ui/Components/TranslateAlert$InlineLoadingTextView;->loaded:Z
 
     if-nez v1, :cond_37
 
-    .line 890
+    .line 892
     iget-object v1, p0, Lorg/telegram/ui/Components/TranslateAlert;->fromLanguage:Ljava/lang/String;
 
     invoke-virtual {p0, v1}, Lorg/telegram/ui/Components/TranslateAlert;->languageName(Ljava/lang/String;)Ljava/lang/String;
@@ -5902,13 +5934,13 @@
 
     goto :goto_37
 
-    .line 892
+    .line 894
     :cond_1f
     iget-boolean v0, p0, Lorg/telegram/ui/Components/TranslateAlert;->loaded:Z
 
     if-eqz v0, :cond_37
 
-    .line 893
+    .line 895
     iget-object v0, p0, Lorg/telegram/ui/Components/TranslateAlert;->subtitleView:Landroid/widget/LinearLayout;
 
     invoke-virtual {v0}, Landroid/widget/LinearLayout;->animate()Landroid/view/ViewPropertyAnimator;

@@ -25,7 +25,7 @@
 .method constructor <init>(Lorg/telegram/ui/GroupCallActivity;)V
     .registers 2
 
-    .line 1723
+    .line 1726
     iput-object p1, p0, Lorg/telegram/ui/GroupCallActivity$3;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -46,7 +46,7 @@
 .method public onOpenAnimationEnd()V
     .registers 3
 
-    .line 1731
+    .line 1734
     iget-object v0, p0, Lorg/telegram/ui/GroupCallActivity$3;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/GroupCallActivity;->access$2200(Lorg/telegram/ui/GroupCallActivity;)I
@@ -57,7 +57,7 @@
 
     if-ne v0, v1, :cond_e
 
-    .line 1732
+    .line 1735
     iget-object v0, p0, Lorg/telegram/ui/GroupCallActivity$3;->this$0:Lorg/telegram/ui/GroupCallActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/GroupCallActivity;->access$2300(Lorg/telegram/ui/GroupCallActivity;)V

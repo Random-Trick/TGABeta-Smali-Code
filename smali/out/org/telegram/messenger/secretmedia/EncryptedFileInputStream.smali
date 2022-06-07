@@ -125,7 +125,7 @@
 .end method
 
 .method public static decryptBytesWithKeyFile([BIILjava/io/File;)V
-    .registers 11
+    .registers 12
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/lang/Exception;
@@ -158,16 +158,16 @@
     .line 82
     invoke-virtual {v4}, Ljava/io/RandomAccessFile;->close()V
 
-    const/4 v6, 0x0
+    int-to-long v5, p2
+
+    const/4 v7, 0x0
 
     move-object v1, p0
 
     move v4, p1
 
-    move v5, p2
-
     .line 83
-    invoke-static/range {v1 .. v6}, Lorg/telegram/messenger/Utilities;->aesCtrDecryptionByteArray([B[B[BIII)V
+    invoke-static/range {v1 .. v7}, Lorg/telegram/messenger/Utilities;->aesCtrDecryptionByteArray([B[B[BIJI)V
 
     return-void
 .end method
@@ -198,7 +198,7 @@
 
 # virtual methods
 .method public read([BII)I
-    .registers 21
+    .registers 22
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -207,121 +207,125 @@
 
     move-object/from16 v0, p0
 
+    move/from16 v8, p3
+
     .line 49
     iget v1, v0, Lorg/telegram/messenger/secretmedia/EncryptedFileInputStream;->currentMode:I
 
-    const/4 v2, 0x1
+    const/4 v9, 0x1
 
-    if-ne v1, v2, :cond_31
+    if-ne v1, v9, :cond_33
 
     iget v1, v0, Lorg/telegram/messenger/secretmedia/EncryptedFileInputStream;->fileOffset:I
 
-    if-nez v1, :cond_31
+    if-nez v1, :cond_33
 
-    const/16 v1, 0x20
+    const/16 v10, 0x20
 
-    new-array v3, v1, [B
+    new-array v11, v10, [B
 
-    const/4 v4, 0x0
+    const/4 v12, 0x0
 
     .line 51
-    invoke-super {v0, v3, v4, v1}, Ljava/io/FileInputStream;->read([BII)I
+    invoke-super {v0, v11, v12, v10}, Ljava/io/FileInputStream;->read([BII)I
 
     .line 52
-    iget-object v6, v0, Lorg/telegram/messenger/secretmedia/EncryptedFileInputStream;->key:[B
+    iget-object v2, v0, Lorg/telegram/messenger/secretmedia/EncryptedFileInputStream;->key:[B
 
-    iget-object v7, v0, Lorg/telegram/messenger/secretmedia/EncryptedFileInputStream;->iv:[B
+    iget-object v3, v0, Lorg/telegram/messenger/secretmedia/EncryptedFileInputStream;->iv:[B
 
-    iget v10, v0, Lorg/telegram/messenger/secretmedia/EncryptedFileInputStream;->fileOffset:I
+    iget v6, v0, Lorg/telegram/messenger/secretmedia/EncryptedFileInputStream;->fileOffset:I
 
-    const/4 v11, 0x0
+    const/4 v7, 0x0
 
-    move-object/from16 v5, p1
+    move-object/from16 v1, p1
 
-    move/from16 v8, p2
+    move/from16 v4, p2
 
-    move/from16 v9, p3
+    move/from16 v5, p3
 
-    invoke-static/range {v5 .. v11}, Lorg/telegram/messenger/Utilities;->aesCbcEncryptionByteArraySafe([B[B[BIIII)V
+    invoke-static/range {v1 .. v7}, Lorg/telegram/messenger/Utilities;->aesCbcEncryptionByteArraySafe([B[B[BIIII)V
 
     .line 53
-    iget v5, v0, Lorg/telegram/messenger/secretmedia/EncryptedFileInputStream;->fileOffset:I
+    iget v1, v0, Lorg/telegram/messenger/secretmedia/EncryptedFileInputStream;->fileOffset:I
 
-    add-int/2addr v5, v1
+    add-int/2addr v1, v10
 
-    iput v5, v0, Lorg/telegram/messenger/secretmedia/EncryptedFileInputStream;->fileOffset:I
+    iput v1, v0, Lorg/telegram/messenger/secretmedia/EncryptedFileInputStream;->fileOffset:I
 
     .line 54
-    aget-byte v3, v3, v4
+    aget-byte v1, v11, v12
 
-    and-int/lit16 v3, v3, 0xff
+    and-int/lit16 v1, v1, 0xff
 
-    sub-int/2addr v3, v1
+    sub-int/2addr v1, v10
 
-    int-to-long v3, v3
+    int-to-long v1, v1
 
-    invoke-virtual {v0, v3, v4}, Lorg/telegram/messenger/secretmedia/EncryptedFileInputStream;->skip(J)J
+    invoke-virtual {v0, v1, v2}, Lorg/telegram/messenger/secretmedia/EncryptedFileInputStream;->skip(J)J
 
     .line 56
-    :cond_31
+    :cond_33
     invoke-super/range {p0 .. p3}, Ljava/io/FileInputStream;->read([BII)I
 
-    move-result v1
+    move-result v10
 
     .line 57
-    iget v3, v0, Lorg/telegram/messenger/secretmedia/EncryptedFileInputStream;->currentMode:I
+    iget v1, v0, Lorg/telegram/messenger/secretmedia/EncryptedFileInputStream;->currentMode:I
 
-    if-ne v3, v2, :cond_4a
+    if-ne v1, v9, :cond_4c
 
     .line 58
-    iget-object v5, v0, Lorg/telegram/messenger/secretmedia/EncryptedFileInputStream;->key:[B
+    iget-object v2, v0, Lorg/telegram/messenger/secretmedia/EncryptedFileInputStream;->key:[B
 
-    iget-object v6, v0, Lorg/telegram/messenger/secretmedia/EncryptedFileInputStream;->iv:[B
+    iget-object v3, v0, Lorg/telegram/messenger/secretmedia/EncryptedFileInputStream;->iv:[B
 
-    iget v9, v0, Lorg/telegram/messenger/secretmedia/EncryptedFileInputStream;->fileOffset:I
+    iget v6, v0, Lorg/telegram/messenger/secretmedia/EncryptedFileInputStream;->fileOffset:I
 
-    const/4 v10, 0x0
+    const/4 v7, 0x0
 
-    move-object/from16 v4, p1
+    move-object/from16 v1, p1
 
-    move/from16 v7, p2
+    move/from16 v4, p2
 
-    move/from16 v8, p3
+    move/from16 v5, p3
 
-    invoke-static/range {v4 .. v10}, Lorg/telegram/messenger/Utilities;->aesCbcEncryptionByteArraySafe([B[B[BIIII)V
+    invoke-static/range {v1 .. v7}, Lorg/telegram/messenger/Utilities;->aesCbcEncryptionByteArraySafe([B[B[BIIII)V
 
-    goto :goto_5d
+    goto :goto_5f
 
-    :cond_4a
-    if-nez v3, :cond_5d
+    :cond_4c
+    if-nez v1, :cond_5f
 
     .line 60
     iget-object v12, v0, Lorg/telegram/messenger/secretmedia/EncryptedFileInputStream;->key:[B
 
     iget-object v13, v0, Lorg/telegram/messenger/secretmedia/EncryptedFileInputStream;->iv:[B
 
-    iget v2, v0, Lorg/telegram/messenger/secretmedia/EncryptedFileInputStream;->fileOffset:I
+    int-to-long v1, v8
+
+    iget v3, v0, Lorg/telegram/messenger/secretmedia/EncryptedFileInputStream;->fileOffset:I
 
     move-object/from16 v11, p1
 
     move/from16 v14, p2
 
-    move/from16 v15, p3
+    move-wide v15, v1
 
-    move/from16 v16, v2
+    move/from16 v17, v3
 
-    invoke-static/range {v11 .. v16}, Lorg/telegram/messenger/Utilities;->aesCtrDecryptionByteArray([B[B[BIII)V
+    invoke-static/range {v11 .. v17}, Lorg/telegram/messenger/Utilities;->aesCtrDecryptionByteArray([B[B[BIJI)V
 
     .line 62
-    :cond_5d
-    :goto_5d
-    iget v2, v0, Lorg/telegram/messenger/secretmedia/EncryptedFileInputStream;->fileOffset:I
+    :cond_5f
+    :goto_5f
+    iget v1, v0, Lorg/telegram/messenger/secretmedia/EncryptedFileInputStream;->fileOffset:I
 
-    add-int v2, v2, p3
+    add-int/2addr v1, v8
 
-    iput v2, v0, Lorg/telegram/messenger/secretmedia/EncryptedFileInputStream;->fileOffset:I
+    iput v1, v0, Lorg/telegram/messenger/secretmedia/EncryptedFileInputStream;->fileOffset:I
 
-    return v1
+    return v10
 .end method
 
 .method public skip(J)J

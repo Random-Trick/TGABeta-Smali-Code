@@ -7,7 +7,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 45287
+    .line 45739
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -32,7 +32,7 @@
 
     goto :goto_22
 
-    .line 45296
+    .line 45748
     :cond_11
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_account_resetPasswordRequestedWait;
 
@@ -40,7 +40,7 @@
 
     goto :goto_22
 
-    .line 45299
+    .line 45751
     :cond_17
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_account_resetPasswordOk;
 
@@ -48,7 +48,7 @@
 
     goto :goto_22
 
-    .line 45293
+    .line 45745
     :cond_1d
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_account_resetPasswordFailedWait;
 
@@ -61,7 +61,7 @@
 
     goto :goto_3d
 
-    .line 45303
+    .line 45755
     :cond_27
     new-instance p0, Ljava/lang/RuntimeException;
 
@@ -91,7 +91,7 @@
     :goto_3d
     if-eqz v0, :cond_42
 
-    .line 45306
+    .line 45758
     invoke-virtual {v0, p0, p2}, Lorg/telegram/tgnet/TLObject;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
     :cond_42

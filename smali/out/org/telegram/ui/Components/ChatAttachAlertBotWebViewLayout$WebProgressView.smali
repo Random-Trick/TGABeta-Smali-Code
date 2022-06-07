@@ -1,4 +1,4 @@
-.class public final Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout$WebProgressView;
+.class public Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout$WebProgressView;
 .super Landroid/view/View;
 .source "ChatAttachAlertBotWebViewLayout.java"
 
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x19
+    accessFlags = 0x9
     name = "WebProgressView"
 .end annotation
 
@@ -48,10 +48,10 @@
 .method public constructor <init>(Landroid/content/Context;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)V
     .registers 6
 
-    .line 861
+    .line 933
     invoke-direct {p0, p1}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
-    .line 853
+    .line 925
     new-instance p1, Lorg/telegram/ui/Components/SimpleFloatPropertyCompat;
 
     sget-object v0, Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout$WebProgressView$$ExternalSyntheticLambda0;->INSTANCE:Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout$WebProgressView$$ExternalSyntheticLambda0;
@@ -70,7 +70,7 @@
 
     iput-object p1, p0, Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout$WebProgressView;->LOAD_PROGRESS_PROPERTY:Lorg/telegram/ui/Components/SimpleFloatPropertyCompat;
 
-    .line 855
+    .line 927
     new-instance p1, Landroid/graphics/Paint;
 
     const/4 v0, 0x1
@@ -79,26 +79,26 @@
 
     iput-object p1, p0, Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout$WebProgressView;->bluePaint:Landroid/graphics/Paint;
 
-    .line 862
+    .line 934
     iput-object p2, p0, Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout$WebProgressView;->resourcesProvider:Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;
 
     const-string p2, "featuredStickers_addButton"
 
-    .line 864
+    .line 936
     invoke-virtual {p0, p2}, Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout$WebProgressView;->getThemedColor(Ljava/lang/String;)I
 
     move-result p2
 
     invoke-virtual {p1, p2}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 865
+    .line 937
     iget-object p1, p0, Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout$WebProgressView;->bluePaint:Landroid/graphics/Paint;
 
     sget-object p2, Landroid/graphics/Paint$Style;->STROKE:Landroid/graphics/Paint$Style;
 
     invoke-virtual {p1, p2}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
-    .line 866
+    .line 938
     iget-object p1, p0, Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout$WebProgressView;->bluePaint:Landroid/graphics/Paint;
 
     const/high16 p2, 0x40000000    # 2.0f
@@ -111,7 +111,7 @@
 
     invoke-virtual {p1, p2}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
-    .line 867
+    .line 939
     iget-object p1, p0, Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout$WebProgressView;->bluePaint:Landroid/graphics/Paint;
 
     sget-object p2, Landroid/graphics/Paint$Cap;->ROUND:Landroid/graphics/Paint$Cap;
@@ -124,7 +124,7 @@
 .method private static synthetic lambda$new$0(Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout$WebProgressView;)F
     .registers 1
 
-    .line 853
+    .line 925
     iget p0, p0, Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout$WebProgressView;->loadProgress:F
 
     return p0
@@ -135,10 +135,10 @@
 .method public draw(Landroid/graphics/Canvas;)V
     .registers 10
 
-    .line 909
+    .line 981
     invoke-super {p0, p1}, Landroid/view/View;->draw(Landroid/graphics/Canvas;)V
 
-    .line 911
+    .line 983
     invoke-virtual {p0}, Landroid/view/View;->getHeight()I
 
     move-result v0
@@ -157,7 +157,7 @@
 
     sub-float v6, v0, v1
 
-    .line 912
+    .line 984
     invoke-virtual {p0}, Landroid/view/View;->getWidth()I
 
     move-result v0
@@ -184,7 +184,7 @@
 .method protected getThemedColor(Ljava/lang/String;)I
     .registers 3
 
-    .line 871
+    .line 943
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout$WebProgressView;->resourcesProvider:Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;
 
     if-eqz v0, :cond_9
@@ -201,7 +201,7 @@
     :goto_a
     if-eqz v0, :cond_11
 
-    .line 872
+    .line 944
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
     move-result p1
@@ -220,10 +220,10 @@
 .method protected onAttachedToWindow()V
     .registers 4
 
-    .line 877
+    .line 949
     invoke-super {p0}, Landroid/view/View;->onAttachedToWindow()V
 
-    .line 879
+    .line 951
     new-instance v0, Landroidx/dynamicanimation/animation/SpringAnimation;
 
     iget-object v1, p0, Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout$WebProgressView;->LOAD_PROGRESS_PROPERTY:Lorg/telegram/ui/Components/SimpleFloatPropertyCompat;
@@ -236,19 +236,19 @@
 
     const/high16 v2, 0x43c80000    # 400.0f
 
-    .line 881
+    .line 953
     invoke-virtual {v1, v2}, Landroidx/dynamicanimation/animation/SpringForce;->setStiffness(F)Landroidx/dynamicanimation/animation/SpringForce;
 
     move-result-object v1
 
     const/high16 v2, 0x3f800000    # 1.0f
 
-    .line 882
+    .line 954
     invoke-virtual {v1, v2}, Landroidx/dynamicanimation/animation/SpringForce;->setDampingRatio(F)Landroidx/dynamicanimation/animation/SpringForce;
 
     move-result-object v1
 
-    .line 880
+    .line 952
     invoke-virtual {v0, v1}, Landroidx/dynamicanimation/animation/SpringAnimation;->setSpring(Landroidx/dynamicanimation/animation/SpringForce;)Landroidx/dynamicanimation/animation/SpringAnimation;
 
     move-result-object v0
@@ -261,17 +261,17 @@
 .method protected onDetachedFromWindow()V
     .registers 2
 
-    .line 887
+    .line 959
     invoke-super {p0}, Landroid/view/View;->onDetachedFromWindow()V
 
-    .line 889
+    .line 961
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout$WebProgressView;->springAnimation:Landroidx/dynamicanimation/animation/SpringAnimation;
 
     invoke-virtual {v0}, Landroidx/dynamicanimation/animation/DynamicAnimation;->cancel()V
 
     const/4 v0, 0x0
 
-    .line 890
+    .line 962
     iput-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout$WebProgressView;->springAnimation:Landroidx/dynamicanimation/animation/SpringAnimation;
 
     return-void
@@ -280,10 +280,10 @@
 .method public setLoadProgress(F)V
     .registers 2
 
-    .line 903
+    .line 975
     iput p1, p0, Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout$WebProgressView;->loadProgress:F
 
-    .line 904
+    .line 976
     invoke-virtual {p0}, Landroid/view/View;->invalidate()V
 
     return-void
@@ -292,17 +292,17 @@
 .method public setLoadProgressAnimated(F)V
     .registers 4
 
-    .line 894
+    .line 966
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout$WebProgressView;->springAnimation:Landroidx/dynamicanimation/animation/SpringAnimation;
 
     if-nez v0, :cond_8
 
-    .line 895
+    .line 967
     invoke-virtual {p0, p1}, Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout$WebProgressView;->setLoadProgress(F)V
 
     return-void
 
-    .line 898
+    .line 970
     :cond_8
     invoke-virtual {v0}, Landroidx/dynamicanimation/animation/SpringAnimation;->getSpring()Landroidx/dynamicanimation/animation/SpringForce;
 
@@ -314,7 +314,7 @@
 
     invoke-virtual {v0, p1}, Landroidx/dynamicanimation/animation/SpringForce;->setFinalPosition(F)Landroidx/dynamicanimation/animation/SpringForce;
 
-    .line 899
+    .line 971
     iget-object p1, p0, Lorg/telegram/ui/Components/ChatAttachAlertBotWebViewLayout$WebProgressView;->springAnimation:Landroidx/dynamicanimation/animation/SpringAnimation;
 
     invoke-virtual {p1}, Landroidx/dynamicanimation/animation/SpringAnimation;->start()V

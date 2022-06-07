@@ -32,14 +32,6 @@
     return-void
 .end method
 
-.method public static synthetic $r8$lambda$FRyc7IlvPeLM_-Ng_F3-gQb1Gfw(Lorg/telegram/ui/Components/AutoDeletePopupWrapper;Landroid/content/Context;Lorg/telegram/ui/Components/AutoDeletePopupWrapper$Callback;Landroid/view/View;)V
-    .registers 4
-
-    invoke-direct {p0, p1, p2, p3}, Lorg/telegram/ui/Components/AutoDeletePopupWrapper;->lambda$new$5(Landroid/content/Context;Lorg/telegram/ui/Components/AutoDeletePopupWrapper$Callback;Landroid/view/View;)V
-
-    return-void
-.end method
-
 .method public static synthetic $r8$lambda$Icl35IjwADJA2YUnh-r7hrhhWZw(Lorg/telegram/ui/Components/AutoDeletePopupWrapper;Lorg/telegram/ui/Components/AutoDeletePopupWrapper$Callback;Landroid/view/View;)V
     .registers 3
 
@@ -60,6 +52,14 @@
     .registers 3
 
     invoke-static {p0, p1, p2}, Lorg/telegram/ui/Components/AutoDeletePopupWrapper;->lambda$new$4(Lorg/telegram/ui/Components/AutoDeletePopupWrapper$Callback;ZI)V
+
+    return-void
+.end method
+
+.method public static synthetic $r8$lambda$V5lyyowCNMCZzVp6FiTMTVFd_t8(Lorg/telegram/ui/Components/AutoDeletePopupWrapper;Landroid/content/Context;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;Lorg/telegram/ui/Components/AutoDeletePopupWrapper$Callback;Landroid/view/View;)V
+    .registers 5
+
+    invoke-direct {p0, p1, p2, p3, p4}, Lorg/telegram/ui/Components/AutoDeletePopupWrapper;->lambda$new$5(Landroid/content/Context;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;Lorg/telegram/ui/Components/AutoDeletePopupWrapper$Callback;Landroid/view/View;)V
 
     return-void
 .end method
@@ -101,7 +101,7 @@
 
     if-eqz p4, :cond_c
 
-    const p4, 0x7f07036d
+    const p4, 0x7f070384
 
     goto :goto_d
 
@@ -126,9 +126,9 @@
     .line 31
     iget-object v0, p0, Lorg/telegram/ui/Components/AutoDeletePopupWrapper;->windowLayout:Lorg/telegram/ui/ActionBar/ActionBarPopupWindow$ActionBarPopupWindowLayout;
 
-    const v2, 0x7f07023b
+    const v2, 0x7f0701c7
 
-    const v3, 0x7f0e0281
+    const v3, 0x7f0e02b6
 
     const-string v4, "Back"
 
@@ -153,9 +153,9 @@
     :cond_36
     iget-object p2, p0, Lorg/telegram/ui/Components/AutoDeletePopupWrapper;->windowLayout:Lorg/telegram/ui/ActionBar/ActionBarPopupWindow$ActionBarPopupWindowLayout;
 
-    const v0, 0x7f07023e
+    const v0, 0x7f0701cc
 
-    const v2, 0x7f0e021e
+    const v2, 0x7f0e0253
 
     const-string v3, "AutoDelete1Day"
 
@@ -177,9 +177,9 @@
     .line 42
     iget-object p2, p0, Lorg/telegram/ui/Components/AutoDeletePopupWrapper;->windowLayout:Lorg/telegram/ui/ActionBar/ActionBarPopupWindow$ActionBarPopupWindowLayout;
 
-    const v0, 0x7f070241
+    const v0, 0x7f0701cf
 
-    const v2, 0x7f0e0222
+    const v2, 0x7f0e0257
 
     const-string v3, "AutoDelete7Days"
 
@@ -201,9 +201,9 @@
     .line 47
     iget-object p2, p0, Lorg/telegram/ui/Components/AutoDeletePopupWrapper;->windowLayout:Lorg/telegram/ui/ActionBar/ActionBarPopupWindow$ActionBarPopupWindowLayout;
 
-    const v0, 0x7f070240
+    const v0, 0x7f0701ce
 
-    const v2, 0x7f0e0220
+    const v2, 0x7f0e0255
 
     const-string v3, "AutoDelete1Month"
 
@@ -225,9 +225,9 @@
     .line 52
     iget-object p2, p0, Lorg/telegram/ui/Components/AutoDeletePopupWrapper;->windowLayout:Lorg/telegram/ui/ActionBar/ActionBarPopupWindow$ActionBarPopupWindowLayout;
 
-    const v0, 0x7f070257
+    const v0, 0x7f070204
 
-    const v2, 0x7f0e022a
+    const v2, 0x7f0e025f
 
     const-string v3, "AutoDeleteCustom"
 
@@ -242,16 +242,16 @@
     .line 53
     new-instance v0, Lorg/telegram/ui/Components/AutoDeletePopupWrapper$$ExternalSyntheticLambda0;
 
-    invoke-direct {v0, p0, p1, p3}, Lorg/telegram/ui/Components/AutoDeletePopupWrapper$$ExternalSyntheticLambda0;-><init>(Lorg/telegram/ui/Components/AutoDeletePopupWrapper;Landroid/content/Context;Lorg/telegram/ui/Components/AutoDeletePopupWrapper$Callback;)V
+    invoke-direct {v0, p0, p1, p5, p3}, Lorg/telegram/ui/Components/AutoDeletePopupWrapper$$ExternalSyntheticLambda0;-><init>(Lorg/telegram/ui/Components/AutoDeletePopupWrapper;Landroid/content/Context;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;Lorg/telegram/ui/Components/AutoDeletePopupWrapper$Callback;)V
 
     invoke-virtual {p2, v0}, Landroid/widget/FrameLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 59
     iget-object p2, p0, Lorg/telegram/ui/Components/AutoDeletePopupWrapper;->windowLayout:Lorg/telegram/ui/ActionBar/ActionBarPopupWindow$ActionBarPopupWindowLayout;
 
-    const v0, 0x7f07025b
+    const v0, 0x7f07020b
 
-    const v2, 0x7f0e022b
+    const v2, 0x7f0e0260
 
     const-string v3, "AutoDeleteDisable"
 
@@ -266,40 +266,40 @@
     iput-object p2, p0, Lorg/telegram/ui/Components/AutoDeletePopupWrapper;->disableItem:Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;
 
     .line 60
-    new-instance p5, Lorg/telegram/ui/Components/AutoDeletePopupWrapper$$ExternalSyntheticLambda3;
+    new-instance v0, Lorg/telegram/ui/Components/AutoDeletePopupWrapper$$ExternalSyntheticLambda3;
 
-    invoke-direct {p5, p0, p3}, Lorg/telegram/ui/Components/AutoDeletePopupWrapper$$ExternalSyntheticLambda3;-><init>(Lorg/telegram/ui/Components/AutoDeletePopupWrapper;Lorg/telegram/ui/Components/AutoDeletePopupWrapper$Callback;)V
+    invoke-direct {v0, p0, p3}, Lorg/telegram/ui/Components/AutoDeletePopupWrapper$$ExternalSyntheticLambda3;-><init>(Lorg/telegram/ui/Components/AutoDeletePopupWrapper;Lorg/telegram/ui/Components/AutoDeletePopupWrapper$Callback;)V
 
-    invoke-virtual {p2, p5}, Landroid/widget/FrameLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {p2, v0}, Landroid/widget/FrameLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     const-string p3, "dialogTextRed2"
 
     .line 64
     invoke-static {p3}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
 
-    move-result p5
+    move-result v0
 
     invoke-static {p3}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
 
     move-result p3
 
-    invoke-virtual {p2, p5, p3}, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;->setColors(II)Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;
+    invoke-virtual {p2, v0, p3}, Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;->setColors(II)Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;
 
-    .line 67
+    .line 66
     new-instance p2, Landroid/widget/FrameLayout;
 
     invoke-direct {p2, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    const-string p3, "graySection"
+    const-string p3, "actionBarDefaultSubmenuSeparator"
 
-    .line 68
-    invoke-static {p3}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
+    .line 67
+    invoke-static {p3, p5}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)I
 
     move-result p3
 
     invoke-virtual {p2, p3}, Landroid/view/View;->setBackgroundColor(I)V
 
-    .line 69
+    .line 68
     invoke-static {p4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p3
@@ -308,7 +308,7 @@
 
     invoke-virtual {p2, p5, p3}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
 
-    .line 70
+    .line 69
     iget-object p3, p0, Lorg/telegram/ui/Components/AutoDeletePopupWrapper;->windowLayout:Lorg/telegram/ui/ActionBar/ActionBarPopupWindow$ActionBarPopupWindowLayout;
 
     const/16 v0, 0x8
@@ -321,12 +321,12 @@
 
     invoke-virtual {p3, p2, v0}, Lorg/telegram/ui/ActionBar/ActionBarPopupWindow$ActionBarPopupWindowLayout;->addView(Landroid/view/View;Landroid/widget/LinearLayout$LayoutParams;)V
 
-    .line 72
+    .line 71
     new-instance p2, Landroid/widget/TextView;
 
     invoke-direct {p2, p1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
-    .line 73
+    .line 72
     invoke-static {p4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
@@ -335,7 +335,7 @@
 
     const/high16 p1, 0x41500000    # 13.0f
 
-    .line 74
+    .line 73
     invoke-static {p1}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result p3
@@ -356,30 +356,30 @@
 
     invoke-virtual {p2, p3, v0, v2, p5}, Landroid/widget/TextView;->setPadding(IIII)V
 
-    .line 75
+    .line 74
     invoke-virtual {p2, p4, p1}, Landroid/widget/TextView;->setTextSize(IF)V
 
     const-string p1, "actionBarDefaultSubmenuItem"
 
-    .line 76
+    .line 75
     invoke-static {p1}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
 
     move-result p1
 
     invoke-virtual {p2, p1}, Landroid/widget/TextView;->setTextColor(I)V
 
-    const p1, 0x7f0e0232
+    const p1, 0x7f0e0267
 
     const-string p3, "AutoDeletePopupDescription"
 
-    .line 77
+    .line 76
     invoke-static {p3, p1}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object p1
 
     invoke-virtual {p2, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 78
+    .line 77
     iget-object p1, p0, Lorg/telegram/ui/Components/AutoDeletePopupWrapper;->windowLayout:Lorg/telegram/ui/ActionBar/ActionBarPopupWindow$ActionBarPopupWindowLayout;
 
     const/4 p3, -0x2
@@ -396,12 +396,12 @@
 .method private dismiss()V
     .registers 3
 
-    .line 82
+    .line 81
     iget-object v0, p0, Lorg/telegram/ui/Components/AutoDeletePopupWrapper;->callback:Lorg/telegram/ui/Components/AutoDeletePopupWrapper$Callback;
 
     invoke-interface {v0}, Lorg/telegram/ui/Components/AutoDeletePopupWrapper$Callback;->dismiss()V
 
-    .line 83
+    .line 82
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
@@ -489,18 +489,18 @@
     return-void
 .end method
 
-.method private synthetic lambda$new$5(Landroid/content/Context;Lorg/telegram/ui/Components/AutoDeletePopupWrapper$Callback;Landroid/view/View;)V
-    .registers 4
+.method private synthetic lambda$new$5(Landroid/content/Context;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;Lorg/telegram/ui/Components/AutoDeletePopupWrapper$Callback;Landroid/view/View;)V
+    .registers 5
 
     .line 54
     invoke-direct {p0}, Lorg/telegram/ui/Components/AutoDeletePopupWrapper;->dismiss()V
 
     .line 55
-    new-instance p3, Lorg/telegram/ui/Components/AutoDeletePopupWrapper$$ExternalSyntheticLambda7;
+    new-instance p4, Lorg/telegram/ui/Components/AutoDeletePopupWrapper$$ExternalSyntheticLambda7;
 
-    invoke-direct {p3, p2}, Lorg/telegram/ui/Components/AutoDeletePopupWrapper$$ExternalSyntheticLambda7;-><init>(Lorg/telegram/ui/Components/AutoDeletePopupWrapper$Callback;)V
+    invoke-direct {p4, p3}, Lorg/telegram/ui/Components/AutoDeletePopupWrapper$$ExternalSyntheticLambda7;-><init>(Lorg/telegram/ui/Components/AutoDeletePopupWrapper$Callback;)V
 
-    invoke-static {p1, p3}, Lorg/telegram/ui/Components/AlertsCreator;->createAutoDeleteDatePickerDialog(Landroid/content/Context;Lorg/telegram/ui/Components/AlertsCreator$ScheduleDatePickerDelegate;)Lorg/telegram/ui/ActionBar/BottomSheet$Builder;
+    invoke-static {p1, p2, p4}, Lorg/telegram/ui/Components/AlertsCreator;->createAutoDeleteDatePickerDialog(Landroid/content/Context;Lorg/telegram/ui/ActionBar/Theme$ResourcesProvider;Lorg/telegram/ui/Components/AlertsCreator$ScheduleDatePickerDelegate;)Lorg/telegram/ui/ActionBar/BottomSheet$Builder;
 
     return-void
 .end method
@@ -524,7 +524,7 @@
 .method private synthetic lambda$updateItems$7(I)V
     .registers 2
 
-    .line 89
+    .line 88
     invoke-virtual {p0, p1}, Lorg/telegram/ui/Components/AutoDeletePopupWrapper;->updateItems(I)V
 
     return-void
@@ -535,7 +535,7 @@
 .method public updateItems(I)V
     .registers 7
 
-    .line 87
+    .line 86
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
@@ -550,7 +550,7 @@
 
     if-gez v4, :cond_16
 
-    .line 88
+    .line 87
     new-instance v0, Lorg/telegram/ui/Components/AutoDeletePopupWrapper$$ExternalSyntheticLambda6;
 
     invoke-direct {v0, p0, p1}, Lorg/telegram/ui/Components/AutoDeletePopupWrapper$$ExternalSyntheticLambda6;-><init>(Lorg/telegram/ui/Components/AutoDeletePopupWrapper;I)V
@@ -562,7 +562,7 @@
     :cond_16
     if-nez p1, :cond_20
 
-    .line 94
+    .line 93
     iget-object p1, p0, Lorg/telegram/ui/Components/AutoDeletePopupWrapper;->disableItem:Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;
 
     const/16 v0, 0x8
@@ -571,7 +571,7 @@
 
     goto :goto_26
 
-    .line 96
+    .line 95
     :cond_20
     iget-object p1, p0, Lorg/telegram/ui/Components/AutoDeletePopupWrapper;->disableItem:Lorg/telegram/ui/ActionBar/ActionBarMenuSubItem;
 

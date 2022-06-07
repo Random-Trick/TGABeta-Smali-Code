@@ -615,116 +615,116 @@
 
     invoke-static {v6, v4, v3}, Landroid/opengl/GLES20;->glGenTextures(I[II)V
 
-    const v4, 0x7f070197
+    const v4, 0x7f07016d
 
     .line 750
     invoke-direct {v0, v4, v3}, Lorg/telegram/ui/IntroActivity$EGLThread;->loadTexture(II)V
 
-    const v4, 0x7f070196
+    const v4, 0x7f07016c
 
     .line 751
     invoke-direct {v0, v4, v1}, Lorg/telegram/ui/IntroActivity$EGLThread;->loadTexture(II)V
 
-    const v4, 0x7f070198
+    const v4, 0x7f07016e
 
     .line 752
     invoke-direct {v0, v4, v2}, Lorg/telegram/ui/IntroActivity$EGLThread;->loadTexture(II)V
 
-    const v4, 0x7f070199
+    const v4, 0x7f07016f
 
     .line 753
     invoke-direct {v0, v4, v5}, Lorg/telegram/ui/IntroActivity$EGLThread;->loadTexture(II)V
 
-    const v4, 0x7f07019b
+    const v4, 0x7f070171
 
     const/4 v7, 0x4
 
     .line 754
     invoke-direct {v0, v4, v7}, Lorg/telegram/ui/IntroActivity$EGLThread;->loadTexture(II)V
 
-    const v4, 0x7f07019a
+    const v4, 0x7f070170
 
     const/4 v8, 0x5
 
     .line 755
     invoke-direct {v0, v4, v8}, Lorg/telegram/ui/IntroActivity$EGLThread;->loadTexture(II)V
 
-    const v4, 0x7f07019d
+    const v4, 0x7f070173
 
     const/4 v9, 0x6
 
     .line 756
     invoke-direct {v0, v4, v9}, Lorg/telegram/ui/IntroActivity$EGLThread;->loadTexture(II)V
 
-    const v4, 0x7f07019c
+    const v4, 0x7f070172
 
     const/4 v10, 0x7
 
     .line 757
     invoke-direct {v0, v4, v10}, Lorg/telegram/ui/IntroActivity$EGLThread;->loadTexture(II)V
 
-    const v4, 0x7f07019e
+    const v4, 0x7f070174
 
     const/16 v11, 0x8
 
     .line 758
     invoke-direct {v0, v4, v11}, Lorg/telegram/ui/IntroActivity$EGLThread;->loadTexture(II)V
 
-    const v4, 0x7f07019f
+    const v4, 0x7f070175
 
     const/16 v14, 0x9
 
     .line 759
     invoke-direct {v0, v4, v14}, Lorg/telegram/ui/IntroActivity$EGLThread;->loadTexture(II)V
 
-    const v4, 0x7f0701a1
+    const v4, 0x7f070177
 
     const/16 v15, 0xa
 
     .line 760
     invoke-direct {v0, v4, v15}, Lorg/telegram/ui/IntroActivity$EGLThread;->loadTexture(II)V
 
-    const v4, 0x7f0701a0
+    const v4, 0x7f070176
 
     .line 761
     invoke-direct {v0, v4, v12}, Lorg/telegram/ui/IntroActivity$EGLThread;->loadTexture(II)V
 
-    const v4, 0x7f0701a2
+    const v4, 0x7f070178
 
     const/16 v12, 0xc
 
     .line 762
     invoke-direct {v0, v4, v12}, Lorg/telegram/ui/IntroActivity$EGLThread;->loadTexture(II)V
 
-    const v4, 0x7f0701a3
+    const v4, 0x7f070179
 
     const/16 v12, 0xd
 
     .line 763
     invoke-direct {v0, v4, v12}, Lorg/telegram/ui/IntroActivity$EGLThread;->loadTexture(II)V
 
-    const v4, 0x7f0701a4
+    const v4, 0x7f07017a
 
     const/16 v15, 0xe
 
     .line 764
     invoke-direct {v0, v4, v15}, Lorg/telegram/ui/IntroActivity$EGLThread;->loadTexture(II)V
 
-    const v4, 0x7f0701a6
+    const v4, 0x7f07017c
 
     const/16 v14, 0xf
 
     .line 765
     invoke-direct {v0, v4, v14}, Lorg/telegram/ui/IntroActivity$EGLThread;->loadTexture(II)V
 
-    const v4, 0x7f0701a5
+    const v4, 0x7f07017b
 
     const/16 v14, 0x10
 
     .line 766
     invoke-direct {v0, v4, v14}, Lorg/telegram/ui/IntroActivity$EGLThread;->loadTexture(II)V
 
-    const v4, 0x7f0701a7
+    const v4, 0x7f07017d
 
     const/16 v14, 0x11
 
@@ -737,26 +737,26 @@
 
     invoke-direct {v0, v4, v14, v11, v3}, Lorg/telegram/ui/IntroActivity$EGLThread;->loadTexture(IIIZ)V
 
-    const v4, 0x7f0701a8
+    const v4, 0x7f07017e
 
     const/16 v11, 0x12
 
     .line 768
     invoke-direct {v0, v4, v11}, Lorg/telegram/ui/IntroActivity$EGLThread;->loadTexture(II)V
 
-    const v4, 0x7f0701a9
+    const v4, 0x7f07017f
 
     .line 769
     invoke-direct {v0, v4, v13}, Lorg/telegram/ui/IntroActivity$EGLThread;->loadTexture(II)V
 
-    const v4, 0x7f0701aa
+    const v4, 0x7f070180
 
     const/16 v11, 0x14
 
     .line 770
     invoke-direct {v0, v4, v11}, Lorg/telegram/ui/IntroActivity$EGLThread;->loadTexture(II)V
 
-    const v4, 0x7f0701ab
+    const v4, 0x7f070181
 
     const/16 v14, 0x15
 

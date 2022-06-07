@@ -52,10 +52,10 @@
 .method public constructor <init>()V
     .registers 2
 
-    .line 211
+    .line 219
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 216
+    .line 224
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -64,7 +64,7 @@
 
     const/4 v0, 0x0
 
-    .line 217
+    .line 225
     iput v0, p0, Lorg/telegram/ui/Components/LinkSpanDrawable$LinkCollector;->mLinksCount:I
 
     return-void
@@ -73,10 +73,10 @@
 .method public constructor <init>(Landroid/view/View;)V
     .registers 3
 
-    .line 212
+    .line 220
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 216
+    .line 224
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -85,10 +85,10 @@
 
     const/4 v0, 0x0
 
-    .line 217
+    .line 225
     iput v0, p0, Lorg/telegram/ui/Components/LinkSpanDrawable$LinkCollector;->mLinksCount:I
 
-    .line 213
+    .line 221
     iput-object p1, p0, Lorg/telegram/ui/Components/LinkSpanDrawable$LinkCollector;->mParent:Landroid/view/View;
 
     return-void
@@ -101,7 +101,7 @@
 
     const/4 v1, 0x1
 
-    .line 346
+    .line 354
     invoke-direct {p0, v0, v1}, Lorg/telegram/ui/Components/LinkSpanDrawable$LinkCollector;->invalidate(Ljava/lang/Object;Z)V
 
     return-void
@@ -112,7 +112,7 @@
 
     const/4 v0, 0x1
 
-    .line 349
+    .line 357
     invoke-direct {p0, p1, v0}, Lorg/telegram/ui/Components/LinkSpanDrawable$LinkCollector;->invalidate(Ljava/lang/Object;Z)V
 
     return-void
@@ -121,33 +121,33 @@
 .method private invalidate(Ljava/lang/Object;Z)V
     .registers 4
 
-    .line 352
+    .line 360
     instance-of v0, p1, Landroid/view/View;
 
     if-eqz v0, :cond_a
 
-    .line 353
+    .line 361
     check-cast p1, Landroid/view/View;
 
     invoke-virtual {p1}, Landroid/view/View;->invalidate()V
 
     goto :goto_21
 
-    .line 354
+    .line 362
     :cond_a
     instance-of v0, p1, Lorg/telegram/ui/ArticleViewer$DrawingText;
 
     if-eqz v0, :cond_18
 
-    .line 355
+    .line 363
     check-cast p1, Lorg/telegram/ui/ArticleViewer$DrawingText;
 
-    .line 356
+    .line 364
     iget-object p1, p1, Lorg/telegram/ui/ArticleViewer$DrawingText;->latestParentView:Landroid/view/View;
 
     if-eqz p1, :cond_21
 
-    .line 357
+    .line 365
     invoke-virtual {p1}, Landroid/view/View;->invalidate()V
 
     goto :goto_21
@@ -155,12 +155,12 @@
     :cond_18
     if-eqz p2, :cond_21
 
-    .line 359
+    .line 367
     iget-object p1, p0, Lorg/telegram/ui/Components/LinkSpanDrawable$LinkCollector;->mParent:Landroid/view/View;
 
     if-eqz p1, :cond_21
 
-    .line 360
+    .line 368
     invoke-virtual {p1}, Landroid/view/View;->invalidate()V
 
     :cond_21
@@ -173,7 +173,7 @@
 
     const/4 v0, 0x0
 
-    .line 253
+    .line 261
     invoke-virtual {p0, p1, v0}, Lorg/telegram/ui/Components/LinkSpanDrawable$LinkCollector;->removeLink(Lorg/telegram/ui/Components/LinkSpanDrawable;Z)V
 
     return-void
@@ -184,7 +184,7 @@
 
     const/4 v0, 0x0
 
-    .line 277
+    .line 285
     invoke-virtual {p0, p1, v0}, Lorg/telegram/ui/Components/LinkSpanDrawable$LinkCollector;->removeLink(Lorg/telegram/ui/Components/LinkSpanDrawable;Z)V
 
     return-void
@@ -195,7 +195,7 @@
 
     if-ltz p1, :cond_5f
 
-    .line 266
+    .line 274
     iget v0, p0, Lorg/telegram/ui/Components/LinkSpanDrawable$LinkCollector;->mLinksCount:I
 
     if-lt p1, v0, :cond_7
@@ -205,7 +205,7 @@
     :cond_7
     if-eqz p2, :cond_43
 
-    .line 270
+    .line 278
     iget-object p2, p0, Lorg/telegram/ui/Components/LinkSpanDrawable$LinkCollector;->mLinks:Ljava/util/ArrayList;
 
     invoke-virtual {p2, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -214,12 +214,12 @@
 
     check-cast p1, Landroid/util/Pair;
 
-    .line 271
+    .line 279
     iget-object p2, p1, Landroid/util/Pair;->first:Ljava/lang/Object;
 
     check-cast p2, Lorg/telegram/ui/Components/LinkSpanDrawable;
 
-    .line 272
+    .line 280
     invoke-static {p2}, Lorg/telegram/ui/Components/LinkSpanDrawable;->access$000(Lorg/telegram/ui/Components/LinkSpanDrawable;)J
 
     move-result-wide v0
@@ -230,25 +230,25 @@
 
     if-gez v4, :cond_5f
 
-    .line 273
+    .line 281
     invoke-virtual {p2}, Lorg/telegram/ui/Components/LinkSpanDrawable;->release()V
 
-    .line 274
+    .line 282
     iget-object p1, p1, Landroid/util/Pair;->second:Ljava/lang/Object;
 
     invoke-direct {p0, p1}, Lorg/telegram/ui/Components/LinkSpanDrawable$LinkCollector;->invalidate(Ljava/lang/Object;)V
 
-    .line 275
+    .line 283
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
 
-    .line 276
+    .line 284
     new-instance p1, Lorg/telegram/ui/Components/LinkSpanDrawable$LinkCollector$$ExternalSyntheticLambda1;
 
     invoke-direct {p1, p0, p2}, Lorg/telegram/ui/Components/LinkSpanDrawable$LinkCollector$$ExternalSyntheticLambda1;-><init>(Lorg/telegram/ui/Components/LinkSpanDrawable$LinkCollector;Lorg/telegram/ui/Components/LinkSpanDrawable;)V
 
-    .line 278
+    .line 286
     invoke-static {p2}, Lorg/telegram/ui/Components/LinkSpanDrawable;->access$000(Lorg/telegram/ui/Components/LinkSpanDrawable;)J
 
     move-result-wide v4
@@ -267,12 +267,12 @@
 
     move-result-wide v0
 
-    .line 276
+    .line 284
     invoke-static {p1, v0, v1}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;J)V
 
     goto :goto_5f
 
-    .line 282
+    .line 290
     :cond_43
     iget-object p2, p0, Lorg/telegram/ui/Components/LinkSpanDrawable$LinkCollector;->mLinks:Ljava/util/ArrayList;
 
@@ -282,15 +282,15 @@
 
     check-cast p1, Landroid/util/Pair;
 
-    .line 283
+    .line 291
     iget-object p2, p1, Landroid/util/Pair;->first:Ljava/lang/Object;
 
     check-cast p2, Lorg/telegram/ui/Components/LinkSpanDrawable;
 
-    .line 284
+    .line 292
     invoke-virtual {p2}, Lorg/telegram/ui/Components/LinkSpanDrawable;->reset()V
 
-    .line 285
+    .line 293
     iget-object p2, p0, Lorg/telegram/ui/Components/LinkSpanDrawable$LinkCollector;->mLinks:Ljava/util/ArrayList;
 
     invoke-virtual {p2}, Ljava/util/ArrayList;->size()I
@@ -299,7 +299,7 @@
 
     iput p2, p0, Lorg/telegram/ui/Components/LinkSpanDrawable$LinkCollector;->mLinksCount:I
 
-    .line 286
+    .line 294
     iget-object p1, p1, Landroid/util/Pair;->second:Ljava/lang/Object;
 
     invoke-direct {p0, p1}, Lorg/telegram/ui/Components/LinkSpanDrawable$LinkCollector;->invalidate(Ljava/lang/Object;)V
@@ -316,7 +316,7 @@
 
     const/4 v0, 0x0
 
-    .line 220
+    .line 228
     invoke-virtual {p0, p1, v0}, Lorg/telegram/ui/Components/LinkSpanDrawable$LinkCollector;->addLink(Lorg/telegram/ui/Components/LinkSpanDrawable;Ljava/lang/Object;)V
 
     return-void
@@ -325,7 +325,7 @@
 .method public addLink(Lorg/telegram/ui/Components/LinkSpanDrawable;Ljava/lang/Object;)V
     .registers 5
 
-    .line 224
+    .line 232
     iget-object v0, p0, Lorg/telegram/ui/Components/LinkSpanDrawable$LinkCollector;->mLinks:Ljava/util/ArrayList;
 
     new-instance v1, Landroid/util/Pair;
@@ -334,14 +334,14 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 225
+    .line 233
     iget p1, p0, Lorg/telegram/ui/Components/LinkSpanDrawable$LinkCollector;->mLinksCount:I
 
     add-int/lit8 p1, p1, 0x1
 
     iput p1, p0, Lorg/telegram/ui/Components/LinkSpanDrawable$LinkCollector;->mLinksCount:I
 
-    .line 226
+    .line 234
     invoke-direct {p0, p2}, Lorg/telegram/ui/Components/LinkSpanDrawable$LinkCollector;->invalidate(Ljava/lang/Object;)V
 
     return-void
@@ -352,7 +352,7 @@
 
     const/4 v0, 0x1
 
-    .line 291
+    .line 299
     invoke-virtual {p0, v0}, Lorg/telegram/ui/Components/LinkSpanDrawable$LinkCollector;->clear(Z)V
 
     return-void
@@ -365,7 +365,7 @@
 
     if-eqz p1, :cond_e
 
-    .line 296
+    .line 304
     :goto_3
     iget p1, p0, Lorg/telegram/ui/Components/LinkSpanDrawable$LinkCollector;->mLinksCount:I
 
@@ -373,14 +373,14 @@
 
     const/4 p1, 0x1
 
-    .line 297
+    .line 305
     invoke-direct {p0, v0, p1}, Lorg/telegram/ui/Components/LinkSpanDrawable$LinkCollector;->removeLink(IZ)V
 
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_3
 
-    .line 299
+    .line 307
     :cond_e
     iget p1, p0, Lorg/telegram/ui/Components/LinkSpanDrawable$LinkCollector;->mLinksCount:I
 
@@ -388,13 +388,13 @@
 
     const/4 p1, 0x0
 
-    .line 300
+    .line 308
     :goto_13
     iget v1, p0, Lorg/telegram/ui/Components/LinkSpanDrawable$LinkCollector;->mLinksCount:I
 
     if-ge p1, v1, :cond_36
 
-    .line 301
+    .line 309
     iget-object v1, p0, Lorg/telegram/ui/Components/LinkSpanDrawable$LinkCollector;->mLinks:Ljava/util/ArrayList;
 
     invoke-virtual {v1, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -409,7 +409,7 @@
 
     invoke-virtual {v1}, Lorg/telegram/ui/Components/LinkSpanDrawable;->reset()V
 
-    .line 302
+    .line 310
     iget-object v1, p0, Lorg/telegram/ui/Components/LinkSpanDrawable$LinkCollector;->mLinks:Ljava/util/ArrayList;
 
     invoke-virtual {v1, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -426,16 +426,16 @@
 
     goto :goto_13
 
-    .line 304
+    .line 312
     :cond_36
     iget-object p1, p0, Lorg/telegram/ui/Components/LinkSpanDrawable$LinkCollector;->mLinks:Ljava/util/ArrayList;
 
     invoke-virtual {p1}, Ljava/util/ArrayList;->clear()V
 
-    .line 305
+    .line 313
     iput v0, p0, Lorg/telegram/ui/Components/LinkSpanDrawable$LinkCollector;->mLinksCount:I
 
-    .line 306
+    .line 314
     invoke-direct {p0}, Lorg/telegram/ui/Components/LinkSpanDrawable$LinkCollector;->invalidate()V
 
     :cond_40
@@ -451,13 +451,13 @@
 
     const/4 v2, 0x0
 
-    .line 324
+    .line 332
     :goto_3
     iget v3, p0, Lorg/telegram/ui/Components/LinkSpanDrawable$LinkCollector;->mLinksCount:I
 
     if-ge v1, v3, :cond_22
 
-    .line 325
+    .line 333
     iget-object v3, p0, Lorg/telegram/ui/Components/LinkSpanDrawable$LinkCollector;->mLinks:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -507,13 +507,13 @@
 
     const/4 v2, 0x0
 
-    .line 332
+    .line 340
     :goto_3
     iget v3, p0, Lorg/telegram/ui/Components/LinkSpanDrawable$LinkCollector;->mLinksCount:I
 
     if-ge v1, v3, :cond_2e
 
-    .line 333
+    .line 341
     iget-object v3, p0, Lorg/telegram/ui/Components/LinkSpanDrawable$LinkCollector;->mLinks:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -526,7 +526,7 @@
 
     if-ne v3, p2, :cond_2b
 
-    .line 334
+    .line 342
     iget-object v3, p0, Lorg/telegram/ui/Components/LinkSpanDrawable$LinkCollector;->mLinks:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -564,7 +564,7 @@
 
     goto :goto_3
 
-    .line 337
+    .line 345
     :cond_2e
     invoke-direct {p0, p2, v0}, Lorg/telegram/ui/Components/LinkSpanDrawable$LinkCollector;->invalidate(Ljava/lang/Object;Z)V
 
@@ -574,7 +574,7 @@
 .method public isEmpty()Z
     .registers 2
 
-    .line 342
+    .line 350
     iget v0, p0, Lorg/telegram/ui/Components/LinkSpanDrawable$LinkCollector;->mLinksCount:I
 
     if-gtz v0, :cond_6
@@ -595,7 +595,7 @@
 
     const/4 v0, 0x1
 
-    .line 230
+    .line 238
     invoke-virtual {p0, p1, v0}, Lorg/telegram/ui/Components/LinkSpanDrawable$LinkCollector;->removeLink(Lorg/telegram/ui/Components/LinkSpanDrawable;Z)V
 
     return-void
@@ -613,13 +613,13 @@
 
     const/4 v1, 0x0
 
-    .line 238
+    .line 246
     :goto_5
     iget v2, p0, Lorg/telegram/ui/Components/LinkSpanDrawable$LinkCollector;->mLinksCount:I
 
     if-ge v1, v2, :cond_21
 
-    .line 239
+    .line 247
     iget-object v2, p0, Lorg/telegram/ui/Components/LinkSpanDrawable$LinkCollector;->mLinks:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -632,7 +632,7 @@
 
     if-ne v2, p1, :cond_1e
 
-    .line 240
+    .line 248
     iget-object v0, p0, Lorg/telegram/ui/Components/LinkSpanDrawable$LinkCollector;->mLinks:Ljava/util/ArrayList;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -657,7 +657,7 @@
     :cond_24
     if-eqz p2, :cond_54
 
-    .line 248
+    .line 256
     invoke-static {p1}, Lorg/telegram/ui/Components/LinkSpanDrawable;->access$000(Lorg/telegram/ui/Components/LinkSpanDrawable;)J
 
     move-result-wide v1
@@ -668,25 +668,25 @@
 
     if-gez p2, :cond_69
 
-    .line 249
+    .line 257
     invoke-virtual {p1}, Lorg/telegram/ui/Components/LinkSpanDrawable;->release()V
 
-    .line 250
+    .line 258
     iget-object p2, v0, Landroid/util/Pair;->second:Ljava/lang/Object;
 
     invoke-direct {p0, p2}, Lorg/telegram/ui/Components/LinkSpanDrawable$LinkCollector;->invalidate(Ljava/lang/Object;)V
 
-    .line 251
+    .line 259
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
 
-    .line 252
+    .line 260
     new-instance p2, Lorg/telegram/ui/Components/LinkSpanDrawable$LinkCollector$$ExternalSyntheticLambda0;
 
     invoke-direct {p2, p0, p1}, Lorg/telegram/ui/Components/LinkSpanDrawable$LinkCollector$$ExternalSyntheticLambda0;-><init>(Lorg/telegram/ui/Components/LinkSpanDrawable$LinkCollector;Lorg/telegram/ui/Components/LinkSpanDrawable;)V
 
-    .line 254
+    .line 262
     invoke-static {p1}, Lorg/telegram/ui/Components/LinkSpanDrawable;->access$000(Lorg/telegram/ui/Components/LinkSpanDrawable;)J
 
     move-result-wide v5
@@ -705,21 +705,21 @@
 
     move-result-wide v0
 
-    .line 252
+    .line 260
     invoke-static {p2, v0, v1}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;J)V
 
     goto :goto_69
 
-    .line 258
+    .line 266
     :cond_54
     iget-object p2, p0, Lorg/telegram/ui/Components/LinkSpanDrawable$LinkCollector;->mLinks:Ljava/util/ArrayList;
 
     invoke-virtual {p2, v0}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 259
+    .line 267
     invoke-virtual {p1}, Lorg/telegram/ui/Components/LinkSpanDrawable;->reset()V
 
-    .line 260
+    .line 268
     iget-object p1, p0, Lorg/telegram/ui/Components/LinkSpanDrawable$LinkCollector;->mLinks:Ljava/util/ArrayList;
 
     invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
@@ -728,7 +728,7 @@
 
     iput p1, p0, Lorg/telegram/ui/Components/LinkSpanDrawable$LinkCollector;->mLinksCount:I
 
-    .line 261
+    .line 269
     iget-object p1, v0, Landroid/util/Pair;->second:Ljava/lang/Object;
 
     invoke-direct {p0, p1}, Lorg/telegram/ui/Components/LinkSpanDrawable$LinkCollector;->invalidate(Ljava/lang/Object;)V
@@ -743,7 +743,7 @@
 
     const/4 v0, 0x1
 
-    .line 311
+    .line 319
     invoke-virtual {p0, p1, v0}, Lorg/telegram/ui/Components/LinkSpanDrawable$LinkCollector;->removeLinks(Ljava/lang/Object;Z)V
 
     return-void
@@ -754,13 +754,13 @@
 
     const/4 v0, 0x0
 
-    .line 315
+    .line 323
     :goto_1
     iget v1, p0, Lorg/telegram/ui/Components/LinkSpanDrawable$LinkCollector;->mLinksCount:I
 
     if-ge v0, v1, :cond_17
 
-    .line 316
+    .line 324
     iget-object v1, p0, Lorg/telegram/ui/Components/LinkSpanDrawable$LinkCollector;->mLinks:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -773,7 +773,7 @@
 
     if-ne v1, p1, :cond_14
 
-    .line 317
+    .line 325
     invoke-direct {p0, v0, p2}, Lorg/telegram/ui/Components/LinkSpanDrawable$LinkCollector;->removeLink(IZ)V
 
     :cond_14

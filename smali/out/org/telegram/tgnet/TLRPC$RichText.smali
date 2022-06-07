@@ -27,10 +27,10 @@
 .method public constructor <init>()V
     .registers 2
 
-    .line 53637
+    .line 54111
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
-    .line 53641
+    .line 54115
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -49,7 +49,7 @@
 
     goto/16 :goto_65
 
-    .line 53684
+    .line 54158
     :sswitch_6
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_textConcat;
 
@@ -57,7 +57,7 @@
 
     goto :goto_65
 
-    .line 53675
+    .line 54149
     :sswitch_c
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_textPlain;
 
@@ -65,7 +65,7 @@
 
     goto :goto_65
 
-    .line 53693
+    .line 54167
     :sswitch_12
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_textFixed;
 
@@ -73,7 +73,7 @@
 
     goto :goto_65
 
-    .line 53678
+    .line 54152
     :sswitch_18
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_textBold;
 
@@ -81,7 +81,7 @@
 
     goto :goto_65
 
-    .line 53663
+    .line 54137
     :sswitch_1e
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_textUrl;
 
@@ -89,7 +89,7 @@
 
     goto :goto_65
 
-    .line 53666
+    .line 54140
     :sswitch_24
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_textAnchor;
 
@@ -97,7 +97,7 @@
 
     goto :goto_65
 
-    .line 53648
+    .line 54122
     :sswitch_2a
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_textPhone;
 
@@ -105,7 +105,7 @@
 
     goto :goto_65
 
-    .line 53654
+    .line 54128
     :sswitch_30
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_textImage;
 
@@ -113,7 +113,7 @@
 
     goto :goto_65
 
-    .line 53690
+    .line 54164
     :sswitch_36
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_textMarked;
 
@@ -121,7 +121,7 @@
 
     goto :goto_65
 
-    .line 53660
+    .line 54134
     :sswitch_3c
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_textSubscript;
 
@@ -129,7 +129,7 @@
 
     goto :goto_65
 
-    .line 53672
+    .line 54146
     :sswitch_42
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_textEmail;
 
@@ -137,7 +137,7 @@
 
     goto :goto_65
 
-    .line 53669
+    .line 54143
     :sswitch_48
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_textEmpty;
 
@@ -145,7 +145,7 @@
 
     goto :goto_65
 
-    .line 53687
+    .line 54161
     :sswitch_4e
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_textItalic;
 
@@ -153,7 +153,7 @@
 
     goto :goto_65
 
-    .line 53651
+    .line 54125
     :sswitch_54
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_textSuperscript;
 
@@ -161,7 +161,7 @@
 
     goto :goto_65
 
-    .line 53657
+    .line 54131
     :sswitch_5a
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_textUnderline;
 
@@ -169,7 +169,7 @@
 
     goto :goto_65
 
-    .line 53681
+    .line 54155
     :sswitch_60
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_textStrike;
 
@@ -182,7 +182,7 @@
 
     goto :goto_80
 
-    .line 53697
+    .line 54171
     :cond_6a
     new-instance p0, Ljava/lang/RuntimeException;
 
@@ -212,7 +212,7 @@
     :goto_80
     if-eqz v0, :cond_85
 
-    .line 53700
+    .line 54174
     invoke-virtual {v0, p0, p2}, Lorg/telegram/tgnet/TLObject;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
     :cond_85

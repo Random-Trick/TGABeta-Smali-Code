@@ -25,7 +25,7 @@
 .method constructor <init>(Lorg/telegram/ui/PhotoPickerActivity;)V
     .registers 2
 
-    .line 857
+    .line 866
     iput-object p1, p0, Lorg/telegram/ui/PhotoPickerActivity$8;->this$0:Lorg/telegram/ui/PhotoPickerActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public isIndexSelectable(I)Z
     .registers 3
 
-    .line 887
+    .line 896
     iget-object v0, p0, Lorg/telegram/ui/PhotoPickerActivity$8;->this$0:Lorg/telegram/ui/PhotoPickerActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/PhotoPickerActivity;->access$1400(Lorg/telegram/ui/PhotoPickerActivity;)Lorg/telegram/ui/PhotoPickerActivity$ListAdapter;
@@ -65,7 +65,7 @@
 .method public isSelected(I)Z
     .registers 3
 
-    .line 875
+    .line 884
     iget-object v0, p0, Lorg/telegram/ui/PhotoPickerActivity$8;->this$0:Lorg/telegram/ui/PhotoPickerActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/PhotoPickerActivity;->access$200(Lorg/telegram/ui/PhotoPickerActivity;)Lorg/telegram/messenger/MediaController$AlbumEntry;
@@ -74,7 +74,7 @@
 
     if-eqz v0, :cond_1d
 
-    .line 876
+    .line 885
     iget-object v0, p0, Lorg/telegram/ui/PhotoPickerActivity$8;->this$0:Lorg/telegram/ui/PhotoPickerActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/PhotoPickerActivity;->access$200(Lorg/telegram/ui/PhotoPickerActivity;)Lorg/telegram/messenger/MediaController$AlbumEntry;
@@ -89,7 +89,7 @@
 
     check-cast p1, Lorg/telegram/messenger/MediaController$PhotoEntry;
 
-    .line 877
+    .line 886
     iget p1, p1, Lorg/telegram/messenger/MediaController$PhotoEntry;->imageId:I
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -98,7 +98,7 @@
 
     goto :goto_2b
 
-    .line 879
+    .line 888
     :cond_1d
     iget-object v0, p0, Lorg/telegram/ui/PhotoPickerActivity$8;->this$0:Lorg/telegram/ui/PhotoPickerActivity;
 
@@ -112,10 +112,10 @@
 
     check-cast p1, Lorg/telegram/messenger/MediaController$SearchImage;
 
-    .line 880
+    .line 889
     iget-object p1, p1, Lorg/telegram/messenger/MediaController$SearchImage;->id:Ljava/lang/String;
 
-    .line 882
+    .line 891
     :goto_2b
     iget-object v0, p0, Lorg/telegram/ui/PhotoPickerActivity$8;->this$0:Lorg/telegram/ui/PhotoPickerActivity;
 
@@ -133,25 +133,25 @@
 .method public onStartStopSelection(Z)V
     .registers 3
 
-    .line 892
+    .line 901
     iget-object v0, p0, Lorg/telegram/ui/PhotoPickerActivity$8;->this$0:Lorg/telegram/ui/PhotoPickerActivity;
 
-    invoke-static {v0, p1}, Lorg/telegram/ui/PhotoPickerActivity;->access$3002(Lorg/telegram/ui/PhotoPickerActivity;I)I
+    invoke-static {v0, p1}, Lorg/telegram/ui/PhotoPickerActivity;->access$3102(Lorg/telegram/ui/PhotoPickerActivity;I)I
 
     const/4 v0, 0x1
 
     if-eqz p1, :cond_11
 
-    .line 894
+    .line 903
     iget-object p1, p0, Lorg/telegram/ui/PhotoPickerActivity$8;->this$0:Lorg/telegram/ui/PhotoPickerActivity;
 
-    invoke-static {p1}, Lorg/telegram/ui/PhotoPickerActivity;->access$3100(Lorg/telegram/ui/PhotoPickerActivity;)Lorg/telegram/ui/ActionBar/ActionBarLayout;
+    invoke-static {p1}, Lorg/telegram/ui/PhotoPickerActivity;->access$3200(Lorg/telegram/ui/PhotoPickerActivity;)Lorg/telegram/ui/ActionBar/ActionBarLayout;
 
     move-result-object p1
 
     invoke-virtual {p1, v0}, Lorg/telegram/ui/ActionBar/ActionBarLayout;->requestDisallowInterceptTouchEvent(Z)V
 
-    .line 896
+    .line 905
     :cond_11
     iget-object p1, p0, Lorg/telegram/ui/PhotoPickerActivity$8;->this$0:Lorg/telegram/ui/PhotoPickerActivity;
 
@@ -167,10 +167,10 @@
 .method public setSelected(Landroid/view/View;IZ)V
     .registers 4
 
-    .line 865
+    .line 874
     iget-object p2, p0, Lorg/telegram/ui/PhotoPickerActivity$8;->this$0:Lorg/telegram/ui/PhotoPickerActivity;
 
-    invoke-static {p2}, Lorg/telegram/ui/PhotoPickerActivity;->access$2900(Lorg/telegram/ui/PhotoPickerActivity;)Z
+    invoke-static {p2}, Lorg/telegram/ui/PhotoPickerActivity;->access$3000(Lorg/telegram/ui/PhotoPickerActivity;)Z
 
     move-result p2
 
@@ -182,11 +182,11 @@
 
     goto :goto_12
 
-    .line 868
+    .line 877
     :cond_d
     check-cast p1, Lorg/telegram/ui/Cells/PhotoAttachPhotoCell;
 
-    .line 869
+    .line 878
     invoke-virtual {p1}, Lorg/telegram/ui/Cells/PhotoAttachPhotoCell;->callDelegate()V
 
     :cond_12

@@ -35,7 +35,7 @@
     return-void
 .end method
 
-.method static synthetic access$200(Lorg/telegram/ui/Components/NumberPicker$ChangeCurrentByOneFromLongPressCommand;Z)V
+.method static synthetic access$100(Lorg/telegram/ui/Components/NumberPicker$ChangeCurrentByOneFromLongPressCommand;Z)V
     .registers 2
 
     .line 1166
@@ -63,12 +63,12 @@
 
     iget-boolean v1, p0, Lorg/telegram/ui/Components/NumberPicker$ChangeCurrentByOneFromLongPressCommand;->mIncrement:Z
 
-    invoke-static {v0, v1}, Lorg/telegram/ui/Components/NumberPicker;->access$000(Lorg/telegram/ui/Components/NumberPicker;Z)V
+    invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/NumberPicker;->changeValueByOne(Z)V
 
     .line 1176
     iget-object v0, p0, Lorg/telegram/ui/Components/NumberPicker$ChangeCurrentByOneFromLongPressCommand;->this$0:Lorg/telegram/ui/Components/NumberPicker;
 
-    invoke-static {v0}, Lorg/telegram/ui/Components/NumberPicker;->access$700(Lorg/telegram/ui/Components/NumberPicker;)J
+    invoke-static {v0}, Lorg/telegram/ui/Components/NumberPicker;->access$600(Lorg/telegram/ui/Components/NumberPicker;)J
 
     move-result-wide v1
 

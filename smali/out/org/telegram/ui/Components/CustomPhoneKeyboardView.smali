@@ -218,7 +218,7 @@
 
     iput-object v1, p0, Lorg/telegram/ui/Components/CustomPhoneKeyboardView;->backButton:Landroid/widget/ImageView;
 
-    const p1, 0x7f0701ee
+    const p1, 0x7f0701f3
 
     .line 144
     invoke-virtual {v1, p1}, Landroid/widget/ImageView;->setImageResource(I)V

@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/TranslateAlert;I)V
     .registers 3
 
-    .line 784
+    .line 786
     iput-object p1, p0, Lorg/telegram/ui/Components/TranslateAlert$6;->this$0:Lorg/telegram/ui/Components/TranslateAlert;
 
     invoke-direct {p0, p2}, Landroid/graphics/drawable/ColorDrawable;-><init>(I)V
@@ -35,10 +35,10 @@
 .method public setAlpha(I)V
     .registers 2
 
-    .line 787
+    .line 789
     invoke-super {p0, p1}, Landroid/graphics/drawable/ColorDrawable;->setAlpha(I)V
 
-    .line 788
+    .line 790
     iget-object p1, p0, Lorg/telegram/ui/Components/TranslateAlert$6;->this$0:Lorg/telegram/ui/Components/TranslateAlert;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/TranslateAlert;->access$1600(Lorg/telegram/ui/Components/TranslateAlert;)Landroid/widget/FrameLayout;

@@ -24,7 +24,7 @@
 .method constructor <init>(Lorg/telegram/ui/DialogsActivity;Landroid/view/View;)V
     .registers 3
 
-    .line 6992
+    .line 7419
     iput-object p1, p0, Lorg/telegram/ui/DialogsActivity$39;->this$0:Lorg/telegram/ui/DialogsActivity;
 
     iput-object p2, p0, Lorg/telegram/ui/DialogsActivity$39;->val$localView:Landroid/view/View;
@@ -39,7 +39,7 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .registers 3
 
-    .line 6995
+    .line 7422
     iget-object p1, p0, Lorg/telegram/ui/DialogsActivity$39;->val$localView:Landroid/view/View;
 
     invoke-virtual {p1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
@@ -48,7 +48,7 @@
 
     if-eqz p1, :cond_15
 
-    .line 6996
+    .line 7423
     iget-object p1, p0, Lorg/telegram/ui/DialogsActivity$39;->val$localView:Landroid/view/View;
 
     invoke-virtual {p1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
@@ -61,7 +61,7 @@
 
     invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
 
-    .line 6998
+    .line 7425
     :cond_15
     iget-object p1, p0, Lorg/telegram/ui/DialogsActivity$39;->this$0:Lorg/telegram/ui/DialogsActivity;
 

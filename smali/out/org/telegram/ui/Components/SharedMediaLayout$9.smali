@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lorg/telegram/ui/Components/SharedMediaLayout;-><init>(Landroid/content/Context;JLorg/telegram/ui/Components/SharedMediaLayout$SharedMediaPreloader;ILjava/util/ArrayList;Lorg/telegram/tgnet/TLRPC$ChatFull;ZLorg/telegram/ui/ActionBar/BaseFragment;Lorg/telegram/ui/Components/SharedMediaLayout$Delegate;I)V
+    value = Lorg/telegram/ui/Components/SharedMediaLayout;-><init>(Landroid/content/Context;JLorg/telegram/ui/Components/SharedMediaLayout$SharedMediaPreloader;ILjava/util/ArrayList;Lorg/telegram/tgnet/TLRPC$ChatFull;ZLorg/telegram/ui/ActionBar/BaseFragment;Lorg/telegram/ui/Components/SharedMediaLayout$Delegate;ILorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,7 +24,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/SharedMediaLayout;Lorg/telegram/ui/Components/SharedMediaLayout$MediaPage;)V
     .registers 3
 
-    .line 1669
+    .line 1673
     iput-object p1, p0, Lorg/telegram/ui/Components/SharedMediaLayout$9;->this$0:Lorg/telegram/ui/Components/SharedMediaLayout;
 
     iput-object p2, p0, Lorg/telegram/ui/Components/SharedMediaLayout$9;->val$mediaPage:Lorg/telegram/ui/Components/SharedMediaLayout$MediaPage;
@@ -39,7 +39,7 @@
 .method public getSpanSize(I)I
     .registers 4
 
-    .line 1672
+    .line 1676
     iget-object v0, p0, Lorg/telegram/ui/Components/SharedMediaLayout$9;->val$mediaPage:Lorg/telegram/ui/Components/SharedMediaLayout$MediaPage;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/SharedMediaLayout$MediaPage;->access$000(Lorg/telegram/ui/Components/SharedMediaLayout$MediaPage;)Lorg/telegram/ui/Components/BlurredRecyclerView;
@@ -58,7 +58,7 @@
 
     if-ne v0, v1, :cond_28
 
-    .line 1673
+    .line 1677
     iget-object v0, p0, Lorg/telegram/ui/Components/SharedMediaLayout$9;->this$0:Lorg/telegram/ui/Components/SharedMediaLayout;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/SharedMediaLayout;->access$900(Lorg/telegram/ui/Components/SharedMediaLayout;)Lorg/telegram/ui/Components/SharedMediaLayout$SharedPhotoVideoAdapter;
@@ -73,7 +73,7 @@
 
     if-ne p1, v0, :cond_26
 
-    .line 1674
+    .line 1678
     iget-object p1, p0, Lorg/telegram/ui/Components/SharedMediaLayout$9;->this$0:Lorg/telegram/ui/Components/SharedMediaLayout;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/SharedMediaLayout;->access$2100(Lorg/telegram/ui/Components/SharedMediaLayout;)I
@@ -87,7 +87,7 @@
 
     return p1
 
-    .line 1678
+    .line 1682
     :cond_28
     iget-object v0, p0, Lorg/telegram/ui/Components/SharedMediaLayout$9;->val$mediaPage:Lorg/telegram/ui/Components/SharedMediaLayout$MediaPage;
 
@@ -107,7 +107,7 @@
 
     if-eq v0, v1, :cond_45
 
-    .line 1679
+    .line 1683
     iget-object p1, p0, Lorg/telegram/ui/Components/SharedMediaLayout$9;->val$mediaPage:Lorg/telegram/ui/Components/SharedMediaLayout$MediaPage;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/SharedMediaLayout$MediaPage;->access$200(Lorg/telegram/ui/Components/SharedMediaLayout$MediaPage;)Lorg/telegram/ui/Components/ExtendedGridLayoutManager;
@@ -120,7 +120,7 @@
 
     return p1
 
-    .line 1681
+    .line 1685
     :cond_45
     iget-object v0, p0, Lorg/telegram/ui/Components/SharedMediaLayout$9;->val$mediaPage:Lorg/telegram/ui/Components/SharedMediaLayout$MediaPage;
 
@@ -158,7 +158,7 @@
 
     if-eqz v0, :cond_73
 
-    .line 1682
+    .line 1686
     iget-object p1, p0, Lorg/telegram/ui/Components/SharedMediaLayout$9;->val$mediaPage:Lorg/telegram/ui/Components/SharedMediaLayout$MediaPage;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/SharedMediaLayout$MediaPage;->access$200(Lorg/telegram/ui/Components/SharedMediaLayout$MediaPage;)Lorg/telegram/ui/Components/ExtendedGridLayoutManager;
@@ -171,7 +171,7 @@
 
     return p1
 
-    .line 1684
+    .line 1688
     :cond_73
     iget-object v0, p0, Lorg/telegram/ui/Components/SharedMediaLayout$9;->val$mediaPage:Lorg/telegram/ui/Components/SharedMediaLayout$MediaPage;
 

@@ -222,7 +222,7 @@
     .line 379
     invoke-virtual {v0, p2, p2, v1, v1}, Lorg/telegram/ui/Components/RadialProgress2;->setColors(IIII)V
 
-    const p2, 0x7f070370
+    const p2, 0x7f070387
 
     .line 380
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
@@ -1715,7 +1715,7 @@
 .end method
 
 .method public setData(Lorg/telegram/ui/AvatarPreviewer$Data;)V
-    .registers 18
+    .registers 19
 
     move-object/from16 v0, p0
 
@@ -1820,19 +1820,19 @@
 
     const/4 v11, 0x0
 
-    const/4 v12, 0x0
+    const-wide/16 v12, 0x0
 
-    const/4 v13, 0x0
+    const/4 v14, 0x0
 
     invoke-static/range {p1 .. p1}, Lorg/telegram/ui/AvatarPreviewer$Data;->access$1500(Lorg/telegram/ui/AvatarPreviewer$Data;)Ljava/lang/Object;
 
-    move-result-object v14
+    move-result-object v15
 
-    const/4 v15, 0x1
+    const/16 v16, 0x1
 
     move-object v4, v1
 
-    invoke-virtual/range {v4 .. v15}, Lorg/telegram/messenger/ImageReceiver;->setImage(Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Landroid/graphics/drawable/Drawable;ILjava/lang/String;Ljava/lang/Object;I)V
+    invoke-virtual/range {v4 .. v16}, Lorg/telegram/messenger/ImageReceiver;->setImage(Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Lorg/telegram/messenger/ImageLocation;Ljava/lang/String;Landroid/graphics/drawable/Drawable;JLjava/lang/String;Ljava/lang/Object;I)V
 
     .line 636
     invoke-direct {v0, v2}, Lorg/telegram/ui/AvatarPreviewer$Layout;->setShowing(Z)V

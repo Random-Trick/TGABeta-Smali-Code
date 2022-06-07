@@ -1156,18 +1156,18 @@
 
     :array_402
     .array-data 4
-        0x7f0e02bd
-        0x7f0e0eac
-        0x7f0e0bda
-        0x7f0e13f4
-        0x7f0e0806
-        0x7f0e1139
-        0x7f0e0e48
-        0x7f0e0d79
-        0x7f0e02f6
-        0x7f0e02a6
-        0x7f0e0805
-        0x7f0e13d8
+        0x7f0e02f4
+        0x7f0e0f58
+        0x7f0e0c64
+        0x7f0e14c2
+        0x7f0e085e
+        0x7f0e11fd
+        0x7f0e0ef3
+        0x7f0e0e09
+        0x7f0e0332
+        0x7f0e02dd
+        0x7f0e085d
+        0x7f0e14a6
     .end array-data
 .end method
 
@@ -3161,7 +3161,7 @@
 
     invoke-direct {p1, p2}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    const p2, 0x7f0e0f1d
+    const p2, 0x7f0e0fca
 
     const-string v0, "ResetChatBackgroundsAlertTitle"
 
@@ -3172,7 +3172,7 @@
 
     invoke-virtual {p1, p2}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const p2, 0x7f0e0f1c
+    const p2, 0x7f0e0fc9
 
     const-string v0, "ResetChatBackgroundsAlert"
 
@@ -3183,7 +3183,7 @@
 
     invoke-virtual {p1, p2}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const p2, 0x7f0e0f11
+    const p2, 0x7f0e0fbe
 
     const-string v0, "Reset"
 
@@ -3198,7 +3198,7 @@
 
     invoke-virtual {p1, p2, v0}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    const p2, 0x7f0e0331
+    const p2, 0x7f0e036d
 
     const-string v0, "Cancel"
 
@@ -4591,7 +4591,7 @@
     .line 473
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
-    const v2, 0x7f070140
+    const v2, 0x7f070109
 
     invoke-virtual {v0, v2}, Lorg/telegram/ui/ActionBar/ActionBar;->setBackButtonImage(I)V
 
@@ -4608,7 +4608,7 @@
     .line 476
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
-    const v2, 0x7f0e03e4
+    const v2, 0x7f0e0423
 
     const-string v3, "ChatBackground"
 
@@ -4626,7 +4626,7 @@
     .line 478
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/BaseFragment;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
-    const v2, 0x7f0e0fb9
+    const v2, 0x7f0e1076
 
     const-string v3, "SelectColorTitle"
 
@@ -4663,7 +4663,7 @@
 
     move-result-object v0
 
-    const v4, 0x7f07014a
+    const v4, 0x7f070110
 
     .line 634
     invoke-virtual {v0, v3, v4}, Lorg/telegram/ui/ActionBar/ActionBarMenu;->addItem(II)Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
@@ -4684,7 +4684,7 @@
 
     iput-object v0, p0, Lorg/telegram/ui/WallpapersListActivity;->searchItem:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
-    const v4, 0x7f0e0f76
+    const v4, 0x7f0e1032
 
     const-string v5, "SearchBackgrounds"
 
@@ -4804,7 +4804,7 @@
 
     const/4 v5, 0x3
 
-    const v6, 0x7f070265
+    const v6, 0x7f07022d
 
     const/high16 v7, 0x42580000    # 54.0f
 
@@ -4812,7 +4812,7 @@
 
     move-result v8
 
-    const v9, 0x7f0e0776
+    const v9, 0x7f0e07cc
 
     const-string v10, "Forward"
 
@@ -4831,13 +4831,13 @@
 
     const/4 v5, 0x4
 
-    const v6, 0x7f070258
+    const v6, 0x7f070206
 
     invoke-static {v7}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v7
 
-    const v8, 0x7f0e0540
+    const v8, 0x7f0e0591
 
     const-string v9, "Delete"
 
@@ -4999,7 +4999,7 @@
     .line 800
     iget-object p1, p0, Lorg/telegram/ui/WallpapersListActivity;->searchEmptyView:Lorg/telegram/ui/Components/EmptyTextProgressView;
 
-    const v1, 0x7f0e0ad8
+    const v1, 0x7f0e0b60
 
     const-string v2, "NoResult"
 

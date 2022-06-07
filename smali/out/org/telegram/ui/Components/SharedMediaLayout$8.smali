@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lorg/telegram/ui/Components/SharedMediaLayout;-><init>(Landroid/content/Context;JLorg/telegram/ui/Components/SharedMediaLayout$SharedMediaPreloader;ILjava/util/ArrayList;Lorg/telegram/tgnet/TLRPC$ChatFull;ZLorg/telegram/ui/ActionBar/BaseFragment;Lorg/telegram/ui/Components/SharedMediaLayout$Delegate;I)V
+    value = Lorg/telegram/ui/Components/SharedMediaLayout;-><init>(Landroid/content/Context;JLorg/telegram/ui/Components/SharedMediaLayout$SharedMediaPreloader;ILjava/util/ArrayList;Lorg/telegram/tgnet/TLRPC$ChatFull;ZLorg/telegram/ui/ActionBar/BaseFragment;Lorg/telegram/ui/Components/SharedMediaLayout$Delegate;ILorg/telegram/ui/ActionBar/Theme$ResourcesProvider;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -26,14 +26,14 @@
 .method constructor <init>(Lorg/telegram/ui/Components/SharedMediaLayout;Landroid/content/Context;ILorg/telegram/ui/Components/SharedMediaLayout$MediaPage;)V
     .registers 5
 
-    .line 1604
+    .line 1608
     iput-object p1, p0, Lorg/telegram/ui/Components/SharedMediaLayout$8;->this$0:Lorg/telegram/ui/Components/SharedMediaLayout;
 
     iput-object p4, p0, Lorg/telegram/ui/Components/SharedMediaLayout$8;->val$mediaPage:Lorg/telegram/ui/Components/SharedMediaLayout$MediaPage;
 
     invoke-direct {p0, p2, p3}, Lorg/telegram/ui/Components/ExtendedGridLayoutManager;-><init>(Landroid/content/Context;I)V
 
-    .line 1606
+    .line 1610
     new-instance p1, Lorg/telegram/ui/Components/Size;
 
     invoke-direct {p1}, Lorg/telegram/ui/Components/Size;-><init>()V
@@ -48,10 +48,10 @@
 .method protected calculateExtraLayoutSpace(Landroidx/recyclerview/widget/RecyclerView$State;[I)V
     .registers 5
 
-    .line 1615
+    .line 1619
     invoke-super {p0, p1, p2}, Landroidx/recyclerview/widget/LinearLayoutManager;->calculateExtraLayoutSpace(Landroidx/recyclerview/widget/RecyclerView$State;[I)V
 
-    .line 1616
+    .line 1620
     iget-object p1, p0, Lorg/telegram/ui/Components/SharedMediaLayout$8;->val$mediaPage:Lorg/telegram/ui/Components/SharedMediaLayout$MediaPage;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/SharedMediaLayout$MediaPage;->access$100(Lorg/telegram/ui/Components/SharedMediaLayout$MediaPage;)I
@@ -62,7 +62,7 @@
 
     if-nez p1, :cond_1b
 
-    .line 1617
+    .line 1621
     aget p1, p2, v0
 
     invoke-static {v0}, Lorg/telegram/ui/Cells/SharedPhotoVideoCell;->getItemSize(I)I
@@ -79,7 +79,7 @@
 
     goto :goto_33
 
-    .line 1618
+    .line 1622
     :cond_1b
     iget-object p1, p0, Lorg/telegram/ui/Components/SharedMediaLayout$8;->val$mediaPage:Lorg/telegram/ui/Components/SharedMediaLayout$MediaPage;
 
@@ -89,7 +89,7 @@
 
     if-ne p1, v0, :cond_33
 
-    .line 1619
+    .line 1623
     aget p1, p2, v0
 
     const/high16 v1, 0x42600000    # 56.0f
@@ -114,7 +114,7 @@
 .method protected getFlowItemCount()I
     .registers 3
 
-    .line 1654
+    .line 1658
     iget-object v0, p0, Lorg/telegram/ui/Components/SharedMediaLayout$8;->val$mediaPage:Lorg/telegram/ui/Components/SharedMediaLayout$MediaPage;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/SharedMediaLayout$MediaPage;->access$000(Lorg/telegram/ui/Components/SharedMediaLayout$MediaPage;)Lorg/telegram/ui/Components/BlurredRecyclerView;
@@ -137,7 +137,7 @@
 
     return v0
 
-    .line 1657
+    .line 1661
     :cond_14
     invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->getItemCount()I
 
@@ -149,7 +149,7 @@
 .method protected getSizeForItem(I)Lorg/telegram/ui/Components/Size;
     .registers 5
 
-    .line 1627
+    .line 1631
     iget-object v0, p0, Lorg/telegram/ui/Components/SharedMediaLayout$8;->val$mediaPage:Lorg/telegram/ui/Components/SharedMediaLayout$MediaPage;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/SharedMediaLayout$MediaPage;->access$000(Lorg/telegram/ui/Components/SharedMediaLayout$MediaPage;)Lorg/telegram/ui/Components/BlurredRecyclerView;
@@ -186,7 +186,7 @@
 
     if-nez v0, :cond_38
 
-    .line 1628
+    .line 1632
     iget-object v0, p0, Lorg/telegram/ui/Components/SharedMediaLayout$8;->this$0:Lorg/telegram/ui/Components/SharedMediaLayout;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/SharedMediaLayout;->access$600(Lorg/telegram/ui/Components/SharedMediaLayout;)[Lorg/telegram/ui/Components/SharedMediaLayout$SharedMediaData;
@@ -212,7 +212,7 @@
     :cond_38
     const/4 p1, 0x0
 
-    .line 1632
+    .line 1636
     :goto_39
     iget-object v0, p0, Lorg/telegram/ui/Components/SharedMediaLayout$8;->size:Lorg/telegram/ui/Components/Size;
 
@@ -224,7 +224,7 @@
 
     if-eqz p1, :cond_84
 
-    .line 1634
+    .line 1638
     iget-object v0, p1, Lorg/telegram/tgnet/TLRPC$Document;->thumbs:Ljava/util/ArrayList;
 
     const/16 v1, 0x5a
@@ -235,7 +235,7 @@
 
     if-eqz v0, :cond_5d
 
-    .line 1635
+    .line 1639
     iget v1, v0, Lorg/telegram/tgnet/TLRPC$PhotoSize;->w:I
 
     if-eqz v1, :cond_5d
@@ -244,7 +244,7 @@
 
     if-eqz v0, :cond_5d
 
-    .line 1636
+    .line 1640
     iget-object v2, p0, Lorg/telegram/ui/Components/SharedMediaLayout$8;->size:Lorg/telegram/ui/Components/Size;
 
     int-to-float v1, v1
@@ -253,16 +253,16 @@
 
     int-to-float v0, v0
 
-    .line 1637
+    .line 1641
     iput v0, v2, Lorg/telegram/ui/Components/Size;->height:F
 
-    .line 1639
+    .line 1643
     :cond_5d
     iget-object p1, p1, Lorg/telegram/tgnet/TLRPC$Document;->attributes:Ljava/util/ArrayList;
 
     const/4 v0, 0x0
 
-    .line 1640
+    .line 1644
     :goto_60
     invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
 
@@ -270,14 +270,14 @@
 
     if-ge v0, v1, :cond_84
 
-    .line 1641
+    .line 1645
     invoke-virtual {p1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Lorg/telegram/tgnet/TLRPC$DocumentAttribute;
 
-    .line 1642
+    .line 1646
     instance-of v2, v1, Lorg/telegram/tgnet/TLRPC$TL_documentAttributeImageSize;
 
     if-nez v2, :cond_78
@@ -293,7 +293,7 @@
 
     goto :goto_60
 
-    .line 1643
+    .line 1647
     :cond_78
     :goto_78
     iget-object p1, p0, Lorg/telegram/ui/Components/SharedMediaLayout$8;->size:Lorg/telegram/ui/Components/Size;
@@ -304,14 +304,14 @@
 
     iput v0, p1, Lorg/telegram/ui/Components/Size;->width:F
 
-    .line 1644
+    .line 1648
     iget v0, v1, Lorg/telegram/tgnet/TLRPC$DocumentAttribute;->h:I
 
     int-to-float v0, v0
 
     iput v0, p1, Lorg/telegram/ui/Components/Size;->height:F
 
-    .line 1649
+    .line 1653
     :cond_84
     iget-object p1, p0, Lorg/telegram/ui/Components/SharedMediaLayout$8;->size:Lorg/telegram/ui/Components/Size;
 
@@ -321,24 +321,24 @@
 .method public onInitializeAccessibilityNodeInfoForItem(Landroidx/recyclerview/widget/RecyclerView$Recycler;Landroidx/recyclerview/widget/RecyclerView$State;Landroid/view/View;Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;)V
     .registers 7
 
-    .line 1662
+    .line 1666
     invoke-super {p0, p1, p2, p3, p4}, Landroidx/recyclerview/widget/GridLayoutManager;->onInitializeAccessibilityNodeInfoForItem(Landroidx/recyclerview/widget/RecyclerView$Recycler;Landroidx/recyclerview/widget/RecyclerView$State;Landroid/view/View;Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;)V
 
-    .line 1663
+    .line 1667
     invoke-virtual {p4}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->getCollectionItemInfo()Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$CollectionItemInfoCompat;
 
     move-result-object p1
 
     if-eqz p1, :cond_27
 
-    .line 1664
+    .line 1668
     invoke-virtual {p1}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$CollectionItemInfoCompat;->isHeading()Z
 
     move-result p2
 
     if-eqz p2, :cond_27
 
-    .line 1665
+    .line 1669
     invoke-virtual {p1}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$CollectionItemInfoCompat;->getRowIndex()I
 
     move-result p2

@@ -1,71 +1,126 @@
-.class Lj$/util/stream/c4;
-.super Ljava/lang/Object;
+.class final enum Lj$/util/stream/c4;
+.super Ljava/lang/Enum;
 
 
-# instance fields
-.field final a:Ljava/util/Map;
+# static fields
+.field public static final enum OP:Lj$/util/stream/c4;
+
+.field public static final enum SPLITERATOR:Lj$/util/stream/c4;
+
+.field public static final enum STREAM:Lj$/util/stream/c4;
+
+.field public static final enum TERMINAL_OP:Lj$/util/stream/c4;
+
+.field public static final enum UPSTREAM_TERMINAL_OP:Lj$/util/stream/c4;
+
+.field private static final synthetic a:[Lj$/util/stream/c4;
 
 
 # direct methods
-.method constructor <init>(Ljava/util/Map;)V
-    .registers 2
+.method static constructor <clinit>()V
+    .registers 11
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lj$/util/stream/c4;
 
-    iput-object p1, p0, Lj$/util/stream/c4;->a:Ljava/util/Map;
+    const-string v1, "SPLITERATOR"
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Lj$/util/stream/c4;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lj$/util/stream/c4;->SPLITERATOR:Lj$/util/stream/c4;
+
+    new-instance v1, Lj$/util/stream/c4;
+
+    const-string v3, "STREAM"
+
+    const/4 v4, 0x1
+
+    invoke-direct {v1, v3, v4}, Lj$/util/stream/c4;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Lj$/util/stream/c4;->STREAM:Lj$/util/stream/c4;
+
+    new-instance v3, Lj$/util/stream/c4;
+
+    const-string v5, "OP"
+
+    const/4 v6, 0x2
+
+    invoke-direct {v3, v5, v6}, Lj$/util/stream/c4;-><init>(Ljava/lang/String;I)V
+
+    sput-object v3, Lj$/util/stream/c4;->OP:Lj$/util/stream/c4;
+
+    new-instance v5, Lj$/util/stream/c4;
+
+    const-string v7, "TERMINAL_OP"
+
+    const/4 v8, 0x3
+
+    invoke-direct {v5, v7, v8}, Lj$/util/stream/c4;-><init>(Ljava/lang/String;I)V
+
+    sput-object v5, Lj$/util/stream/c4;->TERMINAL_OP:Lj$/util/stream/c4;
+
+    new-instance v7, Lj$/util/stream/c4;
+
+    const-string v9, "UPSTREAM_TERMINAL_OP"
+
+    const/4 v10, 0x4
+
+    invoke-direct {v7, v9, v10}, Lj$/util/stream/c4;-><init>(Ljava/lang/String;I)V
+
+    sput-object v7, Lj$/util/stream/c4;->UPSTREAM_TERMINAL_OP:Lj$/util/stream/c4;
+
+    const/4 v9, 0x5
+
+    new-array v9, v9, [Lj$/util/stream/c4;
+
+    aput-object v0, v9, v2
+
+    aput-object v1, v9, v4
+
+    aput-object v3, v9, v6
+
+    aput-object v5, v9, v8
+
+    aput-object v7, v9, v10
+
+    sput-object v9, Lj$/util/stream/c4;->a:[Lj$/util/stream/c4;
 
     return-void
 .end method
 
+.method private constructor <init>(Ljava/lang/String;I)V
+    .registers 3
 
-# virtual methods
-.method a(Lj$/util/stream/d4;)Lj$/util/stream/c4;
-    .registers 4
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    const/4 v0, 0x2
+    return-void
+.end method
 
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+.method public static valueOf(Ljava/lang/String;)Lj$/util/stream/c4;
+    .registers 2
 
-    move-result-object v0
+    const-class v0, Lj$/util/stream/c4;
 
-    .line 1
-    iget-object v1, p0, Lj$/util/stream/c4;->a:Ljava/util/Map;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    invoke-interface {v1, p1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    move-result-object p0
+
+    check-cast p0, Lj$/util/stream/c4;
 
     return-object p0
 .end method
 
-.method b(Lj$/util/stream/d4;)Lj$/util/stream/c4;
-    .registers 4
+.method public static values()[Lj$/util/stream/c4;
+    .registers 1
 
-    const/4 v0, 0x1
+    sget-object v0, Lj$/util/stream/c4;->a:[Lj$/util/stream/c4;
 
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    .line 1
-    iget-object v1, p0, Lj$/util/stream/c4;->a:Ljava/util/Map;
-
-    invoke-interface {v1, p1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p0
-.end method
-
-.method c(Lj$/util/stream/d4;)Lj$/util/stream/c4;
-    .registers 4
-
-    const/4 v0, 0x3
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-virtual {v0}, [Lj$/util/stream/c4;->clone()Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 1
-    iget-object v1, p0, Lj$/util/stream/c4;->a:Ljava/util/Map;
+    check-cast v0, [Lj$/util/stream/c4;
 
-    invoke-interface {v1, p1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p0
+    return-object v0
 .end method

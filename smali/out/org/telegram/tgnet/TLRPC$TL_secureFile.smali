@@ -4,7 +4,7 @@
 
 
 # static fields
-.field public static constructor:I = -0x1fd8859e
+.field public static constructor:I = 0x7d09c27e
 
 
 # instance fields
@@ -20,7 +20,7 @@
 
 .field public secret:[B
 
-.field public size:I
+.field public size:J
 
 
 # direct methods
@@ -33,7 +33,7 @@
 .method public constructor <init>()V
     .registers 1
 
-    .line 4210
+    .line 4250
     invoke-direct {p0}, Lorg/telegram/tgnet/TLRPC$SecureFile;-><init>()V
 
     return-void
@@ -44,49 +44,49 @@
 .method public readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
     .registers 5
 
-    .line 4222
+    .line 4262
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt64(Z)J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lorg/telegram/tgnet/TLRPC$TL_secureFile;->id:J
 
-    .line 4223
+    .line 4263
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt64(Z)J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lorg/telegram/tgnet/TLRPC$TL_secureFile;->access_hash:J
 
-    .line 4224
-    invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
+    .line 4264
+    invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt64(Z)J
 
-    move-result v0
+    move-result-wide v0
 
-    iput v0, p0, Lorg/telegram/tgnet/TLRPC$TL_secureFile;->size:I
+    iput-wide v0, p0, Lorg/telegram/tgnet/TLRPC$TL_secureFile;->size:J
 
-    .line 4225
+    .line 4265
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
 
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$TL_secureFile;->dc_id:I
 
-    .line 4226
+    .line 4266
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
 
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$TL_secureFile;->date:I
 
-    .line 4227
+    .line 4267
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readByteArray(Z)[B
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_secureFile;->file_hash:[B
 
-    .line 4228
+    .line 4268
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readByteArray(Z)[B
 
     move-result-object p1
@@ -99,42 +99,42 @@
 .method public serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
     .registers 4
 
-    .line 4232
+    .line 4272
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_secureFile;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 4233
+    .line 4273
     iget-wide v0, p0, Lorg/telegram/tgnet/TLRPC$TL_secureFile;->id:J
 
     invoke-virtual {p1, v0, v1}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt64(J)V
 
-    .line 4234
+    .line 4274
     iget-wide v0, p0, Lorg/telegram/tgnet/TLRPC$TL_secureFile;->access_hash:J
 
     invoke-virtual {p1, v0, v1}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt64(J)V
 
-    .line 4235
-    iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_secureFile;->size:I
+    .line 4275
+    iget-wide v0, p0, Lorg/telegram/tgnet/TLRPC$TL_secureFile;->size:J
 
-    invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
+    invoke-virtual {p1, v0, v1}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt64(J)V
 
-    .line 4236
+    .line 4276
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_secureFile;->dc_id:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 4237
+    .line 4277
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_secureFile;->date:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 4238
+    .line 4278
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_secureFile;->file_hash:[B
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeByteArray([B)V
 
-    .line 4239
+    .line 4279
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_secureFile;->secret:[B
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeByteArray([B)V

@@ -26,7 +26,7 @@
 .method constructor <init>(Lorg/telegram/ui/ActionBar/ActionBarMenuItem;Landroid/content/Context;Z)V
     .registers 4
 
-    .line 1117
+    .line 1111
     iput-object p1, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuItem$7;->this$0:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
     iput-boolean p3, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuItem$7;->val$wrapInScrollView:Z
@@ -41,10 +41,10 @@
 .method protected onLayout(ZIIII)V
     .registers 6
 
-    .line 1189
+    .line 1183
     invoke-super/range {p0 .. p5}, Landroid/widget/FrameLayout;->onLayout(ZIIII)V
 
-    .line 1191
+    .line 1185
     sget-boolean p1, Lorg/telegram/messenger/LocaleController;->isRTL:Z
 
     const/4 p2, 0x0
@@ -53,7 +53,7 @@
 
     goto :goto_26
 
-    .line 1194
+    .line 1188
     :cond_9
     iget-object p1, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuItem$7;->this$0:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
@@ -67,7 +67,7 @@
 
     if-nez p1, :cond_26
 
-    .line 1195
+    .line 1189
     iget-object p1, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuItem$7;->this$0:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
     invoke-static {p1}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->access$600(Lorg/telegram/ui/ActionBar/ActionBarMenuItem;)Landroid/widget/TextView;
@@ -86,7 +86,7 @@
 
     add-int/2addr p2, p1
 
-    .line 1200
+    .line 1194
     :cond_26
     :goto_26
     iget-object p1, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuItem$7;->this$0:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
@@ -101,7 +101,7 @@
 
     if-nez p1, :cond_3d
 
-    .line 1201
+    .line 1195
     iget-object p1, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuItem$7;->this$0:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
     invoke-static {p1}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->access$700(Lorg/telegram/ui/ActionBar/ActionBarMenuItem;)Landroid/widget/LinearLayout;
@@ -114,7 +114,7 @@
 
     add-int/2addr p2, p1
 
-    .line 1203
+    .line 1197
     :cond_3d
     iget-object p1, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuItem$7;->this$0:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
@@ -162,12 +162,12 @@
 .method protected onMeasure(II)V
     .registers 14
 
-    .line 1144
+    .line 1138
     iget-boolean v0, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuItem$7;->val$wrapInScrollView:Z
 
     if-nez v0, :cond_12
 
-    .line 1145
+    .line 1139
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuItem$7;->this$0:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
     invoke-static {v0}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->access$400(Lorg/telegram/ui/ActionBar/ActionBarMenuItem;)Landroid/widget/ImageView;
@@ -186,7 +186,7 @@
 
     invoke-virtual/range {v1 .. v6}, Landroid/widget/FrameLayout;->measureChildWithMargins(Landroid/view/View;IIII)V
 
-    .line 1148
+    .line 1142
     :cond_12
     sget-boolean v0, Lorg/telegram/messenger/LocaleController;->isRTL:Z
 
@@ -198,7 +198,7 @@
 
     if-nez v0, :cond_9f
 
-    .line 1149
+    .line 1143
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuItem$7;->this$0:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
     invoke-static {v0}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->access$600(Lorg/telegram/ui/ActionBar/ActionBarMenuItem;)Landroid/widget/TextView;
@@ -211,7 +211,7 @@
 
     if-nez v0, :cond_49
 
-    .line 1150
+    .line 1144
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuItem$7;->this$0:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
     invoke-static {v0}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->access$600(Lorg/telegram/ui/ActionBar/ActionBarMenuItem;)Landroid/widget/TextView;
@@ -234,7 +234,7 @@
 
     invoke-virtual/range {v4 .. v9}, Landroid/widget/FrameLayout;->measureChildWithMargins(Landroid/view/View;IIII)V
 
-    .line 1151
+    .line 1145
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuItem$7;->this$0:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
     invoke-static {v0}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->access$600(Lorg/telegram/ui/ActionBar/ActionBarMenuItem;)Landroid/widget/TextView;
@@ -256,16 +256,16 @@
     :cond_49
     const/4 v0, 0x0
 
-    .line 1155
+    .line 1149
     :goto_4a
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result v2
 
-    .line 1156
+    .line 1150
     iput-boolean v1, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuItem$7;->ignoreRequestLayout:Z
 
-    .line 1157
+    .line 1151
     iget-object v1, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuItem$7;->this$0:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
     invoke-static {v1}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->access$700(Lorg/telegram/ui/ActionBar/ActionBarMenuItem;)Landroid/widget/LinearLayout;
@@ -284,7 +284,7 @@
 
     invoke-virtual/range {v4 .. v9}, Landroid/widget/FrameLayout;->measureChildWithMargins(Landroid/view/View;IIII)V
 
-    .line 1158
+    .line 1152
     iget-object v1, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuItem$7;->this$0:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
     invoke-static {v1}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->access$700(Lorg/telegram/ui/ActionBar/ActionBarMenuItem;)Landroid/widget/LinearLayout;
@@ -312,7 +312,7 @@
     :cond_75
     const/4 v1, 0x0
 
-    .line 1159
+    .line 1153
     :goto_76
     iget-object v4, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuItem$7;->this$0:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
@@ -332,10 +332,10 @@
 
     invoke-virtual/range {v5 .. v10}, Landroid/widget/FrameLayout;->measureChildWithMargins(Landroid/view/View;IIII)V
 
-    .line 1160
+    .line 1154
     iput-boolean v3, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuItem$7;->ignoreRequestLayout:Z
 
-    .line 1161
+    .line 1155
     iget-object p1, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuItem$7;->this$0:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
     invoke-static {p1}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->access$300(Lorg/telegram/ui/ActionBar/ActionBarMenuItem;)Lorg/telegram/ui/Components/EditTextBoldCursor;
@@ -360,7 +360,7 @@
 
     goto/16 :goto_12d
 
-    .line 1163
+    .line 1157
     :cond_9f
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuItem$7;->this$0:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
@@ -374,7 +374,7 @@
 
     if-nez v0, :cond_ce
 
-    .line 1164
+    .line 1158
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuItem$7;->this$0:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
     invoke-static {v0}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->access$600(Lorg/telegram/ui/ActionBar/ActionBarMenuItem;)Landroid/widget/TextView;
@@ -397,7 +397,7 @@
 
     invoke-virtual/range {v4 .. v9}, Landroid/widget/FrameLayout;->measureChildWithMargins(Landroid/view/View;IIII)V
 
-    .line 1165
+    .line 1159
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuItem$7;->this$0:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
     invoke-static {v0}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->access$600(Lorg/telegram/ui/ActionBar/ActionBarMenuItem;)Landroid/widget/TextView;
@@ -419,16 +419,16 @@
     :cond_ce
     const/4 v0, 0x0
 
-    .line 1169
+    .line 1163
     :goto_cf
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result v2
 
-    .line 1170
+    .line 1164
     iput-boolean v1, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuItem$7;->ignoreRequestLayout:Z
 
-    .line 1171
+    .line 1165
     iget-object v1, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuItem$7;->this$0:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
     invoke-static {v1}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->access$700(Lorg/telegram/ui/ActionBar/ActionBarMenuItem;)Landroid/widget/LinearLayout;
@@ -447,7 +447,7 @@
 
     invoke-virtual/range {v4 .. v9}, Landroid/widget/FrameLayout;->measureChildWithMargins(Landroid/view/View;IIII)V
 
-    .line 1172
+    .line 1166
     iget-object p1, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuItem$7;->this$0:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
     invoke-static {p1}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->access$700(Lorg/telegram/ui/ActionBar/ActionBarMenuItem;)Landroid/widget/LinearLayout;
@@ -475,7 +475,7 @@
     :cond_fa
     const/4 p1, 0x0
 
-    .line 1173
+    .line 1167
     :goto_fb
     iget-object v1, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuItem$7;->this$0:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
@@ -505,10 +505,10 @@
 
     invoke-virtual/range {v4 .. v9}, Landroid/widget/FrameLayout;->measureChildWithMargins(Landroid/view/View;IIII)V
 
-    .line 1174
+    .line 1168
     iput-boolean v3, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuItem$7;->ignoreRequestLayout:Z
 
-    .line 1175
+    .line 1169
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuItem$7;->this$0:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
     invoke-static {v0}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->access$300(Lorg/telegram/ui/ActionBar/ActionBarMenuItem;)Lorg/telegram/ui/Components/EditTextBoldCursor;
@@ -538,14 +538,14 @@
 .method public requestLayout()V
     .registers 2
 
-    .line 1181
+    .line 1175
     iget-boolean v0, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuItem$7;->ignoreRequestLayout:Z
 
     if-eqz v0, :cond_5
 
     return-void
 
-    .line 1184
+    .line 1178
     :cond_5
     invoke-super {p0}, Landroid/widget/FrameLayout;->requestLayout()V
 
@@ -555,10 +555,10 @@
 .method public setAlpha(F)V
     .registers 3
 
-    .line 1134
+    .line 1128
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->setAlpha(F)V
 
-    .line 1135
+    .line 1129
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuItem$7;->this$0:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
     invoke-static {v0}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->access$400(Lorg/telegram/ui/ActionBar/ActionBarMenuItem;)Landroid/widget/ImageView;
@@ -579,7 +579,7 @@
 
     if-eqz v0, :cond_32
 
-    .line 1136
+    .line 1130
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuItem$7;->this$0:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
     invoke-static {v0}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->access$400(Lorg/telegram/ui/ActionBar/ActionBarMenuItem;)Landroid/widget/ImageView;
@@ -588,7 +588,7 @@
 
     invoke-virtual {v0, p1}, Landroid/widget/ImageView;->setAlpha(F)V
 
-    .line 1137
+    .line 1131
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuItem$7;->this$0:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
     invoke-static {v0}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->access$400(Lorg/telegram/ui/ActionBar/ActionBarMenuItem;)Landroid/widget/ImageView;
@@ -597,7 +597,7 @@
 
     invoke-virtual {v0, p1}, Landroid/widget/ImageView;->setScaleX(F)V
 
-    .line 1138
+    .line 1132
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuItem$7;->this$0:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
     invoke-static {v0}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->access$400(Lorg/telegram/ui/ActionBar/ActionBarMenuItem;)Landroid/widget/ImageView;
@@ -613,10 +613,10 @@
 .method public setVisibility(I)V
     .registers 3
 
-    .line 1123
+    .line 1117
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
-    .line 1124
+    .line 1118
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuItem$7;->this$0:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
     invoke-static {v0}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->access$400(Lorg/telegram/ui/ActionBar/ActionBarMenuItem;)Landroid/widget/ImageView;
@@ -625,7 +625,7 @@
 
     if-eqz v0, :cond_14
 
-    .line 1125
+    .line 1119
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuItem$7;->this$0:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
     invoke-static {v0}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->access$400(Lorg/telegram/ui/ActionBar/ActionBarMenuItem;)Landroid/widget/ImageView;
@@ -634,7 +634,7 @@
 
     invoke-virtual {v0, p1}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 1127
+    .line 1121
     :cond_14
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuItem$7;->this$0:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
@@ -644,7 +644,7 @@
 
     if-eqz v0, :cond_25
 
-    .line 1128
+    .line 1122
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuItem$7;->this$0:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
     invoke-static {v0}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->access$500(Lorg/telegram/ui/ActionBar/ActionBarMenuItem;)Landroid/widget/FrameLayout;

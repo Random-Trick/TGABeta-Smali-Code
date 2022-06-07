@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/ChatActivityEnterView;Landroid/content/Context;)V
     .registers 3
 
-    .line 2849
+    .line 2864
     iput-object p1, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$26;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-direct {p0, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
@@ -35,10 +35,10 @@
 .method public setVisibility(I)V
     .registers 2
 
-    .line 2852
+    .line 2867
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
-    .line 2853
+    .line 2868
     iget-object p1, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$26;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-virtual {p1}, Lorg/telegram/ui/Components/ChatActivityEnterView;->updateSendAsButton()V

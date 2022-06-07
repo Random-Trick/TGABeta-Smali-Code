@@ -26,7 +26,7 @@
 .method constructor <init>(Lorg/telegram/ui/Components/PopupSwipeBackLayout;FI)V
     .registers 4
 
-    .line 296
+    .line 294
     iput-object p1, p0, Lorg/telegram/ui/Components/PopupSwipeBackLayout$2;->this$0:Lorg/telegram/ui/Components/PopupSwipeBackLayout;
 
     iput p2, p0, Lorg/telegram/ui/Components/PopupSwipeBackLayout$2;->val$f:F
@@ -41,9 +41,9 @@
 
 # virtual methods
 .method public onAnimationEnd(Landroid/animation/Animator;)V
-    .registers 3
+    .registers 4
 
-    .line 305
+    .line 303
     iget p1, p0, Lorg/telegram/ui/Components/PopupSwipeBackLayout$2;->val$selectedAccount:I
 
     invoke-static {p1}, Lorg/telegram/messenger/NotificationCenter;->getInstance(I)Lorg/telegram/messenger/NotificationCenter;
@@ -58,17 +58,31 @@
 
     invoke-virtual {p1, v0}, Lorg/telegram/messenger/NotificationCenter;->onAnimationFinish(I)V
 
-    .line 306
+    .line 304
     iget-object p1, p0, Lorg/telegram/ui/Components/PopupSwipeBackLayout$2;->this$0:Lorg/telegram/ui/Components/PopupSwipeBackLayout;
 
     iget v0, p0, Lorg/telegram/ui/Components/PopupSwipeBackLayout$2;->val$f:F
 
     iput v0, p1, Lorg/telegram/ui/Components/PopupSwipeBackLayout;->transitionProgress:F
 
-    .line 307
-    invoke-virtual {p1}, Lorg/telegram/ui/Components/PopupSwipeBackLayout;->invalidateTransforms()V
+    const/4 v1, 0x0
+
+    cmpg-float v0, v0, v1
+
+    if-gtz v0, :cond_1e
+
+    const/4 v0, -0x1
+
+    .line 306
+    invoke-static {p1, v0}, Lorg/telegram/ui/Components/PopupSwipeBackLayout;->access$902(Lorg/telegram/ui/Components/PopupSwipeBackLayout;I)I
 
     .line 308
+    :cond_1e
+    iget-object p1, p0, Lorg/telegram/ui/Components/PopupSwipeBackLayout$2;->this$0:Lorg/telegram/ui/Components/PopupSwipeBackLayout;
+
+    invoke-virtual {p1}, Lorg/telegram/ui/Components/PopupSwipeBackLayout;->invalidateTransforms()V
+
+    .line 309
     iget-object p1, p0, Lorg/telegram/ui/Components/PopupSwipeBackLayout$2;->this$0:Lorg/telegram/ui/Components/PopupSwipeBackLayout;
 
     const/4 v0, 0x0
@@ -81,14 +95,14 @@
 .method public onAnimationStart(Landroid/animation/Animator;)V
     .registers 3
 
-    .line 299
+    .line 297
     iget-object p1, p0, Lorg/telegram/ui/Components/PopupSwipeBackLayout$2;->this$0:Lorg/telegram/ui/Components/PopupSwipeBackLayout;
 
     const/4 v0, 0x1
 
     invoke-static {p1, v0}, Lorg/telegram/ui/Components/PopupSwipeBackLayout;->access$502(Lorg/telegram/ui/Components/PopupSwipeBackLayout;Z)Z
 
-    .line 300
+    .line 298
     iget-object p1, p0, Lorg/telegram/ui/Components/PopupSwipeBackLayout$2;->this$0:Lorg/telegram/ui/Components/PopupSwipeBackLayout;
 
     iget v0, p0, Lorg/telegram/ui/Components/PopupSwipeBackLayout$2;->val$f:F

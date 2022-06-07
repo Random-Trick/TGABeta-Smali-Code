@@ -326,7 +326,7 @@
 
     move-result-object p2
 
-    const v0, 0x7f070366
+    const v0, 0x7f07037d
 
     invoke-virtual {p2, v0}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -339,7 +339,7 @@
 
     move-result-object v0
 
-    const v2, 0x7f070367
+    const v2, 0x7f07037e
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -380,7 +380,7 @@
 
     invoke-direct {v2, p2, v0}, Lorg/telegram/ui/Components/CombinedDrawable;-><init>(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
 
-    const p2, 0x7f0e0fb7
+    const p2, 0x7f0e1074
 
     const-string v0, "SelectChats"
 
@@ -451,7 +451,7 @@
 
     if-nez v0, :cond_102
 
-    const v0, 0x7f0e0621
+    const v0, 0x7f0e0673
 
     const-string v1, "EditWidgetChatsInfo"
 
@@ -474,7 +474,7 @@
 
     if-ne v0, v1, :cond_116
 
-    const v0, 0x7f0e0622
+    const v0, 0x7f0e0674
 
     const-string v1, "EditWidgetContactsInfo"
 
@@ -503,7 +503,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0e13e2
+    const v1, 0x7f0e14b0
 
     const-string v2, "WidgetPasscode2"
 
@@ -555,7 +555,7 @@
 
     invoke-direct {p2, v0}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
 
-    const v0, 0x7f0701b6
+    const v0, 0x7f070189
 
     .line 944
     invoke-virtual {p2, v0}, Landroid/widget/ImageView;->setImageResource(I)V
@@ -565,7 +565,7 @@
 
     invoke-virtual {p2, v0}, Landroid/widget/ImageView;->setScaleType(Landroid/widget/ImageView$ScaleType;)V
 
-    const v0, 0x7f080098
+    const v0, 0x7f080099
 
     .line 946
     invoke-virtual {p1, v0, p2}, Landroid/widget/FrameLayout;->setTag(ILjava/lang/Object;)V
@@ -675,7 +675,7 @@
     .line 931
     iget-object p2, p0, Lorg/telegram/ui/EditWidgetActivity$ListAdapter;->mContext:Landroid/content/Context;
 
-    const v0, 0x7f07012d
+    const v0, 0x7f0700fc
 
     const-string v1, "windowBackgroundGrayShadow"
 

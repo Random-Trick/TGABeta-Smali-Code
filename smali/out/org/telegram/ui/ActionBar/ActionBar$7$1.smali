@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/ActionBar/ActionBar$7;Landroid/transition/TransitionValues;)V
     .registers 3
 
-    .line 1540
+    .line 1565
     iput-object p2, p0, Lorg/telegram/ui/ActionBar/ActionBar$7$1;->val$startValues:Landroid/transition/TransitionValues;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -35,10 +35,10 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .registers 4
 
-    .line 1550
+    .line 1575
     invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationEnd(Landroid/animation/Animator;)V
 
-    .line 1551
+    .line 1576
     iget-object p1, p0, Lorg/telegram/ui/ActionBar/ActionBar$7$1;->val$startValues:Landroid/transition/TransitionValues;
 
     iget-object p1, p1, Landroid/transition/TransitionValues;->view:Landroid/view/View;
@@ -55,10 +55,10 @@
 .method public onAnimationStart(Landroid/animation/Animator;)V
     .registers 4
 
-    .line 1544
+    .line 1569
     invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationStart(Landroid/animation/Animator;)V
 
-    .line 1545
+    .line 1570
     iget-object p1, p0, Lorg/telegram/ui/ActionBar/ActionBar$7$1;->val$startValues:Landroid/transition/TransitionValues;
 
     iget-object p1, p1, Landroid/transition/TransitionValues;->view:Landroid/view/View;

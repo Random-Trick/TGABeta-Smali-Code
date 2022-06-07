@@ -25,7 +25,7 @@
 .method constructor <init>(Lorg/telegram/ui/ThemePreviewActivity$PatternsAdapter;)V
     .registers 2
 
-    .line 4540
+    .line 4530
     iput-object p1, p0, Lorg/telegram/ui/ThemePreviewActivity$PatternsAdapter$1;->this$1:Lorg/telegram/ui/ThemePreviewActivity$PatternsAdapter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public getBackgroundColor()I
     .registers 4
 
-    .line 4553
+    .line 4543
     iget-object v0, p0, Lorg/telegram/ui/ThemePreviewActivity$PatternsAdapter$1;->this$1:Lorg/telegram/ui/ThemePreviewActivity$PatternsAdapter;
 
     iget-object v0, v0, Lorg/telegram/ui/ThemePreviewActivity$PatternsAdapter;->this$0:Lorg/telegram/ui/ThemePreviewActivity;
@@ -51,7 +51,7 @@
 
     if-ne v0, v1, :cond_14
 
-    .line 4554
+    .line 4544
     iget-object v0, p0, Lorg/telegram/ui/ThemePreviewActivity$PatternsAdapter$1;->this$1:Lorg/telegram/ui/ThemePreviewActivity$PatternsAdapter;
 
     iget-object v0, v0, Lorg/telegram/ui/ThemePreviewActivity$PatternsAdapter;->this$0:Lorg/telegram/ui/ThemePreviewActivity;
@@ -65,12 +65,12 @@
     :cond_14
     const-string v0, "chat_wallpaper"
 
-    .line 4556
+    .line 4546
     invoke-static {v0}, Lorg/telegram/ui/ActionBar/Theme;->getDefaultAccentColor(Ljava/lang/String;)I
 
     move-result v0
 
-    .line 4557
+    .line 4547
     iget-object v1, p0, Lorg/telegram/ui/ThemePreviewActivity$PatternsAdapter$1;->this$1:Lorg/telegram/ui/ThemePreviewActivity$PatternsAdapter;
 
     iget-object v1, v1, Lorg/telegram/ui/ThemePreviewActivity$PatternsAdapter;->this$0:Lorg/telegram/ui/ThemePreviewActivity;
@@ -94,7 +94,7 @@
 .method public getBackgroundGradientAngle()I
     .registers 3
 
-    .line 4593
+    .line 4583
     iget-object v0, p0, Lorg/telegram/ui/ThemePreviewActivity$PatternsAdapter$1;->this$1:Lorg/telegram/ui/ThemePreviewActivity$PatternsAdapter;
 
     iget-object v0, v0, Lorg/telegram/ui/ThemePreviewActivity$PatternsAdapter;->this$0:Lorg/telegram/ui/ThemePreviewActivity;
@@ -107,7 +107,7 @@
 
     if-ne v0, v1, :cond_14
 
-    .line 4594
+    .line 4584
     iget-object v0, p0, Lorg/telegram/ui/ThemePreviewActivity$PatternsAdapter$1;->this$1:Lorg/telegram/ui/ThemePreviewActivity$PatternsAdapter;
 
     iget-object v0, v0, Lorg/telegram/ui/ThemePreviewActivity$PatternsAdapter;->this$0:Lorg/telegram/ui/ThemePreviewActivity;
@@ -118,7 +118,7 @@
 
     return v0
 
-    .line 4596
+    .line 4586
     :cond_14
     iget-object v0, p0, Lorg/telegram/ui/ThemePreviewActivity$PatternsAdapter$1;->this$1:Lorg/telegram/ui/ThemePreviewActivity$PatternsAdapter;
 
@@ -136,7 +136,7 @@
 .method public getBackgroundGradientColor1()I
     .registers 4
 
-    .line 4563
+    .line 4553
     iget-object v0, p0, Lorg/telegram/ui/ThemePreviewActivity$PatternsAdapter$1;->this$1:Lorg/telegram/ui/ThemePreviewActivity$PatternsAdapter;
 
     iget-object v0, v0, Lorg/telegram/ui/ThemePreviewActivity$PatternsAdapter;->this$0:Lorg/telegram/ui/ThemePreviewActivity;
@@ -149,7 +149,7 @@
 
     if-ne v0, v1, :cond_14
 
-    .line 4564
+    .line 4554
     iget-object v0, p0, Lorg/telegram/ui/ThemePreviewActivity$PatternsAdapter$1;->this$1:Lorg/telegram/ui/ThemePreviewActivity$PatternsAdapter;
 
     iget-object v0, v0, Lorg/telegram/ui/ThemePreviewActivity$PatternsAdapter;->this$0:Lorg/telegram/ui/ThemePreviewActivity;
@@ -163,12 +163,12 @@
     :cond_14
     const-string v0, "chat_wallpaper_gradient_to"
 
-    .line 4566
+    .line 4556
     invoke-static {v0}, Lorg/telegram/ui/ActionBar/Theme;->getDefaultAccentColor(Ljava/lang/String;)I
 
     move-result v0
 
-    .line 4567
+    .line 4557
     iget-object v1, p0, Lorg/telegram/ui/ThemePreviewActivity$PatternsAdapter$1;->this$1:Lorg/telegram/ui/ThemePreviewActivity$PatternsAdapter;
 
     iget-object v1, v1, Lorg/telegram/ui/ThemePreviewActivity$PatternsAdapter;->this$0:Lorg/telegram/ui/ThemePreviewActivity;
@@ -192,7 +192,7 @@
 .method public getBackgroundGradientColor2()I
     .registers 4
 
-    .line 4573
+    .line 4563
     iget-object v0, p0, Lorg/telegram/ui/ThemePreviewActivity$PatternsAdapter$1;->this$1:Lorg/telegram/ui/ThemePreviewActivity$PatternsAdapter;
 
     iget-object v0, v0, Lorg/telegram/ui/ThemePreviewActivity$PatternsAdapter;->this$0:Lorg/telegram/ui/ThemePreviewActivity;
@@ -205,7 +205,7 @@
 
     if-ne v0, v1, :cond_14
 
-    .line 4574
+    .line 4564
     iget-object v0, p0, Lorg/telegram/ui/ThemePreviewActivity$PatternsAdapter$1;->this$1:Lorg/telegram/ui/ThemePreviewActivity$PatternsAdapter;
 
     iget-object v0, v0, Lorg/telegram/ui/ThemePreviewActivity$PatternsAdapter;->this$0:Lorg/telegram/ui/ThemePreviewActivity;
@@ -219,12 +219,12 @@
     :cond_14
     const-string v0, "key_chat_wallpaper_gradient_to2"
 
-    .line 4576
+    .line 4566
     invoke-static {v0}, Lorg/telegram/ui/ActionBar/Theme;->getDefaultAccentColor(Ljava/lang/String;)I
 
     move-result v0
 
-    .line 4577
+    .line 4567
     iget-object v1, p0, Lorg/telegram/ui/ThemePreviewActivity$PatternsAdapter$1;->this$1:Lorg/telegram/ui/ThemePreviewActivity$PatternsAdapter;
 
     iget-object v1, v1, Lorg/telegram/ui/ThemePreviewActivity$PatternsAdapter;->this$0:Lorg/telegram/ui/ThemePreviewActivity;
@@ -248,7 +248,7 @@
 .method public getBackgroundGradientColor3()I
     .registers 4
 
-    .line 4583
+    .line 4573
     iget-object v0, p0, Lorg/telegram/ui/ThemePreviewActivity$PatternsAdapter$1;->this$1:Lorg/telegram/ui/ThemePreviewActivity$PatternsAdapter;
 
     iget-object v0, v0, Lorg/telegram/ui/ThemePreviewActivity$PatternsAdapter;->this$0:Lorg/telegram/ui/ThemePreviewActivity;
@@ -261,7 +261,7 @@
 
     if-ne v0, v1, :cond_14
 
-    .line 4584
+    .line 4574
     iget-object v0, p0, Lorg/telegram/ui/ThemePreviewActivity$PatternsAdapter$1;->this$1:Lorg/telegram/ui/ThemePreviewActivity$PatternsAdapter;
 
     iget-object v0, v0, Lorg/telegram/ui/ThemePreviewActivity$PatternsAdapter;->this$0:Lorg/telegram/ui/ThemePreviewActivity;
@@ -275,12 +275,12 @@
     :cond_14
     const-string v0, "key_chat_wallpaper_gradient_to3"
 
-    .line 4586
+    .line 4576
     invoke-static {v0}, Lorg/telegram/ui/ActionBar/Theme;->getDefaultAccentColor(Ljava/lang/String;)I
 
     move-result v0
 
-    .line 4587
+    .line 4577
     iget-object v1, p0, Lorg/telegram/ui/ThemePreviewActivity$PatternsAdapter$1;->this$1:Lorg/telegram/ui/ThemePreviewActivity$PatternsAdapter;
 
     iget-object v1, v1, Lorg/telegram/ui/ThemePreviewActivity$PatternsAdapter;->this$0:Lorg/telegram/ui/ThemePreviewActivity;
@@ -304,7 +304,7 @@
 .method public getCheckColor()I
     .registers 2
 
-    .line 4548
+    .line 4538
     iget-object v0, p0, Lorg/telegram/ui/ThemePreviewActivity$PatternsAdapter$1;->this$1:Lorg/telegram/ui/ThemePreviewActivity$PatternsAdapter;
 
     iget-object v0, v0, Lorg/telegram/ui/ThemePreviewActivity$PatternsAdapter;->this$0:Lorg/telegram/ui/ThemePreviewActivity;
@@ -319,7 +319,7 @@
 .method public getIntensity()F
     .registers 2
 
-    .line 4601
+    .line 4591
     iget-object v0, p0, Lorg/telegram/ui/ThemePreviewActivity$PatternsAdapter$1;->this$1:Lorg/telegram/ui/ThemePreviewActivity$PatternsAdapter;
 
     iget-object v0, v0, Lorg/telegram/ui/ThemePreviewActivity$PatternsAdapter;->this$0:Lorg/telegram/ui/ThemePreviewActivity;
@@ -334,7 +334,7 @@
 .method public getPatternColor()I
     .registers 2
 
-    .line 4606
+    .line 4596
     iget-object v0, p0, Lorg/telegram/ui/ThemePreviewActivity$PatternsAdapter$1;->this$1:Lorg/telegram/ui/ThemePreviewActivity$PatternsAdapter;
 
     iget-object v0, v0, Lorg/telegram/ui/ThemePreviewActivity$PatternsAdapter;->this$0:Lorg/telegram/ui/ThemePreviewActivity;
@@ -349,7 +349,7 @@
 .method public getSelectedPattern()Lorg/telegram/tgnet/TLRPC$TL_wallPaper;
     .registers 2
 
-    .line 4543
+    .line 4533
     iget-object v0, p0, Lorg/telegram/ui/ThemePreviewActivity$PatternsAdapter$1;->this$1:Lorg/telegram/ui/ThemePreviewActivity$PatternsAdapter;
 
     iget-object v0, v0, Lorg/telegram/ui/ThemePreviewActivity$PatternsAdapter;->this$0:Lorg/telegram/ui/ThemePreviewActivity;

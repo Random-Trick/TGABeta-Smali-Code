@@ -22,10 +22,10 @@
 .method public constructor <init>(Lorg/telegram/ui/Components/InviteLinkBottomSheet;Landroid/content/Context;)V
     .registers 10
 
-    .line 1013
+    .line 1014
     invoke-direct {p0, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    .line 1014
+    .line 1015
     new-instance p1, Landroid/widget/TextView;
 
     invoke-direct {p1, p2}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
@@ -36,10 +36,10 @@
 
     const/high16 v0, 0x41600000    # 14.0f
 
-    .line 1015
+    .line 1016
     invoke-virtual {p1, p2, v0}, Landroid/widget/TextView;->setTextSize(IF)V
 
-    .line 1016
+    .line 1017
     iget-object p1, p0, Lorg/telegram/ui/Components/InviteLinkBottomSheet$EmptyHintRow;->textView:Landroid/widget/TextView;
 
     const-string v0, "windowBackgroundWhiteGrayText"
@@ -50,12 +50,12 @@
 
     invoke-virtual {p1, v0}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 1017
+    .line 1018
     iget-object p1, p0, Lorg/telegram/ui/Components/InviteLinkBottomSheet$EmptyHintRow;->textView:Landroid/widget/TextView;
 
     invoke-virtual {p1, p2}, Landroid/widget/TextView;->setGravity(I)V
 
-    .line 1018
+    .line 1019
     iget-object p1, p0, Lorg/telegram/ui/Components/InviteLinkBottomSheet$EmptyHintRow;->textView:Landroid/widget/TextView;
 
     const/4 v0, -0x1
@@ -88,7 +88,7 @@
 
     const/high16 p2, 0x42a80000    # 84.0f
 
-    .line 1023
+    .line 1024
     invoke-static {p2}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result p2

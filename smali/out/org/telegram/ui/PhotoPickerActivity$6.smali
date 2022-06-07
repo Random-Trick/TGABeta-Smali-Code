@@ -18,7 +18,7 @@
 .method constructor <init>(Lorg/telegram/ui/PhotoPickerActivity;Landroid/content/Context;I)V
     .registers 4
 
-    .line 759
+    .line 768
     invoke-direct {p0, p2, p3}, Landroidx/recyclerview/widget/GridLayoutManager;-><init>(Landroid/content/Context;I)V
 
     return-void

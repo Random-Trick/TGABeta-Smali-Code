@@ -22,7 +22,7 @@
 .method constructor <init>(Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$1;Landroid/content/Context;)V
     .registers 3
 
-    .line 24717
+    .line 25155
     iput-object p1, p0, Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$1$2;->this$2:Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$1;
 
     invoke-direct {p0, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
@@ -35,7 +35,7 @@
 .method public dispatchKeyEvent(Landroid/view/KeyEvent;)Z
     .registers 4
 
-    .line 24720
+    .line 25158
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getKeyCode()I
 
     move-result v0
@@ -50,16 +50,16 @@
 
     if-nez v0, :cond_16
 
-    .line 24721
+    .line 25159
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$1$2;->this$2:Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$1;
 
     iget-object v0, v0, Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$1;->this$1:Lorg/telegram/ui/ChatActivity$ChatActivityAdapter;
 
     iget-object v0, v0, Lorg/telegram/ui/ChatActivity$ChatActivityAdapter;->this$0:Lorg/telegram/ui/ChatActivity;
 
-    invoke-static {v0}, Lorg/telegram/ui/ChatActivity;->access$36900(Lorg/telegram/ui/ChatActivity;)V
+    invoke-virtual {v0}, Lorg/telegram/ui/ChatActivity;->closeMenu()V
 
-    .line 24723
+    .line 25161
     :cond_16
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->dispatchKeyEvent(Landroid/view/KeyEvent;)Z
 
@@ -71,7 +71,7 @@
 .method protected onMeasure(II)V
     .registers 5
 
-    .line 24728
+    .line 25166
     invoke-static {p2}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result p2
@@ -88,7 +88,7 @@
 
     if-nez p2, :cond_14
 
-    .line 24730
+    .line 25168
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result p2
@@ -96,7 +96,7 @@
     :cond_14
     const/high16 v0, -0x80000000
 
-    .line 24732
+    .line 25170
     invoke-static {p2, v0}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
 
     move-result p2

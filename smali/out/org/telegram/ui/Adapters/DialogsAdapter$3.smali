@@ -32,7 +32,7 @@
 .method constructor <init>(Lorg/telegram/ui/Adapters/DialogsAdapter;Landroid/content/Context;)V
     .registers 3
 
-    .line 497
+    .line 503
     iput-object p1, p0, Lorg/telegram/ui/Adapters/DialogsAdapter$3;->this$0:Lorg/telegram/ui/Adapters/DialogsAdapter;
 
     invoke-direct {p0, p2}, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;-><init>(Landroid/content/Context;)V
@@ -45,7 +45,7 @@
 .method protected afterTextDraw()V
     .registers 7
 
-    .line 507
+    .line 513
     iget-object v0, p0, Lorg/telegram/ui/Adapters/DialogsAdapter$3;->this$0:Lorg/telegram/ui/Adapters/DialogsAdapter;
 
     invoke-static {v0}, Lorg/telegram/ui/Adapters/DialogsAdapter;->access$100(Lorg/telegram/ui/Adapters/DialogsAdapter;)Landroid/graphics/drawable/Drawable;
@@ -54,7 +54,7 @@
 
     if-eqz v0, :cond_2b
 
-    .line 508
+    .line 514
     iget-object v0, p0, Lorg/telegram/ui/Adapters/DialogsAdapter$3;->this$0:Lorg/telegram/ui/Adapters/DialogsAdapter;
 
     invoke-static {v0}, Lorg/telegram/ui/Adapters/DialogsAdapter;->access$100(Lorg/telegram/ui/Adapters/DialogsAdapter;)Landroid/graphics/drawable/Drawable;
@@ -65,7 +65,7 @@
 
     move-result-object v0
 
-    .line 509
+    .line 515
     iget-object v1, p0, Lorg/telegram/ui/Adapters/DialogsAdapter$3;->this$0:Lorg/telegram/ui/Adapters/DialogsAdapter;
 
     invoke-static {v1}, Lorg/telegram/ui/Adapters/DialogsAdapter;->access$100(Lorg/telegram/ui/Adapters/DialogsAdapter;)Landroid/graphics/drawable/Drawable;
@@ -99,7 +99,7 @@
 .method protected onTextDraw()V
     .registers 9
 
-    .line 515
+    .line 521
     iget-object v0, p0, Lorg/telegram/ui/Adapters/DialogsAdapter$3;->this$0:Lorg/telegram/ui/Adapters/DialogsAdapter;
 
     invoke-static {v0}, Lorg/telegram/ui/Adapters/DialogsAdapter;->access$100(Lorg/telegram/ui/Adapters/DialogsAdapter;)Landroid/graphics/drawable/Drawable;
@@ -108,7 +108,7 @@
 
     if-eqz v0, :cond_8f
 
-    .line 516
+    .line 522
     iget-object v0, p0, Lorg/telegram/ui/Adapters/DialogsAdapter$3;->this$0:Lorg/telegram/ui/Adapters/DialogsAdapter;
 
     invoke-static {v0}, Lorg/telegram/ui/Adapters/DialogsAdapter;->access$100(Lorg/telegram/ui/Adapters/DialogsAdapter;)Landroid/graphics/drawable/Drawable;
@@ -119,7 +119,7 @@
 
     move-result-object v0
 
-    .line 517
+    .line 523
     iget v1, p0, Lorg/telegram/ui/Adapters/DialogsAdapter$3;->moveProgress:F
 
     const/high16 v2, 0x40400000    # 3.0f
@@ -134,17 +134,17 @@
 
     float-to-int v1, v1
 
-    .line 518
+    .line 524
     iget v2, v0, Landroid/graphics/Rect;->left:I
 
     iput v2, p0, Lorg/telegram/ui/Adapters/DialogsAdapter$3;->originalX:I
 
-    .line 519
+    .line 525
     iget v2, v0, Landroid/graphics/Rect;->top:I
 
     iput v2, p0, Lorg/telegram/ui/Adapters/DialogsAdapter$3;->originalY:I
 
-    .line 520
+    .line 526
     iget-object v2, p0, Lorg/telegram/ui/Adapters/DialogsAdapter$3;->this$0:Lorg/telegram/ui/Adapters/DialogsAdapter;
 
     invoke-static {v2}, Lorg/telegram/ui/Adapters/DialogsAdapter;->access$100(Lorg/telegram/ui/Adapters/DialogsAdapter;)Landroid/graphics/drawable/Drawable;
@@ -191,12 +191,12 @@
 
     invoke-virtual {v2, v3, v4, v6, v1}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 522
+    .line 528
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
 
-    .line 523
+    .line 529
     iget-wide v2, p0, Lorg/telegram/ui/Adapters/DialogsAdapter$3;->lastUpdateTime:J
 
     sub-long v2, v0, v2
@@ -209,18 +209,18 @@
 
     move-wide v2, v6
 
-    .line 527
+    .line 533
     :cond_5e
     iput-wide v0, p0, Lorg/telegram/ui/Adapters/DialogsAdapter$3;->lastUpdateTime:J
 
-    .line 528
+    .line 534
     iget v0, p0, Lorg/telegram/ui/Adapters/DialogsAdapter$3;->movement:I
 
     const/high16 v1, 0x44260000    # 664.0f
 
     if-nez v0, :cond_77
 
-    .line 529
+    .line 535
     iget v0, p0, Lorg/telegram/ui/Adapters/DialogsAdapter$3;->moveProgress:F
 
     long-to-float v2, v2
@@ -237,15 +237,15 @@
 
     const/4 v0, 0x1
 
-    .line 531
+    .line 537
     iput v0, p0, Lorg/telegram/ui/Adapters/DialogsAdapter$3;->movement:I
 
-    .line 532
+    .line 538
     iput v5, p0, Lorg/telegram/ui/Adapters/DialogsAdapter$3;->moveProgress:F
 
     goto :goto_88
 
-    .line 535
+    .line 541
     :cond_77
     iget v0, p0, Lorg/telegram/ui/Adapters/DialogsAdapter$3;->moveProgress:F
 
@@ -265,13 +265,13 @@
 
     const/4 v0, 0x0
 
-    .line 537
+    .line 543
     iput v0, p0, Lorg/telegram/ui/Adapters/DialogsAdapter$3;->movement:I
 
-    .line 538
+    .line 544
     iput v1, p0, Lorg/telegram/ui/Adapters/DialogsAdapter$3;->moveProgress:F
 
-    .line 541
+    .line 547
     :cond_88
     :goto_88
     invoke-virtual {p0}, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;->getTextView()Landroid/widget/TextView;

@@ -18,7 +18,7 @@
 .method constructor <init>(Lorg/telegram/ui/GroupCallActivity;)V
     .registers 2
 
-    .line 4652
+    .line 4657
     invoke-direct {p0}, Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;-><init>()V
 
     return-void
@@ -29,10 +29,10 @@
 .method public getItemOffsets(Landroid/graphics/Rect;Landroid/view/View;Landroidx/recyclerview/widget/RecyclerView;Landroidx/recyclerview/widget/RecyclerView$State;)V
     .registers 5
 
-    .line 4655
+    .line 4660
     invoke-virtual {p3, p2}, Landroidx/recyclerview/widget/RecyclerView;->getChildAdapterPosition(Landroid/view/View;)I
 
-    .line 4656
+    .line 4661
     sget-boolean p2, Lorg/telegram/ui/GroupCallActivity;->isLandscapeMode:Z
 
     const/high16 p3, 0x40800000    # 4.0f
@@ -41,7 +41,7 @@
 
     if-nez p2, :cond_16
 
-    .line 4657
+    .line 4662
     invoke-static {p3}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result p2
@@ -54,7 +54,7 @@
 
     goto :goto_21
 
-    .line 4659
+    .line 4664
     :cond_16
     invoke-static {p3}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 

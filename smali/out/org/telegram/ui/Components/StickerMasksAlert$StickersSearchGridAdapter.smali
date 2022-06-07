@@ -1352,7 +1352,7 @@
 
     invoke-virtual {p2, v2}, Landroid/widget/ImageView;->setScaleType(Landroid/widget/ImageView$ScaleType;)V
 
-    const v2, 0x7f0703de
+    const v2, 0x7f0703d5
 
     .line 1487
     invoke-virtual {p2, v2}, Landroid/widget/ImageView;->setImageResource(I)V
@@ -1396,7 +1396,7 @@
 
     invoke-direct {p2, v2}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
-    const v2, 0x7f0e0ae7
+    const v2, 0x7f0e0b70
 
     const-string v3, "NoStickersFound"
 

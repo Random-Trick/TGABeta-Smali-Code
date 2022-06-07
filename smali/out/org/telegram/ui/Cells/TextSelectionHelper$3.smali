@@ -25,7 +25,7 @@
 .method constructor <init>(Lorg/telegram/ui/Cells/TextSelectionHelper;)V
     .registers 2
 
-    .line 548
+    .line 547
     iput-object p1, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$3;->this$0:Lorg/telegram/ui/Cells/TextSelectionHelper;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,14 +38,14 @@
 .method public run()V
     .registers 4
 
-    .line 551
+    .line 550
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x17
 
     if-lt v0, v1, :cond_2b
 
-    .line 552
+    .line 551
     iget-object v0, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$3;->this$0:Lorg/telegram/ui/Cells/TextSelectionHelper;
 
     invoke-static {v0}, Lorg/telegram/ui/Cells/TextSelectionHelper;->access$900(Lorg/telegram/ui/Cells/TextSelectionHelper;)Landroid/view/ActionMode;
@@ -60,7 +60,7 @@
 
     if-nez v1, :cond_2b
 
-    .line 553
+    .line 552
     invoke-static {v0}, Lorg/telegram/ui/Cells/TextSelectionHelper;->access$900(Lorg/telegram/ui/Cells/TextSelectionHelper;)Landroid/view/ActionMode;
 
     move-result-object v0
@@ -69,7 +69,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/view/ActionMode;->hide(J)V
 
-    .line 554
+    .line 553
     iget-object v0, p0, Lorg/telegram/ui/Cells/TextSelectionHelper$3;->this$0:Lorg/telegram/ui/Cells/TextSelectionHelper;
 
     invoke-static {v0}, Lorg/telegram/ui/Cells/TextSelectionHelper;->access$1000(Lorg/telegram/ui/Cells/TextSelectionHelper;)Ljava/lang/Runnable;

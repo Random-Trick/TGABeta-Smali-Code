@@ -104,7 +104,7 @@
     .line 47
     iget-object v2, v0, Lorg/telegram/ui/Components/PickerBottomLayout;->cancelButton:Landroid/widget/TextView;
 
-    const v10, 0x7f0e0331
+    const v10, 0x7f0e036d
 
     const-string v11, "Cancel"
 
@@ -339,7 +339,7 @@
     .line 73
     iget-object v1, v0, Lorg/telegram/ui/Components/PickerBottomLayout;->doneButtonTextView:Landroid/widget/TextView;
 
-    const v2, 0x7f0e0fc6
+    const v2, 0x7f0e1083
 
     const-string v3, "Send"
 

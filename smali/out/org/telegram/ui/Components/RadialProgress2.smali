@@ -2040,7 +2040,7 @@
 .end method
 
 .method public setImageOverlay(Ljava/lang/String;)V
-    .registers 8
+    .registers 9
 
     .line 130
     iget-object v0, p0, Lorg/telegram/ui/Components/RadialProgress2;->overlayImageView:Lorg/telegram/messenger/ImageReceiver;
@@ -2095,11 +2095,11 @@
 
     const/4 v4, 0x0
 
-    const/4 v5, -0x1
+    const-wide/16 v5, -0x1
 
     move-object v1, p1
 
-    invoke-virtual/range {v0 .. v5}, Lorg/telegram/messenger/ImageReceiver;->setImage(Ljava/lang/String;Ljava/lang/String;Landroid/graphics/drawable/Drawable;Ljava/lang/String;I)V
+    invoke-virtual/range {v0 .. v6}, Lorg/telegram/messenger/ImageReceiver;->setImage(Ljava/lang/String;Ljava/lang/String;Landroid/graphics/drawable/Drawable;Ljava/lang/String;J)V
 
     return-void
 .end method

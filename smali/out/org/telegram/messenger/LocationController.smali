@@ -441,7 +441,7 @@
 .method static constructor <clinit>()V
     .registers 1
 
-    const/4 v0, 0x3
+    const/4 v0, 0x4
 
     new-array v0, v0, [Lorg/telegram/messenger/LocationController;
 
@@ -1381,7 +1381,7 @@
     const/4 v1, 0x0
 
     :goto_2
-    const/4 v2, 0x3
+    const/4 v2, 0x4
 
     if-ge v0, v2, :cond_13
 
