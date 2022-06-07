@@ -1,0 +1,182 @@
+.class public Lorg/telegram/tgnet/TLRPC$TL_messages_requestWebView;
+.super Lorg/telegram/tgnet/TLObject;
+.source "TLRPC.java"
+
+
+# static fields
+.field public static constructor:I = -0x6e4ea7cf
+
+
+# instance fields
+.field public bot:Lorg/telegram/tgnet/TLRPC$InputUser;
+
+.field public flags:I
+
+.field public from_bot_menu:Z
+
+.field public peer:Lorg/telegram/tgnet/TLRPC$InputPeer;
+
+.field public reply_to_msg_id:I
+
+.field public send_as:Lorg/telegram/tgnet/TLRPC$InputPeer;
+
+.field public silent:Z
+
+.field public start_param:Ljava/lang/String;
+
+.field public theme_params:Lorg/telegram/tgnet/TLRPC$TL_dataJSON;
+
+.field public url:Ljava/lang/String;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .registers 0
+
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .registers 1
+
+    .line 58671
+    invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public deserializeResponse(Lorg/telegram/tgnet/AbstractSerializedData;IZ)Lorg/telegram/tgnet/TLObject;
+    .registers 4
+
+    .line 58686
+    invoke-static {p1, p2, p3}, Lorg/telegram/tgnet/TLRPC$TL_webViewResultUrl;->TLdeserialize(Lorg/telegram/tgnet/AbstractSerializedData;IZ)Lorg/telegram/tgnet/TLRPC$TL_webViewResultUrl;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
+    .registers 4
+
+    .line 58690
+    sget v0, Lorg/telegram/tgnet/TLRPC$TL_messages_requestWebView;->constructor:I
+
+    invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
+
+    .line 58691
+    iget-boolean v0, p0, Lorg/telegram/tgnet/TLRPC$TL_messages_requestWebView;->from_bot_menu:Z
+
+    if-eqz v0, :cond_e
+
+    iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_messages_requestWebView;->flags:I
+
+    or-int/lit8 v0, v0, 0x10
+
+    goto :goto_12
+
+    :cond_e
+    iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_messages_requestWebView;->flags:I
+
+    and-int/lit8 v0, v0, -0x11
+
+    :goto_12
+    iput v0, p0, Lorg/telegram/tgnet/TLRPC$TL_messages_requestWebView;->flags:I
+
+    .line 58692
+    iget-boolean v1, p0, Lorg/telegram/tgnet/TLRPC$TL_messages_requestWebView;->silent:Z
+
+    if-eqz v1, :cond_1b
+
+    or-int/lit8 v0, v0, 0x20
+
+    goto :goto_1d
+
+    :cond_1b
+    and-int/lit8 v0, v0, -0x21
+
+    :goto_1d
+    iput v0, p0, Lorg/telegram/tgnet/TLRPC$TL_messages_requestWebView;->flags:I
+
+    .line 58693
+    invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
+
+    .line 58694
+    iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_messages_requestWebView;->peer:Lorg/telegram/tgnet/TLRPC$InputPeer;
+
+    invoke-virtual {v0, p1}, Lorg/telegram/tgnet/TLObject;->serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
+
+    .line 58695
+    iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_messages_requestWebView;->bot:Lorg/telegram/tgnet/TLRPC$InputUser;
+
+    invoke-virtual {v0, p1}, Lorg/telegram/tgnet/TLObject;->serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
+
+    .line 58696
+    iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_messages_requestWebView;->flags:I
+
+    and-int/lit8 v0, v0, 0x2
+
+    if-eqz v0, :cond_37
+
+    .line 58697
+    iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_messages_requestWebView;->url:Ljava/lang/String;
+
+    invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeString(Ljava/lang/String;)V
+
+    .line 58699
+    :cond_37
+    iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_messages_requestWebView;->flags:I
+
+    and-int/lit8 v0, v0, 0x8
+
+    if-eqz v0, :cond_42
+
+    .line 58700
+    iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_messages_requestWebView;->start_param:Ljava/lang/String;
+
+    invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeString(Ljava/lang/String;)V
+
+    .line 58702
+    :cond_42
+    iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_messages_requestWebView;->flags:I
+
+    and-int/lit8 v0, v0, 0x4
+
+    if-eqz v0, :cond_4d
+
+    .line 58703
+    iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_messages_requestWebView;->theme_params:Lorg/telegram/tgnet/TLRPC$TL_dataJSON;
+
+    invoke-virtual {v0, p1}, Lorg/telegram/tgnet/TLRPC$TL_dataJSON;->serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
+
+    .line 58705
+    :cond_4d
+    iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_messages_requestWebView;->flags:I
+
+    and-int/lit8 v0, v0, 0x1
+
+    if-eqz v0, :cond_58
+
+    .line 58706
+    iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_messages_requestWebView;->reply_to_msg_id:I
+
+    invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
+
+    .line 58708
+    :cond_58
+    iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_messages_requestWebView;->flags:I
+
+    and-int/lit16 v0, v0, 0x2000
+
+    if-eqz v0, :cond_63
+
+    .line 58709
+    iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_messages_requestWebView;->send_as:Lorg/telegram/tgnet/TLRPC$InputPeer;
+
+    invoke-virtual {v0, p1}, Lorg/telegram/tgnet/TLObject;->serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
+
+    :cond_63
+    return-void
+.end method

@@ -1,0 +1,152 @@
+.class public Lorg/telegram/messenger/MessagesController$FaqSearchResult;
+.super Ljava/lang/Object;
+.source "MessagesController.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lorg/telegram/messenger/MessagesController;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x9
+    name = "FaqSearchResult"
+.end annotation
+
+
+# instance fields
+.field public num:I
+
+.field public path:[Ljava/lang/String;
+
+.field public title:Ljava/lang/String;
+
+.field public url:Ljava/lang/String;
+
+
+# direct methods
+.method public constructor <init>(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)V
+    .registers 4
+
+    .line 403
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 404
+    iput-object p1, p0, Lorg/telegram/messenger/MessagesController$FaqSearchResult;->title:Ljava/lang/String;
+
+    .line 405
+    iput-object p2, p0, Lorg/telegram/messenger/MessagesController$FaqSearchResult;->path:[Ljava/lang/String;
+
+    .line 406
+    iput-object p3, p0, Lorg/telegram/messenger/MessagesController$FaqSearchResult;->url:Ljava/lang/String;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public equals(Ljava/lang/Object;)Z
+    .registers 3
+
+    .line 411
+    instance-of v0, p1, Lorg/telegram/messenger/MessagesController$FaqSearchResult;
+
+    if-nez v0, :cond_6
+
+    const/4 p1, 0x0
+
+    return p1
+
+    .line 414
+    :cond_6
+    check-cast p1, Lorg/telegram/messenger/MessagesController$FaqSearchResult;
+
+    .line 415
+    iget-object v0, p0, Lorg/telegram/messenger/MessagesController$FaqSearchResult;->title:Ljava/lang/String;
+
+    iget-object p1, p1, Lorg/telegram/messenger/MessagesController$FaqSearchResult;->title:Ljava/lang/String;
+
+    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public toString()Ljava/lang/String;
+    .registers 5
+
+    .line 420
+    new-instance v0, Lorg/telegram/tgnet/SerializedData;
+
+    invoke-direct {v0}, Lorg/telegram/tgnet/SerializedData;-><init>()V
+
+    .line 421
+    iget v1, p0, Lorg/telegram/messenger/MessagesController$FaqSearchResult;->num:I
+
+    invoke-virtual {v0, v1}, Lorg/telegram/tgnet/SerializedData;->writeInt32(I)V
+
+    const/4 v1, 0x0
+
+    .line 422
+    invoke-virtual {v0, v1}, Lorg/telegram/tgnet/SerializedData;->writeInt32(I)V
+
+    .line 423
+    iget-object v2, p0, Lorg/telegram/messenger/MessagesController$FaqSearchResult;->title:Ljava/lang/String;
+
+    invoke-virtual {v0, v2}, Lorg/telegram/tgnet/SerializedData;->writeString(Ljava/lang/String;)V
+
+    .line 424
+    iget-object v2, p0, Lorg/telegram/messenger/MessagesController$FaqSearchResult;->path:[Ljava/lang/String;
+
+    if-eqz v2, :cond_19
+
+    array-length v2, v2
+
+    goto :goto_1a
+
+    :cond_19
+    const/4 v2, 0x0
+
+    :goto_1a
+    invoke-virtual {v0, v2}, Lorg/telegram/tgnet/SerializedData;->writeInt32(I)V
+
+    .line 425
+    iget-object v2, p0, Lorg/telegram/messenger/MessagesController$FaqSearchResult;->path:[Ljava/lang/String;
+
+    if-eqz v2, :cond_2e
+
+    .line 426
+    :goto_21
+    iget-object v2, p0, Lorg/telegram/messenger/MessagesController$FaqSearchResult;->path:[Ljava/lang/String;
+
+    array-length v3, v2
+
+    if-ge v1, v3, :cond_2e
+
+    .line 427
+    aget-object v2, v2, v1
+
+    invoke-virtual {v0, v2}, Lorg/telegram/tgnet/SerializedData;->writeString(Ljava/lang/String;)V
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_21
+
+    .line 430
+    :cond_2e
+    iget-object v1, p0, Lorg/telegram/messenger/MessagesController$FaqSearchResult;->url:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Lorg/telegram/tgnet/SerializedData;->writeString(Ljava/lang/String;)V
+
+    .line 431
+    invoke-virtual {v0}, Lorg/telegram/tgnet/SerializedData;->toByteArray()[B
+
+    move-result-object v0
+
+    invoke-static {v0}, Lorg/telegram/messenger/Utilities;->bytesToHex([B)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
